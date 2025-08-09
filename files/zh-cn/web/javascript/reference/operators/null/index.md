@@ -5,11 +5,22 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{jsSidebar("Operators")}}
-
 `null` 值特指未不存在任何对象值。它是 JavaScript 的[原始值](/zh-CN/docs/Glossary/Primitive)之一，且在布尔运算中被视为[假值](/zh-CN/docs/Glossary/Falsy)。
 
-{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+
+```js interactive-example
+function getVowels(str) {
+  const m = str.match(/[aeiou]/gi);
+  if (m === null) {
+    return 0;
+  }
+  return m.length;
+}
+
+console.log(getVowels("sky"));
+// Expected output: 0
+```
 
 ## 语法
 

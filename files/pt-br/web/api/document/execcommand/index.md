@@ -50,7 +50,7 @@ Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou e
 - `decreaseFontSize`
   - : Adiciona a tag {{HTMLElement("small")}} ao redor da seleção ou no ponto de inserção. (Não é suportado pelo Internet Explorer.)
 - `defaultParagraphSeparator`
-  - : Altera o separador de parágrafos usado quando novos parágrafos são criados em regiões de texto editáveis. Veja [Diferenças na geração de marcação](/pt-BR/docs/Web/Guide/HTML/Editable_content#Differences_in_markup_generation) para mais detalhes.
+  - : Altera o separador de parágrafos usado quando novos parágrafos são criados em regiões de texto editáveis. Veja [Diferenças na geração de marcação](/pt-BR/docs/conflicting/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) para mais detalhes.
 - `delete`
   - : Exclui o conteúdo da seleção atual.
 - `enableAbsolutePositionEditor`
@@ -126,7 +126,6 @@ Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou e
 - `unlink`
   - : Remove o elemento [âncora](/pt-BR/docs/Web/HTML/Element/a) de um hiperlink selecionado.
 - `useCSS` {{Deprecated_inline}}
-
   - : Alterna o uso de tags HTML ou CSS para a marcação gerada. Requer um booleano `true` / `false` como argumento.
 
     NOTA: Este argumento é logicamente reverso (ou seja, use `false` para usar CSS, `true` para usar HTML) e não é suportado pelo Internet Explorer. Isso foi preterido em favor do `styleWithCSS`.

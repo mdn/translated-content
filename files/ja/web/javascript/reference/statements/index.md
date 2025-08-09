@@ -133,7 +133,8 @@ if (条件)
 label: const a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
-> **メモ:** [関数宣言にラベルを持たせる](/ja/docs/Web/JavaScript/Reference/Statements/label#labeled_function_declarations)古い文法がありますが、ウェブの現実との互換性のために標準化されただけです。
+> [!NOTE]
+> [関数宣言にラベルを持たせる](/ja/docs/Web/JavaScript/Reference/Statements/label#labeled_function_declarations)古い文法がありますが、ウェブの現実との互換性のために標準化されただけです。
 
 これを回避するには、宣言を中括弧で囲んで、[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)の一部にすることができます。
 

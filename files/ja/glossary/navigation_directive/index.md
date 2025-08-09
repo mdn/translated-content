@@ -9,25 +9,23 @@ slug: Glossary/Navigation_directive
 
 ナビゲーションディレクティブは {{CSP("default-src")}} ディレクティブで代替されません。
 
-完全な一覧は[ナビゲーションディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#Navigation_directives)を参照してください。
+完全な一覧は[ナビゲーションディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#navigation_directives)を参照してください。
 
 ## 関連項目
 
 - <https://www.w3.org/TR/CSP/#directives-navigation>
 - 他の種類のディレクティブ:
-
   - {{Glossary("Fetch directive","フェッチディレクティブ")}}
   - {{Glossary("Document directive","文書ディレクティブ")}}
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}
-  - [`block-all-mixed-content`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`require-sri-for`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for)
-  - [`trusted-types`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)
+  - [`block-all-mixed-content`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content)
+  - [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests)
+  - [`require-sri-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+  - [`trusted-types`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types)
 
 - {{HTTPHeader("Content-Security-Policy")}}
 
 1. 関連用語:
-
    1. {{Glossary("CSP")}}
    2. {{Glossary("Fetch directive", "フェッチディレクティブ")}}
    3. {{Glossary("Document directive", "文書ディレクティブ")}}

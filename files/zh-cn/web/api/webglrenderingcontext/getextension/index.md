@@ -48,4 +48,4 @@ WebGL API 的扩展在 [WebGL Extension Registry](https://www.khronos.org/regist
 ## 参阅
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-- [webglreport.com](http://webglreport.com)
+- [webglreport.com](https://webglreport.com)

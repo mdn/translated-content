@@ -3,8 +3,6 @@ title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`border-top-left-radius`** establece el redondeo de la esquina superior izquierda del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0`, no se redondeará la esquina, dejándola cuadrada.
 
 ![border-radius.png](border-radius.png)
@@ -12,7 +10,7 @@ La propiedad CSS **`border-top-left-radius`** establece el redondeo de la esquin
 Un fondo, siendo una imagen o color, está limitado a los bordes, incluso a los redondeados; la posición exacta del corte será definida por el valor de la propiedad {{cssxref("background-clip")}}.
 
 > [!NOTE]
-> Si el valor de esta propiedad no se establece en una propiedad reducida {{cssxref("border-radius")}} que es aplicada al elemento después de la propiedad `border-top-left-radius`, el valor de esta propiedad es restaurado a su valor inicial por la [propiedad de forma reducida](/es/docs/Web/CSS/Shorthand_properties).
+> Si el valor de esta propiedad no se establece en una propiedad reducida {{cssxref("border-radius")}} que es aplicada al elemento después de la propiedad `border-top-left-radius`, el valor de esta propiedad es restaurado a su valor inicial por la [propiedad de forma reducida](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties).
 
 {{cssinfo}}
 

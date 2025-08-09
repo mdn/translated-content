@@ -5,7 +5,7 @@ slug: Web/API/XRRigidTransform
 
 {{APIRef("WebXR Device API")}}
 
-**`XRRigidTransform`** は、位置と向きによって記述される 3D 幾何学的変換を表す [WebXR API](/ja/docs/Web/API/WebXR_API) のインターフェイスです。
+**`XRRigidTransform`** は、位置と向きによって記述される 3D 幾何学的変換を表す [WebXR API](/ja/docs/Web/API/WebXR_Device_API) のインターフェイスです。
 
 `XRRigidTransform` は、以下を含む WebXR API 全体で変換を指定するために使用されます。
 
@@ -28,7 +28,7 @@ slug: Web/API/XRRigidTransform
 - {{DOMxRef("XRRigidTransform.orientation")}} {{readonlyInline}} {{experimental_inline}}
   - : 変換の回転成分を記述する単位クォータニオンを含む {{DOMxRef("DOMPointReadOnly")}}。 単位クォータニオンとして、その長さは常に `1.0` に正規化されます。
 - {{DOMxRef("XRRigidTransform.matrix")}} {{readonlyInline}} {{experimental_inline}}
-  - : 16 メンバーの {{DOMxRef("Float32Array")}} の形式で変換行列を返します。 配列を使用して行列を表す方法については、[行列のフォーマット](/ja/docs/Web/API/XRRigidTransform/matrix#Matrix_format)のセクションを参照してください。
+  - : 16 メンバーの {{DOMxRef("Float32Array")}} の形式で変換行列を返します。 配列を使用して行列を表す方法については、[行列のフォーマット](/ja/docs/Web/API/XRRigidTransform/matrix#matrix_format)のセクションを参照してください。
 
 <!---->
 
@@ -52,7 +52,7 @@ xrSession.requestReferenceSpace(refSpaceType)
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

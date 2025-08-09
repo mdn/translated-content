@@ -28,7 +28,8 @@ Los scripts ejecutados desde páginas con una URL `about:blank` o `javascript:` 
 > [!NOTE]
 > Por ejemplo, `about:blank` a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.
 
-> **Advertencia:** `data:` URLs obtienen un nuevo, vacío, contexto de seguridad.
+> [!WARNING]
+> `data:` URLs obtienen un nuevo, vacío, contexto de seguridad.
 
 ### Excepciones en Internet Explorer
 
@@ -58,23 +59,23 @@ El número de puerto es guardado de forma separada por el navegador. Cualquier l
 
 La política de mismo origen controla las interacciones entre dos orígenes diferentes, como cuando se usa {{domxref("XMLHttpRequest")}} o un elemento {{htmlelement("img")}}. Estas interacciones habitualmente se ubican en tres categorías:
 
-- Las escrituras Cross-origin normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/HTTP/Access_control_CORS#Preflighted_requests).
+- Las escrituras Cross-origin normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/Web/HTTP/Guides/CORS#preflighted_requests).
 - La integración Cross-origin (_embedding)_ normalmente se permite. Los ejemplos se listan debajo.
 - Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la [disponibilidad de un recurso integrado](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
 
 Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado:
 
 - JavaScript con `<script src="..."></script>`. Los mensajes de error para errores de sintaxis están solo disponibles para scripts de mismo origen.
-- CSS con `<link rel="stylesheet" href="...">`. Debido a las [reglas de sintaxis relajadas](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) de CSS, un CSS de origen cruzado requiere de una cabecera `Content-Type` correcta. Las restricciones varían según el navegador: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) (bajar hasta CVE-2010-0051) y [Opera](http://www.opera.com/support/kb/view/943/).
+- CSS con `<link rel="stylesheet" href="...">`. Debido a las [reglas de sintaxis relajadas](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) de CSS, un CSS de origen cruzado requiere de una cabecera `Content-Type` correcta. Las restricciones varían según el navegador: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](https://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](https://code.google.com/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/kb/HT4070) (bajar hasta CVE-2010-0051) y [Opera](https://www.opera.com/support/kb/view/943/).
 - Imágeness con {{htmlelement("img")}}. Los formatos de imagen soportados incluyen PNG, JPEG, GIF, BMP, SVG, ...
 - Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.
-- Plug-ins con [`<object>`](/es/docs/HTML/Element/object), [`<embed>`](/es/docs/HTML/Element/embed) y [`<applet>`](/es/docs/HTML/Element/applet).
-- Fuentes con [`@font-face`](/es/docs/CSS/@font-face). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
-- Cualquiera con [`<frame>`](/es/docs/HTML/Element/frame) and [`<iframe>`](/es/docs/HTML/Element/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/es/docs/HTTP/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
+- Plug-ins con [`<object>`](/es/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/es/docs/Web/HTML/Reference/Elements/embed) y [`<applet>`](/es/docs/HTML/Element/applet).
+- Fuentes con [`@font-face`](/es/docs/Web/CSS/@font-face). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
+- Cualquiera con [`<frame>`](/es/docs/Web/HTML/Reference/Elements/frame) and [`<iframe>`](/es/docs/Web/HTML/Reference/Elements/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/es/docs/Web/HTTP/Reference/Headers/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
 
 ### Cómo permitir el acceso de origen cruzado
 
-Usa [CORS](/es/docs/HTTP/Access_control_CORS) para permitir el acceso de origen cruzado.
+Usa [CORS](/es/docs/Web/HTTP/Guides/CORS) para permitir el acceso de origen cruzado.
 
 ### Cómo bloquear el acceso de origen cruzado
 
@@ -84,7 +85,7 @@ Usa [CORS](/es/docs/HTTP/Access_control_CORS) para permitir el acceso de origen 
 
 ## Acceso script API de Origen Cruzado
 
-Las APIs de JavaScript APIs tales como [`iframe.contentWindow`](/es/docs/DOM/HTMLIFrameElement), {{domxref("window.parent")}}, {{domxref("window.open")}} y {{domxref("window.opener")}} permiten a los documentos referenciarse directamente entre ellos. Cuando dos documentos no tienen el mismo origen, estas referencias proveen un acceso muy limitado a los objetos [`Window`](/es/docs/Web/API/Window) y [`Location`](/es/docs/Web/API/Location), como se describe en las siguientes dos secciones.
+Las APIs de JavaScript APIs tales como [`iframe.contentWindow`](/es/docs/Web/API/HTMLIFrameElement), {{domxref("window.parent")}}, {{domxref("window.open")}} y {{domxref("window.opener")}} permiten a los documentos referenciarse directamente entre ellos. Cuando dos documentos no tienen el mismo origen, estas referencias proveen un acceso muy limitado a los objetos [`Window`](/es/docs/Web/API/Window) y [`Location`](/es/docs/Web/API/Location), como se describe en las siguientes dos secciones.
 
 Para una mayor comunicación entre documentos de origenes diferentes, usar {{domxref("window.postMessage")}}.
 
@@ -133,15 +134,15 @@ Algunos navegadores permiten el acceso a más propiedades de las que permite la 
 
 ## Acceso de almacenamiento de datos de origen cruzado
 
-El acceso a datos almacenados en el navegador tales como [localStorage](/es/docs/Web/Guide/API/DOM/Storage) y [IndexedDB](/es/docs/IndexedDB) son separados por origen. Cada origen obtiene su propio almacenamiento separado, y JavaScript en un origen no puede leer desde o escribir al almacenamiento perteneciente a otro origen.
+El acceso a datos almacenados en el navegador tales como [localStorage](/es/docs/Web/API/Web_Storage_API) y [IndexedDB](/es/docs/Web/API/IndexedDB_API) son separados por origen. Cada origen obtiene su propio almacenamiento separado, y JavaScript en un origen no puede leer desde o escribir al almacenamiento perteneciente a otro origen.
 
 Las cookies usan una definición separada de orígenes. Una página puede asignar una cookie para su propio dominio o cualquier dominio padre, siempre que el dominio padre no sea un sufijo público. Firefox y Chrome usan la [Lista de Sufijos Públicos](http://publicsuffix.org/) para determinar si un dominio es un sufijo público. Internet Explorer usa su propio método interno para determinar si un dominio es un sufijo públicio. El navegador hará disponible una cookie para el dominio dado incluyendo cualquier subdominio, no importa qué protocolo (HTTP/HTTPS) o puerto sea usado. Cuando asignas una cookie, puedes limitar su disponibilidad usando los flags Domain, Path, Secure y Http-Only. Cuando lees una cookie, no puedes ver desde dónde fue asignada. Incluso si sólo usas conexiones HTTPS, cualquier cookie que veas puede haber sido asignada usando una conexión insegura.
 
 ## Ver también
 
-- [Política](http://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Política](https://www.w3.org/Security/wiki/Same_Origin_Policy)
 - [Same-Origin para file: URIs](/es/docs/Same-origin_policy_for_file:_URIs)
-- [Política Same-Origin en W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Política Same-Origin en W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
 
 ## Información de Documento Original
 

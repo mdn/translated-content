@@ -7,9 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 
 **`Intl.Collator.prototype.compare()`** メソッドは、 2 つの文字列をこの {{jsxref("Intl.Collator")}} オブジェクトのソート順に従って比較します。
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.Collator.prototype.compare")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const enCollator = new Intl.Collator("en");
+const deCollator = new Intl.Collator("de");
+const svCollator = new Intl.Collator("sv");
+
+console.log(enCollator.compare("z", "a") > 0);
+// Expected output: true
+
+console.log(deCollator.compare("z", "ä") > 0);
+// Expected output: true
+
+console.log(svCollator.compare("z", "ä") > 0);
+// Expected output: false
+```
 
 ## 構文
 

@@ -44,12 +44,10 @@ JavaScript 프로그램은 꽤 작게 시작되었습니다. 초기에 사용 �
 modules 디렉토리의 두 모듈은 다음과 같습니다.
 
 - `canvas.js` — 캔버스 설정과 관련된 기능을 포함합니다.
-
   - `create()` — 지정한 ID를 가진 래퍼 {{htmlelement("div")}} 안에, 지정한 `width` 와 `height` 를 가진 캔버스를 생성합니다. 지정한 ID(첫 번째 인자)는 지정한 부모 요소(두 번째 인자)안에 추가됩니다. 캔버스의 2D 컨텍스트와 래퍼(wrapper div)의 ID가 들어있는 객체를 반환합니다.
   - `createReportList()` — 데이터를 출력하는데 사용할 수 있는, 지정한 래퍼 요소(div) 안에 추가 된 정렬되지 않은 리스트(ul)를 만듭니다. 리스트의 ID를 반환합니다.
 
 - `square.js` — 다음을 포함합니다.
-
   - `name` — 문자열 'square'를 담고있는 상수입니다.
   - `draw()` — 지정된 크기, 위치, 색상을 사용하여 지정된 캔버스에 사각형을 그립니다. 사각형의 크기, 위치, 색상을 포함하는 객체를 반환합니다.
   - `reportArea()` — 길이가 주어지면 사각형의 넓이를 지정한 보고서 리스트에 작성합니다.
@@ -144,7 +142,7 @@ reportPerimeter(square1.length, reportList);
 
 - 로컬 테스트에서의 주의 사항 — HTML파일을 로컬(예를들어 `file://` URL)에서 로드하려고 하면, JavaScript 모듈 보안 요구 사항으로 인해 CORS오류가 발생합니다. 서버를 통해 테스트 해야 합니다.
 - 표준 스크립트와 달리 모듈 내부에서 정의된 스크립트 섹션과는 다르게 동작할 수 있습니다. 이는 모듈이 자동적으로 [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode)를 사용하기 때문입니다.
-- 모듈 스크립트를 불러올 때 `defer` 속성([`<script>` attributes](/ko/docs/Web/HTML/Element/script#Attributes))를 사용할 필요가 없습니다. 모듈은 자동으로 defer됩니다.
+- 모듈 스크립트를 불러올 때 `defer` 속성([`<script>` attributes](/ko/docs/Web/HTML/Reference/Elements/script#attributes))를 사용할 필요가 없습니다. 모듈은 자동으로 defer됩니다.
 - 마지막으로 모듈 기능을 단일 스크립트의 스코프로 가져왔음을 분명히 해야 합니다. — 전역 스코프에서는 사용할 수 없습니다. 따라서 import한 스크립트에서 가져온 기능에만 접근할 수 있습니다. 예를들어 JavaScript 콘솔에서 접근할 수 없습니다. DevTools에 구문 오류가 표시되지만, 사용하려고 하는 디버깅 기술 중 일부는 사용할 수 없습니다.
 
 ## Default exports versus named exports
@@ -474,6 +472,6 @@ Note that, promise fulfillment 가 모듈 객체를 반환하기 때문에 클�
 - [Using JavaScript modules on the web](https://developers.google.com/web/fundamentals/primers/modules#mjs), by Addy Osmani and Mathias Bynens
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- Axel Rauschmayer's book [Exploring JS: Modules](http://exploringjs.com/es6/ch_modules.html)
+- Axel Rauschmayer's book [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

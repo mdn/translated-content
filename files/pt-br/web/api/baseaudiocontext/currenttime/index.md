@@ -36,4 +36,4 @@ console.log(audioCtx.currentTime);
 
 ## Veja também
 
-- [Usando a API Web Audio API](/pt-BR/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Usando a API Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

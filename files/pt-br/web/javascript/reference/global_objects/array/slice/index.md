@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 O método **`slice()`** retorna uma cópia de parte de um array a partir de um subarray criado entre as posições `início` e `fim` (fim não é incluído) de um array original. O Array original não é modificado.
 
-{{EmbedInteractiveExample("pages/js/array-slice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.slice()")}}
+
+```js interactive-example
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+```
 
 ## Syntaxe
 
@@ -18,7 +40,6 @@ arr.slice([início[,fim]])
 ### Parâmetros
 
 - `início` {{optional_inline}}
-
   - : Índice baseado em zero no qual se inicia a extração.
 
     Como um índice negativo, `início` indica um deslocamento em relação ao fim da sequência. `slice(-2)` extrai os dois últimos elementos do array.
@@ -28,7 +49,6 @@ arr.slice([início[,fim]])
     Se `início` for maior que o comprimento do array, é retornado um array vazio.
 
 - `fim` {{optional_inline}}
-
   - : Índice baseado em zero o qual é o final da extração. `slice` extrai até, não incluindo, `fim`.
 
     `slice(1,4)` extrai do segundo até o quarto elemento (elementos de índice 1, 2 e 3).

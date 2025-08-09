@@ -58,7 +58,7 @@ const audioContext = new AudioContext();
 ```
 
 > [!NOTE]
-> 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
+> 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS) 取得更多信息。
 
 为了使用 Web Audio API 的优秀特性，我们需要从该元素中获取源并将其传入我们创建的上下文中。幸运的是，有一个方法可以让我们做到这一点 — {{domxref("AudioContext.createMediaElementSource")}}:
 
@@ -79,7 +79,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 通过 JavaScript 代码控制声音会受到浏览器的自动播放策略的影响 (autoplay support policies)，因此在未经用户（或白名单）许可的情况下脚本对声音的控制会被阻止。浏览器的自动播放策略通常要求显式权限或者用户与页面产生互动后，才允许脚本触发音频播放。
 
-这些特殊的要求基本上是因为意外的声音可能会打扰到用户，令人厌烦，并且可能导致无障碍问题。你可以在文章 [媒体与 Web 音频 API 自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide) 了解更多相关信息。
+这些特殊的要求基本上是因为意外的声音可能会打扰到用户，令人厌烦，并且可能导致无障碍问题。你可以在文章 [媒体与 Web 音频 API 自动播放指南](/zh-CN/docs/Web/Media/Guides/Autoplay) 了解更多相关信息。
 
 因为我们的脚本正响应用户输入（例如，点击播放按钮）进行播放音频，我们状态良好且应该没有自动播放阻止的问题。所以，让我们看看我们的播放和暂停功能。我们有一个当音频播放时变为暂停按钮的播放按钮：
 
@@ -142,7 +142,7 @@ audioElement.addEventListener(
 
 ## 关于 Web Audio 编辑器
 
-Firefox 有一个名为 [Web Audio editor](/zh-CN/docs/Tools/Web_Audio_Editor) 的工具。在其上运行音频图的任何页面上，你可以打开开发者工具，使用 Web Audio 选项卡查看音频图，可查看每个节点的可用属性，并可以修改这些属性来查看会有什么效果。
+Firefox 有一个名为 [Web Audio editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html) 的工具。在其上运行音频图的任何页面上，你可以打开开发者工具，使用 Web Audio 选项卡查看音频图，可查看每个节点的可用属性，并可以修改这些属性来查看会有什么效果。
 
 ![The Firefox web audio editor showing an audio graph with AudioBufferSource, IIRFilter, and AudioDestination](web-audio-editor.png)
 
@@ -171,7 +171,7 @@ track.connect(gainNode).connect(audioContext.destination);
 
 默认增益为 1；这使当前音量保持不变。增益可以设置的最小值约`-3.4028235E38`，最大约`3.4028235E38`。这里我们将允许音箱增益可以设置到 2（2 倍的原音量）和降低到 0（这可以有效的静音）。
 
-让我们给用户这样的控制 — 我们将会使用 [range input](/zh-CN/docs/Web/HTML/Element/input/range) ：
+让我们给用户这样的控制 — 我们将会使用 [range input](/zh-CN/docs/Web/HTML/Reference/Elements/input/range) ：
 
 ```js
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01">
@@ -205,7 +205,8 @@ volumeControl.addEventListener(
 
 如果用户拥有立体声功能，可用 {{domxref("StereoPannerNode")}} 节点改变左右扬声器的平衡。
 
-> **备注：** `StereoPannerNode` 用于你只想从左到右进行立体声平移的简单情况。还有一个 {{domxref("PannerNode")}}，它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。
+> [!NOTE]
+> `StereoPannerNode` 用于你只想从左到右进行立体声平移的简单情况。还有一个 {{domxref("PannerNode")}}，它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。
 
 为了使其可视化，我们将使我们的音频图如下：
 
@@ -263,7 +264,7 @@ track.connect(gainNode).connect(panner).connect(audioContext.destination);
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
-另一个专门用于演示 Web Audio API 的例子是 [Violent Theremin](http://mdn.github.io/violent-theremin/)，一个允许你通过移动鼠标来改变它的音调音量的简单的应用程序。它还提供了一个迷幻的灯光秀（[查看 Violent Theremin 源代码](https://github.com/mdn/violent-theremin)）
+另一个专门用于演示 Web Audio API 的例子是 [Violent Theremin](https://mdn.github.io/violent-theremin/)，一个允许你通过移动鼠标来改变它的音调音量的简单的应用程序。它还提供了一个迷幻的灯光秀（[查看 Violent Theremin 源代码](https://github.com/mdn/violent-theremin)）
 
 ![A page full of rainbow colours, with two buttons labeled Clear screen and mute. ](violent-theremin.png)
 
@@ -317,7 +318,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 - 通过 JavaScript 直接生成一个音频节点比如 oscillator. 一个 {{ domxref("OscillatorNode") }}是利用{{ domxref("AudioContext.createOscillator") }} 方法来构建。
 - 从原 PCM 数据构建：AudioContext 有解密被支持的音频格式的多种方法。看 {{ domxref("AudioContext.createBuffer()") }}, {{ domxref("AudioContext.createBufferSource()") }}, 以及 {{ domxref("AudioContext.decodeAudioData()") }}.
 - 来自于 HTML 音频元素例如 {{HTMLElement("video")}} 或者{{HTMLElement("audio")}}: 可以看 {{ domxref("AudioContext.createMediaElementSource()") }}.
-- 直接来自于 [WebRTC](/zh-CN/docs/WebRTC)，{{domxref("MediaStream")}} 例如来自于摄像头或麦克风。可以看{{ domxref("AudioContext.createMediaStreamSource()") }}.
+- 直接来自于 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)，{{domxref("MediaStream")}} 例如来自于摄像头或麦克风。可以看{{ domxref("AudioContext.createMediaStreamSource()") }}.
 
 对于这些特殊的例子，我们将会为我们的源构建一个 oscillator 来提供简单的音调，以及 gain node 来控制音频音量：
 
@@ -343,7 +344,7 @@ oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-一个更复杂的例子，（比如 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)), 你可以链接很多你想要的节点在一起，例如：
+一个更复杂的例子，（比如 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)), 你可以链接很多你想要的节点在一起，例如：
 
 ```js
 source = audioCtx.createMediaStreamSource(stream);
@@ -507,7 +508,7 @@ mute.onclick = function () {
 var distortion = audioCtx.createWaveShaper();
 ```
 
-这个对象一定会数学化的定义 wave shape，一个被应用于基础声音波来创造扭曲的效果。这些波并不好被计算，最好的开始方法是搜索 web 算法。比如，我们可以从 [Stack Overflow](http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion) 找到：
+这个对象一定会数学化的定义 wave shape，一个被应用于基础声音波来创造扭曲的效果。这些波并不好被计算，最好的开始方法是搜索 web 算法。比如，我们可以从 [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion) 找到：
 
 ```js
 function makeDistortionCurve(amount) {

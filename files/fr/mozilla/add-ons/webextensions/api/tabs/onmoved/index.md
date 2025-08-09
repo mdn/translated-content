@@ -31,16 +31,13 @@ Les événements ont trois fonctions:
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `tabId`
       - : `integer`. ID de l'onglet déplacé par l'utilisateur.
 
     <!---->
-
     - `moveInfo`
-      - : [`object`](#moveInfo). Informations sur le déménagement.
+      - : [`object`](#moveinfo). Informations sur le déménagement.
 
 ## Objets supplémentaires
 

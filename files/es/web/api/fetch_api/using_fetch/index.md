@@ -12,7 +12,7 @@ Este tipo de funcionalidad se conseguía previamente haciendo uso de {{domxref("
 La especificación fetch difiere de `JQuery.ajax()` en dos formas principales:
 
 - El objeto Promise devuelto desde `fetch()` **no será rechazado con un estado de error HTTP** incluso si la respuesta es un error HTTP 404 o 500. En cambio, este se resolverá normalmente (con un estado `ok` configurado a false), y este solo sera rechazado ante un fallo de red o si algo impidió completar la solicitud.
-- Por defecto, `fetch` no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantentener una sesión de usuario (para mandar cookies, _credentials_ de la opción [init](/es/docs/Web/API/fetch#Parameters) deberan ser configuradas). Desde [el 25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). La especificación cambió la politica por defecto de las credenciales a `same-origin`. Firefox cambió desde la versión 61.0b13.
+- Por defecto, `fetch` no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantentener una sesión de usuario (para mandar cookies, _credentials_ de la opción [init](/es/docs/Web/API/Window/fetch#parameters) deberan ser configuradas). Desde [el 25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). La especificación cambió la politica por defecto de las credenciales a `same-origin`. Firefox cambió desde la versión 61.0b13.
 
 Una petición básica de `fetch` es realmente simple de realizar. Eche un vistazo al siguente código:
 
@@ -29,7 +29,7 @@ Esto es, por supuesto, una respuesta HTTP no el archivo JSON. Para extraer el co
 > [!NOTE]
 > El mixin de `Body` tambien tiene metodos parecidos para extraer otros tipos de contenido del cuerpo. Vease [Body](#body) para más información.
 
-Las peticiones de Fetch son controladas por la directiva de `connect-src` de [Content Security Policy](/es/docs/Security/CSP/CSP_policy_directives) en vez de la directiva de los recursos que se han devuelto.
+Las peticiones de Fetch son controladas por la directiva de `connect-src` de [Content Security Policy](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) en vez de la directiva de los recursos que se han devuelto.
 
 ### Suministrando opciones de petición
 
@@ -356,8 +356,8 @@ Para utilizar `fetch()` en un explorador no soportado, hay disponible un [Fetch 
 
 ## Vea también
 
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch examples on Github](https://github.com/mdn/fetch-examples/)

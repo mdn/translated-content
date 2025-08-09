@@ -12,10 +12,10 @@ Un **protocolo** es un conjunto de reglas que definen cómo se intercambian los 
 ### Conocimiento general
 
 - [Protocolo de comunicaciones](https://es.wikipedia.org/wiki/Protocolo_de_comunicaciones) en Wikipedia
-- [RFC Official Internet Protocol Standards](http://www.rfc-editor.org/search/standards.php)
+- [RFC Official Internet Protocol Standards](https://www.rfc-editor.org/search/standards.php)
 
 ## Vea también
 
 - {{glossary("TCP")}}
-- [Generalidades del protocolo HTTP](/es/docs/Web/HTTP/Overview)
+- [Generalidades del protocolo HTTP](/es/docs/Web/HTTP/Guides/Overview)
 - {{glossary("Packet","Paquete")}}

@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 Метод **`slice()`** возвращает новый массив, содержащий копию части исходного массива.
 
-{{EmbedInteractiveExample("pages/js/array-slice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.slice()")}}
+
+```js interactive-example
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+```
 
 ## Синтаксис
 
@@ -18,7 +40,6 @@ arr.slice([begin[, end]])
 ### Параметры
 
 - `begin` {{optional_inline}}
-
   - : Индекс (счёт начинается с нуля), по которому начинать извлечение.
 
     Если индекс отрицательный, `begin` указывает смещение от конца последовательности. Вызов `slice(-2)` извлечёт два последних элемента последовательности.
@@ -28,7 +49,6 @@ arr.slice([begin[, end]])
     Если `begin` больше длины последовательности вернётся пустой массив.
 
 - `end` {{optional_inline}}
-
   - : Индекс (счёт начинается с нуля), по которому заканчивать извлечение. Метод `slice()` извлекает элементы с индексом меньше `end`.
 
     Вызов `slice(1, 4)` извлечёт элементы со второго по четвёртый (элементы по индексам 1, 2 и 3).

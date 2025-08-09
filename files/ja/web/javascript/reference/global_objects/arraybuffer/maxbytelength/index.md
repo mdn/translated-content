@@ -9,7 +9,17 @@ l10n:
 
 **`maxByteLength`** は {{jsxref("ArrayBuffer")}} インスタンスのアクセサープロパティで、`ArrayBuffer` がサイズ変更可能な最大長をバイト数で表します。
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-maxbytelength.html")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer.maxByteLength")}}
+
+```js interactive-example
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+
+console.log(buffer.byteLength);
+// Expected output: 8
+
+console.log(buffer.maxByteLength);
+// Expected output: 16
+```
 
 ## 解説
 

@@ -9,7 +9,18 @@ l10n:
 
 El método estático **`Object.keys()`** devuelve un arreglo de propiedades enumerables propias de un objeto dado.
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## Sintaxis
 
@@ -92,7 +103,7 @@ console.log(Object.keys(100)); // []
 ## Véase también
 
 - [Polyfill de `Object.keys` en `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

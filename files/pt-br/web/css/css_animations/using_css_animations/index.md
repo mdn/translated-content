@@ -348,4 +348,4 @@ Apenas por questão de completude, aqui está o HTML que exibe o conteúdo da pa
 ## Veja também
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Detectando suporte de animação CSS](/pt-BR/CSS/CSS_animations/Detecting_CSS_animation_support)
+- [Detectando suporte de animação CSS](/pt-BR/docs/CSS/CSS_animations/Detecting_CSS_animation_support)

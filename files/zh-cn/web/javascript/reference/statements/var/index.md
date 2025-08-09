@@ -5,11 +5,23 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 **`var` 语句**用于声明一个函数作用域或全局作用域的变量，并且可以选择将其初始化为一个值。
 
-{{EmbedInteractiveExample("pages/js/statement-var.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Var")}}
+
+```js interactive-example
+var x = 1;
+
+if (x === 1) {
+  var x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 2
+```
 
 ## 语法
 
@@ -22,7 +34,7 @@ var name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : 要声明的变量的名称。必须是有效的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+  - : 要声明的变量的名称。必须是有效的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 - `valueN` {{optional_inline}}
   - : 变量的初始值。可以是任何合法的表达式。默认值为 `undefined`。
 
@@ -79,7 +91,8 @@ delete x; // 在严格模式下，将抛出 SyntaxError，否则静默失败。
 
 `var` 声明，无论它们出现在脚本中的什么位置，都会在执行脚本中的任何代码之前进行处理。在代码中的任何位置声明变量都相当于在顶部声明它。这也意味着变量可以在其声明之前被使用。这种行为被称为[_提升_](/zh-CN/docs/Glossary/Hoisting)，因为变量声明似乎被移动到发生该行为的函数、静态初始化块或脚本源代码的顶部。
 
-> **备注：** `var` 声明仅提升到当前脚本的顶部。如果在一个 HTML 文件中有两个 `<script>` 元素，则第一个脚本无法访问第二个脚本声明的变量，直到第二个脚本已被处理和执行。
+> [!NOTE]
+> `var` 声明仅提升到当前脚本的顶部。如果在一个 HTML 文件中有两个 `<script>` 元素，则第一个脚本无法访问第二个脚本声明的变量，直到第二个脚本已被处理和执行。
 
 ```js
 bla = 2;
@@ -277,7 +290,7 @@ console.log(x, z); // 3 5
 console.log(typeof y); // “undefined”，因为 y 是 a 函数的局部变量
 ```
 
-### 解构赋值声明
+### 解构声明
 
 每个 `=` 的左侧也可以是一个绑定模式。这允许一次创建多个变量。
 
@@ -287,7 +300,7 @@ var [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-有关更多信息，请参阅[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+有关更多信息，请参阅[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ## 规范
 

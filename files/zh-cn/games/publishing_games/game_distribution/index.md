@@ -3,9 +3,7 @@ title: Game distribution
 slug: Games/Publishing_games/Game_distribution
 ---
 
-{{GamesSidebar}}
-
-你已经跟着一两个[教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
+你已经跟着一两个[教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
 
 ## HTML5 相较于传统的好处
 
@@ -15,7 +13,7 @@ slug: Games/Publishing_games/Game_distribution
 
 HTML5 本身是多平台的，所以你只需要写一种代码就可以适配不同的平台。从小型的智能手机和平板电脑，到笔记本电脑和台式电脑，再到智能电视，智能手表甚至是智能冰箱（如果它内置现代化浏览器的话）。
 
-你并不需要数个开发小组去编写不同平台的代码，你们只需要维护这一种基础代码。你可以花更多时间去[推广游戏](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion)和促进[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)。
+你并不需要数个开发小组去编写不同平台的代码，你们只需要维护这一种基础代码。你可以花更多时间去[推广游戏](/zh-CN/docs/Games/Publishing_games/Game_promotion)和促进[游戏收益化](/zh-CN/docs/Games/Publishing_games/Game_monetization)。
 
 ### 即时更新
 
@@ -41,7 +39,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 - 发行商代理
 - 上架商店
 
-记住你的游戏名应该要足够独特，这样可以在发布之后迅速地[推广](/zh-CN/docs/Games/Techniques/Publishing_games/Game_promotion), 但也要同样朗朗上口，这样人们才不会忘记。
+记住你的游戏名应该要足够独特，这样可以在发布之后迅速地[推广](/zh-CN/docs/Games/Publishing_games/Game_promotion), 但也要同样朗朗上口，这样人们才不会忘记。
 
 ### 自运营
 
@@ -94,7 +92,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 ## 打包游戏
 
-网页是 HTML5 游戏的首选也是最好的选择，但如果你想接触到更广泛的受众并在封闭的生态系统中发行你的游戏，你仍然可以通过打包它来做到这一点。好在你不需要几个独立的团队在不同的平台上致力于同一款游戏——你可以一次性构建它，并使用像 [Phonegap](/zh-CN/docs/) 或 [CocoonIO](/zh-CN/docs/) 这样的工具为本地商店打包游戏。生成的包通常非常可靠，但是你仍然应该测试它们，并注意要修复的小问题或 bug。
+网页是 HTML5 游戏的首选也是最好的选择，但如果你想接触到更广泛的受众并在封闭的生态系统中发行你的游戏，你仍然可以通过打包它来做到这一点。好在你不需要几个独立的团队在不同的平台上致力于同一款游戏——你可以一次性构建它，并使用像 [Phonegap](/zh-CN/docs/Web) 或 [CocoonIO](/zh-CN/docs/Web) 这样的工具为本地商店打包游戏。生成的包通常非常可靠，但是你仍然应该测试它们，并注意要修复的小问题或 bug。
 
 ### 实用工具
 
@@ -108,7 +106,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 其他替代工具包括：
 
 - [Intel XDK](https://software.intel.com/en-us/intel-xdk) — 一个很棒的替代品，类似 CocoonIO。
-- [Electron](http://electron.atom.io/) — 或者叫 Atom Shell，是 GitHub 的一个开源跨平台工具。.
+- [Electron](http://electron.atom.io/) — 或者叫 Atom Shell，是 GitHub 的一个开源跨平台工具。
 - [Manifold.js](http://manifoldjs.com/) — 微软团队的这个工具可以从 iOS、Android 和 Windows 创建 HTML5 游戏的本地发行版。
 
 ## 总结

@@ -13,9 +13,9 @@ ARIA - это набор специальных атрибутов, которы
 
 ### Начало работы с ARIA
 
-- [Введение в ARIA](/ru/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
-  - : Быстрое введение в превращение динамического контента в доступный с помощью ARIA. Смотрите также классическую статью [ARIA intro by Gez Lemon](http://dev.opera.com/articles/view/introduction-to-wai-aria/), from 2008.
-- [Web Applications and ARIA FAQ](/ru/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ)
+- [Введение в ARIA](/ru/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
+  - : Быстрое введение в превращение динамического контента в доступный с помощью ARIA. Смотрите также классическую статью [ARIA intro by Gez Lemon](https://dev.opera.com/articles/view/introduction-to-wai-aria/), from 2008.
+- [Web Applications and ARIA FAQ](/ru/docs/Web/Accessibility/ARIA)
   - : Ответы на часто задаваемые вопросы о том как и почему нужно использовать ARIA в разработке интерфейсов веб-приложений.
 - [Записи использования экранных читалок с ARIA.](http://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/)
   - : На этих видео можно увидеть реальные и учебные примеры того ARIA улучшает доступность.
@@ -26,23 +26,23 @@ ARIA - это набор специальных атрибутов, которы
 
 - [Улучшение навигации по странице с помощью ARIA Landmarks](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : Хорошее введение в использование ARIA landmarks для улучшения навигации для пользователей с экранными читалками. [Стоит также заглянуть в заметки по поддержке ARIA landmarks читалками](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) и примеры использования на реальных сайтах (опубликовано в Июле 2011).
-- [Улучшение доступности форм](/ru/docs/ARIA/forms)
+- [Улучшение доступности форм](/ru/docs/Web/Accessibility/ARIA)
   - : ARIA используется не только для обозначения динамического контента! Узнайте, как улучшить доступность форм HTML используя дополнительные ARIA-атрибуты.
-- [Live regions (в процессе написания)](/ru/docs/Accessibility/ARIA/ARIA_Live_Regions)
+- [Live regions (в процессе написания)](/ru/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions подсказывают экранным читалкам как правильно обрабатывать изменения контента на странице.
 - [Использование ARIA Live Regions для оповещения об изменении контента страницы](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
   - : Краткая сводка об использовании live regions от создателей JAWS screen reader software. Live regions также поддерживаются NVDA в Firefox и VoiceOver в Safari.
 
 ### ARIA для виджетов на JavaScript
 
-- [Навигация с помощью клавиатуры и фокус в виджетах на JavaScript](/ru/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Навигация с помощью клавиатуры и фокус в виджетах на JavaScript](/ru/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
   - : Первый шаг в создании доступных JavaScript виджетов, позволяющих производить навигацию с помощью клавиатуры. Статья описывает последовательные шаги по достижению цели. Ещё один хороший ресурс - [статья Yahoo! об управлении фокусом.](http://www.yuiblog.com/blog/2009/02/23/managing-focus/)
 - [Style Guide for Keyboard Navigation](http://access.aol.com/dhtml-style-guide-working-group/)
   - : В этом руководстве описываются способы управления самыми распространёнными виджетами с клавиатуры.
 
 ### Дополнительные ресурсы по ARIA
 
-- [Виджеты. Техники, руководства, примеры.](/ru/docs/Accessibility/ARIA/widgets/overview)
+- [Виджеты. Техники, руководства, примеры.](/ru/docs/Web/Accessibility/ARIA)
   - : Нужен слайдер, меню или другой виджет? здесь вы можете найти все, что нужно
 - [JavaScript UI библиотеки со встроенной поддержкой ARIA.](http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/)
   - : Если вы начинаете новый проект, то вам стоит обратить внимание на UI библиотеки, имеющие встроенную поддержку ARIA. Внимание: статья 2009 года — то, что она описывает, стоит вынести в отдельную статью на MDN, которая будет поддерживаться в актуальном состоянии.
@@ -62,11 +62,11 @@ ARIA - это набор специальных атрибутов, которы
 
 ### Обнаружение багов
 
-[Сообщайте об ошибках ARIA в браузерах, экранных читалках и библиотеках JavaScript.](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
+[Сообщайте об ошибках ARIA в браузерах, экранных читалках и библиотеках JavaScript.](/en-US/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
 
 ### Примеры
 
-- [ARIA. Библиотека примеров.](/ru/docs/Accessibility/ARIA/ARIA_Test_Cases)
+- [ARIA. Библиотека примеров.](/ru/docs/Web/Accessibility/ARIA)
   - : Набор примеров по которым можно многому научиться.
 - Различные демки библиотек с доступными JS виджетами.
   - : [jQuery](http://hanshillen.github.com/jqtest/), [YUI](http://yuilibrary.com/gallery/)
@@ -77,21 +77,20 @@ ARIA - это набор специальных атрибутов, которы
 
 ### Стандартизация
 
-- [WAI-ARIA Activities Overview at W3C](http://www.w3.org/WAI/intro/aria.php)
+- [WAI-ARIA Activities Overview at W3C](https://www.w3.org/WAI/intro/aria.php)
   - : Authoritative Overview of WAI-ARIA Standardization efforts by the Web Accessibility Initiative (WAI)
-- [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
+- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria/)
   - : The W3C specification itself, useful as a reference. Note that, at this stage, it is important to test compatibility, as implementations are still inconsistent.
-- [WAI-ARIA Authoring Practices](http://www.w3.org/WAI/PF/aria-practices/)
-
+- [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/PF/aria-practices/)
   - : Like the W3C WAI-ARIA specification, the official best practices represents a future ideal — a day when authors can rely on consistent ARIA support across browsers and screen readers. The W3C documents provide an in-depth view of ARIA.
 
     For now, web developers implementing ARIA should maximize compatibility. Use best practices docs and examples based on current implementations.
 
 - [Open AJAX Accessibility Task Force](http://www.openajax.org/member/wiki/Accessibility)
   - : The Open AJAX effort centers around developing tools, sample files, and automated tests for ARIA.
-- [Under Construction: WCAG 2.0 ARIA Techniques](/ru/docs/Accessibility/ARIA/ARIA_Techniques)
+- [Under Construction: WCAG 2.0 ARIA Techniques](/ru/docs/Web/Accessibility/ARIA/Guides/Techniques)
   - : The community needs a complete set of WCAG techniques for WAI-ARIA + HTML, so that organizations can be comfortable claiming their ARIA-enabled content is WCAG compliant. This is important when regulations or policies are based on WCAG.
 
 ### Related Topics
 
-[Accessibility](/ru/docs/Accessibility), [AJAX](/ru/docs/AJAX), [JavaScript](/ru/docs/JavaScript)
+[Accessibility](/ru/docs/Web/Accessibility), [AJAX](/ru/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/ru/docs/Web/JavaScript)

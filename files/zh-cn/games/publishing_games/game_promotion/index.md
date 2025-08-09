@@ -3,9 +3,7 @@ title: Game promotion
 slug: Games/Publishing_games/Game_promotion
 ---
 
-{{GamesSidebar}}
-
-开发与发行你的游戏并不是全部.。你应该让大家知道你有个大家会喜欢玩的游戏。这儿有很多方法去推广你的游戏——大部分方法是免费的，所以即使即使你正努力以一名零预算的独立开发者的身份谋生，你也可以让人们知道你的新游戏.。推广游戏也对之后的[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)大有裨益，所以正确地推广游戏是很重要的。
+开发与发行你的游戏并不是全部.。你应该让大家知道你有个大家会喜欢玩的游戏。这儿有很多方法去推广你的游戏——大部分方法是免费的，所以即使即使你正努力以一名零预算的独立开发者的身份谋生，你也可以让人们知道你的新游戏.。推广游戏也对之后的[游戏收益化](/zh-CN/docs/Games/Publishing_games/Game_monetization)大有裨益，所以正确地推广游戏是很重要的。
 
 ## 竞赛
 
@@ -28,7 +26,7 @@ slug: Games/Publishing_games/Game_promotion
 
 ## 游戏门户网站
 
-设立门户网站主要与[收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)挂钩，但是如果你不打算[售卖许可](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization#Licensing)来让人们可以购买你的游戏而是打算[发布广告](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization#Advertisements) , 在免费的门户网站上推广游戏会更有效。你可以在公共门户网站，比如[HTML5Games.com](http://html5games.com/)发布游戏，比起传统的游戏发行平台，它更像一个宣传平台。
+设立门户网站主要与[收益化](/zh-CN/docs/Games/Publishing_games/Game_monetization)挂钩，但是如果你不打算[售卖许可](/zh-CN/docs/Games/Publishing_games/Game_monetization#licensing)来让人们可以购买你的游戏而是打算[发布广告](/zh-CN/docs/Games/Publishing_games/Game_monetization#advertisements) , 在免费的门户网站上推广游戏会更有效。你可以在公共门户网站，比如[HTML5Games.com](http://html5games.com/)发布游戏，比起传统的游戏发行平台，它更像一个宣传平台。
 
 免费的门户网站带来了流量，但是，只有最好的广告才足够受欢迎，能够从发布的广告中获得一些业绩。另一方面，如果你没有预算和有限的时间，门户网站也是一个完美的工具，它可以让更多人看到你的游戏
 
@@ -44,7 +42,7 @@ slug: Games/Publishing_games/Game_promotion
 
 像是[Tuts+ Game Development](http://gamedevelopment.tutsplus.com/) 这样的网站可能会更让人开心——他们为文章付稿费。但并不是所有的主旨都会被接受。当你在写教程的时候，记住要把重点放在给读者提供一些有价值的东西上。他们想要学习一些东西——提供你的专业知识并将你的游戏作为案例研究。专注于一个方面，并试图解释它的全部和细节。如果人们有任何问题，请记得在评论中跟进讨论。
 
-如果你联系的门户网站因你未写过教程而未采纳你的教程，可以在[自己的博客](/zh-CN/docs/Games/Publishing_games/Game_promotion#Website_and_blog)先发布教程，这是锻炼你的写作技巧的最简单的方式。
+如果你联系的门户网站因你未写过教程而未采纳你的教程，可以在[自己的博客](#Website_and_blog)先发布教程，这是锻炼你的写作技巧的最简单的方式。
 
 ## YouTuber 视频主 (YouTubers)
 
@@ -54,11 +52,11 @@ slug: Games/Publishing_games/Game_promotion
 
 ## 活动
 
-如果你已经完成了上面列出的所有选项，你仍然可以找到新的、创造性的方式去推广你的游戏——活动便是另一个很好的例子。参加本地和全球的活动，让你能够面对面地与你的粉丝以及开发社区的其他成员见面。别辜负了他们专程花时间来看你的心思。.
+如果你已经完成了上面列出的所有选项，你仍然可以找到新的、创造性的方式去推广你的游戏——活动便是另一个很好的例子。参加本地和全球的活动，让你能够面对面地与你的粉丝以及开发社区的其他成员见面。别辜负了他们专程花时间来看你的心思。
 
 ### 会议
 
-在许多会议上，你可以发表演讲，解释你克服的一些技术困难，或者如何实现特定的 API;其次，以你的游戏为例。专注于知识部分并降低市场营销是很重要的——开发者对这个问题很敏感，如果你只是想向他们推销一些东西，他们可能会对此不满。.
+在许多会议上，你可以发表演讲，解释你克服的一些技术困难，或者如何实现特定的 API；其次，以你的游戏为例。专注于知识部分并降低市场营销是很重要的——开发者对这个问题很敏感，如果你只是想向他们推销一些东西，他们可能会对此不满。
 
 ### 展会
 
@@ -70,10 +68,10 @@ slug: Games/Publishing_games/Game_promotion
 
 ## 培养社区
 
-你可以帮助社区成长，同时推广你自己和你的游戏。发布[每周时事通讯](http://gamedevjsweekly.com/)，组织[在线竞赛](http://js13kgames.com/)或者[线下聚会](http://gamedevjs.com/)，这些都能让别人知道你对自己的工作充满激情，他们可以依靠你。当你需要帮助的时候，他们会在你身边
+你可以帮助社区成长，同时推广你自己和你的游戏。发布[每周时事通讯](http://gamedevjsweekly.com/)，组织[在线竞赛](https://js13kgames.com/)或者[线下聚会](http://gamedevjs.com/)，这些都能让别人知道你对自己的工作充满激情，他们可以依靠你。当你需要帮助的时候，他们会在你身边
 
 ## 总结
 
 任何推广你的游戏的方法都是好的。你有很多选择，其中大部分都是免费的，所以关键在于你的热情和可用时间。有时候你不得不花更多的时间去推广一款游戏，而不是真正去开发它。记住，如果没有人知道世界上最好的游戏的存在，那么拥有它是没有任何意义的。
 
-现在让我们进入[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization)部分，然后挣口饭吃吧。
+现在让我们进入[游戏收益化](/zh-CN/docs/Games/Publishing_games/Game_monetization)部分，然后挣口饭吃吧。

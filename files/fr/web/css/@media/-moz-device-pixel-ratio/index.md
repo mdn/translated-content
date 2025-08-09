@@ -1,11 +1,11 @@
 ---
-title: "-moz-device-pixel-ratio"
+title: -moz-device-pixel-ratio
 slug: Web/CSS/@media/-moz-device-pixel-ratio
 ---
 
 {{cssref}} {{Non-standard_header}} {{Deprecated_header}}
 
-La [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#ciblfer_des_caractéristiques_média) **`-moz-device-pixel-ratio`**, associée à [`@media`](/fr/docs/Web/CSS/@media), est une caractéristique propre à Gecko et peut être utilisée pour appliquer certains styles en fonctions du nombres de pixels physiques par pixel CSS.
+La [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#ciblfer_des_caractéristiques_média) **`-moz-device-pixel-ratio`**, associée à [`@media`](/fr/docs/Web/CSS/@media), est une caractéristique propre à Gecko et peut être utilisée pour appliquer certains styles en fonctions du nombres de pixels physiques par pixel CSS.
 
 > [!WARNING]
 > Ne pas utiliser cette fonctionnalité ! La caractéristique [`resolution`](/fr/docs/Web/CSS/@media/resolution) et l'unité `dppx` permettent d'obtenir le même mécanisme.

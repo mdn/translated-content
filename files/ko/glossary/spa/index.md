@@ -14,15 +14,13 @@ l10n:
 ## 같이 보기
 
 - 위키백과의 [단일 페이지 애플리케이션](https://en.wikipedia.org/wiki/Single-page_application)
-- [클라이언트 사이드 JavaScript 프레임워크의 이해](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [클라이언트 사이드 JavaScript 프레임워크의 이해](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("API")}}
   - {{Glossary("AJAX")}}
   - {{Glossary("JavaScript")}}
 
 - 인기있는 SPA 프레임워크
-
   - [React](https://react.dev/)
   - [Angular](https://angular.io/)
   - [Vue.JS](https://vuejs.org/)

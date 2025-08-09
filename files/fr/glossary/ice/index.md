@@ -19,7 +19,7 @@ L'algorithme du framework recherche le chemin avec la plus faible latence pour c
 ### Culture générale
 
 - [WebRTC](/fr/docs/Web/API/WebRTC_API), le principal protocole relatif au web qui utilise ICE
-- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Architecture/Protocols)
+- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
 
 ### Référence technique
 

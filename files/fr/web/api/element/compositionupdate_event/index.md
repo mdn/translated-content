@@ -20,16 +20,16 @@ L'événement **compositionupdate** est déclenché lorsqu'un caractère est ajo
 
 ## Propriétés
 
-| Property                        | Type                                               | Description                                                                                      |
-| ------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `target` {{ReadOnlyInline}}     | {{domxref("EventTarget")}}                         | Elément ayant le focus qui traite la composition. Nul si non-accessible.                         |
-| `type` {{ReadOnlyInline}}       | {{domxref("DOMString")}}                           | Le type de l'événement.                                                                          |
-| `bubbles` {{ReadOnlyInline}}    | `boolean`                                          | Est-ce qu'il se propage?                                                                         |
-| `cancelable` {{ReadOnlyInline}} | `boolean`                                          | Peut-il être annulé?                                                                             |
-| `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}                         | {{domxref("Document.defaultView")}} (fenêtre du document).                                       |
-| `detail` {{ReadOnlyInline}}     | `long` (`float`)                                   | 0.                                                                                               |
-| `data` {{ReadOnlyInline}}       | [`DOMString`](/fr/docs/Web/API/DOMString) (string) | La chaîne de caractères originale éditée ou une chaîne vide.                                     |
-| `locale` {{ReadOnlyInline}}     | [`DOMString`](/fr/docs/Web/API/DOMString) (string) | Le code de la langue pour l'évènement de composition si disponible&nbsp;; sinon une chaîne vide. |
+| Property                        | Type                                                                            | Description                                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `target` {{ReadOnlyInline}}     | {{domxref("EventTarget")}}                                                      | Elément ayant le focus qui traite la composition. Nul si non-accessible.                         |
+| `type` {{ReadOnlyInline}}       | {{domxref("DOMString")}}                                                        | Le type de l'événement.                                                                          |
+| `bubbles` {{ReadOnlyInline}}    | `boolean`                                                                       | Est-ce qu'il se propage?                                                                         |
+| `cancelable` {{ReadOnlyInline}} | `boolean`                                                                       | Peut-il être annulé?                                                                             |
+| `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}                                                      | {{domxref("Document.defaultView")}} (fenêtre du document).                                       |
+| `detail` {{ReadOnlyInline}}     | `long` (`float`)                                                                | 0.                                                                                               |
+| `data` {{ReadOnlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (string) | La chaîne de caractères originale éditée ou une chaîne vide.                                     |
+| `locale` {{ReadOnlyInline}}     | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (string) | Le code de la langue pour l'évènement de composition si disponible&nbsp;; sinon une chaîne vide. |
 
 ## Spécifications
 

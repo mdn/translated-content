@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 Метод **`filter()`** **создаёт новый массив со всеми элементами**, прошедшими проверку, задаваемую в передаваемой функции.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## Синтаксис
 
@@ -31,11 +40,9 @@ filter(function callbackFn(element, index, array) { ... }, thisArg)
 ### Параметры
 
 - `callbackFn`
-
   - : Функция-предикат, которая будет вызвана для проверки каждого элемента массива. Если функция возвращает `true`, то элемент остаётся в массиве, если `false`, то удаляется.
 
     Принимает три аргумента
-
     - `element`
       - : Текущий обрабатываемый элемент в массиве.
     - `index`{{optional_inline}}

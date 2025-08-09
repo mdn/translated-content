@@ -13,5 +13,5 @@ l10n:
 
 ## 参见
 
-- [CSS 性能优化](/zh-CN/docs/Learn/Performance/CSS)
-- [JavaScript 性能优化](/zh-CN/docs/Learn/Performance/JavaScript)
+- [CSS 性能优化](/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS)
+- [JavaScript 性能优化](/zh-CN/docs/Learn_web_development/Extensions/Performance/JavaScript)

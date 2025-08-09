@@ -1,11 +1,9 @@
 ---
-title: "::highlight()"
+title: ::highlight()
 slug: Web/CSS/::highlight
 l10n:
   sourceCommit: 47ed48a36b456f8ea9ab6aaa5969c55d2912edcb
 ---
-
-{{CSSRef}}
 
 **`::highlight()`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)用于设置自定义高亮样式。
 

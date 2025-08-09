@@ -71,7 +71,7 @@ l10n:
 
 Github 上の[ウェブ音声 API リポジトリー](https://github.com/mdn/dom-examples/tree/main/web-speech-api) には、音声合成や音声認識を説明するデモが含まれています。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

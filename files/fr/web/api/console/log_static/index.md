@@ -53,7 +53,7 @@ Si vous modifiez l'objet et que vous ne voulez pas que les informations journali
 console.log(JSON.parse(JSON.stringify(obj)));
 ```
 
-D'autres méthodes, comme [`structuredClone()`](/fr/docs/Web/API/structuredClone), peuvent fonctionner dans les navigateurs et seront plus efficaces pour cloner différents types d'objet.
+D'autres méthodes, comme [`structuredClone()`](/fr/docs/Web/API/Window/structuredClone), peuvent fonctionner dans les navigateurs et seront plus efficaces pour cloner différents types d'objet.
 
 ## Spécifications
 

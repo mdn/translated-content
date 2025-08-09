@@ -3,11 +3,56 @@ title: border-style
 slug: Web/CSS/border-style
 ---
 
-{{CSSRef}}
+La propiedad **`border-style`** [CSS](/es/docs/Web/CSS) es una [shorthand property](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) (Propiedad abreviada) que establece el estilo de línea para los cuatro lados del borde de un elemento.
 
-La propiedad **`border-style`** [CSS](/en/CSS) es una [shorthand property](/es/docs/Web/CSS/Shorthand_properties) (Propiedad abreviada) que establece el estilo de línea para los cuatro lados del borde de un elemento.
+{{InteractiveExample("CSS Demo: border-style")}}
 
-{{EmbedInteractiveExample("pages/css/border-style.html")}}
+```css interactive-example-choice
+border-style: none;
+```
+
+```css interactive-example-choice
+border-style: dotted;
+```
+
+```css interactive-example-choice
+border-style: inset;
+```
+
+```css interactive-example-choice
+border-style: dashed solid;
+```
+
+```css interactive-example-choice
+border-style: dashed double none;
+```
+
+```css interactive-example-choice
+border-style: dashed groove none dotted;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 ## Syntax
 
@@ -51,7 +96,6 @@ Cada valor es una palabra clave elegida de la siguiente lista.
 ### Values
 
 - `<br-style>`
-
   - : Describe el estilo del borde. Puede tener los siguientes valores:
 
     | `none`   |     | Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the calculated value of {{ cssxref("border-top-width") }} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.   |

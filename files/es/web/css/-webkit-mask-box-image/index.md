@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-box-image"
+title: -webkit-mask-box-image
 slug: Web/CSS/-webkit-mask-box-image
 ---
 
@@ -11,11 +11,11 @@ slug: Web/CSS/-webkit-mask-box-image
 
 `-webkit-mask-box-image` establece la imagen de máscara para la caja del borde de un elemento.
 
-- {{ Xref_cssinitial() }}: none
+- [Valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing): none
 - Se aplica a : Todos los elementos
-- {{ Xref_cssinherited() }}: no
+- [Heredable](/es/docs/Web/CSS/CSS_cascade/Inheritance): no
 - Media: {{cssxref("Media/Visual", "visual")}}
-- {{ Xref_csscomputed() }}: tal y como se especfica
+- [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d): tal y como se especfica
 
 ## Síntaxis
 
@@ -39,7 +39,6 @@ Where:
 - \<gradient>
   - : La función -webkit-gradient que se usará como imagen de máscara.
 - none
-
   - : Para especificar que la caja del borde no va a tener imagen de máscara.
 
 - \<length>

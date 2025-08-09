@@ -60,5 +60,5 @@ items: [
 
 ## 関連情報
 
-- [テキストフラグメント](/ja/docs/Web/Text_fragments)
+- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}

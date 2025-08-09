@@ -62,5 +62,5 @@ for octal literals use the \"0o\" prefix instead
 
 ## 関連項目
 
-- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ja/docs/Web/JavaScript/Reference/Errors/Bad_octal)
+- [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
+- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)

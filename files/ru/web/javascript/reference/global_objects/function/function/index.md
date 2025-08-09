@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 
 **Конструктор `Function`** создаёт новый **объект** `Function`. Вызов конструктора напрямую позволяет создавать функции программным путём, однако такой способ представляет угрозу для безопасности, а также несёт разные (хотя не такие значительные) проблемы с производительностью при использовании с {{jsxref("Global_Objects/eval")}}. Однако в отличие от eval, конструктор `Function` создаёт функции, выполняемые только в глобальной области видимости.
 
-{{EmbedInteractiveExample("pages/js/function-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+
+```js interactive-example
+const sum = new Function("a", "b", "return a + b");
+
+console.log(sum(2, 6));
+// Expected output: 8
+```
 
 ## Синтаксис
 
@@ -20,8 +27,7 @@ new Function(arg1, ... , argN, functionBody)
 ### Параметры
 
 - `arg1, arg2, ... argN`
-
-  - : Имена, используемые функцией в качестве имён формальных аргументов. Каждое имя должно быть строкой с правильным JavaScript-значением (либо [идентификатором](/ru/docs/Glossary/Identifier), [оставшимся параметром](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), или [деструктурирующим присваиванием](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), либо списком таких строк, разделённых запятой.
+  - : Имена, используемые функцией в качестве имён формальных аргументов. Каждое имя должно быть строкой с правильным JavaScript-значением (либо [идентификатором](/ru/docs/Glossary/Identifier), [оставшимся параметром](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), или [деструктурирующим присваиванием](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring), либо списком таких строк, разделённых запятой.
 
     Поскольку параметры разбираются так же, как и объявления функций, допускается использование пробелов и комментариев. Например: `"x", "theValue = 42", "[a, b] /* numbers */"` — или `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` также будет правильным, хотя трудно читаемым).
 

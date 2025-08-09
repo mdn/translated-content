@@ -32,7 +32,7 @@ El evento **`invalid`** se dispara cuando se ha comprobado la validez de un elem
   </tbody>
 </table>
 
-Este evento puede ser útil para desplegar un resumen de los problemas con un formulario al enviarlo. Cuando un formulario se envía, los eventos `invalid` son disparados en cada control del formulario que es inválido, y entonces en el mismo elemento [`form`](https://www.w3.org/TR/html51/sec-forms.html#elementdef-form). La válidez de los elementos presentados se comprueba antes de enviar al propio {{HtmlElement("form")}}, o despúes del método [`checkValidity()`](/es/docs/HTML/Forms_in_HTML#Constraint_Validation_API) de un elemento o su propio `<form>` es llamado. No es revisada al perder el foco (on blur).
+Este evento puede ser útil para desplegar un resumen de los problemas con un formulario al enviarlo. Cuando un formulario se envía, los eventos `invalid` son disparados en cada control del formulario que es inválido, y entonces en el mismo elemento [`form`](https://www.w3.org/TR/html51/sec-forms.html#elementdef-form). La válidez de los elementos presentados se comprueba antes de enviar al propio {{HtmlElement("form")}}, o despúes del método [`checkValidity()`](/es/docs/Learn_web_development/Extensions/Forms#constraint_validation_api) de un elemento o su propio `<form>` es llamado. No es revisada al perder el foco (on blur).
 
 ## Ejemplo
 
@@ -82,5 +82,5 @@ function logValue(e) {
 
 - {{domxref("GlobalEventHandlers.oninvalid")}}
 - Elemento HTML {{HtmlElement("form")}}
-- Evento relacionado: [`submit`](/es/docs/Web/Reference/Events/submit)
+- Evento relacionado: [`submit`](/es/docs/Web/API/HTMLFormElement/submit_event)
 - [CSS `:invalid` pseudo class](/es/docs/Web/CSS/:invalid)

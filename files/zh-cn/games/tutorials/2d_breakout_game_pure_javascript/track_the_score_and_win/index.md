@@ -3,11 +3,9 @@ title: 跟踪得分和获胜
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
-本篇为[Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch)10 节教程中的**第 8 节。**在你完成这篇课程之后，你可以在[Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html)找到我们的源代码。
+本篇为[Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)10 节教程中的**第 8 节。**在你完成这篇课程之后，你可以在[Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html)找到我们的源代码。
 
 破坏砖块真的很酷，但更酷的是，游戏可以给每个用户击破的砖块奖励分数，并保持总分。
 
@@ -104,6 +102,6 @@ function collisionDetection() {
 
 ## 下一节
 
-游戏到这一步看起来相当不错。在下一课中，你将通过添加鼠标控件来扩大游戏的吸引力：[Mouse controls](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Mouse_controls).。
+游戏到这一步看起来相当不错。在下一课中，你将通过添加鼠标控件来扩大游戏的吸引力：[Mouse controls](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

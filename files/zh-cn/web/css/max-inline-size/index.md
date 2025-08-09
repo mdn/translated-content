@@ -3,13 +3,50 @@ title: max-inline-size
 slug: Web/CSS/max-inline-size
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`max-inline-size`** 根据元素的书写模式定义了元素区块的横向或纵向最大尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("max-width")}} 或 {{CSSXref("max-height")}} 属性。
 
 若为纵向书写模式，则 `max-inline-size` 的值对应于元素的最大高度；否则对应于元素的最大宽度。与此相关的属性为 {{CSSXref("max-block-size")}}，此属性定义了元素另一方向的尺度。
 
-{{EmbedInteractiveExample("pages/css/max-inline-size.html")}}
+{{InteractiveExample("CSS Demo: max-inline-size")}}
+
+```css interactive-example-choice
+max-inline-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-inline-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-inline-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-inline-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the max-inline-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 语法
 

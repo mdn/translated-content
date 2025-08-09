@@ -3,11 +3,9 @@ title: background-origin
 slug: Web/CSS/background-origin
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
-La propiedad background-origin especifica el área de origen de un fondo o imagen en determinada caja. para que la propiedad [background-position](/es/CSS/background-position) calcule la posición de inicio de un fondo o imagen definida por la propiedad [background-image](/es/CSS/background-image).
+La propiedad background-origin especifica el área de origen de un fondo o imagen en determinada caja. para que la propiedad [background-position](/es/docs/Web/CSS/background-position) calcule la posición de inicio de un fondo o imagen definida por la propiedad [background-image](/es/docs/Web/CSS/background-image).
 
 - Valor inicial: padding-box
 - Aplica a: Todos los elementos
@@ -54,7 +52,7 @@ div{
 ## Notas
 
 - La propiedad background-origin es ignorada si la propiedad background-attachment tiene un valor de fixed.
-- Si el valor de esta propiedad no es establecido en la propiedad abreviada (shorthand) [background](/es/CSS/background) que es aplicada a el elemento despues de la propiedad background-origin, el valor de esta propiedad sera restablecido a su valor inicial por la propiedad abreviada background.
+- Si el valor de esta propiedad no es establecido en la propiedad abreviada (shorthand) [background](/es/docs/Web/CSS/background) que es aplicada a el elemento despues de la propiedad background-origin, el valor de esta propiedad sera restablecido a su valor inicial por la propiedad abreviada background.
 
 ### Especificaciones
 
@@ -66,4 +64,4 @@ div{
 
 ## Relacionado
 
-[background](/es/CSS/background), [background-attachment](/es/CSS/background-attachment)[, background-image](/es/CSS/background-image),[background-repeat](/es/CSS/background-repeat)
+[background](/es/docs/Web/CSS/background), [background-attachment](/es/docs/Web/CSS/background-attachment)[, background-image](/es/docs/Web/CSS/background-image),[background-repeat](/es/docs/Web/CSS/background-repeat)

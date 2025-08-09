@@ -54,27 +54,24 @@ Não há nenhuma limitação para a profundidade e a imbricação das listas def
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `compact`{{ Deprecated_inline() }}
-
   - : Este atributo booleano sugere que a lista será processada em um modelo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
 
-    > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/pt-BR/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/pt-BR/CSS/line-height) (espaçamento), da [CSS](/pt-BR/CSS), pode ser utilizada com um valor de 80%.
+    > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/pt-BR/docs/Web/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/pt-BR/docs/CSS/line-height) (espaçamento), da [CSS](/pt-BR/docs/Web/CSS), pode ser utilizada com um valor de 80%.
 
 - `type`{{ Deprecated_inline() }}
-
   - : Usados para estabelecer o tipo de marcador da lista. Os valores definidos durante a [HTML3.2](/pt-BR/HTML3.2) e a versão de transição de [HTML 4.0/4.01](/pt-BR/HTML4.01), são:
-
     - `círculo`,
     - `disco`,
     - e `quadrado`.
 
     Um quarto tipo de marcação está definido na interface _WebTV_, mas nem todos os navegadores o acolhem: `triângulo.`
 
-    Se não estiver presente e se nenhuma propriedade [CSS](/pt-BR/CSS) {{ cssxref("list-style-type") }} se aplicar ao elemento, o perfil de navegação decidirá qual tipo de marcador utilizar, dependendo do nível de aninhamento da lista.
+    Se não estiver presente e se nenhuma propriedade [CSS](/pt-BR/docs/Web/CSS) {{ cssxref("list-style-type") }} se aplicar ao elemento, o perfil de navegação decidirá qual tipo de marcador utilizar, dependendo do nível de aninhamento da lista.
 
-    > **Note:** **Nota de utilização:** Não use este atributo, pois está ultrapassado; em seu lugar, utilize a propriedade [CSS](/pt-BR/CSS) {{ cssxref("list-style-type") }}.
+    > **Note:** **Nota de utilização:** Não use este atributo, pois está ultrapassado; em seu lugar, utilize a propriedade [CSS](/pt-BR/docs/Web/CSS) {{ cssxref("list-style-type") }}.
 
 ## Exemplos
 
@@ -126,10 +123,8 @@ A saída HTML acima, é:
 
 - primeiro item
 - segundo item
-
   - segundo item primeiro subitem
   - segundo item segundo subitem
-
     - segundo item segundo subitem primeiro sub-subitem
     - segundo item segundo subitem segundo sub-subitem
     - segundo item segundo subitem terceiro sub-subitem
@@ -161,7 +156,6 @@ A saída HTML acima será:
 
 - primeiro item
 - segundo item
-
   1. segundo item primeiro subitem
   2. segundo item segundo subitem
   3. segundo item terceiro subitem
@@ -172,10 +166,9 @@ A saída HTML acima será:
 
 - Outros elementos HTML relacionados à lista: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} e o obsoleto {{ HTMLElement("dir") }};
 - Propriedades CSS que podem ser especialmente úteis para determinar o modelo do elemento \<ul>:
-
-  - a propriedade [list-style](/pt-BR/CSS/list-style), conveniente para escolher a maneira como os ordinais serão mostrados,
+  - a propriedade [list-style](/pt-BR/docs/CSS/list-style), conveniente para escolher a maneira como os ordinais serão mostrados,
   - [CSS counters](/pt-BR/CSS_Counters), eficientes para guiar listas complexas aninhadas,
-  - a propriedade [line-height](/pt-BR/CSS/line-height), válida para simular o atributo ultrapassado [`compact`](/pt-BR/docs/Web/HTML/Element/ul#compact),
-  - a propriedade [margin](/pt-BR/CSS/margin), proveitosa para controlar a indentação da lista.
+  - a propriedade [line-height](/pt-BR/docs/CSS/line-height), válida para simular o atributo ultrapassado [`compact`](#compact),
+  - a propriedade [margin](/pt-BR/docs/CSS/margin), proveitosa para controlar a indentação da lista.
 
 {{ HTMLSidebar }}

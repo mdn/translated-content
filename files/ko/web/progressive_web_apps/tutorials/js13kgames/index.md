@@ -29,14 +29,14 @@ PWA는 이들과 동일한 이점을 즐길 수 있는 웹 앱을 생성하는 �
 
 다음은 웹 앱을 PWA로 식별되기 위해 확인해야 하는 몇 가지 핵심 원칙입니다.
 
-- [발견 가능](/ko/Apps/Progressive/Advantages#Discoverable), 따라서 컨텐츠를 검색 엔진을 통해 찾을 수 있습니다.
-- [설치 가능](/ko/Apps/Progressive/Advantages#Installable), 따라서 기기의 홈 화면에서 사용할 수 있습니다.
-- [연결 가능](/ko/Apps/Progressive/Advantages#Linkable), 따라서 간단하게 URL을 전송해 공유할 수 있습니다.
-- [네트워크 독립적](/ko/Apps/Progressive/Advantages#Network_independent), 따라서 오프라인이나 불안한 네트워크 연결에서 동작합니다.
-- [점진적](/ko/Apps/Progressive/Advantages#Progressive), 따라서 최신 브라우저의 모든 기능은 사용할 수 없지만 이전 브라우저의 기본 기능은 여전히 사용할 수 있습니다.
-- [재 참여 가능(Re-engageable)](/ko/Apps/Progressive/Advantages#Re-engageable), 따라서 새 컨텐츠가 사용 가능할 때마다 알림을 보낼 수 있습니다.
-- [반응형](/ko/Apps/Progressive/Advantages#Responsive), 따라서 모든 기기의 화면이나 브라우저에서 사용할 수 있습니다 — 모바일 폰, 태블릿, 노트북, TV, 냉장고, 등.
-- [안전](/ko/Apps/Progressive/Advantages#Safe), 따라서 여러분과 앱 사이의 연결이 여러분의 민감한 데이터에 접근하려는 모든 제3자로부터 안전합니다.
+- [발견 가능](/ko/docs/Apps/Progressive/Advantages#discoverable), 따라서 컨텐츠를 검색 엔진을 통해 찾을 수 있습니다.
+- [설치 가능](/ko/docs/Apps/Progressive/Advantages#installable), 따라서 기기의 홈 화면에서 사용할 수 있습니다.
+- [연결 가능](/ko/docs/Apps/Progressive/Advantages#linkable), 따라서 간단하게 URL을 전송해 공유할 수 있습니다.
+- [네트워크 독립적](/ko/docs/Apps/Progressive/Advantages#network_independent), 따라서 오프라인이나 불안한 네트워크 연결에서 동작합니다.
+- [점진적](/ko/docs/Apps/Progressive/Advantages#progressive), 따라서 최신 브라우저의 모든 기능은 사용할 수 없지만 이전 브라우저의 기본 기능은 여전히 사용할 수 있습니다.
+- [재 참여 가능(Re-engageable)](/ko/docs/Apps/Progressive/Advantages#re-engageable), 따라서 새 컨텐츠가 사용 가능할 때마다 알림을 보낼 수 있습니다.
+- [반응형](/ko/docs/Apps/Progressive/Advantages#responsive), 따라서 모든 기기의 화면이나 브라우저에서 사용할 수 있습니다 — 모바일 폰, 태블릿, 노트북, TV, 냉장고, 등.
+- [안전](/ko/docs/Apps/Progressive/Advantages#safe), 따라서 여러분과 앱 사이의 연결이 여러분의 민감한 데이터에 접근하려는 모든 제3자로부터 안전합니다.
 
 ### 이 모든 것들을 할만한 가치가 있나요?
 
@@ -65,7 +65,7 @@ PWA 접근은 시도해볼만한 가치가 있으며, 여러분의 앱에서 동
 
 PWA를 위해 요구되는 핵심 요소는 [service worker](/ko/docs/Web/API/Service_Worker_API) 지원입니다. 고맙게도 service worker는 현재 데스크탑 및 모바일의 [모든 주요 브라우저에서 지원됩니다](https://jakearchibald.github.io/isserviceworkerready/).
 
-[웹 앱 Manifest](/ko/docs/Web/Manifest), [푸시](/ko/docs/Web/API/Push_API), [알림](/ko/docs/Web/API/Notifications_API), [홈 화면에 추가](/ko/docs/Web/Apps/Progressive/Add_to_home_screen) 기능과 같은 다른 기능들도 널리 지원되고 있습니다. 현재 Safari에서는 웹 앱 Manifest 및 홈 화면에 추가에 지원이 제한적이며 웹 푸시 알림은 지원하지 않습니다. 반면, 다른 주요 브라우저에서는 이 모든 기능들을 지원합니다.
+[웹 앱 Manifest](/ko/docs/Web/Progressive_web_apps/Manifest), [푸시](/ko/docs/Web/API/Push_API), [알림](/ko/docs/Web/API/Notifications_API), [홈 화면에 추가](/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) 기능과 같은 다른 기능들도 널리 지원되고 있습니다. 현재 Safari에서는 웹 앱 Manifest 및 홈 화면에 추가에 지원이 제한적이며 웹 푸시 알림은 지원하지 않습니다. 반면, 다른 주요 브라우저에서는 이 모든 기능들을 지원합니다.
 
 이러한 API의 일부는 실험중이며 문서도 여전히 완성되지 않았지만, Flipkart 와 AliExpress와 같은 성공 스토리를 보면 여러분의 웹 앱에 PWA 기능의 일부를 시도하고 구현하는 것에 대해 이미 납득이 되었을것입니다.
 
@@ -73,7 +73,7 @@ PWA를 위해 요구되는 핵심 요소는 [service worker](/ko/docs/Web/API/Se
 
 ## 예시 어플리케이션
 
-이 문서 시리즈에서는 [js13kGames 2017](http://2017.js13kgames.com/) 대회의 [A-Frame 카테고리](http://js13kgames.com/aframe)에 제출된 게임에 대한 정보를 나열하는 아주 간단한 웹사이트의 소스코드를 살펴볼 것입니다. 여러분은 웹 사이트의 실제 컨텐츠가 무엇인지에 대해서는 생각할 필요가 없습니다 — 중요한 점은 여러분의 프로젝트에 PWA 기능을 어떻게 사용하는지를 배우는 것입니다.
+이 문서 시리즈에서는 [js13kGames 2017](https://2017.js13kgames.com/) 대회의 [A-Frame 카테고리](https://js13kgames.com/aframe)에 제출된 게임에 대한 정보를 나열하는 아주 간단한 웹사이트의 소스코드를 살펴볼 것입니다. 여러분은 웹 사이트의 실제 컨텐츠가 무엇인지에 대해서는 생각할 필요가 없습니다 — 중요한 점은 여러분의 프로젝트에 PWA 기능을 어떻게 사용하는지를 배우는 것입니다.
 
 온라인 버전은 [mdn.github.io/pwa-examples/js13kpwa](https://mdn.github.io/pwa-examples/js13kpwa/) ([소스 코드도 확인하세요](https://github.com/mdn/pwa-examples/tree/master/js13kpwa))에서 확인하실 수 있으며, 다음 몇 가지 문서에서 자세히 설명할 것입니다.
 

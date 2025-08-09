@@ -3,8 +3,6 @@ title: Usando múltiples fondos con CSS
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
-{{CSSRef}}
-
 Con [CSS3](/es/docs/Web/CSS/CSS3), puedes aplicar **múltiple fondos** a los elementos. Estos se presentan uno encima del otro, poniendo el primer fondo definido hasta arriba, y el último, hasta abajo. Sólo el último fondo puede incluir color de fondo.
 
 Especificar fondos múltiples es fácil:
@@ -23,7 +21,7 @@ Puedes hacerlo con la propiedad atajo {{ cssxref("background") }} y con las prop
 
 ## Ejemplo
 
-En este ejemplo, tres fondos son apilados: el logo de Firefox, un [gradiente lineal](/es/docs/Web/CSS/linear-gradient), y una imagen de burbujas:
+En este ejemplo, tres fondos son apilados: el logo de Firefox, un [gradiente lineal](/es/docs/Web/CSS/gradient/linear-gradient), y una imagen de burbujas:
 
 ### HTML
 
@@ -37,7 +35,8 @@ En este ejemplo, tres fondos son apilados: el logo de Firefox, un [gradiente lin
 .multi_bg_example {
   width: 100%;
   height: 400px;
-  background-image: url(firefox.png), url(bubbles.png),
+  background-image:
+    url(firefox.png), url(bubbles.png),
     linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:
@@ -66,4 +65,4 @@ Como puedes ver aquí, el logo de Firefox (primero enlistado) está hasta arriba
 
 ## Véase también
 
-- [Usando gradientes con CSS](/es/docs/CSS/Using_CSS_gradients)
+- [Usando gradientes con CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)

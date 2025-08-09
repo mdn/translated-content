@@ -74,6 +74,6 @@ const bigint64 = new BigInt64Array(iterable);
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)

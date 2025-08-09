@@ -3,7 +3,7 @@ title: JavaScript 型別陣列
 slug: Web/JavaScript/Guide/Typed_arrays
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 當 Webapp 有了視頻、音頻操作，及用 [WebSocket](/zh-TW/docs/Web/API/WebSockets_API) 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為[字串](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)並用 [`charCodeAt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) 方法讀取資料緩衝的位元組。
 
@@ -109,7 +109,7 @@ int16View[0] = 32;
 console.log("現在32位元陣列的欄位0是" + int32View[0]);
 ```
 
-輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/zh-TW/JavaScript_typed_arrays/ArrayBufferView#Typed_array_subclasses) 也是同樣的情形。
+輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typed_array_subclasses) 也是同樣的情形。
 
 ### 處理複雜的資料結構
 
@@ -155,7 +155,7 @@ normalArray.constructor === Array;
 
 ## 參見
 
-- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/zh-TW/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [`StringView` – a C-like representation of strings based on typed arrays](/zh-TW/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
 - [型別陣列——瀏覽器中的二進位資料](https://web.dev/articles/webgl-typed-arrays)

@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest
 
 `XMLHttpRequest` (XHR) 객체는 서버와 상호작용할 때 사용합니다. XHR을 사용하면 페이지의 새로고침 없이도 URL에서 데이터를 가져올 수 있습니다. 이를 활용하면 사용자의 작업을 방해하지 않고 페이지의 일부를 업데이트할 수 있습니다.
 
-`XMLHttpRequest`는 [AJAX](/ko/docs/Web/Guide/AJAX) 프로그래밍에 많이 사용됩니다.
+`XMLHttpRequest`는 [AJAX](/ko/docs/Learn_web_development/Core/Scripting/Network_requests) 프로그래밍에 많이 사용됩니다.
 
 {{InheritanceDiagram}}
 
@@ -39,9 +39,8 @@ slug: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}
   - : 요청에 대한 응답을 포함한 {{domxref("Document")}}를 반환합니다. 요청이 실패했거나, 아직 전송하지 않았거나, 응답을 XML/HTML로 파싱할 수 없는 경우 `null`을 반환합니다. [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 없습니다.
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
-  - : 응답의 [HTTP 상태 코드](/ko/docs/Web/HTTP/Status)를 반환합니다.
+  - : 응답의 [HTTP 상태 코드](/ko/docs/Web/HTTP/Reference/Status)를 반환합니다.
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
-
   - : HTTP 서버가 반환한 응답 문자열을 담은 `string`을 반환합니다. {{domxref("XMLHttpRequest.status")}}와 달리, `statusText`는 "`OK`"와 같은 응답 상태 메시지의 전문을 반환합니다
 
     > [!NOTE]
@@ -113,10 +112,9 @@ slug: Web/API/XMLHttpRequest
 
 - {{domxref("XMLSerializer")}}: DOM 트리를 XML로 직렬화
 - `XMLHttpRequest`를 다루는 MDN 자습서:
-
-  - [Ajax 시작하기](/ko/docs/Web/Guide/AJAX/Getting_Started)
-  - [XMLHttpRequest 사용하기](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [XMLHttpRequest에서의 HTML](/ko/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+  - [Ajax 시작하기](/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e)
+  - [XMLHttpRequest 사용하기](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+  - [XMLHttpRequest에서의 HTML](/ko/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [Fetch API](/ko/docs/Web/API/Fetch_API)
 
 - [HTML5 Rocks — New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)

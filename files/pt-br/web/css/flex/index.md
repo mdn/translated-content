@@ -7,7 +7,54 @@ slug: Web/CSS/flex
 
 A propriedade flex do CSS, define como um ítem será posicionado para no espaço disponível dentro de seu container.
 
-{{EmbedInteractiveExample("pages/css/flex.html")}}
+{{InteractiveExample("CSS Demo: flex")}}
+
+```css interactive-example-choice
+flex: 1;
+```
+
+```css interactive-example-choice
+flex: 2;
+```
+
+```css interactive-example-choice
+flex: 1 30px;
+```
+
+```css interactive-example-choice
+flex: 1 1 100px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change me</div>
+  <div>flex: 1</div>
+  <div>flex: 1</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Propriedades
 
@@ -136,17 +183,14 @@ flex: unset;
 The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax**: the value must be one of:
-
   - a `<number>`: In this case it is interpreted as `flex: <number> 1 0`; the [`<flex-shrink>`](#flex-shrink) value is assumed to be 1 and the [`<flex-basis>`](#flex-basis) value is assumed to be `0`.
   - one of the keywords: [`none`](#none), [`auto`](#auto), or `initial`.
 
 - **Two-value syntax**: the first value must be a {{cssxref("&lt;number&gt;")}} and it is interpreted as [`<flex-grow>`](#flex-grow). The second value must be one of:
-
   - a {{cssxref("&lt;number&gt;")}}: then it is interpreted as [`<flex-shrink>`](#flex-shrink).
   - a valid value for {{cssxref("width")}}: then it is interpreted as [`<flex-basis>`](#flex-basis).
 
 - **Three-value syntax:** the values must be in the following order:
-
   1. a {{cssxref("&lt;number&gt;")}} for [`<flex-grow>`](#flex-grow).
   2. a {{cssxref("&lt;number&gt;")}} for [`<flex-shrink>`](#flex-grow).
   3. a valid value for {{cssxref("width")}} for [`<flex-basis>`](#flex-basis).
@@ -234,5 +278,5 @@ flex.addEventListener("click", function () {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

@@ -86,4 +86,4 @@ JSON.parse('{"foo" : 1, }');
 
 ## Véase también
 
-- [Utilizando](/es/docs/Web/JavaScript/Guide/Using_native_JSON) [JSON nativo](/es/docs/Web/JavaScript/Guide/Using_native_JSON)
+- [Utilizando](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON) [JSON nativo](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON)

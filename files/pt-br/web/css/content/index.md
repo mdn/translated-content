@@ -5,7 +5,7 @@ slug: Web/CSS/content
 
 {{CSSRef}}
 
-A propriedade CSS **`content`** é usada com os pseudoelementos {{cssxref("::before")}} e {{cssxref("::after")}} para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade `content` são _[elementos substituídos](/pt-BR/docs/CSS/Replaced_element) anônimos_.
+A propriedade CSS **`content`** é usada com os pseudoelementos {{cssxref("::before")}} e {{cssxref("::after")}} para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade `content` são _[elementos substituídos](/pt-BR/docs/Web/CSS/Replaced_element) anônimos_.
 
 ```css
 /* Palavras-chave que não podem ser combinadas com outros valores */
@@ -57,7 +57,6 @@ content: unset;
 - {{cssxref("&lt;url&gt;")}}
   - : Uma URL que designa um recurso externo (como uma imagem). Se o recurso não puder ser exibido, ele será ignorado ou um _placeholder_ será exibido no seu lugar.
 - {{cssxref("&lt;counter&gt;")}}
-
   - : O valor de um contador CSS, geralmente um número. Ele pode ser exibido usando a função [`counter()`](/pt-BR/docs/Web/CSS/counter%28%29) ou [`counters()`](/pt-BR/docs/Web/CSS/counters%28%29).
 
     A função `counter()` tem duas formas: 'counter(_nome_)' ou 'counter(_nome_, _estilo_)'. O texto gerado será o valor do contador mais próximo do nome fornecido no pseudoelemento. Ele será formatado com o estilo especificado (o padrão é `decimal`).

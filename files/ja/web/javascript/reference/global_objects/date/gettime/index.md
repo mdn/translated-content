@@ -2,16 +2,22 @@
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
 
-**`getTime()`** メソッドは、 [ECMAScript 元期](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#ecmascript_元期_とタイムスタンプ)からの経過ミリ秒数を返します。
+**`getTime()`** は {{jsxref("Date")}} インスタンスのメソッドで、 [元期](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)、すなわち協定世界時 (UTC) における 1970 年 1 月 1 日の先頭の深夜からの経過ミリ秒数を返します。
 
-このメソッドは、日付と時刻を別の {{jsxref("Date")}} オブジェクトへ代入する助けとして使用できます。このメソッドは、{{jsxref("Date/valueof", "valueOf()")}} メソッドと機能的に同等です。
+{{InteractiveExample("JavaScript デモ: Date.prototype.getTime()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/date-gettime.html","shorter")}}
+```js interactive-example
+const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
+
+// Jan 1, 1970, 00:00:00.000 GMT からの経過秒数
+console.log(moonLanding.getTime());
+// 予想される結果: -14182940000
+```
 
 ## 構文
 
@@ -19,31 +25,17 @@ l10n:
 getTime()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-1970 年 1 月 1 日 00:00:00 UTC から指定した日時までの経過時間をミリ秒で表した数値。
+数値で、この日時のミリ秒単位の[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
-## 時刻の低精度化
+## 解説
 
-ブラウザーの設定によっては、タイミング攻撃とフィンガープリンティングに対する保護を提供するために `new Date().getTime()` の精度が落とされていることがあります。 Firefox では、`privacy.reduceTimerPrecision` が既定で有効になっています。既定値は Firefox 59 では 20 マイクロ秒で、 Firefox 60 では 2 ミリ秒です。
-
-```js
-// Firefox 60 での時刻の精度の低下（2 ミリ秒）
-new Date().getTime();
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// …
-
-// `privacy.resistFingerprinting` が有効な場合の時刻の精度の低下
-new Date().getTime();
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// …
-```
-
-Firefox では、 `privacy.resistFingerprinting` も有効にできます。この場合、精度は 100 ミリ秒と `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 値のうち大きい方になります。
+`Date` オブジェクトは基本的に[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)で表されますが、このメソッドを使用すると、そのタイムスタンプを取得することができます。このメソッドを使用すると、日付と時刻を別の {{jsxref("Date")}} オブジェクトに代入するのに便利です。このメソッドは、機能的には {{jsxref("Date/valueof", "valueOf()")}} メソッドと同じです。
 
 ## 例
 
@@ -73,6 +65,9 @@ end = new Date();
 
 console.log(`Operation took ${end.getTime() - start.getTime()} msec`);
 ```
+
+> [!NOTE]
+> {{domxref("Performance API", "パフォーマンス API", "", "nocode")}} の高解像度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} を使用すると、 {{jsxref("Date.now()")}} よりも信頼性が高く正確な経過時間を測定できます。
 
 ## 仕様書
 

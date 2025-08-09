@@ -62,4 +62,4 @@ var y =
 
 ## Ver también
 
-- [window.scrollY](/es/docs/DOM/window.scrollY)
+- [window.scrollY](/es/docs/Web/API/Window/scrollY)

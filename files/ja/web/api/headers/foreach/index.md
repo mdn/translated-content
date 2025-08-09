@@ -1,25 +1,20 @@
 ---
-title: Headers.forEach()
+title: "Headers: forEach() メソッド"
+short-title: forEach()
 slug: Web/API/Headers/forEach
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 0eeaa04378b34bce70e618ee20434e1193cdec17
 ---
 
-{{APIRef}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 **`Headers.forEach()`** メソッドは、 [`Headers`](/ja/docs/Web/API/Headers) オブジェクト内のキー/値の組にそれぞれ一度ずつ、コールバック関数を実行します。
 
 ## 構文
 
 ```js-nolint
-// アロー関数
-forEach((value, key) => { /* … */ })
-forEach((value, key, object) => { /* … */ })
-
-// インラインコールバック関数
-forEach(function (value, key) { /* … */ })
-forEach(function (value, key, object) { /* … */ })
-forEach(function (value, key) { /* … */ }, thisArg)
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### 引数
@@ -64,7 +59,7 @@ myHeaders.forEach((value, key) => {
 
 結果は次の通りです。
 
-```
+```plain
 compression ==> gzip
 content-type ==> application/json
 cookie ==> This is a demo cookie
@@ -72,11 +67,11 @@ cookie ==> This is a demo cookie
 
 ## ブラウザーの互換性
 
-{{compat}}
+{{Compat}}
 
 ## 関連情報
 
 - [`Map.prototype.forEach()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

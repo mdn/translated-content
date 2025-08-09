@@ -22,7 +22,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 
 和上述 globalCompositeOperation 相比，可以發現 source-in 和 source-atop 這兩種構圖組合所達到的效果，和裁剪路徑類似，而其中最大差異在於裁剪路徑不需加入新圖形，消失的部分也不會出現在畫布上，所以，如果想要限定繪圖區域，裁剪路徑會是更理想的作法。
 
-在[繪畫圖形](/zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths)一章中，我們只提到 stroke() 和 fill() 函式，但其實還有第三個函式，那就是 clip() 函式。
+在[繪畫圖形](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths)一章中，我們只提到 stroke() 和 fill() 函式，但其實還有第三個函式，那就是 clip() 函式。
 
 - `clip()`
   - : 轉換目前繪圖路徑為裁剪路徑。

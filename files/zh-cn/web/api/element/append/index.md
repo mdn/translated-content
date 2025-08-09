@@ -68,7 +68,7 @@ div.append("一些文本", p);
 console.log(div.childNodes); // NodeList [ #text "一些文本", <p> ]
 ```
 
-### append 是非作用域方法
+### append 是不可绑定作用域方法
 
 `append()` 方法无法被绑定到 `with` 语句的作用域中。参见 {{jsxref("Symbol.unscopables")}} 以了解更多信息。
 

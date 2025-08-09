@@ -14,6 +14,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 ### ア
 
 - [位置情報 API](/ja/docs/Web/API/Geolocation_API)
+- [インク API](/ja/docs/Web/API/Ink_API)
 - [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
 - [ウィンドウ制御 API](/ja/docs/Web/API/Window_Management_API)
 - [ウィンドウ制御オーバーレイ API](/ja/docs/Web/API/Window_Controls_Overlay_API)
@@ -37,8 +38,9 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 ### サ
 
 - [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)
-- [サービスワーカー API](Web/API/Service_Worker_API)
-- [CSS カウンタースタイル](/ja/docs/Web/API/CSS_Counter_Styles)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
+- [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)
 - [ストレージ API](/ja/docs/Web/API/Storage_API)
 - [ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API)
 - [センサー API 群](/ja/docs/Web/API/Sensor_APIs)
@@ -58,7 +60,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 - [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
 - [バッジ API](/ja/docs/Web/API/Badging_API)
 - [パフォーマンス API](/ja/docs/Web/API/Performance_API)
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)
 - [プッシュ通知 API](/ja/docs/Web/API/Push_API)
 - [プレゼンテーション API](/ja/docs/Web/API/Presentation_API)
@@ -85,4 +87,4 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 ## ブラウザーの互換性
 
-- [Web API イベントリファレンス](/ja/docs/Web/Events)
+- [Web API イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)

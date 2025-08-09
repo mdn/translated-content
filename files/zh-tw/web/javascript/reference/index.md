@@ -3,9 +3,7 @@ title: JavaScript 參考文件
 slug: Web/JavaScript/Reference
 ---
 
-{{JsSidebar}}
-
-在 MDN 的 JavaScript 分區中，這一部分被作爲 Javascript 的資料庫。閱讀[關於該參考](/zh-TW/docs/Web/JavaScript/Reference/About)以了解更多。
+在 MDN 的 JavaScript 分區中，這一部分被作爲 Javascript 的資料庫。閱讀[關於該參考](/zh-TW/docs/Web/JavaScript/Reference)以了解更多。
 
 ## 全域物件
 
@@ -290,6 +288,6 @@ slug: Web/JavaScript/Reference
 ## 其他參考頁面
 
 - [Lexical grammar](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Data types and data structures](/zh-TW/docs/Web/JavaScript/Data_structures)
+- [Data types and data structures](/zh-TW/docs/Web/JavaScript/Guide/Data_structures)
 - [Strict mode](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)
 - [Deprecated features](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

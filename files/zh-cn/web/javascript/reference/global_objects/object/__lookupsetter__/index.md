@@ -23,13 +23,13 @@ __lookupSetter__(prop)
 
 ### 返回值
 
-绑定到指定属性的 setter 函数。如果找不到这样的属性或者该属性是[数据属性](/zh-CN/docs/Web/JavaScript/Data_structures#数据属性)，则返回 `undefined`。
+绑定到指定属性的 setter 函数。如果找不到这样的属性或者该属性是[数据属性](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#数据属性)，则返回 `undefined`。
 
 ## 描述
 
 所有继承自 `Object.prototype` 的对象（也就是除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)的对象）都会继承 `__lookupSetter__()` 方法。如果为对象的属性定义了一个 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，则无法通过该属性引用 setter 函数，因为该属性引用该函数的返回值。`__lookupSetter__()` 可用于获取对 setter 函数的引用。
 
-`__lookupSetter__()` 沿着[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)向上查找指定的属性。如果原型链上的任何对象具有指定的[自有属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)，则返回该属性的[属性描述符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)的 `set` 属性。如果该属性是数据属性，则返回 `undefined`。如果在整个原型链上都找不到该属性，也同样返回 `undefined`。
+`__lookupSetter__()` 沿着[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)向上查找指定的属性。如果原型链上的任何对象具有指定的[自有属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)，则返回该属性的[属性描述符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)的 `set` 属性。如果该属性是数据属性，则返回 `undefined`。如果在整个原型链上都找不到该属性，也同样返回 `undefined`。
 
 `__lookupSetter__()` 在规范中被定义为“可选规范”，这意味着不需要任何实现来实现它。然而，所有主要的浏览器都实现了它，并且由于它的持续使用，它不太可能被删除。如果浏览器实现了 `__lookupSetter__()`，它还需要实现 [`__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)、[`__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 和 [`__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 方法。
 

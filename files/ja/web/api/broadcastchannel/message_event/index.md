@@ -41,7 +41,7 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 
 ## 例
 
-この例では "Sender" の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) があり、ユーザーがボタンをクリックしたときに [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) の内容を配信します。 "Receiver" の iframe は 2 つあり、ブロードキャストメッセージを受信し、その結果を [`<div>`](/ja/docs/Web/HTML/Element/div) 要素に書き込みます。
+この例では "Sender" の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) があり、ユーザーがボタンをクリックしたときに [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) の内容を配信します。 "Receiver" の iframe は 2 つあり、ブロードキャストメッセージを受信し、その結果を [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div) 要素に書き込みます。
 
 ### Sender
 

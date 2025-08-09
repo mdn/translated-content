@@ -11,7 +11,16 @@ l10n:
 
 [`function` 関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)や[アロー構文](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を用いて関数を定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Expressions - function expression", "shorter")}}
+
+```js interactive-example
+const getRectArea = function (width, height) {
+  return width * height;
+};
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+```
 
 ## 構文
 
@@ -37,7 +46,8 @@ function name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **メモ:** [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)はキーワード `function` から始めることができません。 [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)との曖昧さをさけるためです。 `function` キーワードは文を受け入れることができない文脈で現れた時だけ式を開始します。
+> [!NOTE]
+> [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)はキーワード `function` から始めることができません。 [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)との曖昧さをさけるためです。 `function` キーワードは文を受け入れることができない文脈で現れた時だけ式を開始します。
 
 ### 引数
 

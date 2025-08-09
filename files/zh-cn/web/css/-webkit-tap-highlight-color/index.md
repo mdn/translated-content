@@ -1,9 +1,7 @@
 ---
-title: "-webkit-tap-highlight-color"
+title: -webkit-tap-highlight-color
 slug: Web/CSS/-webkit-tap-highlight-color
 ---
-
-{{CSSRef}}
 
 {{ Non-standard_header() }}
 
@@ -13,7 +11,7 @@ slug: Web/CSS/-webkit-tap-highlight-color
 
 {{cssinfo}}
 
-## Syntax
+## 语法
 
 ```css
 -webkit-tap-highlight-color: red;

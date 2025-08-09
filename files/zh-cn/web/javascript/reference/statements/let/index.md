@@ -5,11 +5,23 @@ l10n:
   sourceCommit: 66149c2238e1beb7fc65dd998968aa0638c874a3
 ---
 
-{{jsSidebar("Statements")}}
-
 **`let`** 声明用于声明可重新赋值的块级作用域局部变量，并且可以选择将其初始化为一个值。
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## 语法
 
@@ -24,7 +36,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 ### 参数
 
 - `nameN`
-  - : 要声明的变量的名称。必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+  - : 要声明的变量的名称。必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 - `valueN` {{optional_inline}}
   - : 变量的初始值。可以是任意合法的表达式。默认值为 `undefined`。
 
@@ -58,7 +70,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 
 注意：在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下允许将 `let` 作为 `var` 或者 `function` 的标识符名称，但你应当避免将 `let` 用作标识符以防止发生意外的语法混淆。
 
-许多风格指南（包括 [MDN 的](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#变量声明)）推荐只要变量没有在其作用域中被重新赋值，就应该使用 {{jsxref("Statements/const", "const")}} 而不是 `let`。这样能更清楚地表明变量的类型（或值，如果其为原始值）永远不会改变。此外也推荐用 `let` 存放可变的非原始值。
+许多风格指南（包括 [MDN 的](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript#变量声明)）推荐只要变量没有在其作用域中被重新赋值，就应该使用 {{jsxref("Statements/const", "const")}} 而不是 `let`。这样能更清楚地表明变量的类型（或值，如果其为原始值）永远不会改变。此外也推荐用 `let` 存放可变的非原始值。
 
 `let` 关键字后方的列表叫做[_绑定_](/zh-CN/docs/Glossary/Binding)_列表_，使用逗号分隔，其中的逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，并且 `=` 符号也*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后初始化的变量能够引用列表中之前初始化的变量。
 
@@ -107,7 +119,8 @@ let i = 10;
 console.log(typeof undeclaredVariable); // "undefined"
 ```
 
-> **备注：** `let` 和 `const` 声明仅在当前脚本被处理时才会被处理。如果在一个 HTML 中有两个以脚本模式运行的 `<script>` 元素，那么第一个脚本不会受到第二个脚本中顶层 `let` 或 `const` 变量的暂时性死区限制，尽管如果你在第一个脚本中声明了一个 `let` 或 `const` 变量，在第二个脚本中再次声明它将会导致[重复声明错误](#重复声明)。
+> [!NOTE]
+> `let` 和 `const` 声明仅在当前脚本被处理时才会被处理。如果在一个 HTML 中有两个以脚本模式运行的 `<script>` 元素，那么第一个脚本不会受到第二个脚本中顶层 `let` 或 `const` 变量的暂时性死区限制，尽管如果你在第一个脚本中声明了一个 `let` 或 `const` 变量，在第二个脚本中再次声明它将会导致[重复声明错误](#重复声明)。
 
 ### 重复声明
 
@@ -273,7 +286,7 @@ let [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-更多信息，参见[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+更多信息，参见[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ## 规范
 

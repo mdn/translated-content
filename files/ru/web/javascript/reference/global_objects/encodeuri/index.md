@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 Метод **encodeURI ()** кодирует универсальный идентификатор ресурса (URI), замещая некоторые символы на одну, две, три или четыре управляющие последовательности, представляющие UTF-8 кодировку символа (четыре управляющие последовательности будут использованы только для символов, состоящих из двух «суррогатных» символов).
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## Синтаксис
 
@@ -51,7 +66,7 @@ console.log(encodeURIComponent("\uD800"));
 console.log(encodeURIComponent("\uDFFF"));
 ```
 
-Также заметим, что следуя наиболее свежей [RFC3986](http://tools.ietf.org/html/rfc3986) для URL, которая делает квадратные скобки защищёнными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:
+Также заметим, что следуя наиболее свежей [RFC3986](https://tools.ietf.org/html/rfc3986) для URL, которая делает квадратные скобки защищёнными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:
 
 ```js
 function fixedEncodeURI(str) {

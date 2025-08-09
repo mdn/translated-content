@@ -60,18 +60,18 @@ As propriedades a seguir estão listados na especificação mais up-to-date, mas
 #### Manipuladores de Eventos
 
 - {{domxref("Notification.onclick")}}
-  - : O manipulador para o evento {{event("click")}} é acionado cada vez que o usuário clica sobre a notificação.
+  - : O manipulador para o evento [`click`](/pt-BR/docs/Web/API/Element/click_event) é acionado cada vez que o usuário clica sobre a notificação.
 - {{domxref("Notification.onerror")}}
-  - : O manipulador para o evento {{event("error")}} é acionado quando a notificação encontra um erro.
+  - : O manipulador para o evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) é acionado quando a notificação encontra um erro.
 
 #### Manipuladores Obsoletos
 
 Os seguintes manipuladores de eventos ainda são suportados, conforme listado na seção [browser compatibility](#browser_compatibility). Estes serão listados abaixo, mas não são listados na especificação atual. Saiba que eles são obsoletos, e pode parar de funcionar em versões futuras do navegador.
 
 - {{domxref("Notification.onclose")}}
-  - : Manipulador do evento {{event("close")}} é acionado quando a notificação é fechada.
+  - : Manipulador do evento [`close`](/pt-BR/docs/Web/API/HTMLDialogElement/close_event) é acionado quando a notificação é fechada.
 - {{domxref("Notification.onshow")}}
-  - : Manipulador do evento {{event("show")}}. é acionado quando a notificação é exibida.
+  - : Manipulador do evento [`show`](/pt-BR/docs/Web/Events/show). é acionado quando a notificação é exibida.
 
 ## Métodos
 
@@ -129,7 +129,7 @@ function notifyMe() {
 
 {{EmbedLiveSample('Exemplo', '100%', 30)}}
 
-Em muitos casos, você não precisa estar presente detalhado. Por exemplo, na nosso [Emogotchi demo](http://mdn.github.io/emogotchi/) ([veja o código fonte](https://github.com/mdn/emogotchi)), basta simlesmente executar {{domxref("Notification.requestPermission")}} independentemente de se certificar de que pode obter permissão para enviar notificações:
+Em muitos casos, você não precisa estar presente detalhado. Por exemplo, na nosso [Emogotchi demo](https://mdn.github.io/emogotchi/) ([veja o código fonte](https://github.com/mdn/emogotchi)), basta simlesmente executar {{domxref("Notification.requestPermission")}} independentemente de se certificar de que pode obter permissão para enviar notificações:
 
 ```js
 Notification.requestPermission();

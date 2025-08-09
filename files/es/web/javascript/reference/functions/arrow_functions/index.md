@@ -15,7 +15,14 @@ Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef
 - No se puede utilizar como {{Glossary("constructor", "constructor")}}.
 - No se puede utilizar {{JSxRef("Operadores/yield", "yield")}} dentro de su cuerpo.
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ### Comparación de funciones tradicionales con funciones flecha
 

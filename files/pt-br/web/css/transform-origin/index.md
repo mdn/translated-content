@@ -7,7 +7,143 @@ slug: Web/CSS/transform-origin
 
 A propriedade **`transform-origin`** define a origem das transformações de um elemento no [CSS](/pt-BR/docs/Web/CSS).
 
-{{EmbedInteractiveExample("pages/css/transform-origin.html")}}
+{{InteractiveExample("CSS Demo: transform-origin")}}
+
+```css interactive-example-choice
+transform-origin: center;
+```
+
+```css interactive-example-choice
+transform-origin: top left;
+```
+
+```css interactive-example-choice
+transform-origin: 50px 50px;
+```
+
+```css interactive-example-choice
+/* 3D rotation with z-axis origin */
+transform-origin: bottom right 60px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-container">
+    <div id="example-element">Rotate me!</div>
+    <img
+      alt=""
+      id="crosshair"
+      src="/shared-assets/images/examples/crosshair.svg"
+      width="24px" />
+    <div id="static-element"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes rotate3d {
+  from {
+    transform: rotate3d(0);
+  }
+
+  to {
+    transform: rotate3d(1, 2, 0, 60deg);
+  }
+}
+
+#example-container {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+#example-element {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background: #f7ebee;
+  color: #000000;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#example-element.rotate {
+  animation: rotate 1s forwards;
+}
+
+#example-element.rotate3d {
+  animation: rotate3d 1s forwards;
+}
+
+#crosshair {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  position: absolute;
+}
+
+#static-element {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: dotted 3px #ff1100;
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  function update() {
+    const selected = document.querySelector(".selected");
+
+    /* Restart the animation
+           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips */
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className =
+          el.style.transformOrigin.split(" ")[2] === "60px"
+            ? "rotate3d"
+            : "rotate";
+      });
+    });
+
+    const transformOrigin = getComputedStyle(el).transformOrigin;
+    const pos = transformOrigin.split(/\s+/);
+    crosshair.style.left = `calc(${pos[0]} - 12px)`;
+    crosshair.style.top = `calc(${pos[1]} - 12px)`;
+  }
+
+  const crosshair = document.getElementById("crosshair");
+  const el = document.getElementById("example-element");
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+  crosshair.style.opacity = "1";
+});
+```
 
 A origem da transformação é o ponto em torno do qual uma transformação é aplicada. Por exemplo, a origem da transformação da função [`rotate()`](/pt-BR/docs/Web/CSS/transform-function/rotate) é o centro de rotação.
 
@@ -68,23 +204,20 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/pt-BR/docs/Web/CSS/initial_value).
+A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value).
 
 Se um único valor {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} for definido, ele representa o deslocamento horizontal.
 
 Se dois ou mais valores forem definidos e nenhum deles for uma palavra-chave, ou a única palavra-chave utilizada for `center`, então o primeiro valor representa o deslocamento horizontal e o segundo representa o deslocamento vertical.
 
 - Sintaxe de um valor:
-
   - O valor deve ser um {{cssxref("&lt;length&gt;")}}, um {{cssxref("&lt;percentage&gt;")}}, ou uma das palavras-chave `left`, `center`, `right`, `top` e `bottom`.
 
 - Sintaxe de dois valores:
-
   - Um valor deve ser um {{cssxref("&lt;length&gt;")}}, um {{cssxref("&lt;percentage&gt;")}}, ou uma das palavras-chave `left`, `center` e `right`.
   - O outro valor deve ser um {{cssxref("&lt;length&gt;")}}, um {{cssxref("&lt;percentage&gt;")}}, ou uma das palavras-chave `top`, `center` e `bottom`.
 
 - Sintaxe de três valores:
-
   - Os dois primeiros valores são os mesmos da sintaxe de dois valores.
   - O terceiro valor deve ser um {{cssxref("&lt;length&gt;")}}. Ele representa sempre o deslocamento Z.
 
@@ -317,5 +450,5 @@ transform-origin: 100% -30%;
 
 ## Veja também
 
-- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

@@ -1,16 +1,24 @@
 ---
 title: Array.prototype.concat()
+short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`concat()`** は {{jsxref("Array")}} インスタンスのメソッドで、2 つ以上の配列を結合するために使用します。
 このメソッドは既存の配列を変更せず、新しい配列を返します。
 
-{{EmbedInteractiveExample("pages/js/array-concat.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.concat()", "shorter")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// 予想される結果: Array ["a", "b", "c", "d", "e", "f"]
+```
 
 ## 構文
 
@@ -40,7 +48,7 @@ concat(value1, value2, /* …, */ valueN)
 
 `concat()` メソッドは、元の配列のいずれかが[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)であった場合には空のスロットを維持します。
 
-`concat()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。 `this` 値は他の引数と同じように扱われます（ただし、先にオブジェクトに変換されます）。つまり、素のオブジェクトは直接結果の配列に追加され、 `@isConcatSpreadable` を持つ配列風オブジェクトは結果の配列に展開されます。
+`concat()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。 `this` 値は他の引数と同じように扱われます（ただし、先にオブジェクトに変換されます）。つまり、素のオブジェクトは直接結果の配列に追加され、 `[Symbol.isConcatSpreadable]` を持つ配列風オブジェクトは結果の配列に展開されます。
 
 ## 例
 
@@ -153,6 +161,7 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ## 関連情報
 
 - [`Array.prototype.concat` のポリフィル (`core-js`)（`Symbol.isConcatSpreadable` の対応など、最近の動作の修正と実装付き）](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.concat` のポリフィル](https://www.npmjs.com/package/array.prototype.concat)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}

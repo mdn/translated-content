@@ -16,5 +16,5 @@ l10n:
 
 ## 関連情報
 
-- [プロキシーサーバーとトンネリング](/ja/docs/Web/HTTP/Proxy_servers_and_tunneling)
+- [プロキシーサーバーとトンネリング](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)
 - [プロキシ](https://ja.wikipedia.org/wiki/プロキシ)（ウィキペディア）

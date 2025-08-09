@@ -47,7 +47,7 @@ l10n:
 3. 当用户稍后访问 `shop.example` 时，当交互指示转化发生时，该网站可以注册一个**归因触发器**（例如，用户点击 `shop.example` 上的“添加到购物车”按钮）。浏览器将发送一个带有 {{httpheader("Attribution-Reporting-Eligible")}} 标头的请求，以表明响应有资格注册归因触发器，如果响应中包含适当的 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头，则完成注册。归因触发器可以是，例如：
    - 一张图片，例如购物车图标或 1x1 透明跟踪像素。在这种情况下，交互是用户访问页面。触发器在图片加载时注册，即当服务器响应图片请求时。
    - 一个 fetch 请求（即 {{domxref("Window/fetch", "fetch()")}} 或 {{domxref("XMLHttpRequest")}}）。在这种情况下，交互可以根据你的应用程序的需要进行指定——例如，fetch 请求可以由 `click` 或 `submit` 事件触发。触发器在响应返回时注册。
-4. 当触发器归因完成后，浏览器会尝试将 [Attribution-Reporting-Register-Trigger](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) 标头中的数据与私有本地缓存中保存的来源数据条目进行匹配（见第 2 步）。有关匹配方法和要求，请参阅[注册归因触发器](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_triggers)。
+4. 当触发器归因完成后，浏览器会尝试将 [Attribution-Reporting-Register-Trigger](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger) 标头中的数据与私有本地缓存中保存的来源数据条目进行匹配（见第 2 步）。有关匹配方法和要求，请参阅[注册归因触发器](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_triggers)。
 5. 如果找到匹配，浏览器将把报告数据发送到通常由广告技术提供商拥有的报告服务器上的端点，在那里可以安全地进行分析。与 cookie 不同，这些数据仅对你发送数据的特定网站可用——不会在其他地方共享数据。这些报告可以是：
    - **事件级报告**：基于归因来源事件的报告，其中详细的来源数据与粗略的触发器数据相关联。例如，报告可能看起来像“`ad.shop.example` 上的点击 ID 200498 导致了 `shop.example` 的购买”，其中“点击 ID 200498”是详细的来源数据，“购买”是粗略的触发器数据。详细的来源数据可能包含来源页面的第一方或上下文数据，而触发器数据可能编码来自触发器页面的事件。
    - **汇总报告**：更详细的报告，结合来自来源和触发器侧的多个转化数据。例如“`news.example` 上的广告活动 ID 774653 导致了 `shop.example` 上来自意大利用户的 654 笔销售，总收入为 $9540。”汇总报告的编制需要使用聚合服务（例如 [Google 聚合服务](https://github.com/privacysandbox/aggregation-service)）。
@@ -91,7 +91,7 @@ l10n:
 
 ## 注册和本地测试
 
-要在你的网站上使用归因报告 API，你必须在[隐私沙盒注册过程](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Enrollment)中指定它。如果不这样做，API 流程将在响应时被阻止，即响应标头将被忽略，来源和触发器将不会被注册。
+要在你的网站上使用归因报告 API，你必须在[隐私沙盒注册过程](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)中指定它。如果不这样做，API 流程将在响应时被阻止，即响应标头将被忽略，来源和触发器将不会被注册。
 
 你仍然可以在没有注册的情况下本地测试你的归因报告 API 代码。要允许本地测试，请启用以下 Chrome 开发者标志：
 
@@ -112,6 +112,6 @@ l10n:
 ## 参见
 
 - [归因报告标头验证工具](https://wicg.github.io/attribution-reporting-api/validate-headers)
-- developers.google.com 上的[归因报告](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/)（2023）
-- developers.google.com 上的[启用转化测量](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/enable-conversion-measurement)（2023）
-- developers.google.com 上的[隐私沙盒](https://developers.google.com/privacy-sandbox/)（2023）
+- developers.google.cn 上的[归因报告](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/)（2023）
+- developers.google.cn 上的[启用转化测量](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/enable-conversion-measurement)（2023）
+- developers.google.cn 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox/)（2023）

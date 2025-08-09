@@ -46,7 +46,7 @@ promise.then(successCallback, failureCallback);
 
 콜백 함수를 전달해주는 고전적인 방식과는 달리, Promise는 아래와 같은 특징을 보장합니다.
 
-- 콜백은 JavaScript Event Loop가 [현재 실행중인 콜 스택을 완료](/ko/docs/Web/JavaScript/EventLoop#Run-to-completion)하기 이전에는 절대 호출되지 않습니다.
+- 콜백은 JavaScript Event Loop가 [현재 실행중인 콜 스택을 완료](/ko/docs/Web/JavaScript/Reference/Execution_model#run-to-completion)하기 이전에는 절대 호출되지 않습니다.
 - 비동기 작업이 성공하거나 실패한 뒤에 [`then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 을 이용하여 추가한 콜백의 경우에도 위와 같습니다.
 - [`then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)을 여러번 사용하여 여러개의 콜백을 추가 할 수 있습니다. 그리고 각각의 콜백은 주어진 순서대로 하나 하나 실행되게 됩니다.
 
@@ -335,7 +335,7 @@ console.log(1); // 1, 2, 3, 4
 
 ## Nesting
 
-간단한 promise 체인은 평평하게 유지하는 것이 가장 좋습니다. 중첩된 체인은 부주의한 구성의 결과일 수 있습니다. [common mistakes](/ko/docs/Web/JavaScript/Guide/Using_promises#Common_mistakes)를 참조하십시오.
+간단한 promise 체인은 평평하게 유지하는 것이 가장 좋습니다. 중첩된 체인은 부주의한 구성의 결과일 수 있습니다. [common mistakes](#Common_mistakes)를 참조하십시오.
 
 중첩은 `catch` 문 범위를 제한하는 제어 구조입니다. 특히, 중첩된 `catch`는 중첩된 범위 외부의 체인에 있는 오류가 아닌 범위 및 그 이하의 오류만 잡습니다. 올바르게 사용하면 오류 복구 시 더 정확한 결과를 얻을 수 있습니다.
 
@@ -398,16 +398,16 @@ doSomething()
 
 예측할 수 없는 순서로 실행되는 promise 및 작업(예: 이벤트 또는 콜백)이 있는 상황에 직면하면 마이크로 태스크를 사용하여 상태를 확인하거나 promise가 조건부로 생성될 때 promise의 균형을 맞추는 것이 좋습니다.
 
-마이크로 태스크가 이 문제를 해결하는 데 도움이 될 수 있다고 생각되면, [queueMicrotask()](/ko/docs/Web/API/queueMicrotask)를 사용해서 함수를 마이크로 태스크로 대기열에 넣는 방법을 [마이크로 태스크 가이드](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide)에서 자세히 알아보십시오.
+마이크로 태스크가 이 문제를 해결하는 데 도움이 될 수 있다고 생각되면, [queueMicrotask()](/ko/docs/Web/API/Window/queueMicrotask)를 사용해서 함수를 마이크로 태스크로 대기열에 넣는 방법을 [마이크로 태스크 가이드](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide)에서 자세히 알아보십시오.
 
 ## See also
 
 - {{jsxref("Promise.then()")}}
 - [`async`/`await`](/ko/docs/Web/JavaScript/Reference/Statements/async_function)
-- [Promises/A+ specification](http://promisesaplus.com/)
+- [Promises/A+ specification](https://promisesaplus.com/)
 - [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
 - [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
 {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}

@@ -2,7 +2,7 @@
 title: JSON.rawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/rawJSON
 l10n:
-  sourceCommit: e7fab5265b54dc9faeff7e8cf4972cc171ec856b
+  sourceCommit: 0e8730e1a9bdfaa1710530c47135f79cedc3e94b
 ---
 
 {{JSRef}}
@@ -27,7 +27,7 @@ JSON.rawJSON(string)
 - `rawJSON`
   - : 提供された元の JSON の `string` です。
 
-さらに、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を持ち、それ自身を生の JSON オブジェクトとしてマークします。これにより、 {{jsxref("JSON.stringify()")}} と {{jsxref("JSON.isRawJSON()")}} で識別できるようになります。
+さらに、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を持ち、それ自身を生の JSON オブジェクトとしてマークします。これにより、 {{jsxref("JSON.stringify()")}} と {{jsxref("JSON.isRawJSON()")}} で識別できるようになります。
 
 ### 例外
 
@@ -36,7 +36,7 @@ JSON.rawJSON(string)
 
 ## 解説
 
-生の JSON オブジェクトは、あらゆる種類の[プリミティブ](/ja/docs/Web/JavaScript/Data_structures#primitive_values)のような、不変で原子的なデータ構造と見なすことができます。これは通常のオブジェクトではなく、生の JSON テキスト以外のデータは持ちません。様々な理由で `JSON.stringify` 自身が生成できない形式にデータを「事前シリアライズ」するために使用します。最も典型的な使用する用途は、浮動小数点数の精度損失の問題です。例えば、次のような場合です。
+生の JSON オブジェクトは、あらゆる種類の[プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#primitive_values)のような、不変で原子的なデータ構造と見なすことができます。これは通常のオブジェクトではなく、生の JSON テキスト以外のデータは持ちません。様々な理由で `JSON.stringify` 自身が生成できない形式にデータを「事前シリアライズ」するために使用します。最も典型的な使用する用途は、浮動小数点数の精度損失の問題です。例えば、次のような場合です。
 
 ```js
 JSON.stringify({ value: 12345678901234567890 });
@@ -45,7 +45,7 @@ JSON.stringify({ value: 12345678901234567890 });
 
 この値は元の数値と正確には等しくありません！これは JavaScript がすべての数値に浮動小数点数を使用しているため、すべての整数を正確に表すことができないからです。数値リテラル `12345678901234567890` 自体は、 JavaScript によって解釈されるときに、最も近い表現可能な数値に丸められます。
 
-`JSON.rawJSON` がなければ、対応する JavaScript の数値が存在しないため、 `JSON.stringify` に `12345678901234567000` という数値リテラルを生成するように指示する方法はありません。生の JSON では、具体的な値を文字列化するように `JSON.stringify()` に直接指示することができます。
+`JSON.rawJSON` がなければ、対応する JavaScript の数値が存在しないため、 `JSON.stringify` に `12345678901234567890` という数値リテラルを生成するように指示する方法はありません。生の JSON では、具体的な値を文字列化するように `JSON.stringify()` に直接指示することができます。
 
 ```js
 const rawJSON = JSON.rawJSON("12345678901234567890");
@@ -114,14 +114,11 @@ console.log(JSON.stringify({ value: "\ud83d\ude04" })); // {"value":"😄"}
 ```js
 const rawJSON = JSON.rawJSON('"\\ud83d\\ude04"');
 const objStr = JSON.stringify({ value: rawJSON });
+console.log(objStr); // {"value":"\ud83d\ude04"}
 console.log(JSON.parse(objStr).value); // 😄
 ```
 
-`rawJSON` の二重バックスラッシュは、実際には単一のバックスラッシュ文字を表しますので、 JSON テキストは次のようになることに注意してください。
-
-```json-nolint
-{"value":"\ud83d\ude04"}
-```
+`rawJSON` の二重バックスラッシュは、実際には単一のバックスラッシュ文字を表します。
 
 ## 仕様書
 

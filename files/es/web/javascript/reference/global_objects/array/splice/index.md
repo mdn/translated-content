@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 El método **`splice()`** cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
 
-{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+
+```js interactive-example
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
 
 ## Sintaxis
 
@@ -20,7 +33,6 @@ array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 - `start`
   - : Índice donde se comenzará a cambiar el array (con 0 como origen). Si es mayor que la longitud del array, el punto inicial será la longitud del array. Si es negativo, empezará esa cantidad de elementos contando desde el final.
 - `deleteCount` {{optional_inline}}
-
   - : Un entero indicando el número de elementos a eliminar del array antiguo.
 
     Si `deleteCount` se omite, o si su valor es mayor que `arr.length - start` (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde `start`), entonces todos los elementos desde `start` hasta el final del array serán eliminados.

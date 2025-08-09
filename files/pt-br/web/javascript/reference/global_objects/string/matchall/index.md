@@ -5,9 +5,22 @@ slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 
 {{JSRef}}
 
-O método `matchAll()` retorna um iterador de todos os resultados correspondentes a uma string em relação a uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions), incluindo [grupos de captura](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+O método `matchAll()` retorna um iterador de todos os resultados correspondentes a uma string em relação a uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions), incluindo [grupos de captura](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
-{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+
+```js interactive-example
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
+
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// Expected output: Array ["test2", "e", "st2", "2"]
+```
 
 ## Sintaxe
 
@@ -18,7 +31,6 @@ str.matchAll(regexp)
 ### Parâmetros
 
 - `regexp`
-
   - : Um objeto de expressão regular.
 
     Se um objeto _`obj`_ não-RegExp for passado, ele será convertido implicitamente em um {{jsxref("RegExp")}} usando `new RegExp(obj)`.
@@ -27,7 +39,7 @@ str.matchAll(regexp)
 
 ### Valor retornado
 
-Um [iterador](/pt-BR/docs/Web/JavaScript/Guide/Iteratores_e_geradores) (que não é um iterável reinicializável).
+Um [iterador](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators) (que não é um iterável reinicializável).
 
 ## Exemplos
 
@@ -129,8 +141,8 @@ array[1];
 ## Veja também
 
 - {{jsxref("String.prototype.match()")}}
-- [Using regular expressions in JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Capturing groups](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+- [Using regular expressions in JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Capturing groups](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

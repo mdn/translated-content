@@ -51,21 +51,21 @@ A propriedade `align-content`, `align-self`, `align-items` e `justify-content` a
 
 ## Guia
 
-- [Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - : Uma visão geral sobre as funcionalidades do Flexbox
 - [Relação entre o Flexbox e os outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
   - : Como o Flexbox está relacionado aos outros métodos de layout, e outras especificações CSS
-- [Alinhando itens em um contêiner flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [Alinhando itens em um contêiner flex](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
   - : Como as propriedades Box Alignment trabalham com Flexbox.
 - [Ordenando itens flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
   - : Explicando as diferentes formas de mudar a order e direção dos itens, e cobrindo os possíveis problemas em fazer isso.
-- [Proporções de Controle de itens flex ao longo do eixo principal](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+- [Proporções de Controle de itens flex ao longo do eixo principal](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
   - : Explicando as propriedades flex-grow, flex-shrink e flex-basis.
 - [Dominando a embalagem de itens flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
   - : Como criar contêiners flex com múltiplas linhas e controlar a exibição dos itens nessas linhas.
 - [Casos típicos de uso do Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
   - : Padrão de projeto comuns que são casos de uso típicos do Flexbox.
-- [Retrocompatibilidade do Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [Retrocompatibilidade do Flexbox](/pt-BR/docs/Glossary/Flexbox)
   - : Status do Flexbox nos browsers, problemas de interoperabilidade e suporte para browsers antigos e versões das especificações
 
 ## Especificações

@@ -17,9 +17,9 @@ Windows 上で従来行われていたファイル拡張子と同じ目的を果
 
 ### 技術リファレンス
 
-- [MIME タイプのリスト](http://www.iana.org/assignments/media-types/media-types.xhtml) (英語)
-- [サーバー MIME タイプの適切な設定](/ja/docs/Properly_Configuring_Server_MIME_Types)
-- ウェブコンテキストでの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)の使用法に関する詳細情報。
-- [MIME タイプの不完全なリスト](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)
+- [MIME タイプのリスト](https://www.iana.org/assignments/media-types/media-types.xhtml) (英語)
+- [サーバー MIME タイプの適切な設定](/ja/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
+- ウェブコンテキストでの [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)の使用法に関する詳細情報。
+- [MIME タイプの不完全なリスト](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)
 - [Mozilla がどのように MIME タイプを決定しているか](/ja/docs/Mozilla/How_Mozilla_determines_MIME_Types)
 - [MediaRecorder.mimeType](/ja/docs/Web/API/MediaRecorder/mimeType)

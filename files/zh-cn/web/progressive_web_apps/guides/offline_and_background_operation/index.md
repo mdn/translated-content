@@ -387,11 +387,9 @@ async function registerPeriodicSync() {
 1. 作为先决条件，应用服务器需要使用{{Glossary("Public-key_cryptography", "公钥/私钥对")}}来设置，以便它可以签名推送消息。签名消息需要遵循 [VAPID](https://datatracker.ietf.org/doc/html/draft-thomson-webpush-vapid-02) 规范。
 
 2. 在设备上，应用程序使用 {{domxref("PushManager.subscribe()")}} 方法订阅来自服务器的消息。`subscribe()` 方法：
-
    - 将应用服务器的公钥作为参数：推送服务将用此来验证来自应用服务器的消息签名。
 
    - 返回一个会兑现为一个 {{domxref("PushSubscription")}} 对象的 `Promise`。这个对象包括：
-
      - 推送服务的[端点](/zh-CN/docs/Web/API/PushSubscription/endpoint): 这是应用服务器了解在何处发送推送消息的方式。
      - 你的服务器将用来加密发向推送服务的消息的[公开加密密钥](/zh-CN/docs/Web/API/PushSubscription/getKey)。
 
@@ -442,8 +440,8 @@ async function registerPeriodicSync() {
 
 ### 指南
 
-- web.dev 上的[介绍后台同步](https://developer.chrome.google.cn/blog/background-sync)（2017）
-- web.dev 上的[介绍后台获取](https://developer.chrome.google.cn/blog/background-fetch)（2022）
-- web.dev 上的[周期性后台同步 API](https://developer.chrome.google.cn/docs/capabilities/periodic-background-sync)（2020）
-- web.dev 上的[通知](https://web.dev/explore/notifications)
-- web.dev 上的[具有离线流媒体的 PWA](https://web.dev/articles/pwa-with-offline-streaming)（2021）
+- developer.chrome.google.cn 上的[介绍后台同步](https://developer.chrome.google.cn/blog/background-sync)（2017）
+- developer.chrome.google.cn 上的[介绍后台获取](https://developer.chrome.google.cn/blog/background-fetch)（2022）
+- developer.chrome.google.cn 上的[周期性后台同步 API](https://developer.chrome.google.cn/docs/capabilities/periodic-background-sync)（2020）
+- web.developers.google.cn 上的[通知](https://web.developers.google.cn/explore/notifications)
+- web.developers.google.cn 上的[具有离线流媒体的 PWA](https://web.developers.google.cn/articles/pwa-with-offline-streaming)（2021）

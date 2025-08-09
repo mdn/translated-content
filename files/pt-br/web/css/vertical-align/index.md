@@ -7,14 +7,56 @@ slug: Web/CSS/vertical-align
 
 A propriedade **`vertical-align`** do [CSS](/pt-BR/docs/Web/CSS) define o alinhamento vertical de uma caixa inline, inline-block ou table-cell.
 
-{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
+{{InteractiveExample("CSS Demo: vertical-align")}}
+
+```css interactive-example-choice
+vertical-align: baseline;
+```
+
+```css interactive-example-choice
+vertical-align: top;
+```
+
+```css interactive-example-choice
+vertical-align: middle;
+```
+
+```css interactive-example-choice
+vertical-align: bottom;
+```
+
+```css interactive-example-choice
+vertical-align: sub;
+```
+
+```css interactive-example-choice
+vertical-align: text-top;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p>
+    Align the star:
+    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+  </p>
+</section>
+```
+
+```css interactive-example
+#default-example > p {
+  line-height: 3em;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-decoration: underline overline;
+}
+```
 
 A propriedade vertical-align pode ser usada em dois contextos:
 
 - Para alinhar verticalmente a caixa de um elemento inline dentro da caixa de linha que a contém. Por exemplo, pode ser usado para [posicionar verticalmente uma imagem em uma linha de texto](#vertical_alignment_in_a_line_box).
 - Para alinhar verticalmente [o conteúdo de uma célula em uma tabela](#vertical_alignment_in_a_table_cell).
 
-Observe que `vertical-align` só se aplica a elementos inline, inline-block e table-cell: você não pode usá-lo para alinhar verticalmente [elementos em nível de bloco](/pt-BR/docs/Web/HTML/Block-level_elements).
+Observe que `vertical-align` só se aplica a elementos inline, inline-block e table-cell: você não pode usá-lo para alinhar verticalmente [elementos em nível de bloco](/pt-BR/docs/Glossary/Block-level_content).
 
 ## Sintaxe
 

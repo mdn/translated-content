@@ -5,13 +5,31 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 **`async function*`** 声明创建一个{{Glossary("binding", "绑定")}}到给定名称的新异步生成器函数。
 
 你也可以使用 [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)来定义异步生成器函数。
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## 语法
 
@@ -30,7 +48,8 @@ async function* name(param0, param1, /* …, */ paramN) {
 > [!NOTE]
 > 箭头函数不能用来定义异步生成器函数。
 
-> **备注：** `function` 和 `*` 是两个单独的标记，因此它们可以用[空白或换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)分隔。然而，如果 `async` 和 `function` 之间有换行符，则会[自动插入](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)分号，导致 `async` 成为标识符，而其余内容成为 `function*` 声明。
+> [!NOTE]
+> `function` 和 `*` 是两个单独的标记，因此它们可以用[空白或换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)分隔。然而，如果 `async` 和 `function` 之间有换行符，则会[自动插入](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)分号，导致 `async` 成为标识符，而其余内容成为 `function*` 声明。
 
 ### 参数
 

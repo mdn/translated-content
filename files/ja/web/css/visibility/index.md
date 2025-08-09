@@ -3,11 +3,53 @@ title: visibility
 slug: Web/CSS/visibility
 ---
 
-{{CSSRef}}
-
 **`visibility`** は CSS のプロパティで、文書のレイアウトを変更することなく要素を表示したり非表示にしたりします。このプロパティは {{HTMLElement("table")}} の行や列を隠すこともできます。
 
-{{EmbedInteractiveExample("pages/css/visibility.html")}}
+{{InteractiveExample("CSS デモ: visibility")}}
+
+```css interactive-example-choice
+visibility: visible;
+```
+
+```css interactive-example-choice
+visibility: hidden;
+```
+
+```css interactive-example-choice
+visibility: collapse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Hide me</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 要素を不可視にして*レイアウトから除去する*には、 `visibility` を使用する代わりに {{cssxref("display")}} プロパティを `none` に設定してください。
 
@@ -32,11 +74,9 @@ visibility: unset;
 - `visible`
   - : 要素のボックスが可視になります。
 - `hidden`
-  - : 要素のボックスは不可視になります (描画されません) が、レイアウトには通常通り影響します。子孫要素は `visibility` が `visible` に設定されていれば可視になります。([タブ順](/ja/docs/Web/HTML/Global_attributes/tabindex)で操作された時などに) 要素はフォーカスを受け取ることができません。
+  - : 要素のボックスは不可視になります (描画されません) が、レイアウトには通常通り影響します。子孫要素は `visibility` が `visible` に設定されていれば可視になります。([タブ順](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)で操作された時などに) 要素はフォーカスを受け取ることができません。
 - `collapse`
-
   - : &#x20;
-
     - {{HTMLElement("table")}} の行、列、列グループ、行グループでは、行や列が不可視になり、 (表の列や行に `{{Cssxref("display")}}: none` が適用された場合のように) 占めていた領域も除去されます。しかし、他の行や列の寸法は、不可視になった行や列のセルが存在するときのように計算されます。この値は表全体の幅や高さを強制的に再計算することなく、すばやく行や列を不可視にすることができます。
     - フレックス項目では、不可視になり、占めていた領域は削除されます。
     - [XUL](/ja/docs/Mozilla/Tech/XUL) 要素では、通常は寸法に影響するその他のスタイルに関わらず、要素の寸法が常にゼロと計算されますが、マージンは有効になります。
@@ -44,7 +84,7 @@ visibility: unset;
 
 ## アクセシビリティの考慮
 
-要素の `visibility` の値に `hidden` を使用すると、 [アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs)から削除されます。これは要素及びその子孫要素が読み上げ技術でアナウンスされない結果になります。
+要素の `visibility` の値に `hidden` を使用すると、 [アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から削除されます。これは要素及びその子孫要素が読み上げ技術でアナウンスされない結果になります。
 
 ## 補間
 

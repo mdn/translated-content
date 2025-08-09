@@ -1,6 +1,9 @@
 ---
-title: CSSGroupingRule.cssRules
+title: "CSSGroupingRule: cssRules プロパティ"
+short-title: cssRules
 slug: Web/API/CSSGroupingRule/cssRules
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{ APIRef("CSSOM") }}

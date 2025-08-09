@@ -21,7 +21,7 @@ Una vez que {{domxref("Response")}} es recuperada, hay varios métodos disponibl
 Puede crear una solicitud y respuesta directamente a con los constructores {{domxref("Request.Request","Request()")}} y {{domxref("Response.Response","Response()")}}, pero no es recomendable hacerlo directamente. En su lugar, es preferible que sean creados como resultado de otras acciones de la API (por ejemplo, {{domxref("FetchEvent.respondWith")}} desde los operadores de servicios).
 
 > [!NOTE]
-> Puede encontrar mas información sobre las características de la API Fetch en [Usando Fetch](/es/docs/Web/API/Fetch_API/Using_Fetch), y aprender los conceptos en [Fetch: conceptos básicos](/es/docs/Web/API/Fetch_API/Basic_concepts).
+> Puede encontrar mas información sobre las características de la API Fetch en [Usando Fetch](/es/docs/Web/API/Fetch_API/Using_Fetch), y aprender los conceptos en [Fetch: conceptos básicos](/es/docs/conflicting/Web/API/Fetch_API/Using_Fetch).
 
 ### Abortar una petición
 
@@ -53,9 +53,9 @@ Los navegadores han empezado a añadir soporte experimental para las interfaces 
 
 ## Ver también
 
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch basic concepts](/es/docs/Web/API/Fetch_API/Basic_concepts)
-- [Fetch API Examples](http://davidwalsh.name/fetch)
+- [Fetch basic concepts](/es/docs/conflicting/Web/API/Fetch_API/Using_Fetch)
+- [Fetch API Examples](https://davidwalsh.name/fetch)

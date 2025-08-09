@@ -3,8 +3,6 @@ title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
 ---
 
-{{FirefoxSidebar}}
-
 Este artículo muestra información sobre los cambios en Firefox 61 que afectarán a los desarrolladores. Firefox 61 es la versión beta actual de Firefox, y se lanzará el 26 de Junio de 2018.
 
 ## Cambios para desarrolladores web
@@ -63,7 +61,7 @@ _No hay cambios._
 
 ### HTTP
 
-- La cookie **`SameSite`** ha sido implementada. Mira [Set-Cookie](/es/docs/Web/HTTP/Headers/Set-Cookie) y [HTTP cookies](/es/docs/Web/HTTP/Cookies) ([Error 795346 en Firefox](https://bugzil.la/795346)).
+- La cookie **`SameSite`** ha sido implementada. Mira [Set-Cookie](/es/docs/Web/HTTP/Reference/Headers/Set-Cookie) y [HTTP cookies](/es/docs/Web/HTTP/Guides/Cookies) ([Error 795346 en Firefox](https://bugzil.la/795346)).
 
 ### Seguridad
 
@@ -95,7 +93,6 @@ _No hay cambios._
 
 - La obsoleta (y nunca implementada correctamente) propiedad {{domxref("SVGViewElement")}}`.viewTarget` ha sido eliminada ([Error 1455763 en Firefox](https://bugzil.la/1455763)).
 - Las siguientes propiedades obsoletas han sido eliminadas de {{domxref("SVGSVGElement")}} ([Error 1133172 en Firefox](https://bugzil.la/1133172)):
-
   - `pixelUnitToMillimeterX`
   - `pixelUnitToMillimeterY`
   - `screenPixelToMillimeterX`

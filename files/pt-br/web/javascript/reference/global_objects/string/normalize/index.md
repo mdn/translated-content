@@ -16,9 +16,7 @@ str.normalize([form])
 ### Parâmetros
 
 - `form`
-
   - : Opcional. Um dentre os seguintes valores: `"NFC"`, `"NFD"`, `"NFKC"`, ou `"NFKD"`, especificando o formato de normalização. Se o valor for omitido ou for {{jsxref("undefined")}}, `"NFC"` será utilizado.
-
     - `NFC` — Formato de Normalização Canônico de Composição.
     - `NFD` — Formato de Normalização Canônico de Decomposição.
     - `NFKC` — Formato de Normalização de Compatibilidade de Composição.
@@ -185,5 +183,5 @@ str.normalize("NFKD"); // '\u0073\u0323\u0307'
 
 ## Veja também
 
-- [Unicode Standard Annex #15, Unicode Normalization Forms](http://www.unicode.org/reports/tr15/)
+- [Unicode Standard Annex #15, Unicode Normalization Forms](https://www.unicode.org/reports/tr15/)
 - [Unicode equivalence](http://en.wikipedia.org/wiki/Unicode_equivalence)

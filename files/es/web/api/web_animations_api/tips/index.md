@@ -4,7 +4,7 @@ slug: Web/API/Web_Animations_API/Tips
 original_slug: Web/CSS/CSS_animations/Tips
 ---
 
-{{cssref}}Las Animaciones con CSS hacen posible crear cosas increíbles con los elementos que forman parte de tus documentos y apps . Sin embargo, hay cosas que deseas hacer que no son evidentes, o soluciones inteligentes que quizás no encuentres de inmediato. Este artículo es una colección de tips y trucos que hemos encontrado que podrían hacer más fácil el trabajo, incluido cómo volver a ejecutar una animación detenida.
+Las Animaciones con CSS hacen posible crear cosas increíbles con los elementos que forman parte de tus documentos y apps . Sin embargo, hay cosas que deseas hacer que no son evidentes, o soluciones inteligentes que quizás no encuentres de inmediato. Este artículo es una colección de tips y trucos que hemos encontrado que podrían hacer más fácil el trabajo, incluido cómo volver a ejecutar una animación detenida.
 
 ## Corriendo una animación de nuevo
 
@@ -156,5 +156,5 @@ Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>
 
 ## Mira también
 
-- [Using CSS transitions](/es/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("Window.requestAnimationFrame()")}}

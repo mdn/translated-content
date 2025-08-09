@@ -7,7 +7,51 @@ slug: Web/CSS/transition-duration
 
 Свойство **`transition-duration`** определяет продолжительность выполнения анимации. Значение по умолчанию равняется `0s`, т.е. отсутствие анимации.
 
-{{EmbedInteractiveExample("pages/css/transition-duration.html")}}
+{{InteractiveExample("CSS Demo: transition-duration")}}
+
+```css interactive-example-choice
+transition-duration: 500ms;
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: background-color;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-duration: 3s, 1s;
+transition-property: margin-right, color;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 You may specify multiple durations; each duration will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer durations specified than in the master list, the user agent repeat the list of durations. If there are more durations, the list is simply truncated to the right size. In both case the CSS declaration stays valid.
 
@@ -129,8 +173,8 @@ var intervalID = window.setInterval(updateTransition, 7000);
   left: 0px;
   top: 0px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left top -webkit-transform
-    color;
+  -webkit-transition-property: width height background-color font-size left
+    top -webkit-transform color;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-property: width height background-color font-size left top
@@ -149,8 +193,8 @@ var intervalID = window.setInterval(updateTransition, 7000);
   left: 150px;
   top: 25px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left top -webkit-transform
-    transform color;
+  -webkit-transition-property: width height background-color font-size left
+    top -webkit-transform transform color;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-property: width height background-color font-size left top
@@ -333,7 +377,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## Смотрите также
 
-- [Using CSS transitions](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-timing-function')}}

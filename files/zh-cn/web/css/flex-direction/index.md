@@ -3,8 +3,6 @@ title: flex-direction
 slug: Web/CSS/flex-direction
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`flex-direction`** 属性指定了内部元素是如何在弹性容器中布局的，定义了主轴的方向（正方向或反方向）。
 
 ```css
@@ -120,4 +118,4 @@ flex-direction: unset;
 
 ## 参见
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

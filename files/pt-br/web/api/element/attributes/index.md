@@ -80,4 +80,4 @@ O exemplo a seguir percorre através dos nós dos atributos do elemento no docum
 ## Veja também
 
 - {{domxref("NamedNodeMap")}}, a interface do objeto retornado
-- Considerações sobre a compatibilidade entre os navegadores: em [quirksmode](http://www.quirksmode.org/dom/w3c_core.html#attributes)
+- Considerações sobre a compatibilidade entre os navegadores: em [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes)

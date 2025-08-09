@@ -5,15 +5,20 @@ l10n:
   sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
-{{jsSidebar("Functions")}}
-
 **箭头函数表达式**的语法比传统的[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)更简洁，但在语义上有一些差异，在用法上也有一些限制：
 
 - 箭头函数没有独立的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)、[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 和 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) {{Glossary("binding", "绑定")}}，并且不可被用作[方法](/zh-CN/docs/Glossary/Method)。
 - 箭头函数不能用作[构造函数](/zh-CN/docs/Glossary/Constructor)。使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用它们会引发 {{jsxref("TypeError")}}。它们也无法访问 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 关键字。
 - 箭头函数不能在其主体中使用 [`yield`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield)，也不能作为生成器函数创建。
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## 语法
 
@@ -39,7 +44,7 @@ param => {
 }
 ```
 
-参数部分支持[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)，并且始终需要使用括号：
+参数部分支持[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，并且始终需要使用括号：
 
 ```js-nolint
 (a, b, ...r) => expression
@@ -164,7 +169,7 @@ const func3 = () => { foo() {} };
 // SyntaxError: Unexpected token '{'
 ```
 
-这是因为只有当箭头后面的标记不是左括号时，JavaScript 才会将箭头函数视为表达式体，因此括号（{}）内的代码会被解析为一系列语句，其中 `foo` 是[标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)，而不是对象文字中的键。
+这是因为只有当箭头后面的标记不是左括号时，JavaScript 才会将箭头函数视为表达式体，因此括号（{}）内的代码会被解析为一系列语句，其中 `foo` 是[标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)，而不是对象字面量中的键。
 
 要解决这个问题，可以用括号将对象字面量包装起来：
 
@@ -208,7 +213,7 @@ Object.defineProperty(obj, "b", {
 });
 ```
 
-由于[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)体具有 `this` 上下文，因此作为[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)的箭头函数会关闭类的 `this` 上下文，箭头函数体中的 `this` 将正确指向实例（对于[静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)来说是类本身）。但是，由于它是一个[闭包](/zh-CN/docs/Web/JavaScript/Closures)，而不是函数本身的绑定，因此 `this` 的值不会根据执行上下文而改变。
+由于[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)体具有 `this` 上下文，因此作为[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)的箭头函数会关闭类的 `this` 上下文，箭头函数体中的 `this` 将正确指向实例（对于[静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)来说是类本身）。但是，由于它是一个[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)，而不是函数本身的绑定，因此 `this` 的值不会根据执行上下文而改变。
 
 ```js
 class C {

@@ -1,14 +1,16 @@
 ---
-title: WebGL2RenderingContext.uniform[1234][uif][v]()
+title: WebGL2RenderingContext：uniform[1234][uif][v]() 方法
 slug: Web/API/WebGL2RenderingContext/uniform
+l10n:
+  sourceCommit: 2b942f0d8f84641c233d701cb5d1f4e6c23120ff
 ---
 
-{{APIRef("WebGL")}} {{SeeCompatTable}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGL2RenderingContext.uniform[1234][uif][v]()`** 方法提供了 uniform（es）变量的详细值
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.uniform[1234][uif][v]()`** 方法指定了 uniform 变量的值。
 
-> **备注：** `ui` _意为无符号整数_, `i` _意为整数，_`f` _意为浮点数_, 并且 `v` _意为矢量。_
-> 并不是所有的组合都是有效的：`u` 不能是 `f`的组合。详见下方语法表格。用 正则表达式概括语法：`uniform[1234](u?i|f)v?`
+> [!NOTE]
+> `ui` 指*无符号整数*，`i` 指*整数*，`f` 指*浮点数*，而 `v` 则指*向量*。并不是所有的组合都是有效的：`u` 不能与 `f` 组合。详见下方语法表格。等价的正则表达式：`uniform[1234](u?i|f)v?`
 
 ## 语法
 
@@ -69,18 +71,16 @@ uniform4uiv(location, data, srcOffset, srcLength)
 
 ### 参数
 
-- location
-  - : 一个 {{domxref("WebGLUniformLocation")}} 对象包含了本地 uniform 属性的修改。
-- `value, v0, v1, v2, v3`
-
-  - : 一个新的值被应用到 uniform 变量当中。合理情况：
-
-    - {{jsxref("Number")}} 如果是无符号整数值 (则用 `ui`方法),如果是整数值 (则用 `i`方法), 如果是浮点数 (则用`f`方法).
-    - {{jsxref("Uint32Array")}} 用于无符号整数向量（矢量）方法 (则用`uiv`方法).
+- `location`
+  - : 一个包含了要修改的 uniform 属性的位置的 {{domxref("WebGLUniformLocation")}} 对象。
+- `data`、`v0`、`v1`、`v2`、`v3`
+  - : 要被应用到 uniform 变量中的新值。可能的类型：
+    - {{jsxref("Number")}}：用于无符号整数值（具有 `ui` 的方法）、整数值（具有 `i` 的方法）或浮点数（具有 `f` 的方法）。
+    - {{jsxref("Uint32Array")}}：用于无符号整数向量方法（具有 `uiv` 的方法）。
 
 ### 返回值
 
-没有返回值
+无（{{jsxref("undefined")}}）。
 
 ## 规范
 
@@ -90,6 +90,6 @@ uniform4uiv(location, data, srcOffset, srcLength)
 
 {{Compat}}
 
-## 详见
+## 参见
 
 - {{domxref("WebGLRenderingContext.uniform()")}}

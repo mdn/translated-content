@@ -3,20 +3,18 @@ title: justify-content
 slug: Web/CSS/justify-content
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS) **`justify-content`** define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.
+La propiedad [CSS](/es/docs/Web/CSS) **`justify-content`** define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.
 
 El alineamiento se produce luego de que las longitudes y márgenes automáticos son aplicados, lo que significa que, si existe al menos un elemento flexible con {{cssxref("flex-grow")}} diferente a 0, no tendrá efecto ya que no habrá espacio disponible.
 
 > [!NOTE]
-> No se debe asumir que esta propiedad sólo se aplicará a contenedores flex en el futuro y por lo tanto no ocultarla simplemente estableciendo otro valor para {{cssxref("display")}}. El CSSWG está trabajano para [extender su uso a cualquier elemento en bloque](http://dev.w3.org/csswg/css3-align/#justify-content). La especificación preliminar se encuentra en una etapa muy temprana y aún no está implementada.
+> No se debe asumir que esta propiedad sólo se aplicará a contenedores flex en el futuro y por lo tanto no ocultarla simplemente estableciendo otro valor para {{cssxref("display")}}. El CSSWG está trabajano para [extender su uso a cualquier elemento en bloque](https://dev.w3.org/csswg/css3-align/#justify-content). La especificación preliminar se encuentra en una etapa muy temprana y aún no está implementada.
 
 {{cssinfo}}
 
-Véase [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes) para más propiedades e información.
+Véase [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más propiedades e información.
 
 ## Sintaxis
 
@@ -153,4 +151,4 @@ Resultados en:
 
 ## Ver también
 
-- [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes)
+- [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

@@ -2,10 +2,10 @@
 title: CSSCounterStyleRule：additiveSymbols 属性
 slug: Web/API/CSSCounterStyleRule/additiveSymbols
 l10n:
-  sourceCommit: 59b1cd1f520971b89ccf521d53a1d9d3bf4c0756
+  sourceCommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
 ---
 
-{{APIRef("CSS Counter Styles")}}
+{{APIRef("CSSOM")}}
 
 {{domxref("CSSCounterStyleRule")}} 接口的 **`additiveSymbols`** 属性用于获取或设置 {{cssxref("@counter-style/additive-symbols","additive-symbols")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
 

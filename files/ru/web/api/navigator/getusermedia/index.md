@@ -21,9 +21,8 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 ### Параметры
 
 - `constraints`
-  - : {{domxref("MediaStreamConstraints")}} объект, определяющий типы запрашиваемых медиа, а также любые требования для каждого типа. Подробнее см. В разделе ограничений современного метода {{domxref ("MediaDevices.getUserMedia ()")}}, а также в статье [Возможности, ограничения и настройки.](/ru/docs/Web/API/Media_Streams_API/Constraints)
+  - : {{domxref("MediaStreamConstraints")}} объект, определяющий типы запрашиваемых медиа, а также любые требования для каждого типа. Подробнее см. В разделе ограничений современного метода {{domxref ("MediaDevices.getUserMedia ()")}}, а также в статье [Возможности, ограничения и настройки.](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - `successCallback`
-
   - : Функция, которая вызывается при утверждении запроса на доступ к мультимедиа. Функция вызывается с одним параметром: объектом {{domxref ("MediaStream")}}, который содержит медиапоток. Затем колбэк может назначить поток желаемому объекту (например, элементу {{HTMLElement ("audio")}} или {{HTMLElement ("video")}}), как показано в следующем примере:
 
     ```js
@@ -105,6 +104,6 @@ if (navigator.getUserMedia) {
 ## Смотрите также
 
 - {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
-- [WebRTC](/ru/docs/WebRTC) - the introductory page to the API
-- [MediaStream API](/ru/docs/WebRTC/MediaStream_API) - the API for the media stream objects
-- [Taking webcam photos](/ru/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`
+- [WebRTC](/ru/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/ru/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`

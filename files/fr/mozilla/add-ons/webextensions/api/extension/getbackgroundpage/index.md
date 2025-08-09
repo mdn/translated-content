@@ -30,7 +30,7 @@ Aucun
 
 ## Exemples
 
-Supposons un [script d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) définisse une fonction `foo()`:
+Supposons un [script d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) définisse une fonction `foo()`:
 
 ```js
 // background.js
@@ -40,7 +40,7 @@ function foo() {
 }
 ```
 
-Un script exécuté dans un [popup](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) peut appeler cette fonction directement comme ceci :
+Un script exécuté dans un [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) peut appeler cette fonction directement comme ceci :
 
 ```js
 // popup.js

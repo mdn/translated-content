@@ -32,7 +32,7 @@ HTML документ боковой панели получает доступ 
 
 ## Использование боковых панелей
 
-Чтобы использовать боковую панель в своём расширении, укажите с помощью ключа [`sidebar_action`](/en-US/Add-ons/WebExtensions/manifest.json/sidebar_action) в manifest.json key, HTML-документ панели, а также заголовок и значок по умолчанию:
+Чтобы использовать боковую панель в своём расширении, укажите с помощью ключа [`sidebar_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) в manifest.json key, HTML-документ панели, а также заголовок и значок по умолчанию:
 
 ```json
 "sidebar_action": {

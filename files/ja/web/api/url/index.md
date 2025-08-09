@@ -129,5 +129,5 @@ const response = await fetch(
 
 - [`URL` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/ja/docs/Web/API/URL_API)
-- [URL とは何か](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - {{domxref("URLSearchParams")}}

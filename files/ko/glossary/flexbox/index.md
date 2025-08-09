@@ -34,10 +34,10 @@ l10n:
 
 - [CSS Flexible Box Layout Module 레벨 1 명세](https://www.w3.org/TR/css-flexbox-1/)
 - CSS Flexbox Guide:
-  - [Flexbox의 기본 개념](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+  - [Flexbox의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - [flexbox와 다른 레이아웃 메소드와의 관계](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
   - [flex container 내 항목 배열](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
   - [flex items 순서 정리](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
-  - [주축을 따라 플렉스 항목의 비율 제어하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+  - [주축을 따라 플렉스 항목의 비율 제어하기](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
   - [플렉스 항목 래핑 마스터하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
-  - [flexbox의 일반적인 사용 사례](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
+  - [flexbox의 일반적인 사용 사례](/ko/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)

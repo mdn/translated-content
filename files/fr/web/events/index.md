@@ -3,7 +3,7 @@ title: Référence des événements
 slug: Web/Events
 ---
 
-Les [événements DOM](/fr/docs/Web/API/Document_Object_Model/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
+Les [événements DOM](/fr/docs/Learn/JavaScript/Building_blocks/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
 
 Chaque événement est représenté par un objet implémentant l'interface [`Event`](/fr/docs/Web/API/Event), et peut avoir d'autres propriétés et/ou champs, permettant d'obtenir des informations supplémentaires au sujet de ce qui s'est produit. La documentation de chaque événement comporte un tableau (en haut de la page) qui comprend un lien vers l'interface de l'événement associé et d'autres informations pertinentes. Une liste complète des différents types d'événements est donnée dans [Event >Événement `Interfaces basées sur`](/fr/docs/Web/API/Event#introduction).
 
@@ -791,80 +791,73 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
 Cette section répertorie les événements qui ont _leurs propres_ pages de référence sur MDN. Si vous êtes intéressé par un événement qui n'est pas listé ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste de MDN.
 
 - {{DOMxRef("AbortSignal")}}
-
   - [abort](/fr/docs/Web/API/AbortSignal/abort_event)
 
 - {{DOMxRef("AudioScheduledSourceNode")}}
-
   - [ended](/fr/docs/Web/API/AudioScheduledSourceNode/ended_event)
 
 - {{DOMxRef("AudioTrackList")}}
-
   - [addtrack](/fr/docs/Web/API/AudioTrackList/addtrack_event)
   - [change](/fr/docs/Web/API/AudioTrackList/change_event)
   - [removetrack](/fr/docs/Web/API/AudioTrackList/removetrack_event)
 
 - {{DOMxRef("BroadcastChannel")}}
-
   - [messageerror](/fr/docs/Web/API/BroadcastChannel/messageerror_event)
   - [message](/fr/docs/Web/API/BroadcastChannel/message_event)
 
 - {{DOMxRef("DedicatedWorkerGlobalScope")}}
-
   - [messageerror](/fr/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
   - [message](/fr/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
 
 - {{DOMxRef("Document")}}
-
-  - [animationcancel](/fr/docs/Web/API/Document/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Document/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Document/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Document/animationstart_event)
+  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
+  - [animationend](/fr/docs/Web/API/Element/animationend_event)
+  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
+  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
   - [copy](/fr/docs/Web/API/Document/copy_event)
   - [cut](/fr/docs/Web/API/Document/cut_event)
   - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-  - [dragend](/fr/docs/Web/API/Document/dragend_event)
-  - [dragenter](/fr/docs/Web/API/Document/dragenter_event)
-  - [dragleave](/fr/docs/Web/API/Document/dragleave_event)
-  - [dragover](/fr/docs/Web/API/Document/dragover_event)
-  - [dragstart](/fr/docs/Web/API/Document/dragstart_event)
-  - [drag](/fr/docs/Web/API/Document/drag_event)
-  - [drop](/fr/docs/Web/API/Document/drop_event)
+  - [dragend](/fr/docs/Web/API/HTMLElement/dragend_event)
+  - [dragenter](/fr/docs/Web/API/HTMLElement/dragenter_event)
+  - [dragleave](/fr/docs/Web/API/HTMLElement/dragleave_event)
+  - [dragover](/fr/docs/Web/API/HTMLElement/dragover_event)
+  - [dragstart](/fr/docs/Web/API/HTMLElement/dragstart_event)
+  - [drag](/fr/docs/Web/API/HTMLElement/drag_event)
+  - [drop](/fr/docs/Web/API/HTMLElement/drop_event)
   - [fullscreenchange](/fr/docs/Web/API/Document/fullscreenchange_event)
   - [fullscreenerror](/fr/docs/Web/API/Document/fullscreenerror_event)
-  - [gotpointercapture](/fr/docs/Web/API/Document/gotpointercapture_event)
-  - [keydown](/fr/docs/Web/API/Document/keydown_event)
-  - [keypress](/fr/docs/Web/API/Document/keypress_event)
-  - [keyup](/fr/docs/Web/API/Document/keyup_event)
-  - [lostpointercapture](/fr/docs/Web/API/Document/lostpointercapture_event)
+  - [gotpointercapture](/fr/docs/Web/API/Element/gotpointercapture_event)
+  - [keydown](/fr/docs/Web/API/Element/keydown_event)
+  - [keypress](/fr/docs/Web/API/Element/keypress_event)
+  - [keyup](/fr/docs/Web/API/Element/keyup_event)
+  - [lostpointercapture](/fr/docs/Web/API/Element/lostpointercapture_event)
   - [paste](/fr/docs/Web/API/Document/paste_event)
-  - [pointercancel](/fr/docs/Web/API/Document/pointercancel_event)
-  - [pointerdown](/fr/docs/Web/API/Document/pointerdown_event)
-  - [pointerenter](/fr/docs/Web/API/Document/pointerenter_event)
-  - [pointerleave](/fr/docs/Web/API/Document/pointerleave_event)
+  - [pointercancel](/fr/docs/Web/API/Element/pointercancel_event)
+  - [pointerdown](/fr/docs/Web/API/Element/pointerdown_event)
+  - [pointerenter](/fr/docs/Web/API/Element/pointerenter_event)
+  - [pointerleave](/fr/docs/Web/API/Element/pointerleave_event)
   - [pointerlockchange](/fr/docs/Web/API/Document/pointerlockchange_event)
   - [pointerlockerror](/fr/docs/Web/API/Document/pointerlockerror_event)
-  - [pointermove](/fr/docs/Web/API/Document/pointermove_event)
-  - [pointerout](/fr/docs/Web/API/Document/pointerout_event)
-  - [pointerover](/fr/docs/Web/API/Document/pointerover_event)
-  - [pointerup](/fr/docs/Web/API/Document/pointerup_event)
+  - [pointermove](/fr/docs/Web/API/Element/pointermove_event)
+  - [pointerout](/fr/docs/Web/API/Element/pointerout_event)
+  - [pointerover](/fr/docs/Web/API/Element/pointerover_event)
+  - [pointerup](/fr/docs/Web/API/Element/pointerup_event)
   - [readystatechange](/fr/docs/Web/API/Document/readystatechange_event)
   - [scroll](/fr/docs/Web/API/Document/scroll_event)
   - [selectionchange](/fr/docs/Web/API/Document/selectionchange_event)
-  - [selectstart](/fr/docs/Web/API/Document/selectstart_event)
-  - [touchcancel](/fr/docs/Web/API/Document/touchcancel_event)
-  - [touchend](/fr/docs/Web/API/Document/touchend_event)
-  - [touchmove](/fr/docs/Web/API/Document/touchmove_event)
-  - [touchstart](/fr/docs/Web/API/Document/touchstart_event)
-  - [transitioncancel](/fr/docs/Web/API/Document/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Document/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Document/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Document/transitionstart_event)
+  - [selectstart](/fr/docs/Web/API/Node/selectstart_event)
+  - [touchcancel](/fr/docs/Web/API/Element/touchcancel_event)
+  - [touchend](/fr/docs/Web/API/Element/touchend_event)
+  - [touchmove](/fr/docs/Web/API/Element/touchmove_event)
+  - [touchstart](/fr/docs/Web/API/Element/touchstart_event)
+  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
+  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
+  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
+  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
   - [visibilitychange](/fr/docs/Web/API/Document/visibilitychange_event)
-  - [wheel](/fr/docs/Web/API/Document/wheel_event)
+  - [wheel](/fr/docs/Web/API/Element/wheel_event)
 
 - {{DOMxRef("Element")}}
-
   - [afterscriptexecute](/fr/docs/Web/API/Element/afterscriptexecute_event)
   - [auxclick](/fr/docs/Web/API/Element/auxclick_event)
   - [beforescriptexecute](/fr/docs/Web/API/Element/beforescriptexecute_event)
@@ -879,7 +872,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [dblclick](/fr/docs/Web/API/Element/dblclick_event)
   - [DOMActivate](/fr/docs/Web/API/Element/DOMActivate_event)
   - [DOMMouseScroll](/fr/docs/Web/API/Element/DOMMouseScroll_event)
-  - [error](/fr/docs/Web/API/Element/error_event)
+  - [error](/fr/docs/Web/API/HTMLElement/error_event)
   - [focusin](/fr/docs/Web/API/Element/focusin_event)
   - [focusout](/fr/docs/Web/API/Element/focusout_event)
   - [focus](/fr/docs/Web/API/Element/focus_event)
@@ -910,7 +903,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [overflow](/fr/docs/Web/API/Element/overflow_event)
   - [paste](/fr/docs/Web/API/Element/paste_event)
   - [scroll](/fr/docs/Web/API/Element/scroll_event)
-  - [select](/fr/docs/Web/API/Element/select_event)
+  - [select](/fr/docs/Web/API/HTMLInputElement/select_event)
   - [show](/fr/docs/Web/API/Element/show_event)
   - [touchcancel](/fr/docs/Web/API/Element/touchcancel_event)
   - [touchend](/fr/docs/Web/API/Element/touchend_event)
@@ -924,13 +917,11 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [wheel](/fr/docs/Web/API/Element/wheel_event)
 
 - {{DOMxRef("EventSource")}}
-
   - [error](/fr/docs/Web/API/EventSource/error_event)
   - [message](/fr/docs/Web/API/EventSource/message_event)
   - [open](/fr/docs/Web/API/EventSource/open_event)
 
 - {{DOMxRef("FileReader")}}
-
   - [abort](/fr/docs/Web/API/FileReader/abort_event)
   - [error](/fr/docs/Web/API/FileReader/error_event)
   - [loadend](/fr/docs/Web/API/FileReader/loadend_event)
@@ -939,57 +930,50 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [progress](/fr/docs/Web/API/FileReader/progress_event)
 
 - {{DOMxRef("HTMLCanvasElement")}}
-
   - [webglcontextcreationerror](/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
   - [webglcontextlost](/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
   - [webglcontextrestored](/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
 
 - {{DOMxRef("HTMLDetailsElement")}}
-
-  - [toggle](/fr/docs/Web/API/HTMLDetailsElement/toggle_event)
+  - [toggle](/fr/docs/Web/API/HTMLElement/toggle_event)
 
 - {{DOMxRef("HTMLDialogElement")}}
-
   - [cancel](/fr/docs/Web/API/HTMLDialogElement/cancel_event)
   - [close](/fr/docs/Web/API/HTMLDialogElement/close_event)
 
 - {{DOMxRef("HTMLElement")}}
-
-  - [animationcancel](/fr/docs/Web/API/HTMLElement/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/HTMLElement/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/HTMLElement/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/HTMLElement/animationstart_event)
-  - [beforeinput](/fr/docs/Web/API/HTMLElement/beforeinput_event)
+  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
+  - [animationend](/fr/docs/Web/API/Element/animationend_event)
+  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
+  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
+  - [beforeinput](/fr/docs/Web/API/Element/beforeinput_event)
   - [change](/fr/docs/Web/API/HTMLElement/change_event)
-  - [gotpointercapture](/fr/docs/Web/API/HTMLElement/gotpointercapture_event)
-  - [input](/fr/docs/Web/API/HTMLElement/input_event)
-  - [lostpointercapture](/fr/docs/Web/API/HTMLElement/lostpointercapture_event)
-  - [pointercancel](/fr/docs/Web/API/HTMLElement/pointercancel_event)
-  - [pointerdown](/fr/docs/Web/API/HTMLElement/pointerdown_event)
-  - [pointerenter](/fr/docs/Web/API/HTMLElement/pointerenter_event)
-  - [pointerleave](/fr/docs/Web/API/HTMLElement/pointerleave_event)
-  - [pointermove](/fr/docs/Web/API/HTMLElement/pointermove_event)
-  - [pointerout](/fr/docs/Web/API/HTMLElement/pointerout_event)
-  - [pointerover](/fr/docs/Web/API/HTMLElement/pointerover_event)
-  - [pointerup](/fr/docs/Web/API/HTMLElement/pointerup_event)
-  - [transitioncancel](/fr/docs/Web/API/HTMLElement/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/HTMLElement/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/HTMLElement/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/HTMLElement/transitionstart_event)
+  - [gotpointercapture](/fr/docs/Web/API/Element/gotpointercapture_event)
+  - [input](/fr/docs/Web/API/Element/input_event)
+  - [lostpointercapture](/fr/docs/Web/API/Element/lostpointercapture_event)
+  - [pointercancel](/fr/docs/Web/API/Element/pointercancel_event)
+  - [pointerdown](/fr/docs/Web/API/Element/pointerdown_event)
+  - [pointerenter](/fr/docs/Web/API/Element/pointerenter_event)
+  - [pointerleave](/fr/docs/Web/API/Element/pointerleave_event)
+  - [pointermove](/fr/docs/Web/API/Element/pointermove_event)
+  - [pointerout](/fr/docs/Web/API/Element/pointerout_event)
+  - [pointerover](/fr/docs/Web/API/Element/pointerover_event)
+  - [pointerup](/fr/docs/Web/API/Element/pointerup_event)
+  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
+  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
+  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
+  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
 
 - {{DOMxRef("HTMLFormElement")}}
-
   - [formdata](/fr/docs/Web/API/HTMLFormElement/formdata_event)
   - [reset](/fr/docs/Web/API/HTMLFormElement/reset_event)
   - [submit](/fr/docs/Web/API/HTMLFormElement/submit_event)
 
 - {{DOMxRef("HTMLInputElement")}}
-
   - [invalid](/fr/docs/Web/API/HTMLInputElement/invalid_event)
   - [search](/fr/docs/Web/API/HTMLInputElement/search_event)
 
 - {{DOMxRef("HTMLMediaElement")}}
-
   - [abort](/fr/docs/Web/API/HTMLMediaElement/abort_event)
   - [canplaythrough](/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event)
   - [canplay](/fr/docs/Web/API/HTMLMediaElement/canplay_event)
@@ -1014,90 +998,72 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [waiting](/fr/docs/Web/API/HTMLMediaElement/waiting_event)
 
 - {{DOMxRef("HTMLSlotElement")}}
-
   - [slotchange](/fr/docs/Web/API/HTMLSlotElement/slotchange_event)
 
 - {{DOMxRef("HTMLTrackElement")}}
-
   - [cuechange](/fr/docs/Web/API/HTMLTrackElement/cuechange_event)
 
 - {{DOMxRef("HTMLVideoElement")}}
-
   - [enterpictureinpicture](/fr/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event)
   - [leavepictureinpicture](/fr/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event)
 
 - {{DOMxRef("IDBDatabase")}}
-
-  - [abort](/fr/docs/Web/API/IDBDatabase/abort_event)
+  - [abort](/fr/docs/Web/API/IDBTransaction/abort_event)
   - [close](/fr/docs/Web/API/IDBDatabase/close_event)
-  - [error](/fr/docs/Web/API/IDBDatabase/error_event)
+  - [error](/fr/docs/Web/API/IDBTransaction/error_event)
   - [versionchange](/fr/docs/Web/API/IDBDatabase/versionchange_event)
 
 - {{DOMxRef("IDBOpenDBRequest")}}
-
   - [blocked](/fr/docs/Web/API/IDBOpenDBRequest/blocked_event)
   - [upgradeneeded](/fr/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
 
 - {{DOMxRef("IDBRequest")}}
-
   - [error](/fr/docs/Web/API/IDBRequest/error_event)
   - [success](/fr/docs/Web/API/IDBRequest/success_event)
 
 - {{DOMxRef("IDBTransaction")}}
-
   - [abort](/fr/docs/Web/API/IDBTransaction/abort_event)
   - [complete](/fr/docs/Web/API/IDBTransaction/complete_event)
   - [error](/fr/docs/Web/API/IDBTransaction/error_event)
 
 - {{DOMxRef("MediaDevices")}}
-
   - [devicechange](/fr/docs/Web/API/MediaDevices/devicechange_event)
 
 - {{DOMxRef("MediaRecorder")}}
-
   - [error](/fr/docs/Web/API/MediaRecorder/error_event)
 
 - {{DOMxRef("MediaStream")}}
-
   - [addtrack](/fr/docs/Web/API/MediaStream/addtrack_event)
   - [removetrack](/fr/docs/Web/API/MediaStream/removetrack_event)
 
 - {{DOMxRef("MediaStreamTrack")}}
-
   - [ended](/fr/docs/Web/API/MediaStreamTrack/ended_event)
   - [mute](/fr/docs/Web/API/MediaStreamTrack/mute_event)
   - [unmute](/fr/docs/Web/API/MediaStreamTrack/unmute_event)
 
 - {{DOMxRef("MessagePort")}}
-
   - [messageerror](/fr/docs/Web/API/MessagePort/messageerror_event)
   - [message](/fr/docs/Web/API/MessagePort/message_event)
 
 - {{DOMxRef("OfflineAudioContext")}}
-
   - [complete](/fr/docs/Web/API/OfflineAudioContext/complete_event)
 
 - {{DOMxRef("PaymentRequest")}}
-
   - [merchantvalidation](/fr/docs/Web/API/PaymentRequest/merchantvalidation_event)
   - [paymentmethodchange](/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event)
   - [shippingaddresschange](/fr/docs/Web/API/PaymentRequest/shippingaddresschange_event)
   - [shippingoptionchange](/fr/docs/Web/API/PaymentRequest/shippingoptionchange_event)
 
 - {{DOMxRef("PaymentResponse")}}
-
   - [payerdetailchange](/fr/docs/Web/API/PaymentResponse/payerdetailchange_event)
 
 - {{DOMxRef("Performance")}}
-
   - [resourcetimingbufferfull](/fr/docs/Web/API/Performance/resourcetimingbufferfull_event)
 
 - {{DOMxRef("PictureInPictureWindow")}}
-
   - [resize](/fr/docs/Web/API/PictureInPictureWindow/resize_event)
 
 - {{DOMxRef("RTCDataChannel")}}
-
   - [bufferedamountlow](/fr/docs/Web/API/RTCDataChannel/bufferedamountlow_event)
   - [close](/fr/docs/Web/API/RTCDataChannel/close_event)
   - [closing](/fr/docs/Web/API/RTCDataChannel/closing_event)
@@ -1106,21 +1072,17 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [open](/fr/docs/Web/API/RTCDataChannel/open_event)
 
 - {{DOMxRef("RTCDtlsTransport")}}
-
   - [error](/fr/docs/Web/API/RTCDtlsTransport/error_event)
 
 - {{DOMxRef("RTCDTMFSender")}}
-
   - [tonechange](/fr/docs/Web/API/RTCDTMFSender/tonechange_event)
 
 - {{DOMxRef("RTCIceTransport")}}
-
   - [gatheringstatechange](/fr/docs/Web/API/RTCIceTransport/gatheringstatechange_event)
   - [selectedcandidatepairchange](/fr/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event)
   - [statechange](/fr/docs/Web/API/RTCIceTransport/statechange_event)
 
 - {{DOMxRef("RTCPeerConnection")}}
-
   - [addstream](/fr/docs/Web/API/RTCPeerConnection/addstream_event)
   - [connectionstatechange](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event)
   - [datachannel](/fr/docs/Web/API/RTCPeerConnection/datachannel_event)
@@ -1134,15 +1096,12 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [track](/fr/docs/Web/API/RTCPeerConnection/track_event)
 
 - {{DOMxRef("ScriptProcessorNode")}}
-
   - [audioprocess](/fr/docs/Web/API/ScriptProcessorNode/audioprocess_event)
 
 - {{DOMxRef("ServiceWorkerContainer")}}
-
   - [message](/fr/docs/Web/API/ServiceWorkerContainer/message_event)
 
 - {{DOMxRef("ServiceWorkerGlobalScope")}}
-
   - [activate](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
   - [contentdelete](/fr/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event)
   - [install](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event)
@@ -1152,11 +1111,9 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [push](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event)
 
 - {{DOMxRef("SharedWorkerGlobalScope")}}
-
   - [connect](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event)
 
 - {{DOMxRef("SpeechRecognition")}}
-
   - [audioend](/fr/docs/Web/API/SpeechRecognition/audioend_event)
   - [audiostart](/fr/docs/Web/API/SpeechRecognition/audiostart_event)
   - [end](/fr/docs/Web/API/SpeechRecognition/end_event)
@@ -1170,11 +1127,9 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [start](/fr/docs/Web/API/SpeechRecognition/start_event)
 
 - {{DOMxRef("SpeechSynthesis")}}
-
   - [voiceschanged](/fr/docs/Web/API/SpeechSynthesis/voiceschanged_event)
 
 - {{DOMxRef("SpeechSynthesisUtterance")}}
-
   - [boundary](/fr/docs/Web/API/SpeechSynthesisUtterance/boundary_event)
   - [end](/fr/docs/Web/API/SpeechSynthesisUtterance/end_event)
   - [error](/fr/docs/Web/API/SpeechSynthesisUtterance/error_event)
@@ -1184,13 +1139,11 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [start](/fr/docs/Web/API/SpeechSynthesisUtterance/start_event)
 
 - {{DOMxRef("SVGAnimationElement")}}
-
   - [beginEvent](/fr/docs/Web/API/SVGAnimationElement/beginEvent_event)
   - [endEvent](/fr/docs/Web/API/SVGAnimationElement/endEvent_event)
   - [repeatEvent](/fr/docs/Web/API/SVGAnimationElement/repeatEvent_event)
 
 - {{DOMxRef("SVGElement")}}
-
   - [abort](/fr/docs/Web/API/SVGElement/abort_event)
   - [error](/fr/docs/Web/API/SVGElement/error_event)
   - [load](/fr/docs/Web/API/SVGElement/load_event)
@@ -1199,46 +1152,39 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [unload](/fr/docs/Web/API/SVGElement/unload_event)
 
 - {{DOMxRef("SVGGraphicsElement")}}
-
   - [copy](/fr/docs/Web/API/SVGGraphicsElement/copy_event)
   - [cut](/fr/docs/Web/API/SVGGraphicsElement/cut_event)
   - [paste](/fr/docs/Web/API/SVGGraphicsElement/paste_event)
 
 - {{DOMxRef("TextTrack")}}
-
   - [cuechange](/fr/docs/Web/API/TextTrack/cuechange_event)
 
 - {{DOMxRef("TextTrackList")}}
-
   - [addtrack](/fr/docs/Web/API/TextTrackList/addtrack_event)
   - [change](/fr/docs/Web/API/TextTrackList/change_event)
   - [removeTrack](/fr/docs/Web/API/TextTrackList/removeTrack_event)
 
 - {{DOMxRef("VideoTrackList")}}
-
   - [addtrack](/fr/docs/Web/API/VideoTrackList/addtrack_event)
   - [change](/fr/docs/Web/API/VideoTrackList/change_event)
   - [removetrack](/fr/docs/Web/API/VideoTrackList/removetrack_event)
 
 - {{DOMxRef("VisualViewport")}}
-
   - [resize](/fr/docs/Web/API/VisualViewport/resize_event)
   - [scroll](/fr/docs/Web/API/VisualViewport/scroll_event)
 
 - {{DOMxRef("WebSocket")}}
-
   - [close](/fr/docs/Web/API/WebSocket/close_event)
   - [error](/fr/docs/Web/API/WebSocket/error_event)
   - [message](/fr/docs/Web/API/WebSocket/message_event)
   - [open](/fr/docs/Web/API/WebSocket/open_event)
 
 - {{DOMxRef("Window")}}
-
   - [afterprint](/fr/docs/Web/API/Window/afterprint_event)
-  - [animationcancel](/fr/docs/Web/API/Window/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Window/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Window/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Window/animationstart_event)
+  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
+  - [animationend](/fr/docs/Web/API/Element/animationend_event)
+  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
+  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
   - [appinstalled](/fr/docs/Web/API/Window/appinstalled_event)
   - [beforeprint](/fr/docs/Web/API/Window/beforeprint_event)
   - [beforeunload](/fr/docs/Web/API/Window/beforeunload_event)
@@ -1267,33 +1213,30 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [rejectionhandled](/fr/docs/Web/API/Window/rejectionhandled_event)
   - [resize](/fr/docs/Web/API/Window/resize_event)
   - [storage](/fr/docs/Web/API/Window/storage_event)
-  - [transitioncancel](/fr/docs/Web/API/Window/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Window/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Window/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Window/transitionstart_event)
+  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
+  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
+  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
+  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
   - [unhandledrejection](/fr/docs/Web/API/Window/unhandledrejection_event)
   - [unload](/fr/docs/Web/API/Window/unload_event)
   - [vrdisplayactivate](/fr/docs/Web/API/Window/vrdisplayactivate_event)
-  - [vrdisplayblur](/fr/docs/Web/API/Window/vrdisplayblur_event)
+  - [vrdisplayblur](/fr/docs/Web/API/Window)
   - [vrdisplayconnect](/fr/docs/Web/API/Window/vrdisplayconnect_event)
   - [vrdisplaydeactivate](/fr/docs/Web/API/Window/vrdisplaydeactivate_event)
   - [vrdisplaydisconnect](/fr/docs/Web/API/Window/vrdisplaydisconnect_event)
-  - [vrdisplayfocus](/fr/docs/Web/API/Window/vrdisplayfocus_event)
-  - [vrdisplaypointerrestricted](/fr/docs/Web/API/Window/vrdisplaypointerrestricted_event)
-  - [vrdisplaypointerunrestricted](/fr/docs/Web/API/Window/vrdisplaypointerunrestricted_event)
+  - [vrdisplayfocus](/fr/docs/Web/API/Window)
+  - [vrdisplaypointerrestricted](/fr/docs/Web/API/Window)
+  - [vrdisplaypointerunrestricted](/fr/docs/Web/API/Window)
   - [vrdisplaypresentchange](/fr/docs/Web/API/Window/vrdisplaypresentchange_event)
 
 - {{DOMxRef("Worker")}}
-
   - [messageerror](/fr/docs/Web/API/Worker/messageerror_event)
   - [message](/fr/docs/Web/API/Worker/message_event)
 
 - {{DOMxRef("WorkerGlobalScope")}}
-
   - [languagechange](/fr/docs/Web/API/WorkerGlobalScope/languagechange_event)
 
 - {{DOMxRef("XMLHttpRequest")}}
-
   - [abort](/fr/docs/Web/API/XMLHttpRequest/abort_event)
   - [error](/fr/docs/Web/API/XMLHttpRequest/error_event)
   - [loadend](/fr/docs/Web/API/XMLHttpRequest/loadend_event)
@@ -1303,11 +1246,9 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [timeout](/fr/docs/Web/API/XMLHttpRequest/timeout_event)
 
 - {{DOMxRef("XRReferenceSpace")}}
-
   - [reset](/fr/docs/Web/API/XRReferenceSpace/reset_event)
 
 - {{DOMxRef("XRSession")}}
-
   - [end](/fr/docs/Web/API/XRSession/end_event)
   - [inputsourceschange](/fr/docs/Web/API/XRSession/inputsourceschange_event)
   - [selectend](/fr/docs/Web/API/XRSession/selectend_event)
@@ -1319,5 +1260,4 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [visibilitychange](/fr/docs/Web/API/XRSession/visibilitychange_event)
 
 - {{DOMxRef("XRSystem")}}
-
   - [devicechange](/fr/docs/Web/API/XRSystem/devicechange_event)

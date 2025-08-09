@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
 
-Dans [le guide précédent](/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid), on a étudié les lignes formées par une grille et comment positionner des objets sur ces lignes. Lorsqu'on utilise une grille CSS, on a toujours ces lignes et celles-ci permettent d'avoir une disposition simple. Toutefois, il existe une autre méthode de disposition avec les grilles, qu'on peut utiliser seule ou combinée avec les lignes. Avec cette méthode, on place les éléments sur des _zones_ de la grille. Nous allons voir dans ce guide comment cela fonctionne voire comment on peut faire de l'ASCII-art en CSS avec les grilles !
+Dans [le guide précédent](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement), on a étudié les lignes formées par une grille et comment positionner des objets sur ces lignes. Lorsqu'on utilise une grille CSS, on a toujours ces lignes et celles-ci permettent d'avoir une disposition simple. Toutefois, il existe une autre méthode de disposition avec les grilles, qu'on peut utiliser seule ou combinée avec les lignes. Avec cette méthode, on place les éléments sur des _zones_ de la grille. Nous allons voir dans ce guide comment cela fonctionne voire comment on peut faire de l'ASCII-art en CSS avec les grilles !
 
 ## Donner un nom à une zone de grille
 

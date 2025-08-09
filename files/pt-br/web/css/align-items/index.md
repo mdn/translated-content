@@ -7,7 +7,51 @@ A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-items`** estabelece o valor {{
 
 O exemplo interativo abaixo demonstra alguns dos valores para `align-items` usando grid layout.
 
-{{EmbedInteractiveExample("pages/css/align-items.html")}}
+{{InteractiveExample("CSS Demo: align-items")}}
+
+```css interactive-example-choice
+align-items: stretch;
+```
+
+```css interactive-example-choice
+align-items: center;
+```
+
+```css interactive-example-choice
+align-items: start;
+```
+
+```css interactive-example-choice
+align-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Sintaxe
 
@@ -42,9 +86,7 @@ align-items: unset;
 ### Valores
 
 - `normal`
-
   - : O efeito desta palavra-chave depende do modo de layout em que nos encontramos:
-
     - Em layouts absolutamente posicionados, a palavra-chave se comporta como `start` em _replaced_ de caixas absolutamente posicionadas, e como `stretch` em _all others_ de caixas absolutamente posicionadas.
     - Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como `stretch`.
     - Para itens-flex, a palavra chave se comporto como `stretch`.
@@ -70,7 +112,6 @@ align-items: unset;
   `first baseline`
 
   `last baseline`
-
   - : Todos itens-flex são alinhados de tal forma que suas [baselines de container flex](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) estejam alinhados. O item com a maior distância entre o eixo de início de sua margem e sua baseline é juntado com eixo de início da linha.
 
 - `stretch`
@@ -239,9 +280,9 @@ display.addEventListener("change", function (evt) {
 
 ## Veja também
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
 - The {{cssxref("align-self")}} property
 

@@ -83,7 +83,7 @@ _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode�
 
 ## Controlling access
 
-[Feature Policy](/ko/docs/Web/HTTP/Feature_Policy)을 사용하여 full-screen mode의 유효성을 제어할 수 있습니다. full-screen mode는 `"fullscreen"`으로 식별되고, 기본 허용 목록 값은 `"self"` 입니다. 이는 최상위(top-level) 문서 컨텍스트에서 full-screen mode가 허용된다는 것을 의미하며, 최상위(top-most) 문서와 같은 출처에서 로드 된 중첩 된 컨텍스트에도 적용됩니다.
+[Feature Policy](/ko/docs/Web/HTTP/Permissions_Policy)을 사용하여 full-screen mode의 유효성을 제어할 수 있습니다. full-screen mode는 `"fullscreen"`으로 식별되고, 기본 허용 목록 값은 `"self"` 입니다. 이는 최상위(top-level) 문서 컨텍스트에서 full-screen mode가 허용된다는 것을 의미하며, 최상위(top-most) 문서와 같은 출처에서 로드 된 중첩 된 컨텍스트에도 적용됩니다.
 
 기능 정책을 사용하여 API에 대한 액세스를 제어하는 자세한 내용은 [Using Feature Policy](/ko/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)을 참조하세요.
 
@@ -98,7 +98,7 @@ _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode�
 
 이 예제에서는 비디오가 웹 페이지에 표시됩니다. <kbd>Return</kbd> 또는 <kbd>Enter</kbd> 키를 누르면, 사용자가 비디오의 창과 full-screen 표시를 전환할 수 있습니다.
 
-[View Live Examples](/samples/domref/fullscreen.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### Watching for the Enter key
 

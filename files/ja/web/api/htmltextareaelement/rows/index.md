@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`rows`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、このテキストコントロールのテキストが見える行数を表す正の整数です。これは `<textarea>` 要素の [`rows`](/ja/docs/Web/HTML/Element/textarea#rows) 属性を反映します。
+**`rows`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、このテキストコントロールのテキストが見える行数を表す正の整数です。これは `<textarea>` 要素の [`rows`](/ja/docs/Web/HTML/Reference/Elements/textarea#rows) 属性を反映します。
 
 ## 値
 

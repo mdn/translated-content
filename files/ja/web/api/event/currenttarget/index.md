@@ -3,12 +3,16 @@ title: "Event: currentTarget プロパティ"
 short-title: currentTarget
 slug: Web/API/Event/currentTarget
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`currentTarget`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM を走査する際の、イベントの現在のターゲットを特定します。これは常にイベントハンドラーが装着されている要素を指し、{{domxref("Event.target")}} とは対照的に、イベントが発生した要素やその子孫である可能性のある要素を特定します。
+**`currentTarget`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントハンドラーが取り付けられた要素を識別します。
+
+これは、イベントが発行された要素と常に同じであるとは限りません。イベントは、ハンドラーを持つ要素の子孫で発生し、ハンドラーを持つ要素に[バブルアップ](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)される可能性があるからです。イベントが発行された要素は、 {{domxref("Event.target")}} で指定されます。
+
+なお、`currentTarget` の値はイベントハンドラー内でのみ利用できます。イベントハンドラー外では `null` となります。つまり、例えばイベントハンドラー内で `Event` オブジェクトの参照を取得し、その後イベントハンドラー外でその `currentTarget` プロパティにアクセスすると、その値は `null` となります。
 
 ## 値
 
@@ -16,31 +20,64 @@ l10n:
 
 ## 例
 
-`Event.currentTarget` は、複数の要素に同じイベントハンドラーを割り当てるときに使用すると面白いです。
+### currentTarget と target
 
-```js
-function hide(e) {
-  e.currentTarget.style.visibility = "hidden";
-  console.log(e.currentTarget);
-  // この関数がイベントハンドラーとして使用されるとき： this === e.currentTarget
-}
+この例は、`currentTarget`と`target`の違いを示しています。
 
-const ps = document.getElementsByTagName("p");
+#### HTML
 
-for (const p of ps) {
-  // クリックされた <p> 要素を隠す
-  p.addEventListener("click", hide, false);
-}
+このページには、 "parent" の {{htmlelement("div")}} の中に "child" の `<div>`　があります。
 
-document.body.addEventListener("click", hide, false);
+```html
+<div id="parent">
+  parent をクリック
+  <div id="child">child クリック</div>
+</div>
 
-// 周辺をクリックすると段落が消えます。
+<button id="reset">リセット</button>
+<pre id="output"></pre>
 ```
 
-> [!NOTE]
-> イベント処理中*だけ* `event.currentTarget` の値は利用可能です。
-> もし {{domxref("console/log_static", "console.log()")}} で `event` オブジェクトを変数に格納し、コンソールで `currentTarget` キーを探すと、その値は `null` となります
-> `console.log(event.currentTarget)` を使ってコンソールで表示するか、 [`debugger`](/ja/docs/Web/JavaScript/Reference/Statements/debugger) 文を使ってコードの実行を一時停止し、 `event.currentTarget` の値を表示させる必要があります。
+```css hidden
+button,
+div,
+pre {
+  margin: 0.5rem;
+}
+
+div {
+  padding: 1rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+イベントハンドラーは親要素に装着されています。イベントハンドラーは、`event.currentTarget` と `event.target` の値をログ出力します。
+
+「リセット」ボタンも備えており、これは例を再読み込みするだけです。
+
+```js
+const output = document.querySelector("#output");
+const parent = document.querySelector("#parent");
+parent.addEventListener("click", (event) => {
+  const currentTarget = event.currentTarget.getAttribute("id");
+  const target = event.target.getAttribute("id");
+  output.textContent = `Current target: ${currentTarget}\n`;
+  output.textContent += `Target: ${target}`;
+});
+
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => document.location.reload());
+```
+
+#### 結果
+
+子要素の `<div>` 内をクリックすると、 `target` は子要素を示します。親要素の `<div>` 内をクリックすると、 `target` は親要素を示します。
+
+どちらの場合も、 `currentTarget` は親を特定します。ハンドラーが装着されている要素だからです。
+
+{{EmbedLiveSample("currentTarget versus target", 100, 250)}}
 
 ## 仕様書
 
@@ -52,4 +89,4 @@ document.body.addEventListener("click", hide, false);
 
 ## 関連情報
 
-- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [学習: イベントのバブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)

@@ -174,4 +174,4 @@ responses.reduce(
 ## 参见
 
 - [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/)，用于可读、可写和转换流的基本可视化。
-- [数据流——权威指南](https://web.dev/articles/streams)
+- [数据流——权威指南](https://web.developers.google.cn/articles/streams)

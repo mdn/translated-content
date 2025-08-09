@@ -9,7 +9,20 @@ l10n:
 
 **`Intl.Segmenter.prototype.segment()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトのロケールおよび粒度に従って文字列を分割します。
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-segment.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.Segmenter.prototype.segment")}}
+
+```js interactive-example
+const string1 = "Que ma joie demeure";
+
+const segmenterFrGrapheme = new Intl.Segmenter("fr", {
+  granularity: "grapheme",
+});
+const graphemeSegments = segmenterFrGrapheme.segment(string1);
+
+console.log(Array.from(graphemeSegments)[0]);
+// Expected output:
+// Object {segment: 'Q', index: 0, input: 'Que ma joie demeure'}
+```
 
 ## 構文
 
@@ -24,7 +37,7 @@ segment(input);
 
 ### 返値
 
-入力文字列のセグメントを含む、反復可能な新しい [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) オブジェクトです。
+入力文字列のセグメントを含む、反復可能な新しい [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) オブジェクトです。
 
 ## 例
 

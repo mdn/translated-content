@@ -3,11 +3,23 @@ title: 圆括号运算符
 slug: Web/JavaScript/Reference/Operators/Grouping
 ---
 
-{{jsSidebar("Operators")}}
-
 圆括号运算符 `( )` 用于控制表达式中的运算优先级。
 
-{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Grouping operator")}}
+
+```js interactive-example
+console.log(1 + 2 * 3); // 1 + 6
+// Expected output: 7
+
+console.log(1 + 2 * 3); // 1 + 6
+// Expected output: 7
+
+console.log((1 + 2) * 3); // 3 * 3
+// Expected output: 9
+
+console.log(1 * 3 + 2 * 3); // 3 + 6
+// Expected output: 9
+```
 
 ## 语法
 

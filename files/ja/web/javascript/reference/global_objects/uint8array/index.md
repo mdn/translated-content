@@ -1,96 +1,65 @@
 ---
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Uint8Array`** は型付き配列で、 8 ビット符号なし整数値の配列を表します。初期化データが明示的に与えられなかった場合、中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文（すなわち、ブラケット記法）を使用するかして参照することができます。
 
-**`Uint8Array`** は型付き配列で、 8 ビット符号なし整数値の配列を表します。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
+`Uint8Array` は非公開の {{jsxref("TypedArray")}} クラスのサブクラスです。
+
+## 解説
+
+`Uint8Array` は、現時点では他の型付き配列に比べて追加のメソッドを持つ唯一の `TypedArray` サブクラスです。汎用バイト配列という性質のため、任意のバイナリーデータの処理に最も適しています。これは、 `Uint8Array` データの 16 進文字列および base64 文字列への作成、シリアライズ、変更を行う 2 種類のメソッドに対応しています。
+
+- {{jsxref("Uint8Array.fromBase64()")}}、{{jsxref("Uint8Array.prototype.toBase64()")}}ｍ{{jsxref("Uint8Array.prototype.setFromBase64()")}} は [base64](/ja/docs/Glossary/Base64) 文字列の処理を行い、 3 バイト単位でを 4 文字（0–9, A–Z, a–z, "+", "/" （または URL セーフ base64 であれば "-" と "\_"）のうちのいずれか）にエンコードします。
+- {{jsxref("Uint8Array.fromHex()")}}、{{jsxref("Uint8Array.prototype.toHex()")}}、{{jsxref("Uint8Array.prototype.setFromHex()")}} は 16 進文字列の処理を行い、それぞれのバイトを 2 文字（0–9 または A–F （大文字小文字の区別なし）のいずれか）にエンコードします。
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Uint8Array/Uint8Array", "Uint8Array()")}}
+- {{jsxref("Uint8Array/Uint8Array", "Uint8Array()")}}
   - : 新しい `Uint8Array` オブジェクトを生成します。
 
 ## 静的プロパティ
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
+_親である {{jsxref("TypedArray")}} から継承した静的プロパティもあります。_
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Uint8Array` の場合は `1` です。
-- {{jsxref("TypedArray.name", "Uint8Array.name")}}
-  - : コンストラクター名を文字列値で返します。`Uint8Array` の場合、 "`Uint8Array`" です。
 
 ## 静的メソッド
 
-- {{jsxref("TypedArray.from", "Uint8Array.from()")}}
-  - : 配列風オブジェクトまたは反復可能オブジェクトから新しい `Uint8Array` オブジェクトを生成します。 {{jsxref("Array.from()")}} も参照してください。
-- {{jsxref("TypedArray.of", "Uint8Array.of()")}}
-  - : 可変長引数で新しい `Uint8Array` オブジェクトを生成します。{{jsxref("Array.of()")}} も参照してください。
+_親である {{jsxref("TypedArray")}} から継承した静的メソッドもあります。_
+
+- {{jsxref("Uint8Array.fromBase64()")}}
+  - : base64 エンコードされた文字列から新しい `Uint8Array` オブジェクトを作成します。
+- {{jsxref("Uint8Array.fromHex()")}}
+  - : 16 進エンコードされた文字列から新しい `Uint8Array` オブジェクトを作成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}}
-  - : `Uint8Array` オブジェクトによって参照される {{jsxref("ArrayBuffer")}} を返します。構築時に固定され、**読み取り専用**です。
-- {{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}}
-  - : `Uint8Array` の長さを (バイト単位で) 返します。構築時に固定され、**読み取り専用**です。
-- {{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}}
-  - : {{jsxref("ArrayBuffer")}} の先頭からの `Uint8Array` のオフセットを (バイト単位で) 返します。構築時に固定され、**読み取り専用**です。
-- {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}
-  - : `Uint8Array` オブジェクト内に保持されている要素の数を返します。構築時に固定され、**読み取り専用**です。
+_親である {{jsxref("TypedArray")}} から継承したインスタンスプロパティもあります。_
+
+これらのプロパティは `Uint8Array.prototype` で定義され、すべての `Uint8Array` インスタンスで共有されます。
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.prototype.BYTES_PER_ELEMENT")}}
+  - : 要素の大きさを数値で返します。`Uint8Array` の場合は `1` です。
+- {{jsxref("Object/constructor", "Uint8Array.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数。Uint8Array インスタンスの場合、初期値は {{jsxref("Uint8Array/Uint8Array", "Uint8Array")}} コンストラクターです。
 
 ## インスタンスメソッド
 
-- {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}
-  - : 配列内で一連の配列要素をコピーします。{{jsxref("Array.prototype.copyWithin()")}} も参照してください。
-- {{jsxref("TypedArray.entries", "Uint8Array.prototype.entries()")}}
-  - : 配列内ですべての位置におけるキーと値の組を提供する新しい*配列イテレーター*を返します。{{jsxref("Array.prototype.entries()")}} も参照してください。
-- {{jsxref("TypedArray.every", "Uint8Array.prototype.every()")}}
-  - : 配列内のすべての要素が関数によって提供されたテストに合格するかどうかテストを実行します。{{jsxref("Array.prototype.every()")}} も参照してください。
-- {{jsxref("TypedArray.fill", "Uint8Array.prototype.fill()")}}
-  - : 配列の先頭位置から末尾位置までのすべての要素を固定値に設定します。{{jsxref("Array.prototype.fill()")}} も参照してください。
-- {{jsxref("TypedArray.filter", "Uint8Array.prototype.filter()")}}
-  - : この配列のすべての要素のうち、与えられたフィルタリング関数が `true` を返すものをもつ新しい配列を生成します。{{jsxref("Array.prototype.filter()")}} も参照してください。
-- {{jsxref("TypedArray.find", "Uint8Array.prototype.find()")}}
-  - : 配列内の要素に与えられたテスト関数を満足するものがあったら、見つかった値を返します。見つからなければ `undefined` を返します。{{jsxref("Array.prototype.find()")}} も参照してください。
-- {{jsxref("TypedArray.findIndex", "Uint8Array.prototype.findIndex()")}}
-  - : 配列内の要素に与えられたテスト関数を満足するものがあったら、見つかった位置を返します。見つからなければ `-1` を返します。{{jsxref("Array.prototype.findIndex()")}} も参照してください。
-- {{jsxref("TypedArray.forEach", "Uint8Array.prototype.forEach()")}}
-  - : 配列内のそれぞれの要素について関数を呼び出します。{{jsxref("Array.prototype.forEach()")}} も参照してください。
-- {{jsxref("TypedArray.includes", "Uint8Array.prototype.includes()")}}
-  - : 型付き配列に特定の要素があるかどうかを判断し、それに応じて `true` か `false`を返します。 {{jsxref("Array.prototype.includes()")}} も参照してください。
-- {{jsxref("TypedArray.indexOf", "Uint8Array.prototype.indexOf()")}}
-  - : 指定された値に等しい配列内の要素の最初の (最小の) 位置を返します。見つからなかった場合、 `-1` を返します。{{jsxref("Array.prototype.indexOf()")}} も参照してください。
-- {{jsxref("TypedArray.join", "Uint8Array.prototype.join()")}}
-  - : 配列のすべての要素を 1 つの文字列に結合します。{{jsxref("Array.prototype.join()")}} も参照してください。
-- {{jsxref("TypedArray.keys", "Uint8Array.prototype.keys()")}}
-  - : 配列内ですべての位置におけるキーを提供する新しい*配列イテレーター*を返します。{{jsxref("Array.prototype.keys()")}} も参照してください。
-- {{jsxref("TypedArray.lastIndexOf", "Uint8Array.prototype.lastIndexOf()")}}
-  - : 指定された値に等しい配列内の要素の最後の (最大の) 位置を返します。見つからなかった場合、 `-1` を返します。{{jsxref("Array.prototype.lastIndexOf()")}} も参照してください。
-- {{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}
-  - : この配列のすべての要素で与えられた関数を呼び出した結果をもつ新しい配列を生成します。{{jsxref("Array.prototype.map()")}} も参照してください。
-- {{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}
-  - : アキュムレーターとこの配列のそれぞれの値に対して (左から右へ) 関数を適用し、単一の値に還元します。{{jsxref("Array.prototype.reduce()")}} も参照してください。
-- {{jsxref("TypedArray.reduceRight", "Uint8Array.prototype.reduceRight()")}}
-  - : アキュムレーターとこの配列のそれぞれの値に対して (右から左へ) 関数を適用し、単一の値に還元します。{{jsxref("Array.prototype.reduceRight()")}} も参照してください。
-- {{jsxref("TypedArray.reverse", "Uint8Array.prototype.reverse()")}}
-  - : 配列の要素の順番を反転させます。最初の要素は最後になり、最後の要素は最初になります。{{jsxref("Array.prototype.reverse()")}} も参照してください。
-- {{jsxref("TypedArray.set", "Uint8Array.prototype.set()")}}
-  - : 入力値を指定した配列から読み込み、この型付き配列内に複数の値を格納します。
-- {{jsxref("TypedArray.slice", "Uint8Array.prototype.slice()")}}
-  - : 配列の一部を取り出して新しい配列を返します。{{jsxref("Array.prototype.slice()")}} も参照してください。
-- {{jsxref("TypedArray.some", "Uint8Array.prototype.some()")}}
-  - : この配列の 1 つ以上の要素が与えられたテスト関数を満たした場合に `true` を返します。{{jsxref("Array.prototype.some()")}} も参照してください。
-- {{jsxref("TypedArray.sort", "Uint8Array.prototype.sort()")}}
-  - : 配列の要素をその場で並べ替え、その配列を返します。{{jsxref("Array.prototype.sort()")}} も参照してください。
-- {{jsxref("TypedArray.subarray", "Uint8Array.prototype.subarray()")}}
-  - : 指定された先頭と末尾の要素位置から新しい `Uint8Array` を返します。
-- {{jsxref("TypedArray.values", "Uint8Array.prototype.values()")}}
-  - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。{{jsxref("Array.prototype.values()")}} も参照してください。
-- {{jsxref("TypedArray.toLocaleString", "Uint8Array.prototype.toLocaleString()")}}
-  - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
-- {{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}
-  - : 配列とその要素を表す文字列を返します。{{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}
-  - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。
+_親である {{jsxref("TypedArray")}} から継承したインスタンスメソッドもあります。_
+
+- {{jsxref("Uint8Array.prototype.setFromBase64()")}}
+  - : この `Uint8Array` オブジェクトに、 base64 エンコードされた文字列から取得したバイト列を格納し、読み込んだバイト数と書き込んだバイト数を示すオブジェクトを返します。
+- {{jsxref("Uint8Array.prototype.setFromHex()")}}
+  - : この `Uint8Array` オブジェクトに 16 進エンコードされた文字列から取得取得したバイト列を格納し、読み込んだバイト数と書き込んだバイト数を示すオブジェクトを返します。
+- {{jsxref("Uint8Array.prototype.toBase64()")}}
+  - : この `Uint8Array` オブジェクトのデータに基づいて、base64 エンコードされた文字列を返します。
+- {{jsxref("Uint8Array.prototype.toHex()")}}
+  - : この `Uint8Array` オブジェクトのデータに基づいて、16 進エンコードされた文字列を返します。
 
 ## 例
 
@@ -98,31 +67,32 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 
 ```js
 // 長さから
-var uint8 = new Uint8Array(2);
+const uint8 = new Uint8Array(2);
 uint8[0] = 42;
 console.log(uint8[0]); // 42
 console.log(uint8.length); // 2
 console.log(uint8.BYTES_PER_ELEMENT); // 1
 
 // 配列から
-var arr = new Uint8Array([21, 31]);
-console.log(arr[1]); // 31
+const x = new Uint8Array([21, 31]);
+console.log(x[1]); // 31
 
-// From another TypedArray
-var x = new Uint8Array([21, 31]);
-var y = new Uint8Array(x);
+// 他の TypedArray から
+const y = new Uint8Array(x);
 console.log(y[0]); // 21
 
 // ArrayBuffer から
-var buffer = new ArrayBuffer(8);
-var z = new Uint8Array(buffer, 1, 4);
+const buffer = new ArrayBuffer(8);
+const z = new Uint8Array(buffer, 1, 4);
+console.log(z.byteOffset); // 1
 
 // 反復可能オブジェクトから
-var iterable = (function* () {
+const iterable = (function* () {
   yield* [1, 2, 3];
 })();
-var uint8 = new Uint8Array(iterable);
-// Uint8Array[1, 2, 3]
+const uint8FromIterable = new Uint8Array(iterable);
+console.log(uint8FromIterable);
+// Uint8Array [1, 2, 3]
 ```
 
 ## 仕様書
@@ -135,7 +105,8 @@ var uint8 = new Uint8Array(iterable);
 
 ## 関連情報
 
-- `Uint8Array` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays) で利用できます
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [`Uint8Array` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

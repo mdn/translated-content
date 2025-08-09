@@ -36,7 +36,7 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
     </tr>
     <tr>
       <th scope="row">Omissão deTag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos pai permitidos</th>
@@ -59,14 +59,13 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `disabled`
   - : Se este atributo Booleano está definido, os controles de formulario que são seus descendentes, exceto os descendentes de seu primeiro elemento opcional {{HTMLElement("legend")}}, estarão desativados, i.e., não editável. Eles não receberão qualquer evento de navegação, como clique do mouse ou relacionado com focus. Frequentemente os navegadores mostram tais controles em cinza.
 - `form`
   - : Este atributo tem o valor do atributo **id** do elemento {{HTMLElement("form")}} com que se relaciona. Seu valor padrão é o **id** do elemento {{HTMLElement("form")}} mais próximo.
 - `name`
-
   - : O nome associado com o grupo.
 
     > [!NOTE]
@@ -85,7 +84,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 </form>
 ```
 
-### Example #2: Simulando um editável {{HTMLElement("select")}} através de um `fieldset` de [radioboxes](/pt-BR/docs/HTML/Element/Input) e [textboxes](/pt-BR/docs/HTML/Element/Input)\*
+### Example #2: Simulando um editável {{HTMLElement("select")}} através de um `fieldset` de [radioboxes](/pt-BR/docs/Web/HTML/Element/input) e [textboxes](/pt-BR/docs/Web/HTML/Element/input)\*
 
 O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
 
@@ -383,7 +382,7 @@ O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
 
 - [Erro do Firefox 504622](https://bugzil.la/504622) - Fieldsets nunca diminui abaixo de sua largura min-intrinsic
 - [WebKit bug 123507](https://bugs.webkit.org/show_bug.cgi?id=123507) - `min-width: {{cssxref("-webkit-min-content")}}` sobre fieldset
-- [StackOverflow discussão com soluções alternativas para os bugs acima](http://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content)
+- [StackOverflow discussão com soluções alternativas para os bugs acima](https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content)
 
 ## Veja também
 

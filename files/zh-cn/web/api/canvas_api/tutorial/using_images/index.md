@@ -9,7 +9,7 @@ canvas 更有意思的一项特性就是图像操作能力。可以用于动态�
 
 引入图像到 canvas 里需要以下两步基本操作：
 
-1. 获得一个指向{{domxref("HTMLImageElement")}}的对象或者另一个 canvas 元素的引用作为源，也可以通过提供一个 URL 的方式来使用图片（参见[例子](http://www.html5canvastutorials.com/tutorials/html5-canvas-images/)）
+1. 获得一个指向{{domxref("HTMLImageElement")}}的对象或者另一个 canvas 元素的引用作为源，也可以通过提供一个 URL 的方式来使用图片（参见[例子](https://www.html5canvastutorials.com/tutorials/html5-canvas-images/)）
 2. 使用`drawImage()`函数将图片绘制到画布上
 
 我们来看看具体是怎么做的。
@@ -41,7 +41,7 @@ canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 
 ### 使用其他域名下的图片
 
-在 {{domxref("HTMLImageElement")}}上使用[crossOrigin](/zh-CN/docs/HTML/CORS_settings_attributes)属性，你可以请求加载其他域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会[污染 canvas](/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas)。
+在 {{domxref("HTMLImageElement")}}上使用[crossOrigin](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)属性，你可以请求加载其他域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会[污染 canvas](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image#.e4.bb.80.e4.b9.88.e6.98.af.22.e8.a2.ab.e6.b1.a1.e6.9f.93.22.e7.9a.84canvas)。
 
 ### 使用其他 canvas 元素
 

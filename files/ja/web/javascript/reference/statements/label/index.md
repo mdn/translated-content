@@ -9,7 +9,21 @@ l10n:
 
 **ラベル付き文**は、任意の[文](/ja/docs/Web/JavaScript/Reference/Statements)に接頭辞として識別子を付けたものです。ラベル付き文の中にネストされた {{jsxref("Statements/break", "break")}} 文や {{jsxref("Statements/continue", "continue")}} 文を使用すると、このラベルにジャンプすることができます。
 
-{{EmbedInteractiveExample("pages/js/statement-label.html")}}
+{{InteractiveExample("JavaScript デモ: Statement - Label")}}
+
+```js interactive-example
+let str = "";
+
+loop1: for (let i = 0; i < 5; i++) {
+  if (i === 1) {
+    continue loop1;
+  }
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "0234"
+```
 
 ## 構文
 

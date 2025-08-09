@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 Каждое событие запущено на определённой стадии запроса. Типичный порядок событий такой:![](webrequest-flow.png)
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} Может быть запущен в любой момент во время запроса. Чреда событий может отличаться от приведённой выше: например, в Firefox, после [HSTS](/ru/docs/Web/HTTP/Headers/Strict-Transport-Security) обновления, событие `onBeforeRedirect` будет запущено сразу же после `onBeforeRequest`.
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} Может быть запущен в любой момент во время запроса. Чреда событий может отличаться от приведённой выше: например, в Firefox, после [HSTS](/ru/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) обновления, событие `onBeforeRedirect` будет запущено сразу же после `onBeforeRequest`.
 
 Все события, кроме `onErrorOccurred`, могут принимать три аргумента в `addListener()`:
 
@@ -19,7 +19,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 Функции - обработчику передаётся объект `details` который содержит информацию о запросе. Она содержит ID запроса, который обеспечен для включения надстройки, которая позволяет соотносить события, ассоциируемые с одним запросом. Это уникально в пределах сессии и контекста надстройки. Информация остаётся одинаковой везде на протяжении запроса, даже при перенаправлениях и обменах аутентификации.
 
-Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) и [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.
+Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) и [host permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.
 
 Для перехвата ресурсов, загруженных страницей (таких как картинки, скрипты или таблицы стилей), расширение должно иметь разрешение хоста для ресурса также как и для главной страницы, запрашивающей ресурс. К примеру, если страница на `https://developer.mozilla.org` загружает картинку из `https://mdn.mozillademos.org`, тогда расширение должно иметь разрешения обоих хостов чтобы перехватить запрос картинки.
 
@@ -28,26 +28,21 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 Используя некоторые из этих событий, вы можете модифицировать запрос. Конкретно, вы можете:
 
 - отменить запрос в:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 - перенаправить запрос в:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - модифицировать заголовки запроса в:
-
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
 - модифицировать заголовки ответа в:
-
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - предоставить учётные данные аутентификации в:
-
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 Чтобы сделать это, вам необходимо передать опцию со значением "blocking" в аргументе `extraInfoSpec` к `addListener()`. Это делает обработчик синхронным. В обработчике, вы можете тогда возвратить объект {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} который индикует модификацию, какую вам нужно сделать: например, модифицированный заголовок запроса который вы хотите отправить.
@@ -62,7 +57,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 Для того, чтобы модифицировать тело HTTP ответа на запрос, вызовите {{WebExtAPIRef("webRequest.filterResponseData")}}, и передайте ID запроса. Это возвратит объект {{WebExtAPIRef("webRequest.StreamFilter")}} который вы сможете использовать чтобы исследовать и изменять данные когда они получены браузером.
 
-Чтобы сделать это, у вас должно быть "webRequestBlocking" API разрешение, а также "webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) и [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) от соответствующего хоста.
+Чтобы сделать это, у вас должно быть "webRequestBlocking" API разрешение, а также "webRequest" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) и [host permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) от соответствующего хоста.
 
 ## Types
 
@@ -122,7 +117,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 {{Compat}}
 
-[Extra notes on Chrome incompatibilities](/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
+[Extra notes on Chrome incompatibilities](/ru/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities).
 
 {{WebExtExamples("h2")}}
 

@@ -1,53 +1,42 @@
 ---
-title: 社群準則
+title: 社群資源
+short-title: 資源
 slug: MDN/Community
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 7819249f906dcfc59a2c4cb702b80a35b7964842
 ---
 
-{{MDNSidebar}}
+👋 歡迎來到 MDN Web 文件，一個記載了 [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[JavaScript](/zh-TW/docs/Web/JavaScript) 和 [Web API](/zh-TW/docs/Web/API) 等 Web 平台技術的開源協作專案。我們也為新手開發者和學生提供大量的[學習資源](/zh-TW/docs/Learn_web_development)。
 
-👋 歡迎來到 MDN Web 文件，一個記載了 [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[JavaScript](/zh-TW/docs/Web/JavaScript) 和 [Web API](/zh-TW/docs/Web/API) 等 Web 平台技術的開源協作專案。我們也為新手開發者和學生提供大量的[學習資源](/zh-TW/docs/Learn)。
-
-## 參與貢獻的方式
-
-- [修復已知的有重大影響的問題](https://github.com/orgs/mdn/projects/25/views/1)
-- [審核拉取請求](/zh-TW/docs/MDN/Community/Pull_requests)
-- [幫助新手在 MDN Web 文件上學習](/zh-TW/docs/MDN/Community/Learn_forum)
-- [為 MDN Web 文件貢獻可互動範例](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)
-- [協助翻譯 MDN Web 文件](/zh-TW/docs/MDN/Community/Contributing/Translated_content)
-- [協助修復已知平台問題](https://github.com/mdn/yari/issues)
-- [協助我們更新瀏覽器兼容性資料](https://github.com/mdn/browser-compat-data)
-
-## 社群資源
-
-- [討論頻道](/zh-TW/docs/MDN/Community/Communication_channels)
-  - : 這個頁面條列了所有 MDN 團隊和社群使用的討論頻道，並提示哪些頻道可能最適合你。
-- [貢獻](/zh-TW/docs/MDN/Community/Contributing)
-  - : 這個章節解釋你可以如何貢獻到 MDN Web 文件和貢獻的規範。此章節包含[開始入門 MDN](/zh-TW/docs/MDN/Community/Contributing/Getting_started)、[儲存庫](/zh-TW/docs/MDN/Community/Contributing/Our_repositories)、[翻譯內容](/zh-TW/docs/MDN/Community/Contributing/Translated_content)與[安全漏洞應對步驟](/zh-TW/docs/MDN/Community/Contributing/Security_vulnerability_response)
-- [開源禮節](/zh-TW/docs/MDN/Community/Open_source_etiquette)。
-  - : 此文章說明在為我們的開源專案做出貢獻時的行為準則，包含貢獻規則、禮節和衝突處理方式。
-- [問題（issue）](/zh-TW/docs/MDN/Community/Issues)
-  - : 問題是用於追蹤所有錯誤和工作都有被正確處理的工具，此文章包含了開啟與處理問題的指南、[問題分類](/zh-TW/docs/MDN/Community/Issues)和[內容與功能建議](/zh-TW/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
-- [拉取請求（pull request）](/zh-TW/docs/MDN/Community/Pull_requests)
+- [開始入門](/zh-TW/docs/MDN/Community/Getting_started)
+  - : 此章節解釋了如何開始貢獻，以及我們接受的貢獻類型。任何人都可以貢獻，而每位貢獻者都會對數百萬讀者產生影響。學習如何貢獻並在開放網路上推動創新。
+- [溝通管道](/zh-TW/docs/MDN/Community/Communication_channels)
+  - : 此頁面列出了 MDN 團隊和我們社群使用的溝通管道，並提示哪些管道可能最適合你。
+- [我們的倉儲](/zh-TW/docs/MDN/Community/Our_repositories)
+  - : 此文件描述了你在貢獻 MDN Web 文件時可能需要的 GitHub 倉儲（repo）。
+- [翻譯內容](/zh-TW/docs/MDN/Community/Translated_content)
+  - : MDN Web 文件在地化資訊，包含團隊、溝通管道以及如何參與的詳細資訊。
+- [開源禮節](/zh-TW/docs/MDN/Community/Open_source_etiquette)
+  - : 此文章提供了在為 MDN 和其他開源專案做出貢獻時的行為指南，包含協作的提示以及如何處理衝突。
+- [GitHub 議題](/zh-TW/docs/MDN/Community/Issues)
+  - : 議題是用來追蹤所有錯誤和具有明確可操作結果的工作。此文章包含了開啟與處理議題的指南，也涵蓋了議題分類和內容建議。
+- [拉取請求](/zh-TW/docs/MDN/Community/Pull_requests)
   - : 這個章節說明了提交拉取請求的指南和審查流程。
+- [GitHub 討論](/zh-TW/docs/MDN/Community/Discussions)
+  - : 在 MDN Web 文件上，我們鼓勵社群圍繞專案相關主題發起並參與討論。GitHub 討論功能很適合用來收集對想法的回饋，並在可能有多種不同方法的任務上達成共識。
 - [用戶角色與團隊](/zh-TW/docs/MDN/Community/Roles_teams)
   - : 這個章節說明了在 MDN Web 文件專案中用戶與團隊所扮演的角色以及成為團隊成員的意義。
+- [社群參與準則（CPG）](/zh-TW/docs/MDN/Community/Community_Participation_Guidelines)
+  - : 此頁面列出了我們所有的社群參與準則，這些準則幫助我們培養一個熱情、包容且安全的社群。它也涵蓋了[如何回報](/zh-TW/docs/MDN/Community/Community_Participation_Guidelines#回報流程)違反 CPG 的行為。
+- [MDN Web 文件變更日誌](/zh-TW/docs/MDN/Writing_guidelines/Changelog)
+  - : 此文件記錄了 MDN 內容流程和最佳實踐的顯著變更，並提供了變更時間和原因的資訊。
 
 ## 行為準則
 
-若要參與專案貢獻以及討論，請先閱讀並同意 [Mozilla 社群參與準則](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)。
+透過親身或線上參與及貢獻我們的任何專案，即表示你已閱讀並同意 [Mozilla 社群參與準則](/zh-TW/docs/MDN/Community/Community_Participation_Guidelines)（CPG）。
 
-## 聯繫我們
+## 一般性支援
 
-你可以使用[討論頻道](/zh-TW/docs/MDN/Community/Communication_channels)與 MDN Web 文件的團隊以及社群交流。
+我們是一個努力維護文件以跟上不斷變化的 Web 生態系統需求的小團隊。不幸的是，我們無法協助解決一般性支援議題，例如程式碼除錯。如果你正在學習，[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節是一個很好的起點，你也可以在 [Stack Overflow](https://stackoverflow.com/questions/) 上發布程式設計議題或搜尋答案。
 
-### 一般性問題協助
-
-我們是一個努力維護可以跟上在不斷變化的 Web 環境中需求的文件的小團隊。不幸的是，我們無法幫助你解決一般性問題。如果你正在學習寫程式，你可以參考以下資料：
-
-- [學習 Web 開發](/zh-TW/docs/Learn)
-- [MDN Web 文件學習論壇](https://discourse.mozilla.org/c/mdn/learn/250)
-- [Stack Overflow](https://stackoverflow.com/questions/)
-
-任何有關一般性問題協助的問題（issue）、討論以及拉取請求會被導向這裡並可能被關閉或鎖起來。
+在 MDN 倉儲中提出的一般性支援議題、討論或拉取請求將被導向此處，並可能被關閉和鎖定。

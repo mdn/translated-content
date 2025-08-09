@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 
 Action quand l'extension est désactivée.
 
-L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
+L'API requière l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
 ## Syntaxe
 
@@ -31,9 +31,7 @@ Les événement ont trois fonctions :
 ### Paramètres
 
 - `function`
-
   - : Fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera par l'argument suivant :
-
     - `info`
       - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désactivé
 

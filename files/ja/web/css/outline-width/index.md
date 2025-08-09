@@ -2,14 +2,45 @@
 title: outline-width
 slug: Web/CSS/outline-width
 l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
-
-{{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`outline-width`** プロパティは、要素の輪郭線の太さを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxref("border")}} よりも外側です。
 
-{{EmbedInteractiveExample("pages/css/outline-width.html")}}
+{{InteractiveExample("CSS デモ: outline-width")}}
+
+```css interactive-example-choice
+outline-width: 12px;
+```
+
+```css interactive-example-choice
+outline-width: thin;
+```
+
+```css interactive-example-choice
+outline-width: medium;
+```
+
+```css interactive-example-choice
+outline-width: thick;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 たいていの場合、輪郭線の見た目を定義するときは一括指定プロパティ {{cssxref("outline")}} を使ったほうが便利です。
 
@@ -60,7 +91,7 @@ outline-width: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_an_elements_outline_width
 <span id="thin">thin</span>
 <span id="medium">medium</span>
 <span id="thick">thick</span>
@@ -71,7 +102,7 @@ outline-width: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_an_elements_outline_width
 span {
   outline-style: solid;
   display: inline-block;
@@ -118,5 +149,5 @@ span {
 ## 関連情報
 
 - {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
 - {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}

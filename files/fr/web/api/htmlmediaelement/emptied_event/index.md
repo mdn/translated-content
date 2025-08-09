@@ -10,7 +10,7 @@ L'événement **`emptied`** est déclenché lorsqu'un média est devenu vide. Pa
 ## Informations générales
 
 - Spécification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-emptied)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-emptied)
 - Interface
   - : {{domxref("Event")}}
 - propagation

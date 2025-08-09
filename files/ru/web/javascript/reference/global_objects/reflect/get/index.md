@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 
 Статический метод **`Reflect.get()`** работает также, словно если бы мы получали свойство объекта (`target[propertyKey]`) с помощью функции.
 
-{{EmbedInteractiveExample("pages/js/reflect-get.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.get()")}}
+
+```js interactive-example
+const object1 = {
+  x: 1,
+  y: 2,
+};
+
+console.log(Reflect.get(object1, "x"));
+// Expected output: 1
+
+const array1 = ["zero", "one"];
+
+console.log(Reflect.get(array1, 1));
+// Expected output: "one"
+```
 
 ## Синтаксис
 
@@ -34,7 +49,7 @@ Reflect.get(target, propertyKey[, receiver])
 
 ## Описание
 
-Метод `Reflect.get` позволяет получить значение свойства некоторого объекта. Он похож на обычный доступ к значению свойства объекта [значению свойства объекта](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors), только с синтаксисом функции.
+Метод `Reflect.get` позволяет получить значение свойства некоторого объекта. Он похож на обычный доступ к значению свойства объекта [значению свойства объекта](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors), только с синтаксисом функции.
 
 ## Примеры
 
@@ -69,4 +84,4 @@ Reflect.get(obj, "foo"); // "foobar"
 ## Смотрите также
 
 - {{jsxref("Reflect")}}
-- [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors)

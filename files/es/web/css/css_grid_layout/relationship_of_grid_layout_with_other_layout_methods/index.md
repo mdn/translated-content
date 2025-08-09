@@ -10,7 +10,7 @@ CSS Grid Layout ha sido diseñado para trabajar junto con otros elementos de CSS
 
 ## Grid y flexbox
 
-La diferencia básica entre CSS Grid Layout y [CSS Flexbox Layout](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) es que Flexbox se creó para diseños de una dimensión, en una fila o una columna. En cambio CSS Grid Layout se pensó para el diseño bidimensional, en varias filas y columnas al mismo tiempo. Sin embargo, las dos especificaciones comparten algunas características comunes, y si ya has aprendido cómo utilizar Flexbox, verás semejanzas que te ayudarán a entender _Grid_.
+La diferencia básica entre CSS Grid Layout y [CSS Flexbox Layout](/es/docs/Web/CSS/CSS_flexible_box_layout) es que Flexbox se creó para diseños de una dimensión, en una fila o una columna. En cambio CSS Grid Layout se pensó para el diseño bidimensional, en varias filas y columnas al mismo tiempo. Sin embargo, las dos especificaciones comparten algunas características comunes, y si ya has aprendido cómo utilizar Flexbox, verás semejanzas que te ayudarán a entender _Grid_.
 
 ### Diseños de Una dimensión vs. dos dimensiones
 

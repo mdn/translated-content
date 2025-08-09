@@ -5,7 +5,7 @@ slug: Web/CSS/@property
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La règle {{cssxref("at-rule")}} [CSS](/fr/docs/Web/CSS) **`@property`** fait partie du panel d'API [CSS Houdini](/fr/docs/Web/Houdini), qui permet aux développeuses et développeurs de définir explicitement leurs propriétés CSS personnalisées (voir {{cssxref('--*', 'CSS custom properties')}}). Cela permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.
+La règle {{cssxref("at-rule")}} [CSS](/fr/docs/Web/CSS) **`@property`** fait partie du panel d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs), qui permet aux développeuses et développeurs de définir explicitement leurs propriétés CSS personnalisées (voir {{cssxref('--*', 'CSS custom properties')}}). Cela permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.
 
 La règle `@property` permet l'enregistrement d'une propriété personnalisée directement dans une feuille de styles sans avoir à utiliser la moindre ligne de JavaScript. Une règle `@property` valide enregistre une nouvelle propriété personnalisée comme si {{domxref('CSS.registerProperty')}} avait été appelé avec les mêmes paramètres.
 
@@ -76,4 +76,4 @@ window.CSS.registerProperty({
 - [API Propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
 - [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
 - [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/fr/docs/Web/Houdini)
+- [CSS Houdini](/fr/docs/Web/API/Houdini_APIs)

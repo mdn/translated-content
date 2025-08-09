@@ -34,7 +34,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 Фоновые сценарии загружаются сразу при загрузке расширения и остаются загруженными до тех пор, пока расширение не будет отключено или удалено. Вы можете использовать любой API-интерфейс WebExtension в сценарии, если вы запросили необходимые [права (permissions)](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-Дополнительную информацию можно найти в статье [Внутреннее устройство расширения](/ru/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages).
+Дополнительную информацию можно найти в статье [Внутреннее устройство расширения](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages).
 
 Ключ `background` это объект, у которого есть два следующих необязательных свойства:
 

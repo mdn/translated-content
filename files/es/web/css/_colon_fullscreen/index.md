@@ -1,9 +1,9 @@
 ---
-title: ":fullscreen"
+title: :fullscreen
 slug: Web/CSS/:fullscreen
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** de [CSS](/es/docs/Web/CSS) representa un elemento que se muestra cuando el navegador está en modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API).
 
@@ -144,4 +144,4 @@ fullscreenButton.addEventListener("click", enterFullscreen);
 - [Usando el modo de pantalla completa](/es/docs/Web/API/Fullscreen_API)
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreen") }}, {{ domxref("Document.fullscreenElement") }}
-- Atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)
+- Atributo [`allowfullscreen`](/es/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

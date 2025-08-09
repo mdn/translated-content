@@ -28,17 +28,17 @@ new Date(dateString)
 ### Parâmetros
 
 - `dateString`
-  - : Uma _string_ de representação de datas no format [RFC2822](http://tools.ietf.org/html/rfc2822#page-14) ou ISO 8601 (outros formatos podem ser utilizados, mas os resultados podem não ser os esperados).
+  - : Uma _string_ de representação de datas no format [RFC2822](https://tools.ietf.org/html/rfc2822#page-14) ou ISO 8601 (outros formatos podem ser utilizados, mas os resultados podem não ser os esperados).
 
 ## Descrição
 
 O método `parse()` analisa uma _string_ de data (como `"Dec 25, 1995"`) e retorna o número de milisegundos desde 01 de Janeiro de 1970, 00:00:00 UTC. Esta função é útil para definir valores de data baseados em valores de _string_, por exemplo em conjunto com o método {{jsxref("Date.prototype.setTime()", "setTime()")}} e o objeto {{jsxref("Global_Objects/Date", "Date")}}.
 
-Dada uma string representando um tempo, `parse()` retorna o valor temporal. É aceito o RFC2822 / IETF sintaxe de data ([RFC2822 Section 3.3](http://tools.ietf.org/html/rfc2822#page-14)), ex.: `"Mon, 25 Dec 1995 13:30:00 GMT"`. A função entende as abreviações dos fusos horários continentais dos EUA, mas para uso geral, use um deslocamento de fuso horário, por exemplo, `"Seg, 25 Dez 1995 13:30:00 +0430"` (4 horas, 30 minutos à leste do Meridiano de Greenwich). Se o fuso horário não é especificado e a string está em um formato ISO reconhecido pela ES5, então é adotado o formato UTC (Tempo Universal Coordenado). GMT e UTC são considerados equivalentes. O fuso horário do seu horário local é usado para interpreatar argumentos na [RFC2822 Formato 3.3](http://tools.ietf.org/html/rfc2822#page-14) (ou qualquer formato não reconhecido como ISO 8601 na ES5) que não contenha informação de fuso horário.
+Dada uma string representando um tempo, `parse()` retorna o valor temporal. É aceito o RFC2822 / IETF sintaxe de data ([RFC2822 Section 3.3](https://tools.ietf.org/html/rfc2822#page-14)), ex.: `"Mon, 25 Dec 1995 13:30:00 GMT"`. A função entende as abreviações dos fusos horários continentais dos EUA, mas para uso geral, use um deslocamento de fuso horário, por exemplo, `"Seg, 25 Dez 1995 13:30:00 +0430"` (4 horas, 30 minutos à leste do Meridiano de Greenwich). Se o fuso horário não é especificado e a string está em um formato ISO reconhecido pela ES5, então é adotado o formato UTC (Tempo Universal Coordenado). GMT e UTC são considerados equivalentes. O fuso horário do seu horário local é usado para interpreatar argumentos na [RFC2822 Formato 3.3](https://tools.ietf.org/html/rfc2822#page-14) (ou qualquer formato não reconhecido como ISO 8601 na ES5) que não contenha informação de fuso horário.
 
 ### Suporte ao formato ECMAScript 5 ISO-8601
 
-_Astring_ Data e hora pode ser no formato [ISO 8601](https://www.w3.org/TR/NOTE-datetime). Por exemplo, `"2011-10-10"` (apenas data) ou `"2011-10-10T14:48:00"` (data e hora) podem ser passados ou convertidos. O fuso horario UTC é usado para interpretar argumentos no formato [ISO 8601](https://www.w3.org/TR/NOTE-datetime) que não contenham informação de fuso horário (note que [ECMAScript ed 6 draft](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-date-time-string-format) especifica que a _string_ do tipo data e hora sem um fuso horário são tratados como data local, não UTC).
+_Astring_ Data e hora pode ser no formato [ISO 8601](https://www.w3.org/TR/NOTE-datetime). Por exemplo, `"2011-10-10"` (apenas data) ou `"2011-10-10T14:48:00"` (data e hora) podem ser passados ou convertidos. O fuso horario UTC é usado para interpretar argumentos no formato [ISO 8601](https://www.w3.org/TR/NOTE-datetime) que não contenham informação de fuso horário (note que [ECMAScript ed 6 draft](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-date-time-string-format) especifica que a _string_ do tipo data e hora sem um fuso horário são tratados como data local, não UTC).
 
 While time zone specifiers are used during date string parsing to interpret the argument, the value returned is always the number of milliseconds between January 1, 1970 00:00:00 UTC and the point in time represented by the argument.
 

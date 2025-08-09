@@ -1,15 +1,22 @@
 ---
 title: Array.of()
+short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Array.of()`** 静的メソッドは、引数の数や型にかかわらず、可変長引数から、新しい `Array` インスタンスを生成します。
 
-{{EmbedInteractiveExample("pages/js/array-of.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.of()", "shorter")}}
+
+```js interactive-example
+console.log(Array.of("foo", 2, "bar", true));
+// 予想される結果: Array ["foo", 2, "bar", true]
+
+console.log(Array.of());
+// 予想される結果: Array []
+```
 
 ## 構文
 
@@ -86,6 +93,7 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 ## 関連情報
 
 - [`Array.of` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.of` のポリフィル](https://www.npmjs.com/package/array.of)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}

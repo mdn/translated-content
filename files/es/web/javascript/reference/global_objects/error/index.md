@@ -99,7 +99,7 @@ try {
 
 Posiblemente desees definir tus propios tipos de error derivados de `Error` para poder lanzarlo con `throw new MyError()` y usar `instanceof MyError` para verificar el tipo de error en el controlador de excepciones. Esto da como resultado un código de manejo de errores más limpio y consistente.
 
-Consulta ["¿Cuál es una buena manera de extender `Error` en JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) en StackOverflow para una discusión en profundidad.
+Consulta ["¿Cuál es una buena manera de extender `Error` en JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) en StackOverflow para una discusión en profundidad.
 
 #### Clase `Error` personalizado en ES6
 
@@ -139,7 +139,8 @@ try {
 
 #### Objeto `Error` personalizado ES5
 
-> **Advertencia:** **Todos** los navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se usa una declaración de prototipo.
+> [!WARNING]
+> **Todos** los navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se usa una declaración de prototipo.
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {

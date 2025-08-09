@@ -7,9 +7,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 
 Désinstalle une extension, compte tenu de son ID.
 
-Cette API requiert l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions). "management"
+Cette API requiert l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -25,15 +25,13 @@ var uninstalling = browser.management.uninstall(
 - `id`
   - : `string`. ID de l'extensions à désinstaller.
 - `options{{optional_inline}}`
-
   - : `object`. l'objet qui peut contenir une propriété unique, `showConfirmDialog`. Si `showConfirmDialog` est `true`, le navigateur affiche une boie de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé.
-
     - Si `id` est l'ID de l'extension appelant, `showConfirmDialog` est par défaut à `false`.
     - Si `id` est l'ID d'une extension différente, cette option est ignorée et la boite de dialogue de confirmation s'affche toujours.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désintallatiion.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désintallatiion.
 
 ## Compatibilité des navigateurs
 

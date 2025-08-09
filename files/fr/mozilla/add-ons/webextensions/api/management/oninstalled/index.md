@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 
 Action quand une extension est installée.
 
-Cette API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
+Cette API requière l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
 ## Syntaxe
 
@@ -31,11 +31,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `function`
-
   - : fonction de rappel qui sera appelée quand l'événement se produira. La fonction passera l'argument suivant :
-
     - `info`
-      - : [`ExtensionInfo`](/fr/Add-ons/WebExtensions/API/management/ExtensionInfo): informations sur l'extension qui a été installée.
+      - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations sur l'extension qui a été installée.
 
 ## Compatibilité des navigateurs
 

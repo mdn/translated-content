@@ -9,7 +9,10 @@ l10n:
 
 **`ToggleEvent`** 接口表示当元素的状态发生改变时通知用户的事件。
 
-它为 `HTMLElement` 的 {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} 和 {{domxref("HTMLElement.toggle_event", "toggle")}} 事件提供事件对象，这两个事件会在弹出框元素在显示与隐藏状态间切换时（分别在切换前与切换后）触发。它也为 `HTMLDetailsElement` 的 {{domxref("HTMLDetailsElement.toggle_event", "toggle")}} 事件提供事件对象，这一事件会在 {{htmlelement("details")}} 元素在展开和收起之间切换时触发。
+它为 `HTMLElement` 的 {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} 和 {{domxref("HTMLElement.toggle_event", "toggle")}} 事件提供事件对象，这两个事件会在弹出框元素在显示与隐藏状态间切换时（分别在切换前与切换后）触发。
+
+- `beforetoggle` 在[弹出框](/zh-CN/docs/Web/API/Popover_API)和 {{htmlelement("dialog")}} 元素上触发
+  `toggle` 在[弹出框](/zh-CN/docs/Web/API/Popover_API)、{{htmlelement("dialog")}} 元素和 {{htmlelement("details")}} 元素上触发
 
 {{InheritanceDiagram}}
 

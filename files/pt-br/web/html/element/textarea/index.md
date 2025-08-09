@@ -7,7 +7,37 @@ slug: Web/HTML/Element/textarea
 
 O **elemento** HTML `<textarea>` representa um controle de edição para uma caixa de texto, útil quando você quer permitir ao usuário informar um texto extenso em formato livre, como um comentário ou formulário de retorno.
 
-{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="story">Tell us your story:</label>
+
+<textarea id="story" name="story" rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+```
+
+```css interactive-example
+label,
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 Os exemplos acima demonstram vários recursos do `<textarea>`. O primeiro exemplo mostra o uso mais simples, com apenas um `id` atributo para permitir que o`<textarea>` estar associado a um {{htmlelement("label")}} elemento para fins de acessibilidade e um `name` atributo para definir o nome do ponto de dados associado enviado ao servidor quando o formulário é enviado.
 
@@ -25,9 +55,7 @@ O `<textarea>` O elemento também aceita vários atributos comuns para formar `<
 Este elemento inclui os atributos globais.
 
 - `autocapitalize` {{non-standard_inline}}
-
   - : Este é um atributo não padrão suportado pelo WebKit no iOS (portanto, quase todos os navegadores executados no iOS, incluindo Safari, Firefox e Chrome), que controla se e como o valor do texto deve ser automaticamente capitalizado quando é inserido / editado pelo do utilizador. Os valores não preteridos estão disponíveis no iOS 5 e posterior. Os valores possíveis são:
-
     - `none`: Desativa completamente a capitalização automática.
     - `sentences`: Coloque automaticamente em maiúscula a primeira letra das frases.
     - `words`: Coloque em maiúscula automaticamente a primeira letra das palavras.
@@ -36,9 +64,7 @@ Este elemento inclui os atributos globais.
     - `off`: {{deprecated_inline()}} Descontinuado desde o iOS 5.
 
 - `autocomplete`
-
   - : Este atributo indica se o valor do controle pode ser preenchido automaticamente pelo navegador. Os valores possíveis são:
-
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: O navegador pode concluir automaticamente o valor com base nos valores inseridos pelo usuário durante os usos anteriores.
 
@@ -59,7 +85,6 @@ Este elemento inclui os atributos globais.
 - `name`
   - : O nome do controle.
 - `placeholder`
-
   - : Uma dica para o usuário sobre o que pode ser inserido no controle. Retornos de carro ou feeds de linha no texto do espaço reservado devem ser tratados como quebras de linha ao renderizar a dica.
 
     > **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada** {{HTMLElement("label")}} elemento vinculado à entrada. Veja [Labels e placeholders](/pt-BR/docs/Web/HTML/Element/input#labels_and_placeholders) para uma explicação completa.
@@ -71,17 +96,13 @@ Este elemento inclui os atributos globais.
 - `rows`
   - : O número de linhas de texto visíveis para o controle.
 - `spellcheck`
-
   - : Especifica se o `<textarea>`está sujeito a verificação ortográfica pelo navegador / SO subjacente. o valor pode ser:
-
     - `true`: Indica que o elemento precisa ter sua ortografia e gramática verificadas.
     - `default` :Indica que o elemento deve agir de acordo com um comportamento padrão, possivelmente com base no próprio elemento pai `spellcheck` valor.
     - `false` : Indica que o elemento não deve ter verificação ortográfica.
 
 - `wrap`
-
   - : Indica como o controle quebra o texto. Os valores possíveis são:
-
     - `hard`: O navegador insere automaticamente quebras de linha (CR + LF) para que cada linha não tenha mais que a largura do controle; a `cols` O atributo também deve ser especificado para que isso entre em vigor.
     - `soft`: O navegador garante que todas as quebras de linha no valor consistam em um par CR + LF, mas não insira nenhuma quebra de linha adicional.
     - `off` {{non-standard_inline}}: Como `soft` mas muda a aparência para `white-space: pre` segmentos de linha que excedam `cols` não estão embrulhados e os `<textarea>` torna-se rolável horizontalmente.
@@ -92,7 +113,7 @@ Este elemento inclui os atributos globais.
 
 `<textarea>` é um elemento substituído - possui dimensões intrínsecas, como uma imagem rasterizada. Por padrão, sua{{cssxref("display")}} o valor é bloco. Em comparação com outros elementos de formulário, é relativamente fácil de estilizar, com seu modelo de caixa, fontes, esquema de cores etc. sendo facilmente manipuláveis usando CSS comum.
 
-[O estilo de formulários HTML fornece algumas dicas úteis sobre estilo](/pt-BR/docs/Learn/HTML/Forms/Styling_HTML_forms)`<textarea>`s.
+[O estilo de formulários HTML fornece algumas dicas úteis sobre estilo](/pt-BR/docs/Learn/Forms/Styling_web_forms)`<textarea>`s.
 
 ### Inconsistência da linha de base
 

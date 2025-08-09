@@ -13,7 +13,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 Чтобы сделать сайт доступным для установки, ему необходимы следующие вещи:
 
-- Веб-манифест с [правильно заполненными полями](/en-US/Apps/Progressive/Add_to_home_screen#Manifest)
+- Веб-манифест с [правильно заполненными полями](/ru/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#manifest)
 - Сайт должен использовать защищённый (HTTPS) домен
 - Иконка для предоставления приложения на устройстве
 - Зарегистрированный service worker, чтобы приложение работало в off-line режиме (на данный момент требуется только для Chrome на Android)
@@ -71,7 +71,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 - `theme_color`: Основной цвет для интерфейса, используемый операционной системой
 - `background_color`: Цвет для фона, используемый при установке и на заставке
 
-Минимальные требования к манифесту - `name` и хотя бы один значок (с `src`, `size` и `type`). Поля `description`, `short_name`, и `start_url` являются рекомендуемыми. Вы можете использовать даже больше полей, чем указано выше — не забудьте проверить ссылку на [Web App Manifest reference](/ru/docs/Web/Manifest).
+Минимальные требования к манифесту - `name` и хотя бы один значок (с `src`, `size` и `type`). Поля `description`, `short_name`, и `start_url` являются рекомендуемыми. Вы можете использовать даже больше полей, чем указано выше — не забудьте проверить ссылку на [Web App Manifest reference](/ru/docs/Web/Progressive_web_apps/Manifest).
 
 ## Добавить на домашний экран
 
@@ -107,7 +107,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 В статье мы узнали, как сделать PWA устанавливаемыми, используя веб-манифест, и добавить их на главный экран.
 
-Для получения большей информации, можете почитать наш [Add to Home screen гайд](/ru/docs/Web/Apps/Progressive/Add_to_home_screen). В настоящее время поддержка ограничена браузерами Firefox для Android 58+, Мобильным Chrome и Android Webview 31+, также Opera для Android 32+, но поддержка должна расширяться в ближайшем будущем.
+Для получения большей информации, можете почитать наш [Add to Home screen гайд](/ru/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable). В настоящее время поддержка ограничена браузерами Firefox для Android 58+, Мобильным Chrome и Android Webview 31+, также Opera для Android 32+, но поддержка должна расширяться в ближайшем будущем.
 
 Теперь давайте перейдём к последнему фрагменту PWA-головоломки — повторному запуску с помощью push-уведомлений.
 

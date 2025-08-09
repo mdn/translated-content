@@ -9,7 +9,7 @@ Effectuer une recherche en utilisant le moteur de recherche spécifié, ou le mo
 
 Les résultats seront affichés dans un nouvel onglet, ou si l'argument tabId est donné, dans l'onglet identifié par ceci.
 
-Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/Add-ons/WebExtensions/manifest.json/permissions) "search".
+Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "search".
 
 Pour obtenir les moteurs de recherche installés, utilisez {{WebExtAPIRef("search.get()")}}.
 
@@ -24,9 +24,7 @@ browser.search.search(
 ### Paramètres
 
 - `searchProperties`
-
   - : `object`. Un objet avec les propriétés suivantes :
-
     - `query`
       - : `string`. La requête de recherche.
     - `engine`{{optional_inline}}

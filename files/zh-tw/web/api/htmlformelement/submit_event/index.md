@@ -7,7 +7,7 @@ slug: Web/API/HTMLFormElement/submit_event
 
 `submit` 事件會在表單送出時觸發。
 
-要注意的是，`submit` 事件**只會**在 [form element](/zh-TW/docs/Web/HTML/Element/form) 上觸發， [button](/zh-TW/docs/Web/HTML/Element/button) 或是 [submit input](/zh-TW/docs/Web/HTML/Element/input) 則不會觸發。（送出的是「表單」，而非「按鈕」）
+要注意的是，`submit` 事件**只會**在 [form element](/zh-TW/docs/Web/HTML/Reference/Elements/form) 上觸發， [button](/zh-TW/docs/Web/HTML/Reference/Elements/button) 或是 [submit input](/zh-TW/docs/Web/HTML/Reference/Elements/input) 則不會觸發。（送出的是「表單」，而非「按鈕」）
 
 ## 基本資料
 

@@ -5,11 +5,47 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
+**`border-bottom`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
 
-**`border-bottom`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
+{{InteractiveExample("CSS デモ: border-bottom")}}
 
-{{EmbedInteractiveExample("pages/css/border-bottom.html")}}
+```css interactive-example-choice
+border-bottom: solid;
+```
+
+```css interactive-example-choice
+border-bottom: dashed red;
+```
+
+```css interactive-example-choice
+border-bottom: 1rem solid;
+```
+
+```css interactive-example-choice
+border-bottom: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 他の一括指定プロパティと同様に、 `border-bottom` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
 
@@ -75,13 +111,13 @@ border-bottom: unset;
 
 #### HTML
 
-```html
+```html live-sample___applying_a_bottom_border
 <div>このボックスには下側に境界線があります。</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___applying_a_bottom_border
 div {
   border-bottom: 4px dashed blue;
   background-color: gold;
@@ -94,7 +130,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('下の境界の適用')}}
+{{EmbedLiveSample('Applying_a_bottom_border')}}
 
 ## 仕様書
 

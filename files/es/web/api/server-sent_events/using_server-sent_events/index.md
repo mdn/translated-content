@@ -7,13 +7,13 @@ slug: Web/API/Server-sent_events/Using_server-sent_events
 
 Desarrollar una aplicación web que utilice server-sent events es muy fácil. Solo necesitas un pequeño código del lado del servidor para transmitir los eventos a la aplicación web, pero del lado de la aplicacion web se trabaja prácticamente igual que con cualquier otro tipo de eventos.
 
-Puedes ver un ejemplo [aqui](/samples/sse/) (actualmente no funciona).
+Puedes ver un ejemplo [aqui](https://mdn.dev/archives/media/samples/sse/) (actualmente no funciona).
 
 [ejemplo2](http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_sse)
 
 ## Recibiendo eventos desde el servidor
 
-El server-sent event API está contenido en la interfaz [`EventSource`](/en/Server-sent_events/EventSource); para abrir una conexión al servidor para recibir eventos de él. Se crea un nuevo objeto new [EventSource](/en/Server-sent_events/EventSource), especificando el URI de un script que genera los eventos, Por ejemplo:
+El server-sent event API está contenido en la interfaz [`EventSource`](/en-US/Server-sent_events/EventSource); para abrir una conexión al servidor para recibir eventos de él. Se crea un nuevo objeto new [EventSource](/en-US/Server-sent_events/EventSource), especificando el URI de un script que genera los eventos, Por ejemplo:
 
 ```js
 var evtSource = new EventSource("ssedemo.php");
@@ -123,19 +123,15 @@ Cada mensaje consiste en una o más líneas de texto que enumeran los campos par
 Los siguientes nombres de campo son definidos por la especificación:
 
 - `event`
-
   - : El tipo de evento. Si se especifica, un evento se enviará al navegador a la escucha para el nombre del evento especificado, el sitio web usaria `addEventLister()` para escuchar eventos nombrados. El controlador `onmessage` se llama si no se especifica el nombre del evento para un mensaje.
 
 - `data`
-
   - : El campo de datos para el mensaje. Cuando el EventSource recibe múltiples lineas con "`data:`", se concatenara, insertando un caracter de nueva de linea entre cada uno. Se eliminan los saltos de línea al final **\[VERIFICAR].**
 
 - `id`
-
   - : El ID del evento que establecerá el último ID del objeto EventSource.
 
 - `Retry`
-
   - : El tiempo de reconexión para usar al intentar enviar el evento. \[Qué código maneja esto?] Este debe ser un número entero, que especifica el tiempo de reconexion en milisegundos. Si se especifica un valor no entero, el campo se ignora.
 
 Se omiten todos los demas nombres de campo.

@@ -14,14 +14,13 @@ Este elemento implementa a interface {{domxref("HTMLDirectoryElement")}}.
 
 ## Atributos
 
-Como todos os outros elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes).
+Como todos os outros elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `compact`
-
   - : Este atributo booleano indica que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do agente do usuário e não funciona em todos os navegadores.
 
     > [!NOTE]
-    > Não use este atributo, pois ele foi descontinuado: o {{HTMLElement("dir")}} elemento deve ser estilizado usando [CSS](/pt-BR/docs/CSS). Para dar um efeito semelhante ao alcançado com o atributo `compact`, a propriedade [CSS](/pt-BR/docs/CSS) {{cssxref("line-height")}} pode ser usado com um valor de `80%`.
+    > Não use este atributo, pois ele foi descontinuado: o {{HTMLElement("dir")}} elemento deve ser estilizado usando [CSS](/pt-BR/docs/Web/CSS). Para dar um efeito semelhante ao alcançado com o atributo `compact`, a propriedade [CSS](/pt-BR/docs/Web/CSS) {{cssxref("line-height")}} pode ser usado com um valor de `80%`.
 
 ## Compatibilidade com navegadores
 
@@ -31,10 +30,9 @@ Como todos os outros elementos HTML, este elemento suporta os [global attributes
 
 - Outros relacionados a lista de elementos HTML: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, e {{HTMLElement("menu")}};
 - Propriedades CSS que podem ser especialmente úteis para estilizar o elemento `<dir>` :
-
   - A propriedade {{cssxref('list-style')}}, útil para escolher a maneira como o ordinal é exibido.
-  - [CSS counters](/pt-BR/docs/CSS_Counters), útil para lidar com listas aninhadas complexas.
-  - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto [`compact`](/pt-BR/docs/Web/HTML/Element/dir#compact).
+  - [CSS counters](/pt-BR/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), útil para lidar com listas aninhadas complexas.
+  - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto [`compact`](#compact).
   - A propriedade {{cssxref('margin')}}, útil para controlar o recuo da lista.
 
 {{HTMLSidebar}}

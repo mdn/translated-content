@@ -9,7 +9,23 @@ slug: WebAssembly/Reference/Control_flow/unreachable
 
 `unreachable` 是一個無條件的例外錯誤。當程式執行到 `unreachable` 時會強制停止。
 
-{{EmbedInteractiveExample("pages/wat/unreachable.html", "tabbed-shorter")}}
+{{InteractiveExample("Wat Demo: unreachable", "tabbed-shorter")}}
+
+```wat interactive-example
+(module
+  (func (export "throw")
+    unreachable
+  )
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
+  result.instance.exports.throw();
+  // Expected output: RuntimeError: unreachable
+});
+```
 
 ## 語法
 

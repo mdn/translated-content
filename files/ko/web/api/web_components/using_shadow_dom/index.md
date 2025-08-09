@@ -198,7 +198,7 @@ wrapper.appendChild(info);
 
 ### 사용자 정의 요소 사용하기
 
-한 번 클래스가 정의되고 나면, 요소를 사용하는 것은 요소를 정의하는 것과 페이지에 요소를 추가하는 것만큼이나 간단합니다. (페이지에 요소를 추가하는 것은 [사용자 정의 요소 사용하기](/ko/docs/Web/Web_Components/Using_custom_elements)에서 설명되었습니다).
+한 번 클래스가 정의되고 나면, 요소를 사용하는 것은 요소를 정의하는 것과 페이지에 요소를 추가하는 것만큼이나 간단합니다. (페이지에 요소를 추가하는 것은 [사용자 정의 요소 사용하기](/ko/docs/Web/API/Web_components/Using_custom_elements)에서 설명되었습니다).
 
 ```js
 // 새로운 요소를 정의합니다
@@ -235,5 +235,5 @@ shadow.appendChild(linkElem);
 
 ## 같이 보기
 
-- [사용자 정의 요소 사용하기](/ko/docs/Web/Web_Components/Using_custom_elements)
-- [template와 slot 사용하기](/ko/docs/Web/Web_Components/Using_templates_and_slots)
+- [사용자 정의 요소 사용하기](/ko/docs/Web/API/Web_components/Using_custom_elements)
+- [template와 slot 사용하기](/ko/docs/Web/API/Web_components/Using_templates_and_slots)

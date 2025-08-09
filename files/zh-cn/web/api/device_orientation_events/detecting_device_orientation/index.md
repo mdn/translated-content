@@ -15,7 +15,8 @@ slug: Web/API/Device_orientation_events/Detecting_device_orientation
 
 要接收设备方向变化信息，只需要监听[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)事件：
 
-> **备注：** [gyronorm.js](https://github.com/dorukeker/gyronorm.js) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
+> [!NOTE]
+> [gyronorm.js](https://github.com/dorukeker/gyronorm.js) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
 
 ```js
 window.addEventListener("deviceorientation", handleOrientation, true);
@@ -48,7 +49,7 @@ function handleOrientation(orientData) {
 
 ### 相关值解释
 
-关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。[Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained) 这篇文章有更详细的描述，下面是对这篇文章的总结。
+关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。[Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained) 这篇文章有更详细的描述，下面是对这篇文章的总结。
 
 - {{ domxref("DeviceOrientationEvent.alpha") }} 表示设备沿 z 轴上的旋转角度，范围为 0\~360。
 - {{ domxref("DeviceOrientationEvent.beta") }} 表示设备在 x 轴上的旋转角度，范围为 -180\~180。它描述的是设备由前向后旋转的情况。
@@ -158,21 +159,21 @@ window.addEventListener("devicemotion", handleMotion, true);
 
 ### 相关值解释
 
-{{ domxref("DeviceMotionEvent") }}对象提供给 web 开发者设备在位置和方向上的改变速度的相关信息。这些变化信息是通过三个轴来体现的。（[Orientation and motion data explained](/zh-CN/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained)有更详细的说明。）
+{{ domxref("DeviceMotionEvent") }}对象提供给 web 开发者设备在位置和方向上的改变速度的相关信息。这些变化信息是通过三个轴来体现的。（[Orientation and motion data explained](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)有更详细的说明。）
 
-[`acceleration`](/zh-CN/docs/Web/API/DeviceMotionEvent.acceleration) 和 [`accelerationIncludingGravity`](/zh-CN/docs/Web/API/DeviceMotionEvent.accelerationIncludingGravity)，都包含下面三个轴：
+[`acceleration`](/zh-CN/docs/Web/API/DeviceMotionEvent/acceleration) 和 [`accelerationIncludingGravity`](/zh-CN/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity)，都包含下面三个轴：
 
 - `x`: 西向东
 - `y`: 南向北
 - `z`: 垂直地面
 
-对于 [`rotationRate`](/zh-CN/docs/Web/API/DeviceMotionEvent.rotationRate) ，情况有点不同；三个轴的信息对应着以下三种情况：
+对于 [`rotationRate`](/zh-CN/docs/Web/API/DeviceMotionEvent/rotationRate) ，情况有点不同；三个轴的信息对应着以下三种情况：
 
 - `alpha`: 设备沿着垂直于屏幕（对于桌面设备则是垂直于键盘）的轴的旋转速率
 - `beta`: 设备沿着屏幕（对于桌面设备则是键盘）左至右方向的轴的旋转速率 (桌面设备相对于键盘)
 - `gamma`: 设备沿着屏幕（对于桌面设备则是键盘）下至上方向的轴的旋转速率
 
-最后，[`interval`](/zh-CN/docs/Web/API/DeviceMotionEvent.interval) 表示的是从设备获取数据的间隔时间，单位是毫秒。
+最后，[`interval`](/zh-CN/docs/Web/API/DeviceMotionEvent/interval) 表示的是从设备获取数据的间隔时间，单位是毫秒。
 
 ## 规范
 
@@ -186,6 +187,6 @@ window.addEventListener("devicemotion", handleMotion, true);
 
 - {{domxref("DeviceOrientationEvent")}}
 - {{domxref("DeviceMotionEvent")}}
-- The legacy [`MozOrientation`](/zh-CN/DOM/MozOrientation) event.
-- [Orientation and motion data explained](/zh-CN/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained)
-- [Using deviceorientation in 3D Transforms](/zh-CN/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms)
+- The legacy [`MozOrientation`](/zh-CN/docs/DOM/MozOrientation) event.
+- [Orientation and motion data explained](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [Using deviceorientation in 3D Transforms](/zh-CN/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)

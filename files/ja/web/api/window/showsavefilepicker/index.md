@@ -19,22 +19,18 @@ showSaveFilePicker()
 ### 引数
 
 - `options` {{Optional_Inline}}
-
   - : 以下のオプションを含むオブジェクトです。
-
     - `excludeAcceptAllOption`
       - : {{JSxRef("boolean")}} 値で、デフォルトは `false` です。
         通常、ピッカーには (以下の `type` オプションに基づく) ファイル形式フィルターを何も適用しない選択肢があるはずです。このオプションを `true` にすると、この選択肢を利用 _不可能_ にします。
     - `suggestedName`
       - : 提案するファイル名を表す {{jsxref('String')}} です。
     - `types`
-
       - : 保存できるファイル形式の{{jsxref('Array', '配列')}}です。各要素は、以下のオプションを持つオブジェクトです。
-
         - `description`
           - : 許可されるファイル形式のカテゴリーの説明で、省略可能です。
         - `accept`
-          - : キーを [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)に、値をファイルの拡張子の{{jsxref('Array', '配列')}}に設定した {{jsxref('Object')}} です。(例は以下を参照してください)
+          - : キーを [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)に、値をファイルの拡張子の{{jsxref('Array', '配列')}}に設定した {{jsxref('Object')}} です。(例は以下を参照してください)
 
 ### 返値
 
@@ -77,5 +73,5 @@ async function getNewFileHandle() {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

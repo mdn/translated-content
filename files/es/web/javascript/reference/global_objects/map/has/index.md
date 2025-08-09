@@ -9,7 +9,18 @@ l10n:
 
 El método **`has()`** de las instancias {{jsxref("Map")}} regresa un booleano indicando si un elemento con la llave especificada existe o no en este _map_.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.has("bar"));
+// Expected output: true
+
+console.log(map1.has("baz"));
+// Expected output: false
+```
 
 ## Sintaxis
 

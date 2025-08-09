@@ -1,11 +1,9 @@
 ---
-title: ":active"
+title: :active
 slug: Web/CSS/:active
 ---
 
-{{CSSRef}}
-
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes) `:active` de [CSS](/es/docs/Web/CSS) representa un elemento (como un botón) que el usuario está activando. Cuando se usa un mouse, la "activación" generalmente comienza cuando el usuario presiona el botón primario del mouse y termina cuando se suelta. La pseudo-clase `:active` se usa comúnmente en los elementos {{HTMLElement("a")}} y {{HTMLElement("button")}}, pero también se puede usar en otros elementos.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:active` de [CSS](/es/docs/Web/CSS) representa un elemento (como un botón) que el usuario está activando. Cuando se usa un mouse, la "activación" generalmente comienza cuando el usuario presiona el botón primario del mouse y termina cuando se suelta. La pseudo-clase `:active` se usa comúnmente en los elementos {{HTMLElement("a")}} y {{HTMLElement("button")}}, pero también se puede usar en otros elementos.
 
 ```css
 /* Selecciona cualquier <a> que esté siendo activado */

@@ -12,7 +12,7 @@ Tanto {{domxref("Window")}} como {{domxref("WorkerGlobalScope")}} implementan `W
 
 Una promesa {{domxref("fetch","fetch()")}} se rechaza con un {{jsxref("TypeError")}} cuando sucede un error en la red, aunque normalmente significa un tema de permisos o similar. Una comprobación más precisa de una solicitud con `fetch()` debería comprobar que la promesa se resuelve, y que la propiedad {{domxref("Response.ok")}} tiene valor `true`. Un estatus HTTP 404 no constituye un error de red.
 
-El método `fetch()` es controlado por la directiva `connect-src` de la [Política de Seguridad de Contenido (Content Security Policy)](/es/docs/Security/CSP/CSP_policy_directives) en lugar de la directiva del recurso que se solicita.
+El método `fetch()` es controlado por la directiva `connect-src` de la [Política de Seguridad de Contenido (Content Security Policy)](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) en lugar de la directiva del recurso que se solicita.
 
 > [!NOTE]
 > Los parámetros del método `fetch()` son indénticos a los del constructor de {{domxref("Request.Request","Request()")}}.
@@ -26,16 +26,12 @@ Promise<Response> fetch(input[, init]);
 ### Parámetros
 
 - _input_
-
   - : Define el recurso que se quiere solicitar. Puede ser:
-
     - Un {{domxref("USVString")}} con la URL del recurso a solicitar. Algunos navegadores aceptan los esquemas `blob:` y `data:`.
     - Un objeto {{domxref("Request")}}.
 
 - _init_ {{optional_inline}}
-
   - : Objeto de opciones que contiene configuraciones para personalizar la solicitud. Estas opciones pueden ser:
-
     - `method`: El método de solicitud, p.ej., `GET`, `POST`.
     - `headers`: Cualquier cabecera que se quiera añadir a la solicitud, contenidas en un objeto {{domxref("Headers")}} o un objeto literal con valores {{domxref("ByteString")}}.
     - `body`: Cualquier cuerpo que se quiera añadir a la solicitud: puede ser un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, u objeto {{domxref("USVString")}}. Nótese que las solicitudes con métodos `GET` o `HEAD` no pueden tener cuerpo.
@@ -131,6 +127,6 @@ var myRequest = new Request("flowers.jpg", miInicializador);
 ## Ver también
 
 - [Fetch API](/es/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)

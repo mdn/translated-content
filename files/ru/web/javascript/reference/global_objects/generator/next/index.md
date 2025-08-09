@@ -23,7 +23,6 @@ gen.next(value)
 [`Object`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object) с двумя свойствами:
 
 - `done` (boolean)
-
   - Имеет значение `true`, если итератор находится за окончанием итерируемой последовательности. В этом случае `value` может указывать _возвращаемое значение_ итератора.
   - Имеет значение `false`, если итератор может создать следующее значение в последовательности. Это эквивалентно вообще не указанному свойству `done`.
 
@@ -80,4 +79,4 @@ g.next(2);
 ## Смотрите также
 
 - [`function*`](/ru/docs/Web/JavaScript/Reference/Statements/function*)
-- [Итераторы и генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Итераторы и генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators)

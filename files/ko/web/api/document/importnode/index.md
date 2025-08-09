@@ -16,7 +16,7 @@ var node = document.importNode(externalNode, deep);
 ```
 
 - `node`
-  - : 문서에 추가될 새로운 노드입니다. 새로운 노드가 문서 트리에 추가되기 전까지, 새로운 노드의 [parentNode](/ko/docs/DOM/Node.parentNode)는 null입니다.
+  - : 문서에 추가될 새로운 노드입니다. 새로운 노드가 문서 트리에 추가되기 전까지, 새로운 노드의 [parentNode](/ko/docs/Web/API/Node/parentNode)는 null입니다.
 - `externalNode`
   - : 다른 문서에서 가져올 노드입니다.
 - `deep`
@@ -35,7 +35,7 @@ document.getElementById("container").appendChild(newNode);
 
 오리지널 노드는 오리지널 문서에서 삭제되지 않습니다. 추가된 노드는 오리지널 노드의 복사본입니다.
 
-Nodes from external documents should be cloned using [`document.importNode()`](/ko/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/ko/docs/Web/API/Document/adoptNode)) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/ko/docs/Web/API/Node/ownerDocument) issues, see the [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
+Nodes from external documents should be cloned using [`document.importNode()`](/ko/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/ko/docs/Web/API/Document/adoptNode)) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/ko/docs/Web/API/Node/ownerDocument) issues, see the [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
 Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.
 

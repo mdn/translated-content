@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Statements/try...catch
 
 La declaración **`try...catch`** señala un bloque de instrucciones a intentar (**`try`**), y especifica una respuesta si se produce una excepción (**`catch`**).
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```
 
 ## Sintaxis
 
@@ -28,19 +38,15 @@ try {
 ```
 
 - `try_statements`
-
   - : Las sentencias que serán ejecutadas.
 
 - `catch_statements_1`, `catch_statements_2`
-
   - : Sentencias que se ejecutan si una excepción es lanzada en el bloque `try`.
 
 - `exception_var_1`, `exception_var_2`
-
   - : Identificador que contiene un objeto de excepcion asociado a la cláusula `catch`.
 
 - `condition_1`
-
   - : Una expresión condicional.
 
 - `finally_statements`

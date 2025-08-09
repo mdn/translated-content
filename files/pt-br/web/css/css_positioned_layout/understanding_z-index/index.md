@@ -15,18 +15,18 @@ Usar z-index aparenta ser extremamente fácil: uma única propriedade, endereça
 
 Esse artigo tentará explicar essas regras, com algumas simplificações e vários exemplos.
 
-1. [Stacking without z-index](/pt-BR/CSS/Understanding_z-index/Stacking_without_z-index) : Regras padrões de empilhamento
-2. [Stacking and float](/pt-BR/CSS/Understanding_z-index/Stacking_and_float) : Como lidar com elementos que usam _float_
-3. [Adding z-index](/pt-BR/CSS/Understanding_z-index/Adding_z-index) : Usando index-z para mudar o empilhamento padrão
-4. [The stacking context](/pt-BR/CSS/Understanding_z-index/The_stacking_context) : Notas sobre contexto do empilhamento
-5. [Stacking context example 1](/pt-BR/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarquia, z-index no último _level_
-6. [Stacking context example 2](/pt-BR/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarquia, z-index em todos os _levels_
-7. [Stacking context example 3](/pt-BR/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarquia, z-index no segundo _level_
+1. [Stacking without z-index](/pt-BR/docs/CSS/Understanding_z-index/Stacking_without_z-index) : Regras padrões de empilhamento
+2. [Stacking and float](/pt-BR/docs/CSS/Understanding_z-index/Stacking_and_float) : Como lidar com elementos que usam _float_
+3. [Adding z-index](/pt-BR/docs/CSS/Understanding_z-index/Adding_z-index) : Usando index-z para mudar o empilhamento padrão
+4. [The stacking context](/pt-BR/docs/CSS/Understanding_z-index/The_stacking_context) : Notas sobre contexto do empilhamento
+5. [Stacking context example 1](/pt-BR/docs/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarquia, z-index no último _level_
+6. [Stacking context example 2](/pt-BR/docs/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarquia, z-index em todos os _levels_
+7. [Stacking context example 3](/pt-BR/docs/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarquia, z-index no segundo _level_
 
 _Note of the author: Thanks to Wladimir Palant and Rod Whiteley for the review\._
 
 ### Original Document Information
 
 - Author(s): Paolo Lombardi
-- This article is the English translation of an article I wrote in Italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- This article is the English translation of an article I wrote in Italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - Last Updated Date: July 9th, 2005

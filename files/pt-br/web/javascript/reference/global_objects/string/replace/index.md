@@ -11,7 +11,18 @@ O método `replace()` retorna uma nova string com algumas ou todas as correspond
 
 A string original não é modificada.
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## Sintaxe
 
@@ -26,7 +37,6 @@ str.replace(regexp|substr, newSubStr|function)
 - `substr`
   - : Uma {{jsxref ("String")}} que será substituída por `newSubStr`. Ele é tratado como uma string textual e não é interpretado como uma expressão regular. Apenas a primeira ocorrência será substituída.
 - `newSubStr`
-
   - : A {{jsxref("Global_Objects/String", "String")}} que substitui a `substr` recebida do parâmetro #1. Uma série de padrões de substituições especiais são suportados. Veja a seção "
 
     Especificando uma string como parâmetro
@@ -34,7 +44,6 @@ str.replace(regexp|substr, newSubStr|function)
     " abaixo.
 
 - `function`
-
   - : A função (function) chamada cria uma nova substring (para ser colocada no lugar da substring recebida pelo parametro #1). Os argumentos fornececidos para essa função estão descritos na seção "
 
     Especificando uma função como parâmetro
@@ -42,9 +51,7 @@ str.replace(regexp|substr, newSubStr|function)
     " mais abaixo.
 
 - `flags` {{non-standard_inline}}
-
-  - : Uma string especificando uma combinação de [flags de expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions). O uso do parâmetro `flags` no método `String.prototype.replace()` é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:
-
+  - : Uma string especificando uma combinação de [flags de expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions). O uso do parâmetro `flags` no método `String.prototype.replace()` é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:
     - `g`
       - : Combinação global.
     - `i`
@@ -121,7 +128,7 @@ console.log(newstr);
 ```
 
 > [!NOTE]
-> Veja [este guia](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) para maiores explicações as sobre expressões regulares.
+> Veja [este guia](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) para maiores explicações as sobre expressões regulares.
 
 ### Usando `global` e `ignore` com `replace()`
 
@@ -139,7 +146,7 @@ console.log(newstr);
 
 ### Trocando palavras em uma string
 
-O script a seguir troca as palavras na string. Para o texto que vai substituir, o script usa [grupos de captura](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) e os padrões de substituição `$1` e `$2`.
+O script a seguir troca as palavras na string. Para o texto que vai substituir, o script usa [grupos de captura](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) e os padrões de substituição `$1` e `$2`.
 
 ```js
 var re = /(\w+)\s(\w+)/;

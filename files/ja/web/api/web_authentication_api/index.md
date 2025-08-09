@@ -20,7 +20,8 @@ slug: Web/API/Web_Authentication_API
 - {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} - publicKey オプションと併用すると、新しいアカウントの登録または既存のアカウントへの新しい非対称鍵ペアの関連付けを行うために新しい認証情報を作成します。
 - {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} - publicKey オプションと併用すると、サービスに対する認証のために、ログインまたは二要素認証として既存の認証情報セットを使用します。
 
-> **メモ:** `create()` と `get()` は両方とも[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) （すなわち、サーバーに https で接続している、サーバーがローカルホストの場合）であることを必要とし、ブラウザーが安全なコンテキストで動作していない場合は利用できません。
+> [!NOTE]
+> `create()` と `get()` は両方とも[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) （すなわち、サーバーに https で接続している、サーバーがローカルホストの場合）であることを必要とし、ブラウザーが保護されたコンテキストで動作していない場合は利用できません。
 
 最も基本的な形式としては、`create()` と `get()` の両方が「チャレンジ」と呼ばれる非常に大きな乱数をサーバーから受け取り、秘密鍵によって署名されたチャレンジをサーバーに返します。これにより、ネットワーク上で秘密を明かすことなく、ユーザーが認証に必要な秘密鍵を持っていることをサーバー－に証明することができます。
 
@@ -51,7 +52,6 @@ _図 1 - ウェブ認証による登録手順と各アクションに関連す�
 4. **認証器がブラウザーにデータを返す** - 新しい公開鍵、グローバルに一意な認証 ID、およびその他の認証データがブラウザーに返され、そこで attestationObject となります。
 5. **ブラウザーが最終的に送信するデータを作成し、アプリケーションがその返値をサーバーに送信** - create() のプロミスが {{domxref("PublicKeyCredential")}} に解決します。 {{domxref("PublicKeyCredential")}} は一意の認証 ID である {{domxref("PublicKeyCredential.rawId")}} 持っており、 {{domxref("AuthenticatorResponse.clientDataJSON")}} を含む {{domxref("AuthenticatorAttestationResponse")}} や {{domxref("AuthenticatorAttestationResponse.attestationObject")}} といったレスポンスと一緒にあります。この {{domxref("PublicKeyCredential")}} は、何らかの望ましいフォーマットやプロトコルでサーバーに送信されます。（注意として、 ArrayBuffer プロパティは base64 か似たようなものでエンコードされている必要があります。）
 6. **サーバーが登録を検証・完了させる** - 最終的に、サーバーが一連のチェックを行い、登録が完了して改ざんされていないことを保証することが要求されています。この保証には次の点を含みます。
-
    1. challenge が送信時と同じものであるかの確認
    2. origin が期待通りのオリジンとなっていることの保証
    3. clientDataHash の署名と特定モデルの認証器用の証明書チェーンを使った attestation の検証
@@ -76,7 +76,6 @@ _図 2 - 図 1 と同様、ウェブ認証による認証手順と各アクシ�
 4. **認証器がブラウザーにデータを返す** - 認証器が authenticatorData とアサーションの署名をブラウザーに返します。
 5. **ブラウザーが最終的なデータを生成し、アプリケーションがサーバーにレスポンスを送信する** - ブラウザーが {{domxref("AuthenticatorAssertionResponse")}} を含む {{domxref("PublicKeyCredential.response")}} と一緒に [Promise](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を {{domxref("PublicKeyCredential")}} に解決しようとします。サーバーに対してどのようなプロトコル、フォーマットでこのデータを戻すのかについては JavaScript アプリケーションに委ねられています。
 6. **サーバーによる検証と認証の完了** - 認証要求の結果を受け取り次第、サーバーはレスポンスの検証を行います。この検証は以下のようなものです。
-
    1. 登録リクエスト時に保存された公開鍵を用いて、認証器による署名を検証する。
    2. 認証器が署名したチャレンジが、サーバーが生成したチャレンジと一致することを確認すること。
    3. 署名検証者 IDがこのサービスに期待されるものであることを確認する。

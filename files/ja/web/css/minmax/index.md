@@ -2,14 +2,53 @@
 title: minmax()
 slug: Web/CSS/minmax
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
-{{CSSRef}}
+**`minmax()`** は [CSS の関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)で使用されます。
 
-**`minmax()`** は [CSS の関数](/ja/docs/Web/CSS/CSS_Functions)で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)で使用されます。
+{{InteractiveExample("CSS デモ: minmax()")}}
 
-{{EmbedInteractiveExample("pages/css/function-minmax.html")}}
+```css interactive-example-choice
+grid-template-columns: minmax(20px, auto) 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+```
+
+```css interactive-example-choice
+grid-template-columns: minmax(2ch, 10ch) 1fr 1fr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One. This column has more text in it.</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 250px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  text-align: left;
+}
+```
 
 ## 構文
 
@@ -121,6 +160,6 @@ _min_ および _max_ の 2 つの引数を取る関数です。
 
 ## 関連情報
 
-- グリッドレイアウトガイド: _[グリッドレイアウトの基本概念 - minmax() によるトラックの寸法制御](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#トラックのサイズ指定と_minmax)_
+- [グリッドレイアウトの基本概念: minmax() によるトラックの寸法制御](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#トラックのサイズ指定と_minmax)
 - [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- 動画チュートリアル: _[Introducing minmax()](https://gridbyexample.com/video/series-minmax/)_
+- 動画: [Introducing minmax()](https://gridbyexample.com/video/series-minmax/)

@@ -19,19 +19,16 @@ getContext(contextType, contextAttributes)
 ### 参数
 
 - `contextType`
-
   - : 是一个指示使用何种上下文的 {{domxref("DOMString")}} 。可能的值是：
-
     - `"2d`", 建立一个 {{domxref("CanvasRenderingContext2D")}} 二维渲染上下文。
-    - `"webgl"` (或`"experimental-webgl"`) 这将创建一个 {{domxref("WebGLRenderingContext")}} 三维渲染上下文对象。只在实现[WebGL](/zh-CN/docs/Web/WebGL) 版本 1(OpenGL ES 2.0) 的浏览器上可用。
-    - "`webgl2`" (或 "`experimental-webgl2`") 这将创建一个 {{domxref("WebGL2RenderingContext")}} 三维渲染上下文对象。只在实现 [WebGL](/zh-CN/docs/Web/WebGL) 版本 2 (OpenGL ES 3.0) 的浏览器上可用。{{experimental_inline}}
+    - `"webgl"` (或`"experimental-webgl"`) 这将创建一个 {{domxref("WebGLRenderingContext")}} 三维渲染上下文对象。只在实现[WebGL](/zh-CN/docs/Web/API/WebGL_API) 版本 1(OpenGL ES 2.0) 的浏览器上可用。
+    - "`webgl2`" (或 "`experimental-webgl2`") 这将创建一个 {{domxref("WebGL2RenderingContext")}} 三维渲染上下文对象。只在实现 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 版本 2 (OpenGL ES 3.0) 的浏览器上可用。{{experimental_inline}}
     - `"bitmaprenderer"` 这将创建一个只提供将 canvas 内容替换为指定{{domxref("ImageBitmap")}}功能的{{domxref("ImageBitmapRenderingContext")}} 。
 
     > [!NOTE]
-    > 标识符 "`experimental-webgl`" 或 "`experimental-webgl2`" 用于新 [WebGL](/zh-CN/docs/Web/WebGL)的实现。这些实现还没有达到测试套件一致性或图形驱动程序平台局势尚不稳定。[Khronos Group](https://www.khronos.org/) 集团认证[WebGL](/zh-CN/docs/Web/WebGL) 实现在某些[一致性规则](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)。
+    > 标识符 "`experimental-webgl`" 或 "`experimental-webgl2`" 用于新 [WebGL](/zh-CN/docs/Web/API/WebGL_API)的实现。这些实现还没有达到测试套件一致性或图形驱动程序平台局势尚不稳定。[Khronos Group](https://www.khronos.org/) 集团认证[WebGL](/zh-CN/docs/Web/API/WebGL_API) 实现在某些[一致性规则](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)。
 
 - `contextAttributes` {{optional_inline}}
-
   - : 你可以在创建渲染上下文的时候设置多个属性，例如：
 
     ```js
@@ -39,19 +36,16 @@ getContext(contextType, contextAttributes)
     ```
 
     2d 上下文属性：
-
     - **`alpha`**: {{jsxref("boolean")}}值表明{{jsxref("canvas")}}包含一个{{jsxref("alpha")}}通道。如果设置为{{jsxref("false")}}, 浏览器将认为{{jsxref("canvas")}}背景总是不透明的，这样可以加速绘制透明的内容和图片。
     - {{non-standard_inline}} (Gecko only) **`willReadFrequently`**: {{jsxref("boolean")}}值表明是否有重复读取计划。经常使用{{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}，这将迫使软件使用 2D {{jsxref("canvas")}} 并 节省内存（而不是硬件加速）。这个方案适用于存在属性 `gfx.canvas.willReadFrequently`的环境。并设置为{{jsxref("true")}} (缺省情况下，只有 B2G / Firefox OS).
     - {{non-standard_inline}} (Blink only) **`storage`**: {{jsxref("string")}} 这样表示使用哪种方式存储 (默认为：持久（"persistent"）).
 
     WebGL 上下文属性：
-
     - **`alpha`**: {{jsxref("boolean")}}值表明{{jsxref("canvas")}}包含一个{{jsxref("alpha")}}缓冲区。
     - **`antialias`**: {{jsxref("boolean")}}值表明是否开启抗锯齿。
     - **`depth`**: {{jsxref("boolean")}}值表明绘制缓冲区包含一个深度至少为 16 位的缓冲区。
     - **`failIfMajorPerformanceCaveat`**: 表明在一个系统性能低的环境是否创建该上下文的{{jsxref("boolean")}}值。
     - **`powerPreference`**: 指示浏览器在运行 WebGL 上下文时使用相应的 GPU 电源配置。可能值如下：
-
       - `"default"`:自动选择，默认值。
       - `"high-performance"`: 高性能模式。
       - `"low-power"`: 节能模式。

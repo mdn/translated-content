@@ -14,5 +14,5 @@ l10n:
 ## 関連情報
 
 - {{cssxref("&lt;length&gt;")}}
-- [学習: CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [学習: CSS の値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [TextMetrics API](/ja/docs/Web/API/TextMetrics)

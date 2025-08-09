@@ -5,7 +5,7 @@ slug: Web/CSS/@font-face
 
 {{CSSRef}}
 
-O **`@font-face`** [CSS](/pt-BR/docs/CSS) [at-rule](/pt-BR/docs/CSS/At-rule) especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.
+O **`@font-face`** [CSS](/pt-BR/docs/Web/CSS) [at-rule](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule) especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.
 
 Se a função `local()` for fornecida, a especificação do nome da fonte a ser procurada no computador do usuário, e a {{Glossary("user agent")}} encontrar uma correspondência, essa fonte local será usada. Caso contrário, o recurso de fonte especificado usando a função `url()` é baixado e usado.
 
@@ -13,7 +13,7 @@ Ao permitir que os autores forneçam suas próprias fontes, `@font-face` torna p
 
 É comum usar `url()` e `local()` juntos, para que a cópia instalada da fonte do usuário seja usada, se disponível, voltando ao download de uma cópia da fonte, caso ela não seja encontrada no dispositivo do usuário.
 
-A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um CSS, mas também dentro de qualquer [CSS conditional-group at-rule](/pt-BR/docs/Web/CSS/At-rule#Conditional_group_rules).
+A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um CSS, mas também dentro de qualquer [CSS conditional-group at-rule](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules).
 
 ```css
 @font-face {
@@ -45,7 +45,6 @@ A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um 
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Permite o controle de baixo nível sobre as variações de fonte OpenType ou TrueType, especificando os nomes dos quatro eixos das letras dos recursos para variar, juntamente com seus valores de variação.
 - {{cssxref("@font-face/src", "src")}}
-
   - : Especifica o recurso que contém os dados da fonte. Pode ser um URL para um local de arquivo de fonte remota ou o nome de uma fonte no computador do usuário.
 
     Para fornecer ao navegador uma dica sobre o formato de um recurso de fonte - para que ele possa selecionar um adequado - é possível incluir um tipo de formato dentro de uma função `format()`:
@@ -91,7 +90,8 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
@@ -108,14 +108,15 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
 
 ## Notes
 
-- As fontes da Web estão sujeitas à mesma restrição de domínio (os arquivos de fonte devem estar no mesmo domínio da página que os utiliza), a menos que os [Controles de Acessos HTTP](/pt-BR/docs/HTTP_access_control) sejam usados para relaxar essa restrição.
+- As fontes da Web estão sujeitas à mesma restrição de domínio (os arquivos de fonte devem estar no mesmo domínio da página que os utiliza), a menos que os [Controles de Acessos HTTP](/pt-BR/docs/Web/HTTP/Guides/CORS) sejam usados para relaxar essa restrição.
 - `@font-face` não pode ser declarado dentro de um seletor CSS. Por exemplo, o seguinte não funcionará:
 
   ```css example-bad
   .className {
     @font-face {
       font-family: MyHelvetica;
-      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      src:
+        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
         url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }
@@ -132,11 +133,11 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
 
 ## Veja Também
 
-- [About WOFF](/pt-BR/docs/WOFF)
+- [About WOFF](/pt-BR/docs/Web/CSS/CSS_fonts/WOFF)
 - [Everythingfonts font-face generator](https://everythingfonts.com/font-face)
-- [FontSquirrel @font-face generator](http://www.fontsquirrel.com/fontface/generator)
-- [Beautiful fonts with @font-face](http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
-- [Open Font Library](http://openfontlibrary.org/)
+- [FontSquirrel @font-face generator](https://www.fontsquirrel.com/fontface/generator)
+- [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
+- [Open Font Library](https://openfontlibrary.org/)
 - [When can I use WOFF?](http://caniuse.com/woff)
 - [When can I use SVG Fonts?](http://caniuse.com/svg-fonts)
 - [Free Fancy Cool Fonts](https://coolfont.org)

@@ -1,11 +1,11 @@
 ---
-title: ":focus-within"
+title: :focus-within
 slug: Web/CSS/:focus-within
 ---
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [Псевдо-класс](/ru/docs/Web/CSS/Pseudo-classes) **`:focus-within`** соответствует элементу, который либо сам находится в фокусе, либо содержит элемент, который находится в фокусе. Другими словами, он представляет элементу, который соответствует псевдоклассу {{CSSxRef(":focus")}} либо имеет потомка, который соответствует `:focus`. (Включая потомков в [shadow trees](/ru/docs/Web/Web_Components/Shadow_DOM).)
+[CSS](/ru/docs/Web/CSS) [Псевдо-класс](/ru/docs/Web/CSS/Pseudo-classes) **`:focus-within`** соответствует элементу, который либо сам находится в фокусе, либо содержит элемент, который находится в фокусе. Другими словами, он представляет элементу, который соответствует псевдоклассу {{CSSxRef(":focus")}} либо имеет потомка, который соответствует `:focus`. (Включая потомков в [shadow trees](/ru/docs/Web/API/Web_components/Using_shadow_DOM).)
 
 ```css
 /* Выделяет <div> когда один из его потомков находится в фокусе */

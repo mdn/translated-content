@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e6f3d674aff436f22b7a4e5bb59a02161492d1ef
 ---
 
-{{CSSRef}}
-
 この料理帳のパターンは、ページ付け (pagination) を表示するために使用されるナビゲーションのパターンを示し、ユーザーは検索結果などのコンテンツのページ間を移動できます。
 
 ![ページ付きリスト内のページのセットへのリンク](pagination.png)
@@ -43,9 +41,9 @@ l10n:
 
 ## アクセシビリティの考慮
 
-スクリーンリーダーを使用している人が、このナビゲーションが何をするのか、そしてリンクをクリックしたときにどこに行くのかを確実に理解できるようにしたいです。 これを手助けするために、 [`aria-label="pagination"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) を `<nav>` 要素に追加しました。
+スクリーンリーダーを使用している人が、このナビゲーションが何をするのか、そしてリンクをクリックしたときにどこに行くのかを確実に理解できるようにしたいです。 これを手助けするために、 [`aria-label="pagination"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を `<nav>` 要素に追加しました。
 
-スクリーンリーダーによって読み取られるが視覚的に隠されている追加のコンテンツを追加し、ページング矢印に [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性を設定しました。
+スクリーンリーダーによって読み取られるが視覚的に隠されている追加のコンテンツを追加し、ページング矢印に [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性を設定しました。
 
 このドキュメントの最後にある「関連情報」の節には、関連するアクセシビリティのトピックへのリンクがあります。
 

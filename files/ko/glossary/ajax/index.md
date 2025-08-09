@@ -13,7 +13,7 @@ AJAX는 전체 페이지가 다시 로드되지 않고 {{Glossary("HTML")}} 페�
 
 ### 같이 보기
 
-- [Ajax](/ko/docs/Web/Guide/AJAX)
+- [Ajax](/ko/docs/Learn_web_development/Core/Scripting/Network_requests)
 - {{DOMxRef("XMLHttpRequest")}} 객체
 - {{DOMxRef("Fetch API")}}
 - 위키피디아 [AJAX](https://ko.wikipedia.org/wiki/Ajax)

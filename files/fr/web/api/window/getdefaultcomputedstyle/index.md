@@ -1,6 +1,6 @@
 ---
 title: Window.getDefaultComputedStyle()
-slug: Web/API/window/getDefaultComputedStyle
+slug: Web/API/Window/getDefaultComputedStyle
 ---
 
 {{APIRef("CSSOM")}}{{Non-standard_header}}
@@ -74,7 +74,7 @@ L'objet retourné est du même type que l'objet retourné par `getComputedStyle`
 
 ## Notes
 
-La valeur retournée est, dans certains cas connus, expressément incorrecte par intention délibérée. En particulier, pour éviter le problème de sécurité appelé CSS History Leak, les navigateurs peuvent "mentir" sur la valeur utilisée pour un lien et toujours retourner des valeurs comme si l'utilisateur n'avait jamais visité le site concerné, et/ou limiter les styles qui peuvent être appliqués via l'utilisation du pseudo-sélecteur `:visited`. Voir <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> et [http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-visited/](http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) pour le détail des exemples de la manière dont cela est implémenté.
+La valeur retournée est, dans certains cas connus, expressément incorrecte par intention délibérée. En particulier, pour éviter le problème de sécurité appelé CSS History Leak, les navigateurs peuvent "mentir" sur la valeur utilisée pour un lien et toujours retourner des valeurs comme si l'utilisateur n'avait jamais visité le site concerné, et/ou limiter les styles qui peuvent être appliqués via l'utilisation du pseudo-sélecteur `:visited`. Voir <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> et [http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-visited/](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) pour le détail des exemples de la manière dont cela est implémenté.
 
 ## Spécifications
 

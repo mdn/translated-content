@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Left_shift
 
 **왼쪽 시프트 (`<<`)** 연산자는 첫 번째 피연산자를 명시된 비트 수(32의 나머지)만큼 왼쪽으로 이동합니다. 왼쪽으로 이동된 초과 비트는 폐기됩니다. 오른쪽은 움직인 비트 수 만큼 0비트로 채워집니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-left-shift.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Left shift operator", "shorter")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 2; // 00000000000000000000000000000010
+
+console.log(a << b); // 00000000000000000000000000010100
+// Expected output: 20
+```
 
 ## 구문
 
@@ -55,5 +63,5 @@ a << b
 
 ## 같이 보기
 
-- [JavaScript에서 비트 연산자 가이드](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#비트_연산자)
+- [JavaScript에서 비트 연산자 가이드](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%eb%b9%84%ed%8a%b8_%ec%97%b0%ec%82%b0%ec%9e%90)
 - [왼쪽 시프트 할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

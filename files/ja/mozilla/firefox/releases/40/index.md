@@ -5,8 +5,6 @@ l10n:
   sourceCommit: dd08ec8cf78926a7854d8f5f7793bf7ae199484e
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能をテストするには、 Firefox Developer Edition をインストールしてください](https://www.mozilla.org/firefox/developer/) Firefox 40 は、米国時間 2015 年 8 月 11 日にリリースされました。このページでは、開発者に影響する Firefox 40 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -58,9 +56,9 @@ _変更なし。_
 - {{jsxref("Symbol.match")}} を追加しました ([Firefox バグ 1054755](https://bugzil.la/1054755))。
 - {{jsxref("Symbol.match")}} プロパティが {{Glossary("truthy")}} な値であるオブジェクトを {{jsxref("String.prototype.startsWith")}}、{{jsxref("String.prototype.endsWith")}}、`String.prototype.contains` に渡すと、{{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1054755](https://bugzil.la/1054755))。
 - {{jsxref("Symbol.match")}} プロパティが{{Glossary("truthy", "真値")}}であるパターンオブジェクトを使用して {{jsxref("Operators/new", "new")}} を伴わずに {{jsxref("RegExp")}} 関数を呼び出すと、パターンそのものが返るようになりました。また、パターンオブジェクトの `constructor` プロパティは {{jsxref("RegExp")}} 関数に等しくなります ([Firefox バグ 1147817](https://bugzil.la/1147817))。
-- JS1.7 の、for-in を使用する非標準の分割代入を廃止しました ([Firefox バグ 1083498](https://bugzil.la/1083498))。
+- JS1.7 の、for-in を使用する非標準の構造分解を廃止しました ([Firefox バグ 1083498](https://bugzil.la/1083498))。
 - [for...in](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで、[非標準の初期化式](/ja/docs/Web/JavaScript/Reference/Statements/for...in#firefox-specific_notes)を無視してコンソールに警告を表示するようになりました ([Firefox バグ 748550](https://bugzil.la/748550) および [Firefox バグ 1164741](https://bugzil.la/1164741))。
-- Unicode コードポイントのエスケープ書式 [`\u{xxxxxx}`](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) をサポートしました ([Firefox バグ 320500](https://bugzil.la/320500))。
+- Unicode コードポイントのエスケープ書式 [`\u{xxxxxx}`](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_コードポイントエスケープ) をサポートしました ([Firefox バグ 320500](https://bugzil.la/320500))。
 - {{jsxref("String.prototype.includes", "String.prototype.contains", "#String.prototype.contains")}} は、{{jsxref("String.prototype.includes")}} に置き換えられました。`String.prototype.contains` はエイリアスとして維持します ([Firefox バグ 1102219](https://bugzil.la/1102219))。
 - {{jsxref("DataView")}} コンストラクターを {{jsxref("Operators/new", "new")}} 演算子を伴わない関数として呼び出した場合、ES6 に従って {{jsxref("TypeError")}} が発生するようになりました。
 - Firefox 21 のリグレッションである、`get` トラップを持たずに配列から作成した Proxy が正常に動作しない問題を修正しました。{{jsxref("Proxy")}} で `get` トラップを定義していない場合は、{{jsxref("Array.length")}} が `0` を返します。また `set` トラップは呼び出されません。この問題の回避策は、必要ない場合でも `get` トラップを追加することでした。この問題は解決されました ([Firefox バグ 895223](https://bugzil.la/895223))。
@@ -93,7 +91,7 @@ _変更なし。_
 
 #### DOM & HTML DOM
 
-- 最新の仕様書の要求に従い、[`srcset`](/ja/docs/Web/HTML/Element/image#srcset) をパースできないときに {{domxref("HTMLImageElement.currentSrc")}} メソッドは `null` ではなく `""` を返すようになりました ([Firefox バグ 1139560](https://bugzil.la/1139560))。
+- 最新の仕様書の要求に従い、[`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) をパースできないときに {{domxref("HTMLImageElement.currentSrc")}} メソッドは `null` ではなく `""` を返すようになりました ([Firefox バグ 1139560](https://bugzil.la/1139560))。
 - 画像と同様に、Firefox は非表示の {{HTMLElement("iframe")}} に対して {{domxref("Window.requestAnimationFrame()")}} を抑制するようになりました ([Firefox バグ 1145439](https://bugzil.la/1145439))。
 - {{domxref("NavigatorID/taintEnabled", "Navigator.taintEnabled")}} はウェブワーカーで使用できなくなりました ([Firefox バグ 1154878](https://bugzil.la/1154878))。
 
@@ -152,7 +150,6 @@ _変更なし。_
 
 - `nsClassInfo::GetImplementationLanguage()` 関数とともに `nsIClassInfo.implementationLanguage` 属性を削除しました。
 - 以下の XPCOM インターフェイスを削除しました。代わりに標準 HTML インターフェイスを使用してください。
-
   - `nsIDOMHTMLBRElement`
   - `nsIDOMDivElement`
   - `nsIDOMHTMLHeadingElement`

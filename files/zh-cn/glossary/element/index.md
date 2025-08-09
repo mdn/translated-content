@@ -15,6 +15,6 @@ l10n:
 
 ## 参见
 
-- [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [开始学习 HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
 - [自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)
 - {{domxref("Element")}} 接口，在 DOM 中表示一个元素

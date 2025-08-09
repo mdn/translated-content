@@ -3,8 +3,6 @@ title: 如何撰写 API 参考文档
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 ---
 
-{{MDNSidebar}}
-
 本篇指南将带你了解在 MDN 上编写 API 参考文档所需的所有知识。
 
 ## 做好准备
@@ -28,7 +26,6 @@ slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 2. 最新版的现代 web 浏览器：这些应该是实验性/alpha 版本，例如 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/) 或 [Chrome Canary](https://www.google.cn/intl/zh-cn/chrome/canary/)，这些版本更有可能支持你所撰写文档的功能。如果你正在为一个新的/实验性的 API 撰写文档，这一点尤其相关。
 3. 演示页/博客文章/其他信息：尽可能找到充实的参考信息。
 4. 实用的工程人员联系方式：找到一个友好的工程联系人来询问有关规范的问题是非常有用的，这个人可能参与了 API 的标准化或在浏览器中的实现。找到他们的好地方是：
-
    - 如果你在相关公司工作，可以在内部联系手册中找到。
    - 参与该 API 讨论的公开邮件列表，如 Mozilla 的 [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) 或 W3C 的 [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/) 等列表。
    - 规范本身。如 [Web Audio API 规范](https://webaudio.github.io/web-audio-api/)在最顶部列出了规范的作者和他们的联系方式。
@@ -147,7 +144,7 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 - [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext](/zh-CN/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext](/zh-CN/docs/Web/API/Web_Audio_API)
 - [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 
 #### 示例
@@ -160,7 +157,6 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 
 - Web_Audio_API
 - AudioContext
-
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
@@ -170,7 +166,6 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
   - ...
 
 - AudioNode
-
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
@@ -180,7 +175,6 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 
 - AudioParam
 - Events (update list)
-
   - start
   - end
   - …
@@ -212,7 +206,6 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 1. **\\{{APIRef}}**：在每个界面页面的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \\{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
    ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 2. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
-
    - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
    - \\{{Deprecated_header}}
    - \\{{Non-standard_header}}
@@ -222,7 +215,6 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 5. **属性列表、方法列表**：这些部分的标题应该是“Properties”和“Methods”，并使用 \\{{domxref}} 宏提供到该接口的每个属性/方法的参考页的链接，以及每个属性/方法的描述。这些应该用[描述/定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)来标注。每个描述都应该是短小精悍的，尽可能使用一句话进行概括。参见“用 \\{{domxref}} 宏引用其他 API 功能”一节，以了解创建其他页面链接的更快方法。
 
    在这两部分的开头，在属性/方法列表的开始之前，用适当的斜体句子表示继承性：
-
    - _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口不实现任何特定属性，但是从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承属性。_）
    - _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口也从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承属性。_）
    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口不实现任何特定方法，但是从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承方法。_）
@@ -236,7 +228,6 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 8. **浏览器兼容性**：现在你需要包含一个浏览器兼容性表格——参见[兼容性表格](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)以获得更多细节。
 9. **Polyfill**：如果合适的话，包括这一部分，提供一个 polyfill 的代码，使 API 即使在没有实现它的浏览器上也能使用。如果不存在或不需要 polyfill，则完全不需要这一部分。
 10. **参见**：“参见”部分是一个可以包含在学习这项技术时可能有用的进一步链接的好地方，包括 MDN（和外部）教程、示例、图书馆等。我们对链接到外部资源有一个宽松的政策，但要注意：
-
     - 不要包括与 MDN 中另一个页面信息相同的页面，而是链接到该页面。
     - 不要写作者的名字——我们是一个作者中立的文档网站。链接到那个文档，作者的名字将显示在那里。
     - 要特别注意博客文章：它们往往会过时（旧的语法，错误的兼容信息）。只有当它们有明显的附加价值，而在维护的文件中又找不到时，才可以链接到它们。
@@ -261,19 +252,18 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 2. **\\{{APIRef}}**：在每个属性页的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
    ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 3. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
-
    - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
    - \\{{Deprecated_header}}
    - \\{{Non-standard_header}}
 
 4. **描述**：属性页的第一段应该对属性的总体目的提供一个简短的、扼要的描述。如果需要任何额外的描述，你可能还想再包括几段。要包括的额外信息是它的默认/初始值，以及它是否是只读的。第一句话的结构必须是：
-
    - 对于只读属性
      - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that...
    - 对于其他属性
      - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
 
-   > **备注：** `InterfaceName.property` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
+   > [!NOTE]
+   > `InterfaceName.property` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
 
 5. **值**：Value 部分将包含属性值的描述。这应该包含该属性的数据类型，以及它所代表的内容。关于其示例，详见 {{domxref("SpeechRecognition.grammars")}}。
 
@@ -299,25 +289,22 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 2. **\\{{APIRef}}**：在每个方法页的第一行中包含 \\{{APIRef}} 宏，将 API 的名称作为参数，例如 \\{{APIRef("Web Audio API")}}。这个宏的作用是在界面页面的左侧构建一个参考菜单，包括属性和方法，以及 [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) 宏中定义的其他快速链接（请人将你的 API 添加到现有的 GroupData 条目中，或者，如果它还没有被列在那里。则创建一个新的）。该目录实际看起来像这张截图一样。
    ![这个截图显示了由 APIRef 宏生成的 OscillatorNode 接口的垂直导航菜单，其中有方法和属性的多个子列表](apiref-links.png)
 3. **标准化状态**：接下来应该添加表示标准化状态的横幅宏（这些横幅宏可以与 \\{{APIRef}} 宏放在同一行）：
-
    - 对于实验性功能（也就是说，还没处于候选推荐〔CR〕级别），使用 \\{{SeeCompatTable}}
    - \\{{Deprecated_header}}
    - \\{{Non-standard_header}}
 
 4. **描述**：方法页的第一段应该对该方法的首要目的进行简短的描述。如果需要额外的描述，你可能还想多写几段。明显需要包括的额外信息是它的默认参数值，该方法所依赖的任何理论，以及参数值的作用。
-
    - 第一句话的开头必须遵循这样的结构：
      - : The **InterfaceName.method()** method interface ...
 
-   > **备注：** `InterfaceName.method()` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
+   > [!NOTE]
+   > `InterfaceName.method()` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
 
 5. **语法**：语法部分应该包括一个 2-3 行的例子——通常只是构建接口，然后调用接口方法。
-
    - 语法应该是类似于这样的结构：
      - : method(param1, param2, …)
 
    语法部分应包括三个小节（见 {{domxref("SubtleCrypto.sign()")}} 的例子）：
-
    - “参数”：本部分内容应该包含一个定义列表（或无序列表），用来列出和描述该方法的不同参数。如果是可选参数，应该在参数名称旁边加入 \{{optional_inline}} 宏。如果没有参数，这部分应该省略。
    - “返回值”：本部分内容应该说明该方法的返回值，是一个简单的值（如双精度浮点数或布尔值），还是一个更复杂的值（如另一个接口对象）。在这种情况下，你可以使用 \{{domxref}} 宏来链接到涵盖该接口的 MDN API 页面（如果存在的话）。一个方法可能什么都不返回，在这种情况下，返回值应该写成“\\{{jsxref('undefined')}}”，在实际渲染的页面中看起来会是这样：{{jsxref("undefined")}}。
    - “异常”：本部分内容应该列出在调用该方法时可能引发的不同异常，以及导致这些异常的情况。如果没有异常，这一节应该被省略。

@@ -51,7 +51,7 @@ var s = Boolean(myString); // valor inicial de true
 No utilices un objeto `Boolean` en lugar de un `Boolean` primitivo.
 
 > [!NOTE]
-> Cuando la propiedad no estándar [`document.all`](/es/docs/Web/API/Document#Properties) se usa como argumento para este constructor, el resultado es un objeto `Boolean` con el valor `false`. Esta propiedad es heredada y no estándar y no se debe usar.
+> Cuando la propiedad no estándar [`document.all`](/es/docs/Web/API/Document#properties) se usa como argumento para este constructor, el resultado es un objeto `Boolean` con el valor `false`. Esta propiedad es heredada y no estándar y no se debe usar.
 
 ## Constructor
 
@@ -99,5 +99,5 @@ var bObjProto = new Boolean({});
 ## Ve también
 
 - [Boolean](/es/docs/Glossary/Boolean)
-- [Boolean primitivo](/es/docs/Web/JavaScript/Data_structures#Boolean_type)
+- [Boolean primitivo](/es/docs/Web/JavaScript/Guide/Data_structures#boolean_type)
 - [Tipo de dato `Boolean` (Wikipedia)](https://es.wikipedia.org/wiki/Tipo_de_dato_lógico)

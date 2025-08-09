@@ -9,7 +9,17 @@ l10n:
 
 **`lastIndexOf()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定された要素が型付き配列内で見つかった最後の位置のインデックスを返し、存在しなければ -1 を返します。型付き配列は `fromIndex` で始まる位置から逆方向に検索されます。 このメソッドは {{jsxref("Array.prototype.lastIndexOf()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-lastindexof.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.lastIndexOf()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 50, 50, 50, 60]);
+
+console.log(uint8.lastIndexOf(50, 5));
+// Expected output: 4
+
+console.log(uint8.lastIndexOf(50, 3));
+// Expected output: 3
+```
 
 ## 構文
 

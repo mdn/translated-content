@@ -19,9 +19,7 @@ select(properties, options)
 ### 引数
 
 - `properties`
-
-  - : [文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型)の配列で、連絡先からどの情報を受け取るかを定義します。許可されている値は次の通りです。
-
+  - : [文字列](/ja/docs/Web/JavaScript/Guide/Data_structures#文字列型)の配列で、連絡先からどの情報を受け取るかを定義します。許可されている値は次の通りです。
     - `'name'`: 連絡先の名前。
     - `'tel'`: 連絡先の電話番号。
     - `'email'`: 連絡先のメールアドレス。
@@ -29,9 +27,7 @@ select(properties, options)
     - `'icon'`: 連絡先のアバター。
 
 - `options` {{optional_inline}}
-
   - : オプションは以下のとおりです。
-
     - `multiple`
       - : 複数の連絡先を選択できるようにするかどうかの論理値。既定値では `false` です。
 

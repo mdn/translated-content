@@ -3,8 +3,6 @@ title: border-bottom
 slug: Web/CSS/border-bottom
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 La propiedad `border-bottom` permite de definir de una vez todas las propiedades individuales {{ Cssxref("border-bottom-color") }}, {{ Cssxref("border-bottom-style") }}, y {{ Cssxref("border-bottom-width") }}, las cuales describen el color, estilo y ancho del borde inferior de un elementos.
@@ -33,7 +31,7 @@ border-bottom: [ <border-width> || <border-style> || <border-color> ] | inherit
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {

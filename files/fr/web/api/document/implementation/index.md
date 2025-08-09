@@ -27,7 +27,7 @@ alert("DOM " + modName + " " + modVer + " supported?: " + conformTest);
 // alerte avec : "DOM HTML 2.0 pris en charge ?: true" si le module DOM niveau 2 HTML est pris en charge.
 ```
 
-Une liste de noms de modules (par exemple, Core, HTML, XML, etc.) est disponible dans la [Conformance Section](http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2) DOM niveau 2.
+Une liste de noms de modules (par exemple, Core, HTML, XML, etc.) est disponible dans la [Conformance Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2) DOM niveau 2.
 
 ## Notes
 
@@ -35,8 +35,8 @@ La recommandation DOM niveau 1 du W3C ne spécifiait que la méthode `hasFeature
 
 ## Spécifications
 
-- [DOM Level 2 Core: implementation](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-102161490)
-- [DOM Level 3 Core: implementation](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-102161490)
+- [DOM Level 2 Core: implementation](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-102161490)
+- [DOM Level 3 Core: implementation](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-102161490)
 
 ## Notes propres à Gecko
 

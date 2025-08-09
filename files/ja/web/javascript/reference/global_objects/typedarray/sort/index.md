@@ -9,7 +9,15 @@ l10n:
 
 **`sort()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素を[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) でソートし、その型付き配列を返します。このメソッドは {{jsxref("Array.prototype.sort()")}} と同じアルゴリズムですが、既定で文字列としてではなく数値として値をソートする点が異なります。
 
-{{EmbedInteractiveExample("pages/js/typedarray-sort.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.sort()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([40, 10, 50, 20, 30]);
+uint8.sort();
+
+console.log(uint8);
+// Expected output: Uint8Array [10, 20, 30, 40, 50]
+```
 
 ## 構文
 
@@ -21,9 +29,7 @@ sort(compareFn)
 ### 引数
 
 - `compareFn` {{optional_inline}}
-
   - : ソート順を定義する関数です。返値は、 2 つの要素の相対順序を示す符号を持つ数値でなければなりません。 `a` が `b` より小さい場合は負の値、`a` が `b` より大きい場合は正の値、等しい場合は 0 です。 `NaN` は `0` として扱われます。この関数は以下の引数で呼び出されます。
-
     - `a`
       - : 比較のための最初の要素。決して `undefined` にはなりません。
     - `b`

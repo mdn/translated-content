@@ -5,11 +5,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/commands/reset
 
 {{AddonSidebar}}
 
-Réinitialise la description de la commande donnée et le raccourci clavier aux valeurs indiquées dans [`commands` de la clé du manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands) de l'extension.
+Réinitialise la description de la commande donnée et le raccourci clavier aux valeurs indiquées dans [`commands` de la clé du manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) de l'extension.
 
 Cela annule efficacement les modifications apportées à la commande à l'aide de la fonction {{WEbExtAPIRef("commands.update()")}}.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ browser.commands.reset(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque le raccourci a été réinitialisé.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque le raccourci a été réinitialisé.
 
 ## Compatibilité des navigateurs
 

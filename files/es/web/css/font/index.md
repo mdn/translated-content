@@ -3,8 +3,6 @@ title: font
 slug: Web/CSS/font
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad {{ Cssxref("font") }} permite establecer de una sola vez los valores para todas las propiedades: {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{ Cssxref("line-height") }} y {{ Cssxref("font-family") }} en una hoja de estilo.
@@ -13,7 +11,7 @@ La propiedad {{ Cssxref("font") }} permite establecer de una sola vez los valore
 
 ## Sintaxis
 
-`font:` \[ <[font-style](/es/CSS/font-style)> || <[font-variant](/es/CSS/font-variant)> || <[font-weight](/es/CSS/font-weight)> ]? <[font-size](/es/CSS/font-size)> \[ / <[line-height](/es/CSS/line-height)> ]? <[font-family](/es/CSS/font-family)>
+`font:` \[ <[font-style](/es/docs/Web/CSS/font-style)> || <[font-variant](/es/docs/Web/CSS/font-variant)> || <[font-weight](/es/docs/Web/CSS/font-weight)> ]? <[font-size](/es/docs/Web/CSS/font-size)> \[ / <[line-height](/es/docs/Web/CSS/line-height)> ]? <[font-family](/es/docs/Web/CSS/font-family)>
 
 `font:` `caption` | `icon` | `menu` | `message-box` | `small-caption` | `status-bar` | `-moz-window` | `-moz-document` | `-moz-workspace` | `-moz-desktop` | `-moz-info` | `-moz-dialog` | `-moz-button` | `-moz-pull-down-menu` | `-moz-list` | `-moz-field`
 
@@ -44,7 +42,7 @@ También se pueden especificar los tipos de letra del sistema usando la propieda
 
 ## Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/font.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font.html)
 
 ```
 /* Ajusta el tamaño de letra a 12pt y el alto de línea a 14pt. La familia tipográfica es sans-serif */

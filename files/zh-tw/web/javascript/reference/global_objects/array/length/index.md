@@ -3,8 +3,6 @@ title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
 
-{{JSRef}}
-
 **`length`** 為 `Array` 物件的屬性，可供設定或回傳該陣列實體中包含的元素個數。其值必為一大於零、32 位元、且恆大於該陣列最大索引數的正整數。
 
 ```js
@@ -48,7 +46,7 @@ arr.forEach(element => console.log(element)); // 空元素無法被迭代
 // 2
 ```
 
-如上所見，`length` 屬性不盡然代表陣列中所有已定義的元素個數。詳見 [length 與數值屬性的關係](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties)。
+如上所見，`length` 屬性不盡然代表陣列中所有已定義的元素個數。詳見 [length 與數值屬性的關係](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties)。
 
 {{js_property_attributes(1, 0, 0)}}
 

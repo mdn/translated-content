@@ -24,7 +24,7 @@ La variable `readyState` peut valoir&nbsp;:
 - **`interactive`**
   - : Le document a été chargé, mais les ressources (images, scripts, css..) sont encore en cours d'acquisition. En revanche la structure DOM est générée, et [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) a été émis.
 - **`complete`**
-  - : Le document et toutes les sous-ressources ont été chargés, et [`load`](/fr//docs/Web/API/Window/load_event) a été émis.
+  - : Le document et toutes les sous-ressources ont été chargés, et [`load`](/fr_docs/Web/API/Window/load_event) a été émis.
 
 ## Exemples
 
@@ -98,4 +98,4 @@ document.addEventListener("readystatechange", bootstrap, false);
 
 - L'événement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
 - L'événement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-- L'événement [`load`](/fr//docs/Web/API/Window/load_event)
+- L'événement [`load`](/fr_docs/Web/API/Window/load_event)

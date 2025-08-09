@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c6e1b00e194b214c2f82149aeaa15a944d2b005a
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
 {{domxref("Window")}} インターフェイスの **`showDirectoryPicker()`** メソッドは、ユーザーがディレクトリーを選択できるディレクトリーピッカーを表示します。
 
@@ -18,9 +18,7 @@ showDirectoryPicker()
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 以下のオプションを含むオブジェクトです。
-
     - `id`
       - : ID を指定することで、ブラウザーは ID ごとに異なるディレクトリーを記憶することができます。他のピッカーで同じ ID を用いると、同じディレクトリーでピッカーが開きます。
     - `mode`
@@ -63,5 +61,5 @@ async function getDir() {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

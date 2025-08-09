@@ -5,9 +5,23 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 
 {{JSRef}}
 
-La méthode **`indexOf()`** renvoie le premier indice (le plus petit) auquel on peut trouver un élément donné dans le tableau typé. Si l'élément n'est pas trouvé, la valeur de retour sera -1. L'algorithme utilisé pour cette méthode est le même que celui pour {{jsxref("Array.prototype.indexOf()")}}. Pour le reste de l'article _TypedArray_ correspond à l'un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`indexOf()`** renvoie le premier indice (le plus petit) auquel on peut trouver un élément donné dans le tableau typé. Si l'élément n'est pas trouvé, la valeur de retour sera -1. L'algorithme utilisé pour cette méthode est le même que celui pour {{jsxref("Array.prototype.indexOf()")}}. Pour le reste de l'article _TypedArray_ correspond à l'un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
-{{EmbedInteractiveExample("pages/js/typedarray-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.indexOf()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.indexOf(50));
+// Expected output: 4
+
+// From position 3
+console.log(uint8.indexOf(20, 3));
+// Expected output: -1
+
+console.log(uint8.indexOf(51));
+// Expected output: -1
+```
 
 ## Syntaxe
 
@@ -28,7 +42,7 @@ Le premier indice du tableau pour lequel l'élément a été trouvé, `-1` s'il 
 
 ## Description
 
-`indexOf` compare `élémentRecherché` aux éléments du tableau typé en utilisant l'[égalité stricte](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#Using_the_Equality_Operators) (celle utilisée par l'opérateur ===).
+`indexOf` compare `élémentRecherché` aux éléments du tableau typé en utilisant l'[égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (celle utilisée par l'opérateur ===).
 
 ## Exemples
 

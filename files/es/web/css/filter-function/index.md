@@ -3,9 +3,7 @@ title: <filter-function>
 slug: Web/CSS/filter-function
 ---
 
-{{cssref}}
-
-El [tipo de datos](/es/docs/Web/CSS/CSS_Types) [CSS](/es/docs/Web/CSS) **`<filter-function>`** representa un efecto gráfico que puede cambiar la apariencia de una imagen de entrada. Se usa en las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.
+El [tipo de datos](/es/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/es/docs/Web/CSS) **`<filter-function>`** representa un efecto gráfico que puede cambiar la apariencia de una imagen de entrada. Se usa en las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.
 
 ## Sintaxis
 

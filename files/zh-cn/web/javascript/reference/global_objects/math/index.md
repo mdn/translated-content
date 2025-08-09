@@ -13,10 +13,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 
 与其他全局对象不同的是，`Math` 不是一个构造器。`Math` 的所有属性与方法都是静态的。引用圆周率的写法是 `Math.PI`，调用正余弦函数的写法是 `Math.sin(x)`，`x` 是要传入的参数。`Math` 的常量是使用 JavaScript 中的全精度浮点数来定义的。
 
-## 属性
+## 静态属性
 
 - {{jsxref("Math.E")}}
-  - : 欧拉常数，也是自然对数的底数，约等于 `2.718`。
+  - : 欧拉数，即自然对数的底数，约等于 `2.718`。
 - {{jsxref("Math.LN2")}}
   - : `2` 的自然对数，约等于 `0.693`。
 - {{jsxref("Math.LN10")}}

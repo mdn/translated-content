@@ -3,8 +3,6 @@ title: 寫作風格指南
 slug: MDN/Writing_guidelines/Writing_style_guide
 ---
 
-{{MDNSidebar}}
-
 為了讓文件更加組織化、標準化而易於閱讀，MDN 風格指南描述了文件的組織方式、拼寫、格式等問題。這些規則只是指導方針而非強制規定。與格式相比，我們對內容更感興趣，因此不用覺得在開始貢獻之前有被迫要學習這些指南的壓力。若之後有其他支援者修改了你的內容以便讓它符合這些指南，你也不需要因此而感到沮喪或驚訝。
 
 在語言方面，本指南主要適用於英語文件，其它語言可擁有（且歡迎建立）自己的風格指南。它們會以當地語系團隊頁面的子頁面發佈。
@@ -41,7 +39,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 - [JavaScript/指南](/zh-TW/docs/Web/JavaScript/Guide) ——主內容表頁面
 - [JavaScript/指南/JavaScript 概述](/zh-TW/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/指南/函數](/zh-TW/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/指南/物件模型細節](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/指南/物件模型細節](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 請儘量避免將你的文章放在頂層，不然會拖慢網站的下載速度，降低網站導覽和搜索的效率。
 
@@ -49,7 +47,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 任何文件的篇幅都應該適可而止。如果你侃侃而談或提供過多的細節，文章會變得乏味且鮮少被閱讀。文章內容涵蓋恰當的篇幅有許多好處，其中就包含：讓讀者找到他們真正想要的資訊、提供搜尋引擎足夠好的素材以便用於分析及評價文章的內容。
 
-本文只針對前者（提供讀者需要的資訊）進行說明。對於如何確保文章恰當的被搜尋引擎分類及評價，請移步到 [MDN 如何針對 SEO 進行寫作](/zh-TW/docs/MDN/Contribute/Howto/Write_for_SEO)。
+本文只針對前者（提供讀者需要的資訊）進行說明。對於如何確保文章恰當的被搜尋引擎分類及評價，請移步到 [MDN 如何針對 SEO 進行寫作](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide)。
 
 寫作的目標是要讓讀者取得所有必要資訊的同時又不會陷入太多的細節中。以下是這個主題的相關建議。
 
@@ -93,7 +91,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-TW/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
 >
-> For more details and further examples, see the [Text](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> For more details and further examples, see the [Text](/zh-TW/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### 涵蓋所有相關的範例
 
@@ -112,7 +110,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 - 如果程式碼相對簡單且並直接使用到任何已經建檔的 API ，那簡略的對其說明它是什麼以及為何在此即可。
 - 如果程式碼過於艱深、使用到已經建檔的 API 、有技術上的創新，則需要提供更細緻的說明。
 
-當加入[實際範例](/zh-TW/docs/MDN/Structures/Live_samples)時，所有位於範例區域內的 {{HTMLElement("pre")}} 區塊會在執行範例前串聯起來，這便於讓你把 HTML 、 CSS 、 JavaScript 分開來處理，並讓它們擁有自己的描述、標題等。這使得程式碼的建檔變得更強大且更彈性。
+當加入[實際範例](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Live_samples)時，所有位於範例區域內的 {{HTMLElement("pre")}} 區塊會在執行範例前串聯起來，這便於讓你把 HTML 、 CSS 、 JavaScript 分開來處理，並讓它們擁有自己的描述、標題等。這使得程式碼的建檔變得更強大且更彈性。
 
 #### 過於簡短的文章很難被找到
 
@@ -180,7 +178,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 ### 程式碼範例的樣式與格式
 
 > [!NOTE]
-> 此章節說明透過樣式／格式來影響程式碼如何在 MDN 文章中顯示。如果你需要撰寫程式碼例子的實際指導方針，請參閱[程式碼範例指導方針](/zh-TW/docs/MDN/Guidelines/Code_guidelines)
+> 此章節說明透過樣式／格式來影響程式碼如何在 MDN 文章中顯示。如果你需要撰寫程式碼例子的實際指導方針，請參閱[程式碼範例指導方針](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
 
 #### Tabs 以及換行
 
@@ -214,7 +212,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 #### 語法上色
 
-一行或多行的程式碼應使用[語法上色](/zh-TW/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting)的方式格式化而不是用 {{HTMLElement("code")}} 元素。
+一行或多行的程式碼應使用[語法上色](/zh-TW/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#code_syntax_highlighting)的方式格式化而不是用 {{HTMLElement("code")}} 元素。
 
 #### 對提及的 HTML 元素使用不同的樣式
 
@@ -235,7 +233,6 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 #### 在備註與括弧中
 
 - 常見的拉丁縮寫（ etc. 、 i.e. 、 e.g. ）可以在括號表達、或備註內使用。這些縮寫都要用半形句號（.）並緊隨著逗號或其他恰當的標點符號。
-
   - **正確**：Web browsers (e.g., Firefox) can be used ...
   - **不正確**：Web browsers e.g. Firefox can be used ...
   - **不正確**：Web browsers, e.g. Firefox, can be used ...
@@ -244,7 +241,6 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 #### 在行文中
 
 - 在普通行文中（也就是備註與括號以外的文字）請使用與該縮寫相等的文字表達。
-
   - **正確**: ... web browsers, and so on.
   - **不正確**: ... web browsers, etc.
   - **正確**: Web browsers such as Firefox can be used ...

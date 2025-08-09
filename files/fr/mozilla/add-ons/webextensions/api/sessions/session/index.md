@@ -23,7 +23,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `lastModified`
   - : `number`. L'heure où l'onglet ou la fenêtre a été fermé, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 - `tab`{{optional_inline}}
-  - : `object`. Si l'objet représente un onglet fermé, cette propriété est présente et sera un objet {{WebExtAPIRef("tabs.Tab")}}. Cela contiendra `url`, `titre`, et `favIconUrl` uniquement si l'extension possède la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs".
+  - : `object`. Si l'objet représente un onglet fermé, cette propriété est présente et sera un objet {{WebExtAPIRef("tabs.Tab")}}. Cela contiendra `url`, `titre`, et `favIconUrl` uniquement si l'extension possède la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabs".
 - `window`{{optional_inline}}
   - : `object`. Si l'objet représente une fenêtre fermée, cette propriété est présente et sera un objet {{WebExtAPIRef("windows.Window")}}.
 

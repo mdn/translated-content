@@ -9,7 +9,22 @@ l10n:
 
 **`Object.defineProperties()`** メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}
+{{InteractiveExample("JavaScript デモ: Object.defineProperties()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperties(object1, {
+  property1: {
+    value: 42,
+    writable: true,
+  },
+  property2: {},
+});
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 構文
 
@@ -22,11 +37,9 @@ Object.defineProperties(obj, props)
 - `obj`
   - : プロパティを定義または変更するオブジェクト。
 - `props`
-
   - : キーが定義または変更されるプロパティの名前を表し、値がそれらのプロパティを記述するオブジェクトであるオブジェクトです。 `props` の各値は、データ記述子かアクセサー記述子のいずれかでなければなりませんが、両方を指定することはできません (詳細は {{jsxref("Object.defineProperty()")}} を参照してください)。
 
     データ記述子およびアクセサー記述子は、オプションで以下のキーを含むことができます。
-
     - `configurable`
       - : プロパティの記述子が変更でき、プロパティが対応するオブジェクトから削除できるときのみ `true`。
         **既定値は `false`。**
@@ -35,12 +48,10 @@ Object.defineProperties(obj, props)
         **既定値は `false`。**
 
     データ記述子には以下のオプションのキーもあります。
-
     - `value`
       - : プロパティに関連づける値。 JavaScript で有効な任意の値です (数値、オブジェクト、関数など)。
         **既定値は {{jsxref("undefined")}}。**
     - `writable`
-
       - : プロパティに関連づけられた値が{{jsxref("Operators", "assignment operator", "代入演算子", 1)}}で変更できる場合のみ `true`。
         **既定値は `false`。**
 
@@ -91,4 +102,4 @@ Object.defineProperties(obj, {
 - [`Object.defineProperties` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

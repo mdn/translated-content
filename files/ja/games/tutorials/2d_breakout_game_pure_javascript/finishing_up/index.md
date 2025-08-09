@@ -3,8 +3,6 @@ title: 仕上げ
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
-{{GamesSidebar}}
-
 {{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **10 ステップ目、最後のステップ**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html)で見ることができます。
@@ -66,7 +64,7 @@ drawLives();
 
 ## requestAnimationFrame()で描画を改善する
 
-ではゲーム機構に直結しない部分、描画に関わる部分にとりかかりましょう。 {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} は今は {{domxref("setInterval()")}} で実装している固定フレームレートよりもより良くブラウザーがゲームを描画できるようにします。
+ではゲーム機構に直結しない部分、描画に関わる部分にとりかかりましょう。 {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} は今は {{domxref("Window.setInterval", "setInterval()")}} で実装している固定フレームレートよりもより良くブラウザーがゲームを描画できるようにします。
 
 ```js
 const interval = setInterval(draw, 10);

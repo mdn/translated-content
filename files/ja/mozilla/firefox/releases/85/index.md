@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 85 の変更点をまとめています。Firefox 85 は、2021 年 1 月 26 日にリリースされました。
 
 > [!NOTE]
@@ -20,7 +18,7 @@ l10n:
 
 ### HTML
 
-- [`<link rel="preload">`](/ja/docs/Web/HTML/Link_types/preload) を有効化しました ([Firefox バグ 1626997](https://bugzil.la/1626997))。
+- [`<link rel="preload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) を有効化しました ([Firefox バグ 1626997](https://bugzil.la/1626997))。
 
 #### 廃止
 

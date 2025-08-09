@@ -18,16 +18,12 @@ scrollIntoView(scrollIntoViewOptions)
 ### 参数
 
 - `alignToTop`{{optional_inline}}
-
   - : 一个布尔值：
-
     - 如果为 `true`，元素的顶端将和其所在滚动区的可视区域的顶端对齐。相应的 `scrollIntoViewOptions: {block: "start", inline: "nearest"}`。这是这个参数的默认值。
     - 如果为 `false`，元素的底端将和其所在滚动区的可视区域的底端对齐。相应的 `scrollIntoViewOptions: {block: "end", inline: "nearest"}`。
 
 - `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
-
   - : 一个包含下列属性的对象：
-
     - `behavior` {{optional_inline}}
       - : 定义滚动是立即的还是平滑的动画。该选项是一个字符串，必须采用以下值之一：
         - `smooth`：滚动应该是平滑的动画。

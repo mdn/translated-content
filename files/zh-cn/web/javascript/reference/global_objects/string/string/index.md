@@ -14,7 +14,8 @@ new String(thing)
 String(thing)
 ```
 
-> **备注：** `String()` 被调用时可以带或不带 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，但会有不同的效果。请参见[返回值](#返回值)。
+> [!NOTE]
+> `String()` 被调用时可以带或不带 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，但会有不同的效果。请参见[返回值](#返回值)。
 
 ### 参数
 
@@ -73,4 +74,4 @@ String(sym); // "Symbol(示例)"
 
 ## 参见
 
-- [JavaScript 指南中的文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)
+- [数字与字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)指南

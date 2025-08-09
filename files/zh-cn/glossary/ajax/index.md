@@ -17,7 +17,7 @@ AJAX 可以用于创建{{Glossary("SPA", "单页应用")}}——那些使用 AJA
 
 ## 参见
 
-- [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [从服务器获取数据](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - 相关术语：
   - {{Glossary("SPA", "单页应用")}}

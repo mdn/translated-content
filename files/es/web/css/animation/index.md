@@ -3,13 +3,11 @@ title: animation
 slug: Web/CSS/animation
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
-La propiedad `animation` de [CSS](/es/CSS) es una [propiedad abreviada (shorthand property)](/en/CSS/Shorthand_properties) para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.
+La propiedad `animation` de [CSS](/es/docs/Web/CSS) es una [propiedad abreviada (shorthand property)](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.
 
-La [lista de propiedades CSS que pueden ser animadas](/es/docs/CSS/Transiciones_de_CSS#Propiedades_que_pueden_ser_animadas)está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/CSS/Transiciones_de_CSS).
+La [lista de propiedades CSS que pueden ser animadas](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#propiedades_que_pueden_ser_animadas)está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 {{cssinfo}}
 
@@ -24,7 +22,7 @@ Formal grammar:  [ <'animation-name'> || <'animation-duration'> || <'animation-t
 
 ## Ejemplos
 
-Consulte [CSS animations](/en/CSS/CSS_animations) para ver los ejemplos.
+Consulte [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver los ejemplos.
 
 ## Sobre Accesibilidad
 
@@ -50,5 +48,5 @@ Para más información (en inglés):
 
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

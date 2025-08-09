@@ -1,9 +1,9 @@
 ---
-title: "::-webkit-progress-bar"
+title: ::-webkit-progress-bar
 slug: Web/CSS/::-webkit-progress-bar
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## 概述
 
@@ -51,7 +51,6 @@ progress {
 ## 参见
 
 - The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
-
   - {{ cssxref("::-webkit-progress-value") }}
   - {{ cssxref("::-webkit-progress-inner-element") }}
 

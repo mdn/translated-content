@@ -21,11 +21,9 @@ var myWorker = new Worker(aURL, options);
 - _aURL_
   - : Est un {{domxref("DOMString")}} représentant l'URL du script que le worker va exécuter. Il doit obéir à la same-origin policy.
 - options {{optional_inline}}
-
   - : Un objet contenant des propriétés pour définir les options. Les propriétés suivantes sont valables:
-
     - `type`: Une {{domxref("DOMString")}} définissant le type de worker à créer. The valeur peuvent être `classic` ou `module`. Si cette prpriété n'est pas définie, la valeur sera `classic`.
-    - `credentials`&nbsp;: une [`DOMString`](/fr/docs/Web/API/DOMString) définissant le type de politique d'origine à utiliser pour le _worker_. Les valeurs peuvent être `omit`, `same-origin` ou _`include`_. _Si cette propriété n'est pas définie, ou que type est défini à `classic`, la valeur sera `classic`._
+    - `credentials`&nbsp;: une [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) définissant le type de politique d'origine à utiliser pour le _worker_. Les valeurs peuvent être `omit`, `same-origin` ou _`include`_. _Si cette propriété n'est pas définie, ou que type est défini à `classic`, la valeur sera `classic`._
     - `name`: Une {{domxref("DOMString")}} définissant un identifiant pour l'environment du worker {{domxref("DedicatedWorkerGlobalScope")}}, souvent utilisé pour le débogage.
 
 ### Exceptions

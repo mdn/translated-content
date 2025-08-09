@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
-{{jsSidebar("Classes")}}
-
 **`static`** 关键字定义了[静态方法或字段](/zh-CN/docs/Web/JavaScript/Reference/Classes#静态方法和字段)，或[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)（有关这种用法的更多信息，请参阅链接）。静态属性不能在类的实例上直接访问。相反，它们是在类本身上被访问的。
 
 静态方法通常是实用函数，如创建或克隆对象的函数，而静态属性则适用于缓存、固定配置或其他不需要跨实例复制的数据。
@@ -14,7 +12,24 @@ l10n:
 > [!NOTE]
 > 在类的上下文中，MDN Web 文档内容交替使用属性和[字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)这两个术语。
 
-{{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Classes Static", "taller")}}
+
+```js interactive-example
+class ClassWithStaticMethod {
+  static staticProperty = "someValue";
+  static staticMethod() {
+    return "static method has been called.";
+  }
+  static {
+    console.log("Class static initialization block called");
+  }
+}
+
+console.log(ClassWithStaticMethod.staticProperty);
+// Expected output: "someValue"
+console.log(ClassWithStaticMethod.staticMethod());
+// Expected output: "static method has been called."
+```
 
 ## 语法
 
@@ -37,7 +52,7 @@ class ClassWithStatic {
 
 本页介绍类的公有静态属性，包括静态方法、静态访问器和静态字段。
 
-- 关于私有静态特性，请参阅[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
+- 关于私有静态特性，请参阅[私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)。
 - 关于实例特性，请参阅[方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)、[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)、[setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 和[公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)。
 
 公有静态特性是使用 `static` 关键字声明的。在[类求值](/zh-CN/docs/Web/JavaScript/Reference/Classes#求值顺序)时，使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 语义（本质上是 {{jsxref("Object.defineProperty()")}}）将它们添加到类构造函数中。类构造函数会再次访问它们。
@@ -90,7 +105,7 @@ console.log(SubClassWithStaticField.subStaticField); // "基类静态方法输�
 静态字段初始化器和[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)是逐个求值的。字段初始化器可以引用其上的字段值，但不能引用其下的字段值。所有静态方法都会事先添加并可被访问，但如果它们引用的字段在被初始化的字段的下方，则调用它们时可能会出现与预期不符的情况。
 
 > [!NOTE]
-> 对于[私有静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
+> 对于[私有静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
 
 ## 示例
 
@@ -125,7 +140,7 @@ console.log(Triple.calculate(6)); // 18
 
 let tp = new Triple();
 
-console.log(SquaredTriple.tripple(3)); // 81（不会受父类实例化的影响）
+console.log(SquaredTriple.calculate(3)); // 81（不会受父类实例化的影响）
 console.log(SquaredTriple.description); // '我可以让你提供的任何数变为其三倍的平方'
 console.log(SquaredTriple.longDescription); // undefined
 console.log(SquaredTriple.customName); // '三倍器'

@@ -11,5 +11,5 @@ FCP タイムスタンプは、ブラウザーがテキスト、画像(背景画
 
 ## 参照
 
-- [First Meaningful Paint](/ja/docs/Glossary/first_meaningful_paint)
+- [First Meaningful Paint](/ja/docs/Glossary/First_meaningful_paint)
 - [Paint Timing specification](https://w3c.github.io/paint-timing/#first-contentful-paint)

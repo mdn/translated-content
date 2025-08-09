@@ -11,7 +11,7 @@ URL API 是 URL 标准的一个组件，定义了有效 {{Glossary("URL")}} 的�
 
 ## 概念和用法
 
-URL 标准的主要内容是由 [URL 的定义](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)及其结构和解析方式决定的。还介绍了与网络上计算机寻址有关的各种术语的定义，并指定了解析 IP 地址和 DOM 地址的算法。大多数开发者更感兴趣于 API 本身。
+URL 标准的主要内容是由 [URL 的定义](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)及其结构和解析方式决定的。还介绍了与网络上计算机寻址有关的各种术语的定义，并指定了解析 IP 地址和 DOM 地址的算法。大多数开发者更感兴趣于 API 本身。
 
 ### 使用 URL 组件
 

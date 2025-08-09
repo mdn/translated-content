@@ -25,9 +25,7 @@ createPeriodicWave(real, imag, constraints)
 - `imag`
   - : 一系列正弦项 (传统上的 B 项)。
 - `constraints` {{optional_inline}}
-
   - : 一个字典对象，用于指定是否禁用规范化（如果没有指定，则默认启动规范化）。它有一个属性：
-
     - `disableNormalization`: 如果设置为 `true`，对周期波禁用规范化。默认值为 `false`.
 
 > [!NOTE]
@@ -76,4 +74,4 @@ osc.stop(2);
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

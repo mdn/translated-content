@@ -20,9 +20,7 @@ write(message, options)
 ### 引数
 
 - `message`
-
   - : 書き込まれるメッセージで、文字列のオブジェクトまたはリテラル、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、レコードの配列のいずれかです。レコードには以下のメンバーがあります。
-
     - `data` {{optional_inline}}
       - : 通信されるデータで、文字列のオブジェクトまたはリテラル、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、ネストされたレコードの配列のいずれかです。
     - `encoding` {{optional_inline}}
@@ -32,17 +30,15 @@ write(message, options)
     - `lang` {{optional_inline}}
       - : {{RFC(5646, "Tags for Identifying Languages （または BCP 47）")}}による有効な言語タグです。
     - `mediaType` {{optional_inline}}
-      - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+      - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
     - `recordType`
-
       - : 文字列で、 `data` に格納されたデータの型を示します。以下の値の何れかになります。
-
         - `"absolute-url"`
           - : データへの絶対 URL です。
         - `"empty"`
           - : 空の {{domxref("NDEFRecord")}} です。
         - `"mime"`
-          - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+          - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
         - `"smart-poster"`
           - : [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) 仕様書で定義されているスマートポスターです。
         - `"text"`
@@ -53,9 +49,7 @@ write(message, options)
           - : [NDEF-URI](https://w3c.github.io/web-nfc/#bib-ndef-uri) 仕様書で定義されている URL です。
 
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `overwrite`
       - : 既存のレコードが存在した場合、上書きするかどうかを指定する論理値です。
     - `signal` {{optional_inline}}

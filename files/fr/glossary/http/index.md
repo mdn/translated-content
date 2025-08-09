@@ -13,5 +13,5 @@ HTTP est textuel (toute communication est faite en texte clair) et sans état (a
 
 ## Voir aussi
 
-- [HTTP sur MDN](/fr/docs/HTTP)
+- [HTTP sur MDN](/fr/docs/Web/HTTP)
 - [HTTP](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol) sur Wikipédia

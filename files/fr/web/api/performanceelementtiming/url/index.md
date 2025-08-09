@@ -15,7 +15,7 @@ var url = PerformanceElementTiming.url;
 
 ### Valeur
 
-Une [`DOMString`](/fr/docs/Web/API/DOMString) qui est l'URL initiale de la demande de ressources pour les images ou 0 pour le texte.
+Une [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est l'URL initiale de la demande de ressources pour les images ou 0 pour le texte.
 
 ## Exemples
 

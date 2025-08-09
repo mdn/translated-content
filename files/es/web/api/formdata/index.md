@@ -53,6 +53,6 @@ Un objeto que implementa `FormData` puede usarse directamente en una estructura 
 ## Ver también
 
 - {{domxref("XMLHTTPRequest")}}
-- [Utilización de XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Usando objetos FormData](/es/docs/Web/Guide/Usando_Objetos_FormData)
+- [Utilización de XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Usando objetos FormData](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

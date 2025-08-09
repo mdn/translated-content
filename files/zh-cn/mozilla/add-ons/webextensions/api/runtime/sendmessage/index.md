@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
 ---
 
-{{AddonSidebar}}
-
 向你的扩展或其他扩展中的事件监听器发送一条消息。
 
 如果想发给你自己的扩展，则省略 `extensionId` 参数。扩展中除调用 `runtime.sendMessage` 的页面以外的所有页面都会触发 {{WebExtAPIRef('runtime.onMessage')}} 事件。
@@ -33,7 +31,6 @@ let sending = browser.runtime.sendMessage(
 ### 参数
 
 - `extensionId` {{optional_inline}}
-
   - : `string`。要将消息发送到的扩展的 ID。包含该参数可将消息发送到其他扩展。如果接收方使用 manifest.json 中的 [browser_specific_settings](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键显式设置了 ID，则 `extensionId` 应该设为该值。否则，它应该是为接收方生成的 ID。
 
     如果省略了 `extensionId`，则消息会被发送到你自己的扩展。
@@ -41,11 +38,8 @@ let sending = browser.runtime.sendMessage(
 - `message`
   - : `any`。可以使用结构化克隆算法序列化的对象。（参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#数据克隆算法)）。
 - `options` {{optional_inline}}
-
   - : `object`。
-
     - `includeTlsChannelId` {{optional_inline}}
-
       - : `boolean`。是否将 TLS 通道 ID 传递给正在监听连接事件的进程的 {{WebExtAPIRef('runtime.onMessageExternal')}}。
 
         只有基于 Chromium 的浏览器支持此选项。
@@ -54,9 +48,7 @@ let sending = browser.runtime.sendMessage(
 
 - **只有 1 个参数**：为要发送的消息，且该消息会在内部传递。
 - **有 2 个参数**：
-
   - 若第二个参数符合下面的规则，则参数将会被解释为 `(message, options)`，且消息会在内部传递：
-
     1. 一个有效的 `options` 对象（也就是说，它是一个仅包含浏览器支持的 `options` 属性的对象）
     2. null
     3. undefined
@@ -118,7 +110,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-sendMessage) API。本文档源自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json)。
+> 此 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-sendMessage) API。该文档衍生自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

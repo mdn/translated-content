@@ -30,13 +30,13 @@ Además, existen herramientas para medir qué tan completa (como porcentaje) es 
 Hay algunos principios clave que una aplicación web debe tratar de observar para ser identificada como PWA. Estos deben ser:
 
 - [Detectable](/es/docs/Web/Progressive_web_apps/Advantages"#Discoverable), por lo que el contenido se puede encontrar a través de motores de búsqueda.
-- [Instalable](/es/docs/Web/Progressive_web_apps/Advantages#Instalable), por lo que puede estar disponible en la pantalla de inicio del dispositivo o en el lanzador de aplicaciones.
-- [Enlazable](/es/docs/Web/Progressive_web_apps/Advantages#Enlazable), para que puedas compartirla simplemente enviando una URL.
-- [Independiente de la red](/es/docs/Web/Progressive_web_apps/Advantages#Independiente_de_la_red), por lo que funciona sin conexión o con una deficiente conexión de red.
+- [Instalable](/es/docs/Web/Progressive_web_apps#instalable), por lo que puede estar disponible en la pantalla de inicio del dispositivo o en el lanzador de aplicaciones.
+- [Enlazable](/es/docs/Web/Progressive_web_apps#enlazable), para que puedas compartirla simplemente enviando una URL.
+- [Independiente de la red](/es/docs/Web/Progressive_web_apps#independiente_de_la_red), por lo que funciona sin conexión o con una deficiente conexión de red.
 - [Progresiva](/es/docs/Web/Progressive_web_apps/AdvantagesProgresiva), por lo que todavía se puede utilizar en un nivel básico en los navegadores más antiguos, pero completamente funcional en los más recientes.
-- [Reconectable](/es/docs/Web/Progressive_web_apps/Advantages#Reconectable), por lo que puede enviar notificaciones cuando haya contenido nuevo disponible.
-- [Adaptable](/es/docs/Web/Progressive_web_apps/Advantages#Adaptable), por lo tanto se puede utilizar en cualquier dispositivo con pantalla y navegador: teléfonos móviles, tabletas, computadoras portátiles, televisores, refrigeradores, etc.
-- [Segura](/es/docs/Web/Progressive_web_apps/Advantages#Segura) por lo que las conexiones entre el usuario, la aplicación y tu servidor están protegidos contra terceros que intenten acceder a datos sensibles.
+- [Reconectable](/es/docs/Web/Progressive_web_apps#reconectable), por lo que puede enviar notificaciones cuando haya contenido nuevo disponible.
+- [Adaptable](/es/docs/Web/Progressive_web_apps#adaptable), por lo tanto se puede utilizar en cualquier dispositivo con pantalla y navegador: teléfonos móviles, tabletas, computadoras portátiles, televisores, refrigeradores, etc.
+- [Segura](/es/docs/Web/Progressive_web_apps#segura) por lo que las conexiones entre el usuario, la aplicación y tu servidor están protegidos contra terceros que intenten acceder a datos sensibles.
 
 Ofrecer estas funciones y hacer uso de todas las [Ventajas que ofrecen las aplicaciones web](#ventajas_de_las_aplicaciones_web) puede crear una oferta atractiva y altamente flexible para tus usuarios y clientes.
 
@@ -73,15 +73,15 @@ Una aplicación web progresiva totalmente capaz debería proporcionar todas las 
 
 El objetivo final es que las aplicaciones web tengan una mejor representación en los motores de búsqueda, sean más fáciles de exponer, catalogar y clasificar, y tener metadatos utilizables por los navegadores para brindarles capacidades especiales.
 
-Algunas de las capacidades ya se han habilitado en ciertas plataformas basadas en web mediante tecnologías patentadas como [Open Graph](http://ogp.me/), que proporciona un formato para especificar metadatos similares en el bloque {{HTMLElement("head")}} de {{Glossary("HTML")}} con etiquetas {{HTMLElement("meta")}}.
+Algunas de las capacidades ya se han habilitado en ciertas plataformas basadas en web mediante tecnologías patentadas como [Open Graph](https://ogp.me/), que proporciona un formato para especificar metadatos similares en el bloque {{HTMLElement("head")}} de {{Glossary("HTML")}} con etiquetas {{HTMLElement("meta")}}.
 
-El estándar web relevante aquí es el [manifiesto de la aplicación web](/es/docs/Web/Manifest), que define las características de una aplicación, como el nombre, el icono, la pantalla de presentación y los colores del tema en un archivo de manifiesto con formato {{Glossary("JSON")}}. Esto es para usar en contextos como listas de aplicaciones y pantallas de inicio de dispositivos.
+El estándar web relevante aquí es el [manifiesto de la aplicación web](/es/docs/Web/Progressive_web_apps/Manifest), que define las características de una aplicación, como el nombre, el icono, la pantalla de presentación y los colores del tema en un archivo de manifiesto con formato {{Glossary("JSON")}}. Esto es para usar en contextos como listas de aplicaciones y pantallas de inicio de dispositivos.
 
 ### Instalable
 
 Una parte fundamental de la experiencia de la aplicación web es que los usuarios tengan iconos de aplicaciones en su pantalla de inicio y los puedan tocar para abrir aplicaciones en su propio contenedor nativo que se sienta bien integrado con la plataforma subyacente.
 
-Las aplicaciones web modernas pueden hacer que esta aplicación nativa se sienta a través de las propiedades establecidas dentro del manifiesto de la aplicación web y mediante una función disponible en los navegadores de teléfonos inteligentes modernos llamada [instalación de la aplicación web](/es/docs/Web/Progressive_web_apps/Developer_guide/Installing).
+Las aplicaciones web modernas pueden hacer que esta aplicación nativa se sienta a través de las propiedades establecidas dentro del manifiesto de la aplicación web y mediante una función disponible en los navegadores de teléfonos inteligentes modernos llamada [instalación de la aplicación web](/es/docs/Web/Progressive_web_apps/Guides/Installing).
 
 ### Enlazable
 
@@ -107,7 +107,7 @@ Una de las principales ventajas de las plataformas nativas es la facilidad con l
 
 ### Adaptable
 
-Las aplicaciones web adaptables utilizan tecnologías como [consultas de medios](/es/docs/Web/CSS/Media_Queries) y [viewport](/es/docs/Glossary/Viewport) para asegurarte de que tu IU se ajuste a cualquier factor de forma: computadora de escritorio, dispositivo móvil, tableta o lo que venga a continuación.
+Las aplicaciones web adaptables utilizan tecnologías como [consultas de medios](/es/docs/Web/CSS/CSS_media_queries) y [viewport](/es/docs/Glossary/Viewport) para asegurarte de que tu IU se ajuste a cualquier factor de forma: computadora de escritorio, dispositivo móvil, tableta o lo que venga a continuación.
 
 ### Segura
 
@@ -121,13 +121,13 @@ Como se mencionó anteriormente, las PWAs no dependen de una sola API, sino que 
 
 El ingrediente clave requerido para las PWAs es la asistencia de [servicio workers](/es/docs/Web/API/Service_Worker_API). Afortunadamente, los servicios de _workers_ [ahora son compatibles con los principales navegadores](https://jakearchibald.github.io/isserviceworkerready/) en computadoras de escritorio y dispositivos móviles.
 
-Otras características como [manifiesto de App Web](/es/docs/Web/Manifest), [Push](/es/docs/Web/API/Push_API), [Notificaciones](/es/docs/Web/API/Notifications_API) y la funcionalidad [Agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Add_to_home_screen) también tienen un amplio soporte. Actualmente, Safari tiene soporte limitado para el manifiesto de aplicaciones web y Agregar a la pantalla de inicio y no admite notificaciones _push web_. Sin embargo, otros navegadores importantes admiten todas estas funciones.
+Otras características como [manifiesto de App Web](/es/docs/Web/Progressive_web_apps/Manifest), [Push](/es/docs/Web/API/Push_API), [Notificaciones](/es/docs/Web/API/Notifications_API) y la funcionalidad [Agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) también tienen un amplio soporte. Actualmente, Safari tiene soporte limitado para el manifiesto de aplicaciones web y Agregar a la pantalla de inicio y no admite notificaciones _push web_. Sin embargo, otros navegadores importantes admiten todas estas funciones.
 
 Por encima de todo, debes seguir la regla de mejora progresiva: usa tecnologías que mejoren la apariencia y la utilidad de tu aplicación cuando estén disponibles, pero que sigan ofreciendo la funcionalidad básica de tu aplicación cuando esas funciones no estén disponibles. Presentar un sitio web confiable con un buen rendimiento es una consecuencia del uso de estas mejoras; esto, a su vez, significa crear aplicaciones web que sigan las mejores prácticas. De esta manera, todos podrán usar la aplicación, pero aquellos con navegadores modernos se beneficiarán aún más de las funciones de PWA.
 
 ## Una aplicación de ejemplo
 
-En esta serie de artículos, examinaremos el código fuente de un sitio web súper simple que enumera información sobre juegos enviados a la [categoría A-Frame](http://js13kgames.com/aframe) en la Competición [js13kGames 2017](http://2017.js13kgames.com/). No tienes que pensar en cuál es el contenido real del sitio web; el punto principal es aprender a utilizar las funciones de PWA en sus propios proyectos.
+En esta serie de artículos, examinaremos el código fuente de un sitio web súper simple que enumera información sobre juegos enviados a la [categoría A-Frame](https://js13kgames.com/aframe) en la Competición [js13kGames 2017](https://2017.js13kgames.com/). No tienes que pensar en cuál es el contenido real del sitio web; el punto principal es aprender a utilizar las funciones de PWA en sus propios proyectos.
 
 Puedes [ver esta aplicación en acción](https://mdn.github.io/pwa-examples/js13kpwa/) en línea, y el código fuente está [disponible en GitHub](https://github.com/mdn/pwa-examples/tree/master/js13kpwa). Examinaremos este código detenidamente a lo largo de esta serie de artículos.
 

@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("BigInt")}} 값의 **`toString()`** 메서드는 지정된 {{jsxref("BigInt")}} 값을 나타내는 문자열을 반환합니다. 뒤에 오는 "n"은 문자열의 일부가 아닙니다.
 
-{{EmbedInteractiveExample("pages/js/bigint-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.toString()")}}
+
+```js interactive-example
+console.log(1024n.toString());
+// Expected output: "1024"
+
+console.log(1024n.toString(2));
+// Expected output: "10000000000"
+
+console.log(1024n.toString(16));
+// Expected output: "400"
+```
 
 ## 구문
 
@@ -65,7 +76,7 @@ console.log(`${Object(1n)}`); // "Overridden"
 
 ### 음수 0 BigInt
 
-정수에는 음수 0이 없으므로 음수 0의 `BigInt`는 없습니다. `0.0`은 JavaScript [`Number`](/ko/docs/Web/JavaScript/Data_structures#number_type) 유형에만 나타나는 IEEE 부동소수점 개념입니다.
+정수에는 음수 0이 없으므로 음수 0의 `BigInt`는 없습니다. `0.0`은 JavaScript [`Number`](/ko/docs/Web/JavaScript/Guide/Data_structures#number_type) 유형에만 나타나는 IEEE 부동소수점 개념입니다.
 
 ```js
 (-0n).toString(); // "0"

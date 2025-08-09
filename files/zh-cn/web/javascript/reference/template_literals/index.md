@@ -3,8 +3,6 @@ title: 模板字符串
 slug: Web/JavaScript/Reference/Template_literals
 ---
 
-{{JsSidebar("More")}}
-
 **模板字面量**是用反引号（`` ` ``）分隔的字面量，允许[多行字符串](#多行字符串)、带嵌入表达式的[字符串插值](#字符串插值)和一种叫[带标签的模板](#带标签的模板)的特殊结构。
 
 模板字面量有时被非正式地叫作*模板字符串*，因为它们最常被用作[字符串插值](#字符串插值)（通过替换占位符来创建字符串）。然而，带标签的模板字面量可能不会产生字符串——它可以与自定义[标签函数](#带标签的模板)一起使用，来对模板字面量的不同部分执行任何操作。
@@ -73,7 +71,7 @@ string text line 2`);
 
 ### 字符串插值
 
-如果没有模板字面量，当你想组合表达式的输出与字符串时，可以使用[加法运算符 `+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) [连接它们](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#连接字符串)：
+如果没有模板字面量，当你想组合表达式的输出与字符串时，可以使用[加法运算符 `+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) [连接它们](/zh-CN/docs/Learn_web_development/Core/Scripting/Strings#连接字符串)：
 
 ```js
 const a = 5;
@@ -154,7 +152,7 @@ console.log(output);
 // That Mike is a youngster.
 ```
 
-标签不必是普通的标识符，你可以使用任何[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#汇总表)大于 16 的表达式，包括[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)、函数调用、[new 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，甚至其他带标签的模板字面量。
+标签不必是普通的标识符，你可以使用任何[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence#%e6%b1%87%e6%80%bb%e8%a1%a8)大于 16 的表达式，包括[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)、函数调用、[new 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，甚至其他带标签的模板字面量。
 
 ```js
 console.log`Hello`; // [ 'Hello' ]
@@ -303,7 +301,8 @@ const doc = html`<!doctype html>
 - `\u` 后不跟 `{`，并且后跟四个以下十六进制数字，例如 `\uz`
 - `\u{}` 包含无效的 Unicode 码点——包含一个非十六进制数字，或者它的值大于 10FFFF，例如 `\u{110000}` 和 `\u{z}`
 
-> **备注：** `\` 后面跟着其他字符，虽然它们可能没有用，因为没有转义，但它们不是语法错误。
+> [!NOTE]
+> `\` 后面跟着其他字符，虽然它们可能没有用，因为没有转义，但它们不是语法错误。
 
 然而，这对于带标签的模板来说是有问题的，除了“cooked”字面量外，这些模板还可以访问原始字面量（转义序列按原样保留）。带标签的模板应该允许嵌入语言（例如 [DSL](https://zh.wikipedia.org/wiki/领域特定语言) 或 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX)），在这些语言里其他转义序列是常见的。因此，从带标签的模板中删除了转义序列诸多格式的语法限制。
 
@@ -337,6 +336,6 @@ const bad = `bad escape sequence: \unicode`;
 
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
-- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
 - [ES3 中的类模板字符串](https://gist.github.com/WebReflection/8f227532143e63649804)
 - [hacks.mozilla.org 上的《深度学习 ES6 之模板字面量》](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)

@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesO
 
 **`Intl.PluralRules.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールのうち、代替する必要なく複数形の書式で対応されているものが入った配列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-pluralrules-supportedlocalesof.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.PluralRules.supportedLocalesOf")}}
+
+```js interactive-example
+const locales = ["en-US", "ban", "ar-OM", "de-DE"];
+const options = { localeMatcher: "lookup" };
+
+console.log(Intl.PluralRules.supportedLocalesOf(locales, options));
+// Expected output: Array ["en-US", "ar-OM", "de-DE"]
+```
 
 ## 構文
 
@@ -21,9 +29,7 @@ Intl.PluralRules.supportedLocalesOf(locales, options);
 - `locales`
   - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
 - `options` {{optional_inline}}
-
   - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
-
     - `localeMatcher`
       - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。
 

@@ -9,7 +9,15 @@ l10n:
 
 **논리적 OR (`||`)** (논리적 분리) 연산자는 피연산자 중 하나 이상이 참인 경우에만 참입니다. 일반적으로 불리언(논리적) 값과 함께 사용되며, 이 경우에는 불리언 값을 반환합니다. 그러나 `||` 연산자는 실제로 지정된 피연산자 중 하나의 값을 반환하므로, 이 연산자를 불리언이 아닌 값과 함께 사용하면 불리언이 아닌 값이 반환됩니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 || b > 0);
+// Expected output: true
+```
 
 ## 문법
 
@@ -31,7 +39,7 @@ false로 변환할 수 있는 표현식의 예는 다음과 같습니다.
 - 빈 문자열 (`""` 또는 `''` 또는 ` `` `);
 - `undefined`.
 
-`||` 연산자는 불리언 값이 아닌 피연산자와 함께 사용할 수 있지만, 반환 값은 항상 [불리언 원시 값](/ko/docs/Web/JavaScript/Data_structures#boolean_type)으로 변환할 수 있으므로 불리언 연산자로 간주할 수 있습니다. 반환 값(또는 일반적으로 모든 표현식)을 해당 불리언 값으로 명시적으로 변환하려면 이중 [{{JSxRef("Operators/Logical_NOT", "NOT operator", "", 1)}}] 또는 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 생성자를 사용합니다.
+`||` 연산자는 불리언 값이 아닌 피연산자와 함께 사용할 수 있지만, 반환 값은 항상 [불리언 원시 값](/ko/docs/Web/JavaScript/Guide/Data_structures#boolean_type)으로 변환할 수 있으므로 불리언 연산자로 간주할 수 있습니다. 반환 값(또는 일반적으로 모든 표현식)을 해당 불리언 값으로 명시적으로 변환하려면 이중 [{{JSxRef("Operators/Logical_NOT", "NOT operator", "", 1)}}] 또는 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 생성자를 사용합니다.
 
 ### 단락 평가
 

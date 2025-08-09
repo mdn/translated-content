@@ -8,9 +8,9 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`defaultChecked`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、要素の既定のチェック状態を指定します。このプロパティは、 {{htmlelement("input")}} 要素の [`checked`](/ja/docs/Web/HTML/Element/input#checked) 属性を反映します。
+**`defaultChecked`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、要素の既定のチェック状態を指定します。このプロパティは、 {{htmlelement("input")}} 要素の [`checked`](/ja/docs/Web/HTML/Reference/Elements/input#checked) 属性を反映します。
 
-論理値の [`checked`](/ja/docs/Web/HTML/Element/input#checked) 属性は、 `radio` ([`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio)) および `checkbox` ([`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)) の入力型に対して有効です。この属性が存在すると、`defaultChecked` プロパティが `true` に設定されます。
+論理値の [`checked`](/ja/docs/Web/HTML/Reference/Elements/input#checked) 属性は、 `radio` ([`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio)) および `checkbox` ([`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)) の入力型に対して有効です。この属性が存在すると、`defaultChecked` プロパティが `true` に設定されます。
 
 ## 値
 

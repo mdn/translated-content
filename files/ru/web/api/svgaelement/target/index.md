@@ -24,7 +24,7 @@ myLink.target = 'value';
 
 ## Пример
 
-Код взят из [«Пример кода SVGAElement»](/ru/docs/Web/API/SVGAElement#Example).
+Код взят из [«Пример кода SVGAElement»](/ru/docs/Web/API/SVGAElement#example).
 
 ```js
 ...

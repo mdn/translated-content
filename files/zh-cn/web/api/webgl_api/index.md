@@ -94,7 +94,7 @@ WebGL 2 是对 WebGL 的一次重大更新，通过 {{domxref("WebGL2RenderingCo
 
 - [3D 纹理](/zh-CN/docs/Web/API/WebGL2RenderingContext/texImage3D)、
 - [采样对象](/zh-CN/docs/Web/API/WebGLSampler)、
-- [Uniform 缓冲对象](/zh-CN/docs/Web/API/WebGL2RenderingContext#Uniform_缓冲对象)、
+- [Uniform 缓冲对象](/zh-CN/docs/Web/API/WebGL2RenderingContext#uniform_缓冲对象)、
 - [同步对象](/zh-CN/docs/Web/API/WebGLSync)、
 - [查询对象](/zh-CN/docs/Web/API/WebGLQuery)、
 - [变换反馈对象](/zh-CN/docs/Web/API/WebGLTransformFeedback)、
@@ -137,7 +137,7 @@ WebGL 2 是对 WebGL 的一次重大更新，通过 {{domxref("WebGL2RenderingCo
 ## 资源
 
 - [Khronos WebGL 站点](https://www.khronos.org/webgl/)：Khronos 组织的 WebGL 官方站点。
-- [WebGL 基本教程](https://web.dev/articles/webgl-fundamentals)：提供了 WebGL 的基础知识。
+- [WebGL 基本教程](https://web.developers.google.cn/articles/webgl-fundamentals)：提供了 WebGL 的基础知识。
 - [Raw WebGL：WebGL 入门](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage)：来自 Nick Desaulniers 主讲的 WebGL 基础知识。
 - [WebGL 演练场](http://webglplayground.net)：用于创建和共享 WebGL 项目的在线工具。适合快速制作原型和进行实验。
 - [WebGL 学院](http://www.webglacademy.com)：一款 HTML/JavaScript 编辑器，提供学习 Webgl 编程基础的教程。

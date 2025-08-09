@@ -7,7 +7,46 @@ slug: Web/CSS/border-right-width
 
 La propriété **`border-right-width`** définit l'épaisseur de la bordure pour le côté droit d'une boîte.
 
-{{EmbedInteractiveExample("pages/css/border-right-width.html")}}
+{{InteractiveExample("CSS Demo: border-right-width")}}
+
+```css interactive-example-choice
+border-right-width: thick;
+```
+
+```css interactive-example-choice
+border-right-width: 2em;
+```
+
+```css interactive-example-choice
+border-right-width: 4px;
+```
+
+```css interactive-example-choice
+border-right-width: 2ex;
+```
+
+```css interactive-example-choice
+border-right-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntaxe
 
@@ -32,9 +71,7 @@ border-right-width: unset;
 ### Valeurs
 
 - `<br-width>`
-
   - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté droit de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
-
     - `thin` (fin)
     - `medium` (intermédiaire)
     - `thick` (épais)
@@ -90,14 +127,12 @@ border-right-width: unset;
 ## Voir aussi
 
 - Les autres propriétés liées à la largeur de la bordure :
-
   - {{cssxref("border-left-width")}},
   - {{cssxref("border-top-width")}},
   - {{cssxref("border-bottom-width")}},
   - {{cssxref("border-width")}}
 
 - Les autres propriétés CSS liées à la bordure du côté droit :
-
   - {{cssxref("border")}},
   - {{cssxref("border-right")}},
   - {{cssxref("border-right-style")}},

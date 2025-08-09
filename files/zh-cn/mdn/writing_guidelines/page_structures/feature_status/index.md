@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
-{{MDNSidebar}}
-
 特性状态为开发者提供了有关特性在各浏览器厂商的实现阶段的信息，有以下几种状态：
 
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
@@ -52,19 +50,16 @@ browser-compat: api.feature
 以下宏用于在页眉呈现状态横幅：
 
 - `\{{SeeCompatTable}}`
-
   - : 用于 `experimental` 状态。它会生成**实验性状态**横幅：
 
     {{SeeCompatTable}}
 
 - `\{{Non-standard_Header}}`
-
   - : 用于 `non-standard` 状态。它会生成**非标准状态**横幅：
 
     {{Non-standard_Header}}
 
 - `\{{Deprecated_Header}}`
-
   - : 用于 `deprecated` 状态。它会生成**已弃用状态**横幅：
 
     {{deprecated_header}}

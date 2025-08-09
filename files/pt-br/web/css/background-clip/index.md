@@ -7,7 +7,42 @@ slug: Web/CSS/background-clip
 
 A propriedade CSS **`background-clip`** especifica se o fundo de um elemento, seja cor ou imagem, se extende debaixo de sua área de borda, preenchimento ou conteúdo.
 
-{{EmbedInteractiveExample("pages/css/background-clip.html")}}
+{{InteractiveExample("CSS Demo: background-clip")}}
+
+```css interactive-example-choice
+background-clip: border-box;
+```
+
+```css interactive-example-choice
+background-clip: padding-box;
+```
+
+```css interactive-example-choice
+background-clip: content-box;
+```
+
+```css interactive-example-choice
+background-clip: text;
+color: transparent;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is the content of the element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/leopard.jpg");
+  color: #d73611;
+  text-shadow: 2px 2px black;
+  padding: 20px;
+  border: 10px dashed #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+```
 
 Se o elemento não possuir as propriedades {{cssxref("background-image")}} ou {{cssxref("background-color")}} definidas, esta propriedade só terá um efeito visual quando a borda tiver regiões transparentes ou regiões parcialmente opacas (devido ao {{cssxref("border-style")}} ou {{cssxref("border-image")}}); caso contrário a borda encobrirá a diferença.
 
@@ -168,4 +203,4 @@ p {
 ## Veja também
 
 - {{cssxref("clip")}}
-- [CSS Box Model](/pt-BR/docs/Web/CSS/box_model)
+- [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

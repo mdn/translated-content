@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
-
 El módulo **Animaciones CSS** le permite animar los valores de las propiedades CSS, como la posición del fondo y transformaciones, a lo largo del tiempo mediante el uso de fotogramas clave. Cada fotograma clave describe cómo debe renderizarse el elemento animado en un momento dado durante la secuencia de animación. Puede usar las propiedades en el módulo de animaciones para controlar la duración, el número de repeticiones, el inicio retrasado y otros aspectos de una animación.
 
 ### Animaciones en acción
@@ -59,7 +57,7 @@ Todas las animaciones, incluso aquellas con 0 segundos de duración, lanzan even
 
 - [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Tutorial paso a paso sobre cómo crear animaciones usando CSS. Este artículo describe las propiedades CSS y las reglas arroba relacionadas con la animación y cómo interactúan entre sí.
-- [Consejos y trucos de animación CSS](/es/docs/Web/CSS/CSS_animations/Tips)
+- [Consejos y trucos de animación CSS](/es/docs/Web/API/Web_Animations_API/Tips)
   - : Consejos y trucos para ayudarlo a aprovechar al máximo las animaciones CSS.
 
 ## Conceptos relacionados

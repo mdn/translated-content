@@ -48,7 +48,7 @@ typeof Object(1n) === "object"; // true
 
 ### 연산자
 
-`+`, `*`, `-`, `**`, `%` 연산자를 `BigInt`나 객체로 감싼 `BigInt`에서 사용할 수 있습니다. [비트 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)도 사용할 수 있으나, 모든 `BigInt`는 부호를 가져야 하므로 `>>>` (부호 버림 오른쪽 시프트)는 사용할 수 없습니다. [asm.js에서 문제를 일으키지 않도록](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs), 단항 `+` 연산자도 지원하지 않습니다.
+`+`, `*`, `-`, `**`, `%` 연산자를 `BigInt`나 객체로 감싼 `BigInt`에서 사용할 수 있습니다. [비트 연산자](/ko/docs/Web/JavaScript/Reference/Operators)도 사용할 수 있으나, 모든 `BigInt`는 부호를 가져야 하므로 `>>>` (부호 버림 오른쪽 시프트)는 사용할 수 없습니다. [asm.js에서 문제를 일으키지 않도록](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs), 단항 `+` 연산자도 지원하지 않습니다.
 
 ```js
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);

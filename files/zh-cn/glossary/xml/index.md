@@ -13,4 +13,4 @@ XML 标签 类似 HTML 标签，但由于 XML 允许用户定义他们自己的�
 
 ## 参见
 
-- [XML 介绍](/zh-CN/docs/Web/XML/XML_introduction)
+- [XML 介绍](/zh-CN/docs/Web/XML/Guides/XML_introduction)

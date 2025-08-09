@@ -5,7 +5,7 @@ slug: Web/API/Window/localStorage
 
 {{APIRef("Web Storage API")}}
 
-La propriété `localStorage` vous permet d'accéder à un objet local {{domxref("Storage")}}. Le `localStorage` est similaire au [`sessionStorage`](/fr/docs/Web/API/Window.sessionStorage). La seule différence : les données stockées dans le `localStorage` n'ont pas de délai d'expiration, alors que les données stockées dans le `sessionStorage` sont nettoyées quand la session navigateur prend fin — donc quand on ferme le navigateur.
+La propriété `localStorage` vous permet d'accéder à un objet local {{domxref("Storage")}}. Le `localStorage` est similaire au [`sessionStorage`](/fr/docs/Web/API/Window/sessionStorage). La seule différence : les données stockées dans le `localStorage` n'ont pas de délai d'expiration, alors que les données stockées dans le `sessionStorage` sont nettoyées quand la session navigateur prend fin — donc quand on ferme le navigateur.
 
 Il convient de noter que les données stockées dans `localStorage` ou `sessionStorage` **sont spécifiques au protocole de la page.**
 
@@ -24,7 +24,7 @@ Un objet {{DOMxRef("Storage")}} qui peut être utilisé pour accéder à l'espac
 ### Exceptions
 
 - `SecurityError`
-  - : La demande viole une décision politique, ou l'origine n'est pas [un schéma/hôte/port valide](/fr/docs/Web/Security/Same_origin_policy_for_JavaScript) (cela peut se produire si l'origine utilise le shéma `file:` ou `data:`, par exemple). Par exemple, l'utilisateur peut configurer son navigateur de manière à refuser la permission de conserver des données pour l'origine spécifiée.
+  - : La demande viole une décision politique, ou l'origine n'est pas [un schéma/hôte/port valide](/fr/docs/Web/Security/Same-origin_policy) (cela peut se produire si l'origine utilise le shéma `file:` ou `data:`, par exemple). Par exemple, l'utilisateur peut configurer son navigateur de manière à refuser la permission de conserver des données pour l'origine spécifiée.
 
 ## Exemple
 

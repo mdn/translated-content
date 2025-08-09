@@ -5,7 +5,7 @@ slug: Glossary/XHTML
 
 {{GlossarySidebar}}
 
-O [HTML](/pt-BR/docs/HTML) pode ser transferido através da internet para o navegador usando duas sintaxes: sintaxe HTML e sintaxe [XML](/pt-BR/docs/XML), também conhecido como XHTML.
+O [HTML](/pt-BR/docs/Web/HTML) pode ser transferido através da internet para o navegador usando duas sintaxes: sintaxe HTML e sintaxe [XML](/pt-BR/docs/Web/XML), também conhecido como XHTML.
 
 ## HTML5 e HTML/XHTML
 
@@ -55,10 +55,10 @@ Se você apresentar suas páginas `text/html` e acreditar que você está escrev
 
 - [No to XHTML](http://www.spartanicus.utvinternet.ie/no-xhtml.htm) um artigo excelente do Spartanicus
 - [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml) por David Hammond
-- [Sending XHTML as text/html Considered Harmful](http://www.hixie.ch/advocacy/xhtml) por Ian Hickson
-- [XHTML's Dirty Little Secret](http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) por Mark Pilgrim
-- [XHTML - What's the Point?](http://hsivonen.iki.fi/xhtml-the-point/) por Henri Sivonen
-- [XHTML is not for Beginners](http://lachy.id.au/log/2005/12/xhtml-beginners) por Lachlan Hunt
+- [Sending XHTML as text/html Considered Harmful](https://www.hixie.ch/advocacy/xhtml) por Ian Hickson
+- [XHTML's Dirty Little Secret](https://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) por Mark Pilgrim
+- [XHTML - What's the Point?](https://hsivonen.iki.fi/xhtml-the-point/) por Henri Sivonen
+- [XHTML is not for Beginners](https://lachy.id.au/log/2005/12/xhtml-beginners) por Lachlan Hunt
 
 ## Suporte
 
@@ -76,5 +76,5 @@ Veja [Properly Using CSS and JavaScript in XHTML Documents](/pt-BR/docs/Properly
 
 ## Veja também
 
-- [HTML](/pt-BR/docs/HTML)
+- [HTML](/pt-BR/docs/Web/HTML)
 - [Namespaces](/pt-BR/docs/Namespaces)

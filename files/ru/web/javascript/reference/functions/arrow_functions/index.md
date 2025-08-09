@@ -272,7 +272,7 @@ var func = (x, y) => {
 
 ## Возвращаемые объектные строки (литералы)
 
-Помните о том, что возвращаемые [объектные строки](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Литерал_объекта/) используют сокращённый синтаксис: `params => {object:literal}` будет работать не так, как ожидается.
+Помните о том, что возвращаемые [объектные строки](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#литерал_объекта/) используют сокращённый синтаксис: `params => {object:literal}` будет работать не так, как ожидается.
 
 ```js
 var func = () => { foo: 1 };
@@ -302,7 +302,7 @@ var func = ()
 
 ## Разбор порядка следования
 
-Поскольку стрелка в стрелочной функции не является оператором, то стрелочные функции имеют специальные правила разбора (парсинга), которые взаимодействуют с [приоритетами операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence/) иначе, чем в обычных функциях.
+Поскольку стрелка в стрелочной функции не является оператором, то стрелочные функции имеют специальные правила разбора (парсинга), которые взаимодействуют с [приоритетами операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence) иначе, чем в обычных функциях.
 
 ```js
 let callback;
@@ -375,8 +375,8 @@ setTimeout(() => {
 ### Замечания для Firefox
 
 - Первоначальная реализация стрелочных функций в Firefox автоматически переводила их в строгий режим. Это поведение было изменено в [Firefox 24](/ru/docs/Mozilla/Firefox/Releases/24). Использование `"use strict";` стало обязательным.
-- Стрелочные функции семантически отличаются от нестандартных [Expression Closures](/ru/docs/Web/JavaScript/Reference/Operators/Expression_closures), добавленных в [Firefox 3](/en-US/Firefox/Releases/3) (подробности в [Javascript 1.8](/ru/docs/Web/JavaScript/New_in_JavaScript/1.8)); в Expression Closures значение `this` не привязано лексически.
-- До [Firefox 39](/en-US/Firefox/Releases/39), перенос строки (`\n`) был ошибочно разрешён после аргументов стрелочной функции. Это было исправлено для соблюдения спецификации ES2015, и код вроде: `() \n => {}` теперь вызывает {{jsxref("SyntaxError")}} в этой и более поздних версиях.
+- Стрелочные функции семантически отличаются от нестандартных [Expression Closures](/ru/docs/Web/JavaScript/Reference/Operators/Expression_closures), добавленных в [Firefox 3](/ru/docs/Mozilla/Firefox/Releases/3) (подробности в [Javascript 1.8](/ru/docs/Web/JavaScript/New_in_JavaScript/1.8)); в Expression Closures значение `this` не привязано лексически.
+- До [Firefox 39](/ru/docs/Mozilla/Firefox/Releases/39), перенос строки (`\n`) был ошибочно разрешён после аргументов стрелочной функции. Это было исправлено для соблюдения спецификации ES2015, и код вроде: `() \n => {}` теперь вызывает {{jsxref("SyntaxError")}} в этой и более поздних версиях.
 
 ## Смотрите также
 

@@ -41,7 +41,7 @@ WebExtension API では、こうしたボタンの種類は "ブラウザーア�
 }
 ```
 
-これは "background.js"という名前の[バックグラウンドスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)と、"icons"ディレクトリーにあるブラウザーアクション(ボタン)を指定します。
+これは "background.js"という名前の[バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)と、"icons"ディレクトリーにあるブラウザーアクション(ボタン)を指定します。
 
 These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
 
@@ -77,7 +77,7 @@ button/
     manifest.json
 ```
 
-ここで[拡張機能をインストールして](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)ボタンをクリックします:
+ここで[拡張機能をインストールして](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)ボタンをクリックします:
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 
@@ -191,7 +191,7 @@ button/
 
 ## ページアクション
 
-[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions) はブラウザーアクションと同様ですが、ブラウザー全体でなく特定ページだけに関連するアクションという点だけが異なります。
+[ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) はブラウザーアクションと同様ですが、ブラウザー全体でなく特定ページだけに関連するアクションという点だけが異なります。
 
 ブラウザーアクションはいつも見えていて、ページアクションは関連するタブだけに見えています。ページアクションボタンはブラウザーツールバーでなく、URL バーに表示されます。
 
@@ -200,7 +200,6 @@ button/
 - [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) マニフェストキー
 - [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - ブラウザーアクションの例:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
@@ -209,5 +208,4 @@ button/
 - [`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) マニフェストキー
 - [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - ページアクションの例:
-
   - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)

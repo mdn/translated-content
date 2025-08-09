@@ -14,7 +14,25 @@ El método estático **`Map.groupBy()`** agrupa los elementos de un iterable, ut
 
 El método es útil principalmente cuando se quiere agrupar elementos que están asociados con un objeto, y particularmente cuando el objeto puede cambiar con el tiempo. Si el objeto es invariante, podrías en su lugar representarlo utilizando una cadena de caracteres _string_, y agrupando los elementos con {{jsxref("Object.groupBy()")}}.
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## Sintaxis
 
@@ -78,7 +96,7 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-Note que el argumento `{ quantity }` de la función, es un ejemplo básico de la [sintaxis de destructuración de objetos pasados como parámetros de función](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#desempacar_campos_de_objetos_pasados_como_parámetro_de_función). Esto desempaca la propiedad `quantity` del objeto pasado como parámetro, y lo asigna a la variable llamada `quantity` en el cuerpo de la función. Esta es una forma muy concisa de accesar los valores relevantes de elementos, dentro de una función.
+Note que el argumento `{ quantity }` de la función, es un ejemplo básico de la [sintaxis de destructuración de objetos pasados como parámetros de función](/es/docs/Web/JavaScript/Reference/Operators/Destructuring#desempacar_campos_de_objetos_pasados_como_parámetro_de_función). Esto desempaca la propiedad `quantity` del objeto pasado como parámetro, y lo asigna a la variable llamada `quantity` en el cuerpo de la función. Esta es una forma muy concisa de accesar los valores relevantes de elementos, dentro de una función.
 
 La llave de un `Map` puede ser modificada y aún usarse. Sin embargo no puedes recrear la llave y aún usarla. Por esa razón es importante que cualquiera que necesite usar el _map_ mantenga una referencia de sus llaves.
 

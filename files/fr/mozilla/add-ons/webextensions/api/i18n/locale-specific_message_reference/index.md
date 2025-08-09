@@ -8,7 +8,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 Chaque extension internationalisée a au moins un fichier nommé `messages.json` qui fournit des chaînes spécifiques aux paramètres régionaux. Cette page décrit le format des fichiers `messages.json`.
 
 > [!NOTE]
-> Pour plus d'informations sur l'internationalisation de vos extensions, consultez notre guide [i18n](/fr/Add-ons/WebExtensions/WebExtension_i18n).
+> Pour plus d'informations sur l'internationalisation de vos extensions, consultez notre guide [i18n](/fr/docs/Mozilla/Add-ons/WebExtensions/WebExtension_i18n).
 
 ## Exemple messages.json
 
@@ -65,7 +65,7 @@ Le nom peut inclure les caractères suivants :
 - @
 
 > [!NOTE]
-> Vous ne devez pas définir les noms commençant par @@. Ces noms sont réservés aux [messages prédéfinis](/fr/Add-ons/WebExtensions/Internationalization#Predefined_messages).
+> Vous ne devez pas définir les noms commençant par @@. Ces noms sont réservés aux [messages prédéfinis](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#predefined_messages).
 
 ### message
 
@@ -108,7 +108,7 @@ Le nom de l'espace réservé est utilisé pour représenter l'espace réservé d
 
 #### contenu
 
-L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript).
+L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#retrieving_message_strings_from_javascript).
 
 #### Exemple
 

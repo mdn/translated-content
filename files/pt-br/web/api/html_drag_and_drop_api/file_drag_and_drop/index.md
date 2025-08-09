@@ -7,14 +7,14 @@ slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 
 As interfaces HTML Drag and Drop permitem que os aplicativos da Web arrastem e soltem arquivos em uma página da Web. Este documento descreve como um aplicativo pode aceitar um ou mais arquivos que são arrastados do _gerenciador de arquivos da plataforma subjacente_ e soltado s em uma página da Web.
 
-Os principais passos para o drag and drop é definir a _drop zone_ (ou seja definir um elemento para a queda dos arquivos) e definir event handlers para os eventos {{event("drop")}} e {{event("dragover")}} . Essas etapas são descritas abaixo, incluindo exemplos de trechos de código. O codigo fonte esta disponivel em [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (pull requests e/ou issues são bem-vindas).
+Os principais passos para o drag and drop é definir a _drop zone_ (ou seja definir um elemento para a queda dos arquivos) e definir event handlers para os eventos [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event) e [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event) . Essas etapas são descritas abaixo, incluindo exemplos de trechos de código. O codigo fonte esta disponivel em [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (pull requests e/ou issues são bem-vindas).
 
 > [!NOTE]
 > Nota: {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}}Define duas APIs diferentes para suportar arrastar e soltar arquivos. Uma API é a interface {{domxref("DataTransfer")}} e a segunda API é a interface {{domxref("DataTransferItem")}} e {{domxref("DataTransferItemList")}}. Este exemplo ilustra o uso de ambas as APIs (e não usa nehuma interface específica do Gecko).
 
 ## Definindo a drop _zone_
 
-O elemento de destino do evento {{event("drop")}} precisa de um event handler global {{domxref("GlobalEventHandlers.ondrop","ondrop")}} O seguinte trecho de código mostra como isso é feito com um elemento: {{HTMLelement("div")}}
+O elemento de destino do evento [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event) precisa de um event handler global {{domxref("GlobalEventHandlers.ondrop","ondrop")}} O seguinte trecho de código mostra como isso é feito com um elemento: {{HTMLelement("div")}}
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);">
@@ -22,7 +22,7 @@ O elemento de destino do evento {{event("drop")}} precisa de um event handler gl
 </div>
 ```
 
-Normalmente, um aplicativo inclui um event handler {{event("dragover")}} no elemento de destino do drop e esse manipulador desativará o comportamento de arraste padrão do navegador. Para adicionar esse handler, você precisa incluir um event handler global {{domxref("GlobalEventHandlers.ondragover","ondragover")}}:
+Normalmente, um aplicativo inclui um event handler [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event) no elemento de destino do drop e esse manipulador desativará o comportamento de arraste padrão do navegador. Para adicionar esse handler, você precisa incluir um event handler global {{domxref("GlobalEventHandlers.ondragover","ondragover")}}:
 
 ```html
 <div
@@ -48,7 +48,7 @@ Por fim, um aplicativo pode querer estilizar o elemento da drop zone para indica
 
 ## Processo de drop
 
-O evento {{event("drop")}} é acionado quando o usuário solta o(s) arquivo(s) no drop handler, se o navegador suportar a interface {{domxref("DataTransferItemList")}} o metodo {{domxref("DataTransferItem.getAsFile","getAsFile()")}} será usado para acessar cada arquivo; caso contrário, a interface {{domxref("DataTransfer")}} usara a propriedade {{domxref("DataTransfer.files","files")}} para acessar cada arquivo.
+O evento [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event) é acionado quando o usuário solta o(s) arquivo(s) no drop handler, se o navegador suportar a interface {{domxref("DataTransferItemList")}} o metodo {{domxref("DataTransferItem.getAsFile","getAsFile()")}} será usado para acessar cada arquivo; caso contrário, a interface {{domxref("DataTransfer")}} usara a propriedade {{domxref("DataTransfer.files","files")}} para acessar cada arquivo.
 
 Este exemplo mostra como escrever o nome de cada arquivo arrastado, no console. Em um aplicativo real, um aplicativo pode querer processar um arquivo usando o {{domxref("File","File API")}}.
 
@@ -83,7 +83,7 @@ function dropHandler(ev) {
 
 ## Impedir o evento de arrastar padrão do navegador
 
-O seguinte event handler {{event("dragover")}} chama {{domxref("Event.preventDefault","preventDefault()")}} para desativar o manipulador padrão de arrastar e soltar do navegador.
+O seguinte event handler [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event) chama {{domxref("Event.preventDefault","preventDefault()")}} para desativar o manipulador padrão de arrastar e soltar do navegador.
 
 ```js
 function dragOverHandler(ev) {
@@ -97,5 +97,5 @@ function dragOverHandler(ev) {
 ## Veja também
 
 - [HTML Drag and Drop API](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/pt-BR/docs/Web/Guide/HTML/Drag_operations)
+- [Drag Operations](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

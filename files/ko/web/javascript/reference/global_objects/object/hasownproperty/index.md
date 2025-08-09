@@ -13,7 +13,21 @@ l10n:
 > **Note:** {{jsxref("Object.hasOwn()")}} 가 권장됩니다.
 > `hasOwnProperty()` 는 이를 지원하는 브라우저에서만 사용됩니다.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty("property1"));
+// Expected output: true
+
+console.log(object1.hasOwnProperty("toString"));
+// Expected output: false
+
+console.log(object1.hasOwnProperty("hasOwnProperty"));
+// Expected output: false
+```
 
 ## 구문
 
@@ -159,8 +173,8 @@ foo.hasOwnProperty("prop"); // Uncaught TypeError: foo.hasOwnProperty is not a f
 ## 같이 보기
 
 - {{jsxref("Object.hasOwn()")}}
-- [속성의 열거 가능성과 소유권](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [속성의 열거 가능성과 소유권](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

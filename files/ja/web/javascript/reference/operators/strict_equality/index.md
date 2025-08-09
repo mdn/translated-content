@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Strict_equality
 
 厳密等価演算子 (`===`) は、二つのオペランドが等しいことを検査し、論理値で結果を返します。[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子とは異なり、厳密等価演算子はオペランドの型が異なる場合、常に異なるものと判断します。
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Strict equality operator")}}
+
+```js interactive-example
+console.log(1 === 1);
+// Expected output: true
+
+console.log("hello" === "hello");
+// Expected output: true
+
+console.log("1" === 1);
+// Expected output: false
+
+console.log(0 === false);
+// Expected output: false
+```
 
 ## 構文
 
@@ -24,7 +38,6 @@ x === y;
 - 両方のオペランドが `null` または両方のオペランドが `undefined` であった場合は `true` を返します。
 - どちらかのオペランドが `NaN` であった場合は `false` を返します。
 - それ以外の場合は、2 つのオペランドの値を比較します。
-
   - 数値型は同じ値の数値である必要があります。 `+0` と `-0` は同じ値と見なされます。
   - 文字列型は同じ文字が同じ順序で並んでいる必要があります。
   - 論理型は両方が `true` であるか両方が `false` である必要があります。

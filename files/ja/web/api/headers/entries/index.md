@@ -1,16 +1,14 @@
 ---
-title: Headers.entries()
+title: "Headers: entries() メソッド"
+short-title: entries()
 slug: Web/API/Headers/entries
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 **`Headers.entries()`** メソッドは、このオブジェクトに含まれるすべてのキーと値のペアを走査する{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。それぞれのペアのキーと値は両方とも {{jsxref("String")}} オブジェクトです。
-
-> [!NOTE]
-> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
@@ -42,7 +40,7 @@ for (const pair of myHeaders.entries()) {
 
 結果は次の通りです。
 
-```
+```plain
 content-type: text/xml
 vary: Accept-Language
 ```
@@ -54,5 +52,5 @@ vary: Accept-Language
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

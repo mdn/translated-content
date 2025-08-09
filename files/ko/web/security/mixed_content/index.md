@@ -78,7 +78,7 @@ Firefox는 이 기능을 실험적인 기능으로 지원합니다. `security.mi
 
 ![혼합 콘텐츠 경고를 표시하는 웹 콘솔의 스크린샷입니다.](mixed_content_-_net_pane.png)
 
-웹 콘솔에서 이러한 경고를 찾을 수 있을 뿐만 아니라, [콘텐츠 보안 정책(CSP)](/ko/docs/Web/HTTP/CSP)을 사용하여 문제를 보고할 수도 있습니다. 웹사이트를 재귀적으로 검사하여 안전하지 않은 콘텐츠의 링크를 찾아주는 [SSL-check](https://www.jitbit.com/sslcheck/)나 [Missing Padlock](https://www.missingpadlock.com/)과 같은 온라인 크롤러를 사용할 수도 있습니다.
+웹 콘솔에서 이러한 경고를 찾을 수 있을 뿐만 아니라, [콘텐츠 보안 정책(CSP)](/ko/docs/Web/HTTP/Guides/CSP)을 사용하여 문제를 보고할 수도 있습니다. 웹사이트를 재귀적으로 검사하여 안전하지 않은 콘텐츠의 링크를 찾아주는 [SSL-check](https://www.jitbit.com/sslcheck/)나 [Missing Padlock](https://www.missingpadlock.com/)과 같은 온라인 크롤러를 사용할 수도 있습니다.
 
 Firefox 23부터 혼합 액티브 콘텐츠는 기본적으로 차단됩니다(환경설정을 통해 혼합 디스플레이 콘텐츠도 차단할 수 있음). 웹 개발자가 혼합 콘텐츠 오류를 쉽게 찾을 수 있도록 차단된 모든 혼합 콘텐츠 요청은 아래와 같이 웹 콘솔의 보안 창에 기록됩니다.
 
@@ -92,4 +92,4 @@ Firefox 23부터 혼합 액티브 콘텐츠는 기본적으로 차단됩니다(�
 ## 같이 보기
 
 - [혼합 콘텐츠 - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
-- [혼합 콘텐츠가 있는 웹사이트를 고치는 방법](/ko/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
+- [혼합 콘텐츠가 있는 웹사이트를 고치는 방법](/ko/docs/orphaned/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)

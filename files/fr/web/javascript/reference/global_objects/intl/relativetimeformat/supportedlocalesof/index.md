@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedL
 
 La méthode **`Intl.RelativeTimeFormat.supportedLocalesOf()`** renvoie un tableau contenant l'ensemble des locales, parmi celles fournies en argument, qui sont prises en charge pour le formatage internationalisé du temps relatif, sans avoir à utiliser la locale par défaut de l'environnement d'exécution.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-supportedlocalesof.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.supportedLocalesOf")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## Syntaxe
 
@@ -20,9 +29,7 @@ Intl.RelativeTimeFormat.supportedLocalesOf(locales[, options])
 - `locales`
   - : Un chaîne de caractères au format d'une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour plus d'informations sur le format de l'argument `locales`, voir la page {{jsxref("Intl", "Intl", "#L'identification_et_le_choix_de_la_locale")}}.
 - `options`
-
   - : Paramètre optionnel, un objet pouvant avoir la propriété suivante :
-
     - `localeMatcher`
       - : L'algorithme de correspondance entre locales à utiliser. Les valeurs possibles sont "lookup" et "best fit". Pour plus d'informations sur ce sujet, voir la page {{jsxref("Intl", "Intl", "#Choix_de_la_locale")}}.
 

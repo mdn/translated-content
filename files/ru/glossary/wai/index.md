@@ -11,4 +11,4 @@ _WAI_ или _Web Accessibility Initiative_ (англ. Инициатива до
 
 ### Базовые знания
 
-- [Сайт WAI](http://www.w3.org/WAI/)
+- [Сайт WAI](https://www.w3.org/WAI/)

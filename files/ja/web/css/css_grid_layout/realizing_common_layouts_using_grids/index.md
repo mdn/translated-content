@@ -5,8 +5,6 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{CSSRef}}
-
 今回の CSS グリッドレイアウトガイドの締めくくりとして、グリッドレイアウトを使ったデザインのテクニックをいくつか紹介します。ここでは、 [grid-template-areas](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas) を使った例と、典型的な 12 列の可変グリッドシステム、そして自動配置を使ったアイテムリストを見ていきます。これらの例からわかるように、多くの場合、グリッドレイアウトで望む結果を得るためには複数の方法があります。自分が解決しようとしている問題や、実現しようとしているデザインに合わせて、最も参考になる方法を選んでください。
 
 ## `grid-template-areas` を使用した、1 ～ 3 列の流動的なレスポンシブレイアウト
@@ -606,7 +604,7 @@ h2 {
 グリッドレイアウトを使いこなすには、ここで紹介したようなサンプルを作り続けるのが一番です。普段使っているフレームワークや浮動要素を使って作っているものを、グリッドを使って作れるかどうか試してみてください。また、現在の方法では作ることができない例を探すことも忘れてはいけません。雑誌やウェブ以外のものからインスピレーションを得るのもいいでしょう。グリッドレイアウトは、今までにない可能性を秘めています。古いレイアウトに縛られることなく、ぜひ活用してみてください。
 
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
-- [CSS レイアウト: グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
+- [CSS レイアウト: グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)
 - [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS-Tricks (2023)
 - [Grid by example](https://gridbyexample.com)
 - [CSS grid website layout examples](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm) on quackit.com

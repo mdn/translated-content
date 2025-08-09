@@ -9,7 +9,21 @@ l10n:
 
 **`Math.f16round()`** 정적 메서드는 숫자의 가장 가까운 [16비트 반정밀도 부동소수점](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) 표현을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-f16round.html")}}
+{{InteractiveExample("JavaScript Demo: Math.f16round()")}}
+
+```js interactive-example
+console.log(Math.f16round(5.5));
+// Expected output: 5.5
+
+console.log(Math.f16round(5.05));
+// Expected output: 5.05078125
+
+console.log(Math.f16round(5));
+// Expected output: 5
+
+console.log(Math.f16round(-5.05));
+// Expected output: -5.05078125
+```
 
 ## 구문
 

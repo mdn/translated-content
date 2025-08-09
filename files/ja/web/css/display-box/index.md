@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-{{CSSRef}}
-
 これらのキーワードは、要素が表示ボックスを作るかどうかを定義します。
 
 ## 構文
@@ -14,7 +12,6 @@ l10n:
 有効な `<display-box>` の値は以下のとおりです。
 
 - `contents`
-
   - : これらの要素は自身のために特定のボックスを生成しません。擬似ボックスやその子ボックスで置き換えられます。なお、 CSS Display Level 3 仕様書では、 `contents` の値が「普通ではない要素」 — 置換要素のように、 CSS ボックスの純粋な概念に従って表示されない要素に影響する方法を定義しています。詳しくは [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) を参照してください。
 
     _ブラウザーのバグにより、現在のところ、この値を使用するとアクセシビリティツリーから要素を削除します。 — 読み上げソフトは中に何があるかを見ません。詳しくは後述の[アクセシビリティの考慮](#アクセシビリティの考慮)の節をご覧ください。_
@@ -25,7 +22,7 @@ l10n:
 
 ## アクセシビリティの考慮
 
-多くのブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` である要素を削除します。これにより、その要素は — また、一部の版のブラウザーではその子孫要素も — 読み上げ技術で読み上げられなくなります。これは [CSSWG 仕様書](https://drafts.csswg.org/css-display/#the-display-properties)によれば、正しくない動作です。
+多くのブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` である要素を削除します。これにより、その要素は — また、一部の版のブラウザーではその子孫要素も — 読み上げ技術で読み上げられなくなります。これは [CSSWG 仕様書](https://drafts.csswg.org/css-display/#the-display-properties)によれば、正しくない動作です。
 
 - [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
@@ -100,7 +97,6 @@ p.secret {
 ## 関連情報
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

@@ -51,13 +51,12 @@ slug: Web/CSS/CSS_box_model
 
 ## Guias e ferramentas
 
-- [Introdução ao modelo de caixa CSS](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-
+- [Introdução ao modelo de caixa CSS](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - : Explicações de uma concepção fundamental no CSS, o modelo de caixa: descreve o sentido de margem, preenchimento, tambem como as diferentes áreas da caixa.
 
-- [Dominando o colapso da margem](/pt-BR/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Dominando o colapso da margem](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - : Na maioria dos casos, duas margens adjacentes são colapsadas em uma. Este artigo descreve quando isso acontecwe e como controlar isso.
-- [Gerador de sombra de caixa](/pt-BR/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator)
+- [Gerador de sombra de caixa](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
   - : Uma ferramenta interativa que permite criar sombras visualmente e gerar a sintaxe necessária para a propriedade {{cssxref("box-shadow")}}.
 
 ## Especificações

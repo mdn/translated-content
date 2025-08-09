@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 
 **`setUTCMinutes()`** 메서드는 표준시에 따라 지정된 날짜의 분을 설정합니다.
 
-{{EmbedInteractiveExample("pages/js/date-setutcminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCMinutes()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+
+console.log(date1.getUTCMinutes());
+// Expected output: 15
+
+date1.setUTCMinutes(25);
+
+console.log(date1.getUTCMinutes());
+// Expected output: 25
+```
 
 ## 구문
 

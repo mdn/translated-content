@@ -29,11 +29,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `ZoomChangeInfo`
-      - : [`object`](#ZoomChangeInfo). Informations sur l'événement de zoom.
+      - : [`object`](#zoomchangeinfo). Informations sur l'événement de zoom.
 
 ## Objets supplémentaires
 

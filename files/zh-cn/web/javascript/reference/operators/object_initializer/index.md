@@ -3,11 +3,29 @@ title: 对象初始化器
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 ---
 
-{{JsSidebar("Operators")}}
-
 **对象初始化器**是一个用大括号（`{}`）括起来的以逗号分隔的列表，包含了一个对象的零个或多个属性名称和相关值。可以通过 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 方法，或者使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符[调用其构造函数](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#使用构造函数)而初始化一个对象。
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+```
 
 ## 语法
 
@@ -129,7 +147,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-在 ES2015 之后，任何地方都允许重复属性名出现，也包括[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names)。你也可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中使用重复的属性名。唯一的例外是[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)，在整个类中它必须是唯一的。
+在 ES2015 之后，任何地方都允许重复属性名出现，也包括[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names)。你也可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中使用重复的属性名。唯一的例外是[私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)，在整个类中它必须是唯一的。
 
 ### 方法定义
 

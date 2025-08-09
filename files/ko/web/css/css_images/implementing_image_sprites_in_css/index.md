@@ -47,4 +47,4 @@ slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 
 ## 같이 보기
 
-- [Full working demo at CSS Tricks](http://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
+- [Full working demo at CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)

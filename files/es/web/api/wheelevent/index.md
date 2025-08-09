@@ -7,7 +7,8 @@ slug: Web/API/WheelEvent
 
 El interface **`WheelEvent`** retrata los eventos que ocurren cuando el usuario mueve la rueda del ratón o de un dispositivo similar.
 
-> **Nota:** **Esta es la forma estándar de usar el evento wheel.**
+> [!NOTE]
+> **Esta es la forma estándar de usar el evento wheel.**
 >
 > Antiguas versiones de navegadores implementaron dos formas no-estándar y no-compatibles-entre-navegadores, los interfaces {{ domxref("MouseWheelEvent") }} y {{domxref("MouseScrollEvent")}}. Utilice este interfaz y evite los dos últimos.
 
@@ -29,7 +30,6 @@ _Este interfaz hereda propiedades de estos padres, {{domxref("MouseEvent")}}, {{
 - {{domxref("WheelEvent.deltaZ")}} {{readonlyinline}}
   - : Devuelve un doble que representa la cantidad de desplazamiento del eje-z.
 - {{domxref("WheelEvent.deltaMode")}} {{readonlyinline}}
-
   - : Devuelve un entero largo sin signo que representa la unidad manejada por los valores de cantidad de desplazamiento delta. Los valores permitidos son:
 
     | Constant          | Value  | Description                                       |
@@ -52,8 +52,7 @@ _Este interfaz no define ningún método, pero hereda métodos de estos padres, 
 
 ## Ver también
 
-- [`wheel`](/es/docs/Web/Reference/Events/wheel)
+- [`wheel`](/es/docs/Web/API/Element/wheel_event)
 - Interfaces reemplazados por este:
-
   - Objeto del evento de la rueda del ratón legado de la plataforma Gecko: {{ domxref("MouseScrollEvent") }}
   - Navegadores no-gecko, objeto del evento de la rueda del ratón legado: {{ domxref("MouseWheelEvent") }}

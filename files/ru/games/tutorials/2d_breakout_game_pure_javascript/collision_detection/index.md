@@ -3,9 +3,9 @@ title: Обнаружение столкновений
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
 
-{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-Это 7 шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код, как он будет выглядеть после завершения этого урока, тут [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
+Это 7 шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код, как он будет выглядеть после завершения этого урока, тут [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
 
 У нас уже есть кирпичи, появляющиеся на экране, но игра все ещё не так интересна, ведь мяч проходит сквозь них. Нам нужно подумать о добавлении обнаружения столкновений, чтобы он мог отскакивать от кирпичей и ломать их.
 
@@ -130,6 +130,6 @@ collisionDetection();
 
 ## Следующие шаги
 
-Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться [отслеживать счёт и выигрывать](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
+Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться [отслеживать счёт и выигрывать](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

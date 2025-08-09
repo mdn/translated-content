@@ -9,7 +9,20 @@ l10n:
 
 **`search()`** は {{jsxref("String")}} 値のメソッドで、正規表現とこの文字列の一致する箇所を検索し、文字列内の最初に一致する箇所の位置を返します。
 
-{{EmbedInteractiveExample("pages/js/string-search.html")}}
+{{InteractiveExample("JavaScript デモ: String.search()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// Anything not a word character, whitespace or apostrophe
+const regex = /[^\w\s']/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 41
+
+console.log(paragraph[paragraph.search(regex)]);
+// Expected output: "!"
+```
 
 ## 構文
 
@@ -20,7 +33,6 @@ search(regexp)
 ### 引数
 
 - `regexp`
-
   - : 正規表現オブジェクト、または [`Symbol.search`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/search) メソッドを持つ任意のオブジェクトです。
 
     `regexp` が `RegExp` オブジェクトでなく、`Symbol.search` メソッドもなかった場合は、{{jsxref("RegExp")}} オブジェクトに `new RegExp(regexp)` を使用して暗黙的に変換されます。

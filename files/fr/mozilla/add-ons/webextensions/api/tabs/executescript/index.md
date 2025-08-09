@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 Injecte du code JavaScript dans une page.
 
-Vous pouvez injecter du code dans des pages dont l'URL peut être exprimée à l'aide d'un [modèle de correspondance](/fr/Add-ons/WebExtensions/Match_patterns)&nbsp;: son schéma doit être "http", "https", "file", "ftp". Pour ce faire, vous devez disposer de la permission pour l'URL de la page, soit explicitement en tant que [permission d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), ou via la [permission activeTab](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+Vous pouvez injecter du code dans des pages dont l'URL peut être exprimée à l'aide d'un [modèle de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)&nbsp;: son schéma doit être "http", "https", "file", "ftp". Pour ce faire, vous devez disposer de la permission pour l'URL de la page, soit explicitement en tant que [permission d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), ou via la [permission activeTab](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
 Vous pouvez également injecter du code dans des pages empaquetées avec votre propre extension :
 
@@ -23,9 +23,9 @@ Vous n'avez pas besoin de permissions spéciales pour le faire.
 
 Vous _ne pouvez pas_ injecter de code dans les pages intégrées du navigateur, par exemple : about:debugging, about:addons, ou sur la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.
 
-Les scripts que vous injectez s'appellent des scripts de contenu. [En savoir plus sur les scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts).
+Les scripts que vous injectez s'appellent des scripts de contenu. [En savoir plus sur les scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -41,9 +41,7 @@ var executing = browser.tabs.executeScript(
 - `tabId` {{optional_inline}}
   - : `integer`. L'ID de l'onglet dans lequel exécuter le script. Par défaut, l'onglet actif de la fenêtre en cours.
 - `details`
-
   - : Un objet décrivant le script à exécuter. Il contient les propriétés suivantes&nbsp;:
-
     - `allFrames` {{optional_inline}}
       - : `boolean`. Si `true`, le code sera injecté dans toutes les cadres de la page courante. Si `true` et `frameId` est défini, alors il y aura une erreur, frameId et allFrames sont mutuellement exclusifs. Si c'est `false`, le code n'est injecté que dans le cadre supérieur. La valeur par défaut est `false`.
     - `code` {{optional_inline}}
@@ -59,16 +57,16 @@ var executing = browser.tabs.executeScript(
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) résolue avec un tableau d'objets représentant le résultat du script dans chaque cadre où le script a été injecté.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) résolue avec un tableau d'objets représentant le résultat du script dans chaque cadre où le script a été injecté.
 
-Le résultat du script est la dernière instruction évaluée, ce qui est similaire à ce qui serait produit (les résultats, pas les affichages de `console.log()`) si vous exécutiez le script dans la [Console Web](/fr/docs/Outils/Console_Web). Par exemple, considérez un script comme celui-ci&nbsp;:
+Le résultat du script est la dernière instruction évaluée, ce qui est similaire à ce qui serait produit (les résultats, pas les affichages de `console.log()`) si vous exécutiez le script dans la [Console Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). Par exemple, considérez un script comme celui-ci&nbsp;:
 
 ```js
 var foo = "my result";
 foo;
 ```
 
-Ici, le tableau des résultats contiendra la chaîne `"my result"` en tant qu'élément. Les valeurs de résultat doivent être [clonables structurées](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure). La dernière déclaration peut également être une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), mais cette fonctionnalité n'est pas supportée par la bibliothèque [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript).
+Ici, le tableau des résultats contiendra la chaîne `"my result"` en tant qu'élément. Les valeurs de résultat doivent être [clonables structurées](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). La dernière déclaration peut également être une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), mais cette fonctionnalité n'est pas supportée par la bibliothèque [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript).
 Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples

@@ -9,7 +9,8 @@ l10n:
 
 **CSSStyleSheet.insertRule()** メソッドは、新しい [CSS ルール](/ja/docs/Web/API/CSSRule)を[現在のスタイルシート](/ja/docs/Web/API/CSSStyleSheet)に挿入します。
 
-> **メモ:** `insertRule()` は {{domxref("CSSStyleSheet")}} 専用のメソッドですが、実際にはルールを `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` に、内部的には {{domxref("CSSRuleList")}} に挿入します。
+> [!NOTE]
+> `insertRule()` は {{domxref("CSSStyleSheet")}} 専用のメソッドですが、実際にはルールを `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` に、内部的には {{domxref("CSSRuleList")}} に挿入します。
 
 ## 構文
 
@@ -21,11 +22,9 @@ insertRule(rule, index)
 ### 引数
 
 - `rule`
-
   - : 挿入されるルールが入った文字列です。どのようなルールを挿入するかは、種類によります。
-
-    - **[ルールセット](/ja/docs/Web/CSS/Syntax#css_の文)** の場合、[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)とスタイル定義です。
-    - **[アットルール](/ja/docs/Web/CSS/At-rule)** の場合、アットマーク付き識別子とルールの内容です。
+    - **[ルールセット](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の文)** の場合、[セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)とスタイル定義です。
+    - **[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)** の場合、アットマーク付き識別子とルールの内容です。
 
 - `index` {{optional_inline}}
   - : `stylesheet.cssRules.length` 以下の正の数で、 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` の中で新しく挿入されるルールの位置を示します。既定値は `0` です。（古い実装では、これは必須でした。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。）

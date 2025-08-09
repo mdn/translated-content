@@ -9,7 +9,19 @@ l10n:
 
 **`Object.fromEntries()`** 静的メソッドは、キーと値の組み合わせのリストをオブジェクトに変換します。
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript デモ: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## 構文
 
@@ -20,9 +32,7 @@ Object.fromEntries(iterable)
 ### 引数
 
 - `iterable`
-
   - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)、例えば {{jsxref("Array")}} や {{jsxref("Map")}} など、オブジェクトを含むリスト。それぞれのオブジェクトには 2 つのプロパティがあります。
-
     - `0`
       - : 文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)で、プロパティのキーを表します。
     - `1`
@@ -40,7 +50,8 @@ Object.fromEntries(iterable)
 
 `Object.fromEntries()` は {{jsxref("Object.entries()")}} の逆の動作をしますが、 `Object.entries()` は文字列キーのプロパティしか返さないのに対し、 `Object.fromEntries()` はシンボルキーのプロパティも作成することができます。
 
-> **メモ:** {{jsxref("Array.from()")}} と異なり、 `Object.fromEntries()` は `this` の値を使用しないので、他のコンストラクターで呼び出してもその型のオブジェクトは作成されません。
+> [!NOTE]
+> {{jsxref("Array.from()")}} と異なり、 `Object.fromEntries()` は `this` の値を使用しないので、他のコンストラクターで呼び出してもその型のオブジェクトは作成されません。
 
 ## 例
 

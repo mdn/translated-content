@@ -11,5 +11,5 @@ DNS 主要的功能，是將人類易於辨識的域名（例如 mozilla.org）�
 
 ## 參見
 
-- [什麼是域名?](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [什麼是域名?](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
 - 維基百科上的[域名系統](https://zh.wikipedia.org/wiki/域名系统)

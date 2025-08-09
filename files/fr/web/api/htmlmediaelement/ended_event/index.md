@@ -11,7 +11,6 @@ L'événement se produit dans deux contextes liés mais unique:
 
 - Les éléments basés sur {{domxref("HTMLMediaElement")}} ({{HTMLElement("audio")}} et {{HTMLElement("video")}}) déclenchent **ended** lorsque la lecture du média atteint la fin.
 - Les pistes de flux média, qui sont basées sur l'interface {{domxref("MediaStreamTrack")}}, déclenchent **`ended`** lorsque la source de la piste interrompt définitivement l'envoi de données sur le flux. Il y'a différentes manières d'y arriver:
-
   - il n'y a plus de données à envoyer.
   - L'utilisateur a révoqué les autorisations nécessaires pour que les données soient envoyées.
   - Le matériel générant les données source a été supprimé ou éjecté.
@@ -20,7 +19,7 @@ L'événement se produit dans deux contextes liés mais unique:
 ## Informations générales
 
 - Spécification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended) et [Media Capture and Streams](https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended) et [Media Capture and Streams](https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended)
 - Interface
   - : {{domxref("Event")}}
 - Propagation

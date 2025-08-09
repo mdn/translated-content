@@ -24,9 +24,7 @@ cache.delete(request,{options}).then(function(true) {
 - request
   - : {{domxref("Request")}}, который вы хотите удалить.
 - options {{optional_inline}}
-
   - : Объект, чьи свойства контролируют как будет выполняться сопоставление ключей при вызове `delete`. Допустимые значения:
-
     - `ignoreSearch`: Булево значение {{domxref("Boolean")}}, которое определяет будет ли процесс сопоставления игнорировать строку запроса в url. Если установлено в `true`, часть `?value=bar` запроса `http://foo.com/?value=bar` будет проигнорирована при сопоставлении ключей. По умолчанию установлено в `false`.
     - `ignoreMethod`: Булево значение {{domxref("Boolean")}}, которое, если равно `true`, предотвращает проверку {{domxref("Request")}} при сопоставлении ключей на `HTTP` метод (обычно допускаются только `GET` и `HEAD`). По умолчанию установлено в `false`.
     - `ignoreVary`: Булево значение {{domxref("Boolean")}}, которое, если равно `true,` указывает операции сопоставления ключей не проводить проверку заголовка `VARY`. Другими словами, если URL совпадает, вы получите соответствие, независимо от того, есть ли заголовок `VARY` на объекте запроса {{domxref("Response")}}. По умолчанию установлено в `false`.
@@ -52,6 +50,6 @@ caches.open("v1").then(function (cache) {
 
 ## Смотрите также
 
-- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование сервис воркеров](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

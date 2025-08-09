@@ -9,7 +9,18 @@ l10n:
 
 **`findLastIndex()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列を逆順で反復処理し、指定したテスト関数を満たす最初の要素のインデックスを返します。テスト関数を満たす値がなかった場合は、-1 を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.findLastIndex()")}} と同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-findlastindex.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.findLastIndex()")}}
+
+```js interactive-example
+function isNegative(element /*, index, array */) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, -20, 30, -40, 50]);
+
+console.log(int8.findLastIndex(isNegative));
+// Expected output: 3
+```
 
 ## 構文
 

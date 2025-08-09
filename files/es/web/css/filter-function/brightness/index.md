@@ -3,13 +3,35 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness
 ---
 
-{{cssref}}
-
 La función **`brightness()`** [CSS](/es/docs/Web/CSS) aplica un multiplicador linear a la imagen, haciendo que su apariencia sea más brallante u oscura. Su resultado es un {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-brightness.html")}}
+{{InteractiveExample("CSS Demo: brightness()")}}
 
-El código de este ejemplo interactivo se encuentra en GitHub repository. Si desea contribuir en el proyecto de ejemplos interactivos, por favor clone el repositorio <https://github.com/mdn/interactive-examples> y envie un pull request.
+```css interactive-example-choice
+filter: brightness(1);
+```
+
+```css interactive-example-choice
+filter: brightness(1.75);
+```
+
+```css interactive-example-choice
+filter: brightness(50%);
+```
+
+```css interactive-example-choice
+filter: brightness(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Sintaxis
 

@@ -27,17 +27,15 @@ Response.json(data, options)
 - `data`
   - : レスポンス本体として使用する JSON データ。
 - `options` {{optional_inline}}
-
   - : レスポンスの設定（ステータスコード、ステータステキスト、ヘッダーなど）の入ったオプションオブジェクト。
     これは、{{domxref("Response.Response", "Response()")}} コンストラクターのオプション引数と同じです。
-
     - `status`
       - : レスポンスのステータスコード、例えば `200` です。
     - `statusText`
       - : ステータスコードに関連付けられたステータスメッセージ。
         ステータスが `200` の場合、これは `OK` になるでしょう。
     - `headers`
-      - : レスポンスに追加したいヘッダーを、{{domxref("Headers")}} オブジェクト、または文字列のキーと値の組からなるオブジェクトリテラル（リファレンスは [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)を参照ください）に入れたものです。
+      - : レスポンスに追加したいヘッダーを、{{domxref("Headers")}} オブジェクト、または文字列のキーと値の組からなるオブジェクトリテラル（リファレンスは [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)を参照ください）に入れたものです。
 
 ### 返値
 

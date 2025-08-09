@@ -3,8 +3,6 @@ title: content
 slug: Web/CSS/content
 ---
 
-{{CSSRef}}
-
 << [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen
@@ -53,9 +51,9 @@ content: attr(alt)
 
 ### Ver también
 
-[(CSS2 en)](http://www.w3.org/TR/REC-CSS2/generate.html#content)
-[(CSS2 1 en)](http://www.w3.org/TR/CSS21/generate.html#content)
-[(CSS3 en)](http://www.w3.org/TR/css3-content/#inserting3)
+[(CSS2 en)](https://www.w3.org/TR/REC-CSS2/generate.html#content)
+[(CSS2 1 en)](https://www.w3.org/TR/CSS21/generate.html#content)
+[(CSS3 en)](https://www.w3.org/TR/css3-content/#inserting3)
 
 Categorías
 

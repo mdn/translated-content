@@ -7,9 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 **`RegExp`** 생성자는 패턴을 사용해 텍스트를 판별할 때 사용하는 정규 표현식 객체를 생성합니다.
 
-정규 표현식에 대한 소개는 [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)을 참고하세요.
+정규 표현식에 대한 소개는 [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_expressions)을 참고하세요.
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 ## 구문
 
@@ -25,7 +39,7 @@ RegExp(pattern[, flags])
 
 - `pattern`
   - : 정규 표현식을 나타내는 텍스트.
-    ES5부터는, 생성자 표기법에 한정하여 다른 `RegExp` 객체 혹은 리터럴을 사용할 수 있습니다. 패턴은 [특수 문자](/ko/docs/Web/JavaScript/Guide/정규식#특수_문자_사용하기)를 포함할 수 있어서 일반적인 문자열 리터럴보다 더 넓은 범위의 값을 판별할 수 있습니다.
+    ES5부터는, 생성자 표기법에 한정하여 다른 `RegExp` 객체 혹은 리터럴을 사용할 수 있습니다. 패턴은 [특수 문자](/ko/docs/Web/JavaScript/Guide/Regular_expressions#특수_문자_사용하기)를 포함할 수 있어서 일반적인 문자열 리터럴보다 더 넓은 범위의 값을 판별할 수 있습니다.
 - `flags`
   - : 정규 표현식에 추가할 플래그.
     정규 표현식 객체를 패턴으로 제공한 경우 `flags` 문자열은 제공한 객체의 플래그를 모두 대체하며 `lastIndex`를 `0`으로 초기화합니다. (ES2015 이후)
@@ -75,6 +89,6 @@ new RegExp("ab+c", "i"); // 생성자
 
 ## 같이 보기
 
-- [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

@@ -8,9 +8,10 @@ l10n:
 
 {{APIRef("Web Components")}}{{Non-standard_header}}
 
-**`ariaRelevant`** は {{domxref("ElementInternals")}} インターフェイスのプロパティで、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性の値を反映します。この属性は、ライブ領域内のアクセシビリティツリーが変更されたときにユーザーエージェントがどのような通知を発生させるかを示します。これは `aria-live` 領域内のどのような変更が関連性があり、告知されるべきかを記述するために使用します。
+**`ariaRelevant`** は {{domxref("ElementInternals")}} インターフェイスのプロパティで、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性の値を反映します。この属性は、ライブ領域内のアクセシビリティツリーが変更されたときにユーザーエージェントがどのような通知を発生させるかを示します。これは `aria-live` 領域内のどのような変更が関連性があり、告知されるべきかを記述するために使用します。
 
-> **メモ:** `ElementInternals` に aria 属性を設定すると、カスタム要素に既定の意味づけを定義することができます。これらは作成者が定義した属性によって上書きされる可能性がありますが、作成者が属性を削除したり、まったく追加しなかった場合でも、確実に既定の意味づけを保持することができます。より詳しい情報は、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
+> [!NOTE]
+> `ElementInternals` に aria 属性を設定すると、カスタム要素に既定の意味づけを定義することができます。これらは作成者が定義した属性によって上書きされる可能性がありますが、作成者が属性を削除したり、まったく追加しなかった場合でも、確実に既定の意味づけを保持することができます。より詳しい情報は、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
 
 ## 値
 

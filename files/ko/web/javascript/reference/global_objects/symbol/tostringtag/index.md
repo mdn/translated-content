@@ -9,7 +9,18 @@ l10n:
 
 **`Symbol.toStringTag`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@toStringTag`를 나타냅니다. {{jsxref("Object.prototype.toString()")}}은 객체의 유형을 나타내는 문자열을 포함하는 속성의 `this` 값에서 이 기호를 검색합니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}
+
+```js interactive-example
+class ValidatorClass {
+  get [Symbol.toStringTag]() {
+    return "Validator";
+  }
+}
+
+console.log(Object.prototype.toString.call(new ValidatorClass()));
+// Expected output: "[object Validator]"
+```
 
 ## 값
 

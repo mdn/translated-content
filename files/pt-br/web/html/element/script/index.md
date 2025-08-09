@@ -31,7 +31,7 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Pais permitidos</th>
@@ -61,7 +61,6 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `async`
-
   - : Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.
 
     > [!WARNING]
@@ -72,10 +71,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     Veja [Browser compatibility](#browser_compatibility) para notas no suporte do navegador. Veja também [Scripts assíncronos para asm.js](/pt-BR/docs/Games/Techniques/Async_scripts).
 
 - `crossorigin`
-  - : Elementos `script` passam o mínimo de informação para {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} em scripts que não passem na checagem do [CORS](/pt-BR/docs/HTTP_access_control). Para permitir logs de erro para sites que usam domínios diferentes para arquivos estáticos, use esse atributo. Veja [CORS settings attributes](/pt-BR/docs/Web/HTML/CORS_settings_attributes) para uma explicação mais detalhada dos argumentos válidos.
+  - : Elementos `script` passam o mínimo de informação para {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} em scripts que não passem na checagem do [CORS](/pt-BR/docs/Web/HTTP/Guides/CORS). Para permitir logs de erro para sites que usam domínios diferentes para arquivos estáticos, use esse atributo. Veja [CORS settings attributes](/pt-BR/docs/Web/HTML/Attributes/crossorigin) para uma explicação mais detalhada dos argumentos válidos.
 - `defer`
-
-  - : Esse atributo Boleano é usado para indicar ao navegador que o script deve ser executado depois que o documento tenha sido parseado, mas antes de disparar o evento {{event("DOMContentLoaded")}}
+  - : Esse atributo Boleano é usado para indicar ao navegador que o script deve ser executado depois que o documento tenha sido parseado, mas antes de disparar o evento [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
 
     Scripts com o atributo `defer` vão impedir que o evento DOMContentLoaded seja disparado até que o script seja carregado e tenha terminado de ser _avaliado_.
 
@@ -93,16 +91,14 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `text`
   - : Like the `textContent`attribute, this attribute sets the text content of the element. Unlike the `textContent` attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
 - `type`
-
   - : Indicates the type of script represented. The value of this attribute will be in one of the following categories:
-
-    - **Omitted or a JavaScript MIME type:** For HTML5-complient browsers this indicates the script is JavaScript. HTML5 spec urges authors to omit the attribute rather than provided a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+    - **Omitted or a JavaScript MIME type:** For HTML5-complient browsers this indicates the script is JavaScript. HTML5 spec urges authors to omit the attribute rather than provided a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/pt-BR/docs/Web/HTTP/Guides/MIME_types).
     - **`module`:** For HTML5-complient browsers the code is treated as a JavaScript module. Processing of the script contents are not affected by the `charset` and `defer` attributes. For information on using `module`, see [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/). {{experimental_inline}}
     - **Any other value or MIME type:** Embedded content is treated as a data block which won't be processed by the browser. The `src` attribute will be ignored.
 
     Note that in Firefox you can use advanced features such as let statements and other features in later JS versions, by using `type=application/javascript;version=1.8` {{Non-standard_inline}}. Beware, however, that as this is a non-standard feature, this will most likely break support for other browsers, in particular Chromium-based browsers.
 
-    For how to include _exotic programming languages_, read about [Rosetta](/pt-BR/Add-ons/Code_snippets/Rosetta).
+    For how to include _exotic programming languages_, read about [Rosetta](/pt-BR/docs/Mozilla/Add-ons/Code_snippets/Rosetta).
 
 ### Atributos obsoletos
 
@@ -115,7 +111,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 Scripts without `async` or `defer` attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.
 
-The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`), a video type (`video/*`), an audio (`audio/*`) type, or `text/csv`. If the script is blocked, an {{event("error")}} is sent to the element, if not a {{event("success")}} event is sent.
+The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`), a video type (`video/*`), an audio (`audio/*`) type, or `text/csv`. If the script is blocked, an [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) is sent to the element, if not a [`success`](/pt-BR/docs/Web/API/IDBRequest/success_event) event is sent.
 
 ## Exemplos
 

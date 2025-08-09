@@ -13,5 +13,5 @@ l10n:
 
 ## 参见
 
-- [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps)
+- [CSS 入门](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 - 维基百科上的[样式表](https://zh.wikipedia.org/wiki/样式表)

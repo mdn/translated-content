@@ -1,11 +1,11 @@
 ---
-title: ":last-of-type"
+title: :last-of-type
 slug: Web/CSS/:last-of-type
 ---
 
 {{CSSRef}}
 
-[CSS](/ru/docs/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:last-of-type`** находит последнего потомка с заданным тегом в списке детей родительского элемента.
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** находит последнего потомка с заданным тегом в списке детей родительского элемента.
 
 ```css
 /* Выбирает <p>, являющийся последним элементом

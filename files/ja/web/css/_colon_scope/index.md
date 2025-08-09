@@ -1,11 +1,9 @@
 ---
-title: ":scope"
+title: :scope
 slug: Web/CSS/:scope
 l10n:
   sourceCommit: 88930816e169c5b51afdfcd22c3b2c54383a22b7
 ---
-
-{{CSSRef}}
 
 **`:scope`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、セレクターが選択する対象の参照点である要素を表します。
 
@@ -150,7 +148,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 #### 結果
 
-`context` のスコープは [`id`](/ja/docs/Web/HTML/Global_attributes#id) が `context` である要素です。選択される要素は、そのコンテキストの直接の子である `<div>` 要素、すなわち `element-1` と `element-2` です。
+`context` のスコープは [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が `context` である要素です。選択される要素は、そのコンテキストの直接の子である `<div>` 要素、すなわち `element-1` と `element-2` です。
 
 {{ EmbedLiveSample('Using :scope in JavaScript') }}
 
@@ -164,9 +162,9 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 ## 関連情報
 
-- {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/At-rule)
+- {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
 - {{cssxref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} および {{domxref("DocumentFragment.querySelectorAll()")}}

@@ -3,8 +3,6 @@ title: CSS彈性盒子用法
 slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 ---
 
-{{CSSRef}}
-
 CSS3 **彈性盒子**，又稱**flexbox**，是為了適應不同螢幕尺寸和顯示設備而生的[佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)。針對許多應用而言，不用 floats 的彈性盒子模型會比塊狀模型（block model）易用，彈性容器的邊緣也不會與內容的邊緣重疊。
 
 多數設計師會發現 flexbox 用起來比 box 簡單得多。像是不多注意 `div` 的話，它就會經常違反設計師意願地，跑到頁頂去 ── 令 footer 附著在頁底，也因此變得很棘手。flexbox 的寬高能改變以適應顯示空間，將較低的元件固定住。Flexbox 邏輯也能讓你確實令 `div` 壓在頁面的右方或底部。Flexbox 元素的顯示順序，與原始碼的顯示順序相互獨立。
@@ -258,9 +256,9 @@ Recall that while the display order of the elements is independent of their orde
 
 有時候配置 Flex item 的演算法會有點難以理解。因此，在設計 Flexible box 時有一些指引，能讓你避免負面意義上的驚嘆。
 
-Flexible box 通常會盡量貼合 [writing mode](/zh-TW/docs/CSS/writing-mode) 的配置，這意味著 **main start** 與 **main end** 會基於 **start** 與 **end** 的位置來配置。
+Flexible box 通常會盡量貼合 [writing mode](/zh-TW/docs/Web/CSS/writing-mode) 的配置，這意味著 **main start** 與 **main end** 會基於 **start** 與 **end** 的位置來配置。
 
-**cross start** 與 **cross end** 依賴 **start** 或 **before** 的定義的位置，其依賴 [`direction` 的值](/zh-TW//docs/Web/CSS/direction)。
+**cross start** 與 **cross end** 依賴 **start** 或 **before** 的定義的位置，其依賴 [`direction` 的值](/zh-TW_docs/Web/CSS/direction)。
 
 Page breaks are possible in flexible boxes layout as long as `break-` property allows it. CSS3 `break-after`, `break-before`, and `break-inside` as well as CSS 2.1 `page-break-before`, `page-break-after`, and `page-break-inside` properties are accepted on a flex container, flex items, and inside flex items.
 

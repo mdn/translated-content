@@ -122,6 +122,6 @@ for (var i = 0; i < files.length; i++) {
 
 ## 參見
 
-- [在網頁應用程式中使用本地檔案](/zh-TW/docs/Using_files_from_web_applications)
+- [在網頁應用程式中使用本地檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("FileReader")}}

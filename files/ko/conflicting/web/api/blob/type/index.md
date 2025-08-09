@@ -6,7 +6,7 @@ original_slug: Web/API/File/type
 
 {{APIRef("File API")}}
 
-**`type`** 속성은 {{domxref("File")}} 객체가 나타내는 파일의 미디어 유형([MIME](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types))을 반환합니다.
+**`type`** 속성은 {{domxref("File")}} 객체가 나타내는 파일의 미디어 유형([MIME](/ko/docs/Web/HTTP/Guides/MIME_types))을 반환합니다.
 
 ## 값
 
@@ -61,5 +61,5 @@ filepicker.addEventListener("change", (event) => {
 
 ## 같이 보기
 
-- [웹 어플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 어플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)
 - [Be skeptical of client-reported MIME types](https://textslashplain.com/2018/07/26/be-skeptical-of-client-reported-mime-content-types/)

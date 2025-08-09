@@ -10,7 +10,7 @@ l10n:
 MDN Web Docs 스태프와 연락하거나 커뮤니티 논의에 참여할 수 있는 소통 창구는 다양합니다.
 
 > [!NOTE]
-> 이 글에서는 MDN Web Docs의 글로벌 커뮤니티를 다룹니다. 한국어 소통 창구는 [지역화](/ko/docs/MDN/Community/Contributing/Translated_content) 문서에서 확인하세요.
+> 이 글에서는 MDN Web Docs의 글로벌 커뮤니티를 다룹니다. 한국어 소통 창구는 [지역화](/ko/docs/MDN/Community/Translated_content) 문서에서 확인하세요.
 
 ## 채팅방
 
@@ -47,7 +47,7 @@ GitHub Discussions를 통해 질문을 게시하고 제안을 제안하세요.
 
 ## 소셜 미디어
 
-MDN Web Docs를 [Mastodon](https://mozilla.social/@mdn)과 [X](https://x.com/MozDevNet)에서 팔로우할 수 있습니다.
+MDN Web Docs를 [Mastodon](https://mastodon.social/@mdn)과 [X](https://x.com/MozDevNet)에서 팔로우할 수 있습니다.
 공유하고 싶은 내용이 있거나 인사를 하고 싶다면 자유롭게 저희를 태그해 주세요. 모든 게시물에 응답할 수는 없지만요.
 
 ## 공개 토론방
@@ -60,7 +60,7 @@ MDN Web Docs를 [Mastodon](https://mozilla.social/@mdn)과 [X](https://x.com/Moz
 
 ## 현지화 채널
 
-각 현지화 팀은 [자체적으로 소통 방법](/ko/docs/MDN/Community/Contributing/Translated_content)을 가지고 있습니다.
+각 현지화 팀은 [자체적으로 소통 방법](/ko/docs/MDN/Community/Translated_content)을 가지고 있습니다.
 
 ## 이메일
 

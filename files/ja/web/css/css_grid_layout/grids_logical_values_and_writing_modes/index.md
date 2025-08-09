@@ -2,10 +2,8 @@
 title: グリッド、論理的な値、書字方向
 slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 l10n:
-  sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
+  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
 ---
-
-{{CSSRef}}
 
 一連のガイドでは、グリッドレイアウトの重要な特徴である、仕様に組み込まれているさまざまな書字方向への対応についてすでに触れています。このガイドでは、グリッドやその他の最新のレイアウト方法のこの機能について、書字方向や論理的プロパティおよび物理的プロパティについて少しずつ学んでいきたいと思います。
 
@@ -65,7 +63,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("","",200)}}
+{{EmbedLiveSample("Issues with physical properties","",200)}}
 
 これは、 CSS で使用される物理的な値やプロパティの問題点を示すとても単純な例です。これらのプロパティは、テキストが左から右、上から下に流れていると仮定しているため、ブラウザーが書字方向を切り替えるための作業が行いにくくなります。
 
@@ -467,9 +465,9 @@ p {
     <p>
       Nori grape silver beet broccoli kombu beet greens fava bean potato
       quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
-      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
-      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
-      chicory celtuce parsley jícama salsify.
+      turnip greens parsnip. Sea lettuce water chestnut eggplant winter purslane
+      fennel azuki bean earthnut pea sierra leone bologi leek soko chicory
+      celtuce parsley jícama salsify.
     </p>
   </div>
   <nav>
@@ -492,6 +490,6 @@ p {
 
 ### すべてにおいて論理的プロパティを
 
-新しいレイアウト方法では、これらの論理的な値を使用してアイテムを配置することができますが、マージンやパディングに使用される物理的なプロパティと組み合わせ始めるとすぐに、これらの物理的なプロパティは、書き込みモードによって変更されないことを覚えておく必要があります。
+新しいレイアウト方法では、これらの論理的な値を使用してアイテムを配置することができますが、マージンやパディングに使用される物理的なプロパティと組み合わせ始めるとすぐに、これらの物理的なプロパティは、書字方向によって変更されないことを覚えておく必要があります。
 
 [CSS Logical Properties 仕様書](https://drafts.csswg.org/css-logical-props/)では、 {{cssxref("margin-left")}} や {{cssxref("margin-right")}} などのプロパティに対して、[論理的な同等のもの](/ja/docs/Web/CSS/CSS_logical_properties_and_values)が CSS で使用できることを意味しています。これらのプロパティや値は、現在のブラウザーでは十分に対応されています。ブロックやインラインからグリッドまでを理解していると、これらの使い方も理解できるようになります。

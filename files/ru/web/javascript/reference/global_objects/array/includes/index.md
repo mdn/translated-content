@@ -9,7 +9,22 @@ l10n:
 
 Метод **`includes()`** экземпляров {{jsxref("Array")}} определяет, содержит ли массив определенное значение, возвращая `true` или `false`.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## Синтаксис
 
@@ -34,7 +49,7 @@ includes(searchElement, fromIndex)
 
 ## Описание
 
-Метод `includes()` сравнивает `searchElement` с элементами массива используя [алгоритм сравнения SameValueZero](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#равенство_одинаковых_величин_и_нулей). Все нулевые значения считаются равными, независимо от знака (то есть `-0` и `0` равны), но `false` _не_ равно `0`. Значение [`NaN`](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) доступно для поиска.
+Метод `includes()` сравнивает `searchElement` с элементами массива используя [алгоритм сравнения SameValueZero](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#равенство_одинаковых_величин_и_нулей). Все нулевые значения считаются равными, независимо от знака (то есть `-0` и `0` равны), но `false` _не_ равно `0`. Значение [`NaN`](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) доступно для поиска.
 
 При использовании в разреженных массивах, метод `includes()` метод считает, что пустые позиции имеют значение `undefined`.
 

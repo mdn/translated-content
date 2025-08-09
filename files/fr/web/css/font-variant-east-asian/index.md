@@ -35,7 +35,6 @@ font-variant-east-asian: unset;
 - `ruby`
   - : Ce mot-clé force l'utilisation de glyphes spécifiques pour les caractères ruby. Généralement, ceux-ci sont plus petits et légèrement plus gras pour améliorer le contraste. Ce mot-clé correspond aux valeurs OpenType `ruby`.
 - `<east-asian-variant-values>`
-
   - : Ces valeurs définissent un ensemble de variantes de glypes logographiques à utiliser pour l'affichage. Les valeurs possibles sont :
 
     | Mot-clé       | Standard dans lequel sont définis les glyphs                                | Équivalent OpenType |
@@ -48,9 +47,7 @@ font-variant-east-asian: unset;
     | `traditional` | Aucun, ce sont les glyphes chinois traditionnels qui sont utilisés.         | `trad`              |
 
 - `<east-asian-width-values>`
-
   - : Ces valeurs permettent de contrôler le dimensionnement des symboles pour les caractères des langues d'Asie orientale. Deux valeurs sont possibles :
-
     - `proportional-width` qui active l'ensemble de caractères d'Asie orientale qui n'ont pas tous la même largeur. Elle correspond aux valeurs OpenType `pwid`.
     - `full-width` qui active l'ensemble de caractères d'Asie orientale où les caractères ont tous la même taille et forme carrée. Elle correspond aux valeurs OpenType `fwid`.
 

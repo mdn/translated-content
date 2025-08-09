@@ -43,7 +43,7 @@ Cette clé permet de définir les propriétés de la clé expérimentale de [`th
 - créer une feuille de style qui définit les correspondances entre les sélecteurs CSS internes pour les éléments d'interface utilisateur Firefox et les variables CSS arbitraires. Les variables CSS sont ensuite mappées dans les objets `colors`, `images`, et `properties` avec les nouvelles propriétés de clé de `theme`.
 - (sans feuille de style) en utilisant `colors`, `images`, et `properties` pour mapper les sélecteurs CSS internes de Firefox, tels que `--arrowpanel-dimmed` vers les nouvelles propriétés de clé de `theme` key properties. Cette option limite l'expérimentation aux composants d'interface utilisateur associés à une variable CSS intégrée.
 
-Pour découvrir les sélecteurs CSS des éléments de l'interface utilisateur Firefox ou des variables CSS internes de Firefox, utilise la [boite à outils du navigateur](/fr/docs/Outils/Boîte_à_outils_du_navigateur).
+Pour découvrir les sélecteurs CSS des éléments de l'interface utilisateur Firefox ou des variables CSS internes de Firefox, utilise la [boite à outils du navigateur](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html).
 
 > [!NOTE]
 > Cette clé est uniquement disponible pour une utilisation dans les canaux Firefox Developer Edition et Firefox Nightly et nécessite l'activation de la préférence `extensions.legacy.enabled`.

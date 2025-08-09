@@ -3,8 +3,6 @@ title: Firefox Quantum 57 para programadores
 slug: Mozilla/Firefox/Releases/57
 ---
 
-{{FirefoxSidebar}}
-
 Este artículo proporciona información sobre los cambios incluidos en Firefox 57 (también conocido como Firefox Quantum) que conciernen a los desarrolladores. Firefox 57 se disponibilizó al público el [14 de noviembre de 2017](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
 ## Firefox 57 === Firefox Quantum
@@ -24,11 +22,11 @@ _No hay ningún cambio._
 
 ### HTML
 
-- Los tipos [«date»](/es/docs/Web/HTML/Element/input/date) y [«time»](/es/docs/Web/HTML/Element/input/time) de {{htmlelement("input")}} ya están activados en todas las compilaciones ([Error 1399036 en Firefox](https://bugzil.la/1399036)).
+- Los tipos [«date»](/es/docs/Web/HTML/Reference/Elements/input/date) y [«time»](/es/docs/Web/HTML/Element/input/time) de {{htmlelement("input")}} ya están activados en todas las compilaciones ([Error 1399036 en Firefox](https://bugzil.la/1399036)).
 
 ### CSS
 
-- Ahora admitimos los valores `minimal-ui` y `standalone` de la consulta [`display-mode`](/es/docs/Web/CSS/@media/display-mode) ([Error 1369815 en Firefox](https://bugzil.la/1369815)). Consúltese también el [campo de manifiesto de aplicación web `display`](/es/docs/Web/Manifest#display).
+- Ahora admitimos los valores `minimal-ui` y `standalone` de la consulta [`display-mode`](/es/docs/Web/CSS/@media/display-mode) ([Error 1369815 en Firefox](https://bugzil.la/1369815)). Consúltese también el [campo de manifiesto de aplicación web `display`](/es/docs/Web/Progressive_web_apps/Manifest#display).
 - Se corrigió un problema que causaba que la notación abreviada de la cuadrícula quedara restablecida al utilizar {{cssxref("grid-row-gap")}} y {{cssxref("grid-column-gap")}} ([Error 1387410 en Firefox](https://bugzil.la/1387410)).
 - Se ha eliminado la preferencia `layout.css.clip-path-shapes.enabled`, que permitía activar o desactivar la compatibilidad de {{cssxref("&lt;basic-shape&gt;")}} con {{cssxref("clip-path")}} ([Error 1399767 en Firefox](https://bugzil.la/1399767)).
 
@@ -65,7 +63,7 @@ _No hay ningún cambio._
 #### API nuevas
 
 - Se ha activado de manera predeterminada la API {{domxref("PerformanceObserver")}} ([Error 1386021 en Firefox](https://bugzil.la/1386021)).
-- Añadimos las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (conocidas como la API «Abort»), que permiten interrumpir las solicitudes del DOM (como las de [recuperación](/es/docs/Web/API/fetch)) si así se desea ([Error 1378342 en Firefox](https://bugzil.la/1378342)).
+- Añadimos las interfaces {{domxref("AbortController")}} y {{domxref("AbortSignal")}} (conocidas como la API «Abort»), que permiten interrumpir las solicitudes del DOM (como las de [recuperación](/es/docs/Web/API/Window/fetch)) si así se desea ([Error 1378342 en Firefox](https://bugzil.la/1378342)).
 
 #### DOM
 
@@ -88,7 +86,7 @@ _No hay ningún cambio._
   > Como Firefox aún no admite el protocolo ndata de SCTP, que permite intercalar mensajes de SCTP de varias fuentes, enviar objetos de datos grandes puede causar retardos importantes en el resto del tránsito SCTP. Véase el [Error 1381145 en Firefox](https://bugzil.la/1381145) para estar al tanto de la implementación de ndata en Firefox.
 
 - El método {{domxref("RTCDataChannel.send()")}} ahora puede emitir una excepción `TypeError` si el tamaño del mensaje que se intenta enviar no es compatible con el agente de usuario de destino (esto se implementó como parte del [Error 979417 en Firefox](https://bugzil.la/979417)).
-- La [API MediaStream Recording](/es/docs/Web/API/MediaStream_Recording_API) se ha actualizado de modo que los sucesos [`error`](/es/docs/Web/Reference/Events/error) que se envíen para notificar problemas acaecidos durante la grabación son ahora del tipo {{domxref("MediaRecorderErrorEvent")}} en lugar de sucesos genéricos.
+- La [API MediaStream Recording](/es/docs/Web/API/MediaStream_Recording_API) se ha actualizado de modo que los sucesos [`error`](/es/docs/Web/API/HTMLElement/error_event) que se envíen para notificar problemas acaecidos durante la grabación son ahora del tipo {{domxref("MediaRecorderErrorEvent")}} en lugar de sucesos genéricos.
 - Se actualizó la documentación concerniente a {{domxref("OfflineAudioContext")}}, dado que sus entradas de constructores pueden especificarse ahora dentro de un objeto en lugar de una lista de parámetros ([Error 1388591 en Firefox](https://bugzil.la/1388591)).
 
 ### Seguridad
@@ -102,14 +100,14 @@ _No hay ningún cambio._
 
 ### Otros
 
-- El valor `fullscreen` del campo `display` del [manifiesto de aplicación web](/es/docs/Web/Manifest) ahora funciona en Firefox para Android 57 ([Error 1126479 en Firefox](https://bugzil.la/1126479)).
+- El valor `fullscreen` del campo `display` del [manifiesto de aplicación web](/es/docs/Web/Progressive_web_apps/Manifest) ahora funciona en Firefox para Android 57 ([Error 1126479 en Firefox](https://bugzil.la/1126479)).
 - La [modalidad sin periféricos](/es/docs/Mozilla/Firefox/Headless_mode) de Firefox ahora incluye el parámetro `-screenshot`, que permite a los usuarios tomar capturas de pantalla de sitios web directamente desde la consola ([Error 1378010 en Firefox](https://bugzil.la/1378010)).
 
 ## Eliminaciones de la plataforma web
 
 ### HTML
 
-- `<link rel="preload">` (véase [Precargar contenido con rel="preload"](/es/docs/Web/HTML/Preloading_content)) fue desactivado en Firefox 57 a causa de varios problemas de compatibilidad con la web (p. ej., [Error 1405761 en Firefox](https://bugzil.la/1405761)). Se espera que para Firefox 58 quede lista la versión de reemplazo, la cual funcionará para recursos no almacenables en la antememoria.
+- `<link rel="preload">` (véase [Precargar contenido con rel="preload"](/es/docs/Web/HTML/Attributes/rel/preload)) fue desactivado en Firefox 57 a causa de varios problemas de compatibilidad con la web (p. ej., [Error 1405761 en Firefox](https://bugzil.la/1405761)). Se espera que para Firefox 58 quede lista la versión de reemplazo, la cual funcionará para recursos no almacenables en la antememoria.
 
 ### API
 
@@ -122,76 +120,62 @@ _No hay ningún cambio._
 ## Cambios relativos a los complementos y los programadores de Mozilla
 
 > [!NOTE]
-> A partir de Firefox 57, se ha eliminado por completo la compatibilidad con los complementos basados en la tecnología XPCOM. Todas las extensiones deben convertirse para emplear la [tecnología nueva](/es/Add-ons/WebExtensions), conocida como WebExtensions, o de lo contrario dejarán de funcionar.
+> A partir de Firefox 57, se ha eliminado por completo la compatibilidad con los complementos basados en la tecnología XPCOM. Todas las extensiones deben convertirse para emplear la [tecnología nueva](/es/docs/Mozilla/Add-ons/WebExtensions), conocida como WebExtensions, o de lo contrario dejarán de funcionar.
 
 ### WebExtensions
 
 Se añadieron o ampliaron las API siguientes:
 
 - [`bookmarks`](/es/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
-
   - compatibilidad con separadores mediante [`bookmarks.BookmarkTreeNodeType`](/es/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType)
 
 - [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-
   - propiedad `theme_icons` para iconos claros u oscuros en función del tema
 
 - [`browserAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
-
   - [`browserAction.openPopup()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup)
 
 - [`browserSettings`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
-
   - [`allowPopupsForUserEvents`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents)
   - [`homepageOverride`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
   - [`imageAnimationBehavior`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior)
   - [`newTabPageOverride`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride)
 
 - [`browsingData`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-
   - [`browsingData.removeLocalStorage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage)
 
 - [`clipboard`](/es/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
-
   - [`setImageData()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData)
 
 - [`contextualIdentities`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
-
   - [`onCreated`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated)
   - [`onRemoved`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved)
   - [`onUpdated`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
   - `colorCode` y `iconUrl` en [`contextualIdentitities.ContextualIdentity`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity)
 
-- [`devtools.panels`](/es/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels)
-
-  - [`devtools.panels.ElementsPanel.createSidebarPane()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane)
+- [`devtools.panels`](/es/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
+  - [`devtools.panels.ElementsPanel.createSidebarPane()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
 
 - [`downloads`](/es/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
-
   - opción `incognito` en [`downloads.download()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)
   - propiedad `estimatedEndTime` en [`downloads.DownloadItem`](/es/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem)
 
-- [`find`](/es/Add-ons/WebExtensions/API/find)
-
+- [`find`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find)
   - [`find()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
   - [`highlightResults()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
   - [`removeHighlighting()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
 
 - [`pageAction.openPopup()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
-- [`privacy`](/es/Add-ons/WebExtensions/API/privacy/websites)
-
-  - [`websites.trackingProtectionMode`](/es/Add-ons/WebExtensions/API/privacy/websites)
+- [`privacy`](/es/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
+  - [`websites.trackingProtectionMode`](/es/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
 
 - [`proxy`](/es/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
-
   - `FindProxyForURL()` puede devolver un objeto ahora
 
 - [`runtime`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
-
   - [`runtime.openOptionsPage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) funciona en Android
 
 - [`sessions`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
-
   - [`setTabValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue)
   - [`getTabValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue)
   - [`removeTabValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue)
@@ -200,38 +184,31 @@ Se añadieron o ampliaron las API siguientes:
   - [`removeWindowValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue)
 
 - [`sidebarAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
-
   - [`sidebarAction.open()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open)
 
 - [`storage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage)
-
   - [`storage.managed`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed)
 
 - [`tabs`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
-
   - opción `loadReplace` en [`tabs.update()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
-  - propiedad `discarded` en [`tabs.Tab`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.onUpdated`](/es/docs/) y [`tabs.query()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
+  - propiedad `discarded` en [`tabs.Tab`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.onUpdated`](/es/docs/Web) y [`tabs.query()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
   - [`tabs.create()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) puede abrir URL con «view-source:»
   - propiedad `openerTabId` en [`tabs.Tab`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.create()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create), [`tabs.query()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) y [`tabs.update()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
 
 - [`theme`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
-
   - `colors.toolbar`
   - `colors.toolbar_field`
   - `colors.toolbar_field_text`
   - `colors.toolbar_text`
 
 - [`theme`](/es/docs/Mozilla/Add-ons/WebExtensions/API/theme)
-
-  - opción `windowId` para [`theme.update()`](/es/Add-ons/WebExtensions/API/theme/update)
+  - opción `windowId` para [`theme.update()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
 
 - [`webRequest`](/es/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
-
   - [`filterResponseData()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData)
   - propiedad `proxyInfo` en sucesos [`webRequest`](/es/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
 
 - [`windows`](/es/docs/Mozilla/Add-ons/WebExtensions/API/windows)
-
   - opción `allowScriptsToClose` en [`windows.create()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
 
 ## Versiones anteriores

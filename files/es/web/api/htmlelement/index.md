@@ -56,7 +56,7 @@ _Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns an {{domxref("HTMLPropertiesCollection")}}…
 - {{domxref("HTMLElement.spellcheck")}}
-  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/es/docs/HTML/Controlling_spell_checking_in_HTML_forms). It is present on all HTML elements, though it hasn't an effect on all of them.
+  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/es/docs/Web/HTML/Reference/Global_attributes/spellcheck). It is present on all HTML elements, though it hasn't an effect on all of them.
 - {{domxref("HTMLElement.style")}}
   - : Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.
 - {{domxref("HTMLElement.tabIndex")}}
@@ -77,17 +77,17 @@ La mayoria de las propiedades de los eventos, del formulario `onXYZ`, estan defi
 - {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
   - : Returns the event handling code for the `paste` event ([Error 280959 en Firefox](https://bugzil.la/280959)).
 - {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchstart`](/es/docs/Web/Reference/Events/touchstart) event.
+  - : Returns the event handling code for the [`touchstart`](/es/docs/Web/API/Element/touchstart_event) event.
 - {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchend`](/es/docs/Web/Reference/Events/touchend) event.
+  - : Returns the event handling code for the [`touchend`](/es/docs/Web/API/Element/touchend_event) event.
 - {{domxref("TouchEventHandlers.ontouchmove")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchmove`](/es/docs/Web/Reference/Events/touchmove) event.
+  - : Returns the event handling code for the [`touchmove`](/es/docs/Web/API/Element/touchmove_event) event.
 - {{domxref("TouchEventHandlers.ontouchenter")}} {{non-standard_inline}}
   - : Returns the event handling code for the [`touchenter`](/es/docs/Web/Reference/Events/touchenter) event.
 - {{domxref("TouchEventHandlers.ontouchleave")}} {{non-standard_inline}}
   - : Returns the event handling code for the [`touchleave`](/es/docs/Web/Reference/Events/touchleave) event.
 - {{domxref("TouchEventHandlers.ontouchcancel")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchcancel`](/es/docs/Web/Reference/Events/touchcancel) event.
+  - : Returns the event handling code for the [`touchcancel`](/es/docs/Web/API/Element/touchcancel_event) event.
 
 ## Methods
 

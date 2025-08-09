@@ -41,9 +41,10 @@ play()
 
 如果 {{Glossary("user agent")}} 被设置为不允许自动或脚本驱动的媒体播放，调用 `play()` 会导致返回的 promise 被立即以 `NotAllowedError` 拒绝。网页应该对这种情况做好准备。举个例子，一个网页不应该假定播放已经自动开始而直接展示相应的用户界面，而应该在返回的 promise 被解决或拒绝后再更新用户界面。更多信息参见 [示例](#示例)。
 
-> **备注：** `play()` 方法可能会让用户被询问是否给予播放媒体的权限，这可能会使返回的 promise 延迟解决。你应该确保你的代码不需要即时响应。
+> [!NOTE]
+> `play()` 方法可能会让用户被询问是否给予播放媒体的权限，这可能会使返回的 promise 延迟解决。你应该确保你的代码不需要即时响应。
 
-关于自动播放和禁止自动播放的更多深度内容，参见我们的文章 [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Autoplay_guide)。
+关于自动播放和禁止自动播放的更多深度内容，参见我们的文章 [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Guides/Autoplay)。
 
 ## 示例
 
@@ -95,6 +96,6 @@ function handlePlayButton() {
 ## 参见
 
 - [Web media technologies](/zh-CN/docs/Web/Media)
-- Learning: [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Autoplay_guide)
+- Learning: [Video and audio content](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Guides/Autoplay)
 - [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

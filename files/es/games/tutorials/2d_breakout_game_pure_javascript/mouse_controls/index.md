@@ -3,17 +3,15 @@ title: Controles del ratón
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando")}}
 
-Este es el noveno paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
+Este es el noveno paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
 
 El juego en sí está terminado, así que ahora vamos a pulirlo. Ya le hemos puesto el control del teclado y ahora le añadiremos el control del ratón.
 
 ## Detectar el movimiento del ratón
 
-Detectar el movimiento del ratón es más fácil que detectar las pulsaciones de las teclas. Todo lo que necesitamos es un añadir "escuchador" al evento [`mousemove`](/es/docs/Web/Reference/Events/mousemove).Añade esta línea destrás de los otros "listeners", justo debajo del evento `keyup`:
+Detectar el movimiento del ratón es más fácil que detectar las pulsaciones de las teclas. Todo lo que necesitamos es un añadir "escuchador" al evento [`mousemove`](/es/docs/Web/API/Element/mousemove_event).Añade esta línea destrás de los otros "listeners", justo debajo del evento `keyup`:
 
 ```js
 document.addEventListener("mousemove", mouseMoveHandler, false);
@@ -49,6 +47,6 @@ Aquí tienes el código para comparar:
 
 ## Pasos siguientes
 
-Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando).
+Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando")}}

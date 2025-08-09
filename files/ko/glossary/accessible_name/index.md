@@ -19,7 +19,7 @@ l10n:
 
 {{HTMLElement("img")}}와 같은 일부 요소의 경우 접근 가능한 이름은 해당 속성(이 경우, `alt` 속성 값)에서 가져옵니다. `<img src="grape.jpg" alt="banana"/>`가 주어지면 이미지의 접근 가능한 이름은 "banana"입니다.
 
-표시되는 콘텐츠와 요소 또는 여러 텍스트 노드와 요소 사이의 연결을 생성하려면, [`aria-labeledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 속성을 사용할 수 있습니다. 접근 가능한 이름이 필요한 UI 요소와 연결할 표시되는 텍스트가 없는 경우, [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 속성을 사용할 수 있습니다. {{HTMLElement("code")}}, {{HTMLElement("del")}} 및 {{HTMLElement("mark")}}와 같이 인라인 텍스트를 표시하는 요소에 이름을 추가하면 안 됩니다.
+표시되는 콘텐츠와 요소 또는 여러 텍스트 노드와 요소 사이의 연결을 생성하려면, [`aria-labeledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 속성을 사용할 수 있습니다. 접근 가능한 이름이 필요한 UI 요소와 연결할 표시되는 텍스트가 없는 경우, [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 속성을 사용할 수 있습니다. {{HTMLElement("code")}}, {{HTMLElement("del")}} 및 {{HTMLElement("mark")}}와 같이 인라인 텍스트를 표시하는 요소에 이름을 추가하면 안 됩니다.
 
 텍스트 콘텐츠 섹션과 같은 많은 요소에는 접근 가능한 이름이 필요하지 않습니다. 모든 컨트롤에는 접근 가능한 이름이 있어야 합니다. 정보를 전달하고 순전히 표현용이 아닌 모든 이미지도 마찬가지입니다.
 
@@ -28,6 +28,6 @@ l10n:
 ## 같이 보기
 
 - [ARIA 역할](/ko/docs/Web/Accessibility/ARIA/Roles)
-- [ARIA 속성](/ko/docs/Web/Accessibility/ARIA/Attributes)
+- [ARIA 속성](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes)
 - [접근성](/ko/docs/Web/Accessibility)
-- [접근성 배우기](/ko/docs/Learn/Accessibility)
+- [접근성 배우기](/ko/docs/Learn_web_development/Core/Accessibility)

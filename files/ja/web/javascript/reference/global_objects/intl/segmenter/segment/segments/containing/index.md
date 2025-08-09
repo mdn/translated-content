@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/co
 
 **`Intl.Segments.containing()`** メソッドは、指定されたインデックスのコードユニットを含む文字列中のセグメントを記述したオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/segments-prototype-containing.html")}}
+{{InteractiveExample("JavaScript デモ: Segments.prototype.containing")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const segments = segmenterFr.segment(string1);
+
+console.log(segments.containing(5));
+// Expected output:
+// Object {segment: 'ma', index: 4, input: 'Que ma joie demeure', isWordLike: true}
+```
 
 ## 構文
 

@@ -3,11 +3,9 @@ title: Mueve la bola
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls")}}
 
-Este es el segundo paso de los 10 del [tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
+Este es el segundo paso de los 10 del [tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
 
 Ya sabes cómo dibujar una pelota, lo has aprendido en el artículo anterior. Ahora vamos a hacer que se mueva. Técnicamente, estaremos pintando la pelota en la pantalla, borrándola y luego pintándola de nuevo en una posición ligeramente diferente cada fotograma para dar la impresión de movimiento, igual que se hace en las películas.
 
@@ -139,6 +137,6 @@ Puedes comprobar el código terminado de este artículo en la demostración en v
 
 ## Siguientes pasos
 
-Hemos dibujado nuestra bola y hemos hecho que se mueva, pero cuando supera el borde del canvas, desaparece. En el tercer capítulo exploraremos como hacer que [rebote en las paredes](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls).
+Hemos dibujado nuestra bola y hemos hecho que se mueva, pero cuando supera el borde del canvas, desaparece. En el tercer capítulo exploraremos como hacer que [rebote en las paredes](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls")}}

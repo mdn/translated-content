@@ -31,5 +31,5 @@ Les en-têtes de représentation incluent&nbsp;:
 - [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
 - [En-tête de charge utile](/fr/docs/Glossary/Payload_header)
 - [En-tête d'entité](/fr/docs/Glossary/Entity_header)
-- [`Digest`](/fr/docs/Web/HTTP/Headers/Digest)
-- [`Want-Digest`](/fr/docs/Web/HTTP/Headers/Want-Digest)
+- [`Digest`](/fr/docs/Web/HTTP/Headers/Content-Digest)
+- [`Want-Digest`](/fr/docs/Web/HTTP/Headers/Want-Content-Digest)

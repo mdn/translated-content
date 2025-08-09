@@ -3,11 +3,11 @@ title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS) **`animation-timing-function`** especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo. Los posibles valores son una o varias {{cssxref("&lt;timing-function&gt;")}}.
+La propiedad [CSS](/es/docs/Web/CSS) **`animation-timing-function`** especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo. Los posibles valores son una o varias {{cssxref("&lt;timing-function&gt;")}}.
 
 Para animaciones con keyframes, la timing function se aplica entre los [keyframes](/es/docs/Web/CSS/@keyframes) en lugar de sobre toda la animación. Es decir, se aplica al comienzo del keyframe y al final del mismo.
 
@@ -53,7 +53,7 @@ animation-timing-function: unset;
 
 ## Ejemplos
 
-Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
+Visita [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
 
 ## Especificaciones
 
@@ -65,5 +65,5 @@ Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejempl
 
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

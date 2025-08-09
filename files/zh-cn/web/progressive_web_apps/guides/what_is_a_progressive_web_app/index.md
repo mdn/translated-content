@@ -40,14 +40,12 @@ PWA 具有网站的优势，包括：
 PWA 也具有平台特定应用程序的许多优势，包括：
 
 - [**PWA 可以安装在设备上**](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)。这意味着：
-
   - PWA 可以从平台的应用商店安装，也可以直接从 web 安装。
   - PWA 可以像平台特定的应用程序一样安装，并可以自定义安装过程。
   - 一旦安装，PWA 会在设备上得到一个应用图标，与平台特定应用程序一样。
   - 一旦安装，PWA 可以作为独立的应用程序启动，而不是作为浏览器中的网站。
 
 - [**PWA 可以在后台与离线操作**](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)：一个典型的网站只在被浏览器加载后才处于活动状态。PWA 可以：
-
   - 在设备没有网络连接时工作。
   - 在后台更新内容。
   - 对来自服务器的[推送消息](/zh-CN/docs/Web/API/Push_API)做出响应。
@@ -73,7 +71,7 @@ PWA 通常看起来像平台特定应用程序——它们通常是在没有浏�
 
 除此之外，PWA 还具有一些额外的特性：
 
-- 一个 [web 应用程序清单](/zh-CN/docs/Web/Manifest)文件，至少提供浏览器需要的信息来安装 PWA，如应用程序名称和图标。
+- 一个 [web 应用程序清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)文件，至少提供浏览器需要的信息来安装 PWA，如应用程序名称和图标。
 
 - 一个 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)，至少提供基本的脱机体验。
 
@@ -81,7 +79,7 @@ PWA 通常看起来像平台特定应用程序——它们通常是在没有浏�
 
 PWA 必须有一个 web 应用程序清单，并且[清单必须包含足够的信息以便浏览器安装 PWA](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)。
 
-清单可以定义 PWA 外观的许多其他方面，比如[主题颜色](/zh-CN/docs/Web/Manifest/theme_color)和[背景颜色](/zh-CN/docs/Web/Manifest/background_color)，以及其行为，包括其[充当其他应用程序数据的共享目标](/zh-CN/docs/Web/Manifest/share_target)的能力或[处理特定文件类型](/zh-CN/docs/Web/Manifest/file_handlers)的能力。
+清单可以定义 PWA 外观的许多其他方面，比如[主题颜色](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color)和[背景颜色](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/background_color)，以及其行为，包括其[充当其他应用程序数据的共享目标](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)的能力或[处理特定文件类型](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers)的能力。
 
 #### Service worker
 

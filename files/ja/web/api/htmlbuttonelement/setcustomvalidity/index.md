@@ -53,7 +53,7 @@ if (errors) {
 - {{domxref("HTMLButtonElement.validity")}}
 - {{domxref("HTMLButtonElement.checkValidity()")}}
 - {{domxref("HTMLButtonElement.reportValidity()")}}
-- [フォーム検証](/ja/docs/Web/HTML/Constraint_validation).
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [フォーム検証](/ja/docs/Web/HTML/Guides/Constraint_validation).
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - CSS {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス

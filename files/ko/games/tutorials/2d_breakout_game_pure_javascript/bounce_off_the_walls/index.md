@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls")}}
 
-이 글은 [Gamedev Canvas 튜토리얼](/ko/docs/Games/Workflows/Breakout_game_from_scratch)에 포함된 10단계 중 3단계 글입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html)에서 확인해볼 수 있습니다.
+이 글은 [Gamedev Canvas 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)에 포함된 10단계 중 3단계 글입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html)에서 확인해볼 수 있습니다.
 
-공이 움직이는 걸 보니 기쁩니다! 하지만 기쁨을 즐길 틈도 없이 공이 스크린 밖으로 사라져버리네요. 이 문제를 해결하기 위해 공이 캔버스의 4군데 모서리에 다달았을 때 튕겨나올 수 있도록 간단한 충돌 감지 기능(더 자세한 내용은 [다음 글](/ko/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection)에서 다시 설명할 예정입니다)을 구현해야 합니다.
+공이 움직이는 걸 보니 기쁩니다! 하지만 기쁨을 즐길 틈도 없이 공이 스크린 밖으로 사라져버리네요. 이 문제를 해결하기 위해 공이 캔버스의 4군데 모서리에 다달았을 때 튕겨나올 수 있도록 간단한 충돌 감지 기능(더 자세한 내용은 [다음 글](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)에서 다시 설명할 예정입니다)을 구현해야 합니다.
 
 ## 간단한 충돌 감지
 
@@ -107,6 +105,6 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 ## 다음 단계
 
-이제 우리는 공이 게임판 안에서 어디서 어떻게 움직이고 있는지 파악했습니다. 네번째 챕터에서는 조작 가능한 배드를 구현해볼 것입니다. — [패드와 키보드 조작](/ko/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls).
+이제 우리는 공이 게임판 안에서 어디서 어떻게 움직이고 있는지 파악했습니다. 네번째 챕터에서는 조작 가능한 배드를 구현해볼 것입니다. — [패드와 키보드 조작](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls")}}

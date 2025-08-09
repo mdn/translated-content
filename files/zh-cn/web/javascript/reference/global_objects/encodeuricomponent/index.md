@@ -3,11 +3,18 @@ title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
 
-{{jsSidebar("Objects")}}
-
 **`encodeURIComponent()`** 函数通过将特定字符的每个实例替换成代表字符的 {{glossary("UTF-8")}} 编码的一个、两个、三个或四个转义序列来编码 {{glossary("URI")}}（只有由两个“代理”字符组成的字符会被编码为四个转义序列）。与 {{jsxref("encodeURI()")}} 相比，此函数会编码更多的字符，包括 URI 语法的一部分。
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURIComponent()", "shorter")}}
+
+```js interactive-example
+// Encodes characters such as ?,=,/,&,:
+console.log(`?x=${encodeURIComponent("test?")}`);
+// Expected output: "?x=test%3F"
+
+console.log(`?x=${encodeURIComponent("шеллы")}`);
+// Expected output: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```
 
 ## 语法
 

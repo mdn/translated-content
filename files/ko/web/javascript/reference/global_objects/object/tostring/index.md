@@ -7,9 +7,24 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Object")}} 객체의 메서드인 **`toString()`** 은 해당 object를 표현하는 문자열을 반환합니다. 이 메서드는 사용자가 [타입 강제 변환](/ko/docs/Web/JavaScript/Data_structures#타입_강제_변환)을 통해 파생된 객체에서 재정의할 수 있습니다.
+{{jsxref("Object")}} 객체의 메서드인 **`toString()`** 은 해당 object를 표현하는 문자열을 반환합니다. 이 메서드는 사용자가 [타입 강제 변환](/ko/docs/Web/JavaScript/Guide/Data_structures#타입_강제_변환)을 통해 파생된 객체에서 재정의할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+
+```js interactive-example
+function Dog(name) {
+  this.name = name;
+}
+
+const dog1 = new Dog("Gabby");
+
+Dog.prototype.toString = function dogToString() {
+  return `${this.name}`;
+};
+
+console.log(dog1.toString());
+// Expected output: "Gabby"
+```
 
 ## 구문
 
@@ -27,9 +42,9 @@ toString();
 
 ## 설명
 
-자바스크립트는 [객체를 원시 값으로 변환](/ko/docs/Web/JavaScript/Data_structures#타입_강제_변환)하기 위해 `toString` 메서드를 호출합니다. 당신은 `toString` 메서드를 직접 부를 일이 거의 없습니다. 자바스크립트는 원시 값이 있어야 할 곳에서 객체를 마주치면 자동으로 해당 메서드를 호출합니다.
+자바스크립트는 [객체를 원시 값으로 변환](/ko/docs/Web/JavaScript/Guide/Data_structures#타입_강제_변환)하기 위해 `toString` 메서드를 호출합니다. 당신은 `toString` 메서드를 직접 부를 일이 거의 없습니다. 자바스크립트는 원시 값이 있어야 할 곳에서 객체를 마주치면 자동으로 해당 메서드를 호출합니다.
 
-이 메서드는 [문자열 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#문자열_변환)에 의해 우선적으로 호출되지만, [숫자 변환](/ko/docs/Web/JavaScript/Data_structures#숫자_강제_변환)과 [원시 타입 변환](/ko/docs/Web/JavaScript/Data_structures#원시_타입_강제_변환)은 `valueOf()`를 우선적으로 호출합니다. 그러나 기본 [`valueOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 메서드는 객체를 반환하므로, 그 객체가 `valueOf()`를 재정의하지 않았다면 보통 `toString()` 메서드가 마지막에 호출됩니다. 예를들어, `+[1]`은 `1`을 반환하는데, 그 이유는 `+[1]`의 [`toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 메서드가 `"1"` 을 반환하고 이 값이 숫자로 변환되기 때문입니다.
+이 메서드는 [문자열 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#문자열_변환)에 의해 우선적으로 호출되지만, [숫자 변환](/ko/docs/Web/JavaScript/Guide/Data_structures#숫자_강제_변환)과 [원시 타입 변환](/ko/docs/Web/JavaScript/Guide/Data_structures#원시_타입_강제_변환)은 `valueOf()`를 우선적으로 호출합니다. 그러나 기본 [`valueOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 메서드는 객체를 반환하므로, 그 객체가 `valueOf()`를 재정의하지 않았다면 보통 `toString()` 메서드가 마지막에 호출됩니다. 예를들어, `+[1]`은 `1`을 반환하는데, 그 이유는 `+[1]`의 [`toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 메서드가 `"1"` 을 반환하고 이 값이 숫자로 변환되기 때문입니다.
 
 `Object.prototype`를 상속받는 모든 객체([`null`-프로토타입 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)를 제외한)들은 `toString()` 메서드를 상속받습니다. 커스텀 객체를 만들 때 `toString()`를 재정의할 수 있고, 재정의된 메서드를 호출하여 커스텀 객체를 문자열 값으로 변환할 수 있습니다. 또 다른방법으로는 [`@@toPrimitive`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 메서드를 추가하여 타입 변환 과정을 넘어서는 조정을 할 수 있고, 이는 타입 변환 과정에서 항상 `valueOf` 또는 `toString` 보다 우선시됩니다.
 

@@ -24,11 +24,8 @@ selectAudioOutput(options)
 ### 引数
 
 - `options` {{Optional_Inline}}
-
   - : ユーザーへの問い合わせで提供される機器を構成するオブジェクトです。
-
     - `deviceId` {{Optional_Inline}}
-
       - : 以前に公開された/許可された単一の機器の ID を 表す文字列です。
         設定しない場合は、利用できるオーディオ出力機器がすべて表示されます。
 
@@ -47,7 +44,7 @@ selectAudioOutput(options)
 ### 例外
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 現在のページに [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)が与えられていない場合、またはユーザーが機器を選択せずに選択プロンプトを閉じた場合に返されます。
+  - : 現在のページに [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が与えられていない場合、またはユーザーが機器を選択せずに選択プロンプトを閉じた場合に返されます。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 利用可能な音声出力機器がない場合に返されます。
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -57,10 +54,10 @@ selectAudioOutput(options)
 
 API へのアクセスは、以下の制約を受けることになります。
 
-- このメソッドは[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
+- このメソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
 - [一時的なユーザーによる有効化](/ja/docs/Web/Security/User_activation)が必要です。
   この機能が機能するためには、ユーザーがページや UI 要素を操作する必要があります。
-- アクセスは HTTP の [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/midi) [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)で制限される可能性があります。
+- アクセスは HTTP の [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi) [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)で制限される可能性があります。
 
 権限の状態は、[権限 API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.query", "navigator.permissions.query()")}} メソッドで、 `speaker-selection` 権限の権限記述子を使用することで、確認することができます。
 

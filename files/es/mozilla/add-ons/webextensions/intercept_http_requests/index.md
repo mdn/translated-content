@@ -48,9 +48,9 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
 });
 ```
 
-En este punto se utiliza {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para llamar la función `logURL()` junstamente después de realizar la solicitud. La función `logURL()` se apropia de la solicitud URL del objeto de eventos y lo registra en la consola del navegador. El [patrón](/es/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` signinifica que se pueden interceptar todas las solicitudes HTTP de todas las URLs.
+En este punto se utiliza {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para llamar la función `logURL()` junstamente después de realizar la solicitud. La función `logURL()` se apropia de la solicitud URL del objeto de eventos y lo registra en la consola del navegador. El [patrón](/es/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` signinifica que se pueden interceptar todas las solicitudes HTTP de todas las URLs.
 
-Para probarlo, [instala la WebExtension](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [abre la consola del navegador](/es/docs/Tools/Browser_Console), y abre algunas páginas Web. En la consola del navegador, deberías ver las URLs de cualquier recurso que el navegador solicita:
+Para probarlo, [instala la WebExtension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), [abre la consola del navegador](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html), y abre algunas páginas Web. En la consola del navegador, deberías ver las URLs de cualquier recurso que el navegador solicita:
 
 {{EmbedYouTube("X3rMgkRkB1Q")}}
 
@@ -101,7 +101,7 @@ Esta vez no se está interceptando cada solicitud: la opción `{urls:[pattern], 
 
 Dése cuenta también, que se esta pasando la opción llamada `"blocking"`: se necesita pasar cada vez que se requiera modificar la solicitud. Esto hace que la función del escuchador bloquee la solicitud de la red, así que el navegador espera que el escuchador retorne antes de continuar. Vea la documentación {{WebExtAPIRef("webRequest.onBeforeRequest")}} para conocer más sobre `"blocking"`.
 
-Para probarlo, abra una página de MDN que contenga bastantes imágenes (por ejemplo <https://developer.mozilla.org/es/docs/Tools/Network_Monitor>), [recargue la WebExtension](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), y luego recargue la página de MDN:
+Para probarlo, abra una página de MDN que contenga bastantes imágenes (por ejemplo <https://developer.mozilla.org/es/docs/Tools/Network_Monitor>), [recargue la WebExtension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), y luego recargue la página de MDN:
 
 {{EmbedYouTube("ix5RrXGr0wA")}}
 
@@ -137,7 +137,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 Aquí se utiliza el escuchador de eventos {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} para ejecutar una función juntamente antes de que la solicitud de las cabeceras sean enviadas.
 
-La función escuchadora será llamada solamente por solicitudes de URLs que coincidan con el [patrón](/es/Add-ons/WebExtensions/Match_patterns) `targetPage`. Dése cuenta de nuevo que `"blocking"` se ha pasado como una opción. También se pasó `"requestHeaders"`, lo cual significa que al escuchador pasará un array conteniendo las cabeceras de la solicitud que se espera enviar. Vea {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} para más información en estas opciones.
+La función escuchadora será llamada solamente por solicitudes de URLs que coincidan con el [patrón](/es/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `targetPage`. Dése cuenta de nuevo que `"blocking"` se ha pasado como una opción. También se pasó `"requestHeaders"`, lo cual significa que al escuchador pasará un array conteniendo las cabeceras de la solicitud que se espera enviar. Vea {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} para más información en estas opciones.
 
 La función escuchadora busca la cabecera "User-Agent" en el array de la solicitud de cabeceras, reemplaza el valor con el valor de la variable `ua`, y regresa el array modificado. Este array modificado será el enviado al servidor.
 
@@ -147,4 +147,4 @@ Para comprobarlo, abra [useragentstring.com](http://useragentstring.com/) y veri
 
 ## Aprenda más
 
-Para aprender más sobre todas las cosas que puede hacer con la API `webRequest`, vea su propia [documentación de referencia](/es/Add-ons/WebExtensions/API/WebRequest).
+Para aprender más sobre todas las cosas que puede hacer con la API `webRequest`, vea su propia [documentación de referencia](/es/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest).

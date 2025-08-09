@@ -9,7 +9,7 @@ l10n:
 
 [Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`RelativeOrientationSensor`** インターフェイスは、地球の参照用座標系は考慮せず、デバイスの物理的な向きを表します。
 
-このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'accelerometer'` および `'gyroscope'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
+このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'accelerometer'` および `'gyroscope'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) でブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 

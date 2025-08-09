@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/update
 
 Mises à jour des propriétés d'une fenêtre. Utilisez ceci pour déplacer, redimensionner, et (un) se concentrer sur une fenêtre, etc.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -23,9 +23,7 @@ var updating = browser.windows.update(
 - `windowId`
   - : `integer`. ID de la fenêtre à mettre à jour.
 - `updateInfo`
-
   - : `object`. Objet contenant les propriétés de mise à jour.
-
     - `drawAttention` {{optional_inline}}
       - : `boolean`. si cela est vrai, la fenêtre doit être affichée de manière à attirer l'attention de l'utilisateur sur la fenêtre, sans changer la fenêtre ciblée. L'effet dure jusqu'à ce que l'utilisateur change de focus sur la fenêtre. Cette option n'a aucun effet si la fenêtre a déjà un focus. Si cela est faux pour annuler la requête précéndete `drawAttention`.
     - `focused` {{optional_inline}}
@@ -45,7 +43,7 @@ var updating = browser.windows.update(
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre mise à jour. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre mise à jour. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 

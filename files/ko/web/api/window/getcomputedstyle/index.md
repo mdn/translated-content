@@ -69,7 +69,7 @@ para.textContent =
 
 ## 의사요소 사용하기
 
-getComputedStyle은 의사요소(pseudo-elements, `::after`, `::before`, `::marker`, `::line-marker`, [spec](http://dev.w3.org/csswg/css3-content/#pseudo-elements)참고)에서 스타일 정보를 가져올 수 있습니다.
+getComputedStyle은 의사요소(pseudo-elements, `::after`, `::before`, `::marker`, `::line-marker`, [spec](https://dev.w3.org/csswg/css3-content/#pseudo-elements)참고)에서 스타일 정보를 가져올 수 있습니다.
 
 ```html
 <style>
@@ -90,7 +90,7 @@ getComputedStyle은 의사요소(pseudo-elements, `::after`, `::before`, `::mark
 
 ## 참고
 
-반환되는 {{domxref("CSSStyleDeclaration")}} 객체에는 지원되는 모든 CSS의 본디속성(longhand)명에 대한 활성값을 갖게 됩니다. 예로, 본디속성명 `border-bottom-width`의 경우를 보면, `border-width`와 `border`같은 [단축속성명](/ko/docs/Web/CSS/Shorthand_properties)이 사용됩니다. `font-size`과 같은 본디속성명만을 사용하여 속성값을 질의하는 것이 안전합니다. `font`같은 단축속성명을 사용하여 질의하는 것은 대부분의 브라우저에서 동작하지 않을 것입니다.
+반환되는 {{domxref("CSSStyleDeclaration")}} 객체에는 지원되는 모든 CSS의 본디속성(longhand)명에 대한 활성값을 갖게 됩니다. 예로, 본디속성명 `border-bottom-width`의 경우를 보면, `border-width`와 `border`같은 [단축속성명](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)이 사용됩니다. `font-size`과 같은 본디속성명만을 사용하여 속성값을 질의하는 것이 안전합니다. `font`같은 단축속성명을 사용하여 질의하는 것은 대부분의 브라우저에서 동작하지 않을 것입니다.
 
 CSS속성 값은 `getPropertyValue(propName)` API를 사용하거나, `cs[' z-index']` 또는 `cs.zIndex` 같은 방식으로 객체에 직접 인덱싱하여 액세스할 수 있습니다.
 

@@ -61,7 +61,7 @@ prise en charge ou si elle est désactivée.
 - `decreaseFontSize`
   - : Ajoute une balise {{HTMLElement("small")}} autour de la sélection ou au point d'insertion. (Non pris en charge par Internet Explorer.)
 - `defaultParagraphSeparator`
-  - : Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont créés dans les zones de texte éditables. Voir [Différences dans la génération du balisage](/fr/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) pour plus de détails.
+  - : Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont créés dans les zones de texte éditables. Voir [Différences dans la génération du balisage](/fr/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) pour plus de détails.
 - `delete`
   - : Supprimer la sélection courante.
 - `enableAbsolutePositionEditor`

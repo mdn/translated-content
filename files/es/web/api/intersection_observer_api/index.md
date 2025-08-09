@@ -293,7 +293,7 @@ El navegador computa el rectángulo de intersección final de la siguiente forma
 2. Comenzando desde el bloque padre inmediato del objetivo y avanzando hacia afuera, se aplica el recorte (si lo hay) de cada bloque contenedor al rectángulo de intersección. El recorte de un bloque se determina en función de la intersección entre los dos bloques y el modo de recorte (si lo hay) es especificado por la propiedad {{cssxref("overflow")}}. Establecer `overflow` en cualquier valor que no sea `visible` provoca que ocurra el recorte.
 3. Si uno de los elementos contenedores es la raíz de un contexto de navegación anidado (como el documento contenido en un {{HTMLElement("iframe")}}), el rectángulo de intersección se recorta al área visible del contenedor de este contexto y continua hacia arriba a través de los contenedores con el bloque contenedor del contexto. Así que, si se alcanza el nivel superior de un `<iframe>`, el rectángulo de intersección se recorta al `viewport` del marco (`<iframe>`), y luego el elemento padre del marco es el siguiente bloque que se recorre hacia la raíz de la intersección.
 4. Cuando el recorrido hacia arriba alcanza la raíz de la intersección, el rectángulo resultante se mapea al espacio de coordenadas de la raíz de la intersección.
-5. A continuación, el rectángulo resultante se actualiza mediante su intersección con el [rectángulo de intersección de la raíz](/es/docs/Web/API/Intersection_Observer_API#root-intersection-rectangle).
+5. A continuación, el rectángulo resultante se actualiza mediante su intersección con el [rectángulo de intersección de la raíz](#root-intersection-rectangle).
 6. Finalmente, este rectángulo se mapea al espacio de coordenadas del {{domxref("document")}} objetivo.
 
 ### Callbacks de cambio de intersección
@@ -321,7 +321,6 @@ intersectionCallback(entries) => {
 ## Interfaces
 
 - {{domxref("IntersectionObserver")}}
-
   - : La interfaz principal para la API de Observador de Intersecciones. Proporciona métodos para crear y gestionar un observador que puede vigilar cualquier número de elementos de destino para la misma configuración de intersección. Cada observador puede observar de manera asíncrona los cambios en la intersección entre uno o más elementos de destino (_target_) y un elemento ancestro compartido o con el {{Glossary('viewport')}} de su {{domxref("Document")}} de nivel superior. El ancestro o el _viewport_ se denomina **root**.
 
 - {{domxref("IntersectionObserverEntry")}}
@@ -343,7 +342,7 @@ El HTML para este ejemplo es muy simple, con un elemento primario que será la c
 
 ### CSS
 
-El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las [CSS transitions](/es/docs/Web/CSS/CSS_Transitions), los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.
+El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las [CSS transitions](/es/docs/Web/CSS/CSS_transitions), los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.
 
 ```css
 #box {
@@ -415,7 +414,7 @@ Las constantes y variables que establecimos aquí son:
 - `decreasingColor`
   - : De manera similar, esta es una cadena que define un color que aplicaremos cuando la proporción de visibilidad esté disminuyendo.
 
-Llamamos a {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} para comenzar a escuchar el evento [`load`](/es/docs/Web/Reference/Events/load); una vez que la página haya terminado de cargarse, obtenemos una referencia al elemento con el ID `"box"` utilizando {{domxref("Document.querySelector", "querySelector()")}}, luego llamamos al método `createObserver()` que crearemos en un momento para manejar la creación e instalación del observador de intersección.
+Llamamos a {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} para comenzar a escuchar el evento [`load`](/es/docs/Web/API/Window/load_event); una vez que la página haya terminado de cargarse, obtenemos una referencia al elemento con el ID `"box"` utilizando {{domxref("Document.querySelector", "querySelector()")}}, luego llamamos al método `createObserver()` que crearemos en un momento para manejar la creación e instalación del observador de intersección.
 
 #### Creando el observador de interesección
 

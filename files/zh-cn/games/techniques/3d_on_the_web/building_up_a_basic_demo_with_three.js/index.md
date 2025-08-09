@@ -1,111 +1,124 @@
 ---
-title: Building up a basic demo with Three.js
+title: 使用 Three.js 构建基础演示
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{GamesSidebar}}
+游戏中的典型 3D 场景（即使是最简单的场景）包含一些标准项目，如位于坐标系中的形状、用于查看的摄像头、使其看起来更漂亮的灯光和材质、使其看起来更生动的动画等。与其他三维库一样，**Three.js** 也提供了内置辅助函数，以帮助你更快地实现常见的三维功能。在本文中，我们将带你了解使用 Three.js 的真正基础知识，包括设置开发环境、构建必要的 HTML、Three 的基本对象以及如何制作一个基本演示。
 
-游戏中一个典型的 3D 场景 (最简单的那种) 包含标准的物品比如在坐标轴中的形状，一个实际可看到他们的摄像机，灯光和材质让其看起来不错，动画使其生动等等。 **Three.js**, 和其他 3D 库一样，提供内置的 helper 函数来帮助你尽可能快地实现通用的 3D 功能 . 在这篇文章我们会带你了解使用 Three 的基本知识，包含设置开发者环境，必要的 HTML 结构，Three.js 对象基础，以及如何创建一个基本的 demo.
+Three 是最流行的 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 库之一，而且很容易上手。我们并不是说它比其他任何 WebGL 库都要好，你可以随意尝试其他库。
 
 > [!NOTE]
-> 我们选择 Three.js 因为它是最流行的[WebGL](/zh-CN/docs/Web/API/WebGL_API) 库之一，并且很容易上手。我们不会介绍任何其他更好的 WebGL 库，你可以自由选择其他库做尝试，比如 [CopperLicht](http://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), [OSG.js](http://osgjs.org/), [O3D](https://code.google.com/p/o3d/), 或者其他你喜欢的库。
+> 本指南最近更新于 2024 年 11 月，与 Three.js `r79` 版本兼容。
 
-## 环境设置
+## 开发环境设置
 
-开始用 Three.js, 你不需要准备太多，只需：
+要开始使用 Three.js 进行开发，应确保使用的是支持 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的现代浏览器。
 
-- 确保使用的支持 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的现代浏览器，例如最新版的 Firefox 或 Chrome.
-- 创建一个目录保存例子。
-- 复制最新的压缩版 [Three.js](http://threejs.org/build/three.min.js) 到你的目录。
-- 用单独的浏览器 tab 打开 [Three.js](http://threejs.org/docs/) 文档 — 对应参考很有用。
+在你的代码中，你可以[使用 CDN 或 Node.js](https://threejs.org/docs/#manual/en/introduction/Installation) 导入 Three.js。如果选择使用 CDN 导入该库，可以在 HTML 代码中使用这个 URL：
 
-## HTML 结构
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+```
 
-这是将用到的 HTML 结构。
+如果要根据特定的 Three.js 版本进行开发，那么将 Three.js 作为依赖项安装在 Node.js 设置中会很方便，而且还能加快协作和部署：
+
+```bash
+npm install --save three
+npm install --save-dev vite # 开发环境需求
+npx vite
+```
+
+或者，你也可以下载[最新的 Three.js 库](https://github.com/mrdoob/three.js/archive/master.zip)，并从位于 `build/three.module.min.js` 的解压压缩包中复制最小化版本的 Three.js 到你的项目中。请注意，压缩包包含源代码文件，因此下载大小约为 350MB。
+
+无论你选择哪种方式开始工作，请确保在工作时打开 [Three.js 文档](https://threejs.org/docs/)以供参考。
+
+## 用于 Three.js 的基本 HTML 结构
+
+如果在本地集成开发环境中构建项目，以下是开始使用的 HTML 结构：
 
 ```html
 <!doctype html>
-<html>
+<html lang="zh-CN">
   <head>
-    meta charset="utf-8">
-    <title>MDN Games: Three.js demo</title>
+    <meta charset="utf-8" />
+    <title>MDN 游戏：Three.js 演示</title>
     <style>
-      body {
+      html,
+      body,
+      canvas {
         margin: 0;
         padding: 0;
-      }
-      canvas {
         width: 100%;
         height: 100%;
+        font-size: 0;
       }
     </style>
   </head>
   <body>
-    <script src="three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
     <script>
-      var WIDTH = window.innerWidth;
-      var HEIGHT = window.innerHeight;
-      /* all our JavaScript code goes here */
+      const WIDTH = window.innerWidth;
+      const HEIGHT = window.innerHeight;
+      /* 我们所有的 JavaScript 代码会出现在这里 */
     </script>
   </body>
 </html>
 ```
 
-It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the `width` and `height` of the {{htmlelement("canvas")}} element that Three.js will insert on the page to 100% so that it will fill the entire available viewport space. The first {{htmlelement("script")}} element includes the Three.js library in the page, and we will write our example code into the second one. There are two helper variables already included, which store the window's `width` and `height`.
+它包含一些基本信息，如文档的 {{htmlelement("title")}}，以及一些用于设置 {{htmlelement("canvas")}} 元素 `width` 和 `height` 的 CSS，Three.js 将在页面中插入该元素，并将其设置为 100% 以填充整个可用视口空间。第一个 {{htmlelement("script")}} 元素在页面中导入了 Three.js 库，我们将在第二个元素中编写示例代码。这里已经包含了两个辅助变量，分别存储窗口的 `width` 和 `height`。
 
-Before reading on, copy this code to a new text file, and save it in your working directory as `index.html`.
+在继续阅读之前，请将这些代码复制到一个新的文本文件中，并将其保存在工作目录中，文件名为 `index.html`。
 
 ## 渲染器
 
-A renderer is a tool that displays scenes right in your browser. There are a few different renderers: WebGL is the default one, and the others you can use are Canvas, SVG, CSS and DOM. They differ in a way everything is rendered, so the WebGL implementation will work differently than the CSS one, but the idea is to have it look exactly the same for the end user. Thanks to this approach, a fallback can be used if the primary technology is not supported by the browser.
+渲染器是一种在浏览器中直接显示场景的工具。有几种不同的渲染器：WebGL 是默认设置，你还可以使用 Canvas、SVG、CSS 和 DOM。它们的渲染方式各不相同，因此 WebGL 的实现方式与 CSS 的实现方式不同。尽管它们实现目标的方式各不相同，但用户的体验看起来都是一样的。有了这种方法，如果浏览器不支持所需的技术，就可以使用后备技术。
+
+下面的代码创建了一个新的 WebGL 渲染器，将其大小设置为适合屏幕上的整个可用空间，并将 DOM 结构附加到页面上。你可能已经注意到了第一行中的 `antialias` 参数——它可以更平滑地渲染形状的边缘。`setClearColor()` 方法将背景设置为浅灰色，而不是默认的黑色。
 
 ```js
-var renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 ```
 
-We are creating a new WebGL renderer, setting it's size to fit the whole available space on the screen and appending the DOM structure to the page. You probably noticed the `antialias` parameter in the first line — this enables the edges of the shapes to be rendered a little more smoothly. The `setClearColor()` method sets our background to a light gray colour instead of the default black one.
-
-Add this code into the second {{htmlelement("script")}} element, just below the JavaScript comment.
+将这些代码添加到第二个 {{htmlelement("script")}} 元素中，紧随 JavaScript 注释之后。
 
 ## 场景
 
-A scene is the place where everything happens. When creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. In three.js, the scene is reperesented by a `Scene` object. Let's create it, by adding the following line below our previous lines:
+场景是一切事件发生的地方。在演示中创建新对象时，我们会将它们全部添加到场景中，使它们在屏幕上可见。在 Three.js 中，场景由一个 `Scene` 对象表示。让我们在前面几行的下面添加以下几行来创建它：
 
 ```js
-var scene = new THREE.Scene();
+const scene = new THREE.Scene();
 ```
 
-Later on we will be using the `.add()` method to add objects to the scene.
+稍后我们将使用 `.add()` 方法将对象添加到场景中。
 
 ## 摄像机
 
-我们有渲染场景，但是我们仍然需要一个摄像机来观察场景 - 想象没有摄像机的电影场景。下面的代码将摄像机放在三维坐标系中，并将其指向我们的场景，这样人们就能看到一些东西：
+我们有渲染场景，但是我们仍然需要一个摄像机来观察场景——想象没有摄像机的电影场景。下面的代码将摄像机放在三维坐标系中，并将其指向我们的场景，这样人们就能看到一些东西：
 
 ```js
-var camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
+const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
 ```
 
-Add these lines to your code, below the prevous ones.
+将这些代码添加到前面所述的代码的下方。
 
-There are other types of camera available (Cube, Orthographic), but the simplest is the Perspective one. To initialize it we have to set its field of view and aspect ratio — the first one is used to set how much is seen, and a proper aspect ratio is important for the objects on the screen to have the right proportions when rendered and not look stretched. Let's explain the values we are setting in the code above:
+还有其他类型的摄像机（如立方体摄像机、正交摄像机），但最简单的还是透视摄像机。要初始化透视摄像机，我们必须设置它的视场角和长宽比：前者用于设置能看到多少物体，后者对于屏幕上的物体在渲染时拥有正确的比例以及看起来不被拉伸非常重要。让我们来解释一下上面代码中的设置值：
 
-- The value we set for the field of view, 70, is something we can experiment with — the higher the value, the greater the amount of scene the camera will show. Imagine a normal camera view, versus a fish eye effect, which allows a lot more to be seen. The default value is 50.
-- The aspect ratio is set to the current width and height of the window so it will be dynamically adjusted. We could set a fixed ratio — for example 16 ⁄ 9, which is the aspect ratio of a widescreen TV. The default value is 1.
-- The `z` position with the value of 50 units is the distance between the camera and the center of the scene on the `z` axis — here we're moving the camera back so the objects on the scene can be viewed. 50 feels ok as it's not too near and not too far and the sizes of the objects allow them to stay on the scene within the given field of view. The `x` and `y` values, if not specified, will default to 0.
+- 我们为视场角设置的数值 70 是可以尝试的：数值越大，摄像机显示的场景就越多。想象一下普通摄像机的视角和鱼眼效果的对比，鱼眼效果可以看到更多的景物。默认值为 50。
+- 纵横比设置为窗口的当前宽度和高度，因此可以动态调整。我们可以设置一个固定的比例，例如 16 ⁄ 9，这是宽屏幕电视的纵横比。默认值为 1。
+- `z` 坐标的值为 50 个单位，是摄像机与场景中心在 `z` 轴上的距离。在这里，我们将摄像机后移，这样就可以看到场景中的物体。50 感觉差不多。这样既不会太近，也不会太远，而且物体的大小也允许它们在给定的视野范围内停留在场景中。如果没有指定 `x` 和 `y` 值，默认值为 0。
 
-You should experiment with these values and see how they change what you see in the scene.
+你可以尝试使用这些值，看看它们会如何改变场景中看到的效果。距离值（例如摄像机 z 坐标位置）是无单位的，可以是你认为适合场景的任何数值：毫米、米、英尺或英里。一切由你决定。
 
-> [!NOTE]
-> The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — milimeters, meters, feet, or miles — it's up to you.
+## 渲染场景
 
-## Rendering the scene
-
-Everything is ready, but we still can't see anything. Although we set the renderer up, we still have to actually render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/zh-CN/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
+一切准备就绪，但我们仍然看不到任何东西。虽然我们已经设置了渲染器，但仍需要渲染一切。在 [`requestAnimationFrame()`](/zh-CN/docs/Web/API/Window/requestAnimationFrame) 的帮助下，我们的 `render()` 函数将完成这项工作：
 
 ```js
 function render() {
@@ -115,164 +128,259 @@ function render() {
 render();
 ```
 
-On every new frame the `render` function is invoked and the `renderer` renders the `scene` and the `camera`. Right after the function declaration we're invoking it for the first time to start the loop, after which it will be used indefinitely.
+在每一帧新画面中，`render` 函数都会被调用，`renderer` 会渲染 `scene` 和 `camera`。就在函数声明之后，我们第一次调用它来启动循环，之后它将被无限地使用。
 
-Again add the new code below your previous additions, then try saving the file and loading it in your browser. You should now see a gray window. Congratulations!
+同样，将这段新代码添加到之前添加的代码下面。保存文件并在浏览器中打开。现在你应该看到一个灰色的窗口。恭喜你！
 
-## Geometry
+## 几何体
 
-Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Three.js provides a bunch of predefined primitives that you can to create shapes instantly in a single line of code. There's cubes, spheres, cylinders and more complicated shapes available. Drawing the needed vertices and faces for given shape is taken care of by the framework, so we can focus on the high level coding. Let's start by defining the geometry for a cube shape — add the following just above the `render()` function:
-
-```js
-var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
-```
-
-In this case we define a simple cube that is 10 x 10 x 10 units. The geometry itself is not enough though — we also need a material that will be used for our shape.
-
-## Material
-
-Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are predefined materials that can be used: Basic, Phong, Lambert. We will play with the last two later on, but for now the Basic one should be enough:
+现在我们的场景已经渲染完成，可以开始添加 3D 图形了。为了加快开发速度，Three.js 提供了大量预定义的图元，只需一行代码就能立即创建形状。有立方体、球体、圆柱体和更复杂的形状可供选择。为给定形状绘制所需的顶点和面等细节由 Three 框架处理，因此我们可以专注于更高层次的编码。让我们从定义立方体的几何形状开始，在 `render()` 函数上方添加以下内容：
 
 ```js
-var basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
+const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 ```
 
-Add this line below the previous one.
+在本例中，我们定义了一个 10 x 10 x 10 个单位的简单立方体。但仅有几何图形本身是不够的，我们还需要为形状选择一种材料。
 
-Our material is ready, but what to do next?
+## 材质
 
-## Mesh
-
-To apply the material to a geometry a mesh is used. It takes a shape and adds the specified material to every face:
+材质是物体表面的覆盖物、颜色或纹理。在本例中，我们将选择简单的蓝色来粉刷我们的盒子。有许多预定义的材质可以使用：Basic（基本）、Phong（芳香）、Lambert（兰伯特）。我们稍后再使用后两种材质，但现在使用“基本”材质就足够了：
 
 ```js
-var cube = new THREE.Mesh(boxGeometry, basicMaterial);
+const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
 ```
 
-Again, add this line below the previous one.
+## 网格
 
-## Adding the cube to the scene
+要将材质应用到几何体上，需要使用网格。它获取一个形状，并在每个面上添加指定的材质：
 
-We've now created the actual cube using the geometry and material defined earlier. The last thing to do is to actually add the cube to our scene — add this line below the previous one:
+```js
+const cube = new THREE.Mesh(boxGeometry, basicMaterial);
+```
+
+## 将立方体添加到场景
+
+现在我们使用之前定义的几何体和材质创建了一个立方体。最后要做的就是将立方体放置到场景中。在前一行下面添加这一行：
 
 ```js
 scene.add(cube);
 ```
 
-If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling as we like. Let's apply a little bit of rotation to the cube, so we can see more than one face — again, add below the previous one:
+如果保存并刷新 Web 浏览器，我们的对象现在看起来就像一个正方形，因为它正对着摄像机。对象的好处在于，我们可以在场景中随意移动它们。例如，随意旋转和缩放。让我们对立方体进行一下旋转，这样我们就能看到不止一个面。同样，在前面的代码下面添加我们的代码：
 
 ```js
 cube.rotation.set(0.4, 0.2, 0);
 ```
 
-Congratulations, you've created your first object in a 3D environment! It was easier than you thought, right? Here's how it should look:
+## Three.js 形状示例
 
-![Blue cube on a gray background rendered with Three.js.](cube.png)
+如果你已经顺利地完成了所有步骤，那么你已经使用 Three.js 在 3D 环境中创建了第一个对象！这比你想象的要容易得多，对吗？你的代码应该与下面的实时示例相似。可以点击“Play”在 MDN 代码演练场中查看和编辑代码：
 
-And here's the code we have created so far:
+```html hidden live-sample___three-js-intro
+<script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+```
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/bwup75fa/","","350")}}
+```js hidden live-sample___three-js-intro
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 
-You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html).
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(WIDTH, HEIGHT);
+renderer.setClearColor(0xdddddd, 1);
+document.body.appendChild(renderer.domElement);
 
-## More shapes and materials
+const scene = new THREE.Scene();
 
-Now we will add more shapes to the scene and explore other shapes, materials, lighting, and more. Let's move the cube to the left to make space for some friends — add the following line just below the previous one:
+const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
+camera.position.z = 50;
+scene.add(camera);
+
+const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
+const cube = new THREE.Mesh(boxGeometry, basicMaterial);
+scene.add(cube);
+cube.rotation.set(0.4, 0.2, 0);
+
+function render() {
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
+}
+render();
+```
+
+```css hidden live-sample___three-js-intro
+body,
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+```
+
+{{embedlivesample("three-js-intro", "", "400px")}}
+
+## 更多图形和材质
+
+现在，我们将在场景中添加更多形状，并探索其他形状、材质、灯光等。让我们把立方体移到左边，为一些朋友腾出空间。在前一行的下方添加以下一行：
 
 ```js
 cube.position.x = -25;
 ```
 
-Now onto the shapes and materials: what would you say for a torus using the Phong material? Try adding the following lines just below the lines that define the cube.
+现在我们来看看更多的形状和材料。如果添加一个用 Phong 材质包裹的环形体，会发生什么情况呢？试着在定义立方体的那行代码下方添加以下代码。
 
 ```js
-var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
-var phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
-var torus = new THREE.Mesh(torusGeometry, phongMaterial);
+const torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
+const phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
+const torus = new THREE.Mesh(torusGeometry, phongMaterial);
+torus.rotation.set(0.5, 0.5, 0);
 scene.add(torus);
 ```
 
-Thee lines will add a torus geometry; the `TorusGeometry()` method's parameters define and the parameters are `radius`, `tube diameter`, `radial segment count` and `tubular segment count`. The Phong material should look more glossy than the simple color of the box that was using the Basic material, although at the moment it will just look black.
+这些线条将添加一个圆环体；`TorusGeometry()` 方法的参数定义了 `radius`、`tube diameter`、`radial segment count` 和 `tubular segment count`。Phong 材质看起来应该比盒子的简单 Basic 材质更有光泽，不过现在我们的环看起来只是黑色的。添加旋转后，环状体会有一个初始深度，这样看起来就不会太平。
 
-We can have even crazier predefined shapes; let's play some more — add the following lines below the ones that defined the torus:
+我们可以选择更多有趣的预定义形状。让我们再来探索一些。在定义圆环体的下面添加以下几行：
 
 ```js
-var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
-var lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
-var dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
+const dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
+const lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
+const dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
 ```
 
-This time we are creating a dodecahedron, which is a shape containing twelve flat faces. The parameter `DodecahedronGeometry()` takes is the size of the object. We're using a Lambert material here, which is similar to Phong, but should be less glossy (again, black for now.) We're moving the object to the right, so it's not in the same place as the box or torus.
+这次我们要创建的十二面体是一个包含十二个平面的形状。`DodecahedronGeometry()` 的参数定义了对象的大小。我们在这里使用的是 Lambert 材质，它与 Phong 类似，但光泽度较低。同样，现在它还是黑色的。我们将物体向右移动，因此它与盒子或圆环物体的位置不同。
 
-As mentioned above, the new objects currently just look black. To have both the Phong and Lambert materials properly visible we need a source of light.
+如上所述，新物体目前看起来只是黑色的。为了使 Phong 和 Lambert 材料都能正常显示，我们需要引入一个光源。
 
-## Lights
+## 光照
 
-There are various types of light sources available in Three.js; the most basic one is the `PointLight`, which works like a flashlight — shinig a spotlight in a given direction. Add the following below your shapre definitions:
+Three.js 中有各种类型的光源。最基本的是 `PointLight`（点光源），它的工作原理类似于手电筒，向指定方向照射聚光灯。在形状定义下方添加以下几行：
 
 ```js
-var light = new THREE.PointLight(0xffffff);
+const light = new THREE.PointLight(0xffffff);
 light.position.set(-10, 15, 50);
 scene.add(light);
 ```
 
-We define a white point of light, set it's position a bit away from the center of the scene so it can light up some parts of the shapes, and add it to the scene. Now everything works as it should — all three shapes are visible. You should check the documentation for other types of light like Ambient, Directional, Hemisphere or Spot, and experiment with placing them on the scene to see the effects.
+我们定义了一个白色光点，将其位置设置在离场景中心稍远的地方，这样它就可以照亮图形的某些部分，最后将其添加到场景中。现在一切正常，三个图形都清晰可见。你应该查看文档，了解其他类型的灯光，如环境光、方向光、半球光或聚光灯。尝试将它们放置在我们的场景中，看看它们对场景有什么影响。
 
-![Shapes: blue cube, dark yellow torus and dark gray dodecahedron on a gray background rendered with Three.js.](shapes.png)
+这是一个很好的进展，但我们可以让它更精彩！在游戏中，通常会有一些事情发生。我们可能会看到动画之类的东西。因此，让我们尝试为这些图形注入一点活力，为它们制作动画！
 
-This looks a little bit boring though. In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.
+## 动画
 
-## Animation
+我们已经使用旋转来调整立方体的位置。我们还可以缩放形状或改变它们的位置。为了显示动画，我们需要在渲染循环中更改这些值，以便在每一帧中更新。
 
-We already used rotation to adjust the position of the cube; we could also scale the shapes, or change thier positions. To show actual animation, we need to make changes to these values inside the render loop so, they are updated on every frame.
+### 旋转
 
-### Rotation
-
-Rotating is quite easy — all you need to do is to add a defined value to the given direction of the rotation on each frame. Add this line of code right after the `requestAnimationFrame()` invocation in the `render` function:
+旋转非常简单。你可以在每一帧上为指定的旋转方向添加一个值。在 `render` 函数内的 `requestAnimationFrame()` 调用后添加这行代码：
 
 ```js
 cube.rotation.y += 0.01;
 ```
 
-It will rotate the cube on every frame by a tiny bit, so it will look like a smooth animation.
+它会在每一帧中将立方体旋转一点点，这样看起来就像一个平滑的动画。
 
-### Scaling
+### 缩放
 
-We can also scale a given object. By applying a constant value we could make it grow or shrink once, but let's make it more interesting. First, we will need a helper variable called `t` for counting the elapsed time. Add it right before the `render()` function:
+我们还可以缩放对象。应用一个常量值，我们就能使其增长或缩小一次。让我们把事情变得更有趣。首先，我们实现一个名为 `t` 的辅助变量，用于计算经过的时间。将它添加到 `render()` 函数之前：
 
 ```js
-var t = 0;
+let t = 0;
 ```
 
-Now let's increase the value by a given constant value on each frame of the animation; add the following lines just below the `requestAnimationFrame()` invocation:
+现在，让我们在动画的每一帧中以给定的常量增加数值。在 `requestAnimationFrame()` 调用下面添加以下几行：
 
 ```js
 t += 0.01;
 torus.scale.y = Math.abs(Math.sin(t));
 ```
 
-This way we'll be able to use `Math.sin` and end up with quite an interesting result: this will scale the torus and repeat the whole process, as `sin` is a periodic function. We're wrapping the scale value in `Math.abs` to pass the absolute values (greater or equal to 0), because sin is between -1 and 0, and for negative values the torus might render unexpectedly (in this case it looks black half the time.)
+我们使用 `Math.sin`，得到了一个非常有趣的结果。由于 `sin` 是一个周期性函数，这将对环形进行缩放，并重复这一过程。我们用 `Math.abs` 封装缩放值，以传递大于或等于 0 的绝对值。由于 sin 介于 -1 和 1 之间，负值可能会以意想不到的方式呈现圆环体。在这种情况下，它有一半时间看起来是黑色的。
 
-Now onto the movement part.
+### 移动
 
-### Moving
-
-Beside rotation and scaling we can also move objects around the scene. Add the following, again just below the `requestAnimationFrame()` invocation:
+除了旋转和缩放，我们还可以在场景中移动对象。在我们的 `requestAnimationFrame()` 调用下方添加以下内容：
 
 ```js
 dodecahedron.position.y = -7 * Math.sin(t * 2);
 ```
 
-This will move the dodecahedron up and down by applying the `sin()` value to the y axis on each frame, with a little bit of adjustment to make it look cooler. Try changing the values to see how it affects the animations.
+这将通过在每一帧的 Y 轴上应用 `sin()` 值来上下移动十二面体，并稍作调整使其看起来更酷。请尝试更改这些值，看看会对动画产生什么影响。
 
-## Conclusion
+## Three.js 动画示例
 
-Here's the final piece of the code:
+下面是带有动画形状的最终代码。你可以点击“Play”在 MDN 代码演练场中编辑示例：
 
-{{JSFiddleEmbed("https://jsfiddle.net/rybr720u/","","350")}}
+```html hidden live-sample___three-js-animation
+<script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+```
 
-You can also [see it on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html) and [fork the repository](https://github.com/end3r/MDN-Games-3D/) if you want to play with it yourself locally. Now you know the basics of Three.js, you can get back to the parent page about [3D on the Web](/zh-CN/docs/Games/Techniques/3D_on_the_web).
+```js live-sample___three-js-animation
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 
-You should also try learning raw WebGL, so you can get a better understanding of what's going on. See our [WebGL documentation](/zh-CN/docs/Web/API/WebGL_API).
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(WIDTH, HEIGHT);
+renderer.setClearColor(0xdddddd, 1);
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 0.1, 10000);
+camera.position.z = 50;
+scene.add(camera);
+
+const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
+const cube = new THREE.Mesh(boxGeometry, basicMaterial);
+cube.position.x = -25;
+cube.rotation.set(0.4, 0.2, 0);
+scene.add(cube);
+
+const torusGeometry = new THREE.TorusGeometry(7, 1, 16, 32);
+const phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
+const torus = new THREE.Mesh(torusGeometry, phongMaterial);
+torus.rotation.set(0.5, 0.5, 0);
+scene.add(torus);
+
+const strangeGeometry = new THREE.DodecahedronGeometry(7);
+const lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
+const dodecahedron = new THREE.Mesh(strangeGeometry, lambertMaterial);
+dodecahedron.position.x = 25;
+scene.add(dodecahedron);
+
+const light = new THREE.PointLight(0xffffff);
+light.position.set(-10, 15, 50);
+scene.add(light);
+
+let t = 0;
+function render() {
+  t += 0.01;
+  requestAnimationFrame(render);
+  cube.rotation.y += 0.01;
+  torus.scale.y = Math.abs(Math.sin(t));
+  dodecahedron.position.y = -7 * Math.sin(t * 2);
+  renderer.render(scene, camera);
+}
+render();
+```
+
+```css hidden live-sample___three-js-animation
+body,
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+```
+
+{{embedlivesample("three-js-animation", "", "400px")}}
+
+## 总结
+
+现在你已经了解 Three.js 的基础知识；祝实验愉快！如果你想了解更多，可以继续阅读 [Web 上的 3D 游戏](/zh-CN/docs/Games/Techniques/3D_on_the_web)文档。还可以尝试学习 WebGL，以便更好地了解 WebGL 底层发生了什么。更多信息请参阅我们的 [WebGL 文档](/zh-CN/docs/Web/API/WebGL_API)。

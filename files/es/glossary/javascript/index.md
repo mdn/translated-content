@@ -38,6 +38,6 @@ Recientemente, la popularidad de JavaScript se ha expandido aún más gracias a 
 
 ### Referencia técnica
 
-- [El último estándar ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- [Referencia de JavaScript](/es/docs/Web/JavaScript/referencia) en MDN
-- [El libro _JavaScript elocuente_](http://eloquentjavascript.net/)
+- [El último estándar ECMAScript](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference) en MDN
+- [El libro _JavaScript elocuente_](https://eloquentjavascript.net/)

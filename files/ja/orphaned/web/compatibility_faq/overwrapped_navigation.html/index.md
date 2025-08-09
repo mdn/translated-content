@@ -74,4 +74,4 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
 
 - 少ない修正で他ブラウザーとの互換性が取れます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

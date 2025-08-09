@@ -134,7 +134,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
   - : Возвращает строку с описанием символа. Переопределяет метод {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Symbol.prototype.valueOf()")}}
   - : Возвращает символ. Переопределяет метод {{jsxref("Object.prototype.valueOf()")}}.
-- [`Symbol.prototype[@@toPrimitive]()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
+- [`Symbol.prototype[@@toPrimitive]()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
   - : Возвращает символ.
 
 ## Примеры
@@ -156,7 +156,7 @@ typeof Symbol.iterator === "symbol";
 - При попытке конвертировать символ в число возникает исключение {{jsxref("TypeError")}} (например, `+sym` или `sym | 0`).
 - Результатом нестрогого сравнения `Object(sym) == sym` будет `true`.
 - `Symbol("foo") + "bar"` вызывает исключение {{jsxref("TypeError")}} (невозможно преобразовать символ в строку). Это помогает избежать случайного создания строкового свойства объекта из символа.
-- Более ["безопасный" вызов `String(sym)`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion) работает с символами как вызов {{jsxref("Symbol.prototype.toString()")}}. Обратите внимание, что в то же время `new String(sym)` вызовет исключение.
+- Более ["безопасный" вызов `String(sym)`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) работает с символами как вызов {{jsxref("Symbol.prototype.toString()")}}. Обратите внимание, что в то же время `new String(sym)` вызовет исключение.
 
 ### Символы и конструкция `for...in`
 
@@ -209,5 +209,5 @@ obj[Object(sym)]; // тоже 1
 
 - [Полифил `Symbol` в `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [Типы и структуры данных JavaScript](/ru/docs/Web/JavaScript/Data_structures)
+- [Типы и структуры данных JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures)
 - [ES6 In Depth: Symbols](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) на hacks.mozilla.org (2015)

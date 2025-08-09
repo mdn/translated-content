@@ -9,19 +9,19 @@ O elemento HTML _Datalist_ (\<datalist>) contém um conjunto de elementos {{ HTM
 
 ## Contexto de uso
 
-| Conteúdo permitido        | [Phrasing content](/pt-BR/HTML/Content_categories#phrasing_content) ou qualquer quantidade de elementos {{ HTMLElement("option") }} (ou nenhum) |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tags           | Nenhuma, ambas as tags inicial e final são obrigatórias                                                                                         |
-| Elementos pais permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content)                                                |
-| Documento normativo       | [HTML5, section 4.10.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)              |
+| Conteúdo permitido        | [Phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content) ou qualquer quantidade de elementos {{ HTMLElement("option") }} (ou nenhum) |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tags           | Nenhuma, ambas as tags inicial e final são obrigatórias                                                                                              |
+| Elementos pais permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content)                                                |
+| Documento normativo       | [HTML5, section 4.10.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)                  |
 
 ## Atributos
 
-Esse elemento não tem nenhum atributo a não ser os [global attributes](/pt-BR/HTML/Global_attributes), comuns para todos os elementos.
+Esse elemento não tem nenhum atributo a não ser os [global attributes](/pt-BR/docs/HTML/Global_attributes), comuns para todos os elementos.
 
 ## Interface do DOM
 
-Esse elemento implementa a interface [`HTMLDataListElement`](/pt-BR/DOM/HTMLDataListElement).
+Esse elemento implementa a interface [`HTMLDataListElement`](/pt-BR/docs/DOM/HTMLDataListElement).
 
 ## Exemplos
 
@@ -36,7 +36,7 @@ Esse elemento implementa a interface [`HTMLDataListElement`](/pt-BR/DOM/HTMLData
 </datalist>
 ```
 
-[View Live Examples](/samples/html/datalist.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/html/datalist.html)
 
 Esse código HTML é renderizado assim no Firefox 4:
 

@@ -9,7 +9,22 @@ l10n:
 
 **`toLocaleString()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素を表す文字列を返します。要素は `toLocaleString` メソッドを使用して文字列に変換され、これらの文字列はロケール依存の文字列（カンマ "," など）で区切られます。このメソッドは {{jsxref("Array.prototype.toLocaleString()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-tolocalestring.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.toLocaleString()")}}
+
+```js interactive-example
+const uint8 = new Uint32Array([500, 8123, 12]);
+
+console.log(uint8.toLocaleString());
+// Expected output: "500,8123,12"
+
+console.log(uint8.toLocaleString("en-GB"));
+// Expected output: "500,8,123,12"
+
+console.log(
+  uint8.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
+// Expected output: "500,00 €,8.123,00 €,12,00 €"
+```
 
 ## 構文
 

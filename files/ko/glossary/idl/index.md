@@ -26,5 +26,5 @@ IDL 속성은 unsigned long, URL, 불리언 등과 같은 [다른 타입을 반�
 ## 같이 보기
 
 - 위키백과의 [IDL](https://en.wikipedia.org/wiki/Interface_description_language)
-- [HTML 속성 참고서](/ko/docs/Web/HTML/Attributes)
+- [HTML 속성 참고서](/ko/docs/Web/HTML/Reference/Attributes)
 - [인터페이스 정의 언어](https://people.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)

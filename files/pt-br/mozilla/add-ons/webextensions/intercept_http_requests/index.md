@@ -48,9 +48,9 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
 });
 ```
 
-Aqui vamos usar {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para chamar a função `logURL()` antes do inicio da requisição. A função `logURL()` guarda a URL da requisição para o objeto event e efetua log no console do navegador. O [padrão](/pt-BR/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` significa que iremos interceptar as requisições HTTP para todas URLs.
+Aqui vamos usar {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para chamar a função `logURL()` antes do inicio da requisição. A função `logURL()` guarda a URL da requisição para o objeto event e efetua log no console do navegador. O [padrão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` significa que iremos interceptar as requisições HTTP para todas URLs.
 
-Para testá-lo, [instale a extensão](/pt-BR/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [abra o console do navegador](/pt-BR/docs/Tools/Browser_Console), e abra alguma página da internet. No console do navegador você pode ver as URLs para alguns recursos que o navegador requisita:
+Para testá-lo, [instale a extensão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [abra o console do navegador](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html), e abra alguma página da internet. No console do navegador você pode ver as URLs para alguns recursos que o navegador requisita:
 
 {{EmbedYouTube("X3rMgkRkB1Q")}}
 
@@ -106,7 +106,7 @@ Desta vez não estamos interceptando cada requisição: a opção `{urls:[patter
 
 Observe também que estamos passando uma opção chamada `"blocking"`: precisamos informá-la toda vez que desejamos modificar a requisição. Isto faz com que a função bloqueie a requisição de rede, então o navegador espera pelo event listener retornar antes de continuar. Veja a documentação {{WebExtAPIRef("webRequest.onBeforeRequest")}} para mais no `"blocking"`.
 
-Teste abrindo uma página no MDN que possua muitas imagens (por exemplo [https://developer.mozilla.org/pt-BR/docs/Tools/Network_Monitor](/pt-BR/docs/Tools/Network_Monitor)), [recarregue a extensão](/pt-BR/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on) e então recarregue a página:
+Teste abrindo uma página no MDN que possua muitas imagens (por exemplo [https://developer.mozilla.org/pt-BR/docs/Tools/Network_Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)), [recarregue a extensão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on) e então recarregue a página:
 
 {{EmbedYouTube("ix5RrXGr0wA")}}
 
@@ -142,7 +142,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 Aqui vamos usar event listener {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} para executar a função somente quando os cabeçalhos forem enviados.
 
-O event listener será chamada somente para requisitar as URLs que batem com o [padrão](/pt-BR/Add-ons/WebExtensions/Match_patterns). Observe também que passamos novamente `"blocking"` como uma opção. Passamos também `"requestHeaders"`, que significa que o listener será passado como um array contendo os cabeçalhos da requisição que desejamos enviar. Veja {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} para mais informações dessas opções.
+O event listener será chamada somente para requisitar as URLs que batem com o [padrão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Observe também que passamos novamente `"blocking"` como uma opção. Passamos também `"requestHeaders"`, que significa que o listener será passado como um array contendo os cabeçalhos da requisição que desejamos enviar. Veja {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} para mais informações dessas opções.
 
 A função listener procura pelo cabeçalho "User-Agent" no array de cabeçalhos da requisição, substitui seu valor com o valor `ua` da variável, e retorna o array modificado. Este array modificado será agora enviado para o servidor.
 
@@ -152,4 +152,4 @@ Teste abrindo [useragentstring.com](http://useragentstring.com/) e veja como ele
 
 ## Aprenda mais
 
-Para aprender sobre todas as coisas que você pode fazer com a API `webRequest`, veja sua [documentação de referência](/pt-BR/Add-ons/WebExtensions/API/WebRequest).
+Para aprender sobre todas as coisas que você pode fazer com a API `webRequest`, veja sua [documentação de referência](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest).

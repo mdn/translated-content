@@ -28,7 +28,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
 
 Краткое описание дополнения, предназначенное для показа в интерфейсе браузера.
 
-Это [локализуемое свойство](/ru/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Это [локализуемое свойство](/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Пример
 

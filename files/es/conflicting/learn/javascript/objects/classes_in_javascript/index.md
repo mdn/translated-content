@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 Con lo básico fuera del camino, nos enfocaremos en Javascript Orientado a Objetos (JSOO) — este artículo presenta una descripción básica de la teoría de la Programación Orientada a Objetos (POO), luego explora cómo Javascript emula classes de objetos via funciones constructoras, y cómo crea instancias de objetos.
 
-| Prerequisitos: | Conocimientos básicos de computación, entendimiento básico de HTML y CSS, familiaridad con las bases de Javascript (ver [Primeros pasos con JavaScript](/es/docs/Learn/JavaScript/First_steps) y [Bloques de construcción JavaScript](/es/docs/Learn/JavaScript/Building_blocks)) y las bases de JSOO (ver [Introducción a objetos](/es/docs/Learn/JavaScript/Objects/Basics)). |
+| Prerequisitos: | Conocimientos básicos de computación, entendimiento básico de HTML y CSS, familiaridad con las bases de Javascript (ver [Primeros pasos con JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Bloques de construcción JavaScript](/es/docs/Learn_web_development/Core/Scripting)) y las bases de JSOO (ver [Introducción a objetos](/es/docs/Learn_web_development/Core/Scripting/Object_basics)). |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Objetivo:      | Entender la teoría base de la programación orientada a objetos, como se relaciona esta con JavaScript ("todo es un objeto"), y como crear constructores e instacias de objetos.                                                                                                                                                                                                 |
 
@@ -22,7 +22,7 @@ Los objetos pueden contener información y código relacionados, los cuales repr
 
 Vamos a considerar un sencillo programa que muestra información sobre estudiantes y profesores en una escuela. Aquí daremos un vistazo a la POO (Programación Orientada a Objetos) en general, no en el contexto de algún lenguaje de programación específico.
 
-Para empezar, podríamos volver a ver al objeto `Persona` de nuestro [artículo de primeros objetos](/es/docs/Learn/JavaScript/Objects/Basics), que define los datos generales y funcionalidades de una persona. Hay muchas cosas que podrías saber acerca de una persona (su dirección, estatura, tamaño de calzado, perfil de ADN, número de pasaporte, rasgos significativos de su personalidad...), pero, en este caso, solo estamos interesados en mostrar su nombre, edad, género e intereses, además de una pequeña introducción sobre este individuo basada en los datos anteriores. También queremos que sea capaz de saludar.
+Para empezar, podríamos volver a ver al objeto `Persona` de nuestro [artículo de primeros objetos](/es/docs/Learn_web_development/Core/Scripting/Object_basics), que define los datos generales y funcionalidades de una persona. Hay muchas cosas que podrías saber acerca de una persona (su dirección, estatura, tamaño de calzado, perfil de ADN, número de pasaporte, rasgos significativos de su personalidad...), pero, en este caso, solo estamos interesados en mostrar su nombre, edad, género e intereses, además de una pequeña introducción sobre este individuo basada en los datos anteriores. También queremos que sea capaz de saludar.
 
 Esto es conocido como **abstracción** — crear un modelo simple de algo complejo que represente sus aspectos más importantes y que sea fácil de manipular para el propósito de nuestro programa.
 
@@ -59,7 +59,7 @@ En el resto del articulo, comenzaremos a ver como podemos practicar la teoría d
 
 Algunas personas sostienen que JavaScript no es un verdadero lenguaje orientado a objetos — por ejemplo, su enunciado [`class`](/es/docs/Web/JavaScript/Reference/Statements/class) es sólo azúcar sintáctica sobre la herencia prototípica existente y no es una `class` en el sentido tradicional. JavaScript, utiliza funciones especiales llamadas funciones constructoras para definir objetos y sus características. Son útiles porque a menudo te encontrarás con situaciones en las que no sabes cuántos objetos crearás; los constructores proporcionan los medios para crear tantos objetos como necesites de una manera efectiva, adjuntando datos y funciones a ellos según sea necesario.
 
-Cuando se crea una nueva instancia del objeto a partir de una función constructora, su funcionalidad central (tal como se define en su prototipo, que exploraremos en el [artículo Prototipos](/es/docs/Learn/JavaScript/Objects/Object_prototypes) de objetos) no se copia en el nuevo objeto como lenguajes OO "clásicos", sino que la funcionalidad está vinculada a través de una cadena de referencia llamada cadena prototipo. Así que esto no es una verdadera instanciación, estrictamente hablando, JavaScript usa un mecanismo diferente para compartir funcionalidad entre objetos.
+Cuando se crea una nueva instancia del objeto a partir de una función constructora, su funcionalidad central (tal como se define en su prototipo, que exploraremos en el [artículo Prototipos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes) de objetos) no se copia en el nuevo objeto como lenguajes OO "clásicos", sino que la funcionalidad está vinculada a través de una cadena de referencia llamada cadena prototipo. Así que esto no es una verdadera instanciación, estrictamente hablando, JavaScript usa un mecanismo diferente para compartir funcionalidad entre objetos.
 
 > [!NOTE]
 > No ser "POO clásica" no es necesariamente algo malo; Como se mencionó anteriormente, la POO puede ser muy compleja muy rápidamente, y JavaScript tiene algunas agradables formas de aprovechar las características de la OO sin tener que profundizar demasiado en ello.
@@ -205,7 +205,7 @@ person1.bio()
 ```
 
 > [!NOTE]
-> Si tienes problemas para lograr que funcione, puedes comparar tu código con nuestra versión — ve [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (también lo puedes ver [corriendo en vivo](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
+> Si tienes problemas para lograr que funcione, puedes comparar tu código con nuestra versión — ve [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (también lo puedes ver [corriendo en vivo](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
 
 ### Ejercicios adicionales
 
@@ -214,11 +214,11 @@ Para empezar, intenta añadir un par de líneas de creación de objetos propias,
 Además, hay un par de problemas con nuestro método `bio()` — la salida siempre incluye el pronombre "He", incluso para personas de otros géneros. Y `bio` solamente incluye dos intereses, sin importar la cantidad que hay en el arreglo `interests`. ¿Podrías corregir esto en la definición de la clase (constructor)? Puedes poner cualquier código dentro de un constructor (probablemente necesites algunos condicionales y un bucle). Piensa como se deben estructurar las declaraciones dependiendo del género, y de la cantidad de intereses.
 
 > [!NOTE]
-> Si estás atascado, hay una [respuesta en nuestro repositorio de GitHub](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — igualmente ¡intentea resolverla primero!
+> Si estás atascado, hay una [respuesta en nuestro repositorio de GitHub](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — igualmente ¡intentea resolverla primero!
 
 ## Otras formas de crear instancias de objetos
 
-Hasta ahora hemos visto dos diferentes formas de crear una instancia de objeto — [declarando un objeto literal](/es/docs/Learn/JavaScript/Objects/Basics#Object_basics), y usando una función constructora (ver arriba).
+Hasta ahora hemos visto dos diferentes formas de crear una instancia de objeto — [declarando un objeto literal](/es/docs/Learn_web_development/Core/Scripting/Object_basics#object_basics), y usando una función constructora (ver arriba).
 
 Esto tiene sentido, pero hay otras formas — se muestran aquí para que te vayas familiarizando en caso de encontrarte con ellas.
 
@@ -291,10 +291,10 @@ En el próximo artículo, exploraremos los prototipos de objeto JavaScript.
 
 ## En este modulo
 
-- [Objetos básicos](/es/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript orientedo a objetos para principiantes](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Prototipos de Objetos](/es/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herencia en JavaScript](/es/docs/Learn/JavaScript/Objects/Inheritance)
-- [Trabajando con datos JSON](/es/docs/Learn/JavaScript/Objects/JSON)
-- [Práctica de construcción de objetos](/es/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Agregar funciones a nuestro demo de pelotas que rebotan](/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+- [Objetos básicos](/es/docs/Learn_web_development/Core/Scripting/Object_basics)
+- [JavaScript orientedo a objetos para principiantes](/es/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [Prototipos de Objetos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
+- [Herencia en JavaScript](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
+- [Trabajando con datos JSON](/es/docs/Learn_web_development/Core/Scripting/JSON)
+- [Práctica de construcción de objetos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)
+- [Agregar funciones a nuestro demo de pelotas que rebotan](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features)

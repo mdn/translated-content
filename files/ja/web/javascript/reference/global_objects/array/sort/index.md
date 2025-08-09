@@ -13,7 +13,19 @@ l10n:
 
 元の配列を変更せずに配列内の要素をソートするには、 {{jsxref("Array/toSorted", "toSorted()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/array-sort.html")}}
+{{InteractiveExample("JavaScript デモ: Array.sort()")}}
+
+```js interactive-example
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+```
 
 ## 構文
 
@@ -25,9 +37,7 @@ sort(compareFn)
 ### 引数
 
 - `compareFn` {{optional_inline}}
-
   - : ソート順を定義する関数です。返値は、 2 つの要素の相対順序を示す符号を持つ数値である必要があります。 `a` が `b` より小さい場合は負の値、`a` が `b` より大きい場合は正の値、等しい場合は 0 とします。 `NaN` は `0` として扱われます。この関数は次の引数で呼び出されます。
-
     - `a`
       - : 比較する第一要素。 `undefined` になることはありません。
     - `b`

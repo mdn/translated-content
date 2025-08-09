@@ -3,8 +3,6 @@ title: Firefox 32 для разработчиков
 slug: Mozilla/Firefox/Releases/32
 ---
 
-{{FirefoxSidebar}}
-
 Хотите помочь с документированием Firefox 32? Взгляните на [список ошибок, о которых нужно написать](http://beta.elchi3.de/doctracker/#list=fx&version=32.0) и приступайте!
 
 ## Изменения для Web Разработчиков
@@ -13,12 +11,12 @@ slug: Mozilla/Firefox/Releases/32
 
 Основные изменения:
 
-- [Редактор Web Audio](/ru/docs/Tools/Web_Audio_Editor)
+- [Редактор Web Audio](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
 - [Автоподстановка и подсказки в Блокноте](/ru/docs/Tools/Scratchpad#Code_completion_and_inline_documentation)
-- [Стили User agent в представлении Inspector Rules](/ru/docs/Tools/Page_Inspector#Rules_view)
-- [Кнопка выбора элемента со страницы перемещена](/ru/docs/Tools/Page_Inspector#Firefox_32_onwards_2)
-- [Добавлено отображение размеров узла в информационную панель Инспектора](/ru/docs/Tools/Page_Inspector#Firefox_32_onwards)
-- [Добавлена кнопка снятия снимка всей страницы](/ru/docs/Tools/Tools_Toolbox#Extra_tools)
+- [Стили User agent в представлении Inspector Rules](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules_view)
+- [Кнопка выбора элемента со страницы перемещена](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards_2)
+- [Добавлено отображение размеров узла в информационную панель Инспектора](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards)
+- [Добавлена кнопка снятия снимка всей страницы](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#extra_tools)
 - Добавлены HiDPI изображения в инструменты
 - Узлы, содержащие `display:none` в Инспекторе отображаются иначе
 
@@ -33,12 +31,11 @@ slug: Mozilla/Firefox/Releases/32
 
 ### HTML
 
-- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Element/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ([Firefox bug 870021](https://bugzil.la/870021)).
+- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Reference/Elements/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ([Firefox bug 870021](https://bugzil.la/870021)).
 
 ### JavaScript
 
 - Реализованы новые встроенные методы ECMAScript 6:
-
   - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723))
   - {{jsxref("Array.prototype.copyWithin()")}}
   - {{jsxref("Number.isSafeInteger()")}}
@@ -63,7 +60,7 @@ _Без изменений._
 
 ## Безопасность
 
-- [Привилегированный код теперь обладает рентгеновским зрением относительно экземпляров `Object` и `Array` в](/ru/docs/Xray_vision#Xray_semantics_for_Object_and_Array) [JavaScript](/ru/docs/Xray_vision#Xray_semantics_for_Object_and_Array).
+- [Привилегированный код теперь обладает рентгеновским зрением относительно экземпляров `Object` и `Array` в](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray_semantics_for_object_and_array) [JavaScript](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray_semantics_for_object_and_array).
 
 ## Изменения для разработчиков дополнений и разработчиков Mozilla
 
@@ -73,7 +70,7 @@ _Без изменений._
 
 - Добавлено свойство [`exclude`](/en-US/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) в `PageMod`.
 - Добавлено свойство [`anonymous`](/en-US/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) в `Request`.
-- [Add-on Debugger](/en-US/Add-ons/Add-on_Debugger) теперь содержит Консоль и Блокнот.
+- [Add-on Debugger](/ru/docs/Mozilla/Add-ons/Add-on_Debugger) теперь содержит Консоль и Блокнот.
 
 #### Подробнее
 

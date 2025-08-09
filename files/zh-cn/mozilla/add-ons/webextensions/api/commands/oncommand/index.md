@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc844647f646395fa602816586640c77017898cf
 ---
 
-{{AddonSidebar}}
-
 当使用相关的键盘快捷键执行命令时触发。
 
 监听器会接收到命令的名称。这与在其 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中给出的名称相匹配。
@@ -22,20 +20,18 @@ browser.commands.onCommand.hasListener(listener)
 事件有三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到这个事件。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
-  - : 停止监听这个事件。`listener` 参数是要移除的监听器。
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册到这个事件。若在监听，返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
 ### 参数
 
 - `listener`
-
   - : 用户输入命令的快捷键时调用的函数。该函数接收以下参数：
-
     - `name`
       - : `string`。命令的名称。这与在其 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中给出的名称相匹配。
     - `tab`

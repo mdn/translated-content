@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 
 ## Сводка
 
-Метод **`Object.is()`** определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Sameness).
+Метод **`Object.is()`** определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ## Синтаксис
 
@@ -24,7 +24,7 @@ var isSame = Object.is(value1, value2);
 
 ## Описание
 
-Метод `Object.is()` определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Sameness). Два значения являются одинаковыми в следующих случаях:
+Метод `Object.is()` определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Два значения являются одинаковыми в следующих случаях:
 
 - оба равны {{jsxref("undefined")}}
 - оба равны {{jsxref("null")}}
@@ -32,7 +32,6 @@ var isSame = Object.is(value1, value2);
 - оба являются строками с одинаковой длиной и одинаковыми символами
 - оба являются одним и тем же объектом
 - оба являются числами и
-
   - оба равны `+0`
   - оба равны `-0`
   - оба равны {{jsxref("NaN")}}
@@ -91,4 +90,4 @@ if (!Object.is) {
 
 ## Смотрите также
 
-- [Руководство по JavaScript: одинаковость](/ru/docs/Web/JavaScript/Guide/Sameness) — сравнение всех трёх встроенных способов проверки на одинаковость
+- [Руководство по JavaScript: одинаковость](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — сравнение всех трёх встроенных способов проверки на одинаковость

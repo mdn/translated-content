@@ -11,4 +11,4 @@ XML タグは HTML タグに似ていますが、XML はユーザーが独自の
 
 ## 関連項目
 
-- [XML のイントロダクション](/ja/docs/XML_Introduction)
+- [XML のイントロダクション](/ja/docs/Web/XML/Guides/XML_introduction)

@@ -5,7 +5,7 @@ slug: Web/CSS/display
 
 {{CSSRef}}
 
-A propriedade **`display`** [CSS](/pt-BR/docs/Web/CSS) define se um elemento é tratado como um [bloco ou elemento inline](/pt-BR/docs/Web/CSS/CSS_Flow_Layout) e o layout usado para seus filhos, como [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout), [grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout) ou [flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout).
+A propriedade **`display`** [CSS](/pt-BR/docs/Web/CSS) define se um elemento é tratado como um [bloco ou elemento inline](/pt-BR/docs/Web/CSS/CSS_Flow_Layout) e o layout usado para seus filhos, como [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout), [grid](/pt-BR/docs/Web/CSS/CSS_grid_layout) ou [flex](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout).
 
 Formalmente, a propriedade **`display`** define os _tipos de exibição_ internos e externos de um elemento. O tipo externo define a participação de um elemento no [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout); o tipo interno define o layout dos filhos. Alguns valores de `display` são totalmente definidos em suas próprias especificações individuais; por exemplo, o detalhe do que acontece quando `display: flex` é declarado é definido na especificação CSS Flexible Box Model.
 
@@ -58,9 +58,7 @@ Os valores de palavra-chave podem ser agrupados em seis categorias de valor.
 ### Fora
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
-
   - : essas palavras-chave especificam o tipo de exibição externa do elemento, que é essencialmente sua função no layout de fluxo:
-
     - `block`
       - : O elemento gera uma caixa de elemento de bloco, gerando quebras de linha antes e depois do elemento quando no fluxo normal.
     - `inline`
@@ -73,25 +71,22 @@ Os valores de palavra-chave podem ser agrupados em seis categorias de valor.
 ### Lado de dentro
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
-
   - : Estas palavras-chave especificam o tipo de exibição interna do elemento, que define o tipo de contexto de formatação em que seu conteúdo é apresentado (supondo que seja um elemento não substituído):
-
     - `flow` {{Experimental_Inline}}
-
       - : O elemento apresenta seu conteúdo usando o layout de fluxo (layout de bloco e linha).
 
         Se seu tipo de exibição externa for `inline` ou `run-in`, e estiver participando de um bloco ou contexto de formatação inline, ele gerará uma caixa inline. Caso contrário, gera uma caixa de contêiner de bloco.
 
-        Dependendo do valor de outras propriedades (como {{CSSxRef("position")}}, {{CSSxRef("float")}} ou {{CSSxRef("overflow")}}) e se ele próprio está participando em um contexto de formatação em bloco ou em linha, ele estabelece um novo [contexto de formatação de bloco](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context) (BFC) para seu conteúdo ou integra seu conteúdo em seu contexto de formatação pai.
+        Dependendo do valor de outras propriedades (como {{CSSxRef("position")}}, {{CSSxRef("float")}} ou {{CSSxRef("overflow")}}) e se ele próprio está participando em um contexto de formatação em bloco ou em linha, ele estabelece um novo [contexto de formatação de bloco](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) para seu conteúdo ou integra seu conteúdo em seu contexto de formatação pai.
 
     - `flow-root`
-      - : O elemento gera uma caixa de elemento de bloco que estabelece um novo [contexto de formatação de bloco](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context), definindo onde está a raiz de formatação.
+      - : O elemento gera uma caixa de elemento de bloco que estabelece um novo [contexto de formatação de bloco](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context), definindo onde está a raiz de formatação.
     - `table`
       - : Esses elementos se comportam como elementos HTML {{HTMLElement("table")}}. Ele define uma caixa de nível de bloco.
     - `flex`
-      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout).
+      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout).
     - `grid`
-      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout).
+      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo de grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
     - `ruby` {{Experimental_Inline}}
       - : O elemento se comporta como um elemento inline e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como os elementos HTML {{HTMLElement("ruby")}} correspondentes.
 
@@ -116,10 +111,8 @@ Isso pode ser usado junto com {{CSSxRef("list-style-type")}} e {{CSSxRef("list-s
 ### Interno
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
-
   - : Alguns modelos de layout como `table` e `ruby` possuem uma estrutura interna complexa, com vários papéis diferentes que seus filhos e descendentes podem preencher.
     Esta seção define os valores de exibição "internos", que só têm significado dentro desse modo de layout específico.
-
     - `table-row-group`
       - : Esses elementos se comportam como {{HTMLElement("tbody")}} elementos HTML.
     - `table-header-group`
@@ -148,11 +141,8 @@ Isso pode ser usado junto com {{CSSxRef("list-style-type")}} e {{CSSxRef("list-s
 ### Caixa
 
 - {{CSSxRef("&lt;display-box&gt;")}}
-
   - : Esses valores definem se um elemento gera caixas de exibição.
-
     - `contents`
-
       - : Esses elementos não produzem uma caixa específica por si mesmos. Eles são substituídos por sua pseudocaixa e suas caixas filhas. Observe que a especificação CSS Display Level 3 define como o valor `contents` deve afetar os "elementos incomuns" — elementos que não são renderizados puramente por conceitos de caixa CSS, como elementos substituídos. Consulte [Apêndice B: Efeitos da exibição: conteúdo sobre elementos incomuns](https://drafts.csswg.org/css-display/#unbox) para obter mais detalhes.
 
         _Devido a um bug nos navegadores, isso removerá o elemento da árvore de acessibilidade - os leitores de tela não verão o que está dentro. Consulte a seção [Preocupações de acessibilidade](#accessibility_preocupações) abaixo para obter mais detalhes._
@@ -164,29 +154,23 @@ Isso pode ser usado junto com {{CSSxRef("list-style-type")}} e {{CSSxRef("list-s
 ### Pré-composto
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
-
   - : CSS 2 usava uma palavra-chave única, sintaxe pré-composta para a propriedade `display`, exigindo palavras-chave separadas para variantes de nível de bloco e nível inline do mesmo modo de layout.
-
     - `inline-block`
-
       - : O elemento gera uma caixa de elemento de bloco que fluirá com o conteúdo ao redor como se fosse uma única caixa em linha (comportando-se como um elemento substituído faria).
 
         É equivalente a `inline flow-root`.
 
     - `inline-table`
-
       - : O valor `inline-table` não possui um mapeamento direto em HTML. Ele se comporta como um elemento HTML {{HTMLElement("table")}}, mas como uma caixa embutida, em vez de uma caixa em nível de bloco. Dentro da caixa da tabela há um contexto de nível de bloco.
 
         É equivalente a `tabela inline`.
 
     - `inline-flex`
-
       - : O elemento se comporta como um elemento inline e apresenta seu conteúdo de acordo com o modelo flexbox.
 
         É equivalente a `inline flex`.
 
     - `inline-grid`
-
       - : O elemento se comporta como um elemento inline e apresenta seu conteúdo de acordo com o modelo de grade.
 
         É equivalente a `inline grid`.
@@ -211,7 +195,7 @@ Atualmente, isso pode ser especificado usando um único valor.
 }
 ```
 
-Para obter mais informações sobre essas alterações na especificação, consulte o artigo [Adapting to the new two-value sintax of display](/pt-BR/docs/Web/CSS/display/two-value_syntax_of_display).
+Para obter mais informações sobre essas alterações na especificação, consulte o artigo [Adapting to the new two-value sintax of display](/pt-BR/docs/Web/CSS/display/multi-keyword_syntax_of_display).
 
 ### Global
 
@@ -226,21 +210,21 @@ display: unset;
 
 As páginas individuais para os diferentes tipos de valor que o `display` pode ter definido apresentam vários exemplos desses valores em ação — consulte a seção [Sintaxe](#sintaxe). Além disso, consulte o material a seguir, que abrange os vários valores de exibição em profundidade.
 
-- [Adaptando-se à nova sintaxe de exibição de dois valores](/pt-BR/docs/Web/CSS/display/two-value_syntax_of_display)
+- [Adaptando-se à nova sintaxe de exibição de dois valores](/pt-BR/docs/Web/CSS/display/multi-keyword_syntax_of_display)
 
 ### Layout de fluxo CSS (exibir: bloquear, exibir: embutido)
 
 - [Block and Inline Layout in Normal Flow](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
 - [Flow Layout and Overflow](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
 - [Layout de fluxo e modos de escrita](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
-- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
 - [Em fluxo e fora de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
 
 ### display: flex
 
-- [Conceitos básicos do flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [Alinhamento de itens em um contêiner flexível](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
-- [Controle de proporções de itens flexíveis ao longo do eixo principal](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+- [Conceitos básicos do flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Alinhamento de itens em um contêiner flexível](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Controle de proporções de itens flexíveis ao longo do eixo principal](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - [Mastering Wrapping of Flex Items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
 - [Ordering Flex Items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
 - [Relação do flexbox com outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
@@ -248,17 +232,17 @@ As páginas individuais para os diferentes tipos de valor que o `display` pode t
 
 ### display: grid
 
-- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [Relação com outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [Posicionamento baseado em linha](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Relação com outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Posicionamento baseado em linha](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - [Áreas de modelo de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Layout usando linhas de grade nomeadas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [Colocação automática no layout da grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [Alinhamento da caixa no layout da grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [Grades, valores lógicos e modos de escrita](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
-- [Layout e acessibilidade da grade CSS](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [Layout de grade CSS e aprimoramento progressivo](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [Realizando layouts comuns usando grades](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+- [Layout usando linhas de grade nomeadas](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [Colocação automática no layout da grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [Alinhamento da caixa no layout da grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Grades, valores lógicos e modos de escrita](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [Layout e acessibilidade da grade CSS](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [Layout de grade CSS e aprimoramento progressivo](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Realizando layouts comuns usando grades](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## Preocupações de acessibilidade
 
@@ -401,6 +385,6 @@ updateDisplay();
 ## Veja também
 
 - [Layout de bloco e inline no fluxo normal](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Introdução aos contextos de formatação](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [Introdução aos contextos de formatação](/pt-BR/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}

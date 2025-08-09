@@ -9,7 +9,7 @@ slug: Web/API/Window/fetch
 
 Промис {{domxref("fetch()")}} завершается {{jsxref("TypeError")}}, если возникает сетевая ошибка, хотя обычно это означает проблему с доступами или аналогичную ей. Для успешного завершения `fetch()` достаточно удостовериться в том, что промис выполнен и что свойство {{domxref("Response.ok")}} имеет значение `true`. HTTP статус 404 не является сетевой ошибкой.
 
-Метод `fetch()` контролируется директивой `connect-src` directive of [Content Security Policy](/ru/docs/Security/CSP/CSP_policy_directives) (политика безопасности контента), а не директивой ресурсов, которые извлекает.
+Метод `fetch()` контролируется директивой `connect-src` directive of [Content Security Policy](/ru/docs/Web/HTTP/Headers/Content-Security-Policy) (политика безопасности контента), а не директивой ресурсов, которые извлекает.
 
 > [!NOTE]
 > Аргументы метода `fetch()` идентичны аргументам {{domxref("Request.Request","Request()")}} конструктора.
@@ -23,16 +23,12 @@ Promise<Response> fetch(input[, init]);
 ### Аргументы
 
 - _input_
-
   - : Определяет желаемый для получения ресурс. Это может быть:
-
     - {{domxref("USVString")}} (строка), содержащая прямую URL ссылку на ресурс. Некоторые браузеры принимают `blob:` и `data:` , как схемы.
     - {{domxref("Request")}} объект (объект ответа).
 
 - _init_ {{optional_inline}}
-
   - : Объект с опциями, содержащий пользовательские настройки, которые вы желаете применить к запросу. Возможные варианты:
-
     - `method`: Метод запроса, например, `GET`, `POST`.
     - `headers`: Заголовки, содержащиеся в объекте {{domxref("Headers")}} или в объекте литерале с побитовыми значениями ({{domxref("ByteString")}}).
     - `body`: Тело запроса, которое может быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, или {{domxref("USVString")}} объектами. Обратите внимание, что `GET` или `HEAD` запрос не может иметь тела.
@@ -128,6 +124,6 @@ var myRequest = new Request("flowers.jpg", myInit);
 ## Смотрите также
 
 - [Fetch API](/ru/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

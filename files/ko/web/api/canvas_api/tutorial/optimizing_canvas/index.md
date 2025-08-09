@@ -79,7 +79,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 ### CSS 변환(transform)을 사용하여 캔버스 크기 조정하라
 
-[CSS 변환(transform)](/ko/docs/Web/Guide/CSS/Using_CSS_transforms)은 GPU를 사용하기 때문에 더 빠릅니다. 가장 좋은 경우는 캔버스를 스케일링하지 않거나, 큰 캔버스를 축소하기보다 작은 캔버스를 확대하는 것입니다.
+[CSS 변환(transform)](/ko/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)은 GPU를 사용하기 때문에 더 빠릅니다. 가장 좋은 경우는 캔버스를 스케일링하지 않거나, 큰 캔버스를 축소하기보다 작은 캔버스를 확대하는 것입니다.
 
 ```js
 var scaleX = window.innerWidth / canvas.width;
@@ -113,7 +113,7 @@ var ctx = canvas.getContext("2d", { alpha: false });
 
 ## See also
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](http://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
+- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}

@@ -5,7 +5,7 @@ slug: Glossary/Primitive
 
 {{GlossarySidebar}}
 
-En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la [Cadena de prototipos](/es/docs/Learn/JavaScript/Objects/Inheritance).
+En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la [Cadena de prototipos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript).
 
 La mayoría de las veces, un valor primitivo se representa directamente en el nivel más bajo de la implementación del lenguaje.
 
@@ -71,7 +71,6 @@ console.log(foo); // 5
 - Después de encontrarla, evalúa la expresión, `foo` se reemplaza por 5 y el motor de JavaScript pasa ese valor a las funciones como argumento
 - Antes de ejecutar las declaraciones dentro del cuerpo de las funciones, **JavaScript toma una copia del argumento originalmente pasado** (que es un primitivo) y crea una copia local. Estas copias, que existen solo dentro del ámbito de las funciones, son accesibles a través de los identificadores que especificaste en las definiciones de las funciones (`num` para `addTwo`, `foo` para `addTwo_v2`)
 - Luego, se ejecutan las instrucciones de las funciones:
-
   - En la primera función, se creó una variable `num` local. ¡Estas aumentando su valor en 2, no el valor original de `foo`!
   - En la segunda función, se creó una variable `foo` local. ¡Esto incrementa su valor en 2, no el valor original (externo) de `foo`!, además, en esta situación, no se puede acceder directamente a la variable `foo` externa. Esto se debe al alcance léxico de JavaScript y al ensombrecimiento de variables resultante. El `foo` local oculta al `foo` externo. Para obtener más información, consulta {{JSxRef("Closures", "Cierres")}}. (Ten en cuenta que `window.foo` aún se podría usar para acceder a la variable `foo` externa).
 
@@ -93,7 +92,7 @@ El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del conten
 
 ## Véase también
 
-- [Tipos de datos JavaScript](/es/docs/Web/JavaScript/Data_structures)
+- [Tipos de datos JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
 - [Tipo de dato primitivo](https://es.wikipedia.org/wiki/Tipo_de_dato_primitivo) en Wikipedia
 - [Glosario de MDN Web Docs](/es/docs/Glossary)
   - {{Glossary("JavaScript")}}

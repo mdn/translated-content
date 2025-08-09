@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 
 O método **`find()`** retorna o **valor** do **primeiro elemento** do array que satisfizer a função de teste provida. Caso contrario, {{jsxref("undefined")}} é retornado.
 
-{{EmbedInteractiveExample("pages/js/array-find.html")}}
+{{InteractiveExample("JavaScript Demo: Array.find()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 Veja também o método {{jsxref("Array.findIndex", "findIndex()")}}, que retorna o **índice** do elemento encontrado no array ao invés do seu valor.
 
@@ -22,9 +31,7 @@ arr.find(callback(element[, index[, array]])[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função executada a cada iteração do array, recebendo três argumentos:
-
     - `element`
       - : O elemento atual que está sendo processado no array.
     - `index`{{optional_inline}}

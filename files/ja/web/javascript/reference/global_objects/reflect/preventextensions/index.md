@@ -5,9 +5,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 
 {{JSRef}}
 
-静的な **`Reflect.preventExtensions()`** メソッドは、すでにプロパティが追加されたオブジェクトに、新しいプロパティを抑制します (つまり、オブジェクトのさらなる拡張を抑制します)。 {{jsxref("Object.preventExtensions()")}} に似ていますが、[違いがあります](#Difference_from_Object.preventExtensions)。
+静的な **`Reflect.preventExtensions()`** メソッドは、すでにプロパティが追加されたオブジェクトに、新しいプロパティを抑制します (つまり、オブジェクトのさらなる拡張を抑制します)。 {{jsxref("Object.preventExtensions()")}} に似ていますが、[違いがあります](#difference_from_object.preventextensions)。
 
-{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
+{{InteractiveExample("JavaScript デモ: Reflect.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: true
+
+Reflect.preventExtensions(object1);
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: false
+```
 
 ## 構文
 

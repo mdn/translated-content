@@ -21,5 +21,5 @@ Con los sitios web interactivos y los estándares web modernos, AJAX está siend
 ### Información técnica
 
 - El objeto {{domxref("XMLHttpRequest")}}.
-- [Documentación AJAX en MDN](/es/docs/AJAX)
+- [Documentación AJAX en MDN](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [Fetch API en MDN](/es/docs/Web/API/Fetch_API/Using_Fetch)

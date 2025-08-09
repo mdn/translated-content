@@ -3,8 +3,6 @@ title: border-bottom-width
 slug: Web/CSS/border-bottom-width
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 `border-bottom-width` define el ancho del borde inferior de una caja.
@@ -31,7 +29,6 @@ border-bottom-width: <border-width> | inherit
 - thick
   - : un borde grueso.
 - \<length>
-
   - : El espesor de un borde tiene un valor explícito. los anchos de borde no pueden ser negativos.
 
     Nota : El valor `em` también es soportada.
@@ -45,7 +42,7 @@ border-bottom-width: <border-width> | inherit
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {

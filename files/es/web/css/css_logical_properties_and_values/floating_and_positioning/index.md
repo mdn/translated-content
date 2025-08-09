@@ -3,9 +3,7 @@ title: Propiedades lógicas para flotantes y posicionamiento
 slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 ---
 
-{{CSSRef}}
-
-La [especificación de Propiedades y Valores Lógicos](https://drafts.csswg.org/css-logical/) contiene una asignación para los valores físicos {{cssxref("float")}} y {{cssxref("clear")}}, y también para las propiedades de posicionamiento usadas con [positioned layout](/es/docs/Web/CSS/CSS_Positioning). Esta guía nos permite saber cómo utilizar estas propiedades.
+La [especificación de Propiedades y Valores Lógicos](https://drafts.csswg.org/css-logical/) contiene una asignación para los valores físicos {{cssxref("float")}} y {{cssxref("clear")}}, y también para las propiedades de posicionamiento usadas con [positioned layout](/es/docs/Web/CSS/CSS_positioned_layout). Esta guía nos permite saber cómo utilizar estas propiedades.
 
 ## Asignando propiedades y valores
 

@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 
 La méthode **`toLocaleUpperCase()`** renvoie la chaîne de caractères qui appelle la méthode en caractères majuscules, selon les correspondances de caractères propres aux différentes locales.
 
-{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLocaleUpperCase()")}}
+
+```js interactive-example
+const city = "istanbul";
+
+console.log(city.toLocaleUpperCase("en-US"));
+// Expected output: "ISTANBUL"
+
+console.log(city.toLocaleUpperCase("TR"));
+// Expected output: "İSTANBUL"
+```
 
 ## Syntaxe
 

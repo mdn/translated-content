@@ -35,7 +35,7 @@ div.warning {
 }
 ```
 
-이 선택자들은 `"p"` ({{HTMLElement("p")}} 요소 내부 텍스트에 녹색을 적용), `"div.warning"` ([class](/ko/docs/Web/HTML/Global_attributes/class) `"warning"`이 있는 모든 {{HTMLElement("div")}} 요소는 경고 상자처럼 보임) 및 `"#customized"` (ID가 `"customized"`인 요소의 기본 글꼴을 16픽셀 크기의 Lucida Grande 또는 몇 가지 대체 글꼴 중 하나로 설정) 입니다.
+이 선택자들은 `"p"` ({{HTMLElement("p")}} 요소 내부 텍스트에 녹색을 적용), `"div.warning"` ([class](/ko/docs/Web/HTML/Reference/Global_attributes/class) `"warning"`이 있는 모든 {{HTMLElement("div")}} 요소는 경고 상자처럼 보임) 및 `"#customized"` (ID가 `"customized"`인 요소의 기본 글꼴을 16픽셀 크기의 Lucida Grande 또는 몇 가지 대체 글꼴 중 하나로 설정) 입니다.
 
 그런 다음, 이 CSS를 다음과 같은 일부 HTML에 적용할 수 있습니다.
 
@@ -61,9 +61,8 @@ div.warning {
 
 ## 같이 보기
 
-- CSS 소개에서 [CSS 선택자에 대해 더 알아보기](/ko/docs/Learn/CSS/Building_blocks/Selectors)
+- CSS 소개에서 [CSS 선택자에 대해 더 알아보기](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 기본 선택자
-
   - [타입 선택자](/ko/docs/Web/CSS/Type_selectors) `elementname`
   - [클래스 선택자](/ko/docs/Web/CSS/Class_selectors) `.classname`
   - [ID 선택자](/ko/docs/Web/CSS/ID_selectors) `#idname`
@@ -72,17 +71,14 @@ div.warning {
   - [상태 선택자](/ko/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
 - 그룹화 선택자
-
   - [선택자 목록](/ko/docs/Web/CSS/Selector_list) `A, B`
 
 - 결합자
-
-  - [인접 형제 선택자](/ko/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
-  - [일반 형제 선택자](/ko/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - [인접 형제 선택자](/ko/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [일반 형제 선택자](/ko/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [자식 선택자](/ko/docs/Web/CSS/Child_combinator) `A > B`
   - [하위 선택자](/ko/docs/Web/CSS/Descendant_combinator) `A B`
 
 - 의사 요소
-
   - [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) `:`
   - [의사 요소](/ko/docs/Web/CSS/Pseudo-elements) `::`

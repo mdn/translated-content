@@ -9,7 +9,7 @@ Obtient le titre de l'action du navigateur.
 
 Tout comme vous pouvez définir le titre par onglet en utilisant {{WebExtAPIRef("browserAction.setTitle()")}}, vous pouvez donc récupérer un titre spécifique à un onglet en passant l'ID de l'onglet dans cette fonction.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -22,9 +22,7 @@ var gettingTitle = browser.browserAction.getTitle(
 ### Paramètres
 
 - `details`
-
   - : `object`
-
     - `tabId`{{optional_inline}}
       - : `integer`. Spécifiez l'onglet pour obtenir le titre.
     - `windowId`{{optional_inline}}
@@ -37,7 +35,7 @@ var gettingTitle = browser.browserAction.getTitle(
 
 ### Return value
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant le titre de l'action du navigateur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne contenant le titre de l'action du navigateur.
 
 ## Exemples
 

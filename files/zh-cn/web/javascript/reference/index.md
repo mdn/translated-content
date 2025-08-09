@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
-{{jsSidebar}}
-
 JavaScript 参考提供了有关 JavaScript 语言的内容资料库。这里详细描述了整个语言。在编写 JavaScript 代码时，你经常会参考这些页面（因此，标题为“JavaScript 参考”）。
 
 JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务端脚本还是其他类似的环境。在大多数情况下，本参考与环境无关，且不针对 web 浏览器环境。
@@ -69,7 +67,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 - {{jsxref("String")}}
 - {{jsxref("RegExp")}}
 
-### 索引集合类
+### 索引集合
 
 - {{jsxref("Array")}}
 - {{jsxref("Int8Array")}}
@@ -294,7 +292,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 - {{jsxref("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### Yield 运算符
 
@@ -327,15 +325,15 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 - {{jsxref("Classes/Constructor", "constructor")}}
 - {{jsxref("Classes/extends", "extends")}}
-- [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{jsxref("Classes/static", "static")}}
 - [静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
 ## 附加参考页面
 
-- {{jsxref("Lexical_grammar", "词法文法", "", 1)}}
-- [数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- {{jsxref("Lexical_grammar", "词法语法", "", 1)}}
+- [数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)
 - [错误参考](/zh-CN/docs/Web/JavaScript/Reference/Errors)

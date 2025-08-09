@@ -7,7 +7,7 @@ slug: Web/API/Window/matchMedia
 
 ## Resumo
 
-Retorna um novo objeto {{domxref("MediaQueryList")}} representando o resultado analisado da string [media query](/pt-BR/docs/CSS/Media_queries) especificada.
+Retorna um novo objeto {{domxref("MediaQueryList")}} representando o resultado analisado da string [media query](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries) especificada.
 
 ## Sintaxe
 
@@ -29,7 +29,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 Este código permite-lhe lidar com as coisas de forma diferente quando a janela é muito estreita.
 
-Veja [Usando media queries a partir do código](/pt-BR/docs/DOM/Using_media_queries_from_code) para mais exemplos.
+Veja [Usando media queries a partir do código](/pt-BR/docs/Web/CSS/CSS_media_queries/Testing_media_queries) para mais exemplos.
 
 ## Especificações
 
@@ -41,7 +41,7 @@ Veja [Usando media queries a partir do código](/pt-BR/docs/DOM/Using_media_quer
 
 ## Veja também
 
-- [Media queries](/pt-BR/docs/CSS/Media_queries)
-- [Usando media queries a partir do código](/pt-BR/docs/DOM/Using_media_queries_from_code)
+- [Media queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Usando media queries a partir do código](/pt-BR/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

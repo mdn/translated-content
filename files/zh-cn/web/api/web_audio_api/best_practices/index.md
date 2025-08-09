@@ -17,7 +17,7 @@ slug: Web/API/Web_Audio_API/Best_practices
 
 如果你使用缓冲节点（buffer node）来加载音频，你将会有更多的控制权。虽然你需要请求这个文件，然后等待它加载完成 ([我们的这篇进阶文章中的这一节](/zh-CN/docs/Web/API/Web_Audio_API/Advanced_techniques#dial_up_—_loading_a_sound_sample)介绍了一个好办法)。但是，随后你可以直接访问数据，这意味着你能进行更精确，更精确的操作。
 
-对于来自用户的摄像头或麦克风的音频，你可以考虑通过[Media Stream API](/zh-CN/docs/Web/API/Media_Streams_API)和{{domxref("MediaStreamAudioSourceNode")}}接口来访问。这在与 WebRTC 协作以及你想录制或分析音频的场合下很管用。
+对于来自用户的摄像头或麦克风的音频，你可以考虑通过[Media Stream API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)和{{domxref("MediaStreamAudioSourceNode")}}接口来访问。这在与 WebRTC 协作以及你想录制或分析音频的场合下很管用。
 
 最后一个要介绍的方法时如何生成声音。这可以通过{{domxref("OscillatorNode")}}和创建一个缓冲区 (buffer) 然后向其中填充你的数据来完成。你可以在[这篇指导你如何创建自己的乐器的文章](/zh-CN/docs/Web/API/Web_Audio_API/Advanced_techniques)中学习到用这两个工具创建声音的知识。
 
@@ -58,7 +58,7 @@ button.addEventListener(
 );
 ```
 
-如果你在用户动作之外创建上下文 (create the context outside of a user gesture)，它的内部状态会被设置为`暂停 (suspend)`。这里我们可以同样用 click 事件的例子。我们会检查这个上下文的状态，并且启动它。如果它是`暂停 (suspend)`的状态，使用[`resume()`](/zh-CN/docs/Web/API/BaseAudioContext/resume)方法来恢复。
+如果你在用户动作之外创建上下文 (create the context outside of a user gesture)，它的内部状态会被设置为`暂停 (suspend)`。这里我们可以同样用 click 事件的例子。我们会检查这个上下文的状态，并且启动它。如果它是`暂停 (suspend)`的状态，使用[`resume()`](/zh-CN/docs/Web/API/AudioContext/resume)方法来恢复。
 
 ```js
 const audioCtx = new AudioContext();
@@ -84,7 +84,7 @@ If your website or application contains sound, you should allow the user control
 
 If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
 
-As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`range input`](/zh-CN/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/zh-CN/docs/Web/HTML/Element/input#attr-step) attribute.
+As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`range input`](/zh-CN/docs/Web/HTML/Reference/Elements/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#attr-step) attribute.
 
 ## Setting AudioParam values
 

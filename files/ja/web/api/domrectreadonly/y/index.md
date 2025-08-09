@@ -1,12 +1,12 @@
 ---
 title: "DOMRectReadOnly: y プロパティ"
-short-title: "y"
+short-title: y
 slug: Web/API/DOMRectReadOnly/y
 l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 **`y`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の原点の Y 座標を表します。
 

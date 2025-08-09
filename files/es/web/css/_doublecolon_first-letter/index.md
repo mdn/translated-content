@@ -1,11 +1,9 @@
 ---
-title: "::first-letter (:first-letter)"
+title: ::first-letter (:first-letter)
 slug: Web/CSS/::first-letter
 ---
 
-{{CSSRef}}
-
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-letter`** aplica estilos a la primera letra de la primera línea un [elemento de bloque](/es/docs/Web/HTML/Block-level_elements), sólo cuando no es precedido de otro contenido (como imágenes o tablas).
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-letter`** aplica estilos a la primera letra de la primera línea un [elemento de bloque](/es/docs/Glossary/Block-level_content), sólo cuando no es precedido de otro contenido (como imágenes o tablas).
 
 ```css
 /* Selecciona la primera letra de <p> */

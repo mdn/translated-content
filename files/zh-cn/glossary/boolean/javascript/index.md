@@ -14,4 +14,4 @@ l10n:
 ## 参见
 
 - [JavaScript 全局对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [JavaScript 数据类型与结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [JavaScript 数据类型与结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)

@@ -9,7 +9,16 @@ slug: Web/JavaScript/Reference/Operators/function
 
 또한 [Function](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 생성자와 [함수 선언(function declaration)](/ko/docs/Web/JavaScript/Reference/Statements/function)을 이용해 함수를 정의할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function expression")}}
+
+```js interactive-example
+const getRectArea = function (width, height) {
+  return width * height;
+};
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+```
 
 ## 구문
 
@@ -17,7 +26,7 @@ slug: Web/JavaScript/Reference/Operators/function
     var myFunction = function [name]([param1[, param2[, ..., paramN]]]) { statements };
 ```
 
-[ES2015](/ko/docs/)에서 [화살표 함수(arrow functions)](/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98)를 사용할 수도 있습니다.
+[ES2015](/ko/docs/Web)에서 [화살표 함수(arrow functions)](/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98)를 사용할 수도 있습니다.
 
 ### 매개변수
 

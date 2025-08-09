@@ -24,7 +24,7 @@ El valor por defecto de esta propiedad en Mozilla es rojo (`#ee0000` en hexadeci
 
 Otra alternativa es `document.body.aLink`, sin embargo éste es [desaprobado en HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-alink) a favor de la alternativa CSS.
 
-[Gecko](/es/Gecko) soporta tanto `alinkColor`/`:active` como {{ Cssxref(":focus") }}. Internet Explorer 6 y 7 soportan `alinkColor`/`:active` sólo para [vínculos de ancla (\<a>) HTML](/es/HTML/Element/a) y el comportamiento es el mismo que `:focus` bajo Gecko. En IE (Internet Explorer) no hay soporte para `:focus`.
+[Gecko](/es/Gecko) soporta tanto `alinkColor`/`:active` como {{ Cssxref(":focus") }}. Internet Explorer 6 y 7 soportan `alinkColor`/`:active` sólo para [vínculos de ancla (\<a>) HTML](/es/docs/Web/HTML/Reference/Elements/a) y el comportamiento es el mismo que `:focus` bajo Gecko. En IE (Internet Explorer) no hay soporte para `:focus`.
 
 ## Especificaciones
 

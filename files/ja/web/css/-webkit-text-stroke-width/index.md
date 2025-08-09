@@ -1,9 +1,7 @@
 ---
-title: "-webkit-text-stroke-width"
+title: -webkit-text-stroke-width
 slug: Web/CSS/-webkit-text-stroke-width
 ---
-
-{{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-text-stroke-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの線の太さを指定します。
 

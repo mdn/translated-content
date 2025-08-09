@@ -2,12 +2,12 @@
 title: FileReader：readAsDataURL() 方法
 slug: Web/API/FileReader/readAsDataURL
 l10n:
-  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-{{domxref("FileReader")}} 接口的 **`readAsDataURL()`** 方法用于读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成时，{{domxref("FileReader.readyState","readyState")}} 属性变为 `DONE`，并触发 {{domxref("FileReader/loadend_event", "loadend")}} 事件。此时，{{domxref("FileReader.result","result")}} 属性包含作为 [data: URL](/zh-CN/docs/Web/URI/Schemes/data) 的数据，将文件的数据表示为 base64 编码字符串。
+{{domxref("FileReader")}} 接口的 **`readAsDataURL()`** 方法用于读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成时，{{domxref("FileReader.readyState","readyState")}} 属性变为 `DONE`，并触发 {{domxref("FileReader/loadend_event", "loadend")}} 事件。此时，{{domxref("FileReader.result","result")}} 属性包含作为 [data: URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的数据，将文件的数据表示为 base64 编码字符串。
 
 > [!NOTE]
 > 如果不先删除 Base64 编码数据前面的 Data-URL 声明，则 blob 的 {{domxref("FileReader.result","result")}} 无法直接解码为 Base64。要仅检索 Base64 编码的字符串，请首先从结果中删除 `data:*/*;base64,`。

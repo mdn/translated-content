@@ -1,20 +1,18 @@
 ---
-title: JavaScript 錯誤參考資料
+title: JavaScript 錯誤參考
 slug: Web/JavaScript/Reference/Errors
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{jsSidebar("Errors")}}
+下方列出了 JavaScript 會拋出的錯誤。這些錯誤可以作為有用的除錯輔助，但回報的問題不一定總是能立即明瞭。下方的頁面將提供關於這些錯誤的更多細節。每個錯誤都是一個基於 {{jsxref("Error")}} 物件的物件，並具有 `name` 和 `message` 屬性。
 
-在這裡，你可以看到一些由 JavaScript 拋出的錯誤一覽。這些錯誤訊息對你的除錯很有幫助，但拋出的錯誤也不是每次都能講清楚。本頁回提供這些錯誤的詳細資訊。所有的錯誤都是由 {{jsxref("Error")}} 物件所建立的物件，有著 `name` 與 `message`。
+Web 主控台中顯示的錯誤可能會包含一個連結，指向下方的對應頁面，以幫助你快速理解程式碼中的問題。
 
-錯誤會出現在網路主控台、可能還連接到相應頁面，以幫助你儘速理解程式碼裡面的問題。
+關於修復 JavaScript 錯誤的入門教學，請參見[出了什麼問題？JavaScript 疑難排解](/zh-TW/docs/Learn_web_development/Core/Scripting/What_went_wrong)。
 
-## 錯誤一覽表
+## 錯誤列表
 
-In this list, each page is listed by name (the type of error) and message (a more detailed human-readable error message). Together, these two properties provide a starting point toward understanding and resolving the error. For more information, follow the links below!
+在此列表中，每個頁面都按名稱（錯誤的類型）和訊息（更詳細、人類可讀的錯誤訊息）列出。這兩個屬性共同提供了一個理解和解決錯誤的起點。欲知更多訊息，請點擊下方連結！
 
 {{ListSubPages("/zh-TW/docs/Web/JavaScript/Reference/Errors")}}
-
-## 參見
-
-- [哪裡出錯了？JavaScript 除錯](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)：針對初學者的 JavaScript 除錯入門教程。

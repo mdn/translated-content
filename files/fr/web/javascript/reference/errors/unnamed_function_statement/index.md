@@ -19,7 +19,7 @@ SyntaxError: Unexpected token ( [Chrome]
 
 ## Quel est le problème ?
 
-[Une déclaration de fonction](/fr/docs/Web/JavaScript/Reference/Instructions/function) présente dans le code requiert un nom. Il faut alors vérifier la façon dont la fonction est définie et s'il est nécessaire de lui fournir un nom ou si la fonction en question est une expression de fonction, une fonction immédiatement invoquée ou si le code de la fonction est simplement bien placé dans son contexte.
+[Une déclaration de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function) présente dans le code requiert un nom. Il faut alors vérifier la façon dont la fonction est définie et s'il est nécessaire de lui fournir un nom ou si la fonction en question est une expression de fonction, une fonction immédiatement invoquée ou si le code de la fonction est simplement bien placé dans son contexte.
 
 ## Exemples
 
@@ -34,7 +34,7 @@ function () {
 // SyntaxError: function statement requires a name
 ```
 
-On peut utiliser [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function) à la place :
+On peut utiliser [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function) à la place :
 
 ```js example-good
 var salutations = function () {
@@ -50,7 +50,7 @@ Si la fonction devait être appelé immédiatement, il suffit d'ajouter des pare
 
 ### Fonctions étiquetées
 
-Si vous utilisez des [fonctions étiquetées](/fr/docs/Web/JavaScript/Reference/Instructions/label), il faut toujours fournir un nom après le mot-clé `function`. Le code suivant ne fonctionnera pas :
+Si vous utilisez des [fonctions étiquetées](/fr/docs/Web/JavaScript/Reference/Statements/label), il faut toujours fournir un nom après le mot-clé `function`. Le code suivant ne fonctionnera pas :
 
 ```js example-bad
 function Greeter() {
@@ -113,8 +113,8 @@ promise.then(
 
 ## Voir aussi
 
-- [Les fonctions dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Fonctions)
-- [Les déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Instructions/function)
-- [Les expressions de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)
+- [Les fonctions dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Functions)
+- [Les déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function)
+- [Les expressions de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function)
 - [Les fonctions immédiatement invoquées (ou _IIFE_ en anglais)](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
-- [`label`](/fr/docs/Web/JavaScript/Reference/Instructions/label)
+- [`label`](/fr/docs/Web/JavaScript/Reference/Statements/label)

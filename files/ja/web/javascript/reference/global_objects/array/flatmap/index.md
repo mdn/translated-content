@@ -1,15 +1,23 @@
 ---
 title: Array.prototype.flatMap()
+short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`flatMap()`** は {{jsxref("Array")}} インスタンスのメソッドで、最初にマッピング関数を使用してそれぞれの要素をマップした後、結果を新しい配列内に平坦化します。これは、 {{jsxref("Array/map", "map()")}} の後に深さ 1 の {{jsxref("Array/flat","flat()")}} を行うのと同じですが (`arr.map(...args).flat()`)、これら 2 つのメソッドを別々に呼び出すよりもわずかに効率的です。
 
-{{EmbedInteractiveExample("pages/js/array-flatmap.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.flatMap()", "shorter")}}
+
+```js interactive-example
+const arr = [1, 2, 1];
+
+const result = arr.flatMap((num) => (num === 2 ? [2, 2] : 1));
+
+console.log(result);
+// 予想される結果: Array [1, 2, 2, 1]
+```
 
 ## 構文
 
@@ -21,7 +29,6 @@ flatMap(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : 配列のそれぞれの要素に対して実行する関数。この関数は、新しい配列の要素を格納した配列を返すか、新しい配列に追加する 1 つの配列以外の値を返します。この関数は、以下の引数で呼び出されます。
     - `element`
       - : 配列で現在処理中の要素です。
@@ -39,7 +46,7 @@ flatMap(callbackFn, thisArg)
 
 ## 解説
 
-`flatMap()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。コールバック関数の詳細な説明は {{jsxref("Array.prototype.map()")}} を参照してください。`flatMap()` メソッドは、[`map(callbackFn, thisArg)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) の後にの [`flat(1)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) を呼び出すのと同じです。要素ごとに、新しい要素の配列を生成し、できた配列を連結して新しい配列を形成します。
+`flatMap()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。コールバック関数の詳細な説明は {{jsxref("Array.prototype.map()")}} を参照してください。`flatMap()` メソッドは、[`map(callbackFn, thisArg)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) の後にの [`flat(1)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) を呼び出すのと同じです。要素ごとに、新しい要素の配列を生成し、できた配列を連結して新しい配列を形成します。これらのメソッドが一般的にどのように動作するのかについての詳細は、[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)の節をご覧ください。
 
 `flatMap()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。ただし、 `callbackFn` から返される値は、平坦化する場合は配列でなければなりません。
 
@@ -66,19 +73,19 @@ for (let i = 0; i < n; i++) {
 
 ## 例
 
-### `map()` と `flatMap()`
+### map() と flatMap()
 
 ```js
-const arr1 = [1, 2, 3, 4];
+const arr = [1, 2, 3, 4];
 
-arr1.map((x) => [x * 2]);
+arr.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap((x) => [x * 2]);
+arr.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
-// only one level is flattened
-arr1.flatMap((x) => [[x * 2]]);
+// 1つのレベルだけがフラット化される
+arr.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -87,12 +94,12 @@ arr1.flatMap((x) => [[x * 2]]);
 文章のリストから単語のリストを生成してみましょう。
 
 ```js
-const arr1 = ["it's Sunny in", "", "California"];
+const arr = ["it's Sunny in", "", "California"];
 
-arr1.map((x) => x.split(" "));
+arr.map((x) => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap((x) => x.split(" "));
+arr.flatMap((x) => x.split(" "));
 // ["it's","Sunny","in", "", "California"]
 ```
 
@@ -101,7 +108,7 @@ arr1.flatMap((x) => x.split(" "));
 ### map() のアイテムの追加と削除
 
 `flatMap` は、`map` 中にアイテムの追加と削除（アイテムの数を変更）を行う方法として利用できます。
-つまり、常に*一対一*ではなく、_多くのアイテムを多くのアイテムに_（入力されたアイテムを個別に扱うことで）マップできるようになります。
+つまり、常に一対一ではなく、_多くのアイテムを多くのアイテムに_（入力されたアイテムを個別に扱うことで）マップできるようになります。
 この意味では、 [filter](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) の逆のような働きをします。
 単純に、アイテムを保持するには 1 要素の配列を返し、アイテムを追加するには複数要素の配列を返し、アイテムを削除するには 0 要素の配列を返します。
 
@@ -120,6 +127,25 @@ const result = a.flatMap((n) => {
 });
 console.log(result); // [4, 1, 4, 20, 16, 1, 18]
 ```
+
+### callbackFn の第 3 引数の使用
+
+`array` 引数は、配列内の別の要素にアクセスしたい場合、特に、その配列を参照する既存の変数がない場合に便利です。次の例では、最初に `filter()` を使用して運用ステーションを抽出し、次に `flatMap()` を使用して、それぞれの要素が駅とその次の駅を含む新しい配列を作成しています。最後の駅では、最終的な配列からその駅を除外するために、空の配列を返しています。
+
+```js
+const stations = ["New Haven", "West Haven", "Milford (closed)", "Stratford"];
+const line = stations
+  .filter((name) => !name.endsWith("(closed)"))
+  .flatMap((name, idx, arr) => {
+    // arr 引数がない場合、変数に保存せずに中間配列に簡単に
+    // アクセスする方法はありません。
+    if (idx === arr.length - 1) return []; // 指定された駅に次の駅がない
+    return [`${name} - ${arr[idx + 1]}`];
+  });
+console.log(line); // ['New Haven - West Haven', 'West Haven - Stratford']
+```
+
+`array` 引数は、構築中の配列ではありません。コールバック関数から構築中の配列にアクセスする方法はありません。
 
 ### 疎配列に対する flatMap() の使用
 
@@ -166,6 +192,7 @@ console.log(
 ## 関連情報
 
 - [`Array.prototype.flatMap` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.flatMap` のポリフィル](https://www.npmjs.com/package/array.prototype.flatmap)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}

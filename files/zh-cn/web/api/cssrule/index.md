@@ -82,4 +82,4 @@ interface CSSRule {
 
 ## 参见
 
-- [Using dynamic styling information](/zh-CN/docs/Web/Guide/DOM/Using_dynamic_styling_information)
+- [Using dynamic styling information](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

@@ -1,25 +1,50 @@
 ---
-title: 預設參數( Default parameters )
+title: 預設參數
 slug: Web/JavaScript/Reference/Functions/Default_parameters
+l10n:
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
-{{jsSidebar("Functions")}}
+**函式預設參數**允許沒有傳入值或是傳入值為 `undefined` 的情況下，參數能以指定的預設值初始化。
 
-**函式預設參數** 允許沒有值傳入或是傳入值為 `undefined 的情況下，參數能以指定的預設值初始化。`
+{{InteractiveExample("JavaScript Demo: Default parameters")}}
+
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// 預期輸出：10
+
+console.log(multiply(5));
+// 預期輸出：5
+```
 
 ## 語法
 
-```plain
-function [name]([param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]) {
-   要執行的程序
+```js-nolint
+function fnName(param1 = defaultValue1, /* …, */ paramN = defaultValueN) {
+  // …
 }
 ```
 
 ## 說明
 
-在 JavaScript 中，函式的參數預設值都為 `{{jsxref("undefined")}} 。然而，指定不同的預設值可能在一些場景很有用。這也是函式參數預設值可以幫上忙的地方。`
+在 JavaScript 中，函式的參數預設值都為 {{jsxref("undefined")}}。然而，某些情況下可能需要指定不同的預設值。這也是函式參數預設值可以幫上忙的地方。
 
-以往設定預設值有個普遍方法：在函式的內容裡檢查傳入參數是否為 `undefined ，如果是的話，爲他指定一個值。如下列範例，若函式被呼叫時，並沒有提供 b 的值，它的值就會是 undefined，在計算 a*b 時，以及呼叫 multiply 時，就會回傳 NaN。然而這在範例的第二行被阻止了：`:
+在下列範例裡，若 `multiply` 被呼叫時，並沒有提供 `b` 的值，`b` 的值就會是 `undefined`，計算 `a * b` 和 `multiply` 就會回傳 `NaN`。
+
+```js
+function multiply(a, b) {
+  return a * b;
+}
+
+multiply(5, 2); // 10
+multiply(5); // NaN！
+```
+
+以往設定預設值的常用方式，是在函式裡檢查傳入參數是否為 `undefined`，是的話就爲它指定一個值。在以下範例裡，如果 `multiply` 被呼叫時只有傳入一個參數，`b` 就會被設定成 `1`：
 
 ```js
 function multiply(a, b) {
@@ -28,11 +53,10 @@ function multiply(a, b) {
 }
 
 multiply(5, 2); // 10
-multiply(5, 1); // 5
 multiply(5); // 5
 ```
 
-有了 ES2015 的預設參數，再也不用於函式進行檢查了，現在只要簡單的在函式的起始處為 b 指定 1 的值：
+有了預設參數，就不用在函式裡檢查了。現在只需要在函式起始處為指定 `b` 的值為 `1`：
 
 ```js
 function multiply(a, b = 1) {
@@ -40,29 +64,85 @@ function multiply(a, b = 1) {
 }
 
 multiply(5, 2); // 10
-multiply(5, 1); // 5
 multiply(5); // 5
+multiply(5, undefined); // 5
 ```
+
+參數仍維持由左至右設定，就算後面出現沒有預設值的參數，依然會覆寫參數預設值。
+
+```js
+function f(x = 1, y) {
+  return [x, y];
+}
+
+f(); // [1, undefined]
+f(2); // [2, undefined]
+```
+
+> [!NOTE]
+> 第一個預設參數及其後面所有參數皆不會影響函式的 [`length`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/length)。
+
+預設參數的初始值設定位於自身的作用域內，該作用域是函式主體所建立作用域的父作用域。
+
+這表示稍早宣告的參數可以在後續參數的初始值設置中被引用。然而，在函式主體內宣告的函式與變數，無法在預設參數的初始值中被引用；若嘗試這麼做，將會拋出執行階段的 {{jsxref("ReferenceError")}}。這也包含在函式主體內以 [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var) 宣告的變數。
+
+例如，以下函式在呼叫時會拋出 `ReferenceError`，因為預設參數值無法存取函式主體的子作用域：
+
+```js example-bad
+function f(a = go()) {
+  function go() {
+    return ":P";
+  }
+}
+
+f(); // ReferenceError: go is not defined
+```
+
+此函式將輸出*參數* `a` 的值，因為變數 `var a` 只被提升（hoist）至函式主體所建立的作用域頂端，而非參數清單所建立的父作用域，因此 `b` 無法存取該變數的值。
+
+```js example-bad
+function f(a, b = () => console.log(a)) {
+  var a = 1;
+  b();
+}
+
+f(); // undefined
+f(5); // 5
+```
+
+預設參數允許使用任何運算式，但不可使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}，因為這些運算子會導致預設運算式的計算暫停。參數的初始化必須是*同步*完成的。
+
+```js example-bad
+async function f(a = await Promise.resolve(1)) {
+  return a;
+}
+```
+
+> [!NOTE]
+> 由於預設參數是在函式被呼叫時計算，而不是在函式被定義時，因此 `await` 和 `yield` 運算子的有效性取決於該函式本身，而非其外圍函式。例如，如果當前函式不是 `async`，則 `await` 會被解析為識別字，並遵循一般的[識別字語法規則](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#識別字)，即便該函式嵌套於 `async` 函式內也是如此。
 
 ## 範例
 
-### 傳入 `undefined`
+### 傳入 undefined 和其它假值
 
-這邊第二段函式呼叫中，僅管第二個傳入參數在呼叫時明確地指定為 undefined（雖不是 null），其顏色參數的值是預設值（rosybrown）。
+在以下範例的第二次呼叫中，即使第一個參數被明確設定為 `undefined`（但不是 `null` 或其他{{Glossary("falsy", "假")}}值），`num` 參數的值仍然是預設值。
 
 ```js
-function setBackgroundColor(element, color = "rosybrown") {
-  element.style.backgroundColor = color;
+function test(num = 1) {
+  console.log(typeof num);
 }
 
-setBackgroundColor(someDiv); // color set to 'rosybrown'
-setBackgroundColor(someDiv, undefined); // color set to 'rosybrown' too
-setBackgroundColor(someDiv, "blue"); // color set to 'blue'
+test(); // 'number'（num 被設定為 1）
+test(undefined); // 'number'（num 也被設定為 1）
+
+// 測試其它假值（falsy）：
+test(""); // 'string'（num 被設定為空字串 ''）
+test(null); // 'object'（num 被設定為 null）
 ```
 
-### 呼叫時賦予值
+### 呼叫時計算值
 
-跟 Python 等語言不同的地方是，先前預設的代數值會拿來進行函式內的程序，也因此在函式呼叫的時候，會建立新物件。
+預設引數會在*呼叫時*進行計算。與 Python（例如）不同，每次呼叫函式時都會建立一個新的物件。
 
 ```js
 function append(value, array = []) {
@@ -70,53 +150,41 @@ function append(value, array = []) {
   return array;
 }
 
-append(1); //[1]
-append(2); //[2], 而非 [1, 2]
+append(1); // [1]
+append(2); // [2], 而非 [1, 2]
 ```
 
-諸如此類的做法，也適用在函式和變量。
+這也適用於函式與變數：
 
 ```js
 function callSomething(thing = something()) {
   return thing;
 }
 
+let numberOfTimesCalled = 0;
 function something() {
-  return "sth";
+  numberOfTimesCalled += 1;
+  return numberOfTimesCalled;
 }
 
-callSomething(); //sth
+callSomething(); // 1
+callSomething(); // 2
 ```
 
-### 預設的參數中，先設定的可提供之後設定的使用
+### 前面的參數可供之後預設參數使用
 
-先前有碰到的參數，後來的即可使用。
+較早（位於左側）定義的參數可供後續的預設參數使用：
 
 ```js
-function singularAutoPlural(
-  singular,
-  plural = singular + "們",
-  rallyingCry = plural + "，進攻啊!!!",
-) {
-  return [singular, plural, rallyingCry];
+function greet(greeting, name, message = `${greeting}，${name}`) {
+  return [greeting, name, message];
 }
 
-//["壁虎","壁虎們", "壁虎，進攻啊!!!"]
-singularAutoPlural("壁虎");
-
-//["狐狸","火紅的狐狸們", "火紅的狐狸們，進攻啊!!!"]
-singularAutoPlural("狐狸", "火紅的狐狸們");
-
-//["鹿兒", "鹿兒們", "鹿兒們 ... 有所好轉"]
-singularAutoPlural(
-  "鹿兒",
-  "鹿兒們",
-  "鹿兒們平心靜氣的 \
-   向政府請願，希望事情有所好轉。",
-);
+greet("你好", "大衛"); // ["你好", "大衛", "你好，大衛"]
+greet("你好", "大衛", "生日快樂！"); // ["你好", "大衛", "生日快樂！"]
 ```
 
-This functionality is approximated in a straight forward fashion and demonstrates how many edge cases are handled.
+這個函式可以近似如下，它展示了處理許多邊緣情況：
 
 ```js
 function go() {
@@ -138,7 +206,6 @@ function withDefaults(
 function withoutDefaults(a, b, c, d, e, f, g) {
   switch (arguments.length) {
     case 0:
-      a;
     case 1:
       b = 5;
     case 2:
@@ -151,7 +218,6 @@ function withoutDefaults(a, b, c, d, e, f, g) {
       f = arguments;
     case 6:
       g = this.value;
-    default:
   }
   return [a, b, c, d, e, f, g];
 }
@@ -163,42 +229,30 @@ withoutDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 ```
 
-### 函式內再定義函式
+### 有指定預設值的解構參數
 
-Introduced in Gecko 33. Functions declared in the function body cannot be referred inside default parameters and throw a {{jsxref("ReferenceError")}} (currently a {{jsxref("TypeError")}} in SpiderMonkey, see [Firefox bug 1022967](https://bugzil.la/1022967)). Default parameters are always executed first, function declarations inside the function body evaluate afterwards.
+你可以透過[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)語法指定預設值。
 
-```js
-// 行不通的！ 最後會丟出 ReferenceError。
-function f(a = go()) {
-  function go() {
-    return ":P";
-  }
-}
-```
-
-### Parameters without defaults after default parameters
-
-Prior to Gecko 26, the following code resulted in a {{jsxref("SyntaxError")}}. This has been fixed in [Firefox bug 777060](https://bugzil.la/777060) and works as expected in later versions. Parameters are still set left-to-right, overwriting default parameters even if there are later parameters without defaults.
+一種常見的做法是將空物件或空陣列作為解構參數的預設值，例如：`[x = 1, y = 2] = []`。這樣即使函式沒有接收到任何引數，這些值仍然會被預先填入：
 
 ```js
-function f(x = 1, y) {
-  return [x, y];
+function preFilledArray([x = 1, y = 2] = []) {
+  return x + y;
 }
 
-f(); // [1, undefined]
-f(2); // [2, undefined]
-```
+preFilledArray(); // 3
+preFilledArray([]); // 3
+preFilledArray([2]); // 4
+preFilledArray([2, 3]); // 5
 
-### Destructured parameter with default value assignment
-
-You can use default value assignment with the [destructuring assignment](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) notation:
-
-```js
-function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
-  return x + y + z;
+// 物件操作抑是如此：
+function preFilledObject({ z = 3 } = {}) {
+  return z;
 }
 
-f(); // 6
+preFilledObject(); // 3
+preFilledObject({}); // 3
+preFilledObject({ z: 2 }); // 2
 ```
 
 ## 規範
@@ -211,4 +265,7 @@ f(); // 6
 
 ## 參見
 
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)指南
+- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions)
+- [其餘參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [空值合併運算子（`??`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

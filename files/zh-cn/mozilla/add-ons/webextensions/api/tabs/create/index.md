@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 创建一个新标签页。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,9 +20,7 @@ let creating = browser.tabs.create(
 ### 参数
 
 - `createProperties`
-
   - : `object`。用于设置新标签页的属性。要了解更多这些属性的信息，请参阅 {{WebExtAPIRef("tabs.Tab")}} 文档。
-
     - `active` {{optional_inline}}
       - : `boolean`。标签页是否应该成为窗口中的活动标签页。如果为 `false`，则不会产生任何效果。这不影响窗口是否获得焦点（参见 {{WebExtAPIRef('windows.update')}}）。默认为 `true`。
     - `cookieStoreId` {{optional_inline}}
@@ -42,7 +38,6 @@ let creating = browser.tabs.create(
     - `pinned` {{optional_inline}}
       - : `boolean`。标签页是否应固定。默认为 `false`。
     - `selected` {{optional_inline}}
-
       - : `boolean`。标签页是否应成为窗口中选择的标签页。默认为 `true`。
 
         > [!WARNING]
@@ -51,13 +46,11 @@ let creating = browser.tabs.create(
     - `title` {{optional_inline}}
       - : `string`。标签页的标题。仅当将标签页创建为 `discarded` 设置为 `true` 时才允许使用。
     - `url` {{optional_inline}}
-
       - : `string`。要导航到的标签页的 URL。默认为新标签页。
 
         完整的 URL 必须包含方案（scheme）（例如，`http://www.google.com` 而不是 `www.google.com`）。
 
         出于安全原因，在 Firefox 中，可能不允许使用特权 URL。因此，传递以下任何 URL 将失败：
-
         - chrome：URL
         - javascript：URL
         - data：URL
@@ -103,7 +96,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{Compat}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-create) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-create) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

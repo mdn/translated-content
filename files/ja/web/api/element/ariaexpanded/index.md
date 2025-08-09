@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaExpanded`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性の値を反映し、この要素が所有または制御するグループ化要素が展開されているか折りたたまれているかを示します。
+**`ariaExpanded`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) 属性の値を反映し、この要素が所有または制御するグループ化要素が展開されているか折りたたまれているかを示します。
 
 ## 値
 

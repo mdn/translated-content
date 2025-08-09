@@ -25,7 +25,7 @@ l10n:
       </td>
       <td>
         ダミー関数。何もしません。
-        <a href="/ja/docs/Web/OpenSearch#autodiscovery_of_search_plugins"
+        <a href="/ja/docs/Web/XML/Guides/OpenSearch#autodiscovery_of_search_plugins"
           >検索プラグインの自動発見</a
         >を参照してください。
       </td>
@@ -44,4 +44,4 @@ Mozilla 固有です。どの標準にも属しません。
 ## ブラウザーの互換性
 
 Firefox 102 で環境設定に隠されました。
-詳細は、 [`window.external`](/ja/docs/Web/API/Window/external#ブラウザーの互換性) の Firefox 互換性情報を参照してください。
+詳細は、 [`window.external`](#ブラウザーの互換性) の Firefox 互換性情報を参照してください。

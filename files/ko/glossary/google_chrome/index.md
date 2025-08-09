@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-구글 크롬(Google Chrome)은 구글이 개발한 무료 웹 {{glossary("browser","브라우저")}}입니다. 이는 [Chromium](http://www.chromium.org/) 오픈 소스 프로젝트에 기반을 두고 있습니다. 몇 가지 주요 차이점은 [BrowserStack](https://www.browserstack.com/guide/difference-between-chrome-and-chromium#toc5)에 설명되어 있습니다. 크롬은 {{glossary("Blink")}}라고 불리는 고유한 레이아웃을 지원한다. 크롬의 iOS 버전은 Blink가 아니라 해당 플랫폼의 웹뷰(WebKit)를 사용한다는 점에 유의해야 합니다.
+구글 크롬(Google Chrome)은 구글이 개발한 무료 웹 {{glossary("browser","브라우저")}}입니다. 이는 [Chromium](https://www.chromium.org/) 오픈 소스 프로젝트에 기반을 두고 있습니다. 몇 가지 주요 차이점은 [BrowserStack](https://www.browserstack.com/guide/difference-between-chrome-and-chromium#toc5)에 설명되어 있습니다. 크롬은 {{glossary("Blink")}}라고 불리는 고유한 레이아웃을 지원한다. 크롬의 iOS 버전은 Blink가 아니라 해당 플랫폼의 웹뷰(WebKit)를 사용한다는 점에 유의해야 합니다.
 
 ## 같이 보기
 

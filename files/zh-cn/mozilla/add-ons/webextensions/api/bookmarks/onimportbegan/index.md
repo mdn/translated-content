@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当浏览器开始导入一组书签时触发。
 
 在导入一组书签时，{{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} 可能会触发很多次。如果你的扩展正在监听 `onCreated`，且监听器比较耗资源，你还应该监听 `onImportBegan` 和 {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}}。当收到 `onImportBegan` 时，忽略 `onCreated`，直到收到 `onImportEnded` 为止。你可以像往常一样处理所有其他通知。
@@ -19,14 +17,14 @@ browser.bookmarks.onImportBegan.removeListener(listener)
 browser.bookmarks.onImportBegan.hasListener(listener)
 ```
 
-事件包含以下三个函数：
+事件包含三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到该事件。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
-  - : 停止监听该事件。`listener` 参数是要移除的监听器。
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册到该事件。如果正在监听，返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 

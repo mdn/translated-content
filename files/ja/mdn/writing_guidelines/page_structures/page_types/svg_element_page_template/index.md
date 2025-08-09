@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **メモ:** _この説明文全体を削除してから公開してください。_
+> [!NOTE]
+> _この説明文全体を削除してから公開してください。_
 >
 > **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
 >
@@ -30,7 +31,7 @@ l10n:
 > - **title**
 >   - : タイトルの見出しで、ページの最上部に表示されます。
 >     書式は **<**_NameOfTheElement_**>** です。
->     例えば "[g](/ja/docs/Web/SVG/Element/g)" 要素の _title_ は `<g>` となります。
+>     例えば "[g](/ja/docs/Web/SVG/Reference/Element/g)" 要素の _title_ は `<g>` となります。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/SVG/Element/NameOfTheElement` のような形式になります。
@@ -51,9 +52,9 @@ l10n:
 >
 > 下記のアドバイスに従って、以下のマクロを更新または削除してください。
 >
-> - `\{{SecureContext_Header}}` — これは **安全なコンテキスト** バナーを生成し、この技術が[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。
+> - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。
 >   そうではない場合は、マクロ呼び出すを削除することができます。
->   そうである場合は、[安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
+>   そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
 > - `\{{SVGRef}}` — これは、要素のための左側のリファレンスサイドバーを生成します。
 >   サイドバーのコンテンツはページメタデータのタグに依存します。
 > - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
@@ -81,10 +82,10 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 
 ### グローバル属性
 
-- [条件処理属性](/ja/docs/Web/SVG/Attribute#条件処理属性)
-- [コア属性](/ja/docs/Web/SVG/Attribute#コア属性)
-- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#グラフィックイベント属性)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#プレゼンテーション属性)
+- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute#条件処理属性)
+- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#コア属性)
+- [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グラフィックイベント属性)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#プレゼンテーション属性)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("transform")}}

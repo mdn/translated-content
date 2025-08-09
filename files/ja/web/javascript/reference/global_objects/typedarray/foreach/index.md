@@ -9,7 +9,17 @@ l10n:
 
 **`forEach()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素ごとに一度与えられた関数を実行します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.forEach()")}} と同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-foreach.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.forEach()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30]);
+
+uint8.forEach((element) => console.log(element));
+
+// Expected output: 10
+// Expected output: 20
+// Expected output: 30
+```
 
 ## 構文
 

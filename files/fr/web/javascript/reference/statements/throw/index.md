@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/throw
 
 L'instruction **`throw`** permet de lever une exception définie par l'utilisateur. L'exécution de la fonction courante sera stoppée (les instructions situées après l'instruction `throw` ne seront pas exécutées) et le contrôle sera passé au premier bloc {{jsxref("Instructions/try...catch","catch")}} de la pile d'appels. Si aucun bloc `catch` ne se trouve dans les fonctions de la pile d'appels, le programme sera terminé.
 
-{{EmbedInteractiveExample("pages/js/statement-throw.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Throw")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (isNaN(width) || isNaN(height)) {
+    throw new Error("Parameter is not a number!");
+  }
+}
+
+try {
+  getRectArea(3, "A");
+} catch (e) {
+  console.error(e);
+  // Expected output: Error: Parameter is not a number!
+}
+```
 
 ## Syntaxe
 

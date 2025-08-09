@@ -7,8 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 
 L'événement se déclenche lorsqu'un thème fourni en tant qu'extension de navigateur est appliqué ou supprimé, plus précisément :
 
-- Quand un [thème statique](/fr/Add-ons/Themes/Theme_concepts#Static_themes) est installé
-- Quand un [thème dynamique](/fr/Add-ons/WebExtensions/API/theme) appelle [`theme.update()`](/fr/Add-ons/WebExtensions/API/theme/update) ou [`theme.reset()`](/fr/Add-ons/WebExtensions/API/theme/update)
+- Quand un [thème statique](/fr/docs/Mozilla/Add-ons/Themes/Theme_concepts#static_themes) est installé
+- Quand un [thème dynamique](/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme) appelle [`theme.update()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) ou [`theme.reset()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
 - Quand un thème est désinstallé
 
 Notez que cet événement n'est pas déclenché pour les thèmes intégrés.
@@ -35,13 +35,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les paramètres suivants :
-
     - `updateInfo`
-
       - : `object`. Un objet contenant deux propriétés :
-
         - `theme`
           - : `object`. Si l'événement a été déclenché parce qu'un thème fourni par une extension a été supprimé, il s'agira d'un objet vide. Si il a été déclenché parce qu'un thème fourni par une extension a été appliqué, ce sera un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème qui a été appliqué.
         - `windowId`{{optional_inline}}

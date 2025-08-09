@@ -9,4 +9,4 @@ slug: Glossary/XHTML
 
 ## 詳細情報
 
-- [XHTML](/ja/docs/Web/Guide/HTML/XHTML)
+- [XHTML](/ja/docs/Glossary/XHTML)

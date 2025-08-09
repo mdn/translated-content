@@ -17,7 +17,7 @@ Cada elemento container ou elementos gráficos em um desenho SVG podem fornecer 
 
 ### Atributos globais
 
-- [Atributos centrais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -27,7 +27,7 @@ _Não existe especificação de atributos._
 
 ## Interface DOM
 
-Este elemento implementa a interface [`SVGDescElement`](/pt-BR/DOM/SVGDescElement).
+Este elemento implementa a interface [`SVGDescElement`](/pt-BR/docs/DOM/SVGDescElement).
 
 ## Compatibilidade com navegadores
 

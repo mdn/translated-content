@@ -12,10 +12,10 @@ slug: Glossary/Protocol
 ### 基礎知識
 
 - ウィキペディアの[通信プロトコル](https://ja.wikipedia.org/wiki/通信プロトコル)の記事
-- [RFC 公式インターネットプロトコル標準](http://www.rfc-editor.org/search/standards.php)
+- [RFC 公式インターネットプロトコル標準](https://www.rfc-editor.org/search/standards.php)
 
 ## 関連情報
 
 - {{glossary("TCP")}}
-- [HTTP 概要](/ja/docs/Web/HTTP/Overview)
+- [HTTP 概要](/ja/docs/Web/HTTP/Guides/Overview)
 - {{glossary("Packet")}}

@@ -20,7 +20,7 @@ chrome.extension.sendRequest(
 )
 ```
 
-Cette API est également disponible en tant que `browser.extension.sendRequest()` dans une [version qui renvoie une promise](/fr/Add-ons/WebExtensions/API#Callbacks_and_promises).
+Cette API est également disponible en tant que `browser.extension.sendRequest()` dans une [version qui renvoie une promise](/fr/docs/Mozilla/Add-ons/WebExtensions/API#callbacks_and_promises).
 
 ### Paramètres
 
@@ -29,9 +29,7 @@ Cette API est également disponible en tant que `browser.extension.sendRequest()
 - `request`
   - : `any`.
 - `responseCallback`{{Optional_Inline}}
-
   - : `function`. La fonction est passée les arguments suivants :
-
     - `response`
       - : `any`. Objet de réponse JSON envoyé par le gestionnaire de la requête. Si une erreur survient lors de la connexion à l'extension, le rappel sera appelé sans arguments et {{WebExtAPIRef('runtime.lastError')}} sera défini sur le message d'erreur.
 

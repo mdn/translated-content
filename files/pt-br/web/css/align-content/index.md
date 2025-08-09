@@ -3,11 +3,55 @@ title: align-content
 slug: Web/CSS/align-content
 ---
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-content`** define a distribuição entre e ao redor dos items do conteúdo do eixo transversal de uma [flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout) ou do eixo de bloco de uma [grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout).
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-content`** define a distribuição entre e ao redor dos items do conteúdo do eixo transversal de uma [flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout) ou do eixo de bloco de uma [grid](/pt-BR/docs/Web/CSS/CSS_grid_layout).
 
 O exemplo interativo abaixo use Grid Layout para demonstrar alguns dos valores dessa propriedade.
 
-{{EmbedInteractiveExample("pages/css/align-content.html")}}
+{{InteractiveExample("CSS Demo: align-content")}}
+
+```css interactive-example-choice
+align-content: start;
+```
+
+```css interactive-example-choice
+align-content: center;
+```
+
+```css interactive-example-choice
+align-content: space-between;
+```
+
+```css interactive-example-choice
+align-content: space-around;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  column-gap: 10px;
+  height: 180px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 This property has no effect on single line flex containers (i.e. ones with `flex-wrap: nowrap`).
 
@@ -71,7 +115,6 @@ align-content: unset;
 - `normal`
   - : The items are packed in their default position as if no `align-content` value was set.
 - `baseline`, `first baseline`, `last baseline`
-
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
 
     ![the baseline is the line upon which most letters "sit" and below which descenders extend.](410px-typography_line_terms.svg.png)
@@ -251,9 +294,9 @@ display.addEventListener("change", function (evt) {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
 
 {{CSSRef}}

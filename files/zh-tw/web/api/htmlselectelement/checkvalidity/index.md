@@ -23,4 +23,4 @@ var result = selectElt.checkValidity();
 
 ## 參見
 
-- [Form validation.](/zh-TW/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Form validation.](/zh-TW/docs/Web/HTML/Guides/Constraint_validation)

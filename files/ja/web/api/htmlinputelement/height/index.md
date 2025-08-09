@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`height`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、コントロールの高さを指定します。これは、 {{htmlelement("input")}} 要素の [`height`](/ja/docs/Web/HTML/Element/input#height) 属性を反映します。
+**`height`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、コントロールの高さを指定します。これは、 {{htmlelement("input")}} 要素の [`height`](/ja/docs/Web/HTML/Reference/Elements/input#height) 属性を反映します。
 
-`height` プロパティは、 [`image`](/ja/docs/Web/HTML/Element/input/image) 型のみに有効です。これは、ピクセル単位で画像ボタンの垂直寸法を定義します。CSS のサイズ指定プロパティがコントロールに適用される場合、値はレンダリングされたコントロールのコンテンツボックスの高さとなり、`height` 属性の値ではありません。`height` が設定されておらず、CSS がコントロールのサイズに影響しない場合、`height` は画像の内在サイズとなります。画像が読み込まれなかった場合、値は `alt` テキストの高さになります。高さが不明な場合は `height` は `0` になります。 `height` が設定されていない場合、CSS は高さに影響を与えず、画像は読み込まれず、 {{DOMxRef("HTMLInputElement.alt", "alt")}} の値は空文字列、または `src` が設定されていません。
+`height` プロパティは、 [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型のみに有効です。これは、ピクセル単位で画像ボタンの垂直寸法を定義します。CSS のサイズ指定プロパティがコントロールに適用される場合、値はレンダリングされたコントロールのコンテンツボックスの高さとなり、`height` 属性の値ではありません。`height` が設定されておらず、CSS がコントロールのサイズに影響しない場合、`height` は画像の内在サイズとなります。画像が読み込まれなかった場合、値は `alt` テキストの高さになります。高さが不明な場合は `height` は `0` になります。 `height` が設定されていない場合、CSS は高さに影響を与えず、画像は読み込まれず、 {{DOMxRef("HTMLInputElement.alt", "alt")}} の値は空文字列、または `src` が設定されていません。
 
 ## 値
 

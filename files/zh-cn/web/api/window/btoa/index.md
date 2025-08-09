@@ -66,7 +66,7 @@ console.log(window.btoa(notOK)); // 错误
 ## 参见
 
 - [`core-js`](https://github.com/zloirock/core-js) 中有对 [`btoa` 的 polyfill](https://github.com/zloirock/core-js#base64-utility-methods)
-- [`data` URL](/zh-CN/docs/Web/URI/Schemes/data)
+- [`data` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.btoa()")}}：相同的，但是是在 worker 作用域内的方法。
 - {{domxref("Window.atob()")}}
 - {{Glossary("Base64")}}

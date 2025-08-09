@@ -42,7 +42,7 @@ _Herda propriedades de seus parentes {{domxref("Node")}}, e seu próprio parente
 - {{ domxref("NonDocumentTypeChildNode.nextElementSibling") }}
   - : É um {{ domxref("Element") }}, o elemento seguido imediatamente do dito na árvore, ou `null` se não há nó irmão.
 - {{ domxref("Element.outerHTML") }} {{experimental_inline}}
-  - : É um {{domxref("DOMString")}} representando a marcação do elemento incluindo seu conteúdo. Quando usado como um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), substitui o elemento com nós analisados a partir de uma determinada [string](/pt-BR/docs/Glossario/String).
+  - : É um {{domxref("DOMString")}} representando a marcação do elemento incluindo seu conteúdo. Quando usado como um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), substitui o elemento com nós analisados a partir de uma determinada [string](/pt-BR/docs/Glossary/String).
 - {{ domxref("NonDocumentTypeChildNode.previousElementSibling") }}
   - : É um {{ domxref("Element") }}, o elemento precedido imediatamente do dito na árvore, ou `nulo` se não há elemento irmão.
 - {{ domxref("Element.scrollHeight") }} {{experimental_inline}} {{readOnlyInline}}

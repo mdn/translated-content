@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/slice
 
 Метод **`slice()`** извлекает часть строки и возвращает новую строку без изменения оригинальной строки.
 
-{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.slice()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+console.log(str.slice(31));
+// Expected output: "the lazy dog."
+
+console.log(str.slice(4, 19));
+// Expected output: "quick brown fox"
+
+console.log(str.slice(-4));
+// Expected output: "dog."
+
+console.log(str.slice(-9, -5));
+// Expected output: "lazy"
+```
 
 ## Синтаксис
 
@@ -20,13 +36,11 @@ str.slice(beginIndex[, endIndex])
 ### Параметры
 
 - _`beginIndex`_
-
   - : Индекс, с которого начинать извлечение (нумерация начинается с нуля). Если аргумент отрицателен, то трактуется как `str.length + beginIndex` (например, если _`beginIndex`_ равен `-3`, то он трактуется как `str.length - 3`). Если _`beginIndex`_ не является числом при проверке {{jsxref('Number', 'Number(<var>beginIndex</var>)')}}, он трактуется как `0`.
 
     Если `beginIndex` больше или равен `str.length`, возвращается пустая строка.
 
 - _`endIndex`_
-
   - : Индекс, _перед_ которым заканчивать извлечение (нумерация начинается с нуля). Символ по этому индексу не будет включён.
 
     Если *`endIndex` *опущен или является `undefined` или больше чем `str.length`, `slice()` извлечёт всё до конца строки. Если аргумент отрицателен, то трактуется как `str.length + endIndex` (например, если `endIndex` равен `-3`, то он трактуется как `str.length - 3`). Если аргумент не `undefined` и не является числом при проверке {{jsxref('Number', 'Number(<var>endIndex</var>)')}}, возвращается пустая строка.

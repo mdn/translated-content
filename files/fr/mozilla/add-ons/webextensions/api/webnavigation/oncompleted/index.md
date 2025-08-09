@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
 
 {{AddonSidebar}}
 
-Lancé lorsqu'un document, y compris les ressources auxquelles il fait référence, est complètement chargé et initialisé. Ceci est équivalent à l'événement [`chargement`](/fr/docs/Web/Events/load) du DOM.
+Lancé lorsqu'un document, y compris les ressources auxquelles il fait référence, est complètement chargé et initialisé. Ceci est équivalent à l'événement [`chargement`](/fr/docs/Web/API/Window/load_event) du DOM.
 
 ## Syntaxe
 
@@ -32,9 +32,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants:
-
     - `details`
       - : [`object`](#details). Détails sur l'événement de navigation.
 

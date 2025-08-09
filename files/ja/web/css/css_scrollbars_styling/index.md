@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a4ae225903c2784a3d74b43f311e05f208e42c91
 ---
 
-{{CSSRef}}
-
 **CSS スクロールバースタイル設定** (CSS scrollbars styling) モジュールは、スクロールバーの視覚的なスタイル設定に使用できるプロパティを定義しています。必要に応じてスクロールバーの幅をカスタマイズできます。また、スクロールバーの背景であるスクロールバーのトラックの色、およびスクロールバーのドラッグ可能なハンドルであるスクロールバーのつまみの色もカスタマイズできます。
 
 ## スクロールバースタイル設定の実例
@@ -85,7 +83,7 @@ for us to breathe.
 - {{cssxref("scroll-snap-type")}} プロパティ
 - {{CSSxRef("::-webkit-scrollbar")}} 擬似要素
 - {{glossary("scroll container", "スクロールコンテナー")}} 用語集の用語
-- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA ロール
+- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA ロール
 
 ## 仕様書
 

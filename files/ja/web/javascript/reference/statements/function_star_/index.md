@@ -11,7 +11,22 @@ l10n:
 
 ジェネレーター関数は {{jsxref("GeneratorFunction")}} コンストラクターや、関数式の構文を使用して定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript デモ: Statement - Function*")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 ## 構文
 
@@ -253,7 +268,6 @@ for (const power of powers(2)) {
 - {{jsxref("Operators/function", "function")}} 式
 - {{jsxref("Functions", "関数と関数スコープ", "", 1)}}
 - その他のウェブリソース:
-
   - [Regenerator](https://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
   - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](https://github.com/mozilla/task.js)

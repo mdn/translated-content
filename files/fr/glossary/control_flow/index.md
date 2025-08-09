@@ -33,8 +33,8 @@ Le contrôle de flux montre que lorsque vous lisez un script, vous ne devez pas 
 
 ### Référence technique
 
-- [Référence JavaScript - Structure de contrôle](/fr/docs/Web/JavaScript/Reference#Contrôle_du_flux) sur MDN
+- [Référence JavaScript - Structure de contrôle](/fr/docs/Web/JavaScript/Reference#contrôle_du_flux) sur MDN
 
 ### Apprendre
 
-- [Instructions (Structure de contrôle)](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs) sur MDN
+- [Instructions (Structure de contrôle)](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) sur MDN

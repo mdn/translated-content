@@ -16,15 +16,11 @@ pc = new RTCPeerConnection([configuration]);
 ### 매개변수
 
 - `configuration` {{optional_inline}}
-
   - : 새로운 연결을 설정하는 옵션 객체입니다.
-
     - `bundlePolicy` {{optional_inline}}
-
       - : 원격 피어가 [SDP BUNDLE 표준](https://webrtcstandards.info/sdp-bundle/)과 호환되지 않을 때 어떻게 candidate의 네고시에이션을 처리 할 것인지를 정의합니다.
 
         가능한 값은 다음 열거형 값 중 하나로, 기본 값은 `balanced`입니다.
-
         - `balanced`
           - : The ICE agent initially creates one {{domxref("RTCDtlsTransport")}}
             for each type of content added: audio, video, and data channels.
@@ -42,14 +38,12 @@ pc = new RTCPeerConnection([configuration]);
             then only a single track will be negotiated and the rest ignored.
 
     - `certificates` {{optional_inline}}
-
       - : 연결 인증에 사용할 {{domxref("RTCCertificate")}}를 담은 {{jsxref("Array")}}입니다. 지정하지 않을 경우 {{domxref("RTCPeerConnection")}} 인스턴스 각각에 대해 인증서가 자동으로 생성됩니다. 주어진 연결에 대해 하나의 인증서만 사용되지만, 다양한 알고리즘을 사용하는 여러 인증서를 제공하면 특정 상황에서의 연결 성공률을 높일 수 있습니다. 아래의 [인증서 사용하기](#인증서_사용하기)에서 더 많은 정보를 확인하세요.
 
         > [!NOTE]
         > 이 옵션은 처음 지정한 이후 변경할 수 없습니다. 인증서를 설정한 후엔 모든 {{domxref("RTCPeerConnection.setConfiguration()")}}이 무시됩니다.
 
     - `iceCandidatePoolSize` {{optional_inline}}
-
       - : ICE candidate 풀의 크기를 지정하는 부호 없는 16비트 정수 값입니다. 기본 값은 0으로 candidate 를 미리 가져오지 않을 것임을 나타냅니다. 연결 시도 전부터 ICE 에이전트가 ICE candidate를 가져올 수 있도록 허용하면 {{domxref("RTCPeerConnection.setLocalDescription()")}} 호출 시점에 이미 candidate를 조사할 수 있으므로 특정 상황에서 연결 속도가 빨라질 수 있습니다.
 
         > [!NOTE]
@@ -116,6 +110,6 @@ the cost of generating new keys.
 ## 참고
 
 - [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Architecture)
+- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Protocols)
 - [Lifetime of a WebRTC session](/ko/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}

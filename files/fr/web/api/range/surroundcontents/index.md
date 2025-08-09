@@ -49,4 +49,4 @@ range.surroundContents(newNode);
 
 ## Voir aussi
 
-- [L'index des interfaces DOM](/fr/docs/DOM/DOM_Reference)
+- [L'index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)

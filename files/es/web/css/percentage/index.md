@@ -3,11 +3,9 @@ title: <percentage>
 slug: Web/CSS/percentage
 ---
 
-{{CSSRef}}
-
 ## Sumario
 
-Los tipos de dato `<porcentaje>` de [CSS](/en/CSS) representan un valor en forma de porcentaje. Muchas [propiedades de CSS](/en/CSS_Reference) pueden tomar valores porcentuales, siempre para definir longitudes con respecto al tamaño de los elementos padre. Los porcentajes estan formados por un [\<numero>](/es/docs/Web/CSS/number) seguido por el signo de porcentaje `%`. No hay un espacio entre el '%' y el numero.
+Los tipos de dato `<porcentaje>` de [CSS](/es/docs/Web/CSS) representan un valor en forma de porcentaje. Muchas [propiedades de CSS](/en-US/CSS_Reference) pueden tomar valores porcentuales, siempre para definir longitudes con respecto al tamaño de los elementos padre. Los porcentajes estan formados por un [\<numero>](/es/docs/Web/CSS/number) seguido por el signo de porcentaje `%`. No hay un espacio entre el '%' y el numero.
 
 Varias propriedades de longitud usan porcentajes, tales como `width, margin` y `padding`. Los porcentajes tambien se pueden ver en `font-size`, donde el tamaño del texto esta directamente relacionado al tamaño de su elemento padre.
 
@@ -16,7 +14,7 @@ Varias propriedades de longitud usan porcentajes, tales como `width, margin` y `
 
 ## Interpolación
 
-Los valores del tipo de dato `<porcentaje>` de CSS pueden ser interpolados en orden de permitir animaciones. En ese caso ellos son interpolados como numeros reales de punto flotante. La velocidad de la interpolación se determina por medio de la [funcion de temporizacion](/en/CSS/timing-function) asociada con la animacion.
+Los valores del tipo de dato `<porcentaje>` de CSS pueden ser interpolados en orden de permitir animaciones. En ese caso ellos son interpolados como numeros reales de punto flotante. La velocidad de la interpolación se determina por medio de la [funcion de temporizacion](/es/docs/Web/CSS/easing-function) asociada con la animacion.
 
 ## Examples
 

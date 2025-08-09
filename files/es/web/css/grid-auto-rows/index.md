@@ -3,8 +3,6 @@ title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 ---
 
-{{CSSRef}}
-
 La propiedad **`grid-auto-rows`** de CSS especifíca el tamaño de una nueva fila creada de forma implícita.
 
 ```css
@@ -58,7 +56,6 @@ Si el elemento de una grilla es ubicado en una fila que no tiene un tamaño expl
 - `<percentage>`
   - : Es un {{cssxref("percentage", "&lt;percentage&gt;")}} no negativo relativo al tamaño del bloque del contenedor de la grilla. Si el tamaño del bloque del contenedor de la grilla es indefinido, el valor del porcentaje es tratado como `auto`.
 - `<flex>`
-
   - : Es una dimensión no negativa con la unidad `fr` especificando el factor flex de la pista (track). Cada pista con valor `<flex>` toma una parte del espacio restante en proporción con su factor flex.
 
     Cuando aparece fuera de una notación `minmax()`, implica un mínimo automático (p.e. `minmax(auto, <flex>)`).
@@ -70,7 +67,6 @@ Si el elemento de una grilla es ubicado en una fila que no tiene un tamaño expl
 - `minmax(minimo, maximo)`
   - : es una notacion funcional que define el rango del tamano, dicho tamano debe ser mayor o igual al (minimo) y menor o igual al (maximo). si el parametro (maximo) es mas pequeno que el parametro (minimo), entonces el parametro (maximo) es ignorado y la funcion se tratara con el parametro (minimo). De otra manera si, a valor `<flex>` pone como minimo el factor flex de la pista, sera tratado como cero( or el contenido minimo, si el contenedor grid es inicializado con el tamano minimo permitido ).
 - `auto`
-
   - : Es una palabra clave que es identica a contenido máximo si es un máximo. Como mínimo representa el valor mínimo más grande (como esté especificado por {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la grilla que ocupan la pista de la grilla.
 
     > [!NOTE]
@@ -121,5 +117,5 @@ Si el elemento de una grilla es ubicado en una fila que no tiene un tamaño expl
 ## Ver también
 
 - Related CSS properties: {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout - sizing rows in the implicit grid](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
-- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
+- Grid Layout Guide: _[Auto-placement in grid layout - sizing rows in the implicit grid](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#sizing_rows_in_the_implicit_grid)_
+- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

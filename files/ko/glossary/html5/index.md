@@ -19,5 +19,5 @@ HTML5라는 용어는 본질적으로 일련의 최신 웹 기술을 나타내�
 ## 같이 보기
 
 - [HTML 문서](/ko/docs/Web/HTML)
-- [HTML 초보자 교육 안내서](/ko/docs/Learn/HTML)
+- [HTML 초보자 교육 안내서](/ko/docs/Learn_web_development/Core/Structuring_content)
 - [Web API](/ko/docs/Web/API)

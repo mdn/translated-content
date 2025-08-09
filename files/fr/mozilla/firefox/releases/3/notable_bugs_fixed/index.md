@@ -3,8 +3,6 @@ title: Bugs importants corrigés dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 ---
 
-{{FirefoxSidebar}}
-
 Cet article fait la liste des corrections importantes faisant partie de Firefox 3 qui ne sont pas nécessairement évidentes à trouver dans la documentation.
 
 - Si une erreur se produit à l'analyse d'un overlay, l'overlay n'est pas appliqué. Les erreurs d'analyse apparaissent dans la console d'erreurs. ([bug Firefox 355755](https://bugzil.la/355755))
@@ -17,7 +15,7 @@ Cet article fait la liste des corrections importantes faisant partie de Firefox 
 - Les gestionnaires d'évènements sont conservés lorsque des éléments sont déplacés dans ou retirés d'un document XUL. ([bug Firefox 286619](https://bugzil.la/286619))
 - Les évènements de mutation sont déclenchés aussi pour les documents non affichés. ([bug Firefox 201238](https://bugzil.la/201238))
 - Divers problèmes dans l'ordre d'affichage des éléments ont été corrigés. ([bug Firefox 317375](https://bugzil.la/317375))
-- [`getElementsByTagName()`](/fr/DOM/element.getElementsByTagName) a été corrigé pour fonctionner correctement sur les sous-arbres dont des éléments ont des préfixes d'espaces de noms dans leur nom de balise ([bug Firefox 206053](https://bugzil.la/206053)).
+- [`getElementsByTagName()`](/fr/docs/Web/API/Element/getElementsByTagName) a été corrigé pour fonctionner correctement sur les sous-arbres dont des éléments ont des préfixes d'espaces de noms dans leur nom de balise ([bug Firefox 206053](https://bugzil.la/206053)).
 - Les évènements `DOMNodeInserted` et `DOMNodeRemoved` s'appliquent à présent aux bons nœuds ([bug Firefox 367164](https://bugzil.la/367164)).
 - `\d`, un des caractères spéciaux dans les expressions rationnelles, a été corrigé pour correspondre uniquement aux chiffres de base de l'alphabet latin (équivalent à `[0-9]`). ([bug Firefox 378738](https://bugzil.la/378738))
 - La catégorie image-sniffing-services permet aux décodeurs d'images implémentés comme des extensions de décoder correctement des images envoyées avec des types MIME incorrects. ([bug Firefox 391667](https://bugzil.la/391667))

@@ -1,24 +1,39 @@
 ---
 title: Atomics.and()
+short-title: and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Atomics.and()`** は静的メソッドで、配列内の指定した位置の値に指定した値でビット単位の AND を計算し、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
 
-静的な **`Atomics.and()`** メソッドは、配列内の指定した位置の値に指定した値でビット単位の AND を計算し、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
+{{InteractiveExample("JavaScript デモ: Atomics.and()")}}
 
-{{EmbedInteractiveExample("pages/js/atomics-and.html")}}
+```js interactive-example
+// バイト単位でサイズを指定して SharedArrayBuffer を作成
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) AND 2 (0010) = 2 (0010)
+console.log(Atomics.and(uint8, 0, 2));
+// 予想される結果: 7
+
+console.log(Atomics.load(uint8, 0));
+// 予想される結果: 2
+```
 
 ## 構文
 
-```js
-Atomics.and(typedArray, index, value);
+```js-nolint
+Atomics.and(typedArray, index, value)
 ```
 
 ### 引数
 
 - `typedArray`
-  - : 共有整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} の何れかです。
+  - : 共有整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, {{jsxref("BigUint64Array")}} の何れかです。
 - `index`
   - : `typedArray` でビット単位の AND を計算する位置です。
 - `value`
@@ -30,8 +45,10 @@ Atomics.and(typedArray, index, value);
 
 ### 例外
 
-- `typedArray` が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- `index` が `typedArray` の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- {{jsxref("TypeError")}}
+  - : `typedArray` が許可された整数型のいずれでもない場合に発生します。
+- {{jsxref("RangeError")}}
+  - : `index` が `typedArray` の範囲を超えている場合に発生します。
 
 ## 解説
 

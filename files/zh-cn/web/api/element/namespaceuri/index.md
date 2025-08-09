@@ -29,7 +29,7 @@ if (
 
 这不是一个计算值，它是基于范围内的名称空间声明检查的名称空间查找的结果。节点命名空间在节点创建时被冻结。
 
-在 Firefox 3.5 以及之前的版本，HTML 文档中的 HTML 元素的名称空间 URI 为 `null`。在更早的版本中，符合 HTML5，它是[`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) 如 XHTML。
+在 Firefox 3.5 以及之前的版本，HTML 文档中的 HTML 元素的名称空间 URI 为 `null`。在更早的版本中，符合 HTML5，它是[`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) 如 XHTML。
 
 你可以使用 DOM Level 2 方法指定的`namespaceURI`创建一个元素 [document.createElementNS](/zh-CN/docs/Web/API/Document/createElementNS)。
 

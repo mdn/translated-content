@@ -1,6 +1,6 @@
 ---
 title: "HTMLImageElement: y プロパティ"
-short-title: "y"
+short-title: y
 slug: Web/API/HTMLImageElement/y
 l10n:
   sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
@@ -21,7 +21,8 @@ l10n:
 
 ![要素に関連するさまざまなボックスの関係を示す図](boxmodel-3.png)
 
-> **メモ:** `y` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
+> [!NOTE]
+> `y` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
 
 ## 例
 

@@ -1,9 +1,7 @@
 ---
-title: ":playing"
+title: :playing
 slug: Web/CSS/:playing
 ---
-
-{{CSSRef}}
 
 **`:playing`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器表示一个处于“播放”状态的可播放元素，例如 {{htmlelement("audio")}} 或 {{htmlelement("video")}}。
 

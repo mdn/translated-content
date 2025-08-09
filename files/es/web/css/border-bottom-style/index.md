@@ -3,8 +3,6 @@ title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 ---
 
-{{CSSRef}}
-
 << [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen
@@ -56,7 +54,7 @@ border-bottom-style: <border-style> | inherit
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {
@@ -72,8 +70,8 @@ A menos que un valor {{ Cssxref("border-style") }} sea definido, el borde no apa
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-style)
-- [CSS 3](http://www.w3.org/TR/css3-background/#border-style)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-style)
+- [CSS 3](https://www.w3.org/TR/css3-background/#border-style)
 
 ### Compatibilidades
 

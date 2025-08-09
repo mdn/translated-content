@@ -41,16 +41,14 @@ Avec cette clé, vous pouvez enregistrer un site Web en tant que gestionnaire po
 Chaque gestionnaire de protocole possède trois propriétés, toutes obligatoires :
 
 - `protocol`
-
   - : Une chaîne définissant le protocole. Cela doit être soit:
-
     - L'une des suivantes : "bitcoin", "dat", "dweb", "geo", "gopher", "im", "ipfs", "ipns", "irc", "ircs", "magnet", "mailto", "mms", "news", "nntp", "sip", "sms", "smsto", "ssb", "ssh", "tel", "urn", "webcal", "wtai", "xmpp".
     - Une chaîne composée d'un nom personnalisé préfixé avec "web+" ou "ext+". Par exemple : "web+foo" ou "ext+foo". Le nom personnalisé doit comporter uniquement des caractères ASCII minuscules. Il est recommandé que les extensions utilisent la forme "ext+".
 
 - `name`
   - : Une chaîne représentant le nom du gestionnaire de protocole. Il sera affiché à l'utilisateur lorsqu'il sera interrogé s'il souhaite que ce gestionnaire ouvre le lien.
 - `uriTemplate`
-  - : Une chaîne représentant l'URL du gestionnaire. Cette chaîne doit inclure "%s" comme espace réservé : il sera remplacé par l'URL échappée du document à traiter. Cette URL peut être une vraie URL, ou il peut s'agir d'un numéro de téléphone, d'une adresse de courrier électronique, etc. C'est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+  - : Une chaîne représentant l'URL du gestionnaire. Cette chaîne doit inclure "%s" comme espace réservé : il sera remplacé par l'URL échappée du document à traiter. Cette URL peut être une vraie URL, ou il peut s'agir d'un numéro de téléphone, d'une adresse de courrier électronique, etc. C'est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Exemple
 
@@ -64,7 +62,7 @@ Chaque gestionnaire de protocole possède trois propriétés, toutes obligatoire
 ]
 ```
 
-Les gestionnaires peuvent également être des [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages).
+Les gestionnaires peuvent également être des [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages).
 
 ```json
 "protocol_handlers": [

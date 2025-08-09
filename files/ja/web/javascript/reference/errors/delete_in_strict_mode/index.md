@@ -25,7 +25,7 @@ JavaScript では、通常の変数を [`delete`](/ja/docs/Web/JavaScript/Refere
 
 `delete` 演算子は、オブジェクトのプロパティのみ削除できます。オブジェクトプロパティは、設定可能な場合は "修飾" されます。
 
-よくある予想とは異なり、 `delete` 演算子は直接的なメモリーの解放とは**関係ありません**。メモリー管理は、参照の解放によって間接的に行われます。[メモリー管理](/ja/docs/Web/JavaScript/Memory_Management)ページと [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子ページで詳細を確認してください。
+よくある予想とは異なり、 `delete` 演算子は直接的なメモリーの解放とは**関係ありません**。メモリー管理は、参照の解放によって間接的に行われます。[メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)ページと [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子ページで詳細を確認してください。
 
 このエラーは、[strict mode モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ発生します。非 strict モードでは、演算子はただ `false` を返します。
 
@@ -65,5 +65,5 @@ x = null;
 ## 関連項目
 
 - [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete)
-- [メモリー管理](/ja/docs/Web/JavaScript/Memory_Management)
+- [メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)
 - [TypeError: property "x" is non-configurable and can't be deleted](/ja/docs/Web/JavaScript/Reference/Errors/Cant_delete)

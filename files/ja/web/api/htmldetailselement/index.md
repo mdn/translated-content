@@ -16,7 +16,7 @@ l10n:
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLDetailsElement.open")}}
-  - : HTML の [`open`](/ja/docs/Web/HTML/Element/details#open) 属性を反映する論理値で、要素の内容（{{HTMLElement("summary")}} を除く）がユーザーに表示されているかどうかを示します。
+  - : HTML の [`open`](/ja/docs/Web/HTML/Reference/Elements/details#open) 属性を反映する論理値で、要素の内容（{{HTMLElement("summary")}} を除く）がユーザーに表示されているかどうかを示します。
 
 ## インスタンスメソッド
 
@@ -26,7 +26,7 @@ _固有のメソッドはありません。親である {{domxref("HTMLElement")
 
 このイベントは [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、このインターフェイスの `onイベント名` プロパティにイベントリスナーを代入することで待ち受けします。
 
-- [`toggle`](/ja/docs/Web/API/HTMLDetailsElement/toggle_event)
+- [`toggle`](/ja/docs/Web/API/HTMLElement/toggle_event)
   - : {{HtmlElement("details")}} 要素の `open`/`closed` 状態がトグル切り替えされたときに発生します。
 
 ## 仕様書

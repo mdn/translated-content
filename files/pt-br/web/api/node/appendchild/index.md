@@ -15,7 +15,7 @@ Adiciona um nó ao final da lista de filhos de um nó pai especificado. Se o nó
 var filho = elemento.appendChild(filho);
 ```
 
-- `elemento` é o [elemento](/pt-BR/docs/DOM/element) pai.
+- `elemento` é o [elemento](/pt-BR/docs/Web/API/Element) pai.
 - `filho` é o nó a ser adicionado como filho de `elemento`. Também é devolvido.
 
 ## Descrição

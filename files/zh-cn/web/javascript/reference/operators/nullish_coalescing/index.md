@@ -5,11 +5,19 @@ l10n:
   sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
 ---
 
-{{jsSidebar("Operators")}}
-
 **空值合并运算符**（**`??`**）是一个逻辑运算符，当左侧的操作数为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或者 {{jsxref("undefined")}} 时，返回其右侧操作数，否则返回左侧操作数。
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## 语法
 

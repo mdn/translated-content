@@ -1,9 +1,9 @@
 ---
-title: ":-moz-loading"
+title: :-moz-loading
 slug: Web/CSS/:-moz-loading
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

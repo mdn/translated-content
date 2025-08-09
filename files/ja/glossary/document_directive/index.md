@@ -9,19 +9,17 @@ slug: Glossary/Document_directive
 
 文書ディレクティブは {{CSP("default-src")}} ディレクティブで代替されることはありません。
 
-完全な一覧は[文書ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#document_directives)を参照してください。
+完全な一覧は[文書ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#document_directives)を参照してください。
 
 ## 関連情報
 
 - 関連用語:
-
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}
   - {{Glossary("Fetch directive", "フェッチディレクティブ")}}
   - {{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}
 
 - リファレンス
-
   - <https://www.w3.org/TR/CSP/#directives-document>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}

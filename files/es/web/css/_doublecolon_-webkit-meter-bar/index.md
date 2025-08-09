@@ -1,9 +1,9 @@
 ---
-title: "::-webkit-meter-bar"
+title: ::-webkit-meter-bar
 slug: Web/CSS/::-webkit-meter-bar
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

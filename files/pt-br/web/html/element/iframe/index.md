@@ -5,15 +5,15 @@ slug: Web/HTML/Element/iframe
 
 O **elemento** **HTML** **\<iframe>** (ou _elemento HTML_ _inline frame_) representa um contexto de navegação aninhado, efetivamente incorporando outra página HTML para a página atual. Em HTML 4.01, um documento pode conter uma cabeça e um corpo ou uma cabeça e um conjunto de quadros, mas não tanto um corpo e um conjunto de quadros. No entanto, um \<iframe> pode ser usado dentro de um corpo de documento normal. Cada contexto de navegação tem sua própria história de sessão e o documento ativo. O contexto de navegação que contém o conteúdo incorporado é chamado o pai de contexto de navegação. O contexto de navegação de nível superior (que não tem um pai) normalmente é a janela do navegador.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content.
+- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), embedded content, interactive content, palpable content.
 - _Permitted content_ Special, see prose
-- _Tag omission_ {{no_tag_omission}}
+- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Permitted parent elements_ Any element that accepts embedded content.
 - _DOM interface_ {{domxref("HTMLIFrameElement")}}
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `align` {{deprecated_inline}}
   - : O alinhamento deste elemento em relação ao contexto.
@@ -34,7 +34,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - `webkitallowfullscreen` {{non-standard_inline}} {{deprecated_inline}}
   - : Use **`allowfullscreen`** ao invés. No Chrome 17 ou mais novo (e talvez mais antigo), this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{domxref("element.webkitRequestFullScreen()")}} method. If this isn't set, the element can't be placed into full screen mode.
 - `mozapp` {{non-standard_inline}}
-  - : For frames hosting an [open web app](/pt-BR/docs/Apps), this specifies the URL of the [app manifest](/pt-BR/docs/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/pt-BR/docs/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
+  - : For frames hosting an [open web app](/pt-BR/docs/Web/Progressive_web_apps), this specifies the URL of the [app manifest](/pt-BR/docs/Web/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/pt-BR/docs/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
 - `mozbrowser` {{non-standard_inline}}
   - : Indicates that the frame is to appear like a top-level browser window to the embedded content. This means that {{domxref("window.top")}}, {{domxref("window.parent")}}, {{domxref("window.frameElement")}}, etc. will _not_ reflect the frame hierarchy. This allows for a web browser UI to be implemented entirely with web technology, given the right permissions. See [Using the Browser API](/pt-BR/docs/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
 - `name`
@@ -42,23 +42,19 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - `remote` {{non-standard_inline}}
   - : Carrega a página do _frame_ em um processo separado.
 - `scrolling`
-
   - : Enumerated attribute indicating when the browser should provide a scroll bar (or other scrolling device) for the frame:
-
     - `auto`: Só quando necessário.
     - `yes`: Sempre mostrar uma barra de rolagem.
     - `no`: Nunca mostrar uma barra de rolagem.
 
 - `sandbox`
-
   - : If specified as an empty string, this attribute enables extra restrictions on the content that can appear in the inline frame. The value of the attribute can either be an empty string (all the restrictions are applied), or a space-separated list of tokens that lift particular restrictions. Valid tokens are:
-
     - `allow-same-origin`: Allows the content to be treated as being from its normal origin. If this keyword is not used, the embedded content is treated as being from a unique origin.
     - `allow-top-navigation`: Allows the embedded browsing context to navigate (load) content to the top-level browsing context. If this keyword is not used, this operation is not allowed.
     - `allow-forms`: Allows the embedded browsing context to submit forms. If this keyword is not used, this operation is not allowed.
     - `allow-popups`: Allows popups (like from window\.open).
     - `allow-scripts`: Allows the embedded browsing context to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
-    - `allow-pointer-lock`: Allows the embedded browsing context to use the [Pointer Lock API](/pt-BR/docs/WebAPI/Pointer_Lock).
+    - `allow-pointer-lock`: Allows the embedded browsing context to use the [Pointer Lock API](/pt-BR/docs/Web/API/Pointer_Lock_API).
 
     > [!NOTE]
     >
@@ -85,7 +81,7 @@ From the DOM `iframe` element, scripts can get access to the {{domxref("window")
 
 From the inside of a frame, a script can get a reference to the parent window via {{domxref("window.parent")}}.
 
-Scripts trying to access a frame's content are subject to the [same-origin policy](/pt-BR/docs/Same_origin_policy_for_JavaScript), and cannot access most of the properties in the other window object if it was loaded from a different domain. This also applies to a script inside a frame trying to access its parent window. Cross-domain communication can still be achieved with {{domxref("window.postMessage")}}.
+Scripts trying to access a frame's content are subject to the [same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy), and cannot access most of the properties in the other window object if it was loaded from a different domain. This also applies to a script inside a frame trying to access its parent window. Cross-domain communication can still be achieved with {{domxref("window.postMessage")}}.
 
 ## Exemplo 1
 

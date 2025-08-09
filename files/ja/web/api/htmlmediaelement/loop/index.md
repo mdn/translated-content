@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.loop`** プロパティは、 HTML の [`loop`](/ja/docs/Web/HTML/Element/video#loop) 属性を反映し、メディア要素が最後に到達したときに最初からやり直すかどうかを制御します。
+**`HTMLMediaElement.loop`** プロパティは、 HTML の [`loop`](/ja/docs/Web/HTML/Reference/Elements/video#loop) 属性を反映し、メディア要素が最後に到達したときに最初からやり直すかどうかを制御します。
 
 ## 値
 

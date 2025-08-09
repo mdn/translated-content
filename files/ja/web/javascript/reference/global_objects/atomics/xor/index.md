@@ -1,18 +1,33 @@
 ---
 title: Atomics.xor()
+short-title: xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Atomics.xor()`** は静的メソッドで、配列内の指定した位置にある指定された値とのビット単位の XOR を計算し、その位置にあった古い値を返します。これは不可分操作であり、変更された値が書き戻されるまで他の書き込みが行われないことが保証されます。
 
-{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}
+{{InteractiveExample("JavaScript デモ: Atomics.xor()")}}
+
+```js interactive-example
+// バイト単位でサイズを指定して SharedArrayBuffer を作成
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) XOR 2 (0010) = 5 (0101)
+console.log(Atomics.xor(uint8, 0, 2));
+// 予想される結果: 7
+
+console.log(Atomics.load(uint8, 0));
+// 予想される結果: 5
+```
 
 ## 構文
 
-```js
-Atomics.xor(typedArray, index, value);
+```js-nolint
+Atomics.xor(typedArray, index, value)
 ```
 
 ### 引数
@@ -30,8 +45,10 @@ Atomics.xor(typedArray, index, value);
 
 ### 例外
 
-- {{jsxref("TypeError")}}: `typedArray` が許可されている整数の型ではなかった場合に発生します。
-- {{jsxref("RangeError")}}: `index` が `typedArray` の範囲を超えていた場合に発生します。
+- {{jsxref("TypeError")}}
+  - : `typedArray` が許可された整数型のいずれでもない場合に発生します。
+- {{jsxref("RangeError")}}
+  - : `index` が `typedArray` の範囲を超えている場合に発生します。
 
 ## 解説
 

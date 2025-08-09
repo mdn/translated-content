@@ -26,19 +26,18 @@ delete(options)
 または
 
 - `options`
-
   - : オブジェクトは以下のプロパティを含みます。
-
     - `name`
       - : Cookie の名前が入っている文字列です。
     - `partitioned` {{Optional_Inline}}
-      - : 論理値で、既定値は `false` です。`true` に設定すると、削除するクッキーがパーティション化 Cookie であることを表します。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Partitioned_cookies) を参照してください。
+      - : 論理値で、既定値は `false` です。`true` に設定すると、削除するクッキーがパーティション化 Cookie であることを表します。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
     - `path`{{Optional_Inline}}
       - : パスを含む文字列です。
     - `url`{{Optional_Inline}}
       - : Cookie の URL が入っている文字列です。
 
-> **メモ:** `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。ドキュメントからは現在の URL の Cookie しか取得できないので、ドキュメントコンテキストで有効な URL はドキュメントの URL のみとなります。
+> [!NOTE]
+> `url` オプションは、特定の URL をスコープとした Cookie の変更を可能にします。サービスワーカーは、自分のスコープ下にある任意の URL に送信される Cookie を取得できます。ドキュメントからは現在の URL の Cookie しか取得できないので、ドキュメントコンテキストで有効な URL はドキュメントの URL のみとなります。
 
 ### 返値
 

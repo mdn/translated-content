@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 CSS を学ぶのは大変な作業かもしれません。
 そんなあなたのために、私たちは CSS に関する**チュートリアル**を多数用意しています。
 完全な初心者を対象としたものもあれば、経験豊富なユーザーが使えるような複雑な機能を紹介したものもあります。
@@ -16,7 +14,7 @@ CSS を学ぶのは大変な作業かもしれません。
 
 ## 初心者レベルの CSS チュートリアル
 
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [CSS の基本](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
   - : このガイドは全くの初心者を対象としています。 CSS を 1 行も書いたことがない？- そんなあなたのためのガイドです。
     この本では、この言語の基本的な概念を説明し、基本的なスタイルシートの書き方を解説しています。
 - [複数の背景画像の利用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
@@ -37,7 +35,7 @@ CSS 2 (Level 1) のリリース後、 CSS に新しい機能が追加されま�
 その中には、奇抜なものもあれば、かなり自己完結的なものもあります。
 基本的な概念の知識があれば、誰でも簡単に使用することができます。
 
-- [CSS カウンタースタイル](/ja/docs/Web/API/CSS_Counter_Styles)
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
   - : CSS でアイテムやページをカウントするのは簡単な作業です。 {{cssxref("counter-reset")}}、{{cssxref("counter-increment")}}、{{cssxref("counters", "counters()")}}、{{cssxref("counter", "counter()")}} の使用方法を学びましょう。
 - [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSSアニメーションでは、スタイル設定を[キーフレーム](/ja/docs/Web/CSS/@keyframes)として定義し、その間をアニメーションで遷移させることができます。

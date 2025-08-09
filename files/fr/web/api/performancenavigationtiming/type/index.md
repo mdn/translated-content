@@ -5,12 +5,12 @@ slug: Web/API/PerformanceNavigationTiming/type
 
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-La propriété en lecture seule **`type`** renvoie une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type de navigation. La valeur doit être l'une des suivantes :
+La propriété en lecture seule **`type`** renvoie une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type de navigation. La valeur doit être l'une des suivantes :
 
 - `navigate`
   - : La navigation a commencé en cliquant sur un lien, en saisissant l'URL dans la barre d'adresse du navigateur, en soumettant un formulaire ou en s'initialisant par une opération de script autre que reload et back_forward, comme indiqué ci-dessous.
 - `reload`
-  - : La navigation s'effectue par l'opération de rechargement du navigateur ou [`location.reload()`](/fr/docs/Web/API/location/reload).
+  - : La navigation s'effectue par l'opération de rechargement du navigateur ou [`location.reload()`](/fr/docs/Web/API/Location/reload).
 - `back_forward`
   - : La navigation se fait par l'opération de traversée de l'historique du navigateur.
 - `prerender`
@@ -24,7 +24,7 @@ perfEntry.type;
 
 ### Valeur de retour
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui est l'une des valeurs énumérées ci-dessus.
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est l'une des valeurs énumérées ci-dessus.
 
 ## Exemple
 

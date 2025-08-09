@@ -5,9 +5,9 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 
 {{MDNSidebar}}
 
-Esta página enumera muchas de las macros de propósito general creadas para usarlas en MDN. Para obtener información sobre cómo usar estas macros, consulta [Uso de macros](/es/docs/MDN/Contribute/Structures/Macros) y [Usar macros de enlaces](/es/docs/MDN/Contribute/Editor/Links#Usar_macros_de_enlaces). Consulta [Otras macros](/es/docs/MDN/Contribute/Structures/Macros/Other) para obtener información sobre las macros que se utilizan con poca frecuencia, que se utilizan solo en contextos especiales o, están en desuso. También hay una [lista completa de todas las macros en MDN](/es/dashboards/macros).
+Esta página enumera muchas de las macros de propósito general creadas para usarlas en MDN. Para obtener información sobre cómo usar estas macros, consulta [Uso de macros](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) y [Usar macros de enlaces](/es/docs/MDN/Contribute/Editor/Links#Usar_macros_de_enlaces). Consulta [Otras macros](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) para obtener información sobre las macros que se utilizan con poca frecuencia, que se utilizan solo en contextos especiales o, están en desuso. También hay una [lista completa de todas las macros en MDN](/es/dashboards/macros).
 
-Consulta también la [guía de estilo CSS](/es/docs/MDN/Contribute/Guidelines/CSS_style_guide) para conocer los estilos disponibles para usarlos.
+Consulta también la [guía de estilo CSS](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN) para conocer los estilos disponibles para usarlos.
 
 ## Enlaces
 
@@ -18,11 +18,9 @@ En general, no es necesario utilizar macros para crear enlaces arbitrarios. Util
 - La macro [`Glossary`](https://github.com/mdn/yari/tree/main/kumascript/macros/Glossary.ejs) crea un vínculo a la entrada de un término específico en el [glosario](/es/docs/Glossary) de MDN. Esta macro acepta un parámetro obligatorio y dos opcionales:
 
   Ejemplos:
-
   1. El nombre del término (tal como "HTML").
   2. El texto que se mostrará en el artículo en lugar del nombre del término (esto se debe usar con poca frecuencia).{{Optional_Inline}}
   3. Si se especifica este parámetro y no es cero, no se aplica el estilo personalizado que normalmente se aplica a los enlaces del glosario.{{Optional_Inline}}
-
   - `\{{Glossary("HTML")}}` produce {{Glossary("HTML")}}
   - `\{{Glossary("CSS", "Hojas de estilo en cascada")}}` produce {{Glossary("CSS", "Hojas de estilo en cascada")}}
   - `\{{Glossary("HTML", "", 1)}}` produce {{Glossary("HTML", "", 1)}}
@@ -38,9 +36,9 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 - [`jsxref`](https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs) enlaza a una página en la {{JSxRef("Referencia", "Referencia de JavaScript")}}.
 - [`SVGAttr`](https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs) enlaza a un atributo SVG específico. Por ejemplo, `\{{SVGAttr("d")}}` crea este enlace: {{SVGAttr("d")}}.
 - [`SVGElement`](https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs) enlaza a un elemento SVG en la Referencia SVG.
-- [`httpheader`](https://github.com/mdn/yari/tree/main/kumascript/macros/httpheader.ejs) enlaza a un [header de HTTP](/es/docs/Web/HTTP/Headers).
-- [`HTTPMethod`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs) enlaza a un [método de solicitud HTTP](/es/docs/Web/HTTP/Methods).
-- [`HTTPStatus`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs) enlaces a un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Status).
+- [`httpheader`](https://github.com/mdn/yari/tree/main/kumascript/macros/httpheader.ejs) enlaza a un [header de HTTP](/es/docs/Web/HTTP/Reference/Headers).
+- [`HTTPMethod`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs) enlaza a un [método de solicitud HTTP](/es/docs/Web/HTTP/Reference/Methods).
+- [`HTTPStatus`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs) enlaces a un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Reference/Status).
 
 ### Ayuda a la navegación para guías multipágina
 
@@ -50,8 +48,8 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 
 ### Ejemplos en vivo
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/tree/main/kumascript/macros/EmbedLiveSample.ejs) te permite insertar la salida de un ejemplo de código en una página, como se describe en [Ejemplos en vivo](/es/docs/MDN/Contribute/Structures/Live_samples).
-- [`LiveSampleLink`](https://github.com/mdn/yari/tree/main/kumascript/macros/LiveSampleLink.ejs) crea un vínculo a una página que contiene el resultado de un ejemplo de código en una página, como se describe en [Ejemplos en vivo](/es/docs/MDN/Contribute/Structures/Live_samples).
+- [`EmbedLiveSample`](https://github.com/mdn/yari/tree/main/kumascript/macros/EmbedLiveSample.ejs) te permite insertar la salida de un ejemplo de código en una página, como se describe en [Ejemplos en vivo](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
+- [`LiveSampleLink`](https://github.com/mdn/yari/tree/main/kumascript/macros/LiveSampleLink.ejs) crea un vínculo a una página que contiene el resultado de un ejemplo de código en una página, como se describe en [Ejemplos en vivo](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
 
 ## Generar la barra lateral
 
@@ -129,7 +127,7 @@ Estas macros se utilizan principalmente en la página [WebAPI](/es/docs/Web/API)
 Estas plantillas tienen la misma semántica que sus contrapartes en línea descritas anteriormente. Las plantillas se deben colocar directamente debajo del título de la página principal (o la ruta de navegación si está disponible) en la página de referencia. También se pueden utilizar para marcar una sección en una página.
 
 - [`Non-standard_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/tree/main/kumascript/macros/SeeCompatTable.ejs) se debe usar en páginas que documentan [características experimentales](/es/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental). Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
+- [`SeeCompatTable`](https://github.com/mdn/yari/tree/main/kumascript/macros/SeeCompatTable.ejs) se debe usar en páginas que documentan [características experimentales](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs) con parámetro: `\{{Deprecated_Header("gecko5")}}` {{Deprecated_Header("gecko5")}} No utilices el parámetro en ninguna área de diagnóstico del navegador (HTML, APIs, JS, CSS, …).
 - [`secureContext_header`](https://github.com/mdn/yari/tree/main/kumascript/macros/secureContext_header.ejs): `\{{SecureContext_Header}}` {{SecureContext_Header}}

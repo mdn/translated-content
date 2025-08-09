@@ -1,15 +1,28 @@
 ---
 title: Array.isArray()
+short-title: isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Array.isArray()`** 静的メソッドは、渡された値が {{jsxref("Array")}} かどうかを判断します。
 
-{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
+{{InteractiveExample("JavaScript デモ: Array.isArray()")}}
+
+```js interactive-example
+console.log(Array.isArray([1, 3, 5]));
+// 予想される結果: true
+
+console.log(Array.isArray("[]"));
+// 予想される結果: false
+
+console.log(Array.isArray(new Array(5)));
+// 予想される結果: true
+
+console.log(Array.isArray(new Int16Array([15, 33])));
+// 予想される結果: false
+```
 
 ## 構文
 
@@ -28,11 +41,14 @@ Array.isArray(value)
 
 ## 解説
 
-`Array.isArray()` は、渡された値が {{jsxref("Array")}} であるかどうかを調べます。値のプロトタイプチェーンを調べたり、 `Array` コンストラクターに頼っているわけではありません。配列リテラル構文または `Array` コンストラクターを使用して作成した値に対しては `true` を返します。このため、 `Array` コンストラクターの ID が異なり、[`instanceof Array`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) が失敗してしまうような領域を超えるオブジェクトでも安全に使用することができます。
+`Array.isArray()` は、渡された値が {{jsxref("Array")}} であるかどうかを調べます。これは、 [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子と同様に、 {{jsxref("Array/Array", "Array()")}} コンストラクターによって初期化されたプライベートフィールドに対して「ブランドチェック」を行います。
+
+これは、誤検知や誤検出を避けることができるため、 [`instanceof Array`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) のより堅牢な代替手段となります。
+
+- `Array.isArray()` は、プロトタイプチェーンに `Array.prototype` がある場合でも、実際の `Array` インスタンスではない値を拒否します。 `instanceof Array` はプロトタイプチェーンを調べるため、これらの値を受け入れます。
+- `Array.isArray()` は、別の領域で構築された `Array` オブジェクトを受け入れます。`instanceof Array` は、`Array` コンストラクターの ID が領域間で異なるため、これらのオブジェクトに対して `false` を返します。
 
 詳しくは、 ["Determining with absolute accuracy whether or not a JavaScript object is an array"](https://web.mit.edu/jwalden/www/isArray.html) を参照してください。
-
-また、 `Array.isArray()` は `Array.prototype` をプロトタイプチェーンに持つオブジェクトも拒否しますが、 `instanceof Array` が受け入れる実際の配列ではありません。
 
 ## 例
 
@@ -91,5 +107,6 @@ arr instanceof Array; // false
 ## 関連情報
 
 - [`Array.isArray` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.isArray` のポリフィル](https://www.npmjs.com/package/array.isarray)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

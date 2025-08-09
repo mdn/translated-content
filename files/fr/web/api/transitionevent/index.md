@@ -29,13 +29,13 @@ _Cette interface hérite également des propriétés de son parent [`Event`](/fr
 
 ## Évènements de type `TransitionEvent`
 
-- [`transitioncancel`](/fr/docs/Web/API/HTMLElement/transitioncancel_event)
+- [`transitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event)
   - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions) a été annulée.
-- [`transitionend`](/fr/docs/Web/API/HTMLElement/transitionend_event)
+- [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
   - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions) a terminé.
-- [`transitionrun`](/fr/docs/Web/API/HTMLElement/transitionrun_event)
+- [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event)
   - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions) est créée (c'est-à-dire ajoutée à l'ensemble des transitions lancées), sans qu'elle soit nécessairement démarrée.
-- [`transitionstart`](/fr/docs/Web/API/HTMLElement/transitionstart_event)
+- [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event)
   - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions) a démarré.
 
 ## Méthodes des instances

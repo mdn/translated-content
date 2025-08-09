@@ -3,11 +3,9 @@ title: CSS Container Queries
 slug: Web/CSS/CSS_containment/Container_queries
 ---
 
-{{CSSRef}}
+[CSS Containment](/es/docs/Web/CSS/CSS_containment) proporciona una nueva forma para aislar secciones de una página e indicarle al navegador que estas secciones son independientes del resto de la página en términos de estilos y disposición (_layout_).
 
-[CSS Containment](/es/docs/Web/CSS/CSS_Containment) proporciona una nueva forma para aislar secciones de una página e indicarle al navegador que estas secciones son independientes del resto de la página en términos de estilos y disposición (_layout_).
-
-Si estás creando un [diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design), a menudo usas [_media queries_](/es/docs/Web/CSS/Media_Queries) para cambiar la disposición de la página con referencia al {{Glossary("viewport")}}.
+Si estás creando un [diseño responsivo](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), a menudo usas [_media queries_](/es/docs/Web/CSS/CSS_media_queries) para cambiar la disposición de la página con referencia al {{Glossary("viewport")}}.
 Es bastante común agrupar elementos HTML dentro de componentes reutilizables que tienen una determinada disposición dependiendo del espacio disponible en la página.
 Es posible que el espacio disponible no solo dependa del tamaño del _viewport_, pues también puede depender del contexto donde el componente se muestra.
 
@@ -24,9 +22,9 @@ Para usar container queries, necesitas declarar un **containment context** en un
 Para hacer esto, usa la propiedad {{Cssxref("container-type")}} con los valores de `size`, `inline-size`, o `normal`.
 Estos valores tienen los siguientes efectos:
 
-- `size`: La consulta toma como referencia las dimensiones de [bloque y en línea](/es/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) del contenedor.
+- `size`: La consulta toma como referencia las dimensiones de [bloque y en línea](/es/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) del contenedor.
   Aplica contención de disposición, estilo y tamaño al contenedor.
-- `inline-size`: La consulta se basa únicamente en la dimensión [en línea](/es/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts#block_and_inline_dimensions) del contenedor.
+- `inline-size`: La consulta se basa únicamente en la dimensión [en línea](/es/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) del contenedor.
   Aplica contención de disposición, estilo y tamaño en línea al contenedor.
 - `normal`: El elemento no es un _query container_ para consultas de tamaño, pero se sigue comportando como un _query container_ para consultas de estilos de contenedor (_container style queries_).
 
@@ -50,7 +48,7 @@ Puedes crear un _containment context_ en el contenedor `div` al usar la propieda
 }
 ```
 
-Una vez que el _containment context_ es creado, puedes utilizar la [regla _at_](/es/docs/Web/CSS/At-rule) {{cssxref("@container")}} para escribir una _container query_.
+Una vez que el _containment context_ es creado, puedes utilizar la [regla _at_](/es/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@container")}} para escribir una _container query_.
 La _query_ en el siguiente ejemplo aplicará ciertos estilos a los elementos según el tamaño del elemento padre más cercano con un _containment context_.
 Específicamente, esta _query_ aumentará el tamaño de fuente del título de la carta si el contenedor es más ancho que `700px`:
 
@@ -162,7 +160,7 @@ Si deseas utilizar una disposición de una sola columna en dispositivos con un _
 
 ## Véase también
 
-- [Media queries](/es/docs/Web/CSS/Media_Queries)
+- [Media queries](/es/docs/Web/CSS/CSS_media_queries)
 - La regla _at_ {{Cssxref("@container")}} de CSS
 - La propiedad {{Cssxref("contain")}} de CSS
 - La propiedad atajo {{Cssxref("container")}} de CSS

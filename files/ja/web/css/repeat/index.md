@@ -2,14 +2,57 @@
 title: repeat()
 slug: Web/CSS/repeat
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
-{{CSSRef}}
+**`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、[トラックリスト](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)内での部分的な繰り返しを表し、繰り返しパターンを示す多数の列や行を、よりコンパクトな形式で記述することができます。
 
-**`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、[トラックリスト](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)内での部分的な繰り返しを表し、繰り返しパターンを示す多数の列や行を、よりコンパクトな形式で記述することができます。
+{{InteractiveExample("CSS デモ: repeat()")}}
 
-{{EmbedInteractiveExample("pages/css/function-repeat.html")}}
+```css interactive-example-choice
+grid-template-columns: repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(2, 20px 1fr);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(auto-fill, 40px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 この関数は CSS グリッドのプロパティである {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} の中で使うことができます。
 
@@ -106,7 +149,6 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 - `auto-fill`
   - : グリッドコンテナーが関連する軸に、定義されたまたは最大の幅を持っている場合、繰り返しの数は、グリッドコンテナーをオーバーフローさせない最大の正の数になります。各トラックは定義されているならば、最大トラック幅を調整する関数（`grid-template-rows` または `grid-template-columns` を定義するために使用されるそれぞれ独立した値）として扱われます。それ以外の場合は、最小トラック幅を調整する関数として扱い、グリッドギャップを考慮に入れます。何回繰り返してもオーバーフローしてしまう場合は、繰り返しを 1 とする。そうでなければ、グリッドコンテナーが関連する軸に、定義された最小の寸法をもっている場合、繰り返しの数は最小の要件を満たす可能性がある最小の正の整数になります。その他の場合は、指定されたトラックリストは `1` 回のみ繰り返します。
 - `auto-fit`
-
   - : `auto-fill` と同様に動作しますが、グリッドアイテムを配置した後、空の繰り返しトラックが折りたたまれる点が異なります。空のトラックとは、フロー内のグリッドアイテムが配置されていない、またはそれをまたいで配置されているものがないトラックのことです。（これは、すべてのトラックが空の場合、すべてのトラックが折りたたまれる結果になる可能性があります。）
 
     折りたたまれたトラックは、`0px`の単一の固定されたトラックサイジング関数を持つものとして扱われ、その両側の溝は折りたたまれます。
@@ -124,7 +166,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 #### HTML
 
-```html
+```html live-sample___specifying_grid_columns_using_repeat
 <div id="container">
   <div>このアイテムの幅は 50 ピクセルです。</div>
   <div>幅が自由なアイテムです。</div>
@@ -136,7 +178,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 #### CSS
 
-```css
+```css live-sample___specifying_grid_columns_using_repeat
 #container {
   display: grid;
   grid-template-columns: repeat(2, 50px 1fr) 100px;
@@ -156,7 +198,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 #### 結果
 
-{{EmbedLiveSample("repeat_を使用したグリッド列の指定", "100%", 200)}}
+{{EmbedLiveSample("Specifying_grid_columns_using_repeat", "100%", 200)}}
 
 ## 仕様書
 
@@ -168,6 +210,12 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- グリッドレイアウトガイド: [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- グリッドレイアウトガイド: [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
+- {{cssxref("grid-template")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-flow")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)

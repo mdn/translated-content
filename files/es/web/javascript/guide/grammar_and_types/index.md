@@ -298,7 +298,6 @@ console.log(MY_ARRAY); // registra ['HTML','CSS','JAVASCRIPT'];
 El último estándar ECMAScript define ocho tipos de datos:
 
 - Siete tipos de datos que son {{Glossary("Primitive", "primitivos")}}:
-
   1. {{Glossary("Boolean", "Booleano")}}. `true` y `false`.
   2. {{Glossary("null")}}. Una palabra clave especial que denota un valor nulo. (Dado que JavaScript distingue entre mayúsculas y minúsculas, `null` no es lo mismo que `Null`, `NULL` o cualquier otra variante).
   3. {{Glossary("undefined")}}. Una propiedad de alto nivel cuyo valor no está definido.
@@ -497,7 +496,8 @@ Por ejemplo:
 
 Un objeto literal es una lista de cero o más pares de nombres de propiedad y valores asociados de un objeto, entre llaves (`{}`).
 
-> **Advertencia:** **¡No uses un objeto literal al comienzo de una declaración!** Esto dará lugar a un error (o no se comportará como esperabas), porque la `{` se interpretará como el comienzo de un bloque.
+> [!WARNING]
+> **¡No uses un objeto literal al comienzo de una declaración!** Esto dará lugar a un error (o no se comportará como esperabas), porque la `{` se interpretará como el comienzo de un bloque.
 
 El siguiente es un ejemplo de un objeto literal. El primer elemento del objeto `car` define una propiedad, `myCar`, y le asigna una nueva cadena, "`Saturn`"; al segundo elemento, la propiedad `getCar`, se le asigna inmediatamente el resultado de invocar a la función `(carTypes("Honda"));` el tercer elemento, la propiedad `special`, utiliza una variable (`sales`) existente.
 

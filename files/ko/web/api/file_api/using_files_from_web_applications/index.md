@@ -399,7 +399,6 @@ function handleFiles(files) {
 1. 새로운 순서가 없는 리스트({{HTMLElement("ul")}}) 엘리먼트가 생성됩니다.
 2. 새로운 리스트 엘리먼트가 {{DOMxRef("Node.appendChild()")}} 메소드 호출에 의해 {{HTMLElement("div")}} 블록으로 삽입됩니다.
 3. `files`에 의해 나타나는 {{DOMxRef("FileList")}} 내의 각 {{DOMxRef("File")}}에 대해 :
-
    1. 새로운 리스트 항목({{HTMLElement("li")}}) 엘리먼트를 생성하고 리스트로 삽입합니다.
    2. 새로운 이미지({{HTMLElement("img")}}) 엘리먼트를 생성합니다.
    3. {{DOMxRef("window.URL.createObjectURL()")}}을 사용하여 이미지의 소스를 파일을 나타내는 새로운 객체 URL로 설정해 blob URL을 생성합니다.
@@ -582,6 +581,6 @@ window.URL.revokeObjectURL(obj_url);
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileList")}}
 - {{DOMxRef("FileReader")}}
-- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
+- [Using XMLHttpRequest](/en-US/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using the DOM File API in chrome code](/en-US/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - {{DOMxRef("XMLHttpRequest")}}

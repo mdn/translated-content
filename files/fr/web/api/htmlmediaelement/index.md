@@ -14,7 +14,6 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : est une {{domxref("AudioTrackList")}} qui liste les objets {{domxref("AudioTrack")}} (_pistes audio_) contenus dans l'élément.
 - {{domxref("HTMLMediaElement.autoplay")}}
-
   - : est un {{jsxref("Boolean")}} qui reflète l'attribut HTML [`autoplay`](/fr/docs/Web/HTML/Element/video#autoplay), indiquant si la lecture doit commencer automatiquement dès que suffisamment de médias sont disponibles pour le faire sans interruption.
 
     > [!NOTE]
@@ -29,7 +28,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
   - : renvoie une {{domxref("DOMTokenList")}} qui aide l'agent utilisateur à sélectionner les contrôles à afficher sur l'élément du média chaque fois que l'agent utilisateur affiche son propre jeu de contrôles. La `DOMTokenList` prend une ou plusieurs des trois valeurs possibles : `nodownload`, `nofullscreen` et `noremoteplayback`.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) indiquant les [règlages CORS](/fr/docs/Web/HTML/Reglages_des_attributs_CORS) pour cet élément de média.
+  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) indiquant les [règlages CORS](/fr/docs/Web/HTML/Attributes/crossorigin) pour cet élément de média.
 - {{domxref("HTMLMediaElement.currentSrc")}}{{readonlyinline}}
   - : Renvoie une {{domxref("DOMString")}} (_chaîne de caractères_) avec l'URL absolue de la ressource de média choisie.
 - {{domxref("HTMLMediaElement.currentTime")}}
@@ -57,10 +56,9 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}
   - : est un `double` qui donne accès à l'heure de fin du fragment si l'élément média a un fragment URI pour `currentSrc`, sinon il est égal à la durée du média.
 - {{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}
-
   - : est un `unsigned long` qui indique le nombre d'échantillons qui seront renvoyés dans le "framebuffer" de chaque évènement `MozAudioAvailable`. Ce nombre est un total pour tous les canaux, et par défaut est défini par le nombre de canaux \* 1024 (c'est-à-dire, 2 canaux \* 1024 échantillons = total 2048).
 
-    La propriété `mozFrameBufferLength` peut être définie à une nouvelle valeur pour une latence plus faible, de plus grandes quantités de données, etc. La taille donnée _doit_ être un nombre compris entre 512 et 16384. L'utilisation d'autres tailles entraîne la levée d'une exception. Le meilleur moment pour définir une nouvelle longueur est après le lancement de l'évènement [loadedmetadata](/fr/docs/Web/Events/loadedmetadata), lorsque l'information audio est connue, mais avant que l'audio ait commencé ou que les événements `MozAudioAvailable` aient commencé à se déclencher.
+    La propriété `mozFrameBufferLength` peut être définie à une nouvelle valeur pour une latence plus faible, de plus grandes quantités de données, etc. La taille donnée _doit_ être un nombre compris entre 512 et 16384. L'utilisation d'autres tailles entraîne la levée d'une exception. Le meilleur moment pour définir une nouvelle longueur est après le lancement de l'évènement [loadedmetadata](/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event), lorsque l'information audio est connue, mais avant que l'audio ait commencé ou que les événements `MozAudioAvailable` aient commencé à se déclencher.
 
 - {{domxref("HTMLMediaElement.mozSampleRate")}}{{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : renvoie un `double` représentant le nombre d'échantillons par seconde. Par exemple, 44100 échantillons par seconde correspondent à la fréquence d'échantillonnage utilisée par les CD audio.
@@ -93,7 +91,6 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.textTracks")}}{{readonlyinline}}
   - : Renvoie la liste d'objets {{domxref("TextTrack")}} (_piste de texte_) contenus dans l'élément.
 - {{domxref("HTMLMediaElement.videoTracks")}}{{readonlyinline}}
-
   - : Renvoie la liste d'objets {{domxref("VideoTrack")}} (_pistes vidéo_) contenus dans l'élément.
 
     > [!NOTE]
@@ -144,7 +141,7 @@ _Cette interface hérite aussi des méthodes de ses ancêtres {{domxref("HTMLEle
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}
-  - : Renvoie un {{jsxref('Object')}}, qui contient des propriétés représentant les métadonnées de la ressource média en cours de lecture, comme paires `{key: value}`. Une copie distincte des données est renvoyée chaque fois que la méthode est appelée. Cette méthode doit être appelée après le déclenchement de l'évènement [loadedmetadata](/fr/docs/Web/Events/loadedmetadata).
+  - : Renvoie un {{jsxref('Object')}}, qui contient des propriétés représentant les métadonnées de la ressource média en cours de lecture, comme paires `{key: value}`. Une copie distincte des données est renvoyée chaque fois que la méthode est appelée. Cette méthode doit être appelée après le déclenchement de l'évènement [loadedmetadata](/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event).
 - {{domxref("HTMLMediaElement.pause()")}}
   - : met en pause la lecture du média.
 - {{domxref("HTMLMediaElement.play()")}}
@@ -174,12 +171,10 @@ Ces méthodes sont obsolètes et ne doivent plus être utilisées, même si un n
 ## Voir aussi
 
 - References
-
   - Les éléments HTML {{HTMLElement("video")}} et {{HTMLElement("audio")}}.
   - Les interfaces {{domxref("HTMLVideoElement")}} et {{domxref("HTMLAudioElement")}}, dérivées de `HTMLMediaElement`.
 
 - Articles
-
-  - [Contenu audio et video](/fr/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video)
-  - [Formats pris en charge par `audio` et `video`](/fr/docs/Web/HTML/Formats_pour_audio_video)
+  - [Contenu audio et video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - [Formats pris en charge par `audio` et `video`](/fr/docs/Web/Media/Formats)
   - [Web Audio API](/fr/docs/Web/API/Web_Audio_API)

@@ -28,10 +28,10 @@ El término "en cascada" se refiere a las reglas que determinan cómo los select
 
 ### Conocimiento general
 
-- [Aprende CSS](/es/Learn/CSS)
+- [Aprende CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)
 - [CSS](https://es.wikipedia.org/wiki/CSS) en Wikipedia
 
 ### Referencia Técnica
 
 - [Documentación sobre CSS en MDN](/es/docs/Web/CSS)
-- [Trabajos recientes del Grupo de Trabajo de CSS](http://www.w3.org/Style/CSS/current-work)
+- [Trabajos recientes del Grupo de Trabajo de CSS](https://www.w3.org/Style/CSS/current-work)

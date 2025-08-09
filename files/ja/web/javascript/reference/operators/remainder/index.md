@@ -9,7 +9,21 @@ l10n:
 
 剰余演算子 (`%`) は、1 つ目のオペランドが 2 つ目のオペランドで除算されたときの余りである剰余を返します。これは常に被除数の符号を取ります。
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Remainder operator")}}
+
+```js interactive-example
+console.log(13 % 5);
+// Expected output: 3
+
+console.log(-13 % 5);
+// Expected output: -3
+
+console.log(4 % 2);
+// Expected output: 0
+
+console.log(-4 % 2);
+// Expected output: -0
+```
 
 ## 構文
 
@@ -19,7 +33,7 @@ x % y
 
 ## 解説
 
-`%` 演算子のオペランドは、数値型と[長整数型](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 つの型ででオーバーロードされています。 これは、まず[両方のオペランドを数値に変換し](/ja/docs/Web/JavaScript/Data_structures#数値変換)、それらの型を調べます。両方のオペランドが長整数型になった場合は長整数型の剰余を実行し、そうでない場合は数値型の剰余を実行します。一方のオペランドが長整数型になり、他方が数値型になった場合は {{jsxref("TypeError")}} が発生します。
+`%` 演算子のオペランドは、数値型と[長整数型](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 つの型ででオーバーロードされています。 これは、まず[両方のオペランドを数値に変換し](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)、それらの型を調べます。両方のオペランドが長整数型になった場合は長整数型の剰余を実行し、そうでない場合は数値型の剰余を実行します。一方のオペランドが長整数型になり、他方が数値型になった場合は {{jsxref("TypeError")}} が発生します。
 
 `n % d` の演算では、`n` を被除数、`d` を除数と呼びます。この演算処理は、オペランドのいずれかが `NaN` であるか、 `n` が ±無限大であるか、または `d` が ±0 である場合に `NaN` を返します。
 

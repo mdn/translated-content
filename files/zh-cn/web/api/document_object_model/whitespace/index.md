@@ -90,7 +90,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 - 一个行内元素（`<span>`，包含一个空格和一个单词“World!”）。
 - 另外一个文本节点（只包含制表符和空格）。
 
-正因为如此，它建立了所谓的[行内格式化上下文](/zh-CN/docs/Web/CSS/Inline_formatting_context)。这是浏览器引擎可能使用的布局渲染上下文之一。
+正因为如此，它建立了所谓的[行内格式化上下文](/zh-CN/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)。这是浏览器引擎可能使用的布局渲染上下文之一。
 
 在这个上下文中，空白符的处理可以总结如下：
 
@@ -189,7 +189,7 @@ slug: Web/API/Document_Object_Model/Whitespace
    ```html
    <block>⏎⇥</block>
    <block>◦◦Hello◦◦</block>
-   <block>⏎◦◦◦</block>
+   <block>⏎⏎◦◦◦</block>
    <block>◦◦World!◦◦</block>
    <block>◦◦⏎</block>
    ```
@@ -278,7 +278,7 @@ Firefox 开发者工具 HTML 检查器将突出显示文本节点，并准确显
 
 有一些方法来解决这个问题：
 
-使用[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来创建项目的水平列表，而不是尝试 `inline-block` 解决方案。这可以为你处理一切，而且绝对是首选的解决方案：
+使用[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来创建项目的水平列表，而不是尝试 `inline-block` 解决方案。这可以为你处理一切，而且绝对是首选的解决方案：
 
 ```css
 ul {

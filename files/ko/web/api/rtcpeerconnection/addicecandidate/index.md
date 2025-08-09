@@ -48,9 +48,7 @@ ICE candidate 추가 시도 중 에러가 발생하면, 이 메소드에서 반�
 - `InvalidStateError`
   - : 현재 `RTCPeerConnection`은 어떠한 원격 유저와도 연결이 되어있지 않습니다. {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} 값이 `null`입니다.
 - `OperationError`
-
   - : 이 에러는 여러가지 이유 때문에 발생합니다:\* 지정된 {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} 값이 non-`null`이고, {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}}안에 존재하는 어떠한 미디어 description의 미디어 ID와도 일치하지 않음
-
     - 지정된 {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}}의 값이 원격 설명 (description)에 포함된 미디어의 숫자와 같거나 큼
     - 지정된 {{domxref("RTCIceCandidate.usernameFragment", "ufrag")}}가 어떠한 원격 설명 (description) 안의 `ufrag` 필드와 일치하지 않음
     - {{domxref("RTCIceCandidate", "candidate")}} 문자열에 존재하는 하나 혹은 여러개의 값들이 올바르지 않거나, 파싱 될 수 없음
@@ -109,6 +107,6 @@ pc.addIceCandidate({ candidate: "" });
 
 - [WebRTC API](/ko/docs/Web/API/WebRTC_API)
 - [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Architecture)
+- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Protocols)
 - [WebRTC connectivity](/ko/docs/Web/API/WebRTC_API/Connectivity)
 - [Lifetime of a WebRTC session](/ko/docs/Web/API/WebRTC_API/Session_lifetime)

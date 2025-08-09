@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 El método **`filter()`** crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## Sintaxis
 
@@ -18,9 +27,7 @@ var newArray = arr.filter(callback(currentValue[, index[, array]])[, thisArg])
 ### Parámetros
 
 - `callback`
-
   - : Función que **comprueba cada elemento** del array para ver si cumple la condición (también llamada predicado). Retorna `true` si el elemento la cumple o en caso contrario retornará `false`. Acepta tres parámetros:
-
     - `currentValue`
       - : El elemento actual del array que está siendo procesado.
     - `index` {{optional_inline}}

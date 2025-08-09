@@ -3,9 +3,9 @@ title: Создание Canvas и рисование на нём
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 
-{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч")}}
 
-Это **1й шаг** из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код для этого урока по ссылке [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
+Это **1й шаг** из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код для этого урока по ссылке [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 
 Прежде чем мы сможем начать писать функциональные возможности игры, нам необходимо создать базовую структуру для рендеринга игры внутри. Это можно сделать с помощью HTML и элемента {{htmlelement ("canvas")}}.
 
@@ -108,6 +108,6 @@ ctx.closePath();
 
 ## Следующие шаги
 
-Сейчас мы создали базовый HTML и немного узнали о canvas, давайте на следующем шаге изучим, как [Двигать мяч в нашей игре](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Move_the_ball).
+Сейчас мы создали базовый HTML и немного узнали о canvas, давайте на следующем шаге изучим, как [Двигать мяч в нашей игре](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}

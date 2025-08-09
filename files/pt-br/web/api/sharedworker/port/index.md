@@ -26,7 +26,7 @@ var myWorker = new SharedWorker("worker.js");
 myWorker.port.start();
 ```
 
-Veja um exemplo completo [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/).)
+Veja um exemplo completo [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/).)
 
 ## Especificações
 

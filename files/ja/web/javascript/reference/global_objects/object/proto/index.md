@@ -10,7 +10,8 @@ l10n:
 > [!WARNING]
 > オブジェクトの `[[Prototype]]` を変更することは、現行の JavaScript エンジンがプロパティアクセスを最適化する性質上、どのブラウザーや JavaScript エンジンでも現在とても遅い処理となります。さらに、継承を変更することの効果は微妙で広範囲に及び、 `obj.__proto__ = ...` 文に費やされる時間に限らず、`[[Prototype]]` が変更されたオブジェクトにアクセスする**あらゆる**コードに及ぶ可能性があります。詳しくは [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes) で説明されています。
 
-> **警告:** `__proto__` を使用することは議論の余地があり、推奨されません。その存在と正確な動作は、ウェブの互換性を確実に保持するための古い機能として標準化されただけであり、セキュリティ上のいくつかの課題と足かせを表示しています。対応をよりよくするためには、 {{jsxref("Object.getPrototypeOf()")}}/{{jsxref("Reflect.getPrototypeOf()")}} や {{jsxref("Object.setPrototypeOf()")}}/{{jsxref("Reflect.setPrototypeOf()")}} を推奨します。
+> [!WARNING]
+> `__proto__` を使用することは議論の余地があり、推奨されません。その存在と正確な動作は、ウェブの互換性を確実に保持するための古い機能として標準化されただけであり、セキュリティ上のいくつかの課題と足かせを表示しています。対応をよりよくするためには、 {{jsxref("Object.getPrototypeOf()")}}/{{jsxref("Reflect.getPrototypeOf()")}} や {{jsxref("Object.setPrototypeOf()")}}/{{jsxref("Reflect.setPrototypeOf()")}} を推奨します。
 
 **`__proto__`** は {{jsxref("Object")}} のアクセサープロパティ (ゲッター関数およびセッター関数) で、アクセスされるオブジェクトの内部の `[[Prototype]]` (オブジェクトまたは {{jsxref("Operators/null", "null")}} のどちらか) を暴露します。
 
@@ -33,7 +34,7 @@ obj.__proto__
 
 ## 解説
 
-`__proto__` ゲッター関数はオブジェクトの内部の `[[Prototype]]` の値を外部に公開します。オブジェクトリテラルを使用して生成されたオブジェクトでは（[プロトタイプセッター](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#プロトタイプセッター)構文を使用しない限り）、この値は `Object.prototype` です。配列リテラルを使用して作成したオブジェクトの場合、この値は [`Array.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) です。関数の場合、この値は {{jsxref("Function", "Function.prototype")}} です。プロトタイプチェーンについては、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)で詳しく説明しています。
+`__proto__` ゲッター関数はオブジェクトの内部の `[[Prototype]]` の値を外部に公開します。オブジェクトリテラルを使用して生成されたオブジェクトでは（[プロトタイプセッター](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#プロトタイプセッター)構文を使用しない限り）、この値は `Object.prototype` です。配列リテラルを使用して作成したオブジェクトの場合、この値は [`Array.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) です。関数の場合、この値は {{jsxref("Function", "Function.prototype")}} です。プロトタイプチェーンについては、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)で詳しく説明しています。
 
 `__proto__` のセッターでオブジェクトの `[[Prototype]]` を変更することができます。与えられた値はオブジェクト、または {{jsxref("Operators/null", "null")}} である必要があります。他の値が与えられた場合は何もしません。
 

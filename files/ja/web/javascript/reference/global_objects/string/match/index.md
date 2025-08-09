@@ -9,7 +9,16 @@ l10n:
 
 **`match()`** は {{jsxref("String")}} 値のメソッドで、この文字列の[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に対する照合結果を受け取ります。
 
-{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.match()", "shorter")}}
+
+```js interactive-example
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+```
 
 ## 構文
 
@@ -20,7 +29,6 @@ match(regexp)
 ### 引数
 
 - `regexp`
-
   - : 正規表現オブジェクト、または [`Symbol.match`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) を持つ任意のオブジェクトです。
 
     `regexp` が `RegExp` 以外のオブジェクトであった場合、暗黙的に {{jsxref("RegExp")}} への変換が `new RegExp(regexp)` を使用して行われます。
@@ -83,7 +91,8 @@ console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **メモ:** {{jsxref("String.prototype.matchAll()")}} と[フラグを用いた高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)も参照してください。
+> [!NOTE]
+> {{jsxref("String.prototype.matchAll()")}} と[フラグを用いた高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)も参照してください。
 
 ### 名前付きキャプチャグループの使用
 

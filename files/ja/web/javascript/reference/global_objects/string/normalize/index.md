@@ -9,7 +9,29 @@ l10n:
 
 **`normalize()`** メソッドは、文字列の Unicode 正規化形式を返します。
 
-{{EmbedInteractiveExample("pages/js/string-normalize.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: String.normalize()", "taller")}}
+
+```js interactive-example
+const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";
+const name2 = "\u0041\u006d\u0065\u0301\u006c\u0069\u0065";
+
+console.log(`${name1}, ${name2}`);
+// Expected output: "Amélie, Amélie"
+console.log(name1 === name2);
+// Expected output: false
+console.log(name1.length === name2.length);
+// Expected output: false
+
+const name1NFC = name1.normalize("NFC");
+const name2NFC = name2.normalize("NFC");
+
+console.log(`${name1NFC}, ${name2NFC}`);
+// Expected output: "Amélie, Amélie"
+console.log(name1NFC === name2NFC);
+// Expected output: true
+console.log(name1NFC.length === name2NFC.length);
+// Expected output: true
+```
 
 ## 構文
 
@@ -21,11 +43,9 @@ normalize(form)
 ### 引数
 
 - `form` {{optional_inline}}
-
   - : Unicode 正規化形式を示す `"NFC"`, `"NFD"`, `"NFKC"`, `"NFKD"` のうちの一つです。省略されたり {{jsxref("undefined")}} であったりした場合は `"NFC"` が使われます。
 
     これらの値には以下の意味があります。
-
     - `"NFC"`
       - : 正規化形式 C。正準等価性によって分解され、再度合成される。
     - `"NFD"`

@@ -3,9 +3,7 @@ title: Monétisation du jeu
 slug: Games/Publishing_games/Game_monetization
 ---
 
-{{GamesSidebar}}
-
-Lorsque vous avez passé votre temps à créer un jeu, à le [distribuer](/fr/docs/Games/Techniques/Publishing_games/Game_distribution) et à en faire la [promotion](/fr/docs/Games/Techniques/Publishing_games/Game_promotion), vous devriez envisager d'en gagner de l'argent. Si votre travail est une entreprise sérieuse sur la voie de devenir un développeur de jeux indépendant capable de gagner sa vie, lisez la suite et voyez quelles sont vos options. La technologie est suffisamment mature; maintenant, il s'agit simplement de choisir la bonne approche.
+Lorsque vous avez passé votre temps à créer un jeu, à le [distribuer](/fr/docs/Games/Publishing_games/Game_distribution) et à en faire la [promotion](/fr/docs/Games/Publishing_games/Game_promotion), vous devriez envisager d'en gagner de l'argent. Si votre travail est une entreprise sérieuse sur la voie de devenir un développeur de jeux indépendant capable de gagner sa vie, lisez la suite et voyez quelles sont vos options. La technologie est suffisamment mature; maintenant, il s'agit simplement de choisir la bonne approche.
 
 ## Jeux payants
 
@@ -17,7 +15,7 @@ Le prix que vous facturez pour votre jeu dépend du marché, de la qualité de v
 
 Au lieu de faire payer votre jeu à l'avance, vous pouvre proposer un jeu gratuit avec des achats intégrés (IAPs). Dans ce cas, le jeu peut être acquis sans dépenser un centime — donnez le jeu aux joueurs, mais offrez de la monnaie du jeu, des bonus ou des avantages en argent réel. Des exemples spécifiques peuvent inclure des niveaux bonus, de meilleurs armes ou sorts, ou le remplissage de l'énergie nécessaire pour jouer. Concevoir un bon système IAP est un art en soi.
 
-N'oubliez pas que vous avez besoin de milliers de téléchargements de votre jeu pour rendre les IAP efficaces — seule une petite fraction des joueurs paiera réellement pour les IAP. Comment petit? Cela varie, mais environ une personne sur mille est dans la moyenne. Plus il y a de personnes qui jouent à votre jeu, plus les chances que quelqu'un paie est élevée, donc vos revenus dépendent fortement de vos activités de [promotion](/fr/docs/Games/Techniques/Publishing_games/Game_promotion).
+N'oubliez pas que vous avez besoin de milliers de téléchargements de votre jeu pour rendre les IAP efficaces — seule une petite fraction des joueurs paiera réellement pour les IAP. Comment petit? Cela varie, mais environ une personne sur mille est dans la moyenne. Plus il y a de personnes qui jouent à votre jeu, plus les chances que quelqu'un paie est élevée, donc vos revenus dépendent fortement de vos activités de [promotion](/fr/docs/Games/Publishing_games/Game_promotion).
 
 ### Freemium
 
@@ -29,7 +27,7 @@ Les Add-ons et les DLCs sont un bon moyen de fournir une valeur supplémentaire 
 
 ## Advertisements
 
-Au lieu de vendre activement les jeux, vous pouvez également essayer de vous procurer un revenu passif — afficher des publicités et s'appuyer sur des activités précédentes liées à la [promotion](/fr/docs/Games/Techniques/Publishing_games/Game_promotion) de votre jeu peut en bénéficier, mais votre jeu doit crée une dépendance, ce qui n'est pas aussi facile qu'il y paraît. Vous devez encore le planifier, et à un moment donné vous aurez également besoin d'un peu de chance. Si votre jeu devient viral et que les gens commencent à le partager, vous pouvez obtenir beaucoup de téléchargements et d'argent grâce aux publicités.
+Au lieu de vendre activement les jeux, vous pouvez également essayer de vous procurer un revenu passif — afficher des publicités et s'appuyer sur des activités précédentes liées à la [promotion](/fr/docs/Games/Publishing_games/Game_promotion) de votre jeu peut en bénéficier, mais votre jeu doit crée une dépendance, ce qui n'est pas aussi facile qu'il y paraît. Vous devez encore le planifier, et à un moment donné vous aurez également besoin d'un peu de chance. Si votre jeu devient viral et que les gens commencent à le partager, vous pouvez obtenir beaucoup de téléchargements et d'argent grâce aux publicités.
 
 De nombreuses entreprises proposent des systèmes de publicité - vous vous inscrivez et leur permettez de diffuser des publicités en échange d'un pourcentage des revenus. On dit que Google AdSense est le plus efficace, mais il n'est pas conçu pour les jeux et c'est une très mauvaise pratique de l'utiliser à cette fin. Au lieu de risquer de fermer votre compte et de bloquer tout l'argent, essayez d'utiliser les portails habituels ciblés par gamedev comme [LeadBolt](https://www.leadbolt.com/). Ils offrent des systèmes faciles à mettre en œuvre pour afficher les publicités dans vos jeux et partager les gains avec vous.
 
@@ -75,7 +73,7 @@ Si vous êtes graphiste, vous pouvez vendre les actifs des jeux que vous avez cr
 
 ### Rédaction d'articles et de tutoriels
 
-Il est possible d'écrire des articles sur vos jeux et même d'être payé pour eux. La [promotion](/fr/docs/Games/Techniques/Publishing_games/Game_promotion) et la monétisation de jeux en même temps sont gagnant-gagnant, et si vous n'en abusez pas avec trop de publicité, les lecteurs apprécieront de les lire et d'apprendre une chose ou deux. Si vous vous concentrez d'abord sur le partage des connaissances et que vous utilisez vos jeux comme des exemples, cela devrait être correct. Consultez [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) ou des sites Web similaires pour des opportunités d'écriture.
+Il est possible d'écrire des articles sur vos jeux et même d'être payé pour eux. La [promotion](/fr/docs/Games/Publishing_games/Game_promotion) et la monétisation de jeux en même temps sont gagnant-gagnant, et si vous n'en abusez pas avec trop de publicité, les lecteurs apprécieront de les lire et d'apprendre une chose ou deux. Si vous vous concentrez d'abord sur le partage des connaissances et que vous utilisez vos jeux comme des exemples, cela devrait être correct. Consultez [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) ou des sites Web similaires pour des opportunités d'écriture.
 
 ### Marchandise
 

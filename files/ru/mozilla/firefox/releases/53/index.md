@@ -3,8 +3,6 @@ title: Firefox 53 для разработчиков
 slug: Mozilla/Firefox/Releases/53
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 53 был выпущен 19 апреля 2017. В этой статье перечислены основные изменения, которые полезны не только для веб-разработчиков, но и разработчиков Firefox и Gecko, а также разработчикам дополнений.
 
 ## Изменения для веб-разработчиков
@@ -20,7 +18,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 #### Новые возможности
 
-- В `mask-*`свойствах обыкновенного письма (см [CSS маски](/ru/docs/Web/CSS/CSS_Masks) ) все поддерживается и доступны по умолчанию (см [Firefox bug 1251161](https://bugzil.la/1251161)).
+- В `mask-*`свойствах обыкновенного письма (см [CSS маски](/ru/docs/Web/CSS/CSS_masking) ) все поддерживается и доступны по умолчанию (см [Firefox bug 1251161](https://bugzil.la/1251161)).
 - Добавлено {{cssxref("caret-color")}} Свойство ([Firefox bug 1063162](https://bugzil.la/1063162)).
 - Реализована {{cssxref("place-items")}} / {{cssxref("place-self")}} / {{cssxref("place-content")}} Shorthands ([Firefox bug 1319958](https://bugzil.la/1319958) ).
 - Добавлено `flow-root` значение {{cssxref ( "display")}} свойства ([Firefox bug 1322191](https://bugzil.la/1322191)).
@@ -41,8 +39,8 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 - ECMAScript 2015 семантика для {{jsxref ( "Function.name")}} свойства были реализованы. Это включает в себя выведенные имена на анонимные функции ( `var foo = function() {}`) ([Firefox bug 883377](https://bugzil.la/883377)).
 - ECMAScript 2015 семантика для закрытия итераторы были реализованы. Это влияет на [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of)цикл, например ([Firefox bug 1147371](https://bugzil.la/1147371)).
-- [Шаблон Буквальное предложение Revision](https://tc39.github.io/proposal-template-literal-revision/) , что [снимает ограничения избежать последовательностей на помеченных литералах шаблона](/ru/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals_and_escape_sequences) было реализовано ([Firefox bug 1317375](https://bugzil.la/1317375)).
-- Нестандартные [Струнные дженерики](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#String_generic_methods) теперь представьте предупреждение устаревания в консоли. Не используйте их больше, они будут удалены в будущем! ([Firefox bug 1319926](https://bugzil.la/1319926)).
+- [Шаблон Буквальное предложение Revision](https://tc39.github.io/proposal-template-literal-revision/) , что [снимает ограничения избежать последовательностей на помеченных литералах шаблона](/ru/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals_and_escape_sequences) было реализовано ([Firefox bug 1317375](https://bugzil.la/1317375)).
+- Нестандартные [Струнные дженерики](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#string_generic_methods) теперь представьте предупреждение устаревания в консоли. Не используйте их больше, они будут удалены в будущем! ([Firefox bug 1319926](https://bugzil.la/1319926)).
 - Статическое `length` свойство {{jsxref ( "TypedArray")}} объектов было изменено с 3 до 0 в соответствии с ES2016 ([Firefox bug 1317306](https://bugzil.la/1317306)).
 - {{jsxref ( "SharedArrayBuffer")}} теперь может быть использован в {{jsxref ( "DataView")}} объекты ([Firefox bug 1246597](https://bugzil.la/1246597)).
 - В более ранних версиях спецификации, {{jsxref ( "SharedArrayBuffer")}} объектов необходимо явно переданы в ходе [структурированного клонирования](/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) . В новой спецификации они не являются [переводными объекты](/ru/docs/Web/API/Transferable) больше , и , следовательно , не должны быть в списке передачи. Новое поведение используется для представления консоли предупреждения только, но теперь будет выдавать ошибку ([Firefox bug 1302037](https://bugzil.la/1302037)).
@@ -51,11 +49,11 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### Мероприятия
 
-- CSS Transitions: The {{event("transitionstart")}}, {{event ( "transitionrun")}} и {{event ( "transitioncancel")}} события были реализованы (см [Firefox bug 1264125](https://bugzil.la/1264125) и [Firefox bug 1287983](https://bugzil.la/1287983)).
+- CSS Transitions: реализованы события [`transitionstart`](/ru/docs/Web/API/Element/transitionstart_event), [`transitionrun`](/ru/docs/Web/API/Element/transitionrun_event) и [`transitioncancel`](/ru/docs/Web/API/Element/transitioncancel_event) ([Firefox bug 1264125](https://bugzil.la/1264125) и [Firefox bug 1287983](https://bugzil.la/1287983)).
 - {{Domxref ( "CompositionEvent.CompositionEvent", "CompositionEvent")}} Конструктор был реализован (см [Firefox bug 1002256](https://bugzil.la/1002256)).
 - {{Domxref ( "MouseEvent.x")}} и {{domxref ( "MouseEvent.y")}} псевдонимами {{domxref ( "MouseEvent.clientX")}} / {{domxref ( "MouseEvent.clientY" )}} были реализованы (см [Firefox bug 424390](https://bugzil.la/424390)).
-- {{Event ( "auxclick")}} событие и соответствующий {{domxref ( "GlobalEventHandlers.onauxclick")}} был реализован обработчик (см [Firefox bug 1304044](https://bugzil.la/1304044)).
-- {{Event ( "transitioncancel")}} событие теперь уволен после [перехода](/ru/docs/Web/CSS/CSS_Transitions) отменяется. См {{domxref ( "GlobalEventHandlers.ontransitioncancel")}} для получения более подробной информации и пример ([Firefox bug 1264125](https://bugzil.la/1264125)).
+- реализованы событие [`auxclick`](/ru/docs/Web/API/Element/auxclick_event) и соответствующий обработчик {{domxref ( "GlobalEventHandlers.onauxclick")}} ([Firefox bug 1304044](https://bugzil.la/1304044)).
+- событие [`transitioncancel`](/ru/docs/Web/API/Element/transitioncancel_event) теперь возникает после отмены [перехода](/ru/docs/Web/CSS/CSS_Transitions).
 
 ### DOM
 
@@ -103,7 +101,6 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 ### HTTP / Networking
 
 - Gecko теперь имеет прив доступный в , `about:config` чтобы позволить пользователям устанавливать их по умолчанию {{HTTPHeader ( "Referrer-политики")}} - ([Firefox bug 1304623](https://bugzil.la/1304623)). Возможные значения: `network.http.referer.userControlPolicy`
-
   - 0 - `no-referrer`
   - 1 - `same-origin`
   - 2 - `strict-origin-when-cross-origin`
@@ -149,7 +146,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 Усовершенствованные API:
 
 - [`storage.sync`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync)
-- `page_action`, `browser_action`, `password`, `tab` [Типы контекстов](/en-US/Add-ons/WebExtensions/API/contextMenus/ContextType) в[`contextMenus`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus)
+- `page_action`, `browser_action`, `password`, `tab` [Типы контекстов](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) в[`contextMenus`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus)
 - [`webRequest.onBeforeRequest`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) теперь поддерживает `requestBody`
 - [`tabs.insertCSS`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)теперь поддерживает `cssOrigin`, что позволяет вставлять таблицы стилей пользователя.
 

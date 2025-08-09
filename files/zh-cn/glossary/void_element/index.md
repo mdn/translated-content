@@ -2,7 +2,7 @@
 title: 空元素
 slug: Glossary/Void_element
 l10n:
-  sourceCommit: 73d8e953dbd0cf882a47419766f1a76b7332dd40
+  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
 {{GlossarySidebar}}
@@ -49,4 +49,4 @@ _HTML 中不存在自闭合标签（`<tag />`）。_
 
 ## 参见
 
-- [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements", "可替换元素")}}

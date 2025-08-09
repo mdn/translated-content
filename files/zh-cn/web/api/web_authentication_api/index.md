@@ -29,20 +29,15 @@ Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cry
 
 一个典型的注册过程包括如图 1 所示的六个步骤，这些在稍后会进一步描述。这是一个注册过程的概览，所需数据已经被简化。所有的必填字段、可选字段及它们在创建注册请求中的含义可以在 {{domxref("PublicKeyCredentialCreationOptions")}} 字典中找到。类似地，完整的响应字段可以在 {{domxref("PublicKeyCredential")}} 接口（其中 {{domxref("PublicKeyCredential.response")}} 是 {{domxref("AuthenticatorAttestationResponse")}} 的接口）中找到。请注意大多数编写程序的 JavaScript 程序员只会关心第 1 步和第 5 步，分别对应 create() 函数的调用和返回。但是，了解步骤 2 到 4 对于理解在浏览器和认证器中发生了什么以及返回数据的含义至关重要。
 
-![WebAuthn registration component and dataflow diagram](webauthn_registration_r4.png)
-
-_图 1 - WebAuthn 注册流程及与各个步骤相关的重要数据。_
-
 注册步骤如下：
 
 1. **应用程序请求注册** - 应用程序发出注册请求。这个请求的协议和格式不在 WebAuthn 标准的范围内。
-2. **服务器发送挑战、用户信息和依赖方信息** - 服务器将挑战、用户信息和依赖方信息发送回应用程序。在这里，协议和格式不在 WebAuthn 标准的范围内。通常，这可以是基于 HTTPS 连接的 [REST](/zh-CN/docs/Glossary/REST)（可能会使用 [XMLHttpRequest](/zh-CN/docs/User:maybe/webidl_mdn/XMLHttpRequest_API) 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)）API。不过只要在安全连接中，也可以使用 [SOAP](/zh-CN/docs/Glossary/SOAP)、[RFC 2549](https://tools.ietf.org/html/rfc2549) 或几乎任何其他协议。从服务器接收到的参数将传递给 [create()](/zh-CN/docs/Web/API/CredentialsContainer/create) ，大部分情况下只需很少修改甚至不需要做任何修改。create() 会返回一个[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，并返回包含 {{domxref("AuthenticatorAttestationResponse")}} 的 {{domxref("PublicKeyCredential")}}。**需要注意的是挑战必须是随机的 buffer（至少 16 字节），并且必须在服务器上生成以确保安全。**
-3. **浏览器向认证器调用 authenticatorMakeCredential()** - 在浏览器内部，浏览器将验证参数并用默认值补全缺少的参数，然后这些参数会变为 {{domxref("AuthenticatorResponse.clientDataJSON")}}。其中最重要的参数之一是 origin，它是 clientData 的一部分，同时服务器将能在稍后验证它。调用 create() 的参数与 clientDataJSON 的 SHA-256 哈希一起传递到身份验证器（只有哈希被发送是因为与认证器的连接可能是低带宽的 NFC 或蓝牙连接，之后认证器只需对哈希签名以确保它不会被篡改）。
+2. **服务器发送挑战、用户信息和依赖方信息** - 服务器将挑战、用户信息和依赖方信息发送回应用程序。在这里，协议和格式不在 WebAuthn 标准的范围内。通常，这可以是基于 HTTPS 连接的 [REST](/zh-CN/docs/Glossary/REST)（可能会使用 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API)）API。不过只要在安全连接中，也可以使用 [SOAP](/zh-CN/docs/Glossary/SOAP)、[RFC 2549](https://tools.ietf.org/html/rfc2549) 或几乎任何其他协议。从服务器接收到的参数将传递给 [create()](/zh-CN/docs/Web/API/CredentialsContainer/create) ，大部分情况下只需很少修改甚至不需要做任何修改。create() 会返回一个[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，并返回包含 {{domxref("AuthenticatorAttestationResponse")}} 的 {{domxref("PublicKeyCredential")}}。**需要注意的是挑战必须是随机的 buffer（至少 16 字节），并且必须在服务器上生成以确保安全。**
+3. **浏览器向认证器调用 authenticatorMakeCredential()** - 在浏览器内部，浏览器将验证参数并用默认值补全缺少的参数，然后这些参数会变为 {{domxref("AuthenticatorResponse.clientDataJSON")}}。其中最重要的参数之一是 origin，它是 clientData 的一部分，同时服务器将能在稍后验证它。调用 create() 的参数与 clientDataJSON 的 SHA-256 散列一起传递到身份验证器（只有散列被发送是因为与认证器的连接可能是低带宽的 NFC 或蓝牙连接，之后认证器只需对散列签名以确保它不会被篡改）。
 4. **认证器创建新的密钥对和证明** - 在进行下一步之前，认证器通常会以某种形式要求用户确认，如输入 PIN，使用指纹，进行虹膜扫描等，以证明用户在场并同意注册。之后，认证器将创建一个新的非对称密钥对，并安全地存储私钥以供将来验证使用。公钥则将成为证明的一部分，被在制作过程中烧录于认证器内的私钥进行签名。这个私钥会具有可以被验证的证书链。
 5. **认证器将数据返回浏览器** - 新的公钥、全局唯一的凭证 ID 和其他的证明数据会被返回到浏览器，成为 attestationObject。
 6. **浏览器生成最终的数据，应用程序将响应发送到服务器** - create() 的 Promise 会返回一个 {{domxref("PublicKeyCredential")}}，其中包含全局唯一的证书 ID {{domxref("PublicKeyCredential.rawId")}} 和包含 {{domxref("AuthenticatorResponse.clientDataJSON")}} 的响应 {{domxref("AuthenticatorAttestationResponse")}}。你可以使用任何你喜欢的格式和协议将 {{domxref("PublicKeyCredential")}} 发送回服务器（注意 ArrayBuffer 类型的属性需要使用 base64 或类似编码方式进行编码）
 7. **服务器验证数据并完成注册** - 最后，服务器需要执行一系列检查以确保注册完成且数据未被篡改。步骤包括：
-
    1. 验证接收到的挑战与发送的挑战相同
    2. 确保 origin 与预期的一致
    3. 使用对应认证器型号的证书链验证 clientDataHash 的签名和证明
@@ -53,18 +48,13 @@ _图 1 - WebAuthn 注册流程及与各个步骤相关的重要数据。_
 
 用户在 WebAuthn 中注册完成之后就可以使用 WebAuthn 进行身份验证（或者说登录）。验证流程与注册相似，图 2 所示的验证流程也与图 1 相似。不过，注册和验证之间的主要区别在于：1) 验证不需要用户或信赖方信息；2) 验证使用之前生成的密钥对创建一个断言，而不是使用在认证器在制造过程中烧录的密钥对创建证明。和上文一样，下面的验证流程图只是一个概况，并非详细描述。验证所需的数据可以在 {{domxref("PublicKeyCredentialRequestOptions")}} 字典中找到；返回的数据可以在 {{domxref("PublicKeyCredential")}} 接口（其中 {{domxref("PublicKeyCredential.response")}} 是 {{domxref("AuthenticatorAssertionResponse")}} 的接口）中找到。
 
-![WebAuthn authentication component and dataflow diagram](mdn_webauthn_authentication_r1.png)
-
-_图 2 - WebAuthn 验证流程及与各个步骤相关的重要数据。_
-
 1. **Application Requests Authentication** - The application makes the initial authentication request. The protocol and format of this request is outside of the scope of WebAuthn.
-2. **Server Sends Challenge** - The server sends a challenge JavaScript program. The protocol for communicating with the server is not specified and is outside of the scope of WebAuthn. Typically, server communications would be [REST](/zh-CN/docs/Glossary/REST) over https (probably using [XMLHttpRequest](/zh-CN/docs/User:maybe/webidl_mdn/XMLHttpRequest_API) or [Fetch](/zh-CN/docs/Web/API/Fetch_API)), but they could also be [SOAP](/zh-CN/docs/Glossary/SOAP), [RFC 2549](https://tools.ietf.org/html/rfc2549) or nearly any other protocol provided that the protocol is secure. The parameters received from the server will be passed to the [get()](/zh-CN/docs/Web/API/CredentialsContainer/get) call, typically with little or no modification. **Note that it is absolutely critical that the challenge be a large buffer of random information (e.g. - more than 100 bytes) and it MUST be generated on the server in order to ensure the security of the authentication process.**
+2. **Server Sends Challenge** - The server sends a challenge JavaScript program. The protocol for communicating with the server is not specified and is outside of the scope of WebAuthn. Typically, server communications would be [REST](/zh-CN/docs/Glossary/REST) over https (probably using [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) or [Fetch](/zh-CN/docs/Web/API/Fetch_API)), but they could also be [SOAP](/zh-CN/docs/Glossary/SOAP), [RFC 2549](https://tools.ietf.org/html/rfc2549) or nearly any other protocol provided that the protocol is secure. The parameters received from the server will be passed to the [get()](/zh-CN/docs/Web/API/CredentialsContainer/get) call, typically with little or no modification. **Note that it is absolutely critical that the challenge be a large buffer of random information (e.g. - more than 100 bytes) and it MUST be generated on the server in order to ensure the security of the authentication process.**
 3. **Browser Call authenticatorGetCredential() on Authenticator** - Internally, the browser will validate the parameters and fill in any defaults, which become the {{domxref("AuthenticatorResponse.clientDataJSON")}}. One of the most important parameters is the origin, which recorded as part of the clientData so that the origin can be verified by the server later. The parameters to the create() call are passed to the authenticator, along with a SHA-256 hash of the clientDataJSON (only a hash is sent because the link to the authenticator may be a low-bandwidth NFC or Bluetooth link and the authenticator is just going to sign over the hash to ensure that it isn't tampered with).
 4. **Authenticator Creates an Assertion** - The authenticator finds a credential for this service that matches the Relying Party ID and prompts a user to consent to the authentication. Assuming both of those steps are successful, the authenticator will create a new assertion by signing over the clientDataHash and authenticatorData with the private key generated for this account during the registration call.
 5. **Authenticator Returns Data to Browser** - The authenticator returns the authenticatorData and assertion signature back to the browser.
 6. **Browser Creates Final Data, Application sends response to Server** - The browser resolves the [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) to a {{domxref("PublicKeyCredential")}} with a {{domxref("PublicKeyCredential.response")}} that contains the {{domxref("AuthenticatorAssertionResponse")}}. It is up to the JavaScript application to transmit this data back to the server using any protocol and format of its choice.
 7. **Server Validates and Finalizes Authentication** - Upon receiving the result of the authentication request, the server performs validation of the response such as:
-
    1. Using the public key that was stored during the registration request to validate the signature by the authenticator.
    2. Ensuring that the challenge that was signed by the authenticator matches the challenge that was generated by the server.
    3. Checking that the Relying Party ID is the one expected for this service.
@@ -172,7 +162,7 @@ navigator.credentials
 ```
 
 - [Mozilla Demo](https://webauthn.bin.coffee/) website and its [source code](https://github.com/jcjones/webauthn.bin.coffee).
-- [Google Demo](http://webauthndemo.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
+- [Google Demo](https://webauthndemo.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
 - [webauthn.org](https://webauthn.org) and its [client source code](https://github.com/apowers313/webauthn-simple-app) and [server source code](https://github.com/apowers313/fido2-lib)
 
 ## 规范

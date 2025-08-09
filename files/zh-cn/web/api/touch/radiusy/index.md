@@ -24,7 +24,7 @@ var yRadius = touchItem.radiusY;
 
 ### 标准定义
 
-[Touch Events Specification](http://www.w3.org/TR/touch-events/)
+[Touch Events Specification](https://www.w3.org/TR/touch-events/)
 
 ### 相关链接
 

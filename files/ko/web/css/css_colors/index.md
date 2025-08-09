@@ -46,7 +46,7 @@ l10n:
   - [`oklab()`](/ko/docs/Web/CSS/color_value/oklab)
   - [`oklch()`](/ko/docs/Web/CSS/color_value/oklch)
   - [`color()`](/ko/docs/Web/CSS/color_value/color)
-- [`color-contrast()`](/ko/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
+- [`color-contrast()`](/ko/docs/Web/CSS/color_value) {{Experimental_Inline}}
 - [`color-mix()`](/ko/docs/Web/CSS/color_value/color-mix)
 
 ### 자료형

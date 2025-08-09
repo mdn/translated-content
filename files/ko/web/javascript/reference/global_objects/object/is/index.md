@@ -7,9 +7,24 @@ l10n:
 
 {{JSRef}}
 
-**`Object.is()`** 정적 메서드는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)인지 결정합니다.
+**`Object.is()`** 정적 메서드는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)인지 결정합니다.
 
-{{EmbedInteractiveExample("pages/js/object-is.html")}}
+{{InteractiveExample("JavaScript Demo: Object.is()")}}
+
+```js interactive-example
+console.log(Object.is("1", 1));
+// Expected output: false
+
+console.log(Object.is(NaN, NaN));
+// Expected output: true
+
+console.log(Object.is(-0, 0));
+// Expected output: false
+
+const obj = {};
+console.log(Object.is(obj, {}));
+// Expected output: false
+```
 
 ## 구문
 
@@ -30,7 +45,7 @@ Object.is(value1, value2);
 
 ## 설명
 
-`Object.is()`는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)인지 결정합니다. 다음 중 하나를 만족하면 두 값은 같습니다.
+`Object.is()`는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)인지 결정합니다. 다음 중 하나를 만족하면 두 값은 같습니다.
 
 - 둘 다 {{jsxref("undefined")}}
 - 둘 다 {{jsxref("null")}}
@@ -38,7 +53,6 @@ Object.is(value1, value2);
 - 둘 다 같은 순서로 같은 문자에 같은 길이인 문자열
 - 둘 다 같은 객체 (두 값 모두 메모리에서 같은 객체를 참조하는 것을 의미)
 - 둘 다 숫자이며
-
   - 둘 다 `+0`
   - 둘 다 `-0`
   - 둘 다 {{jsxref("NaN")}}
@@ -89,4 +103,4 @@ Object.is(NaN, Number.NaN); // true
 ## 같이 보기
 
 - [`core-js`의 `Object.is` 폴리필](https://github.com/zloirock/core-js#ecmascript-object)
-- [동치 비교 및 동일성](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness) — 동일성 내장 기능 3가지 모두 비교
+- [동치 비교 및 동일성](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — 동일성 내장 기능 3가지 모두 비교

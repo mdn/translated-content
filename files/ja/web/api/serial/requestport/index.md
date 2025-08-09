@@ -19,13 +19,9 @@ requestPort(options)
 ### 引数
 
 - `options`
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `filters`
-
       - : 接続されたデバイスの探索に使用するベンダー ID とプロダクト ID を格納したオブジェクトのリストです。[USB Implementors Forum](https://www.usb.org/) が特定の会社に ID を割り当てます。それぞれの会社がその製品に ID を割り当てます。フィルターは以下の値を含みます。
-
         - `usbVendorId`
           - : USB デバイスの製造元を特定する `unsigned short` の整数です。
         - `usbProductId`
@@ -38,7 +34,7 @@ requestPort(options)
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : [Feature Policy](/ja/docs/Web/HTTP/Feature_Policy) でこの API の使用が制限されていたり、ユーザーの操作によって API の使用が許可されていないとき、返された `Promise` がこのエラーで拒否されます。
+  - : [Feature Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) でこの API の使用が制限されていたり、ユーザーの操作によって API の使用が許可されていないとき、返された `Promise` がこのエラーで拒否されます。
 - `AbortError` {{domxref("DOMException")}}
   - : ユーザーが要求に応じてポートを選択しなかったとき、返された `Promise` がこのエラーで拒否されます。
 

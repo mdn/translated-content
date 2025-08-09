@@ -7,8 +7,8 @@ slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 
 A exceção do modo strict do Javascript "can't assign to property" ocorre quando é feita
 a tentativa de criar uma propriedade em um valor [primitivo](/pt-BR/docs/Glossary/Primitive)
-como um [symbol](/pt-BR/docs/Glossary/Symbol), uma [string](/pt-BR/docs/Glossary/String), um [number](/pt-BR/docs/Glossary/Number) ou um [boolean](/pt-BR/docs/Glossary/Boolean).
-Valores [primitivos](/pt-BR/docs/Glossary/Primitive) nâo podem ter nenhuma [propriedade](/pt-BR/docs/Glossary/property/JavaScript).
+como um [symbol](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol), uma [string](/pt-BR/docs/Glossary/String), um [number](/pt-BR/docs/Glossary/Number) ou um [boolean](/pt-BR/docs/Glossary/Boolean).
+Valores [primitivos](/pt-BR/docs/Glossary/Primitive) nâo podem ter nenhuma [propriedade](/pt-BR/docs/Glossary/Property/JavaScript).
 
 ## Mensagem
 
@@ -25,8 +25,8 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 
 No {{jsxref("Strict_mode")}}, um {{jsxref("TypeError")}} é gerado quando é feita a tentativa de
 criar uma propriedade em um valor [primitivo](/pt-BR/docs/Glossary/Primitive) como
-um [symbol](/pt-BR/docs/Glossary/Symbol), uma [string](/pt-BR/docs/Glossary/String), um [number](/pt-BR/docs/Glossary/Number) ou um [boolean](/pt-BR/docs/Glossary/Boolean).
-Valores [primitivos](/pt-BR/docs/Glossary/Primitive) não podem ter nenhuma [propriedade](/pt-BR/docs/Glossary/property/JavaScript).
+um [symbol](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol), uma [string](/pt-BR/docs/Glossary/String), um [number](/pt-BR/docs/Glossary/Number) ou um [boolean](/pt-BR/docs/Glossary/Boolean).
+Valores [primitivos](/pt-BR/docs/Glossary/Primitive) não podem ter nenhuma [propriedade](/pt-BR/docs/Glossary/Property/JavaScript).
 
 O problema pode ser que um valor inesperado está em um lugar inesperado, ou
 que uma variante de objeto de uma {{jsxref("String")}} ou um {{jsxref("Number")}} é esperado.

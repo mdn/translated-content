@@ -17,8 +17,8 @@ Une instruction, ou un ensemble d'instructions, est démarrée si une condition 
 
 ### Référence technique
 
-- [Contrôle de flux](/fr/docs/Glossaire/Structure_de_contrôle) sur MDN
+- [Contrôle de flux](/fr/docs/Glossary/Control_flow) sur MDN
 
 ### Apprendre
 
-- [Contrôle du flux d'instructions et gestion des erreurs en JavaScript](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs) sur MDN
+- [Contrôle du flux d'instructions et gestion des erreurs en JavaScript](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) sur MDN

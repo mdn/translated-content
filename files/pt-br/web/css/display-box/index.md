@@ -10,7 +10,6 @@ Essas palavras-chave definem se um elemento gera caixas de exibição.
 ## Sintaxe
 
 - `contents` {{Experimental_Inline}}
-
   - : Esses elementos não produzem uma caixa específica por si mesmos. Eles são substituídos por sua pseudo-caixa e suas caixas filho. Observe que a especificação CSS Display Level 3 define como o `contents`
 
     o valor deve afetar "elementos incomuns" - elementos que não são renderizados apenas pelos conceitos da caixa CSS, como elementos substituídos. Consulte o Apêndice B: Efeitos da exibição: conteúdo em Elementos incomuns para obter mais detalhes.
@@ -85,7 +84,7 @@ Neste exemplo, o externo {{htmlelement("div")}} possui uma borda vermelha de 2 p
 As implementações atuais na maioria dos navegadores removerão da árvore de acessibilidade qualquer elemento com um `display` valor de `contents`. Isso fará com que o elemento - e em algumas versões do navegador, seus elementos descendentes - não sejam mais anunciados pela tecnologia de leitura de tela. Esse é um comportamento incorreto de acordo com a especificação CSSWG.
 
 - [Marcação mais acessível com display: conteúdo | Hidde de Vries](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
-- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ## Compatibilidade com navegadores
 
@@ -96,12 +95,11 @@ As implementações atuais na maioria dos navegadores removerão da árvore de a
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [Exibição: conteúdo não é uma redefinição de CSS | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 - [Marcação mais acessível com display: contents - hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)

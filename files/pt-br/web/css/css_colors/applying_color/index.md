@@ -53,7 +53,7 @@ Cada elemento é uma caixa com algum tipo de conteúdo e tem um fundo e uma bord
 
 ### Bordas
 
-Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) desenhada em torno dele. Uma borda de elemento básico é uma linha desenhada ao redor das bordas do conteúdo do elemento. Consulte [Propriedades do Box](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model#box_properties) para saber mais sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) para saber mais sobre como aplicar estilos a bordas.
+Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) desenhada em torno dele. Uma borda de elemento básico é uma linha desenhada ao redor das bordas do conteúdo do elemento. Consulte [Propriedades do Box](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Box_model#box_properties) para saber mais sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) para saber mais sobre como aplicar estilos a bordas.
 
 Você pode usar a propriedade abreviada {{cssxref("border")}}, que permite configurar tudo sobre o borda de uma só vez (incluindo recursos não coloridos de bordas, como sua [largura](/pt-BR/docs/Web/CSS/border-width), [estilo](/pt-BR/docs/Web/CSS/border-style) (sólido, tracejado, etc.), e assim por diante.
 
@@ -298,7 +298,7 @@ Nossas duas caixas coloridas compartilham várias propriedades em comum, então,
 }
 ```
 
-Resumidamente, `.box` estabelece o tamanho de cada caixa, bem como a configuração da fonte utilizada dentro dela. Também aproveitamos o [CSS Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout) para centralizar facilmente o conteúdo de cada caixa. Ativamos o modo `flex` usando {{cssxref("display", "display: flex")}} e definimos {{cssxref("justify-content")}} e {{cssxref("align-items")}} para `center`. Então podemos criar uma classe para cada umas duas caixas que definem as propriedades que diferem entre as duas.
+Resumidamente, `.box` estabelece o tamanho de cada caixa, bem como a configuração da fonte utilizada dentro dela. Também aproveitamos o [CSS Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout) para centralizar facilmente o conteúdo de cada caixa. Ativamos o modo `flex` usando {{cssxref("display", "display: flex")}} e definimos {{cssxref("justify-content")}} e {{cssxref("align-items")}} para `center`. Então podemos criar uma classe para cada umas duas caixas que definem as propriedades que diferem entre as duas.
 
 ```css
 .boxLeft {
@@ -440,7 +440,7 @@ Depois de decidir a cor base, existem muitas ferramentas on-line que podem ajud�
 
 Alguns exemplos (todos gratuitos para uso a partir do momento em que esta lista foi revisada pela última vez):
 
-- [Ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Paletton](https://paletton.com/)
 - [Roda de cores on-line do Adobe Color CC](https://color.adobe.com/create/color-wheel)
 
@@ -523,5 +523,5 @@ Com este conjunto, o navegador não alterará a aparência do elemento e o desen
 ## Veja também
 
 - [Desenhando gráficos](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Gráficos na web](/pt-BR/docs/Web/Guide/Graphics)
-- [ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Gráficos na web](/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool)

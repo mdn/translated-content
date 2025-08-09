@@ -5,7 +5,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
-Регулярные выражения - это шаблоны, используемые для сопоставления последовательностей символов в строках. В JavaScript регулярные выражения также являются объектами. Эти шаблоны используются в методах [`exec`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/exec) и [`test`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/test) объекта [`RegExp`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp) а также [`match`](/ru/docs/JavaScript/Reference/Global_Objects/String/match), [`replace`](/ru/docs/JavaScript/Reference/Global_Objects/String/replace), [`search`](/ru/docs/JavaScript/Reference/Global_Objects/String/search), [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split) объекта [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String). Данная глава описывает регулярные выражения в JavaScript.
+Регулярные выражения - это шаблоны, используемые для сопоставления последовательностей символов в строках. В JavaScript регулярные выражения также являются объектами. Эти шаблоны используются в методах [`exec`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) и [`test`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) объекта [`RegExp`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp) а также [`match`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`replace`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/replace), [`search`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/search), [`split`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split) объекта [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String). Данная глава описывает регулярные выражения в JavaScript.
 
 ## Создание регулярного выражения
 
@@ -19,7 +19,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 
   Литералы регулярных выражений вызывают предварительную компиляцию регулярного выражения при анализе скрипта. Если ваше регулярное выражение постоянно, то пользуйтесь им, чтобы увеличить производительность.
 
-- Вызывая функцию конструктор объекта [`RegExp`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp), например:
+- Вызывая функцию конструктор объекта [`RegExp`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp), например:
 
   ```js
   var re = new RegExp("ab+c");
@@ -29,7 +29,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 
 ## Написание шаблона регулярного выражения
 
-Шаблон регулярного выражения состоит из обычных символов, например `/abc/`, или комбинаций обычных и специальных символов, например `/ab*c/` или `/Chapter (\d+)\.\d*/`. Последний пример включает в себя скобки, которые используются как "запоминающий механизм". Соответствие этой части шаблона запоминается для дальнейшего использования, как описано в [Использование совпадений подстрок заключённых в скобки](#Использование_скобочных_выражений_для_нахождения_подстрок).
+Шаблон регулярного выражения состоит из обычных символов, например `/abc/`, или комбинаций обычных и специальных символов, например `/ab*c/` или `/Chapter (\d+)\.\d*/`. Последний пример включает в себя скобки, которые используются как "запоминающий механизм". Соответствие этой части шаблона запоминается для дальнейшего использования, как описано в [Использование совпадений подстрок заключённых в скобки](#использование_скобочных_выражений_для_нахождения_подстрок).
 
 ### Использование простых шаблонов
 
@@ -254,8 +254,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
         Соответствует 'x' но не запоминает соответствие. Это называется
         не-захватывающие скобки. Сопоставленная строка не может быть получена из
         элементов результирующего массива
-        <code style="font-size: 14px; color: rgb(51, 51, 51)">[1]</code>, ...,
-        <code style="font-size: 14px; color: rgb(51, 51, 51)">[n]</code>.
+        <code>[1]</code>, ..., <code>[n]</code>.
       </td>
     </tr>
     <tr>
@@ -747,7 +746,7 @@ function escapeRegExp(string) {
 
 ### Использование скобок
 
-Скобки вокруг любой части регулярного выражения означают что эта часть совпадаемой подстроки будет запомнена. Раз запомнена, подстрока может выбрана для использования как это описано в [Using Parenthesized Substring Matches](#Using_Parenthesized_Substring_Matches).
+Скобки вокруг любой части регулярного выражения означают что эта часть совпадаемой подстроки будет запомнена. Раз запомнена, подстрока может выбрана для использования как это описано в [Using Parenthesized Substring Matches](#using_parenthesized_substring_matches).
 
 Например, паттерн `/Chapter (\d+)\.\d*/` включает в себя дополнительные экранирующие и специальные символы и указывает на то, что часть шаблона должна быть запомнена. Он точно соответствует символам слова 'Chapter ', за которыми следует один или более цифровых символов (`\d` означает любой цифровой символ, а '`+'` означает 1 или более раз), за которым следует десятичная точка (сама по себе являющаяся специальным символом; предшествующий десятичной точке слеш ' \\' означает, что паттерн должен искать литеральный символ '.'), после которой следует любой цифровой символ 0 или более раз ('`\d'` обозначает цифровой символ, '`*'` обозначает 0 или более раз). Кроме того, круглые скобки используются для запоминания первых же совпавших цифровых символов.
 
@@ -757,16 +756,16 @@ function escapeRegExp(string) {
 
 ## Работа с Регулярными Выражениями
 
-Регулярные выражения используются в методах `test` и `exec` объекта `RegExp` и с методами `match`, `replace`, `search`, и `split` объекта `String`. Эти методы подробно объясняются в [Справочнике JavaScript](/ru/docs/JavaScript/Reference)
+Регулярные выражения используются в методах `test` и `exec` объекта `RegExp` и с методами `match`, `replace`, `search`, и `split` объекта `String`. Эти методы подробно объясняются в [Справочнике JavaScript](/ru/docs/Web/JavaScript/Reference)
 
-| Метод                                                                    | Описание                                                                                                                                             |
-| ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`exec`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/exec)       | Метод `RegExp,` который выполняет поиск совпадения в строке. Он возвращает массив данных.                                                            |
-| [`test`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/test)       | Метод `RegExp`, который тестирует совпадение в строке. Возвращает либо истину либо ложь.                                                             |
-| [`match`](/ru/docs/JavaScript/Reference/Global_Objects/String/match)     | Метод `String`, который выполняет поиск совпадения в строке. Он возвращает массив данных либо null если совпадения отсутствуют.                      |
-| [`search`](/ru/docs/JavaScript/Reference/Global_Objects/String/search)   | Метод `String,` который тестирует на совпадение в строке. Он возвращает индекс совпадения, или -1 если совпадений не будет найдено.                  |
-| [`replace`](/ru/docs/JavaScript/Reference/Global_Objects/String/replace) | Метод `String`, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой, переданной как аргумент в этот метод. |
-| [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split)     | Метод `String,` который использует регулярное выражение или фиксированную строку чтобы разбить строку на массив подстрок.                            |
+| Метод                                                                        | Описание                                                                                                                                             |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`exec`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)       | Метод `RegExp,` который выполняет поиск совпадения в строке. Он возвращает массив данных.                                                            |
+| [`test`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)       | Метод `RegExp`, который тестирует совпадение в строке. Возвращает либо истину либо ложь.                                                             |
+| [`match`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/match)     | Метод `String`, который выполняет поиск совпадения в строке. Он возвращает массив данных либо null если совпадения отсутствуют.                      |
+| [`search`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/search)   | Метод `String,` который тестирует на совпадение в строке. Он возвращает индекс совпадения, или -1 если совпадений не будет найдено.                  |
+| [`replace`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/replace) | Метод `String`, который выполняет поиск совпадения в строке, и заменяет совпавшую подстроку другой подстрокой, переданной как аргумент в этот метод. |
+| [`split`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split)     | Метод `String,` который использует регулярное выражение или фиксированную строку чтобы разбить строку на массив подстрок.                            |
 
 Чтобы просто узнать есть ли в строке что либо соответствующее шаблону, воспользуйтесь методами `test` или `search`; а чтобы получить больше информации пользуйтесь методами `exec` или `match` (хотя эти методы работают медленнее). Если вы пользуетесь `exec` или `match` и если совпадения есть, эти методы вернут массив и обновлённые свойства объекта ассоциированного регулярного выражения а также предопределённого объекта `RegExp` регулярного выражения. Если совпадений нет, метод `exec` вернёт `null` (который сконвертируется в `false`).
 

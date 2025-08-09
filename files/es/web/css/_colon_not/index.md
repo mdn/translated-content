@@ -1,9 +1,7 @@
 ---
-title: ":not()"
+title: :not()
 slug: Web/CSS/:not
 ---
-
-{{CSSRef}}
 
 La [pseudoclase](/es/docs/Web/CSS/Pseudo-classes) **`:not()`** de [CSS](/es/docs/Web/CSS) representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la _pseudoclase de negación_.
 
@@ -17,7 +15,7 @@ La [pseudoclase](/es/docs/Web/CSS/Pseudo-classes) **`:not()`** de [CSS](/es/docs
 > [!NOTE]
 >
 > - Se pueden escribir selectores inútiles usando esta pseudoclase. Por ejemplo, `:not(*)` coincide con cualquier elemento que no sea un elemento, por lo que la regla nunca se aplicará.
-> - Esta pseudoclase puede aumentar la [especificidad](/es/docs/Web/CSS/Specificity) de una regla. Por ejemplo, `#foo:not(#bar)` coincidirá con el mismo elemento que el `#foo` más simple, pero tiene una especificidad más alta.
+> - Esta pseudoclase puede aumentar la [especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity) de una regla. Por ejemplo, `#foo:not(#bar)` coincidirá con el mismo elemento que el `#foo` más simple, pero tiene una especificidad más alta.
 > - `:not(.foo)` coincidirá con cualquier cosa que no sea `.foo`, _incluidos {{HTMLElement("html")}} y {{HTMLElement("body")}}._
 > - Este selector solo se aplica a un elemento; no puedes usarlo para excluir a todos los antepasados. Por ejemplo, `body :not(table) a` se aplicará a los enlaces dentro de una tabla, ya que {{HTMLElement("tr")}} coincidirá con la parte `:not()` del selector.
 

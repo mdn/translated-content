@@ -12,5 +12,5 @@ Aquí encontrarás links a cada una de las guías introduciendo y explicando cad
 
 - [Web API interface reference](/es/docs/Web/API) (an index of all of the interfaces comprising all of these APIs)
 - [Document Object Model](/es/docs/Web/API/Document_Object_Model) (DOM)
-- [Web API event reference](/es/docs/Web/Events)
-- [Learning web development](/es/docs/Learn)
+- [Web API event reference](/es/docs/Web/API/Document_Object_Model/Events)
+- [Learning web development](/es/docs/Learn_web_development)

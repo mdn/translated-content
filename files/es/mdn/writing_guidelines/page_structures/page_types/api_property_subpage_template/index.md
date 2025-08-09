@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **Nota:** _Elimina toda esta nota explicativa antes de publicarla._
+> [!NOTE]
+> _Elimina toda esta nota explicativa antes de publicarla._
 >
 > ---
 >
@@ -34,7 +35,6 @@ l10n:
 >     Formatear como _NameOfTheParentInterface_**.**_NameOfTheProperty_.
 >     Por ejemplo, la propiedad [`capabilities`](/es/docs/Web/API/VRDisplay/capabilities) de la interfaz [`VRDisplay`](/es/docs/Web/API/VRDisplay) su `title` es `VRDisplay.capabilities`.
 > - **slug**
->
 >   - : El final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`.
 >     Esto se formateará como `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
 >
@@ -45,7 +45,6 @@ l10n:
 > - **status**
 >   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**obsoleto**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
 > - **browser-compat**
->
 >   - : Reemplace el valor de marcador de posición `path.to.feature.NameOfTheProperty` con la cadena de consulta para la propiedad en el [repositorio de datos de compatibilidad con los navegadores](https://github.com/mdn/browser-compat-data).
 >     La cadena de herramientas utiliza automáticamente la clave para rellenar las secciones de compatibilidad y especificación (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
 >
@@ -70,7 +69,7 @@ l10n:
 > - `\{{APIRef ("GroupDataName")}}` — esto genera la barra lateral de referencia de la izquierda que muestra enlaces de referencia rápida relacionados con la página actual.
 >   Por ejemplo, todas las páginas de la [API de WebVR](/es/docs/Web/API/WebVR_API) tienen la misma barra lateral, que apunta a las otras páginas de la API.
 >   Para generar la barra lateral correcta para tu API, debes añadir una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
->   Consulta nuestra guía de [barras laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar la macro `\{{MDNSidebar}}` cuando copie esta página.
+>   Consulta nuestra guía de [barras laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar la macro `\{{MDNSidebar}}` cuando copie esta página.
 >
 > Las muestras de los banners **Experimental**, **Contexto seguro** y **Desaprobado** se muestran justo después de este bloque de notas.
 >

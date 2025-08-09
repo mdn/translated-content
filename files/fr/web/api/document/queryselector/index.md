@@ -19,14 +19,14 @@ element = document.querySelector(sélecteurs);
 ### Paramètres
 
 - `selectors` (sélecteurs)
-  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs) pour plus d'informations sur les sélecteurs et leur gestion.
+  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) pour plus d'informations sur les sélecteurs et leur gestion.
 
 > [!NOTE]
 > Les caractères qui n'appartiennent pas à la syntaxe standard CSS doivent être échappés par un antislash ("\\"). Puisque JavaScript utilise aussi cette barre pour l'échappement, une attention particulière est nécessaire quand des chaînes comprennent ces caractères. Voir [Échapper des caractères spéciaux](#échapper_des_caractères_spéciaux) pour plus d'informations.
 
 ### Valeur retournée
 
-Un objet {{domxref("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/Sélecteurs_CSS) spécifié, ou `null` s'il n'y a pas de correspondances.
+Un objet {{domxref("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors) spécifié, ou `null` s'il n'y a pas de correspondances.
 
 Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{domxref("Document.querySelectorAll", "querySelectorAll()")}} à la place.
 
@@ -39,7 +39,7 @@ Si vous avez besoin d'une liste de tous les éléments correspondant aux sélect
 
 Si le sélecteur correspond à un ID et que cet ID est utilisé de façon erronée plusieurs fois dans le document, le premier élément en correspondance est retourné.
 
-Les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) CSS ne retourneront jamais aucun élément, comme spécifié dans l'[API des sélecteurs](http://www.w3.org/TR/selectors-api/#grammar) (en).
+Les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) CSS ne retourneront jamais aucun élément, comme spécifié dans l'[API des sélecteurs](https://www.w3.org/TR/selectors-api/#grammar) (en).
 
 ### Échapper des caractères spéciaux
 
@@ -92,7 +92,7 @@ var el = document.querySelector(
 
 ## Voir aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs)
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("document.querySelectorAll()")}}&nbsp;;
 - {{domxref("element.querySelector()")}}&nbsp;;
 - {{domxref("element.querySelectorAll()")}}&nbsp;;

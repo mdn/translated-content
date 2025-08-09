@@ -9,7 +9,19 @@ l10n:
 
 **`get`** 구문은 객체의 속성 접근 시 호출할 함수를 바인딩합니다. 이 구문은 [classes](/ko/docs/Web/JavaScript/Reference/Classes)에서도 사용할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 구문
 
@@ -81,7 +93,7 @@ console.log(instance.msg); // "hello cake"
 
 접근자 속성은 클래스의 `prototype`으로 정의되므로 클래스의 모든 인스턴스에서 공유됩니다. 객체 리터럴의 접근자 속성과 달리 클래스의 접근자 속성은 열거할 수 없습니다.
 
-Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`static`](/ko/docs/Web/JavaScript/Reference/Classes/static)과 [private class features](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields) 페이지에 설명되어 있습니다.
+Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`static`](/ko/docs/Web/JavaScript/Reference/Classes/static)과 [private class features](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements) 페이지에 설명되어 있습니다.
 
 ### `delete` 연산자로 접근자 제거하기
 

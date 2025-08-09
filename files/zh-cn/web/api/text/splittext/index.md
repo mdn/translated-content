@@ -9,7 +9,7 @@ slug: Web/API/Text/splitText
 
 如果指定的偏移量刚好等于原文本节点所包含字符串的长度，则返回一个内容为空的文本节点。
 
-分割后的文本节点还可以使用[`Node.normalize`](/zh-CN/docs/DOM/Node.normalize)方法来合并。
+分割后的文本节点还可以使用[`Node.normalize`](/zh-CN/docs/Web/API/Node/normalize)方法来合并。
 
 ## 语法
 

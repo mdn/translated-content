@@ -23,4 +23,4 @@ Como você pode notar, a cor sem o canal alfa bloqueia completamente o texto ao 
 
 ### Referência técnica
 
-- [CSS color](/pt-BR/docs/Web/CSS/CSS_Color)
+- [CSS color](/pt-BR/docs/Web/CSS/CSS_colors)

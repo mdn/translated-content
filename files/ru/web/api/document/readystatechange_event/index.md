@@ -5,14 +5,13 @@ slug: Web/API/Document/readystatechange_event
 
 {{APIRef}}
 
-Событие `readystatechange` срабатывает, когда изменяется атрибут документа [`readyState`](/ru/docs/DOM/document.readyState).
+Событие `readystatechange` срабатывает, когда изменяется атрибут документа [`readyState`](/ru/docs/Web/API/Document/readyState).
 
 ## Основная информация
 
 - Спецификация
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
 - Интерфейс
-
   - : Event
 
 - Всплывает
@@ -53,8 +52,8 @@ document.onreadystatechange = function () {
 
 ## Связанные события
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
+- [`load`](/ru/docs/Web/API/Window/load_event)
+- [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/ru/docs/Web/API/Window/unload_event)

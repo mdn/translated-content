@@ -73,5 +73,5 @@ fetch(myRequest)
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

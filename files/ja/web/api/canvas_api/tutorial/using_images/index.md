@@ -47,7 +47,7 @@ l10n:
 
 ### ほかのドメインにある画像の使用
 
-[`crossorigin`](/ja/docs/Web/HTML/Element/img#crossorigin) 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
+[`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/img#crossorigin) 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
 
 ### ほかの canvas 要素の使用
 
@@ -80,7 +80,7 @@ img.src = "myImage.png"; // ソースのパスを設定
 
 ### data: URL で画像を埋め込む
 
-画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
+画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/URI/Reference/Schemes/data) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
 
 ```js
 const img = new Image(); // 新たな img 要素を作成
@@ -189,7 +189,7 @@ function draw() {
       }
     }
   };
-  img.src = "rhino.jpg";
+  img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
 ```
 
@@ -221,19 +221,27 @@ draw();
 以下の例では前の例と同じサイの画像を使用していますが、頭の部分を切り抜いて額縁の中に合成しています。額縁の画像は、ドロップシャドウを含む 24 ビット PNG 画像です。GIF や 8 ビット PNG 画像と異なり、24 ビット PNG 画像は 8 ビットのアルファチャンネルが含まれていますので、マットカラーに悩まされることなく背景に重ねることができます。
 
 ```html
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-    </div>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
+<div style="display: none;">
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
+  <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+</div>
 ```
 
 ```js
-function draw() {
+async function draw() {
+  // すべての画像が読み込まれるまで待つ
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
+
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
 
@@ -253,6 +261,7 @@ function draw() {
   // フレームを描く
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+
 draw();
 ```
 

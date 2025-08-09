@@ -9,7 +9,7 @@ slug: Glossary/WebRTC
 
 WebRTC est constitué principalement de ces éléments :
 
-- [getUserMedia](/fr/docs/NavigatorUserMedia.getUserMedia)
+- [getUserMedia](/fr/docs/Web/API/Navigator/getUserMedia)
   - : accorde l'accès à la caméra et / ou au microphone d'un appareil, et peut brancher leurs signaux à une connexion RTC.
 - [RTCPeerConnection](/fr/docs/Web/API/RTCPeerConnection)
   - : configure les appels vocaux ou tchat vidéo
@@ -21,5 +21,5 @@ WebRTC est constitué principalement de ces éléments :
 ### Culture générale
 
 - [WebRTC](https://fr.wikipedia.org/wiki/WebRTC) sur Wikipédia
-- [Guide WebRTC sur MDN](/fr/docs/Web/Guide/API/WebRTC)
+- [Guide WebRTC sur MDN](/fr/docs/Web/API/WebRTC_API)
 - [Support WebRTC des navigateurs](http://caniuse.com/#feat=rtcpeerconnection)

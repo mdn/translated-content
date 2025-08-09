@@ -23,5 +23,5 @@ WCAG には 3 つの適合レベルが定義されています :
 
 ### Technical knowledge
 
-- [MDN でのアクセシビリティ情報](/ja/docs/Web/Accessibility/Information_for_Web_authors)
-- [The WCAG 2.0 recommendation at the W3C](http://www.w3.org/TR/WCAG20/)
+- [MDN でのアクセシビリティ情報](/ja/docs/Web/Accessibility/Guides/Information_for_Web_authors)
+- [The WCAG 2.0 recommendation at the W3C](https://www.w3.org/TR/WCAG20/)

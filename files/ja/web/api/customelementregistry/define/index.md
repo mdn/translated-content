@@ -25,10 +25,8 @@ customElements.define(name, constructor, options);
 - constructor
   - : 新しいカスタム要素のコンストラクターです。
 - options {{optional_inline}}
-
   - : 要素の定義の仕方を制御するオブジェクト。現在は、次の 1 つのオプションのみに対応しています。
-
-- `extends`: 拡張する組み込み要素の名前を示す文字列。*カスタム組み込み要素*を作成するのに使われる。
+    - `extends`: 拡張する組み込み要素の名前を示す文字列。*カスタム組み込み要素*を作成するのに使われる。
 
 ### 返値
 
@@ -43,7 +41,8 @@ customElements.define(name, constructor, options);
 - `TypeError` {{domxref("DOMException")}}
   - : 参照されたコンストラクターがコンストラクターではなかった場合に発生します。
 
-> **メモ:** `NotSupportedError` 例外が多く発生する場合、 `define()` が失敗しているように思えるかもしれませんが、多くの場合は {{domxref("Element.attachShadow()")}} に問題があります。
+> [!NOTE]
+> `NotSupportedError` 例外が多く発生する場合、 `define()` が失敗しているように思えるかもしれませんが、多くの場合は {{domxref("Element.attachShadow()")}} に問題があります。
 
 ## 例
 

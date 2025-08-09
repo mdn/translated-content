@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
 
 **`getBigInt64()`** メソッドは、符号つき 64 ビット整数 (long long) を {{jsxref("DataView")}} の先頭からのバイト単位のオフセット位置から取得します。
 
-{{EmbedInteractiveExample("pages/js/dataview-getbigint64.html")}}
+{{InteractiveExample("JavaScript デモ: DataView.getBigInt64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Highest possible BigInt value that fits in a signed 64-bit integer
+const max = 2n ** (64n - 1n) - 1n;
+
+const view = new DataView(buffer);
+view.setBigInt64(1, max);
+
+console.log(view.getBigInt64(1));
+// Expected output: 9223372036854775807n
+```
 
 ## 構文
 

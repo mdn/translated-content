@@ -14,7 +14,55 @@ l10n:
 
 > [!NOTE] > {{CSSxRef("white-space-collapse")}} 와 `text-wrap` 속성은 {{CSSxRef("white-space")}} 단축 속성을 이용하여 함께 정의할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/css/text-wrap.html")}}
+{{InteractiveExample("CSS Demo: text-wrap")}}
+
+```css interactive-example-choice
+text-wrap: wrap;
+```
+
+```css interactive-example-choice
+text-wrap: nowrap;
+```
+
+```css interactive-example-choice
+text-wrap: balance;
+```
+
+```css interactive-example-choice
+text-wrap: pretty;
+```
+
+```css interactive-example-choice
+text-wrap: stable;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <p>Edit the text in the box:</p>
+    <div class="transition-all" id="example-element">
+      <p contenteditable="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
+        cum eum id quos est.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 250px;
+}
+```
 
 ## 구성 속성
 
@@ -66,7 +114,7 @@ text-wrap: unset;
 
 텍스트의 구획에는 더 이상 `text-wrap: pretty` 를 사용할 수 없습니다. `pretty` 는 성능에 좋지 않은 영향을 끼칠 수 있음을 인지해야 하고, 레이아웃이 속도보다 중요한 경우에만 긴 텍스트 블록에 사용해야 합니다.
 
-`stable` 값은 [`contenteditable`](/ko/docs/Web/HTML/Global_attributes/contenteditable) 가 적용된 콘텐츠에서 사용자 경험을 향상시킵니다. 이 값은 사용자가 텍스트를 수정할 때 수정 중인 영역 이전의 줄들을 안정적으로 유지합니다.
+`stable` 값은 [`contenteditable`](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable) 가 적용된 콘텐츠에서 사용자 경험을 향상시킵니다. 이 값은 사용자가 텍스트를 수정할 때 수정 중인 영역 이전의 줄들을 안정적으로 유지합니다.
 
 ## 형식 정의
 

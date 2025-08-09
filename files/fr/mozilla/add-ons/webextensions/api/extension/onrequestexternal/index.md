@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
 {{AddonSidebar}}
 
 > [!WARNING]
-> Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
+> Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
 
 Lancé lorsqu'une requête est envoyée depuis une autre extension.
 
@@ -36,19 +36,15 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `request`
       - : `any`. La requête envoyée par le script appelant.
 
     <!---->
-
     - `sender`
       - : {{WebExtAPIRef('runtime.MessageSender')}}.
 
     <!---->
-
     - `sendResponse`
       - : `function`. Fonction à appeler lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse.
 

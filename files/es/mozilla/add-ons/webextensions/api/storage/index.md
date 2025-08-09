@@ -14,7 +14,7 @@ El sistema de almacenamiento se basa en [Web Storage API](/es/docs/Web/API/Web_S
 - Los valores almacenados pueden ser cualquier valor JSON, no solo [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String). Entre otras cosas, esto incluye: [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) y [`Object`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object), pero solo cuando sus contenidos se pueden representar como JSON, que no incluye nodos DOM. No es necesario convertir sus valores en cadenas JSON antes de almacenarlos, pero se representan como JSON internamente, por lo tanto, el requisito de que sean responsables de JSON.
 - Se pueden establecer o recuperar múltiples pares de clave / valor en la misma llamada a la API.
 
-Para usar esta API, debe incluir el [permiso](/es/docs/) de "storage" en su archivo [manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+Para usar esta API, debe incluir el [permiso](/es/docs/Web) de "storage" en su archivo [manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 Cada extensión tiene su propia área de almacenamiento, que se puede dividir en diferentes tipos de almacenamiento.
 
@@ -52,11 +52,10 @@ El almacenamiento tiene tres propiedades, que representan los diferentes tipos d
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimientos**
+> [!NOTE]
+> **Agradecimientos**
 >
 > Esta API se basa en la API [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) de Chromium. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
->
-> Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

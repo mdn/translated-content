@@ -5,7 +5,7 @@ slug: Web/API/IDBCursor
 
 {{APIRef("IndexedDB")}}
 
-O **`IDBCursor`** é uma interface da [API IndexedDB](/pt-BR/docs/IndexedDB) que representa o [cursor](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravessar ou interagir sobre vários registros em um banco de dados.
+O **`IDBCursor`** é uma interface da [API IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API) que representa o [cursor](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_cursor) para atravessar ou interagir sobre vários registros em um banco de dados.
 
 O cursor tem uma fonte que indica qual índice ou armazenamento o objeto está sobre a iteração. Ele tem uma posição dentro do intervalo, e move-se numa direcção que é aumentar ou diminuir na ordem de chaves ficha. O cursor permite que um aplicativo para processar de forma assíncrona todos os registros na faixa do cursor.
 
@@ -29,7 +29,6 @@ Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue 
 - {{domxref("IDBCursor.source")}} {{readonlyInline}}
   - : Retorna um {{domxref("IDBObjectStore")}} ou {{domxref("IDBIndex")}} que o cursor é a iteração. Esta função nunca retorna nulo ou gera uma exceção, mesmo se o cursor está actualmente a ser iterativo, tem iterated além de seu fim, ou a sua operação não está ativa.
 - {{domxref("IDBCursor.direction")}} {{readonlyInline}}
-
   - : Retorna a direcção do percurso do cursor. Veja
 
     constantes
@@ -53,7 +52,7 @@ Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue 
 
 ## Example
 
-In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. The cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([view example live](http://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. The cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([view example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```
 function displayData() {

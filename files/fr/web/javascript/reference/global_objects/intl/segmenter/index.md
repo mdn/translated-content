@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 
 L'objet **`Intl.Segmenter`** permet de segmenter un texte en tenant compte de la locale. On peut ainsi obtenir les éléments utiles (graphèmes, mots ou phrases) d'une chaîne de caractères.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+
+console.log(iterator1.next().value.segment);
+// Expected output: 'Que'
+
+console.log(iterator1.next().value.segment);
+// Expected output: ' '
+```
 
 ## Constructeur
 
@@ -24,7 +37,7 @@ L'objet **`Intl.Segmenter`** permet de segmenter un texte en tenant compte de la
 - [`Intl.Segmenter.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
   - : Renvoie un nouvel objet dont les propriétés reflètent la locale et la granularité calculées lors de l'initialisation de cet objet `Intl.Segmenter`.
 - [`Intl.Segmenter.prototype.segment()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : Renvoie une nouvelle instance [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) itérable qui représente les segments de la chaîne de caractères selon la locale et la granularité portées par cette instance `Intl.Segmenter`.
+  - : Renvoie une nouvelle instance [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) itérable qui représente les segments de la chaîne de caractères selon la locale et la granularité portées par cette instance `Intl.Segmenter`.
 
 ## Exemples
 

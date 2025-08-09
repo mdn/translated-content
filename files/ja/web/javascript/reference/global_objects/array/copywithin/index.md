@@ -1,15 +1,26 @@
 ---
 title: Array.prototype.copyWithin()
+short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 l10n:
-  sourceCommit: 688f606b78fb7e375e5680cc1ae49c5b9d0bc0ea
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`copyWithin()`** は {{jsxref("Array")}} インスタンスのメソッドで、この配列の一部を配列内の他の場所にシャローコピーし、この配列を長さを変更せずに返します。
 
-{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.copyWithin()")}}
+
+```js interactive-example
+const array = ["a", "b", "c", "d", "e"];
+
+// インデックス 0 にインデックス 3 の要素をコピー
+console.log(array.copyWithin(0, 3, 4));
+// 予想される結果: Array ["d", "b", "c", "d", "e"]
+
+// インデックス 1 以降のすべての要素にインデックス 3 から末尾までをコピー
+console.log(array.copyWithin(1, 3));
+// 予想される結果: Array ["d", "d", "e", "d", "e"]
+```
 
 ## 構文
 
@@ -22,21 +33,21 @@ copyWithin(target, start, end)
 
 - `target`
   - : 並びのコピー先となる 0 から始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。これは `start` にある要素がコピーされる場所に対応し、`start` から `end` までのすべての要素が後続のインデックスにコピーされます。
-    - 負のインデックスの場合は、配列の末尾から逆に数えます。 `target < 0` の場合は、 `target + array.length` が使用されます。
+    - 負のインデックスの場合は、配列の末尾から逆に数えます。 `-array.length <= target < 0` の場合は、 `target + array.length` が使用されます。
     - `target < -array.length` の場合は、 `0` が使用されます。
     - `target >= array.length` の場合は、何もコピーされません。
     - `target` が正規化後の `start` の後に位置している場合、コピーは `array.length` の末尾までしか行われません（言い換えれば、 `copyWithin()` は配列を拡張しません）。
 - `start`
   - : 要素のコピー元の始まりを表す 0 から始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-    - 負のインデックスの場合は、配列の末尾から逆に数えます。 `start < 0` の場合は、 `start + array.length` が使用されます。
+    - 負のインデックスの場合は、配列の末尾から逆に数えます。 `-array.length <= start < 0` の場合は、 `start + array.length` が使用されます。
     - `start < -array.length` の場合は、 `0` が使用されます。
     - `start >= array.length` の場合は、何もコピーされません。
 - `end` {{optional_inline}}
   - : 要素のコピー元の末尾を表す 0 から始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。 `copyWithin()` のコピーは `end` の手前まで行います。
-    - 負のインデックスの場合は、配列の末尾から逆に数えます。 `end < 0` の場合は、 `end + array.length` が使用されます。
+    - 負のインデックスの場合は、配列の末尾から逆に数えます。 `-array.length <= end < 0` の場合は、 `end + array.length` が使用されます。
     - `end < -array.length` の場合は、 `0` が使用されます。
-    - `end >= array.length` の場合、または `end` が省略された場合は、 `array.length` が使用され、末尾までのすべての要素がコピーされます。
-    - 正規化後に `end` が `start` よりも前か同じ位置になったときは、何もコピーされません。
+    - `end >= array.length` の場合、 `end` が省略された場合、 `undefined` であった場合は、 `array.length` が使用され、末尾までのすべての要素がコピーされます。
+    - `end` が `start` が示す位置の前またはその位置を示す場合、何もコピーされません。
 
 ### 返値
 
@@ -109,6 +120,7 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 ## 関連情報
 
 - [`Array.prototype.copyWithin` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.copyWithin` のポリフィル](https://www.npmjs.com/package/array.prototype.copywithin)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.copyWithin()")}}

@@ -1,5 +1,5 @@
 ---
-title: ":host()"
+title: :host()
 slug: Web/CSS/:host_function
 ---
 
@@ -68,6 +68,6 @@ La règle `:host(.footer) { color : red; }` s'applique à toutes les instances d
 
 ## Voir aussi
 
-- [Les composants web](/fr/docs/Web/Web_Components)
+- [Les composants web](/fr/docs/Web/API/Web_components)
 - {{cssxref(":host")}}
 - {{cssxref(":host-context()")}}

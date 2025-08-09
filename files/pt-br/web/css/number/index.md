@@ -5,7 +5,7 @@ slug: Web/CSS/number
 
 {{CSSRef}}
 
-O [tipo de dado CSS](/pt-BR/docs/Web/CSS/CSS_Types) **`<number>`** representa um número, sendo esse ou um inteiro ou um componente fracional.
+O [tipo de dado CSS](/pt-BR/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<number>`** representa um número, sendo esse ou um inteiro ou um componente fracional.
 
 ## Sintaxe
 
@@ -13,7 +13,7 @@ A sintaxe de `<number>` estende a sintaxe de {{CSSxRef("&lt;integer&gt;")}}. Um 
 
 ## Interpolação
 
-Quando animado, os valores de `<number>` são interpolados como números reais e de ponto flutuante. A velocidade da interpolação é determinada pelo [tempo da função](/pt-BR/docs/Web/CSS/timing-function) associada à animação.
+Quando animado, os valores de `<number>` são interpolados como números reais e de ponto flutuante. A velocidade da interpolação é determinada pelo [tempo da função](/pt-BR/docs/Web/CSS/easing-function) associada à animação.
 
 ## Exemplos
 

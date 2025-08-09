@@ -25,7 +25,7 @@ slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 Tabs API 機能の大半では権限は不要ですが、次の例外はあります:
 
 - Tab オブジェクトの `Tab.url`, `Tab.title`, `Tab.favIconUrl` プロパティにアクセスするには`"tabs`" 権限が必要です。Firefox では、URL の [query](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) を実行するのに`"tabs`"が要ります。
-- {{WebExtAPIRef("tabs.executeScript")}} や {{WebExtAPIRef("tabs.insertCSS")}} には [Host 権限](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)が必要です。
+- {{WebExtAPIRef("tabs.executeScript")}} や {{WebExtAPIRef("tabs.insertCSS")}} には [Host 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)が必要です。
 
 下記は、拡張機能の manifest.json ファイルで `"tabs"` 権限を要求する方法です:
 
@@ -36,12 +36,12 @@ Tabs API 機能の大半では権限は不要ですが、次の例外はあり�
 ],
 ```
 
-この要求により、訪問するすべてのウェブサイトですべての Tabs API 機能を使うことができます。また、host 権限不要の {{WebExtAPIRef("tabs.executeScript")}} や {{WebExtAPIRef("tabs.insertCSS")}} を使うのに、[`"activeTab"`](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)の形で権限を要求する別のこの権限は `"tabs"` に `<all_urls>` つきのものと同じですが、次の 2 つの制限があります:
+この要求により、訪問するすべてのウェブサイトですべての Tabs API 機能を使うことができます。また、host 権限不要の {{WebExtAPIRef("tabs.executeScript")}} や {{WebExtAPIRef("tabs.insertCSS")}} を使うのに、[`"activeTab"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)の形で権限を要求する別のこの権限は `"tabs"` に `<all_urls>` つきのものと同じですが、次の 2 つの制限があります:
 
 - ユーザーは拡張機能のページアクション、コンテキストメニュー、ショートカットキーいずれかでやりとりせねばならない。
 - アクティブなタブ内の権限のみ許可される。
 
-このアプローチの利点は、拡張機能が "Access your data for all websites" という警告をユーザーに表示しないことです。これは `<all_urls>` 権限により、拡張機能がいつでもどんなタブでも実行できるのに対し、[`"activeTab"`](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) では、現在のタブでのユーザーが要求したアクションのみ実行するためです。
+このアプローチの利点は、拡張機能が "Access your data for all websites" という警告をユーザーに表示しないことです。これは `<all_urls>` 権限により、拡張機能がいつでもどんなタブでも実行できるのに対し、[`"activeTab"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) では、現在のタブでのユーザーが要求したアクションのみ実行するためです。
 
 ## タブとそのプロパティの探検
 
@@ -170,7 +170,6 @@ function listTabs() {
 
 1. {{WebExtAPIRef("tabs.Tab")}} オブジェクトからの最初の 5 項目でループする。
 2. 各項目ごとに、文書のフラグメントのハイパーリンクを追加する。
-
    - リンクのラベル—つまり、そのテキスト—が、タブのタイトル (ない場合はその ID)を使って、セットされる
    - タブの ID を使ってリンクのアドレスがセットされる。
 
@@ -323,7 +322,7 @@ if (e.target.id === "tabs-move-beginning") {
 }
 ```
 
-It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](/ja/docs/Mozilla/Add-ons/WebExtensions/Debugging) console, which can be useful when resolving issues found during development.
+It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](https://extensionworkshop.com/documentation/develop/debugging/) console, which can be useful when resolving issues found during development.
 
 ![Example of the console.log output, from the move tabs feature, in the debugging console](console.png)
 
@@ -446,7 +445,7 @@ Let's walk through how it's set up.
 
 To use the CSS features you need either:
 
-- `"tabs"` permission and [host permission](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) or
+- `"tabs"` permission and [host permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or
 - `"activeTab"` permission.
 
 The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("tabs.insertCSS")}} and {{WebExtAPIRef("tabs.removeCSS")}} in the active tab when run from the extension's browser or page action, context menu, or a shortcut.
@@ -534,12 +533,10 @@ browser.pageAction.onClicked.addListener(toggleCSS);
 `toggleCSS()` gets the title of the `pageAction` and then takes the action described:
 
 - **For "Apply CSS":**
-
   - toggles the `pageAction` icon and title to the "remove" versions.
   - applies the CSS using {{WebExtAPIRef("tabs.insertCSS")}}.
 
 - **For "Remove CSS":**
-
   - toggles the `pageAction` icon and title to the "apply" versions.
   - removes the CSS using {{WebExtAPIRef("tabs.removeCSS")}}.
 
@@ -582,5 +579,5 @@ There are a couple of other Tabs API features that don't fit into one of the ear
 
 If you want to learn more about the Tabs API, check out:
 
-- [Tabs API reference](/ja/Add-ons/WebExtensions/API/tabs)
-- [Example extensions](/ja/Add-ons/WebExtensions/Examples) (many of which use the Tabs API)
+- [Tabs API reference](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+- [Example extensions](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples) (many of which use the Tabs API)

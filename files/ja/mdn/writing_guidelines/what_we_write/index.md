@@ -2,10 +2,8 @@
 title: 私たちが書くもの
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: 3c0315d7898d2a5bc21784002c9cdc9dddcf559d
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
-
-{{MDNSidebar}}
 
 MDN Web Docs には、ウェブ開発者が**ブラウザーを意識することなく**コードを書けるように、**ブラウザー中立的な**文書を掲載しています。この記事では、特定のトピックやコンテンツの種類が MDN Web Docs に入れられるべきかどうかについての情報を探ります。
 
@@ -18,6 +16,9 @@ MDN Web Docs には、ウェブ開発者が**ブラウザーを意識するこ�
 MDN のすべてのコンテンツは、それが現れる技術セクションに関連していなければなりません。スパム（商業広告）およびその他の無関係なコンテンツは、このサイトでは受け付けられません。 Mozilla MDN のスタッフの裁量により、スパムを投稿するユーザーは MDN から追放されることがあります。
 
 リンクされているトピックに関連する商用サイトへの外部リンクは、ケースバイケースで判断されます。ウェブ開発者を支援するうえでのその価値は、リンク先サイトの商業的利益を上回るものでなければなりません。
+
+> [!NOTE]
+> MDN の[ウェブ開発の学習](/ja/docs/Learn_web_development)の章には、商用サイトへのリンクが表示されますが、これらは必要最小限に使用されており、信頼できる教育パートナーのみにリンクしています。これについての詳細は、[ウェブ開発の学習の執筆ガイドライン > 外部リンクと埋め込み](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)をご覧ください。
 
 ### 中立性
 
@@ -33,7 +34,7 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 
 新しいリファレンスページやガイドについては、[新しい issue](https://github.com/mdn/mdn/issues/new/choose) で、提案する内容とその理由を説明するディスカッションを開いてください（できるだけ明確にしてください）。
 
-コンテンツの新しいセクションを含む大規模なプロジェクトを提案する場合は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照し、申請プロセスについても概説してください。
+コンテンツの新しいセクションを含む大規模なプロジェクトを提案する場合は、[掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)ページを参照し、申請プロセスについても概説してください。
 
 ## どのようなトピックが MDN Web Docs に載るのか
 
@@ -56,14 +57,14 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 - [Web API](/ja/docs/Web/API)
 - [HTTP](/ja/docs/Web/HTTP)
 
-また、[SVG](/ja/docs/Web/SVG), [XML](/ja/docs/Web/XML), [WebAssembly](/ja/docs/WebAssembly), [アクセシビリティ](/ja/docs/Learn/Accessibility)など、より幅広いトピックについても文書化しています。さらに、これらの技術に関する豊富な[学習ガイド](/ja/docs/Learn)や[用語集](/ja/docs/Glossary)を提供しています。
+また、[SVG](/ja/docs/Web/SVG), [XML](/ja/docs/Web/XML), [WebAssembly](/ja/docs/WebAssembly), [アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility)など、より幅広いトピックについても文書化しています。さらに、これらの技術に関する豊富な[学習ガイド](/ja/docs/Learn_web_development)や[用語集](/ja/docs/Glossary)を提供しています。
 
 > [!NOTE]
-> バックエンドテクノロジーには、別の文書化の場所があり、 MDN Web Docs はこれにとって代わるつもりはありませんが、[いくつかの例外はあります](/ja/docs/Learn/Server-side)。
+> バックエンドテクノロジーには、別の文書化の場所があり、 MDN Web Docs はこれにとって代わるつもりはありませんが、[いくつかの例外はあります](/ja/docs/Learn_web_development/Extensions/Server-side)。
 
 MDN Web Docs のすべてのコンテンツは、それが掲載されている技術分野に関連したものでなければなりません。投稿者は、書き方やコードサンプルなどについて、この [MDN 執筆ガイドライン](/ja/docs/MDN/Writing_guidelines) に従うことが期待されています。
 
-MDN Web Docs に技術を文書化できるかどうかの基準についての詳細は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照してください。
+MDN Web Docs に技術を文書化できるかどうかの基準についての詳細は、[掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)ページを参照してください。
 
 ### 新しい技術を文書化するとき
 
@@ -92,7 +93,7 @@ MDN Web Docs に不適切なトピックの例としては、以下のような�
 
 - ウェブに公開されない、あるブラウザーに特化した技術。
 - ウェブに関連しない技術。
-- エンドユーザー向けの文書化。例えば Mozilla 製品の場合、そのような文書は [Mozilla サポートサイト](https://support.mozilla.org) に属します。
+- エンドユーザー向けの文書化。例えば Mozilla 製品の場合、そのような文書は [Mozilla サポートサイト](https://support.mozilla.org/) に属します。
 - 自己リンクや自己宣伝のための外部リンク。外部リンクを追加する前に、[執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#外部リンク)にあるガイドラインを確認してみてください。
 
 ### 文書を削除する場合

@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Game_over", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Collision_detection")}}
 
-이번 단계는 [Gamedev Canvas tutorial](/ko/docs/Games/Workflows/Breakout_game_from_scratch)의 여섯 번째 학습입니다. [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)에서 이번 학습의 소스코드를 확인할 수 있습니다.
+이번 단계는 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 여섯 번째 학습입니다. [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)에서 이번 학습의 소스코드를 확인할 수 있습니다.
 
 게임플레이 원리를 수정한 후에, 우리는 게임에서 패배할 수 있게 되었습니다. 이것은 실제 게임에 보다 가까운 느낌이기 때문에 훌륭합니다. 하지만 벽과 패들에 공이 튀기는 것 말고 할 수 있는 것이 없기 때문에 금방 지루해집니다. 벽돌깨기 게임에서 진정으로 필요로 한 것은 공으로 파괴할 벽돌입니다. 이 것이 지금 우리가 만들 것입니다!
 

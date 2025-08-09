@@ -82,7 +82,7 @@ ISO 8859-1 혹은 Unicode 문자(가령 `å` 나 `ü`)도 식별자에 사용할
 - `var x = 42`와 같이 {{jsxref("Statements/var", "var")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 실행 맥락에 따라 **지역 및 전역 변수**를 선언하는데 모두 사용될 수 있습니다.
 - `let y = 13`와 같이 {{jsxref("Statements/const", "const")}} 혹은 {{jsxref("Statements/let", "let")}} 키워드로 변수를 선언할 수 있습니다. 이 구문은 블록 스코프 지역 변수를 선언하는데 사용될 수 있습니다. 아래 [변수 스코프](#변수_스코프)를 참고하세요.
 
-[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 구문을 사용하여 [객체 리터럴](#객체_리터럴)에서 값을 풀기 위해 변수를 선언할 수 있습니다. 예를 들면, `let { bar } = foo`. 이 구문은 `bar`라는 이름의 변수를 생성하고 `foo` 객체에 있는 동일한 이름의 키에 해당하는 값을 변수에 할당합니다.
+[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring) 구문을 사용하여 [객체 리터럴](#객체_리터럴)에서 값을 풀기 위해 변수를 선언할 수 있습니다. 예를 들면, `let { bar } = foo`. 이 구문은 `bar`라는 이름의 변수를 생성하고 `foo` 객체에 있는 동일한 이름의 키에 해당하는 값을 변수에 할당합니다.
 
 간단히 변수에 값을 할당 할 수도 있습니다. 예를 들어, `x = 42` 와 같은 구문은 [**선언되지 않은 전역변수**](/ko/docs/Web/JavaScript/Reference/Statements/var#설명)를 만듭니다. 뿐만 아니라, JavaScript의 엄격한 경고를 만들어냅니다. 선언되지 않은 전역변수는 의도되지 않은 동작을 만들어내고는 합니다. 따라서 선언되지 않은 전역변수를 사용하면 안됩니다.
 
@@ -303,7 +303,6 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 최신 ECMAScript 표준은 8가지 데이터 형을 정의합니다.
 
 - 7가지 {{Glossary("Primitive", "원시")}} 데이터 형
-
   1. {{Glossary("Boolean")}}. `true`와 `false`
   2. {{Glossary("null")}}. null 값을 나타내는 특별한 키워드. (JavaScript는 대소문자를 구분하므로, `null`은 `Null`, `NULL` 혹은 다른 변형과도 다릅니다.)
   3. {{Glossary("undefined")}}. 값이 정의되어 있지 않은 최상위 속성.
@@ -397,7 +396,7 @@ let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
 > [!NOTE]
-> 배열 리터럴은 일종의 객체 초기자(initializer) 입니다. [객체 초기자 사용하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#객체_초기자_사용하기) 참고.
+> 배열 리터럴은 일종의 객체 초기자(initializer) 입니다. [객체 초기자 사용하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects#%ea%b0%9d%ec%b2%b4_%ec%b4%88%ea%b8%b0%ec%9e%90_%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0) 참고.
 
 배열이 최상단 스크립트에서 리터럴을 사용하여 만들어진 경우, JavaScript는 배열 리터럴을 포함한 식을 평가할 때마다 배열로 해석합니다. 게다가, 함수에서 사용되는 리터럴은 함수가 호출될 때마다 생성됩니다.
 
@@ -581,7 +580,7 @@ var obj = {
 
 ### 정규식 리터럴
 
-정규식 리터럴은 ([정규식 상세](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)) 슬래시 사이에 감싸인 패턴입니다. 다음은 정규식 리터럴 예제입니다.
+정규식 리터럴은 ([정규식 상세](/ko/docs/Web/JavaScript/Guide/Regular_expressions)) 슬래시 사이에 감싸인 패턴입니다. 다음은 정규식 리터럴 예제입니다.
 
 ```js
 var re = /ab+c/;
@@ -790,7 +789,7 @@ and so is foo.`;
 - [흐름 제어와 에러 처리](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [루프와 반복](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [함수](/ko/docs/Web/JavaScript/Guide/Functions)
-- [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 다음 장에서는, 흐름 제어 구조와 에러 처리를 살펴 볼 것입니다.
 

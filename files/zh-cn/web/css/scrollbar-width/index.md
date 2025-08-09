@@ -3,8 +3,6 @@ title: scrollbar-width
 slug: Web/CSS/scrollbar-width
 ---
 
-{{CSSRef}}
-
 **`scrollbar-width`** 属性允许开发者在元素显示滚动条时设置滚动条的最大宽度。
 
 ## 语法
@@ -26,7 +24,6 @@ scrollbar-width: unset;
 ### 取值
 
 - _\<scrollbar-width>_
-
   - : 将滚动条的宽度定义为数值宽度或者预定义宽度，当被定义为预定义宽度时，则必须为下列值之一：
 
     <table class="standard-table">
@@ -55,8 +52,8 @@ scrollbar-width: unset;
 
 WCAG 标准 2.1.1（键盘）已经存在很长时间，以便为基本键盘可访问性提供建议，并且这应该包括内容区域的滚动。在 WCAG 2.1 中引入的标准 2.5.5（目标大小）建议触摸目标的宽度和高度至少为 44 像素（尽管在高分辨率屏幕上这个问题会更严重，建议进行全面测试）。
 
-- [MDN 理解 WCAG，指南 2.1 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.1_—_keyboard_accessible_make_all_functionality_available_from_a_keyboard)
-- [MDN 理解 WCAG，指南 2.5 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.5_input_modalities_make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard)
+- [MDN 理解 WCAG，指南 2.1 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.1_—_keyboard_accessible_make_all_functionality_available_from_a_keyboard)
+- [MDN 理解 WCAG，指南 2.5 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.5_input_modalities_make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard)
 - [理解成功标准 2.1.1 | W3C 理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
 - [理解成功标准 2.5.5 | W3C 理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 

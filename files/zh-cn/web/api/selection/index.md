@@ -19,7 +19,7 @@ var range = selObj.getRangeAt(0);
 ```
 
 - `selObj` 被赋予一个 Selection 对象
-- `range` 被赋予一个 [Range](/zh-CN/docs/DOM/range) 对象
+- `range` 被赋予一个 [Range](/zh-CN/docs/Web/API/Range) 对象
 
 调用 {{domxref("Selection.toString()","")}} 方法会返回被选中区域中的**纯文本**。要求变量为字符串的函数会自动对对象进行该处理，例如：
 
@@ -39,25 +39,21 @@ window.alert(selObj);
 - 范围 (range)
   - : 范围指的是文档中连续的一部分。一个范围包括整个节点，也可以包含节点的一部分，例如文本节点的一部分。用户通常下只能选择一个范围，但是有的时候用户也有可能选择多个范围（例如当用户按下 Control 按键并框选多个区域时，Chrome 中禁止了这个操作，译者注）。“范围”会被作为 {{domxref("Range")}} 对象返回。Range 对象也能通过 DOM 创建、增加、删减。
 - 可编辑元素 (editing host)
-  - : 一个用户可编辑的元素（例如一个使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 的 HTML 元素，或是在启用了 {{domxref("Document.designMode", "designMode")}} 的 {{domxref("Document")}} 的子元素）。详见 [开发者笔记](#Selection_API_在可编辑元素焦点更改方面的行为)。
+  - : 一个用户可编辑的元素（例如一个使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#contenteditable) 的 HTML 元素，或是在启用了 {{domxref("Document.designMode", "designMode")}} 的 {{domxref("Document")}} 的子元素）。详见 [开发者笔记](#selection_api_在可编辑元素焦点更改方面的行为)。
 
 ## 属性
 
 - {{domxref("Selection/anchorNode","anchorNode")}}{{ReadOnlyInline}}
   - : 返回该选区起点所在的节点（{{domxref("Node")}}）。
 - {{domxref("Selection/anchorOffset","anchorOffset")}}{{ReadOnlyInline}}
-
   - : 返回一个数字，其表示的是选区起点在 {{domxref("Selection/anchorNode","anchorNode")}} 中的位置偏移量。
-
     1. 如果 `anchorNode` 是文本节点，那么返回的就是从该文字节点的第一个字开始，直到被选中的第一个字之间的字数（如果第一个字就被选中，那么偏移量为零）。
     2. 如果 `anchorNode` 是一个元素，那么返回的就是在选区第一个节点之前的同级节点总数。(这些节点都是 `anchorNode` 的子节点)
 
 - {{domxref("Selection/focusNode","focusNode")}}{{ReadOnlyInline}}
   - : 返回该选区终点所在的节点。
 - {{domxref("Selection/focusOffset","focusOffset")}}{{ReadOnlyInline}}
-
   - : 返回一个数字，其表示的是选区终点在 {{domxref("Selection/focusNode","focusNode")}} 中的位置偏移量。
-
     1. 如果 `focusNode` 是文本节点，那么选区末尾未被选中的第一个字，在该文字节点中是第几个字（从 0 开始计），就返回它。
     2. 如果 `focusNode` 是一个元素，那么返回的就是在选区末尾之后第一个节点之前的同级节点总数。
 
@@ -124,13 +120,13 @@ var range = selObj.getRangeAt(0);
 
 `getRangeAt` 方法返回对象的**引用**，并且对该函数返回的 `Range` 对象所运行的函数，会直接作用到选区上，并可能影响用户焦点的情况。
 
-正如 [Selection API 规范](http://www.w3.org/TR/selection-api/#h_note_15) 所指出的，Selection API 最初由 Netscape 创建，并允许多个区域（例如，允许用户从 {{HTMLElement("table")}} 中选择列）。但是，Gecko 以外的浏览器没有实现多个区域，而且规范还要求选择的内容始终（仅）具有一个范围（允许多个区域可能引起不必要的兼容性问题，例如同时从多处输入，译者注）。
+正如 [Selection API 规范](https://www.w3.org/TR/selection-api/#h_note_15) 所指出的，Selection API 最初由 Netscape 创建，并允许多个区域（例如，允许用户从 {{HTMLElement("table")}} 中选择列）。但是，Gecko 以外的浏览器没有实现多个区域，而且规范还要求选择的内容始终（仅）具有一个范围（允许多个区域可能引起不必要的兼容性问题，例如同时从多处输入，译者注）。
 
 ### Selection 及输入焦点
 
 选择和输入焦点（由 {{domxref("Document.activeElement")}} 表示）有一个复杂的关系，该关系因浏览器而异。在跨浏览器兼容的代码中，最好分别处理它们。
 
-Safari 和 Chrome（与 Firefox 不同）目前在以编程方式修改 `Selection` 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 [W3C Bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) 和 [WebKit bug 3869](https://webkit.org/b/3869)）。
+Safari 和 Chrome（与 Firefox 不同）目前在以编程方式修改 `Selection` 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 [W3C Bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) 和 [WebKit bug 38696](https://webkit.org/b/38696)）。
 
 ### Selection API 在可编辑元素焦点更改方面的行为
 
@@ -178,6 +174,6 @@ Selection API 有一个共同的行为（即在浏览器之间共通），该行
 ## 参见
 
 - {{domxref("window.getSelection")}}，{{domxref("document.getSelection")}}及{{domxref("Range")}}
-- HTML5 DOM Range [Interface Selection](http://html5.org/specs/dom-range.html#selection)
+- HTML5 DOM Range [Interface Selection](https://html5.org/specs/dom-range.html#selection)
 - [IDL definition in Mozilla cross-reference](http://lxr.mozilla.org/mozilla/source/content/base/public/nsISelection.idl)
 - [目前 CSS 实现竖排文本较为通用的方式是什么？](http://www.zhihu.com/question/20874144)（页内搜索"Bidi"可了解 Bidi 优先顺序）

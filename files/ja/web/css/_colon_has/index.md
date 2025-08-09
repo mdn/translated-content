@@ -1,11 +1,9 @@
 ---
-title: ":has()"
+title: :has()
 slug: Web/CSS/:has
 l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
-
-{{CSSRef}}
 
 **`:has()`** は CSS の[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、引数として渡される[相対セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#相対セレクター)のいずれかが、その要素から辿ってアンカーとして少なくとも一つの要素とマッチする場合に、その要素を表します。この疑似クラスは、[相対セレクターリスト](/ja/docs/Web/CSS/Selector_list#寛容な相対セレクターリスト)を引数として取ることで、参照している要素に関して親要素や前の兄弟要素を選択する方法を提供します。
 
@@ -16,7 +14,7 @@ h1:has(+ p) {
 }
 ```
 
-`:has()` 疑似クラスは {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} と同様に、引数の中で最も大きい[詳細度](/ja/docs/Web/CSS/Specificity)が `:has()` の詳細度として与えられます。
+`:has()` 疑似クラスは {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} と同様に、引数の中で最も大きい[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が `:has()` の詳細度として与えられます。
 
 ## 構文
 
@@ -231,4 +229,4 @@ CSS における類似の構成は `.abc:has(+ .xyz)` です。これは、次�
 - [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)

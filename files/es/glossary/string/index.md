@@ -13,5 +13,5 @@ En {{Glossary("JavaScript","JavaScript")}}, un String es uno de los {{Glossary("
 
 ### Conocimientos generales
 
-- [Tipos de datos y estructura de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures#String_type)
+- [Tipos de datos y estructura de datos en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#string_type)
 - [String en Wikipedia](http://es.wikipedia.org/wiki/Cadena_de_caracteres)

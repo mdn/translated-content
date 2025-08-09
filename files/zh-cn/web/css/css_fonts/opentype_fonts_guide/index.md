@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f78cc1a104586ebcdbba5f3d3c7df7083d369068
 ---
 
-{{CSSRef}}
-
 字体特性（font feature）或变体（variant）指的是在同一个 OpenType 字体中包含的不同的字形或字符样式。它包括了连字（ligature，由字符组合而成的特殊字形，如“ﬁ”或“ﬄ”）、字偶距（kerning，调整特定字母组合的间距）、分数形式、数字样式，以及其他内容。这些都被称为 OpenType 特性，而且可以通过特定属性和一种底层控制属性（{{cssxref("font-feature-settings")}}）在 web 中使用。本文将介绍在 CSS 中使用 OpenType 字体特性所需的所有内容。
 
 某些字体会默认启用一个或多个特性（通常是字偶距和默认连字），而其他特性留给设计师或开发者选择性地在特定场景中启用。
@@ -152,7 +150,7 @@ OpenType 特性最常用的情形之一，就是正确地呈现小型大写字�
 
 ## 字体特性设置
 
-{{cssxref("font-feature-settings")}} 是允许直接访问每个命名的 OpenType 特性的“底层语法”。这样可以获得更多的控制权，但也有一些缺点，比如它对继承的影响，以及——如上所述——如果你想改变一个设置，你就必须重新声明整个字符串（除非你使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)来设置值）。因此，最好在可能的情况下使用上面展示的标准属性。
+{{cssxref("font-feature-settings")}} 是允许直接访问每个命名的 OpenType 特性的“底层语法”。这样可以获得更多的控制权，但也有一些缺点，比如它对继承的影响，以及——如上所述——如果你想改变一个设置，你就必须重新声明整个字符串（除非你使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)来设置值）。因此，最好在可能的情况下使用上面展示的标准属性。
 
 其具有大量可能的特性。你可以在上面看到其中一部分的示例，也有一些资源可以帮助你找到更多的特性。
 

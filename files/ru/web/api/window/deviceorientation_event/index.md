@@ -5,12 +5,12 @@ slug: Web/API/Window/deviceorientation_event
 
 {{APIRef("Device Orientation Events")}}
 
-Событие `deviceorientation` срабатывает, когда с сенсоров ориентации поступают новые данные о текущем положении устройства внутри Земной системы координат. Эти данные собираются с помощью магнитометра устройства. Более детальное объяснение дано в [Ориентация и объяснение данных движения](/ru/docs/DOM/Orientation_and_motion_data_explained).
+Событие `deviceorientation` срабатывает, когда с сенсоров ориентации поступают новые данные о текущем положении устройства внутри Земной системы координат. Эти данные собираются с помощью магнитометра устройства. Более детальное объяснение дано в [Ориентация и объяснение данных движения](/ru/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained).
 
 ## Общая информация
 
 - Спецификация
-  - : Событие [DeviceOrientation](http://www.w3.org/TR/orientation-event/#deviceorientation)
+  - : Событие [DeviceOrientation](https://www.w3.org/TR/orientation-event/#deviceorientation)
 - Определение
   - : DeviceOrientationEvent
 - Всплывает
@@ -70,12 +70,12 @@ var handleOrientationEvent = function (
 
 ## Похожие события
 
-- [`devicemotion`](/ru/docs/Web/Events/devicemotion)
+- [`devicemotion`](/ru/docs/Web/API/Window/devicemotion_event)
 
 ## Смотрите также
 
 - {{domxref("DeviceMotionEvent")}}
 - {{domxref("window.ondeviceorientation")}}
-- [Определение ориентации устройства](/ru/docs/Web/API/Detecting_device_orientation)
-- [Ориентация и объяснение данных о движении](/ru/docs/Web/Guide/Events/Orientation_and_motion_data_explained)
+- [Определение ориентации устройства](/ru/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Ориентация и объяснение данных о движении](/ru/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
 - Имитация события смены ориентации в настольный браузерах с помощью [orientation-devtool](http://louisremi.github.com/orientation-devtool/)

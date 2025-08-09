@@ -19,7 +19,7 @@ elementList = baseElement.querySelectorAll(selectors);
 
 - `elementList —` результирующий список объектов типа [element](/ru/docs/Web/API/Element) (результаты).
 - `baseElement —` [элемент](/ru/docs/Web/API/Element), над которым выполняется функция.
-- `selectors —` [текст селектора](/ru/docs/Web/Guide/CSS/Getting_Started/Selectors) для выбора нужных элементов.
+- `selectors —` [текст селектора](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) для выбора нужных элементов.
 
 ## Примеры
 
@@ -58,10 +58,10 @@ querySelectorAll() был представлен как часть WebApps API.
 
 ## Ссылки на спецификации
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
+- [Selectors API](https://www.w3.org/TR/selectors-api/)
 
 ## Смотрите также
 
-- [`document.querySelectorAll`](/ru/docs/DOM/Document.querySelectorAll)
-- [`document.querySelector`](/ru/docs/DOM/Document.querySelector)
+- [`document.querySelectorAll`](/ru/docs/Web/API/Document/querySelectorAll)
+- [`document.querySelector`](/ru/docs/Web/API/Document/querySelector)
 - [Сниппеты для `querySelector`](/ru/docs/Code_snippets/QuerySelector)

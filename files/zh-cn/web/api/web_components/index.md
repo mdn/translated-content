@@ -42,8 +42,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
   - : 包含自定义元素相关功能，最值得注意的是 {{domxref("CustomElementRegistry.define()")}} 方法用来注册新的自定义元素，这样就可以在文档中使用它们。
 - {{domxref("Window.customElements")}}
   - : 返回 `CustomElementRegistry` 对象的引用。
-- [生命周期回调](/zh-CN/docs/Web/API/Web_components/Using_custom_elements#Using_the_lifecycle_callbacks)
-
+- [生命周期回调](/zh-CN/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
   - : 定义在自定义元素的类定义中的特殊回调函数，影响其行为：
     - `connectedCallback`：当自定义元素第一次被连接到文档 DOM 时被调用。
     - `disconnectedCallback`：当自定义元素与文档 DOM 断开连接时被调用。
@@ -52,7 +51,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 
 - 创建自定义内置元素的扩展
   - : 定义了以下扩展：
-    - [`is`](/zh-CN/docs/Web/HTML/Global_attributes/is) 全局 HTML 属性：允许你指定标准 HTML 元素像定义的内置元素一样工作。
+    - [`is`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/is) 全局 HTML 属性：允许你指定标准 HTML 元素像定义的内置元素一样工作。
     - {{domxref("Document.createElement()")}} 方法的“is”选项：允许你创建一个标准 HTML 元素的实例，表现得像一个给定的已注册的自定义内置元素。
 - CSS 伪类
   - : 与自定义元素特别相关的伪类：
@@ -84,7 +83,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
   - : 包含一个 HTML 片段，不会在文档初始化时渲染。但是可以在运行时使用 JavaScript 显示。主要用作自定义元素结构的基础。关联的 DOM 接口是{{domxref("HTMLTemplateElement")}}。
 - {{htmlelement("slot")}}
   - : web component 中的一个占位符，你可以填充自己的标记，这样你就可以创建单独的 DOM 树并将它们呈现在一起。关联的 DOM 接口是{{domxref("HTMLSlotElement")}}。
-- [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) 全局 HTML 属性
+- [`slot`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/slot) 全局 HTML 属性
   - : 将在 shadow DOM 树中的插槽分配给一个元素。
 - {{domxref("Element.assignedSlot")}}
   - : 一个只读属性，它返回对插入此元素的 {{htmlelement("slot")}} 的引用。

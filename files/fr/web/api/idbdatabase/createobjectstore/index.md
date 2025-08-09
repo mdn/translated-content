@@ -24,7 +24,6 @@ var objectStore = db.createObjectStore(name, optionalParameters);
 - `name`
   - : Le nom du magasin d'objet à ajouter. Il est possible d'ajouter un magasin d'objet dont le nom est la chaîne vide (!).
 - `optionalParameters` {{optional_inline}}
-
   - : Un objet qui permet de décrire plus finement le magasin d'objets avec ces propriétés :
 
     | Propriété       | Description                                                                                                                                                                           |
@@ -98,7 +97,7 @@ request.onupgradeneeded = function (event) {
 
 ## Voir aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrer des transactions : {{domxref("IDBDatabase")}}
 - Manipuler des transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

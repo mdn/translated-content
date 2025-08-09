@@ -3,7 +3,7 @@ title: "Document: prerendering プロパティ"
 short-title: prerendering
 slug: Web/API/Document/prerendering
 l10n:
-  sourceCommit: 67a5e464f835677f78c744fc69a84cc83186b988
+  sourceCommit: 420ee5d00e14eec60923ada0e48325e44d613a1b
 ---
 
 {{ APIRef("Speculation Rules API") }}{{seecompattable}}
@@ -30,7 +30,7 @@ if (document.prerendering) {
 function pagePrerendered() {
   return (
     document.prerendering ||
-    self.performance?.getEntriesByType?.("navigation")[0]?.activationStart > 0
+    performance.getEntriesByType("navigation")[0]?.activationStart > 0
   );
 }
 ```
@@ -47,7 +47,26 @@ if (document.prerendering) {
 }
 ```
 
-> **メモ:** [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/Web/API/Speculation_Rules_API#安全でない投機的読み込み条件)の節で、遅延させたい活動の種類に関する詳細情報を参照してください。
+> [!NOTE]
+> [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/Web/API/Speculation_Rules_API#安全でない投機的読み込み条件)の節で、遅延させたい活動の種類に関する詳細情報を参照してください。
+
+事前レンダリングがアクティベーションされた頻度を測定するには、次の 3 つの API をすべて組み合わせます。 `document.prerendering` はページが現在事前レンダリング中であるかを検出し、`prerenderingchange` は事前レンダリングされた後にアクティベートされたかを監視し、`activationStart` はページが過去に事前レンダリングされたかをチェックします。
+
+```js
+if (document.prerendering) {
+  document.addEventListener(
+    "prerenderingchange",
+    () => {
+      console.log("Prerender activated after this script ran");
+    },
+    { once: true },
+  );
+} else if (performance.getEntriesByType("navigation")[0]?.activationStart > 0) {
+  console.log("Prerender activated before this script ran");
+} else {
+  console.log("This page load was not via prerendering");
+}
+```
 
 ## 仕様書
 
@@ -61,3 +80,4 @@ if (document.prerendering) {
 
 - [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} イベント
+- {{domxref("PerformanceNavigationTiming.activationStart")}} プロパティ

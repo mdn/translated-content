@@ -14,7 +14,7 @@ width: calc(100% - 80px);
 
 ## Syntax
 
-A função `calc()` recebe uma simples expressão como parâmetro e o resultado desta expressão é utilizado como valor. Pode ser uma simples expressão, combinando os seguintes operadores, utilizando padrão [operator precedence rules](/pt-BR/docs/Learn/JavaScript/First_steps/Math#Operator_precedence):
+A função `calc()` recebe uma simples expressão como parâmetro e o resultado desta expressão é utilizado como valor. Pode ser uma simples expressão, combinando os seguintes operadores, utilizando padrão [operator precedence rules](/pt-BR/docs/Learn_web_development/Core/Scripting/Math#operator_precedence):
 
 - `+`
   - : Adição.
@@ -100,7 +100,7 @@ Aqui, o próprio formulário é estabelecido para utilizar 1/6 da largura da jan
 
 ### calc( ) inserido em variáveis de CSS
 
-Você também pode utilizar `calc()` com [variáveis de CSS](/pt-BR/docs/Web/CSS/CSS_Variables). Considere o seguinte código:
+Você também pode utilizar `calc()` com [variáveis de CSS](/pt-BR/docs/Web/CSS/CSS_cascading_variables). Considere o seguinte código:
 
 ```css
 .foo {

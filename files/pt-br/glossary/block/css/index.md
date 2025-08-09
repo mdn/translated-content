@@ -13,4 +13,4 @@ Usando a propriedade {{cssxref("display")}} você pode alterar a forma como um e
 
 ### Conhecimento geral
 
-- [Modelo de formatação visual](/pt-BR/docs/Web/Guide/CSS/Visual_formatting_model)
+- [Modelo de formatação visual](/pt-BR/docs/Web/CSS/Visual_formatting_model)

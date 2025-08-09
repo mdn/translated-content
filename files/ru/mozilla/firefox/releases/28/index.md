@@ -3,8 +3,6 @@ title: Firefox 28 для разработчика
 slug: Mozilla/Firefox/Releases/28
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 28 был выпущен 18 марта 2014 года. Список ключевых изменений в данной статье будет полезен не только веб-разработчикам, но и Firefox-, Gecko-разработчикам и разработчикам дополнений.
 
 Хотите помочь документировать Firefox 28? Просмотрите [список недостатков, которые надо устранить](http://beta.elchi3.de/doctracker/#list=fx&version=28.0) и приступайте!
@@ -28,7 +26,7 @@ Firefox 28 был выпущен 18 марта 2014 года. Список кл�
 
 ### CSS
 
-- Support for multi-line [flexbox](/ru/docs/Web/Guide/CSS/Flexible_boxes) has been added ([Firefox bug 939901](https://bugzil.la/939901)).
+- Support for multi-line [flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) has been added ([Firefox bug 939901](https://bugzil.la/939901)).
 - Longhand East Asian [counter styles](/ru/docs/Web/CSS/list-style-type) have been implemented ([Firefox bug 934072](https://bugzil.la/934072)).
 - Support for the {{cssxref("background-blend-mode")}} property has been added ([Firefox bug 841601](https://bugzil.la/841601)).
 - The `none` value has been added to {{cssxref("font-variant-ligatures")}} ([Firefox bug 913264](https://bugzil.la/913264)).
@@ -41,7 +39,6 @@ Firefox 28 был выпущен 18 марта 2014 года. Список кл�
 ### JavaScript
 
 - [ECMAScript 6](/ru/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) implementation continues:
-
   - New `Array` methods have been implemented: {{jsxref("Array.prototype.entries()")}} and {{jsxref("Array.prototype.keys()")}} ([Firefox bug 894658](https://bugzil.la/894658)).
 
 ### Интерфейс/API/DOM

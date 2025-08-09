@@ -9,7 +9,16 @@ l10n:
 
 **`fill()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある範囲のインデックスにあるすべての要素を固定値で埋めます。これは変更された型付き配列を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.fill()")}} と同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-fill.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.fill()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([0, 0, 0, 0]);
+// Value, start position, end position
+uint8.fill(4, 1, 3);
+
+console.log(uint8);
+// Expected output: Uint8Array [0, 4, 4, 0]
+```
 
 ## 構文
 

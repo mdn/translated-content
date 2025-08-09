@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 
 {{jsxref("Function")}} 实例的 **`toString()`** 方法返回一个表示该函数源码的字符串。
 
-{{EmbedInteractiveExample("pages/js/function-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Function.toString()")}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum.toString());
+// Expected output: "function sum(a, b) {
+//                     return a + b;
+//                   }"
+
+console.log(Math.abs.toString());
+// Expected output: "function abs() { [native code] }"
+```
 
 ## 语法
 

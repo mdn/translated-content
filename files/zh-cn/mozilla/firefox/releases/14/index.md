@@ -3,8 +3,6 @@ title: Firefox 14 for developers
 slug: Mozilla/Firefox/Releases/14
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 14 shipped on July 17, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
@@ -12,16 +10,16 @@ Firefox 14 shipped on July 17, 2012. This article lists key changes that are use
 ### HTML
 
 - {{ HTMLElement("progress") }}元素不在错误的归为一个表单元素，因此不再有一个`form`属性。
-- The default modifier keys for the [`accesskey`](/zh-CN/HTML/Global_attributes) of HTML contents on Mac are changed to Control+Option. This is the same as WebKit-based browsers on Mac.
+- The default modifier keys for the [`accesskey`](/zh-CN/docs/HTML/Global_attributes) of HTML contents on Mac are changed to Control+Option. This is the same as WebKit-based browsers on Mac.
 
 ### DOM
 
-- [input](/zh-CN/DOM/DOM_event_reference/input) events are fired also on editing host element of [contenteditable](/zh-CN/DOM/element.contentEditable) editor and root element of [designMode](/zh-CN/DOM/document.designMode) editor.
+- [input](/zh-CN/docs/Web/API/Element/input_event) events are fired also on editing host element of [contenteditable](/zh-CN/docs/Web/API/HTMLElement/contentEditable) editor and root element of [designMode](/zh-CN/docs/Web/API/Document/designMode) editor.
 - {{ domxref("DOMException", "DOMException.code") }}已被废弃，根据最新的 DOM Level 4 规范。
 - {{ domxref("Range.insertNode()") }} method now works correctly when used on collapsed ranges.
 - The {{ domxref("BlobBuilder", "MozBlobBuilder") }} interface has been deprecated in favor of the constructor on {{ domxref("Blob") }}. If you use `MozBlobBuilder` you'll see a warning message in the Web Console.
 - The {{domxref("Blob.Blob", "Blob()")}} constructor is now available to workers ([Firefox bug 736686](https://bugzil.la/736686)).
-- Support for the [Mutation Observers](/zh-CN/DOM/DOM_Mutation_Observers) has been landed. It is designed as a replacement for the Mutation Events in DOM3, which has a number of issues regarding performance.
+- Support for the [Mutation Observers](/zh-CN/docs/DOM/DOM_Mutation_Observers) has been landed. It is designed as a replacement for the Mutation Events in DOM3, which has a number of issues regarding performance.
 - The {{ domxref("HTMLImageElement") }} interface's `x` and `y` properties were removed in Gecko 7.0 but restored in this release for compatibility reasons.
 - {{ domxref("Document") }}上的方法`execCommandShowHelp()`和`queryCommandText()`,没有任何作用，已被删除。
 - The `GeoPositionAddress` interface, an obsolete part of the [Geolocation](/zh-CN/Using_geolocation) API, has been removed.
@@ -70,7 +68,7 @@ _No change._
 
 ### 拼写检查
 
-- Dictionary names are now parsed as full [BCP 47](http://tools.ietf.org/html/bcp47) language tags ([bug 730209](https://bugzilla.mozilla.org/show_bug.cgi?id=730209), [bug 741842](https://bugzilla.mozilla.org/show_bug.cgi?id=741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
+- Dictionary names are now parsed as full [BCP 47](https://tools.ietf.org/html/bcp47) language tags ([bug 730209](https://bugzilla.mozilla.org/show_bug.cgi?id=730209), [bug 741842](https://bugzilla.mozilla.org/show_bug.cgi?id=741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
 
 ## 参见
 

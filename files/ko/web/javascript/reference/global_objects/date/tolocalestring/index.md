@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 
 **`toLocaleString()`** 메소드는 날짜를 언어별로 구분하여 나타내는 문자열을 반환합니다. [`Intl.DateTimeFormat` API](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 를 지원하는 구현에서 이 메소드는 단순히 `Intl.DateTimeFormat`를 호출합니다.
 
-{{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+// British English uses day-month-year order and 24-hour time without AM/PM
+console.log(event.toLocaleString("en-GB", { timeZone: "UTC" }));
+// Expected output: "20/12/2012, 03:00:00"
+
+// Korean uses year-month-day order and 12-hour time with AM/PM
+console.log(event.toLocaleString("ko-KR", { timeZone: "UTC" }));
+// Expected output: "2012. 12. 20. 오전 3:00:00"
+```
 
 ## 문법
 
@@ -24,13 +36,11 @@ toLocaleString(locales, options)
 [`Intl.DateTimeFormat` API](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)를 지원하는 구현에서, 이 파라미터들은 정확하게 [`Intl.DateTimeFormat()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) 생성자 파라미터와 일치합니다. `Intl.DateTimeFormat` 를 지원하지 않는 구현은 두 매개변수를 무시하도록 요청되어, 사용된 로케일과 반환된 문자열 형식이 완전히 구현에 종속됩니다.
 
 - `locales` {{optional_inline}}
-
   - : BCP 47 언어 태그 문자열 또는 이러한 문자열의 배열입니다. `Intl.DateTimeFormat()` 생성자의 매개변수 [`locales`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales)와 일치합니다.
 
     `Intl.DateTimeFormat` 을 지원하지 않는 구현에서는 이 매개변수는 무시되고, 보통 호스트 로케일이 사용됩니다.
 
 - `options` {{optional_inline}}
-
   - : 출력 형식을 조정하는 객체입니다. `Intl.DateTimeFormat()` 생성자 매개변수 [`options`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) 와 일치합니다. 만약 `weekday`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, 그리고 `fractionalSecondDigits` 가 전부 undefined이면, `year`, `month`, `day`, `hour`, `minute`, `second` 가`"numeric"` 으로 설정됩니다.
 
     `Intl.DateTimeFormat` 를 지원하지 않는 구현에서 이 매개변수는 무시됩니다.

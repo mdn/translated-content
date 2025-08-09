@@ -3,8 +3,6 @@ title: 迭代協議
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
 
-{{jsSidebar("More")}}
-
 為 ECMAScript 2015 中的一些補充內容，並非新的內建物件或語法，而是協議。這些協議可被任何遵守特定協定的物件所實作。
 
 本文介紹兩種協議：[可迭代協議](#可迭代協議)以及[迭代器協議](#迭代器協議)。
@@ -13,7 +11,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 **可迭代**（iterable）協議允許 JavaScript 物件定義或客制他們的迭代行為，例如哪些值可在 {{jsxref("Statements/for...of", "for..of")}} 語法結構中被迭代出來。部分內建型別為擁有預設迭代行為的[可迭代內建物件](#可迭代內建物件)，如 {{jsxref("Array")}} 或 {{jsxref("Map")}}，而其他型別（如 {{jsxref("Object")}}）則否。
 
-為了成為**可迭代的**，一個物件必須實作 **`[Symbol.iterator]()`** 方法，意思是這個物件（或其[原型鏈](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的其中一個原型物件）必須擁有一個鍵（key）值為 `[Symbol.iterator]`（即 {{jsxref("Symbol.iterator")}} 常數）的屬性：
+為了成為**可迭代的**，一個物件必須實作 **`[Symbol.iterator]()`** 方法，意思是這個物件（或其[原型鏈](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中的其中一個原型物件）必須擁有一個鍵（key）值為 `[Symbol.iterator]`（即 {{jsxref("Symbol.iterator")}} 常數）的屬性：
 
 - `[Symbol.iterator]`
   - : 回傳符合[迭代器協議](#迭代器協議)之物件的無引數函式。
@@ -186,7 +184,7 @@ new WeakSet(
 
 ### 用於可迭代物件的語法
 
-部分陳述式（statements）及運算式（expressions）為預期用於可迭代物件，例如 [`for-of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈、[spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`yield*`](/zh-TW/docs/Web/JavaScript/Reference/Operators/yield*)，及[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)：
+部分陳述式（statements）及運算式（expressions）為預期用於可迭代物件，例如 [`for-of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈、[spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`yield*`](/zh-TW/docs/Web/JavaScript/Reference/Operators/yield*)，及[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)：
 
 ```js
 for (let value of ["a", "b", "c"]) {

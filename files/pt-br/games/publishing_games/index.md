@@ -3,11 +3,11 @@ title: Publishing games
 slug: Games/Publishing_games
 ---
 
-{{GamesSidebar}}Jogos em HTML5 possuem uma grande vantagem sobre jogos nativos em termos de publicação e distribuição — você possui a liberdade de distribuição, promoção e monetização do seu jogo na Web, ao invés de que cada versão ficará presa em uma única loja controlada por uma empresa. Você pode se beneficiar com a Web sendo realmenete multiplataforma. Essa série de artigos demonstra as opções que você têm quando for publicar e distribuir o se jogo, e ter algum retorno enquanto você espera para se tornar famoso.
+Jogos em HTML5 possuem uma grande vantagem sobre jogos nativos em termos de publicação e distribuição — você possui a liberdade de distribuição, promoção e monetização do seu jogo na Web, ao invés de que cada versão ficará presa em uma única loja controlada por uma empresa. Você pode se beneficiar com a Web sendo realmenete multiplataforma. Essa série de artigos demonstra as opções que você têm quando for publicar e distribuir o se jogo, e ter algum retorno enquanto você espera para se tornar famoso.
 
 ## Distribuição do jogo
 
-Então você realizou [um](/pt-BR/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript) ou [dois tutoriais](/pt-BR/docs/Games/Workflows/2D_Breakout_game_Phaser) e desenvolveu um jogo em HTML5 - isso é ótimo! Distribuição de jogos provém tudo o que você necessita saber para poder distribuir o seu jogo recém criado para o mundo — incluindo hospedagem online, submetendo para marketplaces aberto, e submetendo para marketplaces fechados como Google Play ou iOS App Store.
+Então você realizou [um](/pt-BR/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) ou [dois tutoriais](/pt-BR/docs/Games/Tutorials/2D_breakout_game_Phaser) e desenvolveu um jogo em HTML5 - isso é ótimo! Distribuição de jogos provém tudo o que você necessita saber para poder distribuir o seu jogo recém criado para o mundo — incluindo hospedagem online, submetendo para marketplaces aberto, e submetendo para marketplaces fechados como Google Play ou iOS App Store.
 
 ## Promovendo o jogo
 

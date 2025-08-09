@@ -50,9 +50,9 @@ while (box.firstChild)
 
 ## 规范
 
-- [W3C DOM 2 Core: childNodes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1451460987)
-- [W3C DOM 3 Core: childNodes](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1451460987)
-- [W3C DOM 3 NodeList interface](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-536297177)
+- [W3C DOM 2 Core: childNodes](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1451460987)
+- [W3C DOM 3 Core: childNodes](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1451460987)
+- [W3C DOM 3 NodeList interface](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-536297177)
 
 ## 相关链接
 

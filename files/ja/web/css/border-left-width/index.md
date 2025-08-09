@@ -2,14 +2,51 @@
 title: border-left-width
 slug: Web/CSS/border-left-width
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
-
-{{CSSRef}}
 
 **`border-left-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/border-left-width.html")}}
+{{InteractiveExample("CSS デモ: border-left-width")}}
+
+```css interactive-example-choice
+border-left-width: thick;
+```
+
+```css interactive-example-choice
+border-left-width: 2em;
+```
+
+```css interactive-example-choice
+border-left-width: 4px;
+```
+
+```css interactive-example-choice
+border-left-width: 2ex;
+```
+
+```css interactive-example-choice
+border-left-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構文
 
@@ -35,9 +72,7 @@ border-left-width: unset;
 ### 値
 
 - `<line-width>`
-
   - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
-
     - `thin`
     - `medium`
     - `thick`
@@ -59,14 +94,14 @@ border-left-width: unset;
 
 #### HTML
 
-```html
+```html live-sample___comparing_border_widths
 <div>Element 1</div>
 <div>Element 2</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___comparing_border_widths
 div {
   border: 1px solid red;
   margin: 1em 0;
@@ -82,7 +117,7 @@ div:nth-child(2) {
 
 #### 結果
 
-{{EmbedLiveSample('境界線の太さの比較', '100%')}}
+{{EmbedLiveSample('Comparing_border_widths', '100%')}}
 
 ## 仕様書
 

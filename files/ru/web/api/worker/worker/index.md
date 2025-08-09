@@ -5,7 +5,7 @@ slug: Web/API/Worker/Worker
 
 {{APIRef("Web Workers API")}}
 
-Конструктор **`Worker()`** создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника ([same-origin policy](/en/Same_origin_policy_for_JavaScript)).
+Конструктор **`Worker()`** создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника ([same-origin policy](/en-US/Same_origin_policy_for_JavaScript)).
 
 Если URL имеет недопустимый синтаксис или нарушена политика одного источника, то будет вызвано {{domxref("DOMException")}} типа `SECURITY_ERR`.
 
@@ -23,9 +23,7 @@ var myWorker = new Worker(aURL, options);
 - _aURL_
   - : {{domxref("USVString")}}, представляющая URL-адрес скрипта который будет выполняться `worker`. Он должен подчиняться политике одного источника.
 - _options_ {{optional_inline}}
-
   - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
-
     - `type`: A {{domxref("DOMString")}} specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
     - `credentials`: A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be* `omit`*, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `omit` (no credentials required)._
     - _`name`: A _{{domxref("DOMString")}} specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
@@ -49,7 +47,7 @@ first.onchange = function () {
 };
 ```
 
-Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
 ## Спецификации
 

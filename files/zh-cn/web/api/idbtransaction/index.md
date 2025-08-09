@@ -5,7 +5,7 @@ slug: Web/API/IDBTransaction
 
 {{APIRef("IndexedDB")}}
 
-`IDBTransacation`接口由[IndexedDB API](/zh-CN/docs/IndexedDB)提供，异步事务使用数据库中的事件对象属性。所有的读取和写入数据均在事务中完成。由{{domxref("IDBDatabase")}}发起事务，通过{{domxref("IDBTransaction")}} 来设置事务的模式（例如：是否只读`readonly`或读写`readwrite`），以及通过{{domxref("IDBObjectStore")}}来发起一个请求。同时你也可以使用它来中止事务。
+`IDBTransacation`接口由[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)提供，异步事务使用数据库中的事件对象属性。所有的读取和写入数据均在事务中完成。由{{domxref("IDBDatabase")}}发起事务，通过{{domxref("IDBTransaction")}} 来设置事务的模式（例如：是否只读`readonly`或读写`readwrite`），以及通过{{domxref("IDBObjectStore")}}来发起一个请求。同时你也可以使用它来中止事务。
 
 Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Firefox bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further.
 
@@ -51,9 +51,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 ### Event handlers
 
 - {{domxref("IDBTransaction.onabort")}} {{readonlyInline}}
-
   - : The event handler for the `abort` event, fired when the transaction is aborted. This can happen due to:
-
     - bad requests, e.g. trying to add() the same key twice, or put() with the same index key with a uniqueness constraint and there is no error handler on the request to call preventDefault() on the event,
     - an explicit abort() call from script
     - uncaught exception in request's success/error handler,
@@ -83,13 +81,13 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 
 Transactions 可使用以下三种模式中的一种：
 
-| 常量             | 值                           | 描述                                                                                                                                                                                                                                                                               |
-| ---------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `READ_ONLY`      | "readonly"(0 in Chrome)      | 允许读取数据，不改变。                                                                                                                                                                                                                                                             |
-| `READ_WRITE`     | "readwrite"(1 in Chrome)     | 允许读取和写入现有数据存储，数据被改变。                                                                                                                                                                                                                                           |
-| `VERSION_CHANGE` | "versionchange"(2 in Chrome) | 允许执行任何操作，包括删除和创建对象存储和索引。此模式是用于开始使用[IDBDatabase](/zh-CN/docs/IndexedDB/IDBDatabase) 的 [`setVersion()`](/zh-CN/docs/IndexedDB/IDBDatabase#setVersion)方法更新版本号事务。这种模式的事务无法与其他事务并发运行。这种模式下的事务被称为“升级事务”。 |
+| 常量             | 值                           | 描述                                                                                                                                                                                                                                                                           |
+| ---------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `READ_ONLY`      | "readonly"(0 in Chrome)      | 允许读取数据，不改变。                                                                                                                                                                                                                                                         |
+| `READ_WRITE`     | "readwrite"(1 in Chrome)     | 允许读取和写入现有数据存储，数据被改变。                                                                                                                                                                                                                                       |
+| `VERSION_CHANGE` | "versionchange"(2 in Chrome) | 允许执行任何操作，包括删除和创建对象存储和索引。此模式是用于开始使用[IDBDatabase](/zh-CN/docs/Web/API/IDBDatabase) 的 [`setVersion()`](/zh-CN/docs/Web/API/IDBDatabase#setversion)方法更新版本号事务。这种模式的事务无法与其他事务并发运行。这种模式下的事务被称为“升级事务”。 |
 
-即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in Chrome [the change was made in version 21](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/))。你应当防止出现对象不存在的情况：
+即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in Chrome [the change was made in version 21](https://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/))。你应当防止出现对象不存在的情况：
 
 ```js
 var myIDBTransaction = window.IDBTransaction ||

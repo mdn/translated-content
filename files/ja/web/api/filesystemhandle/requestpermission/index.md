@@ -18,9 +18,7 @@ requestPermission(fileSystemHandlePermissionDescriptor)
 ### 引数
 
 - FileSystemHandlePermissionDescriptor {{optional_inline}}
-
   - : 要求する許可のモードを指定するオブジェクトです。以下のオプションが設定可能です。
-
     - : `'mode'`: `'read'` または `'readwrite'` のいずれかの値をとります。
 
 ### 返値
@@ -71,5 +69,5 @@ async function verifyPermission(fileHandle, withWrite) {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

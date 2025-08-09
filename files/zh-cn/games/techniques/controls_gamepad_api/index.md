@@ -3,8 +3,6 @@ title: 使用 Gamepad API 实现控制
 slug: Games/Techniques/Controls_Gamepad_API
 ---
 
-{{GamesSidebar}}
-
 这篇文章着眼于使用 Gamepad API 为网页游戏实现一个有效的跨浏览器控制系统，可以让你使用端游控制器来控制你的网页游戏。Hungry Fridge，就是 [Enclave Games](http://enclavegames.com/) 以此制作的游戏。
 
 ## 网页游戏的控制
@@ -13,7 +11,7 @@ slug: Games/Techniques/Controls_Gamepad_API
 
 ## API 状态与浏览器支持
 
-[Gamepad API](http://www.w3.org/TR/gamepad/) 在 W3C 的进程中仍然还是工作草案的状态，这意味着它的实现方法可能还会出现变动，但是就目前来说[浏览器的支持性](http://caniuse.com/gamepad)相当不错。Firefox 29+ 和 Chrome 35+ 对其支持得非常好。Opera 在版本 22+ 对 API 进行了支持 (一点也不奇怪，因为他们现在使用 Chrome 的引擎了。) 并且微软最近在 Edge 中对 API 实现了支持，也就是说四大主流浏览器现在都支持 Gamepad API。
+[Gamepad API](https://www.w3.org/TR/gamepad/) 在 W3C 的进程中仍然还是工作草案的状态，这意味着它的实现方法可能还会出现变动，但是就目前来说[浏览器的支持性](http://caniuse.com/gamepad)相当不错。Firefox 29+ 和 Chrome 35+ 对其支持得非常好。Opera 在版本 22+ 对 API 进行了支持 (一点也不奇怪，因为他们现在使用 Chrome 的引擎了。) 并且微软最近在 Edge 中对 API 实现了支持，也就是说四大主流浏览器现在都支持 Gamepad API。
 
 ## 哪种控制器最好？
 

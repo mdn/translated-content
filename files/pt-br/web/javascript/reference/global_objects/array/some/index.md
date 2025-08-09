@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 O método **`some()`** testa se ao menos um dos elementos no array passa no teste implementado pela função atribuída e retorna um valor **`true`** ou **`false`**.
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## Sintaxe
 
@@ -18,9 +28,7 @@ arr.some(callback[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função para testar cada elemento, recebendo três argumentos:
-
     - `currentValue`
       - : O valor atual do elemento sendo processado no array.
     - `index`

@@ -19,4 +19,4 @@ _显示了页面加载事件之前的首屏内容如何加载和由速度指数�
 
 ## 参见
 
-- [了解 Web 性能](/zh-CN/docs/Learn/Performance)
+- [了解 Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)

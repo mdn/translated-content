@@ -60,7 +60,7 @@ Regardons quelques exemples précis.
 
 ## Création d'une forme d'onde / oscilloscope
 
-Pour visualiser un oscilloscope (chapeau à [Soledad Penadés](http://soledadpenades.com/) pour le code original sur [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), nous commençons par suivre la procédure standard décrite dans le paragraphe précédent pour mettre en place le tampon :
+Pour visualiser un oscilloscope (chapeau à [Soledad Penadés](https://soledadpenades.com/) pour le code original sur [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), nous commençons par suivre la procédure standard décrite dans le paragraphe précédent pour mettre en place le tampon :
 
 ```js
 analyseur.fftSize = 2048;

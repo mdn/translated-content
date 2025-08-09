@@ -20,7 +20,7 @@ IndexedDB は SQL ベースの RDBMS に似たトランザクショナルデー�
 
 - [IndexedDB の主な特徴と基本用語](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology)についてはこちらをご覧ください。
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)のガイドで、で、非同期的に IndexedDB を使用する方法を基本原理から学びます。
-- データをオフラインで保存するための IndexedDB と、資産をオフラインで保存するためのサービスワーカーを組み合わせる方法は、 [サービスワーカーにより PWA をオフラインで動作させる](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)で概説しています。
+- データをオフラインで保存するための IndexedDB と、資産をオフラインで保存するためのサービスワーカーを組み合わせる方法は、 [サービスワーカーにより PWA をオフラインで動作させる](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)で概説しています。
 
 > [!NOTE]
 > たいていのウェブストレージ技術と同様に、IndexedDB も[同一オリジンポリシー](https://www.w3.org/Security/wiki/Same_Origin_Policy)に従います。よって、保存済みデータは同一ドメイン内からアクセスできますが、異なるドメインにまたがってデータへアクセスすることはできません。
@@ -31,11 +31,11 @@ IndexedDB を扱う操作は非同期に実行しますので、他のアプリ�
 
 ### ストレージの上限と破棄基準
 
-クライアント側 (すなわちローカルディスク) に何らかのデータを保存するウェブ技術はいくつかあります。IndexedDB はそのような技術としてもっともよく語られます。ブラウザーがどれだけの容量をウェブデータストレージに割り当てるかや、容量の上限に達したときにどのデータを削除するかのプロセスは単純ではなく、またブラウザーにより異なります。[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)で、少なくとも Firefox ではどのようにしているかの解説を試みています。
+クライアント側 (すなわちローカルディスク) に何らかのデータを保存するウェブ技術はいくつかあります。IndexedDB はそのような技術としてもっともよく語られます。ブラウザーがどれだけの容量をウェブデータストレージに割り当てるかや、容量の上限に達したときにどのデータを削除するかのプロセスは単純ではなく、またブラウザーにより異なります。[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)で、少なくとも Firefox ではどのようにしているかの解説を試みています。
 
 ## インターフェイス
 
-データベースへのアクセスを行いたい場合は、 [`open()`](/ja/docs/Web/API/IDBFactory/open) を[window](/ja/docs/Web/API/Window) オブジェクトの [`indexedDB`](/ja/docs/Web/API/indexedDB) 属性上で呼び出してください。このメソッドは {{domxref("IDBRequest")}} オブジェクトを返します。{{domxref("IDBRequest")}} オブジェクト上で発行されたイベントによってアプリケーションが呼び出されることにより、非同期操作が行われます。
+データベースへのアクセスを行いたい場合は、 [`open()`](/ja/docs/Web/API/IDBFactory/open) を[window](/ja/docs/Web/API/Window) オブジェクトの [`indexedDB`](/ja/docs/Web/API/Window/indexedDB) 属性上で呼び出してください。このメソッドは {{domxref("IDBRequest")}} オブジェクトを返します。{{domxref("IDBRequest")}} オブジェクト上で発行されたイベントによってアプリケーションが呼び出されることにより、非同期操作が行われます。
 
 ### データベースへの接続
 

@@ -9,7 +9,7 @@ l10n:
 
 **`PageSwapEvent`** イベントオブジェクトは、 {{domxref("Window.pageswap_event", "pageswap")}} イベントのハンドラー関数内で利用できます。
 
-`pageswap` イベントは、前の文書がアンロードされようとしているときに、文書間を移動するときに発行されます。文書間の移動中に、`PageSwapEvent` イベントオブジェクトを使用すると、移動元の文書から関連する[ビュー遷移](/ja/docs/Web/API/View_Transitions_API)（関連する {{domxref("ViewTransition")}} オブジェクトにアクセス）を操作することができます。また、ナビゲーションの種類や現在の文書と出力先文書に関する情報にもアクセスできます。
+`pageswap` イベントは、前の文書がアンロードされようとしているときに、文書間を移動するときに発行されます。文書間の移動中に、`PageSwapEvent` イベントオブジェクトを使用すると、移動元の文書から関連する[ビュー遷移](/ja/docs/Web/API/View_Transition_API)（関連する {{domxref("ViewTransition")}} オブジェクトにアクセス）を操作することができます。また、ナビゲーションの種類や現在の文書と出力先文書に関する情報にもアクセスできます。
 
 ## コンストラクター
 
@@ -88,4 +88,4 @@ window.addEventListener("pageswap", async (e) => {
 
 ## 関連情報
 
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)

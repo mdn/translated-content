@@ -13,7 +13,7 @@ CSS-свойство {{cssxref("border-width")}} определяет ширин
 
 ## Синтаксис
 
-[Общий синтаксис](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("border-width")}}
+[Общий синтаксис](/ru/docs/Web/CSS/Value_definition_syntax): {{csssyntax("border-width")}}
 
 ```css
 border-width: ширина                  /* Одно значение */
@@ -27,9 +27,7 @@ border-width: inherit /* Родительское значение */
 ### Values
 
 - `<br-width>`
-
   - : Is either a non-negative explicit {{cssxref("&lt;length&gt;")}} value or a keyword denoting the thickness of the bottom border. The keyword must be one of the following values:
-
     - `thin`
     - `medium`
     - `thick`

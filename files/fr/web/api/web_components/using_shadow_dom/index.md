@@ -198,7 +198,7 @@ wrapper.appendChild(info);
 
 ### Utiliser notre élément personnalisé
 
-Une fois que la classe est définie, utiliser l'élément est aussi simple que de le définir, et l'ajouter sur la page, comme expliqué dans [Utiliser les éléments personnalisés](/fr/docs/Web/Web_Components/Using_custom_elements) :
+Une fois que la classe est définie, utiliser l'élément est aussi simple que de le définir, et l'ajouter sur la page, comme expliqué dans [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) :
 
 ```js
 // Définit le nouvel élément
@@ -234,5 +234,5 @@ De nombreux navigateurs modernes implantent une optimisation pour les balises [`
 
 ## Voir aussi
 
-- [Utiliser les éléments personnalisés](/fr/docs/Web/Web_Components/Using_custom_elements)
-- [Utiliser les modèles (templates) et les emplacements (slots)](/fr/docs/Web/Web_Components/Using_templates_and_slots)
+- [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements)
+- [Utiliser les modèles (templates) et les emplacements (slots)](/fr/docs/Web/API/Web_components/Using_templates_and_slots)

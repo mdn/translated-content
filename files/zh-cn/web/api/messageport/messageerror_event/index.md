@@ -2,12 +2,12 @@
 title: MessagePort：messageerror 事件
 slug: Web/API/MessagePort/messageerror_event
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: ec8d6cfcaae740f7dfad264b797eebe448085a2b
 ---
 
 {{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-当 {{domxref('MessagePort')}} 对象接收到无法反序列化的消息时，会触发 **`messageerror`** 事件。
+{{domxref('MessagePort')}} 对象的 **`messageerror`** 事件在接收到无法反序列化的消息时触发。
 
 此事件不可取消，也不会冒泡。
 
@@ -23,7 +23,7 @@ onmessageerror = (event) => {};
 
 ## 事件类型
 
-一个 {{domxref("MessageEvent")}}。继承于 {{domxref("Event")}}。
+一个 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("MessageEvent")}}
 
@@ -40,11 +40,11 @@ _此接口还继承了其父接口 {{domxref("Event")}} 的属性。_
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : 一个 `MessageEventSource`（可以是 {{glossary("WindowProxy")}}、{{domxref("MessagePort")}} 或 {{domxref("ServiceWorker")}} 对象），表示消息发送者。
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("MessagePort")}} 对象数组，表示与消息通过的 channel 关联的端口（在适当的情况下，例如在 channel 消息传递或向 shared worker 发送消息时）。
+  - : 一个按顺序包含随消息发送的所有 {{domxref("MessagePort")}} 对象的数组。
 
 ## 示例
 
-假设脚本创建了一个 [`MessageChannel`](/zh-CN/docs/Web/API/MessageChannel)，并使用以下代码将其中一个端口发送到不同的浏览上下文，比如另一个 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)：
+假设脚本创建了一个 [`MessageChannel`](/zh-CN/docs/Web/API/MessageChannel)，并使用以下代码将其中一个端口发送到不同的浏览上下文，比如另一个 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)：
 
 ```js
 const channel = new MessageChannel();
@@ -106,5 +106,5 @@ window.addEventListener("message", (event) => {
 
 ## 参见
 
-- 相关事件：[`message`](/zh-CN/docs/Web/API/MessagePort/message_event).
-- [使用 channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- 相关事件：[`message`](/zh-CN/docs/Web/API/MessagePort/message_event)
+- [使用频道传递消息](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

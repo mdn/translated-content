@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 
 La méthode **`Number.isFinite()`** permet de déterminer si la valeur fournie est un nombre fini.
 
-{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isFinite()")}}
+
+```js interactive-example
+console.log(Number.isFinite(1 / 0));
+// Expected output: false
+
+console.log(Number.isFinite(10 / 5));
+// Expected output: true
+
+console.log(Number.isFinite(0 / 0));
+// Expected output: false
+```
 
 ## Syntaxe
 

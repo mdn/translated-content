@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/const
 
 La **déclaration `const`** permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que l'identifiant ne peut pas être réaffecté. Autrement dit la valeur d'une constante ne peut pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
 
-{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+
+```js interactive-example
+const number = 42;
+
+try {
+  number = 99;
+} catch (err) {
+  console.log(err);
+  // Expected output: TypeError: invalid assignment to const 'number'
+  // (Note: the exact output may be browser-dependent)
+}
+
+console.log(number);
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -18,7 +33,7 @@ const nom1 = valeur1 [, nom2 = valeur2 [, … [, nomN = valeurN]]];
 - `nomN`
   - : Le nom de la constante. Ce nom peut être n'importe quel identifiant valide.
 - `valeurN`
-  - : La valeur à associer à la constante. Cette valeur peut être n'importe quelle [expression](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#new) valide (éventuellement [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)).
+  - : La valeur à associer à la constante. Cette valeur peut être n'importe quelle [expression](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#new) valide (éventuellement [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function)).
 
 ## Description
 
@@ -27,7 +42,7 @@ Cette déclaration permet de créer une constante qui peut être globale ou loca
 Attention, la déclaration `const` crée une référence en lecture seule vers une valeur. Cela ne signifie pas que la valeur référencée ne peut pas être modifiée ! Ainsi, si le contenu de la constante est un objet, l'objet lui-même pourra toujours être modifié.
 
 > [!NOTE]
-> Les aspects liés à la [zone morte temporelle](</fr/docs/Web/JavaScript/Reference/Instructions/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let>) de `let` s'appliquent également à `const`.
+> Les aspects liés à la [zone morte temporelle](</fr/docs/Web/JavaScript/Reference/Statements/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let>) de `let` s'appliquent également à `const`.
 
 ## Exemples
 
@@ -57,12 +72,11 @@ var MA_FAV = 20;
 // cela renvoie également une erreur
 let MA_FAV = 20;
 
-
 // On notera l'importance de la portée de bloc :
 if (MA_FAV === 7) {
   // cela fonctionne sans problème et crée
   // une nouvelle variable dans cette portée
-  let MA_FAV =  20;
+  let MA_FAV = 20;
 
   // Ici, MA_FAV vaut 20
   console.log("mon nombre préféré est " + MA_FAV);
@@ -70,7 +84,6 @@ if (MA_FAV === 7) {
   // L'instruction suivante est remontée dans le
   // contexte global et provoque une erreur !
   var MA_FAV = 20;
-
 }
 
 // MA_FAV vaut toujours 7
@@ -80,10 +93,10 @@ console.log("mon nombre favori est " + MA_FAV);
 const TOTO; // SyntaxError: Missing initializer in const
 
 // const fonctionne également avec les objects
-const monObjet = {"clé": "valeur"};
+const monObjet = { clé: "valeur" };
 
 // Écraser l'objet échouera comme précédemment
-monObjet = {"autreClé": "valeur"};
+monObjet = { autreClé: "valeur" };
 
 // En revanche, les clés d'un objet ne sont pas
 // protégés et on peut donc, de façon valide, avoir
@@ -110,4 +123,4 @@ mon_tableau = ["B"]; // lève une exception
 
 - {{jsxref("Instructions/var","var")}}
 - {{jsxref("Instructions/let","let")}}
-- [Les constantes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Constantes)
+- [Les constantes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#constantes)

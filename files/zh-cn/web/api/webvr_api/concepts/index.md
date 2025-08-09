@@ -21,9 +21,9 @@ slug: Web/API/WebVR_API/Concepts
 
 那么有什么值得我们期待的呢？VR 硬件需要传输高精度的信息，在保证低延迟的情况下传递可接受的用户的体感信息；运行 VR 设备和程序的电脑，必需强大到足以维持这些庞大的信息。直到最近的这几年，如此高精度并且能量强大的设备，才能通过大众可以接受的价格被购买到。早期的 VR 原型设备，需要花费数万美元，然而最近出现的 [Oculus Rift](https://www.oculus.com/rift/) developer kit 却仅售 $350，并且还有更加便宜的解决方案，比如基于手机的 VR 设备像是 [Google Cardboard](https://www.google.com/get/cardboard/)。
 
-在软件方面，Valve 开发了 [SteamVR](http://store.steampowered.com/universe/vr) 软件系统，能够与 VIVE 和其他解决方案兼容，并提供软件访问权限，例如可用的 VR 用户界面。
+在软件方面，Valve 开发了 [SteamVR](https://store.steampowered.com/universe/vr) 软件系统，能够与 VIVE 和其他解决方案兼容，并提供软件访问权限，例如可用的 VR 用户界面。
 
-三星公司同 Oculus 合作，也推出了它的头戴设备 [GearVR](http://www.samsung.com/global/microsite/gearvr/gearvr_features.html)，这款设备可以连接旗下的 NOTE4 以及 6S 等手机。然而这款设备仅仅能够运行几款纯粹的 APP 应用，因而相对于 WEBVR 的特效领域而言，显得不是那么的有意思。
+三星公司同 Oculus 合作，也推出了它的头戴设备 [GearVR](https://www.samsung.com/global/microsite/gearvr/gearvr_features.html)，这款设备可以连接旗下的 NOTE4 以及 6S 等手机。然而这款设备仅仅能够运行几款纯粹的 APP 应用，因而相对于 WEBVR 的特效领域而言，显得不是那么的有意思。
 
 科技已经发展到了今天，随着时间的推移，只会有更多的昂贵的头显设备变得越来越便宜，从而令更多的人在将来能够亲自体验虚拟现实的乐趣。
 
@@ -44,7 +44,7 @@ slug: Web/API/WebVR_API/Concepts
 其余的帮助补充完整的 VR 体验的硬件包括：
 
 - 手持传感识别器：一个可以追踪你的手部位置和运动的传感器，这使得它变成了一个非常有趣的控制器，以及一件存在于 VR 游戏世界种的物体。迄今为止，最先进的这类设备首属 [Leap Motion](https://www.leapmotion.com/)，它可以同电脑配合使用（同 Oculus Rift 设备连接）并且同时还可以和手机兼容（暂时处于实验阶段）。
-- （手机）游戏手柄：我们可以配置一套 XBOX 控制器或者类似的设备作为浏览器的键盘——这种方法提供了另一种同 VR 网页互动的形式。有一些游戏手柄更可以和手机协同使用——就像 [MergeVR headset](http://www.mergevr.com/)——但是这些方法都是通过蓝牙连接设备的方法，并不能完全等同于和 WEBVR 结合。
+- （手机）游戏手柄：我们可以配置一套 XBOX 控制器或者类似的设备作为浏览器的键盘——这种方法提供了另一种同 VR 网页互动的形式。有一些游戏手柄更可以和手机协同使用——就像 [MergeVR headset](https://www.mergevr.com/)——但是这些方法都是通过蓝牙连接设备的方法，并不能完全等同于和 WEBVR 结合。
 - 眼动追踪传感器（实验产品）：FOVE 项目是第一个研究用于追踪和读取人眼运动设备的项目。
 - 面部表情追踪设备（实验产品）：位于南加州大学和 Facebook 的 Oculus 部门的研究人员，已经开始测试更多新的追踪人类面部表情并且能把他们转换成虚拟现实角色的方法。
 - 更加复杂的位置传感系统：SteamVR 控制器，结合了 [Lighthouse](http://www.roadtovr.com/steamvr-beta-update-brings-lighthouse-support-and-vr-tracking-app/) 追踪系统，旨在实现帮助我们能在一个 10x10 平方英尺的 VR 空间范围内自由活动的目的。
@@ -58,24 +58,20 @@ slug: Web/API/WebVR_API/Concepts
 通过 HMD 输出的信息包含一下四种类别：
 
 1. 位置——HMD 设备的位置基于一个 3D 坐标空间中的三个轴——X 代表左右移动，Y 代表上下移动，Z 代表朝向和远离位置传感设备。在 WEBVR 中：
-
    - x position is represented by {{domxref("VRPositionState.position")}}.x.
    - y position is represented by {{domxref("VRPositionState.position")}}.y.
    - z position is represented by {{domxref("VRPositionState.position")}}.z.
 
 2. 方位——HMD 在三维坐标空间中绕三条轴线的旋转。Pitch 为绕 x 轴旋转，yaw 为绕 y 轴旋转，而 roll 则为绕 z 轴旋转。在 WEBVR 中：
-
    - Pitch is represented by {{domxref("VRPositionState.orientation")}}.x.
    - Yaw is represented by {{domxref("VRPositionState.orientation")}}.y.
    - Roll is represented by {{domxref("VRPositionState.orientation")}}.z.
 
 3. 速度——在 VR 中有两种需要被考虑的速度：
-
    - 线速度——HMD 追踪的沿着三种轴向之一的速度。这类的信息可以通过 {{domxref("VRPositionState.linearVelocity")}} 接收（x、y 和 z）
    - 角速度——就是 HMD 设备绕着三种轴向之一旋转的速度。这类的信息可以通过 {{domxref("VRPositionState.angularVelocity")}} 接收（x、y 和 z）
 
 4. 加速度——在 VR 中有两种需要被考虑的加速度：
-
    - 线性加速度——HMD 设备沿着轴向追踪的加速度。这类的信息可以通过 {{domxref("VRPositionState.linearAcceleration")}} 接收（x、y 和 z）
    - 角度加速度——HMD 设备绕着轴旋转的加速度。这类的信息可以通过 {{domxref("VRPositionState.angularAcceleration")}} 接收（x、y 和 z）
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
-{{jsSidebar("Statements")}}
-
 **表达式语句**是指在需要语句的地方使用的表达式。该表达式被执行后，它的结果将被丢弃——因此，它仅对有着副作用的表达式有意义，例如执行函数或者更新变量。
 
 ## 语法
@@ -32,7 +30,7 @@ expression;
 - [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)
 - [`yield`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield) 和 [`yield*`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*)
 
-如果表达式调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 或者触发[强制类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)，它们也可能有副作用。
+如果表达式调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 或者触发[强制类型转换](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制类型转换)，它们也可能有副作用。
 
 ### 被禁用的表达式
 
@@ -41,7 +39,7 @@ expression;
 - `function`：这将是 [`function` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)或者 [`function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)，而不是 [`function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)或者 [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - `async function`：这将是 [`async function` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)或者 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)，而不是 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)或者 [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)
 - `class`：这将是 [`class` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)，而不是 [`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
-- `let[`：这将是带有[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)的 [`let` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)，而不是称为 `let` 变量的[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)（`let` 仅可以是在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#额外的保留字)下的标识符）
+- `let[`：这将是带有[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)的 [`let` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)，而不是称为 `let` 变量的[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)（`let` 仅可以是在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#额外的保留字)下的标识符）
 - `{`：这将是一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)，而不是[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 
 因此，以下所有内容均无效：

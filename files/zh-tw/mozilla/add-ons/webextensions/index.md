@@ -1,90 +1,57 @@
 ---
-title: 瀏覽器擴充功能
+title: 瀏覽器擴充套件
 slug: Mozilla/Add-ons/WebExtensions
+l10n:
+  sourceCommit: 4f197acb904fe25772ddcd928ca1e397fd7680b4
 ---
 
-{{AddonSidebar}}
+擴充套件或附加元件可以修改並增強瀏覽器的功能。適用於 Firefox 的擴充功能是使用 WebExtension API 跨瀏覽器技術建構的。
 
-擴充功能（extension）可以擴展和修改瀏覽器的功能。Firefox 的擴充功能是使用 WebExtension API 建立而成，這是一個開發跨瀏覽器擴充功能的系統。這個系統的大部分相容於 Google Chrome 和 Opera 的 [擴充功能 API](https://developer.chrome.com/docs/extensions) 與 [W3C Draft Community Group](https://browserext.github.io/browserext/)。這些瀏覽器的擴充功能在大多數的情況下，只需要[一點改變](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 或 [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) 中執行。這個 API 也和[多處理程序的 Firefox](/zh-TW/docs/Mozilla/Firefox/Multiprocess_Firefox) 完全相容。
+Firefox 的擴充套件技術在很大程度上與由 Chromium 為基礎的瀏覽器（如 Google Chrome、Microsoft Edge、Opera、Vivaldi）支援的[擴充套件 API](https://developer.chrome.com/docs/extensions/reference/)相容。大多數情況下，為 Chromium 瀏覽器撰寫的擴充套件只需進行[少量修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)即可在 Firefox 中執行。
 
-如果你有任何新點子、問題，或是需要使用 WebExtension API 來移植舊的擴充功能，你可以在 [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35)、[IRC](https://wiki.mozilla.org/IRC) 上的 [#extdev](irc://irc.mozilla.org/extdev) 或 Telegram [MozTW dev/add-on](https://t.me/moztw_dev) 找到我們。
+## 關鍵資源
 
-## 開始入門
+- 指南
+  - : 無論你是剛開始還是尋求更進階的建議，都可以從我們廣泛的[教程與指南](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)中了解擴充套件的運作方式及如何使用 WebExtension API。
+- 參考資料
+  - : 獲取關於 [WebExtension API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 的方法、屬性、類型和事件的詳細資訊，以及 [manifest 鍵](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整詳細資料。
+- Firefox 工作流程
+  - : 瞭解如何為 Firefox 建構和發布擴充套件：包括開發工具、發布與分發以及在 [Extension Workshop](https://extensionworkshop.com/) 上的移植流程。
 
-- [何謂擴充功能？](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
-- [你的第一個 WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
-- [你的第二個 WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
-- [解析 WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [WebExtension 範例](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Examples)
+> [!NOTE]
+> 如果你有想法、疑問或需要幫助，可以加入[社群論壇](https://discourse.mozilla.org/c/add-ons/35)或透過 [Matrix](https://wiki.mozilla.org/Matrix) 加入 [Add-ons Room](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be)。
 
-## 如何……
+## 開始使用
 
-- [監看 HTTP 請求](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)
-- [修改網頁](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
-- [在工作列增加按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [建立設定頁面](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
-- [和剪貼簿互動](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
-
-## 使用者介面
-
-- [介紹](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface)
-- [工具列按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)
-- [有彈出框的工具列按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-- [網址列按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-- [有彈出框的網址列按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)[網址列按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-- [側邊欄](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
-- [右鍵選單](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)
-- [設定頁面](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
-- [附加頁面](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages)
-- [通知](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications)
-- [網址列建議](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox)
-- [開發者工具面板](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
+在建構[你的第一個擴充套件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)之前，先了解[擴充套件能做什麼](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)。瞭解[擴充套件的結構](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)以及 [Firefox 擴充套件開發與發布工作流程概覽](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/)。通過一系列可直接在 Firefox 中執行的[範例擴充套件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Examples)進一步探索。
 
 ## 概念
 
-- [JavaScript API 總覽](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API)
-- [內容腳本](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
-- [觸發條件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
-- [檔案控制](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
-- [國際化](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
-- [資訊安全聲明](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [原生溝通方式](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
-- [使用開發工具 APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs)
-- [UX 範例](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
+詳細了解支撐擴充功能的概念，包括 [JavaScript API 概述](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API)、[內容腳本](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)、[匹配模式](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)、[檔案處理](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)、[國際化](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Internationalization)、[內容安全政策](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)、[本機訊息傳遞](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)、[使用開發者工具 API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)，以及[本機清單](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)等進階主題。
 
-## 移植
+## 使用者介面
 
-- [移植 Google Chrome 的擴充功能](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)
-- [移植舊的 Firefox 附加元件](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)
-- [嵌入式 WebExtensions](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions)
-- [與附加元件 SDK 比較](https://extensionworkshop.com/documentation/develop/comparison-with-the-add-on-sdk/)
-- [與 XUL/XPCOM 比較](https://extensionworkshop.com/documentation/develop/comparison-with-xul-xpcom-extensions/)
-- [Chrome 衝突表](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
-- [桌面版與 Android 版的差異](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/)
+探索擴充套件中可用的所有[使用者介面元件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface)，包括程式碼範例和提示。
+
+## 操作指南
+
+無論是你經常使用的模式（如[使用 Tabs API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API) 和[在工具列添加按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)），還是更進階的主題（如[攔截 HTTP 請求](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)和[處理情境識別](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)），都可以找到相關教程幫助你快速上手。
 
 ## Firefox 工作流程
 
-- [UX](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)
-- [安裝](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
-- [除錯](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Debugging)
-- [在 Firefox for Android 上開發](https://extensionworkshop.com/documentation/develop/developing-extensions-for-firefox-for-android/)
-- [開始使用 web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
-- [web-ext 指令參考](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/)
-- [WebExtensions 和附加元件 ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/)
-- [發布你的 WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)
+當你準備為 Firefox 建立擴充套件或移植你的 Chrome 擴充套件時，請造訪 [Extension Workshop](https://extensionworkshop.com/)。其中包含以下內容的詳細資訊：
+
+- Firefox 工作流程，如[在開發期間暫時安裝擴充套件](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)、[調試](https://extensionworkshop.com/documentation/develop/debugging/)、[請求正確的權限](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/)等。
+- [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 開發工具。
+- [移植 Google Chrome 擴充套件](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)、[桌面與 Android 之間的差異](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/)等。
+- [發布與分發概覽](https://extensionworkshop.com/documentation/publish/)、[宣傳你的擴充套件](https://extensionworkshop.com/documentation/publish/promoting-your-extension/)、[擴充功能生命週期最佳實踐](https://extensionworkshop.com/documentation/manage/)等。
 
 ## 參考資料
 
-#### JavaScript API
+### JavaScript API
 
-- [JavaScript API 總覽](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API)
-- [JavaScript API 在各種瀏覽器的相容表](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+獲取關於所有 [JavaScript API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API) 的方法、屬性、類型和事件的詳細資訊。每個參考頁面還包括程式碼範例及使用該 API 的擴充套件範例的連結。
 
-{{ ListSubpages ("/zh-TW/Add-ons/WebExtensions/API") }}
+### Manifest 鍵
 
-#### Manifest keys
-
-- [manifest.json 總覽](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
-- [manifest.json 在各種瀏覽器的相容表](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
-
-{{ ListSubpages ("/zh-TW/Add-ons/WebExtensions/manifest.json") }}
+獲取關於 [manifest 鍵](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整詳細資訊，包括其所有屬性和設定。

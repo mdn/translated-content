@@ -21,7 +21,7 @@ Stream API 允许 JavaScript 以编程方式访问从网络接收的数据流，
 
 还有更多的优点——你可以检测流何时开始或结束，将流链接在一起，根据需要处理错误和取消流，并对流的读取速度做出反应。
 
-流的基础应用围绕着使响应可以被流处理展开。例如，一个成功的 [fetch 请求](/zh-CN/docs/Web/API/fetch)返回的响应体可以暴露为 {{domxref("ReadableStream")}}，之后你可以使用 {{domxref("ReadableStream.getReader()")}} 创建一个 reader 读取它，使用 {{domxref("ReadableStream.cancel()")}} 取消它等等。
+流的基础应用围绕着使响应可以被流处理展开。例如，一个成功的 [fetch 请求](/zh-CN/docs/Web/API/Window/fetch)返回的响应体可以暴露为 {{domxref("ReadableStream")}}，之后你可以使用 {{domxref("ReadableStream.getReader()")}} 创建一个 reader 读取它，使用 {{domxref("ReadableStream.cancel()")}} 取消它等等。
 
 更复杂的应用包括使用 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数创建你自己的流，例如进入 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 去处理流。
 
@@ -69,7 +69,7 @@ Stream API 允许 JavaScript 以编程方式访问从网络接收的数据流，
 - {{domxref("Request")}}
   - : 当构造一个新的 `Request` 对象后，你可以给它的 `RequestInit` 中的 `body` 属性传入一个 {{domxref("ReadableStream")}}。这个 `Request` 对象就可以被传入 {{domxref("fetch()")}} 中，开始接收流。
 - {{domxref("Response.body")}}
-  - : 一个成功的 [fetch request](/zh-CN/docs/Web/API/fetch) 响应体会默认暴露为 {{domxref("ReadableStream")}}，从而可以采用相应的 reader 来处理等。
+  - : 一个成功的 [fetch request](/zh-CN/docs/Web/API/Window/fetch) 响应体会默认暴露为 {{domxref("ReadableStream")}}，从而可以采用相应的 reader 来处理等。
 
 ### 字节流相关的接口
 

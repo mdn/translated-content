@@ -13,7 +13,7 @@ l10n:
 
 ウェブにおける[プライバシー](/ja/docs/Web/Privacy)と[セキュリティ](/ja/docs/Web/Security)の問題の大きな原因の一つは、 {{htmlelement("iframe")}} 要素に埋め込まれたコンテンツです。過去には、 `<iframe>` はサードパーティクッキーを設定するために使用されてきました。サードパーティクッキーは、サイト間で情報を共有したりユーザーを追跡したりするために使用することができます。また、 `<iframe>` に埋め込まれたコンテンツは、埋め込み文書と通信することができます（例えば、 {{domxref("Window.postMessage()")}} を使用します）。
 
-埋め込み先の文書は、スクリプトを使用して `<iframe>` から様々な情報を読み取ることができます。例えば、埋め込まれた URL が [URL 引数](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#query)を含んでいる場合、 `src` プロパティから URL を読み取ることで、重要なトラッキング/フィンガープリントのデータを取得できる可能性があります。 `<iframe>` は埋め込みコンテキストの DOM にもアクセスすることができます。
+埋め込み先の文書は、スクリプトを使用して `<iframe>` から様々な情報を読み取ることができます。例えば、埋め込まれた URL が [URL 引数](/ja/docs/Web/URI#query)を含んでいる場合、 `src` プロパティから URL を読み取ることで、重要なトラッキング/フィンガープリントのデータを取得できる可能性があります。 `<iframe>` は埋め込みコンテキストの DOM にもアクセスすることができます。
 
 ほとんどの現行ブラウザーは、クッキーのデータが追跡のために使用できなくなるようにストレージを分割する仕組みに取り組んでいます（例えば、 [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) や [Firefox State Partitioning](/ja/docs/Web/Privacy/State_Partitioning) を参照してください）。
 
@@ -53,13 +53,15 @@ const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-`FencedFrameConfig` オブジェクトを得るには、 `resolveToConfig: true` を `runAdAuction()` に渡す必要があります。 `resolveToConfig` が `false` に設定されていると、返される {{jsxref("Promise")}} は不透過な [URN](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns) （`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a` など）に解決し、これは `<iframe>` 内でのみ使用することができます。
+`FencedFrameConfig` オブジェクトを得るには、 `resolveToConfig: true` を `runAdAuction()` に渡す必要があります。 `resolveToConfig` が `false` に設定されていると、返される {{jsxref("Promise")}} は不透過な [URN](/ja/docs/Web/URI#urns) （`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a` など）に解決し、これは `<iframe>` 内でのみ使用することができます。
 
 どちらの方法でも、ブラウザーは埋め込むコンテンツのターゲット位置を含む URL を格納します。不透明な URN、または `FencedFrameConfig` 内部の `url` プロパティに割り当てられたものです。埋め込みコンテキストで実行する JavaScript では、 URL の値を読み取ることはできません。
 
-> **メモ:** [プライバシーサンドボックス](https://developer.google.com/privacy-sandbox) API への既存の実装の移行を容易にするために、`<iframe>` の不透明な URN に対応しています。この対応は一時的なものであることを意図しており、採用が進むにつれて将来的に除去される予定です。
+> [!NOTE]
+> [プライバシーサンドボックス](https://developer.google.com/privacy-sandbox) API への既存の実装の移行を容易にするために、`<iframe>` の不透明な URN に対応しています。この対応は一時的なものであることを意図しており、採用が進むにつれて将来的に除去される予定です。
 
-> **メモ:** `FencedFrameConfig` には {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} メソッドがあり、埋め込み文書内のデータを `<fencedframe>` の共有ストレージに渡すために使用します。例えば、 {{domxref("Worklet")}} で `<fencedframe>` を経由してアクセスし、レポートを作成するために使用することができます。詳しくは[共有ストレージ API](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage) を参照してください。
+> [!NOTE]
+> `FencedFrameConfig` には {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} メソッドがあり、埋め込み文書内のデータを `<fencedframe>` の共有ストレージに渡すために使用します。例えば、 {{domxref("Worklet")}} で `<fencedframe>` を経由してアクセスし、レポートを作成するために使用することができます。詳しくは[共有ストレージ API](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage) を参照してください。
 
 ### `Fence` オブジェクトにおけるフェンスフレーム期のへのアクセス
 
@@ -86,10 +88,10 @@ Supports-Loading-Mode: fenced-frame
 
 他にも HTTP ヘッダーに対するフェンスフレームの効果は以下の通りです。
 
-- [ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Client_hints#ユーザーエージェントクライアントヒント)は[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の委譲に頼っているため、データを漏洩するために使用することができるため、フェンスフレーム内では利用できません。
-- 厳密な [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 設定は、フェンスで囲まれたフレーム内から開くための新しい閲覧コンテキストに対して強制されます。フェンスされたフレームの中から開かれた新しいウィンドウは [`rel="noopener"`](/ja/docs/Web/HTML/Attributes/rel/noopener) と `Cross-Origin-Opener-Policy: same-origin` を保有し、 {{domxref("Window.opener")}} が `null` を返し、自分自身の閲覧コンテキストグループに置かれるようにします。
-- [`Content-Security-Policy: fenced-frame-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) が `<fencedframe>` 要素に読み込まれる入れ子ブラウズコンテキストの有効なソースを指定するために追加されました。
-- [`Content-Security-Policy: sandbox`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) カスタム設定は、プライバシーの課題を軽減するために、フェンスフレームに継承することができません。フェンスされたフレームを読み込むには、 `sandbox` CSP を指定しないか（下記値を意味します）、以下のサンドボックス値を指定する必要があります：
+- [ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)は[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の委譲に頼っているため、データを漏洩するために使用することができるため、フェンスフレーム内では利用できません。
+- 厳密な [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) 設定は、フェンスで囲まれたフレーム内から開くための新しい閲覧コンテキストに対して強制されます。フェンスされたフレームの中から開かれた新しいウィンドウは [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) と `Cross-Origin-Opener-Policy: same-origin` を保有し、 {{domxref("Window.opener")}} が `null` を返し、自分自身の閲覧コンテキストグループに置かれるようにします。
+- [`Content-Security-Policy: fenced-frame-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/fenced-frame-src) が `<fencedframe>` 要素に読み込まれる入れ子ブラウズコンテキストの有効なソースを指定するために追加されました。
+- [`Content-Security-Policy: sandbox`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) カスタム設定は、プライバシーの課題を軽減するために、フェンスフレームに継承することができません。フェンスされたフレームを読み込むには、 `sandbox` CSP を指定しないか（下記値を意味します）、以下のサンドボックス値を指定する必要があります：
   - `allow-same-origin`
   - `allow-forms`
   - `allow-scripts`

@@ -66,4 +66,4 @@ evtSource.onmessage = function (e) {
 
 ## Voir aussi
 
-- [Utiliser les évènements générés par le serveur](/fr/docs/Server-sent_events/Using_server-sent_events)
+- [Utiliser les évènements générés par le serveur](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events)

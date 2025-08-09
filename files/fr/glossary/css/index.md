@@ -30,14 +30,14 @@ Le principe de « cascade » fait référence aux règles de préséance dans l'
 
 ### Culture générale
 
-- [Apprendre CSS](/fr/Apprendre/CSS)
+- [Apprendre CSS](/fr/docs/Learn/CSS)
 - [Feuilles de style en cascade](https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade) sur Wikipédia
 
 ### Références techniques
 
 - [Documentation CSS sur MDN](/fr/docs/Web/CSS)
-- [Les travaux en cours du Groupe de travail CSS](http://www.w3.org/Style/CSS/current-work) (en)
+- [Les travaux en cours du Groupe de travail CSS](https://www.w3.org/Style/CSS/current-work) (en)
 
 ### Voir aussi
 
-- [Cours en ligne sur codecademy.com](http://www.codecademy.com/fr/tracks/web)
+- [Cours en ligne sur codecademy.com](https://www.codecademy.com/fr/tracks/web)

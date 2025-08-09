@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 
 La méthode **`toString()`** renvoie une chaine de caractères représentant le tableau spécifié et ses éléments.
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Array.toString()")}}
+
+```js interactive-example
+const array1 = [1, 2, "a", "1a"];
+
+console.log(array1.toString());
+// Expected output: "1,2,a,1a"
+```
 
 ## Syntaxe
 

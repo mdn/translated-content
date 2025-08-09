@@ -81,5 +81,5 @@ mask: unset;
 ## 같이 보기
 
 - {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
-- [HTML에 SVG 효과 적용하기](/ko/docs/Applying_SVG_effects_to_HTML_content)
-- [SVG](/ko/docs/SVG)
+- [HTML에 SVG 효과 적용하기](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [SVG](/ko/docs/Web/SVG)

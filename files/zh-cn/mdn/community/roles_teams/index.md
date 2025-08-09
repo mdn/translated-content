@@ -3,8 +3,6 @@ title: MDN Web 文档角色和团队
 slug: MDN/Community/Roles_teams
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡献者社区。一些贡献者投入了部分时间，协助完成 MDN Web 文档的日常运行任务。对网站的修改，包括维护任务，都是由员工、承包商和合作伙伴网络完成的，他们都致力于 MDN Web 文档的健康、发展和维护。该项目在很大程度上依赖于 [GitHub 上的 MDN 组织](https://github.com/mdn)中的[角色](#角色)和[团队](#团队)来管理和整合来自这些不同群体的变更。该组织的成员名单可[在此找到](https://github.com/orgs/mdn/people)。
 
 社区贡献对这个开源项目帮助巨大。贡献者可以通过他们在 MDN Web 文档上的工作展示他们的写作、技术和协作技能，以及与来自不同背景的人合作的能力。本节将介绍你在 MDN Web 文档项目志愿工作中可以担任的角色。
@@ -268,7 +266,6 @@ MDN 团队将会联系被提名的人，以获得在[网站](/zh-CN/)“Contribu
 - `@OWD`：来自 Open Web Docs 非营利组织的贡献者
 - `@sre`：支持 MDN Web 文档网站可靠性的工程师
 - `@yari-content`：MDN Web 文档所有的内容审查团队的总称
-
   - 在不同的领域下，如无障碍、插件、CSS、HTML、HTTP、JavaScript、SVG、Web API 和 WebAssembly 下会存在很多子团队。如 `@yari-content-css` 和 `@yari-content-svg`。
   - 在不同本地化语言下，如巴西葡萄牙语、汉语、法语、日语、韩语、俄语和西班牙语下也会存在很多子团队。如 `@yari-content-fr` 和 `@yari-content-ko`。
 

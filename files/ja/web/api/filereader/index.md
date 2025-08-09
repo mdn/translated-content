@@ -11,7 +11,7 @@ l10n:
 
 File オブジェクトは、{{HTMLElement("input")}} 要素を使用してファイルを選択した結果として返される {{domxref("FileList")}} オブジェクト、またはドラッグ & ドロップ操作の {{domxref("DataTransfer")}} オブジェクトから取得することができます。
 
-`FileReader` は、ユーザーが HTML の `<input type="file">` 要素を使って、あるいはドラッグ & ドロップで明示的に選択したファイルの内容にのみアクセスすることができます。ユーザーのファイルシステムからパス名でファイルを読み込むために使用することはできません。クライアントのファイルシステム上のファイルをパス名で読み込むには、[ファイルシステムアクセス API](/ja/docs/Web/API/File_System_Access_API) を使用してください。サーバー側のファイルを読み込むには、標準的な Ajax ソリューションを使用し、ドメインをまたがって読み込む場合は CORS 許可を取得してください。
+`FileReader` は、ユーザーが HTML の `<input type="file">` 要素を使って、あるいはドラッグ & ドロップで明示的に選択したファイルの内容にのみアクセスすることができます。ユーザーのファイルシステムからパス名でファイルを読み込むために使用することはできません。クライアントのファイルシステム上のファイルをパス名で読み込むには、[ファイルシステムアクセス API](/ja/docs/Web/API/File_System_API) を使用してください。サーバー側のファイルを読み込むには、標準的な Ajax ソリューションを使用し、ドメインをまたがって読み込む場合は CORS 許可を取得してください。
 
 {{AvailableInWorkers}}
 
@@ -29,7 +29,6 @@ File オブジェクトは、{{HTMLElement("input")}} 要素を使用してフ�
 - {{domxref("FileReader.error")}} {{ReadOnlyInline}}
   - : ファイルの読み込み中に発生したエラーを表す {{domxref("DOMException")}} です。
 - {{domxref("FileReader.readyState")}} {{ReadOnlyInline}}
-
   - : `FileReader` の状態を示す数値。以下のいずれかになります。
 
     | 名前      | 値  | 説明                                     |

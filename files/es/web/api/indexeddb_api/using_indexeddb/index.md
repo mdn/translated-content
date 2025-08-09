@@ -9,9 +9,9 @@ IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Deb
 
 ## Acerca de este documento
 
-Este tutorial es una guía sobre el uso de la API asíncrona de IndexedDB. Si no está familiarizado con IndexedDB, por favor consulte primero [Conceptos Básicos Acerca de IndexedDB](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB).
+Este tutorial es una guía sobre el uso de la API asíncrona de IndexedDB. Si no está familiarizado con IndexedDB, por favor consulte primero [Conceptos Básicos Acerca de IndexedDB](/en-US/IndexedDB/Basic_Concepts_Behind_IndexedDB).
 
-Para la documentación de referencia sobre la API de IndexedDB, vea el artículo [IndexedDB](/es/docs/IndexedDB) y sus subpaginas, que documentan los tipos de objetos usados por IndexedDB, así como los métodos síncronos y asíncronos.
+Para la documentación de referencia sobre la API de IndexedDB, vea el artículo [IndexedDB](/es/docs/Web/API/IndexedDB_API) y sus subpaginas, que documentan los tipos de objetos usados por IndexedDB, así como los métodos síncronos y asíncronos.
 
 ## Patrones Básicos
 
@@ -72,11 +72,12 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 ¿Lo has visto? Abrir una base de datos es igual que cualquier otra operación — solo tienes que "solicitarla" (request).
 
-La solicitud de apertura no abre la base de datos o inicia la transacción de inmediato. La llamada a la función `open()` retornan unos objetos `IDBOpenDBRequest,` cuyo resultado, correcto o erróneo, se maneja en un evento. Alguna otra función asincrónica en indexedDB hace lo mismo - Devolver un objeto [`IDBRequest`](/es/docs/IndexedDB/IDBRequest) que disparará un evento con el resultado o el error. El resultado para la función de abrir es una instancia de un `IDBDatabase.`
+La solicitud de apertura no abre la base de datos o inicia la transacción de inmediato. La llamada a la función `open()` retornan unos objetos `IDBOpenDBRequest,` cuyo resultado, correcto o erróneo, se maneja en un evento. Alguna otra función asincrónica en indexedDB hace lo mismo - Devolver un objeto [`IDBRequest`](/es/docs/Web/API/IDBRequest) que disparará un evento con el resultado o el error. El resultado para la función de abrir es una instancia de un `IDBDatabase.`
 
-El segundo parámetro para el método open es la versión de la base de datos. La versión de la base de datos determina el esquema - El almacen de objectos en la base de datos y su estructura. Si la base de datos no existe, es creada y se dispara un evento `onupgradeneeded` de inmediato, permitiéndote proveer una actualización de la estructura e índices en la función que capture dicho evento. Se verá más adelante en [Actualizando la versión de la base de datos](#Updating_the_version_of_the_database).
+El segundo parámetro para el método open es la versión de la base de datos. La versión de la base de datos determina el esquema - El almacen de objectos en la base de datos y su estructura. Si la base de datos no existe, es creada y se dispara un evento `onupgradeneeded` de inmediato, permitiéndote proveer una actualización de la estructura e índices en la función que capture dicho evento. Se verá más adelante en [Actualizando la versión de la base de datos](#updating_the_version_of_the_database).
 
-> **Advertencia:** **Importante**: El número de versión es un `unsigned long`. Por lo tanto significa que puede ser un entero muy grande. También significa que si usas un flotante será convertido en un entero más cercano y la transacción puede no ser iniciada, el evento `upgradeneeded` no se desencadenará. Por ejemplo no use 2.4 como un número de versión ya que será igual que la 2:
+> [!WARNING]
+> **Importante**: El número de versión es un `unsigned long`. Por lo tanto significa que puede ser un entero muy grande. También significa que si usas un flotante será convertido en un entero más cercano y la transacción puede no ser iniciada, el evento `upgradeneeded` no se desencadenará. Por ejemplo no use 2.4 como un número de versión ya que será igual que la 2:
 >
 > ```js
 > var request = indexedDB.open("MyTestDatabase", 2.4); // Esto no se hace, la versión será redondeada a 2
@@ -97,7 +98,7 @@ request.onsuccess = function (event) {
 
 ¿Cuál de las dos funciones, onSuccess () o onerror (), se vuelve a llamar? Si todo tiene éxito, un evento de éxito (es decir, un evento DOM cuya propiedad tipo se establece en el "éxito") se dispara con la solicitud como su objetivo. Una vez que se dispara, la función onSuccess () a petición se activa con el evento de éxito como argumento. De lo contrario, si había algún problema, un evento de error (es decir, un evento DOM cuyo tipo de propiedad se establece en "error") se dispara a petición. Esto desencadena la función onerror () con el evento de error como argumento.
 
-La API IndexedDB está diseñada para minimizar la necesidad de control de errores, por lo que no es probable que veamos muchos eventos de error (al menos, no una vez que estás acostumbrado a la API). En el caso de la apertura de una base de datos, sin embargo, hay algunas condiciones comunes que generan eventos de error. El problema más común se produce cuando el usuario ha decidido no dar, a su aplicación web, el permiso para crear una base de datos. Uno de los principales objetivos de diseño de IndexedDB es permitir que grandes cantidades de datos se almacenen para su uso sin conexión a internet. (Para obtener más información sobre la cantidad de almacenamiento que puede tener para cada navegador, consulte [Límites de almacenamiento](/es/docs/Web/API/IndexedDB_API#Storage_limits).)
+La API IndexedDB está diseñada para minimizar la necesidad de control de errores, por lo que no es probable que veamos muchos eventos de error (al menos, no una vez que estás acostumbrado a la API). En el caso de la apertura de una base de datos, sin embargo, hay algunas condiciones comunes que generan eventos de error. El problema más común se produce cuando el usuario ha decidido no dar, a su aplicación web, el permiso para crear una base de datos. Uno de los principales objetivos de diseño de IndexedDB es permitir que grandes cantidades de datos se almacenen para su uso sin conexión a internet. (Para obtener más información sobre la cantidad de almacenamiento que puede tener para cada navegador, consulte [Límites de almacenamiento](/es/docs/Web/API/IndexedDB_API#storage_limits).)
 
 Obviamente, los navegadores no permitirán que alguna red de publicidad o sitio web malicioso pueda contaminar su ordenador, por ello los navegadores utilizan un diálogo para indicar al usuario la primera vez que cualquier aplicación web determinada intente abrir una IndexedDB para el almacenamiento. El usuario puede optar por permitir o denegar el acceso. Además, el almacenamiento IndexedDB en los modos de privacidad navegadores sólo dura en memoria hasta que la sesión de incógnito haya sido cerrada (modo de navegación privada para el modo de Firefox e Incognito para Chrome, pero en Firefox [no está implementado](https://bugzilla.mozilla.org/show_bug.cgi?id=781982) a partir de noviembre 2015 por lo que no puede utilizar IndexedDB en Firefox navegación privada en absoluto).
 
@@ -152,7 +153,7 @@ Blink / Webkit soportan la versión actual de la especificación, tal como fue l
 
 ### Estructuración de la base de datos
 
-Ahora para estructurar la base de datos. IndexedDB usa almacenes de datos (object stores) en lugar de tablas, y una base de datos puede contener cualquier número de almacenes. Cuando un valor es almacenado, se le asocia con una clave. Existen diversas maneras en que una clave pude ser indicada dependiendo de si el almacén usa una [ruta de clave](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath) o [generador](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator).
+Ahora para estructurar la base de datos. IndexedDB usa almacenes de datos (object stores) en lugar de tablas, y una base de datos puede contener cualquier número de almacenes. Cuando un valor es almacenado, se le asocia con una clave. Existen diversas maneras en que una clave pude ser indicada dependiendo de si el almacén usa una [ruta de clave](/en-US/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath) o [generador](/en-US/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator).
 
 La siguiente table muetra las distintas formas en que las claves pueden ser indicadas:
 
@@ -222,7 +223,7 @@ Los almacenes de datos son creados con una llamada a `createObjectStore()`. El m
 
 También se solicitó crear un índice llamado "name" que se fija en la propiedad `name` de los objetos almacenados. Así como con `createObjectStore()`, `createIndex()` toma un objeto opcional `options` que refina el tipo de índice que se desea crear. Agregar objetos que no tengan una propiedad `name` funcionará, pero los objetos no aparecerán en el índice "name"
 
-Ahora se pueden obtener los clientes almacenados usando su `ssn` directamente del almacen, o usando su nombre a través del índice. Para aprender como hacer esto, vea la sección [El uso de un índice](#El_uso_de_un_índice)
+Ahora se pueden obtener los clientes almacenados usando su `ssn` directamente del almacen, o usando su nombre a través del índice. Para aprender como hacer esto, vea la sección [El uso de un índice](#el_uso_de_un_índice)
 
 ### El uso de un generador de claves
 
@@ -252,7 +253,7 @@ request.onupgradeneeded = function (event) {
 };
 ```
 
-Para más detalles acerca del generador de claves, por favor ver ["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept).
+Para más detalles acerca del generador de claves, por favor ver ["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept).
 
 ## Añadir, recuperación y eliminación de datos
 
@@ -265,7 +266,7 @@ To read the records of an existing object store, the transaction can either be i
 You can speed up data access by using the right scope and mode in the transaction. Here are a couple of tips:
 
 - When defining the scope, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.
-- Only specify a `readwrite` transaction mode when necessary. You can concurrently run multiple `readonly` transactions with overlapping scopes, but you can have only one `readwrite` transaction for an object store. To learn more, see the definition for _[transactions](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database)_ in the [Basic Concepts](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB) article.
+- Only specify a `readwrite` transaction mode when necessary. You can concurrently run multiple `readonly` transactions with overlapping scopes, but you can have only one `readwrite` transaction for an object store. To learn more, see the definition for _[transactions](/es/docs/Web/API/IndexedDB_API/Basic_Terminology#database)_ in the [Basic Concepts](/es/docs/Web/API/IndexedDB_API/Basic_Terminology) article.
 
 ### Agregar datos a la base de datos
 
@@ -355,7 +356,7 @@ See how this works? Since there's only one object store, you can avoid passing a
 > You can speed up data access by limiting the scope and mode in the transaction. Here are a couple of tips:
 >
 > - When defining the [scope](#scope), specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.
-> - Only specify a `readwrite` transaction mode when necessary. You can concurrently run multiple `readonly` transactions with overlapping scopes, but you can have only one `readwrite` transaction for an object store. To learn more, see the definition for [_transactions_ in the Basic Concepts article](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
+> - Only specify a `readwrite` transaction mode when necessary. You can concurrently run multiple `readonly` transactions with overlapping scopes, but you can have only one `readwrite` transaction for an object store. To learn more, see the definition for [_transactions_ in the Basic Concepts article](/es/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction).
 
 ### Actualización de una entrada en la base de datos
 
@@ -1290,24 +1291,24 @@ input {
 
 ## Next step
 
-If you want to start tinkering with the API, jump in to the [reference documentation](/en/IndexedDB) and check out the different methods.
+If you want to start tinkering with the API, jump in to the [reference documentation](/en-US/IndexedDB) and check out the different methods.
 
 ## See also
 
 Reference
 
-- [IndexedDB API Reference](/en/IndexedDB)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [IndexedDB API Reference](/en-US/IndexedDB)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/es/docs/IndexedDB/Using_IndexedDB_in_chrome)
 
 Tutorials
 
-- [A simple TODO list using HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/).
+- [A simple TODO list using HTML5 IndexedDB](https://www.html5rocks.com/tutorials/indexeddb/todo/).
 
   > [!NOTE]
   > This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed `setVersion()` method.
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 
 Related articles
 

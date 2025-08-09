@@ -9,7 +9,25 @@ l10n:
 
 **`Symbol()`** 関数は、シンボル型のプリミティブ値を返します。
 
-{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Symbol - Constructor", "taller")}}
+
+```js interactive-example
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(typeof symbol1);
+// Expected output: "symbol"
+
+console.log(symbol2 === 42);
+// Expected output: false
+
+console.log(symbol3.toString());
+// Expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// Expected output: false
+```
 
 ## 構文
 
@@ -18,7 +36,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **メモ:** `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

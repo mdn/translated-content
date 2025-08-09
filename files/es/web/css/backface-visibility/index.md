@@ -3,11 +3,11 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS) **`backface-visibility`** determina si la cara posterior de un elemento es visible de frente al usuario. La cara posterior de un elemento siempre es un fondo transparente, permitiendo, cuando es visible, que se muestre una imagen de espejo de la cara frontal.
+La propiedad [CSS](/es/docs/Web/CSS) **`backface-visibility`** determina si la cara posterior de un elemento es visible de frente al usuario. La cara posterior de un elemento siempre es un fondo transparente, permitiendo, cuando es visible, que se muestre una imagen de espejo de la cara frontal.
 
 Hay casos en los que no queremos que la cara frontal de un elemento sea visible a través de la cara posterior, como cuando se hace el efecto de voltear una tarjeta (estableciendo dos elementos lado a lado).
 
@@ -193,4 +193,4 @@ td {
 
 ## Véase también
 
-- [Uso de CSS transforms](/es/docs/CSS/Using_CSS_transforms)
+- [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

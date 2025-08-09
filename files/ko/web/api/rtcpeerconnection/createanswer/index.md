@@ -47,7 +47,7 @@ RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]);
 아래는 [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling) 문서에서 나오는 코드의 일부입니다. 이 코드는 시그널링 채널을 통해 다른 유저에게 offer는 전달하는 메세지를 다루는 핸들러에서 나옵니다.
 
 > [!NOTE]
-> 주의 할 점은 이것이 시그널링 과정의 일부이며, 전송계층 구현에 대한 세부사항은 전적으로 개발자에게 달려있다는 것 입니다. 여기서는 [WebSocket](/ko/docs/Web/API/WebSocket_API) 연결을 사용해서 다른 유저에게 "video-answer" 값이 있는 `type` 필드 및 offer를 보낸 장치에게 전달 할 answer를 담은 {{Glossary("JSON")}} 메세지를 보냅니다. 프로미스 fulfillment 핸들러의 다른 모든 항목들과 함께 `sendToServer()`함수로 전달되는 객체의 내용을 어떻게 할 지는 개발자의 디자인에 달려잇습니다.
+> 주의 할 점은 이것이 시그널링 과정의 일부이며, 전송계층 구현에 대한 세부사항은 전적으로 개발자에게 달려있다는 것 입니다. 여기서는 [WebSocket](/ko/docs/Web/API/WebSockets_API) 연결을 사용해서 다른 유저에게 "video-answer" 값이 있는 `type` 필드 및 offer를 보낸 장치에게 전달 할 answer를 담은 {{Glossary("JSON")}} 메세지를 보냅니다. 프로미스 fulfillment 핸들러의 다른 모든 항목들과 함께 `sendToServer()`함수로 전달되는 객체의 내용을 어떻게 할 지는 개발자의 디자인에 달려잇습니다.
 
 ```js
 pc.createAnswer()

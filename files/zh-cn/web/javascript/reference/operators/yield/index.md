@@ -3,11 +3,26 @@ title: yield
 slug: Web/JavaScript/Reference/Operators/yield
 ---
 
-{{jsSidebar("Operators")}}
-
 `yield` 关键字用于暂停和恢复[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)。
 
-{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}
+
+```js interactive-example
+function* foo(index) {
+  while (index < 2) {
+    yield index;
+    index++;
+  }
+}
+
+const iterator = foo(0);
+
+console.log(iterator.next().value);
+// Expected output: 0
+
+console.log(iterator.next().value);
+// Expected output: 1
+```
 
 ## 语法
 

@@ -7,9 +7,9 @@ slug: Web/HTML/Element/ruby
 
 O **elemento** **HTML `<ruby>` **representa uma anotação ruby. Anotações ruby são para mostrar a pronúncia de caracteres do Leste Asiático
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content), conteúdo palpável.
-- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
-- _Omissão de tag_ {{no_tag_omission}}
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), conteúdo palpável.
+- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
+- _Omissão de tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos pais permitidos_ Ver prosa
 - _Interface DOM_ {{domxref("HTMLElement")}}
 

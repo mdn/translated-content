@@ -26,7 +26,7 @@ Esses elementos fornecem campos de entrada de texto ou caixas e, portanto, fazem
 - [`<input type="text">`](/pt-BR/docs/Web/HTML/Element/input/text)
 - [`<input type="password">`](/pt-BR/docs/Web/HTML/Element/input/password)
 - [`<input type="search">`](/pt-BR/docs/Web/HTML/Element/input/search)
-- [`<input type="date">`](/pt-BR/docs/Web/HTML/Element/input/date), [`<input type="time">`](/pt-BR/docs/Web/HTML/Element/input/time), [`<input type="datetime">`](/pt-BR/docs/Web/HTML/Element/input/datetime) e [`<input type="datetime-local">`](/pt-BR/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="date">`](/pt-BR/docs/Web/HTML/Element/input/date), [`<input type="time">`](/pt-BR/docs/Web/HTML/Element/input/time), [`<input type="datetime">`](/pt-BR/docs/Web/HTML/Element/input/datetime-local) e [`<input type="datetime-local">`](/pt-BR/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="number">`](/pt-BR/docs/Web/HTML/Element/input/number), [`<input type="range">`](/pt-BR/docs/Web/HTML/Element/input/range)
 - [`<input type="email">`](/pt-BR/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/pt-BR/docs/Web/HTML/Element/input/tel) e [`<input type="url">`](/pt-BR/docs/Web/HTML/Element/input/url)
 - {{HTMLElement("textarea")}}

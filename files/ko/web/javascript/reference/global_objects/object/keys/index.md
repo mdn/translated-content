@@ -9,7 +9,18 @@ l10n:
 
 **`Object.keys()`** 정적 메서드는 주어진 객체 자체의 열거 가능한 문자열 키를 가진 속성들의 이름을 배열로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## 구문
 
@@ -100,7 +111,7 @@ console.log(Object.keys(100)); // []
 ## 같이 보기
 
 - `Object.keys` 의 폴리필 코드는 아래에서 확인할 수 있습니다. [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

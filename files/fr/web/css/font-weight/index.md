@@ -7,7 +7,49 @@ slug: Web/CSS/font-weight
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-weight`** permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. [`font-family`](/fr/docs/Web/CSS/font-family)). Certaines fontes n'existent qu'avec les niveaux de graisses `normal` et `bold`.
 
-{{EmbedInteractiveExample("pages/css/font-weight.html")}}
+{{InteractiveExample("CSS Demo: font-weight")}}
+
+```css interactive-example-choice
+font-weight: normal;
+```
+
+```css interactive-example-choice
+font-weight: bold;
+```
+
+```css interactive-example-choice
+font-weight: lighter;
+```
+
+```css interactive-example-choice
+font-weight: bolder;
+```
+
+```css interactive-example-choice
+font-weight: 100;
+```
+
+```css interactive-example-choice
+font-weight: 900;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 ## Syntaxe
 
@@ -64,7 +106,6 @@ Si une fonte avec la graisse demandée n'est pas disponible, le moteur suit la m
 - Si un niveau supérieur à `500` est utilisé, c'est la graisse la plus sombre et la plus proche qui sera utilisée (la plus proche s'il n'y a pas de graisse plus forte)
 - Si un niveau inférieur à `400` est utilisé, c'est la graisse la plus claire la plus proche qui est utilisée (la plus proche s'il n'y a pas de graisse plus claire)
 - Si c'est un niveau entre `400` et `500` (inclus) qui est utilisé&nbsp;:
-
   - On cherche les niveaux les plus proches entre la cible et `500`, dans l'ordre croissant.
   - Si aucune correspondance n'est trouvée, on cherche les niveaux inférieurs, dans l'ordre décroissant.
   - Si aucune correspondance n'est trouvée, on cherche les niveaux supérieurs à `500`, dans l'ordre croissant.

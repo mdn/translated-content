@@ -13,7 +13,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 可安装网站需要满足以下条件：
 
-- 一份网页清单，填好[正确的字段](/zh-CN/Apps/Progressive/Guides/Making_PWAs_installable#manifest)
+- 一份网页清单，填好[正确的字段](/zh-CN/docs/Web/Apps/Progressive/Guides/Making_PWAs_installable#manifest)
 - 网站的协议必须是安全的（即使用 HTTPS 协议）
 - 一个在设备上代表应用的图标
 - 一个注册好的 Service Worker，可以让应用离线工作（这仅对于安卓设备上的 Chrome 浏览器是必需的）
@@ -71,7 +71,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 - `theme_color`: UI 主颜色，由操作系统使用。
 - `background_color`: 背景色，用于安装和显示启动画面时。
 
-一份网页清单最少需要 `name` 和一个图标 (带有 `src`, `size` 和 `type`)。最好也要提供 `description`、`short_name`、和 `start_url`。除了上述字段，还有一些其他的字段供你使用，请查看[网页应用清单参考](/zh-CN/docs/Web/Manifest)获取详细信息。
+一份网页清单最少需要 `name` 和一个图标（带有 `src`、`size` 和 `type`）。最好也要提供 `description`、`short_name`、和 `start_url`。除了上述字段，还有一些其他的字段供你使用，请查看[网页应用清单参考](/zh-CN/docs/Web/Progressive_web_apps/Manifest)获取详细信息。
 
 ## 添加到主屏
 

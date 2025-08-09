@@ -115,7 +115,7 @@ h2.secondHeading {
 }
 ```
 
-Porém, este método apenas funciona se não existirem outros elementos com o mesmo [block formatting context](/pt-BR/docs/Web/CSS/block_formatting_context) aos quais nós queiramos que o cabeçalho continue aparecendo ao lado horizontalmente. Se o nosso `H2` possui irmãos os quais são barras laterais flutuadas à esquerda e à direita, usar `clear` irá forçá-lo a aparecer abaixo das duas barras laterais, o que provavelmente não é o que queríamos.
+Porém, este método apenas funciona se não existirem outros elementos com o mesmo [block formatting context](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context) aos quais nós queiramos que o cabeçalho continue aparecendo ao lado horizontalmente. Se o nosso `H2` possui irmãos os quais são barras laterais flutuadas à esquerda e à direita, usar `clear` irá forçá-lo a aparecer abaixo das duas barras laterais, o que provavelmente não é o que queríamos.
 
 Se limpar `floats` em um elemento não é uma opção, uma outra abordagem é limitar o contexto de formatação do bloco do containêr flutuante. Referindo-se ao exemplo acima novamente, aparentemente todos os três quadrados vermelhos possuem um elemento paragrafo `P` . Nós podemos atribuir a propiedade {{Cssxref("overflow")}} neste paragrafo para `hidden` ou `auto` para obrigá-lo a expandir para contê-los, porém não permitirá que os mesmos parágrafos pulem fora do limite inferior.
 
@@ -139,4 +139,4 @@ p.withRedBoxes {
 
 ## Veja também
 
-- [Block formatting context](/pt-BR/docs/Web/CSS/block_formatting_context)
+- [Block formatting context](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context)

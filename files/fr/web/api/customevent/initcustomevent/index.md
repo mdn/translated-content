@@ -12,7 +12,7 @@ Les évènements initialisés par ce moyen doivent être créés avec la méthod
 > [!WARNING]
 > N'utilisez plus cette méthode car elle est dépréciée.
 >
-> À la place, utilisez les constructeurs d'évènements spécifiques comme {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. La page [Création et déclenchement d'évènements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events) donne plus d'informations sur la façon de les utiliser.
+> À la place, utilisez les constructeurs d'évènements spécifiques comme {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. La page [Création et déclenchement d'évènements](/fr/docs/Web/Events/Creating_and_triggering_events) donne plus d'informations sur la façon de les utiliser.
 
 ## Syntaxe
 

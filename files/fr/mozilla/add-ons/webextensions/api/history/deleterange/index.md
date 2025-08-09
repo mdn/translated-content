@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 
 Supprime toutes les visites aux pages que l'utilisateur a effectuées pendant la période donnée. Si cela supprime toutes les visites effectuées sur une page donnée, alors la page n'apparaîtra plus dans l'historique du navigateur et {{WebExtAPIRef("history.onVisitRemoved")}} se déclenchera pour cela.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -20,9 +20,7 @@ var deletingRange = browser.history.deleteRange(
 ### Paramètres
 
 - `range`
-
   - : `object`. Spécification de la plage de temps pour laquelle supprimer des visites.
-
     - `startTime`
       - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time). Spécifie l'heure de début de la plage.
     - `endTime`
@@ -30,7 +28,7 @@ var deletingRange = browser.history.deleteRange(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
 
 ## Compatibilité des navigateurs
 

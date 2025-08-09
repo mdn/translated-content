@@ -2,14 +2,12 @@
 title: アスペクト比の理解と設定
 slug: Web/CSS/CSS_box_sizing/Understanding_aspect-ratio
 l10n:
-  sourceCommit: 5d670c42df8ede57e3d6341cb15d8251eb188dc4
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
-
-{{CSSRef}}
 
 ページにレンダリングされるすべての要素は、高さと幅を持ち、したがって、幅と高さの比である{{glossary("aspect ratio", "アスペクト比")}}を持ちます。メディアオブジェクトの自然な寸法は、サイズ指定、拡大縮小、ズーム、境界を適用しないサイズであり、自然なサイズまたは{{glossary("intrinsic size", "内在サイズ")}}と呼ばれています。要素の内在サイズは、[ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)のような整形ルールを適用したり、境界線、マージン、パディングの幅を設定したりするのではなく、要素自体によって決定されます。
 
-サイトを開発するとき、要素の幅をビューポートまたは親コンテナーのサイズに対するパーセント値に設定し、それに比例して高さを変更することで、ビューポートのサイズに応じて特定のアスペクト比を維持できるようにしたいと思うことがよくあります。画像や動画のような置換要素の場合、特定のアスペクト比を維持することは{{glossary("responsive web design", "レスポンシブウェブデザイン")}}を作成するために必要なだけでなく、良いユーザー体験を提供するための重要な要素でもあります。資産のアスペクト比を設定することで、読み込み時の[ジャンク](/ja/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)、すなわちページが描画された後にメディアが読み込まれたときに発生するレイアウトのずれであり、資産用の空間がが確保されていないため、再フローが発生することを防ぐことができます。
+サイトを開発するとき、要素の幅をビューポートまたは親コンテナーのサイズに対するパーセント値に設定し、それに比例して高さを変更することで、ビューポートのサイズに応じて特定のアスペクト比を維持できるようにしたいと思うことがよくあります。画像や動画のような置換要素の場合、特定のアスペクト比を維持することは{{glossary("responsive web design", "レスポンシブウェブデザイン")}}を作成するために必要なだけでなく、良いユーザー体験を提供するための重要な要素でもあります。資産のアスペクト比を設定することで、読み込み時の[ジャンク](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)、すなわちページが描画された後にメディアが読み込まれたときに発生するレイアウトのずれであり、資産用の空間がが確保されていないため、再フローが発生することを防ぐことができます。
 
 CSS を使用すると、置換された要素と置換されていない要素のサイズを縦横比に基づいて調整することができます。このガイドでは、`aspect-ratio` プロパティについて学び、置換された要素と置換されていない要素のアスペクト比について説明します。
 
@@ -49,11 +47,8 @@ div {
   line-height: 100px;
   text-align: center;
   float: left;
-  background-image: repeating-linear-gradient(
-      to right,
-      black 0px 1px,
-      transparent 1px 20px
-    ),
+  background-image:
+    repeating-linear-gradient(to right, black 0px 1px, transparent 1px 20px),
     repeating-linear-gradient(black 0px 1px, transparent 1px 20px);
   background-size:
     181px 5px,
@@ -78,7 +73,7 @@ div + div {
 
 高さと幅、またはインラインサイズとブロックサイズの両方が明示的に設定されている場合、`aspect-ratio` プロパティの値は無視されます。この場合、どの寸法も自動的にサイズ設定されることは許されません。優先サイズは明示的に設定されますので、`aspect-ratio` プロパティは何の効果もありません。インラインサイズとブロックサイズの両方を宣言した場合は、そちらが優先されます。
 
-置換要素では、どちらかの寸法に（`auto` 以外の）値を明示的に設定しない場合、どちらも既定で内在するサイズになります（`aspect-ratio` の値は適用されません）。`aspect-ratio` は、明示的に寸法が設定されていない非置換要素に適用されます。非置換要素は[内在的](/ja/docs/Glossary/Intrinsic_Size)または[外在的](/ja/docs/Glossary/Intrinsic_Size#外在的)のどちらかのサイズになり、コンテンツ、コンテナー、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)のプロパティなどからサイズを取得します。
+置換要素では、どちらかの寸法に（`auto` 以外の）値を明示的に設定しない場合、どちらも既定で内在するサイズになります（`aspect-ratio` の値は適用されません）。`aspect-ratio` は、明示的に寸法が設定されていない非置換要素に適用されます。非置換要素は[内在的](/ja/docs/Glossary/Intrinsic_Size)または[外在的](/ja/docs/Glossary/Intrinsic_Size#外在的)のどちらかのサイズになり、コンテンツ、コンテナー、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)のプロパティなどからサイズを取得します。
 
 要素がページにレンダリングされるとき、CSS が適用されず、HTML のサイズ属性も含まれていなければ、ユーザーエージェントはオブジェクトを自然なサイズでレンダリングします。
 
@@ -89,21 +84,29 @@ div + div {
 <!-- temporarily ignore these images. Testing preview -->
 
 ```html hidden live-sample___original
-<img src="flag.jpg?image=good" alt="220 pixel square pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg?image=good"
+  alt="220 pixel square pride flag" />
 ```
 
 {{EmbedLiveSample("original", "100", "230")}}
 
 これは CSS が適用されていない `220px` の正方形の画像で、内在サイズまたは既定のサイズで表示されます。
 
-置換コンテンツが auto でサイズ指定されている場合、または width に値を設定するなどして 1 つの寸法だけにサイズを指定した場合、ブラウザーはメディアの元の縦横比を維持したまま、もう 1 つの寸法（この場合は高さ）のサイズを自動的に変更します。
+置換コンテンツが auto でサイズ指定されている場合、または `width` に値を設定するなどして 1 つの寸法だけにサイズを指定した場合、ブラウザーはメディアの元の縦横比を維持したまま、もう 1 つの寸法（この場合は高さ）のサイズを自動的に変更します。
 
 この例では、{{cssxref("width")}} だけが画像に設定されているので、ユーザーエージェントはその縦横比を保持します。`55px`、`110px`、そして [`width: auto`](/ja/docs/Web/CSS/width) 値による自然なサイズである `220px` で表示されます。
 
 ```html hidden live-sample___image
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
 ```css hidden live-sample___image
@@ -127,13 +130,19 @@ img + img + img {
 
 この例では、同じ画像が 3 回繰り返され、{{cssxref("height")}} の値は同じ (`110px`) ですが、{{cssxref("width")}} の値は異なるサイズ (`55px`、`110px`、`220px`) に明示されています。
 
-```html hidden live-sample___imagebad
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
+```html hidden live-sample___image-bad
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
-```css hidden live-sample___imagebad
+```css hidden live-sample___image-bad
 img {
   width: 55px;
   height: 110px;
@@ -148,14 +157,16 @@ img + img + img {
 }
 ```
 
-{{EmbedLiveSample("imagebad", "100", "120")}}
+{{EmbedLiveSample("image-bad", "100", "120")}}
 
 `height` と `width` の両方を設定することで、画像を意図的に歪ませています。最初の画像はつぶれ、3 番目の画像は引き伸ばされています。
 
 CSS の {{cssxref("aspect-ratio")}} プロパティを使用して、1 つの寸法を設定し（両方でもどちらでもない）、`1` （または `1 / 1`）以外の値を指定することで、これと同じ歪んだ効果を作成することができました。おそらくこのようなことはしたくないでしょうが、可能であることを知っておくのは良いことです。
 
 ```html hidden live-sample___stretch
-<img src="flag.jpg" alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
 ```css live-sample___stretch
@@ -177,23 +188,31 @@ img {
 
 まず始めに、3 つのアイテムを持つコンテナーを作成し、それぞれに画像を 1 つずつ入れます。
 
-```html live-sample___imagegrid
+```html live-sample___image-grid
 <div class="grid">
   <div>
-    <img src="flag.jpg" alt="Pride flag" />
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
   </div>
   <div>
-    <img class="cover" src="flag.jpg" alt="Pride flag" />
+    <img
+      class="cover"
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
   </div>
   <div>
-    <img class="contain" src="flag.jpg" alt="Pride flag" />
+    <img
+      class="contain"
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
   </div>
 </div>
 ```
 
 次に、コンテナーをグリッドに設定し、各アイテムの縦横比を `2.5` (`5/2`) とし、最小幅を `150px` とします。したがって、最小の高さは `60px` となります。しかし、最終的な幅と高さは、例の iframe の幅、つまりビューポートのサイズに基づいて決定されます。
 
-```css live-sample___imagegrid
+```css live-sample___image-grid
 .grid {
   display: grid;
   gap: 20px;
@@ -209,7 +228,7 @@ div div {
 
 次に画像のサイズを決め、最後の 2 つの画像に `object-fit` プロパティを設定します。
 
-```css live-sample___imagegrid
+```css live-sample___image-grid
 img {
   height: 100%;
   width: 100%;
@@ -224,7 +243,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample("imagegrid", "100", "100")}}
+{{EmbedLiveSample("image-grid", "100", "100")}}
 
 最初の画像だけが歪んで（引き伸ばされて）います。`object-fit` の `fill` 値を使っても同じ効果が得られます。`cover` 画像はコンテナーの幅いっぱいに広がり、垂直方向にセンタリングされ、コンテナーに収まるように切り取られます。`contain` 値は、画像をコンテナー内に確実に収め、水平方向の中央に配置し、収まるように縮小します。
 
@@ -487,7 +506,7 @@ iframe.tiktok {
 
 ### 正方形のグリッドセルを作成
 
-正方形のセルのグリッドは、{{cssxref("grid-template-columns", "列トラックサイズ")}}を固定で定義し、各行が列トラックのサイズと確実に一致するようにすることで作成することができます。しかし、コンテナー内に可能な限り多くの列トラックを収めるために `auto-fill` を使用してレスポンシブグリッドを作成する場合、各項目の幅が不確かになります。そのため、正方形のアイテムを作成するための適切な高さを決定することが難しくなります。
+正方形のセルのグリッドは、[列トラックサイズ](/ja/docs/Web/CSS/grid-template-columns)を固定で定義し、各行が列トラックのサイズと確実に一致するようにすることで作成することができます。しかし、コンテナー内に可能な限り多くの列トラックを収めるために `auto-fill` を使用してレスポンシブグリッドを作成する場合、各項目の幅が不確かになります。そのため、正方形のアイテムを作成するための適切な高さを決定することが難しくなります。
 
 アイテムにアスペクト比を設定することで、グリッドアイテムがレイアウトされたときに、各グリッドアイテムが幅と同じ高さになるように保証し、コンテナーの寸法に関係なく正方形のグリッドアイテムを作成します。
 
@@ -538,7 +557,11 @@ div div::after {
   <div></div>
   <div></div>
   <div></div>
-  <div class="item"><img src="flag.jpg" alt="Pride flag" /></div>
+  <div class="item">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
+  </div>
   <div></div>
   <div></div>
   <div></div>

@@ -66,9 +66,7 @@ CSSStyleValue は、すべての CSS 値が表現される基本クラスです�
 - {{domxref('CSSKeywordValue')}}
   - : CSS のキーワードやその他の識別子を表現するオブジェクトを生成する インターフェイスです。文字列が期待される場所で使用された場合、 CSSKeyword.value の値を返します。
 - {{domxref('CSSMathValue')}}
-
   - : 単一の値や単位よりも複雑な数値を表すサブクラスのツリーで、次のようなものがあります。
-
     - {{domxref('CSSMathInvert')}} - CSS の {{cssxref("calc","calc()")}} 値を `calc(1 / <value>)` のように使用したものを表現します。
     - {{domxref('CSSMathMax')}} - CSS の {{cssxref("max","max()")}} 関数を表します。
     - {{domxref('CSSMathMin')}} - CSS の {{cssxref("min","min()")}} 関数を表します。
@@ -77,9 +75,7 @@ CSSStyleValue は、すべての CSS 値が表現される基本クラスです�
     - {{domxref('CSSMathSum')}} - {{domxref('CSSNumericValue')}} に対して {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, {{domxref('CSSNumericValue.toSum','toSum()')}} を実行した結果を表します。
 
 - {{domxref('CSSNumericValue')}}
-
   - : すべての数値が実行可能な操作を表すインターフェイスです。
-
     - {{domxref('CSSNumericValue.add')}} - 与えられた数字を `CSSNumericValue` に加算します。
     - {{domxref('CSSNumericValue.sub')}} - 与えられた数値を `CSSNumericValue` から減算します。
     - {{domxref('CSSNumericValue.mul')}} - 与えられた数値を `CSSNumericValue` に乗算します。
@@ -113,4 +109,4 @@ CSSStyleValue は、すべての CSS 値が表現される基本クラスです�
 
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 型付きオブジェクトモデルの使用](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS Houdini](/ja/docs/Web/Guide/Houdini)
+- [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)

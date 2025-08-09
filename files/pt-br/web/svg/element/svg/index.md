@@ -50,40 +50,40 @@ svg {
     _Value type_: **\<string>** ; _Default value_: `text/css`; _Animatable_: **no**
 - {{SVGAttr("height")}}
   - : The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
-    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
   - : How the `svg` fragment must be deformed if it is displayed with a different aspect ratio.
     _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("version")}} {{deprecated_inline}}
   - : Which version of SVG is used for the inner content of the element.
-    _Value type_: **[\<number>](/pt-BR/docs/Web/SVG/Content_type#Number)** ; _Default value_: none; _Animatable_: **no**
+    _Value type_: **[\<number>](/pt-BR/docs/Web/SVG/Content_type#number)** ; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("viewBox")}}
   - : The SVG viewport coordinates for the current SVG fragment.
-    _Value type_: **[\<list-of-numbers>](/pt-BR/docs/Web/SVG/Content_type#List-of-Ts)** ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: **[\<list-of-numbers>](/pt-BR/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("width")}}
   - : The displayed width of the rectangular viewport. (Not the width of its coordinate system.)
-    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("x")}}
   - : The displayed x coordinate of the svg container. No effect on outermost `svg` elements.
-    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : The displayed y coordinate of the svg container. No effect on outermost `svg` elements.
-    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/pt-BR/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/pt-BR/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
 > [!NOTE]
 > Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning these attributes can also be used as CSS properties.
 
 ### Global attributes
 
-- [Core Attributes](/pt-BR/docs/Web/SVG/Attribute/Core)
+- [Core Attributes](/pt-BR/docs/Web/SVG/Attribute)
   - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Styling Attributes](/pt-BR/docs/Web/SVG/Attribute/Styling)
+- [Styling Attributes](/pt-BR/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Conditional Processing Attributes](/pt-BR/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Conditional Processing Attributes](/pt-BR/docs/Web/SVG/Attribute)
   - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - Event Attributes
-  - : [Global event attributes](/pt-BR/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Graphical event attributes](/pt-BR/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes), [Document event attributes](/pt-BR/docs/Web/SVG/Attribute/Events#Document_Event_Attributes), [Document element event attributes](/pt-BR/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
-- [Presentation Attributes](/pt-BR/docs/Web/SVG/Attribute/Presentation)
+  - : [Global event attributes](/pt-BR/docs/Web/SVG/Attribute#global_event_attributes), [Graphical event attributes](/pt-BR/docs/Web/SVG/Attribute#graphical_event_attributes), [Document event attributes](/pt-BR/docs/Web/SVG/Attribute#document_event_attributes), [Document element event attributes](/pt-BR/docs/Web/SVG/Attribute#document_element_event_attributes)
+- [Presentation Attributes](/pt-BR/docs/Web/SVG/Attribute)
   - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - Aria Attributes
   - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`

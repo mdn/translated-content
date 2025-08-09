@@ -1,54 +1,213 @@
 ---
-title: <abbr>
+title: "<abbr>: O elemento Abbreviation"
 slug: Web/HTML/Element/abbr
+l10n:
+  sourceCommit: f10015d1752d5668d8fe0de29f9d9807de475d58
 ---
 
-## Sumário
+{{HTMLSidebar}}
 
-O _Elemento HTML `<abbr>`_ (ou Elemento de Abreviação HTML) representa uma abreviação e opcionalmente fornece uma descrição completa para ela. Se presente, o atributo **`title`** deve conter a descrição completa e apenas ela.
+O elemento [HTML](/pt-BR/docs/Web/HTML) **`<abbr>`** representa uma abreviação ou acrônimo.
 
-> [!NOTE]
-> Quando presente, o número gramatical (singular/plural) do texto no atributo **`title`** deve ser correspondente ao do conteúdo do elemento `<abbr>`. Isso também deve ocorrer no caso das linguagens com mais de dois números gramaticais (por exemplo, em árabe não há somente palavras no singular e plural, mas tem também uma categoria dual).
+Ao incluir uma abreviação ou acrônimo, forneça uma expansão completa do termo em texto simples no primeiro uso, junto com o `<abbr>` para marcar a abreviação. Isso informa à pessoa usuária o que a abreviação ou acrônimo significa.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), conteúdo palpável
-- _Conteúdo permitido_[Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Omissão de tag_ {{no_tag_omission}}
-- _Elementos-pai permitidos_ Qualquer elemento que aceite como filho [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Interface DOM_ {{domxref("HTMLElement")}} Após o Gecko 1.9.2 (Firefox 3.6) (e incluindo ele), o Firefox implementou a interface {{domxref("HTMLSpanElement")}} para este elemento.
+O atributo opcional [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) pode fornecer uma expansão para a abreviação ou acrônimo quando uma expansão completa não estiver presente. Isso fornece uma dica para os agentes da pessoa usuária sobre como anunciar/exibir o conteúdo enquanto informa a todas as pessoas usuárias o que a abreviação significa. Se presente, `title` deve conter esta descrição completa e nada mais.
+
+{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
+  layer separate. This is called "separation of concerns."
+</p>
+```
+
+```css interactive-example
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+```
 
 ## Atributos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento suporta apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes). O atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) tem um significado semântico específico quando usado com o elemento `<abbr>`; ele _deve_ conter uma descrição completa legível para pessoas ou uma expansão da abreviação. Este texto é frequentemente apresentado pelos navegadores como uma dica de ferramenta quando o cursor do mouse é passado sobre o elemento.
 
-Use o atributo **title** para definir a descrição completa da abreviação. Muitos navegadores exibem a descrição quando passa-se o mouse por cima da abreviação.
+Cada elemento `<abbr>` que você usa é independente de todos os outros; fornecer um `title` para um não anexa automaticamente o mesmo texto de expansão a outros com o mesmo texto de conteúdo.
+
+## Notas de uso
+
+### Casos de uso típicos
+
+Certamente não é necessário que todas as abreviações sejam marcadas usando `<abbr>`. Existem, no entanto, alguns casos em que é útil fazer isso:
+
+- Quando uma abreviação é usada e você deseja fornecer uma expansão ou definição fora do fluxo do conteúdo do documento, use `<abbr>` com um [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) apropriado.
+- Para definir uma abreviação que pode ser desconhecida para a pessoa leitora, apresente o termo usando `<abbr>` e um texto em linha fornecendo a definição. Inclua um atributo `title` somente quando a expansão ou definição em linha não estiver disponível.
+- Quando a presença de uma abreviação no texto precisa ser semanticamente notada, o elemento `<abbr>` é útil. Isso pode ser usado, por sua vez, para fins de estilo ou script.
+- Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para estabelecer definições para termos que são abreviações ou acrônimos. Veja o exemplo [Definindo uma abreviação](#definindo_uma_abreviação) abaixo.
+
+### Considerações gramaticais
+
+Em idiomas com [número gramatical](<https://pt.wikipedia.org/wiki/N%C3%BAmero_(gram%C3%A1tica)>) (ou seja, idiomas em que o número de itens afeta a gramática de uma sentença), use o mesmo número gramatical no seu atributo `title` assim como no seu elemento `<abbr>`. Isso é especialmente importante em idiomas com mais de dois números, como o árabe, mas também é relevante em inglês.
 
 ## Estilo padrão
 
-O propósito deste elemento é meramente a conveniência de autores e todos os navegadores mostram ele como um elemento dentro de uma linha ({{cssxref('display')}}`: inline`) por padrão, embora o estilo aplicado sobre ele seja diferente entre diferentes navegadores:
+O propósito deste elemento é puramente para a conveniência da pessoa autora e todos os navegadores o exibem em linha ({{cssxref("display", "display: inline")}}) por padrão, embora seu estilo padrão varie de um navegador para outro:
 
-- Alguns navegadores, como o Internet Explorer, não aplicam nenhum estilo à mais do que é aplicado ao elemento {{HTMLElement("span")}}.
-- Opera, Firefox, e alguns outros adicionam um sublinhado pontilhado ao conteúdo do elemento.
-- Alguns poucos navegadores não apenas adicionam um sublinhado pontilhado, mas também colocam o texto em versalete (small caps); para evitar este tipo de estilo, adicione algo como {{cssxref('font-variant')}}`: none` no CSS que administra este caso.
+Alguns navegadores adicionam um sublinhado pontilhado ao conteúdo do elemento. Outros adicionam um sublinhado pontilhado ao converter o conteúdo para versaletes. Outros podem não estilizá-lo de forma diferente de um elemento {{HTMLElement("span")}}. Para controlar esse estilo, use {{cssxref('text-decoration')}} e {{cssxref('font-variant')}}.
 
-É fortemente recomendado que autores web não confiem no estilo padrão. Note que este elemento não é suportado pelo Internet Explorer anterior ao IE7. Como tais versões do IE também não permitem que se aplique estilo para elementos desconhecidos, o seguinte script é necessário para permitir isso:
+## Acessibilidade
 
-```html
-<!--[if lte IE 6]>
-  <script>
-    document.createElement("abbr");
-  </script>
-<![endif]-->
-```
+Soletrar a sigla ou abreviação por completo na primeira vez que for usada em uma página é benéfico para ajudar as pessoas a entendê-la, especialmente se o conteúdo for um jargão técnico ou do setor.
 
-## Exemplo
+Inclua um `title` somente se não for possível expandir a abreviação ou acrônimo no texto. Ter uma diferença entre a palavra ou frase anunciada e o que é exibido na tela, especialmente se for um jargão técnico com o qual a pessoa leitora pode não estar familiarizada, pode ser chocante.
 
 ```html
-<p>Obama é presidente dos <abbr title="Estados Unidos da América">EUA</abbr></p>
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight
+  data-interchange format.
+</p>
 ```
 
-### Resultado
+{{EmbedLiveSample("Accessibility")}}
 
-Obama é presidente dos EUA
+Isso é especialmente útil para pessoas que não estão familiarizadas com a terminologia ou os conceitos discutidos no conteúdo, pessoas que são novas no idioma e pessoas com problemas cognitivos.
+
+## Exemplos
+
+### Marcando uma abreviação semanticamente
+
+Para marcar uma abreviação sem fornecer uma expansão ou descrição, use `<abbr>` sem nenhum atributo, como visto neste exemplo.
+
+#### HTML
+
+```html
+<p>Using <abbr>HTML</abbr> is fun and easy!</p>
+```
+
+#### Resultado
+
+{{EmbedLiveSample("Marking_up_an_abbreviation_semantically")}}
+
+### Estilizando abreviações
+
+Você pode usar CSS para definir um estilo personalizado a ser usado para abreviações, como visto neste exemplo básico.
+
+#### HTML
+
+```html
+<p>Using <abbr>CSS</abbr>, you can style your abbreviations!</p>
+```
+
+#### CSS
+
+```css
+abbr {
+  font-variant: all-small-caps;
+}
+```
+
+#### Resultado
+
+{{EmbedLiveSample("Styling_abbreviations")}}
+
+### Fornecendo uma expansão
+
+Adicionar um atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) permite que você forneça uma expansão ou definição para a abreviação ou acrônimo.
+
+#### HTML
+
+```html
+<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big time.</p>
+```
+
+#### Resultado
+
+{{EmbedLiveSample("Providing_an_expansion")}}
+
+### Definindo uma abreviação
+
+Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma abreviação mais formalmente, como mostrado aqui.
+
+#### HTML
+
+```html
+<p>
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn> is a
+  markup language used to create the semantics and structure of a web page.
+</p>
+
+<p>
+  A <dfn id="spec">Specification</dfn> (<abbr>spec</abbr>) is a document that
+  outlines in detail how a technology or API is intended to function and how it
+  is accessed.
+</p>
+```
+
+#### Resultado
+
+{{EmbedLiveSample("Defining_an_abbreviation", 600, 120)}}
+
+## Resumo técnico
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+          >Categorias de conteúdo</a
+        >
+      </th>
+      <td>
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_de_fluxo"
+          >Conteúdo de fluxo</a
+        >,
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_fraseado"
+          >conteúdo fraseado</a
+        >, conteúdo palpável
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_fraseado"
+          >Conteúdo fraseado</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de tag</th>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
+    </tr>
+    <tr>
+      <th scope="row">Pais permitidos</th>
+      <td>
+        Qualquer elemento que aceite
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_fraseado"
+          >conteúdo fraseado</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Função ARIA implícita</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >Nenhuma função correspondente</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Funções ARIA permitidas</th>
+      <td>Qualquer uma</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Especificações
 
@@ -60,6 +219,4 @@ Obama é presidente dos EUA
 
 ## Veja também
 
-- Outros elementos que possuem [semântica à nível de texto](/pt-BR/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
-
-{{HTMLSidebar}}
+- [Usando o elemento `<abbr>`](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abreviações)

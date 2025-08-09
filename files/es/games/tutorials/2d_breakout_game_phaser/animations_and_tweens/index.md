@@ -3,11 +3,9 @@ title: Animaciones e interpolaciones
 slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
-Este es el paso **14** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Workflows/2D_Breakout_game_Phaser). Puedes encontrar el código fuente tal y cómo quedaría al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html).
+Este es el paso **14** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y cómo quedaría al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html).
 
 Para hacer el juego más vistoso y vivo, podemos usar animaciones e interpolaciones. Esto provocará una experencia de juego mejor y más entretenida. Exploraremos cómo implementar animaciones e interpolaciones Phaser en nuestro juego.
 

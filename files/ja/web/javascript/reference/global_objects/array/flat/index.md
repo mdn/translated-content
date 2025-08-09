@@ -1,15 +1,32 @@
 ---
 title: Array.prototype.flat()
+short-title: flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`flat()`** は {{jsxref("Array")}} インスタンスのメソッドで、すべてのサブ配列の要素を指定した深さで再帰的に結合した新しい配列を生成します。
 
-{{EmbedInteractiveExample("pages/js/array-flat.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.flat()")}}
+
+```js interactive-example
+const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());
+// 予想される結果: Array [0, 1, 2, 3, 4]
+
+const arr2 = [0, 1, [2, [3, [4, 5]]]];
+
+console.log(arr2.flat());
+// 予想される結果: Array [0, 1, 2, Array [3, Array [4, 5]]]
+
+console.log(arr2.flat(2));
+// 予想される結果: Array [0, 1, 2, 3, Array [4, 5]]
+
+console.log(arr2.flat(Infinity));
+// 予想される結果: Array [0, 1, 2, 3, 4, 5]
+```
 
 ## 構文
 
@@ -32,7 +49,7 @@ flat(depth)
 
 `flat()` メソッドは[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。これは `this` を変更するのではなく、元の配列と同じ要素を格納した[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返します。
 
-`flat()` メソッドは、フラット化される配列が[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の場合、空のスロットを無視します。例えば、 `depth` が 1 の場合、ルート配列と最初の入れ子配列の空のスロットは無視されますが、それ以上の入れ子配列の空のスロットは配列自体に保持されます。
+`flat()` メソッドは、フラット化される配列が[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の場合、空のスロットを削除します。例えば、 `depth` が 1 の場合、ルート配列と最初の入れ子配列の空のスロットは無視されますが、それ以上の入れ子配列の空のスロットは配列自体に保持されます。
 
 `flat()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。しかし、その要素を平坦化するには配列でなければなりません。
 
@@ -58,9 +75,9 @@ arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### 平坦化と配列の穴
+### flat() を疎配列で使用
 
-`flat()` メソッドは配列内の空要素を削除します。
+`flat()` メソッドは配列内の[空のスロット](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を削除します。
 
 ```js
 const arr5 = [1, 2, , 4, 5];
@@ -69,9 +86,9 @@ console.log(arr5.flat()); // [1, 2, 4, 5]
 const array = [1, , 3, ["a", , "c"]];
 console.log(array.flat()); // [ 1, 3, "a", "c" ]
 
-const array2 = [1, , 3, ["a", , ["d", , "e"]]];
-console.log(array2.flat()); // [ 1, 3, "a", ["d", empty, "e"] ]
-console.log(array2.flat(2)); // [ 1, 3, "a", "d", "e"]
+const array2 = [1, , 3, undefined, ["a", , ["d", , "e"]], null];
+console.log(array2.flat()); // [ 1, 3, undefined, "a", ["d", empty, "e"], null ]
+console.log(array2.flat(2)); // [ 1, 3, undefined, "a", "d", "e", null ]
 ```
 
 ### 配列でないオブジェクトに対する flat() の呼び出し
@@ -102,6 +119,7 @@ console.log(Array.prototype.flat.call(arrayLike));
 ## 関連情報
 
 - [`Array.prototype.flat` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.flat` のポリフィル](https://www.npmjs.com/package/array.prototype.flat)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}

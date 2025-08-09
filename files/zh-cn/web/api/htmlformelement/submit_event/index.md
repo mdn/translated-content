@@ -33,7 +33,7 @@ slug: Web/API/HTMLFormElement/submit_event
 当用户点击提交按钮（{{HtmlElement("button")}} 或 {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}），亦或是在表单里输入时（e.g. {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}）按下 <kbd>Enter</kbd> 键，`submit` 事件将会被触发。直接调用 {{domxref("HTMLFormElement.submit()", "form.submit()")}} 方法时，事件不会发送到表单。
 
 > [!NOTE]
-> 当试图提交一个未通过[验证](/zh-CN/docs/Learn/Forms/Form_validation)的表单时，会触发 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件。在这种情况下，表单提交将会被验证机制阻止。因此，`sumbit` 事件也就不存在了。
+> 当试图提交一个未通过[验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)的表单时，会触发 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件。在这种情况下，表单提交将会被验证机制阻止。因此，`sumbit` 事件也就不存在了。
 
 ## 示例
 

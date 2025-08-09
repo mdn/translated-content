@@ -58,6 +58,6 @@ xhr.send(null);
 
 ## 関連情報
 
-- [HTTP ステータス](/ja/docs/Web/HTTP/Status)の一覧
+- [HTTP ステータス](/ja/docs/Web/HTTP/Reference/Status)の一覧
 - [HTTP](/ja/docs/Web/HTTP)
 - [WHATWG Fetch Living Standard](https://fetch.spec.whatwg.org/#concept-response-status-message)

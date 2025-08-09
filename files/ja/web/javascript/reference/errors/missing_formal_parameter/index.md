@@ -71,6 +71,5 @@ log({ obj: "value" }); // Object { obj: "value" }
 ## 関連項目
 
 - 形式的な引数に関係するその他のエラー:
-
-  - [SyntaxError: Malformed formal parameter](/ja/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
+  - [SyntaxError: Malformed formal parameter](/ja/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter)
   - [SyntaxError: redeclaration of formal parameter "x"](/ja/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)

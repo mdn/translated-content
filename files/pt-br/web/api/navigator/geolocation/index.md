@@ -26,4 +26,4 @@ geo = navigator.geolocation
 
 Veja também
 
-- [Utilizar geolocalização](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Utilizar geolocalização](/pt-BR/docs/Web/API/Geolocation_API)

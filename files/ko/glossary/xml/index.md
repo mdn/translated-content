@@ -13,4 +13,4 @@ XML 태그는 HTML 태그와 유사하지만 사용자가 자신의 태그를 �
 
 ## 같이 보기
 
-- [XML 소개](/ko/docs/Web/XML/XML_Introduction)
+- [XML 소개](/ko/docs/Web/XML/Guides/XML_introduction)

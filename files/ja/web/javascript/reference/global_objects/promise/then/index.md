@@ -9,7 +9,18 @@ l10n:
 
 **`then()`** は {{jsxref("Promise")}} インスタンスのメソッドであり、最大 2 つの引数として、この `Promise` が成功した場合と失敗した場合のコールバック関数を取ります。コールバックは、それが呼び出されたプロミス内に格納され、すぐに別の {{jsxref("Promise")}} オブジェクトを返値において返し、他のプロミスのメソッドに対する[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)呼び出しを行うことができます。
 
-{{EmbedInteractiveExample("pages/js/promise-then.html")}}
+{{InteractiveExample("JavaScript デモ: Promise.prototype.then()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  resolve("Success!");
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "Success!"
+});
+```
 
 ## 構文
 
@@ -21,18 +32,14 @@ then(onFulfilled, onRejected)
 ### 引数
 
 - `onFulfilled`
-
   - : このプロミスが履行されたときに非同期に呼び出される関数です。この返値は、`then()` から返されるプロミスの履行値になります。この関数は以下の引数と共に呼び出されます。
-
     - `value`
       - : このプロミスが履行されたときの値。
 
-    これが関数ではない場合は、内部的に、履行された値を送るための _識別_ 関数 (`(x) => x`) に置き換えられます。
+    これが関数ではない場合は、内部的に、履行された値を送るための _恒等_ 関数 (`(x) => x`) に置き換えられます。
 
 - `onRejected` {{optional_inline}}
-
   - : このプロミスが拒否されたときに非同期に呼び出される関数です。この返値は、`then()` から返されるプロミスの履行値になります。この関数は以下の引数と共に呼び出されます。
-
     - `reason`
       - : こプロミスが拒否されたときの値。
 
@@ -105,7 +112,7 @@ Promise.reject(1).then(2, 2).then(console.log, console.log); // 1
 
 `then` メソッドは `Promise` を返すので、メソッド連鎖ができます。
 
-関数が `then` にハンドラーとして渡されると `Promise` を返します。同じ `Promise` がメソッド連鎖の次の `then` に現れます。次のスニペットは、非同期実行をシミュレートする、 `setTimeout` 関数付きのコードです。
+`then` にハンドラーとして渡された関数が `Promise` を返す場合、同じ `Promise` がメソッド連鎖の次の `then` に現れます。次のスニペットは、非同期実行をシミュレートする、 `setTimeout` 関数付きのコードです。
 
 ```js
 Promise.resolve("foo")

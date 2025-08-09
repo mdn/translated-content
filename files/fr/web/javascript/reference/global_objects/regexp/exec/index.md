@@ -9,7 +9,19 @@ La méthode **`exec()`** exécute la recherche d'une correspondance sur une cha�
 
 Si on souhaite uniquement savoir s'il y a une correspondance, on utilisera la méthode {{jsxref("RegExp.prototype.test()")}} ou la méthode {{jsxref("String.prototype.search()")}}.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
+
+```js interactive-example
+const regex1 = RegExp("foo*", "g");
+const str1 = "table football, foosball";
+let array1;
+
+while ((array1 = regex1.exec(str1)) !== null) {
+  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+  // Expected output: "Found foo. Next starts at 9."
+  // Expected output: "Found foo. Next starts at 19."
+}
+```
 
 Les objets représentant des expressions rationnelles gardent un état en mémoire lorsqu'ils utilisent les marqueurs {{jsxref("RegExp.global", "global")}} ou {{jsxref("RegExp.sticky", "sticky")}} et ils gardent notamment en mémoire {{jsxref("RegExp.lastIndex", "lastIndex")}} à partir de la correspondance précédemment trouvée. Ainsi, `exec()` peut être utilisée afin de parcourir plusieurs correspondances dans un texte (avec des groupes capturants) (contrairement à {{jsxref("String.prototype.match()")}}).
 
@@ -175,7 +187,7 @@ Cela affichera 'coucou monde !'.
 
 ## Voir aussi
 
-- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.matchAll()")}}

@@ -11,7 +11,7 @@ l10n:
 
 `remove()` メソッドにより、ハンドルを用いてファイルやディレクトリーを直接削除することができます。このメソッドが無い場合に削除をおこなうには、親ディレクトリーのハンドルを取得し、その親ディレクトリーで {{domxref("FileSystemDirectoryHandle.removeEntry()")}} メソッドを呼ぶ必要があるでしょう。
 
-[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_Access_API#%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%B3%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)のルートディレクトリーで `remove()` を呼ぶことで内容を全消去することもでき、これをおこなった後は新しい空の OPFS が作成されます。
+[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API#%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%B3%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)のルートディレクトリーで `remove()` を呼ぶことで内容を全消去することもでき、これをおこなった後は新しい空の OPFS が作成されます。
 
 ## 構文
 
@@ -87,5 +87,5 @@ async function deleteFile(e) {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [FileSystemHandle.remove() demo](https://filesystemhandle-remove.glitch.me/)

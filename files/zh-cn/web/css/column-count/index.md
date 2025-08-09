@@ -5,11 +5,45 @@ l10n:
   sourceCommit: f30eb42442f75f493ebb5ff1f119abf263592d54
 ---
 
-{{CSSRef}}
-
 **column-count** [CSS](/zh-CN/docs/Web/CSS) 属性将一个元素的内容分成指定数量的列。
 
-{{EmbedInteractiveExample("pages/css/column-count.html")}}
+{{InteractiveExample("CSS Demo: column-count")}}
+
+```css interactive-example-choice
+column-count: 2;
+```
+
+```css interactive-example-choice
+column-count: 3;
+```
+
+```css interactive-example-choice
+column-count: 4;
+```
+
+```css interactive-example-choice
+column-count: auto;
+column-width: 8rem;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  text-align: left;
+}
+```
 
 ## 语法
 
@@ -80,5 +114,5 @@ column-count: unset;
 
 - {{CSSXref("column-width")}}、{{CSSXref("columns")}} 简写属性
 - {{CSSXref("column-rule-color")}}、{{CSSXref("column-rule-style")}}、{{CSSXref("column-rule-width")}}、{{CSSXref("column-rule")}} 简写属性
-- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)（学习多列布局属性）
+- [多列布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（学习多列布局属性）
 - [多列式布局的基础概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

@@ -3,23 +3,21 @@ title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 59 中会影响开发人员的更改的信息。Firefox 59 已于 2018 年 3 月 13 日发布。
 
 ## Web 开发者应该注意的变化
 
 ### 开发工具
 
-- [网络监视器](/zh-CN/docs/Tools/Network_Monitor) 响应标签现在显示一个 [已渲染网页的预览](/zh-CN/docs/Tools/Network_Monitor#HTML_preview) — 如果响应是一个 HTML 的话 ([Firefox bug 1353319](https://bugzil.la/1353319)).
-- 存储探查器显示的 Cookie 信息 (见 [Cookies](/zh-CN/docs/Tools/Storage_Inspector#Cookies)) 现在包括一列 _“同站”_ 显示每个 cookie 的同站状态 ([Firefox bug 1298370](https://bugzil.la/1298370))。
-- [标尺](/zh-CN/docs/Tools/Rulers) 工具 现在包含了一个 readout 来显示当前视角的维度 ([Firefox bug 1402633](https://bugzil.la/1402633))。
-- 在[响应式设计模式](/zh-CN/docs/Tools/Responsive_Design_Mode), 你现在可以使用光标键设置屏幕尺寸 ([Firefox bug 1421663](https://bugzil.la/1421663))。详见 [Setting screen size](/zh-CN/docs/Tools/Responsive_Design_Mode#Setting_screen_size) 。
-- The _Raw headers_ display in the [Network Monitor](/zh-CN/docs/Tools/Network_Monitor) _Headers_ tab now includes the response's status code ([Firefox bug 1419401](https://bugzil.la/1419401)).
+- [网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) 响应标签现在显示一个 [已渲染网页的预览](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#html_preview) — 如果响应是一个 HTML 的话 ([Firefox bug 1353319](https://bugzil.la/1353319)).
+- 存储探查器显示的 Cookie 信息 (见 [Cookies](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#cookies)) 现在包括一列 _“同站”_ 显示每个 cookie 的同站状态 ([Firefox bug 1298370](https://bugzil.la/1298370))。
+- [标尺](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) 工具 现在包含了一个 readout 来显示当前视角的维度 ([Firefox bug 1402633](https://bugzil.la/1402633))。
+- 在[响应式设计模式](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), 你现在可以使用光标键设置屏幕尺寸 ([Firefox bug 1421663](https://bugzil.la/1421663))。详见 [Setting screen size](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#setting_screen_size) 。
+- The _Raw headers_ display in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) _Headers_ tab now includes the response's status code ([Firefox bug 1419401](https://bugzil.la/1419401)).
 
 ### HTML
 
-- 实现了{{HTMLElement("textarea")}} 元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/textarea#autocomplete) 属性。这使得你可以启用或禁用元素的表单自动填写。
+- 实现了{{HTMLElement("textarea")}} 元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#autocomplete) 属性。这使得你可以启用或禁用元素的表单自动填写。
 
 ### CSS
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，可用于阻止网站使用 [`Notifications`](/zh-CN/docs/Web/API/Notifications_API) Web API 显示通知。
 
 `Notifications` API 用于向用户显示桌面通知。通知有三个级别的权限：_允许_、*拒绝*和*提示*。用户可以为每个站点设置此权限。如果用户没有为特定站点设置权限，则浏览器将回退到全局权限，其默认值为*提示*。

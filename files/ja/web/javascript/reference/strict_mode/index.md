@@ -20,7 +20,7 @@ JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制
 
 ## 厳格モードの呼び出し
 
-厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Attributes#event_handler_attributes)属性、[`setTimeout()`](/ja/docs/Web/API/setTimeout) などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
+厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Reference/Attributes#event_handler_attributes)属性、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
 
 ### スクリプトでの厳格モード
 
@@ -50,7 +50,7 @@ function myNotStrictFunction() {
 }
 ```
 
-`"use strict"` ディレクティブは、単純な引数を持つ関数の本体にのみ使用することができます。 `"use strict"` を[残余](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)引数のある関数で使用すると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)となります。
+`"use strict"` ディレクティブは、単純な引数を持つ関数の本体にのみ使用することができます。 `"use strict"` を[残余](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)引数のある関数で使用すると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)となります。
 
 ```js-nolint example-bad
 function sum(a = 1, b = 2) {
@@ -197,7 +197,7 @@ function sum(a, a, c) {
 
 #### 古い 8 進数リテラル
 
-厳格モードでは、[`0` を先頭とした 8 進数表記や 8 進数エスケープシーケンスを禁止](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal)します。厳格モード以外では、 `0644` のような `0` で始まる数値は、すべての桁が 8 より小さい場合、 8 進数 (`0644 === 420`) として解釈されます。初心者の開発者は、接頭辞に何の意味もないと信じて、配置用の器具として使用することがありますが、これは数字の意味を変えてしまいます。 8 進数の先頭ゼロの構文はほとんど有益なものではなく、間違って使用される可能性があるため、厳格モードでは構文エラーとなります。
+厳格モードでは、[`0` を先頭とした 8 進数表記や 8 進数エスケープシーケンスを禁止](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)します。厳格モード以外では、 `0644` のような `0` で始まる数値は、すべての桁が 8 より小さい場合、 8 進数 (`0644 === 420`) として解釈されます。初心者の開発者は、接頭辞に何の意味もないと信じて、配置用の器具として使用することがありますが、これは数字の意味を変えてしまいます。 8 進数の先頭ゼロの構文はほとんど有益なものではなく、間違って使用される可能性があるため、厳格モードでは構文エラーとなります。
 
 ```js-nolint example-bad
 "use strict";

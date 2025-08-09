@@ -13,12 +13,12 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-{{HTMLElement("canvas")}} 看起来和 {{HTMLElement("img")}} 元素很相像，唯一的不同就是它并没有 src 和 alt 属性。实际上，`<canvas>` 标签只有两个属性**——** [`width`](/zh-CN/docs/Web/HTML/Element/canvas#width)和[`height`](/zh-CN/docs/Web/HTML/Element/canvas#height)。这些都是可选的，并且同样利用 {{Glossary("DOM")}} [properties](/zh-CN/docs/Web/API/HTMLCanvasElement) 来设置。当没有设置宽度和高度的时候，canvas 会初始化宽度为 300 像素和高度为 150 像素。该元素可以使用{{Glossary("CSS")}}来定义大小，但在绘制时图像会伸缩以适应它的框架尺寸：如果 CSS 的尺寸与初始画布的比例不一致，它会出现扭曲。
+{{HTMLElement("canvas")}} 看起来和 {{HTMLElement("img")}} 元素很相像，唯一的不同就是它并没有 src 和 alt 属性。实际上，`<canvas>` 标签只有两个属性**——** [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas#width)和[`height`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas#height)。这些都是可选的，并且同样利用 {{Glossary("DOM")}} [properties](/zh-CN/docs/Web/API/HTMLCanvasElement) 来设置。当没有设置宽度和高度的时候，canvas 会初始化宽度为 300 像素和高度为 150 像素。该元素可以使用{{Glossary("CSS")}}来定义大小，但在绘制时图像会伸缩以适应它的框架尺寸：如果 CSS 的尺寸与初始画布的比例不一致，它会出现扭曲。
 
 > [!NOTE]
 > 如果你绘制出来的图像是扭曲的，尝试用 width 和 height 属性为\<canvas>明确规定宽高，而不是使用 CSS。
 
-[`id`](/zh-CN/docs/Web/HTML/Global_attributes/id)属性并不是\<canvas>元素所特有的，而是每一个 HTML 元素都默认具有的属性（比如 class 属性）。给每个标签都加上一个 id 属性是个好主意，因为这样你就能在我们的脚本中很容易的找到它。
+[`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)属性并不是\<canvas>元素所特有的，而是每一个 HTML 元素都默认具有的属性（比如 class 属性）。给每个标签都加上一个 id 属性是个好主意，因为这样你就能在我们的脚本中很容易的找到它。
 
 \<canvas>元素可以像任何一个普通的图像一样（有{{cssxref("margin")}}，{{cssxref("border")}}，{{cssxref("background")}}等等属性）被设计。然而，这些样式不会影响在 canvas 中的实际图像。我们将会在一个[专门的章节](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)里看到这是如何解决的。当开始时没有为 canvas 规定样式规则，其将会完全透明。
 
@@ -48,7 +48,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 
 ## 渲染上下文（The rendering context）
 
-{{HTMLElement("canvas")}} 元素创造了一个固定大小的画布，它公开了一个或多个**渲染上下文**，其可以用来绘制和处理要展示的内容。我们将会将注意力放在 2D 渲染上下文中。其他种类的上下文也许提供了不同种类的渲染方式；比如， [WebGL](/zh-CN/docs/Web/WebGL) 使用了基于[OpenGL ES](http://www.khronos.org/opengles/)的 3D 上下文 ("experimental-webgl") 。
+{{HTMLElement("canvas")}} 元素创造了一个固定大小的画布，它公开了一个或多个**渲染上下文**，其可以用来绘制和处理要展示的内容。我们将会将注意力放在 2D 渲染上下文中。其他种类的上下文也许提供了不同种类的渲染方式；比如， [WebGL](/zh-CN/docs/Web/API/WebGL_API) 使用了基于[OpenGL ES](https://www.khronos.org/opengles/)的 3D 上下文 ("experimental-webgl") 。
 
 canvas 起初是空白的。为了展示，首先脚本需要找到渲染上下文，然后在它的上面绘制。{{HTMLElement("canvas")}} 元素有一个叫做 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 的方法，这个方法是用来获得渲染上下文和它的绘画功能。`getContext()`接受一个参数，即上下文的类型。对于 2D 图像而言，如本教程，你可以使用 {{domxref("CanvasRenderingContext2D")}}。
 

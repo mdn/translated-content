@@ -3,13 +3,13 @@ title: 2D игра на Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{GamesSidebar}}{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
 
 В этом пошаговом руководстве мы создадим простую мобильную игру **MDN Breakout** с помощью JavaScript и фреймворка [Phaser](https://phaser.io/).
 
 Каждый шаг будет сопровождаться настраиваемым и живым примером для того, чтобы вы могли видеть, что должно получиться на промежуточных этапах создания. Вы узнаете основы для работы с фреймворком Phaser: рендер и движение картинок, определение столкновения, управление, встроенные вспомогательные функции, анимации и отрисовка кадров, изменение игровой статистки.
 
-Чтобы получить наибольшую пользу от этого руководства, вам необходимо иметь базовые знания [JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics). После прочтения вы научитесь создавать собственные простые веб-игры с помощью Phaser.
+Чтобы получить наибольшую пользу от этого руководства, вам необходимо иметь базовые знания [JavaScript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). После прочтения вы научитесь создавать собственные простые веб-игры с помощью Phaser.
 
 ![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](mdn-breakout-phaser.png)
 
@@ -17,18 +17,18 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 Все уроки и различные версии [MDN Breakout](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/lesson16.html), которые мы сделаем вместе, доступны на [GitHub](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/):
 
-1. [Инициализация фреймворка](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework)
-2. [Масштабирование](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling)
-3. [Загрузка ресурсов и их вывод](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen)
-4. [Движение мяча](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball)
-5. [Физика](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Physics)
-6. [Отскакивание от стен](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls)
-7. [Управление](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление)
-8. [Конец игры](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over)
-9. [Создание поля блоков](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Создание_кирпичей)
-10. [Определение столкновения](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Обработка_коллизий)
-11. [Счёт](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Очки)
-12. [Победа в игре](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Победа)
+1. [Инициализация фреймворка](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
+2. [Масштабирование](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling)
+3. [Загрузка ресурсов и их вывод](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)
+4. [Движение мяча](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
+5. [Физика](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
+6. [Отскакивание от стен](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
+7. [Управление](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
+8. [Конец игры](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
+9. [Создание поля блоков](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
+10. [Определение столкновения](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
+11. [Счёт](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
+12. [Победа в игре](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
 13. [Добавление жизней](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
 14. [Анимация](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
 15. [Кнопки](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
@@ -43,6 +43,6 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 ## Следующие шаги
 
-Давайте начнём! Первая часть руководства — это [Инициализация фреймворка](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework).
+Давайте начнём! Первая часть руководства — это [Инициализация фреймворка](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework).
 
 {{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}

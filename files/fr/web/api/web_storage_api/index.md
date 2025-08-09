@@ -57,5 +57,5 @@ Les développeuses et développeurs doivent connaître ces différentes impléme
 ## Voir aussi
 
 - [Utiliser l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria)
+- [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
 - [HTML5 Storage API By Venkatraman](https://medium.com/@ramsunvtech/onfocus-html5-storage-apis-b45d92aa424b)

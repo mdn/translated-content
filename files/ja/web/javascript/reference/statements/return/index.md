@@ -9,7 +9,22 @@ l10n:
 
 **`return`** 文は関数の実行を終了して、関数の呼び出し元に返す値を指定します。
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript デモ: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## 構文
 
@@ -109,7 +124,7 @@ counter();
 
 ### 関数を返す
 
-[クロージャ](/ja/docs/Web/JavaScript/Closures)についての記事も参照のこと。
+[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)についての記事も参照のこと。
 
 ```js
 function magic() {
@@ -133,4 +148,4 @@ answer(1337); // 56154
 ## 関連情報
 
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions)
-- [クロージャ](/ja/docs/Web/JavaScript/Closures)
+- [クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)

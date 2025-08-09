@@ -9,7 +9,7 @@ l10n:
 
 HTML の {{HTMLElement("script")}} 要素は **`HTMLScriptElement`** インターフェイスを公開しています。これは `<script>` 要素の動作や実行を操作するための特別なプロパティやメソッドを（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて）提供します。
 
-JavaScript ファイルは `text/javascript` の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)で提供されます。しかし、ブラウザーは寛大であり、スクリプトが画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、または `text/csv` で提供されている場合のみブロックされます。スクリプトがブロックされた場合、その要素は {{domxref("HTMLElement/error_event", "error")}} イベントを受け取ります。それ以外の場合は、{{domxref("Window/load_event", "load")}} イベントを受け取ります。
+JavaScript ファイルは `text/javascript` の [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)で提供されます。しかし、ブラウザーは寛大であり、スクリプトが画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、または `text/csv` で提供されている場合のみブロックされます。スクリプトがブロックされた場合、その要素は {{domxref("HTMLElement/error_event", "error")}} イベントを受け取ります。それ以外の場合は、{{domxref("Window/load_event", "load")}} イベントを受け取ります。
 
 {{InheritanceDiagram}}
 
@@ -18,15 +18,15 @@ JavaScript ファイルは `text/javascript` の [MIME タイプ](/ja/docs/Web/H
 _親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
 - {{domxref("HTMLScriptElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
-  - : {{htmlelement("script")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Element/script#attributionsrc) 属性をプログラムで取得・設定し、その属性値を反映します。`attributionsrc` はブラウザーにスクリプトリソースリクエストと一緒に {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを送信するトリガーとして用いられ、それぞれ JavaScript ベースの[属性ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[属性トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録します。
+  - : {{htmlelement("script")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Reference/Elements/script#attributionsrc) 属性をプログラムで取得・設定し、その属性値を反映します。`attributionsrc` はブラウザーにスクリプトリソースリクエストと一緒に {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを送信するトリガーとして用いられ、それぞれ JavaScript ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録します。
 - {{domxref("HTMLScriptElement.async")}}
   - : スクリプトの実行方法を論理値で制御します。クラシックスクリプトの場合、`async` プロパティを `true` に設定すると、構文解析と並列に外部スクリプトが取得され、利用できるようになるとすぐに評価されます。[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)の場合、`async` プロパティを `true` に設定すると、スクリプトとその依存関係がすべて並列に取得され、利用できるようになるとすぐに評価されます。
 - {{domxref("HTMLScriptElement.blocking")}} {{Experimental_Inline}}
   - : スクリプトを取得する際に特定の操作を実行しないことを示す文字列です。これは {{HTMLElement("script")}} 要素の `blocking` 属性を反映しています。
 - `HTMLScriptElement.charset` {{deprecated_inline}}
-  - : 文字列で、外部スクリプトの文字エンコーディングを表します。これは [`charset`](/ja/docs/Web/HTML/Element/script#charset) 属性を反映します。
+  - : 文字列で、外部スクリプトの文字エンコーディングを表します。これは [`charset`](/ja/docs/Web/HTML/Reference/Elements/script#charset) 属性を反映します。
 - {{domxref("HTMLScriptElement.crossOrigin")}}
-  - : 文字列で、 script 要素の [CORS 設定](/ja/docs/Web/HTML/Attributes/crossorigin) を反映します。他の[オリジン](/ja/docs/Glossary/Origin)のスクリプトについては、エラー情報が公開されるかどうかを制御します。
+  - : 文字列で、 script 要素の [CORS 設定](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を反映します。他の[オリジン](/ja/docs/Glossary/Origin)のスクリプトについては、エラー情報が公開されるかどうかを制御します。
 - {{domxref("HTMLScriptElement.defer")}}
   - : スクリプトの実行方法を論理値で制御します。クラシックスクリプトの場合、`defer` プロパティを `true` に設定すると、外部スクリプトは文書が構文解析された後、`DOMContentLoaded` イベントを発行する前に実行されます。[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)の場合、`defer` プロパティは何の効果もありません。
 - `HTMLScriptElement.event` {{deprecated_inline}}
@@ -38,14 +38,14 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 - {{domxref("HTMLScriptElement.noModule")}}
   - : 論理値で、 true ならば [ES モジュール](/ja/docs/Web/JavaScript/Guide/Modules)に対応したブラウザーにおいてスクリプトの実行を停止します。 — JavaScript モジュールに対応して*いない*古いブラウザーで代替スクリプトを実行するために使用します。
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
-  - : 文字列で、 HTML 属性 [`referrerPolicy`](/ja/docs/Web/HTML/Element/script#referrerpolicy) を反映し、スクリプトを取得する際、そのスクリプトの取得が完了した時にどのリファラーを使用するかを示します。
+  - : 文字列で、 HTML 属性 [`referrerPolicy`](/ja/docs/Web/HTML/Reference/Elements/script#referrerpolicy) を反映し、スクリプトを取得する際、そのスクリプトの取得が完了した時にどのリファラーを使用するかを示します。
 - {{domxref("HTMLScriptElement.src")}}
-  - : 文字列で、外部スクリプトの URL を表します。これは [`src`](/ja/docs/Web/HTML/Element/script#src) 属性を反映します。これは {{HTMLElement("script")}} 要素の `src` 属性を反映したものです。
+  - : 文字列で、外部スクリプトの URL を表します。これは [`src`](/ja/docs/Web/HTML/Reference/Elements/script#src) 属性を反映します。これは {{HTMLElement("script")}} 要素の `src` 属性を反映したものです。
 - {{domxref("HTMLScriptElement.text")}}
-
   - : この {{HTMLElement("script")}} 要素の中にあるすべての {{domxref("Text")}} ノード（コメントなどの他のノードを除く）の内容をツリー順で連結した文字列です。設定した場合は、{{domxref("Node.textContent")}} プロパティと同様に動作します。
 
-    > **メモ:** {{domxref("Document.write()")}} メソッドで挿入された場合、 {{HTMLElement("script")}} 要素は（ふつう同期的に）実行されますが、 {{domxref("Element.innerHTML")}} または {{domxref("Element.outerHTML")}} を使用して挿入された場合は実行されません。
+    > [!NOTE]
+    > {{domxref("Document.write()")}} メソッドで挿入された場合、 {{HTMLElement("script")}} 要素は（ふつう同期的に）実行されますが、 {{domxref("Element.innerHTML")}} または {{domxref("Element.outerHTML")}} を使用して挿入された場合は実行されません。
 
 - {{domxref("HTMLScriptElement.type")}}
   - : 文字列で、スクリプトの MIME タイプを表します。これは {{HTMLElement("script")}} 要素の `type` 属性を反映したものです。

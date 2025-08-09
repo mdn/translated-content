@@ -60,17 +60,13 @@ browser.runtime.onMessage.hasListener(listener)
 ### 引数
 
 - `listener`
-
   - : このイベントが発生したときに実行されるリスナー関数。関数には次の引数が渡される。
-
     - `message`
-
       - : `object` 型。メッセージ本体。これは JSON 化できるオブジェクトです（[データクローンアルゴリズム](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#データクローンアルゴリズム)を参照）。
 
     - `sender`
       - : {{WebExtAPIRef('runtime.MessageSender')}} オブジェクト。メッセージの送信側を表します。
     - `sendResponse`
-
       - : メッセージに対する応答を送るために、最大で一回実行できる関数。この関数は引数を一つ受け取り、それは JSON 化できるオブジェクトのはずです（[データクローンアルゴリズム](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#データクローンアルゴリズム)を参照）。その引数はメッセージ送信側に返送されます。
 
         同じ文書中に `onMessage()` リスナーが 2 つ以上ある場合、応答を返すことができるのは 1 つだけです。
@@ -78,13 +74,13 @@ browser.runtime.onMessage.hasListener(listener)
         同期的に応答するには、リスナー関数が復帰する前に `sendResponse()` を実行してください。
 
         非同期的に応答するには、次のどちらかを実行します。
-
         - `sendResponse()` に対する参照を保持したままリスナー関数から `true` を返す。そうすると、リスナー関数から復帰した後でも `sendResponse()` が実行できます。
         - リスナー関数から {{jsxref("Promise")}} を返して、応答の準備ができたときにその Promise を解決する。こちらがより好ましい方法です。
 
     リスナー関数は、論理値または {{jsxref("Promise")}} のいずれかを返します。
 
-    > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できなくなります。
+    > [!NOTE]
+    > `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できなくなります。
     >
     > ```js example-bad
     > // このようにしないでください
@@ -263,7 +259,7 @@ function isBookmarked(message, sender, response) {
 browser.runtime.onMessage.addListener(isBookmarked);
 ```
 
-非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、[`setTimeout()`](/ja/docs/Web/API/setTimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
+非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
 
 ```js
 // background-script.js

@@ -5,9 +5,22 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView
 
 {{JSRef}}
 
-O **`DataView`** provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da [extremidade (_endianness_) da plataforma](/pt-BR/docs/Glossario/Endianness).
+O **`DataView`** provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da [extremidade (_endianness_) da plataforma](/pt-BR/docs/Glossary/Endianness).
 
-{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Create a couple of views
+const view1 = new DataView(buffer);
+const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+view1.setInt8(12, 42); // Put 42 in slot 12
+
+console.log(view2.getInt8(0));
+// Expected output: 42
+```
 
 ## Sintaxe
 
@@ -33,7 +46,6 @@ Você pode pensar nesse objeto retornado como um "intérprete" de um array buffe
 ### Exceções
 
 - `{{jsxref("RangeError")}}`
-
   - : Lançado se o `byteOffset` ou `byteLength` especificados ultrapassarem o final do buffer.
 
     Por exemplo, se o buffer tem 16 bytes de comprimento, o `byteOffset` é 8 e o `byteLength` é 10, esse erro será lançado porque a view resultante tenta estender 2 bytes acima do comprimento total do buffer.
@@ -97,11 +109,11 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 Todas as instâncias de `DataView` herdam {{jsxref("DataView.prototype")}} e permitem a adição de propriedades a todos os objetos DataView.
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties') -->
 
 ## Métodos
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods') -->
 
 ## Exemplo
 

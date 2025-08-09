@@ -32,7 +32,7 @@ Espaços em branco ajudam na legibilidade do código e separam os símbolos um d
 
 ## Finalizadores de linha
 
-Além dos caracteres de espaço em branco, caracteres finalizadores de linha são usados para melhorar a legibilidade do código. Contudo, em alguns casos, finalizadores de linha podem influenciar a execução do código JavaScript, por isso você não poderá usá-los em alguns casos. Eles também afetam o [processo automático de inserção de ponto e vírgula](#automatic_semicolon_insertion). Em [expressões regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) os finalizadores de linha podem ser indicados com a classe **\s**.
+Além dos caracteres de espaço em branco, caracteres finalizadores de linha são usados para melhorar a legibilidade do código. Contudo, em alguns casos, finalizadores de linha podem influenciar a execução do código JavaScript, por isso você não poderá usá-los em alguns casos. Eles também afetam o [processo automático de inserção de ponto e vírgula](#automatic_semicolon_insertion). Em [expressões regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) os finalizadores de linha podem ser indicados com a classe **\s**.
 
 Apenas os seguintes códigos Unicode são tratados como finalizadores de linha no ECMAScript, outros caracteres de quebra de linha são tratados apenas como espaço em branco (por exemplo, Next Line, NEL, U+0085 são considerados espaço em branco).
 

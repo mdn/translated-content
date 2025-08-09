@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`navigator.sendBeacon()`** メソッドは、ウェブサーバーに{{glossary("Asynchronous", "非同期")}}に少量のデータを [HTTP POST](/ja/docs/Web/HTTP/Methods/POST) リクエストで送ります。
+**`navigator.sendBeacon()`** メソッドは、ウェブサーバーに{{glossary("Asynchronous", "非同期")}}に少量のデータを [HTTP POST](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストで送ります。
 
 これはウェブサーバーに分析データを送信するために使用するためのものであり、 {{domxref("XMLHttpRequest", "XMLHttpRequest")}} を使用するような、分析を送信するための古い技術の問題のいくつかを避けています。
 
@@ -53,7 +53,7 @@ sendBeacon(url, data)
 - 非同期に送信されます。
 - 次のページの読み込みには影響しません
 
-データは [HTTP POST](/ja/docs/Web/HTTP/Methods/POST) リクエストで送信されます。
+データは [HTTP POST](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストで送信されます。
 
 ### セッション終了時の分析の送信
 
@@ -74,7 +74,7 @@ document.addEventListener("visibilitychange", function logData() {
 しかし、これは非常に信頼性に欠けます。多くの場合、特にモバイルでは、ブラウザーは `unload`、`beforeunload`、`pagehide` イベントを発行しません。例えば、次の例ではこれらのイベントは発行されません。
 
 1. ユーザーがページを読み込んで操作します。
-2. 完了語、タブを閉じずに別のアプリに切り替えます。
+2. 完了後、タブを閉じずに別のアプリに切り替えます。
 3. その後、携帯電話のアプリマネージャーによってブラウザーアプリが閉じられました。
 
 さらに、 `unload` イベントは現行ブラウザーに実装されているバック/フォワードキャッシュ ([bfcache](https://web.dev/articles/bfcache)) と互換性がありません。 Firefox のような一部のブラウザーは、アンロードハンドラーを格納したページを bfcache から除外することでこの非互換性を処理し、パフォーマンスを低下させています。他にも、 Safari や Android の Chrome などでは、ユーザーが同じタブで別のページに移動したときに `unload` イベントを発生させないように処理しています。

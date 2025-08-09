@@ -2,7 +2,7 @@
 title: 在 web 应用程序中使用文件
 slug: Web/API/File_API/Using_files_from_web_applications
 l10n:
-  sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
+  sourceCommit: dd72711ba653c9db80f84833398bdd2df0c34a39
 ---
 
 {{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
@@ -11,7 +11,7 @@ l10n:
 
 ## 访问被选择的文件
 
-考虑这段 HTML:
+考虑这段 HTML 代码：
 
 ```html
 <input type="file" id="input" multiple />
@@ -132,7 +132,7 @@ const numFiles = files.length;
 
 你可以隐藏公认难看的文件 {{HTMLElement("input")}} 元素并显示你自己的界面来打开文件选择器，然后显示哪个或哪些文件被用户选中了。你可以通过给 input 元素添加 `display:none` 的样式，再调用 {{HTMLElement("input")}} 元素的 {{DOMxRef("HTMLElement.click","click()")}} 方法来实现。
 
-考虑这段 HTML：
+考虑这段 HTML 代码：
 
 ```html
 <input
@@ -183,11 +183,13 @@ fileSelect.addEventListener(
 
 ```css
 .visually-hidden {
-  position: absolute !important;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: 1px;
-  width: 1px;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 input.visually-hidden:is(:focus, :focus-within) + label {
@@ -271,7 +273,7 @@ function handleFiles(files) {
 }
 ```
 
-这里我们循环处理用户选择的文件，看每个文件的 `type` 属性是不是以“`image/`”开头。对每个文件而言，如果它是图片，我们就创建一个新的 `img` 元素。可以使用 CSS 来创建一个漂亮的边框或阴影来显示图片的具体大小，在这儿就不具体做了。
+这里我们循环处理用户选择的文件，看每个文件的 `type` 属性是不是以 `image/` 开头。对每个文件而言，如果它是图片，我们就创建一个新的 `img` 元素。可以使用 CSS 来创建一个漂亮的边框或阴影来显示图片的具体大小，在这儿就不具体做了。
 
 为了在 DOM 树中更容易地找到他们，每个图片元素都被添加了一个名为 `obj` 的 CSS 类。我们还给每个图片添加了 `file` 属性以指定其 {{DOMxRef("File")}} 属性；这样做可以让我们拿到稍后需要实际上传的图片。我们在预览页中使用 {{DOMxRef("Node.appendChild()")}} 来添加新的缩略图。
 
@@ -363,12 +365,11 @@ function handleFiles() {
 
 首先，获取 ID 为 `fileList` 的 {{HTMLElement("div")}} 。这个区块里我们会插入我们的文件列表，包括缩略图。
 
-如果传入 `handleFiles()` 的 {{DOMxRef("FileList")}} 对象值为 `null` 时，我们只要简单将这块的内部 HTML 为显示“没有选择任何文件！”。否则，我们就需要像下面这样编写我们的文件列表：
+如果传入 `handleFiles()` 的 {{DOMxRef("FileList")}} 对象值为空时，我们只要简单将这块的内部 HTML 为显示“没有选择任何文件！”。否则，我们就需要像下面这样编写我们的文件列表：
 
 1. 创建一个无序列表（{{HTMLElement("ul")}}）元素。
 2. 通过调用列表的 {{DOMxRef("Node.appendChild()")}} 方法来将新的列表元素插入到 {{HTMLElement("div")}} 块。
 3. 遍历 `files` 代表的文件集合 {{DOMxRef("FileList")}} 中的每个 {{DOMxRef("File")}}：
-
    1. 创建一个新的列表项（{{HTMLElement("li")}}）元素并插入到列表中。
    2. 创建一个新的图片（{{HTMLElement("img")}}）元素。
    3. 设置图片的源为一个新的指代文件的对象 URL，使用 {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 来创建 blob URL。

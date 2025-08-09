@@ -3,8 +3,6 @@ title: GLSL Шейдеры
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
 
-{{GamesSidebar}}
-
 Шейдеры используют GLSL (OpenGL Shading Language), специальный язык программирования шейдеров от OpenGL, который во многом напоминает С (Си). GLSL выполняется напрямую графическим процессором. Существует два типа шейдеров: вершинные шейдеры и фрагментные (пиксельные) шейдеры. Вершинные шейдеры изменяют положение фигуры в системе 3D координат. Фрагментные шейдеры рассчитывают цвет и другие атрибуты отображения.
 
 GLSL не так прост в изучении, как JavaScript. GLSL является строго типизированным и в нем часто используются операции с векторами и матрицами. It can get very complicated — very quickly. В этой статье мы создадим небольшой пример кода, который отображает куб. Чтобы ускорить разработку, мы будем использовать Three.js API.
@@ -130,7 +128,7 @@ To actually apply the newly created shaders to the cube, comment out the `basicM
 // var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 ```
 
-Далее, создаём [`shaderMaterial`](http://threejs.org/docs/#Reference/Materials/ShaderMaterial):
+Далее, создаём [`shaderMaterial`](https://threejs.org/docs/#Reference/Materials/ShaderMaterial):
 
 ```js
 var shaderMaterial = new THREE.ShaderMaterial({
@@ -237,4 +235,4 @@ This article has taught the very basics of shaders. Our example doesn't do much 
 ## Смотрите также
 
 - [Изучение WebGL](http://learningwebgl.com/blog/?page_id=1217) — for general WebGL knowledge
-- [WebGL шейдеры и GLSL основы](http://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — for GLSL specific information
+- [WebGL шейдеры и GLSL основы](https://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — for GLSL specific information

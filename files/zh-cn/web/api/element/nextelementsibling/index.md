@@ -98,9 +98,9 @@ if(!("nextElementSibling" in document.documentElement)){
 
 ## 参见
 
-- [`nextSibling`](/zh-CN/DOM/Node.nextSibling)
-- [`childElementCount`](/zh-CN/DOM/Element.childElementCount)
-- [`children`](/zh-CN/DOM/Element.children)
-- [`firstElementChild`](/zh-CN/DOM/Element.firstElementChild)
-- [`lastElementChild`](/zh-CN/DOM/Element.lastElementChild)
-- [`previousElementSibling`](/zh-CN/DOM/Element.previousElementSibling)
+- [`nextSibling`](/zh-CN/docs/DOM/Node.nextSibling)
+- [`childElementCount`](/zh-CN/docs/Web/API/Element/childElementCount)
+- [`children`](/zh-CN/docs/Web/API/Element/children)
+- [`firstElementChild`](/zh-CN/docs/Web/API/Element/firstElementChild)
+- [`lastElementChild`](/zh-CN/docs/Web/API/Element/lastElementChild)
+- [`previousElementSibling`](/zh-CN/docs/Web/API/Element/previousElementSibling)

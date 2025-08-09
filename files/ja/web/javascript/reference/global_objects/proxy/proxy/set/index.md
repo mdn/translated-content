@@ -9,7 +9,33 @@ l10n:
 
 **`handler.set()`** は、オブジェクトの `[[Set]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。プロパティの値を設定することに対するトラップです。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.set()", "taller")}}
+
+```js interactive-example
+const monster1 = { eyeCount: 4 };
+
+const handler1 = {
+  set(obj, prop, value) {
+    if (prop === "eyeCount" && value % 2 !== 0) {
+      console.log("Monsters must have an even number of eyes");
+    } else {
+      return Reflect.set(...arguments);
+    }
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+proxy1.eyeCount = 1;
+// Expected output: "Monsters must have an even number of eyes"
+
+console.log(proxy1.eyeCount);
+// Expected output: 4
+
+proxy1.eyeCount = 2;
+console.log(proxy1.eyeCount);
+// Expected output: 2
+```
 
 ## 構文
 
@@ -31,7 +57,6 @@ new Proxy(target, {
 - `value`
   - : 設定するプロパティの新しい値です。
 - `receiver`
-
   - : 割り当てがもともと行われていたオブジェクトです。これは通常、プロキシーそのものです。しかし、 `set()` ハンドラーは内部的にプロトタイプチェーンや様々な他の方法経由で呼び出されます。
 
     例えば、スクリプト上に `obj.name = "jen"` があり、`obj` はプロキシーではなく、独自の `.name` プロパティを持っていません。しかし、プロトタイプチェーンでプロキシーを持っています。その場合、そのプロキシーの `set()` ハンドラーが呼ばれて、 `obj` はレシーバーとして渡されます。

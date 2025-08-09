@@ -3,13 +3,23 @@ title: this
 slug: Web/JavaScript/Reference/Operators/this
 ---
 
-{{jsSidebar("Operators")}}
-
 与其他语言相比，**函数的 `this` 关键字**在 JavaScript 中的表现略有不同，此外，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和非严格模式之间也会有一些差别。
 
 在绝大多数情况下，函数的调用方式决定了 `this` 的值（运行时绑定）。`this` 不能在执行期间被赋值，并且在每次函数被调用时 `this` 的值也可能会不同。ES5 引入了 [bind](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法来设置函数的 `this` 值，而不用考虑函数如何被调用的。ES2015 引入了[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，箭头函数不提供自身的 this 绑定（`this` 的值将保持为闭合词法上下文的值）。
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## 语法
 
@@ -48,7 +58,7 @@ console.log(obj2.getThis()); // { name: 'obj2', getThis: [Function: getThis] }
 
 注意，虽然函数是相同的，但是根据其调用的方式，`this` 的值是不同的。这与函数参数的工作方式类似。
 
-`this` 的值不是拥有此函数作为自己属性的对象，而是用于调用此函数的对象。你可以通过调用对象在[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的方法来证明这一点。
+`this` 的值不是拥有此函数作为自己属性的对象，而是用于调用此函数的对象。你可以通过调用对象在[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中的方法来证明这一点。
 
 ```js
 const obj3 = {
@@ -146,7 +156,7 @@ const foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
-箭头函数在其周围的作用域上创建一个 `this` 值的[闭包](/zh-CN/docs/Web/JavaScript/Closures)，这意味着箭头函数的行为就像它们是“自动绑定”的——无论如何调用，`this` 都绑定到函数创建时的值（在上面的例子中，是全局对象）。在其他函数内部创建的箭头函数也是如此：它们的 `this` 值保持为闭合词法上下文的 `this`。[参见下面的例子](#箭头函数中的_this)。
+箭头函数在其周围的作用域上创建一个 `this` 值的[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)，这意味着箭头函数的行为就像它们是“自动绑定”的——无论如何调用，`this` 都绑定到函数创建时的值（在上面的例子中，是全局对象）。在其他函数内部创建的箭头函数也是如此：它们的 `this` 值保持为闭合词法上下文的 `this`。[参见下面的例子](#箭头函数中的_this)。
 
 此外，当使用 `call()`、`bind()` 或 `apply()` 调用箭头函数时，`thisArg` 参数会被忽略。不过，你仍然可以使用这些方法传递其他参数。
 
@@ -190,7 +200,7 @@ console.log(o.a); // 38
 
 ### 类上下文
 
-一个[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)可以被分为两个上下文：静态和实例。[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)、方法和实例字段初始化器（[公有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)或[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)）属于实例上下文。[静态](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)方法、静态字段初始化器和[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)属于静态上下文。`this` 值在每个上下文中都是不同的。
+一个[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)可以被分为两个上下文：静态和实例。[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)、方法和实例字段初始化器（[公有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)或[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)）属于实例上下文。[静态](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)方法、静态字段初始化器和[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)属于静态上下文。`this` 值在每个上下文中都是不同的。
 
 类构造函数总是通过 `new` 调用，所以它们的行为与[构造函数](#构造函数)相同：`this` 值是正在创建的新实例。类方法的行为像对象字面量中的方法——`this` 值是方法被访问的对象。如果方法没有转移到另一个对象，`this` 通常是类的一个实例。
 
@@ -243,9 +253,10 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 在全局执行上下文中（在任何函数或类之外；可能在全局范围内定义的[块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)或[箭头函数](#箭头函数)内部），`this` 值取决于脚本运行的执行上下文。像[回调](#回调)一样，`this` 值由运行时环境（调用者）确定。
 
-在脚本的顶层，无论是否在严格模式下，`this` 会指向{{jsxref("globalThis")}}。这通常与全局对象相同——例如，如果源代码放在 HTML 的 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素内并作为脚本执行，`this === window`。
+在脚本的顶层，无论是否在严格模式下，`this` 会指向{{jsxref("globalThis")}}。这通常与全局对象相同——例如，如果源代码放在 HTML 的 [`<script>`](/zh-CN/docs/Web/HTML/Reference/Elements/script) 元素内并作为脚本执行，`this === window`。
 
-> **备注：** `globalThis` 通常与全局对象的概念相同（即向 `globalThis` 添加属性会使它们成为全局变量）——这对于浏览器和 Node 是这样的——但主机可以为 `globalThis` 提供与全局对象无关的不同值。
+> [!NOTE]
+> `globalThis` 通常与全局对象的概念相同（即向 `globalThis` 添加属性会使它们成为全局变量）——这对于浏览器和 Node 是这样的——但主机可以为 `globalThis` 提供与全局对象无关的不同值。
 
 ```js
 // 在网页浏览器中，window 对象也是全局对象：
@@ -440,7 +451,7 @@ for (const element of elements) {
 
 ### 内联事件处理器中的 this
 
-当代码从内联[事件处理器属性](/zh-CN/docs/Web/HTML/Attributes#event_handler_attributes)调用时，它的 `this` 绑定到放置监听器的 DOM 元素上：
+当代码从内联[事件处理器属性](/zh-CN/docs/Web/HTML/Reference/Attributes#event_handler_attributes)调用时，它的 `this` 绑定到放置监听器的 DOM 元素上：
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>

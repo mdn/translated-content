@@ -3,11 +3,9 @@ title: 鼠标控制
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
 
-本篇为 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的**第 9 节**。在你完成这篇课程之后，你可以在 [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html) 找到我们的源代码。
+本篇为 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的**第 9 节**。在你完成这篇课程之后，你可以在 [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html) 找到我们的源代码。
 
 这个游戏实际已经完成，现在让我们着手去润色。我们已经添加过键盘控制，而加入鼠标控制也同样简单。
 
@@ -46,6 +44,6 @@ function mouseMoveHandler(e) {
 
 ## 下一步
 
-现在我们已经拥有一个完整的游戏。我们的系列教程将以一些细节上的调整作为[结束。](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Finishing_up)
+现在我们已经拥有一个完整的游戏。我们的系列教程将以一些细节上的调整作为[结束。](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}

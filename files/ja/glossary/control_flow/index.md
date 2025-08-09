@@ -33,8 +33,8 @@ if (field==empty) {
 
 ### 技術文書
 
-- MDN の [JavaScript リファレンス - 制御フロー](/ja/docs/Web/JavaScript/Reference#Control_flow)
+- MDN の [JavaScript リファレンス - 制御フロー](/ja/docs/Web/JavaScript/Reference#control_flow)
 
 ### それについて学ぶ
 
-- MDN の [文（制御フロー）](/ja/docs/Web/JavaScript/Guide/Statements)
+- MDN の [文（制御フロー）](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)

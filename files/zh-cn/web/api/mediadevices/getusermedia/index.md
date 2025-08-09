@@ -34,7 +34,6 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 ### 参数
 
 - `constraints`
-
   - : 作为一个{{domxref("MediaStreamConstraints")}} 对象，指定了请求的媒体类型和相对应的参数。
 
     constraints 参数是一个包含了`video` 和 `audio`两个成员的`MediaStreamConstraints` 对象，用于说明请求的媒体类型。必须至少一个类型或者两个同时可以被指定。如果浏览器无法找到指定的媒体类型或者无法满足相对应的参数要求，那么返回的 Promise 对象就会处于 rejected［失败］状态，`NotFoundError`作为 rejected［失败］回调的参数。
@@ -121,7 +120,6 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 - `AbortError`［中止错误］
   - : 尽管用户和操作系统都授予了访问设备硬件的权利，而且未出现可能抛出`NotReadableError`异常的硬件问题，但仍然有一些问题的出现导致了设备无法被使用。
 - `NotAllowedError`［拒绝错误］
-
   - : 用户拒绝了当前的浏览器实例的访问请求；或者用户拒绝了当前会话的访问；或者用户在全局范围内拒绝了所有媒体访问请求。
 
     > [!NOTE]
@@ -132,7 +130,6 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 - `NotReadableError`［无法读取错误］
   - : 尽管用户已经授权使用相应的设备，操作系统上某个硬件、浏览器或者网页层面发生的错误导致设备无法被访问。
 - `OverconstrainedError`［无法满足要求错误］
-
   - : 指定的要求无法被设备满足，此异常是一个类型为`OverconstrainedError`的对象，拥有一个`constraint`属性，这个属性包含了当前无法被满足的`constraint`对象，还拥有一个`message`属性，包含了阅读友好的字符串用来说明情况。
 
     > [!NOTE]
@@ -242,7 +239,7 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 
 ## 权限
 
-在一个可安装的 app（如[Firefox OS app](/zh-CN/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）中使用 `getUserMedia()` ，你需要在声明文件中指定以下的权限：
+在一个可安装的 app（如[Firefox OS app](/zh-CN/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）中使用 `getUserMedia()` ，你需要在声明文件中指定以下的权限：
 
 ```js
 "permissions": {
@@ -255,7 +252,7 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 }
 ```
 
-参见 [permission: audio-capture](/zh-CN/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/Apps/Developing/App_permissions#video-capture) 来获取更多信息。
+参见 [permission: audio-capture](/zh-CN/docs/Web/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/docs/Web/Apps/Developing/App_permissions#video-capture) 来获取更多信息。
 
 ## 规范
 
@@ -269,6 +266,6 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 
 - 旧的 [navigator.getUserMedia](/zh-CN/docs/Web/API/Navigator/getUserMedia) 遗留 API
 - [navigator.enumerateDevices](/zh-CN/docs/Web/API/MediaDevices/enumerateDevices) - 获取用户可用的设备类型和数量
-- [WebRTC](/zh-CN/docs/WebRTC) - WebRTC API 的介绍页面
-- [MediaStream API](/zh-CN/docs/WebRTC/MediaStream_API) - 媒体流对象的 API
-- [Taking webcam photos](/zh-CN/docs/WebRTC/taking_webcam_photos) - 一个关于使用 `getUserMedia()` 拍照而非录视频的教程
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) - WebRTC API 的介绍页面
+- [MediaStream API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) - 媒体流对象的 API
+- [Taking webcam photos](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - 一个关于使用 `getUserMedia()` 拍照而非录视频的教程

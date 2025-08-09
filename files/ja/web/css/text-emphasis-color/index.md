@@ -5,11 +5,41 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`text-emphasis-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の色を設定します。この値は一括指定の {{cssxref("text-emphasis")}} を使用して設定することもできます。
 
-{{EmbedInteractiveExample("pages/css/text-emphasis-color.html")}}
+{{InteractiveExample("CSS デモ: text-emphasis-color")}}
+
+```css interactive-example-choice
+text-emphasis-color: currentColor;
+```
+
+```css interactive-example-choice
+text-emphasis-color: red;
+```
+
+```css interactive-example-choice
+text-emphasis-color: rgba(90, 200, 160, 0.8);
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-emphasis: filled;
+}
+```
 
 ## 構文
 
@@ -50,7 +80,7 @@ text-emphasis-color: unset;
 
 #### CSS
 
-```css
+```css live-sample___emphasis_with_a_color_and_custom_character
 em {
   text-emphasis-color: green;
   text-emphasis-style: "*";
@@ -59,7 +89,7 @@ em {
 
 #### HTML
 
-```html
+```html live-sample___emphasis_with_a_color_and_custom_character
 <p>例:</p>
 
 <em>これには圏点があります！</em>

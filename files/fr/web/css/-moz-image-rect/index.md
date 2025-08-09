@@ -1,5 +1,5 @@
 ---
-title: "-moz-image-rect"
+title: -moz-image-rect
 slug: Web/CSS/-moz-image-rect
 ---
 
@@ -15,7 +15,7 @@ La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une im
 
 ### Valeurs
 
-- [`url()`](</fr/docs/Web/CSS/url()>)
+- [`url()`](/fr/docs/Web/CSS/url_value)
   - : L'URI de l'image dont on veut obtenir une portion.
 - `top`
   - : La coordonnée du bord haut de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) à partir du coin supérieur gauche.
@@ -130,4 +130,4 @@ Cette propriété ne fait partie d'aucun standard.
 ## Voir aussi
 
 - [Les extensions spécifiques à Mozilla pour CSS extensions](/fr/docs/Web/CSS/Mozilla_Extensions)
-- [Le module de spécification CSS sur les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Le module de spécification CSS sur les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4aacbcc92d55473a07225b7102c9e1d705e89ead
 ---
 
-{{CSSRef}}
-
 CSS の **セレクターリスト** (selector list) (`,`) は、すべての一致するノードを選択します。セレクターリストはカンマ区切りのセレクターのリストです。
 
 ## 概要
@@ -150,4 +148,4 @@ h2:has(+ p, > ul::after, + ul.red) {
 ## 関連情報
 
 - 擬似クラス [`:is()`](/ja/docs/Web/CSS/:is)、[`:where()`](/ja/docs/Web/CSS/:where)、[`:not()`](/ja/docs/Web/CSS/:not)、[`:has()`](/ja/docs/Web/CSS/:has) は、寛容なセレクターリストを受け付けます。
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)

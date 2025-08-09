@@ -3,8 +3,6 @@ title: Selectores de hermanos adyacentes
 slug: Web/CSS/Next-sibling_combinator
 ---
 
-{{CSSRef}}
-
 Se hace referencia a este selector como selector adyacente o selector del próximo hermano. Sólo seleccionará un elemento especificado que esté inmediatamente después de otro elemento especificado.
 
 ## Síntaxis
@@ -47,4 +45,4 @@ li:first-of-type + li {
 
 ## Ver también
 
-- [Selectores de hermanos generales](/es/docs/Web/CSS/Selectores_hermanos_generales)
+- [Selectores de hermanos generales](/es/docs/Web/CSS/Subsequent-sibling_combinator)

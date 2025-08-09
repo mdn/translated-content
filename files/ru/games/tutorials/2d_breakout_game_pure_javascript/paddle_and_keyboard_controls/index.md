@@ -3,9 +3,9 @@ title: Ракетка и управление клавиатурой
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
 
-{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
-Это 4-й этап из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код как он должен выглядеть после завершения этого урока в [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
+Это 4-й этап из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код как он должен выглядеть после завершения этого урока в [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
 
 Мяч беспрепятственно отражается от стен, и вы можете смотреть на него бесконечно, но в настоящее время нет интерактивности. Это не игра, если вы не можете управлять мячом. Давайте добавим взаимодействие с игрой: управление ракеткой.
 
@@ -121,6 +121,6 @@ drawPaddle();
 
 ## Следующий шаг
 
-Теперь у нас есть что-то похожее на игру. Беда только в том, что пока вы можете лишь бесконечно бить мяч ракеткой. Это все изменится в пятой главе, [Game over](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Game_over), когда мы начнём добавлять конечное состояние для нашей игры.
+Теперь у нас есть что-то похожее на игру. Беда только в том, что пока вы можете лишь бесконечно бить мяч ракеткой. Это все изменится в пятой главе, [Game over](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), когда мы начнём добавлять конечное состояние для нашей игры.
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}

@@ -3,8 +3,6 @@ title: Firefox 14 for developers
 slug: Mozilla/Firefox/Releases/14
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 14 は 米国時間 2012 年 7 月 17 日にリリースされました。この記事では、ウェブ開発者が知っておくべくことについてだけでなく、アドオン開発者および Firefox と Gecko 開発者にも役立つ主な変更点を一覧にしています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -16,7 +14,7 @@ Firefox 14 は 米国時間 2012 年 7 月 17 日にリリースされました�
 
 ### DOM
 
-- [input](/ja/docs/Web/API/HTMLElement/input_event) イベントが [contenteditable](/ja/docs/Web/API/HTMLElement/contentEditable) エディターをホストしている要素および [designMode](/ja/docs/Web/API/Document/designMode) エディターのルート要素上での編集でも発生するようになりました。
+- [input](/ja/docs/Web/API/Element/input_event) イベントが [contenteditable](/ja/docs/Web/API/HTMLElement/contentEditable) エディターをホストしている要素および [designMode](/ja/docs/Web/API/Document/designMode) エディターのルート要素上での編集でも発生するようになりました。
 - {{domxref("DOMException", "DOMException.code")}} は最新の DOM Level 4 仕様に従って非推奨になりました。
 - {{domxref("Range.insertNode()")}} が 折り畳まれた (collapsed) 範囲上で用いられたときに正しく動作するようになりました。
 - {{domxref("BlobBuilder", "MozBlobBuilder")}} インターフェイスが {{domxref("Blob")}} コンストラクターの利用を促すために非推奨になりました。 `MozBlobBuilder` を利用した場合、ウェブコンソールに警告が表示されます。
@@ -45,7 +43,7 @@ _変更なし。_
 
 ### HTTP
 
-Gecko で新しい [HTTP](/ja/docs/Web/HTTP) [`308 Permanent Redirect`](/ja/docs/Web/HTTP/Status#308) ステータスコードに対応しました。 Gecko は永続的リダイレクトと一時的リダイレクトを区別しないので、 [`307 Temporary Redirect`](/ja/docs/Web/HTTP/Status#307) ステータスコードのように振る舞います。ユーザーエージェントが 2 つのリクエスト間で HTTP メソッドを変更することは禁止されます (`POST` は `POST` のままであり、`GET` は `GET` のままです)。
+Gecko で新しい [HTTP](/ja/docs/Web/HTTP) [`308 Permanent Redirect`](/ja/docs/Web/HTTP/Reference/Status#308) ステータスコードに対応しました。 Gecko は永続的リダイレクトと一時的リダイレクトを区別しないので、 [`307 Temporary Redirect`](/ja/docs/Web/HTTP/Reference/Status#307) ステータスコードのように振る舞います。ユーザーエージェントが 2 つのリクエスト間で HTTP メソッドを変更することは禁止されます (`POST` は `POST` のままであり、`GET` は `GET` のままです)。
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
 

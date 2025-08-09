@@ -92,9 +92,9 @@ for (let x of generate(1, 2)) console.log(x);
 
 ## Смотрите также
 
-- [iterable protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
+- [iterable protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
-- [generators](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators)
+- [generators](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators#generators)
 - [for…of](/ru/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

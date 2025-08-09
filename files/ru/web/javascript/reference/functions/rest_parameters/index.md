@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Functions/rest_parameters
 
 Синтаксис **остаточных параметров** функции позволяет представлять неограниченное множество аргументов в виде массива.
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
+
+```js interactive-example
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
 
 ## Синтаксис
 
@@ -72,7 +88,7 @@ function f(...args) {
 
 ### Деструктуризация остаточных параметров
 
-Остаточные параметры могут быть деструктурированы (только массивы). Это означает, что их данные могут быть заданы как отдельные значения. Смотрите [Деструктурирующее присваивание](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Остаточные параметры могут быть деструктурированы (только массивы). Это означает, что их данные могут быть заданы как отдельные значения. Смотрите [Деструктурирующее присваивание](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ```
 function f(...[a, b, c]) {
@@ -193,6 +209,6 @@ console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 - [Объект arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Функции](/ru/docs/Web/JavaScript/Reference/Functions)
-- [Оператор распространения](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [Оператор распространения](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Оригинальное предложение на ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)

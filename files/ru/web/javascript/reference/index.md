@@ -291,7 +291,7 @@ l10n:
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
 - {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### Операторы доходности
 
@@ -324,7 +324,7 @@ l10n:
 
 - {{JSxRef("Classes/Constructor", "constructor")}}
 - {{JSxRef("Classes/extends", "extends")}}
-- [Особенности приватных классов](/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Особенности приватных классов](/ru/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [Поля открытого класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{JSxRef("Classes/static", "static")}}
 - [Статические блоки инициализации](/ru/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
@@ -332,7 +332,7 @@ l10n:
 ## Дополнительные справочные страницы
 
 - {{JSxRef("Lexical_grammar", "Lexical grammar", "", 1)}}
-- [Типы и структуры данных](/ru/docs/Web/JavaScript/Data_structures)
+- [Типы и структуры данных](/ru/docs/Web/JavaScript/Guide/Data_structures)
 - [Протоколы итерации](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [Конечные запятые](/ru/docs/Web/JavaScript/Reference/Trailing_commas)
 - [Ошибки](/ru/docs/Web/JavaScript/Reference/Errors)

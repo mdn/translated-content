@@ -3,8 +3,6 @@ title: while 語法
 slug: Web/JavaScript/Reference/Statements/while
 ---
 
-{{jsSidebar("Statements")}}
-
 `while` 語法會執行他的語句，只要指定的條件的求值結果為 true。`while` 語法如下︰
 
 ```js-nolint

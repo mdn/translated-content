@@ -3,15 +3,13 @@ title: Firefox 2 pour les développeurs
 slug: Mozilla/Firefox/Releases/2
 ---
 
-{{FirefoxSidebar}}
-
 ## Nouvelles fonctionnalités pour les développeurs dans Firefox 2
 
 Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles possibilités. Cet article fournit des liens vers des articles couvrant les nouvelles fonctionnalités.
 
 ### Pour les développeurs Web et les développeurs d'applications
 
-- [Microrésumés](http://wiki.mozilla.org/Microsummaries)
+- [Microrésumés](https://wiki.mozilla.org/Microsummaries)
   - : Les microrésumés sont de courtes compilations, régulièrement mises à jour, des plus importantes informations présentes sur des pages Web. Ils peuvent être fournis tant par les sites eux-mêmes que par des développeurs tiers. Lorsque les utilisateurs marquent des pages présentant des microrésumés, ils peuvent choisir d'afficher ceux-ci en lieu et place de titres statiques.
 
 <!---->
@@ -46,7 +44,7 @@ Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles 
 
 <!---->
 
-- [WHATWG Client-side session and persistent storage (ou DOM Storage)](/fr/DOM/Storage)
+- [WHATWG Client-side session and persistent storage (ou DOM Storage)](/fr/docs/Web/API/Web_Storage_API)
   - : Le stockage de session et le stockage persistant côté client permet aux applications Web de conserver des données structurées du côté du client.
 
 <!---->
@@ -112,7 +110,6 @@ Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles 
 <!---->
 
 - Améliorations de Textbox (à partir de Firefox 2.0.0.1 uniquement)
-
   - : L'élément `<textbox>` dispose à présent d'une méthode `reset()` pour réinitialiser la valeur de la boîte de texte à sa valeur par défaut. La propriété `defaultValue` peut être utilisée pour récupérer et modifier cette valeur par défaut ([bug Firefox 312867](https://bugzil.la/312867)).
 
     Support d'une propriété `editor` permettant d'obtenir l'interface interne [nsIEditor](/fr/NsIEditor) pour le champ texte ([bug Firefox 312867](https://bugzil.la/312867)).

@@ -9,7 +9,7 @@ slug: Web/API/EventTarget
 
 除了最為常見的 {{domxref("Element")}}、{{domxref("Document")}} 與 {{domxref("Window")}} 繼承或實作了 `EventTarget` 介面之外，其它的物件還有 {{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}}⋯ 等等。
 
-許多 `EventTarget`（包括 Element、Document 和 Window）除了透過 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 方法外，還可藉由 {{domxref("Document_Object_Model", "DOM")}} 物件的屬性（{{Glossary("property/JavaScript", "property")}}）或 [HTML 元素](/zh-TW/docs/Web/HTML/Element)屬性（{{Glossary("attribute")}}）來設定[事件處理器](/zh-TW/docs/Web/Guide/DOM/Events/Event_handlers)。
+許多 `EventTarget`（包括 Element、Document 和 Window）除了透過 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 方法外，還可藉由 {{domxref("Document_Object_Model", "DOM")}} 物件的屬性（{{Glossary("property/JavaScript", "property")}}）或 [HTML 元素](/zh-TW/docs/Web/HTML/Reference/Elements)屬性（{{Glossary("attribute")}}）來設定[事件處理器](/zh-TW/docs/Web/API/Document_Object_Model/Events)。
 
 {{InheritanceDiagram}}
 
@@ -84,6 +84,6 @@ EventTarget.prototype.dispatchEvent = function (event) {
 
 ## 參見
 
-- [Event reference](/docs/Web/Reference/Events) - the events available in the platform.
+- [Event reference](/zh-TW/docs/Web/API/Document_Object_Model/Events) - the events available in the platform.
 - [Event developer guide](/docs/Web/Guide/DOM/Events)
 - {{domxref("Event")}} interface

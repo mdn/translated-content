@@ -22,7 +22,6 @@ Pour utiliser l'API Bookmarks, vous devez demander la permission `"bookmarks"` d
 L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuvent faire avec les signets et inclut des fonctions pour :
 
 - Manipulation élémentaire d'un signet, offrant :
-
   - Ajouter ({{WebExtAPIRef("bookmarks.create")}}).
   - Récupérer ({{WebExtAPIRef("bookmarks.get")}}).
   - Mettre à jour ({{WebExtAPIRef("bookmarks.update")}}).
@@ -32,14 +31,12 @@ L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuve
 
 - Obtention d'une liste de signets récemment ajoutés ({{WebExtAPIRef("bookmarks.getRecent")}}).
 - Signet la manipulation de l'arborescence des dossiers pour :
-
   - Obtenir des informations sur l'arborescence ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, and {{WebExtAPIRef("bookmarks.getSubTree")}}).
   - Ajouter des branches ({{WebExtAPIRef("bookmarks.create")}}).
   - Supprimer des noeuds ({{WebExtAPIRef("bookmarks.removeTree")}}).
   - Déplacer des nœuds ({{WebExtAPIRef("bookmarks.move")}}).
 
 - Écoute des événements de signets (ou de dossiers d'arborescence de signets) qui :
-
   - Ajouter ({{WebExtAPIRef("bookmarks.onCreated")}}).
   - Changer ({{WebExtAPIRef("bookmarks.onChanged")}}).
   - Déplacer ({{WebExtAPIRef("bookmarks.onMoved")}}.
@@ -47,7 +44,6 @@ L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuve
   - Supprimer ({{WebExtAPIRef("bookmarks.onRemoved")}}).
 
 - Écoute des importations de signets, qui peuvent être utilisées pour suspendre le traitement d'un autre signet pendant l'importation :
-
   - Importer commencé ({{WebExtAPIRef("bookmarks.onImportBegan")}}).
   - Importer terminé ({{WebExtAPIRef("bookmarks.onImportEnded")}}).
 
@@ -215,4 +211,4 @@ browser.windows.onFocusChanged.addListener(updateActiveTab);
 
 ## Apprendre encore plus
 
-Si vous voulez en savoir plus, consultez la [référence de l'API Bookmarks](/fr/Add-ons/WebExtensions/API/bookmarks).
+Si vous voulez en savoir plus, consultez la [référence de l'API Bookmarks](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks).

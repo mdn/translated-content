@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-{{domxref("HTMLObjectElement")}} 接口的 **`useMap`** 属性返回一个反映 [`useMap`](/zh-CN/docs/Web/HTML/Element/object#useMap) HTML 属性的字符串，指定要使用的 {{HTMLElement("map")}} 元素。
+{{domxref("HTMLObjectElement")}} 接口的 **`useMap`** 属性返回一个反映 [`useMap`](/zh-CN/docs/Web/HTML/Reference/Elements/object#usemap) HTML 属性的字符串，指定要使用的 {{HTMLElement("map")}} 元素。
 
 ## 值
 

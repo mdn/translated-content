@@ -20,7 +20,7 @@ Un {{domxref("BiquadFilterNode")}}.
 
 ## Ejemplo
 
-El siguiente ejemplo muestra el uso básico de un AudioContext para crear un nodo de filtro Biquad. Para ver el ejemplo trabanjando completamente, mire nuestra demostración [voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) (mirar tambien [source code](https://github.com/mdn/voice-change-o-matic)).
+El siguiente ejemplo muestra el uso básico de un AudioContext para crear un nodo de filtro Biquad. Para ver el ejemplo trabanjando completamente, mire nuestra demostración [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (mirar tambien [source code](https://github.com/mdn/voice-change-o-matic)).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -59,4 +59,4 @@ biquadFilter.gain.value = 25;
 
 ## Ver tambien
 
-- [Using the Web Audio API](/es/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

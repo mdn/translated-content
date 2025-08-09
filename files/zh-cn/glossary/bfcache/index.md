@@ -17,4 +17,4 @@ bfcache 对于性能非常有利，因此有必要确保你的页面不会阻止
 
 ## 参见
 
-- web.dev 上的[后退/前进缓存](https://web.dev/articles/bfcache)（2023）
+- web.developers.google.cn 上的[后退/前进缓存](https://web.developers.google.cn/articles/bfcache)（2023）

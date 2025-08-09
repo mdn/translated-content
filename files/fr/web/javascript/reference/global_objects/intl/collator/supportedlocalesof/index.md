@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 
 La méthode **`Intl.Collator.supportedLocalesOf()`** renvoie, parmi les locales fournies, un tableau contenant les locales supportées et qui ne nécessitent pas d'utiliser la locale par défaut de l'environnement.
 
-{{EmbedInteractiveExample("pages/js/intl-collator-supportedlocalesof.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.supportedLocalesOf")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.Collator.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## Syntaxe
 
@@ -20,9 +29,7 @@ Intl.Collator.supportedLocalesOf(locales [, options])
 - `locales`
   - : Une chaîne de caractères qui est une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour plus d'informations concernant la forme générale de l'argument `locales`, voir la page {{jsxref("Objets_globaux/Intl", "Intl", "#L'identification_et_le_choix_de_la_locale")}}.
 - `options`{{optional_inline}}
-
   - : Paramètre facultatif. Un objet qui peut posséder les propriétés suivantes :
-
     - `localeMatcher`
       - : L'algorithme utilisé pour la correspondance entre chaînes de caractères. Les valeurs possibles sont `"lookup"` et `"best fit"`. La valeur par défaut est `"best fit"`. Pour plus d'informations, voir la page {{jsxref("Objets_globaux/Intl", "Intl", "#Choix_de_la_locale")}}.
 

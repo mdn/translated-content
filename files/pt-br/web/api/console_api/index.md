@@ -14,7 +14,7 @@ O Console API começou como uma API proprietária, com diferentes navegadores a 
 - [Google Chrome DevTools implementação](https://developers.google.com/chrome-developer-tools/docs/console-api)
 - [Safari DevTools implementação](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
 
-Uso é bastante simples — o objeto {{domxref("console")}} — disponível via {{domxref("window.console")}}, ou {{domxref("WorkerGlobalScope.console")}} em workers; acessível apenas usando `console` — contém vários métodos que você pode chamar para executar tarefas de depuração, geralmente focado no registro de vários valores no navegador [Web Console](/pt-BR/docs/Tools/Web_Console).
+Uso é bastante simples — o objeto {{domxref("console")}} — disponível via {{domxref("window.console")}}, ou {{domxref("WorkerGlobalScope.console")}} em workers; acessível apenas usando `console` — contém vários métodos que você pode chamar para executar tarefas de depuração, geralmente focado no registro de vários valores no navegador [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 De longe o método mais comum usado é o {{domxref("console.log")}}, que é usado para mostrar o valor atual contido em uma variável específica.
 
@@ -32,7 +32,7 @@ let myString = "Hello world";
 console.log(myString);
 ```
 
-See the [Console reference page](/pt-BR/docs/Web/API/Console#Usage) for more examples.
+See the [Console reference page](/pt-BR/docs/Web/API/console#usage) for more examples.
 
 ## Specifications
 
@@ -44,6 +44,6 @@ See the [Console reference page](/pt-BR/docs/Web/API/Console#Usage) for more exa
 
 ## See also
 
-- [Tools](/pt-BR/docs/Tools)
-- [Web Console](/pt-BR/docs/Tools/Web_Console) — how the Web Console in Firefox handles console API calls
-- [Remote debugging](/pt-BR/docs/Tools/Remote_Debugging) — how to see console output when the debugging target is a mobile device
+- [Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web Console in Firefox handles console API calls
+- [Remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — how to see console output when the debugging target is a mobile device

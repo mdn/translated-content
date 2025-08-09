@@ -15,7 +15,6 @@ WebVR API - фантастическое дополнение к набору и
 Для начала вам понадобится:
 
 - Устройство с поддержкой VR.
-
   - Самым дешёвым вариантом будет использовать мобильное устройство, какое-нибудь крепление (например, Google Cardboard) и подходящий браузер. Ощущения будут не такие яркие, как от специализированного устройства, но зато вам не понадобится приобретать мощный компьютер или отдельный VR дисплей.
   - Специализированное устройство может быть дорогим, но зато ощущения будут лучше. Наиболее WebVR-совместимые устройства на данный момент: HTC VIVE, The Oculus Rift. Дополнительную информацию о доступных устройствах и их поддержке браузерами можно найти на [webvr.info](https://webvr.info/).
 
@@ -459,11 +458,11 @@ You should note that we've used a conditional expression to detect whether the l
 
 ## WebVR events
 
-The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/ru/docs/Web/API/WebVR_API#Window_events)). For example:
+The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/ru/docs/Web/API/WebVR_API#window_events)). For example:
 
-- {{event("vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
-- {{event("vrdisplayconnect")}} — Fires when a compatible VR display has been connected to the computer.
-- {{event("vrdisplaydisconnect")}} — Fires when a compatible VR display has been disconnected from the computer.
+- [`vrdisplaypresentchange`](/ru/docs/Web/API/Window/vrdisplaypresentchange_event) — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
+- [`vrdisplayconnect`](/ru/docs/Web/API/Window/vrdisplayconnect_event) — Fires when a compatible VR display has been connected to the computer.
+- [`vrdisplaydisconnect`](/ru/docs/Web/API/Window/vrdisplaydisconnect_event) — Fires when a compatible VR display has been disconnected from the computer.
 
 To demonstrate how they work, our simple demo includes the following example:
 

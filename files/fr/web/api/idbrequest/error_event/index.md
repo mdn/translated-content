@@ -5,9 +5,9 @@ slug: Web/API/IDBRequest/error_event
 
 {{ APIRef("IndexedDB") }}
 
-le gestionnaire d'événement **`onerror`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`error`](/fr/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
+le gestionnaire d'événement **`onerror`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`error`](/fr/docs/Web/API/HTMLElement/error_event), déclenché quand une requête renvoie une erreur.
 
-Le gestionnaire d'événement reçoit l'événement [error](/fr/docs/Web/Events/error) avec le type="error" en paramètre.
+Le gestionnaire d'événement reçoit l'événement [error](/fr/docs/Web/API/HTMLElement/error_event) avec le type="error" en paramètre.
 
 {{AvailableInWorkers}}
 
@@ -68,7 +68,7 @@ objectStoreTitleRequest.onerror = function () {
 ## Voir aussi
 
 - [Using IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [Error Event](/fr/docs/Web/Events/error)
+- [Error Event](/fr/docs/Web/API/HTMLElement/error_event)
 - Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}

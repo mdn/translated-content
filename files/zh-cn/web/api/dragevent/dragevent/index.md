@@ -21,11 +21,9 @@ new DragEvent(type, dragEventInit)
 ### 参数
 
 - _type_
-  - : Is a {{domxref("DOMString")}} representing the name of the event (see [DragEvent event types](/zh-CN/docs/Web/API/DragEvent#Event_types)).
+  - : Is a {{domxref("DOMString")}} representing the name of the event (see [DragEvent event types](/zh-CN/docs/Web/API/DragEvent#event_types)).
 - _DragEventInit_{{optional_inline}}
-
   - : Is a `DragEventInit` dictionary, having the following fields:
-
     - `"dataTransfer"`, optional and defaults to `"null"`. The type is {{domxref("DataTransfer")}}.
 
 The `DragEventInit` dictionary inherits from the {{domxref("MouseEvent.MouseEvent","MouseEventInit dictionary")}}.

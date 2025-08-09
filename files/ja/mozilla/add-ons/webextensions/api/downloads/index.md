@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 
 拡張機能にブラウザーのダウンロードマネージャーとのやりとりを可能にします。この API モジュールを、ファイルマネージャーでのファイルのダウンロード、キャンセル、停止、ダウンロードの再開、ダウンロード済みのファイルの表示に使用できます。
 
-この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで指定する "downloads" [API パーミッション](/JA/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
+この API を使うには [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで指定する "downloads" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
 
 ## 型
 
@@ -79,7 +79,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads) API に基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

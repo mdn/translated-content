@@ -9,7 +9,7 @@ slug: Web/API/IDBDatabase/createObjectStore
 
 此方法接受一个参数作为 store 的名称，也接受一个可选的参数对象让你可以定义重要的可选属性。你可以用这个属性唯一的标识此 store 中的每个对象。因为参数是一个标识符，所以 store 中的每一个对象都应有此属性并保证此属性唯一。
 
-此方法只能在 [`versionchange`](/zh-CN/docs/IndexedDB/IDBTransaction#VERSION_CHANGE) 事务中被调用。
+此方法只能在 [`versionchange`](/zh-CN/docs/Web/API/IDBTransaction#version_change) 事务中被调用。
 
 {{AvailableInWorkers}}
 
@@ -25,13 +25,12 @@ createObjectStore(name, options)
 - name
   - : 被创建的 object store 的名称。请注意创建空名称的 object store 是被允许的。
 - optionalParameters {{optional_inline}}
-
   - : 可选的对象，它的属性是此方法的可选参数，其中包括以下的属性：
 
-    | Attribute       | Description                                                                                                                                                                                                                                                                                                                          |
-    | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | `keyPath`       | [key path](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath) 被用在新的 object store 上。如果为空或未指定，object store 创建时将没有 key path，而是使用 [out-of-line keys](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_outofline_key) 。你也能传一个数组作为 `keyPath` 。 |
-    | `autoIncrement` | 如果为 `true`, object store 有一个 [key generator](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator). 默认为 `false`。                                                                                                                                                                           |
+    | Attribute       | Description                                                                                                                                                                                                                                                                                              |
+    | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `keyPath`       | [key path](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) 被用在新的 object store 上。如果为空或未指定，object store 创建时将没有 key path，而是使用 [out-of-line keys](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_outofline_key) 。你也能传一个数组作为 `keyPath` 。 |
+    | `autoIncrement` | 如果为 `true`, object store 有一个 [key generator](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keygenerator). 默认为 `false`。                                                                                                                                                             |
 
     未知参数将被忽略。
 

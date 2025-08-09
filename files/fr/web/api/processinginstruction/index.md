@@ -17,12 +17,12 @@ Les instructions de traitement héritent des méthodes et propriétés de [`Node
 
 ### Attributs
 
-- target (_cible_) (DOMString) (_chaîne de caractères_) - après le `<?` et avant un [whitespace](/fr/docs/Gestion_des_espaces_dans_le_DOM) (_espace_) le séparant des `data` (_données_)
+- target (_cible_) (DOMString) (_chaîne de caractères_) - après le `<?` et avant un [whitespace](/fr/docs/Web/API/Document_Object_Model/Whitespace) (_espace_) le séparant des `data` (_données_)
 - data (_données_) (DOMString) (_chaîne de caractères_) - premier caractère non espace après `target` et avant `?>`
 
 ### Spécification
 
-- [DOM Level 1 Core : ProcessingInstruction interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813)
+- [DOM Level 1 Core : ProcessingInstruction interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813)
 
 ### Voir aussi
 

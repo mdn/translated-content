@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
 
 Crée une nouvelle identité contextuelle. Une fois créée, l'utilisateur pourra créer de nouveaux onglets appartenant à cette identité contextuelle, tout comme ils peuvent le faire avec les identités intégrées.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -20,15 +20,11 @@ var createContext = browser.contextualIdentities.create(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet contenant des propriétés pour la nouvelle identité contextuelle. Cela contient les propriétés suivantes :
-
     - `name`
       - : `string`. Le nom de la nouvelle identité. Cela sera affiché dans l'interface utilisateur du navigateur, leur permettant d'ouvrir un nouvel onglet appartenant à l'identité. Il sera également affiché dans la barre d'URL pour les onglets appartenant à cette identité.
     - `color`
-
       - : `string`. La couleur associée à la nouvelle identité. Cela sera utilisé pour mettre en évidence les onglets appartenant à cette identité. Vous pouvez fournir l'une des valeurs suivantes ici :
-
         - "blue"
         - "turquoise"
         - "green"
@@ -40,9 +36,7 @@ var createContext = browser.contextualIdentities.create(
         - "toolbar"
 
     - `icon`
-
       - : `string`. Le nom d'une icône à afficher dans la barre d'URL pour les onglets appartenant à cette identité. Vous pouvez fournir l'une des valeurs suivantes ici :
-
         - "fingerprint"
         - "briefcase"
         - "dollar"
@@ -59,7 +53,7 @@ var createContext = browser.contextualIdentities.create(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit la nouvelle identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit la nouvelle identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
 
 ## Compatibilité des navigateurs
 

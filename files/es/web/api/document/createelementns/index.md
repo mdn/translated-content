@@ -18,11 +18,10 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 ### Parámetros
 
 - `namespaceURI`
-  - : _String_ que especifica el [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) a asociar con el elemento. La propiedad [namespaceURI](/es/docs/DOM/element.namespaceURI) del elemento creado es inicializada con el valor del `namespaceURI`. Ver [Namespace URIs válidos](/es/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's).
+  - : _String_ que especifica el [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) a asociar con el elemento. La propiedad [namespaceURI](/es/docs/Web/API/Element/namespaceURI) del elemento creado es inicializada con el valor del `namespaceURI`. Ver [Namespace URIs válidos](#valid_namespace_uri's).
 - `qualifiedName`
-  - : _String_ que especifica el tipo del elemento a ser creado. La propiedad [nodeName](/es/docs/DOM/element.nodeName) del elemento creado es inicializada con el valor `qualifiedName`.
+  - : _String_ que especifica el tipo del elemento a ser creado. La propiedad [nodeName](/es/docs/Web/API/Node/nodeName) del elemento creado es inicializada con el valor `qualifiedName`.
 - `options`{{optional_inline}}
-
   - : Un objeto opcional `ElementCreationOptions` que contiene una sola propiedad llamada `is`, cuyo valor es el nombre de la etiqueta para un elemento personalizado previamente definido usando `customElements.define()`. Para retro compatibilidad con versiones previas de la [Especificación de Elementos Personalizados](https://www.w3.org/TR/custom-elements/), algunos navegadores te permitirán pasar un _String_ aquí en lugar de un _Objeto_, donde el valor del _String_ es el nombre de la etiqueta del elemento personalizado. Ver [Extendiendo elementos HTML nativos](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml) para más información sobre como usar este parámetro.
 
     Al nuevo elemento le será dado un atributo `is` cuyo valor es el nombre de la etiqueta del elemento personalizado. Los elementos personalizados son una característica experimental disponible solo en algunos navegadores.
@@ -40,7 +39,7 @@ El nuevo [`Elemento`](/es/docs/Web/API/Element).
 
 ## Ejemplo
 
-El código siguiente crea un elemento \<div> nuevo en el namespace [XHTML](/es/docs/XHTML) y lo agrega al elemento vbox. Aunque no es un documento [XUL](/es/docs/XUL) extremamente útil esto demuestra el uso de los elementos de dos namespaces distintos dentro de un solo documento:
+El código siguiente crea un elemento \<div> nuevo en el namespace [XHTML](/es/docs/Glossary/XHTML) y lo agrega al elemento vbox. Aunque no es un documento [XUL](/es/docs/XUL) extremamente útil esto demuestra el uso de los elementos de dos namespaces distintos dentro de un solo documento:
 
 ```xml
 <?xml version="1.0"?>

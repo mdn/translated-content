@@ -3,11 +3,21 @@ title: 逻辑或赋值（||=）
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 逻辑或赋值（`x ||= y`）运算仅在 `x` 为{{Glossary("falsy", "假")}}值时为其赋值。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR assignment")}}
+
+```js interactive-example
+const a = { duration: 50, title: "" };
+
+a.duration ||= 10;
+console.log(a.duration);
+// Expected output: 50
+
+a.title ||= "title is empty.";
+console.log(a.title);
+// Expected output: "title is empty."
+```
 
 ## 语法
 

@@ -18,7 +18,7 @@ l10n:
 完全なガイドは、[決済リクエスト API の使用](/ja/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)を参照してください。
 
 > [!NOTE]
-> オリジンを跨いだ {{htmlelement("iframe")}} 要素内では、[`allowpaymentrequest`](/ja/docs/Web/HTML/Element/iframe#allowpaymentrequest) 属性が設定されている場合のみ、 API が利用可能です。
+> オリジンを跨いだ {{htmlelement("iframe")}} 要素内では、[`allowpaymentrequest`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowpaymentrequest) 属性が設定されている場合のみ、 API が利用可能です。
 
 ## インターフェイス
 

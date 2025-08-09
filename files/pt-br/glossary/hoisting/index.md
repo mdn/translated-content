@@ -5,7 +5,7 @@ slug: Glossary/Hoisting
 
 {{GlossarySidebar}}
 
-Hoisting (içamento, em português) é um termo que você _não_ encontrará usado em nenhuma prosa de especificação normativa antes da [especificação de idioma do ECMAScript® 2015](http://www.ecma-international.org/ecma-262/6.0/index.html). Hoisting foi pensado como uma maneira geral de pensar sobre como os contextos de execução (especificamente as fases de criação e execução) funcionam em JavaScript. No entanto, o conceito pode ser um pouco confuso a princípio.
+Hoisting (içamento, em português) é um termo que você _não_ encontrará usado em nenhuma prosa de especificação normativa antes da [especificação de idioma do ECMAScript® 2015](https://www.ecma-international.org/ecma-262/6.0/index.html). Hoisting foi pensado como uma maneira geral de pensar sobre como os contextos de execução (especificamente as fases de criação e execução) funcionam em JavaScript. No entanto, o conceito pode ser um pouco confuso a princípio.
 
 Conceitualmente, por exemplo, uma definição estrita de elevação sugere que as declarações de variáveis e funções são fisicamente movidas para o topo do seu código, mas isso não é realmente o que acontece. Em vez disso, as declarações de variável e função são colocadas na memória durante a fase de _compilação_, mas permanecem exatamente onde você as digitou no seu código.
 

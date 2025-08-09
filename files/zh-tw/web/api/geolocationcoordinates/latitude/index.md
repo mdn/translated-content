@@ -1,27 +1,27 @@
 ---
-title: Coordinates.latitude
+title: GeolocationCoordinates：latitude 屬性
 slug: Web/API/GeolocationCoordinates/latitude
+l10n:
+  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
 ---
 
-{{APIRef("Geolocation API")}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`Coordinates.latitude`** 是個唯讀十進位的複數用來代表裝置緯度的位置。
+{{domxref("GeolocationCoordinates")}} 介面的 **`latitude`** 唯讀屬性是一個 `double` 值，表示位置的緯度（十進位制）。
 
-## 語法
+## 值
 
-```plain
-lat = coordinates.latitude
-```
+一個 `double`，表示位置的緯度（十進位制）。
 
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
-- 屬於 {{domxref("Coordinates")}} 介面。
+- [使用地理定位 API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationCoordinates")}}

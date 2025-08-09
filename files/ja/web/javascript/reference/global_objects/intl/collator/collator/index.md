@@ -8,9 +8,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 **`Intl.Collator()`** コンストラクターは、言語を考慮した文字列の比較を可能にする
 {{jsxref("Intl/Collator", "Intl.Collator")}} オブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.Collator")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
+// Expected output: Array ["a", "ä", "z", "Z"]
+
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
+// Expected output: Array ["a", "z", "Z", "ä"]
+
+console.log(
+  ["Z", "a", "z", "ä"].sort(
+    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+  ),
+);
+// Expected output: Array ["a", "ä", "Z", "z"]
+```
 
 ## 構文
 
@@ -23,14 +36,12 @@ new Intl.Collator(locales, options);
 ### 引数
 
 - `locales` {{optional_inline}}
-
   - : 任意。 BCP47 言語タグの文字列またはその配列。 `locales` 引数の一般的な形式や解釈については {{jsxref("Global_Objects/Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
 
     次の Unicode 拡張キーが使用可能です。
 
     > [!NOTE]
     > これらのキーは通常、 `options` でも設定することができます（下記でリストアップします）。両方が設定されている場合は、 `options` のプロパティが優先されます。
-
     - `co`
       - : 特定のロケールにおける比較方法の変化形を指定します。指定可能な値は次の通りです。
         - `big5han`
@@ -58,17 +69,13 @@ new Intl.Collator(locales, options);
       - : 大文字と小文字のどちらを先に並べるかを指定します。使用できる値は "`upper`", "`lower`", "`false`" （ロケールの既定値を使用）です。このオプションは、 `options` の "`caseFirst`" プロパティでも設定することができます。
 
 - `options` {{optional_inline}}
-
   - : 任意。以下のプロパティの一部またはすべてを持つオブジェクトです。
-
     - `localeMatcher`
       - : ロケールの照合に使用するアルゴリズム。指定可能な値は "`lookup`" と "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細については {{jsxref("Global_Objects/Intl", "Intl", "#ロケールネゴシエーション", 1)}} のページを参照してください。
     - `usage`
       - : この比較がソートのためなのか、それとも一致する文字列を検索するためなのか。使用可能な値は "`sort`" および "`search`" で、既定値は "`sort`" です。
     - `sensitivity`
-
       - : 文字の違いをどの程度までを区別するかです。以下の値を指定可能です。
-
         - "`base`": ベース文字が異なれば、異なる文字であると評価します。 例: a ≠ b, a = á, a = A
         - "`accent`": ベース文字が異なるか、またはアクセントその他の発音区別符号が異なれば、異なる文字であると評価します。 例: a ≠ b, a ≠ á, a = A
         - "`case`": ベース文字が異なるか、ベース文字が同一でも大文字小文字が異なれば、異なる文字であると評価します。 例: a ≠ b, a = á, a ≠ A
@@ -79,14 +86,12 @@ new Intl.Collator(locales, options);
     - `ignorePunctuation`
       - : 句読点を無視するかどうか。指定可能な値は `true` または `false` で、既定値は `false` です。
     - `numeric`
-
       - : "1" < "2" < "10" のように数値として比較を行うかどうかです。可能な値は `true` および `false` です。既定値は `false` です。
 
         > [!NOTE]
         > このオプションは Unicode 拡張キーの `kn` でも設定することができます。両方が指定された場合は、この `options` のプロパティが優先されます。
 
     - `caseFirst`
-
       - : 大文字と小文字のどちらを先に並べるかです。指定可能な値は "`upper`", "`lower`", "`false`" （ロケールの既定の動作）です。大文字と小文字のどちらを先に並べるかは `options` のプロパティでも Unicode 拡張キーでも指定可能です。両方で指定された場合、 `options` プロパティの指定が優先されます。
 
         > [!NOTE]

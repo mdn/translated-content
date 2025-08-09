@@ -4,12 +4,12 @@ This document describes the general guidelines for translating MDN content, whic
 
 For guidelines relating to specific locales, we have locale-specific docs in subdirectories:
 
-- [Russian translation guide / Участие в переводе](ru/translation-guide.md)
-- [Simplified Chinese Guide / 简体中文翻译指南](zh-cn/translation-guide.md)
-- [Traditional Chinese Guide / 正體中文翻譯指南](zh-tw/translation-guide.md)
 - [Spanish guide / Guía en español](es/README.md)
 - [Japanese translation guide / 日本語翻訳ガイド](ja/README.md)
 - [Korean translation guide / 한국 번역 지침](ko/README.md)
+- [Russian translation guide / Руководство по переводу на русский язык](ru/README.md)
+- [Simplified Chinese Guide / 简体中文翻译指南](zh-cn/translation-guide.md)
+- [Traditional Chinese Guide / 正體中文翻譯指南](zh-tw/translation-guide.md)
 
 > [!NOTE]
 > If you want to add a guide to document some specific guidelines for your locale and it does not already appear here, you are welcome to add one, or [talk to the locale teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams) about it.

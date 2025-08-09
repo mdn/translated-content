@@ -5,9 +5,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
 
 {{AddonSidebar}}
 
-Retourne le theme utilisé actuellement sous la forme d'un objet {{WebExtAPIRef("theme.Theme", "Theme")}}. Les arguments disponible dans l'objet couleur sont listés dans les [propriétés de la couleur](/fr/Add-ons/WebExtensions/manifest.json/theme#colors).
+Retourne le theme utilisé actuellement sous la forme d'un objet {{WebExtAPIRef("theme.Theme", "Theme")}}. Les arguments disponible dans l'objet couleur sont listés dans les [propriétés de la couleur](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors).
 
-Il s'agit d'une fonction asynchrone qui renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ var getting = browser.theme.getCurrent(
 
 ### Valeur retournée
 
-Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). L'objet Promise sera résolu avec un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème appliqué à la fenêtre spécifiée. Si aucun thème provenant d'une extension a été appliqué, l'objet Promise sera résolu avec un objet vide.
+Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). L'objet Promise sera résolu avec un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème appliqué à la fenêtre spécifiée. Si aucun thème provenant d'une extension a été appliqué, l'objet Promise sera résolu avec un objet vide.
 
 ## Compatibilité des navigateurs
 

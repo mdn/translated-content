@@ -3,8 +3,6 @@ title: Distrbución de juegos
 slug: Games/Publishing_games/Game_distribution
 ---
 
-{{GamesSidebar}}
-
 Has seguido un tutorial o dos y creado un juego de HTLM5 — eso es genial. Este artículo cubre todo lo que necesitas saber sobre las formas en que puedes distribuir tu juego recién creado al mundo. Esto incluye alojarlo tu mismo en línea, enviarlo a mercados abiertos, y enviándolo a aplicaciones cerradas como Google Play o iOS App Store.
 
 ## Beneficios de HTML5 sobre nativo
@@ -15,7 +13,7 @@ Construir juegos con HTML5 te da ventajas, como:
 
 La tecnología en si es multiplataforma, por lo que puedes escribir el código una vez y apuntarle a múltiples dispositivos. Esto puede ir desde teléfonos inteligentes o tabletas de gama baja, portátiles y ordenadores de escritorio, a smart TVs, relojes o incluso una nevera si puede manejar un navegador lo suficientemente moderno.
 
-No necesitas tener equipos separados para trabajar en el mismo título que le apunta a diferentes plataformas, con solo una base de código para preocuparse. Puedes invertir más tiempo y dinero en [Promociones](/es/docs/Games/Techniques/Publishing_games/Game_promotion) y [Monetizar](/es/docs/Games/Techniques/Publishing_games/Game_monetization).
+No necesitas tener equipos separados para trabajar en el mismo título que le apunta a diferentes plataformas, con solo una base de código para preocuparse. Puedes invertir más tiempo y dinero en [Promociones](/es/docs/Games/Publishing_games/Game_promotion) y [Monetizar](/es/docs/Games/Publishing_games/Game_monetization).
 
 ### Actualizaciones instantáneas
 
@@ -95,7 +93,7 @@ Después de que hayas cubierto Steam, hay un montón de rumores alrededor de ini
 
 La web es la primera y la mejor opción para juegos de HTML5, pero si quieres buscar una audiencia más amplia y distribuir tu juego en un ecosistema cerrado, todavía puedes hacerlo empaquetándolo.
 
-Lo bueno es que no necesitas muchos equipos separados trabajando en el mismo juego para diferentes plataformas — puedes construirlo una vez y usar herramientas como [Phonegap](/es/docs/) o [CocoonIO](/es/docs/) para empaquetar el juego en tiendas nativas. Los paquetes resultantes suelen ser bastante fiables, pero todavía deberias probarlos y estar atento a pequeños problemas o errores que solucionar.
+Lo bueno es que no necesitas muchos equipos separados trabajando en el mismo juego para diferentes plataformas — puedes construirlo una vez y usar herramientas como [Phonegap](/es/docs/Web) o [CocoonIO](/es/docs/Web) para empaquetar el juego en tiendas nativas. Los paquetes resultantes suelen ser bastante fiables, pero todavía deberias probarlos y estar atento a pequeños problemas o errores que solucionar.
 
 ### Herramientas disponibles
 

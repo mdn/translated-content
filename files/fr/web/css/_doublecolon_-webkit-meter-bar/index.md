@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-meter-bar"
+title: ::-webkit-meter-bar
 slug: Web/CSS/::-webkit-meter-bar
 ---
 
@@ -50,10 +50,9 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 ## Voir aussi
 
 - Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
-
   - {{cssxref("::-webkit-meter-inner-element")}}
   - {{cssxref("::-webkit-meter-even-less-good-value")}}
   - {{cssxref("::-webkit-meter-optimum-value")}}
   - {{cssxref("::-webkit-meter-suboptimum-value")}}
 
-- [Les extensions CSS WebKit](/fr/docs/Web/CSS/Webkit_Extensions)
+- [Les extensions CSS WebKit](/fr/docs/Web/CSS/WebKit_Extensions)

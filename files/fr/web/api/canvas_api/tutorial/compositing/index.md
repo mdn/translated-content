@@ -16,7 +16,7 @@ Nous pouvons non seulement dessiner de nouvelles formes derrière des formes exi
 - [`globalCompositeOperation = type`](/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)
   - : Cela configure le type d'opération de composition à appliquer lorsqu'on dessine de nouvelles formes, où le type correspond à une chaîne de caractères faisant référence à une des douze opérations de composition possibles.
 
-Reportez-vous aux [exemples de composition](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) pour le code des exemples suivants.
+Reportez-vous aux [exemples de composition](/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) pour le code des exemples suivants.
 
 {{EmbedLiveSample("Exemple_de_composition", 750, 7000, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 

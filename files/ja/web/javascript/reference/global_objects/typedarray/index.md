@@ -2,18 +2,33 @@
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
 **_TypedArray_** オブジェクトは、背後にある[バイナリーデータバッファー](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)の、配列風のビューを表します。 `TypedArray` という名称のグローバルプロパティがあるわけではなく、また直接 `TypedArray` コンストラクターが見えるわけではありません。代わりに、さまざまなグローバルプロパティがあり、それらの値は後述するように特定の要素の型における型付き配列のコンストラクターになります。下記のページで、それぞれの要素を持つ片引き配列で使用できる共通のプロパティやメソッドを確認できます。
 
-{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray Constructor")}}
+
+```js interactive-example
+// Create a TypedArray with a size in bytes
+const typedArray1 = new Int8Array(8);
+typedArray1[0] = 32;
+
+const typedArray2 = new Int8Array(typedArray1);
+typedArray2[1] = 42;
+
+console.log(typedArray1);
+// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+
+console.log(typedArray2);
+// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+```
 
 ## 解説
 
-`TypedArray` コンストラクター（よく `%TypedArray%` と表記されます。JavaScript プログラムに公開されるグローバルに対応するものがあるわけではないため、「個別のもの」を表すためです）は、すべての `TypedArray` のサブクラスの共通のスーパークラスとして機能します。`%TypedArray%` はすべての型付き配列のサブクラスに対してユーティリティメソッドの共通インターフェイスを提供する「抽象クラス」であると考えてください。このコンストラクターは直接公開されていません。グローバルプロパティである `TypedArray` プロパティは存在しません。`オブジェクト.getPrototypeOf(Int8Array)` などを通してのみアクセスすることができます。
+`TypedArray` コンストラクター（よく `%TypedArray%` と表記されます。JavaScript プログラムに公開されるグローバルに対応するものがあるわけではないため、「個別のもの」を表すためです）は、すべての `TypedArray` のサブクラスの共通のスーパークラスとして機能します。`%TypedArray%` はすべての型付き配列のサブクラスに対してユーティリティメソッドの共通インターフェイスを提供する「抽象クラス」であると考えてください。このコンストラクターは直接公開されていません。グローバルプロパティである `TypedArray` プロパティは存在しません。`Object.getPrototypeOf(Int8Array)` などを通してのみアクセスすることができます。
 
 `TypedArray` のサブクラス（例えば `Int8Array`）のインスタンスを作成する際、配列バッファーがメモリーに内部作成されるか、コンストラクターの引数に `ArrayBuffer` オブジェクトが指定されると、代わりにその `ArrayBuffer` を使用します。バッファーアドレスはインスタンスの内部プロパティとして保存され、`%TypedArray%.prototype` のすべてのメソッドがその配列バッファーアドレスに基づいて値を設定したり取得したりします。
 
@@ -28,6 +43,7 @@ l10n:
 | {{jsxref("Uint16Array")}}       | 0 から 65535                                               | 2                 | `unsigned short`      |
 | {{jsxref("Int32Array")}}        | -2147483648 から 2147483647                                | 4                 | `long`                |
 | {{jsxref("Uint32Array")}}       | 0 から 4294967295                                          | 4                 | `unsigned long`       |
+| {{jsxref("Float16Array")}}      | `-65504` から `65504`                                      | 2                 | なし                  |
 | {{jsxref("Float32Array")}}      | `-3.4E38` から `3.4E38` および `1.2E-38` （最小の正の数）  | 4                 | `unrestricted float`  |
 | {{jsxref("Float64Array")}}      | `-1.8E308` から `1.8E308` および `5E-324` （最小の正の数） | 8                 | `unrestricted double` |
 | {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                      | 8                 | `bigint`              |
@@ -39,7 +55,7 @@ l10n:
 
 - 符号なし整数の配列 (`Uint8Array`, `Uint16Array`, `Uint32Array`, `BigUint64Array`) は、数値を直接バイナリーで格納します。
 - 符号付き整数の配列 (`Int8Array`, `Int16Array`, `Int32Array`, `BigInt64Array`) は、数値を [2 の補数](https://ja.wikipedia.org/wiki/2の補数)を用いて格納します。
-- 浮動小数点の配列 (`Float32Array`, `Float64Array`) は [IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754) 浮動小数点形式を使用して数値を格納します。 [`Number`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding) のリファレンスには、正確な形式についての詳細情報があります。 JavaScript の数値は既定では倍精度浮動小数点数で、 `Float64Array` と同じ形式を使用します。 `Float32Array` で仮数に（52 ビットの代わりに）23 ビット、指数に（11 ビットの代わりに） 8 ビットを使用します。仕様では、すべての {{jsxref("NaN")}} 値が同じビットエンコーダ方式を使用することが要求されていますが、正確なビットパターンは実装に依存することに注意してください。
+- 浮動小数点の配列 (`Float16Array`, `Float32Array`, `Float64Array`) は [IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754) 浮動小数点形式を使用して数値を格納します。 [`Number`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値のエンコーディング) のリファレンスには、正確な形式についての詳細情報があります。 JavaScript の数値は既定では倍精度浮動小数点数で、 `Float64Array` と同じ形式を使用します。 `Float32Array` で仮数に（52 ビットの代わりに）23 ビット、指数に（11 ビットの代わりに） 8 ビットを使用します。`Float16Array` で仮数に 10 ビット、指数に 5 ビットを使用します。仕様では、すべての {{jsxref("NaN")}} 値が同じビットエンコーダ方式を使用することが要求されていますが、正確なビットパターンは実装に依存することに注意してください。
 - `Uint8ClampedArray` は特殊なケースです。これは `Uint8Array` と同じようにバイナリーで格納されますが、範囲外の数値を格納した場合、最上位ビットを切り捨てるのではなく、数学的な値で 0 から 255 の範囲に数値を丸めます。
 
 `Int8Array`、`Uint8Array`、`Uint8ClampedArray` を除くすべての型付き配列は、各要素を複数のバイトを使用して格納します。これらのバイトは、最上位から最下位（ビッグエンディアン）、または最下位から最上位（リトルエンディアン）の順に並べられます。詳しい説明は[エンディアン](/ja/docs/Glossary/Endianness)を参照してください。型付き配列は常にプラットフォームネイティブのバイト順を使用します。バッファーから読み書きする際にエンディアンを指定したい場合は、代わりに {{jsxref("DataView")}} を使用してください。
@@ -48,7 +64,7 @@ l10n:
 
 - すべての整数配列（`Uint8ClampedArray`を除く）は[固定幅の数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)を使用します。
 - `Uint8ClampedArray` は、最初に数値を 0 から 255 の範囲に収めます（255 より大きい値は 255 になり、0 より小さい値は 0 になります）。そして、（切り捨てるのではなく）最も近い整数に丸めます。つまり、 2 つの整数のちょうど中間にある場合は、最も近い偶数の整数に丸めます。例えば、`0.5` は `0`、`1.5` は `2`、`2.5` は `2` となります。
-- `Float32Array` では "round to even" を行い、 64 ビット浮動小数点数を 32 ビットに変換します。これは {{jsxref("Math.fround()")}} で指定されたアルゴリズムと同じです。
+- `Float16Array` および `Float32Array` では "round to even" を行い、 64 ビット浮動小数点数を 32 ビットおよび 16 ビットに変換します。これは {{jsxref("Math.fround()")}} および {{jsxref("Math.f16round()")}} で指定されたアルゴリズムと同じです。
 
 ### サイズ変更可能なバッファー表示時の動作について
 
@@ -178,7 +194,7 @@ new TypedArray(buffer, byteOffset, length)
 
 これらのプロパティは `TypedArray` コンストラクターオブジェクトで定義されており、したがってすべての `TypedArray` サブクラスのコンストラクターで共有されます。
 
-- {{jsxref("TypedArray/@@species", "TypedArray[@@species]")}}
+- [`TypedArray[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)
   - : 派生オブジェクトを作成するために使用されるコンストラクター関数です。
 
 すべての `TypedArray` サブクラスには以下の静的プロパティもあります。
@@ -209,8 +225,8 @@ new TypedArray(buffer, byteOffset, length)
   - : インスタンスオブジェクトを作成したコンストラクター関数です。`TypedArray.prototype.constructor` は隠された `TypedArray` のコンストラクター関数ですが、型付き配列のサブクラスはそれぞれ `constructor` プロパティを定義しています。
 - {{jsxref("TypedArray.prototype.length")}}
   - : 型付き配列内に保持された要素の数を返します。
-- `TypedArray.prototype[@@toStringTag]`
-  - : [`TypedArray.prototype[@@toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値はゲッターで、型付き配列ののコンストラクター名と同じ文字列を返します。このプロパティは `this` の値が型付き配列のサブクラスのいずれでもない場合、 `undefined` を返します。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。ただし、`TypedArray` は独自の [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) メソッドを持っているので、このプロパティは[`Object.prototype.toString.call()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)を `thisArg` に型付き配列を設定して呼び出差ない限り、このプロパティの使用されません。
+- `TypedArray.prototype[Symbol.toStringTag]`
+  - : [`TypedArray.prototype[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値はゲッターで、型付き配列ののコンストラクター名と同じ文字列を返します。このプロパティは `this` の値が型付き配列のサブクラスのいずれでもない場合、 `undefined` を返します。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。ただし、`TypedArray` は独自の [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) メソッドを持っているので、このプロパティは[`Object.prototype.toString.call()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)を `thisArg` に型付き配列を設定して呼び出差ない限り、このプロパティの使用されません。
 
 すべての `TypedArray` のサブクラスには、以下のインスタンスプロパティもあります。
 
@@ -283,7 +299,7 @@ new TypedArray(buffer, byteOffset, length)
   - : 配列内のそれぞれの位置に対する値を含む新しい配列イテレーターオブジェクトを返します。 {{jsxref("Array.prototype.values()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.with()")}}
   - : 指定された位置の要素を指定された値で置き換えた新しい配列を、元の配列に変更を加えることなく返します。
-- [`TypedArray.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
   - : 配列内でそれぞれの位置に対する値を含む新しい配列イテレーターオブジェクトを返します。
 
 ## 例

@@ -17,15 +17,15 @@ Es seguro asumir que las funciones y las API que no se enumeran aquí en absolut
 
 ### Claves completamente compatibles
 
-- [`applications`](/es/Add-ons/WebExtensions/manifest.json/applications)
-- [`browser_action`](/es/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`page_action`](/es/Add-ons/WebExtensions/manifest.json/page_action)
-- [`default_locale`](/es/Add-ons/WebExtensions/manifest.json/default_locale)
-- [`description`](/es/Add-ons/WebExtensions/manifest.json/description)
-- [`manifest_version`](/es/Add-ons/WebExtensions/manifest.json/manifest_version)
-- [`name`](/es/Add-ons/WebExtensions/manifest.json/name)
-- [`version`](/es/Add-ons/WebExtensions/manifest.json/version)
-- [`web_accessible_resources`](/es/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
+- [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
+- [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`page_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
+- [`default_locale`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
+- [`description`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
+- [`manifest_version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
+- [`name`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
+- [`version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
+- [`web_accessible_resources`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
 ### Claves parcialmente admitidas
 
@@ -53,16 +53,15 @@ Firefox aún no admite los siguientes permisos:
 - `nativeMessaging`
 - `unlimitedStorage`
 
-Obviamente, también no admite permisos para las [APIs que no son compatibles](/es/Add-ons/WebExtensions/API#Chrome_incompatibilities).
+Obviamente, también no admite permisos para las [APIs que no son compatibles](/es/docs/Mozilla/Add-ons/WebExtensions/API#chrome_incompatibilities).
 
 ## APIs JavaScript
 
 ### APIs completamente soportadas
 
 - [alarmas](/es/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
-- [Menú contextual](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus)
+- [Menú contextual](/es/docs/Mozilla/Add-ons/WebExtensions/API/menus)
 - [pageAction](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
-
   - Las URL relativas pasadas a `setPopup()`se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión .
 
 ### APIs parcialmente soportadas
@@ -70,7 +69,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### marcadores
 
 - Firefox no admite:
-
   - `getRecent()`
   - `search()`
   - `removeTree()` (`remove` también elimina carpetas no vacías)
@@ -88,7 +86,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### browserAction
 
 - Firefox no admite:
-
   - `enable()` o `disable()`.
 
 - Las URL relativas pasadas a `setPopup()`se resuelven en relación con el documento de la persona que llama, en lugar de con la raíz de la extensión .
@@ -103,7 +100,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### extension
 
 - Firefox sólo soporta :
-
   - `getBackgroundPage()`
   - `getURL()`
   - `inIncognitoContext` en los scripts de contenido
@@ -118,13 +114,11 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### notifications
 
 - Las únicas opciones de notificación admitidas son :
-
   - `iconUrl`
   - `title`
   - `message`.
 
 - Los únicos métodos soportados son :
-
   - `create()`
   - `clear()`
   - `getAll()`.
@@ -135,7 +129,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### Tiempo de ejecución
 
 - Firefox sólo admite:
-
   - `onStartup()`
   - `getManifest()`
   - `getURL()`
@@ -152,7 +145,6 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### tabs
 
 - Firefox does not support:
-
   - `getCurrent()`
   - `sendRequest()`
   - `getSelected()`
@@ -173,7 +165,6 @@ Firefox doesn't yet support the `callback` argument to `executeScript()`.
 #### webNavigation
 
 - Firefox does not support:
-
   - `getFrame()`
   - `getAllFrames()`
   - `onCreatedNavigationTarget`
@@ -186,14 +177,12 @@ Firefox doesn't yet support the `callback` argument to `executeScript()`.
 #### webRequest
 
 - Firefox does not support:
-
   - `handlerBehaviorChanged()`
   - `onAuthRequired`
   - `onBeforeRedirect`
   - `onErrorOccurred`
 
 - Requests can be:
-
   - canceled only in `onBeforeRequest`
   - modified/redirected only in `onBeforeSendHeaders`
 
@@ -235,4 +224,4 @@ We resolve URLs in injected CSS files relative to the CSS file itself, rather th
 ### Miscellaneous incompatibilities
 
 - Chrome allows any optional arguments to be omitted, even if followed by other arguments. Firefox currently supports this only under specific circumetances. We recommend only omitting optional arguments at the end of the arguments list, and using `null` for all other cases.
-- Firefox currently [does not allow](https://bugzil.la/932513) the `{{jsxref("Statements/let", "let")}}` or `{{jsxref("Statements/const", "const")}}` statement in ordinary web pages or Web Extensions. While it is possible to enable support for Firefox's variant of the statement using a special `<script>` tag, this is not recommended. Instead, if your extension code uses `let` or `const` statements, we recommend that you [transpile them using Babel](/es/Add-ons/WebExtensions/Tips#Using_advanced_JavaScript_features_from_ECMAScript_6_and_7) until support is turned on globally.
+- Firefox currently [does not allow](https://bugzil.la/932513) the `{{jsxref("Statements/let", "let")}}` or `{{jsxref("Statements/const", "const")}}` statement in ordinary web pages or Web Extensions. While it is possible to enable support for Firefox's variant of the statement using a special `<script>` tag, this is not recommended. Instead, if your extension code uses `let` or `const` statements, we recommend that you [transpile them using Babel](/es/docs/Mozilla/Add-ons/WebExtensions#using_advanced_javascript_features_from_ecmascript_6_and_7) until support is turned on globally.

@@ -49,4 +49,4 @@ slug: Web/API/Document/createTextNode
 
 ### 규약
 
-[createTextNode](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1975348127)
+[createTextNode](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1975348127)

@@ -7,9 +7,51 @@ slug: Web/CSS/box-shadow
 
 La propriété CSS **`box-shadow`** ajoute des ombres à la boîte d'un élément via une liste d'ombres séparées par des virgules. Une boîte d'ombre est définie avec des décalages horizontal et vertical par rapport à l'élément, avec des rayons de flou et d'étalement et avec une couleur.
 
-{{EmbedInteractiveExample("pages/css/box-shadow.html")}}Elle permet de projeter une ombre depuis un élément. Si une {{cssxref("border-radius")}} est définie sur l'élément avec l'ombre, la boîte de l'ombre prendra les mêmes arrondis. L'ordre des couches (_z order_) pour plusieurs ombres sera le même [que pour les ombres texte](/fr/docs/Web/CSS/text-shadow) (la première ombre est sur le dessus).
+{{InteractiveExample("CSS Demo: box-shadow")}}
 
-[Le générateur de `box-shadow`](/fr/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) est un outil interactif qui permet de générer des valeurs pour `box-shadow`.
+```css interactive-example-choice
+box-shadow: 10px 5px 5px red;
+```
+
+```css interactive-example-choice
+box-shadow: 60px -16px teal;
+```
+
+```css interactive-example-choice
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+```
+
+```css interactive-example-choice
+box-shadow: inset 5em 1em gold;
+```
+
+```css interactive-example-choice
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>This is a box with a box-shadow around it.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  margin: 20px auto;
+  padding: 0;
+  border: 2px solid #333;
+  width: 80%;
+  text-align: center;
+}
+```
+
+Elle permet de projeter une ombre depuis un élément. Si une {{cssxref("border-radius")}} est définie sur l'élément avec l'ombre, la boîte de l'ombre prendra les mêmes arrondis. L'ordre des couches (_z order_) pour plusieurs ombres sera le même [que pour les ombres texte](/fr/docs/Web/CSS/text-shadow) (la première ombre est sur le dessus).
+
+[Le générateur de `box-shadow`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) est un outil interactif qui permet de générer des valeurs pour `box-shadow`.
 
 ## Syntaxe
 
@@ -40,7 +82,6 @@ box-shadow: unset;
 La propriété `box-shadow` peut être définie grâce :
 
 - À deux, trois ou quatre valeurs de longueur ({{cssxref("&lt;length&gt;")}}) :
-
   - Avec deux valeurs, celles-ci sont respectivement considérées comme les coordonnées de décalage de l'ombre : [`<offset-x>` et `<offset-y>`](#offset)
   - Si une troisième valeur est fournie, celle-ci correspondra au rayon du flou : [`<blur-radius>`](#blur)
   - Si une quatrième valeur est fournie, celle-ci correspondra au rayon d'étalement : [`<spread-radius>`](#spread).
@@ -128,6 +169,6 @@ p {
 
 - [Tutoriel et box-shadow tutorial and examples](https://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
 - [Générateur d'ombres CSS](https://cssgenerator.org/box-shadow-css-generator.html)
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 - Le type de données {{cssxref("&lt;color&gt;")}}
 - Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}.

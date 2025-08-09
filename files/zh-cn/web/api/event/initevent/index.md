@@ -1,30 +1,33 @@
 ---
-title: Event.initEvent()
+title: Event：initEvent() 方法
 slug: Web/API/Event/initEvent
+l10n:
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{AvailableInWorkers}}
 
-**`Event.initEvent()`** 方法可以用来初始化由{{domxref("Document.createEvent()") }} 创建的 {{ domxref("event") }} 实例。
+**`Event.initEvent()`** 方法可以用来初始化由 {{domxref("Document.createEvent()") }} 创建的 {{ domxref("event") }} 实例。
 
-用这种方式初始化事件必须是由 {{ domxref("Document.createEvent()") }} 方法创建的实例。本方法必须在事件被触发之前调用（用{{ domxref("EventTarget.dispatchEvent()") }}调用）.事件 一旦被调用，便不再做其他任何事。
+用这种方式初始化事件必须是由 {{ domxref("Document.createEvent()") }} 方法创建的实例。本方法必须在派发事件前调用（通过 {{ domxref("EventTarget.dispatchEvent()") }}）。事件一旦被派发，此函数不再做其他任何事。
 
-> **备注：** **不建议再使用此方法（方法已经过时 deprecated）**
+> [!NOTE]
+> **该方法已被弃用，请勿再使用。**
 >
-> 可以使用特定的 event 构造器函数，比如 {{domxref("Event.Event", "Event()")}}. 该页有关于这些的更多信息 [Creating and triggering events](/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events) .
+> 与其使用该特性，不如使用特定的事件构造函数，如 {{domxref("Event.Event", "Event()")}}。[创建和派发事件](/zh-CN/docs/Web/API/Document_Object_Model/Events#创建和派发事件)一节提供了更多有关使用这些事件的方法的信息。
 
 ## 语法
 
 ```js-nolint
-event.initEvent(type, bubbles, cancelable)
+initEvent(type, bubbles, cancelable)
 ```
 
 - `type`
-  - : 一个 {{domxref("DOMString")}} 类型的字段，定义了事件的类型。
+  - : 描述事件类型的字符串。
 - `bubbles`
-  - : 一个 {{jsxref("Boolean")}} 值，决定是否事件是否应该向上冒泡。一旦设置了这个值，只读属性{{ domxref("Event.bubbles") }}也会获取相应的值。
+  - : 决定是否事件是否应该通过事件链向上冒泡的布尔值。一旦设置了这个值，只读属性{{ domxref("Event.bubbles") }}也会获取相应的值。
 - `cancelable`
-  - : 一个 {{jsxref("Boolean")}} 值，决定该事件的默认动作是否可以被取消。一旦设置了这个值，只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值。
+  - : 决定该事件的默认动作是否可以被取消的布尔值。一旦设置了这个值，只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值。
 
 ## 示例
 
@@ -57,4 +60,4 @@ elem.dispatchEvent(event);
 
 ## 参见
 
-- The constructor to use instead of this deprecated method: {{domxref("Event.Event", "Event()")}}. More specific constructors can be used too.
+- 构造函数，以代替此已废弃的方法：{{domxref("Event.Event", "Event()")}}。也可以使用更具体的构造函数。

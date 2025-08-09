@@ -85,7 +85,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 #### JavaScript
 
-Основной частью этого кода для примера является функция `typedArrayToURL()`, которая создаёт `Blob` из переданного типизированного массива и возвращает объект URL для него. Преобразовав данные в URL объекта, их можно использовать несколькими способами, в том числе, в качестве значения атрибута [`src`](/ru/docs/Web/HTML/Element/img#src) элементов {{HTMLElement("img")}} (конечно, при условии, что данные содержат изображение).
+Основной частью этого кода для примера является функция `typedArrayToURL()`, которая создаёт `Blob` из переданного типизированного массива и возвращает объект URL для него. Преобразовав данные в URL объекта, их можно использовать несколькими способами, в том числе, в качестве значения атрибута [`src`](/ru/docs/Web/HTML/Reference/Elements/img#src) элементов {{HTMLElement("img")}} (конечно, при условии, что данные содержат изображение).
 
 ```js
 function typedArrayToURL(typedArray, mimeType) {
@@ -158,4 +158,4 @@ const text = await blob.text();
 - {{domxref("File")}}
 - {{domxref("URL.createObjectURL")}}
 - [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)
-- [Использование файлов в веб-приложениях](/ru/docs/Web/API/File/Using_files_from_web_applications)
+- [Использование файлов в веб-приложениях](/ru/docs/Web/API/File_API/Using_files_from_web_applications)

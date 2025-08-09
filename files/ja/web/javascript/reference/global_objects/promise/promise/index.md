@@ -9,7 +9,23 @@ l10n:
 
 **`Promise`** コンストラクターは、主にまだプロミスに対応していない関数をラップするために使用します。
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Promise Constructor", "taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## 構文
 
@@ -17,7 +33,8 @@ l10n:
 new Promise(executor)
 ```
 
-> **メモ:** `Promise()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きでないと構築できません。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Promise()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きでないと構築できません。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

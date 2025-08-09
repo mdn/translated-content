@@ -1,9 +1,7 @@
 ---
-title: ":has()"
+title: :has()
 slug: Web/CSS/:has
 ---
-
-{{CSSRef}}
 
 CSS 函数式[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:has()`** 表示一个元素，如果作为参数传递的任何[相对选择器](/zh-CN/docs/Web/CSS/CSS_selectors#relative_selector)在锚定到该元素时，至少匹配一个元素。这个伪类通过把[可容错相对选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错相对选择器列表)作为参数，提供了一种针对引用元素选择父元素或者先前的兄弟元素的方法。
 
@@ -16,7 +14,7 @@ h1:has(+ p) {
 }
 ```
 
-`:has()` 伪类的[优先级](/zh-CN/docs/Web/CSS/Specificity)计算方法与 {{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":not", ":not()")}} 相同：以其参数中具体的选择器进行计算。
+`:has()` 伪类的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)计算方法与 {{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":not", ":not()")}} 相同：以其参数中具体的选择器进行计算。
 
 ## 语法
 
@@ -197,6 +195,6 @@ h3 {
 
 - [`:is()`](/zh-CN/docs/Web/CSS/:is)、[`:where()`](/zh-CN/docs/Web/CSS/:where)、[`:not()`](/zh-CN/docs/Web/CSS/:not)
 - [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
-- [CSS 组合符](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+- [CSS 组合符](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Combinators)
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
-- [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)

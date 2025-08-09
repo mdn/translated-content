@@ -1,15 +1,21 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+{{jsxref("Date")}} 實例的 **`getTime()`** 方法會回傳此日期從[紀元](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)（定義為 UTC 時間 1970 年 1 月 1 日的午夜）開始計算的毫秒數。
 
-**`getTime()`** 方法回傳自 1970 年 1 月 1 日 00:00:00 UTC 起經過的毫秒數。
+{{InteractiveExample("JavaScript Demo: Date.prototype.getTime()", "shorter")}}
 
-你可以透過此方法指派一日期與時間至另一 {{jsxref("Date")}} 物件。這個方法在功能上與 {{jsxref("Date/valueof", "valueOf()")}} 相同。
+```js interactive-example
+const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
 
-{{EmbedInteractiveExample("pages/js/date-gettime.html","shorter")}}
+// 從 1970 年 1 月 1 日 00:00:00.000 GMT 起算的毫秒數
+console.log(moonLanding.getTime());
+// 預期輸出：-14182940000
+```
 
 ## 語法
 
@@ -17,41 +23,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 getTime()
 ```
 
-### 返回值
+### 參數
 
-一個表示自 1970 年 1 月 1 日 00:00:00 UTC 至給定日期為止，所經過的毫秒數。
+無。
+
+### 回傳值
+
+一個數字，表示此日期的[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)（以毫秒為單位）。如果日期是[無效的](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)，則回傳 `NaN`。
 
 ## 描述
 
-`new Date().getTime()` 的精確度可能會依瀏覽器設定而做取捨，以防止時序攻擊（timing attack）與指紋辨識（fingerprinting）。如 Firefox 預設會開啟 `privacy.reduceTimerPrecision`，在 Firefox 59 預設為 20µs、Firefox 60 為 2ms。
-
-```js
-// 在 Firefox 60 中降低的時間精確度（2ms）
-new Date().getTime();
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// …
-
-// 啟用 `privacy.resistFingerprinting` 而降低的時間精確度
-new Date().getTime();
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// …
-```
-
-Firefox 內也可以啟用 `privacy.resistFingerprinting`，將擇 100ms 或
-`privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值當中較大者調整精確度。
+`Date` 物件基本上是由一個[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)表示，而此方法允許你取得該時間戳。你可以使用此方法來協助將日期和時間指派給另一個 {{jsxref("Date")}} 物件。此方法在功能上等同於 {{jsxref("Date/valueof", "valueOf()")}} 方法。
 
 ## 範例
 
-### 使用 `getTime()` 複製日期
+### 使用 getTime() 複製日期
 
-建構一個相同時間值的日期物件。
+建立一個具有相同時間值的日期物件。
 
 ```js
-// 因為月份是從零開始，故 birthday 將為 1995 年 1 月 10 日
+// 因為月份是從 0 開始計算，所以 birthday 會是 1995 年 1 月 10 日
 const birthday = new Date(1994, 12, 10);
 const copy = new Date();
 copy.setTime(birthday.getTime());
@@ -59,7 +50,7 @@ copy.setTime(birthday.getTime());
 
 ### 測量執行時間
 
-在兩個新建立的 {{jsxref("Date")}} 物件接連呼叫 `getTime()` 方法，並相減兩者返回時間。可透過此法計算某些操作的執行時間。參見 {{jsxref("Date.now()")}} 以避免產生非必要的 {{jsxref("Date")}} 物件。
+對新產生的 {{jsxref("Date")}} 物件進行兩次連續的 `getTime()` 呼叫並相減，可以得到這兩次呼叫之間的時間差。這可以用來計算某些操作的執行時間。另請參見 {{jsxref("Date.now()")}} 以避免實例化不必要的 {{jsxref("Date")}} 物件。
 
 ```js
 let end, start;
@@ -70,8 +61,11 @@ for (let i = 0; i < 1000; i++) {
 }
 end = new Date();
 
-console.log(`Operation took ${end.getTime() - start.getTime()} msec`);
+console.log(`操作耗時 ${end.getTime() - start.getTime()} 毫秒`);
 ```
+
+> [!NOTE]
+> 在支援 {{domxref("Performance API", "", "", "nocode")}} 高解析度時間功能的瀏覽器中，{{domxref("Performance.now()")}} 比 {{jsxref("Date.now()")}} 能提供更可靠且更精確的經過時間測量。
 
 ## 規範
 

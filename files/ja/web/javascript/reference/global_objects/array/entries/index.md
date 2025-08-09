@@ -1,15 +1,26 @@
 ---
 title: Array.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`entries()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内の各要素に対するキー/値のペアを含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/array-entries.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.entries()")}}
+
+```js interactive-example
+const array = ["a", "b", "c"];
+
+const iterator = array.entries();
+
+console.log(iterator.next().value);
+// 予想される結果: Array [0, "a"]
+
+console.log(iterator.next().value);
+// 予想される結果: Array [1, "b"]
+```
 
 ## 構文
 
@@ -105,6 +116,7 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 ## 関連情報
 
 - [`Array.prototype.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.entries` のポリフィル](https://www.npmjs.com/package/array.prototype.entries)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}

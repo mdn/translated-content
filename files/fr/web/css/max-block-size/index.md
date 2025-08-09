@@ -13,7 +13,46 @@ Cette propriété permet, contrairement à `max-height` et `max-width`, de défi
 
 Cette propriété est une propriété _logique_ qui doit remplacer les propriétés _physiques_ correspondantes (`max-height` ou `max-width`) si on souhaite que la disposition tienne compte du mode d'écriture de la page (que celui-ci soit horizontal ou vertical). Vous pouvez consulter [ces exemples](/fr/docs/Web/CSS/writing-mode#exemple) pour en savoir plus.
 
-{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
+{{InteractiveExample("CSS Demo: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum block size. <br />This will
+    limit the size in the block dimension, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntaxe
 

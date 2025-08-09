@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
 
-{{FirefoxSidebar}}
-
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
@@ -78,7 +76,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- [特権コードは `Date` のインスタンスで Xray vision が適用されるようになりました](/ja/docs/Xray_vision#Xrays_for_JavaScript_objects)。
+- [特権コードは `Date` のインスタンスで Xray vision が適用されるようになりました](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects)。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

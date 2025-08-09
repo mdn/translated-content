@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
-
 El módulo **Fondos y bordes CSS** proporciona propiedades para agregar bordes, esquinas redondeadas y sombras de caja a los elementos.
 
 Puede agregar diferentes tipos de estilos de borde, incluidos bordes hechos de imágenes de cualquier tipo de imagen, desde imágenes rasterizadas hasta degradados CSS. Los bordes pueden ser cuadrados o redondeados, y se puede establecer un radio diferente para cada esquina. Los elementos se pueden redondear tengan o no un borde visible.
@@ -87,13 +85,13 @@ Para ver el código de este ejemplo, [vea la fuente en GitHub](https://github.co
 
 ## Guías
 
-- [Aprende CSS: fondo y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Aprende CSS: fondo y bordes](/es/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : Explica cómo implementar imágenes decorativas utilizando imágenes de fondo con CSS.
 - [Usando múltiples fondos](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : Explica cómo configurar uno o más fondos en un elemento.
 - [Cambiar el tamaño de las imágenes de fondo](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : Describe cómo cambiar el tamaño y el comportamiento de repetición de las imágenes de fondo.
-- [Aprende CSS: el modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Aprende CSS: el modelo de caja](/es/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : Explica cómo los bordes, junto con otras propiedades del modelo de caja, afectan el modelo de caja CSS.
 - [Usando gradientes de CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Explica cómo crear imágenes de fondo degradadas con CSS.

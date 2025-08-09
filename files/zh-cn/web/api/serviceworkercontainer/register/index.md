@@ -25,10 +25,8 @@ ServiceWorkerContainer.register(scriptURL, options).then(
 
 - `scriptURL`
   - : service worker 脚本的 URL.
-- `options` `{{optional_inline}}`
-
+- `options` {{optional_inline}}
   - : 注册时提供选项的配置对象。目前可用的选项包括：
-
     - `scope`: 一个 {{domxref("USVString")}}，表示定义 service worker 注册范围的 URL；service worker 可以控制的 URL 范围。通常是相对 URL。默认值是基于当前的 location，并以此来解析传入的路径。
 
 ### 返回

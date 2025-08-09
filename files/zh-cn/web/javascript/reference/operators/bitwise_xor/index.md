@@ -3,11 +3,17 @@ title: 按位异或（^）
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
 
-{{jsSidebar("Operators")}}
-
 **按位异或**（**`^`**）运算符在两个操作数有且仅有一个对应的二进制位为 `1` 时，该位的结果值为 `1`。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR", "shorter")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a ^ b); // 00000000000000000000000000000110
+// Expected output: 6
+```
 
 ## 语法
 

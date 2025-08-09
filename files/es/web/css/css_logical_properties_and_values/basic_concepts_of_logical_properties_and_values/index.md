@@ -3,8 +3,6 @@ title: Conceptos básicos de las Propiedades y Valores Lógicos
 slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
 ---
 
-{{CSSRef}}
-
 La Especificación de Propiedades y Valores Lógicos introduce asignaciones relativas al flujo para muchas de las propiedades y valores en CSS. Este artículo introduce la especificación y explica las propiedades y valores relativos al flujo.
 
 ## ¿Por qué necesitamos propiedades lógicas?
@@ -47,7 +45,7 @@ El siguiente diagrama muestra las direcciones de bloque y en línea en un modo d
 
 ## Soporte en navegadores
 
-Las Propiedades y Valores lógicos pueden ser considerados como un par de grupos en términos de la compatibilidad actual del navegador. Algunas de las propiedades son esencialmente asignadas desde la versión física, por ejemplo {{CSSxRef("inline-size")}} por {{CSSxRef("width")}} o {{CSSxRef("margin-inline-start")}} en lugar de {{CSSxRef("margin-left")}}. Esa asignación de propiedades se está comenzando a ver bien en los diferentes navegadores; sin embargo, si miras la página de cada propiedad en la [referencia en MDN](/es/docs/Web/CSS/CSS_Logical_Properties#Reference), verás que el único navegador moderno que no cuenta con estas propiedades es Edge.
+Las Propiedades y Valores lógicos pueden ser considerados como un par de grupos en términos de la compatibilidad actual del navegador. Algunas de las propiedades son esencialmente asignadas desde la versión física, por ejemplo {{CSSxRef("inline-size")}} por {{CSSxRef("width")}} o {{CSSxRef("margin-inline-start")}} en lugar de {{CSSxRef("margin-left")}}. Esa asignación de propiedades se está comenzando a ver bien en los diferentes navegadores; sin embargo, si miras la página de cada propiedad en la [referencia en MDN](/es/docs/Web/CSS/CSS_logical_properties_and_values#reference), verás que el único navegador moderno que no cuenta con estas propiedades es Edge.
 
 Hay otro grupo de estas propiedades lógicas que no tienen una asignación directa con las propiedades físicas existentes. Estas son abreviaturas posibles gracias al hecho de que podemos referirnos a ambos bordes del bloque o dimensión en línea a la vez. Un ejemplo sería {{CSSxRef("margin-block")}}, que es una abreviación de {{CSSxRef("margin-block-start")}} y {{CSSxRef("margin-block-end")}}. Actualmente, estas propiedades no tiene soporte en navegadores.
 
@@ -62,7 +60,7 @@ Puedes probar el soporte de las propiedades y valores lógicos usando _feature q
 
 ## Mira también
 
-- [Alineamiento de caja en Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+- [Alineamiento de caja en Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [Alineamiento de caja en Flex Layout](/es/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
 - [Entendiendo Propiedades y Valores Lógicos](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
 - [Modos de escritura](/es/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)

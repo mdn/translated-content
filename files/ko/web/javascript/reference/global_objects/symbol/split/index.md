@@ -11,7 +11,24 @@ l10n:
 
 보다 상세한 내용은 [`RegExp.prototype[@@split]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split) 및 {{jsxref("String.prototype.split()")}}를 참조하시기 바랍니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-split.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.split")}}
+
+```js interactive-example
+class Split1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.split](string) {
+    const index = string.indexOf(this.value);
+    return `${this.value}${string.substring(0, index)}/${string.substring(
+      index + this.value.length,
+    )}`;
+  }
+}
+
+console.log("foobar".split(new Split1("foo")));
+// Expected output: "foo/bar"
+```
 
 ## 값
 

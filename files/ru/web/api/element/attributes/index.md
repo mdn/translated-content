@@ -80,4 +80,4 @@ var atts = para.attributes;
 ## Смотрите также
 
 - {{domxref("NamedNodeMap")}}, the interface of the returned object
-- Cross-browser compatibility considerations: on [quirksmode](http://www.quirksmode.org/dom/w3c_core.html#attributes)
+- Cross-browser compatibility considerations: on [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes)

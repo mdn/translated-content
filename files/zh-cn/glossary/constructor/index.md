@@ -31,5 +31,5 @@ var defaultReference = new Default();
 ## 参见
 
 - 维基百科上的[构造函数](https://zh.wikipedia.org/wiki/构造器)
-- MDN 上的 [JavaScript 面向对象编程中的构造函数](/zh-CN/docs/Learn/JavaScript/Objects)
+- MDN 上的 [JavaScript 面向对象编程中的构造函数](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 - MDN 上的 [JavaScript 的 New 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)

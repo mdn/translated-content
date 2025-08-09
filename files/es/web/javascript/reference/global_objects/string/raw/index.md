@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/raw
 
 {{JSRef}}
 
-El método estatico **`String.raw()`** es una función de [plantilla de literales](/es/docs/Web/JavaScript/Reference/template_strings), similar al prefijo `r` en Python o al prefijo `@` en C# para strings literales (con ciertas diferencias: ver la explicación en [este problema](https://bugs.chromium.org/p/v8/issues/detail?id=5016)). Se utiliza para obtener un _string_ crudo a partir de plantillas de _string_ (es decir, el original, texto no interpretado).
+El método estatico **`String.raw()`** es una función de [plantilla de literales](/es/docs/Web/JavaScript/Reference/Template_literals), similar al prefijo `r` en Python o al prefijo `@` en C# para strings literales (con ciertas diferencias: ver la explicación en [este problema](https://bugs.chromium.org/p/v8/issues/detail?id=5016)). Se utiliza para obtener un _string_ crudo a partir de plantillas de _string_ (es decir, el original, texto no interpretado).
 
 ## Sintaxis
 
@@ -22,7 +22,7 @@ String.raw`templateString`
 - `...substitutions`
   - : Contiene valores de sustitución.
 - `templateString`
-  - : [opcional] Una [plantilla _string_](/es/docs/Web/JavaScript/Reference/template_strings), con sustituciones (`${...}`).
+  - : [opcional] Una [plantilla _string_](/es/docs/Web/JavaScript/Reference/Template_literals), con sustituciones (`${...}`).
 
 ### Valor de regreso
 
@@ -35,7 +35,7 @@ La forma cruda del _string_ de una plantilla _string_ proporcionada.
 
 ## Descripción
 
-En la mayoría de los casos, `String.raw()` es usado con plantillas _string_. La primera sintaxis mencionada arriba es raramente usada, porque el motor de JavaScript hará la llamada por ti con los argumentos apropiados, al igual que otras [funciones de etiqueta](/es/docs/Web/JavaScript/Reference/template_strings#Tagged_template_literals).
+En la mayoría de los casos, `String.raw()` es usado con plantillas _string_. La primera sintaxis mencionada arriba es raramente usada, porque el motor de JavaScript hará la llamada por ti con los argumentos apropiados, al igual que otras [funciones de etiqueta](/es/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals).
 
 `String.raw()` es la unica función de etiqueta incorporada en las plantillas _string_; trabaja igual que la función de la plantilla por defecto y ejecuta la concatenación. Incluso puedes reimplementarlo con código normal de JavaScript.
 
@@ -86,6 +86,6 @@ String.raw(
 
 ## Tambien ver
 
-- [Template strings](/es/docs/Web/JavaScript/Reference/template_strings)
+- [Template strings](/es/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
 - [Lexical grammar](/es/docs/Web/JavaScript/Reference/Lexical_grammar)

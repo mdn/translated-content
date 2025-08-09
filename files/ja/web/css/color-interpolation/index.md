@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eca1c1c2dfd430d6b7942b0f73128c4c0831e5c1
 ---
 
-{{CSSRef}}
-
 CSS の `color-interpolation` プロパティは、SVG で用いられ、SVG 要素 {{SVGElement("linearGradient")}} および {{SVGElement("radialGradient")}} で用いる色空間を指定します。
 
 ## 構文

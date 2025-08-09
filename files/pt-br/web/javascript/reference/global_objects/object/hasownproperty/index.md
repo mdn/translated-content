@@ -18,7 +18,7 @@ obj.hasOwnProperty(prop)
 ### Parâmetros
 
 - `prop`
-  - : Uma {{jsxref("String")}} ou [symbol](/pt-BR/docs/Glossary/Symbol) indicando o nome da propriedade a ser verificada.
+  - : Uma {{jsxref("String")}} ou [symbol](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol) indicando o nome da propriedade a ser verificada.
 
 ### Valor de Retorno
 
@@ -120,8 +120,8 @@ Observe que neste ultimo caso nenhum novo objeto é criado.
 
 ## Veja Também
 
-- [Enumerability and ownership of properties](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisted](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_Revisited)
+- [JavaScript Guide: Inheritance revisted](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

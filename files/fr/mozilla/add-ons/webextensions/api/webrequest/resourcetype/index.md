@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 
 Ce type est une chaîne de caractères, qui représente le contexte dans lequel une ressource a été récupérée dans une requête web.
 
-Il est utilisé pour [filtrer](/fr/Add-ons/WebExtensions/API/WebRequest/RequestFilter) les requêtes que vous écoutez en utilisant l'API webRequest. Par exemple : vous pouvez écouter les requêtes uniquement pour les images, ou uniquement pour les scripts.
+Il est utilisé pour [filtrer](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) les requêtes que vous écoutez en utilisant l'API webRequest. Par exemple : vous pouvez écouter les requêtes uniquement pour les images, ou uniquement pour les scripts.
 
 ## Type
 
@@ -31,7 +31,6 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `media`
   - : Ressources chargées par un élément {{HTMLElement("video")}} ou {{HTMLElement("audio")}}.
 - `object`
-
   - : Ressources chargées par un élément {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.
 
     Les navigateurs qui n'ont pas de type `object_subrequest` dédié (voir compatibilité des navigateurs ci-dessous), étiquettent également les requêtes ultérieures envoyées par le plugin en tant `object`.
@@ -39,7 +38,6 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `object_subrequest`
   - : Requêtes envoyées par plugins.
 - `ping`
-
   - : Demandes envoyées à l'URL donnée dans l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping) d'un hyperlien, lorsque l'hyperlien est suivi.
 
     Les navigateurs qui n'ont pas de type de `balise` dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que `ping`.
@@ -55,11 +53,11 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `web_manifest`
   - : [Manifests Web App](/fr/docs/Web/Manifest) chargés pour les sites Web qui peuvent être installés sur l'écran d'accueil.
 - `websocket`
-  - : Requêtes initiant une connexion à un serveur via l'[API WebSocket](/fr/docs/WebSockets).
+  - : Requêtes initiant une connexion à un serveur via l'[API WebSocket](/fr/docs/Web/API/WebSockets_API).
 - `xbl`
   - : [XBL](/fr/docs/XBL) bindings chargés pour étendre le comportement des éléments d'un document.
 - `xml_dtd`
-  - : [DTDs](/fr/docs/Glossaire/DTD) chargées pour un document XML.
+  - : [DTDs](/fr/docs/Glossary/Doctype) chargées pour un document XML.
 - `xmlhttprequest`
   - : Requêtes envoyées par un objet {{domxref("XMLHttpRequest")}} ou par l'[API Fetch](/fr/docs/Web/API/Fetch_API).
 - `xslt`

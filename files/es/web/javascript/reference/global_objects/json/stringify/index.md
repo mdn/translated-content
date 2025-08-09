@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 El método **`JSON.stringify()`** convierte un objeto o valor de JavaScript en una cadena de texto JSON, opcionalmente reemplaza valores si se indica una función de reemplazo, o si se especifican las propiedades mediante un array de reemplazo.
 
-{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.stringify()")}}
+
+```js interactive-example
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// Expected output: '{"x":5,"y":6}'
+
+console.log(
+  JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
+);
+// Expected output: '[3,"false",false]'
+
+console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
+// Expected output: '{"x":[10,null,null,null]}'
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// Expected output: '"2006-01-02T15:04:05.000Z"'
+```
 
 ## Sintaxis
 
@@ -36,7 +52,7 @@ Lanza una excepción {{JSxRef("TypeError")}} ("cyclic object value") cuando encu
 
 `JSON.stringify` convierte un valor a notación JSON representándolo:
 
-- Si el valor tiene un método [toJSON()](</es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON/stringify#toJSON()_behavior>), es responsable de definir qué será serializado.
+- Si el valor tiene un método [toJSON()](</es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#toJSON()_behavior>), es responsable de definir qué será serializado.
 - Los objetos {{JSxRef("Boolean")}}, {{JSxRef("Number")}}, and {{JSxRef("String")}} se convierten a sus valores primitivos, de acuerdo con la conversión semántica tradicional.
 - Si durante la conversión se encuentra un {{JSxRef("undefined")}}, una {{JSxRef("Function")}}, o un {{JSxRef("Symbol")}} se omite (cuando se encuentra en un objeto) o se censura a {{JSxRef("null")}} (cuando se encuentra en un array). `JSON.stringify()` puede devolver `undefined` cuando se pasan valores "puros" como `JSON.stringify(function(){}`) o `JSON.stringify(undefined)`.
 - Todas las propiedades que utilicen {{JSxRef("Symbol")}} en los nombres de la clave se ignoran por completo, incluso si utilizan una función `replacer`.

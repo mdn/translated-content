@@ -17,15 +17,15 @@ HTML 드래그 앤 드롭은 {{domxref("Event","DOM event model")}} 과 _{{domxr
 
 모든 [드래그 이벤트](/ko/docs/Web/API/DragEvent#Event_types)는 [글로벌 이벤트 핸들러](/ko/docs/Web/API/DragEvent#GlobalEventHandlers)와 연결되어 있습니다. 각 드래그 이벤트와 드래그 전역 속성은 참조 문서를 가지고 있습니다. 아래 표는 각 이벤트에 대한 간략한 설명과 참조 문서로의 링크를 담고 있습니다.
 
-| 이벤트                                                  | 이벤트 핸들러                                                | 설명                                                                                                                                                     |
-| ------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{domxref('Document/drag_이벤트', 'drag')}}             | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | 요소나 텍스트 블록을 드래그 할 때 발생한다.                                                                                                              |
-| {{domxref('HTMLElement/dragend_event', 'dragend')}}     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 드래그를 끝냈을 때 발생한다. (마우스 버튼을 떼거나 ESC 키를 누를 때) ([드래그 끝내기](/ko/docs/DragDrop/Drag_Operations#dragend)를 보시오)               |
-| {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 드래그한 요소나 텍스트 블록을 적합한 드롭 대상위에 올라갔을 때 발생한다. ([드롭 대상 지정하기](/ko/docs/DragDrop/Drag_Operations#droptargets)를 보시오.) |
-| {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 드래그하는 요소나 텍스트 블록이 적합한 드롭 대상에서 벗어났을 때 발생한다.                                                                               |
-| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | 요소나 텍스트 블록을 적합한 드롭 대상 위로 지나갈 때 발생한다. (매 수백 밀리초마다 발생한다.)                                                            |
-| {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 사용자가 요소나 텍스트 블록을 드래그하기 시작했을 때 발생한다. ([드래그 시작하기](/ko/docs/DragDrop/Drag_Operations#dragstart)를 보시오.)                |
-| {{domxref('HTMLElement/drop_event', 'drop')}}           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 요소나 텍스트 블록을 적합한 드롭 대상에 드롭했을 때 발생한다. ([드롭하기](/ko/docs/DragDrop/Drag_Operations#dragstart)를 보시오.)                        |
+| 이벤트                                                  | 이벤트 핸들러                                                | 설명                                                                                                                                                                           |
+| ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{domxref('Document/drag_이벤트', 'drag')}}             | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | 요소나 텍스트 블록을 드래그 할 때 발생한다.                                                                                                                                    |
+| {{domxref('HTMLElement/dragend_event', 'dragend')}}     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 드래그를 끝냈을 때 발생한다. (마우스 버튼을 떼거나 ESC 키를 누를 때) ([드래그 끝내기](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)를 보시오)               |
+| {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 드래그한 요소나 텍스트 블록을 적합한 드롭 대상위에 올라갔을 때 발생한다. ([드롭 대상 지정하기](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)를 보시오.) |
+| {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 드래그하는 요소나 텍스트 블록이 적합한 드롭 대상에서 벗어났을 때 발생한다.                                                                                                     |
+| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | 요소나 텍스트 블록을 적합한 드롭 대상 위로 지나갈 때 발생한다. (매 수백 밀리초마다 발생한다.)                                                                                  |
+| {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 사용자가 요소나 텍스트 블록을 드래그하기 시작했을 때 발생한다. ([드래그 시작하기](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart)를 보시오.)                |
+| {{domxref('HTMLElement/drop_event', 'drop')}}           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 요소나 텍스트 블록을 적합한 드롭 대상에 드롭했을 때 발생한다. ([드롭하기](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart)를 보시오.)                        |
 
 > **참고:** `참고: dragstart`와 `dragend` 이벤트는 파일을 브라우저로 드래그할 때는 발생하지 않습니다.
 
@@ -56,7 +56,7 @@ Mozilla와 Firefox는 표준 드래그 앤 드롭 모델에서 제공하지 않�
 
 ### 어떤 것이 *draggable*인지 확인하기
 
-하나의 요소를 draggable로 만들기 위해서는 [`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)와 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 전역 이벤트 핸들러를 아래 예제 코드와 같이 추가해야합니다.
+하나의 요소를 draggable로 만들기 위해서는 [`draggable`](/ko/docs/Web/HTML/Reference/Global_attributes#draggable)와 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 전역 이벤트 핸들러를 아래 예제 코드와 같이 추가해야합니다.
 
 ```js
 function dragstart_handler(ev) {
@@ -84,7 +84,7 @@ function dragstart_handler(ev) {
 <p id="p1" draggable="true">This element is draggable.</p>
 ```
 
-추가 정보를 위해 [draggable attribute reference](/ko/docs/Web/HTML/Global_attributes/draggable)와 [Drag operations guide](/ko/docs/Web/Guide/HTML/Drag_operations#draggableattribute)를 참고하세요.
+추가 정보를 위해 [draggable attribute reference](/ko/docs/Web/HTML/Reference/Global_attributes/draggable)와 [Drag operations guide](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)를 참고하세요.
 
 ### 드래그 데이터 정의하기
 
@@ -101,7 +101,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-드래그 앤 드롭에 사용할 수 있는 공통 데이터 타입 (텍스트, HTML, 링크, 파일 등) 의 목록을 보려면, [Recommended Drag Types](/ko/docs/DragDrop/Recommended_Drag_Types)를 참고하십시오. 드래그 데이터에 대한 추가적인 정보를 위해서는 [Drag Data](/ko/docs/Web/Guide/HTML/Drag_operations#dragdata)를 참고하십시오.
+드래그 앤 드롭에 사용할 수 있는 공통 데이터 타입 (텍스트, HTML, 링크, 파일 등) 의 목록을 보려면, [Recommended Drag Types](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)를 참고하십시오. 드래그 데이터에 대한 추가적인 정보를 위해서는 [Drag Data](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata)를 참고하십시오.
 
 ### 드래그 이미지 정의하기
 
@@ -117,7 +117,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-드래그 이미지에 대해 더 알아보려면, [Setting the Drag Feedback Image](/ko/docs/DragDrop/Drag_Operations#dragfeedback)를 참고하세요.
+드래그 이미지에 대해 더 알아보려면, [Setting the Drag Feedback Image](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback)를 참고하세요.
 
 ### 드래그 효과 정의하기
 
@@ -142,7 +142,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-더 자세한 설명은 [Drag Effects](/ko/docs/Web/Guide/HTML/Drag_operations#drageffects)를 참고하세요.
+더 자세한 설명은 [Drag Effects](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects)를 참고하세요.
 
 ### 드롭 지역 정의하기
 
@@ -173,7 +173,7 @@ function dragstart_handler(ev) {
 
 각 핸들러는 {{domxref("Event.preventDefault","preventDefault()")}} 를 호출해 추가적인 이벤트 (터치 이벤트나 포인터 이벤트) 가 일어나지 않도록 합니다.
 
-추가적인 정보는, [Specifying Drop Targets](/ko/docs/Web/Guide/HTML/Drag_operations#droptargets)를 참고하세요.
+추가적인 정보는, [Specifying Drop Targets](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)를 참고하세요.
 
 ### 드롭 효과 다루기
 
@@ -212,13 +212,13 @@ function dragstart_handler(ev) {
 </div>
 ```
 
-더 많은 정보를 위해 [Performing a Drop](/ko/docs/Web/Guide/HTML/Drag_operations#drop)을 보십시오.
+더 많은 정보를 위해 [Performing a Drop](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop)을 보십시오.
 
 ### 드래그가 끝나면
 
 드래그가 끝나면 드래그한 요소에 {{domxref('HTMLElement/dragend_event', 'dragend')}} 이벤트가 발생합니다. 이 이벤트는 드래그가 완료되거나 중간에 취소되어도 발생합니다. {{domxref('HTMLElement/dragend_event', 'dragend')}} 이벤트 핸들러는 {{domxref("DataTransfer.dropEffect","dropEffect")}} 프로퍼티를 확인해 드래그가 성공했는지를 확인할 수 있습니다.
 
-드래그 끝을 다루기 위한 더 많은 정보는 [Finishing a Drag](/ko/docs/DragDrop/Drag_Operations#dragend)를 참고하세요.
+드래그 끝을 다루기 위한 더 많은 정보는 [Finishing a Drag](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)를 참고하세요.
 
 ## 상호 운용성
 

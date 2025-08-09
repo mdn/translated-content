@@ -7,7 +7,37 @@ slug: Web/HTML/Global_attributes/tabindex
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **tabindex** indica se um elemento pode receber foco de entrada (se ele é _focável_), se e em qual posição ele deve fazer parte da navegação sequencial do teclado (geralmente com a tecla <kbd>Tab</kbd>, daí seu nome).
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
+
+```html interactive-example
+<p>Click anywhere in this pane, then try tabbing through the elements.</p>
+
+<label>First in tab order:<input type="text" /></label>
+
+<div tabindex="0">Tabbable due to tabindex.</div>
+
+<div>Not tabbable: no tabindex.</div>
+
+<label>Third in tab order:<input type="text" /></label>
+```
+
+```css interactive-example
+p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+div,
+label {
+  display: block;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+div:focus {
+  font-weight: bold;
+}
+```
 
 Ele aceita valores inteiros, com diferentes resultados dependendo do valor desse inteiro:
 
@@ -36,4 +66,4 @@ Se o atributo `tabindex` for definido em um elemento div {{htmlelement("div")}},
 
 - Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 - {{domxref("HTMLElement.tabIndex")}} que reflete este atributo.
-- Problemas de acessibilidade com tabindex: veja [Don't Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) (em inglês).
+- Problemas de acessibilidade com tabindex: veja [Don't Use Tabindex Greater than 0 | Adrian Roselli](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) (em inglês).

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 
 **`toLocaleString()`** メソッドは、この BigInt 値の言語に合わせた表現の文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
+{{InteractiveExample("JavaScript デモ: BigInt.toLocaleString()")}}
+
+```js interactive-example
+const bigint = 123456789123456789n;
+
+// German uses period for thousands
+console.log(bigint.toLocaleString("de-DE"));
+// Expected output: "123.456.789.123.456.789"
+
+// Request a currency format
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
+// Expected output: "123.456.789.123.456.789,00 €"
+```
 
 ## 構文
 

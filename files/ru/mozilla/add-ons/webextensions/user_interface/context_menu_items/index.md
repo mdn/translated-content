@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 
 {{AddonSidebar}}
 
-Эта возможность пользовательского интерфейса позволяет добавлять новые элементы в контекстное меню браузера, появляющееся при нажатии правой кнопки мыши. Вкладки браузера также имеют контекстное меню доступное через [browser.menus API](/en-US/Add-ons/WebExtensions/API/menus).
+Эта возможность пользовательского интерфейса позволяет добавлять новые элементы в контекстное меню браузера, появляющееся при нажатии правой кнопки мыши. Вкладки браузера также имеют контекстное меню доступное через [browser.menus API](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus).
 
 ![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
 

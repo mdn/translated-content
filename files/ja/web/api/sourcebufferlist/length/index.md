@@ -21,7 +21,7 @@ unsigned long 型の数。
 
 未定
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

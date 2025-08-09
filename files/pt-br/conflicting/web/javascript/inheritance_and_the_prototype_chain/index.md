@@ -65,7 +65,7 @@ Há muitas formas de definir funções construtoras apropriadas para implementar
 
 Esta seção mostra definições simples de como trabalhar com heranças. Nestas definições, você não pode especificar nenhum valor de propriedade quando criar um objeto. O recém-criado objeto terá os valores padrão, que você poderá alterar mais tarde.
 
-Na aplicação real, você poderia definir construtores que permitem que você forneça valores de propriedade no momento da criação do objeto (veja [Construtores flexíveis](#Construtores_flexíveis) para saber mais). Por enquanto, estas simples definições demonstram como a herança ocorre.
+Na aplicação real, você poderia definir construtores que permitem que você forneça valores de propriedade no momento da criação do objeto (veja [Construtores flexíveis](#construtores_flexíveis) para saber mais). Por enquanto, estas simples definições demonstram como a herança ocorre.
 
 As seguintes definições Java e JavaScript `Employee` são similares. A única diferença é que você precisa especificar o tipo de cada propriedade em Java, mas não em JavaScript (devido ao Java ser uma [linguagem fortemente tipada](http://en.wikipedia.org/wiki/Strong_and_weak_typing) enquanto o JavaScript é linguagem fracamente tipada).
 
@@ -221,7 +221,7 @@ mark.dept = "general";
 mark.projects = [];
 ```
 
-The `mark` object inherits values for the `name` and `dept` properties from the prototypical object in `mark.__proto__`. It is assigned a local value for the `projects` property by the `WorkerBee` constructor. This gives you inheritance of properties and their values in JavaScript. Some subtleties of this process are discussed in [Property inheritance revisited](#Property_inheritance_revisited).
+The `mark` object inherits values for the `name` and `dept` properties from the prototypical object in `mark.__proto__`. It is assigned a local value for the `projects` property by the `WorkerBee` constructor. This gives you inheritance of properties and their values in JavaScript. Some subtleties of this process are discussed in [Property inheritance revisited](#property_inheritance_revisited).
 
 Because these constructors do not let you supply instance-specific values, this information is generic. The property values are the default ones shared by all new objects created from `WorkerBee`. You can, of course, change the values of any of these properties. So, you could give specific information for `mark` as follows:
 
@@ -522,7 +522,7 @@ var f = new Foo();
 var isTrue = (f instanceof Foo);
 ```
 
-For a more detailed example, suppose you have the same set of definitions shown in [Inheriting properties](#Inheriting_properties). Create an `Engineer` object as follows:
+For a more detailed example, suppose you have the same set of definitions shown in [Inheriting properties](#inheriting_properties). Create an `Engineer` object as follows:
 
 ```js
 var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");

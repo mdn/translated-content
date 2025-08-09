@@ -9,7 +9,7 @@ Obtient un tableau de tous les moteurs de recherche installés.
 
 Chaque moteur de recherche renvoyé est identifié par un nom, que vous pouvez passer dans {{WebExtAPIRef("search.search()")}} pour utiliser ce moteur particulier pour effectuer une recherche.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -23,7 +23,7 @@ Aucun.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un [tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/array) d'objets de moteur de recherche. Chaque objet de moteur de recherche peut contenir les propriétés suivantes :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un [tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'objets de moteur de recherche. Chaque objet de moteur de recherche peut contenir les propriétés suivantes :
 
 - `name`
   - : `string`. Le nom du moteur de recherche.

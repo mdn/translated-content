@@ -14,7 +14,7 @@ slug: Web/API/CSSGroupingRule
 
 ## 语法
 
-The syntax is described using the [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) format.
+The syntax is described using the [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) format.
 
 ```plain
 interface CSSGroupingRule : CSSRule {
@@ -50,4 +50,4 @@ The `CSSGroupingRule` derives from {{domxref("CSSRule")}} and inherits all metho
 
 ## 参见
 
-- [Using dynamic styling information](/zh-CN/DOM/Using_dynamic_styling_information)
+- [Using dynamic styling information](/zh-CN/docs/DOM/Using_dynamic_styling_information)

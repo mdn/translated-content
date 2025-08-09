@@ -7,7 +7,54 @@ slug: Web/CSS/border-right-style
 
 La propriété **`border-right-style`** définit le style de ligne utilisé pour mettre en forme la bordure sur le côté droit d'une boîte.
 
-{{EmbedInteractiveExample("pages/css/border-right-style.html")}}
+{{InteractiveExample("CSS Demo: border-right-style")}}
+
+```css interactive-example-choice
+border-right-style: none;
+```
+
+```css interactive-example-choice
+border-right-style: dotted;
+```
+
+```css interactive-example-choice
+border-right-style: dashed;
+```
+
+```css interactive-example-choice
+border-right-style: solid;
+```
+
+```css interactive-example-choice
+border-right-style: groove;
+```
+
+```css interactive-example-choice
+border-right-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.

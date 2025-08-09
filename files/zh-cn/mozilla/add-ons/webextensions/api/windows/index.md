@@ -1,9 +1,9 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
+l10n:
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
-
-{{AddonSidebar}}
 
 与浏览器窗口互动。你可以使用此 API 获取有关已打开窗口的信息，以及打开、修改和关闭窗口。你也可以监听窗口的打开、关闭和其激活事件。
 
@@ -21,50 +21,46 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 ## 属性
 
 - {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
-  - : `windowId` 值表示不存在浏览器窗口。
+  - : 表示不存在浏览器窗口的 `windowId` 值。
 - {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
-  - : `windowId` 值表示当前窗口。
+  - : 可在部分 API 中作为 `windowId` 参数来表示当前窗口的值。
 
 ## 函数
 
 - {{WebExtAPIRef("windows.get()")}}
-  - : 指定其 ID，获取一个窗口的细节。
+  - : 获取给定 ID 的窗口信息。
 - {{WebExtAPIRef("windows.getCurrent()")}}
   - : 获取当前窗口。
 - {{WebExtAPIRef("windows.getLastFocused()")}}
-  - : 获取最近获得焦点的窗口，通常它是“顶部”的窗口。
+  - : 获取最近获得焦点的窗口（通常是“最上层”的窗口）。
 - {{WebExtAPIRef("windows.getAll()")}}
   - : 获取所有窗口。
 - {{WebExtAPIRef("windows.create()")}}
   - : 创建新窗口。
 - {{WebExtAPIRef("windows.update()")}}
-  - : 更新一个窗口的属性。使用此项对移动、调整大小、聚焦/取消聚焦等。
+  - : 更新一个窗口的属性。使用该函数移动窗口、调整窗口大小、聚焦/取消聚焦窗口等。
 - {{WebExtAPIRef("windows.remove()")}}
   - : 关闭一个窗口及其所有标签页。
 
 ## 事件
 
+- {{WebExtAPIRef("windows.onBoundsChanged")}}
+  - : 当一个窗口被调整大小或移动时触发。
 - {{WebExtAPIRef("windows.onCreated")}}
   - : 一个窗口创建时触发。
 - {{WebExtAPIRef("windows.onRemoved")}}
   - : 一个窗口关闭时触发。
 - {{WebExtAPIRef("windows.onFocusChanged")}}
-  - : 当前有焦点的窗口改变时触发。
+  - : 当前聚焦的窗口改变时触发。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-### Edge 的不兼容
-
-Edge 中不支持 Promises。需使用回调。
-
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows) API。此文档基于 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
->
-> Microsoft Edge 兼容性数据由微软公司提供，并包含在创作共用 署名 3.0 美国许可证下。
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

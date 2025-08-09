@@ -12,13 +12,14 @@ l10n:
 
 このプロミスは、そのリクエストに対するレスポンスを表す {{domxref("Response")}} で解決します。
 
-`fetch()` のプロミスは、ネットワークエラーが発生した場合（普通は権限の問題がaったときなど）のみ拒否されます。
+`fetch()` のプロミスは、ネットワークエラーが発生した場合（普通は権限の問題があったときなど）のみ拒否されます。
 `fetch()` のプロミスは、サーバーがエラーを示す HTTP ステータスコード（`404`、`504` など）を返しても拒否されません。
 代わりに、 `then()` ハンドラーで {{domxref("Response.ok")}} や {{domxref("Response.status")}} プロパティをチェックする必要があります。
 
-`fetch()` メソッドは取得するリソースのディレクティブではなく、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)の `connect-src` ディレクティブによって制御されます。
+`fetch()` メソッドは取得するリソースのディレクティブではなく、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)の `connect-src` ディレクティブによって制御されます。
 
-> **メモ:** `fetch()` メソッドの引数は {{domxref("Request.Request","Request()")}} コンストラクターと全く同じです。
+> [!NOTE]
+> `fetch()` メソッドの引数は {{domxref("Request.Request","Request()")}} コンストラクターと全く同じです。
 
 ## 構文
 
@@ -30,14 +31,11 @@ fetch(resource, options)
 ### 引数
 
 - `resource`
-
   - : 取得したいリソースを定義します。以下のどちらかが使用できます。
-
     - 文字列または{{Glossary("stringifier", "文字列化")}}できるその他のオブジェクト（{{domxref("URL")}} オブジェクトを含む）。取得したいリソースの直接の URL を含む文字列です。この URL は、文書内の {{domxref("Node.baseURI", "baseURI")}}、ワーカーコンテキストでは {{domxref("WorkerGlobalScope.location")}} となります。
     - {{domxref("Request")}} オブジェクト。
 
 - `options` {{optional_inline}}
-
   - : リクエストに適用する独自の設定を含む {{domxref("RequestInit")}} オブジェクトです。
 
 ### 返値
@@ -49,7 +47,7 @@ fetch(resource, options)
 - `AbortError` {{domxref("DOMException")}}
   - : {{domxref("AbortController")}} の {{domxref("AbortController.abort", "abort()")}} メソッドの呼び出しによりリクエストが中止された。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : [トピック API](/ja/docs/Web/API/Topics_API) を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} によって特別に禁止されており、そして `fetch()` リクエストが `browsingTopics: true` で行われたときに発生します。
+  - : [トピック API](/ja/docs/Web/API/Topics_API) を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} によって特別に禁止されており、そして `fetch()` リクエストが `browsingTopics: true` で行われたときに発生します。
 - {{jsxref("TypeError")}}
   - : 以下の理由で発生する可能性があります。
 
@@ -63,7 +61,7 @@ fetch(resource, options)
   <tbody>
     <tr>
       <td>権限ポリシーによるブロック</td>
-      <td><a href="/ja/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> の使用は、<a href="/ja/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}} で、<code>fetch()</code> リクエストが <code>attributionReporting</code> を指定して行われました。</td>
+      <td><a href="/ja/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> の使用は、<a href="/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}} で、<code>fetch()</code> リクエストが <code>attributionReporting</code> を指定して行われました。</td>
     </tr>
     <tr>
       <td>ヘッダー名が無効である。</td>
@@ -256,5 +254,5 @@ const req = new Request("flowers.jpg", options);
 - {{domxref("WorkerGlobalScope.fetch()")}}
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

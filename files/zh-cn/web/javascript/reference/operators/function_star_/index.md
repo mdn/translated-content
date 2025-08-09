@@ -3,11 +3,25 @@ title: function* 表达式
 slug: Web/JavaScript/Reference/Operators/function*
 ---
 
-{{jsSidebar("Operators")}}
-
 **`function*`** 关键字可以在表达式内部定义一个生成器函数。
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## 语法
 

@@ -7,9 +7,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 
 Désinstalle l'appel de l'extension.
 
-Cette API _ne requiert pas_ la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management"
+Cette API _ne requiert pas_ la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -22,9 +22,7 @@ var uninstallingSelf = browser.management.uninstallSelf(
 ### Paramètres
 
 - `options{{optional_inline}}`
-
   - : `object`. L'objet qui peut comporter deux propriétés, toutes deux facultatives :
-
     - `showConfirmDialog{{optional_inline}}`
       - : Boolean. Si `showConfirmDialog` est `true`, le navigateur affiche la boite de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé. Par défaut à `false`.
     - `dialogMessage{{optional_inline}}`
@@ -32,7 +30,7 @@ var uninstallingSelf = browser.management.uninstallSelf(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.
 
 ## Compatibilité des navigateurs
 

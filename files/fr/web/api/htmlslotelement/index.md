@@ -30,4 +30,4 @@ var nodes = myContentObject.getDistributedNodes();
 
 ## Voir aussi
 
-- [HTMLContentElement](/fr/docs/Web/API/HTMLContentElement)
+- [HTMLContentElement](/fr/docs/Web/API/HTMLSlotElement)

@@ -30,7 +30,7 @@ class ClassWithField {
 このページでは、パブリックインスタンスフィールドについて詳しく紹介します。
 
 - パブリック静的フィールドについては、 [`static`](/ja/docs/Web/JavaScript/Reference/Classes/static) を参照してください。
-- プライベートフィールドについては、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を参照してください。
+- プライベートフィールドについては、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 - パブリックメソッドについては、[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)を参照してください。
 - パブリックアクセサーについては、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)および[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を参照してください。
 
@@ -143,7 +143,7 @@ console.log(instance.b); // undefined
 ```
 
 > [!NOTE]
-> これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 クラスフィールドは [`[[DefineOwnProperty]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の意味づけ（本質的には {{jsxref("Object.defineProperty()")}}）を使用して追加されるため、派生クラスのフィールド宣言は基底クラスのセッターを呼び出すことはありません。この動作は、コンストラクターで `this.field = …` を使用するのとは異なります。
 
@@ -249,7 +249,7 @@ console.log(new Professor("Radev", 54).name); // "Professor Radev"
 
 - [クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイド
 - [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
-- [プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - {{jsxref("Statements/class", "class")}}
 - [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) (Shu-yu Guo, 2018)
 - [Public and private class fields](https://v8.dev/features/class-fields) (v8.dev, 2018)

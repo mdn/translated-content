@@ -2,26 +2,27 @@
 title: シグナリングとビデオ通話
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 l10n:
-  sourceCommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
+  sourceCommit: 27bceead8e9b1fe9c92df0fa5e418f81bd5b9fdf
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
 
 [WebRTC](/ja/docs/Web/API/WebRTC_API) は、デバイス間のリアルタイムな P2P(ピア・ツー・ピア) 接続を通した情報交換を可能にします。接続は **シグナリング** と呼ばれる、ピアの発見とピアとの交渉のプロセスを通じて確立されます。このチュートリアルでは、双方向のビデオ通話を実装していきます。
 
-[WebRTC](/ja/docs/Web/API/WebRTC_API) は制約のある状況下で、音声、動画、データをリアルタイムでやり取りするための完全なピア・ツー・ピアな技術です。ピア同士の発見と交渉のプロセスは、[他の記事でも議論されているように](/ja/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection)、お互いに異なるネットワーク上にいるデバイス同士で行われることになります。この **シグナリング** と呼ばれるプロセスは、デバイス同士がお互いに合意済みの第三者のサーバへの接続を含みます。この第三者サーバを通してデバイスはお互いの位置を確認し、交渉のためのメッセージをやり取りすることが出来ます。
+[WebRTC](/ja/docs/Web/API/WebRTC_API) は制約のある状況下で、音声、動画、データをリアルタイムでやり取りするための完全なピア・ツー・ピアな技術です。ピア同士の発見と交渉のプロセスは、[他の記事でも議論されているように](/ja/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection)、お互いに異なるネットワーク上にいるデバイス同士で行われることになります。この **シグナリング** と呼ばれるプロセスは、デバイス同士がお互いに合意済みの第三者のサーバーへの接続を含みます。この第三者サーバーを通してデバイスはお互いの位置を確認し、交渉のためのメッセージをやり取りすることが出来ます。
 
-このドキュメントでは、私達の WebSocket のドキュメント(この記事へのリンクは追加予定で、まだ存在しません。)の中で作られた[WebSocket チャット](https://webrtc-from-chat.glitch.me/) を、ユーザ間の双方向ビデオ通話をサポートするように改良していきます。もしコードを実際に動かしてみたい場合は、[Glitch example](https://webrtc-from-chat.glitch.me/) や、[remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat) を試すことが出来ます。また Github で[プロジェクト全体](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)も公開されています。
+このドキュメントでは、私達の WebSocket のドキュメント（この記事へのリンクは追加予定で、まだ存在しません。）の中で作られた [WebSocket チャット](https://webrtc-from-chat-v1-4.glitch.me/) を、ユーザ間の双方向ビデオ通話をサポートするように改良していきます。もしコードを実際に動かしてみたい場合は、[Glitch の例](https://webrtc-from-chat-v1-4.glitch.me/) や、[remix の例](https://glitch.com/edit/#!/remix/webrtc-from-chat-v1-4) を試すことが出来ます。また Github で[プロジェクト全体](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)も公開されています。
 
-> **注意:** Glitch の例を試す場合、コードの小さな更新でも接続がリセットされることになります。加えて、Glitch インスタンスは手軽な試行とテストのためにあるので、タイムアウト期間が短く設定されています。
+> [!NOTE]
+> Glitch の例を試す場合、コードの小さな更新でも接続がリセットされることになります。加えて、Glitch インスタンスは手軽な試行とテストのためにあるので、タイムアウト期間が短く設定されています。
 
-## シグナリングサーバ
+## シグナリングサーバー
 
-インターネット越しに二つのデバイス間で WebRTC 接続を確立するためには **シグナリングサーバ** が必要になります。シグナリングサーバの仕事は、出来得る限り最小のプライベートな情報の露出で、ピア同士がお互いを発見し接続するよう仲介者となることです。どうやってこのサーバを作れるのでしょうか、また、シグナリングのプロセスはどのように行われるのでしょうか？
+インターネット越しに二つのデバイス間で WebRTC 接続を確立するためには **シグナリングサーバー** が必要になります。シグナリングサーバーの仕事は、出来得る限り最小のプライベートな情報の露出で、ピア同士がお互いを発見し接続するよう仲介者となることです。どうやってこのサーバーを作れるのでしょうか、また、シグナリングのプロセスはどのように行われるのでしょうか？
 
-まずシグナリングサーバ自体が必要です。 WebRTC はシグナリング情報に特定の伝送プロトコルを指定していません。 [WebSocket](/ja/docs/Web/API/WebSockets_API) や {{domxref("XMLHttpRequest")}} から伝書鳩だって構いません。好きなものを使用して二つのピア間でシグナリング情報を交換できます。
+まずシグナリングサーバー自体が必要です。 WebRTC はシグナリング情報に特定の伝送プロトコルを指定していません。 [WebSocket](/ja/docs/Web/API/WebSockets_API) や {{domxref("Window/fetch", "fetch()")}} から伝書鳩だって構いません。好きなものを使用して二つのピア間でシグナリング情報を交換できます。
 
-サーバはシグナリング情報の中身を理解したり解釈したりする必要はない、と把握しておくことが重要です。 {{Glossary("SDP")}} ですが、これもそれほど大事な情報ではありません。シグナリングサーバを通過するメッセージの内容は、事実上、ブラックボックスです。重要なのは、 {{Glossary("ICE")}} サブシステムであるピアに対して、もう一方のピアにシグナリング情報を送信するよう指示する場合です。もしピアがシグナリング情報を送信すると、他方のピアはその情報を受信して独自の ICE サブシステムへと渡す方法を知ることが出来ます。 シグナリングサーバの役割は、こうした情報を仲介することだけです。情報の中身は内容はサーバにとってまったく関係ありません。
+サーバーはシグナリング情報の中身を理解したり解釈したりする必要はない、と把握しておくことが重要です。 {{Glossary("SDP")}} ですが、これもそれほど大事な情報ではありません。シグナリングサーバーを通過するメッセージの内容は、事実上、ブラックボックスです。重要なのは、 {{Glossary("ICE")}} サブシステムであるピアに対して、もう一方のピアにシグナリング情報を送信するよう指示する場合です。もしピアがシグナリング情報を送信すると、他方のピアはその情報を受信して独自の ICE サブシステムへと渡す方法を知ることが出来ます。 シグナリングサーバーの役割は、こうした情報を仲介することだけです。情報の中身は内容はサーバーにとってまったく関係ありません。
 
 ### Readying the chat server for signaling
 
@@ -119,8 +120,6 @@ All your signaling server now needs to do is send the messages it's asked to. Yo
 
 The signaling process involves this exchange of messages between two peers using an intermediary, the signaling server. The exact process will vary, of course, but in general there are a few key points at which signaling messages get handled:
 
-The signaling process involves this exchange of messages among a number of points:
-
 - Each user's client running within a web browser
 - Each user's web browser
 - The signaling server
@@ -128,7 +127,7 @@ The signaling process involves this exchange of messages among a number of point
 
 Imagine that Naomi and Priya are engaged in a discussion using the chat software, and Naomi decides to open a video call between the two. Here's the expected sequence of events:
 
-[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling/webrtc_-_signaling_diagram.svg)
+![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)
 
 We'll see this detailed more over the course of this article.
 
@@ -136,11 +135,11 @@ We'll see this detailed more over the course of this article.
 
 When each peer's ICE layer begins to send candidates, it enters into an exchange among the various points in the chain that looks like this:
 
-[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](webrtc_-_ice_candidate_exchange.svg)
+![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)
 
 Each side sends candidates to the other as it receives them from their local ICE layer; there is no taking turns or batching of candidates. As soon as the two peers agree upon one candidate that they can both use to exchange the media, media begins to flow. Each peer continues to send candidates until it runs out of options, even after the media has already begun to flow. This is done in hopes of identifying even better options than the one initially selected.
 
-If conditions change (for example, the network connection deteriorates), one or both peers might suggest switching to a lower-bandwidth media resolution, or to an alternative codec. That triggers a new exchange of candidates, after which another media format and/or codec change may take place. In the guide [Codecs used by WebRTC](/ja/docs/Web/Media/Formats/WebRTC_codecs) you can learn more about the codecs which WebRTC requires browsers to support, which additional codecs are supported by which browsers, and how to choose the best codecs to use.
+If conditions change (for example, the network connection deteriorates), one or both peers might suggest switching to a lower-bandwidth media resolution, or to an alternative codec. That triggers a new exchange of candidates, after which another media format and/or codec change may take place. In the guide [Codecs used by WebRTC](/ja/docs/Web/Media/Guides/Formats/WebRTC_codecs) you can learn more about the codecs which WebRTC requires browsers to support, which additional codecs are supported by which browsers, and how to choose the best codecs to use.
 
 Optionally, see {{RFC(8445, "Interactive Connectivity Establishment")}}, [section 2.3 ("Negotiating Candidate Pairs and Concluding ICE")](https://datatracker.ietf.org/doc/html/rfc5245#section-2.3) if you want greater understanding of how this process is completed inside the ICE layer. You should note that candidates are exchanged and media starts to flow as soon as the ICE layer is satisfied. This is all taken care of behind the scenes. Our role is to send the candidates, back and forth, through the signaling server.
 
@@ -166,9 +165,9 @@ The HTML for our client needs a location for video to be presented. This require
 
 The page structure defined here is using {{HTMLElement("div")}} elements, giving us full control over the page layout by enabling the use of CSS. We'll skip layout detail in this guide, but [take a look at the CSS](https://github.com/mdn/samples-server/blob/master/s/webrtc-from-chat/chat.css) on GitHub to see how we handled it. Take note of the two {{HTMLElement("video")}} elements, one for your self-view, one for the connection, and the {{HTMLElement("button")}} element.
 
-The `<video>` element with the `id` "`received_video`" will present video received from the connected user. We specify the `autoplay` attribute, ensuring once the video starts arriving, it immediately plays. This removes any need to explicitly handle playback in our code. The "`local_video`" `<video>` element presents a preview of the user's camera; specifying the `muted` attribute, as we don't need to hear local audio in this preview panel.
+The `<video>` element with the `id` `received_video` will present video received from the connected user. We specify the `autoplay` attribute, ensuring once the video starts arriving, it immediately plays. This removes any need to explicitly handle playback in our code. The `local_video` `<video>` element presents a preview of the user's camera; specifying the `muted` attribute, as we don't need to hear local audio in this preview panel.
 
-Finally, the "`hangup-button`" {{HTMLElement("button")}}, to disconnect from a call, is defined and configured to start disabled (setting this as our default for when no call is connected) and apply the function `hangUpCall()` on click. This function's role is to close the call, and send a signalling server notification to the other peer, requesting it also close.
+Finally, the `hangup-button` {{HTMLElement("button")}}, to disconnect from a call, is defined and configured to start disabled (setting this as our default for when no call is connected) and apply the function `hangUpCall()` on click. This function's role is to close the call, and send a signalling server notification to the other peer, requesting it also close.
 
 ### The JavaScript code
 
@@ -190,11 +189,11 @@ The message object passed into this function is converted into a JSON string by 
 
 #### UI to start a call
 
-The code which handles the `"userlist"` message calls `handleUserlistMsg()`. Here we set up the handler for each connected user in the user list displayed to the left of the chat panel. This function receives a message object whose `users` property is an array of strings specifying the user names of every connected user.
+The code which handles the `"user-list"` message calls `handleUserListMsg()`. Here we set up the handler for each connected user in the user list displayed to the left of the chat panel. This function receives a message object whose `users` property is an array of strings specifying the user names of every connected user.
 
 ```js
-function handleUserlistMsg(msg) {
-  const listElem = document.querySelector(".userlistbox");
+function handleUserListMsg(msg) {
+  const listElem = document.querySelector(".user-list-box");
 
   while (listElem.firstChild) {
     listElem.removeChild(listElem.firstChild);
@@ -358,7 +357,7 @@ The first three of these event handlers are required; you have to handle them to
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "onicegatheringstatechange")}}
   - : The ICE layer sends you the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event, when the ICE agent's process of collecting candidates shifts, from one state to another (such as starting to gather candidates or completing negotiation). See [ICE gathering state](#ice_gathering_state) below.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "onsignalingstatechange")}}
-  - : The WebRTC infrastructure sends you the {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} message when the state of the signaling process changes (or if the connection to the signaling server changes). See [Signaling state](#signaling_state) to see our code.
+  - : The WebRTC infrastructure sends you the {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} message when the state of the signaling process changes (or if the connection to the signaling server changes). See [Signaling state](#ice_signaling_state) to see our code.
 
 #### Starting negotiation
 
@@ -377,7 +376,7 @@ function handleNegotiationNeededEvent() {
         sdp: myPeerConnection.localDescription,
       });
     })
-    .catch(reportError);
+    .catch(window.reportError);
 }
 ```
 
@@ -399,7 +398,7 @@ We know the description is valid, and has been set, when the promise returned by
 - `sdp`
   - : The SDP string describing the offer.
 
-If an error occurs, either in the initial `createOffer()` or in any of the fulfillment handlers that follow, an error is reported by invoking our `reportError()` function.
+If an error occurs, either in the initial `createOffer()` or in any of the fulfillment handlers that follow, an error is reported by invoking our `window.reportError()` function.
 
 Once `setLocalDescription()`'s fulfillment handler has run, the ICE agent begins sending {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} events to the {{domxref("RTCPeerConnection")}}, one for each potential configuration it discovers. Our handler for the `icecandidate` event is responsible for transmitting the candidates to the other peer.
 
@@ -458,6 +457,16 @@ Any errors are caught and passed to `handleGetUserMediaError()`, described in [H
 > [!NOTE]
 > As is the case with the caller, once the `setLocalDescription()` fulfillment handler has run, the browser begins firing {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} events that the callee must handle, one for each candidate that needs to be transmitted to the remote peer.
 
+Finally, the caller handles the answer message it received by creating a new {{domxref("RTCSessionDescription")}} object representing the callee's session description and passing it into
+{{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}.
+
+```js
+function handleVideoAnswerMsg(msg) {
+  const desc = new RTCSessionDescription(msg.sdp);
+  myPeerConnection.setRemoteDescription(desc).catch(window.reportError);
+}
+```
+
 ##### Sending ICE candidates
 
 The ICE negotiation process involves each peer sending candidates to the other, repeatedly, until it runs out of potential ways it can support the `RTCPeerConnection`'s media transport needs. Since ICE doesn't know about your signaling server, your code handles transmission of each candidate in your handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event.
@@ -498,7 +507,7 @@ The signaling server delivers each ICE candidate to the destination peer using w
 function handleNewICECandidateMsg(msg) {
   const candidate = new RTCIceCandidate(msg.candidate);
 
-  myPeerConnection.addIceCandidate(candidate).catch(reportError);
+  myPeerConnection.addIceCandidate(candidate).catch(window.reportError);
 }
 ```
 
@@ -542,15 +551,15 @@ function handleRemoveTrackEvent(event) {
 }
 ```
 
-This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/ja/docs/Web/HTML/Element/video#srcObject) attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
+This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/ja/docs/Web/API/HTMLMediaElement/srcObject) property, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
 
 If the array's length is zero, meaning there are no tracks left in the stream, we end the call by calling `closeVideoCall()`. This cleanly restores our app to a state in which it's ready to start or receive another call. See [Ending the call](#ending_the_call) to learn how `closeVideoCall()` works.
 
-#### Ending the call
+#### 通話を終了する
 
 There are many reasons why calls may end. A call might have completed, with one or both sides having hung up. Perhaps a network failure has occurred, or one user might have quit their browser, or had a system crash. In any case, all good things must come to an end.
 
-##### Hanging up
+##### 切断
 
 When the user clicks the "Hang Up" button to end the call, the `hangUpCall()` function is called:
 
@@ -567,7 +576,7 @@ function hangUpCall() {
 
 `hangUpCall()` executes `closeVideoCall()` to shut down and reset the connection and release resources. It then builds a `"hang-up"` message and sends it to the other end of the call to tell the other peer to neatly shut itself down.
 
-##### Ending the call
+##### 通話の終了
 
 The `closeVideoCall()` function, shown below, is responsible for stopping the streams, cleaning up, and disposing of the {{domxref("RTCPeerConnection")}} object:
 
@@ -601,7 +610,7 @@ function closeVideoCall() {
   remoteVideo.removeAttribute("src");
   remoteVideo.removeAttribute("srcObject");
   localVideo.removeAttribute("src");
-  remoteVideo.removeAttribute("srcObject");
+  localVideo.removeAttribute("srcObject");
 
   document.getElementById("hangup-button").disabled = true;
   targetUsername = null;
@@ -615,15 +624,15 @@ After pulling references to the two {{HTMLElement("video")}} elements, we check 
 3. Close the {{domxref("RTCPeerConnection")}} by calling {{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.
 4. Set `myPeerConnection` to `null`, ensuring our code learns there's no ongoing call; this is useful when the user clicks a name in the user list.
 
-Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/ja/docs/Web/HTML/Element/video#src) and [`srcObject`](/ja/docs/Web/HTML/Element/video#srcObject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
+Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/ja/docs/Web/API/HTMLMediaElement/src) and [`srcObject`](/ja/docs/Web/API/HTMLMediaElement/srcObject) properties using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
 
-Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
+Finally, we set the {{domxref("HTMLButtonElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
 
-#### Dealing with state changes
+#### 状態の変更の処理
 
-There are a number of additional events you can set listeners for which notifying your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
+There are a number of additional events for which you can set listeners to notify your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
 
-##### ICE connection state
+##### ICE 接続状態
 
 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} events are sent to the {{domxref("RTCPeerConnection")}} by the ICE layer when the connection state changes (such as when the call is terminated from the other end).
 
@@ -643,7 +652,7 @@ Here, we apply our `closeVideoCall()` function when the ICE connection state cha
 > [!NOTE]
 > We don't watch the `disconnected` signaling state here as it can indicate temporary issues and may go back to a `connected` state after some time. Watching it would close the video call on any temporary network issue.
 
-##### ICE signaling state
+##### ICE シグナリング状態
 
 Similarly, we watch for {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} events. If the signaling state changes to `closed`, we likewise close the call out.
 
@@ -660,7 +669,7 @@ function handleSignalingStateChangeEvent(event) {
 > [!NOTE]
 > The `closed` signaling state has been deprecated in favor of the `closed` {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}. We are watching for it here to add a bit of backward compatibility.
 
-##### ICE gathering state
+##### ICE 収集状態
 
 {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events are used to let you know when the ICE candidate gathering process state changes. Our example doesn't use this for anything, but it can be useful to watch these events for debugging purposes, as well as to detect when candidate collection has finished.
 
@@ -671,18 +680,18 @@ function handleICEGatheringStateChangeEvent(event) {
 }
 ```
 
-## Next steps
+## 次のステップ
 
-You can now [try out this example on Glitch](https://webrtc-from-chat.glitch.me/) to see it in action. Open the Web console on both devices and look at the logged output—although you don't see it in the code as shown above, the code on the server (and on [GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)) has a lot of console output so you can see the signaling and connection processes at work.
+You can now [try out this example on Glitch](https://webrtc-from-chat-v1-4.glitch.me/) to see it in action. Open the Web console on both devices and look at the logged output—although you don't see it in the code as shown above, the code on the server (and on [GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)) has a lot of console output so you can see the signaling and connection processes at work.
 
 Another obvious improvement would be to add a "ringing" feature, so that instead of just asking the user for permission to use the camera and microphone, a "User X is calling. Would you like to answer?" prompt appears first.
 
 ## 関連情報
 
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)
-- [Web media technologies](/ja/docs/Web/Media)
-- [Guide to media types and formats on the web](/ja/docs/Web/Media/Formats)
-- [Media Capture and Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-- [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API)
-- [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API)
+- [ウェブメディア技術](/ja/docs/Web/Media)
+- [Guide to media types and formats on the web](/ja/docs/Web/Media/Guides/Formats)
+- [目エディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+- [メディア能力 API](/ja/docs/Web/API/Media_Capabilities_API)
+- [MediaStream 州力 API](/ja/docs/Web/API/MediaStream_Recording_API)
 - The [Perfect Negotiation](/ja/docs/Web/API/WebRTC_API/Perfect_negotiation) pattern

@@ -9,7 +9,18 @@ l10n:
 
 **`every()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、提供された関数で実装されたテストに、型付き配列内のすべての要素が合格するかどうかをテストします。これは論理値を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.every()")}} と同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-every.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.every()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, -20, -30, -40, -50]);
+
+console.log(int8.every(isNegative));
+// Expected output: true
+```
 
 ## 構文
 

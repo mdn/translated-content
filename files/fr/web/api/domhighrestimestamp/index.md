@@ -47,7 +47,6 @@ La valeur d'un `DOMHighResTimeStamp` est un nombre flottant double précision qu
 L'**origine temporelle** est une heure qui est considéré comme l'heure de commencement de la vie du document. Elle est calculée comme suit :
 
 - Si l'{{Glossary("objet global")}} du script est {{domxref("Window")}}, l'origine temporelle est déterminée comme suit :
-
   - Si le {{domxref("Document")}} courant est le premier à être chargé dans la fenêtre, l'origine temporelle est l'heure à laquelle le contexte du navigateur a été créé.
   - Si pendant le processus de déchargement du document précédemment chargé dans la fenêtre, un dialogue de confirmation a été affiché pour demander à l'utilisateur de confirmer s'il souhaite quitter la page précédente, l'origine temporelle est l'heure à laquelle l'utilisateur a confirmé que naviguer vers la nouvelle page était acceptable.
   - Si aucun des points ci-dessus ne détermine l'origine temporelle, celle-ci est l'heure à laquelle la navigation responsable de la création du `Document` courant de la fenêtre a eu lieu.
@@ -69,5 +68,5 @@ _Ce type n'a pas de méthodes._
 
 ## Voir aussi
 
-- [Navigation Timing API](/fr/docs/Navigation_timing)
+- [Navigation Timing API](/fr/docs/Web/API/Performance_API/Navigation_timing)
 - [performance.now()](/fr/docs/Web/API/Performance/now)

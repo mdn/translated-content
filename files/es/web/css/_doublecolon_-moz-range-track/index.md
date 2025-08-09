@@ -1,9 +1,9 @@
 ---
-title: "::-moz-range-track"
+title: ::-moz-range-track
 slug: Web/CSS/::-moz-range-track
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 
@@ -51,14 +51,12 @@ No es parte de ninguna especificación.
 ## Ver además
 
 - Los pseudo-elementos usados por Gecko para proporcionar estilos a las distintas partes de un input con type="range":
-
   - {{cssxref("::-moz-range-thumb")}}, el cursor deslizándose sobre la ranura.
   - {{cssxref("::-moz-range-progress")}}
 
 - Pseudo-elementos similares en otros navegadores:
-
   - {{cssxref("::-webkit-slider-runnable-track")}}, pseudo-elemento soportado por WebKit y Blink (Safari, Chrome and Opera).
   - {{cssxref("::-ms-track")}}, pseudo-elemento soportado por Internet Explorer y Edge.
 
 - [CSS-Tricks: Dando estilo con CSS a elementos Input con type="range" para que se muestren correctamente en todos los navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilos y scripting a elementos deslizantes](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Dando estilos y scripting a elementos deslizantes](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

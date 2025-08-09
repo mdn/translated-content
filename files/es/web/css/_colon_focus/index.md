@@ -1,9 +1,7 @@
 ---
-title: ":focus"
+title: :focus
 slug: Web/CSS/:focus
 ---
-
-{{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:focus`** [CSS](/es/docs/Web/CSS) representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.
 

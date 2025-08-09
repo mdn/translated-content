@@ -7,7 +7,40 @@ slug: Web/CSS/outline-width
 
 [CSS](/ko/docs/Web/CSS) **`outline-width`** 속성은 요소 외곽선의 두께를 설정합니다. 외곽선은 요소의 [테두리](/ko/docs/Web/CSS/border) 바깥에 그려지는 선입니다.
 
-{{EmbedInteractiveExample("pages/css/outline-width.html")}}
+{{InteractiveExample("CSS Demo: outline-width")}}
+
+```css interactive-example-choice
+outline-width: 12px;
+```
+
+```css interactive-example-choice
+outline-width: thin;
+```
+
+```css interactive-example-choice
+outline-width: medium;
+```
+
+```css interactive-example-choice
+outline-width: thick;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 외곽선 외형을 설정할 땐 {{cssxref("outline")}} 단축 속성을 사용하는게 편리한 상황이 많습니다.
 

@@ -14,7 +14,7 @@ _As mesmas propriedades de {{domxref("EventTarget")}}._
 ### Manipuladores de Evento
 
 - {{ domxref("MediaDevices.ondevicechange") }}
-  - : O manipulador de evento para o evento {{event("devicechange")}}. Esse evento é entregue ao objeto `MediaDevices` quando uma entrada de mídia ou dispositivo de saída é conectado ou removido do computador do usuário.
+  - : O manipulador de evento para o evento [`devicechange`](/pt-BR/docs/Web/API/MediaDevices/devicechange_event). Esse evento é entregue ao objeto `MediaDevices` quando uma entrada de mídia ou dispositivo de saída é conectado ou removido do computador do usuário.
 
 ## Métodos
 
@@ -25,7 +25,7 @@ _Mesmos métodos de {{domxref("EventTarget")}}._
 - {{ domxref("MediaDevices.enumerateDevices()") }}
   - : Obtém um array de informações sobre a entrada de midia e dispositivos de saída disponíveis no sistema.
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-  - : Retorna um objeto consoante com {{domxref("MediaTrackSupportedConstraints")}} indicando quais propriedades restritivas são suportadas na interface {{domxref("MediaStreamTrack")}}. Veja [Capacidades e restrições](/pt-BR/docs/Web/API/Media_Streams_API#capabilities_and_constraints) para aprender mais sobre restrições e como usá-las.
+  - : Retorna um objeto consoante com {{domxref("MediaTrackSupportedConstraints")}} indicando quais propriedades restritivas são suportadas na interface {{domxref("MediaStreamTrack")}}. Veja [Capacidades e restrições](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API#capabilities_and_constraints) para aprender mais sobre restrições e como usá-las.
 - {{ domxref("MediaDevices.getUserMedia()") }}
   - : Após a permissão do usuário (pedida através de um prompt), liga a câmera, microfone e/ou a tramissão de tela no sistema e fornece uma {{domxref("MediaStream")}} contendo uma faixa de vídeo e/ou áudio com a entrada.
 - {{ domxref("EventTarget.removeEventListener()") }}
@@ -93,7 +93,7 @@ function errorMsg(msg, error) {
 
 ## Veja também
 
-- [Media Capture and Streams API](/pt-BR/docs/Web/API/Media_Streams_API): A API desta interface faz parte..
+- [Media Capture and Streams API](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API): A API desta interface faz parte..
 - [WebRTC API](/pt-BR/docs/Web/API/WebRTC_API)
 - {{domxref("Navigator.mediaDevices")}}: Retorna uma referência para um objeto `MediaDevices` que pode ser usado para acessar dispositivos.
 - [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) Captura de vídeo e playback em HTML5 usando _MediaDevices_ e a _MediaStream Recording API_ ([código no GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))

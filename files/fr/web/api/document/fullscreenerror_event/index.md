@@ -33,8 +33,8 @@ L'évènement **`fullscreenerror`** est déclenché lorsque le navigateur ne peu
 
 ## Evénements liés
 
-- [`fullscreenchange`](/fr/docs/Mozilla_event_reference/fullscreenchange)
+- [`fullscreenchange`](/fr/docs/Web/API/Document/fullscreenchange_event)
 
 ## Voir aussi
 
-- [Utilisation du mode plein écran](/fr/docs/DOM/Using_full-screen_mode)
+- [Utilisation du mode plein écran](/fr/docs/Web/API/Fullscreen_API)

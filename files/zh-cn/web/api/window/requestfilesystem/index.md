@@ -41,7 +41,3 @@ requestFileSystem(type, size, successCallback, errorCallback)
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 相关知识
-
-- [File and Directory Entries API support in Firefox](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)

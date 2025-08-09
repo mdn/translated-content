@@ -5,7 +5,7 @@ slug: Web/API/Document/compatMode
 
 {{ ApiRef("DOM") }}
 
-Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mode_quirks_de_Mozilla)) ou dans le respect des standards.
+Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)) ou dans le respect des standards.
 
 ## Syntaxe
 
@@ -41,4 +41,4 @@ if (document.compatMode == "BackCompat") {
 
 ## Spécifications
 
-- [DOM: Document.compatMode](http://dom.spec.whatwg.org/#dom-document-compatmode)
+- [DOM: Document.compatMode](https://dom.spec.whatwg.org/#dom-document-compatmode)

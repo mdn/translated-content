@@ -1,9 +1,7 @@
 ---
-title: ":focus-visible"
+title: :focus-visible
 slug: Web/CSS/:focus-visible
 ---
-
-{{CSSRef}}
 
 La pseudo-clase **`:focus-visible`** se aplica mientras un elemento coincide con la pseudo-clase {{CSSxRef(":focus")}} y el UA ([Agente de Usuario](/es/docs/Glossary/User_agent)) determina mediante heurística que el foco debe hacerse evidente en el elemento. (Muchos navegdores muestras un "anillo de enfoque" por defecto en este caso.
 

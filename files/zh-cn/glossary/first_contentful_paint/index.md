@@ -17,4 +17,4 @@ l10n:
 - [`PerformancePaintTiming`](/zh-CN/docs/Web/API/PerformancePaintTiming)
 - [最大内容绘制](/zh-CN/docs/Glossary/Largest_contentful_paint)
 - [首次有效绘制](/zh-CN/docs/Glossary/First_meaningful_paint)
-- web.dev 上的[首次内容绘制](https://web.dev/articles/fcp)
+- web.developers.google.cn 上的[首次内容绘制](https://web.developers.google.cn/articles/fcp)

@@ -9,7 +9,15 @@ l10n:
 
 **`ArrayBuffer.isView()`** 정적 메서드는 주어진 값이 `ArrayBuffer` 뷰, 즉 [형식화 배열 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) 또는 {{jsxref("DataView")}} 중 하나인지 판별합니다.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.isView()", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+console.log(ArrayBuffer.isView(new Int32Array()));
+// Expected output: true
+```
 
 ## 구문
 

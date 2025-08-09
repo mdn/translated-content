@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-El método **`HTMLCanvasElement.toDataURL()`** devuelve un [data URI](/es/docs/Web/HTTP/data_URIs) el cual contiene una representación de la imagen en el formato especificado por el parámetro `type` (por defecto es [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). La imagen obtenida tendrá una resolución de 96 dpi.
+El método **`HTMLCanvasElement.toDataURL()`** devuelve un [data URI](/es/docs/Web/URI/Reference/Schemes/data) el cual contiene una representación de la imagen en el formato especificado por el parámetro `type` (por defecto es [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). La imagen obtenida tendrá una resolución de 96 dpi.
 
 - Si la altura o anchura del canvas es `0`, devuelve un string con `"data:,"`
 - Si el tipo solicitado no es `image/png` pero el valor devuelto empieza por `data:image/png`, entonces el formato especificado no esta soportado.
@@ -27,7 +27,7 @@ canvas.toDataURL(tipo, opcionesCodificación);
 
 ### Valor devuelto
 
-Un {{domxref("DOMString")}} que contiene el valor [data URI](/es/docs/Web/HTTP/data_URIs).
+Un {{domxref("DOMString")}} que contiene el valor [data URI](/es/docs/Web/URI/Reference/Schemes/data).
 
 ## Ejemplos
 
@@ -122,4 +122,4 @@ function quitarColor() {
 ## Ver también
 
 - La interfaz que lo define, {{domxref("HTMLCanvasElement")}}.
-- [Data URIs](/es/docs/Web/HTTP/data_URIs) en la referencía [HTTP](/es/docs/Web/HTTP).
+- [Data URIs](/es/docs/Web/URI/Reference/Schemes/data) en la referencía [HTTP](/es/docs/Web/HTTP).

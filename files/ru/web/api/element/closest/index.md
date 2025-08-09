@@ -98,5 +98,5 @@ div.closest("div[title]"); //#block - так как ближе нет блоко
 ## Смотрите также
 
 - Интерфейс {{domxref("Element")}}.
-- [Синтаксис селекторов](/ru/docs/Learn/CSS/Introduction_to_CSS/Selectors)
+- [Синтаксис селекторов](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - Другие методы, принимающие селекторы: {{domxref("element.querySelector()")}} и {{domxref("element.matches()")}}.

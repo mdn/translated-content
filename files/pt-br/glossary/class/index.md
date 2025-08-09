@@ -11,7 +11,7 @@ Em {{glossary("OOP","programação orientada a objeto")}}, uma classe define as 
 
 ### Conhecimentos gerais
 
-- [Class-based vs. prototype-based programming languages](/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages) (como JavaScript)
-- [Using functions as classes in JavaScript](/pt-BR/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Class)
+- [Class-based vs. prototype-based programming languages](/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#class-based_vs._prototype-based_languages) (como JavaScript)
+- [Using functions as classes in JavaScript](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#the_class)
 - [Class-based programming](https://en.wikipedia.org/wiki/Class-based_programming) na Wikipedia
 - [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) na Wikipedia

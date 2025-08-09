@@ -9,7 +9,18 @@ l10n:
 
 **`keys()`** 메서드는 배열의 각 인덱스의 키를 포함하는 새로운 배열 반복자 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-keys.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.keys()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const keys = uint8.keys();
+
+keys.next();
+keys.next();
+
+console.log(keys.next().value);
+// Expected output: 2
+```
 
 ## 구문
 
@@ -56,7 +67,7 @@ console.log(arrKeys.next().value); // 4
 ## 같이 보기
 
 - [Polyfill of `TypedArray.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}

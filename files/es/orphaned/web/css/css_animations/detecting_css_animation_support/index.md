@@ -4,9 +4,9 @@ slug: orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 original_slug: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 ---
 
-{{CSSRef}}
 
-Las animaciones de CSS permiten realizar animaciones creativas de contenido usando nada más que CSS. Sin embargo, es posible que hayan momentos en que estas funciones no sean compatibles, y puede que desees manejar ese problema usando código JavaScript. Este artículo, basado en [la publicación](http://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/) de Chris Heilmann, demuestra una técnica de como hacer esto.
+
+Las animaciones de CSS permiten realizar animaciones creativas de contenido usando nada más que CSS. Sin embargo, es posible que hayan momentos en que estas funciones no sean compatibles, y puede que desees manejar ese problema usando código JavaScript. Este artículo, basado en [la publicación](https://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/) de Chris Heilmann, demuestra una técnica de como hacer esto.
 
 ## Prueba de la compatibilidad de animaciones CSS
 
@@ -89,4 +89,4 @@ Si aún no existe una hoja de estilos, se crea un nuevo elemento {{ HTMLElement(
 
 ## Ver tambien
 
-- [Animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS)
+- [Animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)

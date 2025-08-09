@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 
 Le constructeur **`Intl.Collator()`** crée un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) qui permet de comparer des chaînes de caractères en prenant en compte la locale.
 
-{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+
+```js interactive-example
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
+// Expected output: Array ["a", "ä", "z", "Z"]
+
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
+// Expected output: Array ["a", "z", "Z", "ä"]
+
+console.log(
+  ["Z", "a", "z", "ä"].sort(
+    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+  ),
+);
+// Expected output: Array ["a", "ä", "Z", "z"]
+```
 
 ## Syntaxe
 
@@ -20,14 +35,12 @@ new Intl.Collator(locales, options);
 ### Paramètres
 
 - `locales` {{optional_inline}}
-
   - : Un argument optionnel qui est une balise de langue BCP 47 ou un tableau de telles chaînes. Pour plus de détails sur la forme et l'interprétation de ce paramètres, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale).
 
     Les clés d'extension Unicode suivantes sont autorisées&nbsp;:
 
     > [!NOTE]
     > Ces clés peuvent généralement être paramétrées avec l'argument `options` (voir ci-après), lorsque ces clés sont indiquées dans les deux paramètres c'est `options` qui a la priorité.
-
     - `co`
       - : Les variantes de collation pour certaines locales. Les valeurs possibles sont&nbsp;:
         - `big5han`
@@ -54,18 +67,14 @@ new Intl.Collator(locales, options);
       - : Indique si les majuscules ou les minuscules devraient être triées en premières. Les valeurs possibles sont "`upper`", "`lower`", ou "`false`" (qui utilise la valeur par défaut pour la locale). Cette option peut également être indiquée via la propriété "`caseFirst`" du paramètre `options`.
 
 - `options` {{optional_inline}}
-
   - : Un objet avec une ou plusieurs propriétés parmi les suivantes&nbsp;:
-
     - `localeMatcher`
       - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont "`lookup`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Pour plus d'information, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
     - `usage`
       - : Indique si la comparaison est utilisée pour trier ou pour rechercher des correspondances. Les valeurs possibles sont "`sort`" et
         "`search`", la valeur par défaut est "`sort`".
     - `sensitivity`
-
       - : Indique les différences dans les chaînes de caractères qui entraînent un résultat non nul. Les valeurs possibles sont&nbsp;:
-
         - "`base`"&nbsp;: Seules les chaînes de caractères pour lesquelles les lettres de base sont différentes sont considérées comme différentes. Avec cette option, on a&nbsp;: a ≠ b, a = á, a = A.
         - "`accent`"&nbsp;: Seules les chaînes de caractères pour lesquelles les lettres de base ou les diacritiques diffèrent sont considérées comme différentes. Avec cette option, on a&nbsp;: a ≠ b, a ≠ á, a = A.
         - "`case`"&nbsp;: Seules les chaînes de caractères pour lesquelles les lettres de base ou la casse diffèrent sont considérées comme différentes. Avec cette option, on a&nbsp;: a ≠ b, a = á, a ≠ A.
@@ -76,14 +85,12 @@ new Intl.Collator(locales, options);
     - `ignorePunctuation`
       - : Indique si la ponctuation devrait être ignorée. Les valeurs possibles sont `true` et `false`&nbsp;; la valeur par défaut est `false`.
     - `numeric`
-
       - : Indique si une collation numérique devrait être utilisée (afin d'avoir par exemple "1" < "2" < "10"). Les valeurs possibles sont `true` et `false`&nbsp;; la valeur par défaut est `false`.
 
         > [!NOTE]
         > Cette option peut également être définie via la clé d'extension Unicode `kn`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
 
     - `caseFirst`
-
       - : Indique si les majuscules ou les minuscules devraient être triées en premières. Les valeurs possibles sont "`upper`", "`lower`", ou "`false`" (qui utilisent la valeur par défaut de la locale).
 
         > [!NOTE]

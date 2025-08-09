@@ -3,7 +3,7 @@ title: 使用 Promise
 slug: Web/JavaScript/Guide/Using_promises
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
 
 {{jsxref("Promise")}} 是一个对象，它代表了一个异步操作的最终完成或者失败。因为大多数人仅仅是使用已创建的 Promise 实例对象，所以本教程将首先说明怎样使用 Promise，再说明如何创建 Promise。
 
@@ -345,10 +345,10 @@ async function main() {
 
 当一个 Promise 拒绝事件未被任何处理器处理时，它会冒泡到调用栈的顶部，主机需要将其暴露出来。在 Web 上，当 Promise 被拒绝时，会有下文所述的两个事件之一被派发到全局作用域（通常而言，就是 {{domxref("window")}}；如果是在 web worker 中使用的话，就是 {{domxref("Worker")}} 或者其他基于 worker 的接口）。这两个事件如下所示：
 
-- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
-  - : 当 Promise 被拒绝、并且在 `reject` 函数处理该拒绝事件之后会派发此事件。
-- {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}
-  - : 当 Promise 被拒绝，但没有提供 `reject` 函数来处理该拒绝事件时，会派发此事件。
+- [`unhandledrejection`](/zh-CN/docs/Web/API/Window/unhandledrejection_event)
+  - : 当 promise 被拒绝，但没有可用的拒绝处理器时，会派发此事件。
+- [`rejectionhandled`](/zh-CN/docs/Web/API/Window/rejectionhandled_event)
+  - : 当一个被拒绝的 promise 在触发了 `unhandledrejection` 事件之后才附加处理器时，会派发此事件。
 
 上述两种事件（类型为 {{domxref("PromiseRejectionEvent")}}）都有两个属性，一个是 {{domxref("PromiseRejectionEvent.promise", "promise")}} 属性，该属性指向被拒绝的 Promise，另一个是 {{domxref("PromiseRejectionEvent.reason", "reason")}} 属性，该属性用来说明 Promise 被拒绝的原因。
 
@@ -485,7 +485,7 @@ console.log(value); // 1 还是 2？
 
 另一方面，Promise 是一种[控制反转](https://zh.wikipedia.org/wiki/控制反转)的形式——API 的实现者不控制回调何时被调用。相反，维护回调队列并决定何时调用回调的工作被委托给了 Promise 的实现者，这样一来，API 的使用者和开发者都会自动获得强大的语义保证，包括：
 
-- 被添加到 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 的回调永远不会在 JavaScript 事件循环的[当前运行完成](/zh-CN/docs/Web/JavaScript/Event_loop#执行至完成)之前被调用。
+- 被添加到 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 的回调永远不会在 JavaScript 事件循环的[当前运行完成](/zh-CN/docs/Web/JavaScript/Reference/Execution_model#执行至完成)之前被调用。
 - 即使异步操作已经完成（成功或失败），在这之后通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 添加的回调函数也会被调用。
 - 通过多次调用 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 可以添加多个回调函数，它们会按照插入顺序进行执行。
 

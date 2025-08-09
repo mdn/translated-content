@@ -3,9 +3,7 @@ title: pointer
 slug: Web/CSS/@media/pointer
 ---
 
-{{cssref}}
-
-La [caracteristica](/es/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`pointer`** [CSS](/es/docs/CSS) comprueba si el usuario tiene un dispositivo de puntero (como el ratón), y si es así, cuán preciso es el dispositivo de puntero primario.
+La [caracteristica](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) **`pointer`** [CSS](/es/docs/Web/CSS) comprueba si el usuario tiene un dispositivo de puntero (como el ratón), y si es así, cuán preciso es el dispositivo de puntero primario.
 
 > [!NOTE]
 > Si quieres comprobar la precisión de cualquier dispositivo apuntador, usa [`any-pointer`](/es/docs/Web/CSS/@media/any-pointer) en su lugar.

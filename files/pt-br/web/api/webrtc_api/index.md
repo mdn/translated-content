@@ -165,7 +165,7 @@ Essas interfaces e eventos estão relacionadas à interatividade com redes telef
 
 ## Tutoriais
 
-- [Melhorando a compatibilidade usando o adaptador WebRTC.js](/pt-BR/docs/Web/API/WebRTC_API/adapter.js)
+- [Melhorando a compatibilidade usando o adaptador WebRTC.js](/pt-BR/docs/Web/API/WebRTC_API#interoperability)
   - : A organização WebRTC [fornece no GitHub o adaptador WebRTC](https://github.com/webrtc/adapter/) para solucionar problemas de compatibilidade em implementações WebRTC de diferentes navegadores. O adaptador é um shim JavaScript que permite que seu código seja escrito de acordo com a especificação para que "simplesmente funcione" em todos os navegadores com suporte a WebRTC.
 - [Uma simples amostra de RTCDataChannel](/pt-BR/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
   - : A interface {{DOMxRef("RTCDataChannel")}} é um recurso que permite abrir um canal entre dois pares através do qual você pode enviar e receber dados arbitrários. A API é intencionalmente semelhante à [API WebSocket](/pt-BR/docs/Web/API/WebSockets_API), para que o mesmo modelo de programação possa ser usado para cada uma.

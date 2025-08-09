@@ -7,12 +7,12 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 
 **WebSocket 服务器是一个**TCP 应用程序，监听服务器上任何遵循特定协议的端口，就这么简单。创建自定义服务器的任务往往听起来很吓人，然而，在你选择的平台上实现一个简单的 WebSocket 服务器是很容易的。
 
-WebSocket 服务器可以用任何实现了[Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets)的服务器端编程语言编写，如 C(++) 或 Python 甚至[PHP](/zh-CN/docs/PHP)和[服务器端 JavaScript](/zh-CN/docs/Web/JavaScript/Server-Side_JavaScript)。这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。
+WebSocket 服务器可以用任何实现了[Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets)的服务器端编程语言编写，如 C(++) 或 Python 甚至[PHP](/zh-CN/docs/Glossary/PHP)和[服务器端 JavaScript](/zh-CN/docs/Web/JavaScript/Server-Side_JavaScript)。这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。
 
 你需要知道 HTTP 的工作原理，并具有中级编程经验。根据语言帮助（Depending on language support），可能需要 TCP 套接字的知识。本指南的范围是介绍编写 WebSocket 服务器所需的最低知识。
 
 > [!NOTE]
-> 阅读最新的官方 WebSockets 规范， [RFC 6455](http://datatracker.ietf.org/doc/rfc6455/?include_text=1). 第 1 节和第 4-7 节对服务器实现者特别有意思。第 10 节讨论安全性，你应该在暴露你的服务器之前仔细阅读它。
+> 阅读最新的官方 WebSockets 规范， [RFC 6455](https://datatracker.ietf.org/doc/rfc6455/?include_text=1). 第 1 节和第 4-7 节对服务器实现者特别有意思。第 10 节讨论安全性，你应该在暴露你的服务器之前仔细阅读它。
 
 WebSocket 服务器在这里被解释得非常底层。WebSocket 服务器通常是独立的专用服务器（出于负载平衡或其他实际原因），因此你通常会使用[反向代理](https://en.wikipedia.org/wiki/Reverse_proxy)（例如常规 HTTP 服务器）来检测 WebSocket 握手，预处理这些握手，并将这些客户端发送给 一个真正的 WebSocket 服务器。（例如）这意味着你不必使用 cookie 和身份验证处理程序来扩充服务器代码。
 
@@ -38,17 +38,18 @@ Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
 ```
 
-客户可以在这里请求扩展和/或子协议；详情请见[杂项](#Miscellaneous)。当然，你也可以在这里加上你所需要的一般请求头如`User-Agent`， `Referer`， `Cookie`或者认证头。WebSocket 没有作要求，忽略它们也是安全的。在大多数情况下，反向代理已经做了这些处理。
+客户可以在这里请求扩展和/或子协议；详情请见[杂项](#miscellaneous)。当然，你也可以在这里加上你所需要的一般请求头如`User-Agent`， `Referer`， `Cookie`或者认证头。WebSocket 没有作要求，忽略它们也是安全的。在大多数情况下，反向代理已经做了这些处理。
 
-如果任何请求头信息不被理解或者具有不正确的值，则服务器应该发送“[400 Bad Request](/zh-CN/docs/HTTP/Response_codes#400)”并立即关闭套接字。像往常一样，它也可能会给出 HTTP 响应正文中握手失败的原因，但可能永远不会显示消息（浏览器不显示它）。如果服务器不理解该版本的 WebSocket，则应该发送一个`Sec-WebSocket-Version`头，其中包含它理解的版本。（本指南解释了最新的 v13）。下面我们来看看奇妙的请求头`Sec-WebSocket-Key`。
+如果任何请求头信息不被理解或者具有不正确的值，则服务器应该发送“[400 Bad Request](/zh-CN/docs/Web/HTTP/Reference/Status#400)”并立即关闭套接字。像往常一样，它也可能会给出 HTTP 响应正文中握手失败的原因，但可能永远不会显示消息（浏览器不显示它）。如果服务器不理解该版本的 WebSocket，则应该发送一个`Sec-WebSocket-Version`头，其中包含它理解的版本。（本指南解释了最新的 v13）。下面我们来看看奇妙的请求头`Sec-WebSocket-Key`。
 
 > [!NOTE]
-> 所有浏览器将会发送一个 [`Origin`](/zh-CN/docs/HTTP/Access_control_CORS#Origin)请求头。你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个[403 Forbidden](/zh-CN/docs/HTTP/Response_codes#403)。需要注意的是非浏览器只能发送一个模拟的 `Origin`。大多数应用会拒绝不含这个请求头的请求.。
+> 所有浏览器将会发送一个 [`Origin`](/zh-CN/docs/Web/HTTP/Guides/CORS#origin)请求头。你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个[403 Forbidden](/zh-CN/docs/Web/HTTP/Reference/Status#403)。需要注意的是非浏览器只能发送一个模拟的 `Origin`。大多数应用会拒绝不含这个请求头的请求.。
 
 > [!NOTE]
 > 请求 URI（这里的是`/chat`）在规范里没有定义。很多开发者聪明地把这点用于控制多功能 WebSocket 应用。例如`example.com/chat`会请求一个多方会话应用，而在相同服务器上`example.com/game`则会请求一个多玩家游戏应用。
 
-> **备注：** [常规 HTTP 状态码](/zh-CN/docs/HTTP/Response_codes)只能在握手之前使用。握手成功后，你必须使用一组不同的代码（在规范的第 7.4 节中定义）。
+> [!NOTE]
+> [常规 HTTP 状态码](/zh-CN/docs/Web/HTTP/Reference/Status)只能在握手之前使用。握手成功后，你必须使用一组不同的代码（在规范的第 7.4 节中定义）。
 
 ### 服务器握手响应
 
@@ -61,7 +62,7 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-另外，服务器可以在这时候决定插件或子协议，详情参见[杂项](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous)。 `Sec-WebSocket-Accept` 参数很有趣，它需要服务器通过客户端发送的`Sec-WebSocket-Key` 计算出来。怎样计算呢，把客户发送的 `Sec-WebSocket-Key` 和 "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (这个叫做 "[魔法值](https://en.wikipedia.org/wiki/Magic_string)") 连接起来，把结果用[SHA-1](https://zh.wikipedia.org/wiki/SHA-1)编码，再用[base64](https://zh.wikipedia.org/wiki/Base64)编码一次，就可以了。
+另外，服务器可以在这时候决定插件或子协议，详情参见[杂项](#Miscellaneous)。 `Sec-WebSocket-Accept` 参数很有趣，它需要服务器通过客户端发送的`Sec-WebSocket-Key` 计算出来。怎样计算呢，把客户发送的 `Sec-WebSocket-Key` 和 "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (这个叫做 "[魔法值](https://en.wikipedia.org/wiki/Magic_string)") 连接起来，把结果用[SHA-1](https://zh.wikipedia.org/wiki/SHA-1)编码，再用[base64](https://zh.wikipedia.org/wiki/Base64)编码一次，就可以了。
 
 > [!NOTE]
 > 这看起来繁复的处理使得客户端明确服务端是否支持 WebSocket。这是十分重要的，如果服务端接收到一个 WebSocket 连接但是把数据作为 HTTP 请求理解可能会导致安全问题。
@@ -106,7 +107,7 @@ Frame format:
      +---------------------------------------------------------------+
 ```
 
-掩码明确告知我们消息是否经过格式化。从客户端来的消息必须经过格式化，所以你的服务器必须要求这个掩码是 1（事实上，[规范 5.1 节](http://tools.ietf.org/html/rfc6455#section-5.1)规定了如果客户端发送了没有格式化的消息，你的服务器应该断开连接）
+掩码明确告知我们消息是否经过格式化。从客户端来的消息必须经过格式化，所以你的服务器必须要求这个掩码是 1（事实上，[规范 5.1 节](https://tools.ietf.org/html/rfc6455#section-5.1)规定了如果客户端发送了没有格式化的消息，你的服务器应该断开连接）
 
 当向客户端发送帧时，不要对其进行掩码，也不要设置掩码位。稍后我们将解释屏蔽。注意：即使使用安全套接字，也必须屏蔽消息。RSV1-3 可以忽略，它们是用于扩展的。
 
@@ -152,7 +153,7 @@ Client: FIN=1, opcode=0x0, msg="year!"
 Server: (process complete message) Happy new year to you too!
 ```
 
-注意，第一个框架包含一个完整的消息 (具有 FIN=1 和 opcode!=0x0)，因此服务器可以根据需要进行处理或响应。客户机发送的第二帧具有文本有效负载 (opcode=0x1)，但是整个消息还没有到达 (FIN=0)。该消息的所有剩余部分都用延续帧 (opcode=0x0) 发送，消息的最终帧用 FIN=1 标记。[Section 5.4 of the spec](http://tools.ietf.org/html/rfc6455#section-5.4)描述了消息帧。
+注意，第一个框架包含一个完整的消息 (具有 FIN=1 和 opcode!=0x0)，因此服务器可以根据需要进行处理或响应。客户机发送的第二帧具有文本有效负载 (opcode=0x1)，但是整个消息还没有到达 (FIN=0)。该消息的所有剩余部分都用延续帧 (opcode=0x0) 发送，消息的最终帧用 FIN=1 标记。[Section 5.4 of the spec](https://tools.ietf.org/html/rfc6455#section-5.4)描述了消息帧。
 
 ## Pings 和 Pongs：WebSockets 的心跳
 
@@ -165,12 +166,12 @@ Server: (process complete message) Happy new year to you too!
 
 ## 关闭连接
 
-客户端或服务器端都可以通过发送一个带有指定控制序列的控制帧以开始关闭连接握手（参见[章节 5.5.1](http://tools.ietf.org/html/rfc6455#section-5.5.1)）。对端收到这个控制帧会回复一个关闭帧，关闭发起端关闭连接。任何在关闭连接后接收到的数据都会被丢弃。
+客户端或服务器端都可以通过发送一个带有指定控制序列的控制帧以开始关闭连接握手（参见[章节 5.5.1](https://tools.ietf.org/html/rfc6455#section-5.5.1)）。对端收到这个控制帧会回复一个关闭帧，关闭发起端关闭连接。任何在关闭连接后接收到的数据都会被丢弃。
 
 ## 杂项
 
 > [!NOTE]
-> WebSocket 代码、扩展、子协议等在 [IANA WebSocket Protocol Registry](http://www.iana.org/assignments/websocket/websocket.xml).注册。
+> WebSocket 代码、扩展、子协议等在 [IANA WebSocket Protocol Registry](https://www.iana.org/assignments/websocket/websocket.xml).注册。
 
 WebSocket 扩展和子协议是在握手过程中通过头信息进行协商的。有时候，扩展和子协议看起来太相似而不可能是不同的东西，但是有一个明显的区别。扩展控制 WebSocket 框架并修改有效负载，而子协议构造 WebSocket 有效负载，从不修改任何东西。扩展是可选的和通用的 (比如压缩);子协议是强制性的和本地化的 (就像聊天和 MMORPG 游戏一样)。
 
@@ -226,6 +227,6 @@ Sec-WebSocket-Protocol: soap
 ## 关联
 
 - [WebSocket handshake library in C++](https://github.com/alexhultman/libwshandshake)
-- [Tutorial: Websocket server in C#](/zh-CN/docs/WebSockets/Writing_WebSocket_server)
-- [Writing WebSocket client applications](/zh-CN/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Tutorial: Websocket server in C#](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
+- [Writing WebSocket client applications](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
 - [Tutorial: Websocket server in VB.NET](/zh-CN/docs/WebSockets/WebSocket_Server_Vb.NET)

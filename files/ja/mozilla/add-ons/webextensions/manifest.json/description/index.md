@@ -28,7 +28,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
 
 ブラウザーのユーザーインターフェイスに表示するための、拡張機能の簡単な説明です。
 
-これは[ローカライズ可能なプロパティ](/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)です。
+これは[ローカライズ可能なプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
 
 ## 例
 

@@ -1,15 +1,15 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Atomics`** オブジェクトは、静的なメソッドとして不可分操作を提供します。これらは {{jsxref("SharedArrayBuffer")}} および {{jsxref("ArrayBuffer")}} オブジェクトで使用されます。
+**`Atomics`** 名前空間オブジェクトには、不可分操作を実行するための静的メソッドが含まれています。これらは {{jsxref("SharedArrayBuffer")}} および {{jsxref("ArrayBuffer")}} オブジェクトで使用されます。
 
 ## 解説
 
-不可分操作は、 `Atomics` モジュール上に装備されています。他のグローバルオブジェクトと異なり、 `Atomics` はコンストラクターではありません。 [`new` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)と一緒に使用したり、 `Atomics` オブジェクトを関数として呼び出したりすることはできません。 `Atomics` のすべてのプロパティとメソッドは静的です (例えば、{{jsxref("Math")}} オブジェクトの場合と同様です)。
+ほとんどのグローバルオブジェクトとは異なり、`Atomics` はコンストラクターではありません。 [`new` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)と一緒に使用したり、 `Atomics` オブジェクトを関数として呼び出したりすることはできません。 `Atomics` のすべてのプロパティとメソッドは静的です（{{jsxref("Math")}} オブジェクトの場合と同様です）。
 
 ### 不可分操作
 
@@ -18,6 +18,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
 ### wait と notify
 
 `wait()` メソッドと `notify()` メソッドは、 Linux の futex ("fast user-space mutex") を原型としており、特定の条件が true になるまで待つ手段を提供します。一般的にはブロッキング構造として使用されます。
+
+## 静的プロパティ
+
+- `Atomics[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"Atomics"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## 静的メソッド
 
@@ -29,7 +34,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
   - : 値が等しい場合、配列の指定した位置に値を格納します。古い値を返します。
 - {{jsxref("Atomics.exchange()")}}
   - : 配列の指定した位置に値を格納します。古い値を返します。
-- {{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}
+- {{jsxref("Atomics.isLockFree()")}}
   - : ロック機構と不可分操作のどちらを使用するかを決定するための最適化プリミティブです。指定した要素サイズの配列上の不可分操作が (ロックではなく) ハードウェアによる不可分操作を使用するよう実装されている場合、 `true` を返します。上級者だけが使用してください。
 - {{jsxref("Atomics.load()")}}
   - : 配列の指定した位置の値を返します。
@@ -37,12 +42,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
   - : 配列の指定した位置で待機中のエージェントに通知します。通知を受けたエージェントの数を返します。
 - {{jsxref("Atomics.or()")}}
   - : 配列の指定した位置の値と指定した値でビット単位の論理和 (OR) を計算します。その位置にあった古い値を返します。
+- {{jsxref("Atomics.pause()")}}
+  - : 呼び出し側が共有リソースへのアクセスを待機している間、CPU にそのことを知らせるマイクロウェイトプリミティブを提供します。これにより、システムは、現在のスレッドを譲ることなく、コア（電力など）またはスレッドに割り当てられているリソースを縮小することができます。
 - {{jsxref("Atomics.store()")}}
   - : 配列の指定した位置に指定した値を格納します。その値を返します。
 - {{jsxref("Atomics.sub()")}}
   - : 配列の指定した位置の値から指定した値を減算します。その位置にあった古い値を返します。
 - {{jsxref("Atomics.wait()")}}
-  - : 配列の指定位置に指定した値が含まれているか検証し、休止して待機するかタイムアウトします。 "`ok`"、"`not-equal`"、"`timed-out`" のいずれかの文字列を返します。呼び出したエージェントで待機が許可されていない場合は、 Error 例外を投げます (ほとんどのブラウザーは、ブラウザーのメインスレッドで `wait()` を許可していません)。
+  - : 配列の指定位置に指定した値が含まれているか検証し、休止して待機するかタイムアウトします。 `"ok"`、`"not-equal"`、`"timed-out"` のいずれかの文字列を返します。呼び出し元のエージェントで待機が許可されていない場合、例外が発生します。（ほとんどのブラウザーでは、ブラウザーのメインスレッドで `wait()` を許可していません。）
+- {{jsxref("Atomics.waitAsync()")}}
+  - : 共有メモリー上の場所を非同期的に（つまり、`Atomics.wait` とは異なり、ブロックせずに）待機し、操作の結果を表すオブジェクトを返します。
 - {{jsxref("Atomics.xor()")}}
   - : 配列の指定した位置の値と指定した値でビット単位の排他的論理和 (XOR) を計算します。その位置にあった古い値を返します。
 
@@ -95,7 +104,9 @@ const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
 
-読み取りスレッドはスリープ状態で、 0 の位置が 0 である間は待機しています。これが true である限り、スレッドは進みません。しかし、書き込みスレッドが新しい値を格納すると、書き込みスレッドから通知され、新しい値 (123) を返します。
+読み取りスレッドは、指定された値が指定されたインデックスに格納されている値と一致しているため、位置 0 で休眠状態で待機しています。
+読み取りスレッドは、書き込みスレッドが指定された型付き配列の位置 0 で `Atomics.notify()` を呼び出すまで、動作しません。
+ただし、復帰後に、書き込みスレッドによって位置 0 の値が変更されていない場合、読み取りスレッドは休眠状態に**戻らず**、処理を続けます。
 
 ```js
 Atomics.wait(int32, 0, 0);
@@ -121,8 +132,7 @@ Atomics.notify(int32, 0, 1);
 ## 関連情報
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)
-- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – 同期と分配の抽象化を行うシンプルなライブラリー。
-- [Shared Memory – 短いチュートリアル](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [JavaScript の並列処理機能を味見してみる – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [Shared Memory – 短いチュートリアル](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md) (TC39 ecmascript-sharedmem proposal)
+- [A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) (hacks.mozilla.org, 2016)

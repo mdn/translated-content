@@ -124,7 +124,7 @@ WebGL API расширяется спецификацией WebXR для тог�
   - : In this example and tutorial, we use information learned throughout the WebXR documentation to create a scene containing a rotating cube which the user can move around using both VR headset and keyboard and mouse.
 - [Inputs and input sources](/ru/docs/Web/API/WebXR_Device_API/Inputs)
   - : A guide to input sources and how to efficiently manage the input devices being used to control the WebXR session, and how to receive and process user inputs from those devices.
-- [Targeting and hit detection](/ru/docs/Web/API/Web_Audio_API/Targeting)
+- [Targeting and hit detection](/ru/docs/Web/API/WebXR_Device_API/Targeting)
   - : How to use an input source's targeting ray mode and targeting ray space to display a targeting ray, identify targeted surfaces or objects, and perform related tasks.
 - [Using WebXR input profiles](/ru/docs/Web/API/WebXR_Device_API/Input_profiles)
   - : A guide to interpreting the {{Glossary("JSON")}} data provided by the [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry), which can be used to determine what options and controls are available on the user's available input devices.
@@ -166,7 +166,7 @@ WebGL API расширяется спецификацией WebXR для тог�
 
 ## Смотрите также
 
-- [Graphics on the web](/ru/docs/Web/Guide/Graphics)
+- [Graphics on the web](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [WebGL API](/ru/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
 - [Canvas API](/ru/docs/Web/API/Canvas_API): 2D drawing for the web

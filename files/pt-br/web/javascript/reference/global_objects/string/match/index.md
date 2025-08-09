@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/match
 
 ## Resumo
 
-O método `match()` retorna uma correspondência entre uma string com uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions).
+O método `match()` retorna uma correspondência entre uma string com uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Sintaxe
 
@@ -18,8 +18,7 @@ str.match(regexp);
 ### Parâmetros
 
 - `regexp`
-
-  - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
+  - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
 
     Se você não fornecer nenhum parâmetro ao usar o método `match()`, você obterá um {{jsxref ("Array")}} com uma string vazia: `[""]`.
 
@@ -38,7 +37,7 @@ str.match(regexp);
 Conforme explicado acima, alguns resultados contêm propriedades adicionais conforme descrito abaixo.
 
 - `groups`
-  - : Um objeto de grupos de captura nomeados cujas chaves são os nomes, e valores são os grupos de captura ou {{jsxref ("undefined")}} se nenhum grupo de captura nomeado foi definido. Consulte [Grupos e Intervalos](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) para obter mais informações.
+  - : Um objeto de grupos de captura nomeados cujas chaves são os nomes, e valores são os grupos de captura ou {{jsxref ("undefined")}} se nenhum grupo de captura nomeado foi definido. Consulte [Grupos e Intervalos](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) para obter mais informações.
 - `index`
   - : O índice da pesquisa em que o resultado foi encontrado.
 - `input`
@@ -94,7 +93,7 @@ console.log(matches_array);
 ```
 
 > [!NOTE]
-> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
+> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions#Pesquisa_avan%C3%A7ada_com_Flags).
 
 ### Usando grupos de captura nomeados
 

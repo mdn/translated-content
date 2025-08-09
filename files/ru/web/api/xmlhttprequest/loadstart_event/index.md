@@ -10,7 +10,7 @@ slug: Web/API/XMLHttpRequest/loadstart_event
 ## Общая информация
 
 - Спецификация
-  - : [Progress](http://www.w3.org/TR/progress-events/)
+  - : [Progress](https://www.w3.org/TR/progress-events/)
 - Интерфейс
   - : ProgressEvent
 - Распространяется
@@ -36,13 +36,13 @@ slug: Web/API/XMLHttpRequest/loadstart_event
 
 ## Связанные свойства
 
-- {{event("loadstart")}}
-- {{event("progress")}}
-- {{event("error")}}
-- {{event("abort")}}
-- {{event("load")}}
-- {{event("loadend")}}
+- [`loadstart`](/ru/docs/Web/API/XMLHttpRequest/loadstart_event)
+- [`progress`](/ru/docs/Web/API/XMLHttpRequest/progress_event)
+- [`error`](/ru/docs/Web/API/HTMLElement/error_event)
+- [`abort`](/ru/docs/Web/API/HTMLMediaElement/abort_event)
+- [`load`](/ru/docs/Web/API/Window/load_event)
+- [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event)
 
 ## Смотрите также
 
-- [Отслеживание состояния загрузки](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#Monitoring_progress)
+- [Отслеживание состояния загрузки](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)

@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
-**`ViewTransition`** は{{domxref("View Transitions API", "ビュー遷移 API", "", "nocode")}} のインターフェースで、ビュー遷移を表し、トランジションが様々な状態（例えば、アニメーションを実行する準備ができている、またはアニメーションが終了した）に達したときに反応する機能、またはトランジションを完全にスキップする機能を提供します。
+**`ViewTransition`** は{{domxref("View Transitions API", "ビュー遷移 API", "", "nocode")}} のインターフェイスで、ビュー遷移を表し、トランジションが様々な状態（例えば、アニメーションを実行する準備ができている、またはアニメーションが終了した）に達したときに反応する機能、またはトランジションを完全にスキップする機能を提供します。
 
-このオブジェクト型は {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが返します。 `startViewTransition()` が呼び出されると、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transitions_API#ビュー遷移のプロセス)で説明されている一連のステップに従います。これは様々なプロミスが履行されるタイミングについても説明しています。
+このオブジェクト型は {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが返します。 `startViewTransition()` が呼び出されると、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API#ビュー遷移のプロセス)で説明されている一連のステップに従います。これは様々なプロミスが履行されるタイミングについても説明しています。
 
 {{InheritanceDiagram}}
 

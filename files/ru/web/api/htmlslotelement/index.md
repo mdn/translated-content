@@ -7,14 +7,14 @@ slug: Web/API/HTMLSlotElement
 
 {{Deprecated_header}}
 
-The **`HTMLContentElement`** interface represents a {{HTMLElement("content")}} HTML Element, which is used in [Shadow DOM](/ru/docs/Web/Web_Components/Shadow_DOM).
+The **`HTMLContentElement`** interface represents a {{HTMLElement("content")}} HTML Element, which is used in [Shadow DOM](/ru/docs/Web/API/Web_components/Using_shadow_DOM).
 
 ## Свойства
 
 _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLContentElement.select")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`select`](/ru/docs/Web/HTML/Element/content#select) HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
+  - : Is a {{domxref("DOMString")}} that reflects the [`select`](/ru/docs/Web/HTML/Reference/Elements/slot#select) HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
 
 ## Методы
 
@@ -34,4 +34,4 @@ This feature is no longer defined by any standards.
 ## Смотрите также
 
 - The {{HTMLElement("content")}} HTML element, implementing this interface.
-- [Shadow DOM](/ru/docs/Web/Web_Components/Shadow_DOM)
+- [Shadow DOM](/ru/docs/Web/API/Web_components/Using_shadow_DOM)

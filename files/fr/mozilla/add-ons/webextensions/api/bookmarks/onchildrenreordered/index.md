@@ -29,16 +29,13 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera très semblable à cet événement. La fonction suivante les arguments suivants :
-
     - `id`
       - : `string`. ID du dossier dont les enfants ont été réorganisés.
 
     <!---->
-
     - `reorderInfo`
-      - : [`object`](#reorderInfo). Objet contenant des objets supplémentaires.
+      - : [`object`](#reorderinfo). Objet contenant des objets supplémentaires.
 
 ## Objets supplémentaires
 

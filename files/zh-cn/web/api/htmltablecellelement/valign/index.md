@@ -42,4 +42,4 @@ l10n:
 ## 参见
 
 - {{cssxref("vertical-align")}}
-- [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [样式化表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables)

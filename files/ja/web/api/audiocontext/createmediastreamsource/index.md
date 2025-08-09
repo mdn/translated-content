@@ -33,7 +33,8 @@ createMediaStreamSource(stream)
 
 {{ htmlelement("video") }} 要素の下のスライダーはローパスフィルターの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります。
 
-> **メモ:** [この例の実行](http://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
+> [!NOTE]
+> [この例の実行](https://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
 
 ```js
 const pre = document.querySelector("pre");
@@ -92,7 +93,8 @@ if (navigator.mediaDevices) {
 pre.innerHTML = myScript.innerHTML;
 ```
 
-> **メモ:** `createMediaStreamSource()` を呼び出した結果、メディアストリームからの音声再生は {{domxref("AudioContext")}} の処理グラフに再ルーティングされます。そのため、ストリームの再生/一時停止は、メディア要素 API とプレーヤーコントロールを通して行うことができます。
+> [!NOTE]
+> `createMediaStreamSource()` を呼び出した結果、メディアストリームからの音声再生は {{domxref("AudioContext")}} の処理グラフに再ルーティングされます。そのため、ストリームの再生/一時停止は、メディア要素 API とプレーヤーコントロールを通して行うことができます。
 
 ## 仕様書
 

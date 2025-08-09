@@ -20,9 +20,7 @@ _继承参数自 {{domxref("AudioNodeOptions")}} 字典_.
 - _context_
   - : {{domxref("AudioContext")}} 的引用。
 - _options_ {{optional_inline}}
-
   - : Options are as follows:
-
     - `fftSize`: 用于频域分析的 FFT 初始尺寸。默认值是 2048。
     - `maxDecibels`: 用于 FFT 分析的初始最大功率（dB）。默认值是 -30。
     - `minDecibels`: 用于 FFT 分析的初始最小功率（dB）。默认值是 -100。

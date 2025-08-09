@@ -7,15 +7,15 @@ slug: Web/HTML/Element/output
 
 O elemento de saída (\<output>) é um elemento no qual um site ou aplicativo pode injetar os resultados de um cálculo ou o resultado de uma ação do usuário.
 
-| Categorias de conteúdo | [Flow content](/pt-BR/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/HTML/Content_categories#Phrasing_content), [listed](/pt-BR/HTML/Content_categories#form_listed), [labelable](/pt-BR/HTML/Content_categories#form_labelable), [resettable](/pt-BR/HTML/Content_categories#form_resettable) [form-associated element](/pt-BR/HTML/Content_categories#Form-associated_content). |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conteúdo permitido     | [Phrasing content](/pt-BR/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                                                                                                                |
-| Omissão de tag         | Precisa ter ambas as tags de início e fim.                                                                                                                                                                                                                                                                                                                                                          |
-| Documento normativo    | [HTML5, section 4.10.15](https://www.w3.org/TR/html5/the-button-element.html#the-output-element)                                                                                                                                                                                                                                                                                                    |
+| Categorias de conteúdo | [Flow content](/pt-BR/docs/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content), [listed](/pt-BR/docs/HTML/Content_categories#form_listed), [labelable](/pt-BR/docs/HTML/Content_categories#form_labelable), [resettable](/pt-BR/docs/HTML/Content_categories#form_resettable) [form-associated element](/pt-BR/docs/HTML/Content_categories#form-associated_content). |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conteúdo permitido     | [Phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                                                                                                                                         |
+| Omissão de tag         | Precisa ter ambas as tags de início e fim.                                                                                                                                                                                                                                                                                                                                                                                        |
+| Documento normativo    | [HTML5, section 4.10.15](https://www.w3.org/TR/html5/the-button-element.html#the-output-element)                                                                                                                                                                                                                                                                                                                                  |
 
 ## Atributos
 
-Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR/HTML/Global_attributes).
+Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes).
 
 - `for`
   - : Uma lista de IDs de outros elementos, indicando que estes elementos contribuiram com valores de entrada (input) para o cálculo (ou outros afetados).
@@ -26,7 +26,7 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR
 
 ## Interface DOM
 
-O elemento implementa a interface [HTMLOutputElement](/pt-BR/DOM/HTMLOutputElement) .
+O elemento implementa a interface [HTMLOutputElement](/pt-BR/docs/DOM/HTMLOutputElement) .
 
 ## Exemplo
 

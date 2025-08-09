@@ -9,7 +9,7 @@ slug: Web/API/AbortSignal/timeout_static
 
 信号在超时时使用 `TimeoutError` {{domxref("DOMException")}} 中止，或者由于按下一个浏览器停止按钮（或者一些内置的“停止”操作）而使用 `AbortError` {{domxref("DOMException")}} 中止。这允许 UI 区分超时错误（通常需要通知用户）和用户触发的错误（不需要通知用户）。
 
-超时将基于活动的时间，而不是经过的时间，如果代码在指定的 worker 中运行或者文档在往返缓存时（[bfcache](https://web.dev/articles/bfcache)），将有效地暂停。
+超时将基于活动的时间，而不是经过的时间，如果代码在指定的 worker 中运行或者文档在往返缓存时（[bfcache](https://web.developers.google.cn/articles/bfcache)），将有效地暂停。
 
 > [!NOTE]
 > 在编写代码时，无法组合多个信号。意思是你不能使用超时的 signal 或者通过调用 {{domxref("AbortController.abort()")}} 直接中止下载。

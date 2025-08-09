@@ -28,7 +28,7 @@ p {
 
 ### 基本知識
 
-- [Learn CSS](/zh-TW/docs/Learn/CSS)
+- [Learn CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)
 - 維基百科的 [CSS](https://zh.wikipedia.org/wiki/CSS)
 
 ### 技術參考

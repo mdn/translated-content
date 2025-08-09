@@ -1,83 +1,63 @@
 ---
-title: Console.assert()
+title: console：assert() 靜態方法
 slug: Web/API/console/assert_static
+l10n:
+  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-如果斷言（assertion）為非（false），主控台會顯示錯誤訊息；如果斷言為是（true），則不發生任何事。
-
-{{AvailableInWorkers}}
-
-> [!NOTE]
-> 在 Node.js 內 `console.assert()` 方法的實做，與瀏覽器並不相同。瀏覽器內呼叫 falsy 的 `console.assert()` 斷言出現 `message`，但不會中斷程式碼的執行。然而在 Node.js 裡面，falsy 斷言會拋出 `AssertionError` 錯誤。
+**`console.assert()`** 靜態方法會在斷言為假時，將錯誤訊息寫入主控台。若斷言為真，則不會有任何動作。
 
 ## 語法
 
 ```js-nolint
-assert(assertion, obj1)
-assert(assertion, obj1, obj2)
-assert(assertion, obj1, obj2, /* …, */ objN)
+console.assert(assertion)
 
-assert(assertion, msg)
-assert(assertion, msg, subst1)
-assert(assertion, msg, subst1, /* …, */ substN)
+console.assert(assertion, val1)
+console.assert(assertion, val1, val2)
+console.assert(assertion, val1, val2, /* …, */ valN)
+
+console.assert(assertion, msg)
+console.assert(assertion, msg, subst1)
+console.assert(assertion, msg, subst1, /* …, */ substN)
 ```
 
 ### 參數
 
 - `assertion`
-  - : 布林表達式。如果斷言為非，訊息會出現在主控台上。
-- `obj1` ... `objN`
-  - : 要印出來的 JavaScript 物件名單。 The string representations of each of these objects are appended together in the order listed and output.
+  - : 任何布林運算式。如果斷言為假，主控台會顯示一則通用的斷言失敗訊息。
+- `val1` … `valN`
+  - : 要輸出的 JavaScript 值清單。在顯示通用斷言失敗訊息後，這些值的表示形式會依順序輸出至主控台，訊息與每個值之間會有某種型式的分隔。當這些值存在時，輸出的訊息可能會與未提供這些值時有所不同。若 `val1` 是字串，則屬於特殊情況，將在後文說明。
 - `msg`
-  - : 包含零個以上的 JavaScript 替代（substitution）字串。
-- `subst1` ... `substN`
-  - : JavaScript objects with which to replace substitution strings within `msg`. This parameter gives you additional control over the format of the output.
+  - : 包含零個或多個替代字串的 JavaScript 字串，這些替代字串會依序被 `subst1` 到 `substN` 取代，最多取代至替代字串的數量。系統會將冒號、空格及取代後的字串加到通用斷言訊息後，組成詳細的斷言訊息，並輸出至主控台。關於替代機制的詳細說明，請參見[使用字串替代](/zh-TW/docs/Web/API/console#使用字串替代)。
+- `subst1` … `substN`
+  - : 用來取代 `msg` 中替代字串的 JavaScript 值。如果替代值多於替代字串，這些多出來的值會在詳細的斷言訊息之後，以與未使用格式字串時相同的方式輸出到主控台。
 
-請參見 {{domxref("console")}} 的 [Outputting text to the console](/zh-TW/docs/Web/API/console#Outputting_text_to_the_console) 以獲取詳細資訊。
+如需進一步了解，請參見 {{domxref("console")}} 文件中的[輸出文字到主控台](/zh-TW/docs/Web/API/console#輸出文字到主控台)。
+
+### 回傳值
+
+無（{{jsxref("undefined")}}）。
 
 ## 範例
 
-以下程式碼示範一個 JavaScript 物件的斷言使用：
+以下程式碼範例展示如何在斷言後輸出 JavaScript 物件：
 
 ```js
-const errorMsg = "the # is not even";
-for (let number = 2; number <= 5; number += 1) {
-  console.log("the # is " + number);
-  console.assert(number % 2 === 0, { number: number, errorMsg: errorMsg });
-  // or, using ES2015 object property shorthand:
-  // console.assert(number % 2 === 0, {number, errorMsg});
+const errorMsg = "該數字不是偶數";
+for (let number = 2; number <= 5; number++) {
+  console.log(`該數字是 ${number}`);
+  console.assert(number % 2 === 0, "%o", { number, errorMsg });
 }
-// output:
-// the # is 2
-// the # is 3
-// Assertion failed: {number: 3, errorMsg: "the # is not even"}
-// the # is 4
-// the # is 5
-// Assertion failed: {number: 5, errorMsg: "the # is not even"}
+// 輸出：
+// 該數字是 2
+// 該數字是 3
+// Assertion failed: {number: 3, errorMsg: "該數字不是偶數"}
+// 該數字是 4
+// 該數字是 5
+// Assertion failed: {number: 5, errorMsg: "該數字不是偶數"}
 ```
-
-請注意，雖然包含替換字符串的字符串在 Node 中用作 `console.log` 的參數，但很多（如果不是大多數）瀏覽器...
-
-```js
-console.log("the word is %s", "foo");
-// output: the word is foo
-```
-
-...在所有瀏覽器中，使用此類字符串目前無法作為 console.assert 的參數使用：
-
-```js
-console.assert(false, "the word is %s", "foo");
-// correct output in Node (e.g. v8.10.0) and some browsers
-//     (e.g. Firefox v60.0.2):
-// Assertion failed: the word is foo
-// incorrect output in some browsers
-//     (e.g. Chrome v67.0.3396.87):
-// Assertion failed: the word is %s foo
-```
-
-有關詳細信息，請參閱 {{domxref("console")}} 文檔中的[將文本輸出到控制台](/zh-TW/docs/Web/API/console#Outputting_text_to_the_console)。
 
 ## 規範
 
@@ -89,7 +69,6 @@ console.assert(false, "the word is %s", "foo");
 
 ## 參見
 
-- [WHATWG Console Standard: console.assert](https://console.spec.whatwg.org/#assert-condition-data)
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://learn.microsoft.com/zh-tw/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools#assertions)
+- [Microsoft Edge 關於 `console.assert()` 的文件](https://learn.microsoft.com/zh-tw/microsoft-edge/devtools-guide-chromium/console/api#assert)
+- [Node.js 關於 `console.assert()` 的文件](https://nodejs.org/docs/latest/api/console.html#consoleassertvalue-message)
+- [Google Chrome 關於 `console.dir()` 的文件](https://developer.chrome.com/docs/devtools/console/api/#dir)

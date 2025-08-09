@@ -9,7 +9,22 @@ La fonction **`Math.abs()`** retourne la valeur absolue d'un nombre, c'est-à-di
 
 <math><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>si</mtext><mspace width="1em"></mspace><mi>x</mi><mo>≥</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>si</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&#x3C;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(x)}} = {|x|} = \begin{cases} x &#x26; \text{si} \quad x \geq 0 \\ -x &#x26; \text{si} \quad x &#x3C; 0 \end{cases}</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-abs.html")}}
+{{InteractiveExample("JavaScript Demo: Math.abs()")}}
+
+```js interactive-example
+function difference(a, b) {
+  return Math.abs(a - b);
+}
+
+console.log(difference(3, 5));
+// Expected output: 2
+
+console.log(difference(5, 3));
+// Expected output: 2
+
+console.log(difference(1.23456, 7.89012));
+// Expected output: 6.6555599999999995
+```
 
 ## Syntaxe
 

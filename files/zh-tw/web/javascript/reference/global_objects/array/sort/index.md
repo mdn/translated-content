@@ -3,13 +3,23 @@ title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 
-{{JSRef}}
-
 **`sort()`** 方法會*[原地（in place）](https://zh.wikipedia.org/wiki/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95)*對一個陣列的所有元素進行排序，並回傳此陣列。排序不一定是[穩定的（stable）](https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95#%E7%A9%A9%E5%AE%9A%E6%80%A7)。預設的排序順序是根據字串的 Unicode 編碼位置（code points）而定。
 
 由於依賴執行環境的實作，所以並不能保證排序的時間及空間複雜度。
 
-{{EmbedInteractiveExample("pages/js/array-sort.html")}}
+{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+
+```js interactive-example
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+```
 
 ## 語法
 
@@ -20,7 +30,7 @@ arr.sort([compareFunction])
 ### 參數
 
 - `compareFunction` {{optional_inline}}
-  - : 指定一個函式來定義排序順序。假如省略此參數，陣列將根據各個元素轉為字串後的每一個字元之 [Unicode](/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode) 編碼位置值進行排序。
+  - : 指定一個函式來定義排序順序。假如省略此參數，陣列將根據各個元素轉為字串後的每一個字元之 [Unicode](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#unicode) 編碼位置值進行排序。
 
 ### 回傳值
 

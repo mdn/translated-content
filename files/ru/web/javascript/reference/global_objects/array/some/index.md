@@ -10,7 +10,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 > [!NOTE]
 > Метод возвращает `false` при любом условии для пустого массива.
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## Синтаксис
 
@@ -21,9 +31,7 @@ arr.some(callback(element[, index[, array]])[, thisArg])
 ### Параметры
 
 - `callback`
-
   - : Функция проверки каждого элемента, принимает три аргумента:
-
     - `element`
       - : Текущий обрабатываемый элемент массива.
     - `index`{{Optional_inline}}

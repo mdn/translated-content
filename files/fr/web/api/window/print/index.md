@@ -35,6 +35,6 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 
 ## Voir aussi
 
-- [Guide sur l'impression](/fr/docs/Web/Guide/Printing)
+- [Guide sur l'impression](/fr/docs/Web/CSS/CSS_media_queries/Printing)
 - [L'évènement `beforeprint`](/fr/docs/Web/API/Window/beforeprint_event)
 - [L'évènement `afterprint`](/fr/docs/Web/API/Window/afterprint_event)

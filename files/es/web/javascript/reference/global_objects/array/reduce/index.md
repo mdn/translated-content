@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 El método **`reduce()`** ejecuta una función **reductora** sobre cada elemento de un array, devolviendo como resultado un único valor.
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 La función **reductora** recibe cuatro argumentos:
 
@@ -59,16 +73,16 @@ Suponga que ocurre el siguiente uso de `reduce`:
 });
 
 // Primera llamada
-(valorAnterior = 0), (valorActual = 1), (indice = 1);
+((valorAnterior = 0), (valorActual = 1), (indice = 1));
 
 // Segunda llamada
-(valorAnterior = 1), (valorActual = 2), (indice = 2);
+((valorAnterior = 1), (valorActual = 2), (indice = 2));
 
 // Tercera llamada
-(valorAnterior = 3), (valorActual = 3), (indice = 3);
+((valorAnterior = 3), (valorActual = 3), (indice = 3));
 
 // Cuarta llamada
-(valorAnterior = 6), (valorActual = 4), (indice = 4);
+((valorAnterior = 6), (valorActual = 4), (indice = 4));
 
 // el array sobre el que se llama a reduce siempre es el objeto [0,1,2,3,4]
 
@@ -83,19 +97,19 @@ Y si proporcionas un `valorInicial`, el resultado sería como este:
 }, 10);
 
 // Primera llamada
-(valorAnterior = 10), (valorActual = 0), (indice = 0);
+((valorAnterior = 10), (valorActual = 0), (indice = 0));
 
 // Segunda llamada
-(valorAnterior = 10), (valorActual = 1), (indice = 1);
+((valorAnterior = 10), (valorActual = 1), (indice = 1));
 
 // Tercera llamada
-(valorAnterior = 11), (valorActual = 2), (indice = 2);
+((valorAnterior = 11), (valorActual = 2), (indice = 2));
 
 // Cuarta llamada
-(valorAnterior = 13), (valorActual = 3), (indice = 3);
+((valorAnterior = 13), (valorActual = 3), (indice = 3));
 
 // Quinta llamada
-(valorAnterior = 16), (valorActual = 4), (indice = 4);
+((valorAnterior = 16), (valorActual = 4), (indice = 4));
 
 // el array sobre el que se llama a reduce siempre es el objeto [0,1,2,3,4]
 
@@ -104,7 +118,8 @@ Y si proporcionas un `valorInicial`, el resultado sería como este:
 
 ## Polyfill
 
-> **Nota:** **Polyfill** se refiere a unas líneas de código o un plugin que permite "tener" (en realidad se simulan de alguna otra manera) las nuevas funcionalidades de HTML5 en aquellos navegadores que nativamente no lo soportan. Consigue que, en adelante, el código sea transparente para el programador, como si el navegador soportase la funcionalidad nativamente.
+> [!NOTE]
+> **Polyfill** se refiere a unas líneas de código o un plugin que permite "tener" (en realidad se simulan de alguna otra manera) las nuevas funcionalidades de HTML5 en aquellos navegadores que nativamente no lo soportan. Consigue que, en adelante, el código sea transparente para el programador, como si el navegador soportase la funcionalidad nativamente.
 
 `reduce` es una extensión de JavaScript al estándar ECMA-262; como tal puede que no esté presente en otras implementaciones del estándar. Puedes trabajar con ésto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `reduce` en implementaciones de ECMA-262 que no lo implementan de modo nativo. Este algoritmo es exactamente el mismo usando en Firefox y SpiderMonkey.
 

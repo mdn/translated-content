@@ -41,16 +41,14 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
 プロトコルハンドラーは 3 つのプロパティを持ち、すべて必須です:
 
 - `protocol`
-
   - : プロトコルを定義する文字列。次のいずれか:
-
     - 次のどれか: "bitcoin", "dat", "dweb", "geo", "gopher", "im", "ipfs", "ipns", "irc", "ircs", "magnet", "mailto", "mms", "news", "nntp", "sip", "sms", "smsto", "ssb", "ssh", "tel", "urn", "webcal", "wtai", "xmpp".
     - "web+" や "ext+"で始まるカスタム名からなる文字列。例えば: "web+foo" や "ext+foo"。カスタム名は小文字の ASCII 文字列でなければならない。拡張機能は "ext+" の形式を使うのが推奨です。
 
 - `name`
   - : プロトコルハンドラーを表す文字列。これはユーザーがハンドラーにリンクを開くかどうか問い合わせた時に、ユーザーに表示されます。
 - `uriTemplate`
-  - : ハンドラーの URL を表す。この文字列はプレースホルダーとして "%s" を入れる必要があります: これは処理される文書の URL がエスケープされたもので置き換えられます。この URL は本当の URL や電話番号、電子メールアドレス、などです。これは[ローカライズ可能なプロパティ](/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)です。
+  - : ハンドラーの URL を表す。この文字列はプレースホルダーとして "%s" を入れる必要があります: これは処理される文書の URL がエスケープされたもので置き換えられます。この URL は本当の URL や電話番号、電子メールアドレス、などです。これは[ローカライズ可能なプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
 
 ## 例
 

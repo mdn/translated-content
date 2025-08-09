@@ -3,7 +3,7 @@ title: 流程控制與例外處理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript 擁有許多陳述式，特別是流程控制的陳述式，你可以用這些陳述式來增加程式的互動性。這個章節將會概要介紹陳述式。
 
@@ -68,7 +68,7 @@ if (指定條件) {
 }
 ```
 
-指定條件可以是任何會回傳 true 或 false 的運算式。參見 [Boolean](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description) 來進一步瞭解哪些運算式會回傳 `true` 及 `false`。假如指定條件爲 `true`，陳述式 1 會被執行；否則，陳述式 2 會被執行。陳述式 1 及陳述式 2 可以是任何陳述式，包含巢狀 `if` 陳述式。
+指定條件可以是任何會回傳 true 或 false 的運算式。參見 [Boolean](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description) 來進一步瞭解哪些運算式會回傳 `true` 及 `false`。假如指定條件爲 `true`，陳述式 1 會被執行；否則，陳述式 2 會被執行。陳述式 1 及陳述式 2 可以是任何陳述式，包含巢狀 `if` 陳述式。
 
 你也可以藉由 `else if` 來使用複合的陳述式來測試多種不同的條件，如下：
 
@@ -216,7 +216,7 @@ console.log("Is there anything else you'd like?");
 
 任何物件（object）都可以在 JavaScript 中被拋出。 然而，並非所有拋出的物件都相同。 雖然將數字或字串作為錯誤物件使用是相當常見的，但使用為此目的專門創造的一種例外物件類型通常更有效:
 
-- [ECMAScript 例外](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects)
+- [ECMAScript 例外](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects#fundamental_objects)
 - {{domxref("DOMException")}} and {{domxref("DOMError")}}
 
 ### `throw` 陳述式
@@ -397,7 +397,7 @@ try {
 
 ### 使用 `Error` 物件
 
-根據錯誤的類型，你可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)位於 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
+根據錯誤的類型，你可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)位於 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
 
 假如你要丟出自定義的例外， 為了方便使用這些屬性（例如，如果你的 `catch` 區塊並不要區分你自己的例外和系統的），你可以使用 `Error` 構造子。舉例來說：
 
@@ -432,7 +432,7 @@ catch (e) {
 
 ### 使用 XHR 載入圖檔
 
-這裏有個簡單的範例，使用了 `Promise` 物件與及 [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入 MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html) repository 中的一張圖檔。你也可以[觀看結果](http://mdn.github.io/promises-test/)。 每一步都有註解來讓你慢慢理解 Promise 物件與及 XHR 架構。 下面的版本沒有註解，但藉由觀察 `Promise` 物件的變動你或許可以對 promise 物件有所了解:
+這裏有個簡單的範例，使用了 `Promise` 物件與及 [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入 MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html) repository 中的一張圖檔。你也可以[觀看結果](https://mdn.github.io/promises-test/)。 每一步都有註解來讓你慢慢理解 Promise 物件與及 XHR 架構。 下面的版本沒有註解，但藉由觀察 `Promise` 物件的變動你或許可以對 promise 物件有所了解:
 
 ```js
 function imgLoad(url) {

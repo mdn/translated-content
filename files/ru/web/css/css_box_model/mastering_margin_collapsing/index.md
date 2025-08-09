@@ -69,4 +69,4 @@ p {
 
 ## Смотрите также
 
-- [CSS Reference](/ru/docs/Web/CSS/CSS_Reference)
+- [CSS Reference](/ru/docs/Web/CSS/Reference)

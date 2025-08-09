@@ -8,7 +8,7 @@ slug: Web/API/Response/redirect_static
 {{domxref("Response")}} 接口的 **`redirect()`** 方法返回一个可以重定向到指定 URL 的 `Response` 。
 
 > [!NOTE]
-> 主要和 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 有关。A controlling service worker could intercept a page's request and redirect it as desired. This will actually lead to a real redirect if a service worker sends it upstream.
+> 主要和 [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API) 有关。A controlling service worker could intercept a page's request and redirect it as desired. This will actually lead to a real redirect if a service worker sends it upstream.
 
 ## 语法
 
@@ -51,6 +51,6 @@ responseObj.redirect("https://www.example.com", 302);
 
 ## 参阅
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP 访问控制 (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制 (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

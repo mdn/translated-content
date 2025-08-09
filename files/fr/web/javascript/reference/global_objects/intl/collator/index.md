@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 
 L'objet **`Intl.Collator`** permet de comparer des chaînes de caractères en tenant compte de la locale.
 
-{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+
+```js interactive-example
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
+// Expected output: Array ["a", "ä", "z", "Z"]
+
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
+// Expected output: Array ["a", "z", "Z", "ä"]
+
+console.log(
+  ["Z", "a", "z", "ä"].sort(
+    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+  ),
+);
+// Expected output: Array ["a", "ä", "Z", "z"]
+```
 
 ## Constructeur
 
@@ -42,7 +57,7 @@ Les résultats indiqués ici sont génériques et, en pratique, peuvent varier e
 
 ### Utiliser `locales`
 
-Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare) varient selon les locales. Afin d'obtenir le bon ordre lexicographique dans votre application, il est nécessaire de spécifier la locale de l'utilisatrice ou l'utilisateur (et éventuellement des locales pour des cas de replis) en utilisant l'argument `locales`&nbsp;:
+Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) varient selon les locales. Afin d'obtenir le bon ordre lexicographique dans votre application, il est nécessaire de spécifier la locale de l'utilisatrice ou l'utilisateur (et éventuellement des locales pour des cas de replis) en utilisant l'argument `locales`&nbsp;:
 
 ```js
 // en allemand, 'ä' est équivalent à 'a' pour le tri
@@ -56,7 +71,7 @@ console.log(new Intl.Collator("sv").compare("ä", "z"));
 
 ### Utiliser `options`
 
-Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare) peuvent être adaptés grâce à l'argument `options`&nbsp;:
+Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) peuvent être adaptés grâce à l'argument `options`&nbsp;:
 
 ```js
 // en allemand, 'ä' est composé de la lettre de base 'a'

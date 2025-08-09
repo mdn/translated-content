@@ -47,7 +47,7 @@ onhashchange = (event) => {};
 window.addEventListener(
   "hashchange",
   () => {
-    console.log("哈希已更改！");
+    console.log("散列已更改！");
   },
   false,
 );

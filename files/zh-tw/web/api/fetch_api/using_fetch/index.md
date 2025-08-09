@@ -13,7 +13,7 @@ slug: Web/API/Fetch_API/Using_Fetch
 
 - `fetch()` 回傳的 promise **不會 reject HTTP 的 error status**，就算是 HTTP 404 或 500 也一樣。相反地，它會正常地 resolve，並把 `ok` status 設為 false。會讓它發生 reject 的只有網路錯誤或其他會中斷 request 的情況。
 - `fetch` **可以接收跨站的 cookies**，你可以用 Fetch 來建立跨站的 session。
-- `fetch` **不會傳送 cookies**，除非你有設定 credentials 的 [init option](/zh-TW/docs/Web/API/fetch#Parameters)。 (Since [Aug 25, 2017](https://github.com/whatwg/fetch/pull/585). The spec changed the default credentials policy to `same-origin`. Firefox changed since 61.0b13.)
+- `fetch` **不會傳送 cookies**，除非你有設定 credentials 的 [init option](/zh-TW/docs/Web/API/Window/fetch#parameters)。 (Since [Aug 25, 2017](https://github.com/whatwg/fetch/pull/585). The spec changed the default credentials policy to `same-origin`. Firefox changed since 61.0b13.)
 
 ## 使用 Fetch 發送請求 ( request )
 
@@ -38,7 +38,7 @@ fetch("http://example.com/movies.json")
 > [!NOTE]
 > 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見[Body](#body)
 
-Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Security/CSP/CSP_policy_directives)(內容安全策略) 是由 header 中的 `connect-src` directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。
+Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)(內容安全策略) 是由 header 中的 `connect-src` directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。
 
 ### Request 可用的設定值
 
@@ -363,8 +363,8 @@ if (self.fetch) {
 
 ## 參見
 
-- [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-TW/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/JakeChampion/fetch)
 - [Fetch examples on Github](https://github.com/mdn/fetch-examples/)

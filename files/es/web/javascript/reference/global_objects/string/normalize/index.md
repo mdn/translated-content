@@ -83,5 +83,5 @@ str.normalize("NFKD"); // '\u0073\u0323\u0307'
 
 ## Vea también
 
-- [Anexo del Estándar Unicode #15, Formas de Normalización Unicode](http://www.unicode.org/reports/tr15/)
+- [Anexo del Estándar Unicode #15, Formas de Normalización Unicode](https://www.unicode.org/reports/tr15/)
 - [Equivalencia Unicode](http://en.wikipedia.org/wiki/Unicode_equivalence)

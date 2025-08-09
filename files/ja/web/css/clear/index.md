@@ -5,17 +5,70 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
-
 **`clear`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素をその前にある[浮動](/ja/docs/Web/CSS/float)要素の下に移動 (clear) する必要があるかどうかを設定します。`clear` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
 
-{{EmbedInteractiveExample("pages/css/clear.html")}}
+{{InteractiveExample("CSS デモ: clear")}}
+
+```css interactive-example-choice
+clear: none;
+```
+
+```css interactive-example-choice
+clear: left;
+```
+
+```css interactive-example-choice
+clear: right;
+```
+
+```css interactive-example-choice
+clear: both;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="floated-left">Left</div>
+    <div class="floated-right">Right</div>
+    <div class="transition-all" id="example-element">
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  line-height: normal;
+}
+
+.floated-left {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: left;
+}
+
+.floated-right {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: right;
+  height: 150px;
+}
+```
 
 浮動でないブロックに適用された場合は、その要素の[境界の辺](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area)が、関係するすべての浮動要素の[マージンの辺](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area)より下まで移動します。浮動でないブロックの上マージンは折り畳まれます。
 
 一方で、二つの浮動要素の垂直マージンは折り畳まれません。浮動要素に適用された場合、下の要素のマージンの辺が、すべての関連する浮動要素のマージンの辺よりも下に移動します。これは後の浮動要素が前のものよりも高い位置に配置されることがないため、後の浮動要素の位置に影響します。
 
-解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)内の先行する浮動要素です。
+解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)内の先行する浮動要素です。
 
 > [!NOTE]
 > 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その要素の [`display`](/ja/docs/Web/CSS/display) プロパティの値を [`flow-root`](/ja/docs/Web/CSS/display#flow-root) に設定してください。

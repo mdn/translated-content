@@ -5,7 +5,7 @@ slug: Web/CSS/color_value
 
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **`<color>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 색을 나타냅니다. `<color>`는 이 색이 배경과 [어떻게 합성되어야 하는지](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) 나타내는 [알파 채널](https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C_%EC%B1%84%EB%84%90) 투명도 값도 가질 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`<color>`** [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 색을 나타냅니다. `<color>`는 이 색이 배경과 [어떻게 합성되어야 하는지](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) 나타내는 [알파 채널](https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C_%EC%B1%84%EB%84%90) 투명도 값도 가질 수 있습니다.
 
 `<color>`는 다음 방법으로 정의할 수 있습니다.
 
@@ -14,7 +14,7 @@ slug: Web/CSS/color_value
 - HSL 실린더형 좌표계 사용 (`hsl()`, `hsla()`의 함수형 표기법)
 
 > [!NOTE]
-> 이 글은 `<color>` 자료형에 대해 상세히 기술합니다. HTML에서 실제로 색을 쓰는 법이 더 알고 싶으시면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color)를 참고하세요.
+> 이 글은 `<color>` 자료형에 대해 상세히 기술합니다. HTML에서 실제로 색을 쓰는 법이 더 알고 싶으시면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)를 참고하세요.
 
 ## 구문
 
@@ -32,7 +32,6 @@ slug: Web/CSS/color_value
 - HTML과 달리 CSS는 알 수 없는 키워드를 완전히 무시합니다.
 - 모든 색상 키워드는 투명도 없는 단일 색상을 표현합니다.
 - 어떤 키워드는 다른 키워드의 다른 이름입니다.
-
   - `aqua` / `cyan`
   - `fuchsia` / `magenta`
   - `darkgray` / `darkgrey`
@@ -950,7 +949,6 @@ HSL 색상은 함수형 <a id="hsl()" name="hsl()"><code>hsl()</code></a>과 <a 
 > CSS Colors Level 4부터 `hsla()`는 `hsl()`의 다른 이름입니다. Level 4 표준을 구현한 브라우저에서는 같은 매개변수를 받고 동일하게 행동합니다.
 
 - 함수형 포기법: `hsl(H, S, L[, A])` 또는 `hsla(H, S, L, A)`
-
   - : `H`(색상)는 색상원에서의 {{cssxref("&lt;angle&gt;")}}로 #the-hsl-notation 기준 `deg`, `rad`, `grad`, `turn`을 사용할 수 있습니다. 단위 없이 {{cssxref("&lt;number&gt;")}}로 표현할 경우 hsl-color에 명시된 것과 같이 각도로 해석합니다. 정의에 따르면 빨강=`0deg`=`360deg`이며 다른 색은 (초록=`120deg`, 파랑=`240deg` 등) 원을 따라 분포하고 있습니다. `<angle>`이라면 암묵적으로 원의 주위를 한 바퀴 돕니다. 예컨대 `-120deg`=`240deg`, `480deg`=`120deg`, `-1turn`=`1turn` 입니다.
 
     `S`(채도)와 `L`(명도)은 {{cssxref("&lt;percentage&gt;")}}입니다. `100%` 채도는 제일 진한 색이며 `0%`는 회색입니다. `100%` 명도는 흰색, `0%` 명도는 검은색, `50%` 명도는 "보통" 색입니다.
@@ -1199,11 +1197,11 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 ## 보간
 
-애니메이션과 [그레이디언트](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정합니다.
+애니메이션과 [그레이디언트](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 접근성 고려사항
 
-색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)를 참고하세요.
+색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast)를 참고하세요.
 
 ## 명세
 
@@ -1217,4 +1215,4 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 - {{Cssxref("opacity")}} 속성으로 요소 자체의 투명도를 바꿀 수 있습니다.
 - `<color>`를 지정할 수 있는 흔히 쓰이는 속성: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
-- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color)
+- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)

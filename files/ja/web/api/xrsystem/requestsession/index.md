@@ -22,9 +22,7 @@ requestSession(mode, options)
 ### 引数
 
 - `mode`
-
   - : 文字列 ({{jsxref("String")}}) で、 XR セッションモードを定義します。対応しているモードは次の通りです。
-
     - {{Experimental_Inline}} `immersive-ar`: セッションの出力は没入型端末に独占的にアクセスされますが、レンダリングされたコンテンツは現実の環境と混合されます。
       このセッションの {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} は、コンテンツを混合するために使用するメソッドを示します。
     - `immersive-vr`: このレンダリングセッションは VR モードの没入型 XR 端末を使用して表示されます。周囲の環境に重ねたり統合したりすることは意図していません。
@@ -32,7 +30,6 @@ requestSession(mode, options)
     - `inline`: 出力は、視覚空間全体を占めるのではなく、標準 HTML 文書内の要素のコンテキスト内でインライン表示されます。インラインセッションはモノラルまたはステレオモードで表示することができ、ビューアートラッキングを利用できる場合とできない場合があります。インラインセッションは特別なハードウェアを要求されず、 WebXR API を対応している{{Glossary("user agent", "ユーザーエージェント")}}であれば利用できるはずです。
 
 - `options` {{Optional_Inline}}
-
   - : {{domxref("XRSession")}} を構成するためのオブジェクト。何も含まれない場合、端末はすべてのオプションに対して既定の機能構成を使用します。
     - `requiredFeatures` {{Optional_Inline}}: 返された {{domxref("XRSession")}} が対応しなければならない値の配列。対応しなければならない値の配列。下記の[セッション機能](#セッション機能)を参照ください。
     - `optionalFeatures` {{Optional_Inline}}: 返された {{domxref("XRSession")}} がオプションで対応している機能を表す値の配列。下記の[セッション機能](#セッション機能)を参照ください。
@@ -87,7 +84,7 @@ requestSession(mode, options)
 
 ## セキュリティ
 
-いくつかのセッション機能と様々な参照空間には、ユーザーの同意を要求したり、 {{HTTPHeader("Permissions-Policy")}} を要求するなど、最小限のセキュリティとプライバシーの要件があります。 [`xr-spatial-tracking`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking) ディレクティブを設定する必要があります。詳しくは[権限とセキュリティ](/ja/docs/Web/API/WebXR_Device_API/Permissions_and_security)も参照してください。
+いくつかのセッション機能と様々な参照空間には、ユーザーの同意を要求したり、 {{HTTPHeader("Permissions-Policy")}} を要求するなど、最小限のセキュリティとプライバシーの要件があります。 [`xr-spatial-tracking`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/xr-spatial-tracking) ディレクティブを設定する必要があります。詳しくは[権限とセキュリティ](/ja/docs/Web/API/WebXR_Device_API/Permissions_and_security)も参照してください。
 
 | セッション機能  | ユーザー同意の要件               | 権限ポリシーの要件    |
 | --------------- | -------------------------------- | --------------------- |

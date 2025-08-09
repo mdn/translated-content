@@ -100,7 +100,7 @@ try {
 // @file:///C:/example.html:7:6
 ```
 
-Также для именования исходного кода в функции `eval()` вы можете использовать директиву `//# sourceURL`. Смотрите раздел [Отладка исходных кодов в функции `eval()`](/ru/docs/Tools/Debugger/How_to/Debug_eval_sources) в документации по [отладчику](/ru/docs/Tools/Debugger), а также эту [запись в блоге](http://fitzgeraldnick.com/weblog/59/) (на английском).
+Также для именования исходного кода в функции `eval()` вы можете использовать директиву `//# sourceURL`. Смотрите раздел [Отладка исходных кодов в функции `eval()`](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) в документации по [отладчику](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), а также эту [запись в блоге](https://fitzgeraldnick.com/weblog/59/) (на английском).
 
 ## Спецификации
 

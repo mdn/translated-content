@@ -16,7 +16,7 @@ new Int8Array(object);
 new Int8Array(buffer [, byteOffset [, length]]);
 ```
 
-有关构造函数语法和参数的更多信息，请访问 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+有关构造函数语法和参数的更多信息，请访问 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## 静态属性
 
@@ -102,7 +102,7 @@ var dv = new Int8Array([1, 2, 3]);
 ## 参见
 
 - [`core-js` 中 `Int8Array` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)指南
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

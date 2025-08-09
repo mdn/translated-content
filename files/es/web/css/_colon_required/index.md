@@ -1,11 +1,9 @@
 ---
-title: ":required"
+title: :required
 slug: Web/CSS/:required
 ---
 
-{{ CSSRef }}
-
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:required`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que tenga el atributo [`required`](/es/docs/Web/HTML/Element/input#required) establecido en él.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:required`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que tenga el atributo [`required`](/es/docs/Web/HTML/Reference/Elements/input#required) establecido en él.
 
 ```css
 /* Selecciona cualquier <input> requerido */
@@ -29,7 +27,7 @@ Ver {{cssxref(":invalid")}} para un ejemplo.
 
 ## Problemas de accesibilidad
 
-Obligatoriamente los {{htmlelement("input")}} deben tener el atributo [`required`](/es/docs/Web/HTML/Element/input#required) aplicado a ellos. Esto asegurará que las personas que navegan con la ayuda de tecnología de asistencia, como un lector de pantalla, puedan comprender qué entradas necesitan contenido válido para garantizar un envío exitoso.
+Obligatoriamente los {{htmlelement("input")}} deben tener el atributo [`required`](/es/docs/Web/HTML/Reference/Elements/input#required) aplicado a ellos. Esto asegurará que las personas que navegan con la ayuda de tecnología de asistencia, como un lector de pantalla, puedan comprender qué entradas necesitan contenido válido para garantizar un envío exitoso.
 
 Si el formulario también contiene entradas opcionales, las entradas requeridas deben indicarse visualmente utilizando un tratamiento que no dependa únicamente del color para transmitir el significado. Normalmente, se utilizan texto descriptivo y / o un icono.
 
@@ -47,4 +45,4 @@ Si el formulario también contiene entradas opcionales, las entradas requeridas 
 ## Ver también
 
 - Otras pseudo-clases relacionadas con la validación: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Validación de datos de formulario](/es/docs/Learn/HTML/Forms/Form_validation)
+- [Validación de datos de formulario](/es/docs/Learn_web_development/Extensions/Forms/Form_validation)

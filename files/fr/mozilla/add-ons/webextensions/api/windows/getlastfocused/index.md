@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 
 Obtient la fenêtre qui a été recentrée récemment — généralement la fenêtre 'en haut'.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -20,9 +20,7 @@ var gettingWindow = browser.windows.getLastFocused(
 ### Paramètres
 
 - `getInfo`{{optional_inline}}
-
   - : `object`.
-
     - `populate`{{optional_inline}}
       - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets de la fenêtre. Les objets d'onglets ne contiennent que les propriétés `url`, `title` et `favIconUrl` si le fichier manifest de l'extension comprend la permission `"tabs"`.
     - `windowTypes`{{optional_inline}}

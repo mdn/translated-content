@@ -19,9 +19,8 @@ getUserMedia(constraints, successCallback, errorCallback)
 ### 参数
 
 - `constraints`
-  - : {{domxref("MediaStreamConstaints")}} 对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见 {{domxref("MediaDevices.getUserMedia()")}} 方法下面的 [constraints](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#Parameters) 部分。
+  - : {{domxref("MediaStreamConstaints")}} 对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见 {{domxref("MediaDevices.getUserMedia()")}} 方法下面的 [constraints](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#parameters) 部分。
 - `successCallback`
-
   - : 当调用成功后，successCallback 中指定的函数就被调用，包含了媒体流的 {{domxref("MediaStream")}} 对象作为它的参数，你可以把媒体流对象赋值给合适的元素，然后使用它，就像下面的例子一样：
 
     ```js
@@ -35,7 +34,6 @@ getUserMedia(constraints, successCallback, errorCallback)
     ```
 
 - `errorCallback`
-
   - : 当调用失败，errorCallback 中指定的函数就会被调用，{{domxref("MediaStreamError")}} 对象作为它唯一的参数；此对象基于 {{domxref("DOMException")}} 对象构建。错误码描述见参见以下：
 
     | 错误                    | 描述                               |
@@ -47,7 +45,7 @@ getUserMedia(constraints, successCallback, errorCallback)
 
 ### 宽度和高度
 
-使用 `getUserMedia()` 的示例，包括了可以适用于多种浏览器前缀的代码。注意这种使用方式已经被废除，现代的使用方法请参见 {{domxref("MediaDevices.getUserMedia()")}} 下面的[示例](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#Frame_rate)部分。
+使用 `getUserMedia()` 的示例，包括了可以适用于多种浏览器前缀的代码。注意这种使用方式已经被废除，现代的使用方法请参见 {{domxref("MediaDevices.getUserMedia()")}} 下面的[示例](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#frame_rate)部分。
 
 ```js
 navigator.getUserMedia =
@@ -89,7 +87,7 @@ if (navigator.getUserMedia) {
 }
 ```
 
-参见 [permission: audio-capture](/zh-CN/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/Apps/Developing/App_permissions#video-capture) 以查看更多信息。
+参见 [permission: audio-capture](/zh-CN/docs/Web/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/docs/Web/Apps/Developing/App_permissions#video-capture) 以查看更多信息。
 
 ## 浏览器兼容性
 

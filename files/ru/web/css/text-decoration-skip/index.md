@@ -37,7 +37,7 @@ text-decoration-skip: unset;
 - `objects`
   - : The entire margin box of the element is skipped if it is an atomic inline such as an image or inline-block.
 - `spaces`
-  - : All spacing is skipped, i.e. all [Unicode white space characters](http://www.unicode.org/reports/tr44/#White_Space) and all word separators, plus any adjacent {{cssxref("letter-spacing")}} or {{cssxref("word-spacing")}}.
+  - : All spacing is skipped, i.e. all [Unicode white space characters](https://www.unicode.org/reports/tr44/#White_Space) and all word separators, plus any adjacent {{cssxref("letter-spacing")}} or {{cssxref("word-spacing")}}.
 - `ink`
   - : The text decoration is only drawn where it does not touch or closely approach a glyph. I.e. it is interrupted where it would otherwise cross over a glyph.![An example of "text-decoration-skip: ink;".](decoration-skip-ink.png)
 - `edges`

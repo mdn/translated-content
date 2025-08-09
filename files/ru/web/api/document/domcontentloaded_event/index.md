@@ -160,4 +160,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
 ## Смотрите также
 
 - События связанные с: [`load`](/ru/docs/Web/API/Window/load_event), [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event), [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event), [`unload`](/ru/docs/Web/API/Window/unload_event)
-- Это событие [`Window`](/ru/docs/Web/API/Window) нацеленное на: [`DOMContentLoaded`](/ru/docs/Web/API/Window/DOMContentLoaded_event)
+- Это событие [`Window`](/ru/docs/Web/API/Window) нацеленное на: [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)

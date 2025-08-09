@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **Nota:** _Eliminar toda esta nota explicativa antes de publicar_
+> [!NOTE]
+> _Eliminar toda esta nota explicativa antes de publicar_
 >
 > ---
 >
@@ -42,7 +43,6 @@ l10n:
 > - **status**
 >   - : Incluir claves de estado de tecnología apropiadas: [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (si no está en una pista de estándar).
 > - **browser-compat**
->
 >   - : Reemplace el valor de marcador de posición `ruta.hacia.caracteristica.NombreDelConstructor` con la cadena de consulta para el constructor en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
 >     La cadena se utiliza automáticamente para rellenar las secciones de compatibilidad y especificaciones (reemplazando los macros `\{{Compat}}` y `\{{Specifications}}`).
 >
@@ -67,7 +67,7 @@ l10n:
 > - `\{{APIRef("GroupDataName")}}` — esto genera un menú lateral de referencia del lado izquierdo que muestra enlaces de referencia rápida relacionados con la página actual.
 >   Por ejemplo, cada página en la [WebVR API](/es/docs/Web/API/WebVR_API) tiene el mismo menú lateral, que apunta a las otras páginas en la API.
 >   Para generar el menú lateral correcto para su API, debe agregar una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
->   Vea nuestra [guía de menús laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar el macro `\{{MDNSidebar}}` cuando copie esta página.
+>   Vea nuestra [guía de menús laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar el macro `\{{MDNSidebar}}` cuando copie esta página.
 >
 > Se muestran ejemplos de los banners **Experimental**, **Contexto seguro** y **Desaprobado** justo después de este bloque de notas.
 >

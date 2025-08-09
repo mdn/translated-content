@@ -12,7 +12,7 @@ Un serveur WebSocket peut être écrit dans n'importe quel language de programma
 Avant de débuter, vous **devez** connaître précisément le fonctionnement du protocole HTTP et disposer d'une certaine expérience sur celui-ci. Des connaissances sur les sockets TCP dans votre langage de développement est également précieux. Ce guide ne présente ainsi que le _minimum_ des connaissances requises et non un guide ultime.
 
 > [!NOTE]
-> Lire la dernière spécification officielle sur les WebSockets [RFC 6455](http://datatracker.ietf.org/doc/rfc6455/?include_text=1). Les sections 1 et 4-7 sont particulièrement intéressantes pour ce qui nous occupe. La section 10 évoque la sécurité et doit être connue et mise en oeuvre avant d'exposer votre serveur au-delà du réseau local / lors de la mise en production.
+> Lire la dernière spécification officielle sur les WebSockets [RFC 6455](https://datatracker.ietf.org/doc/rfc6455/?include_text=1). Les sections 1 et 4-7 sont particulièrement intéressantes pour ce qui nous occupe. La section 10 évoque la sécurité et doit être connue et mise en oeuvre avant d'exposer votre serveur au-delà du réseau local / lors de la mise en production.
 
 Un serveur WebSocket est compris ici en "bas niveau" (_c'est-à-dire plus proche du langage machine que du langage humain_. Les WebSockets sont souvent séparés et spécialisés vis-à-vis de leurs homologues serveurs (pour des questions de montées en charge ou d'autres raisons), donc vous devez souvent utiliser un [proxy inverse](https://fr.wikipedia.org/wiki/Proxy_inverse) (_c'est-à-dire de l'extérieur vers l'intérieur du réseau local, comme pour un serveur HTTP classique_) pour détecter les "poignées de mains" spécifiques au WebSocket, qui précédent l'échange et permettent d'aiguiller les clients vers le bon logiciel. Dans ce cas, vous ne devez pas ajouter à votre serveur des _cookies_ et d'autres méthodes d'authentification.
 
@@ -38,17 +38,17 @@ Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
 ```
 
-Le client peut solliciter des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. En outre, des en-têtes communs tel que _User-Agent_, _Referer_, _Cookie_ ou des en-têtes d'authentification peuvent être envoyés par la même requête : leur usage est laissé libre car ils ne se rapportent pas directement au WebSocket et au processus de poignée de main. A ce titre il semble préférable de les ignorer : d'ailleurs dans de nombreuses configurations communes, un proxy inverse les aura finalement déjà traitées.
+Le client peut solliciter des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#miscellaneous) pour les détails. En outre, des en-têtes communs tel que _User-Agent_, _Referer_, _Cookie_ ou des en-têtes d'authentification peuvent être envoyés par la même requête : leur usage est laissé libre car ils ne se rapportent pas directement au WebSocket et au processus de poignée de main. A ce titre il semble préférable de les ignorer : d'ailleurs dans de nombreuses configurations communes, un proxy inverse les aura finalement déjà traitées.
 
-Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse "[400 Bad Request](/fr/docs/HTTP/Response_codes#400)" (_erreur 400 : la requête est incorrecte_) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (_en somme, tout dépend du comportement du client_). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête _Sec-WebSocket-Version_ correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (_voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction_). Maintenant, nous allons passer à l'entête attendu : _Sec-WebSocket-Key_.
+Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse "[400 Bad Request](/fr/docs/Web/HTTP/Status#400)" (_erreur 400 : la requête est incorrecte_) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (_en somme, tout dépend du comportement du client_). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête _Sec-WebSocket-Version_ correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (_voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction_). Maintenant, nous allons passer à l'entête attendu : _Sec-WebSocket-Key_.
 
 > [!NOTE]
-> Un grand nombre de navigateurs enverront un [`Entête d'origine`](/fr/docs/HTTP/Access_control_CORS#Origin). Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse [403 Forbidden](/fr/docs/HTTP/Response_codes#403) si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci.
+> Un grand nombre de navigateurs enverront un [`Entête d'origine`](/fr/docs/Web/HTTP/CORS#origin). Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse [403 Forbidden](/fr/docs/Web/HTTP/Status#403) si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci.
 
 > [!NOTE]
 > L'URI de la requête (`/chat` dans notre cas) n'a pas de signification particulièrement dans les spécifications en usage&nbsp;: elle permet simplement, par convention, de disposer d'une multitude d'applications en parallèle grâce à WebSocket. Par exemple, `exemple.com/chat` peut être associée à une API/une application de dialogue multiutilisateurs lorsque `/game` invoquera son homologue pour un jeu.
 
-> **Note :** [Les codes réguliers (_c-à-d défini par le protocole standard_) HTTP](/fr/docs/HTTP/Response_codes) ne peuvent être utilisés qu'**_avant_** la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée.
+> **Note :** [Les codes réguliers (_c-à-d défini par le protocole standard_) HTTP](/fr/docs/Web/HTTP/Status) ne peuvent être utilisés qu'**_avant_** la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée.
 
 ### La réponse du serveur lors de la poignée de mains
 
@@ -61,7 +61,7 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-En sus, le serveur peut décider de proposer des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. L'entête Sec-WebSocket-Accept nous intéresse ici : le serveur doit la former depuis l'entête Sec-WebSocket-Key envoyée précédemment par le client. Pour l'obtenir, vous devez concaténater (_rassembler_) la valeur de _Sec-WebSocket-Key_ et "_258EAFA5-E914-47DA-95CA-C5AB0DC85B11_" (valeur fixée par défaut : c'est une "[magic string](https://en.wikipedia.org/wiki/Magic_string)") puis procéder au hash par la méthode [SHA-1](https://en.wikipedia.org/wiki/SHA-1) du résultat et retourner le format au format [base64](https://en.wikipedia.org/wiki/Base64).
+En sus, le serveur peut décider de proposer des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#miscellaneous) pour les détails. L'entête Sec-WebSocket-Accept nous intéresse ici : le serveur doit la former depuis l'entête Sec-WebSocket-Key envoyée précédemment par le client. Pour l'obtenir, vous devez concaténater (_rassembler_) la valeur de _Sec-WebSocket-Key_ et "_258EAFA5-E914-47DA-95CA-C5AB0DC85B11_" (valeur fixée par défaut : c'est une "[magic string](https://en.wikipedia.org/wiki/Magic_string)") puis procéder au hash par la méthode [SHA-1](https://en.wikipedia.org/wiki/SHA-1) du résultat et retourner le format au format [base64](https://en.wikipedia.org/wiki/Base64).
 
 > [!NOTE]
 > Ce processus qui peut paraître inutilement complexe, permet de certifier que le serveur et le client sont bien sur une base WebSocket et non une requête HTTP (qui serait alors mal interprétée).
@@ -164,7 +164,7 @@ Server: (process complete message) Happy new year to you too!
 ```
 
 La première trame dispose d'un message en entier (FIN = 1 et optcode est différent de 0x0) : le serveur peut traiter la requête reçue et y répondre. A partir de la seconde trame et pour les deux suivantes (soit trois trames), l'opcode à 0x1 puis 0x0 signifie qu'il s'agit d'un texte suivi du reste du contenu (0x1 = texte ; 0x0 = la suite). La 3e trame à FIN = 1 indique la fin de la requête.
-Voir la [section 5.4](http://tools.ietf.org/html/rfc6455#section-5.4) de la spécification pour les détails de cette partie.
+Voir la [section 5.4](https://tools.ietf.org/html/rfc6455#section-5.4) de la spécification pour les détails de cette partie.
 
 ## Pings-Pongs : le "coeur" des WebSockets
 
@@ -177,14 +177,14 @@ Le _ping_ ou le _pong_ sont des trames classiques dites **de contrôle**. Les _p
 
 ## Clore la connexion
 
-La connexion peut être close à l'initiative du client ou du serveur grâce à l'envoi d'une trame de contrôle contenant des données spécifiques permettant d'interrompre la poignée de main (de lever définitivement le masque pour être plus précis ; voir la [section 5.5.1](http://tools.ietf.org/html/rfc6455#section-5.5.1)). Dès la réception de la trame, le récepteur envoit une trame spécifique de fermeture en retour (pour signifier la bonne compréhension de la fin de connexion). C'est l'émetteur à l'origine de la fermeture qui doit clore la connexion ; toutes les données supplémentaires sont éliminés / ignorés.
+La connexion peut être close à l'initiative du client ou du serveur grâce à l'envoi d'une trame de contrôle contenant des données spécifiques permettant d'interrompre la poignée de main (de lever définitivement le masque pour être plus précis ; voir la [section 5.5.1](https://tools.ietf.org/html/rfc6455#section-5.5.1)). Dès la réception de la trame, le récepteur envoit une trame spécifique de fermeture en retour (pour signifier la bonne compréhension de la fin de connexion). C'est l'émetteur à l'origine de la fermeture qui doit clore la connexion ; toutes les données supplémentaires sont éliminés / ignorés.
 
 ## Diverses informations utiles
 
 > [!NOTE]
-> L'ensemble des codes, extensions et sous-protocoles liés aux WebSocket sont enregistrés dans le (registre) [IANA WebSocket Protocol Registry](http://www.iana.org/assignments/websocket/websocket.xml).
+> L'ensemble des codes, extensions et sous-protocoles liés aux WebSocket sont enregistrés dans le (registre) [IANA WebSocket Protocol Registry](https://www.iana.org/assignments/websocket/websocket.xml).
 
-Les extensions et sous-protocoles des WebSockets sont négociés durant [l'échange des entêtes de la poignée de mains](#PoignéeDeMain). Si l'on pourrait croire qu'extensions et sous-protocles sont finalement la même chose, il n'en est rien : **le contrôle des extensions agit sur les trames** ce qui modifie la charge utile ; **alors que les sous-protocoles modifient uniquement la charge utile,** et rien d'autre. Les extensions sont optionnelles et généralisées (par exemple pour la compression des données) ; les sous-protocoles sont souvent obligatoires et ciblés (par exemple dans le cadre d'une application de chat ou d'un jeu MMORPG).
+Les extensions et sous-protocoles des WebSockets sont négociés durant [l'échange des entêtes de la poignée de mains](#poignéedemain). Si l'on pourrait croire qu'extensions et sous-protocles sont finalement la même chose, il n'en est rien : **le contrôle des extensions agit sur les trames** ce qui modifie la charge utile ; **alors que les sous-protocoles modifient uniquement la charge utile,** et rien d'autre. Les extensions sont optionnelles et généralisées (par exemple pour la compression des données) ; les sous-protocoles sont souvent obligatoires et ciblés (par exemple dans le cadre d'une application de chat ou d'un jeu MMORPG).
 
 > [!WARNING]
 > Les sous-extensions ou les sous-protocoles ne sont pas obligatoires pour l'échange de données par WebSockets ; mais l'esprit développé ici est de rendre soit plus efficace ou sécurisée la transmission (l'esprit d'une extension) ; soit de délimiter et de normaliser le contenu de l'échange (l'esprit d'un sous-protocole ; qui étend donc le protocole par défaut des WebSockets qu'est l'échange de texte simple au format UTF-8).
@@ -235,6 +235,6 @@ Si vous souhaitez que votre serveur puisse supporter certains sous-protocoles, v
 
 ## Contenus associés
 
-- [Tutorial: Websocket server in C#](/fr/docs/WebSockets/Writing_WebSocket_server)
-- [Writing WebSocket client applications](/fr/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Tutorial: Websocket server in C#](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
+- [Writing WebSocket client applications](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
 - [Tutorial: Websocket server in VB.NET](/fr/docs/WebSockets/WebSocket_Server_Vb.NET)

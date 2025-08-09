@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escap
 
 Um **escape de classe de caracteres unicode** é um tipo de [escape de classe de caracteres](/pt-BR/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) que corresponde a um conjunto de caracteres especificado por uma propriedade Unicode. Este escape é suportado apenas no [modo compatível com Unicode](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). Quando o marcador [`v`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) está habilitado, também pode ser usado para corresponder com textos de tamanho finito.
 
-{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp Unicode property escapes", "taller")}}
+
+```js interactive-example
+const sentence = "A ticket to 大阪 costs ¥2000 👌.";
+
+const regexpEmojiPresentation = /\p{Emoji_Presentation}/gu;
+console.log(sentence.match(regexpEmojiPresentation));
+// Expected output: Array ["👌"]
+
+const regexpNonLatin = /\P{Script_Extensions=Latin}+/gu;
+console.log(sentence.match(regexpNonLatin));
+// Expected output: Array [" ", " ", " 大阪 ", " ¥2000 👌."]
+
+const regexpCurrencyOrPunctuation = /\p{Sc}|\p{P}/gu;
+console.log(sentence.match(regexpCurrencyOrPunctuation));
+// Expected output: Array ["¥", "."]
+```
 
 ## Sintaxe
 
@@ -22,7 +38,6 @@ Um **escape de classe de caracteres unicode** é um tipo de [escape de classe de
 ### Parâmetros
 
 - `propriedadeSolitaria`
-
   - : Nome ou valor de uma propriedade Unicode solitária, seguindo a mesma sintaxe como `valor`. Ela especifica o valor para a propriedade `General_Category` (Categoria Geral), ou um [nome binário de propriedade (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). No modo [`v`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets), também pode ser uma [propriedade Unicode binária de textos (en-US)](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings).
 
     > [!NOTE]

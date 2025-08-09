@@ -71,7 +71,7 @@ Les messages poussés (<i lang="en">push messages</i> ou <i lang="en">push</i>) 
 
 La technologie en est à ses débuts. Certains exemples fonctionnels utilisent la plateforme Cloud de messagerie de Google, mais elles sont en cours de réécriture pour prendre en charge [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (<i lang="en">Voluntary Application Identification</i>) qui offre une couche de sécurité supplémentaire. Vous pouvez étudier [les exemples du livre de recettes des <i lang="en">service workers</i>](https://github.com/mdn/serviceworker-cookbook/tree/master/push-payload), essayer de mettre en place un serveur d'émission de messages utilisant [Firebase](https://firebase.google.com/) ou construire votre propre serveur (en utilisant Node.js par exemple).
 
-Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un <i lang="en">service worker</i> (voir les fondamentaux expliqués dans l'article [Fonctionnement hors connexion des PWA grâce aux <i lang="en">service workers</i>](/fr/docs/Web/Apps/Progressive/Offline_Service_workers)). Au sein du <i lang="en">service worker</i>, on peut créer un mécanisme d'abonnement au service push en appelant la méthode [`getSubscription()`](/fr/docs/Web/API/PushManager/getSubscription) de l'interface [`PushManager`](/fr/docs/Web/API/PushManager).
+Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un <i lang="en">service worker</i> (voir les fondamentaux expliqués dans l'article [Fonctionnement hors connexion des PWA grâce aux <i lang="en">service workers</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)). Au sein du <i lang="en">service worker</i>, on peut créer un mécanisme d'abonnement au service push en appelant la méthode [`getSubscription()`](/fr/docs/Web/API/PushManager/getSubscription) de l'interface [`PushManager`](/fr/docs/Web/API/PushManager).
 
 ```js
 navigator.serviceWorker.register("service-worker.js").then((registration) => {
@@ -158,7 +158,7 @@ registration.pushManager.subscribe({
 });
 ```
 
-Voyons maintenant la partie concernant l'abonnement. L'application envoie d'abord les détails de l'abonnement au format JSON au serveur en utilisant [`fetch()`](/fr/docs/Web/API/fetch).
+Voyons maintenant la partie concernant l'abonnement. L'application envoie d'abord les détails de l'abonnement au format JSON au serveur en utilisant [`fetch()`](/fr/docs/Web/API/Window/fetch).
 
 ```js
 fetch("./register", {

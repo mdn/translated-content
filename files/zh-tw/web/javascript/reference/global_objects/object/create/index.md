@@ -3,8 +3,6 @@ title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 
-{{JSRef}}
-
 **`Object.create()`** 指定其原型物件與屬性，創建一個新物件。
 
 ## 語法
@@ -84,7 +82,7 @@ MyClass.prototype.myMethod = function () {
 };
 ```
 
-[Object.assign](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且[有 polyfill](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill)。如需支援較舊的瀏覽器，可使用第三方套件實現如 [jQuery.extend()](https://api.jquery.com/jQuery.extend/) 或 [.assign()](https://lodash.com/docs/#assign) 。
+[Object.assign](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且[有 polyfill](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill)。如需支援較舊的瀏覽器，可使用第三方套件實現如 [jQuery.extend()](https://api.jquery.com/jQuery.extend/) 或 [.assign()](https://lodash.com/docs/#assign) 。
 
 ### `propertiesObject` 參數的使用
 

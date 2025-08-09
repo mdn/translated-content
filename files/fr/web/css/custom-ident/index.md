@@ -31,13 +31,11 @@ Afin d'éviter des ambiguïtés dangereuses, chaque propriété qui utilise `<cu
 - {{cssxref("counter-reset")}}
 
   {{cssxref("counter-increment")}}
-
   - : Interdit d'utiliser les valeurs CSS globales `unset`, `initial` et `inherit` ainsi que la valeur `none`.
 
 - {{cssxref("@counter-style")}}
 
   {{cssxref("list-style-type")}}
-
   - : Interdit d'utiliser les valeurs CSS globales `unset`, `initial` et `inherit` ainsi que les valeurs `none`, `inline`, `outside` et d'autres valeurs prédéfinies, implémentées par les différents navigateurs : `disc`, `circle`, `square`, `decimal`, `cjk-decimal`, `decimal-leading-zero`, `lower-roman`, `upper-roman`, `lower-greek`, `lower-alpha`, `lower-latin`, `upper-alpha`, `upper-latin`, `arabic-indic`, `armenian`, `bengali`, `cambodian`, `cjk-earthly-branch`, `cjk-heavenly-stem`, `cjk-ideographic`, `devanagari`, `ethiopic-numeric`, `georgian`, `gujarati`, `gurmukhi`, `hebrew`, `hiragana`, `hiragana-iroha`, `japanese-formal`, `japanese-informal`, `kannada`, `katakana`, `katakana-iroha`, `khmer`, `korean-hangul-formal`, `korean-hanja-formal`, `korean-hanja-informal`, `lao`, `lower-armenian`, `malayalam`, `mongolian`, `myanmar`, `oriya`, `persian`, `simp-chinese-formal`, `simp-chinese-informal`, `tamil`, `telugu`, `thai`, `tibetan`, `trad-chinese-formal`, `trad-chinese-informal`, `upper-armenian`, `disclosure-open` et `disclosure-close`.
 
 - {{cssxref("grid-row-start")}}

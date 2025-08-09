@@ -7,7 +7,7 @@ slug: Web/API/EventTarget/addEventListener
 
 ## Resumen
 
-`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/DOM/EventTarget) puede ser un simple [elemento](/es/docs/DOM/element) en un archivo, el mismo [`documento`](/es/docs/DOM/document) , una [`ventana`](/es/docs/DOM/window) o un [`XMLHttpRequest`](/es/docs/DOM/XMLHttpRequest).
+`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/Web/API/EventTarget) puede ser un simple [elemento](/es/docs/Web/API/Element) en un archivo, el mismo [`documento`](/es/docs/Web/API/Document) , una [`ventana`](/es/docs/Web/API/Window) o un [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest).
 
 Para registrar más de un eventListener, puedes llamar `addEventListener()` para el mismo elemento pero con diferentes tipos de eventos o parámetros de captura.
 
@@ -19,17 +19,17 @@ target.addEventListener(tipo, listener[, useCapture, wantsUntrusted {{ Non-stand
 ```
 
 - `tipo`
-  - : Una cadena representando el [tipo de evento](/es/docs/DOM/event.type) a escuchar.
+  - : Una cadena representando el [tipo de evento](/es/docs/Web/API/Event/type) a escuchar.
 - `listener`
-  - : El objeto que recibe una notificación cuando un evento de el tipo especificado ocurre. Debe ser un objeto implementando la interfaz [`EventListener`](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener) o solo una [function](/es/docs/JavaScript/Guide/Functions) en JavaScript.
+  - : El objeto que recibe una notificación cuando un evento de el tipo especificado ocurre. Debe ser un objeto implementando la interfaz [`EventListener`](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener) o solo una [function](/es/docs/Web/JavaScript/Guide/Functions) en JavaScript.
 - `useCapture` {{ optional_inline() }}
-
   - : Si es `true`, `useCapture` indica que el usuario desea iniciar la captura. Después de iniciar la captura, todos los eventos del tipo especificado serán lanzados al `listener` registrado antes de comenzar a ser controlados por algún `EventTarget` que esté por debajo en el arbol DOM del documento.
 
     > [!NOTE]
     > For event listeners attached to the event target; the event is in the target phase, rather than capturing and bubbling phases. Events in the target phase will trigger all listeners on an element regardless of the `useCapture` parameter.
 
-    > **Nota:** `useCapture` became optional only in more recent versions of the major browsers; for example, it was not optional prior to Firefox 6. You should provide that parameter for broadest compatibility.
+    > [!NOTE]
+    > `useCapture` became optional only in more recent versions of the major browsers; for example, it was not optional prior to Firefox 6. You should provide that parameter for broadest compatibility.
 
 <!---->
 
@@ -142,11 +142,11 @@ Si quieres pasar parámetros a la función del listener, debes utilizar funcione
 
 `addEventListener` es la forma de registrar un listener de eventos, como se especifica en W3C DOM. Sus beneficios son los siguientes:
 
-- Permite agregar mas de un listener a un solo evento. Esto es particularmente útil para las librerias [DHTML](/es/docs/DHTML) o las [Extensiones de Mozilla](/es/docs/Extensions) que deben funcionar bien, incluso si se utilizan otras librerias/extensiones.
+- Permite agregar mas de un listener a un solo evento. Esto es particularmente útil para las librerias [DHTML](/es/docs/Glossary) o las [Extensiones de Mozilla](/es/docs/Extensions) que deben funcionar bien, incluso si se utilizan otras librerias/extensiones.
 - Da un control mas detallado de la fase en la que el listener se activa (capturing vs. bubbling)
 - Funciona en cualquier elemento del DOM, no únicamente con elementos de HTML.
 
-La alternativa, [Antigua forma de registrar event listeners](#Older_way_to_register_event_listeners) es descrita a continuación.
+La alternativa, [Antigua forma de registrar event listeners](#older_way_to_register_event_listeners) es descrita a continuación.
 
 ### Adding a listener during event dispatch
 
@@ -171,7 +171,7 @@ In the example above, the value of `this` within `modifyText()` when called from
 The value of `this` within `modifyText()` when called from the onclick event will be a reference to the global (window) object.
 
 > [!NOTE]
-> JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/es/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
+> JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
 
 This is an example with and without `bind`:
 
@@ -232,7 +232,7 @@ There is a drawback to `attachEvent`, the value of `this` will be a reference to
 
 ### Older way to register event listeners
 
-`addEventListener()` was introduced with the DOM 2 [Events](http://www.w3.org/TR/DOM-Level-2-Events) specification. Before then, event listeners were registered as follows:
+`addEventListener()` was introduced with the DOM 2 [Events](https://www.w3.org/TR/DOM-Level-2-Events) specification. Before then, event listeners were registered as follows:
 
 ```js
 // Pass a function reference — do not add '()' after it, which would call the function!
@@ -281,6 +281,6 @@ In the first case, a new (anonymous) function is created at each loop turn. In t
 
 ## See Also
 
-- [element.removeEventListener()](/es/docs/DOM/element.removeEventListener)
-- [Creating and triggering custom events](/es/docs/DOM/Creating_and_triggering_events)
-- [More details on the use of `this` in event handlers](http://www.quirksmode.org/js/this.html)
+- [element.removeEventListener()](/es/docs/Web/API/EventTarget/removeEventListener)
+- [Creating and triggering custom events](/es/docs/Web/Events/Creating_and_triggering_events)
+- [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)

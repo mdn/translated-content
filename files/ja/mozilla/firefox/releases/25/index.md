@@ -3,8 +3,6 @@ title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリリースされました。このページでは、開発者に影響する Firefox 25 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -20,12 +18,12 @@ Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリ
 ### CSS
 
 - {{cssxref("background-attachment")}} CSS プロパティの値として、キーワード `local` をサポートしました ([Firefox バグ 483446](https://bugzil.la/483446))。
-- オペレーティングシステムのバージョンを検出するための、非標準で Mozilla だけのメディアクエリーをサポートしました: [`-moz-os-version`](/ja/docs/Web/Guide/CSS/Media_queries#-moz-os-version) ([Firefox バグ 810399](https://bugzil.la/810399))。現在このプロパティは、Windows のみで実装されています。
+- オペレーティングシステムのバージョンを検出するための、非標準で Mozilla だけのメディアクエリーをサポートしました: [`-moz-os-version`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-os-version) ([Firefox バグ 810399](https://bugzil.la/810399))。現在このプロパティは、Windows のみで実装されています。
 - {{cssxref("-moz-osx-font-smoothing")}} CSS プロパティを実装しました ([Firefox バグ 857142](https://bugzil.la/857142))。
 
 ### HTML
 
-- {{HTMLElement("iframe")}} の [`srcdoc`](/ja/docs/Web/HTML/Element/iframe#srcdoc) 属性をサポートしました。これは、{{HTMLElement("iframe")}} のコンテンツをインラインで記載できる属性です ([Firefox バグ 802895](https://bugzil.la/802895))。
+- {{HTMLElement("iframe")}} の [`srcdoc`](/ja/docs/Web/HTML/Reference/Elements/iframe#srcdoc) 属性をサポートしました。これは、{{HTMLElement("iframe")}} のコンテンツをインラインで記載できる属性です ([Firefox バグ 802895](https://bugzil.la/802895))。
 - `"image/jpeg"` タイプとともに使用するとき `HTMLCanvasElement.toBlob` メソッドは、画像の品質を指定する第 3 引数を受け入れます ([Firefox バグ 891884](https://bugzil.la/891884))。
 
 ### JavaScript
@@ -42,8 +40,8 @@ Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリ
 
 ### インターフェイス/API/DOM
 
-- [Web Audio API](/ja/docs/Web_Audio_API) をサポートしました。以前は不完全な実装を、設定のもとで使用できました ([Firefox バグ 779297](https://bugzil.la/779297))。
-- Windows の IME に関するキーの一部を `KeyboardEvent.key` でサポートしました ([Firefox バグ 865565](https://bugzil.la/865565))。詳しくは[キー名の表](/ja/docs/Web/API/KeyboardEvent#Key_names_and_Char_values)をご覧ください。
+- [Web Audio API](/ja/docs/Web/API/Web_Audio_API) をサポートしました。以前は不完全な実装を、設定のもとで使用できました ([Firefox バグ 779297](https://bugzil.la/779297))。
+- Windows の IME に関するキーの一部を `KeyboardEvent.key` でサポートしました ([Firefox バグ 865565](https://bugzil.la/865565))。詳しくは[キー名の表](/ja/docs/Web/API/KeyboardEvent#key_names_and_char_values)をご覧ください。
 - Metro 版 Firefox が、デスクトップ版と同じ方法でキーイベントを発生させるようになりました ([Firefox バグ 843236](https://bugzil.la/843236))。
 - 前の `keydown` イベントの `preventDefault()` が呼び出された場合は`keypress` イベントが発生しないようになりました ([Firefox バグ 501496](https://bugzil.la/501496))。詳しくは [`keydown` イベントのドキュメント](</ja/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event> "Web/Reference/Events/keydown#preventDefault()_of_keydown_event")をご覧ください。
 - `Future` インターフェイスの名称を `Promise` に変更しました ([Firefox バグ 884279](https://bugzil.la/884279))。

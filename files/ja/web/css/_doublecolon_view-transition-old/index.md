@@ -1,15 +1,15 @@
 ---
-title: "::view-transition-old"
+title: ::view-transition-old
 slug: Web/CSS/::view-transition-old
 l10n:
   sourceCommit: c9cc38c3c3c342e2e952c1acd57f55e104c5bb06
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-old`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、ビュー遷移の「古い」ビュー状態、すなわちトランジション前の古いビューの静的なスクリーンショットを表します。
 
-ビュー遷移の間、 `::view-transition-old` は[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transitions_API/Using#ビュー遷移のプロセス)で説明されているように、関連する擬似要素ツリーに記載されます。これは {{cssxref("::view-transition-image-pair")}} の子要素でしかなく、子要素を持つことはありません。
+ビュー遷移の間、 `::view-transition-old` は[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス)で説明されているように、関連する擬似要素ツリーに記載されます。これは {{cssxref("::view-transition-image-pair")}} の子要素でしかなく、子要素を持つことはありません。
 
 これは置換要素であり、 {{cssxref("object-fit")}} や {{cssxref("object-position")}} などのプロパティで操作できます。コンテンツのサイズに等しい自然な寸法を持ちます。
 
@@ -34,7 +34,8 @@ html::view-transition-old(*) {
 }
 ```
 
-> **メモ:** `::view-transition-old` のアニメーションを設定するために、追加のビュー遷移スタイルシートスタイルも設定されます。これらはビュー遷移中に動的に生成されます。詳細は仕様書の [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) および [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) の節を参照してください。
+> [!NOTE]
+> `::view-transition-old` のアニメーションを設定するために、追加のビュー遷移スタイルシートスタイルも設定されます。これらはビュー遷移中に動的に生成されます。詳細は仕様書の [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) および [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) の節を参照してください。
 
 ## 構文
 
@@ -105,5 +106,5 @@ figcaption {
 
 ## 関連情報
 
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
 - [ビュー遷移 API によるスムーズでシンプルなトランジション](https://developer.chrome.com/docs/web-platform/view-transitions/)

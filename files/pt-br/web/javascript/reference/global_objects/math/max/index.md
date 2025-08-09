@@ -61,7 +61,7 @@ function getMaxOfArray(numArray) {
 }
 ```
 
-O novo [operador spread](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) é um modo curto de se escrever a solução com `apply` para retornar o maior valor de um array.
+O novo [operador spread](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax) é um modo curto de se escrever a solução com `apply` para retornar o maior valor de um array.
 
 ```js
 var arr = [1, 2, 3];
@@ -69,7 +69,7 @@ var max = Math.max(...arr);
 // max: 3
 ```
 
-Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o resultado errado caso o array tenha muitos elementos, porque eles tentam passar o array de elementos como parâmetros de funções. Veja [usando apply e funções embutidas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Usando_apply_e_funções_embutidas) para mais detalhes. A solução com `reduce` não apresenta esse problema.
+Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o resultado errado caso o array tenha muitos elementos, porque eles tentam passar o array de elementos como parâmetros de funções. Veja [usando apply e funções embutidas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#usando_apply_e_funções_embutidas) para mais detalhes. A solução com `reduce` não apresenta esse problema.
 
 ## Especificações
 

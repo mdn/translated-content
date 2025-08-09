@@ -16,8 +16,7 @@ history.pushState(state, title, [url])
 ### Parámetros
 
 - `state`
-
-  - : El objeto `state` es un objeto de JavaScript asociado al nuevo registro en el historial creado por `pushState()`. Cuando el usuario navega al nuevo registro, un evento [`popstate`](/es/docs/Web/Reference/Events/popstate) es accionado, y la propiedad `state` del evento contiene una copia del objeto `state` del registro en el historial.
+  - : El objeto `state` es un objeto de JavaScript asociado al nuevo registro en el historial creado por `pushState()`. Cuando el usuario navega al nuevo registro, un evento [`popstate`](/es/docs/Web/API/Window/popstate_event) es accionado, y la propiedad `state` del evento contiene una copia del objeto `state` del registro en el historial.
 
     El objeto `state` puede ser cualquier cosa que pueda ser serializada. Porque Firefox guarda los objetos `state` en el disco del usuario para que así puedan ser restaurados luego de que el usuario reinicia el navegador, se impone un límite de 640k caracteres en la representación serializada de un objeto `state`. Si pasas un objeto `state` con una representación serializada más grande que lo mencionado, a `pushState()`, el método arrojará una excepción. Si necesitas más espacio que el mencionado, es recomendable que uses {{domxref("Window.sessionStorage", "sessionStorage")}} y/o {{domxref("Window.localStorage", "localStorage")}}.
 
@@ -34,7 +33,7 @@ En cierto sentido, llamar a `pushState()` es similar a `window.location = "#foo"
 - No tienes que cambiar la URL si no quieres. En contraste, usar `window.location = "#foo";` sólo crea un nuevo registro en el historial si el _hash_ actual no es `#foo`.
 - Puedes asociar datos arbitrarios a tu nuevo registro en el historial. Con el truco del _hash_, necesitas codificar todos los datos relevantes en una corta cadena de texto.
 
-Cabe destacar que `pushState()` nunca hace que el evento [`hashchange`](/es/docs/Web/Reference/Events/hashchange) sea accionado, incluso si la nueva URL difiere de la URL antigua sólo en su _hash_.
+Cabe destacar que `pushState()` nunca hace que el evento [`hashchange`](/es/docs/Web/API/Window/hashchange_event) sea accionado, incluso si la nueva URL difiere de la URL antigua sólo en su _hash_.
 
 En otros documentos, crea u nelemento con una URI `null`.
 

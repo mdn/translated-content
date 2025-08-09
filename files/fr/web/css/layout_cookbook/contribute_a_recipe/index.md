@@ -21,7 +21,6 @@ Une recette se décompose comme suit :
 1. Un exemple interactif, stocké [sur le dépôt GitHub des exemples CSS](https://github.com/mdn/css-examples)
 2. Une version téléchargeable de cet exemple, également stockée sur le dépôt des exemples CSS.
 3. Une page MDN, rattachée à la section [Livre de recettes CSS](/fr/docs/Web/CSS/Layout_cookbook) qui contient :
-
    1. Les spécifications sommaires
    2. La recette
    3. Les choix effectués
@@ -72,7 +71,7 @@ Ouvrez une _pull request_ depuis votre _fork_ vers le [dépôt des exemples CSS]
 
 ### 5. Créer la page sur MDN
 
-Une fois l'exemple fusionné, vous pouvez créer l'article correspondant sur MDN. Pour cela, vous aurez besoin d'un compte et [des permissions pour la création de page](/fr/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions). Vous pourrez alors créer une page comme sous-page de la section. [Cette page modèle pourra vous servir de point de départ pour votre contenu](/fr/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
+Une fois l'exemple fusionné, vous pouvez créer l'article correspondant sur MDN. Pour cela, vous aurez besoin d'un compte et [des permissions pour la création de page](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page_creation_permissions). Vous pourrez alors créer une page comme sous-page de la section. [Cette page modèle pourra vous servir de point de départ pour votre contenu](/fr/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
 
 Le modèle explique le contenu de chaque section. Vous pouvez également consulter les recettes existantes comme références. Si vous cliquez sur le bouton d'édition en haut de page, vous pourrez ainsi accéder au contenu « brut » de la page et voir comment les macros sont utilisées afin d'intégrer les données de compatibilité ou les exemples interactifs.
 

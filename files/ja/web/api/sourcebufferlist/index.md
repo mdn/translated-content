@@ -5,7 +5,7 @@ slug: Web/API/SourceBufferList
 
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-**`SourceBufferList`** インターフェイスは、複数の {{domxref("SourceBuffer")}} オブジェクトの単純なコンテナリストを表します。
+**`SourceBufferList`** インターフェイスは、複数の {{domxref("SourceBuffer")}} オブジェクトの単純なコンテナーリストを表します。
 
 特定の `MediaSource` に追加された `SourceBuffer` を含むソースバッファのリストは、{{domxref("MediaSource.sourceBuffers")}} プロパティを使用して取得できます。 個々のソースバッファは、配列演算子（つまり `[]`）または {{jsxref("Array.forEach", "forEach()")}} などの関数を使用してアクセスできます。
 
@@ -27,14 +27,14 @@ slug: Web/API/SourceBufferList
 
 _親インターフェイスである {{domxref("EventTarget")}} からメソッドを継承します。_
 
-- [`SourceBufferList`: indexed property getter](/ja/docs/Web/API/SourceBufferList/SourceBuffer)
+- [`SourceBufferList`: indexed property getter](/ja/docs/Web/API/SourceBufferList)
   - : このゲッターにより、リスト内の `SourceBuffer` オブジェクトに配列演算子（つまり `[]`）でアクセスできます。
 
 ## 例
 
 未定
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

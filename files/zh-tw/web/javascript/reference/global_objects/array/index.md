@@ -3,8 +3,6 @@ title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 ---
 
-{{JSRef}}
-
 JavaScript 中的 **`Array`** 全域物件被用於建構陣列；陣列為高階（high-level）、似列表（list-like）的物件。陣列在 Javascript 裡面並沒有固定的長度與型別。由於陣列的長度可以隨時被改變，所以並不能保證陣列的密度。這取決於開發者如何使用陣列。一般來說，這是個非常方便的特性，但如果這並不適用於你的開發工作，你也許會考慮使用型別陣列。
 
 ## 語法
@@ -437,7 +435,7 @@ console.table(values);
 ## 參見
 
 - [JavaScript Guide: 「Indexing object properties」](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties)
-- [JavaScript Guide: 「Predefined Core Objects: `Array` Object」](/zh-TW/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_Object)
-- [Array comprehensions](/zh-TW/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)
+- [JavaScript Guide: 「Predefined Core Objects: `Array` Object」](/zh-TW/docs/Web/JavaScript/Guide#array_object)
+- [Array comprehensions](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Polyfill for JavaScript 1.8.5 Array Generics and ECMAScript 5 Array Extras](https://github.com/plusdude/array-generics)
-- [Typed Arrays](/zh-TW/docs/JavaScript_typed_arrays)
+- [Typed Arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)

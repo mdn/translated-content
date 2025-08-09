@@ -3,11 +3,9 @@ title: Physics
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 5 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html)完成本课程后找到源代码
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 5 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html)完成本课程后找到源代码
 
 为了在我们的游戏中的对象之间进行正确的碰撞检测，我们将需要物理学; 本文将向你介绍 Phaser 中的可用内容，以及演示典型的简单设置。
 
@@ -87,6 +85,6 @@ function update() {}
 
 ## 下一步
 
-现在我们可以转到下一课，看看如何让球[从墙上弹起](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls)。
+现在我们可以转到下一课，看看如何让球[从墙上弹起](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}

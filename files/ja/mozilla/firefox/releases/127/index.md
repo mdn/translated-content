@@ -5,15 +5,13 @@ l10n:
   sourceCommit: 81b27da7107783b4a4d9ff245a99d93f6d3efc3a
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 127 の変更点をまとめています。Firefox 127 は、米国時間 [2024 年 6 月 11 日](https://whattrainisitnow.com/release/?version=127) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Element/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
+- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
 
 ### CSS
 
@@ -22,7 +20,6 @@ l10n:
 ### JavaScript
 
 - [`Set`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set) の、以下のメソッドをサポートしました ([Firefox bug 1868423](https://bugzil.la/1868423)):
-
   - [`Set.prototype.intersection()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection) — 自身の Set と指定した Set の両方に存在する要素を持つ、新しい Set を返します。
   - [`Set.prototype.union()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/union) — 自身の Set と指定した Set にあるすべての要素を持つ、新しい Set を返します。
   - [`Set.prototype.difference()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/difference) — 自身の Set に存在するが指定した Set には存在しない要素を持つ、新しい Set を返します。
@@ -33,7 +30,7 @@ l10n:
 
 ### SVG
 
-- CSS では [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#css) で初めにサポートされた行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) を、SVG でもサポートしました。これらは CSS プロパティの値 `stroke-width: 0.5lh` や SVG 属性の値 `stroke-width="0.5lh"` のどちらでも使用できます ([Firefox bug 1892089](https://bugzil.la/1892089))。
+- CSS では [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#css) で初めにサポートされた行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) を、SVG でもサポートしました。これらは CSS プロパティの値 `stroke-width: 0.5lh` や SVG 属性の値 `stroke-width="0.5lh"` のどちらでも使用できます ([Firefox bug 1892089](https://bugzil.la/1892089))。
 
 ### セキュリティ
 

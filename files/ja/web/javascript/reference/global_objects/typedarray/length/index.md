@@ -9,7 +9,16 @@ l10n:
 
 **`length`** は {{jsxref("TypedArray")}} インスタンスのアクセサープロパティで、型付き配列の長さを（要素数で）返します。
 
-{{EmbedInteractiveExample("pages/js/typedarray-length.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.length", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer, 2);
+
+console.log(uint8.length);
+// Expected output: 6
+```
 
 ## 解説
 

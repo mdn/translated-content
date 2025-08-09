@@ -2,16 +2,54 @@
 title: flex-wrap
 slug: Web/CSS/flex-wrap
 l10n:
-  sourceCommit: 1a07a1f7f623d94a8454414d1a4df9add04ddd5e
+  sourceCommit: 1f12a4156d4aec63d8466c49a39b1ac76d8a5735
 ---
-
-{{CSSRef}}
 
 **`flex-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。
 
-{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
+{{InteractiveExample("CSS デモ: flex-wrap")}}
 
-他のプロパティや詳細情報については [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)をご覧ください。
+```css interactive-example-choice
+flex-wrap: nowrap;
+```
+
+```css interactive-example-choice
+flex-wrap: wrap;
+```
+
+```css interactive-example-choice
+flex-wrap: wrap-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+    <div>Item Four</div>
+    <div>Item Five</div>
+    <div>Item Six</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
+
+{{cssxref("flex-flow")}} プロパティは、 {{CSSXRef("flex-direction")}} と `flex-wrap` の両プロパティを一括指定することができ、それぞれフレックスコンテナーの主軸及び交差軸を定義します。
 
 ## 構文
 
@@ -28,18 +66,16 @@ flex-wrap: revert-layer;
 flex-wrap: unset;
 ```
 
-`flex-wrap` プロパティは次の値のリストから選択した単一のキーワードで指定します。
-
 ### 値
 
-以下の値を利用することができます。
+`flex-wrap` プロパティは以下の値のリストから選択した単一のキーワードで指定します。
 
 - `nowrap`
-  - : フレックスアイテムは単一行に配置され、フレックスコンテナーからあふれることもあります。 `cross-start` は、 {{cssxref("flex-direction")}} の値に応じて `start` または `before` と同一になります。
+  - : フレックスアイテムは単一行に配置され、フレックスコンテナーからはみ出すこともあります。交差軸の先頭は、 {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
 - `wrap`
-  - : フレックスアイテムは複数行に分割されます。 `cross-start` は `flex-direction` の値に応じて `start` または `before` と同一になり、 `cross-end` は、指定された `cross-start` の反対側になります。
+  - : フレックスアイテムは複数行に分割されます。交差軸の先頭は、現在の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)および {{cssxref("flex-direction")}} の値に応じて、[インラインの先頭またはブロックの先頭](/ja/docs/Glossary/Flow_relative_values)のどちらかと等しくなります。
 - `wrap-reverse`
-  - : `wrap` と同様に動作しますが、 `cross-start` と `cross-end` が入れ替わります。
+  - : `wrap` と同様に動作しますが、交差軸の先頭と末尾が入れ替わります。
 
 ## 公式定義
 
@@ -55,7 +91,7 @@ flex-wrap: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_flex_container_wrap_values
 <h4>This is an example for flex-wrap:wrap</h4>
 <div class="content">
   <div class="red">1</div>
@@ -78,8 +114,8 @@ flex-wrap: unset;
 
 #### CSS
 
-```css
-/* Common Styles */
+```css live-sample___setting_flex_container_wrap_values
+/* 共通スタイル */
 .content,
 .content1,
 .content2 {
@@ -106,7 +142,7 @@ flex-wrap: unset;
   background: steelblue;
 }
 
-/* Flexbox Styles */
+/* フレックスボックススタイル */
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -123,7 +159,7 @@ flex-wrap: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('フレックスコンテナーの_wrap_値の設定', '', '700') }}
+{{ EmbedLiveSample('Setting flex container wrap values', '', '700') }}
 
 ## 仕様書
 
@@ -135,6 +171,8 @@ flex-wrap: unset;
 
 ## 関連情報
 
-- {{CSSXRef("flex-flow")}} は `flex-wrap` および {{CSSXRef("flex-direction")}} プロパティの一括指定プロパティです。
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
+- {{CSSXRef("flex-direction")}}
+- {{CSSXRef("flex-flow")}} 一括指定
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール

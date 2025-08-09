@@ -2,14 +2,59 @@
 title: border-left-style
 slug: Web/CSS/border-left-style
 l10n:
-  sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
-
-{{CSSRef}}
 
 **`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
-{{EmbedInteractiveExample("pages/css/border-left-style.html")}}
+{{InteractiveExample("CSS デモ: border-left-style")}}
+
+```css interactive-example-choice
+border-left-style: none;
+```
+
+```css interactive-example-choice
+border-left-style: dotted;
+```
+
+```css interactive-example-choice
+border-left-style: dashed;
+```
+
+```css interactive-example-choice
+border-left-style: solid;
+```
+
+```css interactive-example-choice
+border-left-style: groove;
+```
+
+```css interactive-example-choice
+border-left-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
@@ -53,7 +98,7 @@ border-left-style: unset;
 
 #### HTML
 
-```html
+```html live-sample___examples
 <table>
   <tr>
     <td class="b1">none</td>
@@ -76,7 +121,7 @@ border-left-style: unset;
 
 #### CSS
 
-```css
+```css live-sample___examples
 /* 表の外見を定義 */
 table {
   border-width: 2px;
@@ -122,7 +167,7 @@ td {
 
 #### 結果
 
-{{ EmbedLiveSample('例', 300, 200) }}
+{{ EmbedLiveSample('Examples', 300, 200) }}
 
 ## 仕様書
 

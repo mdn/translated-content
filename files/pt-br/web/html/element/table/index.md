@@ -7,7 +7,93 @@ slug: Web/HTML/Element/table
 
 O elemento **`<table>`** [HTML](/pt-BR/docs/Web/HTML) representa dados tabulares — isto é, informações apresentadas em uma tabela bidimensional composta por linhas e colunas de células contendo dados .
 
-{{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Front-end web developer course 2021
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Person</th>
+      <th scope="col">Most interest in</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Chris</th>
+      <td>HTML tables</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th scope="row">Dennis</th>
+      <td>Web accessibility</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th scope="row">Sarah</th>
+      <td>JavaScript frameworks</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th scope="row">Karen</th>
+      <td>Web performance</td>
+      <td>36</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Average age</th>
+      <td>33</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+```
 
 ## Contexto de uso
 
@@ -46,7 +132,7 @@ O elemento **`<table>`** [HTML](/pt-BR/docs/Web/HTML) representa dados tabulares
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos pais permitidos</th>
@@ -75,14 +161,12 @@ O elemento **`<table>`** [HTML](/pt-BR/docs/Web/HTML) representa dados tabulares
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ### Atributos depreciados
 
 - `align` {{Deprecated_inline}}
-
   - : Este atributo [enumerado](/pt-BR/docs/Glossary/Enumerated) indica como a tabela deve ser alinhada dentro do documento que a contém. Pode ter os seguintes valores:
-
     - `left`: a tabela é exibida no lado esquerdo do documento;
     - `center`: a tabela é exibida no centro do documento;
     - `right`: a tabela é exibida no lado direito do documento.
@@ -90,39 +174,32 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     Defina {{cssxref("margin-left")}} e {{cssxref("margin-right")}} como `auto` ou {{cssxref("margin")}} como `0 auto` para obter um efeito que é semelhante ao atributo align.
 
 - `bgcolor` {{Deprecated_inline}}
-
   - : A cor de fundo da tabela. É um [código RGB hexadecimal de 6 dígitos](/pt-BR/docs/Web/CSS/hex-color), prefixado por um '`#`'. Uma das [palavras-chave de cor] predefinidas (/pt-BR/docs/Web/CSS/named-color) também pode ser usada.
 
     Para obter um efeito semelhante, use a propriedade CSS {{cssxref("background-color")}}.
 
 - `border` {{Deprecated_inline}}
-
   - : Este atributo inteiro define, em pixels, o tamanho do quadro ao redor da tabela. Se definido como 0, o atributo [`frame`](#frame) é definido como void.
 
     Para obter um efeito semelhante, use a propriedade abreviada CSS {{cssxref("border")}}.
 
 - `cellpadding` {{Deprecated_inline}}
-
   - : Este atributo define o espaço entre o conteúdo de uma célula e sua borda, exibida ou não. Se o comprimento do preenchimento da célula for definido em pixels, esse espaço de tamanho de pixel será aplicado a todos os quatro lados do conteúdo da célula. Se o comprimento for definido usando um valor percentual, o conteúdo será centralizado e o espaço vertical total (superior e inferior) representará este valor. O mesmo vale para o espaço horizontal total (esquerda e direita).
 
     Para obter um efeito semelhante, aplique a propriedade {{cssxref("border-collapse")}} ao elemento `<table>`, com seu valor definido para recolher, e a propriedade {{cssxref("padding")}} aos elementos {{HTMLElement("td")}}.
 
 - `cellspacing` {{Deprecated_inline}}
-
   - : Este atributo define o tamanho do espaço entre duas células em um valor percentual ou pixels. O atributo é aplicado horizontal e verticalmente, ao espaço entre o topo da tabela e as células da primeira linha, a esquerda da tabela e a primeira coluna, a direita da tabela e a última coluna e a parte inferior da tabela e a última linha.
 
     Para obter um efeito semelhante, aplique a propriedade {{cssxref("border-spacing")}} ao elemento `<table>`. `border-spacing` não tem nenhum efeito se {{cssxref("border-collapse")}} estiver definido para recolher.
 
 - `frame` {{Deprecated_inline}}
-
   - : Este atributo enumerado define qual lado do quadro ao redor da tabela deve ser exibido.
 
     Para obter um efeito semelhante, use as propriedades {{cssxref("border-style")}} e {{cssxref("border-width")}}.
 
 - `rules` {{Deprecated_inline}}
-
   - : Este atributo enumerado define onde as rules, ou seja, as linhas, devem aparecer em uma tabela. Pode ter os seguintes valores:
-
     - `none`, que indica que nenhuma regra será exibida; é o valor padrão;
     - `groups`, que fará com que as regras sejam exibidas entre os grupos de linhas (definidas por {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} e {{HTMLElement("tfoot") }} elementos) e entre grupos de colunas (definidos apenas pelos elementos {{HTMLElement("col")}} e {{HTMLElement("colgroup")}});
     - `rows`, que fará com que as regras sejam exibidas entre as linhas;
@@ -687,9 +764,8 @@ Se a tabela não puder ser separada, use uma combinação de [`id`](/pt-BR/docs/
 
 ## Veja também
 
-- [Tutorial de tabela de dados HTML](/pt-BR/docs/Learn/HTML/Tables)
+- [Tutorial de tabela de dados HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - Propriedades CSS que podem ser especialmente úteis para estilizar o elemento `<table>`:
-
   - {{cssxref("width")}} para controlar a largura da tabela;
   - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} , {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} para controlar o aspecto das bordas das células, réguas e moldura;
   - {{cssxref("margin")}} e {{cssxref("padding")}} para estilizar o conteúdo da célula individual;

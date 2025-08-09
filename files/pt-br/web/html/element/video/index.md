@@ -7,7 +7,21 @@ slug: Web/HTML/Element/video
 
 O elemento [HTML](/pt-BR/docs/Web/HTML) **`<video>`** incorpora um reprodutor de mídia que suporta a reprodução de vídeo no documento. Você também pode usar `<video>` para conteúdo de áudio, mas o elemento {{HTMLElement("audio")}} pode proporcionar uma experiência de usuário mais adequada.
 
-{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250">
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 O exemplo acima mostra um uso simples do elemento `<video>`. Semelhante ao elemento {{htmlelement("img")}}, incluímos o caminho da mídia que queremos exibir dentro do atributo `src`; também podemos incluir outros atributos para especificar informações, como largura e altura do vídeo, se queremos que ele seja reproduzido automaticamente e em loop, se queremos mostrar os controles de vídeo padrão do navegador etc.
 
@@ -18,7 +32,6 @@ O conteúdo dentro das tags de abertura e fechamento `<video></video>` é exibid
 Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `autoplay`
-
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
     > [!NOTE]
@@ -31,7 +44,6 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 - `controls`
   - : Se esse atributo estiver presente, o navegador oferecerá controles para permitir o usuário controlar a reprodução do vídeo, incluindo volume, navegação (seek), e pausa/continuação da reprodução.
 - `controlslist`
-
   - : O atributo [`controlslist`](https://wicg.github.io/controls-list/explainer.html), quando definido, ajuda o navegador a selecionar que controles mostrar no elemento `video` sempre que o navegador exibir o seu próprio conjunto de controles (ou seja, quando o atributo `controls` for especificado).
 
     Os valores permitidos são `nodownload`, `nofullscreen` e `noremoteplayback`.
@@ -39,9 +51,7 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
     Use o atributo [`disablepictureinpicture`](#disablepictureinpicture) se você quiser desabilitar o modo Picture-In-Picture (e o controle).
 
 - `crossorigin`
-
   - : Esse atributo [enumerado](/pt-BR/docs/Glossary/Enumerated) indica se deve usar CORS para buscar o vídeo relacionado. [Recursos habilitados para CORS](/pt-BR/docs/Web/HTML/CORS_enabled_image) podem ser reutilizados no elemento {{HTMLElement("canvas")}} sem serem _contaminados_. Os valores permitidos são:
-
     - `anonymous`
       Envia uma solicitação de origem cruzada sem uma credencial. Em outras palavras, ele envia o cabeçalho HTTP `Origin:` sem um cookie, certificado X.509 ou realizar uma autenticação HTTP Basic. Se o servidor não fornecer credenciais ao site de origem (não definindo o cabeçalho HTTP `Access-Control-Allow-Origin:`), o recurso será contaminado e seu uso restrito.
     - `use-credentials`
@@ -52,7 +62,6 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 - `disablepictureinpicture`
   - : Impede o navegador de sugerir um menu de contexto Picture-in-Picture ou de solicitar automaticamente o Picture-in-Picture em alguns casos..
 - `disableremoteplayback`
-
   - : Um atributo Booleano usado para desativar a capacidade de reprodução remota em dispositivos conectados usando tecnologias com fio (HDMI, DVI, etc.) e sem fio (Miracast, Chromecast, DLNA, AirPlay, etc.).
 
     No Safari, você pode usar [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) como alternativa.
@@ -68,9 +77,7 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 - `poster`
   - : Uma URL indicando uma imagem de prévia do vídeo até o usuário reproduzir ou navegar por ele. Se este atributo não estiver especificado, nada será mostrado até que o primeiro quadro esteja disponível; então o primeiro quadro será exibido como imagem de prévia.
 - `preload`
-
   - : Esse atributo enumerado pretende dar uma sugestão ao navegador sobre o que o autor pensa que proporcionará uma melhor experiência do usuário. Ele pode ter os seguintes valores:
-
     - `none`: indica que o usuário não necessitará consultar o vídeo ou que o servidor quer minimizar seu tráfego; em outros termos indica que o vídeo não deve ser pré-carregado.
     - `metadata`: indica que embora o usuário não necessitará consultar o vídeo, pegar os meta-dados (ex: comprimento) é interessante.
     - `auto`: indica que o usuário necessita ter prioridade; em outros termos isso indicou que, se necessário, o vídeo inteiro pode ser baixado, mesmo que não seja esperado a execução.
@@ -286,7 +293,7 @@ Os navegadores não dão suporte a todos os mesmos formatos de vídeo; você pod
 </video>
 ```
 
-Nós oferecemos um guia abrangente e detalhado sobre [tipos de arquivos de mídia](/pt-BR/docs/Web/Media/Formats) e o [guia sobre os codecs compatíveis com vídeo](/pt-BR/docs/Web/Media/Formats/Video_codecs). Também está disponível um [guia sobre os codecs de áudio](/pt-BR/docs/Web/Media/Formats/Audio_codecs) que podem ser usados com eles.
+Nós oferecemos um guia abrangente e detalhado sobre [tipos de arquivos de mídia](/pt-BR/docs/Web/Media/Guides/Formats) e o [guia sobre os codecs compatíveis com vídeo](/pt-BR/docs/Web/Media/Formats/Video_codecs). Também está disponível um [guia sobre os codecs de áudio](/pt-BR/docs/Web/Media/Formats/Audio_codecs) que podem ser usados com eles.
 
 Outras notas de uso:
 
@@ -297,7 +304,7 @@ Outras notas de uso:
 - Você pode reproduzir arquivos de áudio usando um elemento `<video>`. Isso pode ser útil, por exemplo, se você precisar executar áudio com uma transcrição [WebVTT](/pt-BR/docs/Web/API/WebVTT_API), já que o elemento {{HTMLElement("audio")}} não permite legendas usando WebVTT.
 - Para testar o conteúdo de alternativa (_fallback_) em navegadores que suportam o elemento, você pode substituir `<video>` por um elemento que não exista, como `<notavideo>`.
 
-Uma boa fonte geral de informações sobre o uso de HTML `<video>` é o tutorial para iniciantes em [Conteúdo de vídeo e áudio](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
+Uma boa fonte geral de informações sobre o uso de HTML `<video>` é o tutorial para iniciantes em [Conteúdo de vídeo e áudio](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
 
 ### Estilização com CSS
 
@@ -535,14 +542,13 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
 
 ## Veja também
 
-- [Guia para tipos de mídia e formatos para web](/pt-BR/docs/Web/Media/Formats)
-
+- [Guia para tipos de mídia e formatos para web](/pt-BR/docs/Web/Media/Guides/Formats)
   - [Formatos de contêiner de mídia (tipos de arquivo)](/pt-BR/docs/Web/Media/Formats/Containers)
   - [Guia de codecs de vídeo na Web](/pt-BR/docs/Web/Media/Formats/Video_codecs)
   - [Guia de codecs de áudio da Web](/pt-BR/docs/Web/Media/Formats/Audio_codecs)
 
 - Posicionamento e dimensionamento da imagem em seu quadro: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
-- [Usando áudio e vídeo em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Usando áudio e vídeo em HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipulando vídeo usando canvas](/pt-BR/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Configurando servidores para mídia Ogg](/pt-BR/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Configurando servidores para mídia Ogg](/pt-BR/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

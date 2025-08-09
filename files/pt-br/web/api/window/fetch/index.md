@@ -18,7 +18,7 @@ similar). Uma promessa {{domxref("fetch()")}} _não_ rejeita erros HTTP (`404`, 
 `then()` deve checar as propriedades {{domxref("Response.ok")}} e/ou
 {{domxref("Response.status")}}.
 
-O método `fetch()` é controlado pela diretiva `connect-src` da [Content Security Policy](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) em vez da diretiva dos recursos que está recuperando.
+O método `fetch()` é controlado pela diretiva `connect-src` da [Content Security Policy](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) em vez da diretiva dos recursos que está recuperando.
 
 > [!NOTE]
 > Os parâmetros do método `fetch()` são idênticos
@@ -33,16 +33,12 @@ const fetchResponsePromise = fetch(resource [, init])
 ### Parâmetros
 
 - `resource`
-
   - : Isto define o recurso que você deseja buscar. Isto pode ser:
-
-    - String ou qualquer outro objeto com um [stringifier](/pt-BR/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — incluindo um objeto {{domxref("URL")}} — que fornece a URL do recurso que você deseja buscar.
+    - String ou qualquer outro objeto com um [stringifier](/pt-BR/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifiers) — incluindo um objeto {{domxref("URL")}} — que fornece a URL do recurso que você deseja buscar.
     - Um objeto {{domxref("Request")}}.
 
 - `init` {{optional_inline}}
-
   - : Um objeto contendo quaisquer configurações customizadas que você deseja aplicar à solicitação. As opções possíveis são:
-
     - `method`
       - : O método da requisição, por exemplo `GET`, `POST`. Observe que o cabeçalho
         {{httpheader("Origin")}} não é definido em requisições Fetch com um método de
@@ -50,7 +46,7 @@ const fetchResponsePromise = fetch(resource [, init])
         (Este comportamento foi corrigido no Firefox 65 — consulte [Erro do Firefox 1508661](https://bugzil.la/1508661)).
     - `headers`
       - : Qualquer cabeçalho que você queira adicionar à sua requisição, contido dentro de um objeto
-        {{domxref("Headers")}} ou um objeto literal com valores {{jsxref("String")}}. Observe que [alguns nomes são proibidos](/pt-BR/docs/Glossary/Forbidden_header_name).
+        {{domxref("Headers")}} ou um objeto literal com valores {{jsxref("String")}}. Observe que [alguns nomes são proibidos](/pt-BR/docs/Glossary/Forbidden_request_header).
     - `body`
       - : Qualquer corpo que você queira adicionar à sua requisição: podendo ser um
         {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
@@ -61,26 +57,21 @@ const fetchResponsePromise = fetch(resource [, init])
       - : O modo que deseja usar para a requisição, por exemplo, `cors`,
         `no-cors`, ou `same-origin`.
     - `credentials`
-
-      - : Controla o que os navegadores fazem com as credenciais ([cookies](/pt-BR/docs/Web/HTTP/Cookies), entradas de [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication), e certificados de cliente TLS). Deve ser uma das seguintes strings:
-
+      - : Controla o que os navegadores fazem com as credenciais ([cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies), entradas de [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Guides/Authentication), e certificados de cliente TLS). Deve ser uma das seguintes strings:
         - `omit`
           - : Diz aos navegadores para excluir credenciais da requisição, e ignorar quaisquer credenciais enviadas de volta na resposta (por exemplo, qualquer cabeçalho {{HTTPHeader("Set-Cookie")}}).
         - `same-origin`
           - : Diz aos navegadores para incluir credenciais com requisições para URLs da mesma origem, e usar quaisquer credenciais enviadas de volta nas respostas de URLs da mesma origem.
         - `include`
-
           - : Diz aos navegadores para incluir credenciais em ambas requisições `same-origin` e `cross-origin`, e sempre use as credenciais enviadas de volta nas respostas.
 
             > [!NOTE]
-            > As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/pt-BR/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
+            > As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/pt-BR/docs/Web/HTTP/Guides/CORS#preflight_requests_and_credentials).
 
     - `cache`
-      - : Uma string indicando como a requisição vai interagir com o [cache HTTP](/pt-BR/docs/Web/HTTP/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
+      - : Uma string indicando como a requisição vai interagir com o [cache HTTP](/pt-BR/docs/Web/HTTP/Guides/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
     - `redirect`
-
       - : Como lidar com uma resposta `redirect`:
-
         - `follow`: Segue os redirecionamentos automaticamente. A menos que esteja definido de outra forma, o redirecionamento é definido, por padrão, como `follow`.
         - `error`: Aborta com um erro se o redirecionamento ocorrer.
         - `manual`: O autor da chamada pretende processar a resposta em outro contexto.
@@ -329,5 +320,5 @@ let myRequest = new Request("flowers.jpg", myInit);
 
 - [Fetch API](/pt-BR/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/pt-BR/docs/Web/HTTP)

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 
 静的な **`Reflect.setPrototypeOf()`** メソッドは、返値を除いて、 {{jsxref("Object.setPrototypeOf()")}} と同じメソッドです。これは指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) にほかのオブジェクト、または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を設定し、操作が成功したなら `true` を、そうでないなら `false` を返します。
 
-{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
+{{InteractiveExample("JavaScript デモ: Reflect.setPrototypeOf()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.setPrototypeOf(object1, Object.prototype));
+// Expected output: true
+
+console.log(Reflect.setPrototypeOf(object1, null));
+// Expected output: true
+
+const object2 = {};
+
+console.log(Reflect.setPrototypeOf(Object.freeze(object2), null));
+// Expected output: false
+```
 
 ## 構文
 

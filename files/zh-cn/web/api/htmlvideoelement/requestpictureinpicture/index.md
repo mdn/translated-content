@@ -2,7 +2,7 @@
 title: HTMLVideoElement：requestPictureInPicture() 方法
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
 l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Picture-in-Picture API")}}
@@ -30,7 +30,7 @@ requestPictureInPicture()
 - `NotSupportedError` {{domxref("DOMException")}}
   - : 如果该特性不受支持（例如，被用户偏好设置或平台限制禁用），则抛出该异常。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果该功能被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止，则抛出该异常。
+  - : 如果该功能被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止，则抛出该异常。
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 如果视频元素的 `readState` 为 `HAVE_NOTHING`，或者视频元素没有视频轨道，或者视频元素的 `disablePictureInPicture` 属性为 `true`，则抛出该异常。
 - `NotAllowedError` {{domxref("DOMException")}}

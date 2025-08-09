@@ -123,7 +123,7 @@ if (!Object.keys) {
 
 Пожалуйста, обратите внимание, что вышеприведённый код в IE7 (и, может быть, в IE8) включает и не перечисляемые ключи, если объект передаётся из другого окна.
 
-Более простой полифил может быть найден в статье [Javascript - Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html) (англ.).
+Более простой полифил может быть найден в статье [Javascript - Object.keys Browser Compatibility](https://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html) (англ.).
 
 ## Спецификации
 
@@ -135,7 +135,7 @@ if (!Object.keys) {
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

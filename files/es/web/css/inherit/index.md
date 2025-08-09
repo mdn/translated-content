@@ -3,17 +3,15 @@ title: inherit
 slug: Web/CSS/inherit
 ---
 
-{{CSSRef}}
-
 << [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen
 
-**inherit** es un valor permitido en todas las propiedades CSS. Hace que el elemento al cual se aplica tome el [valor calculado](/es/CSS/Valor_calculado) de la propiedad de su elemento padre.
+**inherit** es un valor permitido en todas las propiedades CSS. Hace que el elemento al cual se aplica tome el [valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) de la propiedad de su elemento padre.
 
 #### Para propiedades heredadas
 
-Para las propiedades [heredadas](/es/CSS/inheritance#Propiedades_heredadas), este valor refuerza el comportamiento del valor por defecto y es necesario sólo para anular otras reglas. Por ejemplo:
+Para las propiedades [heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_heredadas), este valor refuerza el comportamiento del valor por defecto y es necesario sólo para anular otras reglas. Por ejemplo:
 
 ```
   /* hacer las cabeceras de segundo nivel, verdes */
@@ -33,7 +31,7 @@ el elemento será azul.
 
 #### Para propiedades no heredadas
 
-Para las propiedades [no heredadas](/es/CSS/inheritance#Propiedades_no_heredadas), este valor especifica un comportamiento que tiene relativamente poco sentido al no reforzar el valor por defecto.
+Para las propiedades [no heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_no_heredadas), este valor especifica un comportamiento que tiene relativamente poco sentido al no reforzar el valor por defecto.
 
 ### Notas
 
@@ -41,7 +39,7 @@ Siempre se hereda desde el elemento padre dentro del árbol del documento, aún 
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/cascade.html#value-def-inherit)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#value-def-inherit)
 
 ### Compatibilidad de navegadores
 

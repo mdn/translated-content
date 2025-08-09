@@ -16,4 +16,4 @@ Muitos comandos de programação são também síncronos — por exemplo quando 
 ### Technical reference
 
 - {{glossary("Assíncrono")}}
-- [Synchronous and asynchronous requests](/pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) using the [XMLHttpRequest()](/pt-BR/docs/Web/API/XMLHttpRequest) {{glossary("API")}}
+- [Synchronous and asynchronous requests](/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) using the [XMLHttpRequest()](/pt-BR/docs/Web/API/XMLHttpRequest) {{glossary("API")}}

@@ -3,8 +3,6 @@ title: "ReferenceError: can't access lexical declaration`X' before initializatio
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 消息提示
 
 ```plain
@@ -51,4 +49,4 @@ test();
 
 ## 相关内容
 
-- [let 的暂存死区及相关错误](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)
+- [let 的暂存死区及相关错误](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)

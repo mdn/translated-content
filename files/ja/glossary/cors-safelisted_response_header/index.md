@@ -5,7 +5,7 @@ slug: Glossary/CORS-safelisted_response_header
 
 {{GlossarySidebar}}
 
-_CORS セーフリストレスポンスヘッダー_ は、[CORS](/ja/docs/Web/HTTP/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
+_CORS セーフリストレスポンスヘッダー_ は、[CORS](/ja/docs/Web/HTTP/Guides/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
 
 既定では以下のレスポンスヘッダーがセーフリストに含まれます。
 
@@ -19,7 +19,8 @@ _CORS セーフリストレスポンスヘッダー_ は、[CORS](/ja/docs/Web/H
 
 {{HTTPHeader("Access-Control-Expose-Headers")}} ヘッダーを使用して追加のヘッダーをセーフリストに追加することができます。
 
-> **メモ:** {{HTTPHeader("Content-Length")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/whatwg/fetch/pull/626)]
+> [!NOTE]
+> {{HTTPHeader("Content-Length")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/whatwg/fetch/pull/626)]
 
 ## 例
 
@@ -34,11 +35,10 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 ## 関連情報
 
 - [HTTP](/ja/docs/Web/HTTP)
-- [HTTP headers](/ja/docs/Web/HTTP/Headers)
+- [HTTP headers](/ja/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
 - 関連用語:
-
   - {{Glossary("CORS")}}
   - {{Glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}
-  - {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+  - {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
   - {{Glossary("Request header", "リクエストヘッダー")}}

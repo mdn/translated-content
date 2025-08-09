@@ -1,33 +1,56 @@
 ---
-title: PositionError.code
+title: GeolocationPositionError：code 屬性
 slug: Web/API/GeolocationPositionError/code
+l10n:
+  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
 ---
 
-{{APIRef("Geolocation API")}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`PositionError.code`** 是一個唯讀無符號整數（`unsigned short`）表示錯誤碼。以下列出可能的值：
+{{domxref("GeolocationPositionError")}} 介面的 **`code`** 唯讀屬性是一個表示錯誤碼的 `unsigned short`。
 
-| 值  | 相對應的常數           | 描述                                                                                           |
-| --- | ---------------------- | ---------------------------------------------------------------------------------------------- |
-| `1` | `PERMISSION_DENIED`    | 取得地理資訊失敗，因為此頁面沒有獲取地理位置信息的權限。                                       |
-| `2` | `POSITION_UNAVAILABLE` | 取得地理資訊失敗，因為至少有一個地理位置信息內的資訊回傳了錯誤。                               |
-| `3` | `TIMEOUT`              | 取得地理資訊超過時限，利用 {{domxref("PositionOptions.timeout")}} i 來定義取得地理資訊的時限。 |
+可能的值如下：
 
-## 語法
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">值</th>
+      <th scope="col">相關常數</th>
+      <th scope="col">描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>1</code></td>
+      <td><code>PERMISSION_DENIED</code></td>
+      <td>
+        取得地理位置訊息失敗，因為頁面沒有權限執行此操作。
+      </td>
+    </tr>
+    <tr>
+      <td><code>2</code></td>
+      <td><code>POSITION_UNAVAILABLE</code></td>
+      <td>
+        取得地理位置失敗，因為一個或多個內部位置來源回傳了內部錯誤。
+      </td>
+    </tr>
+    <tr>
+      <td><code>3</code></td>
+      <td><code>TIMEOUT</code></td>
+      <td>未能在允許的時間內取得地理位置訊息。</td>
+    </tr>
+  </tbody>
+</table>
 
-```plain
-typeErr = poserr.code
-```
-
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
-- 屬於 {{domxref("PositionError")}} 。
+- [使用地理位置](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationPositionError")}}

@@ -13,12 +13,12 @@ Comenzamos este tutorial observando el elemento {{HTMLElement("canvas")}}. Al fi
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-A primera vista, un elemento {{HTMLElement("canvas")}} es parecido al elemento {{HTMLElement("img")}}, con la diferencia que este no tiene los atributos `src` y `alt`. El elemento `<canvas>` tiene solo dos atributos - [`width`](/es/docs/Web/HTML/Element/canvas#width) y [`height`](/es/docs/Web/HTML/Element/canvas#height). Ambos son opcionales y pueden ser definidos usando propiedades [DOM](/es/docs/DOM). Cuando los atributos ancho y alto no estan especificados, el lienzo se inicializara con **300 pixels** ancho y **150 pixels** de alto. El elemento puede ser arbitrariamente redimensionado por CSS, pero durante el renderizado la imagen es escalada para ajustarse al tamaño de su layout. Si el tamaño del CSS no respeta el ratio del canvas inicial, este aparecerá distorsionado.
+A primera vista, un elemento {{HTMLElement("canvas")}} es parecido al elemento {{HTMLElement("img")}}, con la diferencia que este no tiene los atributos `src` y `alt`. El elemento `<canvas>` tiene solo dos atributos - [`width`](/es/docs/Web/HTML/Reference/Elements/canvas#width) y [`height`](/es/docs/Web/HTML/Reference/Elements/canvas#height). Ambos son opcionales y pueden ser definidos usando propiedades [DOM](/es/docs/Web/API/Document_Object_Model). Cuando los atributos ancho y alto no estan especificados, el lienzo se inicializara con **300 pixels** ancho y **150 pixels** de alto. El elemento puede ser arbitrariamente redimensionado por CSS, pero durante el renderizado la imagen es escalada para ajustarse al tamaño de su layout. Si el tamaño del CSS no respeta el ratio del canvas inicial, este aparecerá distorsionado.
 
 > [!NOTE]
 > Si su renderizado se ve distorsionado, pruebe especificar los atributos width y height explícitamente en los atributos del `<canvas>` , y no usando CSS.
 
-El atributo [id](/es/docs/Web/HTML/Atributos_Globales/id) no está especificado para el elemento `<canvas>` pero es uno de los [atributos globales de HTML](/es/docs/Web/HTML/Atributos_Globales) el cual puede ser aplicado a cualquier elemento HTML (como [class](/es/docs/Web/HTML/Global_attributes/class) por ejemplo). Siempre es buena idea proporcionar un `id` porque esto hace más fácil identificarlo en un script.
+El atributo [id](/es/docs/Web/HTML/Reference/Global_attributes/id) no está especificado para el elemento `<canvas>` pero es uno de los [atributos globales de HTML](/es/docs/Web/HTML/Reference/Global_attributes) el cual puede ser aplicado a cualquier elemento HTML (como [class](/es/docs/Web/HTML/Reference/Global_attributes/class) por ejemplo). Siempre es buena idea proporcionar un `id` porque esto hace más fácil identificarlo en un script.
 
 El elemento `<canvas>` puede ser estilizado como a cualquier imagen normal (margin, border, background, etc). Estas reglas, sin embargo, no afectan a lo dibujado sobre el canvas. Mas adelante veremos cómo se hace esto en un [capítulo dedicado](/es/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) en este tutorial. Cuando no tenemos reglas de estilo aplicadas al canvas, este será completamente transparente.
 
@@ -51,9 +51,9 @@ Si el contenido alternativo no se necesita, un simple `<canvas id="foo" ...></ca
 
 ## El contexto de renderización
 
-{{HTMLElement("canvas")}} crea un lienzo de dibujo fijado que expone uno o mas contextos renderizados, los cuales son usados para crear y manipular el contenido mostrado. Nos enfocaremos en renderizacion de contextos 2D. Otros contextos deberan proveer diferentes tipos de renderizaciones; por ejemplo, [WebGL](/es/docs/Web/WebGL) usa un 3D contexto ("experimental-webgl") basado sobre [OpenGL ES](http://www.khronos.org/opengles/).
+{{HTMLElement("canvas")}} crea un lienzo de dibujo fijado que expone uno o mas contextos renderizados, los cuales son usados para crear y manipular el contenido mostrado. Nos enfocaremos en renderizacion de contextos 2D. Otros contextos deberan proveer diferentes tipos de renderizaciones; por ejemplo, [WebGL](/es/docs/Web/API/WebGL_API) usa un 3D contexto ("experimental-webgl") basado sobre [OpenGL ES](https://www.khronos.org/opengles/).
 
-El canvas esta inicialmente en blanco. Para mostrar alguna cosa, un script primero necesita acceder al contexto a renderizar y dibujar sobre este. El elemento {{HTMLElement("canvas")}} tiene un [method](/es/docs/Web/API/HTMLCanvasElement#Methods) llamado `getContext()`, usado para obtener el contexto a renderizar y sus funciones de dibujo. `getContext()` toma un parametro, el tipo de contexto. Para graficos 2D, como los que cubre este tutorial, su especificacion es "2d".
+El canvas esta inicialmente en blanco. Para mostrar alguna cosa, un script primero necesita acceder al contexto a renderizar y dibujar sobre este. El elemento {{HTMLElement("canvas")}} tiene un [method](/es/docs/Web/API/HTMLCanvasElement#methods) llamado `getContext()`, usado para obtener el contexto a renderizar y sus funciones de dibujo. `getContext()` toma un parametro, el tipo de contexto. Para graficos 2D, como los que cubre este tutorial, su especificacion es "2d".
 
 ```js
 var canvas = document.getElementById("tutorial");

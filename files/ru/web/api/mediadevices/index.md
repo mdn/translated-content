@@ -14,7 +14,7 @@ _Наследует свойство родителя {{domxref("EventTarget")}}
 ### Обработчики событий
 
 - {{ domxref("MediaDevices.ondevicechange") }}
-  - : Это обработчик события {{event("devicechange")}}. Это событие доставляется в объект `MediaDevices` когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.
+  - : Это обработчик события [`devicechange`](/ru/docs/Web/API/MediaDevices/devicechange_event). Это событие доставляется в объект `MediaDevices` когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.
 
 ## Методы
 
@@ -96,7 +96,7 @@ function errorMsg(msg, error) {
 
 ## Смотрите также
 
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API): API, частью которого является этот интерфейс.
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API): API, частью которого является этот интерфейс.
 - [WebRTC API](/ru/docs/Web/API/WebRTC_API)
 - {{domxref("Navigator.mediaDevices")}}: Возвращает ссылку на объект `MediaDevices`, который можно использовать для доступа к устройствам.
 - [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML5 захват и воспроизведение видео с помощью `MediaDevices` и MediaStream Recording API ([исходный код на GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))

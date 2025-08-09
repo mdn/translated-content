@@ -33,7 +33,8 @@ distortion.connect(audioCtx.destination);
 
 アナライザノードは、{{domxref("AnalyserNode.fftSize")}}プロパティ値（指定されていない場合は、デフォルトは 2048 です）として指定する内容に応じて、特定の周波数ドメインで高速フーリエ変換（fft）を使用してオーディオデータをキャプチャします。
 
-> **メモ:** {{domxref("AnalyserNode.minDecibels")}}と{{domxref("AnalyserNode.maxDecibels")}}を使用して、fft データスケーリング範囲の最小値と最大値を指定することもできます。{{domxref("AnalyserNode.smoothingTimeConstant")}}。それらの使い方の詳細については、それらのページをお読みください。
+> [!NOTE]
+> {{domxref("AnalyserNode.minDecibels")}}と{{domxref("AnalyserNode.maxDecibels")}}を使用して、fft データスケーリング範囲の最小値と最大値を指定することもできます。{{domxref("AnalyserNode.smoothingTimeConstant")}}。それらの使い方の詳細については、それらのページをお読みください。
 
 データを取得するには、周波数データを取得するために{{domxref("AnalyserNode.getFloatFrequencyData()")}}および{{domxref("AnalyserNode.getByteFrequencyData()")}}メソッドを使用する必要があります。{{domxref("AnalyserNode.getByteTimeDomainData()")}}と{{domxref(" AnalyserNode.getFloatTimeDomainData()")}}を使用して波形データを取得します。
 
@@ -59,7 +60,7 @@ analyser.getByteTimeDomainData(dataArray);
 
 ## 波形/オシロスコープの作成
 
-オシロスコープのビジュアライゼーション（ [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167) の元のコードの [Soledad Penadés](http://soledadpenades.com/) に感謝します）を作成するには、前のセクションで説明した標準パターンに従って、バッファを設定します。
+オシロスコープのビジュアライゼーション（ [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167) の元のコードの [Soledad Penadés](https://soledadpenades.com/) に感謝します）を作成するには、前のセクションで説明した標準パターンに従って、バッファを設定します。
 
 ```js
 analyser.fftSize = 2048;
@@ -212,4 +213,4 @@ draw();
 ![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API/bar-graph.png)
 
 > [!NOTE]
-> この記事に記載されている例では、{{domxref("AnalyserNode.getByteFrequencyData()")}}と{{domxref("AnalyserNode.getByteTimeDomainData()")}}で使用法が示されています。実際の例は{{domxref("AnalyserNode.getFloatFrequencyData()")}}と{{domxref("AnalyserNode.getFloatTimeDomainData()")}}にあるので、私たちの [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) デモを参照してください（[ソースコード](https://github.com/mdn/voice-change-o-matic-float-data)も参照してください）— これは、元の [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) とまったく同じですが、符号なしバイトデータではなく、Float データを使用しています。
+> この記事に記載されている例では、{{domxref("AnalyserNode.getByteFrequencyData()")}}と{{domxref("AnalyserNode.getByteTimeDomainData()")}}で使用法が示されています。実際の例は{{domxref("AnalyserNode.getFloatFrequencyData()")}}と{{domxref("AnalyserNode.getFloatTimeDomainData()")}}にあるので、私たちの [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) デモを参照してください（[ソースコード](https://github.com/mdn/voice-change-o-matic-float-data)も参照してください）— これは、元の [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) とまったく同じですが、符号なしバイトデータではなく、Float データを使用しています。

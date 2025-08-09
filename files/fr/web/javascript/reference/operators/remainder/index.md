@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Remainder
 
 L'opérateur du reste (`%`) renvoie le reste de la division de l'opérande gauche par l'opérande droit. Le résultat a toujours le signe du numérateur.
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}
+
+```js interactive-example
+console.log(13 % 5);
+// Expected output: 3
+
+console.log(-13 % 5);
+// Expected output: -3
+
+console.log(4 % 2);
+// Expected output: 0
+
+console.log(-4 % 2);
+// Expected output: -0
+```
 
 Bien que dans la plupart des langages, `%` est un opérateur de reste, pour d'autres (par exemple [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) c'est un opérateur de modulo. Lorsqu'on utilise des valeurs positives, les deux opérateurs sont équivalents mais lorsque le numérateur et de dénominateur ont des signes différents, le reste et le modulo fourniront des signes différents. Pour obtenir une opération équivalente au modulo en JavaScript, on pourra utiliser `((a % n ) + n ) % n`.
 

@@ -1,9 +1,7 @@
 ---
-title: ":hover"
+title: :hover
 slug: Web/CSS/:hover
 ---
-
-{{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:hover`** de [CSS](/es/docs/Web/CSS) coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).
 

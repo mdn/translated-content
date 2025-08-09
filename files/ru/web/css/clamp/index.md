@@ -91,4 +91,4 @@ TBD
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}
 - {{CSSxRef("min")}}
-- [CSS Values](/ru/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

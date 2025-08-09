@@ -3,7 +3,7 @@ title: Applying SVG effects to HTML content
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
-Firefox 3.5 introduziu suporte para uso do [SVG](/pt-BR/docs/SVG) como um componente do [CSS](/pt-BR/docs/Web/CSS) em ordem para introduzir efeitos SVG no conteúdo HTML.
+Firefox 3.5 introduziu suporte para uso do [SVG](/pt-BR/docs/Web/SVG) como um componente do [CSS](/pt-BR/docs/Web/CSS) em ordem para introduzir efeitos SVG no conteúdo HTML.
 
 Você pode embutir o SVG nos estilos dentro do mesmo documento, ou com um _stylesheet_ externo.
 
@@ -238,6 +238,6 @@ O SVG é importado do arquivo com nome `resources.svg`, usando o clip-path com o
 
 ## Veja também
 
-- [SVG](/pt-BR/docs/SVG)
-- [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
+- [SVG](/pt-BR/docs/Web/SVG)
+- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
 - ([\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))

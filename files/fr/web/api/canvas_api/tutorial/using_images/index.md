@@ -19,7 +19,7 @@ Voyons comment faire.
 L'API Canvas peut utiliser l'un des types de données suivants comme source d'image :
 
 - [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)
-  - : Il s'agit d'images créées à l'aide du constructeur `Image()`, ainsi que de tout élément HTML [`<img>`](/fr/docs/Web/HTML/Element/Img).
+  - : Il s'agit d'images créées à l'aide du constructeur `Image()`, ainsi que de tout élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img).
 - [`SVGImageElement`](/fr/docs/Web/API/SVGImageElement)
   - : Ce sont des images incorporées en utilisant l'élément SVG [`<image>`](/fr/docs/Web/SVG/Element/image).
 - [`HTMLVideoElement`](/fr/docs/Web/API/HTMLVideoElement)
@@ -27,7 +27,7 @@ L'API Canvas peut utiliser l'un des types de données suivants comme source d'im
 - [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement)
   - : Vous pouvez utiliser un autre élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) comme source d'image.
 
-Ces sources sont collectivement référencées par le type [`CanvasImageSource`](/fr/docs/Web/API/CanvasImageSource).
+Ces sources sont collectivement référencées par le type [`CanvasImageSource`](/fr/docs/Web/API/CanvasRenderingContext2D).
 
 Il existe plusieurs façons d'obtenir des images pour une utilisation sur un canevas.
 
@@ -41,7 +41,7 @@ Nous pouvons obtenir une référence aux images sur la même page que le canevas
 
 ### Utilisation d'images d'un autre domaine
 
-En utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/Img#attr-crossorigin) d'un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) (reflété par la propriété [`HTMLImageElement.crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin)), vous pouvez demander la permission de charger une image d'un autre domaine pour l'utiliser dans votre appel à `drawImage()`. Si le domaine d'hébergement permet un accès interdomaine à l'image, l'image peut être utilisée dans votre canevas sans l'altérer; sinon utiliser l'image va [corrompre le canevas](/fr/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+En utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin) d'un élément [`<img>`](/fr/docs/Web/HTML/Element/img) (reflété par la propriété [`HTMLImageElement.crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin)), vous pouvez demander la permission de charger une image d'un autre domaine pour l'utiliser dans votre appel à `drawImage()`. Si le domaine d'hébergement permet un accès interdomaine à l'image, l'image peut être utilisée dans votre canevas sans l'altérer; sinon utiliser l'image va [corrompre le canevas](/fr/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
 ### Utilisation d'autres éléments canvas
 
@@ -78,7 +78,7 @@ Si vous n'utilisez qu'une image externe, cela peut être une bonne approche, mai
 
 ### Intégration d'une image via une URL de données
 
-Un autre moyen possible d'inclure des images consiste à utiliser les [URL de données (`data: url`)](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). Les URL de données vous permettent de définir complètement une image en tant que chaîne de caractères codée en Base64 directement dans votre code.
+Un autre moyen possible d'inclure des images consiste à utiliser les [URL de données (`data: url`)](/fr/docs/Web/URI/Schemes/data). Les URL de données vous permettent de définir complètement une image en tant que chaîne de caractères codée en Base64 directement dans votre code.
 
 ```js
 let img = new Image(); // Crée un nouvel élément img
@@ -244,11 +244,11 @@ function draw() {
 }
 ```
 
-Nous avons pris une approche différente pour charger les images cette fois. Au lieu de les charger en créant de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), nous les avons incluses comme balises [`<img>`](/fr/docs/Web/HTML/Element/Img) directement dans notre source HTML et avons récupéré les images depuis ceux-ci. Les images sont masquées via la propriété CSS [`display`](/fr/docs/Web/CSS/display) qui vaut `none`.
+Nous avons pris une approche différente pour charger les images cette fois. Au lieu de les charger en créant de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), nous les avons incluses comme balises [`<img>`](/fr/docs/Web/HTML/Element/img) directement dans notre source HTML et avons récupéré les images depuis ceux-ci. Les images sont masquées via la propriété CSS [`display`](/fr/docs/Web/CSS/display) qui vaut `none`.
 
 {{EmbedLiveSample("Exemple_encadrer_une_image", 160, 160, "canvas_drawimage2.jpg")}}
 
-Chaque [`<img>`](/fr/docs/Web/HTML/Element/Img) se voit attribuer un attribut `id`, ce qui facilite leur sélection en utilisant [`document.getElementById()`](/fr/docs/Web/API/Document/getElementById). Nous utilisons `drawImage()` pour découper le rhinocéros de la première image et le mettre à l'échelle sur le canevas, puis dessiner le cadre par-dessus en utilisant un deuxième appel `drawImage()`.
+Chaque [`<img>`](/fr/docs/Web/HTML/Element/img) se voit attribuer un attribut `id`, ce qui facilite leur sélection en utilisant [`document.getElementById()`](/fr/docs/Web/API/Document/getElementById). Nous utilisons `drawImage()` pour découper le rhinocéros de la première image et le mettre à l'échelle sur le canevas, puis dessiner le cadre par-dessus en utilisant un deuxième appel `drawImage()`.
 
 ## Exemple d'une galerie d'art
 

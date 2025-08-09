@@ -213,7 +213,7 @@ self.addEventListener("activate", (e) => {
 });
 ```
 
-Esto asegura que solo tengamos los archivos que necesitamos en la caché, por lo que no dejamos basura; el [espacio de caché disponible en el navegador es limitado](/es/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria), por lo que es una buena idea limpiarlo nosotros mismos después.
+Esto asegura que solo tengamos los archivos que necesitamos en la caché, por lo que no dejamos basura; el [espacio de caché disponible en el navegador es limitado](/es/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria), por lo que es una buena idea limpiarlo nosotros mismos después.
 
 ## Otros casos de uso
 
