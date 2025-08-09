@@ -1,6 +1,7 @@
 ---
 title: Référence des événements
-slug: Web/Events
+slug: conflicting/Web/API/Document_Object_Model/Events
+original_slug: Web/Events
 ---
 
 Les [événements DOM](/fr/docs/Learn/JavaScript/Building_blocks/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
