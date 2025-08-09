@@ -98,7 +98,7 @@ tfoot td {
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes). Les attributs listés ci-après sont désormais tous dépréciés.
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes). Les attributs listés ci-après sont désormais tous dépréciés.
 
 ### Attributs dépréciés
 
@@ -401,12 +401,12 @@ Fournir un élément {{HTMLElement("caption")}} pour légender le tableau avec u
 
 Une telle légende fournit une aide pour les personnes qui naviguent avec des outils d'assistance comme des lecteurs d'écran.
 
-- [Ajouter une légende à un tableau grâce à `<caption>`](/fr/docs/Learn/HTML/Tables/Advanced)
+- [Ajouter une légende à un tableau grâce à `<caption>`](/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 - [Légendes et résumés • Tableaux • Tutoriels d'accessibilité du W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
 
 ### Portées des lignes et des colonnes
 
-L'attribut [`scope`](/fr/docs/Web/HTML/Element/th#scope) peut être redondant dans certains contextes où la portée peut être déterminée avec les autres éléments. Toutefois de nombreux lecteurs d'écran utilisent cet attribut pour répliquer l'organisation générale du tableau. Dans les tableaux plus complexes, `scope` pourra être utilisé afin de fournir les informations nécessaires à l'organisation (tant au moteur HTML qu'aux outils d'assistance).
+L'attribut [`scope`](/fr/docs/Web/HTML/Reference/Elements/th#scope) peut être redondant dans certains contextes où la portée peut être déterminée avec les autres éléments. Toutefois de nombreux lecteurs d'écran utilisent cet attribut pour répliquer l'organisation générale du tableau. Dans les tableaux plus complexes, `scope` pourra être utilisé afin de fournir les informations nécessaires à l'organisation (tant au moteur HTML qu'aux outils d'assistance).
 
 #### Exemples
 
@@ -444,20 +444,20 @@ L'attribut [`scope`](/fr/docs/Web/HTML/Element/th#scope) peut être redondant da
 
 Ajouter `scope="col"` sur un élément {{HTMLElement("th")}} permettra d'aider à décrire le fait que la cellule est en haut de la colonne. Indiquer `scope="row"` sur un élément {{HTMLElement("td")}} permettra d'indiquer que la cellule est la première de la ligne.
 
-- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/docs/Learn/HTML/Tables/Advanced#tableaux_pour_des_utisateurs_malvoyants)
+- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#tableaux_pour_des_utisateurs_malvoyants)
 - [Les tableaux avec deux en-têtes • Tutoriels d'accessibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/two-headers/)
 - [Les tableaux avec des en-têtes hétérogènes • Tutoriels d'accessibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/irregular/)
 - [H63 : Utiliser l'attribut `scope` afin d'associer les cellules de l'en-tête et celles des données dans les tableaux de données | Techniques W3C pour WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
 
 ### Tableaux complexes
 
-Les technologies d'assistance telles que les lecteurs d'écran peuvent rencontrer des difficultés lors de l'analyse de tableaux complexes où les cellules d'en-tête ne sont pas associées aux données de façon clairement verticale ou horizontale. Généralement, cela se traduit par la présence des attributs [`colspan`](/fr/docs/Web/HTML/Element/td#colspan) et [`rowspan`](/fr/docs/Web/HTML/Element/td#rowspan).
+Les technologies d'assistance telles que les lecteurs d'écran peuvent rencontrer des difficultés lors de l'analyse de tableaux complexes où les cellules d'en-tête ne sont pas associées aux données de façon clairement verticale ou horizontale. Généralement, cela se traduit par la présence des attributs [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#colspan) et [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#rowspan).
 
 Si possible, on présentera le tableau différemment, en le divisant en plusieurs tableaux simples qui ne nécessitent pas l'utilisation des atttributs `colspan` et `rowspan`. En plus d'aider à la compréhension pour les personnes qui utilisent des outils d'assistance, cela pourra bénéficier aux personnes souffrant de troubles cognitifs.
 
-Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs [`id`](/fr/docs/Web/HTML/Global_attributes#id) et [`headers`](/fr/docs/Web/HTML/Element/td#headers) afin d'associer « informatiquement » les cellules du tableaux avec les en-têtes correspondantes.
+Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) et [`headers`](/fr/docs/Web/HTML/Reference/Elements/td#headers) afin d'associer « informatiquement » les cellules du tableaux avec les en-têtes correspondantes.
 
-- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/docs/Learn/HTML/Tables/Advanced#tableaux_pour_des_utisateurs_malvoyants)
+- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#tableaux_pour_des_utisateurs_malvoyants)
 - [Les tableaux avec des en-têtes sur plusieurs niveaux • Tutoriels d'accesibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43 : Utiliser les attributs `id` et `headers` afin d'associer les cellules de données et les cellules d'en-tête dans les tableaux | Techniques W3C pour WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 

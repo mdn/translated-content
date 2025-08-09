@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{Non-standard_header}}
 
-Le pseudo-élément CSS **`::-webkit-inner-spin-button`** permet de mettre en forme la partie intérieure de la roulette qui permet de choisir la valeur d'un élément [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number).
+Le pseudo-élément CSS **`::-webkit-inner-spin-button`** permet de mettre en forme la partie intérieure de la roulette qui permet de choisir la valeur d'un élément [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number).
 
 ## Syntaxr
 

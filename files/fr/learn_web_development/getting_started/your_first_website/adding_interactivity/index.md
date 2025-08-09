@@ -21,7 +21,7 @@ JavaScript est plutôt compact tout en étant très souple. Les développeurs on
 - des API tierces‑parties permettant aux développeurs d'incorporer dans leurs sites des fonctionnalités issues d'autres fournisseurs de contenu, comme Twitter ou Facebook.
 - des modèles et bibliothèques tierces‑parties applicables à votre HTML permettant de mettre en œuvre rapidement des sites et des applications.
 
-Comme cet article est une introduction simplifiée à JavaScript, nous n'allons pas compliquer les choses à ce stade en entrant dans les détails sur les différences entre le coeur du langage JavaScript et les différents outils cités plus haut. Vous pourrez entrer dans ces détails plus tard grâce à notre [centre d'apprentissage JavaScript](/fr/docs/Learn/JavaScript), et le reste du MDN.
+Comme cet article est une introduction simplifiée à JavaScript, nous n'allons pas compliquer les choses à ce stade en entrant dans les détails sur les différences entre le coeur du langage JavaScript et les différents outils cités plus haut. Vous pourrez entrer dans ces détails plus tard grâce à notre [centre d'apprentissage JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting), et le reste du MDN.
 
 Ci-dessous nous allons vous présenter quelques aspects du coeur du langage, et vous pratiquerez aussi en manipulant les fonctionnalités des API navigateur. Amusez-vous !
 
@@ -68,7 +68,7 @@ Ensuite, nous fixons à «&nbsp;Bonjour, monde !&nbsp;» la valeur de la propri�
 Nous allons explorer les fonctionnalités de base de JavaScript pour que vous puissiez mieux comprendre comment il fonctionne. Ces fonctionnalités sont communes à la plupart des langages de programmation, si vous comprenez ces éléments en JavaScript, vous êtes en bonne voie de pouvoir programmer à peu près n'importe quoi !
 
 > [!WARNING]
-> Tout au long de cet article, vous pouvez saisir les lignes de code dans votre console JavaScript pour voir ce qui se passe. Pour plus de détails sur les consoles JavaScript, vous pouvez lire [Découvrir les outils de développement présents dans le navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+> Tout au long de cet article, vous pouvez saisir les lignes de code dans votre console JavaScript pour voir ce qui se passe. Pour plus de détails sur les consoles JavaScript, vous pouvez lire [Découvrir les outils de développement présents dans le navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -112,7 +112,7 @@ let myVariable = "Bob";
 myVariable = "Étienne";
 ```
 
-Notez que les variables peuvent contenir des [types différents de données](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives)&nbsp;:
+Notez que les variables peuvent contenir des [types différents de données](/fr/docs/Web/JavaScript/Guide/Data_structures#les_valeurs_primitives)&nbsp;:
 
 <table class="standard-table">
   <thead>

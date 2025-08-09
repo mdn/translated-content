@@ -11,20 +11,20 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques
 #### Rôles de composant d'interface
 
 - [Alert](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_alert)
-- [Alertdialog](/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
+- [Alertdialog](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [Button](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_button)
-- [Checkbox](/fr/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [Checkbox](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
 - [Dialog](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_dialog)
-- [Link](/fr/docs/Web/Accessibility/ARIA/Roles/link_role)
-- [Log](/fr/docs/Web/Accessibility/ARIA/Roles/log_role)
+- [Link](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/link_role)
+- [Log](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
 - Marquee
-- [Progressbar](/fr/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
+- [Progressbar](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
 - [Radio](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_radio)
 - Scrollbar
-- [Slider](/fr/docs/Web/Accessibility/ARIA/Roles/slider_role)
+- [Slider](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - Spinbutton
-- [status](/fr/docs/Web/Accessibility/ARIA/Roles/status_role)
-- [textbox](/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [status](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
+- [textbox](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
 - Timer
 - Tooltip
 
@@ -34,7 +34,7 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 
 - Grid (tableau, contenant les rôles `row` (ligne), `gridcell` (cellule), `rowheader` (en-tête de ligne) et `columnheader` (en-tête de colonne))
 - Menubar / Menu (contenant les rôles `menuitem`, `menuitemcheckbox` et `menuitemradio`)
-- [Listbox](/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role) (boîte de liste, contenant le rôle `option`)
+- [Listbox](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) (boîte de liste, contenant le rôle `option`)
 - Tablist (boîte à onglets, contenant les rôles `tab` et `tabpanel`)
 - Tree (arbre, contenant les rôles `group` et `treeitem`)
 - [Radiogroup (voir le rôle `Radio`)](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_radio)
@@ -46,13 +46,13 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 - Definition
 - Directory
 - Document
-- [Group](/fr/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [Group](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 - Heading
 - Img
 - List, listitem
 - Math
 - Note
-- [Presentation](/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role)
+- [Presentation](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)
 - Region
 - Separator
 - [Toolbar](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_toolbar)
@@ -60,7 +60,7 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 #### Rôles de points de repère
 
 - Application
-- [Banner](/fr/docs/Web/Accessibility/ARIA/Roles/banner_role)
+- [Banner](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)
 - Complementary
 - Contentinfo
 - Form
@@ -86,7 +86,7 @@ Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôle
 - [aria-orientation](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation)
 - aria-pressed
 - aria-readonly
-- [aria-required](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+- [aria-required](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
 - aria-selected
 - aria-sort
 - [aria-valuemax](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax)

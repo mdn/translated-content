@@ -40,7 +40,7 @@ La page d'accueil de la BBC, par exemple, contient un nombre important de liens 
 
 ## Anatomie d'un lien
 
-Un lien élémentaire se crée en intégrant le texte ou tout autre contenu que vous voulez transformer en lien dans un élément [`<a>`](/fr/docs/Web/HTML/Element/a) et en lui affectant un attribut [`href`](/fr/docs/Web/HTML/Element/a#href) (qui sera la **référence hypertexte**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
+Un lien élémentaire se crée en intégrant le texte ou tout autre contenu que vous voulez transformer en lien dans un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) et en lui affectant un attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) (qui sera la **référence hypertexte**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
 
 ### Exemple simple
 
@@ -75,7 +75,7 @@ Le titre devient ainsi un lien&nbsp;:
 
 ### Liens avec les images
 
-Si vous voulez transformer une image en lien, utilisez l'élément [`<a>`](/fr/docs/Web/HTML/Element/a) pour envelopper le fichier image référencé par l'élément [`<img>`](/fr/docs/Web/HTML/Element/img). L'exemple ci-dessous utilise un chemin relatif pour référencer un fichier image SVG stocké localement.
+Si vous voulez transformer une image en lien, utilisez l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) pour envelopper le fichier image référencé par l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img). L'exemple ci-dessous utilise un chemin relatif pour référencer un fichier image SVG stocké localement.
 
 ```css hidden
 img {
@@ -96,7 +96,7 @@ Le logo du MDN devient donc un lien&nbsp;:
 {{EmbedLiveSample('', '100%', 150)}}
 
 > [!NOTE]
-> Vous en saurez plus sur l'utilisation des images sur le Web dans [un prochain article](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+> Vous en saurez plus sur l'utilisation des images sur le Web dans [un prochain article](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
 ### Ajouter des informations avec l'attribut `title`
 
@@ -173,7 +173,7 @@ Il y a aussi deux répertoires dans la racine — `pdfs` et `projects`. Chacun d
 
 ### Fragments de documents
 
-Il est possible de faire un lien vers une partie donnée d'un document HTML, qu'on appelle un **fragment de document**, plutôt que vers le haut du document. Pour ce faire, vous devrez d'abord assigner un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id) à l'élément vers lequel vous voulez pointer. Il est généralement logique d'établir un lien vers une rubrique précise, ainsi cela ressemble à quelque chose comme&nbsp;:
+Il est possible de faire un lien vers une partie donnée d'un document HTML, qu'on appelle un **fragment de document**, plutôt que vers le haut du document. Pour ce faire, vous devrez d'abord assigner un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) à l'élément vers lequel vous voulez pointer. Il est généralement logique d'établir un lien vers une rubrique précise, ainsi cela ressemble à quelque chose comme&nbsp;:
 
 ```html
 <h2 id="Contact">Adresse de contact</h2>
@@ -306,11 +306,11 @@ L'exemple terminé devrait finir par ressembler à quelque chose comme ce qui su
 
 ## Liens de courriel
 
-Il est possible de créer des liens ou des boutons qui, lorsqu'ils sont cliqués, ouvrent un nouveau courriel sortant plutôt que de faire un lien vers une ressource ou une page. Pour cela, on utilise un élément [`<a>`](/fr/docs/Web/HTML/Element/a) dont l'attribut `href` contient une URL avec le schéma `mailto:`.
+Il est possible de créer des liens ou des boutons qui, lorsqu'ils sont cliqués, ouvrent un nouveau courriel sortant plutôt que de faire un lien vers une ressource ou une page. Pour cela, on utilise un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) dont l'attribut `href` contient une URL avec le schéma `mailto:`.
 
 Sous sa forme la plus basique et la plus communément utilisée, un lien `mailto:` indique simplement l'adresse du destinataire voulu.
 
-En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre [`href`](/fr/docs/Web/HTML/Element/a#href) est simplement `mailto:`), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel sur l'appareil, sans adresse de destination renseignée. Cette méthode est souvent utile pour les liens «&nbsp;Partager&nbsp;» sur lesquels on peut cliquer pour envoyer un e-mail à l'adresse de son choix.
+En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) est simplement `mailto:`), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel sur l'appareil, sans adresse de destination renseignée. Cette méthode est souvent utile pour les liens «&nbsp;Partager&nbsp;» sur lesquels on peut cliquer pour envoyer un e-mail à l'adresse de son choix.
 
 ### Exemple simple
 
@@ -336,7 +336,7 @@ Voici un exemple incluant `cc` (<i lang="en">carbon copy</i>, pour les destinata
 ```
 
 > [!NOTE]
-> La valeur de chaque champ doit être codée à la façon d'une URL, c'est-à-dire que les caractères non-imprimables (les caractères invisibles tels que les tabulations, les retours chariot et les sauts de page) et les espaces doivent être échappés avec un [encodage-pourcent](https://fr.wikipedia.org/wiki/Encodage-pourcent). Notez également l'utilisation du point d'interrogation (`?`) pour séparer l'URL principale des valeurs de champ et de l'esperluette (&) pour séparer chaque champ dans l'URL `mailto:`. C'est la notation standard des requêtes URL. Voir [la documentation de la méthode HTTP `GET`](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data#la_méthode_get) pour comprendre pourquoi la notation de requête URL est habituellement utilisée.
+> La valeur de chaque champ doit être codée à la façon d'une URL, c'est-à-dire que les caractères non-imprimables (les caractères invisibles tels que les tabulations, les retours chariot et les sauts de page) et les espaces doivent être échappés avec un [encodage-pourcent](https://fr.wikipedia.org/wiki/Encodage-pourcent). Notez également l'utilisation du point d'interrogation (`?`) pour séparer l'URL principale des valeurs de champ et de l'esperluette (&) pour séparer chaque champ dans l'URL `mailto:`. C'est la notation standard des requêtes URL. Voir [la documentation de la méthode HTTP `GET`](/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#la_méthode_get) pour comprendre pourquoi la notation de requête URL est habituellement utilisée.
 
 Voici quelques autres exemples d'URL `mailto`&nbsp;:
 
@@ -348,10 +348,10 @@ Voici quelques autres exemples d'URL `mailto`&nbsp;:
 
 ## Testez vos compétences&nbsp;!
 
-Vous voici à la fin de cet article, mais pouvez-vous vous souvenir des informations les plus importantes&nbsp;? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien retenu ces informations avant de continuer sur [Testez vos compétences&nbsp;: Liens](/fr/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links).
+Vous voici à la fin de cet article, mais pouvez-vous vous souvenir des informations les plus importantes&nbsp;? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien retenu ces informations avant de continuer sur [Testez vos compétences&nbsp;: Liens](/fr/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links).
 
 ## Résumé
 
-C'est tout pour les liens, du moins pour l'instant&nbsp;! Nous reverrons aux liens plus loin dans le cours pour les mettre en forme. Pour la prochaine étape de ce cours, nous reviendrons sur la sémantique HTML, et verrons quelques fonctionnalités plus avancées ou inhabituelles pour [le formatage avancé de texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting).
+C'est tout pour les liens, du moins pour l'instant&nbsp;! Nous reverrons aux liens plus loin dans le cours pour les mettre en forme. Pour la prochaine étape de ce cours, nous reviendrons sur la sémantique HTML, et verrons quelques fonctionnalités plus avancées ou inhabituelles pour [le formatage avancé de texte](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features).
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

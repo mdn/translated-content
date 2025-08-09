@@ -91,6 +91,6 @@ if (typeof self.queueMicrotask !== "function") {
 
 - [Prothèse d'émulation de `queueMicrotask()` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
 - [Utiliser les micro-tâches en JavaScript avec `queueMicrotask()`](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- [JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous)
+- [JavaScript asynchrone](/fr/docs/Learn_web_development/Extensions/Async_JS)
 - [Explications sur `queueMicrotask()` (en anglais)](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
 - [Tâches, micro-tâches, queues et ordonnancement, une présentation de Jake Archibald (en anglais)](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)

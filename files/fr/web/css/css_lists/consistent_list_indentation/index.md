@@ -19,7 +19,7 @@ La bordure pointillée rouge représente la limite extérieure de la zone de con
 
 ![](consistent-list-indentation-figure2.gif)
 
-À présent, nous allons placer ces éléments dans un élément parent. Pour cet exemple, nous utiliserons une liste non-ordonnée avec {{HTMLElement("ul")}}. Selon [le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model), les boîtes des éléments de la liste s'inscrivent dans la boîte de contenu de l'élément parent. Cette dernière n'a, pour l'instant, aucune marge ni aucun remplissage (_padding_). On obtient donc ce résultat :
+À présent, nous allons placer ces éléments dans un élément parent. Pour cet exemple, nous utiliserons une liste non-ordonnée avec {{HTMLElement("ul")}}. Selon [le modèle de boîtes CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model), les boîtes des éléments de la liste s'inscrivent dans la boîte de contenu de l'élément parent. Cette dernière n'a, pour l'instant, aucune marge ni aucun remplissage (_padding_). On obtient donc ce résultat :
 
 ![](consistent-list-indentation-figure3.gif)
 

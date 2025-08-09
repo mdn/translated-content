@@ -6,7 +6,7 @@ original_slug: Web/HTML/Attributes/for
 
 {{HTMLSidebar}}
 
-L'attribut **`for`** est un attribut autorisé pour [`<label>`](/fr/docs/Web/HTML/Element/label) et [`<output>`](/fr/docs/Web/HTML/Element/output). Lorsqu'il est utilisé sur un élément `<label>`, il indique l'élément de formulaire que ce label décrit. Lorsqu'il est utilisé sur un élément `<output>`, il permet une relation explicite entre les éléments, qui représentent les valeurs, qui sont utilisées dans le résultat représenté par `<output>`.
+L'attribut **`for`** est un attribut autorisé pour [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) et [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output). Lorsqu'il est utilisé sur un élément `<label>`, il indique l'élément de formulaire que ce label décrit. Lorsqu'il est utilisé sur un élément `<output>`, il permet une relation explicite entre les éléments, qui représentent les valeurs, qui sont utilisées dans le résultat représenté par `<output>`.
 
 ## Utilisation
 
@@ -26,7 +26,7 @@ Lorsqu'il est utilisé comme attribut de `<output>`, l'attribut `for` a une vale
 
 ## Exemples
 
-Voir des exemples d'utilisation sur les pages des éléments pour [`<label>`](/fr/docs/Web/HTML/Element/label) et [`<output>`](/fr/docs/Web/HTML/Element/output).
+Voir des exemples d'utilisation sur les pages des éléments pour [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) et [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output).
 
 ## Spécifications
 

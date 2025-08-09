@@ -48,10 +48,10 @@ svg {
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'évènements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#core) »
+- [Attributs d'évènements graphiques](/fr/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

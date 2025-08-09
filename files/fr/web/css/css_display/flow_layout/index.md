@@ -22,11 +22,11 @@ La première phrase contient également un élément {{HTMLElement("span")}} ave
 
 ## Guides
 
-- [Les dispositions de bloc et en ligne dans le flux normal](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [La disposition en flux et les dépassements](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
-- [La disposition en flux et les modes d'écriture](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
-- [Explications sur les contextes de formatage](/fr/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
-- [Être ou non dans le flux](/fr/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
+- [Les dispositions de bloc et en ligne dans le flux normal](/fr/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [La disposition en flux et les dépassements](/fr/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [La disposition en flux et les modes d'écriture](/fr/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [Explications sur les contextes de formatage](/fr/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [Être ou non dans le flux](/fr/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
 
 ## Référence
 

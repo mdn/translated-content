@@ -17,7 +17,7 @@ La structure du site web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/
 
 ### Le HTML
 
-Du point de vue HTML, le squelette de l'application est formé par tout ce qui se trouve en dehors de l'élément [`<section>`](/fr/docs/Web/HTML/Element/section)&nbsp;:
+Du point de vue HTML, le squelette de l'application est formé par tout ce qui se trouve en dehors de l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)&nbsp;:
 
 ```html
 <!doctype html>
@@ -74,7 +74,7 @@ Du point de vue HTML, le squelette de l'application est formé par tout ce qui s
 </html>
 ```
 
-La section [`<head>`](/fr/docs/Web/HTML/Element/head) contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et `app.js`, là où notre application JavaScript est initialisée. Le [corps (`<body>`)](/fr/docs/Web/HTML/Element/body) est divisé en trois avec [`<header>`](/fr/docs/Web/HTML/Element/header) (contenant les images liées), [`<main>`](/fr/docs/Web/HTML/Element/main) la page (avec le titre, la description et un emplacement pour le contenu) et [`<footer>`](/fr/docs/Web/HTML/Element/footer) (le copyright et les liens).
+La section [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et `app.js`, là où notre application JavaScript est initialisée. Le [corps (`<body>`)](/fr/docs/Web/HTML/Reference/Elements/body) est divisé en trois avec [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header) (contenant les images liées), [`<main>`](/fr/docs/Web/HTML/Reference/Elements/main) la page (avec le titre, la description et un emplacement pour le contenu) et [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer) (le copyright et les liens).
 
 Le seul travail de l'application est de lister toutes les entrées _A-Frame_ de la compétition js13kGames 2017. Comme vous pouvez le voir, c'est un site web sur une page, tout ce qu'il y a de plus ordinaire. Le but est d'avoir une base simple, afin que nous puissions nous concentrer sur l'implémentation des fonctionnalités relatives aux PWA.
 
