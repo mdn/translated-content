@@ -80,7 +80,7 @@ p {
 {{ EmbedLiveSample('text-basics-1', "100%", 130) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -155,7 +155,7 @@ ul {
 {{ EmbedLiveSample('text-basics-2', "100%", 220) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -221,7 +221,7 @@ dt {
 {{ EmbedLiveSample('text-basics-3', "100%", 160) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -282,7 +282,7 @@ em {
 {{ EmbedLiveSample('text-basics-4', "100%", 160) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 

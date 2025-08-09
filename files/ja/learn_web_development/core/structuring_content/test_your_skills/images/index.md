@@ -54,7 +54,7 @@ img {
 {{ EmbedLiveSample('images-1', "100%", 150) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -83,7 +83,7 @@ img {
 {{ EmbedLiveSample('images-2', "100%", 600) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -122,7 +122,7 @@ figcaption {
 {{ EmbedLiveSample('images-3', "100%", 600) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 

@@ -56,7 +56,7 @@ body {
 {{ EmbedLiveSample("forms-buttons-1", "100%", 150) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -125,7 +125,7 @@ body {
 {{ EmbedLiveSample("forms-buttons-2", "100%", 350) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -211,7 +211,7 @@ body {
 {{ EmbedLiveSample("forms-buttons-3", "100%", 250) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -272,7 +272,7 @@ body {
 {{ EmbedLiveSample("forms-buttons-4", "100%", 250) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -334,7 +334,7 @@ body {
 {{ EmbedLiveSample("forms-buttons-5", "100%", 250) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
