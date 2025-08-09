@@ -55,7 +55,7 @@ video {
 {{ EmbedLiveSample('audio-1', "100%", 150) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
@@ -104,7 +104,7 @@ video {
 {{EmbedLiveSample('video-1', "100%", 300)}}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 

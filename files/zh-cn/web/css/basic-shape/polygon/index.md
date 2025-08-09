@@ -2,12 +2,12 @@
 title: polygon()
 slug: Web/CSS/basic-shape/polygon
 l10n:
-  sourceCommit: 9760ffbbd1720d09b7d36853edd421fe5447dbc4
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`polygon()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。它用于通过提供一个或多个坐标对（每一个坐标代表形状的一个顶点）来绘制[多边形](https://zh.wikipedia.org/wiki/多边形)。
 
-{{InteractiveExample("CSS Demo: polygon()")}}
+{{InteractiveExample("CSS 演示：polygon()")}}
 
 ```css interactive-example-choice
 clip-path: polygon(
@@ -46,7 +46,6 @@ clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 ## 语法
 
 ```css-nolint
-
 /* 指定坐标列表 */
 /* polygon(<length-percentage> <length-percentage>, ... )*/
 polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%)
@@ -70,7 +69,7 @@ polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 - [`<fill-rule>`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
   - : 一个可选的值，可以是 `nonzero`（默认值，当省略时）或 `evenodd`，指定填充规则。
 - {{cssxref("length-percentage")}}
-  - : 每个多边形的顶点由一对 `<length-percentage>` 值表示，给出了相对于形状的[参考框](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考框)的顶点的 x/y 坐标。
+  - : 每个多边形的顶点由一对 `<length-percentage>` 值表示，给出了相对于形状的[参考盒子](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考盒子)的顶点的 x/y 坐标。
 
 ### 返回值
 
@@ -140,8 +139,8 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 <div class="box">
   <div class="shape"></div>
   <p>
-    1782 年 11 月的一个夜晚，据说两兄弟坐在法国小镇 Annonay
-    的冬季火炉旁，看着烟雾从壁炉的宽烟囱里升起。他们的名字叫史蒂芬和约瑟夫·蒙戈菲耶，他们是纸张制造商，以拥有思想深度和对所有科学知识和新发现的浓厚兴趣而闻名。在那之前的一晚——一个值得铭记的夜晚，正如后来所证明的——数亿人都看着他们火炉里升起的烟雾，却没有从中获得任何特别的灵感。
+    据说，1782 年 11
+    月的一个夜晚，在法国小城安诺内，有两兄弟坐在冬日的炉火旁，看着炉膛里灰色的烟圈沿着宽大的烟囱袅袅升起。他们的名字叫斯蒂芬·蒙哥菲尔和约瑟夫·蒙哥菲尔，职业是造纸工人，以心思缜密著称，对所有科学知识和新发现都有着浓厚的兴趣。在那个夜晚——一个值得纪念的夜晚——之前，数以亿计的人都在注视着自家炉火升起的烟圈，却没有从中得到任何特别的启发。
   </p>
 </div>
 ```

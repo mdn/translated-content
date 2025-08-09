@@ -178,7 +178,7 @@ let time = window.performance.timing;
         {{domxref("PerformanceTiming.domContentLoadedEventStart","domContentLoadedEventStart")}}
       </td>
       <td>
-        パーサーが <code><a href="/ja/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a><//code> イベントを送信する直前、つまり解釈直後に実行できるスクリプトがすべて実行された直後。
+        パーサーが <code><a href="/ja/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a></code> イベントを送信する直前、つまり解釈直後に実行できるスクリプトがすべて実行された直後。
       </td>
     </tr>
     <tr>
@@ -194,7 +194,7 @@ let time = window.performance.timing;
         {{domxref("PerformanceTiming.domComplete","domComplete")}}
       </td>
       <td>
-        パーサーがメイン文書での作業を完了した時点、すなわち <a href="/ja/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> が <code>'complete'</code> に変わり、対応する <code><a href="/ja/docs/Web/API/Document/readystatechange_event">readystatechange</a><//code> イベントが発生した時点。
+        パーサーがメイン文書での作業を完了した時点、すなわち <a href="/ja/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> が <code>'complete'</code> に変わり、対応する <code><a href="/ja/docs/Web/API/Document/readystatechange_event">readystatechange</a></code> イベントが発生した時点。
       </td>
     </tr>
     <tr>

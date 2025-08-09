@@ -1,29 +1,31 @@
 ---
 title: "スキルテスト: フレックスボックス"
+short-title: フレックスボックス
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
-original_slug: Learn_web_development/Core/CSS_layout/Flexbox_skills
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
-
-{{LearnSidebar}}
 
 このスキルテストの目的は、[フレックスボックスとフレックスアイテム](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)がどのように動作するか理解しているかどうかを評価することです。以下にフレックスボックスを使用して作成する 4 つの一般的なデザインパターンを示します。課題はそれらを構築することです。
 
 > [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+
+## 対話型チャレンジ
+
+まず最初に、[学習パートナー](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)である [Scrimba](https://scrimba.com/home) が作成した、マージンの一括指定を使った楽しくインタラクティブな課題をご紹介します。
+
+埋め込みのスクリームを見て、指示に従ってコードを編集し、タイムライン上の課題（小さな幽霊のアイコン）を完了してください。完了したら、スクリームの再生を再開して、教師の解答が自分の解答と一致するかどうかを調べることができます。
+
+<scrim-inline url="https://scrimba.com/frontend-path-c0j/~03a" scrimtitle="Flexbox alignment challenges" survey="true"></scrim-inline>
 
 ## 課題 1
 
-この課題では、リスト項目はサイトのナビゲーションです。各アイテムの間に等しい空間の大きさで、一列に並べる必要があります。
+この課題では、リストアイテムはサイトのナビゲーションです。各アイテムの間に等しい空間の大きさで、一列に並べる必要があります。
 
 最終結果は下記の画像のようになるはずです。
 
 ![空間を空けて並べられたフレックスアイテム。](flex-task1.png)
-
-以下のライブコードを更新して、完成例を再現してみてください。
 
 ```html live-sample___flexbox1
 <nav>
@@ -36,7 +38,7 @@ l10n:
 </nav>
 ```
 
-```css hidden live-sample___flexbox1
+```css live-sample___flexbox1
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -56,17 +58,16 @@ nav a:visited {
   display: inline-block;
   text-decoration: none;
 }
-```
 
-```css live-sample___flexbox1
 nav ul {
+  /* ここにスタイルを追加 */
 }
 ```
 
 {{EmbedLiveSample("flexbox1", "", "240px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 `display: flex` を適用すると、`justify-content` プロパティを使用して空間を制御することができます。
 
@@ -89,8 +90,6 @@ nav ul {
 
 **ボーナス問題:** これで最初のアイテムを他のアイテムの 2 倍の大きさにできますか？
 
-以下のライブコードを更新して、完成例を再現してみてください。
-
 ```html live-sample___flexbox2
 <ul>
   <li>I am small</li>
@@ -103,7 +102,7 @@ nav ul {
 </ul>
 ```
 
-```css hidden live-sample___flexbox2
+```css live-sample___flexbox2
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -121,20 +120,20 @@ li {
   color: #fff;
   padding: 0.5em;
 }
-```
 
-```css live-sample___flexbox2
 ul {
+  /* ここにスタイルを追加 */
 }
 
 li {
+  /* ここにスタイルを追加 */
 }
 ```
 
 {{EmbedLiveSample("flexbox2", "", "240px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 一括指定を使用するのが最善ですので、このシナリオでは `flex: 1` が最も適切な答えでしょう。したがって、最適な結果は次のようになります。
 
@@ -160,70 +159,9 @@ li:first-child {
 
 ## 課題 3
 
-この課題では、下記の HTML に 2 つの要素があり、クラスが `parent` の `<div>` 要素に、クラスが `child` の `<div>` 要素が格納されています。フレックスボックスを使用して、子要素を親の中央に配置してください。ここで取りうる解決策は一つではないことに注意してください。
-
-最終結果は下記の画像のようになるはずです。
-
-![別のボックスの中央にあるボックス。](flex-task3.png)
-
-以下のライブコードを更新して、完成例を再現してみてください。
-
-```html live-sample___flexbox3
-<div class="parent">
-  <div class="child">Center me.</div>
-</div>
-```
-
-```css hidden live-sample___flexbox3
-body {
-  font: 1.2em / 1.5 sans-serif;
-}
-.parent {
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
-  height: 200px;
-}
-
-.child {
-  background-color: #4d7298;
-  color: #fff;
-  padding: 0.5em;
-  width: 150px;
-}
-```
-
-```css hidden live-sample___flexbox3
-.parent {
-}
-
-.child {
-}
-```
-
-{{EmbedLiveSample("flexbox3", "", "210px")}}
-
-<details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
-
-アイテムを水平方向と垂直方向に中央揃えにするには、親スタイルを変更するだけで十分です。
-
-```css
-.parent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-```
-
-</details>
-
-## 課題 4
-
-この課題では、下記の画像のように、これらの項目を行に並べてください。
+この課題では、下記の画像のように、これらのアイテムを行に並べてください。
 
 ![行として表示される一連のアイテム。](flex-task4.png)
-
-以下のライブコードを更新して、完成例を再現してみてください。
 
 ```html live-sample___flexbox4
 <ul>
@@ -240,7 +178,7 @@ body {
 </ul>
 ```
 
-```css hidden live-sample___flexbox4
+```css live-sample___flexbox4
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -259,20 +197,20 @@ li {
   padding: 0.5em;
   margin: 0.5em;
 }
-```
 
-```css live-sample___flexbox4
 ul {
+  /* ここにスタイルを追加 */
 }
 
 li {
+  /* ここにスタイルを追加 */
 }
 ```
 
 {{EmbedLiveSample("flexbox4", "", "260px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 この課題では、フレックス行を折り返すための `flex-wrap` プロパティを理解することが求められます。 さらに、上記の例のような外見にするには、子要素に `flex: auto`（または `flex: 1 1 auto;`）を設定する必要があります。
 
@@ -288,7 +226,3 @@ li {
 ```
 
 </details>
-
-## 関連情報
-
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)

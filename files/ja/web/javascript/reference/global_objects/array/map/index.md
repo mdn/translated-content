@@ -132,7 +132,7 @@ console.log(kvArray);
 
 ### undefined を持つ対応付けられた配列
 
-{{jsxref("undefined")}} が返されるか、または何も返されない場合、結果の配列には  `undefined` が含まれます。要素を削除したい場合は、 {{jsxref("Array/filter", "filter()")}} メソッドをチェーンするか、 {{jsxref("Array/flatMap", "flatMap()")}} メソッドを使用して、削除を示す空の配列を返します。
+{{jsxref("undefined")}} が返されるか、または何も返されない場合、結果の配列には `undefined` が含まれます。要素を削除したい場合は、 {{jsxref("Array/filter", "filter()")}} メソッドをチェーンするか、 {{jsxref("Array/flatMap", "flatMap()")}} メソッドを使用して、削除を示す空の配列を返します。
 
 ```js
 const numbers = [1, 2, 3, 4];

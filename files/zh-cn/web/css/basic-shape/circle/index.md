@@ -2,12 +2,12 @@
 title: circle()
 slug: Web/CSS/basic-shape/circle
 l10n:
-  sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`circle()`** CSS [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)定义了一个圆形，使用半径和位置来描述。它是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型之一。
 
-{{InteractiveExample("CSS Demo: circle()")}}
+{{InteractiveExample("CSS 演示：circle()")}}
 
 ```css interactive-example-choice
 clip-path: circle(50px);
@@ -79,18 +79,11 @@ clip-path: circle(6rem at 12rem 8rem);
 ```html live-sample___circle
 <div class="box">
   <img
-    alt="A hot air balloon"
+    alt="一个热气球"
     src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
   <p>
-    One November night in the year 1782, so the story runs, two brothers sat
-    over their winter fire in the little French town of Annonay, watching the
-    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
-    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
-    were noted as possessing thoughtful minds and a deep interest in all
-    scientific knowledge and new discovery. Before that night—a memorable night,
-    as it was to prove—hundreds of millions of people had watched the rising
-    smoke-wreaths of their fires without drawing any special inspiration from
-    the fact.
+    据说，1782 年 11
+    月的一个夜晚，在法国小城安诺内，有两兄弟坐在冬日的炉火旁，看着炉膛里灰色的烟圈沿着宽大的烟囱袅袅升起。他们的名字叫斯蒂芬·蒙哥菲尔和约瑟夫·蒙哥菲尔，职业是造纸工人，以心思缜密著称，对所有科学知识和新发现都有着浓厚的兴趣。在那个夜晚——一个值得纪念的夜晚——之前，数以亿计的人都在注视着自家炉火升起的烟圈，却没有从中得到任何特别的启发。
   </p>
 </div>
 ```

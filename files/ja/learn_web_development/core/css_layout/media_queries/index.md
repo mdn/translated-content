@@ -304,7 +304,7 @@ Firefox 開発者ツールの[レスポンシブデザインモード](https://f
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Media Queries: a simple mobile first design, step 1</title>
   <style>
-    /* Add styles here */
+    /* ここにスタイルを追加 */
   </style>
 </head>
 <div class="wrapper">

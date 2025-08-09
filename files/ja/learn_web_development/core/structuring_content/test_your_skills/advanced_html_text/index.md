@@ -77,7 +77,7 @@ time {
 {{ EmbedLiveSample('advanced-text', "100%", 260) }}
 
 <details>
-<summary>クリックすると解答を表示</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 完了した HTML は、次のようになるはずです。
 
