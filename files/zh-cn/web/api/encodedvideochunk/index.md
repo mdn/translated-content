@@ -17,13 +17,13 @@ l10n:
 ## 实例属性
 
 - {{domxref("EncodedVideoChunk.type")}} {{ReadOnlyInline}}
-  - : 返回一个字符串，指示此数据块是否为关键帧。
+  - : 返回一个指示此数据块是否为关键帧字符串。
 - {{domxref("EncodedVideoChunk.timestamp")}} {{ReadOnlyInline}}
-  - : 返回一个整数，表示视频的时间戳（以微秒为单位）。
+  - : 返回一个表示视频的时间戳（以微秒为单位）整数。
 - {{domxref("EncodedVideoChunk.duration")}} {{ReadOnlyInline}}
-  - : 返回一个整数，表示视频的持续时间（以微秒为单位）。
+  - : 返回一个表示视频的持续时间（以微秒为单位）整数。
 - {{domxref("EncodedVideoChunk.byteLength")}} {{ReadOnlyInline}}
-  - : 返回一个整数，表示视频的长度（以字节为单位）。
+  - : 返回一个表示视频的长度（以字节为单位）整数。
 
 ## 实例方法
 
