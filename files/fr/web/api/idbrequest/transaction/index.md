@@ -5,7 +5,7 @@ slug: Web/API/IDBRequest/transaction
 
 {{ APIRef("IndexedDB") }}
 
-La propriété **`transaction`** de l'interface IDBRequest renvoie la {{domxref("IDBTransaction","transaction")}} dans laquelle on fait la requête. La propriété peut renvoyer `null` si la requête se fait sans transaction, comme un objet IDBRequest renvoyé par {{domxref("IDBFactory.open")}} (dans ce cas on se connecte juste à la base de données, il n’y a pas de transaction associée).
+La propriété **`transaction`** de l'interface IDBRequest renvoie la {{domxref("IDBTransaction","transaction")}} dans laquelle on fait la requête. La propriété peut renvoyer `null` si la requête se fait sans transaction, comme un objet IDBRequest renvoyé par {{domxref("IDBFactory.open")}} (dans ce cas on se connecte juste à la base de données, il n'y a pas de transaction associée).
 
 > [!NOTE]
 > Durant la gestion d'un événement {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} qui met à jour la version de la base de données, la propriété **`transaction`** doit être une {{domxref("IDBTransaction","transaction")}} ouverte en {{domxref("IDBTransaction.mode", "mode")}} `"versionchange"`, on peut alors accéder aux {{domxref("IDBObjectStore","magasins d'objets")}} et {{domxref("IDBIndex","index")}} ou annulé la mise à niveau. Après quoi, la propriété **`transaction`** renverra encore `null`.
