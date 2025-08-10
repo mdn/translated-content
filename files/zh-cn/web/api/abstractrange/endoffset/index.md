@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-一个整数值，表示在 {{domxref("Node")}}（由 {{domxref("AbstractRange.endContainer", "endContainer")}} 指定）中，范围最后一个字符所在的位置。
+一个整型。它表示在 {{domxref("Node")}}（由 {{domxref("AbstractRange.endContainer", "endContainer")}} 指定）中，范围最后一个字符所在的位置。
 
 ## 示例
 
