@@ -65,7 +65,7 @@ function getRandomArbitrary(min, max) {
 
 ### 取得一個介於兩個值之間的隨機整數
 
-此範例回傳一個介於指定值之間的隨機_整數_。該值不小於 `min`（如果 `min` 不是整數，則為大於 `min` 的下一個整數），且小於（但不等於）`max`。
+此範例回傳一個介於指定值之間的隨機*整數*。該值不小於 `min`（如果 `min` 不是整數，則為大於 `min` 的下一個整數），且小於（但不等於）`max`。
 
 ```js
 function getRandomInt(min, max) {
