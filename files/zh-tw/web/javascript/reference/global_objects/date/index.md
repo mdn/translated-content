@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b3840f6234d24ade72a43171fd6489dd533aaf15
 ---
 
-JavaScript 的 **`Date`** 物件以平台獨立的格式表示一個特定的時間點。`Date` 物件封裝了一個整數，代表自 1970 年 1 月 1 日 00:00:00 UTC（*紀元*）以來的毫秒數。
+JavaScript 的 **`Date`** 物件以平台獨立的格式表示一個特定的時間點。`Date` 物件封裝了一個整數，代表自 1970 年 1 月 1 日 00:00:00 UTC（_紀元_）以來的毫秒數。
 
 > [!NOTE]
 > 隨著 {{jsxref("Temporal")}} API 的引入，`Date` 物件被視為一個遺留功能。建議在新程式碼中使用 `Temporal`，並在可能的情況下將現有程式碼遷移至 `Temporal`（請查看[瀏覽器相容性](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Temporal#瀏覽器相容性)）。我們很快會撰寫一份使用指南！
