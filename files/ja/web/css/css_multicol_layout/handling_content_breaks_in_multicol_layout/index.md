@@ -1,8 +1,9 @@
 ---
 title: 段組みにおけるコンテンツの分割の処理
+short-title: コンテンツの分割の処理
 slug: Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
 l10n:
-  sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 段組みレイアウトでは、段ボックス間で、ページメディアのページ間と同様に内容が分割されます。どちらのコンテキストでも、 [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)モジュールのプロパティを用いて、どのようにコンテンツを分割するかを制御します。このガイドでは、段組みで断片化がどのように動作するかを見てみます。

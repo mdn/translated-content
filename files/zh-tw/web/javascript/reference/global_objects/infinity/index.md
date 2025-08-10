@@ -13,8 +13,8 @@ l10n:
 const maxNumber = 10 ** 1000; // 最大正數
 
 if (maxNumber === Infinity) {
-  console.log("我們稱之為 Infinity！");
-  // 預期輸出：「我們稱之為 Infinity！」
+  console.log("我們稱之為無限大！");
+  // 預期輸出：「我們稱之為無限大！」
 }
 
 console.log(1 / maxNumber);

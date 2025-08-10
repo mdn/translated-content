@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc844647f646395fa602816586640c77017898cf
 ---
 
-{{AddonSidebar}}
-
 当使用相关的键盘快捷键执行命令时触发。
 
 监听器会接收到命令的名称。这与在其 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中给出的名称相匹配。

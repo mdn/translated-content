@@ -2,12 +2,9 @@
 title: "HTML 属性: required"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
-original_slug: Web/HTML/Attributes/required
 l10n:
-  sourceCommit: 0496bb2fcef13172325e1cc25a5fc71410506557
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 [論理](/ja/docs/Glossary/Boolean/HTML)属性の **`required`** 属性は、存在する場合、所有するフォームを送信する前にユーザーが入力に値を指定しなければならないことを示します。
 

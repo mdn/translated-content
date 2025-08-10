@@ -3,8 +3,6 @@ title: <div>：內容分區元素
 slug: Web/HTML/Reference/Elements/div
 ---
 
-{{HTMLSidebar}}
-
 **`<div>`** [HTML](/zh-TW/docs/Web/HTML) 元素是流內容的通用容器。除非以某種方式使用 {{glossary("CSS")}} 進行樣式化（例如直接應用樣式或應用某種佈局模型，如 [Flexbox](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout) 到其父元素上），否則它對內容或佈局沒有影響。
 
 {{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}

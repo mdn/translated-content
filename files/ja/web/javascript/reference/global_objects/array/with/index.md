@@ -1,11 +1,10 @@
 ---
 title: Array.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Array/with
 l10n:
-  sourceCommit: d78e56f238d41d5f1e050ed7b04179d2b657d573
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`with()`** は {{jsxref("Array")}} インスタンスのメソッドで、[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)に対応する[コピー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)メソッドです。これは、指定された位置の要素を指定された値で置き換えた新しい配列を返します。
 
@@ -18,8 +17,8 @@ arrayInstance.with(index, value)
 ### 引数
 
 - `index`
-  - : 配列を変更するゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion)。
-    - インデックスが負の場合は、配列の末尾から逆に数えます。 `index < 0` の場合、 `index + array.length` が使用されます。
+  - : 配列を変更するゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。
+    - インデックスが負の場合は、配列の末尾から逆に数えます。 `-array.length <= index < 0` の場合、 `index + array.length` が使用されます。
     - 正規化後のインデックスが範囲を超えていた場合は、 {{jsxref("RangeError")}} 例外が発生します。
 - `value`
   - : 指定された位置に割り当てる値です。
@@ -98,6 +97,7 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 ## 関連情報
 
 - [`Array.prototype.with` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [es-shims による `Array.prototype.with` のポリフィル](https://www.npmjs.com/package/array.prototype.with)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

@@ -1,25 +1,23 @@
 ---
-title: class
+title: HTML class グローバル属性
+short-title: class
 slug: Web/HTML/Reference/Global_attributes/class
-original_slug: Web/HTML/Global_attributes/class
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
-**`class`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は、要素のクラスを空白区切りで並べたリストで、大文字小文字を区別します。クラスは CSS の [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) や JavaScript の DOM メソッド {{domxref("document.getElementsByClassName")}} といった関数により、特定の要素を選択したり特定の要素にアクセスしたりすることを可能にします。
+**`class`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は、要素のクラスを [ASCII ホワイトスペース](/ja/docs/Glossary/Whitespace#html_での使い方)で区切って並べたリストです。
 
 {{InteractiveExample("HTML デモ: class", "tabbed-standard")}}
 
-```html interactive-example
-<p>Narrator: This is the beginning of the play.</p>
+```html-nolint interactive-example
+<p>ナレーター: これは劇の始まりです。</p>
 
-<p class="note editorial">Above point sounds a bit obvious. Remove/rewrite?</p>
+<p class="note editorial">この点は少しありきたりに聞こえるかもしれません。削除または書き換えますか？</p>
 
-<p>Narrator: I must warn you now folks that this beginning is very exciting.</p>
+<p>ナレーター: 皆さん、この始まりはとてもエキサイティングなものになることをあらかじめお断りしておきます。</p>
 
-<p class="note">[Lights go up and wind blows; Caspian enters stage right]</p>
+<p class="note">[照明が点灯し、風が吹き、カスピアンが舞台右側から登場。]</p>
 ```
 
 ```css interactive-example
@@ -29,16 +27,28 @@ l10n:
 }
 
 .editorial {
-  background: rgb(255, 0, 0, 0.25);
+  background: rgb(255 0 0 / 0.25);
   padding: 10px;
 }
 
-.editorial:before {
+.editorial::before {
   content: "Editor: ";
 }
 ```
 
-仕様書ではクラス名の要件を示していませんが、ウェブ開発者は要素の外見ではなく、意味論的な目的を表す名前を使用することが推奨されます。例えば、あるクラスの要素が _イタリック体_ で表示されるとしても、クラス名は _attribute_ の方が _italics_ よりも属性を説明します。意味論的な名前は、ページの外見を変更した場合でも論理的であり続けます。
+## 構文
+
+`class` 属性は、 [ASCII ホワイトスペース](/ja/docs/Glossary/Whitespace#html_での使い方)で区切られたクラス値のリストです。
+
+それぞれのクラス値は、 Unicode 文字（もちろん、 ASCII ホワイトスペースを除く）を任意に含めることができます。ただし、 {{domxref("Document.querySelector()")}} のような API を使用して JavaScript から、あるいは CSS スタイルシート内で CSS セレクターとして使用する場合、クラス属性の値は [CSS 識別子](/ja/docs/Web/CSS/ident)として有効でなければなりません。これは、クラス属性値が有効な CSS 識別子ではない場合 (例えば、`my?class` や `1234`)、セレクターで使用する前に、 {{domxref("CSS.escape_static", "CSS.escape()")}} メソッドまたは[手動](/ja/docs/Web/CSS/ident#文字のエスケープ)でエスケープしなければならないことを意味しています。
+
+このため、開発者は、エスケープを必要としない、有効な CSS 識別子である値をクラス属性として選ぶことをお勧めします。
+
+## 解説
+
+クラスを使用すると、CSS および JavaScript で、[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)または {{domxref("document.getElementsByClassName()")}} などの関数を使用して、特定の要素を選択してアクセスすることができます。
+
+仕様書ではクラスの名前に関する要求事項はありませんが、ウェブ開発者は、要素の表示ではなく、要素の意味的な目的を記述する名前を使用することが推奨されています。例えば、 _italics_ ではなく _attribute_ を使用して属性を記述します。ただし、このクラスの要素は _italics_ で表示される場合もあります。意味的な名前は、ページの表示が変更されても論理的な意味を保ちます。
 
 ## 仕様書
 
