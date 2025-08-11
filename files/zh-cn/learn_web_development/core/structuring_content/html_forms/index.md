@@ -197,7 +197,7 @@ btn.addEventListener("click", () => {
 
 你需要知道的是，有些输入类型的值并不是用户直接在字段中输入的。例如 [`<input type="color">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/color) 会显示一个取色器，你可以从中选择颜色；[`<input type="radio">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio) 会显示一个单选按钮，可以被选中也可以不被选中。
 
-对于单选按钮，一般需要在 `value` 属性中指定一个具体的值，表示当该按钮被选中时，提交到服务器的实际内容。注意，你 *可以* 在 `text` 和 `color` 等输入类型上也设置 `value` 属性，其效果是：表单控件在初次渲染完成时就预先填充这个值。
+对于单选按钮，一般需要在 `value` 属性中指定一个具体的值，表示当该按钮被选中时，提交到服务器的实际内容。注意，你*可以*在 `text` 和 `color` 等输入类型上也设置 `value` 属性，其效果是：表单控件在初次渲染完成时就预先填充这个值。
 
 #### `required` 和 `value` 属性的实际效果
 
