@@ -96,7 +96,7 @@ twoDecimalPlaces;
 
 ### 转换至 number 数据类型
 
-有时，你可能会遇到一个以字符串类型存储的数字，这会使得对其进行计算变得困难。这种情况最常发生在数据被输入到[表单](/zh-CNS/docs/Learn_web_development/Extensions/Forms)的输入框中，且[输入类型为文本](/zh-CN/docs/Web/HTML/Reference/Elements/input/text)时。解决此问题的方法是将字符串值传递给 [`Number()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 构造函数，以返回该值的数字版本。
+有时，你可能会遇到一个以字符串类型存储的数字，这会使得对其进行计算变得困难。这种情况最常发生在数据被输入到[表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)的输入框中，且[输入类型为文本](/zh-CN/docs/Web/HTML/Reference/Elements/input/text)时。解决此问题的方法是将字符串值传递给 [`Number()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 构造函数，以返回该值的数字版本。
 
 例如，尝试在控制台下输入这几行：
 
@@ -226,9 +226,9 @@ myNumber = Number(myNumber) + 3;
 num2 + num1 / 8 + 2;
 ```
 
-一般人，你会将它看作“*50 加 10 等于 60*”，然后“*8 加 2 等于 10*”，最后“*60 除以 10 等于 6*”。
+一般人，你会将它看作“_50 加 10 等于 60_”，然后“_8 加 2 等于 10_”，最后“_60 除以 10 等于 6_”。
 
-但浏览器会看作“*10 除以 8 等于 1.25*”，然后“*50 加 1.25 加 2 等于 53.25*”。
+但浏览器会看作“_10 除以 8 等于 1.25_”，然后“_50 加 1.25 加 2 等于 53.25_”。
 
 这是因为**运算符优先级**——一些运算符将在计算算式（在编程中称为*表达式*）的结果时先于其他运算符被执行。JavaScript 中的运算符优先级与学校的数学课程相同——乘法和除法总是先完成，然后是加法和减法（总是从左到右进行计算）。
 
@@ -430,7 +430,7 @@ btn.addEventListener("click", updateBtn);
 function updateBtn() {
   if (btn.textContent === "启动机器") {
     btn.textContent = "停止机器";
-    txt.textContent = "T机器已启动！";
+    txt.textContent = "机器已启动！";
   } else {
     btn.textContent = "启动机器";
     txt.textContent = "机器已停止运行。";
