@@ -411,11 +411,11 @@ btn.addEventListener("click", () => {
 
 ### 复选框
 
-“要参加的课程”的复选框是使用 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox) 控件实现的。这些控件渲染为一组开关状态的复选框。与单选按钮不同，你可以同时选择多个选项。
+“选择要参加的课程”的复选框是使用 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox) 控件实现的。这些控件渲染为一组开关状态的复选框。与单选按钮不同，你可以同时选择多个选项。
 
 ```html
 <fieldset>
-  <legend>要参加的课程：</legend>
+  <legend>选择要参加的课程：</legend>
   <div>
     <input type="checkbox" id="yoga" name="yoga" />
     <label for="yoga">瑜伽（+$10）</label>
