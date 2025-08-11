@@ -297,10 +297,10 @@ btn.addEventListener("click", () => {
             name="hotel"
             value="economy"
             checked />
-          <label for="hotelChoice1">经济型 （+$0）</label>
+          <label for="hotelChoice1">经济型（+$0）</label>
 
           <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
-          <label for="hotelChoice2">高级型 （+$50）</label>
+          <label for="hotelChoice2">高级型（+$50）</label>
 
           <input
             type="radio"
@@ -308,20 +308,20 @@ btn.addEventListener("click", () => {
             name="hotel"
             value="penthouse"
             disabled />
-          <label for="hotelChoice3">顶级套房 （+$150）</label>
+          <label for="hotelChoice3">顶级套房（+$150）</label>
         </div>
       </fieldset>
       <fieldset>
         <legend>要参加的课程：</legend>
         <div>
           <input type="checkbox" id="yoga" name="yoga" />
-          <label for="yoga">瑜伽 （+$10）</label>
+          <label for="yoga">瑜伽（+$10）</label>
 
           <input type="checkbox" id="coffee" name="coffee" />
-          <label for="coffee">咖啡烘焙 （+$20）</label>
+          <label for="coffee">咖啡烘焙（+$20）</label>
 
           <input type="checkbox" id="balloon" name="balloon" />
-          <label for="balloon">气球动物艺术 （+$5）</label>
+          <label for="balloon">气球动物艺术（+$5）</label>
         </div>
       </fieldset>
       <p>
@@ -372,10 +372,10 @@ btn.addEventListener("click", () => {
       name="hotel"
       value="economy"
       checked />
-    <label for="hotelChoice1">经济型 （+$0）</label>
+    <label for="hotelChoice1">经济型（+$0）</label>
 
     <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
-    <label for="hotelChoice2">高级型 （+$50）</label>
+    <label for="hotelChoice2">高级型（+$50）</label>
 
     <input
       type="radio"
@@ -383,7 +383,7 @@ btn.addEventListener("click", () => {
       name="hotel"
       value="penthouse"
       disabled />
-    <label for="hotelChoice3">顶级套房 （+$150）</label>
+    <label for="hotelChoice3">顶级套房（+$150）</label>
   </div>
 </fieldset>
 ```
@@ -418,13 +418,13 @@ btn.addEventListener("click", () => {
   <legend>要参加的课程：</legend>
   <div>
     <input type="checkbox" id="yoga" name="yoga" />
-    <label for="yoga">瑜伽 （+$10）</label>
+    <label for="yoga">瑜伽（+$10）</label>
 
     <input type="checkbox" id="coffee" name="coffee" />
-    <label for="coffee">咖啡烘焙 （+$20）</label>
+    <label for="coffee">咖啡烘焙（+$20）</label>
 
     <input type="checkbox" id="balloon" name="balloon" />
-    <label for="balloon">气球动物艺术 （+$5）</label>
+    <label for="balloon">气球动物艺术（+$5）</label>
   </div>
 </fieldset>
 ```
