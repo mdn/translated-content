@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-`composite` [抽象角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles) 表示一个可能包含可导航子元素或拥有子元素的小部件。
+`composite` [抽象角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles)表示一个可能包含可导航子元素或拥有子元素的微件。
 
 > [!WARNING]
 > `composite` 是一个抽象角色。此处列出它是为了文档的完整性。Web 开发者不应使用此角色。
