@@ -418,8 +418,9 @@ HTML 包含兩個 {{htmlelement("p")}} 元素，中間有一個 {{htmlelement("d
 </div>
 
 <p>
-  這是另一個段落，用來顯示 <code>display: none;</code> 正在被應用和移除於上面的 <code>&lt;div&gt;</code>。如果只是改變它的
-  <code>opacity</code>，它將總是佔據 DOM 中的空間。
+  這是另一個段落，用來顯示 <code>display: none;</code> 正在被應用和移除於上面的
+  <code>&lt;div&gt;</code>。如果只是改變它的 <code>opacity</code>，它將總是佔據
+  DOM 中的空間。
 </p>
 ```
 
