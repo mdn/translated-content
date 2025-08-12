@@ -34,7 +34,7 @@ valueOf()
 
 ### 回傳值
 
-一個數字，表示此日期的[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)（以毫秒為單位）。如果日期為[無效](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)，則回傳 `NaN`。
+一個數字，表示此日期的[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)（以毫秒為單位）。如果日期[無效](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)，則回傳 `NaN`。
 
 ## 描述
 
