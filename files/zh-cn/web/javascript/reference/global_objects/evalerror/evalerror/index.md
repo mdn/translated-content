@@ -30,7 +30,7 @@ EvalError(message, fileName, lineNumber)
 ## 参数
 
 - `message` {{optional_inline}}
-  - ： 人类可理解的错误描述。
+  - ：人类可理解的错误描述。
 - `options` {{optional_inline}}
   - ： 一个包含以下属性的对象：
     - `cause` {{optional_inline}}
