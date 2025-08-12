@@ -38,7 +38,7 @@ setTime(timeValue)
 
 ### 回傳值
 
-就地變更 {{jsxref("Date")}} 物件，並回傳其新的[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)。如果 `timeValue` 是 `NaN`（或其他會被[強制轉換](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#數字轉換)為 `NaN` 的值，例如 `undefined`），則日期會被設定為[無效日期](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#docs/Web/JavaScript/Reference/Global_Objects/Number)，並回傳 `NaN`。
+就地變更 {{jsxref("Date")}} 物件，並回傳其新的[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)。如果 `timeValue` 是 `NaN`（或其他會被[強制轉換](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#數字轉換)為 `NaN` 的值，例如 `undefined`），則日期會被設定為[無效日期](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)，並回傳 `NaN`。
 
 ## 範例
 
