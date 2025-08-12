@@ -31,7 +31,7 @@ l10n:
 - {{cssxref("animation-fill-mode")}}
   - : 指定動畫在執行前後如何將樣式應用於其目標。
     > [!NOTE]
-    > 在動畫的 [forwards](/zh-TW/docs/Web/CSS/animation-fill-mode#forwards) 填充模式下，加上動畫的屬性行為就像被包含在一個設定好的 [`will-change`](/zh-TW/docs/Web/CSS/will-change) 屬性值中。如果在動畫期間建立了新的堆疊情境，目標元素在動畫結束後會保留該堆疊情境。
+    > 在動畫的 [forwards](/zh-TW/docs/Web/CSS/animation-fill-mode#forwards) 填充模式下，加上動畫的屬性行為就像被包含在一個設定好的 [`will-change`](/zh-TW/docs/Web/CSS/will-change) 屬性值中。如果在動畫期間建立了新的堆疊上下文，目標元素在動畫結束後會保留該堆疊上下文。
 - {{cssxref("animation-iteration-count")}}
   - : 指定動畫應重複的次數。
 - {{cssxref("animation-name")}}
@@ -403,22 +403,22 @@ function listener(event) {
 
 #### HTML
 
-HTML 包含兩個 {{htmlelement("p")}} 元素，中間有一個 {{htmlelement("div")}}，我們將為其 `display` 從 `none` 動畫到 `block`。
+HTML 包含兩個 {{htmlelement("p")}} 元素，中間有一個 {{htmlelement("div")}}，我們會將其 `display` 從 `none` 動畫到 `block`。
 
 ```html
 <p>
   在螢幕上任何地方點擊或按任何鍵，以切換
-  <code><div></code> 的顯示與隱藏。
+  <code>&lt;div&gt;</code> 的顯示與隱藏。
 </p>
 
 <div>
-  這是一個 <code><div></code> 元素，它在
+  這是一個 <code>&lt;div&gt;</code> 元素，它在
   <code>display: none; opacity: 0</code> 和
   <code>display: block; opacity: 1</code> 之間加上動畫。很酷吧？
 </div>
 
 <p>
-  這是另一個段落，用來顯示 <code>display: none;</code> 正在被應用和移除於上面的 <code><div></code>。如果只是改變它的
+  這是另一個段落，用來顯示 <code>display: none;</code> 正在被應用和移除於上面的 <code>&lt;div&gt;</code>。如果只是改變它的
   <code>opacity</code>，它將總是佔據 DOM 中的空間。
 </p>
 ```
