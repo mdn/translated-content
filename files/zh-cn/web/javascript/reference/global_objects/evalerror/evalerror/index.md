@@ -34,7 +34,7 @@ EvalError(message, fileName, lineNumber)
 - `options` {{optional_inline}}
   - ： 一个包含以下属性的对象：
     - `cause` {{optional_inline}}
-      - ： 一个用于指示错误具体原因的属性。当捕获并重新抛出一个具有更具体或更有用错误信息的错误时，可以使用此属性来传递原始错误。
+      - ：一个用于指示错误具体原因的属性。当捕获并重新抛出一个具有更具体或更有用错误信息的错误时，可以使用此属性来传递原始错误。
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - ：导致该异常的代码的文件名。
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
