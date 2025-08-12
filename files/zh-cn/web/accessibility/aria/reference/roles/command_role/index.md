@@ -5,14 +5,14 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-`command` 角色定义了一个执行操作但不接收输入数据的小部件。
+`command` 角色定义了一个执行操作但不接收输入数据的微件。
 
 > [!NOTE]
 > `command` 是一个抽象角色。此处包含它是为了文档的完整性。Web 开发者不应使用此角色。
 
 ## 描述
 
-`command` 角色代表一种执行操作但不接收输入数据的控件。它是以下小部件角色的超类：[`button`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)、[`link`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role) 和 [`menuitem`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+`command` 角色代表一种执行操作但不接收输入数据的控件。它是以下微件角色的超类：[`button`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)、[`link`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role) 和 [`menuitem`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
 
 ## 最佳实践
 
