@@ -23,7 +23,7 @@ EvalError(message, fileName)
 EvalError(message, fileName, lineNumber)
 ```
 
-> [!提示]
+> [! 提示]
 >
 > `EvalError()` 在使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下都可以调用。两种方式都会创建一个新的 `EvalError` 实例。
 
