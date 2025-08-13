@@ -1,11 +1,11 @@
 ---
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`speak-as`** 記述子は、与えられた {{cssxref('@counter-style')}} で構築されたカウンター記号が、どのように話し言葉で表現されるかを指定します。例えば、カウンター記号を数値として話すか、あるいは単にオーディオキューで表現するかを指定することができます。
+**`speak-as`** 記述子は、与えられた {{cssxref('@counter-style')}} で構築されたカウンター記号が、話し言葉でどのように表現されるかを指定します。例えば、カウンター記号を数値として話すか、あるいは単にオーディオキューで表現するかを指定することができます。
 
 ## 構文
 
@@ -53,30 +53,25 @@ speak-as: <counter-style-name>;
 
 ## 形式文法
 
-```
-auto                 |
-bullets              |
-numbers              |
-words                |
-spell-out            |
-<counter-style-name>
-
-<counter-style-name> = <custom-ident>
-```
+{{csssyntax}}
 
 ## 例
 
 ### カウンターの読み上げ方を設定
 
+この例では、カウンターシステムは、視覚的なマーカーとして理解できない記号を使用して修正されています。しかし、`speak-as` 記述子を使用して、アクセシビリティツリー内のリストアイテムのマーカーを数値に設定しています。対応している場合、視覚的なマーカーではなく数値がスクリーンリーダーによって読み上げられます。
+
+`speak-as` 記述子の結果の使い勝手を確認するには、VoiceOver などの支援技術や他のスクリーンリーダーを使用するか、`speak-as` に対応しているブラウザーの開発者ツールで[アクセシビリティパネル](https://firefox-source-docs.mozilla.org/devtools-user/index.html#accessibility-inspector)を表示するかしてください。
+
 #### HTML
 
 ```html
 <ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
+  <li>I had one apple</li>
+  <li>I ate two bananas</li>
+  <li>I devoured three oranges</li>
+  <li>I am not hungry for dinner</li>
+  <li>But I'll have five scoops of ice cream for dessert</li>
 </ul>
 ```
 
@@ -97,7 +92,7 @@ spell-out            |
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_the_spoken_form_for_a_counter') }}
+{{ EmbedLiveSample('カウンターの読み上げ方を設定') }}
 
 ## 仕様書
 
@@ -109,5 +104,8 @@ spell-out            |
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを生成する関数記法
+- {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
+- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール

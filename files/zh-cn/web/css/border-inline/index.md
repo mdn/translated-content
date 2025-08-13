@@ -3,8 +3,6 @@ title: border-inline
 slug: Web/CSS/border-inline
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline`** 为[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用于在样式表中的某处同时设置逻辑行向边框的各属性值。
 
 {{InteractiveExample("CSS Demo: border-inline")}}

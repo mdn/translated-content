@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<br>`** 元素在文本中生成一个换行（回车）符号。此元素在写诗和地址时很有用，这些地方的换行都非常重要。
 
 {{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}

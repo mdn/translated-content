@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2b26cc6e576d23f68fdf992767da81de9707965e
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 **`text-spacing-trim`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語/日本語/韓国語 (CJK) の約物文字（句読点や括弧など）について、隣接する文字との間、およびテキスト行の先頭または末尾に設定する内部空間（カーニング）を制御します。
 
@@ -39,7 +39,8 @@ text-spacing-trim: unset;
     - `trim-start`
       - : `normal` と同様に動作しますが、 CJK 全角の開始用約物文字が各行の先頭に来た場合には半角幅で設定します。
 
-    > **メモ:** [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
+    > [!NOTE]
+    > [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
 
 ## 解説
 

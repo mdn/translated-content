@@ -34,7 +34,7 @@ slug: Web/API/Element/paste_event
 
 데이터 가공 등을 위해 기본 동작을 재정의해야 할 필요가 있는 경우 {{domxref("Event.preventDefault", "event.preventDefault()")}}을 호출해 취소하고, 직접 데이터를 삽입하면 됩니다.
 
-[합성](/ko/docs/Web/Events/Creating_and_triggering_events) `paste` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 문서 내용에 영향을 줄 수 없습니다.
+[합성](/ko/docs/Web/API/Document_Object_Model/Events) `paste` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 문서 내용에 영향을 줄 수 없습니다.
 
 ## 예제
 

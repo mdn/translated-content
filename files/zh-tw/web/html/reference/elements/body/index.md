@@ -3,8 +3,6 @@ title: <body>：文件主體元素
 slug: Web/HTML/Reference/Elements/body
 ---
 
-{{HTMLSidebar}}
-
 **`<body>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表 HTML 文件的內容。一個文件中只能有一個 `<body>` 元素。
 
 ## 屬性

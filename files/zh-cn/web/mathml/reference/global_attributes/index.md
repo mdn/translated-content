@@ -11,7 +11,7 @@ l10n:
 
 除了基本的 MathML 全局属性外，还存在以下全局属性：
 
-- [事件处理器](/zh-CN/docs/Web/Events/Event_handlers)属性，例如 **`onclick`**、**`onfocus`** 等。
+- [事件处理器](/zh-CN/docs/Web/API/Document_Object_Model/Events)属性，例如 **`onclick`**、**`onfocus`** 等。
 - [`href`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/href) 属性，用于将 MathML 元素设置为超链接。
 
 ## 全局属性列表

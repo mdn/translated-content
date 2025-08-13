@@ -21,7 +21,8 @@ original_slug: Web/Accessibility/ARIA/Roles/form_role
 
 フォーム (`form`) ランドマーク ([landmark](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)) は、(メイン ([`main`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)) や検索 ([`search`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)) など) 他の名前付きランドマークが適切でない場合に、全体として結合してフォームを作成する、項目とオブジェクトのコレクションを含むコンテンツのリージョンを識別します。
 
-> **メモ:** {{htmlelement("form")}} 要素を使用すると、アクセス可能な名前が提供されている場合、コンテンツのセクションがフォーム (`form`) ランドマークとして自動的に伝えられます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を使用することを常に好むべきです。
+> [!NOTE]
+> {{htmlelement("form")}} 要素を使用すると、アクセス可能な名前が提供されている場合、コンテンツのセクションがフォーム (`form`) ランドマークとして自動的に伝えられます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を使用することを常に好むべきです。
 
 可能であれば、HTML の {{htmlelement("form")}} 要素を使用してください。 `<form>` 要素は、アクセス可能な名前 (`aria-labelledby`、`aria-label`、`title` など) がある場合にフォーム (`form`) ランドマークを定義します。 ユーザーがフォームの目的を理解できるように、文書内の各フォームに一意のラベルを付けるようにしてください。 このラベルは、支援技術のユーザーだけでなく、全てのユーザーに表示するべきです。 フォームを検索機能に使用する場合は、フォーム (`form`) ランドマークの代わりに検索 (`search`) ランドマークを使用してください。
 

@@ -1,21 +1,18 @@
 ---
-title: title
+title: HTML title グローバル属性
+short-title: title
 slug: Web/HTML/Reference/Global_attributes/title
-original_slug: Web/HTML/Global_attributes/title
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`title`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に関するアドバイザリー情報を表すテキストを含みます。
 
 {{InteractiveExample("HTML デモ: title", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  Use the <code>title</code> attribute on an <code>iframe</code> to clearly
-  identify the content of the <code>iframe</code> to screen readers.
+  <code>title</code> 属性を使用して、 <code>iframe</code> のコンテンツをスクリーンリーダーに明確に識別します。
 </p>
 
 <iframe

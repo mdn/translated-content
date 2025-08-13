@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
-{{jsSidebar("Classes")}}
-
 **`extends`** 关键字用于[类声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)或者[类表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)中，以创建一个类，该类是另一个类的子类。
 
 {{InteractiveExample("JavaScript Demo: Classes Extends", "taller")}}

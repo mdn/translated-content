@@ -10,7 +10,8 @@ HTTP の **`302 Found`** [リダイレクトレスポンス](/ja/docs/Web/HTTP/R
 このステータスを受信したブラウザーは、自動的に `Location` ヘッダーの中の URL にあるリソースをリクエストし、ユーザーを新しいページへリダイレクトさせます。
 このレスポンスを受け取った検索エンジンは、新しいリソースに元の URL へのリンクの属性を付与しないため、新しい URL に {{Glossary("SEO")}} の値が引き継がれません。
 
-> **メモ:** [Fetch Standard](https://fetch.spec.whatwg.org/#http-redirect-fetch) では、ユーザーエージェントが `302` を {{HTTPMethod("POST")}} リクエストの返信として受け取った場合、以降のリダイレクトリクエストは {{HTTPMethod("GET")}} メソッドを使用します。これは HTTP [仕様書](#仕様書)で許されている通りです。
+> [!NOTE]
+> [Fetch Standard](https://fetch.spec.whatwg.org/#http-redirect-fetch) では、ユーザーエージェントが `302` を {{HTTPMethod("POST")}} リクエストの返信として受け取った場合、以降のリダイレクトリクエストは {{HTTPMethod("GET")}} メソッドを使用します。これは HTTP [仕様書](#仕様書)で許されている通りです。
 > ユーザーエージェントがリクエストを変更しないようにするには、代わりに {{HTTPStatus("307", "307 Temporary Redirect")}} を使用してください。これは `307` レスポンスの後でメソッドを変更することを禁止しています。
 >
 > 使用されるメソッドを {{HTTPMethod("GET")}} に変更したい場合は、代わりに {{HTTPStatus("303", "303 See Other")}} を使用してください。

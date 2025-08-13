@@ -3,8 +3,6 @@ title: counter-increment
 slug: Web/CSS/counter-increment
 ---
 
-{{CSSRef}}
-
 ## 概要
 
 `counter-increment`属性用于将[CSS Counters](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)的值增加给定值。可以使用 {{cssxref("counter-reset")}} 属性重置计数器的值。

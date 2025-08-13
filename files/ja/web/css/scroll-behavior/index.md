@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 215e1b1590b1210152e3570627933c0303171e11
 ---
 
-{{CSSRef}}
-
 **`scroll-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ナビゲーションや CSSOM のスクローリング API によってスクロールするボックスにスクロールが発生した際の、そのスクロールの振る舞いを設定します。
 
 {{InteractiveExample("CSS デモ: scroll-behavior")}}

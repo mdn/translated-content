@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`justify-content`** プロパティは、フレックスコンテナーの{{Glossary("main axis", "主軸")}}、グリッドおよび段組みコンテナーの[インライン軸](/ja/docs/Glossary/Logical_properties#inline_direction)に沿って、中身のアイテムの間や周囲に間隔を配置する方法を定義します。
 
 下記のインタラクティブな例では、グリッドレイアウトを使用して `justify-content` の値を示しています。
@@ -134,7 +132,8 @@ justify-content: unset;
 - `stretch`
   - : 各アイテムの主軸に沿った寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、主軸方向の寸法の合計が配置コンテナーを満たすようになります。
 
-    > **メモ:** [フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)では、`stretch` の値は `flex-start` または `start` として動作します。そのため、伸縮は {{CSSXref("flex-grow")}} プロパティを使用して制御します。
+    > [!NOTE]
+    > [フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)では、`stretch` の値は `flex-start` または `start` として動作します。そのため、伸縮は {{CSSXref("flex-grow")}} プロパティを使用して制御します。
 
 - `safe`
   - : アイテムが配置コンテナーをあふれる場合、そのアイテムは配置モードが `start` であるかのように配置されます。指定した配置は行われません。

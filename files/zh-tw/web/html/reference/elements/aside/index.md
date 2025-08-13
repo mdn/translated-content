@@ -3,8 +3,6 @@ title: <aside>：側邊欄元素
 slug: Web/HTML/Reference/Elements/aside
 ---
 
-{{HTMLSidebar}}
-
 **`<aside>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表文件中只間接相關於主要內容的部分。側邊欄常常被呈現為側邊欄或呼叫框。
 
 {{InteractiveExample("HTML Demo: &lt;aside&gt;", "tabbed-standard")}}

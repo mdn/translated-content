@@ -5,7 +5,8 @@ slug: orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-> **警告:** **moz** の接頭辞がついたメソッドやプロパティ（**mozSetDataAt()** など）は Gecko 固有のインターフェイスです。これらのインターフェイスは Gecko ベースのブラウザーで**しか**動作しません。
+> [!WARNING]
+> **moz** の接頭辞がついたメソッドやプロパティ（**mozSetDataAt()** など）は Gecko 固有のインターフェイスです。これらのインターフェイスは Gecko ベースのブラウザーで**しか**動作しません。
 
 Mozilla はいくつかの標準外の機能を使用した、複数のアイテムのドラッグができる機能に対応しています。これは {{domxref("DataTransfer.types","types")}} プロパティと、同様に {{domxref("DataTransfer.getData","getData()")}}, {{domxref("DataTransfer.setData","setData()")}}, {{domxref("DataTransfer.clearData","clearData()")}} メソッドを反映したものですが、取得、修正、削除するアイテムの位置を指定する追加の引数を取ります。
 

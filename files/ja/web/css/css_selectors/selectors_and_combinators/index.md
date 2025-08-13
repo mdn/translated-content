@@ -1,11 +1,10 @@
 ---
 title: CSS セレクターと結合子
+short-title: セレクターと結合子
 slug: Web/CSS/CSS_selectors/Selectors_and_combinators
 l10n:
-  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 CSS セレクターは、選択した要素に一連の CSS ルールを適用するために、選択する要素のパターンを定義するために使用します。結合子は、セレクター間の関係を定義します。様々なセレクターと結合子を使用することで、入力する要素の型、属性、状態、他の要素との関係に基づいて、必要な要素を正確に選択し、スタイル設定することができます。
 
@@ -53,7 +52,7 @@ p.myClass#myId {
 
 #### 結果
 
-{{EmbedLiveSample("Basic selectors", "100%", 100)}}
+{{EmbedLiveSample("Basic selectors", "100%", 120)}}
 
 ## 結合子
 
@@ -100,7 +99,7 @@ h2 + p + p {
 #myId > .myClass {
   outline: 3px dashed red;
 }
-> p {
+* > p {
   font-size: 1.1rem;
 }
 ```
@@ -125,7 +124,7 @@ h2 + p + p {
 
 #### 結果
 
-{{EmbedLiveSample("Combinators", "100%", 300)}}
+{{EmbedLiveSample("Combinators", "100%", 500)}}
 
 ### CSS 入れ子による複雑セレクターの作成
 
@@ -156,8 +155,10 @@ h2 {
     outline: 3px dashed red;
   }
 }
-> p {
-  font-size: 1.1rem;
+* {
+  & > p {
+    font-size: 1.1rem;
+  }
 }
 ```
 
@@ -192,12 +193,12 @@ h2 {
 
 ## 擬似クラスセレクター
 
-[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュールでは、 60 以上の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) を定義しています。擬似クラスはコロン (`:`) を接頭辞とする[単純セレクター](#単純セレクター)で、文書ツリー内に含まれない状態の情報に基づいて要素を選択できるようにします。{{CSSxRef("pseudo-classes", "擬似クラス")}}を使用することで、状態にに基づいて要素をスタイル設定することができます。
+[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュールでは、 60 以上の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)を定義しています。擬似クラスはコロン (`:`) を接頭辞とする[単純セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#単純セレクター)で、文書ツリー内に含まれない状態の情報に基づいて要素を選択できるようにします。{{CSSxRef("pseudo-classes", "擬似クラス")}}を使用することで、状態にに基づいて要素をスタイル設定することができます。
 例えば、 {{cssxref(":target")}} 単純セレクターはフラグメント識別子を持つ URL の要素を対象とし、 [`a:visited`](/ja/docs/Web/CSS/:visited) [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)はユーザーが訪問したすべての {{HTMLElement("a")}} 要素に一致します。
 
 擬似クラスは、[要素の表示状態](/ja/docs/Web/CSS/Pseudo-classes#表示状態擬似クラス)、[入力](/ja/docs/Web/CSS/Pseudo-classes#入力擬似クラス)、[言語](/ja/docs/Web/CSS/Pseudo-classes#言語擬似クラス)、[位置](/ja/docs/Web/CSS/Pseudo-classes#位置擬似クラス)、[リソース状態](/ja/docs/Web/CSS/Pseudo-classes#リソース状態擬似クラス)、[時間軸](/ja/docs/Web/CSS/Pseudo-classes#時間軸擬似クラス)、[ツリー構造](/ja/docs/Web/CSS/Pseudo-classes#ツリー構造擬似クラス)、[ユーザー操作](/ja/docs/Web/CSS/Pseudo-classes#ユーザー操作擬似クラス)、[関数](/ja/docs/Web/CSS/Pseudo-classes#関数擬似クラス)に分類することができます。
 
-複数の擬似クラスを組み合わせて[複合セレクター](#複合セレクター)を作成することができます。擬似クラスを要素型セレクターや全称セレクターと複合セレクターに結合する場合、擬似クラスは、要素型セレクターや全称セレクターの後に置かなければなりません。
+複数の擬似クラスを組み合わせて[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)を作成することができます。擬似クラスを要素型セレクターや全称セレクターと複合セレクターに結合する場合、擬似クラスは、要素型セレクターや全称セレクターの後に置かなければなりません。
 
 ## 擬似要素セレクター
 

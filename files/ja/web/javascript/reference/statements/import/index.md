@@ -93,7 +93,8 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-> **メモ:** `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を構造分解することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
+> [!NOTE]
+> `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を構造分解することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
 
 #### デフォルトの import
 
@@ -140,7 +141,8 @@ myModule.doAllTheAmazingThings();
 
 `myModule` は[封印された](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) [`null` プロトタイプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)オブジェクトです。 デフォルトのエクスポートは `default` という名前のキーで利用できるようになっています。詳細は[モジュール名前空間オブジェクト](/ja/docs/Web/JavaScript/Reference/Operators/import#モジュール名前空間オブジェクト)をご覧ください。
 
-> **メモ:** JavaScript は `import * from "module-name"` のような、ワイルカードインポートを提供していません。名前の衝突が高確率で発生するためです。
+> [!NOTE]
+> JavaScript は `import * from "module-name"` のような、ワイルカードインポートを提供していません。名前の衝突が高確率で発生するためです。
 
 #### 副作用のためだけにモジュールをインポートする
 

@@ -148,7 +148,8 @@ console.log(proxy3.message2); // world
 - {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : 新しい `Proxy` オブジェクトを生成します。
 
-> **メモ:** `Proxy.prototype` プロパティはないので、`Proxy` インスタンスには特別なプロパティやメソッドはありません。
+> [!NOTE]
+> `Proxy.prototype` プロパティはないので、`Proxy` インスタンスには特別なプロパティやメソッドはありません。
 
 ## 静的メソッド
 

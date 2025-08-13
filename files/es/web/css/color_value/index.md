@@ -3,8 +3,6 @@ title: <color>
 slug: Web/CSS/color_value
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo de datos [CSS](/es/docs/Web/CSS) **`<color>`** denota un color en el [sRGB color space](http://en.wikipedia.org/wiki/SRGB). Un color puede ser descrito de cualquiera de las siguiente maneras:

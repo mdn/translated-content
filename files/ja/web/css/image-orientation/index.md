@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-{{CSSRef}}
-
 **`image-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像の向きのレイアウトに依存しない修正を指定します。
 
 {{InteractiveExample("CSS デモ: image-orientation")}}
@@ -56,7 +54,8 @@ image-orientation: unset;
 - `from-image`
   - : 既定の初期値です。画像に含まれている [EXIF](https://ja.wikipedia.org/wiki/EXIF) 情報を使用して、画像の向きを適切にします。
 
-> **警告:** `image-orientation: none;` はセキュリティ上の懸念により、EXIF 情報でエンコードされた安全でないオリジン画像の向きを上書きしません。 詳細は、[この CSS 作業グループ草案課題](https://github.com/w3c/csswg-drafts/issues/5165)をご覧ください。
+> [!WARNING]
+> `image-orientation: none;` はセキュリティ上の懸念により、EXIF 情報でエンコードされた安全でないオリジン画像の向きを上書きしません。 詳細は、[この CSS 作業グループ草案課題](https://github.com/w3c/csswg-drafts/issues/5165)をご覧ください。
 
 ## 解説
 

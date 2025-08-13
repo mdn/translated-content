@@ -3,7 +3,7 @@ title: ::-webkit-progress-inner-element
 slug: Web/CSS/::-webkit-progress-inner-element
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

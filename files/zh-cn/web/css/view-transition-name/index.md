@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3a95c239db50c88fdde48daacb6c279006a422b9
 ---
 
-{{CSSRef}}
-
 **`view-transition-name`** [CSS](/zh-CN/docs/Web/CSS) 属性为选中的元素提供了一个独特的标识名称（一个 {{cssxref("custom-ident")}}），并使其参与与根视图过渡分开的[视图过渡](/zh-CN/docs/Web/API/View_Transition_API)——或者如果指定了 `none` 值，则不参与任何视图过渡。
 
 ## 语法

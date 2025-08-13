@@ -867,6 +867,7 @@
 /ru/docs/Web/CSS/Тихий	/ru/docs/Web/CSS/CSS_syntax/Comments
 /ru/docs/Web/CSS/Указанное_значение	/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
 /ru/docs/Web/CSS/размер	/ru/docs/Web/CSS/length
+/ru/docs/Web/Events	/ru/docs/Web/API/Document_Object_Model/Events
 /ru/docs/Web/Events/abort_(dom_abort_api)	/ru/docs/Web/API/AbortSignal/abort_event
 /ru/docs/Web/Events/blur	/ru/docs/Web/API/Element/blur_event
 /ru/docs/Web/Events/deviceorientation	/ru/docs/Web/API/Window/deviceorientation_event
@@ -1267,8 +1268,9 @@
 /ru/docs/Web/JavaScript/Language_overview	/ru/docs/Web/JavaScript/Guide/Language_overview
 /ru/docs/Web/JavaScript/Memory_management	/ru/docs/Web/JavaScript/Guide/Memory_management
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Private_properties
-/ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_properties
+/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Private_elements
+/ru/docs/Web/JavaScript/Reference/Classes/Private_properties	/ru/docs/Web/JavaScript/Reference/Classes/Private_elements
+/ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_elements
 /ru/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ru/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /ru/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement	/ru/docs/Web/JavaScript/Reference/Errors/Unexpected_token

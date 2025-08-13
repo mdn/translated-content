@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-{{CSSRef}}
-
 **`scrollbar-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールバーのトラックとつまみの色を設定します。
 
 **トラック**はスクロールバーの背景を表し、一般的にスクロール位置にかかわらず固定されています。
@@ -55,7 +53,8 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-> **メモ:** [`@media (forced-colors: active)`](/ja/docs/Web/CSS/@media/forced-colors) とすると、`scrollbar-color` が `auto` になります。
+> [!NOTE]
+> [`@media (forced-colors: active)`](/ja/docs/Web/CSS/@media/forced-colors) とすると、`scrollbar-color` が `auto` になります。
 
 ## アクセシビリティ
 

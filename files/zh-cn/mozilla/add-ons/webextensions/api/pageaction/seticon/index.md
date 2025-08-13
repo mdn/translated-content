@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 53c832f09b5f55b2cbe040907bff8abfb7b57f72
 ---
 
-{{AddonSidebar}}
-
 设置页面操作的图标。
 
 你可以指定图片文件的路径或 {{WebExtAPIRef('sidebarAction.ImageDataType')}} 对象作为单个图标。

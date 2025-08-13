@@ -5,7 +5,8 @@ l10n:
   sourceCommit: a1ac64fa4da965d2a152f08221b1a9aed638fd16
 ---
 
-> **注目:** **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事に設定されたキーが使用されます。以下の記事は、MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
+> [!CALLOUT]
+> **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事に設定されたキーが使用されます。以下の記事は、MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
 
 フロントマターの `page-type` キーは MDN ページ型を記述します。
 これにより、 MDN コンテンツツールはコンテンツチェックやサイドバーの整理を自動化することができます。
@@ -46,7 +47,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 - `learn-topic`: トピックの概要、つまり [_CSS_](/ja/docs/Learn_web_development/Core/Styling_basics) のようなモジュールの集合です。
 - `learn-module` [_HTML によるコンテンツの構造化_](/ja/docs/Learn_web_development/Core/Structuring_content)のように、モジュールの概要、つまり、順番に並んだガイドの集合です。
 - `learn-module-chapter` [_モバイルアクセシビリティ_](/ja/docs/Learn_web_development/Core/Accessibility/Mobile)のように、モジュールの一部であるガイド。
-- `learn-module-assessment` [_スキルテスト: 基本的なコントロール_](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
+- `learn-module-assessment` [_スキルテスト: 基本的なコントロール_](/ja/docs/Learn_web_development/Extensions/Forms)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
 - `learn-faq`: [_ドメイン名とは何ですか?_](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)のように、ウェブ開発に関する固有の質問に対する答えです。
 
 ### アクセシビリティのページ型
