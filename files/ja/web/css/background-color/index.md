@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
-
 **`background-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景色を設定します。
 
 {{InteractiveExample("CSS デモ: background-color")}}

@@ -3,8 +3,6 @@ title: カード
 slug: Web/CSS/Layout_cookbook/Card
 ---
 
-{{CSSRef}}
-
 このパターンは、オプションでフッターが付く「カード」部品のリストです。
 
 ![1 行に 3 つのカード部品](cards.png)

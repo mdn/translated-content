@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
-{{CSSRef}}
-
 **`mask-border-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[マスク境界画像](/ja/docs/Web/CSS/mask-border)の辺と中央部分の変倍およびタイル表示の方法を指定します。
 
 ## 構文
@@ -69,7 +67,8 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 -webkit-mask-box-image-repeat: round;
 ```
 
-> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> [!NOTE]
+> [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 

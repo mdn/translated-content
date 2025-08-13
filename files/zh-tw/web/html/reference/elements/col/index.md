@@ -3,8 +3,6 @@ title: <col>：表格欄元素
 slug: Web/HTML/Reference/Elements/col
 ---
 
-{{HTMLSidebar}}
-
 **`<col>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於定義由其父元素 {{HTMLElement("colgroup")}} 表示的欄組中的一個或多個欄。`<col>` 元素僅在未定義 [`span`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#span) 屬性的 {{HTMLElement("colgroup")}} 元素的情況下作為其子元素有效。
 
 {{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-{{HTMLSidebar}}
-
 **`<dt>`** [HTML](/zh-CN/docs/Web/HTML) 元素指定描述或定义列表中的术语，因此必须在 {{HTMLElement("dl")}} 元素内部使用。它通常后面跟着一个 {{HTMLElement("dd")}} 元素；然而，多个连续的 `<dt>` 元素表示由紧随其后的一个 {{HTMLElement("dd")}} 元素定义的多个术语。
 
 随后的 {{HTMLElement("dd")}}（**描述详情**）元素提供与使用 `<dt>` 指定的术语相关的定义或其他相关文本。

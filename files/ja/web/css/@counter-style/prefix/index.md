@@ -1,11 +1,13 @@
 ---
 title: prefix
 slug: Web/CSS/@counter-style/prefix
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+{{cssxref('@counter-style')}} ルールの **`prefix`** 記述子は、カウンターのマーカー表現の先頭に追加されるコンテンツを指定します。
 
-**`prefix`** は {{cssxref('@counter-style')}} ルールの記述子で、マーカーに先立って表示される内容を指定します。指定されていない場合、既定値は `""` (空文字列) になります。
+カウンター値が負の場合、`prefix` は負の符号の前に、 {{cssxref("@counter-style/negative", "negative")}} 記述子によって追加されたその他の `<symbol>` の前に付きます。
 
 ## 構文
 
@@ -18,6 +20,8 @@ prefix: url(bullet.png);
 
 ### 値
 
+**`prefix`** 記述子は、その値として単一の `<symbol>` を取ります。
+
 - `<symbol>`
   - : マーカーに先立って表示される `<symbol>` を指定します。 {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}} の何れかです。
 
@@ -27,42 +31,38 @@ prefix: url(bullet.png);
 
 ## 形式文法
 
-```
-<symbol>
-
-<symbol> =
-  <string>       |
-  <image>        |
-  <custom-ident>
-```
+{{csssyntax}}
 
 ## 例
 
 ### カウンターに接頭辞を追加
 
+この例では、それぞれのカウンタ番号の前に "Book " （空白付き）が接頭辞として付加され、その後にコロン (`:`) が続きます。コロンは、{{cssxref("@counter-style/suffix", "suffix")}} 記述子によって追加されます。
+
 #### HTML
 
 ```html
-<ul class="index">
-  <li>The Boy Who Lived</li>
-  <li>The Vanishing Glass</li>
-  <li>The Letters from No One</li>
-  <li>The Keeper of the Keys</li>
-  <li>Diagon Alley</li>
-</ul>
+<ol class="books">
+  <li>Flamer, by Mike Curato</li>
+  <li>Gender Queer: A Memoir, by Maia Kobabe</li>
+  <li>Tricks, by Ellen Hopkins</li>
+  <li>The Handmaid's Tale: The Graphic Novel, by Margaret Atwood</li>
+  <li>Crank, by Ellen Hopkins</li>
+</ol>
 ```
 
 #### CSS
 
 ```css
-@counter-style chapters {
+@counter-style books {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-  prefix: "Chapter ";
+  prefix: "書籍 ";
+  suffix: ": ";
 }
 
-.index {
-  list-style: chapters;
+.books {
+  list-style: books;
   padding-left: 15ch;
 }
 ```
@@ -81,5 +81,8 @@ prefix: url(bullet.png);
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを作成する関数記法
+- {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
+- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール

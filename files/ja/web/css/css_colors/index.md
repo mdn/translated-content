@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
 ---
 
-{{CSSRef}}
-
 **CSS 色** (colors) モジュールは、色、色の種類、色の混合、透過性、そしてどのようにこれらの色や効果を HTML コンテンツに適用するかを扱います。
 
 このモジュールが持つ CSS プロパティは {{cssxref("color")}} と {{cssxref("opacity")}} の 2 つだけですが、20 以上の CSS と SVG プロパティ、CSS 画像、アットルール、@media ルールはこの 2 つのプロパティに依存しています。

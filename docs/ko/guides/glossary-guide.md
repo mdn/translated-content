@@ -71,6 +71,7 @@
 | Tools & resources      | 도구 & 리소스   | [링크][JavaScript]                                                                                                                      |
 | Transient activation   | 임시 활성화     |                                                                                                                                         |
 | Tutorial               | 자습서          |                                                                                                                                         |
+| Usage context          | 사용 맥락       |                                                                                                                                         |
 | Usage notes            | 사용 일람       |                                                                                                                                         |
 | Web Technologies       | 웹 기술들       | [링크][Introduction_to_HTML5_Game_Development]                                                                                          |
 

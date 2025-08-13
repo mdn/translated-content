@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
 ---
 
-{{CSSRef}}
-
 **`mask-border-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の幅を設定します。
 
 ## 構文
@@ -83,7 +81,8 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 -webkit-mask-box-image-width: 20px;
 ```
 
-> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を（Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して）挙げていますので、効果について分かるでしょう。
+> [!NOTE]
+> [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を（Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して）挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 

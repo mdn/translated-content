@@ -264,7 +264,8 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
-> **メモ:** `arguments` という変数は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#eval_および_arguments_の単純化)では宣言できないので、上のコードは構文エラーになります。これにより、 `arguments` のスコープ効果がより理解しやすくなります。
+> [!NOTE]
+> `arguments` という変数は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#eval_および_arguments_の単純化)では宣言できないので、上のコードは構文エラーになります。これにより、 `arguments` のスコープ効果がより理解しやすくなります。
 
 多くの場合、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が `arguments` オブジェクトの代わりに使えます。
 

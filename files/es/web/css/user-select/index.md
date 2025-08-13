@@ -3,8 +3,6 @@ title: user-select
 slug: Web/CSS/user-select
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`user-select`** controla si el usuario puede seleccionar el texto. Esto no tiene ningún efecto en el contenido cargado bajo {{Glossary("Chrome", "chrome")}}, excepto en cuadros de texto.
 
 ```css

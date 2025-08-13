@@ -12,7 +12,8 @@ l10n:
 
 ウィンドウコンテキストでは、この値がナビゲーションを開始した時刻を表します。 {{domxref("Worker")}} および {{domxref("ServiceWorker")}} コンテキストでは、この値はワーカーが実行された時刻を表します。このプロパティを使用して、コンテキスト間で時刻の原点を同期することができます (下記例を参照)。
 
-> **メモ:** `performance.timeOrigin` の値は、その時刻で実行された {{jsxref("Date.now()")}} が返す値と異なる場合があります。これは、 `Date.now()` がシステムやユーザーのクロック調整、クロックスキューなどの影響を受けることがあるからです。 `timeOrigin` プロパティは [monotonic clock](https://w3c.github.io/hr-time/#dfn-monotonic-clock) であり、現在の時刻が減少することはなく、これらの調整の影響を受けません。
+> [!NOTE]
+> `performance.timeOrigin` の値は、その時刻で実行された {{jsxref("Date.now()")}} が返す値と異なる場合があります。これは、 `Date.now()` がシステムやユーザーのクロック調整、クロックスキューなどの影響を受けることがあるからです。 `timeOrigin` プロパティは [monotonic clock](https://w3c.github.io/hr-time/#dfn-monotonic-clock) であり、現在の時刻が減少することはなく、これらの調整の影響を受けません。
 
 ## 値
 

@@ -3,8 +3,6 @@ title: :required
 slug: Web/CSS/:required
 ---
 
-{{ CSSRef }}
-
 **`:required`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素のうち [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性が設定されているものを表します。
 
 ```css
@@ -53,7 +51,8 @@ label {
 
 この擬似クラスは、フォームを送信する前に有効なデータを持っている必要がある入力欄を強調表示するのに便利です。
 
-> **メモ:** {{cssxref(":optional")}} 擬似クラスは*省略可能*なフォーム欄を選択します。
+> [!NOTE]
+> {{cssxref(":optional")}} 擬似クラスは*省略可能*なフォーム欄を選択します。
 
 ## 構文
 

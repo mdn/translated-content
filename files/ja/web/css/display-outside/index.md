@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b9db4e51b6f1cddba3af708643fc9804849d61c2
 ---
 
-{{CSSRef}}
-
 `<display-outside>` のキーワードは、本質的にフローレイアウトにおける要素の役割である、要素の {{CSSxRef("display")}} の外部表示種別を指定します。これらのキーワードは `display` プロパティの値として使用され、単一のキーワードとしては伝統的な目的に、または Level 3 仕様書では {{CSSxRef("&lt;display-inside&gt;")}} のキーワードと共に使用されます。
 
 ## 構文

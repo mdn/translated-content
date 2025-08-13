@@ -37,7 +37,8 @@ JavaScriptのソーステキストでは、 \<ZWNJ> と \<ZWJ> は[識別子](#�
 
 [space separator set]: https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BGeneral_Category%3DSpace_Separator%7D
 
-> **メモ:** ["White_Space" プロパティがあるが "Space_Separator" 一般カテゴリーにない文字](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BWhite_Space%7D%26%5CP%7BGeneral_Category%3DSpace_Separator%7D)のうち、 U+0009, U+000B, U+000C は JavaScript でもホワイトスペースとして扱われ、 U+0085 NEXT LINE は特別な役割を持たず、他にも[改行文字](#改行文字)の集合となるものがあります。
+> [!NOTE]
+> ["White_Space" プロパティがあるが "Space_Separator" 一般カテゴリーにない文字](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BWhite_Space%7D%26%5CP%7BGeneral_Category%3DSpace_Separator%7D)のうち、 U+0009, U+000B, U+000C は JavaScript でもホワイトスペースとして扱われ、 U+0085 NEXT LINE は特別な役割を持たず、他にも[改行文字](#改行文字)の集合となるものがあります。
 
 > [!NOTE]
 > JavaScript エンジンで使用される Unicode 規格が変更されると、プログラムの動作に影響を与える可能性があります。例えば、 ES2016 では参照する Unicode 規格が 5.1 から 8.0.0 にアップグレードされ、その影響で U+180E MONGOLIAN VOWEL SEPARATOR が "Space_Separator" カテゴリーから「書式化（Cf）」カテゴリーに移動し、空白でなくなっています。その結果、" \u180E".trim().length の結果が 0 から 1 に変更されました。
