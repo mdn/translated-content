@@ -15,7 +15,7 @@ l10n:
 
 `menubar` には、[`menuitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)、[`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)、[`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role) の 3 種類のメニュー項目が含まれます。これらのメニュー項目は、オプションで 1 つ以上の [`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) コンテナーにネストできます。グループまたは項目は、オプションで [`separator`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) 要素で区切ることができます。すべてのメニュー項目は、無効化されていてもフォーカスを受け取ることができる必要がありますが、`group` と `separator` 要素はフォーカス可能ではありません。
 
-ネイティブのメニューバーの例は、デスクトップブラウザーでこれを読んでいる場合、画面の上部に存在する可能性があるバーです。Web ベースのメニューバーの例は、Google ドキュメントでドキュメント名の下に通常表示される「ファイル 編集 表示 挿入 表示形式」などと読める水平メニューバーです。
+ネイティブのメニューバーの例は、デスクトップブラウザーでこれを読んでいる場合、画面の上部に存在する可能性があるバーです。ウェブベースのメニューバーの例は、Google ドキュメントでドキュメント名の下に通常表示される「ファイル 編集 表示 挿入 表示形式」などと読める水平メニューバーです。
 
 メニューバーのインタラクションは、デスクトップのグラフィカルユーザーインターフェイスにおける典型的なメニューバーのインタラクションと似ている必要があります。Google ドキュメントでは、これらのメニュー項目のそれぞれがポップアップサブメニューを持つ `menuitem` であるため、それぞれが `aria-haspopup` 属性を `true` に設定しています。`menubar` 要素にはありません。
 
