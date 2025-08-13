@@ -1,21 +1,24 @@
 ---
-title: グリッドレイアウトのボックス配置
+title: グリッドレイアウトのアイテムの配置
+short-title: アイテムの配置
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 l10n:
   sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
 ---
 
-CSS グリッドレイアウトは [Box Alignment Level 3](https://drafts.csswg.org/css-align/) 仕様を実装しています。これは標準の[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)がフレックスコンテナーの中でアイテム配置を行うのと同じです。この仕様書には、様々なレイアウト方式すべてにおける配置の動作を詳述されています。どのレイアウト方式も、可能な限り仕様に準拠し、その違い (特徴と制約) に基づいて個々の動作を実装します。現在、仕様書にはすべてのレイアウト方式の詳細がありますが、ブラウザーの実装は完全ではありません。しかしながら、CSS グリッドレイアウト方式は広く実装されています。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)は、[CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)を実装しています。これは、フレックスコンテナー内のアイテムの配置に使用される[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)と同じ標準です。配置モジュールでは、すべてのレイアウトメソッドで配置がどのように動作すべきかを詳しく説明しています。
 
-このガイドでは、グリッドレイアウトにおけるボックス配置がどのように機能するのか説明します。フレックスボックスのプロパティと値の機能と多くの類似点があります。しかし、グリッドは二次元、フレックスボックスは一次元であるため、いくつか小さな違いがあることに気をつけてください。それではグリッド内のものを配置するときに使う 2 つの軸について見ていきましょう。
+このガイドでは、ボックス配置プロパティを使用して、グリッドレイアウト内のアイテムを配置する方法を見ていきます。
+
+これらのプロパティと値がフレックスボックスで動作する方法と類似点があることにお気づきかもしれません。グリッドは 2 次元であり、フレックスボックスは 1 次元であるため、注意すべきいくつかの小さな違いがあります。このため、グリッド内で配置を行う際に扱う 2 つの軸について見ていくことから始めましょう。
 
 ## グリッドレイアウトの 2 つの軸
 
-グリッドレイアウトでは、*ブロック軸*と*インライン軸*という 2 つの軸が利用できます。ブロック軸は、ブロックレイアウトでブロックが配置される軸です。ページ内に 2 つの段落がある場合、上から下に向かって並べられますので、この方向がブロック軸となります。
+グリッドレイアウトでは、「ブロック軸」と「インライン軸」という 2 つの軸が利用できます。[ブロック軸](/ja/docs/Glossary/Flow_relative_values#block_direction)は、ブロックレイアウトでブロックが配置される軸です。ページ内に 2 つの段落がある場合、上から下に向かって並べられますので、この方向がブロック軸となります。
 
 ![ブロック軸は垂直方向](block_axis.png)
 
-*インライン軸*はブロック軸に交差する軸です。通常、テキストはインライン方向に向かって並べられます。
+[インライン軸](/ja/docs/Glossary/Flow_relative_values#inline_direction)は，ブロック軸に直交する軸であり、通常、テキストはインライン方向に向かって流れます。
 
 ![インライン／行軸は水平方向](7_inline_axis.png)
 
@@ -27,17 +30,19 @@ CSS グリッドレイアウトは [Box Alignment Level 3](https://drafts.csswg.
 
 ### align-items の使用
 
-以下の例には、4 つのグリッド領域があります。グリッドコンテナー上で {{cssxref("align-items")}} プロパティと次の値の一つを使い、アイテムを配置しています。
+次の例では、グリッド内に 4 つの{{glossary("grid areas", "グリッド領域")}}があります。 {{cssxref("align-items")}} プロパティを{{glossary("grid container", "グリッドコンテナー")}}に使用して、`normal`、`stretch`、または {{cssxref("self-position")}} や {{cssxref("baseline-position")}} 値を使用して、アイテムを配置することができます。
 
-- `auto`
 - `normal`
+- `stretch`
 - `start`
 - `end`
 - `center`
-- `stretch`
 - `baseline`
 - `first baseline`
 - `last baseline`
+- `auto` （`align-self` のみ）
+
+既定値は `normal` であり、グリッドコンテナーでは `stretch` に解決されます。
 
 ```css hidden
 * {
@@ -88,22 +93,22 @@ CSS グリッドレイアウトは [Box Alignment Level 3](https://drafts.csswg.
 
 ```html
 <div class="wrapper">
-  <div class="item1">Item 1</div>
-  <div class="item2">Item 2</div>
-  <div class="item3">Item 3</div>
-  <div class="item4">Item 4</div>
+  <div class="item1">アイテム 1</div>
+  <div class="item2">アイテム 2</div>
+  <div class="item3">アイテム 3</div>
+  <div class="item4">アイテム 4</div>
 </div>
 ```
 
 {{ EmbedLiveSample('Using_align-items', '500', '500') }}
 
-`align-items: start` を設定すると、それぞれの子である `<div>` の高さはコンテンツの `<div>` によって決定されることを覚えておいてください。また、[`align-items`](/ja/docs/Web/CSS/align-items) を完全に省略すると、それぞれの子である `<div>` の高さはグリッド領域を満たすように広がります。
+`align-items: start` を設定すると、それぞれの子である `<div>` の高さはコンテンツの `<div>` によって決定されることを覚えておいてください。また、 {{cssxref("align-items")}} を完全に省略すると、それぞれの子である `<div>` の高さはグリッド領域を満たすように広がります。
 
-{{cssxref("align-items")}} プロパティはすべての子グリッドアイテムに {{cssxref("align-self")}} プロパティを設定します。これは、グリッドアイテム上で `align-self` を使えばプロパティを個別に設定できるということです。
+`align-items` プロパティはすべての子グリッドアイテムに {{cssxref("align-self")}} プロパティを設定します。これは、グリッドアイテム上で直接 `align-self` を使えばプロパティを個別に設定できるということです。
 
 ### align-self の使用
 
-次の例では、`align-self` プロパティを使い、様々な配置の値を実験します。最初の領域で見られるのは `align-self` の既定の動作で、引き伸ばされています。2 つ目のアイテムは `align-self` が `start` 値を持っており、3 つ目は `end` 、4 つ目は `center` です。
+次の例では、`align-self` プロパティを使い、様々な配置の値を実験します。最初の領域は、`align-self` の既定の動作であり、この場合は `stretch` に解決されます。2 つ目のアイテムは `align-self` が `start` 値を持っており、3 つ目は `end` 、4 つ目は `center` です。
 
 ```css hidden
 * {
@@ -156,10 +161,10 @@ CSS グリッドレイアウトは [Box Alignment Level 3](https://drafts.csswg.
 
 ```html
 <div class="wrapper">
-  <div class="item1">Item 1</div>
-  <div class="item2">Item 2</div>
-  <div class="item3">Item 3</div>
-  <div class="item4">Item 4</div>
+  <div class="item1">アイテム 1</div>
+  <div class="item2">アイテム 2</div>
+  <div class="item3">アイテム 3</div>
+  <div class="item4">アイテム 4</div>
 </div>
 ```
 
@@ -167,27 +172,27 @@ CSS グリッドレイアウトは [Box Alignment Level 3](https://drafts.csswg.
 
 ### アイテムと固有のアスペクト比
 
-既定では、{{cssxref("align-self")}} の動作はアイテムを広げます。しかし、固有のアスペクト比を持つアイテムの動作は `start` になります。固有のアスペクト比を持つアイテムに既定で `stretch` を設定するとアイテムを歪めるからです。
-
-この動作は現在、仕様で明確になっていますが、ブラウザーはまだ正しく実装していません。その間、{{cssxref("align-self")}} と {{cssxref("justify-self")}} を `start` に設定することによって、画像などのアイテムがグリッドの直接の子のように既定で広がらないことを保証できます。これにより、実装後の正しい動作を模倣することができます。
+{{cssxref("align-self")}} の既定の動作は、グリッドコンテナーの `align-items` プロパティを継承することです。このプロパティの既定値は `normal` で、内在的な{{glossary("aspect ratio", "アスペクト比")}}を持つアイテムを除き、アイテムを伸縮させます。アスペクト比を持つアイテムを伸縮させると、アイテムが歪んでしまうためです。
 
 ## インライン軸上のアイテムの位置揃え
 
-{{cssxref("align-items")}} と {{cssxref("align-self")}} がブロック軸上でアイテムの配置を処理するように、{{cssxref("justify-items")}} と {{cssxref("justify-self")}} は、インライン軸上で同じ動作をします。選べる値は `align-self` と同じです。
+`align-items` と `align-self` はブロック軸上でアイテムを揃えるのに対し、{{cssxref("justify-items")}} と {{cssxref("justify-self")}} はインライン軸上でアイテムを揃えます。選択できる値は、`align-self` プロパティの `normal`、`stretch`、{{cssxref("self-position")}}、{{cssxref("baseline-position")}} の値と同様で、`left` および `right` もあります。値には、以下のものがあります。
 
-- `auto`
 - `normal`
 - `start`
 - `end`
+- `left`
+- `right`
 - `center`
 - `stretch`
 - `baseline`
 - `first baseline`
 - `last baseline`
+- `auto` （`justify-self` のみ）
 
 以下では、{{cssxref("align-items")}} と同様の例を見ることができます。今回は {{cssxref("justify-self")}} を適用しています。
 
-ここでも既定は、固有のアスペクト比を持つアイテム以外、`stretch` です。配置の設定を変更しない場合、グリッドアイテムはグリッド領域をカバーします。例の最初のアイテムは既定の配置を表しています。
+繰り返しになりますが、内在的なアスペクト比を持つアイテム以外は、既定値は `stretch` です。これは、配置を変更しない限り、グリッドアイテムは既定でグリッド領域全体を覆うということです。この例では、最初のアイテムが配置において既定の `stretch` の値を示しています。
 
 ```css hidden
 * {
@@ -240,24 +245,25 @@ CSS グリッドレイアウトは [Box Alignment Level 3](https://drafts.csswg.
 
 ```html
 <div class="wrapper">
-  <div class="item1">Item 1</div>
-  <div class="item2">Item 2</div>
-  <div class="item3">Item 3</div>
-  <div class="item4">Item 4</div>
+  <div class="item1">アイテム 1</div>
+  <div class="item2">アイテム 2</div>
+  <div class="item3">アイテム 3</div>
+  <div class="item4">アイテム 4</div>
 </div>
 ```
 
 {{ EmbedLiveSample('Justifying_Items_on_the_Inline_Axis', '500', '500') }}
 
-{{cssxref("align-self")}} と {{cssxref("align-items")}} と同様に、グリッドコンテナーに {{cssxref("justify-items")}} を適用することで、すべてのアイテムに {{cssxref("justify-self")}} の値を設定できます。
+`align-self` と `align-items` と同様に、グリッドコンテナーに `justify-items` を適用することで、すべてのアイテムに `justify-self` の値を設定することができます。
 
-{{cssxref("justify-self")}} と {{cssxref("justify-items")}} プロパティは[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)に実装されていません。これはフレックスボックスが一次元であること、軸にそって複数のアイテムがあるかもしれず単一のアイテムを揃えることができないことによります。フレックスボックスの主軸・インライン軸に沿って配置するには、{{cssxref("justify-content")}} プロパティを使用します。
+> [!NOTE]
+> `justify-self` および `justify-items` プロパティはフレックスボックスには実装されていません。これは[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)が 1 次元であるという性質によるもの、軸に沿って複数のアイテムがあるかもしれず、単一のアイテムを揃えることができないことによります。フレックスボックスの主軸・インライン軸に沿って配置するには、 {{cssxref("justify-content")}} プロパティを使用します。
 
 ### 一括指定プロパティ
 
-{{CSSxRef("place-items")}} プロパティは {{CSSxRef("align-items")}} と {{CSSxRef("justify-items")}} の一括指定です。
+{{CSSxRef("place-items")}} プロパティは `align-items` と `justify-items` の一括指定です。
 
-{{CSSxRef("place-self")}} は {{CSSxRef("align-self")}} と {{CSSxRef("justify-self")}} の一括指定です。
+{{CSSxRef("place-self")}} プロパティは `align-self` と `justify-self` の一括指定です。
 
 ## 領域内のアイテムを中央に揃える
 
@@ -302,7 +308,7 @@ align プロパティと justify プロパティを組み合わせると、グ�
 
 ```html
 <div class="wrapper">
-  <div class="item1">Item 1</div>
+  <div class="item1">アイテム 1</div>
 </div>
 ```
 
@@ -310,7 +316,11 @@ align プロパティと justify プロパティを組み合わせると、グ�
 
 ## ブロック軸上のグリッドトラックの配置
 
-グリッドトラックが使う領域がグリッドコンテナーより小さければ、コンテナー内にグリッドトラック自体を配置できます。繰り返しますが、これはブロック軸とインライン軸上で行われます。{{cssxref("align-content")}} はブロック軸方向でトラックを配置し、{{cssxref("justify-content")}} はインライン軸方向の配置を行います。{{CSSxRef("place-content")}} プロパティは {{cssxref("align-content")}} と {{cssxref("justify-content")}} のショートハンドです。{{cssxref("align-content")}} と {{cssxref("justify-content")}} と {{cssxref("place-content")}} の値は次の通りです。
+グリッドトラックが使う領域がグリッドコンテナーより小さい場合、そのコンテナー内でグリッドトラック自体を配置することができます。 {{cssxref("align-content")}} はブロック軸方向でトラックを配置し、{{cssxref("justify-content")}} はインライン軸方向の配置を行います。 `*-items` および `*-item` プロパティと同様に、 {{CSSxRef("place-content")}} プロパティは `align-content` および `justify-content` の一括指定です。
+
+`align-content`、`justify-content`、`place-content` の値には、すべて {{cssxref("content-distribution")}} および {{cssxref("content-position")}} の値が含まれます。 `align-content` プロパティは、 {{cssxref("baseline-position")}} 値も受け入れます。また、他の `justify-*` プロパティと同様に、`justify-content` も `left` および `right` を受け入れます。
+
+`place-content` の有効なキーワードには、次のものがあります。
 
 - `normal`
 - `start`
@@ -323,12 +333,14 @@ align プロパティと justify プロパティを組み合わせると、グ�
 - `baseline`
 - `first baseline`
 - `last baseline`
-
-以下の例では 500 ピクセル × 500 ピクセルのグリッドコンテナーがあります。3 つの行トラックと列トラックがあり、それぞれ、幅 100 ピクセル、溝 10 ピクセルです。これはグリッドコンテナー内でブロックとインラインどちらの方向にも隙間があることを意味します。
+- `left`
+- `right`
 
 `align-content` プロパティはグリッドコンテナーに適用され、グリッド全体に作用します。
 
 ### 既定の配置
+
+この例では 500px × 500px のグリッドコンテナーがあります。3 つの行トラックと列トラックがあり、それぞれ、幅 100px、溝 10px です。これはグリッドコンテナー内でブロックとインラインどちらの方向にも隙間があることを意味します。
 
 グリッドレイアウトの既定の動作は `start` です。そのため、グリッドトラックはグリッドの左上にあり、開始グリッド線に対して整列しています。
 
@@ -381,10 +393,10 @@ align プロパティと justify プロパティを組み合わせると、グ�
 
 ```html
 <div class="wrapper">
-  <div class="item1">Item 1</div>
-  <div class="item2">Item 2</div>
-  <div class="item3">Item 3</div>
-  <div class="item4">Item 4</div>
+  <div class="item1">アイテム 1</div>
+  <div class="item2">アイテム 2</div>
+  <div class="item3">アイテム 3</div>
+  <div class="item4">アイテム 4</div>
 </div>
 ```
 
@@ -392,7 +404,13 @@ align プロパティと justify プロパティを組み合わせると、グ�
 
 ### align-content: end を設定
 
-コンテナーに `align-content` を追加し、値を `end` に設定すると、トラックは、すべてブロック方向の中でグリッドコンテナーが終わる線に移動します。
+同じ CSS と HTML を使用して、この例では、コンテナーに `align-content` を値 `end` で追加します。これにより、トラックはすべて、ブロック次元に沿ってグリッドコンテナーの末尾の線に移動します。
+
+```css
+.wrapper {
+  align-content: end;
+}
+```
 
 ```css hidden
 * {
@@ -412,9 +430,7 @@ align プロパティと justify プロパティを組み合わせると、グ�
   padding: 1em;
   color: #d9480f;
 }
-```
 
-```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
@@ -426,7 +442,6 @@ align プロパティと justify プロパティを組み合わせると、グ�
     "a a b"
     "a a b"
     "c d d";
-  align-content: end;
 }
 .item1 {
   grid-area: a;
@@ -442,12 +457,12 @@ align プロパティと justify プロパティを組み合わせると、グ�
 }
 ```
 
-```html
+```html hidden
 <div class="wrapper">
-  <div class="item1">Item 1</div>
-  <div class="item2">Item 2</div>
-  <div class="item3">Item 3</div>
-  <div class="item4">Item 4</div>
+  <div class="item1">アイテム 1</div>
+  <div class="item2">アイテム 2</div>
+  <div class="item3">アイテム 3</div>
+  <div class="item4">アイテム 4</div>
 </div>
 ```
 
@@ -455,7 +470,13 @@ align プロパティと justify プロパティを組み合わせると、グ�
 
 ### align-content: space-between の設定
 
-このプロパティには、フレックスボックスでおなじみの値を使うこともできます。スペース配分の値は、 `space-between`、`space-around`、`space-evenly` です。 {{cssxref("align-content")}} を `space-between` に更新すると、グリッド上の要素がどのように配置されるかが分かります。
+また、 {{cssxref("content-distribution")}} の空間分配値 `space-between`、`space-around`、`space-evenly`、`stretch` を適用することもできます。この例では、ブロック軸上のトラックを配置する {{cssxref("align-content")}} を、トラックの間隔を空ける `space-between` に設定しています。
+
+```css
+.wrapper {
+  align-content: space-between;
+}
+```
 
 ```css hidden
 * {
@@ -475,9 +496,7 @@ align プロパティと justify プロパティを組み合わせると、グ�
   padding: 1em;
   color: #d9480f;
 }
-```
 
-```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
@@ -489,7 +508,6 @@ align プロパティと justify プロパティを組み合わせると、グ�
     "a a b"
     "a a b"
     "c d d";
-  align-content: space-between;
 }
 .item1 {
   grid-area: a;
@@ -505,28 +523,35 @@ align プロパティと justify プロパティを組み合わせると、グ�
 }
 ```
 
-```html
+```html hidden
 <div class="wrapper">
-  <div class="item1">Item 1</div>
-  <div class="item2">Item 2</div>
-  <div class="item3">Item 3</div>
-  <div class="item4">Item 4</div>
+  <div class="item1">アイテム 1</div>
+  <div class="item2">アイテム 2</div>
+  <div class="item3">アイテム 3</div>
+  <div class="item4">アイテム 4</div>
 </div>
 ```
 
 {{ EmbedLiveSample('Setting_align-content_space-between', '500', '600') }}
 
-スペース配分の値を使用すると、グリッド上のアイテムが大きくなる可能性があることに注意してください。アイテムが複数のグリッドトラックにまたがる場合、トラック間にさらにスペースを追加すると、アイテムはその分大きくなる必要があります。グリッドは常に厳密です。したがって、これらの値を使用する場合は、トラックの内容が追加のスペースに対応できるようにするか、整列プロパティを使用して引き伸ばさず始点に置くようにします。
+アイテムが複数のグリッドトラックにまたがる場合、空間分配値を使用すると、またがるアイテムに、トラック間に追加された空間が追加されるため、グリッド上のアイテムがもっと大きくなる可能性があります。したがって、これらの値を使用する場合は、余分な空間があってもトラックのコンテンツが対応できることを確認するか、アイテムに配置プロパティを使用して、アイテムが伸縮するのではなく、先頭または末尾に移動するようにしてください。
 
-下の図では、`align-content` を `start` にして配置したグリッドの隣に、`align-content` を `space-between` に設定して配置したグリッドがあります。2 つのトラックの間にスペースを取るとき、2 つの行トラックにまたがる Item 1 と 2 が どのように余分な高さを確保しているか見てください。
+以下の画像では、 2 つの異なる `align-content` 値を使用してグリッドを配置し、 `start` と `space-between` を比較しています。 2 行にまたがる最初の 2 つのアイテムは、 3 行の間に配分された余白によって生じた空間を割り当てられたため、 `space-between` の例では高さが余分に増えていることがわかります。
 
 ![space-between を使用したときアイテムがどのように大きくなるかのデモ。](7_space-between.png)
 
 ## インライン軸上のグリッドトラックの位置揃え
 
-ブロック軸で {{cssxref("align-content")}} を使うのと同様に、インライン軸では {{cssxref("justify-content")}} を使うことができます。
+ブロック軸で `align-content` を使うのと同様に、インライン軸では `justify-content` を使うことができます。
 
-同じ例を使って、{{cssxref("justify-content")}} に `space-around` を設定してみましょう。やはり、1 つ以上の列トラックにまたがるトラックが余分なスペースを得ることになります。
+同じ例を使って、{{cssxref("justify-content")}} に `space-around` を設定してみましょう。やはり、複数の列トラックにまたがるトラックが余分な空間を得ることになります。
+
+```css
+.wrapper {
+  align-content: space-between;
+  justify-content: space-around;
+}
+```
 
 ```css hidden
 * {
@@ -546,9 +571,7 @@ align プロパティと justify プロパティを組み合わせると、グ�
   padding: 1em;
   color: #d9480f;
 }
-```
 
-```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
@@ -560,8 +583,6 @@ align プロパティと justify プロパティを組み合わせると、グ�
     "a a b"
     "a a b"
     "c d d";
-  align-content: space-between;
-  justify-content: space-around;
 }
 .item1 {
   grid-area: a;
@@ -577,12 +598,12 @@ align プロパティと justify プロパティを組み合わせると、グ�
 }
 ```
 
-```html
+```html hidden
 <div class="wrapper">
-  <div class="item1">Item 1</div>
-  <div class="item2">Item 2</div>
-  <div class="item3">Item 3</div>
-  <div class="item4">Item 4</div>
+  <div class="item1">アイテム 1</div>
+  <div class="item2">アイテム 2</div>
+  <div class="item3">アイテム 3</div>
+  <div class="item4">アイテム 4</div>
 </div>
 ```
 
@@ -590,9 +611,9 @@ align プロパティと justify プロパティを組み合わせると、グ�
 
 ## 配置と auto マージン
 
-領域の中でアイテムを配置するもう一つの方法は、自動マージンを使用することです。コンテナーブロックの左右のマージンを `auto` に設定すると、ビューポート内でレイアウトを中央に配置できます。既に知っているように、自動マージンは空きスペースのすべてを吸収します。両側のマージンを `auto` に設定すると、両マージンはスペースのすべてを取るよう試みるため、ブロックは中央に押し込まれます。
+領域内のアイテムを揃えるもう 1 つの方法は、 auto マージンを使用することです。ビューポート、またはその親内のブロックレベル要素を中央に配置したことがある場合は、中央に配置したい要素の右マージンと左マージンを `auto` に設定して行ったかもしれません。 auto マージンは、利用可能な空間をすべて吸収します。両側のマージンを `auto` に設定すると、両方のマージンがすべての空間を取り込もうとするため、ブロックレベル要素が中央に押しやられます。
 
-次の例では、 item 1 に `auto` の左マージンを与えます。自動マージンは、そのアイテムのコンテンツ用の空間が割り当てられた後に残りのスペースを取るため、コンテンツが領域の右側に押し出されます。どのように押し出されるか見てみましょう。
+次の例では、アイテム 1 の {{cssxref("margin-left")}} プロパティが `auto` に設定されています。これにより、コンテンツは領域の右側に押し出されます。これは、コンテンツに必要な空間が割り当てられた後、利用可能な空間が auto マージンとして確保されるためです。
 
 ```css hidden
 * {
@@ -644,23 +665,33 @@ align プロパティと justify プロパティを組み合わせると、グ�
 
 ```html
 <div class="wrapper">
-  <div class="item1">Item 1</div>
-  <div class="item2">Item 2</div>
-  <div class="item3">Item 3</div>
-  <div class="item4">Item 4</div>
+  <div class="item1">アイテム 1</div>
+  <div class="item2">アイテム 2</div>
+  <div class="item3">アイテム 3</div>
+  <div class="item4">アイテム 4</div>
 </div>
 ```
 
 {{ EmbedLiveSample('Alignment_and_auto_margins', '500', '550') }}
 
-[Firefox グリッドハイライター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) を使って、どのようにアイテムが整列されるか見てみましょう。
+ブラウザーの開発者ツールにあるグリッドインスペクターを使用して、アイテムがどのように配置されているかを確認してみましょう。
 
 ![グリッドハイライターを使って自動マージンを表している画像。](7_auto_margins.png)
 
 ## 整列と書字方向
 
-ここまでのすべての例は英語を使ったものであり、これは左から右へ書く言語です。物理方向で考えるとき、行の始点はグリッドの左上になります。
+これらの例はすべて、左書きの言語である英語です。これは、物理的な方向で考えると、先頭の線はグリッドの左上にあるということです。
 
-CSS グリッドレイアウトとボックス配置の仕様は、CSS の書字方向と共に機能するよう設計されています。アラビア語などの右から左へ書く言語で作業する場合、グリッドの始点は右上になり、`justify-content: start` の既定はグリッドトラックがグリッドの右手側から始まるようになるでしょう。
+CSS グリッドレイアウトと CSS ボックス配置は、CSS の書字方向と連動しています。アラビア語などの右書きの言語を表示する場合、グリッドの開始位置は右上になるため、`justify-content: start` の既定では、グリッドトラックはグリッドの右側から始まります。
 
-`margin-right` または `margin-left` で自動マージンを使用した場合、および `top`、`right`、`bottom`、`left` を使って位置を絶対指定した場合、書字方向が尊重されません。次のガイドでは、CSS グリッドレイアウトのボックス配置と書字方向の間における相互作用を見ていきます。これは、複数の言語で表示されるサイトを開発する場合、またはデザインの中で言語や書字方向を混在させたい場合に、理解することが重要になります。
+{{glossary("physical properties", "物理的プロパティ")}}を設定した場合、例えば {{cssxref("margin-right")}} や {{cssxref("margin-left")}} を使用して auto マージンを設定したり、{{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}} オフセットを使用してアイテムを絶対位置指定したりしても、書字方向は反映されません。[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes) ガイドでは、CSS グリッドレイアウト、ボックスの配置、および書字方向の間の相互作用についてさらに詳しく見ていきます。これは、複数の言語で表示されるサイトを開発する場合、またはデザインで言語や書字方向を混在させる場合、理解しておくことが重要です。
+
+## 関連情報
+
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)

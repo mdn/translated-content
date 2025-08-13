@@ -17,7 +17,7 @@ l10n:
 
 ![テキストの左と右に表示されている 2 つのブロック。](float-task1.png)
 
-```html live-sample___float1
+```html-nolint live-sample___float1
 <div class="box">
   <div class="float float1">One</div>
   <div class="float float2">Two</div>

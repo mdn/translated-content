@@ -2,7 +2,7 @@
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
 l10n:
-  sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`ascent-override`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、フォントのアセンダーの寸法を定義します。アセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの上の高さです。
@@ -43,7 +43,7 @@ ascent-override: 90%;
 
 @font-face {
   font-family: local-font;
-  src: local(Local Font);
+  src: local("Local Font");
   ascent-override: 125%;
 }
 ```

@@ -2,7 +2,7 @@
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 l10n:
-  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`scrollbar-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールバーのトラックとつまみの色を設定します。
@@ -79,7 +79,7 @@ scrollbar-color: unset;
   width: 300px;
   height: 100px;
   overflow-y: scroll;
-  scrollbar-color: #007 #bada55;
+  scrollbar-color: #000077 #bada55;
 }
 ```
 

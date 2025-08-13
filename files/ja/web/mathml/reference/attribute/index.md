@@ -1,12 +1,10 @@
 ---
-title: 属性
+title: MathML の属性
+short-title: 属性
 slug: Web/MathML/Reference/Attribute
-original_slug: Web/MathML/Attribute
 l10n:
-  sourceCommit: 34c43aca36f776c824e698dfd07e3ece34cc6f00
+  sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
-
-{{MathMLRef}}
 
 これは MathML 属性のアルファベット順リストです。それぞれの属性の詳細は、関連する [MathML 要素ページ](/ja/docs/Web/MathML/Reference/Element)および[グローバル属性ページ](/ja/docs/Web/MathML/Reference/Global_attributes)にあります。[値](/ja/docs/Web/MathML/Reference/Values)ページでは、 MathML 属性で使用される共通の値についての注意を説明しています。
 
