@@ -22,7 +22,8 @@ new Float16Array(buffer, byteOffset)
 new Float16Array(buffer, byteOffset, length)
 ```
 
-> **メモ:** `Float16Array()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築できます。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} がスローされます。
+> [!NOTE]
+> `Float16Array()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築できます。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} がスローされます。
 
 ### 引数
 

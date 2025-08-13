@@ -60,7 +60,8 @@ El tipo `Number` es un [valor en formato binario de 64 bits de doble precisión 
 
 Para verificar el valor disponible más grande o el valor más pequeño disponible dentro de {{jsxref("Infinity", "±Infinity")}}, puedes usar las constantes {{jsxref("Number.MAX_VALUE")}} o {{jsxref("Number.MIN_VALUE")}}.
 
-> **Nota:** **A partir de ECMAScript 2015**, también puedes comprobar si un número está en el rango de números de punto flotante de doble precisión mediante {{jsxref("Number.isSafeInteger()")}} así como {{jsxref("Number.MAX_SAFE_INTEGER")}} y {{jsxref("Number.MIN_SAFE_INTEGER")}}.Más allá de este rango, los enteros en JavaScript ya no son seguros y serán una aproximación de punto flotante de doble precisión del valor.
+> [!NOTE]
+> **A partir de ECMAScript 2015**, también puedes comprobar si un número está en el rango de números de punto flotante de doble precisión mediante {{jsxref("Number.isSafeInteger()")}} así como {{jsxref("Number.MAX_SAFE_INTEGER")}} y {{jsxref("Number.MIN_SAFE_INTEGER")}}.Más allá de este rango, los enteros en JavaScript ya no son seguros y serán una aproximación de punto flotante de doble precisión del valor.
 
 El tipo `number` solo tiene un entero con dos representaciones: `0` se representa como `-0` y `+0`. (`0` es un alias de `+0`).
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3d283cb0a0c6f36ad09ca95f751a30bd3a1fcf4d
 ---
 
-{{AddonSidebar}}
-
 表示已注册用户脚本的对象。由 {{WebExtAPIRef("userScripts.getScripts","userScripts.getScripts()")}} 返回，并用作 {{WebExtAPIRef("userScripts.register","userScripts.register()")}} 和 {{WebExtAPIRef("userScripts.update","userScripts.update()")}} 的输入。
 
 ## 类型

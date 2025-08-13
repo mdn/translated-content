@@ -39,7 +39,8 @@ l10n:
 </svg>
 ```
 
-> **メモ:** `stroke`, `stroke-width`, `fill` の各属性は、後のチュートリアルで説明します。
+> [!NOTE]
+> `stroke`, `stroke-width`, `fill` の各属性は、後のチュートリアルで説明します。
 
 ### 長方形
 

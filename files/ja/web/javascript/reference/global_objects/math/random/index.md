@@ -9,7 +9,8 @@ l10n:
 
 **`Math.random()`** は静的メソッドで、 0 以上 1 未満の範囲で浮動小数点の擬似乱数を返します。その範囲ではほぼ均一な分布で、ユーザーは必要なだけ範囲の拡大をすることができます。実装側で乱数生成アルゴリズムの初期シードを選択します。ユーザーが初期シードを選択、またはリセットすることは出来ません。
 
-> **メモ:** `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えていません。セキュリティに関連する目的では使用しないでください。代わりにウェブ暗号 API (より具体的には {{domxref("Crypto.getRandomValues()")}} メソッド) を使用してください。
+> [!NOTE]
+> `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えていません。セキュリティに関連する目的では使用しないでください。代わりにウェブ暗号 API (より具体的には {{domxref("Crypto.getRandomValues()")}} メソッド) を使用してください。
 
 {{InteractiveExample("JavaScript デモ: Math.random()")}}
 
@@ -77,7 +78,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **メモ:** [`Math.round()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/round) を使う方が魅力的かもしれませんが、その場合は乱数が不均一な分布に従うことになるので、ユーザーのニーズに合わないかもしれません。
+> [!NOTE]
+> [`Math.round()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/round) を使う方が魅力的かもしれませんが、その場合は乱数が不均一な分布に従うことになるので、ユーザーのニーズに合わないかもしれません。
 
 ### 包括的に 2 つの値の間のランダムな整数を得る
 

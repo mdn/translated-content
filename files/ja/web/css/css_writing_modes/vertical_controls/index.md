@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0f4b28bdc51e89cd25d132b9db12e3e903a9c5aa
 ---
 
-{{CSSRef}}
-
 このガイドでは、CSS の {{cssxref("writing-mode")}} および {{cssxref("direction")}} プロパティを使用して縦書きのフォームコントロールを作成および構成する方法を説明しています。 これには以下が含まれます。
 
 - [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) のスライダー、{{htmlelement("progress")}} の進捗バー、{{htmlelement("meter")}} 要素。
@@ -27,7 +25,8 @@ l10n:
 
 [座標変換](/ja/docs/Web/CSS/transform)を使用してコントロールを 90 度回転させることもできますが、コントロールを独自のレイヤーで持つことになり、他のコンテンツが重なってしまうなど、予期せぬレイアウト上の副作用が発生する可能性があります。 `writing-mode` を使用することで、より信頼性の高いソリューションが得られます。
 
-> **メモ:** {{cssxref("writing-mode")}} プロパティは十分に実装されているものの、 `writing-mode` を使用して縦書きのフォームコントロールを作成することは、 2024 年になってようやくすべてのブラウザーで対応されました。
+> [!NOTE]
+> {{cssxref("writing-mode")}} プロパティは十分に実装されているものの、 `writing-mode` を使用して縦書きのフォームコントロールを作成することは、 2024 年になってようやくすべてのブラウザーで対応されました。
 
 > [!NOTE]
 > 実験的な `sideways-lr` および `sideways-rl` の値は、それぞれ `vertical-lr` および `vertical-rl` 値が示すのと似た効果を持っていますが、通常、縦書きのテキスト文字（中国語や日本語など）は 90 度回転して横書きで表示されますが、横書きのテキスト文字（例えばラテン語）はこれらの値の影響を受けません。

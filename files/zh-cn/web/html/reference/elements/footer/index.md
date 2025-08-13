@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<footer>`** 元素表示其最近的祖先[分段内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#分段内容)的页脚或[分段根](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements#标注章节内容)元素。`<footer>` 通常包含有关该部分作者、版权数据或相关文档链接的信息。
 
 {{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}

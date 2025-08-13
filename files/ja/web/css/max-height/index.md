@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
-{{CSSRef}}
-
 **`max-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大高を設定します。これは {{Cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)が、 `max-height` に指定した値を上回ることを防ぎます。
 
 {{InteractiveExample("CSS デモ: max-height")}}

@@ -14,7 +14,7 @@ l10n:
 > [!WARNING]
 > 请勿再使用此方法，因为它已被弃用。
 >
-> 请使用特定的事件构造函数代替，例如：{{domxref("UIEvent.UIEvent", "UIEvent()")}}。[创建和触发事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)页面提供了有关使用方法的更多信息。
+> 请使用特定的事件构造函数代替，例如：{{domxref("UIEvent.UIEvent", "UIEvent()")}}。[创建和触发事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)页面提供了有关使用方法的更多信息。
 
 ## 语法
 

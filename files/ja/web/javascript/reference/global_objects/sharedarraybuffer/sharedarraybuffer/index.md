@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}
 
-> **メモ:** `SharedArrayBuffer` コンストラクターは、特定の[セキュリティの要件](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#セキュリティの要件)に適合しない限り、グローバルに利用できるとは限りません。
+> [!NOTE]
+> `SharedArrayBuffer` コンストラクターは、特定の[セキュリティの要件](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#セキュリティの要件)に適合しない限り、グローバルに利用できるとは限りません。
 
 **`SharedArrayBuffer()` コンストラクター**は {{jsxref("SharedArrayBuffer")}} オブジェクトを生成し、これは {{jsxref("ArrayBuffer")}} オブジェクトと似た、汎用的な、固定長の生のバイナリーデータバッファーを表します。
 
@@ -28,7 +29,8 @@ new SharedArrayBuffer(length)
 new SharedArrayBuffer(length, options)
 ```
 
-> **メモ:** `SharedArrayBuffer()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けた場合のみ構築できます。 `new` をつけずに呼び出そうとすると、 {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `SharedArrayBuffer()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けた場合のみ構築できます。 `new` をつけずに呼び出そうとすると、 {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
@@ -69,7 +71,8 @@ const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
 buffer.grow(12);
 ```
 
-> **メモ:** `maxByteLength` は、用途に応じて実現可能な最小値に設定することをお勧めします。メモリー不足エラーのリスクを縮小するため、 `1073741824` (1GB) を超えることは決してないようにしてください。
+> [!NOTE]
+> `maxByteLength` は、用途に応じて実現可能な最小値に設定することをお勧めします。メモリー不足エラーのリスクを縮小するため、 `1073741824` (1GB) を超えることは決してないようにしてください。
 
 ## 仕様書
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
 ---
 
-{{HTMLSidebar}}
-
 **`<wbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个单词换行机会——文本中的一个位置，浏览器可以选择在此处换行，即使其换行规则不会在此处换行。
 
 {{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 58313eeb2415546be9763dc691b6d519433c6dbb
 ---
 
-{{CSSRef}}
-
 **`text-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("inline-size")}} プロパティから決定される折り返し領域にテキストの文字列を含むボックスを配置し、テキストを要素のアンカーポイントに対して相対的に配置します。アンカーポイントは、 {{SVGAttr('x')}} および {{SVGAttr('y')}} （または {{SVGAttr('dx')}} および {{SVGAttr('dy')}}）属性を使用して定義されます。 CSS プロパティの値が存在する場合、その値は要素の {{SVGAttr("text-anchor")}} 属性の値を上書きします。
 
 要素内の個々のテキスト断片はそれぞれ独立して配置されます。したがって、複数行の {{SVGElement("text")}} 要素では、 `text-anchor` の値に従ってテキストの各行が配置されます。 `text-anchor` の値は、 SVG の {{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}} の各要素にのみ効果を持ちます。 `text-anchor` は自動的に折り返されたテキストには適用されません。その場合は、 {{cssxref('text-align')}} を参照してください。

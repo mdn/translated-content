@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`perspective-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消点*として使われます。
 
 {{InteractiveExample("CSS デモ: perspective-origin")}}

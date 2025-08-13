@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("downloads")}} API 的 `DownloadItem` 类型表示一个被下载的文件。
 
 ## 类型

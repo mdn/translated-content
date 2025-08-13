@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 该对象包含用于指定 CSS 和 JavaScript 注入目标的详细信息。你可以在 {{WebExtAPIRef("scripting.executeScript()")}}、{{WebExtAPIRef("scripting.insertCSS()")}} 和 {{WebExtAPIRef("scripting.removeCSS()")}} 中使用该对象。
 
 ## 类型

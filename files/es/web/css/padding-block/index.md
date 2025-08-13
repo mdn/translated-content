@@ -3,7 +3,7 @@ title: padding-block
 slug: Web/CSS/padding-block
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`padding-block`** define el relleno lógico de inicio y final del bloque de un elemento, que se asigna a las propiedades físicas del relleno según el modo de escritura del elemento, la direccionalidad y la orientación del texto.
 

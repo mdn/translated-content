@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1db74391e637d69ede247bb4e4a4f0585a2f11c6
 ---
 
-{{CSSRef}}
-
 **`overflow-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インライン要素に対して、テキストが行ボックスをあふれないように、ブラウザーが分割できない文字列の途中で改行を入れるかどうかの設定を適用します。
 
 > [!NOTE]
@@ -49,7 +47,8 @@ overflow-wrap: break-word;
 }
 ```
 
-> **メモ:** {{cssxref("word-break")}} とは対照的に、 `overflow-wrap` は単語全体があふれずに行内に配置できない場合にのみ、改行を生成します。
+> [!NOTE]
+> {{cssxref("word-break")}} とは対照的に、 `overflow-wrap` は単語全体があふれずに行内に配置できない場合にのみ、改行を生成します。
 
 ## 構文
 

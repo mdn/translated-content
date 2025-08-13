@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
-{{CSSRef}}
-
 **CSS データ型**は、 CSS のプロパティや関数で使用される具体的な値 (キーワードや単位を含む) を定義しています。これは[コンポーネント値型](https://www.w3.org/TR/css3-values/#component-types)の特殊な種類です。
 
 よく使われるデータ型は、 [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)仕様書で定義されています。この仕様書は[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)も定義しており、これはより複雑な型や処理を指定することができます。その他の型は、該当する型で仕様書で定義されています。
