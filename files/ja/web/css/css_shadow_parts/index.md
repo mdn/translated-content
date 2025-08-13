@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 **CSS シャドウパーツ** (CSS shadow parts) モジュールは、[シャドウホスト](/ja/docs/Glossary/Shadow_tree)に設定できる {{CSSXref("::part", "::part()")}} 擬似要素を定義します。この擬似要素を使用すると、シャドウホストが、スタイル設定のために、シャドウツリーで選択された要素を外部ページに公開できるようにすることができます。
 
 既定では、シャドウツリー内の要素は、それぞれのシャドウルート内でのみスタイルを設定できます。CSS シャドウパーツモジュールを使用すると、カスタム要素を構成する {{HTMLElement("template")}} の子孫に [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を記載し、 `::part()` 擬似要素を介してシャドウツリーノードを外部スタイルに公開することができます。

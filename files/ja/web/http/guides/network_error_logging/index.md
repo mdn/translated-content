@@ -1,20 +1,22 @@
 ---
-title: Network Error Logging
+title: ネットワークエラーログ記録 (NEL)
+short-title: ネットワークエラーログ記録
 slug: Web/HTTP/Guides/Network_Error_Logging
-original_slug: Web/HTTP/Network_Error_Logging
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 {{SeeCompatTable}}
 
-ネットワークエラーロギングは、HTTP の {{HTTPHeader("NEL")}} *[レスポンスヘッダー](/ja/docs/Glossary/Response_header)*を使って設定できるメカニズムです。この実験的なヘッダーにより、ウェブサイトやアプリケーションは、対応しているブラウザーから、失敗した (必要であれば成功した) ネットワーク読み取りに関するレポートを受け取ることを選択することができます。
+ネットワークエラーログ記録は、HTTP の {{HTTPHeader("NEL")}} [レスポンスヘッダー](/ja/docs/Glossary/Response_header)を使って設定できる機構です。この実験的なヘッダーにより、ウェブサイトやアプリケーションは、対応しているブラウザーから、失敗した（必要であれば成功した）ネットワーク読み取りに関するレポートを受け取ることを選択することができます。
 
 レポートは、 {{HTTPHeader("Report-To")}} ヘッダーで定義された報告グループに送信されます。
 
 ## 使用方法
 
-ウェブアプリケーションは、 *[JSON エンコード](/ja/docs/Glossary/Response_header)*されたオブジェクトである NEL ヘッダーを使って、この動作を選択します。
+ウェブアプリケーションは、 [JSON エンコード](/ja/docs/Glossary/Response_header)されたオブジェクトである NEL ヘッダーを使って、この動作を選択します。
 
-```
+```http
 NEL: { "report_to": "nel",
        "max_age": 31556952 }
 ```
@@ -24,9 +26,9 @@ NEL: { "report_to": "nel",
 以下のオブジェクトキーが NEL ヘッダーで指定されています。
 
 - report_to
-  - : ネットワークエラーレポートの送信先となる [Reporting API](/ja/docs/Web/API/Reporting_API) グループです。
+  - : ネットワークエラーレポートの送信先となる [レポート API](/ja/docs/Web/API/Reporting_API) グループです。
 - max_age
-  - : ポリシーの有効期間を秒単位で指定します (HSTS ポリシーが時間制限されているのと同様の方法です)。参照される報告グループは、少なくとも NEL ポリシーと同程度の有効期間を持つ必要があります。
+  - : ポリシーの有効期間を秒単位で指定します（HSTS ポリシーが時間制限されているのと同様の方法です）。参照される報告グループは、少なくとも NEL ポリシーと同程度の有効期間を持つ必要があります。
 - include_subdomains
   - : true の場合、ポリシーは、ポリシーヘッダーが設定されているオリジンの下のすべてのサブドメインに適用されます。このオプションを有効にする場合は、サブドメインを含めるように報告グループを設定する必要があります。
 - success_fraction
@@ -36,21 +38,22 @@ NEL: { "report_to": "nel",
 
 上記のレポートグループは、 {{HTTPHeader("Report-To")}} ヘッダー内で通常の方法で定義されます。例えば下記のようになります。
 
-```
+```http
 Report-To: { "group": "nel",
              "max_age": 31556952,
              "endpoints": [
-               { "url": "https://example.com/csp-reports" }
-             ] }
+              { "url": "https://example.com/csp-reports" }
+             ]
+           }
 ```
 
 ## エラーレポート
 
-これらの例では、Reporting API のペイロード全体を示しています。最上位の **`"body"`** キーには、ネットワークエラーレポートが含まれています。
+これらの例では、Reporting API のコンテンツ全体を示しています。最上位の **`"body"`** キーには、ネットワークエラーレポートが含まれています。
 
 ### HTTP 400 (Bad Request) response
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",
@@ -62,7 +65,7 @@ Report-To: { "group": "nel",
     "protocol": "http/1.1",
     "referrer": "https://example.com/previous-page",
     "sampling_fraction": 1,
-    "server_ip": "137.205.28.66",
+    "server_ip": "192.0.2.172",
     "status_code": 400,
     "type": "http.error",
     "url": "https://example.com/bad-request"
@@ -74,7 +77,7 @@ Report-To: { "group": "nel",
 
 なお、このレポートではフェーズが `dns` に設定されており、含めることのできる `server_ip` はありません。
 
-```js
+```json
 {
   "age": 20,
   "type": "network-error",
@@ -121,7 +124,7 @@ Report-To: { "group": "nel",
 - `tcp.failed`
   - : TCP コネクションが直前のエラーによってカバーできない原因で失敗した
 - `http.error`
-  - : ユーザーエージェントがレスポンスの受信に成功したが、 [4xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5) または [5xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.6) のステータスコードであった
+  - : ユーザーエージェントがレスポンスの受信に成功したが、 [4xx](https://httpwg.org/specs/rfc9110.html#status.4xx) または [5xx](https://httpwg.org/specs/rfc9110.html#status.5xx) のステータスコードであった
 - `http.protocol.error`
   - : コネクションが HTTP プロトコルエラーのために中止された
 - `http.response.invalid`
@@ -133,10 +136,12 @@ Report-To: { "group": "nel",
 
 ## 仕様書
 
-| 仕様書                                                                             |
-| ---------------------------------------------------------------------------------- |
-| [Network Error Logging](https://w3c.github.io/network-error-logging/#introduction) |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [レポート API](/ja/docs/Web/API/Reporting_API)

@@ -2,10 +2,8 @@
 title: :not()
 slug: Web/CSS/:not
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
 ---
-
-{{CSSRef}}
 
 **`:not()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、列挙されたセレクターに一致しない要素を表します。特定の項目が選択されることを防ぐため、否定擬似クラス (_negation pseudo-class_) と呼ばれています。
 
@@ -26,16 +24,13 @@ p > :not(strong, b.important) {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  <b>Mars</b> is one of the most Earth-like planets. <b>Mars</b> day is almost
-  the same as an Earth day, only <strong>37 minutes</strong> longer.
+  <b>火星</b> は、地球に最もよく似た惑星のひとつです。<b>火星</b>の 1 日は、地球の 1 日とほとんど同じで、わずか <strong>37 分</strong>長いだけです。
 </p>
 
 <p class="irrelevant">
-  <b class="important">NASA</b>'s Jet <del>Momentum</del> Propulsion Laboratory
-  is designing mission concepts to survive the <b>Venus</b> extreme temperatures
-  and atmospheric pressure.
+  <b class="important">NASA</b> の Jet <del>Momentum</del> Propulsion Laboratory は、<b>金星</b>の極端な温度と大気圧に耐えるミッションの概念を設計しています。
 </p>
 ```
 
@@ -43,13 +38,15 @@ p > :not(strong, b.important) {
 
 ## 構文
 
-`:not()` 擬似クラスは引数として、 1 つ以上のセレクターをカンマで区切った[セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list)を必要とします。このリストには[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めることはできませんが、その他の単純、複合、複雑セレクターは許可されます。
-
 ```css-nolint
 :not(<complex-selector-list>) {
   /* ... */
 }
 ```
+
+### 引数
+
+`:not()` 擬似クラスは引数として、 1 つ以上のセレクターをカンマで区切った[セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list)を必要とします。このリストには[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めることはできませんが、その他の単純、複合、複雑セレクターは利用できます。
 
 ## 解説
 
@@ -61,7 +58,7 @@ p > :not(strong, b.important) {
 - `:not(.foo)` は `.foo` ではないすべての要素を選択するため、{{HTMLElement("html")}} や {{HTMLElement("body")}} も選択します。
 - このセレクターは、「Xでない」ものすべてに一致します。これは、[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)と使用すると、対象とする要素を選択する経路が複数できるので、意外な動きをするかもしれません。例えば、`body :not(table) a` は {{HTMLElement("table")}} 内のリンクにも適用されます。{{HTMLElement("tr")}}、{{HTMLElement("tbody")}}、{{HTMLElement("th")}}、{{HTMLElement("td")}}、{{HTMLElement("caption")}} などはすべて `:not(table)` の部分に一致するからです。これを回避するには、代わりに `body a:not(table a)` を使用すると、テーブルの子孫ではないリンクのみに適用されます。
 - 複数のセレクターを同時に否定することができます。例えば、`:not(.foo, .bar)` は `:not(.foo):not(.bar)` と同じです。
-- もし `:not()` 擬似クラスに渡されたセレクターのいずれかが無効であったり、ブラウザーが対応していなかったりした場合、ルール全体が無効となります。この挙動を克服するために有効な方法は、寛容なセレクターリストを受け入れる [`:is()`](/ja/docs/Web/CSS/:is) 擬似クラスを使用することです。例えば `:not(.foo, :invalid-pseudo-class)` はルール全体を無効にしてしまいますが、 `:not(is(.foo, :invalid-pseudo-class))` は `.foo` 以外のあらゆる（{{HTMLElement("html")}} や {{HTMLElement("body")}} を含む）要素に一致します。
+- もし `:not()` 擬似クラスに渡されたセレクターのいずれかが無効であったり、ブラウザーが対応していなかったりした場合、ルール全体が無効となります。この挙動を克服するために有効な方法は、寛容なセレクターリストを受け入れる [`:is()`](/ja/docs/Web/CSS/:is) 擬似クラスを使用することです。例えば `:not(.foo, :invalid-pseudo-class)` はルール全体を無効にしてしまいますが、 `:not(:is(.foo, :invalid-pseudo-class))` は `.foo` 以外のあらゆる（{{HTMLElement("html")}} や {{HTMLElement("body")}} を含む）要素に一致します。
 
 ## 例
 
@@ -88,7 +85,7 @@ p > :not(strong, b.important) {
   text-shadow: 2px 2px 3px gold;
 }
 
-/* '.fancy' クラスの中にない <p> 要素 */
+/* `.fancy` クラスの中にない <p> 要素 */
 p:not(.fancy) {
   color: green;
 }
@@ -98,17 +95,17 @@ body :not(p) {
   text-decoration: underline;
 }
 
-/* <div> または '.fancy' ではない要素 */
+/* <div> または `.fancy` ではない要素 */
 body :not(div):not(.fancy) {
   font-weight: bold;
 }
 
-/* <div> でも '.fancy' でもない要素 */
+/* <div> でも `.fancy` でもない要素 */
 body :not(div, .fancy) {
   text-decoration: overline underline;
 }
 
-/* <h2> の中にある要素で <span> に foo クラスでないもの */
+/* <h2> の中にある要素で <span> に `.foo` クラスでないもの */
 h2 :not(span.foo) {
   color: red;
 }
@@ -145,7 +142,7 @@ p:not(.foo, :invalid-pseudo-class) {
 /* すべての <p> 要素のうち `foo` クラスがないものを選択 */
 p:not(:is(.foo, :invalid-pseudo-class)) {
   color: green;
-  border-top: dotted thin currentcolor;
+  border-top: dotted thin currentColor;
 }
 
 /* すべての <div> 要素のうち `foo` または `bar` クラスがないものを選択 */
@@ -156,7 +153,7 @@ div:not(.foo, .bar) {
 
 /* すべての <div> 要素のうち `foo` または `bar` クラスがないものを選択 */
 div:not(:is(.foo, .bar)) {
-  border-bottom: dotted thin currentcolor;
+  border-bottom: dotted thin currentColor;
 }
 ```
 

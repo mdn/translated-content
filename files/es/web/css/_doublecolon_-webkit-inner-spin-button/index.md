@@ -3,7 +3,7 @@ title: ::-webkit-inner-spin-button
 slug: Web/CSS/::-webkit-inner-spin-button
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

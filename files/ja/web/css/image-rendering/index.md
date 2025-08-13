@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`image-rendering`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。
 
 {{InteractiveExample("CSS デモ: image-rendering")}}
@@ -74,7 +72,8 @@ image-rendering: unset;
 - `pixelated`
   - : 画像は「最近傍法」 ("nearest neighbor") などのアルゴリズムで元の画像サイズの最も近い整数倍に変倍され、その後、滑らかな補間を使用して最終的な希望のサイズに画像が調整されます。これは、拡大解像度が元の整数倍でない場合に、変倍による画質の劣化を発生させることなく、「ピクセル化」された見た目を維持することを意図しています。
 
-> **メモ:** `optimizeQuality` および `optimizeSpeed` の値は、初期の草稿で (SVG の仕様 {{SVGAttr("image-rendering")}} に似たものとして) `smooth` および `pixelated` の同義語として定義されていました。
+> [!NOTE]
+> `optimizeQuality` および `optimizeSpeed` の値は、初期の草稿で (SVG の仕様 {{SVGAttr("image-rendering")}} に似たものとして) `smooth` および `pixelated` の同義語として定義されていました。
 
 ## 公式定義
 

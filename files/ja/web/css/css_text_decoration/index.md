@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
-{{CSSRef}}
-
 **CSS テキスト装飾** (CSS text decoration) は、下線、テキストの影、圏点など、テキスト装飾に関連する機能を定義します。
 
 ## リファレンス

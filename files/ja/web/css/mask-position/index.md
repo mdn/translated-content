@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14e9ec66f59c8c97242e9863b2d19902522638ae
 ---
 
-{{CSSRef}}
-
 **`mask-position`** は [CSS](/ja/docs/Web/CSS) プロパティで、定義されたマスク画像それぞれについて、 {{cssxref("mask-origin")}} で設定されたマスク位置レイヤーに対する初期位置を設定します。
 
 ## 構文

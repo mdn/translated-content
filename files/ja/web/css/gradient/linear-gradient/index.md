@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、二つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: linear-gradient()")}}
@@ -94,7 +92,8 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 - `<color-hint>`
   - : 隣り合う色経由点の間でどのようにグラデーションが進むかを定義する{{glossary("interpolation","補間")}}のヒントです。長さによって、どの位置で二つの色経由点のグラデーション色が色の移行の中間点に達するかを定義します。省略された場合、色の移行の中間点は二つの色経由点の中点になります。
 
-> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)と同じルールに従います。
+> [!NOTE]
+> [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)と同じルールに従います。
 
 ## 解説
 

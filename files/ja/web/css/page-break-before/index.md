@@ -3,8 +3,6 @@ title: page-break-before
 slug: Web/CSS/page-break-before
 ---
 
-{{CSSRef}}
-
 > [!WARNING]
 > このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。
 

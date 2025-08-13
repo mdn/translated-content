@@ -56,7 +56,8 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 
 エラーが発生した場合、例えばプロパティが書き込み不可の場合は、 {{jsxref("TypeError")}} が発生しますが、エラーが発生する前にプロパティが追加される場合、 `target` オブジェクトが変更されることがあります。
 
-> **メモ:** `Object.assign()` はコピー元の値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} でも例外を発生させません。
+> [!NOTE]
+> `Object.assign()` はコピー元の値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} でも例外を発生させません。
 
 ## 例
 

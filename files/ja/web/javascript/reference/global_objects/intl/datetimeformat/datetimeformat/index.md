@@ -61,7 +61,8 @@ new Intl.DateTimeFormat(locales, options);
         - "`medium`"
         - "`short`"
 
-        > **メモ:** `dateStyle` は `timeStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
+        > [!NOTE]
+        > `dateStyle` は `timeStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
 
     - `timeStyle`
       - : `format()` が呼び出された際に使用される時刻の書式化スタイルです。利用可能な値は以下のとおりです。
@@ -70,7 +71,8 @@ new Intl.DateTimeFormat(locales, options);
         - "`medium`"
         - "`short`"
 
-        > **メモ:** `timeStyle` は `dateStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
+        > [!NOTE]
+        > `timeStyle` は `dateStyle` と一緒に使用することができますが、他のオプション (`weekday`, `hour`, `month`, など) と一緒に使用することはできません。
 
     - `calendar`
       - : 暦です。有効な値は、 "`buddhist`", "`chinese`", " `coptic`", "`ethiopia`", "`ethiopic`", "`gregory`", " `hebrew`", "`indian`", "`islamic`", "`iso8601`", " `japanese`", "`persian`", "`roc`" です。

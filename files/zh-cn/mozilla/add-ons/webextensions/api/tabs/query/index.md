@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a6313e45a6ae4c356325f06d0e7e8919bab251a8
 ---
 
-{{AddonSidebar}}
-
 获取具有指定属性的所有标签页，如果未指定任何属性，则获取所有标签页。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。

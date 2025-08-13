@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
-
 **`word-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、改行しなければテキストがコンテンツボックスからあふれる場合に、ブラウザーが改行を挿入するかどうかを指定します。
 
 {{InteractiveExample("CSS デモ: word-break")}}
@@ -79,7 +77,8 @@ word-break: unset;
 - `break-word`
   - : `overflow-wrap: anywhere` と `word-break: normal` を組み合わせたのと同様の効果がありますが、 {{cssxref("overflow-wrap")}} プロパティの実際の値とは関係ありません。
 
-> **メモ:** `word-break: break-word` および `overflow-wrap: break-word` ({{cssxref("overflow-wrap")}} を参照) とは対照的に、 `word-break: break-all` はテキストがコンテナーからちょうどあふれたところで (単語全体を次の行に送れば途中で改行を防ぐことができる場合であっても) 位置で改行を生成します。
+> [!NOTE]
+> `word-break: break-word` および `overflow-wrap: break-word` ({{cssxref("overflow-wrap")}} を参照) とは対照的に、 `word-break: break-all` はテキストがコンテナーからちょうどあふれたところで (単語全体を次の行に送れば途中で改行を防ぐことができる場合であっても) 位置で改行を生成します。
 
 仕様書で、それ以外の値として `manual` も掲載していますが、現在どのブラウザーも対応していません。 `manual` が実装された場合、 `word-break: normal` と同じ効果を持ちますが、東南アジアの言語では自動的に改行が挿入されないという違いがあります。 これは、そのような言語ではユーザーエージェントが最適ではない位置に改行を挿入することが多いためです。 `manual` を使用すると、最適な位置に手動で改行を挿入することができます。
 

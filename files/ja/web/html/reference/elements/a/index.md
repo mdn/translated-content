@@ -109,7 +109,8 @@ li {
     - `_top`: 最上位の閲覧コンテキスト（現在のコンテキストの祖先である "最上位" のコンテキスト）です。親の閲覧コンテキストがない場合は、 `_self` と同じ動作をします。
     - `_unfencedTop`: 埋め込まれた[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)が最上位のフレームを移動できるようにします (つまり、他の予約された移動先とは異なり、フェンスフレームのルートを越えて移動します)。これがフェンスフレームのコンテキスト外で使用されてもナビゲーションは成功しますが、予約語のようには動作しないことに注意してください。
 
-    > **メモ:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。
+    > [!NOTE]
+    > `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。
 
 - `type`
   - : リンク先 URL の {{Glossary("MIME type", "MIME タイプ")}}の形式を表すヒントです。組み込まれている機能はありません。
@@ -344,7 +345,8 @@ a {
 
 {{EmbedLiveSample('Linking to an element on the same page')}}
 
-> **メモ:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)（英語）。
+> [!NOTE]
+> `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)（英語）。
 
 ### メールアドレスへのリンク
 

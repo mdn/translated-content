@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<ul>`** 元素表示无序的项目列表，通常渲染为项目符号列表。
 
 {{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
