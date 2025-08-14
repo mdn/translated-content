@@ -1,8 +1,8 @@
 ---
-title: EvalError() constructor
+title: EvalError() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 l10n:
-  sourceCommit: 01ff31c3d7c6818de4b0cdd3c130ab7ccc948856
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
 `EvalError` 构造函数用于创建 {{jsxref("EvalError")}} 对象。
@@ -23,8 +23,7 @@ EvalError(message, fileName)
 EvalError(message, fileName, lineNumber)
 ```
 
-> [! 提示]
->
+> [!NOTE]
 > `EvalError()` 在使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下都可以调用。两种方式都会创建一个新的 `EvalError` 实例。
 
 ## 参数
@@ -53,7 +52,7 @@ try {
   console.log(e instanceof EvalError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "EvalError"
-  console.log(e.stack); // Stack of the error
+  console.log(e.stack); // 错误的堆栈
 }
 ```
 
