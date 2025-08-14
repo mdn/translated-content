@@ -153,7 +153,8 @@ jobs:
 
           ARGS=()
           for file in "${files_to_build[@]}"; do
-              ARGS+=("-f" "$PWD/$file")
+              file_without_prefix="${file#files/}"
+              ARGS+=("-f" "$CONTENT_TRANSLATED_ROOT/$file_without_prefix")
           done
 
           yarn rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
