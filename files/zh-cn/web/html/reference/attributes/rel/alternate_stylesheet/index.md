@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-**`alternate stylesheet`** 关键字对作为 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性值用于 {{HTMLElement("link")}} 元素时，表示目标资源为*替代样式表*。在网页中指定**替代样式表**可让用户根据自身需求或偏好查看页面的多个版本。
+**`alternate stylesheet`** 关键字对在作为 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性值用于 {{HTMLElement("link")}} 元素时，表示目标资源为*替代样式表*。在网页中指定**替代样式表**可让用户根据自身需求或偏好查看页面的多个版本。
 
 > [!NOTE]
 > 该功能在未安装扩展的浏览器中支持不佳。若需提供与用户现有偏好兼容的替代呈现方式，参见 CSS {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} 和 {{cssxref("@media/prefers-contrast","prefers-contrast")}} [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性)。
@@ -16,7 +16,7 @@ Firefox 允许用户通过*视图 > 页面样式*子菜单选择替代{{glossary
 
 ### 提供替代样式表
 
-替代样式表通过使用带有 `rel="alternate stylesheet"` 和 `title="..."`属性的 {{HTMLElement("link")}} 标签指定。例如：
+替代样式表通过使用带有 `rel="alternate stylesheet"` 和 `title="..."` 属性的 {{HTMLElement("link")}} 标签指定。例如：
 
 ```html
 <link href="reset.css" rel="stylesheet" />
