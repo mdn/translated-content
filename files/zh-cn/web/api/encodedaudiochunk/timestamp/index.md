@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-**`timestamp`** 是 {{domxref("EncodedAudioChunk")}} 接口的只读属性返回表示音频的时间戳（以微秒为单位）的整数。
+{{domxref("EncodedAudioChunk")}} 接口的 **`timestamp`** 只读属性返回表示音频的时间戳（以微秒为单位）的整数。
 
 ## 值
 
