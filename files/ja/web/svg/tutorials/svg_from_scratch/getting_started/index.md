@@ -1,18 +1,15 @@
 ---
 title: 始めましょう
 slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
-original_slug: Web/SVG/Tutorial/Getting_Started
 l10n:
-  sourceCommit: 9d69b066e7d887ffca8e974786d1c2600fb72bc3
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
 
-{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
+### 基本的な例
 
-### 簡単な例
-
-簡単な例で正しく始めましょう。下のコードを見てください。
+基本的な例で正しく始めましょう。下のコードを見てください。
 
 ```xml
 <svg version="1.1"
@@ -28,7 +25,7 @@ l10n:
 </svg>
 ```
 
-コードをコピーして、ファイル demo1.svg に貼り付けましょう。そして、ファイルをブラウザーで開いてください。これは、次のスクリーンショットのように表示されます。（Firefox のユーザーは[こちら](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml)をクリックしてください）
+コードをコピーして、ファイル demo1.svg に貼り付けましょう。そして、ファイルをブラウザーで開いてください。これは、次のスクリーンショットのように表示されます。（または[ライブで表示](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml)）
 
 ![svgdemo1.png](svgdemo1.png)
 
@@ -39,9 +36,9 @@ l10n:
    - SVG 2 より前では、他にもバージョンの SVG から識別するために `version` 属性と `baseProfile` 属性を常に使用しましょう。 SVG 2 では `version` 属性も `baseProfile` 属性も非推奨です。
    - XML の派生として、 SVG は (xmlns 属性で) 正しい名前空間に結び付けなければなりません。[名前空間の速修講座](/ja/docs/Web/SVG/Guides/Namespaces_crash_course)に詳細が載っていますのでご覧ください。
 
-2. {{SVGElement("rect")}} で画像領域全体を覆う長方形を描画することで、背景を赤色にします。
-3. {{SVGElement("circle")}} で半径が 80px の緑色の円を赤色の長方形の中心（内側に 30+120px、上方に 50+50px のオフセット）に描画します。
-4. テキスト "SVG" を描画します。各文字の内側は、白色で塗りつぶします。テキストは、中心点にしたい場所にアンカーを設定することで位置づけられます。この例では、中心点を赤色の長方形の中央と一致させましょう。最終的な仕上がりを確実に美しく保つため、フォントサイズや縦位置の微調整が可能です。
+2. {{SVGElement("rect")}} で画像領域全体を覆う矩形を描画することで、背景を赤色にします。
+3. {{SVGElement("circle")}} で半径が 80px の緑色の円を赤色の矩形の中心（内側に 30+120px、上方に 50+50px のオフセット）に描画します。
+4. テキスト "SVG" を描画します。各文字の内側は、白色で塗りつぶします。テキストは、中心点にしたい場所にアンカーを設定することで位置づけられます。この例では、中心点を赤色の矩形の中央と一致させましょう。最終的な仕上がりを確実に美しく保つため、フォントサイズや縦位置の微調整が可能です。
 
 ### SVG ファイルの基本特性
 
@@ -93,4 +90,4 @@ Vary: Accept-Encoding
 
 サーバーの設定ミスは SVG の読み込みに失敗する理由として非常に一般的です。サーバーが正しいヘッダーを SVG ファイルと一緒に送信するように設定されていない場合、 Firefox はファイルのマークアップをテキストや文字化けしたゴミとして表示したり、ビューアーにアプリケーションを選択して開くように要求したりする可能性が高いです。
 
-{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}

@@ -1,27 +1,26 @@
 ---
 title: Set.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`add()`** は {{jsxref("Set")}} インスタンスのメソッドで、この集合に同じ値を持つ要素がない場合、指定した値を持つ新しい要素をこの集合に追加します。
 
 {{InteractiveExample("JavaScript デモ: Set.prototype.add()")}}
 
 ```js interactive-example
-const set1 = new Set();
+const set = new Set();
 
-set1.add(42);
-set1.add(42);
-set1.add(13);
+set.add(42);
+set.add(42);
+set.add(13);
 
-for (const item of set1) {
+for (const item of set) {
   console.log(item);
-  // Expected output: 42
-  // Expected output: 13
+  // 予想される結果: 42
+  // 予想される結果: 13
 }
 ```
 

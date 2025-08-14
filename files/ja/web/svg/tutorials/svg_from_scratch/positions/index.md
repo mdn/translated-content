@@ -1,14 +1,11 @@
 ---
-title: 配置
+title: 位置指定
 slug: Web/SVG/Tutorials/SVG_from_scratch/Positions
-original_slug: Web/SVG/Tutorial/Positions
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}
 
 この記事では、 SVG (Scalable Vector Graphics) が描画コンテキストの中でどのようにオブジェクトの位置や大きさを表現しているのか、座標系や、変倍可能なコンテキストにおける「ピクセル」とは何かを説明します。
 
@@ -48,10 +45,10 @@ SVG では、すべての要素に対して座標系または**グリッド**シ
 
 この場合、 SVG キャンバス全体の大きさは 200px×200px です。しかし `viewBox` 属性は、表示するキャンバスの部分を定義しています。これら 200x200 ピクセルの領域は、ユーザー単位 (0,0) から始まり右方向および下方向に 100x100 ユーザー単位を占める領域を表示します。これは実質的に 100x100 単位の領域をズームインし、画像を 2 倍のサイズに引き伸ばします。
 
-現行の (単一の要素またはイメージ全体への) ユーザー単位と画面単位間のマッピングは、**ユーザー座標系** (user coordinate system) と呼ばれます。座標系から離れることで、回転・変形・反転を行うこともできます。既定のユーザー座標系は、1 ユーザーピクセルを 1 デバイスピクセルに割り当てます。（ただし、デバイスは何を 1 ピクセルとして扱うかを決めることができるかもしれません。） SVG ファイルで "in" や "cm" など特定の寸法である長さは、結果の画像で 1:1 で見えるようにする方法で計算されます。
+現行の (単一の要素またはイメージ全体への) ユーザー単位と画面単位間の対応付けは、**ユーザー座標系** (user coordinate system) と呼ばれます。変倍だけでなく、回転、変形、反転を行うこともできます。既定のユーザー座標系は、1 ユーザーピクセルを 1 デバイスピクセルに割り当てます。（ただし、デバイスは何を 1 ピクセルとして扱うかを決めることができるかもしれません。） SVG ファイルで "in" や "cm" など特定の寸法である長さは、結果の画像で 1:1 で見えるようにする方法で計算されます。
 
 これを説明する SVG 1.1 の仕様を引用します。
 
-> (前略) ユーザーエージェントは自身の環境から、 "1px" を "0.2822222mm" に対応づける (すなわち 90dpi) と仮定します。すると、 SVG コンテンツの処理において（中略） "1cm" は "35.43307px" （よって、35.43307 ユーザー単位）と一致します。
+> （前略）ユーザーエージェントは自身の環境から、 "1px" を "0.2822222mm" に対応づける (すなわち 90dpi) と仮定します。すると、 SVG コンテンツの処理において（中略） "1cm" は "35.43307px" （よって、35.43307 ユーザー単位）と一致します。
 
-{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}
