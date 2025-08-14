@@ -2,7 +2,7 @@
 title: データ型
 slug: Web/SVG/Guides/Content_type
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 SVG は多くのデータ型を使用しています。この記事では、これらのデータ型とその構文、使用目的の説明を掲載しています。
@@ -144,13 +144,13 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
     _IRI_ は {{SVGAttr("href")}} 属性で使用します。
     いくつかの属性は、 _IRI_ と文字列の両方をコンテンツとして許します。相対 IRI と文字列が曖昧にならないように、関数記法 \<FuncIRI> を使用します。これは関数記法で区切られた _IRI_ です。メモ: 歴史的な理由から、区切り文字は CSS 仕様との互換性のために `url(` と `)` です。 _FuncIRI_ 形式は、プレゼンテーション属性で使用します。
 
-    SVG は他のオブジェクトへの _IRI_ 参照（絶対参照と相対参照の両方）を多用します。例えば、長方形を線形グラデーションで塗りつぶすには、最初に {{SVGElement("linearGradient")}} 要素を定義し、それに ID を与えます。
+    SVG は他のオブジェクトへの _IRI_ 参照（絶対参照と相対参照の両方）を多用します。例えば、矩形を線形グラデーションで塗りつぶすには、最初に {{SVGElement("linearGradient")}} 要素を定義し、それに ID を与えます。
 
     ```html
     <linearGradient xml:id="MyGradient">...</linearGradient>
     ```
 
-    次に、長方形の {{SVGAttr("fill")}} 属性の値として線形グラデーションを参照するには、次のようにします。
+    次に、矩形の {{SVGAttr("fill")}} 属性の値として線形グラデーションを参照するには、次のようにします。
 
     ```html
     <rect fill="url(#MyGradient)" />
@@ -160,7 +160,7 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
     - **ローカル _IRI_ 参照**: _IRI_ 参照は、\<absoluteIRI> または \<relativeIRI> を持たず、フラグメント識別子（`#<elementID>` または `#xpointer(id<elementID>)`）のみを持ちます。
     - **非ローカル _IRI_ 参照**: _IRI_ 参照が \<absoluteIRI> または \<relativeIRI> を持ちます。
 
-      SVG における IRI 参照の完全な仕様は、 [SVG 1.1 (2nd Edition): IRI references](https://www.w3.org/TR/SVG/linking.html#IRIReference) を参照してください。
+      IRI は、SVG 2 では廃止された概念であり、汎用的な [URL](#url) 型に置き換えられました。
 
 ## length（長さ）
 
