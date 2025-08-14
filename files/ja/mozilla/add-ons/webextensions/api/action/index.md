@@ -34,11 +34,11 @@ manifest.json の [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.jso
 ## 関数
 
 - {{WebExtAPIRef("action.setTitle()")}}
-  - : ブラウザーアクションにタイトルを追加します。ツールチップ上に表示されます。
+  - : ブラウザーアクションにタイトルを設定します。ツールチップ上に表示されます。
 - {{WebExtAPIRef("action.getTitle()")}}
   - : ブラウザーアクションのタイトルを取得します。
 - {{WebExtAPIRef("action.setIcon()")}}
-  - : ブラウザーアクションのアイコンを取得します。
+  - : ブラウザーアクションのアイコンを設定します。
 - {{WebExtAPIRef("action.setPopup()")}}
   - : ユーザーがブラウザーアクションのアイコンをクリックした時に、ポップアップとして表示される HTML ドキュメントを設定します。
 - {{WebExtAPIRef("action.getPopup()")}}
@@ -79,7 +79,7 @@ manifest.json の [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.jso
 
 > [!NOTE]
 > この API は Chromium の [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action) API に基づいています。
-> この文書は Chromium プログラムの [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) に派生します。
+> この文書は Chromium プログラムの [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) から派生します。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
