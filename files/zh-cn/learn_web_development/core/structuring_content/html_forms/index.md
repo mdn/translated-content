@@ -489,7 +489,7 @@ btn.addEventListener("click", () => {
 
 ## 技能测试！
 
-你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅 [技能测试：表单和按钮](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons)
+你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：表单和按钮](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons)
 
 ## 总结
 
