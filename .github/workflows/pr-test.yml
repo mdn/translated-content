@@ -153,9 +153,7 @@ jobs:
 
           ARGS=()
           for file in "${files_to_build[@]}"; do
-              # Remove the 'files/' prefix from the path (bash-ism, removes shortest match from beginning)
-              file_without_prefix="${file#files/}"
-              ARGS+=("-f" "$CONTENT_TRANSLATED_ROOT/$file_without_prefix")
+              ARGS+=("-f" "$PWD/$file")
           done
 
           yarn rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
