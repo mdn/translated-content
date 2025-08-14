@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 使用此函数注册一个或多个内容脚本。
 
 它接受一个参数，该参数是一个对象，其属性类似于 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 清单（manifest）键中给出的对象（但请注意，`content_scripts` 是对象数组，而传递给 `register()` 的参数是一个单独的对象）。

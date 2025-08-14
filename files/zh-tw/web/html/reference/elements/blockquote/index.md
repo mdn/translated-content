@@ -3,8 +3,6 @@ title: <blockquote>：引用塊元素
 slug: Web/HTML/Reference/Elements/blockquote
 ---
 
-{{HTMLSidebar}}
-
 **`<blockquote>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示所包含的文本是擴展引用。通常，這通過縮進在視覺上呈現（有關如何更改，請參見[注意事項](#使用注意事項)）。可以使用 `cite` 屬性提供引用信息的源文檔或消息的 URL，而使用 {{HTMLElement("cite")}} 元素可以提供源的文本表示。
 
 {{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}

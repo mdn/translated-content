@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 从页面中移除先前通过调用 {{WebExtAPIRef("tabs.insertCSS()")}} 插入的 CSS。
 
 > [!NOTE]

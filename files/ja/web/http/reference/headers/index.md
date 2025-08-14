@@ -2,15 +2,17 @@
 title: HTTP ヘッダー
 short-title: ヘッダー
 slug: Web/HTTP/Reference/Headers
-original_slug: Web/HTTP/Headers
 l10n:
-  sourceCommit: a8f881645d776d1303a0a25bd884f95e1b2805e1
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-**HTTP ヘッダー**により、 HTTP リクエストやレスポンスでクライアントやサーバーが追加情報を渡すことができます。 HTTP ヘッダーは、大文字小文字を区別しないヘッダー名とそれに続くコロン (`:`)、 値で構成されます。値の前にある{{Glossary("Whitespace", "ホワイトスペース")}}は無視されます。
+**HTTP ヘッダー**を使用すると、クライアントとサーバーは、リクエストまたはレスポンスのメッセージに追加情報を渡すことができます。
+HTTP/1.X では、ヘッダーは、大文字と小文字を区別しない名前、その後にコロン、オプションの空白（無視されます）、そして最後にその値が続く形式です（`Allow: POST` など）。
+HTTP/2 以降では、開発者ツールで表示すると、ヘッダーは小文字で示され (`accept: */*`)、[擬似ヘッダー](/ja/docs/Web/HTTP/Guides/Messages#擬似ヘッダー)の特別なグループには接頭辞としてコロンが付きます (`:status: 200`)。
+それぞれのプロトコルバージョンの構文に関する詳細情報は、 [HTTP メッセージ](/ja/docs/Web/HTTP/Guides/Messages)ページで探すことができます。
 
-私的な独自のヘッダーは、以前は `X-` 接頭辞を使用していましたが、この慣習は、標準外のフィールドが標準になったときに不便が発生するため、2012 年 6 月の [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) で非推奨になりました。それ以外のヘッダーは [IANA HTTP フィールド名レジストリー](https://www.iana.org/assignments/http-fields/http-fields.xhtml)に収録されており、その基になったものは [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) で定義されていました。
-IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"provisional"（新しい）、 "deprecated"（使用は非推奨）、"obsolete"（使用できなくなった）などの状態に関する情報を含めて掲載しています。
+独自の私的なヘッダーは、以前は `X-` 接頭辞を使用していましたが、この慣習は、標準外のフィールドが標準になったときに不便が発生するため、2012 年に [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) で非推奨になりました。それ以外のヘッダーは [IANA HTTP フィールド名レジストリー](https://www.iana.org/assignments/http-fields/http-fields.xhtml)に収録されており、その基になったものは [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) で定義されていました。
+IANA レジストリーでは、[ステータスに関する情報](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status)を含めてヘッダーが掲載されています。
 
 ヘッダーは、そのコンテキストに応じて分類できます。
 
@@ -28,7 +30,7 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 - エンドツーエンドヘッダー
   - : これらのヘッダーは、メッセージの最終的な宛先、すなわちリクエストならばサーバー、レスポンスならばクライアントに伝送し*なければなりません*。中間のプロキシーはヘッダーを変更せずに再伝送しなければならず、またキャッシュには保存しなければなりません。
 - ホップバイホップヘッダー
-  - : これらのヘッダーは単一のトランスポート層の接続にのみ意味を持ち、プロキシーが再転送したり、キャッシュを行ったりしては*いけません*。なお、 {{httpheader("Connection")}} ヘッダーを用いて設定する場合があるのはホップバイホップヘッダーのみです。
+  - : これらのヘッダーは単一のトランスポート層の接続にのみ意味を持ち、プロキシーが再転送したり、キャッシュを行ったりしては*いけません*。なお、 {{HTTPHeader("Connection")}} ヘッダーを用いて設定する場合があるのはホップバイホップヘッダーのみです。
 
 ## 認証
 
@@ -85,7 +87,7 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 - {{HTTPHeader("Accept")}}
   - : 送り返すことができるデータの{{Glossary("MIME_type", "種類")}}をサーバーに通知します。
 - {{HTTPHeader("Accept-Encoding")}}
-  - : 送り返すリソースで使用できるエンコードアルゴリズム (一般的には[圧縮アルゴリズム](/ja/docs/Web/HTTP/Guides/Compression)) をサーバーに通知します。
+  - : 送り返すリソースで使用できるエンコードアルゴリズム、ふつうは[圧縮アルゴリズム](/ja/docs/Web/HTTP/Guides/Compression)をサーバーに通知します。
 - {{HTTPHeader("Accept-Language")}}
   - : 送り返すリソースで期待する自然言語をサーバーに通知します。これはヒントであり、必ずしもユーザーの完全な制御下にあるものではありません。サーバーはユーザーの選択 (ドロップダウンリストで選ぶ言語など) を明示的に上書きしないように、常に注意を払うべきです。
 - {{HTTPHeader("Accept-Patch")}}
@@ -151,7 +153,14 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
   - : {{HTTPHeader("Repr-Digest")}} ヘッダーのウィッシュの状態です。
     これは、 `Repr-` における {{HTTPHeader("Want-Content-Digest")}} に相当します。
 
-## メッセージ本文の情報
+## 整合性ポリシー
+
+- {{HTTPHeader("Integrity-Policy")}}
+  - : ユーザーエージェントが読み込む（特定の型の）すべてのリソースが [サブリソース整合性](/ja/docs/Web/Security/Subresource_Integrity)を保証するようにします。
+- {{HTTPHeader("Integrity-Policy-Report-Only")}}
+  - : 整合性ポリシーが（`Integrity-Policy` ヘッダーを使用して）適用された場合、[サブリソース整合性](/ja/docs/Web/Security/Subresource_Integrity)を侵害する、ユーザーエージェントが読み込んだリソースに関してレポートします。
+
+## メッセージ本体の情報
 
 - {{HTTPHeader("Content-Length")}}
   - : リソースの大きさを、バイト単位の10進数で示します。
@@ -163,6 +172,17 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
   - : 読者向けに言語を示すヘッダーであり、ユーザーが自身の好む言語に応じて区別することができます。
 - {{HTTPHeader("Content-Location")}}
   - : 返すデータの代替データの場所を示します。
+
+## 環境設定
+
+環境設定をリクエストに含めて送信することで、リクエストやレスポンスのオプションの動作を示すことができます。
+クライアントにとって意味が曖昧になる場合、サーバーは環境設定が適用されたかどうかをレスポンスで示すことができます。
+ブラウザーは、これらのヘッダーによる環境設定の送信をネイティブには処理しません。これらは、実装固有の独自のクライアントで使用されます。
+
+- {{HTTPHeader("Prefer")}}
+  - : リクエスト処理中の特定のサーバー動作に関する環境設定を示します。例えば、最小限のレスポンスコンテンツ (`return=minimal`) や非同期処理 (`respond-async`) をリクエストすることができます。ヘッダーがサポートされていない場合、サーバーはリクエストを通常どおり処理します。
+- {{HTTPHeader("Preference-Applied")}}
+  - : `Prefer` ヘッダーで指定された環境設定のうち、サーバーが適用したものをクライアントに通知します。これは、環境設定の処理に関する透明性を提供するための、レスポンス専用のヘッダーです。
 
 ## プロキシー
 
@@ -183,7 +203,7 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 - {{HTTPHeader("If-Range")}}
   - : 指定した ETag または日時がリモートのリソースにマッチする場合に限定した、条件付き範囲付きリクエストを生成します。異なるバージョンのリソースから 2 つの範囲をダウンロードすることを防ぎます。
 - {{HTTPHeader("Content-Range")}}
-  - : 部分的なメッセージが、メッセージ本文全体のどこに位置するかを示します。
+  - : 部分的なメッセージが、メッセージ本体全体のどこに位置するかを示します。
 
 ## リダイレクト
 
@@ -239,7 +259,8 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : ブラウザーがページを {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}} の内部に表示することを許可するかを示します。
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : クロスドメインポリシーファイル (`crossdomain.xml`) を許可するかどうかを指定します。このファイルは、 Adobe の Flash Player、Adobe Acrobat、Microsoft Silverlight、Apache Flex などのクライアントに、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)によって制限されているドメイン間のデータを処理する許可を与えるポリシーを定義することができます。詳細については、 [Cross-domain Policy File Specification](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) を参照してください。
+  - : クロスドメインポリシーファイルは、Adobe Acrobat や Apache Flex などのクライアントに、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy) によって制限されるドメイン間のデータを処理する権限を付与することができます。
+    `X-Permitted-Cross-Domain-Policies` ヘッダーは、このようなポリシーファイルを上書きして、クライアントが不要なリクエストをブロックし続けるようにします。
 - {{HTTPHeader("X-Powered-By")}}
   - : ホスティング環境やその他のフレームワークによって設定される可能性があり、アプリケーションや訪問者に有益ではない情報を含みます。潜在的な脆弱性が発現することを防ぐために、このヘッダーは設定しないでください。
 - {{HTTPHeader("X-XSS-Protection")}}
@@ -268,9 +289,9 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 ## サーバー送信イベント
 
 - {{HTTPHeader("Reporting-Endpoints")}}
-  - : [報告 API](/ja/docs/Web/API/Reporting_API) を使用する際に、ブラウザーが警告およびエラーレポートを送信すべきサーバーエンドポイントを指定するレスポンスヘッダーです。
+  - : [レポート API](/ja/docs/Web/API/Reporting_API) を使用する際に、ブラウザーが警告およびエラーレポートを送信すべきサーバーエンドポイントを指定するレスポンスヘッダーです。
 - {{HTTPHeader("Report-To")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : [報告 API](/ja/docs/Web/API/Reporting_API) を使用する際に、ブラウザーが警告およびエラーレポートを送信すべきサーバーエンドポイントを指定するレスポンスヘッダーです。
+  - : [レポート API](/ja/docs/Web/API/Reporting_API) を使用する際に、ブラウザーが警告およびエラーレポートを送信すべきサーバーエンドポイントを指定するレスポンスヘッダーです。
 
 ## 転送エンコーディング
 
@@ -313,10 +334,13 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
   - : ユーザーエージェントがフォローアップリクエストをする前に待つべき時間を示します。
 - {{HTTPHeader("Server-Timing")}}
   - : 指定されたリクエストレスポンスサイクルについて、1 つ以上の指標および説明を伝えます。
-- `Service-Worker-Allowed`
+- {{HTTPHeader("Service-Worker")}}
+  - : サービスワーカースクリプトリソースのフェッチに含まれます。
+    このヘッダーは、管理者が監視のためにサービスワーカースクリプトリクエストをログ出力するのに役立ちます。
+- {{HTTPHeader("Service-Worker-Allowed")}}
   - : [パス制限](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register)を除去するために、[サービスワーカースクリプトのレスポンス](https://w3c.github.io/ServiceWorker/#service-worker-script-response)にこのヘッダーを記載します。
 - {{HTTPHeader("SourceMap")}}
-  - : 生成されたコードを[ソースマップ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)にリンクします。
+  - : デバッガーが生成または変換されたコードではなく、元のソースコードを段階的に実行できるように、{{Glossary("source map", "ソースマップ")}}にリンクします。
 - {{HTTPHeader("Upgrade")}}
   - : これは HTTP/1.1（のみ）のヘッダーで、すでに確立されているクライアント/サーバー接続を（同じトランスポートプロトコル上で）異なるプロトコルにアップグレードするために使用することができます。例えば、クライアントが HTTP 1.1 から HTTP 2.0 に接続をアップグレードしたり、HTTP や HTTPS 接続を WebSocket にアップグレードするために使用することができます。
 - {{HTTPHeader("Priority")}}
@@ -329,11 +353,11 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 
 [帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API)を使用すると、開発者がコンバージョンを測定することができます。例えば、ユーザーがあるサイトに埋め込まれた広告をクリックし、ベンダーのサイトで商品を購入した場合、そのコンバージョンに関するレポートにアクセスすることができます。サードパーティーのトラッキングクッキーに頼らずに、様々なヘッダーを頼りに、コンバージョンを示すために一致させる**ソース**と**トリガー**を登録します。
 
-- {{httpheader("Attribution-Reporting-Eligible")}}
+- {{HTTPHeader("Attribution-Reporting-Eligible")}}
   - : 現在のリクエストに対応するレスポンスが、帰属ソースまたはトリガーのいずれかを登録する ことによって、帰属レポートに参加する資格があることを示すために使用され ます。
-- {{httpheader("Attribution-Reporting-Register-Source")}}
+- {{HTTPHeader("Attribution-Reporting-Register-Source")}}
   - : `Attribution-Reporting-Eligible` ヘッダーを含むリクエストに対するレスポンスの一部として記載され、これは帰属ソースを登録するために使用されます。
-- {{httpheader("Attribution-Reporting-Register-Trigger")}}
+- {{HTTPHeader("Attribution-Reporting-Register-Trigger")}}
   - : `Attribution-Reporting-Eligible` ヘッダーを含むリクエストに対するレスポンスの一部として記載され、これは帰属トリガーを登録するために使用します。
 
 ### クライアントヒント
@@ -345,7 +369,7 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 - {{HTTPHeader("Accept-CH")}}
   - : サーバーは Accept-CH ヘッダーフィールドや HTML `<meta>` 要素の [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv) 属性を使ってクライアントヒントに対応していることを告知できます。
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
-  - : サーバーは `Critical-CH` を {{HttpHeader("Accept-CH")}} とともに使用して、受け入れられるクライアントヒントも[重要なクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#critical_client_hints)であることを指定します。
+  - : サーバーは `Critical-CH` を {{HTTPHeader("Accept-CH")}} とともに使用して、受け入れられるクライアントヒントも[重要なクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#critical_client_hints)であることを指定します。
 
 クライアントヒントのカテゴリーを以下に一覧します。
 
@@ -359,7 +383,7 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
   - : ユーザーエージェントの基盤となっているプラットフォームアーキテクチャです。
 - {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
   - : ユーザーエージェントの基盤となっている CPU のビットのアーキテクチャ（例えば "64" ビット）です。
-- {{HTTPHeader("Sec-CH-UA-Form-Factor")}} {{experimental_inline}}
+- {{HTTPHeader("Sec-CH-UA-Form-Factors")}} {{experimental_inline}}
   - : ユーザーエージェントのフォームファクター、ユーザーがユーザーエージェントを操作する方法を説明しています。
 - {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
   - : ユーザーエージェントの完全なバージョン文字列です。
@@ -411,6 +435,18 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
   - : 文字列 `on` で、ユーザーエージェントがデータ使用量を縮小することを推奨することを示します。
 
+### 圧縮辞書転送
+
+[圧縮辞書転送] (/ja/docs/Web/HTTP/Guides/Compression_dictionary_transport) は、 {{glossary("Brotli compression", "Brotli 圧縮")}} または {{glossary("Zstandard compression", "Zstandard 圧縮")}} の標準の静的辞書を使用する代わりに、共有圧縮辞書を使用して HTTP レスポンスの転送サイズを縮小する方法です。
+
+- {{HTTPHeader("Available-Dictionary")}} {{experimental_inline}}
+  - : ブラウザーは、このリクエストヘッダーを使用して、サーバーが圧縮に使用できる、最も適切な辞書を示すことができます。
+- {{HTTPHeader("Dictionary-ID")}} {{experimental_inline}}
+  - : ブラウザーがリソースに対してすでに利用できる辞書を持っており、サーバーが `Use-As-Dictionary` ヘッダーでその辞書の `id` を指定した場合に使用されます。
+    辞書を使用できるリソースのリクエストには、`Available-Dictionary` ヘッダーと、サーバーが提供する辞書 `id` が `Dictionary-ID` ヘッダーに含まれます。
+- {{HTTPHeader("Use-As-Dictionary")}} {{experimental_inline}}
+  - : 辞書が今後のリクエストで使用できる照合基準を一覧表示します。
+
 ### プライバシー
 
 - {{HTTPHeader("DNT")}} {{deprecated_inline}} {{non-standard_inline}}
@@ -423,8 +459,9 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 
 ### セキュリティ
 
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
-  - : ウェブアプリケーションがそのオリジンを分離できるようにする仕組みを提供します。
+- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
+  - : レスポンスヘッダーは、関連付けられた文書 ({{domxref("Document")}}) がオリジンキー付き[エージェントクラスター](https://tc39.es/ecma262/#sec-agent-clusters)に配置されるべきであることを示すために使用されます。
+    この分離により、ユーザーエージェントは、プロセスやスレッドなどのエージェントクラスターに対して、実装固有のリソースをより効率的に割り当てることができます。
 
 ### サーバー送信イベント
 
@@ -447,18 +484,17 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
   - : クライアントは [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) ヘッダーフィールドを送信して、利用可能な署名を利用する意図を示したり、対応している署名の種類を示したりすることができます。
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : このリクエストが TLS early data で送信されたことを示します。
-- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
-  - : レスポンスヘッダーは、関連付けられた文書 ({{domxref("Document")}}) がオリジンキー付き[エージェントクラスター](https://tc39.es/ecma262/#sec-agent-clusters)に配置されるべきであることを示すために使用されます。
-    この分離により、ユーザーエージェントは、プロセスやスレッドなどのエージェントクラスターに対して、実装固有のリソースをより効率的に割り当てることができます。
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : 連合 ID プロバイダー (IdP) が送信するレスポンスヘッダーで、ログイン状態を設定します。つまり、現在のブラウザーで IdP にユーザーがログインしているかどうかということです。
-    これはブラウザーで保存され、 [FedCM API](/ja/docs/Web/API/FedCM_API) で使用あれます。
+    これはブラウザーで保存され、 [FedCM API](/ja/docs/Web/API/FedCM_API) で使用されます。
 - {{HTTPHeader("Signature")}} {{experimental_inline}}
   - : [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signature-header) ヘッダーフィールドは、交換のための署名のリストを伝え、それぞれはその署名の権威を決定して、そして更新する方法についての情報を伴います。
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
   - : [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signed-headers-header) ヘッダーフィールドは、シグネチャに含めるためのレスポンスヘッダーフィールドの順序付きリストを識別します。
 - {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
   - : [投機ルール](/ja/docs/Web/API/Speculation_Rules_API) の JSON 定義を格納したテキストリソースを指す URL のリストを提供します。レスポンスが HTML 文書の場合、これらのルールは文書の投機ルール設定に追加されます。
+- {{HTTPHeader("Sec-Speculation-Tags")}} {{experimental_inline}}
+  - : サーバーが投機を発生させたルールを特定し、必要に応じてそのルールをブロックできるように、投機ルールから投機を発生させた 1 つ以上のタグ値を含みます。
 - {{HTTPHeader("Supports-Loading-Mode")}} {{experimental_inline}}
   - : ナビゲーション対象が、よりリスクの高い様々な読み込みモードを使用することをオプトインするために設定します。例えば、オリジン間、同一サイトの[事前レンダリング](/ja/docs/Web/API/Speculation_Rules_API#事前レンダリングの使用)には `Supports-Loading-Mode` の値として `credentialed-prerender` が要求されます。
 
@@ -471,9 +507,9 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 - {{HTTPHeader("X-Forwarded-Proto")}} {{non-standard_inline}}
   - : クライアントがプロキシーやロードバランサーに接続するために使用したプロトコル (HTTP または HTTPS) を識別します。
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
-  - : ユーザーがたどるであろうリンクや、ドキュメントが参照する画像、 CSS、 JavaScript などのリソースのドメイン名解決をブラウザーが事前に行う機能である、 DNS プリフェッチを制御します。
+  - : ユーザーがたどるであろうリンクや、ドキュメントが参照する画像、 CSS、 JavaScript などのリソースのドメイン名解決をブラウザーが事前に行う機能である、 DNS 先読みを制御します。
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
-  - : [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは `<meta name="robots" content="…">` と等価です。
+  - : [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは [`<meta name="robots">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/robots) と等価です。
 
 ## 非推奨のヘッダー
 
@@ -481,12 +517,6 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
   - : 実装固有のヘッダーで、リクエストとレスポンスの連鎖のどこにいてもさまざまな効果を持つことができます。`Cache-Control` ヘッダーがまだ存在しない HTTP/1.0 キャッシュとの後方互換性のために使用します。
 - {{HTTPHeader("Warning")}} {{deprecated_inline}}
   - : 可能な問題についての一般的な警告情報。
-
-## 協力
-
-[新しい記事を書いたり](/ja/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header)、既存のものを改善したりすることにご協力ください。
-
-<!-- Check https://github.com/mdn/content/issues/1458 for known missing pages -->
 
 ## 関連情報
 

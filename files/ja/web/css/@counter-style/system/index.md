@@ -1,6 +1,8 @@
 ---
 title: system
 slug: Web/CSS/@counter-style/system
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`system`** 記述子は、整数値のカウンターを文字列表現に変換するために使用するアルゴリズムを指定します。これは {{cssxref("@counter-style")}} で使用され、定義されたスタイルの動作を定義するために使用されます。
@@ -21,41 +23,50 @@ system: fixed;
 /* 複合値 */
 system: fixed 3;
 system: extends decimal;
+system: extends circled-letters;
 ```
 
-これは、 3 つの形式のうちの 1 つです。
+## 値
+
+3 つの形のうちのいずれかを取ることができます。
 
 - キーワード値 `cyclic`, `numeric`, `alphabetic`, `symbolic`, `additive`, `fixed` のいずれか。
 - キーワード値 `fixed` と整数値。
-- キーワード値 `extends` と {{cssxref("@counter-style")}} の名前。
+- キーワード値 `extends` と [`<counter-style-name>`](/ja/docs/Web/CSS/@counter-style#counter-style-name) の名前。
 
-<!---->
+値は次のものです。
 
 - `cyclic`
-  - : 提供された記号のリストを循環します。記号のリストの最後に到達すると、最初に戻ってやり直します。このシステムは、ただ一つの記号を持つ単純な弾丸スタイルや、複数の記号を持つスタイルに便利です。 `symbols` 記述子には 1 つ以上の記号を指定する必要があります。そうでなければ、カウンタースタイルが有効になりません。
-- `fixed`
-  - : 有限の記号セットを指定することを定義します。指定された記号をすべて循環したら、代替スタイルが使用されます。このシステムは、カウンターの値が有限である場合に有効です。 `symbols` 記述子には 1 つ以上の記号を指定しなければ、カウンタースタイルが有効にはなりません。また、オプションで {{cssxref("&lt;integer&gt;")}} をシステムの後に指定し、最初の記号の値として指定することができます。この整数が省略された場合、最初の整数の値は `1` として扱われます。
-- `symbolic`
-  - : 指定された記号のリストを循環します。この循環を連続して回すたびに、カウンター表現に使用される記号が 2 倍、 3 倍と増えていきます。例えば、元の記号が "◽" と "◾" であった場合、循環するごとに "◽◽" と "◾◾" 、 "◽◽◽" と "◾◾◾" のように変化します。 `symbols` 記述子には 1 つ以上の記号を指定する必要があります。そうでなければ、カウンタースタイルが有効になりません。このカウンターシステムは正のカウンター値に対してのみ機能します。
-- `alphabetic`
-  - : 指定された記号を桁として、アルファベット記数法に解釈します。 `"a"` から `"z"` までの文字が `alphabetic` 記数法のカウンタースタイルの記号として指定された場合、最初の 26 個のカウンター表現は `"a"`, `"b"` から `"z"` までとなります。この時点までは、上で説明した `symbolic` システムと同じ動作になります。しかし、`"z"` 以降は `"aa"`, `"ab"`, `"ac"`… のように続きます。
-
-    `symbols` 記述子には 2 つ以上の記号を指定する必要があります。そうでなければ、カウンタースタイルが有効になりません。 `symbols` 記述子で与えられた最初のカウンター記号は `1` として、次の記号は `2` として、以下同様に解釈されます。このシステムはまた、正のカウンター値に対してのみ定義されています。
+  - : [`symbols`](/ja/docs/Web/CSS/@counter-style/symbols) 記述子で指定された記号のリストを順番に繰り返します。リストの終わりに到達すると、サイクルは最初に戻り、最初から繰り返されます。この値は、1 つの記号のみを使用する基本的な箇条書きスタイルと、複数の記号を使用するスタイルの両方に役立ちます。`symbols` 記述子には、少なくとも 1 つの記号を指定する必要があります。そうしないと、カウンタースタイルは有効になりません。
 
 - `numeric`
   - : カウンター記号を[位取り記数法](https://ja.wikipedia.org/wiki/%E4%BD%8D%E5%8F%96%E3%82%8A%E8%A8%98%E6%95%B0%E6%B3%95)の桁として解釈します。この記数法は、上で説明した `alphabetic` システムと似ています。主な違いは、 `alphabetic` システムでは、 `symbols` 記述子で与えられた最初のカウンター記号が `1` 、次の記号は `2` 、以下同様に解釈されますが、この記数法では、最初のカウンター記号が 0、次は `1`、次は `2` というように解釈されることです。
 
     `symbols` 記述子には 2 つ以上の記号を指定する必要があります。そうでなければ、カウンタースタイルが有効になりません。
 
+- `alphabetic`
+  - : 指定された記号を桁として、アルファベット記数法に解釈します。 `"a"` から `"z"` までの文字が `alphabetic` 記数法のカウンタースタイルの記号として指定された場合、最初の 26 個のカウンター表現は `"a"`, `"b"` から `"z"` までとなります。この時点までは、上で説明した `symbolic` システムと同じ動作になります。しかし、`"z"` 以降は `"aa"`, `"ab"`, `"ac"`… のように続きます。
+
+    `symbols` 記述子には 2 つ以上の記号を指定する必要があります。そうでなければ、カウンタースタイルが有効になりません。 `symbols` 記述子で与えられた最初のカウンター記号は `1` として、次の記号は `2` として、以下同様に解釈されます。この記数法はまた、正のカウンター値に対してのみ定義されています。
+
+- `symbolic`
+  - : `symbols` 記述子のリストで指定されたシンボルを繰り返し循環し、リストを順番に 2 回、3 回と渡すたびに、シンボルを 2 倍、3 倍といった具合に増やします。例えば、元の記号が "◽" と "◾" であった場合、循環するごとに "◽◽" と "◾◾" 、 "◽◽◽" と "◾◾◾" のように変化します。 `symbols` 記述子には 1 つ以上の記号を指定する必要があります。そうしないと、カウンタースタイルは有効になりません。このカウンターシステムは、正の値のカウンターにのみ動作します。
+
 - `additive`
-  - : ローマ数字のように、異なる値を得るために異なる位置の数字を再利用するのではなく、より大きな値を得るために追加の記号を定義する「符号-値」の記数法を表すために使用されます。このようなシステムでは、数値の値は数値の桁を足すことで求められます。
+  - : 異なる位置で数字を再利用して異なる値を得るのではなく、より大きな値のために追加の数字を定義する、ローマ数字などの「記号値」の記数法を表すために使用されます。このようなシステムでは、数値の値は、その数値の数字を足し合わせることで求めることができます。
 
     `additive-symbols` と呼ばれる追加の記述子は、 1 つの*加算タプル*で指定しなければならず、そうでなければカウンタースタイルのルールが有効になりません。加算タプルは複合カウンター記号に似ており、通常のカウンター記号と負でない整数の重みの 2 つの部分から構成されます。加算タプルは重みの降順で指定しなければならず、そうでない場合は無効となります。
 
-- `extends`
-  - : 他のカウンタースタイルのアルゴリズムを使用し、他の側面を変更することができます。カウンタースタイルのルールが `extends` システムを使用している場合、指定されていない記述子やその値は、指定された拡張カウンタースタイルから取得されます。 extends で指定されたカウンタースタイル名が現在定義されているカウンタースタイル名でない場合、代わりに 10 進カウンタースタイルから拡張されます。
+- `fixed` または `fixed <integer>`
+  - : 有限のシンボルセットを定義し、 `symbols` 記述子で指定されたシンボルリストを 1 回反復処理します。指定されたシンボルがすべて反復処理されると、代替のカウンタースタイルが使用されます。このキーワード値は、カウンタースタイルの値が有限の場合に便利です。 `symbols` 記述子には、少なくとも 1 つのシンボルを指定する必要があります。そうしないと、カウンタースタイルは有効になりません。 `fixed` キーワードの後に、オプションの {{cssxref("&lt;integer&gt;")}} 値を指定できます。指定した場合、 `<integer>` 値は、シンボルリストから最初のシンボルを取得するリスト内のアイテムを示します。省略した場合、 `integer` の既定値は `1` となり、リストの最初のアイテムに最初のシンボルが割り当てられます。
 
-    extends では `symbols` または `additive-symbols` 記述子を指定してはならず、そうでなければカウンタースタイルのルールが有効になりません。 1 つまたは複数のカウンタースタイル定義が extends 値でサイクルを形成する場合、ブラウザーは関係しているすべてのカウンタースタイルを 10 進数スタイルから拡張したものとして扱います。
+- `extends`
+  - : 拡張カウンタースタイルの一部の側面を変更できるようにすることで、別のブラウザーまたは作成者が定義したカウンタースタイルのアルゴリズムを拡張します。指定されていない記述子とその値は、指定された拡張カウンタースタイルから継承されます。`extends` で指定したカウンタースタイル名がまだ定義されていない場合、既定では `decimal` カウンタースタイルが拡張されます。
+
+    `symbols` または `additive-symbols` 記述子を含んではなりません。そうしないと、カウンタースタイルルールが無効になります。1 つ以上のカウンタースタイル定義が、その `extends` 値で循環を形成している場合、ブラウザーは、その循環に関与するすべてのカウンタースタイルを `decimal` スタイルから拡張したものとして扱います。
+
+> [!NOTE]
+> 値が `cyclic`、`numeric`、`alphabetic`、`symbolic`、`fixed` の場合には、 [`symbols`](/ja/docs/Web/CSS/@counter-style/symbols) 記述子が必要です。 `additive` 値が設定されている場合には、 [`additive-symbols`](/ja/docs/Web/CSS/@counter-style/additive-symbols) 記述子が必要です。
 
 ## 公式定義
 
@@ -63,29 +74,13 @@ system: extends decimal;
 
 ## 形式文法
 
-```
-cyclic                             |
-numeric                            |
-alphabetic                         |
-symbolic                           |
-additive                           |
-[ fixed <integer>? ]               |
-[ extends <counter-style-name> ]
-
-<counter-style-name> = <custom-ident>
-```
+{{csssyntax}}
 
 ## 例
 
 ### cyclic カウンター
 
-ブラウザーが対応していれば、この例は次のように描画されます。
-
-```
-◉ One
-◉ Two
-◉ Three
-```
+`cyclic` 値は、シンボルリストを走査し、必要に応じてリストを繰り返します。
 
 #### CSS
 
@@ -94,14 +89,17 @@ additive                           |
   <li>One</li>
   <li>Two</li>
   <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+  <li>Six</li>
 </ul>
 ```
 
 ```css
 @counter-style fisheye {
   system: cyclic;
-  symbols: ◉;
-  suffix: " ";
+  symbols: ◉ ➀;
+  suffix: ": ";
 }
 
 ul {
@@ -115,15 +113,7 @@ ul {
 
 ### fixed カウンター
 
-ブラウザーが対応していれば、この例は次のように描画されます。
-
-```
-➀ One
-➁ Two
-➂ Three
-4 Four
-5 Five
-```
+`fixed` 値は、シンボルリストを 1 回だけ走査し、`integer` 値で示されるリストアイテムの番号から 1 つのサイクルを開始します。
 
 #### CSS
 
@@ -134,14 +124,15 @@ ul {
   <li>Three</li>
   <li>Four</li>
   <li>Five</li>
+  <li>Six</li>
 </ul>
 ```
 
 ```css
 @counter-style circled-digits {
-  system: fixed;
+  system: fixed 3;
   symbols: ➀ ➁ ➂;
-  suffix: " ";
+  suffix: ": ";
 }
 
 ul {
@@ -155,18 +146,7 @@ ul {
 
 ### symbolic カウンター
 
-ブラウザーが対応していれば、この例は次のように描画されます。
-
-```
-  a. One
-  b. Two
-  c. Three
- aa. Four
- bb. Five
- cc. Six
-aaa. Seven
-bbb. Eight
-```
+`symbolic` 値は、`symbols` 記述子で定義されているリストをループし、リストを 2 回目と 3 回目にループするたびに、シンボルの数をそれぞれ 2 倍、3 倍にします。
 
 #### CSS
 
@@ -201,19 +181,6 @@ ul {
 
 ### alphabetic カウンター
 
-ブラウザーが対応していれば、この例は次のように描画されます。
-
-```
- a. One
- b. Two
- c. Three
-aa. Four
-ab. Five
-ac. Six
-ba. Seven
-bb. Seven
-```
-
 #### CSS
 
 ```html hidden
@@ -247,22 +214,9 @@ ul {
 
 ### numeric カウンター
 
-ブラウザーが対応していれば、この例は次のように描画されます。
-
-```
- b. One
- c. Two
-ba. Three
-bb. Four
-bc. Five
-ca. Six
-cb. Seven
-cc. Eight
-```
-
 `symbols` 記述子で指定された最初の記号は、ここでは `0` と解釈されます。
 
-#### CSS<br>
+#### CSS
 
 ```html hidden
 <ul>
@@ -336,20 +290,24 @@ ul {
 
 #### HTML
 
+[`start`](/ja/docs/Web/HTML/Reference/Elements/ol#start) 属性を {{HTMLElement("ol")}} 要素に使用することで、カウントを `1` から始める必要がないことを示しています。さらに、 [`value`](/ja/docs/Web/HTML/Reference/Elements/li#value) 属性を 5 番目の {{HTMLElement("li")}} 要素で使用することで、 `@counter-style` を使用して定義したカウンターが、ネイティブのカウンターと同様に動作することを示しています。
+
 ```html
-<ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
-</ul>
+<ol start="48">
+  <li>48</li>
+  <li>49</li>
+  <li>50</li>
+  <li>51</li>
+  <li value="109">109</li>
+  <li>110</li>
+  <ol></ol>
+</ol>
 ```
 
 #### CSS
 
 ```css
-@counter-style upper-roman {
+@counter-style uppercase-roman {
   system: additive;
   range: 1 3999;
   additive-symbols:
@@ -368,8 +326,9 @@ ul {
     1 I;
 }
 
-ul {
-  list-style: upper-roman;
+ol {
+  list-style: uppercase-roman;
+  padding-left: 5em;
 }
 ```
 
@@ -379,7 +338,7 @@ ul {
 
 ### extends の例
 
-この例では、 `lower-alpha` カウンタースタイルのアルゴリズム、記号、その他のプロパティを使用しますが、カウンター表現の後のピリオド (`'.'`) を削除し、文字を `(a)`, `(b)` などのように括弧で囲んで使用します。
+この例では、いくつかのネイティブの {{CSSXref("list-style-type")}} カウンター値の 1 つである [`lower-alpha`](/ja/docs/Web/CSS/list-style-type#lower-alpha) のアルゴリズム、記号、およびその他のプロパティを使用していますが、ピリオド (`'.'`) を削除し、`(a)` および `(b)` のように文字を括弧で囲むことで拡張しています。
 
 #### HTML
 
@@ -409,7 +368,7 @@ ul {
 
 #### 結果
 
-{{ EmbedLiveSample('Extends_example') }}
+{{ EmbedLiveSample('Extending_a_counter') }}
 
 ## 仕様書
 
@@ -421,5 +380,6 @@ ul {
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- その他の {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}} など
+- {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを生成する関数記法
