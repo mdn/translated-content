@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 127 中影响开发者的变更信息。Firefox 127 于 [2024 年 6 月 11 日](https://whattrainisitnow.com/release/?version=127)发布。
 
 ## 为 Web 开发者带来的变化

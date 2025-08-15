@@ -3,8 +3,6 @@ title: this
 slug: Web/JavaScript/Reference/Operators/this
 ---
 
-{{jsSidebar("Operators")}}
-
 与其他语言相比，**函数的 `this` 关键字**在 JavaScript 中的表现略有不同，此外，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和非严格模式之间也会有一些差别。
 
 在绝大多数情况下，函数的调用方式决定了 `this` 的值（运行时绑定）。`this` 不能在执行期间被赋值，并且在每次函数被调用时 `this` 的值也可能会不同。ES5 引入了 [bind](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法来设置函数的 `this` 值，而不用考虑函数如何被调用的。ES2015 引入了[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，箭头函数不提供自身的 this 绑定（`this` 的值将保持为闭合词法上下文的值）。
@@ -202,7 +200,7 @@ console.log(o.a); // 38
 
 ### 类上下文
 
-一个[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)可以被分为两个上下文：静态和实例。[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)、方法和实例字段初始化器（[公有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)或[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)）属于实例上下文。[静态](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)方法、静态字段初始化器和[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)属于静态上下文。`this` 值在每个上下文中都是不同的。
+一个[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)可以被分为两个上下文：静态和实例。[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)、方法和实例字段初始化器（[公有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)或[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)）属于实例上下文。[静态](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)方法、静态字段初始化器和[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)属于静态上下文。`this` 值在每个上下文中都是不同的。
 
 类构造函数总是通过 `new` 调用，所以它们的行为与[构造函数](#构造函数)相同：`this` 值是正在创建的新实例。类方法的行为像对象字面量中的方法——`this` 值是方法被访问的对象。如果方法没有转移到另一个对象，`this` 通常是类的一个实例。
 

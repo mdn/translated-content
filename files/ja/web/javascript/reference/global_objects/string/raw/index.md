@@ -9,7 +9,7 @@ l10n:
 
 **`String.raw()`** 静的メソッドは、[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)のためのタグ関数です。この関数は Python の文字列リテラルの `r` 接頭辞や C# の文字列リテラルの `@` 接頭辞に似ています。この関数は、テンプレートリテラルの生の文字列形式を取得するために使用されます。つまり、置換（`${foo}` など）は行われますが、エスケープ（`\n` など）は実行されません。
 
-{{InteractiveExample("JavaScript Demo: String.raw()")}}
+{{InteractiveExample("JavaScript デモ: String.raw()")}}
 
 ```js interactive-example
 // Create a variable that uses a Windows
@@ -55,7 +55,8 @@ String.raw`templateString`
 
 `String.raw()` はテンプレートリテラルの唯一の組み込みタグ関数です。既定のテンプレート関数のように動作し、連結を行います。通常の JavaScript コードで再実装することができます。
 
-> **警告:** `String.raw` を直接「識別」タグとして使用しないでください。この実装方法については[識別タグの構築](#識別タグの構築)を参照してください。
+> [!WARNING]
+> `String.raw` を直接「識別」タグとして使用しないでください。この実装方法については[識別タグの構築](#識別タグの構築)を参照してください。
 
 `String.raw()` が `raw` プロパティに `length` プロパティがないか、正でない `length` を持つオブジェクトで呼び出された場合、空の文字列 `""` を返します。もし `substitutions.length < strings.raw.length - 1` （つまり、プレースホルダーを埋めるだけの置換がない - 整形式タグ付きテンプレートリテラルでは起こりえない）場合、残りのプレースホルダーは空の文字列で埋められます。
 

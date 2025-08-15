@@ -2,7 +2,7 @@
 title: JavaScript と DOM インターフェイスによる HTML の表の操作
 slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -10,7 +10,7 @@ l10n:
 この記事では、強力で基本的な DOM レベル 1 のメソッドと、それを JavaScript からどのように使用するかを概観します。どのようにして HTML 要素を動的に生成、アクセス、制御、削除するかを学ぶことができます。ここで紹介する DOM メソッドは HTML に限ったものではなく、XML に対しても用いることができます。ここで用意しているデモは、すべての最近のブラウザーで正常に動作します。
 
 > [!NOTE]
-> ここで紹介する DOM メソッドは ドキュメントオブジェクトモデル（コア）レベル 1 仕様の一部に過ぎません。DOM レベル 1 には HTML ドキュメント特有のメソッド (DOM 1 HTML) と共に、一般的なドキュメントアクセスと操作（DOM 1 コア）のためのメソッドが含まれています。
+> ここで紹介する DOM メソッドは ドキュメントオブジェクトモデル（コア）レベル 1 仕様の一部に過ぎません。DOM レベル 1 には HTML 文書特有のメソッド (DOM 1 HTML) と共に、一般的な文書アクセスと操作（DOM 1 コア）のためのメソッドが含まれています。
 
 ## 動的な HTML の表の生成
 
@@ -21,7 +21,7 @@ l10n:
 #### HTML
 
 ```html
-<input type="button" value="Generate a table" onclick="generateTable()" />
+<input type="button" value="表を生成" />
 ```
 
 #### JavaScript
@@ -41,7 +41,7 @@ function generateTable() {
       // <td> 要素とテキストノードを作成し、テキストノードを
       // <td> の内容として、その <td> を表の行の末尾に追加
       const cell = document.createElement("td");
-      const cellText = document.createTextNode(`${i} 行目、${j} 列目のセル`);
+      const cellText = document.createTextNode(`行 ${i} 、列 ${j} のセル`);
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
@@ -57,6 +57,10 @@ function generateTable() {
   // tbl の border 属性を 2 に設定
   tbl.setAttribute("border", "2");
 }
+
+document
+  .querySelector("input[type='button']")
+  .addEventListener("click", generateTable);
 ```
 
 ```css hidden
@@ -150,7 +154,7 @@ JavaScript コードによって生成される HTML マークアップはこの
 
 ```html
 <body>
-  <input type="button" value="段落の背景色を設定" onclick="setBackground()" />
+  <input type="button" value="段落の背景色を設定" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -169,6 +173,8 @@ function setBackground() {
   // インラインスタイルを設定
   secondParagraph.style.background = "red";
 }
+
+document.querySelector("input").addEventListener("click", setBackground);
 ```
 
 #### 結果
@@ -177,7 +183,7 @@ function setBackground() {
 
 ### 解説
 
-`getElementsByTagName(tagNameValue)` は任意の DOM {{domxref("Element")}} またはルート {{domxref("Document")}} 要素で利用できるメソッドです。呼び出されると、タグ名に照合する要素の子孫をすべて配列で返します。リストの最初の要素は配列の位置 `[0]` に配置されます。
+`getElementsByTagName(tagNameValue)` は任意の DOM の {{domxref("Element")}} またはルート {{domxref("Document")}} 要素で利用できるメソッドです。呼び出されると、タグ名に照合する要素の子孫をすべて配列で返します。リストの最初の要素は配列の位置 `[0]` に配置されます。
 
 以下の手順で処理をします。
 
@@ -223,7 +229,8 @@ secondParagraph.appendChild(myTextNode);
 
 ![段落要素内のテキストノードを DOM ツリー内の個々の兄弟として。](sample2b2.jpg)
 
-> **メモ:** `createTextNode()` と `appendChild` は、hello と world という単語の間にホワイトスペースを入れる簡単な方法です。もう 1 つの重要な注意点は、hello の後に world という単語が追加されたように、`appendChild` メソッドは最後の子の後に子を追加するということです。ですから、hello と world の間にテキストノードを追加したい場合は、 `insertBefore` を `appendChild` の代わりに使用する必要があります。
+> [!NOTE]
+> `createTextNode()` と `appendChild()` は、hello と world という単語の間にホワイトスペースを入れる簡単な方法です。もう 1 つの重要な注意点は、hello の後に world という単語が追加されたように、`appendChild` メソッドは最後の子の後に子を追加するということです。ですから、hello と world の間にテキストノードを追加したい場合は、 `insertBefore` を `appendChild` の代わりに使用する必要があります。
 
 ### 文書オブジェクトと createElement(..) メソッドによる新しい要素の生成
 
@@ -254,9 +261,9 @@ myNewPTagNode.appendChild(myTextNode);
 
 ![新しいノード要素を作成し、オブジェクトツリーのテキスト構造に追加します。](sample2d.jpg)
 
-## 表の動的生成 (Sample1.html に戻って)
+## 表の動的生成
 
-この文書ではこれ以降再び sample1.html を扱っていきます。以下の図はこの例で生成される table オブジェクトツリー構造を表しています。
+以下の図はこの例で生成される table オブジェクトツリー構造を表しています。
 
 ### HTML 表構造の再確認
 
@@ -264,61 +271,50 @@ myNewPTagNode.appendChild(myTextNode);
 
 ### 要素ノードの生成とその文書ツリーへの挿入
 
-sample1.html における基本的な表の生成の手順は次の通りです。
+基本的な表の生成の手順は次の通りです。
 
-- body オブジェクトを取得します（document オブジェクトの最初の項目）。
+- body オブジェクトを取得します（document オブジェクトの最初のアイテム）。
 - すべての要素を生成します。
-- 最後に、各子要素を（上の図のように）表構造に従って付加していきます。以下のソースコードは sample1.html のコメント付き版になります。
+- 最後に、各子要素を（上の図のように）表構造に従って付加していきます。
 
-> **メモ:** `start` 関数の最後には新たなコードがあります。 DOM のメソッド `setAttribute()` を用いて表のの `border` プロパティが設定されており、`setAttribute()` は属性名と属性値という 2 つの引数を取ります。`setAttribute()` メソッドを用いて任意の要素の任意の属性を設定することができます。
+> [!NOTE]
+> スクリプト最後には新たなコードがあります。 DOM のメソッド `setAttribute()` を用いて表のの `border` プロパティが設定されており、`setAttribute()` は属性名と属性値という 2 つの引数を取ります。`setAttribute` メソッドを用いて任意の要素の任意の属性を設定することができます。
 
-```html
-<html lang="ja">
-  <head>
-    <title>
-      サンプルコード - 基本的 DOM インターフェイスによる HTML 要素の動的操作法
-    </title>
-    <script>
-      function start() {
-        // body への参照を取得します
-        const myBody = document.getElementsByTagName("body")[0];
+```js
+// body への参照を取得
+const myBody = document.getElementsByTagName("body")[0];
 
-        // <table> と <tbody> 要素を生成します
-        const myTable = document.createElement("table");
-        const myTableBody = document.createElement("tbody");
+// <table> と <tbody> 要素を生成
+const myTable = document.createElement("table");
+const myTableBody = document.createElement("tbody");
 
-        // すべてのセルを生成します
-        for (let j = 0; j < 3; j++) {
-          // <tr> 要素を生成します
-          const myCurrentRow = document.createElement("tr");
+// すべてのセルを生成
+for (let j = 0; j < 3; j++) {
+  // <tr> 要素を生成
+  const myCurrentRow = document.createElement("tr");
 
-          for (let i = 0; i < 4; i++) {
-            // <td> 要素を生成します
-            const myCurrentCell = document.createElement("td");
-            // テキストノードを生成します
-            const currentText = document.createTextNode(
-              `cell is row ${j}, column ${i}`,
-            );
-            // 生成したテキストノードを <td> セルへと付加します
-            myCurrentCell.appendChild(currentText);
-            // その <td> セルを <tr> 行へと付加します
-            myCurrentRow.appendChild(myCurrentCell);
-          }
-          // その <tr> 行を <tbody> へと付加します
-          myTableBody.appendChild(myCurrentRow);
-        }
+  for (let i = 0; i < 4; i++) {
+    // <td> 要素を生成
+    const myCurrentCell = document.createElement("td");
+    // テキストノードを生成
+    const currentText = document.createTextNode(
+      `cell is row ${j}, column ${i}`,
+    );
+    // 生成したテキストノードを <td> セルへ追加
+    myCurrentCell.appendChild(currentText);
+    // その <td> セルを <tr> 行へ追加
+    myCurrentRow.appendChild(myCurrentCell);
+  }
+  // その <tr> 行を <tbody> へ追加
+  myTableBody.appendChild(myCurrentRow);
+}
 
-        // <tbody> を <table> へと付加します
-        myTable.appendChild(myTableBody);
-        // <table> を <body> へと付加します
-        myBody.appendChild(myTable);
-        // mytable の border 属性を 2 に設定します
-        myTable.setAttribute("border", "2");
-      }
-    </script>
-  </head>
-  <body onload="start()"></body>
-</html>
+// <tbody> を <table> へ追加
+myTable.appendChild(myTableBody);
+// <table> を <body> へ追加
+myBody.appendChild(myTable);
+// mytable の border 属性を 2 に設定
+myTable.setAttribute("border", "2");
 ```
 
 ## DOM と CSS による表の操作
@@ -327,7 +323,7 @@ sample1.html における基本的な表の生成の手順は次の通りです�
 
 この例では、2 つの新しい DOM 属性を導入しています。まず、`childNodes` 属性を使用して mycel の子ノードのリストを取得します。`childNodes` リストには、名前やタイプに関係なく、すべての子ノードが含まれます。`getElementsByTagName()` と同様に、ノードのリストを返します。
 
-違いは、(a) `getElementsByTagName()` が指定したタグ名の要素のみを返すことと、(b) `getElementsByTagName()` が直系の子だけでなく、任意のレベルの子孫を返すことです。
+違いは、(a) `getElementsByTagName()` が指定したタグ名の要素のみを返すことと、(b) `childNodes` が直系の子だけでなく、任意のレベルの子孫をすべて含むことです。
 
 返されたリストを手に入れたら、`[x]` メソッドを使って目的の子項目を取得します。この例では、表の 2 行目の 2 番目のセルのテキストノードを myceltext に格納しています。
 
@@ -337,17 +333,17 @@ sample1.html における基本的な表の生成の手順は次の通りです�
 > オブジェクトがテキストノードである場合、data 属性を使用して当該ノードのテキスト内容を得ることができます。
 
 ```js
-myBody = document.getElementsByTagName("body")[0];
-myTable = myBody.getElementsByTagName("table")[0];
-myTableBody = myTable.getElementsByTagName("tbody")[0];
-myRow = myTableBody.getElementsByTagName("tr")[1];
-myCell = myRow.getElementsByTagName("td")[1];
+const myBody = document.getElementsByTagName("body")[0];
+const myTable = myBody.getElementsByTagName("table")[0];
+const myTableBody = myTable.getElementsByTagName("tbody")[0];
+const myRow = myTableBody.getElementsByTagName("tr")[1];
+const myCell = myRow.getElementsByTagName("td")[1];
 
 // myCell の childNodes リストの最初の項目要素
-myCellText = myCell.childNodes[0];
+const myCellText = myCell.childNodes[0];
 
 // currentText のコンテンツは myCellText の data の内容
-currentText = document.createTextNode(myCellText.data);
+const currentText = document.createTextNode(myCellText.data);
 myBody.appendChild(currentText);
 ```
 
@@ -361,37 +357,30 @@ myTable.getAttribute("border");
 
 ### スタイルプロパティ変更による列の非表示化
 
-JavaScript 変数にオブジェクトを納めさえすれば、スタイルプロパティを直接設定できます。以下のコードは 2 列目の各セル非表示とされ 1 行目の各セルが赤い背景色を持つように変更された sample1.html です。style プロパティが直接設定されていることに注意して下さい。
+JavaScript 変数にオブジェクトを納めさえすれば、スタイルプロパティを直接設定できます。以下のコードは 2 列目の各セル非表示とされ 1 行目の各セルが赤い背景色を持つように変更されたものです。 `style` プロパティが直接設定されていることに注意して下さい。
 
-```html
-<html lang="en">
-  <body onload="start()"></body>
-  <script>
-    function start() {
-      const myBody = document.getElementsByTagName("body")[0];
-      const myTable = document.createElement("table");
-      const myTableBody = document.createElement("tbody");
+```js
+const myBody = document.getElementsByTagName("body")[0];
+const myTable = document.createElement("table");
+const myTableBody = document.createElement("tbody");
 
-      for (let row = 0; row < 2; row++) {
-        const myCurrentRow = document.createElement("tr");
-        for (let col = 0; col < 2; col++) {
-          const myCurrentCell = document.createElement("td");
-          const currentText = document.createTextNode(`cell is: ${row}${col}`);
-          myCurrentCell.appendChild(currentText);
-          myCurrentRow.appendChild(myCurrentCell);
-          // 0 列目であればセルの背景色を設定し、
-          // 1 列目であればセルを非表示とする
-          if (col === 0) {
-            myCurrentCell.style.background = "rgb(255, 0, 0)";
-          } else {
-            myCurrentCell.style.display = "none";
-          }
-        }
-        myTableBody.appendChild(myCurrentRow);
-      }
-      myTable.appendChild(myTableBody);
-      myBody.appendChild(myTable);
+for (let row = 0; row < 2; row++) {
+  const myCurrentRow = document.createElement("tr");
+  for (let col = 0; col < 2; col++) {
+    const myCurrentCell = document.createElement("td");
+    const currentText = document.createTextNode(`cell is: ${row}${col}`);
+    myCurrentCell.appendChild(currentText);
+    myCurrentRow.appendChild(myCurrentCell);
+    // 0 列目であればセルの背景色を設定し、
+    // 1 列目であればセルを非表示とする
+    if (col === 0) {
+      myCurrentCell.style.background = "rgb(255 0 0)";
+    } else {
+      myCurrentCell.style.display = "none";
     }
-  </script>
-</html>
+  }
+  myTableBody.appendChild(myCurrentRow);
+}
+myTable.appendChild(myTableBody);
+myBody.appendChild(myTable);
 ```

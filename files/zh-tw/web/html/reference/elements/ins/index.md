@@ -3,8 +3,6 @@ title: <ins>：插入文字元素
 slug: Web/HTML/Reference/Elements/ins
 ---
 
-{{HTMLSidebar}}
-
 **`<ins>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表已添加到文件的一段文字範圍。你可以使用 {{HTMLElement("del")}} 元素來類似地表示已從文件中刪除的文字範圍。
 
 {{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}

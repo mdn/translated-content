@@ -17,7 +17,8 @@ new Intl.DurationFormat(locales)
 new Intl.DurationFormat(locales, options)
 ```
 
-> **メモ:** `Intl.DurationFormat()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) をつけた場合のみ構築できます。 `new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Intl.DurationFormat()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) をつけた場合のみ構築できます。 `new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
@@ -35,7 +36,7 @@ new Intl.DurationFormat(locales, options)
     - `localeMatcher`
       - : 使用するロケール照合アルゴリズム。利用可能な値は "`lookup`" と "`best fit`" です。既定値は "`best fit`" です。このオプションについての詳細は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
     - `numberingSystem`
-      - : 数値の書式化に使用する命数法。たとえば `"arab"`, `"hans"`, `"mathsans"` などです。 For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types). このオプションは、`nu` Unicode 拡張キーでも設定できます。両方が指定された場合、この `options` プロパティが優先されます。
+      - : 数値の書式化に使用する記数法。たとえば `"arab"`, `"hans"`, `"mathsans"` などです。 For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types). このオプションは、`nu` Unicode 拡張キーでも設定できます。両方が指定された場合、この `options` プロパティが優先されます。
     - `style`
       - : 書式化される経過時間のスタイル。この値は、他のすべての単位オプションの既定値として使用され、経過時間単位のリストを連結する場合の {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}} の `style` オプションにも対応します。利用可能な値は次のとおりです。
         - `"long"`

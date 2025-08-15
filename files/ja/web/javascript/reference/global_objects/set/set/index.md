@@ -9,7 +9,7 @@ l10n:
 
 **`Set()`** コンストラクターは {{jsxref("Set")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype Constructor")}}
 
 ```js interactive-example
 const set1 = new Set([1, 2, 3, 4, 5]);
@@ -31,7 +31,8 @@ new Set()
 new Set(iterable)
 ```
 
-> **メモ:** `Set()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築することができ案す。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Set()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築することができ案す。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

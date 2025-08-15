@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@keyframes`** [@규칙](/ko/docs/Web/CSS/At-rule)은 개발자가 애니메이션 중간중간의 특정 지점들을 거칠 수 있는 키프레임들을 설정함으로써 CSS 애니메이션 과정의 중간 절차를 제어할 수 있게 합니다. 이를 통해 브라우저가 [transitions](/ko/docs/Web/CSS/CSS_transitions)으로 애니메이션을 처리하는 것 보다 더 세밀하게 중간 동작들을 제어할 수 있습니다.
+**`@keyframes`** [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)은 개발자가 애니메이션 중간중간의 특정 지점들을 거칠 수 있는 키프레임들을 설정함으로써 CSS 애니메이션 과정의 중간 절차를 제어할 수 있게 합니다. 이를 통해 브라우저가 [transitions](/ko/docs/Web/CSS/CSS_transitions)으로 애니메이션을 처리하는 것 보다 더 세밀하게 중간 동작들을 제어할 수 있습니다.
 
 ## 구문
 

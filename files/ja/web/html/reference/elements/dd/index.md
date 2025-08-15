@@ -10,7 +10,7 @@ l10n:
 
 **`<dd>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リスト要素 ({{HTMLElement("dl")}}) 内で、その前の用語 ({{HTMLElement("dt")}}) の説明、定義、値などを示します。
 
-{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;dd&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>Cryptids of Cornwall:</p>

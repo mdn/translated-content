@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3a1ad1fcf1a399211b333eed524fe9df13bdb62b
 ---
 
-{{CSSRef}}
-
 **`<box-edge>`** 値型は[ボックス端](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)のキーワード、例えば [`content-box`](#content-box) や [`border-box`](#border-box) を表します。 box-edge キーワードは、要素のボックスモデルのさまざまな側面や、要素が画面にどのように位置指定され描画されるかを定義するために使用します。
 
 box-edge キーワードは `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coord-box>`, `<geometry-box>` データ型の成分ですが、これらに限定されません。これらの型は {{cssxref("transform-box")}} や {{cssxref("background-clip")}} などのプロパティで適用されます。

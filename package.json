@@ -23,7 +23,7 @@
     "lint:yml": "prettier -c \"**/*.yml\""
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "dependencies": {
     "autocorrect-node": "2.14.0",
@@ -36,12 +36,12 @@
     "markdownlint-rule-search-replace": "1.2.0",
     "mdast-util-from-markdown": "^2.0.2",
     "ora": "^8.2.0",
-    "prettier": "3.6.1",
+    "prettier": "3.6.2",
     "unist-util-visit": "^5.0.0",
     "yargs": "^18.0.0"
   },
   "devDependencies": {
-    "lefthook": "^1.11.14"
+    "lefthook": "^1.12.2"
   },
   "packageManager": "yarn@1.22.22"
 }

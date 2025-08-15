@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 
 大なりイコール演算子 (`>=`) は、左辺のオペランドが右辺のオペランド以上の場合は `true` を返し、それ以外の場合は `false` を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Greater than or equal operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Greater than or equal operator")}}
 
 ```js interactive-example
 console.log(5 >= 3);

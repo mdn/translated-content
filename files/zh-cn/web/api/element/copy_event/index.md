@@ -13,7 +13,7 @@ slug: Web/API/Element/copy_event
 
 然而，事件处理器不可以*读取*剪贴板数据。
 
-可以构建和派发一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `copy` 事件，但这不会影响系统剪贴板。
+可以构建和派发一个[合成](/zh-CN/docs/Web/API/Document_Object_Model/Events) `copy` 事件，但这不会影响系统剪贴板。
 
 ## 语法
 

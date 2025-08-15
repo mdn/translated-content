@@ -170,7 +170,7 @@ document.getElementById("size-16").onclick = size16;
 
 자바와 같은 몇몇 언어들은 메서드를 비공개로 선언할 수 있는 기능을 제공합니다. 이는 같은 클래스 내부의 다른 메서드에서만 그 메서드들을 호출할 수 있다는 의미입니다.
 
-[classes](/ko/docs/Web/JavaScript/Reference/Classes) 이전의 JavaScript에는 [비공개 메서드](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods)를 선언하는 기본 방법이 없었지만, 클로저를 사용하여 비공개 메서드를 흉내낼 수 있다는 것이 가능했습니다. 비공개 메서드는 코드에 대한 접근을 제한하는 데만 유용한 것이 아닙니다. 또한 전역 이름 공간을 관리하는 강력한 방법을 제공합니다.
+[classes](/ko/docs/Web/JavaScript/Reference/Classes) 이전의 JavaScript에는 [비공개 메서드](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements#private_methods)를 선언하는 기본 방법이 없었지만, 클로저를 사용하여 비공개 메서드를 흉내낼 수 있다는 것이 가능했습니다. 비공개 메서드는 코드에 대한 접근을 제한하는 데만 유용한 것이 아닙니다. 또한 전역 이름 공간을 관리하는 강력한 방법을 제공합니다.
 
 아래 코드는 비공개 함수와 변수에 접근하는 퍼블릭 함수를 정의하기 위해 클로저를 사용하는 방법을 보여줍니다. 이렇게 클로저를 사용하는 것을 [모듈 디자인 패턴](https://www.google.com/search?q=javascript+module+pattern)을 따른다고 합니다.
 
@@ -578,4 +578,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-앞의 두 가지 예제에서, 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메서드 정의는 객체 생성시마다 발생할 필요가 없습니다. 자세한 내용은 [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 참고하세요.
+앞의 두 가지 예제에서, 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메서드 정의는 객체 생성시마다 발생할 필요가 없습니다. 자세한 내용은 [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)을 참고하세요.

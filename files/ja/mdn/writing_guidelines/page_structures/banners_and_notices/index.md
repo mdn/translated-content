@@ -50,7 +50,8 @@ browser-compat: api.AudioDecoder
 > [!NOTE]
 > コンテンツ内でこれらのマクロを手動で更新することはできますが、ブラウザー互換性データと一致しない値は置き換えられたり除去されたりします。
 
-> **メモ:** `\{{SeeCompatTable}}`、`\{{Deprecated_Header}}`、`\{{Non-standard_Header}}` のバナーがあるページは、ページメタデータにそれぞれ `experimental`、`deprecated`、`non-standard` のステータス値があります。
+> [!NOTE]
+> `\{{SeeCompatTable}}`、`\{{Deprecated_Header}}`、`\{{Non-standard_Header}}` のバナーがあるページは、ページメタデータにそれぞれ `experimental`、`deprecated`、`non-standard` のステータス値があります。
 > このメタデータは、ヘッダーと同じときに自動的に更新されます。
 > バナーマクロはこのステータスメタデータには依存しません（しかし、いつか生成されるかもしれません）。
 
@@ -66,9 +67,11 @@ browser-compat: api.AudioDecoder
   > [!WARNING]
   > この機能は現在 <number> 件のブラウザーベンダーが反対しています。反対意見の詳細については、[規格の状況](#規格の状況)の節を参照してください。
   ```
+
   - `<number>` は、その機能に反対しているブラウザーベンダーの数に置き換えます。
   - （英語版において） `vendor` または `vendors` は適切に使用してください。
 
 - 上記バナーと同じページに、標準の「仕様書」の下位セクションとして「規格の状況」を追加します。
 
-> **メモ:** [Related Website Sets](/ja/docs/Web/API/Storage_Access_API/Related_website_sets) がランディングページのバナー、「規格の状況」セクション、何を記述べきかという例になります。
+> [!NOTE]
+> [Related Website Sets](/ja/docs/Web/API/Storage_Access_API/Related_website_sets) がランディングページのバナー、「規格の状況」セクション、何を記述べきかという例になります。

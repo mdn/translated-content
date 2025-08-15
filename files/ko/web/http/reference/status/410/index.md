@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/410
 original_slug: Web/HTTP/Status/410
 ---
 
-{{HTTPSidebar}}
-
 하이퍼텍스트 전송 규약(HTTP) **`410 Gone`** 클라이언트 에러 응답 코드는 원본 서버에서 대상 리소스에 대해 더 이상 접근할 수
 없으며, 이 상태가 영구적일 가능성이 있음을 의미합니다.
 

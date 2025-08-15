@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
-
 **`border-left-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-left-width")}}
+{{InteractiveExample("CSS デモ: border-left-width")}}
 
 ```css interactive-example-choice
 border-left-width: thick;

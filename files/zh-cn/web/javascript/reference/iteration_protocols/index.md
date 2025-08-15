@@ -3,8 +3,6 @@ title: 迭代协议
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
 
-{{jsSidebar("More")}}
-
 **迭代协议**并不是新的内置实现或语法，而是*协议*。这些协议可以被任何遵循某些约定的对象来实现。
 
 迭代协议具体分为两个协议：[可迭代协议](#可迭代协议)和[迭代器协议](#迭代器协议)。
@@ -343,7 +341,7 @@ console.log(it.next().value); // 2
 
 ### 使用类定义一个可迭代对象
 
-状态封装也可以对[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)进行。
+状态封装也可以对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)进行。
 
 ```js
 class SimpleClass {

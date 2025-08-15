@@ -2,10 +2,8 @@
 title: ドメイン名とは
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 l10n:
-  sourceCommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 <table>
   <tbody>
@@ -17,7 +15,9 @@ l10n:
     </tr>
     <tr>
       <th scope="row">目標:</th>
-      <td>ドメイン名とはどのようなもので、どのように働くのか、なぜ重要なのかを学びます。</td>
+      <td>
+        ドメイン名とはどのようなもので、どのように働くのか、なぜ重要なのかを学びます。
+      </td>
     </tr>
   </tbody>
 </table>
@@ -50,7 +50,7 @@ l10n:
 
     TLD にはラテン文字だけでなく特殊文字も含めることができ、長さは最大 63 文字ですが、ほとんどは 2 〜 3 文字です。
 
-    TLD の完全なリストは [ICANN が管理しています](https://www.icann.org/resources/pages/tlds-2012-02-25-en)。
+    TLD の完全なリストは [ICANN が管理しています](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains)。
 
 - ラベル（またはコンポーネント）
   - : ラベルは、TLD に続くものです。ラベルは大文字と小文字を区別しない文字の並びで、 1 ～ 63 文字の長さです。 `A` から `Z` の文字、 `0` から `9` の数字、および `-` 文字（ラベルの最初または最後の文字であってはならない）のみで構成されます。 `a`, `97`, `hello-strange-person-16-how-are-you` はすべて有効なラベルの例です。
@@ -161,4 +161,4 @@ DNS データベースは世界中のすべての DNS サーバーに格納さ�
 - 実際にやってみたいのであれば、そろそろ[ウェブページの構造](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)の設計と構造を探求するのがよいでしょう。
 - また、ウェブサイトを構築するためのいくつかの面で費用がかかることも注目に値します。[ウェブサイトを構築するのにかかる費用](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)を参照してください。
 - あるいはウィキペディアで[ドメイン名](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%90%8D)についてもっと読んでください。
-- DNS がどのように機能するかについての楽しくカラフルな説明も[ここ](https://howdns.works/)にあります。
+- [DNS がどのように機能するか](https://howdns.works/)（英語）のチュートリアルには、楽しくカラフルな説明があります。

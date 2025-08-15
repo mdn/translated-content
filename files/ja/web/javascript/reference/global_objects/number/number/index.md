@@ -16,7 +16,8 @@ new Number(value)
 Number(value)
 ```
 
-> **メモ:** `Number()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてもつけなくても呼び出せますが、効果は異なります。[返値](#返値)を参照してください。
+> [!NOTE]
+> `Number()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてもつけなくても呼び出せますが、効果は異なります。[返値](#返値)を参照してください。
 
 ### 引数
 

@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`column-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の色を設定します。
 
-{{InteractiveExample("CSS Demo: column-rule-color")}}
+{{InteractiveExample("CSS デモ: column-rule-color")}}
 
 ```css interactive-example-choice
 column-rule-color: red;

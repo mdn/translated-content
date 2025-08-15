@@ -3,8 +3,6 @@ title: Timing-Allow-Origin
 slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
 ---
 
-{{HTTPSidebar}}
-
 响应头 **`Timing-Allow-Origin`** 用于指定特定站点，以允许其访问[Resource Timing API](/zh-CN/docs/Web/API/Performance_API/Resource_timing)提供的相关信息，否则这些信息会由于跨源限制将被报告为零
 
 | Header type                           | {{Glossary("Response header")}} |

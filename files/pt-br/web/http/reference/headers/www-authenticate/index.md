@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/WWW-Authenticate
 original_slug: Web/HTTP/Headers/WWW-Authenticate
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho da resposta HTTP **`WWW-Authenticate`** define o método de autenticação a ser usado para obter acesso ao recurso.
 
 O cabeçalho `WWW-Authenticate` é enviado junto a resposta {{HTTPStatus("401")}} `Unauthorized`.

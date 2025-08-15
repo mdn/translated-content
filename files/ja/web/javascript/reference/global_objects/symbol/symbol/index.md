@@ -9,7 +9,7 @@ l10n:
 
 **`Symbol()`** 関数は、シンボル型のプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+{{InteractiveExample("JavaScript デモ: Symbol - Constructor", "taller")}}
 
 ```js interactive-example
 const symbol1 = Symbol();
@@ -36,7 +36,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **メモ:** `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

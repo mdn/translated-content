@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 
 **`setUint8()`** メソッドは、符号なし 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setUint8()")}}
+{{InteractiveExample("JavaScript デモ: DataView.setUint8()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

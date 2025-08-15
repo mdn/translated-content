@@ -3,8 +3,6 @@ title: HTML 中使用的日期与时间格式
 slug: Web/HTML/Guides/Date_and_time_formats
 ---
 
-{{HTMLSidebar}}
-
 特定的 HTML 元素会使用日期和（或）时间值，指定这些值的字符串格式将在本篇文章中描述。
 
 使用这些格式的元素包含一些令用户选择或指定日期、时间或日期和时间的 {{HTMLElement("input")}} 和 {{HTMLElement("ins")}}、{{HTMLElement("del")}} 元素，它们的 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/ins#datetime) 属性指定了插入或删除内容的日期或日期和时间。
