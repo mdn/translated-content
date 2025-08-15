@@ -9,7 +9,7 @@ slug: Web/API/Event/type
 
 傳至 {{ domxref("EventTarget.addEventListener()") }} 和 {{ domxref("EventTarget.removeEventListener()") }} 方法中，代表事件類型的參數 _`event`_ 是不區分大小寫的。
 
-可用的事件類型，可參考 [event reference](/zh-TW/docs/Web/Events)。
+可用的事件類型，可參考 [event reference](/zh-TW/docs/Web/API/Document_Object_Model/Events)。
 
 ## 語法
 

@@ -3,8 +3,6 @@ title: <area>：圖像地圖區域元素
 slug: Web/HTML/Reference/Elements/area
 ---
 
-{{HTMLSidebar}}
-
 **`<area>`** [HTML](/zh-TW/docs/Web/HTML) 元素定義了圖像地圖中具有預定義可點擊區域的區域。圖像地圖允許將圖像上的幾何區域與{{Glossary("Hyperlink", "超連結")}}關聯。
 
 此元素僅在 {{HTMLElement("map")}} 元素內使用。

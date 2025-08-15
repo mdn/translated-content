@@ -2,7 +2,7 @@
 title: 寸法指定の論理的プロパティ
 slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 このガイドでは、ページ上の要素の寸法の設定に使用する、物理的な方向のプロパティと論理的なプロパティのフローに関連した対応付けを説明します。

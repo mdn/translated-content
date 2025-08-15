@@ -1,11 +1,10 @@
 ---
 title: イベント入門
+short-title: イベント
 slug: Learn_web_development/Core/Scripting/Events
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6149deb5f4beccdc09549fbf8d1810d9a4dc3462
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
 
@@ -50,14 +49,9 @@ l10n:
 - 動画が再生される、停止される、再生が終わる
 - エラーが発生する
 
-ここから（そして MDN の[イベントリファレンス](/ja/docs/Web/Events)から）、発生するイベントが**たくさん**あることがわかります。
+ここから（そして MDN の[イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)から）、発生するイベントが**たくさん**あることがわかります。
 
-イベントに反応するには、イベントに**イベントハンドラー**を取り付けます。これは、イベントが発行されたときに実行するコードのブロック（通常はプログラマーであるあなたが作成する JavaScript 関数）です。
-このようなコードのブロックが、イベントに応答して実行するように定義されている場合、**イベントハンドラーを登録**していると言います。
-なお、イベントハンドラーは時に **イベントリスナー** と呼ばれることがあります。目的からすれば言い換えてもほとんど問題ないのですが、厳密に言えば一緒に動作する別のものです。イベントリスナーはイベントの発生を待ち受けし、イベントハンドラーは発生したイベントに応答して動作するコードです。
-
-> [!NOTE]
-> ウェブのイベントは JavaScript のコア言語の一部ではありません。それらはブラウザーに組み込まれた API の一部として定義されています。
+イベントに反応するには、そのイベントに **イベントリスナー** を割り当てます。これは、イベントの発生を待ち受けるコードの機能です。イベントが発生すると、そのイベントに対応するために、**イベントハンドラー** 関数（イベントリスナーによって参照される、またはイベントリスナー内に含まれる）が呼び出されます。このようなコードのブロックを、イベントに応じて実行するように設定することを、**イベントハンドラーの登録** といいます。
 
 ### 例: クリックイベントの扱い
 
@@ -73,7 +67,7 @@ button {
 }
 ```
 
-次に JavaScript が少しあります。この詳細は次の章で見ていきますが、これで言えることは、ボタンの `"click"` イベントにイベントハンドラーを追加し、そのハンドラーがページの背景をランダムな色に設定することでイベントに反応しているということです。
+次に、少量の JavaScript があります。これについては次の領域で詳しく説明しますが、ここでは、ボタンに `"click"` イベントのイベントリスナーを追加し、そのイベントに対して、ページ背景をランダムな色に設定するハンドラー関数が反応するということを覚えておいてください。
 
 ```js
 const btn = document.querySelector("button");
@@ -94,7 +88,7 @@ btn.addEventListener("click", () => {
 
 ## addEventListener() の使用
 
-最後の例で見たように、イベントを発行することができるオブジェクトは {{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドを持っており、これはイベントハンドラーを追加するための推奨メカニズムです。
+最後の例で見たように、イベントを発行することができるオブジェクトは {{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドを持っており、これはイベントリスナーを追加するための推奨メカニズムです。
 
 前回の例のコードを詳しく見ていきましょう。
 
@@ -111,12 +105,12 @@ btn.addEventListener("click", () => {
 });
 ```
 
-HTML の {{HTMLElement("button")}} 要素は、ユーザーがボタンをクリックするとイベントを発生します。そのため、 `addEventListener()` 関数を定義し、ここで呼び出しています。引数を 2 つ渡しています。
+HTML の {{HTMLElement("button")}} 要素は、ユーザーがそれをクリックすると `click` イベントを発行します。イベントリスナーを追加するために、その要素に対して `addEventListener()` メソッドを呼び出します。このメソッドは 2 つの引数を取ります。
 
 - 文字列 `"click"` で、クリックイベントを待ち受けしたいことを示します。ボタンは他にもたくさんのイベントを発行することができます。例えば、ユーザーがマウスをボタンの上に移動させたときに [`"mouseover"`](/ja/docs/Web/API/Element/mouseover_event) を発行したり、ユーザーがキーを押してボタンにフォーカスが当たったときに [`"keydown"`](/ja/docs/Web/API/Element/keydown_event) を発行したりすることができます。
-- イベント発生時に呼び出す関数です。この場合、この関数はランダムな RGB の色を生成し、ページの [`<body>`](/ja/docs/Web/CSS/background-color)(/ja/docs/Web/HTML/Element/body) の [`background-color`](/ja/docs/Web/CSS/background-color) をその色に設定します。
+- イベント発生時に呼び出す関数です。この場合、定義されているこの無名関数はランダムな RGB の色を生成し、その色の [`background-color`](/ja/docs/Web/CSS/background-color) を [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) に設定します。
 
-ハンドラー関数を別の名前付き関数にするのは問題ありません。
+別個の名前付き関数を作成し、`addEventListener()` の 2 つ目の引数でそれを参照することもできます。
 
 ```js
 const btn = document.querySelector("button");
@@ -144,43 +138,22 @@ btn.addEventListener("click", changeBackground);
 - [`dblclick`](/ja/docs/Web/API/Element/dblclick_event) — ダブルクリックされた場合だけ色が変わります。
 - [`mouseover`](/ja/docs/Web/API/Element/mouseover_event) と [`mouseout`](/ja/docs/Web/API/Element/mouseout_event) — それぞれ、マウスポインターがボタンの上に来たときとボタンの上から外れた時に色が変わります。
 
-一部のイベント、たとえば `click` などは、ほぼすべての要素で利用できます。他のイベントはより具体的で、特定の状況でのみ使用することができます。例えば、[`play`](/ja/docs/Web/API/HTMLMediaElement/play_event) イベントは {{htmlelement("video")}} のようないくつかの要素でのみ利用することができます。
+一部のイベント、たとえば `click` などは、ほぼすべての要素で利用できます。他のイベントはより具体的で、特定の状況でのみ使用することができます。例えば、[`play`](/ja/docs/Web/API/HTMLMediaElement/play_event) イベントは {{htmlelement("video")}} のような再生機能を持った要素でのみ利用することができます。
 
-### リスナーの除去方法
+### リスナーの除去
 
-`addEventListener()` を用いてイベントハンドラーを追加した場合、[`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener) メソッドを用いて再び除去することができます。例えば、この例では `changeBackground()` イベントハンドラーが除去されます。
+`addEventListener()` を使用してイベントリスナーを追加した場合、必要に応じてそれを除去することができます。最も一般的な方法は、 [`removeEventListener( )`](/ja/docs/Web/API/EventTarget/removeEventListener) メソッドを使用することです。例えば、次の行は、前述の `click` イベントハンドラーを除去します。
 
 ```js
 btn.removeEventListener("click", changeBackground);
 ```
 
-イベントハンドラーは {{domxref("AbortSignal")}} を {{domxref("EventTarget/addEventListener()", "addEventListener()")}} に渡して、後で {{domxref("AbortController/abort()", "abort()")}} を呼び出すことでも除去できます。
-例えば、 `AbortSignal` で除去されるイベントハンドラーを追加するには、次のようにします。
-
-```js-nolint
-const controller = new AbortController();
-
-btn.addEventListener("click",
-  () => {
-    const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
-    document.body.style.backgroundColor = rndCol;
-  },
-  { signal: controller.signal } // このハンドラーに AbortSignal を渡す
-);
-```
-
-すると、上のコードで作成したイベントハンドラーは、次のように除去されます。
-
-```js
-controller.abort(); // このコントローラーに関連付けられたすべてのイベントを除去
-```
-
-単純で小さなプログラムでは、古くて使われていないイベントハンドラーをクリーンアップする必要はありませんが、大規模で複雑なプログラムでは、効率を向上させることができます。
+簡単で小さなプログラムでは、古くて使われていないイベントハンドラーをクリーンアップする必要はありませんが、大規模で複雑なプログラムでは、効率を向上させることができます。
 また、イベントハンドラーを除去する機能により、同じボタンが異なる状況で異なるアクションをするようなことも可能です。ハンドラーを追加したり除去されたりするだけです。
 
 ### 単一のイベントに複数の待ち受けを追加
 
-{{domxref("EventTarget/addEventListener()", "addEventListener()")}} に複数の呼び出しを行うことで、異なるハンドラーを提供し、単一のイベントに複数のハンドラーを持たせることができます。
+{{domxref("EventTarget/addEventListener()", "addEventListener()")}} を複数回呼び出し、異なるハンドラーを指定することで、単一のイベントに対して複数のハンドラー関数を実行することができます。
 
 ```js
 myElement.addEventListener("click", functionA);
@@ -196,7 +169,7 @@ myElement.addEventListener("click", functionB);
 ### イベントハンドラープロパティ
 
 イベントを発行することができるオブジェクト（ボタンなど）は通常、 `on` にイベント名が続くプロパティを持っています。例えば、要素には `onclick` というプロパティがあります。
-これは、イベントハンドラープロパティと呼ばれます。イベントを待ち受けるには、ハンドラー関数をプロパティに割り当てることで実現できます。
+これは、**イベントハンドラープロパティ**と呼ばれています。イベントを待ち受けるには、ハンドラー関数をプロパティに割り当てることで実現できます。
 
 例えば、ランダムな色の例を次のように書き換えることができます。
 
@@ -230,14 +203,7 @@ function bgChange() {
 btn.onclick = bgChange;
 ```
 
-イベントハンドラープロパティでは、単一のイベントに複数のハンドラーを追加することはできません。例えば、 `addEventListener('click', handler)` は 1 つの要素に対して複数回、第 2 引数に異なる関数を指定して呼び出すことができます。
-
-```js
-element.addEventListener("click", function1);
-element.addEventListener("click", function2);
-```
-
-イベントハンドラープロパティでは、後からプロパティを設定しようとすると、それ以前のものが上書きされてしまうため、これは不可能です。
+イベントハンドラーのプロパティには、`addEventListener()` と比較して欠点があります。最も重要な欠点の 1 つは、[1 つのイベントに複数のリスナーを追加](#単一のイベントに複数の待ち受けを追加)できないことです。次のパターンは、プロパティの値を設定しようとすると、それ以前の値が上書きされてしまうため、機能しません。
 
 ```js
 element.onclick = function1;
@@ -248,7 +214,7 @@ element.onclick = function2;
 
 あなたのコードにもこのようなパターンがあるかもしれません。
 
-```html
+```html example-bad
 <button onclick="bgChange()">押してね</button>
 ```
 
@@ -259,10 +225,10 @@ function bgChange() {
 }
 ```
 
-イベントハンドラーを登録するための最も初期の方法は、 [HTML のイベントハンドラー属性](/ja/docs/Web/HTML/Reference/Attributes#イベントハンドラー属性)（またはインラインイベントハンドラー）を使うものでした。属性の値は、文字通り、イベントが発生したときに実行したい JavaScript コードです。
+イベントハンドラーを登録するための最も初期の方法は、 [HTML のイベントハンドラー属性](/ja/docs/Web/HTML/Reference/Attributes#イベントハンドラー属性)（またはインラインイベントハンドラー）を使うものでした。属性の値には、イベントが発生したときに実行したい JavaScript コードが書かれています。
 上記の例では、同じページの {{htmlelement("script")}} 要素の中で定義した関数を呼び出していますが、例えば次のように、属性の中に直接 JavaScript を挿入することもできます。
 
-```html
+```html example-bad
 <button onclick="alert('こんにちは、これは古い形のイベントハンドラーです。');">
   押してね
 </button>
@@ -293,7 +259,7 @@ for (const button of buttons) {
 
 ときどきイベントハンドラー関数内で `event`、`evt`、`e` などと名付けられた引数を見かけるでしょう。
 これらは**イベントオブジェクト**と呼ばれ、イベントの追加機能や情報を提供する目的でイベントハンドラーに自動的に渡されます。
-例えば、またランダムカラーの例をちょっと書き換えてみましょう。
+例えば、ランダムな色の例を、イベントオブジェクトを含めるように書き直してみましょう。
 
 ```js
 const btn = document.querySelector("button");
@@ -320,7 +286,7 @@ btn.addEventListener("click", bgChange);
 
 > [!NOTE]
 > イベントオブジェクトには好きな名前が使えます。イベントハンドラー関数のカッコの中に使いたい名前を書くだけです。
-> `e`/`evt`/`event` が開発者の間でとても良く使われていますが、これらが短くて覚えやすいからです。
+> 開発者の間では `e`、`evt`、`event` がとても良く使われていますが、これらが短くて覚えやすいからです。
 > 常に一貫性を保つことは良いことです。自分自身に対しても、可能であれば他の人に対しても。
 
 ### イベントオブジェクトの追加プロパティ
@@ -364,7 +330,7 @@ div {
 まず、姓と名を入力させる単純な HTML フォームです。
 
 ```html
-<form>
+<form action="#">
   <div>
     <label for="fname">姓: </label>
     <input id="fname" type="text" />
@@ -386,7 +352,7 @@ div {
 }
 ```
 
-これで JavaScript を少し入れます。ここでは、テキストフィールドが空かどうかをテストする [`submit`](/ja/docs/Web/API/HTMLFormElement/submit_event) イベント（フォームを送信すると submit イベントが発生します）のハンドラーの中に、とても単純なチェックを実装します。
+これで JavaScript を少し入れます。ここでは、テキストフィールドが空かどうかをテストする [`submit`](/ja/docs/Web/API/HTMLFormElement/submit_event) イベント（フォームを送信すると submit イベントが発生します）のハンドラーの中に基本的なチェックを実装します。
 もしそうであれば、イベントオブジェクトの [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) 関数を呼び出してフォームの送信を停止し、フォームの下の段落にエラーメッセージを表示して何が間違っているのかをユーザーに指示します。
 
 ```js
@@ -406,10 +372,7 @@ form.addEventListener("submit", (e) => {
 明らかに、これはかなり緩いフォーム検証です。例えば、空白や数字が入力されたフォームをユーザーが検証するのを止めることはできませんが、例としては問題ありません。
 出力は以下のようになります。
 
-{{ EmbedLiveSample('Preventing_default_behavior', '100%', 180, "", "") }}
-
-> [!NOTE]
-> ソースコード全体については、 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) を（および[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)も）ご覧ください。
+完全なサンプルは[ライブで実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)してご覧いただけます。ぜひ試してみて下さい。完全なソースコードについては、 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) をご覧ください。
 
 ## ウェブページだけではない
 
@@ -418,7 +381,7 @@ form.addEventListener("submit", (e) => {
 
 例えば、 [Node.js](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) はとても人気のある JavaScript ランタイムで、開発者が JavaScript を使用してネットワークやサーバーサイドのアプリケーションを構築することができます。
 [Node.js イベントモデル](https://nodejs.org/api/events.html)は、イベントを待ち受けするリスナーと、定期的にイベントを発信するエミッターによってできています。それほど異なるものには聞こえませんが、コードはかなり異なり、イベントリスナーを登録するための `on()` や、一度実行した後に登録を解除するイベントリスナーを登録するための `once()` などの関数を使用しています。
-[HTTP の connect イベントのドキュメント](https://nodejs.org/api/http.html#event-connect)には、良い例があります。
+Node.js の [HTTP の connect イベントのドキュメント](https://nodejs.org/api/http.html#event-connect)には、良い例があります。
 
 また、 JavaScript を使用し、 [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) と呼ばれる技術を使って、クロスブラウザーのアドオン（ブラウザー機能拡張）を構築することもできます。
 イベントモデルはウェブイベントモデルに似ていますが、少し異なります。イベントリスナーのプロパティは{{Glossary("camel_case", "キャメルケース")}}で書かれ（`onmessage` ではなく `onMessage` など）、 `addListener` 関数と組み合わせる必要があります。

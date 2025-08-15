@@ -5976,6 +5976,24 @@
       "mayconrem"
     ]
   },
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2020-11-17T03:43:19.041Z",
+    "contributors": [
+      "kosarev_va",
+      "RuslanPro01",
+      "ismailaga123",
+      "injashkin",
+      "Corba",
+      "snowydad",
+      "arthurg91",
+      "wbamberg",
+      "LbIdarka",
+      "Dzhabarovm",
+      "Kerminator1973",
+      "kRaVeda",
+      "teoli"
+    ]
+  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2019-09-25T18:36:16.946Z",
     "contributors": [
@@ -13360,24 +13378,6 @@
       "Mrakobees",
       "torbasow",
       "yaruson"
-    ]
-  },
-  "Web/Events": {
-    "modified": "2020-11-17T03:43:19.041Z",
-    "contributors": [
-      "kosarev_va",
-      "RuslanPro01",
-      "ismailaga123",
-      "injashkin",
-      "Corba",
-      "snowydad",
-      "arthurg91",
-      "wbamberg",
-      "LbIdarka",
-      "Dzhabarovm",
-      "Kerminator1973",
-      "kRaVeda",
-      "teoli"
     ]
   },
   "Web/HTML": {
