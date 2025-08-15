@@ -61,15 +61,15 @@ onpopstate = (event) => { }
 
 為了更清楚地了解 `popstate` 事件何時觸發，請思考當使用者導覽網站或以程式設計方式遍歷歷史紀錄時，目前歷史紀錄項目發生變更時所發生的簡化事件序列。在此，轉換會將目前的歷史紀錄項目變更為我們稱之為 **new-entry** 的項目。目前頁面的工作階段歷史紀錄堆疊項目將被稱為 **current-entry**。
 
-1.  如果 **new-entry** 目前不包含現有的 {{domxref("Document")}}，則在繼續之前擷取內容並建立其 `Document`。這最終會將 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 和 {{domxref("Window/load_event", "load")}} 等事件發送到包含該文件的 {{domxref("Window")}}，但與此同時，以下步驟將繼續執行。
-2.  如果 **current-entry** 的標題不是使用 History API 方法（{{domxref("History.pushState", "pushState()")}} 或 {{domxref("History.replaceState", "replaceState()")}}）設定的，則將該項目的標題設定為其 {{domxref("document.title")}} 屬性回傳的字串。
-3.  如果瀏覽器有希望在導覽離開 **current-entry** 之前與其一起儲存的狀態訊息，它就會這麼做。該項目現在被稱為具有「持久化的使用者狀態」。瀏覽器可能新增到歷史紀錄工作階段項目的訊息可能包括，例如，文件的捲動位置、表單輸入的值以及其他此類資料。
-4.  如果 **new-entry** 的 `Document` 物件與 **current-entry** 不同，則會更新瀏覽上下文，使其 {{domxref("Window.document", "document")}} 屬性參照 **new-entry** 所參照的文件，並且上下文的名稱會更新以匹配現在目前文件的上下文名稱。
-5.  **new-entry** 的 {{domxref("Document")}} 中，每個將 [`autocomplete`](/zh-TW/docs/Web/HTML/Reference/Elements/input#autocomplete) 組態為自動填入欄位名稱設定為 `off` 的表單控制項都會被重設。有關自動填入欄位名稱以及自動填入如何運作的更多訊息，請參見 [HTML autocomplete 屬性](/zh-TW/docs/Web/HTML/Reference/Attributes/autocomplete)。
-6.  如果 **new-entry** 的文件已經完全載入並準備就緒——也就是說，其 {{domxref("Document.readyState", "readyState")}} 為 `complete`——且該文件尚未可見，則會使其可見，並向該文件觸發 {{domxref("Window/pageshow_event", "pageshow")}} 事件，其中 {{domxref("PageTransitionEvent")}} 的 {{domxref("PageTransitionEvent.persisted", "persisted")}} 屬性設定為 `true`。
-7.  文件的 {{domxref("Document.URL", "URL")}} 會設定為 **new-entry** 的 URL。
-8.  如果歷史紀錄遍歷是在啟用替換的情況下執行的，則緊接在目標項目之前的項目（考慮到 {{domxref("History.go", "go()")}} 等方法上的 `delta` 參數）將從歷史紀錄堆疊中移除。
-9.  如果 **new-entry** 沒有持久化的使用者狀態，且其 URL 的片段不為 `null`，則文件會捲動到該片段。
+1. 如果 **new-entry** 目前不包含現有的 {{domxref("Document")}}，則在繼續之前擷取內容並建立其 `Document`。這最終會將 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 和 {{domxref("Window/load_event", "load")}} 等事件發送到包含該文件的 {{domxref("Window")}}，但與此同時，以下步驟將繼續執行。
+2. 如果 **current-entry** 的標題不是使用 History API 方法（{{domxref("History.pushState", "pushState()")}} 或 {{domxref("History.replaceState", "replaceState()")}}）設定的，則將該項目的標題設定為其 {{domxref("document.title")}} 屬性回傳的字串。
+3. 如果瀏覽器有希望在導覽離開 **current-entry** 之前與其一起儲存的狀態訊息，它就會這麼做。該項目現在被稱為具有「持久化的使用者狀態」。瀏覽器可能新增到歷史紀錄工作階段項目的訊息可能包括，例如，文件的捲動位置、表單輸入的值以及其他此類資料。
+4. 如果 **new-entry** 的 `Document` 物件與 **current-entry** 不同，則會更新瀏覽上下文，使其 {{domxref("Window.document", "document")}} 屬性參照 **new-entry** 所參照的文件，並且上下文的名稱會更新以匹配現在目前文件的上下文名稱。
+5. **new-entry** 的 {{domxref("Document")}} 中，每個將 [`autocomplete`](/zh-TW/docs/Web/HTML/Reference/Elements/input#autocomplete) 組態為自動填入欄位名稱設定為 `off` 的表單控制項都會被重設。有關自動填入欄位名稱以及自動填入如何運作的更多訊息，請參見 [HTML autocomplete 屬性](/zh-TW/docs/Web/HTML/Reference/Attributes/autocomplete)。
+6. 如果 **new-entry** 的文件已經完全載入並準備就緒——也就是說，其 {{domxref("Document.readyState", "readyState")}} 為 `complete`——且該文件尚未可見，則會使其可見，並向該文件觸發 {{domxref("Window/pageshow_event", "pageshow")}} 事件，其中 {{domxref("PageTransitionEvent")}} 的 {{domxref("PageTransitionEvent.persisted", "persisted")}} 屬性設定為 `true`。
+7. 文件的 {{domxref("Document.URL", "URL")}} 會設定為 **new-entry** 的 URL。
+8. 如果歷史紀錄遍歷是在啟用替換的情況下執行的，則緊接在目標項目之前的項目（考慮到 {{domxref("History.go", "go()")}} 等方法上的 `delta` 參數）將從歷史紀錄堆疊中移除。
+9. 如果 **new-entry** 沒有持久化的使用者狀態，且其 URL 的片段不為 `null`，則文件會捲動到該片段。
 10. 接著，**current-entry** 會設定為 **new-entry**。目標項目現在被視為目前的項目。
 11. 如果 **new-entry** 儲存了序列化的狀態訊息，則該訊息會反序列化到 {{domxref("History.state")}} 中；否則，`state` 為 `null`。
 12. 如果 `state` 的值發生變更，則會向文件發送 `popstate` 事件。
