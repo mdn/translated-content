@@ -65,7 +65,7 @@ l10n:
 1. 在你的檔案系統 UI 中，點擊你的*家目錄*，然後雙擊你的*文件*資料夾。
 2. 在這個位置建立一個名為 `web-projects` 的新資料夾：
    1. 在 Windows 上，可以透過在檔案總管視窗中選擇*新增*按鈕並選擇*資料夾*（或按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>），在出現的新資料夾圖示的名稱欄位中輸入 `web-projects`，然後按下 <kbd>Enter</kbd>／<kbd>Return</kbd> 來完成。
-   2. 在 macOS 上，可以透過在 Finder 選單中選擇*檔案* > *新增資料夾*（或按下 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>）來完成——你會看到一個名為*未命名檔案夾*的新資料夾出現。點擊資料夾名稱開始編輯，輸入 `web-projects`，然後按下 <kbd>Enter</kbd>／<kbd>Return</kbd>。
+   2. 在 macOS 上，可以透過在 Finder 選單中選擇*檔案* > _新增資料夾_（或按下 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>）來完成——你會看到一個名為*未命名檔案夾*的新資料夾出現。點擊資料夾名稱開始編輯，輸入 `web-projects`，然後按下 <kbd>Enter</kbd>／<kbd>Return</kbd>。
 
 如果你打錯字，你可以編輯資料夾名稱來更正它（這對檔案也適用）：
 
@@ -83,11 +83,11 @@ l10n:
 現在讓我們在 VS Code 中打開我們的 `web-projects` 資料夾：
 
 1. 打開 VS Code。
-2. 從選單中選擇*檔案* > *開啟資料夾...*。
+2. 從選單中選擇*檔案* > _開啟資料夾..._。
    > [!NOTE]
    > 如果你是鍵盤使用者，在 Windows 中可以按住 <kbd>Ctrl</kbd> 鍵再按下 <kbd>K</kbd> 然後 <kbd>O</kbd> 來執行*開啟資料夾*指令。對 macOS 使用者來說，最簡單的方法是使用 <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> 打開*命令選擇區*，輸入「Open Folder」來篩選指令列表，使用方向鍵向下移動到*檔案：開啟資料夾*，然後按下 <kbd>Enter</kbd>。
 3. 一個迷你版的作業系統檔案系統 UI 將會出現。用它來找到你的 `web-projects` 資料夾，選取它，然後按下*選擇資料夾*按鈕。
-4. 你會看到一個標題為*您是否信任此資料夾中檔案的作者？*的對話框。請仔細閱讀以了解其內容。目前，你是唯一會在這個資料夾中建立檔案的人，所以你可以點擊*是，我信任作者*。
+4. 你會看到一個標題為*你是否信任此資料夾中檔案的作者？*的對話框。請仔細閱讀以了解其內容。目前，你是唯一會在這個資料夾中建立檔案的人，所以你可以點擊*是，我信任作者*。
 
 你應該會看到你的 `web-projects` 資料夾在 VS Code 的*檔案總管*窗格中打開，如下所示：
 
@@ -191,7 +191,7 @@ VS Code 雖然絕非完美，但它擁有一套廣泛的鍵盤快捷鍵。在本
 讓我們來看一個基本的範例。你現在可能還不完全明白這一切的意義，但沒關係。
 
 1. 在網路上搜尋一張你喜歡的圖片（例如，使用像 [Google 圖片](https://www.google.com/imghp) 這樣的服務）並下載它。或者，你也可以直接拿我們的 [Firefox 圖示圖片](https://raw.githubusercontent.com/mdn/beginner-html-site/refs/heads/main/images/firefox-icon.png) 來用於這個範例。
-2. 將圖片放入你的 *images* 資料夾中。
+2. 將圖片放入你的 _images_ 資料夾中。
 3. 確保圖片檔案的名稱簡短、簡單且不含空格。例如，`firefox-icon.png` 很好，`cat.jpg` 也很好，但 `efregre^%^£$£@%$^&YTJgfbgfdgt54656756_ertgrth-rtgtfghhyj.png` 就不好。同時也要確保你保留了副檔名。
 
 現在我們將向 `index.html` 檔案新增內容，讓它能夠找到圖片檔案並顯示它。
@@ -212,7 +212,7 @@ VS Code 雖然絕非完美，但它擁有一套廣泛的鍵盤快捷鍵。在本
    </html>
    ```
 
-2. `<img src="" alt="我的測試圖片">` 這行是將圖片插入頁面的 HTML 程式碼。我們需要告訴 HTML 圖片在哪裡。圖片在 *images* 資料夾內，而這個資料夾與 `index.html` 在同一個資料夾中。要從 `index.html` 向下走到我們的圖片，我們需要的檔案路徑是 `images/你的圖片檔名`。例如，如果你的圖片叫做 `firefox-icon.png`，那麼檔案路徑就是 `images/firefox-icon.png`。
+2. `<img src="" alt="我的測試圖片">` 這行是將圖片插入頁面的 HTML 程式碼。我們需要告訴 HTML 圖片在哪裡。圖片在 _images_ 資料夾內，而這個資料夾與 `index.html` 在同一個資料夾中。要從 `index.html` 向下走到我們的圖片，我們需要的檔案路徑是 `images/你的圖片檔名`。例如，如果你的圖片叫做 `firefox-icon.png`，那麼檔案路徑就是 `images/firefox-icon.png`。
 3. 將檔案路徑插入到你的 HTML 程式碼中 `src=""` 的雙引號之間。
 4. 儲存你的 HTML 檔案，然後在你的 Web 瀏覽器中載入它。你可以透過 <kbd>Ctrl</kbd>／右鍵點擊 HTML 檔案，然後選擇*開啟方式*並從子選單中選擇一個 Web 瀏覽器來完成。你也可以在同一個螢幕上打開你的檔案系統 UI 和一個 Web 瀏覽器視窗，然後將 HTML 檔案拖放到 Web 瀏覽器視窗上。
 
