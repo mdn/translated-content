@@ -2,7 +2,7 @@
 title: stroke-linecap
 slug: Web/SVG/Reference/Attribute/stroke-linecap
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
 **`stroke-linecap`** 属性は、開いたサブパスの描線（線）が描画されるときに、その末端に使用する形状を定義するプレゼンテーション属性です。
@@ -17,7 +17,6 @@ l10n:
 - {{SVGElement('line')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 例
@@ -139,7 +138,7 @@ svg {
 
 ### square
 
-`square` 値は、各サブパスの端において、幅が描線の幅の半分に等しく、高さが描線の幅に等しい長方形によって描線が拡張されることを示します。長さがゼロのサブパスでは、描線は、サブパスのこの点を中心として、幅が描線の幅に等しい正方形となります。
+`square` 値は、各サブパスの端において、幅が描線の幅の半分に等しく、高さが描線の幅に等しい矩形によって描線が拡張されることを示します。長さがゼロのサブパスでは、描線は、サブパスのこの点を中心として、幅が描線の幅に等しい正方形となります。
 
 #### 例
 
