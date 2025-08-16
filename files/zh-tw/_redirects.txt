@@ -75,7 +75,7 @@
 /zh-TW/docs/DOM/XMLHttpRequest	/zh-TW/docs/Web/API/XMLHttpRequest
 /zh-TW/docs/DOM/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
 /zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest	/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
-/zh-TW/docs/DOM_中的空白字元	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
+/zh-TW/docs/DOM_中的空白字元	/zh-TW/docs/Web/CSS/CSS_text/Whitespace
 /zh-TW/docs/DragDrop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/DragDrop/Drag_and_Drop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/Drawing_text_using_a_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -511,7 +511,8 @@
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/Document/registerElement	/zh-TW/docs/Web/API/CustomElementRegistry/define
-/zh-TW/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
+/zh-TW/docs/Web/API/Document_Object_Model/Whitespace	/zh-TW/docs/Web/CSS/CSS_text/Whitespace
+/zh-TW/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/zh-TW/docs/Web/CSS/CSS_text/Whitespace
 /zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/Web/API/Event
 /zh-TW/docs/Web/API/ElementCSSInlineStyle/style	/en-US/docs/Web/API/HTMLElement/style
 /zh-TW/docs/Web/API/EventListener	/zh-TW/docs/Web/API/EventTarget/addEventListener
