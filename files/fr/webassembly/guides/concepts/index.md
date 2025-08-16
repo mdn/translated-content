@@ -98,7 +98,7 @@ Ainsi le code "passe-plat" implémente les fonctionnalités de chaque librairie 
 
 Le document HTML généré charge le fichier JavaScript contenant le code "passe-plat" et écrit stdout dans un {{htmlelement("textarea")}}. Si l'application utilise OpenGL, le HTML contient aussi un élément {{htmlelement("canvas")}} qui est utilisé comme cible de rendu. Il est vraiment simple de modifier la sortie Emscripten pour en faire l'application web que vous souhaitez.
 
-Vous pouvez trouver toute la documentation sur Emscripten à l'adresse [emscripten.org](http://emscripten.org), et un guide pour exploiter la chaîne de compilation et ainsi compiler votre propre application C/C++ en wasm à l'adresse [Compiler du C/C++ en WebAssembly](/fr/docs/WebAssembly/C_to_Wasm).
+Vous pouvez trouver toute la documentation sur Emscripten à l'adresse [emscripten.org](http://emscripten.org), et un guide pour exploiter la chaîne de compilation et ainsi compiler votre propre application C/C++ en wasm à l'adresse [Compiler du C/C++ en WebAssembly](/fr/docs/WebAssembly/Guides/C_to_Wasm).
 
 ### Écrire du WebAssembly directement
 
@@ -116,5 +116,5 @@ Cet article vous a donné une explication sur ce qu'est WebAssembly, pourquoi il
 
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
-- [Loading and running WebAssembly code](/fr/docs/WebAssembly/Loading_and_running)— trouvez comment charger votre propre module WebAssembly dans une page web.
-- [Using the WebAssembly JavaScript API](/fr/docs/WebAssembly/Using_the_JavaScript_API) — trouvez comment utiliser les autres fonctionnalités majeures de l'API JavaScript WebAssembly.
+- [Loading and running WebAssembly code](/fr/docs/WebAssembly/Guides/Loading_and_running)— trouvez comment charger votre propre module WebAssembly dans une page web.
+- [Using the WebAssembly JavaScript API](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API) — trouvez comment utiliser les autres fonctionnalités majeures de l'API JavaScript WebAssembly.

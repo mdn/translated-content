@@ -3,7 +3,7 @@ title: Applications web progressives
 slug: Web/Progressive_web_apps
 ---
 
-Les **applications web progressives** (ou <i lang="en">progressive web applications</i> en anglais, abrégées en PWAs) sont des applications web qui utilisent [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), [les manifestes](/fr/docs/Web/Manifest), et d'autres fonctionnalités de la plateforme web, avec [l'amélioration progressive](/fr/docs/Glossary/Progressive_Enhancement) pour fournir aux utilisatrices et utilisateurs une expérience équivalente à celle des applications natives.
+Les **applications web progressives** (ou <i lang="en">progressive web applications</i> en anglais, abrégées en PWAs) sont des applications web qui utilisent [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), [les manifestes](/fr/docs/Web/Progressive_web_apps/Manifest), et d'autres fonctionnalités de la plateforme web, avec [l'amélioration progressive](/fr/docs/Glossary/Progressive_Enhancement) pour fournir aux utilisatrices et utilisateurs une expérience équivalente à celle des applications natives.
 
 Les applications web progressives ont plusieurs [avantages](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#avantages_des_applications_web)&nbsp;: elles peuvent être [installées](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#installabilité), [améliorées progressivement](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#prise_en_charge_de_lamelioration_progressive), [conçues de façon adaptative](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#adaptativité), [maintenir l'engagement](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#re-engagement), [être indiquées avec un lien](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#decouvrabilite_avec_un_lien), [découvrables](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#découvrabilité), [indépendantes de l'état du réseau](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#indépendance_du_réseau), et [sécurisées](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#sécurité).
 
@@ -13,14 +13,14 @@ Ces documents d'introduction et ces guides vous feront découvrir les différent
 
 - [Introduction aux applications web progressives](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames)
 - [Structure d'une application web progressive](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure) et [aperçu structurel](/fr/docs/Web/Progressive_web_apps)
-- [Comprendre les briques de construction de la conception adaptative](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [Comprendre les briques de construction de la conception adaptative](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 - [Le fonctionnement hors-ligne des PWA à l'aide des <i lang="en">service workers</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
 - [Comment rendre une PWA installable](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), [activer la fonctionnalité «&nbsp;ajouter à l'écran d'accueil&nbsp;»](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable), et [plus de détails sur l'installation des PWA](/fr/docs/Web/Progressive_web_apps/Guides/Installing)
 - [Comment utiliser les API Notifications et Push pour l'engagement](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push)
 - [Comment activer le chargement progressif](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading)
-- [Comment construire des PWA pensées pour le mobile](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [Comment construire des PWA pensées pour le mobile](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 - [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Utiliser le stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage), [IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB), et [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Utiliser le stockage côté client](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage), [IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB), et [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API) et [l'API Push](/fr/docs/Web/API/Push_API)
 
 ## Voir aussi

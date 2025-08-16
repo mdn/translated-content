@@ -7,7 +7,7 @@ l10n:
 
 {{MDNSidebar}}
 
-[Les tickets GitHub (ou <i lang="en">issues</i> en anglais)](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) sont utilisés afin de tracer l'ensemble des tâches à réaliser et qui ont un résultat attendu clair. Si vous avez trouvé un <i lang="en">bug</i> avec le contenu ou la plateforme, regardez si ce problème n'a pas déjà été remonté sur [le dépôt correspondant](/fr/docs/MDN/Community/Contributing/Our_repositories). Si ça n'est pas le cas, n'hésitez pas à rédiger un nouveau ticket en utilisant le modèle disponible sur le début.
+[Les tickets GitHub (ou <i lang="en">issues</i> en anglais)](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) sont utilisés afin de tracer l'ensemble des tâches à réaliser et qui ont un résultat attendu clair. Si vous avez trouvé un <i lang="en">bug</i> avec le contenu ou la plateforme, regardez si ce problème n'a pas déjà été remonté sur [le dépôt correspondant](/fr/docs/orphaned/MDN/Community/Contributing/Our_repositories). Si ça n'est pas le cas, n'hésitez pas à rédiger un nouveau ticket en utilisant le modèle disponible sur le début.
 
 > [!NOTE]
 > Si un ticket a l'étiquette `triage`, cela signifie qu'elle n'a pas encore été revue et qu'il n'est pas nécessaire de travailler dessus.

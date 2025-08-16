@@ -181,7 +181,7 @@ Bien que vous ayez la possibilité d'installer des logiciels tels que GStreamer,
 - [HLS Browser Support](https://www.jwplayer.com/html5/hls/)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
 - [The Basics of HTTP Live Streaming](http://www.larryjordan.biz/app_bin/wordpress/archives/2369)
-- [DASH Adaptive Streaming for HTML 5 Video](/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [DASH Adaptive Streaming for HTML 5 Video](/fr/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
 - [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [MPEG-DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
 - [DASH Reference Client](https://dashif.org/reference/players/javascript/1.0.0/index.html)

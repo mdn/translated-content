@@ -48,13 +48,13 @@ Comme vous pouvez le voir sur le bref exemple ci-dessus, le titre consiste en un
 Le titre est placé directement sous la balise `<table>`.
 
 > [!NOTE]
-> L'attribut [`summary`](/fr/docs/Web/HTML/Element/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
+> L'attribut [`summary`](/fr/docs/Web/HTML/Reference/Elements/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
 
 ### Apprentissage actif&nbsp;: Ajouter un titre
 
 Essayons en revisitant un exemple rencontré dans l'article précédent.
 
-1. Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
+1. Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
 2. Ajoutez un titre approprié pour le tableau.
 3. Enregistrez votre code et ouvrez-le dans un navigateur pour voir à quoi il ressemble.
 
@@ -73,7 +73,7 @@ Pour les utiliser :
 - L'élément `<tfoot>` doit envelopper la partie du tableau qui est le pied de page — ce peut être une dernière ligne contenant, par exemple, la somme des rangées précédentes. Vous pouvez inclure l'élément \<tfoot> à la suite du code contenant le corps du tableau, là où vous souhaitez le trouver, ou juste en-dessous de l'élément \<thead> (le navigateur l'affichera toujours en pied de tableau).
 - L'élément `<tbody>` doit couvrir toutes les parties du tableau non contenues dans un \<thead> ou un \<tfoot>. Il pourra apparaître dans le code, sous la déclaration de l'en-tête ou du pied de page, selon la façon dont vous avez décidé de le structurer (voir les notes ci‑dessus).
 
-> **Note :** `<tbody>` est toujours inclus dans tous les tableaux, implicitement si vous ne l'avez pas spécifié dans votre code. Pour le vérifier, ouvrez un tableau ne contenant pas l'élément `<tbody>` et regardez le code HTML dans les [outils de développement de votre navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — vous verrez que le navigateur a ajouté cette balise pour vous. Si vous vous demandez pourquoi vous ennuyer à gérer ce qui est ajouté automatiquement — parce que cela vous donne plus de contrôle sur la structure et l'apparence de votre tableau.
+> **Note :** `<tbody>` est toujours inclus dans tous les tableaux, implicitement si vous ne l'avez pas spécifié dans votre code. Pour le vérifier, ouvrez un tableau ne contenant pas l'élément `<tbody>` et regardez le code HTML dans les [outils de développement de votre navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — vous verrez que le navigateur a ajouté cette balise pour vous. Si vous vous demandez pourquoi vous ennuyer à gérer ce qui est ajouté automatiquement — parce que cela vous donne plus de contrôle sur la structure et l'apparence de votre tableau.
 
 ### Apprentissage actif : Ajout d'une structure au tableau
 
@@ -83,7 +83,7 @@ Mettons en œuvre ces nouveaux éléments.
 2. Essayez de les ouvrir dans un navigateur — vous verrez que cela paraît correct, mais gagnerait à être amélioré. La ligne "SUM" qui contient les totaux des montants dépensés semble être au mauvais endroit et il manque certains détails du code.
 3. Mettez la ligne d'en-têtes en évidence avec l'élément `<thead>` , la ligne des totaux ("SUM") dans un `<tfoot>`, et le reste du contenu dans un `<tbody>`.
 4. Enregistrez et actualisez, et vous verrez que l'ajout de l'élément `<tfoot>` a renvoyé la ligne "SUM" en bas du tableau.
-5. Ensuite, ajoutez un attribut [`colspan`](/fr/docs/Web/HTML/Element/td#colspan) pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne «&nbsp;Coût&nbsp;».
+5. Ensuite, ajoutez un attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#colspan) pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne «&nbsp;Coût&nbsp;».
 6. Ajoutons un style supplémentaire au tableau, pour vous donner une idée de l'utilité de ces éléments pour l'application des CSS. Dans le \<head> du document HTML, vous pouvez voir un élément {{htmlelement("style")}} vide, ajoutez les lignes suivantes de code CSS :
 
    ```css
@@ -100,7 +100,7 @@ Mettons en œuvre ces nouveaux éléments.
 7. Enregistrez, actualisez et regardez le résultat. Si `<tbody>` et `<tfoot>` n'étaient pas en place, vous devriez écrire plus de commandes plus complexes (sélection/règles) pour l'application des mêmes styles.
 
 > [!NOTE]
-> Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS ([Introduction aux CSS](/fr/docs/Learn/CSS/First_steps) est un bon moyen de commencer ; il y a aussi un article spécifique sur [l'esthétique des tables](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)).
+> Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS ([Introduction aux CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f) est un bon moyen de commencer ; il y a aussi un article spécifique sur [l'esthétique des tables](/fr/docs/Learn_web_development/Core/Styling_basics/Tables)).
 
 Le code de votre tableau fini devrait ressembler à quelque chose comme :
 
@@ -349,11 +349,11 @@ Cette partie de l'article indique des techniques avancées pour rendre les table
 
 Les lecteurs d'écran identifieront tous les en-têtes et les utiliseront pour réaliser automatiquement les associations entre ces en-têtes et les cellules correspondantes. La combinaison des en-têtes des colonnes et des lignes doit permettre d'identifier et d'interpréter les données de chaque cellule. Ainsi, les utilisateurs de lecteurs d'écran peuvent accéder aux données d'une façon similaire à celle des utilisateurs voyants.
 
-Nous avons déjà traité des en-têtes dans notre article précédent — voir [Ajouter des en-têtes avec \<th>](/fr/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements) .
+Nous avons déjà traité des en-têtes dans notre article précédent — voir [Ajouter des en-têtes avec \<th>](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#Adding_headers_with_%3Cth%3E_elements) .
 
 ### L'attribut `scope`
 
-Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut [`scope`](/fr/docs/Web/HTML/Element/th#scope). Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguïté un en-tête de colonne comme étant un en-tête de colonne ainsi&nbsp;:
+Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut [`scope`](/fr/docs/Web/HTML/Reference/Elements/th#scope). Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguïté un en-tête de colonne comme étant un en-tête de colonne ainsi&nbsp;:
 
 ```html
 <thead>
@@ -385,7 +385,7 @@ Les lecteurs d'écran reconnaîtront un balisage structuré comme celui-ci et pe
 
 ### Les attributs `id` et `headers`
 
-Une alternative à l'usage de l'attribut `scope` est l'utilisation des attributs [`id`](/fr/docs/Web/HTML/Global_attributes#id) et [`headers`](/fr/docs/Web/HTML/Element/td#headers) pour créer une association entre en-têtes et cellules. Ils sont utilisés de la manière suivante :
+Une alternative à l'usage de l'attribut `scope` est l'utilisation des attributs [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) et [`headers`](/fr/docs/Web/HTML/Reference/Elements/td#headers) pour créer une association entre en-têtes et cellules. Ils sont utilisés de la manière suivante :
 
 1. Vous ajoutez un identifiant unique `id` à chaque élément `<th>`.
 2. Vous ajoutez un attribut `headers` à chaque élément `<td>` . Chaque attribut `headers` doit contenir une liste des `id` de tous les éléments \<th> qu'il contient, séparés par des espaces.
@@ -432,6 +432,6 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 
 ## Résumé
 
-Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais nous vous avons vraiment indiqué tout ce qu'il est nécessaire de savoir pour le moment. À ce stade, vous voulez peut-être en apprendre plus sur les styles de tableaux HTML — voyez alors [Décor des tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables).
+Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais nous vous avons vraiment indiqué tout ce qu'il est nécessaire de savoir pour le moment. À ce stade, vous voulez peut-être en apprendre plus sur les styles de tableaux HTML — voyez alors [Décor des tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

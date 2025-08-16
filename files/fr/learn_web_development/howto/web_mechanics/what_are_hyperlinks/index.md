@@ -52,7 +52,7 @@ Les liens sont la clef de voute du Web, ils ont pu le rendre utile et prospère.
 
 ## Pédagogie active
 
-_Cette section a besoin d'être enrichie, [n'hésitez pas à contribuer !](/fr/docs/MDN/Community/Contributing/Getting_started)_
+_Cette section a besoin d'être enrichie, [n'hésitez pas à contribuer !](/fr/docs/MDN/Community/Getting_started)_
 
 ## Aller plus loin
 

@@ -595,5 +595,5 @@ Comme on a pu le voir dans cet article, la disposition avec les grilles CSS n'es
 
 ## Voir aussi
 
-- [Guides sur _Flexbox_](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Guides sur _Flexbox_](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)
 - [Guides sur la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout)

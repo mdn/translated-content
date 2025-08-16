@@ -41,14 +41,14 @@ svg {
 
 ### Attributs Globaux
 
-- [Attribut de base](/fr/docs/Web/SVG/Attribute)
+- [Attribut de base](/fr/docs/Web/SVG/Reference/Attribute)
   - : Principalement: {{SVGAttr('id')}} et {{SVGAttr('tabindex')}}
-- [Attribut de style](/fr/docs/Web/SVG/Attribute)
+- [Attribut de style](/fr/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}} et {{SVGAttr('style')}}
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute)
+- [Attributs conditionnels](/fr/docs/Web/SVG/Reference/Attribute)
   - : Principalement: {{SVGAttr('requiredExtensions')}} et {{SVGAttr('systemLanguage')}}
 - Attributs d'évènements
-  - : [Attribut d'évènement global](/fr/docs/Web/SVG/Attribute#global_event_attributes), [Attribut d'évènement graphique](/fr/docs/Web/SVG/Attribute#graphical_event_attributes)
+  - : [Attribut d'évènement global](/fr/docs/Web/SVG/Reference/Attribute#global_event_attributes), [Attribut d'évènement graphique](/fr/docs/Web/SVG/Reference/Attribute#graphical_event_attributes)
 - [Attributs de présentation](h/fr/docs/Web/SVG/Attribute/Presentation)
   - : Principalement: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}} et {{SVGAttr('visibility')}}
 - Attributs ARIA

@@ -10,31 +10,31 @@ L'attribut **`height`** définit la longueur verticale d'un élément dans le sy
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
-- [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend)
-- [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix)
-- [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer)
-- [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite)
-- [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix)
-- [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting)
-- [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap)
-- [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow)
-- [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood)
-- [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur)
-- [`<feImage>`](/fr/docs/Web/SVG/Element/feImage)
-- [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge)
-- [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology)
-- [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset)
-- [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting)
-- [`<feTile>`](/fr/docs/Web/SVG/Element/feTile)
-- [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence)
-- [`<filter>`](/fr/docs/Web/SVG/Element/filter)
-- [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject)
-- [`<image>`](/fr/docs/Web/SVG/Element/image)
-- [`<mask>`](/fr/docs/Web/SVG/Element/mask)
-- [`<pattern>`](/fr/docs/Web/SVG/Element/pattern)
-- [`<rect>`](/fr/docs/Web/SVG/Element/rect)
-- [`<svg>`](/fr/docs/Web/SVG/Element/svg)
-- [`<use>`](/fr/docs/Web/SVG/Element/use)
+- [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend)
+- [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix)
+- [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer)
+- [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite)
+- [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix)
+- [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLighting)
+- [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMap)
+- [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow)
+- [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood)
+- [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur)
+- [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage)
+- [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge)
+- [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology)
+- [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset)
+- [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLighting)
+- [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile)
+- [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence)
+- [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter)
+- [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject)
+- [`<image>`](/fr/docs/Web/SVG/Reference/Element/image)
+- [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask)
+- [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern)
+- [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect)
+- [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg)
+- [`<use>`](/fr/docs/Web/SVG/Reference/Element/use)
 
 ## Exemple
 
@@ -59,7 +59,7 @@ svg {
 
 ## `<feBlend>`
 
-Pour [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -82,7 +82,7 @@ Pour [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend), `height` définit la longu
 
 ## `<feColorMatrix>`
 
-Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -105,7 +105,7 @@ Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix), `height` défi
 
 ## `<feComponentTransfer>`
 
-Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -128,7 +128,7 @@ Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer), `h
 
 ## `<feComposite>`
 
-Pour [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -151,7 +151,7 @@ Pour [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite), `height` définit 
 
 ## `<feConvolveMatrix>`
 
-Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -174,7 +174,7 @@ Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix), `height`
 
 ## `<feDiffuseLighting>`
 
-Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLighting), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -197,7 +197,7 @@ Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting), `heigh
 
 ## `<feDisplacementMap>`
 
-Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMap), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -220,7 +220,7 @@ Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap), `heigh
 
 ## `<feDropShadow>`
 
-Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -243,7 +243,7 @@ Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow), `height` défini
 
 ## `<feFlood>`
 
-Pour [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -266,7 +266,7 @@ Pour [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood), `height` définit la longu
 
 ## `<feGaussianBlur>`
 
-Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -289,7 +289,7 @@ Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur), `height` dé
 
 ## `<feImage>`
 
-Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -312,7 +312,7 @@ Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `height` définit la longu
 
 ## `<feMerge>`
 
-Pour [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -335,7 +335,7 @@ Pour [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge), `height` définit la longu
 
 ## `<feMorphology>`
 
-Pour [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -358,7 +358,7 @@ Pour [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology), `height` défini
 
 ## `<feOffset>`
 
-Pour [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -381,7 +381,7 @@ Pour [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset), `height` définit la lon
 
 ## `<feSpecularLighting>`
 
-Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLighting), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -404,7 +404,7 @@ Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting), `hei
 
 ## `<feTile>`
 
-Pour [`<feTile>`](/fr/docs/Web/SVG/Element/feTile), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -427,7 +427,7 @@ Pour [`<feTile>`](/fr/docs/Web/SVG/Element/feTile), `height` définit la longueu
 
 ## `<feTurbulence>`
 
-Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence), `height` définit la longueur verticale de la zone de rendu de la primitive.
+Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence), `height` définit la longueur verticale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
@@ -450,7 +450,7 @@ Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence), `height` défini
 
 ## `<filter>`
 
-Pour [`<filter>`](/fr/docs/Web/SVG/Element/filter), `height` définit la longueur verticale de la zone de rendu du filtre.
+Pour [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter), `height` définit la longueur verticale de la zone de rendu du filtre.
 
 <table class="properties">
   <tbody>
@@ -473,7 +473,7 @@ Pour [`<filter>`](/fr/docs/Web/SVG/Element/filter), `height` définit la longueu
 
 ## `<foreignObject>`
 
-Pour [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), `height` définit la longueur verticale de la zone de rendu pour le document référencé.
+Pour [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject), `height` définit la longueur verticale de la zone de rendu pour le document référencé.
 
 <table class="properties">
   <tbody>
@@ -499,7 +499,7 @@ Pour [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), `height` défi
 
 ## `<image>`
 
-Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `height` définit la longueur verticale de l'image.
+Pour [`<image>`](/fr/docs/Web/SVG/Reference/Element/image), `height` définit la longueur verticale de l'image.
 
 <table class="properties">
   <tbody>
@@ -525,7 +525,7 @@ Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `height` définit la longueur 
 
 ## `<mask>`
 
-Pour [`<mask>`](/fr/docs/Web/SVG/Element/mask), `height` définit la longueur verticale de sa zone d'effet. L'effet exact de cet attribut est influencé par l'attribut [`maskUnits`](/fr/docs/Web/SVG/Attribute/maskUnits).
+Pour [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask), `height` définit la longueur verticale de sa zone d'effet. L'effet exact de cet attribut est influencé par l'attribut [`maskUnits`](/fr/docs/Web/SVG/Attribute/maskUnits).
 
 <table class="properties">
   <tbody>
@@ -548,7 +548,7 @@ Pour [`<mask>`](/fr/docs/Web/SVG/Element/mask), `height` définit la longueur ve
 
 ## `<pattern>`
 
-Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `height` définit la longueur verticale du motif répété. L'effet exact de cet attribut est influencé par les attributs [`patternUnits`](/fr/docs/Web/SVG/Attribute/patternUnits) et [`patternTransform`](/fr/docs/Web/SVG/Attribute/patternTransform).
+Pour [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern), `height` définit la longueur verticale du motif répété. L'effet exact de cet attribut est influencé par les attributs [`patternUnits`](/fr/docs/Web/SVG/Attribute/patternUnits) et [`patternTransform`](/fr/docs/Web/SVG/Attribute/patternTransform).
 
 <table class="properties">
   <tbody>
@@ -571,7 +571,7 @@ Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `height` définit la longu
 
 ## `<rect>`
 
-Pour [`<rect>`](/fr/docs/Web/SVG/Element/rect), `height` définit la longueur verticale du rectangle.
+Pour [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect), `height` définit la longueur verticale du rectangle.
 
 <table class="properties">
   <tbody>
@@ -597,10 +597,10 @@ Pour [`<rect>`](/fr/docs/Web/SVG/Element/rect), `height` définit la longueur ve
 
 ## `<svg>`
 
-Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `height` définit la longueur verticale de la zone de rendu de la zone d'affichage SVG.
+Pour [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), `height` définit la longueur verticale de la zone de rendu de la zone d'affichage SVG.
 
 > [!NOTE]
-> Dans un document HTML, si les deux attributs [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) et `height` sont absents, [l'élément SVG sera rendu avec une hauteur de `150px`](https://svgwg.org/specs/integration/#svg-css-sizing).
+> Dans un document HTML, si les deux attributs [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) et `height` sont absents, [l'élément SVG sera rendu avec une hauteur de `150px`](https://svgwg.org/specs/integration/#svg-css-sizing).
 
 <table class="properties">
   <tbody>
@@ -626,7 +626,7 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `height` définit la longueur vert
 
 ## `<use>`
 
-Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `height` définit la longueur verticale de l'élément référencé.
+Pour [`<use>`](/fr/docs/Web/SVG/Reference/Element/use), `height` définit la longueur verticale de l'élément référencé.
 
 <table class="properties">
   <tbody>
@@ -647,7 +647,7 @@ Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `height` définit la longueur vert
   </tbody>
 </table>
 
-> **Note :** `height` n'a pas d'effet sur les éléments `<use>`, à moins que l'élément référencé ait un attribut [`viewbox`](/fr/docs/Web/SVG/Attribute/viewBox), c'est-à-dire que leur effet s'applique uniquement si `use` fait référence à un élément `<svg>` ou `<symbol>`.
+> **Note :** `height` n'a pas d'effet sur les éléments `<use>`, à moins que l'élément référencé ait un attribut [`viewbox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox), c'est-à-dire que leur effet s'applique uniquement si `use` fait référence à un élément `<svg>` ou `<symbol>`.
 
 > [!NOTE]
 > À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisé comme propriété CSS sur les éléments utilisés.

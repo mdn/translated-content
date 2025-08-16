@@ -63,7 +63,7 @@ export default function Todo() {
 }
 ```
 
-Jusque-là tout va bien, mais notre composant doit retourner quelque chose&nbsp;! Retournez au fichier `src/App.js`, copiez le premier [`<li>`](/fr/docs/Web/HTML/Element/li) de la liste non ordonnée, puis collez-le dans `Todo.js` afin que ce dernier contienne ceci&nbsp;:
+Jusque-là tout va bien, mais notre composant doit retourner quelque chose&nbsp;! Retournez au fichier `src/App.js`, copiez le premier [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li) de la liste non ordonnée, puis collez-le dans `Todo.js` afin que ce dernier contienne ceci&nbsp;:
 
 ```jsx
 export default function Todo() {
@@ -191,7 +191,7 @@ Si vous changez la <i lang="en">prop</i> `completed` de chaque composant `<Todo 
 
 ### Identifiez-vous
 
-À l'heure actuelle, notre composant `<Todo />` fournit le même attribut `id`, avec la valeur `todo-0`, pour chaque tâche. Cela ne respecte pas les règles HTML, car les [identifiants (`id`)](/fr/docs/Web/HTML/Global_attributes/id) doivent être uniques (ils sont utilisés comme identifiants uniques pour les fragments de document, CSS, JavaScript, etc.). Cela signifie que nous devons donner à notre composant une prop `id` qui prend une valeur unique pour chaque `Todo`.
+À l'heure actuelle, notre composant `<Todo />` fournit le même attribut `id`, avec la valeur `todo-0`, pour chaque tâche. Cela ne respecte pas les règles HTML, car les [identifiants (`id`)](/fr/docs/Web/HTML/Reference/Global_attributes/id) doivent être uniques (ils sont utilisés comme identifiants uniques pour les fragments de document, CSS, JavaScript, etc.). Cela signifie que nous devons donner à notre composant une prop `id` qui prend une valeur unique pour chaque `Todo`.
 
 Pour suivre le même schéma qu'au départ, donnons à chaque instance du composant `<Todo />` un identifiant au format `todo-i`, où `i` est incrémenté d'une unité à chaque fois&nbsp;:
 

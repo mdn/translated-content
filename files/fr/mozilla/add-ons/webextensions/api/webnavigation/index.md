@@ -25,7 +25,7 @@ Chaque evenement correspond directement à un état précis dans la navigation. 
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} est déclenché si [l'identificateur de fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page est modifié.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} peut être déclenché à tout moment.
 
-Chaque navigation est une transition d'URL dans un cadre de navigateur particulier. Le cadre du navigateur est identifié par un ID d'onglet et un ID de trame. Le cadre peut être le contexte de navigation de niveau supérieur dans l'onglet ou peut être un contexte de navigation imbriqué implémenté en tant qu'[iframe](/fr/docs/Web/HTML/Element/iframe).
+Chaque navigation est une transition d'URL dans un cadre de navigateur particulier. Le cadre du navigateur est identifié par un ID d'onglet et un ID de trame. Le cadre peut être le contexte de navigation de niveau supérieur dans l'onglet ou peut être un contexte de navigation imbriqué implémenté en tant qu'[iframe](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 L'appel `addListener()` de chaque événement accepte un paramètre de filtre facultatif. Le filtre spécifiera un ou plusieurs modèles d'URL, et l'événement ne sera alors déclenché que pour les navigations dans lesquelles l'URL cible correspond à l'un des modèles.
 
@@ -43,7 +43,7 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-o
 ## Functions
 
 - {{WebExtAPIRef("webNavigation.getFrame()")}}
-  - : Récupère des informations sur un cadre particulier. Ce cadre peut être le cadre de niveau supérieur dans un onglet ou un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué, et est identifié de manière unique par un ID d'onglet et un ID de _frame_.
+  - : Récupère des informations sur un cadre particulier. Ce cadre peut être le cadre de niveau supérieur dans un onglet ou un [iframe](/fr/docs/Web/HTML/Reference/Elements/iframe) imbriqué, et est identifié de manière unique par un ID d'onglet et un ID de _frame_.
 - {{WebExtAPIRef("webNavigation.getAllFrames()")}}
   - : Étant donné un ID d'onglet, récupère des informations sur tous les cadres qu'il contient.
 

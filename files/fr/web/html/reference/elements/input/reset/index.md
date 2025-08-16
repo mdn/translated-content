@@ -80,7 +80,7 @@ Si aucune valeur n'est indiquée, le bouton aura le texte par défaut « Réinit
 
 ## Utiliser les boutons de réinitialisation
 
-Les boutons `<input type="reset">` sont utilisés pour réinitialiser les formulaires. Si vous souhaitez créer un bouton personnalisé et adapter son comportement grâce à JavaScript, il est préférable d'utiliser un élément {{htmlelement("button")}} (voire un élément [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button)).
+Les boutons `<input type="reset">` sont utilisés pour réinitialiser les formulaires. Si vous souhaitez créer un bouton personnalisé et adapter son comportement grâce à JavaScript, il est préférable d'utiliser un élément {{htmlelement("button")}} (voire un élément [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button)).
 
 ### Un bouton simple
 
@@ -106,9 +106,9 @@ Pour essayer, saisissez un peu de texte dans le champ puis appuyez sur le bouton
 
 ### Ajouter un raccourci au bouton
 
-Les raccourcis claviers permettent de déclencher un bouton grâce à une touche ou à une combinaison de touches sur le clavier. Pour ajouter un raccourci clavier à un bouton de réinitialisation, il suffit d'utiliser l'attribut [`accesskey`](/fr/docs/Web/HTML/Global_attributes#accesskey).
+Les raccourcis claviers permettent de déclencher un bouton grâce à une touche ou à une combinaison de touches sur le clavier. Pour ajouter un raccourci clavier à un bouton de réinitialisation, il suffit d'utiliser l'attribut [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes#accesskey).
 
-Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur <kbd>r</kbd> et d'autres touches propres au navigateur et au système d'exploitation, se référer à [`accesskey`](/fr/docs/Web/HTML/Global_attributes#accesskey) pour le détails).
+Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur <kbd>r</kbd> et d'autres touches propres au navigateur et au système d'exploitation, se référer à [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes#accesskey) pour le détails).
 
 ```html
 <form>
@@ -129,7 +129,7 @@ Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur 
 
 ### Désactiver/Activer un bouton
 
-Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribut [`disabled`](/fr/docs/Web/HTML/Global_attributes#disabled) sur l'élément :
+Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribut [`disabled`](/fr/docs/Web/HTML/Reference/Global_attributes#disabled) sur l'élément :
 
 ```html
 <input type="reset" value="Désactivé" disabled />
@@ -138,10 +138,10 @@ Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribu
 On peut activer/désactiver le bouton lors de la navigation sur la page avec JavaScript en modifiant la valeur de l'attribut `disabled` pour la passer de `true` à `false` et _vice versa_ (par exemple avec une instruction telle que `btn.disabled = true`).
 
 > [!NOTE]
-> Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button#d%c3%a9sactiver_et_activer_un_bouton).
+> Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button#d%c3%a9sactiver_et_activer_un_bouton).
 
 > [!NOTE]
-> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
+> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ## Validation
 
@@ -192,4 +192,4 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
 - L'élément {{HTMLElement("button")}}
 - [Apprendre les formulaires et les boutons](/fr/docs/Learn/HTML/Forms_and_buttons)
 - [L'accessibilité et les formulaires](/fr/docs/Web/Accessibility/ARIA)
-- [Les formulaires HTML](/fr/docs/Learn/Forms)
+- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)

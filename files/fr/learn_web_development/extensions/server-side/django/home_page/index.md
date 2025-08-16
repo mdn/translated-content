@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Home_page
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
-Le travail préparatoire pour nous permettre de créer une page d'accueil pour le site web de [la bibliothèque locale](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) est réalisé. La page d'accueil montera le nombre d'enregistrements pour chacun des objets décrits dans la base et les liens à l'aide d'une barre latérale de navigation. Dans la progression de l'article, nous apprendrons à gérer les vues et à présenter les données à l'aide de gabarits.
+Le travail préparatoire pour nous permettre de créer une page d'accueil pour le site web de [la bibliothèque locale](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) est réalisé. La page d'accueil montera le nombre d'enregistrements pour chacun des objets décrits dans la base et les liens à l'aide d'une barre latérale de navigation. Dans la progression de l'article, nous apprendrons à gérer les vues et à présenter les données à l'aide de gabarits.
 
 <table class="standard-table">
   <tbody>
@@ -37,7 +37,7 @@ Le travail préparatoire pour nous permettre de créer une page d'accueil pour l
 
 ## Survol
 
-Dans les sections précédentes, nous avons défini [le modèle de données et les objets Django à manipuler](/fr/docs/Learn/Server-side/Django/Models), puis nous avons commencé à peupler [des enregistrements à l'aide du site d'administration](/fr/docs/Learn/Server-side/Django/Admin_site). Désormais, nous allons œuvrer à la présentation des données et développer le code nécessaire à l'information des utilisateurs. La première étape essentielle est de déterminer les informations que nous souhaitons publier dans nos différentes pages et, par conséquent, identifier les URL qui pourvoiront à la publication de ces informations. Nous serons alors en capacité de construire les routages d'URL, les vues et gabarits qui répondront aux exigences définies.
+Dans les sections précédentes, nous avons défini [le modèle de données et les objets Django à manipuler](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Models), puis nous avons commencé à peupler [des enregistrements à l'aide du site d'administration](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site). Désormais, nous allons œuvrer à la présentation des données et développer le code nécessaire à l'information des utilisateurs. La première étape essentielle est de déterminer les informations que nous souhaitons publier dans nos différentes pages et, par conséquent, identifier les URL qui pourvoiront à la publication de ces informations. Nous serons alors en capacité de construire les routages d'URL, les vues et gabarits qui répondront aux exigences définies.
 
 Le diagramme ci-dessous est important à comprendre car il est au cœur du fonctionnement du cadriciel Django. Il décrit les flux de données et les composants sollicités pour traiter et répondre à une requête HTTP. Nous avons déjà travaillé le modèle de données (à gauche du diagramme), nous allons désormais nous atteler à :
 
@@ -81,7 +81,7 @@ La toute première page à créer est la page d'accueil (`catalog/`). Cette page
 
 ### Routage d'URL
 
-Quand nous avons créé [le squelette du site](/fr/docs/Learn/Server-side/Django/skeleton_website), nous avons mis à jour les routages des URLs dans le fichier **locallibrary/urls.py** afin de nous assurer que toutes les requêtes démarrant par `catalog/` seront traités par le configurateur _URLConf du module_ `catalog.urls` qui traitera la sous-chaîne restante.
+Quand nous avons créé [le squelette du site](/fr/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website), nous avons mis à jour les routages des URLs dans le fichier **locallibrary/urls.py** afin de nous assurer que toutes les requêtes démarrant par `catalog/` seront traités par le configurateur _URLConf du module_ `catalog.urls` qui traitera la sous-chaîne restante.
 
 L'extrait du code ci-dessous permet d'intégrer dans **locallibrary/urls.py** le configurateur d'URL du module `catalog` :
 
@@ -156,7 +156,7 @@ def index(request):
 
 La première ligne de code permet d'importer les modèles de données du catalogue décrites dans le module `catalog`.
 
-La première section de la fonction index() permet à l'aide de requêtes, par l'intermédiaire des objets de modèle de données, d'obtenir les nombres d'enregistrements. Pour cela, nous utilisons la méthode d'objet _models_ `objects.all()` sur les objets `Book` et `BookInstance`. Ensuite, nous recherchons les ouvrages disponibles, ce qui revient à faire une requête avec un filtre sur l'attribut status de l'objet `BookInstance` ayant la valeur 'a' (Available). Si vous avez un oubli, vous pouvez consulter [La section 3 de Django didactique : utilisation du modèle de données > Chercher des enregistrements](/fr/docs/Learn/Server-side/Django/Models#rechercher_des_enregistrements).
+La première section de la fonction index() permet à l'aide de requêtes, par l'intermédiaire des objets de modèle de données, d'obtenir les nombres d'enregistrements. Pour cela, nous utilisons la méthode d'objet _models_ `objects.all()` sur les objets `Book` et `BookInstance`. Ensuite, nous recherchons les ouvrages disponibles, ce qui revient à faire une requête avec un filtre sur l'attribut status de l'objet `BookInstance` ayant la valeur 'a' (Available). Si vous avez un oubli, vous pouvez consulter [La section 3 de Django didactique : utilisation du modèle de données > Chercher des enregistrements](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Models#rechercher_des_enregistrements).
 
 La dernière ligne de cette fonction est l'appel de la fonction `render()` dont l'objet est de constituer une page HTML et la transmettre comme une réponse. Cette fonction encapsule plusieurs autres fonctions du cadriciel ce qui permet de simplifier le processus de restitution des informations. La fonction `render()` utilise les paramètres :
 
@@ -350,7 +350,7 @@ De la même manière, vous pouvez par exemple :
 ```
 
 > [!NOTE]
-> Les exemples ci-dessus indiquent où se trouvent les fichiers, mais le cadriciel ne travaille pas ainsi par défaut. Nous avons configuré le serveur web de développement en modifiant le routage des URL (**/locallibrary/locallibrary/urls.py**) à [la création du squelette du site](/fr/docs/Learn/Server-side/Django/skeleton_website). Cependant nous devrons travailler plus tard la mise en production.
+> Les exemples ci-dessus indiquent où se trouvent les fichiers, mais le cadriciel ne travaille pas ainsi par défaut. Nous avons configuré le serveur web de développement en modifiant le routage des URL (**/locallibrary/locallibrary/urls.py**) à [la création du squelette du site](/fr/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website). Cependant nous devrons travailler plus tard la mise en production.
 
 Pour plus de détails sur les fichiers statiques vous pouvez consulter la documentation Django sur [la gestion des fichiers statiques](https://docs.djangoproject.com/fr/2.2/howto/static-files/).
 

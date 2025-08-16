@@ -31,6 +31,6 @@ Renvoie `true` si la valeur de l'élément n'a pas de problèmes de validité&nb
 
 ## Voir aussi
 
-- [En apprendre plus&nbsp;: Validation des données de formulaires côté client](/fr/docs/Learn/Forms/Form_validation)
-- [Guide&nbsp;: Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
-- [API de validation de contraintes](/fr/docs/Learn/Forms/Form_validation)
+- [En apprendre plus&nbsp;: Validation des données de formulaires côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Guide&nbsp;: Validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation)
+- [API de validation de contraintes](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)

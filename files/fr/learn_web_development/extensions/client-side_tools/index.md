@@ -10,13 +10,13 @@ Les outils côté client peuvent être intimidants, mais cette série d'articles
 
 ## Conditions prérequises
 
-Vous devez vraiment apprendre les bases des langages [HTML](/fr/docs/Learn/HTML), [CSS](/fr/docs/Learn/CSS), et [JavaScript](/fr/docs/Learn/JavaScript) avant d'essayer d'utiliser les outils détaillés ici.
+Vous devez vraiment apprendre les bases des langages [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) avant d'essayer d'utiliser les outils détaillés ici.
 
 ## Guides
 
 - [Vue d'ensemble de l'outillage côté client](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
   - : Dans cet article, nous vous proposons un aperçu des outils Web modernes, des types d'outils disponibles et de l'endroit où vous les rencontrerez dans le cycle de vie du développement d'applications Web, et comment trouver de l'aide sur des outils individuels.
-- [Cours intensif en ligne de commande](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
+- [Cours intensif en ligne de commande](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
   - : Dans votre processus de développement, vous devrez sans aucun doute exécuter une commande dans le terminal (ou sur la "ligne de commande" - ce sont en fait la même chose). Cet article fournit une introduction au terminal, les commandes essentielles que vous devrez y saisir, comment enchaîner des commandes et comment ajouter vos propres outils d'interface de ligne de commande (CLI).
 - [Principes de base de la gestion des paquets](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
   - : Dans cet article, nous examinerons en détail les gestionnaires de paquets pour comprendre comment nous pouvons les utiliser dans nos propres projets - pour installer les dépendances des outils de projet, les maintenir à jour, etc.

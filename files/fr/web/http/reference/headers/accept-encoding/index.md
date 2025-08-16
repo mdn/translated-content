@@ -4,14 +4,14 @@ slug: Web/HTTP/Reference/Headers/Accept-Encoding
 original_slug: Web/HTTP/Headers/Accept-Encoding
 ---
 
-L'en-tête HTTP **`Accept-Encoding`** permet de définir quel sera l'encodage du contenu. Il s'agit généralement de l'algorithme de compression utilisé par le serveur. Le client peut alors décoder le corps de la requête correctement. Utilisant [la négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation), le serveur choisit l'une des propositions d'encodage que le client prend en charge. Le serveur l'utilise et le notifie au client à l'aide de l'en-tête de réponse [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding).
+L'en-tête HTTP **`Accept-Encoding`** permet de définir quel sera l'encodage du contenu. Il s'agit généralement de l'algorithme de compression utilisé par le serveur. Le client peut alors décoder le corps de la requête correctement. Utilisant [la négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation), le serveur choisit l'une des propositions d'encodage que le client prend en charge. Le serveur l'utilise et le notifie au client à l'aide de l'en-tête de réponse [`Content-Encoding`](/fr/docs/Web/HTTP/Reference/Headers/Content-Encoding).
 
 Même si le client et le serveur supportent deux algorithmes de compressions communs, le serveur peut choisir de ne pas compresser le corps de la réponse si l'encodage `identity` (aucune compression) est accepté par le client. Deux exemples de cas communs peuvent conduire à la non-compression du corps de la réponse :
 
 - Les données sont déjà compressées et la compression ne réduira pas la taille des données transmises. Cela peut être le cas de certains formats d'images qui sont déjà compressés ;
 - Le serveur est en surcharge et ne peut plus allouer suffisamment de temps de calcul nécessaire pour compresser les données. Microsoft recommande de ne pas utiliser la compression si le serveur utilise plus de 80% de la puissance de calcul.
 
-Dès lors que l'usage d'`identity`, signifiant l'absence de compression, n'est pas explicitement interdite, que ce soit par `identity;q=0` ou `*;q=0` (sans l'usage d'une autre valeur pour `identity`), le serveur ne doit jamais renvoyer une erreur [`406`](/fr/docs/Web/HTTP/Status/406) `Not Acceptable.`
+Dès lors que l'usage d'`identity`, signifiant l'absence de compression, n'est pas explicitement interdite, que ce soit par `identity;q=0` ou `*;q=0` (sans l'usage d'une autre valeur pour `identity`), le serveur ne doit jamais renvoyer une erreur [`406`](/fr/docs/Web/HTTP/Reference/Status/406) `Not Acceptable.`
 
 > [!NOTE]
 >
@@ -86,6 +86,6 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## Voir aussi
 
-- [Négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation) HTTP
-- En-tête résultant de la négociation de contenu : [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding)
-- Autres en-têtes en rapport : [`TE`](/fr/docs/Web/HTTP/Headers/TE), [`Accept`](/fr/docs/Web/HTTP/Headers/Accept), [`Accept-Charset`](/fr/docs/conflicting/Web/HTTP/Headers), [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language)
+- [Négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation) HTTP
+- En-tête résultant de la négociation de contenu : [`Content-Encoding`](/fr/docs/Web/HTTP/Reference/Headers/Content-Encoding)
+- Autres en-têtes en rapport : [`TE`](/fr/docs/Web/HTTP/Headers/TE), [`Accept`](/fr/docs/Web/HTTP/Reference/Headers/Accept), [`Accept-Charset`](/fr/docs/conflicting/Web/HTTP/Headers), [`Accept-Language`](/fr/docs/Web/HTTP/Reference/Headers/Accept-Language)

@@ -62,7 +62,7 @@ Dans l'exemple suivant, on utilise `column-width` avec une valeur de 200px et `c
 
 ### La propriété raccourcie `columns`
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) `columns` peut être utilisée afin de définir à la fois `column-count` et `column-width`. Si on utilise une unité de longueur, la valeur sera utilisée pour `column-width`, si on utilise un entier, la valeur sera utilisée pour `column-count`. Les deux peuvent être définies simultanément en étant séparées d'un espace.
+La [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) `columns` peut être utilisée afin de définir à la fois `column-count` et `column-width`. Si on utilise une unité de longueur, la valeur sera utilisée pour `column-width`, si on utilise un entier, la valeur sera utilisée pour `column-count`. Les deux peuvent être définies simultanément en étant séparées d'un espace.
 
 Ce fragment de code CSS donnera donc le même résultat que pour le premier exemple où `column-count` vaut 3.
 
