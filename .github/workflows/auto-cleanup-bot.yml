@@ -28,10 +28,10 @@ jobs:
           - zh-tw
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Checkout (content)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: mdn/content
           path: mdn/content

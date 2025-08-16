@@ -1,6 +1,7 @@
 ---
 title: Cómo manejan el espacio en blanco HTML, CSS y el DOM
-slug: Web/API/Document_Object_Model/Whitespace
+slug: Web/CSS/CSS_text/Whitespace
+original_slug: Web/API/Document_Object_Model/Whitespace
 ---
 
 {{APIRef("DOM")}}

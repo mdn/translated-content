@@ -11359,16 +11359,6 @@
       "Mgjbot"
     ]
   },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-03-27T15:45:14.756Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "ethertank",
-      "Mgjbot",
-      "Deq"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2020-10-15T21:48:03.239Z",
     "contributors": [
@@ -25245,6 +25235,16 @@
     "modified": "2019-03-18T21:22:13.313Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-03-27T15:45:14.756Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "ethertank",
+      "Mgjbot",
+      "Deq"
     ]
   },
   "Web/CSS/CSS_text_decoration": {

@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # This is a "required" workflow so path filtering can not be used:
       # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
@@ -31,7 +31,7 @@ jobs:
               - ".github/workflows/pr-check_redirects.yml"
 
       - name: Checkout (content)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         if: steps.filter.outputs.required_files == 'true'
         with:
           repository: mdn/content

@@ -1,6 +1,7 @@
 ---
 title: ホワイトスペースは HTML、CSS、そして DOM 内でどう扱われるか
-slug: Web/API/Document_Object_Model/Whitespace
+slug: Web/CSS/CSS_text/Whitespace
+original_slug: Web/API/Document_Object_Model/Whitespace
 l10n:
   sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
