@@ -3,8 +3,6 @@ title: <i>：斜體文字元素
 slug: Web/HTML/Reference/Elements/i
 ---
 
-{{HTMLSidebar}}
-
 **`<i>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一段文字，由於某些原因與正常文字有所區分，例如成語、專業術語、分類設計等。歷史上，這些元素通常以斜體字來呈現，這也是這個元素被命名為 `<i>` 的原因。
 
 {{InteractiveExample("HTML Demo: &lt;i&gt;", "tabbed-shorter")}}

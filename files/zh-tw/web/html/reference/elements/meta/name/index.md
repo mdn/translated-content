@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{HTMLSidebar}}
-
 {{htmlelement("meta")}} 元素的 **`name`** 屬性以鍵值對的形式提供後設資料。當 `<meta>` 元素具有 `name` 屬性時，[`content`](/zh-TW/docs/Web/HTML/Reference/Elements/meta#content) 屬性定義了其對應的值。這些後設資料是*文件層級的後設資料*，適用於整個頁面。
 
 例如，以下的 `<meta>` 標籤為文件提供了一個 `description` 作為後設資料：

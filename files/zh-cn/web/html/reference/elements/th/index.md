@@ -3,8 +3,6 @@ title: <th>
 slug: Web/HTML/Reference/Elements/th
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<th>` 元素**定义表格内的表头单元格。这部分特征是由 [`scope`](#scope) 和 [`headers`](#headers) 属性准确定义的。
 
 {{InteractiveExample("HTML Demo: &lt;th&gt;", "tabbed-taller")}}
