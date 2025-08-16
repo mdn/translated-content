@@ -1,11 +1,13 @@
 ---
 title: exp()
 slug: Web/CSS/exp
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`exp()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)は指数関数で、引数として数値を取り、その数値で数学定数 `e` を累乗した値を返します。
+**`exp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、指数関数であり、引数として数値を取り、その数値で数学定数 `e` を累乗した値を返します。
 
-数学定数 [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) は自然対数の底で、約 `2.718281828459045` です。
+数学定数 [`e`](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) は自然対数の底で、約 `2.718281828459045` です。
 
 `exp(number)` 関数は計算を含み、{{CSSxRef("pow", "pow(e, number)")}} と同じ値を返します。
 
@@ -73,19 +75,19 @@ div.box {
   background: linear-gradient(orange, red);
 }
 div.box-1 {
-  transform: rotate(calc(1turn * exp(-1))); // 0.3678794411714423turn
+  transform: rotate(calc(1turn * exp(-1))); /* 0.3678794411714423turn */
 }
 div.box-2 {
-  transform: rotate(calc(1turn * exp(-0.75))); // 0.4723665527410147turn
+  transform: rotate(calc(1turn * exp(-0.75))); /* 0.4723665527410147turn */
 }
 div.box-3 {
-  transform: rotate(calc(1turn * exp(-0.5))); // 0.6065306597126334turn
+  transform: rotate(calc(1turn * exp(-0.5))); /* 0.6065306597126334turn */
 }
 div.box-4 {
-  transform: rotate(calc(1turn * exp(-0.25))); // 0.7788007830714049turn
+  transform: rotate(calc(1turn * exp(-0.25))); /* 0.7788007830714049turn */
 }
 div.box-5 {
-  transform: rotate(calc(1turn * exp(0))); // 1turn
+  transform: rotate(calc(1turn * exp(0))); /* 1turn */
 }
 ```
 
@@ -112,22 +114,22 @@ div.box-5 {
 
 ```css
 h1 {
-  font-size: calc(1rem * exp(1.25)); // 3.4903429574618414rem
+  font-size: calc(1rem * exp(1.25)); /* 3.4903429574618414rem */
 }
 h2 {
-  font-size: calc(1rem * exp(1)); // 2.718281828459045rem
+  font-size: calc(1rem * exp(1)); /* 2.718281828459045rem */
 }
 h3 {
-  font-size: calc(1rem * exp(0.75)); // 2.117000016612675rem
+  font-size: calc(1rem * exp(0.75)); /* 2.117000016612675rem */
 }
 h4 {
-  font-size: calc(1rem * exp(0.5)); // 1.6487212707001282rem
+  font-size: calc(1rem * exp(0.5)); /* 1.6487212707001282rem */
 }
 h5 {
-  font-size: calc(1rem * exp(0.25)); // 1.2840254166877414rem
+  font-size: calc(1rem * exp(0.25)); /* 1.2840254166877414rem */
 }
 h6 {
-  font-size: calc(1rem * exp(0)); // 1rem
+  font-size: calc(1rem * exp(0)); /* 1rem */
 }
 ```
 
