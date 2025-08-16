@@ -3,8 +3,6 @@ title: background-image
 slug: Web/CSS/background-image
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`background-image`** 속성은 요소의 배경 이미지를 한 개나 여러 개 지정합니다.
 
 {{InteractiveExample("CSS Demo: background-image")}}

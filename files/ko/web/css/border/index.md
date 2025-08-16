@@ -3,8 +3,6 @@ title: border
 slug: Web/CSS/border
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`border`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소의 테두리를 설정합니다. {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}의 값을 설정합니다.
 
 {{InteractiveExample("CSS Demo: border")}}

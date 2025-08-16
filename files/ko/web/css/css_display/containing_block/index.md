@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_display/Containing_block
 original_slug: Web/CSS/Containing_block
 ---
 
-{{cssref}}
-
 요소의 크기와 위치는 **컨테이닝 블록**(containing block)의 영향을 받곤 합니다. 대부분의 경우, 어떤 요소의 컨테이닝 블록은 가장 가까운 [블록 레벨](/ko/docs/Glossary/Block-level_content) 조상의 [콘텐츠 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)이나, 항상 그런 것은 아닙니다. 이 글에서는 요소의 컨테이닝 블록을 결정하는 요인을 살펴보겠습니다.
 
 사용자 에이전트(브라우저 등)는 문서를 그릴 때 모든 요소에 대해 상자(박스)를 생성합니다. 각각의 상자는 아래의 네 가지 영역으로 나눠집니다.

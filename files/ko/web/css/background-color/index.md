@@ -3,8 +3,6 @@ title: background-color
 slug: Web/CSS/background-color
 ---
 
-{{CSSRef}}
-
 [CSS](/en-US/CSS) **`background-color`** 속성은 요소의 배경 색을 지정합니다.
 
 {{InteractiveExample("CSS Demo: background-color")}}

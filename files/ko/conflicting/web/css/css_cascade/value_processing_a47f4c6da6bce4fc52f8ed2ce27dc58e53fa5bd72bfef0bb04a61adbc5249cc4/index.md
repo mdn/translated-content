@@ -4,8 +4,6 @@ slug: conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce
 original_slug: Web/CSS/resolved_value
 ---
 
-{{cssref}}
-
 [CSS](/ko/docs/Web/CSS) 속성의 **결정값**은 {{domxref("Window.getComputedStyle", "getComputedStyle()")}}이 반환하는 값입니다.
 
 속성 대부분은 결정값이 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)이지만, {{cssxref("width")}}와 {{cssxref("height")}}를 포함한 기존 속성은 [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)입니다. 속성 별 자세한 사항은 아래의 명세를 참고하세요.

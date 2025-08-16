@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7dea2fa2c2562a8f441dfca779a08ae363334a13
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`gap`** 속성은 행과 열 사이의 간격 ({{glossary("gutters")}})을 설정합니다. {{CSSxRef("row-gap")}}과 {{CSSxRef("column-gap")}}의 [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)입니다.
 
 {{InteractiveExample("CSS Demo: gap")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 883b021c97375f872d0702f0d0747b1373155cef
 ---
 
-{{CSSRef}}
-
 이 도구를 사용하면 {{cssxref("box-shadow")}} 효과를 통하여 CSS 객체에 박스 음영 그림자 효과를 적용할 수 있습니다.
 
 {{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 900)}}
