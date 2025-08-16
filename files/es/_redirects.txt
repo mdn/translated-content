@@ -1496,7 +1496,7 @@
 /es/docs/Referencia_CSS/Extensiones_Mozilla	/es/docs/Web/CSS/Mozilla_Extensions
 /es/docs/Referencia_CSS:Extensiones_Mozilla	/es/docs/Web/CSS/Mozilla_Extensions
 /es/docs/Referencia_DOM_de_Gecko	/es/docs/Web/API/Document_Object_Model
-/es/docs/Referencia_DOM_de_Gecko/Cómo_espacioenblanco	/es/docs/Web/API/Document_Object_Model/Whitespace
+/es/docs/Referencia_DOM_de_Gecko/Cómo_espacioenblanco	/es/docs/Web/CSS/CSS_text/Whitespace
 /es/docs/Referencia_DOM_de_Gecko/Ejemplos	/es/docs/Web/API/Document_Object_Model/Examples
 /es/docs/Referencia_DOM_de_Gecko/Introducción	/es/docs/Web/API/Document_Object_Model/Introduction
 /es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores	/es/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
@@ -1841,6 +1841,7 @@
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_f02ee0854f5dae742561e13875ea3551
+/es/docs/Web/API/Document_Object_Model/Whitespace	/es/docs/Web/CSS/CSS_text/Whitespace
 /es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_f02ee0854f5dae742561e13875ea3551
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
