@@ -1760,6 +1760,7 @@
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
 /zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Whitespace	/zh-CN/docs/Web/CSS/CSS_text/Whitespace
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList
 /zh-CN/docs/Web/API/Element.className	/zh-CN/docs/Web/API/Element/className
 /zh-CN/docs/Web/API/Element.clientLeft	/zh-CN/docs/Web/API/Element/clientLeft
@@ -2755,7 +2756,7 @@
 /zh-CN/docs/Web/Guide/AJAX/Getting_Started	/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests
 /zh-CN/docs/Web/Guide/API	/zh-CN/docs/Web/API
 /zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm	/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
-/zh-CN/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
+/zh-CN/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/CSS/CSS_text/Whitespace
 /zh-CN/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /zh-CN/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 /zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained
@@ -2790,7 +2791,7 @@
 /zh-CN/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-CN/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /zh-CN/docs/Web/Guide/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model
 /zh-CN/docs/Web/Guide/CSS/媒体查询	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
-/zh-CN/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
+/zh-CN/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/CSS/CSS_text/Whitespace
 /zh-CN/docs/Web/Guide/Events/Touch_events	/zh-CN/docs/Web/API/Touch_events
 /zh-CN/docs/Web/Guide/Graphics	/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /zh-CN/docs/Web/Guide/HTML	/zh-CN/docs/Learn_web_development/Core/Structuring_content

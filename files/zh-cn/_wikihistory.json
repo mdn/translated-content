@@ -10745,14 +10745,6 @@
       "EugeneZeng"
     ]
   },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-01-30T13:21:03.275Z",
-    "contributors": [
-      "chrisdavidmills",
-      "lon",
-      "ziyunfei"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2019-03-23T22:58:48.150Z",
     "contributors": [
@@ -24524,6 +24516,14 @@
       "RainSlide",
       "zjffun",
       "LuXuanqing"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-01-30T13:21:03.275Z",
+    "contributors": [
+      "chrisdavidmills",
+      "lon",
+      "ziyunfei"
     ]
   },
   "Web/CSS/CSS_text_decoration": {
