@@ -2,7 +2,7 @@
 title: hyphens
 slug: Web/CSS/hyphens
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
 
 **`hyphens`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、手動で指定された位置で文字列のハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。
@@ -29,7 +29,7 @@ hyphens: auto;
 
 ```css interactive-example
 #example-element {
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
   font-size: 1.5rem;
   text-align: left;
   width: 7rem;
@@ -153,6 +153,6 @@ dd.auto {
 ## 関連情報
 
 - {{Cssxref("content")}}
-- {{cssxref("overflow-wrap")}} (formerly `word-wrap`)
+- {{cssxref("overflow-wrap")}} （以前の `word-wrap`）
 - {{cssxref("word-break")}}
 - [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
