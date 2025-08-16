@@ -2,7 +2,7 @@
 title: CSS スクロールバースタイル設定
 slug: Web/CSS/CSS_scrollbars_styling
 l10n:
-  sourceCommit: a4ae225903c2784a3d74b43f311e05f208e42c91
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **CSS スクロールバースタイル設定** (CSS scrollbars styling) モジュールは、スクロールバーの視覚的なスタイル設定に使用できるプロパティを定義しています。必要に応じてスクロールバーの幅をカスタマイズできます。また、スクロールバーの背景であるスクロールバーのトラックの色、およびスクロールバーのドラッグ可能なハンドルであるスクロールバーのつまみの色もカスタマイズできます。
@@ -91,5 +91,6 @@ for us to breathe.
 
 ## 関連情報
 
-- {{CSSxRef("::-webkit-scrollbar")}}
-- {{CSSxRef("-ms-overflow-style")}}
+- {{cssxref('scroll-timeline')}}, {{cssxref('scroll-timeline-axis')}}, {{cssxref('scroll-timeline-name')}}
+- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
