@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fffabdeeb9a069e40a070dadeedc93298b2aca7e
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<tr>`** 元素定义了表格中的一行单元格。然后可以使用 {{HTMLElement("td")}}（数据单元格）和 {{HTMLElement("th")}}（标题单元格）元素的组合来建立该行的单元格。
 
 {{InteractiveExample("HTML Demo: &lt;tr&gt;", "tabbed-taller")}}

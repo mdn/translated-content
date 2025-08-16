@@ -14,7 +14,7 @@ l10n:
 
 基本的な MathML のグローバル属性に加え、以下のグローバル属性も存在します。
 
-- [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)属性、例えば **`onclick`**、**`onfocus`**、など。
+- [イベントハンドラー](/ja/docs/Web/API/Document_Object_Model/Events)属性、例えば **`onclick`**、**`onfocus`**、など。
 - [`href`](/ja/docs/Web/MathML/Global_attributes/href) 属性、 MathML 要素をハイパーリンクにします。
 
 ## グローバル属性の一覧

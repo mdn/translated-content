@@ -3,8 +3,6 @@ title: <label>
 slug: Web/HTML/Reference/Elements/label
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<label>` 元素**（标签）表示用户界面中某个元素的说明。
 
 {{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}

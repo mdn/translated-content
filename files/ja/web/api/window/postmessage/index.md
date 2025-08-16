@@ -14,7 +14,7 @@ l10n:
 
 さらに、アクセスするスクリプトは、アクセスする文書のウィンドウオブジェクトを事前に取得しておく必要があります。これは、ポップアップの場合は [`window.open()`](/ja/docs/Web/API/Window/open)、iframe の場合は [`iframe.contentWindow`](/ja/docs/Web/API/HTMLIFrameElement/contentWindow) などのメソッドを使用して行うことができます。
 
-大まかには、ウィンドウが他のウィンドウへの参照を取得できる場合（`targetWindow = window.opener` など）、 `targetWindow.postMessage()` を使って {{domxref("MessageEvent")}} をそのウィンドウ上で配信することができます。受け取ったウィンドウでは必要に応じて自由に[イベントを処理](/ja/docs/Web/Events/Event_handlers)することができます。 `window.postMessage()` に渡された引数 ("message") は[イベントオブジェクトを通して対象のウィンドウに公開されます](#配信されるイベント)。
+大まかには、ウィンドウが他のウィンドウへの参照を取得できる場合（`targetWindow = window.opener` など）、 `targetWindow.postMessage()` を使って {{domxref("MessageEvent")}} をそのウィンドウ上で配信することができます。受け取ったウィンドウでは必要に応じて自由に[イベントを処理](/ja/docs/Web/API/Document_Object_Model/Events)することができます。 `window.postMessage()` に渡された引数 ("message") は[イベントオブジェクトを通して対象のウィンドウに公開されます](#配信されるイベント)。
 
 ## 構文
 

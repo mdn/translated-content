@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 77e46a5b43f828fcc6bd30facddc6fc4bfe84f9b
 ---
 
-{{HTMLSidebar}}
-
 **`min`** 属性定义了可接受和有效的输入最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 小于此值，则该元素将无法通过[验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)。此值必须小于等于 `max` 属性的值。
 
 某些输入类型具有默认的最小值。如果输入项没有默认的最小值，且 `min` 指定的值无法转换为有效的数字（或未设置最小值），则输入没有最小值。
