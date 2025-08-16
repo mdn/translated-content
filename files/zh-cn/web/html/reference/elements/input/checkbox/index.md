@@ -3,8 +3,6 @@ title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 ---
 
-{{HTMLSidebar}}
-
 **`checkbox`** 类型的 {{htmlelement("input")}} 元素在默认情况下被呈现为激活时被选中（打勾）的方框，就像你在官方的政府文件表格中看到的那样。具体外观取决于浏览器运行的操作系统配置。一般来说，这是一个正方形，但它可能有圆角。复选框允许你在表格中选择单一的数值进行提交（或不提交）。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}

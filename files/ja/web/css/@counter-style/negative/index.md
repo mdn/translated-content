@@ -1,28 +1,34 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-カスタムカウンターのスタイルを定義する際、 **`negative`** 記述子により、値が負のときにカウンターの表現に付加または前置する記号を指定する方法を提供することで、負のカウンターの表現を変更することができます。
+**`negative`** は {{cssxref("@counter-style")}} アットルールの記述子で、独自のカウンタースタイルを定義する際に、負のカウンター値をどのように表すかを定義することができます。`negative` 記述子の値は、カウンターの値が負の場合に、カウンターの表現の前後に追加する記号を定義します。
 
 ## 構文
 
 ```css
-/* <symbol> 値 */
-negative: "-"; /* 負の値の場合に先頭に '-' を付ける */
+/* 単一の <symbol> 値 */
+negative: "--"; /* 負の値の場合に先頭に '--' を付ける */
+
+/* 2 つの <symbol> 値 */
 negative: "(" ")"; /* 負の値の場合に '(' と ')' で囲む */
 ```
 
 ### 値
 
-- first `<symbol>`
-  - : カウンターが負の時に、この記号がその表現の前に付きます。
-- second `<symbol>`
-  - : 存在する場合、カウンターが負の時に、この記号がその表現の後に追加されます。
+`negative` 記述子は、最大 2 つの [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#values) 値を受け入れます。
+
+- `<symbol>`
+  - : 1 つの値のみを指定した場合、カウンターが負の値の場合、その値がカウンターの表現の前に追加されます。 2 つの値を指定した場合、カウンターが負の値の場合、最初の値はカウンターの表現の前に追加され、 2 つ目の値はカウンターの表現の後ろに追加されます。
 
 ## 解説
 
-カウンターの値が負の場合、記述子の値として指定された記号がカウンター表現の前に置かれ、指定された場合は 2 番目の記号が表現の後に追加されます。 negative 記述子は、 `system` の値が `symbolic`, `alphabetic`, `numeric`, `additive`, `extends` の何れかで、拡張カウンタースタイル自体が負の符号を使用している場合のみ有効になります。負のカウンター値に対応していない他のシステムで negative 記述子が指定された場合、その記述子は無視されます。
+カウンター値が負の場合、 `negative` 記述子に指定された `<symbol>` が、カウンター表現の前に追加され、負の値の既定値 `-` を置き換えます。2 つ目の `<symbol>` が指定されている場合、カウンター表現の後に追加されます。
+
+`negative` 記述子は、 2 つの場合に適用されます。カウンタースタイルの `system` 値が `symbolic`、`alphabetic`、`numeric`、`additive` で、カウントが負の場合、および `system` 値が `extends` で、拡張カウンタースタイル自体が負の符号を使用している場合です。負のカウンター値に対応していないシステムでは、 `negative` 記述子を指定しても効果はなく、無視されます。
 
 ## 公式定義
 
@@ -30,28 +36,23 @@ negative: "(" ")"; /* 負の値の場合に '(' と ')' で囲む */
 
 ## 形式文法
 
-```
-<symbol> <symbol>?
-
-<symbol> =
-  <string>       |
-  <image>        |
-  <custom-ident>
-```
+{{csssyntax}}
 
 ## 例
 
 ### 負のカウンターを描画する
 
+この例では、[`decimal`](/ja/docs/Web/CSS/list-style-type#decimal) リストスタイルを[拡張](/ja/docs/Web/CSS/@counter-style/system#extends)しています。 `negative` 記述子は、負のカウンター値の前後に `(-` および `)` を追加するために使用されます。
+
 #### HTML
 
 ```html
-<ol class="list" start="-3">
+<ol start="-3">
+  <li>Negative three</li>
+  <li>Negative two</li>
+  <li>Negative one</li>
+  <li>Zero</li>
   <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
 </ol>
 ```
 
@@ -59,12 +60,12 @@ negative: "(" ")"; /* 負の値の場合に '(' と ')' で囲む */
 
 ```css
 @counter-style neg {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  system: extends decimal;
   negative: "(-" ")";
+  suffix: ": ";
 }
 
-.list {
+ol {
   list-style: neg;
 }
 ```
@@ -72,6 +73,8 @@ negative: "(" ")"; /* 負の値の場合に '(' と ')' で囲む */
 #### 結果
 
 {{ EmbedLiveSample('Rendering negative counters') }}
+
+`negative` 記述子の値として掲載されている接頭辞および接尾辞は、カウンター値が 0 未満の場合にのみマーカーに追加されます。
 
 ## 仕様書
 
@@ -83,5 +86,8 @@ negative: "(" ")"; /* 負の値の場合に '(' と ')' で囲む */
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール

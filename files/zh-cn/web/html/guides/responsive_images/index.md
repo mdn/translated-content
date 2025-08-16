@@ -5,8 +5,6 @@ l10n:
   sourceCommit: dee5effadcb82cf2de9b50c128f7a050919ed523
 ---
 
-{{HTMLSidebar}}
-
 在本文中我们将学习响应式图片（一种在不同的屏幕尺寸、分辨率或具有其他类似特性的设备上都呈现良好的图片），并且探究 HTML 提供的一些帮助实现它们的工具，这有助于提升（网页在）不同设备上的性能。响应式图片仅是[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)的一部分，你在学习 CSS 的过程中将学到相关的知识。
 
 <table class="standard-table">

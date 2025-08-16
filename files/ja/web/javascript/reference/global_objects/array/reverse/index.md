@@ -1,11 +1,10 @@
 ---
 title: Array.prototype.reverse()
+short-title: reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`reverse()`** は {{jsxref("Array")}} のメソッドで、配列の要素を[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で反転させ、その配列への参照を返します。最初の要素が最後の要素に、最後の要素が最初の要素になります。言い換えれば、配列内の要素順序を、先に述べた方向とは逆に向かわせます。
 
@@ -14,17 +13,17 @@ l10n:
 {{InteractiveExample("JavaScript デモ: Array.reverse()")}}
 
 ```js interactive-example
-const array1 = ["one", "two", "three"];
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["one", "two", "three"]
+const array = ["one", "two", "three"];
+console.log("array:", array);
+// 予想される結果: "array:" Array ["one", "two", "three"]
 
-const reversed = array1.reverse();
+const reversed = array.reverse();
 console.log("reversed:", reversed);
-// Expected output: "reversed:" Array ["three", "two", "one"]
+// 予想される結果: "reversed:" Array ["three", "two", "one"]
 
-// Careful: reverse is destructive -- it changes the original array.
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["three", "two", "one"]
+// 注意: reverse は破壊的です。元の配列が変更されます。
+console.log("array:", array);
+// 予想される結果: "array:" Array ["three", "two", "one"]
 ```
 
 ## 構文
@@ -122,6 +121,7 @@ console.log(Array.prototype.reverse.call(arrayLike));
 ## 関連情報
 
 - [`Array.prototype.reverse` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.reverse` のポリフィル](https://www.npmjs.com/package/array.prototype.reverse)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}

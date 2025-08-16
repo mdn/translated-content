@@ -16,7 +16,7 @@ l10n:
 
 > [!NOTE]
 > **このメソッドは廃止されているため、使用しないでください。**
-> 代わりに、 {{domxref("Event.Event", "Event()")}} のような特定のイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、これらの使用方法の詳細が記載されています。
+> 代わりに、 {{domxref("Event.Event", "Event()")}} のような特定のイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)のページに、これらの使用方法の詳細が記載されています。
 
 ## 構文
 

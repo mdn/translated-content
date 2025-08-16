@@ -3,8 +3,6 @@ title: 权限 - permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 ---
 
-{{AddonSidebar}}
-
 <table class="fullwidth-table standard-table">
   <tbody>
     <tr>
