@@ -8,21 +8,21 @@ l10n:
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<meta>`** représente toute information de métadonnées qui ne peut pas être représentée par un des autres éléments de métadonnées ([`<base>`](/fr/docs/Web/HTML/Element/base), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<script>`](/fr/docs/Web/HTML/Element/script), [`<style>`](/fr/docs/Web/HTML/Element/style) ou [`<title>`](/fr/docs/Web/HTML/Element/title)).
+L'élément HTML **`<meta>`** représente toute information de métadonnées qui ne peut pas être représentée par un des autres éléments de métadonnées ([`<base>`](/fr/docs/Web/HTML/Reference/Elements/base), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link), [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script), [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) ou [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title)).
 
 `<meta>` peut fournir différents types de métadonnées&nbsp;:
 
 - Si l'attribut [`name`](#name) est défini, l'élément `<meta>` définit alors une métadonnée _du document_, s'appliquant à toute la page.
 - Si l'attribut [`http-equiv`](#http-equiv) est défini, l'élément `<meta>` est une _directive de pragma_, fournissant une information équivalente à celle qui peut être indiquée par l'en-tête HTTP homonyme.
 - Si l'attribut [`charset`](#charset) est défini, l'élément `<meta>` constitue _une déclaration de jeu de caractères_, et indique l'encodage des caractères du document.
-- Si l'attribut [`itemprop`](/fr/docs/Web/HTML/Global_attributes/itemprop) est défini, l'élément `<meta>` fournit _une métadonnée spécifique au site_.
+- Si l'attribut [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes/itemprop) est défini, l'élément `<meta>` fournit _une métadonnée spécifique au site_.
 
 ## Attributs
 
-Comme tous les autres éléments, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> Il faut préciser que l'attribut [`name`](#name) possède une signification spécifique pour l'élément `<meta>` et que l'attribut [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop) ne doit pas être utilisé quand l'un de ces attributs suivant est déjà défini&nbsp;: [`name`](#name), [`http-equiv`](#http-equiv) ou [`charset`](#charset).
+> Il faut préciser que l'attribut [`name`](#name) possède une signification spécifique pour l'élément `<meta>` et que l'attribut [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop) ne doit pas être utilisé quand l'un de ces attributs suivant est déjà défini&nbsp;: [`name`](#name), [`http-equiv`](#http-equiv) ou [`charset`](#charset).
 
 - `charset`
   - : Cet attribut indique l'encodage des caractères pour le document. Si cet attribut est présent, sa valeur doit correspondre (quelle que soit la casse) à `"utf-8"`. En effet, seul UTF-8 est valide pour encoder des documents HTML depuis HTML5. Les éléments `<meta>` qui déclarent un encodage doivent apparaître complètement au sein des 1024 premiers octets du document.
@@ -32,9 +32,9 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 - `http-equiv`
   - : Cet attribut définit une directive de pragma. Il est nommé `http-equiv(alent)`, car les valeurs autorisées suivantes sont les noms d'en-têtes HTTP correspondant.
     - `content-security-policy`
-      - : Cette valeur permet de créer des [règles de gestion de contenu (CSP)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) pour les ressources qui sont servies. Cela permet notamment d'indiquer les origines valides et les points d'accès aux scripts afin de protéger contre les attaques XSS.
+      - : Cette valeur permet de créer des [règles de gestion de contenu (CSP)](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) pour les ressources qui sont servies. Cela permet notamment d'indiquer les origines valides et les points d'accès aux scripts afin de protéger contre les attaques XSS.
     - `content-type`
-      - : Ce champ d'attribut définit le [type MIME](/fr/docs/Web/HTTP/MIME_types) du document, suivi du jeu de caractères utilisé pour l'encodage du document. Si cette valeur est utilisée, l'attribut `content` doit valoir `"text/html; charset=utf-8"`. Cette formulation est équivalente à un élément `<meta>` ayant l'attribut [`charset`](#charset), et les mêmes restrictions s'appliquent quant à l'emplacement dans le document (1024 premiers octets).
+      - : Ce champ d'attribut définit le [type MIME](/fr/docs/Web/HTTP/Guides/MIME_types) du document, suivi du jeu de caractères utilisé pour l'encodage du document. Si cette valeur est utilisée, l'attribut `content` doit valoir `"text/html; charset=utf-8"`. Cette formulation est équivalente à un élément `<meta>` ayant l'attribut [`charset`](#charset), et les mêmes restrictions s'appliquent quant à l'emplacement dans le document (1024 premiers octets).
         > [!NOTE]
         > Cette valeur peut uniquement être utilisée pour les documents servis avec le type `text/html`. Elle ne peut pas être utilisée pour les documents servis avec un type MIME XML.
     - `default-style`
@@ -46,7 +46,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
         - Le nombre de secondes qu'il faudrait attendre avant de recharger la page si l'attribut [`content`](#content) contient seulement un nombre entier positif.
         - Le nombre de secondes qu'il faudrait attendre avant que la page soit redirigée vers une autre page, si l'attribut [`content`](#content) contient un nombre entier positif suivi par la chaîne de caractères '`;url=`' ainsi qu'une URL valide. Voir [la section sur l'accessibilité ci-après](#accessibilité).
 - `name`
-  - : Cet attribut définit le nom d'une métadonnée au niveau du document, l'attribut `content` portant alors la valeur correspondante. Voir [la page sur les noms des métadonnées standard](/fr/docs/Web/HTML/Element/meta/name) pour plus de détails à propos des noms de métadonnées standard définis dans la spécification HTML.
+  - : Cet attribut définit le nom d'une métadonnée au niveau du document, l'attribut `content` portant alors la valeur correspondante. Voir [la page sur les noms des métadonnées standard](/fr/docs/Web/HTML/Reference/Elements/meta/name) pour plus de détails à propos des noms de métadonnées standard définis dans la spécification HTML.
 
 ## Exemples
 
@@ -128,12 +128,12 @@ Les pages utilisant `refresh` risquent d'utiliser un intervalle de temps trop co
 
 ## Voir aussi
 
-- [Les noms des métadonnées standard](/fr/docs/Web/HTML/Element/meta/name)
-- [Apprendre à utiliser `<meta>`](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#métadonnées_lélément_meta)
-- [La balise méta `viewport`](/fr/docs/Web/HTML/Viewport_meta_tag)
+- [Les noms des métadonnées standard](/fr/docs/Web/HTML/Reference/Elements/meta/name)
+- [Apprendre à utiliser `<meta>`](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#métadonnées_lélément_meta)
+- [La balise méta `viewport`](/fr/docs/Web/HTML/Guides/Viewport_meta_element)
 - Les autres éléments relatifs aux métadonnées&nbsp;:
-  - [`<base>`](/fr/docs/Web/HTML/Element/base)
-  - [`<head>`](/fr/docs/Web/HTML/Element/head)
-  - [`<link>`](/fr/docs/Web/HTML/Element/link)
-  - [`<style>`](/fr/docs/Web/HTML/Element/style)
-  - [`<title>`](/fr/docs/Web/HTML/Element/title)
+  - [`<base>`](/fr/docs/Web/HTML/Reference/Elements/base)
+  - [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head)
+  - [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link)
+  - [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style)
+  - [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title)

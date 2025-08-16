@@ -50,7 +50,7 @@ Les événements ont trois fonctions :
 - `processId`
   - : `integer`. L'ID du processus dans lequel cet onglet est rendu.
 - `frameId`
-  - : `integer`. Frame dans lequel la navigation est en cours. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation se déroule dans un iframe imbriqué. Les ID _frames_ sont uniques pour un onglet et un processus donnés.
+  - : `integer`. Frame dans lequel la navigation est en cours. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Reference/Elements/iframe) imbriqué. Une valeur positive indique que la navigation se déroule dans un iframe imbriqué. Les ID _frames_ sont uniques pour un onglet et un processus donnés.
 - `timeStamp`
   - : `number`. L'heure à laquelle `DOMContentLoaded` a été déclenchée, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 

@@ -18,7 +18,7 @@ Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"submit"`
 
 ## Valeur
 
-La valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un élément `<input type="submit">` contient une chaîne de caractères ({{domxref("DOMString")}}) qui est utilisée comme étiquette pour le bouton.
+La valeur de l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) d'un élément `<input type="submit">` contient une chaîne de caractères ({{domxref("DOMString")}}) qui est utilisée comme étiquette pour le bouton.
 
 Si on n'indique aucune valeur, ce sera un texte par défaut (dépendant du navigateur) qui sera utilisé ainsi que du système d'éxploitation:
 
@@ -34,19 +34,19 @@ Si on n'indique aucune valeur, ce sera un texte par défaut (dépendant du navig
 
 En complément des attributs pris en charge par l'ensemble des éléments {{HTMLElement("input")}}, les boutons `"submit"` permettent d'utiliser les attributs suivants :
 
-| Attribut                            | Description                                                                                                                                                                                                   |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`formaction`](#formaction)         | L'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) du formulaire s'il est défini.                                 |
-| [`formenctype`](#formenctype)       | Une chaîne de caractères qui indique le type d'encodage à utiliser pour les données du formulaire.                                                                                                            |
-| [`formmethod`](#formmethod)         | La méthode HTTP ({{HTTPMethod("get")}} ou {{HTTPMethod("post")}}) à utiliser pour envoyer le formulaire.                                                                                                      |
-| [`formnovalidate`](#formnovalidate) | Un booléen qui, lorsqu'il est présent, indique que les champs du formulaire ne sont pas soumis [aux contraintes de validation](/fr/docs/Web/HTML/Constraint_validation) avant l'envoi des données au serveur. |
-| [`formtarget`](#formtarget)         | Le contexte de navigation dans lequel charger la réponse du serveur reçue après l'envoi du formulaire.                                                                                                        |
+| Attribut                            | Description                                                                                                                                                                                                          |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`formaction`](#formaction)         | L'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) du formulaire s'il est défini.                             |
+| [`formenctype`](#formenctype)       | Une chaîne de caractères qui indique le type d'encodage à utiliser pour les données du formulaire.                                                                                                                   |
+| [`formmethod`](#formmethod)         | La méthode HTTP ({{HTTPMethod("get")}} ou {{HTTPMethod("post")}}) à utiliser pour envoyer le formulaire.                                                                                                             |
+| [`formnovalidate`](#formnovalidate) | Un booléen qui, lorsqu'il est présent, indique que les champs du formulaire ne sont pas soumis [aux contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation) avant l'envoi des données au serveur. |
+| [`formtarget`](#formtarget)         | Le contexte de navigation dans lequel charger la réponse du serveur reçue après l'envoi du formulaire.                                                                                                               |
 
 ### `formaction`
 
-Une chaîne de caractères représentant l'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) du formulaire ({{HTMLElement("form")}}) propriétaire du champ `<input>`.
+Une chaîne de caractères représentant l'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) du formulaire ({{HTMLElement("form")}}) propriétaire du champ `<input>`.
 
-Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et {{HTMLElement("button")}}.
+Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image) et {{HTMLElement("button")}}.
 
 ### `formenctype`
 
@@ -55,36 +55,36 @@ Une chaîne de caractères qui identifie la méthode d'encodage à utiliser pour
 - `application/x-www-form-urlencoded`
   - : Les informations sont envoyées sous la forme d'une chaîne de caractères ajoutée à l'URL en utilisant l'algorithme de {{jsxref("encodeURI", "encodeURI()")}}. **Cette valeur est la valeur par défaut.**
 - `multipart/form-data`
-  - : Cette valeur utilise l'API {{domxref("FormData")}} pour gérer les données et permet d'*uploader*des fichiers. Cet encodage _doit_ être utilisé s'il y a des éléments {{HTMLElement("input")}} de [`type`](/fr/docs/Web/HTML/Element/input#type) `"file"` ([`<input type="file">`](/fr/docs/Web/HTML/Element/input/file)).
+  - : Cette valeur utilise l'API {{domxref("FormData")}} pour gérer les données et permet d'*uploader*des fichiers. Cet encodage _doit_ être utilisé s'il y a des éléments {{HTMLElement("input")}} de [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) `"file"` ([`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file)).
 - `text/plain`
   - : Les données sont envoyées comme texte simple. Cette valeur est généralement utile pour déboguer car elle permet de voir facilement les données envoyées.
 
-Si cet attribut est défini, sa valeur prend la priorité sur l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) du formulaire.
+Si cet attribut est défini, sa valeur prend la priorité sur l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) du formulaire.
 
-Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et {{HTMLElement("button")}}.
+Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image) et {{HTMLElement("button")}}.
 
 ### `formmethod`
 
-Une chaîne de caractères qui indique la méthode HTTP à utiliser lors de l'envoi des données du formulaire. Cette valeur prend la priorité sur l'attribut [`method`](/fr/docs/Web/HTML/Element/form#method) du formulaire. Les valeurs autorisées sont :
+Une chaîne de caractères qui indique la méthode HTTP à utiliser lors de l'envoi des données du formulaire. Cette valeur prend la priorité sur l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method) du formulaire. Les valeurs autorisées sont :
 
 - `get`
-  - : Une URL est construite en commençant avec l'URL fournie par l'attribut `formaction` ou [`action`](/fr/docs/Web/HTML/Element/form#action), suivie d'un point d'interrogation puis des données du formulaire, encodées comme indiqué avec `formenctype` ou [`enctype`](/fr/docs/Web/HTML/Element/form#enctype). Cette URL est ensuite envoyée au serveur avec une requête HTTP {{HTTPMethod("get")}}. Cette méthode fonctionne correctement pour les formulaires simples, contenant des données ASCII et sans effet de bord. **C'est la valeur par défaut.**
+  - : Une URL est construite en commençant avec l'URL fournie par l'attribut `formaction` ou [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action), suivie d'un point d'interrogation puis des données du formulaire, encodées comme indiqué avec `formenctype` ou [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#enctype). Cette URL est ensuite envoyée au serveur avec une requête HTTP {{HTTPMethod("get")}}. Cette méthode fonctionne correctement pour les formulaires simples, contenant des données ASCII et sans effet de bord. **C'est la valeur par défaut.**
 - `post`
-  - : Les données du formulaire sont incluses dans le corps de la requête envoyée à l'URL fournie par l'attribut `formaction` ou [`action`](/fr/docs/Web/HTML/Element/form#action) en utilisant une requête {{HTTPMethod("push")}}. Cette méthode prend en charge les données plus complexes (que celles pour `get`) et les pièces jointes sous forme de fichiers.
+  - : Les données du formulaire sont incluses dans le corps de la requête envoyée à l'URL fournie par l'attribut `formaction` ou [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) en utilisant une requête {{HTTPMethod("push")}}. Cette méthode prend en charge les données plus complexes (que celles pour `get`) et les pièces jointes sous forme de fichiers.
 - `dialog`
   - : Cette méthode est utilisée pour indique que le bouton permet simplement de fermer la boîte de dialogue associée au champ. Aucune donnée n'est transmise.
 
-Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et {{HTMLElement("button")}}.
+Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image) et {{HTMLElement("button")}}.
 
 ### `formnovalidate`
 
-Un attribut booléen qui, lorsqu'il est présent, indique que le formulaire ne devrait pas être validé avant d'être envoyé au serveur. Cet attribut prend la priorité sur l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) du formulaire parent.
+Un attribut booléen qui, lorsqu'il est présent, indique que le formulaire ne devrait pas être validé avant d'être envoyé au serveur. Cet attribut prend la priorité sur l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) du formulaire parent.
 
-Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et {{HTMLElement("button")}}.
+Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image) et {{HTMLElement("button")}}.
 
 ### `formtarget`
 
-Une chaîne de caractères qui indique un nom ou un mot-clé qui définit où afficher la réponse reçue depuis le serveur après l'envoi du formulaire. La chaîne de caractères doit correspondre au nom **d'un contexte de navigation** (un onglet, une fenêtre ou une {{HTMLElement("iframe")}}). La valeur de cet attribut prendra la priorité sur celle fournie par l'attribut [`target`](/fr/docs/Web/HTML/Element/form#target) du formulaire ({{HTMLElement("form")}}) parent.
+Une chaîne de caractères qui indique un nom ou un mot-clé qui définit où afficher la réponse reçue depuis le serveur après l'envoi du formulaire. La chaîne de caractères doit correspondre au nom **d'un contexte de navigation** (un onglet, une fenêtre ou une {{HTMLElement("iframe")}}). La valeur de cet attribut prendra la priorité sur celle fournie par l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) du formulaire ({{HTMLElement("form")}}) parent.
 
 En complément des noms des onglets, fenêtres, _iframes_, quelques mots-clés spéciaux peuvent être utilisés :
 
@@ -97,11 +97,11 @@ En complément des noms des onglets, fenêtres, _iframes_, quelques mots-clés s
 - `_top`
   - : La réponse est chargée dans le contexte de navigation de plus haut niveau, c'est-à-dire le contexte de navigation qui est l'ancêtre, sans parent, du contexte courant. Si le contexte courant est déjà le contexte de navigation le plus haut, cette valeur est synonyme de `"_self"`.
 
-Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et {{HTMLElement("button")}}.
+Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image) et {{HTMLElement("button")}}.
 
 ## Utiliser les boutons d'envoi
 
-Les boutons `<input type="submit">` sont utilisés afin d'envoyer des formulaires. Si vous souhaitez créer un bouton personnalisé et adapter son comportement avec JavaScript, il sera préférable d'utiliser un élément {{HTMLElement("button")}} ou un élément [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button).
+Les boutons `<input type="submit">` sont utilisés afin d'envoyer des formulaires. Si vous souhaitez créer un bouton personnalisé et adapter son comportement avec JavaScript, il sera préférable d'utiliser un élément {{HTMLElement("button")}} ou un élément [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button).
 
 Attention, si un seul élément bouton est inséré dans un formulaire (par exemple `<button>Mon bouton</button>`), le navigateur considèrera que ce bouton doit servir comme bouton d'envoi. Il est donc nécessaire de déclarer explicitement un bouton d'envoi (`<input type="submit">`) en plus d'autres boutons que vous souhaiteriez ajouter.
 
@@ -127,13 +127,13 @@ Voici le résultat obtenu :
 
 Pour tester, vous pouvez saisir un texte dans le champ puis cliquer sur le bouton.
 
-Lorsque le formulaire est envoyé, les paires formées par les noms et les valeurs seront envoyées au serveur. Dans le cas précédent, la donnée envoyée aura la forme `text=monTexte` (la deuxième partie varie selon le texte saisi). La destination et la méthode utilisées pour l'envoi des données dépend des attributs utilisés sur l'élément `<form>` (ainsi que d'autres détails). Pour plus d'informations, vous pouvez lire [Envoyer les données d'un formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data).
+Lorsque le formulaire est envoyé, les paires formées par les noms et les valeurs seront envoyées au serveur. Dans le cas précédent, la donnée envoyée aura la forme `text=monTexte` (la deuxième partie varie selon le texte saisi). La destination et la méthode utilisées pour l'envoi des données dépend des attributs utilisés sur l'élément `<form>` (ainsi que d'autres détails). Pour plus d'informations, vous pouvez lire [Envoyer les données d'un formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data).
 
 ### Ajouter un raccourci clavier
 
-Les raccourcis claviers permettent à l'utilisateur d'utiliser une touche du clavier ou une combinaison de touches afin de déclencher l'action d'un bouton. Pour ajouter un raccourci à un bouton d'envoi, on peut utiliser l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Global_attributes#accesskey).
+Les raccourcis claviers permettent à l'utilisateur d'utiliser une touche du clavier ou une combinaison de touches afin de déclencher l'action d'un bouton. Pour ajouter un raccourci à un bouton d'envoi, on peut utiliser l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes#accesskey).
 
-Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [accesskey](/fr/docs/Web/HTML/Global_attributes#accesskey) pour la liste de ces touches).
+Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [accesskey](/fr/docs/Web/HTML/Reference/Global_attributes#accesskey) pour la liste de ces touches).
 
 ```html
 <form>
@@ -154,7 +154,7 @@ Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit
 
 ### Activer et désactiver un bouton d'envoi
 
-Si on souhaite désactiver un bouton, il sufft d'utiliser l'attribut booléen universel [`disabled`](/fr/docs/Web/HTML/Global_attributes#disabled) :
+Si on souhaite désactiver un bouton, il sufft d'utiliser l'attribut booléen universel [`disabled`](/fr/docs/Web/HTML/Reference/Global_attributes#disabled) :
 
 ```html
 <input type="submit" value="Disabled" disabled />
@@ -163,10 +163,10 @@ Si on souhaite désactiver un bouton, il sufft d'utiliser l'attribut booléen un
 Pour activer / désactiver le bouton dynamiquement, on pourra manipuler l'attribut DOM `disabled` avec la valeur `true` ou `false` en JavaScript (avec une instruction similaire à `btn.disabled = true`).
 
 > [!NOTE]
-> Voir la page [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button#d%c3%a9sactiver_et_activer_un_bouton) pour plus d'exemples concernant l'activation/désactivation des boutons liés à un formulaire.
+> Voir la page [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button#d%c3%a9sactiver_et_activer_un_bouton) pour plus d'exemples concernant l'activation/désactivation des boutons liés à un formulaire.
 
 > [!NOTE]
-> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
+> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ## Validation
 
@@ -222,4 +222,4 @@ Voir les exemples ci-avant.
 - L'élément {{HTMLElement("button")}}.
 - [Apprendre les formulaires et les boutons](/fr/docs/Learn/HTML/Forms_and_buttons)
 - [L'accessibilité et les formulaires](/fr/docs/Web/Accessibility/ARIA)
-- [Les formulaires HTML](/fr/docs/Learn/Forms)
+- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)

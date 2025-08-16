@@ -131,7 +131,7 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 
 L'utilisation de grandes portions de textes avec `font-style: all-small-caps` ou `font-style: all-petite-caps` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_W3C Understanding WCAG 2.1_ (en anglais)](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Spécifications

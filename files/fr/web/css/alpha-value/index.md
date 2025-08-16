@@ -5,7 +5,7 @@ slug: Web/CSS/alpha-value
 
 {{CSSRef}}
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_Types) CSS **`<alpha-value>`** représente une valeur qui peut être un nombre ({{cssxref("&lt;number&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) et qui indique le [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) ou _l'opacité_ d'une couleur.
+Le [type de donnée](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS **`<alpha-value>`** représente une valeur qui peut être un nombre ({{cssxref("&lt;number&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) et qui indique le [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) ou _l'opacité_ d'une couleur.
 
 ## Syntaxe
 

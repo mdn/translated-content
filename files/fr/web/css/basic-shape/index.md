@@ -62,7 +62,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 Lorsque cette syntaxe est utilisée pour définir des formes, la boîte de référence sera indiquée par chaque propriété qui utilise des valeurs `<basic-shape>`. L'origine du repère utilisé se situe dans le coin en haut à gauche de la boîte de référence avec un axe des abscisses allant vers la droite et un axe des ordonnées allant vers le bas. Toutes les longueurs exprimées en pourcentages sont calculées en fonction des dimensions de la boîte de référence.
 
-Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Value_definition_syntax)).
+Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)).
 
 - `inset()`
   - : Cette fonction permet de définir un rectangle incrusté (_inset_).
@@ -84,7 +84,7 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
     polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
     ```
 
-    `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Attribute/fill-rule) utilisée pour déterminer l'intérieur du polygone. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut pour cet argument est `nonzero`.
+    `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) utilisée pour déterminer l'intérieur du polygone. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut pour cet argument est `nonzero`.
 
     Ensuite, chaque paire d'arguments dans la liste représente les coordonnées _xi_ et _yi_ du i-ème sommet du polygone.
 
@@ -117,9 +117,9 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
     path( [<fill-rule>,]? <string>)
     ```
 
-    L'argument optionnel `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Attribute/fill-rule) utilisée pour déterminer l'intérieur du chemin. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut est `nonzero`.
+    L'argument optionnel `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) utilisée pour déterminer l'intérieur du chemin. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut est `nonzero`.
 
-    L'argument obligatoire `<string>` est une chaîne de caractères, entre quotes, représentant [un chemin SVG](/fr/docs/Web/SVG/Attribute/d).
+    L'argument obligatoire `<string>` est une chaîne de caractères, entre quotes, représentant [un chemin SVG](/fr/docs/Web/SVG/Reference/Attribute/d).
 
 Les arguments qui ne sont pas définis ci-avant suivent cette syntaxe :
 

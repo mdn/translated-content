@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/input/datetime-local
 
 {{HTMLSidebar}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`"datetime-local"`** permettent de créer des champs destinés à saisir simplement une date (définie par une année, un mois, et un jour) et une heure (définie par une heure et une minute). Il n'y a pas de secondes dans ce contrôle.
+Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut **`"datetime-local"`** permettent de créer des champs destinés à saisir simplement une date (définie par une année, un mois, et un jour) et une heure (définie par une heure et une minute). Il n'y a pas de secondes dans ce contrôle.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
@@ -36,7 +36,7 @@ label {
 }
 ```
 
-L'interface utilisateur du contrôle varie selon les navigateurs. La prise en charge de cette fonctionnalité est hétérogène&nbsp;: Chrome/Opera et Edge l'implémentent pour les navigateurs de bureau et la plupart des navigateurs mobiles l'implémentent. Pour les navigateurs qui n'implémentent pas cette fonctionnalité, le contrôle utilisé est celui de [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
+L'interface utilisateur du contrôle varie selon les navigateurs. La prise en charge de cette fonctionnalité est hétérogène&nbsp;: Chrome/Opera et Edge l'implémentent pour les navigateurs de bureau et la plupart des navigateurs mobiles l'implémentent. Pour les navigateurs qui n'implémentent pas cette fonctionnalité, le contrôle utilisé est celui de [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text).
 
 Le contrôle est spécifié afin de pouvoir représenter une heure et une date locales et _pas nécessairement la date et l'heure locale de l'utilisatrice ou l'utilisateur_. Autrement dit, une implémentation devrait autoriser toute combinaison valide (d'année / mois / jour / heure / minutes) même si cette combinaison n'est pas valide pour le fuseau horaire de l'utilisatrice ou l'utilisateur (par exemple pour les fuseaux horaires qui ne gèrent pas les heures d'été). Certains navigateurs mobiles (sur iOS par exemple) n'implémentent pas cette règle correctement.
 
@@ -71,7 +71,7 @@ Certains navigateurs pourront utiliser un contrôle avec un texte simple et vér
 
 ## Valeur
 
-Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui représente la valeur de la date saisie dans le contrôle. Le format utilisable est décrit dans [cette section de l'article sur les formats](/fr/docs/Web/HTML/Date_and_time_formats). Il est possible d'indiquer une date par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)&nbsp;:
+Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui représente la valeur de la date saisie dans le contrôle. Le format utilisable est décrit dans [cette section de l'article sur les formats](/fr/docs/Web/HTML/Guides/Date_and_time_formats). Il est possible d'indiquer une date par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value)&nbsp;:
 
 ```html
 <label for="party">Veuillez saisir une date et une heure pour la fête :</label>
@@ -87,7 +87,7 @@ Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Glob
 On notera ici que le format de la date affichée n'est pas celui utilisé pour écrire la valeur de l'attribut `value`. Le format d'affichage de la date sera choisi en fonction de la locale du système d'exploitation de l'utilisatrice ou l'utilisateur. En revanche, l'attribut `value` sera toujours formaté de la façon suivante&nbsp;: `yyyy-MM-ddThh:mm`. Lorsque la valeur est envoyée au serveur, elle aura donc ce format&nbsp;: `partydate=2017-06-01T08:30`.
 
 > [!NOTE]
-> Attention si les données sont envoyées avec la méthode HTTP [`GET`](/fr/docs/Web/HTTP/Methods/GET), les deux points (`:`) devront être échappés pour être intégrés dans les paramètres de l'URL. Avec l'exemple précédent, cela signifie qu'on enverra `partydate=2017-06-01T08%3A30`. Si on souhaite échapper une chaîne de caractères de la même façon en JavaScript, on pourra utiliser [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI).
+> Attention si les données sont envoyées avec la méthode HTTP [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET), les deux points (`:`) devront être échappés pour être intégrés dans les paramètres de l'URL. Avec l'exemple précédent, cela signifie qu'on enverra `partydate=2017-06-01T08%3A30`. Si on souhaite échapper une chaîne de caractères de la même façon en JavaScript, on pourra utiliser [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI).
 
 En JavaScript, Il est également possible de définir la valeur de la date utilisée dans le contrôle via la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement). Par exemple&nbsp;:
 
@@ -100,17 +100,17 @@ Plusieurs méthodes, fournies par JavaScript (cf. [`Date`](/fr/docs/Web/JavaScri
 
 ## Attributs supplémentaires
 
-En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de type `date` gèrent les attributs suivants.
+En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), les champs de type `date` gèrent les attributs suivants.
 
 ### `max`
 
-La date/heure la plus avancée qui peut être saisie dans le contrôle. Si la valeur de [`value`](/fr/docs/Web/HTML/Element/input#attr-value) est supérieure à la date indiquée par cet attribut, l'élément ne respectera pas [les contraintes de validation](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `max` n'est pas une chaîne de caractères qui suit le format `"yyyy-MM-ddThh:mm"`, il n'y aura pas de valeur maximale.
+La date/heure la plus avancée qui peut être saisie dans le contrôle. Si la valeur de [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value) est supérieure à la date indiquée par cet attribut, l'élément ne respectera pas [les contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `max` n'est pas une chaîne de caractères qui suit le format `"yyyy-MM-ddThh:mm"`, il n'y aura pas de valeur maximale.
 
 La valeur de cet attribut doit être une date supérieure ou égale à celle indiquée par l'attribut `min`.
 
 ### `min`
 
-La date/heure minimale qui peut être saisie dans le contrôle. Toute date/heure saisie antérieure à celle-ci ne respectera pas [les contraintes de validation](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `min` n'est pas une chaîne de caractères qui suit le format `"yyyy-MM-ddThh:mm"`, il n'y aura pas de valeur minimale.
+La date/heure minimale qui peut être saisie dans le contrôle. Toute date/heure saisie antérieure à celle-ci ne respectera pas [les contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `min` n'est pas une chaîne de caractères qui suit le format `"yyyy-MM-ddThh:mm"`, il n'y aura pas de valeur minimale.
 
 La valeur de cet attribut doit être une date antérieure ou égale à celle indiquée par l'attribut `max`.
 
@@ -135,7 +135,7 @@ Dans les exemples suivants, nous verrons certains cas d'utilisation plus complex
 
 ### Utilisation simple de `datetime-local`
 
-Dans sa forme la plus simple, `<input type="datetime-local">` peut s'utiliser avec un élément `<input>` et un élément [`<label>`](/fr/docs/Web/HTML/Element/label) comme ceci&nbsp;:
+Dans sa forme la plus simple, `<input type="datetime-local">` peut s'utiliser avec un élément `<input>` et un élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) comme ceci&nbsp;:
 
 ```html
 <form>
@@ -182,15 +182,15 @@ Par conséquent&nbsp;:
 
 ### Paramétrer le fuseau horaire
 
-Les champs `datetime-local` ne permettent pas d'indiquer le fuseau horaire de la date/heure utilisée. Cette caractéristique était disponible pour les champs de type [`datetime`](/fr/docs/Web/HTML/Element/input/datetime-local) qui est désormais obsolète (retiré de la spécification). Ce type de champ a été retiré en raison d'un manque d'implémentation de la part des navigateurs et des problèmes relatifs à l'ergonomie. Il est plus simple d'avoir un contrôle séparé pour indiquer le fuseau horaire.
+Les champs `datetime-local` ne permettent pas d'indiquer le fuseau horaire de la date/heure utilisée. Cette caractéristique était disponible pour les champs de type [`datetime`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local) qui est désormais obsolète (retiré de la spécification). Ce type de champ a été retiré en raison d'un manque d'implémentation de la part des navigateurs et des problèmes relatifs à l'ergonomie. Il est plus simple d'avoir un contrôle séparé pour indiquer le fuseau horaire.
 
-Ainsi, si vous créez un système où l'utilisatrice ou l'utilisateur est déjà connecté et que le fuseau horaire est déjà connu, celui-ci peut être fourni via un champ de type [`hidden`](/fr/docs/Web/HTML/Element/input/hidden). Par exemple&nbsp;:
+Ainsi, si vous créez un système où l'utilisatrice ou l'utilisateur est déjà connecté et que le fuseau horaire est déjà connu, celui-ci peut être fourni via un champ de type [`hidden`](/fr/docs/Web/HTML/Reference/Elements/input/hidden). Par exemple&nbsp;:
 
 ```html
 <input type="hidden" id="timezone" name="timezone" value="-08:00" />
 ```
 
-Sinon, on peut proposer la sélection d'un fuseau horaire grâce à un élément [`<select>`](/fr/docs/Web/HTML/Element/select)&nbsp;:
+Sinon, on peut proposer la sélection d'un fuseau horaire grâce à un élément [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)&nbsp;:
 
 ```html
 <select name="timezone" id="timezone">
@@ -238,7 +238,7 @@ Si vous essayez d'envoyer le formulaire avec une date incomplète ou en dehors d
 
 {{EmbedLiveSample('', 600, 120)}}
 
-Vous trouverez ensuite la feuille de style CSS utilisée pour l'exemple. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme le contrôle selon que sa valeur est valide ou non. Les icônes indicatives sont placées dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) séparé car, sous Chrome, le contenu généré automatiquement est placé à l'intérieur du contrôle et ne peut pas être affiché/mis en forme efficacement.
+Vous trouverez ensuite la feuille de style CSS utilisée pour l'exemple. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme le contrôle selon que sa valeur est valide ou non. Les icônes indicatives sont placées dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) séparé car, sous Chrome, le contenu généré automatiquement est placé à l'intérieur du contrôle et ne peut pas être affiché/mis en forme efficacement.
 
 ```css
 div {
@@ -343,11 +343,11 @@ input:valid + span:after {
 }
 ```
 
-Actuellement, la meilleure façon de gérer les dates/heures d'une façon homogène pour les différents navigateurs est d'utiliser différents contrôles (via des éléments [`<select>`](/fr/docs/Web/HTML/Element/select)) pour sélectionner l'année, le jour, le mois, la date et l'heure. Il existe également des bibliothèques JavaScript telles que [le sélecteur de date jQuery](https://jqueryui.com/datepicker/) et [le sélecteur d'heure jQuery](https://timepicker.co/).
+Actuellement, la meilleure façon de gérer les dates/heures d'une façon homogène pour les différents navigateurs est d'utiliser différents contrôles (via des éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)) pour sélectionner l'année, le jour, le mois, la date et l'heure. Il existe également des bibliothèques JavaScript telles que [le sélecteur de date jQuery](https://jqueryui.com/datepicker/) et [le sélecteur d'heure jQuery](https://timepicker.co/).
 
 ## Exemples
 
-Dans cet exemple, on crée deux ensembles d'éléments pour sélectionner une date et une heure&nbsp;: un sélecteur natif `<input type="datetime-local">` d'une part et un ensemble de cinq éléments [`<select>`](/fr/docs/Web/HTML/Element/select) d'autre part pour les navigateurs qui ne prennent pas en charge le contrôle natif.
+Dans cet exemple, on crée deux ensembles d'éléments pour sélectionner une date et une heure&nbsp;: un sélecteur natif `<input type="datetime-local">` d'une part et un ensemble de cinq éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) d'autre part pour les navigateurs qui ne prennent pas en charge le contrôle natif.
 
 {{EmbedLiveSample('', 600, 140)}}
 
@@ -436,7 +436,7 @@ input:valid + span:after {
 }
 ```
 
-Une partie intéressante du code est celle où on détecte la prise en charge de la fonctionnalité. Pour cela, dans le script, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Element/input) auquel on attribue le type `datetime-local` puis on vérifie son type juste après. Pour les navigateurs qui ne prennent pas en charge ce type de contrôle, le type aura changé et sera `text`. Si c'est le cas, on masque le contrôle natif et on utilise l'interface utilisateur alternative (composée avec les éléments [`<select>`](/fr/docs/Web/HTML/Element/select)).
+Une partie intéressante du code est celle où on détecte la prise en charge de la fonctionnalité. Pour cela, dans le script, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) auquel on attribue le type `datetime-local` puis on vérifie son type juste après. Pour les navigateurs qui ne prennent pas en charge ce type de contrôle, le type aura changé et sera `text`. Si c'est le cas, on masque le contrôle natif et on utilise l'interface utilisateur alternative (composée avec les éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)).
 
 ```js
 // On définit les différentes variables
@@ -617,9 +617,9 @@ daySelect.onchange = function () {
 
 ## Voir aussi
 
-- L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/input) ainsi que l'interface DOM qui le porte&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date)
-- [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time)
-- [Un tutoriel sur les sélecteurs de date et d'heure](/fr/docs/Learn/Forms/Basic_native_form_controls#sélection_de_date_et_heure)
-- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
-- [La compatibilité des propriétés CSS pour les éléments de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- L'élément générique [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) ainsi que l'interface DOM qui le porte&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
+- [`<input type="date">`](/fr/docs/Web/HTML/Reference/Elements/input/date)
+- [`<input type="time">`](/fr/docs/Web/HTML/Reference/Elements/input/time)
+- [Un tutoriel sur les sélecteurs de date et d'heure](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#sélection_de_date_et_heure)
+- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Guides/Date_and_time_formats)
+- [La compatibilité des propriétés CSS pour les éléments de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)

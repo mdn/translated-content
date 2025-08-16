@@ -6,7 +6,7 @@ original_slug: Web/HTTP/CORS
 
 Le «&nbsp; _Cross-origin resource sharing_ » (CORS) ou « partage des ressources entre origines multiples » (en français, moins usité) est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un agent utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un agent utilisateur réalise une requête HTTP **multi-origine (_cross-origin_)** lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
 
-Prenons un exemple de requête multi-origine : une page HTML est servie depuis `http://domaine-a.com` contient un élément [`<img> src`](/fr/docs/Web/HTML/Element/img#attr-src) ciblant `http://domaine-b.com/image.jpg`. Aujourd'hui, de nombreuses pages web chargent leurs ressources (feuilles CSS, images, scripts) à partir de domaines séparés (par exemple des CDN (_Content Delivery Network_ en anglais ou « Réseau de diffusion de contenu »).
+Prenons un exemple de requête multi-origine : une page HTML est servie depuis `http://domaine-a.com` contient un élément [`<img> src`](/fr/docs/Web/HTML/Reference/Elements/img#attr-src) ciblant `http://domaine-b.com/image.jpg`. Aujourd'hui, de nombreuses pages web chargent leurs ressources (feuilles CSS, images, scripts) à partir de domaines séparés (par exemple des CDN (_Content Delivery Network_ en anglais ou « Réseau de diffusion de contenu »).
 
 Pour des raisons de sécurité, les requêtes HTTP multi-origine émises depuis les scripts sont restreintes. Ainsi, {{domxref("XMLHttpRequest")}} et l'[API Fetch](/fr/docs/Web/API/Fetch_API) respectent la règle [d'origine unique](/fr/docs/Web/Security/Same-origin_policy). Cela signifie qu'une application web qui utilise ces API peut uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée, sauf si des en-têtes CORS sont utilisés.
 
@@ -18,7 +18,7 @@ Le CORS permet de prendre en charge des requêtes multi-origines sécurisées et
 
 Cet article est destiné à toutes et à tous.
 
-Il pourra notamment servir aux administrateurs web, aux développeurs côté serveur ainsi qu'aux développeurs côté client. Les navigateurs récents permettent de gérer les règles de partage multi-origine côté client grâce à certaines règles et en-têtes mais cela implique également que des serveurs puissent gérer ces requêtes et réponses. Aussi, pour compléter le spectre concerné, nous vous invitons à lire d'autres articles complétant le point de vue « serveur » (par exemple [cet article utilisant des fragments de code PHP](/fr/docs/Web/HTTP/CORS)).
+Il pourra notamment servir aux administrateurs web, aux développeurs côté serveur ainsi qu'aux développeurs côté client. Les navigateurs récents permettent de gérer les règles de partage multi-origine côté client grâce à certaines règles et en-têtes mais cela implique également que des serveurs puissent gérer ces requêtes et réponses. Aussi, pour compléter le spectre concerné, nous vous invitons à lire d'autres articles complétant le point de vue « serveur » (par exemple [cet article utilisant des fragments de code PHP](/fr/docs/Web/HTTP/Guides/CORS)).
 
 ## Quelles requêtes utilisent le CORS ?
 
@@ -35,7 +35,7 @@ Cet article propose un aperçu général de _Cross-Origin Resource Sharing_ ains
 
 ## Aperçu fonctionnel
 
-Le standard CORS fonctionne grâce à l'ajout de nouveaux [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) qui permettent aux serveurs de décrire un ensemble d'origines autorisées pour lire l'information depuis un navigateur web. De plus, pour les méthodes de requêtes HTTP qui entraînent des effets de bord sur les données côté serveur (notamment pour les méthodes en dehors de {{HTTPMethod("GET")}} ou pour les méthodes {{HTTPMethod("POST")}} utilisées avec certains [types MIME](/fr/docs/Web/HTTP/MIME_types)), la spécification indique que les navigateurs doivent effectuer une requête préliminaire (« _preflight request_ ») et demander au serveur les méthodes prises en charges via une requête utilisant la méthode {{HTTPMethod("OPTIONS")}} puis, après approbation du serveur, envoyer la vraie requête. Les serveurs peuvent également indiquer aux clients s'il est nécessaire de fournir des informations d'authentification (que ce soit des [cookies](/fr/docs/Web/HTTP/Cookies) ou des données d'authentification HTTP) avec les requêtes.
+Le standard CORS fonctionne grâce à l'ajout de nouveaux [en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) qui permettent aux serveurs de décrire un ensemble d'origines autorisées pour lire l'information depuis un navigateur web. De plus, pour les méthodes de requêtes HTTP qui entraînent des effets de bord sur les données côté serveur (notamment pour les méthodes en dehors de {{HTTPMethod("GET")}} ou pour les méthodes {{HTTPMethod("POST")}} utilisées avec certains [types MIME](/fr/docs/Web/HTTP/Guides/MIME_types)), la spécification indique que les navigateurs doivent effectuer une requête préliminaire (« _preflight request_ ») et demander au serveur les méthodes prises en charges via une requête utilisant la méthode {{HTTPMethod("OPTIONS")}} puis, après approbation du serveur, envoyer la vraie requête. Les serveurs peuvent également indiquer aux clients s'il est nécessaire de fournir des informations d'authentification (que ce soit des [cookies](/fr/docs/Web/HTTP/Guides/Cookies) ou des données d'authentification HTTP) avec les requêtes.
 
 Les sections qui suivent évoquent les différents scénarios relatifs au CORS ainsi qu'un aperçu des en-têtes HTTP utilisés.
 
@@ -45,7 +45,7 @@ Voyons ici trois scénarios qui illustrent le fonctionnement du CORS. Tous ces e
 
 Les fragments de code JavaScript (ainsi que les instances serveurs qui gèrent ces requêtes) se trouvent sur <http://arunranga.com/examples/access-control/> et fonctionnent pour les navigateurs qui prennent en charge {{domxref("XMLHttpRequest")}} dans un contexte multi-site.
 
-Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'article [Contrôle d'accès côté serveur](/fr/docs/Web/HTTP/CORS).
+Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'article [Contrôle d'accès côté serveur](/fr/docs/Web/HTTP/Guides/CORS).
 
 ### Requêtes simples
 
@@ -309,7 +309,7 @@ Toutefois, si la requête déclenche une requête préliminaire suite à l'absen
 
 ### Requêtes avec informations d'authentification
 
-Une des fonctionnalités intéressante mise en avant par le CORS (via {{domxref("XMLHttpRequest")}} ou [Fetch](/fr/docs/Web/API/Fetch_API)) est la possibilité d'effectuer des requêtes authentifiées reconnaissant les [cookies HTTP](/fr/docs/Web/HTTP/Cookies) et les informations d'authentification HTTP. Par défaut, lorsqu'on réalise des appels {{domxref("XMLHttpRequest")}} ou [Fetch](/fr/docs/Web/API/Fetch_API) entre différents sites, les navigateurs n'enverront pas les informations d'authentification. Pour cela, il est nécessaire d'utiliser une option spécifique avec le constructeur {{domxref("XMLHttpRequest")}} ou {{domxref("Request")}} lorsqu'on l'appelle.
+Une des fonctionnalités intéressante mise en avant par le CORS (via {{domxref("XMLHttpRequest")}} ou [Fetch](/fr/docs/Web/API/Fetch_API)) est la possibilité d'effectuer des requêtes authentifiées reconnaissant les [cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies) et les informations d'authentification HTTP. Par défaut, lorsqu'on réalise des appels {{domxref("XMLHttpRequest")}} ou [Fetch](/fr/docs/Web/API/Fetch_API) entre différents sites, les navigateurs n'enverront pas les informations d'authentification. Pour cela, il est nécessaire d'utiliser une option spécifique avec le constructeur {{domxref("XMLHttpRequest")}} ou {{domxref("Request")}} lorsqu'on l'appelle.
 
 Dans cet exemple, le contenu chargé depuis `http://toto.example` effectue une requête GET simple vers une ressource située sous `http://truc.autre` qui définit des _cookies_. Voici un exemple de code JavaScript qui pourrait se trouver sur `toto.example` :
 
@@ -501,7 +501,7 @@ Voir [ci-avant pour des exemples d'utilisation de cet en-tête](#preflight).
 
 - [Exemples de codes utilisant `XMLHttpRequest` et le CORS (en anglais)](https://arunranga.com/examples/access-control/)
 - [Exemples de code côté client et côté serveur utilisant le CORS (en anglais)](https://github.com/jackblackevo/cors-jsonp-sample)
-- [Le CORS vu côté serveur (PHP, etc.)](/fr/docs/Web/HTTP/CORS)
+- [Le CORS vu côté serveur (PHP, etc.)](/fr/docs/Web/HTTP/Guides/CORS)
 - {{domxref("XMLHttpRequest")}}
 - [L'API Fetch](/fr/docs/Web/API/Fetch_API)
 - [Utiliser le CORS - HTML5 Rocks (en anglais)](https://www.html5rocks.com/en/tutorials/cors/)
