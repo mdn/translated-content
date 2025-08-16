@@ -76,4 +76,4 @@ l10n:
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
 - [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
 - [CSS ルビレイアウト](/ja/docs/Web/CSS/CSS_ruby_layout)モジュール
-- [CSS テキスト装飾](/en-US/docs/Web/CSS/CSS_text_decoration)モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration)モジュール
