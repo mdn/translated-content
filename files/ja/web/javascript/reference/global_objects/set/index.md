@@ -2,10 +2,8 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 l10n:
-  sourceCommit: 0a9c10fc67901972221dc7b3d006334fbfa73dce
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Set`** オブジェクトは、{{Glossary("Primitive", "プリミティブ値")}}やオブジェクト参照を問わず、あらゆる型で多数の一意の値を格納することができます。
 
@@ -67,7 +65,7 @@ l10n:
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The union of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
@@ -143,8 +141,8 @@ interface GPUSupportedFeatures {
 
 `Set` 風オブジェクトは、読み取り専用か読み書き可能かのどちらかです（上記の IDL で `readonly` キーワードを確認してください。
 
-- 読み取り専用の `Set` 風オブジェクトには [`size`](#set.prototype.size) プロパティがあり、 [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), [`[Symbol.iterator]()`](#set.prototypesymbol.iterator) の各メソッドがあります。
-- 読み書き可能な `Set` 風オブジェクトには、それに加えて [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), [`add()`](#set.prototype.add) の各メソッドがあります。
+- 読み取り専用の `Set` 風オブジェクトには {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, [`Symbol.iterator()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) の各メソッドがあります。
+- 読み書き可能な `Set` 風オブジェクトには、それに加えて {{jsxref("Set/clear", "clear()")}}, {{jsxref("Set/delete", "delete()")}}, {{jsxref("Set/add", "add()")}} の各メソッドがあります。
 
 メソッドとプロパティは `Set` の等価なエンティティと同じ動作をしますが、項目のの型に制限があります。
 
