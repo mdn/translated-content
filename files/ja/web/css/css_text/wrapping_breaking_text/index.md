@@ -2,7 +2,7 @@
 title: テキストの分割と折り返し
 slug: Web/CSS/CSS_text/Wrapping_breaking_text
 l10n:
-  sourceCommit: 587c39b8fe43e66c79c2055b4791a60483049e82
+  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
 
 このガイドは CSS で管理することができるテキストのオーバーフローの様々な方法を説明します。
@@ -148,7 +148,7 @@ CSS はこのようにあふれて表示させますが、これは他の方法�
 ```css live-sample___word-break-checkbox
 .field {
   inline-size: 150px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin-block-end: 1em;
   padding: 10px;
 }
