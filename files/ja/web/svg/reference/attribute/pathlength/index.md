@@ -211,7 +211,7 @@ svg {
 
 ## rect
 
-{{SVGElement('rect')}} では、 `pathLength` により、長方形の全長をユーザー単位で指定することができます。
+{{SVGElement('rect')}} では、 `pathLength` により、矩形の全長をユーザー単位で指定することができます。
 
 <table class="properties">
   <tbody>
