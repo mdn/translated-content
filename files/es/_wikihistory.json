@@ -5071,12 +5071,6 @@
       "pablo.turati"
     ]
   },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-08-24T04:42:05.596Z",
-    "contributors": [
-      "Nachec"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2020-11-04T23:21:08.729Z",
     "contributors": [
@@ -9770,6 +9764,12 @@
     "modified": "2019-03-23T22:36:23.444Z",
     "contributors": [
       "pekechis"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-08-24T04:42:05.596Z",
+    "contributors": [
+      "Nachec"
     ]
   },
   "Web/CSS/CSS_transforms/Using_CSS_transforms": {
