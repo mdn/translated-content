@@ -1,8 +1,6 @@
 ---
 title: PerformanceEventTiming
 slug: Web/API/PerformanceEventTiming
-page-type: web-api-interface
-browser-compat: api.PerformanceEventTiming
 ---
 
 {{APIRef("Performance API")}}
