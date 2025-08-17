@@ -2,7 +2,7 @@
 title: display
 slug: Web/CSS/display
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
 
 **`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックボックスとインラインボックス](/ja/docs/Web/CSS/CSS_display/Flow_layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などを設定します。
@@ -33,18 +33,17 @@ display: grid;
 
 ```html interactive-example
 <p>
-  Apply different <code>display</code> values on the dashed orange-bordered
-  <code>div</code>, which contains three child elements.
+  さまざまな <code>display</code> 値を、 3 つの子要素が含まれている、オレンジ色の破線の境界線のある <code>div</code> に適用します。
 </p>
 <section class="default-example" id="default-example">
   <div class="example-container">
-    Some text A.
+    テキスト A。
     <div id="example-element">
-      <div class="child">Child 1</div>
-      <div class="child">Child 2</div>
-      <div class="child">Child 3</div>
+      <div class="child">子要素 1</div>
+      <div class="child">子要素 2</div>
+      <div class="child">子要素 3</div>
     </div>
-    Some text B.
+    テキスト B。
   </div>
 </section>
 ```
@@ -56,7 +55,7 @@ display: grid;
 }
 
 code {
-  background: #8888;
+  background: #88888888;
 }
 
 #example-element {
@@ -85,7 +84,7 @@ display: grid;
 display: inline-grid;
 display: flow-root;
 
-/* ボックスの生成 */
+/* ボックスの抑制 */
 display: none;
 display: contents;
 
@@ -268,15 +267,6 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 これらの変更の詳細については、 [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)の記事を参照してください。
 
-### グローバル
-
-```css
-/* グローバル値 */
-display: inherit;
-display: initial;
-display: unset;
-```
-
 ## 解説
 
 `display` に設定できる様々な種類の値の個々のページでは、それらの値が動作する機能の複数の例をを設定しています。 — [構文](#構文)の節を参照してください。なお、 display の様々な値については、以下の資料で詳しく解説していますので、ご覧ください。
@@ -311,10 +301,9 @@ display: unset;
 - [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
 - [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [グリッドレイアウトのアイテムの配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout)
 - [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ### display のアニメーション
@@ -508,7 +497,8 @@ updateDisplay();
 
 ## 関連情報
 
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
+- SVG の {{SVGAttr("display")}} 属性
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
