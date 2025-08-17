@@ -153,7 +153,7 @@ const exposedEventsList = [...performance.eventCounts.keys()];
 
 ### 获取事件时间信息
 
-要获取事件时间信息，请创建一个 {{domxref("PerformanceObserver")}} 实例，然后调用其 [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) 方法，传入 `"event"` 或 `"first-input"` 作为 [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) 选项的值。需要将 `buffered` 设置为 `true` 才能访问用户代理在构建文档时缓冲的事件。然后，`PerformanceObserver` 对象的回调会接收到一个 `PerformanceEventTiming` 对象列表，您可以对其进行分析。
+要获取事件时间信息，请创建一个 {{domxref("PerformanceObserver")}} 实例，然后调用其 [`observe()`](/zh-CN/docs/Web/API/PerformanceObserver/observe) 方法，传入 `"event"` 或 `"first-input"` 作为 [`type`](/zh-CN/docs/Web/API/PerformanceEntry/entryType) 选项的值。需要将 `buffered` 设置为 `true` 才能访问用户代理在构建文档时缓冲的事件。然后，`PerformanceObserver` 对象的回调会接收到一个 `PerformanceEventTiming` 对象列表，您可以对其进行分析。
 
 ```js
 const observer = new PerformanceObserver((list) => {
