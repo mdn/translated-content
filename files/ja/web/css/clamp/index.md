@@ -1,11 +1,11 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`clamp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、値を上限と下限の間に制限します。 `clamp()` によって、定義された最大値と最小値の間の値を選択することができます。最小値、推奨値、最大値の3つの引数を取ります。 `clamp()` 関数は {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;integer&gt;")}} のいずれでも使用することができます。
-
-`clamp(MIN, VAL, MAX)` は `{{CSSxRef("max()")}}(MIN, {{CSSxRef("min()")}}(VAL, MAX))` と同等です。
+**`clamp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、定義された下限値と上限値の範囲内の値を、その範囲内に制限します。この関数は、最小値、推奨値、および最大許容値の 3 つの引数を取ります。
 
 {{InteractiveExample("CSS デモ: clamp()")}}
 
@@ -24,8 +24,7 @@ font-size: clamp(1rem, 10vw, 2rem);
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    The font-size of this text varies depending on the base font of the page,
-    and the size of the viewport.
+    このテキストのフォントサイズは、ページのベースフォントとビューポートのサイズによって異なります。
   </div>
 </section>
 ```
@@ -34,24 +33,46 @@ font-size: clamp(1rem, 10vw, 2rem);
 
 ## 構文
 
-`clamp()` 関数は、3 つの式を最小値、推奨値、最大値の順で引数としてカンマ区切りで受け取ります。
+```css
+/* 静的な値 */
+width: clamp(200px, 40%, 400px);
+width: clamp(20rem, 30vw, 70rem);
+width: clamp(10vw, 20em, 100vw);
 
-最小値は最も小さい (最も負側の) 値です。これは許される値の範囲の下限です。推奨値がこの値よりも小さい場合、最小値が使用されます。
+/* 計算値 */
+width: clamp(min(10vw, 20rem), 300px, max(90vw, 55rem));
+width: clamp(100px, calc(30% / 2rem + 10px), 900px);
+```
 
-推奨値は、結果が最小値と最大値の間である限り使用される値の式です。
+### 引数
 
-最大値は最も大きな (最も正側の) 値で、推奨値がこの上限値よりも大きい場合にプロパティの値に代入されます。
+`clamp(min, val, max)` 関数は、カンマで区切られた 3 つの式を引数として受け入れます。
 
-式は計算関数 (詳しくは {{CSSxRef("calc()")}} を参照)、リテラル値、 {{CSSxRef("attr()")}} のように正しい引数の型 ({{CSSxRef("&lt;length&gt;")}} など) として評価されるその他の式、重複した {{CSSxRef("min()")}} および {{CSSxRef("max()")}} 関数などです。数式としては、 `calc()` 関数自体を使用せずに加算、減算、乗算、除算を使用することができます。計算順を指定するために括弧を使用することもできます。
+- `min`
+  - : 最小値は、最小（最も負側の）値です。これは、許容値の範囲の下限です。推奨値がこれより小さい場合、最小値が使用されます。
+
+- `val`
+  - : 推奨値は、結果が最小値と最大値の間にある場合にその値が使用される式です。
+
+- `max`
+  - : 最大値は、推奨値がこれより大きい場合に、プロパティの値に代入される最大の（最も正側の）式値です。
+
+式は、計算関数（詳しくは {{CSSxRef("calc", "calc()")}} を参照）、リテラル値、有効な引数型として評価されるその他の式（{{CSSxRef("&lt;length&gt;")}} など）、または入れ子になった {{CSSxRef("min", "min()")}} および {{CSSxRef("max", "max()")}} 関数です。数式としては、 `calc()` 関数自体を使用せずに加算、減算、乗算、除算を使用することができます。計算順を指定するために括弧を使用することもできます。
 
 式の中でそれぞれの値に異なる単位を使用し、いずれかの引数を構成する計算関数の中で異なる単位を使用することもできます。
 
-### メモ
+この関数を使用する際には、次の点に留意してください。
 
-- 自動レイアウト、固定レイアウトを問わず、表の列、列グループ、行、行グループ、セルの幅や高さのパーセント値を出力する数式は、 `auto` が指定されたものとして扱われる*ことが*あります。
-- 式の値として `max()` および `min()` 関数を重ねることは許可されており、内側のものは単純な括弧として扱われます。式は完全な数式であるため、 `calc()` 関数自体を使用せずに加算、減算、乗算、除算を使用することができます。
-- 式は加算 ( + )、減算 ( - )、乗算 ( \* )、除算 ( / ) 演算子で組み合わせた値にすることがができ、標準の演算子の優先順位を使用します。 + および - 演算子の両側に空白を入れることを忘れないでください。式の中の値には {{CSSxRef("&lt;length&gt;")}} の構文の値にすることができます。式の中のそれぞれの値に異なる単位を使用することができます。必要に応じて、計算順を指定するために括弧を使用することもできます。
+- 自動レイアウト、固定レイアウトを問わず、表の列、列グループ、行、行グループ、セルの幅や高さのパーセント値を出力する数式は、 `auto` が指定されたものとして扱われることがあります。
+- 式の値として `max()` および `min()` 関数を重ねることは許可されており、内側のものは単純な括弧として扱われます。式は完全な数式であるため、 calc() 関数自体を使用せずに加算、減算、乗算、除算を使用することができます。
+- 式は加算 ( `+` )、減算 ( `-` )、乗算 ( `*` )、除算 ( `/` ) 演算子で組み合わせた値にすることがができ、標準の演算子の優先順位を使用します。 + および - 演算子の両側に空白を入れることを忘れないでください。式の中の値には {{CSSxRef("&lt;length&gt;")}} の構文の値にすることができます。式の中のそれぞれの値に異なる単位を使用することができます。必要に応じて、計算順を指定するために括弧を使用することもできます。
 - {{CSSxRef("min()")}} および {{CSSxRef("max()")}} を `clamp()` 関数の中で使用したくなるでしょう。
+
+### 返値
+
+`clamp(MIN, VAL, MAX)` は `max(MIN, min(VAL, MAX))` として解決されます。
+
+指定された引数に基づいて、この関数は {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;integer&gt;")}} のいずれかを返します。
 
 ### 形式文法
 
@@ -59,22 +80,36 @@ font-size: clamp(1rem, 10vw, 2rem);
 
 ## 例
 
-### min, max, clamp の比較
+### min(), max(), clamp() の比較
 
-この例では、いくつかの大きさに対して {{CSSxRef("min()")}}、{{CSSxRef("max()")}}、{{CSSxRef("clamp()")}} を利用した単純なレスポンシブの例を紹介します。
+この例では、レスポンシブにサイズを設定するために {{CSSxRef("min", "min()")}}、
+{{CSSxRef("max", "max()")}}、`clamp()` を使用する ウェブページを指定しています。
 
-[`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) 要素の [`width`](/ja/docs/Web/CSS/width) には、`min(1000px, calc(70% + 100px))` が設定されています。これは、`calc(70% + 100px)` の結果が `1000px` よりも小さい場合には、その値に設定されることを意味しています。`min()` では最大値を設定することができます。
+この例では、3 つの方法でページ要素のサイズを調整しています。
 
-[`<p>`](/ja/docs/Web/HTML/Reference/Elements/p) 要素の [`font-size`](/ja/docs/Web/CSS/font-size) には、`max(1.2rem, 1.2vw)` が設定されています。すなわち、計算された `1.2vw` の値が `1.2rem` の値よりも大きい場合には、代わりにその値が設定されます。`max()` では、最小値を設定することができ、このような場合にはアクセシビリティの観点からも便利です。
+- テキストの行の長さ
+- 段落テキストのフォントサイズ
+- 見出しテキストのフォントサイズ
 
-[`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素の `font-size` は、`clamp(1.8rem, 2.5vw, 2.8rem)` と設定されています。これは、`2.5vw` の計算値が `1.8rem` の値よりも大きくなるまで、`font-size` が `1.8rem` に設定されることを意味します。この時点では、`2.5vw` の計算値が `2.8rem` の計算値よりも大きくなるまで、`font-size` は `2.5vw` に設定されます。この時点で、`font-size` は `2.8rem` に設定されます。`clamp()` では、最小値と最大値を設定することができます。
+3 つのケースすべてにおいて、ページはビューポート相対単位（[`vw`](/ja/docs/Web/CSS/length#vw) と {{cssxref("percentage")}}）、ビューポートの幅に応じて変化するサイズを設定し、ビューポート相対ではない値（[`rem`](/ja/docs/Web/CSS/length#rem) と [`px`](/ja/docs/Web/CSS/length#px)）を組み合わせて、最小サイズや最大サイズを実装しています。
 
-操作してみたい場合は、[GitHub で公開されている例](https://mdn.github.io/css-examples/min-max-clamp/)を参照してください。
+例は <https://mdn.github.io/css-examples/min-max-clamp/> にあります。新しいウィンドウで開いて、ウィンドウの幅を調整してみてください。
+
+**行の長さ** （[`<body>`](/ja/docs/Web/CSS/width) 要素の [`width`](/ja/docs/Web/CSS/width) によって制御される）は、ウィンドウの幅が広くなるにつれて長くなりますが、ある点 (`1000px`) を超えるとそれ以上は長くなりません。 `min()` を使用して、**行の最大長**を設定しています。これは `1000px` 未満にはなりますが、それ以上にはなりません。長い行は読みにくいため、行の長さを制限したい場合が多いため、これは役立ちます。これを実現するために、 `min(1000px, calc(70% + 100px))` を使用しています。パーセント値による計算の結果が `1000px` を超えた場合、固定値 `1000px` に切り替わります。
+
+**段落テキストのサイズ**は、[`font-size`](/ja/docs/Web/CSS/font-size) で制御され、 [`<p>`](/ja/docs/Web/HTML/Reference/Elements/p) 要素によって制御される、ウィンドウが狭くなるにつれて減少しますが、ある点（`1.2vw` が `1.2rem` 未満になる点）を超えると、それ以上は小さくはなりません。ここでは、最小フォントサイズを設定するために `max()` を使用しています。フォントは `1.2rem` より大きく伸長することはできますが、それより小さくはなりません。これは、非常に小さなテキストは読みにくいため、役立ちます。これを実現するために、 `max(1.2rem, 1.2vw)` を使用しています。これは、 `font-size` が `1.2rem` に設定されることを意味します。ただし、 `1.2vw` の計算値が `1.2rem` より大きい場合は、代わりに `1.2vw` に設定されます。
+
+[`<h1>`](/ja/docs/Web/CSS/font-size) 要素の [`font-size`](/ja/docs/Web/CSS/font-size) によって制御される **見出しテキストのサイズ** は、最大値と最小値の両方のしきい値を持つビューポート相対値です。これを実現するために、`clamp(1.8rem, 2.5vw, 2.8rem)` を使用します。ビューポート相対の値は `2.5vw` ですが、`1.8rem` と `2.8rem` の間に制限されているため、結果は次のようになります。
+
+- `2.5vw` の計算値が `1.8rem` 未満の場合、`1.8rem` が使用されます
+- `2.5vw` の計算値が `2.8rem` より大きい場合、`2.8rem` が使用されます。
+
+これにより、見出しのテキストが、とても狭いウィンドウでは小さくなりすぎたり、とても広いウィンドウでは大きくなりすぎたりすることを防ぎます。
 
 #### HTML
 
 ```html
-<h1>Simple responsive test</h1>
+<h1>基本的なレスポンシブ検査</h1>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci,
   eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat
@@ -132,7 +167,7 @@ p {
 
 ## 関連情報
 
-- {{CSSxRef("calc()")}}
-- {{CSSxRef("max()")}}
-- {{CSSxRef("min()")}}
-- [CSS 値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- {{CSSxRef("calc", "calc()")}}
+- {{CSSxRef("max", "max()")}}
+- {{CSSxRef("min", "min()")}}
+- [学習: CSS 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

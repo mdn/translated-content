@@ -1,11 +1,13 @@
 ---
 title: pow()
 slug: Web/CSS/pow
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`pow()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)は、基数を累乗した値を返す指数関数です。
+**`pow()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、数値の累乗の値を返す指数関数です。
 
-{{CSSxRef("exp")}} 関数は `pow()` の特別なケースで、基数が数学定数 [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) になります。
+{{CSSxRef("exp")}} 関数は、基数の値が数学定数 [e](<https://ja.wikipedia.org/wiki/ネイピア数>) である `pow()` の特殊なケースです。
 
 ## 構文
 
@@ -18,16 +20,16 @@ width: calc(10px * pow(2, 10)); /* 10px * 1024 = 10240px */
 
 ### 引数
 
-`pow(base, number)` 関数は、カンマで区切られた 2 つの値を引数で受け取ります。
+`pow(base, number)` 関数は、カンマで区切られた 2 つの値を引数として受け入れます。
 
 - `base`
-  - : {{CSSxRef("&lt;number&gt;")}} に解決される計算式で、基数を表します。
+  - : 底を表す {{CSSxRef("&lt;number&gt;")}} に解決される計算式。
 - `number`
-  - : {{CSSxRef("&lt;number&gt;")}} に解決される計算式で、指数を表します。
+  - : 指数を表す {{CSSxRef("&lt;number&gt;")}} に解決される計算式。
 
 ### 返値
 
-返値は {{CSSxRef("&lt;number&gt;")}} で、base<sup>number</sup>、つまり `base` を `number` 乗した値になります。
+{{CSSxRef("&lt;number&gt;")}} で、 base<sup>number</sup>、つまり `base` を `number` 乗した値を表します。
 
 ## 形式文法
 
@@ -35,19 +37,19 @@ width: calc(10px * pow(2, 10)); /* 10px * 1024 = 10240px */
 
 ## 例
 
-### 固定比率で見出しを拡大する
+### 見出しを固定比率で変倍する
 
-`pow()` 関数は、ページ上のすべてのフォントサイズを固定比率で関連付ける CSS モジュラースケールのような戦略に役立ちます。
+`pow( )` 関数は、CSS モジュラースケールと同様の戦略に役立ちます。これは、ページ上のすべてのフォントサイズを、固定された比率で相互に関連付けます。
 
 #### HTML
 
 ```html
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
+<h1>見出し 1</h1>
+<h2>見出し 2</h2>
+<h3>見出し 3</h3>
+<h4>見出し 4</h4>
+<h5>見出し 5</h5>
+<h6>見出し 6</h6>
 ```
 
 #### CSS

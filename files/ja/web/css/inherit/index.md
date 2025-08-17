@@ -2,7 +2,7 @@
 title: inherit
 slug: Web/CSS/inherit
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。

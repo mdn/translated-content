@@ -123,9 +123,15 @@ chooseToppings()
 
 ```js
 chooseToppings()
-  .then((toppings) => placeOrder(toppings))
-  .then((order) => collectOrder(order))
-  .then((pizza) => eatPizza(pizza))
+  .then((toppings) => {
+    return placeOrder(toppings);
+  })
+  .then((order) => {
+    return collectOrder(order);
+  })
+  .then((pizza) => {
+    return eatPizza(pizza);
+  })
   .catch(failureCallback);
 ```
 

@@ -2,10 +2,10 @@
 title: abs()
 slug: Web/CSS/abs
 l10n:
-  sourceCommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`abs()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は、引数の絶対値を同じ型で返します。
+**`abs()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、引数の絶対値を同じ型で返します。
 
 ## 構文
 
@@ -55,9 +55,9 @@ div {
 }
 ```
 
-### 後方互換性のためのフォールバック
+### 後方互換性のための代替手段
 
-CSS `abs()` 関数をサポートしていない古いブラウザーでは、次のように CSS {{CSSxRef("max")}} 関数を使用することで同じ結果を得られます。
+CSS の `abs()` 関数に対応していない古いブラウザーでは、次のように CSS {{CSSxRef("max")}} 関数を使用することで同じ結果を得られます。
 
 ```css
 p {
@@ -65,7 +65,7 @@ p {
 }
 ```
 
-{{CSSxRef("max")}} 関数により、`var(--lh)` と `-1 * var(--lh)` のうち大きい値が返されます。`--lh` が正であれ負であれ、返される値は常に正であり、これは絶対値となります。
+{{CSSxRef("max")}} 関数により、 `var(--lh)` と `-1 * var(--lh)` のうち大きい値が返されます。 `--lh` が正であれ負であれ、返される値は常に正であり、これは絶対値となります。
 
 ## 仕様書
 

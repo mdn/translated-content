@@ -92,5 +92,5 @@ for us to breathe.
 ## 関連情報
 
 - {{cssxref('scroll-timeline')}}, {{cssxref('scroll-timeline-axis')}}, {{cssxref('scroll-timeline-name')}}
-- [CSS オーバーフロー](/en-US/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS スクロールスナップ](/en-US/docs/Web/CSS/CSS_scroll_snap)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
