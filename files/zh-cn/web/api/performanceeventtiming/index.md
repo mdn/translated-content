@@ -129,7 +129,7 @@ const exposedEventsList = [...performance.eventCounts.keys()];
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - ：返回关联事件的类型。
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - ：返回一个 {{domxref("DOMHighResTimeStamp")}}，表示关联事件的 [`timestamp`](/en-US/docs/Web/API/Event/timeStamp) 属性。这是事件创建的时间，可以被视为用户交互发生时间的代理。
+  - ：返回一个 {{domxref("DOMHighResTimeStamp")}}，表示关联事件的 [`timestamp`](/zh-CN/docs/Web/API/Event/timeStamp) 属性。这是事件创建的时间，可以被视为用户交互发生时间的代理。
 
 该接口还支持以下属性：
 
