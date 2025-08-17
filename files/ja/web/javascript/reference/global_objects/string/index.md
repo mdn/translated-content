@@ -2,10 +2,8 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`String`** オブジェクトは文字の並びを表したり操作したりするために使用されます。
 
@@ -304,7 +302,7 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 > [!NOTE]
 > 非推奨です。これらのメソッドは避けてください。
 >
-> これらはとても古い HTML 標準に基づいており、現在利用できる HTML タグや属性のサブセットしか提供していないため、使用するのには限界があります。多くが今日では非推奨または標準外のマークアップを生成します。さらに、単純な文字列の連結を検証やサニタイズなしに行うため、[`innerHTML`](/ja/docs/Web/API/Element/innerHTML) を使用して直接挿入するとセキュリティ上の脅威となる可能性があります。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model)、例えば [`document.createElement()`](/ja/docs/Web/API/Document/createElement) など使用してください。
+> これらはとても古い HTML 標準に基づいており、現在利用できる HTML タグや属性のサブセットしか提供していないため、使用するのには限界があります。多くが今日では非推奨または標準外のマークアップを生成します。さらに、文字列の連結を検証やサニタイズなしに行うため、[`innerHTML`](/ja/docs/Web/API/Element/innerHTML) を使用して直接挿入するとセキュリティ上の脅威となる可能性があります。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model)、例えば [`document.createElement()`](/ja/docs/Web/API/Document/createElement) など使用してください。
 
 - {{jsxref("String.prototype.anchor()")}} {{deprecated_inline}}
   - : [`<a name="name">`](/ja/docs/Web/HTML/Reference/Elements/a#name)（ハイパーテキストのターゲット）
