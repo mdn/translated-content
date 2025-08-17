@@ -134,7 +134,7 @@ const exposedEventsList = [...performance.eventCounts.keys()];
 该接口还支持以下属性：
 
 - {{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}}
-  - ：返回关联事件的 [`cancelable`](/en-US/docs/Web/API/Event/cancelable) 属性。
+  - ：返回关联事件的 [`cancelable`](/zh-CN/docs/Web/API/Event/cancelable) 属性。
 - {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - ：返回唯一标识触发相关事件的用户交互的 ID。
 - {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
