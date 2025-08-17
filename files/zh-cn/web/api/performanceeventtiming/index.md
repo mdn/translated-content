@@ -193,5 +193,5 @@ observer.observe({ type: "event", durationThreshold: 16, buffered: true });
 
 ## 参见
 
-- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
-- [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
+- [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API)
+- [Page Visibility API](/zh-CN/docs/Web/API/Page_Visibility_API)
