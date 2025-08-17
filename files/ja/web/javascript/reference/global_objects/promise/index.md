@@ -379,7 +379,7 @@ btn.addEventListener("click", testPromise);
 <h1>プロミスの例</h1>
 ```
 
-```js live-sample___promises
+```js-nolint live-sample___promises
 function imgLoad(url) {
   // Promise() コンストラクターを使用して、新しいプロミスを作成
   // これは、2 つの引数 resolve と reject に対応する関数を引数として持つ
