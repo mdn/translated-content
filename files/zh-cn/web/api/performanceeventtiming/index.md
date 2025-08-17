@@ -15,7 +15,7 @@ Event Timing API 的 `PerformanceEventTiming` 接口用来观察用户交互触�
 您通常通过创建 {{domxref("PerformanceObserver")}} 实例来使用 `PerformanceEventTiming` 对象，然后调用其 [`observe()`](/zh-CN/docs/Web/API/PerformanceObserver/observe) 方法，传入 `"event"` 或 `"first-input"` 作为 [`type`](/zh-CN/docs/Web/API/PerformanceEntry/entryType) 选项的值。然后，`PerformanceObserver` 对象的回调将接收到一个 `PerformanceEventTiming` 对象列表，您可以对其进行分析。请参阅[下面的示例](#getting_event_timing_information)以了解更多信息。
 
 默认情况下，当 `PerformanceEventTiming` 条目的持续时间达到 104 毫秒或以上时，该条目会被暴露。研究表明，如果用户输入在 100 毫秒内未得到处理，则被认为是缓慢的，而 104 毫秒是大于 100 毫秒的第一个 8 的倍数（出于安全原因，此 API 四舍五入为最接近的 8 毫秒的倍数）。
-但是，您可以使用 [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) 方法中的 `durationThreshold` 选项将 {{domxref("PerformanceObserver")}} 设置为不同的阈值。
+但是，您可以使用 [`observe()`](/zh-CN/docs/Web/API/PerformanceObserver/observe) 方法中的 `durationThreshold` 选项将 {{domxref("PerformanceObserver")}} 设置为不同的阈值。
 
 此接口从其父级 {{domxref("PerformanceEntry")}} 继承方法和属性：
 
