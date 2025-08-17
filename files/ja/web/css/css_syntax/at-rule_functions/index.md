@@ -1,17 +1,17 @@
 ---
 title: CSS アットルール関数
+short-title: アットルール関数
 slug: Web/CSS/CSS_syntax/At-rule_functions
-original_slug: Web/CSS/At-rule-functions
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **[CSS](/ja/docs/Web/CSS) [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)関数**は、複雑なルールを表したり、特別なデータ処理や計算を呼び出すことができるアットルール文です。
 
 ## 構文
 
-```css
-@identifier 関数([引数]? [, 引数]!) {
+```plain
+@識別子 関数([引数]? [, 引数]!) {
 }
 ```
 
@@ -25,11 +25,9 @@ l10n:
 
 - {{CSSxRef("@import", "@import url()")}}
   - : 指定した URL からスタイルシートファイルをインポートします。
-- {{CSSxRef("@import", "@import src()")}}
-  - : 指定したソースからスタイルシートファイルをインポートします。
 - {{CSSxRef("@import", "@import supports()")}}
   - : ブラウザーの対応状況に基づいてスタイルシートファイルをインポートします。
-- {{CSSxRef("@import", "@import layer()")}}
+- [`@import layer()`](/ja/docs/Web/CSS/@import/layer_function)
   - : 指定されたカスケードレイヤーの中にスタイルシートファイルをインポートします。
 
 ## @supports 関数
@@ -49,8 +47,6 @@ l10n:
 
 - {{CSSxRef("@namespace", "@namespace url()")}}
   - : XML 名前空間を指定した URL から定義します。
-- {{CSSxRef("@namespace", "@namespace src()")}}
-  - : XML 名前空間を指定したソースから定義します。
 
 ## @container 関数
 
@@ -58,3 +54,7 @@ l10n:
 
 - {{CSSxRef("@container", "@container style()")}}
   - : コンテナーコンテキストのスタイルを定義します。
+
+## 関連情報
+
+- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
