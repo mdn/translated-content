@@ -177,7 +177,7 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "event", buffered: true });
 ```
 
-您还可以设置不同的[`durationThreshold`](/en-US/docs/Web/API/PerformanceObserver/observe#durationthreshold)。默认值为 104 毫秒，最小可能的持续时间阈值为 16 毫秒。
+您还可以设置不同的[`durationThreshold`](/zh-CN/docs/Web/API/PerformanceObserver/observe#durationthreshold)。默认值为 104 毫秒，最小可能的持续时间阈值为 16 毫秒。
 
 ```js
 observer.observe({ type: "event", durationThreshold: 16, buffered: true });
