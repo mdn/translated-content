@@ -370,7 +370,7 @@ div {
 <button>カードを切る</button>
 ```
 
-```html hidden
+```html-nolint hidden
 <div class="warning">
   <p>
     お使いのブラウザーは高度な <code>attr()</code> に対応していません。そのため、このデモは何も動作しません。
