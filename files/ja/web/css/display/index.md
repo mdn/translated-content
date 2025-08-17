@@ -31,7 +31,7 @@ display: flex;
 display: grid;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
   さまざまな <code>display</code> 値を、 3 つの子要素が含まれている、オレンジ色の破線の境界線のある <code>div</code> に適用します。
 </p>
