@@ -81,7 +81,9 @@ function isIgnorable(nod) {
  */
 function nodeBefore(sib) {
   while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) return sib;
+    if (!isIgnorable(sib)) {
+      return sib;
+    }
   }
   return null;
 }
