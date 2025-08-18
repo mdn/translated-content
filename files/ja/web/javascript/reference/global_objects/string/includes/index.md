@@ -1,15 +1,14 @@
 ---
 title: String.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`includes()`** は {{jsxref("String")}} 値のメソッドで、大文字と小文字を区別して検索を行い、指定された文字列がこの文字列内で見つかるかどうかを判断し、必要に応じて `true` または `false` を返します。
 
-**`includes()`** メソッドは、1 つの文字列を別の文字列の中に見出すことができるかどうかを判断し、必要に応じて `true` か `false` を返します。
-
-{{InteractiveExample("JavaScript デモ: String.includes()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.includes()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";
@@ -21,7 +20,7 @@ console.log(
     sentence.includes(word) ? "is" : "is not"
   } in the sentence`,
 );
-// Expected output: "The word "fox" is in the sentence"
+// 予想される結果: "The word "fox" is in the sentence"
 ```
 
 ## 構文
@@ -91,6 +90,7 @@ console.log(str.includes("")); // true
 ## 関連情報
 
 - [`String.prototype.includes` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.prototype.includes` のポリフィル](https://www.npmjs.com/package/string.prototype.includes)
 - {{jsxref("Array.prototype.includes()")}}
 - {{jsxref("TypedArray.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}
