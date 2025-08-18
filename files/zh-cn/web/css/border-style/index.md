@@ -5,11 +5,10 @@ slug: Web/CSS/border-style
 
 ## 概述
 
-{{CSSRef}}
-
 `border-style` 是一个 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用来设定元素所有边框的样式。
 
-> **备注：** `border-style` 默认值是 `none`，这意味着如果你只修改 {{ Cssxref("border-width") }} 和 {{ Cssxref("border-color") }} 是不会出现边框的。
+> [!NOTE]
+> `border-style` 默认值是 `none`，这意味着如果你只修改 {{ Cssxref("border-width") }} 和 {{ Cssxref("border-color") }} 是不会出现边框的。
 
 {{InteractiveExample("CSS Demo: border-style")}}
 
@@ -84,7 +83,6 @@ border-style: unset;
 ### 取值
 
 - `<br-style>`
-
   - : 关键字用于描述边框样式。它可以有以下取值：
 
     | `none`   |     | 和关键字 `hidden` 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 `0`，即使先前已经指定过它的值。在单元格边框重叠情况下，`none` 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。 |

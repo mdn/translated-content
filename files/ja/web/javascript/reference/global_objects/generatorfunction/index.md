@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 Object.getPrototypeOf(function* () {}).constructor;
 ```
 
-{{InteractiveExample("JavaScript Demo: GeneratorFunction()", "taller")}}
+{{InteractiveExample("JavaScript デモ: GeneratorFunction()", "taller")}}
 
 ```js interactive-example
 const GeneratorFunction = function* () {}.constructor;
@@ -52,7 +52,8 @@ new GeneratorFunction ([arg1[, arg2[, ...argN]],] functionBody)
 
 関数に渡されたすべての引数は、渡された順に、作成される関数内の引数の識別子の名前として扱われます。
 
-> **メモ:** {{jsxref("Statements/function*", "ジェネレーター関数")}}が `GeneratorFunction` コンストラクターによって生成された場合、生成コンテキストのクロージャは作成されません。常にグローバルスコープに生成されます。
+> [!NOTE]
+> {{jsxref("Statements/function*", "ジェネレーター関数")}}が `GeneratorFunction` コンストラクターによって生成された場合、生成コンテキストのクロージャは作成されません。常にグローバルスコープに生成されます。
 >
 > 実行すると、ローカル変数とグローバルグローバル変数にのみアクセスでき、 `GeneratorFunction` コンストラクターが呼び出されたスコープの変数にはアクセスできません。
 >

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 获取设为该浏览器操作的弹窗的 HTML 文档。
 
 > [!NOTE]
@@ -25,9 +23,7 @@ let gettingPopup = browser.action.getPopup(
 ### 参数
 
 - `details`
-
   - : 一个含有下列属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`，指定要获取弹窗的标签页。
     - `windowId` {{optional_inline}}

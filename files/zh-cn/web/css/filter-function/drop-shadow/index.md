@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`drop-shadow()`** [CSS](/zh-CN/docs/Web/CSS) [函数](docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)对输入图像应用投影效果。其结果是 {{cssxref("&lt;filter-function&gt;")}}。
 
 {{InteractiveExample("CSS Demo: drop-shadow()")}}
@@ -70,7 +68,6 @@ drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 ### 参数
 
 - `color` {{optional_inline}}
-
   - : 阴影的颜色。如果未指定，则使用父元素中 {{cssxref("color")}} 属性的值。
 
 - `length`

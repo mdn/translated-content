@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-right-width`** 用于设置元素右边框的宽度。
 
 {{InteractiveExample("CSS Demo: border-right-width")}}
@@ -74,9 +72,7 @@ border-right-width: unset;
 ### 值
 
 - `<line-width>`
-
   - : 定义边框的宽度，明确的非负 {{cssxref("&lt;length&gt;")}} 值或者是关键字。如果它是关键字，则必须是以下值之一：
-
     - `thin`
     - `medium`
     - `thick`

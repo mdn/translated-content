@@ -3,8 +3,6 @@ title: <hex-color>
 slug: Web/CSS/hex-color
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<hex-color>`** 为描述 [sRGB](/zh-CN/docs/Glossary/RGB) 颜色的*十六进制颜色语法*的记号，此记号将颜色的主分量（红、绿、蓝）及其透明度写为十六进制数。
 
 在可使用 {{CSSXref("&lt;color&gt;")}} 的任意位置均可使用 `<hex-color>` 值。
@@ -21,19 +19,15 @@ slug: Web/CSS/hex-color
 ### 取值
 
 - `R` 或 `RR`
-
   - : 颜色的*红色*分量，为介于 `0` 和 `ff`（255）之间不区分大小写的十六进制数。若仅有一数，则重复此数——`1` 意为 `11`。
 
 - `G` 或 `GG`
-
   - : 颜色的*绿色*分量，为介于 `0` 和 `ff`（255）之间不区分大小写的十六进制数。若仅有一数，则重复此数——`c` 意为 `cc`。
 
 - `B` 或 `BB`
-
   - : 颜色的*蓝色*分量，为介于 `0` 和 `ff`（255）之间不区分大小写的十六进制数。若仅有一数，则重复此数——`9` 意为 `99`。
 
 - `A` 或 `AA` {{optional_inline}}
-
   - : 颜色的 _alpha_ 分量，标示其透明度，为介于 `0` 和 `ff`（255）之间不区分大小写的十六进制数。若仅有一数，则重复此数——`e` 意为 `ee`。`0`（即 `00`）表示完全透明的颜色，而 `f`（即 `ff`）表示完全不透明的颜色。
 
 > [!NOTE]

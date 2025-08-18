@@ -46,7 +46,8 @@ l10n:
 > [!WARNING]
 > コンテンツが Unicode 点字パターンのみの場合、値はユーザーの優先翻訳テーブルに従って翻訳されません。
 
-> **メモ:** `aria-roledescription` をそのまま `aria-brailleroledescription` に使用しないでください。`aria-roledescription` が適切な点字表現を提供しない場合にのみ、この属性を含めてください。
+> [!NOTE]
+> `aria-roledescription` をそのまま `aria-brailleroledescription` に使用しないでください。`aria-roledescription` が適切な点字表現を提供しない場合にのみ、この属性を含めてください。
 
 次の場合、`aria-brailleroledescription` の値は点字ユーザーに公開されません:
 

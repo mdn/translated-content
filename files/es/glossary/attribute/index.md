@@ -11,5 +11,5 @@ Un atributo amplía una etiqueta ({{Glossary("tag")}}), cambiando su comportamie
 
 ### Referencia técnica
 
-- [HTML attribute reference](/es/docs/Web/HTML/Attributes)
-- Information about HTML's [global attributes](/es/docs/Web/HTML/Global_attributes).
+- [HTML attribute reference](/es/docs/Web/HTML/Reference/Attributes)
+- Information about HTML's [global attributes](/es/docs/Web/HTML/Reference/Global_attributes).

@@ -31,9 +31,7 @@ arr.some(callback[, objetThis])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à tester pour chaque élément du tableau. Cette fonction utilise trois arguments :
-
     - `valeurCourante`
       - : L'élément du tableau à traiter par la fonction.
     - `index` {{optional_inline}}

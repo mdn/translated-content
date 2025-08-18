@@ -2,10 +2,10 @@
 title: serviceworker
 slug: Web/Progressive_web_apps/Manifest/Reference/serviceworker
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{SeeCompatTable}}{{Non-standard_header}}
 
 `serviceworker` メンバーは、商業ウェブサイトで指定された決済方法の決済メカニズムを提供するウェブベースの決済アプリケーションを実行するために、ジャストインタイム (JIT) でインストールされ、登録されたサービスワーカーを指定します。詳細は、{{domxref("Payment Handler API", "決済ハンドラー API", "", "nocode")}} を参照してください。
 
@@ -14,18 +14,14 @@ l10n:
 `serviceworker` オブジェクトは以下の値を持つことができます。
 
 - `scope` {{experimental_inline}} {{non-standard_inline}}
-
   - : サービスワーカーの登録スコープを表す文字列です。
 
 - `src` {{experimental_inline}} {{non-standard_inline}}
-
   - : サービスワーカーのスクリプトをダウンロードするための URL を表す文字列です。
 
 - `use_cache` {{experimental_inline}} {{non-standard_inline}}
-
   - : 論理値で、 HTTP キャッシュが更新中のサービスワーカーのスクリプトリソースにどのように使用されるかを設定します。
     これは、 {{domxref("ServiceWorkerContainer.register()")}} を使用して JavaScript 経由でサービスワーカーを登録する際に指定する `updateViaCache` オプションの特定の値と同等な機能を提供します。
-
     - `true`: HTTP キャッシュはインポートのために照会されますが、メインスクリプトは常にネットワークから更新されます。 HTTP キャッシュにインポート用の新しい項目が見つからない場合は、ネットワークから取得されます。 `updateViaCache: "imports"` と同等です。
     - `false`: メインスクリプトやそのインポートには HTTP キャッシュは使用されません。すべてのサービスワーカーのスクリプトリソースはネットワークから更新されます。 `updateViaCache: "none"` と同等です。
 

@@ -1872,12 +1872,6 @@
       "shade0602"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn": {
-    "modified": "2020-09-07T06:45:08.142Z",
-    "contributors": [
-      "shade0602"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Test_your_skills/Position": {
     "modified": "2020-09-07T06:09:02.193Z",
     "contributors": [
@@ -5980,6 +5974,24 @@
       "teoli",
       "Newser",
       "mayconrem"
+    ]
+  },
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2020-11-17T03:43:19.041Z",
+    "contributors": [
+      "kosarev_va",
+      "RuslanPro01",
+      "ismailaga123",
+      "injashkin",
+      "Corba",
+      "snowydad",
+      "arthurg91",
+      "wbamberg",
+      "LbIdarka",
+      "Dzhabarovm",
+      "Kerminator1973",
+      "kRaVeda",
+      "teoli"
     ]
   },
   "Web/API/Document_Object_Model/Examples": {
@@ -13368,24 +13380,6 @@
       "yaruson"
     ]
   },
-  "Web/Events": {
-    "modified": "2020-11-17T03:43:19.041Z",
-    "contributors": [
-      "kosarev_va",
-      "RuslanPro01",
-      "ismailaga123",
-      "injashkin",
-      "Corba",
-      "snowydad",
-      "arthurg91",
-      "wbamberg",
-      "LbIdarka",
-      "Dzhabarovm",
-      "Kerminator1973",
-      "kRaVeda",
-      "teoli"
-    ]
-  },
   "Web/HTML": {
     "modified": "2020-05-09T08:33:52.357Z",
     "contributors": [
@@ -15991,7 +15985,7 @@
       "fscholz"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_properties": {
+  "Web/JavaScript/Reference/Classes/Private_elements": {
     "modified": "2020-10-15T22:33:38.348Z",
     "contributors": [
       "cliggen",
@@ -21884,6 +21878,12 @@
       "mvictorl",
       "nsvintitskiy",
       "SoMuchEffort"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/CSS_layout/Multiple-column_Layout": {
+    "modified": "2020-09-07T06:45:08.142Z",
+    "contributors": [
+      "shade0602"
     ]
   },
   "conflicting/Learn_web_development/Core/Scripting": {

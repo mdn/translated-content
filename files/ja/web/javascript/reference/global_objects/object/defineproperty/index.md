@@ -9,7 +9,7 @@ l10n:
 
 **`Object.defineProperty()`** は静的メソッドで、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+{{InteractiveExample("JavaScript デモ: Object.defineProperty()")}}
 
 ```js interactive-example
 const object1 = {};
@@ -54,9 +54,7 @@ Object.defineProperty(obj, prop, descriptor)
 どちらの形でも記述子はオブジェクトで表現します。共通して以下のオプションのキーを持つことができます (注: ここでいう**既定値**とは、`Object.defineProperty()` を使ってプロパティを定義する場合です)。
 
 - `configurable`
-
   - : これが `false` に設定されていた場合、
-
     - このプロパティの種類をデータプロパティとアクセサープロパティの間で変更することができません。
     - このプロパティを削除することができません。
     - 記述子の他の属性は変更できません（しかし、 `writable: true` のデータ記述子であれば、 `value` を変更し、 `writable` を `false` に変更することができます）。

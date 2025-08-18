@@ -14,7 +14,7 @@ JavaScript で `this` の値は、関数がどのように定義されている�
 
 [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)では、`this` の扱いが異なります。定義された時点で親スコープから継承します。この動作により、アロー関数はコールバックやコンテキストの保持を行う上で特に便利です。ただし、アロー関数には独自の `this` バインディングがありません。そのため、`bind()`、`apply()`、`call()` メソッドで `this` の値を設定することはできません。また、オブジェクトメソッドで現在のオブジェクトを指すこともできません。
 
-{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+{{InteractiveExample("JavaScript デモ: Expressions - this")}}
 
 ```js interactive-example
 const test = {
@@ -207,7 +207,7 @@ console.log(o.a); // 38
 
 ### クラスコンテキスト
 
-[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は、静的コンテキストとインスタンスコンテキストの 2 つに分けることができます。[コンストラクター](/ja/docs/Web/JavaScript/Reference/Classes/constructor)、メソッド、インスタンスフィールド初期化子（[パブリック](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)または[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)）はインスタンスコンテキストに属します。[静的](/ja/docs/Web/JavaScript/Reference/Classes/static)メソッド、静的フィールド初期化子、静的初期化ブロックは静的コンテキストに属します。それぞれのコンテキストで、`this` の値が異なります。
+[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は、静的コンテキストとインスタンスコンテキストの 2 つに分けることができます。[コンストラクター](/ja/docs/Web/JavaScript/Reference/Classes/constructor)、メソッド、インスタンスフィールド初期化子（[パブリック](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)または[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)）はインスタンスコンテキストに属します。[静的](/ja/docs/Web/JavaScript/Reference/Classes/static)メソッド、静的フィールド初期化子、静的初期化ブロックは静的コンテキストに属します。それぞれのコンテキストで、`this` の値が異なります。
 
 クラスのコンストラクターは常に `new` で呼び出されるため、その動作は[関数コンストラクター](#コンストラクター)と同じです。`this` 値は、作成される新しいインスタンスです。 クラスメソッドは、オブジェクトリテラル内のメソッドと同じように動作します。`this` 値は、メソッドがアクセスされたオブジェクトです。 メソッドが他のオブジェクトに転送されない場合、`this` は通常、クラスのインスタンスです。
 
@@ -234,7 +234,8 @@ console.log(C.staticField === C); // true
 this = new Base();
 ```
 
-> **警告:** `this` を `super()` の呼び出しの前に参照すると、エラーが発生します。
+> [!WARNING]
+> `this` を `super()` の呼び出しの前に参照すると、エラーが発生します。
 
 派生クラスはでは `super()` を呼び出す前に return をしてはいけません。ただし、オブジェクトを返す場合やコンストラクターがない場合を除きます。
 
@@ -261,7 +262,8 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 スクリプトの最上位レベルでは、`this` 値は厳格モードであるかどうかに関わらず、`globalThis` を参照します。これは一般的にグローバルオブジェクトと同じです。例えば、ソースが HTML の [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素内に置かれ、スクリプトとして実行された場合、`this === window` となります。
 
-> **メモ:** `globalThis` は一般的にグローバルオブジェクトと同じ概念です(つまり、`globalThis` にプロパティを追加するとグローバル変数になります)。これはブラウザーとノードの場合です。しかし、ホストはグローバルオブジェクトとは関係のない値を `globalThis` に指定することができます。
+> [!NOTE]
+> `globalThis` は一般的にグローバルオブジェクトと同じ概念です(つまり、`globalThis` にプロパティを追加するとグローバル変数になります)。これはブラウザーとノードの場合です。しかし、ホストはグローバルオブジェクトとは関係のない値を `globalThis` に指定することができます。
 
 ```js
 // ウェブブラウザーでは window オブジェクトもグローバルオブジェクトです。

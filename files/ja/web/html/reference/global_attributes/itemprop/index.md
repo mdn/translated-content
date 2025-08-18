@@ -1,12 +1,10 @@
 ---
-title: itemprop
+title: HTML itemprop グローバル属性
+short-title: itemprop
 slug: Web/HTML/Reference/Global_attributes/itemprop
-original_slug: Web/HTML/Global_attributes/itemprop
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`itemprop`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、アイテムにプロパティを追加するために使用します。すべての HTML 要素に `itemprop` 属性を設定することができ、 `itemprop` は名前と値の組み合わせで構成されます。名前と値の組み合わせは**プロパティ**と呼ばれ、 1 つまたは複数のプロパティで**アイテム**を構成します。プロパティ値は文字列又は URL のどちらかで、 {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}}, {{HTMLElement("track")}}, {{HTMLElement("video")}} など、広範にわたる要素と関連付けすることができます。
 
@@ -19,11 +17,11 @@ l10n:
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span
-    >Director:
+  <span>
+    Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span
-  >
+    (born August 16, 1954)
+  </span>
   <span itemprop="genre">Science fiction</span>
   <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
     Trailer
@@ -37,11 +35,11 @@ l10n:
   <tbody>
     <tr>
       <td rowspan="2"> </td>
-      <th colspan="2"><strong>Item</strong></th>
+      <th colspan="2"><strong>アイテム</strong></th>
     </tr>
     <tr>
-      <th><strong>itemprop name</strong></th>
-      <th><strong>itemprop value</strong></th>
+      <th><strong>itemprop 名</strong></th>
+      <th><strong>itemprop 値</strong></th>
     </tr>
     <tr>
       <td>itemprop</td>
@@ -143,8 +141,8 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
     Band:
     <span itemprop="band" itemscope>
       <span itemprop="name">Jazz Band</span>
-      (<span itemprop="size">12</span> players)</span
-    >
+      (<span itemprop="size">12</span> players)
+    </span>
   </p>
 </div>
 ```
@@ -192,8 +190,8 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
   <span
     itemprop="favorite-color
     favorite-fruit"
-    >orange</span
-  >
+    >orange
+  </span>
 </div>
 ```
 
@@ -277,13 +275,11 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 **トークン**は、文字列か URL のいずれかです。アイテムは、 URL の場合に**型付きアイテム**と呼ばれます。そうでなければ文字列です。文字列は、ピリオドまたはコロンを含むことができません（下記参照）。
 
 1. アイテムが型付きアイテムの場合、次のいずれかでなければなりません。
-
    1. 定義されたプロパティ名。
    2. または、妥当な URL。これは、語彙定義を参照します。
    3. 独自のアイテムプロパティ名を表す妥当な URL （つまり、公式な私用で定義されていないもの）。
 
 2. アイテムが型付きアイテムでない場合は、次のようになります。
-
    1. "`.`" (U+002E FULL STOP) 文字と "`:`" (U+003A COLON) 文字を含まず、所有者のアイテムプロパティ名 (公式な仕様で定義されないもの) として使用される文字列。
 
 > [!NOTE]
@@ -294,35 +290,27 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 名前と値の組のプロパティ値は、次のリストで最初に一致するものに与えられます。
 
 - 要素が `itemscope` 属性を持つ場合
-
   - 値は要素によって作成された**アイテム**を持つ
 
 - 要素が `meta` 要素である場合
-
   - 値は、要素の `content` 属性の値である
 
 - 要素が `audio`, `embed`, `iframe`, `img`, `source`, `track`, `video` 要素である場合
-
   - 値は、属性が設定される時に要素のノード文書（[マイクロデータ DOM API](/ja/docs/Web/HTML/Guides/Microdata) の一部）に関連する要素の src 属性の解析する値に由来する結果の URL 文字列である
 
 - 要素が `a`, `area`, `link` 要素である場合
-
   - 値は、属性が設定される時に要素のノード文書に関連する要素の href 属性の解析する値に由来する結果の URL 文字列である
 
 - 要素が `object` 要素である場合
-
   - 値は、属性が設定される時に要素のノード文書に関連する要素の data 属性の解析する値に由来する結果の URL 文字列である
 
 - 要素が `data` 要素である場合
-
   - 値は、要素の value 属性の値である
 
 - 要素が `meter` 要素である場合
-
   - 値は、要素の `value` 属性の値である
 
 - 要素が `time` 要素である場合
-
   - 値は、要素の `datetime` 値である
 
 それ以外
@@ -355,8 +343,6 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 </div>
 ```
 
-以下も同等です。
-
 ```html
 <div itemscope>
   <p itemprop="a">1</p>
@@ -364,8 +350,6 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
   <p itemprop="a">2</p>
 </div>
 ```
-
-以下も同等です。
 
 ```html
 <div id="x">
@@ -432,15 +416,10 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 
 {{Specifications}}
 
-## ブラウザーの互換性
-
-{{Compat}}
-
 ## 関連情報
 
 - [それ以外のグローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - その他のマイクロデータに関するグローバル属性:
-
   - [`itemid`](/ja/docs/Web/HTML/Reference/Global_attributes/itemid)
   - [`itemref`](/ja/docs/Web/HTML/Reference/Global_attributes/itemref)
   - [`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope)

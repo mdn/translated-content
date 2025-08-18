@@ -116,7 +116,8 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **警告:** `String` をコンストラクターとして使用することはほとんどないでしょう。
+> [!WARNING]
+> `String` をコンストラクターとして使用することはほとんどないでしょう。
 
 プリミティブの文字列と `String` オブジェクトは {{jsxref("Global_Objects/eval", "eval()")}} を使用すると異なる結果となります。 `eval` に渡されたプリミティブは、ソースコードとして扱われます。 `String` オブジェクトは他のオブジェクトと同様に、オブジェクトとしてそのままの文字列を返します。
 
@@ -270,13 +271,11 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 - {{jsxref("String/substring")}}
   - : 呼び出した文字列の指定された位置以降（または区間）にある文字が入った新しい文字列を返します。
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
-
   - : 文字列内の文字が、現在のロケールに沿って小文字に変換されます。
 
     ほとんどの言語では、これは {{jsxref("String/toLowerCase", "toLowerCase()")}} と同じものを返します。
 
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}
-
   - : 文字列内の文字が、現在のロケールに沿って大文字に変換されます。
 
     ほとんどの言語では、これは {{jsxref("String/toUpperCase", "toUpperCase()")}} と同じものを返します。

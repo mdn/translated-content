@@ -10,7 +10,7 @@ l10n:
 
 **`<tfoot>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の一連の列を総括する行のセットを定義します。
 
-{{InteractiveExample("HTML Demo: &lt;tfoot&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;tfoot&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
@@ -86,9 +86,7 @@ td {
 以下の属性は非推奨であり、使用すべきではありません。これらの属性は、既存のコードを更新する際の参考として、また歴史的な興味のためだけに、以下に文書化されています。
 
 - `align` {{deprecated_inline}}
-
   - : この列挙属性は、各セルの内容物について、水平方向の配置方法を制御します。以下の値が指定可能です。
-
     - `left`: 内容物をセルの左側に揃えます。
     - `center`: 内容物をセル内で中央揃えにします。
     - `right`: 内容物をセルの右側に揃えます。
@@ -103,7 +101,6 @@ td {
     > - CSS で `char` の値と同様の効果を得るには、 [`char`](#char) の値を {{cssxref("text-align")}} プロパティの値として使用することができます。
 
 - `bgcolor` {{Deprecated_inline}}
-
   - : 表の背景色です。この属性は、列の各セルの背景色を定義します。 [6 桁の 16 進数の RGB コード](/ja/docs/Web/CSS/hex-color)の前に '`#`' が付いた形です。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)の一つを使用することもできます。
 
     同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
@@ -113,9 +110,7 @@ td {
 - `charoff` {{deprecated_inline}}
   - : この属性は、`char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
 - `valign` {{deprecated_inline}}
-
   - : この属性は、表本体の各行のセルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
-
     - `baseline`: テキストを可能な限りセルの下端に近づけますが、下端ではなく文字の[ベースライン](https://en.wikipedia.org/wiki/Baseline_%28typography%29)</a>に揃えます。文字がサイズ全体に渡る場合は、 `bottom` と同じ効果になります。
     - `bottom`: テキストを可能な限りセルの下端に近づけて配置します。
     - `middle`: テキストをセル内の中央に置きます。
@@ -182,6 +177,5 @@ td {
 
 - 他の表関連要素: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}
 - `<tfoot>` 要素のスタイル設定に役立つであろう CSS プロパティと擬似クラス:
-
   - {{cssxref(":nth-child")}} 擬似クラス: 列内のセルの配置を設定するため
   - {{cssxref("text-align")}} プロパティ: すべてのセル内コンテンツを '.' などの同一文字で揃えるため

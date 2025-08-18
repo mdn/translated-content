@@ -101,7 +101,7 @@ En el ejemplo siguiente hemos utilizado la misma imagen dos veces. La primera im
 Esta técnica se utiliza para dar a las imágenes una respuesta _adaptativa_, de modo que se reduzcan adecuadamente cuando se visualizan en un dispositivo más pequeño. Sin embargo, no es conveniente usar esta técnica para cargar imágenes demasiado grandes y luego reducirlas en el navegador. Las imágenes deben tener el tamaño adecuado, no deben ser más grandes de lo que sea necesario para el tamaño más grande que se muestran en el diseño. Descargar imágenes muy grandes ralentizará tu sitio y puede costarles más dinero a los usuarios si tienen una conexión tarifada.
 
 > [!NOTE]
-> Obtén más información sobre las [técnicas adaptativas para las imágenes](/es/docs/Web/HTML/Responsive_images).
+> Obtén más información sobre las [técnicas adaptativas para las imágenes](/es/docs/Web/HTML/Guides/Responsive_images).
 
 ## Unidades de ventana gráfica
 

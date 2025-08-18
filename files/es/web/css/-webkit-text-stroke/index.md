@@ -3,7 +3,7 @@ title: -webkit-text-stroke
 slug: Web/CSS/-webkit-text-stroke
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

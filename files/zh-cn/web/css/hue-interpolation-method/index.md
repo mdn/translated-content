@@ -3,8 +3,6 @@ title: <hue-interpolation-method>
 slug: Web/CSS/hue-interpolation-method
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<hue-interpolation-method>`** 表示用于在 {{CSSXref("&lt;hue&gt;")}} 值之间插值的算法。此插值方法指定了如何根据色轮求两个色相值之间的中点。此数据类型用作数据类型 {{CSSXref("&lt;color-interpolation-method&gt;")}} 的分量。
 
 在对 `<hue>` 值进行插值时，色相插值算法默认为 [`shorter`](#shorter)。
@@ -30,9 +28,7 @@ decreasing hue
 有四种确定所用弧的算法：
 
 - `shorter`
-
   - : 使用劣弧。当两条半径重合时，此弧退化为单点。当两段弧长度相等时：
-
     - 若 `θ1 < θ2`，则使用顺时针弧；
     - 若 `θ1 > θ2`，则使用逆时针弧。
 
@@ -41,14 +37,11 @@ decreasing hue
     | ![shorter，θ1 = 45deg 且 θ2 = 135deg](shorter_increasing.png) | ![shorter，θ1 = -225deg 且 θ2 = 45deg](shorter_decreasing.png) |
 
 - `longer`
-
   - : 使用优弧。当两条半径重合时：
-
     - 若 `θ1 ≤ θ2`，则此弧变为顺时针定向的整个圆周。
     - 若 `θ1 > θ2`，则此弧变为逆时针定向的整个圆周。
 
     当两段弧长度相等时：
-
     - 若 `θ1 < θ2`，则使用顺时针弧。
     - 若 `θ1 > θ2`，则使用逆时针弧。
 
@@ -57,9 +50,7 @@ decreasing hue
     | ![longer，θ1 = 45deg 且 θ2 = -225deg](longer_decreasing.png) | ![longer，θ1 = 135deg 且 θ2 = 45deg](longer_increasing.png) |
 
 - `increasing`
-
   - : 使用顺时针弧。当两条半径重合时：
-
     - 若 `θ1 < θ2`，则此弧变为顺时针定向的整个圆周。
     - 若 `θ1 ≥ θ2`，则此弧退化为单点。
 
@@ -68,9 +59,7 @@ decreasing hue
     | ![increasing，θ1 = 45deg 且 θ2 = 135deg](shorter_increasing.png) | ![increasing，θ1 = 495deg 且 θ2 = 45deg](longer_increasing.png) |
 
 - `decreasing`
-
   - : 使用逆时针弧。当两条半径重合时：
-
     - 若 `θ1 ≤ θ2`，则此弧退化为单点。
     - 若 `θ1 > θ2`，则此弧变为逆时针定向的整个圆周。
 

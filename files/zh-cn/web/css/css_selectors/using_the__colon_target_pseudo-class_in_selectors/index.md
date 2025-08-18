@@ -3,8 +3,6 @@ title: 在选择器中使用 :target 伪类
 slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 ---
 
-{{CSSRef}}
-
 为了辅助标识那些指向文档特定部分链接的目标，[CSS3 选择器](https://www.w3.org/TR/css3-selectors/#target-pseudo) 引入了 {{cssxref(":target")}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes). Netscape 7.1 已经在 Netscape 系列中加入了这个伪类的支持，这一新的举措让页面作者能够辅助用户在较大的页面中定位。
 
 ### 选择一个目标

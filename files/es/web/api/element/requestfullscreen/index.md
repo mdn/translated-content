@@ -35,4 +35,4 @@ Ve a [Using full-screen mode](/es/docs/Web/API/Fullscreen_API) para mas detalles
 - {{domxref("document.mozFullScreenElement")}}
 - {{domxref("document.mozFullScreenEnabled")}}
 - {{cssxref(":-moz-full-screen")}}
-- [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/es/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

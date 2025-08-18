@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 960a94a198ca60fb04fe63857ea61d7306465791
 ---
 
-{{CSSRef}}
-
 **CSS 生成コンテンツ** (CSS generated content) モジュールは、 CSS により要素のコンテンツを置き換えたり、コンテンツを文書に追加したりする方法を定義します。
 
 生成コンテンツは、コンテンツの置換に使用することができます。この場合、 DOM ノードのコンテンツは CSS `<image>` に置き換えられます。 CSS 生成コンテンツを使用すると、言語固有の引用符の生成、カスタムリストアイテム番号や箇条書きの生成、選択した擬似要素に無名置換要素としてコンテンツを生成して視覚的にコンテンツを追加することもできます。
@@ -130,36 +128,30 @@ CSS 生成コンテンツモジュールでは、まだ実装されていない 
 ## ガイド
 
 - [生成コンテンツの「手引」ガイド](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
-
   - : {{cssxref("content")}} プロパティを使用して、文書にテキストや画像コンテンツを追加する方法を学びます。
 
 - [生成コンテンツによる装飾的なボックスの作成](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes)
-
   - : 視覚効果のための生成コンテンツのスタイル設定の例です。
 
 ## 関連概念
 
 - [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
-
   - {{cssxref("::before")}} 擬似要素
   - {{cssxref("::after")}} 擬似要素
   - {{cssxref("::marker")}} 擬似要素
 
 - [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-
   - {{cssxref("counter", "counter()")}} 関数
   - {{cssxref("counters", "counters()")}} 関数
   - {{cssxref("counter-increment")}} プロパティ
   - {{cssxref("counter-reset")}} プロパティ
 
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-
   - {{cssxref("::scroll-button()")}} 擬似要素
   - {{cssxref("::scroll-marker")}} 擬似要素
   - {{cssxref(":target-current")}} 擬似クラス
 
 - [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
-
   - {{cssxref("attr", "attr()")}} 関数
   - {{cssxref("string")}} データ型
   - {{cssxref("image")}} データ型

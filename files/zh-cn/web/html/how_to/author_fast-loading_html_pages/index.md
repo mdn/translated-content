@@ -3,8 +3,6 @@ title: 编写快速加载的 HTML 页面
 slug: Web/HTML/How_to/Author_fast-loading_HTML_pages
 ---
 
-{{HTMLSidebar}}
-
 以下技巧都是基于通用的知识和经验。
 
 一个好的页面不仅要给访客提供一个更有交互性的站点，同时也需要降低你的服务器压力和网络请求。后者对于那些高访问量的站点，或在有爆炸性新闻出现等特殊情况下会出现流量突增的站点来说尤为关键。
@@ -163,9 +161,7 @@ table-layout: fixed;
 ## 页面结构示例
 
 - `{{htmlelement('html')}}`
-
   - `{{htmlelement('head')}}`
-
     - `{{htmlelement('link')}}`
       CSS 文件用来修饰页面外观。在调试维护中把不相关的 CSS 拆分在不同文件中，且尽量减少文件的数量可以提高性能。
 
@@ -176,7 +172,6 @@ table-layout: fixed;
   - `{{htmlelement('body')}}`
 
     用户能在完整页面下载完之前就可以看到的页面小分块（`{{htmlelement('header')}}`/`{{htmlelement('main')}}`/`{{htmlelement('table')}}`）。
-
     - `{{htmlelement('script')}}`
 
       任何用于执行交互的脚本。交互脚本通常只能在页面完全加载并初始化所有必要对象后运行。没有必要在页面内容之前加载这些脚本。这只会减慢页面加载的初始外观。

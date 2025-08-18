@@ -38,7 +38,6 @@ databases()
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-
   - : メソッドが[不透明なオリジン](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802#42242802)から呼ばれたときに発生します。
 
 - `UnknownError` {{domxref("DOMException")}}

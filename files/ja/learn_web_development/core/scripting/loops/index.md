@@ -242,7 +242,6 @@ for (初期化処理; 条件; 最後の式) {
 
 1. `for` キーワードに続き括弧があります。
 2. 括弧の中には、セミコロンで区切られた以下の項目があります。
-
    1. **初期化処理**: これはたいていの場合、繰り返し回数分増やしていく変数の初期化処理となります。
       この変数を**カウンター変数**と呼ぶことがあります。
    2. **条件**: これは、ループがいつ繰り返しをやめるかを定義します。
@@ -436,14 +435,14 @@ btn.addEventListener("click", () => {
 2. 次に、ボタン (`btn`) にイベントリスナーを設定しています。ボタンが押されたときに検索結果が戻ってくるようになっています。
 3. テキスト入力欄に入力された値を `searchName` という変数に格納してから、次の検索に備え、入力欄をクリアし、フォーカスを設定しています。検索に大文字小文字を区別しないよう、文字列に [`toLowerCase()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) を実行しているのに注意してください。
 4. ここからが本題の `for...of` ループです。
-
    1. ループの中では、まず現在の連絡先をコロン文字で分割し、結果の 2 つの値を `splitContact` という配列に格納します。
    2. それから、条件文を用いて、`splitContact[0]` （連絡先の名前）が入力された `searchName` にまた [`toLowerCase()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) を使って小文字化したものと等しいかを判定します。
       もし等しければ、文字列を段落に入れてその連絡先の電話番号を示し、`break` を使用してループを終了しています。
 
 5. ループの後、連絡先が設定されたかどうかをチェックし、設定されていない場合は段落テキストを「連絡先が見つかりません。」に設定しています。
 
-> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) で見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)もあります）。
+> [!NOTE]
+> [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) で見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)もあります）。
 
 ## continue で繰り返しをスキップ
 
@@ -491,7 +490,8 @@ btn.addEventListener("click", () => {
 3. もし、平方根と切り捨てた数値が等しくないのなら (`!==`)、平方根は整数ではないことを示しています。整数以外には興味がありませんので、`continue` 文を用いて、その数値をどこにも保持することなく、次のループの繰り返しまでスキップします。
 4. もし、その平方根が整数値であるならば、if ブロックは飛ばされるので、`continue` 文は実行されません。代わりに、現在の `i` の値を段落の内容の後ろにスペースと一緒に結合します。
 
-> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) でも見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)もあります）。
+> [!NOTE]
+> [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) でも見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)もあります）。
 
 ## while と do...while
 
@@ -592,13 +592,11 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 - 10 から 0 までのループ。初期化処理として `let i = 10;` を示します。
 - それぞれの反復処理に対して、新しい段落を作成し、それを出力用の `<div>` に追加します。`const output = document.querySelector('.output');` を使うことを選択しました。
   コメント内で、ループ内のどこかで使用する必要がある 3 つのコード行を提供します。
-
   - `const para = document.createElement('p');` — 新しい段落を作成します。
   - `output.appendChild(para);` — 出力の `<div>` に段落を追加します。
   - `para.textContent =` — 段落内のテキストを、イコール記号の後の右辺においたものにします。
 
 - 反復回数が異なれば、その反復回数の段落に入れるテキストも異なります（条件文と複数の `para.textContent =` 行が必要です）。
-
   - 数字が 10 の場合、段落に "Countdown 10" と出力する。
   - 数字が 0 の場合、段落に "Blast off!" と出力する。
   - その他の数字では、段落にその数字を出力する。
@@ -769,7 +767,6 @@ textarea.onkeyup = () => {
 
 - 0 から `people` 配列の長さまで反復するループを作成します。
 - 各ループ反復中に、条件文を使用して現在の配列項目が "Phil" または "Lola" に等しいかチェックします。
-
   - そうである場合は、`refused` 段落の `textContent` の最後に配列項目を連結し、その後にカンマとスペースを続けます
   - そうでない場合は、配列項目を、`admitted` 段落の `textContent` の末尾に連結し、その後にカンマとスペースを続けます
 

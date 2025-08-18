@@ -3,8 +3,6 @@ title: <bdi>：雙向獨立文本元素
 slug: Web/HTML/Reference/Elements/bdi
 ---
 
-{{HTMLSidebar}}
-
 **`<bdi>`** [HTML](/zh-TW/docs/Web/HTML) 元素告訴瀏覽器的雙向算法，要將其包含的文本與周圍的文本隔離處理。當網站動態插入某些文本但不知道插入文本的方向性時，這尤其有用。
 
 {{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}

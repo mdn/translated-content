@@ -1,14 +1,11 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Reference/Status/503
-original_slug: Web/HTTP/Status/503
 l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`503 Service Unavailable`** [サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#server_error_responses)ステータスコードは、サーバーがリクエストを処理する準備ができていないことを示します。
+HTTP の **`503 Service Unavailable`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、サーバーがリクエストを処理する準備ができていないことを示します。
 
 よくある原因としては、サーバーがメンテナンスのために停止しているか、過負荷状態であることが挙げられます。
 メンテナンス中は、サーバー管理者は一時的にすべてのトラフィックを `503` ページにリダイレクトすることがあります。また、ソフトウェアの更新中に自動的に発生することもあります。

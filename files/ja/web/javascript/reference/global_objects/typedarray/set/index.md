@@ -9,7 +9,7 @@ l10n:
 
 **`set()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、複数の値を指定した配列から入力値を読み込み、型付き配列に格納します。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.set()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.set()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

@@ -3,8 +3,6 @@ title: repeat()
 slug: Web/CSS/repeat
 ---
 
-{{cssref}}
-
 La función [CSS](/es/docs/Web/CSS) **`repeat()`** representa un fragmento repetido de la lista de la pista, permitiendo un gran número de columnas o renglones que exhiben un patrón recurrente para ser escrito de una forma más compacta.
 
 Esta función puede ser usada en las propiedades CSS Grid {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}.
@@ -59,7 +57,6 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 - `auto-fill`
   - : Si el contenedor de cuadrícula tiene un tamaño definido o máximo en el eje relevante, entonces el número de repeticiones es el mayor entero positivo posible que no hace que la cuadrícula desborde su contenedor de cuadrícula. Tratando cada pista con su función de dimensiones máximo de pista (cada valor se utiliza individualmente para definir `grid-template-rows` o `grid-template-columns`), si está definido. De lo contrario, como su función de tamaño mínimo de pista, y teniendo en cuenta la brecha de cuadrícula. Si se desbordara cualquier número de repeticiones, entonces la repetición es `1`. De lo contrario, si el contenedor de la cuadrícula tiene un tamaño mínimo definido en el eje relevante, el número de repeticiones es el número entero positivo más pequeño posible que cumple ese requisito mínimo. De lo contrario, la lista de pistas especificada se repite solo una vez.
 - `auto-fit`
-
   - : Se comporta igual que el autocompletado `auto-fill`, excepto que después de colocar los elementos de la cuadrícula se colapsan las pistas vacías repetidas. Una pista vacía es aquella sin elementos de cuadrícula colocados o que se extienden a través de ella. (Esto puede provocar el colapso de todas las pistas, si están todas vacías).
 
     Una pista colapsada se trata como si tuviera una única función de tamaño de pista fija de `0px`, y los canales (gutters) a cada lado de ella colapsan.

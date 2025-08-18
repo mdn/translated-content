@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn_web_development/Extensions/Forms)を使用してサーバーにアップロードしたり、JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="avatar">Choose a profile picture:</label>
@@ -59,7 +59,8 @@ label {
 
 [`capture`](/ja/docs/Web/HTML/Reference/Attributes/capture) 属性は文字列で、 [`accept`](/ja/docs/Web/HTML/Reference/Attributes/accept) 属性で入力が画像または映像データであると示した場合、これらのデータを取り込むためにどのカメラを使用するかを指定します。 `user` の値では、ユーザーの方を向いているカメラやマイクを使用します。 `environment` は外側を向いたカメラやマイクを使用します。この属性がない場合、{{Glossary("User agent", "ユーザーエージェント")}}は何をするかを自分で自由に決めます。要求された方向が有効ではない場合、ユーザーエージェントは推奨される既定のモードで代用します。
 
-> **メモ:** `capture` は以前は論理値であり、存在した場合、ファイル入力を要求する代わりに、カメラやマイクなどその端末のメディア取り込み機器を使用するように要求していました。
+> [!NOTE]
+> `capture` は以前は論理値であり、存在した場合、ファイル入力を要求する代わりに、カメラやマイクなどその端末のメディア取り込み機器を使用するように要求していました。
 
 ### multiple
 
@@ -73,7 +74,8 @@ label {
 
 論理型の `webkitdirectory` 属性は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリーのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
 
-> **メモ:** `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、 Firefox でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
+> [!NOTE]
+> `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、 Firefox でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
 
 ## 固有ファイル型指定子
 
@@ -342,7 +344,6 @@ input.addEventListener("change", updateImageDisplay);
 - ファイルが選択されて*いた*場合、ループで 1 つずつ、プレビューの `<div>` にそれについての情報を表示します。特筆するべきは次です。
 - 独自の `validFileType()` 関数を使用して、ファイルが正しい形式 (つまり、 `accept` 属性で指定された画像形式) であるかどうかをチェックします。
 - そうであるなら、次のことを行います。
-
   - ファイルの名前とファイルサイズを、前述の `<div>` (`file.name` および `file.size` で取得) 内のリストアイテムに出力します。独自の `returnFileSize()` 関数はファイルサイズを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。
   - {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Reference/Elements/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
 

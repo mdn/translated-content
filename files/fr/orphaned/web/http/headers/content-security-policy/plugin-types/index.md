@@ -4,8 +4,6 @@ slug: orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types
 original_slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`plugin-types`** restreint l'ensemble des greffons pouvant être intégrés dans un document en limitant les types de ressources pouvant être chargées.
 
 L'instanciation d'éléments {{HTMLElement("embed")}}, {{HTMLElement("object")}} ou {{HTMLElement("applet")}} échouera si :

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 这篇指南会给你入门 JavaScript 模块的全部信息。
 
@@ -44,12 +44,10 @@ modules/
 modules 目录下的两个模块的描述如下：
 
 - `canvas.js`——包含与设置画布相关的功能：
-
   - `create()`——在指定 ID 的包装器 {{htmlelement("div")}} 内创建指定 `width` 和 `height` 的画布，该 ID 本身附加在指定的父元素内。返回包含画布的 2D 上下文和包装器 ID 的对象。
   - `createReportList()`——创建一个无序列表，并将其添加到指定的包装元素内，该列表可用于输出报告数据。返回列表的 ID。
 
 - `square.js`——包含：
-
   - `name`——包含字符串“square”的常量。
   - `draw()`——在指定画布上绘制一个正方形，具有指定的大小，位置和颜色。返回包含正方形大小，位置和颜色的对象。
   - `reportArea()`——在给定长度的情况下，将正方形区域写入特定报告列表。
@@ -661,7 +659,8 @@ export { Circle } from "./shapes/circle.js";
 
 它们从各个子模块中获取导出，并有效地从 `shapes.js` 模块中获取它们。
 
-> **备注：** `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此你将无法在同一文件中编写任何有用的相关代码。
+> [!NOTE]
+> `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此你将无法在同一文件中编写任何有用的相关代码。
 
 所以现在在 `main.js` 文件中，我们可以通过替换来访问所有三个模块类
 

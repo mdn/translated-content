@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/User-Agent/Firefox
 original_slug: Web/HTTP/Headers/User-Agent/Firefox
 ---
 
-{{HTTPSidebar}}
-
 ### Uso Apropiado
 
 No se recomienda el uso de las cadenas del User Agent como su principal opción para la detección del navegador. Vea [Deteccion Cross browser y Soporte Cross Browser](/es/Deteccion_Cross_browser_y_Soporte_Cross_Browser) para una ojeada mas en profundo a varias técnicas sobre detección de navegadores con recomendaciones.
@@ -33,7 +31,6 @@ _localización_
 - `Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-US; rv:1.0.1) Gecko/20020730 AOL/7.0`
 - `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0rc2) Gecko/20020512 Netscape/7.0b1`
 - `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.2) Gecko/20020220 CS 2000 7.0/7.0`
-
   - `Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.4.2) Gecko/20020502 CS 2000 7.0/7.0`
 
 - `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.1) Gecko/20020508 Netscape6/6.2.3`

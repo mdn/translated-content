@@ -3,8 +3,6 @@ title: log()
 slug: Web/CSS/log
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`log()`** 为指数型函数，返回某数的对数。
 
 [对数](https://zh.wikipedia.org/wiki/对数)为指数的逆运算。固定底数的此数次方将产生传入的第一个参数。
@@ -25,11 +23,9 @@ width: calc(100px * log(625, 5)); /* 400px */
 `log(value [, base]?)` 函数接受以逗号分隔的两值作为其参数。
 
 - `value`
-
   - : 解析为大于等于 0 的 {{CSSXref("&lt;number&gt;")}} 的计算式，表示真数。
 
 - `base`
-
   - : 可选。为解析为大于等于 0 的 {{CSSXref("&lt;number&gt;")}} 的计算式，表示对数的底数。若未定义，则使用默认的对数底数 `e`。
 
 ### 返回值

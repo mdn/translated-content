@@ -10,7 +10,7 @@ l10n:
 
 **`<td>`** は [HTML](/ja/docs/Web/HTML) の要素で、表でデータを包含するセルを定義します。これは*モデル*に関与します。
 
-{{InteractiveExample("HTML Demo: &lt;td&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;td&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
@@ -92,16 +92,13 @@ caption {
 ### 非推奨の属性
 
 - `abbr` {{deprecated_inline}}
-
   - : この属性は、セルの内容の簡潔な説明を持ちます。読み上げソフトなど一部のユーザーエージェントは、内容自体の前にこの説明を提供することがあります。
 
     > [!NOTE]
     > この属性は最新の標準で廃止されているため、使用しないでください。あるいは、省略した説明をセル内に置き、長い内容を **title** 属性に置くこともできます。
 
 - `align` {{deprecated_inline}}
-
   - : この[列挙](/ja/docs/Glossary/Enumerated)属性は各セルの中身について、水平方向の配置方法を制御します。以下の値を指定可能です。
-
     - `left`: 中身をセルの左側に揃えます。
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
@@ -118,7 +115,6 @@ caption {
 - `axis` {{deprecated_inline}}
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。
 - `bgcolor` {{deprecated_inline}}
-
   - : この属性は、列の各セルの背景色を定義します。値は [6 桁の 16 進数による RGB コード](/ja/docs/Web/CSS/hex-color)で、先頭に '`#`' が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)の一つを使うこともできます。
 
     同様の効果を与えるには、 CSS の {{ cssxref("background-color") }} プロパティを使用してください。
@@ -132,9 +128,7 @@ caption {
 - `scope` {{deprecated_inline}}
   - : これは列挙型の属性で、この ({{HTMLElement("th")}} で定義されている) 見出し要素が関連するセルを定義します。この属性は `<th>` 要素のみに、行と列のどちらの見出しであるかを定義するために使用してください。
 - `valign` {{deprecated_inline}}
-
   - : この属性は、表本体の各行のセルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
-
     - `baseline`: テキストを可能な限りセルの下端に近づけますが、下端ではなく文字の[ベースライン](https://en.wikipedia.org/wiki/Baseline_%28typography%29)に揃えます。文字がサイズ全体に渡る場合は、 `bottom` と同じ効果になります。
     - `bottom`: テキストを可能な限りセルの下端に近づけて配置します。
     - `middle`: テキストをセル内の中央に置きます。

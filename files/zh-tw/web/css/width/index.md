@@ -3,8 +3,6 @@ title: width
 slug: Web/CSS/width
 ---
 
-{{CSSRef}}
-
 The **`width`** CSS property specifies the width of an element. By default, the property defines the width of the [content area](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the width of the [border area](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area).
 
 ```css
@@ -180,7 +178,8 @@ p {
 
 {{EmbedLiveSample("examples", "100%", 660)}}
 
-> **備註：** {{cssxref("min-width")}} 和 {{cssxref("max-width")}} 會覆寫 {{cssxref("width")}}.
+> [!NOTE]
+> {{cssxref("min-width")}} 和 {{cssxref("max-width")}} 會覆寫 {{cssxref("width")}}.
 
 {{cssinfo}}
 

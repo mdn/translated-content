@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f4a5bfd14f0a45d65f234e2436373a1763b892d3
 ---
 
-{{CSSRef}}
-
 **CSS 位置指定レイアウト** (CSS positioned layout) モジュールは、ウェブページ上での要素の位置指定方法を定義します。
 
 ## リファレンス

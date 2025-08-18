@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Language
 original_slug: Web/HTTP/Headers/Content-Language
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Language`** {{Glossary("entity header")}}는 청중을 위한 언어를 설명하기 위해 사용되는데, 사용자가 선호하는 언어에 따라 사용자를 구분하도록 해줍니다.
 
 예를 들어, "`Content-Language: de-DE`"가 설정되면, 이는 문서가 독일어 발표자를 위해 만들어졌음을 의미합니다(하지만, 그것이 문서가 독일어로 쓰여졌음을 나타내지는 않습니다. 예를 들어, 독일인 발표자를 위한 언어 코스의 일부분이 영어로 작성된 것일 수도 있습니다).
@@ -44,7 +42,7 @@ Content-Language: de-DE, en-CA
 
 ### 문서가 작성된 언어 나타내기
 
-글로벌 [`lang`](/ko/docs/Web/HTML/Global_attributes/lang) 어트리뷰는 HTML 엘리먼트 상에서 전체 [HTML](/ko/docs/Web/HTML) 문서 혹은 그의 일부의 언어를 나타내기 위해 사용됩니다.
+글로벌 [`lang`](/ko/docs/Web/HTML/Reference/Global_attributes/lang) 어트리뷰는 HTML 엘리먼트 상에서 전체 [HTML](/ko/docs/Web/HTML) 문서 혹은 그의 일부의 언어를 나타내기 위해 사용됩니다.
 
 ```html
 <html lang="de"></html>

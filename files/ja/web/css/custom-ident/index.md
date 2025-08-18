@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a42dcee9b9cd82d26f1d8de321e2f42975aea07d
 ---
 
-{{CSSRef}}
-
 **`<custom-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、{{glossary("identifier", "識別子")}}として使われるユーザー定義の任意の文字列を意味します。これは大文字と小文字を区別し、曖昧さを避けるため、いくつかの値は様々なコンテキストで禁止されています。
 
 ## 構文
@@ -50,15 +48,12 @@ CSS では、文字をエスケープする方法がいくつかあります。�
 - {{CSSxRef("counter-reset")}}, {{CSSxRef("counter-increment")}}
   - : グローバル CSS 値 (`unset`, `initial`, `inherit`) を禁止し、 `none` も禁止しています。
 - {{CSSxRef("@counter-style")}}, {{CSSxRef("list-style-type")}}
-
   - : グローバル CSS 値 (`unset`, `initial`, `inherit`) と、次の値を禁止しています。
-
     - `none`
     - `inline`
     - `outside`
 
     また、さまざまなブラウザーで、いくつかの定義済みの値が実装されています。
-
     - `disc`
     - `circle`
     - `square`

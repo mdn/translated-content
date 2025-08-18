@@ -24,11 +24,11 @@ SVG 이미지와 그 동작 방식은 [XML](/ko/docs/Web/XML) 텍스트 파일�
 
 SVG는 [World Wide Web Consortium(W3C)](https://www.w3.org/)가 1999년부터 개발하고 있습니다.
 
-[SVG 자습서](/ko/docs/Web/SVG/Tutorial)도 방문해보세요.
+[SVG 자습서](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch)도 방문해보세요.
 
 ## 문서
 
-- [SVG 요소 참고서](/ko/docs/Web/SVG/Element)
+- [SVG 요소 참고서](/ko/docs/Web/SVG/Reference/Element)
   - : 각각의 SVG 요소에 대한 세부 정보입니다.
 - [SVG 특성 참고서](/ko/docs/Web/SVG/Attribute)
   - : 각각의 SVG 특성에 대한 세부 정보입니다.
@@ -36,7 +36,7 @@ SVG는 [World Wide Web Consortium(W3C)](https://www.w3.org/)가 1999년부터 �
   - : JavaScript 상호작용을 위한 SVG DOM 인터페이스의 세부 정보입니다.
 - [HTML 콘텐츠에 SVG 효과 적용하기](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
   - : SVG는 {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}와 사용할 수 있습니다. SVG를 사용해서
-    [평범한 HTML 페이지나 웹 어플리케이션을 향상하세요](/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
+    [평범한 HTML 페이지나 웹 어플리케이션을 향상하세요](/ko/docs/Web/SVG/Guides/SVG_in_HTML).
 
 ## 도구
 

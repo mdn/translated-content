@@ -1,12 +1,9 @@
 ---
 title: 207 Multi-Status
 slug: Web/HTTP/Reference/Status/207
-original_slug: Web/HTTP/Status/207
 l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+  sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`207 Multi-Status`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、レスポンスが混在していることを示します。
 このレスポンスは、ウェブ分散オーサリングおよびバージョン管理 ({{Glossary("WebDAV")}}) のコンテキストでのみ使用されています。
@@ -19,7 +16,7 @@ HTTP の **`207 Multi-Status`** は[成功レスポンス](/ja/docs/Web/HTTP/Ref
 
 ## ステータス
 
-```plain
+```http
 207 Multi-Status
 ```
 

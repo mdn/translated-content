@@ -18,9 +18,7 @@ browser.pageAction.setTitle(
 ### Paramètres
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. L'ID de l'onglet dont vous voulez définir le titre.
     - `title`

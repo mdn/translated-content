@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当窗口中被高亮的标签页集合更改时触发。
 
 请注意，在 63 版本之前，Firefox 没有高亮多个标签页的概念，因此此事件只是 {{WebExtAPIRef("tabs.onActivated")}} 的别名。
@@ -33,9 +31,7 @@ browser.tabs.onHighlighted.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `highlightInfo`
       - : `object`。被高亮标签页的 ID 及其窗口的 ID。详见 [highlightInfo](#highlightinfo_2) 部分。
 

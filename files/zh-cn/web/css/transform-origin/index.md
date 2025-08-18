@@ -3,8 +3,6 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 ---
 
-{{CSSRef}}
-
 **`transform-origin`** CSS 属性让你更改一个元素变形的原点。
 
 {{InteractiveExample("CSS Demo: transform-origin")}}
@@ -191,16 +189,13 @@ transform-origin: unset;
 如果定义了两个或更多值并且没有值的关键字，或者唯一使用的关键字是`center`，则第一个值表示水平偏移量，第二个值表示垂直偏移量。
 
 - 一个值：
-
   - 必须是{{cssxref("&lt;length&gt;")}}，{{cssxref("&lt;percentage&gt;")}}，或 `left`, `center`, `right`, `top`, `bottom`关键字中的一个。
 
 - 两个值：
-
   - 其中一个必须是{{cssxref("&lt;length&gt;")}}，{{cssxref("&lt;percentage&gt;")}}，或`left`, `center`, `right`关键字中的一个。
   - 另一个必须是{{cssxref("&lt;length&gt;")}}，{{cssxref("&lt;percentage&gt;")}}，或`top`, `center`, `bottom`关键字中的一个。
 
 - 三个值：
-
   - 前两个值和只有两个值时的用法相同。
   - 第三个值必须是{{cssxref("&lt;length&gt;")}}。它始终代表 Z 轴偏移量。
 

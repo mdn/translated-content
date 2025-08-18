@@ -194,7 +194,6 @@ Voyons les caractéristiques de cet élément [`<template>`](/fr/docs/Web/HTML/E
 
 - Ce [`<template>`](/fr/docs/Web/HTML/Element/template) contient un élément [`<style>`](/fr/docs/Web/HTML/Element/style) avec un ensemble de règles CSS dont la portée est celle du fragment de document créé par l'élément [`<template>`](/fr/docs/Web/HTML/Element/template).
 - Ce [`<template>`](/fr/docs/Web/HTML/Element/template) utilise un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) et l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#attr-name) correspondant afin d'avoir trois [emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot)&nbsp;:
-
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`

@@ -2,12 +2,10 @@
 title: Google App Engine を使ってウェブサイトを公開する方法
 slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
-
-[Google App Engine](https://cloud.google.com/appengine/) は、Google のインフラ上でアプリケーションを構築して実行できる強力なプラットフォームです。ゼロから多階層のウェブ アプリケーションを構築する場合でも、静的なウェブサイトをホストする場合でも、必要なアプリケーションを構築することができます。ここでは、 Google App Engine でウェブサイトをホスティングするためのステップバイステップガイドを紹介します。
+[Google App Engine](https://cloud.google.com/appengine/) は、Google のインフラ上でアプリケーションを構築して実行できる強力なプラットフォームです。ゼロから多階層のウェブアプリケーションを構築する場合でも、静的なウェブサイトをホストする場合でも、必要なアプリケーションを構築することができます。ここでは、 Google App Engine でウェブサイトをホスティングするためのステップバイステップガイドを紹介します。
 
 ## Google Cloud Platform プロジェクトの作成
 
@@ -16,7 +14,6 @@ Google のツールを自分のサイトやアプリに使用するには、Goog
 1. Google Cloud Platform Console の [App Engine dashboard](https://console.cloud.google.com/projectselector/appengine) に移動し、 _Create_ ボタンを押します。
 2. プロジェクトを作成したことがない場合は、メールによる更新情報を受け取るかどうかを選択し、利用規約に同意すれば、次に進むことができるはずです。
 3. プロジェクト名を入力し、プロジェクト ID を編集してメモしておきます。このチュートリアルでは、以下の値を使用します。
-
    - プロジェクト名: _GAE Sample Site_
    - プロジェクト ID: _gaesamplesite_
 
@@ -28,7 +25,6 @@ Cloud Platform のプロジェクトには、それぞれ 1 つの App Engine �
 
 1. 公開するには、サンプルアプリが必要です。使用するものがない場合は、この[サンプルアプリ](https://gaesamplesite.appspot.com/downloads.html)をダウンロードし、展開してください。
 2. サンプルアプリケーションの構造を見てみましょう。`website` フォルダーにはウェブサイトのコンテンツがあり、`app.yaml` はアプリケーションの設定ファイルです。
-
    - ウェブサイトのコンテンツは `website` フォルダーの中に入れなければならず、そのランディングページは `index.html` と名付けなければなりませんが、それ以外はどのような形でも構いません。
    - `app.yaml` ファイルは、静的ファイルへの URL の割り当て方法を App Engine に指示するための設定ファイルです。編集する必要はありません。
 

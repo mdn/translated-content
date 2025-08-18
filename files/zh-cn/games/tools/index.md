@@ -3,8 +3,6 @@ title: 游戏开发工具
 slug: Games/Tools
 ---
 
-{{GamesSidebar}}
-
 在此页面中，你可以找到我们的游戏开发工具文章的链接，这些文章旨在涵盖框架、编译器和调试工具。
 
 ## Web 技术
@@ -36,7 +34,6 @@ slug: Games/Tools
 - [SVG](/zh-CN/docs/Web/SVG) (Scalable Vector Graphics)
   - : 构建能够顺利扩展的矢量图形，无论用户显示器的大小或分辨率如何。
 - [Typed Arrays](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
-
   - : 从 JavaScript 中访问原始二进制数据; 操纵 GL 纹理，游戏数据或其他任何东西。
 
 - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)

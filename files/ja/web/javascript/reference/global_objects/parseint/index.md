@@ -9,7 +9,7 @@ l10n:
 
 **`parseInt()`** 関数は、文字列の引数を解釈し、指定された[基数](https://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0) （数学的記数法の底）の整数値を返します。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - parseInt()")}}
 
 ```js interactive-example
 console.log(parseInt("123"));
@@ -42,7 +42,6 @@ parseInt(string, radix)
 - `string`
   - : 整数で始まる文字列です。この引数では先頭の{{Glossary("whitespace", "ホワイトスペース")}}は無視されます。
 - `radix` {{optional_inline}}
-
   - : `2` から `36` までの整数で、`string` の*基数*（数学的記数法の底）を表します。これは [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion)に変換されます。変換後にそれが 0 でなく、 \[2, 36] の範囲外であった場合、この関数は常に `NaN` を返します。`0` または指定されなかった場合、基数は `string` の値に基づいて推測されます。既定で常に `10` になるわけではありません。[下記の解説](#解説)では、 `radix` が提供されなかった場合に何が起こるかをもっと詳細に説明しています。
 
 ### 返値

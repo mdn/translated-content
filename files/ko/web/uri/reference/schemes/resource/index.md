@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{HTTPSidebar}}{{non-standard_header}}
+{{non-standard_header}}
 
 `resource:` 스키마가 앞에 붙은 URL은 리소스 URL은 Firefox 및 Firefox 브라우저 확장 프로그램에서 내부적으로 리소스를 로드하는 데 사용되지만, 일부 정보는 브라우저가 연결하는 사이트에서도 사용할 수 있습니다.
 

@@ -10,7 +10,7 @@ l10n:
 **`for...of`** 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)をソースとした一連の値を処理するループを実行します。反復可能オブジェクトには、
 たとえば組み込みの {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}}（およびその他の DOM コレクション）、同様に {{jsxref("Functions/arguments", "arguments")}} オブジェクトや、[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)から生成される[ジェネレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator)、ユーザー定義の反復可能オブジェクトなどがあります。
 
-{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+{{InteractiveExample("JavaScript デモ: Statement - For...Of")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];
@@ -32,7 +32,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : 反復処理の各回において、一連のデータから値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の何れかで定義されたものか、[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなります（以前に宣言した変数や、オブジェクトプロパティ、[分割代入パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)など）。`var` で宣言された変数はループのローカル変数ではなく、すなわち `for...of` ループと同じスコープになります。
+  - : 反復処理の各回において、一連のデータから値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の何れかで定義されたものか、[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなります（以前に宣言した変数や、オブジェクトプロパティ、[構造分解パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)など）。`var` で宣言された変数はループのローカル変数ではなく、すなわち `for...of` ループと同じスコープになります。
 - `iterable`
   - : 反復可能オブジェクトです。ループを実行する一連の値の元となるものです。
 - `statement`
@@ -68,7 +68,7 @@ for (let value of iterable) {
 > [!NOTE]
 > 反復処理ごとに新しい変数が作成されます。ループ本体内で変数を再代入しても、反復可能オブジェクト（この場合は配列）の元の値には影響しません。
 
-[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して複数のローカル変数に代入することもできますし、 `for (x.y of iterable)` のようなプロパティアクセサーを使用して、オブジェクトプロパティに値を代入することもできます。
+[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して複数のローカル変数に代入することもできますし、 `for (x.y of iterable)` のようなプロパティアクセサーを使用して、オブジェクトプロパティに値を代入することもできます。
 
 しかし、特別なルールにより、変数名として `async` を使用することは禁じられています。これは無効な構文です。
 

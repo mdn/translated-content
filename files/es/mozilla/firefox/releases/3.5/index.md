@@ -3,8 +3,6 @@ title: Firefox 3.5 para desarrolladores
 slug: Mozilla/Firefox/Releases/3.5
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el funcionamiento de una amplia variedad de estándares web. Este artículo ofrece una extensa lista con enlaces a artículos que explican estas grandes mejoras.
 
 ## Nuevas funcionalidades para desarrolladores en Firefox 3.5
@@ -14,7 +12,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 #### Funciones de HTML 5
 
 - [Usar audio y video en Firefox](/Es/Usar_audio_y_v%C3%ADdeo_en_Firefox)
-  - : Firefox 3.5 implementa los elementos [`audio`](/es/docs/Web/HTML/Element/audio) y [`video`](/es/docs/Web/HTML/Element/video) de HTML 5.
+  - : Firefox 3.5 implementa los elementos [`audio`](/es/docs/Web/HTML/Reference/Elements/audio) y [`video`](/es/docs/Web/HTML/Reference/Elements/video) de HTML 5.
 - [Recursos sin conexión en Firefox](/es/docs/Offline_resources_in_Firefox)
   - : Firefox 3.5 implementa de forma completa la especificación para recursos sin conexión de HTML 5.
 - [Arrastrar y soltar (Drag and drop](/es/docs/Web/API/HTML_Drag_and_Drop_API))
@@ -45,7 +43,6 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
   [`-moz-column-rule-style`](/es/docs/Web/CSS/column-rule-style)
 
   [`-moz-column-rule-color`](/es/docs/Web/CSS/column-rule-color)
-
   - : Firefox 3.5 añade la posibilidad de usar estas extensiones al CSS de Mozilla.
 
 - [The `-moz-nativehyperlinktext` color value](/es/docs/Web/CSS/color#mozilla_specific_colors)
@@ -69,7 +66,6 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
   [`:last-of-type`](/es/docs/Web/CSS/:nth-last-of-type)
 
   [`:only-of-type`](/es/docs/Web/CSS/:only-of-type)
-
   - : Estos selectores pueden ser usados en Firefox 3.5.
 
 #### Nuevas funcionalidades del DOM
@@ -133,7 +129,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 
 - [Corrección de color ICC en Firefox](/es/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox)
   - : Firefox 3.5 ahora soporta corrección de color ICC para imágenes etiquetadas.
-- El atributo `defer` es ahora soportado en elementos [`script`](/es/docs/Web/HTML/Element/script)
+- El atributo `defer` es ahora soportado en elementos [`script`](/es/docs/Web/HTML/Reference/Elements/script)
   - : Este atributo indica al navegador que _puede_ escoger continuar parseando y renderizando la página sin esperar a que el script termine de ejecutarse.
 
 ### Otras mejoras
@@ -149,7 +145,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 - En ámbito no-chrome, los objetos capturados en excepciones son ahora el objeto realmente lanzado en lugar de un wrapper [XPConnect](/es/docs/XPConnect) que contiene el objeto lanzado.
 - Las referencias ID de SVG ahora son vivas.
 - Los filtros SVG ahora funcionan para `foreignObject`.
-- El método `GetSVGDocument()` ha sido añadido a los elementos [`object`](/es/docs/Web/HTML/Element/object) y [`iframe`](/es/docs/Web/HTML/Element/iframe) por compatibilidad.
+- El método `GetSVGDocument()` ha sido añadido a los elementos [`object`](/es/docs/Web/HTML/Reference/Elements/object) y [`iframe`](/es/docs/Web/HTML/Reference/Elements/iframe) por compatibilidad.
 - El setting implícito de propiedades en inicializadores de objeto y array ya no ejecuta los setters JavaScript. Ver el post [Object and array initializers should not invoke setters when evaluated](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) para más detalles.
 - La variable `gDownloadLastDir.path` ha sido renombrada a `gDownloadLastDir.file` porque se refiere a un `nsIFile`, no a una ruta.
 - La variable `gDownloadLastDirPath` ha sido renombrada a `gDownloadLastDirFile` porque se refiere a un `nsIFile`, not a una ruta.

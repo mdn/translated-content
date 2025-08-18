@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
-{{CSSRef}}
-
 CSS 宣言はすべて、プロパティと値のペアから成っています。値には、単一のキーワード、整数、関数、異なる型の組み合わせなど、プロパティに応じてさまざまなデータ型を含めることがあります。また、値には単位を持つものもあれば、持たないものもあります。すべてのプロパティは、CSS 全体で有効な値も受け入れます。CSS 値と単位モジュールでは、CSS プロパティが受け入れる値と単位というデータの型を定義しています。このモジュールでは、CSS プロパティと関数に対して有効な値の設定するには、CSS 値定義構文、つまり形式文法を定義します。
 
 ## リファレンス
@@ -187,37 +185,29 @@ CSS 宣言はすべて、プロパティと値のペアから成っています�
 ## ガイド
 
 - [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-
   - : CSS プロパティおよび関数によって受け入れられる典型的な値を定義する CSS データ型についての紹介です。
 
 - [数値データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-
   - : 数値データ型の概要で、整数、数値、パーセント値、寸法、相対寸法および絶対寸法、角度、時刻などの単位など。
 
 - [テキストデータ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
-
   - : テキストデータ型（定義済みのキーワード値、グローバル CSS キーワード値、 URL など）の概要。
 
 - [CSS 値関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
-
   - : CSS プロパティの CSS 値を返すために、特別なデータ処理や計算を呼び出す CSS 文の概要。
 
 - [CSS 数学関数の使用](/ja/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
-
   - : プロパティ値を数式で書くことができる CSS の数学関数。
 
 - [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-
   - : CSS プロパティおよび関数の有効な値の設定するには、使用されている形式文法。
 
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-
   - : 最も頻繁に使用される値の型を見ていき、それらが何なのか、また、これがどのように動作するのかを見ていきます。
 
 ## 関連事項
 
 - [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
-
   - {{cssxref("initial")}}
   - {{cssxref("inherit")}}
   - {{cssxref("revert")}}
@@ -226,22 +216,18 @@ CSS 宣言はすべて、プロパティと値のペアから成っています�
   - {{cssxref("all")}}
 
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
-
   - {{cssxref("&lt;flex&gt;")}}
   - [フレックス単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#フレックス単位) (`fr`)
 
 - [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール
-
   - [コンテナー単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#コンテナー単位) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`)
 
 - [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
-
   - {{cssxref("&lt;color&gt;")}}
   - {{cssxref("system-color")}}
   - [`color-mix()`](/ja/docs/Web/CSS/color_value/color-mix)
 
 - [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール
-
   - {{cssxref("&lt;image&gt;")}}
   - {{cssxref("&lt;gradient&gt;")}}
 

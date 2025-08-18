@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`@view-transition`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、文書間のナビゲーションの場合に、移動元及び移動先の文書で[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を行うように指定するために使用します。
 
@@ -22,9 +22,7 @@ l10n:
 ### 記述子
 
 - `navigation`
-
   - : このアットルールが文書内のビュー遷移の動作に与える効果を指定します。 可能な値は以下のとおりです。
-
     - `auto`: この文書でビュー遷移が発生するのは、同一オリジン内のナビゲーションで、オリジン間リダイレクトがなく、{{domxref("NavigateEvent.navigationType", "navigationType")}} が`traverse`、`push`、`replace` のいずれかである場合です。`push` または `replace` の場合、ナビゲーションはブラウザーの UI 機能ではなく、ページコンテンツを操作するユーザーによって開始されたものでなければなりません。
 
     - `none`: この文書でビュー遷移は発生しません。

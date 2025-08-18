@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cbfee97866847077a5c7feb3b337ed7d4f3d3424
 ---
 
-{{securecontext_header}}{{HTTPSidebar}}
+{{securecontext_header}}
 
 **`Clear-Site-Data`** ヘッダーは、リクエストしているウェブサイトに関連付けられた閲覧用データ（クッキー、ストレージ、キャッシュ）を消去します。ウェブ開発者がそのオリジンのためにブラウザーがローカルに保存したデータをより制御できます。
 
@@ -48,9 +48,7 @@ Clear-Site-Data: "*"
 - `"cookies"`
   - : サーバーが、レスポンス URL のオリジンに関するすべてのクッキーの消去を望んでいることを示します。これは登録されたドメインにサブドメインを含め影響します。ですから、 `https://example.com` と同様に `https://stage.example.com` のクッキーも消去されます。
 - `"storage"`
-
   - : サーバーが、レスポンス URL のオリジンに関するすべての DOM ストレージの消去を望んでいることを示します。これは以下のようなストレージ機構を含みます。
-
     - localStorage （`localStorage.clear` を実行）
     - sessionStorage （`sessionStorage.clear` を実行）
     - IndexedDB （それぞれのデータベースに {{domxref("IDBFactory.deleteDatabase")}} を実行）

@@ -3,8 +3,6 @@ title: background-repeat
 slug: Web/CSS/background-repeat
 ---
 
-{{CSSRef}}
-
 La propiedad de [CSS](/es/docs/Web/CSS) **`background-repeat`** define como se repiten los fondos del documento. Un fondo de imagen puede ser repetido sobre el eje horizontal, el eje vertical, ambos ejes, o no estar repetido.
 
 {{InteractiveExample("CSS Demo: background-repeat")}}
@@ -77,7 +75,6 @@ Por defecto, las imágenes repetidas son ajustadas al tamaño del elemento, pero
 ### Valores
 
 - `<repeat-style>`
-
   - : Los atributos de valor único son una abreviación de los atributos de doble valor.
 
     | **Valor único** | **Doble valor equivalente** |
