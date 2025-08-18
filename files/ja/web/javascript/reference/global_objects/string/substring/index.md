@@ -1,24 +1,23 @@
 ---
 title: String.prototype.substring()
+short-title: substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`substring()`** は {{jsxref("String")}} 値のメソッドで、文字列の一部、開始インデックスから終了インデックスの手前まで、または終了インデックスが指定されなかった場合は文字列の最後までを返します。
 
-**`substring()`** メソッドは `string` の一部、開始インデックスから終了インデックスの手前まで、または終了インデックスが指定されなかった場合は文字列の最後までを返します。
-
-{{InteractiveExample("JavaScript デモ: String.substring()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.substring()")}}
 
 ```js interactive-example
 const str = "Mozilla";
 
 console.log(str.substring(1, 3));
-// Expected output: "oz"
+// 予想される結果: "oz"
 
 console.log(str.substring(2));
-// Expected output: "zilla"
+// 予想される結果: "zilla"
 ```
 
 ## 構文
@@ -43,7 +42,7 @@ substring(indexStart, indexEnd)
 
 `substring()` は `indexStart` から `indexEnd` の直前までの文字を取り出します。特に、
 
-- `indexEnd` が省略された場合、`substring()` は文字列の最後までの文字を取り出します。
+- `indexEnd` が省略されたり `undefined` であったりした場合、`substring()` は文字列の最後までの文字を取り出します。
 - `indexStart` が `indexEnd` と等しい場合、 `substring()` は空の文字列を返します。
 - `indexStart` が `indexEnd` より大きかった場合、 `substring()` は 2 つの引数が交換されたものとして実行されます。下記の例をご覧ください。
 
@@ -55,27 +54,31 @@ substring(indexStart, indexEnd)
 
 ### substring() の使用
 
-以下の例では `substring()` を使用して、 `'Mozilla'` という文字列から文字を取り出して表示します。
+以下の例では `substring()` を使用して、 `"Mozilla"` という文字列から文字を取り出して表示します。
+
+<!-- cSpell:ignore Mozill -->
 
 ```js
 const anyString = "Mozilla";
 
-console.log(anyString.substring(0, 1)); // 'M'
-console.log(anyString.substring(1, 0)); // 'M'
+console.log(anyString.substring(0, 1)); // "M"
+console.log(anyString.substring(1, 0)); // "M"
 
-console.log(anyString.substring(0, 6)); // 'Mozill'
+console.log(anyString.substring(0, 6)); // "Mozill"
 
-console.log(anyString.substring(4)); // 'lla'
-console.log(anyString.substring(4, 7)); // 'lla'
-console.log(anyString.substring(7, 4)); // 'lla'
+console.log(anyString.substring(4)); // "lla"
+console.log(anyString.substring(4, 7)); // "lla"
+console.log(anyString.substring(7, 4)); // "lla"
 
-console.log(anyString.substring(0, 7)); // 'Mozilla'
-console.log(anyString.substring(0, 10)); // 'Mozilla'
+console.log(anyString.substring(0, 7)); // "Mozilla"
+console.log(anyString.substring(0, 10)); // "Mozilla"
 ```
 
 ### substring() と length プロパティの使用
 
 次の例では `substring()` メソッドと {{jsxref("String/length", "length")}} プロパティを使用して、特定の文字列の最後の文字を抜き出しています。この方法では、上記の例と同じようあなたが最初と最後の位置を知っている必要がないこと考えると、覚えやすいかもしれません。
+
+<!-- cSpell:ignore illa zilla -->
 
 ```js
 const text = "Mozilla";
@@ -133,7 +136,7 @@ console.log(text.slice(-5, -2)); // "zil"
 
 ### 文字列内の部分文字列の置き換え
 
-次の例は、文字列内の部分文字列を置き換えます。これは単独の文字と部分文字列の両方を置き換えます。例の最後にある関数呼び出しは、`Brave New World` という文字列を `Brave New Web` に置き換えます。
+次の例は、文字列内の部分文字列を置き換えます。これは単独の文字と部分文字列の両方を置き換えます。この例の最後にある関数呼び出しは、元の文字列 `Brave New World` から文字列 `Brave New Web` を生成します。
 
 ```js
 // fullS という文字列内で oldS を newS に置き換えます。
@@ -152,7 +155,7 @@ function replaceString(oldS, newS, fullS) {
 replaceString("World", "Web", "Brave New World");
 ```
 
-なお、これは `oldS` が `newS` の部分文字列である場合に無限ループに陥ります。 — 例えば、 '`World`' を '`OtherWorld`' で置き換える場合などです。
+なお、これは `oldS` が `newS` の部分文字列である場合に無限ループに陥ります。 — 例えば、 `"World"` を `"OtherWorld"` で置き換える場合などです。
 
 置き換えるのにより良い方法は以下の通りです。
 
