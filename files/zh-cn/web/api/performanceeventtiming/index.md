@@ -158,14 +158,14 @@ const exposedEventsList = [...performance.eventCounts.keys()];
 ```js
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
-    // Full duration
+    // 全程
     const duration = entry.duration;
 
     // Input delay (before processing event)
     const delay = entry.processingStart - entry.startTime;
 
-    // Synchronous event processing time
-    // (between start and end dispatch)
+    // 同步事件处理时间
+    // （开始和结束调度之间）
     const eventHandlerTime = entry.processingEnd - entry.processingStart;
     console.log(`Total duration: ${duration}`);
     console.log(`Event delay: ${delay}`);
@@ -173,7 +173,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-// Register the observer for events
+// 注册事件观察者
 observer.observe({ type: "event", buffered: true });
 ```
 
