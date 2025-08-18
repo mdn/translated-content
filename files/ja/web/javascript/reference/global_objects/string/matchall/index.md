@@ -1,15 +1,14 @@
 ---
 title: String.prototype.matchAll()
+short-title: matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`matchAll()`** は {{jsxref("String")}} 値のメソッドで、この文字列と[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を照合したすべての結果を、[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を含み、イテレーターで返すメソッドです。
 
-{{InteractiveExample("JavaScript デモ: String.matchAll()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.matchAll()")}}
 
 ```js interactive-example
 const regexp = /t(e)(st(\d?))/g;
@@ -18,10 +17,10 @@ const str = "test1test2";
 const array = [...str.matchAll(regexp)];
 
 console.log(array[0]);
-// Expected output: Array ["test1", "e", "st1", "1"]
+// 予想される結果: Array ["test1", "e", "st1", "1"]
 
 console.log(array[1]);
-// Expected output: Array ["test2", "e", "st2", "2"]
+// 予想される結果: Array ["test2", "e", "st2", "2"]
 ```
 
 ## 構文
@@ -50,7 +49,7 @@ matchAll(regexp)
 
 ## 解説
 
-`String.prototype.matchAll` の実装自体は、正規表現がグローバルであるという余分な入力検証を除けば）非常にシンプルで、引数の文字列を最初の引数として `Symbol.matchAll` メソッドを呼び出すだけです。実際の実装は [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) から来ています。
+`String.prototype.matchAll` の実装は、引数に対応する `Symbol.matchAll` メソッドを、最初の引数として文字列を指定して呼び出すだけです（正規表現がグローバルであるかどうかを検証する部分を除く）。実際の実装は [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) から来ています。
 
 ## 例
 
@@ -165,9 +164,10 @@ str.matchAll({
 ## 関連情報
 
 - [`String.prototype.matchAll` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.match()")}}
-- [JavaScript での正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
+- [es-shims による `String.prototype.matchAll` のポリフィル](https://www.npmjs.com/package/string.prototype.matchall)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
 - [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)ガイド
+- {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

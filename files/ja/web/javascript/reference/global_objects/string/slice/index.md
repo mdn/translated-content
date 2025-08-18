@@ -1,30 +1,29 @@
 ---
 title: String.prototype.slice()
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`slice()`** は {{jsxref("String")}} 値のメソッドで、元の文字列を変更せず、文字列の一部分を取り出し、それを新しい文字列として返します。
 
-**`slice()`** メソッドは、元の文字列を変更せず、文字列の一部分を取り出し、それを新しい文字列として返します。
-
-{{InteractiveExample("JavaScript デモ: String.slice()", "taller")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.slice()", "taller")}}
 
 ```js interactive-example
 const str = "The quick brown fox jumps over the lazy dog.";
 
 console.log(str.slice(31));
-// Expected output: "the lazy dog."
+// 予想される結果: "the lazy dog."
 
 console.log(str.slice(4, 19));
-// Expected output: "quick brown fox"
+// 予想される結果: "quick brown fox"
 
 console.log(str.slice(-4));
-// Expected output: "dog."
+// 予想される結果: "dog."
 
 console.log(str.slice(-9, -5));
-// Expected output: "lazy"
+// 予想される結果: "lazy"
 ```
 
 ## 構文
@@ -47,16 +46,28 @@ slice(indexStart, indexEnd)
 
 ## 解説
 
-`slice()` は 1 つの文字列からテキストを取り出し、新しい文字列を返します。一方の文字列におけるテキストへの変更は、他の文字列に影響を与えません。
+`slice()` は 1 つの文字列からテキストを取り出し、新しい文字列を返します。
 
-`slice()` は `indexEnd` を含まずにテキストを取り出します。例えば `str.slice(1, 4)` は、 2 番目から 4 番目までの文字（`1`, `2`, `3` の位置の文字）を取り出します。
+`slice()` は、`indexEnd` まで（ただし `indexEnd` 自体は含まない）を抽出します。例えば、`str.slice(4, 8)` は、5 文字目から 8 文字目（インデックス `4`、`5`、`6`、`7` の文字）を抽出します。
+
+```plain
+              indexStart        indexEnd
+                  ↓               ↓
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| T | h | e |   | m | i | r | r | o | r |
+
+                  m   i   r   r
+                 _______________
+                      ↑
+                    Result
+```
 
 - `indexStart >= str.length` の場合、空文字列が返されます。
 - `indexStart < 0` の場合、位置は文字列の末尾から数えられます。もっと正式に言えば、この場合、部分文字列は `max(indexStart + str.length, 0)` から始まります。
-- `indexStart` が省略されたり、 undefined であったり、（{{jsxref('Number', 'Number(indexStart)')}} を使用して）数値に変換できなかったりした場合は、 `0` として扱われます。
-- `indexEnd` が省略されたり、 undefined であったり、（{{jsxref('Number', 'Number(indexEnd)')}} を使用して）数値に変換できなかったり、 `indexEnd >= str.length` であったりした場合は、 `slice()` は文字列の末尾まで抽出します。
+- `indexStart` が省略されていたり、`undefined` であったり、または[数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)できなかったりした場合、`0` として扱われます。
+- `indexEnd` が省略されているか、`undefined` であるか、`indexEnd >= str.length` の場合、`slice()` は文字列の末尾まで抽出します。
 - `indexEnd < 0` であった場合、その位置は文字列の末尾から数えられます。もっと正式に言えば、この場合、部分文字列は `max(indexEnd + str.length, 0)` で終わります。
-- 負の値を正規化した後で `indexEnd <= indexStart` であった場合（すなわち、 `indexEnd` が `indexStart` よりも前の文字を表していた場合）は、空文字列が返されます。
+- 負の値を正規化した後、`indexEnd <= indexStart` である場合（つまり、`indexEnd` が `indexStart` の前の文字を表す場合）、空文字列が返されます。
 
 ## 例
 

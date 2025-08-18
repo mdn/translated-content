@@ -1,24 +1,23 @@
 ---
 title: String.prototype.toLocaleLowerCase()
+short-title: toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 l10n:
-  sourceCommit: b5c766f4eecb4fcf9d8ba175caddb94f7c3e9d20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`toLocaleLowerCase()`** は {{jsxref("String")}} 値のメソッドで、呼び出した文字列の値を、ロケールに依存した対応付けに基づいて小文字に変換して返します。
 
-**`toLocaleLowerCase()`** メソッドは、呼び出した文字列の値を、ロケールに依存した対応付けに基づいて小文字に変換して返します。
-
-{{InteractiveExample("JavaScript デモ: String.toLocaleLowerCase()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.toLocaleLowerCase()")}}
 
 ```js interactive-example
 const dotted = "İstanbul";
 
 console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
-// Expected output: "i̇stanbul"
+// 予想される結果: "i̇stanbul"
 
 console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
-// Expected output: "istanbul"
+// 予想される結果: "istanbul"
 ```
 
 ## 構文
@@ -41,7 +40,7 @@ toLocaleLowerCase(locales)
 
 ## 解説
 
-`toLocaleLowerCase()` メソッドは、ロケール固有の大文字小文字の対応付けに従って小文字に変換された文字列の値を返します。`toLocaleLowerCase()` はその文字列自体に影響を与えません。ほとんどの場合は {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} と同じ結果が得られますが、トルコ語のように大文字小文字のマッピングが Unicode 既定の大文字小文字のマッピングに従っていないロケールの場合は、異なる結果が得られる可能性があります。
+`toLocaleLowerCase()` メソッドは、ロケール固有の大文字小文字の対応付けに従って小文字に変換された文字列の値を返します。`toLocaleLowerCase()` はその文字列自体に影響を与えません。ほとんどの場合は {{jsxref("String/toLowerCase", "toLowerCase()")}} と同じ結果が得られますが、トルコ語のように大文字小文字のマッピングが Unicode 既定の大文字小文字のマッピングに従っていないロケールの場合は、異なる結果が得られる可能性があります。
 
 ## 例
 

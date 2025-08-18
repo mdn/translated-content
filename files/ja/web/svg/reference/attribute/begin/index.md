@@ -228,7 +228,7 @@ l10n:
 
 ### イベントの例
 
-```html
+```html-nolint
 <svg
   width="120"
   height="120"

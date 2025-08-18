@@ -1,21 +1,20 @@
 ---
 title: String.prototype.toUpperCase()
+short-title: toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`toUpperCase()`** は {{jsxref("String")}} 値のメソッドで、呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。
 
-**`toUpperCase()`** メソッドは、呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。
-
-{{InteractiveExample("JavaScript デモ: String.toUpperCase()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.toUpperCase()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";
 
 console.log(sentence.toUpperCase());
-// Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+// 予想される結果: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
 ```
 
 ## 構文
@@ -23,6 +22,10 @@ console.log(sentence.toUpperCase());
 ```js-nolint
 toUpperCase()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 

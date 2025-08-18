@@ -1,17 +1,16 @@
 ---
 title: String.prototype.charCodeAt()
+short-title: charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 l10n:
-  sourceCommit: a49d60648404407784b04ff5ff7e16a6a8d1ac25
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`charCodeAt()`** メソッドは、指定された位置にある UTF-16 コード単位を表す `0` から `65535` までの整数を返します。
 
-`charCodeAt()` は常に [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして文字列をインデックスするので、孤立サロゲートを返すかもしれません。コードポイント値全体を取得したい場合は、 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}} を使用してください。
+`charCodeAt()` は常に [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして文字列をインデックスするので、孤立サロゲートを返すかもしれません。コードポイント値全体を取得したい場合は、 {{jsxref("String.prototype.codePointAt()")}} を使用してください。
 
-{{InteractiveExample("JavaScript デモ: String.charCodeAt()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.charCodeAt()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";
@@ -23,7 +22,7 @@ console.log(
     index,
   )}`,
 );
-// Expected output: "Character code 113 is equal to q"
+// 予想される結果: "Character code 113 is equal to q"
 ```
 
 ## 構文

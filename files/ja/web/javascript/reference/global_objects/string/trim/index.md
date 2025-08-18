@@ -1,26 +1,25 @@
 ---
 title: String.prototype.trim()
+short-title: trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`trim()`** は {{jsxref("String")}} 値のメソッドで、この文字列の両端からホワイトスペースを取り除き、元の文字列を変更せずに新しい文字列を返します。
 
 一方の端からのみホワイトスペースを取り除いた新しい文字列を返したい場合は、{{jsxref("String/trimStart", "trimStart()")}} または {{jsxref("String/trimEnd", "trimEnd()")}} を使用してください。
 
-{{InteractiveExample("JavaScript デモ: String.trim()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.trim()")}}
 
 ```js interactive-example
 const greeting = "   Hello world!   ";
 
 console.log(greeting);
-// Expected output: "   Hello world!   ";
+// 予想される結果: "   Hello world!   ";
 
 console.log(greeting.trim());
-// Expected output: "Hello world!";
+// 予想される結果: "Hello world!";
 ```
 
 ## 構文
@@ -45,7 +44,7 @@ trim()
 
 次の例は、`str` の両端からホワイトペースを取り除きます。
 
-```js-nolint
+```js
 const str = "   foo  ";
 console.log(str.trim()); // 'foo'
 ```

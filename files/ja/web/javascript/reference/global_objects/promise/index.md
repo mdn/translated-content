@@ -2,10 +2,8 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Promise`** オブジェクトは、非同期処理の完了（もしくは失敗）の結果およびその結果の値を表します。
 
@@ -194,7 +192,7 @@ JavaScript はもともと[シングルスレッド](/ja/docs/Glossary/Thread)�
   - : 与えられた理由で拒否された新しい `Promise` オブジェクトを返します。
 - {{jsxref("Promise.resolve()")}}
   - : 与えられた値で解決された `Promise` オブジェクトを返します。もし値が Thenable （つまり `then` メソッドを持っているオブジェクト）ならば、返されるプロミスはその Thenable をたどり、その結果を採用します。そうでなければ、返されるプロミスは与えられた値で履行されます。
-- {{jsxref("Promise.try()")}} {{experimental_inline}}
+- {{jsxref("Promise.try()")}}
   - : あらゆる種類のコールバック（復帰か例外か、同期的か非同期的にかかわらず）を取り、その結果を `Promise` でラップします。
 - {{jsxref("Promise.withResolvers()")}}
   - : {{jsxref("Promise/Promise", "Promise()")}} コンストラクターの実行側に渡された 2 つの引数に対応する、新しい `Promise` オブジェクトとそれを解決または拒否する 2 つの関数を格納したオブジェクトを返します。
@@ -222,11 +220,13 @@ JavaScript はもともと[シングルスレッド](/ja/docs/Glossary/Thread)�
 
 ### 基本的な例
 
+この例では、`setTimeout(...)` を使用して非同期コードをシミュレートしています。
+実際には、XHR や HTML API などの何かを使用することになるでしょう。
+
 ```js
 const myFirstPromise = new Promise((resolve, reject) => {
-  // resolve(...) は、非同期で行っていたことが成功したときに呼び出し、失敗したときには reject(...) を呼び出します。
-  // この例では、setTimeout(...) を使用して非同期コードをエミュレーションしています。
-  // 実際には、XHR や HTML API のようなものを使用することになります。
+  // resolve(...) は、非同期で行っていたことが成功したときに呼び出し、
+  // 失敗したときには reject(...) を呼び出す。
   setTimeout(() => {
     resolve("成功!"); // やった！うまくいった！
   }, 250);
@@ -260,7 +260,7 @@ function tetheredGetNumber(resolve, reject) {
     if (value < THRESHOLD_A) {
       resolve(value);
     } else {
-      reject(`Too large: ${value}`);
+      reject(new RangeError(`大きすぎます: ${value}`));
     }
   }, 500);
 }
@@ -280,7 +280,7 @@ function promiseGetWord(parityInfo) {
   return new Promise((resolve, reject) => {
     const { value, isOdd } = parityInfo;
     if (value >= THRESHOLD_A - 1) {
-      reject(`Still too large: ${value}`);
+      reject(new RangeError(`まだ大きすぎます: ${value}`));
     } else {
       parityInfo.wordEvenOdd = isOdd ? "odd" : "even";
       resolve(parityInfo);
@@ -372,7 +372,68 @@ btn.addEventListener("click", testPromise);
 
 ### XHR による画像の読み込み
 
-`Promise` と {{domxref("XMLHttpRequest")}} で画像を読み込む別の例は、 MDN の GitHub の [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) リポジトリーにあり、[動作を確認する](https://mdn.github.io/js-examples/promises-test/)ことができます。それぞれの行のコメントで Promise と XHR の構造がよくわかるはずです。
+`Promise` と {{domxref("XMLHttpRequest")}} を使用して画像を読み込む別の例を下記に示します。
+それぞれの段階にコメントが付いており、 Promise と XHR のアーキテクチャを詳しく追うことができます。
+
+```html hidden live-sample___promises
+<h1>プロミスの例</h1>
+```
+
+```js live-sample___promises
+function imgLoad(url) {
+  // Promise() コンストラクターを使用して、新しいプロミスを作成
+  // これは、2 つの引数 resolve と reject に対応する関数を引数として持つ
+  return new Promise((resolve, reject) => {
+    // XHR で画像を読み込む
+    const request = new XMLHttpRequest();
+    request.open("GET", url);
+    request.responseType = "blob";
+    // リクエストが読み込まれたら、それが成功したかどうかを調べる
+    request.onload = () => {
+      if (request.status === 200) {
+        // 成功したら、リクエストのレスポンスを返してプロミスを解決
+        resolve(request.response);
+      } else {
+        // 失敗した場合は、エラーメッセージでプロミスを拒否
+        reject(
+          Error(
+            `画像が正常に読み込まれませんでした。エラーコード: + ${request.statusText}`,
+          ),
+        );
+      }
+    };
+    // ネットワークエラーを処理
+    request.onerror = () => reject(new Error("ネットワークエラーが発生しました。"));
+    // リクエストを送信
+    request.send();
+  });
+}
+
+// 本体要素への参照を取得し、新しい画像オブジェクトを作成する
+const body = document.querySelector("body");
+const myImage = new Image();
+const imgUrl =
+  "https://mdn.github.io/shared-assets/images/examples/round-balloon.png";
+
+// 読み込みたい URL に対応する関数を呼び出し、プロミス then() メソッドを
+// 2 つのコールバックで連鎖させる
+imgLoad(imgUrl).then(
+  (response) => {
+    // 最初のメソッドは、プロミスが解決すると、resolve() メソッド内で
+    // 指定された request.response に対応して実行される
+    const imageURL = URL.createObjectURL(response);
+    myImage.src = imageURL;
+    body.appendChild(myImage);
+  },
+  (error) => {
+    // 2 つ目は、プロミスが拒否されたときに実行され、
+    // reject() メソッドで指定されたエラーをログ出力する
+    console.log(error);
+  },
+);
+```
+
+{{embedlivesample("promises", "", "240px")}}
 
 ### 現行の設定オブジェクトの追跡
 
@@ -383,7 +444,8 @@ btn.addEventListener("click", testPromise);
 これをもう少し詳しく説明するために、文書に埋め込まれた [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) がホストとどのように通信するかを見てみましょう。すべての Web API は現行の設定オブジェクトを認識しているため、以下のようにすればすべてのブラウザーで動作します。
 
 ```html
-<!doctype html> <iframe></iframe>
+<!doctype html>
+<iframe></iframe>
 <!-- ここが領域です -->
 <script>
   // ここも同様に領域です
@@ -399,7 +461,8 @@ btn.addEventListener("click", testPromise);
 同じ概念をプロミスに適用します。上の例を少し変えてみると、こうなります。
 
 ```html
-<!doctype html> <iframe></iframe>
+<!doctype html>
+<iframe></iframe>
 <!-- ここが領域です -->
 <script>
   // ここも同様に領域です

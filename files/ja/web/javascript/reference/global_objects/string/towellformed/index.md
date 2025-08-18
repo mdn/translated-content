@@ -1,11 +1,10 @@
 ---
 title: String.prototype.toWellFormed()
+short-title: toWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/toWellFormed
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toWellFormed()`** は {{jsxref("String")}} 値のメソッドで、この文字列のすべての[孤立サロゲート](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)を Unicode 置換文字 U+FFFD に置き換えた文字列を返します。
 
@@ -87,5 +86,6 @@ console.log(encodeURI(illFormed.toWellFormed())); // "https://example.com/search
 ## 関連情報
 
 - [`String.prototype.toWellFormed` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#well-formed-unicode-strings)
+- [es-shims による `String.prototype.toWellFormed` のポリフィル](https://www.npmjs.com/package/string.prototype.towellformed)
 - {{jsxref("String.prototype.isWellFormed()")}}
 - {{jsxref("String.prototype.normalize()")}}

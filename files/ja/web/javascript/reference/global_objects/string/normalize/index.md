@@ -1,36 +1,35 @@
 ---
 title: String.prototype.normalize()
+short-title: normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`normalize()`** は {{jsxref("String")}} 値のメソッドで、この文字列の Unicode 正規化形式を返します。
 
-**`normalize()`** メソッドは、文字列の Unicode 正規化形式を返します。
-
-{{InteractiveExample("JavaScript デモ: String.normalize()", "taller")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.normalize()", "taller")}}
 
 ```js interactive-example
 const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";
 const name2 = "\u0041\u006d\u0065\u0301\u006c\u0069\u0065";
 
 console.log(`${name1}, ${name2}`);
-// Expected output: "Amélie, Amélie"
+// 予想される結果: "Amélie, Amélie"
 console.log(name1 === name2);
-// Expected output: false
+// 予想される結果: false
 console.log(name1.length === name2.length);
-// Expected output: false
+// 予想される結果: false
 
 const name1NFC = name1.normalize("NFC");
 const name2NFC = name2.normalize("NFC");
 
 console.log(`${name1NFC}, ${name2NFC}`);
-// Expected output: "Amélie, Amélie"
+// 予想される結果: "Amélie, Amélie"
 console.log(name1NFC === name2NFC);
-// Expected output: true
+// 予想される結果: true
 console.log(name1NFC.length === name2NFC.length);
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 構文
@@ -59,10 +58,10 @@ normalize(form)
 
 与えられた文字列の Unicode 正規化形式を含む文字列です。
 
-### 発生する例外
+### 例外
 
 - {{jsxref("RangeError")}}
-  - : `form` が上記で指定された値のいずれでもない場合は {{jsxref("RangeError")}} が発生します。
+  - : `form` が上記で指定された値のいずれでもない場合に発生します。
 
 ## 解説
 
@@ -218,4 +217,4 @@ str.normalize("NFKD"); // '\u0073\u0323\u0307'
 ## 関連情報
 
 - [Unicode Standard Annex #15, Unicode Normalization Forms](https://www.unicode.org/reports/tr15/)
-- [Unicode の等価性](https://ja.wikipedia.org/wiki/Unicodeの等価性)
+- [Unicode の等価性](https://ja.wikipedia.org/wiki/Unicodeの等価性)（ウィキペディア）
