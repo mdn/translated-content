@@ -1,6 +1,7 @@
 ---
 title: DOM 中的空白字元
-slug: Web/API/Document_Object_Model/Whitespace
+slug: Web/CSS/CSS_text/Whitespace
+original_slug: Web/API/Document_Object_Model/Whitespace
 ---
 
 {{DefaultAPISidebar("DOM")}}
