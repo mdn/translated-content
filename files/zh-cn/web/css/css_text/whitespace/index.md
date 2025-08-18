@@ -1,6 +1,7 @@
 ---
 title: HTML、CSS 和 DOM 中的空白符是如何处理的
-slug: Web/API/Document_Object_Model/Whitespace
+slug: Web/CSS/CSS_text/Whitespace
+original_slug: Web/API/Document_Object_Model/Whitespace
 ---
 
 {{DefaultAPISidebar("DOM")}}
