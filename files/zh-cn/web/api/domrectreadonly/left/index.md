@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-**`DOMRectReadOnly`** 接口的只读属性 **`left`** 返回 `DOMRect` 的左坐标值。（其值与 `x` 相同；如果 `width` 为负数，则为 `x + width`。）
+**`DOMRectReadOnly`** 接口的只读属性 **`left`** 返回 `DOMRect` 的左坐标值。（取值与 `x` 相同；如果 `width` 为负数，则为 `x + width`。）
 
 ## 值
 
