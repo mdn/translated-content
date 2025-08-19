@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`contains()`** 方法返回一个布尔值，表示给定的字符串是否存在于列表中。
+**`contains()`** 方法返回表示给定的字符串是否存在于列表中的布尔值。
 
 ## 语法
 
