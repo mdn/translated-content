@@ -3,8 +3,6 @@ title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 ---
 
-{{CSSRef}}
-
 **`grid-auto-flow`** 属性控制着自动布局算法怎样运作，精确指定在网格中被自动布局的元素怎样排列。
 
 {{InteractiveExample("CSS Demo: grid-auto-flow")}}

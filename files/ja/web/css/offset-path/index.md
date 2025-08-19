@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
-{{CSSRef}}
-
 **`offset-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がたどる経路（パス）を指定し、そのパス内の親コンテナーまたは SVG 座標系における要素の位置を決定します。パスは、要素が位置指定または移動される直線、曲線、または幾何学的形状です。
 
 `offset-path` プロパティは、{{cssxref("offset-distance")}}、{{cssxref("offset-rotate")}}、{{cssxref("offset-anchor")}} プロパティと組み合わせて使用し、パスに沿った要素の位置と方向を制御します。
 
-{{InteractiveExample("CSS Demo: offset-path")}}
+{{InteractiveExample("CSS デモ: offset-path")}}
 
 ```css interactive-example-choice
 offset-path: path("M-70,-40 C-70,70 70,70 70,-40");

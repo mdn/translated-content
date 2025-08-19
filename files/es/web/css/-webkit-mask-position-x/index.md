@@ -3,7 +3,7 @@ title: -webkit-mask-position-x
 slug: Web/CSS/-webkit-mask-position-x
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

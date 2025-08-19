@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
 ---
 
-{{CSSRef}}
-
 **CSS アンカー位置指定**モジュールは、要素を結びつけるための機能を定義します。要素は、**アンカー要素**と**アンカー位置指定要素**として定義できます。アンカー位置指定要素は、アンカー要素に束縛することができます。アンカー位置決めされた要素は、そのサイズと位置を、結合されたアンカー要素のサイズと位置に相対的に設定することができます。
 
 CSS のアンカーポジショニングは、アンカーポジショニングされた要素の複数の代替位置を指定するための CSS だけのメカニズムも提供します。例えば、ツールチップがフォームフィールドにアンカーされているが、既定の位置設定では画面外にレンダリングされる場合、ブラウザーは別の提案された位置でレンダリングし、画面上に配置することができます。
@@ -139,7 +137,8 @@ HTML で位置指定された要素をアンカーに関連付けるには、[`a
 
 {{ EmbedLiveSample("HTML method", "100%", "120") }}
 
-> **メモ:** [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性は、CSS のものよりも対応が進んでいません。詳しくは、[`anchor` 属性の互換性表](/ja/docs/Web/HTML/Reference/Global_attributes/anchor#ブラウザーの互換性)をご覧ください。
+> [!NOTE]
+> [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性は、CSS のものよりも対応が進んでいません。詳しくは、[`anchor` 属性の互換性表](/ja/docs/Web/HTML/Reference/Global_attributes/anchor#ブラウザーの互換性)をご覧ください。
 
 2 つの要素は関連付けられましたが、まだ結び付けられていません。 それらを結び付けるには、位置指定された要素をアンカーに対して相対的に位置指定する必要があります。これは CSS で行います。
 
@@ -164,7 +163,8 @@ anchor(<anchor-element> <anchor-side>, <fallback>)
 
 - `<anchor-element>`
   - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されたアンカー、または、HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
-    > **メモ:** `<anchor-element>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。関連付けは、`position-anchor` プロパティと `anchor` 属性のみで指定できます。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-element>` 値](/ja/docs/Web/CSS/anchor#element_positioned_relative_to_multiple_anchors)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
+    > [!NOTE]
+    > `<anchor-element>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。関連付けは、`position-anchor` プロパティと `anchor` 属性のみで指定できます。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-element>` 値](/ja/docs/Web/CSS/anchor#element_positioned_relative_to_multiple_anchors)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
 
 - [`<anchor-side>`](/ja/docs/Web/CSS/anchor#anchor-side)
   - : アンカーの端に対する相対位置を指定します。有効な値には、アンカーの中心、アンカーの物理的な辺（`top`, `left`, など）、または論理的な辺（`start`, `self-end`, など）、またはインセットプロパティの軸の先頭 (`0%`) と末尾 (`100%`) の間のパーセント値が含まれます。`anchor()` 関数が設定されているインセットプロパティと[互換性](/ja/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values)のない値が使用された場合、代替値が使用されます。

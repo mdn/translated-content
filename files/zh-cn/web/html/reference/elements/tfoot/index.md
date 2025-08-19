@@ -3,8 +3,6 @@ title: <tfoot>
 slug: Web/HTML/Reference/Elements/tfoot
 ---
 
-{{HTMLSidebar}}
-
 HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 <table class="properties">

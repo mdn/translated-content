@@ -3,7 +3,7 @@ title: <big>：更大文字元素
 slug: Web/HTML/Reference/Elements/big
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<big>`** [HTML](/zh-TW/docs/Web/HTML) 廢棄的元素會將所包含的文字呈現為比周圍文字大一個級別的字體大小（例如 `medium` 變為 `large`）。該大小限制在瀏覽器允許的最大字體大小之內。
 

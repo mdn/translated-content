@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6da4cf5ad98eff4a623db03164549c4f2e3b001a
 ---
 
-{{CSSRef}}
-
 **`scan`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器のスキャンプロセスに基づいて CSS スタイルを適用するために使用されます。
 
 ## 構文

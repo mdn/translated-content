@@ -11,7 +11,7 @@ l10n:
 
 詳しくは、[`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) および {{jsxref("String.prototype.matchAll()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}
+{{InteractiveExample("JavaScript デモ: Symbol.matchAll")}}
 
 ```js interactive-example
 const re = /[0-9]+/g;

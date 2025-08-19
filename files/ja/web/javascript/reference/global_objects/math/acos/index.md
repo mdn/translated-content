@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.acos()")}}
+{{InteractiveExample("JavaScript デモ: Math.acos()")}}
 
 ```js interactive-example
 // Calculates angle of a right-angle triangle in radians

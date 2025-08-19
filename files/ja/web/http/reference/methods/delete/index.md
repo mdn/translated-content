@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/DELETE
 original_slug: Web/HTTP/Methods/DELETE
 ---
 
-{{HTTPSidebar}}
-
 **HTTP の `DELETE` リクエストメソッド**は、指定されたリソースを削除します。
 
 <table class="properties">

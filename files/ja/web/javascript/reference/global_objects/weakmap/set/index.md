@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 
 **`set()`** メソッドは、指定されたキーと値をもつ新しい要素を `WeakMap` オブジェクトへ追加します。
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+{{InteractiveExample("JavaScript デモ: WeakMap.prototype.set()")}}
 
 ```js interactive-example
 const weakmap1 = new WeakMap();

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2b44e3e665ceb5f4336089695aa5f617b1baf33c
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!WARNING]
 > このヘッダーの代わりに、 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} ディレクティブを {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用してください。

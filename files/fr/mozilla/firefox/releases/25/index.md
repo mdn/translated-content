@@ -3,8 +3,6 @@ title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
 ---
 
-{{FirefoxSidebar}}
-
 ## Changements pour les développeurs Web
 
 ### Nouveau dans Firefox DevTools

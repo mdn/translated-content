@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 设置页面操作的标题。当用户悬停在页面操作上时，标题会显示在工具提示中。
 
 ## 语法

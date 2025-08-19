@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c26709292444632dfbc4862f4b0b5f2adc5fff56
 ---
 
-{{AddonSidebar}}
-
 返回扩展的动态规则集。
 
 ## 语法

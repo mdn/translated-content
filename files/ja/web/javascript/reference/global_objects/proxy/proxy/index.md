@@ -15,7 +15,8 @@ l10n:
 new Proxy(target, handler)
 ```
 
-> **メモ:** `Proxy()` は、[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Proxy()` は、[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

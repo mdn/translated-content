@@ -9,7 +9,7 @@ l10n:
 
 **`Object.assign()`** 静的メソッドは、すべての{{jsxref("Object/propertyIsEnumerable", "列挙可能", "", 1)}}な{{jsxref("Object/hasOwn", "自身のプロパティ", "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+{{InteractiveExample("JavaScript デモ: Object.assign()")}}
 
 ```js interactive-example
 const target = { a: 1, b: 2 };
@@ -56,7 +56,8 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 
 エラーが発生した場合、例えばプロパティが書き込み不可の場合は、 {{jsxref("TypeError")}} が発生しますが、エラーが発生する前にプロパティが追加される場合、 `target` オブジェクトが変更されることがあります。
 
-> **メモ:** `Object.assign()` はコピー元の値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} でも例外を発生させません。
+> [!NOTE]
+> `Object.assign()` はコピー元の値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} でも例外を発生させません。
 
 ## 例
 

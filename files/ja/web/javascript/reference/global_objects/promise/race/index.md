@@ -9,7 +9,7 @@ l10n:
 
 **`Promise.race()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを受け取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、最初に決定したプロミスの最終的な状態で決定されます。
 
-{{InteractiveExample("JavaScript Demo: Promise.race()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Promise.race()", "taller")}}
 
 ```js interactive-example
 const promise1 = new Promise((resolve, reject) => {
@@ -238,7 +238,8 @@ setTimeout(() => {
 // { status: 'rejected', reason: 300 }
 ```
 
-> **メモ:** `promiseState` 関数は非同期で実行されます。プロミスの値を同期的に取得する方法がないからです（つまり、 `then()` や `await` がない場合）、たとえプロミスが既に決定されていたとしてもです。しかし、`promiseState()` は常に 1 ティック以内に履行され、実際にプロミスの決定を待つことはありません。
+> [!NOTE]
+> `promiseState` 関数は非同期で実行されます。プロミスの値を同期的に取得する方法がないからです（つまり、 `then()` や `await` がない場合）、たとえプロミスが既に決定されていたとしてもです。しかし、`promiseState()` は常に 1 ティック以内に履行され、実際にプロミスの決定を待つことはありません。
 
 ### Promise.any() との比較
 

@@ -3,8 +3,6 @@ title: Firefox 63 for developers
 slug: Mozilla/Firefox/Releases/63
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされました。このページでは、開発者に影響する Firefox 63 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
