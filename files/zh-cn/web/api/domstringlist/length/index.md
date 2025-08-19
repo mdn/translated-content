@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-{{domxref("DOMStringList")}} 的 **`length`** 只读属性表示该对象中字符串的数量。
+{{domxref("DOMStringList")}} 的只读属性 **`length`** 表示该对象中字符串的数量。
 
 ## 值
 
