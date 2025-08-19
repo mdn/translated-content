@@ -3126,7 +3126,8 @@
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Transforming_with_XSLT	/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/ja/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
+/ja/docs/Web/API/Document_Object_Model/Whitespace	/ja/docs/Web/CSS/CSS_text/Whitespace
+/ja/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
 /ja/docs/Web/API/Element.querySelector	/ja/docs/Web/API/Element/querySelector
@@ -4549,7 +4550,7 @@
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Working_with_the_History_API	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/Guide/DOM/Using_full_screen_mode	/ja/docs/Web/API/Fullscreen_API
-/ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
+/ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/Web/API/Document_Object_Model/Events
 /ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /ja/docs/Web/Guide/Graphics	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images
@@ -6286,7 +6287,7 @@
 /ja/docs/Web_Development/Mobile	/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /ja/docs/Web_Development/Mobile/Responsive_design	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web_Development/Writing_forward-compatible_websites	/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
-/ja/docs/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
+/ja/docs/Whitespace_in_the_DOM	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/XHTML	/ja/docs/Glossary/XHTML
 /ja/docs/XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest
 /ja/docs/XMLHttpRequest/FormData	/ja/docs/Web/API/FormData
