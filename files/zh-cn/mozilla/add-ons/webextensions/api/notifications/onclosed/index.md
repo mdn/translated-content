@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1c0dda60cb2b680a753264b538e2c46776ecd837
 ---
 
-{{AddonSidebar}}
-
 当通知被关闭（无论是系统关闭还是用户关闭）时触发。
 
 ## 语法

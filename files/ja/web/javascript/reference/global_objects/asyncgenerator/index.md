@@ -60,7 +60,8 @@ asyncGen.next().then((res) => console.log(res.value)); // 3
 - {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
   - : インスタンスオブジェクトを作成したコンストラクター関数。`AsyncGenerator` インスタンスの場合、初期値は [`AsyncGeneratorFunction.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction) です。
 
-    > **メモ:** `AsyncGenerator` は生成した非同期ジェネレーター関数を格納しているわけではありません。
+    > [!NOTE]
+    > `AsyncGenerator` は生成した非同期ジェネレーター関数を格納しているわけではありません。
 
 - `AsyncGenerator.prototype[Symbol.toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"AsyncGenerator"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。

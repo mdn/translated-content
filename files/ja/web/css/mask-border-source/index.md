@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
-
 **`mask-border-source`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)を生成するのに使われる元の画像を設定します。
 
 {{cssxref("mask-border-slice")}} プロパティは、元の画像を最終的なマスク境界に動的に適用する上で、複数の領域に分割するために使用されます。
@@ -60,7 +58,8 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 -webkit-mask-box-image-source: url(image.jpg);
 ```
 
-> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> [!NOTE]
+> [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 

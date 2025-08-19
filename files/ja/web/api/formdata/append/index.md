@@ -28,7 +28,8 @@ append(name, value, filename)
 - `filename` {{optional_inline}}
   - : 第 2 引数に {{domxref("Blob")}} または {{domxref("File")}} を渡した場合に、サーバーに報告されるファイル名（文字列）です。{{domxref("Blob")}} オブジェクトの既定のファイル名は "blob" です。{{domxref("File")}} オブジェクトの既定値は、ファイルのファイル名です。
 
-> **メモ:** `FormData` オブジェクトに追加するデータとして {{domxref("Blob")}} を指定した場合、"Content-Disposition" ヘッダーでサーバーに報告されるファイル名はブラウザーによって異なることがあります。
+> [!NOTE]
+> `FormData` オブジェクトに追加するデータとして {{domxref("Blob")}} を指定した場合、"Content-Disposition" ヘッダーでサーバーに報告されるファイル名はブラウザーによって異なることがあります。
 
 ### 返値
 

@@ -9,7 +9,7 @@ l10n:
 
 **`CustomEvent`** 介面可用來將自訂資料附加到應用程式產生的事件上。
 
-作為 `CustomEvent` 的替代方案，你可以[子類別化 `Event` 介面](/zh-TW/docs/Web/Events/Creating_and_triggering_events#新增自訂資料——子類別化_event)來新增自訂資料和行為。
+作為 `CustomEvent` 的替代方案，你可以[子類別化 `Event` 介面](/zh-TW/docs/Web/API/Document_Object_Model/Events#新增自訂資料——子類別化_event)來新增自訂資料和行為。
 
 > [!NOTE]
 > 如果嘗試在網頁擴充功能內容腳本與網頁腳本之間進行通訊，非字串的 `detail` 屬性會在 Firefox 中拋出「Permission denied to access property」的錯誤。為避免此問題，請複製該物件。詳情請參見[與頁面腳本共享物件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)。
@@ -46,4 +46,4 @@ _此介面繼承自其父介面 {{domxref("Event")}} 的方法。_
 ## 參見
 
 - {{domxref("Window.postMessage()")}}
-- [建立與觸發事件](/zh-TW/docs/Web/Events/Creating_and_triggering_events)
+- [建立與觸發事件](/zh-TW/docs/Web/API/Document_Object_Model/Events)

@@ -48,7 +48,7 @@ Por ejemplo:
 - Un vídeo se reproduce, se pausa o termina.
 - Ocurrió un error.
 
-A partir de esto (y dando un vistazo a la [referencia de eventos](/es/docs/Web/Events) de MDN) puedes observar que existen **muchos** eventos que pueden ser lanzados.
+A partir de esto (y dando un vistazo a la [referencia de eventos](/es/docs/Web/API/Document_Object_Model/Events) de MDN) puedes observar que existen **muchos** eventos que pueden ser lanzados.
 
 Para reaccionar a un evento, puedes asociarle un **manejador de eventos**. Esto es un bloque de código (normalmente una función de JavaScript que tú como programador creas) que se ejecuta cuando el evento ocurre.
 Cuando uno de estos bloques de código se configura para ejecutarse en respuesta de un evento, decimos que estamos **registrando un manejador de eventos**.
@@ -800,7 +800,7 @@ Si hay algo que no te quedó muy claro, tómate la libertad de leer de nuevo el 
 ## Véase también
 
 - [domevents.dev](https://domevents.dev/) — una aplicación interactiva bastante útil para aprender el comportamiento del sistema de eventos del DOM a través de la exploración.
-- [Referencia de eventos](/es/docs/Web/Events)
+- [Referencia de eventos](/es/docs/Web/API/Document_Object_Model/Events)
 - [Orden de eventos](https://www.quirksmode.org/js/events_order.html) (debate sobre captura y burbujeo) - un excelente y detallado artículo por Peter-Paul Koch.
 - [Event accessing](https://www.quirksmode.org/js/events_access.html) (debate sobre el objeto evento) - otro excelente y detallado artículo por Peter-Paul Koch.
 

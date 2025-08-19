@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
 ---
 
-{{CSSRef}}
-
 **`:modal`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、操作が解除されるまで、それ以外の要素とのすべての操作を除外する状態にある要素と一致します。 `:modal` 擬似クラスを使用して、複数の要素を同時に選択することができますが、アクティブになり、入力を受け付けることができるのはそのうちの 1 つのみです。
 
 {{InteractiveExample("CSS デモ: :modal", "tabbed-shorter")}}

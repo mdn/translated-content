@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-{{CSSRef}}
-
 **`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
 
 {{InteractiveExample("CSS デモ: background")}}

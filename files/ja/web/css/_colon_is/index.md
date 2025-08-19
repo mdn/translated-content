@@ -2,15 +2,13 @@
 title: :is()
 slug: Web/CSS/:is
 l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`:is()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターのリストを引数に取り、リスト中のセレクターの何れか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。
+**`:is()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターのリストを引数に取り、リスト中のセレクターのいずれか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。
 
 > [!NOTE]
-> 元々は `:matches()` （と `:any()`）という名前でしたが、[CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) で `:is()` に改名されました。
+> 元々は `:matches()` （および `:any()`）という名前でしたが、[CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) で `:is()` に改名されました。
 
 {{InteractiveExample("CSS デモ: :is", "tabbed-shorter")}}
 
@@ -20,7 +18,6 @@ ol {
   color: darkblue;
 }
 
-/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 :is(ol, ul, menu:unsupported) :is(ol, ul) {
   color: green;
 }
@@ -57,11 +54,21 @@ ol {
 </ol>
 ```
 
-擬似要素は `:is()` のセレクターリストでは無効です。
+## 構文
+
+```css-nolint
+:is(<forgiving-selector-list>) {
+  /* ... */
+}
+```
+
+### 引数
+
+擬似クラス `:is()` には、引数として、1 つ以上のセレクターをカンマで区切ったリストである[セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#セレクターリスト)が要求されます。このリストには、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は含まれていてはなりませんが、その他の単純、複合、複雑セレクターは使用できます。
 
 ### :is() と :where() の違い
 
-この 2 つの違いは、 `:is()` がセレクター全体の詳細度にカウントされる（最も詳細な引数の詳細度を取る）のに対し、 [`:where()`](/ja/docs/Web/CSS/:where) は詳細度の値が 0 であることです。これは、 [`:where()` 参照ページの例](/ja/docs/Web/CSS/:where#examples)で実証されています。
+この 2 つの違いは、 `:is()` がセレクター全体の詳細度にカウントされる（最も詳細な引数の詳細度を取る）のに対し、 [`:where()`](/ja/docs/Web/CSS/:where) は詳細度の値が 0 であることです。これは、 [`:where()` 参照ページの例](/ja/docs/Web/CSS/:where#例)で実証されています。
 
 ### セレクターの解釈の許容
 
@@ -149,7 +156,7 @@ dir dir dir {
 ... これを次のように置き換えることができます。
 
 ```css
-/* 3層（以上）の順序なしリストに四角形を使用 */
+/* 3 層（以上）の順序なしリストに四角形を使用 */
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
   list-style-type: square;
 }
@@ -225,7 +232,7 @@ h1 {
 
 ### :is() は擬似要素を選択しない
 
-`:is()` 擬似クラスは擬似要素にマッチしません。したがって、次のようにしたり、
+`:is()` 擬似クラスは擬似要素に一致しません。したがって、次のようにしたり、
 
 ```css example-bad
 some-element:is(::before, ::after) {
@@ -241,20 +248,12 @@ some-element:is(::before, ::after) {
 }
 ```
 
-以下のようにしましょう：
+以下のようにしましょう。
 
 ```css example-good
 some-element::before,
 some-element::after {
   display: block;
-}
-```
-
-## 構文
-
-```css-nolint
-:is(<forgiving-selector-list>) {
-  /* ... */
 }
 ```
 

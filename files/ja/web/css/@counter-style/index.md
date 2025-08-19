@@ -1,11 +1,15 @@
 ---
 title: "@counter-style"
 slug: Web/CSS/@counter-style
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+**`@counter-style`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、スタイルにあらかじめ設定されたものではないカウンターのスタイルを定義することができます。 `@counter-style` ルールには[記述子](#記述子)を設定し、カウンター値を文字列表現に変換する方法を定義します。
 
-**`@counter-style`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、スタイルにあらかじめ設定されたものではないカウンターのスタイルを定義することができます。 `@counter-style` ルールはカウンターの値をどのように文字列表現に変換するかを定義します。
+CSS は多くの便利な定義済みカウンタースタイルを提供していますが、`@counter-style` アットルールは、カウンターを作成するための自由度の高い方法を提供します。このアットルールは、定義済みスタイルが要件に合わない場合に、作成者が自分自身でカウンタースタイルを定義できるようにすることで、世界中の字組みのニーズに対応しています。
+
+## 構文
 
 ```css
 @counter-style thumbs {
@@ -13,83 +17,53 @@ slug: Web/CSS/@counter-style
   symbols: "\1F44D";
   suffix: " ";
 }
-
-ul {
-  list-style: thumbs;
-}
 ```
 
-初期バージョンの CSS では、有用なカウンターのスタイルのセットを定義していました。しかし、何年にもわたって定義済みのスタイルがここに追加され続けたため、世界中の記法のニーズを満たすにはこのシステムでは不十分になりました。 `@counter-style` アットルールは、あらかじめ定義されたスタイルがニーズに合っていないときに独自のカウンタースタイルを定義できるようにすることで、この欠点を完全に解決します。
+`@counter-style` アットルールは、[カウンタースタイル名](#カウンタースタイル名)によって識別され、名前付きカウンターのスタイルは、1 つ以上の[記述子](#記述子)およびその値で構成される `<declaration-list>` を使用して微調整することができます。
 
-## 構文
+### カウンタースタイル名
+
+- `<counter-style-name>`
+  - : カウンタスタイルの名前を提供します。大文字と小文字を区別する {{cssxref("custom-ident")}} として、引用符で囲まずに指定します。値は `none` と同じであってはなりません。すべての独自の識別子と同様に、カウンタースタイルの値は [CSS 全体のキーワード](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords) にはできません。[リスト](/ja/docs/Web/CSS/CSS_lists#プロパティ)および[カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles#プロパティ)プロパティの値を含む、それ以外の列挙された CSS プロパティの値は避けてください。カウンタの名前は、大文字と小文字を区別せず {{cssxref("list-style-type")}} プロパティの値である `decimal`、`disc`、`square`、`circle`、`disclosure-open`、`disclosure-closed` にはできません。
+
+    > [!NOTE]
+    > 上書きできないカウンタースタイル名 `decimal`、`disc`、`square`、`circle`、`disclosure-open`、および `disclosure-closed` は、独自のカウンターの名前として使用することはできません。ただし、 `<counter-style-name>` データ型が期待されるその他のコンテキスト、例えば `system: extends <counter-style-name>` では、これらは有効です。
 
 ### 記述子
 
-それぞれの `@counter-style` は名前で識別され、記述子のセットを持ちます。
-
 - {{cssxref("@counter-style/system", "system")}}
-  - : カウンターの整数値を文字列表現に変換するために使用するアルゴリズムを指定します。
-
-<!---->
-
-- {{cssxref("@counter-style/negative", "negative")}}
-  - : 値が負の数の時に、カウンター表現の前または後に追加する記号を指定します。
-
-<!---->
-
-- {{cssxref("@counter-style/prefix", "prefix")}}
-  - : マーカー表現の前に追加する記号を指定します。接頭辞は表現の最終段階で追加されるため、カウンターの最終的な表現では、負号の前に来ます。
-
-<!---->
-
-- {{cssxref("@counter-style/suffix", "suffix")}}
-  - : prefix 記述子と同様に、マーカー表現に追加される記号を指定します。接尾辞はマーカー表現の後に来ます。
-
-<!---->
-
-- {{cssxref("@counter-style/range", "range")}}
-  - : カウンタースタイルが適用される値の範囲を定義します。カウンタースタイルが範囲を外れたカウンター値を表現するために使用されると、カウンタースタイルは代替スタイルで代用されます。
-
-<!---->
-
-- {{cssxref("@counter-style/pad", "pad")}}
-  - : マーカー表現に最小文字数を適用する必要がある場合に使用されます。例えば、カウンターが 01 から始まって 02、03、04 のように進む場合は、パッド文字が使用されます。指定されたパッド値よりも長い文字数の場合は、マーカーは通常通りに構築されます。
-
-<!---->
-
-- {{cssxref("@counter-style/fallback", "fallback")}}
-  - : 指定したシステムでカウンター値の表現を構築できない場合や、カウンター値が指定された範囲の外にあった場合に、代わりに使用されるシステムを指定します。指定された代替スタイルも値の表現に失敗した場合は、代替スタイルの代替があれば、それが使用されます。代替システムが記述されていない場合や、代替システムのチェーンがカウンター値を表現できなかった場合は、最終的に decimal スタイルに代替されます。
-
-<!---->
+  - : カウンター の整数値を文字列表現に変換するために使用するアルゴリズムを指定します。値が `cyclic`、`numeric`、`alphabetic`、`symbolic`、`fixed` のいずれかの場合は、`symbols` 記述子も指定する必要があります。値が `additive` の場合は、 `additive-symbols` 記述子も指定する必要があります。
 
 - {{cssxref("@counter-style/symbols", "symbols")}}
-  - : マーカー表現に使用される記号を指定します。記号は文字列、画像、カスタム識別子を含むことができます。記号がマーカー表現を構築するためにどのように使用されるかは、 system 記述子で指定されたアルゴリズムによります。例えば、 system が fixed に指定されていた場合は、この記述子で N 個の記号が指定されていると、カウンターの最初の N 個の記号を表すために使用されます。記号のセットを使い切ると、リストの残りには代替スタイルが使用されます。
-
-    以下の `@counter-style` ルールでは、文字の記号ではなく画像を使用しています。記号に画像の値を使用するのは現在のところ「リスクのある」機能で、実装されているブラウザーはありません。
-
-    ```css
-    @counter-style winners-list {
-      system: fixed;
-      symbols: url(gold-medal.svg) url(silver-medal.svg) url(bronze-medal.svg);
-      suffix: " ";
-    }
-    ```
-
-<!---->
+  - : マーカー表現に使用される記号を指定します。記号は文字列、画像、カスタム識別子を指定することができます。この記述子は、`system` 記述子が `cyclic`、`numeric`、`alphabetic`、`symbolic`、`fixed` に設定されている場合に必要です。
 
 - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - : symbols 記述子で指定された記号は、多くのアルゴリズムではマーカーを構築するために使用されますが、 'addaptive' などの一部のシステムではこの記述子の*加算的タプル*に依存します。それぞれの加算的タプルはカウンター記号と、非負の整数の重みによって成ります。加算的タプルは重みの降順で指定しなければなりません。
+  - : 加算システム用の「加算タプル」を定義します。`symbols` 記述子で指定された記号は、ほとんどのアルゴリズムでマーカー表現の構築に使用されますが、ローマ数字などの加算カウンターシステムは、一連の重み付き記号で構成されています。記述子 は、カウンター記号とその非負の整数重みのリストであり、重みの降順で掲載されています。この記述子は、`system` 記述子が `additive` に設定されている場合に必要です。
 
-<!---->
+- {{cssxref("@counter-style/negative", "negative")}}
+  - : 値が負の場合、カウンター表現に追加または先頭に追加する記号を指定します。
+
+- {{cssxref("@counter-style/prefix", "prefix")}}
+  - : マーカー表現の前に付加する記号を指定します。接頭辞は、`negative` 記述子によって負のカウンター値に追加される文字の前に、最終段階で表現に追加されます。
+
+- {{cssxref("@counter-style/suffix", "suffix")}}
+  - : prefix 記述子と同様に、マーカー表現に追加される記号を指定します。接尾辞は、マーカー表現の後、`negative` 記述子によって負のカウンター値に追加された文字の後にも含まれます。
+
+- {{cssxref("@counter-style/range", "range")}}
+  - : カウンタースタイルが適用される値の範囲を定義します。この記述子で定義された範囲外のカウンター値を表すためにカウンタースタイルが使用された場合、カウンタースタイルは `fallback` スタイルに戻ります。
+
+- {{cssxref("@counter-style/pad", "pad")}}
+  - : マーカーの表現を最小の長さにする必要がある場合に使用します。例えば、カウンターを 01 から始めて 02、03、04 と読むようにしたい場合は、`pad` 記述子を使用します。指定した `pad` 値よりも大きい表現の場合、マーカーは通常どおり構築されます。
 
 - {{cssxref("@counter-style/speak-as", "speak-as")}}
   - : 読み上げソフトのような音声合成で、カウンタースタイルを読み上げる方法を記述します。例えば、マーカー記号の値はこの記述子の値に応じて、順序付きリストでは数値やアルファベットとして、順序なしリストでは合図として読み上げられることがあります。
 
+- {{cssxref("@counter-style/fallback", "fallback")}}
+  - : 指定したシステムがカウンター値の表現を構築できない場合、またはカウンター値が指定した `range` の範囲外である場合に、代替するシステムのカウンター名を指定します。代替カウンターも値を表現できない場合は、指定されている場合、そのカウンターの代替が使用されます。代替カウンターが記述されていない場合、または代替システムのチェーンがカウンター値を表現できない場合、最終的には `decimal` スタイルに代替されます。
+
 ## 形式文法
 
-```
-@counter-style <counter-style-name> { <declaration-list> }
-```
+{{csssyntax}}
 
 ## 例
 
@@ -111,26 +85,32 @@ ul {
 }
 ```
 
-このようなリストを生成します。
+上記のコードは、次の結果を生成します。
 
-Ⓐ One
-Ⓑ Two
-Ⓒ Three
-Ⓓ Four
-Ⓔ Five
-…
-Ⓨ Twenty-five
-Ⓩ Twenty-six
-27 Twenty-seven
-28 Twenty-eight
-29 Twenty-nine
-30 Thirty
+```html hidden
+<ol class="items">
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>
+  <li>four</li>
+  <li>five</li>
+</ol>
+<p>...</p>
+<ol class="items" start="25">
+  <li>twenty-five</li>
+  <li>twenty-six</li>
+  <li>twenty-seven</li>
+  <li>twenty-eight</li>
+</ol>
+```
 
-他の例は[デモページ](https://mdn.github.io/css-examples/counter-style-demo/)をご覧ください。
+{{EmbedLiveSample('Specifying symbols with counter-style', '', '300')}}
+
+他の例は[デモページ](https://mdn.github.io/css-examples/counter-style-demo/)をご覧ください（[コード](https://github.com/mdn/css-examples/tree/main/counter-style-demo)）。
 
 ### 既成のカウンタースタイル
 
-100 以上の `counter-style` のコードスニペットを集めた [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/) の文書をご覧ください。この文書では、世界中の言語と文化のニーズを満たすカウンタースタイルを提供しています。
+100 以上の `counter-style` のコードスニペットを集めた [Ready-made Counter Styles](https://w3c.github.io/predefined-counter-styles/) の文書をご覧ください。この文書では、世界中の言語と文化のニーズを満たすカウンタースタイルを提供しています。
 
 [カウンタースタイル変換ツール](https://r12a.github.io/app-counters/) は、このリストから、カウンタースタイルのコピー＆ペーストコードをテストし、作成するために使用されます。
 
@@ -144,7 +124,8 @@ ul {
 
 ## 関連情報
 
+- {{Cssxref("counter", "counter()")}}
+- {{Cssxref("counters", "counters()")}}
+- {{cssxref("symbols", "symbols()")}}
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}, {{Cssxref("list-style-type")}}
-- 無名のカウンタースタイルを作成する関数表記である {{cssxref("symbols", "symbols()")}}
-- CSS の {{Cssxref("counter", "counter()")}} および {{Cssxref("counters", "counters()")}} 関数
-- [カウンタースタイルのデモ](https://mdn.github.io/css-examples/counter-style-demo/) ([コード](https://github.com/mdn/css-examples/tree/main/counter-style-demo))
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール

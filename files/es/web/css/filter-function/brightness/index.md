@@ -3,8 +3,6 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness
 ---
 
-{{cssref}}
-
 La función **`brightness()`** [CSS](/es/docs/Web/CSS) aplica un multiplicador linear a la imagen, haciendo que su apariencia sea más brallante u oscura. Su resultado es un {{cssxref("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("CSS Demo: brightness()")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`color()`** 関数記法により、他のほとんどの色関数が暗黙に処理する sRGB {{glossary("color space", "色空間")}}ではなく、特定の指定した色空間で色を指定することができます。
 
 特定の色空間に対応しているかどうかは、CSS メディア特性の [`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) で検出することができます。
@@ -44,7 +42,8 @@ color(colorspace c1 c2 c3[ / A])
 - `A` {{optional_inline}}
   - : 色のアルファチャンネル値を表す {{CSSXref("&lt;alpha-value&gt;")}} で、数値 `0` は `0%` （完全に透明）、 `1` は `100%` （完全に不透明）に対応します。さらに、キーワード `none` を使用することで、アルファチャンネルを指定しません。 `A` チャンネルの値が明示的に指定されない場合、既定値として 100% が指定されます。含める場合、値の前にはスラッシュ (`/`) が付きます。
 
-> **メモ:** `none`の効果についての詳細情報は、[色成分の欠落](/ja/docs/Web/CSS/color_value#missing_color_components)を参照してください。
+> [!NOTE]
+> `none`の効果についての詳細情報は、[色成分の欠落](/ja/docs/Web/CSS/color_value#missing_color_components)を参照してください。
 
 #### 相対色の値の構文
 

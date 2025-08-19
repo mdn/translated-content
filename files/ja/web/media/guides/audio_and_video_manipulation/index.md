@@ -123,7 +123,8 @@ processor.doLoad();
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **メモ:** [このデモのソースコードは GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)も)。
+> [!NOTE]
+> [このデモのソースコードは GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)も)。
 
 ### 再生速度
 
@@ -191,7 +192,8 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('Playable_code', 700, 425) }}
 
-> **メモ:** [playbackRate のデモ](https://jsbin.com/qomuvefu/2/edit)を試してみてください。
+> [!NOTE]
+> [playbackRate のデモ](https://jsbin.com/qomuvefu/2/edit)を試してみてください。
 
 ## 音声の加工
 
@@ -293,7 +295,8 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
-> **メモ:** [CORS](/ja/docs/Web/HTTP/Guides/CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
+> [!NOTE]
+> [CORS](/ja/docs/Web/HTTP/Guides/CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
 
 #### よく使われる音声フィルター
 
@@ -347,7 +350,8 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **メモ:** [GitHub リポジトリに例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)があります ([ライブ版](https://mdn.github.io/webaudio-examples/panner-node/)も)。
+> [!NOTE]
+> [GitHub リポジトリに例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)があります ([ライブ版](https://mdn.github.io/webaudio-examples/panner-node/)も)。
 
 ## JavaScript によるコーデック
 

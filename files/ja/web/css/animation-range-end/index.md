@@ -5,13 +5,14 @@ l10n:
   sourceCommit: c9c9df07f47c9c3a3a9c5d44cebe3f795326af7b
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`animation-range-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、タイムラインに沿ったアニメーションの適用範囲の末尾、つまり、タイムラインに沿ったアニメーションの末尾を設定するために使用します。
 
 `animation-range-end` および {{cssxref("animation-range-start")}} のプロパティは、 [`animation-range`](/ja/docs/Web/CSS/animation-range) 一括指定プロパティを使用して設定することもできます。
 
-> **メモ:** {{cssxref("animation-range-end")}} はリセット専用の値として {{cssxref("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-range-end` の値が `normal` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-range-end` を宣言しないと、その効果を得ることができません。
+> [!NOTE]
+> {{cssxref("animation-range-end")}} はリセット専用の値として {{cssxref("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-range-end` の値が `normal` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-range-end` を宣言しないと、その効果を得ることができません。
 
 ## 構文
 

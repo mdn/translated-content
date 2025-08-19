@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`animation-fill-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。
 
 {{InteractiveExample("CSS デモ: animation-fill-mode")}}
@@ -167,9 +165,11 @@ animation-fill-mode: unset;
 - `both`
   - : アニメーションは forwards と backwards の両方の既定に従います。よって、アニメーションの設定は実行前と実行後の両方に適用されます。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> [!NOTE]
+> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** `animation-fill-mode` は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
+> [!NOTE]
+> `animation-fill-mode` は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
 
 ## 公式定義
 
