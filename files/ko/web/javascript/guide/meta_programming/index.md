@@ -130,7 +130,7 @@ Proxy 객체는 target(여기서는 빈 객체)과 handler 객체를 정의하�
           </dd>
           <strong>상속 속성 접근</strong>
           <dd>
-            <code>Object.create(<var>proxy</var>)[foo]</code
+            <code><span>Object.create(<var>proxy</var>)[foo]</span></code
             ><br />{{jsxref("Reflect.get()")}}
           </dd>
         </dl>
@@ -150,7 +150,7 @@ Proxy 객체는 target(여기서는 빈 객체)과 handler 객체를 정의하�
           </dd>
           <strong>상속 속성 할당</strong>
           <dd>
-            <code>Object.create(<var>proxy</var>)[foo] = bar</code
+            <code><span>Object.create(<var>proxy</var>)[foo] = bar</span></code
             ><br />{{jsxref("Reflect.set()")}}
           </dd>
         </dl>
