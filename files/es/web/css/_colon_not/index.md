@@ -3,8 +3,6 @@ title: :not()
 slug: Web/CSS/:not
 ---
 
-{{CSSRef}}
-
 La [pseudoclase](/es/docs/Web/CSS/Pseudo-classes) **`:not()`** de [CSS](/es/docs/Web/CSS) representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la _pseudoclase de negación_.
 
 ```css

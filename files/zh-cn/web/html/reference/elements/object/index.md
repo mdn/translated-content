@@ -3,8 +3,6 @@ title: <object>
 slug: Web/HTML/Reference/Elements/object
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<object>` 元素**（或者称作 _HTML 嵌入对象元素_）表示引入一个外部资源，这个资源可能是一张图片，一个嵌入的浏览上下文，亦或是一个插件所使用的资源。
 
 {{InteractiveExample("HTML Demo: &lt;object&gt;", "tabbed-standard")}}

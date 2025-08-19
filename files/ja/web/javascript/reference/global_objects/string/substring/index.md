@@ -9,7 +9,7 @@ l10n:
 
 **`substring()`** メソッドは `string` の一部、開始インデックスから終了インデックスの手前まで、または終了インデックスが指定されなかった場合は文字列の最後までを返します。
 
-{{InteractiveExample("JavaScript Demo: String.substring()")}}
+{{InteractiveExample("JavaScript デモ: String.substring()")}}
 
 ```js interactive-example
 const str = "Mozilla";

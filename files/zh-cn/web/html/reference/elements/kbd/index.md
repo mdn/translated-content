@@ -79,5 +79,3 @@ Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd>
 ## 参阅
 
 - {{htmlelement("code")}}
-
-{{HTMLSidebar}}

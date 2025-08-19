@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`412 Precondition Failed`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示拒絕訪問目標資源。這發生在[條件請求](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)上的方法不是 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}}，並且由 {{HTTPHeader("If-Unmodified-Since")}} 或 {{HTTPHeader("If-Match")}} 標頭定義的條件未得到滿足時。在這種情況下，請求（通常是上傳或修改資源）無法執行，並會返回此錯誤回應。
 
 ## 狀態

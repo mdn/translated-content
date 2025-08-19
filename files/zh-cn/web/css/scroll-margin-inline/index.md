@@ -3,8 +3,6 @@ title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
 ---
 
-{{CSSRef}}
-
 [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-margin-inline`** 设置了元素的行向滚动外边距。
 
 {{InteractiveExample("CSS Demo: scroll-margin-inline")}}

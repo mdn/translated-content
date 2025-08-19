@@ -3,8 +3,6 @@ title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("downloads")}} API 的 **`download()`** 函数根据给出的 URL 和其他首选项下载一个文件。
 
 - 如果指定的 `url` 使用 HTTP 或者 HTTPS 协议，那么下载请求将会包含当前为该域名所设置的所有 cookie。

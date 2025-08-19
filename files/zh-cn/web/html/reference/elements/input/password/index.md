@@ -3,8 +3,6 @@ title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 ---
 
-{{HTMLSidebar}}
-
 **`"password"`** 类型的 `<input>` 元素可以让用户更加安全的输入密码。
 
 这个元素是作为单行纯文本编辑器控件呈现的，其中文本被遮蔽，无法读取。通常通过用诸如星号（“\*”）或点（“•”）等符号替换每个字符来实现。根据用户的{{Glossary("user agent","用户代理")}}和操作系统不同，显示的字符也会不同。

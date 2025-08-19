@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.atanh()")}}
+{{InteractiveExample("JavaScript デモ: Math.atanh()")}}
 
 ```js interactive-example
 console.log(Math.atanh(-1));

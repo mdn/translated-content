@@ -1,11 +1,10 @@
 ---
 title: スクロールスナップの基本概念
+short-title: 基本概念
 slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 l10n:
-  sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュールにあるプロパティを使用すると、ユーザーが文書をスクロールする際に、スクロールが特定の位置にスナップする方法を定義することができます。
 

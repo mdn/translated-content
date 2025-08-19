@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5863b9e6635b304b96ef5f70937329e854957f73
 ---
 
-{{CSSRef}}
-
 El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) de [CSS](/es/docs/Web/CSS) **`::part`** representa cualquier elemento dentro de un [shadow tree](/es/docs/Web/API/Web_components/Using_shadow_DOM) que tiene un atributo [`part`](/es/docs/Web/HTML/Reference/Global_attributes#part) coincidente.
 
 ```css

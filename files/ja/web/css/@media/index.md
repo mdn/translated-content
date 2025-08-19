@@ -5,14 +5,12 @@ l10n:
   sourceCommit: f0fcb3b92e14a1d5b7f51947597cef1fbf4be64c
 ---
 
-{{CSSRef}}
-
 **`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
 
 > [!NOTE]
 > JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
 
-{{InteractiveExample("CSS Demo: @media", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: @media", "tabbed-standard")}}
 
 ```css interactive-example
 abbr {

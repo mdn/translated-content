@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 814f49dc14eb8c8a15c6c3bdc6c83d24ed865cdf
 ---
 
-{{AddonSidebar}}
-
 要由 {{WebExtAPIRef("userScripts.getScripts()")}} 或 {{WebExtAPIRef("userScripts.unregister()")}} 处理的用户脚本列表。
 
 ## 类型

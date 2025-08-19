@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当一个标签页从窗口中分离时触发，例如因为它正在被移动到另一个窗口。
 
 ## 语法

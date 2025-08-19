@@ -9,7 +9,7 @@ l10n:
 
 **`Intl.Segmenter.supportedLocalesOf()`** メソッドは、指定したロケールのうち、ランタイムのデフォルトロケールにフォールバックすることなくサポートされているものを含む配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.supportedLocalesOf", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Intl.Segmenter.supportedLocalesOf", "shorter")}}
 
 ```js interactive-example
 const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];

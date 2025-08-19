@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ad896488bf8fac04fc6fa144c441fdbfd880737c
 ---
 
-{{CSSRef}}
-
 {{Glossary("DOM")}} では、{{Glossary("media query", "メディアクエリー")}}の結果を {{domxref("MediaQueryList")}} インターフェイスおよびそのメソッドやプロパティを用いてプログラムから調べることができる機能を備えています。`MediaQueryList` オブジェクトを作成すると、[クエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の結果を確認したり、結果が変化したときに自動的に通知を受け取ったりすることができます。
 
 ## メディアクエリーリストの作成

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/PATCH
 original_slug: Web/HTTP/Methods/PATCH
 ---
 
-{{HTTPSidebar}}
-
 **HTTP の `PATCH` リクエストメソッド**は、リソースへの部分的な変更を適用します。
 
 `PATCH` は {{Glossary("CRUD")}} に見られる "update" の概念にやや類似しています（一般的に、 HTTP は {{Glossary("CRUD")}} とは異なり、両者は混同するべきではありません）。

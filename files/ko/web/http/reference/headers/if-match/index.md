@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`If-Match`** {{Glossary("request header")}} 는 [조건부 요청](/ko/docs/Web/HTTP/Guides/Conditional_requests)을 생성합니다.
 서버는 `If-Match` 요청 헤더가 {{HTTPHeader("ETag")}} 값들 중 하나와 일치하는 경우에만 {{HTTPMethod("GET")}} 와 {{HTTPMethod("HEAD")}} 메서드에 대한 자원을 반환하거나 {{HTTPMethod("PUT")}} 혹은 안전하지 않은 메서드를 통해 자원을 업로드합니다.
 만일 조건이 일치하지 않으면 {{HTTPStatus("412", "412 Precondition Failed")}} 응답이 반환됩니다.
