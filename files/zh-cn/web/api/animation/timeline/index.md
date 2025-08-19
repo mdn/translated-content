@@ -7,11 +7,11 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-{{domxref("Animation")}} 接口的 **`Animation.timeline`** 属性返回或设置与此动画关联的 {{domxref("AnimationTimeline", "Timeline")}}（时间线）。时间线是基于 {{domxref("AnimationTimeline")}}，用于同步的时间值源的对象。默认情况下，动画的时间线和 {{domxref("Document")}} 的时间线是相同的。
+{{domxref("Animation")}} 接口的 **`Animation.timeline`** 属性返回或设置与此动画关联的{{domxref("AnimationTimeline", "时间线", "", 1)}}。时间线是基于 {{domxref("AnimationTimeline")}}，用于同步的时间值源的对象。默认情况下，动画的时间线和 {{domxref("Document")}} 的时间线是相同的。
 
 ## 值
 
-一个用作动画的时间源的 {{domxref("AnimationTimeline", "Timeline Object", "", 1)}}；或者表示使用默认时间线（即 {{domxref("Document")}} 的时间线）的 `null` 值。
+一个用作动画的时间源的{{domxref("AnimationTimeline", "时间线对象", "", 1)}}；或者表示使用默认时间线（即 {{domxref("Document")}} 的时间线）的 `null` 值。
 
 ## 示例
 
