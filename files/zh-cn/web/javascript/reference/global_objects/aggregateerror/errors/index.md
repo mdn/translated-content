@@ -2,10 +2,10 @@
 title: "AggregateError: errors"
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/errors
 l10n:
-  sourceCommit: 7d5c16db5223119030cab9c064b49e8b4e9e6dfe
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("AggregateError")}} 实例的 **`errors`** 数据属性包含一个数组，该数组表示已聚合的错误。
+{{jsxref("AggregateError")}} 实例的 **`errors`** 数据属性包含一个表示已聚合的错误的数组。
 
 ## 值
 
@@ -20,15 +20,15 @@ l10n:
 ```js
 try {
   throw new AggregateError(
-    // An iterable of errors
-    new Set([new Error("some error"), new Error("another error")]),
-    "Multiple errors thrown",
+    // 一个 errors 可迭代对象
+    new Set([new Error("某个错误"), new Error("另一个错误")]),
+    "抛出多个错误",
   );
 } catch (err) {
   console.log(err.errors);
   // [
-  //   Error: some error,
-  //   Error: another error
+  //   Error: 某个错误，
+  //   Error: 另一个错误
   // ]
 }
 ```
@@ -43,6 +43,6 @@ try {
 
 ## 参见
 
-- [Control flow and error handling](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) 指南
+- [控制流和错误处理](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)指南
 - {{jsxref("AggregateError")}}
-- [`Error`: `cause`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/cause)
+- [`Error`：`cause`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/cause)
