@@ -269,7 +269,7 @@ Reflect.apply("".charAt, "ponies", [3]);
 
 ### 속성 정의 성공 여부 확인
 
-{{jsxref("Object.defineProperty")}}는 속성 정의에 성공하면 객체를 반환하고, 실패하면 {{jsxref("TypeError")}}를 발생시킵니다. 따라서 속성을 정의하면서 오류가 발생했는지 확인하려면 {{jsxref("Statements/try...catch", "try...catch")}} 블록을 사용해야 합니다.  반면, {{jsxref("Reflect.defineProperty()")}}는 성공 여부를 불리언 값으로 반환하므로, 단순히 {{jsxref("Statements/if...else", "if...else")}} 블록으로 처리할 수 있습니다:
+{{jsxref("Object.defineProperty")}}는 속성 정의에 성공하면 객체를 반환하고, 실패하면 {{jsxref("TypeError")}}를 발생시킵니다. 따라서 속성을 정의하면서 오류가 발생했는지 확인하려면 {{jsxref("Statements/try...catch", "try...catch")}} 블록을 사용해야 합니다. 반면, {{jsxref("Reflect.defineProperty()")}}는 성공 여부를 불리언 값으로 반환하므로, 단순히 {{jsxref("Statements/if...else", "if...else")}} 블록으로 처리할 수 있습니다:
 
 ```js
 if (Reflect.defineProperty(target, property, attributes)) {
