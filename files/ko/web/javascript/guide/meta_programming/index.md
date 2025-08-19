@@ -1,8 +1,6 @@
 ---
 title: 메타프로그래밍
 slug: Web/JavaScript/Guide/Meta_programming
-page-type: guide
-sidebar: jssidebar
 ---
 
 {{jsxref("Proxy")}}와 {{jsxref("Reflect")}} 객체를 사용하면 기본 언어 동작(예: 속성 조회, 할당, 열거, 함수 호출 등)을 가로채고 사용자 정의 동작을 정의할 수 있습니다. 이 두 객체를 활용하면 JavaScript에서 메타프로그래밍을 할 수 있습니다.
