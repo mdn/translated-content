@@ -2,7 +2,7 @@
 title: begin
 slug: Web/SVG/Reference/Attribute/begin
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a9063bb88f28dc2a9b32e39f060ab6930663da52
 ---
 
 **`begin`** 属性は、関連する要素がいつアクティブになるかを定義します。
@@ -228,7 +228,7 @@ l10n:
 
 ### イベントの例
 
-```html
+```html-nolint
 <svg
   width="120"
   height="120"
@@ -251,7 +251,7 @@ l10n:
   <!-- trigger -->
   <rect
     id="startButton"
-    style="cursor:pointer;"
+    cursor="pointer"
     x="19.5"
     y="62.5"
     rx="5"
@@ -261,7 +261,7 @@ l10n:
     stroke="black"
     stroke-width="1" />
 
-  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+  <text x="60" y="80" text-anchor="middle" pointer-events="none">
     クリック
   </text>
 
@@ -367,7 +367,7 @@ l10n:
   </rect>
 
   <!-- trigger -->
-  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+  <text x="60" y="80" text-anchor="middle" pointer-events="none">
     "s" キーを押す
   </text>
 

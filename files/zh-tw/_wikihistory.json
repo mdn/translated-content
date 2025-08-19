@@ -2620,16 +2620,6 @@
       "PJCHENder"
     ]
   },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-01-30T13:21:14.453Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jackblackevo",
-      "ethertank",
-      "Mgjbot",
-      "BobChao"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2020-02-27T01:36:51.610Z",
     "contributors": [
@@ -3874,6 +3864,16 @@
       "bensontobeicsc",
       "jackblackevo",
       "xuan0123"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-01-30T13:21:14.453Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jackblackevo",
+      "ethertank",
+      "Mgjbot",
+      "BobChao"
     ]
   },
   "Web/CSS/Descendant_combinator": {
