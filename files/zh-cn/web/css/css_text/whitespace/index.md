@@ -1,9 +1,7 @@
 ---
 title: HTML、CSS 和 DOM 中的空白符是如何处理的
-slug: Web/API/Document_Object_Model/Whitespace
+slug: Web/CSS/CSS_text/Whitespace
 ---
-
-{{DefaultAPISidebar("DOM")}}
 
 在 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 中，空白符的存在会导致布局问题，并使内容树的操作变得困难，这取决于它的位置。这篇文章探讨了什么时候会出现困难，并研究了如何缓解由此产生的问题。
 

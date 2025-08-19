@@ -67,7 +67,7 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 
 コンテンツを表スタイルでグループ化することで列と行に関する情報が提供されない場合、グリッドセルの位置は、[`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) を使用してプログラムで説明する必要があります。 `aria-describedby` に提供される [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) は、行と列を意図する親要素に対応している必要があります。
 
-`aria-describedby` を介して適用された行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Rowheader_role)) ロールまたは列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)) ロールを持つ親要素を参照することにより、支援技術は、グリッドセル (`gridcell`) 要素とコンテンツを表スタイルでグループ化した残りとの位置と関係を理解できます。
+`aria-describedby` を介して適用された行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)) ロールまたは列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)) ロールを持つ親要素を参照することにより、支援技術は、グリッドセル (`gridcell`) 要素とコンテンツを表スタイルでグループ化した残りとの位置と関係を理解できます。
 
 ### インタラクティブなグリッドとツリーグリッド
 
