@@ -9,7 +9,8 @@ l10n:
 
 **`textContent`** は {{domxref ("Node")}} のプロパティで、ノードおよびその子孫のテキストの内容を表します。
 
-> **メモ:** `textContent` と {{domxref("HTMLElement.innerText")}} は混同しやすいものですが、2 つのプロパティは[重要な点が異なります](#innertext_との違い)。
+> [!NOTE]
+> `textContent` と {{domxref("HTMLElement.innerText")}} は混同しやすいものですが、2 つのプロパティは[重要な点が異なります](#innertext_との違い)。
 
 ## 値
 

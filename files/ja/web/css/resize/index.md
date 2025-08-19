@@ -5,11 +5,9 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`resize`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します。
 
-{{InteractiveExample("CSS Demo: resize")}}
+{{InteractiveExample("CSS デモ: resize")}}
 
 ```css interactive-example-choice
 resize: both;

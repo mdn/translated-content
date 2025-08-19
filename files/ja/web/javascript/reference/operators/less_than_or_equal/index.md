@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
 
 小なりイコール演算子 (`<=`) は、左のオペランドが右のオペランドより小さいか等しい場合に `true` を返し、それ以外の場合は `false` を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Less than or equal operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Less than or equal operator")}}
 
 ```js interactive-example
 console.log(5 <= 3);

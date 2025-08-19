@@ -1,12 +1,10 @@
 ---
-title: autocorrect
+title: HTML autocorrect グローバル属性
+short-title: autocorrect
 slug: Web/HTML/Reference/Global_attributes/autocorrect
-original_slug: Web/HTML/Global_attributes/autocorrect
 l10n:
-  sourceCommit: 6b278eb98d94ec8d85f03f77aef7c5d08edcd88f
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
 **`autocorrect`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、[列挙型](/ja/docs/Glossary/Enumerated)属性であり、編集可能なテキストの綴りや句読点の誤りを自動修正するかどうかを制御します。
 
@@ -154,3 +152,8 @@ resetButton.addEventListener("click", (e) => {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
+- [`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)

@@ -11342,13 +11342,6 @@
       "RobinEgg"
     ]
   },
-  "Web/API/Document_Object_Model/Transforming_with_XSLT": {
-    "modified": "2020-04-13T14:02:19.940Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
     "modified": "2020-08-22T02:39:04.971Z",
     "contributors": [
@@ -11364,16 +11357,6 @@
       "wbamberg",
       "kohei.yoshino",
       "Mgjbot"
-    ]
-  },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-03-27T15:45:14.756Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "ethertank",
-      "Mgjbot",
-      "Deq"
     ]
   },
   "Web/API/DragEvent": {
@@ -24119,13 +24102,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/@media/aural": {
-    "modified": "2019-03-23T23:33:39.943Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank"
-    ]
-  },
   "Web/CSS/@media/color": {
     "modified": "2020-10-15T22:05:50.804Z",
     "contributors": [
@@ -25259,6 +25235,16 @@
     "modified": "2019-03-18T21:22:13.313Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-03-27T15:45:14.756Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "ethertank",
+      "Mgjbot",
+      "Deq"
     ]
   },
   "Web/CSS/CSS_text_decoration": {
@@ -29546,24 +29532,6 @@
     "contributors": [
       "mfuji09",
       "mpcjazz"
-    ]
-  },
-  "Web/Events": {
-    "modified": "2020-10-16T22:39:39.169Z",
-    "contributors": [
-      "mpcjazz",
-      "companymickey",
-      "neeg2",
-      "FujiHaruka",
-      "u-sho",
-      "mfuji09",
-      "wbamberg",
-      "silverskyvicto",
-      "WhiteHawk-taka",
-      "Marsf",
-      "ssw",
-      "ethertank",
-      "Sheppy"
     ]
   },
   "Web/Guide/API": {
@@ -43964,6 +43932,24 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03": {
+    "modified": "2020-10-16T22:39:39.169Z",
+    "contributors": [
+      "mpcjazz",
+      "companymickey",
+      "neeg2",
+      "FujiHaruka",
+      "u-sho",
+      "mfuji09",
+      "wbamberg",
+      "silverskyvicto",
+      "WhiteHawk-taka",
+      "Marsf",
+      "ssw",
+      "ethertank",
+      "Sheppy"
+    ]
+  },
   "conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT": {
     "modified": "2020-04-13T14:03:23.203Z",
     "contributors": [
@@ -44217,6 +44203,13 @@
       "teoli"
     ]
   },
+  "conflicting/Web/CSS/@media": {
+    "modified": "2019-03-23T23:33:39.943Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank"
+    ]
+  },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
     "contributors": [
@@ -44337,10 +44330,10 @@
     ]
   },
   "conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT": {
-    "modified": "2019-03-18T20:50:34.881Z",
+    "modified": "2020-04-13T14:02:19.940Z",
     "contributors": [
       "mfuji09",
-      "silverskyvicto"
+      "Marsf"
     ]
   },
   "conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_1af10c5c37196c51dbca9c7afe2a2c49d05656401a85bc9790e8390612e730dd": {

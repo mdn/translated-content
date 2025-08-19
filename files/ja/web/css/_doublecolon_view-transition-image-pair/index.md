@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1a27ade8c981c8a98c8fac9881b362e881a4d236
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-image-pair`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ビュー遷移](/ja/docs/Web/API/View_Transition_API)の「古い」および「新しい」ビュー状態、すなわちトランジションの前と後のコンテナーを表します。
 

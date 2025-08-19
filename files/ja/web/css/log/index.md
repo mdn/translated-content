@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
 ---
 
-{{CSSRef}}
-
 **`log()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は、数値の対数を返す指数関数です。
 
 [対数](https://ja.wikipedia.org/wiki/%E5%AF%BE%E6%95%B0)は、べき乗の逆演算です。これは、第 1 引数として渡された数を得るために、固定された底をどれだけべき乗しなければならないかを示す数値です。

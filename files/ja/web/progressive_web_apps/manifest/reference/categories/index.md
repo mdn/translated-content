@@ -2,15 +2,14 @@
 title: categories
 slug: Web/Progressive_web_apps/Manifest/Reference/categories
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 628b29f53d15f203c4a6b33c1d0303f864f6af63
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `categories` はマニフェストのメンバーで、ウェブアプリケーションに 1 つ以上の分類を指定することができます。
 これらのカテゴリーは、ユーザーがアプリストアでアプリを見つけるのに役立ちます。
 
-> **メモ:** `categories` メンバーはオプションであり、アプリストアはアプリを表示する際に異なる値を使用することがあります。
+> [!NOTE]
+> `categories` メンバーはオプションであり、アプリストアはアプリを表示する際に異なる値を使用することがあります。
 
 ## 構文
 

@@ -3,8 +3,6 @@ title: list-style-image
 slug: Web/CSS/list-style-image
 ---
 
-{{CSSRef}}
-
 ## 概要
 
 **`list-style-image`** 属性用来指定一个能用来作为列表元素标记的图片。

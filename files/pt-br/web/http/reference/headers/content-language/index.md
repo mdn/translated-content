@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Language
 original_slug: Web/HTTP/Headers/Content-Language
 ---
 
-{{HTTPSidebar}}
-
 O [cabeçalho de entidade](/pt-BR/docs/Glossary/Entity_header) **`Content-Language`** é usado para descrever a língua(s) destinada para a audiência, para que isto permita um usuário de se diferenciar de acordo com a língua preferida do usuário.
 
 Por exemplo, se "`Content-Language: de-DE`" está selecionado, você diz que o documento é destinado para quem fala Alemão (no entanto, não indica que o documento é escrito em Alemão. Por exemplo, pode ser escrito em Inglês como parte de um curso de línguas para fluentes em Alemão).

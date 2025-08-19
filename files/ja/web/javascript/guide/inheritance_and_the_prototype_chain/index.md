@@ -571,7 +571,8 @@ Object.setPrototypeOf(obj, anotherObj);
 
 すべてのオブジェクトは [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) セッターを継承しており、これを使用して既存のオブジェクトの `[[Prototype]]` を設定することができます（`__proto__` キーがオブジェクトでオーバーライドされていない場合）。
 
-> **警告:** `Object.prototype.__proto__` アクセサーは**標準外**で非推奨です。 代わりに、常に `Object.setPrototypeOf` を使用する必要があります。
+> [!WARNING]
+> `Object.prototype.__proto__` アクセサーは**標準外**で非推奨です。 代わりに、常に `Object.setPrototypeOf` を使用する必要があります。
 
 ```js
 const obj = {};

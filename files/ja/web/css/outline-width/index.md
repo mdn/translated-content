@@ -5,11 +5,9 @@ l10n:
   sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`outline-width`** プロパティは、要素の輪郭線の太さを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxref("border")}} よりも外側です。
 
-{{InteractiveExample("CSS Demo: outline-width")}}
+{{InteractiveExample("CSS デモ: outline-width")}}
 
 ```css interactive-example-choice
 outline-width: 12px;

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Decrement
 
 デクリメント演算子 (`--`) は、オペランドをデクリメント (1 を減算) して値を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Decrement operator")}}
 
 ```js interactive-example
 let x = 3;

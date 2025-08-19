@@ -9,7 +9,7 @@ l10n:
 
 **`String.fromCodePoint()`** 静的メソッドは指定されたコードポイントの並びを使って生成された文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: String.fromCodePoint()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.fromCodePoint()", "shorter")}}
 
 ```js interactive-example
 console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));

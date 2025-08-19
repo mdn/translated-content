@@ -3,8 +3,6 @@ title: Function.prototype.call
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
 
-{{JSRef}}
-
 使用給定的 `this` 參數以及分別給定的參數來呼叫某個函數
 
 > [!NOTE]

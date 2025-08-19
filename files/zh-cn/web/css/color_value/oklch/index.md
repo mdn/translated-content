@@ -3,8 +3,6 @@ title: oklch()
 slug: Web/CSS/color_value/oklch
 ---
 
-{{CSSRef}}
-
 函数记号 **`oklch()`** 在 Oklch 颜色空间中表示指定颜色。此函数记号与 {{CSSXref("color_value/oklab", "oklab()")}} 有相同的 L 轴，但使用极坐标 C（色度）和 H（色相）。
 
 ## 语法

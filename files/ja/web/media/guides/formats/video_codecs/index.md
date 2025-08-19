@@ -1781,7 +1781,8 @@ VP9 は、WebM コンテナーを使用することができる（そして、�
    </video>
    ```
 
-> **メモ:** {{HTMLElement("video")}} 要素は、その中に {{HTMLElement("source")}} 要素があってもなくても、閉じタグの `</video>` が必要です。
+> [!NOTE]
+> {{HTMLElement("video")}} 要素は、その中に {{HTMLElement("source")}} 要素があってもなくても、閉じタグの `</video>` が必要です。
 
 ### 高画質な動画表示におすすめ
 

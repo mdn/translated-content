@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-> **メモ:** [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、関数の `caller` にアクセスするとエラーが発生します。 API は削除され、代替手段もありません。これは、コードが「スタックを歩く」ことを防ぐためです。これは、セキュリティリスクをもたらすだけでなく、インライン展開や末尾再帰呼び出し最適化などの最適化の可能性を大幅に制限します。より詳しい説明については、 [`arguments.callee` の非推奨化の根拠](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee#解説)をご覧ください。
+> [!NOTE]
+> [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、関数の `caller` にアクセスするとエラーが発生します。 API は削除され、代替手段もありません。これは、コードが「スタックを歩く」ことを防ぐためです。これは、セキュリティリスクをもたらすだけでなく、インライン展開や末尾再帰呼び出し最適化などの最適化の可能性を大幅に制限します。より詳しい説明については、 [`arguments.callee` の非推奨化の根拠](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee#解説)をご覧ください。
 
 **`caller`** は {{jsxref("Function")}} インスタンスのアクセサープロパティで、この関数を呼び出した関数を返します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数では、 `caller` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
 

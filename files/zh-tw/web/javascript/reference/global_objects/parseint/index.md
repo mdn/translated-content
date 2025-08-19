@@ -3,8 +3,6 @@ title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 
-{{jsSidebar("Objects")}}
-
 **`parseInt()`** 函式能將輸入的字串轉成整數。
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}

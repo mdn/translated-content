@@ -2,10 +2,8 @@
 title: スクロールスナップイベントの使用
 slug: Web/CSS/CSS_scroll_snap/Using_scroll_snap_events
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュールでは、 2 つの**スクロールスナップイベント**、 {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} と {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} が定義されています。これらは、ブラウザーが新しい[スクロールスナップのターゲット](/ja/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)がそれぞれ待機中または選択されたと判断したことに応じて、それぞれ JavaScript を実行できるようにします。
 

@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`background-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に 1 つ以上の背景画像を設定します。
 
-{{InteractiveExample("CSS Demo: background-image")}}
+{{InteractiveExample("CSS デモ: background-image")}}
 
 ```css interactive-example-choice
 background-image: url("/shared-assets/images/examples/lizard.png");

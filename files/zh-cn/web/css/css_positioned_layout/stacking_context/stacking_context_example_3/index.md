@@ -3,8 +3,6 @@ title: 层叠上下文示例 3
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 ---
 
-{{CSSRef}}
-
 ### 层叠上下文示例 3
 
 最后一个例子展示了，在多层级的 HTML 结构中混合了多个定位元素且使用类选择器设置 z-index 属性时出现的问题。

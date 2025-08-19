@@ -11,7 +11,7 @@ l10n:
 
 結果の値には年、月、日が含まれますが、時刻は含まれません。 {{HTMLElement("input/time", "time")}} および {{HTMLElement("input/datetime-local", "datetime-local")}} 入力型は時刻や日付と時刻の入力に対応しています。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="start">Start date:</label>
@@ -92,7 +92,8 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 `date` 入力欄では、 `step` の値は日単位で指定します。また、 86,400,000 に `step` を乗じた値に等しいミリ秒数として扱われます（数値はミリ秒単位であるため）。 `step` の既定値は `1` であり、 1 日を表します。
 
-> **メモ:** `any` を `step` 属性の値として指定すると、 `1` を `date` 入力欄に設定したのと同じ効果になります。
+> [!NOTE]
+> `any` を `step` 属性の値として指定すると、 `1` を `date` 入力欄に設定したのと同じ効果になります。
 
 ## date 入力欄の使用
 

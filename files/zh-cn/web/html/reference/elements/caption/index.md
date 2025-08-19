@@ -67,5 +67,3 @@ slug: Web/HTML/Reference/Elements/caption
 - 其他与 table 相关的 HTML 元素：{{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
 - 可能对{{HTMLElement("caption")}} 元素有用的 CSS 属性：
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.
-
-{{HTMLSidebar}}

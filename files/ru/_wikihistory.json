@@ -5976,6 +5976,24 @@
       "mayconrem"
     ]
   },
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2020-11-17T03:43:19.041Z",
+    "contributors": [
+      "kosarev_va",
+      "RuslanPro01",
+      "ismailaga123",
+      "injashkin",
+      "Corba",
+      "snowydad",
+      "arthurg91",
+      "wbamberg",
+      "LbIdarka",
+      "Dzhabarovm",
+      "Kerminator1973",
+      "kRaVeda",
+      "teoli"
+    ]
+  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2019-09-25T18:36:16.946Z",
     "contributors": [
@@ -13362,24 +13380,6 @@
       "yaruson"
     ]
   },
-  "Web/Events": {
-    "modified": "2020-11-17T03:43:19.041Z",
-    "contributors": [
-      "kosarev_va",
-      "RuslanPro01",
-      "ismailaga123",
-      "injashkin",
-      "Corba",
-      "snowydad",
-      "arthurg91",
-      "wbamberg",
-      "LbIdarka",
-      "Dzhabarovm",
-      "Kerminator1973",
-      "kRaVeda",
-      "teoli"
-    ]
-  },
   "Web/HTML": {
     "modified": "2020-05-09T08:33:52.357Z",
     "contributors": [
@@ -15985,7 +15985,7 @@
       "fscholz"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_properties": {
+  "Web/JavaScript/Reference/Classes/Private_elements": {
     "modified": "2020-10-15T22:33:38.348Z",
     "contributors": [
       "cliggen",

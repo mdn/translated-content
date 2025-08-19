@@ -9,7 +9,7 @@ l10n:
 
 **`Object.defineProperty()`** は静的メソッドで、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+{{InteractiveExample("JavaScript デモ: Object.defineProperty()")}}
 
 ```js interactive-example
 const object1 = {};

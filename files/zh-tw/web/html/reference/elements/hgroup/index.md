@@ -3,8 +3,6 @@ title: <hgroup>：標題群組元素
 slug: Web/HTML/Reference/Elements/hgroup
 ---
 
-{{HTMLSidebar}}
-
 **`<hgroup>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個標題及相關內容。它將一個單獨的 [`<h1>–<h6>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素與一個或多個 [`<p>`](/zh-TW/docs/Web/HTML/Reference/Elements/p) 元素分組。
 
 {{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}

@@ -3,7 +3,7 @@ title: <rb>：Ruby 基本元素
 slug: Web/HTML/Reference/Elements/rb
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<rb>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於定義 {{HTMLElement("ruby")}} 注釋的基本文字組件，即正在注釋的文字。每個 `<rb>` 元素應該包裹基本文字的每個獨立原子部分。
 

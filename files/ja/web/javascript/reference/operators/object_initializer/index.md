@@ -9,7 +9,7 @@ l10n:
 
 **オブジェクト初期化子** (object initializer) は、オブジェクトのプロパティ名と関連する値の 0 個以上のペアを中括弧 (`{}`) で囲んだカンマ区切りのリストです。オブジェクトは [`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) や [`new`](/ja/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) 演算子で[コンストラクター関数を呼び出して](/ja/docs/Web/JavaScript/Reference/Operators/new)使用することもできます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Object initializer", "taller")}}
 
 ```js interactive-example
 const object1 = { a: "foo", b: 42, c: {} };
@@ -249,7 +249,8 @@ const mergedObj = { ...obj1, ...obj2 };
 // { foo: "baz", x: 42, y: 13 }
 ```
 
-> **警告:** {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
+> [!WARNING]
+> {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
 
 ### プロトタイプセッター
 

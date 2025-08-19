@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
-{{CSSRef}}
-
 在 CSS 中，**`::after`** 会创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，作为所选元素的最后一个子元素。它通常用于为具有 {{CSSxRef("content")}} 属性的元素添加修饰内容。默认情况下，它是行向布局的。
 
 {{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}

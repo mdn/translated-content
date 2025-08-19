@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<map>`** 元素与 {{HTMLElement("area")}} 元素一起使用来定义一个图像映射（一个可点击的链接区域）。
 
 {{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
