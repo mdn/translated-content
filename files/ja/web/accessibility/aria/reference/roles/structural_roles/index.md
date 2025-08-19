@@ -14,7 +14,7 @@ ARIA 文書構造ロールは、コンテンツのセクションに構造的説
 
 一部の構造ロール、例えば [`suggestion`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role) などは、HTML の同等物を持たないため、別のドキュメントがあります。HTML の同等物を持つ一部の構造ロール、例えば [`heading`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) などは、ARIA 属性の要件があります。これらは個別のロールドキュメントへのリンクとともに以下にリストされています。
 
-以下のロールのほとんどは決して必要ではありませんでしたが、完全性のために ARIA に追加されました。ここでも完全性のために含めています。
+以下のロールのほとんどは必要ではありませんでしたが、完全性のために ARIA に追加されました。ここでも完全性のために含めています。
 
 ## HTML 同等物を持つ構造ロール
 
