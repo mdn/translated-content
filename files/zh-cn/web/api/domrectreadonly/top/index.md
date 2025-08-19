@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-**`DOMRectReadOnly`** 接口的只读属性 **`top`** 返回 `DOMRect` 的顶部坐标值。（其值与 `y` 相同；如果 `height` 为负数，则为 `y + height`。）
+**`DOMRectReadOnly`** 接口的只读属性 **`top`** 返回 `DOMRect` 的顶部坐标值。（取值与 `y` 相同；如果 `height` 为负数，则为 `y + height`。）
 
 ## 值
 
