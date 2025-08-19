@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} 接口 **`ariaPosInSet`** 属性反射 [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) 属性的值，该属性定义了当前列表项或树形结构中元素的编号或位置。
+{{domxref("Element")}} 接口 **`ariaPosInSet`** 属性反射 [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) 属性的值。该属性定义了当前列表项或树形结构中元素的编号或位置。
 
 ## 值
 
