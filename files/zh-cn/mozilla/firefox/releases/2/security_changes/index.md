@@ -15,7 +15,7 @@ l10n:
 
 如果必须启用 SSLv2 支持，可以通过将相应的 `security.ssl2.*` 用户首选项设置为 `true` 来实现。
 
-## 新功能
+## 新特性
 
 - Firefox 2 在 TLS 中支持[椭圆曲线密码学](https://zh.wikipedia.org/wiki/椭圆曲线密码学)。目前仅支持 256、384 和 521（是的，确实是 521）位的曲线。
 - Firefox 2 支持 TLS 服务器名称指示扩展，以根据 [RFC 3546](https://datatracker.ietf.org/doc/html/rfc3546) 实现对单个底层网络地址上托管多个虚拟服务器的服务器的安全连接。
