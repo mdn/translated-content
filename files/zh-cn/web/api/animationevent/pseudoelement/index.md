@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-一个以 `'::'` 开头的字符串，包含动画运行在其上的[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的名称。
+一个以 `'::'` 开头的字符串，包含正在运行着对应动画的[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的名称。
 
 ## 规范
 
