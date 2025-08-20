@@ -50,7 +50,7 @@ observer.observe({ entryTypes: ["mark", "measure"] });
 
 ### 观察单个性能条目类型
 
-以下示例使用 `buffered` 和 `type` 配置选项检索缓冲事件并订阅资源加载计时事件（{{domxref("PerformanceResourceTiming")}}）的较新事件。 每当你需要配置观察器使用 `buffered` 或 `durationThreshold` 选项时，请使用 `type` 而不是 `entryType`。否则收集多种类型的性能条目类型将无法正常工作。
+以下示例使用 `buffered` 和 `type` 配置项检索缓冲事件并订阅资源加载计时事件（{{domxref("PerformanceResourceTiming")}}）的最新条目。 每当你需要配置观察器以使用 `buffered` 或 `durationThreshold` 选项时，应使用 `type` 而不是 `entryType`。否则无法同时收集多种性能条目类型。
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {
