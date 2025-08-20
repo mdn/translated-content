@@ -93,7 +93,7 @@ if (typeof x === "undefined") {
   // ここの文は実行される
 }
 
-  // ReferenceError が発生
+// ReferenceError が発生
 if (x === undefined) {
 }
 ```
