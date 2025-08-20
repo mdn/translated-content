@@ -144,7 +144,7 @@ customElements.define(
   <p slot="F">这是包装器尾部</p>
 </card-wrapper>
 
-<h2>Card component</h2>
+<h2>卡片组件</h2>
 
 <card-component>
   <p slot="header_slot">这是卡片头部</p>
