@@ -23,7 +23,6 @@ observe(options)
       - : {{domxref("DOMHighResTimeStamp")}} 定义 {{domxref("PerformanceEventTiming")}} 条目的阈值。默认值为 104 毫秒，四舍五入到最接近的 8 毫秒。最低阈值为 16 毫秒。不可与 `entryTypes` 选项同时使用。
     - `entryTypes`
       - : 字符串数组，每个字符串指定一个要观察的性能条目类型。不能与 `type`、`buffered` 或 `durationThreshold` 选项一起使用。
-      
         请参阅 {{domxref("PerformanceEntry.entryType")}} 以获取有效的性能条目类型名称列表。无法识别的类型将被忽略，但浏览器可能会向控制台输出警告消息以帮助开发者调试代码。如果没有找到有效类型，则 `observe()` 不起作用。
 
     - `type`
