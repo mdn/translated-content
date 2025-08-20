@@ -1,0 +1,28 @@
+---
+title: AnimationPlaybackEvent：timelineTime 属性
+slug: Web/API/AnimationPlaybackEvent/timelineTime
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+---
+
+{{ APIRef("Web Animations") }}
+
+{{domxref("AnimationPlaybackEvent")}} 接口的 **`timelineTime`** 只读属性表示事件排队时动画的{{domxref("AnimationTimeline", "时间线", "", 1)}}的时间值。如果生成事件时动画未与时间线关联，或者关联的时间线处于非活动状态，则该值将为未解析状态。
+
+## 值
+
+一个以毫秒为单位的数字，或 `null`。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationPlayBackEvent")}}
+- {{domxref("AnimationTimeline")}}
