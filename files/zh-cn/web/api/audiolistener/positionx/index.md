@@ -7,10 +7,10 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioListener") }} 接口的只读属性 `positionX` 是一个表示监听器在三维笛卡尔空间中的 x 坐标的 {{domxref("AudioParam")}}。
+{{ domxref("AudioListener") }} 接口的只读属性 `positionX` 返回一个表示监听器在三维笛卡尔空间中的 x 坐标的 {{domxref("AudioParam")}}。
 
 > [!NOTE]
-> 当与 {{domxref("PannerNode")}} 结合使用时，如果 {{domxref("PannerNode.panningModel", "PannerNode")}} 设置为 equalpower，则该参数为 [_a-rate_](/zh-CN/docs/Web/API/AudioParam#a-rate)，否则为 [_k-rate_](/zh-CN/docs/Web/API/AudioParam#k-rate)。
+> 当与 {{domxref("PannerNode")}} 同时使用时，若将 {{domxref("PannerNode.panningModel", "PannerNode")}} 设置为 equalpower，则该参数为 [_a-rate_](/zh-CN/docs/Web/API/AudioParam#a-rate)，否则为 [_k-rate_](/zh-CN/docs/Web/API/AudioParam#k-rate)。
 
 ## 值
 
@@ -31,7 +31,3 @@ l10n:
 ## 参见
 
 - [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-
-```
-
-```
