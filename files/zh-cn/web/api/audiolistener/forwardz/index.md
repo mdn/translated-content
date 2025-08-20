@@ -7,10 +7,10 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioListener") }} 接口的只读属性 `forwardZ` 是一个表示定义监听器指向方向的向量的 z 值 {{domxref("AudioParam")}}。
+{{ domxref("AudioListener") }} 接口的只读属性 `forwardZ` 返回一个表示定义监听器指向方向的向量的 z 分量的 {{domxref("AudioParam")}}。
 
 > [!NOTE]
-> 当与 {{domxref("PannerNode")}} 结合使用时，如果 {{domxref("PannerNode.panningModel", "panningModel")}} 设置为 equalpower，则该参数为 _a-rate_；否则为 _k-rate_。
+> 当与 {{domxref("PannerNode")}} 同时使用时，若将 {{domxref("PannerNode.panningModel", "panningModel")}} 设置为 equalpower，则该参数为 _a-rate_；否则为 _k-rate_。
 
 ## 值
 
@@ -18,7 +18,7 @@ l10n:
 
 ## 示例
 
-请参阅 [`BaseAudioContext.createPanner()`](/zh-CN/docs/Web/API/BaseAudioContext/createPanner#examples) 获取示例代码。
+参见 [`BaseAudioContext.createPanner()`](/zh-CN/docs/Web/API/BaseAudioContext/createPanner#示例) 以获取示例代码。
 
 ## 规范
 
@@ -31,7 +31,3 @@ l10n:
 ## 参见
 
 - [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-
-```
-
-```
