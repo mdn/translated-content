@@ -7,10 +7,10 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-{{domxref("AudioListener")}} 接口的只读属性 `upX` 是一个表示定义监听器指向方向的向上方向向量的 x 值的 {{domxref("AudioParam")}}。
+{{domxref("AudioListener")}} 接口的只读属性 `upX` 返回一个表示定义监听器指向方向的向上方向向量的 x 分量的 {{domxref("AudioParam")}}。
 
 > [!NOTE]
-> 当与 {{domxref("PannerNode")}} 一起使用时，如果 {{domxref("PannerNode.panningModel", "PannerNode")}} 设置为 equalpower，则该参数为 _a-rate_，否则为 _k-rate_。
+> 当与 {{domxref("PannerNode")}} 同时使用时，若将 {{domxref("PannerNode.panningModel", "PannerNode")}} 设置为 equalpower，则该参数为 _a-rate_，否则为 _k-rate_。
 
 ## 值
 
@@ -31,5 +31,3 @@ l10n:
 ## 参见
 
 - [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-
-```
