@@ -1,5 +1,6 @@
 ---
 title: AudioListener：upX 属性
+short-title: upX
 slug: Web/API/AudioListener/upX
 l10n:
   sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
