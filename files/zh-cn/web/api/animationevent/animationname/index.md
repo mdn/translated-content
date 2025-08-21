@@ -1,6 +1,6 @@
 ---
 title: AnimationEvent：animationName 属性
-shortTitle: animationName
+short-title: animationName
 slug: Web/API/AnimationEvent/animationName
 l10n:
   sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
