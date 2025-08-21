@@ -25,7 +25,7 @@ p.a = 1;
 console.log(p.a, p.b); // 1, 42
 ```
 
-Proxy 객체는 target(여기서는 빈 객체)과 handler 객체를 정의하며, 이 안에 '트랩' 함수가 구현되어 있습니다. 여기서는 프록시된 객체가 정의되지 않은 속성을 가져올 때 undefined를 반환하지 않고 대신 숫자 42를 반환합니다.
+`Proxy` 객체는 `target`(여기서는 빈 객체)과 `get` 함정이 구현된 `handler` 객체를 정의합니다. 여기서는 프록시된 객체가 정의되지 않은 속성을 가져올 때 `undefined`를 반환하지 않고 대신 숫자 `42`를 반환합니다.
 
 추가 예제는 {{jsxref("Proxy")}} 참고 페이지에서 확인할 수 있습니다.
 
@@ -235,7 +235,7 @@ console.log(typeof proxy); // "object", typeof는 트랩을 실행하지 않습�
 
 `Reflect`는 함수 객체가 아닙니다.
 
-`Reflect`는 기본 동작을 핸들러에서 대상 객체로 전달할 때 유용하게 사용됩니다.
+`Reflect`는 기본 동작을 핸들러에서 `target`으로 전달할 때 유용하게 사용됩니다.
 
 예를 들어, {{jsxref("Reflect.has()")}}를 사용하면 [`in` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/in)를 함수처럼 사용할 수 있습니다:
 
