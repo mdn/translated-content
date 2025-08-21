@@ -1,5 +1,6 @@
 ---
 title: AudioDecoder：state 属性
+short-title: state
 slug: Web/API/AudioDecoder/state
 l10n:
   sourceCommit: 06b418a190b8e4a46682ab706d14984e7db34862
