@@ -1,5 +1,6 @@
 ---
 title: AudioEncoder：dequeue 事件
+short-title: dequeue
 slug: Web/API/AudioEncoder/dequeue_event
 l10n:
   sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
