@@ -1,5 +1,6 @@
 ---
 title: AudioListener：forwardZ 属性
+short-title: forwardZ
 slug: Web/API/AudioListener/forwardZ
 l10n:
   sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
