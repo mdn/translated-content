@@ -1,5 +1,6 @@
 ---
 title: AudioListener：positionX 属性
+short-title: positionX
 slug: Web/API/AudioListener/positionX
 l10n:
   sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
