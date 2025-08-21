@@ -1,20 +1,19 @@
 ---
 title: Object.defineProperties()
+short-title: defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.defineProperties()`** メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
 
 {{InteractiveExample("JavaScript デモ: Object.defineProperties()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-Object.defineProperties(object1, {
+Object.defineProperties(object, {
   property1: {
     value: 42,
     writable: true,
@@ -22,8 +21,8 @@ Object.defineProperties(object1, {
   property2: {},
 });
 
-console.log(object1.property1);
-// Expected output: 42
+console.log(object.property1);
+// 予想される結果: 42
 ```
 
 ## 構文
@@ -56,7 +55,6 @@ Object.defineProperties(obj, props)
         **既定値は `false`。**
 
         アクセサー記述子には、以下のオプションのキーもあります。
-
     - `get`
       - : プロパティのゲッターとして用いられる関数。ゲッターがなければ {{jsxref("undefined")}} になります。関数の返値がプロパティの値として使用されます。
         **既定値は {{jsxref("undefined")}}。**
@@ -100,6 +98,7 @@ Object.defineProperties(obj, {
 ## 関連情報
 
 - [`Object.defineProperties` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims による `Object.defineProperties` のポリフィル](https://www.npmjs.com/package/object.defineproperties)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
 - [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
