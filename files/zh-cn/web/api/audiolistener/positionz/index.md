@@ -1,5 +1,6 @@
 ---
 title: AudioListener：positionZ 属性
+short-title: positionZ
 slug: Web/API/AudioListener/positionZ
 l10n:
   sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
