@@ -1,5 +1,6 @@
 ---
 title: AnimationPlaybackEvent：timelineTime 属性
+short-title: timelineTime
 slug: Web/API/AnimationPlaybackEvent/timelineTime
 l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
