@@ -1,5 +1,6 @@
 ---
 title: AnimationEvent：elapsedTime 属性
+short-title: elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
 l10n:
   sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
