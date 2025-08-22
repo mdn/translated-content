@@ -55,6 +55,7 @@ Object.defineProperties(obj, props)
         **既定値は `false`。**
 
         アクセサー記述子には、以下のオプションのキーもあります。
+
     - `get`
       - : プロパティのゲッターとして用いられる関数。ゲッターがなければ {{jsxref("undefined")}} になります。関数の返値がプロパティの値として使用されます。
         **既定値は {{jsxref("undefined")}}。**
