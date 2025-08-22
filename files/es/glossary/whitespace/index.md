@@ -19,7 +19,7 @@ La [especificación del lenguaje ECMAScript® 2015](https://www.ecma-internation
 
 - [Espacio en blanco ASCII](https://infra.spec.whatwg.org/#ascii-whitespace)
 - [Especificación del lenguaje ECMAScript® 2015](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
-- [Cómo se manejan los espacios en blanco mediante HTML, CSS y el DOM](/es/docs/Web/API/Document_Object_Model/Whitespace)
+- [Cómo se manejan los espacios en blanco mediante HTML, CSS y el DOM](/es/docs/Web/CSS/CSS_text/Whitespace)
 - [El caracter de espacio en blanco](https://es.wikipedia.org/wiki/El_caracter_de_espacio_en_blanco) en Wikipedia
 - [Glosario de MDN Web Docs](/es/docs/Glossary)
   - {{Glossary("Character", "Caracter")}}
