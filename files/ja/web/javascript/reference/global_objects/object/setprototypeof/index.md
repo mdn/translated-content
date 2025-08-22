@@ -1,13 +1,12 @@
 ---
 title: Object.setPrototypeOf()
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Object.setPrototypeOf()`** 静的メソッドは、指定されたオブジェクトのプロトタイプ（つまり、内部の `[[Prototype]]` プロパティ）を、別のオブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定します。
+**`Object.setPrototypeOf()`** は静的メソッドで、指定されたオブジェクトのプロトタイプ（つまり、内部の `[[Prototype]]` プロパティ）を、別のオブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定します。
 
 > [!WARNING]
 > オブジェクトの `[[Prototype]]` を変更すると、 [最近の JavaScript エンジンがプロパティへのアクセスを最適化する方法](https://mathiasbynens.be/notes/prototypes)の特質上、すべてのブラウザーや JavaScript エンジンで、操作がとても低速になります。さらに、プロトタイプを変更することの性能への影響は細かく広範囲にわたり、 `Object.setPrototypeOf(...)` 文に費やされる時間だけではなく、 `[[Prototype]]` が変更されたすべてのオブジェクトへのアクセスを持つ**_すべて_**のコードに影響する可能性があります。詳しくは [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes) をお読みください。
@@ -21,12 +20,12 @@ const obj = {};
 const parent = { foo: "bar" };
 
 console.log(obj.foo);
-// Expected output: undefined
+// 予想される結果: undefined
 
 Object.setPrototypeOf(obj, parent);
 
 console.log(obj.foo);
-// Expected output: "bar"
+// 予想される結果: "bar"
 ```
 
 ## 構文

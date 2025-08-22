@@ -1,31 +1,30 @@
 ---
 title: Object.create()
+short-title: create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Object.create()`** 静的メソッドは、既存のオブジェクトを新しく生成されるオブジェクトのプロトタイプとして使用して、新しいオブジェクトを生成します。
+**`Object.create()`** は静的メソッドで、既存のオブジェクトを新しく生成されるオブジェクトのプロトタイプとして使用して、新しいオブジェクトを生成します。
 
 {{InteractiveExample("JavaScript デモ: Object.create()", "taller")}}
 
-```js interactive-example
+```js-nolint interactive-example
 const person = {
   isHuman: false,
-  printIntroduction: function () {
-    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  printIntroduction() {
+    console.log(`私は ${this.name} です。私は人間でしょうか？ ${this.isHuman}`);
   },
 };
 
 const me = Object.create(person);
 
-me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
-me.isHuman = true; // Inherited properties can be overwritten
+me.name = "Matthew"; // "name" は "me" に設定されるもので、 "person" にではない
+me.isHuman = true; // 継承されたプロパティは上書き可能
 
 me.printIntroduction();
-// Expected output: "My name is Matthew. Am I human? true"
+// 予想される結果: "My name is Matthew. Am I human? true"
 ```
 
 ## 構文

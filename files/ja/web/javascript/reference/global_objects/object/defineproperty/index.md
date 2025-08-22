@@ -1,29 +1,28 @@
 ---
 title: Object.defineProperty()
+short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.defineProperty()`** は静的メソッドで、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。
 
 {{InteractiveExample("JavaScript デモ: Object.defineProperty()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-Object.defineProperty(object1, "property1", {
+Object.defineProperty(object, "foo", {
   value: 42,
   writable: false,
 });
 
-object1.property1 = 77;
-// Throws an error in strict mode
+object.foo = 77;
+// 厳格モードではエラーが発生
 
-console.log(object1.property1);
-// Expected output: 42
+console.log(object.foo);
+// 予想される結果: 42
 ```
 
 ## 構文
@@ -81,7 +80,7 @@ Object.defineProperty(obj, prop, descriptor)
   - : プロパティのセッターとなる関数で、セッターがない場合は {{jsxref("undefined")}} です。プロパティに値が割り当てられたとき、その値を引数としてこの関数がコールされます。この関数内で `this` は割り当てようとしたプロパティを持つオブジェクトになります。
     **既定値は {{jsxref("undefined")}} です。**
 
-記述子に `value`, `writable`, `get`, `set` のいずれのキーもない場合、データ記述子として扱われます。記述子に `value` または `writable` と、`get` または `set` のキーの両方がある場合は、例外が発生します。
+記述子に `value`, `writable`, `get`, `set` のいずれのキーもない場合、データ記述子として扱われます。記述子がデータ記述子（`value` または `writable` を持つため）であり、かつアクセサー記述子（`get` または `set` を持つため）である場合、例外が発生します。
 
 これらのキーは必ずしも記述子が直接所有しているとは限らないことに留意してください。継承されたプロパティも同様です。これらの既定を確実に保持するためには、記述子オブジェクトのプロトタイプチェーンにある既存のオブジェクトを前もって凍結するか、すべてのオプションを明示的に指定するか、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を作成します。
 
@@ -102,29 +101,9 @@ Object.defineProperty(obj, "key2", {
   value: "static",
 });
 
-// 同じオブジェクトを再利用
-function withValue(value) {
-  const d =
-    withValue.d ||
-    (withValue.d = {
-      enumerable: false,
-      writable: false,
-      configurable: false,
-      value,
-    });
-
-  // 値の代入で重複操作を防ぐ
-  if (d.value !== value) d.value = value;
-
-  return d;
-}
-// このように使います。
-Object.defineProperty(obj, "key", withValue("static"));
-
-// freeze が利用できるなら、オブジェクトのプロトタイプのプロパティ
-// (value, get, set, enumerable, writable, configurable) を
-// 追加・削除することを防ぐことができます。
-(Object.freeze || Object)(Object.prototype);
+// 3. オブジェクトのプロトタイププロパティの追加または除去されるのを防止
+// (value, get, set, enumerable, writable, configurable)
+Object.freeze(Object.prototype);
 ```
 
 プロパティが既に存在する場合、 `Object.defineProperty()` は記述子の値とプロパティの現在の構成に従ってプロパティを変更しようとします。
@@ -423,23 +402,23 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 ```js
 const pattern = {
   get() {
-    return "I always return this string, whatever you have assigned";
+    return "何を代入しても、この文字列を常に返します";
   },
   set() {
-    this.myname = "this is my name string";
+    this.myName = "これは私の名前の文字列です";
   },
 };
 
 function TestDefineSetAndGet() {
-  Object.defineProperty(this, "myproperty", pattern);
+  Object.defineProperty(this, "myProperty", pattern);
 }
 
 const instance = new TestDefineSetAndGet();
-instance.myproperty = "test";
-console.log(instance.myproperty);
-// I always return this string, whatever you have assigned
+instance.myProperty = "test";
+console.log(instance.myProperty);
+// 何を代入しても、この文字列を常に返します
 
-console.log(instance.myname); // this is my name string
+console.log(instance.myName); // これは私の名前の文字列です
 ```
 
 ### プロパティの継承

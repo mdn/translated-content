@@ -127,7 +127,7 @@ Done. Now run:
   - `favicon.ico`：这个是项目的图标，当前就是 Vue 的 logo。
 - `index.html`：你的 Vue 应用会从这个 HTML 页面运行。
 - `src`：这个是 Vue 应用的核心代码目录。
-  - `main.js`：这是应用的入口文件。目前它会初始化 Vue 应用并且制定将应用挂载到 `index.html` 文件中的哪个 HTML 元素上。通常还会做一些注册全局组件或者添额外的 Vue 库的操作。
+  - `main.js`：这是应用的入口文件。目前它会初始化 Vue 应用并且指定将应用挂载到 `index.html` 文件中的哪个 HTML 元素上。通常还会做一些注册全局组件或者添额外的 Vue 库的操作。
   - `App.vue`：这是 Vue 应用的根节点组件，往下看可以了解更多关注 Vue 组件的信息。
   - `components`：这是用来存放自定义组件的目录，目前里面只有一个示例组件。
   - `assets`：这个目录用来存放像 CSS、图片这种静态资源，但是因为它们属于代码目录下，所以可以用 webpack 来操作和处理。意思就是你可以使用一些像 [Sass/SCSS](https://sass-lang.com/) 或者 [Stylus](https://stylus-lang.com/) 这样的预处理器。

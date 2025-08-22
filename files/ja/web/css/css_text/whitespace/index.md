@@ -357,7 +357,7 @@ Firefox 開発者ツールの HTML インスペクターでは、テキストノ
 
 この問題を回避する方法は何通りかあります。
 
-水平方向のアイテムのリストを生成するのに、 `inline-block` による解決法よりも[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用します。これは、あなたに代わってすべてを処理するもので、間違いなく望ましい解決策です。
+- 水平方向のアイテムのリストを生成するのに、 `inline-block` による解決法よりも[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用します。これは、あなたに代わってすべてを処理するもので、間違いなく望ましい解決策です。
 
   ```css
   ul {

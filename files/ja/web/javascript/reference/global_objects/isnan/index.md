@@ -2,10 +2,8 @@
 title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Objects")}}
 
 **`isNaN()`** 関数は、必要に応じてまず値を数値に変換してから、引数が {{jsxref("NaN")}} (非数) かどうかを判定します。 `isNaN()` 関数内の型変換は[予想外](#解説)の結果になることがあるため、 {{jsxref("Number.isNaN()")}} を使用することをお勧めします。
 
@@ -39,7 +37,7 @@ isNaN(value)
 
 ### 返値
 
-指定された値を[数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)した後で {{jsxref("NaN")}} であれば、 `true` を返します。それ以外の場合は、 `false` を返します。
+指定された値を[数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)した後で {{jsxref("NaN")}} であれば、 `true` を返します。それ以外の場合は、 `false` を返します。
 
 ## 解説
 

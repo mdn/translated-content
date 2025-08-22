@@ -1,26 +1,25 @@
 ---
 title: Object.isExtensible()
+short-title: isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.isExtensible()`** メソッドは、オブジェクトが拡張可能であるか（新しいプロパティを追加することができるかどうか）を判定します。
 
 {{InteractiveExample("JavaScript デモ: Object.isExtensible()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-console.log(Object.isExtensible(object1));
-// Expected output: true
+console.log(Object.isExtensible(object));
+// 予想される結果: true
 
-Object.preventExtensions(object1);
+Object.preventExtensions(object);
 
-console.log(Object.isExtensible(object1));
-// Expected output: false
+console.log(Object.isExtensible(object));
+// 予想される結果: false
 ```
 
 ## 構文
