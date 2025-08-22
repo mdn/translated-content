@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get changed files
         id: check
@@ -76,7 +76,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout (content)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         if: steps.check.outputs.HAS_FILES == 'true'
         with:
           repository: mdn/content
@@ -153,7 +153,8 @@ jobs:
 
           ARGS=()
           for file in "${files_to_build[@]}"; do
-              ARGS+=("-f" "$PWD/$file")
+              file_without_prefix="${file#files/}"
+              ARGS+=("-f" "$CONTENT_TRANSLATED_ROOT/$file_without_prefix")
           done
 
           yarn rari build --no-basic --json-issues --data-issues "${ARGS[@]}"

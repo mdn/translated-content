@@ -2,7 +2,7 @@
 title: font-size
 slug: Web/SVG/Reference/Attribute/font-size
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: da8c3171b7a7ea6694af71fac7a3194d8e9ba869
 ---
 
 **`font-size`** フォントサイズ属性は、複数行レイアウト環境でテキストを複数行にわたって設定する際に、{{Glossary("baseline/typography", "ベースライン")}}からベースラインまでのフォントのサイズを参照します。
@@ -14,27 +14,20 @@ l10n:
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## 例
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
+### SVG フォントサイズを制御
 
 ```html
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" font-size="smaller">smaller</text>
-  <text x="100" y="20" font-size="2em">2em</text>
+  <text y="25" font-size="smaller">smaller</text>
+  <text x="100" y="25" font-size="2em">2em</text>
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "200", "30")}}
+{{EmbedLiveSample}}
 
 ## 使用上のメモ
 

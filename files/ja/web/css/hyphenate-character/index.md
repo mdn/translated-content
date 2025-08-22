@@ -2,7 +2,7 @@
 title: hyphenate-character
 slug: Web/CSS/hyphenate-character
 l10n:
-  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
+  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
 
 **`hyphenate-character`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ハイフンによる改行の前で行末に使用される文字（または文字列）を設定します。
@@ -31,7 +31,7 @@ hyphenate-character: "—";
 
 ```css interactive-example
 #example-element {
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
   font-size: 1.5rem;
   text-align: left;
   width: 7rem;
