@@ -28,7 +28,7 @@ An object is disposable if it has the `[Symbol.dispose]()` method. The method is
 
 ### ユーザー定義の処分可能オブジェクト
 
-`[Symbol.dispose]` allows the creation of custom disposables. See the {{jsxref("Statements/using", "using")}} reference for more information.
+`[Symbol.dispose]` により、カスタムの処分可能オブジェクトを作成できます。詳細については、{{jsxref("Statements/using", "using")}} を参照してください。
 
 ```js
 class Disposable {
