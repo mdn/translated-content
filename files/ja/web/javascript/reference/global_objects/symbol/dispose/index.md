@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
-The **`Symbol.dispose`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.dispose`. The {{jsxref("Statements/using", "using")}} declaration looks up this symbol on the variable initializer for the method to call when the variable goes out of scope.
+**`Symbol.dispose`** は、静的データプロパティーで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.dispose` を表します。{{jsxref("Statements/using", "using")}} 宣言が、変数を初期化するオブジェクトにおけるこのシンボルを調べることで、変数がスコープ外になる際に呼び出すメソッドを取得します。
 
 ## Value
 
