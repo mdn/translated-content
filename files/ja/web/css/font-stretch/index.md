@@ -5,14 +5,13 @@ l10n:
   sourceCommit: 6de7472d2f9ff0a78a0098721df1d5473d51b953
 ---
 
-{{CSSRef}}
-
-> **メモ:** `font-stretch` プロパティは仕様書において [`font-width` に名前が変更されました](https://drafts.csswg.org/css-fonts/#font-stretch-desc)。 `font-stretch` は `font-width` プロパティの別名として維持されることになりました。
+> [!NOTE]
+> `font-stretch` プロパティは仕様書において [`font-width` に名前が変更されました](https://drafts.csswg.org/css-fonts/#font-stretch-desc)。 `font-stretch` は `font-width` プロパティの別名として維持されることになりました。
 > 新しい `font-width` という名前には、まだどのブラウザーでも対応していません。
 
 **`font-stretch`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの normal, condensed, expanded のフェイスを選択します。
 
-{{InteractiveExample("CSS Demo: font-stretch")}}
+{{InteractiveExample("CSS デモ: font-stretch")}}
 
 ```css interactive-example-choice
 font-stretch: condensed;
@@ -103,7 +102,6 @@ font-stretch: unset;
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : 通常より幅の広い (expanded) フォントフェイスを指定します。最も幅の広いフェイスは ultra-expanded です。
 - `<percentage>`
-
   - : {{cssxref("&lt;percentage&gt;")}} 値です。このプロパティでは負の数は許可されていません。
 
 ### キーワードと数値の対応

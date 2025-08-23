@@ -73,7 +73,8 @@ Principalmente hay cuatro formas de analizar este documento XML:
    escanear en lo que respecta a los saltos de línea. Sin embargo, este método es un "último recurso" ya que si el
    código XML cambia ligeramente, el método probablemente fallará.
 
-> **Nota:** `XMLHttpRequest` ahora puede interpretar HTML por ti
+> [!NOTE]
+> `XMLHttpRequest` ahora puede interpretar HTML por ti
 > utilizando la propiedad {{domxref("XMLHttpRequest.responseXML", "responseXML")}}. Lea el
 > artículo sobre [HTML
 > en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) para aprender como hacerlo.

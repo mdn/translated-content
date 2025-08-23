@@ -52,9 +52,11 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **メモ:** `WebGLRenderingContext` に関するインターフェイスは、[WebGL](/ja/docs/Web/API/WebGL_API) に掲載しています。
+> [!NOTE]
+> `WebGLRenderingContext` に関するインターフェイスは、[WebGL](/ja/docs/Web/API/WebGL_API) に掲載しています。
 
-> **メモ:** {{domxref("OffscreenCanvas")}} はウェブワーカーでも利用できます。
+> [!NOTE]
+> {{domxref("OffscreenCanvas")}} はウェブワーカーでも利用できます。
 
 {{domxref("CanvasCaptureMediaStreamTrack")}} は関連するインターフェイスです。
 

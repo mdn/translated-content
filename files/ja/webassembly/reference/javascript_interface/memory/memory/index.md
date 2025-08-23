@@ -19,9 +19,7 @@ new WebAssembly.Memory(memoryDescriptor);
 ### 引数
 
 - _memoryDescriptor_
-
   - : 以下のメンバーを含むことができるオブジェクトです。
-
     - _initial_
       - : WebAssembly メモリーの初期サイズで、単位は WebAssembly ページ数です。
     - _maximum {{optional_inline}}_

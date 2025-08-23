@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 05808d3600f3a5b856eaaf89359f1fdc3d255c26
 ---
 
-{{AddonSidebar}}
-
 添加按钮到浏览器的工具栏。
 
 [浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)是浏览器工具栏中的一个按钮。

@@ -3,8 +3,6 @@ title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)**dir**是一个指示元素中文本方向的枚举属性。它的取值如下：
 
 - ltr，指从*左*到*右*，用于那种从左向右书写的语言（比如英语）；

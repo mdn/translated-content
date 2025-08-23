@@ -3,8 +3,6 @@ title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
 
-{{AddonSidebar}}
-
 使用指定的搜索引擎或默认搜索引擎进行搜索。
 
 结果将显示在一个新的选项卡中，或者如果给出了 tabId 参数，则显示在由此标识的选项卡中。
@@ -24,9 +22,7 @@ browser.search.search(
 ### 参数
 
 - `searchProperties`
-
   - : `object`. 拥有以下属性的对象：
-
     - `query`
       - : `字符串`. 进行查询的内容。
     - `engine`{{optional_inline}}

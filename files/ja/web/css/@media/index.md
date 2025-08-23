@@ -5,14 +5,12 @@ l10n:
   sourceCommit: f0fcb3b92e14a1d5b7f51947597cef1fbf4be64c
 ---
 
-{{CSSRef}}
-
 **`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
 
 > [!NOTE]
 > JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
 
-{{InteractiveExample("CSS Demo: @media", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: @media", "tabbed-standard")}}
 
 ```css interactive-example
 abbr {
@@ -191,7 +189,6 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
   - : 複数のメディア特性を 1 つのメディアクエリーに結合する際に使用されます。クエリーが `true` になるためには、結合させた各機能が `true` を返すことが必要です。
     また、メディア特性とメディア種別を結合する際にも使用されます。
 - `not`
-
   - : メディアクエリーを反転するために使用され、クエリーが `false` を返す場合に `true` を返します。
     カンマで区切られたクエリーのリストの中にある場合は、適用された特定のクエリーのみを反転します。
 

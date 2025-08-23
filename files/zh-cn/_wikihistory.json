@@ -10745,14 +10745,6 @@
       "EugeneZeng"
     ]
   },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-01-30T13:21:03.275Z",
-    "contributors": [
-      "chrisdavidmills",
-      "lon",
-      "ziyunfei"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2019-03-23T22:58:48.150Z",
     "contributors": [
@@ -24526,6 +24518,14 @@
       "LuXuanqing"
     ]
   },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-01-30T13:21:03.275Z",
+    "contributors": [
+      "chrisdavidmills",
+      "lon",
+      "ziyunfei"
+    ]
+  },
   "Web/CSS/CSS_text_decoration": {
     "modified": "2019-04-19T11:09:51.086Z",
     "contributors": [
@@ -28122,28 +28122,6 @@
       "FredWe",
       "teoli",
       "TimZhao"
-    ]
-  },
-  "Web/Events": {
-    "modified": "2020-08-14T06:47:09.660Z",
-    "contributors": [
-      "lc15011977647",
-      "pe4ch",
-      "RainSlide",
-      "wbamberg",
-      "zhangchen",
-      "purcy",
-      "WjmNightingale",
-      "plter",
-      "XiaoyaoChen",
-      "BobGreen",
-      "xgqfrms-GitHub",
-      "zliy",
-      "tcatche",
-      "Ende93",
-      "ziyunfei",
-      "ReyCG_sub",
-      "louisremi"
     ]
   },
   "Web/HTML": {
@@ -33052,7 +33030,7 @@
       "bumaociyuan"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_properties": {
+  "Web/JavaScript/Reference/Classes/Private_elements": {
     "modified": "2020-10-15T22:30:12.129Z",
     "contributors": [
       "zhuangyin",

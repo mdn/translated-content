@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 隐藏指定标签页的页面操作。
 
 `hide()` 会覆盖模式匹配，因此即便标签页的 URL 与 [`show_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 匹配，也不会在指定的标签页中显示页面操作。

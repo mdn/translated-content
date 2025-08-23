@@ -13,7 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 new WeakRef(targetObject)
 ```
 
-> **备注：** `WeakRef()` 必须通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 关键字调用。试图在没有 `new` 的情况下调用会抛出一个 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `WeakRef()` 必须通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 关键字调用。试图在没有 `new` 的情况下调用会抛出一个 {{jsxref("TypeError")}}。
 
 ### 参数
 

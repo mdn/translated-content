@@ -3,8 +3,6 @@ title: 拦截 HTTP 请求
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 ---
 
-{{AddonSidebar}}
-
 使用 {{WebExtAPIRef("webRequest")}} API 可以拦截 HTTP 请求。该 API 允许开发者植入一个侦听器用以侦听各个阶段的 HTTP 请求。在侦听器中，你能：
 
 - 获取请求及其返回的 header 和 body

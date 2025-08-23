@@ -5,11 +5,9 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`opacity`** は CSS のプロパティで、要素の不透明度を設定します。不透明度は要素の裏にあるコンテンツが隠れる度合いであり、透明度の逆です。
 
-{{InteractiveExample("CSS Demo: opacity")}}
+{{InteractiveExample("CSS デモ: opacity")}}
 
 ```css interactive-example-choice
 opacity: 0;
@@ -60,7 +58,6 @@ opacity: unset;
 ### 値
 
 - `<alpha-value>`
-
   - : {{cssxref("number")}} を `0.0` 以上 `1.0` 以下で、また {{cssxref("percentage")}} を `0%` 以上 `100%` 以下で、チャネルの不透明度（つまり、アルファチャネルの値）を表します。範囲外の数値も有効ですが、近い方の限界値に丸められます。
 
     | 値                                                    | 意味                                                           |

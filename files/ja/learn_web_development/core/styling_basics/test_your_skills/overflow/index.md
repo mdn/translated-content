@@ -1,23 +1,24 @@
 ---
 title: "スキルテスト: オーバーフロー"
+short-title: オーバーフロー
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
-original_slug: Learn_web_development/Core/Styling_basics/Overflow_Tasks
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
-
-{{LearnSidebar}}
 
 このスキルテストの目的は、 [CSS のオーバーフローとその管理方法](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)方法を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題 1
 
-この課題では、高さが固定されているため、コンテンツがボックスからはみ出しています。高さは維持したまま、オーバーフローを発生させるのに十分なテキストがある場合にのみ、ボックスにスクロールバーを表示させるようにしてください。 HTML からテキストの一部を除去し、テキストが少量しかなくオーバーフローがなくなった場合、スクロールバーが現れないことをテストしてください。
+この課題では、高さが固定されているため、コンテンツがボックスからはみ出しています。
+
+この課題を完了するには、次のようにします。
+
+1. 高さは維持したまま、オーバーフローを発生させるのに十分なテキストがある場合にのみ、ボックスにスクロールバーを表示させるようにしてください。
+2. HTML からテキストの一部を除去し、テキストが少量しかなくオーバーフローがなくなった場合、スクロールバーが現れないことをテストしてください。
 
 ![境界線と垂直スクロールバーのある小さなボックス。](mdn-overflow1.png)
 
@@ -54,7 +55,7 @@ body {
 {{EmbedLiveSample("overflow-scroll", "", "450px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 コンテンツがあふれたときにのみボックスにスクロールバーが追加されるように、`overflow: auto` を追加してください。
 
@@ -73,8 +74,6 @@ body {
 最終的には下記画像のようになるはずです。
 
 ![画像は枠いっぱいに表示されますが、枠からはみ出てはいません。](mdn-overflow2.png)
-
-下記のライブコードを更新して、完成例を再現してみてください。
 
 ```html live-sample___overflow-hidden
 <div class="box">
@@ -98,7 +97,7 @@ body {
 {{EmbedLiveSample("overflow-hidden", "", "300px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 `overflow: hidden` を `.box` セレクターに追加する必要があります。
 
@@ -109,7 +108,3 @@ body {
 ```
 
 </details>
-
-## 関連情報
-
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)

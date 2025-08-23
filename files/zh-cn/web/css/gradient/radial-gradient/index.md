@@ -3,8 +3,6 @@ title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
 ---
 
-{{CSSRef}}
-
 **`radial-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)创建一个图像，该图像由从原点辐射的两种或多种颜色之间的渐进过渡组成，其形状可以是圆形或椭圆形。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
 
 {{InteractiveExample("CSS Demo: radial-gradient()")}}
@@ -55,7 +53,6 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 - `<ending-shape>`
   - : 渐变的结束形状。值可以是 `circle`（圆形，渐变的形状是一个半径不变的正圆）或 `ellipse`（椭圆，渐变形状是轴对称椭圆）。如果没有指定，默认为 `ellipse`。
 - `<size>`
-
   - : 确定渐变结束形状的大小。如果省略，则默认为最远角（farthest-corner）。它可以显式给出，也可以通过关键字给出。就关键字定义而言，渐变框边缘应视为向两个方向无限延伸，而不是有限线段。
 
     对于它们的 `<size>`，圆形和椭圆渐变都接受以下关键字：

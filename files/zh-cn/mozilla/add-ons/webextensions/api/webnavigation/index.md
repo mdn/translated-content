@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e92bec809ea0bef618f7e604d7a7457f50aa0127
 ---
 
-{{AddonSidebar}}
-
 为导航的各个阶段添加事件监听器。导航是指浏览器中的某个框架从一个 URL 跳转到另一个 URL，通常是（但不总是）用户操作（如点击链接或在地址栏输入 URL）引起的。
 
 与 {{WebExtAPIRef("webRequest")}} API 相比：导航通常会导致浏览器发起 Web 请求，但 webRequest API 关注的是 HTTP 层的底层视角，而 webNavigation API 更侧重于浏览器 UI 本身的视角。
@@ -16,14 +14,12 @@ l10n:
 ![主流程和下文描述的附加流程的可视化。](we-flow.png)
 
 - 主流程为：
-
   - {{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}
   - {{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}
   - {{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}
   - {{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}
 
 - 此外：
-
   - 如果浏览器需要为导航创建新标签页或新窗口（例如，用户在新标签页中打开链接），则 {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}} 会在 `onBeforeNavigate` 之前触发。
   - 如果页面使用 [history API](/zh-CN/docs/Web/API/History_API) 更新了浏览器地址栏中的 URL，则会触发 {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}}。
   - 如果页面的[片段标识符](/zh-CN/docs/Web/URI/Reference/Fragment)发生变化，则会触发 {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}}。

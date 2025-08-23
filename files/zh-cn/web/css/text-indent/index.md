@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{CSSRef}}
-
 **`text-indent`** CSS 属性设置区块元素中文本行前面空格（缩进）的长度。
 
 {{InteractiveExample("CSS Demo: text-indent")}}
@@ -227,7 +225,6 @@ p {
 
 - [学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 - 相关 CSS 属性：
-
   - [`text-justify`](/zh-CN/docs/Web/CSS/text-justify)
   - [`text-orientation`](/zh-CN/docs/Web/CSS/text-orientation)
   - [`text-overflow`](/zh-CN/docs/Web/CSS/text-overflow)

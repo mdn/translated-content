@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 **CSS メディアクエリー**モジュールにより、ビューポートの値やブラウザーや端末の機能を検査および問い合わせして、現在のユーザー環境に応じて CSS スタイルを条件付きで適用することができます。メディアクエリーは、 CSS の `@media` ルールや、 HTML や JavaScript などの他のコンテキストや言語で使用されます。
 
 メディアクエリーは、[レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)の中心的な要素です。メディアクエリーを使用すると、端末の特性やその値に応じて条件付きで CSS スタイルを設定することができます。一般的には、ビューポートのサイズに基づいてメディアクエリーを使用し、様々な画面サイズの端末に適切なレイアウトを設定します。例えば、幅の広い画面では 3 段組み、幅の狭い画面では 1 段組みにするなどです。
@@ -80,27 +78,21 @@ l10n:
 ## ガイド
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-
   - : メディアクエリーと、その構文や演算子、メディアクエリー式を構築するために使用するメディア機能を紹介します。
 
 - [学習: メディアクエリーの基本](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries)
-
   - : メディアクエリーと、それを使用してレスポンシブデザインを作成するための手法の概要です。
 
 - [プログラムからのメディアクエリーのテスト](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-
   - : JavaScript の中でメディアクエリーを使用して端末の状態を特定する方法、メディアクエリーの結果が変化したとき（ユーザーが画面を回転させたり、ブラウザーの大きさを変更したりしたとき）にコードに通知されるよう、リスナーを設定する方法を説明します。
 
 - [アクセシビリティのためのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
-
   - : ユーザーがウェブサイトをより理解できるように、メディアクエリーが支援できることを学びます。
 
 - [印刷](/ja/docs/Web/CSS/CSS_media_queries/Printing)
-
   - : ウェブコンテンツの印刷出力を改善するためのヒントとテクニック。
 
 - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
-
   - : `sizes` を使用してメディアクエリーを使用し、ウェブサイトのレスポンシブ画像のソリューションを実装する方法を学びます。
 
 ## 関連概念

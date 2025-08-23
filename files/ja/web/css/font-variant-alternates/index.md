@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`font-variant-alternates`** は [CSS](/ja/docs/Web/CSS) のプロパティで、代替書体の使用を制御します。代替書体は {{cssxref("@font-feature-values")}} で定義された代替名で参照される可能性があります。
 
 {{cssxref("@font-feature-values")}} アットルールを使って、与えられたフォントフェイスに対して、人間が読める名前と、特定の OpenType フォント機能を制御する数値インデックスを関連付けることができます。代替字体を選択する関数（`stylistic`、`styleset`、`character-variant`、`swash`、`ornament`、`annotation`）の場合、 `font-variant-alternates` プロパティで人間が読める名前を参照することで、関連する関数を適用することができます。
@@ -57,7 +55,6 @@ font-variant-alternates: unset;
 - `swash()`
   - : この関数は、[先端装飾](https://en.wikipedia.org/wiki/Swash_%28typography%29)書体を有効にします。この引数は、フォント固有の名前を数値に対応づけたものです。 OpenType の `swsh` および `cswh` の値に相当します (例: `swsh 2` および `cswh 2`)。
 - `ornaments()`
-
   - : この関数は、[フルーロン](https://ja.wikipedia.org/wiki/%E3%83%95%E3%83%AB%E3%83%BC%E3%83%AD%E3%83%B3)およびその他の飾り書体などの装飾を有効にします。 OpenType の `ornm` の値に相当します (例: `ornm 2`)。
 
     > [!NOTE]

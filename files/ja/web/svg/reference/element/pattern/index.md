@@ -49,7 +49,6 @@ svg {
   - : この属性は `<pattern>` 属性の既定値を提供するテンプレートパターンを参照します。
     _値の型_: [**\<URL>**](/ja/docs/Web/SVG/Guides/Content_type#url); _既定値_: _none_; _アニメーション_: **可**
 - {{SVGAttr("patternContentUnits")}}
-
   - : この属性は `<pattern>` の内容物の座標系を定義します。
     _値の型_: `userSpaceOnUse` | `objectBoundingBox`; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
 
@@ -75,11 +74,11 @@ svg {
   - : この属性はパターンタイルの x 方向のシフト量を指定します。
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length); _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-
   - : この属性は `<pattern>` 属性の既定値を提供するテンプレートパターンを参照します。
     _値の型_: [**\<URL>**](/ja/docs/Web/SVG/Guides/Content_type#url); _既定値_: _none_; _アニメーション_: **可**
 
-    > **メモ:** `href` を実装しているブラウザーでは、 `href` と `xlink:href` を共に設定した場合、`xlink:href` は無視され `href` のみが使用されます。
+    > [!NOTE]
+    > `href` を実装しているブラウザーでは、 `href` と `xlink:href` を共に設定した場合、`xlink:href` は無視され `href` のみが使用されます。
 
 - {{SVGAttr("y")}}
   - : この属性はパターンタイルの y 方向のシフト量を指定します。

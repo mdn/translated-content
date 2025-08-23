@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`sandbox`** ディレクティブは、 {{HTMLElement("iframe")}} の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性と同様に、要求されたリソースに対してサンドボックスを有効にします。これは、ポップアップの防止、プラグインやスクリプトの実行の防止、同一オリジンポリシーの強制などを含むページ操作の制限を適用します。
 
 <table class="properties">
@@ -65,7 +63,8 @@ Content-Security-Policy: sandbox <value>;
 - `allow-top-navigation-to-custom-protocols`
   - : ブラウザーに組み込まれている、または[ウェブサイトによって登録された](/ja/docs/Web/API/Navigator/registerProtocolHandler) `http` 以外のプロトコルへのナビゲーションを可能にします。この機能は `allow-popups` または `allow-top-navigation` キーワードでも有効になる。
 
-> **メモ:** `allow-top-navigation` および関連する値は、埋め込み文書（子 iframe など）に対してのみ意味を持ちます。 独立した文書の場合、最上位の閲覧コンテキストは文書自体であるため、これらの値が示す効果はありません。
+> [!NOTE]
+> `allow-top-navigation` および関連する値は、埋め込み文書（子 iframe など）に対してのみ意味を持ちます。 独立した文書の場合、最上位の閲覧コンテキストは文書自体であるため、これらの値が示す効果はありません。
 
 ## 例
 

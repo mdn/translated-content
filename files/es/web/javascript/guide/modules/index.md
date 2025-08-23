@@ -46,12 +46,10 @@ modules/
 Los dos módulos del directorio `modules` se describen a continuación:
 
 - `canvas.js` — contiene funciones relacionadas con la configuración del lienzo (`canvas`):
-
   - `create()` — crea un lienzo (`canvas`) con un `width` y `height` especificados dentro de un contenedor [`<div>`](/es/docs/Web/HTML/Reference/Elements/div) con un ID especificado, que a su vez se añade dentro de un elemento padre especificado. Devuelve un objeto que contiene el contexto 2D del lienzo y el ID del contenedor.
   - `createReportList()` — crea una lista desordenada adjunta dentro de un elemento contenedor específico, que se puede usar para generar datos de informes. Devuelve el ID de la lista.
 
 - `square.js` — contiene:
-
   - `name` — una constante que contiene la cadena 'square'.
   - `draw()` — dibuja una figura cuadrada en un lienzo específico, con un tamaño, posición y color específicos. Devuelve un objeto que contiene el tamaño, la posición y el color del cuadrado.
   - `reportArea()` — escribe el área de un cuadrado en una lista de informes específica, dada su longitud.

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
-{{AddonSidebar}}
-
 当文档（包括它所指向的资源）已经加载完并且已初始化时触发。该事件与 window 的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件等价。
 
 ## 语法
@@ -34,9 +32,7 @@ browser.webNavigation.onCompleted.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `details`
       - : `object`。有关导航事件的详细信息。参见 [details](#details) 部分以了解更多信息。
 

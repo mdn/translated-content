@@ -3,8 +3,6 @@ title: outline-width
 slug: Web/CSS/outline-width
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`outline-width`** es usada para establecer el grosor del contorno de un elemento. Un contorno es una línea que se dibuja al rededor de los elementos, fuera de los límites del borde, para resaltar al elemento:

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 La [función](/es/docs/Web/CSS/CSS_Functions) [CSS](/es/docs/Web/CSS) **`linear-gradient()`** crea una imagen que consiste en una transición progresiva entre dos o más colores a lo largo de una línea recta. Su resultado es un objeto del tipo de datos {{CSSxRef("&lt;gradient&gt;")}}, que es un tipo especial de {{CSSxRef("&lt;image&gt;")}}.
 
 {{InteractiveExample("CSS Demo: linear-gradient()")}}
@@ -83,7 +81,6 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 ### Valores
 
 - `<lado-o-esquina>`
-
   - : La posición del punto de inicio de la línea de gradiente. Si se especifica, consiste en la palabra `to` y hasta dos palabras clave: una indica el lado horizontal (`left` o `right`), y la otra el lado vertical (`top` o `bottom`). El orden de las palabras clave de los lados no importa. Si no se especifica, se asume `to bottom`.
 
     Los valores `to top`, `to bottom`, `to left`, y `to right` son equivalentes a los ángulos `0deg`, `180deg`, `270deg`, y `90deg`, respectivamente. Los otros valores se traducen en un ángulo.

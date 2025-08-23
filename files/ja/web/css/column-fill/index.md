@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
 
-{{InteractiveExample("CSS Demo: column-fill")}}
+{{InteractiveExample("CSS デモ: column-fill")}}
 
 ```css interactive-example-choice
 column-fill: auto;

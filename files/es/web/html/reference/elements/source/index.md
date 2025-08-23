@@ -79,9 +79,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `src`
   - : Es la ubicación del recurso multimedia, requerido por los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}}. El valor de este atributo es ignorado cuando el elemento `<source>` se coloca dentro de un elemento {{HTMLElement("picture")}}.
 - `srcset` {{experimental_inline}}
-
   - : Una lista de una o más cadenas separadas por comas que indican un conjunto de posibles imágenes representadas por la fuente para que las utilice el navegador. Cada cadena se compone de:
-
     1. una URL a una imagen,
     2. un descriptor de ancho, que es un entero positivo seguido directamente por `'w'`. El valor predeterminado, si falta, es el infinito.
     3. un descriptor de densidad de píxeles, que es un número flotante positivo seguido directamente por `'x'`. El valor predeterminado, si falta, es `1x`.

@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/draggable
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`draggable`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 드래그 가능 여부를 나타내는 열거형 특성으로, 네이티브 브라우저 동작 방식과 [HTML Drag and Drop API](/ko/docs/Web/API/HTML_Drag_and_Drop_API) 모두 통제합니다.
+**`draggable`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 요소의 드래그 가능 여부를 나타내는 열거형 특성으로, 네이티브 브라우저 동작 방식과 [HTML Drag and Drop API](/ko/docs/Web/API/HTML_Drag_and_Drop_API) 모두 통제합니다.
 
 `draggable`은 다음 두 값 중 하나를 가질 수 있습니다.
 
@@ -27,4 +27,4 @@ original_slug: Web/HTML/Global_attributes/draggable
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).

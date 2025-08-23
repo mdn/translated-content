@@ -116,7 +116,6 @@ La propriété `filter` s'utilise avec le mot-clé `none` ou avec une à plusieu
 Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les filtres sont appliqués dans l'ordre.
 
 - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
-
   - : Applique un [flou gaussien](https://en.wikipedia.org/wiki/Gaussian_blur) à l'image.
 
     ```css
@@ -124,7 +123,6 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
-
   - : Rend l'image plus claire ou plus sombre en utilisant un coefficient multiplicateur. L'effet est linéaire&nbsp;: `0%` créera une image complètement noire, `100%` ne modifiera pas l'image et les valeurs supérieures à 100% rendront l'image plus claire.
 
     ```css
@@ -132,7 +130,6 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
-
   - : Ajuste le contraste de l'image. Une valeur de `0%` rendra l'image grise, `100%` n'aura pas d'effet et les valeurs supérieures à `100%` renforceront le contraste.
 
     ```css
@@ -140,7 +137,6 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-
   - : Applique une ombre portée suivant les contours de l'image. Son paramètre suit la même syntaxe que celle de la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow) (définie dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)), sauf que le mot-clé `inset` et le paramètre `spread` ne sont pas autorisés. Tous les filtres appliqués après `drop-shadow()` sont appliqués à l'ombre portée également.
 
     ```css
@@ -148,7 +144,6 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
-
   - : Convertit l'image en niveaux de gris. Un argument de `100%` rendra l'image uniquement avec des niveaux de gris. Un argument de `0%` ne modifiera pas l'image d'entrée. Les valeurs entre `0%` et `100%` appliquent un effet proportionnel.
 
     ```css
@@ -156,7 +151,6 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
-
   - : Applique une rotation de teinte. L'argument angulaire définit le nombre de degrés pour la rotation sur le cercle des teintes. Une valeur de `0deg` n'aura pas d'effet sur l'image.
 
     ```css
@@ -164,7 +158,6 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
-
   - : Inverse les couleurs de l'image. Si l'argument vaut `100%`, on obtiendra le négatif complet de l'image. Si l'argument vaut `0%`, l'image sera inchangée. Les valeurs entre `0%` et `100%` ont des effets proportionnels.
 
     ```css
@@ -172,7 +165,6 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
-
   - : Applique un niveau de transparence. Un coefficient de `0%` rendra l'image complètement transparente tandis qu'un coefficient de `100%` laissera l'image inchangée.
 
     ```css
@@ -180,7 +172,6 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
-
   - : Sature l'image. Avec un coefficient de `0%`, l'image sera complètement désaturée. `100%` n'aura pas d'effet sur l'image. Les valeurs supérieures à `100%` augmenteront la saturation.
 
     ```css
@@ -188,7 +179,6 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
-
   - : Convertit l'image en sépia. Un coefficient de `100%` rendra l'image complètement sépia tandis qu'un coefficient `0%` n'aura pas d'effet sur l'image.
 
     ```css

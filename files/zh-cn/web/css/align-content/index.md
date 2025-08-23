@@ -3,8 +3,6 @@ title: align-content
 slug: Web/CSS/align-content
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 的 **`align-content`** 属性设置了浏览器如何沿着[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)的纵轴和[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)的主轴在内容项之间和周围分配空间。
 
 {{InteractiveExample("CSS Demo: align-content")}}
@@ -113,7 +111,6 @@ align-content: unset; /* 未设置 */
   `last baseline`
 
   ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/410px-Typography_Line_Terms.svg.png)
-
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 

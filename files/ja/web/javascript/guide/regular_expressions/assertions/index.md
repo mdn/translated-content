@@ -9,7 +9,7 @@ l10n:
 
 アサーションには、 行や単語の先頭・末尾を示す境界や、（先読み、後読み、条件式を含む）何らかの方法で照合が可能なことを示す、その他のパターンが含まれます。
 
-{{InteractiveExample("JavaScript Demo: RegExp Assertions", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp Assertions", "taller")}}
 
 ```js interactive-example
 const text = "A quick fox";
@@ -108,7 +108,8 @@ console.log(text.match(regexpFoxQuality));
 
 ### その他のアサーション
 
-> **メモ:** `?` の文字は数量子としても使用されます。
+> [!NOTE]
+> `?` の文字は数量子としても使用されます。
 
 <table class="standard-table">
   <thead>

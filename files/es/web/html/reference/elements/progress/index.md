@@ -36,7 +36,6 @@ Este elemento incluye [Atributos Globales](/es/docs/Web/HTML/Reference/Global_at
 - `max`
   - : Este atributo indica la cantidad de trabajo que demorá la carga, se define en el elemento `progress`. Por ejemplo max="100".
 - `value`
-
   - : Este atributo indica que parte de la tarea ya se ha completado o cargado. Debe especificarse un valor entre 0 y `max`, o entre 0 y 1.0 si `max` está omitido. Si al atributo `value` no se le especifica ningún valor, se estara llevando a cabo la tarea sin que el elemento mueste funcionamiento alguno. Por ejemplo si la carga está al 50% será de 0.5 el valor, en el caso de no especificar max.
 
 Puedes usar la propiedad CSS {{ cssxref("orient") }} permite especificar la orientacion de la barra de progreso (horizontal o vertical) con horizontal por defecto. La pseudo-clase {{ cssxref(":indeterminate") }} se puede utiliza para hacer que coincida con las barras de progreso indeterminadas.

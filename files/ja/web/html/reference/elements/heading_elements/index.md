@@ -10,7 +10,7 @@ l10n:
 
 **`<h1>`** ～ **`<h6>`** は [HTML](/ja/docs/Web/HTML) の要素で、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。既定では、すべての見出し要素は[ブロックレベル](/ja/docs/Glossary/Block-level_content)ボックスを作成し、改行して始まり、その包含ブロックの中で利用できる幅いっぱいに広がります。
 
-{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;h1-h6&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <h1>Beetles</h1>
@@ -136,24 +136,19 @@ h4 {
 見出しはページのコンテンツの構造を反映して、節として入れ子になることがあります。多くのスクリーンリーダーはページのすべての見出しの順序付きリストを生成し、利用者がコンテンツの階層構造を手早く特定することもできます。
 
 1. `h1` Beetles
-
    1. `h2` Etymology
    2. `h2` Distribution and Diversity
    3. `h2` Evolution
-
       1. `h3` Late Paleozoic
       2. `h3` Jurassic
       3. `h3` Cretaceous
       4. `h3` Cenozoic
 
    4. `h2` External Morphology
-
       1. `h3` Head
-
          1. `h4` Mouthparts
 
       2. `h3` Thorax
-
          1. `h4` Prothorax
          2. `h4` Pterothorax
 

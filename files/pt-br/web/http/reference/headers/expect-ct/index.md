@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expect-CT
 original_slug: Web/HTTP/Headers/Expect-CT
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho `Expect-CT` deixa sites optarem em reportar e/ou forçar requirimentos do [Certificado de Transparência](/pt-BR/docs/Web/Security/Certificate_Transparency), para previnir o uso incorreto de certificados do site passar despercebido.
 
 Os requerimentos do CT podem ser satisfeitos utilizando qualquer um dos seguintes mecanismos:
@@ -46,19 +44,16 @@ Expect-CT: report-uri="<uri>",
 ## Diretivas
 
 - `max-age`
-
   - : O número de segundos depois da recepção do cabeçalho `Expect-CT` durante o qual o agente de usuário deve identificar o hospedeiro da mensagem recebida como um hospedeiro `Expect-CT` conhecido.
 
     Se o cache receber um valor maior do que ele pode representar, or se qualquer um dos seus cálculos subsequentes estourar o limite, o cache vai considerar este valor a ser 2,147,483,648 (231) ou o maior inteiro positivo que ele pode representar.
 
 - `report-uri="<uri>"` {{optional_inline}}
-
   - : A URI onde o agente de usuário deve reportar falhas `Expect-CT`.
 
     Quando presente com a diretiva `enforce`, a configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário que ambos o _compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.
 
 - `enforce` {{optional_inline}}
-
   - : Sinais ao agente do usuário que conforme a política do Certificado de Transparência deve ser executada (ao invés de somente ser reportada) e o agente de usuário deve recusar futuras conexões que violem a política do Certificado de Transparência.
 
     Quando ambas as diretivas `enforce` e `report-uri` estiverem presentes, configuração é referida como uma configuração "executar-e-reportar", sinalizando ao agente de usuário que ambos o _compliance_ da política do Certificado de Transparência deve ser executado _e_ que as violações devem ser reportadas.

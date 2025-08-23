@@ -3,8 +3,6 @@ title: Firefox 47 for developers
 slug: Mozilla/Firefox/Releases/47
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 47 は、米国時間 2016 年 6 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 47 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -14,7 +12,6 @@ Firefox 47 は、米国時間 2016 年 6 月 7 日にリリースされました
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で [ユーザーエージェントをスプーフィング](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) する
 - メモリーツールの [Retaining paths パネル](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html#retaining_paths_panel)
 - [Service Worker](/ja/docs/Web/API/ServiceWorker) と [Push API](/ja/docs/Web/API/Push_API) のデバッグ
-
   - Worker 用の [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) ダッシュボード
   - キャッシュされたリクエストを [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で表示
   - [キャッシュストレージ](/ja/docs/Web/API/Cache) を [ストレージインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) でサポート
@@ -39,7 +36,6 @@ _変更なし。_
 - CSS Mask Image プロパティを実験的に実装しました。現在は Nightly 版の Firefox のみで使用できます。{{cssxref("mask-repeat")}}、{{cssxref("mask-position")}}、{{cssxref("mask-size")}}、およびショートハンドの {{cssxref("mask")}} を使用できます ([Firefox バグ 686281](https://bugzil.la/686281))。
 - HTML 要素において、{{cssxref("clip-path")}} プロパティで `polygon()`, `ellipse()`, `circle()` を実験的にサポートしました ([inset()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246762) および [path()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246764) はサポートしていません)。設定項目 `layout.css.clip-path-shapes.enabled` で制御しており、既定値は `false` です ([Firefox バグ 1075457](https://bugzil.la/1075457))。値の変更は (従ってアニメーションも) 未サポートです。
 - CSS Grid の実験的な実装を更新しました:
-
   - グリッドコンテナーで、{{cssxref("align-content")}}`: normal` は `stretch` と同じ動作になりました ([Firefox バグ 1237754](https://bugzil.la/1237754))。
   - {{cssxref('grid')}}、{{cssxref('grid-template')}}、{{cssxref('grid-gap')}} プロパティで、列と行の値の順序を入れ替えました ([Firefox バグ 1251999](https://bugzil.la/1251999))。
 

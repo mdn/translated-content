@@ -15,7 +15,7 @@ l10n:
 
 - [Async Clipboard API](/ko/docs/Web/API/Clipboard)
 - [Background Sync](https://wicg.github.io/BackgroundSync/spec/) (예시로 {{domxref("SyncManager")}}를 보세요.)
-- [`Cache-Control: immutable`](/ko/docs/Web/HTTP/Headers/Cache-Control)
+- [`Cache-Control: immutable`](/ko/docs/Web/HTTP/Reference/Headers/Cache-Control)
 - [Credential Management API](/ko/docs/Web/API/Credential_Management_API)
 - [Device Orientation / Device Motion](/ko/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
 - [EyeDropper API](/ko/docs/Web/API/EyeDropper)

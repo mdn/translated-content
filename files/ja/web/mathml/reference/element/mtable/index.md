@@ -15,10 +15,8 @@ MathML の `<mtable>` 要素は表や行列を作るのに使えます。`<mtabl
 この要素の属性には[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)があります。一部のブラウザーは以下の属性にも対応していることがあります。
 
 - `align` {{Non-standard_Inline}}
-
   - : 環境に対する表の**垂直**の配置を指定します。
     使用可能な値は以下の通りです。
-
     - `axis` （既定値）: 表の垂直方向の中心が環境の軸（通常はマイナス記号）に配置される。
     - `baseline`: 表の垂直方向の中心が、環境のベースライン上に配置されます。
     - `bottom`: 表の下端が、環境のベースライン上に配置されます。
@@ -46,7 +44,8 @@ MathML の `<mtable>` 要素は表や行列を作るのに使えます。`<mtabl
 - `width` {{Non-standard_Inline}}
   - : 表全体の幅を示す [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) を指定します。
 
-> **メモ:** `width` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
+> [!NOTE]
+> `width` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
 
 ## 例
 

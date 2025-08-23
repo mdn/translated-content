@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f47d71927e4dc46f3aabde0a56c7f940da988d9f
 ---
 
-{{HTMLSidebar}}
-
 **`<slot>`** [HTML](/zh-CN/docs/Web/HTML) 元素是——[Web 组件](/zh-CN/docs/Web/API/Web_components)技术套件的一部分——它是一个在 web 组件内部的占位符，你可以使用自己的标记来填充该占位符，从而创建单独的 DOM 树并将其一起呈现。
 
 ## 属性
@@ -14,7 +12,6 @@ l10n:
 此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `name`
-
   - : 插槽名称。
 
     **具名插槽**是具有 `name` 属性的 `<slot>` 元素。

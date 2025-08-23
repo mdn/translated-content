@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/void
 
 **`void` 演算子**は与えられた式 (`expression`) を評価し、{{jsxref("undefined")}} を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - void operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - void operator")}}
 
 ```js interactive-example
 const output = void 1;
@@ -80,7 +80,8 @@ void (function iife() {
 </a>
 ```
 
-> **メモ:** `javascript:` 擬似プロトコルは控えめなイベントハンドラーなどの代替であり、積極的に使用するべきではないでしょう。
+> [!NOTE]
+> `javascript:` 擬似プロトコルは控えめなイベントハンドラーなどの代替であり、積極的に使用するべきではないでしょう。
 
 ### アロー関数からのリーク防止
 

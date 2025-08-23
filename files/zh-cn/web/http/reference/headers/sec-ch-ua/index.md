@@ -3,7 +3,7 @@ title: Sec-CH-UA
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
+{{SeeCompatTable}} {{securecontext_header}}
 
 **`Sec-CH-UA`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)请求标头（header）提供用户代理的品牌（brand）和重要的版本信息。
 
@@ -31,7 +31,8 @@ _significant version_ 是`市场`版本标识符，用于区分品牌的主要�
 
 标头可以包含任何位置和任何名称的“假冒”品牌。此功能旨在防止服务器直接拒绝未知的用户代理，迫使用户代理在品牌标识上撒谎。
 
-> **备注：** {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} 与 **`Sec-CH-UA`** 相同，但前者包含完整版本号，而不是每个品牌的重要版本号。
+> [!NOTE]
+> {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} 与 **`Sec-CH-UA`** 相同，但前者包含完整版本号，而不是每个品牌的重要版本号。
 
 ## 语法
 

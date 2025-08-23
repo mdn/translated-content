@@ -3,8 +3,6 @@ title: <h1>–<h6>：HTML 章節標題元素
 slug: Web/HTML/Reference/Elements/Heading_Elements
 ---
 
-{{HTMLSidebar}}
-
 **`<h1>`** 到 **`<h6>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表六個級別的章節標題。`<h1>` 是最高的章節級別，`<h6>` 是最低的。默認情況下，所有標題元素在佈局中創建一個[區塊級](/zh-TW/docs/Glossary/Block-level_content)區域，從新行開始並佔據其包含區塊中可用的全部寬度。
 
 {{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
@@ -133,24 +131,19 @@ h4 {
 標題可以嵌套為子節以反映頁面內容的組織結構。大多數螢幕閱讀器也可以生成頁面上所有標題的有序列表，這可以幫助人們快速確定內容的層次結構：
 
 1. `h1` 甲蟲
-
    1. `h2` 語源
    2. `h2` 分佈與多樣性
    3. `h2` 進化
-
       1. `h3` 晚古生代
       2. `h3` 侏羅紀
       3. `h3` 白堊紀
       4. `h3` 新生代
 
    4. `h2` 外部形態
-
       1. `h3` 頭部
-
          1. `h4` 口器
 
       2. `h3` 胸部
-
          1. `h4` 前胸
          2. `h4` 中胸
 

@@ -10,7 +10,7 @@ l10n:
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
 
-{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;video&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <video controls width="250">
@@ -35,7 +35,6 @@ l10n:
 他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に対応しています。
 
 - `autoplay`
-
   - : 論理属性です。この属性が指定された場合、データの読み込みが完了し、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
     > [!NOTE]
@@ -46,7 +45,6 @@ l10n:
 - `controls`
   - : この属性が指定された場合、再生、音量、シーク、ポーズの各機能を制御するコントロールを表示します。
 - `controlslist`
-
   - : [`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性が指定されていると、ブラウザー自身のコントロールのセットを表示する場合（例えば `controls` 属性が設定されている場合）、`video` 要素に表示するコントロールを選択するのを補助します。
 
     指定できる値は `nodownload`, `nofullscreen`, `noremoteplayback` です。
@@ -54,9 +52,7 @@ l10n:
     [`disablepictureinpicture`](#disablepictureinpicture) 属性を使用すると、ピクチャインピクチャモード（およびコントロール）を無効にすることができます。
 
 - [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
-
   - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、関連画像を取得する際に CORS を使用するかどうかを示します。 [CORS が有効なリソース](/ja/docs/Web/HTML/How_to/CORS_enabled_image)は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用することができます。許可される値は次の通りです。
-
     - `anonymous`
       - : 資格情報なしでオリジン間リクエストを実行します。すなわち、 `Origin:` HTTP ヘッダーを送信する際に、 Cookie や X.509 証明書を送信したり、 HTTP ベーシック認証を行ったりしません。サーバーが元のサイトに資格情報を付与しない場合 (`Access-Control-Allow-Origin:` HTTP ヘッダーの設定なし)、リソースが*汚染*され、その使用が制限されます。
     - `use-credentials`
@@ -67,7 +63,6 @@ l10n:
 - `disablepictureinpicture`
   - : ブラウザーにピクチャインピクチャのコンテキストメニューを表示させないようにしたり、場合によっては自動的にピクチャインピクチャを要求しないようにします。
 - `disableremoteplayback`
-
   - : 論理属性で、有線（HDMI, DVI など）や無線（Miracast, Chromecast, DLNA, AirPlay など）を使用して接続された端末のリモート再生機能を無効にするために使用されます。
 
     Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
@@ -83,9 +78,7 @@ l10n:
 - `poster`
   - : 動画のダウンロード中に表示される画像の URL です。この属性が指定されない場合、最初のフレームが利用可能になるまで何も表示されず、その後、最初のフレームをポスターフレームとして表示します。
 - `preload`
-
   - : {{Glossary("enumerated", "列挙型")}}の属性で、動画が再生される前に、どのコンテンツを読み込むとユーザーに最高の使い勝手をもたらすかについての作者の考えを、ブラウザーに対するヒントとしてを提供するためのものです。以下の値のうちひとつを持つことができます。
-
     - `none`: 動画を事前に読み込むべきではないことを示します。
     - `metadata`: 動画のメタデータ (例えば、長さ) を読み込みます。
     - `auto`: ユーザーが動画ファイルを使用しないと思われる場合でも、ファイル全体をダウンロードしてよいことを示します。
@@ -529,7 +522,6 @@ AddType video/webm .webm
 ## 関連情報
 
 - [ウェブ上のメディア種別と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
-
   - [メディアコンテナー形式（ファイル形式）](/ja/docs/Web/Media/Guides/Formats/Containers)
   - [ウェブの動画コーデックガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)
   - [ウェブの音声コーデックガイド](/ja/docs/Web/Media/Formats/Audio_codecs)

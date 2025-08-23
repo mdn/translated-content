@@ -3,8 +3,6 @@ title: Firefox 3.5 pour les développeurs
 slug: Mozilla/Firefox/Releases/3.5
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'une gestion améliorée d'une grande variété de standards du Web. Cet article en fournit une longue liste, avec des liens vers des articles décrivant les améliorations majeures.
 
 ## Nouvelles fonctionnalités pour les développeurs dans Firefox 3.5
@@ -49,7 +47,6 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
   {{ cssxref("-moz-column-rule-style") }}
 
   {{ cssxref("-moz-column-rule-color") }}
-
   - : La gestion de ces extensions à CSS de Mozilla a été ajoutée dans Firefox 3.5.
 
 - La {{ cssxref("valeur_de_couleur#Extensions_spécifiques_à_Mozilla","-moz-nativehyperlinktext") }}
@@ -73,7 +70,6 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
   {{ cssxref(":last-of-type") }}
 
   {{ cssxref(":only-of-type") }}
-
   - : Ces sélecteurs sont nouvellement gérés dans Firefox 3.5
 
 #### Nouvelles fonctionnalités DOM

@@ -3,8 +3,6 @@ title: <th>
 slug: Web/HTML/Reference/Elements/th
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<th>` 元素**定义表格内的表头单元格。这部分特征是由 [`scope`](#scope) 和 [`headers`](#headers) 属性准确定义的。
 
 {{InteractiveExample("HTML Demo: &lt;th&gt;", "tabbed-taller")}}
@@ -88,9 +86,7 @@ caption {
 - `rowspan`
   - : 一个非负整数值，指示表头单元格跨越或扩展多少行。默认值为 `1`。如果该值被设置为 `0`，这个单元格就被扩展到 `<th>` 所属的表格分组部分（{{HTMLElement("thead")}}、{{HTMLElement("tbody")}} 或 {{HTMLElement("tfoot")}}）的最后一个单元。比 `65534` 大的值被会被裁剪到 `65534`。
 - `scope`
-
   - : 定义了表头元素（在 `<th>` 中定义）关联的单元格。可能的{{Glossary("enumerated", "枚举")}}值如下：
-
     - `row`：表头关联所属的行中所有的单元格。
     - `col`：表头关联所属的列中所有的单元格。
     - `rowgroup`：表头属于一个行组并与其中所有单元格相关联。

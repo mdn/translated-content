@@ -130,13 +130,11 @@ Django hace un gran trabajo al crear un sitio de administración básico usando 
 Posteriormente puedes personalizar la interfaz para hacerla incluso más fácil de usar. Algunas de las cosas que puedes hacer son:
 
 - Vistas de lista:
-
   - Añadir campos e información adicional desplegada para cada registro.
   - Añadir filtros para seleccionar qué registros se listan, basados en fechas u otros tipos de valores (ej. estado de préstamo del libro).
   - Añadir opciones adicionales al menú _Action_ en las vistas de lista y elegir en qué lugar del formulario se despliega este menú.
 
 - Vistas de detalle:
-
   - Elegir qué campos desplegar (o excluir), junto con su orden, agrupamiento, si son editables, el tipo de control a usarse, orientación, etc.
   - Añadir campos relacionados a un registro para permitir la edición en cadena (ej. proveer la capacidad de añadir y editar registros de libros mientras estás creando su registro de autor).
 

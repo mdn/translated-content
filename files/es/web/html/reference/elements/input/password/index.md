@@ -62,9 +62,7 @@ Además de los atributos listados abajo, este elemento puede tener cualquier [gl
 - `defaultvalue`
   - : Define un valor predeterminado en el campo de la contraseña.
 - `inputmode`
-
   - : Le da proporciona información al buscador sobre que teclado mostrar. Los valores posibles son:
-
     - `verbatim`: Alfanumérico, contenido no verbla tales como usuarios y contraseñas.
     - `latin`: Introducción de texto en el lenguaje preferido del usuario con ayudas de escritura, como predicción de texto. Se usa para comunicación de usuario a ordenador en, por ejemplo, campos de búsqueda.
     - `latin-name`: Como _latin_, pero para nombres de personas.

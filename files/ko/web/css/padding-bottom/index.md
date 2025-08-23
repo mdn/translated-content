@@ -82,7 +82,7 @@ padding-bottom: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 여백의 크기로 고정값 사용.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) **너비**의 백분율 사용.
+  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) **너비**의 백분율 사용.
 
 ### 형식 구문
 
