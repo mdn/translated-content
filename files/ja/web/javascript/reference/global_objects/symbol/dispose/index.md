@@ -13,9 +13,10 @@ l10n:
 
 {{js_property_attributes(0, 0, 0)}}
 
-## Description
+## 解説
 
 An object is disposable if it has the `[Symbol.dispose]()` method. The method is expected to have the following semantics:
+処分可能な（disposable）オブジェクトとは、 `[Symbol.dispose]()` メソッドを備えたオブジェクトです。このメソッドは、以下のようなセマンティクスを持つことが期待されます:
 
 - Invoking this method notifies the Disposable object that the caller does not intend to continue to use this object. This method should perform any necessary logic to explicit clean up the resource including, but not limited to, file system handles, streams, host objects, etc.
 - When an exception is thrown from this method, it typically means that the resource could not be explicitly freed.
