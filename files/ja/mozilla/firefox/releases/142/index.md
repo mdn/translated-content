@@ -20,8 +20,7 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 ### CSS
 
 - {{cssxref("@scope")}} の内部の [`&` セレクター](/ja/docs/Web/CSS/Nesting_selector) が、[スコープ開始セレクターの詳細度](/ja/docs/Web/CSS/@scope#scope_の詳細度) を継承しないようになりました。
-  これにより `@scope` の内部の `&` セレクターは [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) との一貫性が保たれて、予期せぬ詳細度の違いを避けられます ([CSS 入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) をご覧ください) 
-  ([Firefox bug 1975531](https://bugzil.la/1975531))。
+  これにより `@scope` の内部の `&` セレクターは [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) との一貫性が保たれて、予期せぬ詳細度の違いを避けられます ([CSS 入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) をご覧ください) ([Firefox bug 1975531](https://bugzil.la/1975531))。
 
 ### JavaScript
 
@@ -40,16 +39,14 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 - {{domxref("Animation.commitStyles()")}} メソッドで、アニメーション終了後の計算済みスタイルをコミットするために、アニメーションに [`fill`](/ja/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) を設定する必要がなくなりました。ほかのブラウザーもこの変更をサポートするまで、`fill` を設定し続けるべきであることに注意してください ([Firefox bug 1973203](https://bugzil.la/1973203))。
 - [Prioritized Task Scheduling API](/ja/docs/Web/API/Prioritized_Task_Scheduling_API) をサポートしました。アプリケーションのタスクの優先度を割り当ておよび管理するための標準化された方法を提供します。
   サポートしたインターフェイスは {{domxref("Scheduler")}}、{{domxref("TaskController")}}、{{domxref("TaskSignal")}}、{{domxref("TaskPriorityChangeEvent")}} (および {{domxref("TaskSignal/prioritychange_event","prioritychange")}} イベント) です。また、{{domxref("Window.scheduler")}} および {{domxref("WorkerGlobalScope.scheduler")}} プロパティをサポートしました。
-  {{domxref("Scheduling")}} インターフェイスと {{domxref("Navigator.scheduling")}} プロパティは未サポートです 
-  ([Firefox bug 1966997](https://bugzil.la/1966997))。
+  {{domxref("Scheduling")}} インターフェイスと {{domxref("Navigator.scheduling")}} プロパティは未サポートです ([Firefox bug 1966997](https://bugzil.la/1966997))。
 
 #### Media、WebRTC、Web Audio
 
 - {{domxref("RTCIceCandidatePairStats")}} ディクショナリーの {{domxref("RTCIceCandidatePairStats/currentRoundTripTime", "currentRoundTripTime")}}、{{domxref("RTCIceCandidatePairStats/totalRoundTripTime", "totalRoundTripTime")}}、{{domxref("RTCIceCandidatePairStats/responsesReceived", "responsesReceived")}} プロパティをサポートしました。これらは現在のラウンドトリップタイム (RTT) や、接続の平均 RTT を計算するために必要な情報を返します 
   ([Firefox bug 1371391](https://bugzil.la/1371391))。
 - {{domxref("RTCRtpSender")}} インターフェイスの {{domxref("RTCRtpSender.setParameters()","setParameters()")}} および {{domxref("RTCRtpSender.getParameters()","getParameters()")}} メソッドで、それぞれの `encoding` で使用する特定の [`コーデック`](/ja/docs/Web/API/RTCRtpSender/setParameters#codecs) の設定および取得をサポートしました。
-  また、{{domxref("RTCPeerConnection")}} インターフェイスの {{domxref("RTCPeerConnection/addTransceiver","addTransceiver()")}} メソッドに渡す [`init.sendEncodings`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) 配列に、それぞれのエンコード用の `codec` を設定可能になりました 
-  ([Firefox bug 1894137](https://bugzil.la/1894137))。
+  また、{{domxref("RTCPeerConnection")}} インターフェイスの {{domxref("RTCPeerConnection/addTransceiver","addTransceiver()")}} メソッドに渡す [`init.sendEncodings`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) 配列に、それぞれのエンコード用の `codec` を設定可能になりました ([Firefox bug 1894137](https://bugzil.la/1894137))。
 - {{domxref("RTCInboundRtpStreamStats")}} インターフェイスの {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}、{{domxref("RTCInboundRtpStreamStats.framesAssembledFromMultiplePackets", "framesAssembledFromMultiplePackets")}}、{{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}}、{{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}}、{{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferTargetDelay")}}、{{domxref("RTCInboundRtpStreamStats.keyFramesDecoded", "keyFramesDecoded")}}、{{domxref("RTCInboundRtpStreamStats.pauseCount", "pauseCount")}}、{{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}、{{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}}、{{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}} プロパティをサポートしました ([Firefox bug 1926622](https://bugzil.la/1926622))。
 
 ### WebDriver への適合 (WebDriver BiDi, Marionette)
@@ -92,13 +89,11 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 
 - スクリプト向けの **`Integrity-Policy` および `Integrity-Policy-Report-Only`** (Nightly): `security.integrity_policy.enabled`
 
-  {{httpheader("Integrity-Policy")}} および {{httpheader("Integrity-Policy-Report-Only")}} HTTP ヘッダーを、スクリプトリソース向けにサポートしました。これらはそれぞれ、ウェブサイトがスクリプトの [サブリソース完全性の保証](/ja/docs/Web/Security/Subresource_Integrity) を強制する、またはポリシー違反の報告のみ行うことができます 
-  ([Firefox bug 1976656](https://bugzil.la/1976656))。
+  {{httpheader("Integrity-Policy")}} および {{httpheader("Integrity-Policy-Report-Only")}} HTTP ヘッダーを、スクリプトリソース向けにサポートしました。これらはそれぞれ、ウェブサイトがスクリプトの [サブリソース完全性の保証](/ja/docs/Web/Security/Subresource_Integrity) を強制する、またはポリシー違反の報告のみ行うことができます ([Firefox bug 1976656](https://bugzil.la/1976656))。
 
 - スタイルシート向けの **`Integrity-Policy` および `Integrity-Policy-Report-Only`** : `security.integrity_policy.stylesheet.enabled`
 
-  {{httpheader("Integrity-Policy")}} および {{httpheader("Integrity-Policy-Report-Only")}} HTTP ヘッダーを、スタイルシートリソース向けにサポートしました。これらはそれぞれ、ウェブサイトがサブリソース完全性の保証を強制する、またはポリシー違反の報告のみ行うことができます 
-  ([Firefox bug 1974247](https://bugzil.la/1974247))。
+  {{httpheader("Integrity-Policy")}} および {{httpheader("Integrity-Policy-Report-Only")}} HTTP ヘッダーを、スタイルシートリソース向けにサポートしました。これらはそれぞれ、ウェブサイトがサブリソース完全性の保証を強制する、またはポリシー違反の報告のみ行うことができます ([Firefox bug 1974247](https://bugzil.la/1974247))。
 
 以下の機能は Firefox 142 で導入しましたが、デフォルトで無効です。
 これらを実験するには、`about:config` ページで適切な設定項目を検索して `true` に設定してください。
