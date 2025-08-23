@@ -53,19 +53,19 @@ const resource = new Disposable();
 console.log(resource.isDisposed); // true
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - [Polyfill of `Symbol.dispose` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
-- [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- [JavaScript resource management](/ja/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Symbol.asyncDispose")}}
 - {{jsxref("Statements/using", "using")}}
-- [`DisposableStack.prototype[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose)
-- [`Iterator.prototype[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.dispose)
+- [`DisposableStack.prototype[Symbol.dispose]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose)
+- [`Iterator.prototype[Symbol.dispose]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.dispose)
