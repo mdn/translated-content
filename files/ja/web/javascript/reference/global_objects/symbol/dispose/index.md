@@ -18,7 +18,7 @@ l10n:
 An object is disposable if it has the `[Symbol.dispose]()` method. The method is expected to have the following semantics:
 処分可能な（disposable）オブジェクトとは、 `[Symbol.dispose]()` メソッドを備えたオブジェクトです。このメソッドは、以下のようなセマンティクスを持つことが期待されます:
 
-- Invoking this method notifies the Disposable object that the caller does not intend to continue to use this object. This method should perform any necessary logic to explicit clean up the resource including, but not limited to, file system handles, streams, host objects, etc.
+- このメソッドを呼び出すことで、呼び出し元がこのオブジェクトの使用を継続する意図がないことを、処分可能なオブジェクトに伝えます。このメソッドは、ファイルシステムハンドル、ストリーム、ホストオブジェクトなど、リソースを明示的にクリーンアップするために必要なロジックを実行する必要があります。
 - When an exception is thrown from this method, it typically means that the resource could not be explicitly freed.
 - If called more than once on the same object, the function should not throw an exception. However, this requirement is not enforced.
 
