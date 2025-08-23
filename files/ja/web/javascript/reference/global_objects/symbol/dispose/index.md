@@ -1,6 +1,6 @@
 ---
-title: Symbol.species
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
+title: Symbol.dispose
+slug: Web/JavaScript/Reference/Global_Objects/Symbol/dispose
 l10n:
   sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
