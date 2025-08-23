@@ -20,7 +20,7 @@ An object is disposable if it has the `[Symbol.dispose]()` method. The method is
 
 - このメソッドを呼び出すことで、呼び出し元がこのオブジェクトの使用を継続する意図がないことを、処分可能なオブジェクトに伝えます。このメソッドは、ファイルシステムハンドル、ストリーム、ホストオブジェクトなど、リソースを明示的にクリーンアップするために必要なロジックを実行する必要があります。
 - このメソッドが例外をスローした場合、通常はリソースを解放できなかったことを意味します。
-- If called more than once on the same object, the function should not throw an exception. However, this requirement is not enforced.
+- 同じオブジェクトにおいて複数回呼び出された場合でも、メソッドは例外をスローするべきではありません。ただし、この要件は強制ではありません。
 
 This method should not return a promise, as promises returned by `[Symbol.dispose]()` are not awaited by {{jsxref("Statements/await_using", "await using")}}. To declare async disposables, use {{jsxref("Symbol.asyncDispose")}}.
 
