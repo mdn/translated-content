@@ -10,7 +10,7 @@ l10n:
 
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;ol&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <ol>
@@ -40,9 +40,7 @@ li {
 - `start`
   - : 整数値を持つ属性で、リスト項目の序数の開始値を指定します。この値は、番号付けの種類が文字やローマ数字であっても、常にアラビア数字 (1, 2, 3, など) で指定します。例えば、 "d" の文字や "iv" のローマ数字から始める場合は、 `start="4"` を使用してください。
 - `type`
-
   - : 番号付けの種類を設定します。
-
     - `a` は、英小文字を示します
     - `A` は、英大文字を示します
     - `i` は、小文字のローマ数字を示します
@@ -192,18 +190,18 @@ li {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/List_role">list</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role">group</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role">menu</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role">none</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role">tablist</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role">tree</a></code>
       </td>
     </tr>
     <tr>
@@ -225,7 +223,6 @@ li {
 
 - 他のリスト関連の HTML 要素: {{HTMLElement("ul")}}、 {{HTMLElement("li")}}、 {{HTMLElement("menu")}}
 - `<ol>` 要素のスタイル付けに役立つ CSS プロパティ:
-
   - {{CSSxRef("list-style")}} プロパティは、序数の表示方法を選ぶのに便利です。
   - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)は、複雑な入れ子のリストを扱うのに便利です。
   - {{CSSxRef("line-height")}} プロパティは、非推奨の [`compact`](#compact) 属性をシミュレートするのに役立ちます。

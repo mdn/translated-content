@@ -49,7 +49,7 @@ Il est tout à fait possible de combiner des valeurs avec différentes unités d
 
 ```html
 <img
-  src="https://developer.mozilla.org/static/img/web-docs-sprite.svg"
+  src="/shared-assets/images/examples/web-docs-sprite.svg"
   alt="MDN Web Docs"
   class="logo" />
 ```

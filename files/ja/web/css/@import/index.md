@@ -2,10 +2,8 @@
 title: "@import"
 slug: Web/CSS/@import
 l10n:
-  sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
+  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
-
-{{CSSRef}}
 
 **`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。
 `@import` ルールはスタイルシートの最上位で、他のアットルール（[@charset](/ja/docs/Web/CSS/@charset) や [@layer](/ja/docs/Web/CSS/@layer)）やスタイル宣言の前に定義する必要があり、そうしなければ無視されます。
@@ -31,7 +29,7 @@ l10n:
 - _list-of-media-queries_
   - : [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)のカンマ区切りのリストで、リンクした URL で定義された CSS ルールを適用するためのメディアに依存した条件を指定します。ブラウザーが対応していないメディアクエリーの場合、リンクされたリソースは読み込まれません。
 - _layer-name_
-  - : リンクされたリソースのコンテンツがインポートされる[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の名前です。
+  - : リンクされたリソースのコンテンツがインポートされる[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の名前です。詳しくは [`layer()`](/ja/docs/Web/CSS/@import/layer_function) を参照してください。
 - _supports-condition_
   - : このスタイルシートをインポートするために、ブラウザーが対応している必要がある特性を示します。
     ブラウザーが _supports-condition_ で指定された条件に適合しない場合、リンクされたスタイルシートを取得しないことがあり、他にもパスを通してダウンロードしても読み込むことはできません。
@@ -102,8 +100,8 @@ l10n:
 ### 機能に対応していることを条件とした CSS ルールのインポート
 
 ```css
-@import url("gridy.css") supports(display: grid) screen and (max-width: 400px);
-@import url("flexy.css") supports((not (display: grid)) and (display: flex))
+@import url("grid.css") supports(display: grid) screen and (max-width: 400px);
+@import url("flex.css") supports((not (display: grid)) and (display: flex))
   screen and (max-width: 400px);
 ```
 

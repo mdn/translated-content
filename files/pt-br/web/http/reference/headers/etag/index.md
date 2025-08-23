@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/ETag
 original_slug: Web/HTTP/Headers/ETag
 ---
 
-{{HTTPSidebar}}
-
 O HTTP provê no cabeçalho (header) da resposta (response), a **`ETag`** que é um identificador para uma versão específica de um recurso. A ETag permite que o cache torne-se mais eficiente e preserve o tráfego de dados (largura de banda), assim um web server não precisa reenviar uma resposta com todos os dados que não tiveram nenhuma mudança em seu conteúdo. Além disso, as ETags ajudam a impedir que atualizações simultâneas de um recurso sejam feitas por outros. Veja sobre (["mid-air collisions"](#caching_of_unchanged_resources)).
 
 Se o recurso numa URL sofre mudança, a `Etag` assume um novo valor que deve ser gerado pelo Web Server. Uma comparação entre elas podem determinar se as duas representações do recurso são iguais. Etags são similares às nossas impressões digitais, e por isso também podem ser usadas por alguns servidores como um forma de rastreamento. Elas podem ser configuradas a fim de que possam ser persistidas idenfinidamente por um servidor de rastreamento.
@@ -33,7 +31,7 @@ ETag: "<etag_value>"
 ## Diretivas
 
 - `W/` {{optional_inline}}
-  - : `'W/'` (case-sensitive) Indica que um validador fraco está sendo usado (veja mais em [weak validator](/pt-BR/docs/Web/HTTP/Conditional_requests#Weak_validation)). _Etags Fracas_ são fáceis de serem geradas, mas possuem a desvantagem de serem menos usadas para comparações. _Validadores Fortes_ são ideais para comparações mas podem ser muito difíceis de serem gerados de uma forma eficaz. Os valores de uma Etag Fraca para duas representações de um único recurso podem ser equivalentes semanticamente, contudo não são idênticas em byte-for-byte. Isto significa que etags fracas impedem o cache efetivo quando requisições dentro de um intervalo de bytes são realizadas (veja mais em [byte range requests](/pt-BR/docs/Web/HTTP/Headers/Accept-Ranges) ), ao passo que etags fortes permitem que um intervalo de requisições aindam possam ser preservadas no cache.
+  - : `'W/'` (case-sensitive) Indica que um validador fraco está sendo usado (veja mais em [weak validator](/pt-BR/docs/Web/HTTP/Conditional_requests#Weak_validation)). _Etags Fracas_ são fáceis de serem geradas, mas possuem a desvantagem de serem menos usadas para comparações. _Validadores Fortes_ são ideais para comparações mas podem ser muito difíceis de serem gerados de uma forma eficaz. Os valores de uma Etag Fraca para duas representações de um único recurso podem ser equivalentes semanticamente, contudo não são idênticas em byte-for-byte. Isto significa que etags fracas impedem o cache efetivo quando requisições dentro de um intervalo de bytes são realizadas (veja mais em [byte range requests](/pt-BR/docs/Web/HTTP/Reference/Headers/Accept-Ranges) ), ao passo que etags fortes permitem que um intervalo de requisições aindam possam ser preservadas no cache.
 - "\<etag_value>"
   - : Tag na Entidade que possui valor único o qual está representando o recurso requisitado. O valor será do tipo string com caracteres em ASCII que será exibido dentro de aspas duplas, como pode se vê ao lado `"675af34563dc-tr34"`. O método por qual o valor da `ETag` foi gerado não está especificado. Frequentemente, uma hash do conteúdo, uma hash da última modificação ou somente um número de revisão é usado. Por exemplo o MDN usa uma hash hexadecimal para o conteúdo do artigo da wiki.
 

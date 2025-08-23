@@ -2,12 +2,10 @@
 title: CSS テキスト
 slug: Web/CSS/CSS_text
 l10n:
-  sourceCommit: 9a9907307112d53135fbf3863a316c8e7b8c1b55
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**CSS テキスト** (CSS Text) モジュールは、改行、文字揃え、配置、ホワイトスペースの扱い、テキスト変換などのテキスト操作の実行方法を定義します。
+**CSS テキスト** (CSS text) モジュールは、改行、文字揃え、配置、ホワイトスペースの扱い、テキスト変換などのテキスト操作の実行方法を定義します。
 
 ## リファレンス
 
@@ -40,7 +38,6 @@ l10n:
 ### ガイド
 
 - [テキストの分割と折り返し](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
-
   - : あふれたテキストを CSS で管理する、さまざまな方法についてのガイドです。
 
 ## 関連概念
@@ -79,3 +76,4 @@ l10n:
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
 - [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
 - [CSS ルビレイアウト](/ja/docs/Web/CSS/CSS_ruby_layout)モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration)モジュール

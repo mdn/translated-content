@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 现代 Web 浏览器提供了很多在用户电脑上存放数据的方法——只要用户的允许——然后在需要时检索数据。这样能让你存留的数据长时间保存，保存站点和文档在离线情况下使用，保留对站点的个性化配置等等。本篇文章只解释它们工作的一些很基础的部分。
@@ -683,7 +681,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-> **备注：** `sw.js` 文件的给定路径是相对于站点源的，而不是包含代码的 JavaScript 文件。service worker 在 `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。来源是 `https://mdn.github.io`，因此给定的路径必须是 `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。如果你想在自己的服务器上托管此示例，则必须相应地更改此示例。这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。
+> [!NOTE]
+> `sw.js` 文件的给定路径是相对于站点源的，而不是包含代码的 JavaScript 文件。service worker 在 `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。来源是 `https://mdn.github.io`，因此给定的路径必须是 `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`。如果你想在自己的服务器上托管此示例，则必须相应地更改此示例。这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。
 
 #### 安装 service worker
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14ce84d863643d7f729e497781bfd247add7d1ae
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 123 の変更点をまとめています。Firefox 123 は、米国時間 [2024 年 2 月 20 日](https://whattrainisitnow.com/release/?version=123) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -38,7 +36,7 @@ l10n:
 ### API
 
 - [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) で、クロスオリジンの資格情報作成をサポートしました。
-  特に、トップレベルで入れ子の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) で [`Feature-Policy: publickey-credentials-create`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) によって許可されていれば、入れ子の閲覧コンテキストで別のオリジンから [`navigator.credentials.create({publicKey})`](/ja/docs/Web/API/CredentialsContainer/create) を最上位のドキュメントへ呼び出せるようになりました。
+  特に、トップレベルで入れ子の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) で [`Permissions-Policy: publickey-credentials-create`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) によって許可されていれば、入れ子の閲覧コンテキストで別のオリジンから [`navigator.credentials.create({publicKey})`](/ja/docs/Web/API/CredentialsContainer/create) を最上位のドキュメントへ呼び出せるようになりました。
   ([Firefox bug 1870863](https://bugzil.la/1870863))
 
 #### DOM

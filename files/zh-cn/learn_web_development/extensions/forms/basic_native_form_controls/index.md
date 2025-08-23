@@ -3,7 +3,7 @@ title: 原生表单部件
 slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)中，我们标记了一个功能性的 web 表单示例，介绍了一些表单部件和常见的结构元素，并重点介绍了无障碍的最佳实践。现在，我们将详细研究不同表单部件的功能，查看了哪些选项可用于收集不同类型的数据。这个指南有些详尽，涵盖了所有可用的原生表单小部件。
 
@@ -45,7 +45,8 @@ slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 - 它们可以使用 [`size`](/zh-CN/docs/Web/HTML/Reference/Attributes/size)（框的物理尺寸）和 [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Attributes/maxlength)（可以输入的最大字符数）进行限制。
 - 如果浏览器支持的话，它们可以从拼写检查（使用 [`spellcheck`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/spellcheck) 属性）中获益。
 
-> **备注：** {{htmlelement("input")}} 元素是如此特别因为它可以通过简单设置 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性，来接收多种类型的数据。它被用于创建大多数类型的表单小部件，包括单行文本字段、没有文本输入的控件、时间和日期控件和按钮。
+> [!NOTE]
+> {{htmlelement("input")}} 元素是如此特别因为它可以通过简单设置 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性，来接收多种类型的数据。它被用于创建大多数类型的表单小部件，包括单行文本字段、没有文本输入的控件、时间和日期控件和按钮。
 
 ### 单行文本框
 
@@ -197,7 +198,8 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 �
 
 我们也可以使用 {{htmlelement("button")}} 元素。它也带有 `submit`、`reset` 和 `button` 这几个 `type` 属性，与 `<input>` 的三种按钮行为一致。它们之间的主要区别在于 `<button>` 元素更易于设置样式。
 
-> **备注：** `image` input 类型同样被渲染为一个按钮。我们将在后面提到。
+> [!NOTE]
+> `image` input 类型同样被渲染为一个按钮。我们将在后面提到。
 
 > [!NOTE]
 > 你可以在 Github 上看到 [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)）。
@@ -328,7 +330,7 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
 
 ## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls)。
 
 ## 总结
 

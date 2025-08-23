@@ -1,11 +1,9 @@
 ---
-title: style
+title: HTML style 全域屬性
 slug: Web/HTML/Reference/Global_attributes/style
 l10n:
-  sourceCommit: 476fb44932d56c0f50628a620348cd77f411b5ab
+  sourceCommit: 7885271e36e9d2744296c01f400653f63caa6f75
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`style`** [全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes) 包含要應用於此元素的 [CSS](/zh-TW/docs/Web/CSS) 樣式宣告。請注意，建議將樣式定義在單獨的檔案中。此屬性和 {{HTMLElement("style")}} 元素主要目的是允許快速設定樣式，例如用於測試目的。
 
@@ -14,8 +12,8 @@ l10n:
 ```html interactive-example
 <div style="background: #ffe7e8; border: 2px solid #e66465">
   <p style="margin: 15px; line-height: 1.5; text-align: center">
-    Well, I am the slime from your video<br />
-    Oozin' along on your livin' room floor.
+    嗯，我就是你影片裡的那坨爛泥<br />
+    慢慢地在你客廳地板上滑行著。
   </p>
 </div>
 ```

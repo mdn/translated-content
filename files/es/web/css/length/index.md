@@ -3,8 +3,6 @@ title: <length>
 slug: Web/CSS/length
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo de dato [CSS](/es/docs/Web/CSS) `<length>` denota medidas de distancia. Es un valor {{cssxref("&lt;number&gt;")}} seguido por una unidad de longitud (`px`, `em`, `pc`, `in`, `mm`, …). Al igual que en cualquier dimensión CSS, no debe haber espacio entre la unidad y el número. La unidad de longitud es opcional después del valor {{cssxref("&lt;number&gt;")}} `0`.
@@ -24,7 +22,6 @@ Los valores de tipo `<length>` pueden ser interpolados para permitir animaciones
 #### Longitudes relativas a la fuente
 
 - `em`
-
   - : Esta unidad representa el tamaño calculado de fuente ({{Cssxref("font-size")}}) del elemento. Si se usa dentro de la propiedad {{Cssxref("font-size")}}, representa el tamaño de fuente _heredado_ por el elemento.
 
     > [!NOTE]
@@ -35,7 +32,6 @@ Los valores de tipo `<length>` pueden ser interpolados para permitir animaciones
 - `ch`
   - : Esta unidad representa la anchura, o más precisamente, la medida de avance, del glifo '0' (cero, de caracter Unicode U+0030) en la fuente ({{Cssxref("font")}}) del elemento.
 - `rem`
-
   - : Esta unidad representa el tamaño ({{Cssxref("font-size")}}) del elemento raíz (p.ej. el tamaño de fuente del elemento {{HTMLElement("html")}}). Cuando se aplica a {{Cssxref("font-size")}} del elemento raíz, representa su valor inicial.
 
     > [!NOTE]

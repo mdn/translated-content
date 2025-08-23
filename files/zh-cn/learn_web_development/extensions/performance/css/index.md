@@ -3,7 +3,7 @@ title: CSS 性能优化
 slug: Learn_web_development/Extensions/Performance/CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
 当开发网站时，你需要考虑浏览器如何处理你网站上的 CSS。为了减轻 CSS 可能引起的性能问题，你应该对其进行优化。例如，你应该优化 CSS 以减少[阻塞渲染](/zh-CN/docs/Glossary/Render_blocking)并最小化所需的回流次数。本文将为你介绍关键的 CSS 性能优化技术。
 
@@ -159,7 +159,8 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
 浏览器可能会在元素实际发生变化之前进行优化设置。这类优化可以通过提前完成可能需要的大量工作，提高页面的响应速度。CSS 的 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 属性向浏览器提示元素预期的变化方式。
 
-> **备注：**`will-change` 应该作为处理现有的性能问题的最后一招。不应该用它来预测性能问题。
+> [!NOTE]
+> `will-change` 应该作为处理现有的性能问题的最后一招。不应该用它来预测性能问题。
 
 ```css
 .element {

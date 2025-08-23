@@ -3,8 +3,6 @@ title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 ---
 
-{{CSSRef}}
-
 CSS 属性 **`grid-auto-rows`** 用于指定隐式创建的行轨道大小。
 
 {{InteractiveExample("CSS Demo: grid-auto-rows")}}
@@ -109,7 +107,6 @@ grid-auto-rows: unset;
 - `<percentage>`
   - : 相对于网格窗口块尺寸的非负 {{cssxref("percentage", "&lt;percentage&gt;")}} 值。如果网格容器的块尺寸是不确定的，则百分比值将被视为 `auto`。
 - `<flex>`
-
   - : 非负的、以 `fr` 为单位的维度指定轨道的弹性因子。每个 `<flex>`-尺寸的轨道都按其弹性因子的比例挤占剩余空间的一部分。
 
     当使用在 `minmax()` 符号外时，意味着最小值为 `auto` (例： `minmax(auto, <flex>)`).
@@ -121,7 +118,6 @@ grid-auto-rows: unset;
 - `minmax(min, max)`
   - : 函数符号，定义一个不小于`min`且不大于`max`的尺寸范围。如果`max`比`min`小，则`max`会被忽略，函数会被录作`min`处理。作为最大值，`<flex>` 值设置了轨道的弹性因子。作为最小值，会被当作 0 处理（或者最小内容——当网格容器指定了尺寸为最小内容）。
 - `auto`
-
   - : 关键字，当用来指定最大值时与最大内容一致，当用来指定最小值时，它表示轨道中所有网格元素最小尺寸中的最大值（由{{cssxref("min-width")}}/{{cssxref("min-height")}}指定）。
 
     注意：`auto` 轨道尺寸（且仅有 `auto` 轨道尺寸）可配合{{cssxref("align-content")}} 和{{cssxref("justify-content")}} 属性使用。

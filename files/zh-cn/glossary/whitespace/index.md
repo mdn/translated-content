@@ -22,13 +22,11 @@ l10n:
 ## 参见
 
 - 维基百科的[空白字符](https://zh.wikipedia.org/wiki/空白字元)词条
-- [HTML、CSS、DOM 中如何处理空白字符](/zh-CN/docs/Web/API/Document_Object_Model/Whitespace)
+- [HTML、CSS、DOM 中如何处理空白字符](/zh-CN/docs/Web/CSS/CSS_text/Whitespace)
 - {{cssxref("white-space")}}
 - 规范
-
   - [ASCII 空白字符规范](https://infra.spec.whatwg.org/#ascii-whitespace)
   - [ECMAScript 语言规范](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 
 - [术语表](/zh-CN/docs/Glossary)
-
   1. {{Glossary("Character", "字符")}}

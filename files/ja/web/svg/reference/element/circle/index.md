@@ -1,12 +1,9 @@
 ---
 title: <circle>
 slug: Web/SVG/Reference/Element/circle
-original_slug: Web/SVG/Element/circle
 l10n:
-  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
-
-{{SVGRef}}
 
 **`<circle>`** は [SVG](/ja/docs/Web/SVG) の要素で、[SVG 基本図形](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)の一つであり、中心座標と半径を指定して円を描画します。
 
@@ -32,16 +29,16 @@ svg {
 
 - {{SVGAttr("cx")}}
   - : 円の中心の X 軸座標です。
-    _値の型_: **[\<length>](/ja/docs/Web/SVG/Guides/Content_type#length)**|**[\<percentage>](/ja/docs/Web/SVG/Guides/Content_type#percentage)** ; _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: **[\<length>](/ja/docs/Web/SVG/Guides/Content_type#length)** | **[\<percentage>](/ja/docs/Web/SVG/Guides/Content_type#percentage)**; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("cy")}}
   - : 円の中心の Y 軸座標です。
-    _値の型_: **[\<length>](/ja/docs/Web/SVG/Guides/Content_type#length)**|**[\<percentage>](/ja/docs/Web/SVG/Guides/Content_type#percentage)** ; _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: **[\<length>](/ja/docs/Web/SVG/Guides/Content_type#length)** | **[\<percentage>](/ja/docs/Web/SVG/Guides/Content_type#percentage)**; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("r")}}
   - : 円の半径。0 以下の値は円の描画が無効となります。
-    _値の型_: **[\<length>](/ja/docs/Web/SVG/Guides/Content_type#length)**|**[\<percentage>](/ja/docs/Web/SVG/Guides/Content_type#percentage)** ; _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: **[\<length>](/ja/docs/Web/SVG/Guides/Content_type#length)** | **[\<percentage>](/ja/docs/Web/SVG/Guides/Content_type#percentage)**; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("pathLength")}}
   - : 円の円周の長さの合計をユーザー単位で指定します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _なし_; _アニメーション_: **可**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: _なし_; _アニメーション_: **可**
 
 > [!NOTE]
 > SVG2 から `cx`, `cy`, `r` は幾何プロパティです。つまり、これらの属性はその要素の CSS プロパティとしても使用することができるということです。

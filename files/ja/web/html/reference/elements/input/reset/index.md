@@ -1,16 +1,15 @@
 ---
 title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
-original_slug: Web/HTML/Element/input/reset
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、既定の {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <form>
@@ -164,8 +163,8 @@ input[type="submit"] {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a> および
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -182,7 +181,7 @@ input[type="submit"] {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>

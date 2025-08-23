@@ -3,8 +3,6 @@ title: <custom-ident>
 slug: Web/CSS/custom-ident
 ---
 
-{{CSSRef}}
-
 **`<custom-ident>`** 指用户自定义字符串标识符。一种[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)；要区分大小写，值不能有任何歧义。
 
 ## 语法
@@ -31,13 +29,11 @@ slug: Web/CSS/custom-ident
 - {{cssxref("counter-reset")}}
 
   {{cssxref("counter-increment")}}
-
   - : 禁止使用`unset`, `initial`, `inherit`, `none`.
 
 - {{cssxref("@counter-style")}}
 
   {{cssxref("list-style-type")}}
-
   - : 禁止使用`unset`, `initial`, `inherit`, `none`, `inline`, `outside`. 同时不同浏览器预定义的值如：`disc`, `circle`, `square`, `decimal`, `cjk-decimal`, `decimal-leading-zero`, `lower-roman`, `upper-roman`, `lower-greek`, `lower-alpha`, `lower-latin`, `upper-alpha`, `upper-latin`, `arabic-indic`, `armenian`, `bengali`, `cambodian`, `cjk-earthly-branch`, `cjk-heavenly-stem`, `cjk-ideographic`, `devanagari`, `ethiopic-numeric`, `georgian`, `gujarati`, `gurmukhi`, `hebrew`, `hiragana`, `hiragana-iroha`, `japanese-formal`, `japanese-informal`, `kannada`, `katakana`, `katakana-iroha`, `khmer`, `korean-hangul-formal`, `korean-hanja-formal`, `korean-hanja-informal`, `lao`, `lower-armenian`, `malayalam`, `mongolian`, `myanmar`, `oriya`, `persian`, `simp-chinese-formal`, `simp-chinese-informal`, `tamil`, `telugu`, `thai`, `tibetan`, `trad-chinese-formal`, `trad-chinese-informal`, `upper-armenian`, `disclosure-open`, 和 `disclosure-close`也不能使用。
 
 - {{cssxref("grid-row-start")}}

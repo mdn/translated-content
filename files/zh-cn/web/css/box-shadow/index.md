@@ -3,8 +3,6 @@ title: box-shadow
 slug: Web/CSS/box-shadow
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`box-shadow`** 属性用于在元素的框架上添加阴影效果。你可以在同一个元素上设置多个阴影效果，并用逗号将他们分隔开。该属性可设置的值包括阴影的 X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色。
 
 {{InteractiveExample("CSS Demo: box-shadow")}}
@@ -82,7 +80,6 @@ box-shadow: unset;
 向元素添加单个 box-shadow 效果时使用以下规则：
 
 - 当给出两个、三个或四个 [`<length>`](/zh-CN/docs/Web/CSS/length)值时。
-
   - 如果只给出两个值，那么这两个值将会被当作 `<offset-x><offset-y>` 来解释。
   - 如果给出了第三个值，那么第三个值将会被当作`<blur-radius>`解释。
   - 如果给出了第四个值，那么第四个值将会被当作`<spread-radius>`来解释。

@@ -3,8 +3,6 @@ title: font-palette
 slug: Web/CSS/font-palette
 ---
 
-{{CSSRef}}
-
 **`font-palette`** [CSS](/zh-CN/docs/Web/CSS) 属性允许用户代理指定某个字体所包含众多调色板中的其中一个。用户还可以通过使用 [@font-palette-values](/zh-CN/docs/Web/CSS/@font-palette-values) @ 规则来覆盖调色板中的值或创建一个新的调色板。
 
 ## 语法

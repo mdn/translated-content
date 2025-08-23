@@ -3,7 +3,7 @@ title: HTML 性能优化
 slug: Learn_web_development/Extensions/Performance/HTML
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
 
 HTML 默认情况下快速且易于访问。作为开发者，我们的工作是在创建或编辑 HTML 代码时确保保持这两个特性。例如当嵌入的 {{htmlelement("video")}} 文件大小过大，或者 JavaScript 解析阻塞了关键页面元素的渲染时，情况可能会比较复杂。本文将引导你了解关键的 HTML 性能特性，以大幅提高网页质量。
 

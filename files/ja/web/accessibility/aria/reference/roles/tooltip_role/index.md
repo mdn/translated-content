@@ -24,9 +24,9 @@ ARIA `tooltip` ロールの使用は、通常のブラウザーのツールチ�
 
 `tooltip` ロールを持つ要素は、ツールチップが表示される前または表示されるときに [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を使用して参照する必要があります。 `aria-describedby` 属性はツールチップではなく、自分自身で要素に指定します。
 
-ツールチップは、自分自身の要素の [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) プロパティではポップアップとはみなされません。
+ツールチップは、自分自身の要素の [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) プロパティではポップアップとはみなされません。
 
-ツールチップは現れたり消えたりしますが、その出現は自動的に行われ、ユーザーが意図的に制御するものではないので、 [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) ロールは対応していません。
+ツールチップは現れたり消えたりしますが、その出現は自動的に行われ、ユーザーが意図的に制御するものではないので、 [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) ロールは対応していません。
 
 ツールチップのアクセシブル名は、コンテンツから決まります。理論的には、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) や [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) から使用することができますが、ほとんどの場合、アクセシブル名を持つツールチップを提供するために ARIA プロパティを使用することは推奨されません。
 

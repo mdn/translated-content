@@ -162,7 +162,8 @@ function handleSubmit(event) {
 
 React は、状態を部分に導入するための特別な関数を提供しており、その名前は `useState()` という名前が適切です。
 
-> **メモ:** `useState()` は、**フック**と呼ばれる特別なカテゴリーの関数に属し、それぞれを使用してコンポーネントに新しい機能を追加することができます。他にもフックはありますが、それについては後ほど学びます。
+> [!NOTE]
+> `useState()` は、**フック**と呼ばれる特別なカテゴリーの関数に属し、それぞれを使用してコンポーネントに新しい機能を追加することができます。他にもフックはありますが、それについては後ほど学びます。
 
 useState() を使用するには、 React モジュールからそれをインポートする必要があります。 `Form.jsx` ファイルの先頭に、 `Form()` 関数の定義の上に以下の行を追加します。
 
@@ -182,7 +183,7 @@ const [name, setName] = useState("Learn React");
 
 - `name` 定数を `"Learn React"` の名前で定義する。
 - `name` を変更する関数として `setName()` と名付けた関数を定義しています。
-- `useState()` はこれら 2 つのことを配列で返すので、[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して、どちらも別個の変数に取得します。
+- `useState()` はこれら 2 つのことを配列で返すので、[配列の構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して、どちらも別個の変数に取得します。
 
 ### 状態の読み取り
 

@@ -3,8 +3,6 @@ title: 挑战：创建精美的信纸
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
 
 如果你想给人留下好印象，把信写在一张精美的信纸上会是个不错的开始，在这个评估里我们希望你能创建一个在线模版来达到这样的效果。
@@ -27,7 +25,6 @@ slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 
 - 把 CSS 链接到 HTML 文档里。
 - 给信纸添加这样一个背景：
-
   - 把之前下载的顶部图片固定到信纸顶部。
   - 把之前下载的底部图片固定到信纸底部。
   - 为了给信纸一点纹理，在前面背景的基础上添加一个半透明的渐变，使其在顶部和底部附近稍微变暗，但中间的大部分完全透明。

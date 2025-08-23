@@ -64,7 +64,8 @@ JavaScript でよくある問題として、以下のようなものがありま
 
 - [非同期処理](/ja/docs/Learn_web_development/Extensions/Async_JS)が完了したことを確認してから、それが返す値を使用するようにします。これは通常、プロミスの使用方法を理解することを意味しています。 [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) を適切に使用するか、プロミスの {{jsxref("Promise.then()", "then()")}} ハンドラーで非同期呼び出しの結果を処理するコードを実行します。このトピックの初心者向け記事は、[プロミスの使用方法](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises)を参照してください。
 
-> **メモ:** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) には、これらのよくある間違いについての解説などがあります。
+> [!NOTE]
+> [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) には、これらのよくある間違いについての解説などがあります。
 
 ## ブラウザーの JavaScript コンソール
 

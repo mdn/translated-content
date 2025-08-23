@@ -3,8 +3,6 @@ title: 常見問題
 slug: Learn_web_development/Howto
 ---
 
-{{LearnSidebar}}
-
 學習專區的這個區塊被設計來為可能遇到的常見問題提供解答，這並非核心學習路線的必要途徑（譬如 [HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 或 [CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics) 的教學文章）。這些文章為獨立成群。
 
 ## Web 的運作方式

@@ -3,8 +3,6 @@ title: <summary>：摘要展现元素
 slug: Web/HTML/Reference/Elements/summary
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<summary>` 元素** 指定了 {{HTMLElement("details")}} 元素展开盒子的内容的摘要，标题或图例。点击 `<summary>` 元素可以切换父元素 `<details>` 开启和关闭的状态。
 
 {{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}

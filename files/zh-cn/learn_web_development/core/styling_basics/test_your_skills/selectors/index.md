@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 782d88782968782657abad748e20770229c6aab6
 ---
 
-{{LearnSidebar}}
-
 这个技能测试的目的是帮助你理解 [CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。
 
 > [!NOTE]

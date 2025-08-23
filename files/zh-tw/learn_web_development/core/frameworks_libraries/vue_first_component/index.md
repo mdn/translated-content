@@ -3,7 +3,7 @@ title: 建立第一個 Vue 元件
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在是時候來更深入了解 Vue ，以及建立我們自訂的元件——我們將從建立一個元件開始，這個元件代表待辦清單裡的每一個項目。在過程中，我們會學到一些重要的概念，例如在元件裡面調用其他元件，使用 props 傳遞資料，以及儲存它的狀態（ state ）。
 
@@ -147,12 +147,10 @@ export default {
 2. 在 `export default {}` 的物件中加入一個 `props` 屬性，值為一個空物件
 3. 在 `props` 物件中加入兩個屬性，分別是 `label` 和 `done`
 4. `label` 的值是一個物件帶有兩個屬性
-
    1. 第一個屬性是 `required`，它的值為 `true`。這會告訴 Vue 我們預期元件必須要接收到一個名為 `label` 的 prop。如果元件沒有接受到的話，Vue 會發出警告通知我們。
    2. 第二個屬性是 `type`，它的值為 `String`。這會告訴 Vue 我們預期 prop 的型別是一個字串。
 
 5. 接著是 `done` 這個 prop
-
    1. 首先設定 `default` 屬性為 `false`，意思是當元件沒有接收到 `done` 的時候，`done` 的初始值為 false（要注意只有在 prop 不是必需的時候才會設定初始值）
    2. 接著設定 `type` 這個屬性為 `Boolean`，這會告訴 Vue 我們預期 `done` 是一個布林值
 

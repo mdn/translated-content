@@ -1,19 +1,18 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Reference/Elements/input/week
-original_slug: Web/HTML/Element/input/week
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`week`** 型は、年と、その年の [ISO 8601 週番号](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) (つまり、第 1 週から第 [52 または 53](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) 週) を簡単に入力することができる入力欄を生成します。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="camp-week">Choose a week in May or June:</label>
+<label for="camp-week">5月か6月の週を選んでください:</label>
 
 <input
   type="week"
@@ -368,17 +367,17 @@ function populateWeeks() {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
         <code>valueAsDate</code>,
         <code>valueAsNumber</code>
       </td>

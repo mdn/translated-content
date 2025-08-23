@@ -84,7 +84,8 @@ l10n:
 
 ![恐竜の基本的な画像が、ブラウザーに埋め込まれ、その上に "Images in HTML" と書かれています](basic-image.png)
 
-> **メモ:** {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)を参照してください。
+> [!NOTE]
+> {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)を参照してください。
 
 > [!NOTE]
 > この節で仕上げた例は、 [Github で実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)ことができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)も参照してください）。
@@ -620,7 +621,7 @@ p {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML 画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML 画像](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images) を見てください。
 
 ## まとめ
 

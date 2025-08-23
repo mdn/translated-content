@@ -2,10 +2,8 @@
 title: 典型的 HTTP 會話
 slug: Web/HTTP/Guides/Session
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: cb8143261f5cd54788285574ab0c427ba3f01a04
 ---
-
-{{HTTPSidebar}}
 
 在用戶端—伺服器協定（例如 HTTP）中，會話由三個階段組成：
 
@@ -29,7 +27,6 @@ l10n:
 一旦建立了連接，使用者代理就可以發送請求（使用者代理通常是網頁瀏覽器，但也可以是其他任何東西，例如爬蟲）。用戶端請求由文本指令組成，用 CRLF（回車符，後跟換行符）分隔，分成三個塊：
 
 1. 第一行包含一個請求方法，後面跟著它的參數：
-
    - 文件的路徑，作為不帶協定或域名的絕對 URL
    - HTTP 協定版本
 
@@ -96,14 +93,14 @@ Vary: Accept-Encoding,Cookie
 Age: 7
 
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
-  <title>A simple webpage</title>
+  <title>基本網頁</title>
 </head>
 <body>
-  <h1>Simple HTML webpage</h1>
-  <p>Hello, world!</p>
+  <h1>基本 HTML 網頁</h1>
+  <p>哈囉，世界！</p>
 </body>
 </html>
 ```

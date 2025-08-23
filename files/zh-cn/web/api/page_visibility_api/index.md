@@ -36,7 +36,6 @@ slug: Web/API/Page_Visibility_API
 - 大多数浏览器会停止向后台标签页或隐藏的 {{ HTMLElement("iframe") }} 发送 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 回调，以提高性能和电池寿命。
 - 在后台或不活动标签页中，{{domxref("Window.setTimeout", "setTimeout()")}} 等计时器会被限流，以帮助提高性能。详情请参阅[延迟时间超过指定时间的原因](/zh-CN/docs/Web/API/Window/setTimeout#延时比指定值更长的原因)。
 - 浏览器实施基于预算的后台超时限流。现代浏览器的操作方式大同小异，具体细节如下：
-
   - 在 Firefox 中，后台标签页中的每个窗口都有自己的时间预算（以毫秒为单位），最大值和最小值分别为 +50 毫秒和 -150 毫秒。Chrome 浏览器与之非常相似，只是预算以秒为单位。
   - 窗口在 30 秒后会受到限流，限流延迟规则与为窗口定时器指定的规则相同（请再次参阅[延迟时间超过指定时间的原因](/zh-CN/docs/Web/API/Window/setTimeout#延时比指定值更长的原因)）。在 Chrome 浏览器中，该值为 10 秒。
   - 只有当预算为非负数时，才允许执行定时器任务。
@@ -58,9 +57,7 @@ slug: Web/API/Page_Visibility_API
 - {{domxref("Document.hidden")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : 如果页面处于隐藏状态，则返回 `true`，否则返回 `false`。
 - {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
-
   - : 说明文档当前可见性状态的字符串。可能的值有：
-
     - `visible`
       - : 页面内容至少部分可见。在实践中，这意味着页面是非最小化窗口的前景选项卡。
     - `hidden`

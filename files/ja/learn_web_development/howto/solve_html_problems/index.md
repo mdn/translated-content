@@ -28,7 +28,7 @@ HTML は文書の意味的な情報を提供することに特化しているの
 - [画像やグラフィックに注釈を付ける方法](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#図表と図表のキャプションで画像に注釈を付ける)
 - [略語をマークして理解しやすくする方法](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#略語)
 - [ウェブページに引用を追加する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#引用)
-- [HTML で用語を定義する方法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML)
+- [HTML で用語を定義する方法](/ja/docs/Web/HTML/How_to/Define_terms_with_HTML)
 
 ### ハイパーリンク
 
@@ -47,7 +47,7 @@ HTML を使用する主な理由の 1 つは、{{Glossary("Hyperlink", "ハイ�
 HTMLは文書構造を設定するだけです。表示に関する課題を解決するには、 {{glossary("CSS")}} を使用するか、スクリプトを使用してページを操作可能にしてください。
 
 - [ウェブページで CSS を使用する方法](/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started#文書に_css_を追加)
-- [ウェブページで JavaScript を使用する方法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage)
+- [ウェブページで JavaScript を使用する方法](/ja/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
 
 ### 埋め込みコンテンツ
 
@@ -74,7 +74,7 @@ HTMLは文書構造を設定するだけです。表示に関する課題を解�
 ### データ表現
 
 - 数値とコード値を HTML で表現する方法 - [上付き文字と下付き文字](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#上付きと下付き)、および[コンピューターのコードの表現](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#コンピューターのコードの表現)を参照してください。
-- [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [データ属性の使用](/ja/docs/Web/HTML/How_to/Use_data_attributes)
 
 ### 上級のテキスト意味づけ
 
@@ -85,7 +85,7 @@ HTMLは文書構造を設定するだけです。表示に関する課題を解�
 
 - [レスポンシブ画像をウェブページに追加する方法](/ja/docs/Web/HTML/Guides/Responsive_images)
 - [ウェブページにベクター画像を追加する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
-- [画像にヒットマップを追加する方法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
+- [画像にヒットマップを追加する方法](/ja/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
 
 ### 国際化
 
@@ -96,8 +96,8 @@ HTML は単一言語ではありません。一般的な国際化の問題を処
 
 ### パフォーマンス
 
-- [読み込みが速い HTML ページを作成する方法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [読み込みが速い HTML ページを作成する方法](/ja/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
 
 ## 関連情報
 
-- [HTML 早見表](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet)
+- [HTML 早見表](/ja/docs/Web/HTML/Guides/Cheatsheet)

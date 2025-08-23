@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
-
 **`border-left`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
 
-{{InteractiveExample("CSS Demo: border-left")}}
+{{InteractiveExample("CSS デモ: border-left")}}
 
 ```css interactive-example-choice
 border-left: solid;

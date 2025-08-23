@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Asynchronous
 
 ## Pre requisitos
 
-Javascript Assíncrono é um tópico razoavelmente avançado e é aconselhada a leitura dos módulos [Primeiros Passos com Javascript](/pt-BR/docs/Learn/JavaScript/First_steps) e [Elementos construtivos do Javascript](/pt-BR/docs/Learn/JavaScript/Building_blocks) antes de continuar.
+Javascript Assíncrono é um tópico razoavelmente avançado e é aconselhada a leitura dos módulos [Primeiros Passos com Javascript](/pt-BR/docs/Learn_web_development/Core/Scripting) e [Elementos construtivos do Javascript](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting) antes de continuar.
 
 Se você não estiver familiarizado com os conceitos de programação assíncrona, a sugestão é iniciar com o artigo [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing) desse módulo. Caso contrário, você pode provavelmente pular para o módulo [Introdução ao Javascript Assíncrono](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introdu%C3%A7%C3%A3o).
 
@@ -23,7 +23,7 @@ Se você não estiver familiarizado com os conceitos de programação assíncron
   - : Nesse artigo vamos recapitular brevemente os problemas associados ao Javascript síncrono e introduzir algumas das diferentes técnicas do Javascript assícrono que irá encontrar mais a frente, mostrando como essas técnicas podem nos ajudar a resolver tais problemas.
 - [Javascript assícrono cooperativo: Timeouts e intervalos](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
   - : Aqui contemplamos os métodos tradicionais que o Javascript possui disponível para executar código de forma assíncrona após decorrido um certo periodo de tempo ou em um intervalo regular (e.g. um determinado número de vezes por segundo), discutir sua utilidade e perceber alguns problemas inerentes a eles.
-- [Manipulando elegantemente operações assíncronas com Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Manipulando elegantemente operações assíncronas com Promises](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Promises)
   - : Promises são um novo recurso da linguagem Javascript que permitem adiar ações até que a ação anterior esteja concluída ou responder com falha. Isso é extremamente útil para montar uma sequência de operações para que funcione corretamente. Este artigo lhe orienta como as Promises funcionam, onde verá elas sendo utilizadas em [WebAPIs](/pt-BR/docs/Web/API). Também aprenderá como escrever suas próprias promises.
 - [Facilitando a programação assícrona com async e await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
   - : Promises podem ser um pouco complexas de construir e entender. Por esse motivo, os navegadores modernos implementado funções `async` e o operador `await`. O primeiro permite que funções padrão se comportem implicitamente de forma assíncrona com promises, enquanto que o último pode ser usado dentro de funções `async` para esperar por 'promessas' antes que a função continue. Isso faz com que o encadeamento de 'promessas' seja mais fácil de ler.

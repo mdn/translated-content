@@ -1,14 +1,11 @@
 ---
 title: 405 Method Not Allowed
 slug: Web/HTTP/Reference/Status/405
-original_slug: Web/HTTP/Status/405
 l10n:
-  sourceCommit: cb132bc83b660e51be8959de5336c00b08030104
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`405 Method Not Allowed`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、リクエストメソッドをサーバー側で認識しているが、対象のリソースでは対応していないことを示します。
+HTTP の **`405 Method Not Allowed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、リクエストメソッドをサーバー側で認識しているが、対象のリソースでは対応していないことを示します。
 サーバーは、対象のリソースで現在対応しているメソッドの一覧を含む {{HTTPHeader("Allow")}} ヘッダーフィールドを、 405 レスポンスの中で生成しなければなりません。
 
 ファイルやディレクトリーに正しくないサーバー側権限を設定すると、リクエストが成功するはずであるにもかかわらず、 405 レスポンスが発生する可能性があります。

@@ -10,7 +10,7 @@ l10n:
 
 **`<footer>`** は [HTML](/ja/docs/Web/HTML) の要素で、直近の[区分コンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements#区分コンテンツのラベル付け)要素のフッターを表します。フッターには通常、そのセクションの著者に関する情報、関連文書へのリンク、著作権情報等を含めます。
 
-{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;footer&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <article>
@@ -122,26 +122,26 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a>、ただし
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role">contentinfo</a>、ただし
         <a href="/ja/docs/Web/HTML/Element/article">article</a>,
         <a href="/ja/docs/Web/HTML/Element/aside">aside</a>,
         <a href="/ja/docs/Web/HTML/Element/main">main</a>,
         <a href="/ja/docs/Web/HTML/Element/nav">nav</a>,
         <a href="/ja/docs/Web/HTML/Element/section">section</a>
         のいずれかの要素、または
-        <code>role=<a href="/ja/docs/Web/Accessibility/ARIA/Roles/article_role">article</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code>
-        がある要素の子である場合は <a href="/ja/docs/Web/Accessibility/ARIA/Roles/generic_role">generic</a>
+        <code>role=<a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role">complementary</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role">main</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role">navigation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code>
+        がある要素の子である場合は <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a>
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

@@ -15,5 +15,5 @@ Os servidores mais comuns numa rede local são os de arquivos, nomes, emails, im
 
 ### Conhecimentos Gerais
 
-- [Introdução aos servidores](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [Introdução aos servidores](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [Servidor](https://pt.wikipedia.org/wiki/Servidor) na Wikipedia

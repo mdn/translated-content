@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Sec-Fetch-User`** は{{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}}で、これはユーザーアクティベーションによって開始されたリクエストに 対してのみ送られ、その値は常に `?1` です。
 
 サーバーはこのヘッダーを使用して、文書や iframe などからのナビゲーションリクエストがユーザーによって発信されたかどうかを識別できます。
@@ -19,7 +17,7 @@ l10n:
       <td>{{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい（<code>Sec-</code> 接頭辞）</td>
     </tr>
     <tr>
@@ -63,7 +61,6 @@ Sec-Fetch-User: ?1
 ## 関連情報
 
 - 関連ヘッダー
-
   - {{HTTPHeader("Sec-Fetch-Dest")}}
   - {{HTTPHeader("Sec-Fetch-Mode")}}
   - {{HTTPHeader("Sec-Fetch-Site")}}

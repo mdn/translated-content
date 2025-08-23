@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/in
 
 **`in` 演算子**は、指定されたプロパティが指定されたオブジェクトにある場合に `true` を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - in operator")}}
 
 ```js interactive-example
 const car = { make: "Honda", model: "Accord", year: 1998 };
@@ -33,7 +33,7 @@ prop in object;
 ### 引数
 
 - `prop`
-  - : プロパティ名または配列のインデックスを表す文字列式またはシンボルです（シンボルではない場合は、文字列に強制変換されます）。
+  - : プロパティ名または配列のインデックスを表す文字列式またはシンボルです（シンボルではない場合は、文字列に強制変換されます）。[プライベート要素の識別子](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)である場合もあります。
 - `object`
   - : オブジェクト（またはそのプロトタイプチェーン）に、指定された名前（`prop`）のプロパティが含まれているかどうかを確認するオブジェクト。
 
@@ -126,10 +126,10 @@ let empties = new Array(3).fill(undefined);
 
 ### プライベートフィールドとメソッド
 
-`in` 演算子を使用して、特定の[クラスのプライベートフィールドまたはメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)がクラスで定義されているかどうかを調べることができます。そのメソッドが存在すれば演算子は `true` を返し、そうでなければ `false` を返します。
+`in` 演算子を使用して、特定の[クラスのプライベートフィールドまたはメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)がクラスで定義されているかどうかを調べることができます。プロパティが定義されている場合、演算子は `true` を返し、そうでない場合は `false` を返します。これは、そのオブジェクトがそのクラスのコンストラクターで作成された場合にのみ `true` を返すため、「ブランドチェック」と呼ばれています。その後、他のプライベート要素にも安全にアクセスすることができます。
 
 > [!NOTE]
-> クラスの定義されていない*プライベート*フィールドやメソッドにアクセスしようとすると、コードで `throw` が発生します。存在しない可能性があるプライベートフィールドを `in` 演算子でチェックすると、 `try/catch` を使用するより簡潔にすることができます。
+> クラスの定義されていない*プライベート*フィールドやメソッドにアクセスしようとすると、コードで `throw` が発生します。存在しない可能性があるプライベート要素を `in` 演算子でチェックすると、 `try/catch` を使用するより簡潔にすることができます。
 
 以下のコードは、指定されたクラスが特定のプライベートメソッドやフィールドを持っているかどうかをチェックする静的関数です。
 

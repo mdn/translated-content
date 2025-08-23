@@ -3,7 +3,7 @@ title: MathML 表格
 slug: Web/MathML/Tutorials/For_beginners/Tables
 ---
 
-{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Tutorials/For_beginners")}}
 
 掌握了所有基本的数学符号后，接下来要考虑的是用于矩阵式表达和其他高级数学布局的表格布局。
 
@@ -294,7 +294,8 @@ MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Stru
 
 {{ EmbedLiveSample('高级布局用法', 700, 200) }}
 
-> **警告：** [`<mtable>`](/zh-CN/docs/Web/MathML/Reference/Element/mtable) 文档中记录了更多高级布局选项，如对齐或间距等特殊属性。这些属性起源于 CSS 一类事物之前，最初设计用于不支持 CSS 的渲染器。然而，并非所有浏览器都实现了这些属性。将来，可能会用基于 CSS 的替代方案取代仅用于布局目的（即非实际矩阵对象）的 `<mtable>` 的用法。
+> [!WARNING]
+> [`<mtable>`](/zh-CN/docs/Web/MathML/Reference/Element/mtable) 文档中记录了更多高级布局选项，如对齐或间距等特殊属性。这些属性起源于 CSS 一类事物之前，最初设计用于不支持 CSS 的渲染器。然而，并非所有浏览器都实现了这些属性。将来，可能会用基于 CSS 的替代方案取代仅用于布局目的（即非实际矩阵对象）的 `<mtable>` 的用法。
 
 ## 总结
 
@@ -309,4 +310,4 @@ MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Stru
 - [`<mtr>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mtr)
 - [`<mtd>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mtd)
 
-{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Tutorials/For_beginners")}}

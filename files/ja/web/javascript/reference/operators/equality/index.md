@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Equality
 
 等価演算子 (`==`) は、二つのオペランドが等しいことを検査し、論理値で結果を返します。[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子とは異なり、オペランドの型が異なる場合には型の変換を試みてから比較を行います。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Equality operator")}}
 
 ```js interactive-example
 console.log(1 == 1);
@@ -36,13 +36,11 @@ x == y;
 - 両方のオペランドがオブジェクトである場合、同じオブジェクトを指している場合に限り `true` を返します。
 - 一方のオペランドが `null` で、もう一方が `undefined` であった場合は `true` を返します。
 - オペランドの型が異なる場合は、比較前に同じ型に変換を試みます。
-
   - 数値と文字列を比較する場合、文字列を数値に変換しようとします。
   - 一方のオペランドが論理値である場合、その論理値のオペランドが `true` である場合は 1 に、 `false` である場合は +0 に変換します。
   - オペランドのうちの一方がオブジェクトで、もう一方が数値または文字列である場合は、そのオブジェクトの `valueOf()` および `toString()` メソッドを使用してプリミティブに変換を試みます。
 
 - オペランドが同じ型である場合は、次のよう比較します。
-
   - 文字列型: 両方のオペランドが同じ文字を同じ順序で持っている場合のみ、 `true` を返します。
   - 数値型: 両方のオペランドが同じ値を持っている場合のみ、 `true` を返します。 `+0` と `-0` は同じ値と見なされます。一方のオペランドが `NaN` である場合は `false` を返します。
   - 論理型: 両方のオペランドが共に `true` であるか、共に `false` である場合のみ `true` になります。

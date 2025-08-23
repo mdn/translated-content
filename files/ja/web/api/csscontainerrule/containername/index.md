@@ -3,7 +3,7 @@ title: "CSSContainerRule: containerName プロパティ"
 short-title: containerName
 slug: Web/API/CSSContainerRule/containerName
 l10n:
-  sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
+  sourceCommit: f3c4fc42e8817d0b8f703cf83957c33cd5342019
 ---
 
 {{ APIRef("CSSOM") }}
@@ -64,7 +64,7 @@ function log(result) {
 カードには既定のフォントサイズがあり、 `sidebar` という名前の `@container` が、最小幅が 700px を超える場合に上書きされます。
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   .post {
     container-type: inline-size;
     container-name: sidebar;
@@ -89,7 +89,7 @@ function log(result) {
 最後に、コンテナー名とクエリーのプロパティをログに記録します（ログを記録するコードは示していません）。
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[2]; // CSSContainerRule で、コンテナールールを表す
 log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);

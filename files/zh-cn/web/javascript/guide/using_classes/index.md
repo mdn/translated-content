@@ -3,7 +3,7 @@ title: 使用类
 slug: Web/JavaScript/Guide/Using_classes
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
+{{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。对[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。本节，我们将展示如何利用类创建实例。
 
@@ -321,9 +321,9 @@ const red = new Color(255, 0, 0);
 console.log(red.values[0]); // 0; 不再是 255，因为 HSL 模型下纯红色的 H 分量为 0
 ```
 
-用户对 `values` 数组代表 RGB 值的假设不再成立，这可能会打破他们的代码逻辑。因此，如果你是一个类的实现者，你应该隐藏实例的内部数据结构，以保持 API 的简洁性，并防止在你做了一些“无害的重构”时，用户代码不至于崩溃。在类中，这是通过[_私有字段_](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)来实现的。
+用户对 `values` 数组代表 RGB 值的假设不再成立，这可能会打破他们的代码逻辑。因此，如果你是一个类的实现者，你应该隐藏实例的内部数据结构，以保持 API 的简洁性，并防止在你做了一些“无害的重构”时，用户代码不至于崩溃。在类中，这是通过[_私有字段_](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)来实现的。
 
-私有字段是以 `#`（井号）开头的标识符。井号是这个字段名的必要部分，这也就意味着私有字段永远不会与公共属性发生命名冲突。为了在类中的任何地方引用一个私有字段，你必须在类体中*声明*它（你不能在类体外部创建私有字段）。除此之外，私有字段与普通属性几乎是等价的。
+私有字段是以 `#`（井号）开头的标识符。井号是这个字段名的必要部分，这也就意味着私有字段永远不会与公共字段或方法发生命名冲突。为了在类中的任何地方引用一个私有字段，你必须在类体中*声明*它（你不能在类体外部创建私有元素）。除此之外，私有字段与普通属性几乎是等价的。
 
 ```js
 class Color {
@@ -579,7 +579,7 @@ class MyClass {
 console.log(MyClass.myStaticProperty); // 'foo'
 ```
 
-静态初始化块几乎等价于在类声明之后立即执行一些代码。唯一的区别是它们可以访问静态私有属性。
+静态初始化块几乎等价于在类声明之后立即执行一些代码。唯一的区别是它们可以访问静态私有元素。
 
 ## 扩展与继承
 

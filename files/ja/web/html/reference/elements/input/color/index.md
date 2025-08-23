@@ -1,9 +1,8 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
-original_slug: Web/HTML/Element/input/color
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -14,7 +13,7 @@ CSS の色表現には他にも色名、関数表記、アルファ値つきの 
 
 この要素の外見は、ブラウザーやプラットフォームによって大きく異なります。基本的なテキストの入力欄で、入力された色情報が文字列の検証のみを行う入力欄であったり、プラットフォームの標準カラーピッカーや、独自のピッカーウィンドウを表示するなど、ブラウザーやプラットフォームにより大きく異なることがあります。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>Choose your monster's colors:</p>
@@ -200,8 +199,8 @@ function updateAll(event) {
     <tr>
       <td><strong>対応する共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> および
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a> および
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>
       </td>
     </tr>
     <tr>

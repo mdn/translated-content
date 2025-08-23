@@ -2,10 +2,8 @@
 title: ブラウザーの開発者ツールとは
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 l10n:
-  sourceCommit: 6635942cfb4f8949f7b707a24cf428c57750a96d
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 最近のブラウザーにはパワフルな開発者ツールが入っています。開発者ツールでは、現在の HTML や CSS、JavaScript の状態を検証したり、ページがどういった資産にアクセスし、どれだけ時間がかかったかといった多様なことができます。この記事ではブラウザーの開発者ツールの使い方について説明します。
 
@@ -20,18 +18,19 @@ l10n:
 
 どのように開くのかというと、 3 つの方法があります。
 
-- **_キーボード:_**
+- **キーボード:**
+  - **Windows:** <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> または <kbd>F12</kbd>
+  - **macOS:** <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>
 
-  - **Windows:** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_ または <kbd>F12</kbd>
-
-  - **macOS:** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
-
-- **_メニューバー:_**
-
-  - **Firefox:** メニュー ![Firefox のハンバーガーメニューアイコンで、 Firefox をカスタマイズしたり制御したりするためのオプションがあります。](2014-01-10-13-08-08-f52b8c.png) ➤ ウェブ開発 ➤ 開発者ツールを開く
+- **メニューバー:**
+  - **Firefox:** メニュー (☰) ➤ ウェブ開発 ➤ 開発者ツールを開く
   - **Chrome:** その他のツール ➤ 開発者ツール
-  - **Safari:** 開発 ➤ Web インスペクタ (もし、開発メニューが表示されていない場合は Safari ➤ 設定 ➤ 詳細 を開いて、メニューバーに[開発]メニューを表示 のチェックボックスをオンにします。)
-  - **Opera** では 開発者用ツール ➤ Web インスペクタ
+  - **Opera**: 開発者 ➤ 開発者ツール
+  - **Safari:** 開発 ➤ Web インスペクタ
+
+    > [!NOTE]
+    > Safari の開発者向けツールは、既定では有効になっていません。
+    > これらを有効にするには、Safari ➤ 環境設定 ➤ 詳細 に移動し、[メニューバーに「開発」メニューを表示] または [Web 開発者向けの機能を有効にする] チェックボックスをオンにしてください。
 
 - **コンテキストメニュー:** ウェブページ上の項目で、長押しまたは右クリック (Mac では Ctrl + クリック) し、表示されたコンテキストメニューより**要素を調査**を選択してください。（さらに、この方法では右クリックで選択した要素がハイライトされて表示されます。）
 
@@ -45,9 +44,8 @@ l10n:
 
 もしインスペクターが表示されていない場合、
 
-- インスペクタータブをタップまたはクリックしてください。
-- Chrome、Microsoft Edge、Opera では、要素をタップ／クリックしてください。
-- Safari では、それに類するような名前はついていませんが、HTML が見えるでしょう。もし、画面に表示するように何も選択していなければ、スタイルボタンを押すことで CSS が見られます。
+- **Firefox:** **インスペクター**タブを選択してください。
+- **Other browsers:** **要素**タブを選択してください。
 
 ### DOM インスペクターについて詳しく知る
 
@@ -57,7 +55,7 @@ l10n:
 
 - **ノードを削除** (要素を削除の場合もあり) は現在選択中の要素を削除します。
 - **HTML として編集** (属性を追加や、テキストの編集の場合もあり) はその場で HTML を編集し、結果を見ることができます。テストやデバッグの際にとても便利です。
-- **hover / active / focus** 要素を強制的に選択した状態に切り替えます。その状態での見た目を確認することができます。
+- **:hover/:active/:focus** 要素を強制的に選択した状態に切り替えます。その状態での見た目を確認することができます。
 - **コピー** 現在選択されている項目の HTML をコピーします。
 - CSS パスをコピーする や、XPath をコピーする といったメニューがあるブラウザーもあります。これは CSS のセレクターや、現在の HTML要素への XPath 表現のコピーを可能とするものです。
 
@@ -81,20 +79,23 @@ l10n:
 CSS ビューアーの一番上にいくつかのタブメニューがあることに気づいたでしょうか。
 
 - **計算済み**: このタブはブラウザーによって求められた、現在選択中の要素に適用されている設定値が見られます。
-- **レイアウト**: Firefox では、この領域には 2 つの部分があります。
-
-  - **ボックスモデル**: このタブは現在選択中の要素に適用されているボックスモデルがどれだけの大きさになっているかが一覧できます。
-  - **グリッド**: 閲覧しているページが CSS グリッドを使用している場合、この部分でグリッドの詳細を確認することができます。
-
+- **レイアウト**: これは、検査対象の要素が CSS [グリッド](/ja/docs/Web/CSS/CSS_grid_layout)および[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)レイアウトモードを使用している場合の詳細を示します。
 - **フォント**: Firefox ではこのタブに現在選択中の要素のフォント設定が表示されます。
+
+「ボックスモデル」ビューは、現在の要素のボックスモデルを視覚的に表現するため、その要素に適用されているパディング、境界線、マージン、およびコンテンツの大きさを一目で確認できます。Firefox では、これは「レイアウト」タブにあり、他のブラウザーでは「計算済み」タブにあります。
+
+一部のブラウザでは、選択した要素の JavaScript の詳細もこのパネルで表示できます。Safari では、これらは「ノード」タブに統合されていますが、Chrome、Opera、Edge では別々のタブに表示されます。
+
+- **プロパティ**: その要素オブジェクトの{{Glossary("Property/JavaScript", "プロパティ")}}。
+- **イベントリスナー**: その要素に関連付けられた[イベント](/ja/docs/Web/API/Event)。
 
 ### もっと詳しく知る
 
 各ブラウザーのインスペクターの詳細については以下をご覧ください。
 
-- [Firefox インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [Chrome DOM インスペクター](https://developer.chrome.com/docs/devtools/dom/) (Opera のインスペクターもこれと同じ動作です)
-- [Safari DOM インスペクタおよびスタイルエクスプローラー (英語)](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
+- [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
+- [Chrome DOM インスペクター](https://developer.chrome.com/docs/devtools/dom/) （Opera と Edge インスペクターも同じです）
+- [Safari 要素タブ](https://webkit.org/web-inspector/elements-tab/)
 
 ## JavaScript デバッガー
 
@@ -104,15 +105,12 @@ JavaScript デバッガーでは、変数の値を見たり、ブレークポイ
 
 デバッガーを起動するは、次のようにします。
 
-**Firefox**: ![Firefox をカスタマイズし、制御するためのより多くのオプションがある Firefox メニューアイコン](2014-01-10-13-08-08-f52b8c.png) ➤ _ウェブ開発_ ➤ _デバッガー_ を選択するか、 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> を押すかして JavaScript デバッガーを開いてください。ツールが既に開いている場合は、**デバッガー**タブをクリックしてください。
-
-**Chrome**: 開発者ツールを開き、**ソース**タブを選択します。（Opera も、これと同じ方法で動作します）。
-
-**Safari**: 「開発者ツール」を開き、「デバッガー」タブを選択します。
+**Firefox**: 開発者ツールを開き、**デバッガー**タブを選択してください。
+**その他のブラウザー**: 開発者ツールを開き、**ソース**タブを選択してください。
 
 ### デバッガーの探究
 
-Firefox の JavaScript デバッガーには、 3 つのペインがあります。
+各ブラウザの JavaScript デバッガーは 3 つのペインに分かれています。これらのレイアウトは、使用しているブラウザによって多少異なります。このガイドでは、Firefox を基準として説明します。
 
 #### ファイルリスト
 
@@ -146,20 +144,15 @@ Firefox の JavaScript デバッガーには、 3 つのペインがあります
 
 さまざまなブラウザーでの JavaScript デバッガーについて詳しく知ることができます。
 
-- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
-- [Microsoft Edge Debugger](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
-- [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/)
-- [Safari Debugger](https://developer.apple.com/safari/tools/)
+- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
+- [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/) （Opera と Edge のデバッガーも同様）
+- [Safari Sources tab](https://webkit.org/web-inspector/sources-tab/)
 
 ## JavaScript コンソール
 
-JavaScript コンソールは、期待通りに使用されていない JavaScript をデバッグするための非常に便利なツールです。ブラウザーに読み込まれたページに対して JavaScript を実行し、ブラウザーがコードを実行しようとしたときに発生したエラーを報告します。どのブラウザーでもコンソールにアクセスすることができます。
+JavaScript コンソールは、期待どおりに動作しない JavaScript をデバッグするのにとても便利なツールです。このツールを使用すると、ブラウザーに現在読み込まれているページに対して JavaScript の行を実行し、ブラウザーがコードの実行を試みたときに発生したエラーを報告することができます。
 
-開発者ツールがすでに開いている場合は、「コンソール」タブをクリックまたは押します。
-
-そうでない場合、 Firefox では、<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> またはメニューコマンドを使用して、コンソールを直接開くことができます。メニュー ![](2014-01-10-13-08-08-f52b8c.png) ➤ ウェブ開発者 ➤ ウェブコンソール、または ツール ➤ ウェブコンソール です。他のブラウザーでは、開発者ツールを開き、コンソールタブをクリックしてください。
-
-すると、次のようなウィンドウが表示されます。
+どのブラウザーでもコンソールにアクセスするには、開発者ツールを開き、**コンソール** タブを選択します。これにより、次のようなウィンドウが表示されます。
 
 ![ブラウザー開発者ツールのコンソールタブ。コンソールで 2 つの JavaScript 関数が実行されました。ユーザーは関数を入力し、コンソールは返値を表示しています。](console_only.png)
 
@@ -208,10 +201,10 @@ document.querySelector("h1").appendChild(loginImage);
 様々なブラウザーでの JavaScript コンソールについて詳しく知ることができます。
 
 - [Firefox ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [Chrome JavaScript コンソール](https://developer.chrome.com/docs/devtools/console/) (Opera のインスペクターはこれと同様に動作します)
-- [Safari コンソール](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
+- [Chrome JavaScript コンソール](https://developer.chrome.com/docs/devtools/console/) (Opera と Edge のインスペクタも同様)
+- [Safari Console Object API](https://webkit.org/web-inspector/console-object-api/) および [Console Command Line API](https://webkit.org/web-inspector/console-command-line-api/)
 
 ## 関連情報
 
 - [HTML のデバッグ](/ja/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
-- [CSS のデバッグ](/ja/docs/Learn_web_development/Core/Styling_basics/Building_blocks/Debugging_CSS)
+- [CSS のデバッグ](/ja/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)

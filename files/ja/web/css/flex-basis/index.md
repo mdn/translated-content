@@ -5,13 +5,12 @@ l10n:
   sourceCommit: c63daf697d8f22ba17d4633f018ad7dfa65e4770
 ---
 
-{{CSSRef}}
-
 **`flex-basis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("flex item","フレックスアイテム")}}の主要部分の初期の寸法を設定します。 {{Cssxref("box-sizing")}} で設定していない限り、このプロパティはコンテンツボックスの寸法を定義します。
 
-> **メモ:** {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-grow`、`flex-shrink`、`flex-basis` の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-basis` プロパティについて説明していますので、ここではこれらを別個のものとしています。
+> [!NOTE]
+> {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-grow`、`flex-shrink`、`flex-basis` の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-basis` プロパティについて説明していますので、ここではこれらを別個のものとしています。
 
-{{InteractiveExample("CSS Demo: flex-basis")}}
+{{InteractiveExample("CSS デモ: flex-basis")}}
 
 ```css interactive-example-choice
 flex-basis: auto;
@@ -87,7 +86,6 @@ flex-basis: unset;
 ### 値
 
 - `<'width'>`
-
   - : 以下の単位のいずれかです。
     - {{cssxref("&lt;length&gt;")}} は絶対的な値を設定します。
     - {{cssxref("&lt;percentage&gt;")}} は包含ブロックのコンテンツ領域の幅または高さに対する割合を設定します。 `flex-basis` のパーセント値はフレックスコンテナーに対して解決されます。フレックスコンテナーのサイズが不定の場合、 `flex-basis` の使用する値は `content` となります。
@@ -97,7 +95,6 @@ flex-basis: unset;
     - {{cssxref("fit-content")}} は、現在の要素のコンテンツに基づいて計算された、 `min-content` と `max-content` の値で囲まれた、包含ブロックのコンテンツ領域の使用可能な最大サイズを設定します。
 
 - `content`
-
   - : フレックスアイテムの内容物に基づいて、自動的に大きさを決めます。
 
 ## 公式定義

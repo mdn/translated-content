@@ -3,8 +3,6 @@ title: :only-of-type
 slug: Web/CSS/:only-of-type
 ---
 
-{{CSSRef}}
-
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** [CSS](/es/docs/Web/CSS) representa un elemento que no tiene hermanos del mismo tipo.
 
 ```css

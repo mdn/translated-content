@@ -1,12 +1,9 @@
 ---
 title: アクセシビリティを推進する HTML の機能
 slug: Learn_web_development/Howto/Design_and_accessibility/HTML_features_for_accessibility
-original_slug: Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 以下のコンテンツは、さまざまな障害を持つ人々にとってウェブページのアクセシビリティをより高めるために使用できる HTML の特定の機能について説明しています。
 
@@ -39,7 +36,7 @@ l10n:
 
 ## スキップリンク
 
-タブ移動を補助するために、ユーザーがあなたのウェブページの大きな塊を飛び越えることを可能にするリンクを提供することができます。たとえば、ユーザーが多すぎるナビゲーションリンクを飛び越えて、すべてのリンクを巡回するのではなくページのメインコンテンツを読むことができるようにしたい場合があります。
+タブ移動を補助するために、ユーザーがウェブページの大きな塊を飛び越えることを可能にする[スキップリンク](/ja/docs/Web/HTML/Reference/Elements/a#スキップリンク)を提供することができます。たとえば、ユーザーが多すぎるナビゲーションリンクを飛び越えて、すべてのリンクを巡回するのではなくページのメインコンテンツを読むことができるようにしたい場合があります。
 
 ```html
 <header>
@@ -48,11 +45,11 @@ l10n:
 </header>
 
 <nav>
-  <!-- navigation stuff -->
+  <!-- ナビゲーション部 -->
 </nav>
 
 <section id="content">
-  <!--your content -->
+  <!-- コンテンツ -->
 </section>
 ```
 
@@ -80,7 +77,7 @@ l10n:
 
 ## ARIA ロール属性
 
-既定、 HTML の意味を持つすべての要素はロール ([`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)) を持っています。例えば、 `<input type="radio">` は `radio` ロールを持ちます。 HTML の意味を持たない要素はロールを持ちません。 ARIA ロールは、 [`tablist`](/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role) ウィジェットのように、 HTML にネイティブに存在しない要素を記述するために使用することができます。ロールはまた、存在するがまだブラウザーの完全な対応をしていない新しい要素にも役立ちます。例えば、 SVG 画像を使用する場合、開始タグに `role="img"` を追加してください。 [SVG VoiceOver のバグ](https://webkit.org/b/216364) があり、 VoiceOver は SVG 画像を正しくアナウンスできないからです。
+既定、 HTML の意味を持つすべての要素はロール ([`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)) を持っています。例えば、 `<input type="radio">` は `radio` ロールを持ちます。 HTML の意味を持たない要素はロールを持ちません。 ARIA ロールは、 [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) ウィジェットのように、 HTML にネイティブに存在しない要素を記述するために使用することができます。ロールはまた、存在するがまだブラウザーの完全な対応をしていない新しい要素にも役立ちます。例えば、 SVG 画像を使用する場合、開始タグに `role="img"` を追加してください。 [SVG VoiceOver のバグ](https://webkit.org/b/216364) があり、 VoiceOver は SVG 画像を正しくアナウンスできないからです。
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />

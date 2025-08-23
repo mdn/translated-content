@@ -6,11 +6,10 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`TE`** リクエストヘッダーは、ユーザーエージェントが受け入れる転送エンコーディング方式を指定します。（非公式に `Accept-Transfer-Encoding` と呼ばれることもあり、その方がより直感的でしょう。）
 
-> **メモ:** [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) と
+> [!NOTE]
+> [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) と
 > [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting) では、
 > `TE` ヘッダーフィールドは、`trailer` 値が設定されている場合にのみ受け入れられます。
 
@@ -23,7 +22,7 @@ l10n:
       <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい</td>
     </tr>
   </tbody>

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
-Em muitos casos, a finalidade de [HTML Form](/pt-BR/docs/Learn/Forms) Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.
+Em muitos casos, a finalidade de [HTML Form](/pt-BR/docs/Learn_web_development/Extensions/Forms) Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.
 
 ## Para onde vão os dados?
 
@@ -253,7 +253,7 @@ You should avoid many/most problems if you follow these three rules, but it's al
 
 ## Conclusion
 
-As you can see, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. Yes, as we'll see, it's possible to [perform client side data validation](/pt-BR/docs/Learn/Forms/Form_validation) but the server can't trust this validation because it has no way to truly know what really happens on the client side.
+As you can see, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. Yes, as we'll see, it's possible to [perform client side data validation](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation) but the server can't trust this validation because it has no way to truly know what really happens on the client side.
 
 ## See also
 

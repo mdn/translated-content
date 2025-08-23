@@ -56,7 +56,7 @@ Mozilla와 Firefox는 표준 드래그 앤 드롭 모델에서 제공하지 않�
 
 ### 어떤 것이 *draggable*인지 확인하기
 
-하나의 요소를 draggable로 만들기 위해서는 [`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)와 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 전역 이벤트 핸들러를 아래 예제 코드와 같이 추가해야합니다.
+하나의 요소를 draggable로 만들기 위해서는 [`draggable`](/ko/docs/Web/HTML/Reference/Global_attributes#draggable)와 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 전역 이벤트 핸들러를 아래 예제 코드와 같이 추가해야합니다.
 
 ```js
 function dragstart_handler(ev) {
@@ -84,7 +84,7 @@ function dragstart_handler(ev) {
 <p id="p1" draggable="true">This element is draggable.</p>
 ```
 
-추가 정보를 위해 [draggable attribute reference](/ko/docs/Web/HTML/Global_attributes/draggable)와 [Drag operations guide](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)를 참고하세요.
+추가 정보를 위해 [draggable attribute reference](/ko/docs/Web/HTML/Reference/Global_attributes/draggable)와 [Drag operations guide](/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)를 참고하세요.
 
 ### 드래그 데이터 정의하기
 

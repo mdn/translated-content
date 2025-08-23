@@ -3,8 +3,6 @@ title: user-select
 slug: Web/CSS/user-select
 ---
 
-{{CSSRef}}
-
 **`user-select`** [CSS](/zh-CN/docs/Web/CSS) 属性用于控制用户是否可以选择文本。这不会对作为浏览器用户界面（即 {{Glossary("Chrome", "chrome")}}）的一部分的内容加载产生任何影响，除非是在文本框中。
 
 {{InteractiveExample("CSS Demo: user-select")}}
@@ -51,18 +49,16 @@ user-select: revert-layer;
 user-select: unset;
 ```
 
-> **备注：** `user-select` 不是继承属性，即使默认的属性值 `auto` 的表现基本上以继承为主，似乎是继承属性。甚至，WebKit/基于 Chromium 的浏览器在实现此属性时*将其作为继承属性*，但这和有关规范是相悖的，且会带来一些问题。目前，Chromium 暂时选择[修复将其作为继承属性所带来的问题](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)，使最终表现符合规范。
+> [!NOTE]
+> `user-select` 不是继承属性，即使默认的属性值 `auto` 的表现基本上以继承为主，似乎是继承属性。甚至，WebKit/基于 Chromium 的浏览器在实现此属性时*将其作为继承属性*，但这和有关规范是相悖的，且会带来一些问题。目前，Chromium 暂时选择[修复将其作为继承属性所带来的问题](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)，使最终表现符合规范。
 
 ### 取值
 
 - `none`
-
   - : 元素及其子元素的文本不可选中。请注意，{{domxref("Selection")}} 对象可以包含这些元素。
 
 - `auto`
-
   - : `auto` 的具体取值取决于一系列条件，具体如下：
-
     - 在 `::before` 和 `::after` 伪元素上，采用的属性值是 `none`
     - 如果元素是可编辑元素，则采用的属性值是 `contain`
     - 否则，如果此元素的父元素的 `user-select` 采用的属性值为 `all`，则该元素采用的属性值也为 `all`
@@ -74,7 +70,6 @@ user-select: unset;
 - `all`
   - : 在一个 HTML 编辑器中，当双击子元素或者上下文时，那么包含该子元素的最顶层元素也会被选中。
 - `contain`
-
   - : 允许在元素内选择；但是，选区将被限制在该元素的边界之内。
 
     > [!NOTE]

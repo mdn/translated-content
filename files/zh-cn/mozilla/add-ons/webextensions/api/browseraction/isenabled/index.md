@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 如果浏览器操作是启用的，则返回 `true`。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,9 +20,7 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 ### 参数
 
 - `details`
-
   - : `object`。一个可选包含 `tabId` 或 `windowId` 以供检查的对象。
-
     - `tabId` {{optional_inline}}
       - : `integer`。要检查的标签页的 ID。
     - `windowId` {{optional_inline}}

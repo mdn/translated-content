@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}
-
 **`Cache-Control`** は HTTP のヘッダーフィールドで、 [キャッシュ](/ja/docs/Web/HTTP/Guides/Caching) をブラウザーや共有キャッシュ（プロキシーや CDN など）において制御するためのディレクティブ (指示) を、リクエストとレスポンスの両方で保持します。
 
 <table class="properties">
@@ -20,7 +18,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
     <tr>

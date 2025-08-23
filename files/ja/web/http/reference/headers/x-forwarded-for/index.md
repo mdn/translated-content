@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/X-Forwarded-For
 original_slug: Web/HTTP/Headers/X-Forwarded-For
 ---
 
-{{HTTPSidebar}}
-
 **X-Forwarded-For** (XFF) ヘッダーは、 HTTP プロキシーサーバーを通過してウェブサーバーへ接続したクライアントの、送信元 IP アドレスを特定するために事実上の標準となっているヘッダーです。
 
 > [!WARNING]
@@ -22,7 +20,7 @@ original_slug: Web/HTTP/Headers/X-Forwarded-For
       <td>{{Glossary("Request header", "要求ヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい</td>
     </tr>
   </tbody>

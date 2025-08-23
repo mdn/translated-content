@@ -3,8 +3,6 @@ title: width
 slug: Web/CSS/width
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`width`** establece el ancho de un elemento.
 Por defecto, establece el ancho del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area),
 pero si el {{cssxref("box-sizing")}} se establece en `border-box`,
@@ -92,7 +90,7 @@ width: unset;
 
 Asegúrese de que los elementos establecidos con un `width` no trunquen y/o oculten otros contenidos cuando se amplía la página para aumentar el tamaño del texto.
 
-- [MDN Entendiendo WCAG, Pauta 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Entendiendo WCAG, Pauta 1.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Comprender el criterio de éxito 1.4.4 | W3C Entendiendo WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Definición formal

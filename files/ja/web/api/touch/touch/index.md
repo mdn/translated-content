@@ -19,9 +19,7 @@ new Touch(options)
 ### 引数
 
 - `touchInit`
-
   - : 以下のフィールドを持つオブジェクトです。
-
     - `identifier`
       - : `long` 値で、タッチ点の識別番号です。
     - `target`

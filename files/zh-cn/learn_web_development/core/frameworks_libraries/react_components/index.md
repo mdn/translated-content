@@ -3,8 +3,6 @@ title: 组件化我们的 React App
 slug: Learn_web_development/Core/Frameworks_libraries/React_components
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
 此时，我们的 App 是一个单体。在我们能使用它之前，我们需要把它分解成可管理的、可描述的组件。React 对于什么是组件和什么不是组件并没有任何硬性规定，这完全取决于你！在这篇文章，我们将向你展示一种合理分解 App 的方法。
@@ -243,7 +241,8 @@ ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
 
 这个数组现在可以在 App 组件中以 `props.tasks` 使用。你可以使用 `console.log()` 去检查它。
 
-> **备注：** `ALL_CAPS` 这个常量名称在 JavaScript 中没有特殊意义；它们是一种惯例，告诉其他开发者“这个数据在这里定义后将永远不会改变”。
+> [!NOTE]
+> `ALL_CAPS` 这个常量名称在 JavaScript 中没有特殊意义；它们是一种惯例，告诉其他开发者“这个数据在这里定义后将永远不会改变”。
 
 ## 使用迭代进行渲染
 

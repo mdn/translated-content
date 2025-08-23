@@ -43,7 +43,7 @@ A primeira coisa que você vai olhar é, os três métodos de aplicação do CSS
 
 ### Folha de Estilos Externa
 
-Em [Começando com o CSS](/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics) nós linkamos uma folha de estilos externas em nossa página. Isso é o método mais comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
+Em [Começando com o CSS](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) nós linkamos uma folha de estilos externas em nossa página. Isso é o método mais comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
 
 `Uma folha de estilos externa é quando você tem seu CSS escrito em um arquivo separado com uma extensão .css`, e você o refere dentro de um elemento `<link>` do HTML:
 
@@ -206,7 +206,7 @@ h1, h2, .intro
 **Tente criar algumas regras CSS que usem os seletores acima e algum HTML para ser estilizado por eles. Se você não souber o que significa alguma das sintaxes acima, tente procurar no MDN!**
 
 > [!NOTE]
-> Você aprenderá muito mais sobre seletores em nossos tutoriais [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors), no próximo módulo.
+> Você aprenderá muito mais sobre seletores em nossos tutoriais [CSS selectors](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), no próximo módulo.
 
 ### Especificidade
 
@@ -244,7 +244,7 @@ No entanto, no caso do nosso bloco anterior com o seletor de classe e o seletor 
 
 **Experimente o exemplo acima por si mesmo - adicione o HTML ao seu experimento, em seguida, adicione as duas regras p {...} à sua folha de estilo. Em seguida, altere o primeiro seletor p para .special para ver como ele muda o estilo.**
 
-As regras de especificidade e cascata podem parecer um pouco complicadas no início e são mais fáceis de entender depois que você tiver acumulado mais conhecimento de CSS. Em nosso artigo [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), que você verá no próximo módulo, explicarei isso em detalhes, incluindo como calcular a especificidade. Por enquanto, lembre-se de que isso existe e que às vezes o CSS pode não ser aplicado como você espera porque algo mais em sua folha de estilo tem uma especificidade maior. Identificar que mais de uma regra pode ser aplicada a um elemento é o primeiro passo para resolver esses problemas.
+As regras de especificidade e cascata podem parecer um pouco complicadas no início e são mais fáceis de entender depois que você tiver acumulado mais conhecimento de CSS. Em nosso artigo [Cascade and inheritance](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts), que você verá no próximo módulo, explicarei isso em detalhes, incluindo como calcular a especificidade. Por enquanto, lembre-se de que isso existe e que às vezes o CSS pode não ser aplicado como você espera porque algo mais em sua folha de estilo tem uma especificidade maior. Identificar que mais de uma regra pode ser aplicada a um elemento é o primeiro passo para resolver esses problemas.
 
 ## Propriedades e valores
 
@@ -336,7 +336,7 @@ A saída do código acima se parece com isso:
 
 ## @rules
 
-Até agora, não encontramos as regras, em inglês [`@rules`](/pt-BR/docs/Web/CSS/At-rule) (pronuncia-se "at-rules") do CSS. Estas são regras especiais que dão ao CSS algumas instruções sobre como se comportar. Algumas `@rules` são simples, com o nome da regra e um valor. Por exemplo, para importar uma folha de estilo adicional na sua folha de estilo CSS principal, você pode usar `@import`:
+Até agora, não encontramos as regras, em inglês [`@rules`](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule) (pronuncia-se "at-rules") do CSS. Estas são regras especiais que dão ao CSS algumas instruções sobre como se comportar. Algumas `@rules` são simples, com o nome da regra e um valor. Por exemplo, para importar uma folha de estilo adicional na sua folha de estilo CSS principal, você pode usar `@import`:
 
 ```css
 @import "styles2.css";
@@ -572,6 +572,6 @@ padding- left: 10px;
 
 ## Qual é o próximo passo?
 
-É útil entender um pouco sobre como o navegador pega seu HTML e CSS e transforma-o em uma página da web, então no próximo artigo — [Como CSS Funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works) — vamos dar uma olhada nesse processo.
+É útil entender um pouco sobre como o navegador pega seu HTML e CSS e transforma-o em uma página da web, então no próximo artigo — [Como CSS Funciona](/pt-BR/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — vamos dar uma olhada nesse processo.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

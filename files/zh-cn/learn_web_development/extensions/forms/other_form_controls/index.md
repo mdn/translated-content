@@ -3,7 +3,7 @@ title: 其他表单控件
 slug: Learn_web_development/Extensions/Forms/Other_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
 
 现在我们来具体看看非 `<input>` 表单控件的功能，从下拉列表菜单（drop-down list）、多行文本域（multi-line text field）到其他有用的表单功能，如我们在前一篇文章看到的 {{htmlelement('output')}} 元素和进度条（progress bar）元素。
 
@@ -270,13 +270,11 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 计量器代表了一个由 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#max) 和 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#min) 限定范围内的固定值。这个值在视觉上呈现为一个条形，为了了解这个条形的样子，我们将这个值与其他一些设定的值进行比较：
 
 - [`low`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#low) 和 [`high`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#high) 将范围分为了三个部分：
-
   - 下半部分范围在 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#min) 和 [`low`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#low) 值之间，包含端点值。
   - 中间部分范围在 [`low`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#low) 和 [`high`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#high) 值之间，不包含端点值。
   - 上半部分范围在 [`high`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#high) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#max) 值之间，包含端点值。
 
 - [`optimum`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum) 值定义了 {{HTMLElement("meter")}} 元素的最佳值，它与 [`low`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#low) 和 [`high`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#high) 值一同定义了首选的范围部分：
-
   - 如果 [`optimum`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum) 在下半部分范围内，下半部分范围被认为是首选部分，中间部分范围被认为是平均部分，而上半部分范围被认为是最差的部分。
   - 如果 [`optimum`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum) 在中间部分范围内，下半部分范围被认为是平均部分，中间部分范围被认为是首选部分，而上半部分范围也被认为是平均部分。
   - 如果 [`optimum`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum) 在上半部分范围内，下半部分范围被认为是最差的部分，中间部分范围被认为是平均部分，而上半部分范围被认为是首选部分。
@@ -301,7 +299,7 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 ## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：其他控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：其他控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls)。
 
 ## 总结
 

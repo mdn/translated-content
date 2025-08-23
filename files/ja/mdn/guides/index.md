@@ -1,23 +1,19 @@
 ---
-title: 開発者ガイド
+title: ウェブ開発者ガイド
+short-title: ガイド
 slug: MDN/Guides
-original_slug: Web/Guide
 l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+  sourceCommit: 515d03ad8572b96e88916888156444626dcba193
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/ja/docs/Web/Guide")}}
-</section>
-
-MDN ドキュメントには多くのガイドがあります。この記事は使用例を追加したり、API や機能の使用方法を教えることを目的としています。このページでは、最も人気のある素材をリンクしています。
+MDN Web Docs には多くのガイドがあります。この記事は使用例を追加したり、 API や機能の使用方法を教えることを目的としています。このページでは、最も人気のある素材をリンクしています。
 
 ## HTML
 
 - [HTML によるウェブの構成](/ja/docs/Learn_web_development/Core/Structuring_content)
-  - : HTML の学習領域では、HTML を 1 から学ぶためのチュートリアルを提供しています。
+  - : HTML の学習領域では、 HTML を 1 から学ぶためのチュートリアルを提供しています。
 - [HTML の基本](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
-  - : この記事では、HTML の基本的な理解を深めることができます。このガイドに従うこと以下で、HTML 学習領域の素材をさらに探求することができます。
+  - : この記事では、 HTML の基本的な理解を深めることができます。このガイドに従うこと以下で、 HTML 学習領域の素材をさらに探求することができます。
 
 ## CSS
 
@@ -38,13 +34,13 @@ MDN ドキュメントには多くのガイドがあります。この記事は�
 - [音声と動画の配信](/ja/docs/Web/Media/Guides/Audio_and_video_delivery)
   - : ウェブ上で音声や動画を届ける手段には、「静的な」データからアダプティブライブストリームに至るまでたくさんのものものがあります。この記事は、ウェブベースのメディアを伝送する様々な仕組みや一般的なブラウザーとの互換性について学ぶ最初のステップとして作られたものです。
 - [音声と動画の加工](/ja/docs/Web/Media/Guides/Audio_and_video_manipulation)
-  - : 様々な技術を組み合わせて新たな形を作ることができるのがウェブの美しいところです。ブラウザーには音声や動画に対する諸々の機能が組み込まれていますから、{{htmlelement("canvas")}}や [WebGL](/ja/docs/Web/API/WebGL_API)、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) といった技術を使い、直接的に音声や動画を編集することができます。例えば、エコーや圧縮効果を音声に加えたり、白黒やセピアのフィルターを動画に加えたりできます。この記事では、何をすべきかを説明するリファレンスを提供しています。
+  - : 様々な技術を組み合わせて新たな形を作ることができるのがウェブの美しいところです。ブラウザーには音声や動画に対する諸々の機能が組み込まれていますから、 {{htmlelement("canvas")}} や [WebGL](/ja/docs/Web/API/WebGL_API)、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) といった技術を使い、直接的に音声や動画を編集することができます。例えば、エコーや圧縮効果を音声に加えたり、白黒やセピアのフィルターを動画に加えたりできます。この記事では、何をすべきかを説明するリファレンスを提供しています。
 
 ## API
 
 - [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-  - : [`FormData`](/ja/docs/Web/API/FormData) オブジェクトは、{{domxref("Window/fetch", "fetch()")}} を使用して送信するためのキーと値のペアのセットを収集可能にします。本来はフォームデータの送信に使用することを想定していましたが、キーのついたデータを伝送するためにフォームとは独立して使用することもできます。伝送されるデータは、フォームのエンコードタイプが "multipart/form-data" に設定されている場合に、`submit()` メソッドで送信する際に使用するデータと同じ形式です。
-- [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps#core_pwa_guides)
+  - : [`FormData`](/ja/docs/Web/API/FormData) オブジェクトは、{{domxref("Window/fetch", "fetch()")}} を使用して送信するためのキーと値のペアのセットを収集可能にします。本来はフォームデータの送信に使用することを想定していましたが、キーのついたデータを伝送するためにフォームとは独立して使用することもできます。伝送されるデータは、フォームのエンコードタイプが "multipart/form-data" に設定されている場合に、 `submit()` メソッドで送信する際に使用するデータと同じ形式です。
+- [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)
   - : プログレッシブウェブアプリ (PWA) は、現行のウェブ API と従来のプログレッシブエンハンスメント戦略を使用して、クロスプラットフォームのウェブアプリケーションを作成します。このアプリはあらゆる場所で動作し、ネイティブアプリと同じユーザー使い勝手の利点をもたらすいくつかの機能を提供します。この一連のガイドでは、PWA について知っておく必要があるすべてを教えます。
 - [XML の構文解析とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)
   - : ウェブプラットフォーム上での XML の構文解析やシリアライズには複数の方法があり、それぞれ長所と短所があります。

@@ -1,16 +1,16 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
-original_slug: Web/HTML/Element/input/hidden
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`hidden`** 型は、フォームの送信時にユーザーが見たり変更したりすることができないデータをウェブ開発者が含めることができます。例えば、現在注文中又は編集中の ID や、一意のセキュリティトークンなどに利用できます。隠し入力欄はページの表示で完全に非表示になり、ページの中で表示させる方法はありません。
 
-> **メモ:** {{domxref("Element/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
+> [!NOTE]
+> {{domxref("Element/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
 
 ## 値
 
@@ -58,7 +58,7 @@ l10n:
 
 ## 例
 
-以前に作成した編集フォーム（[編集された内容の追跡](#tracking_edited_content)を参照）に、隠し入力欄を使用して編集するレコードの ID を記憶する簡単なバージョンを実装する方法を見てみましょう。
+以前に作成した編集フォーム（[編集された内容の追跡](#tracking_edited_content)を参照）に、隠し入力欄を使用して編集するレコードの ID を記憶するバージョンを実装する方法を見てみましょう。
 
 編集フォームの HTML はこのようになっているかもしれません。
 
@@ -148,7 +148,7 @@ textarea {
     </tr>
     <tr>
       <td><strong>対応する共通属性</strong></td>
-      <td><a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
+      <td><a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a></td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>

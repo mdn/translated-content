@@ -37,7 +37,8 @@ SQL、またはデータベースでサポートされているクエリー言�
 
 ORM を使用する利点は、プログラマがデータベースのセマンティクスではなく JavaScript オブジェクトの観点から考え続けることができることです。これは、同じデータベースまたは異なるウェブサイトで異なるデータベースを扱う必要がある場合に特に当てはまります。またデータの検証とチェックを実行するための明らかな場所を提供します。
 
-> **メモ:** **Tip:** ODM/ORM を使用すると、多くの場合、開発と保守のコストが削減されます。ネイティブのクエリー言語に精通しているかパフォーマンスが最優先であるのでなければ、ODM の使用を積極的に検討するべきです。
+> [!NOTE]
+> **Tip:** ODM/ORM を使用すると、多くの場合、開発と保守のコストが削減されます。ネイティブのクエリー言語に精通しているかパフォーマンスが最優先であるのでなければ、ODM の使用を積極的に検討するべきです。
 
 ### どの ORM/ODM を使うべきですか？
 
@@ -61,7 +62,8 @@ NPM パッケージマネージャのサイトには、多数の ODM/ORM ソリ�
 
 この ODM とデータベースの組み合わせは、Node コミュニティで非常に人気があります。これは、ドキュメントの保存とクエリーのシステムが JSON に非常に似ているため、JavaScript 開発者にはよく知られているためです。
 
-> **メモ:** **Tip:** Mongoose を使用するために MongoDB を知っている必要はありませんが、[Mongoose のドキュメント](http://mongoosejs.com/docs/guide.html)の一部は、MongoDB に慣れている方が使いやすく理解しやすいものです。
+> [!NOTE]
+> **Tip:** Mongoose を使用するために MongoDB を知っている必要はありませんが、[Mongoose のドキュメント](http://mongoosejs.com/docs/guide.html)の一部は、MongoDB に慣れている方が使いやすく理解しやすいものです。
 
 このチュートリアルの残りの部分では、[ローカルライブラリーウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)の例の Mongoose スキーマとモデルを定義してアクセスする方法を示します。
 
@@ -131,7 +133,8 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 デフォルトの `Connection` オブジェクトは `mongoose.connection` で取得できます。接続されると、open イベントが `Connection` インスタンスで発生します。
 
-> **メモ:** **Tip:** 追加のコネクションを作成する必要がある場合は、`mongoose.createConnection()` を使用できます。 これは `connect()` と同じ形式のデータベース URI (ホスト、データベース、ポート、オプションなど) を取り、`Connection` オブジェクトを返します。
+> [!NOTE]
+> **Tip:** 追加のコネクションを作成する必要がある場合は、`mongoose.createConnection()` を使用できます。 これは `connect()` と同じ形式のデータベース URI (ホスト、データベース、ポート、オプションなど) を取り、`Connection` オブジェクトを返します。
 
 ### モデルの定義と作成
 
@@ -212,7 +215,6 @@ var schema = new Schema({
 
 - フィールドの*name* と *type*を key-value ペアのように書く (例えば `name`, `binary`, `living` のように）.
 - `type`定義するオブジェクトが続くフィールド名、およびフィールドの他のオプション。オプションには次のようなものがあります:
-
   - 初期値.
   - ビルドインのバリデータ (例えば最大値/最小値) それからカスタマイズしたバリデーション機能.
   - そのヒールドが必須かどうか
@@ -229,7 +231,6 @@ Mongoose はビルドインもしくはカスマイズしたバリデータや�
 - すべての [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) に [required](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required) があります。 これはドキュメントを保存するために必要なフィールドを指定するために使われます。
 - [Numbers](http://mongoosejs.com/docs/api.html#schema-number-js) に [min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min)（最小値を指定） と [max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max)（最大値を指定） バリデータがあります。
 - [Strings](http://mongoosejs.com/docs/api.html#schema-string-js) には以下のバリデータがあります:
-
   - [enum](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum): フィールドに利用可能な値の配列を指定します。
   - [match](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match): マッチさせる正規表現を指定します。
   - [maxlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength) と [minlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength): 文字数の最大値と最小値を指定します。
@@ -497,7 +498,6 @@ After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 1. Click **Create New** in the _MongoDB Deployments_ section.![](mLabCreateNewDeployment.png)
 2. This will open the _Cloud Provider Selection_ screen.
    ![MLab - screen for new deployment](mLab_new_deployment_form_v2.png)
-
    - Select the SANDBOX (Free) plan from the Plan Type section.
    - Select any provider from the _Cloud Provider_ section. Different providers offer different regions (displayed below the selected plan type).
    - Click the **Continue** button.
@@ -505,17 +505,14 @@ After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 3. This will open the _Select Region_ screen.
 
    ![Select new region screen](mLab_new_deployment_select_region_v2.png)
-
    - Select the region closest to you and then **Continue**.
 
 4. This will open the _Final Details_ screen.
    ![New deployment database name](mLab_new_deployment_final_details.png)
-
    - Enter the name for the new database as `local_library` and then select **Continue**.
 
 5. This will open the _Order Confirmation_ screen.
    ![Order confirmation screen](mLab_new_deployment_order_confirmation.png)
-
    - Click **Submit Order** to create the database.
 
 6. You will be returned to the home screen. Click on the new database you just created to open its details screen. As you can see the database has no collections (data).
@@ -715,7 +712,8 @@ In order to test the models (and to create some example books and other items th
 
 4. The script should run through to completion, displaying items as it creates them in the terminal.
 
-> **メモ:** **Tip:** Go to your database on [mLab](https://mlab.com/home). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
+> [!NOTE]
+> **Tip:** Go to your database on [mLab](https://mlab.com/home). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
 ## まとめ
 

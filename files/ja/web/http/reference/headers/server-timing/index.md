@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Server-Timing
 original_slug: Web/HTTP/Headers/Server-Timing
 ---
 
-{{HTTPSidebar}}
-
 **`Server-Timing`** ヘッダーは、指定されたリクエスト－レスポンスのサイクルについての 1 つ以上のメトリックと説明を通信します。ユーザーのブラウザーの開発ツール内や、 {{domxref("PerformanceServerTiming")}} インターフェイス内で、任意のバックエンドサーバーのタイミングメトリック (データベースの読み書き、 CPU 時間、ファイルシステムアクセス、など) を表面化させるために使用します。
 
 <table class="properties">
@@ -18,7 +16,7 @@ original_slug: Web/HTTP/Headers/Server-Timing
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>

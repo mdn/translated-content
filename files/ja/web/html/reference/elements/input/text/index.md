@@ -1,16 +1,15 @@
 ---
 title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
-original_slug: Web/HTML/Element/input/text
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`text`** 型は、基本的な単一行のテキスト入力欄を生成します。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="name">Name (4 to 8 characters):</label>
@@ -75,7 +74,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> [!NOTE]
+> [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細や例については[パターンの指定](#パターンの指定)を参照してください。
 
@@ -321,7 +321,8 @@ input:valid + span::after {
 
 4 文字未満でフォームを送信しようとすると、適切なエラーメッセージが表示されます（ブラウザーによって異なります）。 8 文字を超えて入力しようとしても、ブラウザーが許しません。
 
-> **メモ:** `minlength` を指定して `required` を指定しないと、ユーザーが値を指定する必要がなくなるので、入力は妥当と判断されます。
+> [!NOTE]
+> `minlength` を指定して `required` を指定しないと、ユーザーが値を指定する必要がなくなるので、入力は妥当と判断されます。
 
 ### パターンの指定
 
@@ -405,20 +406,20 @@ input:valid + span::after {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
-      <td><a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>, <code>value</code></td>
+      <td><a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>, <code>value</code></td>
     </tr>
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
@@ -435,8 +436,8 @@ input:valid + span::after {
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td><code>list</code> 属性がない場合:
-                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td><code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
+      <td><code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>

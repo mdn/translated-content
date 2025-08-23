@@ -1,13 +1,13 @@
 ---
 title: offset-distance
 slug: Web/CSS/offset-distance
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`offset-distance`** は CSS プロパティで、 {{CSSxRef("offset-path")}} 上の要素を配置する位置を指定します。
 
-{{InteractiveExample("CSS Demo: offset-distance")}}
+{{InteractiveExample("CSS デモ: offset-distance")}}
 
 ```css interactive-example-choice
 offset-distance: 0%;
@@ -60,14 +60,14 @@ offset-distance: 40px;
 offset-distance: inherit;
 offset-distance: initial;
 offset-distance: revert;
+offset-distance: revert-layer;
 offset-distance: unset;
 ```
 
-- `{{cssxref('&lt;length-percentage&gt;')}}`
+- {{cssxref('&lt;length-percentage&gt;')}}
+  - : 要素が（{{cssxref('offset-path')}} で定義された）パス上のどのくらいの距離にあるかを指定する長さです。
 
-  - : 要素が ({{cssxref('offset-path')}} で定義された) パス上のどのくらいの距離にあるかを指定する長さです。
-
-    100% はパスの全長を表します。 (`offset-path` が基本シェイプまたは `path()` として定義されている場合)。
+    100% はパスの全長を表します。（`offset-path` が基本シェイプまたは `path()` として定義されている場合）。
 
 ## 公式定義
 

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Last-Modified
 original_slug: Web/HTTP/Headers/Last-Modified
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Last-Modified`** レスポンスヘッダーは、リソースが最後に変更されたとオリジンのサーバーが判断している日時を含みます。これは受信または保存されたリソースが、同じものであるかを判断する検証材料として使用されます。 {{HTTPHeader("ETag")}} ヘッダーよりも精度は低く、その代替手段になります。 {{HTTPHeader("If-Modified-Since")}} や {{HTTPHeader("If-Unmodified-Since")}} ヘッダーを含む条件付きリクエストはこのフィールドを使用します。
 
 <table class="properties">
@@ -18,7 +16,7 @@ HTTP の **`Last-Modified`** レスポンスヘッダーは、リソースが最
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>

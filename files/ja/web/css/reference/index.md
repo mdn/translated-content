@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
 ---
 
-{{CSSRef}}
-
 この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
 
 ## 基本的なルールと構文
@@ -102,7 +100,8 @@ div.menu-bar li:hover > ul {
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
   - : HTML に含まれていないエンティティを表します。
 
-> **注目:** [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)および[擬似要素の仕様書](https://drafts.csswg.org/css-pseudo/)も参照してください。
+> [!CALLOUT]
+> [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)および[擬似要素の仕様書](https://drafts.csswg.org/css-pseudo/)も参照してください。
 
 ## 概念
 

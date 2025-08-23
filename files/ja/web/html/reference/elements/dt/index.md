@@ -12,7 +12,7 @@ l10n:
 
 後に続く {{HTMLElement("dd")}}（**詳細説明**）要素は、 `<dt>` を用いて指定した用語について、定義やその他の関連する文字列を表します。
 
-{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;dt&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>Please use the following paint colors for the new house:</p>
@@ -83,13 +83,13 @@ dd {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Listitem_role"
             >listitem</a
           ></code
         >

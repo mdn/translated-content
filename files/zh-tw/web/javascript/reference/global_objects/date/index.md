@@ -3,8 +3,6 @@ title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 ---
 
-{{JSRef}}
-
 建立一個 JavaScript **`Date`** 物件來指向某一個時間點。Date 物件是基於世界標準時間（UTC） 1970 年 1 月 1 日開始的毫秒數值來儲存時間。
 
 ## 語法
@@ -30,7 +28,6 @@ new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
 - `value`
   - : 自世界標準時間（UTC） 1970 年 1 月 1 日 00:00:00 開始的毫秒整數（Integer）值（Unix 紀元；但要注意到大多 Unix 時間戳記是以秒而非毫秒為單位）。
 - `dateString`
-
   - : 表示時間日期的字串。這個字串應該要能被 {{jsxref("Date.parse()")}} 方法解析（符合 [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14) 及 [version of ISO8601](https://262.ecma-international.org/5.1/#sec-15.9.1.15) 格式要求).
 
     > [!NOTE]
@@ -72,7 +69,6 @@ new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
 - {{jsxref("Date.now()")}}
   - : 回傳對應於當下時間的數值 - 1970/01/01 00:00:00 (UTC) 到當下的毫秒數。
 - {{jsxref("Date.parse()")}}
-
   - : 解析字串所表示的時間，回傳由 1970/01/01 00:00:00 (UTC) 到該時間的毫秒數值。
 
     > [!NOTE]
@@ -90,7 +86,6 @@ new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
 - {{jsxref("Date.now()")}}
   - : 回傳對應於當下時間的數值 - 1970/01/01 00:00:00 (UTC) 到當下的毫秒數。
 - {{jsxref("Date.parse()")}}
-
   - : 解析字串所表示的時間，回傳由 1970/01/01 00:00:00 (UTC) 到該時間的毫秒數值。
 
     > [!NOTE]

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 超文本标记语言（英语：**H**yper**T**ext **M**arkup **L**anguage，简称：HTML）是一种用来结构化 Web 网页及其内容的标记语言。网页内容可以是：一组段落、一个重点信息列表、也可以含有图片和数据表格。正如标题所示，本文将对 HTML 及其功能做一个基本介绍。
@@ -226,7 +224,8 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 
 如果网址开始部分省略了 `https://` 或者 `http://`（称作*协议*），可能会得到错误的结果。在完成一个链接后，可以试着点击它来确保指向正确。
 
-> **备注：** `href` 这个名字可能一开始看起来有点令人费解。如果它很难记忆的话，记住它代表的是超文本引用（_**h**ypertext **ref**erence_）。
+> [!NOTE]
+> `href` 这个名字可能一开始看起来有点令人费解。如果它很难记忆的话，记住它代表的是超文本引用（_**h**ypertext **ref**erence_）。
 
 现在就为页面添加一个链接吧。
 

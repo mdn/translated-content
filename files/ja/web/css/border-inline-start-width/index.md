@@ -1,13 +1,13 @@
 ---
 title: border-inline-start-width
 slug: Web/CSS/border-inline-start-width
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`border-inline-start-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: border-inline-start-width")}}
+{{InteractiveExample("CSS デモ: border-inline-start-width")}}
 
 ```css interactive-example-choice
 border-inline-start-width: thick;
@@ -28,7 +28,7 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -56,6 +56,7 @@ border-inline-start-width: thick;
 border-inline-start-width: inherit;
 border-inline-start-width: initial;
 border-inline-start-width: revert;
+border-inline-start-width: revert-layer;
 border-inline-start-width: unset;
 ```
 
@@ -74,13 +75,13 @@ border-inline-start-width: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -100,7 +101,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("例", 140, 140)}}
 
 ## 仕様書
 
@@ -112,5 +113,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のうちの 1 つに対応づけられます
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

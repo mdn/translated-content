@@ -49,7 +49,7 @@ input:invalid {
 
 上記のものは、メールアドレスが単なるドメインであり、 URL にプロトコルがないため、`typeMismatch`が発生します。
 
-`typeMismatch` は、 [`type`](/ja/docs/Web/HTML/Reference/Elements/input#入力型) 属性で期待される [`value`](/ja/docs/Web/HTML/Attributes/value) の値と、実際に存在するデータとの間に不一致がある場合に発生します。 `typeMismatch` は数あるエラーのひとつで、 {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/url", "url")}} の入力型にのみ関係します。他の入力型では、提供された値が型に基づく期待値と一致しない場合、異なるエラーが発生します。例えば、 {{HTMLElement("input/number", "number")}} の入力値が浮動小数点数でない場合、 `badInput` が `true` になります。メールが [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) であるにもかかわらず空の場合は、 {{domxref('ValidityState.valueMissing','valueMissing')}} が `true` になります。
+`typeMismatch` は、 [`type`](/ja/docs/Web/HTML/Reference/Elements/input#入力型) 属性で期待される [`value`](/ja/docs/Web/HTML/Reference/Attributes/value) の値と、実際に存在するデータとの間に不一致がある場合に発生します。 `typeMismatch` は数あるエラーのひとつで、 {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/url", "url")}} の入力型にのみ関係します。他の入力型では、提供された値が型に基づく期待値と一致しない場合、異なるエラーが発生します。例えば、 {{HTMLElement("input/number", "number")}} の入力値が浮動小数点数でない場合、 `badInput` が `true` になります。メールが [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) であるにもかかわらず空の場合は、 {{domxref('ValidityState.valueMissing','valueMissing')}} が `true` になります。
 
 ## 仕様書
 

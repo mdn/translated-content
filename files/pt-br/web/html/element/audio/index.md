@@ -38,9 +38,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
 - `played`
   - : Um objeto {{ domxref("TimeRanges") }}indicando que todo o áudio foi reproduzido.
 - `preload`
-
   - : Esse atributo enumerado pretende dar uma sugestão ao navegador sobre o que o autor pensa que proporcionará uma melhor experiência do usuário. Ele pode ter os seguintes valores:
-
     - none: indica que o usuário não necessitará consultar o áudio ou que o servidor quer minimizar seu tráfego; em outros termos indica que o áudio não deve ser pré-carregado;
     - metadata: indica que embora o usuário não necessitará consultar o áudio, pegar os meta-dados (ex: comprimento) é interessante;
     - auto: indica que o usuário necessita ter prioridade; em outros termos isso significa que, se necessário, o áudio inteiro pode ser baixado, mesmo que não seja esperado a execução;
@@ -53,7 +51,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
 - `src`
-  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/Web/HTTP/CORS). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/pt-BR/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
+  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/Web/HTTP/Guides/CORS). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/pt-BR/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 
@@ -87,10 +85,10 @@ Reproduz o arquivo de áudio anexado a esse artigo.
 
 ## Veja também
 
-- [Media formats supported by the audio and video elements](/pt-BR/docs/Web/Media/Formats)
+- [Media formats supported by the audio and video elements](/pt-BR/docs/Web/Media/Guides/Formats)
 - [Introducing the audio API extension](/pt-BR/docs/Introducing_the_Audio_API_Extension)
 - [`HTMLAudioElement`](/pt-BR/docs/Web/API/HTMLAudioElement)
 - [`nsIDOMHTMLMediaElement`](/pt-BR/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
 - [`video`](http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/Video)
-- [Using audio and video](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Using audio and video](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [The `audio` element](https://www.whatwg.org/specs/web-apps/current-work/#audio) (Especificação HTML5)

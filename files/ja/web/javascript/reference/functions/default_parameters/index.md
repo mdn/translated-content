@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Functions/Default_parameters
 
 **関数のデフォルト引数**は、関数に値が渡されない場合や `undefined` が渡された場合に、デフォルト値で初期化される形式上の引数を指定することができます。
 
-{{InteractiveExample("JavaScript Demo: Functions Default")}}
+{{InteractiveExample("JavaScript デモ: Functions Default")}}
 
 ```js interactive-example
 function multiply(a, b = 1) {
@@ -218,11 +218,11 @@ f(); // [1, undefined]
 f(2); // [2, undefined]
 ```
 
-### 既定値のある分割代入の引数
+### 既定値のある構造分解の引数
 
-既定値の代入を、{{jsxref("Operators/Destructuring_assignment", "分割代入", "", 1)}}表記で行うことができます。
+既定値の代入を、{{jsxref("Operators/Destructuring_assignment", "構造分解", "", 1)}}表記で行うことができます。
 
-これを行う一般的な方法は、空のオブジェクト/配列をオブジェクト/配列に分割代入することです。例えば、 `[x = 1, y = 2] = []` とします。
+これを行う一般的な方法は、空のオブジェクト/配列をオブジェクト/配列に構造分解することです。例えば、 `[x = 1, y = 2] = []` とします。
 このようにすることで、空の配列/オブジェクトを関数に渡しても、あらかじめ設定した値を保持することができます。
 
 ```js

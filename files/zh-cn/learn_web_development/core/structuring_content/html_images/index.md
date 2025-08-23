@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 26aeffa549ae61cd863afcb8fdcb3ba0e1e33b0c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
 最初，web 仅有文字，非常乏味。幸运的是，不久之后，我们就能在网页中嵌入图片和其他更有趣的内容类型了。尽管有多种多媒体类型需要考虑，但是从在网页中嵌入简单图片的 {{htmlelement("img")}} 元素开始更加合理。在这篇文章中，我们将详细介绍如何使用 {{htmlelement("img")}} 元素，包括它的基本属性，如何用 {{htmlelement("figure")}} 元素为它添加标题，它与 {{glossary("CSS")}} 背景图片的关系，以及其他 web 平台上的图形类型。
 
@@ -73,7 +73,8 @@ l10n:
 
 如果这些图像并非由你创建，你应该查看它们发布的许可证条款，确保自己有使用它们的权限（有关更多信息，请参阅下面的[媒体资源和许可证](#媒体资源和许可)）。
 
-> **警告：** _未经许可_，*绝不要*将 `src` 属性指向其他网站上的图像。这被称为“热链接（hotlinking）”。大多数人认为这是不道德的，因为这会导致每当有人访问你的页面，都会有另一些不知情的人为图像交付带宽费用。这也导致你无法掌控图像，图像有可能在你不知情的情况下，被删除或替换为尴尬的内容。
+> [!WARNING]
+> _未经许可_，*绝不要*将 `src` 属性指向其他网站上的图像。这被称为“热链接（hotlinking）”。大多数人认为这是不道德的，因为这会导致每当有人访问你的页面，都会有另一些不知情的人为图像交付带宽费用。这也导致你无法掌控图像，图像有可能在你不知情的情况下，被删除或替换为尴尬的内容。
 
 无论是使用绝对 URL 还是相对 URL，上述代码片段将会得到以下结果：
 
@@ -629,7 +630,7 @@ p {
 
 ## 技能测试！
 
-你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：HTML 图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images)。
+你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：HTML 图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images)。
 
 ## 总结
 

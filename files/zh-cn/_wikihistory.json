@@ -54,13 +54,6 @@
       "fierayan"
     ]
   },
-  "Games/Introduction_to_HTML5_Game_Development": {
-    "modified": "2019-01-17T01:15:39.320Z",
-    "contributors": [
-      "wbamberg",
-      "xgqfrms-GitHub"
-    ]
-  },
   "Games/Publishing_games": {
     "modified": "2019-01-17T00:50:49.182Z",
     "contributors": [
@@ -177,6 +170,13 @@
     "contributors": [
       "wbamberg",
       "zsxeee"
+    ]
+  },
+  "Games/Tools": {
+    "modified": "2019-01-17T01:15:39.320Z",
+    "contributors": [
+      "wbamberg",
+      "xgqfrms-GitHub"
     ]
   },
   "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {
@@ -3942,12 +3942,6 @@
       "liaozhifeng"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Test_your_skills/Tables": {
-    "modified": "2020-07-20T07:49:16.101Z",
-    "contributors": [
-      "Road"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Values_and_units": {
     "modified": "2020-07-16T22:28:59.438Z",
     "contributors": [
@@ -4144,7 +4138,7 @@
       "WavinFlag"
     ]
   },
-  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript": {
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript": {
     "modified": "2020-08-05T11:02:17.810Z",
     "contributors": [
       "driftingdream"
@@ -5425,41 +5419,6 @@
       "pengtikui",
       "skylakecore",
       "qixi"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image": {
-    "modified": "2020-07-16T22:22:43.732Z",
-    "contributors": [
-      "hebby"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
-    "modified": "2020-07-16T22:22:33.856Z",
-    "contributors": [
-      "Dorence",
-      "Banhave",
-      "boltyu",
-      "TheaAo",
-      "wth",
-      "Samoay",
-      "ziyunfei",
-      "Y001",
-      "Mgjbot",
-      "Carrie zhxj"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
-    "modified": "2020-07-16T22:22:37.588Z",
-    "contributors": [
-      "zhangchen",
-      "hhxxhg",
-      "lavenderming",
-      "xgqfrms-GitHub",
-      "hellotaotao",
-      "Go7hic",
-      "marshalYuan",
-      "monjer",
-      "Deryckxie"
     ]
   },
   "Learn_web_development/Howto/Solve_JavaScript_problems": {
@@ -10786,14 +10745,6 @@
       "EugeneZeng"
     ]
   },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-01-30T13:21:03.275Z",
-    "contributors": [
-      "chrisdavidmills",
-      "lon",
-      "ziyunfei"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2019-03-23T22:58:48.150Z",
     "contributors": [
@@ -13131,6 +13082,16 @@
       "libmw"
     ]
   },
+  "Web/API/HTMLDialogElement/showModal": {
+    "modified": "2019-07-21T23:38:59.262Z",
+    "contributors": [
+      "fanyue",
+      "SphinxKnight",
+      "teoli",
+      "ziyunfei",
+      "c_king"
+    ]
+  },
   "Web/API/HTMLDivElement": {
     "modified": "2020-10-15T22:00:23.173Z",
     "contributors": [
@@ -13208,22 +13169,6 @@
       "teoli",
       "AshfaqHossain",
       "ziyunfei"
-    ]
-  },
-  "Web/API/HTMLElement/copy_event": {
-    "modified": "2019-03-24T00:18:09.591Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
-    ]
-  },
-  "Web/API/HTMLElement/cut_event": {
-    "modified": "2019-03-24T00:18:03.706Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
     ]
   },
   "Web/API/HTMLElement/dir": {
@@ -13411,14 +13356,6 @@
       "ScaredKitty",
       "weiqinl",
       "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/HTMLElement/paste_event": {
-    "modified": "2019-03-24T00:18:09.700Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
     ]
   },
   "Web/API/HTMLElement/title": {
@@ -20832,12 +20769,6 @@
       "maicss"
     ]
   },
-  "Web/API/Window/copy_event": {
-    "modified": "2020-10-15T22:30:15.212Z",
-    "contributors": [
-      "Jee"
-    ]
-  },
   "Web/API/Window/createImageBitmap": {
     "modified": "2019-03-18T20:44:01.174Z",
     "contributors": [
@@ -21677,16 +21608,6 @@
       "khalid32",
       "Meteormatt",
       "ziyunfei"
-    ]
-  },
-  "Web/API/Window/showModalDialog": {
-    "modified": "2019-07-21T23:38:59.262Z",
-    "contributors": [
-      "fanyue",
-      "SphinxKnight",
-      "teoli",
-      "ziyunfei",
-      "c_king"
     ]
   },
   "Web/API/Window/sizeToContent": {
@@ -24595,6 +24516,14 @@
       "RainSlide",
       "zjffun",
       "LuXuanqing"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-01-30T13:21:03.275Z",
+    "contributors": [
+      "chrisdavidmills",
+      "lon",
+      "ziyunfei"
     ]
   },
   "Web/CSS/CSS_text_decoration": {
@@ -28195,28 +28124,6 @@
       "TimZhao"
     ]
   },
-  "Web/Events": {
-    "modified": "2020-08-14T06:47:09.660Z",
-    "contributors": [
-      "lc15011977647",
-      "pe4ch",
-      "RainSlide",
-      "wbamberg",
-      "zhangchen",
-      "purcy",
-      "WjmNightingale",
-      "plter",
-      "XiaoyaoChen",
-      "BobGreen",
-      "xgqfrms-GitHub",
-      "zliy",
-      "tcatche",
-      "Ende93",
-      "ziyunfei",
-      "ReyCG_sub",
-      "louisremi"
-    ]
-  },
   "Web/HTML": {
     "modified": "2020-05-18T02:45:10.401Z",
     "contributors": [
@@ -28317,6 +28224,27 @@
       "xuqisheng"
     ]
   },
+  "Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image": {
+    "modified": "2020-07-16T22:22:43.732Z",
+    "contributors": [
+      "hebby"
+    ]
+  },
+  "Web/HTML/How_to/Author_fast-loading_HTML_pages": {
+    "modified": "2020-07-16T22:22:33.856Z",
+    "contributors": [
+      "Dorence",
+      "Banhave",
+      "boltyu",
+      "TheaAo",
+      "wth",
+      "Samoay",
+      "ziyunfei",
+      "Y001",
+      "Mgjbot",
+      "Carrie zhxj"
+    ]
+  },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2020-05-06T06:27:48.960Z",
     "contributors": [
@@ -28328,6 +28256,20 @@
       "kmc947373",
       "ziyunfei",
       "Breezewish"
+    ]
+  },
+  "Web/HTML/How_to/Use_data_attributes": {
+    "modified": "2020-07-16T22:22:37.588Z",
+    "contributors": [
+      "zhangchen",
+      "hhxxhg",
+      "lavenderming",
+      "xgqfrms-GitHub",
+      "hellotaotao",
+      "Go7hic",
+      "marshalYuan",
+      "monjer",
+      "Deryckxie"
     ]
   },
   "Web/HTML/Reference": {
@@ -33088,7 +33030,7 @@
       "bumaociyuan"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_properties": {
+  "Web/JavaScript/Reference/Classes/Private_elements": {
     "modified": "2020-10-15T22:30:12.129Z",
     "contributors": [
       "zhuangyin",
@@ -41261,12 +41203,6 @@
       "876843240"
     ]
   },
-  "Web/SVG/Reference/Attribute/accent-height": {
-    "modified": "2019-07-05T08:35:14.107Z",
-    "contributors": [
-      "yvonneit"
-    ]
-  },
   "Web/SVG/Reference/Attribute/accumulate": {
     "modified": "2019-03-23T22:32:55.125Z",
     "contributors": [
@@ -41840,14 +41776,6 @@
       "huyue"
     ]
   },
-  "Web/SVG/Reference/Element/cursor": {
-    "modified": "2020-10-15T21:39:22.908Z",
-    "contributors": [
-      "knightyun",
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
   "Web/SVG/Reference/Element/defs": {
     "modified": "2019-03-23T23:05:33.636Z",
     "contributors": [
@@ -42057,49 +41985,6 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Reference/Element/font": {
-    "modified": "2019-03-23T22:43:54.105Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie",
-      "charlie"
-    ]
-  },
-  "Web/SVG/Reference/Element/font-face": {
-    "modified": "2019-03-23T23:04:56.439Z",
-    "contributors": [
-      "Sebastianz",
-      "charlie"
-    ]
-  },
-  "Web/SVG/Reference/Element/font-face-format": {
-    "modified": "2019-03-23T22:46:32.676Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Reference/Element/font-face-name": {
-    "modified": "2019-03-23T22:46:33.056Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Reference/Element/font-face-src": {
-    "modified": "2019-03-18T20:41:42.540Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Reference/Element/font-face-uri": {
-    "modified": "2019-03-23T22:46:38.431Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
   "Web/SVG/Reference/Element/foreignObject": {
     "modified": "2020-10-15T21:39:29.342Z",
     "contributors": [
@@ -42117,28 +42002,6 @@
       "Sebastianz",
       "fanxiaojie",
       "monjer"
-    ]
-  },
-  "Web/SVG/Reference/Element/glyph": {
-    "modified": "2019-03-23T22:55:52.238Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie",
-      "charlie"
-    ]
-  },
-  "Web/SVG/Reference/Element/glyphRef": {
-    "modified": "2019-03-23T22:46:32.815Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Reference/Element/hkern": {
-    "modified": "2019-03-23T22:46:35.411Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie"
     ]
   },
   "Web/SVG/Reference/Element/image": {
@@ -42192,15 +42055,6 @@
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Reference/Element/missing-glyph": {
-    "modified": "2019-03-23T23:04:57.001Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie",
-      "fonglezen",
-      "charlie"
     ]
   },
   "Web/SVG/Reference/Element/mpath": {
@@ -42344,14 +42198,6 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Reference/Element/tref": {
-    "modified": "2019-03-23T23:05:44.122Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie",
-      "baiya"
-    ]
-  },
   "Web/SVG/Reference/Element/tspan": {
     "modified": "2019-03-23T23:29:30.380Z",
     "contributors": [
@@ -42373,14 +42219,6 @@
   "Web/SVG/Reference/Element/view": {
     "modified": "2019-06-15T03:14:56.821Z",
     "contributors": [
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Reference/Element/vkern": {
-    "modified": "2020-10-15T21:39:26.145Z",
-    "contributors": [
-      "RainSlide",
       "Sebastianz",
       "fanxiaojie"
     ]

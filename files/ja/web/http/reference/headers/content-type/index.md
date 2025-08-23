@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Content-Type`** は{{Glossary("representation header","表現ヘッダー")}}で、コンテンツへのエンコードが適用される前の、リソースの元の{{Glossary("MIME type","メディア種別")}}を示すために使用します。
 
 レスポンスにおいては、 `Content-Type` ヘッダーはクライアントに返されたコンテンツの実際の種類を伝えます。
@@ -28,7 +26,7 @@ HTTP の **`Content-Type`** は{{Glossary("representation header","表現ヘッ�
       <td>{{Glossary("Representation header", "表現ヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
     <tr>
@@ -67,10 +65,8 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
 ## ディレクティブ
 
 - `<media-type>`
-
   - : リソースやデータの [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
     以下の引数を付けることができます。
-
     - **`charset`**: 標準で使用する{{Glossary("character encoding","文字エンコーディング")}}を示します。
       この値は大文字小文字を区別しませんが、小文字を推奨します。
     - **`boundary`**: 本文がマルチパートである場合、 `boundary` ディレクティブが必要です。

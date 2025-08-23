@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Expose-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Expose-Headers`** レスポンスヘッダーは、レスポンスの一部としてどのヘッダーを公開するかを、その名前を列挙して示します。
 
 既定では、公開される {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}は 7 つだけです。
@@ -30,7 +28,7 @@ original_slug: Web/HTTP/Headers/Access-Control-Expose-Headers
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>

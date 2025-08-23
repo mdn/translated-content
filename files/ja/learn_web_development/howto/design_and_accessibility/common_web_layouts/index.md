@@ -1,12 +1,9 @@
 ---
 title: 一般的なウェブレイアウトには何が含まれているのか
 slug: Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
-original_slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 l10n:
-  sourceCommit: cbd8527cf4df0464c4724b73161e4f7721301616
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 ウェブサイトのページをデザインする際、最も一般的なレイアウトを把握しておくとよいでしょう。
 
@@ -15,7 +12,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        ウェブプロジェクトで<a href="/ja/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding">何を実現したいのか</a>について既に考えていること。
+        ウェブプロジェクトで<a href="/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding">何を実現したいのか</a>について既に考えていること。
       </td>
     </tr>
     <tr>
@@ -74,15 +71,15 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ### 1 列レイアウト
 
-**[Invision application](https://www.invisionapp.com/)**. 一般的な 1 列レイアウトで、ひとつのページにすべての情報を直線的に提供するものです。
+一般的な 1 列レイアウトで、ひとつのページにすべての情報を直線的に提供するものです。
 
-![1　列レイアウトの例](screenshot-product.jpg) ![ヘッダー、本文、サイド記事の積み重ね、フッターの1列レイアウト](screenshot-product-overlay.jpg)
+![1 列レイアウトの例](screenshot-product.jpg) ![ヘッダー、本文、サイド記事の積み重ね、フッターの1列レイアウト](screenshot-product-overlay.jpg)
 
 とても簡単です。ただ、たくさんの人がデスクトップ PC からサイトを閲覧することに変わりはないので、デスクトップでも使いやすく、読みやすいコンテンツにしてください。
 
 ### 2 列レイアウト
 
-**[Abduzeedo](https://abduzeedo.com/typography-mania-261)** はシンプルなブログレイアウトです。ブログは通常、 2 つの列を持っています。太い列は本分用で、細い列は横に並べるもの（ウィジェット、副次ナビゲーションレベル、広告など）用の列です。
+ブログは通常、 2 つの列を持っています。太い列は本分用で、細い列は横に並べるもの（ウィジェット、副次ナビゲーションレベル、広告など）用の列です。
 
 ![ブログの 2 列レイアウトの例](screenshot-blog.jpg) ![左列に本文を配置した 2 列組みのレイアウト。](screenshot-blog-overlay.jpg)
 
@@ -108,4 +105,4 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 基本的には 2 列レイアウトですが、視覚的にレイアウトを崩すような工夫があちこちに見受けられます。特に、ヘッダーが本文の画像に重なっていること。ヘッダーのメニューの曲線と画像の下部の曲線が結びついて、ヘッダーと本文は技術的には完全に別物であるにもかかわらず、一つのもののように見えます。 Opera の例は MICA の例よりも複雑に見えますが、実際には簡単に実装できます（正確には、「簡単」というのは相対的な概念です）。
 
-このように、基本的なレイアウトだけでも、魅力的なウェブサイトを作ることができます。自分の好きなウェブサイトを保有し、ヘッダー、フッター、本文、サイドコンテンツはどこにあるのか、自問してみてください。これはうまくいくデザイン、いかないデザインのヒントになりますよ。
+このように、基本的なレイアウトだけでも、魅力的なウェブサイトを作ることができます。自分の好きなウェブサイトを保有し、ヘッダー、フッター、本文、サイドコンテンツはどこにあるのか、自問してみてください。これはうまくいくデザイン、いかないデザインのヒントになります。

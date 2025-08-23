@@ -9,7 +9,7 @@ l10n:
 
 **`valueOf()`** は {{jsxref("Object")}} インスタンスのメソッドで、 `this` 値を[オブジェクトに](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#オブジェクト変換)変換します。このメソッドは、派生オブジェクトでは独自の[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)ロジックのためにオーバーライドされるためのものです。
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+{{InteractiveExample("JavaScript デモ: Object.prototype.valueOf()")}}
 
 ```js interactive-example
 function MyNumberType(n) {

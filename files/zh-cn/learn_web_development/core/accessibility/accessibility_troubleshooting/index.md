@@ -3,8 +3,6 @@ title: 挑战：无障碍疑难解答
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
 
 在本模块的测验环节中，我们将呈现一个含有若干无障碍问题的简单网站，你需要对它进行诊断并修复这些问题。

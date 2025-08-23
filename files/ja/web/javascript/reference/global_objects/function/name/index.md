@@ -133,7 +133,7 @@ f.name; // "f"
 
 ### 初期化子と既定値
 
-[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#既定値)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)などの初期化子（既定値）の関数は、バインド済みの識別子の名前を `name` として継承します。
+[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#既定値)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)などの初期化子（既定値）の関数は、バインド済みの識別子の名前を `name` として継承します。
 
 ```js
 const [f = () => {}] = [];
@@ -215,7 +215,7 @@ o[sym1].name; // "[foo]"
 o[sym2].name; // "[]"
 ```
 
-### プライベートプロパティ
+### プライベートフィールドとメソッド
 
 プライベートフィールドとプライベートメソッドは、ハッシュ記号 (`#`) が名前の一部に含まれます。
 
@@ -283,7 +283,8 @@ console.log(Foo.name); // Foo に静的な "name" がある場合は "Hello"、�
 
 ### JavaScript 圧縮ツールおよび最小化ツール
 
-> **警告:** `name` プロパティを使用しているときに、 JavaScript の圧縮（ミニファイ）や難読化のような変換を行う際には注意が必要です。これらのツールは JavaScript ビルドパイプラインの一部として、本番環境に設置する前にプログラムのサイズを縮小するためによく使用されます。これらの変換は、ビルド時に関数名を変更することがあります。
+> [!WARNING]
+> `name` プロパティを使用しているときに、 JavaScript の圧縮（ミニファイ）や難読化のような変換を行う際には注意が必要です。これらのツールは JavaScript ビルドパイプラインの一部として、本番環境に設置する前にプログラムのサイズを縮小するためによく使用されます。これらの変換は、ビルド時に関数名を変更することがあります。
 
 次のようなソースコードは、
 

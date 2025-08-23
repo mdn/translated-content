@@ -1,9 +1,9 @@
 ---
-title: 後方互換モード
+title: 後方互換モードと標準モードを理解する
+short-title: 後方互換モードと標準モード
 slug: Web/HTML/Guides/Quirks_mode_and_standards_mode
-original_slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 l10n:
-  sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Host
 original_slug: Web/HTTP/Headers/Host
 ---
 
-{{HTTPSidebar}}
-
 **`Host`** リクエストヘッダーは、リクエストが送信される先のサーバーのホスト名とポート番号を指定します。
 
 ポート番号が指定されなかった場合は、要求されたサービスの既定のポート（例えば HTTPS の URL であれば`443`、 HTTP の URL であれば `80`）とみなされます。
@@ -22,7 +20,7 @@ original_slug: Web/HTTP/Headers/Host
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>はい</td>
     </tr>

@@ -1,16 +1,15 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
-original_slug: Web/HTML/Element/input/datetime-local
 l10n:
-  sourceCommit: 1977c6e57be71ba31aaadec114ccdaca41c2019c
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 {{htmlelement("input")}} 要素の **`datetime-local`** 型は、ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="meeting-time">Choose a time for your appointment:</label>
@@ -192,7 +191,8 @@ input:valid + span::after {
 > [!WARNING]
 > HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、誤った種類のデータなど）が送信された場合に問題が発生するおそれがあります。
 
-> **メモ:** `datetime-local` の入力欄では、日時の値は常に `YYYY-MM-DDTHH:mm` の書式に正規化されます。
+> [!NOTE]
+> `datetime-local` の入力欄では、日時の値は常に `YYYY-MM-DDTHH:mm` の書式に正規化されます。
 
 ## 例
 
@@ -233,7 +233,8 @@ input:valid + span::after {
 
 有効な範囲には `min` と `max` の値の間のすべての時刻が含まれます。時刻は範囲内の最初の日と最後の日でのみ制約されます。
 
-> **メモ:** [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用して、時刻が増加するたびにジャンプする日数を変えることができるはずです（例えば、土曜日だけを選択可能にしたい場合など）。しかし、これは執筆時の実装では効果的に動作していないようです。
+> [!NOTE]
+> [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用して、時刻が増加するたびにジャンプする日数を変えることができるはずです（例えば、土曜日だけを選択可能にしたい場合など）。しかし、これは執筆時の実装では効果的に動作していないようです。
 
 ## 技術的概要
 
@@ -254,17 +255,17 @@ input:valid + span::after {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
         <code>valueAsDate</code>,
         <code>valueAsNumber</code>
       </td>

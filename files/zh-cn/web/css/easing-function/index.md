@@ -3,8 +3,6 @@ title: <easing-function>
 slug: Web/CSS/easing-function
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<easing-function>`** 表示描述某数值变化速率的数学函数。
 
 这种两值之间的过渡可应用于不同情境，可用于描述属性值在动画中变化的快慢程度，由此得以在动画的持续过程中改变其速度。你可为 CSS [过渡](/zh-CN/docs/Web/CSS/transition-timing-function)和[动画](/zh-CN/docs/Web/CSS/animation-timing-function)指定缓动函数。
@@ -35,43 +33,34 @@ step-end
 ### 取值
 
 - `<point-list>`
-
   - : 线性定格列表。
 
 - `linear`
-
   - : 表示线性插值。此关键字表示缓动函数 `linear(0, 1)`。
 
 ![“输出进度”关于“输入进度”的图像，展示了从原点延伸至 (1, 1) 的直线](linear.svg)
 
 - `<x1>`, `<y1>`, `<x2>`, `<y2>`
-
   - : 表示定义三次贝塞尔曲线的 [P1 和 P2 点](#三次贝塞尔函数)的横纵坐标的 {{CSSXref("&lt;number&gt;")}} 值。`x1` 和 `x2` 须位于 `[0, 1]` 范围中，否则此值无效。
 
 - `ease`
-
   - : 表示插值缓慢开始，陡然加速，再逐渐减速至结束。此关键字表示缓动函数 `cubic-bezier(0.25, 0.1, 0.25, 1.0)`。其与 [`ease-in-out`](#ease-in-out) 相似，但在开始时加速更陡。
 
 - `ease-in`
-
   - : 表示插值缓慢开始，再逐渐加速至结束，最终突然停止。此关键字表示缓动函数 `cubic-bezier(0.42, 0.0, 1.0, 1.0)`。
 
 - `ease-out`
-
   - : 表示插值突然开始，再逐渐减速至结束。此关键字表示缓动函数 `cubic-bezier(0.0, 0.0, 0.58, 1.0)`。
 
 - `ease-in-out`
-
   - : 表示插值缓慢开始，然后加速，再减速至结束。此关键字表示缓动函数 `cubic-bezier(0.42, 0.0, 0.58, 1.0)`。在开始时，此关键字表现同 [`ease-in`](#ease-in) 关键字；在结束时，表现同 [`ease-out`](#ease-out) 关键字。
 
 ![“输出进度”关于“输入进度”的图像，其中“ease”展示了从原点快速升至 (1, 1) 的曲线；“ease-in”展示了发自原点且在接近 (1, 1) 时变平的略微弯曲的线；“ease-out”展示了在接近 (1, 1) 时略微变弯的斜线；“ease-in-out”展示了从原点到 (1, 1) 的对称 S 形曲线](ease.svg)
 
 - `<number-of-steps>`
-
   - : 严格正的 {{CSSXref("&lt;integer&gt;")}}，表示构成阶跃函数的等距步数。
 
 - `<direction>`
-
   - : 下列表示跳跃何时出现的关键字之一：
     - `jump-start` 表示第一步（即第一次跳跃）在插值开始时发生。
     - `jump-end` 表示最后一步（即最后一次跳跃）在插值结束时发生。
@@ -81,11 +70,9 @@ step-end
     - `end` 与 `jump-end` 等价。此关键字为默认值。
 
 - `step-start`
-
   - : 表示插值立即跳跃至其最终状态，再保持至结束。此关键字表示缓动函数 `steps(1, jump-start)` 或 `steps(1, start)`。
 
 - `step-end`
-
   - : 表示插值保持其初始状态至结束，再直接跳跃至其最终状态。此关键字表示缓动函数 `steps(1, jump-end)` 或 `steps(1, end)`。
 
 ![“输出进度”关于“输入进度”的图像，其中“step-start”展示了空心原点和从 (0, 1) 延伸至 (1, 1) 的水平直线；“step-end”展示了从原点延伸至 (1, 0)（空心）的水平直线和位于 (1, 1) 的点](step.svg)

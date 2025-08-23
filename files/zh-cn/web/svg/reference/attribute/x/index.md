@@ -7,7 +7,6 @@ slug: Web/SVG/Reference/Attribute/x
 
 你可以在以下 SVG 元素中使用该属性：
 
-- {{SVGElement("cursor")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}
 - {{SVGElement("feComponentTransfer")}}
@@ -34,7 +33,6 @@ slug: Web/SVG/Reference/Attribute/x
 - {{SVGElement("feTurbulence")}}
 - {{SVGElement("filter")}}
 - {{SVGElement("foreignObject")}}
-- {{SVGElement("glyphRef")}}
 - {{SVGElement("image")}}
 - {{SVGElement("mask")}}
 - {{SVGElement("pattern")}}
@@ -42,7 +40,6 @@ slug: Web/SVG/Reference/Attribute/x
 - {{SVGElement("svg")}}
 - {{SVGElement("symbol")}}
 - {{SVGElement("text")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 - {{SVGElement("use")}}
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content")}}
 
 在本测验中，我们将测试你对于本模块文章所介绍的技术的掌握程度。你需要将一些有关于 Mozilla 的图片和视频添加到一个漂亮的页面上！
 

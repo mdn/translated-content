@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/SourceMap
 original_slug: Web/HTTP/Headers/SourceMap
 ---
 
-{{HTTPSidebar}}
-
 **`SourceMap`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーは、生成されたコードを[ソースマップ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)にリンクし、ブラウザーが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。
 
 <table class="properties">
@@ -15,7 +13,7 @@ original_slug: Web/HTTP/Headers/SourceMap
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>

@@ -3,7 +3,7 @@ title: React 新手入門
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在本文中，我們將向 React 打個招呼。我們將探索其背後與範例的一些細節，在自己電腦設置基本的 React 工具鏈環境，並建立一個簡單入門的應用程式——好瞭解 React 基本架構。
 

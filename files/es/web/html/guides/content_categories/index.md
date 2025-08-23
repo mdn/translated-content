@@ -34,9 +34,9 @@ Los elementos que pertenecen a la categoría de flujo de contenido suelen conten
 Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una condición específica:
 
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} [`scoped`](/es/docs/Web/HTML/Element/style#scoped)
+- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Reference/Global_attributes#attr-itemprop)
+- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Reference/Global_attributes#attr-itemprop)
+- {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} [`scoped`](/es/docs/Web/HTML/Reference/Elements/style#scoped)
 
 ### Contenido de sección
 
@@ -45,7 +45,7 @@ Los elementos que pertenecen al modelo de contenido de secciones crean una [secc
 Los elementos que pertenecen a esta categoría son {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} y {{HTMLElement("section")}}.
 
 > [!NOTE]
-> No confundas este modelo de contenido con la categoría de [seccionado raíz](/es/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), que aísla su contenido del esquema regular.
+> No confundas este modelo de contenido con la categoría de [seccionado raíz](/es/docs/Web/HTML/Reference/Elements/Heading_Elements#sectioning_roots), que aísla su contenido del esquema regular.
 
 ### Contenido del encabezado
 
@@ -71,9 +71,9 @@ Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, si solo incluye contenido de redacción
 - {{HTMLElement("ins")}}, si solo incluye contenido de redacción
-- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#itemprop)
+- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Reference/Global_attributes#itemprop)
 - {{HTMLElement("map")}}, si solo incluye contenido de redacción
-- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#itemprop)
+- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Reference/Global_attributes#itemprop)
 
 ### Contenido incrustado
 
@@ -84,12 +84,12 @@ El contenido incrustado importa otro recurso o inserta contenido de otro lenguaj
 El contenido interactivo incluye elementos diseñados específicamente para la interacción del usuario. Los elementos que pertenecen a esta categoría incluyen: {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}} y {{HTMLElement("textarea")}}.
 Algunos elementos pertenecen a esta categoría solo bajo condiciones específicas:
 
-- {{HTMLElement("audio")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Element/audio#controls)
-- {{HTMLElement("img")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Element/img#usemap)
-- {{HTMLElement("input")}}, si el atributo [`type`](/es/docs/Web/HTML/Element/input#type) no está en estado oculto
-- {{HTMLElement("menu")}}, si el atributo [`type`](/es/docs/Web/HTML/Element/menu#type) está en la barra de estado de herramientas
-- {{HTMLElement("object")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Element/object#usemap)
-- {{HTMLElement("video")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Element/video#controls)
+- {{HTMLElement("audio")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Reference/Elements/audio#controls)
+- {{HTMLElement("img")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Reference/Elements/img#usemap)
+- {{HTMLElement("input")}}, si el atributo [`type`](/es/docs/Web/HTML/Reference/Elements/input#type) no está en estado oculto
+- {{HTMLElement("menu")}}, si el atributo [`type`](/es/docs/Web/HTML/Reference/Elements/menu#type) está en la barra de estado de herramientas
+- {{HTMLElement("object")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Reference/Elements/object#usemap)
+- {{HTMLElement("video")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Reference/Elements/video#controls)
 
 ### Contenido palpable
 

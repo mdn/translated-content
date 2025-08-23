@@ -1,16 +1,15 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
-original_slug: Web/HTML/Element/input/search
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリーを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) 入力欄と機能的には同じですが、{{Glossary("User agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="site-search">Search the site:</label>
@@ -35,7 +34,7 @@ label {
 
 ## 値
 
-[`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では [`HTMLInputElement.value`](/ja/docs/Web/API/HTMLInputElement#value) プロパティを使ってこれを受け取ることができます。
+[`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では [`HTMLInputElement.value`](/ja/docs/Web/API/HTMLInputElement/value) プロパティを使ってこれを受け取ることができます。
 
 ```js
 searchTerms = mySearch.value;
@@ -69,7 +68,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> [!NOTE]
+> [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細や例については[パターンの指定](#パターンの指定)を参照してください。
 
@@ -431,14 +431,14 @@ input:valid ~ span::after {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -459,8 +459,8 @@ input:valid ~ span::after {
     </tr>
      <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role">searchbox</a></code></td>
-      <td><code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+      <td><code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role">searchbox</a></code></td>
+      <td><code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>

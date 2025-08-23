@@ -12,7 +12,7 @@ l10n:
 
 既定では、 `<pre>` は[ブロックレベル](/ja/docs/Glossary/Block-level_content)要素であり、 {{cssxref("display")}} の既定値は `block` です。
 
-{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;pre&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <pre>
@@ -162,7 +162,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

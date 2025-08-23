@@ -1,12 +1,10 @@
 ---
 title: MathML の属性値
+short-title: 属性値
 slug: Web/MathML/Reference/Values
-original_slug: Web/MathML/Values
 l10n:
-  sourceCommit: 1bb0a2834d8e90495319ee9e52ecbc55e856e913
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
-
-{{MathMLRef}}
 
 ## MathML 固有の型
 

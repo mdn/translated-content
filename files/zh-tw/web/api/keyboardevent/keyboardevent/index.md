@@ -18,9 +18,7 @@ slug: Web/API/KeyboardEvent/KeyboardEvent
 - `type`
   - : 一 {{domxref("DOMString")}} 用來表示事件名稱。
 - `options` {{optional_inline}}
-
   - : 一個 `KeyboardEventInit` dictionary，能接受以下參數：
-
     - `key` {{optional_inline}}
       - : 一個字符串，默認值為 `""`，用來設定 {{domxref("KeyboardEvent.key")}} 的值。
     - `code` {{optional_inline}}
@@ -46,7 +44,8 @@ slug: Web/API/KeyboardEvent/KeyboardEvent
     - `which` {{optional_inline}}
       - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.which")}} 的值
 
-> **備註：** _`KeyboardEventInit` dictionary 亦接受 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和{{domxref("Event.Event", "EventInit")}} 所接受的參數。_
+> [!NOTE]
+> _`KeyboardEventInit` dictionary 亦接受 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和{{domxref("Event.Event", "EventInit")}} 所接受的參數。_
 
 ## 規格
 

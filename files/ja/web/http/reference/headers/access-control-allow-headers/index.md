@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Headers`** レスポンスヘッダーは、 {{HTTPHeader("Access-Control-Request-Headers")}} を含む{{glossary("preflight request", "プリフライトリクエスト")}}へのレスポンスで、実際のリクエストの間に使用できる HTTP ヘッダーを示すために使用されます。
 
 このヘッダーは、リクエストに {{HTTPHeader("Access-Control-Request-Headers")}} ヘッダーが含まれている時に必要です。
@@ -20,7 +18,7 @@ original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>

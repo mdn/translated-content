@@ -184,7 +184,7 @@ fetch("products.json")
 
 이 함수 내부는 다음과 같습니다.
 
-- 서버가 오류(예: [404 Not Found](/ko/docs/Web/HTTP/Status/404))를 반환하지 않았는지 확인하십시오. 오류가 발생하면 예외를 발생시킵니다.
+- 서버가 오류(예: [404 Not Found](/ko/docs/Web/HTTP/Reference/Status/404))를 반환하지 않았는지 확인하십시오. 오류가 발생하면 예외를 발생시킵니다.
 - 응답 시 {{domxref("Response.json","json()")}}를 호출합니다. 그러면 [JSON 객체](/ko/docs/Learn_web_development/Core/Scripting/JSON)로 데이터를 가져옵니다. 우리는 `response.json()`가 반환한 promise를 반환합니다.
 
 다음으로 반환된 promise의 `then()` 메서드에 함수를 전달합니다. 이 함수는 응답 데이터를 JSON으로 포함하는 객체를 받고, 이를 `initialize()` 함수에 전달합니다. 사용자 인터페이스에 모든 제품을 표시하는 프로세스를 시작하는 함수입니다.
@@ -262,7 +262,7 @@ Fetch API가 이보다 더 개선된 것이라고 생각하기를 바랍니다. 
 - [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [JSON data 사용하기](/ko/docs/Learn_web_development/Core/Scripting/JSON)
-- [HTTP 개요](/ko/docs/Web/HTTP/Overview)
+- [HTTP 개요](/ko/docs/Web/HTTP/Guides/Overview)
 - [Server-side 웹 사이트 프로그래밍](/ko/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

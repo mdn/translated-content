@@ -10,7 +10,7 @@ l10n:
 
 **`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢のグループを作成します。
 
-{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;optgroup&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="dino-select">Choose a dinosaur:</label>
@@ -96,7 +96,7 @@ label {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

@@ -98,7 +98,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-[Closures](/pt-BR/docs/Web/JavaScript/Closures) são úteis como forma de criar funcções parametrizáveis sem concatenar strings.
+[Closures](/pt-BR/docs/Web/JavaScript/Guide/Closures) são úteis como forma de criar funcções parametrizáveis sem concatenar strings.
 
 ### Analisando JSON (convertendo string para objetos JavaScript)
 

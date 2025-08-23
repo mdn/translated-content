@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
 original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
 
-{{HTTPSidebar}}
-
 ## Motivo
 
 ```
@@ -48,4 +46,4 @@ add_header 'Access-Control-Allow-Origin' 'origin-list'
 
 - [CORS errors (Erros do CORS)](/pt-BR/docs/Web/HTTP/CORS/Errors)
 - Glossário: {{Glossary("CORS")}}
-- [CORS introduction (Introdução ao CORS)](/pt-BR/docs/Web/HTTP/CORS)
+- [CORS introduction (Introdução ao CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS)

@@ -10,7 +10,7 @@ l10n:
 
 **`<hr>`** は [HTML](/ja/docs/Web/HTML) の要素で、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
 
-{{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;hr&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
@@ -112,12 +112,12 @@ hr::after {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> または <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> または <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

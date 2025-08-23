@@ -1,9 +1,8 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
-original_slug: Web/HTML/Element/input/date
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -12,7 +11,7 @@ l10n:
 
 結果の値には年、月、日が含まれますが、時刻は含まれません。 {{HTMLElement("input/time", "time")}} および {{HTMLElement("input/datetime-local", "datetime-local")}} 入力型は時刻や日付と時刻の入力に対応しています。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="start">Start date:</label>
@@ -93,7 +92,8 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 `date` 入力欄では、 `step` の値は日単位で指定します。また、 86,400,000 に `step` を乗じた値に等しいミリ秒数として扱われます（数値はミリ秒単位であるため）。 `step` の既定値は `1` であり、 1 日を表します。
 
-> **メモ:** `any` を `step` 属性の値として指定すると、 `1` を `date` 入力欄に設定したのと同じ効果になります。
+> [!NOTE]
+> `any` を `step` 属性の値として指定すると、 `1` を `date` 入力欄に設定したのと同じ効果になります。
 
 ## date 入力欄の使用
 
@@ -255,16 +255,16 @@ input:valid + span::after {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
         <code>valueAsDate</code>,
         <code>valueAsNumber</code>
       </td>

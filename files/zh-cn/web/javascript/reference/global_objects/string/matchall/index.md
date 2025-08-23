@@ -31,7 +31,6 @@ matchAll(regexp)
 ### 参数
 
 - `regexp`
-
   - : 一个正则表达式对象，或者是任何具有 [`Symbol.matchAll`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll) 方法的对象。
 
     如果 `regexp` 不是一个 `RegExp` 对象，并且没有 `Symbol.matchAll` 方法，它将通过 `new RegExp(regexp, 'g')` 被隐式转换为一个 {{jsxref("RegExp")}} 对象。

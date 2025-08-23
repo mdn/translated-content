@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a53253307ade5c6e3eec896a5f2d799fdebe9ae8
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
 在这篇文章中，我们将讨论进行简单 Web 开发所需的软件以及哪些软件是现在就需要安装的，包括代码编辑器和现代 Web 浏览器。

@@ -1,16 +1,15 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
-original_slug: Web/HTML/Element/input/email
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`email`** 型は、ユーザーに一つのメールアドレス、または、 [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 属性が設定されていた場合は、メールアドレスのリストを入力および編集させるために使用します。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="email">Enter your example.com email:</label>
@@ -39,7 +38,7 @@ label {
 {{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性には文字列が入り、メールアドレスの構文に合うかどうかが自動的に検証されます。具体的には、検証に通ることができる値の書式には 3 種類があります。
 
 1. 空文字列 ("")。ユーザーが値を入力しないか、または値が削除されたことを表します。
-2. 単一の正しい形式のメールアドレス。メールアドレスが実在する必要はありませんが、少なくとも正しい書式です。簡単に言えば、 `username@domain` または `username@domain.tld` の形です。もちろんそれ以上のものもあります。[検証](#検証)の節で、メールアドレスの検証アルゴリズムで一致する{{Glossary("Regular expression", "正規表現")}}について参照してください。
+2. 単一の正しい形式のメールアドレス。メールアドレスが実在する必要はありませんが、少なくとも正しい書式です。これは、 `username@domain` または `username@domain.tld` の形です。もちろんそれ以上のものもあります。[検証](#検証)の節で、メールアドレスの検証アルゴリズムで一致する{{Glossary("Regular expression", "正規表現")}}について参照してください。
 3. [`multiple`](/ja/docs/Web/HTML/Reference/Elements/input#multiple) 属性が指定されたとき（のみ）、値はカンマ区切りで複数の正しい形式のメールアドレスを入れることができます。それぞれのメールアドレスの前後にある空白は除去されます。
 
 [検証](#検証)の節で、どのようなメールアドレスが正しい形式であると検証されるかの詳細を参照してください。
@@ -80,7 +79,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> [!NOTE]
+> [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細と例については[パターン検証](#パターン検証)の節を参照してください。
 
@@ -139,7 +139,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 入力欄は単一のメールアドレスが入力された時や、任意の数のメールアドレスをカンマ区切りで入力した場合、その中にホワイトスペース文字がある場合も有効として扱われるようになります。
 
-> **メモ:** `multiple` が使用されると、値を空欄にすることが許可されます。
+> [!NOTE]
+> `multiple` が使用されると、値を空欄にすることが許可されます。
 
 `multiple` が指定された場合に有効な文字列の例をいくつか示します。
 
@@ -375,18 +376,18 @@ label::after {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#name"><code>name</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#multiple"><code>multiple</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#name"><code>name</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a>
       </td>
     </tr>
     <tr>
@@ -407,9 +408,9 @@ label::after {
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td>
         <code>list</code> 属性がない場合:
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code><br />
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code><br />
         <code>list</code> 属性がある場合:
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>
       </td>
     </tr>
   </tbody>

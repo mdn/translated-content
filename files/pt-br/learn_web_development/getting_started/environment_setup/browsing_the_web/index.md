@@ -58,7 +58,7 @@ Comparemos a biblioteca com um servidor web:
 
 ## Aprendizado ativo
 
-_Ainda não há nenhum aprendizado ativo. [Por favor, considere fazer uma contribuição](/pt-BR/docs/MDN/Community/Contributing/Getting_started)._
+_Ainda não há nenhum aprendizado ativo. [Por favor, considere fazer uma contribuição](/pt-BR/docs/MDN/Community/Getting_started)._
 
 ## Imersão a Fundo
 
@@ -108,5 +108,5 @@ Aqui há uma instância do Firefox mostrando uma caixa de pesquisa do Google com
 
 ## Próximos passos
 
-- Escavando a fundo: [O que é um servidor web](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- Veja como páginas web são vinculadas dentro de um website: [Entendendo links na web](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
+- Escavando a fundo: [O que é um servidor web](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
+- Veja como páginas web são vinculadas dentro de um website: [Entendendo links na web](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks)

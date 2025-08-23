@@ -107,6 +107,6 @@ Tanto as intranets quanto as extranets são executadas no mesmo tipo de infraest
 
 ## Próximos passos
 
-- [Como a Web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Entendendo a diferença entre uma página web, um website, um servidor web e um mecânismo de pesquisa](/pt-BR/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
-- [Entendendo nomes de domínio](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Como a Web funciona](/pt-BR/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
+- [Entendendo a diferença entre uma página web, um website, um servidor web e um mecânismo de pesquisa](/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
+- [Entendendo nomes de domínio](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

@@ -2,20 +2,17 @@
 title: HTTP リクエストメソッド
 short-title: リクエストメソッド
 slug: Web/HTTP/Reference/Methods
-original_slug: Web/HTTP/Methods
 l10n:
-  sourceCommit: 3e525728d4f65438eea3ab052085d7aad14d1eba
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP では、一連の**リクエストメソッド**を定義しています。これは、リクエストの目的と、リクエストが成功した場合に期待される結果を示しています。
-リクエストメソッドは *HTTP 述語*と呼ばれることがありますが、名詞であることもあります。
+リクエストメソッドは名詞であることもありますが、「HTTP 述語」と呼ばれることもあります。
 それぞれのリクエストメソッドには独自の意味がありますが、複数のメソッドに共通する特徴もあります。具体的には、リクエストメソッドは{{glossary("Safe/HTTP", "安全")}}、{{glossary("idempotent", "べき等")}}、{{glossary("cacheable", "キャッシュ可能")}}である場合があります。
 
 - {{HTTPMethod("GET")}}
   - : `GET` メソッドは、指定したリソースの表現をリクエストします。
-    `GET` を使用するリクエストは、データの取得のみを行うべきであり、リクエストの{{Glossary("HTTP Content", "コンテンツ")}}を入れてはいけません。
+    `GET` を使用するリクエストは、データの取得のみを行うべきであり、リクエスト{{Glossary("HTTP Content", "コンテンツ")}}を入れてはいけません。
 - {{HTTPMethod("HEAD")}}
   - : `HEAD` メソッドは `GET` リクエストと同じレスポンスを、レスポンス本文なしで求めます。
 - {{HTTPMethod("POST")}}

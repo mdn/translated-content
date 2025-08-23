@@ -3,8 +3,6 @@ title: 挑战：一个漂亮的盒子
 slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 
 在这个评估里，通过尝试创造一个引人瞩目的盒子，你将得到更多关于如何创造酷炫盒子的练习。

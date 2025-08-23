@@ -1,6 +1,5 @@
 ---
 title: Element：paste 事件
-short-title: paste
 slug: Web/API/Element/paste_event
 ---
 
@@ -14,7 +13,7 @@ slug: Web/API/Element/paste_event
 
 要覆盖默认行为（例如插入一些不同的数据或转换剪贴板内容），事件处理程序必须使用 {{domxref("Event/preventDefault", "event.preventDefault()")}} 取消默认动作，然后手动插入其想要的数据。
 
-可以构建和派发一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `paste` 事件，但这不会影响系统剪贴板或文档内容。
+可以构建和派发一个[合成](/zh-CN/docs/Web/API/Document_Object_Model/Events) `paste` 事件，但这不会影响系统剪贴板或文档内容。
 
 ## 语法
 
@@ -86,6 +85,5 @@ target.addEventListener("paste", (event) => {
 
 ## 参见
 
-- 相关联事件：{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}
-- {{domxref("Document")}} 目标上的这个事件：{{domxref("Document/paste_event", "paste")}}
-- {{domxref("Window")}} 目标上的这个事件：{{domxref("Window/paste_event", "paste")}}
+- {{domxref("Element/cut_event", "cut")}} 事件
+- {{domxref("Element/copy_event", "copy")}} 事件

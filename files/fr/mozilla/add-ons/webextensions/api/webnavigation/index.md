@@ -14,14 +14,12 @@ Chaque evenement correspond directement à un état précis dans la navigation. 
 ![](we-flow.png)
 
 - Le flux primaire est :
-
   - `{{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}`
   - `{{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}`
   - `{{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}`
   - `{{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}`.
 
 - Adionellement :
-
   - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` est déclenché avant `onBeforeNavigate` si le navigateur a besoin de créer un nouvel onglet ou une nouvelle fenêtre pour la navigation (par exemple, parce que l'utilisateur a ouvert un lien dans un nouvel onglet).
   - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} est déclenché si une page utilise l'[API historique](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur.
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} est déclenché si [l'identificateur de fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page est modifié.

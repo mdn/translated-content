@@ -140,7 +140,7 @@ function wait(delayInMS) {
 }
 ```
 
-`wait()` 関数は、指定したミリ秒数が経過すると解決する新しい {{jsxref("Promise")}} を返します。 タイムアウトハンドラー関数としてプロミスの解決ハンドラーを指定して、{{domxref("setTimeout()")}} を呼び出す[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用して動作します。 これにより、タイムアウトを使用するときにプロミス構文を使用できます。 これは、後で説明するように、プロミスを連鎖させるときに非常に便利です。
+`wait()` 関数は、指定したミリ秒数が経過すると解決する新しい {{jsxref("Promise")}} を返します。 タイムアウトハンドラー関数としてプロミスの解決ハンドラーを指定して、{{domxref("Window.setTimeout", "setTimeout()")}} を呼び出す[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用して動作します。 これにより、タイムアウトを使用するときにプロミス構文を使用できます。 これは、後で説明するように、プロミスを連鎖させるときに非常に便利です。
 
 ### メディア収録の開始
 

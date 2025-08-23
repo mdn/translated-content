@@ -220,17 +220,17 @@ Hay algunos serios [Security concerns](#security_concerns) a considerar con `<if
 
 Este ejemplo incluye los elementos básicos necesarios para usar un `<iframe>`:
 
-- [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/es/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : Si está configurado, el `<iframe>` se puede colocar en modo pantalla completa usando el [Full Screen API](/es/docs/Web/API/Fullscreen_API) (El uso del API está fuera del alcance de este artículo.)
-- [`frameborder`](/es/docs/Web/HTML/Element/iframe#frameborder)
+- [`frameborder`](/es/docs/Web/HTML/Reference/Elements/iframe#frameborder)
   - : Si se establece en 1, esto le indica al navegador que dibuje un borde entre este marco y otros marcos, que es el comportamiento predeterminado. 0 elimina el borde. Usar esto ya no es realmente recomendable, ya que el mismo efecto se puede lograr mejor usando[`border`](/es/docs/Web/CSS/border)`: none;` en tu {{Glossary('CSS')}}.
-- [`src`](/es/docs/Web/HTML/Element/iframe#src)
+- [`src`](/es/docs/Web/HTML/Reference/Elements/iframe#src)
   - : Este atributo, como con {{htmlelement("video")}}/{{htmlelement("img")}},contiene una ruta que apunta a la URL del documento que se va a incrustar.
-- [`width`](/es/docs/Web/HTML/Element/iframe#width) and [`height`](/es/docs/Web/HTML/Element/iframe#height)
+- [`width`](/es/docs/Web/HTML/Reference/Elements/iframe#width) and [`height`](/es/docs/Web/HTML/Reference/Elements/iframe#height)
   - : Estos atributos especifican el ancho y la altura (width y height) que quieres que tenga el iframe.
 - **Contenido de reserva**
-  - : De la misma manera que otros elementos similares [`<video>`](/es/docs/Web/HTML/Element/video), puedes incluir contenido alternativo entre las etiquetas de apertura y cierre `<iframe></iframe>` que aparecerán si el navegador no admite el `<iframe>`. En este caso hemos incluido un enlace a la página. Es poco probable que encuentres algún navegador que no admita `<iframe>`s en estos días.
-- [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox)
+  - : De la misma manera que otros elementos similares [`<video>`](/es/docs/Web/HTML/Reference/Elements/video), puedes incluir contenido alternativo entre las etiquetas de apertura y cierre `<iframe></iframe>` que aparecerán si el navegador no admite el `<iframe>`. En este caso hemos incluido un enlace a la página. Es poco probable que encuentres algún navegador que no admita `<iframe>`s en estos días.
+- [`sandbox`](/es/docs/Web/HTML/Reference/Elements/iframe#sandbox)
   - : Este atributo, que funciona en navegadores un poco más modernos que el resto de la funciones de `<iframe>` (por ejemplo IE 10 y superior) solicita una mayor configuración de seguridad; bueno, hablaremos más sobre esto en la siguiente sección.
 
 > [!NOTE]
@@ -242,7 +242,8 @@ Arriba mencionamos nuestra preocupación por la seguridad — vamos a entrar en 
 
 Los creadores de navegadores y los desarrolladores web han aprendido por las malas que los iframes son un objetivo común (término oficial: **vector de ataque**) para los "malos" de la Web (a menudo denominados **hackers**,o más exactamente, **crackers**) para atacar si están tratando de modificar maliciosamente tu página web, o engañar a las personas para que hagan algo que no quieren hacer, como revelar información confidencial como nombre de usuario o contraseña. Debido a esto, los ingenieros de especificaciones y los desarrolladores de navegadores han desarrollado varios mecanismos para hacer que los `<iframe>`s sean más seguros, y también hay mejores prácticas a considerar — cubriremos algunas de estas a continuación.
 
-> **Nota:** [Clickjacking](https://es.wikipedia.org/wiki/Clickjacking) es un tipo de ataque de iframe común en el que los piratas informáticos incrustan un iframe invisible en tu documento (o incrustan tu documento en su propio sitio web malicioso) y lo utilizan para capturar las interacciones de los ususarios. Esta es una forma común de engañar a los usuarios o robar datos sensibles.
+> [!NOTE]
+> [Clickjacking](https://es.wikipedia.org/wiki/Clickjacking) es un tipo de ataque de iframe común en el que los piratas informáticos incrustan un iframe invisible en tu documento (o incrustan tu documento en su propio sitio web malicioso) y lo utilizan para capturar las interacciones de los ususarios. Esta es una forma común de engañar a los usuarios o robar datos sensibles.
 
 Primero un ejemplo rápido — intenta cargar el ejemplo anterior que mostramos arriba en tu navegador — puedes encontrarlo en [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ) Tu no verás nada en tu navegador, pero si miras en la _Consola_ en las [herramientas de desarrollador de tu navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), tú verás un mensaje diciendote porque.En Firefox, te dirá _Load denied by X-Frame-Options: "https://developer.mozilla.org/es/docs/Glossary" does not permit framing_. Esto es porque los desarrolladores que construyeron MDN han incluido una configuración en el servidor que almacena la página web que impide que sean incrustados dentro de `<iframe>`s (ver [Configure CSP directives](#configure_csp_directives), abajo.) Esto tiene sentido— una página completa de MDN no tiene sentido estar incrustada en otras páginas, a menos que tu quieras hacer algo como incrustarlas en tu sitio web y reclamarlas como propias — o intentar robar datos via clickjacking, los cuales ambos son cosas realmente malas. Además de que si todo el mundo comienza a hacerlo, todo el ancho de banda adicional podría costarle mucho dinero a Mozzilla.
 
@@ -263,7 +264,8 @@ Si el contenido es licenciado, debes obedecer los terminos de la licencia. Por e
 
 Usar HTTPS requiere un certificado de seguridad, el cual puede ser costoso (Aunque [Let's Encrypt](https://letsencrypt.org/) hace las cosas más faciles) — si tu no puedes tener uno, tu debes servir tu documento padre con HTTP. Sin embargo, debido al segundo beneficio de HTTPS expuesto arriba, no importa cual sea el costo tu nunca debes embeber contenido de terceros con HTTP. (En el mejor de los casos, el navegador de tus usuarios les dará una advertencia). Todas las empresas con buena reputación que hacen contenido para embeber via `<iframe>` lo harán disponible via HTTPS — mira la URLs dentro del `<iframe>` atributo `src` cuando tu estes embebiendo contenido desde Google Maps o Youtube, por ejemplo.
 
-> **Nota:** [Github pages](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) permite que el contenido sea servido via HTTPS por defecto, asi que es util para hospedar tu contenido. Si estás usando un hosting diferente y no estás seguro, pregunta a tu proveedor de hosting acerca del tema .
+> [!NOTE]
+> [Github pages](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) permite que el contenido sea servido via HTTPS por defecto, asi que es util para hospedar tu contenido. Si estás usando un hosting diferente y no estás seguro, pregunta a tu proveedor de hosting acerca del tema .
 
 #### Siempre usa el atributo `sandbox`
 
@@ -271,7 +273,7 @@ You want to give attackers as little power as you can to do bad things on your w
 
 Unsandboxed content can do way too much (executing JavaScript, submitting forms, popup windows, etc.) By default you should impose all available restrictions by using the `sandbox` attribute with no parameters, as shown in our previous example.
 
-If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case the embedded content could bypass the same origin security policy that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
+If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/es/docs/Web/HTML/Reference/Elements/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case the embedded content could bypass the same origin security policy that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
 
 > [!NOTE]
 > Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
@@ -294,15 +296,16 @@ However, you are unlikely to use these elements very much — Applets haven't be
 
 If you find yourself needing to embed plugin content, this is the kind of information you'll need, at a minimum:
 
-|                                                                            | {{htmlelement("embed")}}                                                                            | {{htmlelement("object")}}                                                                             |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} of the embedded content                                | [`src`](/es/docs/Web/HTML/Element/embed#src)                                                        | [`data`](/es/docs/Web/HTML/Element/object#data)                                                       |
-| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/es/docs/Web/HTML/Element/embed#type)                                                      | [`type`](/es/docs/Web/HTML/Element/object#type)                                                       |
-| height and width (in CSS pixels) of the box controlled by the plugin       | [`height`](/es/docs/Web/HTML/Element/embed#height) [`width`](/es/docs/Web/HTML/Element/embed#width) | [`height`](/es/docs/Web/HTML/Element/object#height) [`width`](/es/docs/Web/HTML/Element/object#width) |
-| names and values, to feed the plugin as parameters                         | ad hoc attributes with those names and values                                                       | single-tag {{htmlelement("param")}} elements, contained within `<object>`                             |
-| independent HTML content as fallback for an unavailable resource           | not supported (`<noembed>` is obsolete)                                                             | contained within `<object>`, after `<param>` elements                                                 |
+|                                                                            | {{htmlelement("embed")}}                                                                                                  | {{htmlelement("object")}}                                                                                                   |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| {{glossary("URL")}} of the embedded content                                | [`src`](/es/docs/Web/HTML/Reference/Elements/embed#src)                                                                   | [`data`](/es/docs/Web/HTML/Reference/Elements/object#data)                                                                  |
+| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/es/docs/Web/HTML/Reference/Elements/embed#type)                                                                 | [`type`](/es/docs/Web/HTML/Reference/Elements/object#type)                                                                  |
+| height and width (in CSS pixels) of the box controlled by the plugin       | [`height`](/es/docs/Web/HTML/Reference/Elements/embed#height) [`width`](/es/docs/Web/HTML/Reference/Elements/embed#width) | [`height`](/es/docs/Web/HTML/Reference/Elements/object#height) [`width`](/es/docs/Web/HTML/Reference/Elements/object#width) |
+| names and values, to feed the plugin as parameters                         | ad hoc attributes with those names and values                                                                             | single-tag {{htmlelement("param")}} elements, contained within `<object>`                                                   |
+| independent HTML content as fallback for an unavailable resource           | not supported (`<noembed>` is obsolete)                                                                                   | contained within `<object>`, after `<param>` elements                                                                       |
 
-> **Nota:** `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the [`typemustmatch`](/es/docs/Web/HTML/Element/object#typemustmatch) attribute (only implemented in Firefox, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
+> [!NOTE]
+> `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the [`typemustmatch`](/es/docs/Web/HTML/Reference/Elements/object#typemustmatch) attribute (only implemented in Firefox, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
 
 Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this [live on Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html), and [check the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) too):
 

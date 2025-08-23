@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`data-*`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一类被称为**自定义数据属性**的属性，可以通过脚本在 [HTML](/zh-CN/docs/Web/HTML) 与 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 表示之间进行专有数据的交换。
 
 {{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
@@ -86,7 +84,7 @@ li:hover:after {
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
-有关使用 HTML 数据属性的更深入的教程，请参阅[使用数据属性](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)。
+有关使用 HTML 数据属性的更深入的教程，请参阅[使用数据属性](/zh-CN/docs/Web/HTML/How_to/Use_data_attributes)。
 
 ## 规范
 
@@ -100,4 +98,4 @@ li:hover:after {
 
 - 所有的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.dataset")}} 属性允许访问和修改这些值
-- [使用数据属性](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [使用数据属性](/zh-CN/docs/Web/HTML/How_to/Use_data_attributes)

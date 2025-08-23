@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials
 original_slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
 
-{{HTTPSidebar}}
-
 ## Motivo
 
 ```
@@ -28,4 +26,4 @@ Se, em vez disso, você precisar ajustar o comportamento do servidor, você deve
 
 - [CORS errors](/pt-BR/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/pt-BR/docs/Web/HTTP/CORS)
+- [CORS introduction](/pt-BR/docs/Web/HTTP/Guides/CORS)

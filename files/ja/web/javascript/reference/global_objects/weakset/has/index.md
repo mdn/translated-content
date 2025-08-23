@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 
 **`has()`** メソッドは、特定の値をもつ要素が `WeakSet` オブジェクト内に存在するかどうかを示す真偽値を返します。
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+{{InteractiveExample("JavaScript デモ: WeakSet.Prototype.has()")}}
 
 ```js interactive-example
 const weakset1 = new WeakSet();

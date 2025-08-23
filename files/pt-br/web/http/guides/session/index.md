@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Session
 original_slug: Web/HTTP/Session
 ---
 
-{{HTTPSidebar}}
-
 Em protocolos cliente-servidor, como o HTTP, sessões consistem de três partes:
 
 1. O cliente estabelece uma conexão TCP (ou a conexão apropriada caso o protocolo TCP não seja o protocolo usado na camada de transporte).
@@ -29,7 +27,6 @@ A URL da página a se requisitar contém o nome do domínio e o número da porta
 Depois que a conexão é estabelecida, o _user-agent_ pode enviar a solicitação (um _user-agent_ normalmente é um navegador Web, podendo ser também qualquer outra coisa, como um _crawler_, por exemplo). Uma solicitação de cliente consiste em diretivas de texto, separadas por quebras de linhas (CRLF), divididas em três blocos:
 
 1. A primeira linha contém um método de requisição seguido por seus parâmetros:
-
    - o caminho do documento, ou seja, uma URL absoluta sem o protocolo ou nome de domínio
    - a versão do protocolo HTTP
 
@@ -61,10 +58,10 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### Métodos de requisição
 
-HTTP define um conjunto de [métodos de requisição](/pt-BR/docs/Web/HTTP/Methods) indicando a ação desejada a ser executada em um recurso. Embora eles também possam ser substantivos, essas solicitações são às vezes chamadas de verbos HTTP. As requisições mais comuns são `GET` e `POST`:
+HTTP define um conjunto de [métodos de requisição](/pt-BR/docs/Web/HTTP/Reference/Methods) indicando a ação desejada a ser executada em um recurso. Embora eles também possam ser substantivos, essas solicitações são às vezes chamadas de verbos HTTP. As requisições mais comuns são `GET` e `POST`:
 
 - O método {{HTTPMethod("GET")}} solicita uma representação de dados do recurso especificado. Requisições usando GET só devem retornar dados.
-- O método {{HTTPMethod("POST")}} envia dados para um servidor para que possa alterar seu estado. Esse é o método geralmente usado para [formulários HTML](/pt-BR/docs/Learn/Forms).
+- O método {{HTTPMethod("POST")}} envia dados para um servidor para que possa alterar seu estado. Esse é o método geralmente usado para [formulários HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms).
 
 ## Estrutura de uma resposta do servidor
 
@@ -135,7 +132,7 @@ Content-Type: text/html
 
 ### Códigos de status de resposta
 
-[Códigos de status de respostas HTTP](/pt-BR/docs/Web/HTTP/Status) (HTTP _response status codes_) indicam se uma requisição HTTP específica foi concluída com sucesso. As respostas são agrupadas em cinco classes: respostas informativas, respostas bem-sucedidas, redirecionamentos, erros de clientes e erros de servidores.
+[Códigos de status de respostas HTTP](/pt-BR/docs/Web/HTTP/Reference/Status) (HTTP _response status codes_) indicam se uma requisição HTTP específica foi concluída com sucesso. As respostas são agrupadas em cinco classes: respostas informativas, respostas bem-sucedidas, redirecionamentos, erros de clientes e erros de servidores.
 
 - {{HTTPStatus(200)}}: _OK_. A requisição foi bem sucedida.
 - {{HTTPStatus(301)}}: _Moved Permanently_. Esse código de resposta significa que o URI do recurso solicitado foi alterado.
@@ -144,6 +141,6 @@ Content-Type: text/html
 ## Veja também
 
 - [Identificando recursos na web](/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-- [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
-- [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods)
-- [HTTP response status codes](/pt-BR/docs/Web/HTTP/Status)
+- [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Reference/Headers)
+- [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods)
+- [HTTP response status codes](/pt-BR/docs/Web/HTTP/Reference/Status)

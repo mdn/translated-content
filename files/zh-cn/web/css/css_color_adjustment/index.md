@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
 ---
 
-{{CSSRef}}
-
 **CSS 颜色调整**（CSS color adjustment）模块提供了一种机制，允许用户代理根据用户偏好（例如“暗黑模式”、对比度调整和其他配色方案）自动进行颜色调整。
 
 该模块与 {{CSSxRef("@media")}} 媒体查询特性 {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}、{{cssxref("@media/prefers-contrast", "prefers-contrast")}} 和 {{cssxref("@media/forced-colors", "forced-colors")}} 一起，定义了浏览器自动调整颜色的方式和时机。

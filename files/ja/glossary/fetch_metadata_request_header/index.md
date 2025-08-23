@@ -11,7 +11,7 @@ l10n:
 
 この情報があれば、サーバーは{{Glossary("resource isolation policy", "リソース分離ポリシー")}}を実装し、外部サイトが共有を意図され、適切に使用することができるリソースだけをリクエストできるようにすることができます。この手法は {{Glossary("CSRF")}}、Cross-site Script Inclusion ('XSSI')、タイミング攻撃、オリジン間情報リークなどの一般的なサイトを跨ぐウェブ脆弱性を軽減するのに役立ちます。
 
-これらのヘッダー名には `Sec-` の接頭辞が付いており、{{Glossary("Forbidden header name", "禁止ヘッダー名")}}であるため、 JavaScript からヘッダーを変更することはできません。
+これらのヘッダー名には `Sec-` の接頭辞が付いており、{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}であるため、 JavaScript からヘッダーを変更することはできません。
 
 フェッチメタデータリクエストヘッダーには以下のようなものがあります。
 
@@ -33,7 +33,6 @@ l10n:
 - [全 HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Reference/Headers)
 - [全 HTTP ヘッダーの一覧 > フェッチメタデータリクエストヘッダー](/ja/docs/Web/HTTP/Reference/Headers#フェッチメタデータリクエストヘッダー)
 - 関連用語:
-
   - {{Glossary("Representation header", "表現ヘッダー")}}
   - {{Glossary("HTTP_header","HTTP ヘッダー")}}
   - {{Glossary("Response header", "レスポンスヘッダー")}}

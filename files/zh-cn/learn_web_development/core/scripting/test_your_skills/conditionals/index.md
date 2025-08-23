@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
 
-{{learnsidebar}}
-
 这个技能测试的目标是评估你是否理解了[在代码中做决定——条件语句](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals)一文。
 
 > [!NOTE]

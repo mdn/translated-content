@@ -3,8 +3,6 @@ title: 透過用戶代理偵測瀏覽器
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 ---
 
-{{HTTPSidebar}}
-
 針對不同的瀏覽器給予不同的網頁或服務，通常不是好主意：網路的原意，是要讓所有人都能訪問，無論他們使用何種瀏覽器或何種設備。你的網站可以透過基於（瀏覽器）功能可用性的漸進增強法開發，而不是特別指定某種瀏覽器。
 
 不過瀏覽器與標準並不是完美的，有些特殊情況依舊需要偵測瀏覽器。透過用戶代理（user agent）去偵測瀏覽器看似簡單，要做好卻頗為困難。這份文件會盡可能引導你正確處理這種事。
@@ -28,7 +26,6 @@ slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 如果要避免用戶代理偵測，有以下選項！
 
 - 功能偵測
-
   - : 功能偵測使你無須弄清是哪種瀏覽器在渲染你的網頁，只須檢查需要的具體功能是否能用。如果不能用，就採取備用方案。在極少數的情況下，各瀏覽器行為有所不同。面對這種情況，不要偵測用戶代理，而是用實作測試來檢查瀏覽器 API、並搞清楚用法。最近有個好例子：[Chrome 針對正規表達式，添加了實驗性的 lookbehind 支援](https://chromestatus.com/feature/5668726032564224)，但其他瀏覽器並不支援。你可能以為要這麼用：
 
     ```js
@@ -80,7 +77,6 @@ slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 - 優雅降級（Graceful degradation）
   - : 這種由上而下的途徑，是先在建造網站時，就用上所有需要的功能，再調整到令舊版瀏覽器也能執行。這種途徑與漸進增強相比，難度更高、效率也更糟，不過在某些情況下也可能更管用。
 - 行動設備偵測（Mobile Device Detection）
-
   - : 檢查是否透過行動設備上網，大概是用戶代理嗅探最常見的用途與誤用。偵測後要作什麼事，卻往往是被忽略的問題所在。開發者通常透過用戶代理嗅探，將用戶設備導向至易於觸碰的小螢幕，以便加強網站體驗。
 
     用戶代理這方面有時有用，但問題是所有設備不完全相同：有些行動設備的尺寸很大、有些桌機有一小塊觸控螢幕、有些人使用完全是不同世界的智慧型電視、甚至還有藉由翻轉平板、來動態改變設備長寬的人！
@@ -157,7 +153,7 @@ function whenMediaChanges() {
 var listenToMediaQuery = isWebkit
   ? function (mQ, f) {
       if (/height|width/.test(mQ.media)) mqL.push([mQ, f]);
-      mQ.addListener(f), mQ.addListener(whenMediaChanges);
+      (mQ.addListener(f), mQ.addListener(whenMediaChanges));
     }
   : function () {};
 var destroyMediaQuery = isWebkit

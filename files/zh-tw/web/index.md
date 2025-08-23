@@ -2,19 +2,15 @@
 title: 給開發者的 Web 技術文件
 slug: Web
 l10n:
-  sourceCommit: c640274a19227cd5790912ea76841732baa6731f
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
-
-<section id="Quick_links">
-  {{ListSubpages("", 1, 0, 1)}}
-</section>
 
 全球資訊網的開放性提供了開發人員非常棒的機會。要充分發揮 Web 潛能，你需要知道如何使用它們。你可以從以下連結找到各種 Web 技術說明。
 
 ## Web 開發者說明文件
 
 - [Web 開發者指南](/zh-TW/docs/MDN/Guides)
-  - : 提供實用教學，幫助你實際使用 Web 技術來做你想做或需要做的事情。
+  - : Web 開發者指南提供實用教學，幫助你實際使用 Web 技術來達成你的目標或需求。
 - [Web 開發者入門](/zh-TW/docs/MDN/Tutorials)
   - : 帶你逐步學習 HTML、CSS、JavaScript 和 Web API。
 - [無障礙](/zh-TW/docs/Web/Accessibility)
@@ -35,12 +31,12 @@ l10n:
 - [HTML](/zh-TW/docs/Web/HTML)
   - : HTML 提供用於構建 Web 文件和應用程式的基本結構。
 - [CSS](/zh-TW/docs/Web/CSS)
-  - : 階層式樣式表用於描述　Web 文件和應用程式的外觀。
+  - : 階層式樣式表用於描述 Web 文件和應用程式的外觀。
 - [JavaScript](/zh-TW/docs/Web/JavaScript)
   - : JavaScript 是 Web 的原生程式語言。
 - [WebAssembly](/zh-TW/docs/WebAssembly)
   - : WebAssembly 能夠讓以 C、C++、Rust、Swift、C#、Go 等語言開發的程式在 Web 上執行。
-- [事件](/zh-TW/docs/Web/Events)
+- [事件](/zh-TW/docs/Web/API/Document_Object_Model/Events)
   - : 你的 Web 應用程式能夠對事件做出反應；例如當 Web 完成載入，或使用者選擇某些內容、按下按鍵、調整視窗大小、提交表單、暫停影片等。
 - [HTTP](/zh-TW/docs/Web/HTTP)
   - : **超文字傳輸協定**（Hypertext Transfer Protocol）是基本的網際網路協定，用於從網路上取得檔案、樣式表、程式碼、圖片、影片、字型，以及其他資源——以及將資料傳回伺服器。
@@ -64,12 +60,12 @@ l10n:
   - : OpenSearch 允許網站為自身描述一個搜尋引擎，以便瀏覽器或其他用戶端應用程式可以使用該搜尋引擎。
 - [XML](/zh-TW/docs/Web/XML)
   - : 可擴展標記語言是一種嚴格的[文件物件模型](/zh-TW/docs/Web/API/Document_Object_Model)序列化格式。
-- [XSLT](/zh-TW/docs/Web/XSLT)
-  - : 可延伸樣式表轉換語言是一種基於 [XML](/zh-TW/docs/Web/XML/XML_introduction) 的語言，與專門的處理軟體結合使用，用於轉換 XML 文件。
-- [XPath](/zh-TW/docs/Web/XPath)
-  - : XPath 使用非 XML 語法提供一種靈活的方式來定位（指向）[XML](/zh-TW/docs/Web/XML/XML_introduction) 文件的不同部分。它還可以用於測試文件中的定位節點是否符合某個模式。
-- [EXSLT](/zh-TW/docs/Web/EXSLT)
-  - : EXSLT 是 [XSLT](/zh-TW/docs/Web/XSLT) 的一組擴展。
+- [XSLT](/zh-TW/docs/Web/XML/XSLT)
+  - : 可延伸樣式表轉換語言是一種基於 [XML](/zh-TW/docs/Web/XML/Guides/XML_introduction) 的語言，與專門的處理軟體結合使用，用於轉換 XML 文件。
+- [XPath](/zh-TW/docs/Web/XML/XPath)
+  - : XPath 使用非 XML 語法提供一種靈活的方式來定位（指向）[XML](/zh-TW/docs/Web/XML/Guides/XML_introduction) 文件的不同部分。它還可以用於測試文件中的定位節點是否符合某個模式。
+- [EXSLT](/zh-TW/docs/Web/XML/EXSLT)
+  - : EXSLT 是 [XSLT](/zh-TW/docs/Web/XML/XSLT) 的一組擴展。
 
 ## 開發者工具說明文件
 

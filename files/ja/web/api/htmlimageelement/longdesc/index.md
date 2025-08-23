@@ -52,4 +52,4 @@ l10n:
 
 ## 関連情報
 
-- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

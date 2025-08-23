@@ -12,7 +12,7 @@ l10n:
 
 段落は[ブロックレベル要素](/ja/docs/Glossary/Block-level_content)であり、特徴的なのは `</p>` で閉じる前に他のブロックレベル要素が見つかった場合は自動的に閉じることです。下記の「タグの省略」をご覧ください。
 
-{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;p&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>
@@ -86,7 +86,7 @@ p {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles"
           >paragraph</a
         >
       </td>
@@ -106,7 +106,8 @@ p {
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-> **メモ:** `<p>` の `align` 属性は廃止済みであり、使用するべきではありません。
+> [!NOTE]
+> `<p>` の `align` 属性は廃止済みであり、使用するべきではありません。
 
 ## 例
 

@@ -29,12 +29,12 @@ HTML 要素は文書中で、`<` および `>` で囲まれた要素名で構成
 
 - [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
   - : フォームはウェブで非常に重要な部分です。――これはウェブサイトとのやり取り（登録やログイン、フィードバックの送信、商品の購入など）に必要な多くの機能を提供します。このモジュールでは、フォームのクライアント側／フロントエンド部分の作成から始めます。
-- [CORS を利用した画像](/ja/docs/Web/HTML/How_to/How_to/CORS_enabled_image)
-  - : [`crossorigin`](/ja/docs/Web/HTML/Reference/Reference/Elementss/img#crossorigin) 属性と {{glossary("CORS")}} ヘッダーを組み合わせることで、 {{HTMLElement("img")}} 要素で定義された画像を異なるドメインから読み出し、 それを {{HTMLElement("canvas")}} 要素の中で同じドメインから読み出したかのように扱うことができます。
-- [CORS 設定属性](/ja/docs/Web/HTML/Reference/Reference/Attributes/crossorigin)
+- [CORS を利用した画像](/ja/docs/Web/HTML/How_to/CORS_enabled_image)
+  - : [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/img#crossorigin) 属性と {{glossary("CORS")}} ヘッダーを組み合わせることで、 {{HTMLElement("img")}} 要素で定義された画像を異なるドメインから読み出し、 それを {{HTMLElement("canvas")}} 要素の中で同じドメインから読み出したかのように扱うことができます。
+- [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : [CORS](/ja/docs/Web/HTTP/Guides/CORS) をサポートするいくつかの HTML 要素（{{HTMLElement("img")}} や {{HTMLElement("video")}} など）は `crossorigin` 属性（`crossOrigin` プロパティ）を持っており、要素が取得したデータに関する CORS リクエストを設定することができます。
-- [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Reference/Reference/Attributes/rel/preload)
-  - : HTML の {{htmlelement("head")}} 要素内において、 {{htmlelement("link")}} 要素で [`rel`](/ja/docs/Web/HTML/Reference/Reference/Elementss/link#rel) 属性に `preload` を指定することで、読み込み後すぐにページに必要なリソース、つまりページ読み込みの過程の初期の、ブラウザーの主なレンダリング機構が起動する前に、先読みを始めたいものを指定する宣言的なフェッチリクエストを記述することができます。これにより、ページの最初のレンダリングがブロックされにくくなり、パフォーマンスが向上します。この記事では `preload` がどのように動作するのかについての基本的なガイドを提供します。
+- [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)
+  - : HTML の {{htmlelement("head")}} 要素内において、 {{htmlelement("link")}} 要素で [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に `preload` を指定することで、読み込み後すぐにページに必要なリソース、つまりページ読み込みの過程の初期の、ブラウザーの主なレンダリング機構が起動する前に、先読みを始めたいものを指定する宣言的なフェッチリクエストを記述することができます。これにより、ページの最初のレンダリングがブロックされにくくなり、パフォーマンスが向上します。この記事では `preload` がどのように動作するのかについての基本的なガイドを提供します。
 - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
   - : この記事では、レスポンシブ画像という概念について学びます。レスポンシブ画像とは、画面サイズや解像度、他にも様々な機能が異なる端末でも適切に表示される画像のことです。また、 HTML でレスポンシブ画像を実装するために役立つツールについても見ていきます。これにより、さまざまな端末でパフォーマンスを向上させることができます。
 

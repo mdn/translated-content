@@ -9,7 +9,7 @@ l10n:
 
 **`toExponential()`** メソッドは {{jsxref("Number")}} オブジェクトを指数表記で表した文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Number.toExponential()")}}
+{{InteractiveExample("JavaScript デモ: Number.toExponential()")}}
 
 ```js interactive-example
 function expo(x, f) {

@@ -1,13 +1,13 @@
 ---
 title: border-inline-style
 slug: Web/CSS/border-inline-style
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`border-inline-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}} と {{cssxref("border-bottom-style")}}、または {{cssxref("border-left-style")}} と {{cssxref("border-right-style")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: border-inline-style")}}
+{{InteractiveExample("CSS デモ: border-inline-style")}}
 
 ```css interactive-example-choice
 border-inline-style: dotted;
@@ -28,7 +28,7 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -53,8 +53,14 @@ direction: rtl;
 /* <'border-style'> の値 */
 border-inline-style: dashed;
 border-inline-style: dotted;
-border-inline-style: revert;
 border-inline-style: groove;
+
+/* グローバル値 */
+border-inline-style: inherit;
+border-inline-style: initial;
+border-inline-style: revert;
+border-inline-style: revert-layer;
+border-inline-style: unset;
 ```
 
 ### 値
@@ -70,17 +76,19 @@ border-inline-style: groove;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
-### HTML
+### border-inline-style の設定
+
+#### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -96,7 +104,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("border-inline-style_の設定", 140, 140)}}
 
 ## 仕様書
 
@@ -108,5 +116,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは物理的な境界のプロパティ {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のうちの 1 つに対応します
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

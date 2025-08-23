@@ -3,7 +3,7 @@ title: border
 slug: Web/CSS/border
 ---
 
-{{CSSRef}}{{ PreviousNext("Guía de referencia de CSS", "CSS:border-color") }}
+{{ PreviousNext("Guía de referencia de CSS", "CSS:border-color") }}
 
 ### Propiedades Constitutivas
 

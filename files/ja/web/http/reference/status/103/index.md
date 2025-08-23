@@ -1,12 +1,9 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Reference/Status/103
-original_slug: Web/HTTP/Status/103
 l10n:
-  sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`103 Early Hints`** は[情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス)ステータスコードで、サーバーが最終的なレスポンスがリンクする予定のサイトやリソースに関するヒントを記載したレスポンスを準備している間に送信される場合があります。
 これにより、サーバーが最終的なレスポンスを準備し送信する前に、ブラウザーがサイトに[事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)したり、リソースの[事前読み込み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)を開始したりすることができます。

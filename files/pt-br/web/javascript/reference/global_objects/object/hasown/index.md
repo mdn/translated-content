@@ -161,8 +161,8 @@ if (Object.hasOwn(foo, "prop")) {
 
 - [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.hasOwnProperty()")}}
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript Guide: Inheritance revisited](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

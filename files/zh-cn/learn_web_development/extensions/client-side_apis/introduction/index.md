@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7e97f3c5ada65b6638909bde92881a4b8d46a2b8
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
+{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 首先，我们将从一个高层次看看 API——它们是什么、它们如何工作、如何在代码中使用它们，以及它们是如何组织的。我们也将看看不同主要类别的 API 以及它们的用途。
 

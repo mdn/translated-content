@@ -3,8 +3,6 @@ title: 挑战：基本的 CSS 理解
 slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}
 
 你已经在这个模块中了解到了很多内容，所以当你达到这个模块的最后一篇文章的时候，感觉一定非常不错吧！在你继续之前的最后一步，就是完成对于这个模块的测验。本次测验涉及到几个相关的练习，你必须按顺序完成，这样你才能设计出最终的成品：一张名片/游戏玩家卡片/社交媒体的简介。
@@ -34,7 +32,6 @@ slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 
 - 接下来，我们希望你观察四个选择器，并计算每一个的专用性。将它们写在稍后可以找到的地方，例如在 CSS 顶部的注释中。
 - 现在是时候把正确的选择器放在正确的规则集上了！你的 CSS 资源中有四对选择器和规则集需要匹配，现在就开始匹配，并将它们添加到你的 CSS 文件。你需要：
-
   - 为整体卡片的容器提供一个固定的宽/高，背景颜色，边框，以及边框圆角等等。
   - 为 header 提供一个渐变的背景颜色，从更暗到更亮，加上圆角，配合在卡片容器上设置的圆角。
   - 为 footer 提供一个渐变的背景颜色，从更亮到更暗，加上圆角，配合在卡片容器上设置的圆角。

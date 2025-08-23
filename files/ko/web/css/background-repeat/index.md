@@ -75,7 +75,6 @@ background-repeat: unset;
 ### 값
 
 - `<repeat-style>`
-
   - : 한 개 값 구문은 두 개 값 구문의 단축 형태입니다.
 
     <table class="standard-table">
@@ -219,7 +218,8 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image: url(star-solid.gif), url(favicon32.png);
+  background-image:
+    url(star-solid.gif), url(/shared-assets/images/examples/favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

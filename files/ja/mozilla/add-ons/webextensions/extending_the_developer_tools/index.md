@@ -27,7 +27,6 @@ devtools ページには目に見える DOM はありませんが、[`<script>`]
 - グローバル [`window`](/ja/docs/Web/API/Window) オブジェクトを介してアクセス可能な通常の DOM API
 - コンテンツスクリプトと[同じ WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)
 - devtools API:
-
   - [`devtools.inspectedWindow`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
   - [`devtools.network`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
   - [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)

@@ -48,7 +48,7 @@ Por ejemplo:
 - Un vídeo se reproduce, se pausa o termina.
 - Ocurrió un error.
 
-A partir de esto (y dando un vistazo a la [referencia de eventos](/es/docs/Web/Events) de MDN) puedes observar que existen **muchos** eventos que pueden ser lanzados.
+A partir de esto (y dando un vistazo a la [referencia de eventos](/es/docs/Web/API/Document_Object_Model/Events) de MDN) puedes observar que existen **muchos** eventos que pueden ser lanzados.
 
 Para reaccionar a un evento, puedes asociarle un **manejador de eventos**. Esto es un bloque de código (normalmente una función de JavaScript que tú como programador creas) que se ejecuta cuando el evento ocurre.
 Cuando uno de estos bloques de código se configura para ejecutarse en respuesta de un evento, decimos que estamos **registrando un manejador de eventos**.
@@ -114,7 +114,7 @@ El elemento HTML {{HTMLElement("button")}} lanzará un evento cuando el usuario 
 
 - la cadena `"click"`, para indicar que queremos detectar el evento de clic.
   Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/es/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
-- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/es/docs/Web/HTML/Element/body) a ese color.
+- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/es/docs/Web/HTML/Reference/Elements/body) a ese color.
 
 Es válido crear una función manejador con su propio nombre, de la siguiente forma:
 
@@ -270,7 +270,7 @@ function bgChange() {
 }
 ```
 
-El primer método para el registro de manejadores de eventos en la Web, utilizaba [_atributos HTML para manejar eventos_](/es/docs/Web/HTML/Attributes#event_handler_attributes) (o _manejadores de eventos en línea_) como el que se mostró anteriormente. El valor del atributo es literalmente el código JavaScript que quieres ejecutar cuando el evento ocurra.
+El primer método para el registro de manejadores de eventos en la Web, utilizaba [_atributos HTML para manejar eventos_](/es/docs/Web/HTML/Reference/Attributes#event_handler_attributes) (o _manejadores de eventos en línea_) como el que se mostró anteriormente. El valor del atributo es literalmente el código JavaScript que quieres ejecutar cuando el evento ocurra.
 El ejemplo anterior invoca a la función definida dentro de un elemento {{htmlelement("script")}} en la misma página, pero también pueden insertar JavaScript directamente en el atributo, por ejemplo:
 
 ```html
@@ -529,9 +529,7 @@ El HTML se ve así:
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Su navegador no es compatible con video HTML. Aquí hay un
       <a href="rabbit320.mp4">enlace al video</a> en su lugar.
@@ -625,9 +623,7 @@ Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en e
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Su navegador no es compatible con video HTML. Aquí hay un
       <a href="rabbit320.mp4">enlace al video</a> en su lugar.
@@ -804,7 +800,7 @@ Si hay algo que no te quedó muy claro, tómate la libertad de leer de nuevo el 
 ## Véase también
 
 - [domevents.dev](https://domevents.dev/) — una aplicación interactiva bastante útil para aprender el comportamiento del sistema de eventos del DOM a través de la exploración.
-- [Referencia de eventos](/es/docs/Web/Events)
+- [Referencia de eventos](/es/docs/Web/API/Document_Object_Model/Events)
 - [Orden de eventos](https://www.quirksmode.org/js/events_order.html) (debate sobre captura y burbujeo) - un excelente y detallado artículo por Peter-Paul Koch.
 - [Event accessing](https://www.quirksmode.org/js/events_access.html) (debate sobre el objeto evento) - otro excelente y detallado artículo por Peter-Paul Koch.
 

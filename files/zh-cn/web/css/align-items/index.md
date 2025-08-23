@@ -3,8 +3,6 @@ title: align-items
 slug: Web/CSS/align-items
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`align-items`** 属性设置了所有直接子元素的 {{cssxref("align-self")}} 值作为一个组。在 Flexbox 中，它控制子元素在{{glossary("Cross Axis", "交叉轴")}}上的对齐。在 Grid 布局中，它控制了子元素在其{{glossary("Grid Areas", "网格区域")}}内的块向轴上的对齐。
 
 下面的交互示例演示了使用网格布局的 `align-items` 的一些值。
@@ -90,9 +88,7 @@ align-items: unset;
 ### 取值
 
 - `normal`
-
   - : 这个关键字的效果取决于我们处在什么布局模式中：
-
     - 在绝对定位的布局中，对于*被替代*的绝对定位盒子，行为与 `start` 类似；对于*其他所有*绝对定位的盒子，行为与 `stretch` 类似。
     - 在绝对定位布局的静态位置上，行为与 `stretch` 类似。
     - 对于那些 flex 元素而言，行为与 `stretch` 类似。

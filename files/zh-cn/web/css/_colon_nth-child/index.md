@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`:nth-child()`** [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)根据元素在父元素的子元素列表中的索引来选择元素。换言之，`:nth-child()` 选择器根据父元素内的所有兄弟元素的位置来选择子元素。
 
 {{InteractiveExample("CSS Demo: :nth-child", "tabbed-shorter")}}
@@ -73,9 +71,7 @@ li:nth-child(even) {
 ### 函数符号
 
 - `<An+B>`
-
   - : 表示元素在兄弟元素列表中的位置是 `An+B` 模式的元素，其中 `n` 为正整数或 0，`A` 和 `B` 为整数，且 `A` 不为 0。其中：
-
     - `A` 是整数步长，
     - `B` 是整数偏移量，
     - `n` 是从 0 开始的所有非负整数。

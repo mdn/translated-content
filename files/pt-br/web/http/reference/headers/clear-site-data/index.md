@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Clear-Site-Data
 original_slug: Web/HTTP/Headers/Clear-Site-Data
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho HTTP **`Clear-Site-Data`** limpa os dados de navegação (_cookies_, armazenamento, _cache_) associados com o site requisitado. Ele permite desenvolvedores web terem maior controle sobre os dados armazenados localmente pelo navegador para suas origens.
 
 <table class="properties">
@@ -42,13 +40,11 @@ Clear-Site-Data: "*"
 > Todas as diretivas devem estar de acordo com a [gramática de cadeia de caracteres com as aspas](https://tools.ietf.org/html/rfc7230#section-3.2.6). A diretiva que não inclui aspas duplas é inválida.
 
 - `"cache"`
-  - : Indica que o servidor quer remover localmente os dados cacheados (i.e. o cache do navegador, veja [HTTP caching](/pt-BR/docs/Web/HTTP/Caching)) para a URL de origem da resposta. Dependendo do navegador, essa diretiva pode acabar apagando outras coisas como páginas pré-renderizadas, _scripts_ armazenados, shaders WebGL ou sugestões na barra de endereço.
+  - : Indica que o servidor quer remover localmente os dados cacheados (i.e. o cache do navegador, veja [HTTP caching](/pt-BR/docs/Web/HTTP/Guides/Caching)) para a URL de origem da resposta. Dependendo do navegador, essa diretiva pode acabar apagando outras coisas como páginas pré-renderizadas, _scripts_ armazenados, shaders WebGL ou sugestões na barra de endereço.
 - `"cookies"`
   - : Indica que o servidor quer remover todos os _cookies_ da URL de origem da resposta. Credenciais de autenticação HTTP também são limpas. Isso afeta o registro inteiro do domínio, incluindo subdomínios. Então, `https://example.com` também como `https://stage.example.com`, terão seus _cookies_ limpos.
 - `"storage"`
-
   - : Indica que o servidor quer remover todo o armezenamento DOM para a URL de origem da resposta. Isso incluí mecanismos de armazenamento como:
-
     - localStorage (executa `localStorage.clear`),
     - sessionStorage (executa `sessionStorage.clear`),
     - IndexedDB (para cada banco de dados, executa {{domxref("IDBFactory.deleteDatabase")}}),

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Allow
 original_slug: Web/HTTP/Headers/Allow
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Allow`** lista um conjunto de métodos suportados pelo recurso.
 
 O cabeçalho deve ser enviado se o servidor responde com um código de resposta {{HTTPStatus("405")}} `Method Not Allowed`, para indicar quais métodos de requisição podem ser utilizados. Um cabeçalho `Allow` vazio indica que o recurso não permite cabeçalhos de requisição, o que pode acontecer temporariamente para um dado recurso, por exemplo.
@@ -32,7 +30,7 @@ Allow: <métodos-http>
 ## Diretivas
 
 - \<métodos-http>
-  - : Uma lista de [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods) separados por vírgula.
+  - : Uma lista de [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods) separados por vírgula.
 
 ## Exemplos
 

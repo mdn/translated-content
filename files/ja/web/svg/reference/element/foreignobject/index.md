@@ -1,12 +1,9 @@
 ---
 title: <foreignObject>
 slug: Web/SVG/Reference/Element/foreignObject
-original_slug: Web/SVG/Element/foreignObject
 l10n:
-  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
-
-{{SVGRef}}
 
 **`<foreignObject>`** は [SVG](/ja/docs/Web/SVG) 要素で、異なる XML 名前空間の要素を含みます。ブラウザーのコンテキストでは、ほとんどの場合 (X)HTML です。
 
@@ -67,7 +64,11 @@ svg {
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: `0`; _アニメーション_: **可**
 
 > [!NOTE]
-> SVG2 以降、`x`, `y`, `width`, `height` はジオメトリー属性であり、これらの属性は要素の CSS プロパティとして使用することもできます。
+> SVG2 以降、`x`, `y`, `width`, `height` は幾何属性であり、これらの属性は要素の CSS プロパティとして使用することもできます。
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGForeignObjectElement")}} インターフェイスを実装しています。
 
 ## 使用可能な場所
 

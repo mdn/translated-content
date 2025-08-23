@@ -1,11 +1,9 @@
 ---
-title: title
+title: HTML title 全域屬性
 slug: Web/HTML/Reference/Global_attributes/title
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 7885271e36e9d2744296c01f400653f63caa6f75
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 [全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes) **`title`** 包含表示與其所屬元素相關的建議資訊的文字。
 
@@ -13,8 +11,8 @@ l10n:
 
 ```html interactive-example
 <p>
-  Use the <code>title</code> attribute on an <code>iframe</code> to clearly
-  identify the content of the <code>iframe</code> to screen readers.
+  對 <code>iframe</code> 使用 <code>title</code> 屬性，以清楚地向螢幕閱讀器說明
+  <code>iframe</code> 的內容。
 </p>
 
 <iframe

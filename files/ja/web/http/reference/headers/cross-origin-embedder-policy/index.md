@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy
 original_slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Cross-Origin-Embedder-Policy`** (COEP) レスポンスヘッダーは、（[CORP](/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy) または [CORS](/ja/docs/Web/HTTP/Guides/CORS) を使用して）文書に明示的に許可を与えていない外部オリジンのリソースが、文書に読み込まれることを防止するものです。
 
 <table class="properties">
@@ -15,7 +13,7 @@ HTTP の **`Cross-Origin-Embedder-Policy`** (COEP) レスポンスヘッダー�
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>

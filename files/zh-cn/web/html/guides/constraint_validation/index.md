@@ -3,8 +3,6 @@ title: 约束验证
 slug: Web/HTML/Guides/Constraint_validation
 ---
 
-{{HTMLSidebar}}
-
 创建 web 表单始终是一个复杂的任务。仅仅组装表单是容易的，但是检查每一个字段的值是否有效并且一致是一件更加困难的事情，而如何告知用户错误所在可能会令人头痛。[HTML5](/zh-CN/docs/Glossary/HTML5) 引入了表单相关的一些新机制：它为 {{ HTMLElement("input") }} 元素和*约束验证*增加了一些新的语义类型，使得客户端检查表单内容变得容易。基本上，通过设置一些新的属性，常用的约束条件可以无需 JavaScript 代码而检测到；对于更复杂的约束条件的校验可以尝试使用约束验证 API。
 
 对于这些概念的基本介绍和示例，参阅[表单数据校验教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)一页的介绍。
@@ -413,7 +411,6 @@ window.onload = () => {
 以下一些方法可以控制违反约束条件的文本：
 
 - 以下元素上的 `setCustomValidity(message)` 方法：
-
   - {{HTMLElement("fieldset")}}。备注：大多数浏览器中，在 fieldset 元素上设定自定义验证信息不会阻止表单提交。
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}

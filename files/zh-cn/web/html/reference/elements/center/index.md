@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 6f886b9147b7f62bacfa1e740a3ea288168a58aa
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<center>`** [HTML](/zh-CN/docs/Web/HTML) 元素是一个[块级元素](/zh-CN/docs/Glossary/Block-level_content)，它在其包含元素中将其块级或行级内容水平居中显示。容器通常是（但不一定必须是）{{HTMLElement("body")}}。
 

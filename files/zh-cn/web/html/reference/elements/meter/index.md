@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9c09b183a5ce844a75c2f22e909d03f71ca329fc
 ---
 
-{{HTMLSidebar}}
-
 **`<meter>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示在已知范围内的标量值或分数值。
 
 {{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
@@ -31,7 +29,6 @@ label {
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `value`
-
   - : 当前数值。如果指定了最小值和最大值（`min` 属性和 `max` 属性），则必须介于这两个值之间。如果未指定或格式错误，则值为 `0`。如果指定的值不在 `min` 属性和 `max` 属性给定的范围内，则该值等于范围的最近端。
 
     > [!NOTE]

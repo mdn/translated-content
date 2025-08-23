@@ -1,16 +1,14 @@
 ---
 title: "CSP: form-action"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/form-action
-original_slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`form-action`** ディレクティブは、指定のコンテキストからフォームの送信先として使用される URL を制限します。
 
-> **警告:** `form-action` がフォーム送信後のリダイレクトをブロックするかどうかは [議論の最中](https://github.com/w3c/webappsec-csp/issues/8) であり、この点に関する実装はブラウザーによって異なります（例えば、 Firefox 57 はリダイレクトをブロックしませんが、 Chrome 63 はリダイレクトをブロックします。）
+> [!WARNING]
+> `form-action` がフォーム送信後のリダイレクトをブロックするかどうかは [議論の最中](https://github.com/w3c/webappsec-csp/issues/8) であり、この点に関する実装はブラウザーによって異なります（例えば、 Firefox 57 はリダイレクトをブロックしませんが、 Chrome 63 はリダイレクトをブロックします。）
 
 <table class="properties">
   <tbody>
@@ -38,15 +36,19 @@ Content-Security-Policy: form-action <source>;
 Content-Security-Policy: form-action <source> <source>;
 ```
 
-### ソース
+このディレクティブは、次のいずれかの値を指定することができます。
 
-`<source>` には、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
-
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と[数々の他のディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+- `'none'`
+  - : フォームの送信は行われません。単一引用符は必須です。
+- `<source-expression-list>`
+  - : ソース表現の値を空白で区切ったリストです。フォームの送信は、指定されたソース表現のいずれかと URL が一致した場合に行われます。このディレクティブでは、以下のソース表現の値が適用できます。
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## 例
 
-### Meta タグの設定
+### meta タグの設定
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
@@ -62,7 +64,7 @@ Content-Security-Policy: form-action <source> <source>;
 
 ### Nginx の設定
 
-```
+```nginx
 add_header Content-Security-Policy "form-action 'none';"
 ```
 

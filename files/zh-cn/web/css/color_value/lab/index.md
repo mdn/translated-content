@@ -3,8 +3,6 @@ title: lab()
 slug: Web/CSS/color_value/lab
 ---
 
-{{CSSRef}}
-
 函数记号 **`lab()`** 在 CIE L\*a\*b\* 颜色空间中表示指定颜色。Lab 表示人可见的全部颜色的范围。
 
 ## 语法
@@ -18,7 +16,6 @@ lab(52.2345% 40.1645 59.9971 / .5);
 ### 取值
 
 - 函数记号：`lab(L a b [/ A])`
-
   - `L` 为介于 `0` 和 `100` 之间的 {{CSSXref("&lt;number&gt;")}} 或介于 `0%` 和 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}}，指定了 CIE 明度，此处数值 `0` 对应 `0%`（黑），数值 `100` 对应 `100%`（白）。
 
   - `a` 为介于 `-125` 和 `125` 之间的 {{CSSXref("&lt;number&gt;")}} 或介于 `-100%` 和 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}}，指定了在 Lab 颜色空间中沿 `a` 轴的距离，即颜色绿或红的程度。
