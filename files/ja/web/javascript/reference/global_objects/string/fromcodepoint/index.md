@@ -1,11 +1,10 @@
 ---
 title: String.fromCodePoint()
+short-title: fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 l10n:
-  sourceCommit: a49d60648404407784b04ff5ff7e16a6a8d1ac25
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`String.fromCodePoint()`** 静的メソッドは指定されたコードポイントの並びを使って生成された文字列を返します。
 
@@ -13,12 +12,13 @@ l10n:
 
 ```js interactive-example
 console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
-// Expected output: "☃★♲你"
+// 予想される結果: "☃★♲你"
 ```
 
 ## 構文
 
 ```js-nolint
+String.fromCodePoint()
 String.fromCodePoint(num1)
 String.fromCodePoint(num1, num2)
 String.fromCodePoint(num1, num2, /* …, */ numN)
@@ -26,7 +26,7 @@ String.fromCodePoint(num1, num2, /* …, */ numN)
 
 ### 引数
 
-- `numN`
+- `num1`, …, `numN`
   - : `0` 以上 `0x10FFFF` 以下の整数で、Unicode コードポイントを表します。
 
 ### 返値
@@ -96,6 +96,7 @@ String.fromCodePoint(0x1f303); // または 10 進数で 127747
 ## 関連情報
 
 - [`String.fromCodePoint` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.fromCodePoint` のポリフィル](https://www.npmjs.com/package/string.fromcodepoint)
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.codePointAt()")}}
