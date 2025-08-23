@@ -2,7 +2,7 @@
 title: Symbol.dispose
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/dispose
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 5d6f5187d1c657edec7e735d3cc5ad36907e2030
 ---
 
 **`Symbol.dispose`** は、静的データプロパティーで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.dispose` を表します。{{jsxref("Statements/using", "using")}} 宣言が、変数を初期化するオブジェクトにおけるこのシンボルを調べることで、変数がスコープ外になる際に呼び出すメソッドを取得します。
