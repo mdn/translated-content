@@ -24,9 +24,9 @@ An object is disposable if it has the `[Symbol.dispose]()` method. The method is
 
 このメソッドはプロミスを返すべきではありません。なぜなら、`[Symbol.dispose]()` が返すプロミスは {{jsxref("Statements/await_using", "await using")}} によって待機されないからです。非同期の処分可能オブジェクトを宣言するには、{{jsxref("Symbol.asyncDispose")}} を使用してください。
 
-## Examples
+## 例
 
-### User defined disposables
+### ユーザー定義の処分可能オブジェクト
 
 `[Symbol.dispose]` allows the creation of custom disposables. See the {{jsxref("Statements/using", "using")}} reference for more information.
 
