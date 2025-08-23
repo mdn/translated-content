@@ -1,25 +1,24 @@
 ---
 title: String.prototype.replace()
+short-title: replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`replace()`** は {{jsxref("String")}} 値のメソッドで、`pattern` に一致する文字列の一部またはすべてを `replacement` で置き換えた新しい文字列を返します。`pattern` には文字列または正規表現 ({{jsxref("RegExp")}}) を指定することができ、 `replacement` には文字列または一致するごとに呼び出される関数を指定することができます。`pattern` が文字列の場合、最初に一致した箇所のみを置き換えます。元の文字列は変更されません。
 
-{{InteractiveExample("JavaScript デモ: String.replace()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.replace()")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";
 
 console.log(paragraph.replace("Ruth's", "my"));
-// Expected output: "I think my dog is cuter than your dog!"
+// 予想される結果: "I think my dog is cuter than your dog!"
 
 const regex = /Dog/i;
 console.log(paragraph.replace(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your dog!"
+// 予想される結果: "I think Ruth's ferret is cuter than your dog!"
 ```
 
 ## 構文
@@ -120,7 +119,7 @@ function replacer(match, p1, p2, p3, offset, string) {
   // p1 is non-digits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(" - ");
 }
-const newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+const newString = "abc12345#$*%".replace(/(\D*)(\d*)(\W*)/, replacer);
 console.log(newString); // abc - 12345 - #$*%
 ```
 
@@ -134,8 +133,8 @@ console.log(newString); // abc - 12345 - #$*%
 
 ```js
 const str = "Twas the night before Xmas...";
-const newstr = str.replace(/xmas/i, "Christmas");
-console.log(newstr); // Twas the night before Christmas...
+const newStr = str.replace(/xmas/i, "Christmas");
+console.log(newStr); // Twas the night before Christmas...
 ```
 
 これは `'Twas the night before Christmas...'` と出力します。
@@ -150,8 +149,8 @@ console.log(newstr); // Twas the night before Christmas...
 ```js
 const re = /apples/gi;
 const str = "Apples are round, and apples are juicy.";
-const newstr = str.replace(re, "oranges");
-console.log(newstr); // oranges are round, and oranges are juicy.
+const newStr = str.replace(re, "oranges");
+console.log(newStr); // oranges are round, and oranges are juicy.
 ```
 
 この出力は 'oranges are round, and oranges are juicy' となります。
@@ -163,8 +162,8 @@ console.log(newstr); // oranges are round, and oranges are juicy.
 ```js
 const re = /(\w+)\s(\w+)/;
 const str = "Maria Cruz";
-const newstr = str.replace(re, "$2, $1");
-console.log(newstr); // Cruz, Maria
+const newStr = str.replace(re, "$2, $1");
+console.log(newStr); // Cruz, Maria
 ```
 
 この出力は `'Cruz, Maria'` となります。
@@ -259,6 +258,7 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 ## 関連情報
 
 - [`String.prototype.replace` のポリフィル (`core-js`) （`Symbol.replace` への対応など、現代の修正や実装に対応したもの）](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
 - {{jsxref("String.prototype.replaceAll()")}}
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
