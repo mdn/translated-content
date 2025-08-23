@@ -22,7 +22,7 @@ An object is disposable if it has the `[Symbol.dispose]()` method. The method is
 - このメソッドが例外をスローした場合、通常はリソースを解放できなかったことを意味します。
 - 同じオブジェクトにおいて複数回呼び出された場合でも、メソッドは例外をスローするべきではありません。ただし、この要件は強制ではありません。
 
-This method should not return a promise, as promises returned by `[Symbol.dispose]()` are not awaited by {{jsxref("Statements/await_using", "await using")}}. To declare async disposables, use {{jsxref("Symbol.asyncDispose")}}.
+このメソッドはプロミスを返すべきではありません。なぜなら、`[Symbol.dispose]()` が返すプロミスは {{jsxref("Statements/await_using", "await using")}} によって待機されないからです。非同期の処分可能オブジェクトを宣言するには、{{jsxref("Symbol.asyncDispose")}} を使用してください。
 
 ## Examples
 
