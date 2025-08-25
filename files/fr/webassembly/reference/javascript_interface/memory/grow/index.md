@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Memory/grow
 
 {{WebAssemblySidebar}}
 
-La méthode **`grow()`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory), permet d'augmenter la taille de l'espace mémoire correspondant d'un nombre de pages WebAssembly.
+La méthode **`grow()`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory), permet d'augmenter la taille de l'espace mémoire correspondant d'un nombre de pages WebAssembly.
 
 ## Syntaxe
 
@@ -53,5 +53,5 @@ On voit ici que la valeur de `grow()` indique l'espace utilisé avant l'agrandis
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

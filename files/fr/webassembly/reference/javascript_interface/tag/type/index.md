@@ -6,9 +6,9 @@ original_slug: WebAssembly/JavaScript_interface/Tag/type
 
 {{WebAssemblySidebar}}
 
-La méthode **`type()`**, rattachée au prototype d'un objet [`Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag), permet d'accéder à la séquence des types de données associés à la balise.
+La méthode **`type()`**, rattachée au prototype d'un objet [`Tag`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag), permet d'accéder à la séquence des types de données associés à la balise.
 
-L'objet renvoyé par la méthode sera le même que celui initialement passé au [constructeur `Tag()`](/fr/docs/WebAssembly/JavaScript_interface/Tag/Tag).
+L'objet renvoyé par la méthode sera le même que celui initialement passé au [constructeur `Tag()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag/Tag).
 
 ## Syntaxe
 
@@ -22,9 +22,9 @@ Aucun.
 
 ### Valeur de retour
 
-Un objet avec une propriété nommée `parameters` qui fait référence au tableau des types de données associés à cette instance [`Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag).
+Un objet avec une propriété nommée `parameters` qui fait référence au tableau des types de données associés à cette instance [`Tag`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag).
 
-Il s'agit du même objet `type` qui a été initialement passé au [constructeur `Tag()`](/fr/docs/WebAssembly/JavaScript_interface/Tag/Tag).
+Il s'agit du même objet `type` qui a été initialement passé au [constructeur `Tag()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag/Tag).
 
 ## Exemples
 
@@ -51,5 +51,5 @@ console.log(tag.type());
 ## Voir aussi
 
 - [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Concepts WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

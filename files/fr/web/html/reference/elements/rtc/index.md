@@ -32,7 +32,7 @@ ruby {
 
 ## Attributs
 
-Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 

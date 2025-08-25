@@ -12,7 +12,7 @@ Le rôle **[button](https://www.w3.org/WAI/PF/aria/roles#button)** devrait être
 </div>
 ```
 
-L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) avec `type="button"` pour représenter des boutons :
+L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) ou [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) avec `type="button"` pour représenter des boutons :
 
 ```html
 <button id="saveChanges">Enregistrer</button>
@@ -177,7 +177,7 @@ function handleCommand(event) {
 
 ### Exemple d'interrupteur
 
-Dans le fragment qui suit, on convertit un élément [`<span>`](/fr/docs/Web/HTML/Element/span) en interrupteur grâce au rôle `button` et à l'attribut `aria-pressed`. Lorsque le bouton est activé, `aria-pressed` change de valeur et alterne entre `true` et `false`.
+Dans le fragment qui suit, on convertit un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) en interrupteur grâce au rôle `button` et à l'attribut `aria-pressed`. Lorsque le bouton est activé, `aria-pressed` change de valeur et alterne entre `true` et `false`.
 
 #### HTML
 

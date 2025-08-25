@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`showPopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) affiche un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en l'ajoutant à [la couche supérieure](/fr/docs/Glossary/Top_layer).
+La méthode **`showPopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) affiche un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) valide) en l'ajoutant à [la couche supérieure](/fr/docs/Glossary/Top_layer).
 
-Lorsque `showPopover()` est appelée sur un élément avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) qui est actuellement masqué&nbsp;:
+Lorsque `showPopover()` est appelée sur un élément avec l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) qui est actuellement masqué&nbsp;:
 
 1. Un évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) est déclenché.
 2. Le <i lang="en">popover</i> est affiché.

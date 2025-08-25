@@ -5,7 +5,7 @@ slug: Web/CSS/::-webkit-search-results-button
 
 {{CSSRef}}{{Non-standard_header}}
 
-Le pseudo-élément **`::-webkit-search-results-button`** représente le bouton affiché sur le bord gauche d'un élément {{HTMLElement("input")}} de type `"search"` qui affiche un menu proposant les dernières recherches effectuées à l'utilisateur. Ce bouton et ce pseudo-élément ne sont pas standards et sont uniquement pris en charge par WebKit/Blink. Le bouton des résultats de recherche est uniquement affiché pour les éléments {{HTMLElement("input")}} qui possèdent [un attribut `results`](/fr/docs/Web/HTML/Element/input).
+Le pseudo-élément **`::-webkit-search-results-button`** représente le bouton affiché sur le bord gauche d'un élément {{HTMLElement("input")}} de type `"search"` qui affiche un menu proposant les dernières recherches effectuées à l'utilisateur. Ce bouton et ce pseudo-élément ne sont pas standards et sont uniquement pris en charge par WebKit/Blink. Le bouton des résultats de recherche est uniquement affiché pour les éléments {{HTMLElement("input")}} qui possèdent [un attribut `results`](/fr/docs/Web/HTML/Reference/Elements/input).
 
 ## Syntaxe
 
