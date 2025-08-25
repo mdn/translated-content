@@ -41,7 +41,7 @@ observe(options)
 ```js
 const observer = new PerformanceObserver((list, obj) => {
   list.getEntries().forEach((entry) => {
-    // 处理 "mark" and "measure" 事件
+    // 处理“mark”和“measure”事件
   });
 });
 observer.observe({ entryTypes: ["mark", "measure"] });
