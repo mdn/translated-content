@@ -54,7 +54,7 @@ observer.observe({ entryTypes: ["mark", "measure"] });
 ```js
 const observer = new PerformanceObserver((list, obj) => {
   list.getEntries().forEach((entry) => {
-    // 处理 "resource" 事件
+    // 处理“resource”事件
   });
 });
 observer.observe({ type: "resource", buffered: true });
