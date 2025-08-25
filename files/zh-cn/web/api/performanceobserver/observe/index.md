@@ -1,6 +1,8 @@
 ---
 title: PerformanceObserver：observe() 方法
 slug: Web/API/PerformanceObserver/observe
+l10n:
+  souceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
