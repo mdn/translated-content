@@ -21,7 +21,7 @@ cible.onkeydown = refFunction;
 
 ## Exemple
 
-Cet exemple affiche la valeur de [`KeyboardEvent.code`](/fr/docs/Web/API/KeyboardEvent/code) à chaque fois qu'on appuie sur une touche à l'intérieur de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+Cet exemple affiche la valeur de [`KeyboardEvent.code`](/fr/docs/Web/API/KeyboardEvent/code) à chaque fois qu'on appuie sur une touche à l'intérieur de l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
 ### HTML
 

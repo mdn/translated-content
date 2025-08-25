@@ -5,7 +5,7 @@ slug: Web/API/Document/compatMode
 
 {{ ApiRef("DOM") }}
 
-Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)) ou dans le respect des standards.
+Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)) ou dans le respect des standards.
 
 ## Syntaxe
 

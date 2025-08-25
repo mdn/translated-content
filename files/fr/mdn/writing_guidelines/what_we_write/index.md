@@ -56,10 +56,10 @@ Les sujets sur lesquels nous nous concentrons avant tout sont les technologies w
 - [Les API web](/fr/docs/Web/API)
 - [HTTP](/fr/docs/Web/HTTP)
 
-Nous documentons également d'autres sujets comme [SVG](/fr/docs/Web/SVG), [XML](/fr/docs/Web/XML), [WebAssembly](/fr/docs/WebAssembly), [l'accessibilité](/fr/docs/Learn/Accessibility). De plus, nous écrivons [des guides d'apprentissage](/fr/docs/Learn) pour ces technologies et disposons également [d'un glossaire](/fr/docs/Glossary).
+Nous documentons également d'autres sujets comme [SVG](/fr/docs/Web/SVG), [XML](/fr/docs/Web/XML), [WebAssembly](/fr/docs/WebAssembly), [l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility). De plus, nous écrivons [des guides d'apprentissage](/fr/docs/Learn_web_development) pour ces technologies et disposons également [d'un glossaire](/fr/docs/Glossary).
 
 > [!NOTE]
-> Les technologies côté serveur ont, la plupart du temps, leur propre documentation et MDN n'a pas pour but de maintenir une autre version. Toutefois, [il existe certaines exceptions](/fr/docs/Learn/Server-side).
+> Les technologies côté serveur ont, la plupart du temps, leur propre documentation et MDN n'a pas pour but de maintenir une autre version. Toutefois, [il existe certaines exceptions](/fr/docs/Learn_web_development/Extensions/Server-side).
 
 Le contenu présent sur MDN doit être pertinent pour la section dans laquelle il est situé. On attend des personnes qui contribuent à ce qu'elles suivent [les règles d'écritures sur MDN](/fr/docs/MDN/Writing_guidelines) tant pour la forme, les exemples de code que pour d'autres sujets.
 

@@ -118,7 +118,7 @@ td {
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs dépréciés
 
@@ -171,7 +171,7 @@ Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés.
 
 ## Exemples
 
-Consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples d'utilisation sur `<tfoot>`.
+Consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour des exemples d'utilisation sur `<tfoot>`.
 
 ## Spécifications
 
@@ -184,15 +184,15 @@ Consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples
 ## Voir aussi
 
 - Les autres éléments HTML relatifs aux tableaux&nbsp;:
-  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
-  - [`<col>`](/fr/docs/Web/HTML/Element/col)
-  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
-  - [`<table>`](/fr/docs/Web/HTML/Element/table)
-  - [`<tbody>`](/fr/docs/Web/HTML/Element/tbody)
-  - [`<td>`](/fr/docs/Web/HTML/Element/td)
-  - [`<th>`](/fr/docs/Web/HTML/Element/th)
-  - [`<thead>`](/fr/docs/Web/HTML/Element/thead)
-  - [`<tr>`](/fr/docs/Web/HTML/Element/tr)
+  - [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption)
+  - [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)
+  - [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup)
+  - [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)
+  - [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody)
+  - [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)
+  - [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th)
+  - [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)
+  - [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)
 - Les propriétés et pseudo-classes CSS qui peuvent s'avérer utiles pour mettre en forme l'élément `<tfoot>`&nbsp;:
   - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de définir l'alignement des cellules de la colonne
   - La propriété [`text-align`](/fr/docs/Web/CSS/text-align) qui permet d'aligner le contenu des différentes cellules par rapport à un même caractère (comme le point ou la virgule)

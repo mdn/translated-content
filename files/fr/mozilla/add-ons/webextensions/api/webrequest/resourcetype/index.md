@@ -22,7 +22,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `image`
   - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
 - `imageset`
-  - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) d'un élement `<img>`.
+  - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#srcset) d'un élement `<img>`.
 
 <!---->
 
@@ -38,7 +38,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `object_subrequest`
   - : Requêtes envoyées par plugins.
 - `ping`
-  - : Demandes envoyées à l'URL donnée dans l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping) d'un hyperlien, lorsque l'hyperlien est suivi.
+  - : Demandes envoyées à l'URL donnée dans l'attribut [`ping`](/fr/docs/Web/HTML/Reference/Elements/a#ping) d'un hyperlien, lorsque l'hyperlien est suivi.
 
     Les navigateurs qui n'ont pas de type de `balise` dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que `ping`.
 
@@ -51,7 +51,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `sub_frame`
   - : Documents chargés dans un élément {{HTMLElement("iframe")}} ou {{HTMLElement("frame")}}.
 - `web_manifest`
-  - : [Manifests Web App](/fr/docs/Web/Manifest) chargés pour les sites Web qui peuvent être installés sur l'écran d'accueil.
+  - : [Manifests Web App](/fr/docs/Web/Progressive_web_apps/Manifest) chargés pour les sites Web qui peuvent être installés sur l'écran d'accueil.
 - `websocket`
   - : Requêtes initiant une connexion à un serveur via l'[API WebSocket](/fr/docs/Web/API/WebSockets_API).
 - `xbl`
@@ -61,7 +61,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `xmlhttprequest`
   - : Requêtes envoyées par un objet {{domxref("XMLHttpRequest")}} ou par l'[API Fetch](/fr/docs/Web/API/Fetch_API).
 - `xslt`
-  - : Feuilles de style [XSLT](/fr/docs/Web/XSLT) chargées pour transformer un document XML
+  - : Feuilles de style [XSLT](/fr/docs/Web/XML/XSLT) chargées pour transformer un document XML
 - `other`
   - : Ressources qui ne sont couvertes par aucun autre type disponible.
 

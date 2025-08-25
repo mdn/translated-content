@@ -21,7 +21,7 @@ On peut utiliser {{cssxref("shape-margin")}} afin d'écarter le texte de la form
 
 ## Origines et compatibilité CORS
 
-Attention, les images utilisées pour créer les formes doivent [être compatibles pour le CORS](/fr/docs/Web/HTTP/CORS). Une image hébergée sur le même domaine que le site devrait fonctionner. En revanche, si les images sont hébergées sur un domaine différent (celui d'un CDN par exemple), il faudra s'assurer que les bons en-têtes HTTP sont fournis afin de construire des images. À cause de ce prérequis, si vous testez un site en local avec vos fichiers, les formes CSS à partir d'images ne fonctionneront pas si vous ne mettez pas en place de serveur web local.
+Attention, les images utilisées pour créer les formes doivent [être compatibles pour le CORS](/fr/docs/Web/HTTP/Guides/CORS). Une image hébergée sur le même domaine que le site devrait fonctionner. En revanche, si les images sont hébergées sur un domaine différent (celui d'un CDN par exemple), il faudra s'assurer que les bons en-têtes HTTP sont fournis afin de construire des images. À cause de ce prérequis, si vous testez un site en local avec vos fichiers, les formes CSS à partir d'images ne fonctionneront pas si vous ne mettez pas en place de serveur web local.
 
 ### Ai-je à faire à un problème de CORS ?
 

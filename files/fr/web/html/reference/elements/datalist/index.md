@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/datalist
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<datalist>`** contient un ensemble d'éléments [`<option>`](/fr/docs/Web/HTML/Element/option) qui représentent les valeurs possibles pour d'autres contrôles.
+L'élément HTML **`<datalist>`** contient un ensemble d'éléments [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option) qui représentent les valeurs possibles pour d'autres contrôles.
 
 {{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
 
@@ -100,7 +100,7 @@ label {
 
 ## Attributs
 
-Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
 
 ## Exemples
 
@@ -135,5 +135,5 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 
 ## Voir aussi
 
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et plus précisément son attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list).
-- L'élément [`<option>`](/fr/docs/Web/HTML/Element/option).
+- L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et plus précisément son attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#attr-list).
+- L'élément [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option).

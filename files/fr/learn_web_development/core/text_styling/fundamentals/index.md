@@ -36,7 +36,7 @@ Dans cet article, nous allons commencer le voyage vers la maîtrise des styles d
 Comme vous l'avez déjà vu dans votre apprentissage de HTML et CSS, le texte d'un élément est placé à l'intérieur de la boîte de contenu de cet élément. Il débute en haut à gauche de cette zone (ou en haut à droite, dans le cas des contenus en langues s'écrivant de droite à gauche) et se poursuit vers la fin de la ligne. Arrivé en bout de ligne, il descend à la ligne suivante et continue, puis va à la ligne suivante, jusqu'à ce que tout le contenu ait été placé. Les contenus textuels se comportent comme une suite d'éléments en ligne placés les uns à côté des autres. Aucun saut de ligne n'est créé avant que la fin de la ligne soit atteinte, sauf si vous forcez manuellement le saut de ligne avec l'élément {{htmlelement("br")}}.
 
 > [!NOTE]
-> Si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model) avant de poursuivre.
+> Si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) avant de poursuivre.
 
 Les propriétés CSS utilisées pour le style de texte appartiennent généralement à deux catégories, que nous verrons séparément dans cet article :
 
@@ -74,7 +74,7 @@ Vous pouvez trouver l'[exemple (en) fini](https://mdn.github.io/learning-area/cs
 
 La propriété {{cssxref("color")}} définit la couleur du contenu d'avant‑plan des éléments sélectionnés (généralement du texte, mais peut être autre chose, comme un soulignement ou un surlignage créé avec la propriété {{cssxref("text-decoration")}}.
 
-`color` accepte toutes les [unités de couleur des CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleurs), par exemple :
+`color` accepte toutes les [unités de couleur des CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#couleurs), par exemple :
 
 ```css
 p {
@@ -201,7 +201,7 @@ p {
 
 ### Taille de la police de caractères
 
-Dans l'article [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units) de notre prédédent module, nous avons vu les [unités de longueur et taille](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille). La taille des polices de caractères (définie avec la propriété {{cssxref("font-size")}}) accepte la plupart des unités de valeur (et d'autres comme les [pourcentages](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#pourcentages)). Toutefois, les unités les plus couramment utilisées pour dimensionner le texte sont :
+Dans l'article [Valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) de notre prédédent module, nous avons vu les [unités de longueur et taille](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longueur_et_taille). La taille des polices de caractères (définie avec la propriété {{cssxref("font-size")}}) accepte la plupart des unités de valeur (et d'autres comme les [pourcentages](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#pourcentages)). Toutefois, les unités les plus couramment utilisées pour dimensionner le texte sont :
 
 - `px` (pixels) : le nombre de pixels souhaités pour la hauteur du texte. C'est une unité absolue — il en résulte une même valeur finale calculée de la police sur la page dans à peu près n'importe quelle situation.
 - `em` : 1 em est égal à la taille de la police définie sur l'élément parent de l'élément courant que nous composons (plus précisément, la largeur d'un « M » majuscule de l'élément parent). Cette valeur peut devenir difficile à déterminer si vous avez beaucoup d'imbrications avec diverses tailles de police, mais cela reste faisable, comme vous le verrez ci-dessous. Pourquoi s'embêter ? C'est assez naturel, une fois que vous y êtes habitué ; vous pouvez utiliser `em` pour tout dimensionner, pas seulement du texte. Vous pouvez avoir un site web entier dimensionné avec des `em`, la maintenance en sera facilitée.
@@ -479,7 +479,7 @@ p {
 
 ### Hauteur de ligne
 
-La propriété {{cssxref ("line-height")}} définit la hauteur de chaque ligne de texte — elle peut prendre la plupart des [unités de longueur et de taille](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), mais elle peut également prendre une valeur sans unité, qui agit comme un multiplicateur et est considérée habituellement comme la meilleure option — la valeur de {{cssxref ("font-size")}} est multipliée par ce facteur pour obtenir la valeur de `line-height`. Le corps de texte semble généralement plus agréable et est plus facile à lire lorsque les lignes sont espacées ; la hauteur de ligne recommandée est d'environ 1,5-2 (double interligne). Donc, pour définir une hauteur de ligne de texte égale à 1,5 fois la hauteur de la police, vous utiliserez ceci :
+La propriété {{cssxref ("line-height")}} définit la hauteur de chaque ligne de texte — elle peut prendre la plupart des [unités de longueur et de taille](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size), mais elle peut également prendre une valeur sans unité, qui agit comme un multiplicateur et est considérée habituellement comme la meilleure option — la valeur de {{cssxref ("font-size")}} est multipliée par ce facteur pour obtenir la valeur de `line-height`. Le corps de texte semble généralement plus agréable et est plus facile à lire lorsque les lignes sont espacées ; la hauteur de ligne recommandée est d'environ 1,5-2 (double interligne). Donc, pour définir une hauteur de ligne de texte égale à 1,5 fois la hauteur de la police, vous utiliserez ceci :
 
 ```css
 line-height: 1.5;

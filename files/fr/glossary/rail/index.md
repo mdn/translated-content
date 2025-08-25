@@ -18,4 +18,4 @@ slug: Glossary/RAIL
 
 ## Voir aussi
 
-- [Timings de performance Web recommandés: combien de temps est trop long](/fr/docs/Web/Performance/How_long_is_too_long)
+- [Timings de performance Web recommandés: combien de temps est trop long](/fr/docs/Web/Performance/Guides/How_long_is_too_long)

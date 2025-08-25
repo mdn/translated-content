@@ -14,7 +14,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 
 ### A
 
-- [`accent-height`](/fr/docs/Web/SVG/Attribute/accent-height)
+- [`accent-height`](/fr/docs/conflicting/Web/SVG/Reference/Attribute)
 - [`accumulate`](/fr/docs/Web/SVG/Attribute/accumulate)
 - [`additive`](/fr/docs/Web/SVG/Attribute/additive)
 - [`alignment-baseline`](/fr/docs/Web/SVG/Attribute/alignment-baseline)
@@ -43,21 +43,21 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`class`](/fr/docs/Web/SVG/Attribute/class)
 - [`clip`](/fr/docs/Web/SVG/Attribute/clip)
 - [`clipPathUnits`](/fr/docs/Web/SVG/Attribute/clipPathUnits)
-- [`clip-path`](/fr/docs/Web/SVG/Attribute/clip-path)
+- [`clip-path`](/fr/docs/Web/SVG/Reference/Attribute/clip-path)
 - [`clip-rule`](/fr/docs/Web/SVG/Attribute/clip-rule)
-- [`color`](/fr/docs/Web/SVG/Attribute/color)
+- [`color`](/fr/docs/Web/SVG/Reference/Attribute/color)
 - [`color-interpolation`](/fr/docs/Web/SVG/Attribute/color-interpolation)
 - [`color-interpolation-filters`](/fr/docs/Web/SVG/Attribute/color-interpolation-filters)
 - [`color-profile`](/fr/docs/Web/SVG/Attribute/color-profile)
 - [`color-rendering`](/fr/docs/Web/SVG/Attribute/color-rendering)
 - [`crossorigin`](/fr/docs/Web/SVG/Attribute/crossorigin)
 - [`cursor`](/fr/docs/Web/SVG/Attribute/cursor)
-- [`cx`](/fr/docs/Web/SVG/Attribute/cx)
-- [`cy`](/fr/docs/Web/SVG/Attribute/cy)
+- [`cx`](/fr/docs/Web/SVG/Reference/Attribute/cx)
+- [`cy`](/fr/docs/Web/SVG/Reference/Attribute/cy)
 
 ### D
 
-- [`d`](/fr/docs/Web/SVG/Attribute/d)
+- [`d`](/fr/docs/Web/SVG/Reference/Attribute/d)
 - [`decelerate`](/fr/docs/Web/SVG/Attribute/decelerate)
 - [`descent`](/fr/docs/Web/SVG/Attribute/descent)
 - [`diffuseConstant`](/fr/docs/Web/SVG/Attribute/diffuseConstant)
@@ -66,8 +66,8 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`divisor`](/fr/docs/Web/SVG/Attribute/divisor)
 - [`dominant-baseline`](/fr/docs/Web/SVG/Attribute/dominant-baseline)
 - [`dur`](/fr/docs/Web/SVG/Attribute/dur)
-- [`dx`](/fr/docs/Web/SVG/Attribute/dx)
-- [`dy`](/fr/docs/Web/SVG/Attribute/dy)
+- [`dx`](/fr/docs/Web/SVG/Reference/Attribute/dx)
+- [`dy`](/fr/docs/Web/SVG/Reference/Attribute/dy)
 
 ### E
 
@@ -79,9 +79,9 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 
 ### F
 
-- [`fill`](/fr/docs/Web/SVG/Attribute/fill)
-- [`fill-opacity`](/fr/docs/Web/SVG/Attribute/fill-opacity)
-- [`fill-rule`](/fr/docs/Web/SVG/Attribute/fill-rule)
+- [`fill`](/fr/docs/Web/SVG/Reference/Attribute/fill)
+- [`fill-opacity`](/fr/docs/Web/SVG/Reference/Attribute/fill-opacity)
+- [`fill-rule`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule)
 - [`filter`](/fr/docs/Web/SVG/Attribute/filter)
 - [`filterUnits`](/fr/docs/Web/SVG/Attribute/filterUnits)
 - [`flood-color`](/fr/docs/Web/SVG/Attribute/flood-color)
@@ -113,7 +113,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 ### H
 
 - [`hanging`](/fr/docs/Web/SVG/Attribute/hanging)
-- [`height`](/fr/docs/Web/SVG/Attribute/height)
+- [`height`](/fr/docs/Web/SVG/Reference/Attribute/height)
 - [`href`](/fr/docs/Web/SVG/Attribute/href)
 - [`hreflang`](/fr/docs/Web/SVG/Attribute/hreflang)
 - [`horiz-adv-x`](/fr/docs/Web/SVG/Attribute/horiz-adv-x)
@@ -124,7 +124,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`id`](/fr/docs/Web/SVG/Attribute/id)
 - [`ideographic`](/fr/docs/Web/SVG/Attribute/ideographic)
 - [`image-rendering`](/fr/docs/Web/SVG/Attribute/image-rendering)
-- [`in`](/fr/docs/Web/SVG/Attribute/in)
+- [`in`](/fr/docs/Web/SVG/Reference/Attribute/in)
 - [`in2`](/fr/docs/Web/SVG/Attribute/in2)
 - [`intercept`](/fr/docs/Web/SVG/Attribute/intercept)
 
@@ -159,7 +159,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`markerHeight`](/fr/docs/Web/SVG/Attribute/markerHeight)
 - [`markerUnits`](/fr/docs/Web/SVG/Attribute/markerUnits)
 - [`markerWidth`](/fr/docs/Web/SVG/Attribute/markerWidth)
-- [`mask`](/fr/docs/Web/SVG/Attribute/mask)
+- [`mask`](/fr/docs/Web/SVG/Reference/Attribute/mask)
 - [`maskContentUnits`](/fr/docs/Web/SVG/Attribute/maskContentUnits)
 - [`maskUnits`](/fr/docs/Web/SVG/Attribute/maskUnits)
 - [`mathematical`](/fr/docs/Web/SVG/Attribute/mathematical)
@@ -198,12 +198,12 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`patternUnits`](/fr/docs/Web/SVG/Attribute/patternUnits)
 - [`ping`](/fr/docs/Web/SVG/Attribute/ping)
 - [`pointer-events`](/fr/docs/Web/SVG/Attribute/pointer-events)
-- [`points`](/fr/docs/Web/SVG/Attribute/points)
+- [`points`](/fr/docs/Web/SVG/Reference/Attribute/points)
 - [`pointsAtX`](/fr/docs/Web/SVG/Attribute/pointsAtX)
 - [`pointsAtY`](/fr/docs/Web/SVG/Attribute/pointsAtY)
 - [`pointsAtZ`](/fr/docs/Web/SVG/Attribute/pointsAtZ)
 - [`preserveAlpha`](/fr/docs/Web/SVG/Attribute/preserveAlpha)
-- [`preserveAspectRatio`](/fr/docs/Web/SVG/Attribute/preserveAspectRatio)
+- [`preserveAspectRatio`](/fr/docs/Web/SVG/Reference/Attribute/preserveAspectRatio)
 - [`primitiveUnits`](/fr/docs/Web/SVG/Attribute/primitiveUnits)
 
 ### R
@@ -228,7 +228,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 ### S
 
 - [`scale`](/fr/docs/Web/SVG/Attribute/scale)
-- [`seed`](/fr/docs/Web/SVG/Attribute/seed)
+- [`seed`](/fr/docs/Web/SVG/Reference/Attribute/seed)
 - [`shape-rendering`](/fr/docs/Web/SVG/Attribute/shape-rendering)
 - [`slope`](/fr/docs/Web/SVG/Attribute/slope)
 - [`spacing`](/fr/docs/Web/SVG/Attribute/spacing)
@@ -246,15 +246,15 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`strikethrough-position`](/fr/docs/Web/SVG/Attribute/strikethrough-position)
 - [`strikethrough-thickness`](/fr/docs/Web/SVG/Attribute/strikethrough-thickness)
 - [`string`](/fr/docs/Web/SVG/Attribute/string)
-- [`stroke`](/fr/docs/Web/SVG/Attribute/stroke)
-- [`stroke-dasharray`](/fr/docs/Web/SVG/Attribute/stroke-dasharray)
-- [`stroke-dashoffset`](/fr/docs/Web/SVG/Attribute/stroke-dashoffset)
-- [`stroke-linecap`](/fr/docs/Web/SVG/Attribute/stroke-linecap)
-- [`stroke-linejoin`](/fr/docs/Web/SVG/Attribute/stroke-linejoin)
-- [`stroke-miterlimit`](/fr/docs/Web/SVG/Attribute/stroke-miterlimit)
-- [`stroke-opacity`](/fr/docs/Web/SVG/Attribute/stroke-opacity)
-- [`stroke-width`](/fr/docs/Web/SVG/Attribute/stroke-width)
-- [`style`](/fr/docs/Web/SVG/Attribute/style)
+- [`stroke`](/fr/docs/Web/SVG/Reference/Attribute/stroke)
+- [`stroke-dasharray`](/fr/docs/Web/SVG/Reference/Attribute/stroke-dasharray)
+- [`stroke-dashoffset`](/fr/docs/Web/SVG/Reference/Attribute/stroke-dashoffset)
+- [`stroke-linecap`](/fr/docs/Web/SVG/Reference/Attribute/stroke-linecap)
+- [`stroke-linejoin`](/fr/docs/Web/SVG/Reference/Attribute/stroke-linejoin)
+- [`stroke-miterlimit`](/fr/docs/Web/SVG/Reference/Attribute/stroke-miterlimit)
+- [`stroke-opacity`](/fr/docs/Web/SVG/Reference/Attribute/stroke-opacity)
+- [`stroke-width`](/fr/docs/Web/SVG/Reference/Attribute/stroke-width)
+- [`style`](/fr/docs/Web/SVG/Reference/Attribute/style)
 - [`surfaceScale`](/fr/docs/Web/SVG/Attribute/surfaceScale)
 - [`systemLanguage`](/fr/docs/Web/SVG/Attribute/systemLanguage)
 
@@ -265,12 +265,12 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`target`](/fr/docs/Web/SVG/Attribute/target)
 - [`targetX`](/fr/docs/Web/SVG/Attribute/targetX)
 - [`targetY`](/fr/docs/Web/SVG/Attribute/targetY)
-- [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor)
+- [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor)
 - [`text-decoration`](/fr/docs/Web/SVG/Attribute/text-decoration)
 - [`text-rendering`](/fr/docs/Web/SVG/Attribute/text-rendering)
 - [`textLength`](/fr/docs/Web/SVG/Attribute/textLength)
 - [`to`](/fr/docs/Web/SVG/Attribute/to)
-- [`transform`](/fr/docs/Web/SVG/Attribute/transform)
+- [`transform`](/fr/docs/Web/SVG/Reference/Attribute/transform)
 - [`transform-origin`](/fr/docs/Web/SVG/Attribute/transform-origin)
 - [`type`](/fr/docs/Web/SVG/Attribute/type)
 
@@ -297,19 +297,19 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`vert-adv-y`](/fr/docs/Web/SVG/Attribute/vert-adv-y)
 - [`vert-origin-x`](/fr/docs/Web/SVG/Attribute/vert-origin-x)
 - [`vert-origin-y`](/fr/docs/Web/SVG/Attribute/vert-origin-y)
-- [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox)
+- [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox)
 - [`visibility`](/fr/docs/Web/SVG/Attribute/visibility)
 
 ### W
 
-- [`width`](/fr/docs/Web/SVG/Attribute/width)
+- [`width`](/fr/docs/Web/SVG/Reference/Attribute/width)
 - [`widths`](/fr/docs/Web/SVG/Attribute/widths)
 - [`word-spacing`](/fr/docs/Web/SVG/Attribute/word-spacing)
 - [`writing-mode`](/fr/docs/Web/SVG/Attribute/writing-mode)
 
 ### X
 
-- [`x`](/fr/docs/Web/SVG/Attribute/x)
+- [`x`](/fr/docs/Web/SVG/Reference/Attribute/x)
 - [`x-height`](/fr/docs/Web/SVG/Attribute/x-height)
 - [`x1`](/fr/docs/Web/SVG/Attribute/x1)
 - [`x2`](/fr/docs/Web/SVG/Attribute/x2)
@@ -344,7 +344,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - Attributs principaux
   - [`id`](/fr/docs/Web/SVG/Attribute/id)
   - [`class`](/fr/docs/Web/SVG/Attribute/class)
-  - [`style`](/fr/docs/Web/SVG/Attribute/style)
+  - [`style`](/fr/docs/Web/SVG/Reference/Attribute/style)
   - [`lang`](/fr/docs/Web/SVG/Attribute/lang)
   - [`tabindex`](/fr/docs/Web/SVG/Attribute/tabindex)
   - [`xml:base`](/fr/docs/Web/SVG/Attribute/xml:base)
@@ -374,22 +374,22 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`alignment-baseline`](/fr/docs/Web/SVG/Attribute/alignment-baseline)
 - [`baseline-shift`](/fr/docs/Web/SVG/Attribute/baseline-shift)
 - [`clip`](/fr/docs/Web/SVG/Attribute/clip)
-- [`clip-path`](/fr/docs/Web/SVG/Attribute/clip-path)
+- [`clip-path`](/fr/docs/Web/SVG/Reference/Attribute/clip-path)
 - [`clip-rule`](/fr/docs/Web/SVG/Attribute/clip-rule)
-- [`color`](/fr/docs/Web/SVG/Attribute/color)
+- [`color`](/fr/docs/Web/SVG/Reference/Attribute/color)
 - [`color-interpolation`](/fr/docs/Web/SVG/Attribute/color-interpolation)
 - [`color-interpolation-filters`](/fr/docs/Web/SVG/Attribute/color-interpolation-filters)
 - [`color-profile`](/fr/docs/Web/SVG/Attribute/color-profile)
 - [`color-rendering`](/fr/docs/Web/SVG/Attribute/color-rendering)
 - [`cursor`](/fr/docs/Web/SVG/Attribute/cursor)
-- [`d`](/fr/docs/Web/SVG/Attribute/d)
+- [`d`](/fr/docs/Web/SVG/Reference/Attribute/d)
 - [`direction`](/fr/docs/Web/SVG/Attribute/direction)
 - [`display`](/fr/docs/Web/SVG/Attribute/display)
 - [`dominant-baseline`](/fr/docs/Web/SVG/Attribute/dominant-baseline)
 - [`enable-background`](/fr/docs/Web/SVG/Attribute/enable-background)
-- [`fill`](/fr/docs/Web/SVG/Attribute/fill)
-- [`fill-opacity`](/fr/docs/Web/SVG/Attribute/fill-opacity)
-- [`fill-rule`](/fr/docs/Web/SVG/Attribute/fill-rule)
+- [`fill`](/fr/docs/Web/SVG/Reference/Attribute/fill)
+- [`fill-opacity`](/fr/docs/Web/SVG/Reference/Attribute/fill-opacity)
+- [`fill-rule`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule)
 - [`filter`](/fr/docs/Web/SVG/Attribute/filter)
 - [`flood-color`](/fr/docs/Web/SVG/Attribute/flood-color)
 - [`flood-opacity`](/fr/docs/Web/SVG/Attribute/flood-opacity)
@@ -409,25 +409,25 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`marker-end`](/fr/docs/Web/SVG/Attribute/marker-end)
 - [`marker-mid`](/fr/docs/Web/SVG/Attribute/marker-mid)
 - [`marker-start`](/fr/docs/Web/SVG/Attribute/marker-start)
-- [`mask`](/fr/docs/Web/SVG/Attribute/mask)
+- [`mask`](/fr/docs/Web/SVG/Reference/Attribute/mask)
 - [`opacity`](/fr/docs/Web/SVG/Attribute/opacity)
 - [`overflow`](/fr/docs/Web/SVG/Attribute/overflow)
 - [`pointer-events`](/fr/docs/Web/SVG/Attribute/pointer-events)
 - [`shape-rendering`](/fr/docs/Web/SVG/Attribute/shape-rendering)
 - [`stop-color`](/fr/docs/Web/SVG/Attribute/stop-color)
 - [`stop-opacity`](/fr/docs/Web/SVG/Attribute/stop-opacity)
-- [`stroke`](/fr/docs/Web/SVG/Attribute/stroke)
-- [`stroke-dasharray`](/fr/docs/Web/SVG/Attribute/stroke-dasharray)
-- [`stroke-dashoffset`](/fr/docs/Web/SVG/Attribute/stroke-dashoffset)
-- [`stroke-linecap`](/fr/docs/Web/SVG/Attribute/stroke-linecap)
-- [`stroke-linejoin`](/fr/docs/Web/SVG/Attribute/stroke-linejoin)
-- [`stroke-miterlimit`](/fr/docs/Web/SVG/Attribute/stroke-miterlimit)
-- [`stroke-opacity`](/fr/docs/Web/SVG/Attribute/stroke-opacity)
-- [`stroke-width`](/fr/docs/Web/SVG/Attribute/stroke-width)
-- [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor)
+- [`stroke`](/fr/docs/Web/SVG/Reference/Attribute/stroke)
+- [`stroke-dasharray`](/fr/docs/Web/SVG/Reference/Attribute/stroke-dasharray)
+- [`stroke-dashoffset`](/fr/docs/Web/SVG/Reference/Attribute/stroke-dashoffset)
+- [`stroke-linecap`](/fr/docs/Web/SVG/Reference/Attribute/stroke-linecap)
+- [`stroke-linejoin`](/fr/docs/Web/SVG/Reference/Attribute/stroke-linejoin)
+- [`stroke-miterlimit`](/fr/docs/Web/SVG/Reference/Attribute/stroke-miterlimit)
+- [`stroke-opacity`](/fr/docs/Web/SVG/Reference/Attribute/stroke-opacity)
+- [`stroke-width`](/fr/docs/Web/SVG/Reference/Attribute/stroke-width)
+- [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor)
 - [`text-decoration`](/fr/docs/Web/SVG/Attribute/text-decoration)
 - [`text-rendering`](/fr/docs/Web/SVG/Attribute/text-rendering)
-- [`transform`](/fr/docs/Web/SVG/Attribute/transform)
+- [`transform`](/fr/docs/Web/SVG/Reference/Attribute/transform)
 - [`transform-origin`](/fr/docs/Web/SVG/Attribute/transform-origin)
 - [`unicode-bidi`](/fr/docs/Web/SVG/Attribute/unicode-bidi)
 - [`vector-effect`](/fr/docs/Web/SVG/Attribute/vector-effect)
@@ -438,7 +438,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 ### Attributs de filtre
 
 - Attributs pour les primitives de filtre
-  - : [`height`](/fr/docs/Web/SVG/Attribute/height), [`result`](/fr/docs/Web/SVG/Attribute/result), [`width`](/fr/docs/Web/SVG/Attribute/width), [`x`](/fr/docs/Web/SVG/Attribute/x), [`y`](/fr/docs/Web/SVG/Attribute/y)
+  - : [`height`](/fr/docs/Web/SVG/Reference/Attribute/height), [`result`](/fr/docs/Web/SVG/Attribute/result), [`width`](/fr/docs/Web/SVG/Reference/Attribute/width), [`x`](/fr/docs/Web/SVG/Reference/Attribute/x), [`y`](/fr/docs/Web/SVG/Attribute/y)
 - Attributs pour les fonctions de transfert
   - : [`type`](/fr/docs/Web/SVG/Attribute/type), [`tableValues`](/fr/docs/Web/SVG/Attribute/tableValues), [`slope`](/fr/docs/Web/SVG/Attribute/slope), [`intercept`](/fr/docs/Web/SVG/Attribute/intercept), [`amplitude`](/fr/docs/Web/SVG/Attribute/amplitude), [`exponent`](/fr/docs/Web/SVG/Attribute/exponent), [`offset`](/fr/docs/Web/SVG/Attribute/offset)
 
@@ -449,7 +449,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - Attributs pour la cible de l'animation
   - : [`attributeType`](/fr/docs/Web/SVG/Attribute/attributeType), [`attributeName`](/fr/docs/Web/SVG/Attribute/attributeName)
 - Attributs pour le minutage de l'animation
-  - : [`begin`](/fr/docs/Web/SVG/Attribute/begin), [`dur`](/fr/docs/Web/SVG/Attribute/dur), [`end`](/fr/docs/Web/SVG/Attribute/end), [`min`](/fr/docs/Web/SVG/Attribute/min), [`max`](/fr/docs/Web/SVG/Attribute/max), [`restart`](/fr/docs/Web/SVG/Attribute/restart), [`repeatCount`](/fr/docs/Web/SVG/Attribute/repeatCount), [`repeatDur`](/fr/docs/Web/SVG/Attribute/repeatDur), [`fill`](/fr/docs/Web/SVG/Attribute/fill)
+  - : [`begin`](/fr/docs/Web/SVG/Attribute/begin), [`dur`](/fr/docs/Web/SVG/Attribute/dur), [`end`](/fr/docs/Web/SVG/Attribute/end), [`min`](/fr/docs/Web/SVG/Attribute/min), [`max`](/fr/docs/Web/SVG/Attribute/max), [`restart`](/fr/docs/Web/SVG/Attribute/restart), [`repeatCount`](/fr/docs/Web/SVG/Attribute/repeatCount), [`repeatDur`](/fr/docs/Web/SVG/Attribute/repeatDur), [`fill`](/fr/docs/Web/SVG/Reference/Attribute/fill)
 - Attributs pour les valeurs de l'animation
   - : [`calcMode`](/fr/docs/Web/SVG/Attribute/calcMode), [`values`](/fr/docs/Web/SVG/Attribute/values), [`keyTimes`](/fr/docs/Web/SVG/Attribute/keyTimes), [`keySplines`](/fr/docs/Web/SVG/Attribute/keySplines), [`from`](/fr/docs/Web/SVG/Attribute/from), [`to`](/fr/docs/Web/SVG/Attribute/to), [`by`](/fr/docs/Web/SVG/Attribute/by), [`autoReverse`](/fr/docs/Web/SVG/Attribute/autoReverse), [`accelerate`](/fr/docs/Web/SVG/Attribute/accelerate), [`decelerate`](/fr/docs/Web/SVG/Attribute/decelerate)
 - Attributs pour les additions des animations
@@ -527,6 +527,6 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 
 ## Voir aussi
 
-- [Référence des éléments SVG](/fr/docs/Web/SVG/Element)
-- [Tutoriel SVG](/fr/docs/Web/SVG/Tutorial)
+- [Référence des éléments SVG](/fr/docs/Web/SVG/Reference/Element)
+- [Tutoriel SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [Référence de l'interface SVG](/fr/docs/Web/API/SVG_API#interfaces)

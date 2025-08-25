@@ -33,4 +33,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Voir aussi
 
-- [Authentification HTTP](/fr/docs/Web/HTTP/Authentication)
+- [Authentification HTTP](/fr/docs/Web/HTTP/Guides/Authentication)

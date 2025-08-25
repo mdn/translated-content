@@ -137,7 +137,7 @@ Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes
 - [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [Les grilles CSS, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [Les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Les grilles CSS et l'amélioration progressive](/fr/docs/conflicting/Web/CSS/CSS_grid_layout)
 - [Construire des dispositions courantes avec des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 - [Les sous-grilles (_subgrid_)](/fr/docs/Web/CSS/CSS_grid_layout/Subgrid)
 

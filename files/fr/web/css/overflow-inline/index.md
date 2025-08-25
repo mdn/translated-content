@@ -145,4 +145,4 @@ div {
 - [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/CSS_overflow)
 - [Les propriétés logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Les modes d'écritures](/fr/docs/Web/CSS/CSS_writing_modes)
-- [Apprendre le débordement de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Apprendre le débordement de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow)

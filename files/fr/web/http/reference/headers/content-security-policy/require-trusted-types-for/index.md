@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-fo
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`require-trusted-types-for`** {{experimental_inline}} directive informe l'agent utilisateur de contrôler les données passées au puits de fonctions XSS du DOM, tel que le mutateur [Element.innerHTML](/fr/docs/Web/API/Element/innerHTML).
 
-Lors de leur usage, ces fonctions n'acceptent que des valeurs typées et non falsifiables créées par des règles de Trusted Type et rejettent les chaines de caractère. Conjointement à la directive **[`trusted-types`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)**, qui empêche la création de règles de Trusted Type, cette directive permet aux auteurs de définir des règles empêchant d'écrire des données dans le DOM et donc de réduire la fenêtre de tir pour les attaques XSS sur le DOM à quelques pans isolés de la base de code d'une application, facilitant donc son contrôle et sa relecture.
+Lors de leur usage, ces fonctions n'acceptent que des valeurs typées et non falsifiables créées par des règles de Trusted Type et rejettent les chaines de caractère. Conjointement à la directive **[`trusted-types`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types)**, qui empêche la création de règles de Trusted Type, cette directive permet aux auteurs de définir des règles empêchant d'écrire des données dans le DOM et donc de réduire la fenêtre de tir pour les attaques XSS sur le DOM à quelques pans isolés de la base de code d'une application, facilitant donc son contrôle et sa relecture.
 
 ## Syntaxe
 

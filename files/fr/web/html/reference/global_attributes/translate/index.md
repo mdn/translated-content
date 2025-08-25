@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/translate
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`translate`** est un attribut à valeur contrainte qui peut être utilisé afin d'indiquer si les valeurs d'attribut d'un élément et si les valeurs de ses nœuds {{domxref("Text")}} descendants doivent être traduits lorsque la page est localisée ou s'il faut les laisser inchangés. Les valeurs autorisées pour cet attribut sont :
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`translate`** est un attribut à valeur contrainte qui peut être utilisé afin d'indiquer si les valeurs d'attribut d'un élément et si les valeurs de ses nœuds {{domxref("Text")}} descendants doivent être traduits lorsque la page est localisée ou s'il faut les laisser inchangés. Les valeurs autorisées pour cet attribut sont :
 
 - `"yes"` (ou une chaîne vide), qui indique que l'élément devrait être traduit lorsque la page est localisée ;
 - `"no"`, qui indique que l'élément ne doit pas être traduit.
@@ -39,5 +39,5 @@ L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`translate`** est 
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 - La propriété {{domxref("HTMLElement.translate")}} qui reflète cet attribut.
