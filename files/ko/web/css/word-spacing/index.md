@@ -3,8 +3,6 @@ title: word-spacing
 slug: Web/CSS/word-spacing
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`word-spacing`** 속성은 단어와 단어 사이, 태그와 태그 사이의 거리를 설정합니다.
 
 {{InteractiveExample("CSS Demo: word-spacing")}}

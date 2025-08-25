@@ -3,8 +3,6 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness
 ---
 
-{{cssref}}
-
 **`brightness()`** [CSS](/ko/docs/Web/CSS) 함수는 주어진 이미지에 선형 계수를 적용해 더 밝거나 어둡게 만듭니다. 반환 값은 {{cssxref("&lt;filter-function&gt;")}}입니다.
 
 {{InteractiveExample("CSS Demo: brightness()")}}

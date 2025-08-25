@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a08c1d8b4022ffbd69d4fd3097d0a30716f5fde7
 ---
 
-{{CSSRef}}
-
 [CSS 논리적 속성과 값 모듈](/ko/docs/Web/CSS/CSS_logical_properties_and_values#properties) 은 CSS 에서의 {{glossary("physical properties")}} 의 대열 상대적인 매핑과 값을 정의합니다. 이 안내서에서는 모듈에 대해 다루며, {{glossary("flow relative values")}} 값과 속성에 대해 설명합니다.
 
 ## 논리적 속성이 유용한 이유

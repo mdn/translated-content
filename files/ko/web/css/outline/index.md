@@ -3,8 +3,6 @@ title: outline
 slug: Web/CSS/outline
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`outline`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 모든 외곽선 속성을 한꺼번에 지정합니다.
 
 {{InteractiveExample("CSS Demo: outline")}}

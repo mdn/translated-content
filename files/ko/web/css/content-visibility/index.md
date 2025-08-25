@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}
-
 **`content-visibility`** [CSS](/ko/docs/Web/CSS) 속성은 요소가 가진 콘텐츠를 모두 렌더할지 여부를 제어하며, 강력한 독립성 규칙을 통하여 사용자 에이전트가 큰 규모의 레이아웃 및 렌더링을 필요로 할 때까지 이 작업을 잠재적으로 생략할 수 있도록 합니다. 이는 사용자 에이전트가 요소의 렌더링 작업(레이아웃과 페인팅을 포함한)을 필요로 할 때까지는 생략할 수 있게 해주며 이로 인해 초기 페이지를 불러오는 속도를 더 빠르게 합니다.
 
 > [!NOTE] > {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 이벤트는 `content-visibility: auto` 가 적용된 어떠한 요소든 렌더링 작업이 생략되기 시작하거나 끝날 때에 발생합니다. 이는 애플리케이션 코드에 렌더링 절차가 필요하지 않을 때 (예시, {{htmlelement("canvas")}} 에 그림을 그리는 경우) 이 작업을 시작하거나 중단하여 처리 능력을 최적화할 수 있는 편리한 방법을 제공합니다.

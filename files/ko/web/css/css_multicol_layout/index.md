@@ -3,8 +3,6 @@ title: CSS Multi-column Layout
 slug: Web/CSS/CSS_multicol_layout
 ---
 
-{{CSSRef}}
-
 **CSS Multi-column Layout**은 다단 레이아웃을 정의하는 CSS 모듈입니다. 레이아웃에서 단의 숫자와 콘텐츠가 하나의 단에서 다른 단으로 흐르는 방식, 단 사이의 간격, 구분선과 구분선의 모양 등의 지원을 포함하고 있습니다.
 
 ## 참고

@@ -4,8 +4,6 @@ slug: conflicting/Web/CSS/CSS_cascade/Value_processing
 original_slug: Web/CSS/specified_value
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) 속성의 **지정값**은 세 가지 방법 중 하나로 설정됩니다.
 
 1. 문서의 스타일시트가 속성값을 지정했다면 그러면 그 값이 사용됩니다. 예를 들어, {{cssxref("color")}} 속성이 `green` 으로 설정된 경우 대응하는 요소(element)의 텍스트 색은 녹색이 됩니다.

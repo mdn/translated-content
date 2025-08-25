@@ -3,8 +3,6 @@ title: word-break
 slug: Web/CSS/word-break
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`word-break`** 속성은 텍스트가 자신의 콘텐츠 박스 밖으로 오버플로 할 때 줄을 바꿀 지 지정합니다.
 
 {{InteractiveExample("CSS Demo: word-break")}}

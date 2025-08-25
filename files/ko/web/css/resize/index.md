@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`resize`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 크기 조절 여부와 방향을 설정할 수 있습니다.
 
 {{InteractiveExample("CSS Demo: resize")}}

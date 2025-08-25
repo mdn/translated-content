@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
-{{CSSRef}}
-
 **`text-overflow`** [CSS](/ko/docs/Web/CSS) 속성은 숨겨진 넘치는 콘텐츠를 사용자에게 어떻게 표시할지 설정합니다. 이는 말줄임표 (`…`)를 표시하여 생략되거나, 사용자 지정 문자열로 대체될 수 있습니다.
 
 {{InteractiveExample("CSS Demo: text-overflow")}}

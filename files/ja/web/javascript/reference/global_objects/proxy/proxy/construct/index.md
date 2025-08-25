@@ -1,34 +1,33 @@
 ---
 title: handler.construct()
+short-title: construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 l10n:
-  sourceCommit: 5c9b080f763346a4a18cc2c50fa4e21d2feec700
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`handler.construct()`** メソッドは、オブジェクトの `[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/new", "new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシーを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
 
 {{InteractiveExample("JavaScript デモ: handler.construct()", "taller")}}
 
 ```js interactive-example
-function monster1(disposition) {
+function Monster(disposition) {
   this.disposition = disposition;
 }
 
-const handler1 = {
+const handler = {
   construct(target, args) {
     console.log(`Creating a ${target.name}`);
-    // Expected output: "Creating a monster1"
+    // 予想される結果: "Creating a monster1"
 
     return new target(...args);
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const ProxiedMonster = new Proxy(Monster, handler);
 
-console.log(new proxy1("fierce").disposition);
-// Expected output: "fierce"
+console.log(new ProxiedMonster("fierce").disposition);
+// 予想される結果: "fierce"
 ```
 
 ## 構文

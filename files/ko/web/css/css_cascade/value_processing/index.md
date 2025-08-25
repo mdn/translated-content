@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_cascade/Value_processing
 original_slug: Web/CSS/initial_value
 ---
 
-{{cssref}}
-
 [CSS](/ko/docs/Web/CSS) 속성의 **초깃값**은 속성의 기본값으로, 속성 정의 표가 명시하고 있습니다. 초깃값의 사용처는 상속 여부에 따라 다릅니다.
 
 - [상속 속성](/ko/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)의 경우, [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)이 없는 이상 초깃값은 **루트 요소에만** 쓰입니다.

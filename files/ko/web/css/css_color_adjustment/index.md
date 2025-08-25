@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
 ---
 
-{{CSSRef}}
-
 **CSS 색상 조정** 모듈은 모델을 제공하고 사용자 에이전트가 자동 색상 조정을 제어하여 "다크 모드", 대비 조정 및 기타 색상 구성 선호도와 같은 사용자 선호도를 처리합니다.
 
 {{CSSxRef("@media")}} 기능과 함께 {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, 그리고 {{cssxref("@media/forced-colors", "forced-colors")}}는 브라우저가 색상을 자동으로 조정하는 방식과 시점을 정의합니다.

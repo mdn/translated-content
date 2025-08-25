@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
-
 **네임스페이스 선택자** (`|`)는 선택자를 네임스페이스로부터 분리하여, 타입 선택자의 네임스페이스 혹은 {{glossary("namespace", "네임스페이스")}}가 없는 경우를 식별합니다.
 
 ```css

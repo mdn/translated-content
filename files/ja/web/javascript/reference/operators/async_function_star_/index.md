@@ -2,10 +2,8 @@
 title: async function* 式
 slug: Web/JavaScript/Reference/Operators/async_function*
 l10n:
-  sourceCommit: 373fcd42528fc9eafa3703dc99927cc56c75fa8d
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`async function*`** キーワードは、式の内部で非同期ジェネレーター関数を定義するために使用できます。
 
@@ -26,7 +24,7 @@ joinAll(async function* () {
   yield await Promise.resolve("b");
   yield await Promise.resolve("c");
 }).then((str) => console.log(str));
-// 予想される出力: "abc"
+// 予想される結果: "abc"
 ```
 
 ## 構文

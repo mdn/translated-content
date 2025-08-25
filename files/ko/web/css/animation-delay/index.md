@@ -3,8 +3,6 @@ title: animation-delay
 slug: Web/CSS/animation-delay
 ---
 
-{{CSSRef}}
-
 **`animation-delay`** [CSS](/ko/docs/Web/CSS) 속성은 애니메이션이 시작할 시점을 지정합니다. 시작 즉시, 잠시 후에, 또는 애니메이션이 일부 진행한 시점부터 시작할 수 있습니다.
 
 {{InteractiveExample("CSS Demo: animation-delay")}}

@@ -3,8 +3,6 @@ title: 선택자 목록
 slug: Web/CSS/Selector_list
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **선택자 목록**(`,`)은 일치하는 모든 요소를 선택합니다.
 
 ```css

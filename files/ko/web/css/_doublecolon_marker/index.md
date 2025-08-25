@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 679f5893a4734fd136b80140e13262422d76b123
 ---
 
-{{CSSRef}}
-
 **`::marker`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 일반적으로 불릿 혹은 숫자를 포함하는 목록 요소의 마커 상자를 선택합니다. 이는 {{HTMLElement("li")}}와 {{HTMLElement("summary")}}처럼 [`display: list-item`](/ko/docs/Web/CSS/display)이 설정된 의사 요소나 일반 요소에서 동작합니다.
 
 {{InteractiveExample("CSS Demo: ::marker", "tabbed-shorter")}}

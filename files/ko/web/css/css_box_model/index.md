@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8e595b9a3833765941374a5e75480a54fb337662
 ---
 
-{{CSSRef}}
-
 **CSS box model** 은 각 요소에 대해 [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)에 따라 생성되고 배치되는 안팎 여백을 포함한 사각형 박스를 위한 CSS 모듈입니다.
 
 ## 박스 모델 개요

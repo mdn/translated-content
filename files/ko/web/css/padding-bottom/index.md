@@ -3,8 +3,6 @@ title: padding-bottom
 slug: Web/CSS/padding-bottom
 ---
 
-{{CSSRef}}
-
 **`padding-bottom`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 아래쪽에 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다.
 
 {{InteractiveExample("CSS Demo: padding-bottom")}}

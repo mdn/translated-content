@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
 original_slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 ---
 
-{{CSSRef}}
-
 이번 안내서에서는 블록 및 인라인 요소가 일반 대열의 일부일 때 어떻게 동작하는지에 대한 기본 사항을 살펴본다.
 
 일반 대열은 [CSS 2.1규격](https://www.w3.org/TR/CSS2/visuren.html#normal-flow)에 정의되어 있으며, 이는 일반 대열에 소속된 상자가 *서식 상황*의 일부가 된다는 것을 설명한다. 그 상자는 블록 또는 인라인이 될 수 있지만 동시에 양수겸장이 될 수는 없다. 블록 수준 상자는 *블록 서식 상황*에 참여하는 것으로, 인라인 수준 상자는 *인라인 서식 상황*에 참여하는 것으로 기술한다.

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 63cbf204323f117a2a80c7aa6273e50253ab9d07
 ---
 
-{{CSSRef}}
-
 **container-name** [CSS](/ko/docs/Web/CSS) 속성은 [컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries)에서 [@container](/ko/docs/Web/CSS/@container) @-규칙에 사용되는 쿼리 컨테이너 이름의 목록을 지정합니다.
 컨테이너 쿼리는 가장 가까운 컨테인먼트 맥락(containment context) 조상 요소의 [크기](/ko/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries)나 [스크롤 상태](/ko/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)에 따라 요소에 스타일을 적용합니다.
 컨테인먼트 맥락에 이름을 지정하면, 단순히 가장 가까운 조상 대신 해당 이름을 사용해 {{Cssxref("@container")}} @-규칙으로 구체적으로 타겟팅할 수 있습니다.

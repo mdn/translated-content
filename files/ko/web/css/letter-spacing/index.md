@@ -3,8 +3,6 @@ title: letter-spacing
 slug: Web/CSS/letter-spacing
 ---
 
-{{CSSRef}}
-
 **`letter-spacing`** [CSS](/ko/docs/Web/CSS) 속성은 글자 사이의 간격을 조절합니다.
 
 {{InteractiveExample("CSS Demo: letter-spacing")}}

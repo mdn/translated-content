@@ -3,7 +3,7 @@ title: CSS Scrollbars
 slug: Web/CSS/CSS_scrollbars_styling
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **CSS Scrollbars**는 Windows IE 5.5에서 2000년에 도입한 더이상 사용되지 않는(obsolete) 스크롤바 색상 프로퍼티를 표준화합니다.
 

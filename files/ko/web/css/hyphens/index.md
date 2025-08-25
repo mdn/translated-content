@@ -3,8 +3,6 @@ title: hyphens
 slug: Web/CSS/hyphens
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`hyphens`** 속성은 여러 줄에 걸치는 텍스트에서 단어에 붙임표를 추가하는 방식을 설정합니다. 붙임표를 아예 방지할 수도 있고, 수동으로 지정한 곳에서만 발생하도록 나타낼 수도 있으며, 브라우저가 자동으로 적절한 곳에 붙임표를 삽입하도록 허용할 수도 있습니다.
 
 {{InteractiveExample("CSS Demo: hyphens")}}

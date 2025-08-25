@@ -277,5 +277,3 @@ display.addEventListener("change", function (evt) {
 - CSS Flexbox Guide: _[Aligning items in a flex container](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/ko/docs/Web/CSS/CSS_Box_Alignment)
-
-{{CSSRef}}

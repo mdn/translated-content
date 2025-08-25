@@ -3,8 +3,6 @@ title: border-right-style
 slug: Web/CSS/border-right-style
 ---
 
-{{CSSRef}}
-
 **`border-right-style`** [CSS](/ko/docs/Web/CSS) 속성은 요소 테두리의 오른쪽 스타일을 지정합니다.
 
 {{InteractiveExample("CSS Demo: border-right-style")}}

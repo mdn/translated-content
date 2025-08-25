@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
-{{CSSRef}}
-
 **CSSOM 뷰** 모듈을 사용하면 문서의 시각적 보기, 특히 스크롤 동작을 조작할 수 있습니다.
 
 ## 참조

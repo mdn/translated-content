@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 ---
 
-{{CSSRef}}
-
 « [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 ### z-index가 없는 경우의 쌓임

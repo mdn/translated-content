@@ -3,8 +3,6 @@ title: cursor
 slug: Web/CSS/cursor
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`cursor`** 속성은 요소 위에 마우스 커서가 올라갔을 때 보여줄 모양을 지정합니다.
 
 {{InteractiveExample("CSS Demo: cursor")}}

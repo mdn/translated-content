@@ -4,8 +4,6 @@ slug: Web/CSS/line-clamp
 original_slug: Web/CSS/-webkit-line-clamp
 ---
 
-{{CSSRef}}
-
 **`-webkit-line-clamp`** CSS 속성은 {{Glossary("block container", "블록 컨테이너")}}의 콘텐츠를 지정한 줄 수만큼으로 제한합니다.
 
 {{cssxref("display")}} 속성을 `-webkit-box` 또는 `-webkit-inline-box`로, 그리고 {{cssxref("-webkit-box-orient")}} 속성을 `vertical`로 설정한 경우에만 동작합니다.

@@ -3,8 +3,6 @@ title: 플렉스박스의 대표적인 사용례
 slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 ---
 
-{{CSSRef}}
-
 이번 안내서에서는 흔히 볼 수 있는 플렉스박스 사용 사례 중 일부를 살펴 보겠습니다. 플렉스박스의 사용이 다른 레이아웃 메서드보다 더 적합한 사례입니다.
 
 ## 왜 플렉스박스를 선택?

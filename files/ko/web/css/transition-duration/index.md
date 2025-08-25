@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1608a85abb1d05dadc63f27c93fc3e4b7e630db0
 ---
 
-{{CSSRef}}
-
 **`transition-duration`** [CSS](/ko/docs/Web/CSS) 속성은 트랜지션 애니메이션이 완료되는 데 걸리는 시간을 설정합니다. 기본값은 `0s` 로, 애니메이션이 발생하지 않습니다.
 
 {{InteractiveExample("CSS Demo: transition-duration")}}

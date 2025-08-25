@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
 **`grid-template-columns`** CSS 속성은 {{glossary("grid column", "grid columns")}}의 열 이름과 트랙 크기 조정 함수들을 정의합니다.
 
 {{InteractiveExample("CSS Demo: grid-template-columns")}}

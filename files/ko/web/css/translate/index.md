@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`translate`** [CSS](/ko/docs/Web/CSS) 속성은 {{CSSxRef("transform")}} 속성과 별개로 독립적으로 변환을 지정할 수 있게 합니다. 이는 일반적인 사용자 인터페이스 사용에 더 적합하며, `transform` 값에 지정할 변환 함수의 정확한 순서를 기억할 필요가 없습니다.
 
 {{InteractiveExample("CSS Demo: translate")}}

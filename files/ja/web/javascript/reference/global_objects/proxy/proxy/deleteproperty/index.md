@@ -1,39 +1,38 @@
 ---
 title: handler.deleteProperty()
+short-title: deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`handler.deleteProperty()`** メソッドは、オブジェクトの `[[Get]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/delete", "delete")}} などの操作で使用されます。
+**`handler.deleteProperty()`** メソッドは、オブジェクトの `[[Delete]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Operators/delete", "delete")}} などの操作で使用されます。
 
 {{InteractiveExample("JavaScript デモ: handler.deleteProperty()", "taller")}}
 
 ```js interactive-example
-const monster1 = {
+const monster = {
   texture: "scaly",
 };
 
-const handler1 = {
+const handler = {
   deleteProperty(target, prop) {
     if (prop in target) {
       delete target[prop];
       console.log(`property removed: ${prop}`);
-      // Expected output: "property removed: texture"
+      // 予想される結果: "property removed: texture"
     }
   },
 };
 
-console.log(monster1.texture);
-// Expected output: "scaly"
+console.log(monster.texture);
+// 予想される結果: "scaly"
 
-const proxy1 = new Proxy(monster1, handler1);
-delete proxy1.texture;
+const proxy = new Proxy(monster, handler);
+delete proxy.texture;
 
-console.log(monster1.texture);
-// Expected output: undefined
+console.log(monster.texture);
+// 予想される結果: undefined
 ```
 
 ## 構文
@@ -42,7 +41,7 @@ console.log(monster1.texture);
 new Proxy(target, {
   deleteProperty(target, property) {
   }
-});
+})
 ```
 
 ### 引数
@@ -121,5 +120,5 @@ console.log(result2); // false
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/delete", "delete")}} operator
+- {{jsxref("Operators/delete", "delete")}} 演算子
 - {{jsxref("Reflect.deleteProperty()")}}
