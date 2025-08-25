@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-**`inert`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一个布尔属性，表示该元素及其所有平级树后代变为*惰性的*。使用 [`showModal()`](/zh-CN/docs/Web/API/HTMLDialogElement/showModal) 生成的模态 {{htmlelement("dialog")}} 不会继承自其祖先的惰性状态，而是只能通过显式设置自身 `inert` 属性来使其成为惰性的。
+**`inert`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一个表示该元素及其所有平级树后代变为*惰性*的布尔属性。使用 [`showModal()`](/zh-CN/docs/Web/API/HTMLDialogElement/showModal) 生成的模态 {{htmlelement("dialog")}} 不会继承自其祖先的惰性状态，而是只能通过显式设置自身 `inert` 属性来使其成为惰性的。
 
 具体来说，`inert` 做了这些事情：
 
@@ -32,7 +32,7 @@ l10n:
 
 ## 无障碍考虑
 
-在使用 `inert` 属性时，请务必仔细考虑其无障碍性。默认情况下，无法通过视觉方式判断一个元素或其子树是否为非活动状态。作为网页开发者，有责任明确标识出哪些内容部分是活跃的，哪些是静态的。
+在使用 `inert` 属性时，请务必仔细考虑其无障碍性。默认情况下，无法通过视觉方式判断一个元素或其子树是否为非活动状态。作为 Web 开发者，有责任明确标识出哪些内容部分是活跃的，哪些是静态的。
 
 在提供内容非交互性的视觉和非视觉提示时，请记住视觉视口可能仅包含内容的某些部分。用户可能已放大到内容的某个小区域，或根本无法查看内容。非交互性部分若未明显标识为非交互性，可能导致用户感到沮丧并产生糟糕的用户体验。
 
@@ -49,4 +49,4 @@ l10n:
 - HTML {{HTMLElement("dialog")}} 元素
 - {{domxref("HTMLElement.inert")}} HTML DOM 属性
 - [介绍 inert](https://web.developers.google.cn/articles/inert)
-- [“inert”属性终于要登陆网页了！](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)
+- [“inert”属性终于要登陆 Web 了！](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)
