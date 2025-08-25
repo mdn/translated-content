@@ -1,5 +1,6 @@
 ---
 title: DOMRectReadOnly：x 属性
+short-title: x
 slug: Web/API/DOMRectReadOnly/x
 l10n:
   sourceCommit: 3652cfa9c036cf3ceebb1384bdc7edfd549251f3
