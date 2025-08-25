@@ -1,11 +1,10 @@
 ---
 title: Object.prototype.isPrototypeOf()
+short-title: isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`isPrototypeOf()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトが別のオブジェクトのプロトタイプチェーンに存在するかどうかを判定します。
 
@@ -23,9 +22,9 @@ Bar.prototype = Object.create(Foo.prototype);
 const bar = new Bar();
 
 console.log(Foo.prototype.isPrototypeOf(bar));
-// Expected output: true
+// 予想される結果: true
 console.log(Bar.prototype.isPrototypeOf(bar));
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 構文

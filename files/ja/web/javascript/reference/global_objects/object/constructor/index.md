@@ -1,11 +1,10 @@
 ---
 title: Object.prototype.constructor
+short-title: constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`constructor`** は {{jsxref("Object")}} インスタンスのデータプロパティで、インスタンスオブジェクトを生成したコンストラクター関数への参照を返します。なお、このプロパティの値は*関数そのものへの参照*であり、関数名を含んだ文字列ではありません。
 
