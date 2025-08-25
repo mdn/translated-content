@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 63cbf204323f117a2a80c7aa6273e50253ab9d07
 ---
 
-{{CSSRef}}
-
 **`container-type`** [CSS](/ko/docs/Web/CSS) 속성을 사용하면 요소를 쿼리 컨테이너로 설정할 수 있습니다. `container-type`은 컨테이너 쿼리에서 사용할 컨테이너 맥락의 유형을 정의하는 데 사용됩니다. 사용할 수 있는 컨테이너 맥락은 다음과 같습니다.
 
 - [크기](/ko/docs/Web/CSS/CSS_containment/Container_size_and_style_queries): 컨테이너의 최대/최소 크기, 가로세로 비율, 방향 등과 같은 일반적인 크기나 인라인 크기 조건에 따라 자식 요소에 CSS 규칙을 선택적으로 적용할 수 있습니다.

@@ -3,8 +3,6 @@ title: opacity
 slug: Web/CSS/opacity
 ---
 
-{{CSSRef}}
-
 **`opacity`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 불투명도를 설정합니다. 불투명도는 요소 뒤쪽 콘텐츠가 숨겨지는 정도로, 투명도의 반대입니다.
 
 {{InteractiveExample("CSS Demo: opacity")}}
