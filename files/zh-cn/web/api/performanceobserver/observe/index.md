@@ -7,7 +7,11 @@ l10n:
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-**{{domxref("PerformanceObserver")}}** 的 **`observe()`** 方法用于观察传入的参数中指定的性能条目类型的集合。请参阅 {{domxref("PerformanceEntry.entryType")}} 了解条目类型列表，并参阅 {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} 了解用户代理支持的条目类型列表。当记录一个指定类型的性能条目时，在创建 {{domxref("PerformanceObserver")}} 时设置的回调函数会被调用。
+**{{domxref("PerformanceObserver")}}** 的 **`observe()`** 方法用于观察传入的参数中指定的性能条目类型的集合。
+
+请参阅 {{domxref("PerformanceEntry.entryType")}} 了解条目类型列表，并参阅 {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} 了解用户代理支持的条目类型列表。
+
+当记录一个指定类型的性能条目时，在创建 {{domxref("PerformanceObserver")}} 时设置的回调函数会被调用。
 
 ## 语法
 
