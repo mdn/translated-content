@@ -1,33 +1,38 @@
 ---
-title: CSSStyleRule.selectorText
+title: "CSSStyleRule: selectorText property"
+short-title: selectorText
 slug: Web/API/CSSStyleRule/selectorText
+page-type: web-api-instance-property
+browser-compat: api.CSSStyleRule.selectorText
 ---
 
 {{APIRef("CSSOM") }}
 
-## 概述
+selectorText 属性是 {{domxref(“CSSStyleRule”)}} 接口的一部分，用于获取和设置与 CSSStyleRule 关联的选择器。
 
-**`CSSRule.selectorText`** 属性返回 CSS 规则的选择符文本，只读。动态设置 CSS 规则，请看 [Using dynamic styling information](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information).
+## 值
 
-## 语法
-
-```plain
-string = cssRule.selectorText
-```
+一个字符串。
 
 ## 例子
 
-```js
-// for cssrule: body { background-color: darkblue; }
-var stylesheet = document.styleSheets[0];
+以下 CSS 包含一个样式规则。这将是 document.styleSheets[0].cssRules 返回的第一个 {{domxref(“CSSRule”)}}。因此，myRules[0].selectorText 返回选择器的字面字符串，在本例中是 "h1"。
 
-alert(stylesheet.cssRules[0].selectorText); // body
+```css
+h1 {
+  color: pink;
+}
 ```
 
-## 说明
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].selectorText); // a string containing "h1".
+```
 
-浏览器解析选择符的时候可能会剔除不必要的空白字符
+## 规范
 
-## 标准
+{{Specifications}}
 
-- [Document Object Model CSS - #CSS-CSSRuleCSS](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)
+## 浏览器兼容性
+
+{{Compat}}
