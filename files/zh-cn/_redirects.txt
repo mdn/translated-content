@@ -1440,7 +1440,7 @@
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
-/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/zh-CN/docs/conflicting/Learn_web_development/Core/Styling_basics
+/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
