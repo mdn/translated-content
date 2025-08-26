@@ -41,9 +41,11 @@ WebExtensions API での実現方法は２つあります：
 
 [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、`content_scripts` は <https://developer.mozilla.org/> 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。
 
-> **メモ:** `content_scripts` の `"js"` プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。
+> [!NOTE]
+> `content_scripts` の `"js"` プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。
 
-> **メモ:** `content_scripts` キーでは `"css"` プロパティで CSS スタイルシートを挿入することもできます。
+> [!NOTE]
+> `content_scripts` キーでは `"css"` プロパティで CSS スタイルシートを挿入することもできます。
 
 次に、"page-eater.js" というファイルを "modify-page" ディレクトリー内に作り、以下のように記述します。
 

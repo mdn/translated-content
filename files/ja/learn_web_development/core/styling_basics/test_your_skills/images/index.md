@@ -1,29 +1,23 @@
 ---
 title: "スキルテスト: 画像とフォーム要素"
+short-title: 画像とフォーム
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Images
-original_slug: Learn_web_development/Core/Styling_basics/Images_tasks
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
-
-{{LearnSidebar}}
 
 このスキルテストの目的は、[画像、メディア、フォーム要素](/ja/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)のような特殊な要素が CSS でどのように扱われるかを理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題 1
 
-この課題では、ボックスからはみ出している画像があります。画像は余分な余白なくボックス内に収まるように変倍したいのですが、 画像の一部が切り取られても構いません。
+この課題では、ボックスからはみ出している画像があります。画像は余分な余白なくボックス内に収まるように変倍したいのですが、 画像の一部が切り取られても構いません。これを実現するには、CSS を更新してください。
 
 最終的には下記画像のようになるはずです。
 
 ![ボックス内の画像](mdn-images-object-fit.png)
-
-下記のライブコードを更新して、画像がボックスからはみ出さない完成例を再現してみてください。
 
 ```html live-sample___object-fit
 <div class="box">
@@ -41,14 +35,14 @@ l10n:
 }
 
 img {
-  /* Add styles here */
+  /* ここにスタイルを追加 */
 }
 ```
 
 {{EmbedLiveSample("object-fit", "", "400px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 画像の一部が切り取られても問題ありません。
 `object-fit: cover` を用いるのが最善の選択ですが、幅と高さを `100%` に設定する必要があります。
@@ -65,30 +59,30 @@ img {
 
 ## 課題 2
 
-この課題では、単純なフォームがあります。課題は以下の変更を行うことです。
+この課題では、基本的なフォームがあります。
 
-- 属性セレクターを使用して `.myform` 内の検索フィールドとボタンを対象とします。
-- フォームフィールドとボタンにフォームの他の部分と同じテキストサイズを使用するようにします。
-- フォームフィールドとボタンに 10px のパディングを与えます。
-- ボタンの背景を `rebeccapurple`、前景を白、境界線をなくし、角を 5px に丸めます。
+この課題を完了するには、次のようにします。
+
+1. 属性セレクターを使用して `.my-form` 内の検索フィールドとボタンを対象とします。
+2. フォームフィールドとボタンにフォームの他の部分と同じテキストサイズを使用するようにします。
+3. フォームフィールドとボタンに `10px` のパディングを与えます。
+4. ボタンの背景を `rebeccapurple`、前景を白、境界線をなくし、角を 5px に丸めます。
 
 最終的には下記画像のようになるはずです。
 
 ![単一行のフォーム](mdn-images-form.png)
 
-下記のライブコードを更新して、完成例を再現してみてください。
-
-```html live-sample___form
+```html live-sample___forms-1
 <form action="" class="my-form" method="post">
   <div>
-    <label for="fldSearch">Keywords</label>
+    <label for="fldSearch">キーワード</label>
     <input id="fldSearch" name="keywords" type="search" />
-    <input name="btnSubmit" type="submit" value="Search" />
+    <input name="btnSubmit" type="submit" value="検索" />
   </div>
 </form>
 ```
 
-```css live-sample___form
+```css live-sample___forms-1
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -98,10 +92,10 @@ body {
 }
 ```
 
-{{EmbedLiveSample("form")}}
+{{EmbedLiveSample("forms-1")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 この課題に対する解決策の例を以下に示します。
 
@@ -128,6 +122,137 @@ body {
 
 </details>
 
-## 関連情報
+## 課題 3
 
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+2 つ目のフォームのスタイル設定の評価は、かなり自由形式であり、ここで何を行うかについて、非常に柔軟に対応できます。 CSS は、下記に記述されている要件を満たす必要があります。
+
+この課題を完了するには、次のようにします。
+
+1. [フォームの動作の正規化](/ja/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior) で説明されているように、フォント、パディング、マージン、サイズをより一貫性のあるものにするために、何らかの軽量な「リセット」を追加して始めましょう。
+2. さらに、入力欄とボタンに、見栄えの良い一貫性のあるスタイル設定を追加します。
+3. 入力とラベルがきれいに整列するように、何らかのレイアウト手法を使用してください。
+
+```html hidden live-sample___forms-2
+<form>
+  <h2>個人情報を編集</h2>
+  <ul>
+    <li>
+      <label for="email">メールアドレス:</label>
+      <input type="email" id="email" name="email" />
+    </li>
+    <li>
+      <label for="website">ウェブサイト:</label>
+      <input type="url" id="website" name="website" />
+    </li>
+    <li>
+      <label for="phone">電話番号:</label>
+      <input type="tel" id="phone" name="phone" />
+    </li>
+    <li>
+      <label for="food">好きな食べもの:</label>
+      <select name="food" id="food">
+        <option>サラダ</option>
+        <option>カレー</option>
+        <option>ピザ</option>
+        <option>ファヒータ</option>
+      </select>
+    </li>
+    <li>
+      <button>情報を更新</button>
+    </li>
+  </ul>
+</form>
+```
+
+```css live-sample___forms-2
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font:
+    1em / 1.4 Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  margin: 0;
+  width: 500px;
+}
+
+/* ここより上のコードは変更しないでください。 */
+
+/* ここにコードを追加してください。 */
+```
+
+{{ EmbedLiveSample("forms-2", "100%", 250) }}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+完了した CSS は、次のようになるでしょう。
+
+```css
+/* ... */
+/* ここより上のコードは変更しないでください。 */
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+li:last-of-type {
+  margin-top: 30px;
+}
+
+label {
+  flex: 0 40%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+input,
+select {
+  flex: auto;
+  height: 2em;
+}
+
+input,
+select,
+button {
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select {
+  padding: 5px;
+}
+
+button {
+  margin: 0 auto;
+  padding: 5px 20px;
+  line-height: 1.5;
+  background: #eee;
+}
+
+button:hover,
+button:focus {
+  background: #ddd;
+}
+```
+
+</details>

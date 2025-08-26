@@ -42,7 +42,8 @@ navigator.geolocation.getCurrentPosition((position) => {
 
 位置情報が変化した場合（端末が移動した時や、より正確な位置情報が得られた時）は、位置情報の更新と同時に呼び出されるコールバック関数を指定することができます。これは {{domxref("Geolocation.watchPosition","watchPosition()")}} 関数を使うことで実現できますが、こちらの入力引数は {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} と同じです。コールバック関数は繰り返し呼び出され、ブラウザーは移動に応じて位置情報を更新したり、位置の特定に別の技術を使用することでより詳細な位置情報を提供したりすることが可能です。エラー発生時に呼び出されるコールバック関数は `getCurrentPosition()` と同様に任意指定であり、繰り返し呼び出される場合があります。
 
-> **メモ:** {{domxref("Geolocation.watchPosition","watchPosition()")}} を使用する際に、先に {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} を呼び出す必要はありません。
+> [!NOTE]
+> {{domxref("Geolocation.watchPosition","watchPosition()")}} を使用する際に、先に {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} を呼び出す必要はありません。
 
 ```js
 const watchID = navigator.geolocation.watchPosition((position) => {

@@ -29,7 +29,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings1.html", '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Cadenas 2
 
@@ -43,7 +44,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings2.html", '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Cadenas 3
 
@@ -57,7 +59,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings3.html", '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings3-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Cadenas 4
 
@@ -73,7 +76,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings4.html", '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings4-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/strings/strings4-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

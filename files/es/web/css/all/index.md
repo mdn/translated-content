@@ -3,8 +3,6 @@ title: all
 slug: Web/CSS/all
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad de forma reducida **`all`** restaura todas las propiedades, excepto {{cssxref("unicode-bidi")}} y {{cssxref("direction")}}, a su valor inicial o heredado.

@@ -2,10 +2,8 @@
 title: "@font-face"
 slug: Web/CSS/@font-face
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
 
@@ -31,17 +29,13 @@ l10n:
 - {{cssxref("@font-face/font-display", "font-display")}}
   - : フォントのダウンロードおよび準備状況に応じて、どのようにフォントフェイスを表示するかを特定します。
 - {{cssxref("@font-face/font-family", "font-family")}}
-  - : font プロパティのフォントフェイス値で使われる名前を指定します。
+  - : font プロパティのフォントフェイス値で使われる名前を指定します。 `@font-face` ルールが有効であるためには、 `font-family` 名が必要です。
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-  - : {{cssxref("font-stretch")}} 値です。 font-face で対応する範囲を指定するために、 `font-stretch: 50% 200%;` のように 2 つの値を受け付けます。
+  - : {{cssxref("font-stretch")}} 値です。フォントフェイスで対応する範囲を指定するために、 `font-stretch: 50% 200%;` のように 2 つの値を受け付けます。
 - {{cssxref("@font-face/font-style", "font-style")}}
-  - : {{cssxref("font-style")}} 値です。 font-face で対応する範囲を指定するために、 `font-style: oblique 20deg 50deg;` のように 2 つの値を受け付けます。
+  - : {{cssxref("font-style")}} 値です。フォントフェイスで対応する範囲を指定するために、 `font-style: oblique 20deg 50deg;` のように 2 つの値を受け付けます。
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-  - : {{cssxref("font-weight")}} 値です。 font-face で対応する範囲を指定するために、 `font-weight: 100 400;` のように 2 つの値を受け付けます。
-
-    > [!NOTE]
-    > font-variant 記述子は 2018 年に仕様から除去されました。 {{cssxref("font-variant")}} 値プロパティは対応していますが、記述子に相当するものはありません。
-
+  - : {{cssxref("font-weight")}} 値です。フォントフェイスで対応する範囲を指定するために、 `font-weight: 100 400;` のように 2 つの値を受け付けます。
 - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
   - : OpenType フォントで高度な印刷機能を制御することができるようにします。
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
@@ -51,7 +45,7 @@ l10n:
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : このフォントに関連するグリフのアウトラインとメトリックの倍率を定義します。これにより、同じフォントサイズでレンダリングしたときに、さまざまなフォントのデザインを調和させることが容易になります。
 - {{cssxref("@font-face/src", "src")}}
-  - : フォントの形式や技術に関するヒントを含むフォントリソースへの参照を指定します。これは @font-face ルールが有効になるためには必須です。
+  - : フォントの形式や技術に関するヒントを含むフォントリソースへの参照を指定します。 `src` は `@font-face` ルールが有効になるためには必須です。
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : フォントで使用される Unicode コードポイントの範囲です。
 
@@ -62,7 +56,7 @@ l10n:
 `local()` 関数が与えられると、ユーザーのコンピューターで探すフォント名を指定し、{{Glossary("user agent", "ユーザーエージェント")}}がそれを見つけることができれば、そのローカルフォントを使用します。そうでなければ、 `url()` 関数を使用して指定されたフォントリソースをダウンロードして使用します。
 
 ブラウザーはリストの宣言順にリソースを読み込もうとするので、 通常は `local()` を `url()` の前に書くべきです。どちらの関数もオプションなので、 `url()` を使用せずに `local()` のみを 1 つ以上格納したルールブロックも可能です。
-`format()` や `tech()` の値がより具体的なフォントが必要な場合は、これらの値を持たないバージョンの前に記載する必要があります。
+`format()` または `tech()` の値を持つより詳細なフォントを使用したい場合は、これらの値を持たないバージョンよりも前に記載してください。そうしないと、より詳細度の低いフォントが最初に試され、使用されてしまいます。
 
 `@font-face` で作者が独自のフォントを提供できるようになることで、「ウェブセーフ」フォント (つまり、広く利用できると考えられるほど一般的なフォント) と呼ばれる制限なしにコンテンツをデザインすることができます。ローカルにインストールされているフォントを、名前を指定して検索し使用することができる機能により、インターネット接続に頼らなくてもフォントを基本的なものからカスタマイズすることができるようになります。
 

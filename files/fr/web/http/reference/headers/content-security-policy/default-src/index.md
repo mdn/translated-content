@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/default-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** sert de valeur par défaut pour les autres directives CSP {{Glossary("fetch directive", "fetch directives")}}.
 
 Pour chacune des directives suivantes, l'agent utilisateur consultera la directive `default-src` et utilisera sa valeur pour la directive demandée si celle-ci est absente :

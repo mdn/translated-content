@@ -28,7 +28,8 @@ target.addEventListener(tipo, listener[, useCapture, wantsUntrusted {{ Non-stand
     > [!NOTE]
     > For event listeners attached to the event target; the event is in the target phase, rather than capturing and bubbling phases. Events in the target phase will trigger all listeners on an element regardless of the `useCapture` parameter.
 
-    > **Nota:** `useCapture` became optional only in more recent versions of the major browsers; for example, it was not optional prior to Firefox 6. You should provide that parameter for broadest compatibility.
+    > [!NOTE]
+    > `useCapture` became optional only in more recent versions of the major browsers; for example, it was not optional prior to Firefox 6. You should provide that parameter for broadest compatibility.
 
 <!---->
 

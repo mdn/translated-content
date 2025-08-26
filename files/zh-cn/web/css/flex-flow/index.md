@@ -3,8 +3,6 @@ title: flex-flow
 slug: Web/CSS/flex-flow
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 [CSS](/zh-CN/docs/Web/CSS) **`flex-flow`** 属性是 flex-direction 和 flex-wrap 的简写。

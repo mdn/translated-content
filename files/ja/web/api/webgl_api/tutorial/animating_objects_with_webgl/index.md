@@ -28,7 +28,8 @@ let deltaTime = 0;
 function drawScene(gl, programInfo, buffers, squareRotation) {
 ```
 
-> **メモ:** `drawScene()` 関数の中で、 `mat4.translate()` の呼び出しの直後に次のコードを追加してください。
+> [!NOTE]
+> `drawScene()` 関数の中で、 `mat4.translate()` の呼び出しの直後に次のコードを追加してください。
 
 ```js
 mat4.rotate(

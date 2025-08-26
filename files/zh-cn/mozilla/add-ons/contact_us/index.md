@@ -3,8 +3,6 @@ title: 联系我们
 slug: Mozilla/Add-ons/Contact_us
 ---
 
-{{AddonSidebar}}
-
 你可以从以下链接获得帮助，时刻关注关于附加组件的最新消息，并且给予我们反馈。
 
 ### 附加组件论坛

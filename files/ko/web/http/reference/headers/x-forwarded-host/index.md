@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
 original_slug: Web/HTTP/Headers/X-Forwarded-Host
 ---
 
-{{HTTPSidebar}}
-
 **`X-Forwarded-Host`** (XFH) 헤더는 HTTP 요청 헤더에서 클라이언트가 요청한 원래 {{HTTPHeader("Host")}} 헤더를 식별하는 사실상의 표준 헤더입니다.
 
 리버스 프록시(로드발란서, CDN) 에서 Host 이름과 포트는 요청을 처리 하는 Origin 서버와 다를 수 있습니다. 이러한 경우 `X-Forwarded-Host` 헤더는 원래 사용된 Host 를 확인 하는데 유용 합니다.

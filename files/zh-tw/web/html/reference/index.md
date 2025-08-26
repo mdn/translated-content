@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTMLSidebar}}
-
 這裡的 [HTML](/zh-TW/docs/Web/HTML) 參考描述了 HTML 所有的**元素**與**屬性**，包括為所有元素接受的**全域屬性**。
 
 - [HTML 元素指引](/zh-TW/docs/Web/HTML/Reference/Elements)

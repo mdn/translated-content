@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Location
 original_slug: Web/HTTP/Headers/Location
 ---
 
-{{HTTPSidebar}}
-
 **`Location`** レスポンスヘッダーはリダイレクト先の URL を示します。 `3xx` (リダイレクト) または `{{HTTPStatus("201")}}` (created) ステータスレスポンスを返すときのみ意味を成します。
 
 リダイレクトの場合、 HTTP メソッドは元のメソッドとリダイレクトの種類によって、 `Location` で示されたページにアクセスする新しいリクエストを生成するために使用します。

@@ -9,7 +9,7 @@ l10n:
 
 **`handler.ownKeys()`** メソッドは、オブジェクトの `[[OwnPropertyKeys]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Object.keys()")}}, {{jsxref("Reflect.ownKeys()")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.ownKeys()", "taller")}}
 
 ```js interactive-example
 const monster1 = {

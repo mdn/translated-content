@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/500
 original_slug: Web/HTTP/Status/500
 ---
 
-{{HTTPSidebar}}
-
 Quando o servidor retorna um código de erro (HTTP) 500, indica que encontrou uma condição inesperada e que o impediu de atender à solicitação.
 
 Essa resposta de erro é uma resposta genérica "abrangente". Às vezes, os arquivos log de servidores podem responder com um status code 500 acompanhado de mais detalhes sobre o request para evitar que no futuro erros desse tipo possam voltar a acontecer.

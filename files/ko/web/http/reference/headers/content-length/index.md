@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Length`** 헤더는 수신자에게 전송되는 메시지 본문의 크기(바이트)를 나타냅니다.
 
 <table class="properties">

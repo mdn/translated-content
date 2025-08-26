@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 > [!NOTE]
 > 使用 `:blank` 选择器被认为尚有一定风险，CSSWG 正在持续改进它。

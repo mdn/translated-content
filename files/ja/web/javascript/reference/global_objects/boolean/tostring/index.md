@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 
 **`toString()`** メソッドは、指定された Boolean オブジェクトを表す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Boolean.toString()")}}
+{{InteractiveExample("JavaScript デモ: Boolean.toString()")}}
 
 ```js interactive-example
 const flag1 = new Boolean(true);

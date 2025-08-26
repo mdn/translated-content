@@ -9,7 +9,8 @@ l10n:
 
 **CSSStyleSheet.insertRule()** メソッドは、新しい [CSS ルール](/ja/docs/Web/API/CSSRule)を[現在のスタイルシート](/ja/docs/Web/API/CSSStyleSheet)に挿入します。
 
-> **メモ:** `insertRule()` は {{domxref("CSSStyleSheet")}} 専用のメソッドですが、実際にはルールを `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` に、内部的には {{domxref("CSSRuleList")}} に挿入します。
+> [!NOTE]
+> `insertRule()` は {{domxref("CSSStyleSheet")}} 専用のメソッドですが、実際にはルールを `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` に、内部的には {{domxref("CSSRuleList")}} に挿入します。
 
 ## 構文
 

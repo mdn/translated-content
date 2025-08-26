@@ -179,7 +179,8 @@ CSS は可能な限りコンテンツを隠しません。これをやってし�
 
 `scroll` にしておけばコンテンツが少なくても、それとは関係なくスクロールバーは常に表示されます。
 
-> **メモ:** `overflow` プロパティでは x 軸と y 軸の 2 つの値を渡すことができることに注意してください。2 つのキーワードが指定されている場合、ひとつめは `overflow-x`、2 つめは `overflow-y` として適用されます。それ以外の場合は `overflow-x` と `overflow-y` の両方に同じ値が設定されます。例えば、`overflow: scroll hidden` とした場合は、`overflow-x` は `scroll`、`overflow-y` は `hidden` となります。
+> [!NOTE]
+> `overflow` プロパティでは x 軸と y 軸の 2 つの値を渡すことができることに注意してください。2 つのキーワードが指定されている場合、ひとつめは `overflow-x`、2 つめは `overflow-y` として適用されます。それ以外の場合は `overflow-x` と `overflow-y` の両方に同じ値が設定されます。例えば、`overflow: scroll hidden` とした場合は、`overflow-x` は `scroll`、`overflow-y` は `hidden` となります。
 
 ### スクロールバーを必要な場合だけ表示する
 

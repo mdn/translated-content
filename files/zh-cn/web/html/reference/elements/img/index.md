@@ -3,8 +3,6 @@ title: <img>：图像嵌入元素
 slug: Web/HTML/Reference/Elements/img
 ---
 
-{{HTMLSidebar}}
-
 **`<img>`** [HTML](/zh-CN/docs/Web/HTML) 元素将一张图像嵌入文档。
 
 {{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
