@@ -25,7 +25,7 @@ Firefox 3.5 实现了隐私浏览模式。在该模式下，cookie、历史记�
 
 `about:certerror?e=error&u=url&d=desc`
 
-需要提供自定义证书错误页面的嵌入者现在可以通过提供他们自己的 `about:` 页面实现，并将 `security.alternate_certificate_error_page` 预设设置为适当的页面名称（例如 `"certerror"`）来实现。
+开发者需要提供自定义证书错误页面的嵌入者现在可以通过提供他们自己的 `about:` 页面实现，并将 `security.alternate_certificate_error_page` 预设设置为适当的页面名称（例如 `"certerror"`）来实现这一功能。
 
 ## 参见
 
