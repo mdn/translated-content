@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{Deprecated_header}}
 
-**`specified`** 属性始终返回 `true`。
+{{domxref("Attr")}} 接口的 **`specified`** 只读属性始终返回 `true`。
 
 ## 值
 
