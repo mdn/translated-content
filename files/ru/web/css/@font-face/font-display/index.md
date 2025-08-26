@@ -57,7 +57,7 @@ font-display: optional;
   font-family: ExampleFont;
   src:
     url(/path/to/fonts/examplefont.woff) format("woff"),
-    url(/path/to/fonts/examplefont.eot) format("eot");
+    url(/path/to/fonts/examplefont.eot) format("embedded-opentype");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
