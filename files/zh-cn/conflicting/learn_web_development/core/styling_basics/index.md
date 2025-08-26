@@ -1,6 +1,7 @@
 ---
 title: 挑战：一个漂亮的盒子
-slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
+slug: conflicting/Learn_web_development/Core/Styling_basics
+original_slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
