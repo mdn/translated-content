@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-{{domxref("DOMRect")}} 接口的 **`x`** 属性是表示矩形的 x 坐标，即视口左边缘与矩形原点之间的水平距离。
+{{domxref("DOMRect")}} 接口的 **`x`** 属性表示矩形的 x 坐标，即视口左边缘与矩形原点之间的水平距离。
 
 当矩形的宽度为非负数时，矩形的水平原点是视口的左边缘。如果宽度为负数，则矩形的水平原点是视口的右边缘。
 
