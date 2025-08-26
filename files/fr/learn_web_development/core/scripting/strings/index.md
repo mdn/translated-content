@@ -264,7 +264,7 @@ button.onclick = function () {
 };
 ```
 
-{{ EmbedLiveSample('Concaténation_dans_un_contexte', '100%', 50) }}
+{{ EmbedLiveSample('Concaténation_dans_un_contexte', '100%', 50, , , , , 'allow-modals') }}
 
 Ici nous utilisons en ligne 4 la fonction {{domxref("Window.prompt()", "Window.prompt()")}}, qui demande à l'utilisateur de répondre à une question par l'intermédiaire d'une boîte de dialogue, puis qui stocke le texte entré dans une variable donnée — dans ce cas `name`. En ligne 5, nous nous servons de la fonction {{domxref("Window.alert()", "Window.alert()")}} pour afficher un dialogue contenant une chaîne assemblée à partir de deux chaînes littérales et de la variable `name`, par concaténation.
 

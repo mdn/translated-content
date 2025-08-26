@@ -140,7 +140,7 @@ function greet() {
 button.addEventListener("click", greet);
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, , , , , 'allow-modals') }}
 
 ここでは {{domxref("window.prompt()", "window.prompt()")}} 関数を使用して、テキストを入力できるポップアップダイアログを表示し、ユーザーによって入力された文字列を変数へ、この場合は `name` 変数へ格納しています。そして、その名前を一般的な挨拶メッセージに挿入する文字列を表示します。
 
