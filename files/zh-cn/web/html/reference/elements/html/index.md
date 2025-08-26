@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bf671984cfef2f7c6419571d834a146c5424ac10
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<html>`** 元素表示 HTML 文档的根（顶级元素），所以它也被称为*根元素*。其他所有元素必须是此元素的后代。
 
 ## 属性

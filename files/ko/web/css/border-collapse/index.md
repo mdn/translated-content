@@ -3,8 +3,6 @@ title: border-collapse
 slug: Web/CSS/border-collapse
 ---
 
-{{CSSRef}}
-
 **`border-collapse`** CSS 속성은 표 테두리(border)가 분리(separated) 또는 상쇄(collapsed)될 지를 결정합니다. 분리 모델에서는, 인접한 셀은 각각 자신의 고유(distinct) 테두리가 있습니다. 상쇄 모델에서는, 인접한 표 셀은 테두리를 공유합니다.
 
 {{InteractiveExample("CSS Demo: border-collapse")}}

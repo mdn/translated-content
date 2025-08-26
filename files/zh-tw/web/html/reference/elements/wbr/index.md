@@ -3,8 +3,6 @@ title: <wbr>：換行機會元素
 slug: Web/HTML/Reference/Elements/wbr
 ---
 
-{{HTMLSidebar}}
-
 **`<wbr>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表換行機會，即文本中的位置，瀏覽器可以選擇在該位置斷行，儘管其斷行規則在該位置本身不會創建斷行。
 
 {{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}

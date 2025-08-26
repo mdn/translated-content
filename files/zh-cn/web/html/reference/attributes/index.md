@@ -3,8 +3,6 @@ title: HTML 属性参考
 slug: Web/HTML/Reference/Attributes
 ---
 
-{{HTMLSidebar("Attributes")}}
-
 HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配置元素或者以各种方式来调整元素的行为，进而满足用户所需的标准。
 
 ## 属性列表

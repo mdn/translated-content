@@ -1,22 +1,27 @@
 ---
 title: String.prototype.blink()
+short-title: blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 l10n:
-  sourceCommit: 544993667dd25e8ccd3893218138c900e2e6b134
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-**`blink()`** メソッドは、文字列を (`<blink>str</blink>`) に埋め込んだ文字列を生成し、古いブラウザーにおいて文字列を点滅させるために使用します。
+**`blink()`** は {{jsxref("String")}} 値のメソッドで、この文字列を `<blink>` の中に埋め込んだ文字列 (`<blink>str</blink>`) を生成し、古いブラウザーにおいて文字列を点滅させるために使用します。
 
-> [!WARNING]
-> [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。`blink()` の場合、`<blink>` 要素自体が現代のブラウザーから削除されており、テキストを点滅させることは、複数のアクセシビリティ標準で忌避されています。この要素を使用することは避けてください。
+> [!NOTE]
+> [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。 `blink()` の場合、`<blink>` 要素自体が現代のブラウザーから削除されており、テキストを点滅させることは、複数のアクセシビリティ標準で忌避されています。この要素を使用することは避けてください。
 
 ## 構文
 
 ```js-nolint
 blink()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -29,13 +34,21 @@ blink()
 以下の例では文字列のメソッドを使用して、文字列の整形方法を変化させています。
 
 ```js
-const worldString = "Hello, world";
+const contentString = "Hello, world";
 
-console.log(worldString.blink()); // <blink>Hello, world</blink>
-console.log(worldString.bold()); // <b>Hello, world</b>
-console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike()); // <strike>Hello, world</strike>
+document.body.innerHTML = contentString.blink();
 ```
+
+これにより、次の HTML が生成されます。
+
+```html
+<blink>Hello, world</blink>
+```
+
+> [!WARNING]
+> このマークアップは、`blink` が有効な要素でなくなったため、不正です。
+
+要素の点滅は完全に避けるべきです。
 
 ## 仕様書
 
@@ -48,6 +61,5 @@ console.log(worldString.strike()); // <strike>Hello, world</strike>
 ## 関連情報
 
 - [`String.prototype.blink` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- [es-shims による `String.prototype.blink` のポリフィル](https://www.npmjs.com/package/es-string-html-methods)
+- [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)

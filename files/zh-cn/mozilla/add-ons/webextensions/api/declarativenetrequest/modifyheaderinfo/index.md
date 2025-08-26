@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 要修改的请求的请求标头或响应标头，在 `rule.action.requestHeaders` 数组或 `rule.action.responseHeaders` 数组中声明，用于 {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}`.type` 为"modifyHeaders"这个规则。
 
 每个对象描述了一个标头修改。要修改多个标头，可以在这些数组中指定多个对象，或者跨多个规则。

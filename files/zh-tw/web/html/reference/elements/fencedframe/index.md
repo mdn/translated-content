@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`<fencedframe>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個巢狀的{{Glossary("browsing context", "瀏覽上下文")}}，將另一個 HTML 頁面嵌入到當前頁面中。`<fencedframe>` 在形式和功能上與 {{htmlelement("iframe")}} 元素非常相似，不同之處在於：
 

@@ -3,8 +3,6 @@ title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("cookies")}} API 的 `onChanged` 事件會在 cookie 設定或刪除時觸發。
 
 請注意，更新 cookie 的屬性要透過以下兩個步驟實做：
