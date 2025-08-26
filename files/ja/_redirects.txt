@@ -2071,7 +2071,7 @@
 /ja/docs/Learn/Accessibility/What_is_accessibility	/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
 /ja/docs/Learn/CSS	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Building_blocks	/ja/docs/Learn_web_development/Core/Styling_basics
-/ja/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
+/ja/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Building_blocks/Advanced_styling_effects	/ja/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 /ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders	/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /ja/docs/Learn/CSS/Building_blocks/Box_Model_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
@@ -2157,7 +2157,7 @@
 /ja/docs/Learn/CSS/Introduction_to_CSS/Syntax	/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started
 /ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units
 /ja/docs/Learn/CSS/Styling_boxes	/ja/docs/Learn_web_development/Core/Styling_basics
-/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box	/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
+/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Styling_boxes/Advanced_box_effects	/ja/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 /ja/docs/Learn/CSS/Styling_boxes/Backgrounds	/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /ja/docs/Learn/CSS/Styling_boxes/Borders	/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
@@ -2493,6 +2493,7 @@
 /ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 /ja/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 /ja/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
+/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /ja/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
 /ja/docs/Learn_web_development/Core/Styling_basics/Sizing_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
