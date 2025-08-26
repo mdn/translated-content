@@ -81,7 +81,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('Une_définition_générale', '100%', 80) }}
+{{ EmbedLiveSample('Une_définition_générale', '100%', 80, , , , , 'allow-modals') }}
 
 Essayez de cliquer sur l'étiquette texte pour voir ce qui se passe. Notez que vous pouvez également retrouver cet exemple sur GitHub — voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html), ou l'[exécuter](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html).
 

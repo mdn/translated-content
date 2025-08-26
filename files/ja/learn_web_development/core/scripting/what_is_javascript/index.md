@@ -83,7 +83,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 テキストラベルの最新バージョンをクリックしてみて、何が起きるのか見てみましょう。（このデモは GitHub でも見られます。[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html)または[ライブ実行](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)を参照してください。）
 
