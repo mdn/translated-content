@@ -13,7 +13,7 @@ l10n:
 
 修复此漏洞的方法是向 `nsIProtocolHandler` 接口添加了一个新的 `URI_IS_LOCAL_RESOURCE` 标志，以表明该协议可以安全地注册为界面。任何创建自己的协议处理器并尝试在 `chrome.manifest` 文件中注册的附加组件，都必须使用此标志才能正常工作。
 
-## 私人浏览模式
+## 隐私浏览模式
 
 Firefox 3.5 实现了隐私浏览模式。在该模式下，cookie、历史记录和其他可能涉及隐私的信息都不会永久保存在用户的计算机上。扩展和其他附加组件可以支持隐私浏览功能，在隐私浏览模式启用时检测到并避免保存隐私信息。有关详细信息，参见[支持隐私浏览模式](https://web.archive.org/web/20210620014429/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode)。
 
