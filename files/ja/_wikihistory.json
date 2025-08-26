@@ -4442,12 +4442,6 @@
       "snakada"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Cool-looking_box": {
-    "modified": "2020-07-16T22:28:27.155Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Debugging_CSS": {
     "modified": "2020-10-15T22:23:08.869Z",
     "contributors": [
@@ -43713,15 +43707,9 @@
     ]
   },
   "conflicting/Learn_web_development/Core/Styling_basics": {
-    "modified": "2020-12-08T08:44:57.052Z",
+    "modified": "2020-07-16T22:28:27.155Z",
     "contributors": [
-      "mfuji09",
-      "Uemmra3",
-      "dskmori",
-      "h-subaru",
-      "fu7mu4",
-      "snakada",
-      "kamariyan21"
+      "Wind1808"
     ]
   },
   "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors": {
