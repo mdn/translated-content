@@ -19,7 +19,7 @@ slug: Learn_web_development/Core/Styling_basics/What_is_CSS
       </td>
     </tr>
     <tr>
-      <th scope="row">学习目标：</th>
+      <th scope="row">目标：</th>
       <td>
         <ul>
           <li>了解 CSS 的用途</li>
