@@ -21,4 +21,4 @@ l10n:
 ## 参见
 
 - [使 PWA 可安装](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-- web.dev 上的[如何提供您自己的应用内安装体验](https://web.developers.google.cn/articles/customize-install)（2021）
+- web.dev 上的[如何提供你自己的应用内安装体验](https://web.developers.google.cn/articles/customize-install)（2021）
