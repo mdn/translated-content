@@ -51,7 +51,7 @@ slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 - **呈现**文档给你的用户是指将其转换为对你的受众易于阅读的形式。像是 {{Glossary("Mozilla Firefox","Firefox")}}、{{Glossary("Google Chrome","Chrome")}}、{{Glossary("Apple_Safari","Safari")}} 和 {{Glossary("Microsoft Edge","Edge")}} 这样的 {{Glossary("browser","Web 浏览器")}}旨在以视觉方式（例如在电脑屏幕、投影仪、移动设备或打印机上）呈现文档，在 Web 中我们通常称这个过程为“渲染”；我们在[浏览器如何加载网站](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites)一文中给出了简化的渲染过程描述。
 
 > [!NOTE]
-> 浏览器有时也被称为 {{Glossary("User agent","用户代理")}}，意思是代表用户在计算机系统中运行的程序。
+> 浏览器有时也被称为{{Glossary("User agent","用户代理")}}，意思是代表用户在计算机系统中运行的程序。
 
 CSS 可用于网页外观相关的多种用途，例如：
 
