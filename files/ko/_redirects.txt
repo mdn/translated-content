@@ -273,7 +273,7 @@
 /ko/docs/Learn/CSS	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
 /ko/docs/Learn/CSS/Basics	/en-US/docs/Learn_web_development/Core/Styling_basics
 /ko/docs/Learn/CSS/Building_blocks	/ko/docs/Learn_web_development/Core/Styling_basics
-/ko/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/ko/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
+/ko/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3
 /ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance	/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /ko/docs/Learn/CSS/Building_blocks/Cascade_layers	/ko/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
@@ -513,6 +513,7 @@
 /ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON	/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON
 /ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops	/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops
 /ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
+/ko/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3
 /ko/docs/Learn_web_development/Extensions/Security_privacy	/ko/docs/conflicting/Web/Security
 /ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/ko/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/ko/docs/Web/HTML/How_to/Use_data_attributes
@@ -702,7 +703,8 @@
 /ko/docs/Web/API/WindowEventHandlers/onpopstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ko/docs/Web/API/Window/setTimeout
 /ko/docs/Web/API/WindowTimers/setTimeout	/ko/docs/Web/API/Window/setTimeout
-/ko/docs/Web/API/XMLHttpRequest/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
+/ko/docs/Web/API/XMLHttpRequest/timeout	/ko/docs/Web/API/XMLHttpRequestEventTarget/timeout_event
+/ko/docs/Web/API/XMLHttpRequest/timeout_event	/ko/docs/Web/API/XMLHttpRequestEventTarget/timeout_event
 /ko/docs/Web/API/atob	/ko/docs/Web/API/Window/atob
 /ko/docs/Web/API/btoa	/ko/docs/Web/API/Window/btoa
 /ko/docs/Web/API/clearInterval	/ko/docs/Web/API/Window/clearInterval
@@ -888,7 +890,7 @@
 /ko/docs/Web/Events/popstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/Events/resize	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/Events/scroll	/ko/docs/Web/API/Document/scroll_event
-/ko/docs/Web/Events/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
+/ko/docs/Web/Events/timeout	/ko/docs/Web/API/XMLHttpRequestEventTarget/timeout_event
 /ko/docs/Web/Events/visibilitychange	/ko/docs/Web/API/Document/visibilitychange_event
 /ko/docs/Web/Guide	/ko/docs/MDN/Guides
 /ko/docs/Web/Guide/AJAX/Getting_Started	/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
@@ -1390,7 +1392,7 @@
 /ko/docs/Web/Reference/Events/orientationchange	/ko/docs/Web/API/Window/orientationchange_event
 /ko/docs/Web/Reference/Events/popstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/Reference/Events/resize	/ko/docs/Web/API/Window/resize_event
-/ko/docs/Web/Reference/Events/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
+/ko/docs/Web/Reference/Events/timeout	/ko/docs/Web/API/XMLHttpRequestEventTarget/timeout_event
 /ko/docs/Web/Reference/Events/visibilitychange	/ko/docs/Web/API/Document/visibilitychange_event
 /ko/docs/Web/SVG/Attribute/accumulate	/ko/docs/Web/SVG/Reference/Attribute/accumulate
 /ko/docs/Web/SVG/Attribute/additive	/ko/docs/Web/SVG/Reference/Attribute/additive
