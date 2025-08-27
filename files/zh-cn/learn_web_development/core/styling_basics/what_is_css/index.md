@@ -1,6 +1,8 @@
 ---
 title: 什么是 CSS？
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
+l10n:
+  sourceCommit: 25d1da7132494104d33f02bc3e99c98f9175d195
 ---
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
