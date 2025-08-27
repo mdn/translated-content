@@ -35,7 +35,7 @@ slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 
 ## 浏览器默认样式
 
-在 [HTML 内容结构模块](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 中，我们介绍了 HTML 是什么，以及它如何用于标记文档。这些文档在浏览器中是可读的：标题比普通文本大，段落会换行并有间距，链接有颜色并带下划线以便区分。
+在 [HTML 内容结构模块](/zh-CN/docs/Learn_web_development/Core/Structuring_content)中，我们介绍了 HTML 是什么以及它是如何用于标记文档的。这些文档在浏览器中是可读的：标题比普通文本大，段落会换行并有间距，链接有颜色并带下划线以便区分。
 
 你看到的这些样式就是浏览器的默认样式——非常基础的样式，用于确保即使页面作者没有指定样式，网页也能保持可读性。这些样式由浏览器内置的默认 CSS 样式表定义，与 HTML 本身无关。
 
