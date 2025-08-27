@@ -1,7 +1,7 @@
 ---
 title: 멋지게 보이는 박스
-slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
-original_slug: Learn/CSS/Building_blocks/A_cool_looking_box
+slug: conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3
+original_slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
 l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
