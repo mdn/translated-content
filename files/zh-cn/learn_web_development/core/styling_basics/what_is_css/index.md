@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 <table>
   <tbody>
     <tr>
-      <th scope="row">前置知识：</th>
+      <th scope="row">前置条件：</th>
       <td>
         <a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">安装基础软件</a>、
         <a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">文件操作基础</a>，
