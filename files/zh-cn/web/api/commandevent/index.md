@@ -9,7 +9,7 @@ l10n:
 
 **`CommandEvent`** 接口表示一个事件，当拥有有效的 {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} 和 {{domxref("HTMLButtonElement.command", "command")}} 属性的 {{domxref("HTMLButtonElement", "button")}} 元素即将调用一个交互元素时触发该事件。
 
-`HTMLElement` 的 {{domxref("HTMLElement.command_event", "command")}} 事件的事件对象，表示当调用者控件被激活时的操作（例如点击或按下）。
+它是 `HTMLElement` 的 {{domxref("HTMLElement.command_event", "command")}} 事件的事件对象，表示当调用者控件被激活时的操作（例如点击或按下）。
 
 {{InheritanceDiagram}}
 
@@ -20,7 +20,7 @@ l10n:
 
 ## 实例属性
 
-_继承其父类 {{DOMxRef("Event")}} 的属性。_
+_继承其父接口 {{DOMxRef("Event")}} 的属性。_
 
 - {{domxref("CommandEvent.source")}} {{ReadOnlyInline}}
   - : 一个 {{domxref("HTMLButtonElement")}}，表示触发此次调用的按钮。
