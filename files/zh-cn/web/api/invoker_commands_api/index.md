@@ -11,7 +11,7 @@ l10n:
 
 ## 概念与用法
 
-Web 上常见的模式是使用 {{HTMLElement("button")}} 元素来控制页面的各个方面，例如打开和关闭 {{domxref("Popover API", "弹出框", "", "nocode")}} 或 {{HTMLElement("dialog")}} 元素、格式化文本等。
+Web 上常见的模式是使用 {{HTMLElement("button")}} 元素来控制页面的各个方面，例如打开和关闭{{domxref("Popover API", "弹出框", "", "nocode")}}或 {{HTMLElement("dialog")}} 元素、格式化文本等。
 
 过去，创建这些控件通常需要为按钮添加 JavaScript 事件监听器，然后调用它们所控制元素的 API。{{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} 和 {{domxref("HTMLButtonElement.command", "command")}} 属性为有限的一组操作提供了声明式实现方法。对于内置命令，这种方式的优势在于用户无需等待 JavaScript 下载和执行即可让按钮变为可交互。
 
