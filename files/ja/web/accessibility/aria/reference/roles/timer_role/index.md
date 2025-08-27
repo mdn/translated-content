@@ -2,7 +2,7 @@
 title: "ARIA: timer ロール"
 slug: Web/Accessibility/ARIA/Reference/Roles/timer_role
 l10n:
-  sourceCommit: 50f209459d9e1db35bf0d973d7878ea4600acb8c
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 **`timer`** ロールは、要素が開始点からの経過時間または終了点までの残り時間を示す数値カウンターであることを支援技術に示します。支援技術は、暗黙的な [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 値が `off` であるため、タイマーの更新を通知しません。

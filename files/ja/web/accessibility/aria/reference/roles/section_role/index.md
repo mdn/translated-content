@@ -2,7 +2,7 @@
 title: "ARIA: section ロール"
 slug: Web/Accessibility/ARIA/Reference/Roles/section_role
 l10n:
-  sourceCommit: 50f209459d9e1db35bf0d973d7878ea4600acb8c
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 **`section` ロール**は、抽象ロールであり、レンダリング可能な構造的格納コンポーネントの親クラスロールです。
