@@ -2,7 +2,7 @@
 title: "ARIA: tree ロール"
 slug: Web/Accessibility/ARIA/Reference/Roles/tree_role
 l10n:
-  sourceCommit: 50f209459d9e1db35bf0d973d7878ea4600acb8c
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 `tree` は、ユーザーが階層的に整理されたコレクションから 1 つ以上のアイテムを選択できるウィジェットです。
