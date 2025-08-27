@@ -76,7 +76,7 @@ h1 {
 
 - 在上面的示例中，CSS 规则以一个 {{Glossary("CSS Selector", "选择器")}} 开头。它用于“选择”我们要设置样式的 HTML 元素。在这个例子中，我们设置的是一级标题（`{{htmlelement("Heading_Elements", "&lt;h1>")}}`）。
 - 接着我们使用一对大括号 `{ }`。
-- 大括号中包含一个或多个 **声明**，每个声明由 **属性** 和 **值** 组成。我们在冒号前指定属性（例如上述示例中的 `color`），在冒号后指定该属性的值（`red` 是为 `color` 属性设置的值）。
+- 大括号中包含一个或多个**声明**，每个声明由**属性**和**值**组成。我们在冒号前指定属性（例如上述示例中的 `color`），并在冒号后指定该属性的值（我们为 `color` 属性设置取值 `red`）。
 - 此示例包含两个声明，一个是 `color`，另一个是 `font-size`。
 
 不同的 CSS {{Glossary("property/CSS","属性")}} 允许不同的取值。在我们的示例中，`color` 属性可以接受多种 [颜色值](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color)，而 `font-size` 属性则可以接受多种 [尺寸单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numbers_lengths_and_percentages) 作为值。
