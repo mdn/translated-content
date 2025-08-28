@@ -150,7 +150,7 @@ p {
 1. 在已有的两个段落下方添加另一个段落，观察第二条 CSS 规则如何自动应用到新段落上。
 2. 在 `<h1>` 下方某处添加一个 `<h2>` 子标题，比如放在其中一个段落之后。
 3. 尝试为 `<h2>` 元素设置不同的颜色：复制 `h1` 的 CSS 规则，将选择器改为 `h2`，并将 `color` 的值从 `red` 改为 `purple`（紫色）等。
-4. 如果你想挑战一下自己，可以在 MDN 的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference) 中查找一些新的 CSS 属性和值，添加到你的样式规则中！
+4. 如果你想挑战一下自己，可以在 MDN 的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)中查找一些新的 CSS 属性和值，添加到你的样式规则中！
 
 如果你还想进一步练习 CSS 基础，可以参考 Scrimba 提供的课程[写下你的第一行 CSS！](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn) <sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>。这个课程简要介绍了 CSS 的基本语法，并提供了一个交互式挑战，让你练习编写 CSS 声明。
 
