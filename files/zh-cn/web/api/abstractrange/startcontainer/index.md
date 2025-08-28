@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("AbstractRange")}} 接口的 **`startContainer`** 只读属性返回范围的起始节点。
+{{domxref("AbstractRange")}} 接口的 **`startContainer`** 只读属性返回范围的起始{{domxref("Node", "节点", , 1)}}。
 
 ## 值
 
