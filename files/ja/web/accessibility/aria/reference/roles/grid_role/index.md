@@ -53,7 +53,7 @@ original_slug: Web/Accessibility/ARIA/Roles/grid_role
 
 #### ロール
 
-- [treegrid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Treegrid_Role) (サブクラス)
+- [treegrid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) (サブクラス)
   - : グリッドに展開や折りたたみができる列がある場合は、ツリーグリッドを使用できます。
 - [row](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : グリッド内の行。
@@ -590,7 +590,7 @@ TBD
 
 - [ARIA composite ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role)
 - [ARIA table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
-- [ARIA treegrid ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_Role)
+- [ARIA treegrid ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 - [ARIA row ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [ARIA rowgroup ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
 - [ARIA: gridcell ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
