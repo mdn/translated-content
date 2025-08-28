@@ -19,7 +19,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
+      <th scope="row">学习成果：</th>
       <td>
         <ul>
           <li>了解 CSS 的用途</li>
