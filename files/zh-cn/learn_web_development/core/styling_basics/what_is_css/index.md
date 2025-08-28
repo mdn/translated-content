@@ -22,11 +22,11 @@ l10n:
       <th scope="row">学习成果：</th>
       <td>
         <ul>
-          <li>了解 CSS 的用途</li>
-          <li>理解 HTML 与样式无关</li>
-          <li>认识浏览器默认样式的概念</li>
-          <li>了解 CSS 代码的基本结构</li>
-          <li>掌握 CSS 如何应用到 HTML 上</li>
+          <li>了解 CSS 的用途。</li>
+          <li>理解 HTML 与样式无关。</li>
+          <li>认识浏览器默认样式的概念。</li>
+          <li>了解 CSS 代码的基本结构。</li>
+          <li>掌握 CSS 如何应用到 HTML 上。</li>
         </ul>
       </td>
     </tr>
