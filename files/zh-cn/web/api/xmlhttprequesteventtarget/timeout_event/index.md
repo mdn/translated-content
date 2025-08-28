@@ -1,6 +1,7 @@
 ---
 title: timeout
-slug: Web/API/XMLHttpRequest/timeout_event
+slug: Web/API/XMLHttpRequestEventTarget/timeout_event
+original_slug: Web/API/XMLHttpRequest/timeout_event
 ---
 
 {{APIRef("XMLHttpRequest API")}}
