@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onloadend
-slug: Web/API/XMLHttpRequest/loadend_event
+slug: Web/API/XMLHttpRequestEventTarget/loadend_event
+original_slug: Web/API/XMLHttpRequest/loadend_event
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
