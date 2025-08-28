@@ -99,7 +99,7 @@ p {
 你会发现有些属性值很快就能掌握，而其他的则需要查阅。MDN 上的各个属性页面可以快速帮助你查找属性及其可用值。
 
 > [!NOTE]
-> 所有 CSS 属性页面（以及其他 CSS 功能）都可以在 MDN 的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)中找到。你也可以习惯使用搜索引擎查找“mdn css-功能名”，例如搜索“mdn color”或“mdn font-size”，以获取某个 CSS 功能的更多信息。
+> 所有 CSS 属性页面（以及其他 CSS 特性）都可以在 MDN 的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)中找到。你也可以习惯使用搜索引擎查找“mdn css-特性名”，例如搜索“mdn color”或“mdn font-size”，以获取某个 CSS 特性的更多信息。
 
 ## CSS 如何应用到 HTML？
 
