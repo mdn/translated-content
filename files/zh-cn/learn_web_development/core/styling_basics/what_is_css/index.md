@@ -59,7 +59,7 @@ CSS 可用于网页外观相关的多种用途，例如：
 - 创建布局，如[网格布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)或[多列布局](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)
 - 特效，如[动画](/zh-CN/docs/Web/CSS/CSS_animations)
 
-CSS 语言按模块组织，每个模块包含相关功能。例如，你可以查阅[背景与边框模块](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)的 MDN 参考页面，了解其用途及包含的属性和功能。在我们的模块页面中，你还可以找到定义这些技术的规范链接。
+CSS 语言按*模块*组织，每个模块包含相关功能。例如，你可以查阅[背景与边框模块](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)的 MDN 参考页面，了解其用途及包含的属性和功能。在我们的模块页面中，你还可以找到定义这些技术的*规范*链接。
 
 ## CSS 语法基础
 
