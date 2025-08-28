@@ -14,9 +14,7 @@ l10n:
     <tr>
       <th scope="row">前置条件：</th>
       <td>
-        <a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">安装基础软件</a>、
-        <a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">文件操作基础</a>，
-        以及 HTML 基础知识（建议学习
+        <a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">安装基础软件</a>、<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">文件操作基础</a>，以及 HTML 基础知识（建议学习
         <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 内容结构模块</a>）。
       </td>
     </tr>
