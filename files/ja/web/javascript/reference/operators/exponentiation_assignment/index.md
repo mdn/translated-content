@@ -18,7 +18,7 @@ console.log((a **= 2));
 console.log((a **= 0));
 // 予想される結果: 1
 
-console.log((a **= 'hello'));
+console.log((a **= "hello"));
 // 予想される結果: NaN
 ```
 
