@@ -5,13 +5,14 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 `::-webkit-scrollbar` は CSS の擬似要素で、スクロール可能なオーバーフローを持つ要素のスクロールバーのスタイルに影響を与えます。
 
 {{cssxref("scrollbar-color")}} および {{cssxref("scrollbar-width")}} の標準プロパティは、この擬似要素および関連する `::-webkit-scrollbar-*` 擬似要素に対応していないブラウザーの代替として使用できます（[ブラウザーの互換性](#ブラウザーの互換性)を参照してください）。
 
-> **メモ:** {{cssxref("scrollbar-color")}} および {{cssxref("scrollbar-width")}} に対応しており、 `auto` 以外の値が設定されている場合、これらは `::-webkit-scrollbar-*` スタイル設定を上書きします。
+> [!NOTE]
+> {{cssxref("scrollbar-color")}} および {{cssxref("scrollbar-width")}} に対応しており、 `auto` 以外の値が設定されている場合、これらは `::-webkit-scrollbar-*` スタイル設定を上書きします。
 > 詳細については、「[スクロールバースタイルの代替設定を追加](#スクロールバースタイルに代替設定を追加)」をご覧ください。
 
 ## CSS スクロールバーのセレクター

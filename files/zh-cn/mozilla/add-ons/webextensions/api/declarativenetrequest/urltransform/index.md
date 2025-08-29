@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 描述 URL 转换以执行重定向规则的详细信息。此对象可以在 {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}.redirect.transform 中指定。
 
 ## 类型

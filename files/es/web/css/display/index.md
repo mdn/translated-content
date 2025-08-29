@@ -3,8 +3,6 @@ title: display
 slug: Web/CSS/display
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`display`** especifica si un elemento es tratado como [block or inline element](/es/docs/Web/CSS/CSS_display/Flow_layout) y el diseño usado por sus hijos, como [flow layout](/es/docs/Web/CSS/CSS_display/Flow_layout)(Diseño de Flujo), [grid](/es/docs/Web/CSS/CSS_grid_layout)(Cuadricula) o [flex](/es/docs/Web/CSS/CSS_flexible_box_layout)(Flexible).
 
 Formalmente la propiedad `display` establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en [flow layout](/es/docs/Web/CSS/CSS_display/Flow_layout); la tipo interna establece el layout(Diseño) de los hijos. Algunos valores de `display` estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando `display: flex` es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. **Vea** la siguientes tablas para mas especificaciones individuales.

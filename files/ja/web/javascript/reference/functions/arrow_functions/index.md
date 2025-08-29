@@ -13,7 +13,7 @@ l10n:
 - アロー関数は[コンストラクター](/ja/docs/Glossary/Constructor)として使用することはできません。 [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) をつけて呼び出すと {{jsxref("TypeError")}} が発生します。 [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) キーワードにアクセスすることもできません。
 - アロー関数は本体内で [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) を使用することができず、ジェネレーター関数として作成することもできません。
 
-{{InteractiveExample("JavaScript Demo: Functions =>")}}
+{{InteractiveExample("JavaScript デモ: Functions =>")}}
 
 ```js interactive-example
 const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
@@ -264,7 +264,8 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
-> **メモ:** `arguments` という変数は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#eval_および_arguments_の単純化)では宣言できないので、上のコードは構文エラーになります。これにより、 `arguments` のスコープ効果がより理解しやすくなります。
+> [!NOTE]
+> `arguments` という変数は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#eval_および_arguments_の単純化)では宣言できないので、上のコードは構文エラーになります。これにより、 `arguments` のスコープ効果がより理解しやすくなります。
 
 多くの場合、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が `arguments` オブジェクトの代わりに使えます。
 

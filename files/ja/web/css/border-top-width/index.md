@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 **`border-top-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界の幅を設定します。
 
 {{InteractiveExample("CSS デモ: border-top-width")}}

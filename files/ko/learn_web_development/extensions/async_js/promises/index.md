@@ -123,9 +123,15 @@ chooseToppings()
 
 ```js
 chooseToppings()
-  .then((toppings) => placeOrder(toppings))
-  .then((order) => collectOrder(order))
-  .then((pizza) => eatPizza(pizza))
+  .then((toppings) => {
+    return placeOrder(toppings);
+  })
+  .then((order) => {
+    return collectOrder(order);
+  })
+  .then((pizza) => {
+    return eatPizza(pizza);
+  })
   .catch(failureCallback);
 ```
 
@@ -199,7 +205,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
    }
    ```
 
-   이제 추가 설명은 충븐하므로, JavaScript의 첫 번째 줄 아래에 다음과 같은 라인을 추가하세요.
+   이제 추가 설명은 충분하므로, JavaScript의 첫 번째 줄 아래에 다음과 같은 라인을 추가하세요.
 
    ```js
    let promise2 = promise.then((response) => response.blob());

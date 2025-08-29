@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/408
 original_slug: Web/HTTP/Status/408
 ---
 
-{{HTTPSidebar}}
-
 HyperText Transfer Protocol (HTTP) **`408 Request Timeout`** 응답 상태 코드는 서버가 사용하지 않는 연결을 끊고 싶다는 것을 의미한다. 서버가 클라이언트의 요청 없이도 유휴 상태의 연결에 전송한다.
 
 `408`은 서버가 계속해서 기다리기보다는 연결을 종료하기로 결정했다는 것을 알려주기 때문에, 서버는 응답에 "close" {{HTTPHeader("Connection")}}헤더 필드를 추가해서 전송해야한다.

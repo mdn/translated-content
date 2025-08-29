@@ -9,7 +9,7 @@ l10n:
 
 **`handler.preventExtensions()`** はオブジェクトの `[[PreventExtensions]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Object.preventExtensions()")}} のような操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.preventExtensions()", "taller")}}
 
 ```js interactive-example
 const monster1 = {

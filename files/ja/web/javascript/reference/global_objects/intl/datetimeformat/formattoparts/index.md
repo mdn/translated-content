@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 
 **`Intl.DateTimeFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した {{jsxref("Intl.DateTimeFormat")}} フォーマッターが生成する文字列のロケールを考慮した書式化を可能にします。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatToParts()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat.prototype.formatToParts()", "taller")}}
 
 ```js interactive-example
 const date = new Date(2012, 5);

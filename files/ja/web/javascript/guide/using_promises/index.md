@@ -203,7 +203,8 @@ async function logIngredients() {
 
 `async`/`await` はプロミスを基に構築されています。例えば、`doSomething()` は以前と同じ関数であるため、プロミスから `async`/`await` に変更するために必要なリファクタリングは最小限で済みます。 `async`/`await` の構文については、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)および [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) のリファレンスで詳しく説明されています。
 
-> **メモ:** `async`/`await` は通常のプロミス連鎖と同じ並列処理の意味論をもちます。 1 つの非同期関数内で `await` を使用しても、プログラム全体が停止するわけではなく、その値に依存する部分のみが停止します。そのため、 `await` が待機中の間にも、他にも非同期のジョブが実行される可能性があります。
+> [!NOTE]
+> `async`/`await` は通常のプロミス連鎖と同じ並列処理の意味論をもちます。 1 つの非同期関数内で `await` を使用しても、プログラム全体が停止するわけではなく、その値に依存する部分のみが停止します。そのため、 `await` が待機中の間にも、他にも非同期のジョブが実行される可能性があります。
 
 ## エラー処理
 

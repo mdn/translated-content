@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-{{CSSRef}}
-
 **`orientation`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}} (または[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)ではページボックス) の向きを調べるために使用することができます。
 
 > [!NOTE]

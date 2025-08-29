@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
 
 **`getInt32()`** メソッドは、符号付き 32 ビット整数 (long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt32()")}}
+{{InteractiveExample("JavaScript デモ: DataView.getInt32()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

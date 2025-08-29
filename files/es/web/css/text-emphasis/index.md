@@ -3,8 +3,6 @@ title: text-emphasis
 slug: Web/CSS/text-emphasis
 ---
 
-{{CSSRef}}
-
 La **propiedad** **[CSS](/es/docs/Web/CSS)** de **text-emphasis**, es una propiedad _abreviada_ para establecer los valores de [text-empahasis-style](/es/docs/Web/CSS/text-emphasis-style) y [text-emphasis-color](/es/docs/Web/CSS/text-emphasis-color), en una sola declaración.
 
 Esta **propiedad** aplicara el énfasis a cada carácter especificado en el texto del elemento, a excepción de caracteres separados como espacios y caracteres de control .
@@ -41,7 +39,8 @@ La propiedad **text-emphasis** es diferente a la propiedad [text-decoration](/es
 
 The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
 
-> **Nota:** `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.
+> [!NOTE]
+> `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.
 
 {{cssinfo}}
 

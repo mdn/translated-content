@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("declarativeNetRequest.Rule")}} 的 `action` 属性表明了在匹配到规则时采取的相应动作的细节。
 
 ## 类型

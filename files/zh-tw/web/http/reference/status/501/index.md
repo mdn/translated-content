@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`501 Not Implemented`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示伺服器不支援完成請求所需的功能。
 
 此狀態的回應也可能包含 {{HTTPHeader("Retry-After")}} 標頭，告知用戶端在指定時間後可以重試請求。`501` 回應預設是可快取的，除非快取標頭另有指示。

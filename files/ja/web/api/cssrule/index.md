@@ -2,7 +2,7 @@
 title: CSSRule
 slug: Web/API/CSSRule
 l10n:
-  sourceCommit: 5e3cb7c4405256c4ad004986bbff622777b664b6
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("CSSOM")}}

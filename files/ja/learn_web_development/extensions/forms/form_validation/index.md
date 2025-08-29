@@ -227,7 +227,8 @@ input:valid {
 
 {{HTMLElement("input")}} 要素の型によっては、検証のために [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) 属性が必要ないことがあります。例えば `email` 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。
 
-> **メモ:** {{HTMLElement("textarea")}} 要素は [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) 属性に対応していません。
+> [!NOTE]
+> {{HTMLElement("textarea")}} 要素は [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) 属性に対応していません。
 
 ### 入力欄の長さの制約
 
@@ -840,7 +841,7 @@ form.addEventListener("submit", handleSubmit);
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Form_validation) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms) を見てください。
 
 ## まとめ
 

@@ -3,8 +3,6 @@ title: page-break-before
 slug: Web/CSS/page-break-before
 ---
 
-{{CSSRef}}
-
 > [!WARNING]
 > このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。
 
@@ -29,7 +27,7 @@ page-break-before: revert;
 page-break-before: unset;
 ```
 
-{{InteractiveExample("CSS Demo: page-break-before")}}
+{{InteractiveExample("CSS デモ: page-break-before")}}
 
 ```css interactive-example-choice
 page-break-before: auto;

@@ -15,7 +15,8 @@ HTML 文書の場合、{{domxref("Element.innerHTML")}} や {{domxref("Element.o
 
 なお、 {{domxref("XMLHttpRequest")}}は、 URL アドレスが指定できるリソースから直接 XML や HTML を解釈でき、その {{domxref("XMLHttpRequest.response", "response")}} プロパティで `Document` を返すことに注意してください。
 
-> **メモ:** [ブロックレベル要素](/ja/docs/Glossary/Block-level_content)、例えば `<p>` の中に別のブロックレベル要素が入れ子になっている場合、自動的に閉じられ、その結果、閉じられた `</p>` タグの前に解釈されることになります。
+> [!NOTE]
+> [ブロックレベル要素](/ja/docs/Glossary/Block-level_content)、例えば `<p>` の中に別のブロックレベル要素が入れ子になっている場合、自動的に閉じられ、その結果、閉じられた `</p>` タグの前に解釈されることになります。
 
 ## コンストラクター
 

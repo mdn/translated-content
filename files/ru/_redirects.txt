@@ -637,7 +637,7 @@
 /ru/docs/Web/API/GlobalEventHandlers/onerror	/ru/docs/Web/API/Window/error_event
 /ru/docs/Web/API/GlobalEventHandlers/onfocus	/ru/docs/Web/API/Window/focus_event
 /ru/docs/Web/API/GlobalEventHandlers/oninput	/ru/docs/Web/API/Element/input_event
-/ru/docs/Web/API/GlobalEventHandlers/onloadend	/ru/docs/Web/API/XMLHttpRequest/loadend_event
+/ru/docs/Web/API/GlobalEventHandlers/onloadend	/ru/docs/Web/API/XMLHttpRequestEventTarget/loadend_event
 /ru/docs/Web/API/GlobalEventHandlers/onscroll	/ru/docs/Web/API/Element/scroll_event
 /ru/docs/Web/API/GlobalEventHandlers/onselect	/ru/docs/Web/API/HTMLInputElement/select_event
 /ru/docs/Web/API/GlobalEventHandlers/onsubmit	/ru/docs/Web/API/HTMLFormElement/submit_event
@@ -711,6 +711,8 @@
 /ru/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data	/ru/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
 /ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/ru/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 /ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+/ru/docs/Web/API/XMLHttpRequest/loadend_event	/ru/docs/Web/API/XMLHttpRequestEventTarget/loadend_event
+/ru/docs/Web/API/XMLHttpRequest/loadstart_event	/ru/docs/Web/API/XMLHttpRequestEventTarget/loadstart_event
 /ru/docs/Web/API/XMLHttpRequest/onreadystatechange	/ru/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ru/docs/Web/API/atob	/ru/docs/Web/API/Window/atob
 /ru/docs/Web/API/btoa	/ru/docs/Web/API/Window/btoa
@@ -867,6 +869,7 @@
 /ru/docs/Web/CSS/Тихий	/ru/docs/Web/CSS/CSS_syntax/Comments
 /ru/docs/Web/CSS/Указанное_значение	/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
 /ru/docs/Web/CSS/размер	/ru/docs/Web/CSS/length
+/ru/docs/Web/Events	/ru/docs/Web/API/Document_Object_Model/Events
 /ru/docs/Web/Events/abort_(dom_abort_api)	/ru/docs/Web/API/AbortSignal/abort_event
 /ru/docs/Web/Events/blur	/ru/docs/Web/API/Element/blur_event
 /ru/docs/Web/Events/deviceorientation	/ru/docs/Web/API/Window/deviceorientation_event
@@ -878,7 +881,7 @@
 /ru/docs/Web/Events/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/Events/keypress	/ru/docs/Web/API/Element/keypress_event
 /ru/docs/Web/Events/load	/ru/docs/Web/API/Window/load_event
-/ru/docs/Web/Events/loadstart	/ru/docs/Web/API/XMLHttpRequest/loadstart_event
+/ru/docs/Web/Events/loadstart	/ru/docs/Web/API/XMLHttpRequestEventTarget/loadstart_event
 /ru/docs/Web/Events/mousedown	/ru/docs/Web/API/Element/mousedown_event
 /ru/docs/Web/Events/mouseleave	/ru/docs/Web/API/Element/mouseleave_event
 /ru/docs/Web/Events/popstate	/ru/docs/Web/API/Window/popstate_event
@@ -1267,8 +1270,9 @@
 /ru/docs/Web/JavaScript/Language_overview	/ru/docs/Web/JavaScript/Guide/Language_overview
 /ru/docs/Web/JavaScript/Memory_management	/ru/docs/Web/JavaScript/Guide/Memory_management
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Private_properties
-/ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_properties
+/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Private_elements
+/ru/docs/Web/JavaScript/Reference/Classes/Private_properties	/ru/docs/Web/JavaScript/Reference/Classes/Private_elements
+/ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_elements
 /ru/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ru/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /ru/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement	/ru/docs/Web/JavaScript/Reference/Errors/Unexpected_token

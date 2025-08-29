@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("downloads")}} API 的 **`acceptDanger()`** 函数用于提示用户接受或取消一个潜在危险的下载。
 
 此函数不能从后台脚本调用，只能在可见窗口中运行的脚本（例如浏览器或页面操作的弹出窗口）中调用。

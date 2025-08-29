@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7e649ddc14198ca9e55ac2ccfabc36a23bd16bb4
 ---
 
-{{CSSRef}}
-
 **CSS 座標変換** (CSS transforms) は、 CSS でスタイル付けされた要素をどのように二次元または三次元空間に座標変換するかを定義します。
 
 ## CSS 座標変換の動作

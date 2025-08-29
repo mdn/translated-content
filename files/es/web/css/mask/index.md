@@ -3,7 +3,7 @@ title: -webkit-mask
 slug: Web/CSS/mask
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

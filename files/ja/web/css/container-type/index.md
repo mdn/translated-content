@@ -5,14 +5,13 @@ l10n:
   sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
 ---
 
-{{CSSRef}}
-
 要素はクエリーコンテナーを確立するのに、 **`container-type`** という [CSS](/ja/docs/Web/CSS) プロパティを使用することができます。 `container-type` は、コンテナークエリーで使用されるコンテナーコンテキストの種類を定義するために使用されます。利用できるコンテナーコンテキストは次のとおりです。
 
 - [サイズ](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries): 最大または最小サイズ、アスペクト比、方向などの一般的なサイズまたはインラインサイズの条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
 - [スクロール状態](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries): コンテナーが途中までスクロールされているスクロールコンテナーであるかどうか、コンテナーがスクロールスナップコンテナーにスナップされている[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)であるかどうかなどのスクロール状態の条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
 
-> **メモ:** `container-type` および {{cssxref("container-name")}} プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
+> [!NOTE]
+> `container-type` および {{cssxref("container-name")}} プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
 
 ## 構文
 
