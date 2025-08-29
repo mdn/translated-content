@@ -313,16 +313,16 @@ p {
   <tr><td rowspan="4">3</td><td>作成者 - 先に宣言されたレイヤー</td><td rowspan="4">通常</td></tr>
   <tr><td>作成者 - 後に宣言されたレイヤー</td></tr>
   <tr><td>作成者 - レイヤー化されていないスタイル</td></tr>
-  <tr><td>`style` によるインラインスタイル</td></tr>
+  <tr><td><code>style</code> によるインラインスタイル</td></tr>
   <tr><td>4</td><td>アニメーション</td><td></td></tr>
-  <tr><td rowspan="4">5</td><td>作成者 - レイヤー化されていないスタイル</td><td rowspan="4">`!important`</td></tr>
+  <tr><td rowspan="4">5</td><td>作成者 - レイヤー化されていないスタイル</td><td rowspan="4"><code>!important</code></td></tr>
   <tr><td>作成者 - 後に宣言されたレイヤー</td></tr>
   <tr><td>作成者 - 先に宣言されたレイヤー</td></tr>
-  <tr><td>`style` によるインラインスタイル</td></tr>
-  <tr><td rowspan="3">6</td><td>ユーザー - レイヤー化されていないスタイル</td><td rowspan="3"><code>!important</td></tr>
+  <tr><td><code>style</code> によるインラインスタイル</td></tr>
+  <tr><td rowspan="3">6</td><td>ユーザー - レイヤー化されていないスタイル</td><td rowspan="3"><code>!important</code></td></tr>
   <tr><td>ユーザー - 後に宣言されたレイヤー</td></tr>
   <tr><td>ユーザー - 先に宣言されたスタイル</td></tr>
-  <tr><td rowspan="3">7</td><td>user-agent - レイヤー化されていないスタイル</td><td rowspan="3">`!important`</td></tr>
+  <tr><td rowspan="3">7</td><td>user-agent - レイヤー化されていないスタイル</td><td rowspan="3"><code>!important</code></td></tr>
   <tr><td>ユーザーエージェント - 後に宣言されたレイヤー</td></tr>
   <tr><td>ユーザーエージェント - 先に宣言されたスタイル</td></tr>
   <tr><td>8</td><td>トランジション</td><td></td></tr>

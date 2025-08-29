@@ -3,8 +3,6 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`backface-visibility`** 속성은 요소의 뒷면이 사용자를 향할 때 보여야 하는지 지정합니다.
 
 {{InteractiveExample("CSS Demo: backface-visibility")}}

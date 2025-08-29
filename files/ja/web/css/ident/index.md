@@ -2,7 +2,7 @@
 title: <ident>
 slug: Web/CSS/ident
 l10n:
-  sourceCommit: bd74b8a8222517dead9def675a499dcf1dc30328
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`<ident>`** [CSS](/ja/docs/Web/CSS) [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) は、{{glossary("identifier", "識別子")}}として使用される任意の文字列を意味します。

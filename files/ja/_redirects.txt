@@ -2071,7 +2071,7 @@
 /ja/docs/Learn/Accessibility/What_is_accessibility	/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
 /ja/docs/Learn/CSS	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Building_blocks	/ja/docs/Learn_web_development/Core/Styling_basics
-/ja/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
+/ja/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Building_blocks/Advanced_styling_effects	/ja/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 /ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders	/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /ja/docs/Learn/CSS/Building_blocks/Box_Model_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
@@ -2157,7 +2157,7 @@
 /ja/docs/Learn/CSS/Introduction_to_CSS/Syntax	/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started
 /ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units
 /ja/docs/Learn/CSS/Styling_boxes	/ja/docs/Learn_web_development/Core/Styling_basics
-/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box	/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
+/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Styling_boxes/Advanced_box_effects	/ja/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 /ja/docs/Learn/CSS/Styling_boxes/Backgrounds	/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /ja/docs/Learn/CSS/Styling_boxes/Borders	/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
@@ -2493,6 +2493,7 @@
 /ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 /ja/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 /ja/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
+/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /ja/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
 /ja/docs/Learn_web_development/Core/Styling_basics/Sizing_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
@@ -3126,7 +3127,8 @@
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Transforming_with_XSLT	/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/ja/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
+/ja/docs/Web/API/Document_Object_Model/Whitespace	/ja/docs/Web/CSS/CSS_text/Whitespace
+/ja/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
 /ja/docs/Web/API/Element.querySelector	/ja/docs/Web/API/Element/querySelector
@@ -4549,7 +4551,7 @@
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Working_with_the_History_API	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/Guide/DOM/Using_full_screen_mode	/ja/docs/Web/API/Fullscreen_API
-/ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
+/ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/Web/API/Document_Object_Model/Events
 /ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /ja/docs/Web/Guide/Graphics	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images
@@ -6286,7 +6288,7 @@
 /ja/docs/Web_Development/Mobile	/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /ja/docs/Web_Development/Mobile/Responsive_design	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web_Development/Writing_forward-compatible_websites	/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
-/ja/docs/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
+/ja/docs/Whitespace_in_the_DOM	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/XHTML	/ja/docs/Glossary/XHTML
 /ja/docs/XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest
 /ja/docs/XMLHttpRequest/FormData	/ja/docs/Web/API/FormData

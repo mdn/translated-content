@@ -3779,14 +3779,6 @@
       "SirnoChan"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Cool-looking_box": {
-    "modified": "2020-07-16T22:28:27.701Z",
-    "contributors": [
-      "grape",
-      "Lohoyo",
-      "lihaoyuan"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Debugging_CSS": {
     "modified": "2020-07-16T22:29:30.454Z",
     "contributors": [
@@ -10743,14 +10735,6 @@
       "alwxkxk",
       "xhlsrj",
       "EugeneZeng"
-    ]
-  },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-01-30T13:21:03.275Z",
-    "contributors": [
-      "chrisdavidmills",
-      "lon",
-      "ziyunfei"
     ]
   },
   "Web/API/DragEvent": {
@@ -24524,6 +24508,14 @@
       "RainSlide",
       "zjffun",
       "LuXuanqing"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-01-30T13:21:03.275Z",
+    "contributors": [
+      "chrisdavidmills",
+      "lon",
+      "ziyunfei"
     ]
   },
   "Web/CSS/CSS_text_decoration": {

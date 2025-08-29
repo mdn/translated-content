@@ -10327,19 +10327,6 @@
       "fider"
     ]
   },
-  "Web/API/XMLHttpRequest/loadend_event": {
-    "modified": "2019-03-18T21:41:57.825Z",
-    "contributors": [
-      "dedotmoroz"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadstart_event": {
-    "modified": "2019-03-23T22:29:55.674Z",
-    "contributors": [
-      "fscholz",
-      "forestbird"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:01:52.733Z",
     "contributors": [
@@ -10443,6 +10430,19 @@
       "Zakhse",
       "nakhodkiin",
       "Salasar"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadend_event": {
+    "modified": "2019-03-18T21:41:57.825Z",
+    "contributors": [
+      "dedotmoroz"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadstart_event": {
+    "modified": "2019-03-23T22:29:55.674Z",
+    "contributors": [
+      "fscholz",
+      "forestbird"
     ]
   },
   "Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data": {

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 024449e686746a0d036edeb2323bfe21adfa2155
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`scale`** 속성은 {{CSSxRef("transform")}} 속성과는 독립적으로 개별적인 크기 변형을 지정할 수 있게 합니다. 이는 일반적인 사용자 인터페이스 사용에 더 알맞고, `transform` 값을 사용할 때처럼 정확한 순서를 기억해야 할 필요가 없습니다.
 
 {{InteractiveExample("CSS Demo: scale")}}

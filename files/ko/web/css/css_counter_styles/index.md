@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1a3107dc1b77e3ece12b0a7d872dadbe95813956
 ---
 
-{{CSSRef}}
-
 **CSS counter styles** 모듈을 사용하면 사용자 정의 카운터 스타일을 정의할 수 있습니다.
 
 ## 참고서
