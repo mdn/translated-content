@@ -1,28 +1,29 @@
 ---
 title: loadstart
-slug: Web/API/XMLHttpRequest/loadstart_event
+slug: Web/API/XMLHttpRequestEventTarget/loadstart_event
+original_slug: Web/API/XMLHttpRequest/loadstart_event
 ---
 
 {{APIRef("XMLHttpRequest API")}}
 
-Событие `loadstart` происходит, когда начинается загрузка.
+当程序开始加载时，loadstart 事件将被触发。这个事件可以被 {{domxref("XMLHttpRequest")}} 调用，也适用于 {{htmlelement("img")}} 和 {{htmlelement("video")}} 元素。
 
-## Общая информация
+## 基本信息
 
-- Спецификация
+- 规范文档
   - : [Progress](https://www.w3.org/TR/progress-events/)
-- Интерфейс
+- 接口
   - : ProgressEvent
-- Распространяется
-  - : Нет
-- Отменяемое
-  - : Нет
-- Цель
+- 冒泡
+  - : No
+- 可取消
+  - : No
+- 目标
   - : Element
-- Действие по умолчанию
-  - : Нет
+- 默认动作
+  - : None
 
-## Свойства
+## 属性
 
 | Property                              | Type                       | Description                                                                                                                                                    |
 | ------------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,15 +35,11 @@ slug: Web/API/XMLHttpRequest/loadstart_event
 | `loaded` {{readonlyInline}}           | unsigned long (long)       | The number of bytes transferred since the beginning of the operation. This doesn't include headers and other overhead, but only the content itself. Read only. |
 | `total` {{readonlyInline}}            | unsigned long (long)       | The total number of bytes of content that will be transferred during the operation. If the total size is unknown, this value is zero. Read only.               |
 
-## Связанные свойства
+## 规范
 
-- [`loadstart`](/ru/docs/Web/API/XMLHttpRequest/loadstart_event)
-- [`progress`](/ru/docs/Web/API/XMLHttpRequest/progress_event)
-- [`error`](/ru/docs/Web/API/HTMLElement/error_event)
-- [`abort`](/ru/docs/Web/API/HTMLMediaElement/abort_event)
-- [`load`](/ru/docs/Web/API/Window/load_event)
-- [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event)
+{{Specifications}}
 
-## Смотрите также
+## 参见
 
-- [Отслеживание состояния загрузки](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
+- 相关事件：{{domxref("XMLHttpRequest/loadend_event", "loadend")}}、{{domxref("XMLHttpRequest/load_event", "load")}}、{{domxref("XMLHttpRequest/progress_event", "progress")}}、{{domxref("XMLHttpRequest/error_event", "error")}}、{{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [监测进度](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#监测进度)

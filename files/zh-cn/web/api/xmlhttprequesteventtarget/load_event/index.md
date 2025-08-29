@@ -1,30 +1,31 @@
 ---
-title: "XMLHttpRequest: error 事件"
-slug: Web/API/XMLHttpRequest/error_event
+title: "XMLHttpRequest: load event"
+slug: Web/API/XMLHttpRequestEventTarget/load_event
+original_slug: Web/API/XMLHttpRequest/load_event
 ---
 
 {{APIRef}}
 
-当请求遇到错误时，将触发`error` 事件。
+当一个{{domxref("XMLHttpRequest")}}请求完成的时候会触发`load` 事件。
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">可冒泡</th>
+      <th scope="row">Bubbles</th>
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">可取消</th>
+      <th scope="row">Cancelable</th>
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">接口</th>
+      <th scope="row">Interface</th>
       <td>{{domxref("ProgressEvent")}}</td>
     </tr>
     <tr>
-      <th scope="row">事件处理程序属性</th>
+      <th scope="row">Event handler property</th>
       <td>
-        {{domxref("XMLHttpRequestEventTarget/onerror", "onerror")}}
+        {{domxref("XMLHttpRequestEventTarget/onload", "onload")}}
       </td>
     </tr>
   </tbody>
@@ -132,5 +133,5 @@ xhrButtonAbort.addEventListener("click", () => {
 
 ## 参见
 
-- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}、{{domxref("XMLHttpRequest/load_event", "load")}}、{{domxref("XMLHttpRequest/progress_event", "progress")}}、{{domxref("XMLHttpRequest/loadend_event", "loadend")}}、{{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [监视进度](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#监测进度)
+- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}、{{domxref("XMLHttpRequest/loadend_event", "loadend")}}、{{domxref("XMLHttpRequest/progress_event", "progress")}}、{{domxref("XMLHttpRequest/error_event", "error")}}、{{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [监测进度](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#监测进度)
