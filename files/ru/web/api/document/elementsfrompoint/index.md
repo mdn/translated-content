@@ -14,7 +14,7 @@ l10n:
 
 ## Синтаксис
 
-```js
+```js-nolint
 elementsFromPoint(x, y);
 ```
 
