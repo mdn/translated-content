@@ -1,6 +1,7 @@
 ---
 title: loadstart
-slug: Web/API/XMLHttpRequest/loadstart_event
+slug: Web/API/XMLHttpRequestEventTarget/loadstart_event
+original_slug: Web/API/XMLHttpRequest/loadstart_event
 ---
 
 {{APIRef("XMLHttpRequest API")}}

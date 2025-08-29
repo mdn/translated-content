@@ -21811,18 +21811,6 @@
       "holynewbie"
     ]
   },
-  "Web/API/XMLHttpRequest/abort_event": {
-    "modified": "2020-10-15T22:23:57.824Z",
-    "contributors": [
-      "shaodahong"
-    ]
-  },
-  "Web/API/XMLHttpRequest/error_event": {
-    "modified": "2020-10-15T22:19:47.705Z",
-    "contributors": [
-      "lnh"
-    ]
-  },
   "Web/API/XMLHttpRequest/getAllResponseHeaders": {
     "modified": "2019-05-07T04:02:32.986Z",
     "contributors": [
@@ -21837,29 +21825,6 @@
       "wsico",
       "winson",
       "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/XMLHttpRequest/load_event": {
-    "modified": "2020-10-15T22:18:39.683Z",
-    "contributors": [
-      "logTXT",
-      "hzy"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadend_event": {
-    "modified": "2019-03-23T22:16:58.948Z",
-    "contributors": [
-      "fscholz",
-      "wudexiang",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadstart_event": {
-    "modified": "2019-03-23T22:29:32.098Z",
-    "contributors": [
-      "fscholz",
-      "faremax",
-      "Lxxyx"
     ]
   },
   "Web/API/XMLHttpRequest/open": {
@@ -21877,16 +21842,6 @@
       "Reveur",
       "651291702",
       "xchenGitHub"
-    ]
-  },
-  "Web/API/XMLHttpRequest/progress_event": {
-    "modified": "2020-10-15T21:49:44.294Z",
-    "contributors": [
-      "Ende93",
-      "957398123",
-      "fscholz",
-      "roberthow",
-      "fengfu"
     ]
   },
   "Web/API/XMLHttpRequest/readyState": {
@@ -21995,13 +21950,6 @@
       "holynewbie"
     ]
   },
-  "Web/API/XMLHttpRequest/timeout_event": {
-    "modified": "2019-04-08T08:24:47.314Z",
-    "contributors": [
-      "irenesmith",
-      "kameii"
-    ]
-  },
   "Web/API/XMLHttpRequest/upload": {
     "modified": "2019-04-19T09:12:27.378Z",
     "contributors": [
@@ -22028,6 +21976,58 @@
     "contributors": [
       "RainSlide",
       "rubyisapm"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/abort_event": {
+    "modified": "2020-10-15T22:23:57.824Z",
+    "contributors": [
+      "shaodahong"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/error_event": {
+    "modified": "2020-10-15T22:19:47.705Z",
+    "contributors": [
+      "lnh"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/load_event": {
+    "modified": "2020-10-15T22:18:39.683Z",
+    "contributors": [
+      "logTXT",
+      "hzy"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadend_event": {
+    "modified": "2019-03-23T22:16:58.948Z",
+    "contributors": [
+      "fscholz",
+      "wudexiang",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadstart_event": {
+    "modified": "2019-03-23T22:29:32.098Z",
+    "contributors": [
+      "fscholz",
+      "faremax",
+      "Lxxyx"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/progress_event": {
+    "modified": "2020-10-15T21:49:44.294Z",
+    "contributors": [
+      "Ende93",
+      "957398123",
+      "fscholz",
+      "roberthow",
+      "fengfu"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/timeout_event": {
+    "modified": "2019-04-08T08:24:47.314Z",
+    "contributors": [
+      "irenesmith",
+      "kameii"
     ]
   },
   "Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest": {
