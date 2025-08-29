@@ -62,7 +62,7 @@ if (document.elementsFromPoint) {
 }
 ```
 
-{{EmbedLiveSample("Примеры", "100%", "150")}}
+{{EmbedLiveSample("Примеры", 420, 160)}}
 
 ## Спецификации
 
