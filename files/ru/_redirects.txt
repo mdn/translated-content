@@ -329,14 +329,14 @@
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/ru/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images	/ru/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
-/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/ru/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/ru/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/ru/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/ru/docs/Web/HTML/Guides/Responsive_images
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Добавление_r_graphics_to_the_Web	/ru/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML	/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML/Проверьте_свои_знания:_Изображения_в_HTML	/ru/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
-/ru/docs/Learn/HTML/Multimedia_and_embedding/заставка_Mozilla	/ru/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+/ru/docs/Learn/HTML/Multimedia_and_embedding/заставка_Mozilla	/ru/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /ru/docs/Learn/HTML/Tables	/ru/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /ru/docs/Learn/HTML/Tables/Advanced	/ru/docs/Learn_web_development/Core/Structuring_content/Table_accessibility
 /ru/docs/Learn/HTML/Tables/Basics	/ru/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
@@ -494,6 +494,7 @@
 /ru/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn	/ru/docs/conflicting/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /ru/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions	/ru/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions
 /ru/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images	/ru/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
+/ru/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page	/ru/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks	/ru/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 /ru/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks	/ru/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
 /ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/ru/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
