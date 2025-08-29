@@ -36,12 +36,12 @@ slug: Web/API/XMLHttpRequestEventTarget/loadstart_event
 
 ## Связанные свойства
 
-- [`loadstart`](/ru/docs/Web/API/XMLHttpRequest/loadstart_event)
+- [`loadstart`](/ru/docs/Web/API/XMLHttpRequestEventTarget/loadstart_event)
 - [`progress`](/ru/docs/Web/API/XMLHttpRequest/progress_event)
 - [`error`](/ru/docs/Web/API/HTMLElement/error_event)
 - [`abort`](/ru/docs/Web/API/HTMLMediaElement/abort_event)
 - [`load`](/ru/docs/Web/API/Window/load_event)
-- [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event)
+- [`loadend`](/ru/docs/Web/API/XMLHttpRequestEventTarget/loadend_event)
 
 ## Смотрите также
 
