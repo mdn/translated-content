@@ -8,7 +8,7 @@ slug: Web/CSS/Layout_cookbook
 Le livre de recettes CSS vise à illustrer différents motifs qu'on retrouve fréquemment sur le Web et qu'on pourrait souhaiter implémenter pour son propre site. En plus de fournir du code qui peut servir de point de départ, ces recettes mettent en avant les différents outils et dispositions qui peuvent être utilisées et les choix à effectuer lors du développement.
 
 > [!NOTE]
-> Si vous débutez en CSS, nous vous conseillons de consulter [notre module sur l'apprentissage de la disposition en CSS](/fr/docs/Learn/CSS/CSS_layout). Ce guide vous fournira les informations de base pour comprendre le fonctionnement de chacune de ces recettes.
+> Si vous débutez en CSS, nous vous conseillons de consulter [notre module sur l'apprentissage de la disposition en CSS](/fr/docs/Learn_web_development/Core/CSS_layout). Ce guide vous fournira les informations de base pour comprendre le fonctionnement de chacune de ces recettes.
 
 ## Les recettes
 

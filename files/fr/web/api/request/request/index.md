@@ -124,5 +124,5 @@ var copie = new Request(maRequete);
 ## Voir aussi
 
 - [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
-- [Le contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/CORS)
+- [Le contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

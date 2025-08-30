@@ -12,7 +12,7 @@ Les scripts sans attribut `async` ou `defer` sont chargés et exécutés immédi
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `async`
   - : Cet attribut booléen indique si le navigateur doit, dans la mesure du possible, exécuter les scripts de manière asynchrone. **_Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts « inline » déclarés dans les éléments), dans ce cas il n'aurait aucun effet._**
@@ -24,7 +24,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
     Se référer au tableau de compatibilité ci-après pour les informations concernant la prise en charge par les navigateurs. Voir aussi la page sur [les scripts asynchrones avec asm.js](/fr/docs/Games/Techniques/Async_scripts).
 
 - `crossorigin`
-  - : Les balises de `script` classiques enverront un minimum d'informations à {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} pour les scripts qui ne respectent pas les contrôles standard du [CORS](/fr/docs/Web/HTTP/CORS). Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on pourra utiliser cet attribut. Voir [la page de réglages des attributs CORS](/fr/docs/Web/HTML/Attributes/crossorigin) pour plus d'explications quant aux valeurs valides.
+  - : Les balises de `script` classiques enverront un minimum d'informations à {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} pour les scripts qui ne respectent pas les contrôles standard du [CORS](/fr/docs/Web/HTTP/Guides/CORS). Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on pourra utiliser cet attribut. Voir [la page de réglages des attributs CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'explications quant aux valeurs valides.
 - `defer`
   - : Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event). **_Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts contenus déclarés dans les éléments), dans ce cas il n'aurait aucun effet._** Pour obtenir un effet similaire avec les scripts insérés de façon dynamique, on utilisera explicitement `async=false`. Les scripts qui possèdent un attribut `defer` seront exécutés dans l'ordre dans lequel ils apparaissent dans le document.
 
@@ -53,7 +53,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : Cet attribut définit l'URI d'un script externe. Cela peut être utilisé pour insérer des scripts autrement qu'en les insérant à même le document. **_Les éléments `script` avec un attribut `src` défini ne doivent pas avoir de script compris dans leurs balises. Cela peut causer un comportement inattendu où le contenu du fichier référencé est chargé mais où le contenu de l'élément est ignoré._**
 - `type`
   - : Cet attribut indique le type de script. La valeur de cet attribut peut appartenir à l'une de ces catégories :
-    - **Correspondant à un type MIME JavaScript ou absent :** Cela indique que le script est en JavaScript. La spécification HTML5 conseille aux auteurs d'omettre cet attribut plutôt que de fournir un type MIME redondant. Pour les navigateurs plus anciens, cela indiquait le langage de script du code embarqué. Les types MIME correspondant à JavaScript sont [énumérés dans la spécification](/fr/docs/Web/HTTP/MIME_types#javascript_types).
+    - **Correspondant à un type MIME JavaScript ou absent :** Cela indique que le script est en JavaScript. La spécification HTML5 conseille aux auteurs d'omettre cet attribut plutôt que de fournir un type MIME redondant. Pour les navigateurs plus anciens, cela indiquait le langage de script du code embarqué. Les types MIME correspondant à JavaScript sont [énumérés dans la spécification](/fr/docs/Web/HTTP/Guides/MIME_types#javascript_types).
     - **`module` :** Le code sera traité comme un module JavaScript. Le traitement du script n'est pas affecté par les attributs `charset` et `defer`. Pour plus d'informations sur l'utilisation des modules, voir le guide sur [les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
     - **Toute autre valeur :** Le contenu embarqué est considéré comm un bloc de donnée et ne sera pas traité par le navigateur. Les développeurs doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript afin d'indiquer de tels blocs de donnée. Dans ce cas, l'attribut `src` sera ignoré.
 
@@ -163,7 +163,7 @@ Les navigateurs qui prennent en charge le type `module` prennent également en c
 ## Voir aussi
 
 - {{domxref("document.currentScript")}}
-- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
+- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Guides/Date_and_time_formats)
 - [Guide sur les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules)
 - [Tableau de compatibilité de Ryan Grove pour les évènements liés aux éléments `<script>` et `<link>`](https://pie.gd/test/script-link-events/)
 - [Un article de Flavio Copes sur le chargement de ressources JavaScript et les différences entre `async` et `defer` (en anglais)](https://flaviocopes.com/javascript-async-defer/)

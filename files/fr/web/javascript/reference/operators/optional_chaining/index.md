@@ -80,7 +80,7 @@ let result = uneInterface.uneMéthode?.();
 
 #### Réaliser des fonctions de rappel optionnelles ou des écouteurs d'évènements
 
-Si vous utilisez des fonctions ou des méthodes de recherche depuis un objet avec [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), vous pourriez avoir des valeurs inexistantes que vous ne pouvez appeler comme fonction à moins que vous ayez vérifié leur existance. En utilisant `?.`, vous pourriez vous passer de cette vérification supplémentaire :
+Si vous utilisez des fonctions ou des méthodes de recherche depuis un objet avec [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring), vous pourriez avoir des valeurs inexistantes que vous ne pouvez appeler comme fonction à moins que vous ayez vérifié leur existance. En utilisant `?.`, vous pourriez vous passer de cette vérification supplémentaire :
 
 ```js
 // ES2019

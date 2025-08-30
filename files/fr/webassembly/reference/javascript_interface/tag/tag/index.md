@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Tag/Tag
 
 {{WebAssemblySidebar}}
 
-Le constructeur **`WebAssembly.Tag()`** crée un nouvel objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag).
+Le constructeur **`WebAssembly.Tag()`** crée un nouvel objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag).
 
 ## Syntaxe
 
@@ -45,5 +45,5 @@ const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
 ## Voir aussi
 
 - [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Concepts WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

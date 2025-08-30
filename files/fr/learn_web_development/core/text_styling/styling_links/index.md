@@ -6,7 +6,7 @@ original_slug: Learn/CSS/Styling_text/Styling_links
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-Lors de la mise en forme de [liens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), il est important de comprendre comment utiliser les pseudo-classes pour mettre en forme efficacement les états des liens, et comment créer des liens pour les utiliser dans diverses fonctionnalités d'interface courantes, telles que les menus de navigation et les onglets. Nous allons examiner tous ces sujets dans cet article.
+Lors de la mise en forme de [liens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links), il est important de comprendre comment utiliser les pseudo-classes pour mettre en forme efficacement les états des liens, et comment créer des liens pour les utiliser dans diverses fonctionnalités d'interface courantes, telles que les menus de navigation et les onglets. Nous allons examiner tous ces sujets dans cet article.
 
 <table class="standard-table">
   <tbody>
@@ -39,11 +39,11 @@ Lors de la mise en forme de [liens](/fr/docs/Learn/HTML/Introduction_to_HTML/Cre
 
 ## Un coup d'œil à quelques liens
 
-Nous avons regardé comment les liens sont implémentés dans votre HTML selon les meilleures pratiques dans [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Dans cet article, nous allons développer ces connaissances en vous montrant les meilleures pratiques pour la mise en forme de liens.
+Nous avons regardé comment les liens sont implémentés dans votre HTML selon les meilleures pratiques dans [Création d'hyperliens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links). Dans cet article, nous allons développer ces connaissances en vous montrant les meilleures pratiques pour la mise en forme de liens.
 
 ### État des liens
 
-La première chose à comprendre est le concept d'états des liens : les différents états dans lesquels les liens peuvent exister, qui peuvent être mis en forme en utilisant différentes [pseudo-classes](/fr/docs/Learn/CSS/Building_blocks/Selectors#pseudo-classes_et_pseudo-éléments) :
+La première chose à comprendre est le concept d'états des liens : les différents états dans lesquels les liens peuvent exister, qui peuvent être mis en forme en utilisant différentes [pseudo-classes](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#pseudo-classes_et_pseudo-éléments) :
 
 - **link (non visité)** : l'état par défaut dans lequel se trouve un lien, lorsqu'il n'est dans aucun autre état ; cela peut être spécifiquement mis en forme en utilisant la pseudo classe {{cssxref(":link")}} ;
 - **visited :** un lien qui a déjà été visité (qui existe dans l'historique du navigateur), mis en forme en utilisant la pseudo-classe {{cssxref(":visited")}} ;
@@ -382,12 +382,12 @@ Nous utilisons également {{cssxref("background-size")}} pour indiquer à quelle
 
 Enfin, nous avons mis un peu de {{cssxref("padding-right")}} sur les liens pour faire de la place afin que l'image d'arrière-plan se place à l'intérieur, de sorte que nous ne la faisions chevaucher le texte.
 
-Un dernier mot : comment avons-nous sélectionné uniquement les liens externes ? Eh bien, si vous écrivez vos liens HTML correctement, vous ne devriez utiliser des URL absolues que pour les liens externes : il est plus efficace d'utiliser des liens relatifs pour la redirection vers d'autres parties de votre propre site. Le texte "http" ne devrait donc apparaître que dans les liens externes, et nous pouvons le sélectionner avec un [sélecteur d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors#sélecteurs_dattribut) : `a[href*="http]` sélectionne les éléments {{htmlelement("a")}}, mais seulement s'ils ont un attribut [`href`](/fr/docs/Web/HTML/Element/a#href) ayant une valeur contenant "http" quelque part à l'intérieur.
+Un dernier mot : comment avons-nous sélectionné uniquement les liens externes ? Eh bien, si vous écrivez vos liens HTML correctement, vous ne devriez utiliser des URL absolues que pour les liens externes : il est plus efficace d'utiliser des liens relatifs pour la redirection vers d'autres parties de votre propre site. Le texte "http" ne devrait donc apparaître que dans les liens externes, et nous pouvons le sélectionner avec un [sélecteur d'attribut](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#sélecteurs_dattribut) : `a[href*="http]` sélectionne les éléments {{htmlelement("a")}}, mais seulement s'ils ont un attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) ayant une valeur contenant "http" quelque part à l'intérieur.
 
 Alors voilà, essayez de revoir la section d'apprentissage actif ci-dessus et d'explorer cette nouvelle technique !
 
 > [!NOTE]
-> Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
+> Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics) et le [design adaptif _(responsive web design)_](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
 
 ## Mise en forme de liens comme des boutons
 

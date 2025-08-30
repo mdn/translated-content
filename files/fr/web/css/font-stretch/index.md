@@ -200,4 +200,4 @@ Le tableau qui suit illustre l'effet des différents pourcentages avec deux poli
 
 - [`font-style`](/fr/docs/Web/CSS/font-style)
 - [`font-weight`](/fr/docs/Web/CSS/font-weight)
-- [Apprendre — Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Apprendre — Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)

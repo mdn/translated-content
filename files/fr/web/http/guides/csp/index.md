@@ -24,7 +24,7 @@ Pour un niveau de protection le plus élevé possible, un site qui voudrait qu'a
 
 ### Empêcher les écoutes du trafic
 
-En plus de restreindre les domaines à partir desquels le contenu peut être chargé, le serveur peut indiquer quels protocoles doivent être utilisés et par exemple forcer l'utilisation de HTTPS afin d'améliorer la sécurité. Une stratégie de sécurité complète pour la transmission des données peut non seulement forcer l'utilisation de TLS via HTTPS mais aussi forcer l'utilisation de [cookies sécurisés](/fr/docs/Web/HTTP/Cookies) (qui ne peuvent être envoyés qu'en HTTPS) et indiquer de convertir automatiquement toutes les requêtes qui auraient été faites en HTTP simple en requêtes HTTPS. L'utilisation de l'en-tête {{HTTPHeader("Strict-Transport-Security")}} permet de s'assurer que les navigateurs utilisent obligatoirement des connexions chiffrées en TLS (HTTPS).
+En plus de restreindre les domaines à partir desquels le contenu peut être chargé, le serveur peut indiquer quels protocoles doivent être utilisés et par exemple forcer l'utilisation de HTTPS afin d'améliorer la sécurité. Une stratégie de sécurité complète pour la transmission des données peut non seulement forcer l'utilisation de TLS via HTTPS mais aussi forcer l'utilisation de [cookies sécurisés](/fr/docs/Web/HTTP/Guides/Cookies) (qui ne peuvent être envoyés qu'en HTTPS) et indiquer de convertir automatiquement toutes les requêtes qui auraient été faites en HTTP simple en requêtes HTTPS. L'utilisation de l'en-tête {{HTTPHeader("Strict-Transport-Security")}} permet de s'assurer que les navigateurs utilisent obligatoirement des connexions chiffrées en TLS (HTTPS).
 
 ## Utiliser CSP
 
@@ -193,4 +193,4 @@ _Il existe une incompatibilité spécifique dans certaines versions de Safari : 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
 - [L'utilisation de CSP pour les WebExtensions.](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [La gestion de CSP dans les web workers](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#utilisation_du_csp_dans_les_web_workers)
+- [La gestion de CSP dans les web workers](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#utilisation_du_csp_dans_les_web_workers)

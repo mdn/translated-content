@@ -8,20 +8,20 @@ original_slug: Web/HTML/Attributes/pattern
 
 L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété [`patternMismatch`](/fr/docs/Web/API/ValidityState/patternMismatch) en lecture seule, rattachée à l'objet [`ValidityState`](/fr/docs/Web/API/ValidityState), vaudra `true`.
 
-L'attribut `pattern` peut être utilisé pour les champs de type [`text`](/fr/docs/Web/HTML/Element/input/text), [`tel`](/fr/docs/Web/HTML/Element/input/tel), [`email`](/fr/docs/Web/HTML/Element/input/email), [`url`](/fr/docs/Web/HTML/Element/input/url), [`password`](/fr/docs/Web/HTML/Element/input/password), [`search`](/fr/docs/Web/HTML/Element/input/search).
+L'attribut `pattern` peut être utilisé pour les champs de type [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text), [`tel`](/fr/docs/Web/HTML/Reference/Elements/input/tel), [`email`](/fr/docs/Web/HTML/Reference/Elements/input/email), [`url`](/fr/docs/Web/HTML/Reference/Elements/input/url), [`password`](/fr/docs/Web/HTML/Reference/Elements/input/password), [`search`](/fr/docs/Web/HTML/Reference/Elements/input/search).
 
 La valeur de cet attribut doit être une expression rationnelle JavaScript valide (voir la documentation de [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)). Le marqueur (_flag_) `'u'` pour être utilisé afin d'indiquer que l'expression rationnelle est une séquence de codets Unicode et non ASCII. On n'utilisera pas de barres obliques (_slashes_) autour du texte du motif de l'expression rationnelle.
 
 Si le motif n'est pas indiqué ou est invalide, aucune expression rationnelle ne sera appliquée et l'attribut sera ignoré.
 
 > [!NOTE]
-> On pourra utiliser l'attribut [`title`](/fr/docs/Web/HTML/Element/input#attr-title) afin de fournir aux utilisateurs des explications quant aux règles à respecter pour que la valeur soit valide. Attention, on ne doit pas utiliser uniquement cet attribut pour fournir ces explications. Voir ci-après quant à l'utilisabilité.
+> On pourra utiliser l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#attr-title) afin de fournir aux utilisateurs des explications quant aux règles à respecter pour que la valeur soit valide. Attention, on ne doit pas utiliser uniquement cet attribut pour fournir ces explications. Voir ci-après quant à l'utilisabilité.
 
-Certains types d'`<input>` qui prennent en charge l'attribut `pattern` (notamment [`email`](/fr/docs/Web/HTML/Element/input/email) et [`url`](/fr/docs/Web/HTML/Element/input/url)) ont des contraintes particulières qui doivent également être respectées. Si l'attribut `pattern` n'est pas présent et que la valeur saisie ne respecte pas la syntaxe attendue pour ce type de champ, la propriété en lecture seule [`typeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) vaudra `true`.
+Certains types d'`<input>` qui prennent en charge l'attribut `pattern` (notamment [`email`](/fr/docs/Web/HTML/Reference/Elements/input/email) et [`url`](/fr/docs/Web/HTML/Reference/Elements/input/url)) ont des contraintes particulières qui doivent également être respectées. Si l'attribut `pattern` n'est pas présent et que la valeur saisie ne respecte pas la syntaxe attendue pour ce type de champ, la propriété en lecture seule [`typeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) vaudra `true`.
 
 ### Utilisabilité
 
-Lorsqu'on utilise l'attribut `pattern`, il est nécessaire de fournir une description du format attendu avec un texte visible près du contrôle. On pourra en plus utiliser l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title) afin de fournir une description. Les agents utilisateurs peuvent utiliser la valeur de `title` lors de la validation des contraintes afin d'indiquer à l'utilisateur que le motif n'est pas respecté. Certains navigateurs pourront afficher une bulle d'information et certains outils d'assistance pourront énoncer le contenu de `title` à voix haute lorsque le focus arrive sur le contrôle. Toutefois, l'utilisation seule de cet attribut ne suffit pas pour fournir une accessibilité suffisante.
+Lorsqu'on utilise l'attribut `pattern`, il est nécessaire de fournir une description du format attendu avec un texte visible près du contrôle. On pourra en plus utiliser l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) afin de fournir une description. Les agents utilisateurs peuvent utiliser la valeur de `title` lors de la validation des contraintes afin d'indiquer à l'utilisateur que le motif n'est pas respecté. Certains navigateurs pourront afficher une bulle d'information et certains outils d'assistance pourront énoncer le contenu de `title` à voix haute lorsque le focus arrive sur le contrôle. Toutefois, l'utilisation seule de cet attribut ne suffit pas pour fournir une accessibilité suffisante.
 
 ### Validation des contraintes
 
@@ -75,11 +75,11 @@ input:invalid {
 
 {{EmbedLiveSample("Exemple_1", 300, 80)}}
 
-En utilisant les attributs [`minlength`](/fr/docs/Web/HTML/Attributes/minlength) et [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength) à la place, on aurait eu les propriétés [`validityState.tooLong`](/fr/docs/Web/API/validityState/tooLong) ou [`validityState.tooShort`](/fr/docs/Web/API/validityState/tooShort) qui auraient valu `true`.
+En utilisant les attributs [`minlength`](/fr/docs/Web/HTML/Reference/Attributes/minlength) et [`maxlength`](/fr/docs/Web/HTML/Reference/Attributes/maxlength) à la place, on aurait eu les propriétés [`validityState.tooLong`](/fr/docs/Web/API/validityState/tooLong) ou [`validityState.tooShort`](/fr/docs/Web/API/validityState/tooShort) qui auraient valu `true`.
 
 ### Indiquer un motif
 
-On pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern) afin d'indiquer une expression rationnelle qui devra être respectée par la valeur saisie pour que celle-ci soit considérée comme valide (voir [ce guide sur la validation avec les expressions rationnelles](/fr/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) pour une introduction).
+On pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern) afin d'indiquer une expression rationnelle qui devra être respectée par la valeur saisie pour que celle-ci soit considérée comme valide (voir [ce guide sur la validation avec les expressions rationnelles](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_against_a_regular_expression) pour une introduction).
 
 L'exemple qui suit permet de restreindre les valeurs saisies entre 4 et 8 caractères qui doivent également être des lettres minuscules.
 
@@ -155,6 +155,6 @@ L'attribut `title` est utilisé par certains navigateurs pour écrire les messag
 
 ## Voir aussi
 
-- [Les contraintes de validation](/fr/docs/Web/HTML/Constraint_validation)
-- [La validation des données de formulaires](/fr/docs/Learn/Forms/Form_validation)
+- [Les contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation)
+- [La validation des données de formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Les expressions rationnelles (ou expressions régulières / _regexp_)](/fr/docs/Web/JavaScript/Guide/Regular_expressions)

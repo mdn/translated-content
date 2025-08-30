@@ -5,7 +5,7 @@ slug: Web/CSS/@layer
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
 
 ## Syntaxe
 
@@ -116,7 +116,7 @@ Pour ajouter des règles à la couche `layout` située à l'intérieur de `frame
 
 ### Exemple simple
 
-Dans l'exemple suivant, deux règles CSS sont créées. Une pour les éléments [`<p>`](/fr/docs/Web/HTML/Element/p) en dehors de toute couche et une pour ceux qui sont situés dans une couche intitulée `type` pour `.box p`.
+Dans l'exemple suivant, deux règles CSS sont créées. Une pour les éléments [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) en dehors de toute couche et une pour ceux qui sont situés dans une couche intitulée `type` pour `.box p`.
 
 Sans couche, le sélecteur `.box p` aurait la plus haute spécificité et le texte `Coucou le monde !` serait alors affiché en vert. La couche `type` arrivant avant la couche anonyme pour gérer le contenu qui n'est pas affecté à une couche, le texte sera en violet.
 

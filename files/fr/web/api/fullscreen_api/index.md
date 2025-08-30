@@ -147,4 +147,4 @@ Pour le moment, tous les navigateurs n'ont pas implémenté la version sans pré
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}
-- [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/fr/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
