@@ -131,7 +131,7 @@ function greet() {
 button.addEventListener("click", greet);
 ```
 
-{{EmbedLiveSample('上下文中的串联', '100%', 50)}}
+{{EmbedLiveSample('上下文中的串联', '100%', 50, , , , , 'allow-modals')}}
 
 这里我们使用了第 4 行中的 {{domxref("window.prompt()", "window.prompt()")}} 函数，它要求用户在弹出的对话框中回答一个问题然后将他们输入的文本存储在一个给定的变量中——在这个示例中是 `name` 变量。然后，我们将名称插入通用的问候消息中，并显示该字符串。
 
