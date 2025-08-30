@@ -2,10 +2,8 @@
 title: 構造分解（分割代入）
 slug: Web/JavaScript/Reference/Operators/Destructuring
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **構造分解**（destructuring、旧：分割代入）構文は、配列から値を取り出して、あるいはオブジェクトからプロパティを取り出して別個の変数に代入することを可能にする JavaScript の構文です。これは、データを受け取る場所（代入の左辺や、新しい識別子バインディングを作成する場所ならどこでも）で使用できます。
 
