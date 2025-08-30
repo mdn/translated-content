@@ -31,7 +31,7 @@ console.log(1 / maxNumber);
 
 `Infinity` 是*全域物件*的一個屬性。換句話說，它是一個在全域作用域中的變數。
 
-`Infinity`（正無限大）這個值比任何其他數字都大。
+`Infinity`（正無限大）的值大於任何其他數字。
 
 這個值的行為與數學上的無限大略有不同；詳情請參見 {{jsxref("Number.POSITIVE_INFINITY")}}。
 
