@@ -51,7 +51,7 @@ web 上的代理可以是以下之一：
 - 全局声明的变量、[`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 的值以及全局对象。
 - [模板字面数组](/zh-CN/docs/Web/JavaScript/Reference/Template_literals#带标签的模板)的缓存，因为对同一标记的模板字面表达式的求值总是会导致标记接收到相同的数组对象。
 
-在网络上，域和全局对象是一一对应的。全局对象可以是 {{domxref("Window")}}、{{domxref("WorkerGlobalScope")}} 或 {{domxref("WorkletGlobalScope")}}。因此，举例来说，每个 `iframe` 都在不同的域中执行，尽管它可能与父窗口在同一个代理中。
+在 web 上，域和全局对象是一一对应的。全局对象可以是 {{domxref("Window")}}、{{domxref("WorkerGlobalScope")}} 或 {{domxref("WorkletGlobalScope")}}。因此，举例来说，每个 `iframe` 都在不同的域中执行，尽管它可能与父窗口在同一个代理中。
 
 在讨论全局对象的身份时，通常会提到域。例如，我们需要 {{jsxref("Array.isArray()")}} 或 {{jsxref("Error.isError()")}} 这样的方法，因为在另一个域构建的数组的原型对象与当前域中的 `Array.prototype` 对象不同，因此 `instanceof Array` 将错误地返回 `false`。
 
