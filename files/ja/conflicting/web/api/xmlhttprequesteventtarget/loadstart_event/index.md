@@ -1,23 +1,24 @@
 ---
-title: "XMLHttpRequestUpload: abort イベント"
-short-title: abort
-slug: Web/API/XMLHttpRequestUpload/abort_event
+title: "XMLHttpRequestUpload: loadstart イベント"
+short-title: loadstart
+slug: conflicting/Web/API/XMLHttpRequestEventTarget/loadstart_event
+original_slug: Web/API/XMLHttpRequestUpload/loadstart_event
 l10n:
   sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
 {{APIRef("XMLHttpRequest API")}}
 
-`abort` は {{domxref("XMLHttpRequestUpload")}} で発生するイベントで、例えばプログラムが {{domxref("XMLHttpRequest.abort()")}} を呼び出したためにリクエストが中断されたときに発行されます。
+**`loadstart`** イベントは、リクエストがデータの読み込みを始めたときに発行されます。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("abort", (event) => {});
+addEventListener("loadstart", (event) => {});
 
-onabort = (event) => {};
+onloadstart = (event) => {};
 ```
 
 ## イベント型
@@ -30,27 +31,28 @@ onabort = (event) => {};
 
 _親である {{domxref("Event")}} からプロパティを継承しています。_
 
-- {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
+- {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}} {{ReadOnlyInline}}
   - : 論理値で、このプロセスで行われる作業の合計と、すでに行われた作業の量が計算可能かどうかを示す。言い換えれば、進捗が計測可能かどうかを示します。
-- {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
+- {{domxref("ProgressEvent.loaded", "loaded")}} {{ReadOnlyInline}}
   - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`total` をこのプロパティの値で割ることで算出できます。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
-- {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
+- {{domxref("ProgressEvent.total", "total")}} {{ReadOnlyInline}}
   - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 HTTP を使用してリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
 ## 例
 
-### `abort` イベントの使用
+## `loadstart` イベントの使用
 
-`abort` イベントを使用すると、アップロードが完了する前に停止させることができます。ファイルをアップロードして進捗バーを表示する完全なコード例については、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
+`loadstart` イベントを使用すると、アップロードの開始を検出することができます。ファイルをアップロードして進捗バーを表示する完全なコード例については、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
 
 ```js
-// 中止の場合、プログレスバーを非表示にする
-// これらのイベントは xhr オブジェクトでも待ち受けすることができることに注意
-function errorAction(event) {
-  progressBar.classList.remove("visible");
-  log.textContent = `Upload failed: ${event.type}`;
-}
-xhr.upload.addEventListener("abort", errorAction);
+// アップロードを開始する時に、進捗バーを表示する
+xhr.upload.addEventListener("loadstart", (event) => {
+  progressBar.classList.add("visible");
+  progressBar.value = 0;
+  progressBar.max = event.total;
+  log.textContent = "Uploading (0%)…";
+  abortButton.disabled = false;
+});
 ```
 
 ## 仕様書
@@ -63,5 +65,5 @@ xhr.upload.addEventListener("abort", errorAction);
 
 ## 関連情報
 
-- 関連イベント: {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestUpload/load_event", "load")}}, {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}, {{domxref("XMLHttpRequestUpload/error_event", "error")}}, {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
+- 関連イベント: {{domxref("XMLHttpRequestUpload/load_event", "load")}}, {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}, {{domxref("XMLHttpRequestUpload/error_event", "error")}}, {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}, {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
 - {{domxref("XMLHttpRequestUpload")}}

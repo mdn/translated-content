@@ -1,23 +1,24 @@
 ---
-title: "XMLHttpRequestUpload: loadstart イベント"
-short-title: loadstart
-slug: Web/API/XMLHttpRequestUpload/loadstart_event
+title: "XMLHttpRequestUpload: error イベント"
+short-title: error
+slug: conflicting/Web/API/XMLHttpRequestEventTarget/error_event
+original_slug: Web/API/XMLHttpRequestUpload/error_event
 l10n:
   sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
 {{APIRef("XMLHttpRequest API")}}
 
-**`loadstart`** イベントは、リクエストがデータの読み込みを始めたときに発行されます。
+`error` イベントは、リクエストがエラーになったときに発行されます。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("loadstart", (event) => {});
+addEventListener("error", (event) => {});
 
-onloadstart = (event) => {};
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -39,19 +40,18 @@ _親である {{domxref("Event")}} からプロパティを継承しています
 
 ## 例
 
-## `loadstart` イベントの使用
+### `error` イベントの使用
 
-`loadstart` イベントを使用すると、アップロードの開始を検出することができます。ファイルをアップロードして進捗バーを表示する完全なコード例については、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
+`error` イベントを使用すると、アップロードの問題を検出することができます。ファイルをアップロードしてプログレスバーを表示する完全なコード例については、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
 
 ```js
-// アップロードを開始する時に、進捗バーを表示する
-xhr.upload.addEventListener("loadstart", (event) => {
-  progressBar.classList.add("visible");
-  progressBar.value = 0;
-  progressBar.max = event.total;
-  log.textContent = "Uploading (0%)…";
-  abortButton.disabled = false;
-});
+// エラーの場合、プログレスバーを非表示にする
+// これらのイベントは xhr オブジェクトでも待ち受けすることができることに注意
+function errorAction(event) {
+  progressBar.classList.remove("visible");
+  log.textContent = `Upload failed: ${event.type}`;
+}
+xhr.upload.addEventListener("error", errorAction);
 ```
 
 ## 仕様書
@@ -64,5 +64,5 @@ xhr.upload.addEventListener("loadstart", (event) => {
 
 ## 関連情報
 
-- 関連イベント: {{domxref("XMLHttpRequestUpload/load_event", "load")}}, {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}, {{domxref("XMLHttpRequestUpload/error_event", "error")}}, {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}, {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
+- 関連イベント: {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestUpload/load_event", "load")}}, {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}, {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}, {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
 - {{domxref("XMLHttpRequestUpload")}}

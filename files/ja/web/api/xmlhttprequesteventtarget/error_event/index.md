@@ -1,23 +1,24 @@
 ---
-title: "XMLHttpRequest: progress イベント"
-short-title: progress
-slug: Web/API/XMLHttpRequest/progress_event
+title: "XMLHttpRequest: error イベント"
+short-title: error
+slug: Web/API/XMLHttpRequestEventTarget/error_event
+original_slug: Web/API/XMLHttpRequest/error_event
 l10n:
   sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
 {{APIRef("XMLHttpRequest API")}}
 
-**`progress`** イベントは、リクエストがもっとデータを受信した際に定期的に発行されます。
+`error` イベントは、リクエストでエラーが発生したときに発行されます。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("progress", (event) => {});
+addEventListener("error", (event) => {});
 
-onprogress = (event) => {};
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -112,19 +113,15 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
-  );
+  runXHR("example-image.jpg");
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("http://i-dont-exist");
+  runXHR("https://example.com/notfound.jpg");
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
-  ).abort();
+  runXHR("example-image.jpg").abort();
 });
 ```
 
@@ -142,5 +139,5 @@ xhrButtonAbort.addEventListener("click", () => {
 
 ## 関連情報
 
-- 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
+- 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#進捗の監視)

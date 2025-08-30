@@ -1,7 +1,8 @@
 ---
 title: "XMLHttpRequest: loadstart イベント"
 short-title: loadstart
-slug: Web/API/XMLHttpRequest/loadstart_event
+slug: Web/API/XMLHttpRequestEventTarget/loadstart_event
+original_slug: Web/API/XMLHttpRequest/loadstart_event
 l10n:
   sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---

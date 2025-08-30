@@ -1,23 +1,24 @@
 ---
-title: "XMLHttpRequestUpload: timeout イベント"
-short-title: timeout
-slug: Web/API/XMLHttpRequestUpload/timeout_event
+title: "XMLHttpRequestUpload: load イベント"
+short-title: load
+slug: Web/API/XMLHttpRequestEventTarget/load_event
+original_slug: Web/API/XMLHttpRequestUpload/load_event
 l10n:
   sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
 {{APIRef("XMLHttpRequest API")}}
 
-**`timeout`** イベントはあらかじめ設定された時間が過ぎて進行が終了したときに発行されます。
+`load` イベントは {{domxref("XMLHttpRequestUpload")}} トランザクションが完全に完了したときに発行されます。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("timeout", (event) => {});
+addEventListener("load", (event) => {});
 
-ontimeout = (event) => {};
+onload = (event) => {};
 ```
 
 ## イベント型
@@ -37,22 +38,19 @@ _親である {{domxref("Event")}} からプロパティを継承しています
 - {{domxref("ProgressEvent.total", "total")}} {{ReadOnlyInline}}
   - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 HTTP を使用してリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
-## 例
+### 例
 
-### `timeout` イベントの使用
+## `load` イベントの使用
 
-`timeout` イベントを使用することで、アップロードに時間がかかりすぎて停止したことを検出することができます。ファイルをアップロードして進捗バーを表示する完全なコード例については、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
-
-タイムアウトは {{domxref("XMLHttpRequest")}} オブジェクトで {{domxref("XMLHttpRequest.timeout")}} プロパティを使用して設定します。
+`load` イベントを使用すると、アップロードが正常に終了したことを検出することができます。ファイルをアップロードしてプログレスバーを表示する完全なコード例については、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
 
 ```js
-// タイムアウトの場合、プログレスバーを非表示にする
-// これらのイベントは xhr オブジェクトでも待ち受けすることができることに注意
-function errorAction(event) {
+// アップロードが完了したら、プログレスバーを非表示にする
+xhr.upload.addEventListener("load", (event) => {
   progressBar.classList.remove("visible");
-  log.textContent = `Upload failed: ${event.type}`;
-}
-xhr.upload.addEventListener("timeout", errorAction);
+  log.textContent = "Upload finished.";
+  abortButton.disabled = true;
+});
 ```
 
 ## 仕様書
@@ -65,6 +63,5 @@ xhr.upload.addEventListener("timeout", errorAction);
 
 ## 関連情報
 
-- 関連イベント: {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestUpload/load_event", "load")}}, {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}, {{domxref("XMLHttpRequestUpload/error_event", "error")}}, {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}
+- 関連イベント: {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}, {{domxref("XMLHttpRequestUpload/error_event", "error")}}, {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}, {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
 - {{domxref("XMLHttpRequestUpload")}}
-- {{domxref("XMLHttpRequest.timeout")}}

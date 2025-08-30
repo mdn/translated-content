@@ -1,23 +1,24 @@
 ---
-title: "XMLHttpRequest: error イベント"
-short-title: error
-slug: Web/API/XMLHttpRequest/error_event
+title: "XMLHttpRequest: load イベント"
+short-title: load
+slug: conflicting/Web/API/XMLHttpRequestEventTarget/load_event
+original_slug: Web/API/XMLHttpRequest/load_event
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{APIRef("XMLHttpRequest API")}}
 
-`error` イベントは、リクエストでエラーが発生したときに発行されます。
+`load` イベントは、 {{domxref("XMLHttpRequest")}} のトランザクションが成功裏に完了したときに発行されます。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+addEventListener("load", (event) => {});
 
-onerror = (event) => {};
+onload = (event) => {};
 ```
 
 ## イベント型
@@ -112,15 +113,15 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR("example-image.jpg");
+  runXHR("image.jpg");
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("https://example.com/notfound.jpg");
+  runXHR("https://somewhere.org/i-dont-exist");
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR("example-image.jpg").abort();
+  runXHR("image.jpg").abort();
 });
 ```
 
@@ -138,5 +139,5 @@ xhrButtonAbort.addEventListener("click", () => {
 
 ## 関連情報
 
-- 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
 - [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#進捗の監視)
