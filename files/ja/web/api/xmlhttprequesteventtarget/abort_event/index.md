@@ -1,13 +1,12 @@
 ---
-title: "XMLHttpRequest: abort イベント"
+title: "XMLHttpRequestEventTarget: abort イベント"
 short-title: abort
 slug: Web/API/XMLHttpRequestEventTarget/abort_event
-original_slug: Web/API/XMLHttpRequest/abort_event
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 `abort` イベントは、例えばプログラムが {{domxref("XMLHttpRequest.abort()")}} を呼び出した時など、リクエストが中断されたときに発行されます。
 
@@ -15,10 +14,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("abort", (event) => {});
+```js-nolint
+addEventListener("abort", (event) => { })
 
-onabort = (event) => {};
+onabort = (event) => { }
 ```
 
 ## イベント型
@@ -32,7 +31,7 @@ onabort = (event) => {};
 _下記のプロパティに加え、親インターフェイスである {{domxref("Event")}} のプロパティを利用できます。_
 
 - {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}} {{ReadOnlyInline}}
-  - : 論理値で、このプロセスで行われる作業の合計と、すでに行われた作業の量が計算可能かどうかを示す。言い換えれば、進捗が計測可能かどうかを示します。
+  - : 論理値のフラグで、このプロセスで行われる作業の合計と、すでに行われた作業の量が計算可能かどうかを示します。言い換えれば、進捗が計測可能かどうかを示します。
 - {{domxref("ProgressEvent.loaded", "loaded")}} {{ReadOnlyInline}}
   - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`total` をこのプロパティの値で割ることで算出できます。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
 - {{domxref("ProgressEvent.total", "total")}} {{ReadOnlyInline}}
@@ -50,17 +49,17 @@ _下記のプロパティに加え、親インターフェイスである {{domx
     class="xhr success"
     type="button"
     name="xhr"
-    value="Click to start XHR (success)" />
+    value="クリックで XHR 開始（成功）" />
   <input
     class="xhr error"
     type="button"
     name="xhr"
-    value="Click to start XHR (error)" />
+    value="クリックで XHR 開始（エラー）" />
   <input
     class="xhr abort"
     type="button"
     name="xhr"
-    value="Click to start XHR (abort)" />
+    value="クリックで XHR 開始（中止）" />
 </div>
 
 <textarea readonly class="event-log"></textarea>
@@ -76,7 +75,7 @@ _下記のプロパティに加え、親インターフェイスである {{domx
 }
 
 input {
-  width: 11rem;
+  width: 13rem;
   margin: 0.5rem;
 }
 ```
@@ -113,7 +112,7 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR("my-picture.jpg");
+  runXHR("/shared-assets/images/examples/balloon.jpg");
 });
 
 xhrButtonError.addEventListener("click", () => {
@@ -121,13 +120,27 @@ xhrButtonError.addEventListener("click", () => {
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR("my-picture.jpg").abort();
+  runXHR("/shared-assets/images/examples/balloon.jpg").abort();
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('Usage with XMLHttpRequest', '100%', '150px') }}
+
+### XMLHttpRequestUpload の使い方
+
+アップロードが完了する前に停止するには、 `abort` イベントを使用することができます。ファイルをアップロードして進捗バーを表示する完全なサンプルコードについては、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
+
+```js
+// 中止時には進捗バーを非表示にする
+// なお、このイベントは xhr オブジェクトでもリスナーを登録することができる
+function errorAction(event) {
+  progressBar.classList.remove("visible");
+  log.textContent = `Upload failed: ${event.type}`;
+}
+xhr.upload.addEventListener("abort", errorAction);
+```
 
 ## 仕様書
 
@@ -139,5 +152,5 @@ xhrButtonAbort.addEventListener("click", () => {
 
 ## 関連情報
 
-- 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
+- 関連イベント: {{domxref("XMLHttpRequestEventTarget/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}, {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}, {{domxref("XMLHttpRequestEventTarget/error_event", "error")}}, {{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}}
 - [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#進捗の監視)
