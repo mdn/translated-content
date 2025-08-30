@@ -22,8 +22,8 @@ JavaScript 引擎实现了 [ECMAScript（JavaScript）语言](/zh-CN/docs/Web/Ja
 在 JavaScript 规范中，JavaScript 的每个自主执行器都被称为**代理**，它维护着自己的代码执行设施：
 
 - （对象）**堆**：这只是一个名称，用来表示内存中的一个大区域（大多是非结构化的）。当程序中创建对象时，它就会被填充。请注意，在共享内存的情况下，每个代理都有自己的堆，每个堆都有自己版本的 {{jsxref("SharedArrayBuffer")}} 对象，但缓冲区所代表的底层内存是共享的。
-- [（作业）**队列**](#作业队列和事件循环)：这在 HTML 中（通常）被称为事件循环（*event loop*），它可以在 JavaScript 中实现异步编程，同时又是单线程的。之所以称其为队列，是因为它通常是先入先出：先执行的工作在后执行的工作之前。
-- [（执行上下文）**栈**](#栈与执行上下文)：这就是所谓的调用栈（*call stack*），允许通过进入和退出执行上下文（如函数）来传输控制流。之所以称为栈，是因为它是后进先出的。每个任务进入时都会向（空）栈中推入一个新帧，退出时则会清空栈。
+- [（作业）**队列**](#作业队列和事件循环)：这在 HTML 中（通常）被称为事件循环（_event loop_），它可以在 JavaScript 中实现异步编程，同时又是单线程的。之所以称其为队列，是因为它通常是先入先出：先执行的工作在后执行的工作之前。
+- [（执行上下文）**栈**](#栈与执行上下文)：这就是所谓的调用栈（_call stack_），允许通过进入和退出执行上下文（如函数）来传输控制流。之所以称为栈，是因为它是后进先出的。每个任务进入时都会向（空）栈中推入一个新帧，退出时则会清空栈。
 
 这是三种不同的数据结构，用于跟踪不同的数据。我们将在下面的章节中详细介绍队列和堆栈。要了解堆内存如何分配和释放，请参阅 [内存管理](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)。
 
@@ -34,8 +34,8 @@ web 上的代理可以是以下之一：
 - 一个包含各种 {{domxref("Window")}} 对象的*相似源 window 代理*，这些对象有可能直接或通过使用 {{domxref("Document/domain", "document.domain")}} 相互联系。如果窗口[按源成键](/zh-CN/docs/Web/API/Window/originAgentCluster)，则只有同源窗口才能相互联系。
 - 一个包含 {{domxref("DedicatedWorkerGlobalScope")}} 的*专用 Worker 代理*。
 - 一个包含 {{domxref("SharedWorkerGlobalScope")}} 的*共享 Worker 代理*。
-- 一个包含 {{domxref("ServiceWorkerGlobalScope")}} 的 *Service worker 代理*。
-- 一个包含 {{domxref("WorkletGlobalScope")}} 的 *Worklet 代理*。
+- 一个包含 {{domxref("ServiceWorkerGlobalScope")}} 的 _Service worker 代理_。
+- 一个包含 {{domxref("WorkletGlobalScope")}} 的 _Worklet 代理_。
 
 换句话说，每个 Worker 创建自己的代理，而一个或多个窗口可能在同一个代理中，通常是一个主文档及其类似的源 iframe。在 Node.js 中，也有一个类似的概念，称为 [worker 线程](https://nodejs.org/api/worker_threads.html)。
 
