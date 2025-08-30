@@ -1,6 +1,7 @@
 ---
 title: abort
-slug: Web/API/XMLHttpRequest/abort_event
+slug: Web/API/XMLHttpRequestEventTarget/abort_event
+original_slug: Web/API/XMLHttpRequest/abort_event
 ---
 
 {{APIRef("XMLHttpRequest API")}}

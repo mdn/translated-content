@@ -1,6 +1,7 @@
 ---
 title: :target-within
-slug: Web/CSS/:target-within
+slug: conflicting/Web/CSS_d54dd63012f78ca10cf513755d7aecb96294c42dbd23a285b37ae69a38cbb4dc
+original_slug: Web/CSS/:target-within
 l10n:
   sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
