@@ -77,7 +77,7 @@ Vous pouvez trouver plusieurs exemples utilisant les polices variables sur [v-fo
 
 ## Guides
 
-- [Mise en forme du texte et utilisation des polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Mise en forme du texte et utilisation des polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
   - : Dans cet article, destiné aux débutants, nous abordons en détail les fonctionnalités pour la mise en forme du texte et la modification de la police.
 - [Guide sur les caractéristiques de police OpenType](/fr/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide)
   - : Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec CSS.

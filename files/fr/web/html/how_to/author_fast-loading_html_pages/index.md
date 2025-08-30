@@ -103,4 +103,4 @@ Notez, cependant, que beaucoup de conseils énumérés dans cette page sont des 
 - [Site Optimization Tutorial (WebMonkey)](http://webmonkey.wired.com/webmonkey/design/site_building/tutorials/tutorial2.html) (en anglais)
 - [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (en anglais)
 - Document d'information d'origine:
-  - [Astuces de création de pages HTML à affichage rapide](/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
+  - [Astuces de création de pages HTML à affichage rapide](/fr/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)

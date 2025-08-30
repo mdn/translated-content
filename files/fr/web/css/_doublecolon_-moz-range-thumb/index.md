@@ -5,7 +5,7 @@ slug: Web/CSS/::-moz-range-thumb
 
 {{CSSRef}}{{Non-standard_header}}
 
-Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se déplace le long de la piste dans un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range` et qui permet de modifier la valeur numérique associée.
+Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se déplace le long de la piste dans un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `range` et qui permet de modifier la valeur numérique associée.
 
 > [!NOTE]
 > Utiliser `::-moz-range-thumb` avec un autre élément que `<input type="range">` n'aura aucun effet.
@@ -48,7 +48,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Voir aussi
 
-- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`&nbsp;:
+- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `range`&nbsp;:
   - [`::-moz-range-track`](/fr/docs/Web/CSS/::-moz-range-track)
   - [`::-moz-range-progress`](/fr/docs/Web/CSS/::-moz-range-progress)
 

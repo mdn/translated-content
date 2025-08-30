@@ -54,7 +54,7 @@ On peut rencontrer ce type de comportement dans les "feuilles de style de réini
 
 ### Utiliser le sélecteur universel pour rendre les sélecteurs plus lisibles
 
-On peut utiliser `*` pour rendre les sélecteurs plus lisibles, pour clarifier leur fonctionnement. Par exemple, si je veux sélectionner tout élément descendant de l'élément `<article>`, qui est le premier enfant de son parent, pour le mettre en gras, je peux utiliser le sélecteur {{cssxref(":first-child")}}, qu'on verra dans la leçon sur les [pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)&nbsp;:
+On peut utiliser `*` pour rendre les sélecteurs plus lisibles, pour clarifier leur fonctionnement. Par exemple, si je veux sélectionner tout élément descendant de l'élément `<article>`, qui est le premier enfant de son parent, pour le mettre en gras, je peux utiliser le sélecteur {{cssxref(":first-child")}}, qu'on verra dans la leçon sur les [pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)&nbsp;:
 
 ```css
 article :first-child {
@@ -105,6 +105,6 @@ Un sélecteur d'ID commence par un `#` plutôt que par un point, mais est essent
 
 ## Prochain article
 
-Notre exploration des sélecteurs se poursuit par l'étude des [sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors).
+Notre exploration des sélecteurs se poursuit par l'étude des [sélecteurs d'attributs](/fr/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}

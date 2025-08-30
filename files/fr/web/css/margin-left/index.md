@@ -91,7 +91,7 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 - [`<length>`](/fr/docs/Web/CSS/length)
   - : La taille de la marge, exprimée comme une valeur fixe.
 - [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La taille de la marge exprimée avec un pourcentage relatif à la dimension du [bloc englobant](/fr/docs/Web/CSS/Containing_block) sur l'axe en ligne (qui correspond à la largeur pour une langue écrite horizontalement, voir [`writing-mode`](/fr/docs/Web/CSS/writing-mode)).
+  - : La taille de la marge exprimée avec un pourcentage relatif à la dimension du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) sur l'axe en ligne (qui correspond à la largeur pour une langue écrite horizontalement, voir [`writing-mode`](/fr/docs/Web/CSS/writing-mode)).
 - `auto`
   - : Un mot-clé qui indique que la marge gauche s'adapte à l'espace restant. Cet espace est principalement défini par le mode de disposition utilisé. Si `margin-left` et `margin-right` valent toutes les deux `auto`, m'espace calculé sera réparti de façon équitable. Le tableau suivant précise les différents cas&nbsp;:
 

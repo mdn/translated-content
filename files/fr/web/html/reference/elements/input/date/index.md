@@ -6,9 +6,9 @@ original_slug: Web/HTML/Element/input/date
 
 {{HTMLSidebar}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`date`** permettent de créer des champs où saisir des dates, via un champ texte dont la valeur est validée ou avec un sélecteur de date.
+Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut **`date`** permettent de créer des champs où saisir des dates, via un champ texte dont la valeur est validée ou avec un sélecteur de date.
 
-La valeur fournie par un tel contrôle contiendra l'année, le mois et le jour mais _pas_ l'heure et les minutes. Les éléments [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time) et [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local) permettent respectivement de saisir des heures et des combinaisons de dates et heures.
+La valeur fournie par un tel contrôle contiendra l'année, le mois et le jour mais _pas_ l'heure et les minutes. Les éléments [`<input type="time">`](/fr/docs/Web/HTML/Reference/Elements/input/time) et [`<input type="datetime-local">`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local) permettent respectivement de saisir des heures et des combinaisons de dates et heures.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
 
@@ -38,7 +38,7 @@ label {
 }
 ```
 
-L'apparence du contrôle affiché dépend du navigateur utilisé et la prise en charge de cette fonctionnalité est hétérogène (cf. la section en fin d'article sur [la compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails). Pour les navigateurs qui ne prennent pas en charge ce type d'élément `<input>`, c'est un simple [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text) qui sera affiché.
+L'apparence du contrôle affiché dépend du navigateur utilisé et la prise en charge de cette fonctionnalité est hétérogène (cf. la section en fin d'article sur [la compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails). Pour les navigateurs qui ne prennent pas en charge ce type d'élément `<input>`, c'est un simple [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text) qui sera affiché.
 
 <table class="properties">
   <tbody>
@@ -68,9 +68,9 @@ L'apparence du contrôle affiché dépend du navigateur utilisé et la prise en 
 
 ## Valeur
 
-Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui représente la valeur de la date saisie dans le contrôle. La date est dans le format ISO8601, décrit dans [cette section de l'article sur les formats](/fr/docs/Web/HTML/Date_and_time_formats).
+Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui représente la valeur de la date saisie dans le contrôle. La date est dans le format ISO8601, décrit dans [cette section de l'article sur les formats](/fr/docs/Web/HTML/Guides/Date_and_time_formats).
 
-Il est possible de fournir une valeur par défaut en renseignant l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)&nbsp;:
+Il est possible de fournir une valeur par défaut en renseignant l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value)&nbsp;:
 
 ```html
 <input id="date" type="date" value="2017-06-01" />
@@ -94,17 +94,17 @@ Dans l'exemple qui précède, on récupère le premier élément `<input>` dont 
 
 ## Attributs supplémentaires
 
-En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de type `"date"` gèrent les attributs suivants&nbsp;:
+En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), les champs de type `"date"` gèrent les attributs suivants&nbsp;:
 
 ### `max`
 
-La date la plus avancée qui peut être saisie dans le contrôle. Si la valeur de [`value`](/fr/docs/Web/HTML/Element/input#attr-value) est supérieure à la date indiquée par cet attribut, l'élément ne respectera pas [les contraintes de validation](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `max` n'est pas une chaîne de caractères qui suit le format `yyyy-mm-dd`, il n'y aura pas de valeur maximale.
+La date la plus avancée qui peut être saisie dans le contrôle. Si la valeur de [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value) est supérieure à la date indiquée par cet attribut, l'élément ne respectera pas [les contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `max` n'est pas une chaîne de caractères qui suit le format `yyyy-mm-dd`, il n'y aura pas de valeur maximale.
 
 La valeur de cet attribut doit être une date supérieure ou égale à celle indiquée par l'attribut `min`.
 
 ### `min`
 
-La date minimale qui peut être saisie dans le contrôle. Toute date saisie antérieure à celle-ci ne respectera pas [les contraintes de validation](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `min` n'est pas une chaîne de caractères qui suit le format `yyyy-mm-dd`, il n'y aura pas de valeur minimale.
+La date minimale qui peut être saisie dans le contrôle. Toute date saisie antérieure à celle-ci ne respectera pas [les contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `min` n'est pas une chaîne de caractères qui suit le format `yyyy-mm-dd`, il n'y aura pas de valeur minimale.
 
 La valeur de cet attribut doit être une date antérieure ou égale à celle indiquée par l'attribut `max`.
 
@@ -130,7 +130,7 @@ Dans les exemples qui suivent, nous verrons comment utiliser `<input type="date"
 
 ### Utilisation simple
 
-Dans son expression la plus simple `<input type="date">` s'utilise avec un élément `<input>` et un élément [`<label>`](/fr/docs/Web/HTML/Element/label)&nbsp;:
+Dans son expression la plus simple `<input type="date">` s'utilise avec un élément `<input>` et un élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label)&nbsp;:
 
 ```html
 <form action="https://example.com">
@@ -149,7 +149,7 @@ Ce fragment de HTML envoie la date saisie avec la clé `bday` vers `https://exam
 
 ### Paramétrer une date maximale et une date minimale
 
-On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max) afin de restreindre les dates qui peuvent être saisies par l'utilisatrice ou l'utilisateur. Dans l'exemple suivant, on indique une date minimum au premier avril 2017 (`2017-04-01`) et une date maximale au 30 avril 2017 (`2017-04-30`)&nbsp;:
+On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#attr-max) afin de restreindre les dates qui peuvent être saisies par l'utilisatrice ou l'utilisateur. Dans l'exemple suivant, on indique une date minimum au premier avril 2017 (`2017-04-01`) et une date maximale au 30 avril 2017 (`2017-04-30`)&nbsp;:
 
 ```html
 <form>
@@ -165,19 +165,19 @@ On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min)
 On ne peut donc ici que sélectionner une date en avril 2017. Seule la partie du contrôle consacrée aux jours sera éditable et on ne pourra pas sélectionner d'autres mois ou années.
 
 > [!NOTE]
-> On devrait également pouvoir utiliser l'attribut [`step`](/fr/docs/Web/HTML/Element/input#attr-step) afin de faire varier le nombre de jours pour l'incrément de la date (par exemple afin de ne pouvoir sélectionner que les samedis). Cependant, cette fonctionnalité ne semble être présente dans aucune implémentation au moment où nous écrivons ces lignes.
+> On devrait également pouvoir utiliser l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#attr-step) afin de faire varier le nombre de jours pour l'incrément de la date (par exemple afin de ne pouvoir sélectionner que les samedis). Cependant, cette fonctionnalité ne semble être présente dans aucune implémentation au moment où nous écrivons ces lignes.
 
 ### Contrôler la taille du champ de saisie
 
-`<input type="date">` ne permet pas d'utiliser des attributs de dimensionnement tels que [`size`](/fr/docs/Web/HTML/Element/input#attr-size). Il est nécessaire d'utiliser [CSS](/fr/docs/Web/CSS) pour gérer ces aspects de mise en forme.
+`<input type="date">` ne permet pas d'utiliser des attributs de dimensionnement tels que [`size`](/fr/docs/Web/HTML/Reference/Elements/input#attr-size). Il est nécessaire d'utiliser [CSS](/fr/docs/Web/CSS) pour gérer ces aspects de mise en forme.
 
 ## Validation
 
 Par défaut `<input type="date">` n'applique pas de validation particulière aux valeurs saisies. Les interfaces utilisateur ne permettent généralement pas de saisir une valeur qui n'est pas une date ou qui est une date invalide (par exemple un 32 avril 2017).
 
-Si on utilise les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max) afin de restreindre les dates possibles, les navigateurs qui prennent en charge cette fonctionnalité afficheront une erreur si la valeur saisie est en dehors de cet intervalle.
+Si on utilise les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#attr-max) afin de restreindre les dates possibles, les navigateurs qui prennent en charge cette fonctionnalité afficheront une erreur si la valeur saisie est en dehors de cet intervalle.
 
-De plus, si l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required) est actif, il sera obligatoire de saisir ce champ. Une erreur sera affichée si on essaie d'envoyer le formulaire avec un tel champ vide.
+De plus, si l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#attr-required) est actif, il sera obligatoire de saisir ce champ. Une erreur sera affichée si on essaie d'envoyer le formulaire avec un tel champ vide.
 
 Prenons un exemple où la date est contrainte entre deux dates et que le champ est obligatoire&nbsp;:
 
@@ -204,7 +204,7 @@ Si on essaie de soumettre le formulaire avec une date incomplète (ou en dehors 
 
 {{EmbedLiveSample('', 600, 100)}}
 
-Voici la feuille de style utilisée pour l'exemple. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme un indicateur selon que la valeur est valide ou non. On place cet indicateur dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) séparé car pour Chrome, le contenu généré dans les pseudo-classes est intégré dans le contrôle du formulaire et ne peut être mis en forme ou affiché correctement.
+Voici la feuille de style utilisée pour l'exemple. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme un indicateur selon que la valeur est valide ou non. On place cet indicateur dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) séparé car pour Chrome, le contenu généré dans les pseudo-classes est intégré dans le contrôle du formulaire et ne peut être mis en forme ou affiché correctement.
 
 ```css
 label {
@@ -242,7 +242,7 @@ C'est sur ce second point qu'il y a le plus de risques. Comme nous l'avons menti
 - `dd-mm-yyyy`
 - `mm-dd-yyyy`
 
-Une méthode permettant de parer à cette éventualité est d'utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern). Bien que celui-ci ne soit pas utilisé pour les contrôles de saisie des dates, il peut être utilisé pour le champ texte. Voici un exemple que vous pouvez consulter dans un navigateur qui ne prend pas en charge cette fonctionnalité&nbsp;:
+Une méthode permettant de parer à cette éventualité est d'utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern). Bien que celui-ci ne soit pas utilisé pour les contrôles de saisie des dates, il peut être utilisé pour le champ texte. Voici un exemple que vous pouvez consulter dans un navigateur qui ne prend pas en charge cette fonctionnalité&nbsp;:
 
 ```html
 <form>
@@ -280,11 +280,11 @@ input:valid + span::after {
 }
 ```
 
-C'est pour cela que la meilleure solution consiste à avoir trois champs de saisie distincts à destination de l'utilisatrice ou l'utilisateur&nbsp;: un pour saisir les jours, le deuxième pour les mois et un troisième pour l'année (chacun avec un élément ([`<select>`](/fr/docs/Web/HTML/Element/select)). On peut également opter pour l'utilisation d'une bibliothèque JavaScript telle que [le sélecteur de date jQuery (<i lang="en">jQuery date picker</i>)](https://jqueryui.com/datepicker/).
+C'est pour cela que la meilleure solution consiste à avoir trois champs de saisie distincts à destination de l'utilisatrice ou l'utilisateur&nbsp;: un pour saisir les jours, le deuxième pour les mois et un troisième pour l'année (chacun avec un élément ([`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)). On peut également opter pour l'utilisation d'une bibliothèque JavaScript telle que [le sélecteur de date jQuery (<i lang="en">jQuery date picker</i>)](https://jqueryui.com/datepicker/).
 
 ## Exemples
 
-Dans l'exemple qui suit, on crée deux éléments d'interface utilisateur afin de choisir une date&nbsp;: le premier qui utilise un sélecteur natif `<input type="date">` et un second qui utilise trois éléments [`<select>`](/fr/docs/Web/HTML/Element/select) qui permettra de choisir une date pour les anciens navigateurs qui ne prendraient pas en charge le contrôle natif.
+Dans l'exemple qui suit, on crée deux éléments d'interface utilisateur afin de choisir une date&nbsp;: le premier qui utilise un sélecteur natif `<input type="date">` et un second qui utilise trois éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) qui permettra de choisir une date pour les anciens navigateurs qui ne prendraient pas en charge le contrôle natif.
 
 {{EmbedLiveSample('', 600, 100)}}
 
@@ -344,7 +344,7 @@ input:valid + span::after {
 }
 ```
 
-Une autre partie intéressante est celle où on détecte si le navigateur prend charge la fonctionnalité native `<input type="date">`. Pour cela, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Element/input) et on change son type en `date`, puis on vérifie immédiatement la valeur de son type&nbsp;: pour les navigateurs qui ne prennent pas en charge l'élément natif, ils renverront la valeur `text`, car l'élément natif aura été «&nbsp;converti&nbsp;». Dans ce cas, on masque le sélecteur natif et on affiche le sélecteur alternatif (celui qui contient les éléments [`<select>`](/fr/docs/Web/HTML/Element/select)).
+Une autre partie intéressante est celle où on détecte si le navigateur prend charge la fonctionnalité native `<input type="date">`. Pour cela, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et on change son type en `date`, puis on vérifie immédiatement la valeur de son type&nbsp;: pour les navigateurs qui ne prennent pas en charge l'élément natif, ils renverront la valeur `text`, car l'élément natif aura été «&nbsp;converti&nbsp;». Dans ce cas, on masque le sélecteur natif et on affiche le sélecteur alternatif (celui qui contient les éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)).
 
 ```js
 // On définit les différentes variables
@@ -502,7 +502,7 @@ daySelect.onchange = function () {
 
 ## Voir aussi
 
-- L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/input) et l'interface DOM qui le porte&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [Un tutoriel sur les sélecteurs de date et d'heure](/fr/docs/Learn/Forms/Basic_native_form_controls#sélection_de_date_et_heure)
-- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
-- [La compatibilité des propriétés CSS pour les éléments de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- L'élément générique [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface DOM qui le porte&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
+- [Un tutoriel sur les sélecteurs de date et d'heure](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#sélection_de_date_et_heure)
+- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Guides/Date_and_time_formats)
+- [La compatibilité des propriétés CSS pour les éléments de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)

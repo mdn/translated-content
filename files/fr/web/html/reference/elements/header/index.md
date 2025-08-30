@@ -111,7 +111,7 @@ header > time {
 
 ## Notes d'utilisation
 
-L'élément `<header>` n'est pas une section de contenu et n'introduit donc pas de nouvelle section dans la [structure](/fr/docs/Web/HTML/Element/Heading_Elements). Cela dit, un élément `<header>` est généralement destiné à contenir l'en-tête de la section environnante (un élément `<h1>` à `<h6>`), mais ce **n'est pas** obligatoire.
+L'élément `<header>` n'est pas une section de contenu et n'introduit donc pas de nouvelle section dans la [structure](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements). Cela dit, un élément `<header>` est généralement destiné à contenir l'en-tête de la section environnante (un élément `<h1>` à `<h6>`), mais ce **n'est pas** obligatoire.
 
 ### Usage historique
 
@@ -119,7 +119,7 @@ Bien que l'élément `<header>` ne fasse pas partie de la spécification HTML av
 
 ## Attributs
 
-Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
@@ -160,7 +160,7 @@ Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Globa
 
 ## Accessibilité
 
-L'élément `<header>` définit un point de repère [`banner`](/fr/docs/Web/Accessibility/ARIA/Roles/banner_role) lorsque son contexte est un élément [`<body>`](/fr/docs/Web/HTML/Element/body). Lorsqu'un élément HTML `<header>` descend de certains éléments (tels que [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<main>`](/fr/docs/Web/HTML/Element/main), [`<nav>`](/fr/docs/Web/HTML/Element/nav) ou [`<section>`](/fr/docs/Web/HTML/Element/section)), il n'est pas considéré comme un repère `banner`.
+L'élément `<header>` définit un point de repère [`banner`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) lorsque son contexte est un élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body). Lorsqu'un élément HTML `<header>` descend de certains éléments (tels que [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside), [`<main>`](/fr/docs/Web/HTML/Reference/Elements/main), [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav) ou [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)), il n'est pas considéré comme un repère `banner`.
 
 ## Spécifications
 
@@ -173,12 +173,12 @@ L'élément `<header>` définit un point de repère [`banner`](/fr/docs/Web/Acce
 ## Voir aussi
 
 - Autres éléments liés à la section d'un document&nbsp;:
-  - [`<body>`](/fr/docs/Web/HTML/Element/body)
-  - [`<nav>`](/fr/docs/Web/HTML/Element/nav)
-  - [`<article>`](/fr/docs/Web/HTML/Element/article)
-  - [`<aside>`](/fr/docs/Web/HTML/Element/aside)
-  - [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-  - [`<footer>`](/fr/docs/Web/HTML/Element/footer)
-  - [`<section>`](/fr/docs/Web/HTML/Element/section)
-  - [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Utiliser des sections et structures HTML](/fr/docs/Web/HTML/Element/Heading_Elements)
+  - [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body)
+  - [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav)
+  - [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article)
+  - [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside)
+  - [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
+  - [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer)
+  - [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)
+  - [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address)
+- [Utiliser des sections et structures HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
