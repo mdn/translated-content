@@ -1,7 +1,8 @@
 ---
 title: "XMLHttpRequestUpload: progress イベント"
 short-title: progress
-slug: Web/API/XMLHttpRequestUpload/progress_event
+slug: Web/API/XMLHttpRequestEventTarget/progress_event
+original_slug: Web/API/XMLHttpRequestUpload/progress_event
 l10n:
   sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---

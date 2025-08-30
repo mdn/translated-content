@@ -1,6 +1,7 @@
 ---
 title: Mozilla のスプラッシュページ
-slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+slug: Learn_web_development/Core/Structuring_content/Splash_page
+original_slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

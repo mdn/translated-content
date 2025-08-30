@@ -1,7 +1,8 @@
 ---
 title: "XMLHttpRequest: abort イベント"
 short-title: abort
-slug: Web/API/XMLHttpRequest/abort_event
+slug: Web/API/XMLHttpRequestEventTarget/abort_event
+original_slug: Web/API/XMLHttpRequest/abort_event
 l10n:
   sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---

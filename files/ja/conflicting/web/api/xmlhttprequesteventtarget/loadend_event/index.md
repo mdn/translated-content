@@ -1,7 +1,8 @@
 ---
 title: "XMLHttpRequest: loadend イベント"
 short-title: loadend
-slug: Web/API/XMLHttpRequest/loadend_event
+slug: conflicting/Web/API/XMLHttpRequestEventTarget/loadend_event
+original_slug: Web/API/XMLHttpRequest/loadend_event
 l10n:
   sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
