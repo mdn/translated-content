@@ -30,7 +30,7 @@ View Transitions API는 필요한 DOM 변경 및 전환 애니메이션을 훨�
 
 ### 기본적인 뷰 전환 만들기
 
-예를 들어, SPA에는 탐색 링크가 클릭되거나 서버에서 업데이트가 푸시되는 등의 이벤트에 대한 응답으로 새 콘텐츠를 가져오고 DOM을 업데이트하는 기능이 포함될 수 있습니다. [기본 뷰 전환 데모](https://mdn.github.io/dom-examples/view-transitions/)에서는 클릭한 섬네일을 기반으로 새로운 전체 크기 이미지를 표시하는 `displayNewImage()` 함수로 이 기능을 단순화했습니다. 브라우저에서 지원하는 경우에만 View Transition API를 호출하는 `updateView()` 함수 안에 이 기능을 캡슐화했습니다.
+예를 들어, SPA에는 탐색 링크가 클릭되거나 서버에서 업데이트가 푸시되는 등의 이벤트에 대한 응답으로 새 콘텐츠를 가져오고 DOM을 업데이트하는 기능이 포함될 수 있습니다. [기본 뷰 전환 SPA 데모](https://mdn.github.io/dom-examples/view-transitions/spa/)에서는 클릭한 섬네일을 기반으로 새로운 전체 크기 이미지를 표시하는 `displayNewImage()` 함수로 이 기능을 단순화했습니다. 브라우저에서 지원하는 경우에만 View Transition API를 호출하는 `updateView()` 함수 안에 이 기능을 캡슐화했습니다.
 
 ```js
 function updateView(event) {
@@ -289,7 +289,8 @@ function spaNavigate(data) {
 
 ## 예제
 
-- [기본 뷰 전환 데모](https://mdn.github.io/dom-examples/view-transitions/): 이전 이미지와 새 이미지, 이전 캡션과 새 캡션 간에 별도의 전환이 있는 기본 이미지 갤러리 데모입니다.
+- [기본 뷰 전환 SPA 데모](https://mdn.github.io/dom-examples/view-transitions/spa/): 이전 이미지와 새 이미지, 이전 캡션과 새 캡션 간에 별도의 전환이 있는 기본 이미지 갤러리 데모입니다.
+- [기본 뷰 전환 MPA 데모](https://mdn.github.io/dom-examples/view-transitions/mpa/): 두 페이지 사이트 간 전환(MPA)의 사용법을 보여주는 샘플로, 두 페이지 사이를 이동할 때 사용자 지정 "위로 스와이프" 전환을 제공합니다.
 - [HTTP 203 playlist](https://http203-playlist.netlify.app/): 다양한 뷰 전환을 제공하는 보다 정교한 동영상 플레이어 데모 앱으로, [View Transitions API를 사용한 부드럽고 간단한 전환](https://developer.chrome.com/docs/web-platform/view-transitions/)에 대해 설명합니다.
 
 ## 명세서
