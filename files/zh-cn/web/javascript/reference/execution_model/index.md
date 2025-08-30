@@ -173,7 +173,7 @@ promise.then(() => {
 
 ### 永不阻塞
 
-事件循环模型提供的另一个重要保证是 JavaScript 的执行永远不会阻塞。处理 I/O 通常是通过事件和回调来执行的，因此当应用程序在等待 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 查询返回或 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch) 请求返回时，它仍然可以处理用户输入等其他事情。异步操作完成后执行的代码总是以回调函数的形式提供（例如，promise {{jsxref("Promise/then”, “then()")}} 处理程序、`setTimeout()` 中的回调函数或事件处理程序），它定义了操作完成后添加到作业队列中的作业。
+事件循环模型提供的另一个重要保证是 JavaScript 的执行永远不会阻塞。处理 I/O 通常是通过事件和回调来执行的，因此当应用程序在等待 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 查询返回或 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch) 请求返回时，它仍然可以处理用户输入等其他事情。异步操作完成后执行的代码总是以回调函数的形式提供（例如，promise {{jsxref("Promise/then", "then()")}} 处理程序、`setTimeout()` 中的回调函数或事件处理程序），它定义了操作完成后添加到作业队列中的作业。
 
 当然，“永不阻塞”的保证要求平台 API 本身必须是异步的，但也存在一些传统的例外情况，如 `alert()` 或同步 XHR。为了确保应用程序的响应速度，避免使用这些例外情况是一种很好的做法。
 
