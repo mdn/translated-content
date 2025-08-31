@@ -136,7 +136,7 @@ xhrButtonAbort.addEventListener("click", () => {
 
 `progress` イベントを使用すると、長いアップロードの進捗に関する情報を取得することができます。ファイルをアップロードして進捗バーを表示する完全なコード例については、メインの {{domxref("XMLHttpRequestUpload")}} ページを参照してください。
 
-```js
+```js-nolint
 // progress イベントを受信するたびに、進捗バーと進捗メッセージを更新
 xhr.upload.addEventListener("progress", (event) => {
   progressBar.value = event.loaded; // 進捗バーを更新
