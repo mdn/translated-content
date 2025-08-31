@@ -2,7 +2,7 @@
 title: WebAssembly コードの読み込みと実行
 slug: WebAssembly/Guides/Loading_and_running
 l10n:
-  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7bz
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
 JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリーにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。
