@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-**`widget`** ロールは、[抽象ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles) で、グラフィカルユーザーインターフェイス (GUI) のインタラクティブコンポーネントです。
+**`widget`** ロールは、[抽象ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#抽象ロール) で、グラフィカルユーザーインターフェイス (GUI) のインタラクティブコンポーネントです。
 
 > [!WARNING]
 > `widget` ロールは、オントロジーに使用される抽象ロールです。文書化の完全性のためにここに含まれています。ウェブ制作者が使用すべきではありません。
