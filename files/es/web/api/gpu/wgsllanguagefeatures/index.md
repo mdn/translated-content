@@ -14,7 +14,7 @@ La propiedad de solo lectura **`wgslLanguageFeatures`** de la interfaz {{domxref
 
 ## Valor
 
-Una instancia del objeto{{domxref("WGSLLanguageFeatures")}}. Esto es un objeto [setlike](/es/docs/Web/JavaScript/Reference/Global_Objects/Set).
+Una instancia del objeto{{domxref("WGSLLanguageFeatures")}}. Este es un objeto [setlike](/es/docs/Web/JavaScript/Reference/Global_Objects/Set).
 
 ## Ejemplos
 
