@@ -24,7 +24,6 @@ El objeto `GPU` para el contexto actual se accede mediante las propiedades {{dom
   - : Devuelve una {{jsxref("Promise")}} que se resuelve con una instancia del objeto {{domxref("GPUAdapter")}}. Desde aquí puedes solicitar un {{domxref("GPUDevice")}}, que es la interfaz principal para usar la funcionalidad de WebGPU.
 - {{domxref("GPU.getPreferredCanvasFormat", "getPreferredCanvasFormat()")}}
   - : Devuelve el formato óptimo de textura para el canvas para renderizar contenido de 8 bits y rango dinámico estándar en el sistema actual.
- 
 ## Ejemplos
 
 ### Solicitar un adaptador y un dispositivo

@@ -21,7 +21,7 @@ getPreferredCanvasFormat()
 
 Ninguno.
 
-### Valor devuelto 
+### Valor devuelto
 
 Una cadena de texto indicando un formato de textura del canvas. El valor puede ser `rgba8unorm` o `bgra8unorm`.
 
