@@ -3,7 +3,7 @@ title: "XMLHttpRequest: setAttributionReporting() メソッド"
 short-title: setAttributionReporting()
 slug: Web/API/XMLHttpRequest/setAttributionReporting
 l10n:
-  sourceCommit: ba5f28ab10ef1af48a55f363c8facc04a1f94479
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
@@ -49,7 +49,7 @@ const attributionReporting = {
 function triggerSourceInteraction() {
   const req = new XMLHttpRequest();
   req.open("GET", "https://shop.example/endpoint");
-  // Check availability of setAttributionReporting() before calling
+  // 呼び出す前に setAttributionReporting() が使用できることを確認する
   if (typeof req.setAttributionReporting === "function") {
     req.setAttributionReporting(attributionReporting);
     req.send();
