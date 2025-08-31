@@ -8,7 +8,7 @@ l10n:
 **`select` ロール** は抽象ロールで、ユーザーが選択肢の集合から選択を行うことができるフォームウィジェットの親クラスロールです。
 
 > [!WARNING]
-> `select` ロールは [抽象ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles) です。文書の完全性のためにここに含めています。ウェブ作成者が使用するべきではありません。
+> `select` ロールは [抽象ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#抽象ロール) です。文書の完全性のためにここに含めています。ウェブ作成者が使用するべきではありません。
 
 ## 説明
 
