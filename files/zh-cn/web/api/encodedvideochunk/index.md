@@ -17,9 +17,9 @@ l10n:
 ## 实例属性
 
 - {{domxref("EncodedVideoChunk.type")}} {{ReadOnlyInline}}
-  - : 返回一个指示此数据块是否为关键帧字符串。
+  - : 返回一个指示此数据块是否为关键帧的字符串。
 - {{domxref("EncodedVideoChunk.timestamp")}} {{ReadOnlyInline}}
-  - : 返回一个表示视频的时间戳（以微秒为单位）整数。
+  - : 返回一个表示视频的时间戳（以微秒为单位）的整数。
 - {{domxref("EncodedVideoChunk.duration")}} {{ReadOnlyInline}}
   - : 返回一个表示视频的持续时间（以微秒为单位）整数。
 - {{domxref("EncodedVideoChunk.byteLength")}} {{ReadOnlyInline}}
