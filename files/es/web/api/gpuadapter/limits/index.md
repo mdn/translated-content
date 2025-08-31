@@ -48,14 +48,14 @@ async function init() {
 }
 ```
 
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- The [WebGPU API](/en-US/docs/Web/API/WebGPU_API)
+- La [API de WebGPU](/es/docs/Web/API/WebGPU_API)
