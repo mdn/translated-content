@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("AbstractRange")}} 接口的 **`collapsed`** 只读属性在当范围的起始位置和结束位置相同时为 `true`。
+{{domxref("AbstractRange")}} 接口的 **`collapsed`** 只读属性在范围的起始位置和结束位置相同时为 `true`。
 
 ## 值
 
