@@ -37,7 +37,7 @@ async function init() {
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error("No se pudo solicitar un adaptador WebGPU.");
+    throw Error("No se pudo solicitar un adaptador de WebGPU.");
   }
 
   const device = await adapter.requestDevice();
