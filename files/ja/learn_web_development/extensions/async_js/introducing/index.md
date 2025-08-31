@@ -1,11 +1,10 @@
 ---
 title: 非同期 JavaScript 入門
+short-title: 入門
 slug: Learn_web_development/Extensions/Async_JS/Introducing
 l10n:
-  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
@@ -221,7 +220,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 初期の非同期 API の中には、まさにこのような方法でイベントを使用するものがありました。 {{domxref("XMLHttpRequest")}} は、JavaScript を使ってリモートサーバーに HTTP リクエストを送信する API です。API を使用すると、JavaScript でリモートサーバーに HTTP リクエストを行うことができます。これは長い時間を要するので、非同期 API となっており、 `XMLHttpRequest` オブジェクトにイベントリスナーを装着することで、リクエストの進捗と最終的に完了したことの通知を受けることができます。
 
-以下の例では、これを実践しています。［クリックしてリクエストを開始］を押して、リクエストを送信してみましょう。新しい {{domxref("XMLHttpRequest")}} を作成し、その {{domxref("XMLHttpRequest/loadend_event", "loadend")}} イベントを待ち受けます。ハンドラーは、ステータスコードとともに「完了！」メッセージをログに記録します。
+以下の例では、これを実践しています。［クリックしてリクエストを開始］を押して、リクエストを送信してみましょう。新しい {{domxref("XMLHttpRequest")}} を作成し、その {{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}} イベントを待ち受けます。ハンドラーは、ステータスコードとともに「完了！」メッセージをログに記録します。
 
 イベントリスナーを追加した後、リクエストを送信します。この後、「XHR リクエストを開始しました」というログが記録されることに注意してください。つまり、リクエストが進行している間、プログラムは実行し続けることができ、リクエストが完了したときにイベントハンドラーが呼び出されます。
 

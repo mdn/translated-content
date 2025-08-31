@@ -1,11 +1,13 @@
 ---
 title: Firefox 50 for developers
+short-title: Firefox 50
 slug: Mozilla/Firefox/Releases/50
 l10n:
-  sourceCommit: 6bed868c7b75c4c3ca3721fa8ed6c6ad2f41262b
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
-[Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/ja/firefox/developer/)Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされました。このページでは、開発者に影響する Firefox 50 の変更点をまとめています。
+[Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください](https://www.firefox.com/en-US/channel/desktop/developer/)。
+Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされました。このページでは、開発者に影響する Firefox 50 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -60,7 +62,7 @@ l10n:
 ### ネットワーク
 
 - 非同期 {{domxref("XMLHttpRequest")}} でエラーが発生したとき、{{domxref("XMLHttpRequest.getAllResponseHeaders()")}} メソッドが空文字列を返すようになりました ([Firefox バグ 1286744](https://bugzil.la/1286744))。
-- CORS または他のネットワークの制約により失敗した非同期 {{domxref("XMLHttpRequest")}} は `NetworkError` を返すのではなく、他のエラーと同様にキャッチ可能な {{domxref("XMLHttpRequest/error_event", "error")}} が発生するようになりました ([Firefox バグ 709991](https://bugzil.la/709991))。
+- CORS または他のネットワークの制約により失敗した非同期 {{domxref("XMLHttpRequest")}} は `NetworkError` を返すのではなく、他のエラーと同様にキャッチ可能な {{domxref("XMLHttpRequestEventTarget/error_event", "error")}} が発生するようになりました ([Firefox バグ 709991](https://bugzil.la/709991))。
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} および {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} が、デフォルトで空のヘッダーを返すようになりました。これは設定項目 `network.http.keep_empty_response_headers_as_empty_string` で制御しています ([Firefox バグ 918721](https://bugzil.la/918721))。
 - [`Request.cache`](/ja/docs/Web/API/Request/cache) に `only-if-cached` オプションを追加しました ([Firefox バグ 1272436](https://bugzil.la/1272436))。
 
@@ -141,7 +143,3 @@ l10n:
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) の一部として、{{domxref("DataTransferItem.webkitGetAsEntry()")}} を実装しました。これは、ドロップされたファイルを表す {{domxref("FileSystemEntry")}} を取得できます ([Firefox バグ 1289255](https://bugzil.la/1289255))。これはデフォルトで有効です。
 - [ディレクトリーアップロード API](https://wicg.github.io/directory-upload/proposal.html) 提案の一部である `HTMLInputElement.directory` プロパティを `allowdirs` に改名しました ([Firefox バグ 1288681](https://bugzil.la/1288681))。このプロパティは設定で無効化しています。
-
-## 過去のバージョン
-
-{{Firefox_for_developers}}

@@ -3,7 +3,7 @@ title: "XMLHttpRequest: responseXML プロパティ"
 short-title: responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}

@@ -242,8 +242,8 @@ try {
 
 1. 新しい `XMLHttpRequest` オブジェクトを作成します。
 2. [`open()`](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを呼び出して、初期化します。
-3. [`load`](/ja/docs/Web/API/XMLHttpRequest/load_event) イベントにイベントリスナーを追加します。このイベントは、レスポンスが正常に完了したときに発行されます。リスナーでは、データを指定して `initialize()` を呼び出します。
-4. [`error`](/ja/docs/Web/API/XMLHttpRequest/error_event) イベントにイベントリスナーを追加し、リクエストがエラーになったときに発行されるようにします。
+3. [`load`](/ja/docs/conflicting/Web/API/XMLHttpRequestEventTarget/load_event) イベントにイベントリスナーを追加します。このイベントは、レスポンスが正常に完了したときに発行されます。リスナーでは、データを指定して `initialize()` を呼び出します。
+4. [`error`](/ja/docs/Web/API/XMLHttpRequestEventTarget/error_event) イベントにイベントリスナーを追加し、リクエストがエラーになったときに発行されるようにします。
 5. リクエストを送信します。
 
 また、 `open()` や `send()` で発生したエラーを処理するために、全体を [try...catch](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックで囲む必要があります。

@@ -210,7 +210,7 @@ position: unset;
 
 ### 绝对定位
 
-相对定位的元素会保持在文档的正常流中。与此相反，绝对定位的元素会被移出流程；因此，其他元素的定位就好像它不存在一样。绝对定位的元素是相对于其*最近定位的祖先*（即非 `sticky` 的最近祖先）定位的。如果定位祖先不存在，则相对于 ICB（[初始包含块](https://drafts.csswg.org/css-display/#initial-containing-block)）定位，ICB 是文档根元素的包含块。
+相对定位的元素会保持在文档的正常流中。与此相反，绝对定位的元素会被移出流程；因此，其他元素的定位就好像它不存在一样。绝对定位的元素是相对于其*最近定位的祖先*（即非 `static` 的最近祖先）定位的。如果定位祖先不存在，则相对于 ICB（[初始包含块](https://drafts.csswg.org/css-display/#initial-containing-block)）定位，ICB 是文档根元素的包含块。
 
 #### HTML
 

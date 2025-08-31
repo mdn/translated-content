@@ -57,11 +57,11 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 - {{domxref("FileReader.onload")}}
   - : [`load`](/zh-TW/docs/Web/API/Window/load_event) 事件處理器，於讀取完成時觸發。
 - {{domxref("FileReader.onloadstart")}}
-  - : [`loadstart`](/zh-TW/docs/Web/API/XMLHttpRequest/loadstart_event) 事件處理器，於讀取開始時觸發。
+  - : [`loadstart`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/loadstart_event) 事件處理器，於讀取開始時觸發。
 - {{domxref("FileReader.onloadend")}}
-  - : [`loadend`](/zh-TW/docs/Web/API/XMLHttpRequest/loadend_event) 事件處理器，於每一次讀取結束之後觸發（不論成功或失敗），會於 `onload` 或 `onerror` 事件處理器之後才執行。
+  - : [`loadend`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/loadend_event) 事件處理器，於每一次讀取結束之後觸發（不論成功或失敗），會於 `onload` 或 `onerror` 事件處理器之後才執行。
 - {{domxref("FileReader.onprogress")}}
-  - : [`progress`](/zh-TW/docs/Web/API/XMLHttpRequest/progress_event) 事件處理器，於讀取 {{domxref("Blob")}} 內容時觸發。
+  - : [`progress`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/progress_event) 事件處理器，於讀取 {{domxref("Blob")}} 內容時觸發。
 
 > [!NOTE]
 > `FileReader` 物件繼承自 {{domxref("EventTarget")}}，其所有的事件也都能夠透過 {{domxref("EventTarget.addEventListener()","addEventListener")}} 方法來註冊事件監聽器。

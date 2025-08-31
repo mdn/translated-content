@@ -1299,13 +1299,13 @@ This article offers a list of events that can be sent; some are standard events 
   - [languagechange 事件](/zh-TW/docs/Web/API/WorkerGlobalScope/languagechange_event)
 
 - {{DOMxRef("XMLHttpRequest")}}
-  - [abort 事件](/zh-TW/docs/Web/API/XMLHttpRequest/abort_event)
-  - [error 事件](/zh-TW/docs/Web/API/XMLHttpRequest/error_event)
-  - [loadend 事件](/zh-TW/docs/Web/API/XMLHttpRequest/loadend_event)
-  - [loadstart 事件](/zh-TW/docs/Web/API/XMLHttpRequest/loadstart_event)
-  - [load 事件](/zh-TW/docs/Web/API/XMLHttpRequest/load_event)
-  - [progress 事件](/zh-TW/docs/Web/API/XMLHttpRequest/progress_event)
-  - [timeout 事件](/zh-TW/docs/Web/API/XMLHttpRequest/timeout_event)
+  - [abort 事件](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/abort_event)
+  - [error 事件](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/error_event)
+  - [loadend 事件](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/loadend_event)
+  - [loadstart 事件](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/loadstart_event)
+  - [load 事件](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/load_event)
+  - [progress 事件](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/progress_event)
+  - [timeout 事件](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/timeout_event)
 
 - {{DOMxRef("XRReferenceSpace")}}
   - [reset 事件](/zh-TW/docs/Web/API/XRReferenceSpace/reset_event)

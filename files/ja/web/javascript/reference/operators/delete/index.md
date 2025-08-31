@@ -1,41 +1,38 @@
 ---
 title: delete 演算子
 slug: Web/JavaScript/Reference/Operators/delete
+l10n:
+  sourceCommit: 03d5115691a7a9fa3df3b6ebd20a0c7eed213252
 ---
 
-{{jsSidebar("Operators")}}
+**`delete`** 演算子は、オブジェクトからプロパティを除去します。プロパティの値がオブジェクトであり、そのオブジェクトへの参照がこれ以上存在しない場合、そのプロパティが保持するオブジェクトは最終的に自動的に解放されます。
 
-JavaScript の **`delete` 演算子**は、オブジェクトからプロパティを削除します。同じプロパティへの参照がそれ以上保持されていない場合は、自動的に解放されます。
-
-{{InteractiveExample("JavaScript デモ: Expressions - delete operator")}}
+{{InteractiveExample("JavaScript デモ: delete 演算子")}}
 
 ```js interactive-example
-const Employee = {
-  firstname: "Maria",
-  lastname: "Sanchez",
+const employee = {
+  firstName: "Maria",
+  lastName: "Sanchez",
 };
 
-console.log(Employee.firstname);
-// Expected output: "Maria"
+console.log(employee.firstName);
+// 予想される結果: "Maria"
 
-delete Employee.firstname;
+delete employee.firstName;
 
-console.log(Employee.firstname);
-// Expected output: undefined
+console.log(employee.firstName);
+// 予想される結果: undefined
 ```
 
 ## 構文
 
-```js
-delete expression;
+```js-nolint
+delete object.property
+delete object[property]
 ```
 
-`expression` は下記のように、[プロパティ](/ja/docs/Glossary/Property/JavaScript)への参照として評価されるべきものです。
-
-```js
-delete object.property;
-delete object["property"];
-```
+> [!NOTE]
+> `delete` 演算子の次の式は、より幅広い構文が許容されますが、意味のある動作をもたらすのは上記の方法のみです。
 
 ### 引数
 
@@ -46,162 +43,89 @@ delete object["property"];
 
 ### 返値
 
-プロパティが{{jsxref("Object.hasOwnProperty", "自分自身の", "", 1)}}{{jsxref("Errors/Cant_delete", "構成不可", "", 1)}}のプロパティであった場合、 strict モードでなければ `false` を返します。それ以外の場合は `true` を返します。
+プロパティが[自己](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)の[構成不可](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#configurable)プロパティであった場合、厳格モードでなければ `false` を返します。それ以外の場合は `true` を返します。
 
 ### 例外
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、プロパティが編集不可の場合、{{jsxref("TypeError")}} が発生します。
+- {{jsxref("TypeError")}}
+  - : [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で、このプロパティが自己の構成不可プロパティである場合は発生します。
+- {{jsxref("ReferenceError")}}
+  - : `object` が [`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) である場合に発生します。
 
 ## 解説
 
-一般的に信じられていることとは異なり (おそらく [C++ における delete](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)を参照してください。
+`delete` 演算子は、[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)が他の単項演算子（例：[`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof)）と同等です。
+したがって、より優先度の高い演算子で構成される任意の式を受け入れます。ただし、以下の形式は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)において早期の構文エラーを引き起こします。
 
-**`delete`** 演算子は指定したプロパティをオブジェクトから取り除きます。削除に成功すると `true` を返し、そうでなければ `false` を返します。
+```js-nolint example-bad
+delete identifier;
+delete object.#privateProperty;
+```
 
-ただし、次のようなシナリオを考慮することが重要です。
+[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は自動的に厳格モードで動作し、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)はクラス本体内でのみ合法的に参照できるため、プライベート要素が削除されることは決してありません。 `delete 識別子` は、 `識別子` がグローバルオブジェクトの構成不可プロパティを参照している場合に[機能する可能性があります](#グローバルプロパティの削除)が、この形式は避けるべきであり、代わりに [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis) を接頭辞として付けるべきです。
+
+それ以外の式も受け入れられますが、それらは意味のある動作にはつながりません。
+
+```js example-bad
+delete console.log(1);
+// 1 を出力し、 true を返すが、何も削除されない
+```
+
+`delete`演算子は、指定されたプロパティをオブジェクトから取り除きます。削除が成功した場合、`true`を返し、失敗した場合は`false`を返します。一般的に信じられていることとは異なり (おそらく [C++ における delete](https://learn.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)ページを参照してください。
+
+以下の次のシナリオを考慮することが重要です。
 
 - 削除しようとしたプロパティが存在しない場合、`delete` は何もせずに `true` を返します。
-- そのオブジェクトのプロトタイプチェーンに同名のプロパティが存在する場合、削除後はプロトタイプチェーンのプロパティをオブジェクトが使うようになります (つまり、`delete` は自身のプロパティにのみ効果があります)。
-- グローバルスコープや関数スコープから {{jsxref("Statements/var","var")}} で宣言されたプロパティは削除できません。
-  - そのため、`delete` はグローバルスコープ内の関数を削除できません (関数定義の一部であるか関数式の一部であるかにかかわらず)。
-  - (グローバルスコープを除く) オブジェクトの一部である関数は `delete` で削除できます。
-
-- {{jsxref("Statements/let","let")}} や {{jsxref("Statements/const","const")}} で宣言された任意のプロパティはそれらが宣言されたスコープから削除できません。
-- 編集不可能なプロパティは削除できません。これには {{jsxref("Math")}} や {{jsxref("Array")}}、{{jsxref("Object")}} のような組み込みオブジェクトのプロパティや {{jsxref("Object.defineProperty()")}} のようなメソッドで編集不可として生成されたプロパティが含まれます。
-
-次のスニペットがシンプルな例です。
-
-```js
-var Employee = {
-  age: 28,
-  name: "abc",
-  designation: "developer",
-};
-
-console.log(delete Employee.name); // true を返す
-console.log(delete Employee.age); // true を返す
-
-// When trying to delete a property that does
-// not exist, true is returned
-console.log(delete Employee.salary); // true を返す
-```
-
-### 編集不可のプロパティ
-
-プロパティが編集不可に設定されているとき、`delete` は何もせずに `false` を返します。strict モードでは、これは `TypeError` を生成します。
-
-```js
-var Employee = {};
-Object.defineProperty(Employee, "name", { configurable: false });
-
-console.log(delete Employee.name); // false を返す
-```
-
-{{jsxref("Statements/var","var")}} や {{jsxref("Statements/let","let")}}、{{jsxref("Statements/const","const")}} は、`delete` 演算子で削除できない編集不可のプロパティを生成します:
-
-```js
-var nameOther = "XYZ";
-
-// We can access this global property using:
-Object.getOwnPropertyDescriptor(window, "nameOther");
-
-// output: Object {value: "XYZ",
-//                  writable: true,
-//                  enumerable: true,
-//                  configurable: false}
-
-// Since "nameOther" is added using with the
-// var keyword, it is marked as "non-configurable"
-
-delete nameOther; // return false
-```
-
-strict モードでは、例外が発生します。
-
-### strict モードとそれ以外の違い
-
-strict モードのとき、`delete` が変数や関数の引数、関数名への直接参照に使われた場合、{{jsxref("SyntaxError")}} が発生します。したがって、 strict モードでエラーが発生することを防ぐためには、 `delete` 演算子を `delete object.property` または `delete object['property']` の形で使用する必要があります。
-
-```js
-Object.defineProperty(globalThis, "variable1", {
-  value: 10,
-  configurable: true,
-});
-Object.defineProperty(globalThis, "variable2", {
-  value: 10,
-  configurable: false,
-});
-
-// strict モードでは SyntaxError
-console.log(delete variable1); // true
-
-// strict モードでは SyntaxError
-console.log(delete variable2); // false
-```
-
-```js
-function func(param) {
-  // strict モードでは SyntaxError
-  console.log(delete param); // false
-}
-
-// strict モードでは SyntaxError
-console.log(delete func); // false
-```
-
-### ブラウザーの互換性の注意
-
-ECMAScript はオブジェクトに対して反復処理を行った時の順序を実装系依存であるとしているにもかかわらず、主要なブラウザーはいずれも、(少なくともプロトタイプ上にないプロパティについては) 最初に追加されたプロパティを最初に処理する順序に対応しているようです。しかし Internet Explorer では、プロパティに対して `delete` を用いたときにややこしい結果になることがあり、これが他のブラウザーが単純なオブジェクトを整列された連想配列のように用いることの障害になります。Internet Explorer では、プロパティの*値*を `undefined` に設定しようとしたとき、後から同じ名前で再びプロパティを追加すると、そのプロパティは*元の*場所で処理されるようになります。削除済みのプロパティを再度追加した場合に予想されるような、最後の場所ではありません。
-
-複数のブラウザーで同じ連想配列を使用したい場合は、可能であれば {{jsxref("Map")}} を使用してください。または、2 つに分けた配列 (片方はキー、もう片方は値) やプロパティを一つだけ持ったオブジェクトの配列を構築するなどの方法でこの構造をシミュレーションしてください。
+- `delete` は自己のプロパティにのみ効果があります。オブジェクトのプロトタイプチェーン上に同じ名前のプロパティが存在する場合、削除後もオブジェクトはプロトタイプチェーン上のプロパティを使用します。
+- 構成不可のプロパティは削除できません。これには {{jsxref("Math")}} や {{jsxref("Array")}}、{{jsxref("Object")}} のような組み込みオブジェクトのプロパティや {{jsxref("Object.defineProperty()")}} のようなメソッドで編集不可として生成されたプロパティが含まれます。
+- 変数（関数の引数 を含む）の削除は、一切動作しません。`delete variable` は厳格モードでは {{jsxref("SyntaxError")}} が発生し、厳格モード以外では何の効果もありません。
+  - {{jsxref("Statements/var", "var")}} をつけて宣言された変数は、グローバルスコープまたは関数のスコープから削除できません。これらは[グローバルオブジェクト](/ja/docs/Glossary/Global_object)に添付されている可能性がありますが、構成不可であるためです。
+  - {{jsxref("Statements/let", "let")}} や {{jsxref("Statements/const", "const")}} で宣言された変数は、オブジェクトに添付されていないため、定義されたスコープ内から削除することはできません。
 
 ## 例
 
-```js
-// adminName プロパティをグローバルスコープに生成
-adminName = "xyz";
+### delete の使用
 
-// empCount プロパティをグローバルスコープに生成
-// var を使用しているため、これは構成不可となります。 let や const でも同じことになります。
+> [!NOTE]
+> 次の例では、暗黙的にグローバル変数を生成したり識別子を削除したりするなど、厳格モードでは禁止されている厳格モード非対応の機能のみを使用しています。
+
+```js
+// empCount プロパティをグローバルスコープに作成する。
+// var を使用しているため、これは構成不可となる
 var empCount = 43;
 
+// グローバルスコープに EmployeeDetails プロパティを作成する。
+// "var" なしで定義しているため、構成不可となる。
 EmployeeDetails = {
   name: "xyz",
   age: 5,
   designation: "Developer",
 };
 
-// adminName はグローバルスコープのプロパティです。
-// var を使用せずに生成されたため、構成可能になっているので
-// 削除することができます。
-delete adminName; // true を返す
-
-// 対照的に、 empCount は var が使用されたので
-// 構成可能ではありません。
-delete empCount; // false を返す
-
-// delete を使用してオブジェクトからプロパティを削除することができます。
+// delete を使用してオブジェクトからプロパティを削除することができる。
 delete EmployeeDetails.name; // true を返す
 
 // プロパティが存在しない場合であっても、 delete は "true" を返します。
 delete EmployeeDetails.salary; // true を返す
 
-// delete は組み込み静的プロパティには効果がありません。
-delete Math.PI; // false を返す
-
-// EmployeeDetails はグローバルスコープのプロパティです。
-// "var" を使用せずに定義されたため、構成可能となっています。
+// EmployeeDetails はグローバルスコープのプロパティである。
 delete EmployeeDetails; // true を返す
+
+// 逆に、 empCount は var が使用されているため構成不可である。
+delete empCount; // false を返す
+
+// delete は構成不可の組み込み静的プロパティには効果がない。
+delete Math.PI; // false を返す
 
 function f() {
   var z = 44;
 
-  // delete はローカル変数名には効果がありません。
+  // delete はローカル変数名には効果がない。
   delete z; // false を返す
 }
 ```
 
-### `delete` とプロトタイプチェーン
+### delete とプロトタイプチェーン
 
 次の例では、プロトタイプチェーン上に同じ名前を持つプロパティがある場合に、オブジェクトの自身のプロパティを削除しています。
 
@@ -212,7 +136,7 @@ function Foo() {
 
 Foo.prototype.bar = 42;
 
-var foo = new Foo();
+const foo = new Foo();
 
 // foo.bar は自身のプロパティに関連付けられて
 // います。
@@ -241,29 +165,69 @@ console.log(foo.bar); // undefined
 `delete` 演算子が配列の要素を削除すると、要素は配列からなくなります。 次の例では、`trees[3]` が `delete` で削除されます。
 
 ```js
-var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 delete trees[3];
-if (3 in trees) {
-  // これは実行されない
-}
+console.log(3 in trees); // false
 ```
 
-ある配列の要素を存在したまま未定義の値としたい場合は、`delete` 演算子の代わりに `undefined` 値を使用してください。次の例では、`trees[3]` に `undefined` を割り当てていますが、配列のその要素は存在したままです。
+これによって、空のスロットを持つ[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)が作成されます。ある配列の要素を存在したまま未定義の値としたい場合は、`delete` 演算子の代わりに `undefined` 値を使用してください。次の例では、`trees[3]` に `undefined` を割り当てていますが、配列のその要素は存在したままです。
 
 ```js
-var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 trees[3] = undefined;
-if (3 in trees) {
-  // これは実行される
-}
+console.log(3 in trees); // true
 ```
 
-代わりに、配列の内容を変更して配列要素を削除したい場合は、`{{jsxref("Array.splice()", "splice()")}}` メソッドを使用してください。次の例では、{{jsxref("Array.splice()", "splice()")}} を使用して配列から `trees[3]` を削除しています。
+代わりに、配列の内容を変更して配列要素を削除したい場合は、{{jsxref("Array/splice", "splice()")}} メソッドを使用してください。次の例では、{{jsxref("Array/splice", "splice()")}} を使用して配列から `trees[3]` を削除しています。
 
 ```js
-var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 trees.splice(3, 1);
 console.log(trees); // ["redwood", "bay", "cedar", "maple"]
+```
+
+### 構成不可のプロパティの削除
+
+プロパティが構成不可としてマークされている場合、`delete` は何の効果もなく、`false` を返します。厳格モードでは、これは `TypeError` が発生します。
+
+```js
+const Employee = {};
+Object.defineProperty(Employee, "name", { configurable: false });
+
+console.log(delete Employee.name); // false を返す
+```
+
+{{jsxref("Statements/var", "var")}} は、`delete` 演算子で削除できない構成不可のプロパティを作成する:
+
+```js
+// "nameOther" は var キーワードを付けて追加するものであるため、
+// 構成不可としてマークされる
+var nameOther = "XYZ";
+
+// このグローバルプロパティには以下のようにアクセスすることができる
+Object.getOwnPropertyDescriptor(globalThis, "nameOther");
+// {
+//   value: "XYZ",
+//   writable: true,
+//   enumerable: true,
+//   configurable: false
+// }
+
+delete globalThis.nameOther; // false を返す
+```
+
+厳格モードでは、これらは例外が発生します。
+
+### グローバルプロパティの削除
+
+グローバルプロパティが構成不可な場合（例えば、直接プロパティ代入による）、そのプロパティは削除することが でき、その後グローバル変数としてそれらを参照すると {{jsxref("ReferenceError")}} が発生します。
+
+```js
+globalThis.globalVar = 1;
+console.log(globalVar); // 1
+// 厳格モードでない場合、`delete globalVar` も使用することができる
+delete globalThis.globalVar;
+console.log(globalVar); // ReferenceError: globalVar is not defined
 ```
 
 ## 仕様書
@@ -276,7 +240,5 @@ console.log(trees); // ["redwood", "bay", "cedar", "maple"]
 
 ## 関連情報
 
-- [In depth analysis on
-  delete](http://perfectionkills.com/understanding-delete/)
 - {{jsxref("Reflect.deleteProperty()")}}
 - {{jsxref("Map.prototype.delete()")}}

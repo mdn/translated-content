@@ -56,7 +56,7 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
   - : この課題では、最終的なデザイン（名刺/ゲーム用カード/ソーシャルメディアのプロフィール）を作成するために、完了しなければならない数々の関連の演習を提供しています。
 - [課題: 装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper) <sup>課題</sup>
   - : 好印象を与えたいのなら、素敵なレターヘッドの便箋に手紙を書くのはとても良い考えです。この評価では、そのような見た目のオンラインテンプレートの作成に挑戦します。
-- [課題: かっこいいボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box) <sup>課題</sup>
+- [課題: かっこいいボックス](/ja/docs/conflicting/Learn_web_development/Core/Styling_basics) <sup>課題</sup>
   - : この課題では、かっこいいボックスをいくつか作成する練習をします。目を引くボックスを作成してみましょう。
 
 ## 追加のチュートリアル

@@ -1,153 +1,161 @@
 ---
-title: CSS 如何运行
+title: 什么是 CSS？
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
+l10n:
+  sourceCommit: 25d1da7132494104d33f02bc3e99c98f9175d195
 ---
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
-我们已经知道了 CSS 是做什么的以及怎么写简单的样式这样基础的 CSS，接下来我将了解到浏览器如何获取 CSS、HTML 和将他们加载成网页。
+**{{Glossary("CSS")}}**（层叠样式表）可以让你创建外观精美的网页，但它在底层是如何工作的呢？本文将解释 CSS 是什么、基本语法是什么样的，以及浏览器如何将 CSS 应用于 HTML 来实现样式。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前置知识：</th>
-      <td>基础计算机知识、基本软件安装、简单文件知识、HTML 基础</td>
+      <th scope="row">前置条件：</th>
+      <td>
+        <a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">安装基础软件</a>、<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">文件操作基础</a>，以及 HTML 基础知识（建议学习
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 内容结构模块</a>）。
+      </td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
+      <th scope="row">学习成果：</th>
       <td>
-        理解浏览器如何加载 CSS 和 HTML、浏览器遇到无法解析的 CSS 会发生什么
+        <ul>
+          <li>了解 CSS 的用途。</li>
+          <li>理解 HTML 与样式无关。</li>
+          <li>认识浏览器默认样式的概念。</li>
+          <li>了解 CSS 代码的基本结构。</li>
+          <li>掌握 CSS 如何应用到 HTML 上。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## CSS 究竟是怎么工作的？
+## 浏览器默认样式
 
-当浏览器展示一个文件的时候，它必须兼顾文件的内容和文件的样式信息，下面我们会了解到它处理文件的标准的流程。需要知道的是，下面的步骤是浏览加载网页的简化版本，而且不同的浏览器在处理文件的时候会有不同的方式，但是下面的步骤基本都会出现。
+在 [HTML 内容结构模块](/zh-CN/docs/Learn_web_development/Core/Structuring_content)中，我们介绍了 HTML 是什么以及它是如何用于标记文档的。这些文档在浏览器中是可读的：标题比普通文本大，段落会换行并有间距，链接有颜色并带下划线以便区分。
 
-1. 浏览器载入 HTML 文件（比如从网络上获取）。
-2. 将 HTML 文件转化成一个 DOM（Document Object Model），DOM 是文件在计算机内存中的表现形式，下一节将更加详细的解释 DOM。
-3. 接下来，浏览器会拉取该 HTML 相关的大部分资源，比如嵌入到页面的图片、视频和 CSS 样式。JavaScript 则会稍后进行处理，简单起见，同时此节主讲 CSS，所以这里对如何加载 JavaScript 不会展开叙述。
-4. 浏览器拉取到 CSS 之后会进行解析，根据选择器的不同类型（比如 element、class、id 等等）把他们分到不同的“桶”中。浏览器基于它找到的不同的选择器，将不同的规则（基于选择器的规则，如元素选择器、类选择器、id 选择器等）应用在对应的 DOM 的节点中，并添加节点依赖的样式（这个中间步骤称为渲染树）。
-5. 上述的规则应用于渲染树之后，渲染树会依照应该出现的结构进行布局。
-6. 网页展示在屏幕上（这一步被称为着色）。
+你看到的这些样式就是浏览器的默认样式——非常基础的样式，用于确保即使页面作者没有指定样式，网页也能保持可读性。这些样式由浏览器内置的默认 CSS 样式表定义，与 HTML 本身无关。
 
-## 关于 DOM
+![浏览器使用的默认样式](html-example.png)
 
-一个 DOM 有一个树形结构，标记语言中的每一个元素、属性以及每一段文字都对应着结构树中的一个节点（Node/DOM 或 DOM node）。节点由节点本身和其他 DOM 节点的关系定义，有些节点有父节点，有些节点有兄弟节点（同级节点）。
+如果所有网站都长得一样，web 将变得非常无趣。这就是你需要学习 CSS 的原因。
 
-对于 DOM 的理解会很大程度上帮助你设计、调试和维护你的 CSS，因为 DOM 是你的 CSS 样式和文件内容的结合。当你使用浏览器 F12 调试的时候你需要操作 DOM 以查看使用了哪些规则。
+## CSS 的作用是什么？
 
-## 一个真实的 DOM 案例
+通过 CSS，你可以精确控制 HTML 元素在浏览器中的外观，以你喜欢的设计和布局呈现文档。
 
-不同于很长且枯燥的案例，这里我们通过一个 HTML 片段来了解 HTML 怎么转化成 DOM
+- **文档**通常是使用标记语言编写的文本文件，最常见的是 {{Glossary("HTML")}}（称为 HTML 文档）。你也可能遇到其他标记语言编写的文档，如 {{Glossary("SVG")}} 或 {{Glossary("XML")}}。HTML 文档包含网页的内容，并定义其结构。
+- **呈现**文档给你的用户是指将其转换为对你的受众易于阅读的形式。像是 {{Glossary("Mozilla Firefox","Firefox")}}、{{Glossary("Google Chrome","Chrome")}}、{{Glossary("Apple_Safari","Safari")}} 和 {{Glossary("Microsoft Edge","Edge")}} 这样的{{Glossary("browser","浏览器")}}旨在以视觉方式（例如在电脑屏幕、投影仪、移动设备或打印机上）呈现文档，在 Web 中我们通常称这个过程为“渲染”；我们在[浏览器如何加载网站](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites)一文中给出了简化的渲染过程描述。
 
-以下列 HTML 代码为例：
+> [!NOTE]
+> 浏览器有时也被称为{{Glossary("User agent","用户代理")}}，意思是代表用户在计算机系统中运行的程序。
 
-```html
-<p>
-  Let's use:
-  <span>Cascading</span>
-  <span>Style</span>
-  <span>Sheets</span>
-</p>
+CSS 可用于网页外观相关的多种用途，例如：
+
+- 文本样式，包括更改标题和链接的[颜色](/zh-CN/docs/Web/CSS/color_value)和[大小](/zh-CN/docs/Web/CSS/font-size)
+- 创建布局，如[网格布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)或[多列布局](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)
+- 特效，如[动画](/zh-CN/docs/Web/CSS/CSS_animations)
+
+CSS 语言按*模块*组织，每个模块包含相关功能。例如，你可以查阅[背景与边框模块](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)的 MDN 参考页面，了解其用途及包含的属性和功能。在我们的模块页面中，你还可以找到定义这些技术的*规范*链接。
+
+## CSS 语法基础
+
+CSS 是一种基于规则的语言——通过定义一组样式规则来指定网页上哪些元素应该应用哪些样式。
+
+例如，你可能希望将页面主标题设置为红色的大号文字。以下代码展示了一个非常简单的 CSS 规则：
+
+```css
+h1 {
+  color: red;
+  font-size: 2.5em;
+}
 ```
 
-在这个 DOM 中，`<p>`元素对应了父节点，它的子节点是一个 text 节点和三个对应了`<span>`元素的节点，`SPAN`节点同时也是他们中的 Text 节点的父节点。
+- 在上面的示例中，CSS 规则以一个{{Glossary("CSS Selector", "选择器")}}开头，用于*选择*我们要设置样式的 HTML 元素。在这个例子中，我们为一级标题（`{{htmlelement("Heading_Elements", "&lt;h1>")}}`）添加样式。
+- 接着我们使用一对大括号 `{ }`。
+- 大括号中包含一个或多个**声明**，每个声明由**属性**和**值**组成。我们在冒号前指定属性（例如上述示例中的 `color`），并在冒号后指定该属性的值（我们为 `color` 属性设置取值 `red`）。
+- 此示例包含两个声明，一个是 `color`，另一个是 `font-size`。
 
-```plain
-P
-├─ "Let's use:"
-├─ SPAN
-|  └─ "Cascading"
-├─ SPAN
-|  └─ "Style"
-└─ SPAN
-    └─ "Sheets"
-```
+不同的 CSS {{Glossary("property/CSS","属性")}}允许不同的取值。在我们的示例中，`color` 属性可以接受多种[颜色值](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color)，而 `font-size` 属性则可以接受多种[尺寸单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#数值、长度和百分比)作为值。
 
-上图就是浏览器怎么解析之前那个 HTML 片段——它生成上图的 DOM 树形结构并将它按照如下输出到浏览器：
+一个 CSS 样式表通常包含许多这样的规则，依次书写。
 
-{{EmbedLiveSample('一个真实的 DOM 案例', '100%', 55)}}
+```css
+h1 {
+  color: red;
+  font-size: 2.5em;
+}
 
-```css hidden
 p {
-  margin: 0;
+  color: aqua;
+  padding: 5px;
+  background: midnightblue;
 }
 ```
 
-## 应用 CSS 到 DOM
+你会发现有些属性值很快就能掌握，而其他的则需要查阅。MDN 上的各个属性页面可以快速帮助你查找属性及其可用值。
 
-接下来让我们看看添加一些 CSS 到文件里加以渲染，同样的 HTML 代码：
+> [!NOTE]
+> 所有 CSS 属性页面（以及其他 CSS 特性）都可以在 MDN 的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)中找到。你也可以习惯使用搜索引擎查找“mdn css-特性名”，例如搜索“mdn color”或“mdn font-size”，以获取某个 CSS 特性的更多信息。
+
+## CSS 如何应用到 HTML？
+
+如[浏览器如何加载网站](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites)所述，当你访问一个网页时，浏览器首先接收包含网页内容的 HTML 文档，并将其转换为一个 **DOM 树**。
+
+随后，网页中找到的 CSS 规则（无论是直接写在 HTML 中，还是引用的外部 `.css` 文件）会根据选择器指定的元素分类到不同的“桶”中。这些规则随后应用到 DOM 树上，生成一个**渲染树**，最终绘制到浏览器窗口中。
+
+我们来看一个例子。首先定义一个 HTML 片段，CSS 将应用于其中的元素：
 
 ```html
-<p>
-  Let's use:
-  <span>Cascading</span>
-  <span>Style</span>
-  <span>Sheets</span>
-</p>
+<h1>CSS 很棒</h1>
+
+<p>你可以为文本添加样式。</p>
+
+<p>你还可以创建布局和特效。</p>
 ```
 
-以下为 CSS 代码：
+现在，我们重复上一节中的 CSS 代码：
 
 ```css
-span {
-  border: 1px solid black;
-  background-color: lime;
+h1 {
+  color: red;
+  font-size: 2.5em;
 }
-```
 
-浏览器会解析 HTML 并创造一个 DOM，然后解析 CSS。可以看到唯一的选择器就是`span`元素选择器，浏览器处理规则会非常快！把同样的规则直接使用在三个`<span>`标签上，然后渲染出图像到屏幕。
-
-现在的显示如下：
-
-{{EmbedLiveSample('应用 CSS 到 DOM', '100%', 55)}}
-
-在我们下一个模块的 [Debugging CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) 文章中我们将会使用 F12 调试 CSS 的问题并且更进一步的了解浏览器如何解析 CSS。
-
-## 当浏览器遇到无法解析的 CSS 代码会发生什么
-
-在[之前的文章中](/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#浏览器支持)我们提到了浏览器并不会同时实现所有的新 CSS，此外很多人也不会使用最新版本的浏览器。鉴于 CSS 一直不断的开发，因此领先于浏览器可以识别的范围，那么你也许会好奇当浏览器遇到无法解析的 CSS 选择器或声明的时候会发生什么呢？
-
-答案就是浏览器什么也不会做，继续解析下一个 CSS 样式！
-
-如果一个浏览器在解析你所书写的 CSS 规则的过程中遇到了无法理解的属性或者值，它会忽略这些并继续解析下面的 CSS 声明。在你书写了错误的 CSS 代码（或者误拼写），又或者当浏览器遇到对于它来说很新的还没有支持的 CSS 代码的时候上述的情况同样会发生（直接忽略）。
-
-相似的，当浏览器遇到无法解析的选择器的时候，他会直接忽略整个选择器规则，然后解析下一个 CSS 选择器。
-
-在下面的案例中，我使用会导致属性错误的英式拼写来书写"color"，所以我的段落没有被渲染成蓝色，而其他的 CSS 代码会正常执行，只有错误的部分会被忽略。
-
-```html
-<p>I want this text to be large, bold and blue.</p>
-```
-
-```css
 p {
-  font-weight: bold;
-  colour: blue; /* incorrect spelling of the color property */
-  font-size: 200%;
+  color: aqua;
+  padding: 5px;
+  background: midnightblue;
 }
 ```
 
-{{EmbedLiveSample('当浏览器遇到无法解析的 CSS 代码会发生什么', '100%', 200)}}
+这段 CSS：
 
-这样做好处多多，代表着你使用最新的 CSS 优化的过程中浏览器遇到无法解析的规则也不会报错。当你为一个元素指定多个 CSS 样式的时候，浏览器会加载样式表中的最后的 CSS 代码进行渲染（样式表，优先级等请读者自行了解），也正因为如此，你可以为同一个元素指定多个 CSS 样式来解决有些浏览器不兼容新特性的问题（比如指定两个`width`）。
+- 选择页面上的所有 `<h1>` 元素，将其文字设为红色并放大。由于示例 HTML 中只有一个 `<h1>`，只有它会被应用样式。
+- 选择页面上的所有 `<p>` 元素，设置文字颜色、背景颜色和内边距。示例中有两个 `<p>` 元素，它们都会应用这些样式。
 
-这一特点在你想使用一个很新的 CSS 特性但是不是所有浏览器都支持的时候（浏览器兼容）非常有用，举例来说，一些老的浏览器不接收`calc()`(calculate 的缩写，CSS3 新增，为元素指定动态宽度、长度等，注意此处的动态是计算之后得一个值) 作为一个值。我可能使用它结合像素为一个元素设置了动态宽度（如下），老式的浏览器由于无法解析忽略这一行；新式的浏览器则会把这一行解析成像素值，并且覆盖第一行指定的宽度。
+当 CSS 应用于 HTML 后，页面的渲染效果如下：
 
-```css
-.box {
-  width: 500px;
-  width: calc(100% - 50px);
-}
-```
+{{EmbedLiveSample('CSS 如何应用到 HTML？', '100%', 200)}}
 
-后面的课程我们会讨论更多关于浏览器兼容的问题。
+## 玩转 CSS
 
-## 最后
+试着操作上面的示例。点击右上角的“Play”按钮，即可在 MDN Playground 编辑器中加载它。
 
-恭喜你完成本模块，下面的文章你将会[使用你的新知识](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page)来完成覆盖样式的案例，在这个过程中测试一些 CSS 样式。
+请尝试以下操作：
+
+1. 在已有的两个段落下方添加另一个段落，观察第二条 CSS 规则如何自动应用到新段落上。
+2. 在 `<h1>` 下方某处添加一个 `<h2>` 子标题，比如放在其中一个段落之后。
+3. 尝试为 `<h2>` 元素设置不同的颜色：复制 `h1` 的 CSS 规则，将选择器改为 `h2`，并将 `color` 的值从 `red` 改为 `purple`（紫色）等。
+4. 如果你想挑战一下自己，可以在 MDN 的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)中查找一些新的 CSS 属性和值，添加到你的样式规则中！
+
+如果你还想进一步练习 CSS 基础，可以参考 Scrimba 提供的课程[写下你的第一行 CSS！](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn) <sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>。这个课程简要介绍了 CSS 的基本语法，并提供了一个交互式挑战，让你练习编写 CSS 声明。
+
+## 总结
+
+现在你已经初步了解了 CSS 是什么以及它的工作原理，接下来我们将继续练习如何编写 CSS，并更详细地解释语法结构。
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

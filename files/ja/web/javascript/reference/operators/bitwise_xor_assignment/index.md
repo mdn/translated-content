@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**ビット排他的論理和代入演算子 (`^=`)** は、 2 つのオペランドに対して[ビット単位のXOR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR) を実行し、その結果を左側のオペランドに代入します。
+**ビット排他的論理和代入演算子 (`^=`)** は、 2 つのオペランドに対して[ビット単位のXOR](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR) を実行し、その結果を左側のオペランドに代入します。
 
 {{InteractiveExample("JavaScript デモ: ビット排他的論理和代入演算子 (^=)")}}
 

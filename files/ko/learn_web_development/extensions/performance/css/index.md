@@ -99,7 +99,7 @@ CSSOM 생성을 최적화 하고 페이지 성능을 향상시키기 위해, 현
 
 - **CSS 스프라이트로 사진 HTTP 요청 줄이기**: [CSS 스프라이트](https://css-tricks.com/css-sprites/)는 아이콘 같은 사이트에서 사용하려는 여러 작은 사진을 하나의 파일에 배치하고 각각 다른 위치에서 필요한 이미지 부분을 표시하도록, 각기 다른 {{cssxref("background-position")}} 값을 사용하여 각 위치에 필요한 사진 부분을 표시하는 기법입니다. 이 기법은 패칭한 사진을 불러오는 HTTP 요청 횟수를 극적으로 줄일 수 있습니다.
 
-- **중요한 자원 프리로드 하기**: 중요한 자원을 위해 {{htmlelement("link")}} 요소가 프리로드로 실행되도록 [`rel="preload"`](/ko/docs/Web/HTML/Attributes/rel/preload)를 사용할 수 있습니다. 여기에는 CSS 파일, 글꼴, 사진이 포함됩니다.
+- **중요한 자원 프리로드 하기**: 중요한 자원을 위해 {{htmlelement("link")}} 요소가 프리로드로 실행되도록 [`rel="preload"`](/ko/docs/Web/HTML/Reference/Attributes/rel/preload)를 사용할 수 있습니다. 여기에는 CSS 파일, 글꼴, 사진이 포함됩니다.
 
   ```html
   <link rel="preload" href="style.css" as="style" />
@@ -154,7 +154,7 @@ CSSOM 생성을 최적화 하고 페이지 성능을 향상시키기 위해, 현
 - [`transform: translateZ()`](/ko/docs/Web/CSS/transform), [`rotate3d()`](/ko/docs/Web/CSS/transform-function/rotate3d)와 같은 3D 변환 애니메이션
 - [`position: fixed`](/ko/docs/Web/CSS/position)와 같은 특정 속성이 적용된 애니메이션 요소
 - [`will-change`](/ko/docs/Web/CSS/will-change) 속성이 적용된 요소. 아래서 자세히 살펴봅니다.
-- 자신의 레이어에서 렌더링되는 특정 요소, [`<video>`](/ko/docs/Web/HTML/Element/video), [`<canvas>`](/ko/docs/Web/HTML/Element/canvas), [`<iframe>`](/ko/docs/Web/HTML/Element/iframe)이 있습니다.
+- 자신의 레이어에서 렌더링되는 특정 요소, [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/ko/docs/Web/HTML/Reference/Elements/canvas), [`<iframe>`](/ko/docs/Web/HTML/Element/iframe)이 있습니다.
 
 GPU에서 애니메이션을 실행하면 특히 모바일에서 성능이 향상될 수 있습니다. 하지만, 애니메이션을 GPU로 옮기는 과정은 항상 간단한 것은 아닙니다. 이에 대한 유용하고 자세한 분석은 [CSS GPU 애니메이션: 올바르게 하기](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) smashingmagazine.com, 2016에서 확인해보세요.
 
@@ -172,7 +172,7 @@ GPU에서 애니메이션을 실행하면 특히 모바일에서 성능이 향�
 
 ## 렌더링 차단 최적화 하기
 
-CSS는 미디어 쿼리로 스타일을 특정 조건에 맞춰 범위를 지정할 수 있습니다. 미디어 쿼리는 반응형 웹 디자인에 중요하고 중요 렌더링 경로를 최적화 하는데 도움을 줍니다. 브라우저는 모든 스타일을 분석할 때까지 렌더링을 차단하지만 프린트 스타일시트 같은 사용하지 않는 스타일인 경우에는 렌더링을 차단하지 않습니다. 미디어 쿼리에 기반하여 CSS를 다수 파일로 분리함으로써, 사용되지 않는 CSS 다운로드를 하는 렌더링 차단을 예방할 수 있습니다. 논 블로킹 CSS 링크를 생성하려면, 프린트 스타일과 같이 바로 사용되지 않는 스타일을 별도의 파일로 분리하고 HTML 마크업에 [`<link>`](/ko/docs/Web/HTML/Element/link) 요소를 추가한 후, 미디어 쿼리를 추가하세요. 이 경우, 해당 스타일시트는 프린트 스타일시트 상태로 지정됩니다.
+CSS는 미디어 쿼리로 스타일을 특정 조건에 맞춰 범위를 지정할 수 있습니다. 미디어 쿼리는 반응형 웹 디자인에 중요하고 중요 렌더링 경로를 최적화 하는데 도움을 줍니다. 브라우저는 모든 스타일을 분석할 때까지 렌더링을 차단하지만 프린트 스타일시트 같은 사용하지 않는 스타일인 경우에는 렌더링을 차단하지 않습니다. 미디어 쿼리에 기반하여 CSS를 다수 파일로 분리함으로써, 사용되지 않는 CSS 다운로드를 하는 렌더링 차단을 예방할 수 있습니다. 논 블로킹 CSS 링크를 생성하려면, 프린트 스타일과 같이 바로 사용되지 않는 스타일을 별도의 파일로 분리하고 HTML 마크업에 [`<link>`](/ko/docs/Web/HTML/Reference/Elements/link) 요소를 추가한 후, 미디어 쿼리를 추가하세요. 이 경우, 해당 스타일시트는 프린트 스타일시트 상태로 지정됩니다.
 
 ```html
 <!-- styles.css의 로딩 및 파싱은 렌더링을 차단합니다 -->
