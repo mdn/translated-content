@@ -8,7 +8,7 @@ l10n:
 ランドマークは、ページの重要なサブセクションです。`landmark` ロールは、ユーザーが直接ナビゲートできることを望む可能性が高い、重要なコンテンツセクションの aria ロール値の抽象親クラスです。
 
 > [!NOTE]
-> `landmark` ロールは [抽象ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles) です。ドキュメントの完全性のためにここに含まれています。ウェブ開発者は使用すべきではありません。
+> `landmark` ロールは [抽象ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#抽象ロール) です。ドキュメントの完全性のためにここに含まれています。ウェブ開発者は使用すべきではありません。
 
 ## 説明
 
