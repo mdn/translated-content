@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("XMLHttpRequest API")}}
 
-**`XMLHttpRequest.timeout`** は `unsigned long` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期 XMLHttpRequest や `InvalidAccessError` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/Web/API/XMLHttpRequest/timeout_event) イベントが発行されます。
+**`XMLHttpRequest.timeout`** は `unsigned long` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期 XMLHttpRequest や `InvalidAccessError` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/Web/API/XMLHttpRequestEventTarget/timeout_event) イベントが発行されます。
 
 > [!NOTE]
 > ウィンドウを持つ同期リクエストでは、タイムアウトを使用することはできません。
