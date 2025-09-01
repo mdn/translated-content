@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-{{CSSRef}}
-
 **`invert()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 주어진 이미지에 색상 샘플들을 반전해줍니다. {{cssxref("&lt;filter-function&gt;")}}을 반환 값으로 가집니다.
 
 {{InteractiveExample("CSS Demo: invert()")}}

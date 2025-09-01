@@ -1,15 +1,14 @@
 ---
 title: String.prototype.indexOf()
+short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 l10n:
-  sourceCommit: c367939020b2cbd60da7bd56a14670659d5e9491
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`indexOf()`** は {{jsxref("String")}} 値のメソッドで、この文字列を検索し、指定した部分文字列が最初に出現するインデックスを返します。 オプションで開始位置を取り、指定した数値以上のインデックスで指定した部分文字列が最初に出現するインデックスを返します。
 
-{{InteractiveExample("JavaScript デモ: String.indexOf()", "taller")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.indexOf()", "taller")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";
@@ -18,7 +17,7 @@ const searchTerm = "dog";
 const indexOfFirst = paragraph.indexOf(searchTerm);
 
 console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
-// Expected output: "The index of the first "dog" is 15"
+// 予想される結果: "The index of the first "dog" is 15"
 
 console.log(
   `The index of the second "${searchTerm}" is ${paragraph.indexOf(
@@ -26,7 +25,7 @@ console.log(
     indexOfFirst + 1,
   )}`,
 );
-// Expected output: "The index of the second "dog" is 38"
+// 予想される結果: "The index of the second "dog" is 38"
 ```
 
 ## 構文
@@ -80,7 +79,7 @@ indexOf(searchString, position)
 
 ```js
 "Blue Whale".indexOf("Blue"); // 0 を返す
-"Blue Whale".indexOf("Blute"); // -1 を返す
+"Blue Whale".indexOf("Wale"); // -1 を返す
 "Blue Whale".indexOf("Whale", 0); // 5 を返す
 "Blue Whale".indexOf("Whale", 5); // 5 を返す
 "Blue Whale".indexOf("Whale", 7); // -1 を返す
@@ -102,7 +101,7 @@ indexOf(searchString, position)
 
 ```js
 "Blue Whale".indexOf("Blue") !== -1; // true。'Blue' が 'Blue Whale' の中で見つかった
-"Blue Whale".indexOf("Bloe") !== -1; // false。 'Bloe' が 'Blue Whale' の中で見つからなかった
+"Blue Whale".indexOf("Wale") !== -1; // false。 'Wale' が 'Blue Whale' の中で見つからなかった
 ```
 
 ## 例
