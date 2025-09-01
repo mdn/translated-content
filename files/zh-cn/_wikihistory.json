@@ -3592,17 +3592,6 @@
       "Boot95"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
-    "modified": "2020-07-16T22:25:08.878Z",
-    "contributors": [
-      "Roy-Tian",
-      "FantasqueX",
-      "codeofjackie",
-      "lihaoyuan",
-      "superkuang",
-      "nbhaohao"
-    ]
-  },
   "Learn_web_development/Core/Structuring_content/Planet_data_table": {
     "modified": "2020-07-16T22:25:31.394Z",
     "contributors": [
@@ -3610,6 +3599,17 @@
       "WoodCube",
       "Undecyce",
       "lihaoyuan",
+      "nbhaohao"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Splash_page": {
+    "modified": "2020-07-16T22:25:08.878Z",
+    "contributors": [
+      "Roy-Tian",
+      "FantasqueX",
+      "codeofjackie",
+      "lihaoyuan",
+      "superkuang",
       "nbhaohao"
     ]
   },
