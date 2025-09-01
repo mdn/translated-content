@@ -1246,7 +1246,7 @@
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding	/zh-CN/docs/Learn_web_development/Core/Structuring_content
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images
-/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/zh-CN/docs/Web/HTML/Guides/Responsive_images
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
@@ -1439,6 +1439,7 @@
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
+/zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
