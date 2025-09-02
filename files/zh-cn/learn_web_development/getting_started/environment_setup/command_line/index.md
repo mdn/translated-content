@@ -422,12 +422,8 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 ```js
 const myObj = {
-  a: 1,
-  b: { c: 2 },
-};
-function printMe(obj) {
-  console.log(obj.b.c);
-}
+  a: 1,b: { c: 2 },};
+function printMe(obj) {console.log(obj.b.c);}
 printMe(myObj);
 ```
 
