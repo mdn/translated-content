@@ -61,7 +61,7 @@ l10n:
 
 ## flex 容器
 
-使用 flexbox 排版的區域稱為 **flex 容器**。要建立一個{{glossary("flex container", "flex 容器")}}，請將該區域的 {{cssxref("display")}} 屬性設定為 `flex`。當我們這麼做時，該容器的直接子元素就會變成 **flex 項目**。你可以使用 `inline flex` 或 `inline-flex` 來建立行內 flex 容器，或使用 `block flex` 或 `flex` 來建立區塊級 flex 容器，藉此明確控制容器本身是以行內還是區塊格式化上下文顯示。
+使用 flexbox 排版的區域稱為 **flex 容器**。要建立一個 {{glossary("flex container", "flex 容器")}}，請將該區域的 {{cssxref("display")}} 屬性設定為 `flex`。當我們這麼做時，該容器的直接子元素就會變成 **flex 項目**。你可以使用 `inline flex` 或 `inline-flex` 來建立行內 flex 容器，或使用 `block flex` 或 `flex` 來建立區塊級 flex 容器，藉此明確控制容器本身是以行內還是區塊格式化上下文顯示。
 
 ### 初始值
 
@@ -341,7 +341,7 @@ flexbox 的一個關鍵特性是能夠在主軸和交錯軸上對齊和兩端對
 
 此屬性的初始值為 `stretch`，這就是為什麼 flex 項目預設會伸展到 flex 容器的高度（如果 `flex-direction` 設定為 `column` 或 `column-reverse`，則為寬度）。這個高度可能來自容器中最高的項目，或是在 flex 容器本身上設定的尺寸。
 
-你可以改為將 `align-items` 設定為 `flex-start` 或簡寫為 `start`，以使項目在 flex 容器的開頭對齊；`flex-end` 或簡寫為 `end`，以將它們對齊到結尾；或 `center` 以將它們置中對齊。在即時範例中試試這個——我給了 flex 容器一個高度，以便你可以看到項目如何在容器內移動。看看如果你將 align-items 的值設定為以下這些會發生什麼：
+你可以改為將 `align-items` 設定為 `flex-start`（或簡寫為 `start`），以使項目在 flex 容器的開頭對齊；或設定為 `flex-end`（或簡寫為）`end`，以將它們結尾對齊；或設定為 `center`，以將它們置中對齊。在即時範例中試試這個——我給了 flex 容器一個高度，以便你可以看到項目如何在容器內移動。看看如果你將 align-items 的值設定為以下這些會發生什麼：
 
 - `stretch`
 - `flex-start`
@@ -378,7 +378,7 @@ flexbox 的一個關鍵特性是能夠在主軸和交錯軸上對齊和兩端對
 
 {{EmbedLiveSample("align-items")}}
 
-`align-items` 是設定在 flex 容器上，並影響所有的 flex 項目。如果你想讓某個 flex 項目的對齊方式與其他項目不同，你可以在該 flex 項目上設定 {{cssxref("align-self")}}。
+`align-items` 設定在 flex 容器上，並影響所有的 flex 項目。如果你想讓某個 flex 項目的對齊方式與其他項目不同，你可以在該 flex 項目上設定 {{cssxref("align-self")}}。
 
 ### justify-content
 
