@@ -14,12 +14,12 @@ JavaScript 的 **`Date`** 物件以平台獨立的格式表示一個特定的時
 
 ### 紀元、時間戳與無效日期
 
-一個 JavaScript 日期基本上被指定為自[紀元](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-time-values-and-time-range)以來經過的毫秒數，紀元被定義為 1970 年 1 月 1 日 00:00:00 UTC 的午夜（相當於 [UNIX 紀元](/zh-TW/docs/Glossary/Unix_time)）。這個時間戳是*時區無關*的，並唯一地定義了歷史上的一個瞬間。
+JavaScript 日期基本上被指定為自[紀元](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-time-values-and-time-range)以來經過的毫秒數，紀元被定義為 1970 年 1 月 1 日 00:00:00 UTC 的午夜（相當於 [UNIX 紀元](/zh-TW/docs/Glossary/Unix_time)）。這個時間戳是*時區無關*的，並唯一地定義了歷史上的一個瞬間。
 
 > [!NOTE]
 > 雖然 `Date` 物件核心的時間值是 UTC，但獲取日期和時間或其元件的基本方法都在本地（即主機系統）時區和偏移量下運作。
 
-`Date` 物件可表示的最大時間戳略小於最大安全整數（{{jsxref("Number.MAX_SAFE_INTEGER")}}，即 9,007,199,254,740,991）。一個 `Date` 物件相對於紀元最多可以表示 ±8,640,000,000,000,000 毫秒，或 ±100,000,000（一億）天。這個範圍是從西元前 271821 年 4 月 20 日到西元 275760 年 9 月 13 日。任何試圖表示此範圍之外時間的嘗試，都會導致 `Date` 物件持有一個值為 [`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN) 的時間戳，這是一個「無效日期」。
+`Date` 物件可表示的最大時間戳略小於最大安全整數（{{jsxref("Number.MAX_SAFE_INTEGER")}}，即 9,007,199,254,740,991）。`Date` 物件相對於紀元最多可以表示 ±8,640,000,000,000,000 毫秒，或 ±100,000,000（一億）天。這個範圍是從西元前 271821 年 4 月 20 日到西元 275760 年 9 月 13 日。任何試圖表示此範圍之外時間的嘗試，都會導致 `Date` 物件持有一個值為 [`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN) 的時間戳，這是一個「無效日期」。
 
 ```js
 console.log(new Date(8.64e15).toString()); // "Sat Sep 13 275760 00:00:00 GMT+0000 (世界協調時間)"
@@ -170,7 +170,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 
 例如，`"2011-10-10"`（*僅日期*格式）、`"2011-10-10T14:48:00"`（*日期時間*格式）或 `"2011-10-10T14:48:00.000+09:00"`（帶有毫秒和時區的*日期時間*格式）都是有效的日期時間字串。
 
-當缺少時區偏移時，**僅日期格式被解釋為 UTC 時間，而日期時間格式被解釋為本地時間。** 解釋為 UTC 時間是由於一個歷史性的規範錯誤，該錯誤與 ISO 8601 不一致，但由於 web 相容性而無法更改。請參見 [Broken Parser – A Web Reality Issue](https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/)。
+當缺少時區偏移時，**僅日期格式被解釋為 UTC 時間，而日期時間格式被解釋為本地時間**。解釋為 UTC 時間是由於一個歷史性的規範錯誤，該錯誤與 ISO 8601 不一致，但由於 web 相容性而無法更改。請參見[解析器損壞——一個現實 Web 問題](https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/)。
 
 {{jsxref("Date.parse()")}} 和 {{jsxref("Date/Date", "Date()")}} 建構子都接受日期時間字串格式的字串作為輸入。此外，當輸入不符合此格式時，實作允許支援其他日期格式。
 
@@ -188,7 +188,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 - {{jsxref("Date/toUTCString", "toUTCString()")}} 回傳格式為 `Thu, 01 Jan 1970 00:00:00 GMT` 的字串（廣義的 {{rfc(7231)}}）。
 - {{jsxref("Date/toLocaleDateString", "toLocaleDateString()")}}、{{jsxref("Date/toLocaleTimeString", "toLocaleTimeString()")}} 和 {{jsxref("Date/toLocaleString", "toLocaleString()")}} 使用地區特定的日期和時間格式，通常由 [`Intl`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl) API 提供。
 
-範例請參見 [toString 方法回傳值的格式](#tostring_方法回傳值的格式) 一節。
+範例請參見 [toString 方法回傳值的格式](#tostring_方法回傳值的格式)一節。
 
 ## 建構子
 
