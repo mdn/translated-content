@@ -15,12 +15,12 @@ l10n:
 
 ## 示例
 
-以下示例显示了一个自定义复选框组件，其中有一个与之关联的 {{HTMLElement("label")}} 元素。将 `labels` 的值打印到控制台会返回一个包含一个表示此标签的条目 {{domxref("NodeList")}}。
+以下示例显示了一个自定义复选框组件，其中有一个与之关联的 {{HTMLElement("label")}} 元素。将 `labels` 的值打印到控制台会返回一个包含表示此标签的条目 {{domxref("NodeList")}}。
 
 ```html
 <form id="myForm">
   <custom-checkbox id="custom-checkbox"></custom-checkbox>
-  <label for="custom-checkbox">加入新闻通讯</label>
+  <label for="custom-checkbox">加入时事通讯</label>
 </form>
 ```
 
