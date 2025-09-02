@@ -110,7 +110,7 @@ VS Code 雖然絕非完美，但它擁有一套廣泛的鍵盤快捷鍵。在本
 
 從這裡，你可以使用*檔案總管*窗格頂部的相關按鈕來建立新的檔案和資料夾。
 
-1. 點擊*新增檔案...* 圖示（或 <kbd>Tab</kbd> 到它並按下 <kbd>Enter</kbd>／<kbd>Return</kbd>）來建立一個新檔案。
+1. 點擊*新增檔案...*圖示（或 <kbd>Tab</kbd> 到它並按下 <kbd>Enter</kbd>／<kbd>Return</kbd>）來建立一個新檔案。
 2. 在出現的文字輸入框中輸入檔案名稱為「index.html」，然後按下 <kbd>Enter</kbd>／<kbd>Return</kbd>。
 
 > [!NOTE]
@@ -124,7 +124,7 @@ VS Code 雖然絕非完美，但它擁有一套廣泛的鍵盤快捷鍵。在本
 
 讓我們來探索一下這個功能，並在此過程中，將我們的 `index.html` 檔案移動到它自己的子資料夾中。我們其實不希望它直接放在主 `web-projects` 資料夾裡。
 
-1. 使用 VS Code *檔案總管*窗格的*新增資料夾...* 按鈕，在 `web-projects` 內建立一個新資料夾。
+1. 使用 VS Code *檔案總管*窗格的*新增資料夾...*按鈕，在 `web-projects` 內建立一個新資料夾。
 2. 將它命名為 `test-site`。
 3. 現在你應該可以將 `index.html` 檔案拖放到 `test-site` 資料夾上，以將檔案移動到該資料夾內。
    > [!NOTE]
@@ -182,7 +182,7 @@ VS Code 雖然絕非完美，但它擁有一套廣泛的鍵盤快捷鍵。在本
 最好養成將資料夾和檔案名稱寫成小寫、不含空格、並用連字號分隔單字的習慣，至少在你清楚知道自己在做什麼之前是這樣。這樣一來，你將來會遇到較少的問題。
 
 > [!NOTE]
-> 你可以在 [Google 的 URL 結構最佳實踐](https://developers.google.com/search/docs/crawling-indexing/url-structure) 中找到更多關於檔案名稱和 URL 的最佳實踐。
+> 你可以在 [Google 的 URL 結構最佳實踐](https://developers.google.com/search/docs/crawling-indexing/url-structure)中找到更多關於檔案名稱和 URL 的最佳實踐。
 
 ## 檔案路徑
 
@@ -190,7 +190,7 @@ VS Code 雖然絕非完美，但它擁有一套廣泛的鍵盤快捷鍵。在本
 
 讓我們來看一個基本的範例。你現在可能還不完全明白這一切的意義，但沒關係。
 
-1. 在網路上搜尋一張你喜歡的圖片（例如，使用像 [Google 圖片](https://www.google.com/imghp) 這樣的服務）並下載它。或者，你也可以直接拿我們的 [Firefox 圖示圖片](https://raw.githubusercontent.com/mdn/beginner-html-site/refs/heads/main/images/firefox-icon.png) 來用於這個範例。
+1. 在網路上搜尋一張你喜歡的圖片（例如，使用像 [Google 圖片](https://www.google.com/imghp)這樣的服務）並下載它。或者，你也可以直接拿我們的 [Firefox 圖示圖片](https://raw.githubusercontent.com/mdn/beginner-html-site/refs/heads/main/images/firefox-icon.png)來用於這個範例。
 2. 將圖片放入你的 _images_ 資料夾中。
 3. 確保圖片檔案的名稱簡短、簡單且不含空格。例如，`firefox-icon.png` 很好，`cat.jpg` 也很好，但 `efregre^%^£$£@%$^&YTJgfbgfdgt54656756_ertgrth-rtgtfghhyj.png` 就不好。同時也要確保你保留了副檔名。
 
@@ -200,7 +200,7 @@ VS Code 雖然絕非完美，但它擁有一套廣泛的鍵盤快捷鍵。在本
 
    ```html
    <!doctype html>
-   <html lang="en-US">
+   <html lang="zh-TW">
      <head>
        <meta charset="utf-8" />
        <meta name="viewport" content="width=device-width" />
