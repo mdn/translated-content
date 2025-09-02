@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**べき乗代入演算子 (`**=`)\*\* は、[べき乗](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)を 2 つのオペランドで実行し、結果を左オペランドに代入します。
+<strong>べき乗代入演算子 (`**=`)</strong> は、[べき乗](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)を 2 つのオペランドで実行し、結果を左オペランドに代入します。
 
 {{InteractiveExample("JavaScript デモ: べき乗代入演算子 (**=)")}}
 
