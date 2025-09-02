@@ -3,7 +3,7 @@ title: animation-duration
 slug: Web/CSS/animation-duration
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`animation-duration`** [CSS](/ko/docs/Web/CSS) 속성은 애니메이션이 한 사이클을 완료하는 데 걸리는 시간을 지정합니다.
 

@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
 
-{{CSSRef}}
-
 **`box-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のフレームの周囲にシャドウ効果を追加します。カンマで区切ることで、複数の効果を設定することができます。ボックスの影は要素からの相対的な X および Y のオフセット、ぼかしと拡散の半径、色で記述します。
 
-{{InteractiveExample("CSS Demo: box-shadow")}}
+{{InteractiveExample("CSS デモ: box-shadow")}}
 
 ```css interactive-example-choice
 box-shadow: 10px 5px 5px red;

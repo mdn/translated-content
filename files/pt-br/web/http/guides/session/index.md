@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Session
 original_slug: Web/HTTP/Session
 ---
 
-{{HTTPSidebar}}
-
 Em protocolos cliente-servidor, como o HTTP, sessões consistem de três partes:
 
 1. O cliente estabelece uma conexão TCP (ou a conexão apropriada caso o protocolo TCP não seja o protocolo usado na camada de transporte).

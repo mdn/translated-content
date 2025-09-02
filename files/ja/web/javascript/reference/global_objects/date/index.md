@@ -9,7 +9,8 @@ l10n:
 
 JavaScript の **`Date`** オブジェクトは、単一の瞬間の時刻をプラットフォームに依存しない形式で表します。`Date` オブジェクトは、1970 年 1 月 1 日午前 0 時 (UTC)（元期）からのミリ秒を表す整数値をカプセル化しています。
 
-> **メモ:** {{jsxref("Temporal")}} API の導入に伴い、Date オブジェクトは古い機能と見なされます。新しいコードには `Temporal` を使用することを検討し、可能であれば既存のコードも移行してください（[ブラウザーの互換性](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility)を確認してください。使用ガイドは近日中に作成予定です！）。
+> [!NOTE]
+> {{jsxref("Temporal")}} API の導入に伴い、Date オブジェクトは古い機能と見なされます。新しいコードには `Temporal` を使用することを検討し、可能であれば既存のコードも移行してください（[ブラウザーの互換性](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility)を確認してください。使用ガイドは近日中に作成予定です！）。
 
 ## 解説
 
@@ -126,7 +127,8 @@ console.log(new Date(8.64e15 + 1).toString()); // "Invalid Date"
 
 {{jsxref("Date/Date", "Date()")}} コンストラクターは 2 つ以上の引数を指定して呼び出すことができ、その場合はそれぞれローカル時刻年、月、日、時、分、秒、ミリ秒として解釈されます。{{jsxref("Date.UTC()")}} も同様に動作しますが、こちらは成分を UTC 時刻として解釈し、年を表す単一の引数も受け入れます。
 
-> **メモ:** `Date()` コンストラクターや `Date.UTC()`、そして非推奨の {{jsxref("Date/getYear", "getYear()")}}/{{jsxref("Date/setYear", "setYear()")}} メソッドなど、一部のメソッドは 2 桁の年を 1900 年代の年として解釈します。例えば、`new Date(99, 5, 24)` は 1999 年 6 月 24 日と解釈され、99 年 6 月 24 日とは解釈されません。 詳細は [2 桁の年の解釈](#2_桁の年の解釈) を参照ください。
+> [!NOTE]
+> `Date()` コンストラクターや `Date.UTC()`、そして非推奨の {{jsxref("Date/getYear", "getYear()")}}/{{jsxref("Date/setYear", "setYear()")}} メソッドなど、一部のメソッドは 2 桁の年を 1900 年代の年として解釈します。例えば、`new Date(99, 5, 24)` は 1999 年 6 月 24 日と解釈され、99 年 6 月 24 日とは解釈されません。 詳細は [2 桁の年の解釈](#2_桁の年の解釈) を参照ください。
 
 ある部分が指定範囲を超えたり、下回ったりした場合、通常、その部分は上位の部分に「繰り上げ」されるか、「繰り下げ」されます。例えば、月を 12 に設定すると（月はゼロ基点なので、12 月は 11）、翌年の 1 月になります。日を 0 に設定すると、前月の最終日になります。これは[日時文字列形式](#日時文字列形式)で指定した日付にも適用されます。
 
@@ -415,7 +417,8 @@ function printElapsedTime(testFn) {
 const yourFunctionReturn = printElapsedTime(yourFunction);
 ```
 
-> **メモ:** {{domxref("Performance API", "ウェブパフォーマンス API", "", "nocode")}} の高精度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} で、 {{jsxref("Date.now()")}} よりも高信頼かつ高精度な経過時間の測定が可能です。
+> [!NOTE]
+> {{domxref("Performance API", "ウェブパフォーマンス API", "", "nocode")}} の高精度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} で、 {{jsxref("Date.now()")}} よりも高信頼かつ高精度な経過時間の測定が可能です。
 
 ### ECMAScript 元期からの経過秒数を取得する
 

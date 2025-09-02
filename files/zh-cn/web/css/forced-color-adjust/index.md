@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`forced-color-adjust`** CSS 属性允许用户将某些元素从强制颜色模式中移除，这些值的控制权将交还给 CSS。
 
 ## 语法

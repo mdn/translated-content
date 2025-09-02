@@ -2,10 +2,8 @@
 title: 標準組み込みオブジェクト
 slug: Web/JavaScript/Reference/Global_Objects
 l10n:
-  sourceCommit: fb442649a7e91a177a582a3e9c6e1a95a9e8dda5
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar("Objects")}}
 
 本章では JavaScript の標準組み込みオブジェクトについて、それらのメソッドやプロパティと共にすべて文書化しています。
 
@@ -62,6 +60,7 @@ l10n:
 - {{jsxref("EvalError")}}
 - {{jsxref("RangeError")}}
 - {{jsxref("ReferenceError")}}
+- {{jsxref("SuppressedError")}}
 - {{jsxref("SyntaxError")}}
 - {{jsxref("TypeError")}}
 - {{jsxref("URIError")}}
@@ -75,6 +74,7 @@ l10n:
 - {{jsxref("BigInt")}}
 - {{jsxref("Math")}}
 - {{jsxref("Date")}}
+- {{jsxref("Temporal")}}
 
 ### テキスト処理
 
@@ -88,6 +88,7 @@ l10n:
 これらのオブジェクトは、インデックス値で順序付けされたデータのコレクションを表します。これには、(型付けされた) 配列や配列に似た構造体も含まれます。
 
 - {{jsxref("Array")}}
+- {{jsxref("TypedArray")}}
 - {{jsxref("Int8Array")}}
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8ClampedArray")}}
@@ -139,6 +140,8 @@ l10n:
 - {{jsxref("Generator")}}
 - {{jsxref("AsyncGenerator")}}
 - {{jsxref("AsyncFunction")}}
+- {{jsxref("DisposableStack")}}
+- {{jsxref("AsyncDisposableStack")}}
 
 ### リフレクション
 

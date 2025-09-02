@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f72ba695e4d6d4dd74ee71a2cc3b774410acd1ea
 ---
 
-{{AddonSidebar}}
-
 允许扩展程序与浏览器的下载管理器进行交互。你可以使用此 API 模块下载文件，取消、暂停、恢复下载，并在文件管理器中显示已下载的文件。
 
 要使用此 API，你需要在 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中指定“downloads” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。

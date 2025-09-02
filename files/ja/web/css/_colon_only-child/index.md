@@ -3,8 +3,6 @@ title: :only-child
 slug: Web/CSS/:only-child
 ---
 
-{{CSSRef}}
-
 **`:only-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素がない要素を表します。 `:first-child:last-child` または `:nth-child(1):nth-last-child(1)` と同じですが、詳細度はより低くなります。
 
 ```css
@@ -14,7 +12,7 @@ p:only-child {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :only-child", "tabbed-shorter")}}
 
 ```css interactive-example
 li:only-child {

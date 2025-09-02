@@ -2,10 +2,8 @@
 title: await 演算子
 slug: Web/JavaScript/Reference/Operators/await
 l10n:
-  sourceCommit: 364a4d02b10854ab7cef4ff4b0ec3616d4e1c8ab
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`await`** 演算子はプロミス ({{jsxref("Promise")}}) を待ち、履行値を取得するために使用します。[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の中、または[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)の最上位でのみ使用することができます。
 

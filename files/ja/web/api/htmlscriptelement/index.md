@@ -44,7 +44,8 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 - {{domxref("HTMLScriptElement.text")}}
   - : この {{HTMLElement("script")}} 要素の中にあるすべての {{domxref("Text")}} ノード（コメントなどの他のノードを除く）の内容をツリー順で連結した文字列です。設定した場合は、{{domxref("Node.textContent")}} プロパティと同様に動作します。
 
-    > **メモ:** {{domxref("Document.write()")}} メソッドで挿入された場合、 {{HTMLElement("script")}} 要素は（ふつう同期的に）実行されますが、 {{domxref("Element.innerHTML")}} または {{domxref("Element.outerHTML")}} を使用して挿入された場合は実行されません。
+    > [!NOTE]
+    > {{domxref("Document.write()")}} メソッドで挿入された場合、 {{HTMLElement("script")}} 要素は（ふつう同期的に）実行されますが、 {{domxref("Element.innerHTML")}} または {{domxref("Element.outerHTML")}} を使用して挿入された場合は実行されません。
 
 - {{domxref("HTMLScriptElement.type")}}
   - : 文字列で、スクリプトの MIME タイプを表します。これは {{HTMLElement("script")}} 要素の `type` 属性を反映したものです。

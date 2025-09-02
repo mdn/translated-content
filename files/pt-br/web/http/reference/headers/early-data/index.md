@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Early-Data
 original_slug: Web/HTTP/Headers/Early-Data
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{SeeCompatTable}}
 
 O cabeçalho **`Early-Data`** é colocado por um intermediário para indicar que a requisição foi transportada em [dados precoces do TLS (TLS _early data_)](/pt-BR/docs/Web/Security/Transport_Layer_Security#TLS_1.3), e também indica que o intermediário entende o código de status {{HTTPStatus("425", "425 (Too Early)")}}.
 

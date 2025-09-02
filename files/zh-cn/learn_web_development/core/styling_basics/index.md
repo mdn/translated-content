@@ -61,8 +61,6 @@ slug: Learn_web_development/Core/Styling_basics
   - : 这项评估测试你对基本语法、选择器、特异性、盒子模型的掌握。
 - [设计漂亮的信头信笺](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper)
   - : 如果你想留下良好的印象，用一张漂亮的信头信笺写一封信一定是个好的开始。在这一评估中，你将挑战创建这样一个漂亮的网络样板。
-- [一个炫酷的盒子](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box)
-  - : 在这里，你将练习使用背景和边距来创建一个吸引眼球的盒子。
 
 ## 参见
 

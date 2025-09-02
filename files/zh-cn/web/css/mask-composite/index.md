@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b64538dc77e9a6181b882bd54bdbb307c1430ba8
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`mask-composite`** 表示对当前遮罩层及其下方遮罩层执行的合成操作。
 
 ## 语法

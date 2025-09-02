@@ -587,7 +587,8 @@ input[type="radio"]:indeterminate {
 > [!NOTE]
 > この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
 
-> **メモ:** [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
+> [!NOTE]
+> [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
 
 ## その他の擬似クラス
 
@@ -604,7 +605,7 @@ input[type="radio"]:indeterminate {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト：高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト：高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms)を見てください。
 
 ## まとめ
 

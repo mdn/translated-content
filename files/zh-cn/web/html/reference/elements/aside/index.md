@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTMLSidebar}}
-
 **`<aside>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于表示文档中内容仅与主内容间接相关的部分。通常以侧边栏或提示框的形式呈现。
 
 {{InteractiveExample("HTML Demo: &lt;aside&gt;", "tabbed-standard")}}

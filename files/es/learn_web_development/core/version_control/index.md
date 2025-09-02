@@ -26,7 +26,8 @@ Los VCS proporcionan herramientas para satisfacer las necesidades anteriores. [G
 
 Hemos preparado un curso que incluye toda la información esencial que necesitas para alcanzar tu objetivo.
 
-> **Observación:** [Comenzar](/es/docs/orphaned/Learn/Front-end_web_developer)
+> [!CALLOUT]
+> [Comenzar](/es/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Prerequisitos
 

@@ -2,10 +2,8 @@
 title: ウェブ開発の学習
 slug: Learn_web_development
 l10n:
-  sourceCommit: 9b80c652eda0b516f3ed7f9be3b90f59aa9982e1
+  sourceCommit: 99d723c4f77d7f537292a07dd7b5e5c13cb610da
 ---
-
-{{LearnSidebar}}
 
 ## 新人フロントエンド開発者のための基本的なスキルセット
 
@@ -13,7 +11,7 @@ MDN の**ウェブ開発の学習**（または**学習**）へようこそ。�
 
 ## ウェブ開発の学習について
 
-- フロントエンド開発者がキャリアを成功させ、業界で通用するために必要なスキルと知識を定義します。
+- [MDN カリキュラム](/en-US/curriculum/)（英語）で定義されている、キャリアの成功と業界での活躍に必要な、すべてのフロントエンド開発者に必要な基本的なスキルと知識が学べます。
 
 - MDN コミュニティによって作成され、より幅広いウェブコミュニティの学生、教育者、開発者からの観察により改良されました。
 
@@ -31,7 +29,23 @@ MDN の**ウェブ開発の学習**（または**学習**）へようこそ。�
 - 基本を終えた方
   - : [発展モジュール](/ja/docs/Learn_web_development/Extensions)は、知識を広げ、専門分野を開発し始めるには有益な追加スキルを扱っています。コアモジュールを完了したら、こちらに進んでください。
 - 学校で働いている方
-  - : 私たちのモジュールを指導のガイドとして使い、さらにアイディアをお探しの方は[教育者ページ](/ja/docs/Learn_web_development/Educators)を参照するか、または Scrimba の [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN カリキュラムパートナー_</sup> に生徒を登録してください。
+  - : 私たちのモジュールを指導のガイドとして使い、さらにアイディアをお探しの方は[教育者ページ](/ja/docs/Learn_web_development/Educators)を参照するか、または Scrimba の [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> に生徒を登録してください。
+
+## スキルテスト
+
+このコースでは、このコースで学んだ内容を理解しているかどうかを評価するための記事がいくつか用意されています。記事には 2 種類あります。
+
+- 「スキルテスト」の記事は頻繁に現れ、HTML リンク、CSS ボックスモデル、JavaScript 関数など、単一の機能に関する知識を検査します。
+- 「チャレンジ」はそれほど頻繁には現れませんが、複数の機能を組み合わせて、完全なウェブサイトやプログラムを作成するための能力を検査します。
+
+ほとんどの質問には、それぞれのタスクの開始コードを示す HTML/CSS/JavaScript コードブロックが含まれています。それぞれを解くには、コードブロックの **"Play"** ボタンを押して [MDN Playground](/en-US/play) でサンプルを開き、質問の指示に従ってコードを編集することをお勧めします。
+
+もし間違えてしまった場合は、MDN Playground の「リセット」ボタンを使用して作業内容を消去することができます。どうしても解決できない場合は、通常、それぞれの質問の章の下部に解決策が表示されます。また、[助けを求める](#連絡方法)こともできます。
+
+> [!NOTE]
+> 自分自身でエディターやオンラインエディター（[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/) など）で作業したい場合は、MDN Playground からコードをコピーして、お好みの環境に貼り付けてください。
+
+一部の質問には、作業を開始するためのコードブロックが含まれておらず、代わりに、ローカルマシンで作業するためのスターターファイルをダウンロードするよう指示があります。これは、質問が複雑なため、あるいは単に少し変更を加えたいためです。
 
 ## サンプルコードの入手
 
@@ -44,15 +58,15 @@ MDN の**ウェブ開発の学習**（または**学習**）へようこそ。�
 
 何か連絡を取りたいことがある場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)を使用してください。サイト上で間違っていると思うことや足りないもの、新しい学習テーマのリクエスト、わからない項目のヘルプなど、どんなことでもお聞かせください。
 
-コンテンツの作成、改善の手助けに興味がある場合、[協力するには？](/ja/docs/MDN/Community)を覗いて、それから連絡を取ってください！　あなたが初心者でも、教師でも、経験豊富なウェブ開発者でも、その他学習体験の改善に興味がある人でも、誰でも歓迎です。
+コンテンツの作成、改善の手助けに興味がある場合、[協力するには](/ja/docs/MDN/Community)を覗いて、それから連絡を取ってください！　あなたが初心者でも、教師でも、経験豊富なウェブ開発者でも、その他学習体験の改善に興味がある人でも、誰でも歓迎です。
 
 ## 関連情報
 
-- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
-  - : [Scrimba](https://scrimba.com?via=mdn) のフロントエンド開発者キャリアパスでは、楽しく対話しながら学べるレッスンや課題、知識豊富な講師、対応しているコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを学ぶことができます。ゼロから最初のフロントエンドの仕事に就くまで、このコースの多くの部分は、無料版として単独で利用できます。
-- [Learn JavaScript](https://learnjavascript.online/)
-  - : ウェブ開発者を目指す人のための優れたリソースです。インタラクティブな環境で、短いレッスンとインタラクティブなテストを使用して、自動的に採点される評価試験にガイドされながら JavaScript を学ぶことができます。最初の 40 レッスンは無料で、完全なコースはわずかな一回の支払いで利用できます。
-- [Codecademy](https://www.codecademy.com/)
+- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>
+  - : [Scrimba](https://scrimba.com?via=mdn) （英語）のフロントエンド開発者キャリアパスでは、楽しく対話しながら学べるレッスンや課題、知識豊富な講師、対応しているコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを学ぶことができます。ゼロから最初のフロントエンドの仕事に就くまで、このコースの多くの部分は、無料版として単独で利用できます。
+- [Codecademy](https://www.codecademy.com/)（英語）
   - : 一からプログラミング言語を学ぶための優れたインタラクティブなサイトです。
-- [freeCodeCamp.org](https://www.freecodecamp.org/)
+- [freeCodeCamp.org](https://www.freecodecamp.org/)（英語）
   - : ウェブ開発を学習するチュートリアルやプロジェクトを備えたインタラクティブなサイトです。
+- [Learn JavaScript](https://learnjavascript.online/)（英語）
+  - : ウェブ開発者を目指す人のための優れたリソースです。インタラクティブな環境で、短いレッスンとインタラクティブなテストを使用して、自動的に採点される評価試験にガイドされながら JavaScript を学ぶことができます。最初の 40 レッスンは無料で、完全なコースはわずかな一回の支払いで利用できます。

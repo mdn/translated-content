@@ -136,7 +136,7 @@ l10n:
 <!--div>
   <label for="username">名字：</label>
   <input id="username" type="text" name="username" required>
-  <label for="username"><span aria-label="必须">*</label>
+  <label for="username"><span aria-label="必须">*</span></label>
 </div-->
 
 <!-- 可能没有这样写好： -->

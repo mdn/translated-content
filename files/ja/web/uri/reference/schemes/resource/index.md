@@ -3,7 +3,7 @@ title: "resource: URL"
 short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
 l10n:
-  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
+  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
 ---
 
 {{non-standard_header}}
@@ -12,19 +12,22 @@ l10n:
 
 ## 構文
 
-リソース URL は、接頭辞 (`resource:`) と読み込むするリソースを指す URL の 2 つの部分で構成されます。
-
 ```url
 resource://<path>
 ```
 
-例えば次のようになります。
+- `resource:`
+  - : この URL のスキームです。
+- `<path>`
+  - : 読み込むリソースを指すパス。
+
+例を示します。
 
 ```url
 resource://gre/res/svg.css
 ```
 
-リソース URL ('->') に矢印がある場合は、最初のファイルが次のファイルにロードされたことを意味します。
+リソース URL に矢印 ('->') がある場合は、最初のファイルが次のファイルを読み込むことを意味します。
 
 ```url
 resource://<File-loader> -> <File-loaded>

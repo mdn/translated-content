@@ -3,7 +3,7 @@ title: <acronym>
 slug: Web/HTML/Reference/Elements/acronym
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<acronym>`** [HTML](/zh-TW/docs/Web/HTML) 元素允許作者清楚地指示一系列字元，這些字元構成一個詞的縮寫或簡稱。
 

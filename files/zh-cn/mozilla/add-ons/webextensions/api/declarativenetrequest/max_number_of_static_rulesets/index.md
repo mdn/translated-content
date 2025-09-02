@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 扩展可以在清单（manifest）键 [`declarative_net_request.rule_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 中指定的静态规则集的最大数量。
 
 其值为 `50`。

@@ -2,10 +2,8 @@
 title: 式と演算子
 slug: Web/JavaScript/Reference/Operators
 l10n:
-  sourceCommit: 8cf6d8c10adf3ce5370f8a3f180bec11112d4d44
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 この節では、JavaScript 言語のすべての演算子、式、キーワードについて記述しています。
 
@@ -129,7 +127,8 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/in", "in")}}
   - : `in` 演算子は、与えられたプロパティをオブジェクトが持っているかどうかを判別します。
 
-> **メモ:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
+> [!NOTE]
+> `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
 
 ### 等値演算子
 

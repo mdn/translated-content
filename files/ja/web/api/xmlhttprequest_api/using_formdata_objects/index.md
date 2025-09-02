@@ -38,7 +38,8 @@ send.addEventListener("click", async () => {
 });
 ```
 
-> **メモ:** `"avatar"` および `"webmasterfile"` フィールドはどちらも、ファイルを含んでいます。フィールド `"accountnum"` に与えた数値は [`FormData.append()`](/ja/docs/Web/API/FormData/append) メソッドにより直ちに文字列へ変換されます（フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、文字列のいずれかを取ることができます。値が `Blob` でも `File` でもない場合は、文字列に変換されます）。
+> [!NOTE]
+> `"avatar"` および `"webmasterfile"` フィールドはどちらも、ファイルを含んでいます。フィールド `"accountnum"` に与えた数値は [`FormData.append()`](/ja/docs/Web/API/FormData/append) メソッドにより直ちに文字列へ変換されます（フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、文字列のいずれかを取ることができます。値が `Blob` でも `File` でもない場合は、文字列に変換されます）。
 
 この例では、 `"username"`, `"accountnum"`, `"avatar"`, `"webmasterfile"` というフィールドの値を含む `FormData` インスタンスを構築し、 {{domxref("Window/fetch", "fetch()")}} を使用してフォームのデータを送信します。 `"webmasterfile"` フィールドは {{domxref("Blob")}} です。 `Blob` オブジェクトは、不変的な生データのファイルのようなオブジェクトを表します。 Blob は、必ずしも JavaScript に適した形式ではないデータを表します。 {{ domxref("File") }} インターフェイスは `Blob` をベースにしており、 Blob の機能を継承し、ユーザーのシステム上のファイルをサポートするように拡張されています。 `Blob` を作成するには、 [`Blob()` コンストラクター](/ja/docs/Web/API/Blob/Blob)を呼び出します。
 
@@ -46,7 +47,8 @@ send.addEventListener("click", async () => {
 
 既存の {{ HTMLElement("form") }} のデータを含む `FormData` オブジェクトを構築するには、 `FormData` オブジェクトの作成時にその form 要素を指定します。
 
-> **メモ:** `FormData` は `name` 属性を使用する入力フィールドのみを使用します。
+> [!NOTE]
+> `FormData` は `name` 属性を使用する入力フィールドのみを使用します。
 
 ```js
 const formData = new FormData(someFormElement);

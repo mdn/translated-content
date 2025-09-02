@@ -3,8 +3,6 @@ title: <display-legacy>
 slug: Web/CSS/display-legacy
 ---
 
-{{CSSRef}}
-
 CSS 2 为 `display` 属性使用单关键字的语法，对于相同布局模式的块级和行级变体要求使用各自的关键字。本文详述这些关键字。
 
 ## 语法
