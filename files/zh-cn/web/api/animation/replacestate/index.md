@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-[Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的只读属性 **`Animation.replaceState`** 表示动画是否已被浏览器在被另一个动画替换后被自动移除。
+[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 的只读属性 **`Animation.replaceState`** 表示动画是否在被另一个动画替换后[由浏览器自动移除](/zh-CN/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#自动删除填充动画)。
 
 ## 值
 
@@ -30,7 +30,7 @@ l10n:
 
 ## 参见
 
-- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}}
 - {{domxref("Animation.remove_event","remove")}} 事件
 - {{domxref("Animation.persist()")}}
