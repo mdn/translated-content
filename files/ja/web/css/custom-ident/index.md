@@ -2,7 +2,7 @@
 title: <custom-ident>
 slug: Web/CSS/custom-ident
 l10n:
-  sourceCommit: a42dcee9b9cd82d26f1d8de321e2f42975aea07d
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`<custom-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、{{glossary("identifier", "識別子")}}として使われるユーザー定義の任意の文字列を意味します。これは大文字と小文字を区別し、曖昧さを避けるため、いくつかの値は様々なコンテキストで禁止されています。
@@ -110,8 +110,8 @@ CSS では、文字をエスケープする方法がいくつかあります。�
     - `disclosure-open`
     - `disclosure-close`
 
-- {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}
-  - : `span` 値を禁止しています。
+- {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}, {{CSSxRef("grid-template-rows")}}, {{CSSxRef("grid-template-columns")}}
+  - : `span` 値および `auto` 値を禁止しています。
 - {{CSSxRef("view-transition-name")}}
   - : グローバル CSS 値 (`unset`, `initial`, `inherit`) および `none` の値を禁止しています。
 - {{CSSxRef("will-change")}}
@@ -127,7 +127,7 @@ ground-level      アルファベットとダッシュの組み合わせ
 -test             ダッシュとそれに続くアルファベット
 _internal         アンダースコアとそれに続くアルファベット
 \22 toto          Unicode 文字とそれに続くアルファベット
-bili\.bob         ピリオドが正しくエスケープされている
+scooby\.doo       ピリオドが正しくエスケープされている
 ```
 
 ### 無効な識別子
@@ -135,9 +135,9 @@ bili\.bob         ピリオドが正しくエスケープされている
 ```plain example-bad
 34rem             数字で始まってはいけない
 -12rad            ダッシュで始まって数字が続いてはいけない
-bili.bob          アルファベットと数字以外でエスケープせずに使えるのは _ と - だけ
-'bilibob'         <string> になります
-"bilibob"         <string> になります
+scooby.doo        アルファベットと数字以外でエスケープせずに使えるのは _ と - だけ
+'scoobyDoo'       <string> になります
+"scoobyDoo"       <string> になります
 ```
 
 ## 仕様書

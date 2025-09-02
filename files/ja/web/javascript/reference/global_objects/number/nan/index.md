@@ -1,11 +1,10 @@
 ---
 title: Number.NaN
+short-title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Number.NaN`** 静的データプロパティは非数 (Not-A-Number) を表す値であり、{{jsxref("NaN")}} と同じです。`NaN` の動作についての詳しい情報は、[グローバルプロパティの説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN)を参照してください。
 
@@ -13,9 +12,8 @@ l10n:
 
 ```js interactive-example
 function clean(x) {
-  // eslint-disable-next-line use-isnan
   if (x === Number.NaN) {
-    // Can never be true
+    // true になることはない
     return null;
   }
   if (isNaN(x)) {
@@ -24,7 +22,7 @@ function clean(x) {
 }
 
 console.log(clean(Number.NaN));
-// Expected output: 0
+// 予想される結果: 0
 ```
 
 ## 値

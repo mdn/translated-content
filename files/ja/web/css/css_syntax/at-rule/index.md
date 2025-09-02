@@ -2,7 +2,7 @@
 title: アットルール
 slug: Web/CSS/CSS_syntax/At-rule
 l10n:
-  sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **アットルール**は [CSS の文](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_statements)のうち、CSS の動作を規定するものです。アットルールはアットマーク、`@` (U+0040 COMMERCIAL AT) で始まり、識別子が続きます。次のセミコロン、 `;` (U+003B SEMICOLON) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の宣言ブロック)のどちらかが現れるまでの部分からなります。
