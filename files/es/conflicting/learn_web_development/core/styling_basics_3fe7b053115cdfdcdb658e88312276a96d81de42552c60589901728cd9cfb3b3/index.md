@@ -1,6 +1,7 @@
 ---
 title: "Desafío: Una caja con aspecto genial"
-slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
+slug: conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3
+original_slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
 l10n:
   sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
