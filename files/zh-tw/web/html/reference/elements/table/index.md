@@ -10,7 +10,7 @@ slug: Web/HTML/Reference/Elements/table
 ```html interactive-example
 <table>
   <caption>
-    2021 前端網頁開發課程
+    2021 前端 Web 開發課程
   </caption>
   <thead>
     <tr>
