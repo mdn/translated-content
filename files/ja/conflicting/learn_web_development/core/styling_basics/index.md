@@ -1,6 +1,7 @@
 ---
 title: "課題: 基本的な CSS の理解"
-slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+slug: conflicting/Learn_web_development/Core/Styling_basics
+original_slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
