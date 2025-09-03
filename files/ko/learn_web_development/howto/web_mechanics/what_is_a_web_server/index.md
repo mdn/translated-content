@@ -3,7 +3,7 @@ title: 웹 서버란 무엇일까?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 l10n:
-  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f 
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
