@@ -37,7 +37,7 @@ slug: Web/HTML/Reference/Elements/table
     </tr>
     <tr>
       <th scope="row">Karen</th>
-      <td>網頁表現</td>
+      <td>Web 效能</td>
       <td>36</td>
     </tr>
   </tbody>
