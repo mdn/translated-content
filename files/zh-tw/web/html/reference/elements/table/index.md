@@ -236,7 +236,7 @@ tfoot td {
   </tbody>
 </table>
 
-<p>有colgroup的表格</p>
+<p>有 colgroup 的表格</p>
 <table>
   <colgroup span="4"></colgroup>
   <tr>
