@@ -3,8 +3,6 @@ title: font-synthesis
 slug: Web/CSS/font-synthesis
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`font-synthesis`** 속성은 브라우저가 굵은 글꼴과 이탤릭 글꼴을 합성하는 것을 허용할지 설정합니다.
 
 {{InteractiveExample("CSS Demo: font-synthesis")}}

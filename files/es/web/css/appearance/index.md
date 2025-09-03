@@ -3,13 +3,14 @@ title: -moz-appearance (-webkit-appearance)
 slug: Web/CSS/appearance
 ---
 
-{{non-standard_header}}{{CSSRef}}
+{{non-standard_header}}
 
 La propiedad CSS `-moz-appearance` se utiliza en Gecko (Firefox) para visualizar un elemento utilizando una plataforma nativa basada en el estilo del tema del sistema operativo.
 
 Esta propiedad es frecuentemente utilizada en hojas de estilo [XUL](/es/docs/Mozilla/Tech/XUL/Tutorial) para diseñar widgets personalizados con un estilo apropiado a la plataforma. También se utiliza en las implementaciones [XBL](/es/docs/XBL) de los widgets que se arman en la plataforma Mozilla.
 
-> **Nota:** _No utilizar_ esta propiedad en sitios Web: no sólo porque no es estándar, sinó porque su comportamiento cambia de un navegador a otro. Incluso la palabra clave `none` no tiene el mismo comportamiento en cada elemento de formulario a través de diferentes navegadores, y alguno no la soporta en absoluto.
+> [!NOTE]
+> _No utilizar_ esta propiedad en sitios Web: no sólo porque no es estándar, sinó porque su comportamiento cambia de un navegador a otro. Incluso la palabra clave `none` no tiene el mismo comportamiento en cada elemento de formulario a través de diferentes navegadores, y alguno no la soporta en absoluto.
 
 {{cssinfo}}
 

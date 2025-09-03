@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9c9be5239fe7fb2907784e8cace339d4910eb103
 ---
 
-{{AddonSidebar}}
-
 当发生错误并且导航被中止时触发此事件。这可能是网络错误或用户中止导航导致的。
 
 ## 语法

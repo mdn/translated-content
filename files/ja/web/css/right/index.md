@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
-{{CSSRef}}
-
 **`right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。
 
-{{InteractiveExample("CSS Demo: right")}}
+{{InteractiveExample("CSS デモ: right")}}
 
 ```css interactive-example-choice
 right: 0;

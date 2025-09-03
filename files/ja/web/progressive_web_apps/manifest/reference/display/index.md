@@ -2,10 +2,8 @@
 title: display
 slug: Web/Progressive_web_apps/Manifest/Reference/display
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `display` はマニフェストのメンバーで、ウェブアプリケーションの推奨表示モードを指定するために使用します。表示モードは、オペレーティングシステムのコンテキスト内でアプリケーションが起動された際に、ブラウザーのUIがユーザーに表示される範囲を決定します。ブラウザーのインターフェイスをすべて表示するか、あるいは非表示にして、よりアプリケーションらしい体験を提供するかを選択できます。
 
@@ -46,7 +44,8 @@ l10n:
 
 表示モードに応じて選択的に CSS を提供するには、 {{cssxref("@media/display-mode", "display-mode")}} メディア特性を使用することができます。これにより、サイトを URL から起動した場合とデスクトップアイコンから起動した場合とでユーザーの操作に一貫性を持たせることができます。
 
-> **メモ:** `display-mode` メディア特性の値は、ブラウザーで実際に使用されている `display` モードを反映します。
+> [!NOTE]
+> `display-mode` メディア特性の値は、ブラウザーで実際に使用されている `display` モードを反映します。
 > これは、マニフェストでリクエストされたモードと異なる場合があります。リクエストされたモードにブラウザーが対応していない可能性があるためです。
 
 次のコードのように、使用されている `display-mode` に応じて、アプリのスタイル設定を調整することができます。

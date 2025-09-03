@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど [`margin`](/ja/docs/Web/CSS/margin) プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
 
 {{InteractiveExample("CSS デモ: scroll-margin")}}

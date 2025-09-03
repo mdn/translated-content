@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/501
 original_slug: Web/HTTP/Status/501
 ---
 
-{{HTTPSidebar}}
-
 Le code de réponse HTTP d'erreur serveur **`501 Not Implemented`** indique que le serveur ne prend pas en charge les fonctionnalités nécessaires pour réaliser la requête.
 
 Une telle réponse peut également contenir un en-tête [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After) indiquant au client le moment auquel revenir pour vérifier si la fonctionnalité est alors prise en charge.

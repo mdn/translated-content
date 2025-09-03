@@ -68,7 +68,8 @@ var context = new AudioContext();
 var buffer = context.createBuffer(2, 22050, 44100);
 ```
 
-> **メモ:** [デジタルオーディオに](https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA)おいて、**44100**[Hz](https://ja.wikipedia.org/wiki/%E3%83%98%E3%83%AB%E3%83%84)(**44.1kHz** とも表記される)は一般的な[サンプリング周波数](https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96)です。なぜ 44.1kHz なのでしょう？
+> [!NOTE]
+> [デジタルオーディオに](https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA)おいて、**44100**[Hz](https://ja.wikipedia.org/wiki/%E3%83%98%E3%83%AB%E3%83%84)(**44.1kHz** とも表記される)は一般的な[サンプリング周波数](https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96)です。なぜ 44.1kHz なのでしょう？
 >
 > 第一に、人間の耳の[可聴範囲](https://en.wikipedia.org/wiki/Hearing_range)は、大雑把に 20 から 20000Hz の範囲です。[Nyquist-Shannon のサンプリング定理](https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96%E5%AE%9A%E7%90%86)により、サンプリング周波数は再現したい最大周波数の 2 倍以上でなくてはなりません。したがって、サンプリングレートは 40kHz 以上でなくてはなりません。
 >

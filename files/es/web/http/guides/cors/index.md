@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 726efed289eb9d62eef723bdc506dc39e4abcbb3
 ---
 
-{{HTTPSidebar}}
-
 **El intercambio de recursos de origen cruzado** ({{Glossary("CORS")}}, por sus siglas en inglés), es un mecanismo basado en cabeceras {{Glossary("HTTP")}} que permite a un servidor indicar cualquier dominio, esquema o puerto con un {{Glossary("origin", "origen")}} distinto del suyo desde el que un navegador debería permitir la carga de recursos. CORS también se basa en un mecanismo por el cual los navegadores realizan una solicitud de "verificación previa" al servidor que aloja el recurso de origen cruzado, con el fin de comprobar que el servidor permitirá la solicitud real. En esa comprobación previa, el navegador envía cabeceras que indican el método HTTP y las cabeceras que se utilizarán en la solicitud real.
 
 Un ejemplo de solicitud de origen cruzado: el código JavaScript del front-end servido desde `https://domain-a.com` utiliza {{domxref("XMLHttpRequest")}} para realizar una solicitud a `https://domain-b.com/data.json` .
@@ -73,7 +71,8 @@ Una petición simple es aquella que cumple todas las siguientes condiciones:
 - Si la petición se realiza utilizando un objeto {{domxref("XMLHttpRequest")}}, no se registran detectores de eventos en el objeto devuelto por la propiedad {{domxref("XMLHttpRequest.upload")}} utilizada en la petición; Es decir, dada una instancia `xhr` de {{domxref("XMLHttpRequest")}}, ningún código ha llamado a `xhr.upload.addEventListener()` para añadir un detector de eventos para monitorizar la subida.
 - No se utiliza ningún objeto {{domxref("ReadableStream")}} en la solicitud.
 
-> **Nota:** _WebKit Nightly_ y _Safari Technology Preview_ imponen restricciones adicionales a lo valores permitidos en las cabeceras {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} y {{HTTPHeader("Content-Language")}}. Si alguna de esas cabeceras tiene valores "no estándar", WebKit/Safari no consideran que la petición sea una "solicitud simple". Los valores que WebKit/Safari consideran "no estándar" no están documentados, excepto en los siguientes errores de WebKit:
+> [!NOTE]
+> _WebKit Nightly_ y _Safari Technology Preview_ imponen restricciones adicionales a lo valores permitidos en las cabeceras {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} y {{HTTPHeader("Content-Language")}}. Si alguna de esas cabeceras tiene valores "no estándar", WebKit/Safari no consideran que la petición sea una "solicitud simple". Los valores que WebKit/Safari consideran "no estándar" no están documentados, excepto en los siguientes errores de WebKit:
 >
 > - [Comprobación previa requerida para cabeceras de solicitud CORS-safelisted no estándar: Accept, Accept-Language y Content-Language](https://webkit.org/b/165178)
 > - [Permitir comas en las cabeceras para CORS simple en Accept, Accept-Language y Content-Language](https://webkit.org/b/165566)

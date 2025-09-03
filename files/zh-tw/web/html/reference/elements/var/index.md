@@ -3,8 +3,6 @@ title: <var>：變數元素
 slug: Web/HTML/Reference/Elements/var
 ---
 
-{{HTMLSidebar}}
-
 **`<var>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於表示數學表達式或編程上下文中的變數名稱。通常使用斜體版本的當前字型呈現，儘管該行為依賴於瀏覽器。
 
 {{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}

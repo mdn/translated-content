@@ -5,11 +5,10 @@ l10n:
   sourceCommit: 243dd73fe136031badaef52c3e6133b21bcf7a07
 ---
 
-{{CSSRef}}
-
 **`<position>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 2 次元の座標を表し、要素ボックスからの相対的な位置を示すために用いられます。 {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}}, {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}}, {{cssxref("transform-origin")}} で使用されています。
 
-> **メモ:** `<position>` 値で記述される最終的な位置は、要素ボックスの中である必要はありません。
+> [!NOTE]
+> `<position>` 値で記述される最終的な位置は、要素ボックスの中である必要はありません。
 
 ## 構文
 
@@ -38,7 +37,8 @@ value value              /* それぞれの方向（水平、垂直）の距離�
 keyword value keyword value /* それぞれの値はその前のキーワードからのオフセット */
 ```
 
-> **メモ:** {{cssxref("background-position")}} プロパティも3つの値の構文を受け付けます。これは `<position>` を使用する他のプロパティでは許可されません。
+> [!NOTE]
+> {{cssxref("background-position")}} プロパティも3つの値の構文を受け付けます。これは `<position>` を使用する他のプロパティでは許可されません。
 
 ## 補間
 

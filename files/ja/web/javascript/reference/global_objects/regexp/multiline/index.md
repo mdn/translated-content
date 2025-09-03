@@ -9,7 +9,7 @@ l10n:
 
 **`multiline`** は {{jsxref("RegExp")}} のアクセサープロパティで、正規表現で `m` フラグが使用されているかどうかを返します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.multiline", "taller")}}
 
 ```js interactive-example
 const regex1 = new RegExp("^football");

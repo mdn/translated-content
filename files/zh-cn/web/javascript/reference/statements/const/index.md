@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 **`const`** 声明用于声明块作用域的局部变量。常量的值不能通过使用[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)重新赋值来更改，但是如果常量是一个[对象](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#objects)，它的属性可以被添加、更新或删除。
 
 {{InteractiveExample("JavaScript Demo: Statement - Const")}}

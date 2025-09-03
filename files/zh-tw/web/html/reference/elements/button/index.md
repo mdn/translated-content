@@ -3,8 +3,6 @@ title: <button>：按鈕元素
 slug: Web/HTML/Reference/Elements/button
 ---
 
-{{HTMLSidebar}}
-
 **`<button>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個由使用者使用滑鼠、鍵盤、手指、語音命令或其他輔助技術啟動的互動元素。一旦啟動，它將執行一個動作，例如提交一個[表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)或打開對話框。
 
 預設情況下，HTML 按鈕會呈現為與{{Glossary("user agent", "使用者代理")}}所在平台類似的樣式，但你可以使用 [CSS](/zh-TW/docs/Web/CSS) 更改按鈕的外觀。

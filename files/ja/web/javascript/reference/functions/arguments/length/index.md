@@ -27,7 +27,8 @@ function adder(base /*, n2, ... */) {
 }
 ```
 
-> **メモ:** {{jsxref("Function.length")}} と arguments.length の違いに注意してください。
+> [!NOTE]
+> {{jsxref("Function.length")}} と arguments.length の違いに注意してください。
 
 ## 仕様書
 

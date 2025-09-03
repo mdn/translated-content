@@ -2,10 +2,8 @@
 title: theme_color
 slug: Web/Progressive_web_apps/Manifest/Reference/theme_color
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `theme_color` メンバーは、ウェブアプリケーションのユーザーインターフェイスの既定色を指定するために使用します。
 この色は、ツールバー、アドレスバー、ステータスバーなど、さまざまなブラウザー UI 要素に適用されます。
@@ -95,7 +93,7 @@ body {
 
 ```json
 {
-  "theme_color": "rgb(66, 133, 244)"
+  "theme_color": "rgb(66 133 244)"
 }
 ```
 

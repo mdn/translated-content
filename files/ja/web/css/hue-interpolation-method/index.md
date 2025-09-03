@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
-
 **`<hue-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{CSSXref("&lt;hue&gt;")}} 値間の補間に用いるアルゴリズムを表します。
 補間方法は、色相環に基づいて 2 つの色相値の中間点を探す方法を指定します。
 これは {{CSSXref("&lt;color-interpolation-method&gt;")}} データ型の成分として使用します。

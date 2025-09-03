@@ -3,7 +3,7 @@ title: -moz-user-modify
 slug: Web/CSS/user-modify
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

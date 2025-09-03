@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS)의 **`justify-content`** 속성은 브라우저가 콘텐츠 항목 사이와 주변의 공간을 플렉스 컨테이너에서는 {{Glossary("Main Axis", "main-axis")}}, 그리고 그리드 컨테이너에서는 인라인 축을 기준으로 어떻게 정렬할 것인지를 정의합니다.
 
 아래의 상호작용하는 예제는 그리드 레이아웃을 사용할 때의 일부 값들을 설명합니다.
