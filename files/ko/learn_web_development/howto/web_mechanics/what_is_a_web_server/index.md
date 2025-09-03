@@ -113,4 +113,3 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 - [웹에서 어떤 것을 하는 것이 얼마나 많은 비용이 들지](/ko/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)를 읽어보기
 - [당신이 웹 사이트를 생성하기 위해 필요한 다양한 소프트웨어](/ko/docs/Learn/What_software_do_I_need.)를 배우기
 - [웹 서버에 어떻게 파일을 업로드 하는 지](/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)와 같은 실용적인 것으로 넘어가기
-
