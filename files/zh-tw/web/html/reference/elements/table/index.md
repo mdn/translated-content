@@ -27,7 +27,7 @@ slug: Web/HTML/Reference/Elements/table
     </tr>
     <tr>
       <th scope="row">Dennis</th>
-      <td>網頁無障礙</td>
+      <td>Web 無障礙</td>
       <td>45</td>
     </tr>
     <tr>
