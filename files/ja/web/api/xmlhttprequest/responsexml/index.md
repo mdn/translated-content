@@ -21,7 +21,7 @@ l10n:
 
 ### 値
 
-{{domxref("XMLHttpRequest")}} を用いて受け取った XML または HTML を解釈した {{domxref("Document")}}、またはデータを受け取っていなかったり、データが XML/HTML でな買ったりした場合は `null`
+{{domxref("XMLHttpRequest")}} を用いて受け取った XML または HTML を解釈した {{domxref("Document")}}、またはデータを受け取っていなかったり、データが XML/HTML でなかったりした場合は `null`
 
 ### 例外
 

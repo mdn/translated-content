@@ -4315,18 +4315,18 @@
       "Yokoyama-go"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
-    "modified": "2020-07-16T22:25:07.532Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808"
-    ]
-  },
   "Learn_web_development/Core/Structuring_content/Planet_data_table": {
     "modified": "2020-07-16T22:25:30.116Z",
     "contributors": [
       "silverskyvicto",
       "karaage-kun"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Splash_page": {
+    "modified": "2020-07-16T22:25:07.532Z",
+    "contributors": [
+      "mfuji09",
+      "Wind1808"
     ]
   },
   "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content": {
@@ -4442,12 +4442,6 @@
       "snakada"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Cool-looking_box": {
-    "modified": "2020-07-16T22:28:27.155Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Debugging_CSS": {
     "modified": "2020-10-15T22:23:08.869Z",
     "contributors": [
@@ -4460,12 +4454,6 @@
     "contributors": [
       "snakada",
       "Wind1808"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:12.420Z",
-    "contributors": [
-      "silverskyvicto"
     ]
   },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
@@ -22315,23 +22303,11 @@
       "mfuji09"
     ]
   },
-  "Web/API/XMLHttpRequest/abort_event": {
-    "modified": "2020-10-15T22:32:23.389Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
   "Web/API/XMLHttpRequest/channel": {
     "modified": "2020-08-13T07:56:10.374Z",
     "contributors": [
       "eltociear",
       "kobayashitomoya"
-    ]
-  },
-  "Web/API/XMLHttpRequest/error_event": {
-    "modified": "2020-10-15T22:32:26.389Z",
-    "contributors": [
-      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/getAllResponseHeaders": {
@@ -22344,24 +22320,6 @@
     "modified": "2020-10-15T22:13:18.185Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "Web/API/XMLHttpRequest/load_event": {
-    "modified": "2020-10-15T22:32:23.285Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadend_event": {
-    "modified": "2020-10-15T22:15:46.341Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadstart_event": {
-    "modified": "2020-10-15T22:32:27.191Z",
-    "contributors": [
-      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/mozAnon": {
@@ -22387,12 +22345,6 @@
     "contributors": [
       "mfuji09",
       "yuta0801"
-    ]
-  },
-  "Web/API/XMLHttpRequest/progress_event": {
-    "modified": "2020-10-15T22:32:24.380Z",
-    "contributors": [
-      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/readyState": {
@@ -22468,15 +22420,6 @@
       "westbird24"
     ]
   },
-  "Web/API/XMLHttpRequest/timeout_event": {
-    "modified": "2020-10-15T22:11:43.836Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "irenesmith",
-      "silverskyvicto"
-    ]
-  },
   "Web/API/XMLHttpRequest/upload": {
     "modified": "2020-10-15T22:25:35.310Z",
     "contributors": [
@@ -22487,6 +22430,33 @@
     "modified": "2020-10-15T22:32:23.587Z",
     "contributors": [
       "mpcjazz"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/abort_event": {
+    "modified": "2020-10-15T22:32:23.389Z",
+    "contributors": [
+      "eltociear"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/error_event": {
+    "modified": "2020-10-15T22:32:26.389Z",
+    "contributors": [
+      "eltociear"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadstart_event": {
+    "modified": "2020-10-15T22:32:27.191Z",
+    "contributors": [
+      "eltociear"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/timeout_event": {
+    "modified": "2020-10-15T22:11:43.836Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "irenesmith",
+      "silverskyvicto"
     ]
   },
   "Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest": {
@@ -43713,15 +43683,9 @@
     ]
   },
   "conflicting/Learn_web_development/Core/Styling_basics": {
-    "modified": "2020-12-08T08:44:57.052Z",
+    "modified": "2020-07-16T22:28:12.420Z",
     "contributors": [
-      "mfuji09",
-      "Uemmra3",
-      "dskmori",
-      "h-subaru",
-      "fu7mu4",
-      "snakada",
-      "kamariyan21"
+      "silverskyvicto"
     ]
   },
   "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors": {
@@ -44159,6 +44123,24 @@
   },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
+    "contributors": [
+      "eltociear"
+    ]
+  },
+  "conflicting/Web/API/XMLHttpRequestEventTarget/load_event": {
+    "modified": "2020-10-15T22:32:23.285Z",
+    "contributors": [
+      "eltociear"
+    ]
+  },
+  "conflicting/Web/API/XMLHttpRequestEventTarget/loadend_event": {
+    "modified": "2020-10-15T22:15:46.341Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/XMLHttpRequestEventTarget/progress_event": {
+    "modified": "2020-10-15T22:32:24.380Z",
     "contributors": [
       "eltociear"
     ]
