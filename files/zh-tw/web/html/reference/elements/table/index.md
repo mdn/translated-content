@@ -198,7 +198,7 @@ tfoot td {
 ### 更多範例
 
 ```html
-<p>Simple table with header</p>
+<p>有表頭的簡單表格</p>
 <table>
   <tr>
     <th>姓</th>
