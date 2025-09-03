@@ -1,6 +1,7 @@
 ---
 title: "Window: sizeToContent() method"
 short-title: sizeToContent()
+slug: Web/API/Window/sizeToContent
 l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
