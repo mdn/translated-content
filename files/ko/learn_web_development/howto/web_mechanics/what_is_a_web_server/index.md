@@ -3,7 +3,7 @@ title: 웹 서버란 무엇일까?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 l10n:
-  sourceCommit: bd48972c8a9c2acf3b8fa6e41248d0952eb0c406
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -15,10 +15,10 @@ l10n:
     <tr>
       <th scope="row">선행 지식:</th>
       <td>
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+        <a href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >웹 페이지와 웹 사이트, 웹 서버, 그리고 검색 엔진의 차이점</a
         >에 대해 이해하고
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >인터넷이 어떻게 동작하는지</a
         > 알고있으면 좋습니다.
       </td>
