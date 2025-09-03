@@ -130,7 +130,7 @@ tfoot td {
     </tr>
     <tr>
       <th scope="row">允許父元素</th>
-      <td>任何允許流內容的物件</td>
+      <td>任何允許流內容的元素</td>
     </tr>
     <tr>
       <th scope="row">允許 ARIA 規則</th>
