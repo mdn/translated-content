@@ -214,7 +214,7 @@ tfoot td {
   </tr>
 </table>
 
-<p>有thead、tfoot和tbody的表格</p>
+<p>有 thead、tfoot 和 tbody 的表格</p>
 <table>
   <thead>
     <tr>
