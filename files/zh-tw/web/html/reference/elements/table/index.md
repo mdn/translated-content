@@ -377,7 +377,7 @@ td {
 
 ## 參見
 
-- 適合格式化 `<table>` 物件的CSS:
+- 適合格式化 `<table>` 元素的 CSS：
   - {{cssxref("width")}} 來控制表格寬度；
   - {{cssxref("border")}}、{{cssxref("border-style")}}、{{cssxref("border-color")}}、{{cssxref("border-width")}}、{{cssxref("border-collapse")}}、{{cssxref("border-spacing")}} 來控制表格外框、樣式規則以及單元格的外框；
   - {{cssxref("margin")}} 和 {{cssxref("padding")}} 來格式化單獨的單元格；
