@@ -2080,7 +2080,7 @@
 /ja/docs/Learn/CSS/Building_blocks/Cascade_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
 /ja/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/ja/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 /ja/docs/Learn/CSS/Building_blocks/Debugging_CSS	/ja/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
-/ja/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/ja/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/ja/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 /ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements	/ja/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
 /ja/docs/Learn/CSS/Building_blocks/Images_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
@@ -2149,7 +2149,7 @@
 /ja/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /ja/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors	/ja/docs/Learn_web_development/Core/Styling_basics/Combinators
 /ja/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS	/ja/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
-/ja/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/ja/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/ja/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ja/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements	/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /ja/docs/Learn/CSS/Introduction_to_CSS/Selectors	/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
@@ -2495,6 +2495,7 @@
 /ja/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 /ja/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
 /ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/ja/docs/Learn_web_development/Core/Styling_basics
+/ja/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /ja/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
 /ja/docs/Learn_web_development/Core/Styling_basics/Sizing_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
