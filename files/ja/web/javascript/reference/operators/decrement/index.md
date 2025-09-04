@@ -32,7 +32,7 @@ x--
 
 ## 解説
 
-`--` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。最初に[オペランドを数値の値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion)し、その型を検査します。オペランドが長整数になった場合、長整数の減算を実行し、そうでない場合は数値の減算を実行します。
+`--` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。最初に[オペランドを数値の値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)し、その型を検査します。オペランドが長整数になった場合、長整数の減算を実行し、そうでない場合は数値の減算を実行します。
 
 後置演算子として使用した場合（演算子がオペランドの後ろにあった場合、例えば `x--`）、デクリメント演算子は減算を行い、減算前の値を返します。
 
