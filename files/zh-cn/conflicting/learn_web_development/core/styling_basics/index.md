@@ -1,6 +1,7 @@
 ---
 title: 挑战：基本的 CSS 理解
-slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+slug: conflicting/Learn_web_development/Core/Styling_basics
+original_slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}
