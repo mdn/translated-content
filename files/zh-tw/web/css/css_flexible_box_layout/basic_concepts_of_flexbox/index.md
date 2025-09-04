@@ -435,7 +435,7 @@ flexbox 的一個關鍵特性是能夠在主軸和交錯軸上對齊和兩端對
 
 [`place-items`](/zh-TW/docs/Web/CSS/place-items) 屬性是 `align-items` 和 `justify-items` 的簡寫屬性。如果設定在 flex 容器上，它會設定對齊方式，但不會設定兩端對齊，因為 `justify-items` 在 flexbox 中會被忽略。
 
-還有另一個簡寫屬性，[`place-content`](/zh-TW/docs/Web/CSS/place-content)，它定義了 {{cssxref("align-content")}} 和 `justify-content` 屬性。`align-content` 屬性只影響會換行的 flex 容器，並在[在 flex 容器中對齊項目](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)中討論。
+還有另一個簡寫屬性，[`place-content`](/zh-TW/docs/Web/CSS/place-content)，它定義了 {{cssxref("align-content")}} 和 `justify-content` 屬性。`align-content` 屬性只影響會換行的 flex 容器，其詳細說明請參閱 [flex 容器中的項目對齊](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)。
 
 ## 後續步驟
 
