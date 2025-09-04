@@ -3796,21 +3796,6 @@
       "lihaoyuan"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-10-09T04:34:43.547Z",
-    "contributors": [
-      "benniks",
-      "blateyang",
-      "grape",
-      "LeoB-O",
-      "codeofjackie",
-      "allan_simon",
-      "phiwyc",
-      "yydzxz",
-      "ddtyjmyjm",
-      "nbhaohao"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
     "modified": "2020-07-16T22:27:52.665Z",
     "contributors": [
@@ -42792,6 +42777,21 @@
     "modified": "2020-10-15T22:15:29.365Z",
     "contributors": [
       "Cyandev"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics": {
+    "modified": "2020-10-09T04:34:43.547Z",
+    "contributors": [
+      "benniks",
+      "blateyang",
+      "grape",
+      "LeoB-O",
+      "codeofjackie",
+      "allan_simon",
+      "phiwyc",
+      "yydzxz",
+      "ddtyjmyjm",
+      "nbhaohao"
     ]
   }
 }
