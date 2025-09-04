@@ -341,7 +341,7 @@ flexbox 的一個關鍵特性是能夠在主軸和交錯軸上對齊和兩端對
 
 此屬性的初始值為 `stretch`，這就是為什麼 flex 項目預設會伸展到 flex 容器的高度（如果 `flex-direction` 設定為 `column` 或 `column-reverse`，則為寬度）。這個高度可能來自容器中最高的項目，或是在 flex 容器本身上設定的尺寸。
 
-你可以改為將 `align-items` 設定為 `flex-start`（或簡寫為 `start`），以使項目在 flex 容器的開頭對齊；或設定為 `flex-end`（或簡寫為）`end`，以將它們結尾對齊；或設定為 `center`，以將它們置中對齊。在即時範例中試試這個——我給了 flex 容器一個高度，以便你可以看到項目如何在容器內移動。看看如果你將 align-items 的值設定為以下這些會發生什麼：
+你可以改為將 `align-items` 設定為 `flex-start`（或簡寫為 `start`），以使項目在 flex 容器的開頭對齊；或設定為 `flex-end`（或簡寫為 `end`），以將它們結尾對齊；或設定為 `center`，以將它們置中對齊。在即時範例中試試這個——我給了 flex 容器一個高度，以便你可以看到項目如何在容器內移動。看看如果你將 align-items 的值設定為以下這些會發生什麼：
 
 - `stretch`
 - `flex-start`
