@@ -2,10 +2,10 @@
 title: hypot()
 slug: Web/CSS/hypot
 l10n:
-  sourceCommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`hypot()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は、各引数の 2 乗の合計値の[平方根](https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9)を返す指数関数です。
+**`hypot()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、各引数の 2 乗の合計値の[平方根](https://ja.wikipedia.org/wiki/平方根)を返す指数関数です。
 
 {{CSSxRef("pow")}} と {{CSSxRef("sqrt")}} は単位のない数値のみを扱いますが、`hypot()` は単位を持つ値を受け入れます。ただし、すべての値は同じ[型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)である必要があります。
 

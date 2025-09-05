@@ -1,25 +1,24 @@
 ---
 title: Map.prototype.size
+short-title: size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`size`** は {{jsxref("Map")}} インスタンスのアクセサープロパティで、このマップにある要素の数を返します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.size")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("a", "alpha");
-map1.set("b", "beta");
-map1.set("g", "gamma");
+map.set("a", "alpha");
+map.set("b", "beta");
+map.set("g", "gamma");
 
-console.log(map1.size);
-// Expected output: 3
+console.log(map.size);
+// 予想される結果: 3
 ```
 
 ## 解説

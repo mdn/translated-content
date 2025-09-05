@@ -1,14 +1,11 @@
 ---
 title: SVG のツール
 slug: Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
-original_slug: Web/SVG/Tutorial/Tools_for_SVG
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Image_element", "Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS") }}
 
 SVG の内部の基礎を説明しましたので、ここでは SVG ファイルで作業を行うためのツールをいくつか見ていきましょう。
 
@@ -38,13 +35,7 @@ Batik は [Apache FOP](https://xmlgraphics.apache.org/fop/) と連携して、SV
 
 ### 他のレンダラー
 
-SVG からラスター画像を作成するためのプロジェクトがいくつかあります。[ImageMagick](http://ImageMagick.org) は、もっとも有名なコマンドライン画像処理ツールのひとつです。Gnome ライブラリーの [rsvg](https://wiki.gnome.org/Projects/LibRsvg) は、 Wikipedia が SVG をラスター化するために用いています。また、 SlimerJS や PhantomJS などのヘッドレスブラウザーを使用すると、ブラウザー上での SVG の表示に近い画像が得られるため、人気があります。
-
-## Snap.svg
-
-URL: [snapsvg.io](http://snapsvg.io/)
-
-Raphael JS の作者が開発した、より新しい JavaScript の抽象化レイヤーです。 Snap.svg は最近のブラウザー向けに設計されているため、マスキング、クリッピング、パターン、フルグラデーション、グループなどの最新の SVG 機能をサポートしています。 Raphael のような古いブラウザーには対応していません。
+SVG からラスター画像を作成するためのプロジェクトがいくつかあります。[ImageMagick](http://ImageMagick.org) は、もっとも有名なコマンドライン画像処理ツールのひとつです。GNOME ライブラリーの [rsvg](https://wiki.gnome.org/Projects/LibRsvg) は、 Wikipedia が SVG をラスター化するために用いています。また、 SlimerJS や PhantomJS などのヘッドレスブラウザーを使用すると、ブラウザー上での SVG の表示に近い画像が得られるため、人気があります。
 
 ## Google Docs
 
@@ -62,4 +53,4 @@ GIS (Geographic Information System) アプリケーションで、SVG は保存�
 
 W3C は、SVG を対応する[プログラムの一覧](https://www.w3.org/Graphics/SVG/WG/wiki/Implementations)を提供しています。
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Image_element", "Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS") }}

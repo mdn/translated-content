@@ -240,12 +240,12 @@ tfoot td {
     <th>名</th>
   </tr>
   <tr>
-    <td>John</td>
     <td>Doe</td>
+    <td>John</td>
   </tr>
   <tr>
-    <td>Jane</td>
     <td>Doe</td>
+    <td>Jane</td>
   </tr>
 </table>
 

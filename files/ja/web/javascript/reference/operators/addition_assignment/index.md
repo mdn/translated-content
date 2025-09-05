@@ -2,24 +2,22 @@
 title: 加算代入演算子 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **加算代入 (`+=`)** 演算子は、 2 つのオペランドの[加算](/ja/docs/Web/JavaScript/Reference/Operators/Addition)（数値の加算または文字列の結合のどちらか）を実行し、左オペランドへ結果を代入します。
 
-{{InteractiveExample("JavaScript デモ: 式 - 加算代入演算子")}}
+{{InteractiveExample("JavaScript デモ: 加算代入演算子 (+=)")}}
 
 ```js interactive-example
 let a = 2;
 let b = "hello";
 
 console.log((a += 3)); // 加算
-// 予想される出力: 5
+// 予想される結果: 5
 
 console.log((b += " world")); // 結合
-// 予想される出力: "hello world"
+// 予想される結果: "hello world"
 ```
 
 ## 構文

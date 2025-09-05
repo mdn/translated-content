@@ -1,11 +1,10 @@
 ---
 title: Proxy() コンストラクター
+short-title: Proxy()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Proxy()`** コンストラクターは {{jsxref("Proxy")}} オブジェクトを生成します。
 

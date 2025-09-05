@@ -72,5 +72,5 @@ formData.getAll("name"); // ["true", "72"]
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- [FormData オブジェクトの使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}
