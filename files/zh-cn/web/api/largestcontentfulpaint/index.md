@@ -77,7 +77,7 @@ LCP API 分析它找到的所有内容（包括从 DOM 中删除的内容）。�
 const observer = new PerformanceObserver((list) => {
   const entries = list.getEntries();
   const lastEntry = entries[entries.length - 1]; // 使用最新的 LCP 候选值
-  console.log("LCP：", lastEntry.startTime);
+  console.log("LCP:", lastEntry.startTime);
   console.log(lastEntry);
 });
 observer.observe({ type: "largest-contentful-paint", buffered: true });
