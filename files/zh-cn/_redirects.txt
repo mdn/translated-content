@@ -1048,7 +1048,7 @@
 /zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /zh-CN/docs/Learn/CSS/Building_blocks/Cascade_layers	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
-/zh-CN/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/zh-CN/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
 /zh-CN/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
@@ -1120,9 +1120,9 @@
 /zh-CN/docs/Learn/CSS/Styling_boxes/Advanced_box_effects	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 /zh-CN/docs/Learn/CSS/Styling_boxes/Borders	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
-/zh-CN/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/zh-CN/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
-/zh-CN/docs/Learn/CSS/Styling_boxes/创建精美的信纸	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/zh-CN/docs/Learn/CSS/Styling_boxes/创建精美的信纸	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Styling_boxes/背景	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /zh-CN/docs/Learn/CSS/Styling_text	/zh-CN/docs/Learn_web_development/Core/Text_styling
 /zh-CN/docs/Learn/CSS/Styling_text/Fundamentals	/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals
@@ -1442,6 +1442,7 @@
 /zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/zh-CN/docs/Learn_web_development/Core/Styling_basics
+/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
