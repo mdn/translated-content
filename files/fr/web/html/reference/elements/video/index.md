@@ -56,7 +56,7 @@ Le contenu fourni entre les balises `<video></video>` est affiché comme contenu
 
     Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS (l'en-tête HTTP `Origin:` n'est pas envoyé) et elle ne peut pas être utilisée dans un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas). Si la valeur est invalide, elle sera gérée comme si le mot-clé `anonymous` était utilisé. Pour plus d'informations, consulter l'article sur [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin).
 
-- `disablePictureInPicture`
+- `disablepictureinpicture`
   - : Empêche le navigateur de suggérer un menu contextuel pour la superposition d'une image/vidéo ("_Picture-in-picture_") ou de demander l'activation automatique pour la superposition du média.
 - `disableremoteplayback`
   - : Un attribut booléen utilisé pour désactiver la capacité de lecture à distance dans les appareils qui sont attachés à l'aide de technologies câblées (HDMI, DVI, etc.) et sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.).
