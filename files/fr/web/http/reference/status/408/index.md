@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Status/408
 
 Le code de statut de réponse HTTP **`408 Request Timeout`** est [une erreur côté client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) qui indique que le serveur souhaiterait clôturer cette connexion inutilisée. Un `408` est envoyé sur une connexion inactive par certains serveurs, _même sans aucune demande précédente par le client_.
 
-Un serveur doit envoyer l'en-tête [`Connection: close`](/fr/docs/Web/HTTP/Headers/Reference/Connection) en réponse, puisque `408` implique que le serveur a décidé de fermer la connexion plutôt que de continuer à attendre.
+Un serveur doit envoyer l'en-tête [`Connection: close`](/fr/docs/Web/HTTP/Reference/Headers/Connection) en réponse, puisque `408` implique que le serveur a décidé de fermer la connexion plutôt que de continuer à attendre.
 
 Cette réponse est de plus en plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent le mécanisme HTTP de pré-connexion qui permet d'accélérer la navigation.
 
@@ -68,5 +68,5 @@ Content-Type: text/html
 ## Voir aussi
 
 - Les [codes de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
-- [`Connection`](/fr/docs/Web/HTTP/Headers/Reference/Connection)
+- [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection)
 - [`X-DNS-Prefetch-Control`](/fr/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
