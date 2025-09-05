@@ -14,7 +14,7 @@ l10n:
 此 API 提供的关键时刻是{{Glossary("Largest Contentful Paint", "最大内容绘制（LCP）")}}指标。它提供视口内可见的最大图像或文本块的渲染时间，从页面首次开始加载时记录。在确定 LCP 时，会考虑以下元素：
 
 - {{HTMLElement("img")}} 元素。
-- SVG 内的[`<image>`](/zh-CN/docs/Web/SVG/Reference/Element/image) 元素。
+- SVG 内的 [`<image>`](/zh-CN/docs/Web/SVG/Reference/Element/image) 元素。
 - {{HTMLElement("video")}} 元素的海报帧图片。
 - 具有 {{cssxref("background-image")}} 的元素。
 - 文本节点组，比如 {{HTMLElement("p")}}。
@@ -23,8 +23,8 @@ l10n:
 
 {{domxref("PerformancePaintTiming")}} API 提供了其他关键绘制时刻：
 
-- {{Glossary("First Paint", "首次绘制（FP）")}}： 页面上首次渲染任何内容的时间。注意首次绘制的标记是可选的，并非所有用户代理都会上报。
-- {{Glossary("First Contentful Paint", "首次内容绘制（FCP）")}}： 首次渲染 DOM 文本或图像内容的时间。
+- {{Glossary("First Paint", "首次绘制（FP）")}}：页面上首次渲染任何内容的时间。注意首次绘制的标记是可选的，并非所有用户代理都会报告。
+- {{Glossary("First Contentful Paint", "首次内容绘制（FCP）")}}：首次渲染 DOM 文本或图像内容的时间。
 
 `LargestContentfulPaint` 继承自 {{domxref("PerformanceEntry")}}。
 
@@ -52,7 +52,7 @@ l10n:
 - {{domxref("LargestContentfulPaint.loadTime")}} {{ReadOnlyInline}}
   - : 元素加载时间。
 - {{domxref("LargestContentfulPaint.size")}} {{ReadOnlyInline}}
-  - : 以面积形式（宽度 \* 高度）返回元素的固有大小。
+  - : 以面积形式（宽度 \* 高度）返回元素的固有尺寸。
 - {{domxref("LargestContentfulPaint.id")}} {{ReadOnlyInline}}
   - : 元素的 id。如果没有 id，此属性将返回空字符串。
 - {{domxref("LargestContentfulPaint.url")}} {{ReadOnlyInline}}
@@ -85,21 +85,21 @@ observer.observe({ type: "largest-contentful-paint", buffered: true });
 
 ### 跨源图像渲染时间
 
-处于安全原因，如果资源是跨源请求，则 {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} 属性初始值为 `0`。此时应使用 {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} 属性作为后备值。
+处于安全原因，如果资源是跨源请求，则 {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} 属性初始值为 `0`。此时应使用 {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} 属性作为备用值。
 
-在这些情况下，浏览器[现在可能会暴露出稍微粗化的渲染时间](https://github.com/w3c/paint-timing/issues/104)。请检查[浏览器支持](#浏览器兼容性)。
+在这些情况下，浏览器[现在可能会暴露出稍微粗化的渲染时间](https://github.com/w3c/paint-timing/issues/104)。请查看[浏览器支持](#浏览器兼容性)。
 
-要暴露更准确的跨源渲染时间信息，需要设置 {{HTTPHeader("Timing-Allow-Origin")}} HTTP 响应标头。
+要暴露更精确的跨源渲染时间信息，需要设置 {{HTTPHeader("Timing-Allow-Origin")}} HTTP 响应标头。
 
-例如，要允许 `https://developer.mozilla.org` 看到准确的 `renderTime`，跨源资源应该发送：
+例如，要允许 `https://developer.mozilla.org` 看到精确的 `renderTime`，跨源资源应该发送：
 
 ```http
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
-如代码示例所示，你可以使用 {{domxref("PerformanceEntry.startTime", "startTime")}}，它在该条目的 {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} 不为 `0` 时返回其值，否则返回 {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} 的值。不过，建议设置 {{HTTPHeader("Timing-Allow-Origin")}} 标头以获取更准确的指标。
+如代码示例所示，你可以使用 {{domxref("PerformanceEntry.startTime", "startTime")}}，它在该条目的 {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} 不为 `0` 时返回该值，否则返回 {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} 的值。不过，建议设置 {{HTTPHeader("Timing-Allow-Origin")}} 标头以获取更精确的指标。
 
-如果你使用 `startTime`，可以通过检查是否使用了 `renderTime` 来标记任何不准确的信息：
+如果你使用 `startTime`，可以通过检查是否使用了 `renderTime` 来标记任何不精确的信息：
 
 ```js
 const isAccurateLCP = Boolean(entry.renderTime);
