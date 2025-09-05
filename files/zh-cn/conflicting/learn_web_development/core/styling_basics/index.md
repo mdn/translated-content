@@ -1,6 +1,7 @@
 ---
 title: 挑战：创建精美的信纸
-slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+slug: conflicting/Learn_web_development/Core/Styling_basics
+original_slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
