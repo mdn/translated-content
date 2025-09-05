@@ -4449,19 +4449,6 @@
       "snakada"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper": {
-    "modified": "2020-07-16T22:28:25.184Z",
-    "contributors": [
-      "snakada",
-      "Wind1808"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:12.420Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
     "modified": "2020-07-16T22:27:50.918Z",
     "contributors": [
@@ -43689,8 +43676,9 @@
     ]
   },
   "conflicting/Learn_web_development/Core/Styling_basics": {
-    "modified": "2020-07-16T22:28:27.155Z",
+    "modified": "2020-07-16T22:28:25.184Z",
     "contributors": [
+      "snakada",
       "Wind1808"
     ]
   },
