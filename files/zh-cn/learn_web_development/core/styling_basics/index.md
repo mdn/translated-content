@@ -57,7 +57,7 @@ slug: Learn_web_development/Core/Styling_basics
 
 想要测试一下你的 CSS 技能吗？下面这些评估将测试你对以上那些指南中的 CSS 技能的掌握。
 
-- [设计漂亮的信头信笺](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper)
+- [设计漂亮的信头信笺](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
   - : 如果你想留下良好的印象，用一张漂亮的信头信笺写一封信一定是个好的开始。在这一评估中，你将挑战创建这样一个漂亮的网络样板。
 
 ## 参见
