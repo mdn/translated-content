@@ -2,6 +2,8 @@
 title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
 original_slug: Web/HTTP/Status/408
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 Le code de statut de réponse HTTP **`408 Request Timeout`** est [une erreur côté client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) qui indique que le serveur souhaiterait clôturer cette connexion inutilisée. Un `408` est envoyé sur une connexion inactive par certains serveurs, _même sans aucune demande précédente par le client_.
