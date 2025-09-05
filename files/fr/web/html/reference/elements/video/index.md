@@ -157,7 +157,7 @@ On peut changer la valeur de `display` en `block` afin de simplifier le position
 ### Ajouter des sous-titres et d'autres pistes de texte synchronisées
 
 Les pistes de texte synchronisées pour les sous-titres, les sous-titres codés, les titres de chapitres, etc. peuvent être ajoutées de manière déclarative en imbriquant l'élément [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track).
-Les pistes sont spécifiées dans le [Format de fichier de pistes de texte pour vidéos Web (WebVTT)](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format) (fichier `.vtt`).
+Les pistes sont spécifiées dans le [Format de fichier de pistes de texte pour vidéos Web (WebVTT)](/fr/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format) (fichier `.vtt`).
 
 Par exemple, le code HTML ci-dessous inclut le fichier « captions.vtt », qui sera utilisé pour superposer des sous-titres codés sur la vidéo si l'utilisateur active cette fonctionnalité.
 
