@@ -1,5 +1,5 @@
 ---
-title: <video>
+title: "<video> : l'élément d'intégration vidéo"
 slug: Web/HTML/Reference/Elements/video
 original_slug: Web/HTML/Element/video
 l10n:
@@ -120,38 +120,128 @@ Le contenu fourni entre les balises `<video></video>` est affiché comme contenu
 
 ## Notes d'utilisation
 
+Les navigateurs ne prennent pas en charge l'ensemble des formats vidéo&nbsp; vous pouvez fournir plusieurs sources grâce à des éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source), le navigateur utilisera la première ressource dont il connaît le format&nbsp;:
+
+```html
+<video controls>
+  <source src="maVideo.mp4" type="video/mp4" />
+  <source src="maVideo.webm" type="video/webm" />
+  <p>
+    Votre navigateur ne prend pas en charge les vidéos HTML5. Voici
+    <a href="myVideo.mp4">un lien pour télécharger la vidéo</a>.
+  </p>
+</video>
+```
+
+Lorsque vous utilisez des éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source), le navigateur tente de charger chaque source séquentiellement. Si une source échoue (par exemple, en raison d'une URL non valide ou d'un format non pris en charge), la source suivante est tentée, etc. Un événement `error` se déclenche sur l'élément `<video>` après que toutes les sources ont échoué&nbsp;; Les événements `error` ne sont pas déclenchés sur chaque élément individuel `<source>`.
+
+Nous proposons un [Guide des types de fichiers multimédias substantiel et approfondi](/fr/docs/Web/Media/Guides/Formats) et le [Guide des codecs pris en charge pour la vidéo](/fr/docs/Web/Media/Guides/Formats/Video_codecs). Il y a également un guide disponible pour les [codecs audio qui peuvent être utilisés avec eux](/fr/docs/Web/Media/Guides/Formats/Audio_codecs).
+
+Quelques notes d'utilisation&nbsp;:
+
+- Si l'attribut `controls` n'est pas indiqué, la vidéo n'incluera pas les contrôles par défaut du navigateur et il est nécessaire de fournir ses propres contrôles en utilisant JavaScript et l'API [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement). Voir l'article [créer un lecteur vidéo multi-navigateurs](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) pour plus de détails.
+- L'API `HTMLMediaElement` déclenche de nombreux [évènements](/fr/docs/Web/Guide/DOM/Events/evenement_medias) qui permettent d'avoir un contrôle précis sur l'audio et la vidéo.
+- La propriété [`object-position`](/fr/docs/Web/CSS/object-position) permet d'ajuster la position de la vidéo dans le cadre du lecteur et la propriété [`object-fit`](/fr/docs/Web/CSS/object-fit) permet de contrôler l'ajustement de la taille de la vidéo dans le cadre.
+- Afin de fournir des sous-titres et légendes à la vidéo, on peut utiliser du code JavaScript ainsi que des éléments [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track) au format [WebVTT](/fr/docs/Web/API/WebVTT_API). Voir l'article [Ajouter des sous-titres et légendes à une vidéo HTML5](/fr/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour plus d'informations.
+- Vous pouvez lire des fichiers audio à l'aide d'un élément `<video>`. Cela peut être utile si, par exemple, vous devez effectuer un audio avec une transcription [WebVTT](/fr/docs/Web/API/WebVTT_API), puisque l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) n'autorise pas les transcriptions à l'aide de WebVTT.
+- Pour tester le contenu similaire sur les navigateurs qui prennent en charge l'élément, vous pouvez remplacer `<video>` par un élément inexistant comme `<notavideo>` (pas une vidéo en Français).
+
+Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulter [le tutoriel sur le contenu audio et video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
+
 ### Mise en forme avec CSS
 
-L'élément `<video>` est un élément remplacé et, pour cet élément, la valeur initiale de {{cssxref("display")}} est `inline` mais la hauteur et la largeur du cadre sont définies par les caractéristiques de la vidéo embarquée.
+L'élément `<video>` est un élément remplacé et, pour cet élément, la valeur initiale de [`display`](/fr/docs/Web/CSS/display) est `inline` mais la hauteur et la largeur du cadre sont définies par les caractéristiques de la vidéo embarquée.
 
-On peut changer la valeur de `display` en `block` afin de simplifier le positionnement et le dimensionnement. L'article [Bases de la mise en forme d'un lecteur vidéo](/fr/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) fournit différentes techniques de mise en forme.
+On peut changer la valeur de `display` en `block` afin de simplifier le positionnement et le dimensionnement. L'article [Bases de la mise en forme d'un lecteur vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics) fournit différentes techniques de mise en forme.
+
+### Ajouter des sous-titres et d'autres pistes de texte synchronisées
+
+Les pistes de texte synchronisées pour les sous-titres, les sous-titres codés, les titres de chapitres, etc. peuvent être ajoutées de manière déclarative en imbriquant l'élément [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track).
+Les pistes sont spécifiées dans le [Format de fichier de pistes de texte pour vidéos Web (WebVTT)](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format) (fichier `.vtt`).
+
+Par exemple, le code HTML ci-dessous inclut le fichier « captions.vtt », qui sera utilisé pour superposer des sous-titres codés sur la vidéo si l'utilisateur active cette fonctionnalité.
+
+```html
+<video controls src="video.webm">
+  <track default kind="captions" src="captions.vtt" />
+</video>
+```
+
+Les pistes de texte synchronisées peuvent également être ajoutées par programmation à l'aide de l'[API WebVTT](/fr/docs/Web/API/WebVTT_API).
 
 ### Détecter l'ajout et la suppression de pistes
 
-Il est possible de détecter l'ajout et la suppression de pistes d'un élément `<video>` grâce aux évènements [`addtrack`](/fr/docs/Web/API/VideoTrackList/addtrack_event) et [`removetrack`](/fr/docs/Web/API/VideoTrackList/removetrack_event). Toutefois, ces évènements ne sont pas déclenchés à même l'élément `<video>` mais sur l'objet représentant la liste des pistes associées à l'élément `<video>` grâce à l'objet {{domxref("HTMLMediaElement")}} qui possède un type différent selon le type de piste manipulé :
+Il est possible de détecter l'ajout et la suppression de pistes d'un élément `<video>` grâce aux évènements [`addtrack`](/fr/docs/Web/API/VideoTrackList/addtrack_event) et [`removetrack`](/fr/docs/Web/API/VideoTrackList/removetrack_event). Toutefois, ces évènements ne sont pas déclenchés à même l'élément `<video>` mais sur l'objet représentant la liste des pistes associées à l'élément `<video>` grâce à l'objet [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) qui possède un type différent selon le type de piste manipulé :
 
-- {{domxref("HTMLMediaElement.audioTracks")}}
-  - : Un objet {{domxref("AudioTrackList")}} qui contient l'ensemble des pistes audio associées au média. Il est possible d'ajouter un écouteur sur l'évènement `addtrack` sur cet objet afin d'être alerté lorsque de nouvelles pistes audio sont ajoutées à l'élément.
-- {{domxref("HTMLMediaElement.videoTracks")}}
-  - : On peut ajouter un écouteur d'évènement `addtrack` à cet objet {{domxref("VideoTrackList")}} afin d'être alerté lorsque des pistes vidéos sont ajoutées à l'élément.
-- {{domxref("HTMLMediaElement.textTracks")}}
-  - : On peut ajouter un écouteur d'évènement `addtrack` à cet objet {{domxref("TextTrackList")}} afin d'être alerté lorsque des pistes textuelles sont ajoutées à l'élément.
+- [`HTMLMediaElement.audioTracks`](/fr/docs/Web/API/HTMLMediaElement/audioTracks)
+  - : Un objet [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) qui contient l'ensemble des pistes audio associées au média. Il est possible d'ajouter un écouteur sur l'évènement `addtrack` sur cet objet afin d'être alerté lorsque de nouvelles pistes audio sont ajoutées à l'élément.
+- [`HTMLMediaElement.videoTracks`](/fr/docs/Web/API/HTMLMediaElement/videoTracks)
+  - : On peut ajouter un écouteur d'évènement `addtrack` à cet objet [`VideoTrackList`](/fr/docs/Web/API/VideoTrackList) afin d'être alerté lorsque des pistes vidéos sont ajoutées à l'élément.
+- [`HTMLMediaElement.textTracks`](/fr/docs/Web/API/HTMLMediaElement/textTracks)
+  - : On peut ajouter un écouteur d'évènement `addtrack` à cet objet [`TextTrackList`](/fr/docs/Web/API/TextTrackList) afin d'être alerté lorsque des pistes textuelles sont ajoutées à l'élément.
 
-Le fragment de code qui suit, par exemple, permettra d'appeler une fonction donnée lorsque des pistes audio sont ajoutées ou supprimées d'un élément `<video>` :
+Le fragment de code qui suit, par exemple, permettra d'appeler une fonction donnée lorsque des pistes audio sont ajoutées ou supprimées d'un élément `<video>`&nbsp;:
 
 ```js
-var elem = document.querySelector("video");
+const elem = document.querySelector("video");
 
-elem.audioTrackList.onaddtrack = function (event) {
+elem.audioTracks.onaddtrack = (event) => {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function (event) {
+elem.audioTracks.onremovetrack = (event) => {
   trackEditor.removeTrack(event.track);
 };
 ```
 
-On peut aussi utiliser la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} pour gérer les évènements [`addtrack`](/fr/docs/Web/API/VideoTrackList/addtrack_event) et [`removetrack`](/fr/docs/Web/API/VideoTrackList/removetrack_event).
+On peut aussi utiliser la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) pour gérer les évènements [`addtrack`](/fr/docs/Web/API/VideoTrackList/addtrack_event) et [`removetrack`](/fr/docs/Web/API/VideoTrackList/removetrack_event).
+
+### Utilisation côté serveur
+
+Si le type MIME de la vidéo n'est pas indiqué correctement sur le serveur, la vidéo peut ne pas s'afficher, le navigateur peut afficher une boîte grise avec une croix si JavaScript est activé.
+
+Si vous utilisez Apache Web Server pour les vidéos WebM, le problème peut également être réglé en modifiant le fichier `mime.types` situé dans `/etc/apache` ou en ajoutant une directive `AddType` au fichier `httpd.conf`.
+
+```
+AddType video/webm .webm
+```
+
+Votre hébergeur Web peut fournir une interface facile aux modifications de configuration de type MIME pour les nouvelles technologies jusqu'à ce qu'une mise à jour globale se produise naturellement.
+
+## Accessibilité
+
+Les vidéos doivent fournir des sous-titres et retranscription qui décrivent précisément le contenu. Les sous-titres doivent permettre au visiteur malentendant de comprendre le contenu audio lorsque la vidéo est lancée. Les retranscriptions sont utilisées par les personnes qui souhaitent relire le contenu audio à un rythme différent.
+
+Si on utilise un service de sous-titrage automatique est utilisé, il est nécessaire de vérifier que le contenu généré correspond bien au contenu audio de la vidéo.
+
+En plus des dialogues, les sous-titres et retranscription doivent également inclure les informations permettant d'identifier la musique et les effets sonores qui communiquent des informations importantes (l'émotion et le ton entre autres) :
+
+```
+14
+00:03:14 --> 00:03:18
+[Musique rock théâtrale]
+
+15
+00:03:19 --> 00:03:21
+[Murmure] Qu'est-ce que c'est au loin ?
+
+16
+00:03:22 --> 00:03:24
+C'est… C'est un…
+
+16 00:03:25 --> 00:03:32
+[Bruit de choc]
+[La vaisselle se brise]
+```
+
+Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuvent être positionnés grâce à [l'indication `align`](/fr/docs/Web/API/WebVTT_API#cue_settings).
+
+- [Sous-titres et légendes - _Plugins_](/fr/docs/Glossary/Plugin)
+- [API Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
+- [WebAIM : _Captions, Transcripts, and Audio Descriptions_ (en anglais)](https://webaim.org/techniques/captions/)
+- [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [_Understanding Success Criterion 1.2.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [_Understanding Success Criterion 1.2.2 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
 ## Exemples
 
@@ -196,59 +286,6 @@ Dans cet exemple, trois sources différentes pour la vidéo sont fournies. La pr
   Votre navigateur ne permet pas de lire les vidéos HTML5.
 </video>
 ```
-
-## Utilisation côté serveur
-
-Si le type MIME de la vidéo n'est pas indiqué correctement sur le serveur, la vidéo peut ne pas s'afficher, le navigateur peut afficher un boîte grise avec une croix si JavaScript est activé.
-
-Si vous utilisez Apache pour servir des vidéos Ogg Theora, vous pouvez ajouter les extensions utilisées pour les fichiers en face du type MIME. Pour cela, il faut éditer le fichier de configuration `mime.types` (situé dans le dossier `/etc/apache` ) ou utiliser la directive de configuration `AddType` dans le fichier `httpd.conf`.
-
-```
-AddType video/ogg .ogm
-AddType video/ogg .ogv
-AddType video/ogg .ogg
-```
-
-Pour les vidéos WebM, le problème peut également être réglé en modifiant le fichier `mime.types` situé dans `/etc/apache` ou en ajoutant une directive `AddType` au fichier `httpd.conf`.
-
-```
-AddType video/webm .webm
-```
-
-## Accessibilité
-
-Les vidéos doivent fournir des sous-titres et retranscription qui décrivent précisément le contenu. Les sous-titres doivent permettre au visiteur malentendant de comprendre le contenu audio lorsque la vidéo est lancée. Les retranscriptions sont utilisées par les personnes qui souhaitent relire le contenu audio à un rythme différent.
-
-Si on utilise un service de sous-titrage automatique est utilisé, il est nécessaire de vérifier que le contenu généré correspond bien au contenu audio de la vidéo.
-
-En plus des dialogues, les sous-titres et retranscription doivent également inclure les informations permettant d'identifier la musique et les effets sonores qui communiquent des informations importantes (l'émotion et le ton entre autres) :
-
-```
-14
-00:03:14 --> 00:03:18
-[Musique rock théâtrale]
-
-15
-00:03:19 --> 00:03:21
-[Murmure] Qu'est-ce que c'est au loin ?
-
-16
-00:03:22 --> 00:03:24
-C'est… C'est un…
-
-16 00:03:25 --> 00:03:32
-[Bruit de choc]
-[La vaisselle se brise]
-```
-
-Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuvent être positionnés grâce à [l'indication `align`](/fr/docs/Web/API/WebVTT_API#cue_settings).
-
-- [Sous-titres et légendes - _Plugins_](/fr/docs/Glossary/Plugin)
-- [API Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
-- [WebAIM : _Captions, Transcripts, and Audio Descriptions_ (en anglais)](https://webaim.org/techniques/captions/)
-- [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
-- [_Understanding Success Criterion 1.2.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [_Understanding Success Criterion 1.2.2 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
 ## Résumé technique
 
