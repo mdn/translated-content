@@ -1,6 +1,7 @@
 ---
 title: "課題: 美しいレターヘッド付きの便箋の作成"
-slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+slug: conflicting/Learn_web_development/Core/Styling_basics
+original_slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
