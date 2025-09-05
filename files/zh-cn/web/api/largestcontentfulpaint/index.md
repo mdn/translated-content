@@ -60,7 +60,7 @@ l10n:
 
 ## 实例方法
 
-_此接口还继承来自 {{domxref("PerformanceEntry")}} 的方法。_ 
+_此接口还继承来自 {{domxref("PerformanceEntry")}} 的方法。_
 
 - {{domxref("LargestContentfulPaint.toJSON()")}}
   - : 返回 `LargestContentfulPaint` 对象的 JSON 表示形式。
