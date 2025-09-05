@@ -146,7 +146,7 @@ Quelques notes d'utilisation&nbsp;:
 - Vous pouvez lire des fichiers audio à l'aide d'un élément `<video>`. Cela peut être utile si, par exemple, vous devez effectuer un audio avec une transcription [WebVTT](/fr/docs/Web/API/WebVTT_API), puisque l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) n'autorise pas les transcriptions à l'aide de WebVTT.
 - Pour tester le contenu similaire sur les navigateurs qui prennent en charge l'élément, vous pouvez remplacer `<video>` par un élément inexistant comme `<notavideo>` (pas une vidéo en Français).
 
-Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulter [le tutoriel sur le contenu audio et video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
+Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulter [le tutoriel sur le contenu audio et video](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
 
 ### Mise en forme avec CSS
 
@@ -238,10 +238,10 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
 
 - [Sous-titres et légendes - _Plugins_](/fr/docs/Glossary/Plugin)
 - [API Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
-- [WebAIM : _Captions, Transcripts, and Audio Descriptions_ (en anglais)](https://webaim.org/techniques/captions/)
-- [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
-- [_Understanding Success Criterion 1.2.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [_Understanding Success Criterion 1.2.2 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+- [WebAIM : _Captions, Transcripts, and Audio Descriptions_ <sup>(angl.</sup>](https://webaim.org/techniques/captions/)
+- [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [_Understanding Success Criterion 1.2.1 - W3C Understanding WCAG 2.0_ <sup>(angl.</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [_Understanding Success Criterion 1.2.2 - W3C Understanding WCAG 2.0_ <sup>(angl.</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
 ## Exemples
 
@@ -293,25 +293,25 @@ Dans cet exemple, trois sources différentes pour la vidéo sont fournies. La pr
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_intégré"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_intégré"
           >contenu intégré</a
         >. Si l'élément a un attribut
         <a href="/fr/docs/Web/HTML/Element/video#controls"><code>controls</code></a> :
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_interactif"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_interactif"
           >contenu interactif</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_tangible"
           >contenu tangible</a
         >.
       </td>
@@ -321,7 +321,7 @@ Dans cet exemple, trois sources différentes pour la vidéo sont fournies. La pr
       <td>
         <p>
           Si l'élément a un attribut
-          <a href="/fr/docs/Web/HTML/Element/video#src"><code>src</code></a> : zéro ou plusieurs
+          <a href="/fr/docs/Web/HTML/Reference/Elements/video#src"><code>src</code></a> : zéro ou plusieurs
           éléments {{HTMLElement("track")}} suivi par du contenu
           transparent qui ne contient pas d'élément
           {{HTMLElement("audio")}} ou {{HTMLElement("video")}}
@@ -342,7 +342,7 @@ Dans cet exemple, trois sources différentes pour la vidéo sont fournies. La pr
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_intégré"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_intégré"
           >contenu intégré</a
         >.
       </td>
@@ -368,9 +368,9 @@ Dans cet exemple, trois sources différentes pour la vidéo sont fournies. La pr
 
 ## Voir aussi
 
-- [Les formats pris en charge par `<audio>` et `<video>`](/fr/docs/Web/Media/Formats)
+- [Les formats pris en charge par `<audio>` et `<video>`](/fr/docs/Web/Media/Guides/Formats)
 - {{htmlelement("audio")}}
 - Les propriétés CSS permettant de positionner/redimensionner le contenu : {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-- [Utiliser les éléments `<audio>` et `<video>`](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Utiliser les éléments `<audio>` et `<video>`](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipuler l'élément `<video>` avec `<canvas>`](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Configuration côté serveur pour les média Ogg](/fr/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)
