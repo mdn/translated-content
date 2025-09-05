@@ -174,7 +174,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/Logical_OR", "||")}}
   - : 論理和 (OR) です。
 - {{jsxref("Operators/Nullish_coalescing", "??")}}
-  - : Null 合体演算子です。
+  - : ヌル値合体演算子です。
 
 ### 条件（三項）演算子
 
@@ -183,7 +183,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 
 ### 代入演算子
 
-代入演算子は、右辺のオペランドに基づいて、値を左辺のオペランドに代入します。
+代入演算子は、右オペランドに基づいて、値を左オペランドに代入します。
 
 - {{jsxref("Operators/Assignment", "=")}}
   - : 代入演算子です。
@@ -216,7 +216,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
   - : 論理和代入です。
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
-  - : 論理 Null 合体代入です。
+  - : 論理ヌル値合体代入です。
 - [`[a, b] = arr`, `{ a, b } = obj`](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)
   - : 構造分解は、配列やオブジェクトのプロパティを、配列やオブジェクトリテラルに似た構文を使用して変数に代入します。
 
