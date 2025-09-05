@@ -2,7 +2,7 @@
 title: <display-legacy>
 slug: Web/CSS/display-legacy
 l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 CSS 2 では `display` プロパティで単一のキーワードによる構文を採用しており、同じレイアウトモードのブロックレベルとインラインレベルで別々のキーワードが必要でした。このページではこれらの値を詳しく紹介します。

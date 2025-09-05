@@ -1,35 +1,37 @@
 ---
-title: 構文
+title: "CSS 構文入門: 宣言、ルールセット、文"
+short-title: 入門
 slug: Web/CSS/CSS_syntax/Syntax
-original_slug: Web/CSS/Syntax
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-カスケーディングスタイルシート ([CSS](/ja/docs/Web/CSS)) 言語の基本的な狙いは、ブラウザーのエンジンがページの要素を、色、位置、装飾などの特定の特性をもって描けるようにすることです。 *CSS の構文*はこの目的を反映し、以下のような基本的な構成要素があります。
+カスケーディングスタイルシート ([CSS](/ja/docs/Web/CSS)) 言語の基本的な狙いは、ブラウザーのエンジンがページの要素を、色、位置、装飾などの特定の特性をもって描けるようにすることです。 CSS の構文は、この目的を反映し、以下のような基本的な構成要素があります。
 
-- 識別子である**プロパティ**。人間が読むことができ、人間が読むことができる*名前*であり、どの機能が考慮されるかを定義します。
-- 特性がどのようにエンジンに操作されなければならないか表す**値**。どのプロパティも、形式文法および意味論的に定義され、ブラウザーに実装された妥当な値を対として持ちます。
+- 識別子である**プロパティ**。人間が読むことができ、人間が読むことができる名前であり、どの機能が考慮されるかを定義します。
+- 特性がどのようにエンジンに処理されるべきであるかを表す**値**。どのプロパティも、形式文法および意味論的に定義され、ブラウザーに実装された妥当な値を対として持ちます。
 
 ## CSS の宣言
 
 CSS のプロパティを特定の値に設定することは、 CSS 言語の核となる仕組みです。プロパティと値の組は**宣言**と呼ばれ、どの CSS エンジンも、 1 つ 1 つのページの要素を適切に配置し、形作るために、どの宣言を要素に適用するかを計算します。
 
-CSS では、プロパティと値の両方とも、既定で大文字と小文字を区別しません。組はコロン '`:`' (`U+003A COLON`) で分割され、プロパティと値の前、間、後のホワイトスペースは (内部のものを除き) 無視されます。
+CSS では、プロパティと値の両方とも、既定で大文字と小文字を区別しません。組はコロン `:` (U+003A COLON) で分割され、プロパティと値の前、間、後のホワイトスペースは (内部のものを除き) 無視されます。
 
-![CSS の構文 - declaration.png](css_syntax_-_declaration.png)
+![CSS 宣言は、2 つのエンティティをコロンで区切り、宣言をセミコロンで閉じるプロパティと値のペアです。](css_syntax_-_declaration.png)
 
-CSS には [100 を超える種類のプロパティ](/ja/docs/Web/CSS/Reference)と、無限に近い種類の値があります。すべてのプロパティと値の組み合わせが許されるわけではなく、どのプロパティも、何が妥当な値であるか定義されています。与えられたプロパティの値が妥当ではなかったとき、その宣言は*妥当ではない*と見なされ、 CSS エンジンから完全に無視されます。
+CSS には[数百種類のプロパティ](/ja/docs/Web/CSS/Reference)と、無限に近い種類の値があります。すべてのプロパティと値の組み合わせが許されるわけではなく、どのプロパティも、何が妥当な値であるか定義されています。与えられたプロパティの値が妥当ではなかったとき、その宣言は妥当ではないと見なされ、 CSS エンジンから完全に無視されます。
 
 ## CSS の宣言ブロック
 
-宣言は、左中括弧 '`{`' (`U+007B LEFT CURLY BRACKET`) と右中括弧 '`}`' (`U+007D RIGHT CURLY BRACKET`) で区切られた構造の中で、**ブロック**にグループ化されます。ブロックは入れ子になることがあるため、左中括弧と右中括弧が対応していなければなりません。
+宣言は、左中括弧 `{` (U+007B LEFT CURLY BRACKET) と右中括弧 `}` (U+007D RIGHT CURLY BRACKET) で区切られた構造の中で、**ブロック**にグループ化されます。ブロックは入れ子になることがあるため、左中括弧と右中括弧が対応していなければなりません。
 
-![css syntax - block.png](css_syntax_-_block.png)
+![2 つの波括弧が CSS ブロックの開始と終了を区切ります。波括弧の間には CSS コンテンツまたはコンテンツが何もありません。](css_syntax_-_block.png)
 
-このようなブロックは必然的に**宣言ブロック**と呼ばれ、その中の宣言はセミコロン '`;`' (`U+003B SEMICOLON`) で区切ります。宣言ブロックは宣言を持たず、空になることもあります。宣言の周囲のホワイトスペースは無視されます。ブロックの最後の宣言は、セミコロンで終わらせる必要はありませんが、セミコロンで終わらせればブロックを他の宣言で拡張するときにセミコロンを付け忘れることを防げるため、*良い書き方*とみなされます。
+このようなブロックは必然的に**宣言ブロック**と呼ばれ、その中の宣言はセミコロン `;` (U+003B SEMICOLON) で区切ります。宣言ブロックは宣言を持たず、空になることもあります。宣言の周囲のホワイトスペースは無視されます。ブロックの最後の宣言は、セミコロンで終わらせる必要はありませんが、セミコロンで終わらせればブロックを他の宣言で拡張するときにセミコロンを付け忘れることを防げるため、良い書き方とみなされています。
 
 CSS 宣言ブロックは以下の図のように表すことができます。
 
-![css syntax - declarations block.png](declaration-block.png)
+![CSSのブロック内（波括弧で囲まれた部分）では、宣言はセミコロンで区切られます。最後のセミコロンは省略可能ですが、良い慣習として推奨されています。](declaration-block.png)
 
 > [!NOTE]
 > 左中括弧と右中括弧を除いた、セミコロンで分割された宣言のリストである CSS 宣言ブロックの内容は、 HTML の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性の中に置くことができます。
@@ -40,16 +42,16 @@ CSS 宣言ブロックは以下の図のように表すことができます。
 
 CSS ではこれを、宣言ブロックと条件を関連付けることで実現します。それぞれの（妥当な）宣言ブロックの前に、ページの要素を選択する条件である[**セレクター**](/ja/docs/Web/CSS/CSS_selectors)を置きます。[セレクターのグループ](/ja/docs/Web/CSS/Selector_list)と宣言ブロックの組を**ルールセット**、またはしばしば単に**ルール**と呼びます。
 
-CSS のルールセット (またはルール) は下記の図のように表現することができます。
+CSS のルールセット（またはルール）は下記の図のように表現することができます。
 
-![css syntax - ruleset.png](ruleset.png)
+![カンマで区切られたセレクタのグループが、波括弧で囲まれた宣言ブロックの前に配置されています。このブロックには、セミコロンで終わる複数の宣言が含まれています。](ruleset.png)
 
-ページの要素は複数のセレクターに一致する可能性があり、あるプロパティが複数のルールで異なる値で複数回現れる可能性があるため、 CSS 標準ではあるプロパティが他のプロパティより優先され、適用しなければならないことを定義しています。これを[カスケード](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)アルゴリズムと呼びます。
+ページの要素は複数のセレクターに一致する可能性があり、あるプロパティが複数のルールで異なる値で複数回現れる可能性があるため、 CSS 標準ではあるプロパティが他のプロパティより優先され、適用しなければならないことを定義しています。これをカスケードアルゴリズムと呼びます（[競合の解決](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)を参照）。
 
 > [!NOTE]
 > 単一のセレクターで構成されるルールセットを複数まとめて表記する方法の一つとして、ルールセットをセレクターの集合で記述することが挙げられますが、各ルールセットの妥当性を上手くまとめるものではない点に注意しましょう。
 >
-> 基本セレクターのうちの一つが妥当ではなかった場合 (架空の要素や架空のセレクターを使った際など)、*セレクター*全体が妥当ではないこととなり、ルール全体も (妥当ではないものとして) 無視されます。</div>
+> これには重要な結果が伴います。基本セレクターが 1 つでも不正な場合、たとえば未知の擬似要素や擬似クラスを使用している場合、セレクター全体が不正となり、ルール全体が（不正として）無視されます。
 
 ## CSS の文
 
@@ -57,12 +59,12 @@ CSS のルールセット (またはルール) は下記の図のように表現
 
 **文**は、空白ではないすべての文字で始まり、（文字列の外にあり、エスケープされておらず、別の {} または () または [] の対の中に含まれていない）最初の右中括弧またはセミコロンで終わる構成要素です。
 
-![css syntax - statements Venn diag.png](css_syntax_-_statements_venn_diag.png)
+![すべてのルールセットが入れ子文である、あるいは一部の アットルールは入れ子文であるが、そのほとんどはそうではない、という文のベン図。アットルールでも入れ子でもないものは、すべて不正な文です。](css_syntax_-_statements_venn_diag.png)
 
-文には二種類があります。
+文には 2 種類があります。
 
-- **ルールセット** (または*ルール*)。ここまで見てきたように、 CSS の宣言の集合を、[セレクター](/ja/docs/Web/CSS/CSS_selectors)によって記述された条件に関連付けています。
-- **アットルール**。アットマーク '`@`' (`U+0040 COMMERCIAL AT`) で始まり、識別子が後続し、ブロックの外のセミコロンまたは次のブロックの終わりに至るまで続きます。それぞれの種類の [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)は、識別子によって定義され、当然ながら独自の内部構文や意味を持つことがあります。アットルールはメタデータ情報 ({{ cssxref("@charset") }} や {{ cssxref("@import") }} など) を伝えたり、条件情報 ({{ cssxref("@media") }} や {{ cssxref("@document") }}) など) を伝えたり、記述的情報 ({{ cssxref("@font-face") }} など) を伝えたりするために使用します。
+- **ルールセット** （またはルール）。ここまで見てきたように、 CSS の宣言の集合を、[セレクター](/ja/docs/Web/CSS/CSS_selectors)によって記述された条件に関連付けています。
+- **アットルール**。アットマーク `@` (U+0040 COMMERCIAL AT) で始まり、識別子が後続し、ブロックの外のセミコロンまたは次のブロックの終わりに至るまで続きます。それぞれの種類の [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)は、識別子によって定義され、当然ながら独自の内部構文や意味を持つことがあります。アットルールはメタデータ情報（{{ cssxref("@layer") }} や {{ cssxref("@import") }} など）を伝えたり、条件情報（{{ cssxref("@media") }} や {{ cssxref("@document") }} など）を伝えたり、記述的情報（{{ cssxref("@font-face") }} など）を伝えたりするために使用します。
 
 ルールまたはアットルールではない文は、すべて妥当ではなく、無視されます。
 
@@ -72,21 +74,17 @@ CSS のルールセット (またはルール) は下記の図のように表現
 
 ## 関連情報
 
-- CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
-  - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
-  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - 値
-    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
-    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
+- [セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [セレクター構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
+- [エラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
+- [カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
+- [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- 値
+  - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
+  - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
+  - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
+  - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
+- [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
