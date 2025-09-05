@@ -1048,9 +1048,9 @@
 /zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /zh-CN/docs/Learn/CSS/Building_blocks/Cascade_layers	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
-/zh-CN/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/zh-CN/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
-/zh-CN/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/zh-CN/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 /zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
 /zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
@@ -1107,7 +1107,7 @@
 /zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /zh-CN/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators
 /zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
-/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /zh-CN/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
@@ -1120,9 +1120,9 @@
 /zh-CN/docs/Learn/CSS/Styling_boxes/Advanced_box_effects	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 /zh-CN/docs/Learn/CSS/Styling_boxes/Borders	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
-/zh-CN/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/zh-CN/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
-/zh-CN/docs/Learn/CSS/Styling_boxes/创建精美的信纸	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/zh-CN/docs/Learn/CSS/Styling_boxes/创建精美的信纸	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Styling_boxes/背景	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /zh-CN/docs/Learn/CSS/Styling_text	/zh-CN/docs/Learn_web_development/Core/Text_styling
 /zh-CN/docs/Learn/CSS/Styling_text/Fundamentals	/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals
@@ -1246,7 +1246,7 @@
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding	/zh-CN/docs/Learn_web_development/Core/Structuring_content
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images
-/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/zh-CN/docs/Web/HTML/Guides/Responsive_images
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
@@ -1439,8 +1439,11 @@
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
+/zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/zh-CN/docs/Learn_web_development/Core/Styling_basics
+/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper	/zh-CN/docs/Learn_web_development/Core/Styling_basics
+/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
