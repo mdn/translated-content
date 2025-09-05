@@ -2078,7 +2078,7 @@
 /ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /ja/docs/Learn/CSS/Building_blocks/Cascade_layers	/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
 /ja/docs/Learn/CSS/Building_blocks/Cascade_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
-/ja/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/ja/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/ja/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Building_blocks/Debugging_CSS	/ja/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
 /ja/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
@@ -2162,7 +2162,7 @@
 /ja/docs/Learn/CSS/Styling_boxes/Backgrounds	/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /ja/docs/Learn/CSS/Styling_boxes/Borders	/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /ja/docs/Learn/CSS/Styling_boxes/Box_model_recap	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
-/ja/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/ja/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/ja/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Styling_boxes/Styling_tables	/ja/docs/Learn_web_development/Core/Styling_basics/Tables
 /ja/docs/Learn/CSS/Styling_text	/ja/docs/Learn_web_development/Core/Text_styling
 /ja/docs/Learn/CSS/Styling_text/Fundamentals	/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals
@@ -2495,6 +2495,7 @@
 /ja/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 /ja/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
 /ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/ja/docs/Learn_web_development/Core/Styling_basics
+/ja/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /ja/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
