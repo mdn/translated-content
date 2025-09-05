@@ -67,6 +67,6 @@ Content-Type: text/html
 
 ## Voir aussi
 
-- [Les codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
+- Les [codes de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
 - [`Connection`](/fr/docs/Web/HTTP/Headers/Connection)
 - [`X-DNS-Prefetch-Control`](/fr/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
