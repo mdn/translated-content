@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Performance API")}}
 
-`LargestContentfulPaint` 接口用于提供网页视口内最大图像或文本元素在用户首次输入前的绘制时间信息。
+`LargestContentfulPaint` 接口提供网页视口内最大图像或文本元素在用户首次输入前的绘制时间信息。
 
 ## 描述
 
@@ -69,9 +69,9 @@ _此接口还继承来自 {{domxref("PerformanceEntry")}} 的方法。_
 
 ### 观察最大内容绘制
 
-以下示例中，注册了一个侦察器，以在页面加载时获取最大的内容绘制。`buffered` 标志用于访问侦察器创建之前的数据。
+以下示例中，注册了一个观察器，以在页面加载时获取最大内容绘制。`buffered` 标志用于访问观察器创建之前的数据。
 
-LCP API 分析它找到的所有内容（包括从 DOM 中删除的内容）。当发现新的最大内容时，它会创建一个新条目。当滚动或输入事件发生时，它会停止查找更大的内容，因为这些事件可能会在网站上引入新内容。因此 LCP 是侦察器报告的最后一个性能条目。
+LCP API 分析它找到的所有内容（包括从 DOM 中删除的内容）。当发现新的最大内容时，它会创建一个新条目。当滚动或输入事件发生时，它会停止查找更大的内容，因为这些事件可能会在网站上引入新内容。因此 LCP 是观察器报告的最后一个性能条目。
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -85,7 +85,7 @@ observer.observe({ type: "largest-contentful-paint", buffered: true });
 
 ### 跨源图像渲染时间
 
-处于安全原因，如果资源是跨源请求，则 {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} 属性初始值为 `0`。此时应使用 {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} 属性作为备用值。
+出于安全原因，如果资源是跨源请求，则 {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} 属性初始值为 `0`。此时应使用 {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} 属性作为备用值。
 
 在这些情况下，浏览器[现在可能会暴露出稍微粗化的渲染时间](https://github.com/w3c/paint-timing/issues/104)。请查看[浏览器支持](#浏览器兼容性)。
 
