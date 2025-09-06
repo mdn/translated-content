@@ -15,7 +15,7 @@ l10n:
 상호작용을 하는 요소에 접근자 이름이 없거나, 접근자 이름이 부정확한 경우, 또는 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 속성을 통해 참조되는 DOM 안에 보이는 콘텐츠가 없는 경우에 `aria-label` 속성은 이 속성이 부여된 상호작용 요소에 지정할 문자열을 정의하는데 사용될 수 있습니다. 이는 해당 요소에게 접근자 이름을 제공하게 됩니다.
 
 ```html
-<button aria-label="Close" onclick="myDialog.close()">
+<button aria-label="Close">
   <svg
     aria-hidden="true"
     focusable="false"
@@ -24,9 +24,15 @@ l10n:
     xmlns="http://www.w3.org/2000/svg">
     <path
       d="m.967 14.217 5.8-5.906-5.765-5.89L3.094.26l5.783 5.888L14.66.26l2.092 2.162-5.766 5.889 5.801 5.906-2.092 2.162-5.818-5.924-5.818 5.924-2.092-2.162Z"
-      fill="#000" />
+      fill="black" />
   </svg>
 </button>
+```
+
+```js
+document.querySelector("button").addEventListener("click", () => {
+  myDialog.close();
+});
 ```
 
 > **참고:** `aria-label`은 레이블로 참조되어질 수 있는 DOM 안에 표시가능한 적당한 텍스트가 없을 때, 상호작용을 하는 요소들 또는 다른 ARIA 선언들을 통해 상호작용하도록 만들어진 요소에 사용하기 위한 것입니다.
