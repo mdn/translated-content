@@ -98,7 +98,7 @@ Estos controladores de eventos se definen en el mixin {{DOMxRef("GlobalEventHand
 - {{DOMxRef("GlobalEventHandlers.onloadedmetadata")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadedmetadata`](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event).
 - {{DOMxRef("GlobalEventHandlers.onloadend")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event) (cuando el progreso se haya detenido en la carga de un recurso).
+  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadend`](/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event) (cuando el progreso se haya detenido en la carga de un recurso).
 - {{DOMxRef("GlobalEventHandlers.onloadstart")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event) (cuando el progreso ha comenzado a cargar un recurso).
 - {{DOMxRef("GlobalEventHandlers.onlostpointercapture")}}
