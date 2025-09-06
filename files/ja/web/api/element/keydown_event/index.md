@@ -102,7 +102,7 @@ eventTarget.addEventListener("keydown", (event) => {
 ```
 
 > [!NOTE]
-> IME を開くための最初の文字を入力したときに、 `compositionstart` が `keydown` の後に発行されることがあります。また、 IME を閉じられり最後の文字を入力したときに、 `compositionend` が `keydown` の前に発行されることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。しかし、これらの場合でも {{domxref("KeyboardEvent.keyCode")}} は `229` のままなので、非推奨ではあるものの、やはり `keyCode` も調べることをお勧めします。
+> IME を開くための最初の文字を入力したときに、 `compositionstart` が `keydown` の後に発行されることがあります。また、 IME を閉じる最後の文字を入力したときに、 `compositionend` が `keydown` の前に発行されることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。しかし、これらの場合でも {{domxref("KeyboardEvent.keyCode")}} は `229` のままなので、非推奨ではあるものの、やはり `keyCode` も調べることをお勧めします。
 
 ## 仕様書
 
