@@ -179,7 +179,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vita
 </form>
 ```
 
-{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300)}}
+{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300, , , , , 'allow-modals')}}
 
 ### Maximum length and number of lines example
 

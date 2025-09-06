@@ -64,7 +64,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 Intenta hacer clic en esta última versión de la etiqueta de texto para ver qué sucede (ten en cuenta también que puedes encontrar esta demostración en GitHub — ¡consulta el [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html) o [ejecútalo en vivo](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
 
