@@ -55,7 +55,7 @@ JavaScript には、一般的な `Error` コンストラクターの他に、中
 これらのプロパティは `Error.prototype` で定義されており、すべての `Error` インスタンスで共有されます。
 
 - {{jsxref("Object/constructor", "Error.prototype.constructor")}}
-  - : このインスタンスオブジェクトを作成したコンストラクター関数です。 `Error` インスタンスの場合、初期値は {{jsxref("Error/Error", "Array")}} コンストラクターです。
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。 `Error` インスタンスの場合、初期値は {{jsxref("Error/Error", "Error")}} コンストラクターです。
 - {{jsxref("Error.prototype.name")}}
   - : エラーの名称を表します。`Error.prototype.name` の場合、初期値は `"Error"` です。 {{jsxref("TypeError")}} や {{jsxref("SyntaxError")}} のようなサブクラスは各自の `name` プロパティを提供します。
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
