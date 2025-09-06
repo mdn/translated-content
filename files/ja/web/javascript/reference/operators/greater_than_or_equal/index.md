@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**大なりイコール演算子 (`>=`)** は、左辺のオペランドが右辺のオペランド以上の場合は `true` を返し、それ以外の場合は `false` を返します。
+**大なりイコール演算子 (`>=`)** は、左オペランドが右オペランド以上の場合は `true` を返し、それ以外の場合は `false` を返します。
 
 {{InteractiveExample("JavaScript デモ: 大なりイコール演算子 (>=)")}}
 
@@ -34,7 +34,7 @@ x >= y
 
 オペランドは、[小なり](/ja/docs/Web/JavaScript/Reference/Operators/Less_than)演算子と同じアルゴリズムを使用して比較され、結果が反転されます。 `x >= y` は通常 `!(x < y)` と同等ですが、 `x >= y` と `x < y` の両方が `false` となる 2 つの例外があります。
 
-- 一方のオペランドが BigInt に変換される一方、もう一方が BigInt 値に変換できない（[`BigInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) に渡すと[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax)を発生する）文字列に変換される場合。
+- 一方のオペランドが長整数に変換される一方、もう一方が長整数値に変換できない（[`BigInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) に渡すと[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax)を発生する）文字列に変換される場合。
 - オペランドの一方が `NaN` に変換される場合。（例えば、数値に変換できない文字列や `undefined` など。）
 
 `x >= y` は、一般的に `x > y || x == y` と同等ですが、次のいくつかの例外があります。
@@ -73,7 +73,7 @@ x >= y
 3 >= 5; // false
 ```
 
-### Number と BigInt の比較
+### 数値と長整数の比較
 
 ```js
 5n >= 3; // true
