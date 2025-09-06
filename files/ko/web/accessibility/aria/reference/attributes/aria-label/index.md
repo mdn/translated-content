@@ -85,7 +85,7 @@ original_slug: Web/Accessibility/ARIA/Attributes/aria-label
 
 > **참고:** `aria-label` 속성은 오로지 상호작용 요소에서만 사용됩니다. 위에 나열된 것들과 같은 비 상호작용 요소에 사용할 경우 aria-label 속성 값은 읽히지 않거나, 비 상호작용 요소를 상호작용하는 요소처럼 작동하는 것으로 사용자를 혼동시킬 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
