@@ -11,7 +11,7 @@ Cette page liste l'ensemble des tutoriels, avec une courte description. Ils sont
 
 ## Tutoriels pour les débutants
 
-- [Débuter en CSS](/fr/docs/Learn/CSS/First_steps)
+- [Débuter en CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f)
   - : Ce guide est destiné aux non-initiés : vous n'avez jamais écrit une seule ligne de CSS ? Cet article est pour vous ! Il explique les concepts fondamentaux du langage et vous guide via la rédaction de feuilles de style basiques.
 - [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : Les arrière-plans sont fondamentaux afin d'obtenir une mise en forme appréciable. CSS vous permet d'en définir plusieurs pour chaque boîte. Ce tutoriel explique comment les arrière-plans interagissent et comment utiliser ces interactions pour réaliser des effets.

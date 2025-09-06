@@ -32,7 +32,7 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 
 ## Rendre les choses simples
 
-Comme les [formulaires HTML](/fr/docs/Learn/Forms) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;»&nbsp;! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
+Comme les [formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;»&nbsp;! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
 
 ### La simplification élégante est la meilleure amie du développeur Web
 
@@ -42,7 +42,7 @@ Voyons quelques exemples relatifs aux formulaires en HTML.
 
 #### Types d'entrées en HTML
 
-Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon dont ils simplifient est grandement prévisible. Si un navigateur ne connaît pas la valeur de l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) d'un élément {{HTMLElement("input")}}, il prendra une valeur `text` en recours.
+Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon dont ils simplifient est grandement prévisible. Si un navigateur ne connaît pas la valeur de l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) d'un élément {{HTMLElement("input")}}, il prendra une valeur `text` en recours.
 
 ```html
 <label for="myColor">
@@ -78,7 +78,7 @@ Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon 
 
 #### Sélecteurs d'attributs CSS
 
-Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Attribute_selectors) sont très utiles avec les [formulaires HTML](/fr/docs/Learn/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
+Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Attribute_selectors) sont très utiles avec les [formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
 
 ```html
 <input type="number" class="number" />
@@ -108,7 +108,7 @@ input.number {
 
 Il y a deux manières de définir un bouton dans un formulaire HTML&nbsp;:
 
-- un élément {{HTMLElement("input")}} avec un attribut [`type`](/fr/docs/Web/HTML/Element/input#type) défini avec une des valeurs `button`, `submit`, `reset` ou `image`
+- un élément {{HTMLElement("input")}} avec un attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) défini avec une des valeurs `button`, `submit`, `reset` ou `image`
 - un élément {{HTMLElement("button")}}
 
 L'élément {{HTMLElement("input")}} peut rendre les choses compliquées si vous voulez appliquer des CSS avec un sélecteur d'élément&nbsp;:
@@ -137,8 +137,8 @@ input.button {
 
 L'élément {{HTMLElement("button")}} présente deux problèmes potentiels&nbsp;:
 
-- un bogue dans certaines anciennes versions d'Internet Explorer. Lorsque l'utilisateur clique sur le bouton, ce n'est pas le contenu de l'attribut [`value`](/fr/docs/Web/HTML/Element/button#value) qui est envoyé, mais le contenu HTML disponible entre balises de début et de fin de l'élément {{HTMLElement("button")}}. Ce n'est un problème que si vous voulez envoyer une telle valeur, par exemple si le traitement des données dépend du bouton sur lequel l'utilisateur clique.
-- certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut pour l'attribut [`type`](/fr/docs/Web/HTML/Element/button#type), donc il est recommandé de toujours définir l'attribut [`type`](/fr/docs/Web/HTML/Element/button#type) pour les éléments {{HTMLElement("button")}}.
+- un bogue dans certaines anciennes versions d'Internet Explorer. Lorsque l'utilisateur clique sur le bouton, ce n'est pas le contenu de l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/button#value) qui est envoyé, mais le contenu HTML disponible entre balises de début et de fin de l'élément {{HTMLElement("button")}}. Ce n'est un problème que si vous voulez envoyer une telle valeur, par exemple si le traitement des données dépend du bouton sur lequel l'utilisateur clique.
+- certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut pour l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/button#type), donc il est recommandé de toujours définir l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/button#type) pour les éléments {{HTMLElement("button")}}.
 
 ```html
 <!-- Cliquer sur ce boutton envoie «&nbsp;<em>Do A</em>&nbsp;» au lieu de «&nbsp;A&nbsp;» dans certains cas -->
@@ -151,7 +151,7 @@ Le choix de l'une ou l'autre solution vous appartient, selon les contraintes du 
 
 ### Laissez tomber les CSS
 
-Le plus gros problème avec les formulaires HTML et les navigateurs historiques est la prise en charge des CSS. Comme vous pouvez le constater, vu la complexité de la [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls), c'est très difficile. Même s'il est toujours possible de faire quelques ajustements sur les éléments de texte (comme la taille ou la couleur de police), il y a toujours des effets secondaires. La meilleure approche reste de ne faire aucune composition des widgets de formulaire HTML. Mais vous pouvez toujours appliquer des styles à tous les éléments environnants. Si vous êtes un professionnel et que votre client le réclame, dans ce cas, vous pouvez étudier certaines techniques difficiles telles que la [construction de widgets avec JavaScript](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés). Mais dans ce cas, n'hésitez pas à facturer votre client pour ce caprice.
+Le plus gros problème avec les formulaires HTML et les navigateurs historiques est la prise en charge des CSS. Comme vous pouvez le constater, vu la complexité de la [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn_web_development/Extensions/Forms), c'est très difficile. Même s'il est toujours possible de faire quelques ajustements sur les éléments de texte (comme la taille ou la couleur de police), il y a toujours des effets secondaires. La meilleure approche reste de ne faire aucune composition des widgets de formulaire HTML. Mais vous pouvez toujours appliquer des styles à tous les éléments environnants. Si vous êtes un professionnel et que votre client le réclame, dans ce cas, vous pouvez étudier certaines techniques difficiles telles que la [construction de widgets avec JavaScript](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés). Mais dans ce cas, n'hésitez pas à facturer votre client pour ce caprice.
 
 ## Détection de fonctionnalité et prothèses d'émulation (_polyfills_)
 
@@ -208,4 +208,4 @@ Même si des scripts comme Modernizr sont très attentifs aux performances, le c
 
 Comme vous pouvez le constater, opérer avec des navigateurs historiques n'est pas qu'une question de formulaires. C'est tout un ensemble de techniques&nbsp;; mais les maîtriser toutes dépasserait le cadre de cet article.
 
-Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/Learn/Forms), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Community/Contributing/Getting_started).
+Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Community/Getting_started).

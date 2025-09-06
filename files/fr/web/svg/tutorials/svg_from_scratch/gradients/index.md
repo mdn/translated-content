@@ -100,7 +100,7 @@ L'élément `<linearGradient>` peut également prendre différents attributs pou
 >   href="#Gradient1" />
 > ```
 >
-> Ici, le namespace xlink est inclut directement sur le noeud, bien qu'il soit généralement définit en haut du document, comme dans l'[exemple avec les images](/fr/docs/Web/SVG/Tutorial/Other_content_in_SVG)
+> Ici, le namespace xlink est inclut directement sur le noeud, bien qu'il soit généralement définit en haut du document, comme dans l'[exemple avec les images](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG)
 
 ## Dégradé Radial
 
@@ -306,6 +306,6 @@ Il y a quelques subtilités concernant l'utilisation de `gradientUnits="objectBo
 
 ### gradientTransform
 
-Vous pouvez également appliquer une transformation au gradient en utilisant l'attribut `gradientTransform`, mais puisque nous n'avons pas encore introduit les [transformations](/fr/docs/Web/SVG/Tutorial/Basic_Transformations), nous le laisserons de côté pour l'instant.
+Vous pouvez également appliquer une transformation au gradient en utilisant l'attribut `gradientTransform`, mais puisque nous n'avons pas encore introduit les [transformations](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations), nous le laisserons de côté pour l'instant.
 
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}

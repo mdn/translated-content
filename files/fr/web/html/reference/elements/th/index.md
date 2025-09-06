@@ -119,7 +119,7 @@ caption {
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `abbr`
   - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
@@ -131,7 +131,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : Cet attribut est une liste de chaînes de caractères séparées par des espaces. Chacune correspond à l'attribut `id` de l'élément `<th>` qui s'applique à cet élément.
 
 - `rowspan`
-  - : Cet attribut contient un entier positif indiquant sur combien de lignes s'étend la cellule. La valeur par défaut est 1. Si cet attribut vaut 0, la cellule s'étend jusqu'à la fin de la section ([`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot)) du tableau à laquelle appartient la cellule même si cette section est définie implicitement. Les valeurs supérieures à 65534 seront ramenées à 65534.
+  - : Cet attribut contient un entier positif indiquant sur combien de lignes s'étend la cellule. La valeur par défaut est 1. Si cet attribut vaut 0, la cellule s'étend jusqu'à la fin de la section ([`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead), [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody), [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot)) du tableau à laquelle appartient la cellule même si cette section est définie implicitement. Les valeurs supérieures à 65534 seront ramenées à 65534.
 
 - `scope`
   - : Cet attribut référence les cellules auxquelles l'élément `<th>` est lié. Cet attribut peut prendre l'une des valeurs suivantes&nbsp;:
@@ -140,7 +140,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
     - `col`
       - : Indique que l'en-tête s'applique à toutes les cellules de la colonne à laquelle appartient cet élément.
     - `rowgroup`
-      - : Indique que l'en-tête appartient à un groupe de lignes et s'applique à toutes ses cellules. Les cellules restantes sont soit celles à droite de l'élément, soit celles à gauche selon la valeur de l'attribut [`dir`](/fr/docs/Web/HTML/Global_attributes/dir) de l'élément [`<table>`](/fr/docs/Web/HTML/Element/table).
+      - : Indique que l'en-tête appartient à un groupe de lignes et s'applique à toutes ses cellules. Les cellules restantes sont soit celles à droite de l'élément, soit celles à gauche selon la valeur de l'attribut [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir) de l'élément [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table).
     - `colgroup`
       - : Indique que l'en-tête appartient à un groupe de colonne et concerne toutes ses cellules.
 
@@ -213,14 +213,14 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
     > Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
 
 - `width` {{deprecated_inline}}
-  - : Cet attribut est utilisé afin de définir une largeur de cellule recommandée. Un espace supplémentaire peut être ajouté via les propriétés [`cellspacing`](/fr/docs/Web/API/HTMLTableElement/cellSpacing) et [`cellpadding`](/fr/docs/Web/API/HTMLTableElement/cellPadding) et en modifiant la largeur de l'élément [`<col>`](/fr/docs/Web/HTML/Element/col). Si la largeur de la colonne est trop étroite pour afficher une cellule donnée correctement, elle sera élargie lors de l'affichage.
+  - : Cet attribut est utilisé afin de définir une largeur de cellule recommandée. Un espace supplémentaire peut être ajouté via les propriétés [`cellspacing`](/fr/docs/Web/API/HTMLTableElement/cellSpacing) et [`cellpadding`](/fr/docs/Web/API/HTMLTableElement/cellPadding) et en modifiant la largeur de l'élément [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col). Si la largeur de la colonne est trop étroite pour afficher une cellule donnée correctement, elle sera élargie lors de l'affichage.
 
     > [!NOTE]
     > Cet attribut est désormais obsolète et il faut donc éviter de l'utiliser. On utilisera plutôt la propriété CSS [`width`](/fr/docs/Web/CSS/width) à la place.
 
 ## Exemples
 
-Voir la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples d'utilisation de l'élément `<th>`.
+Voir la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour des exemples d'utilisation de l'élément `<th>`.
 
 ## Spécifications
 
@@ -233,12 +233,12 @@ Voir la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples d'ut
 ## Voir aussi
 
 - Les autres éléments HTML relatifs aux tableaux&nbsp;:
-  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
-  - [`<col>`](/fr/docs/Web/HTML/Element/col)
-  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
-  - [`<table>`](/fr/docs/Web/HTML/Element/table)
-  - [`<tbody>`](/fr/docs/Web/HTML/Element/tbody)
-  - [`<td>`](/fr/docs/Web/HTML/Element/td)
-  - [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot)
-  - [`<thead>`](/fr/docs/Web/HTML/Element/thead)
-  - [`<tr>`](/fr/docs/Web/HTML/Element/tr).
+  - [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption)
+  - [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)
+  - [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup)
+  - [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)
+  - [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody)
+  - [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)
+  - [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot)
+  - [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)
+  - [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr).

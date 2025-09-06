@@ -37,7 +37,7 @@ p {
 
 ## Attributs
 
-Cet élément, comme les autres éléments HTML, inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément, comme les autres éléments HTML, inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
 > L'attribut `align` pour les balises `<p>` est obsolète et ne doit plus être utilisé.

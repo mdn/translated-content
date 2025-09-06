@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension spécifique à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente le contour interne pour le focus sur les éléments [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), [`<input type="reset">`](/fr/docs/Web/HTML/Element/input/reset), et [`<input type="color">`](/fr/docs/Web/HTML/Element/input/color).
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension spécifique à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente le contour interne pour le focus sur les éléments [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button), [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit), [`<input type="reset">`](/fr/docs/Web/HTML/Reference/Elements/input/reset), et [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color).
 
 > [!NOTE]
 > Utiliser `::-moz-focus-inner` sur un autre élément que les types de boutons pris en charge n'aura aucun effet.

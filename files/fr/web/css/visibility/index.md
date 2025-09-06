@@ -77,7 +77,7 @@ La propriété `visibility` est définie avec l'un des mots-clés suivants.
 - `visible`
   - : La valeur par défaut, la boîte est visible.
 - `hidden`
-  - : La boîte est invisible (totalement transparente, rien n'est dessiné) mais continue d'avoir un impact sur la disposition. Les fils de l'élément seront visibles s'ils ont `visibility:visible`. L'élément ne pourra plus recevoir le focus (cf. [la navigation au clavier avec les tabulations](/fr/docs/Web/HTML/Global_attributes/tabindex)).
+  - : La boîte est invisible (totalement transparente, rien n'est dessiné) mais continue d'avoir un impact sur la disposition. Les fils de l'élément seront visibles s'ils ont `visibility:visible`. L'élément ne pourra plus recevoir le focus (cf. [la navigation au clavier avec les tabulations](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex)).
 - `collapse`
   - : Le mot-clé `collapse` a différents effets selon les éléments :
     - Pour les lignes, les colonnes, les groupes de lignes et les groupes de colonnes d'un tableau, les éléments sont masqués et l'espace occupé est retiré (comme si on avait appliqué `{{cssxref("display")}}: none` aux colonnes/lignes du tableau). La taille des autres lignes et colonnes continue d'être calculée comme si les lignes et colonnes masquées étaient présentes. Cela a été conçu afin de pouvoir retirer rapidement des lignes et/ou des colonnes sans avoir à recalculer les dimensions pour l'ensemble du tableau.
@@ -168,7 +168,7 @@ tr.col {
 
 ## Accessibilité
 
-Utiliser la propriété `visibility` avec la valeur `hidden` retirera l'objet de [l'arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Les éléments ciblés, ainsi que leurs éléments descendants ne seront plus annoncés par les lecteurs d'écran.
+Utiliser la propriété `visibility` avec la valeur `hidden` retirera l'objet de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). Les éléments ciblés, ainsi que leurs éléments descendants ne seront plus annoncés par les lecteurs d'écran.
 
 ## Notes
 
