@@ -2,7 +2,7 @@
 title: Web API
 slug: Web/API
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
 ウェブのコードを書く時は、数多くの Web API が利用できます。以下に、ウェブアプリやサイトを開発する際に利用することができる可能性があるすべてのインターフェイス（オブジェクト型）のリストを挙げます。
@@ -84,7 +84,3 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 利用可能なすべてのインターフェイス (すなわちオブジェクトの型) の一覧です。
 
 {{APIListAlpha}}
-
-## ブラウザーの互換性
-
-- [Web API イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)

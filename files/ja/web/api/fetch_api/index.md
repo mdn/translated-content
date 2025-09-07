@@ -13,7 +13,7 @@ l10n:
 
 フェッチ API は {{DOMxRef("Request")}} と {{DOMxRef("Response")}} オブジェクト（他にもネットワークリクエストに関係すること）と、CORS や HTTP の Origin ヘッダーの意味づけのような関連の概念を使用します。
 
-リクエストを行い、リソースを読み取るには、{{DOMxRef("Window.fetch", "fetch()")}} メソッドを使用します。これは {{DOMxRef("Window")}} と {{DOMxRef("WorkerGlobalScope", "Worker")}} コンテキストの両方でグローバルメソッドです。このため、リソースを取得するほとんどのコンテキストで利用できます。
+リクエストを行い、リソースを読み取るには、{{domxref("Window/fetch", "fetch()")}} メソッドを使用します。これは {{DOMxRef("Window")}} と {{DOMxRef("WorkerGlobalScope", "Worker")}} コンテキストの両方でグローバルメソッドです。このため、リソースを取得するほとんどのコンテキストで利用できます。
 
 `fetch()` メソッドは必須の引数を 1 つ取り、取得したいリソースのパスを指定します。これは {{JSxRef("Promise")}} を返します。これはサーバーがヘッダーで返答するとすぐに、**サーバーレスポンスが HTTP エラーステータスであったとしても**、 {{DOMxRef("Response")}} に解決します。第 2 引数は任意で、 `init` オプションオブジェクトを渡すことができます（{{DOMxRef("Request")}} を参照してください）。
 
@@ -23,9 +23,9 @@ l10n:
 
 フェッチ API の詳しい利用方法は [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)を参照してください。
 
-## Fetch インターフェイス
+## インターフェイス
 
-- {{DOMxRef("Window.fetch", "fetch()")}}
+- {{domxref("Window.fetch()")}} および {{domxref("WorkerGlobalScope.fetch()")}}
   - : `fetch()` メソッドはリソース取得のために使用されます。
 - {{DOMxRef("Headers")}}
   - : リクエストとレスポンスのヘッダーを表現しています。ヘッダー情報への問い合わせや、結果による振る舞いの選択が可能です。
@@ -48,4 +48,3 @@ l10n:
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)
-- [フェッチのポリフィル](https://github.com/github/fetch)
