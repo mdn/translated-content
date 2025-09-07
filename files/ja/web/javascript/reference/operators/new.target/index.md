@@ -52,7 +52,7 @@ new.target
 
 通常の関数呼び出しでは (コンストラクター関数の呼び出しとは対照的に)、 `new.target` は {{jsxref("undefined")}} になります。これにより、関数が [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きでコンストラクターとして呼び出されたかを検出できます。
 
-```js
+```js-nolint
 function Foo() {
   if (!new.target) {
     throw new Error("Foo() は new を付けて呼び出さなくてはなりません");
