@@ -391,56 +391,79 @@ C'est… C'est un…
 
 Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuvent être positionnés grâce à [l'indication `align`](/fr/docs/Web/API/WebVTT_API#cue_settings).
 
-- [Sous-titres et légendes - _Plugins_](/fr/docs/Glossary/Plugin)
 - [API Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
-- [WebAIM : _Captions, Transcripts, and Audio Descriptions_ <sup>(angl.</sup>](https://webaim.org/techniques/captions/)
-- [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
-- [_Understanding Success Criterion 1.2.1 - W3C Understanding WCAG 2.0_ <sup>(angl.</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [_Understanding Success Criterion 1.2.2 - W3C Understanding WCAG 2.0_ <sup>(angl.</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+- [WebAIM : _Captions, Transcripts, and Audio Descriptions_ <sup>(angl.)</sup>](https://webaim.org/techniques/captions/)
+- [Comprendre les règles WCAG 1.2 <sup>(angl.)</sup>](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [_Understanding Success Criterion 1.2.1 - W3C Understanding WCAG 2.0_ <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [_Understanding Success Criterion 1.2.2 - W3C Understanding WCAG 2.0_ <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
 ## Exemples
 
-### Exemples simples
+### Source unique
+
+Cet exemple lit une vidéo lorsqu'il est activé, fournissant à l'utilisateur les commandes vidéo par défaut du navigateur pour contrôler la lecture.
+
+#### HTML
 
 ```html
-<!-- Un exemple simple -->
-<video src="fichiervideo.webm" autoplay poster="vignette.jpg">
-  Votre navigateur ne permet pas de lire les vidéos. Mais vous pouvez toujours
-  <a href="fichiervideo.webm">la télécharger</a> !
-</video>
-
-<!-- Une vidéo avec des sous-titres -->
-<video src="toto.webm">
-  <track kind="subtitles" src="toto.en.vtt" srclang="en" label="Anglais" />
-  <track kind="subtitles" src="toto.sv.vtt" srclang="sv" label="Suédois" />
-</video>
-```
-
-Dans le premier exemple, la vidéo est lancée dès que possible. Avant que la vidéo ne soit lancée, la vignette utilisée sera le fichier `"vignette.jpg"`.
-
-Dans le deuxième exemple, l'utilisateur peut choisir parmi deux pistes de sous-titres.
-
-### Utiliser plusieurs sources
-
-Dans cet exemple, trois sources différentes pour la vidéo sont fournies. La première source utilisée est WebM, si son format n'est pas lisible pour le navigateur, c'est le fichier MP4 qui sera utilisé et si celui-ci n'est pas lisible non plus, ce sera le fichier OGG qui sera exploité.
-
-```html
+<!-- Exemple vidéo de base -->
+<!-- « Big Buck Bunny » sous licence CC 3.0 par la fondation Blender. Hébergé par archive.org -->
+<!-- Affiche provenant de peach.blender.org -->
 <video
-  width="480"
   controls
-  poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
-  <source
-    src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm"
-    type="video/webm" />
-  <source
-    src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4"
-    type="video/mp4" />
-  <source
-    src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv"
-    type="video/ogg" />
-  Votre navigateur ne permet pas de lire les vidéos HTML5.
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="620">
+  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais ne vous inquiétez pas, vous pouvez
+  <a href="https://archive.org/details/BigBuckBunny_124">la télécharger</a>
+  et la regarder avec votre lecteur vidéo préféré !
 </video>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('Source unique', "", '400')}}
+
+Jusqu'à ce que la vidéo commence à être lue, l'image fournie dans l'attribut `poster` s'affiche à sa place. Si le navigateur ne prend pas en charge la lecture vidéo, il affiche le texte de remplacement.
+
+### Sources multiples
+
+Cet exemple s'appuie sur le précédent et fournit trois sources différentes pour le média. Cela permet de visionner la vidéo quel que soit le codec vidéo pris en charge par le navigateur.
+
+#### HTML
+
+```html
+<!-- Utilisation de plusieurs sources comme solutions de secours pour une balise vidéo -->
+<!-- « Elephants Dream » par Orange Open Movie Project Studio, sous licence CC-3.0, hébergé par archive.org -->
+<!-- Affiche hébergée par Wikimedia -->
+<video
+  width="620"
+  controls
+  poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg">
+  <source
+    src="https://archive.org/download/ElephantsDream/ed_hd.avi"
+    type="video/avi" />
+  <source
+    src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    type="video/mp4" />
+
+  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais ne vous inquiétez pas, vous pouvez
+  <a
+    href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    download="ed_1024_512kb.mp4">
+    la télécharger en MP4
+  </a>
+  et la regarder avec votre lecteur vidéo préféré !
+</video>
+```
+
+#### Résultat
+
+{{EmbedLiveSample('Sources multiples', "", '400')}}
+
+Le format AVI est essayé en premier. S'il ne peut pas être lu, le format [MP4](/fr/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) est essayé. Un message de retour s'affiche si l'élément vidéo n'est pas pris en charge, mais pas si toutes les sources échouent.
+
+Certains types de fichiers multimédias vous permettent de fournir des informations plus spécifiques à l'aide du paramètre [`codecs`](/fr/docs/Web/Media/Guides/Formats/codecs_parameter) dans la chaîne de caractères de type de fichier. Par exemple, `video/webm; codecs="vp8, vorbis"` indique que le fichier est un fichier [WebM](/fr/docs/Web/Media/Guides/Formats/Containers#webm) utilisant [VP8](/fr/docs/Web/Media/Guides/Formats/Video_codecs#vp8) pour la vidéo et [Vorbis](/fr/docs/Web/Media/Guides/Formats/Audio_codecs#vorbis) pour l'audio.
 
 ## Résumé technique
 
@@ -523,9 +546,13 @@ Dans cet exemple, trois sources différentes pour la vidéo sont fournies. La pr
 
 ## Voir aussi
 
-- [Les formats pris en charge par `<audio>` et `<video>`](/fr/docs/Web/Media/Guides/Formats)
-- {{htmlelement("audio")}}
-- Les propriétés CSS permettant de positionner/redimensionner le contenu : {{cssxref("object-position")}} and {{cssxref("object-fit")}}
+- [Guide des types et formats de médias : contenu image, audio et vidéo](/fr/docs/Web/Media/Guides/Formats)
+  - [Formats de conteneurs multimédias (types de fichiers)](/fr/docs/Web/Media/Guides/Formats/Containers)
+  - [Guide des codecs vidéo du Web](/fr/docs/Web/Media/Guides/Formats/Video_codecs)
+  - [Guide des codecs audio du Web](/fr/docs/Web/Media/Guides/Formats/Audio_codecs)
+
+- Les propriétés CSS permettant de positionner/redimensionner le contenu&nbsp;: [`object-position`](/fr/docs/Web/CSS/object-position) et [`object-fit`](/fr/docs/Web/CSS/object-fit)
+- L'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio)
 - [Utiliser les éléments `<audio>` et `<video>`](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipuler l'élément `<video>` avec `<canvas>`](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Configuration côté serveur pour les média Ogg](/fr/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)
