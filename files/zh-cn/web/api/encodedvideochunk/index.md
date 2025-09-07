@@ -21,9 +21,9 @@ l10n:
 - {{domxref("EncodedVideoChunk.timestamp")}} {{ReadOnlyInline}}
   - : 返回一个表示视频的时间戳（以微秒为单位）的整数。
 - {{domxref("EncodedVideoChunk.duration")}} {{ReadOnlyInline}}
-  - : 返回一个表示视频的持续时间（以微秒为单位）整数。
+  - : 返回一个表示视频的持续时间（以微秒为单位）的整数。
 - {{domxref("EncodedVideoChunk.byteLength")}} {{ReadOnlyInline}}
-  - : 返回一个表示视频的长度（以字节为单位）整数。
+  - : 返回一个表示视频的长度（以字节为单位）的整数。
 
 ## 实例方法
 
