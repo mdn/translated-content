@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr
 original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`style-src-attr`** spécifie les sources valides pour des feuilles de styles appliquées à des éléments individuels du DOM par l'attribut `style`.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`style-src-attr`** spécifie les sources valides pour des feuilles de styles appliquées à des éléments individuels du DOM par l'attribut `style`.
 
 <table class="properties">
   <tbody>
@@ -34,7 +34,7 @@ Content-Security-Policy: style-src-attr <source>;
 Content-Security-Policy: style-src-attr <source> <source>;
 ```
 
-`style-src-attr` peut être utilisée avec [`style-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)&nbsp;:
+`style-src-attr` peut être utilisée avec [`style-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src)&nbsp;:
 
 ```http
 Content-Security-Policy: style-src <source>;
@@ -43,9 +43,9 @@ Content-Security-Policy: style-src-attr <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Spécifications
 
@@ -57,11 +57,11 @@ On notera que cet ensemble de valeurs peut être utilisé pour toutes les [direc
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`style-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)
-- [`style-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem)
-- L'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link)
-- [`<style>`](/fr/docs/Web/HTML/Element/style), [`<link>`](/fr/docs/Web/HTML/Element/link)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`style-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src)
+- [`style-src-elem`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem)
+- L'en-tête [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link)
+- [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link)
 - [`@import`](/fr/docs/Web/CSS/@import)
 - [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
 - [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)

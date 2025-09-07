@@ -95,5 +95,5 @@ mask: unset;
 
 - {{cssxref("clip-path")}}, {{cssxref("filter")}}
 - [Les formes CSS : "clipping" et "masking" – comment les utiliser (en anglais)](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - [SVG](/fr/docs/Web/SVG)

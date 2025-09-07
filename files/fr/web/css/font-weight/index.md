@@ -204,7 +204,7 @@ Pour que l'exemple suivant fonctionne, il est nécessaire d'utiliser un navigate
 
 Pour les personnes ayant une vision faible, il peut être extrêmement difficile de lire un texte avec `font-weight` qui vaut `100` ou `200`, notamment [si le contraste entre le texte et l'arrière-plan est faible](/fr/docs/Web/CSS/color#accessibilité).
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Comprendre les critères de succès 1.4.8 — Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Définition formelle
@@ -270,4 +270,4 @@ span {
 
 - [`font-style`](/fr/docs/Web/CSS/font-style)
 - [`font-family`](/fr/docs/Web/CSS/font-family)
-- [Apprendre — Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Apprendre — Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)

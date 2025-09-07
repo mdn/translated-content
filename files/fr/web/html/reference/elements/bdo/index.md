@@ -111,7 +111,7 @@ Les caractères du texte sont dessinés à partir du point de départ dans la di
 
 ## Attributs
 
-Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`dir`**
   - : La direction du texte au sein de l'élément. Cet attribut peut valoir :
@@ -144,4 +144,4 @@ La spécification HTML 4 ne définissait pas d'évènement pour cet élément. I
 
 ## Voir aussi
 
-- Élément HTML associé : [`<bdi>`](/fr/docs/Web/HTML/Element/bdi)
+- Élément HTML associé : [`<bdi>`](/fr/docs/Web/HTML/Reference/Elements/bdi)

@@ -2107,11 +2107,11 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
 
 En HTML, la plupart des attributs ont deux aspects : l'**attribut de contenu** et l'**attribut IDL** (pour _Interface Definition Language_ ou langage de définition des interfaces).
 
-L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes [`element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) et [`element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute). L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une `maxlength` d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) à 42, on utilisera `setAttribute("maxlength", "42")` sur cet élément.
+L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes [`element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) et [`element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute). L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une `maxlength` d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) à 42, on utilisera `setAttribute("maxlength", "42")` sur cet élément.
 
 L'attribut IDL est également connu sous la forme d'une propriété JavaScript. Ce sont les attributs qu'on peut obtenir ou modifier via JavaScript sous la forme `élément.toto`. L'attribut IDL utilisera toujours la valeur de l'attribut de contenu sous-jacent, éventuellement en la modifiant pour renvoyer une valeur ou pour la modifier. Autrement dit, les attributs IDL, reflètent les attributs de contenu.
 
-La plupart du temps, les attributs IDL renverront leurs valeurs, telles qu'elles sont utilisées. Par exemple, le type (l'attribut `type`) par défaut des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) vaut `"text"`, et si on définit `input.type="tototruc"`, l'élément `<input>` se comportera comme un élément de type `text` (en termes d'apparence et de comportement) mais le contenu de l'attribut `type` sera "tototruc". Cependant, l'attribut de type IDL renverra la chaîne `"text"`.
+La plupart du temps, les attributs IDL renverront leurs valeurs, telles qu'elles sont utilisées. Par exemple, le type (l'attribut `type`) par défaut des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) vaut `"text"`, et si on définit `input.type="tototruc"`, l'élément `<input>` se comportera comme un élément de type `text` (en termes d'apparence et de comportement) mais le contenu de l'attribut `type` sera "tototruc". Cependant, l'attribut de type IDL renverra la chaîne `"text"`.
 
 Les attributs IDL ne sont pas toujours des chaînes de caractères. `input.maxlength` est un nombre par exemple (un entier long signé pour être précis). Lorsqu'on manipule des attributs IDL on utilisera toujours le type défini pour l'interface. Ainsi, `input.maxlength` renverra toujours un nombre et si on souhaite le définir, il faudra le faire avec un nombre, si on passe une valeur d'un autre type, cette valeur sera convertie grâce aux mécanismes de conversion habituels de JavaScript.
 
@@ -2138,4 +2138,4 @@ Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas
 
 ## Voir aussi
 
-- [Les éléments HTML](/fr/docs/Web/HTML/Element)
+- [Les éléments HTML](/fr/docs/Web/HTML/Reference/Elements)

@@ -38,7 +38,7 @@ var inserting = browser.tabs.insertCSS(
     - `code`{{optional_inline}}
       - : `string`. Code à injecter, sous la forme d'une chaîne de texte.
     - `cssOrigin`{{optional_inline}}
-      - : `string`. Cela peut prendre l'une des deux valeurs suivantes: "utilisateur", pour ajouter le CSS en tant que feuille de style utilisateur, ou "auteur" pour l'ajouter en tant que feuille de style auteur. Spécifier "utilisateur" vous permet d'empêcher les sites Web de surcharger le CSS que vous insérez: voir [la commande en cascade](/fr/docs/Web/CSS/Cascade#cascading_order). Si cette option est omise, le CSS est ajouté en tant que feuille de style auteur.
+      - : `string`. Cela peut prendre l'une des deux valeurs suivantes: "utilisateur", pour ajouter le CSS en tant que feuille de style utilisateur, ou "auteur" pour l'ajouter en tant que feuille de style auteur. Spécifier "utilisateur" vous permet d'empêcher les sites Web de surcharger le CSS que vous insérez: voir [la commande en cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade#cascading_order). Si cette option est omise, le CSS est ajouté en tant que feuille de style auteur.
     - `file`{{optional_inline}}
       - : `string`. Chemin d'accès à un fichier contenant le code à injecter. Dans Firefox, les URL relatives sont résolues par rapport à l'URL de la page en cours. Dans Chrome, ces URL sont résolues par rapport à l'URL de base de l'extension. Pour travailler avec plusieurs navigateurs, vous pouvez spécifier le chemin comme une URL absolue, en commençant à la racine de l'extension, comme ceci : `"/path/to/stylesheet.css"`.
     - `frameId`{{optional_inline}}

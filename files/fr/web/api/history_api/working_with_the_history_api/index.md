@@ -131,7 +131,7 @@ Dans cet exemple, nous appelons `pushState()` avec trois arguments&nbsp;:
 - `""`
   - : Cet argument est nécessaire pour la rétrocompatibilité avec les anciens sites et devrait toujours être une chaîne de caractères vide.
 - `creature`
-  - : Cette valeur sera utilisée comme URL pour l'entrée d'historique. Elle sera affichée dans la barre d'URL du navigateur et utilisée comme valeur pour l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) des requêtes HTTP effectuées par la page. Cette valeur doit avoir la [même origine](/fr/docs/Glossary/Same-origin_policy) que la page.
+  - : Cette valeur sera utilisée comme URL pour l'entrée d'historique. Elle sera affichée dans la barre d'URL du navigateur et utilisée comme valeur pour l'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) des requêtes HTTP effectuées par la page. Cette valeur doit avoir la [même origine](/fr/docs/Glossary/Same-origin_policy) que la page.
 
 ## Utiliser l'évènement `popstate`
 

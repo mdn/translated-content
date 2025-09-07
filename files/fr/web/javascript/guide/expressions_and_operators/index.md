@@ -116,7 +116,7 @@ C'est une erreur que d'affecter des valeurs à des propriétés non-modifiables 
 
 ### Décomposition
 
-Pour les affectations plus complexes, [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) permet de construire une expression JavaScript pour extraire des données de tableaux ou d'objets avec une syntaxe qui reflète les littéraux utilisés pour la construction de tableaux ou d'objets.
+Pour les affectations plus complexes, [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring) permet de construire une expression JavaScript pour extraire des données de tableaux ou d'objets avec une syntaxe qui reflète les littéraux utilisés pour la construction de tableaux ou d'objets.
 
 ```js
 const toto = ["un", "deux", "trois"];

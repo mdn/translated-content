@@ -129,7 +129,7 @@ Dans l'exemple suivant, on charge une police Open Sans locale et on l'importe en
 
 Les personnes atteintes de dyslexie ou d'autres troubles cognitifs pourront avoir des difficultés à lire des textes dont la fonte est trop condensée, notamment [si le contraste des couleurs est trop faible](/fr/docs/Web/CSS/color#accessibility_concerns).
 
-- [Comprendre les règles WCAG - Partie 1.4 (MDN)](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG - Partie 1.4 (MDN)](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Respecter le critère 1.4.8 - Comprendre les règles WCAG 2.0 (W3C)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Spécifications

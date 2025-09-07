@@ -34,7 +34,7 @@ La syntaxe de cette propriété est similaire à la fonction [`rect()`](/fr/docs
 
 ## Exemples
 
-Dans cet exemple, on charge une image qu'on découpe en quatre zones pour dessiner le logo Firefox dans quatre éléments [`<div>`](/fr/docs/Web/HTML/Element/div). Lorsqu'on clique sur le conteneur, cela fait tourner les images entre les blocs.
+Dans cet exemple, on charge une image qu'on découpe en quatre zones pour dessiner le logo Firefox dans quatre éléments [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div). Lorsqu'on clique sur le conteneur, cela fait tourner les images entre les blocs.
 
 ### HTML
 

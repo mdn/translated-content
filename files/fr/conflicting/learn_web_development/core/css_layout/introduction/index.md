@@ -37,7 +37,7 @@ Avant d'approfondir les diverses méthodes de mise en page, il serait bien de re
 
 Le processus commence lorsque les boîtes des éléments individuels sont disposées de telle manière que leur remplissage, bordure et/ou marge est ajouté à leur contenu. C'est ce que nous appelons le **modèle de boîte**.
 
-Par défaut, le contenu d'un [élément de bloc](/fr/docs/Glossary/Block-level_content) remplit l'espace en ligne disponible de l'élément parent qui le contient, en s'agrandissant le long de la dimension du bloc pour s'adapter à son contenu. La taille des [éléments en ligne](/fr/docs/Glossary/Inline-level_content) correspond simplement à la taille de leur contenu. Vous pouvez définir la largeur ([`width`](/fr/docs/Web/CSS/width)) ou la hauteur ([`height`](/fr/docs/Web/CSS/height)) pour certains éléments dont la propriété `display` vaut `inline` par défaut, comme [`<img>`](/fr/docs/Web/HTML/Element/img), mais la valeur de `display` restera toujours `inline`.
+Par défaut, le contenu d'un [élément de bloc](/fr/docs/Glossary/Block-level_content) remplit l'espace en ligne disponible de l'élément parent qui le contient, en s'agrandissant le long de la dimension du bloc pour s'adapter à son contenu. La taille des [éléments en ligne](/fr/docs/Glossary/Inline-level_content) correspond simplement à la taille de leur contenu. Vous pouvez définir la largeur ([`width`](/fr/docs/Web/CSS/width)) ou la hauteur ([`height`](/fr/docs/Web/CSS/height)) pour certains éléments dont la propriété `display` vaut `inline` par défaut, comme [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), mais la valeur de `display` restera toujours `inline`.
 
 Si vous voulez contrôler la taille d'un élément en ligne de cette manière, vous devez le paramétrer pour qu'il se comporte comme un élément de niveau bloc avec `display: block;` (ou même `display: inline-block;` qui mélange les caractéristiques des deux).
 
@@ -105,6 +105,6 @@ span {
 
 Dans cette leçon, vous avez appris les bases du flux normal, c'est-à-dire la disposition par défaut des éléments CSS. En comprenant comment les éléments en ligne, les éléments en bloc et les marges se comportent par défaut, il vous sera plus facile de modifier leur comportement à l'avenir.
 
-Dans le prochain article, nous approfondirons ces connaissances en apportant des modifications aux éléments CSS à l'aide des [boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+Dans le prochain article, nous approfondirons ces connaissances en apportant des modifications aux éléments CSS à l'aide des [boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox).
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}

@@ -87,7 +87,7 @@ Dans de nombreux cas, les choses sont comme elles sont sur les OSP pour une rais
 
 ## Suivez le guide
 
-Les bons OSP rendront toujours la documentation des contributeurs facilement accessible. Sur les projets GitHub, elle se trouve généralement dans le fichier CONTRIBUTING.md du dépôt, ou parfois dans le fichier README.md du projet. Étant un projet de documentation, le contenu de MDN dispose d'un [README](https://github.com/mdn/translated-content/blob/main/README.md) et d'un ensemble décent de docs pour les contributeurs sur le site lui-même (voir [Contribuer à MDN](/fr/docs/MDN/Community/Contributing)).
+Les bons OSP rendront toujours la documentation des contributeurs facilement accessible. Sur les projets GitHub, elle se trouve généralement dans le fichier CONTRIBUTING.md du dépôt, ou parfois dans le fichier README.md du projet. Étant un projet de documentation, le contenu de MDN dispose d'un [README](https://github.com/mdn/translated-content/blob/main/README.md) et d'un ensemble décent de docs pour les contributeurs sur le site lui-même (voir [Contribuer à MDN](/fr/docs/conflicting/MDN/Community)).
 
 La seule chose à demander ici est de ne pas avoir peur de demander de l'aide, mais de TOUJOURS essayer de trouver la réponse à votre question avant de la poser. De cette façon, vous développez votre connaissance du projet et devenez plus indépendant, et vous n'imposez pas une charge inutile aux autres contributeurs.
 
@@ -95,7 +95,7 @@ Bien sûr, la documentation ne sera pas toujours parfaite. Si vous trouvez quelq
 
 ## Découvrez où poser des questions
 
-Cherchez toujours à savoir quel est le meilleur endroit pour poser des questions. Les bons OSP le préciseront toujours dans leur docs (voir [Demander de l'aide sur le MDN](/fr/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)). Si vous souhaitez poser des questions d'ordre général, utilisez toujours ces canaux. Ne vous contentez pas de déposer un ticket sur GitHub pour chaque question, car cela ajoute du poids au projet (voir "Faites des progrès, pas du bruit" ci-dessous).
+Cherchez toujours à savoir quel est le meilleur endroit pour poser des questions. Les bons OSP le préciseront toujours dans leur docs (voir [Demander de l'aide sur le MDN](/fr/docs/MDN/Community/Getting_started#step_4_ask_for_help)). Si vous souhaitez poser des questions d'ordre général, utilisez toujours ces canaux. Ne vous contentez pas de déposer un ticket sur GitHub pour chaque question, car cela ajoute du poids au projet (voir "Faites des progrès, pas du bruit" ci-dessous).
 
 ## Faites des progrès, pas du bruit
 

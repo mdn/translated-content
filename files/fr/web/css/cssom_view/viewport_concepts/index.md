@@ -126,7 +126,7 @@ Pour un document SVG, la zone d'affichage correspond à la partie de l'image SVG
 
 Dans cet exemple, la zone d'affichage possède un ratio de 3::4 et mesure 400 x 300 unités (où les unités par défaut sont généralement des pixels CSS).
 
-SVG possède un système de coordonnées interne qui est défini grâce à l'attribut [`viewbox`](/fr/docs/Web/SVG/Attribute/viewBox) mais qui n'est pas directement lié à la problématique des zones d'affichage.
+SVG possède un système de coordonnées interne qui est défini grâce à l'attribut [`viewbox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) mais qui n'est pas directement lié à la problématique des zones d'affichage.
 
 Si on inclut un fichier SVG dans un document HTML, la zone d'affichage pour le SVG sera le bloc englobant initial ou la largeur et la hauteur du conteneur SVG. Si on utilise une requête média {{CSSxRef("@media")}} dans le code CSS du SVG, celle-ci sera relative à la taille du conteneur et pas à celle de la zone d'affichage du document.
 

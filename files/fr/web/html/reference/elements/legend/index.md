@@ -39,7 +39,7 @@ input {
 
 ## Attributs
 
-Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 

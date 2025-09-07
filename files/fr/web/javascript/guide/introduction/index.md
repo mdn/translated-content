@@ -19,11 +19,11 @@ Pour lire ce guide, il est conseillé d'avoir&nbsp;:
 
 La documentation MDN pour JavaScript comprend&nbsp;:
 
-- [Apprendre le Web](/fr/docs/Learn)&nbsp;: cette section fournit des informations destinées aux débutants et présente les concepts de bases autour de la programmation et d'Internet.
+- [Apprendre le Web](/fr/docs/Learn_web_development)&nbsp;: cette section fournit des informations destinées aux débutants et présente les concepts de bases autour de la programmation et d'Internet.
 - [Le guide JavaScript](/fr/docs/Web/JavaScript/Guide) (ce guide) fournit un aperçu du langage JavaScript et de ses objets.
 - [La référence JavaScript](/fr/docs/Web/JavaScript/Reference) fournit une référence détaillée sur les fonctionnalités de JavaScript.
 
-Si vous débutez en JavaScript, vous pouvez commencer par les articles de la section [Apprendre](/fr/docs/Learn) et du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide). Une fois que vous maîtrisez les briques de bases, vous pourrez utiliser [la référence JavaScript](/fr/docs/Web/JavaScript/Reference) pour obtenir des informations détaillées sur chacun des objets natifs et des instructions.
+Si vous débutez en JavaScript, vous pouvez commencer par les articles de la section [Apprendre](/fr/docs/Learn_web_development) et du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide). Une fois que vous maîtrisez les briques de bases, vous pourrez utiliser [la référence JavaScript](/fr/docs/Web/JavaScript/Reference) pour obtenir des informations détaillées sur chacun des objets natifs et des instructions.
 
 ## Qu'est-ce que JavaScript&nbsp;?
 
@@ -51,13 +51,13 @@ Java est un langage de programmation utilisant les classes, conçus pour être e
 | Orienté objet. Aucune distinction entre les types et les objets. L'héritage est basé sur un mécanisme utilisant les prototypes et les propriétés et méthodes peuvent être ajoutées dynamiquement à n'importe quel objet. | Orienté objet, utilisant un modèle de classes. Les objets sont divisés entre les classes et les instances, l'héritage s'effectue via la hiérarchie des classes. Les classes et les instances ne peuvent pas recevoir de nouvelles propriétés ou méthodes dynamiquement. |
 | Le type de données des variables n'est pas déclaré (typage dynamique).                                                                                                                                                   | Le type de données des variables doit être déclaré (typage statique).                                                                                                                                                                                                   |
 
-Pour plus d'informations sur les différences entre JavaScript et Java, voir le chapitre sur [les détails du modèle objet JavaScript](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+Pour plus d'informations sur les différences entre JavaScript et Java, voir le chapitre sur [les détails du modèle objet JavaScript](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ## JavaScript et la spécification ECMAScript
 
 JavaScript est standardisé par [Ecma International](https://www.ecma-international.org/) — une association européenne de standardisation des systèmes d'information et de communication (ECMA étant historiquement un acronyme pour _European Computer Manufacturers Association_) qui délivre un langage de programmation standardisé, international appelé ECMAScript. Ce langage se comporte de la même façon pour toutes les applications qui supportent ce standard. Les entreprises peuvent utiliser ce langage standard afin de développer leur implémentation de JavaScript. Le standard ECMAScript est documenté avec la spécification ECMA-262.
 
-Le standard ECMA-262 est également approuvé par l'[ISO](https://www.iso.ch/) (_International Organization for Standardization_) sous ISO-16262. La spécification peut également être trouvée sur [le site web d'Ecma International](https://www.ecma-international.org/publications/standards/Ecma-262.htm). La spécification ECMAScript ne décrit pas le _Document Object Model_ (DOM) qui est standardisé par le [World Wide Web Consortium (W3C)](https://www.w3.org/) et [le WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org). Le DOM définit la façon dont les documents HTML sont exposés aux scripts. Pour mieux comprendre les différentes technologies gravitant autour de JavaScript, voir l'article [Aperçu des technologies JavaScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview).
+Le standard ECMA-262 est également approuvé par l'[ISO](https://www.iso.ch/) (_International Organization for Standardization_) sous ISO-16262. La spécification peut également être trouvée sur [le site web d'Ecma International](https://www.ecma-international.org/publications/standards/Ecma-262.htm). La spécification ECMAScript ne décrit pas le _Document Object Model_ (DOM) qui est standardisé par le [World Wide Web Consortium (W3C)](https://www.w3.org/) et [le WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org). Le DOM définit la façon dont les documents HTML sont exposés aux scripts. Pour mieux comprendre les différentes technologies gravitant autour de JavaScript, voir l'article [Aperçu des technologies JavaScript](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ### Documentation JavaScript et spécification ECMAScript
 

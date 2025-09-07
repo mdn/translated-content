@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`frame-src`** spécifie les sources valides pour les contextes de navigation imbriqués chargés avec des éléments tels que [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`frame-src`** spécifie les sources valides pour les contextes de navigation imbriqués chargés avec des éléments tels que [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame) et [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 <table class="properties">
   <tbody>
@@ -36,9 +36,9 @@ Content-Security-Policy: frame-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -50,7 +50,7 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: frame-src https://example.com/
 ```
 
-L'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) suivant sera bloqué et ne se chargera pas&nbsp;:
+L'élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) suivant sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
 <iframe src="https://not-example.com/"></iframe>
@@ -66,5 +66,5 @@ L'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) suivant sera bloqué 
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame) et [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)
