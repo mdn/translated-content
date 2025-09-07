@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Operator_precedence
 
 **演算子の優先順位**は、演算子が互いにどのように解釈されるかを決定します。優先度の高い演算子は、優先度の低い演算子のオペランドになります。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Operator precedence")}}
 
 ```js interactive-example
 console.log(3 + 4 * 5); // 3 + 20

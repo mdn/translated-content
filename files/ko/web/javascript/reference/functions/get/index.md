@@ -93,7 +93,7 @@ console.log(instance.msg); // "hello cake"
 
 접근자 속성은 클래스의 `prototype`으로 정의되므로 클래스의 모든 인스턴스에서 공유됩니다. 객체 리터럴의 접근자 속성과 달리 클래스의 접근자 속성은 열거할 수 없습니다.
 
-Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`static`](/ko/docs/Web/JavaScript/Reference/Classes/static)과 [private class features](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties) 페이지에 설명되어 있습니다.
+Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`static`](/ko/docs/Web/JavaScript/Reference/Classes/static)과 [private class features](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements) 페이지에 설명되어 있습니다.
 
 ### `delete` 연산자로 접근자 제거하기
 

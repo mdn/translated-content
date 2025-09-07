@@ -34,7 +34,6 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
 - aria-checked
-
   - : `aria-checked` の値は、チェックボックスの状態を定義します。 この属性には、次の 3 つの値のいずれかがあります。
 
     `true`
@@ -60,7 +59,6 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 - onclick
   - : マウスクリックを処理して、`aria-checked` 属性の値を変更することでチェックボックスの状態を変更し、チェックボックスの外観を変更することで、視力のあるユーザーにチェックされているかどうかを見せます。
 - onKeyPress
-
   - : ユーザーが&#x20;
 
     <kbd>Space</kbd>
@@ -145,9 +143,9 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 
 - [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)
 - [ARIA: radio ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [ARIA: menuitem ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Menuitem_Role)
-- [ARIA: menuitemcheckbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Menuitemcheckbox_Role)
-- [ARIA: menuitemradio ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Menuitemradio_Role)
+- [ARIA: menuitem ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [ARIA: menuitemcheckbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [ARIA: menuitemradio ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
 - [ARIA: switch ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 - [ARIA: option ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 获取浏览器操作徽章的文本颜色。
 
 从 Firefox 63 版本开始，除非使用 {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} 显式设置了徽章文本颜色，否则徽章文本颜色将自动设置为黑色或白色，以使其与指定的徽章背景颜色形成最大对比度。例如，如果你将徽章背景颜色设置为白色，则默认的徽章文本颜色将设置为黑色，反之亦然。
@@ -26,9 +24,7 @@ browser.browserAction.getBadgeTextColor(
 ### 参数
 
 - details
-
   - : `object`。
-
     - `tabId` {{optional_inline}}
       - : `integer`。指定从中获取徽章文本颜色的标签页。
     - `windowId` {{optional_inline}}

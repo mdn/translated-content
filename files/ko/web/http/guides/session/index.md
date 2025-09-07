@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Session
 original_slug: Web/HTTP/Session
 ---
 
-{{HTTPSidebar}}
-
 HTTP와 같은 클라이언트-서버 프로토콜에서, 세션은 다음의 세 가지 과정으로 이루어집니다.
 
 1. 클라이언트가 TCP 연결을 수립합니다(또는 전송 계층이 TCP가 아닌 다른 적당한 연결로).
@@ -27,7 +25,6 @@ TCP를 이용할 경우, 컴퓨터 상의 HTTP 서버를 위한 기본 포트는
 연결이 한번 수립되고 나면 사용자-에이전트는 요청을 보낼 수 있습니다(사용자-에이전트는 일반적으로 웹 브라우저를 말하지만, 예를 들자면 crawler와 같이 무엇이든 될 수 있습니다). 클라이언트 요청은 세 가지 블록으로 나누어진 CRLF(라인 피드를 따르는 캐리지 리턴)로 구분된 텍스트 지시자들로 이루어집니다.
 
 1. 첫번째 줄은 파라메터가 따르는 요청 메서드를 포함합니다.
-
    - 문서의 경로, 즉 프로토콜과 도메인 이름을 제외한 절대 URL
    - 사용중인 HTTP 프로토콜 버전
 
@@ -59,7 +56,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### 요청 메서드
 
-HTTP는 주어진 자원에 대해 실행되길 바라는 동작을 가리키는 [요청 메서드](/ko/docs/Web/HTTP/Methods) 집합을 정의합니다. 그것들이 명사가 될 수 있을지라도, 이 요청 메서드들은 때때로 HTTP 동사로써 참조됩니다. 일반적으로 대부분의 요청은 `GET`과 `POST`입니다.
+HTTP는 주어진 자원에 대해 실행되길 바라는 동작을 가리키는 [요청 메서드](/ko/docs/Web/HTTP/Reference/Methods) 집합을 정의합니다. 그것들이 명사가 될 수 있을지라도, 이 요청 메서드들은 때때로 HTTP 동사로써 참조됩니다. 일반적으로 대부분의 요청은 `GET`과 `POST`입니다.
 
 - {{HTTPMethod("GET")}} 메서드는 지정된 자원의 표시를 요청합니다. `GET`을 사용하는 요청은 데이터를 가져오는 것 외에는 할 수 없습니다.
 - {{HTTPMethod("POST")}} 메서드는 서버에 데이터를 전송하여 서버가 상태를 바꾸도록 만듭니다. 이것은 [HTML Forms](/ko/docs/Learn_web_development/Extensions/Forms)에서 자주 사용되는 메서드입니다.
@@ -133,7 +130,7 @@ Content-Type: text/html
 
 ### 응답 상태 코드
 
-[HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Status)는 특정 HTTP 요청이 성공적으로 끝났는지 아닌지를 가리킵니다. 응답은 다섯가지 계층 내로 그룹화됩니다: 정보를 제공하는 응답, 성공적인 응답, 리다이렉트, 클라이언트 오류, 그리고 서버 오류.
+[HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Reference/Status)는 특정 HTTP 요청이 성공적으로 끝났는지 아닌지를 가리킵니다. 응답은 다섯가지 계층 내로 그룹화됩니다: 정보를 제공하는 응답, 성공적인 응답, 리다이렉트, 클라이언트 오류, 그리고 서버 오류.
 
 - {{HTTPStatus(200)}}: 성공. 요청이 성공했다는 것을 의미합니다.
 - {{HTTPStatus(301)}}: 영구적으로 옮겨짐. 이 응답 코드는 요청된 자원의 URI가 변경되었다는 것을 의미합니다.
@@ -142,6 +139,6 @@ Content-Type: text/html
 ## 함께 참고할 내용
 
 - [웹 리소스 식별](/ko/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-- [HTTP 헤더](/ko/docs/Web/HTTP/Headers)
-- [HTTP 요청 메서드](/ko/docs/Web/HTTP/Methods)
-- [HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Status)
+- [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)
+- [HTTP 요청 메서드](/ko/docs/Web/HTTP/Reference/Methods)
+- [HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Reference/Status)

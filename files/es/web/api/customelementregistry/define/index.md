@@ -25,9 +25,7 @@ customElements.define(name, constructor, options);
 - constructor
   - : Constructor para el nuevo elemento personalizado
 - options {{optional_inline}}
-
   - : Objecto que controla cómo se define el elemento. Actualmente solo se permite una opción:
-
     - `extends`: Cadena que especifica el nombre del elemento preconstruido del cual se va a extender. Se usa para crear _elementos personalizados preconstruidos_.
 
 ### Valor de retorno

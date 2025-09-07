@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 重新加载一个标签页，可选择是否绕过本地 web 缓存。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -25,7 +23,6 @@ let reloading = browser.tabs.reload(
 - `tabId` {{optional_inline}}
   - : `integer`。要重新加载的标签页的 ID。默认为当前窗口中选定的标签页。
 - `reloadProperties` {{optional_inline}}
-
   - : 一个包含以下属性的对象：
     - `bypassCache` {{optional_inline}}
       - : `boolean`。是否绕过本地 web 缓存。默认为 `false`。

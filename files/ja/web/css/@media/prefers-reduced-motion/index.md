@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d8fbe1ea30dcc8fd707048a804f5070a729b57a7
 ---
 
-{{CSSRef}}
-
 > [!WARNING]
 > このページの下部に埋め込まれた例は、拡大縮小の動きがありますが、一部の読者には問題があるかもしれません。前庭運動障害をお持ちの方は、アニメーションを見る前に、お使いの端末のモーション軽減機能を有効にしてください。
 
@@ -32,7 +30,6 @@ l10n:
 Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 
 - GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation がオンになっている場合。
-
   - GNOME の古いバージョンでは、 GNOME Tweaks > General タブ (バージョンによっては Appearance タブ) > Animations がオフになっている場合。
   - 他にも、 `gtk-enable-animations = false` を [GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration) の `[Settings]` に追加する方法もあります。
 

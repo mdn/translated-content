@@ -9,7 +9,7 @@ l10n:
 
 **`Math.imul()`** は静的メソッドで、2 つの引数で C 言語風の 32 ビット乗算を行った結果を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.imul()")}}
+{{InteractiveExample("JavaScript デモ: Math.imul()")}}
 
 ```js interactive-example
 console.log(Math.imul(3, 4));

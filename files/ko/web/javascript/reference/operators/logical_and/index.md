@@ -54,7 +54,7 @@ result = 2 && 0; // result 에 0 이 할당됩니다
 result = "foo" && 4; // result 에 4 가 할당됩니다.
 ```
 
-`&&` 연산자는 불리언이 아닌 피연산자와 함께 사용할 수 있지만, 반환 값은 항상 [원시형 불리언](/ko/docs/Web/JavaScript/Data_structures#boolean_타입)으로
+`&&` 연산자는 불리언이 아닌 피연산자와 함께 사용할 수 있지만, 반환 값은 항상 [원시형 불리언](/ko/docs/Web/JavaScript/Guide/Data_structures#boolean_타입)으로
 변환할 수 있기 때문에 불리언 연산자로 간주합니다. 반환값이나 어떠한 일반적인 표현식을 명시적으로 해당 불리언 값으로 변환하려면 이중
 [`NOT 연산자`](/ko/docs/Web/JavaScript/Reference/Operators/Logical_NOT)를 사용하거나
 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 생성자를 사용하시기 바랍니다.

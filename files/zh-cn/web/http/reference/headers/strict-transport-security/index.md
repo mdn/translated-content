@@ -3,8 +3,6 @@ title: Strict-Transport-Security
 slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Strict-Transport-Security`**（通常简称为 {{Glossary("HSTS")}}）响应标头用来通知浏览器应该只通过 HTTPS 访问该站点，并且以后使用 HTTP 访问该站点的所有尝试都应自动重定向到 HTTPS。
 
 > [!NOTE]
@@ -46,7 +44,8 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 网站通过 HTTP Strict Transport Security 标头通知浏览器，这个网站禁止使用 HTTP 方式加载，并且浏览器应该自动把所有尝试使用 HTTP 的请求自动替换为 HTTPS 请求。
 
-> **备注：** `Strict-Transport-Security` 标头在通过 HTTP 访问时会被浏览器**忽略**。只有在你的网站通过 HTTPS 访问并且没有证书错误时，浏览器才认为你的网站支持 HTTPS，然后遵守 `Strict-Transport-Security` 标头。浏览器这样做是因为攻击者可以拦截到站点的 HTTP 连接，然后注入或者删除标头。
+> [!NOTE]
+> `Strict-Transport-Security` 标头在通过 HTTP 访问时会被浏览器**忽略**。只有在你的网站通过 HTTPS 访问并且没有证书错误时，浏览器才认为你的网站支持 HTTPS，然后遵守 `Strict-Transport-Security` 标头。浏览器这样做是因为攻击者可以拦截到站点的 HTTP 连接，然后注入或者删除标头。
 
 ### 示例场景
 

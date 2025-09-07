@@ -3,7 +3,7 @@ title: 迭代器和生成器
 slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
 
 迭代器和生成器将迭代的概念直接带入核心语言，并提供了一种机制来自定义 {{jsxref("Statements/for...of","for...of")}} 循环的行为。
 
@@ -68,7 +68,8 @@ while (!result.done) {
 console.log(`已迭代序列的大小：${result.value}`); // 5
 ```
 
-> **备注：** [反射性](https://zh.wikipedia.org/wiki/反射式编程)地知道特定对象是否是迭代器是不可能的。如果你需要这样做，请使用[可迭代对象](#可迭代对象)。
+> [!NOTE]
+> [反射性](https://zh.wikipedia.org/wiki/反射式编程)地知道特定对象是否是迭代器是不可能的。如果你需要这样做，请使用[可迭代对象](#可迭代对象)。
 
 ## 生成器函数
 

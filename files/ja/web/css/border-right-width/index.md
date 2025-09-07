@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
-
 **`border-right-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-right-width")}}
+{{InteractiveExample("CSS デモ: border-right-width")}}
 
 ```css interactive-example-choice
 border-right-width: thick;
@@ -74,9 +72,7 @@ border-right-width: unset;
 ### 値
 
 - `<line-width>`
-
   - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
-
     - `thin`
     - `medium`
     - `thick`

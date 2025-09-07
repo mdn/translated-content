@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
-{{CSSRef}}
-
 **`dominant-baseline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックス内のテキストとインラインレベルのコンテンツを整列させるために使用される特定の[ベースライン](/ja/docs/Glossary/Baseline/Typography)（主要ベースライン）を指定します。また、ボックスの整列コンテキストでベースライン揃えに参加するすべてのボックスの既定の整列ベースラインも示します。存在する場合、シェイプの {{SVGAttr("dominant-baseline")}} 属性を上書きします。
 
 ベースラインはフォントベースライン表から選択されます。指定のフォントにベースライン表がない場合、またはベースライン表に希望するベースラインの項目がない場合、ブラウザーは経験則を使用して希望するベースラインの位置を決定することがあります。
@@ -19,7 +17,8 @@ l10n:
 
 `dominant-baseline` の値によっては、 3 つの値すべてを再決定します。他のものは、ベースライン表のフォントサイズのみを再設定します。初期値の `auto` が望ましくない結果をもたらす場合、このプロパティを使用して、望ましい変倍ベースライン表を明示的に設定することができます。
 
-> **メモ:** `dominant-baseline` プロパティは、 SVG の {{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}} の各要素のみに効果があります。
+> [!NOTE]
+> `dominant-baseline` プロパティは、 SVG の {{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}} の各要素のみに効果があります。
 
 ## 構文
 
@@ -48,7 +47,6 @@ dominant-baseline: unset;
 ### 値
 
 - `auto`
-
   - : このプロパティが {{SVGElement("text")}} 要素に適用された場合、計算された値は {{SVGAttr("writing-mode")}} 属性の値に依存します。
 
     {{SVGAttr("writing-mode")}} が横書きの場合、 `dominant-baseline` 成分の値は `alphabetic` です。 そうではなく、 {{SVGAttr("writing-mode")}} が縦書きの場合、 `dominant-baseline` 成分の値は `central` です。

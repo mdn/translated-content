@@ -8,7 +8,7 @@ l10n:
 {{JSRef}}
 
 > [!NOTE]
-> En algunas versiones de algunos navegadores, este método fué implementado como el método `Array.prototype.groupToMap()`. Debido a problemas de compatibilidad web, ahora es implementado como un método estático. Revise la [tabla de compatibilidad con navegadores](#compatibilidad_con_navegadores) para más detalles.
+> En algunas versiones de algunos navegadores, este método fue implementado como el método `Array.prototype.groupToMap()`. Debido a problemas de compatibilidad web, ahora es implementado como un método estático. Revise la [tabla de compatibilidad con navegadores](#compatibilidad_con_navegadores) para más detalles.
 
 El método estático **`Map.groupBy()`** agrupa los elementos de un iterable, utilizando los valores regresados por la función provista. El objeto {{jsxref("Map")}} regresado utiliza los valores únicos de la función de prueba como llaves, los cuales pueden utilizarse para obtener el arreglo de elementos en cada grupo.
 
@@ -64,7 +64,7 @@ Los elementos en el objeto {{jsxref("Map")}} regresado por la función y en el i
 Este método es util cuando necesitas agrupar información que está relacionada a un objeto en particular y que potencialmente puede cambiar con el tiempo. Esto es debido a que, incluseo si el objeto es modificado, continuará funcionando como llave para el objeto `Map` regresado por la función. Si en su lugar creas una representación _string_ para el objeto y la utilizas como la llave para agrupar en {{jsxref("Object.groupBy()")}}, debes mantener el mapeo entre el objeto original y su representacion de acuerdo a como el objeto cambia.
 
 > [!NOTE]
-> Para accesar los grupos en el objeto `Map` regresado por la función, debes utilizar el mismo objeto que fué usado como llave en el `Map` (a pesar de que puedes modificar sus propiedades). No puedes usar otro objeto que de casulaidad tiene el mismo nombre y las mismas propiedades.
+> Para accesar los grupos en el objeto `Map` regresado por la función, debes utilizar el mismo objeto que fue usado como llave en el `Map` (a pesar de que puedes modificar sus propiedades). No puedes usar otro objeto que de casulaidad tiene el mismo nombre y las mismas propiedades.
 
 `Map.groupBy` no lee el valor de `this`. Puede ser llamado en cualquier objeto y regresará una nueva instancia de {{jsxref("Map")}}.
 

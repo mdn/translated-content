@@ -2,10 +2,8 @@
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 l10n:
-  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`scrollbar-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールバーのトラックとつまみの色を設定します。
 
@@ -36,7 +34,6 @@ scrollbar-color: unset;
 ### 値
 
 - `<scrollbar-color>`
-
   - : スクロールバーの色を定義します。
 
     <table class="standard-table">
@@ -56,7 +53,8 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-> **メモ:** [`@media (forced-colors: active)`](/ja/docs/Web/CSS/@media/forced-colors) とすると、`scrollbar-color` が `auto` になります。
+> [!NOTE]
+> [`@media (forced-colors: active)`](/ja/docs/Web/CSS/@media/forced-colors) とすると、`scrollbar-color` が `auto` になります。
 
 ## アクセシビリティ
 
@@ -81,7 +79,7 @@ scrollbar-color: unset;
   width: 300px;
   height: 100px;
   overflow-y: scroll;
-  scrollbar-color: #007 #bada55;
+  scrollbar-color: #000077 #bada55;
 }
 ```
 

@@ -5,13 +5,12 @@ l10n:
   sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
 ---
 
-{{CSSRef}}
-
 **container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [@container](/ja/docs/Web/CSS/@container) アットルールによる[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)で使用されるクエリーコンテナー名のリストを指定します。
 コンテナークエリーは、コンテナーコンテキストを持つ最も近い祖先の[サイズ](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries)または[スクロール状態](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)に基づいて、要素にスタイルを適用します。
 コンテナーコンテキストの名前が指定されたとき、コンテナーコンテキストのある最も近い祖先の代わりに、 {{Cssxref("@container")}} アットルールを用いて固有のターゲットを指定することができます。
 
-> **メモ:** {{cssxref("container-type")}} プロパティと `container-name` プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
+> [!NOTE]
+> {{cssxref("container-type")}} プロパティと `container-name` プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
 
 ## 構文
 
@@ -35,14 +34,11 @@ container-name: unset;
 ### 値
 
 - `none`
-
   - : 既定値。クエリコンテナーには名前がありません。
 
 - {{cssxref("custom-ident")}}
-
   - : コンテナーを識別するために使用する、大文字と小文字を区別する文字列です。
     以下の条件が適用されます。
-
     - 名前は有効な {{cssxref("custom-ident")}} であれば何でもかまいませんが、`default` と等しくあってはいけません。
     - 名前の値は引用符で囲んではいけません。
     - 制作者が定義する識別子（例: `--container-name`）を意図するダッシュ記号は許可されています。

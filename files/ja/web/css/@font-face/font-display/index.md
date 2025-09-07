@@ -2,10 +2,8 @@
 title: font-display
 slug: Web/CSS/@font-face/font-display
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`font-display`** は [`@font-face`](/ja/docs/Web/CSS/@font-face) アットルールの記述子で、フォントがダウンロード済みで利用できるかに基づいて、どのようにフォントの種類を表示するかを定めます。
 
@@ -60,8 +58,8 @@ font-display: optional;
 @font-face {
   font-family: ExampleFont;
   src:
-    url(/path/to/fonts/example-font.woff) format("woff"),
-    url(/path/to/fonts/example-font.eot) format("eot");
+    url("/path/to/fonts/example-font.woff") format("woff"),
+    url("/path/to/fonts/example-font.eot") format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

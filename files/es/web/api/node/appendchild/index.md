@@ -9,7 +9,8 @@ Agrega un nuevo nodo al final de la lista de un elemento hijo de un elemento pad
 
 Si el hijo(Child) **es una referencia**(hace referencia) hacia un nodo existente en el documento actual, este es quitado del padre actual para ser puesto en el nodo padre nuevo. La clave está en **si el (Child) es una referencia a un nodo existente en el documento**.
 
-> **Nota:** **Nueva API disponible**
+> [!NOTE]
+> **Nueva API disponible**
 > El método {{domxref("ParentNode.append()")}} soporta varios argumentos y cadenas para adjuntar.
 
 ## Sintaxis

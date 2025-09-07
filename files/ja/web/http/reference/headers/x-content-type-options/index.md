@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/X-Content-Type-Options
 original_slug: Web/HTTP/Headers/X-Content-Type-Options
 ---
 
-{{HTTPSidebar}}
-
 **`X-Content-Type-Options`** は HTTP のレスポンスヘッダーで、 {{HTTPHeader("Content-Type")}} ヘッダーで示された [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)を変更せずに従うべきであることを示すために、サーバーによって使用されるマーカーです。これにより、[MIME タイプのスニッフィング](/ja/docs/Web/HTTP/Guides/MIME_types#mime_sniffing)を抑止することができます。言い替えれば、 MIME タイプを意図的に設定することができます。
 
 このヘッダーは、 Microsoft が IE 8 において、コンテンツのスニッフィングにより、実行不可能な MIME タイプを実行可能な MIME タイプに変換してしまうという事故を抑止するためのとして導入したものです。それ以来、他のブラウザーは MIME スニッフィングのアルゴリズムにそれほど積極的ではなくても、このヘッダーを導入してきました。
@@ -14,7 +12,8 @@ Firefox 72 から、 {{HTTPHeader("Content-type")}} が提供されている場�
 
 サイトのセキュリティテスターは通常、このヘッダーが設定されていることを期待しています。
 
-> **メモ:** `X-Content-Type-Options` は、 [`nosniff` によるリクエストブロッキング](https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?)を[リクエスト先](https://fetch.spec.whatwg.org/#concept-request-destination)が "`script`" と "`style`" の場合のみ適用します。しかし、 [Cross-Origin Read Blocking (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#determining-whether-a-response-is-corb_protected) 保護を HTML, TXT, JSON, XML の各ファイル (SVG `image/svg+xml` を除く) に対して有効にすることもできます。</p>
+> [!NOTE]
+> `X-Content-Type-Options` は、 [`nosniff` によるリクエストブロッキング](https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?)を[リクエスト先](https://fetch.spec.whatwg.org/#concept-request-destination)が "`script`" と "`style`" の場合のみ適用します。しかし、 [Cross-Origin Read Blocking (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#determining-whether-a-response-is-corb_protected) 保護を HTML, TXT, JSON, XML の各ファイル (SVG `image/svg+xml` を除く) に対して有効にすることもできます。</p>
 
 <table class="properties">
   <tbody>

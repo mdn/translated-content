@@ -3,8 +3,6 @@ title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
 ---
 
-{{jsSidebar("Objects")}}
-
 全域屬性 **`NaN`** 表示「非數值」（Not-A-Number）的數值。
 
 {{js_property_attributes(0,0,0)}}

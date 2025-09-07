@@ -9,7 +9,7 @@ l10n:
 
 **`extends`** キーワードは、[クラス宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)や[クラス式](/ja/docs/Web/JavaScript/Reference/Operators/class)の中で、他のクラスの子であるクラスを生成するために使用します。
 
-{{InteractiveExample("JavaScript Demo: Classes Extends", "taller")}}
+{{InteractiveExample("JavaScript デモ: Classes Extends", "taller")}}
 
 ```js interactive-example
 class DateFormatter extends Date {
@@ -141,7 +141,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-親クラスのコンストラクターがオブジェクトを返す場合、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)をさらに初期化するときに、そのオブジェクトが派生クラスの `this` 値として使用されます。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を含む）を無関係なオブジェクトに定義することができます。
+親クラスのコンストラクターがオブジェクトを返す場合、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)をさらに初期化するときに、そのオブジェクトが派生クラスの `this` 値として使用されます。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を含む）を無関係なオブジェクトに定義することができます。
 
 ### 組み込みクラスのサブクラス化
 

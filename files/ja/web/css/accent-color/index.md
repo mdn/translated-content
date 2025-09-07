@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`accent-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一部の要素で生成されるユーザーインターフェイス要素の{{Glossary("accent", "強調表示")}}色を設定します。
 
-{{InteractiveExample("CSS Demo: accent-color")}}
+{{InteractiveExample("CSS デモ: accent-color")}}
 
 ```css interactive-example-choice
 accent-color: red;

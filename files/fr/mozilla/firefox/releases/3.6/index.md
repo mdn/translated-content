@@ -3,19 +3,14 @@ title: Firefox 3.6 pour les développeurs
 slug: Mozilla/Firefox/Releases/3.6
 ---
 
-{{FirefoxSidebar}}
-
 1. Notes de versions pour développeurs
-
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
 2. Modules complémentaires
-
    1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
    2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
 
 3. Fonctionnement interne de Firefox
-
    1. [Le projet Mozilla](/fr/docs/Mozilla)
    2. [Gecko](/fr/docs/Mozilla/Gecko)
    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
@@ -30,7 +25,6 @@ slug: Mozilla/Firefox/Releases/3.6
    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
 4. Développer et contribuer
-
    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
    2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)

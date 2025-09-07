@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Cookies
 original_slug: Web/HTTP/Cookies
 ---
 
-{{HTTPSidebar}}
-
 Una cookie HTTP, cookie web o cookie de navegador es una pequeña pieza de datos que un servidor envía a el navegador web del usuario. El navegador guarda estos datos y los envía de regreso junto con la nueva petición al mismo servidor. Las cookies se usan generalmente para decirle al servidor que dos peticiones tienen su origen en el mismo navegador web lo que permite, por ejemplo, mantener la sesión de un usuario abierta. Las cookies permiten recordar la información de estado en vista a que el protocolo HTTP es un protocolo sin estado.
 
 Las cookies se utilizan principalmente con tres propósitos:
@@ -178,7 +176,6 @@ Se presentan aquí algunas técnicas que se deberían usar para evitar que estas
 
 - Los endpoints GET no deben tener acciones de modificación, y si esto se necesita se debería requerir una petición POST. Además los endpoints POST no debería aceptar la intercambiabilidad de aceptar peticiones GET con parametros en _query string_
 - Un token CSRF debería ser incluido en cada elemento `<form>` mediante un input oculto. Este token debe ser único para cada usuario y almacenado (por ejemplo, en una _cookie_). De esta forma el servidor puede mirar si el valor requerido es enviado, y en cierto modo lo idea sería descartar la petición si el valor no concuerda con lo esperado.
-
   - Este método de protección recae en la imposibilidad de que un atacante pueda predecir este token autogenerado en cada inicio de sesión. Cabe aclarar que este token debería ser regenerado en cada inicio de sesión.
 
 - Al igual que con [XSS](/es/docs/Web/Security/Attacks#cross-site_scripting_xss), el filtrado de entrada es importante.

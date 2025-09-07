@@ -3,8 +3,6 @@ title: :last-child
 slug: Web/CSS/:last-child
 ---
 
-{{CSSRef}}
-
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:last-child`** de [CSS](/es/docs/Web/CSS) representa el último elemento entre un grupo de elementos hermanos.
 
 ```css

@@ -221,7 +221,8 @@ Los vínculos o enlaces son muy importantes —son los que hacen de la web, la w
 
 Podrías obtener resultados inesperados si al comienzo de la dirección web omites la parte `https://` o `http://` llamada _protocolo_. Así que luego del marcado del vínculo, haz clic en él para asegurarte que te dirige a la dirección deseada.
 
-> **Nota:** `href` podría parecer, en principio, una opción un tanto oscura para un nombre de atributo. Si tienes problemas para recordarla, recuerda que se refiere a _**h**ypertext **ref**erence_ (referencia de hipertexto).
+> [!NOTE]
+> `href` podría parecer, en principio, una opción un tanto oscura para un nombre de atributo. Si tienes problemas para recordarla, recuerda que se refiere a _**h**ypertext **ref**erence_ (referencia de hipertexto).
 
 Ahora agrega un vínculo a tu página, si es que aún no lo hiciste.
 

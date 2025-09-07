@@ -1,11 +1,10 @@
 ---
 title: <script type="importmap">
+short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 **`importmap`** の値を [`<script>` 要素](/ja/docs/Web/HTML/Reference/Elements/script)の [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性に設定すると、要素の本体がインポートマップであることを示します。
 
@@ -39,25 +38,25 @@ JSON オブジェクトは、[JSON のインポートマップ表現](#json_の�
 [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)をインポートする場合は、 [`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)と [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)のどちらであっても、インポートするモジュールを示す「モジュール指定子」があります。
 ブラウザーは、モジュールをインポートするために、この指定子を絶対的な URL に解決できなければなりません。
 
-例えば、以下の記述では、文書のベース URL からの相対パスであるモジュール指定子 `"./modules/shapes/square.js"` と絶対 URL であるモジュール指定子 `"https://example.com/shapes/circle.js"` から要素をインポートします。
+例えば、次の文は、絶対 URL であるモジュール指定子 `"https://example.com/shapes/circle.js"` および、文書のベース URL に対する相対パスであるモジュール指定子 `"./modules/shapes/square.js"` から要素をインポートします。
 
 ```js
-import { name as squareName, draw } from "./modules/shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./modules/shapes/square.js";
 ```
 
 インポートマップにより、開発者はモジュール指定子に（ほとんど）好きなテキストを指定することができます。対応表は、モジュール指定子が解決されたときにテキストを置き換える、対応する値を提供します。
 
 ### ベアモジュール
 
-下記のインポートマップは `imports` キーを定義しており、`square` と `circle` というプロパティを持つ「モジュール指定マップ」を持ちます。
+下記のインポートマップは `imports` キーを定義しており、`circle` と `square` というプロパティを持つ「モジュール指定マップ」を持ちます。
 
 ```html
 <script type="importmap">
   {
     "imports": {
-      "square": "./module/shapes/square.js",
-      "circle": "https://example.com/shapes/circle.js"
+      "circle": "https://example.com/shapes/circle.js",
+      "square": "./modules/shapes/square.js"
     }
   }
 </script>
@@ -66,8 +65,8 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 このインポートマップを使えば、上記と同じモジュールをインポートすることができますが、モジュール指定子には「ベアモジュール」を使用します。
 
 ```js
-import { name as squareName, draw } from "square";
 import { name as circleName } from "circle";
+import { name as squareName, draw } from "square";
 ```
 
 ### パス接頭辞のマッピング
@@ -291,17 +290,13 @@ scopes` キーを使って、モジュールをインポートするスクリプ
 インポートマップは有効な JSON オブジェクトでなければならず、オプションキーである `import`、`scope`、`integrity` のいずれかを定義することができます。です。それぞれのキーの値はオブジェクトでなければならず、空でも構いません。
 
 - `imports` {{optional_inline}}
-
   - : 値は[モジュール指定子マップ](#モジュール指定子マップ)で、 `import` 文や `import()` 演算子に現れるかもしれないモジュール指定子テキストと、指定子が解決されたときにそれを置き換えるテキストとの間のマッピングを提供するものです。
 
     これは `scopes` パスの URL が一致しない場合や、一致する `scopes` パスのモジュール指定子マップにモジュール指定子と一致するキーが格納されていない場合に、一致するモジュール指定子を探すために検索される予備的な対応表になります。
-
     - `<モジュール指定子マップ>`
-
       - : 「モジュール指定子マップ」は有効な JSON オブジェクトで、_キー_ はモジュールをインポートする際にモジュール指定子内に存在する可能性のあるテキスト、対応する _値_ はモジュール指定子をアドレスに解決する際にこのテキストを置き換える URL やパスです。
 
         モジュール指定子マップの JSON オブジェクトは、以下の条件を保有します。
-
         - どのキーも空であってはなりません。
         - 値はすべて文字列で、有効な絶対 URL か、`/`, `./`, `../` で始まる有効な URL 文字列を定義する必要があります。
         - キーが `/` で終わっている場合、対応する値も `/` で終わらなければなりません。
@@ -309,14 +304,12 @@ scopes` キーを使って、モジュールをインポートするスクリプ
         - オブジェクトプロパティの順序は関係ありません。複数のキーがモジュール指定子に一致する場合、最も詳細なキーが使用されます（言い換えれば、指定子 "olive/branch/" は "olive/" の前に一致することになります）。
 
 - `integrity` {{optional_inline}}
-
   - : 有効な JSON オブジェクトを定義し、キーには有効な絶対 URL または相対 URL （`/`、`./`、`../` のいずれかで始めるもの）が含まれている文字列を指定します。
     対応する値は有効な[整合性メタデータ](/ja/docs/Web/Security/Subresource_Integrity#サブリソース完全性の使い方)です。
 
     モジュールをインポートまたは事前読み込みするスクリプトの URL が `integrity` オブジェクトのキーと照合される場合、すでに整合性メタデータが添付されていない限り、対応する整合性メタデータがスクリプトのフェッチオプションに適用されます。
 
 - `scopes` {{optional_inline}}
-
   - : スコープはパス固有の[モジュール指定子マップ](#モジュール指定子マップ)を定義し、モジュールをインポートするコードのパスに依存したマップの選択を可能にします。
 
     scopes オブジェクトは有効な JSON オブジェクトで、各プロパティは `<scope key>` で、これは URL パスであり、対応する値は `<モジュール指定子マップ>` です。

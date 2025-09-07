@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
-{{AddonSidebar}}
-
 当页面的[片段标识符](https://zh.wikipedia.org/wiki/URI片段)发生更改时会触发此事件。例如，如果页面使用片段实现目录，则当用户点击目录中的条目时会触发此事件。此框架的所有后续事件都将使用更新后的 URL。
 
 ## 语法
@@ -34,9 +32,7 @@ browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `details`
       - : `object`。有关导航事件的详细信息。参见 [details](#details) 部分以了解更多信息。
 

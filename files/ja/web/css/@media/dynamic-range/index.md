@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-{{CSSRef}}
-
 **`dynamic-range`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している明るさ、コントラスト比、および色深度の組み合わせを検査することができます。
 
 > [!NOTE]
@@ -17,7 +15,6 @@ l10n:
 `dynamic-range` 機能は、以下の一覧から選択したキーワードの値として指定します。
 
 - `standard`
-
   - : この値は、あらゆる視覚的な端末と一致し、視覚機能のない端末は除外されます。`high` と一致するユーザーエージェントまたは出力機器は、`standard` 値とも一致します。
 
 - `high`

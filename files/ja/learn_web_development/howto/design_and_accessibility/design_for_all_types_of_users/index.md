@@ -1,12 +1,9 @@
 ---
 title: すべての種類のユーザーのためにデザインするには
 slug: Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
-original_slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 この記事ではあらゆる種類のユーザーのためのウェブサイトを設計する基本的なヒントを紹介します。
 
@@ -15,7 +12,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        ここではアクセシビリティに応じた詳細な説明はしていませんので、まず<a href="/ja/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility">アクセシビリティとは何か</a>を読んでください。
+        ここではアクセシビリティに応じた詳細な説明はしていませんので、まず<a href="/ja/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility">アクセシビリティとは何か</a>を読んでください。
       </td>
     </tr>
     <tr>
@@ -232,7 +229,8 @@ div.container {
 
 画像が簡潔に記述できるのであれば、 `alt` 属性を提供すればよく、それ以上のことをする必要はありません。画像が簡潔に記述できない場合は、同じページで同じ内容を別の形で提供するか（例えば、円グラフを同じデータを提供する表で補完する）、あるいは `longdesc` 属性に頼らなければならないでしょう。この属性の値は、画像の内容を詳細に記述したリソースを明示的に指す URL です。
 
-> **メモ:** `longdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 W3C の [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
+> [!NOTE]
+> `longdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 W3C の [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
 
 #### 音声/動画
 
@@ -245,7 +243,4 @@ div.container {
 
 ### 画像の圧縮
 
-ユーザーによっては、画像を表示することを選んでも、特に発展途上国やモバイル機器では、利用できる帯域幅が限られている場合があります。ウェブサイトを成功させたいのであれば、画像を圧縮してください。オンラインでもローカルでも、様々なツールがあります。
-
-- **インストールするソフトウェア** [ImageOptim](https://imageoptim.com/api) (Mac)、[OptiPNG](http://optipng.sourceforge.net/) （全プラットフォーム）、[PNGcrush](https://pmt.sourceforge.io/pngcrush/) （DOS、Unix/Linux）
-- **オンラインツール** Dynamic drive の [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) （帯域幅がより有効になるように、ある形式から別の形式に自動的に変換することができます。）
+ユーザーによっては、画像を表示することを選んでも、特に発展途上国やモバイル機器では、利用できる帯域幅が限られている場合があります。ウェブサイトを成功させたいのであれば、画像を圧縮してください。オンラインでもローカルでも、様々なツールがあります。通常、ローカルツールは開発ワークフローと統合しやすいのでお勧めです。これらのツールには [ImageOptim](https://imageoptim.com/api) (Mac)、[OptiPNG](http://optipng.sourceforge.net/) （全プラットフォーム）、[PNGcrush](https://pmt.sourceforge.io/pngcrush/) （DOS、Unix/Linux）などがあります。

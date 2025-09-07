@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/del
 ### Definición
 
 - El elemento `del` (deleted-borrado) marca las partes de un texto o documento que han sido suprimidas o sustituidas.
-
   - : **Sus etiquetas son**: \<del> y \</del> (ambas obligatorias).
 
     **Crea una caja**: a veces [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).

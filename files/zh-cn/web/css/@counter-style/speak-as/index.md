@@ -3,8 +3,6 @@ title: speak-as
 slug: Web/CSS/@counter-style/speak-as
 ---
 
-{{CSSRef}}
-
 当已明确定义 {{cssxref('@counter-style')}} 后，可以用 **`speak-as`** 定义在口语场景中如何表述这个 counter 符号。比如作为一篇文章的作者可以指定，当计算机读出这篇文章时，是以数字序号表示 counter，还是仅仅用语音提示。
 
 {{cssinfo}}
@@ -26,9 +24,7 @@ speak-as: <counter-style-name>;
 ### 值
 
 - `auto`
-
   - : 如果 **`speak-as`** 的值是 **`auto`**，那么它的实际值是由 {{cssxref("system")}} 的值决定的：
-
     - 如果 `system` 的值是 `alphabetic`，**`speak-as`** 的值是 `spell-out`**。**
     - 如果 `system` 的值是 `cyclic`，**`speak-as`** 的值是 `bullets`。
     - 如果 `system` 的值是 `extends`，当被继承的样式上也定义了 **`speak-as: auto`**，那么 **`speak-as`** 的值就和被继承样式的值相同。

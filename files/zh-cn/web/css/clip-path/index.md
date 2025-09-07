@@ -3,8 +3,6 @@ title: clip-path
 slug: Web/CSS/clip-path
 ---
 
-{{CSSRef}}
-
 **`clip-path`** [CSS](/zh-CN/docs/Web/CSS) 属性使用裁剪方式创建元素的可显示区域。区域内的部分显示，区域外的隐藏。
 
 {{InteractiveExample("CSS Demo: clip-path")}}
@@ -115,9 +113,7 @@ clip-path: unset;
 - `<clip-source>`
   - : 用 {{cssxref("url_value", "&lt;url&gt;")}} 引用 [SVG](/zh-CN/docs/Web/SVG) 的 {{SVGElement("clipPath")}} 元素
 - {{cssxref("&lt;basic-shape&gt;")}}
-
   - : 一种形状，其大小和位置由 `<geometry-box>` 的值定义。如果没有指定 `<geometry-box>`，则将使用 `border-box` 用为参考框。取值可为以下值中的任意一个：
-
     - {{cssxref("basic-shape/inset","inset()")}}
       - : 定义一个 inset 矩形。
     - {{cssxref("basic-shape/circle","circle()")}}
@@ -130,9 +126,7 @@ clip-path: unset;
       - : 定义一个任意形状（使用一个可选的 SVG 填充规则和一个 SVG 路径定义）。
 
 - `<geometry-box>`
-
   - : 如果同 `<basic-shape>` 一起声明，它将为基本形状提供相应的参考框盒。通过自定义，它将利用确定的盒子边缘包括任何形状边角（比如说，被 {{cssxref("border-radius")}} 定义的剪切路径）。几何框盒可以有以下的值中的一个：
-
     - `margin-box`
       - : 使用 [margin box](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) 作为引用框。
     - `border-box`
@@ -687,6 +681,5 @@ clipPathSelect.addEventListener("change", function (evt) {
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
 - [在 HTML 内容中应用 SVG 效果](/zh-CN/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - SVG 属性：
-
   - {{SVGAttr("clip-path")}}
   - {{SVGAttr("clip-rule")}}

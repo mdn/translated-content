@@ -3,8 +3,6 @@ title: CSS 层叠
 slug: Web/CSS/CSS_cascade/Cascade
 ---
 
-{{CSSRef}}
-
 层叠是 CSS 的一个基本特征，它是一个定义了如何合并来自多个源的属性值的算法。它在 CSS 处于核心地位，CSS 的全称层叠样式表正是强调了这一点。
 
 ## 哪些 CSS 实体会参与层叠计算
@@ -142,7 +140,6 @@ margin-left: 3px;
 
 - CSS 教程中层叠知识的[介绍](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)。
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
@@ -153,7 +150,6 @@ margin-left: 3px;
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
     - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
     - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)

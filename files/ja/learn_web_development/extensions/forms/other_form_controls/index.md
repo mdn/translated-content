@@ -163,7 +163,8 @@ l10n:
 > [!NOTE]
 > 複数選択可能な選択ボックスの場合、選択ボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう。代わりに、すべての値がリストに一度に表示され、選択肢の [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)属性はウィジェットの高さを決定します。
 
-> **メモ:** {{HTMLElement("select")}} 要素に対応しているすべてのブラウザーは、 [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性にも対応しています。
+> [!NOTE]
+> {{HTMLElement("select")}} 要素に対応しているすべてのブラウザーは、 [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性にも対応しています。
 
 ### 自動補完のボックス
 
@@ -220,13 +221,11 @@ l10n:
 メーターバーは [`max`](/ja/docs/Web/HTML/Reference/Elements/meter#max) と [`min`](/ja/docs/Web/HTML/Reference/Elements/meter#min)t/meter#min) 値で区切られた範囲内の固定された値を表します。この値は視覚的にバーとして表示され、このバーがどのように見えるかを知るために、他のいくつかの設定された値と比較します。
 
 - [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) と [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) の値は範囲を 3 つに分割します。
-
   - 範囲の下位の部分は [`min`](/ja/docs/Web/HTML/Reference/Elements/meter#min) と [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) 値の間であり、端も含みます。
   - 範囲の中位の部分は [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) と [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) 値の間であり、端を含みません。
   - 範囲の上位の部分は [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) と [`max`](/ja/docs/Web/HTML/Reference/Elements/meter#max) 値の間であり、端も含みます。
 
 - [`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) 値は {{HTMLElement("meter")}} 要素の最適な値を定義します。 [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) および [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) 値と組み合わせて、どの範囲の値を推奨するかを定義します。
-
   - [`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) の値が範囲の下位の部分にある場合、範囲の下位の部分を推奨部分、中位の部分を平均部分、上位の部分を最悪の部分と見なします。
   - [`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) の値が範囲の中位の部分にある場合、範囲の下位の部分を平均部分、中位の部分を推奨部分、上の部分を同じく平均部分と見なします。
   - [`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) の値が範囲の上位の部分にある場合、範囲の下位の部分を最悪の部分、中位の部分を平均部分、上位の部分を推奨部分と見なします。
@@ -263,7 +262,7 @@ l10n:
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: その他のコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: その他のコントロール](/ja/docs/Learn_web_development/Extensions/Forms) を見てください。
 
 ## まとめ
 

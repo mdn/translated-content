@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c5f403bb08c91ae77ddfe47f937438fb5e6fcae5
 ---
 
-{{CSSRef}}
-
 **`cy`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{SVGElement("circle")}} または {{SVGElement("ellipse")}} 要素の中心の Y 座標を定義します。存在する場合、その要素の {{SVGAttr("cy")}} 属性を上書きします。
 
 > [!NOTE]
@@ -32,11 +30,9 @@ cx: unset;
 {{cssxref("length")}} および {{cssxref("percentage")}} 値で、円または楕円の垂直方向の中心を記述します。
 
 - {{cssxref("length")}}
-
   - : 絶対長または相対長として、 CSS の {{cssxref("&lt;length&gt;")}} データ型で許可されている任意の単位で表現できます。負の値は無効です。
 
 - {{cssxref("percentage")}}
-
   - : パーセント値は、現在の SVG ビューポートの高さを参照します。
 
 ## 公式定義

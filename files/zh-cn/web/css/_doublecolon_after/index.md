@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
-{{CSSRef}}
-
 在 CSS 中，**`::after`** 会创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，作为所选元素的最后一个子元素。它通常用于为具有 {{CSSxRef("content")}} 属性的元素添加修饰内容。默认情况下，它是行向布局的。
 
 {{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
@@ -44,7 +42,8 @@ a::after {
 </p>
 ```
 
-> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“源元素”的直接子元素，因此不能应用于*{{glossary("Replaced elements", "可替换元素")}}*（如 {{htmlelement("img")}}），它们的内容在不受当前文档样式的影响的情况下被替换。
+> [!NOTE]
+> `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“源元素”的直接子元素，因此不能应用于*{{glossary("Replaced elements", "可替换元素")}}*（如 {{htmlelement("img")}}），它们的内容在不受当前文档样式的影响的情况下被替换。
 
 ## 语法
 

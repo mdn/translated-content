@@ -3,8 +3,6 @@ title: table-layout
 slug: Web/CSS/table-layout
 ---
 
-{{CSSRef}}
-
 **table-layout** CSS 属性定义了用于布局{{htmlelement("table", "表格")}}的单元格、行和列的算法。
 
 {{InteractiveExample("CSS Demo: table-layout")}}
@@ -88,7 +86,6 @@ table-layout: unset;
 - `auto`
   - : 默认情况下，大多数浏览器使用自动表格布局算法。表格及其单元格的宽度会根据内容自动调整大小。
 - `fixed`
-
   - : 表格和列的宽度是由 `table` 和 `col` 元素的宽度或第一行单元格的宽度来设置的。后续行中的单元格不会影响列的宽度。
 
     在“fixed”布局方法下，一旦下载并分析了第一行表格，整个表格就可以被渲染出来。这可以加快渲染时间，相比于“automatic”布局方法，但是后续单元格内容可能不适合提供的列宽。单元格使用 {{Cssxref("overflow")}} 属性来确定是否要剪裁任何溢出的内容，但仅当表格具有已知宽度时才会生效；否则，它们不会溢出到单元格之外。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<bdo>`** 元素覆盖了当前文本的方向，使文本以不同的方向渲染出来。
 
 {{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
@@ -44,9 +42,7 @@ bdo {
 元素属性包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `dir`
-
   - : 文本在此元素内容中渲染的方向。可能的值有：
-
     - `ltr`：指示文本应从左到右绘制。
     - `rtl`：指示文本应从右到左绘制。
 

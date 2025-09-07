@@ -3,8 +3,6 @@ title: <ruby>
 slug: Web/HTML/Reference/Elements/ruby
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<ruby>` 元素**的意思是旁註標記。旁註標記用於標示東亞文字的發音。
 
 {{InteractiveExample("HTML Demo: &lt;ruby&gt;", "tabbed-shorter")}}

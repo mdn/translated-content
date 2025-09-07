@@ -14,7 +14,8 @@ l10n:
 
 多くのコマンドは、文書の[選択範囲](/ja/docs/Web/API/Selection)に対して影響を及ぼします。例えば、一部のコマンド（太字、斜体など）は現在選択されているテキストを整形する一方で、他のコマンドは選択範囲を削除したり、新しい要素を挿入したり（選択範囲を置き換えたり）、行全体に影響を与えたり（インデント）します。変更することができるのは現在アクティブになっている編集可能な要素だけですが、一部のコマンド（`copy`など）は編集可能な要素がなくても動作します。
 
-> **メモ:** `execCommand()` によって行われた変更は、ブラウザーや構成によって {{domxref("Element/beforeinput_event", "beforeinput")}} と {{domxref("Element/input_event", "input")}} イベントを発生させる場合と発生させない場合があります。起動されると、イベントのハンドラーは `execCommand()` を返す前に実行されます。制作者はこのような再帰的な呼び出し、特にこれらのイベントに応答して `execCommand()` を呼び出す場合には注意が必要です。Firefox 82 以降、入れ子になった `execCommand()` 呼び出しは常に失敗します。[バグ 1634262](https://bugzil.la/1634262) を参照してください。
+> [!NOTE]
+> `execCommand()` によって行われた変更は、ブラウザーや構成によって {{domxref("Element/beforeinput_event", "beforeinput")}} と {{domxref("Element/input_event", "input")}} イベントを発生させる場合と発生させない場合があります。起動されると、イベントのハンドラーは `execCommand()` を返す前に実行されます。制作者はこのような再帰的な呼び出し、特にこれらのイベントに応答して `execCommand()` を呼び出す場合には注意が必要です。Firefox 82 以降、入れ子になった `execCommand()` 呼び出しは常に失敗します。[バグ 1634262](https://bugzil.la/1634262) を参照してください。
 
 ## 構文
 
@@ -25,9 +26,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ### 引数
 
 - `aCommandName`
-
   - : 文字列で、実行するコマンドの名前を指定します。以下のコマンドが使用できます。
-
     - `backColor`
       - : 文書の背景色を変更します。 `styleWithCss` モードでは、文書ではなく含まれているブロックの背景色に影響します。この場合、引数として {{cssxref("&lt;color&gt;")}} 値の文字列を渡す必要があります。
     - `bold`
@@ -119,7 +118,6 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `unlink`
       - : 選択されたハイパーリンクから[アンカー要素](/ja/docs/Web/HTML/Reference/Elements/a)を削除します。
     - `useCSS` {{Deprecated_inline}}
-
       - : 生成するマークアップに HTML タグと CSS のどちらを使用するかを切り替えます。引数として true または false の真偽値が必要です。
         > [!NOTE]
         > この引数は論理が逆です（つまり、`false` で CSS が使用され、`true` で HTML が使用される）。これは `styleWithCSS` に置き換えられ、非推奨になりました。
@@ -138,7 +136,8 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 論理値で、コマンドが対応していないか無効であれば `false` になります。
 
-> **メモ:** `document.execCommand()` はユーザーの操作の中で行われた場合にのみ `true` を返します。コマンドを呼び出す前に、ブラウザーが対応しているかどうかを調べるために返値を使用しないでください。
+> [!NOTE]
+> `document.execCommand()` はユーザーの操作の中で行われた場合にのみ `true` を返します。コマンドを呼び出す前に、ブラウザーが対応しているかどうかを調べるために返値を使用しないでください。
 
 ## 例
 

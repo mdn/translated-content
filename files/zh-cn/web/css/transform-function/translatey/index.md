@@ -3,13 +3,12 @@ title: translateY()
 slug: Web/CSS/transform-function/translateY
 ---
 
-{{CSSRef}}
-
 `translateY()` 在页面垂直移动元素，结果是 CSS 数据类型 {{cssxref("&lt;transform-function&gt;")}}。
 
 ![](translatey.png)
 
-> **备注：** `translateY(ty)` 对应 `translate(0, ty)` 或`translate3d(0, ty, 0)`。
+> [!NOTE]
+> `translateY(ty)` 对应 `translate(0, ty)` 或`translate3d(0, ty, 0)`。
 
 ## 语法
 

@@ -10,7 +10,7 @@ l10n:
 
 **`<textarea>`** は [HTML](/ja/docs/Web/HTML) の要素で、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。
 
-{{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;textarea&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="story">Tell us your story:</label>
@@ -58,13 +58,10 @@ label {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
-
   - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。
 
 - [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
-
   - : この属性は、コントロールの値をブラウザーが自動的に入力してよいかを示します。以下の値を指定できます。
-
     - `off`: ユーザーはフォームを使用するたびにフィールドへ値を明示的に入力しなければならないか、ドキュメントが独自の自動入力を提供します。ブラウザーは入力内容の自動入力を行いません。
     - `on`: ブラウザーはユーザーが以前入力した値を元に、値の自動入力を行うことができます。
     - [`<token-list>`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete#トークンリストのトークン): 自動入力の詳細トークンを順序付きで空白区切りした集合です。オプションでグループ名トークン、配送先または請求先を表すグループ化トークン、連絡先の種類を識別するためのトークンなどがその前に入ります。
@@ -72,10 +69,8 @@ label {
     `<textarea>` 要素に `autocomplete` 属性を指定していない場合、ブラウザーはその `<textarea>` 要素のフォームオーナーに設定された `autocomplete` の `on` または `off` の状態を継承します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、その入力フィールドの `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/form#autocomplete) 属性をご覧ください。
 
 - [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect)
-
   - : ユーザーがこの `textarea` を編集しているときに、テキストの自動スペルチェックと修正を有効にするかどうかを制御します。
     許可されている値は以下の通りです。
-
     - `on`
       - : 自動スペルチェックとテキスト置換を有効にする。
     - `off`
@@ -86,7 +81,6 @@ label {
 - `cols`
   - : 平均的な文字幅による、テキストコントロールの外見上の幅です。この属性を指定する場合は、正の整数を与えなければなりません。指定されなかった場合の既定値は `20` です。
 - [`dirname`](/ja/docs/Web/HTML/Reference/Attributes/dirname)
-
   - : この属性は、要素の内容のテキストの書字方向を示すために使用します。
     詳しくは、 [`dirname` 属性](/ja/docs/Web/HTML/Reference/Attributes/dirname)を参照してください。
 
@@ -101,7 +95,6 @@ label {
 - `name`
   - : コントロールの名前です。
 - [`placeholder`](/ja/docs/Web/HTML/Reference/Attributes/placeholder)
-
   - : コントロールに何を入力できるかに関する、ユーザーへの助言です。プレースホルダーのテキスト内にあるキャリッジリターンやラインフィードは、ヒントを表示する際に改行として扱わなければなりません。
 
     > [!NOTE]
@@ -114,17 +107,13 @@ label {
 - `rows`
   - : コントロールで見ることが可能なテキストの行数です。指定する場合は、正の整数でなければなりません。指定されなかった場合、既定値は 2 になります。
 - [`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)
-
   - : `<textarea>` がブラウザーや OS に依存したスペルチェックを行うかどうかを指定します。以下の値が使用できます。
-
     - `true`: 要素でスペルや文法チェックを行う必要があることを示します。
     - `default` : 要素は既定の動作、おそらく親要素の `spellcheck` 値によって動作することを示します。
     - `false` : 要素でスペルチェックを行うべきではないことを示します。
 
 - `wrap`
-
   - : フォームの送信において、どのように値を折り返すかを制御するかを示します。以下の値を指定可能です。
-
     - `hard`: ブラウザーは自動的に改行 (CR+LF) を挿入し、各行がコントロールの幅より長くならないようにします。有効にするには、[`cols`](#cols) 属性を指定する必要があります。
     - `soft`: ブラウザーは、入力された値の改行がすべて `CR+LF` のペアであることを保証しますが、値にそれ以外の改行が追加されることはありません。
     - `off` {{non-standard_inline}}: `soft` に似ていますが外観を `white-space: pre` に変更しますので、`cols` を超えた部分は折り返されず、水平方向にスクロール可能になります。

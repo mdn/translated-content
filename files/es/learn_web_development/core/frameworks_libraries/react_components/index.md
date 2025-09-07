@@ -249,7 +249,8 @@ ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
 
 Este arreglo ahora esta disponible en el componente `App` como `props.tasks`. Puede usar `console.log` para comprobarlo, si lo desea.
 
-> **Nota:** `TODAS_MAYUSCULAS` los nombres de las constantes no tienen un significado especial en Javascript; es una convención para decirle a otros desarrolladores "Estos datos nunca cambiarán después de haberse definido aquí".
+> [!NOTE]
+> `TODAS_MAYUSCULAS` los nombres de las constantes no tienen un significado especial en Javascript; es una convención para decirle a otros desarrolladores "Estos datos nunca cambiarán después de haberse definido aquí".
 
 ## Renderizado con iteración
 

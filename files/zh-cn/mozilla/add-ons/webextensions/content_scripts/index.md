@@ -3,8 +3,6 @@ title: 内容脚本
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
 
-{{AddonSidebar}}
-
 Content script 是你扩展的一部分，运行于一个特定的网页环境（而并不是后台脚本，后台脚本是扩展的一部分，也不是该网页利用 {{HTMLElement("script")}} 加载的一个脚本，{{HTMLElement("script")}} 加载的脚本是网页的一部分）。
 
 后台脚本可以访问所有 WebExtension JavaScript APIS，但是他们不能直接访问网页的内容，所以如果你需要 Content Scripts 来做到这点。
@@ -267,7 +265,6 @@ document.body.addEventListener("click", function () {
 
 - 监听 content script 的所有连接企图。
 - 当收到连接请求后：
-
   - 存贮 Port 对象至 `portFromCS`
   - 使用 portFromCS 发送一个消息到 content script
   - 开始监听消息并记录它们。

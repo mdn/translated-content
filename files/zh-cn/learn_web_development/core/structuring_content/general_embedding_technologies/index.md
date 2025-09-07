@@ -248,7 +248,8 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 浏览器制造商和 Web 开发人员已经深刻认识到，如果 Web 上的恶意人士（通常称为**黑客**，或者更准确地说，**破解者**）试图发起攻击，或者欺骗人们做一些他们不想做的事情，比如泄露敏感信息（如用户名和密码），那么 iframe 是常见目标（正式术语：**攻击向量**）。因此，规范工程师和浏览器开发人员已经开发了各种安全机制，以使 `<iframe>` 更安全，并且还有一些最佳实践需要考虑——我们将在下面介绍其中一些。
 
-> **备注：** [点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)是一种常见的 iframe 攻击，黑客将一个不可见的 iframe 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来获取用户的交互。这是一种常见的误导用户或窃取敏感数据的方式。
+> [!NOTE]
+> [点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)是一种常见的 iframe 攻击，黑客将一个不可见的 iframe 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来获取用户的交互。这是一种常见的误导用户或窃取敏感数据的方式。
 
 一个简单的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。与你期望的页面不同，你可能会看到某种类型的消息，内容类似于“无法打开此页面”，如果你查看[浏览器开发工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中的*控制台*，你将看到一条信息消息告知你原因。在 Firefox 中，消息类似于*由于“X-Frame-Options”指令设置为“DENY”，因此无法在 iframe 中加载“https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN 的开发人员在服务器上设置了一个选项，禁止将网站页面嵌入到 `<iframe>` 中（参见下面的[配置 CSP 指令](#配置_scp_指令)）。这是有原因的——整个 MDN 页面在其他页面中嵌入并不合适，除非你希望将它们嵌入到你的网站上并将它们声明为你自己的页面——或者通过点击劫持来尝试窃取数据，这两者都是非常糟糕的行为。而且，如果每个人这样做，额外的带宽成本将给 Mozilla 带来很大压力。
 
@@ -269,7 +270,8 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 要想为网站启用 HTTPS，你需要安装特殊的安全证书。许多托管提供商提供了支持 HTTPS 的托管服务，无需你自己进行任何设置即可安装证书。但是，如果你*确实*需要自己动手为网站设置 HTTPS 支持，[Let's Encrypt](https://letsencrypt.org/) 提供了工具和说明，可以自动创建和安装所需的证书，并支持包括 Apache Web 服务器、Nginx 和其他常用的 Web 服务器。Let's Encrypt 的工具旨在使该过程尽可能简单，因此强烈建议使用它或其他可用的方法来启用你的网站的 HTTPS。
 
-> **备注：** [Github pages](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
+> [!NOTE]
+> [Github pages](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
 
 #### 始终使用 `sandbox` 属性
 

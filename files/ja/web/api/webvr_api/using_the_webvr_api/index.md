@@ -17,7 +17,6 @@ WebVR API はウェブ開発者のツールキットへのすばらしい追加�
 始めるには、次のものが必要です。
 
 - 対応している VR ハードウェア
-
   - 最も安価なオプションは、モバイル端末、対応しているブラウザー、および機器マウント（例えば Google Cardboard）を使用することです。これは、専用のハードウェアほど良い使い勝手ではありませんが、強力なコンピューターや専用の VR ディスプレイを購入する必要はありません。
   - 専用のハードウェアはコストがかかりますが、より良い使い勝手を提供することができます。現時点で最も WebVR と互換性のあるハードウェアは、 HTC VIVE と Oculus Rift です。 [webvr.info](https://webvr.info/) のトップページには、利用できるハードウェアや対応しているブラウザーについて、さらに有益な情報が掲載されています。
 
@@ -34,7 +33,8 @@ WebVR API がどのように動作するのかを説明するために、次の�
 
 ![灰色の回転する 3D 立方体](capture1.png)
 
-> **メモ:** [このデモのソースコード](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) は GitHub で、[ライブで見ることができます](https://mdn.github.io/webvr-tests/webvr/raw-webgl-example/) also.
+> [!NOTE]
+> [このデモのソースコード](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) は GitHub で、[ライブで見ることができます](https://mdn.github.io/webvr-tests/webvr/raw-webgl-example/) also.
 
 > [!NOTE]
 > ブラウザーで WebVR が動作しない場合、グラフィックカードを通して実行しているかどうかを確認する必要がある場合があります。例えば NVIDIA のカードの場合、 NVIDIA コントロールパネルが正常に設定されていれば、利用できるコンテキストメニューオプションがあります - Firefox を右クリックし、 _Run with graphics processor > High-performance NVIDIA processor_ を選んでください。

@@ -3,8 +3,6 @@ title: Firefox 3 para desarrolladores
 slug: Mozilla/Firefox/Releases/3
 ---
 
-{{FirefoxSidebar}}
-
 Si eres un desarrollador que intenta ponerse al día con todas las nuevas características de Firefox 3, este es el lugar perfecto para empezar. Este artículo proporciona una lista de nuevos artículos que tratan sobre las características añadidas a Firefox 3. Aunque no cubre necesariamente todos los pequeños cambios, te ayudará a conocer mejor las mejoras más importantes.
 
 ### Características nuevas para desarrolladores en Firefox 3
@@ -22,7 +20,6 @@ Si eres un desarrollador que intenta ponerse al día con todas las nuevas caract
 - [Gestión de transformaciones en canvas](/es/Tutorial_de_Canvas/Transformaciones#Transformaciones)
   - : Firefox 3 administra los métodos `transform()` y `setTransform()` en canvases (lienzos).
 - [El uso de microformatos](/es/El_uso_de_microformatos)
-
   - : Firefox 3 tiene APIs que permiten trabajar con microformatos.
 
 - [Hojas de estilo alternativas](/es/Hojas_de_estilo_alternativas)
