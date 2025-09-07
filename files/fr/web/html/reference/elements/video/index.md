@@ -528,6 +528,14 @@ Certains types de fichiers médias vous permettent de fournir des informations p
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant</a
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
     </tr>
