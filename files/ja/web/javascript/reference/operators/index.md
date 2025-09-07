@@ -47,7 +47,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/Property_accessors", "プロパティアクセサー", "", 1)}}
   - : プロパティアクセス演算子はオブジェクトのプロパティやメソッドへのアクセス (`object.property` や `object["property"]`) を提供します。
 - {{jsxref("Operators/Optional_chaining", "?.")}}
-  - : オプショナルチェーン演算子は、参照が [nullish](/ja/docs/Glossary/Nullish)（[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)）であった場合にエラーを発生させる代わりに `undefined` を返します。
+  - : オプショナルチェーン演算子は、参照が[ヌル値](/ja/docs/Glossary/Nullish)（[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)）であった場合にエラーを発生させる代わりに `undefined` を返します。
 - {{jsxref("Operators/new", "new")}}
   - : `new` 演算子はコンストラクターのインスタンスを作成します。
 - {{jsxref("Operators/new.target", "new.target")}}
@@ -55,7 +55,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/import.meta", "import.meta")}}
   - : コンテキストに依存したメタデータを JavaScript モジュールへ公開するオブジェクトです。
 - {{jsxref("Operators/super", "super")}}
-  - : `super`キーワードは親オブジェクトのコンストラクタを呼び出したり、親オブジェクトのプロパティにアクセスしたりすることができます。
+  - : `super`キーワードは親オブジェクトのコンストラクターを呼び出したり、親オブジェクトのプロパティにアクセスしたりすることができます。
 - {{jsxref("Operators/import", "import()")}}
   - : `import()` 構文を使うと、モジュールを非同期かつ動的に、潜在的にモジュールでない環境に読み込むことができます。
 
