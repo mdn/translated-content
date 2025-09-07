@@ -94,29 +94,184 @@ Le contenu fourni entre les balises `<video></video>` est affiché comme contenu
 
 ## Évènements
 
-| Nom                                                                                       | Condition de déclenchement                                                                                                                                                                                                          |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}}{{Deprecated_Inline}} | La mémoire tampon en entrée d'un {{DOMxRef("ScriptProcessorNode")}} peut désormais être traité.                                                                                                                                     |
-| {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}                                  | Le navigateur peut lire le média mais estime que trop peu de données ont été chargées pour lire le média jusqu'à sa fin (il faudra vraisemblablement un arrêt pour un chargement en mémoire tampon).                                |
-| {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}                    | Le navigateur estime qu'il peut lire le média jusqu'à sa fin, sans avoir à interrompre la lecture par du chargement en mémoire tampon.                                                                                              |
-| {{domxref("OfflineAudioContext.complete_event", "complete")}}                             | Le rendu d'un {{DOMxRef("OfflineAudioContext")}} est terminé.                                                                                                                                                                       |
-| {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}                    | L'attribut `duration` a été mis à jour.                                                                                                                                                                                             |
-| {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}                                  | Le média est devenu vide. Cela peut par exemple se produire lorsque le média a déjà été (partiellement ou complètement) chargé et que la méthode [`load()`](/fr/docs/Web/API/HTMLMediaElement/load) est invoquée pour le recharger. |
-| {{domxref("HTMLMediaElement.ended_event", 'ended')}}                                      | La lecture a été interrompue car la fin du média est atteinte.                                                                                                                                                                      |
-| {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}                            | La première _frame_ du média a été chargée.                                                                                                                                                                                         |
-| {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}                    | Les métadonnées ont été chargées.                                                                                                                                                                                                   |
-| {{domxref("HTMLMediaElement.pause_event", 'pause')}}                                      | La lecture a été mise en pause.                                                                                                                                                                                                     |
-| {{domxref("HTMLMediaElement.play_event", 'play')}}                                        | La lecture a démarré.                                                                                                                                                                                                               |
-| {{domxref("HTMLMediaElement.playing_event", 'playing ')}}                                 | La lecture est prête à être lancée après avoir été mise en pause ou interrompue pour un chargement en mémoire de données.                                                                                                           |
-| {{domxref("HTMLMediaElement.progress_event", 'progress')}}                                | Évènement déclenché périodiquement lorsque le navigateur charge une ressource.                                                                                                                                                      |
-| {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}                            | La vitesse de lecture a changé.                                                                                                                                                                                                     |
-| {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}                                    | Une opération de déplacement du curseur de lecture (_seek_) est terminée.                                                                                                                                                           |
-| {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}                                  | L'agent utilisateur tente de récupérer les données associées au média mais les données ne parviennent pas.                                                                                                                          |
-| {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}                                  | L'agent utilisateur tente de récupérer les données associées au média mais les données ne parviennent pas.                                                                                                                          |
-| {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}                                  | Le chargement des données du média ont été suspendues.                                                                                                                                                                              |
-| {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}                            | Le temps décrit par l'attribut `currentTime` a été mis à jour.                                                                                                                                                                      |
-| {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}                        | Le volume a été modifié.                                                                                                                                                                                                            |
-| {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}                                  | La lecture a été interrompue en raison d'un manque temporaire de données.                                                                                                                                                           |
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Nom de l'évènement</th>
+      <th scope="col">Condition de déclenchement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
+      </td>
+      <td>
+        La mémoire tampon en entrée d'un {{DOMxRef("ScriptProcessorNode")}}
+        peut désormais être traité.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
+      </td>
+      <td>
+        Le navigateur peut lire le média mais estime que trop peu de données ont
+        été chargées pour lire le média jusqu'à sa fin (il faudra vraisemblablement
+        un arrêt pour un chargement en mémoire tampon).
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
+      </td>
+      <td>
+        Le navigateur estime qu'il peut lire le média jusqu'à sa fin, sans avoir
+        à interrompre la lecture par du chargement en mémoire tampon.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("OfflineAudioContext.complete_event", "complete")}}
+      </td>
+      <td>
+        Le rendu d'un {{DOMxRef("OfflineAudioContext")}} est terminé.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
+      </td>
+      <td>L'attribut <code>duration</code> a été mis à jour.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
+      </td>
+      <td>
+        Le média est devenu vide. Cela peut par exemple se produire lorsque le média
+        a déjà été (partiellement ou complètement) chargé et que la méthode
+        <a href="/fr/docs/Web/API/HTMLMediaElement/load" rel="internal"
+          ><code>load()</code></a
+        >
+        est invoquée pour le recharger.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.ended_event", 'ended')}}
+      </td>
+      <td>La lecture a été interrompue car la fin du média est atteinte.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.error_event", 'error')}}
+      </td>
+      <td>
+        Une erreur s'est produite lors de la récupération des données,
+        ou le type de ressource n'est pas un format pris en charge.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
+      </td>
+      <td>La première _frame_ du média a été chargée.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
+      </td>
+      <td>Les métadonnées ont été chargées.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+      </td>
+      <td>Le navigateur a commencé à charger la ressource.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.pause_event", 'pause')}}
+      </td>
+      <td>La lecture a été mise en pause.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.play_event", 'play')}}
+      </td>
+      <td>La lecture a démarré.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
+      </td>
+      <td>
+        La lecture est prête à être lancée après avoir été mise en pause ou interrompue
+        pour un chargement en mémoire de données.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.progress_event", 'progress')}}
+      </td>
+      <td>Évènement déclenché périodiquement lorsque le navigateur charge une ressource.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
+      </td>
+      <td>La vitesse de lecture a changé.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
+      </td>
+      <td>Une opération de déplacement du curseur de lecture (<em>seek</em>) est terminée.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
+      </td>
+      <td>Une opération de déplacement du curseur de lecture (<em>seek</em>) a commencé.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
+      </td>
+      <td>
+       L'agent utilisateur tente de récupérer les données associées au média
+       mais les données ne parviennent pas.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
+      </td>
+      <td>Le chargement des données du média ont été suspendues.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
+      </td>
+      <td>
+        Le temps décrit par l'attribut <code>currentTime</code> a été mis à jour.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
+      </td>
+      <td>Le volume a été modifié.</td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
+      </td>
+      <td>La lecture a été interrompue en raison d'un manque temporaire de données.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Notes d'utilisation
 
@@ -307,7 +462,7 @@ Dans cet exemple, trois sources différentes pour la vidéo sont fournies. La pr
         <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_intégré"
           >contenu intégré</a
         >. Si l'élément a un attribut
-        <a href="/fr/docs/Web/HTML/Element/video#controls"><code>controls</code></a> :
+        <a href="/fr/docs/Web/HTML/Reference/Elements/video#controls"><code>controls</code></a> :
         <a href="/fr/docs/Web/HTML/Guides/Content_categories#Contenu_interactif"
           >contenu interactif</a
         >,
