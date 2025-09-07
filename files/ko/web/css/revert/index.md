@@ -3,8 +3,6 @@ title: revert
 slug: Web/CSS/revert
 ---
 
-{{CSSRef}}
-
 **`revert`** 는 현재 엘리먼트에 선언 된 캐스캐이딩된 속성으로부터 **{{Glossary("style origin")}}** 으로 되돌립니다. 부모 속성 또는 user agent에 따라 default로 선언 된 속성으로 되돌리는 것입니다. 이 속성은 css 단축속성{{cssxref("all")}}을 포함한 어떤 프로퍼티에도 적용할 수 있습니다.
 
 - 만약 그 사이트만의 css 속성이 지정되어있다면 `revert` 속성은 유저가 지정한 커스텀 스타일로 롤백합니다. 만약 하나만 존재한다면 user agent의 default 스타일로 돌아가는 것입니다.

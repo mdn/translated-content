@@ -2,7 +2,7 @@
 title: <display-inside>
 slug: Web/CSS/display-inside
 l10n:
-  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 以下のキーワードは、要素の内部の {{CSSxRef("display")}} 種別を指定し、これは要素 (置換要素ではないものとする) の内容物をレイアウトする整形コンテキストの種類を定義します。これらのキーワードは `display` プロパティの値として使用され、単一のキーワードとしては伝統的な目的に、または Level 3 仕様書では {{CSSxRef("&lt;display-outside&gt;")}} のキーワードと共に使用されます。
@@ -14,7 +14,7 @@ l10n:
 - `flow`
   - : 要素は、フローレイアウト (ブロックおよびインラインのレイアウト) を使用して、内容物をレイアウトします。
 
-    外部表示種別が `inline` または `run-in` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックコンテナーボックスを生成します。
+    外部表示種別が `inline` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックコンテナーボックスを生成します。
 
     ほかのプロパティ ({{CSSxRef("position")}}, {{CSSxRef("float")}}, {{CSSxRef("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成する、または内容物が親の整形コンテキストに吸収されます。
 
@@ -53,7 +53,7 @@ l10n:
 
 ```css
 .box {
-  background-color: rgb(224, 206, 247);
+  background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
   display: flow-root;
 }

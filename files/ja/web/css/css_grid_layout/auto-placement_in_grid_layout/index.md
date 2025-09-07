@@ -1,8 +1,9 @@
 ---
 title: グリッドレイアウトでの自動配置
+short-title: 自動配置
 slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 l10n:
-  sourceCommit: b17ca921175c0a92d21c6c4effbc7fa3dc348a8e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)には、グリッドを作成し、そのグリッド内に子アイテムの一部またはすべてを明示的に配置しない場合に、その動作を制御するルールが含まれています。コンテンツの配置を明示的に制御する必要がない場合、この「自動配置」は、一連のアイテムのグリッドを作成する最も簡単な方法です。

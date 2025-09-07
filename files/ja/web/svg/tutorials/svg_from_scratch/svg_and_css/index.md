@@ -3,16 +3,14 @@ title: SVG と CSS
 slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
 original_slug: Web/SVG/Tutorial/SVG_and_CSS
 l10n:
-  sourceCommit: 32d1c9ff83019f8efae3e7987a55e83035e4b926
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 このページでは、グラフィックを作成するための特殊言語である [SVG](/ja/docs/Web/SVG) への CSS の適用について説明します。
 
-以下では SVG 対応ブラウザーで実行する単純なデモを作成します。
+以下では、ブラウザーで実行するデモを作成します。
 
 > [!NOTE]
 > {{SVGElement("use")}} 要素によって参照される要素は、その要素のスタイルを継承します。したがって、それらに異なるスタイルを適用するには、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)を使用しましょう。
@@ -21,7 +19,7 @@ l10n:
 
 プレーンテキストファイルとして新しい SVG 文書 `doc8.svg` を作成してください。ここからコンテンツをコピーして貼り付けてください。スクロールしてすべてを取得するようにしてください。
 
-```html
+```html live-sample___example
 <svg
   width="600px"
   height="600px"
@@ -256,7 +254,7 @@ l10n:
 
 `doc8.svg` と同じディレクトリーに新しい CSS ファイル `style8.css` を作成しましょう。ここにあるコンテンツをコピー＆ペーストし、スクロールしてすべて取得するようにしてください。
 
-```css
+```css live-sample___example
 /*** SVG デモ ***/
 
 /* page */
@@ -391,7 +389,7 @@ SVG 対応のブラウザーで `doc8.svg` 文書を開いてください。マ�
 
 ### 結果
 
-{{EmbedLiveSample("例", "660", "660")}}
+{{EmbedLiveSample("example", "660", "660")}}
 
 このデモについてのメモです。
 
@@ -405,7 +403,7 @@ SVG 対応のブラウザーで `doc8.svg` 文書を開いてください。マ�
 
   ```html
   <style>
-    @import url(style8.css);
+    @import "style8.css";
   </style>
   ```
 
@@ -417,9 +415,9 @@ SVG 対応のブラウザーで `doc8.svg` 文書を開いてください。マ�
 
 [この練習の解答を見る](/ja/docs/Learn_web_development/Core/Challenges#svg_and_css)
 
-## 簡略化された構造
+## 構造の簡略化
 
-上に示した SVG 構造は、 {{SVGElement("use")}} 要素を介して花の各部分を参照することで、より簡潔に書くことができます。この[動作は標準化されています](https://www.w3.org/TR/SVG2/struct.html#UseStyleInheritance)が、今のところ `<use>` 要素で参照される要素に対して {{cssxref(":hover")}} 擬似クラスと他の複雑な CSS セレクターに対応しているブラウザーはいくつかしかありません。[このような参照する要素にどのようなルールが適用されるかについての課題](https://github.com/w3c/svgwg/issues/504)があります。
+上に示した SVG 構造は、 {{SVGElement("use")}} 要素を介して花の各部分を参照することで、より簡潔に書くことができます。この[動作は標準化されています](https://svgwg.org/svg2-draft/struct.html#UseStyleInheritance)が、今のところ `<use>` 要素で参照される要素に対して {{cssxref(":hover")}} 擬似クラスと他の複雑な CSS セレクターに対応しているブラウザーはいくつかしかありません。[このような参照する要素にどのようなルールが適用されるかについての課題](https://github.com/w3c/svgwg/issues/504)があります。
 
 そのときの構造は下記をご覧ください。
 
@@ -430,6 +428,11 @@ SVG 対応のブラウザーで `doc8.svg` 文書を開いてください。マ�
   viewBox="-300 -300 600 600"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link
+    xmlns="http://www.w3.org/1999/xhtml"
+    rel="stylesheet"
+    href="style8.css"
+    type="text/css" />
   <title>SVG デモ</title>
   <desc>Mozilla CSS Getting Started - SVG デモ</desc>
 
@@ -481,7 +484,7 @@ SVG 対応のブラウザーで `doc8.svg` 文書を開いてください。マ�
 </svg>
 ```
 
-{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 ## 次は何か
 
