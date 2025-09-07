@@ -414,7 +414,8 @@ Cet exemple lit une vidéo lorsqu'il est activé, fournissant à l'utilisateur l
   src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
   poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
   width="620">
-  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais ne vous inquiétez pas, vous pouvez
+  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais
+  ne vous inquiétez pas, vous pouvez
   <a href="https://archive.org/details/BigBuckBunny_124">la télécharger</a>
   et la regarder avec votre lecteur vidéo préféré !
 </video>
@@ -447,7 +448,8 @@ Cet exemple s'appuie sur le précédent et fournit trois sources différentes po
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     type="video/mp4" />
 
-  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais ne vous inquiétez pas, vous pouvez
+  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais
+  ne vous inquiétez pas, vous pouvez
   <a
     href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     download="ed_1024_512kb.mp4">
