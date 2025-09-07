@@ -94,7 +94,7 @@ Vous pourrez voir cet exemple s'afficher sur toute la page en cliquant sur [ce l
 
 Une autre chose qui mérite d'être mentionnée à ce stade est que les événements ne sont pas particuliers à JavaScript - la plupart des langages de programmation ont un certain type de modèle d'événement, et la façon dont cela fonctionne diffère souvent de celle de JavaScript. En fait, le modèle d'événement en JavaScript pour les pages Web diffère du modèle d'événement pour JavaScript tel qu'il est utilisé dans d'autres environnements.
 
-Par exemple, [Node.js](/fr/docs/Learn/Server-side/Express_Nodejs) est un runtime JavaScript très populaire qui permet aux développeurs d'utiliser JavaScript pour créer des applications réseau et serveur. Le modèle [Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) s'appuie sur des écouteurs pour écouter les événements et des émetteurs pour générer des événements périodiquement — bien qu'il ne le semble pas à première vue, le code est très différent, en particulier lorsqu'il utilise des fonctions comme `on()` pour enregistrer un écouteur d'événement, et `once()` pour enregistrer un écouteur d'événement qui s'efface après sa première exécution. le document [HTTP connect event docs](https://nodejs.org/docs/latest-v8.x/api/http.html#http_event_connect) propose un bon exemple d'utilisation.
+Par exemple, [Node.js](/fr/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) est un runtime JavaScript très populaire qui permet aux développeurs d'utiliser JavaScript pour créer des applications réseau et serveur. Le modèle [Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) s'appuie sur des écouteurs pour écouter les événements et des émetteurs pour générer des événements périodiquement — bien qu'il ne le semble pas à première vue, le code est très différent, en particulier lorsqu'il utilise des fonctions comme `on()` pour enregistrer un écouteur d'événement, et `once()` pour enregistrer un écouteur d'événement qui s'efface après sa première exécution. le document [HTTP connect event docs](https://nodejs.org/docs/latest-v8.x/api/http.html#http_event_connect) propose un bon exemple d'utilisation.
 
 Comme autre exemple, vous pouvez désormais utiliser JavaScript pour créer des extensions inter-navigateurs — comme améliorations de la fonctionnalité du navigateur — à l'aide d'une technologie appelée [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions). Le modèle d'événement est similaire au modèle d'événements Web, mais un peu différent — les écouteurs d'événements sont sensibles à la casse (p.ex. `onMessage` plutôt que `onmessage`), et doivent êtres combinés à la fonction `addListener`. Jetez un oeil à la page [runtime.onMessage page](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) pour voir un exemple.
 
@@ -120,7 +120,7 @@ btn.onclick = function () {
 
 La propriété [`onclick`](/fr/docs/Web/API/Element/click_event) est la propriété du gestionnaire d'événement utilisée dans cette situation. C'est essentiellement une propriété comme les autres disponibles sur le bouton (p.ex. [`btn.textContent`](/fr/docs/Web/API/Node/textContent), ou [`btn.style`](/fr/docs/Web/API/HTMLElement/style)), mais d'un type spécial — lorsque vous la définissez comme étant égale à du code, ce code est exécuté lorsque l'événement se déclenche sur le bouton.
 
-Vous pouvez également définir la propriété du gestionnaire d'événement comme étant égale au nom d'une fonction définie (comme nous l'avons vu dans [Construire votre propre fonction](/fr/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)). Le code suivant fonctionnera tout pareil&nbsp;:
+Vous pouvez également définir la propriété du gestionnaire d'événement comme étant égale au nom d'une fonction définie (comme nous l'avons vu dans [Construire votre propre fonction](/fr/docs/Learn_web_development/Core/Scripting/Build_your_own_function)). Le code suivant fonctionnera tout pareil&nbsp;:
 
 ```js
 var btn = document.querySelector("button");
@@ -594,7 +594,7 @@ Vous devriez maintenant maîtriser tout ce que vous devez savoir sur les événe
 
 En outre, il est important de comprendre que les différents contextes dans lesquels JavaScript est utilisé tendent à avoir des modèles d'événements différents - des API Web à d'autres domaines tels que WebExtensions du navigateur et Node.js (JavaScript côté serveur). Nous ne nous attendons pas à ce que vous compreniez tous ces domaines maintenant, mais cela aide certainement à comprendre les bases des événements à mesure que vous avancez dans l'apprentissage du développement Web.
 
-S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article, ou [contactez-nous](/fr/docs/Learn#nous_contacter) pour demander de l'aide.
+S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article, ou [contactez-nous](/fr/docs/Learn_web_development#nous_contacter) pour demander de l'aide.
 
 ## Voir aussi
 

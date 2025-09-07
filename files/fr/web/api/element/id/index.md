@@ -5,7 +5,7 @@ slug: Web/API/Element/id
 
 {{ApiRef("DOM")}}
 
-La propriété **`Element.id`** représente l'identifiant de l'élément, reflétant l' **[id](/fr/docs/Web/HTML/Global_attributes/id)** global de l'attribut.
+La propriété **`Element.id`** représente l'identifiant de l'élément, reflétant l' **[id](/fr/docs/Web/HTML/Reference/Global_attributes/id)** global de l'attribut.
 
 Il doit être unique dans un document et est souvent utilisé pour extraire l'élément en utilisant {{domxref("document.getElementById","getElementById")}}. Les autres utilisations courantes de `id` comprennent l'utilisation de l'[ID de l'élément en tant que sélecteur](/fr/docs/Web/CSS/ID_selectors) lors de la mise en forme du document avec [CSS](/fr/docs/Web/CSS).
 
@@ -31,4 +31,4 @@ elt.id = idStr; // Définir l'identifiant
 
 ## Voir aussi
 
-- L'attribut global [**id**](/fr/docs/Web/HTML/Global_attributes/id) de DOM.
+- L'attribut global [**id**](/fr/docs/Web/HTML/Reference/Global_attributes/id) de DOM.

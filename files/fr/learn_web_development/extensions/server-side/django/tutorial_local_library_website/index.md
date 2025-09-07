@@ -69,6 +69,6 @@ Si vous êtes coincé, vous pourrez trouver une version totalement développée 
 
 ## Résumé
 
-Vous en savez plus sur le projet _LocalLibrary_ et ce que vous allez progressivement apprendre, il est désormais temps de créer le [squellette du projet](/fr/docs/Learn/Server-side/Django/skeleton_website) qui hébergera la bibliothèque.
+Vous en savez plus sur le projet _LocalLibrary_ et ce que vous allez progressivement apprendre, il est désormais temps de créer le [squellette du projet](/fr/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) qui hébergera la bibliothèque.
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

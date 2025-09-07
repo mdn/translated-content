@@ -144,6 +144,6 @@ Les frameworks web peuvent aider à atténuer beaucoup des vulnérabilités les 
 
 Cet article a présenté le concept de sécurité web et quelques-unes des menaces courantes vis-à-vis desquelles il faut se protéger. Le plus important à comprendre est qu'une application web ne peut pas faire confiance aux données provenant du navigateur ! Les données des utilisateurs doivent toutes être nettoyées avant d'être affichées ou utilisées dans les requêtes SQL ou dans les appels systèmes.
 
-C'est la fin de [ce module](/fr/docs/Learn/Server-side/First_steps), couvrant vos premiers pas dans le développement d'un site web côté serveur. Nous espérons que vous avez apprécié apprendre les concepts fondamentaux. Vous êtes désormais apte à choisir un framework web et à commencer à programmer.
+C'est la fin de [ce module](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps), couvrant vos premiers pas dans le développement d'un site web côté serveur. Nous espérons que vous avez apprécié apprendre les concepts fondamentaux. Vous êtes désormais apte à choisir un framework web et à commencer à programmer.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

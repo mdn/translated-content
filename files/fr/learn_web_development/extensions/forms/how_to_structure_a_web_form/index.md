@@ -189,7 +189,7 @@ Chaque groupe de fonctionnalités séparées doit être contenu dans un élémen
 
 ### Apprentissage actif&nbsp;: construire une structure de formulaire
 
-Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
+Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
 
 1. Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) dans un nouveau répertoire.
 2. Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML&nbsp;:
@@ -308,7 +308,7 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
    </section>
    ```
 
-8. Enfin, finalisez votre formulaire en ajoutant la balise fermante pour [`<form>`](/fr/docs/Web/HTML/Element/form)&nbsp;:
+8. Enfin, finalisez votre formulaire en ajoutant la balise fermante pour [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)&nbsp;:
 
    ```html
    </form>

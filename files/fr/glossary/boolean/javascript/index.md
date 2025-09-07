@@ -14,4 +14,4 @@ Un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) e
 ## Voir aussi
 
 - [L'objet global JavaScript `Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [Les types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [Les types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)

@@ -13,7 +13,7 @@ Il existe deux protocoles concernant l'itération : [le protocole « itérable �
 
 Le protocole « **itérable** » permet aux objets JavaScript de définir ou de personnaliser leur comportement lors d'une itération, par exemple la façon dont les valeurs seront parcourues avec une boucle {{jsxref("Instructions/for...of", "for..of")}}. Certains types natifs tels que {{jsxref("Array")}} ou {{jsxref("Map")}} possèdent un comportement itératif par défaut, d'autres types, comme {{jsxref("Object")}} n'ont pas ce type de comportement.
 
-Afin d'être **itérable**, un objet doit implémenter la méthode **`@@iterator`**, cela signifie que l'objet (ou un des objets de [sa chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec une clé **`@@iterator`** qui est accessible via {{jsxref("Symbol.iterator")}} :
+Afin d'être **itérable**, un objet doit implémenter la méthode **`@@iterator`**, cela signifie que l'objet (ou un des objets de [sa chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec une clé **`@@iterator`** qui est accessible via {{jsxref("Symbol.iterator")}} :
 
 | Propriété           | Valeur                                                                                         |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
@@ -199,7 +199,7 @@ ainsi que {{jsxref("Promise.all", "Promise.all(itérable)")}}, {{jsxref("Promise
 
 ### Les éléments de syntaxe utilisant des itérables
 
-Certains éléments du langage utilisent des itérables, par exemple : [`for..of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), [yield\*](/fr/docs/Web/JavaScript/Reference/Operators/yield*), [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) :
+Certains éléments du langage utilisent des itérables, par exemple : [`for..of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), [yield\*](/fr/docs/Web/JavaScript/Reference/Operators/yield*), [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring) :
 
 ```js
 for (let value of ["a", "b", "c"]) {

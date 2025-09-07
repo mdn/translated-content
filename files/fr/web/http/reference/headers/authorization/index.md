@@ -32,7 +32,7 @@ Authorization: <type> <credentials>
 ## Directives
 
 - _\<type>_
-  - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#schéma_d'authentification). Le type [`"Basic"`](/fr/docs/Web/HTTP/Authentication#basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
+  - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#schéma_d'authentification). Le type [`"Basic"`](/fr/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
     - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
 
 - _\<credentials>_
@@ -49,7 +49,7 @@ Authorization: <type> <credentials>
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-Voir aussi l'article [authentification HTTP](/fr/docs/Web/HTTP/Authentication) avec des exemples de configuration de serveurs Apache ou nginx pour protéger votre site grâce à un mot de passe et l'authentification HTTP basique.
+Voir aussi l'article [authentification HTTP](/fr/docs/Web/HTTP/Guides/Authentication) avec des exemples de configuration de serveurs Apache ou nginx pour protéger votre site grâce à un mot de passe et l'authentification HTTP basique.
 
 ## Spécifications
 
@@ -61,7 +61,7 @@ Voir aussi l'article [authentification HTTP](/fr/docs/Web/HTTP/Authentication) a
 
 ## Voir
 
-- [L'authentification HTTP](/fr/docs/Web/HTTP/Authentication)
+- [L'authentification HTTP](/fr/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

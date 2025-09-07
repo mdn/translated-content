@@ -73,7 +73,7 @@ De nombreuses opérations natives qui s'attendent à manipuler des nombres appli
   - [Les séparateurs numériques](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#séparateurs_numériques) (le tiret bas dans `1_050.95`) ne sont pas autorisés.
 - [Les grands entiers (<i lang="en">BigInts</i>)](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) déclenchent une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) pour empêcher une perte de précision involontaire lors de la conversion implicite.
 - [Les symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) déclenchent une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-- Les objets sont d'abord [convertis en une valeur primitive](/fr/docs/Web/JavaScript/Data_structures#primitive_coercion) à l'aide de leurs méthodes [`[@@toPrimitive]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (où `"number"` est fourni comme indication), `valueOf()`, et `toString()`, selon cet ordre. La valeur primitive obtenue est alors convertie en nombre.
+- Les objets sont d'abord [convertis en une valeur primitive](/fr/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) à l'aide de leurs méthodes [`[@@toPrimitive]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (où `"number"` est fourni comme indication), `valueOf()`, et `toString()`, selon cet ordre. La valeur primitive obtenue est alors convertie en nombre.
 
 Il existe deux méthodes qui permettent de déclencher cette conversion (ou presque) en JavaScript&nbsp;:
 

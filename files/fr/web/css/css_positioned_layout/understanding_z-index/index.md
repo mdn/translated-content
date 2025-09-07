@@ -17,12 +17,12 @@ Cela signifie que les règles de style CSS permettent de positionner des boîtes
 
 Ces articles ont pour but d'expliquer ces règles, de proposer quelques simplifications et de nombreux exemples.
 
-1. [L'empilement sans `z-index`](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index)&nbsp;: Règles d'empilement par défaut
-2. [L'empilement et `float`](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements)&nbsp;: Comportement des éléments flottants
-3. [Ajouter `z-index`](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index)&nbsp;: Utiliser `z-index` pour modifier l'empilement par défaut
-4. [L'empilement de couches](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)&nbsp;: Remarques sur l'empilement de couches
-5. [Exemple d'empilement n°1](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)&nbsp;: Hiérarchie HTML à 2 niveaux, `z-index` sur le dernier niveau
-6. [Exemple d'empilement n°2](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)&nbsp;: Hiérarchie HTML à 2 niveaux, `z-index` sur tous les éléments
-7. [Exemple d'empilement n°3](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)&nbsp;: Hiérarchie HTML à 3 niveaux, `z-index` sur le deuxième niveau
+1. [L'empilement sans `z-index`](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)&nbsp;: Règles d'empilement par défaut
+2. [L'empilement et `float`](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)&nbsp;: Comportement des éléments flottants
+3. [Ajouter `z-index`](/fr/docs/Web/CSS/CSS_positioned_layout/Using_z-index)&nbsp;: Utiliser `z-index` pour modifier l'empilement par défaut
+4. [L'empilement de couches](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context)&nbsp;: Remarques sur l'empilement de couches
+5. [Exemple d'empilement n°1](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1)&nbsp;: Hiérarchie HTML à 2 niveaux, `z-index` sur le dernier niveau
+6. [Exemple d'empilement n°2](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2)&nbsp;: Hiérarchie HTML à 2 niveaux, `z-index` sur tous les éléments
+7. [Exemple d'empilement n°3](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3)&nbsp;: Hiérarchie HTML à 3 niveaux, `z-index` sur le deuxième niveau
 
 {{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_sans_z-index", "Web/CSS/Comprendre_z-index")}}

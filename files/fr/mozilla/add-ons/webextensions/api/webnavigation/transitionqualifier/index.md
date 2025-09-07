@@ -10,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 - "client_redirect"
-  - : Redirection(s) provoquée par le JavaScript en cours d'exécution dans la page ou un pragma "actualiser" dans la balise [meta](/fr/docs/Web/HTML/Element/meta) de la page.
+  - : Redirection(s) provoquée par le JavaScript en cours d'exécution dans la page ou un pragma "actualiser" dans la balise [meta](/fr/docs/Web/HTML/Reference/Elements/meta) de la page.
 - "server_redirect"
   - : Redirection(s) provoquée par un [code status HTTP 3XX](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) envoyé par le serveur.
 - "forward_back"

@@ -5,7 +5,7 @@ slug: Web/CSS/border-color
 
 {{CSSRef}}
 
-La propriété CSS **`border-color`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir la couleur de la bordure sur les quatre côtés de la boîte de bordure d'un élément.
+La propriété CSS **`border-color`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir la couleur de la bordure sur les quatre côtés de la boîte de bordure d'un élément.
 
 {{InteractiveExample("CSS Demo: border-color")}}
 

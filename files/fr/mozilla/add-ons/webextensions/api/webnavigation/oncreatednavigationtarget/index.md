@@ -51,7 +51,7 @@ Les événements ont trois fonctions :
 ### Détails
 
 - `sourceFrameId`
-  - : `integer`. ID de l'image à partir de laquelle la navigation est initiée. 0 indique que le cadre est le contexte de navigation de niveau supérieur de l'onglet, et non un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation est initiée à partir d'un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.
+  - : `integer`. ID de l'image à partir de laquelle la navigation est initiée. 0 indique que le cadre est le contexte de navigation de niveau supérieur de l'onglet, et non un [iframe](/fr/docs/Web/HTML/Reference/Elements/iframe) imbriqué. Une valeur positive indique que la navigation est initiée à partir d'un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.
 - `sourceProcessId`
   - : `integer`. L'ID du processus à partir duquel la navigation est initiée.
 - `sourceTabId`

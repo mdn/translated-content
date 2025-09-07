@@ -34,11 +34,11 @@ p {
 Comme vous pouvez le voir dans l'exemple ci-dessus, un élément `<br>` est inclus à chaque point où nous voulons que le texte soit interrompu. Le texte après le `<br>` recommence au début de la ligne suivante du bloc de texte.
 
 > [!NOTE]
-> Attention, `<br>` ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte. Pour cela, on utilisera la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin) sur l'élément HTML [`<p>`](/fr/docs/Web/HTML/Element/p).
+> Attention, `<br>` ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte. Pour cela, on utilisera la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin) sur l'élément HTML [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p).
 
 ## Attributs
 
-Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs obsolètes
 
@@ -155,6 +155,6 @@ Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propri
 
 ## Voir aussi
 
-- L'élément [`<address>`](/fr/docs/Web/HTML/Element/address)
-- L'élément [`<p>`](/fr/docs/Web/HTML/Element/p)
-- L'élément [`<wbr>`](/fr/docs/Web/HTML/Element/wbr)
+- L'élément [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address)
+- L'élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p)
+- L'élément [`<wbr>`](/fr/docs/Web/HTML/Reference/Elements/wbr)

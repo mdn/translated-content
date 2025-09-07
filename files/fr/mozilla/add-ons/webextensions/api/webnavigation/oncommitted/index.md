@@ -50,7 +50,7 @@ Les événements ont trois fonctions :
 - `processId`
   - : `integer`. L'ID du processus dans lequel cet onglet est rendu.
 - `frameId`
-  - : `integer`. Frame dans lequel la navigation aura lieu. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. A positive value indicates that navigation happens in a nested iframe. Les ID de frame sont uniques pour un onglet et un processus donnés.
+  - : `integer`. Frame dans lequel la navigation aura lieu. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Reference/Elements/iframe) imbriqué. A positive value indicates that navigation happens in a nested iframe. Les ID de frame sont uniques pour un onglet et un processus donnés.
 - `parentFrameId`
   - : `integer`. ID du parent de cette image. Réglez à -1 s'il s'agit d'un cadre de niveau supérieur.
 - `timeStamp`

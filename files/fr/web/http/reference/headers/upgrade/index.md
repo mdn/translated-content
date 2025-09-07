@@ -38,13 +38,13 @@ Upgrade: exemple/1, toto/2
 ```
 
 > [!NOTE]
-> L'en-tête [`Connection: upgrade`](/fr/docs/Web/HTTP/Headers/Connection) doit être présent lorsqu'`Upgrade` est envoyé.
+> L'en-tête [`Connection: upgrade`](/fr/docs/Web/HTTP/Reference/Headers/Connection) doit être présent lorsqu'`Upgrade` est envoyé.
 
-Le serveur est libre d'ignorer la requête et répondre alors comme si l'en-tête `Upgrade` n'avait pas été envoyé (par exemple avec [un statut `200 OK`](/fr/docs/Web/HTTP/Status/200)).
+Le serveur est libre d'ignorer la requête et répondre alors comme si l'en-tête `Upgrade` n'avait pas été envoyé (par exemple avec [un statut `200 OK`](/fr/docs/Web/HTTP/Reference/Status/200)).
 
 Si le serveur décide de mettre à niveau la connexion, il doit&nbsp;:
 
-1. Renvoyer une réponse avec [le statut `101 Switching Protocols`](/fr/docs/Web/HTTP/Status/101) et qui contient un en-tête `Upgrade` indiquant le(s) protocole(s) sur le(s)quel(s) basculer. Par exemple&nbsp;:
+1. Renvoyer une réponse avec [le statut `101 Switching Protocols`](/fr/docs/Web/HTTP/Reference/Status/101) et qui contient un en-tête `Upgrade` indiquant le(s) protocole(s) sur le(s)quel(s) basculer. Par exemple&nbsp;:
 
    ```http
    HTTP/1.1 101 Switching Protocols
@@ -54,9 +54,9 @@ Si le serveur décide de mettre à niveau la connexion, il doit&nbsp;:
 
 2. Envoyer une réponse à la requête originelle _en utilisant le nouveau protocole_ (le serveur ne peut basculer sur un protocole que s'il est en mesure de répondre à la requête originelle avec celui-ci).
 
-Un serveur pourra également envoyer cet en-tête lors d'une réponse [`426 Upgrade Required`](/fr/docs/Web/HTTP/Status/426) pour indiquer que le serveur ne traitera pas la requête avec le protocole actuel, mais pourrait le faire si le protocole était changé. Le client peut alors initier un changement de protocole comme vu ci-avant.
+Un serveur pourra également envoyer cet en-tête lors d'une réponse [`426 Upgrade Required`](/fr/docs/Web/HTTP/Reference/Status/426) pour indiquer que le serveur ne traitera pas la requête avec le protocole actuel, mais pourrait le faire si le protocole était changé. Le client peut alors initier un changement de protocole comme vu ci-avant.
 
-Pour plus de détails et d'exemples, voir [l'article sur le mécanisme de mise à niveau du protocole](/fr/docs/Web/HTTP/Protocol_upgrade_mechanism).
+Pour plus de détails et d'exemples, voir [l'article sur le mécanisme de mise à niveau du protocole](/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism).
 
 ## Syntaxe
 
@@ -67,7 +67,7 @@ Upgrade: protocol_name[/protocol_version]
 
 Notes&nbsp;:
 
-- L'en-tête [`Connection`](/fr/docs/Web/HTTP/Headers/Connection) doit _toujours_ être envoyé avec la valeur `upgrade` lorsque l'en-tête `Upgrade` est envoyé.
+- L'en-tête [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection) doit _toujours_ être envoyé avec la valeur `upgrade` lorsque l'en-tête `Upgrade` est envoyé.
 - Les protocoles indiqués en valeurs forment une liste, séparée par des virgules, et triée par ordre de préférence décroissant. La version du protocole est optionnelle. Par exemple&nbsp;:
 
 ```http
@@ -101,7 +101,7 @@ Upgrade: websocket
 
 ## Voir aussi
 
-- [Mécanisme de mise à niveau du protocole](/fr/docs/Web/HTTP/Protocol_upgrade_mechanism)
-- [`101 Switching Protocol`](/fr/docs/Web/HTTP/Status/101)
-- [`426 Upgrade Required`](/fr/docs/Web/HTTP/Status/426)
-- [`Connection`](/fr/docs/Web/HTTP/Headers/Connection)
+- [Mécanisme de mise à niveau du protocole](/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
+- [`101 Switching Protocol`](/fr/docs/Web/HTTP/Reference/Status/101)
+- [`426 Upgrade Required`](/fr/docs/Web/HTTP/Reference/Status/426)
+- [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection)

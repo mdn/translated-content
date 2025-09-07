@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 {{AddonSidebar}}
 
-Fonctions permettant d'internationaliser votre extension. Vous pouvez utiliser ces API pour obtenir des chaînes localisées à partir de fichiers locaux conditionnés avec votre extension, connaître la langue actuelle du navigateur et en connaître la valeur de son [En-tete "Accept-Language"](/fr/docs/Web/HTTP/Content_negotiation#the_accept-language_header).
+Fonctions permettant d'internationaliser votre extension. Vous pouvez utiliser ces API pour obtenir des chaînes localisées à partir de fichiers locaux conditionnés avec votre extension, connaître la langue actuelle du navigateur et en connaître la valeur de son [En-tete "Accept-Language"](/fr/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header).
 
 Pour plus de détails sur l'utilisation de i18n pour votre extension, voir :
 
@@ -20,7 +20,7 @@ Pour plus de détails sur l'utilisation de i18n pour votre extension, voir :
 ## Fonctions
 
 - {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
-  - : Obtient les [accept-languages](/fr/docs/Web/HTTP/Content_negotiation#the_accept-language_header) du navigateur. Ceci est différent des paramètres régionaux utilisés par le navigateur. Pour obtenir les paramètres régionaux, utilisez {{WebExtAPIRef('i18n.getUILanguage')}}.
+  - : Obtient les [accept-languages](/fr/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header) du navigateur. Ceci est différent des paramètres régionaux utilisés par le navigateur. Pour obtenir les paramètres régionaux, utilisez {{WebExtAPIRef('i18n.getUILanguage')}}.
 - {{WebExtAPIRef("i18n.getMessage()")}}
   - : Obtient la chaîne localisée pour le message spécifié.
 - {{WebExtAPIRef("i18n.getUILanguage()")}}
