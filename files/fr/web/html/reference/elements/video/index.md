@@ -299,7 +299,7 @@ Quelques notes d'utilisation&nbsp;:
 - La propriété [`object-position`](/fr/docs/Web/CSS/object-position) permet d'ajuster la position de la vidéo dans le cadre du lecteur et la propriété [`object-fit`](/fr/docs/Web/CSS/object-fit) permet de contrôler l'ajustement de la taille de la vidéo dans le cadre.
 - Afin de fournir des sous-titres et légendes à la vidéo, on peut utiliser du code JavaScript ainsi que des éléments [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track) au format [WebVTT](/fr/docs/Web/API/WebVTT_API). Voir l'article [Ajouter des sous-titres et légendes à une vidéo HTML5](/fr/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour plus d'informations.
 - Vous pouvez lire des fichiers audio à l'aide d'un élément `<video>`. Cela peut être utile si, par exemple, vous devez effectuer un audio avec une transcription [WebVTT](/fr/docs/Web/API/WebVTT_API), puisque l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) n'autorise pas les transcriptions à l'aide de WebVTT.
-- Pour tester le contenu similaire sur les navigateurs qui prennent en charge l'élément, vous pouvez remplacer `<video>` par un élément inexistant comme `<notavideo>` (pas une vidéo en Français).
+- Pour tester le contenu similaire sur les navigateurs qui prennent en charge l'élément, vous pouvez remplacer `<video>` par un élément inexistant comme `<notavideo>` (_pas une vidéo_, en français).
 
 Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulter [le tutoriel sur le contenu audio et video](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
 
