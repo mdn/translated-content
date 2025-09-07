@@ -161,7 +161,7 @@ Le contenu fourni entre les balises `<video></video>` est affiché comme contenu
       <td>
         {{domxref("HTMLMediaElement.ended_event", 'ended')}}
       </td>
-      <td>La lecture a été interrompue car la fin du média est atteinte.</td>
+      <td>La lecture a été interrompue, car la fin du média est atteinte.</td>
     </tr>
     <tr>
       <td>
@@ -565,4 +565,4 @@ Certains types de fichiers médias vous permettent de fournir des informations p
 - L'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio)
 - [Utiliser les éléments `<audio>` et `<video>`](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipuler l'élément `<video>` avec `<canvas>`](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Configuration côté serveur pour les média Ogg](/fr/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)
+- [Configuration côté serveur pour les médias Ogg](/fr/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)
