@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<video>`** intègre un lecteur multimédia qui prend en charge la lecture vidéo dans le document. Vous pouvez également utiliser `<video>` pour le contenu audio, mais l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) peut fournir une expérience utilisateur plus appropriée.
+L'élément [HTML](/fr/docs/Web/HTML) **`<video>`** intègre un lecteur de média qui prend en charge la lecture vidéo dans le document. Vous pouvez également utiliser `<video>` pour le contenu audio, mais l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) peut fournir une expérience utilisateur plus appropriée.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;video&gt;", "tabbed-standard")}}
 
@@ -290,7 +290,7 @@ Les navigateurs ne prennent pas en charge l'ensemble des formats vidéo&nbsp; vo
 
 Lorsque vous utilisez des éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source), le navigateur tente de charger chaque source séquentiellement. Si une source échoue (par exemple, en raison d'une URL non valide ou d'un format non pris en charge), la source suivante est tentée, etc. Un événement `error` se déclenche sur l'élément `<video>` après que toutes les sources ont échoué&nbsp;; Les événements `error` ne sont pas déclenchés sur chaque élément individuel `<source>`.
 
-Nous proposons un [Guide des types de fichiers multimédias substantiel et approfondi](/fr/docs/Web/Media/Guides/Formats) et le [Guide des codecs pris en charge pour la vidéo](/fr/docs/Web/Media/Guides/Formats/Video_codecs). Il y a également un guide disponible pour les [codecs audio qui peuvent être utilisés avec eux](/fr/docs/Web/Media/Guides/Formats/Audio_codecs).
+Nous proposons un [Guide des types de fichiers médias substantiel et approfondi](/fr/docs/Web/Media/Guides/Formats) et le [Guide des codecs pris en charge pour la vidéo](/fr/docs/Web/Media/Guides/Formats/Video_codecs). Il y a également un guide disponible pour les [codecs audio qui peuvent être utilisés avec eux](/fr/docs/Web/Media/Guides/Formats/Audio_codecs).
 
 Quelques notes d'utilisation&nbsp;:
 
@@ -369,7 +369,7 @@ Les vidéos doivent fournir des sous-titres et retranscription qui décrivent pr
 
 Si on utilise un service de sous-titrage automatique est utilisé, il est nécessaire de vérifier que le contenu généré correspond bien au contenu audio de la vidéo.
 
-En plus des dialogues, les sous-titres et retranscription doivent également inclure les informations permettant d'identifier la musique et les effets sonores qui communiquent des informations importantes (l'émotion et le ton entre autres) :
+En plus des dialogues, les sous-titres et retranscription doivent également inclure les informations permettant d'identifier la musique et les effets sonores qui communiquent des informations importantes (l'émotion et le ton entre autres)&nbsp;:
 
 ```
 14
@@ -414,8 +414,8 @@ Cet exemple lit une vidéo lorsqu'il est activé, fournissant à l'utilisateur l
   src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
   poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
   width="620">
-  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais
-  ne vous inquiétez pas, vous pouvez
+  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais ne
+  vous inquiétez pas, vous pouvez
   <a href="https://archive.org/details/BigBuckBunny_124">la télécharger</a>
   et la regarder avec votre lecteur vidéo préféré !
 </video>
@@ -448,8 +448,8 @@ Cet exemple s'appuie sur le précédent et fournit trois sources différentes po
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     type="video/mp4" />
 
-  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais
-  ne vous inquiétez pas, vous pouvez
+  Désolé, votre navigateur ne prend pas en charge les vidéos intégrées, mais ne
+  vous inquiétez pas, vous pouvez
   <a
     href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     download="ed_1024_512kb.mp4">
@@ -465,7 +465,7 @@ Cet exemple s'appuie sur le précédent et fournit trois sources différentes po
 
 Le format AVI est essayé en premier. S'il ne peut pas être lu, le format [MP4](/fr/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) est essayé. Un message de retour s'affiche si l'élément vidéo n'est pas pris en charge, mais pas si toutes les sources échouent.
 
-Certains types de fichiers multimédias vous permettent de fournir des informations plus spécifiques à l'aide du paramètre [`codecs`](/fr/docs/Web/Media/Guides/Formats/codecs_parameter) dans la chaîne de caractères de type de fichier. Par exemple, `video/webm; codecs="vp8, vorbis"` indique que le fichier est un fichier [WebM](/fr/docs/Web/Media/Guides/Formats/Containers#webm) utilisant [VP8](/fr/docs/Web/Media/Guides/Formats/Video_codecs#vp8) pour la vidéo et [Vorbis](/fr/docs/Web/Media/Guides/Formats/Audio_codecs#vorbis) pour l'audio.
+Certains types de fichiers médias vous permettent de fournir des informations plus spécifiques à l'aide du paramètre [`codecs`](/fr/docs/Web/Media/Guides/Formats/codecs_parameter) dans la chaîne de caractères de type de fichier. Par exemple, `video/webm; codecs="vp8, vorbis"` indique que le fichier est un fichier [WebM](/fr/docs/Web/Media/Guides/Formats/Containers#webm) utilisant [VP8](/fr/docs/Web/Media/Guides/Formats/Video_codecs#vp8) pour la vidéo et [Vorbis](/fr/docs/Web/Media/Guides/Formats/Audio_codecs#vorbis) pour l'audio.
 
 ## Résumé technique
 
@@ -549,7 +549,7 @@ Certains types de fichiers multimédias vous permettent de fournir des informati
 ## Voir aussi
 
 - [Guide des types et formats de médias : contenu image, audio et vidéo](/fr/docs/Web/Media/Guides/Formats)
-  - [Formats de conteneurs multimédias (types de fichiers)](/fr/docs/Web/Media/Guides/Formats/Containers)
+  - [Formats de conteneurs médias (types de fichiers)](/fr/docs/Web/Media/Guides/Formats/Containers)
   - [Guide des codecs vidéo du Web](/fr/docs/Web/Media/Guides/Formats/Video_codecs)
   - [Guide des codecs audio du Web](/fr/docs/Web/Media/Guides/Formats/Audio_codecs)
 
