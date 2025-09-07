@@ -6,9 +6,9 @@ original_slug: Web/SVG/Attribute/preserveAspectRatio
 
 {{SVGRef}}
 
-L'attribut **`preserveAspectRatio`** indique comment un élément est mis à l'échelle lorsque le ratio largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est différent du ratio de la zone d'affichage (défini par les attributs `width` et `height`).
+L'attribut **`preserveAspectRatio`** indique comment un élément est mis à l'échelle lorsque le ratio largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) est différent du ratio de la zone d'affichage (défini par les attributs `width` et `height`).
 
-Parce que les proportions du SVG sont définies par l'attribut `viewBox`, si ce dernier n'est pas défini alors l'attribut `preserveAspectRatio` n'a aucun effet (_à l'exception près de l'élément [`<image>`](/fr/docs/Web/SVG/Element/image) comme décrit ci-dessous_).
+Parce que les proportions du SVG sont définies par l'attribut `viewBox`, si ce dernier n'est pas défini alors l'attribut `preserveAspectRatio` n'a aucun effet (_à l'exception près de l'élément [`<image>`](/fr/docs/Web/SVG/Reference/Element/image) comme décrit ci-dessous_).
 
 ## Exemple
 
@@ -229,7 +229,7 @@ preserveAspectRatio="<align> [<meetOrSlice>]"
 La valeur de l'attribut est constituée d'un ou deux mots clés : l'alignement et l'option "meet ou slice" (satisfaire ou trancher) comme décrit ci-dessous:
 
 - Alignement
-  - : L'alignement indique s'il faut forcer une mise à l'échelle uniforme et si oui, comment faire dans le cas où le rapport largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) ne correspond pas à celui affiché. Les différentes valeurs possibles sont:
+  - : L'alignement indique s'il faut forcer une mise à l'échelle uniforme et si oui, comment faire dans le cas où le rapport largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) ne correspond pas à celui affiché. Les différentes valeurs possibles sont:
     - **none**
       Ne pas forcer la mise à l'échelle uniforme. Étirer le contenu de manière à ce que le contenu remplisse toute la hauteur et toute la largeur affichée. _Notez que si_ `<align>` _vaut_ `none`_, alors la valeur_ `<meetOrSlice>` _est ignorée_.
     - **xMinYMin** - Force la mise à l'échelle uniforme.
@@ -264,25 +264,25 @@ La valeur de l'attribut est constituée d'un ou deux mots clés : l'alignement e
   - : La valeur _meet_ ou _slice_ est optionnelle. Les deux valeurs possibles sont:
     - **meet** (_par défaut_) - Mettre à l'échelle l'image tel que:
       - les proportions sont préservées
-      - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est entièrement visible dans la zone d'affichage
-      - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est agrandie autant que possible, tout en respectant les autres critères
+      - la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) est entièrement visible dans la zone d'affichage
+      - la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) est agrandie autant que possible, tout en respectant les autres critères
 
-      Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la zone d'affichage sera agrandie au-delà de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) (la zone dans laquelle sera dessinée la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera plus petite que la zone d'affichage).
+      Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la zone d'affichage sera agrandie au-delà de la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) (la zone dans laquelle sera dessinée la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) sera plus petite que la zone d'affichage).
 
     - **slice** - Mettre à l'échelle l'image tel que:
       - les proportions sont préservées
-      - la zone d'affichage est entièrement remplie par la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox)
-      - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est réduite autant que possible, tout en respectant les autres critères
+      - la zone d'affichage est entièrement remplie par la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox)
+      - la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) est réduite autant que possible, tout en respectant les autres critères
 
-      Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera agrandie au-delà de la zone d'affichage (la zone dans laquelle sera dessinée la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera plus grande que la zone d'affichage).
+      Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) sera agrandie au-delà de la zone d'affichage (la zone dans laquelle sera dessinée la [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) sera plus grande que la zone d'affichage).
 
 ## Éléments
 
-Sept éléments utilisent cet attribut: [`<svg>`](/fr/docs/Web/SVG/Element/svg), [`<symbol>`](/fr/docs/Web/SVG/Element/symbol), [`<image>`](/fr/docs/Web/SVG/Element/image), [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), [`<marker>`](/fr/docs/Web/SVG/Element/marker), [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), and [`<view>`](/fr/docs/Web/SVG/Element/view).
+Sept éléments utilisent cet attribut: [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), [`<symbol>`](/fr/docs/Web/SVG/Reference/Element/symbol), [`<image>`](/fr/docs/Web/SVG/Reference/Element/image), [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage), [`<marker>`](/fr/docs/Web/SVG/Reference/Element/marker), [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern), and [`<view>`](/fr/docs/Web/SVG/Element/view).
 
 ### feImage
 
-Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `preserveAspectRatio` définit comment l'image doit être ajustée dans le rectangle défini par l'élément `<feImage>`.
+Pour [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage), `preserveAspectRatio` définit comment l'image doit être ajustée dans le rectangle défini par l'élément `<feImage>`.
 
 <table class="standard-table">
   <tbody>
@@ -303,7 +303,7 @@ Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `preserveAspectRatio` déf
 
 ### image
 
-Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `preserveAspectRatio` définit comment l'image doit être ajustée dans le rectangle défini par l'élément `<image>`.
+Pour [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage), `preserveAspectRatio` définit comment l'image doit être ajustée dans le rectangle défini par l'élément `<image>`.
 
 <table class="standard-table">
   <tbody>
@@ -324,7 +324,7 @@ Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `preserveAspectRatio` déf
 
 ### marker
 
-Pour [`<marker>`](/fr/docs/Web/SVG/Element/marker), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
+Pour [`<marker>`](/fr/docs/Web/SVG/Reference/Element/marker), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
 
 <table class="standard-table">
   <tbody>
@@ -345,7 +345,7 @@ Pour [`<marker>`](/fr/docs/Web/SVG/Element/marker), `preserveAspectRatio` indiqu
 
 ### pattern
 
-Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
+Pour [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
 
 <table class="standard-table">
   <tbody>
@@ -366,7 +366,7 @@ Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `preserveAspectRatio` indi
 
 ### svg
 
-Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
+Pour [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
 
 <table class="standard-table">
   <tbody>
@@ -387,7 +387,7 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `preserveAspectRatio` indique si u
 
 ### symbol
 
-Pour [`<symbol>`](/fr/docs/Web/SVG/Element/symbol), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
+Pour [`<symbol>`](/fr/docs/Web/SVG/Reference/Element/symbol), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
 
 <table class="standard-table">
   <tbody>

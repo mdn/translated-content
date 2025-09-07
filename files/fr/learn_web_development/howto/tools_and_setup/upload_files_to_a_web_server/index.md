@@ -43,7 +43,7 @@ Maintenant que vous avez [construit une page web](/fr/docs/Learn/HTML/Write_a_si
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Community/Getting_started)._
 
 ## Aller plus loin
 
@@ -128,7 +128,7 @@ Et _voilà_ ! Notre site est en ligne !
 Le protocole FTP est l'une des méthodes les plus répandues pour publier un site web. Cependant, il en existe d'autres, en voici quelques unes :
 
 - **Les interfaces web**. Votre hébergeur peut mettre à disposition une interface web qui permet de transférer des fichiers.
-- **GitHub** (méthode avancée). Il est possible de transférer des fichiers grâce à {{Glossary("git")}} en utilisant des combinaison de méthodes qui sont liées aux opérations de commit/push. Pour plus d'informations, voir l'article sur [comment publier son site web](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website) qui fait partie du guide [Commencer avec le Web](/fr/docs/Learn/Getting_started_with_the_web).
+- **GitHub** (méthode avancée). Il est possible de transférer des fichiers grâce à {{Glossary("git")}} en utilisant des combinaison de méthodes qui sont liées aux opérations de commit/push. Pour plus d'informations, voir l'article sur [comment publier son site web](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) qui fait partie du guide [Commencer avec le Web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).
 - **{{Glossary("Rsync")}}** (méthode avancée). Un système de synchronisation de fichiers entre un système local et un système distant.
 - **{{Glossary("WebDAV")}}**. Une extension du protocle {{Glossary("HTTP")}} qui permet de gérer des fichiers de façon plus avancée.
 

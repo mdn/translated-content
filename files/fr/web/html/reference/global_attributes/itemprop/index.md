@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/itemprop
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`itemprop`** est utilisé afin d'ajouter des propriétés à un objet. C'est un attribut universel et chaque élément HTML peut donc avoir un attribut `itemprop` qui permettra de former un couple de nom (la valeur de l'attribut) et de valeur (la valeur de l'élément). Chacune de ces paires constitue une **propriété** et un groupe de propriété forme un **objet (_item_)**. Les valeurs des propriétés sont généralement des chaînes de caractères ou des URL et peuvent être associées à de nombreux éléments comme {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}} et {{HTMLElement("video")}}.
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemprop`** est utilisé afin d'ajouter des propriétés à un objet. C'est un attribut universel et chaque élément HTML peut donc avoir un attribut `itemprop` qui permettra de former un couple de nom (la valeur de l'attribut) et de valeur (la valeur de l'élément). Chacune de ces paires constitue une **propriété** et un groupe de propriété forme un **objet (_item_)**. Les valeurs des propriétés sont généralement des chaînes de caractères ou des URL et peuvent être associées à de nombreux éléments comme {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}} et {{HTMLElement("video")}}.
 
 ### Un exemple simple
 
@@ -394,9 +394,9 @@ Un exemple sur un livre qu'on décrit avec les différents attributs.
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 - Les autres attributs universels relatifs aux microdonnées :
-  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemref`](/fr/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes#itemscope)
+  - [`itemtype`](/fr/docs/Web/HTML/Reference/Global_attributes#itemtype)

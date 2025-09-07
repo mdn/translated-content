@@ -32,7 +32,7 @@ Le multimédia est une autre catégorie de contenu susceptible de créer des pro
 
 ## Multimédia et accessibilité
 
-Jusqu'ici, dans ce module, nous avons examiné une variété de contenus et ce qui doit être fait pour en assurer l'accessibilité, du simple contenu textuel aux tableaux de données, en passant par les images, les contrôles natifs tels que les éléments de formulaire et les boutons, et des structures de balisage encore plus complexes. (avec [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics) l'attribut).
+Jusqu'ici, dans ce module, nous avons examiné une variété de contenus et ce qui doit être fait pour en assurer l'accessibilité, du simple contenu textuel aux tableaux de données, en passant par les images, les contrôles natifs tels que les éléments de formulaire et les boutons, et des structures de balisage encore plus complexes. (avec [WAI-ARIA](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) l'attribut).
 
 Cet article, par contre, examine une autre catégorie générale de contenu pour laquelle il est difficile d'assurer l'accessibilité au multimédia. Les images, les vidéos, les éléments {{htmlelement ("canvas")}} les animations Flash, etc. ne sont pas aussi faciles à comprendre par les lecteurs d'écran ou à naviguer au clavier, et nous devons leur donner un coup de main.
 
@@ -40,7 +40,7 @@ Mais ne désespérez pas - nous vous aiderons ici à naviguer parmi les techniqu
 
 ## Simple images
 
-Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article [HTML&nbsp;: une bonne base pour l'accessibilité](/fr/docs/Learn/Accessibility/HTML), vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d'un texte alternatif que les lecteurs d'écran peuvent lire et lire à leurs utilisateurs.
+Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article [HTML&nbsp;: une bonne base pour l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/HTML), vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d'un texte alternatif que les lecteurs d'écran peuvent lire et lire à leurs utilisateurs.
 
 Par exemple:
 
@@ -239,7 +239,7 @@ Chaque fois que l'heure est mise à jour (une fois par seconde), nous activons c
 
 Cela vous donne une idée de base sur la manière d'ajouter des fonctionnalités de lecteur personnalisées aux instances de lecteur vidéo / audio. Pour plus d'informations sur l'ajout de fonctionnalités plus complexes aux lecteurs vidéo / audio, y compris les solutions de secours Flash pour les navigateurs plus anciens, voir aussi:
 
-- [Audio and video delivery](/fr/docs/Web/Media/Audio_and_video_delivery)
+- [Audio and video delivery](/fr/docs/Web/Media/Guides/Audio_and_video_delivery)
 - [Video player styling basics](/fr/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
 - [Creating a cross-browser video player](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
 
@@ -321,7 +321,7 @@ WEBVTT
 Pour que ceci soit affiché avec la lecture du média HTML, vous devez:
 
 - Enregistrez-le en tant que fichier .vtt dans un endroit approprié.
-- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>` devrait être placé dans `<audio>` ou `<video>`, mais après tout `<source>` éléments . Utilisez l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#kind) pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez [srclang](/fr/docs/Web/HTML/Element/track#srclang) pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
+- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>` devrait être placé dans `<audio>` ou `<video>`, mais après tout `<source>` éléments . Utilisez l'attribut [`kind`](/fr/docs/Web/HTML/Reference/Elements/track#kind) pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez [srclang](/fr/docs/Web/HTML/Reference/Elements/track#srclang) pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
 
 Voici un exemple:
 

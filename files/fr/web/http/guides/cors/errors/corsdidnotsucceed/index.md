@@ -16,6 +16,6 @@ La requête {{Glossary("HTTP")}} qui utilise le CORS a échoué à cause de la c
 
 ## Voir aussi
 
-- [Erreurs CORS](/fr/docs/Web/HTTP/CORS/Errors)
+- [Erreurs CORS](/fr/docs/Web/HTTP/Guides/CORS/Errors)
 - Grammaire: {{Glossary("CORS")}}
-- [Introduction CORS](/fr/docs/Web/HTTP/CORS)
+- [Introduction CORS](/fr/docs/Web/HTTP/Guides/CORS)

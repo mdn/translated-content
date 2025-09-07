@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<hgroup>`** représente un titre et son contenu associé. Il regroupe un élément [`<h1>-<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements) avec un ou plusieurs paragraphes [`<p>`](/fr/docs/Web/HTML/Element/p).
+L'élément [HTML](/fr/docs/Web/HTML) **`<hgroup>`** représente un titre et son contenu associé. Il regroupe un élément [`<h1>-<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) avec un ou plusieurs paragraphes [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p).
 
 {{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
 
@@ -44,7 +44,7 @@ hgroup p {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -132,13 +132,13 @@ L'élément `<hgroup>` n'a pas de sémantique forte pour l'accessibilité. C'est
 ## Voir aussi
 
 - Les autres éléments HTML relatifs aux sections du document&nbsp;:
-  - [`<body>`](/fr/docs/Web/HTML/Element/body)
-  - [`<article>`](/fr/docs/Web/HTML/Element/article)
-  - [`<section>`](/fr/docs/Web/HTML/Element/section)
-  - [`<aside>`](/fr/docs/Web/HTML/Element/aside)
-  - [`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-  - [`<nav>`](/fr/docs/Web/HTML/Element/nav)
-  - [`<header>`](/fr/docs/Web/HTML/Element/header)
-  - [`<footer>`](/fr/docs/Web/HTML/Element/footer)
-  - [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Sections et plan d'un document HTML](/fr/docs/Web/HTML/Element/Heading_Elements)
+  - [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body)
+  - [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article)
+  - [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)
+  - [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside)
+  - [`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
+  - [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav)
+  - [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header)
+  - [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer)
+  - [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address)
+- [Sections et plan d'un document HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)

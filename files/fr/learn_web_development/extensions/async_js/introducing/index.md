@@ -250,7 +250,7 @@ document.querySelector("#recharger").addEventListener("click", () => {
 
 {{EmbedLiveSample("", 600, 120)}}
 
-On retrouve ici le même comportement que celui des [gestionnaires d'évènements vus dans le précédent module](/fr/docs/Learn/JavaScript/Building_blocks/Events), sauf qu'au lieu que l'évènement soit une action de l'utilisatrice ou de l'utilisateur (comme un clic sur un bouton), c'est le changement d'état d'un objet.
+On retrouve ici le même comportement que celui des [gestionnaires d'évènements vus dans le précédent module](/fr/docs/Learn_web_development/Core/Scripting/Events), sauf qu'au lieu que l'évènement soit une action de l'utilisatrice ou de l'utilisateur (comme un clic sur un bouton), c'est le changement d'état d'un objet.
 
 ## Fonctions de rappel (<i lang="en">callbacks</i> en anglais)
 

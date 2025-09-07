@@ -55,11 +55,11 @@ Nous verrons ces différents problèmes, ainsi que d'autres, par la suite.
 
 ## Résolution générale des problèmes en JavaScript
 
-Comme nous l'avons dit dans [l'article précédent](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#commençons_par_le_commencement_résoudre_les_problèmes_généraux) à propos de HTML et CSS, assurez vous que votre code fonctionne déjà normalement avant de vous concentrer sur les problèmes entre les navigateurs. Si vous n'avez pas lu [l'article Diagnostiquer des problèmes JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong), nous vous invitons à le faire avant de poursuivre. En effet, identifier de nombreux problèmes rencontrés avec JavaScript comme ceux-ci pourra vous aider à mieux diagnostiquer un problème de compatibilité. Parmi les problèmes fréquents causés par JavaScript, on a&nbsp;:
+Comme nous l'avons dit dans [l'article précédent](/fr/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#commençons_par_le_commencement_résoudre_les_problèmes_généraux) à propos de HTML et CSS, assurez vous que votre code fonctionne déjà normalement avant de vous concentrer sur les problèmes entre les navigateurs. Si vous n'avez pas lu [l'article Diagnostiquer des problèmes JavaScript](/fr/docs/Learn_web_development/Core/Scripting/What_went_wrong), nous vous invitons à le faire avant de poursuivre. En effet, identifier de nombreux problèmes rencontrés avec JavaScript comme ceux-ci pourra vous aider à mieux diagnostiquer un problème de compatibilité. Parmi les problèmes fréquents causés par JavaScript, on a&nbsp;:
 
-- Les problèmes de syntaxe et de logique de base (voir [Diagnostiquer des problèmes JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)).
-- La gestion des portées pour la définition des variables&nbsp;: s'assurer qu'il n'y a pas de conflits entre les différentes valeurs déclarées à différents endroits (Voir [Portée d'une fonction et conflits](/fr/docs/Learn/JavaScript/Building_blocks/Functions#la_portée_des_fonctions_et_les_conflits)).
-- La confusion à propos de [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this), la portée à laquelle il s'applique, pouvant changer la valeur à laquelle on s'attend. Vous pouvez lire [Qu'est-ce que «&nbsp;this&nbsp;»&nbsp;?](/fr/docs/Learn/JavaScript/Objects/Basics#quest-ce_que_«_this_») comme introduction à ce sujet, et aussi étudier quelques exemples comme [celui-ci](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), qui illustre un usage classique où on enregistre la valeur de `this` pour une portée donnée dans une variable séparée afin de l'utiliser dans des fonctions imbriquées, pour être sûr·e d'appliquer le code au bon `this`.
+- Les problèmes de syntaxe et de logique de base (voir [Diagnostiquer des problèmes JavaScript](/fr/docs/Learn_web_development/Core/Scripting/What_went_wrong)).
+- La gestion des portées pour la définition des variables&nbsp;: s'assurer qu'il n'y a pas de conflits entre les différentes valeurs déclarées à différents endroits (Voir [Portée d'une fonction et conflits](/fr/docs/Learn_web_development/Core/Scripting/Functions#la_portée_des_fonctions_et_les_conflits)).
+- La confusion à propos de [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this), la portée à laquelle il s'applique, pouvant changer la valeur à laquelle on s'attend. Vous pouvez lire [Qu'est-ce que «&nbsp;this&nbsp;»&nbsp;?](/fr/docs/Learn_web_development/Core/Scripting/Object_basics#quest-ce_que_«_this_») comme introduction à ce sujet, et aussi étudier quelques exemples comme [celui-ci](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), qui illustre un usage classique où on enregistre la valeur de `this` pour une portée donnée dans une variable séparée afin de l'utiliser dans des fonctions imbriquées, pour être sûr·e d'appliquer le code au bon `this`.
 - L'usage incorrect de fonctions au sein de boucles qui utilisent une variable globale (ce qui correspond plus généralement à une confusion sur les portées). Par exemple, dans [`bad-for-loop.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (voir [le code source](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), on exécute 10 itérations en utilisant une variable définie avec `var`, en créant à chaque fois un paragraphe auquel on attache un gestionnaire d'évènement [`onclick`](/fr/docs/Web/API/Element/click_event). Lorsqu'on clique sur les paragraphes, on souhaite afficher un message d'alerte indiquant le numéro du paragraphe (c'est-à-dire la valeur de `i` au moment où le paragraphe a été ajouté). Au lieu de ce résultat, tous les messages d'alertes affichent la valeur 11, car la boucle `for` a terminé ses itérations avant que les fonctions imbriquées soient appelées.
 
   > [!NOTE]
@@ -71,7 +71,7 @@ Comme nous l'avons dit dans [l'article précédent](/fr/docs/Learn/Tools_and_tes
 
 ### Outils d'analyse de code (<i lang="en">linters</i>)
 
-Comme pour [HTML et CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#les_linters), vous pouvez vous aider d'un <i lang="en">linter</i> pour écrire du JavaScript de meilleure qualité. Un tel outil vous indiquera certaines erreurs et pourra aussi émettre des avertissements quant à des mauvaises pratiques. Vous pourrez le paramétrer pour qu'il soit plus ou moins strict. Nous vous recommandons particulièrement [ESLint](https://eslint.org/) et nous verrons certains usages par la suite.
+Comme pour [HTML et CSS](/fr/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#les_linters), vous pouvez vous aider d'un <i lang="en">linter</i> pour écrire du JavaScript de meilleure qualité. Un tel outil vous indiquera certaines erreurs et pourra aussi émettre des avertissements quant à des mauvaises pratiques. Vous pourrez le paramétrer pour qu'il soit plus ou moins strict. Nous vous recommandons particulièrement [ESLint](https://eslint.org/) et nous verrons certains usages par la suite.
 
 #### Utilisation en ligne
 
@@ -117,7 +117,7 @@ function showHeroes(jsonObj) {
 }
 ```
 
-On voit que le code échoue dès qu'on accède à une propriété de `jsonObj` (dont on s'attend à ce que ce soit [un objet JSON](/fr/docs/Learn/JavaScript/Objects/JSON)). Cette valeur est normalement récupérée depuis un fichier JSON tiers à l'aide de l'appel XHR suivant&nbsp;:
+On voit que le code échoue dès qu'on accède à une propriété de `jsonObj` (dont on s'attend à ce que ce soit [un objet JSON](/fr/docs/Learn_web_development/Core/Scripting/JSON)). Cette valeur est normalement récupérée depuis un fichier JSON tiers à l'aide de l'appel XHR suivant&nbsp;:
 
 ```js
 let requestURL =
@@ -197,7 +197,7 @@ Nous avons ici plusieurs informations très utiles.
 3. En cliquant sur `onload` dans la section _Pile d'exécution_, on peut analyser ce qui s'est passé à l'appel de la fonction. La vue est alors mise à jour pour afficher la fonction `request.onload` dans le panneau central et sa portée dans la section _Portées_.
 4. Si vous développez la portée `onload`, vous pourrez voir que la variable `superHeroes` est également une chaîne de caractères et pas un objet. C'est là notre problème, l'appel [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) renvoie du JSON sous forme de texte et pas sous forme d'un objet JSON.
 
-Nous vous donnons ici l'occasion de corriger le problème par vous-même. Pour vous donner quelques pistes, vous pouvez [paramétrer l'objet de la requête `XMLHttpRequest` pour recevoir explicitement une réponse au format JSON](/fr/docs/Web/API/XMLHttpRequest/responseType), ou [convertir le texte obtenu en JSON](/fr/docs/Learn/JavaScript/Objects/JSON#conversion_entre_objets_et_textes) après avoir reçu la réponse. Si vous coincez, vous pouvez consulter [le code source de l'exemple corrigé](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html).
+Nous vous donnons ici l'occasion de corriger le problème par vous-même. Pour vous donner quelques pistes, vous pouvez [paramétrer l'objet de la requête `XMLHttpRequest` pour recevoir explicitement une réponse au format JSON](/fr/docs/Web/API/XMLHttpRequest/responseType), ou [convertir le texte obtenu en JSON](/fr/docs/Learn_web_development/Core/Scripting/JSON#conversion_entre_objets_et_textes) après avoir reçu la réponse. Si vous coincez, vous pouvez consulter [le code source de l'exemple corrigé](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html).
 
 > [!NOTE]
 > Le débogueur possède de nombreuses autres fonctionnalités que nous n'avons pas abordées ici, comme les points d'arrêt conditionnels et les expressions espionnes. Pour plus d'informations, [référez vous à la documentation du débogueur Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
@@ -222,7 +222,7 @@ Dans cette section, nous verrons certains des problèmes causés par JavaScript 
 
 ### Utilisation d'API Web ou de fonctionnalités JavaScript récentes
 
-Dans [l'article précédent](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#les_vieux_navigateurs_ne_supportant_pas_les_fonctionnalités_récentes), nous avons vu comment gérer certains problèmes liés aux fonctionnalités HTML ou CSS non prises en charge grâce à la nature de ces langages. Toutefois, JavaScript n'est pas aussi permissif que HTML et CSS, si le moteur JavaScript rencontre une erreur ou une syntaxe qu'il ne reconnait pas (par exemple lorsqu'une nouvelle fonctionnalité, pas encore prise en charge, est utilisée), il déclenchera une erreur.
+Dans [l'article précédent](/fr/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#les_vieux_navigateurs_ne_supportant_pas_les_fonctionnalités_récentes), nous avons vu comment gérer certains problèmes liés aux fonctionnalités HTML ou CSS non prises en charge grâce à la nature de ces langages. Toutefois, JavaScript n'est pas aussi permissif que HTML et CSS, si le moteur JavaScript rencontre une erreur ou une syntaxe qu'il ne reconnait pas (par exemple lorsqu'une nouvelle fonctionnalité, pas encore prise en charge, est utilisée), il déclenchera une erreur.
 
 Il existe différentes stratégies pour gérer la prise en charge des fonctionnalités récentes. Voyons-en quelques-unes.
 
@@ -274,7 +274,7 @@ Il existe différentes variétés de bibliothèques JavaScript (certaines servan
 
 Lors du choix d'une bibliothèque, assurez vous qu'elle fonctionne sur l'ensemble des navigateurs que vous ciblez et testez votre implémentation avec soin. Pour choisir une bibliothèque, il faut aussi vérifier certains critères, comme sa maintenance, sa prise en charge, voire sa popularité, pour éviter une bibliothèque qui devienne obsolète rapidement. N'hésitez pas à échanger avec d'autres personnes pour savoir ce qu'elles utilisent ou recommandent, vérifiez l'activité sur le dépôt de code de la bibliothèque si ses sources sont ouvertes, etc.
 
-Pour utiliser une bibliothèque, il faudra généralement télécharger ses fichiers (JavaScript, parfois CSS et/ou avec d'autres dépendances) et les attacher à la page (par exemple via un élément [`<script>`](/fr/docs/Web/HTML/Element/script)). D'autres méthodes existent aussi, comme l'installation sous forme de composants [Bower](https://bower.io/) ou l'inclusion comme dépendances avec [Webpack](https://webpack.github.io/). Référez vous à la documentation d'installation de chaque bibliothèque pour plus d'informations.
+Pour utiliser une bibliothèque, il faudra généralement télécharger ses fichiers (JavaScript, parfois CSS et/ou avec d'autres dépendances) et les attacher à la page (par exemple via un élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script)). D'autres méthodes existent aussi, comme l'installation sous forme de composants [Bower](https://bower.io/) ou l'inclusion comme dépendances avec [Webpack](https://webpack.github.io/). Référez vous à la documentation d'installation de chaque bibliothèque pour plus d'informations.
 
 > [!NOTE]
 > Vous rencontrerez probablement certains <i lang="en">frameworks</i> JavaScript comme [React](https://react.dev), [Ember](https://emberjs.com/) et [Angular](https://angularjs.org/). Les bibliothèques s'utilisent pour régler différents problèmes et s'intégrer à des sites existants. Les <i lang="en">frameworks</i> sont plutôt des solutions complètes pour développer des applications web complexes.
@@ -287,7 +287,7 @@ Prenons un exemple où nous utiliserons une prothèse pour l'API Fetch et une au
 
 1. Pour commencer, téléchargez un exemplaire de [`fetch-polyfill.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) et [cette image](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/flowers.jpg) dans un nouveau répertoire. Nous allons écrire du code pour récupérer cette image et l'afficher sur la page.
 2. Ensuite, enregistrez une copie [de la prothèse d'émulation pour Fetch](https://raw.githubusercontent.com/github/fetch/master/fetch.js), dans le même répertoire que le fichier HTML précédent.
-3. Appliquez les <i lang="en">polyfills</i> à la page en utilisant le code suivant avant l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) afin qu'elles soient disponibles sur la page lorsqu'on commence à utiliser l'API Fetch. Nous incluons la prothèse d'émulation des promesses via un CDN&nbsp;:
+3. Appliquez les <i lang="en">polyfills</i> à la page en utilisant le code suivant avant l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) afin qu'elles soient disponibles sur la page lorsqu'on commence à utiliser l'API Fetch. Nous incluons la prothèse d'émulation des promesses via un CDN&nbsp;:
 
    ```html
    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
@@ -382,7 +382,7 @@ Le billet d'Aaron Anderson, [<i lang="en">History of the browser user-agent stri
 
 ### Gestion des préfixes en JavaScript
 
-Dans l'article précédent, nous avons discuté longuement de [la gestion des préfixes navigateur en CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#gestion_des_préfixes_css). Pendant un temps, les préfixes étaient également utilisés pour les implémentations de nouvelles fonctionnalités en JavaScript (les préfixes pour JavaScript étaient écrits en [<i lang="en">camel case</i>](/fr/docs/Glossary/Camel_case) et non [avec des tirets](/fr/docs/Glossary/kebab_case) comme CSS). Par exemple, si un nouvel objet, avec le nom standard `Object`, était implémenté&nbsp;:
+Dans l'article précédent, nous avons discuté longuement de [la gestion des préfixes navigateur en CSS](/fr/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#gestion_des_préfixes_css). Pendant un temps, les préfixes étaient également utilisés pour les implémentations de nouvelles fonctionnalités en JavaScript (les préfixes pour JavaScript étaient écrits en [<i lang="en">camel case</i>](/fr/docs/Glossary/Camel_case) et non [avec des tirets](/fr/docs/Glossary/kebab_case) comme CSS). Par exemple, si un nouvel objet, avec le nom standard `Object`, était implémenté&nbsp;:
 
 - Firefox aurait utilisé `mozObject`
 - Chrome, Opera, et Safari auraient utilisé `webkitObject`
@@ -407,7 +407,7 @@ Mais il faut rappeler que les fonctionnalités préfixées n'étaient pas censé
 
 ## Savoir trouver de l'aide
 
-Vous pourrez tomber sur de nombreux autres problèmes en JavaScript (comme avec tout langage)&nbsp;: le plus important est de savoir comment trouver des réponses en ligne. Voyez [la section correspondante de l'article sur HTML et CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#trouver_de_laide) pour nos conseils.
+Vous pourrez tomber sur de nombreux autres problèmes en JavaScript (comme avec tout langage)&nbsp;: le plus important est de savoir comment trouver des réponses en ligne. Voyez [la section correspondante de l'article sur HTML et CSS](/fr/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#trouver_de_laide) pour nos conseils.
 
 ## Résumé
 

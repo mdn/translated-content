@@ -11,9 +11,9 @@ En informatique, un type **énuméré** est un type de données qui consiste en 
 
 ## Les attributs HTML énumérés
 
-En HTML, [les attributs énumérés (parfois appelés à valeur contrainte)](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute) sont des attributs dont les valeurs possibles sont un ensemble prédéfini de chaînes de caractères. Ainsi, l'attribut HTML universel [`dir`](/fr/docs/Web/HTML/Global_attributes/dir) possède trois valeurs valides&nbsp;: `ltr`, `rtl`, et `auto`.
+En HTML, [les attributs énumérés (parfois appelés à valeur contrainte)](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute) sont des attributs dont les valeurs possibles sont un ensemble prédéfini de chaînes de caractères. Ainsi, l'attribut HTML universel [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir) possède trois valeurs valides&nbsp;: `ltr`, `rtl`, et `auto`.
 
-Chaque attribut énuméré possède une valeur par défaut lorsque l'attribut est présent sans sa valeur et une valeur par défaut lorsqu'une valeur invalide lui est associée. À la différence des attributs HTML [booléens](/fr/docs/Glossary/Boolean) qui valent toujours vrai que la valeur soit présente, omise ou invalide, les attributs HTML énumérés peuvent avoir une valeur par défaut différente en fonction que la valeur est omise ou invalide. Par exemple, l'attribut HTML universel [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable) n'a que deux valeurs valides&nbsp;: `true` et `false`. Si l'attribut est présent, mais qu'aucune valeur n'est indiquée, la valeur par défaut sera `true`. En revanche, si une valeur invalide est utilisée (par exemple `contenteditable="contenteditable"`), la valeur utilisée effectivement correspondra à un troisième état, `inherit`.
+Chaque attribut énuméré possède une valeur par défaut lorsque l'attribut est présent sans sa valeur et une valeur par défaut lorsqu'une valeur invalide lui est associée. À la différence des attributs HTML [booléens](/fr/docs/Glossary/Boolean) qui valent toujours vrai que la valeur soit présente, omise ou invalide, les attributs HTML énumérés peuvent avoir une valeur par défaut différente en fonction que la valeur est omise ou invalide. Par exemple, l'attribut HTML universel [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) n'a que deux valeurs valides&nbsp;: `true` et `false`. Si l'attribut est présent, mais qu'aucune valeur n'est indiquée, la valeur par défaut sera `true`. En revanche, si une valeur invalide est utilisée (par exemple `contenteditable="contenteditable"`), la valeur utilisée effectivement correspondra à un troisième état, `inherit`.
 
 ## Les attributs ARIA énumérés
 
@@ -28,5 +28,5 @@ En JavaScript, les propriétés énumérables sont les propriétés dont le marq
 ## Voir aussi
 
 - [Booléen](/fr/docs/Glossary/Boolean)
-- [Les types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [Les types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
 - [Les attributs énumérés HTML dans le standard HTML (en anglais)](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)

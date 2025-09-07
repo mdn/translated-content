@@ -26,4 +26,4 @@ Le code de réponse HTTP d'erreur serveur **`504 Gateway Timeout`** indique que 
 ## Voir aussi
 
 - [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- [`502`](/fr/docs/Web/HTTP/Status/502)
+- [`502`](/fr/docs/Web/HTTP/Reference/Status/502)

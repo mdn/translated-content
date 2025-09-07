@@ -561,7 +561,7 @@ myObject.register();
 
 ### Passer des données à et depuis un écouteur d'évènements
 
-On peut avoir l'impression que les écouteurs d'évènements sont comme des îles et qu'il est extrêmement difficile de leur passer des données quelconques, encore moins d'en récupérer après qu'ils ont été exécutés. Les écouteurs d'évènements ne prennent qu'un seul argument, l'objet [`event`](/fr/docs/Learn/JavaScript/Building_blocks/Events#event_objects), qui est passé automatiquement à l'écouteur, et la valeur retournée est ignorée. Aussi, comment pouvons-nous leur passer des données et en récupérer ? Il y a un certain nombre de bonnes méthodes pour ce faire.
+On peut avoir l'impression que les écouteurs d'évènements sont comme des îles et qu'il est extrêmement difficile de leur passer des données quelconques, encore moins d'en récupérer après qu'ils ont été exécutés. Les écouteurs d'évènements ne prennent qu'un seul argument, l'objet [`event`](/fr/docs/Learn_web_development/Core/Scripting/Events#event_objects), qui est passé automatiquement à l'écouteur, et la valeur retournée est ignorée. Aussi, comment pouvons-nous leur passer des données et en récupérer ? Il y a un certain nombre de bonnes méthodes pour ce faire.
 
 #### Passer des données à un écouteur d'évènement en utilisant "this"
 

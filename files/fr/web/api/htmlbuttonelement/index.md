@@ -5,7 +5,7 @@ slug: Web/API/HTMLButtonElement
 
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLButtonElement`** fournit des propriétés et méthodes (en plus de celles fournies par l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) dont elle hérite) qui permettent de manipuler les éléments [`<button>`](/fr/docs/Web/HTML/Element/button).
+L'interface **`HTMLButtonElement`** fournit des propriétés et méthodes (en plus de celles fournies par l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) dont elle hérite) qui permettent de manipuler les éléments [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
 
 {{InheritanceDiagram}}
 
@@ -22,17 +22,17 @@ _Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLEl
 - [`HTMLButtonElement.form`](/fr/docs/Web/API/HTMLButtonElement/form) {{readonlyInline}}
   - : Un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) qui reflète l'élément de formulaire auquel ce bouton est associé. Si le bouton est un descendant de l'élément du formulaire, cet attribut sera une référence à l'objet `HTMLFormElement` associé à ce formulaire. Si le bouton n'est pas un descendant de l'élément du formulaire, l'attribut peut être une référence à n'importe quel élément `HTMLFormElement` associé du même document, ou la valeur `null` si aucun ne correspond.
 - [`HTMLButtonElement.formAction`](/fr/docs/Web/API/HTMLButtonElement/formAction)
-  - : Une chaîne de caractères qui reflète l'URI d'une ressource qui traite les informations envoyées par ce bouton. S'il est présent, cet attribut surcharge l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
+  - : Une chaîne de caractères qui reflète l'URI d'une ressource qui traite les informations envoyées par ce bouton. S'il est présent, cet attribut surcharge l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
 - [`HTMLButtonElement.formEnctype`](/fr/docs/Web/API/HTMLButtonElement/formEnctype)
-  - : Une chaîne de caractères qui reflète le type de contenu utilisé pour envoyer le formulaire au serveur. S'il est présent, cet attribut surcharge l'attribut [`enctype`](/fr/docs/Web/HTML/Element/form#enctype) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
+  - : Une chaîne de caractères qui reflète le type de contenu utilisé pour envoyer le formulaire au serveur. S'il est présent, cet attribut surcharge l'attribut [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#enctype) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
 - [`HTMLButtonElement.formMethod`](/fr/docs/Web/API/HTMLButtonElement/formMethod)
-  - : Une chaîne de caractères qui reflète la méthode HTTP utilisée par le navigateur pour envoyer le formulaire. S'il est présent, cet attribut surcharge l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
+  - : Une chaîne de caractères qui reflète la méthode HTTP utilisée par le navigateur pour envoyer le formulaire. S'il est présent, cet attribut surcharge l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
 - [`HTMLButtonElement.formNoValidate`](/fr/docs/Web/API/HTMLButtonElement/formNoValidate)
-  - : Un booléen qui indique que le formulaire ne devrait pas être validé pour l'envoi. S'il est présent, cet attribut surcharge l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#attr-novalidate) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
+  - : Un booléen qui indique que le formulaire ne devrait pas être validé pour l'envoi. S'il est présent, cet attribut surcharge l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#attr-novalidate) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
 - [`HTMLButtonElement.formTarget`](/fr/docs/Web/API/HTMLButtonElement/formTarget)
-  - : Une chaîne de caractères qui reflète le nom ou un mot-clé de l'emplacement où afficher la réponse reçue après l'envoi du formulaire. S'il est présent, cet attribut surcharge l'attribut [`target`](/fr/docs/Web/HTML/Element/form#attr-target) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel est associé cet élément.
+  - : Une chaîne de caractères qui reflète le nom ou un mot-clé de l'emplacement où afficher la réponse reçue après l'envoi du formulaire. S'il est présent, cet attribut surcharge l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#attr-target) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel est associé cet élément.
 - [`HTMLButtonElement.labels`](/fr/docs/Web/API/HTMLButtonElement/labels) {{readonlyInline}}
-  - : Un objet [`NodeList`](/fr/docs/Web/API/NodeList) qui représente une liste des éléments [`<label>`](/fr/docs/Web/HTML/Element/label) qui sont des libellés pour ce bouton.
+  - : Un objet [`NodeList`](/fr/docs/Web/API/NodeList) qui représente une liste des éléments [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) qui sont des libellés pour ce bouton.
 - [`HTMLButtonElement.menu`](/fr/docs/Web/API/HTMLButtonElement/menu) {{experimental_inline}}
   - : Un objet [`HTMLMenuElement`](/fr/docs/Web/API/HTMLMenuElement) qui représente l'élément de menu à afficher si on clique sur ce bouton et qu'il a `type="menu"`.
 - [`HTMLButtonElement.name`](/fr/docs/Web/API/HTMLButtonElement/name)
@@ -51,7 +51,7 @@ _Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLEl
       - : Le bouton affiche un menu. {{experimental_inline}}
 
 - [`HTMLButtonElement.willValidate`](/fr/docs/Web/API/HTMLButtonElement/willValidate) {{readonlyInline}}
-  - : Un booléen qui indique si le bouton est candidat à la validation de contraintes. Il vaut `false` si une condition l'empêche de participer à la validation des contraintes, y compris si sa propriété `type` vaut `reset` ou `button`&nbsp;; s'il a un ancêtre [`<datalist>`](/fr/docs/Web/HTML/Element/datalist)&nbsp;; ou si la propriété `disabled` vaut `true`.
+  - : Un booléen qui indique si le bouton est candidat à la validation de contraintes. Il vaut `false` si une condition l'empêche de participer à la validation des contraintes, y compris si sa propriété `type` vaut `reset` ou `button`&nbsp;; s'il a un ancêtre [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist)&nbsp;; ou si la propriété `disabled` vaut `true`.
 - [`HTMLButtonElement.validationMessage`](/fr/docs/Web/API/HTMLButtonElement/validationMessage) {{readonlyInline}}
   - : Une chaîne de caractères représentant le message localisé qui décrit la validation de contrainte lorsque le contrôle ne respecte pas les contraintes éventuelles. Cet attribut vaudra la chaîne vide si le contrôle n'est pas candidat à la validation de contraintes (`willValidate` à `false`), ou s'il respecte les contraintes.
 - [`HTMLButtonElement.validity`](/fr/docs/Web/API/HTMLButtonElement/validity) {{readonlyInline}}
@@ -81,4 +81,4 @@ Pour les navigateurs utilisant Gecko, la pseudo-classe non standard [`:-moz-subm
 
 ## Voir aussi
 
-- L'élément HTML qui porte cette interface&nbsp;: [`<button>`](/fr/docs/Web/HTML/Element/button)
+- L'élément HTML qui porte cette interface&nbsp;: [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)

@@ -138,5 +138,5 @@ x = document.formulaire[controle].value;
 
 - {{jsxref("Object")}}
 - {{jsxref("Object.defineProperty()")}}
-- [L'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [L'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
 - [Le chaînage optionnel](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining)

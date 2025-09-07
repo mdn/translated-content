@@ -1,28 +1,26 @@
 ---
-title: typeof
+title: typeof 演算子
 slug: Web/JavaScript/Reference/Operators/typeof
 l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`typeof`** 演算子は、オペランドの値の型を示す文字列を返します。
 
-{{InteractiveExample("JavaScript デモ: Expressions - typeof")}}
+{{InteractiveExample("JavaScript デモ: typeof 演算子")}}
 
 ```js interactive-example
 console.log(typeof 42);
-// Expected output: "number"
+// 予想される結果: "number"
 
 console.log(typeof "blubber");
-// Expected output: "string"
+// 予想される結果: "string"
 
 console.log(typeof true);
-// Expected output: "boolean"
+// 予想される結果: "boolean"
 
 console.log(typeof undeclaredVariable);
-// Expected output: "undefined"
+// 予想される結果: "undefined"
 ```
 
 ## 構文
@@ -151,8 +149,8 @@ typeof func; // "function" を返す
 // 括弧を使うと、式のデータ型を特定することができます。
 const someData = 99;
 
-typeof someData + " Wisen"; // "number Wisen"
-typeof (someData + " Wisen"); // "string"
+typeof someData + " foo"; // "number foo"
+typeof (someData + " foo"); // "string"
 ```
 
 ### エラー

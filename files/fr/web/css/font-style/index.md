@@ -138,7 +138,7 @@ Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt
 
 L'utilisation de grandes portions de textes avec `font-style: italic` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Spécifications
@@ -152,4 +152,4 @@ L'utilisation de grandes portions de textes avec `font-style: italic` peut rendr
 ## Voir aussi
 
 - [`font-weight`](/fr/docs/Web/CSS/font-weight)
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Initiation à la mise en forme du texte](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)

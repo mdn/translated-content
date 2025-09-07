@@ -4,9 +4,9 @@ slug: Web/HTML/How_to/CORS_enabled_image
 original_slug: Web/HTML/CORS_enabled_image
 ---
 
-HTML permet d'utiliser l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin) sur les images. Utilisé avec un en-tête [CORS](/fr/docs/Glossary/CORS) adéquat, les images définies par [`<img>`](/fr/docs/Web/HTML/Element/img) provenant d'origines étrangères pourront être utilisées au sein d'un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) comme si elles avaient été chargées depuis l'origine courante.
+HTML permet d'utiliser l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/img#attr-crossorigin) sur les images. Utilisé avec un en-tête [CORS](/fr/docs/Glossary/CORS) adéquat, les images définies par [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) provenant d'origines étrangères pourront être utilisées au sein d'un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) comme si elles avaient été chargées depuis l'origine courante.
 
-Pour plus de détails sur l'attribut `crossorigin`, voir [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Attributes/crossorigin).
+Pour plus de détails sur l'attribut `crossorigin`, voir [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin).
 
 ## Canevas corrompu et sécurité
 
@@ -14,14 +14,14 @@ Les pixels composant un canevas pouvant venir de différentes sources, notamment
 
 Dès que des données sont chargées dans le canevas depuis une autre origine sans avoir été « approuvées » par le CORS, le canevas devient **corrompu** (_tainted_). Dès qu'un canevas est corrompu, il n'est plus considéré comme sécurisé et toute tentative de récupérer des données depuis les données de l'image résultera en une exception.
 
-Si la source du contenu tiers est un élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img) ou SVG [`<svg>`](/fr/docs/Web/SVG/Element/svg), il n'est plus permis de récupérer le contenu du canevas.
+Si la source du contenu tiers est un élément HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou SVG [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), il n'est plus permis de récupérer le contenu du canevas.
 
 Si la source du contenu tiers est une image obtenue à partir d'un [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) ou d'une [`ImageBitMap`](/fr/docs/Web/API/ImageBitMap) et que la source de l'image ne respecte pas les règles quant à l'unicité de l'origine, il ne sera pas possible de lire le contenu du canevas.
 
 Appeler l'une des méthodes suivantes sur un canevas corrompu déclenchera une erreur :
 
 - [`getImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData) sur le contexte du canevas
-- [`toBlob()`](/fr/docs/Web/API/HTMLCanvasElement/toBlob) sur l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas)
+- [`toBlob()`](/fr/docs/Web/API/HTMLCanvasElement/toBlob) sur l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas)
 - [`toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL) sur le canevas
 
 L'exception levée par de tels appels sera une exception `SecurityError`. Cette mesure protège les utilisateurs contre l'exposition de données privées via des images provenant de sites tiers sans permission.
@@ -32,7 +32,7 @@ Dans cet exemple, on souhaite autoriser la récupération et l'enregistrement d'
 
 ### Configuration serveur
 
-Pour commencer, configurons le serveur stockant les images avec un en-tête [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) qui permet un accès multi-origines aux fichiers images.
+Pour commencer, configurons le serveur stockant les images avec un en-tête [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) qui permet un accès multi-origines aux fichiers images.
 
 Dans la suite de cet exemple, on prendra le cas d'un site est servi via [Apache](https://httpd.apache.org/). On pourra utiliser le fragment [de configuration serveur Apache pour les images CORS](https://github.com/h5bp/server-configs-apache/blob/master/h5bp/cross-origin/images.conf) :
 
@@ -53,7 +53,7 @@ Pour résumer, cela permet de configurer le serveur afin de pouvoir accéder aux
 
 Maintenant que le serveur est configuré pour permettre la récupération d'image depuis plusieurs origines, on peut écrire le code qui permet à l'utilisateur d'enregistrer les images [en stockage local](/fr/docs/Web/API/Web_Storage_API) comme si elles étaient servies depuis le même domaine que le code.
 
-Pour cela, on utilise l'attribut [`crossorigin`](/fr/docs/Web/HTML/Global_attributes#attr-crossorigin) en définissant [`crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin) sur l'élément [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) sur lequel l'image sera chargée. Ainsi, on indique au navigateur de demander un accès multi-origine lors du téléchargement de l'image.
+Pour cela, on utilise l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-crossorigin) en définissant [`crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin) sur l'élément [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) sur lequel l'image sera chargée. Ainsi, on indique au navigateur de demander un accès multi-origine lors du téléchargement de l'image.
 
 #### Démarrer le téléchargement
 
@@ -98,7 +98,7 @@ function imageReceived() {
 }
 ```
 
-`imageReceived()` est invoquée lorsque l'évènement `"load"` est déclenché sur l'élément `HTMLImageElement` qui reçoit l'image téléchargée. Cet évènement se produit lorsque l'ensemble des données téléchargées est disponible. Cette fonction commence par créer un nouvel élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) qui sera utilisé afin de convertir l'image en une URL de donnée. On récupère également un accès au contexte du canevas pour dessiner en 2D ([`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D)) dans la variable `context`.
+`imageReceived()` est invoquée lorsque l'évènement `"load"` est déclenché sur l'élément `HTMLImageElement` qui reçoit l'image téléchargée. Cet évènement se produit lorsque l'ensemble des données téléchargées est disponible. Cette fonction commence par créer un nouvel élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) qui sera utilisé afin de convertir l'image en une URL de donnée. On récupère également un accès au contexte du canevas pour dessiner en 2D ([`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D)) dans la variable `context`.
 
 La taille du canevas est ajustée afin que ses dimensions correspondent à celles de l'image. L'image est ensuite dessinée dans le canevas grâce à [`drawImage()`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage). Le canevas est alors inséré dans le document et l'image y devient visible.
 

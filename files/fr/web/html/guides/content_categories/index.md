@@ -34,18 +34,18 @@ Les éléments appartenant à la catégorie de contenu de flux contiennent gén�
 Quelques autres éléments appartiennent à cette catégorie mais seulement sous certaines conditions :
 
 - {{HTMLElement("area")}} s'il est un descendant de l'élément {{HTMLElement("map")}}
-- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Global_attributes#itemprop) est présent
-- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Global_attributes#itemprop) est présent
-- {{HTMLElement("style")}} si l'attribut [`scoped`](/fr/docs/Web/HTML/Element/style#scoped) {{deprecated_inline()}} est présent
+- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop) est présent
+- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop) est présent
+- {{HTMLElement("style")}} si l'attribut [`scoped`](/fr/docs/Web/HTML/Reference/Elements/style#scoped) {{deprecated_inline()}} est présent
 
 ### Contenu sectionnant
 
-Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/Web/HTML/Element/Heading_Elements) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](#contenu_de_titre).
+Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](#contenu_de_titre).
 
 Les éléments appartenant à cette catégorie sont les éléments {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} et {{HTMLElement("section")}}.
 
 > [!NOTE]
-> Il ne faut pas confondre ce modèle de contenu avec la catégorie de [racine de sectionnement](/fr/docs/Web/HTML/Element/Heading_Elements#racines_de_sectionnement) qui isole un contenu par rapport à la structure (ou plan) principale.
+> Il ne faut pas confondre ce modèle de contenu avec la catégorie de [racine de sectionnement](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#racines_de_sectionnement) qui isole un contenu par rapport à la structure (ou plan) principale.
 
 ### Contenu de titre
 
@@ -70,9 +70,9 @@ Quelques autres éléments appartiennent à cette catégorie mais seulement selo
 - {{HTMLElement("area")}} s'il est un descendant de l'élément {{HTMLElement("map")}}
 - {{HTMLElement("del")}} s'il contient seulement du contenu phrasé
 - {{HTMLElement("ins")}} s'il contient seulement du contenu phrasé
-- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Global_attributes#itemprop) est présent
+- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop) est présent
 - {{HTMLElement("map")}} s'il contient seulement du contenu phrasé
-- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Global_attributes#itemprop) est présent
+- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop) est présent
 
 ### Contenu intégré
 
@@ -84,12 +84,12 @@ Le contenu interactif regroupe des éléments spécialement conçus pour une int
 
 Quelques éléments appartiennent à cette catégorie seulement sous certaines conditions :
 
-- {{HTMLElement("audio")}} si l'attribut [`controls`](/fr/docs/Web/HTML/Element/audio#controls) est présent
-- {{HTMLElement("img")}} si l'attribut [`usemap`](/fr/docs/Web/HTML/Element/img#usemap) est présent
-- {{HTMLElement("input")}} si l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) ne vaut pas `hidden`
-- {{HTMLElement("menu")}} si l'attribut [`type`](/fr/docs/Web/HTML/Element/menu#type) vaut `toolbar`
-- {{HTMLElement("object")}} si l'attribut [`usemap`](/fr/docs/Web/HTML/Element/object#usemap) est présent
-- {{HTMLElement("video")}}, si l'attribut [`controls`](/fr/docs/Web/HTML/Element/video#controls) est présent
+- {{HTMLElement("audio")}} si l'attribut [`controls`](/fr/docs/Web/HTML/Reference/Elements/audio#controls) est présent
+- {{HTMLElement("img")}} si l'attribut [`usemap`](/fr/docs/Web/HTML/Reference/Elements/img#usemap) est présent
+- {{HTMLElement("input")}} si l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) ne vaut pas `hidden`
+- {{HTMLElement("menu")}} si l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/menu#type) vaut `toolbar`
+- {{HTMLElement("object")}} si l'attribut [`usemap`](/fr/docs/Web/HTML/Reference/Elements/object#usemap) est présent
+- {{HTMLElement("video")}}, si l'attribut [`controls`](/fr/docs/Web/HTML/Reference/Elements/video#controls) est présent
 
 ### Contenu tangible
 
@@ -154,4 +154,4 @@ Si ces éléments étaient retirés, ce fragment de code HTML serait toujours du
 
 ## Autres modèles de contenu
 
-[Racine de sectionnement.](/fr/docs/Web/HTML/Element/Heading_Elements#racines_de_sectionnement)
+[Racine de sectionnement.](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#racines_de_sectionnement)

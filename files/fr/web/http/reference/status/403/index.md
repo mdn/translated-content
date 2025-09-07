@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Status/403
 
 Le code de statut d'erreur de réponse HTTP **`403 Forbidden`** indique qu'un serveur comprend la requête mais refuse de l'autoriser.
 
-Ce statut est similaire au statut [`401`](/fr/docs/Web/HTTP/Status/401), mais dans ce cas, la ré-authentification ne changera rien. L'accès est définitivement interdit et est lié à la logique de l'application, par exemple manque d'une permission d'accès à une ressource.
+Ce statut est similaire au statut [`401`](/fr/docs/Web/HTTP/Reference/Status/401), mais dans ce cas, la ré-authentification ne changera rien. L'accès est définitivement interdit et est lié à la logique de l'application, par exemple manque d'une permission d'accès à une ressource.
 
 ## Statut
 
@@ -31,5 +31,5 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Voir aussi
 
-- [`401`](/fr/docs/Web/HTTP/Status/401)
+- [`401`](/fr/docs/Web/HTTP/Reference/Status/401)
 - [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)

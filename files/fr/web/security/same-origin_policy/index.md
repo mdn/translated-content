@@ -39,7 +39,7 @@ Le numéro de port est stocké par le navigateur séparément. Tout appel aux se
 
 La same-origin policy contrôle les interactions entre deux origines différentes, quand vous utilisez [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) par exemple. Ces interactions sont généralement rangées dans trois catégories :
 
-- _Écritures_ cross-origin généralement autorisées. Par exemple, les liens, les redirections ou les envois de formulaires. Quelques rares requêtes HTTP nécessitent [preflight](/fr/docs/Web/HTTP/CORS#preflighted_requests).
+- _Écritures_ cross-origin généralement autorisées. Par exemple, les liens, les redirections ou les envois de formulaires. Quelques rares requêtes HTTP nécessitent [preflight](/fr/docs/Web/HTTP/Guides/CORS#preflighted_requests).
 - _Embarqué_ cross-origin généralement autorisé. Les exemples sont listés ci-après.
 - _Lectures_ cross-origin généralement non autorisées.
 
@@ -47,15 +47,15 @@ Voici quelques exemples de ressources qui peuvent être embarqués malgré leur 
 
 - JavaScript avec `<script src="..."></script>`. Les messages d'erreur de syntaxe ne sont disponibles que pour les scripts ayant la même origine.
 - CSS avec `<link rel="stylesheet" href="...">`. Étant donnée la [souplesse des règles de syntaxe](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) du CSS, les CSS d'origine différentes nécessitent une entête `Content-Type` correcte. Les restrictions varient selon les navigateurs : [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](https://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](https://code.google.com/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/kb/HT4070) et [Opera](https://www.opera.com/support/kb/view/943/).
-- Images avec [`<img>`](/fr/docs/Web/HTML/Element/img). Les formats d'image supportés, comprenant PNG, JPEG, GIF, BMP, SVG...
-- Fichiers média avec [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<audio>`](/fr/docs/Web/HTML/Element/audio).
-- Objets avec [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/HTML/Element/applet).
+- Images avec [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img). Les formats d'image supportés, comprenant PNG, JPEG, GIF, BMP, SVG...
+- Fichiers média avec [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) et [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio).
+- Objets avec [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/HTML/Element/applet).
 - Fontes de polices avec [`@font-face`](/fr/docs/Web/CSS/@font-face). Certain navigateurs autorisent les fontes cross-origin, d'autres appliquent la same-origin policy.
-- N'importe quoi avec [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe). Un site peut utiliser l'entête [`X-Frame-Options`](/fr/docs/Web/HTTP/Headers/X-Frame-Options) pour interdire cela depuis une page n'ayant pas la même origine.
+- N'importe quoi avec [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame) et [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe). Un site peut utiliser l'entête [`X-Frame-Options`](/fr/docs/Web/HTTP/Reference/Headers/X-Frame-Options) pour interdire cela depuis une page n'ayant pas la même origine.
 
 ### Autoriser l'accès cross-origin
 
-Utiliser [CORS](/fr/docs/Web/HTTP/CORS) pour autoriser l'accès cross-origin.
+Utiliser [CORS](/fr/docs/Web/HTTP/Guides/CORS) pour autoriser l'accès cross-origin.
 
 ### Comment bloquer l'accès cross-origin access
 

@@ -13,4 +13,4 @@ Un [Objet](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object) est une stru
 
 - [Programmation orientée objet](https://fr.wikipedia.org/wiki/Programmation_orientée_objet) sur Wikipédia
 - {{jsxref("Object")}} dans la [référence JavaScript](/fr/docs/Web/JavaScript/Reference)
-- [Structure de données Objet en JavaScript](/fr/docs/Web/JavaScript/Data_structures#les_objets)
+- [Structure de données Objet en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures#les_objets)

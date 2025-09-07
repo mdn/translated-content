@@ -10,31 +10,31 @@ original_slug: Learn/HTML
 
 ## Parcours d'apprentissage
 
-L'idéal serait que vous débutiez votre parcours d'apprentissage par l'étude du HTML. Commencez par lire [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML). Vous pouvez ensuite passer à l'étude de sujets plus avancés comme&nbsp;:
+L'idéal serait que vous débutiez votre parcours d'apprentissage par l'étude du HTML. Commencez par lire [Introduction au HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8). Vous pouvez ensuite passer à l'étude de sujets plus avancés comme&nbsp;:
 
-- les [CSS](/fr/docs/Learn/CSS), et comment les utiliser pour donner un style au HTML (par exemple, modifier la taille du texte et les polices utilisées, ajouter des bordures et des ombres portées, mettre en page avec plusieurs colonnes, ajouter des animations et autres effets visuels).
-- le [JavaScript](/fr/docs/Learn/JavaScript), et comment l'utiliser pour ajouter des fonctionnalités dynamiques aux pages Web (par exemple, trouver votre emplacement et le tracer sur une carte, faire apparaître/disparaître des éléments d'interface utilisateur lorsque vous basculez un bouton, enregistrer les données des utilisateurs localement sur leurs ordinateurs, et bien plus encore).
+- les [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et comment les utiliser pour donner un style au HTML (par exemple, modifier la taille du texte et les polices utilisées, ajouter des bordures et des ombres portées, mettre en page avec plusieurs colonnes, ajouter des animations et autres effets visuels).
+- le [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting), et comment l'utiliser pour ajouter des fonctionnalités dynamiques aux pages Web (par exemple, trouver votre emplacement et le tracer sur une carte, faire apparaître/disparaître des éléments d'interface utilisateur lorsque vous basculez un bouton, enregistrer les données des utilisateurs localement sur leurs ordinateurs, et bien plus encore).
 
-Avant de commencer ce sujet, vous devriez avoir au moins une connaissance de base de l'utilisation des ordinateurs et de l'utilisation passive du Web (c'est-à-dire juste le regarder, de consommer le contenu). Vous devriez avoir un environnement de travail de base tel que précisé dans [Installer les outils de base](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software), et comprendre comment créer et gérer les fichiers,comme détaillé dans [Gérer les fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — ces deux articles font partie de notre module [Commencer avec le Web](/fr/docs/Learn/Getting_started_with_the_web) dédié aux débutants.
+Avant de commencer ce sujet, vous devriez avoir au moins une connaissance de base de l'utilisation des ordinateurs et de l'utilisation passive du Web (c'est-à-dire juste le regarder, de consommer le contenu). Vous devriez avoir un environnement de travail de base tel que précisé dans [Installer les outils de base](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), et comprendre comment créer et gérer les fichiers,comme détaillé dans [Gérer les fichiers](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) — ces deux articles font partie de notre module [Commencer avec le Web](/fr/docs/Learn_web_development/Getting_started/Your_first_website) dédié aux débutants.
 
-Il est recommandé de passer par [Commencer avec le Web](/fr/docs/Learn/Getting_started_with_the_web) avant d'étudier ce sujet, mais ce n'est pas absolument nécessaire ; une grande partie de ce qui est couvert dans l'article [Les bases du HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics) est également couvert dans notre module [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML), quoique beaucoup plus en détail.
+Il est recommandé de passer par [Commencer avec le Web](/fr/docs/Learn_web_development/Getting_started/Your_first_website) avant d'étudier ce sujet, mais ce n'est pas absolument nécessaire ; une grande partie de ce qui est couvert dans l'article [Les bases du HTML](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) est également couvert dans notre module [Introduction au HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8), quoique beaucoup plus en détail.
 
 ## Modules
 
 Cette rubrique contient les modules suivants, dans l'ordre suggéré pour les parcourir. Vous devriez commencer par le premier.
 
-- [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML)
+- [Introduction au HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8)
   - : Ce module prépare le terrain, en vous familiarisant avec les concepts importants et la syntaxe, en examinant comment appliquer le HTML au texte, comment créer des hyperliens et comment utiliser le HTML pour structurer une page Web.
-- [Multimedia et intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding)
+- [Multimedia et intégration](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content)
   - : Ce module explore comment utiliser le HTML pour incorporer du multimédia dans vos pages Web, y compris les diverses façons d'inclure des images, et comment intégrer de la vidéo, de l'audio et même d'autres pages Web entières.
-- [Tableaux HTML](/fr/docs/Learn/HTML/Tables)
+- [Tableaux HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : Représenter des sous forme de tableaux sur une page Web de manière compréhensible, {{Glossary("Accessibilité", "accessible")}} peut être un défi. Ce module porte sur le balisage basique des tableaux, ainsi que des fonctions plus complexes telles que l'implémentation de légendes et de résumés.
-- [Formulaire HTML](/fr/docs/Learn/Forms)
+- [Formulaire HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
   - : Les formulaires sont une partie très importante du Web — ils fournissent la grande partie des fonctionnalités dont vous avez besoin pour interagir avec les sites Web, par exemple enregistrement et connexion, envoi de commentaires, achat de produits et plus encore. Ce module vous permet de commencer à créer la partie des formulaires côté client.
 
 ## Résolution de problèmes courants en HTML
 
-[Utilisation du HTML pour la solution de problèmes courants](/fr/docs/Learn/HTML/Howto) fournit des liens vers des contenus expliquant comment utiliser le HTML pour résoudre les problèmes très courants lors de la création d'une page Web : titrer, ajouter des images ou des vidéos, mettre en évidence du contenu, créer un formulaire de base, etc.
+[Utilisation du HTML pour la solution de problèmes courants](/fr/docs/Learn_web_development/Howto/Solve_HTML_problems) fournit des liens vers des contenus expliquant comment utiliser le HTML pour résoudre les problèmes très courants lors de la création d'une page Web : titrer, ajouter des images ou des vidéos, mettre en évidence du contenu, créer un formulaire de base, etc.
 
 ## Voir aussi
 

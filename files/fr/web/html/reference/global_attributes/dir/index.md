@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/dir
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`dir`** est un attribut à valeur contrainte qui indique la direction du texte contenu dans l'élément.
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`dir`** est un attribut à valeur contrainte qui indique la direction du texte contenu dans l'élément.
 
 {{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
 
@@ -48,5 +48,5 @@ Les valeurs autorisées pour cet attribut sont :
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 - La propriété {{domxref("HTMLElement.dir")}} qui reflète cet attribut

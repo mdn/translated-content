@@ -6,7 +6,7 @@ original_slug: Glossary/Forbidden_header_name
 
 {{GlossarySidebar}}
 
-**Un nom d'en-tête interdit** est un nom d'[en-tête HTTP](/fr/docs/Web/HTTP/Headers) qui ne peut être modifié par programmation, spécifiquement, un nom d'en-tête de **requête** HTTP (contraste avec {{Glossary("Forbidden response header name","Nom d'en-tête de réponse interdit")}}).
+**Un nom d'en-tête interdit** est un nom d'[en-tête HTTP](/fr/docs/Web/HTTP/Reference/Headers) qui ne peut être modifié par programmation, spécifiquement, un nom d'en-tête de **requête** HTTP (contraste avec {{Glossary("Forbidden response header name","Nom d'en-tête de réponse interdit")}}).
 
 Les modifications de ces en-têtes sont interdites pour que l'agent utilisateur garde un total contrôle sur eux. Les noms commençant par `Sec-` sont réservés à la création de nouveaux en-têtes à l'abri des {{glossary("API","API")}} utilisant [Fetch](/fr/docs/Web/API/Fetch_API) qui accordent aux développeurs le contrôle des en-têtes, tels que {{domxref("XMLHttpRequest")}}.
 

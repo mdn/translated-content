@@ -31,7 +31,7 @@ a[href^="tel"]::before {
 
 L'information de contact fournie via cet élément peut prendre n'importe quelle forme pertinente : ce peut être une adresse physique, une URL, une adresse électronique, un numéro de téléphone, des coordonnées géographiques, etc. Ces informations devraient contenir le nom de la personne, du groupe de personne ou de l'organisation à laquelle le contact fait référence.
 
-Cet élément peut être employé dans un élément [`<article>`](/fr/docs/Web/HTML/Element/article) pour indiquer la personne qui écrit l'article ou être utilisé dans l'en-tête de la page pour fournir une adresse d'entreprise.
+Cet élément peut être employé dans un élément [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) pour indiquer la personne qui écrit l'article ou être utilisé dans l'en-tête de la page pour fournir une adresse d'entreprise.
 
 <table class="properties">
   <tbody>
@@ -140,13 +140,13 @@ Cet élément peut être employé dans un élément [`<article>`](/fr/docs/Web/H
 
 ## Attributs
 
-Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
 
 ## Notes d'utilisation
 
-- Pour représenter une adresse arbitraire, qui n'est pas relative à l'information de contact, on utilisera l'élément [`<p>`](/fr/docs/Web/HTML/Element/p) plutôt que l'élément `<address>`.
-- Cet élément ne doit pas contenir plus d'informations que l'information de contact, par exemple une date de publication (qui appartiendrait à l'élément [`<time>`](/fr/docs/Web/HTML/Element/time)).
-- Typiquement un élément `<address>` peut être placé dans l'élément [`<footer>`](/fr/docs/Web/HTML/Element/footer) de la section courante, s'il y en a une.
+- Pour représenter une adresse arbitraire, qui n'est pas relative à l'information de contact, on utilisera l'élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) plutôt que l'élément `<address>`.
+- Cet élément ne doit pas contenir plus d'informations que l'information de contact, par exemple une date de publication (qui appartiendrait à l'élément [`<time>`](/fr/docs/Web/HTML/Reference/Elements/time)).
+- Typiquement un élément `<address>` peut être placé dans l'élément [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer) de la section courante, s'il y en a une.
 
 ## Exemples
 
@@ -169,7 +169,7 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 
 {{EmbedLiveSample("Exemples", "100%", 190)}}
 
-Bien que le rendu par défaut du texte de l'élément `<address>` utilise le même style par défaut que les éléments [`<i>`](/fr/docs/Web/HTML/Element/i) ou [`<em>`](/fr/docs/Web/HTML/Element/em), il est plus approprié d'utiliser cet élément lorsque l'on traite d'informations de contact, étant donné qu'il apporte des informations sémantiques supplémentaires.
+Bien que le rendu par défaut du texte de l'élément `<address>` utilise le même style par défaut que les éléments [`<i>`](/fr/docs/Web/HTML/Reference/Elements/i) ou [`<em>`](/fr/docs/Web/HTML/Reference/Elements/em), il est plus approprié d'utiliser cet élément lorsque l'on traite d'informations de contact, étant donné qu'il apporte des informations sémantiques supplémentaires.
 
 ## Spécifications
 
@@ -181,5 +181,5 @@ Bien que le rendu par défaut du texte de l'élément `<address>` utilise le mê
 
 ## Voir aussi
 
-- Les autres éléments liés aux sections d'un document : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<header>`](/fr/docs/Web/HTML/Element/header) ;
-- [Sections et titres d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
+- Les autres éléments liés aux sections d'un document : [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body), [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside), [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Reference/Elements/hgroup), [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer), [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header) ;
+- [Sections et titres d'un document HTML5](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)

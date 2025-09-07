@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
-[L'attribut universel](/fr/docs/Web/HTML/Global_attributes) **`virtualkeyboardpolicy`** est un attribut à valeur contrainte. Lorsqu'il est appliqué sur un élément qui utilise également l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable), il contrôle le comportement du clavier virtuel qui apparaît à l'écran pour les appareils comme les tablettes, téléphones tactiles ou les autres appareils où un clavier physique pourrait ne pas être disponible.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`virtualkeyboardpolicy`** est un attribut à valeur contrainte. Lorsqu'il est appliqué sur un élément qui utilise également l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable), il contrôle le comportement du clavier virtuel qui apparaît à l'écran pour les appareils comme les tablettes, téléphones tactiles ou les autres appareils où un clavier physique pourrait ne pas être disponible.
 
 Cet attribut peut prendre l'une des valeurs suivantes&nbsp;:
 
@@ -29,6 +29,6 @@ Cet attribut peut prendre l'une des valeurs suivantes&nbsp;:
 
 ## Voir aussi
 
-- [Tous les attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 - [`HTMLElement.contentEditable`](/fr/docs/Web/API/HTMLElement/contentEditable) et [`HTMLElement.isContentEditable`](/fr/docs/Web/API/HTMLElement/isContentEditable)
 - [L'API `VirtualKeyboard`](/fr/docs/Web/API/VirtualKeyboard_API)

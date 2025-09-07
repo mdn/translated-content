@@ -43,15 +43,15 @@ Dans certains cas, les moteurs de recherche couvrent un public régional. Certai
 
 ## Attributs globaux liés aux microdonnées
 
-- [`itemid`](/fr/docs/Web/HTML/Global_attributes/itemid)
+- [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes/itemid)
   - : Cet attribut est l'identifiant unique d'un objet.
-- [`itemprop`](/fr/docs/Web/HTML/Global_attributes/itemprop)
+- [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes/itemprop)
   - : Cet attribut est utilisé afin d'ajouter des propriétés à un élément.
-- [`itemref`](/fr/docs/Web/HTML/Global_attributes/itemref)
+- [`itemref`](/fr/docs/Web/HTML/Reference/Global_attributes/itemref)
   - : Cet attribut permet de faire référence à d'autres éléments HTML décrivant le même objet.
-- [`itemscope`](/fr/docs/Web/HTML/Global_attributes/itemscope)
+- [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes/itemscope)
   - : Cet attribut définit la portée du vocabulaire déclaré par `itemtype` et englobe généralement un objet.
-- [`itemtype`](/fr/docs/Web/HTML/Global_attributes/itemtype)
+- [`itemtype`](/fr/docs/Web/HTML/Reference/Global_attributes/itemtype)
   - : Cet attribut définit l'URL du vocabulaire qui spécifie le modèle de données utilisé pour décrire les objets.
 
 ## Exemple
@@ -154,6 +154,6 @@ Fonctionnalité ajoutée dans Firefox 16 et retirée dans Firefox 49.
 
 ## Voir aussi
 
-- [Les attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 
 {{QuickLinksWithSubpages("/fr/docs/Web/HTML")}}

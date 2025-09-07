@@ -5,7 +5,7 @@ slug: Web/CSS/@import
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) **`@import`** est utilisée afin d'importer des règles à partir d'autres feuilles de style. Ces règles @ doivent être utilisées avant toutes les autres règles, à l'exception de {{cssxref("@charset")}}. `@import` n'est pas [une instruction imbriquée](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_instructions_css) et ne peut donc pas être utilisée à l'intérieur [de groupe de règles conditionnelles](/fr/docs/Web/CSS/At-rule#r.c3.a8gles_conditionnelles_de_groupe).
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) **`@import`** est utilisée afin d'importer des règles à partir d'autres feuilles de style. Ces règles @ doivent être utilisées avant toutes les autres règles, à l'exception de {{cssxref("@charset")}}. `@import` n'est pas [une instruction imbriquée](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started#les_instructions_css) et ne peut donc pas être utilisée à l'intérieur [de groupe de règles conditionnelles](/fr/docs/Web/CSS/CSS_syntax/At-rule#r.c3.a8gles_conditionnelles_de_groupe).
 
 ```css
 @import url("fineprint.css") print;

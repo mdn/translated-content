@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 {{JSRef}}
 
-Le type **`Object`** est l'un [des types de données JavaScript](/fr/docs/Web/JavaScript/Data_structures). Il est utilisé pour stocker des ensembles de clés/valeurs et des entités plus complexes. Les objets peuvent être créés avec le constructeur [`Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) ou avec [la syntaxe d'initialisation d'objet littérale](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+Le type **`Object`** est l'un [des types de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures). Il est utilisé pour stocker des ensembles de clés/valeurs et des entités plus complexes. Les objets peuvent être créés avec le constructeur [`Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) ou avec [la syntaxe d'initialisation d'objet littérale](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Description
 
@@ -99,7 +99,7 @@ Il n'existe pas de méthode pour `Object` qui permette de supprimer une proprié
 - [`Object.prototype.isPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf)
   - : Renvoie un booléen indiquant si l'objet courant (pour lequel est appelé cette méthode) fait partie de la chaîne de prototypes de l'objet passé en argument.
 - [`Object.prototype.propertyIsEnumerable()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
-  - : Renvoie un booléen indiquant si [l'attribut interne ECMAScript `[[Enumerable]]`](/fr/docs/Web/JavaScript/Data_structures#propriétés) est fixé.
+  - : Renvoie un booléen indiquant si [l'attribut interne ECMAScript `[[Enumerable]]`](/fr/docs/Web/JavaScript/Guide/Data_structures#propriétés) est fixé.
 - [`Object.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString)
   - : Appelle la méthode [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 - [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)

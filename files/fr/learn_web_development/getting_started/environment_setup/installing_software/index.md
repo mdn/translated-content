@@ -38,7 +38,7 @@ Avant d'aller plus loin, installez au moins deux navigateurs différents afin de
 
 ### Installer un serveur web local
 
-Pour que certains exemples fonctionnent correctement, il vous faudra avoir mis en place un serveur web local. Pour cela, vous pouvez consulter l'article [Comment configurer un serveur de test local&nbsp;?](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
+Pour que certains exemples fonctionnent correctement, il vous faudra avoir mis en place un serveur web local. Pour cela, vous pouvez consulter l'article [Comment configurer un serveur de test local&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
 
 ## Quels outils sont nécessaires pour du développement web professionnel&nbsp;?
 

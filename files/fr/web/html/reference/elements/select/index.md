@@ -45,14 +45,14 @@ L'élément `<select>` possède certains attributs spécifiques dont `multiple` 
 
 Il est possible de regrouper plusieurs éléments `<option>` à l'intérieur d'éléments {{htmlelement("optgroup")}} afin de créer des groupes d'options distincts.
 
-Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs/Learn/Forms/Basic_native_form_controls#contenu_déroulant).
+Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#contenu_déroulant).
 
 ## Attributs
 
-Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `autocomplete`
-  - : Une chaîne de caractères qui fournit une indication à l'agent utilisateur pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
+  - : Une chaîne de caractères qui fournit une indication à l'agent utilisateur pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
 - `autofocus`
   - : Cet attribut booléen permet d'indiquer si ce contrôle du formulaire devrait recevoir le focus au chargement de la page. Pour un même document, seul un élément de formulaire peut avoir l'attribut `autofocus` activé.
 - `disabled`
@@ -70,14 +70,14 @@ Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels
 
 ## Mise en forme avec CSS
 
-Il est communément admis que l'élément `<select>` est difficilement mis en forme avec CSS. Certains aspects de l'élément, [son modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model), [la police utilisée](/fr/docs/Web/CSS/CSS_fonts) ou encore l'apparence ({{cssxref("appearance")}}), peuvent être modifiés.
+Il est communément admis que l'élément `<select>` est difficilement mis en forme avec CSS. Certains aspects de l'élément, [son modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model), [la police utilisée](/fr/docs/Web/CSS/CSS_fonts) ou encore l'apparence ({{cssxref("appearance")}}), peuvent être modifiés.
 
 Toutefois, ces propriétés peuvent fournir des résultats incohérents entre les différents navigateurs et il peut être difficile d'aligner différents contrôles sur une colonne.Aussi, si la structure interne de cet élément est trop complexe, on pourra créer un tel contrôle en utilisant des éléments non sémantiques, du code JavaScript et WAI-ARIA afin de décrire la sémantique du contrôle.
 
 Pour plus d'informations sur la mise en forme de `<select>` :
 
-- [Mettre en forme les formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
+- [Mettre en forme les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 
 ## Exemples
 

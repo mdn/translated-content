@@ -5,7 +5,7 @@ slug: Web/CSS/::-moz-list-bullet
 
 {{CSSRef}}{{Non-standard_header}}
 
-Le [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-list-bullet`** est [une extension non-standard de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) utilisé pour appliquer un style aux puces des éléments d'une liste non ordonnée (autrement dit, pour un élément [`<li>`](/fr/docs/Web/HTML/Element/li)) contenu dans un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
+Le [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-list-bullet`** est [une extension non-standard de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) utilisé pour appliquer un style aux puces des éléments d'une liste non ordonnée (autrement dit, pour un élément [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li)) contenu dans un élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
 
 ## Syntaxe
 

@@ -11,12 +11,12 @@ Un évènement peut être déclenché par une action humaine (clic avec la souri
 
 Il existe de nombreux types d'évènements dont certains utilisent d'autres interfaces basées sur `Event`. L'interface `Event` contient les propriétés et méthodes qui sont communes à l'ensemble des évènements.
 
-De nombreux éléments DOM peuvent être paramétrés afin d'accepter (« d'écouter ») ces évènements et d'exécuter du code en réaction afin de les traiter (« gérer »). Les gestionnaires d'évènements sont généralement connectés (« attachés ») aux [éléments HTML](/fr/docs/Web/HTML/Element) (tels que `<button>`, `<div>`, `<span>`, etc.) grâce à la méthode [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) qui remplace les anciens [attributs de gestion d'évènement](/fr/docs/Web/HTML/Global_attributes) qui étaient auparavant utilisés en HTML. Avec cette méthode d'ajout plus récente, les gestionnaires peuvent également être déconnectés/détachés si besoin via la méthode [`EventTarget.removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener).
+De nombreux éléments DOM peuvent être paramétrés afin d'accepter (« d'écouter ») ces évènements et d'exécuter du code en réaction afin de les traiter (« gérer »). Les gestionnaires d'évènements sont généralement connectés (« attachés ») aux [éléments HTML](/fr/docs/Web/HTML/Reference/Elements) (tels que `<button>`, `<div>`, `<span>`, etc.) grâce à la méthode [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) qui remplace les anciens [attributs de gestion d'évènement](/fr/docs/Web/HTML/Reference/Global_attributes) qui étaient auparavant utilisés en HTML. Avec cette méthode d'ajout plus récente, les gestionnaires peuvent également être déconnectés/détachés si besoin via la méthode [`EventTarget.removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener).
 
 > [!NOTE]
 > Il est tout à fait possible d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse pourront tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).
 
-Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres [de bouillonnement (_bubbling_) et de capture](/fr/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) définis sur chaque gestionnaire ainsi déclenché.
+Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres [de bouillonnement (_bubbling_) et de capture](/fr/docs/Learn_web_development/Core/Scripting/Events#event_bubbling_and_capture) définis sur chaque gestionnaire ainsi déclenché.
 
 ## Interfaces basées sur Event
 
@@ -147,5 +147,5 @@ On notera que l'ensemble des interfaces d'évènements ont un nom qui termine pa
 ## Voir aussi
 
 - Les types d'évènement disponibles : [Référence des évènements](/fr/docs/Web/Events)
-- [Comparaison des cibles d'évènements](/fr/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
+- [Comparaison des cibles d'évènements](/fr/docs/Learn_web_development/Core/Scripting/Event_bubbling) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
 - [Créer et déclencher des évènements personnalisés](/fr/docs/Web/Events/Creating_and_triggering_events)

@@ -81,7 +81,7 @@ small {
 
 On aura ainsi une taille minimale de `1rem` et la taille du texte qui se met à l'échelle si on zoome sur la page.
 
-- [Comprendre les règles 1.4 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) (MDN)
+- [Comprendre les règles 1.4 du WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) (MDN)
 - [Comprendre le critère de réussite 1.4.4 du WCAG 2.0 (W3C)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Spécifications
@@ -97,4 +97,4 @@ On aura ainsi une taille minimale de `1rem` et la taille du texte qui se met à 
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [Valeurs et unités en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Valeurs et unités en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

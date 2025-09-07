@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("XSLT")}}
 
-Un objet **`XSLTProcessor`** applique une feuille de style de transformation [XSLT](/fr/docs/Web/XSLT) sur un document XML afin de produire un nouveau document XML. Il dispose de méthodes pour charger la feuille de styles XSLT, manipuler les valeurs des paramètres `<xsl:param>`, et pour appliquer la transformation correspondante à des documents.
+Un objet **`XSLTProcessor`** applique une feuille de style de transformation [XSLT](/fr/docs/Web/XML/XSLT) sur un document XML afin de produire un nouveau document XML. Il dispose de méthodes pour charger la feuille de styles XSLT, manipuler les valeurs des paramètres `<xsl:param>`, et pour appliquer la transformation correspondante à des documents.
 
 ## Constructeur
 
@@ -217,7 +217,7 @@ function init() {
 
 ### Exemple avancé
 
-Dans cet exemple avancé, on trie plusieurs éléments [`<div>`](/fr/docs/Web/HTML/Element/div) selon leur contenu. Cet exemple permet de trier le contenu à plusieurs reprises, d'alterner entre un ordre croissant ou décroissant. Le code JavaScript charge le fichier XSL pour le premier tri puis marque la variable `xslloaded` avec `true` lorsque le chargement du fichier est terminé. Grâce à la méthode [`XSLTProcessor.getParameter()`](/fr/docs/Web/API/XSLTProcessor/getParameter), on peut savoir si on souhaite un tri croissant ou décroissant. La valeur par défaut correspond à un tri croissant. L'ordre du tri peut être fixé à l'aide de la méthode [`XSLTProcessor.setParameter()`](/fr/docs/Web/API/XSLTProcessor/setParameter).
+Dans cet exemple avancé, on trie plusieurs éléments [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) selon leur contenu. Cet exemple permet de trier le contenu à plusieurs reprises, d'alterner entre un ordre croissant ou décroissant. Le code JavaScript charge le fichier XSL pour le premier tri puis marque la variable `xslloaded` avec `true` lorsque le chargement du fichier est terminé. Grâce à la méthode [`XSLTProcessor.getParameter()`](/fr/docs/Web/API/XSLTProcessor/getParameter), on peut savoir si on souhaite un tri croissant ou décroissant. La valeur par défaut correspond à un tri croissant. L'ordre du tri peut être fixé à l'aide de la méthode [`XSLTProcessor.setParameter()`](/fr/docs/Web/API/XSLTProcessor/setParameter).
 
 Le fichier XSLT contient un paramètre `myOrder` que le code JavaScript fixe pour changer la méthode de tri. L'attribut `order` de l'élément `xsl:sort` peut accéder à la valeur du paramètre avec `$myOrder`. Toutefois, il faut que la valeur soit une expression XPath et pas une chaîne de caractères, c'est pour cela qu'on écrit `{$myOrder}`. Les accolades (`{}`) permettent d'évaluer le contenu dans une expression XPath.
 
@@ -327,4 +327,4 @@ function sort() {
 
 ## Voir aussi
 
-- [XSLT](/fr/docs/Web/XSLT)
+- [XSLT](/fr/docs/Web/XML/XSLT)

@@ -57,8 +57,8 @@ p {
 ## Voir aussi
 
 - [La référence CSS](/fr/docs/Web/CSS/Reference)
-- [La notion de valeur initiale](/fr/docs/Web/CSS/initial_value)
-- [La notion de valeur calculée](/fr/docs/Web/CSS/computed_value)
-- [La notion de valeur utilisée](/fr/docs/Web/CSS/used_value)
-- [La notion de valeur résolue](/fr/docs/Web/CSS/resolved_value)
-- [La notion de valeur réelle](/fr/docs/Web/CSS/actual_value)
+- [La notion de valeur initiale](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
+- [La notion de valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
+- [La notion de valeur utilisée](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
+- [La notion de valeur résolue](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
+- [La notion de valeur réelle](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)

@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/del
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<del>`** représente une portion de texte ayant été supprimée d'un document. Cet élément est souvent (mais pas nécessairement) affiché rayé. L'élément [`<ins>`](/fr/docs/Web/HTML/Element/ins) est quant à lui utilisé pour représenter des portions de texte ajoutées.
+L'élément HTML **`<del>`** représente une portion de texte ayant été supprimée d'un document. Cet élément est souvent (mais pas nécessairement) affiché rayé. L'élément [`<ins>`](/fr/docs/Web/HTML/Reference/Elements/ins) est quant à lui utilisé pour représenter des portions de texte ajoutées.
 
 {{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
 
@@ -103,12 +103,12 @@ Cet élément est souvent (mais pas nécessairement) rendu en appliquant un styl
 
 ## Attributs
 
-Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur `<del>`.
+Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur `<del>`.
 
 - `cite`
   - : Une URL pour une ressource expliquant le changement (cela peut être un procès verbal d'une réunion par exemple).
 - `datetime`
-  - : Cet attribut indique l'heure et la date du changement et doit être une date valide avec une heure facultative. Si la valeur ne peut pas être analysée comme telle, l'élément n'aura pas d'information temporelle associée. Voir [l'article sur les formats](/fr/docs/Web/HTML/Date_and_time_formats) pour la représentation d'[une date seule](/fr/docs/Web/HTML/Date_and_time_formats#date_strings) ou d'[une date avec une heure](/fr/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
+  - : Cet attribut indique l'heure et la date du changement et doit être une date valide avec une heure facultative. Si la valeur ne peut pas être analysée comme telle, l'élément n'aura pas d'information temporelle associée. Voir [l'article sur les formats](/fr/docs/Web/HTML/Guides/Date_and_time_formats) pour la représentation d'[une date seule](/fr/docs/Web/HTML/Guides/Date_and_time_formats#date_strings) ou d'[une date avec une heure](/fr/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings).
 
 ## Exemples
 
@@ -160,5 +160,5 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
 
 ## Voir aussi
 
-- L'élément [`<ins>`](/fr/docs/Web/HTML/Element/ins) permet de représenter les insertions dans un texte
-- L'élément [`<s>`](/fr/docs/Web/HTML/Element/s) permet de représenter des portions de texte qui ne sont plus pertinentes (elles sont généralement barrées)
+- L'élément [`<ins>`](/fr/docs/Web/HTML/Reference/Elements/ins) permet de représenter les insertions dans un texte
+- L'élément [`<s>`](/fr/docs/Web/HTML/Reference/Elements/s) permet de représenter des portions de texte qui ne sont plus pertinentes (elles sont généralement barrées)

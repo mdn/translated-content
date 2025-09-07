@@ -218,7 +218,7 @@ Pour les langages qui n'ont pas cette notion, les développeuses et développeur
 
 Dans cet article, nous avons décrit les fonctionnalités de base d'un langage de programmation orienté objet et qui utilise les classes, comme Java ou C++.
 
-Dans les deux articles précédents, nous avions vu deux fonctionnalités de JavaScript&nbsp;: [les constructeurs](/fr/docs/Learn/JavaScript/Objects/Basics) et [les prototypes](/fr/docs/Learn/JavaScript/Objects/Object_prototypes). Ces fonctionnalités sont liées à certains des concepts orientés objet vus ci-dessus.
+Dans les deux articles précédents, nous avions vu deux fonctionnalités de JavaScript&nbsp;: [les constructeurs](/fr/docs/Learn_web_development/Core/Scripting/Object_basics) et [les prototypes](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes). Ces fonctionnalités sont liées à certains des concepts orientés objet vus ci-dessus.
 
 - **Les constructeurs** JavaScript fournissent de quoi écrire une définition de classe pour définir la structure d'un objet, dont ses méthodes, à un seul endroit. Toutefois, les prototypes peuvent aussi être utilisés dans ce cas. Ainsi, si une méthode est définie sur la propriété `prototype` du constructeur, tous les objets créés avec le constructeur auront la méthode via leur prototype et il ne sera pas nécessaire de la définir dans le constructeur.
 

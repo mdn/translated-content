@@ -27,7 +27,7 @@ label {
 
 ## Attributs
 
-Comme pour les autres éléments HTML, cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme pour les autres éléments HTML, cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `form`
   - : Cet attribut contient l'attribut **`id`** de l'élément {{HTMLElement("form")}} auquel celui-ci est rattaché. Par défaut, il est à l'élément {{HTMLElement("form")}} qui est son plus proche ancêtre.

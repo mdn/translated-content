@@ -49,4 +49,4 @@ Vous trouverez des informations plus détaillées sur les différences entre les
 
 - [Incompatibilités Chrome](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 - [Prise en charge des API Javascript par le navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-- [Compatibilité du navigateur pour manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Compatibilité du navigateur pour manifest.json](/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/manifest.json)

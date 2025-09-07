@@ -15,5 +15,5 @@ Dans {{Glossary("JavaScript")}}, **BigInt** est un type de données numériques 
 
 ### Référence technique
 
-- La structure de données JavaScript : [`BigInt`](/fr/docs/Web/JavaScript/Data_structures#bigint_type)
+- La structure de données JavaScript : [`BigInt`](/fr/docs/Web/JavaScript/Guide/Data_structures#bigint_type)
 - L'objet global JavaScript {{jsxref("BigInt")}}

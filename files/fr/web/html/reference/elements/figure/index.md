@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/figure
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<figure>`** représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption). La figure, sa légende et son contenu sont référencés comme une seule unité.
+L'élément HTML **`<figure>`** représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément [`<figcaption>`](/fr/docs/Web/HTML/Reference/Elements/figcaption). La figure, sa légende et son contenu sont référencés comme une seule unité.
 
 {{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
 
@@ -95,13 +95,13 @@ figcaption {
 
 ## Attributs
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
 - Généralement, un élément `<figure>` est utilisé pour une image, une illustration, un diagramme, un fragment de code ou autre qui est référencé depuis le flux principal du document. Toutefois, cet élément peut être déplacé vers une autre partie du document ou en annexe sans que cela ait un impact sur le flux principal.
-- `<figure>` est [une racine de sectionnement](/fr/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), son contenu est donc exclu du plan général du document.
-- Une légende peut être associée avec l'élément `<figure>` en insérant un élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption) à l'intérieur (en premier ou dernier élément enfant). C'est le premier élément `<figcaption>` qui sera trouvé dans la figure qui sera affiché comme légende.
+- `<figure>` est [une racine de sectionnement](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#sectioning_roots), son contenu est donc exclu du plan général du document.
+- Une légende peut être associée avec l'élément `<figure>` en insérant un élément [`<figcaption>`](/fr/docs/Web/HTML/Reference/Elements/figcaption) à l'intérieur (en premier ou dernier élément enfant). C'est le premier élément `<figcaption>` qui sera trouvé dans la figure qui sera affiché comme légende.
 
 ## Exemples
 
@@ -196,4 +196,4 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
 ## Voir aussi
 
-- L'élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption)
+- L'élément [`<figcaption>`](/fr/docs/Web/HTML/Reference/Elements/figcaption)

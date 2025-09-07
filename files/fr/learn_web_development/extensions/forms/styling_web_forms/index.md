@@ -16,7 +16,7 @@ Quelques années plus tard, les CSS ont été créées et ce qui était une néc
 
 Comme les utilisateurs étaient habitués à l'apparence visuelle de leurs plateformes respectives, les fournisseurs de navigateurs étaient réticents à rendre possible la modification de l'apparence des formulaires. Et pour être honnête, il est toujours extrêmement difficile de reconstruire tous les contrôles pour que leur apparence soit modifiable.
 
-Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs/Learn/Forms).
+Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms).
 
 ### Tous les widgets ne sont pas égaux devant les CSS
 
@@ -37,9 +37,9 @@ Ceci inclut aussi tous les widgets de champs textuels (qu'ils soient mono ou mul
 
 L'apparence de certains éléments ne peut être modifiée que rarement et peut nécessiter quelques astuces complexes, et parfois une connaissance avancée des CSS3.
 
-Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu [`placeholder`](/fr/docs/Web/HTML/Element/input#placeholder) ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.
+Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.
 
-Nous allons voir comment gérer ces cas particuliers dans l'article [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling).
+Nous allons voir comment gérer ces cas particuliers dans l'article [Apparence avancée des formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 
 #### Le truand
 
@@ -49,11 +49,11 @@ Le principal problème avec tous ces widgets vient du fait que leur structure es
 
 ## Compositions stylistiques de base
 
-Pour changer l'apparence [des éléments facilement modifiables](/fr/docs/Learn/Forms/Styling_web_forms#le_bon) avec les CSS, vous ne devriez pas rencontrer de problèmes, puisqu'ils se comportent comme n'importe quel autre élément HTML. Toutefois, les feuilles de style peuvent ne pas être cohérentes entre navigateurs, il y a donc un certain nombre d'astuces à connaître.
+Pour changer l'apparence [des éléments facilement modifiables](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms#le_bon) avec les CSS, vous ne devriez pas rencontrer de problèmes, puisqu'ils se comportent comme n'importe quel autre élément HTML. Toutefois, les feuilles de style peuvent ne pas être cohérentes entre navigateurs, il y a donc un certain nombre d'astuces à connaître.
 
 ### Champs de recherche
 
-Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peut être un peu complexe à modifier. Sur les navigateurs utilisant WebKit (Chrome, Safari, etc.) vous devrez utiliser la propriété CSS propriétaire `-webkit-appearance`. Nous allons aborder le sujet plus en détails dans dans l'article&nbsp;: [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling).
+Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peut être un peu complexe à modifier. Sur les navigateurs utilisant WebKit (Chrome, Safari, etc.) vous devrez utiliser la propriété CSS propriétaire `-webkit-appearance`. Nous allons aborder le sujet plus en détails dans dans l'article&nbsp;: [Apparence avancée des formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 
 #### Exemple
 
@@ -207,7 +207,7 @@ Les polices demandent un supplément de traitement avant de débuter&nbsp;:
 1. Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de fontsquirrel.
 2. En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.
 3. Décompressez le fichier zip fourni.
-4. Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs&nbsp;; voyez notre article sur les [Web fonts](/fr/docs/Learn/CSS/Styling_text/Web_fonts) pour des informations plus détaillées.
+4. Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs&nbsp;; voyez notre article sur les [Web fonts](/fr/docs/Learn_web_development/Core/Text_styling/Web_fonts) pour des informations plus détaillées.
 
 ### Le CSS
 
@@ -397,6 +397,6 @@ Et voilà ! (en français dans le texte)
 
 Comme vous pouvez le voir, tant que nous voulons construire des formulaires avec seulement des champs de texte et des boutons, il est facile de les styliser à l'aide des CSS. Si vous voulez en savoir plus sur les petites astuces des CSS qui peuvent vous faciliter la vie lorsque vous travaillez avec des widgets de formulaire, jetez un coup d'oeil à la partie formulaire du [projet normalize.css](http://necolas.github.com/normalize.css).
 
-Dans le [prochain article](/fr/docs/Learn/Forms/Advanced_form_styling), nous verrons comment gérer les widgets des catégories « brutes » et « truands ».
+Dans le [prochain article](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling), nous verrons comment gérer les widgets des catégories « brutes » et « truands ».
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}

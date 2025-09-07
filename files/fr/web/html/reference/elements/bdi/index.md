@@ -57,9 +57,9 @@ Si `TEXTE-INJECTÉ` est un texte écrit de gauche à droite, aucun problème. En
 1 - TEXTE-INJECTÉre place
 ```
 
-Si on connaît d'avance la direction de `TEXTE-INJECTÉ`, on peut corriger le problème en enveloppant `TEXTE-INJECTÉ` dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) avec un attribut [`dir`](/fr/docs/Web/HTML/Global_attributes#attr-dir) décrivant la bonne direction. Cependant, si on ne connaît pas la direction à l'avance (`TEXTE-INJECTÉ` provenant d'une base de données ou étant saisi par un utilisateur), on utilisera `<bdi>` afin d'empêcher la direction de `TEXTE-INJECTÉ` d'avoir un impact sur le texte environnant.
+Si on connaît d'avance la direction de `TEXTE-INJECTÉ`, on peut corriger le problème en enveloppant `TEXTE-INJECTÉ` dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) avec un attribut [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-dir) décrivant la bonne direction. Cependant, si on ne connaît pas la direction à l'avance (`TEXTE-INJECTÉ` provenant d'une base de données ou étant saisi par un utilisateur), on utilisera `<bdi>` afin d'empêcher la direction de `TEXTE-INJECTÉ` d'avoir un impact sur le texte environnant.
 
-Bien que le même effet de rendu puisse être créé avec la règle CSS [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)`: isolate` sur un élément [`<span>`](/fr/docs/Web/HTML/Element/span) ou toute méthode de formatage du texte, la sémantique est ici uniquement portée par l'élément `<bdi>`. Les navigateurs peuvent notamment ignorer la mise en forme induite par la feuille CSS. Dans ce cas, le texte serait bien affiché en utilisant l'élément HTML mais deviendrait inutilisable si seul CSS est utilisé pour apporter cette information.
+Bien que le même effet de rendu puisse être créé avec la règle CSS [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)`: isolate` sur un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) ou toute méthode de formatage du texte, la sémantique est ici uniquement portée par l'élément `<bdi>`. Les navigateurs peuvent notamment ignorer la mise en forme induite par la feuille CSS. Dans ce cas, le texte serait bien affiché en utilisant l'élément HTML mais deviendrait inutilisable si seul CSS est utilisé pour apporter cette information.
 
 Utiliser `<span dir="auto">` aura le même effet qu'utiliser `<bdi>` mais la sémantique portée sera moindre.
 
@@ -130,13 +130,13 @@ Utiliser `<span dir="auto">` aura le même effet qu'utiliser `<bdi>` mais la sé
 
 ## Attributs
 
-Comme tous les éléments HTML, cet élément dispose des [attributs universels](/fr/docs/Web/HTML/Global_attributes). Cependant il a une sémantique légèrement différente. En effet, l'attribut **`dir`** n'est pas hérité. S'il n'est pas renseigné, sa valeur par défaut sera `auto` et le navigateur décidera de la direction à appliquer selon le contenu de l'élément si aucune valeur parmi `"rtl"`, `"ltr"` n'est fournie.
+Comme tous les éléments HTML, cet élément dispose des [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes). Cependant il a une sémantique légèrement différente. En effet, l'attribut **`dir`** n'est pas hérité. S'il n'est pas renseigné, sa valeur par défaut sera `auto` et le navigateur décidera de la direction à appliquer selon le contenu de l'élément si aucune valeur parmi `"rtl"`, `"ltr"` n'est fournie.
 
 ## Exemples
 
 ### Gauche à droite sans bdi
 
-Cet exemple affiche les gagnants d'une compétition grâce à des éléments [`<span>`](/fr/docs/Web/HTML/Element/span). Ici, les noms ne s'écrivent que de gauche à droite et le résultat s'affiche correctement :
+Cet exemple affiche les gagnants d'une compétition grâce à des éléments [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span). Ici, les noms ne s'écrivent que de gauche à droite et le résultat s'affiche correctement :
 
 ```html
 <ul>
@@ -219,5 +219,5 @@ body {
 
 - [Le balisage en ligne et texte bidirectionnel en HTML (W3C)](https://www.w3.org/International/articles/inline-bidi-markup/) (en anglais)
 - [Les bases de l'algorithme bidirectionnel Unicode (W3C)](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) (en anglais)
-- Un élément HTML connexe : [`<bdo>`](/fr/docs/Web/HTML/Element/bdo)
+- Un élément HTML connexe : [`<bdo>`](/fr/docs/Web/HTML/Reference/Elements/bdo)
 - Les propriétés CSS [`direction`](/fr/docs/Web/CSS/direction) et [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)

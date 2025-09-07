@@ -13,7 +13,7 @@ Vous pouvez ajouter différents types de styles de bordures, y compris des bordu
 
 Les ombres des boîtes comprennent les ombres intérieures et extérieures, les ombres simples ou multiples, et les ombres opaques ou transparentes. Une ombre extérieure projette une ombre comme si la bordure de l'élément était opaque. Une ombre intérieure projette une ombre comme si tout ce qui se trouvait à l'extérieur du bord de remplissage était opaque. L'ombre peut être unie et opaque ou inclure une distance d'étalement avec une transition de la couleur de l'ombre vers la transparence.
 
-Les propriétés de ce module vous permettent également de définir si les cellules à l'intérieur d'un élément [`<table>`](/fr/docs/Web/HTML/Element/table) doivent avoir des bordures communes ou séparées.
+Les propriétés de ce module vous permettent également de définir si les cellules à l'intérieur d'un élément [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) doivent avoir des bordures communes ou séparées.
 
 ### Arrière-plans, bordures et ombres de boîtes en action
 
@@ -87,13 +87,13 @@ Pour voir le code de cet exemple, [regardez le code source sur GitHub](https://g
 
 ## Guides
 
-- [Apprendre CSS: Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Apprendre CSS: Arrière-plans et bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : Dans cet article, on voit comment implémenter des images décoratives à l'aide d'images d'arrière-plan CSS.
 - [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : Dans cet article, on voit comment paramétrer un ou plusieurs arrière-plans pour un élément.
 - [Redimensionner les images d'arrière-plan avec background-size](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : Dans cet article, on voit comment modifier la taille et paramétrer la répétition d'une image d'arrière-plan.
-- [Apprendre CSS: Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Apprendre CSS: Le modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : Dans cet article, on voit comment les bordures, ainsi que d'autres propriétés du modèle de boîte, affectent le modèle de boîte CSS.
 - [Utilisation de dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Dans cet article, on voit comment créer des images d'arrière-plan dégradées CSS.

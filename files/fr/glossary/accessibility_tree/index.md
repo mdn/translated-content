@@ -20,7 +20,7 @@ Un objet de l'arbre d'accessibilité contient quatre éléments&nbsp;:
 - [**role**](/fr/docs/Web/Accessibility/ARIA/Roles)
   - : Quel genre de chose est cet élément&nbsp;? Par exemple est-ce un bouton, une barre de navigation ou une liste d'éléments&nbsp;?
 - **state**
-  - : A-t-il un état&nbsp;? Pensez à coché/décoché pour les checkboxes, ou plié/déplié pour l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary).
+  - : A-t-il un état&nbsp;? Pensez à coché/décoché pour les checkboxes, ou plié/déplié pour l'élément [`<summary>`](/fr/docs/Web/HTML/Reference/Elements/summary).
 
 De plus, l'arbre d'accessibilité contient souvent des informations concernant ce qui peut être fait avec un élément&nbsp;: un lien peut être _suivi_, on peut _écrire dans_ un champ texte etc.
 

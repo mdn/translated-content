@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/figcaption
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<figcaption>`** représente une légende décrivant le reste du contenu de son élément parent [`<figure>`](/fr/docs/Web/HTML/Element/figure).
+L'élément HTML **`<figcaption>`** représente une légende décrivant le reste du contenu de son élément parent [`<figure>`](/fr/docs/Web/HTML/Reference/Elements/figure).
 
 {{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
 
@@ -107,11 +107,11 @@ figcaption {
 
 ## Attributs
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemple
 
-Veuillez consulter la page [`<figure>`](/fr/docs/Web/HTML/Element/figure) pour des exemples sur `<figcaption>`.
+Veuillez consulter la page [`<figure>`](/fr/docs/Web/HTML/Reference/Elements/figure) pour des exemples sur `<figcaption>`.
 
 ## Spécifications
 
@@ -123,4 +123,4 @@ Veuillez consulter la page [`<figure>`](/fr/docs/Web/HTML/Element/figure) pour d
 
 ## Voir aussi
 
-- L'élément [`<figure>`](/fr/docs/Web/HTML/Element/figure)
+- L'élément [`<figure>`](/fr/docs/Web/HTML/Reference/Elements/figure)

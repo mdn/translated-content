@@ -123,14 +123,14 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 ### WebAssembly
 
-- [`WebAssembly`](/fr/docs/WebAssembly/JavaScript_interface)
-- [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module)
-- [`WebAssembly.Instance`](/fr/docs/WebAssembly/JavaScript_interface/Instance)
-- [`WebAssembly.Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory)
-- [`WebAssembly.Table`](/fr/docs/WebAssembly/JavaScript_interface/Table)
-- [`WebAssembly.CompileError`](/fr/docs/WebAssembly/JavaScript_interface/CompileError)
-- [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError)
-- [`WebAssembly.RuntimeError`](/fr/docs/WebAssembly/JavaScript_interface/RuntimeError)
+- [`WebAssembly`](/fr/docs/WebAssembly/Reference/JavaScript_interface)
+- [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module)
+- [`WebAssembly.Instance`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Instance)
+- [`WebAssembly.Memory`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+- [`WebAssembly.Table`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table)
+- [`WebAssembly.CompileError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
+- [`WebAssembly.LinkError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
+- [`WebAssembly.RuntimeError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
 
 ## Instructions
 
@@ -290,8 +290,8 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 - [`&&=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
 - [`||=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
 - [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-- [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-- [`{a, b} = {a:1, b:2}`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
+- [`{a, b} = {a:1, b:2}`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### Opérateur virgule
 
@@ -309,6 +309,6 @@ Ce chapitre documente comment travailler avec [les fonctions JavaScript](/fr/doc
 ## Autres pages de la référence
 
 - [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Types de données et structures de données](/fr/docs/Web/JavaScript/Data_structures)
+- [Types de données et structures de données](/fr/docs/Web/JavaScript/Guide/Data_structures)
 - [Mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
 - [Fonctionnalités dépréciées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

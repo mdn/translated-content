@@ -12,7 +12,7 @@ slug: Web/API/CSS_Properties_and_Values_API
 - {{domxref('CSS.registerProperty')}}
   - : Définit la manière dont un navigateur devrait analyser une {{cssxref('--*', 'propriété CSS personnalisée')}}. L'accès à cette interface se fait en [JavaScript](/fr/docs/Web/JavaScript) via {{domxref('CSS.registerProperty')}}.
 - {{cssxref('@property')}}
-  - : Définit la manière dont un navigateur devrait analyser une {{cssxref('--*', 'propriété CSS personnalisée')}}. L'accès à cette interface se fait à l'aide d'une règle [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}} en [CSS](/fr/docs/Web/CSS).
+  - : Définit la manière dont un navigateur devrait analyser une {{cssxref('--*', 'propriété CSS personnalisée')}}. L'accès à cette interface se fait à l'aide d'une règle [at-rule](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref('@property')}} en [CSS](/fr/docs/Web/CSS).
 
 ## Exemples
 
@@ -27,7 +27,7 @@ window.CSS.registerProperty({
 });
 ```
 
-Le même enregistrement peut se faire en [CSS](/fr/docs/Web/CSS) en utilisant la règle [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}}&nbsp;:
+Le même enregistrement peut se faire en [CSS](/fr/docs/Web/CSS) en utilisant la règle [at-rule](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref('@property')}}&nbsp;:
 
 ```css
 @property --ma-couleur {

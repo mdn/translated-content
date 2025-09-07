@@ -43,22 +43,22 @@ Origin: <schema>://<nomhote>:<port>
 
 ## Description
 
-L'en-tête `Origin` est semblable à l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer), mais ne contient pas le chemin de la ressource et peut valoir `null`. On l'utilise pour fournir le «&nbsp;contexte de sécurité&nbsp;» de la requête d'origine, sauf dans les cas où l'information de l'origine est superflue ou sensible pour des questions de vie privée.
+L'en-tête `Origin` est semblable à l'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer), mais ne contient pas le chemin de la ressource et peut valoir `null`. On l'utilise pour fournir le «&nbsp;contexte de sécurité&nbsp;» de la requête d'origine, sauf dans les cas où l'information de l'origine est superflue ou sensible pour des questions de vie privée.
 
 Au sens large, les agents utilisateurs envoient l'en-tête `Origin` avec les requêtes&nbsp;:
 
 - [D'origines multiples](/fr/docs/Glossary/CORS) (<i lang="en">cross origin</i> en anglais).
-- [De même origine](/fr/docs/Web/Security/Same-origin_policy), sauf pour les requêtes utilisant les méthodes [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) (autrement dit, cet en-tête est utilisé pour les requêtes avec la méthode [`POST`](/fr/docs/Web/HTTP/Methods/POST), [`OPTIONS`](/fr/docs/Web/HTTP/Methods/OPTIONS), [`PUT`](/fr/docs/Web/HTTP/Methods/PUT), [`PATCH`](/fr/docs/Web/HTTP/Methods/PATCH), et [`DELETE`](/fr/docs/Web/HTTP/Methods/DELETE)).
+- [De même origine](/fr/docs/Web/Security/Same-origin_policy), sauf pour les requêtes utilisant les méthodes [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) (autrement dit, cet en-tête est utilisé pour les requêtes avec la méthode [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST), [`OPTIONS`](/fr/docs/Web/HTTP/Reference/Methods/OPTIONS), [`PUT`](/fr/docs/Web/HTTP/Reference/Methods/PUT), [`PATCH`](/fr/docs/Web/HTTP/Reference/Methods/PATCH), et [`DELETE`](/fr/docs/Web/HTTP/Reference/Methods/DELETE)).
 
-Il existe certaines exceptions aux règles précédentes. Par exemple, lorsqu'une requête [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) est effectuée en mode [`no-cors`](/fr/docs/Web/API/Request/mode#value), l'en-tête `Origin` ne sera pas ajouté.
+Il existe certaines exceptions aux règles précédentes. Par exemple, lorsqu'une requête [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) est effectuée en mode [`no-cors`](/fr/docs/Web/API/Request/mode#value), l'en-tête `Origin` ne sera pas ajouté.
 
 L'en-tête `Origin` peut valoir `null` dans certains cas (la liste qui suit n'est pas exhaustive)&nbsp;:
 
 - Le schéma de l'origine n'est pas `http`, `https`, `ftp`, `ws`, `wss`, ou `gopher` (y compris `blob`, `file` et `data`).
-- La requête porte sur des médias d'origines multiples, par exemple via les éléments [`<img>`](/fr/docs/Web/HTML/Element/img), [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<audio>`](/fr/docs/Web/HTML/Element/audio).
+- La requête porte sur des médias d'origines multiples, par exemple via les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) et [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio).
 - Pour les documents créés via un programme à l'aide de [`createDocument()`](/fr/docs/Web/API/DOMImplementation/createDocument), ou générés à partir d'une URL `data:`, ou qui n'ont pas de contexte de navigation créateur.
 - Pour les redirections entre les origines.
-- Pour les éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) dont l'attribut `sandox` ne contient pas la valeur `allow-same-origin`.
+- Pour les éléments [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) dont l'attribut `sandox` ne contient pas la valeur `allow-same-origin`.
 - Pour les réponses qui sont des erreurs réseau.
 
 > [!NOTE]
@@ -84,7 +84,7 @@ Origin: https://developer.mozilla.org:80
 
 ## Voir aussi
 
-- [`Host`](/fr/docs/Web/HTTP/Headers/Host)
-- [`Referer`](/fr/docs/Web/HTTP/Headers/Referer)
+- [`Host`](/fr/docs/Web/HTTP/Reference/Headers/Host)
+- [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer)
 - [Politique de même origine](/fr/docs/Web/Security/Same-origin_policy)
 - [Quand les navigateurs envoient-ils l'en-tête `Origin`&nbsp;? Quand l'origine est-elle mise à `null`&nbsp;? (question Stack Overflow, en anglais)](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)

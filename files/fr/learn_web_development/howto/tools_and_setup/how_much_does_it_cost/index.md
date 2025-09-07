@@ -153,7 +153,7 @@ Selon les réponses à ces questions, votre site peut coûter entre quelques mil
 
 ## Prochaines étapes
 
-Maintenant que la question du coût est résolue, il est temps de commencer à concevoir ce site web et de [préparer un environnement de travail](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+Maintenant que la question du coût est résolue, il est temps de commencer à concevoir ce site web et de [préparer un environnement de travail](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
-- Vous pouvez lire [cet article sur comment choisir et installer un éditeur de texte](/fr/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
-- Si vous souhaitez en savoir plus sur les aspects de conception, vous pouvez [décortiquer l'anatomie d'une page web](/fr/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts).
+- Vous pouvez lire [cet article sur comment choisir et installer un éditeur de texte](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors).
+- Si vous souhaitez en savoir plus sur les aspects de conception, vous pouvez [décortiquer l'anatomie d'une page web](/fr/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).

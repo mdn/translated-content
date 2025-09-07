@@ -38,7 +38,7 @@ result; // "Barry"
 
 ### Apprendre sur ce sujet
 
-- [Exemple rapide](/fr/docs/Web/JavaScript/Language_overview#les_fonctions) (à la fin de la section "Les fonctions", juste avant "Les objets personnalisés")
+- [Exemple rapide](/fr/docs/Web/JavaScript/Guide/Language_overview#les_fonctions) (à la fin de la section "Les fonctions", juste avant "Les objets personnalisés")
 
 ### Culture générale
 

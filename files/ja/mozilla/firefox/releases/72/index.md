@@ -56,7 +56,7 @@ _変更なし。_
 
 ### JavaScript
 
-- [Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) を実装しました ([Firefox バグ 1566141](https://bugzil.la/1566141))。
+- [ヌル値合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)を実装しました ([Firefox バグ 1566141](https://bugzil.la/1566141))。
 
 ### API
 

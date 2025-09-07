@@ -134,8 +134,8 @@ console.log(machin); // 4.555806215962888
 ```
 
 > [!NOTE]
-> Si l'import est réalisé dans un script HTML, il faut que celui-ci soit chargé avec l'attribut [`type`](/fr/docs/Web/HTML/Global_attributes#type) `"module"` : `<script type="module" src="./demo.js"></script>` sinon il y aura une erreur quant aux origines multiples ([CORS](/fr/docs/Web/HTTP/CORS)).
-> Il n'est pas possible de charger des modules JavaScript via une URL `file://` pour des raisons de sécurité (voir [CORS](/fr/docs/Web/HTTP/CORS) également). Il faudra utiliser un serveur HTTP.
+> Si l'import est réalisé dans un script HTML, il faut que celui-ci soit chargé avec l'attribut [`type`](/fr/docs/Web/HTML/Reference/Global_attributes#type) `"module"` : `<script type="module" src="./demo.js"></script>` sinon il y aura une erreur quant aux origines multiples ([CORS](/fr/docs/Web/HTTP/Guides/CORS)).
+> Il n'est pas possible de charger des modules JavaScript via une URL `file://` pour des raisons de sécurité (voir [CORS](/fr/docs/Web/HTTP/Guides/CORS) également). Il faudra utiliser un serveur HTTP.
 
 ### Utilisation d'exports par défaut
 

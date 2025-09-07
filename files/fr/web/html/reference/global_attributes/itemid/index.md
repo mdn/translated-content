@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/itemid
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`itemid`** permet d'identifier un objet, au sens des microdonnées, de façon unique et globale. L'attribut `itemid` peut uniquement être défini sur les éléments qui ont un attribut [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope) et un attribut [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype). De plus, un `itemid` ne peut pas être défini sur des éléments dont l'attribut `itemscope` possède un attribut `itemtype` qui définit un vocabulaire qui ne prend pas en charge les identifiants globaux tels que défini dans la spécification du vocabulaire.
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemid`** permet d'identifier un objet, au sens des microdonnées, de façon unique et globale. L'attribut `itemid` peut uniquement être défini sur les éléments qui ont un attribut [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes#itemscope) et un attribut [`itemtype`](/fr/docs/Web/HTML/Reference/Global_attributes#itemtype). De plus, un `itemid` ne peut pas être défini sur des éléments dont l'attribut `itemscope` possède un attribut `itemtype` qui définit un vocabulaire qui ne prend pas en charge les identifiants globaux tels que défini dans la spécification du vocabulaire.
 
 La signification exacte d'un identifiant global est déterminée par la spécification du vocabulaire. C'est le rôle de cette spécification d'autoriser ou non la présence de plusieurs éléments avec le même identifiant (sur une ou plusieurs pages) et de définir les règles de gestion associées.
 
@@ -80,10 +80,10 @@ Un élément qui décrit un livre :
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 - Les autres attributs universels relatifs aux microdonnées :
-  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop)
+  - [`itemref`](/fr/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes#itemscope)
+  - [`itemtype`](/fr/docs/Web/HTML/Reference/Global_attributes#itemtype)

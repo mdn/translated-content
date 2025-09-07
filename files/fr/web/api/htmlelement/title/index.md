@@ -40,4 +40,4 @@ bouton1.title = "cliquer pour rafraîchir";
 
 ## Voir aussi
 
-- L'attribut HTML global [**title**](/fr/docs/Web/HTML/Global_attributes/title).
+- L'attribut HTML global [**title**](/fr/docs/Web/HTML/Reference/Global_attributes/title).

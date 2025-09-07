@@ -20,7 +20,7 @@ font-language-override: inherit;
 font-language-override: unset;
 ```
 
-Par défaut, les navigateurs utilisent l'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) pour déterminer la langue du texte d'un élément. Grâce à cette information, certains glyphes spéciaux, conçus pour cette langue, peuvent être utilisés. Ainsi, de nombreuses polices possèdent un caractère spécial pour la ligature `fi` afin que le point du `i` fusionne avec le caractère précédent. Cette ligature ne devrait pas être utilisée en turc, car il existe deux formes pour le i, avec et sans point : `i` et `ı`.
+Par défaut, les navigateurs utilisent l'attribut global [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes#lang) pour déterminer la langue du texte d'un élément. Grâce à cette information, certains glyphes spéciaux, conçus pour cette langue, peuvent être utilisés. Ainsi, de nombreuses polices possèdent un caractère spécial pour la ligature `fi` afin que le point du `i` fusionne avec le caractère précédent. Cette ligature ne devrait pas être utilisée en turc, car il existe deux formes pour le i, avec et sans point : `i` et `ı`.
 
 Quelques fois, l'auteur d'un document peut vouloir surcharger la langue. Ainsi, si la fonte ne sait pas que la langue azérie possède un i sans point, comme le turc, on pourra utiliser `font-language-override` pour forcer l'utilisation des glyphes turcs qui seront plus adaptés que les glyphes par défaut.
 

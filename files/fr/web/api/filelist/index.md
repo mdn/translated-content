@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File API")}}
 
-On pourra obtenir un objet de type `FileList` grâce à la propriété `files` d'un objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) (qui représente un élément HTML [`<input>`](/fr/docs/Web/HTML/Element/input)) du DOM. Un objet `FileList` permet d'accéder à la liste des fichiers sélectionnés via un élément `<input type="file">`. Il est également utilisé pour manipuler une liste de fichiers déposé dans du contenu web en glisser/déposer. Voir [la page sur l'objet `DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails sur ce deuxième usage.
+On pourra obtenir un objet de type `FileList` grâce à la propriété `files` d'un objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) (qui représente un élément HTML [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)) du DOM. Un objet `FileList` permet d'accéder à la liste des fichiers sélectionnés via un élément `<input type="file">`. Il est également utilisé pour manipuler une liste de fichiers déposé dans du contenu web en glisser/déposer. Voir [la page sur l'objet `DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails sur ce deuxième usage.
 
 Tous les nœuds qui sont des éléments `<input>` possèdent un attribut `files` de type `FileList` qui permet d'accéder aux éléments de cette liste. Ainsi, avec le fragment de HTML qui suit&nbsp;:
 

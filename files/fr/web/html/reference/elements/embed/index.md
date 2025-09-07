@@ -103,7 +103,7 @@ Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire 
 
 ## Attributs
 
-Cet élément possède [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément possède [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `height`
   - : La hauteur utilisée pour l'affichage de la ressource, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px). La valeur est absolue, les pourcentages ne sont pas autorisés.
@@ -131,7 +131,7 @@ Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/C
 
 ## Accessibilité
 
-Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title) sur un élément `embed` pour étiqueter son contenu afin que les personnes naviguant avec une technologie d'assistance telle qu'un lecteur d'écran puissent comprendre ce qu'il contient. La valeur du titre doit décrire de manière concise le contenu intégré. Sans titre, il se peut qu'elles ne soient pas en mesure de déterminer quel est son contenu intégré. Ce changement de contexte peut être source de confusion et de perte de temps, en particulier si l'élément `embed` contient du contenu interactif comme de la vidéo ou de l'audio.
+Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) sur un élément `embed` pour étiqueter son contenu afin que les personnes naviguant avec une technologie d'assistance telle qu'un lecteur d'écran puissent comprendre ce qu'il contient. La valeur du titre doit décrire de manière concise le contenu intégré. Sans titre, il se peut qu'elles ne soient pas en mesure de déterminer quel est son contenu intégré. Ce changement de contexte peut être source de confusion et de perte de temps, en particulier si l'élément `embed` contient du contenu interactif comme de la vidéo ou de l'audio.
 
 ## Spécifications
 
@@ -143,5 +143,5 @@ Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title) sur un 
 
 ## Voir aussi
 
-- D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<canvas>`](/fr/docs/Web/HTML/Element/canvas), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<img>`](/fr/docs/Web/HTML/Element/img), [`<math>`](/fr/docs/Web/MathML/Element/math), [`<object>`](/fr/docs/Web/HTML/Element/object), [`<svg>`](/fr/docs/Web/SVG/Element/svg), and [`<video>`](/fr/docs/Web/HTML/Element/video).
+- D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio), [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas), [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), [`<math>`](/fr/docs/Web/MathML/Reference/Element/math), [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), and [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video).
 - Positionnement et dimensionnement du contenu intégré dans son cadre : [`object-position`](/fr/docs/Web/CSS/object-position) and [`object-fit`](/fr/docs/Web/CSS/object-fit)

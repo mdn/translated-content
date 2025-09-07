@@ -39,7 +39,7 @@ La grille est un module de spécification puissant qui peut être combinée avec
 
 À partir du moment où on crée un _conteneur_ en déclarant la propriété `display: grid` ou `display: inline-grid` sur un élément, tous les _enfants directs_ de cet élément deviennent des _éléments de grille_.
 
-Cet exemple montre un élément [`<div>`](/fr/docs/Web/HTML/Element/div) avec une classe `.wrapper`, avec cinq éléments enfants.
+Cet exemple montre un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) avec une classe `.wrapper`, avec cinq éléments enfants.
 
 ```html
 <div class="wrapper">

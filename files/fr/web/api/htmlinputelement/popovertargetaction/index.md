@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("DOM")}}
 
-La propriété **`popoverTargetAction`** de l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) permet de lire et définit l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur un élément <i lang="en">popover</i> contrôlé par un élément [`<input>`](/fr/docs/Web/HTML/Element/input) avec l'attribut `type="button"`.
+La propriété **`popoverTargetAction`** de l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) permet de lire et définit l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur un élément <i lang="en">popover</i> contrôlé par un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) avec l'attribut `type="button"`.
 
-Elle reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Element/input#popovertargetaction).
+Elle reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/input#popovertargetaction).
 
 ## Valeur
 
@@ -30,7 +30,7 @@ Cet exemple montre une utilisation simple de l'API Popover avec la valeur `toggl
 
 #### HTML
 
-Tout d'abord, nous définissons un élément HTML `<button>` que nous utiliserons pour afficher et masquer le <i lang="en">popover</i>, et un `<div>` qui sera le <i lang="en">popover</i>. Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/input#l_attribut_popovertargetaction) sur le `<button>` ou l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) sur le `<div>`, car nous le ferons de manière programmatique.
+Tout d'abord, nous définissons un élément HTML `<button>` que nous utiliserons pour afficher et masquer le <i lang="en">popover</i>, et un `<div>` qui sera le <i lang="en">popover</i>. Dans ce cas, nous ne définissons pas l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/input#l_attribut_popovertargetaction) sur le `<button>` ou l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) sur le `<div>`, car nous le ferons de manière programmatique.
 
 ```html
 <input id="toggleBtn" type="button" value="Afficher/masquer le popover" />

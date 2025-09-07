@@ -5,14 +5,14 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/CSS_media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/CSS_media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
 
 > [!NOTE]
 > Il est possible de manipuler la règle @ `@media` via le CSSOM (et JavaScript) grâce à l'interface [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule).
 
 ## Syntaxe
 
-Une requête média (type `<media-query>`) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre [règle conditionnelle](/fr/docs/Web/CSS/At-rule#les_règles_de_groupe_conditionnelles).
+Une requête média (type `<media-query>`) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre [règle conditionnelle](/fr/docs/Web/CSS/CSS_syntax/At-rule#les_règles_de_groupe_conditionnelles).
 
 ```css
 /* Au niveau le plus haut du code */
@@ -74,7 +74,7 @@ Les expressions de caractéristique de média testent la présence ou la valeur 
 - [`device-width`](/fr/docs/Web/CSS/@media/device-width) {{deprecated_inline}}
   - : La largeur de la surface de rendu de l'appareil de sortie. Dépréciée avec le module de spécification sur les requêtes média de niveau 4.
 - [`display-mode`](/fr/docs/Web/CSS/@media/display-mode)
-  - : Le mode d'affichage de l'application, tel qu'indiqué par la propriété [`display`](/fr/docs/Web/Manifest#display) du manifeste de l'application. Définie par [la spécification du manifeste des applications web](https://w3c.github.io/manifest/#the-display-mode-media-feature).
+  - : Le mode d'affichage de l'application, tel qu'indiqué par la propriété [`display`](/fr/docs/Web/Progressive_web_apps/Manifest#display) du manifeste de l'application. Définie par [la spécification du manifeste des applications web](https://w3c.github.io/manifest/#the-display-mode-media-feature).
 - [`dynamic-range`](/fr/docs/Web/CSS/@media/dynamic-range)
   - : Une combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
 - [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
@@ -136,7 +136,7 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 
 Pour une meilleure interaction, notamment avec les personnes qui zooment sur une page pour accroître la taille du texte ou qui définissent une taille de police par défaut pour l'ensemble du navigateur, on utilisera l'unité [`em`](/fr/docs/Web/CSS/length#em) comme valeur pour [les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) lorsqu'il faut utiliser une longueur (valeur de type [`<length>`](/fr/docs/Web/CSS/length)).
 
-Les unités [`em`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) et [`px`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) sont toutes les deux valides mais [`em`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) s'adapte mieux quand la taille de la police du navigateur a été ajustée.
+Les unités [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longueur_et_taille) et [`px`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longueur_et_taille) sont toutes les deux valides mais [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longueur_et_taille) s'adapte mieux quand la taille de la police du navigateur a été ajustée.
 
 On privilégiera, autant que possible, les requêtes média de la spécification de niveau 4 afin d'améliorer l'ergonomie. On pourra, par exemple, se baser sur [`prefers-reduced-motion` afin de détecter si l'utilisateur souhaite minimiser les animations ou les déplacements](/fr/docs/Web/CSS/@media/prefers-reduced-motion).
 

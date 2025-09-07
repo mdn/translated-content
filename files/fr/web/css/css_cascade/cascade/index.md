@@ -10,7 +10,7 @@ l10n:
 
 La **cascade** est un algorithme qui définit comment les agents utilisateur combinent les valeurs des propriétés selon leurs différentes sources. La cascade définit l'origine et la couche qui l'emporte lorsque des déclarations présentes dans plusieurs [origines](#types_dorigine) ou [couches de cascade](/fr/docs/Web/CSS/@layer) définissent une valeur pour une propriété sur un élément.
 
-La cascade est au cœur de CSS, et fait même partie de l'acronyme _**<i lang="en">Cascading</i>**_ <i lang="en">Style Sheets</i> qu'on traduit par feuilles de style en cascade. Lorsqu'un [sélecteur](/fr/docs/Web/CSS/CSS_selectors) cible un élément, la valeur de la propriété avec l'origine qui a la plus haute précédence est appliquée, même si un sélecteur d'une origine avec une précédence moindre ou d'une autre couche a une [spécificité](/fr/docs/Web/CSS/Specificity) supérieure.
+La cascade est au cœur de CSS, et fait même partie de l'acronyme _**<i lang="en">Cascading</i>**_ <i lang="en">Style Sheets</i> qu'on traduit par feuilles de style en cascade. Lorsqu'un [sélecteur](/fr/docs/Web/CSS/CSS_selectors) cible un élément, la valeur de la propriété avec l'origine qui a la plus haute précédence est appliquée, même si un sélecteur d'une origine avec une précédence moindre ou d'une autre couche a une [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) supérieure.
 
 Dans cet article, on explique ce qu'est la cascade et l'ordre dans lequel les [déclarations](/fr/docs/Web/API/CSSStyleDeclaration) [CSS](/fr/docs/Glossary/CSS) cascadent. Nous aborderons également les couches de cascade et les types d'origine. Comprendre la précédence des origines est un prérequis fondamental pour comprendre le fonctionnement de la cascade.
 
@@ -32,11 +32,11 @@ Certains navigateurs permettent aux utilisatrices et utilisateurs de modifier le
 
 Bien que certaines contraintes soient imposées aux navigateurs sur leurs feuilles de style via la spécification HTML, ils ont une grande latitude. Cela signifie qu'il existe certaines différences entre les navigateurs. Pour simplifier le développement web, certaines équipes de développement peuvent utiliser une feuille de style de réinitialisation telle que [normalize.css](https://github.com/necolas/normalize.css), qui définit les valeurs des propriétés communes avec un état connu, avant de procéder à des modifications spécifiques.
 
-À moins que la feuille de style de l'agent utilisateur inclut [`!important`](/fr/docs/Web/CSS/Specificity#lexception_!important) à côté d'une propriété pour la rendre importante, les styles déclarés par le site, y compris les feuilles de style de réinitialisation, l'emporteront sur les styles de l'agent utilisateur, quelle que soit la spécificité du sélecteur associé.
+À moins que la feuille de style de l'agent utilisateur inclut [`!important`](/fr/docs/Web/CSS/CSS_cascade/Specificity#lexception_!important) à côté d'une propriété pour la rendre importante, les styles déclarés par le site, y compris les feuilles de style de réinitialisation, l'emporteront sur les styles de l'agent utilisateur, quelle que soit la spécificité du sélecteur associé.
 
 ### Feuilles de style du site
 
-Les **feuilles de style du site** (<i lang="en">author stylesheets</i> en anglais) sont les feuilles de style les plus fréquemment rencontrées. Il s'agit des styles écrits par les équipes de développement web. Ces styles peuvent réinitialiser les styles de l'agent utilisateur, comme indiqué avant, et définir les styles pour la conception d'une page ou application web donnée. C'est la personne ou l'équipe qui développe le site web qui définit les styles du document en utilisant une ou plusieurs feuilles de style importées ou liées, des éléments [`<style>`](/fr/docs/Web/HTML/Element/style) ou encore des styles en incise définis avec l'attribut [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style). Ce sont ces styles qui définissent l'aspect du site web, son thème.
+Les **feuilles de style du site** (<i lang="en">author stylesheets</i> en anglais) sont les feuilles de style les plus fréquemment rencontrées. Il s'agit des styles écrits par les équipes de développement web. Ces styles peuvent réinitialiser les styles de l'agent utilisateur, comme indiqué avant, et définir les styles pour la conception d'une page ou application web donnée. C'est la personne ou l'équipe qui développe le site web qui définit les styles du document en utilisant une ou plusieurs feuilles de style importées ou liées, des éléments [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) ou encore des styles en incise définis avec l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-style). Ce sont ces styles qui définissent l'aspect du site web, son thème.
 
 ### Feuilles de style de l'utilisatrice ou l'utilisateur
 
@@ -67,14 +67,14 @@ L'algorithme de la cascade détermine quelle valeur s'applique pour chaque propr
    | 7                                    | Agent utilisateur (navigateur) | `!important` |
    | 8                                    | Transitions CSS                |              |
 
-3. **Spécificité**&nbsp;: En cas d'égalité pour une même origine, [la spécificité](/fr/docs/Web/CSS/Specificity) d'une règle est considérée pour déterminer laquelle choisir. La spécificité des sélecteurs est comparée, et c'est la déclaration avec la plus grande spécificité qui l'emporte.
+3. **Spécificité**&nbsp;: En cas d'égalité pour une même origine, [la spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) d'une règle est considérée pour déterminer laquelle choisir. La spécificité des sélecteurs est comparée, et c'est la déclaration avec la plus grande spécificité qui l'emporte.
 4. **Ordre d'apparence**&nbsp;: Si plusieurs valeurs pour une même propriété sont décrites dans des règles avec des sélecteurs de même spécificité, c'est la dernière déclaration, dans l'ordre des styles, qui est appliquée.
 
 La cascade progresse dans l'ordre croissant des précédences, les animations ont donc la précédence sur les valeurs normales, qu'elles soient déclarées par l'utilisatrice ou l'utilisateur, le site, ou l'agent utilisateur. Les valeurs importantes l'emportent sur les animations, et les transitions l'emportent sur les valeurs importantes.
 
 > **Note :** **Transitions et animations**
 >
-> Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/Specificity#lexception_!important)).
+> Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/CSS_cascade/Specificity#lexception_!important)).
 >
 > Les valeurs des propriétés définies dans une transition ([`transition`](/fr/docs/Web/CSS/transition)) l'emportent sur toutes les autres valeurs, y compris celles marquées avec `!important`.
 
@@ -199,7 +199,7 @@ margin-left: 3px;
 
 L'ordre de déclaration des couches a son importance pour la détermination de la précédence. Les styles normaux situés dans une couche l'emportent sur les styles déclarés dans les couches antérieures. Les styles normaux déclarés en dehors de toute couche l'emportent sur les styles normaux situés dans des couches, quelle que soit la spécificité.
 
-Dans cet exemple, le site utilise la règle [`@import`](/fr/docs/Web/CSS/@import) pour importer cinq feuilles de styles externes dans un élément [`<style>`](/fr/docs/Web/HTML/Element/style).
+Dans cet exemple, le site utilise la règle [`@import`](/fr/docs/Web/CSS/@import) pour importer cinq feuilles de styles externes dans un élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style).
 
 ```html
 <style>
@@ -394,7 +394,7 @@ Maintenant que nous avons une meilleure compréhension de la précédence selon 
 
 ## Entités CSS qui participent à la cascade
 
-Seules les déclarations de paires de propriété/valeur CSS participent à la cascade. Cela signifie que les [règles @](/fr/docs/Web/CSS/At-rule) contenant des entités autres que des déclarations, comme une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) qui contiendrait _des descripteurs_, ne participent pas à la cascade.
+Seules les déclarations de paires de propriété/valeur CSS participent à la cascade. Cela signifie que les [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule) contenant des entités autres que des déclarations, comme une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) qui contiendrait _des descripteurs_, ne participent pas à la cascade.
 
 Les propriétés et les descripteurs définis dans les règles @ ne participent pas à la cascade. Ce sont les règles @ dans leur intégralité qui participent à la cascade. Ainsi, dans une règle `@font-face`, on a des noms de police identifiés par des descripteurs [`font-family`](/fr/docs/Web/CSS/@font-face/font-family). Si plusieurs règles `@font-face` sont définies pour le même descripteur, seule la règle `@font-face` la plus appropriée sera considérée, _dans son intégralité_. S'il y a plus d'une règle @ appropriée, ce sont les déclarations `@font-face` entières qui sont comparées en utilisant les étapes 1, 2, et 4 de l'algorithme (il n'y a pas de spécificité en ce qui concerne les règles @).
 
@@ -469,20 +469,20 @@ Après que le contenu a fini de modifier les styles, on peut être dans une situ
 
 ## Voir aussi
 
-- [Une introduction simple à la cascade CSS](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Une introduction simple à la cascade CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
-  - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/Inheritance)
+  - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Modes d'affichage](/fr/docs/Glossary/Layout_mode)
+  - [Modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/initial_value)
-    - [Calculées](/fr/docs/Web/CSS/computed_value)
-    - [Utilisées](/fr/docs/Web/CSS/used_value)
-    - [Effectives](/fr/docs/Web/CSS/actual_value)
-- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-- [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-- [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+    - [Initiales](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
+    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [Utilisées](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
+    - [Effectives](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+- [Éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)

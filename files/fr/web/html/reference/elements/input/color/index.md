@@ -41,7 +41,7 @@ input {
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un élément `<input type="color">` est une chaîne de caractères sur 7 caractères qui correspond au code de la couleur en représentation hexadécimale RGB. Autrement dit, le premier caractère est un croisillon (#) , les deux suivants indiquent la composante rouge (R) de la couleur, les deux suivants indiquent la couleur verte (G pour _Green_ en anglais) et les deux suivants indiquent la composante bleue (B) de la couleur. La valeur respecte nécessairement ce format et n'est jamais vide.
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) d'un élément `<input type="color">` est une chaîne de caractères sur 7 caractères qui correspond au code de la couleur en représentation hexadécimale RGB. Autrement dit, le premier caractère est un croisillon (#) , les deux suivants indiquent la composante rouge (R) de la couleur, les deux suivants indiquent la couleur verte (G pour _Green_ en anglais) et les deux suivants indiquent la composante bleue (B) de la couleur. La valeur respecte nécessairement ce format et n'est jamais vide.
 
 > [!NOTE]
 > Si la valeur saisie n'est pas un code hexadécimal RGB d'une couleur opaque valide, c'est la valeur `"#000000"` (c'est-à-dire la couleur noire) qui sera utilisée. Il est notamment impossible d'utiliser les noms de couleurs CSS ou des fonctions CSS afin de définir cette valeur. Il faut garder à l'esprit que HTML et CSS sont deux langages séparés, définis par des spécifications distinctes. De plus, les couleurs avec un canal alpha ne sont pas prises en charges, utiliser un code avec une notation sur 9 caractères entraînera également l'utilisation de `"#000000"`.

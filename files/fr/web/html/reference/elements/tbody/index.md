@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/tbody
 
 {{HTMLSidebar}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** permet de regrouper un ou plusieurs éléments [`<tr>`](/fr/docs/Web/HTML/Element/tr) afin de former le corps d'un tableau HTML ([`<table>`](/fr/docs/Web/HTML/Element/table)).
+L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** permet de regrouper un ou plusieurs éléments [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr) afin de former le corps d'un tableau HTML ([`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)).
 
 {{InteractiveExample("HTML Demo: &lt;tbody&gt;", "tabbed-taller")}}
 
@@ -75,7 +75,7 @@ td {
 }
 ```
 
-L'élément `<tbody>`, ainsi que les éléments [`<thead>`](/fr/docs/Web/HTML/Element/thead) et [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot), fournissent des informations sémantiques qui sont utilisées pour l'affichage à l'écran, l'impression et [l'accessibilité](/fr/docs/Glossary/Accessibility).
+L'élément `<tbody>`, ainsi que les éléments [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) et [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot), fournissent des informations sémantiques qui sont utilisées pour l'affichage à l'écran, l'impression et [l'accessibilité](/fr/docs/Glossary/Accessibility).
 
 <table class="properties">
   <tbody>
@@ -118,7 +118,7 @@ L'élément `<tbody>`, ainsi que les éléments [`<thead>`](/fr/docs/Web/HTML/El
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs dépréciés
 
@@ -166,19 +166,19 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 ## Notes d'utilisation
 
-- Lorsque le tableau contient un élément [`<thead>`](/fr/docs/Web/HTML/Element/thead) (qui identifie les lignes d'en-tête), l'élément `<tbody>` _doit_ apparaître après.
-- Si on utilise `<tbody>`, il faudra alors que celui-ci contienne toutes les lignes qui ne sont pas des lignes d'en-tête ou de pied de tableau. Autrement dit, il n'est pas possible d'avoir des éléments [`<tr>`](/fr/docs/Web/HTML/Element/tr) qui soient des éléments fils directs de [`<table>`](/fr/docs/Web/HTML/Element/table) si on utilise `<tbody>`.
-- Lorsqu'il est imprimé, `<tbody>` représente le contenu qui, lorsqu'il est plus long qu'une page, sera différent sur chaque page. En revanche, [`<thead>`](/fr/docs/Web/HTML/Element/thead) et [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot) seront les mêmes ou seront semblables sur chacune des pages.
-- Lorsqu'un tableau est présenté sur un écran qui n'est pas suffisamment grand pour l'afficher en entier, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra permettre de faire défiler séparément les contenus des éléments [`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot), `<tbody>` et [`<caption>`](/fr/docs/Web/HTML/Element/caption) d'un même élément [`<table>`](/fr/docs/Web/HTML/Element/table).
+- Lorsque le tableau contient un élément [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) (qui identifie les lignes d'en-tête), l'élément `<tbody>` _doit_ apparaître après.
+- Si on utilise `<tbody>`, il faudra alors que celui-ci contienne toutes les lignes qui ne sont pas des lignes d'en-tête ou de pied de tableau. Autrement dit, il n'est pas possible d'avoir des éléments [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr) qui soient des éléments fils directs de [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) si on utilise `<tbody>`.
+- Lorsqu'il est imprimé, `<tbody>` représente le contenu qui, lorsqu'il est plus long qu'une page, sera différent sur chaque page. En revanche, [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) et [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot) seront les mêmes ou seront semblables sur chacune des pages.
+- Lorsqu'un tableau est présenté sur un écran qui n'est pas suffisamment grand pour l'afficher en entier, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra permettre de faire défiler séparément les contenus des éléments [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead), [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot), `<tbody>` et [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption) d'un même élément [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table).
 - À la différence des éléments `<thead>`, `<tfoot>` et `<caption>`, on peut utiliser plusieurs éléments `<tbody>`, tant qu'ils sont consécutifs. Cela permet de répartir les lignes des grands tableaux en différentes sections, chacune pouvant être mise en forme distinctement.
 
 ## Exemples
 
-Quelques exemples sont présentés ci-après afin d'illustrer l'utilisation de l'élément `<tbody>`. Pour plus d'exemples, voir [la section Exemples de la page sur `<table>`](/fr/docs/Web/HTML/Element/table#exemples).
+Quelques exemples sont présentés ci-après afin d'illustrer l'utilisation de l'élément `<tbody>`. Pour plus d'exemples, voir [la section Exemples de la page sur `<table>`](/fr/docs/Web/HTML/Reference/Elements/table#exemples).
 
 ### Exemple simple
 
-Dans ce premier exemple simple, on crée un tableau contenant des informations sur un groupe d'étudiants, composé d'un élément [`<thead>`](/fr/docs/Web/HTML/Element/thead) et d'un élément `<tbody>` qui contient plusieurs lignes.
+Dans ce premier exemple simple, on crée un tableau contenant des informations sur un groupe d'étudiants, composé d'un élément [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) et d'un élément `<tbody>` qui contient plusieurs lignes.
 
 #### HTML
 
@@ -240,7 +240,7 @@ td {
 }
 ```
 
-On définit ensuite le style pour la majorité des cellules, tant celles qui ont des données mais aussi celles formées par [`<td>`](/fr/docs/Web/HTML/Element/td) et [`<th>`](/fr/docs/Web/HTML/Element/th). On leur donne un contour gris d'une épaisseur de 1 pixel et le contenu des cellules est aligné à gauche avec [`text-align`](/fr/docs/Web/CSS/text-align).
+On définit ensuite le style pour la majorité des cellules, tant celles qui ont des données mais aussi celles formées par [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) et [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th). On leur donne un contour gris d'une épaisseur de 1 pixel et le contenu des cellules est aligné à gauche avec [`text-align`](/fr/docs/Web/CSS/text-align).
 
 ```css
 thead > tr > th {
@@ -250,7 +250,7 @@ thead > tr > th {
 }
 ```
 
-Enfin, on met en forme les cellules d'en-têtes, contenues dans le bloc [`<thead>`](/fr/docs/Web/HTML/Element/thead). Celles-ci utilisent un arrière-plan ([`background-color`](/fr/docs/Web/CSS/background-color)) plus sombre, une police plus grande et une bordure basse plus épaisse et plus sombre.
+Enfin, on met en forme les cellules d'en-têtes, contenues dans le bloc [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead). Celles-ci utilisent un arrière-plan ([`background-color`](/fr/docs/Web/CSS/background-color)) plus sombre, une police plus grande et une bordure basse plus épaisse et plus sombre.
 
 #### Résultat
 
@@ -260,7 +260,7 @@ Voici le résultat obtenu&nbsp;:
 
 ### Plusieurs corps de tableau
 
-On peut créer plusieurs sections au sein d'un tableau en utilisant plusieurs éléments `<tbody>`. Chacun peut avoir son propre en-tête et ses propres lignes. Toutefois, _il ne peut y avoir qu'un seul élément [`<thead>`](/fr/docs/Web/HTML/Element/thead) par tableau&nbsp;!_ Pour cette raison, il faudra utiliser un élément [`<tr>`](/fr/docs/Web/HTML/Element/tr) rempli d'éléments [`<th>`](/fr/docs/Web/HTML/Element/th) afin de créer des en-têtes au sein de chaque `<tbody>`. Voyons cela.
+On peut créer plusieurs sections au sein d'un tableau en utilisant plusieurs éléments `<tbody>`. Chacun peut avoir son propre en-tête et ses propres lignes. Toutefois, _il ne peut y avoir qu'un seul élément [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) par tableau&nbsp;!_ Pour cette raison, il faudra utiliser un élément [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr) rempli d'éléments [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th) afin de créer des en-têtes au sein de chaque `<tbody>`. Voyons cela.
 
 Prenons l'exemple précédent et ajoutons plus d'étudiants à la liste. Cette fois, on met à jour le tableau afin de regrouper les étudiants par spécialité, avec des lignes d'en-tête pour chaque spécialité.
 
@@ -324,7 +324,7 @@ Le HTML modifié ressemble à ceci&nbsp;:
 </table>
 ```
 
-On voit ici que chaque spécialité est placée dans un bloc `<tbody>` séparé, avec la première ligne qui contient un unique élément [`<th>`](/fr/docs/Web/HTML/Element/th) avec un attribut [`colspan`](/fr/docs/Web/HTML/Element/th#attr-colspan) pour s'étendre sur toute la largeur du tableau. Cet en-tête indique le nom de la spécialité contenue dans le `<tbody>`.
+On voit ici que chaque spécialité est placée dans un bloc `<tbody>` séparé, avec la première ligne qui contient un unique élément [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th) avec un attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/th#attr-colspan) pour s'étendre sur toute la largeur du tableau. Cet en-tête indique le nom de la spécialité contenue dans le `<tbody>`.
 
 Puis, chaque ligne suivante pour ce `<tbody>` se compose de deux cellules&nbsp;: la première contenant l'identifiant et la seconde contenant le nom.
 
@@ -355,7 +355,7 @@ thead > tr > th {
 }
 ```
 
-Le CSS est inchangé pour la plupart. Une différence est apportée en ciblant les cellules d'en-tête d'un `<tbody>` (plutôt que celles d'un élément [`<thead>`](/fr/docs/Web/HTML/Element/thead)). On peut alors mettre en forme les en-têtes de chaque section.
+Le CSS est inchangé pour la plupart. Une différence est apportée en ciblant les cellules d'en-tête d'un `<tbody>` (plutôt que celles d'un élément [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)). On peut alors mettre en forme les en-têtes de chaque section.
 
 ```css
 tbody > tr > th {
@@ -376,15 +376,15 @@ tbody > tr > th {
 ## Voir aussi
 
 - Les autres éléments HTML relatifs aux tableaux&nbsp;:
-  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
-  - [`<col>`](/fr/docs/Web/HTML/Element/col)
-  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
-  - [`<table>`](/fr/docs/Web/HTML/Element/table)
-  - [`<td>`](/fr/docs/Web/HTML/Element/td)
-  - [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot)
-  - [`<th>`](/fr/docs/Web/HTML/Element/th)
-  - [`<thead>`](/fr/docs/Web/HTML/Element/thead)
-  - [`<tr>`](/fr/docs/Web/HTML/Element/tr)
+  - [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption)
+  - [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)
+  - [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup)
+  - [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)
+  - [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)
+  - [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot)
+  - [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th)
+  - [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)
+  - [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)
 - Les propriétés et pseudo-classes CSS qui sont particulièrement utiles pour mettre en forme l'élément `<tbody>`&nbsp;:
   - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de paramétrer l'alignement des cellules d'une colonne
   - La propriété [`text-align`](/fr/docs/Web/CSS/text-align) qui permet d'aligner le contenu des cellules par rapport à un même caractère (par exemple «&nbsp;.&nbsp;»)

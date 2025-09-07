@@ -5,7 +5,7 @@ slug: Web/CSS/text-emphasis-position
 
 {{CSSRef}}
 
-La propriété **`text-emphasis-position`** permet de décrire l'emplacement des marques d'emphase quand elles sont utilisées. L'ajout des marques a le même effet que [les annotations ruby](/fr/docs/Web/HTML/Element/ruby) quant à la hauteur de ligne : s'il n'y a pas suffisamment de place, la hauteur de la ligne est augmentée.
+La propriété **`text-emphasis-position`** permet de décrire l'emplacement des marques d'emphase quand elles sont utilisées. L'ajout des marques a le même effet que [les annotations ruby](/fr/docs/Web/HTML/Reference/Elements/ruby) quant à la hauteur de ligne : s'il n'y a pas suffisamment de place, la hauteur de la ligne est augmentée.
 
 ```css
 /* Valeur initiale */

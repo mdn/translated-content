@@ -18,7 +18,7 @@ La distance horizontale entre deux glyphes peut être ajustée minutieusement av
 
 ### Attributs globaux
 
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#core) »
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Reference/Attribute#core) »
 
 ### Attributs spécifiques
 
@@ -37,4 +37,4 @@ Cet élément implémente l'interface [`SVGHKernElement`](/fr/docs/Web/API/SVGHK
 - {{ SVGElement("font") }}
 - {{ SVGElement("glyph") }}
 - {{ SVGElement("vkern") }}
-- [Tutoriel SVG : Polices SVG](/fr/docs/Web/SVG/Tutorial/SVG_fonts)
+- [Tutoriel SVG : Polices SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)

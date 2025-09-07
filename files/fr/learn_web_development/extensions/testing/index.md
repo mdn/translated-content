@@ -17,7 +17,7 @@ Savoir précisément quels outils prendre peut parfois être une tâche difficil
 
 ## Parcours d'apprentissage
 
-Vous devriez vraiment apprendre les langages de base [HTML](/fr/docs/Learn/HTML), [CSS](/fr/docs/Learn/CSS), et [JavaScript](/fr/docs/Learn/JavaScript) avant d'essayer d'utiliser les outils présentés ici. Par exemple, vous allez avoir besoin de connaître les fondamentaux de ces langages avant de commencer à déboguer des erreurs dans un code source web complexe, ou utiliser efficacement les librairies JavaScript , ou encore écrire des tests et les utiliser sur vos codes, etc.
+Vous devriez vraiment apprendre les langages de base [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) avant d'essayer d'utiliser les outils présentés ici. Par exemple, vous allez avoir besoin de connaître les fondamentaux de ces langages avant de commencer à déboguer des erreurs dans un code source web complexe, ou utiliser efficacement les librairies JavaScript , ou encore écrire des tests et les utiliser sur vos codes, etc.
 
 Vous avez d'abord besoin d'une base solide.
 
@@ -25,5 +25,5 @@ Vous avez d'abord besoin d'une base solide.
 
 - Outils de développement web
   - : Dans ce module, nous explorons les différents types d'outils de développement web. Ceci inclut de connaître les tâches les plus courantes que vous serez amenés à résoudre, comment les intégrer au sein d'un workflow, et les meilleurs outils actuellement disponibles afin d'effectuer ces tâches.
-- [Test à travers différents navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [Test à travers différents navigateurs](/fr/docs/conflicting/Learn_web_development/Extensions/Testing)
   - : Ce module est orienté spécifiquement vers les tests de projets web à travers différents navigateurs. Ici on cherche à identifier quel type d'audience vous ciblez (ex. de quels utilisateurs, navigateurs et appareils avez vous le plus besoin de vous soucier?), comment faire des tests, les principaux problèmes auxquels vous devrez faire face avec différents types de codes et comment en venir à bout, quels outils sont les plus adaptés pour vous aider à cerner et résoudre ces problèmes, et comment utiliser l'automatisation afin d'accélérer les tests.

@@ -51,7 +51,7 @@ Referrer-Policy: unsafe-url
 - `strict-origin`
   - : N'envoie que l'origine du document comme référent quand le niveau de sécurité du protocole reste le même (HTTPS vers HTTPS) mais n'envoie rien si la destination est moins sécurisée (HTTPS vers HTTP).
 - `strict-origin-when-cross-origin` (_valeur par défaut_)
-  - : Envoie l'origine, le chemin et les paramètres de requête pour les requêtes de même origine. N'envoie que l'origine quand le niveau de sécurité du protocole reste le même pour les requêtes vers d'autres origines (HTTPS vers HTTPS) et n'envoie aucun en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) si la destination est moins sécurisée (HTTPS vers HTTP).
+  - : Envoie l'origine, le chemin et les paramètres de requête pour les requêtes de même origine. N'envoie que l'origine quand le niveau de sécurité du protocole reste le même pour les requêtes vers d'autres origines (HTTPS vers HTTPS) et n'envoie aucun en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) si la destination est moins sécurisée (HTTPS vers HTTP).
 - `unsafe-url`
   - : Envoie l'origine, le chemin et les paramètres de requête pour toutes les requêtes sans tenir compte du niveau de sécurité.
 
@@ -60,7 +60,7 @@ Referrer-Policy: unsafe-url
 
 ## Intégration avec HTML
 
-Vous pouvez aussi définir des règles de référent au sein d'HTML. Par exemple, vous pouvez définir la règle de référent pour le document entier avec un élément {{HTMLElement("meta")}} dont le [name](/fr/docs/Web/HTML/Element/meta#attr-name) est `referrer` :
+Vous pouvez aussi définir des règles de référent au sein d'HTML. Par exemple, vous pouvez définir la règle de référent pour le document entier avec un élément {{HTMLElement("meta")}} dont le [name](/fr/docs/Web/HTML/Reference/Elements/meta#attr-name) est `referrer` :
 
 ```html
 <meta name="referrer" content="origin" />
@@ -72,7 +72,7 @@ Ou le définit pour des requêtes spécifiques avec l'attribut `referrerpolicy` 
 <a href="http://example.com" referrerpolicy="origin"></a>
 ```
 
-Autrement, une [relation de lien](/fr/docs/Web/HTML/Attributes/rel) définie à `noreferrer` sur un élément `a`, `area`, ou `link` peut être défini :
+Autrement, une [relation de lien](/fr/docs/Web/HTML/Reference/Attributes/rel) définie à `noreferrer` sur un élément `a`, `area`, ou `link` peut être défini :
 
 ```html
 <a href="http://example.com" rel="noreferrer"></a>

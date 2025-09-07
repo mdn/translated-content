@@ -8,7 +8,7 @@ original_slug: Learn/Server-side
 
 Le sujet abordant les sites **web dynamiques / la programmation coté serveur** est une série de modules vous montrant comment créer un site web dynamique (sites web intereagissant avec vous de manière à vous donner des informations personnelles en réponse aux requêtes HTTP). Les modules fournissent une introduction universelle à la programmation coté serveur à travers des guides spécifiques pour les debutants vous montrant comment vous servir des infrastructure d'application (aussi appelé frameworks) Django (fait en Python) et Express(fait en Node.js/JavaScript) afin de créer des applications basiques.
 
-La plupart des sites web utilisent une technologie (frameworks, serveurs, languages, etc.) côté serveur afin d'afficher dynamiquement les différentes informations requises. Par exemple, imaginez combien de produits sont disponibles sur Amazon, et imaginez combien de post ont été publiés sur Facebook depuis son commencement ? Afficher tout ceci en utilisant uniquement des pages 'statiques' aurait été absolument inutile et complétement infernal, au lieu de ça les sites dynamiques utilisent des templates (sorte de page statique servant de 'modèle', programmé en utilisant le [HTML](/fr/docs/Learn/HTML), le [CSS](/fr/docs/Learn/CSS) et le [JavaScript](/fr/docs/Learn/JavaScript) dans lequel on viendra y insérer les informations voulues ; par exemple, chaque page d'article amazon est la même, il s'agit juste d'un template dans lequel viennent se placer les informations du produit sélectionné).
+La plupart des sites web utilisent une technologie (frameworks, serveurs, languages, etc.) côté serveur afin d'afficher dynamiquement les différentes informations requises. Par exemple, imaginez combien de produits sont disponibles sur Amazon, et imaginez combien de post ont été publiés sur Facebook depuis son commencement ? Afficher tout ceci en utilisant uniquement des pages 'statiques' aurait été absolument inutile et complétement infernal, au lieu de ça les sites dynamiques utilisent des templates (sorte de page statique servant de 'modèle', programmé en utilisant le [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), le [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et le [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) dans lequel on viendra y insérer les informations voulues ; par exemple, chaque page d'article amazon est la même, il s'agit juste d'un template dans lequel viennent se placer les informations du produit sélectionné).
 
 De nos jours, dans le monde du web, apprendre la programmation côté serveur est indispensable.
 
@@ -20,9 +20,9 @@ Des connaissances minimales en concepts de programmation pourront être utiles, 
 
 Vous allez avoir besoin de comprendre "comment le fonctionne le Web". Nous vous recommandons premièremement de lire les sujets suivants :
 
-- [Qu'est-ce qu'un serveur web](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [De quel logiciels ai-je besoin afin de faire des sites web ?](/fr/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- [Comment transférer des fichiers à un serveur web ?](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [Qu'est-ce qu'un serveur web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
+- [De quel logiciels ai-je besoin afin de faire des sites web ?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- [Comment transférer des fichiers à un serveur web ?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
 
 Ces articles vous donnerons les outils nécessaires afin de travailler avec les modules de cette section.
 
@@ -30,11 +30,11 @@ Ces articles vous donnerons les outils nécessaires afin de travailler avec les 
 
 Ce sujet contient les modules suivants. Vous feriez mieux de commencer par le premier module, pour ensuite faire les autres qui vous montrerons comment travailler à l'aide des 2 languages de programmation côté serveur les plus populaire en utilisant les frameworks web appropriés.
 
-- [Les premiers pas en programmation de site web côté serveur](/fr/docs/Learn/Server-side/First_steps)
+- [Les premiers pas en programmation de site web côté serveur](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps)
   - : Ce module fournit les informations de base sur la programmation de site web côté serveur en répondant à des questions telles que "Qu'est-ce que c'est ?", "En quoi est-ce différent de la prgrammation côté client ?" ou encore "Pourquoi est-ce si utile ?" ainsi qu'un aperçu de quelques frameworks côté serveur et comment choisir le vôtre en fonction de vos besoin ou des besoins de votre site web. Finalement nous allons vous présenter les principes de sécurité en serveur web.
-- [Le framework Web Django (Python)](/fr/docs/Learn/Server-side/Django)
+- [Le framework Web Django (Python)](/fr/docs/Learn_web_development/Extensions/Server-side/Django)
   - : Django est une infrastructure d'application (framework) côté serveur extrêmement populaire et dotée de son lot de fonctionnalités, écrite en Python. Ce module vous expliquera pourquoi Django fait un si bon framework pour serveurs, comment l'installer et s'en servir.
-- [Express Web Framework (Node.js/JavaScript)](/fr/docs/Learn/Server-side/Express_Nodejs)
+- [Express Web Framework (Node.js/JavaScript)](/fr/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
   - : Express est une infrastructure d'application (framework) assez populaire, écrite en JavaScript et fonctionnant à l'aide de Node.js. Ce module explique les avantages dont bénéficie ce framework, comment l'installer ainsi que comment s'en servir.
 
 ## Voir aussi

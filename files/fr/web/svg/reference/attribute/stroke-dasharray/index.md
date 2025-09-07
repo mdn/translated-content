@@ -14,17 +14,17 @@ L'attribut **`stroke-dasharray`** est un attribut de présentation qui définit 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
 - [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph)
-- [`<circle>`](/fr/docs/Web/SVG/Element/circle)
-- [`<ellipse>`](/fr/docs/Web/SVG/Element/ellipse)
-- [`<path>`](/fr/docs/Web/SVG/Element/path)
-- [`<line>`](/fr/docs/Web/SVG/Element/line)
-- [`<polygon>`](/fr/docs/Web/SVG/Element/polygon)
-- [`<polyline>`](/fr/docs/Web/SVG/Element/polyline)
-- [`<rect>`](/fr/docs/Web/SVG/Element/rect)
-- [`<text>`](/fr/docs/Web/SVG/Element/text)
+- [`<circle>`](/fr/docs/Web/SVG/Reference/Element/circle)
+- [`<ellipse>`](/fr/docs/Web/SVG/Reference/Element/ellipse)
+- [`<path>`](/fr/docs/Web/SVG/Reference/Element/path)
+- [`<line>`](/fr/docs/Web/SVG/Reference/Element/line)
+- [`<polygon>`](/fr/docs/Web/SVG/Reference/Element/polygon)
+- [`<polyline>`](/fr/docs/Web/SVG/Reference/Element/polyline)
+- [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect)
+- [`<text>`](/fr/docs/Web/SVG/Reference/Element/text)
 - [`<textPath>`](/fr/docs/Web/SVG/Element/textPath)
 - [`<tref>`](/fr/docs/Web/SVG/Element/tref)
-- [`<tspan>`](/fr/docs/Web/SVG/Element/tspan)
+- [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan)
 
 ## Exemple
 

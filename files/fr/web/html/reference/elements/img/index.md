@@ -32,27 +32,27 @@ L'exemple qui précède illustre l'utilisation de l'élément `<img>`&nbsp;:
 
 Il existe de nombreux autres attributs&nbsp;:
 
-- Le contrôle du [référent](/fr/docs/Web/HTTP/Headers/Referrer-Policy) et de la politique de gestion des ressources d'origines multiples ([CORS](/fr/docs/Glossary/CORS)) avec les attributs `crossorigin` et `referrerpolicy`.
+- Le contrôle du [référent](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy) et de la politique de gestion des ressources d'origines multiples ([CORS](/fr/docs/Glossary/CORS)) avec les attributs `crossorigin` et `referrerpolicy`.
 - [`width`](#width) et [`height`](#height) qui permettent de définir la taille intrinsèque de l'image, lui permettant ainsi de prendre l'espace nécessaire avant son chargement (évitant ainsi d'avoir des décalages indésirables lors du chargement de la page).
-- Des indications <i lang="en">responsives</i> avec [`sizes`](#sizes) et [`srcset`](#srcset) (voir également l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) et [le tutoriel sur les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)).
+- Des indications <i lang="en">responsives</i> avec [`sizes`](#sizes) et [`srcset`](#srcset) (voir également l'élément [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) et [le tutoriel sur les images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)).
 
 ## Formats d'image pris en charge
 
 Le standard HTML n'indique pas les formats d'image qui doivent être pris en charge, les agents utilisateurs peuvent prendre en charge différents formats.
 
-> [!NOTE] [Le guide sur les types de fichier et formats d'image](/fr/docs/Web/Media/Formats/Image_types) contient de nombreuses informations sur les formats d'image et leur prise en charge dans les navigateurs. La section qui suit n'est qu'un résumé&nbsp;!
+> [!NOTE] [Le guide sur les types de fichier et formats d'image](/fr/docs/Web/Media/Guides/Formats/Image_types) contient de nombreuses informations sur les formats d'image et leur prise en charge dans les navigateurs. La section qui suit n'est qu'un résumé&nbsp;!
 
 Les formats d'image qu'on rencontre le plus fréquemment sur le Web sont&nbsp;:
 
-- [APNG (<i lang="en">Animated Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics) pour les séquences animées avec une compression sans perte (le format GIF est moins performant)
-- [AVIF (<i lang="en">AV1 Image File Format</i>)](/fr/docs/Web/Media/Formats/Image_types#avif) pour les images et les images animées avec de hautes performances
-- [GIF (<i lang="en">Graphics Interchange Format</i>)](/fr/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format) pour les images et animations _simples_
-- [JPEG (<i lang="en">Joint Photographic Expert Group image</i>)](/fr/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) pour une compression avec pertes d'images statiques, il s'agit du format le plus utilisé
-- [PNG (<i lang="en">Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) pour une compression sans perte d'images statiques, de meilleure qualité que le JPEG
-- [SVG (<i lang="en">Scalable Vector Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) pour un format d'image vectorielle (qui permet de dessiner une image précisément à différentes échelles)
-- [WebP (<i lang="en">Web Picture format</i>)](/fr/docs/Web/Media/Formats/Image_types#webp) pour les images statiques et animées
+- [APNG (<i lang="en">Animated Portable Network Graphics</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics) pour les séquences animées avec une compression sans perte (le format GIF est moins performant)
+- [AVIF (<i lang="en">AV1 Image File Format</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#avif) pour les images et les images animées avec de hautes performances
+- [GIF (<i lang="en">Graphics Interchange Format</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) pour les images et animations _simples_
+- [JPEG (<i lang="en">Joint Photographic Expert Group image</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) pour une compression avec pertes d'images statiques, il s'agit du format le plus utilisé
+- [PNG (<i lang="en">Portable Network Graphics</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) pour une compression sans perte d'images statiques, de meilleure qualité que le JPEG
+- [SVG (<i lang="en">Scalable Vector Graphics</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) pour un format d'image vectorielle (qui permet de dessiner une image précisément à différentes échelles)
+- [WebP (<i lang="en">Web Picture format</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#webp) pour les images statiques et animées
 
-Les formats comme [WebP](/fr/docs/Web/Media/Formats/Image_types#webp) et [AVIF](/fr/docs/Web/Media/Formats/Image_types#avif) sont recommandés, car avec de meilleures performances que PNG, JPEG, GIF tant pour les images animées que statiques. WebP dispose d'une large prise en charge tandis qu'AVIF n'est pas pris en charge par Safari.
+Les formats comme [WebP](/fr/docs/Web/Media/Guides/Formats/Image_types#webp) et [AVIF](/fr/docs/Web/Media/Guides/Formats/Image_types#avif) sont recommandés, car avec de meilleures performances que PNG, JPEG, GIF tant pour les images animées que statiques. WebP dispose d'une large prise en charge tandis qu'AVIF n'est pas pris en charge par Safari.
 
 SVG reste le format recommandé pour les images qui doivent être dessinées avec précision quelle que soit la taille.
 
@@ -68,7 +68,7 @@ Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gest
 
 ## Attributs
 
-On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
+On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur cet élément.
 
 - `alt`
   - : Définit une description textuelle alternative pour l'image.
@@ -114,19 +114,19 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     > Indiquer plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées pour la même fonctionnalité. On peut par exemple avoir plusieurs campagnes dont on souhaite mesurer les performances, via différents rapports sur différentes données.
 
 - `crossorigin`
-  - : Indique que la récupération de l'image doit être effectuée avec une requête CORS. Les données provenant d'une [image chargée via une requête CORS](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sans que celui-ci soit considéré comme [corrompu (<i lang="en">tainted</i>)](/fr/docs/Web/HTML/CORS_enabled_image#canevas_corrompu_et_sécurité).
+  - : Indique que la récupération de l'image doit être effectuée avec une requête CORS. Les données provenant d'une [image chargée via une requête CORS](/fr/docs/Web/HTML/How_to/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) sans que celui-ci soit considéré comme [corrompu (<i lang="en">tainted</i>)](/fr/docs/Web/HTML/How_to/CORS_enabled_image#canevas_corrompu_et_sécurité).
 
-    Si l'attribut `crossorigin` _n'est pas_ indiqué, une requête sans CORS sera effectuée (c'est-à-dire sans l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Headers/Origin)) et le navigateur marquera la page comme potentiellement corrompue, empêchant d'accéder aux données de l'image et empêchant son utilisation dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
+    Si l'attribut `crossorigin` _n'est pas_ indiqué, une requête sans CORS sera effectuée (c'est-à-dire sans l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin)) et le navigateur marquera la page comme potentiellement corrompue, empêchant d'accéder aux données de l'image et empêchant son utilisation dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas).
 
-    Si l'attribut `crossorigin` _est présent_, une requête CORS est envoyée (avec l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Headers/Origin))&nbsp;; si le serveur ne gère pas l'accès depuis les origines tierces (c'est-à-dire qu'il n'envoie aucun en-tête de réponse [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) ou qu'il n'inclut pas l'origine du site dans l'en-tête `Access-Control-Allow-Origin`), le navigateur bloquera le chargement de l'image et affichera une erreur CORS dans la console de développement.
+    Si l'attribut `crossorigin` _est présent_, une requête CORS est envoyée (avec l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin))&nbsp;; si le serveur ne gère pas l'accès depuis les origines tierces (c'est-à-dire qu'il n'envoie aucun en-tête de réponse [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) ou qu'il n'inclut pas l'origine du site dans l'en-tête `Access-Control-Allow-Origin`), le navigateur bloquera le chargement de l'image et affichera une erreur CORS dans la console de développement.
 
     Les valeurs autorisées pour cet attribut sont&nbsp;:
     - `anonymous`
-      - : Une requête CORS est envoyée sans informations d'authentification (c'est-à-dire sans cookie, [certificat X.509](https://datatracker.ietf.org/doc/html/rfc5280), ou en-tête de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)).
+      - : Une requête CORS est envoyée sans informations d'authentification (c'est-à-dire sans cookie, [certificat X.509](https://datatracker.ietf.org/doc/html/rfc5280), ou en-tête de requête [`Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Authorization)).
     - `use-credentials`
       - : La requête CORS est envoyée avec les informations d'authentification (cookies, certificat X.509 et/ou en-tête `Authorization`). Si le serveur ne permet pas le partage des informations d'authentification avec le site d'origine (avec `Access-Control-Allow-Credentials: true` comme en-tête de réponse), le navigateur marque l'image comme potentiellement corrompue et restreint l'accès à ses données.
 
-    Si la valeur de l'attribut est invalide, les navigateurs considèrent que la valeur `anonymous` a été utilisée. Voir [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Attributes/crossorigin) pour plus d'informations.
+    Si la valeur de l'attribut est invalide, les navigateurs considèrent que la valeur `anonymous` a été utilisée. Voir [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'informations.
 
 - `decoding`
   - : Fournit au navigateur une indication pour décoder l'image. Les valeurs autorisées sont&nbsp;:
@@ -137,8 +137,8 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `auto`
       - : La valeur par défaut qui indique qu'il n'y a pas de préférence. C'est le navigateur qui décide alors ce qui est le mieux.
 
-- [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming)
-  - : Indique que l'image doit être observée par l'API [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming). La valeur fournie devient un identifiant pour l'élément observé. Voir aussi la page de l'atttribut [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming).
+- [`elementtiming`](/fr/docs/Web/HTML/Reference/Attributes/elementtiming)
+  - : Indique que l'image doit être observée par l'API [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming). La valeur fournie devient un identifiant pour l'élément observé. Voir aussi la page de l'atttribut [`elementtiming`](/fr/docs/Web/HTML/Reference/Attributes/elementtiming).
 
 - `fetchpriority`
   - : Fournit une indication de la priorité relative à utiliser pour la récupération de l'image. Les valeurs autorisées sont&nbsp;:
@@ -161,7 +161,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
   - : Cet attribut booléen indique que l'image fait partie d'une [carte côté serveur](https://en.wikipedia.org/wiki/Image_map#Server-side). Dans ce cas, les coordonnées du clic sur l'image sont envoyés au serveur.
 
     > [!NOTE]
-    > Cet attribut est uniquement autorisé lorsque l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) disposant d'un attribut `href` valide. Cela fournit une alternative lorsque la navigation se fait sans dispositif de pointage.
+    > Cet attribut est uniquement autorisé lorsque l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) disposant d'un attribut `href` valide. Cela fournit une alternative lorsque la navigation se fait sans dispositif de pointage.
 
 - `loading`
   - : Indique comment le navigateur devrait charger l'image&nbsp;:
@@ -179,11 +179,11 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - `referrerpolicy`
   - : Une chaîne de caractères qui indique le référent à utiliser lors de la récupération de la ressource&nbsp;:
     - `no-referrer`
-      - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) n'est pas envoyé.
+      - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) n'est pas envoyé.
     - `no-referrer-when-downgrade`
-      - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) ne sera pas envoyé aux origines sans TLS/HTTPS.
+      - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) ne sera pas envoyé aux origines sans TLS/HTTPS.
     - `origin`:
-      - : Le référent envoyé sera limité à l'origine de la page référente, c'est-à-dire qu'il ne contiendra que le [schéma, l'hôte et le port](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL).
+      - : Le référent envoyé sera limité à l'origine de la page référente, c'est-à-dire qu'il ne contiendra que le [schéma, l'hôte et le port](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL).
     - `origin-when-cross-origin`
       - : Le référent envoyé aux autres origines sera limité au schéma, à l'hôte et au port. La navigation vers la même origine contiendra le chemin.
     - `same-origin`
@@ -218,16 +218,16 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
     Toute combinaison des deux types de descripteur sera invalide. De même, indiquer deux sources avec le même descripteur sera invalide.
 
-    L'agent utilisateur sélectionne une des sources disponibles comme il l'entend. Cette liberté permet de baser le choix sur d'autres facteurs comme les préférences de l'utilisateur ou les conditions réseau. Voir [le tutoriel sur les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) pour un exemple.
+    L'agent utilisateur sélectionne une des sources disponibles comme il l'entend. Cette liberté permet de baser le choix sur d'autres facteurs comme les préférences de l'utilisateur ou les conditions réseau. Voir [le tutoriel sur les images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images) pour un exemple.
 
 - `width`
   - : La largeur intrinsèque de l'image, exprimée en pixels. La valeur doit être un nombre entier sans unité.
 
 - `usemap`
-  - : L'URL partielle (commençant par `#`) d'une [carte d'image](/fr/docs/Web/HTML/Element/map) associée à l'élément.
+  - : L'URL partielle (commençant par `#`) d'une [carte d'image](/fr/docs/Web/HTML/Reference/Elements/map) associée à l'élément.
 
     > [!NOTE]
-    > Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/button).
+    > Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
 
 ### Attributs dépréciés
 
@@ -264,13 +264,13 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
 ## Mettre en forme avec CSS
 
-`<img>` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element). Sa propriété [`display`](/fr/docs/Web/CSS/display) par défaut vaut `inline`, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image, à la façon de `inline-block`. Il est tout à fait possible d'utiliser les propriétés [`border`](/fr/docs/Web/CSS/border)/[`border-radius`](/fr/docs/Web/CSS/border-radius), [`padding`](/fr/docs/Web/CSS/padding)/[`margin`](/fr/docs/Web/CSS/margin), [`width`](/fr/docs/Web/CSS/width), et [`height`](/fr/docs/Web/CSS/height) sur une image.
+`<img>` est [un élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties). Sa propriété [`display`](/fr/docs/Web/CSS/display) par défaut vaut `inline`, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image, à la façon de `inline-block`. Il est tout à fait possible d'utiliser les propriétés [`border`](/fr/docs/Web/CSS/border)/[`border-radius`](/fr/docs/Web/CSS/border-radius), [`padding`](/fr/docs/Web/CSS/padding)/[`margin`](/fr/docs/Web/CSS/margin), [`width`](/fr/docs/Web/CSS/width), et [`height`](/fr/docs/Web/CSS/height) sur une image.
 
 `<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec [`vertical-align: baseline`](/fr/docs/Web/CSS/vertical-align), le bas de l'image sera placé sur la ligne de base du texte.
 
 La propriété [`object-position`](/fr/docs/Web/CSS/object-position) peut être utilisée afin de positionner l'image au sein de la boîte fournie par l'élément. La propriété [`object-fit`](/fr/docs/Web/CSS/object-fit) peut être utilisée pour ajuster le dimensionnement de l'image au sein de la boîte (par exemple pour étirer ou rogner l'image dans la boîte si nécessaire).
 
-Selon son type, une image peut avoir une largeur et une hauteur intrinsèque. Pour certains types d'image en revanche, de telles dimensions intrinsèques ne sont pas nécessaires. Ainsi, les images vectorielles (en SVG par exemple) n'ont pas de dimensions intrinsèques si leur racine (l'élément [`<svg>`](/fr/docs/Web/SVG/Element/svg)) n'a pas d'attribut `width` ou `height` défini.
+Selon son type, une image peut avoir une largeur et une hauteur intrinsèque. Pour certains types d'image en revanche, de telles dimensions intrinsèques ne sont pas nécessaires. Ainsi, les images vectorielles (en SVG par exemple) n'ont pas de dimensions intrinsèques si leur racine (l'élément [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg)) n'a pas d'attribut `width` ou `height` défini.
 
 ## Exemples
 
@@ -286,7 +286,7 @@ Dans l'exemple qui suit, l'image est accompagnée d'un texte alternatif qui sert
 
 ### Créer un lien avec une image
 
-Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l'élément `<img>` est placé au sein d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a). Ici, le texte alternatif devrait décrire la ressource vers laquelle pointe le lien.
+Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l'élément `<img>` est placé au sein d'un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a). Ici, le texte alternatif devrait décrire la ressource vers laquelle pointe le lien.
 
 ```html
 <a href="https://developer.mozilla.org">
@@ -349,14 +349,14 @@ La valeur d'un attribut `alt` devrait toujours décrire le contenu de l'image de
 
 Un test important pour l'accessibilité consiste à lire le contenu de l'attribut `alt` avec le contenu texte précédent afin de voir si cela fournit les mêmes informations que l'image. Ainsi, si l'image était précédée de la phrase «&nbsp;Lors de mon voyage, j'ai vu un animal mignon&nbsp;:&nbsp;». Dans l'exemple de la mauvaise pratique, cela aurait donné «&nbsp;Lors de mon voyage, j'ai vu un animal mignon&nbsp;: image&nbsp;», ce qui n'a pas de sens. Avec la bonne pratique et cet exemple, on aurait obtenu «&nbsp;Lors de mon voyage, j'ai vu un animal mignon&nbsp;: Un manchot Rockhopper sur une plage.&nbsp;», ce qui est plus parlant.
 
-Pour les images déclenchant une action, par exemple celles incluses dans un lien [`<a>`](/fr/docs/Web/HTML/Element/a) ou un bouton [`<button>`](/fr/docs/Web/HTML/Element/button), il faut penser à décrire l'action déclenchée dans `alt`. On peut ainsi écrire `alt="page suivante"` plutôt que `alt="flèche droite"`. Vous pouvez inclure une description complémentaire dans l'attribut `title`, qui pourra être lu par les lecteurs d'écrans si l'utilisatrice ou l'utilisateur en fait la demande.
+Pour les images déclenchant une action, par exemple celles incluses dans un lien [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) ou un bouton [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), il faut penser à décrire l'action déclenchée dans `alt`. On peut ainsi écrire `alt="page suivante"` plutôt que `alt="flèche droite"`. Vous pouvez inclure une description complémentaire dans l'attribut `title`, qui pourra être lu par les lecteurs d'écrans si l'utilisatrice ou l'utilisateur en fait la demande.
 
 Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'écran pourront annoncer le nom du fichier de l'image. Cela peut être source de confusion si le nom du fichier n'est pas représentatif du contenu de l'image.
 
 - [Un arbre de décision pour `alt` • Images • Tutoriel WAI sur l'accessibilité web (en anglais)](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 - [Texte alternatif&nbsp;: le guide ultime — <i lang="en">Axess Lab</i> (en anglais)](https://axesslab.com/alt-texts/)
 - [Comment optimiser votre texte alternatif&nbsp;: une introduction — Deque (en anglais)](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de succès 1.1.1 | W3C Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ### Identifier le contenu SVG comme image
@@ -369,9 +369,9 @@ En raison [d'un bug VoiceOver](https://webkit.org/b/216364), ce dernier n'annonc
 
 ### L'attribut `title`
 
-L'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title) n'est pas un remplaçant acceptable pour l'attribut `alt`. Il vaut également mieux éviter de dupliquer la valeur de l'attribut `alt` dans un attribut `title` pour la même image. En effet, un tel doublon entraînera les lecteurs d'écran à annoncer deux fois la description, ce qui pourra être une source de confusion.
+L'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) n'est pas un remplaçant acceptable pour l'attribut `alt`. Il vaut également mieux éviter de dupliquer la valeur de l'attribut `alt` dans un attribut `title` pour la même image. En effet, un tel doublon entraînera les lecteurs d'écran à annoncer deux fois la description, ce qui pourra être une source de confusion.
 
-L'attribut `title` ne devrait pas être utilisé afin de compléter les informations de légende de l'image pour accompagner la description fournie par `alt`. Si une image a besoin d'une légende, on utilisera les éléments [`figure`](/fr/docs/Web/HTML/Element/figure) et [`figcaption`](/fr/docs/Web/HTML/Element/figcaption).
+L'attribut `title` ne devrait pas être utilisé afin de compléter les informations de légende de l'image pour accompagner la description fournie par `alt`. Si une image a besoin d'une légende, on utilisera les éléments [`figure`](/fr/docs/Web/HTML/Reference/Elements/figure) et [`figcaption`](/fr/docs/Web/HTML/Reference/Elements/figcaption).
 
 La valeur de l'attribut `title` est généralement affichée via une bulle d'information qui apparaît au survol du curseur sur l'image. Bien que cet attribut _puisse_ fournir des informations supplémentaires, on ne doit pas s'attendre à ce que toute personne le voit&nbsp;: par exemple lorsque la navigation est effectuée au clavier ou sur un écran tactile. Si les informations à afficher sont particulièrement importantes ou utiles, on utilisera les méthodes évoquées ci-avant plutôt que `title`.
 
@@ -454,13 +454,13 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
 
 ## Voir aussi
 
-- [Apprendre — Les images en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Guide sur les formats et types de fichier pour les images](/fr/docs/Web/Media/Formats/Image_types)
-- [Les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Apprendre — Les images en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [Guide sur les formats et types de fichier pour les images](/fr/docs/Web/Media/Guides/Formats/Image_types)
+- [Les images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)
 - Les éléments HTML&nbsp;:
-  - [`<picture>`](/fr/docs/Web/HTML/Element/picture),
-  - [`<object>`](/fr/docs/Web/HTML/Element/object),
-  - [`<embed>`](/fr/docs/Web/HTML/Element/embed).
+  - [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture),
+  - [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object),
+  - [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed).
 - Les propriétés CSS relatives aux images&nbsp;:
   - [`object-fit`](/fr/docs/Web/CSS/object-fit),
   - [`object-position`](/fr/docs/Web/CSS/object-position),

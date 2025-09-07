@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-L'objectif de ce test de compétences est d'évaluer si vous comprenez comment [mettre en place des liens hypertextes en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).
+L'objectif de ce test de compétences est d'évaluer si vous comprenez comment [mettre en place des liens hypertextes en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 
 > [!NOTE]
 > Vous pouvez essayer les solutions dans les éditeurs interactifs ci-dessous. Cependant, il peut être utile de télécharger le code et d'utiliser un outil en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour travailler sur les tâches.

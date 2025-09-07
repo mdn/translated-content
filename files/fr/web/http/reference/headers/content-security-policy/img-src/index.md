@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/img-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/img-src
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`img-src`** spécifie les sources valides d'images et d'icônes.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`img-src`** spécifie les sources valides d'images et d'icônes.
 
 <table class="properties">
   <tbody>
@@ -36,9 +36,9 @@ Content-Security-Policy: img-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -50,7 +50,7 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: img-src https://example.com/
 ```
 
-Cet élément [`<img>`](/fr/docs/Web/HTML/Element/img) sera bloqué et ne se chargera pas&nbsp;:
+Cet élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
 <img src="https://not-example.com/toto.jpg" alt="image d'exemple" />
@@ -66,5 +66,5 @@ Cet élément [`<img>`](/fr/docs/Web/HTML/Element/img) sera bloqué et ne se cha
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<img>`](/fr/docs/Web/HTML/Element/img)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img)

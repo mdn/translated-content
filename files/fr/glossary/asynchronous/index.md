@@ -23,9 +23,9 @@ Dans un logiciel asynchrone, l'envoi d'une requête, à un serveur par exemple, 
 
 Une conception de logiciel asynchrone étend le concept précédent en créant du code permettant à un programme de lancer des tâches secondaires sans attendre leur complétion. Quand une tâche secondaire se termine, la tâche principale est notifiée selon un mécanisme prédéfini lui permettant de savoir comment la tâche secondaire s'est terminée et comment le résultat, s'il y en a un, est disponible.
 
-Il existe de nombreuses techniques permettant d'implémenter des logiciels asynchrones. L'article [JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous) en donne une introduction.
+Il existe de nombreuses techniques permettant d'implémenter des logiciels asynchrones. L'article [JavaScript asynchrone](/fr/docs/Learn_web_development/Extensions/Async_JS) en donne une introduction.
 
 ## Voir aussi
 
-- [Récupérer des données du serveur](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Récupérer des données du serveur](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [Synchrone](/fr/docs/Glossary/Synchronous)

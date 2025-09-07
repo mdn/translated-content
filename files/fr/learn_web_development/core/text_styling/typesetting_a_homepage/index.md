@@ -92,8 +92,8 @@ Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvo
 
 ## Dans ce module
 
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Styling_links)
-- [Polices de caractères web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Initiation à la mise en forme du texte](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [Style de listes](/fr/docs/Learn_web_development/Core/Text_styling/Styling_lists)
+- [Mise en forme des liens](/fr/docs/Learn_web_development/Core/Text_styling/Styling_links)
+- [Polices de caractères web](/fr/docs/Learn_web_development/Core/Text_styling/Web_fonts)
 - Composition d'une page d'accueil d'une école de communauté

@@ -32,7 +32,7 @@ i {
 
 ## Attributs
 
-Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 

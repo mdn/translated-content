@@ -183,7 +183,7 @@ Notez que nous avons utilisé des pourcentages pour définir les largeurs — c'
 
 ## Ancienne création d'un cadre de trames
 
-La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le [dégagement des boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats).
+La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le [dégagement des boîtes flottantes](/fr/docs/Learn_web_development/Core/CSS_layout/Floats).
 
 Le type de cadre de trames le plus facile à créer est un cadre de largeur fixe — il faut simplement déterminer la largeur totale du désign, le nombre de colonnes voulues et la largeur des gouttières et des colonnes. Si nous décidons plutôt de disposer ce design sur une trame avec des colonnes s'adaptant à la largeur de vue du navigateur, nous devrons calculer les pourcentages de largeur des colonnes et celui des gouttières entre colonnes.
 

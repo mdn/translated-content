@@ -18,7 +18,7 @@ Un schéma très courant sur le Web consiste à afficher des contenus par-dessus
 - Non-modaux
   - : Ce qui signifie que le reste de la page reste interactif pendant que le <i lang="en">popover</i> est affiché.
 
-Les <i lang="en">popovers</i> créés à l'aide de l'API Popover sont toujours non-modaux. Si vous souhaitez créer un <i lang="en">popover</i> modal, l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) est la bonne solution. Cependant, gardez à l'esprit que les éléments `<dialog>` ne sont pas placés dans [la couche supérieure](/fr/docs/Glossary/Top_layer) par défaut, contrairement aux <i lang="en">popovers</i>. Il y a un recoupement important entre les deux&nbsp;: il est tout à fait possible de créer un <i lang="en">popover</i> persistant, et de le contrôler en utilisant du HTML déclaratif. Vous pouvez même transformer un élément `<dialog>` en <i lang="en">popover</i> si vous souhaitez combiner le contrôle des <i lang="en">popovers</i> et le placement en surimpression avec la sémantique des boîtes de dialogue.
+Les <i lang="en">popovers</i> créés à l'aide de l'API Popover sont toujours non-modaux. Si vous souhaitez créer un <i lang="en">popover</i> modal, l'élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) est la bonne solution. Cependant, gardez à l'esprit que les éléments `<dialog>` ne sont pas placés dans [la couche supérieure](/fr/docs/Glossary/Top_layer) par défaut, contrairement aux <i lang="en">popovers</i>. Il y a un recoupement important entre les deux&nbsp;: il est tout à fait possible de créer un <i lang="en">popover</i> persistant, et de le contrôler en utilisant du HTML déclaratif. Vous pouvez même transformer un élément `<dialog>` en <i lang="en">popover</i> si vous souhaitez combiner le contrôle des <i lang="en">popovers</i> et le placement en surimpression avec la sémantique des boîtes de dialogue.
 
 Les cas d'utilisation typiques de l'API Popover incluent les éléments d'interfaces utilisateur interactifs comme les menus d'action, les notifications personnalisées de type <i lang="en">toast</i>, les suggestions d'éléments de formulaire, les sélecteurs de contenu ou les interfaces d'apprentissage.
 
@@ -39,12 +39,12 @@ Voir [Utiliser l'API Popover](/fr/docs/Web/API/Popover_API/Using) pour un guide 
 
 ## Attributs HTML
 
-- [`popover`](/fr/docs/Web/HTML/Global_attributes/popover)
+- [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)
   - : Un attribut universel qui transforme un élément en élément <i lang="en">popover</i> et qui prend un état de <i lang="en">popover</i> (`"auto"` ou `"manual"`) comme valeur.
-- [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget)
-  - : Transforme un élément [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) en bouton de contrôle de <i lang="en">popover</i>. La valeur de cet attribut correspond à l'identifiant de l'élément <i lang="en">popover</i> à contrôler.
-- [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction)
-  - : Spécifie l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur l'élément <i lang="en">popover</i> contrôlé par un élément de contrôle [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input).
+- [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget)
+  - : Transforme un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) ou [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) en bouton de contrôle de <i lang="en">popover</i>. La valeur de cet attribut correspond à l'identifiant de l'élément <i lang="en">popover</i> à contrôler.
+- [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
+  - : Spécifie l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur l'élément <i lang="en">popover</i> contrôlé par un élément de contrôle [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) ou [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
 ## Fonctionnalités CSS
 
@@ -63,11 +63,11 @@ Voir [Utiliser l'API Popover](/fr/docs/Web/API/Popover_API/Using) pour un guide 
 ### Propriétés d'instance
 
 - [`HTMLElement.popover`](/fr/docs/Web/API/HTMLElement/popover)
-  - : Permet de connaître ou de modifier l'état de l'élément <i lang="en">popover</i> via JavaScript (`"auto"` ou `"manual"`). Elle peut être utilisée pour détecter la prise en charge des fonctionnalités <i lang="en">popover</i>. Cette propriété reflète l'attribut HTML [`popover`](/fr/docs/Web/HTML/Global_attributes/popover).
+  - : Permet de connaître ou de modifier l'état de l'élément <i lang="en">popover</i> via JavaScript (`"auto"` ou `"manual"`). Elle peut être utilisée pour détecter la prise en charge des fonctionnalités <i lang="en">popover</i>. Cette propriété reflète l'attribut HTML [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover).
 - [`HTMLButtonElement.popoverTargetElement`](/fr/docs/Web/API/HTMLButtonElement/popoverTargetElement) et [`HTMLInputElement.popoverTargetElement`](/fr/docs/Web/API/HTMLInputElement/popoverTargetElement)
-  - : Permet de connaître ou de modifier l'élément <i lang="en">popover</i> contrôlé par le bouton. C'est l'équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget).
+  - : Permet de connaître ou de modifier l'élément <i lang="en">popover</i> contrôlé par le bouton. C'est l'équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget).
 - [`HTMLButtonElement.popoverTargetAction`](/fr/docs/Web/API/HTMLButtonElement/popoverTargetAction) et [`HTMLInputElement.popoverTargetAction`](/fr/docs/Web/API/HTMLInputElement/popoverTargetAction)
-  - : Permet de connaître ou de modifier l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur l'élément <i lang="en">popover</i> contrôlé par le bouton. Cette propriété reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction).
+  - : Permet de connaître ou de modifier l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur l'élément <i lang="en">popover</i> contrôlé par le bouton. Cette propriété reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction).
 
 ### Méthodes d'instance
 
@@ -83,7 +83,7 @@ Voir [Utiliser l'API Popover](/fr/docs/Web/API/Popover_API/Using) pour un guide 
 - Évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event), rattaché à `HTMLElement`
   - : Déclenché juste avant que l'état d'un élément <i lang="en">popover</i> ne change entre affiché et masqué, ou vice versa.
 - Évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event), rattaché à `HTMLElement`
-  - : Déclenché lorsque l'état d'un élément <i lang="en">popover</i> a changé entre les états affiché et masqué, ou vice versa. Voir l'évènement analogue [`toggle` de `HTMLDetailsElement`](/fr/docs/Web/API/HTMLElement/toggle_event) qui signale les changements d'états des éléments [`<details>`](/fr/docs/Web/HTML/Element/details).
+  - : Déclenché lorsque l'état d'un élément <i lang="en">popover</i> a changé entre les états affiché et masqué, ou vice versa. Voir l'évènement analogue [`toggle` de `HTMLDetailsElement`](/fr/docs/Web/API/HTMLElement/toggle_event) qui signale les changements d'états des éléments [`<details>`](/fr/docs/Web/HTML/Reference/Elements/details).
 
 ## Exemples
 

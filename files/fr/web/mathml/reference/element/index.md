@@ -173,4 +173,4 @@ La locution « **élement de présentation** » est utilisée pour décrire l'or
 ## Voir aussi
 
 - [MathML](/fr/docs/Web/MathML)
-- [Référence des attributs MathML](/fr/docs/Web/MathML/Attribute)
+- [Référence des attributs MathML](/fr/docs/Web/MathML/Reference/Attribute)

@@ -26,7 +26,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `method`
   - : `string`. Méthode HTTP standard: par exemple, "GET" ou "POST".
 - `originUrl`
-  - : `string`. URL de la ressource qui a déclenché cette demande. Notez que ceci peut ne pas être le même que l'URL de la page dans laquelle la ressource demandée sera chargée. Par exemple, si un document déclenche un chargement dans une fenêtre différente l'[attribut cible d'un lien](/fr/docs/Web/HTML/Element/a#attr-target), ou d'un document CSS inclut une image utilisant la [`notation fonctionnelle url()`](</fr/docs/Web/CSS/url_value#The_url()_functional_notation>), alors ce sera l'URL du document original ou du document CSS, respectivement.
+  - : `string`. URL de la ressource qui a déclenché cette demande. Notez que ceci peut ne pas être le même que l'URL de la page dans laquelle la ressource demandée sera chargée. Par exemple, si un document déclenche un chargement dans une fenêtre différente l'[attribut cible d'un lien](/fr/docs/Web/HTML/Reference/Elements/a#attr-target), ou d'un document CSS inclut une image utilisant la [`notation fonctionnelle url()`](</fr/docs/Web/CSS/url_value#The_url()_functional_notation>), alors ce sera l'URL du document original ou du document CSS, respectivement.
 - `parentFrameId`
   - : `integer`. ID de l'image qui contient l'image qui a envoyé la demande. Défini sur -1 si aucun cadre parent n'existe.
 - `requestId`

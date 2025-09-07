@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/picture
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<picture>`** est un conteneur utilisé afin de définir zéro ou plusieurs éléments {{HTMLElement("source")}} destinés à un élément {{HTMLElement("img")}}. Le navigateur choisira la source la plus pertinente selon la disposition de la page (les contraintes qui s'appliquent à la boîte dans laquelle l'image devra être affichée), selon l'appareil utilisé (la densité de pixels de l'affichage par exemple avec les appareils hiDPI) et selon les formats pris en charge (ex. WebP pour les navigateurs Chromium ou PNG pour les autres). Si aucune correspondance n'est trouvée parmi les éléments `<source>`, c'est le fichier défini par l'attribut [`src`](/fr/docs/Web/HTML/Element/img#src) de l'élément `<img>` qui sera utilisé.
+L'élément HTML **`<picture>`** est un conteneur utilisé afin de définir zéro ou plusieurs éléments {{HTMLElement("source")}} destinés à un élément {{HTMLElement("img")}}. Le navigateur choisira la source la plus pertinente selon la disposition de la page (les contraintes qui s'appliquent à la boîte dans laquelle l'image devra être affichée), selon l'appareil utilisé (la densité de pixels de l'affichage par exemple avec les appareils hiDPI) et selon les formats pris en charge (ex. WebP pour les navigateurs Chromium ou PNG pour les autres). Si aucune correspondance n'est trouvée parmi les éléments `<source>`, c'est le fichier défini par l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#src) de l'élément `<img>` qui sera utilisé.
 
 {{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
 
@@ -21,18 +21,18 @@ L'élément HTML **`<picture>`** est un conteneur utilisé afin de définir zér
 </picture>
 ```
 
-L'agent utilisateur examine chaque attribut présent dans `<source>` ([`srcset`](/fr/docs/Web/HTML/Element/source#srcset), [`media`](/fr/docs/Web/HTML/Element/source#media), and [`type`](/fr/docs/Web/HTML/Element/source#type)) pour sélectionner l'URL de la meilleure ressource selon la disposition de la page, les caractéristiques de l'écran de l'appareil, etc.
+L'agent utilisateur examine chaque attribut présent dans `<source>` ([`srcset`](/fr/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/fr/docs/Web/HTML/Reference/Elements/source#media), and [`type`](/fr/docs/Web/HTML/Reference/Elements/source#type)) pour sélectionner l'URL de la meilleure ressource selon la disposition de la page, les caractéristiques de l'écran de l'appareil, etc.
 
 L'élément `<picture>` peut être utilisé pour :
 
 - Fournir une direction artistique : rogner, modifier des images selon différentes conditions de média
 - Fournir différents formats d'image lorsque certains formats ne sont pas pris en charge par les navigateurs
 
-Lorsqu'on fournit des versions haute densité d'une image pour les appareils avec un DPI élevé, on utilisera plutôt [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) sur l'élément `<img>` à la place. Ainsi, les navigateurs pourront choisir une image à plus basse densité dans un contexte où les flux réseaux doivent être économisés. De plus, il ne sera pas nécessaire d'écrire des requêtes média explicites.
+Lorsqu'on fournit des versions haute densité d'une image pour les appareils avec un DPI élevé, on utilisera plutôt [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#srcset) sur l'élément `<img>` à la place. Ainsi, les navigateurs pourront choisir une image à plus basse densité dans un contexte où les flux réseaux doivent être économisés. De plus, il ne sera pas nécessaire d'écrire des requêtes média explicites.
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 

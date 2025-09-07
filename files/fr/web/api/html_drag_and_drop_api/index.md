@@ -68,7 +68,7 @@ Dans cette section, nous allons voir les premières étapes nécessaires aux fon
 
 ### Identifier ce qui peut être déplacé
 
-Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) ainsi que le gestionnaire d'évènement global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} :
+Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes#draggable) ainsi que le gestionnaire d'évènement global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} :
 
 ```html
 <script>
@@ -83,7 +83,7 @@ Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut [`dr
 </p>
 ```
 
-Voir [la page de référence sur l'attribut `draggable`](/fr/docs/Web/HTML/Global_attributes/draggable) et [le guide sur les opérations de déplacement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) pour plus d'informations.
+Voir [la page de référence sur l'attribut `draggable`](/fr/docs/Web/HTML/Reference/Global_attributes/draggable) et [le guide sur les opérations de déplacement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) pour plus d'informations.
 
 ### Définir les données déplacées
 

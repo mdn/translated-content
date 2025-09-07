@@ -44,7 +44,7 @@ Ces boîtes de dialogue sont des fenêtres modales qui empêchent d'accéder au 
 
 Il y a également d'autres raisons [d'éviter les boîtes de dialogue pour demander une confirmation](https://alistapart.com/article/neveruseawarning/).
 
-Une autre méthode consiste à utiliser l'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) afin d'afficher des demandes de confirmation.
+Une autre méthode consiste à utiliser l'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) afin d'afficher des demandes de confirmation.
 
 ## Spécifications
 
@@ -56,6 +56,6 @@ Une autre méthode consiste à utiliser l'élément HTML [`<dialog>`](/fr/docs/W
 
 ## Voir aussi
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
+- L'élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog)
 - [`window.alert()`](/fr/docs/Web/API/Window/alert)
 - [`window.prompt()`](/fr/docs/Web/API/Window/prompt)

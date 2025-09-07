@@ -65,4 +65,4 @@ Il est possible de tester la prise en charge des propriétés et valeurs logique
 - [L'alignement des boîtes pour une disposition en grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [L'alignement des boîtes pour une disposition flexible](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Comprendre les propriétés et les valeurs logiques](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
-- [Les modes d'écriture](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [Les modes d'écriture](/fr/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)

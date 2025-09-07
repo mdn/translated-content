@@ -62,7 +62,7 @@ Le HTML sémantique ne demande pas plus de temps à écrire que du (mauvais) bal
 Continuons et jetons un œil au HTML accessible dans le détail.
 
 > [!NOTE]
-> C'est une bonne idée d'avoir un lecteur d'écran configuré, pour tester les exemples ci-dessous. Voir notre guide pour [gérer les problèmes courants d'accessibilité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) pour plus de détails.
+> C'est une bonne idée d'avoir un lecteur d'écran configuré, pour tester les exemples ci-dessous. Voir notre guide pour [gérer les problèmes courants d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#screenreaders) pour plus de détails.
 
 ## Une bonne sémantique
 
@@ -256,7 +256,7 @@ Vous pouvez vérifier ces affirmations en comparant votre expérience antérieur
 
 Si vous essayez notre exemple plus moderne de structure avec un lecteur d'écran, vous verrez que le balisage de présentation ne gêne plus ni ne rend la lecture du contenu confuse. Il est également beaucoup plus léger et plus petit en termes de taille de code, ce qui signifie une maintenance plus facile du code et une sollicitation moindre de la bande passante par l'utilisateur (particulièrement critique en cas de connexions lentes).
 
-Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir [Référence des éléments HTML](/fr/docs/Web/HTML/Element#content_sectioning)). Vous pouvez créer une disposition en utilisant uniquement des éléments {{htmlelement("div")}} imbriqués, mais il est préférable d'utiliser des éléments de sectionnement appropriés pour envelopper votre navigation principale ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), en répétant des unités de contenu ({{htmlelement("article")}}), etc. Elles fournissent une sémantique supplémentaire aux lecteurs d'écran (et à d'autres outils) pour donner à l'utilisateur des indices supplémentaires sur le contenu qu'il navigue (voir [Prise en charge du lecteur d'écran pour les nouveaux éléments de section HTML5](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) pour une idée de la prise en charge du lecteur d'écran).
+Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir [Référence des éléments HTML](/fr/docs/Web/HTML/Reference/Elements#content_sectioning)). Vous pouvez créer une disposition en utilisant uniquement des éléments {{htmlelement("div")}} imbriqués, mais il est préférable d'utiliser des éléments de sectionnement appropriés pour envelopper votre navigation principale ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), en répétant des unités de contenu ({{htmlelement("article")}}), etc. Elles fournissent une sémantique supplémentaire aux lecteurs d'écran (et à d'autres outils) pour donner à l'utilisateur des indices supplémentaires sur le contenu qu'il navigue (voir [Prise en charge du lecteur d'écran pour les nouveaux éléments de section HTML5](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) pour une idée de la prise en charge du lecteur d'écran).
 
 > [!NOTE]
 > Outre le fait que votre contenu présente une bonne sémantique et une présentation attrayante, il convient que son ordre source soit logique : vous pouvez toujours le placer où vous le souhaitez à l'aide de CSS par la suite, mais vous devez définir l'ordre exact des sources pour commencer. les utilisateurs de lecteur d'écran qui se liront auront du sens.
@@ -272,7 +272,7 @@ L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisa
 Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné ou appuyer sur un bouton (nous avons inclus du JavaScript pour que les boutons alertent un message), ou commencer à taper pour saisir du texte dans une entrée de texte (les autres éléments de formulaire ont des contrôles différents, par exemple, l'élément {{htmlelement("select")}} peut avoir ses options affichées et alterner entre les touches fléchées haut et bas).
 
 > [!NOTE]
-> Différents navigateurs peuvent avoir différentes options de contrôle du clavier disponibles. Voir comment [gérer les problèmes courants d'accessibilité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility) pour plus de détails.
+> Différents navigateurs peuvent avoir différentes options de contrôle du clavier disponibles. Voir comment [gérer les problèmes courants d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#using_native_keyboard_accessibility) pour plus de détails.
 
 Vous obtenez essentiellement ce comportement gratuitement, en utilisant simplement les éléments appropriés, par exemple :
 
@@ -345,7 +345,7 @@ Ajouter de tels avantages en retour demande un peu de travail (vous pouvez utili
 <div data-message="This is from the third button" tabindex="0">Et moi!</div>
 ```
 
-Fondamentalement, l'attribut [`tabindex`](/fr/docs/Web/HTML/Global_attributes#tabindex) est principalement destiné à permettre aux éléments que l'on peut cibler avec la touche Tab d'avoir un ordre de tabulation personnalisé (spécifié dans l'ordre numérique positif), au lieu d'être simplement tabulés dans leur ordre source par défaut. C'est presque toujours une mauvaise idée, car cela peut causer une confusion majeure. Utilisez-le uniquement si vous en avez vraiment besoin, par exemple si la mise en page affiche les éléments dans un ordre visuel très différent de celui du code source et si vous souhaitez que les éléments fonctionnent de manière plus logique. Il y a deux autres options pour `tabindex` :
+Fondamentalement, l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes#tabindex) est principalement destiné à permettre aux éléments que l'on peut cibler avec la touche Tab d'avoir un ordre de tabulation personnalisé (spécifié dans l'ordre numérique positif), au lieu d'être simplement tabulés dans leur ordre source par défaut. C'est presque toujours une mauvaise idée, car cela peut causer une confusion majeure. Utilisez-le uniquement si vous en avez vraiment besoin, par exemple si la mise en page affiche les éléments dans un ordre visuel très différent de celui du code source et si vous souhaitez que les éléments fonctionnent de manière plus logique. Il y a deux autres options pour `tabindex` :
 
 - `tabindex="0"` – comme indiqué ci-dessus, cette valeur permet aux éléments qui ne sont pas normalement tabulables de le devenir. C'est la valeur la plus utile de `tabindex`.
 - `tabindex="-1"` – cela permet aux éléments qui ne sont normalement pas tabulables d'être ciblés par le programme, par ex. via JavaScript, ou en tant que cible de liens.
@@ -395,7 +395,7 @@ c'est un mauvais texte du lien :
 ```
 
 > [!NOTE]
-> Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur la [création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Vous pouvez également voir quelques bons et mauvais exemples dans [Bons-liens.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) et [Mauvais-liens.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur la [création d'hyperliens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links). Vous pouvez également voir quelques bons et mauvais exemples dans [Bons-liens.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) et [Mauvais-liens.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Les libellés de formulaire sont également importantes pour vous donner un indice sur ce que vous devez entrer dans chaque entrée de formulaire. Ce qui suit semble être un exemple assez raisonnable :
 
@@ -460,7 +460,7 @@ Regardez maintenant notre tableau d'exemple sur les groupes punk – vous pouvez
 - L'élément {{htmlelement("caption")}} et l'attribut summary `<table>` effectuent tous deux des travaux similaires. Ils agissent en tant que texte alternatif pour une table, offrant ainsi à un utilisateur de lecteur d'écran un résumé rapide et utile du contenu de la table. `<caption>` est généralement préféré car il rend son contenu accessible aux utilisateurs malvoyants, qui pourraient également le trouver utile. Vous n'avez pas vraiment besoin des deux.
 
 > [!NOTE]
-> Voir notre article [Tableaux HTML&nbsp;: dispositions avancées et accessibilité](/fr/docs/Learn/HTML/Tables/Advanced) pour plus de détails sur les tables de données accessibles.
+> Voir notre article [Tableaux HTML&nbsp;: dispositions avancées et accessibilité](/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) pour plus de détails sur les tables de données accessibles.
 
 ## Alternatives textuelles
 
@@ -501,7 +501,7 @@ Cela met en évidence l'importance non seulement d'utiliser des noms de fichiers
 Une chose à considérer est de savoir si vos images ont une signification dans votre contenu, ou si elles sont purement décoratives, n'ont donc aucune signification. S'ils sont décoratifs, il est préférable de les inclure dans la page en tant qu'images d'arrière-plan CSS.
 
 > [!NOTE]
-> Lisez [Les images en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) et [Images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) pour plus d'informations sur la mise en œuvre des images et les meilleures pratiques.
+> Lisez [Les images en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images) et [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images) pour plus d'informations sur la mise en œuvre des images et les meilleures pratiques.
 
 Si vous souhaitez fournir des informations contextuelles supplémentaires, vous devez les insérer dans le texte entourant l'image ou dans un attribut title, comme indiqué ci-dessus. Dans ce cas, la plupart des lecteurs d'écran liront le texte alternatif, l'attribut title et le nom du fichier. En outre, les navigateurs affichent le texte du titre sous forme d'infos lors du survol de la souris.
 
@@ -517,7 +517,7 @@ Jetons un autre coup d'oeil à la quatrième méthode :
 
 Dans ce cas, nous n'utilisons pas du tout l'attribut `alt` Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un `id` puis nous avons utilisé l'attribut `aria-labelledby` pour : faire référence à cela `id`, ce qui amène les lecteurs d'écran à utiliser ce paragraphe comme alt text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n'est pas possible avec `alt`.
 
-> **Note :** `aria-labelledby` fait partie de la spécification [WAI ARIA](https://www.w3.org/TR/wai-aria-1.1/), qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article [WAI-ARIA basic](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
+> **Note :** `aria-labelledby` fait partie de la spécification [WAI ARIA](https://www.w3.org/TR/wai-aria-1.1/), qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article [WAI-ARIA basic](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics).
 
 ### Autres mécanismes alternatifs de texte
 

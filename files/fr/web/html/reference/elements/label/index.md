@@ -49,10 +49,10 @@ On peut également créer un lien implicite en imbriquant l'élément `<input>` 
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `for`
-  - : L'identifiant (la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id)) de l'élément de formulaire associé, appartenant au même document que l'élément label. Le premier élément du document dont l'identifiant correspond est alors le contrôle étiqueté par l'élément.
+  - : L'identifiant (la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id)) de l'élément de formulaire associé, appartenant au même document que l'élément label. Le premier élément du document dont l'identifiant correspond est alors le contrôle étiqueté par l'élément.
 
     > [!NOTE]
     > Un élément label peut simultanément avoir un attribut `for` et contenir un élément de contrôle tant que l'attribut `for` pointe vers l'élément contenu.
@@ -61,11 +61,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : L'élément de formulaire auquel l'élément label est associé (son formulaire propriétaire). La valeur de cet attribut doit être l'identifiant d'un élément {{HTMLElement("form")}} contenu au sein du même document. Si l'attribut n'est pas renseigné, cet élément \<label> doit être le descendant d'un élément {{HTMLElement("form")}}. Cet attribut permet de placer des éléments label dans le document sans qu'ils soient nécessairement imbriqués dans un formulaire.
 
     > [!NOTE]
-    > La spécification HTML a été mise à jour le 28 avril 2016 afin de déprécier l'attribut [`form`](/fr/docs/Web/HTML/Global_attributes#form). Celui-ci est toujours disponible dans les scripts mais sa définition a changé, il renvoie désormais le contrôle associé au formulaire ou `null` s'il n'y a pas de contrôle associé (autrement dit si {{domxref("HTMLLabelElement.control")}} vaut `null`).
+    > La spécification HTML a été mise à jour le 28 avril 2016 afin de déprécier l'attribut [`form`](/fr/docs/Web/HTML/Reference/Global_attributes#form). Celui-ci est toujours disponible dans les scripts mais sa définition a changé, il renvoie désormais le contrôle associé au formulaire ou `null` s'il n'y a pas de contrôle associé (autrement dit si {{domxref("HTMLLabelElement.control")}} vaut `null`).
 
 ## Notes d'utilisation
 
-- Un élément `<label>` peut être associé à un contrôle en plaçant l'élément du contrôle dans l'élément `<label>` ou en utilisant l'attribut [`for`](/fr/docs/Web/HTML/Global_attributes#for). Un tel contrôle sera appelé le contrôle _étiqueté_ par l'élément `<label>`. Un contrôle peut être associé à plusieurs `<label>`.
+- Un élément `<label>` peut être associé à un contrôle en plaçant l'élément du contrôle dans l'élément `<label>` ou en utilisant l'attribut [`for`](/fr/docs/Web/HTML/Reference/Global_attributes#for). Un tel contrôle sera appelé le contrôle _étiqueté_ par l'élément `<label>`. Un contrôle peut être associé à plusieurs `<label>`.
 - Les étiquettes ne sont pas directement associées aux formulaires. Elles le sont indirectement via le contrôle auquel elles sont rattachées.
 - Lorsqu'on clique ou touche un élément `<label>` et que celui-ci est associé à un contrôle d'un formulaire, l'évènement `click` est également déclenché pour le contrôle.
 
@@ -129,7 +129,7 @@ Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLEleme
 
 ### Titres
 
-Placer des [éléments de titres](/fr/docs/Web/HTML/Element/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Element/Heading_Elements#navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
+Placer des [éléments de titres](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
 
 S'il faut associer un titre à un formulaire ou à une section d'un formulaire, on utilisera l'élément {{HTMLElement("legend")}} au sein d'un élément {{HTMLElement("fieldset")}}.
 

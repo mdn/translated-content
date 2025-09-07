@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/data
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<data>`** relie un contenu à une version de ce contenu interprétable par un ordinateur. Si le contenu possède une composante temporelle, l'élément [`<time>`](/fr/docs/Web/HTML/Element/time) doit être utilisé.
+L'élément HTML **`<data>`** relie un contenu à une version de ce contenu interprétable par un ordinateur. Si le contenu possède une composante temporelle, l'élément [`<time>`](/fr/docs/Web/HTML/Reference/Elements/time) doit être utilisé.
 
 {{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
 
@@ -95,7 +95,7 @@ data:hover::after {
 
 ## Attributs
 
-Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur `<data>`.
+Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur `<data>`.
 
 - `value`
   - : Cet attribut définit la version du contenu qui doit être interprétée par une machine.
@@ -127,4 +127,4 @@ Dans l'exemple suivant, on affiche des noms de produits avec des codes correspon
 
 ## Voir aussi
 
-- L'élément [`<time>`](/fr/docs/Web/HTML/Element/time).
+- L'élément [`<time>`](/fr/docs/Web/HTML/Reference/Elements/time).

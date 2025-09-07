@@ -119,7 +119,7 @@ if (window.Element && !Element.prototype.closest) {
 ## Voir aussi
 
 - L'interface [`Element`](/fr/docs/Web/API/Element)
-- [La syntaxe des sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
+- [La syntaxe des sélecteurs CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - Les autres méthodes qui utilisent des sélecteurs en argument&nbsp;:
   - [`element.querySelector()`](/fr/docs/Web/API/Element/querySelector)
   - [`element.matches()`](/fr/docs/Web/API/Element/matches)

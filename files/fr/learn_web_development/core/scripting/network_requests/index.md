@@ -41,7 +41,7 @@ C'est pourquoi de nombreux sites web utilisent plutôt des API JavaScript afin d
 
 ![Utiliser Fetch pour mettre à jour les pages](fetch-update.svg)
 
-Pour cela, on utilise principalement l'API [<i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API). Elle permet d'utiliser JavaScript depuis une page pour construire et envoyer une requête [HTTP](/fr/docs/Web/HTTP) à un serveur afin de récupérer des données. Lorsque le serveur répond en fournissant les données, le code JavaScript peut les utiliser afin de mettre à jour la page, généralement en utilisant [les API de manipulation du DOM](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). Les données sont généralement demandées au format [JSON](/fr/docs/Learn/JavaScript/Objects/JSON) (un bon format d'échange de données), mais il peut tout aussi bien s'agir de HTML ou de texte.
+Pour cela, on utilise principalement l'API [<i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API). Elle permet d'utiliser JavaScript depuis une page pour construire et envoyer une requête [HTTP](/fr/docs/Web/HTTP) à un serveur afin de récupérer des données. Lorsque le serveur répond en fournissant les données, le code JavaScript peut les utiliser afin de mettre à jour la page, généralement en utilisant [les API de manipulation du DOM](/fr/docs/Learn_web_development/Core/Scripting/DOM_scripting). Les données sont généralement demandées au format [JSON](/fr/docs/Learn_web_development/Core/Scripting/JSON) (un bon format d'échange de données), mais il peut tout aussi bien s'agir de HTML ou de texte.
 
 Cette méthode est employée largement par les sites utilisant de nombreuses données tels que Amazon, YouTube, eBay, etc. Avec ce modèle&nbsp;:
 
@@ -74,7 +74,7 @@ Enregistrez ces fichiers dans un nouveau répertoire sur votre ordinateur.
 
 Dans cet exemple, nous récupèrerons différents vers d'un poème en les sélectionnant depuis une liste déroulante.
 
-À l'intérieur de l'élément [`<script>`](/fr/docs/Web/HTML/Element/script), ajoutez le code qui suit. Ce code enregistre des références aux éléments [`<select>`](/fr/docs/Web/HTML/Element/select) et [`<pre>`](/fr/docs/Web/HTML/Element/pre) et ajoute un gestionnaire d'évènement sur l'élément `<select>` afin d'appeler une fonction `updateDisplay()` lorsqu'une nouvelle valeur est sélectionnée dans la liste (la valeur étant alors passée en paramètre de la fonction).
+À l'intérieur de l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script), ajoutez le code qui suit. Ce code enregistre des références aux éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) et [`<pre>`](/fr/docs/Web/HTML/Reference/Elements/pre) et ajoute un gestionnaire d'évènement sur l'élément `<select>` afin d'appeler une fonction `updateDisplay()` lorsqu'une nouvelle valeur est sélectionnée dans la liste (la valeur étant alors passée en paramètre de la fonction).
 
 ```js
 const verseChoose = document.querySelector("select");
@@ -94,7 +94,7 @@ function updateDisplay(verse) {
 }
 ```
 
-Au début de notre fonction, nous allons construire une URL relative qui pointe vers le fichier texte que nous voulons charger, car nous en aurons besoin ensuite. La valeur choisie avec l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) correspond au texte de l'élément [`<option>`](/fr/docs/Web/HTML/Element/option) (à moins que l'attribut [`value`](/fr/docs/Web/HTML/Element/option#value) indique une autre valeur). La valeur sera par exemple `Verse 1`, qui correspond au fichier `verse1.txt` situé dans le même répertoire que le fichier HTML. On a donc une correspondance pratique entre les valeurs à sélectionner et les noms de nos fichiers texte.
+Au début de notre fonction, nous allons construire une URL relative qui pointe vers le fichier texte que nous voulons charger, car nous en aurons besoin ensuite. La valeur choisie avec l'élément [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) correspond au texte de l'élément [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option) (à moins que l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) indique une autre valeur). La valeur sera par exemple `Verse 1`, qui correspond au fichier `verse1.txt` situé dans le même répertoire que le fichier HTML. On a donc une correspondance pratique entre les valeurs à sélectionner et les noms de nos fichiers texte.
 
 Toutefois, les serveurs web sont généralement sensibles à la casse et le nom du fichier ne contient pas d'espace. Il faut donc convertir `Verse 1` en `verse1.txt`. Pour cela, nous passerons le V majuscule en minuscule, retirerons l'espace et rajouterons l'extension `.txt` à la fin. On peut y arriver à l'aide des fonctions [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace), [`toLowerCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace), et des [littéraux de gabarit](/fr/docs/Web/JavaScript/Reference/Template_literals). Ajoutez les lignes suivantes à l'intérieur de la fonction `updateDisplay()`&nbsp;:
 
@@ -138,7 +138,7 @@ Récapitulons ce que fait ce fragment de script.
 
 Pour commencer, on utilise la fonction globale [`fetch()`](/fr/docs/Web/API/Window/fetch) qui est le point d'entrée de l'API <i lang="en">Fetch</i>. Cette fonction prend l'URL comme paramètre (elle peut aussi utiliser un autre paramètre optionnel, mais nous ne l'utilisons pas ici).
 
-Ensuite, `fetch()` est une API asynchrone qui renvoie [une promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si vous ne savez pas ce qu'est une promesse, lisez le module [JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous), et notamment [l'article sur les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises) (qui parle aussi de `fetch()`) avant de revenir à cet article.
+Ensuite, `fetch()` est une API asynchrone qui renvoie [une promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si vous ne savez pas ce qu'est une promesse, lisez le module [JavaScript asynchrone](/fr/docs/Learn_web_development/Extensions/Async_JS), et notamment [l'article sur les promesses](/fr/docs/Learn_web_development/Extensions/Async_JS/Promises) (qui parle aussi de `fetch()`) avant de revenir à cet article.
 
 Comme `fetch()` renvoie une promesse, nous passons une fonction à la méthode [`then()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) de la promesse renvoyée. Cette méthode sera appelée lorsque le navigateur aura reçu une réponse du serveur pour la requête HTTP. Dans le code du gestionnaire, on vérifie que la requête a réussi et on déclenche une erreur sinon. S'il n'y a pas eu d'rreur, on appelle [`response.text()`](/fr/docs/Web/API/Response/text) pour interpréter le corps de la réponse sous forme de texte.
 
@@ -146,7 +146,7 @@ Comme `fetch()` renvoie une promesse, nous passons une fonction à la méthode [
 
 Enfin, on chaîne un gestionnaire [`catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) pour intercepter toute erreur qui serait déclenchée dans l'une des fonctions asynchrones ou des gestionnaires associés.
 
-Il y a un problème avec cette version du code, aucun vers n'est affiché lors du premier chargement. Pour corriger cela, on ajoute les deux lignes qui suivent à la fin du code, avant la balise fermante `</script>`. Cela permet de charger le premier vers par défaut et de s'assurer que la valeur affichée par l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) correspond bien&nbsp;:
+Il y a un problème avec cette version du code, aucun vers n'est affiché lors du premier chargement. Pour corriger cela, on ajoute les deux lignes qui suivent à la fin du code, avant la balise fermante `</script>`. Cela permet de charger le premier vers par défaut et de s'assurer que la valeur affichée par l'élément [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) correspond bien&nbsp;:
 
 ```js
 updateDisplay("Verse 1");
@@ -155,9 +155,9 @@ verseChoose.value = "Verse 1";
 
 #### Servir l'exemple grâce à un serveur
 
-Les navigateurs récents ne permettent pas d'envoyer des requêtes HTTP en ouvrant simplement un fichier local pour des raisons de sécurité (voir [la sécurité des sites web](/fr/docs/Learn/Server-side/First_steps/Website_security) pour plus d'informations).
+Les navigateurs récents ne permettent pas d'envoyer des requêtes HTTP en ouvrant simplement un fichier local pour des raisons de sécurité (voir [la sécurité des sites web](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) pour plus d'informations).
 
-Pour que l'exemple fonctionne correctement, nous devons le tester avec un serveur web local. Pour savoir comment faire, suivez [notre guide pour mettre en place un serveur local de test](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+Pour que l'exemple fonctionne correctement, nous devons le tester avec un serveur web local. Pour savoir comment faire, suivez [notre guide pour mettre en place un serveur local de test](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 ### Le magasin de conserves
 
@@ -189,8 +189,8 @@ La fonction `fetch()` renvoie une promesse. Si celle-ci réussit, la fonction pa
 
 Dans cette fonction&nbsp;:
 
-- On vérifie que le serveur n'a pas renvoyé d'erreur (comme [`404 Not Found`](/fr/docs/Web/HTTP/Status/404)). Si c'est le cas, on lève l'erreur.
-- On appelle [`json()`](/fr/docs/Web/API/Response/json) sur la réponse. Les données de la réponse seront alors interprétées comme [un objet JSON](/fr/docs/Learn/JavaScript/Objects/JSON). On renvoie la promesse renvoyée par `response.json()`.
+- On vérifie que le serveur n'a pas renvoyé d'erreur (comme [`404 Not Found`](/fr/docs/Web/HTTP/Reference/Status/404)). Si c'est le cas, on lève l'erreur.
+- On appelle [`json()`](/fr/docs/Web/API/Response/json) sur la réponse. Les données de la réponse seront alors interprétées comme [un objet JSON](/fr/docs/Learn_web_development/Core/Scripting/JSON). On renvoie la promesse renvoyée par `response.json()`.
 
 Ensuite, on passe une fonction à la méthode `then()` de la promesse ainsi renvoyée. Cette fonction reçoit un objet (qui contient les données de la réponse en JSON), qu'on passe à la fonction `initialize()`. Cette dernière initie l'affichage de tous les produits sur l'interface utilisateur.
 
@@ -266,8 +266,8 @@ De nombreux sujets sont abordés dans cet article et nous n'en avons qu'effleur�
 
 - [Utiliser l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API/Using_Fetch)
 - [Les promesses JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Manipuler des données en JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Un aperçu de HTTP](/fr/docs/Web/HTTP/Overview)
-- [La programmation web côté serveur](/fr/docs/Learn/Server-side)
+- [Manipuler des données en JSON](/fr/docs/Learn_web_development/Core/Scripting/JSON)
+- [Un aperçu de HTTP](/fr/docs/Web/HTTP/Guides/Overview)
+- [La programmation web côté serveur](/fr/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

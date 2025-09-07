@@ -5,7 +5,7 @@ slug: Web/CSS/:in-range
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:in-range`** cible un élément {{htmlelement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs [`min`](/fr/docs/Web/HTML/Element/input#min) et [max](/fr/docs/Web/HTML/Element/input#max).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:in-range`** cible un élément {{htmlelement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [max](/fr/docs/Web/HTML/Reference/Elements/input#max).
 
 ```css
 /* Cible n'importe quel élément <input>   */
@@ -88,4 +88,4 @@ input:out-of-range + label::after {
 ## Voir aussi
 
 - {{cssxref(":out-of-range")}}
-- [Guide de validation pour les données de formulaire](/fr/docs/Learn/Forms/Form_validation)
+- [Guide de validation pour les données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)

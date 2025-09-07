@@ -54,7 +54,7 @@ Cet opérateur lève une exception {{jsxref("TypeError")}} en [mode strict](/fr/
 
 ## Description
 
-Contrairement à ce qu'on pourrait penser, l'opérateur `delete` n'a rien à voir avec une libération de mémoire directe. La gestion de la mémoire en JavaScript est réalisée de façon indirecte en tenant compte des références, [voir cette page pour plus de détails](/fr/docs/Web/JavaScript/Memory_management).
+Contrairement à ce qu'on pourrait penser, l'opérateur `delete` n'a rien à voir avec une libération de mémoire directe. La gestion de la mémoire en JavaScript est réalisée de façon indirecte en tenant compte des références, [voir cette page pour plus de détails](/fr/docs/Web/JavaScript/Guide/Memory_management).
 
 L'opérateur **`delete`** permet de retirer une propriété donnée d'un objet. Lorsque la suppression se déroule sans problème, l'opération renvoie `true`, sinon c'est la valeur `false` qui est renvoyée. Voici quelques scénarios importants qui précisent ce comportement :
 

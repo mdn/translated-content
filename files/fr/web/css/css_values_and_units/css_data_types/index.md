@@ -67,4 +67,4 @@ Le module **_CSS basic data types_** définit les différents types de données 
 ## Voir aussi
 
 - [Unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

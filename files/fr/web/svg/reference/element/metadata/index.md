@@ -16,8 +16,8 @@ L'élément [SVG](/fr/docs/Web/SVG) **`<metadata>`** permet d'ajouter des metado
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs d'événements globaux](/fr/docs/Web/SVG/Attribute#événements_globaux)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs d'événements globaux](/fr/docs/Web/SVG/Reference/Attribute#événements_globaux)
 
 ### Attributs spécifiques
 

@@ -64,7 +64,7 @@ name="fieldName"; filename="filename.jpg"
 ## Directives
 
 `<name>`
-Est suivie d'une chaîne contenant le nom du champ HTML dans la forme auquel le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple) d'un {{HTMLElement("input","&lt;input type=file&gt;")}} element), il peut y avoir plusieurs sous-parties portant le même nom.
+Est suivie d'une chaîne contenant le nom du champ HTML dans la forme auquel le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) d'un {{HTMLElement("input","&lt;input type=file&gt;")}} element), il peut y avoir plusieurs sous-parties portant le même nom.
 
 Un `name` avec une valeur de `'_charset_'` indique que la partie n'est pas un champ HTML, mais le jeu de caractères par défaut à utiliser pour les pièces sans informations de charset explicites.
 
@@ -121,6 +121,6 @@ value2
 
 ## Voir aussi
 
-- [HTML Forms](/fr/docs/Learn/Forms)
+- [HTML Forms](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
 - {{HTTPHeader("Content-Type")}} définissant la limite du corps multipartie.
 - L'interface {{domxref("FormData")}} utilisée pour manipuler les données de formulaire à utiliser dans l'API {{domxref("XMLHttpRequest")}}.

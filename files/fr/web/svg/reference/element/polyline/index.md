@@ -16,10 +16,10 @@ L'élément SVG **`<polyline>`** est une forme SVG basique qui crée des lignes 
 
 ### Attributs universels
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)
-- [Attributs principaux](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs relatifs aux évènements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d%27événement_graphique)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_traitement_conditionnel)
+- [Attributs principaux](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs relatifs aux évènements graphiques](/fr/docs/Web/SVG/Reference/Attribute#Attributs_d%27événement_graphique)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

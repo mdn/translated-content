@@ -16,7 +16,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:default`** représente u
 
 Ainsi, le bouton actionné par défaut parmi plusieurs boutons pourra être mis en forme en le ciblant avec cette pseudo-classe.
 
-Ce sélecteur peut être utilisé sur des éléments {{htmlelement("button")}}, [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio) et {{htmlelement("option")}} :
+Ce sélecteur peut être utilisé sur des éléments {{htmlelement("button")}}, [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) et {{htmlelement("option")}} :
 
 - Un élément `<option>` par défaut est le premier qui possède l'attribut `selected` ou le premier qui est activé selon l'ordre du DOM.
 - Les éléments `<input type="checkbox">` et `<input type="radio">` seront ciblés s'ils possèdent l'attribut `checked`.

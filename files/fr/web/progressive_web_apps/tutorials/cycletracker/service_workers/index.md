@@ -13,7 +13,7 @@ Jusqu'à présent, nous avons écrit le HTML, le CSS et le JavaScript de l'appli
 Si ce n'est pas déjà fait, copiez les fichiers [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/app.js), et [celui du manifeste](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/cycletracker.json). Respectivement, enregistrez-les avec les noms `index.html`, `styles.css`, `app.js`, et `cycletracker.json`.
 
 Dans cette section, nous allons créer un fichier `sw.js` qui contiendra le script de notre <i lang="en">service worker</i> qui convertira notre application web en PWA. Nous avons déjà un fichier JavaScript et la dernière ligne de notre fichier HTML appelle `app.js`. Ce code JavaScript fournit l'ensemble des fonctionnalités de notre application web classique. Plutôt que d'appeler le fichier `sw.js` comme nous l'avions fait pour
-`app.js` en utilisant l'attribut `src` de l'élément [`<script>`](/fr/docs/Web/HTML/Element/script), nous allons créer une relation entre l'application web et le <i lang="en">service worker</i> en _enregistrant_ ce dernier.
+`app.js` en utilisant l'attribut `src` de l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script), nous allons créer une relation entre l'application web et le <i lang="en">service worker</i> en _enregistrant_ ce dernier.
 
 À la fin de ce chapitre, vous aurez une PWA fonctionnelle&nbsp;: une application web améliorée qui peut être installée et qui fonctionne même sans accès à Internet.
 
@@ -197,7 +197,7 @@ Nous pouvons utiliser l'évènement [`fetch`](/fr/docs/Web/API/ServiceWorkerGlob
 
 Notre application ne contient qu'une seule page. Toutes les requêtes liées à la navigation concerneront uniquement la page `index.html`. Il n'y a pas d'autres pages à charger. Aussi, si la propriété [`mode`](/fr/docs/Web/API/Request/mode) de l'objet [`Request`](/fr/docs/Web/API/Request) fourni par l'API <i lang="en">Fetch</i> vaut `navigate` (indiquant que le navigateur cherche une page web), on utilisera la méthode [`respondWith()`](/fr/docs/Web/API/FetchEvent/respondWith) de `FetchEvent` pour empêcher la gestion par défaut du navigateur (qui consiste à demander la ressource au serveur) et on fournira notre propre promesse de réponse à l'aide de la méthode [`caches.match()`](/fr/docs/Web/API/CacheStorage/match).
 
-Pour tous les autres modes des requêtes, on ouvre le cache que nous avions rempli [lors de l'installation](sauvegarder_le_cache_à_linstallation_de_la_PWA) en passant la requête de l'évènement à la méthode `match()`. Cette méthode vérifiera si la requête correspond à l'une des clés pour [une réponse (`Response`)](/fr/docs/Web/API/Response) enregistrée. Si ce n'est pas le cas, on renvoie [un statut 404](/fr/docs/Web/HTTP/Status/404) comme réponse.
+Pour tous les autres modes des requêtes, on ouvre le cache que nous avions rempli [lors de l'installation](sauvegarder_le_cache_à_linstallation_de_la_PWA) en passant la requête de l'évènement à la méthode `match()`. Cette méthode vérifiera si la requête correspond à l'une des clés pour [une réponse (`Response`)](/fr/docs/Web/API/Response) enregistrée. Si ce n'est pas le cas, on renvoie [un statut 404](/fr/docs/Web/HTTP/Reference/Status/404) comme réponse.
 
 Pour cela, on utilise le constructeur [`Response()`](/fr/docs/Web/API/Response/Response) avec un corps `null` et `status: 404` comme options. Cela ne signifie pas qu'il y a une erreur avec notre PWA. Tout ce qui est nécessaire devrait déjà être en cache, et si ce n'est pas le cas, nous n'allons pas contacter le serveur pour résoudre ce sujet.
 
@@ -350,7 +350,7 @@ if ("serviceWorker" in navigator) {
 
 ### Tâche
 
-Ouvrez le fichier `index.html` et ajoutez l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) après le script incluant `app.js` et avant la balise fermante `</body>`.
+Ouvrez le fichier `index.html` et ajoutez l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) après le script incluant `app.js` et avant la balise fermante `</body>`.
 
 ```html
 <!-- Enregistrement du service worker de l'application. -->
@@ -380,7 +380,7 @@ Pour obtenir un nouveau cache, on peut modifier [le numéro de version](#numéro
 
 En général, on préfère éviter d'avoir à mettre à jour le numéro de version à chaque enregistrement dans son éditeur. Avant que vous ayez une nouvelle version de votre PWA prête à être déployée en production et diffusée à tout le monde, vous pouvez désinscrire le <i lang="en">service worker</i> plutôt que de modifier le numéro de version.
 
-Vous pouvez désinscrire un <i lang="en">service worker</i> en cliquant sur le bouton «&nbsp;Désinscrire&nbsp;» dans [les outils de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). En effectuant ensuite un rafraîchissement forcé, la page réinscrira le <i lang="en">service worker</i> et créera un nouveau cache.
+Vous pouvez désinscrire un <i lang="en">service worker</i> en cliquant sur le bouton «&nbsp;Désinscrire&nbsp;» dans [les outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools). En effectuant ensuite un rafraîchissement forcé, la page réinscrira le <i lang="en">service worker</i> et créera un nouveau cache.
 
 ![Capture d'écran du panneau Applications des outils de développement de Firefox avec un service worker arrêté et le bouton Désinscrire](firefox_sw.jpg)
 

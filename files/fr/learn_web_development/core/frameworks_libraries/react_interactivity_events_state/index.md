@@ -63,7 +63,7 @@ Appliquons cela à notre application en commençant par le composant `Form.js`.
 
 ### Gérer la soumission du formulaire
 
-Au début de la fonction du composant `Form()`, créez une fonction nommée `handleSubmit()`. Cette fonction doit [empêcher le comportement par défaut de l'évènement `submit`](/fr/docs/Learn/JavaScript/Building_blocks/Events#éviter_le_comportement_par_défaut) puis déclencher une alerte avec un message de votre choix. Vous devriez obtenir une fonction comme celle-ci&nbsp;:
+Au début de la fonction du composant `Form()`, créez une fonction nommée `handleSubmit()`. Cette fonction doit [empêcher le comportement par défaut de l'évènement `submit`](/fr/docs/Learn_web_development/Core/Scripting/Events#éviter_le_comportement_par_défaut) puis déclencher une alerte avec un message de votre choix. Vous devriez obtenir une fonction comme celle-ci&nbsp;:
 
 ```jsx
 function handleSubmit(e) {
@@ -72,7 +72,7 @@ function handleSubmit(e) {
 }
 ```
 
-Pour que cette fonction soit utilisée, ajoutez un attribut `onSubmit` à l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) en utilisant `handleSubmit` comme valeur&nbsp;:
+Pour que cette fonction soit utilisée, ajoutez un attribut `onSubmit` à l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) en utilisant `handleSubmit` comme valeur&nbsp;:
 
 ```jsx
 <form onSubmit={handleSubmit}>
@@ -146,7 +146,7 @@ Que se passe-t-il dans cette ligne de code&nbsp;?
 
 - Nous définissons la valeur initiale de `name` comme étant «&nbsp;Utiliser les hooks&nbsp;».
 - Nous définissons une fonction `setName()` dont le rôle est de modifier `name`.
-- `useState()` renvoie ces deux valeurs et nous utilisons [la décomposition de tableaux](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) pour les capturer dans des variables séparées.
+- `useState()` renvoie ces deux valeurs et nous utilisons [la décomposition de tableaux](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring) pour les capturer dans des variables séparées.
 
 ### Lecture de l'état
 

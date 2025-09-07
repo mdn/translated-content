@@ -378,7 +378,7 @@ arc.getArchive(); // [{val: 11}, {val: 13}]
 
 ## Voir aussi
 
-- [Énumérabilité et maîtrise des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Énumérabilité et maîtrise des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

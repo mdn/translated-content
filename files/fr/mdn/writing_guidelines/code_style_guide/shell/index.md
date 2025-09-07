@@ -28,4 +28,4 @@ Il existe quelques directives à suivre lors de l'écriture d'un bloc de code sh
 
 ## De bons exemples de commandes shell sur le MDN
 
-Nos [Documents de développement côté serveur de Django](/fr/docs/Learn/Server-side/Django) montrent une bonne pratique de présentation des commandes de l'invite shell, etc. sur le MDN. Regardez [Configurer un environnement de développement Django](/fr/docs/Learn/Server-side/Django/development_environment) par exemple.
+Nos [Documents de développement côté serveur de Django](/fr/docs/Learn_web_development/Extensions/Server-side/Django) montrent une bonne pratique de présentation des commandes de l'invite shell, etc. sur le MDN. Regardez [Configurer un environnement de développement Django](/fr/docs/Learn_web_development/Extensions/Server-side/Django/development_environment) par exemple.

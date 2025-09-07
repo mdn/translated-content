@@ -38,7 +38,7 @@ L'accesseur `__proto__` expose la valeur du `[[Prototype]]` interne d'un objet.
 
 Le mutateur `__proto__` permet de changer le `[[Prototype]]` d'un objet. Cet objet doit être extensible selon {{jsxref("Object.isExtensible")}}, si ce n'est pas le cas, une exception {{jsxref("TypeError")}} sera renvoyée. La valeur fournie pour le nouveau prototype doit être un objet ou {{jsxref("null")}}. Toute autre valeur entraînera un échec silencieux.
 
-Pour plus d'éléments sur le fonctionnement de l'héritage et des prototypes, voir la page sur [l'héritage et les chaînes de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+Pour plus d'éléments sur le fonctionnement de l'héritage et des prototypes, voir la page sur [l'héritage et les chaînes de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 Le propriété `__proto__` n'est qu'une propriété accesseur (composée d'une fonction accesseur (_getter_) et d'une fonction mutateur (_setter_)) pour {{jsxref("Object.prototype")}}. Si l'accès à `__proto__` consulte {{jsxref("Object.prototype")}}, on trouvera la propriété. Un accesseur qui ne consulte pas {{jsxref("Object.prototype")}} ne pourra pas trouver le prototype. Si une propriété `__proto__` est trouvée avant que {{jsxref("Object.prototype")}} ne soit consulté, cette propriété « cachera » {{jsxref("Object.prototype")}}.
 

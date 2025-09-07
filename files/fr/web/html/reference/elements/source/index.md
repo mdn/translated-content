@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/source
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<source>`** définit différentes ressources média pour un élément {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}}. C'est un élément vide : il ne possède pas de contenu et ne nécessite pas de balise fermante. Il est généralement utilisé pour distribuer le même contenu en utilisant [les différents formats pris en charge par les différents navigateurs](/fr/docs/Web/Media/Formats).
+L'élément HTML **`<source>`** définit différentes ressources média pour un élément {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}}. C'est un élément vide : il ne possède pas de contenu et ne nécessite pas de balise fermante. Il est généralement utilisé pour distribuer le même contenu en utilisant [les différents formats pris en charge par les différents navigateurs](/fr/docs/Web/Media/Guides/Formats).
 
 {{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
 
@@ -24,7 +24,7 @@ L'élément HTML **`<source>`** définit différentes ressources média pour un 
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `media`
   - : [Une requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour sélectionner la source du média. Cet attribut doit uniquement être utilisé pour un élément {{HTMLElement("picture")}}.
@@ -52,7 +52,7 @@ L'élément `<source>` est un _élément vide_ ce qui signifie qu'il n'a aucun c
 
 ### Vidéo
 
-Dans cet exemple, on voit comment distribuer une vidéo au format Ogg pour les navigateurs qui prennent en charge ce format, la même vidéo au format QuickTime pour d'autres voire au format webm. Si le navigateur ne prend pas en charge `<audio>` ou `<video>`, un message sera affiché. Si le navigateur prend en charge l'élément mais aucun des formats proposé, un évènement `error` sera déclenché et le lecteur média (s'il est activé) indiquera une erreur. [Cette page indique les différents formats pris en charge par les navigateurs](/fr/docs/Web/Media/Formats) pour les éléments `<audio>` et `<video>`.
+Dans cet exemple, on voit comment distribuer une vidéo au format Ogg pour les navigateurs qui prennent en charge ce format, la même vidéo au format QuickTime pour d'autres voire au format webm. Si le navigateur ne prend pas en charge `<audio>` ou `<video>`, un message sera affiché. Si le navigateur prend en charge l'élément mais aucun des formats proposé, un évènement `error` sera déclenché et le lecteur média (s'il est activé) indiquera une erreur. [Cette page indique les différents formats pris en charge par les navigateurs](/fr/docs/Web/Media/Guides/Formats) pour les éléments `<audio>` et `<video>`.
 
 #### HTML
 
@@ -144,4 +144,4 @@ Avec l'élément {{HTMLElement("picture")}}, il faut toujours inclure un éléme
 - {{HTMLElement("picture")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- [Les performances sur le Web](/fr/docs/Learn/Performance)
+- [Les performances sur le Web](/fr/docs/Learn_web_development/Extensions/Performance)

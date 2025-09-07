@@ -79,4 +79,4 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 
 ## Voir aussi
 
-- [Description illustrée de la syntaxe pouvant couvrir de 1 à 4 valeurs](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_épineux)
+- [Description illustrée de la syntaxe pouvant couvrir de 1 à 4 valeurs](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties#quelques_cas_aux_limites_épineux)

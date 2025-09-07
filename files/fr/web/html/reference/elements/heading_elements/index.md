@@ -87,7 +87,7 @@ h4 {
 
 ## Attributs
 
-Ces éléments incluent uniquement les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Ces éléments incluent uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -97,10 +97,10 @@ Ces éléments incluent uniquement les [attributs universels](/fr/docs/Web/HTML/
 
 ### Éviter d'avoir plusieurs éléments `<h1>` sur une page
 
-Bien qu'il soit permis par le standard HTML d'utiliser plusieurs éléments `<h1>` sur une même page tant que ceux-ci ne sont pas [imbriqués](#imbrication), cela est considéré comme une mauvaise pratique. Une page devrait généralement avoir un seul élément `<h1>` qui décrit le contenu de la page (semblable à l'élément [`<title>`](/fr/docs/Web/HTML/Element/title)).
+Bien qu'il soit permis par le standard HTML d'utiliser plusieurs éléments `<h1>` sur une même page tant que ceux-ci ne sont pas [imbriqués](#imbrication), cela est considéré comme une mauvaise pratique. Une page devrait généralement avoir un seul élément `<h1>` qui décrit le contenu de la page (semblable à l'élément [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title)).
 
 > [!NOTE]
-> L'imbrication de plusieurs éléments `<h1>` au sein [d'éléments sectionnants](/fr/docs/Web/HTML/Element#sectionnement_du_contenu) imbriqués était autorisée dans d'anciennes versions du standard HTML. Toutefois, cela a toujours été considéré comme une mauvaise pratique et ce n'est plus conforme. Pour en savoir plus, vous pouvez lire le billet [<i lang="en">There Is No Document Outline Algorithm</i> d'Adrian Roselli (en anglais)](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
+> L'imbrication de plusieurs éléments `<h1>` au sein [d'éléments sectionnants](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) imbriqués était autorisée dans d'anciennes versions du standard HTML. Toutefois, cela a toujours été considéré comme une mauvaise pratique et ce n'est plus conforme. Pour en savoir plus, vous pouvez lire le billet [<i lang="en">There Is No Document Outline Algorithm</i> d'Adrian Roselli (en anglais)](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
 
 Mieux vaudra donc utiliser un seul élément `<h1>` par page et [l'imbrication de titres d'autres niveaux](#imbrication) sans sauter de niveaux.
 
@@ -201,7 +201,7 @@ Les titres peuvent être imbriqués en sous-sections afin de modéliser l'organi
 Lorsque les titres sont imbriqués, il est possible de sauter des niveaux lors de la fermeture d'une sous-section.
 
 - [Tutoriel sur la structure d'une page et les titres, par la WAI](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [Comprendre les règles pour l'accessibilité des contenus web (WCAG), explications sur la règle 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les règles pour l'accessibilité des contenus web (WCAG), explications sur la règle 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [Comprendre le critère de succès 1.3.1, WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 - [Comprendre les règles pour l'accessibilité des contenus web (WCAG), explications sur la règle 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Comprendre le critère de succès 2.4.1, WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
@@ -210,9 +210,9 @@ Lorsque les titres sont imbriqués, il est possible de sauter des niveaux lors d
 
 ### Libeller le contenu des sections
 
-Une autre technique de navigation employée par celles et ceux qui utilisent les lecteurs d'écran consiste à générer une liste du [contenu sectionnant](/fr/docs/Web/HTML/Element#sectionnement_du_contenu) et à l'utiliser afin de déterminer le plan de la page.
+Une autre technique de navigation employée par celles et ceux qui utilisent les lecteurs d'écran consiste à générer une liste du [contenu sectionnant](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) et à l'utiliser afin de déterminer le plan de la page.
 
-Le contenu sectionnant peut être libellé en utilisant une combinaison des attributs [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) et [`id`](/fr/docs/Web/HTML/Global_attributes#id), où le libellé décrit de façon concise l'objet de la section. Cette technique s'avère utile lorsqu'il y a plus d'un élément sectionnant sur la même page.
+Le contenu sectionnant peut être libellé en utilisant une combinaison des attributs [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) et [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id), où le libellé décrit de façon concise l'objet de la section. Cette technique s'avère utile lorsqu'il y a plus d'un élément sectionnant sur la même page.
 
 #### Exemples
 
@@ -238,7 +238,7 @@ Le contenu sectionnant peut être libellé en utilisant une combinaison des attr
 
 {{EmbedLiveSample('','100%','190')}}
 
-Avec cet exemple, un lecteur d'écran annoncera la présence de deux sections [`<nav>`](/fr/docs/Web/HTML/Element/nav), la première appelée «&nbsp;Navigation primaire&nbsp;» et l'autre appelée «&nbsp;Navigation du pied de page&nbsp;». Si les libellés n'avaient pas été fournis, la personne aurait dû consulter le contenu de chaque élément `<nav>` afin de déterminer leur utilité.
+Avec cet exemple, un lecteur d'écran annoncera la présence de deux sections [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), la première appelée «&nbsp;Navigation primaire&nbsp;» et l'autre appelée «&nbsp;Navigation du pied de page&nbsp;». Si les libellés n'avaient pas été fournis, la personne aurait dû consulter le contenu de chaque élément `<nav>` afin de déterminer leur utilité.
 
 - [Utiliser l'attribut `aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [Tutoriels sur les libellés pour les régions et la structure des pages, par la WAI](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
@@ -253,6 +253,6 @@ Avec cet exemple, un lecteur d'écran annoncera la présence de deux sections [`
 
 ## Voir aussi
 
-- [`<p>`](/fr/docs/Web/HTML/Element/p)
-- [`<div>`](/fr/docs/Web/HTML/Element/div)
-- [`<section>`](/fr/docs/Web/HTML/Element/section)
+- [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p)
+- [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div)
+- [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)

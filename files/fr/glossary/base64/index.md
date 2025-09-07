@@ -11,7 +11,7 @@ l10n:
 
 Les schémas d'encodage en base64 sont principalement utilisés lorsqu'il s'agit d'enregistrer ou d'envoyer des données binaires via un média qui a été conçu pour gérer du texte en ASCII. Cette transformation permet de conserver l'intégrité des données envoyées lors du transport. Base64 est utilisé par plusieurs applications, notamment celles qui gèrent les courriels avec [MIME](https://fr.wikipedia.org/wiki/MIME), et le stockage de données complexes en [XML](/fr/docs/Web/XML).
 
-Sur le Web, on utilise généralement l'encodage base64 pour inclure des données binaires dans [une URL de données `data:`](/fr/docs/Web/URI/Schemes/data).
+Sur le Web, on utilise généralement l'encodage base64 pour inclure des données binaires dans [une URL de données `data:`](/fr/docs/Web/URI/Reference/Schemes/data).
 
 En JavaScript, il existe deux fonctions utilisées pour encoder et décoder des chaînes en base64&nbsp;:
 

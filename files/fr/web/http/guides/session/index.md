@@ -57,10 +57,10 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### Méthodes de demande
 
-HTTP définit un ensemble de [méthodes de requête](/fr/docs/Web/HTTP/Methods) indiquant l'action souhaitée à effectuer sur une ressource. Bien qu'ils puissent également être des noms, ces méthodes de requêtes sont parfois appelées verbes HTTP. Les requêtes les plus courantes sont `GET` et `POST` :
+HTTP définit un ensemble de [méthodes de requête](/fr/docs/Web/HTTP/Reference/Methods) indiquant l'action souhaitée à effectuer sur une ressource. Bien qu'ils puissent également être des noms, ces méthodes de requêtes sont parfois appelées verbes HTTP. Les requêtes les plus courantes sont `GET` et `POST` :
 
 - La méthode {{HTTPMethod ("GET")}} demande une représentation de données de la ressource spécifiée. Les requêtes utilisant `GET` ne doivent que récupérer les données.
-- La méthode {{HTTPMethod ("POST")}} envoie des données à un serveur afin qu'il puisse changer son état. C'est la méthode souvent utilisée pour les [formulaires HTML](/fr/docs/Learn/Forms).
+- La méthode {{HTTPMethod ("POST")}} envoie des données à un serveur afin qu'il puisse changer son état. C'est la méthode souvent utilisée pour les [formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms).
 
 ## Structure d'une réponse du serveur
 
@@ -131,7 +131,7 @@ Content-Type: text/html
 
 ### Codes d'état de réponse
 
-[Les codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Status) indiquent si une requête HTTP spécifique a été effectuée avec succès. Les réponses sont regroupées en cinq classes: réponses d'information, réponses réussies, redirections, erreurs de client et erreurs de serveurs.
+[Les codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status) indiquent si une requête HTTP spécifique a été effectuée avec succès. Les réponses sont regroupées en cinq classes: réponses d'information, réponses réussies, redirections, erreurs de client et erreurs de serveurs.
 
 - {{HTTPStatus(200)}}: OK. La demande a réussi.
 - {{HTTPStatus(301)}}: Moved Permanently. Ce code de réponse signifie que l'URL de la ressource demandée a été modifiée.
@@ -140,6 +140,6 @@ Content-Type: text/html
 ## Voir aussi
 
 - [Identifying resources on the Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) (en anglais)
-- [En-têtes HTTP](/fr/docs/Web/HTTP/Headers)
-- [Méthode de requête HTTP](/fr/docs/Web/HTTP/Methods)
-- [Codes de réponse HTTP](/fr/docs/Web/HTTP/Status)
+- [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
+- [Méthode de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
+- [Codes de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)

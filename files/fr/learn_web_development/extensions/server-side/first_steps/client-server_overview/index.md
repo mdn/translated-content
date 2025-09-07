@@ -51,7 +51,7 @@ Cette requête inclut&nbsp;:
 - `POST` data. Les requêtes `POST` ajoutent de nouvelles ressources dont les données sont encodées dans le corps de la requête.
 - Cookies côté Client. Contient les données de session du client, incluant les clés dont peut se servir le serveur pour déterminer le statut de login et les accés/permissions aux ressources.
 
-Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut [HTTP Response](/fr/docs/Web/HTTP/Status) indiquant si, oui ou non, la requête a abouti. (ex : "`200 OK`" pour un succés, "`404 Not Found`" si la ressource ne peut être trouvée, "`403 Forbidden`" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête `GET` contiendrait la ressource demandée.
+Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut [HTTP Response](/fr/docs/Web/HTTP/Reference/Status) indiquant si, oui ou non, la requête a abouti. (ex : "`200 OK`" pour un succés, "`404 Not Found`" si la ressource ne peut être trouvée, "`403 Forbidden`" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête `GET` contiendrait la ressource demandée.
 
 Quand une page HTML est retournée, elle est affichée par le navigateur. Le navigateur, nativement, pourra découvrir des liens vers d'autres ressources (ex : une page HTML intégre habituellement des pages JavaScript et CSS ), et enverra des requêtes séparées pour télécharger ces fichiers.
 
@@ -66,7 +66,7 @@ Vous faites une simple requête `GET` en cliquant sur un lien ou en faisant une 
 
 #### La requête
 
-Chaque ligne de la requête contient des informations sur celle-ci. La première partie est appelée l'en-tête ( **header**) et contient beaucoup de données utiles. De la même manière qu'un [HTML head](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) contient des informations utiles (pas le contenu réel qui lui, se trouve dans le corps (body) :
+Chaque ligne de la requête contient des informations sur celle-ci. La première partie est appelée l'en-tête ( **header**) et contient beaucoup de données utiles. De la même manière qu'un [HTML head](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) contient des informations utiles (pas le contenu réel qui lui, se trouve dans le corps (body) :
 
 ```
 GET https://developer.mozilla.org/en-US/search?q=la+relation+Client+-+serveur&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
@@ -217,7 +217,7 @@ Voyons comment tout cela marche en révisant un diagramme d'architecture de site
 
 ![A simplified diagram of a static web server.](Basic%20Static%20App%20Server.png)
 
-Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP `GET` spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse HTTP contenant le document et un [HTTP Response status code](/fr/docs/Web/HTTP/Status) ( statut codé de la réponse HTTP) qui est "`200 OK`" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "`404 Not Found`" si le fichier est absent sur le serveur , ou bien "`301 Moved Permanently`" si le fichier existe mais a été déplacé vers une nouvelle localisation.
+Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP `GET` spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse HTTP contenant le document et un [HTTP Response status code](/fr/docs/Web/HTTP/Reference/Status) ( statut codé de la réponse HTTP) qui est "`200 OK`" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "`404 Not Found`" si le fichier est absent sur le serveur , ou bien "`301 Moved Permanently`" si le fichier existe mais a été déplacé vers une nouvelle localisation.
 
 Le serveur d'un site statique n'aura à faire face qu'à des requêtes GET vu qu'il ne stocke aucune donnée modifiable. Il ne change pas non plus ses réponses basées sur les données des requêtes HTTP (c'est à dire les paramètres URL ou les cookies).
 

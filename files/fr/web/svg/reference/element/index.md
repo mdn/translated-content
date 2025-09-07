@@ -242,8 +242,8 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 
 ## Voir aussi
 
-- [Référence des attributs SVG](/fr/docs/Web/SVG/Attribute)
-- [Tutoriel SVG](/fr/docs/Web/SVG/Tutorial)
+- [Référence des attributs SVG](/fr/docs/Web/SVG/Reference/Attribute)
+- [Tutoriel SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [Référence des interfaces avec SVG](/fr/docs/Web/API/Document_Object_Model#svg_interfaces)
 
 {{SVGRef}}

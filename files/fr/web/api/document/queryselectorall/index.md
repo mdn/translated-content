@@ -130,7 +130,7 @@ inner.length; // 0
 
 - [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
-- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) dans la zone d'apprentissage de MDN
+- [Sélecteurs d'attribut](/fr/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) dans la zone d'apprentissage de MDN
 - {{domxref("Element.querySelectorAll")}} et {{domxref("Element.querySelectorAll()")}}
 - {{domxref("document.querySelector")}}
 - {{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}

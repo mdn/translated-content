@@ -83,7 +83,7 @@ La liste de ces fonctionnalités est :
 
 Le web fournit des fonctionnalités et API que peuvent affecter l'anonymat, la vie privée et la sécurité si leur usage est abusif. Dans certains cas, vous pourriez avoir envie de limiter strictement la manière dont de telles fonctionnalités sont utilisées sur un site web. Il y a des moyens de permettre à des fonctionnalités d'être activées ou désactivées pour des origines ou des cadres spécifiques dans un site web. Quand ils sont disponibles, les moyens intègrent avec l'API Permissions ou des mécanismes propres à eux-mêmes la possibilité de vérifier si la fonctionnalité est disponible.
 
-Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/Headers/Permissions-Policy#directives)) :
+Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)) :
 
 - Accéléromètre
 - Capteur de luminosité ambiante

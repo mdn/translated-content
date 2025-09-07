@@ -8,7 +8,7 @@ original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
 
 ## Ajouter `z-index`
 
-Dans le premier exemple, [« empilement sans `z-index` »](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index), illustre comment l'empilement fonctionne par défaut. Pour définir un ordre d'empilement différent, il faut utiliser la propriété CSS {{cssxref("z-index")}}.
+Dans le premier exemple, [« empilement sans `z-index` »](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index), illustre comment l'empilement fonctionne par défaut. Pour définir un ordre d'empilement différent, il faut utiliser la propriété CSS {{cssxref("z-index")}}.
 
 Cette propriété, dont l'attribut est une valeur entière (positive ou négative), représente la position de l'élément le long de l'axe Z. Pour se représenter cette notion, on peut imaginer que la page possède plusieurs couches, les unes au dessus des autres. Chaque couche est numérotée. Un couche avec une grande valeur de `z-index` est affichée par dessus toutes celles dont la valeur est inférieure à la sienne.
 
@@ -29,7 +29,7 @@ Cette propriété, dont l'attribut est une valeur entière (positive ou négativ
 > [!NOTE]
 >
 > - Lorsque la propriété `z-index` n'est pas définie, les éléments sont rendus sur la couche 0 par défaut.
-> - Si plusieurs éléments possède la même valeur de `z-index` (c'est-à-dire qu'ils sont placés sur la même couche), alors les règles d'empilement expliquées dans [empilement sans `z-index`](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) s'appliquent.
+> - Si plusieurs éléments possède la même valeur de `z-index` (c'est-à-dire qu'ils sont placés sur la même couche), alors les règles d'empilement expliquées dans [empilement sans `z-index`](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) s'appliquent.
 
 Dans l'exemple qui suit, l'empilement des couches a été réordonné en utilisant `z-index`. Le `z-index` du bloc DIV#5 n'a pas d'effet, l'élément n'étant pas positionné.
 

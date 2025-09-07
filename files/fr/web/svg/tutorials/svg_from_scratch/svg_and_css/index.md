@@ -13,7 +13,7 @@ Cette page illustre l'application de CSS sur des documents [SVG](/fr/docs/Web/SV
 Nous allons voir par la suite un exemple que vous pourrez copier pour l'exécuter dans votre navigateur (à la condition que celui-ci soit compatible avec SVG).
 
 > [!NOTE]
-> Les éléments référencés par des éléments [`<use>`](/fr/docs/Web/SVG/Element/use) héritent des styles de cet élément. Pour leur appliquer des styles différents, il faut donc utiliser [les propriétés CSS personnalisées (_custom properties_)](/fr/docs/Web/CSS/CSS_cascading_variables).
+> Les éléments référencés par des éléments [`<use>`](/fr/docs/Web/SVG/Reference/Element/use) héritent des styles de cet élément. Pour leur appliquer des styles différents, il faut donc utiliser [les propriétés CSS personnalisées (_custom properties_)](/fr/docs/Web/CSS/CSS_cascading_variables).
 
 ## Exemple
 
@@ -397,7 +397,7 @@ Notes sur cette démonstration :
 
 ## Structure simplifiée
 
-La structure SVG présentée ci-dessus pourrait être écrite de manière beaucoup plus concise en référençant les différentes parties de la fleur via des éléments [`<use>`](/fr/docs/Web/SVG/Element/use). Ce [comportement est normalisé](https://www.w3.org/TR/SVG2/struct.html#UseStyleInheritance), bien que seuls quelques navigateurs prennent en charge la pseudo-classe [`:hover`](/fr/docs/Web/CSS/:hover) et d'autres sélecteurs CSS plus complexes sur les éléments référencés via les éléments `<use>`, pour le moment. Il existe [un débat sur les règles applicables à ces éléments référencés](https://github.com/w3c/svgwg/issues/504).
+La structure SVG présentée ci-dessus pourrait être écrite de manière beaucoup plus concise en référençant les différentes parties de la fleur via des éléments [`<use>`](/fr/docs/Web/SVG/Reference/Element/use). Ce [comportement est normalisé](https://www.w3.org/TR/SVG2/struct.html#UseStyleInheritance), bien que seuls quelques navigateurs prennent en charge la pseudo-classe [`:hover`](/fr/docs/Web/CSS/:hover) et d'autres sélecteurs CSS plus complexes sur les éléments référencés via les éléments `<use>`, pour le moment. Il existe [un débat sur les règles applicables à ces éléments référencés](https://github.com/w3c/svgwg/issues/504).
 
 Voici comment se présente la structure du document SVG désormais.
 

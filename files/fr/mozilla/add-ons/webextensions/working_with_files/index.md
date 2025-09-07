@@ -41,7 +41,7 @@ Si vous souhaitez travailler avec un fichier de l'ordinateur de l'utilisateur, u
 
 Exemple : [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 Guide : [Using files from web applications](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-API références : [HTML input element](/fr/docs/Web/HTML/Element/input/file) | [DOM File API](/fr/docs/Web/API/File)
+API références : [HTML input element](/fr/docs/Web/HTML/Reference/Elements/input/file) | [DOM File API](/fr/docs/Web/API/File)
 
 > [!NOTE]
 > Si vous souhaitez accéder ou traiter tous les fichiers dans un dossier sélectionné, vous pouvez le faire en utilisant `<input type="file" webkitdirectory="true"/>` pour sélectionner le dossier et récupérer tous les fichiers qu'il contient.

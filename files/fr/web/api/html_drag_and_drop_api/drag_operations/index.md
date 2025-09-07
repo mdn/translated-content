@@ -18,7 +18,7 @@ En HTML, excepté le comportement par défaut des images, des liens et des séle
 
 Pour rendre un autre élément HTML glissable, deux choses doivent être faites&nbsp;:
 
-- Définissez l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) à `true` sur l'élément que vous voulez rendre glissable.
+- Définissez l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes#draggable) à `true` sur l'élément que vous voulez rendre glissable.
 - Ajoutez un scrutateur sur l'événement [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) et définissez les données du glissement dans ce scrutateur.
 - {{domxref("DataTransfer.setData","Définir la donnée de glissement")}} au sein du scrutateur ajouté précédemment.
 
@@ -32,11 +32,11 @@ Voici un exemple qui permet à une section de contenu d'être glissée&nbsp;:
 </div>
 ```
 
-L'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) est défini à true, ce qui rend l'élément glissant. Si cet attribut est omis ou défini à false, l'élément ne serait pas glissant et le texte serait alors simplement sélectionné. Cet attribut peut être placé sur n'importe quel élément, y compris des images et des liens. Toutefois, pour les deux derniers, la valeur par défaut est true, donc vous n'utiliserez l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) que pour le définir à `false` pour interdire le glissement de ces éléments.
+L'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes#draggable) est défini à true, ce qui rend l'élément glissant. Si cet attribut est omis ou défini à false, l'élément ne serait pas glissant et le texte serait alors simplement sélectionné. Cet attribut peut être placé sur n'importe quel élément, y compris des images et des liens. Toutefois, pour les deux derniers, la valeur par défaut est true, donc vous n'utiliserez l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes#draggable) que pour le définir à `false` pour interdire le glissement de ces éléments.
 
 Notez que lorsqu'un élément est rendu glissable, le texte ou les autres éléments qu'il contient ne peuvent plus être sélectionné de manière classique en cliquant et déplaçant la souris. Au lieu de cela, l'utilisateur doit maintenir la touche <kbd>Alt</kbd> appuyée pour sélectionner le texte avec la souris, ou bien utilisez le clavier.
 
-Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable), car tous les éléments XUL sont glissables.
+Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes#draggable), car tous les éléments XUL sont glissables.
 
 ```html
 <button

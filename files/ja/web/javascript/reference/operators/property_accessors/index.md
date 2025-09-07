@@ -2,30 +2,28 @@
 title: プロパティアクセサー
 slug: Web/JavaScript/Reference/Operators/Property_accessors
 l10n:
-  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **プロパティアクセサー**はオブジェクトのプロパティへのアクセスを提供するもので、ドット記法またはブラケット記法を使用します。
 
-{{InteractiveExample("JavaScript デモ: Expressions - Property accessors", "taller")}}
+{{InteractiveExample("JavaScript デモ: プロパティアクセサー", "taller")}}
 
 ```js interactive-example
 const person1 = {};
-person1["firstname"] = "Mario";
-person1["lastname"] = "Rossi";
+person1["firstName"] = "Mario";
+person1["lastName"] = "Rossi";
 
-console.log(person1.firstname);
-// Expected output: "Mario"
+console.log(person1.firstName);
+// 予想される結果: "Mario"
 
 const person2 = {
-  firstname: "John",
-  lastname: "Doe",
+  firstName: "John",
+  lastName: "Doe",
 };
 
-console.log(person2["lastname"]);
-// Expected output: "Doe"
+console.log(person2["lastName"]);
+// 予想される結果: "Doe"
 ```
 
 ## 構文
@@ -38,7 +36,7 @@ object.#privateProperty
 
 ## 解説
 
-オブジェクトは実際には*連想配列*（別名 _map_、 _dictionary_、 _hash_、 _lookup table_）とみなすことができます。この配列における*キー*はオブジェクトの[プロパティ](/ja/docs/Glossary/Property/JavaScript)の名前です。
+オブジェクトは実際には連想配列（別名 _map_、 _dictionary_、 _hash_、 _lookup table_）とみなすことができます。この配列における*キー*はオブジェクトの[プロパティ](/ja/docs/Glossary/Property/JavaScript)の名前です。
 
 プロパティにアクセスするには、*ドット記法*と*ブラケット記法*の 2 通りがあります。
 
@@ -59,7 +57,7 @@ console.log(object.$1); // 'foo'
 
 ```js-nolint example-bad
 const object = {};
-object.1 = 'bar'; // SyntaxError
+object.1 = "bar"; // SyntaxError
 console.log(object.1); // SyntaxError
 ```
 
@@ -82,7 +80,7 @@ document.createElement("pre");
 77..toExponential();
 // or
 77.0.toExponential();
-// 77.と77.0は同じものとして評価されます
+// 77. と 77.0 は同じものとして評価されます
 ```
 
 さらに、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)は、それを定義するクラス内でドット記法を使用してのみアクセスすることができます。

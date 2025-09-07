@@ -94,7 +94,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 {{EmbedLiveSample('')}}
 
-La portée de `context` est l'élément dont [l'identifiant (`id`)](/fr/docs/Web/HTML/Global_attributes#id) vaut `context`. Les éléments sélectionnés sont les éléments `<div>` qui sont des enfants directs de ce contexte, c'est-à-dire `element-1` et `element-2`, mais pas leurs descendants à eux.
+La portée de `context` est l'élément dont [l'identifiant (`id`)](/fr/docs/Web/HTML/Reference/Global_attributes#id) vaut `context`. Les éléments sélectionnés sont les éléments `<div>` qui sont des enfants directs de ce contexte, c'est-à-dire `element-1` et `element-2`, mais pas leurs descendants à eux.
 
 ## Spécifications
 

@@ -6,9 +6,9 @@ original_slug: Web/HTML/Attributes/step
 
 {{HTMLSidebar}}
 
-L'attribut **`step`** est un nombre qui indique l'incrément que la valeur doit suivre ou le mot-clé `any`. Il est valable pour les types de saisie numérique, notamment les [`date`](/fr/docs/Web/HTML/Element/input/date), [`month`](/fr/docs/Web/HTML/Element/input/month), [`week`](/fr/docs/Web/HTML/Element/input/week), [`time`](/fr/docs/Web/HTML/Element/input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/input/number) et [`range`](/fr/docs/Web/HTML/Element/input/range).
+L'attribut **`step`** est un nombre qui indique l'incrément que la valeur doit suivre ou le mot-clé `any`. Il est valable pour les types de saisie numérique, notamment les [`date`](/fr/docs/Web/HTML/Reference/Elements/input/date), [`month`](/fr/docs/Web/HTML/Reference/Elements/input/month), [`week`](/fr/docs/Web/HTML/Reference/Elements/input/week), [`time`](/fr/docs/Web/HTML/Reference/Elements/input/time), [`datetime-local`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local), [`number`](/fr/docs/Web/HTML/Reference/Elements/input/number) et [`range`](/fr/docs/Web/HTML/Reference/Elements/input/range).
 
-`step` définit l'incrément obtenu lors du clic sur les boutons déroulants haut et bas, du déplacement d'un curseur vers la gauche et la droite sur une plage, et de la validation des différents types de date. S'il n'est pas explicitement inclus, `step` prend par défaut la valeur 1 pour `number` et `range`, et 1 type d'unité (minute, semaine, mois, jour) pour les types d'entrée date/heure. La valeur doit être un nombre positif - entier ou flottant - ou la valeur spéciale `any`, ce qui signifie qu'aucun incrément n'est impliqué et que toute valeur est autorisée (sauf autres contraintes, comme [`min`](/fr/docs/Web/HTML/Attributes/min) et [`max`](/fr/docs/Web/HTML/Attributes/max)).
+`step` définit l'incrément obtenu lors du clic sur les boutons déroulants haut et bas, du déplacement d'un curseur vers la gauche et la droite sur une plage, et de la validation des différents types de date. S'il n'est pas explicitement inclus, `step` prend par défaut la valeur 1 pour `number` et `range`, et 1 type d'unité (minute, semaine, mois, jour) pour les types d'entrée date/heure. La valeur doit être un nombre positif - entier ou flottant - ou la valeur spéciale `any`, ce qui signifie qu'aucun incrément n'est impliqué et que toute valeur est autorisée (sauf autres contraintes, comme [`min`](/fr/docs/Web/HTML/Reference/Attributes/min) et [`max`](/fr/docs/Web/HTML/Reference/Attributes/max)).
 
 La valeur des incréments par défaut pour les entrées `number` est 1, ce qui permet de ne saisir que des nombres entiers, _à moins que_ la valeur initiale ne soit pas un nombre entier. La valeur de pas par défaut pour les entrées `time` est de 1 seconde, 900 étant égal à 15 minutes.
 
@@ -108,7 +108,7 @@ La valeur des incréments par défaut pour les entrées `number` est 1, ce qui p
   </tbody>
 </table>
 
-Si `any` n'est pas explicitement défini, les valeurs valides pour les types de saisie `number`, date/heure, et les types d'entrée `range` sont égales à la base du pas — la valeur [`min`](/fr/docs/Web/HTML/Attributes/min) et les incréments de la valeur du pas, jusqu'à la valeur [`max`](/fr/docs/Web/HTML/Attributes/max), si spécifiée. Par exemple, si on a `<input type="number" min="10" step="2">` tout entier pair, 10 ou grand, est valide. S'il est omis, `<input type="number">`, tout entier est valide, mais les flottants, comme `4,2`, ne le sont pas, car `step` est par défaut à 1. Pour que `4,2` soit valide, `step` aurait dû être défini à `any`, `0,1`, `0,2`, et la valeur min aurait dû être un nombre se terminant par .2, comme `<input type="number" min="-5.2">`.
+Si `any` n'est pas explicitement défini, les valeurs valides pour les types de saisie `number`, date/heure, et les types d'entrée `range` sont égales à la base du pas — la valeur [`min`](/fr/docs/Web/HTML/Reference/Attributes/min) et les incréments de la valeur du pas, jusqu'à la valeur [`max`](/fr/docs/Web/HTML/Reference/Attributes/max), si spécifiée. Par exemple, si on a `<input type="number" min="10" step="2">` tout entier pair, 10 ou grand, est valide. S'il est omis, `<input type="number">`, tout entier est valide, mais les flottants, comme `4,2`, ne le sont pas, car `step` est par défaut à 1. Pour que `4,2` soit valide, `step` aurait dû être défini à `any`, `0,1`, `0,2`, et la valeur min aurait dû être un nombre se terminant par .2, comme `<input type="number" min="-5.2">`.
 
 ### L'impact de min sur step
 
@@ -135,11 +135,11 @@ Les valeurs valides comprennent `1,2`, `3,2`, `5,2`, `7,2`, `9,2`, `11,2`, et ai
 > [!NOTE]
 > Lorsque les données saisies par l'utilisateur ne respectent pas la configuration indiquée par l'incrément, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudoclasses [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
 
-Voir [Validation côté client](/fr/docs/Web/HTML/Constraint_validation) et [`stepMismatch`](/fr/docs/Web/API/ValidityState/stepMismatch) pour plus d'informations.
+Voir [Validation côté client](/fr/docs/Web/HTML/Guides/Constraint_validation) et [`stepMismatch`](/fr/docs/Web/API/ValidityState/stepMismatch) pour plus d'informations.
 
 ## Accessibilité
 
-Fournissez des instructions pour aider les utilisateurs à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `min`, assurez-vous que cette exigence minimale est comprise par l'utilisateur. Fournir des instructions dans l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus souples, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute).
+Fournissez des instructions pour aider les utilisateurs à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `min`, assurez-vous que cette exigence minimale est comprise par l'utilisateur. Fournir des instructions dans l'élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus souples, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute).
 
 ## Spécifications
 
@@ -147,11 +147,11 @@ Fournissez des instructions pour aider les utilisateurs à comprendre comment re
 
 ## Voir aussi
 
-- L'attribut [`max`](/fr/docs/Web/HTML/Attributes/max)
-- L'attribut [`min`](/fr/docs/Web/HTML/Attributes/min)
-- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
-- L'API [Constraint validation](/fr/docs/Learn/Forms/Form_validation)
+- L'attribut [`max`](/fr/docs/Web/HTML/Reference/Attributes/max)
+- L'attribut [`min`](/fr/docs/Web/HTML/Reference/Attributes/min)
+- [Validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation)
+- L'API [Constraint validation](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - La propriété [`validityState.stepMismatch`](/fr/docs/Web/API/validityState/stepMismatch)
 - La pseudo-classe [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
-- Les types [`date`](/fr/docs/Web/HTML/Element/input/date), [`month`](/fr/docs/Web/HTML/Element/input/month), [`week`](/fr/docs/Web/HTML/Element/input/week), [`time`](/fr/docs/Web/HTML/Element/input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/input/number) et [`range`](/fr/docs/Web/HTML/Element/input/range), ainsi que l'élément [`<meter>`](/fr/docs/Web/HTML/Element/meter)
+- L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
+- Les types [`date`](/fr/docs/Web/HTML/Reference/Elements/input/date), [`month`](/fr/docs/Web/HTML/Reference/Elements/input/month), [`week`](/fr/docs/Web/HTML/Reference/Elements/input/week), [`time`](/fr/docs/Web/HTML/Reference/Elements/input/time), [`datetime-local`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local), [`number`](/fr/docs/Web/HTML/Reference/Elements/input/number) et [`range`](/fr/docs/Web/HTML/Reference/Elements/input/range), ainsi que l'élément [`<meter>`](/fr/docs/Web/HTML/Reference/Elements/meter)

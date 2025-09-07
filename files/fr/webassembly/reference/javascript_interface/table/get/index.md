@@ -21,7 +21,7 @@ var funcRef = table.get(index);
 
 ### Valeur de retour
 
-Une référence de fonction, c'est-à-dire [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Exported_functions) qui est une enveloppe JavaScript pour manipuler la fonction WebAssembly sous-jacente.
+Une référence de fonction, c'est-à-dire [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Guides/Exported_functions) qui est une enveloppe JavaScript pour manipuler la fonction WebAssembly sous-jacente.
 
 ### Exceptions
 
@@ -52,5 +52,5 @@ On note ici qu'il est nécessaire d'avoir un deuxième opérateur d'appel après
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

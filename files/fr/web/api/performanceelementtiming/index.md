@@ -12,9 +12,9 @@ L'interface **`PerformanceElementTiming`** de l'API [Element Timing API](/fr/doc
 - [`PerformanceElementTiming.element`](/fr/docs/Web/API/PerformanceElementTiming/element) {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-Standard_Inline}}
   - : Un [`Element`](/fr/docs/Web/API/Element) représentant l'élément pour lequel nous retournons des informations.
 - [`PerformanceElementTiming.id`](/fr/docs/Web/API/PerformanceElementTiming/id) {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-Standard_Inline}}
-  - : Un [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est l'identifiant (attribut [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id)) de l'élément.
+  - : Un [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est l'identifiant (attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id)) de l'élément.
 - [`PerformanceElementTiming.identifier`](/fr/docs/Web/API/PerformanceElementTiming/identifier) {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-Standard_Inline}}
-  - : Une [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est la valeur de l'attribut [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming) de l'élément.
+  - : Une [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est la valeur de l'attribut [`elementtiming`](/fr/docs/Web/HTML/Reference/Attributes/elementtiming) de l'élément.
 - [`PerformanceElementTiming.intersectionRect`](/fr/docs/Web/API/PerformanceElementTiming/intersectionRect) {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-Standard_Inline}}
   - : Un [`DOMRectReadOnly`](/fr/docs/Web/API/DOMRectReadOnly) qui est le rectangle de l'élément dans la fenêtre d'affichage.
 - [`PerformanceElementTiming.loadTime`](/fr/docs/Web/API/PerformanceElementTiming/loadTime) {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-Standard_Inline}}

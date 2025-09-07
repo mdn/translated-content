@@ -62,17 +62,17 @@ svgns|a:active {
 {{EmbedLiveSample('Exemple', 100, 100)}}
 
 > [!WARNING]
-> Étant donné que cet élément partage son nom de balise avec l'[élément HTML `<a>`](/fr/docs/Web/HTML/Element/a), la sélection de "`a`" avec CSS ou [`querySelector`](/fr/docs/Web/API/Document/querySelector) peut s'appliquer au mauvais type d'élément. La [règle `@namespace`](/fr/docs/Web/CSS/@namespace) permet de faire la distinction entre les deux.
+> Étant donné que cet élément partage son nom de balise avec l'[élément HTML `<a>`](/fr/docs/Web/HTML/Reference/Elements/a), la sélection de "`a`" avec CSS ou [`querySelector`](/fr/docs/Web/API/Document/querySelector) peut s'appliquer au mauvais type d'élément. La [règle `@namespace`](/fr/docs/Web/CSS/@namespace) permet de faire la distinction entre les deux.
 
 ## Attributs
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#événement_graphiques)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#attributs_xlink)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_traitement_conditionnel)
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Reference/Attribute#événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
+- [Attributs Xlink](/fr/docs/Web/SVG/Reference/Attribute#attributs_xlink)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -80,14 +80,14 @@ svgns|a:active {
 
 ### Attributs spécifiques
 
-- [`download`](/fr/docs/Web/HTML/Element/a#download) {{experimental_inline}}
+- [`download`](/fr/docs/Web/HTML/Reference/Elements/a#download) {{experimental_inline}}
 - {{SVGAttr("href")}}
-- [`hreflang`](/fr/docs/Web/HTML/Element/a#hreflang)
-- [`ping`](/fr/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
-- [`referrerpolicy`](/fr/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
-- [`rel`](/fr/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
+- [`hreflang`](/fr/docs/Web/HTML/Reference/Elements/a#hreflang)
+- [`ping`](/fr/docs/Web/HTML/Reference/Elements/a#ping) {{experimental_inline}}
+- [`referrerpolicy`](/fr/docs/Web/HTML/Reference/Elements/a#referrerpolicy) {{experimental_inline}}
+- [`rel`](/fr/docs/Web/HTML/Reference/Elements/a#rel) {{experimental_inline}}
 - {{SVGAttr("target")}}
-- [`type`](/fr/docs/Web/HTML/Element/a#type)
+- [`type`](/fr/docs/Web/HTML/Reference/Elements/a#type)
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## Contexte d'utilisation

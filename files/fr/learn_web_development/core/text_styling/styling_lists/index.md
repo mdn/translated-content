@@ -6,7 +6,7 @@ original_slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Les [listes](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#listes) se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.
+Les [listes](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#listes) se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.
 
 <table class="standard-table">
   <tbody>
@@ -112,13 +112,13 @@ Le code HTML pour nos exemples de liste ressemble à ceci&nbsp;:
 
 {{EmbedLiveSample('','100%',770)}}
 
-Si vous allez à l'exemple réel maintenant, et examinez les éléments de la liste en utilisant [les outils de développement des navigateurs](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), vous noterez quelques valeurs de style par défaut&nbsp;:
+Si vous allez à l'exemple réel maintenant, et examinez les éléments de la liste en utilisant [les outils de développement des navigateurs](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), vous noterez quelques valeurs de style par défaut&nbsp;:
 
-- Les éléments [`<ul>`](/fr/docs/Web/HTML/Element/ul) et [`<ol>`](/fr/docs/Web/HTML/Element/ol) ont une propriété [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas et une propriété [`padding-left`](/fr/docs/Web/CSS/padding-left) de `40px` (`2.5em`).
-- Les éléments de la liste ([`<li>`](/fr/docs/Web/HTML/Element/li)) n'ont aucun paramètre d'espacement par défaut.
-- L'élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) a des propriétés [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas, mais pas de définition du remplissage.
-- Les éléments [`<dd>`](/fr/docs/Web/HTML/Element/dd) ont une propriété [`margin-left`](/fr/docs/Web/CSS/margin-left) de `40px` (`2.5em`).
-- Les éléments [`<p>`](/fr/docs/Web/HTML/Element/p), inclus pour référence, ont des propriétés [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas, identiques à ceux des différents types de listes.
+- Les éléments [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) et [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ont une propriété [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas et une propriété [`padding-left`](/fr/docs/Web/CSS/padding-left) de `40px` (`2.5em`).
+- Les éléments de la liste ([`<li>`](/fr/docs/Web/HTML/Reference/Elements/li)) n'ont aucun paramètre d'espacement par défaut.
+- L'élément [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl) a des propriétés [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas, mais pas de définition du remplissage.
+- Les éléments [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd) ont une propriété [`margin-left`](/fr/docs/Web/CSS/margin-left) de `40px` (`2.5em`).
+- Les éléments [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p), inclus pour référence, ont des propriétés [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas, identiques à ceux des différents types de listes.
 
 ## Gestion d'espacement des listes
 
@@ -168,7 +168,7 @@ dt {
 
 ## Style propre à une liste
 
-Maintenant que nous avons examiné l'espacement général des listes, explorons quelques propriétés propres à une liste. Il y a trois propriétés à connaître pour commencer&nbsp;; elles s'appliquent aux éléments [`<ul>`](/fr/docs/Web/HTML/Element/ul) ou [`<ol>`](/fr/docs/Web/HTML/Element/ol)&nbsp;:
+Maintenant que nous avons examiné l'espacement général des listes, explorons quelques propriétés propres à une liste. Il y a trois propriétés à connaître pour commencer&nbsp;; elles s'appliquent aux éléments [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) ou [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol)&nbsp;:
 
 - [`list-style-type`](/fr/docs/Web/CSS/list-style-type)&nbsp;: définit le type de puces à utiliser pour la liste, par exemple des puces carrées ou rondes pour une liste non ordonnée ou bien des nombres, des lettres ou des chiffres romains pour une liste ordonnée.
 - [`list-style-position`](/fr/docs/Web/CSS/list-style-position)&nbsp;: définit si les puces seront disposées à l'intérieur ou à l'extérieur du début de l'élément de liste.
@@ -215,7 +215,7 @@ ul {
 }
 ```
 
-Cependant, cette propriété est un peu limitée en termes de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de [`background`](/fr/docs/Web/CSS/background), dont vous apprendrez beaucoup plus dans le module [Blocs de base en CSS](/fr/docs/Learn/CSS/Building_blocks). Pour l'instant, voici un avant-goût&nbsp;!
+Cependant, cette propriété est un peu limitée en termes de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de [`background`](/fr/docs/Web/CSS/background), dont vous apprendrez beaucoup plus dans le module [Blocs de base en CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics). Pour l'instant, voici un avant-goût&nbsp;!
 
 Dans notre exemple achevé, nous avons appliqué un style à la liste non ordonnée (en plus de ce que vous avez déjà vu ci-dessus) comme ceci&nbsp;:
 
@@ -236,7 +236,7 @@ ul li {
 
 Voici ce que nous avons fait&nbsp;:
 
-- Abaissé la valeur de la propriété [`padding-left`](/fr/docs/Web/CSS/padding-left) de l'élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) de `40px` par défaut à `20px`, puis défini la même valeur pour les éléments de la liste. Ainsi, l'ensemble des éléments d'une liste non ordonnée seront toujours alignés avec les éléments d'une liste ordonnée et les descriptions d'une liste descriptive&nbsp;; tout en disposant d'un remplissage où les images d'arrière-plan seront placées. Si nous ne le faisions pas, les images d'arrière-plan et le texte de l'élément de liste se superposeraient, ce qui ferait brouillon.
+- Abaissé la valeur de la propriété [`padding-left`](/fr/docs/Web/CSS/padding-left) de l'élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) de `40px` par défaut à `20px`, puis défini la même valeur pour les éléments de la liste. Ainsi, l'ensemble des éléments d'une liste non ordonnée seront toujours alignés avec les éléments d'une liste ordonnée et les descriptions d'une liste descriptive&nbsp;; tout en disposant d'un remplissage où les images d'arrière-plan seront placées. Si nous ne le faisions pas, les images d'arrière-plan et le texte de l'élément de liste se superposeraient, ce qui ferait brouillon.
 - Défini la propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) à `none`, ainsi aucune puce par défaut n'apparaît. Nous allons utiliser les propriétés de [`background`](/fr/docs/Web/CSS/background) pour gérer les puces.
 - Inséré une puce pour chaque élément de la liste désordonnée. Les propriétés pertinentes sont les suivantes&nbsp;:
   - [`background-image`](/fr/docs/Web/CSS/background-image)&nbsp;: la référence du chemin d'accès au fichier image utilisé comme puce.
@@ -276,7 +276,7 @@ Parfois, vous pouvez vouloir numéroter différemment une liste ordonnée — pa
 
 ### Numéro de départ
 
-L'attribut [`start`](/fr/docs/Web/HTML/Element/ol#attr-start) vous permet de commencer le numérotage de la liste à partir d'un nombre autre que 1.
+L'attribut [`start`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-start) vous permet de commencer le numérotage de la liste à partir d'un nombre autre que 1.
 
 ```html
 <ol start="4">
@@ -301,7 +301,7 @@ L'attribut [`start`](/fr/docs/Web/HTML/Element/ol#attr-start) vous permet de com
 
 ### Numérotation inversée
 
-L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#attr-reversed) inverse la numérotation de la liste.
+L'attribut [`reversed`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-reversed) inverse la numérotation de la liste.
 
 ```html
 <ol start="4" reversed>
@@ -329,7 +329,7 @@ L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#attr-reversed) inverse la n
 
 ### Valeurs individualisées
 
-L'attribut [`value`](/fr/docs/Web/HTML/Element/ol#attr-value) vous permet de numéroter les éléments de liste avec des valeurs numériques de votre choix.
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-value) vous permet de numéroter les éléments de liste avec des valeurs numériques de votre choix.
 
 ```html
 <ol>
@@ -463,7 +463,7 @@ Les compteurs CSS fournissent des outils avancés pour personnaliser le comptage
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez une évaluation de vos compétences à la fin de ce module — voir [Composition de la page d'accueil d'une école de communauté](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage). Peut-être que vous voudriez revoir les autres articles avant de l'essayer.
+Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez une évaluation de vos compétences à la fin de ce module — voir [Composition de la page d'accueil d'une école de communauté](/fr/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage). Peut-être que vous voudriez revoir les autres articles avant de l'essayer.
 
 ## Résumé
 

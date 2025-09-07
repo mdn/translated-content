@@ -38,7 +38,7 @@ mask-image: unset;
 - `none`
   - : Le masque défini par ce mot-clé sera une image noire transparente.
 - `<mask-source>`
-  - : Une référence [`url()`](/fr/docs/Web/CSS/url_value) vers un masque SVG ([`<mask>`](/fr/docs/Web/SVG/Element/mask)) ou une image CSS.
+  - : Une référence [`url()`](/fr/docs/Web/CSS/url_value) vers un masque SVG ([`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask)) ou une image CSS.
 - [`<image>`](/fr/docs/Web/CSS/image)
   - : Une image utilisée pour le masque.
 

@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Memory/Memory
 
 {{WebAssemblySidebar}}
 
-Le constructeur **`WebAssembly.Memory()`** permet de créer un nouvel objet `Memory` dont la propriété [`buffer`](/fr/docs/WebAssembly/JavaScript_interface/Memory/buffer) est un tableau tampon [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) redimensionnable ou un `SharedArrayBuffer` contenant les octets bruts de mémoire à laquelle accède une `Instance` WebAssembly.
+Le constructeur **`WebAssembly.Memory()`** permet de créer un nouvel objet `Memory` dont la propriété [`buffer`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) est un tableau tampon [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) redimensionnable ou un `SharedArrayBuffer` contenant les octets bruts de mémoire à laquelle accède une `Instance` WebAssembly.
 
 Une mémoire créée par du code JavaScript ou WebAssembly sera accessible et modifiable depuis JavaScript ou WebAssembly.
 
@@ -39,13 +39,13 @@ new WebAssembly.Memory(descripteurMemoire);
 
 ### Créer une nouvelle instance Memory
 
-Il existe deux façons d'obtenir un objet `WebAssembly.Memory`. La première consiste à la construire depuis du code JavaScript. Dans l'exemple qui suit, on crée une nouvelle instance d'un objet `Memory` WebAssembly avec une taille initiale de 10 pages (640Ko) et une taille maximale de 100 pages (6,4Mo). Sa propriété [`buffer`](/fr/docs/WebAssembly/JavaScript_interface/Memory/buffer) renverra un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+Il existe deux façons d'obtenir un objet `WebAssembly.Memory`. La première consiste à la construire depuis du code JavaScript. Dans l'exemple qui suit, on crée une nouvelle instance d'un objet `Memory` WebAssembly avec une taille initiale de 10 pages (640Ko) et une taille maximale de 100 pages (6,4Mo). Sa propriété [`buffer`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) renverra un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 ```js
 var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
-La deuxième méthode pour obtenir un objet `WebAssembly.Memory` consiste à l'exporter depuis un module WebAssembly. Dans l'exemple suivant (voir [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) sur GitHub pour le code source, ainsi que [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)), on récupère et on instancie le bytecode chargé memory.wasm avec la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) tout en important la mémoire créée à la ligne précédente. On stocke ensuite certaines valeurs dans cette mémoire et on exporte une fonction qu'on utilise pour additionner certaines des valeurs.
+La deuxième méthode pour obtenir un objet `WebAssembly.Memory` consiste à l'exporter depuis un module WebAssembly. Dans l'exemple suivant (voir [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) sur GitHub pour le code source, ainsi que [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)), on récupère et on instancie le bytecode chargé memory.wasm avec la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) tout en important la mémoire créée à la ligne précédente. On stocke ensuite certaines valeurs dans cette mémoire et on exporte une fonction qu'on utilise pour additionner certaines des valeurs.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
@@ -85,5 +85,5 @@ La propriété `buffer` de l'objet mémoire correspondant renverra alors un obje
 ## Voir aussi
 
 - La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Concepts WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

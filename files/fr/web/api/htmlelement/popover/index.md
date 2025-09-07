@@ -9,7 +9,7 @@ l10n:
 
 La propriété **`popover`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) récupère et définit l'état d'un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) via JavaScript (`"auto"` ou `"manual"`), et peut être utilisée pour la détection de fonctionnalités.
 
-Elle reflète la valeur de l'attribut HTML global [`popover`](/fr/docs/Web/HTML/Global_attributes/popover).
+Elle reflète la valeur de l'attribut HTML global [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover).
 
 ## Valeur
 

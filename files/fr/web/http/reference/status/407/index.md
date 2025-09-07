@@ -32,9 +32,9 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 ## Voir aussi
 
-- [La gestion de l'authentification en HTTP](/fr/docs/Web/HTTP/Authentication)
-- [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate)
-- [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)
+- [La gestion de l'authentification en HTTP](/fr/docs/Web/HTTP/Guides/Authentication)
+- [`WWW-Authenticate`](/fr/docs/Web/HTTP/Reference/Headers/WWW-Authenticate)
+- [`Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Authorization)
 - [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization)
 - [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate)
-- [`401`](/fr/docs/Web/HTTP/Status/401), [`403`](/fr/docs/Web/HTTP/Status/403)
+- [`401`](/fr/docs/Web/HTTP/Reference/Status/401), [`403`](/fr/docs/Web/HTTP/Reference/Status/403)

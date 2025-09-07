@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-L'objectif de cette évaluation est de vous aider à vérifier votre compréhension du [modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
+L'objectif de cette évaluation est de vous aider à vérifier votre compréhension du [modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
 > [!NOTE]
 > Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut toutefois être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.

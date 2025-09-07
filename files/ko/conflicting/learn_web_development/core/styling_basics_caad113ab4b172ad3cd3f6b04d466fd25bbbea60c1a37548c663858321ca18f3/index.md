@@ -1,7 +1,7 @@
 ---
 title: 멋진 편지지 양식 만들기
-slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-original_slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
+slug: conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3
+original_slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---

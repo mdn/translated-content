@@ -40,30 +40,30 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 
 ### HTML
 
-- La propriété `crossOrigin` a été ajouté à [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin) a été ajouté à l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) (voir [bug 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299)).
+- La propriété `crossOrigin` a été ajouté à [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/img#attr-crossorigin) a été ajouté à l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) (voir [bug 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299)).
 - La méthode [`HTMLSelectElement.add()`](</fr/docs/Web/API/HTMLSelectElement#add()>) supporte désormais supporte désormais soit un élément ou soit l'index d'un élément auquel un nouvel élément doit être inséré avant. Auparavant, seulement un élément était supporté (voir [bug 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200)).
 - Le constructeur `HTMLIsIndexElement` a été retiré. Aucun éléments n'a implémenté cette interface depuis Firefox 4.
 - la fonctionnalité HTML5 "menu contextuel" (attribut `contextmenu`), qui vous permet d'ajouter des éléments personnalisés particuliers au menu contextuel d'origine, est désormais supportée (l'implémentation est encore expérimentale en attendant des changements dans la spécification (voir [bug 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)')).
-- Le support de l'attribut [`accesskeylabel`](/fr/docs/Web/HTML/Global_attributes#accesskey) a été ajouté à tous les éléments.
-- les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) supportent désormais l'attribut `selectionDirection`, et leurs méthodes `setSelectionRange()` ont été mises à jour pour supporter éventuellement la spécification d'une direction.
+- Le support de l'attribut [`accesskeylabel`](/fr/docs/Web/HTML/Reference/Global_attributes#accesskey) a été ajouté à tous les éléments.
+- les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) supportent désormais l'attribut `selectionDirection`, et leurs méthodes `setSelectionRange()` ont été mises à jour pour supporter éventuellement la spécification d'une direction.
 - La plupart des éléments peuvent désormais obtenir une bague de focalisation établie autour d'eux s'ils ont été faits pouvant recevoir le focus via l'attribut `tabindex` et que l'utilisateur se concentre ensuite sur l'élément.
-- Dans un ensemble d'éléments [`<label>`](/fr/docs/Web/HTML/Element/label) imbriqués, cliquer sur les événements ne déclencheront plus plusieurs éléments, qui, avant, provoquaient un blocage de Firefox (voir [bug 646157](https://bugzilla.mozilla.org/show_bug.cgi?id=646157)).
+- Dans un ensemble d'éléments [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) imbriqués, cliquer sur les événements ne déclencheront plus plusieurs éléments, qui, avant, provoquaient un blocage de Firefox (voir [bug 646157](https://bugzilla.mozilla.org/show_bug.cgi?id=646157)).
 
 ### DOM
 
 - La méthode [`insertAdjacentHTML`](/fr/docs/Web/API/Element/insertAdjacentHTML) a été implémentée.
 - [`BlobBuilder`](/fr/docs/Web/API/Blob) dispose désormais d'une méthode `getFile()` qui renvoie le contenu du blob dans un fichier.
 - L'interface [`FileReaderSync`](/fr/docs/Web/API/FileReaderSync) (partie de FileAPI) a été implementée.
-- La gestion des évènements par les [`<label>`](/fr/docs/Web/HTML/Element/label) imbriqués a été fixée.
+- La gestion des évènements par les [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) imbriqués a été fixée.
 - Vous pouvez maintenant utiliser [`window.postMessage()`](/fr/docs/Web/API/Window/postMessage) pour passer les objets [`File`](/fr/docs/Web/API/File) et [`FileList`](/fr/docs/Web/API/FileList) entre les fenêtres.
-- Lors de l'édition de zones [`element.contenteditable`](/fr/docs/Web/API/Element/contenteditable) la sortie d'une position en appuyant sur retour, ou à la sortie d'une liste en mode édition en appuyant sur retour à deux reprises, revient maintenant au mode d'entrée au paragraphe (c'est-à-dire les paragraphes à l'intérieur des blocs [`<p>`](/fr/docs/Web/HTML/Element/p)) au lieu de lignes de séparation par les éléments [`<br>`](/fr/docs/Web/HTML/Element/br).
+- Lors de l'édition de zones [`element.contenteditable`](/fr/docs/Web/API/Element/contenteditable) la sortie d'une position en appuyant sur retour, ou à la sortie d'une liste en mode édition en appuyant sur retour à deux reprises, revient maintenant au mode d'entrée au paragraphe (c'est-à-dire les paragraphes à l'intérieur des blocs [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p)) au lieu de lignes de séparation par les éléments [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
 - Correction d'un bug empêchant la justification de la prise d'effet correcte lorsqu'elle est appliquée à la première ligne dans une zone [`element.contenteditable`](/fr/docs/Web/API/Element/contenteditable).
 - Correction d'un bug qui faisait que en appuyant sur Suppr ou Retour arrière au début d'une zone [`element.contenteditable`](/fr/docs/Web/API/Element/contenteditable) affectait le bloc `contenteditable` précédent s'il était présent.
 - [`document.getSelection()`](/fr/docs/Web/API/Document/getSelection) renvoie désormais l'objet `Selection` identique à [`window.getSelection()`](/fr/docs/Web/API/Window/getSelection), à la place de _stringifying_.
 - La propriété HTML5 `selectionDirection` permet de définir la direction de la sélection dans un texte éditable.
 - [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) a maintenant une propriété `seekable` qui retourne l'objet [`TimeRanges`](/fr/docs/Web/API/TimeRanges).
 - L'attribut `.preload` de [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) se reflète désormais comme une _valeur énumérée_.
-- Les [propriétés `crossOrigin`](/fr/docs/Web/HTML/Attributes/crossorigin) sont par défaut defaults to "Anonyme" quand une valeur invalide est utilisée.
+- Les [propriétés `crossOrigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) sont par défaut defaults to "Anonyme" quand une valeur invalide est utilisée.
 - [`window.navigator.cookieEnabled`](/fr/docs/Web/API/Window/navigator/cookieEnabled) renvoie désormais correctement l'information quand le paramètre de cookie par défaut est écrasé sur la base de chaque site.
 
 ### JavaScript
@@ -79,7 +79,7 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 - Le traitement de [`background-size`](/fr/docs/Web/CSS/background-size) a été revu pour mieux correspondre à la spécification.
 - Dans le passé, [`text-decoration`](/fr/docs/Web/CSS/text-decoration) en mode quirks avait l'épaisseur de ligne et la position ajustée sur le texte descendant pour correspondre à la descendance. Désormais le mode standard et le mode quirks ont un rendu plus proche.
 - Le positionnement horizontal des éléments est davantage conforme à la spécification dans beaucoup de cas. La documentation est à venir, mais pour l'instant, pour plus de détails voir le commentaire 23 du [bug 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780).
-- [Les images SVG sont désormais correctement mise à l'échelle](/fr/docs/Web/CSS/Scaling_of_SVG_backgrounds) lorsqu'elles sont utilisées comme images de fond.
+- [Les images SVG sont désormais correctement mise à l'échelle](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds) lorsqu'elles sont utilisées comme images de fond.
 
 ### Réseau
 
@@ -106,7 +106,7 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 
 ### MathML
 
-- le support de l'attribut `displaystyle` sur l'élément de premier niveau [`<math>`](/fr/docs/Web/MathML/Element/math) a été ajouté.
+- le support de l'attribut `displaystyle` sur l'élément de premier niveau [`<math>`](/fr/docs/Web/MathML/Reference/Element/math) a été ajouté.
 - L'interprétation de numéros de lignes négatifs pour l'attribut `align` de [`<mtable>`](/fr/docs/Web/MathML/Element/mtable) a été corrigée.
 
 ### Outils de développement

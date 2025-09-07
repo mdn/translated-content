@@ -3,7 +3,7 @@ title: Référence des événements
 slug: Web/Events
 ---
 
-Les [événements DOM](/fr/docs/Learn/JavaScript/Building_blocks/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
+Les [événements DOM](/fr/docs/Learn_web_development/Core/Scripting/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
 
 Chaque événement est représenté par un objet implémentant l'interface [`Event`](/fr/docs/Web/API/Event), et peut avoir d'autres propriétés et/ou champs, permettant d'obtenir des informations supplémentaires au sujet de ce qui s'est produit. La documentation de chaque événement comporte un tableau (en haut de la page) qui comprend un lien vers l'interface de l'événement associé et d'autres informations pertinentes. Une liste complète des différents types d'événements est donnée dans [Event >Événement `Interfaces basées sur`](/fr/docs/Web/API/Event#introduction).
 
@@ -1189,8 +1189,8 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [beforeprint](/fr/docs/Web/API/Window/beforeprint_event)
   - [beforeunload](/fr/docs/Web/API/Window/beforeunload_event)
   - [blur](/fr/docs/Web/API/Window/blur_event)
-  - [copy](/fr/docs/Web/API/Window/copy_event)
-  - [cut](/fr/docs/Web/API/Window/cut_event)
+  - [copy](/fr/docs/conflicting/Web/API/Element/copy_event)
+  - [cut](/fr/docs/Web/API/Element/cut_event)
   - [devicemotion](/fr/docs/Web/API/Window/devicemotion_event)
   - [deviceorientation](/fr/docs/Web/API/Window/deviceorientation_event)
   - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
@@ -1208,7 +1208,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [orientationchange](/fr/docs/Web/API/Window/orientationchange_event)
   - [pagehide](/fr/docs/Web/API/Window/pagehide_event)
   - [pageshow](/fr/docs/Web/API/Window/pageshow_event)
-  - [paste](/fr/docs/Web/API/Window/paste_event)
+  - [paste](/fr/docs/Web/API/Element/paste_event)
   - [popstate](/fr/docs/Web/API/Window/popstate_event)
   - [rejectionhandled](/fr/docs/Web/API/Window/rejectionhandled_event)
   - [resize](/fr/docs/Web/API/Window/resize_event)

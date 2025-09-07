@@ -7,7 +7,7 @@ slug: Web/API/Document
 
 L'interface **`Document`** représente n'importe quelle page web chargée dans le navigateur et sert de point d'entrée pour accéder au contenu de la page qui est formé par [l'arbre du DOM](/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model).
 
-L'arbre du DOM inclut les éléments tels que [`<body>`](/fr/docs/Web/HTML/Element/body), [`<table>`](/fr/docs/Web/HTML/Element/table) et [tous les autres](/fr/docs/Web/HTML/Element) présents dans la page. Il fournit des fonctionnalités à l'ensemble du document et permet, par exemple, d'obtenir l'URL de la page et de créer de nouveaux éléments dans le document.
+L'arbre du DOM inclut les éléments tels que [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body), [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) et [tous les autres](/fr/docs/Web/HTML/Reference/Elements) présents dans la page. Il fournit des fonctionnalités à l'ensemble du document et permet, par exemple, d'obtenir l'URL de la page et de créer de nouveaux éléments dans le document.
 
 {{InheritanceDiagram}}
 
@@ -25,7 +25,7 @@ _Cette interface hérite également des interfaces [`Node`](/fr/docs/Web/API/Nod
 - [`Document.activeElement`](/fr/docs/Web/API/Document/activeElement) {{ReadOnlyInline}}
   - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui possède le focus.
 - [`Document.body`](/fr/docs/Web/API/Document/body)
-  - : Renvoie le nœud [`<body>`](/fr/docs/Web/HTML/Element/body) ou [`<frameset>`](/fr/docs/Web/HTML/Element/frameset) du document courant.
+  - : Renvoie le nœud [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) ou [`<frameset>`](/fr/docs/Web/HTML/Reference/Elements/frameset) du document courant.
 - [`Document.characterSet`](/fr/docs/Web/API/Document/characterSet) {{ReadOnlyInline}}
   - : Renvoie le jeu de caractères utilisé par le document.
 - [`Document.childElementCount`](/fr/docs/Web/API/Document/childElementCount) {{readonlyInline}}
@@ -37,25 +37,25 @@ _Cette interface hérite également des interfaces [`Node`](/fr/docs/Web/API/Nod
 - [`Document.contentType`](/fr/docs/Web/API/Document/contentType) {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Renvoie le type MIME du document courant.
 - [`Document.currentScript`](/fr/docs/Web/API/Document/currentScript) {{ReadOnlyInline}}
-  - : Renvoie l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) dont le script est actuellement en cours de traitement et [qui n'est pas un module JavaScript](https://github.com/whatwg/html/issues/997).
+  - : Renvoie l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) dont le script est actuellement en cours de traitement et [qui n'est pas un module JavaScript](https://github.com/whatwg/html/issues/997).
 - [`Document.doctype`](/fr/docs/Web/API/Document/doctype) {{ReadOnlyInline}}
   - : Renvoie la définition du type de document (<i lang="en">Document Type Definition</i> ou DTD) du document courant.
 - [`Document.documentElement`](/fr/docs/Web/API/Document/documentElement) {{ReadOnlyInline}}
-  - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui est un enfant direct du document. Pour les documents HTML, il s'agit normalement d'un objet [`HTMLHtmlElement`](/fr/docs/Web/API/HTMLHtmlElement) qui représente l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) du document.
+  - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui est un enfant direct du document. Pour les documents HTML, il s'agit normalement d'un objet [`HTMLHtmlElement`](/fr/docs/Web/API/HTMLHtmlElement) qui représente l'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html) du document.
 - [`Document.documentURI`](/fr/docs/Web/API/Document/documentURI) {{ReadOnlyInline}}
   - : Renvoie l'emplacement du document sous la forme d'une chaîne de caractères.
 - [`Document.embeds`](/fr/docs/Web/API/Document/embeds) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments embarqués (via [`<embed>`](/fr/docs/Web/HTML/Element/embed)) dans le document.
+  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments embarqués (via [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed)) dans le document.
 - [`Document.firstElementChild`](/fr/docs/Web/API/Document/firstElementChild) {{readonlyInline}}
   - : Renvoie le premier élément enfant du document courant.
 - [`Document.fonts`](/fr/docs/Web/API/Document/fonts)
   - : Renvoie l'interface [`FontFaceSet`](/fr/docs/Web/API/FontFaceSet) pour le document courant.
 - [`Document.forms`](/fr/docs/Web/API/Document/forms) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments [`<form>`](/fr/docs/Web/HTML/Element/form) du document.
+  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) du document.
 - [`Document.fullscreenElement`](/fr/docs/Web/API/Document/fullscreenElement) {{ReadOnlyInline}}
   - : Renvoie l'élément actuellement en mode plein écran pour ce document.
 - [`Document.head`](/fr/docs/Web/API/Document/head) {{ReadOnlyInline}}
-  - : Renvoie l'élément [`<head>`](/fr/docs/Web/HTML/Element/head) pour le document courant.
+  - : Renvoie l'élément [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) pour le document courant.
 - [`Document.hidden`](/fr/docs/Web/API/Document/hidden) {{ReadOnlyInline}}
   - : Renvoie une valeur booléenne qui indique si la page est considérée masquée ou non.
 - [`Document.images`](/fr/docs/Web/API/Document/images) {{ReadOnlyInline}}
@@ -79,7 +79,7 @@ _Cette interface hérite également des interfaces [`Node`](/fr/docs/Web/API/Nod
 - [`Document.featurePolicy`](/fr/docs/Web/API/Document/featurePolicy) {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Renvoie l'interface [`FeaturePolicy`](/fr/docs/Web/API/FeaturePolicy) qui fournit une API pour l'introspection des règles de fonctionnalité (<i lang="en">feature policies</i>) appliquées au document.
 - [`Document.scripts`](/fr/docs/Web/API/Document/scripts) {{ReadOnlyInline}}
-  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) contenant les éléments [`<script>`](/fr/docs/Web/HTML/Element/script) du document.
+  - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) contenant les éléments [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) du document.
 - [`Document.scrollingElement`](/fr/docs/Web/API/Document/scrollingElement) {{ReadOnlyInline}}
   - : Renvoie une référence à l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui fait défiler le document.
 - [`Document.styleSheets`](/fr/docs/Web/API/Document/styleSheets) {{ReadOnlyInline}}
@@ -152,7 +152,7 @@ _L'interface `Document` est étendue avec des gestionnaires d'évènement suppl�
 - [`Document.preferredStyleSheetSet`](/fr/docs/Web/API/Document/preferredStyleSheetSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Renvoie l'ensemble de feuilles de styles préféré comme indiqué par l'autrice ou l'auteur de la page.
 - [`Document.rootElement`](/fr/docs/Web/API/Document/rootElement) {{Deprecated_Inline}}
-  - : Agit comme [`Document.documentElement`](/fr/docs/Web/API/Document/documentElement), mais uniquement pour les éléments racines [`<svg>`](/fr/docs/Web/SVG/Element/svg). C'est cette dernière qu'il faudra utiliser à la place.
+  - : Agit comme [`Document.documentElement`](/fr/docs/Web/API/Document/documentElement), mais uniquement pour les éléments racines [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg). C'est cette dernière qu'il faudra utiliser à la place.
 - [`Document.selectedStyleSheetSet`](/fr/docs/Web/API/Document/selectedStyleSheetSet) {{deprecated_inline}}
   - : Renvoie l'ensemble de feuilles de styles actuellement utilisé.
 - [`Document.styleSheetSets`](/fr/docs/Web/API/Document/styleSheetSets) {{Deprecated_Inline}} {{ReadOnlyInline}}
@@ -306,9 +306,9 @@ Pour les documents HTML, l'interface `Document` hérite de [`HTMLDocument`](/fr/
 L'écoute de ces évènements peut être effectuée avec `addEventListener()` ou en affectant un gestionnaire d'évènement à la propriété `on<nomdevenement>` correspondante à cette interface.
 
 - [`afterscriptexecute`](/fr/docs/Web/API/Document/afterscriptexecute_event) {{Non-standard_Inline}}
-  - : Déclenché lorsqu'un élément statique [`<script>`](/fr/docs/Web/HTML/Element/script) finit d'exécuter son script.
+  - : Déclenché lorsqu'un élément statique [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) finit d'exécuter son script.
 - [`beforescriptexecute`](/fr/docs/Web/API/Document/beforescriptexecute_event) {{Non-standard_Inline}}
-  - : Déclenché lorsqu'un élément statique [`<script>`](/fr/docs/Web/HTML/Element/script) est sur le point de commencer son exécution.
+  - : Déclenché lorsqu'un élément statique [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) est sur le point de commencer son exécution.
 - [`scroll`](/fr/docs/Web/API/Document/scroll_event)
   - : Déclenché lorsque la vue du document ou d'un élément a défilé. Également disponible avec la propriété [`onscroll`](/fr/docs/Web/API/Element/scroll_event).
 - [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event)

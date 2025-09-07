@@ -19,7 +19,7 @@ Le rôle `article` indique qu'une section d'une page pourrait tout à fait être
 Dans l'exemple qui précède, on a deux articles côte à côte sur une même page qui pourraient partager la même structure et être liés l'un à l'autre.
 
 > [!NOTE]
-> Plutôt qu'un élément `<div>` avec un rôle `article`, on utilisera plutôt un élément [`<article>`](/fr/docs/Web/HTML/Element/article). **On privilégiera toujours les éléments natifs s'ils sont disponibles.**
+> Plutôt qu'un élément `<div>` avec un rôle `article`, on utilisera plutôt un élément [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article). **On privilégiera toujours les éléments natifs s'ils sont disponibles.**
 
 Pour l'exemple qui précède, mieux vaut ne pas utiliser `role="article"` mais privilégier l'élément `<article>`.
 
@@ -45,7 +45,7 @@ Si un article fait partie d'un flux, il devra posséder les attributs [`aria-pos
 
 Au sein d'une `application` ou d'un autre widget pour lesquels les outils d'assistance sont en mode passe-plat, un article pourra être utilisé afin d'indiquer que le contenu qu'il contient doit être traité comme du contenu web classique.
 
-Plutôt que d'inclure le rôle `article` sur un élément non-sémantique, on devrait utiliser l'élément HTML [`<article>`](/fr/docs/Web/HTML/Element/article). Les agents utilisateur traduisent les informations d'accessibilité associées à cet élément comme le rôle `article`. Utiliser l'élément [`<article>`](/fr/docs/Web/HTML/Element/article) permet également aux moteurs de recherche de mieux découvrir la structure d'une page. Ce rôle, ou si possible `<article>`, pourra être utilisé pour indiquer des billets de blog, des messages sur un forum, un commentaire dans un blog ou un forum, ou tout élément d'un flux de réseau social.
+Plutôt que d'inclure le rôle `article` sur un élément non-sémantique, on devrait utiliser l'élément HTML [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article). Les agents utilisateur traduisent les informations d'accessibilité associées à cet élément comme le rôle `article`. Utiliser l'élément [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) permet également aux moteurs de recherche de mieux découvrir la structure d'une page. Ce rôle, ou si possible `<article>`, pourra être utilisé pour indiquer des billets de blog, des messages sur un forum, un commentaire dans un blog ou un forum, ou tout élément d'un flux de réseau social.
 
 ### Rôles, états et propriétés WAI-ARIA associés
 
@@ -77,13 +77,13 @@ Voir [l'exemple d'affichage de recommandations de restaurants](https://www.w3.or
 
 ## Ordre de précédence
 
-Ce rôle correspond à l'élément [`<article>`](/fr/docs/Web/HTML/Element/article) en HTML et, si possible, c'est cet élément qui devrait être utilisé. Ce rôle ne requiert pas la présence de rôles spécifiques parmi les éléments enfants. Il s'agit du seul rôle autorisé pour un enfant direct d'un élément ayant le rôle [`feed`](/fr/docs/Web/Accessibility/ARIA/Roles/feed_role).
+Ce rôle correspond à l'élément [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) en HTML et, si possible, c'est cet élément qui devrait être utilisé. Ce rôle ne requiert pas la présence de rôles spécifiques parmi les éléments enfants. Il s'agit du seul rôle autorisé pour un enfant direct d'un élément ayant le rôle [`feed`](/fr/docs/Web/Accessibility/ARIA/Roles/feed_role).
 
 ## Voir aussi
 
 - [Le rôle `feed`](/fr/docs/Web/Accessibility/ARIA/Roles/feed_role)
 - [Le rôle `section`](/fr/docs/Web/Accessibility/ARIA/Roles/section_role)
-- [L'élément HTML `<article>`](/fr/docs/Web/HTML/Element/article)
+- [L'élément HTML `<article>`](/fr/docs/Web/HTML/Reference/Elements/article)
 - [L'entrée du glossaire pour RSS](/fr/docs/Glossary/RSS)
 
 <section id="Quick_links">

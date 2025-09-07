@@ -6,9 +6,9 @@ original_slug: Web/HTTP/Status/204
 
 Le code de statut de réponse HTTP **`204 No Content`** indique que la requête a réussi mais que le client n'a pas besoin de quitter la page actuelle.
 
-Généralement, ce code est renvoyé lorsque le résultat d'une requête [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) et qu'une ressource est mise à jour, sans modifier le contenu actuel de la page affichée à l'utilisateur (par exemple un éditeur de texte en ligne avec une fonctionnalité «&nbsp;Enregistrer et continuer à travailler&nbsp;»). Si la ressource est créée, c'est le code de statut [`201 Created`](/fr/docs/Web/HTTP/Status/201) qui sera renvoyé à la place. Si la page doit être actualisée avec une nouvelle page mise à jour, c'est le code de statut [`200`](/fr/docs/Web/HTTP/Status/200) qui doit être utilisé à la place.
+Généralement, ce code est renvoyé lorsque le résultat d'une requête [`PUT`](/fr/docs/Web/HTTP/Reference/Methods/PUT) et qu'une ressource est mise à jour, sans modifier le contenu actuel de la page affichée à l'utilisateur (par exemple un éditeur de texte en ligne avec une fonctionnalité «&nbsp;Enregistrer et continuer à travailler&nbsp;»). Si la ressource est créée, c'est le code de statut [`201 Created`](/fr/docs/Web/HTTP/Reference/Status/201) qui sera renvoyé à la place. Si la page doit être actualisée avec une nouvelle page mise à jour, c'est le code de statut [`200`](/fr/docs/Web/HTTP/Reference/Status/200) qui doit être utilisé à la place.
 
-Par défaut, une réponse 204 peut être mise en cache. Un en-tête [`ETag`](/fr/docs/Web/HTTP/Headers/ETag) est inclus pour ce type de réponse.
+Par défaut, une réponse 204 peut être mise en cache. Un en-tête [`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag) est inclus pour ce type de réponse.
 
 ## Statut
 
@@ -34,4 +34,4 @@ Apple Safari rejette ces données. Google Chrome et Microsoft Edge ignorent jusq
 
 ## Voir aussi
 
-- [Les verbes utilisés pour les méthodes HTTP](/fr/docs/Web/HTTP/Methods)
+- [Les verbes utilisés pour les méthodes HTTP](/fr/docs/Web/HTTP/Reference/Methods)

@@ -31,7 +31,7 @@ original_slug: Learn/CSS/First_steps/What_is_CSS
   </tbody>
 </table>
 
-Dans le cours [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML), nous avons présenté le langage HTML et comment l'utiliser afin de rédiger des documents structurés. Ces documents seront consultables dans un navigateur ; les titres apparaîtront dans une police plus grande que le corps de texte, la rupture entre deux paragraphes sera marquée par un saut de ligne, et les liens seront soulignés et colorés pour les distinguer du reste du texte. L'image ci-dessous montre comment un navigateur affiche un document HTML — la mise en forme par défaut garantit un minimum de lisibilité, même si l'auteur de la page n'a spécifié aucune règle de style.
+Dans le cours [Introduction au HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8), nous avons présenté le langage HTML et comment l'utiliser afin de rédiger des documents structurés. Ces documents seront consultables dans un navigateur ; les titres apparaîtront dans une police plus grande que le corps de texte, la rupture entre deux paragraphes sera marquée par un saut de ligne, et les liens seront soulignés et colorés pour les distinguer du reste du texte. L'image ci-dessous montre comment un navigateur affiche un document HTML — la mise en forme par défaut garantit un minimum de lisibilité, même si l'auteur de la page n'a spécifié aucune règle de style.
 
 ![La mise en forme par défaut appliquée par un navigateur.](html-example.png)
 
@@ -67,9 +67,9 @@ h1 {
 }
 ```
 
-La règle commence par un [sélecteur](/fr/docs/Glossary/CSS_Selector), l'élément HTML mis en forme. Ici, le style s'applique aux titres de niveau 1 ([`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements)).
+La règle commence par un [sélecteur](/fr/docs/Glossary/CSS_Selector), l'élément HTML mis en forme. Ici, le style s'applique aux titres de niveau 1 ([`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)).
 
-Suivent une paire d'accolades `{ }` à l'intérieur desquelles on trouve une ou plusieurs **déclarations**, sous la forme d'une paire **propriété:&nbsp;valeur**. Chaque paire précise une propriété de l'élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont séparées par deux points. Chaque déclaration se termine par un point-virgule. À chaque [propriété](/fr/docs/Glossary/Property/CSS) définie par CSS correspondent différentes valeurs possibles. Dans l'exemple, la propriété `color` peut prendre différentes [valeurs de type `<color>`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleur). La propriété `font-size` accepte différentes [tailles](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#nombres_longueurs_et_pourcentages) comme valeurs.
+Suivent une paire d'accolades `{ }` à l'intérieur desquelles on trouve une ou plusieurs **déclarations**, sous la forme d'une paire **propriété:&nbsp;valeur**. Chaque paire précise une propriété de l'élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont séparées par deux points. Chaque déclaration se termine par un point-virgule. À chaque [propriété](/fr/docs/Glossary/Property/CSS) définie par CSS correspondent différentes valeurs possibles. Dans l'exemple, la propriété `color` peut prendre différentes [valeurs de type `<color>`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#couleur). La propriété `font-size` accepte différentes [tailles](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#nombres_longueurs_et_pourcentages) comme valeurs.
 
 Une feuille de style CSS est constituée d'une succession de telles règles&nbsp;:
 
@@ -111,7 +111,7 @@ Si vous débutez en CSS, la lecture des spécifications peut être déroutante&n
 
 Les fonctionnalités CSS définies dans les spécifications peuvent uniquement être utilisées dans une page web si un ou plusieurs navigateurs les implémentent. Autrement dit, il faut bien qu'il y ait un programme qui puisse transformer les règles CSS en éléments affichés à l'écran.
 
-Nous étudierons ce point plus en détail dans l'article sur [le fonctionnement des CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_works). Il est rare que les différents navigateurs implémentent simultanément une nouvelle fonctionnalité CSS. Il est donc fréquent que certains sous-ensembles de CSS soient fonctionnels pour certains navigateurs et pas pour d'autres. Pour cette raison, il est essentiel de vérifier l'état de la compatibilité et des implémentations. Sur chaque page MDN décrivant une propriété, le statut d'implémentation de la propriété est fourni dans un tableau de compatibilité web. Vous saurez ainsi s'il est pertinent de l'utiliser dans votre site web.
+Nous étudierons ce point plus en détail dans l'article sur [le fonctionnement des CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS). Il est rare que les différents navigateurs implémentent simultanément une nouvelle fonctionnalité CSS. Il est donc fréquent que certains sous-ensembles de CSS soient fonctionnels pour certains navigateurs et pas pour d'autres. Pour cette raison, il est essentiel de vérifier l'état de la compatibilité et des implémentations. Sur chaque page MDN décrivant une propriété, le statut d'implémentation de la propriété est fourni dans un tableau de compatibilité web. Vous saurez ainsi s'il est pertinent de l'utiliser dans votre site web.
 
 Voici, par exemple, le tableau de compatibilité pour la propriété [`font-family`](/fr/docs/Web/CSS/font-family).
 
@@ -119,6 +119,6 @@ Voici, par exemple, le tableau de compatibilité pour la propriété [`font-fami
 
 ## Où continuer
 
-Maintenant que vous avez compris ce qu'est CSS, vous pourrez commencer à écrire vos premières règles de style dans la leçon [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started).
+Maintenant que vous avez compris ce qu'est CSS, vous pourrez commencer à écrire vos premières règles de style dans la leçon [Démarrer avec CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started).
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}

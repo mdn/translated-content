@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 53b19adf7936b1830f407813c3252b35c5eb925e
 ---
 
-Le protocole [HTTP/1.1](/fr/docs/Web/HTTP) dispose d'un mécanisme spécifique pour basculer une connexion déjà établie sur un autre protocole, en utilisant l'en-tête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade).
+Le protocole [HTTP/1.1](/fr/docs/Web/HTTP) dispose d'un mécanisme spécifique pour basculer une connexion déjà établie sur un autre protocole, en utilisant l'en-tête [`Upgrade`](/fr/docs/Web/HTTP/Reference/Headers/Upgrade).
 
 Ce mécanisme est indicatif et la bascule sur un autre protocole ne peut être forcée. Il appartient aux implémentations de choisir si elles veulent ou non basculer sur un nouveau protocole (et ce même si elles prennent en charge le protocole demandé). En pratique, ce mécanisme est généralement utilisé pour mettre en place une connexion WebSocket.
 
@@ -14,9 +14,9 @@ On notera que HTTP/2 interdit explicitement ce mécanisme, il est propre à HTTP
 
 ## Mettre à niveau des connexions HTTP/1.1
 
-L'en-tête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) est utilisé par les clients pour inviter le serveur à basculer sur l'un des protocoles parmi ceux de la liste fournie, triée par ordre de préférence décroissant.
+L'en-tête [`Upgrade`](/fr/docs/Web/HTTP/Reference/Headers/Upgrade) est utilisé par les clients pour inviter le serveur à basculer sur l'un des protocoles parmi ceux de la liste fournie, triée par ordre de préférence décroissant.
 
-`Upgrade` étant un en-tête de point à point, il doit également être indiqué dans l'en-tête [`Connection`](/fr/docs/Web/HTTP/Headers/Connection). Une requête avec `Upgrade` ressemblera donc à quelque chose comme&nbsp;:
+`Upgrade` étant un en-tête de point à point, il doit également être indiqué dans l'en-tête [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection). Une requête avec `Upgrade` ressemblera donc à quelque chose comme&nbsp;:
 
 ```http
 GET /index.html HTTP/1.1
@@ -27,7 +27,7 @@ Upgrade: exemple/1, toto/2
 
 D'autres en-têtes peuvent être nécessaires selon le protocole demandé. Pour une bascule en [WebSocket](/fr/docs/Web/API/WebSocket), des en-têtes supplémentaires pourront être fournis pour configurer la connexion et fournir certains éléments de sécurité à l'ouverture de la connexion. Voir [Basculer sur une connexion WebSocket](#basculer_sur_une_connexion_websocket) pour plus de détails.
 
-Si le serveur souhaite mettre à niveau la connexion, il renvoie une réponse au statut [`101 Switching Protocols`](/fr/docs/Web/HTTP/Status/101) avec un en-tête `Upgrade` indiquant le(s) protocole(s) vers le(s)quel(s) basculer. Si le serveur ne souhaite pas (ou ne peut pas) mettre à niveau la connexion, il ignore l'en-tête `Upgrade` et renvoie une réponse normale (par exemple [`200 OK`](/fr/docs/Web/HTTP/Status/200)).
+Si le serveur souhaite mettre à niveau la connexion, il renvoie une réponse au statut [`101 Switching Protocols`](/fr/docs/Web/HTTP/Reference/Status/101) avec un en-tête `Upgrade` indiquant le(s) protocole(s) vers le(s)quel(s) basculer. Si le serveur ne souhaite pas (ou ne peut pas) mettre à niveau la connexion, il ignore l'en-tête `Upgrade` et renvoie une réponse normale (par exemple [`200 OK`](/fr/docs/Web/HTTP/Reference/Status/200)).
 
 Après avoir envoyé le code de statut `101`, le serveur peut commencer à échanger avec le nouveau protocole et déclencher les éventuels échanges préparatoires (<i lang="en">handshakes</i>) nécessaires propres au nouveau protocole. Dans la pratique, la connexion devient un flux d'échange bidirectionnel dès que la réponse mise à niveau est terminée et la requête qui a demandé la bascule peut alors être finalisée sur le nouveau protocole.
 
@@ -44,7 +44,7 @@ Le constructeur [`WebSocket()`](/fr/docs/Web/API/WebSocket/WebSocket) s'occupe d
 > [!NOTE]
 > Le schéma d'URL `"wss://"` permet d'ouvrir une connexion WebSocket sécurisée (contrairement à `"ws://"`).
 
-Si vous devez créer une connexion WebSocket de zéro, vous devrez gérer la poignée de main avec le serveur. Après avoir créé la session HTTP/1.1 initiale, demandez la mise à niveau de la connexion en ajoutant les en-têtes [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) et [`Connection`](/fr/docs/Web/HTTP/Headers/Connection) comme suit&nbsp;:
+Si vous devez créer une connexion WebSocket de zéro, vous devrez gérer la poignée de main avec le serveur. Après avoir créé la session HTTP/1.1 initiale, demandez la mise à niveau de la connexion en ajoutant les en-têtes [`Upgrade`](/fr/docs/Web/HTTP/Reference/Headers/Upgrade) et [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection) comme suit&nbsp;:
 
 ```http
 Connection: Upgrade
@@ -53,7 +53,7 @@ Upgrade: websocket
 
 ## En-têtes propres à WebSocket
 
-Les en-têtes suivants sont utilisés lors d'une mise à niveau vers une connexion WebSocket. En dehors des en-têtes [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) et [`Connection`](/fr/docs/Web/HTTP/Headers/Connection), le reste est généralement optionnel ou géré de façon transparente par le navigateur et le serveur.
+Les en-têtes suivants sont utilisés lors d'une mise à niveau vers une connexion WebSocket. En dehors des en-têtes [`Upgrade`](/fr/docs/Web/HTTP/Reference/Headers/Upgrade) et [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection), le reste est généralement optionnel ou géré de façon transparente par le navigateur et le serveur.
 
 ### `Sec-WebSocket-Extensions`
 
@@ -113,7 +113,7 @@ Sec-WebSocket-Version: version
 
 #### En-tête de réponse
 
-Si le serveur ne peut pas communiquer en utilisant la version demandée, il répondra avec une erreur (comme [`426 Upgrade Required`](/fr/docs/Web/HTTP/Status/426)) incluant un en-tête `Sec-WebSocket-Version` décrivant une liste des versions du protocole qui sont prises en charge. Si le serveur prend en charge la version du protocole demandée, aucun en-tête `Sec-WebSocket-Version` n'est inclus dans la réponse.
+Si le serveur ne peut pas communiquer en utilisant la version demandée, il répondra avec une erreur (comme [`426 Upgrade Required`](/fr/docs/Web/HTTP/Reference/Status/426)) incluant un en-tête `Sec-WebSocket-Version` décrivant une liste des versions du protocole qui sont prises en charge. Si le serveur prend en charge la version du protocole demandée, aucun en-tête `Sec-WebSocket-Version` n'est inclus dans la réponse.
 
 ```http
 Sec-WebSocket-Version: supportedVersions

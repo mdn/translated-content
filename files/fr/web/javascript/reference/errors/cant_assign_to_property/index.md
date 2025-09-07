@@ -18,7 +18,7 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 
 ## Quel est le problème ?
 
-En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), une exception {{jsxref("TypeError")}} est déclenchée lorsqu'on tente de créer une propriété sur [une valeur primitive](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives) telle qu'un symbole, une chaîne de caractères, un nombre ou un booleén.
+En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), une exception {{jsxref("TypeError")}} est déclenchée lorsqu'on tente de créer une propriété sur [une valeur primitive](/fr/docs/Web/JavaScript/Guide/Data_structures#les_valeurs_primitives) telle qu'un symbole, une chaîne de caractères, un nombre ou un booleén.
 
 Le problème peut être lié à une valeur qui se trouve à un endroit inattendu ou qu'un équivalent objet d'une valeur primitive est attendu (ex. {{jsxref("String")}} pour la chaîne de caractères ou {{jsxref("Number")}} pour un nombre).
 

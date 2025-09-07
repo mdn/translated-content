@@ -70,7 +70,7 @@ C'est parce que le visuel ne raconte pas toute l'histoire. Nous utilisons la cou
 > [!NOTE]
 > Les daltoniens représentent environ [8% de la population mondiale](http://www.color-blindness.com/2006/04/28/colorblind-population/) ou, en d'autres termes, environ 1 homme sur 12 et 1 femme sur 200 sont daltoniens. Les personnes aveugles et malvoyantes représentent environ 4 à 5 % de la population mondiale (en 2012, il y avait [285 millions de personnes aveugles et malvoyantes](https://fr.wikipedia.org/wiki/Déficience_visuelle) dans le monde, alors que la population totale était [d'environ 7 milliards](https://fr.wikipedia.org/wiki/Population_mondiale) d'habitants).
 
-Dans votre code HTML, vous pouvez marquer des sections de contenu selon leur fonction — vous pouvez utiliser des éléments qui représentent sans ambiguïté les sections de contenu décrites ci-dessus, et les technologies d'assistance comme les lecteurs d'écran peuvent reconnaître ces éléments et vous aider avec des tâches comme «&nbsp;trouver la navigation principale&nbsp;» ou «&nbsp;trouver le contenu principal ». Comme nous l'avons mentionné plus tôt dans le cours, le fait de [ne pas utiliser la bonne structure d'éléments et la bonne sémantique pour le bon travail a un certain nombre de conséquences](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure).
+Dans votre code HTML, vous pouvez marquer des sections de contenu selon leur fonction — vous pouvez utiliser des éléments qui représentent sans ambiguïté les sections de contenu décrites ci-dessus, et les technologies d'assistance comme les lecteurs d'écran peuvent reconnaître ces éléments et vous aider avec des tâches comme «&nbsp;trouver la navigation principale&nbsp;» ou «&nbsp;trouver le contenu principal ». Comme nous l'avons mentionné plus tôt dans le cours, le fait de [ne pas utiliser la bonne structure d'éléments et la bonne sémantique pour le bon travail a un certain nombre de conséquences](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure).
 
 Pour mettre en œuvre le marquage sémantique, HTML fournit des balises dédiées que vous pourrez utiliser pour représenter ces parties, par exemple&nbsp;:
 
@@ -195,19 +195,19 @@ Prenez le temps voulu pour regarder ce code et le comprendre — les commentaire
 
 ## Plus de détails à propos des éléments de mise en page
 
-La compréhension détaillée de la signification globale de tous les éléments de la mise en page HTML est importante — vous l'acquerrez au fur et à mesure avec l'expérience dans le développement web. Vous pouvez trouver beaucoup de détails en parcourant la [référence aux éléments HTML](/fr/docs/Web/HTML/Element). Pour l'instant, il convient de bien comprendre les principales définitions :
+La compréhension détaillée de la signification globale de tous les éléments de la mise en page HTML est importante — vous l'acquerrez au fur et à mesure avec l'expérience dans le développement web. Vous pouvez trouver beaucoup de détails en parcourant la [référence aux éléments HTML](/fr/docs/Web/HTML/Reference/Elements). Pour l'instant, il convient de bien comprendre les principales définitions :
 
 - {{HTMLElement('main')}} est relatif au contenu _unique de la page_. N'utilisez `<main>` que une seule fois par page et placez-le directement à l'intérieur de l'élement {{HTMLElement('body')}}. Idéalement, il ne devrait pas être imbriqué dans d'autres éléments.
 - {{HTMLElement('article')}} entoure un bloc de contenu en relation constituant en soi une unité de sens pris isolément par rapport au reste de la page (par ex. un unique billet de blog.)
-- {{HTMLElement('section')}} ressemble à `<article>`, mais sert plutôt à contenir une partie isolée de la page constituant un élément de fonctionnalité en soi (par ex. une petite carte ou un ensemble d'intitulés d'article ou de résumés). Il est considéré de bonne pratique de commencer chaque section par un [`heading`](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) ; notez également que vous pouvez fractionner un `<article>` en plusieurs `<section>` ou bien des `<section>` en divers `<article>`, selon le contexte.
+- {{HTMLElement('section')}} ressemble à `<article>`, mais sert plutôt à contenir une partie isolée de la page constituant un élément de fonctionnalité en soi (par ex. une petite carte ou un ensemble d'intitulés d'article ou de résumés). Il est considéré de bonne pratique de commencer chaque section par un [`heading`](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) ; notez également que vous pouvez fractionner un `<article>` en plusieurs `<section>` ou bien des `<section>` en divers `<article>`, selon le contexte.
 - {{HTMLElement('aside')}} contient les composantes non directement liées au contenu principal mais pouvant fournir des informations supplémentaires indirectement en relation avec ce dernier (entrées de glossaire, biographie de l'auteur, liens connexes, etc).
-- {{HTMLElement('header')}} représente un groupe de contenus introductoires. Enfant de {{HTMLElement('body')}}, il définit l'en-tête général de la page web, mais enfant de {{HTMLElement('article')}} ou {{HTMLElement('section')}} il définit un en‑tête propre à cette section (ne confondez pas [titles et headings](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter%20un%20titre)).
+- {{HTMLElement('header')}} représente un groupe de contenus introductoires. Enfant de {{HTMLElement('body')}}, il définit l'en-tête général de la page web, mais enfant de {{HTMLElement('article')}} ou {{HTMLElement('section')}} il définit un en‑tête propre à cette section (ne confondez pas [titles et headings](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#ajouter%20un%20titre)).
 - {{HTMLElement('nav')}} contient les éléments principaux de navigation pour la page. Les liens secondaires, etc., n'entrent pas dans la navigation.
 - {{HTMLElement('footer')}} représente un groupe de contenu de fin pour une page.
 
 ### Enveloppes non‑sémantiques
 
-Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément sémantique idéal pour regrouper certaines entités ou envelopper certains contenus. D'autres fois, vous souhaitez simplement regrouper un ensemble d'éléments pour en faire une entité unique pour des {{glossary("CSS")}} ou des {{glossary("JavaScript")}}. Pour de tels cas, HTML met à votre disposition les éléments {{HTMLElement("div")}} et {{HTMLElement("span")}}. Utilisez‑les de préférence avec un attribut [`class`](/fr/docs/Web/HTML/Global_attributes#class) approprié, en quelque sorte étiquetez‑les pour pouvoir les cibler plus facilement.
+Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément sémantique idéal pour regrouper certaines entités ou envelopper certains contenus. D'autres fois, vous souhaitez simplement regrouper un ensemble d'éléments pour en faire une entité unique pour des {{glossary("CSS")}} ou des {{glossary("JavaScript")}}. Pour de tels cas, HTML met à votre disposition les éléments {{HTMLElement("div")}} et {{HTMLElement("span")}}. Utilisez‑les de préférence avec un attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#class) approprié, en quelque sorte étiquetez‑les pour pouvoir les cibler plus facilement.
 
 {{HTMLElement("span")}} est un élément en ligne non-semantique&nbsp;; vous l'utiliserez seulement si vous ne trouvez pas de meilleur élément de sémantique textuelle pour envelopper votre contenu, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple&nbsp;:
 
@@ -264,7 +264,7 @@ Les éléments {{htmlelement("br")}} et {{htmlelement("hr")}} sont utilisés à 
 </p>
 ```
 
-Sans éléments `<br>`, le paragraphe serait rendu par une seule longue ligne (comme précisé plus haut dans ce cours, [HTML ignore la plupart des blancs](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html))&nbsp;; avec des \<br> dans le code, voici le rendu de ce qui précède&nbsp;:
+Sans éléments `<br>`, le paragraphe serait rendu par une seule longue ligne (comme précisé plus haut dans ce cours, [HTML ignore la plupart des blancs](/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#whitespace_in_html))&nbsp;; avec des \<br> dans le code, voici le rendu de ce qui précède&nbsp;:
 
 Il y avait une fois une fille nommée Nell
 Qui aimait écrire du HTML
@@ -318,6 +318,6 @@ Vous devriez avoir maintenant une meilleure idée de la façon de structurer une
 
 ## Voir aussi
 
-- [Using HTML sections and outlines](/fr/docs/Web/HTML/Element/Heading_Elements)&nbsp;: Guide avancé des éléments de la sémantique et des algorithmes descriptifs du HTML5.
+- [Using HTML sections and outlines](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)&nbsp;: Guide avancé des éléments de la sémantique et des algorithmes descriptifs du HTML5.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML")}}

@@ -23,7 +23,7 @@ slug: Mozilla/Firefox/Releases/25
 
 ### HTML
 
-- L'attribut [`srcdoc`](/fr/docs/Web/HTML/Element/iframe#srcdoc), permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est maintenant pris en charge ([bug Firefox 802895](https://bugzil.la/802895)).
+- L'attribut [`srcdoc`](/fr/docs/Web/HTML/Reference/Elements/iframe#srcdoc), permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est maintenant pris en charge ([bug Firefox 802895](https://bugzil.la/802895)).
 - Lorsqu'elle est utilisée avec un type `"image/jpeg"`, la méthode `HTMLCanvasElement.toBlob` accepte désormais un troisième attribut définissant la qualité de l'image ([bug Firefox 891884](https://bugzil.la/891884)).
 
 ### JavaScript

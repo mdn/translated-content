@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/manifest-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`manifest-src`** spécifie [le manifeste](/fr/docs/Web/Manifest) qui peut être appliqué à la ressource.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`manifest-src`** spécifie [le manifeste](/fr/docs/Web/Progressive_web_apps/Manifest) qui peut être appliqué à la ressource.
 
 <table class="properties">
   <tbody>
@@ -36,9 +36,9 @@ Content-Security-Policy: manifest-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -50,7 +50,7 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: manifest-src https://example.com/
 ```
 
-Cet élément [`<link>`](/fr/docs/Web/HTML/Element/link) sera bloqué et ne se chargera pas&nbsp;:
+Cet élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
 <link rel="manifest" href="https://not-example.com/manifest" />
@@ -66,6 +66,6 @@ Cet élément [`<link>`](/fr/docs/Web/HTML/Element/link) sera bloqué et ne se c
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [Les manifestes d'application web](/fr/docs/Web/Manifest)
-- [`<link>`](/fr/docs/Web/HTML/Element/link)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [Les manifestes d'application web](/fr/docs/Web/Progressive_web_apps/Manifest)
+- [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link)

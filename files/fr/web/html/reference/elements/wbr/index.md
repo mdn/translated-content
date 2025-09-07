@@ -30,7 +30,7 @@ L'élément HTML **`<wbr>`** permet de représenter un emplacement où casser la
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes
 

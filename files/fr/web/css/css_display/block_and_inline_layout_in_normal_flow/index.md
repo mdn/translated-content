@@ -75,7 +75,7 @@ La taille de la boîte de la ligne sur l'axe orthogonal à l'axe de lecture est 
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
 
-Pour en savoir plus sur le comportement des boîtes en ligne et des boîtes de bloc, vous pouvez consulter [le guide sur le modèle de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model).
+Pour en savoir plus sur le comportement des boîtes en ligne et des boîtes de bloc, vous pouvez consulter [le guide sur le modèle de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model).
 
 ## La propriété `display` et la disposition de flux
 
@@ -111,6 +111,6 @@ Dans ce guide, nous avons vu comment les éléments étaient affichés dans le f
 ## Voir aussi
 
 - [Le module de spécification _CSS Basic Box Model_ qui définit les propriétés de base pour le modèle de boîte](/fr/docs/Web/CSS/CSS_box_model)
-- [Apprendre - le fonctionnement du flux normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [Apprendre - le fonctionnement du flux normal](/fr/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)
 - [Les éléments HTML en ligne](/fr/docs/Glossary/Inline-level_content)
 - [Les éléments HTML de bloc](/fr/docs/Glossary/Block-level_content)

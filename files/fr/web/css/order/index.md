@@ -141,7 +141,7 @@ La propriété `order` créera une incohérence entre l'ordre de présentation v
 
 - [_Flexbox & the keyboard navigation disconnect — Tink_ (en anglais)](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
 - [_Source Order Matters, Adrian Roselli_ (en anglais)](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [Comprendre les règles du WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les règles du WCAG 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [_Understanding Success Criterion 1.3.2, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
 ## Spécifications

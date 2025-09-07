@@ -17,7 +17,7 @@ Le code de réponse d'erreur HTTP **`451 Unavailable For Legal Reasons`** indiqu
 Cet exemple de réponse est tiré de la RFC IETF (cf. ci-après), et contient une référence à [Monty Python&nbsp;: La Vie de Brian](https://fr.wikipedia.org/wiki/Monty_Python_:_La_Vie_de_Brian).
 
 > [!NOTE]
-> L'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link) peut aussi contenir une relation `rel="blocked-by"` identifiant l'entité ayant mis en place le blocage de la ressource et pas nécessairement l'entité ayant demandé le blocage.
+> L'en-tête [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link) peut aussi contenir une relation `rel="blocked-by"` identifiant l'entité ayant mis en place le blocage de la ressource et pas nécessairement l'entité ayant demandé le blocage.
 
 C'est le corps de la réponse (et non `rel="blocked-by"`) qui pourra renseigner sur l'entité responsable en premier lieu du blocage de la ressource. Le corps peut ainsi contenir le nom de la personne ou de l'organisation qui a réalisé la demande à l'origine du retrait du contenu.
 

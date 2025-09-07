@@ -66,16 +66,16 @@ Il est possible d'accéder à l'URL de base d'un document via un script en utili
 
 ## Attributs
 
-Les [attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés sur cet élément.
+Les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) peuvent être utilisés sur cet élément.
 
 > [!WARNING]
-> Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Element/link).
+> Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link).
 
 - **`href`**
   - : L'URL de base à utiliser afin de recomposer les URL relatives contenues dans le document. Si cet attribut est défini, cet élément doit être présent avant les éléments dont les attributs sont des URL.
     Les URI absolues et relatives sont autorisées (voir la note ci-après).
 - **`target`**
-  - : Un **mot-clé** ou un **nom défini par l'auteur** du [contexte de navigation](/fr/docs/Glossary/Browsing_context) par défaut pour afficher les résultats de la navigation à partir des éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) ou [`<form>`](/fr/docs/Web/HTML/Element/form) sans attributs `target` explicites.
+  - : Un **mot-clé** ou un **nom défini par l'auteur** du [contexte de navigation](/fr/docs/Glossary/Browsing_context) par défaut pour afficher les résultats de la navigation à partir des éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a), [`<area>`](/fr/docs/Web/HTML/Reference/Elements/area) ou [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) sans attributs `target` explicites.
 
     Les mots-clés suivants ont des significations particulières :
     - `_self` : Charge le résultat dans le contexte de navigation courant. C'est la valeur par défaut de l'attribut s'il n'est pas utilisé.
@@ -91,7 +91,7 @@ Si plusieurs éléments `<base>` sont utilisés, seules les premières valeurs p
 
 ### Ancres dans la page
 
-Les ancres d'une page ([`<a>`](/fr/docs/Web/HTML/Element/a)), par exemple `<a href="#ancre">ancre</a>`, sont résolues avec l'URL de base fournie via `<base>` et déclenche une requête HTTP vers l'URL de base.
+Les ancres d'une page ([`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)), par exemple `<a href="#ancre">ancre</a>`, sont résolues avec l'URL de base fournie via `<base>` et déclenche une requête HTTP vers l'URL de base.
 
 1. Soit `<base href="https://example.com">`
 2. … et ce lien : `<a href="#ancre">Anker</a>`

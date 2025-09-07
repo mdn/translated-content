@@ -128,6 +128,6 @@ Vous pouvez également vérifier le contraste des couleurs directement via les o
 
 ## Voir aussi
 
-- [Couleur et contraste de couleur](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur)
-- [Étiquettes multiples](/fr/docs/Learn/Forms/How_to_structure_a_web_form#étiquettes_multiples)
+- [Couleur et contraste de couleur](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur)
+- [Étiquettes multiples](/fr/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#étiquettes_multiples)
 - [Comprendre le contraste non textuel](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)

@@ -18,7 +18,7 @@ L'élément HTML **`<plaintext>`** permet d'afficher du texte qui n'est pas inte
 
 ## Attributs
 
-Cet élément n'a aucun autre attribut en dehors des [attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+Cet élément n'a aucun autre attribut en dehors des [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
 
 ## Interface DOM
 

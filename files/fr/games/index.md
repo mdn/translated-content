@@ -14,7 +14,7 @@ Bienvenue dans le centre de développement de jeux MDN ! Dans cette zone du site
 Nous avons également inclus une section de références afin que vous puissiez facilement trouver des informations sur toutes les API les plus courantes utilisées dans le développement de jeux.
 
 > [!NOTE]
-> La création de jeux sur le Web s'appuie sur un certain nombre de technologies Web de base telles que HTML, CSS et JavaScript. La [Zone "Apprendre"](/fr/docs/Learn) est un bon endroit pour commencer avec les bases.
+> La création de jeux sur le Web s'appuie sur un certain nombre de technologies Web de base telles que HTML, CSS et JavaScript. La [Zone "Apprendre"](/fr/docs/Learn_web_development) est un bon endroit pour commencer avec les bases.
 
 ## Portez des jeux natifs sur le Web
 

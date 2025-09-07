@@ -43,7 +43,7 @@ Ainsi, un menu de navigation devrait être délimité par un élément {{htmlele
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -142,5 +142,5 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Glo
 ## Voir aussi
 
 - Les autres éléments HTML relatifs au plan du document : {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Structure et sections d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
+- [Structure et sections d'un document HTML5](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ARIA : le rôle `region`](/fr/docs/Web/Accessibility/ARIA/Roles/Region_role)

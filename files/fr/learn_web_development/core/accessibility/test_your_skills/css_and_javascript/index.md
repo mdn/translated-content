@@ -6,7 +6,7 @@ original_slug: Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_
 
 {{LearnSidebar}}
 
-L'objectif de ce test de connaissances est d'évaluer si vous maîtrisez les [meilleures pratiques d'accessibilité en CSS et en JavaScript](/fr/docs/Learn/Accessibility/CSS_and_JavaScript).
+L'objectif de ce test de connaissances est d'évaluer si vous maîtrisez les [meilleures pratiques d'accessibilité en CSS et en JavaScript](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript).
 
 > [!NOTE]
 > Vous pouvez tester les solutions dans les éditeurs interactifs ci-dessous, cependant il peut être plus utile de télécharger le code et d'utiliser un outil en ligne comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices suivants.

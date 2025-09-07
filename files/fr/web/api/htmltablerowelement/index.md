@@ -14,13 +14,13 @@ L'interface **`HTMLTableRowElement`** fournit des propriétés et des méthodes 
 _Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} contenant une valeur énumérée reflétant l'attribut [`align`](/fr/docs/Web/HTML/Element/tr#align). Il indique l'alignement du contenu de l'élément par rapport au contexte environnant. Les valeurs possibles sont `"left"`, `"right"`, et `"center"`.
+  - : Est un {{domxref("DOMString")}} contenant une valeur énumérée reflétant l'attribut [`align`](/fr/docs/Web/HTML/Reference/Elements/tr#align). Il indique l'alignement du contenu de l'élément par rapport au contexte environnant. Les valeurs possibles sont `"left"`, `"right"`, et `"center"`.
 - {{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} contenant la couleur de fond des cellules. Il reflète l'attribut obsolète [`bgColor`](/fr/docs/Web/HTML/Element/tr#bgcolor) attribute.
+  - : Est un {{domxref("DOMString")}} contenant la couleur de fond des cellules. Il reflète l'attribut obsolète [`bgColor`](/fr/docs/Web/HTML/Reference/Elements/tr#bgcolor) attribute.
 - {{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}
   - : Renvoie une {{domxref("HTMLCollection")}} en direct contenant les cellules de la ligne. La `HTMLCollection` est active et est automatiquement mise à jour lorsque des cellules sont ajoutées ou supprimées.
 - {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} contenant un seul caractère. Ce caractère est celui sur lequel aligner toutes les cellules d'une colonne. Il reflète [`char`](/fr/docs/Web/HTML/Element/tr#char) et par défaut les points décimaux associés à la langue, par exemple `'.'` pour l'anglais, ou `','` pour le français. Cette propriété était facultative et n'était pas très bien prise en charge.
+  - : Est un {{domxref("DOMString")}} contenant un seul caractère. Ce caractère est celui sur lequel aligner toutes les cellules d'une colonne. Il reflète [`char`](/fr/docs/Web/HTML/Reference/Elements/tr#char) et par défaut les points décimaux associés à la langue, par exemple `'.'` pour l'anglais, ou `','` pour le français. Cette propriété était facultative et n'était pas très bien prise en charge.
 - {{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}
   - : Est un {{domxref("DOMString")}} contenant un entier indiquant combien de caractère doivent être laissés à droite (pour les scripts de gauche à droite; ou à gauche pour les scripts de droite à gauche) du caractère défini par `HTMLTableRowElement.ch`. Cette propriété était facultative et n'était pas très bien prise en charge.
 - {{domxref("HTMLTableRowElement.rowIndex")}} {{readonlyInline}}
@@ -28,7 +28,7 @@ _Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{readonlyInline}}
   - : Renvoie une valeur `long` qui donne la position logique de la ligne dans la section de table à laquelle elle appartient. Si la ligne ne fait pas partie d'une section, renvoie `-1`.
 - {{domxref("HTMLTableRowElement.vAlign")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} représentant une valeur énumérée indiquant comment le contenu de la cellule doit être aligné verticalement. Il reflète l'attribut [`valign`](/fr/docs/Web/HTML/Element/tr#valign) et peut avoir l'une des valeurs suivantes : `"top"`, `"middle"`, `"bottom"`, ou `"baseline"`.
+  - : Est un {{domxref("DOMString")}} représentant une valeur énumérée indiquant comment le contenu de la cellule doit être aligné verticalement. Il reflète l'attribut [`valign`](/fr/docs/Web/HTML/Reference/Elements/tr#valign) et peut avoir l'une des valeurs suivantes : `"top"`, `"middle"`, `"bottom"`, ou `"baseline"`.
 
 ## Méthodes
 

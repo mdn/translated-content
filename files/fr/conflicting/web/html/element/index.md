@@ -12,7 +12,7 @@ Une commande peut être définie explicitement, avec un texte et éventuellement
 
 ## Attributs
 
-Cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Global_attributes) et notamment `title` qui peut être utilisé afin de décrire une commande ou pour fournir des indications quant à l'utilisation de celle-ci.
+Cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) et notamment `title` qui peut être utilisé afin de décrire une commande ou pour fournir des indications quant à l'utilisation de celle-ci.
 
 - `checked`
   - : Un attribut booléen qui indique si la commande est sélectionné. Cet attribut peut uniquement être utilisé lorsque l'attribut `type` vaut `checkbox` ou `radio`.

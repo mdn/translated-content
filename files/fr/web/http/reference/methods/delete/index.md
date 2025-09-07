@@ -47,7 +47,7 @@ DELETE <cible-requête>["?"<fragment-requête>] HTTP/1.1
 ```
 
 - `<cible-requête>`
-  - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie par [l'en-tête `Host`](/fr/docs/Web/HTTP/Headers/Host). Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) pour les requêtes vers un serveur originel et d'une URL absolue pour les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.example.com/chemin/vers/fichier.html`).
+  - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie par [l'en-tête `Host`](/fr/docs/Web/HTTP/Reference/Headers/Host). Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) pour les requêtes vers un serveur originel et d'une URL absolue pour les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.example.com/chemin/vers/fichier.html`).
 - `<fragment-requête>` {{optional_inline}}
   - : Un fragment de requête optionnel précédé d'un point d'interrogation `?`. Utilisé généralement pour fournir de l'information sous la forme de paires `clé=valeur`.
 
@@ -62,15 +62,15 @@ DELETE /fichier.html HTTP/1.1
 Host: example.com
 ```
 
-Si la requête réussit, plusieurs [codes de statut de réponses](/fr/docs/Web/HTTP/Status#successful_responses) peuvent être renvoyés.
-Une réponse [`204 No Content`](/fr/docs/Web/HTTP/Status/204) indique que la requête a réussi et qu'aucune information supplémentaire ne doit être fournie au client en retour&nbsp;:
+Si la requête réussit, plusieurs [codes de statut de réponses](/fr/docs/Web/HTTP/Reference/Status#successful_responses) peuvent être renvoyés.
+Une réponse [`204 No Content`](/fr/docs/Web/HTTP/Reference/Status/204) indique que la requête a réussi et qu'aucune information supplémentaire ne doit être fournie au client en retour&nbsp;:
 
 ```http
 HTTP/1.1 204 No Content
 Date: Wed, 04 Sep 2024 10:16:04 GMT
 ```
 
-Une réponse [`200 OK`](/fr/docs/Web/HTTP/Status/200) indique que la requête réussit et que le corps de la réponse inclut une représentation décrivant le résultat&nbsp;:
+Une réponse [`200 OK`](/fr/docs/Web/HTTP/Reference/Status/200) indique que la requête réussit et que le corps de la réponse inclut une représentation décrivant le résultat&nbsp;:
 
 ```http
 HTTP/1.1 200 OK
@@ -85,7 +85,7 @@ Content-Length: 1234
 </html>
 ```
 
-Une réponse [`202 Accepted`](/fr/docs/Web/HTTP/Status/202) indique que la requête a été acceptée et qu'elle réussira probablement, mais que la ressource n'a pas encore été supprimée du serveur.
+Une réponse [`202 Accepted`](/fr/docs/Web/HTTP/Reference/Status/202) indique que la requête a été acceptée et qu'elle réussira probablement, mais que la ressource n'a pas encore été supprimée du serveur.
 
 ```http
 HTTP/1.1 202 Accepted
@@ -111,9 +111,9 @@ Content-Length: 1234
 
 ## Voir aussi
 
-- [Les méthodes des requêtes HTTP](/fr/docs/Web/HTTP/Methods)
-- [Les codes de statut des réponses HTTP](/fr/docs/Web/HTTP/Status)
-  - [200](/fr/docs/Web/HTTP/Status/200)
-  - [202](/fr/docs/Web/HTTP/Status/202)
-  - [204](/fr/docs/Web/HTTP/Status/204)
-- [Les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
+- [Les méthodes des requêtes HTTP](/fr/docs/Web/HTTP/Reference/Methods)
+- [Les codes de statut des réponses HTTP](/fr/docs/Web/HTTP/Reference/Status)
+  - [200](/fr/docs/Web/HTTP/Reference/Status/200)
+  - [202](/fr/docs/Web/HTTP/Reference/Status/202)
+  - [204](/fr/docs/Web/HTTP/Reference/Status/204)
+- [Les en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)

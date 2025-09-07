@@ -49,7 +49,7 @@ On notera qu'il n'est pas nécessaire d'avoir une rupture brutale pour utiliser 
 
 ### Effectuer la transition depuis une disposition flottante
 
-Jusqu'à présent, pour créer une disposition sur plusieurs colonnes, on a utilisé [des dispositions flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats). Si vous avez un objet qui flotte et que celui-ci est également un objet d'une grille CSS : dans un navigateur qui prend en charge les grilles CSS, le flottement ne sera plus appliqué sur l'objet. En fait, la grille prend le pas sur le flottement. Dans l'exemple qui suit, on a simplement un objet média. Pour un navigateur historique, on utilise {{cssxref("float")}}, cependant, on a également défini un conteneur de grille dans lequel on pourra utiliser les propriétés d'alignement disponibles pour les navigateurs qui implémentent les grilles CSS.
+Jusqu'à présent, pour créer une disposition sur plusieurs colonnes, on a utilisé [des dispositions flottantes](/fr/docs/Learn_web_development/Core/CSS_layout/Floats). Si vous avez un objet qui flotte et que celui-ci est également un objet d'une grille CSS : dans un navigateur qui prend en charge les grilles CSS, le flottement ne sera plus appliqué sur l'objet. En fait, la grille prend le pas sur le flottement. Dans l'exemple qui suit, on a simplement un objet média. Pour un navigateur historique, on utilise {{cssxref("float")}}, cependant, on a également défini un conteneur de grille dans lequel on pourra utiliser les propriétés d'alignement disponibles pour les navigateurs qui implémentent les grilles CSS.
 
 Le mode {{cssxref("float")}} ne s'applique plus sur l'objet et on peut utiliser la propriété {{cssxref("align-self")}} afin d'aligner le contenu vers la fin du conteneur.
 

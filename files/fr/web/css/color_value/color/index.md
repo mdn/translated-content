@@ -11,7 +11,7 @@ La notation fonctionnelle **`color()`** permet d'exprimer une couleur dans un es
 
 La prise en charge d'un espace de couleur donné peut être détectée grâce à la caractéristique média [`color-gamut`](/fr/docs/Web/CSS/@media/color-gamut).
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [`@color-profile`](/fr/docs/Web/CSS/@color-profile) peut être utilisée afin de définir et de nommer un profil de couleur à utiliser dans la fonction `color()`.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [`@color-profile`](/fr/docs/Web/CSS/@color-profile) peut être utilisée afin de définir et de nommer un profil de couleur à utiliser dans la fonction `color()`.
 
 ## Syntaxe
 

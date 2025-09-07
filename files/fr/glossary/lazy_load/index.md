@@ -9,4 +9,4 @@ slug: Glossary/Lazy_load
 
 ## Voir aussi
 
-- [Lazy loading](/fr/docs/Web/Performance/Lazy_loading)
+- [Lazy loading](/fr/docs/Web/Performance/Guides/Lazy_loading)

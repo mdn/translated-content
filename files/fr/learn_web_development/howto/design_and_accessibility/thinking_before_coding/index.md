@@ -38,7 +38,7 @@ Se poser ces questions et y répondre constituent la _conceptualisation_ du proj
 
 ## Pédagogie active
 
-_Il n'y a pas la pédagogie active disponible pour l'instant. [S'il-vous-plaît, pensez à contribuer pour enrichir ce contenu !](/fr/docs/MDN/Community/Contributing/Getting_started)_
+_Il n'y a pas la pédagogie active disponible pour l'instant. [S'il-vous-plaît, pensez à contribuer pour enrichir ce contenu !](/fr/docs/MDN/Community/Getting_started)_
 
 ## Aller plus loin
 
@@ -188,5 +188,5 @@ Comme vous pouvez le voir, l'idée simple: « Je veux faire un site » génère 
 
 ## Prochaines étapes
 
-- Commencer à apprendre la technique [Comment fonctionne l'Internet ?](/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
-- Approfondir le design et la conception [Conception d'une page web](/fr/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts)
+- Commencer à apprendre la technique [Comment fonctionne l'Internet ?](/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
+- Approfondir le design et la conception [Conception d'une page web](/fr/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)

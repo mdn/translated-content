@@ -56,13 +56,13 @@ Le JavaScript côté client en particulier a de nombreuses API à sa disposition
 Ci-dessus, nous avons indiqué ce qu'est une API JavaScript côté client et sa relation avec le langage JavaScript. Pour récapituler, clarifier, et apporter plus de précisions sur d'autres outils JavaScript qui existent&nbsp;:
 
 - JavaScript
-  - : Un langage de programmation de haut niveau intégré aux navigateurs, qui permet de mettre en œuvre des fonctionnalités sur les pages et applications web. Notez que JavaScript est également disponible dans d'autres environnements de programmation, tels que [Node.js](/fr/docs/Learn/Server-side/Express_Nodejs/Introduction).
+  - : Un langage de programmation de haut niveau intégré aux navigateurs, qui permet de mettre en œuvre des fonctionnalités sur les pages et applications web. Notez que JavaScript est également disponible dans d'autres environnements de programmation, tels que [Node.js](/fr/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction).
 - Les API web, fournies par le navigateur
   - : Constructions intégrées dans le navigateur, situées au‑dessus du langage JavaScript, permettant une mise en œuvre plus facile de fonctionnalités.
 - Les API tierces
   - : Constructions intégrées à des plateformes tierces (par exemple Twitter, Facebook) qui permettent d'utiliser certaines fonctionnalités de ces plateformes dans vos propres pages web (par exemple&nbsp;: afficher vos derniers tweets sur votre page web).
 - Les bibliothèques JavaScript
-  - : Habituellement, un ou plusieurs fichiers JavaScript contenant des [fonctions personnalisées](/fr/docs/Learn/JavaScript/Building_blocks/Functions#fonctions_personnalisées) que vous pouvez attacher à votre page web pour accélérer ou activer l'écriture de fonctionnalités courantes. Des exemples incluent jQuery, Mootools et React.
+  - : Habituellement, un ou plusieurs fichiers JavaScript contenant des [fonctions personnalisées](/fr/docs/Learn_web_development/Core/Scripting/Functions#fonctions_personnalisées) que vous pouvez attacher à votre page web pour accélérer ou activer l'écriture de fonctionnalités courantes. Des exemples incluent jQuery, Mootools et React.
 - Les <i lang="en">frameworks</i> JavaScript
   - : Au‑dessus des bibliothèques, les <i lang="en">frameworks</i> JavaScript (par exemple Angular et Ember) sont plutôt des ensembles de HTML, CSS, JavaScript et autres technologies, que vous installez puis utilisez pour écrire une application web entière. La différence essentielle entre une bibliothèque et un <i lang="en">framework</i> est «&nbsp;l'inversion du contrôle&nbsp;». Avec une bibliothèque, c'est la personne qui développe qui appelle les méthodes de la bibliothèque et exerce un contrôle. Avec un <i lang="en">framework</i>, le contrôle est inversé&nbsp;: c'est le <i lang="en">framework</i> qui appelle le code développé.
 
@@ -75,17 +75,17 @@ Il existe de nombreuses API dans les navigateurs modernes. Elles permettent de r
 Voici les API web que vous rencontrerez le plus souvent (et que nous allons voir en détails dans ce module)&nbsp;:
 
 - Les API pour manipuler des documents chargés dans le navigateur
-  - : L'exemple le plus évident est [l'API DOM (pour <i lang="en">Document Object Model</i>)](/fr/docs/Web/API/Document_Object_Model). Elle permet de manipuler le HTML et CSS&nbsp;: créer, supprimer et modifier du code HTML, appliquer de nouveaux styles à votre page dynamiquement, etc. Par exemple, chaque fois que vous voyez une fenêtre pop-up apparaître sur une page, ou qu'un nouveau contenu est affiché, c'est que le DOM est en action. Découvrez-en plus sur ces types d'API dans la rubrique [Manipuler des documents](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
+  - : L'exemple le plus évident est [l'API DOM (pour <i lang="en">Document Object Model</i>)](/fr/docs/Web/API/Document_Object_Model). Elle permet de manipuler le HTML et CSS&nbsp;: créer, supprimer et modifier du code HTML, appliquer de nouveaux styles à votre page dynamiquement, etc. Par exemple, chaque fois que vous voyez une fenêtre pop-up apparaître sur une page, ou qu'un nouveau contenu est affiché, c'est que le DOM est en action. Découvrez-en plus sur ces types d'API dans la rubrique [Manipuler des documents](/fr/docs/Learn_web_development/Core/Scripting/DOM_scripting).
 - Les API pour récupérer des données du serveur et mettre à jour une page web
-  - : Si vous avez juste besoin de mettre à jour une liste de produits ou afficher de nouveaux articles disponibles, le faire instantanément sans avoir à recharger toute la page du serveur peut rendre le site ou l'application beaucoup plus réactif et «&nbsp;accrocheur&nbsp;». [L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) est l'API principale pour cet usage (du code antérieur peut utiliser l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)). Vous pourrez rencontrer le terme **Ajax** pour qualifier cette technique. Pour en savoir plus sur ces API, voir [Récupérer des données du serveur.](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+  - : Si vous avez juste besoin de mettre à jour une liste de produits ou afficher de nouveaux articles disponibles, le faire instantanément sans avoir à recharger toute la page du serveur peut rendre le site ou l'application beaucoup plus réactif et «&nbsp;accrocheur&nbsp;». [L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) est l'API principale pour cet usage (du code antérieur peut utiliser l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)). Vous pourrez rencontrer le terme **Ajax** pour qualifier cette technique. Pour en savoir plus sur ces API, voir [Récupérer des données du serveur.](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
 - Les API pour dessiner et manipuler des graphiques
-  - : Les plus populaires sont [Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API). Elles permettent la mise à jour, par programmation, des pixels contenus dans un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) pour créer des scènes 2D et 3D. Par exemple, vous pouvez dessiner des formes comme des rectangles ou des cercles, importer une image sur le canevas, et lui appliquer un filtre sépia ou niveau de gris à l'aide de l'API Canvas ou encore créer une scène 3D complexe avec éclairage et textures en utilisant WebGL. De telles API sont souvent combinées avec d'autres API, par exemple [`window.requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame), pour créer des boucles d'animation (faire des mises à jour continues de scènes) et ainsi créer des dessins animés et des jeux. Pour en savoir plus sur ces API, voir [Dessiner des éléments graphiques](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics).
+  - : Les plus populaires sont [Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API). Elles permettent la mise à jour, par programmation, des pixels contenus dans un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) pour créer des scènes 2D et 3D. Par exemple, vous pouvez dessiner des formes comme des rectangles ou des cercles, importer une image sur le canevas, et lui appliquer un filtre sépia ou niveau de gris à l'aide de l'API Canvas ou encore créer une scène 3D complexe avec éclairage et textures en utilisant WebGL. De telles API sont souvent combinées avec d'autres API, par exemple [`window.requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame), pour créer des boucles d'animation (faire des mises à jour continues de scènes) et ainsi créer des dessins animés et des jeux. Pour en savoir plus sur ces API, voir [Dessiner des éléments graphiques](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics).
 - Les API audio et vidéo
-  - : [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement), [l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API) ou [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent de faire des choses vraiment intéressantes avec du multimédia, telles que la création de contrôles personnalisés pour jouer de l'audio et vidéo, l'affichage de textes comme des légendes et des sous-titres, la récupération de vidéos depuis votre webcam pour l'afficher sur l'ordinateur d'une autre personne dans une visio‑conférence ou encore l'ajout d'effets sur des pistes audio (tels que le gain, la distorsion, la balance, etc.). Pour en savoir plus sur ces API, voir [les API audio et vidéo](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs).
+  - : [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement), [l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API) ou [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent de faire des choses vraiment intéressantes avec du multimédia, telles que la création de contrôles personnalisés pour jouer de l'audio et vidéo, l'affichage de textes comme des légendes et des sous-titres, la récupération de vidéos depuis votre webcam pour l'afficher sur l'ordinateur d'une autre personne dans une visio‑conférence ou encore l'ajout d'effets sur des pistes audio (tels que le gain, la distorsion, la balance, etc.). Pour en savoir plus sur ces API, voir [les API audio et vidéo](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs).
 - Les API de périphérique
   - : Elles permettent essentiellement de manier et récupérer des données à partir de périphériques modernes, de manière utile pour les applications web. Nous avons déjà parlé de [l'API de géolocalisation](/fr/docs/Web/API/Geolocation_API) accédant aux données d'emplacement de l'appareil afin que vous puissiez repérer votre position sur une carte.
 - Les API de stockage côté client
-  - : Elles permettent de stocker des données côté client et on peut donc créer une application qui enregistre son état entre les chargements de page, et peut-être même fonctionner lorsque le périphérique est hors ligne. Il existe un certain nombre d'options disponibles, par exemple le simple stockage nom/valeur avec l'[API <i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API), et le stockage plus complexe de données tabulaires avec l'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API). Pour en savoir plus sur ces API, voir [Stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage).
+  - : Elles permettent de stocker des données côté client et on peut donc créer une application qui enregistre son état entre les chargements de page, et peut-être même fonctionner lorsque le périphérique est hors ligne. Il existe un certain nombre d'options disponibles, par exemple le simple stockage nom/valeur avec l'[API <i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API), et le stockage plus complexe de données tabulaires avec l'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API). Pour en savoir plus sur ces API, voir [Stockage côté client](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage).
 
 ### API tierces courantes
 
@@ -106,17 +106,17 @@ Chaque API JavaScript a son fonctionnement propre. Elles partagent toutefois des
 
 ### Elles sont fondées sur des objets
 
-Les API interagissent avec le code en utilisant un ou plusieurs [objets JavaScript](/fr/docs/Learn/JavaScript/Objects), qui servent de conteneurs pour les données utilisées par l'API (contenues dans les propriétés d'objet), et la fonctionnalité rendue disponible par l'API (contenue dans des méthodes d'objet).
+Les API interagissent avec le code en utilisant un ou plusieurs [objets JavaScript](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects), qui servent de conteneurs pour les données utilisées par l'API (contenues dans les propriétés d'objet), et la fonctionnalité rendue disponible par l'API (contenue dans des méthodes d'objet).
 
 > [!NOTE]
-> Si vous ne connaissez pas encore le fonctionnement des objets, vous devriez revenir en arrière et parcourir le module [objets JavaScript](/fr/docs/Learn/JavaScript/Objects) avant de continuer.
+> Si vous ne connaissez pas encore le fonctionnement des objets, vous devriez revenir en arrière et parcourir le module [objets JavaScript](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects) avant de continuer.
 
 Prenons comme exemple l'API <i lang="en">Web Audio</i>. Il s'agit d'une API assez complexe avec plusieurs objets. Voici les objets principaux&nbsp;:
 
 - [`AudioContext`](/fr/docs/Web/API/AudioContext)
   - : Qui représente un [graphe audio](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#graphes_audio) qui peut être utilisé afin de manipuler la lecture audio dans le navigateur et qui possède différentes méthodes et propriétés qui sont disponibles pour manipuler ce signal audio.
 - [`MediaElementAudioSourceNode`](/fr/docs/Web/API/MediaElementAudioSourceNode)
-  - : Qui représente un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) contenant du son qu'on veut jouer et manipuler dans le contexte.
+  - : Qui représente un élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) contenant du son qu'on veut jouer et manipuler dans le contexte.
 - [`AudioDestinationNode`](/fr/docs/Web/API/AudioDestinationNode)
   - : Qui représente la destination de l'audio, c'est-à-dire le composant physique qui sera utilisé pour produire le son (il s'agit généralement des hauts-parleurs ou des écouteurs).
 
@@ -130,7 +130,7 @@ Alors comment ces objets interagissent-ils&nbsp;? Si vous regardez notre exemple
 <input type="range" min="0" max="1" step="0.01" value="1" class="volume" />
 ```
 
-Pour commencer, nous incluons, un élément `<audio>` avec lequel nous intégrons un fichier MP3 dans la page. Nous n'incluons pas de contrôles par défaut du navigateur. Ensuite, nous incluons un [`<button>`](/fr/docs/Web/HTML/Element/button) que nous utiliserons pour lire et arrêter la musique, et un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`, que nous utiliserons pour ajuster le volume de la piste en cours de lecture.
+Pour commencer, nous incluons, un élément `<audio>` avec lequel nous intégrons un fichier MP3 dans la page. Nous n'incluons pas de contrôles par défaut du navigateur. Ensuite, nous incluons un [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) que nous utiliserons pour lire et arrêter la musique, et un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `range`, que nous utiliserons pour ajuster le volume de la piste en cours de lecture.
 
 Ensuite, examinons le JavaScript de cet exemple.
 
@@ -215,7 +215,7 @@ em.textContent = "Coucou vous !"; // donne à em du contenu textuel
 para.appendChild(em); // intègre em dans le paragraphe
 ```
 
-L'API [Canvas](/fr/docs/Web/API/Canvas_API) repose également sur l'obtention d'un objet de contexte à utiliser pour manipuler les choses, bien que dans ce cas, il s'agisse d'un contexte graphique plutôt que d'un contexte audio. Son objet de contexte est créé en obtenant une référence à l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sur lequel vous voulez dessiner, puis en appelant sa méthode [`HTMLCanvasElement.getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext)&nbsp;:
+L'API [Canvas](/fr/docs/Web/API/Canvas_API) repose également sur l'obtention d'un objet de contexte à utiliser pour manipuler les choses, bien que dans ce cas, il s'agisse d'un contexte graphique plutôt que d'un contexte audio. Son objet de contexte est créé en obtenant une référence à l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) sur lequel vous voulez dessiner, puis en appelant sa méthode [`HTMLCanvasElement.getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext)&nbsp;:
 
 ```js
 const canvas = document.querySelector("canvas");
@@ -238,7 +238,7 @@ Ball.prototype.draw = function () {
 
 ### Elles utilisent des évènements pour gérer les changements d'état
 
-Nous avons déjà abordé les évènements plus tôt dans le cours dans notre article [Introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events), qui examine en détail ce que sont les évènements web côté client et comment ils sont utilisés dans votre code. Si vous n'êtes pas déjà familiarisé avec le fonctionnement des évènements de l'API web côté client, nous vous conseillons de lire cet article avant de poursuivre.
+Nous avons déjà abordé les évènements plus tôt dans le cours dans notre article [Introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events), qui examine en détail ce que sont les évènements web côté client et comment ils sont utilisés dans votre code. Si vous n'êtes pas déjà familiarisé avec le fonctionnement des évènements de l'API web côté client, nous vous conseillons de lire cet article avant de poursuivre.
 
 Certaines API web ne contiennent aucun évènement, mais la plupart en contiennent au moins quelques-uns. Les propriétés des gestionnaires qui nous permettent d'exécuter des fonctions lorsque des évènements se produisent sont généralement répertoriées dans notre matériel de référence dans des sections distinctes intitulées «&nbsp;Gestionnaires d'évènements&nbsp;».
 

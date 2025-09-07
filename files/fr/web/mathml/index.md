@@ -15,13 +15,13 @@ Vous trouverez ici des liens vers la documentation, les exemples et les outils p
 
 ## Référence MathML
 
-- [Référence des éléments MathML](/fr/docs/Web/MathML/Element)
+- [Référence des éléments MathML](/fr/docs/Web/MathML/Reference/Element)
   - : Des informations précises sur chaque élément MathML et leurs compatibilités avec les différents navigateurs.
-- [Référence des attributs MathML](/fr/docs/Web/MathML/Attribute)
+- [Référence des attributs MathML](/fr/docs/Web/MathML/Reference/Attribute)
   - : Des informations sur les attributs MathML qui modifient l'apparence ou le comportement des éléments.
-- [Exemples MathML](/fr/docs/Web/MathML/Examples)
+- [Exemples MathML](/fr/docs/Web/MathML/Guides)
   - : Des fragments de code MathML ainsi que des exemples pour comprendre son fonctionnement.
-- [Éditer du MathML](/fr/docs/Web/MathML/Authoring)
+- [Éditer du MathML](/fr/docs/Web/MathML/Guides/Authoring)
   - : Des conseils sur l'édition de document en MathML&nbsp;: les éditeurs à utiliser et comment intégrer le code produit dans du contenu web.
 
 ## Obtenir de l'aide de la communauté

@@ -69,7 +69,7 @@ false + false; // 0
 1n + 2n; // 3n
 ```
 
-長整数と数値のオペランドを混在させることはできません。
+加算で長整数と数値のオペランドを混在させることはできません。
 
 ```js example-bad
 1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions

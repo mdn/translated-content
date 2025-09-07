@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/itemtype
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`itemtype`** définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. `itemscope` est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemtype`** définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. `itemscope` est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.
 
 L'attribut `itemtype` doit avoir une valeur qui est un ensemble non ordonné de fragments uniques, sensible à la casse. Chaque fragment doit être une URL absolue valide et tous les fragments participent à la définition du même vocabulaire. La valeur de l'attribut doit avoir au moins un fragment.
 
@@ -74,9 +74,9 @@ itemtype = URL
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 - Les autres attributs universels relatifs aux microdonnées :
-  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop)
+  - [`itemref`](/fr/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes#itemscope)

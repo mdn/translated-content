@@ -420,5 +420,5 @@ Pour ajouter une ligne et quelques cellules à un tableau existant&nbsp;:
 
 - [Référence DOM](/fr/docs/Web/API/Document_Object_Model)
 - [Introduction à DOM](/fr/docs/Web/API/Document_Object_Model/Introduction)
-- [Les événements et DOM](/fr/docs/Learn/JavaScript/Building_blocks/Events)
+- [Les événements et DOM](/fr/docs/Learn_web_development/Core/Scripting/Events)
 - [Exemples](/fr/docs/Web/API/Document_Object_Model/Examples)

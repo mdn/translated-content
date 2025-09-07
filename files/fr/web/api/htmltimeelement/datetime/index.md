@@ -3,7 +3,7 @@ title: HTMLTimeElement.dateTime
 slug: Web/API/HTMLTimeElement/dateTime
 ---
 
-{{ APIRef("HTML DOM") }}La propriété **`HTMLTimeElement.dateTime`** est une {{domxref("DOMString")}} qui reflète l'attribut HTML [`datetime`](/fr/docs/Web/HTML/Element/time#datetime), contenant une date et une heure interprétable par un ordinateur.
+{{ APIRef("HTML DOM") }}La propriété **`HTMLTimeElement.dateTime`** est une {{domxref("DOMString")}} qui reflète l'attribut HTML [`datetime`](/fr/docs/Web/HTML/Reference/Elements/time#datetime), contenant une date et une heure interprétable par un ordinateur.
 
 Le format de la chaîne de caractères doit correspondre à l'une des micro-syntaxes HTML suivantes:
 

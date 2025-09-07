@@ -53,4 +53,4 @@ Les boîtes de ligne ont généralement la même taille sur l'axe en ligne (c'es
 ## Voir aussi
 
 - [Le contexte de formatage en bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Le modèle de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+- [Le modèle de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)

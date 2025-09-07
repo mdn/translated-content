@@ -149,7 +149,7 @@ tr:nth-child(odd) td {
 
 ## Attributs
 
-On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
+On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur cet élément.
 
 ### Attributs obsolètes
 
@@ -169,9 +169,9 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
 ## Notes d'utilisation
 
-L'élément `<caption>` devrait être le premier élément enfant de l'élément parent [`<table>`](/fr/docs/Web/HTML/Element/table).
+L'élément `<caption>` devrait être le premier élément enfant de l'élément parent [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table).
 
-Quand l'élément [`<table>`](/fr/docs/Web/HTML/Element/table) (étant le parent de l'élément `<caption>`) n'est que l'unique descendant d'un élément [`<figure>`](/fr/docs/Web/HTML/Element/figure), c'est l'élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption) doit être utilisé.
+Quand l'élément [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) (étant le parent de l'élément `<caption>`) n'est que l'unique descendant d'un élément [`<figure>`](/fr/docs/Web/HTML/Reference/Elements/figure), c'est l'élément [`<figcaption>`](/fr/docs/Web/HTML/Reference/Elements/figcaption) doit être utilisé.
 
 Utiliser la propriété [`background-color`](/fr/docs/Web/CSS/background-color) sur le tableau ne modifiera pas l'apparence de la légende. Il est également nécessaire d'ajouter une déclaration CSS avec `background-color` sur l'élément `<caption>` pour que celui-ci ait la même couleur.
 

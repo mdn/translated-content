@@ -38,7 +38,7 @@ HTML5 fournit des éléments pour intégrer du multimédia dans les documents �
 
 ## Les balises HTML5 video et audio
 
-Les balises {{htmlelement("video")}} et {{htmlelement("audio")}} permettent d'intégrer des vidéos et de l'audio dans des pages web. Comme nous l'avons montré dans [Contenu audio et vidéo](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), une implémentation habituelle ressemble à ça :
+Les balises {{htmlelement("video")}} et {{htmlelement("audio")}} permettent d'intégrer des vidéos et de l'audio dans des pages web. Comme nous l'avons montré dans [Contenu audio et vidéo](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio), une implémentation habituelle ressemble à ça :
 
 ```html
 <video controls>
@@ -55,7 +55,7 @@ Cela crée un lecteur vidéo à l'intérieur du navigateur :
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-Vous pouvez consulter toutes fonctionnalités HTML audio et vidéo dans l'article mentionné précédemment. Pour notre utilisation ici, l'attribut le plus intéressant est [`controls`](/fr/docs/Web/HTML/Element/video#controls). Il permet d'activer l'ensemble des contrôles de lecture par défaut; si vous ne le spécifiez pas, vous aucun contrôle ne sera affiché :
+Vous pouvez consulter toutes fonctionnalités HTML audio et vidéo dans l'article mentionné précédemment. Pour notre utilisation ici, l'attribut le plus intéressant est [`controls`](/fr/docs/Web/HTML/Reference/Elements/video#controls). Il permet d'activer l'ensemble des contrôles de lecture par défaut; si vous ne le spécifiez pas, vous aucun contrôle ne sera affiché :
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -171,7 +171,7 @@ Tout d'abord, en haut du CSS, nous utilisons un bloc {{cssxref("@font-face")}} p
 Ensuite, nous générons du contenu pour afficher une icône sur chaque bouton :
 
 - Nous utilisons le sélecteur {{cssxref("::before")}} pour afficher le contenu au début de chaque élément {{htmlelement("button")}}.
-- Nous utilisons la propriété {{cssxref("content")}} pour que le contenu à afficher soit égal au contenu de l'attribut [`data-icon`](/fr/docs/Learn/HTML/Howto/Use_data_attributes). Dans le cas du bouton play par exemple, `data-icon` contient un "P" majuscule.
+- Nous utilisons la propriété {{cssxref("content")}} pour que le contenu à afficher soit égal au contenu de l'attribut [`data-icon`](/fr/docs/Web/HTML/How_to/Use_data_attributes). Dans le cas du bouton play par exemple, `data-icon` contient un "P" majuscule.
 - Nous apliquons la police web personnalisée au bouton en utilisant {{cssxref("font-family")}}. Dans cette police, "P" est une icône "play", donc le bouton play a une icône "play" affichée dedans.
 
 Les polices d'icônes sont très cool pour de nombreuses raisons: réduire les requêtes HTTP (puisque vous n'avez pas besoin de télécharger des icônes sous forme de fichiers image), bonne scalabilité, et le fait que vous pouvez utiliser les propriétés de texte pour les formatter — comme {{cssxref("color")}} et {{cssxref("text-shadow")}}.
@@ -475,10 +475,10 @@ Voici quelques suggestions de modifications à apporter à l'exemple que nous av
 ## Voir aussi
 
 - {{domxref("HTMLMediaElement")}}
-- [Contenu audio et vidéo](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) — simple guide aux `<video>` et `<audio>` HTML.
-- [Intégration audio et vidéo](/fr/docs/Web/Media/Audio_and_video_delivery) — guide détaillé sur l'intégration de média dans le navigateur, avec de nombreux conseils, astuces et liens vers des tutoriels plus avancés.
+- [Contenu audio et vidéo](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — simple guide aux `<video>` et `<audio>` HTML.
+- [Intégration audio et vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_delivery) — guide détaillé sur l'intégration de média dans le navigateur, avec de nombreux conseils, astuces et liens vers des tutoriels plus avancés.
 - [Manipulation audio et vidéo](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) — guide détaillé pour manipuler l'audio et vidéo avec [Canvas API](/fr/docs/Web/API/Canvas_API), [Web Audio API](/fr/docs/Web/API/Web_Audio_API), et plus encore.
 - Les pages référence {{htmlelement("video")}} et {{htmlelement("audio")}}.
-- [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/Media/Formats).
+- [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/Media/Guides/Formats).
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

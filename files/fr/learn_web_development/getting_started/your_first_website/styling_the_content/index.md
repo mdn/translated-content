@@ -21,7 +21,7 @@ p {
 
 Faisons un essai : copiez ces trois lignes de code CSS dans un nouveau fichier dans votre éditeur de texte, puis sauvegardez le fichier sous le nom `style.css` dans votre répertoire `styles`.
 
-Pour que cela fonctionne, il faut appliquer le CSS au document HTML, sinon la mise en forme décrite dans le fichier CSS n'affectera pas l'affichage de la page HTML dans la navigateur (si vous n'avez pas suivi toutes les étapes pour arriver ici, vous pouvez lire l'article [Gérer les fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files) et [Les bases du HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics) pour savoir par où commencer).
+Pour que cela fonctionne, il faut appliquer le CSS au document HTML, sinon la mise en forme décrite dans le fichier CSS n'affectera pas l'affichage de la page HTML dans la navigateur (si vous n'avez pas suivi toutes les étapes pour arriver ici, vous pouvez lire l'article [Gérer les fichiers](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) et [Les bases du HTML](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) pour savoir par où commencer).
 
 1. Ouvrez votre fichier `index.html` et copiez la ligne suivante quelque part au sein de l'élément `head` (c'est-à-dire entre les balises `<head>` et `</head>`) :
 
@@ -90,7 +90,7 @@ Il y a différents types de sélecteurs. Dans les exemples précédents, nous n'
 | Sélecteur d'attribut                                                                  | Les éléments de la page qui possèdent l'attribut donné.                                                                                                | `img[src]` sélectionne `<img src="monimage.png">` mais pas `<img>`                                |
 | Sélecteur de pseudo-classe                                                            | Les éléments donnés mais uniquement dans un certain état (par exemple quand on passe la souris dessus).                                                | `a:hover` sélectionne `<a>` mais uniquement quand le pointeur de la souris est au-dessus du lien. |
 
-Il existe plein d'autres sélecteurs, pour tous les découvrir, vous pouvez lire notre [guide sur les sélecteurs](/fr/docs/Learn/CSS/Building_blocks/Selectors).
+Il existe plein d'autres sélecteurs, pour tous les découvrir, vous pouvez lire notre [guide sur les sélecteurs](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Les polices (fontes) et le texte
 
@@ -171,7 +171,7 @@ html {
 }
 ```
 
-Cette règle permet de définir la couleur utilisée en arrière-plan pour toute la page. Vous pouvez ici utiliser la valeur que vous aviez choisie [lors de la conception de votre site](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#couleur_du_thème).
+Cette règle permet de définir la couleur utilisée en arrière-plan pour toute la page. Vous pouvez ici utiliser la valeur que vous aviez choisie [lors de la conception de votre site](/fr/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#couleur_du_thème).
 
 ### Mettre en forme le corps de page
 
@@ -239,6 +239,6 @@ Si vous avez suivi les différentes étapes de cet article, vous devriez obtenir
 
 Si vous êtes bloqué·e quelque part, vous pouvez toujours comparer votre travail avec [le code final de cet exemple disponible sur GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
-Dans cet article, nous n'avons fait qu'effleurer les bases de CSS. Pour continuer et en apprendre plus, vous pouvez vous rendre sur la page [Apprendre CSS](/fr/docs/Learn/CSS).
+Dans cet article, nous n'avons fait qu'effleurer les bases de CSS. Pour continuer et en apprendre plus, vous pouvez vous rendre sur la page [Apprendre CSS](/fr/docs/Learn_web_development/Core/Styling_basics).
 
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_HTML", "Apprendre/Commencer_avec_le_web/Les_bases_JavaScript","Apprendre/Commencer_avec_le_web")}}

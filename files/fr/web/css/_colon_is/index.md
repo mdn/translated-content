@@ -157,9 +157,9 @@ On pourra remplacer ce bloc avec&nbsp;:
 
 ### Simplifier les sélecteurs de section
 
-La pseudo-classe `:is()` est notamment utile lorsqu'on manipule [les sections et titres HTML](/fr/docs/Web/HTML/Element/Heading_Elements). En effet, les éléments [`<section>`](/fr/docs/Web/HTML/Element/section), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside) et [`<nav>`](/fr/docs/Web/HTML/Element/nav) sont généralement imbriqués les uns avec les autres. Sans `:is()`, leur mise en forme à différents niveaux peut s'avérer délicate.
+La pseudo-classe `:is()` est notamment utile lorsqu'on manipule [les sections et titres HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements). En effet, les éléments [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside) et [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav) sont généralement imbriqués les uns avec les autres. Sans `:is()`, leur mise en forme à différents niveaux peut s'avérer délicate.
 
-Ainsi, sans `:is()`, il serait très compliqué de cibler tous les éléments [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements) situés à différentes profondeurs&nbsp;:
+Ainsi, sans `:is()`, il serait très compliqué de cibler tous les éléments [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) situés à différentes profondeurs&nbsp;:
 
 ```css
 /* Niveau 0 */
@@ -268,6 +268,6 @@ un-element::after {
 
 ## Voir aussi
 
-- [`:where()`](/fr/docs/Web/CSS/:where)&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/Specificity) qui vaut 0.
+- [`:where()`](/fr/docs/Web/CSS/:where)&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) qui vaut 0.
 - [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list)
 - [Composants web](/fr/docs/Web/API/Web_components)

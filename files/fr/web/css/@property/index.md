@@ -38,7 +38,7 @@ Les descripteurs inconnus ne sont pas valides et sont ignorés, mais n'invaliden
 
 Ajout d'une vérification de type à la {{cssxref('--*', 'propriété personnalisée')}} `--my-color` en tant que couleur avec une valeur par défaut, sans lui permettre d'hériter de sa valeur&nbsp;:
 
-Utilisation de la règle [CSS](/fr/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}}&nbsp;:
+Utilisation de la règle [CSS](/fr/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref('@property')}}&nbsp;:
 
 ```css
 @property --my-color {

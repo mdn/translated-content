@@ -107,7 +107,7 @@ processor.doLoad();
 {{EmbedLiveSample("Vidéo_et_Canvas", '100%', 550)}}
 
 > [!NOTE]
-> En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer [CORS (Cross Origin Resource Sharing)](/fr/docs/Web/HTTP/CORS) sur le serveur qui héberge la vidéo et utiliser l'attribut `crossorigin` sur la balise vidéo.
+> En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer [CORS (Cross Origin Resource Sharing)](/fr/docs/Web/HTTP/Guides/CORS) sur le serveur qui héberge la vidéo et utiliser l'attribut `crossorigin` sur la balise vidéo.
 
 > [!NOTE]
 > L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.
@@ -295,7 +295,7 @@ window.addEventListener("load", setFilter);
 {{ EmbedLiveSample('Code_jouable_2', 700, 425) }}
 
 > [!NOTE]
-> À moins que [CORS](/fr/docs/Web/HTTP/CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
+> À moins que [CORS](/fr/docs/Web/HTTP/Guides/CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
 
 Les filtres pouvant être appliqués sont:
 

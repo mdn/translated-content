@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS) **`<color>`** permet de représenter des couleurs. Une valeur de type `<color>` peut également contenir un [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) indiquant l'opacité (et donc la transparence) de la couleur, qui pourra être utilisée lors de la [composition](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) avec son arrière-plan.
+Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<color>`** permet de représenter des couleurs. Une valeur de type `<color>` peut également contenir un [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) indiquant l'opacité (et donc la transparence) de la couleur, qui pourra être utilisée lors de la [composition](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) avec son arrière-plan.
 
 Une valeur de type `<color>` peut être définie de l'une des façons suivantes&nbsp;:
 
@@ -135,7 +135,7 @@ Pour les animations et [les dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gr
 
 ## Accessibilité
 
-Certaines personnes distinguent difficilement les couleurs entre elles. La recommandation [WCAG 2.1](https://www.w3.org/Translations/WCAG21-fr/#use-of-color) indique que la couleur ne doit pas être utilisée comme unique façon de transmettre un message, d'indiquer une action ou de fournir un résultat. Voir l'article [Couleur et contraste](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur) pour plus d'informations.
+Certaines personnes distinguent difficilement les couleurs entre elles. La recommandation [WCAG 2.1](https://www.w3.org/Translations/WCAG21-fr/#use-of-color) indique que la couleur ne doit pas être utilisée comme unique façon de transmettre un message, d'indiquer une action ou de fournir un résultat. Voir l'article [Couleur et contraste](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur) pour plus d'informations.
 
 ## Syntaxe formelle
 

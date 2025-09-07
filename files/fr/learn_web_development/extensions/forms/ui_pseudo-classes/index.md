@@ -41,18 +41,18 @@ Nous avons abordé ces pseudo-classes dans les articles précédents. Plus réce
 - [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional) qui ciblent les contrôles de formulaire optionnels ou obligatoires.
 - [`:valid`](/fr/docs/Web/CSS/:valid), [`:invalid`](/fr/docs/Web/CSS/:invalid), [`:in-range`](/fr/docs/Web/CSS/:in-range), [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range) qui ciblent les contrôles de formulaire valides ou invalides selon les contraintes de validation des formulaires et ceux dont la valeur est contenue ou dehors de l'intervalle indiqué.
 - [`:enabled`](/fr/docs/Web/CSS/:enabled), [`:disabled`](/fr/docs/Web/CSS/:disabled), [`:read-only`](/fr/docs/Web/CSS/:read-only) et [`:read-write`](/fr/docs/Web/CSS/:read-write) qui ciblent les contrôles de formulaires actifs ou désactivés (via l'attribut HTML `disabled`), et ceux qui sont accessibles en lecture-écriture ou en lecture uniquement (avec l'attribut HTML `readonly`).
-- [`:checked`](/fr/docs/Web/CSS/:checked), [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) et [`:default`](/fr/docs/Web/CSS/:default) qui ciblent respectivement les cases à cocher et boutons radio qui sont cochés, dans un état indéterminé (ni coché ni décoché) et les options par défaut (par exemple un élément [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox) avec l'attribut `checked` ou un élément [`<option>`](/fr/docs/Web/HTML/Element/option) avec l'attribut `selected`).
+- [`:checked`](/fr/docs/Web/CSS/:checked), [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) et [`:default`](/fr/docs/Web/CSS/:default) qui ciblent respectivement les cases à cocher et boutons radio qui sont cochés, dans un état indéterminé (ni coché ni décoché) et les options par défaut (par exemple un élément [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) avec l'attribut `checked` ou un élément [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option) avec l'attribut `selected`).
 
 Il en existe de nombreuses autres, mais celles indiquées dans cette liste sont les plus utiles à première vue. Certaines des autres pseudo-classes permettent de résoudre des problèmes bien spécifiques ou ne sont pas encore prises en charge de façon homogène par les navigateurs. Celles de la liste précédente sont correctement prises en charge, mais il reste nécessaire de bien tester ses formulaires pour s'assurer qu'ils fonctionnent pour le public cible.
 
 > [!NOTE]
-> Certaines des pseudo-classes vues ici portent sur la mise en forme des contrôles de formulaire selon leur état de validation (est-ce que la donnée saisie dans le champ est valide ou non&nbsp;?). Nous apprendrons comment paramétrer et contrôler les contraintes de validation dans notre prochain article sur [la validation des formulaires côté client](/fr/docs/Learn/Forms/Form_validation). En attendant, nous aborderons ce sujet de façon simple afin de ne pas créer de confusion.
+> Certaines des pseudo-classes vues ici portent sur la mise en forme des contrôles de formulaire selon leur état de validation (est-ce que la donnée saisie dans le champ est valide ou non&nbsp;?). Nous apprendrons comment paramétrer et contrôler les contraintes de validation dans notre prochain article sur [la validation des formulaires côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation). En attendant, nous aborderons ce sujet de façon simple afin de ne pas créer de confusion.
 
 ## Mettre en forme les champs selon qu'ils sont obligatoires ou non
 
 Un des aspects de base quant à la validation côté client d'un formulaire est le caractère obligatoire ou optionnel d'un champ (c'est-à-dire qu'il faut que le champ soit rempli (ou non) avant que le formulaire puisse être envoyé).
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) disposent d'un attribut `required` qui, lorsqu'il est présent, signifie que le champ porté par ce contrôle doit être renseigné avant que le formulaire puisse être envoyé. Par exemple&nbsp;:
+Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), et [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) disposent d'un attribut `required` qui, lorsqu'il est présent, signifie que le champ porté par ce contrôle doit être renseigné avant que le formulaire puisse être envoyé. Par exemple&nbsp;:
 
 ```html
 <form>
@@ -148,7 +148,7 @@ Pour commencer, ajoutons un paragraphe en haut du formulaire pour indiquer comme
 
 Les personnes qui utilisent un lecteur d'écran auront l'information qu'un champ est obligatoire lorsque les éléments concernés seront vocalisés, les autres personnes auront cette information grâce au libellé.
 
-Étant donné que les éléments `<input>` ne permettent pas d'inclure du contenu généré (en effet, le contenu généré est placé relativement à la boîte de formatage d'un élément, or, les éléments de formulaire agissent comme des éléments remplacés et n'ont donc pas de telle boîte de formatage), on ajoutera un élément [`<span>`](/fr/docs/Web/HTML/Element/span) vide dans lequel placer ce contenu généré&nbsp;:
+Étant donné que les éléments `<input>` ne permettent pas d'inclure du contenu généré (en effet, le contenu généré est placé relativement à la boîte de formatage d'un élément, or, les éléments de formulaire agissent comme des éléments remplacés et n'ont donc pas de telle boîte de formatage), on ajoutera un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) vide dans lequel placer ce contenu généré&nbsp;:
 
 ```html
 <div>
@@ -197,7 +197,7 @@ Le contenu généré a le texte «&nbsp;obligatoire&nbsp;», qui correspond à c
 
 ## Mettre en forme les contrôles selon la validité des données
 
-L'autre aspect fondamental de la validation d'un formulaire est le caractère valide (ou invalide) des données qui y sont saisies (pour les données numériques, cette validité peut être définie par un intervalle). Les contrôles de formulaire [avec des contraintes de validation](/fr/docs/Web/HTML/Constraint_validation) peuvent être ciblés par ces états.
+L'autre aspect fondamental de la validation d'un formulaire est le caractère valide (ou invalide) des données qui y sont saisies (pour les données numériques, cette validité peut être définie par un intervalle). Les contrôles de formulaire [avec des contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation) peuvent être ciblés par ces états.
 
 ### `:valid` et `:invalid`
 
@@ -206,8 +206,8 @@ On peut cibler les contrôles d'un formulaire avec les pseudo-classes [`:valid`]
 - Les contrôles sans contraintes de validation seront toujours valides, et donc toujours ciblés par `:valid`.
 - Les contrôles avec `required` et qui n'ont pas de valeur sont considérés comme invalides et seront donc ciblés par `:invalid` et par `:required`.
 - Les contrôles avec une validation native, comme `<input type="email">` ou `<input type="url">`, sont ciblés par `:invalid` lorsque les données saisies ne correspondent pas au motif et au format voulu (mais sont considérés comme valides s'ils sont vides).
-- Les contrôles dont la valeur courante est en dehors des limites d'intervalle décrites par les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max) sont ciblés par `:invalid`, et aussi par [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range) que nous verrons par la suite.
-- Il existe d'autres méthodes pour qu'un élément soit ciblé par `:valid`/`:invalid`, nous verrons comment dans [l'article sur la validation d'un formulaire côté client](/fr/docs/Learn/Forms/Form_validation). Gardons les choses simples pour l'instant.
+- Les contrôles dont la valeur courante est en dehors des limites d'intervalle décrites par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#attr-max) sont ciblés par `:invalid`, et aussi par [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range) que nous verrons par la suite.
+- Il existe d'autres méthodes pour qu'un élément soit ciblé par `:valid`/`:invalid`, nous verrons comment dans [l'article sur la validation d'un formulaire côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation). Gardons les choses simples pour l'instant.
 
 Prenons un exemple simple d'utilisation de `:valid`/`:invalid` (vous pouvez voir [l'exemple de démonstration `valid-invalid.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html), et [le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
 
@@ -262,7 +262,7 @@ On voit ici comment les champs texte sont invalides lorsqu'ils sont vides et val
 
 ### Respect de l'intervalle pour les données numériques
 
-Comme mentionné brièvement avant, il existe deux autres pseudo-classes&nbsp;: [`:in-range`](/fr/docs/Web/CSS/:in-range) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range). Celles-ci s'appliquent aux champs numériques dont les intervalles de validité sont délimités par les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max) lorsque leurs données sont comprises ou en dehors de cet intervalle.
+Comme mentionné brièvement avant, il existe deux autres pseudo-classes&nbsp;: [`:in-range`](/fr/docs/Web/CSS/:in-range) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range). Celles-ci s'appliquent aux champs numériques dont les intervalles de validité sont délimités par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#attr-max) lorsque leurs données sont comprises ou en dehors de cet intervalle.
 
 > [!NOTE]
 > Les types de champs numériques sont&nbsp;: `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`.
@@ -315,7 +315,7 @@ Il s'agit de la même démarche que celle suivie avec l'exemple pour `:required`
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-Il est possible qu'un champ numérique soit obligatoire _et_ qu'il soit en dehors de l'intervalle autorisé. Que se passe-t-il dans ce cas&nbsp;? Comme la règle `:out-of-range` apparaît après celle pour `:required`, [les règles de la cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#understanding_the_cascade) s'appliquent et c'est le message pour l'intervalle qui est affiché.
+Il est possible qu'un champ numérique soit obligatoire _et_ qu'il soit en dehors de l'intervalle autorisé. Que se passe-t-il dans ce cas&nbsp;? Comme la règle `:out-of-range` apparaît après celle pour `:required`, [les règles de la cascade](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#understanding_the_cascade) s'appliquent et c'est le message pour l'intervalle qui est affiché.
 
 Cela fonctionne plutôt bien&nbsp;: lorsque la page charge pour initialement, c'est «&nbsp;Obligatoire&nbsp;» qui est montré avec une croix et une bordure rouge. Lorsqu'on saisit un âge valide (ici dans l'intervalle `12-120`), le champ devient valide. En revanche, si on change l'âge pour saisir une valeur en dehors de l'intervalle, le message «&nbsp;En dehors de l'intervalle autorisé&nbsp;» apparaît en lieu et place de «&nbsp;Obligatoire&nbsp;».
 
@@ -491,7 +491,7 @@ Firefox ne prenait en charge ces pseudo-classes qu'avec un préfixe jusqu'à Fir
 
 ## État des cases à cocher et boutons radio&nbsp;: coché, par défaut, indéterminé
 
-Nous l'avons vu dans les articles précédents de ce module, les [boutons radio](/fr/docs/Web/HTML/Element/input/radio) et les [cases à cocher](/fr/docs/Web/HTML/Element/input/checkbox) peuvent être cochés ou décochés. Il existe aussi d'autres états à prendre en compte&nbsp;:
+Nous l'avons vu dans les articles précédents de ce module, les [boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) et les [cases à cocher](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) peuvent être cochés ou décochés. Il existe aussi d'autres états à prendre en compte&nbsp;:
 
 - [`:default`](/fr/docs/Web/CSS/:default)
   - : Qui permet de cibler les boutons radio et cases à cocher qui sont sélectionnés par défaut lors du chargement de la page (grâce à la présence de l'attribut `checked`). Ils continuent d'être ciblés par la pseudo-classe [`:default`](/fr/docs/Web/CSS/:default), même si la personne les désélectionne.
@@ -502,7 +502,7 @@ Nous l'avons vu dans les articles précédents de ce module, les [boutons radio]
 
 Lorsqu'un contrôle est coché/sélectionné, la pseudo-classe [`:checked`](/fr/docs/Web/CSS/:checked) s'appliquera.
 
-L'usage le plus fréquent de cette pseudo-classe consiste à appliquer un style différent lorsque la case à cocher/le bouton radio est coché si l'apparence native a été retirée avec `appearance: none;` et qu'on souhaite construire une mise en forme complète sur mesure. Nous avons de tels exemples dans l'article précédent lorsque nous avons abordé [l'utilisation de `appearance: none` sur les boutons radio et cases à cocher](/fr/docs/Learn/Forms/Advanced_form_styling#mettre_en_forme_les_cases_à_cocher_et_les_boutons_radio).
+L'usage le plus fréquent de cette pseudo-classe consiste à appliquer un style différent lorsque la case à cocher/le bouton radio est coché si l'apparence native a été retirée avec `appearance: none;` et qu'on souhaite construire une mise en forme complète sur mesure. Nous avons de tels exemples dans l'article précédent lorsque nous avons abordé [l'utilisation de `appearance: none` sur les boutons radio et cases à cocher](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#mettre_en_forme_les_cases_à_cocher_et_les_boutons_radio).
 
 En résumé, le code utilisant `:checked`, tiré de notre exemple sur [les boutons radio mis en forme](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) ressemble à&nbsp;:
 
@@ -538,9 +538,9 @@ Comme mentionné auparavant, la pseudo-classe [`:default`](/fr/docs/Web/CSS/:def
 
 Les boutons radio et les cases à cocher seront également ciblés par la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) lorsqu'ils ne sont ni cochés ni décochés. Mais qu'est-ce que ça signifie&nbsp;? Les éléments dans un état indéterminé incluent&nbsp;:
 
-- Les éléments [`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio) lorsque l'ensemble des boutons radio d'un même groupe sont décochés
-- Les éléments [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox) pour lesquels la propriété `indeterminate` est passée à `true` avec du code JavaScript
-- Les éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress) qui n'ont pas de valeur.
+- Les éléments [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) lorsque l'ensemble des boutons radio d'un même groupe sont décochés
+- Les éléments [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) pour lesquels la propriété `indeterminate` est passée à `true` avec du code JavaScript
+- Les éléments [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress) qui n'ont pas de valeur.
 
 Ce n'est pas un état qu'on rencontre souvent et on peut s'en servir pour indiquer qu'il est nécessaire de sélectionner une option avec un bouton de radio avant de pouvoir poursuivre.
 
@@ -611,7 +611,7 @@ Voici le résultat correspondant&nbsp;:
 > L'exemple est également disponible sur GitHub [sur une page séparée `radios-checked-indeterminate.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) ([voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)).
 
 > [!NOTE]
-> Vous pouvez trouver [d'autres exemples avec l'état `indeterminate`](/fr/docs/Web/HTML/Element/input/checkbox#g%c3%a9rer_un_%c3%a9tat_ind%c3%a9termin%c3%a9) sur la page de référence pour [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox).
+> Vous pouvez trouver [d'autres exemples avec l'état `indeterminate`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox#g%c3%a9rer_un_%c3%a9tat_ind%c3%a9termin%c3%a9) sur la page de référence pour [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox).
 
 ## D'autres pseudo-classes
 
@@ -621,11 +621,11 @@ Ces pseudo-classes sont correctement prises en charge par les navigateurs modern
 
 - La pseudo-classe [`:focus-within`](/fr/docs/Web/CSS/:focus-within) s'applique à un élément qui a le focus ou qui _contient_ un élément qui a reçu le focus. Elle est utile si on veut mettre en avant un champ d'un formulaire qui a le focus.
 - La pseudo-classe [`:focus-visible`](/fr/docs/Web/CSS/:focus-visible) permet de cibler les éléments avec le focus qui ont reçu ce focus avec des interactions au clavier (plutôt qu'à la souris ou au doigt). Elle est utile si on veut distinguer visuellement le focus obtenu au clavier du focus obtenu autrement.
-- La pseudo-classe [`:placeholder-shown`](/fr/docs/Web/CSS/:placeholder-shown) permet de cibler les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) pour lesquels les textes indicatifs (<i lang="en">placeholders</i>) s'affichent parce que la valeur de ces éléments est vide.
+- La pseudo-classe [`:placeholder-shown`](/fr/docs/Web/CSS/:placeholder-shown) permet de cibler les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) pour lesquels les textes indicatifs (<i lang="en">placeholders</i>) s'affichent parce que la valeur de ces éléments est vide.
 
 Les pseudo-classes qui suivent sont aussi intéressantes, mais leur prise en charge n'est pas aussi homogène&nbsp;:
 
-- La pseudo-classe [`:blank`](/fr/docs/Web/CSS/:blank) qui permet de sélectionner les contrôles de formulaire vides. [`:empty`](/fr/docs/Web/CSS/:empty) cible également les éléments qui n'ont pas d'enfant, comme [`<input>`](/fr/docs/Web/HTML/Element/input), et de façon plus générale les autres éléments vides comme [`<br>`](/fr/docs/Web/HTML/Element/br) et [`<hr>`](/fr/docs/Web/HTML/Element/hr). `:empty` est plutôt bien prise en charge, mais la spécification de `:blank` n'est pas encore finie et elle n'est donc pas encore prise en charge.
+- La pseudo-classe [`:blank`](/fr/docs/Web/CSS/:blank) qui permet de sélectionner les contrôles de formulaire vides. [`:empty`](/fr/docs/Web/CSS/:empty) cible également les éléments qui n'ont pas d'enfant, comme [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), et de façon plus générale les autres éléments vides comme [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br) et [`<hr>`](/fr/docs/Web/HTML/Reference/Elements/hr). `:empty` est plutôt bien prise en charge, mais la spécification de `:blank` n'est pas encore finie et elle n'est donc pas encore prise en charge.
 - La pseudo-classe [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo), lorsqu'elle sera prise en charge, agira de façon semblable à [`:invalid`](/fr/docs/Web/CSS/:invalid), mais avec une meilleure ergonomie. Si la valeur est valide lorsque le champ reçoit le focus, l'élément pourra être ciblé avec `:invalid` lorsque la personne saisit des données et que la valeur est temporairement invalide&nbsp;; il ne sera ciblé par `:user-invalid` qu'après que l'élément a perdu le focus (si son contenu est toujours invalide). Si la valeur était initialement invalide, l'élément sera ciblé par `:invalid` et par `:user-invalid` pour toute la durée du focus. De façon analogue à `:invalid`, il ne sera plus ciblé par `:user-invalid` dès lors que la valeur deviendra valide.
 
 ## Testez vos compétences&nbsp;!
@@ -634,6 +634,6 @@ Vous avez atteint la fin de cet article, mais avez-vous retenu les informations 
 
 ## Résumé
 
-Et voilà la fin de ce tour des pseudo-classes relatives à l'interface utilisateur. N'hésitez pas à les utiliser et à créer des mises en forme amusantes avec&nbsp;! Nous allons voir ensuite un sujet différent&nbsp;: [la validation des formulaires côté client](/fr/docs/Learn/Forms/Form_validation).
+Et voilà la fin de ce tour des pseudo-classes relatives à l'interface utilisateur. N'hésitez pas à les utiliser et à créer des mises en forme amusantes avec&nbsp;! Nous allons voir ensuite un sujet différent&nbsp;: [la validation des formulaires côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 {{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}

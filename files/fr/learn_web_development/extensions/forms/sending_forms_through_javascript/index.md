@@ -12,7 +12,7 @@ Les formulaires HTML peuvent envoyer des requêtes [HTTP](/fr/docs/Web/HTTP) de 
 
 ## Un formulaire parfois détourné
 
-Avec les applications progressives et/ou basées sur un <i lang="en">framework</i>, il est fréquent d'utiliser [les formulaires HTML](/fr/docs/Learn/Forms) afin d'envoyer des données sans charger un nouveau document lorsque les données de la réponse sont reçues. Voyons d'abord pourquoi une nouvelle approche est nécessaire.
+Avec les applications progressives et/ou basées sur un <i lang="en">framework</i>, il est fréquent d'utiliser [les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) afin d'envoyer des données sans charger un nouveau document lorsque les données de la réponse sont reçues. Voyons d'abord pourquoi une nouvelle approche est nécessaire.
 
 ### Maîtriser l'interface générale
 
@@ -20,7 +20,7 @@ Lorsqu'on utilise un envoi de formulaire HTML standard, comme décrit dans l'art
 
 Une interface utilisateur moderne utilisera généralement des formulaires HTML pour récupérer des données saisies par la personne, pas nécessairement pour les envoyer. Lorsque la personne soumet le formulaire, l'application prend le contrôle et transmet les données en arrière-plan, de façon asynchrone, mettant uniquement à jour les éléments de l'interface qui le nécessitent.
 
-L'envoi de données arbitraires de façon asynchrone est généralement désigné par l'acronyme [AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), qui signifie **<i lang="en">Asynchronous JavaScript And XML</i>** en anglais (qu'on pourrait traduire par «&nbsp;JavaScript et XML asynchrones&nbsp;»).
+L'envoi de données arbitraires de façon asynchrone est généralement désigné par l'acronyme [AJAX](/fr/docs/Learn_web_development/Core/Scripting/Network_requests), qui signifie **<i lang="en">Asynchronous JavaScript And XML</i>** en anglais (qu'on pourrait traduire par «&nbsp;JavaScript et XML asynchrones&nbsp;»).
 
 ### En quoi est-ce différent&nbsp;?
 
@@ -112,7 +112,7 @@ btn.addEventListener("click", () => {
 {{EmbedLiveSample("", "100%", 50)}}
 
 > [!NOTE]
-> Cette utilisation de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est sujette aux [règles de même origine (<i lang="en">same-origin policy</i>)](/fr/docs/Glossary/Same-origin_policy). Si vous souhaitez effectuer des requêtes entre différentes origines, vous devrez paramétrer [le contrôle d'accès CORS](/fr/docs/Web/HTTP/CORS).
+> Cette utilisation de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est sujette aux [règles de même origine (<i lang="en">same-origin policy</i>)](/fr/docs/Glossary/Same-origin_policy). Si vous souhaitez effectuer des requêtes entre différentes origines, vous devrez paramétrer [le contrôle d'accès CORS](/fr/docs/Web/HTTP/Guides/CORS).
 
 ### Utiliser `XMLHttpRequest` et `FormData`
 
@@ -175,7 +175,7 @@ btn.addEventListener("click", () => {
 
 #### Utiliser un objet `FormData` couplé à un élément `<form>`
 
-Il est aussi possible de rattacher un objet `FormData` à un élément [`<form>`](/fr/docs/Web/HTML/Element/form). On obtient ainsi un objet `FormData` qui représente les données contenues dans le formulaire.
+Il est aussi possible de rattacher un objet `FormData` à un élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form). On obtient ainsi un objet `FormData` qui représente les données contenues dans le formulaire.
 
 ##### HTML
 
@@ -417,20 +417,20 @@ Selon le navigateur et le type de données que vous avez à gérer, envoyer les 
 
 ### Parcours d'apprentissage
 
-- [Un premier formulaire HTML](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les contrôles de formulaire natifs](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Les champs de saisie HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
-- [Les autres contrôles de formulaire](/fr/docs/Learn/Forms/Other_form_controls)
-- [Les pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Mettre en forme les formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
-- [La validation des données d'un formulaire](/fr/docs/Learn/Forms/Form_validation)
-- [Envoyer les données d'un formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Un premier formulaire HTML](/fr/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [Comment structurer un formulaire HTML](/fr/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [Les contrôles de formulaire natifs](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [Les champs de saisie HTML5](/fr/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
+- [Les autres contrôles de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
+- [Les pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
+- [Mettre en forme les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [La validation des données d'un formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Envoyer les données d'un formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
 
 ### Sujets avancés
 
 - **Envoyer des formulaires avec JavaScript**
-- [Construire des contrôles de formulaire spécifiques](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Les formulaires HTML dans les navigateurs historiques](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Tableau de compatibilité des propriétés pour les contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Construire des contrôles de formulaire spécifiques](/fr/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [Les formulaires HTML dans les navigateurs historiques](/fr/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
+- [Tableau de compatibilité des propriétés pour les contrôles de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)

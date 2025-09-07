@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/for...in
 
 {{jsSidebar("Statements")}}
 
-L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions).
+L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions).
 
 {{InteractiveExample("JavaScript Demo: Statement - For...In")}}
 
@@ -111,7 +111,7 @@ for (var prop in obj) {
 
 - {{jsxref("Instructions/for...of","for...of")}} : une instruction semblable qui permet d'itérer sur les valeurs des propriétés
 - {{jsxref("Instructions/for","for")}}
-- [Le rattachement et le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Le rattachement et le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Array.prototype.forEach()")}}

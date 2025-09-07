@@ -74,7 +74,7 @@ La fonction **`url()`** peut être incluse comme valeur pour les propriétés [`
       Si vous choisissez d'écrire l'URL sans guillemets, il faudra utiliser une barre oblique inverse (`\`) avant toute parenthèse, espace ou apostrophe (`'`) ou guillemets (`"`) faisant partie de l'URL.
 
     - `chemin`
-      - : La référence à un identifiant d'une [forme SVG](/fr/docs/Web/SVG/Tutorial/Basic_Shapes), `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, ou `rect`. Ce sera alors la géométrie de la forme qui sera utilisée pour le chemin.
+      - : La référence à un identifiant d'une [forme SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes), `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, ou `rect`. Ce sera alors la géométrie de la forme qui sera utilisée pour le chemin.
 
 - `url-modifier` {{Experimental_Inline}}
   - : À l'avenir, la fonction `url()` pourrait prendre en charge un modificateur tel qu'un identifiant ou une notation fonctionnelle qui modifierait le sens de l'URL. Cette valeur n'est pas complètement définie par la spécification et n'est pas prise en charge.

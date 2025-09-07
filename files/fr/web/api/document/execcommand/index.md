@@ -5,7 +5,7 @@ slug: Web/API/Document/execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-Lorsqu'un document HTML passe en [`designMode`](/fr/docs/Web/API/Document/designMode), l'objet `document` correspondant expose une méthode **`execCommand()`** permettant d'exécuter des commandes manipulant la région éditable courante tels que [les champs de formulaire](/fr/docs/Web/HTML/Element/input) ou les éléments [`contentEditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+Lorsqu'un document HTML passe en [`designMode`](/fr/docs/Web/API/Document/designMode), l'objet `document` correspondant expose une méthode **`execCommand()`** permettant d'exécuter des commandes manipulant la région éditable courante tels que [les champs de formulaire](/fr/docs/Web/HTML/Reference/Elements/input) ou les éléments [`contentEditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 La plupart des commandes affectent la [sélection](/fr/docs/Web/API/Selection) du document (mise en gras, italique, etc.), tandis que
 d'autres insèrent de nouveaux éléments (un lien) ou modifient toute une ligne (indentation). Lorsqu'on
@@ -61,7 +61,7 @@ prise en charge ou si elle est désactivée.
 - `decreaseFontSize`
   - : Ajoute une balise {{HTMLElement("small")}} autour de la sélection ou au point d'insertion. (Non pris en charge par Internet Explorer.)
 - `defaultParagraphSeparator`
-  - : Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont créés dans les zones de texte éditables. Voir [Différences dans la génération du balisage](/fr/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) pour plus de détails.
+  - : Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont créés dans les zones de texte éditables. Voir [Différences dans la génération du balisage](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) pour plus de détails.
 - `delete`
   - : Supprimer la sélection courante.
 - `enableAbsolutePositionEditor`
@@ -97,11 +97,11 @@ prise en charge ou si elle est désactivée.
 - `insertImage`
   - : Insère une image au point d'insertion en supprimant la sélection. L'argument doit être une chaîne de caractères indiquant l'URL à utiliser pour l'attribut `src` de l'image. Les prérequis de cette valeur sont les mêmes que pour `createLink`.
 - `insertOrderedList`
-  - : Crée une [liste numérotée ordonnée](/fr/docs/Web/HTML/Element/ol) pour la sélection ou à partir du point d'insertion.
+  - : Crée une [liste numérotée ordonnée](/fr/docs/Web/HTML/Reference/Elements/ol) pour la sélection ou à partir du point d'insertion.
 - `insertUnorderedList`
-  - : Crée une [liste non-ordonnée](/fr/docs/Web/HTML/Element/ul) pour la sélection ou à partir du point d'insertion.
+  - : Crée une [liste non-ordonnée](/fr/docs/Web/HTML/Reference/Elements/ul) pour la sélection ou à partir du point d'insertion.
 - `insertParagraph`
-  - : Insère un [paragraphe](/fr/docs/Web/HTML/Element/p) autour de la sélection pour la ligne courante. (Internet Explorer insère un paragraphe au point d'insertion et supprime la sélection.)
+  - : Insère un [paragraphe](/fr/docs/Web/HTML/Reference/Elements/p) autour de la sélection pour la ligne courante. (Internet Explorer insère un paragraphe au point d'insertion et supprime la sélection.)
 - `insertText`
   - : Insère le texte indiqué au point d'insertion (quitte à supprimer l'éventuelle sélection courante).
 - `italic`
@@ -127,15 +127,15 @@ prise en charge ou si elle est désactivée.
 - `strikeThrough`
   - : Active ou désactive la rayure de la sélection ou à partir d'un point d'insertion.
 - `subscript`
-  - : Active ou désactive [la mise en indice](/fr/docs/Web/HTML/Element/sub) pour la sélection ou au point d'insertion
+  - : Active ou désactive [la mise en indice](/fr/docs/Web/HTML/Reference/Elements/sub) pour la sélection ou au point d'insertion
 - `superscript`
-  - : Active ou désactive [la mise en exposant](/fr/docs/Web/HTML/Element/sup) pour la sélection ou au point d'insertion
+  - : Active ou désactive [la mise en exposant](/fr/docs/Web/HTML/Reference/Elements/sup) pour la sélection ou au point d'insertion
 - `underline`
-  - : Active ou désactive [le soulignement](/fr/docs/Web/HTML/Element/u) pour la sélection ou au point d'insertion.
+  - : Active ou désactive [le soulignement](/fr/docs/Web/HTML/Reference/Elements/u) pour la sélection ou au point d'insertion.
 - `undo`
   - : Annule la dernière commande exécutée.
 - `unlink`
-  - : Retire l'[ancre](/fr/docs/Web/HTML/Element/a) de l'hyperlien sélectionné.
+  - : Retire l'[ancre](/fr/docs/Web/HTML/Reference/Elements/a) de l'hyperlien sélectionné.
 - `useCSS` {{Deprecated_inline}}
   - : Active/désactive l'utilisation de balises HTML ou de CSS pour le balisage généré. La valeur de l'argument doit être un booléen. Note : cet argument possède une logique inversée (`false` permet d'utiliser CSS et `true` permet d'utiliser HTML). Cette valeur n'est pas prise en charge par Internet Explorer et a été dépréciée en faveur de `styleWithCSS`.
 - `styleWithCSS`

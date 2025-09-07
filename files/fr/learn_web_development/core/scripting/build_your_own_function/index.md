@@ -52,7 +52,7 @@ La fonction [alert()](/fr/docs/Web/API/Window/alert) est assez limitée&nbsp;: v
 Pour commencer, mettons en place une fonction de base.
 
 > [!NOTE]
-> Pour les conventions de nommage des fonctions, vous devez suivre les mêmes règles que les [conventions de noms de variables](/fr/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules). Ce qui est bien, c'est que vous pouvez les différencier — les noms de fonctions se terminent par des parenthèses, pas les variables.
+> Pour les conventions de nommage des fonctions, vous devez suivre les mêmes règles que les [conventions de noms de variables](/fr/docs/Learn_web_development/Core/Scripting/Variables#an_aside_on_variable_naming_rules). Ce qui est bien, c'est que vous pouvez les différencier — les noms de fonctions se terminent par des parenthèses, pas les variables.
 
 1. Commencez par faire une copie locale du fichier [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html). Vous pourrez voir que le code HTML est simple — l'élément body ne contient qu'un seul bouton. Nous avons également ajouté quelques règles CSS de base pour styliser la boîte de message personnalisée, et un élément {{htmlelement("script")}} pour écrire notre code JavaScript.
 2. Ensuite, ajoutez le code ci-dessous à l'intérieur de l'élément `<script>`&nbsp;:

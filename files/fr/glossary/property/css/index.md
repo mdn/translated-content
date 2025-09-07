@@ -27,7 +27,7 @@ div {
 
 ### Culture générale
 
-- [Apprendre CSS](/fr/docs/Learn/CSS)
+- [Apprendre CSS](/fr/docs/Learn_web_development/Core/Styling_basics)
 
 ### Références techniques
 

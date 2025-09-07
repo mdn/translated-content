@@ -147,7 +147,7 @@ console.log(y); // "global2"
 
 ### Émuler le fonctionnement des interfaces privées
 
-En utilisant l'instruction `let` avec [des constructeurs](/fr/docs/Glossary/Constructor), on peut créer des _interfaces privées_ sans avoir à utiliser [de fermetures](/fr/docs/Web/JavaScript/Closures) :
+En utilisant l'instruction `let` avec [des constructeurs](/fr/docs/Glossary/Constructor), on peut créer des _interfaces privées_ sans avoir à utiliser [de fermetures](/fr/docs/Web/JavaScript/Guide/Closures) :
 
 ```js
 var Truc;

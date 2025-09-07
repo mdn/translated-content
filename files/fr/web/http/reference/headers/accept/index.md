@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Accept
 original_slug: Web/HTTP/Headers/Accept
 ---
 
-Le paramètre d'entête de requête HTTP **`Accept`** indique quels sont les types de contenu, exprimés sous la forme de types MIME, que le client sera capable d'interpréter. Par le biais de la résolution de contenu -([content negotiation](/fr/docs/Web/HTTP/Content_negotiation)), le serveur sélectionne ensuite une proposition parmi toutes, l'utilise et informe le client de son choix avec l'entête de réponse {{HTTPHeader("Content-Type")}}. Les navigateurs fixent des valeurs adéquates pour cet entête selon le contexte où la requête a été exécutée : selon que l'utilisateur souhaite récupérer une feuille de style css, ou qu'il souhaite récupérer une image, une vidéo ou un script, la valeur fixée pour la requête ne sera pas la même.
+Le paramètre d'entête de requête HTTP **`Accept`** indique quels sont les types de contenu, exprimés sous la forme de types MIME, que le client sera capable d'interpréter. Par le biais de la résolution de contenu -([content negotiation](/fr/docs/Web/HTTP/Guides/Content_negotiation)), le serveur sélectionne ensuite une proposition parmi toutes, l'utilise et informe le client de son choix avec l'entête de réponse {{HTTPHeader("Content-Type")}}. Les navigateurs fixent des valeurs adéquates pour cet entête selon le contexte où la requête a été exécutée : selon que l'utilisateur souhaite récupérer une feuille de style css, ou qu'il souhaite récupérer une image, une vidéo ou un script, la valeur fixée pour la requête ne sera pas la même.
 
 <table class="properties">
   <tbody>
@@ -39,7 +39,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 ## Directives
 
 - `<MIME_type>/<MIME_subtype>`
-  - : Un type MIME unique et déterminé [MIME type](/fr/docs/Web/HTTP/MIME_types), comme par exemple `text/html`.
+  - : Un type MIME unique et déterminé [MIME type](/fr/docs/Web/HTTP/Guides/MIME_types), comme par exemple `text/html`.
 - `<MIME_type>/*`
   - : un type MIME type ne comprenant pas de sous-type. `image/*` prendra en charge `image/png`, `image/svg`, `image/gif` et tous autres types d'image.
 - `*/*`
@@ -67,6 +67,6 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
 ## Voir aussi
 
-- HTTP [content negotiation](/fr/docs/Web/HTTP/Content_negotiation)
+- HTTP [content negotiation](/fr/docs/Web/HTTP/Guides/Content_negotiation)
 - Entête avec le résultat de la résolution de contenu : {{HTTPHeader("Content-Type")}}
 - Autres entêtes similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}

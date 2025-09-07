@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/autofocus
 
 {{HTMLSidebar("Global_attributes")}}
 
-[L'attribut global](/fr/docs/Web/HTML/Global_attributes) **`autofocus`** est un attribut booléen indiquant qu'un élément devrait recevoir le focus au chargement de la page ou lorsque l'élément {{HTMLElement("dialog")}} dont il fait éventuellement partie est affiché.
+[L'attribut global](/fr/docs/Web/HTML/Reference/Global_attributes) **`autofocus`** est un attribut booléen indiquant qu'un élément devrait recevoir le focus au chargement de la page ou lorsque l'élément {{HTMLElement("dialog")}} dont il fait éventuellement partie est affiché.
 
 ```html
 <input name="q" autofocus />
@@ -15,7 +15,7 @@ original_slug: Web/HTML/Global_attributes/autofocus
 L'attribut `autofocus` ne devrait pas être placé sur plus d'un élément au sein du document. S'il est placé sur plusieurs éléments, c'est le premier qui recevra le focus.
 
 > [!NOTE]
-> L'attribut `autofocus` s'applique à tous les éléments, et pas seulement aux contrôles de formulaires. Par exemple, il peut être utilisé sur une zone [contenteditable](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+> L'attribut `autofocus` s'applique à tous les éléments, et pas seulement aux contrôles de formulaires. Par exemple, il peut être utilisé sur une zone [contenteditable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 ## Remarques sur l'accessibilité de la fonctionnalité
 

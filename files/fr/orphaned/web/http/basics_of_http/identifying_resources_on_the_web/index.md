@@ -51,7 +51,7 @@ Ces deux URNs correspondent :
 
 | Schéma      | Description                                                         |
 | ----------- | ------------------------------------------------------------------- |
-| data        | [URIs de données](/fr/docs/Web/URI/Schemes/data)       |
+| data        | [URIs de données](/fr/docs/Web/URI/Reference/Schemes/data)       |
 | file        | Fichiers du système hôte sur lequel est installé le navigateur      |
 | ftp         | [File Transfer Protocol](/fr/docs/Glossary/FTP)                     |
 | http/https  | [Hyper text transfer protocol (sécurisé)](/fr/docs/Glossary/HTTP)   |
@@ -107,5 +107,5 @@ urn:isbn:9780141036144
 
 ## Voir aussi
 
-- [Qu'est-ce qu'une URL ?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Qu'est-ce qu'une URL ?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [La liste des différents schémas des URIs, maintenue par l'IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

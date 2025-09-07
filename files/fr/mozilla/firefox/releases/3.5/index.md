@@ -11,8 +11,8 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 
 #### HTML5
 
-- [Utilisation d'audio et vidéo dans Firefox](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - : Firefox 3.5 ajoute la gestion des éléments HTML5 [`audio`](/fr/docs/Web/HTML/Element/audio) et [`video`](/fr/docs/Web/HTML/Element/video).
+- [Utilisation d'audio et vidéo dans Firefox](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+  - : Firefox 3.5 ajoute la gestion des éléments HTML5 [`audio`](/fr/docs/Web/HTML/Reference/Elements/audio) et [`video`](/fr/docs/Web/HTML/Reference/Elements/video).
 - [Ressources hors ligne dans Firefox](/fr/Ressources_hors_ligne_dans_Firefox)
   - : Firefox 3.5 gère entièrement la spécification de ressources hors ligne d'HTML5.
 - [Glisser et déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
@@ -133,7 +133,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 
 - [Correction de couleurs ICC dans Firefox](/fr/Correction_de_couleurs_ICC_dans_Firefox)
   - : Firefox 3.5 gère à présent la correction de couleurs ICC pour les images balisées.
-- L'attribut `defer` est géré sur les éléments [`script`](/fr/docs/Web/HTML/Element/script)
+- L'attribut `defer` est géré sur les éléments [`script`](/fr/docs/Web/HTML/Reference/Elements/script)
   - : Cet attribut indique au navigateur qu'il _peut_ décider de continuer d'analyser et d'afficher la page sans attendre que le script ait terminé son exécution.
 
 ### Autres améliorations
@@ -148,7 +148,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 - Dans un contexte non-chrome, les objets catchés dans les exceptions sont à présent les objets rejetés tels quels plutôt qu'une enveloppe [XPConnect](/fr/XPConnect) contenant ces objets.
 - Les références ID dans SVG sont à présent directes.
 - Les filtres SVG fonctionnent à présent avec `foreignObject`.
-- La méthode `GetSVGDocument()` a été ajoutée aux éléments [`object`](/fr/docs/HTML/Element/object) et [`iframe`](/fr/docs/Web/HTML/Element/iframe) pour assurer une meilleure compatibilité.
+- La méthode `GetSVGDocument()` a été ajoutée aux éléments [`object`](/fr/docs/HTML/Element/object) et [`iframe`](/fr/docs/Web/HTML/Reference/Elements/iframe) pour assurer une meilleure compatibilité.
 - La définition implicite de propriétés dans des initialiseurs d'objets et de tableaux n'exécute plus les mutateurs en JavaScript.
 - La variable `gDownloadLastDir.path` a été renommée en `gDownloadLastDir.file` étant donné qu'elle fait référence à un objet `nsIFile` et non à un chemin.
 - La variable `gDownloadLastDirPath` a été renommée en `gDownloadLastDirFile` étant donné qu'elle fait référence à un objet `nsIFile` et non à un chemin.

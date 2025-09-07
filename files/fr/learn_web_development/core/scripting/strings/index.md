@@ -35,7 +35,7 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
 
 ## Chaînes de caractères — les bases
 
-À première vue, les chaînes se traitent de la même manière que les nombres&nbsp;; mais si vous approfondissez la chose, vous commencerez à percevoir des différences notables. Entrons sur la console quelques lignes simples pour nous familiariser avec la chose. À propos de la console, nous en avons placé une ci‑dessous (ou utiliser [l'explorateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)&nbsp;; comme vous préférez).
+À première vue, les chaînes se traitent de la même manière que les nombres&nbsp;; mais si vous approfondissez la chose, vous commencerez à percevoir des différences notables. Entrons sur la console quelques lignes simples pour nous familiariser avec la chose. À propos de la console, nous en avons placé une ci‑dessous (ou utiliser [l'explorateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)&nbsp;; comme vous préférez).
 
 ```html hidden
 <!doctype html>

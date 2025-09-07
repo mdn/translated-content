@@ -57,7 +57,7 @@ Cette catégorie comprend les personnes aveugles, malvoyantes, daltoniennes, etc
 - D'autres, comme [NVDA](http://www.nvaccess.org/) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome, Windows et Mac OS X), et [Orca](https://wiki.gnome.org/Projects/Orca) (Linux) sont gratuits.
 - Certains sont intégrés au système d'exploitation, comme [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) (Mac OS X et iOS), [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows), [ChromeVox](http://www.chromevox.com/) (sur ChromeOS), et [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
-Il est conseillé de se familiariser avec les lecteurs d'écran ; vous devriez installer un lecteur d'écran et expérimenter avec pour comprendre comment il marche. Lisez notre [Guide pour tester les lecteurs d'écrans sur différents navigateurs (en)](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) pour avoir plus d'information sur leur utilisation. La vidéo ci-dessous (en anglais) vous donne un bref aperçu de l'experience.
+Il est conseillé de se familiariser avec les lecteurs d'écran ; vous devriez installer un lecteur d'écran et expérimenter avec pour comprendre comment il marche. Lisez notre [Guide pour tester les lecteurs d'écrans sur différents navigateurs (en)](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#screenreaders) pour avoir plus d'information sur leur utilisation. La vidéo ci-dessous (en anglais) vous donne un bref aperçu de l'experience.
 
 {{EmbedYouTube("IK97XMibEws")}}
 
@@ -77,7 +77,7 @@ Ces personnes ont un handicap ayant rapport au mouvement, qui peuvent comprendre
 
 Ce genre de handicap peut aussi venir avec l'âge, et non d'un accident ou d'une pathologie particulière, ou encore être la conséquence de limitations matérielles — certains utilisateurs peuvent ne pas avoir de souris.
 
-En général, cela se traduit au niveau du développement web par la nécessité de rendre les contrôles accessible au clavier — nous discuterons de l'accessibilité au clavier plus tard dans d'autres articles du module, mais cela peut être une bonne idée d'essayer de naviguer sur certains sites en utilisant seulement le clavier. Par exemple, pouvez vous naviguer entre les différents champs d'un formulaire juste avec la touche <kbd>Tab</kbd> ? Vous trouverez plus de détails à propos de l'utilisation du clavier dans la section [Test d'accessibilité avec le clavier intégré entre différents navigateurs(en)](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility).
+En général, cela se traduit au niveau du développement web par la nécessité de rendre les contrôles accessible au clavier — nous discuterons de l'accessibilité au clavier plus tard dans d'autres articles du module, mais cela peut être une bonne idée d'essayer de naviguer sur certains sites en utilisant seulement le clavier. Par exemple, pouvez vous naviguer entre les différents champs d'un formulaire juste avec la touche <kbd>Tab</kbd> ? Vous trouverez plus de détails à propos de l'utilisation du clavier dans la section [Test d'accessibilité avec le clavier intégré entre différents navigateurs(en)](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#using_native_keyboard_accessibility).
 
 De nombreuses personnes souffrent de troubles de la mobilité. Par exemple, en France, 4% des personnes vivant en ménage ordinaire déclarent avoir des difficultés à se servir des mains et doigts, d'après la vue d'ensemble [L'approche du handicap par les limitations fonctionnelles et la restriction globale d'activité chez les adultes de 20 à 59 ans](https://www.insee.fr/fr/statistiques/1372411?sommaire=1372421) de l'INSEE.
 
@@ -114,7 +114,7 @@ Un mythe commun en matière d'accessibilité est que l'accessibilité est un "su
 
 Cependant, si vous envisagez l'accessibilité dès le début d'un projet, le coût de la plupart des contenus accessibles devrait être assez minime.
 
-Lors de la planification de votre projet, tenez compte des tests d'accessibilité dans votre programme de tests, comme pour tout autre segment d'audience cible important (par exemple, les navigateurs de bureau ou mobiles cibles). Testez tôt et souvent, en exécutant idéalement des tests automatisés pour détecter les fonctionnalités manquantes détectables par programme (telles que les images manquantes [alternative text](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives) ou le texte du lien incorrect — voir [Element relationships and context](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#element_relationships_and_context)), et en effectuant des tests avec des groupes d'utilisateurs désactivés pour voir comment. des fonctionnalités de site plus complexes fonctionnent pour eux, par exemple:
+Lors de la planification de votre projet, tenez compte des tests d'accessibilité dans votre programme de tests, comme pour tout autre segment d'audience cible important (par exemple, les navigateurs de bureau ou mobiles cibles). Testez tôt et souvent, en exécutant idéalement des tests automatisés pour détecter les fonctionnalités manquantes détectables par programme (telles que les images manquantes [alternative text](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#text_alternatives) ou le texte du lien incorrect — voir [Element relationships and context](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#element_relationships_and_context)), et en effectuant des tests avec des groupes d'utilisateurs désactivés pour voir comment. des fonctionnalités de site plus complexes fonctionnent pour eux, par exemple:
 
 - Mon widget de sélecteur de date est-il utilisable par les personnes utilisant des lecteurs d'écran ?
 - Si le contenu est mis à jour de manière dynamique, les personnes malvoyantes le savent-elles ?
@@ -129,7 +129,7 @@ D'autre part, si vous travaillez sur un site web de galerie présentant des œuv
 Pour montrer que vous vous souciez de l'accessibilité et que vous en avez pensé, publiez sur votre site une déclaration d'accessibilité détaillant votre politique en matière d'accessibilité et les mesures que vous avez prises pour rendre le site accessible. Si quelqu'un se plaint de ce que votre site a un problème d'accessibilité, commencez un dialogue avec elle, faites preuve d'empathie et prenez les mesures qui s'imposent pour tenter de résoudre le problème.
 
 > [!NOTE]
-> Notre article [Gérer les problèmes courants d'accessibilité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility) couvre les spécificités d'accessibilité qui doivent être testées plus en détail.
+> Notre article [Gérer les problèmes courants d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#using_native_keyboard_accessibility) couvre les spécificités d'accessibilité qui doivent être testées plus en détail.
 
 Résumer :
 
@@ -160,7 +160,7 @@ Différents systèmes d'exploitation ont différentes API d'accessibilité dispo
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-Lorsque les informations sémantiques natives fournies par les éléments HTML dans vos applications Web tombent, vous pouvez les compléter avec des fonctionnalités de la [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), qui ajoutent des informations sémantiques à l'arbre d'accessibilité pour améliorer l'accessibilité. Vous pouvez en apprendre beaucoup plus sur WAI-ARIA dans notre article sur les bases de [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
+Lorsque les informations sémantiques natives fournies par les éléments HTML dans vos applications Web tombent, vous pouvez les compléter avec des fonctionnalités de la [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), qui ajoutent des informations sémantiques à l'arbre d'accessibilité pour améliorer l'accessibilité. Vous pouvez en apprendre beaucoup plus sur WAI-ARIA dans notre article sur les bases de [WAI-ARIA basics](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics).
 
 ## Résumé
 

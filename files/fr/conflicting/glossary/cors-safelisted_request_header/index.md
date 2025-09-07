@@ -6,7 +6,7 @@ original_slug: Glossary/Simple_header
 
 {{GlossarySidebar}}
 
-Un _en-tête simple_ (ou en-tête de requête sécurisé CORS) est l'un des [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) suivants :
+Un _en-tête simple_ (ou en-tête de requête sécurisé CORS) est l'un des [en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) suivants :
 
 - {{HTTPHeader("Accept")}},
 - {{HTTPHeader("Accept-Language")}},
@@ -25,7 +25,7 @@ Lorsqu'elles ne contiennent que de simples en-têtes, les requêtes sont réput�
 
 ## Voir aussi
 
-- [En-têtes HTTP](/fr/docs/Web/HTTP/Headers)
+- [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
 - {{Glossary("Simple response header","En-tête de réponse simple")}}
 - {{Glossary("Forbidden header name","Nom d'en-tête interdit")}}
 - {{Glossary("Request header","En-tête de requête")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-timeline`** définit un nom qui peut être utilisé pour identifier l'élément source d'une chronologie de défilement, ainsi que l'axe de défilement qui fournit la chronologie.
+La [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-timeline`** définit un nom qui peut être utilisé pour identifier l'élément source d'une chronologie de défilement, ainsi que l'axe de défilement qui fournit la chronologie.
 
 Le nom ainsi déclaré peut être utilisé dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline) afin d'indiquer l'élément (et donc la barre de défilement) utilisé pour contrôler l'avancement de l'animation. On notera que si l'élément n'affiche pas de barre de défilement dans l'axe indiqué, aucune chronologie ne sera créée.
 

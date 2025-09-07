@@ -109,11 +109,11 @@ b {
 
 ## Voir aussi
 
-- [L'empilement sans z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Règles d'empilement par défaut
-- [Ajouter z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index) : Utiliser z-index pour modifier l'empilement par défaut
-- [L'empilement de couches](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) : Remarques sur l'empilement de couches
-- [Exemple d'empilement n°1](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : Hiérarchie HTML à 2 niveaux, z-index sur le dernier niveau
-- [Exemple d'empilement n°2](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : Hiérarchie HTML à 2 niveaux, z-index sur tous les éléments
-- [Exemple d'empilement n°3](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3) : Hiérarchie HTML à 3 niveaux, z-index sur le deuxième niveau
+- [L'empilement sans z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : Règles d'empilement par défaut
+- [Ajouter z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : Utiliser z-index pour modifier l'empilement par défaut
+- [L'empilement de couches](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context) : Remarques sur l'empilement de couches
+- [Exemple d'empilement n°1](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : Hiérarchie HTML à 2 niveaux, z-index sur le dernier niveau
+- [Exemple d'empilement n°2](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2) : Hiérarchie HTML à 2 niveaux, z-index sur tous les éléments
+- [Exemple d'empilement n°3](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3) : Hiérarchie HTML à 3 niveaux, z-index sur le deuxième niveau
 
 {{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}

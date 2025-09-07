@@ -33,7 +33,7 @@ Cet article est une sorte de boîte à malices : elle introduit certaines des fo
 
 ## Ombres des boîtes
 
-Revenons au module [Styling text](/fr/docs/Learn/CSS/Styling_text) — nous y avons vu la propriété {{cssxref("text-shadow")}} : elle permet d'appliquer une ou plusieurs ombres portées au texte d'un élément. Il existe une propriété équivalente pour les boîtes — {{cssxref("box-shadow")}} : elle applique une ou plusieurs ombres portées à une boîte d'élément réelle. Tout comme les ombres de texte, les ombres de boîtes sont bien prises en charge par les navigateurs, mais seulement au-delà de IE9. Les utilisateurs des anciennes versions d'IE pourraient être confrontés à l'absence d'ombres ; donc, testez simplement vos designs pour être sûr que le contenu reste lisible sans ombrage.
+Revenons au module [Styling text](/fr/docs/Learn_web_development/Core/Text_styling) — nous y avons vu la propriété {{cssxref("text-shadow")}} : elle permet d'appliquer une ou plusieurs ombres portées au texte d'un élément. Il existe une propriété équivalente pour les boîtes — {{cssxref("box-shadow")}} : elle applique une ou plusieurs ombres portées à une boîte d'élément réelle. Tout comme les ombres de texte, les ombres de boîtes sont bien prises en charge par les navigateurs, mais seulement au-delà de IE9. Les utilisateurs des anciennes versions d'IE pourraient être confrontés à l'absence d'ombres ; donc, testez simplement vos designs pour être sûr que le contenu reste lisible sans ombrage.
 
 Vous trouverez les exemples de cet article dans le fichier [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html) également).
 
@@ -344,7 +344,7 @@ Nous obtenons le résultat suivant :
 Vous voyez ici que `mix-blend-mode: multiply;` a mélangé non seulement les deux images d'arrière plan, mais également la couleur du `<div>` situé dessous.
 
 > [!NOTE]
-> Ne vous inquiétez pas si vous ne saisissez pas certaines propriétés de mise en page telles que {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. Nous en reparlerons en détail dans le module [CSS Layout](/fr/docs/Learn/CSS/CSS_layout).
+> Ne vous inquiétez pas si vous ne saisissez pas certaines propriétés de mise en page telles que {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. Nous en reparlerons en détail dans le module [CSS Layout](/fr/docs/Learn_web_development/Core/CSS_layout).
 
 ## -webkit-background-clip: text
 

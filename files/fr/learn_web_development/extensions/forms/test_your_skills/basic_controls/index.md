@@ -6,7 +6,7 @@ original_slug: Learn/Forms/Test_your_skills:_Basic_controls
 
 {{LearnSidebar}}
 
-Le but de cette évaluation est de vérifier que vous avez compris [l'article sur les contrôles de formulaire natifs de base](/fr/docs/Learn/Forms/Basic_native_form_controls).
+Le but de cette évaluation est de vérifier que vous avez compris [l'article sur les contrôles de formulaire natifs de base](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls).
 
 > [!NOTE]
 > Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.

@@ -115,5 +115,5 @@ var bObjProto = new Boolean({});
 ## Voir aussi
 
 - [Booléen](/fr/docs/Glossary/Boolean)
-- [Valeurs primitives booléennes](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives)
+- [Valeurs primitives booléennes](/fr/docs/Web/JavaScript/Guide/Data_structures#les_valeurs_primitives)
 - [Le type de données booléen sur Wikipédia](https://fr.wikipedia.org/wiki/Booléen)

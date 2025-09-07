@@ -94,4 +94,4 @@ Les guides qui suivent vous permettront de comprendre les concepts fondamentaux 
 ## Voir aussi
 
 - [La gestion des performances sur le Web](/fr/docs/Web/Performance)
-- [Apprendre&nbsp;: les performances sur le Web](/fr/docs/Learn/Performance)
+- [Apprendre&nbsp;: les performances sur le Web](/fr/docs/Learn_web_development/Extensions/Performance)

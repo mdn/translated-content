@@ -260,7 +260,7 @@ function draw(img) {
 
 ## Sauvegarde des images
 
-L' {{domxref ("HTMLCanvasElement")}} fournit une méthode `toDataURL ()`, utile lors de l'enregistrement d'images. Il retourne un [URI de données](/fr/docs/Web/URI/Schemes/data) contenant une représentation de l'image dans le format spécifié par le paramètre de `type` (par défaut en [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) ). L'image renvoyée est dans une résolution de 96 dpi.
+L' {{domxref ("HTMLCanvasElement")}} fournit une méthode `toDataURL ()`, utile lors de l'enregistrement d'images. Il retourne un [URI de données](/fr/docs/Web/URI/Reference/Schemes/data) contenant une représentation de l'image dans le format spécifié par le paramètre de `type` (par défaut en [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) ). L'image renvoyée est dans une résolution de 96 dpi.
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : Par défaut. Crée un image PNG.

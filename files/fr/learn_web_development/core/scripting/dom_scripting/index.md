@@ -33,7 +33,7 @@ Malgré ces limitations, les API web nous donnent accès à beaucoup de fonction
 
 ![](document-window-navigator.png)
 
-- La _fenêtre_ est l'onglet du navigateur dans lequel une page web est chargée. Elle est représentée en JavaScript par l'objet [`Window`](/fr/docs/Web/API/Window). Utiliser les méthodes disponibles sur cet objet nous permet par exemple de récupérer la taille de la fenêtre (voir [`Window.innerWidth`](/fr/docs/Web/API/Window/innerWidth) et [`Window.innerHeight`](/fr/docs/Web/API/Window/innerHeight)), manipuler le document chargé dans cette fenêtre, stocker des données spécifiques à ce document côté client (par exemple en utilisant une base de données locale ou autre mécanisme de stockage), attacher un [gestionnaire d'évènement](/fr/docs/Learn/JavaScript/Building_blocks/Events) à la fenêtre en cours, et plus encore.
+- La _fenêtre_ est l'onglet du navigateur dans lequel une page web est chargée. Elle est représentée en JavaScript par l'objet [`Window`](/fr/docs/Web/API/Window). Utiliser les méthodes disponibles sur cet objet nous permet par exemple de récupérer la taille de la fenêtre (voir [`Window.innerWidth`](/fr/docs/Web/API/Window/innerWidth) et [`Window.innerHeight`](/fr/docs/Web/API/Window/innerHeight)), manipuler le document chargé dans cette fenêtre, stocker des données spécifiques à ce document côté client (par exemple en utilisant une base de données locale ou autre mécanisme de stockage), attacher un [gestionnaire d'évènement](/fr/docs/Learn_web_development/Core/Scripting/Events) à la fenêtre en cours, et plus encore.
 - Le _navigateur_ représente l'état et l'identité du navigateur web (la chaîne de caractères décrivant l'agent utilisant par exemple) tel qu'il existe sur le Web. En JavaScript, il est représenté par l'objet [`Navigator`](/fr/docs/Web/API/Navigator). Vous pouvez utiliser cet objet pour récupérer des informations telles que la géolocalisation, les préférences de langue, un flux vidéo en provenance de la webcam, etc.
 - Le _document_ (accédé par le DOM dans les navigateurs) est la page actuellement chargée dans la fenêtre. Il est représenté en JavaScript par l'objet [`Document`](/fr/docs/Web/API/Document). Vous pouvez utiliser cet objet pour retourner et manipuler les éléments HTML et CSS qui composent le document. Par exemple&nbsp;: récupérer un élément dans le DOM, changer son texte, appliquer de nouveaux styles dessus, créer de nouveaux éléments et les ajouter à un élément comme enfant, ou même en supprimer.
 
@@ -43,7 +43,7 @@ Dans cet article, nous allons principalement nous concentrer sur la manipulation
 
 Le document chargé dans chaque onglet de votre navigateur, et donc son contenu, est accessible via un modèle objet du document — <i lang="en">Document Objet Model</i> en anglais, ou DOM. Il s'agit d'une structure arborescente créée par le navigateur et qui permet aux langages de programmation d'accéder facilement à la structure HTML — par exemple, le navigateur lui-même l'utilise pour appliquer différents styles aux éléments correspondants sur la page, tandis qu'un développeur comme vous et moi peut l'utiliser pour manipuler le DOM avec du JavaScript après que la page ait été chargée.
 
-Nous avons créé une simple page d'exemple, [`dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) ([voir en direct](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)). Essayez de l'ouvrir dans votre navigateur — c'est une page très simple qui contient un élément [`<section>`](/fr/docs/Web/HTML/Element/section), à l'intérieur duquel se trouve une image et un paragraphe avec un lien. Le code source HTML ressemble à ça&nbsp;:
+Nous avons créé une simple page d'exemple, [`dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) ([voir en direct](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)). Essayez de l'ouvrir dans votre navigateur — c'est une page très simple qui contient un élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), à l'intérieur duquel se trouve une image et un paragraphe avec un lien. Le code source HTML ressemble à ça&nbsp;:
 
 ```html
 <!doctype html>
@@ -106,7 +106,7 @@ Pour commencer l'apprentissage de la manipulation du DOM, commençons par un exe
    const link = document.querySelector("a");
    ```
 
-4. Maintenant que nous avons la référence à l'élément enregistrée dans une variable, nous pouvons commencer à le manipuler en utilisant les propriétés et les méthodes qui lui sont associées (celles-ci sont définies sur les interfaces telles que [`HTMLAnchorElement`](/fr/docs/Web/API/HTMLAnchorElement) dans le cas d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a), et sur les interfaces plus génériques [`HTMLElement`](/fr/docs/Web/API/HTMLElement), et [`Node`](/fr/docs/Web/API/Node) — qui représente tous les nœuds d'un DOM). Tout d'abord, changeons le texte du lien en mettant à jour la valeur de la propriété [`Node.textContent`](/fr/docs/Web/API/Node/textContent). Ajoutez la ligne suivante à la suite de la précédente&nbsp;:
+4. Maintenant que nous avons la référence à l'élément enregistrée dans une variable, nous pouvons commencer à le manipuler en utilisant les propriétés et les méthodes qui lui sont associées (celles-ci sont définies sur les interfaces telles que [`HTMLAnchorElement`](/fr/docs/Web/API/HTMLAnchorElement) dans le cas d'un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a), et sur les interfaces plus génériques [`HTMLElement`](/fr/docs/Web/API/HTMLElement), et [`Node`](/fr/docs/Web/API/Node) — qui représente tous les nœuds d'un DOM). Tout d'abord, changeons le texte du lien en mettant à jour la valeur de la propriété [`Node.textContent`](/fr/docs/Web/API/Node/textContent). Ajoutez la ligne suivante à la suite de la précédente&nbsp;:
 
    ```js
    link.textContent = "Mozilla Developer Network";
@@ -118,7 +118,7 @@ Pour commencer l'apprentissage de la manipulation du DOM, commençons par un exe
    link.href = "https://developer.mozilla.org";
    ```
 
-Notez que, comme souvent en JavaScript, il y a plusieurs façons de sélectionner et d'enregistrer une référence à un élément dans une variable. [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) est l'approche moderne recommandée — elle est pratique puisqu'elle permet de sélectionner des éléments en utilisant les sélecteurs CSS. L'appel à `querySelector()` que nous avons utilisé plus tôt récupère le premier élément [`<a>`](/fr/docs/Web/HTML/Element/a) qui apparaît dans le document. Si vous souhaitez au contraire récupérer plusieurs éléments, vous pouvez utiliser [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll), qui récupère tous les éléments du document correspondant au sélecteur, et retourne des références vers ces éléments dans un objet similaire à un [tableau](/fr/docs/Learn/JavaScript/First_steps/Arrays) appelé un [`NodeList`](/fr/docs/Web/API/NodeList).
+Notez que, comme souvent en JavaScript, il y a plusieurs façons de sélectionner et d'enregistrer une référence à un élément dans une variable. [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) est l'approche moderne recommandée — elle est pratique puisqu'elle permet de sélectionner des éléments en utilisant les sélecteurs CSS. L'appel à `querySelector()` que nous avons utilisé plus tôt récupère le premier élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) qui apparaît dans le document. Si vous souhaitez au contraire récupérer plusieurs éléments, vous pouvez utiliser [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll), qui récupère tous les éléments du document correspondant au sélecteur, et retourne des références vers ces éléments dans un objet similaire à un [tableau](/fr/docs/Learn_web_development/Core/Scripting/Arrays) appelé un [`NodeList`](/fr/docs/Web/API/NodeList).
 
 Il existe des méthodes plus anciennes pour récupérer des références aux éléments, telles que&nbsp;:
 
@@ -131,7 +131,7 @@ Ces deux dernières méthodes fonctionnent mieux dans les navigateurs plus ancie
 
 Ce qui précède vous a donné un petit avant-goût de ce que vous pouvez faire, mais allons plus loin et regardons comment créer de nouveaux éléments.
 
-1. Pour revenir à notre exemple, commençons par récupérer une référence à notre élément [`<section>`](/fr/docs/Web/HTML/Element/section) — ajoutez le code suivant au bas de votre script existant (idem avec les lignes qui suivront)&nbsp;:
+1. Pour revenir à notre exemple, commençons par récupérer une référence à notre élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) — ajoutez le code suivant au bas de votre script existant (idem avec les lignes qui suivront)&nbsp;:
 
    ```js
    const sect = document.querySelector("section");
@@ -232,7 +232,7 @@ La première d'entre elles consiste à ajouter des styles en ligne (<i lang="en"
 Il y a un autre moyen de manipuler dynamiquement des styles sur votre document, que nous allons étudier maintenant.
 
 1. Supprimez les cinq lignes précédentes que nous avons ajoutées à notre code JavaScript.
-2. Ajoutez ce qui suit au sein de la balise [`<head>`](/fr/docs/Web/HTML/Element/head) de votre HTML&nbsp;:
+2. Ajoutez ce qui suit au sein de la balise [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) de votre HTML&nbsp;:
 
    ```html
    <style>
@@ -277,12 +277,12 @@ La démo terminée doit ressembler à ça&nbsp;:
 
 Pour compléter l'exercice, suivez les étapes ci-dessous, et assurez-vous que votre exemple se comporte comme décrit ci-dessus.
 
-1. Tout d'abord, téléchargez une copie du fichier [`shopping-list.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html). Vous verrez qu'il contient un peu de CSS, une liste avec un titre, un champ, un bouton, une liste vide et un élément [`<script>`](/fr/docs/Web/HTML/Element/script). Vous apporterez toutes vos modifications à l'intérieur du script.
-2. Créez trois variables, contenant des références aux éléments de liste [`<ul>`](/fr/docs/Web/HTML/Element/ul), de champ [`<input>`](/fr/docs/Web/HTML/Element/input) et de bouton [`<button>`](/fr/docs/Web/HTML/Element/button).
-3. Créez une [fonction](/fr/docs/Learn/JavaScript/Building_blocks/Functions) qui sera déclenchée lorsqu'on clique sur le bouton.
+1. Tout d'abord, téléchargez une copie du fichier [`shopping-list.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html). Vous verrez qu'il contient un peu de CSS, une liste avec un titre, un champ, un bouton, une liste vide et un élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script). Vous apporterez toutes vos modifications à l'intérieur du script.
+2. Créez trois variables, contenant des références aux éléments de liste [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul), de champ [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et de bouton [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
+3. Créez une [fonction](/fr/docs/Learn_web_development/Core/Scripting/Functions) qui sera déclenchée lorsqu'on clique sur le bouton.
 4. À l'intérieur du corps de la fonction, commencez par stocker la [valeur actuelle](/fr/docs/Web/API/HTMLInputElement#propriétés) (propriété `value`) du champ dans une variable.
 5. Ensuite, videz le champ en définissant sa valeur comme une chaîne vide — `''`.
-6. Créez trois nouveaux éléments&nbsp;: un élément de liste [`<li>`](/fr/docs/Web/HTML/Element/li), un [`<span>`](/fr/docs/Web/HTML/Element/span) et un bouton [`<button>`](/fr/docs/Web/HTML/Element/button), et stockez-les chacun dans des variables.
+6. Créez trois nouveaux éléments&nbsp;: un élément de liste [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li), un [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) et un bouton [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), et stockez-les chacun dans des variables.
 7. Attachez le `<span>` et le `<button>` comme enfants de `<li>`.
 8. Définissez le contenu texte du `<span>` comme égal à la valeur du champ que vous avez récupéré précédemment, et le contenu du bouton à «&nbsp;Supprimer&nbsp;».
 9. Attachez l'article `<li>` comme enfant de la liste.

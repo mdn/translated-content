@@ -9,7 +9,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer
 Tous les navigateurs web modernes possèdent un ensemble d'outils de développement. Ces outils permettent de réaliser différentes actions&nbsp;: inspecter le code HTML, CSS ou JavaScript chargé à la volée dans la page, montrer les fichiers téléchargés et leur temps de chargement, etc. Dans cet article, nous verrons comment utiliser les fonctionnalités basiques des outils de développements d'un navigateur (aussi souvent appelés par l'anglicisme «&nbsp;<i lang="en">devtools</i>&nbsp;»).
 
 > [!NOTE]
-> Avant de poursuivre avec les exemples présentés ci-après, nous vous conseillons d'utiliser [l'exemple construit](https://mdn.github.io/beginner-html-site-scripted/) dans la série d'articles [Commencer avec le Web](/fr/docs/Learn/Getting_started_with_the_web) et d'ouvrir le site dans votre navigateur pour poursuivre avec les étapes suivantes.
+> Avant de poursuivre avec les exemples présentés ci-après, nous vous conseillons d'utiliser [l'exemple construit](https://mdn.github.io/beginner-html-site-scripted/) dans la série d'articles [Commencer avec le Web](/fr/docs/Learn_web_development/Getting_started/Your_first_website) et d'ouvrir le site dans votre navigateur pour poursuivre avec les étapes suivantes.
 
 ## Comment ouvrir les outils de développement d'un navigateur
 
@@ -222,5 +222,5 @@ Pour en apprendre plus sur la console JavaScript présente dans les différents 
 
 ## Voir aussi
 
-- [Déboguer du HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Déboguer du CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [Déboguer du HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
+- [Déboguer du CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)

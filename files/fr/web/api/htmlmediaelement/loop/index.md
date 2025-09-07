@@ -5,7 +5,7 @@ slug: Web/API/HTMLMediaElement/loop
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLMediaElement.loop`** reflète dans le DOM [l'attribut HTML `loop`](/fr/docs/Web/HTML/Element/video#attr-loop), qui contrôle si la lecture de l'élément multimédia doit recommencer une fois la fin du média atteinte.
+La propriété **`HTMLMediaElement.loop`** reflète dans le DOM [l'attribut HTML `loop`](/fr/docs/Web/HTML/Reference/Elements/video#attr-loop), qui contrôle si la lecture de l'élément multimédia doit recommencer une fois la fin du média atteinte.
 
 ## Syntaxe
 

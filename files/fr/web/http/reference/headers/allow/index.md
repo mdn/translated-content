@@ -30,7 +30,7 @@ Allow: <methodes-http>
 ## Directives
 
 - \<methodes-http>
-  - : La liste des [méthodes de requête HTTP](/fr/docs/Web/HTTP/Methods) autorisées, séparées par des virgules.
+  - : La liste des [méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods) autorisées, séparées par des virgules.
 
 ## Exemples
 

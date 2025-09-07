@@ -56,7 +56,7 @@ Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une
 - `stroke-box`
   - : La partie qui est peinte est rognée sur la boîte contenant le contour.
 - `view-box`
-  - : C'est le <i lang="en">viewport</i> du plus proche SVG qui est utilisé comme boîte de référence. Si l'attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée le <i lang="en">viewport</i>, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîte sont basées sur la hauteur et la largeur de l'attribut `viewBox`.
+  - : C'est le <i lang="en">viewport</i> du plus proche SVG qui est utilisé comme boîte de référence. Si l'attribut [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) est défini pour l'élément qui crée le <i lang="en">viewport</i>, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîte sont basées sur la hauteur et la largeur de l'attribut `viewBox`.
 - `no-clip`
   - : La partie qui est peinte n'est pas rognée.
 - `border` {{non-standard_inline}}

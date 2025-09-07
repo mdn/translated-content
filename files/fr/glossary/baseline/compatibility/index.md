@@ -27,7 +27,7 @@ Une fonctionnalité <i lang="en">Baseline</i>, comme une API, un ensemble de pro
 
 ## Voir aussi
 
-- [Tester sur plusieurs navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [Tester sur plusieurs navigateurs](/fr/docs/conflicting/Learn_web_development/Extensions/Testing)
 - [Le dépôt GitHub web-platform-dx/web-features](https://github.com/web-platform-dx/web-features)
 - [Le groupe communautaire W3C WebDX](https://www.w3.org/community/webdx/)
 - [Le dépôt GitHub mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)

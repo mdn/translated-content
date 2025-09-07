@@ -32,7 +32,7 @@ Les scripts de contenu ne peuvent accéder qu'à [un sous-ensemble des API WebEx
 > - sync.services.mozilla.com
 > - testpilot.firefox.com
 >
-> If you try to inject a content script into a page in these domains, it will fail and the page will log a [CSP](/fr/docs/Web/HTTP/CSP) error.
+> If you try to inject a content script into a page in these domains, it will fail and the page will log a [CSP](/fr/docs/Web/HTTP/Guides/CSP) error.
 >
 > Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) to move users away from addons.mozilla.org.
 
@@ -176,7 +176,7 @@ Les scripts de contenu peuvent effectuer des requêtes en utilisant les API clas
 
 Les scripts de contenu obtiennent les mêmes privilèges interdomaines que le reste de l'extension : si l'extension a demandé un accès interdomaine pour un domaine à l'aide de la clé [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) dans le fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ses scripts de contenu auront également accès à ce domaine.
 
-Ceci est accompli en exposant des instances XHR et _fetch_ privilégiées dans le script de contenu. Cela a pour effet secondaire de ne pas définir les en-têtes [`Origin`](/fr/docs/Web/HTTP/Headers/Origin) et [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) tels que la page elle-même l'aurait fait. Cela est souvent préférable afin d'éviter que la requête révèle la différence d'origine. À partir de Firefox 58, les extensions qui doivent exécuter des requêtes se comportant comme si elles étaient envoyées par le contenu lui-même peuvent utiliser `content.XMLHttpRequest` et `content.fetch()`. Pour les extensions visant une compatibilité entre les navigateurs, il est nécessaire de vérifier la présence de ces API avant de les utiliser.
+Ceci est accompli en exposant des instances XHR et _fetch_ privilégiées dans le script de contenu. Cela a pour effet secondaire de ne pas définir les en-têtes [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin) et [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) tels que la page elle-même l'aurait fait. Cela est souvent préférable afin d'éviter que la requête révèle la différence d'origine. À partir de Firefox 58, les extensions qui doivent exécuter des requêtes se comportant comme si elles étaient envoyées par le contenu lui-même peuvent utiliser `content.XMLHttpRequest` et `content.fetch()`. Pour les extensions visant une compatibilité entre les navigateurs, il est nécessaire de vérifier la présence de ces API avant de les utiliser.
 
 ## Communication avec les scripts d'arrière-plan
 
