@@ -1,15 +1,13 @@
 ---
-title: オプショナルチェーン (?.)
+title: オプショナルチェーン演算子 (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 l10n:
-  sourceCommit: 8cb0caef8175e1772f13ef7bc761f9616e2c5a4b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+**オプショナルチェーン演算子 (`?.`)** (optional chaining) は、オブジェクトのプロパティにアクセスしたり、関数を呼び出したりします。この演算子を使用してアクセスするオブジェクトまたは呼び出される関数が {{jsxref("undefined")}} または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合、エラーが発生することなく、式が途中で終了し、{{jsxref("undefined")}} と評価されます。
 
-**オプショナルチェーン (`?.`)** (optional chaining) 演算子は、オブジェクトのプロパティにアクセスしたり、関数を呼び出したりします。この演算子を使用してアクセスするオブジェクトまたは呼び出される関数が {{jsxref("undefined")}} または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合、エラーが発生することなく、式が途中で終了し、{{jsxref("undefined")}} と評価されます。
-
-{{InteractiveExample("JavaScript デモ: Expressions - Optional chaining operator", "taller")}}
+{{InteractiveExample("JavaScript デモ: オプショナルチェーン演算子 (?.)", "taller")}}
 
 ```js interactive-example
 const adventurer = {
@@ -21,23 +19,23 @@ const adventurer = {
 
 const dogName = adventurer.dog?.name;
 console.log(dogName);
-// Expected output: undefined
+// 予想される結果: undefined
 
 console.log(adventurer.someNonExistentMethod?.());
-// Expected output: undefined
+// 予想される結果: undefined
 ```
 
 ## 構文
 
 ```js-nolint
-obj.val?.prop
-obj.val?.[expr]
-obj.func?.(args)
+obj?.prop
+obj?.[expr]
+func?.(args)
 ```
 
 ## 解説
 
-`?.` 演算子の機能は `.` チェーン演算子と似ていますが、参照が [nullish](/ja/docs/Glossary/Nullish) ([`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}}) の場合にエラーとなるのではなく、式が短絡され `undefined` が返されるところが異なります。関数呼び出しで使用すると、与えられた関数が存在しない場合、 `undefined` を返します。
+`?.` 演算子の機能は `.` チェーン演算子と似ていますが、参照が[ヌル値](/ja/docs/Glossary/Nullish)（[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}}）の場合にエラーとなるのではなく、式が短絡され `undefined` が返されるところが異なります。関数呼び出しで使用すると、与えられた関数が存在しない場合、 `undefined` を返します。
 
 これは、参照が失われた可能性のある連結されたプロパティにアクセスする時、結果的に短く単純な式になります。また、必要なプロパティの存在が保証されていない場合にオブジェクトのコンテンツを探索するのにも役立ちます。
 
@@ -49,7 +47,7 @@ const nestedProp = obj.first && obj.first.second;
 
 `obj.first` の値が `null` ではない（そして `undefined` でもない）ことが確認された後で、`obj.first.second` の値にアクセスします。これにより、`obj.first` をテストせずに直接 `obj.first.second` にアクセスした場合に発生するエラーを防ぐことができます。
 
-これは JavaScript でよく使われるパターンですが、チェーンが長くなると冗長になり、安全ではありません。例えば、`obj.first` が{{Glossary("Falsy", "偽")}}値で、`null` や `undefined` ではない値（例えば `0`）であった場合、それでも短絡となり、`nestedProp` が `0` になります。これは望ましくないかもしれません。
+これは JavaScript でよく使われるパターンですが、チェーンが長くなると冗長になり、安全ではありません。例えば、`obj.first` が{{Glossary("Falsy", "偽値")}}で、`null` や `undefined` ではない値（例えば `0`）であった場合、それでも短絡となり、`nestedProp` が `0` になります。これは望ましくないかもしれません。
 
 しかし、オプショナルチェーン演算子 (`?.`) を使えば、`obj.first.second` にアクセスしようとする前に `obj.first` の状態を明示的にテストする必要がなくなります。
 
@@ -96,7 +94,8 @@ const result = someInterface.customMethod?.();
 [ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)を使用して式のプロパティにアクセスする際にも、オプショナルチェーン演算子を使用することができます。
 
 ```js
-const nestedProp = obj?.["prop" + "Name"];
+const propName = "x";
+const nestedProp = obj?.[propName];
 ```
 
 これは配列の添字でアクセスする際に角括弧を使用する必要があるため、配列に対して特に有益な機能です。
@@ -119,7 +118,7 @@ const object = {};
 object?.property = 1; // SyntaxError: Invalid left-hand side in assignment
 ```
 
-[テンプレートリテラルタグ](/ja/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)はオプショナルチェーンにはできません（[SyntaxError: tagged template cannot be used with optional chain](/ja/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)を参照）。
+[テンプレートリテラルタグ](/ja/docs/Web/JavaScript/Reference/Template_literals#タグ付きテンプレート)はオプショナルチェーンにはできません（[SyntaxError: tagged template cannot be used with optional chain](/ja/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)を参照）。
 
 ```js-nolint example-bad
 String?.raw`Hello, world!`;
@@ -185,18 +184,18 @@ const prop = temp.b;
 
 ### 基本的な例
 
-次の例では、マップに存在しない `bar` メンバの `name` プロパティを取得しようとしています。したがって、結果は `undefined` になります。
+次の例では、マップに存在しない `CSS` メンバーの `name` プロパティを取得しようとしています。したがって、結果は `undefined` になります。
 
 ```js
 const myMap = new Map();
-myMap.set("foo", { name: "baz", desc: "inga" });
+myMap.set("JS", { name: "Josh", desc: "I maintain things" });
 
-const nameBar = myMap.get("bar")?.name;
+const nameBar = myMap.get("CSS")?.name;
 ```
 
 ### オプションのコールバックやイベントハンドラーの扱い
 
-コールバックやオブジェクトからフェッチメソッドを[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#オブジェクトの構造分解)で使用する場合、存在しない値を持つことができるため、その存在をテストしない限り、その値を関数として呼び出すことはできません。`?.` を使用すると、この余分なテストを避けることができます。
+コールバックやオブジェクトからのフェッチメソッドを[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#オブジェクトの構造分解)パターンで使用する場合、存在しない値を持つ可能性があるため、その存在を検査しない限り、その値を関数として呼び出すことはできません。`?.` を使用すると、この余分な検査を避けることができます。
 
 ```js
 // オプショナルチェーンなしで書かれたコード
@@ -237,13 +236,13 @@ const customer = {
 };
 const customerCity = customer.details?.address?.city;
 
-// … これはオプショナルチェーンの関数呼び出しでも動作します
+// これはオプショナルチェーンの関数呼び出しでも動作します
 const customerName = customer.name?.getName?.(); // メソッドが存在しないので、 customerName は undefined
 ```
 
-### Null 合体演算子と共に使う
+### ヌル値合体演算子と共に使う
 
-[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)をオプショナルチェーンの後につけることで、値が存在しなかったときの既定値を指定することができます。
+[ヌル値合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)をオプショナルチェーンの後につけることで、値が存在しなかったときの既定値を指定することができます。
 
 ```js
 function printCustomerCity(customer) {
@@ -271,4 +270,4 @@ printCustomerCity({
 
 ## 関連情報
 
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [ヌル値合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
