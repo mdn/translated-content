@@ -11,7 +11,7 @@ l10n:
 
 ## 描述
 
-此 API 提供的关键时刻是{{Glossary("Largest Contentful Paint", "最大内容绘制（LCP）")}}指标。它提供视口内可见的最大图像或文本块的渲染时间，从页面首次开始加载时记录。在确定 LCP 时，会考虑以下元素：
+此 API 提供的关键时刻是{{Glossary("Largest Contentful Paint", "最大内容绘制（LCP）")}}指标。它提供视口内可见的最大图像或文本块的渲染时间（从页面首次开始加载时开始记录）。在确定 LCP 时，会考虑以下元素：
 
 - {{HTMLElement("img")}} 元素。
 - SVG 内的 [`<image>`](/zh-CN/docs/Web/SVG/Reference/Element/image) 元素。
