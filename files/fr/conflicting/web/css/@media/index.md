@@ -1,6 +1,7 @@
 ---
 title: aural
-slug: Web/CSS/@media/aural
+slug: conflicting/Web/CSS/@media
+original_slug: Web/CSS/@media/aural
 ---
 
 {{CSSRef}}{{deprecated_header}}

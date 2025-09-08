@@ -1,7 +1,7 @@
 ---
 title: Compréhension des fondements des CSS
-slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
-original_slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
+slug: conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9
+original_slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
