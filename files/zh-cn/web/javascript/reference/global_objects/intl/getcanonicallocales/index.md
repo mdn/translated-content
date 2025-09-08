@@ -2,7 +2,7 @@
 title: Intl.getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 l10n:
-  sourceCommit: 939067a53bb5bb3787f2d536b83df2252d4e838e
+  sourceCommit: 6356aa3911fe6cf953e0b04c3b285fe95e4b5355
 ---
 
 **`Intl.getCanonicalLocales()`** 静态方法返回一个包含规范的区域设置名称的数组。重复的元素将会被去除，每一个元素都会被验证为格式有效的语言标签。
@@ -46,7 +46,7 @@ Intl.getCanonicalLocales("EN-US"); // ["en-US"]
 Intl.getCanonicalLocales(["EN-US", "Fr"]); // ["en-US", "fr"]
 
 Intl.getCanonicalLocales("EN_US");
-// RangeError:'EN_US' is not a structurally valid language tag
+// RangeError: invalid language tag: "EN_US"
 ```
 
 ## 规范
