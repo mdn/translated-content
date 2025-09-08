@@ -66,7 +66,7 @@ l10n:
 
 この場合、たとえ `<output>` が暗黙的に、そして明示的に `calcForm` に関連付けられたとしても、 `calcForm` が送信される際に `result` は `a` や `b` につけて送信されません。ただし、 `result` はフォームの `HTMLFormControlsCollection` の一部です。
 
-```html
+```html-nolint
 <form id="calcForm">
   <label>1 つ目の数値: <input id="a" value="2" type="number" /></label>
   <label>2 つ目の数値: <input id="b" value="3" type="number" /></label>
