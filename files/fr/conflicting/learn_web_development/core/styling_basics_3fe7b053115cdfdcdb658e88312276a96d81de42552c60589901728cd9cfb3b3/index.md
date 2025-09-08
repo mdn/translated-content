@@ -1,7 +1,7 @@
 ---
 title: Une boîte d'aspect rafraîchissant
-slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
-original_slug: Learn/CSS/Building_blocks/A_cool_looking_box
+slug: conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3
+original_slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}

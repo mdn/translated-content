@@ -1,7 +1,7 @@
 ---
 title: "Évaluation : page d'accueil Mozilla"
-slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
-original_slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
+slug: Learn_web_development/Core/Structuring_content/Splash_page
+original_slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
