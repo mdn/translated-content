@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-**`isHistoryNavigation`** は {{domxref("Request")}} インターフェイスの。読み取り専用プロパティで、このリクエストが履歴ナビゲーションであるかどうかを示す論理値です。
+**`isHistoryNavigation`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストが履歴ナビゲーションであるかどうかを示す論理値です。
 
 履歴ナビゲーションは、ブラウザーの履歴の中の移動であり、 {{domxref("History.go()")}}、{{domxref("History.back()")}}、{{domxref("History.forward()")}}、{{domxref("Navigation.traverseTo()")}}、{{domxref("Navigation.back()")}}、{{domxref("Navigation.forward()")}} を呼び出したり、ブラウザーの前ページ、次ページへのナビゲーションボタンをクリックしたりして行うものです。
 
@@ -22,29 +22,28 @@ l10n:
 
 ```js
 self.addEventListener("request", (event) => {
-  // ...
+  // …
 
   if (event.request.isHistoryNavigation) {
     event.respondWith(
       caches.match(event.request).then((response) => {
         if (response !== undefined) {
           return response;
-        } else {
-          return fetch(event.request).then((response) => {
-            let responseClone = response.clone();
-
-            caches.open("v1").then((cache) => {
-              cache.put(event.request, responseClone);
-            });
-
-            return response;
-          });
         }
+        return fetch(event.request).then((response) => {
+          const responseClone = response.clone();
+
+          caches
+            .open("v1")
+            .then((cache) => cache.put(event.request, responseClone));
+
+          return response;
+        });
       }),
     );
   }
 
-  // ...
+  // …
 });
 ```
 
