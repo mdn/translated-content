@@ -131,7 +131,7 @@ Vous pouvez automatiser la création de l'arbre DOM en utilisant un algorithme i
 
 ### Et après ?
 
-Les arbres DOM peuvent être interrogés en utilisant des [expressions XPath](/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript), convertis en chaîne de caractères ou écris dans un fichier local ou distant en utilisant [XMLSerializer](/fr/docs/Web/XML/Parsing_and_serializing_XML) (sans avoir à le convertir en chaîne de caractères auparavant), [envoyés à un serveur Web](/fr/docs/Web/API/XMLHttpRequest) (via XMLHttpRequest), transformés en utilisant [XSLT](/fr/docs/Web/XSLT), [XLink](/fr/docs/Glossary/XLink), convertis en un objet JavaScript à travers un [algorithme JXON](/fr/docs/Archive/JXON), etc.
+Les arbres DOM peuvent être interrogés en utilisant des [expressions XPath](/fr/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript), convertis en chaîne de caractères ou écris dans un fichier local ou distant en utilisant [XMLSerializer](/fr/docs/Web/XML/Parsing_and_serializing_XML) (sans avoir à le convertir en chaîne de caractères auparavant), [envoyés à un serveur Web](/fr/docs/Web/API/XMLHttpRequest) (via XMLHttpRequest), transformés en utilisant [XSLT](/fr/docs/Web/XML/XSLT), [XLink](/fr/docs/Glossary/XLink), convertis en un objet JavaScript à travers un [algorithme JXON](/fr/docs/Archive/JXON), etc.
 
 Vous pouvez utiliser des arbres DOM pour modéliser des données qui ne peuvent pas être traitées avec RDF (ou si vous n'aimez pas RDF). Un autre champ d'action est que, comme XUL est du XML, l'UI de votre application peut être manipulée dynamiquement, téléchargée, enregistrée, chargée, convertie ou transformée relativement facilement.
 
@@ -139,7 +139,7 @@ Vous pouvez utiliser des arbres DOM pour modéliser des données qui ne peuvent 
 
 - [XML](/fr/docs/Glossary/XML)
 - [JXON](/fr/docs/Archive/JXON)
-- [XPath](/fr/docs/Web/XPath)
+- [XPath](/fr/docs/Web/XML/XPath)
 - [E4X (ECMAScript for XML)](/fr/docs/E4X)
 - [Parsing and serializing XML](/fr/docs/Web/XML/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest)

@@ -277,7 +277,7 @@
 /ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance	/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /ko/docs/Learn/CSS/Building_blocks/Cascade_layers	/ko/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
-/ko/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/ko/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+/ko/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3
 /ko/docs/Learn/CSS/Building_blocks/Debugging_CSS	/ko/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
 /ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions	/ko/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 /ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements	/ko/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
@@ -514,6 +514,7 @@
 /ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops	/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops
 /ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
 /ko/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3
+/ko/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3
 /ko/docs/Learn_web_development/Extensions/Security_privacy	/ko/docs/conflicting/Web/Security
 /ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/ko/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/ko/docs/Web/HTML/How_to/Use_data_attributes

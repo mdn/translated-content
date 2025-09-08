@@ -102,7 +102,7 @@ La boucle s'exécute indépendamment du statut de la connexion, on a donc une v�
 
 ## Gestion des erreurs
 
-Quand un problème survient (tel qu'un délai de réponse dépassé ou une erreur liée au [contrôle d'accès](/fr/docs/Web/HTTP/CORS)), un évènement `error` est généré. Vous pouvez traiter ces cas d'erreur en implémentant la fonction de rappel `onerror` sur l'objet `EventSource`.
+Quand un problème survient (tel qu'un délai de réponse dépassé ou une erreur liée au [contrôle d'accès](/fr/docs/Web/HTTP/Guides/CORS)), un évènement `error` est généré. Vous pouvez traiter ces cas d'erreur en implémentant la fonction de rappel `onerror` sur l'objet `EventSource`.
 
 ```js
 evtSource.onerror = function (err) {

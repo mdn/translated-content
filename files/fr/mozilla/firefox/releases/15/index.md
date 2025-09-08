@@ -54,7 +54,7 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 - Les opérateurs mathématiques peuvent désormais utiliser les polices téléchargeables spécifiés avec {{cssxref("@font-face")}}. Cela permet à [l'extension MathML-fonts](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) de travailler également avec les opérateurs extensibles.
 - L'attribut `selection` de {{MathMLElement("maction")}} est désormais uniquement pris en compte avec l'actiontype `toggle`.
 - [L'obsolète et contraignant namedspace](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) a été supprimé ([bug Firefox 673759](https://bugzil.la/673759)).
-- La prise en charge de la syntaxe des valeurs de [Length](/fr/docs/Web/MathML/Values) et {{MathMLElement("mpadded")}} a été améliorée selon la spécification MathML3.
+- La prise en charge de la syntaxe des valeurs de [Length](/fr/docs/Web/MathML/Reference/Values) et {{MathMLElement("mpadded")}} a été améliorée selon la spécification MathML3.
 - Les nouveaux opérateurs MathML pour les maths arabes ont été ajoutés au dictionnaire opérateur ([bug Firefox 757125](https://bugzil.la/757125)).
 
 ### Réseau

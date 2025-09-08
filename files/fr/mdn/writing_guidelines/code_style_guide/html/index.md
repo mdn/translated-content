@@ -40,7 +40,7 @@ Vous devez utiliser le doctype HTML5. Il est court, facile à retenir et rétroc
 
 ### Langue du document
 
-Définissez la langue du document à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) de votre élément [`<html>`](/fr/docs/Web/HTML/Element/html) :
+Définissez la langue du document à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes#lang) de votre élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html) :
 
 ```html example-good
 <html lang="fr"></html>
@@ -56,17 +56,17 @@ Vous devez également définir le jeu de caractères de votre document comme sui
 <meta charset="utf-8" />
 ```
 
-Utilisez UTF-8 à moins que vous n'ayez une très bonne raison de ne pas le faire ; il couvrira vos besoins en caractères à peu près indépendamment de la langue que vous utilisez dans votre document. En outre, vous devriez toujours spécifier le jeu de caractères le plus tôt possible dans le bloc [`<head>`](/fr/docs/Web/HTML/Element/head) de votre HTML (dans le premier kilooctet), car cela vous protège contre une [vulnérabilité de sécurité d'Internet Explorer](http://support.microsoft.com/kb/928847).
+Utilisez UTF-8 à moins que vous n'ayez une très bonne raison de ne pas le faire ; il couvrira vos besoins en caractères à peu près indépendamment de la langue que vous utilisez dans votre document. En outre, vous devriez toujours spécifier le jeu de caractères le plus tôt possible dans le bloc [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) de votre HTML (dans le premier kilooctet), car cela vous protège contre une [vulnérabilité de sécurité d'Internet Explorer](http://support.microsoft.com/kb/928847).
 
 ### Méta-balise Viewport
 
-Enfin, vous devez toujours ajouter la métabalise viewport dans votre HTML [`<head>`](/fr/docs/Web/HTML/Element/head), pour donner à l'exemple une meilleure chance de fonctionner sur les appareils mobiles. Vous devez inclure au moins les éléments suivants dans votre document, que vous pourrez modifier ultérieurement en fonction des besoins :
+Enfin, vous devez toujours ajouter la métabalise viewport dans votre HTML [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head), pour donner à l'exemple une meilleure chance de fonctionner sur les appareils mobiles. Vous devez inclure au moins les éléments suivants dans votre document, que vous pourrez modifier ultérieurement en fonction des besoins :
 
 ```html example-good
 <meta name="viewport" content="width=device-width" />
 ```
 
-Voir [Zones d'affichage sur mobiles](/fr/docs/Web/CSS/Viewport_concepts#mobile_viewports) pour plus de détails.
+Voir [Zones d'affichage sur mobiles](/fr/docs/Web/CSS/CSSOM_view/Viewport_concepts#mobile_viewports) pour plus de détails.
 
 ## Style général de codage des balises
 

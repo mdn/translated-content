@@ -80,7 +80,7 @@ HTML 代码中可根据*功能*来为区段添加标记。可使用元素来无�
 
 ### 探索我们示例的代码
 
-上图的示例可用下面的代码表示（你也可以[在 GitHub 仓库上找到我们的示例](https://github.com/roy-tian/learning-area/blob/main/html/introduction-to-html/document-and-website-structure/index.html)）。请看下面的列表，了解视觉输出的每个部分由哪些部分组成。
+上图的示例可用下面的代码表示（你也可以[在 GitHub 仓库上找到我们的示例](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html)）。请看下面的列表，了解视觉输出的每个部分由哪些部分组成。
 
 ```html
 <!doctype html>

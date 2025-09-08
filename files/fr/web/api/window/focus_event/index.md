@@ -9,7 +9,7 @@ La propriété **`onfocus`**, , rattachée au mixin [`GlobalEventHandlers`](/fr/
 
 L'évènement `focus` est déclenché lorsque la personne active le focus sur un élément.
 
-Afin que `onfocus` soit déclenché sur les éléments qui ne sont pas des éléments `<input>`, il faut que ces derniers aient un attribut [`tabindex`](/fr/docs/Web/HTML/Global_attributes#attr-tabindex). Voir la section [Remettre l'accessibilité au clavier](/fr/docs/Learn/Accessibility/HTML#remettre_laccessibilité_au_clavier) pour plus de détails.
+Afin que `onfocus` soit déclenché sur les éléments qui ne sont pas des éléments `<input>`, il faut que ces derniers aient un attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-tabindex). Voir la section [Remettre l'accessibilité au clavier](/fr/docs/Learn_web_development/Core/Accessibility/HTML#remettre_laccessibilité_au_clavier) pour plus de détails.
 
 > [!NOTE]
 > Le gestionnaire d'évènement opposé à `onfocus` est [`onblur`](/fr/docs/Web/API/Window/blur_event).
@@ -26,7 +26,7 @@ cible.onfocus = refFonction;
 
 ## Exemple
 
-Cet exemple utilise [`onblur`](/fr/docs/Web/API/Window/blur_event) et `onfocus` pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+Cet exemple utilise [`onblur`](/fr/docs/Web/API/Window/blur_event) et `onfocus` pour changer le texte au sein d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
 ### HTML
 

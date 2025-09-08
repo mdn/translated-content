@@ -91,7 +91,7 @@ L'élément HTML **`<body>`** représente le contenu principal du document HTML.
 
 ## Attributs
 
-Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`alink`** {{deprecated_inline}}
   - : La couleur du texte quand les liens hypertextes sont sélectionnés. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`color`](/fr/docs/Web/CSS/color) à la place avec la pseudo-classe [`:active`](/fr/docs/Web/CSS/:active).
@@ -177,5 +177,5 @@ Comme pour tous les autres éléments, on peut utiliser [les attributs universel
 
 ## Voir aussi
 
-- L'élément [`<html>`](/fr/docs/Web/HTML/Element/html)
-- L'élément [`<head>`](/fr/docs/Web/HTML/Element/head)
+- L'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html)
+- L'élément [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head)

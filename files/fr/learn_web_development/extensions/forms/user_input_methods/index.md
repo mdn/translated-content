@@ -20,7 +20,7 @@ Les mécanismes en entrées dépendent des capacités de l'appareil qui exécute
 
 - Certains appareils ont des écrans tactiles: le plateforme web dispose des [événements tactiles](/fr/docs/Web/API/Touch_events) pour interpréter l'activité du doigt sur les interfaces tactiles.
 - Pour les appareils ayant une souris/pavé tactile comme méthode de pointage, l'[API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API) aide à implémenter un jeu 3D à la première personne ou toute autre application nécessisant un contrôle total du dispositif de pointage. L'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API) quant à elle aide à afficher l'application en mode plein écran.
-- En utilisant les fonctionnalités telles que les éléments [contentEditable](/fr/docs/Web/HTML/Global_attributes/contenteditable), vous pouvez implémenter des éditeurs rich-text rapidement et avec [Drag\&Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API) vous pouvez laisser les utilisateurs déplacer des éléments dans votre application. Quand l'orientation de l'écran a de l'importance pour votre application, vous pouvez lire l'orientation de l'écran à travers l'[API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) et verrouiller l'écran dans un sens.
+- En utilisant les fonctionnalités telles que les éléments [contentEditable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable), vous pouvez implémenter des éditeurs rich-text rapidement et avec [Drag\&Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API) vous pouvez laisser les utilisateurs déplacer des éléments dans votre application. Quand l'orientation de l'écran a de l'importance pour votre application, vous pouvez lire l'orientation de l'écran à travers l'[API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) et verrouiller l'écran dans un sens.
 - Vous devriez toujours être attentif à l'accessibilité du clavier quand c'est approprié — beaucoup d'utilisateurs web utilisent uniquement le clavier pour naviger sur les sites web et applications, et les bloquer hors de votre fonctionnalité est une mauvaise idée.
 
 Vous trouverez ci-dessous un ensemble de recommandations et meilleures pratiques pour utiliser de tels outils dans des Open Web Apps.
@@ -133,7 +133,7 @@ Voici un exemple qui permet à du contenu d'être déplacé:
 
 Ici, on
 
-- Définit l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#attr-dir) à vrai pour que l'élément puisse être déplacé.
+- Définit l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-dir) à vrai pour que l'élément puisse être déplacé.
 - Ajoute un gestionnaire d'événement [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) qui définit les données de déplacement à l'intérieur.
 
 > [!NOTE]
@@ -141,14 +141,14 @@ Ici, on
 
 #### contentEditable
 
-Dans un Open Web App, tout élément DOM peut être rendu directement éditable en utilisant l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-class).
+Dans un Open Web App, tout élément DOM peut être rendu directement éditable en utilisant l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-class).
 
 ```html
 <div contenteditable="true">Ce texte peut être édité par l'utilisateur.</div>
 ```
 
 > [!NOTE]
-> Vous pouvez trouver les informations de compatibilité, des exemples et d'autres ressources dans le guide [Contenu Éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+> Vous pouvez trouver les informations de compatibilité, des exemples et d'autres ressources dans le guide [Contenu Éditable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 ## Exemples
 
@@ -176,5 +176,5 @@ Dans un Open Web App, tout élément DOM peut être rendu directement éditable 
 - [Screen Orientation API](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Fullscreen API](/fr/docs/Web/API/Fullscreen_API)
 - [Drag & Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Content Editable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
+- [Content Editable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
 - [Implementing TV remote control navigation](/fr/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)

@@ -25,7 +25,7 @@ Pour lier une feuille de style externe, on inclut un élément `<link>` de la fo
 <link href="main.css" rel="stylesheet" />
 ```
 
-Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Attributes/rel).
+Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Reference/Attributes/rel).
 
 Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site dans l'onglet, on trouvera :
 
@@ -66,28 +66,28 @@ Certaines fonctionnalités relatives à la sécurité sont également disponible
   crossorigin="anonymous" />
 ```
 
-L'attribut `rel` vaut `preload` et indique que le navigateur doit précharger la ressource (voir [Le préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload) pour plus de détails), l'attribut `as` indique la classe de contenu qui est récupéré et l'attribut `crossorigin` indique si la ressource doit être récupérée avec une requête CORS.
+L'attribut `rel` vaut `preload` et indique que le navigateur doit précharger la ressource (voir [Le préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) pour plus de détails), l'attribut `as` indique la classe de contenu qui est récupéré et l'attribut `crossorigin` indique si la ressource doit être récupérée avec une requête CORS.
 
 Quelques notes d'utilisation :
 
 - Un élément `<link>` element peut être placé dans un élément {{HTMLElement("head")}} ou {{htmlelement("body")}} selon la valeur de la relation. C'est cependant une bonne pratique que de placer l'ensemble des éléments `<link>` dans l'élément `<head>`.
-- Lorsque `<link>` est utilisé pour la _favicon_ d'un site et que celui-ci utilise les règles CSP afin d'améliorer la sécurité, les règles s'appliquent également aux icônes. Aussi, si la _favicon_ ne charge pas, veuillez vérifier que la directive [`img-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) de l'en-tête {{HTTPHeader("Content-Security-Policy")}} ne bloque pas le chargement de l'image.
+- Lorsque `<link>` est utilisé pour la _favicon_ d'un site et que celui-ci utilise les règles CSP afin d'améliorer la sécurité, les règles s'appliquent également aux icônes. Aussi, si la _favicon_ ne charge pas, veuillez vérifier que la directive [`img-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) de l'en-tête {{HTTPHeader("Content-Security-Policy")}} ne bloque pas le chargement de l'image.
 - Les spécifications HTML et XHTML définissent des gestionnaires d'évènements pour l'élément `<link>` mais leur utilisation reste incertaine.
 - Pour XHTML 1.0, les éléments vides tels que `<link>` devaient utiliser une barre oblique de fin : `<link />`.
 - WebTV prend en charge la valeur `next` pour l'attribut `rel` afin de précharger la page suivante pour une série de documents.
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `as`
-  - : Cet attribut est uniquement utilisé lorsque `rel="preload"` ou `rel="prefetch"` est utilisé pour l'élément `<link>`. L'attribut indique le type de contenu chargé par l'élément `<link>` et permet au navigateur de déterminer la priorité du contenu, d'identifier les utilisations de la ressource plus bas dans le document, d'appliquer [la bonne politique de sécurité des contenus](/fr/docs/Web/HTTP/CSP) et de définir le bon en-tête de requête {{httpheader("Accept")}}.
+  - : Cet attribut est uniquement utilisé lorsque `rel="preload"` ou `rel="prefetch"` est utilisé pour l'élément `<link>`. L'attribut indique le type de contenu chargé par l'élément `<link>` et permet au navigateur de déterminer la priorité du contenu, d'identifier les utilisations de la ressource plus bas dans le document, d'appliquer [la bonne politique de sécurité des contenus](/fr/docs/Web/HTTP/Guides/CSP) et de définir le bon en-tête de requête {{httpheader("Accept")}}.
 - `crossorigin`
-  - : Cet attribut à valeur contrainte indique si le CORS doit être utilisé lorsque la ressource liée est récupérée. [Les images avec CORS activé](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisée dans un élément {{HTMLElement("canvas")}} sans qu'il soit corrompu. Les valeurs autorisées sont :
+  - : Cet attribut à valeur contrainte indique si le CORS doit être utilisé lorsque la ressource liée est récupérée. [Les images avec CORS activé](/fr/docs/Web/HTML/How_to/CORS_enabled_image) peuvent être réutilisée dans un élément {{HTMLElement("canvas")}} sans qu'il soit corrompu. Les valeurs autorisées sont :
     - `"anonymous"` : une requête _cross-origine_ est effectuée (avec l'en-tête HTTP `Origin`). Mais aucune information d'identification n'est envoyée (aucun cookie, aucun certificat X.509, aucune authentification simple via HTTP). Si le serveur ne fournit pas d'informations au site d'origine (c'est-à-dire sans utiliser l'en-tête HTTP {{httpheader("Access-Control-Allow-Origin")}}, l'image sera _corrompue_ et son utilisation sera restreinte.
     - `"use-credentials"` : une requête _cross-origine_ est effectuée (avec l'en-tête HTTP `Origin`) avec des informations d'authentification qui sont envoyées (un cookie, un certification et une authentification HTTP simple sont envoyés). Si le serveur ne fournit pas d'information d'authentification au site d'origine via l'en-tête {{httpheader("Access-Control-Allow-Credentials")}}, l'image sera corrompue et son utilisation sera restreinte.
 
-    Lorsque l'attribut est absent, la ressource est récupérée sans requête CORS (c'est-à-dire sans envoyer l'en-tête {{httpheader("Origin")}}) ce qui empêche de l'utiliser dans les éléments qui ne doivent pas être corrompus tels que {{HTMLElement('canvas')}}. Si la valeur est invalide, elle est synonyme de `anonymous`. Pour plus d'informations, consulter [l'article sur le contrôle d'origine HTTP (CORS)](/fr/docs/Web/HTML/Attributes/crossorigin).
+    Lorsque l'attribut est absent, la ressource est récupérée sans requête CORS (c'est-à-dire sans envoyer l'en-tête {{httpheader("Origin")}}) ce qui empêche de l'utiliser dans les éléments qui ne doivent pas être corrompus tels que {{HTMLElement('canvas')}}. Si la valeur est invalide, elle est synonyme de `anonymous`. Pour plus d'informations, consulter [l'article sur le contrôle d'origine HTTP (CORS)](/fr/docs/Web/HTML/Reference/Attributes/crossorigin).
 
 - `disabled`
   - : Cet attribut est uniquement utilisable avec les liens avec `rel="stylesheet"`. L'attribut booléen `disabled` indique si la feuille de style référencée devrait être chargée et appliquée au document. Si l'attribut `disabled` est indiqué dans le document HTML lors de son chargement, la feuille de style ne sera pas chargé au chargement de la page. La feuille de style sera uniquement chargée à la demande si (et lorsque) l'attribut `disabled` est retiré ou passé à `false` via un script.
@@ -130,7 +130,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
     - `'unsafe-url'` : le référent incluera l'origine et le chemin (mais ni le fragment, ni le mot de passe ou le nom d'utilisateur). Ce comportement n'est pas sécurisé car il peut laisser fuiter des origines et des chemins de ressources TLS vers des origines non-sécurisées.
 
 - `rel`
-  - : Cet attribut indique la relation qui existe entre le document et la ressource liée. Cet attribut doit être une liste de [types de lien](/fr/docs/Web/HTML/Attributes/rel), séparés par des espaces. La plupart du temps, cet attribut est utilisé pour caractériser un lien vers une feuille de style et il vaut alors `stylesheet` quand l'attribut `href` reçoit l'URL de la feuille de style à charger. WebTV supporte également la valeur `next` qui permet de précharger la page suivante d'une série de pages.
+  - : Cet attribut indique la relation qui existe entre le document et la ressource liée. Cet attribut doit être une liste de [types de lien](/fr/docs/Web/HTML/Reference/Attributes/rel), séparés par des espaces. La plupart du temps, cet attribut est utilisé pour caractériser un lien vers une feuille de style et il vaut alors `stylesheet` quand l'attribut `href` reçoit l'URL de la feuille de style à charger. WebTV supporte également la valeur `next` qui permet de précharger la page suivante d'une série de pages.
 - `sizes`
   - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque [`rel`](#rel) contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes :
     - `any` : l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
@@ -138,11 +138,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     > [!NOTE]
     >
-    > - La plupart des format d'icône permettent simplement de stocker une seule icône, c'est pour cela que, la plupart du temps, [`sizes`](/fr/docs/Web/HTML/Global_attributes#sizes) ne contient qu'un seul élément.
+    > - La plupart des format d'icône permettent simplement de stocker une seule icône, c'est pour cela que, la plupart du temps, [`sizes`](/fr/docs/Web/HTML/Reference/Global_attributes#sizes) ne contient qu'un seul élément.
     > - Safari sur iOS ne prend pas en charge cet attribut mais utilise des types de lien non-standards pour définir l'icône utilisé dans la barre du site ou pour le lancer : `apple-touch-icon` et `apple-touch-startup-icon`.
 
 - `title`
-  - : L'attribut `title` possède un sens spécifique pour l'élément `<link>`. Utilisé pour un lien `<link rel="stylesheet">`, l'attribut `title` définit [une feuille de style alternative ou une feuille de style préférée](/fr/docs/Web/CSS/Alternative_style_sheets). S'il est mal utilisé, [la feuille de style pourra être ignorée](/fr/docs/Utiliser_des_titres_corrects_avec_des_feuilles_de_styles_externes).
+  - : L'attribut `title` possède un sens spécifique pour l'élément `<link>`. Utilisé pour un lien `<link rel="stylesheet">`, l'attribut `title` définit [une feuille de style alternative ou une feuille de style préférée](/fr/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet). S'il est mal utilisé, [la feuille de style pourra être ignorée](/fr/docs/Utiliser_des_titres_corrects_avec_des_feuilles_de_styles_externes).
 - `type`
   - : Cet attribut est utilisé pour définir le type de contenu auquel le lien fait référence. La valeur de cet attribut doit être un type MIME tel que `text/html` ou `text/css`, etc. Le plus souvent, cet attribut est utilsé pour définir le type de feuille de style utilisé et la valeur la plus fréquente est `text/css` qui indique le format d'une feuille de style en cascade (_Cascading Style Sheet_ pour CSS). Cet attribut est également utilisé pour les liens avec `rel="preload"` afin de vérifier la prise en charge du format de fichier (si le navigateur ne prend pas en charge ce fichier, il n'est pas téléchargé).
 
@@ -159,10 +159,10 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 - `prefetch` {{Non-standard_inline}} {{secureContext_inline}}
   - : Cet attribut permet d'identifier une ressource qui sera nécessaire dans la suite de la navigation et que l'agent utilisateur devrait télécharger. Cela permet à l'agent utilisateur d'avoir un meilleur temps de réponse lorsque la ressource sera nécessaire.
 - `rev`{{deprecated_inline}}
-  - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut [`href`](#href)). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Attributes/rel) utilisés pour cet attribut sont semblables aux valeurs autorisés par [`rel`](#rel).
+  - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut [`href`](#href)). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Reference/Attributes/rel) utilisés pour cet attribut sont semblables aux valeurs autorisés par [`rel`](#rel).
 
     > [!NOTE]
-    > Cet attribut est obsolète en HTML5 **et ne doit pas être utilisé**. Pour obtenir le même effet, on utilisera l'attribut [`rel`](#rel) avec la valeur réciproque [pour le type de lien](/fr/docs/Web/HTML/Attributes/rel), (`made` devrait par exemple être remplacé par `author`). Cet attribut ne signifie pas « révision » et ne doit pas être utilisé comme un numéro de version.
+    > Cet attribut est obsolète en HTML5 **et ne doit pas être utilisé**. Pour obtenir le même effet, on utilisera l'attribut [`rel`](#rel) avec la valeur réciproque [pour le type de lien](/fr/docs/Web/HTML/Reference/Attributes/rel), (`made` devrait par exemple être remplacé par `author`). Cet attribut ne signifie pas « révision » et ne doit pas être utilisé comme un numéro de version.
 
     > [!NOTE]
     > La spécification actuelle de HTML 5.2 du W3C n'indique plus l'attribut `rev` comme obsolète. En revanche, la spécification du WHATWG le considère toujours comme obsolète. Tant que cette incohérence n'est pas résolue, mieux vaut considérer cet attribut comme obsolète.
@@ -182,7 +182,7 @@ Pour associer une feuille de style à la page courante, on utilisera la syntaxe 
 
 ### Fournir des feuilles de style alternatives
 
-Pour un document, on peut indiquer [plusieurs feuilles de style alternatives](/fr/docs/Web/CSS/Alternative_style_sheets).
+Pour un document, on peut indiquer [plusieurs feuilles de style alternatives](/fr/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
 L'utilisateur pourra choisir parmi ces feuilles de style via le menu « Affichage > Style de la page ». Ainsi, un utilisateur pourra voir différentes versions d'une même page.
 
@@ -220,7 +220,7 @@ Il est possible de déterminer si une feuille de style a été chargée en écou
 
 ### Exemples avec `preload`
 
-De nombreux exemples avec `<link rel="preload">` peuvent être lus sur [Précharger des ressources grâce à `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload).
+De nombreux exemples avec `<link rel="preload">` peuvent être lus sur [Précharger des ressources grâce à `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload).
 
 ## Notes
 

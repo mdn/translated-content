@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/child-src
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`child-src`** définit les sources valides de [<i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) et de contextes de navigations imbriqués chargés au moyen d'éléments tels que [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe). Pour les <i lang="en">workers</i>, les requêtes non-conformes sont traitées comme des erreurs de réseau fatales par l'agent utilisateur.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`child-src`** définit les sources valides de [<i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) et de contextes de navigations imbriqués chargés au moyen d'éléments tels que [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame) et [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe). Pour les <i lang="en">workers</i>, les requêtes non-conformes sont traitées comme des erreurs de réseau fatales par l'agent utilisateur.
 
 <table class="properties">
   <tbody>
@@ -36,9 +36,9 @@ Content-Security-Policy: child-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -50,7 +50,7 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: child-src https://example.com/
 ```
 
-Cette [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) et ce <i lang="en">worker</i> seront bloqués et ne se chargeront pas&nbsp;:
+Cette [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) et ce <i lang="en">worker</i> seront bloqués et ne se chargeront pas&nbsp;:
 
 ```html
 <iframe src="https://not-example.com"></iframe>
@@ -70,6 +70,6 @@ Cette [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) et ce <i lang="en">worker</
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame) et [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)
 - [`Worker`](/fr/docs/Web/API/Worker), [`SharedWorker`](/fr/docs/Web/API/SharedWorker), [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker)

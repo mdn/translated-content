@@ -59,7 +59,7 @@ Tout cela c'est très bien, mais le problème apparaît lorsque vous commencez �
 
 Quand le site est vu sur un écran étroit, il serait préférable de montrer une version recadrée de l'image sur les parties importantes de la vue au lieu de faire voir des bâtiments, et peut-être quelque chose entre les deux pour un écran de largeur moyenne comme une tablette — ce problème relève de **décisions de nature artistique**.
 
-De plus, il n'est pas nécessaire d'intégrer des images aussi volumineuses sur une page destinée à être affichée sur l'écran minuscule d'un mobile&nbsp;; c'est le problème des **changements de résolution** — une image matricielle est définie sur un certain nombre de pixels de large et un certain nombre de pixels de haut&nbsp;; comme on a pu le voir à propos des [graphiques vectoriels](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web), une image matricielle paraît pixelisée si elle est affichée plus grande que sa taille d'origine (alors qu'un graphique vectoriel ne l'est pas).
+De plus, il n'est pas nécessaire d'intégrer des images aussi volumineuses sur une page destinée à être affichée sur l'écran minuscule d'un mobile&nbsp;; c'est le problème des **changements de résolution** — une image matricielle est définie sur un certain nombre de pixels de large et un certain nombre de pixels de haut&nbsp;; comme on a pu le voir à propos des [graphiques vectoriels](/fr/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML), une image matricielle paraît pixelisée si elle est affichée plus grande que sa taille d'origine (alors qu'un graphique vectoriel ne l'est pas).
 
 Et si elle est montrée significativement plus petite que sa taille d'origine, c'est un gaspillage de bande passante — les personnes utilisant des navigateurs mobiles en particulier ne veulent pas gaspiller leur bande passante en téléchargeant une grande image destinée à des ordinateurs de bureau, alors qu'une petite image ferait l'affaire pour leur appareil. La solution idéale serait d'avoir plusieurs résolutions disponibles et de servir des tailles appropriées selon le type d'appareil accédant au site web.
 
@@ -70,21 +70,21 @@ Vous pouvez penser que des images vectorielles sont la solution à ces problème
 Ce type de problème n'existait pas quand le web a vu le jour, du début jusqu'au milieu des années 90 — à l'époque, les seuls appareils permettant de naviguer sur le web étaient les ordinateurs de bureau et les portables, de sorte que les ingénieurs et rédacteurs de spécifications pour les navigateurs ne pouvaient même pas imaginer l'existence de ces problèmes. Pour résoudre les problèmes indiqués ci-dessus, les techniques d'images adaptatives sont de mise en œuvre récente&nbsp;: elles offrent au navigateur plusieurs fichiers d'images, soit montrant tous la même chose mais avec un nombre de pixels différent (commutation de résolution), soit des images différentes selon l'espace alloué (décisions artistiques).
 
 > [!NOTE]
-> Toutes les nouvelles fonctionnalités présentées dans cet article — [`srcset`](/fr/docs/Web/HTML/Element/img#attr-srcset)/[`sizes`](/fr/docs/Web/HTML/Element/img#attr-sizes)/[`<picture>`](/fr/docs/Web/HTML/Element/picture) — sont toutes prises en charge dans les versions de navigateurs récemment publiées pour les ordinateurs de bureau et pour les mobiles (y compris le navigateur Edge de Microsoft, même si ce n'est pas le cas d'Internet Explorer).
+> Toutes les nouvelles fonctionnalités présentées dans cet article — [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#attr-srcset)/[`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#attr-sizes)/[`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) — sont toutes prises en charge dans les versions de navigateurs récemment publiées pour les ordinateurs de bureau et pour les mobiles (y compris le navigateur Edge de Microsoft, même si ce n'est pas le cas d'Internet Explorer).
 
 ## Comment créer des images adaptatives&nbsp;?
 
-Dans ce paragraphe, nous allons examiner les deux problèmes illustrés ci-dessus et montrer comment les résoudre à l'aide des fonctions d'images adaptatives du HTML. Notez que nous nous focaliserons sur l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) du HTML dans cette section, comme vous avez pu le voir dans la zone de contenu de l'exemple ci-dessus — l'image d'en-tête du site n'est là que pour la décoration, et donc implémenté en utilisant des images de fond du CSS. CSS a [sans doute de meilleurs outils](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/) que le HTML pour la conception adaptative&nbsp;: nous en parlerons dans le module CSS à venir.
+Dans ce paragraphe, nous allons examiner les deux problèmes illustrés ci-dessus et montrer comment les résoudre à l'aide des fonctions d'images adaptatives du HTML. Notez que nous nous focaliserons sur l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) du HTML dans cette section, comme vous avez pu le voir dans la zone de contenu de l'exemple ci-dessus — l'image d'en-tête du site n'est là que pour la décoration, et donc implémenté en utilisant des images de fond du CSS. CSS a [sans doute de meilleurs outils](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/) que le HTML pour la conception adaptative&nbsp;: nous en parlerons dans le module CSS à venir.
 
 ### Commutations de résolution&nbsp;: tailles différentes
 
-Alors, quel est le problème à résoudre à l'aide des commutations de résolution&nbsp;? Nous voulons afficher un contenu d'image identique, juste plus grand ou plus petit selon l'appareil — c'est la situation de la deuxième image du contenu de notre exemple précédent. L'élément standard [`<img>`](/fr/docs/Web/HTML/Element/img) vous permet classiquement de ne faire pointer le navigateur que vers un seul fichier source :
+Alors, quel est le problème à résoudre à l'aide des commutations de résolution&nbsp;? Nous voulons afficher un contenu d'image identique, juste plus grand ou plus petit selon l'appareil — c'est la situation de la deuxième image du contenu de notre exemple précédent. L'élément standard [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) vous permet classiquement de ne faire pointer le navigateur que vers un seul fichier source :
 
 ```html
 <img src="elva-fairy-800w.jpg" alt="Elva habillée en fée" />
 ```
 
-Mais il est possible d'utiliser deux nouveaux attributs — [`srcset`](/fr/docs/Web/HTML/Element/img#attr-srcset) et [`sizes`](/fr/docs/Web/HTML/Element/img#attr-sizes) — permettant de fournir plusieurs images source avec des indications pour permettre au navigateur de faire le bon choix. Vous trouverez un exemple de cela dans le fichier [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) sur GitHub (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html))&nbsp;:
+Mais il est possible d'utiliser deux nouveaux attributs — [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#attr-srcset) et [`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#attr-sizes) — permettant de fournir plusieurs images source avec des indications pour permettre au navigateur de faire le bon choix. Vous trouverez un exemple de cela dans le fichier [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) sur GitHub (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html))&nbsp;:
 
 ```html
 <img
@@ -113,7 +113,7 @@ Les attributs `srcset` et `sizes` paraissent complexes, mais ils ne sont pas dif
 
 **`sizes`** définit un ensemble de conditions pour le média (par ex. des largeurs d'écran) et indique quelle taille d'image serait la plus adaptée si certaines conditions sont satisfaites — ce sont les conditions dont nous avons parlé plus haut. Dans ce cas, nous écrivons avant chaque virgule&nbsp;:
 
-1. une **condition pour le média** (`(max-width:600px)`) — vous pourrez en savoir plus à ce propos dans l'[article sur les CSS](/fr/docs/Learn/CSS), mais pour le moment disons simplement que cette condition pour le média décrit un état possible de l'écran. Dans notre cas, nous disons «&nbsp;si la largeur de fenêtre est de 600 pixels ou moins »,
+1. une **condition pour le média** (`(max-width:600px)`) — vous pourrez en savoir plus à ce propos dans l'[article sur les CSS](/fr/docs/Learn_web_development/Core/Styling_basics), mais pour le moment disons simplement que cette condition pour le média décrit un état possible de l'écran. Dans notre cas, nous disons «&nbsp;si la largeur de fenêtre est de 600 pixels ou moins »,
 2. une espace,
 3. **la largeur de la place** occupée par l'image si la condition pour le média est vraie (`480px`).
 
@@ -134,10 +134,10 @@ Et c'est tout&nbsp;! Donc à ce stade, si un navigateur prenant en charge une la
 >
 > Pour observer les images chargées, vous pouvez utiliser l'onglet [Moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) dans les outils de développement de Firefox.
 
-Les navigateurs les plus anciens qui ne prennent pas en charge ces fonctionnalités les ignorent; poursuivent et chargent normalement l'image référencée dans l'attribut [`src`](/fr/docs/Web/HTML/Element/img#attr-src).
+Les navigateurs les plus anciens qui ne prennent pas en charge ces fonctionnalités les ignorent; poursuivent et chargent normalement l'image référencée dans l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#attr-src).
 
 > [!NOTE]
-> Dans l'élément [`<head>`](/fr/docs/Web/HTML/Element/head) du document, vous trouvez la ligne `<meta name="viewport" content="width=device-width">`&nbsp;: ceci force les navigateurs mobiles de prendre la largeur réelle de leur vue pour charger des pages web (certains navigateurs mobiles mentent à propos de la largeur de leur vue, et à la place chargent des pages pour une vue plus large, puis rétrécissent la page chargée, ce qui n'est pas vraiment une aide pour les pages adaptatives ou pour la conception).
+> Dans l'élément [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) du document, vous trouvez la ligne `<meta name="viewport" content="width=device-width">`&nbsp;: ceci force les navigateurs mobiles de prendre la largeur réelle de leur vue pour charger des pages web (certains navigateurs mobiles mentent à propos de la largeur de leur vue, et à la place chargent des pages pour une vue plus large, puis rétrécissent la page chargée, ce qui n'est pas vraiment une aide pour les pages adaptatives ou pour la conception).
 
 ### Commutation de résolution&nbsp;: même taille, résolutions différentes
 
@@ -162,7 +162,7 @@ Dans ce cas, `sizes` n'est pas nécessaire — le navigateur détermine simpleme
 
 ### Décision de nature artistique
 
-Pour résumer, le problème des **décisions de nature artistique** réside dans le choix des modifications à apporter à l'image selon les diverses tailles d'affichage. Par exemple, si un instantané d'un grand plan paysager avec une personne au milieu, correctement affiché sur un site web avec le navigateur d'un ordinateur de bureau, est rétréci lorsque ce même site est visionné sur un navigateur de mobile, cet instantané risque d'avoir mauvaise mine, car la personne sera vraiment minuscule et difficile à voir. Il serait probablement préférable de montrer sur un mobile une image portrait plus petite d'un zoom sur la personne. L'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) nous permet d'implémenter ce type de solution.
+Pour résumer, le problème des **décisions de nature artistique** réside dans le choix des modifications à apporter à l'image selon les diverses tailles d'affichage. Par exemple, si un instantané d'un grand plan paysager avec une personne au milieu, correctement affiché sur un site web avec le navigateur d'un ordinateur de bureau, est rétréci lorsque ce même site est visionné sur un navigateur de mobile, cet instantané risque d'avoir mauvaise mine, car la personne sera vraiment minuscule et difficile à voir. Il serait probablement préférable de montrer sur un mobile une image portrait plus petite d'un zoom sur la personne. L'élément [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) nous permet d'implémenter ce type de solution.
 
 Revenons à notre exemple initial du fichier [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html). Cette image nécessite d'opérer un choix de nature artistique&nbsp;:
 
@@ -172,7 +172,7 @@ Revenons à notre exemple initial du fichier [not-responsive.html](https://mdn.g
   alt="Chris debout tenant sa fille Elva dans ses bras" />
 ```
 
-Arrangeons cela avec [`<picture>`](/fr/docs/Web/HTML/Element/picture)&nbsp;! Comme pour `<vidéo>` et `<audio>`, l'élément `<picture>` est une enveloppe conteneur de plusieurs éléments [`<source>`](/fr/docs/Web/HTML/Element/source)&nbsp;; ces éléments indiquent plusieurs sources différentes entre lesquelles le navigateur peut choisir&nbsp;; ils sont suivis du très important élément [`<img>`](/fr/docs/Web/HTML/Element/img). Le code dans [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ressemblera à&nbsp;:
+Arrangeons cela avec [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture)&nbsp;! Comme pour `<vidéo>` et `<audio>`, l'élément `<picture>` est une enveloppe conteneur de plusieurs éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source)&nbsp;; ces éléments indiquent plusieurs sources différentes entre lesquelles le navigateur peut choisir&nbsp;; ils sont suivis du très important élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img). Le code dans [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ressemblera à&nbsp;:
 
 ```html
 <picture>
@@ -197,7 +197,7 @@ Ce code nous permet d'afficher une image adaptée à la fois sur un écran large
 
 ### Pourquoi ne peut-on pas réaliser cela avec le CSS ou du JavaScript&nbsp;?
 
-Lorsque le navigateur commence à charger une page, il commence à télécharger (précharger) toutes les images avant que l'analyseur principal n'ait commencé à charger et à interpréter le CSS et le JavaScript de la page. Cette technique est utile, car elle permet de réduire de 20 % en moyenne le temps de chargement des pages. Cependant, elle n'est d'aucune aide pour les images adaptatives, d'où la nécessité de mettre en œuvre des solutions comme `srcset`. Vous ne pourriez pas, par exemple, charger l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), puis détecter la largeur de fenêtre avec JavaScript et changer dynamiquement l'image source pour une image plus petite si désiré. À ce moment-là, l'image originale aurait déjà été chargée, et vous chargeriez en plus la petite image, ce qui est encore pire en termes d'image adaptative.
+Lorsque le navigateur commence à charger une page, il commence à télécharger (précharger) toutes les images avant que l'analyseur principal n'ait commencé à charger et à interpréter le CSS et le JavaScript de la page. Cette technique est utile, car elle permet de réduire de 20 % en moyenne le temps de chargement des pages. Cependant, elle n'est d'aucune aide pour les images adaptatives, d'où la nécessité de mettre en œuvre des solutions comme `srcset`. Vous ne pourriez pas, par exemple, charger l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), puis détecter la largeur de fenêtre avec JavaScript et changer dynamiquement l'image source pour une image plus petite si désiré. À ce moment-là, l'image originale aurait déjà été chargée, et vous chargeriez en plus la petite image, ce qui est encore pire en termes d'image adaptative.
 
 ### Utilisez largement les formats d'image modernes
 
@@ -221,23 +221,23 @@ Il existe plusieurs nouveaux formats d'image très intéressants (comme WebP et 
 
 ## Testez vos compétences&nbsp;!
 
-Et vous voici à la fin de cet article, mais saurez-vous vous rappeler les informations les plus importantes&nbsp;? Vous pourrez trouver une évaluation détaillée pour tester ces compétences à la fin du module&nbsp;: voir [Créer une page de présentation de Mozilla](/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page).
+Et vous voici à la fin de cet article, mais saurez-vous vous rappeler les informations les plus importantes&nbsp;? Vous pourrez trouver une évaluation détaillée pour tester ces compétences à la fin du module&nbsp;: voir [Créer une page de présentation de Mozilla](/fr/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page).
 
 ## Résumé
 
 Voilà notre paquet‑cadeau pour des images adaptatives — nous espérons que ces nouvelles techniques vous plaisent. Résumons, nous vous avons exposé deux méthodes distinctes pour résoudre ce problème&nbsp;:
 
-- **les décisions de nature artistique**&nbsp;: cette méthode consiste à servir des images recadrées selon les diverses mises en page — par exemple, une image paysagère offrant toute la scène pour une mise en page destinée aux ordinateurs de bureau et une image portrait montrant le sujet principal zoomé de près pour une mise en page destinée aux mobiles. On résout alors ce problème avec [`<picture>`](/fr/docs/Web/HTML/Element/picture).
-- **la commutation de résolution**&nbsp;: cette méthode consiste à servir des images issues de fichiers plus petits pour les périphériques à petit écran, car ils n'ont que faire des grosses images prévues pour les écrans d'ordinateurs de bureau — et en plus, en option, adapter la résolution de l'image aux écrans de faible ou grande densité. On résout ce problème avec l'utilisation de [graphiques vectoriels](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) (images SVG) ainsi qu'à l'aide des attributs [`srcset`](/fr/docs/Web/HTML/Element/img#attr-srcset) et [`sizes`](/fr/docs/Web/HTML/Element/img#attr-sizes).
+- **les décisions de nature artistique**&nbsp;: cette méthode consiste à servir des images recadrées selon les diverses mises en page — par exemple, une image paysagère offrant toute la scène pour une mise en page destinée aux ordinateurs de bureau et une image portrait montrant le sujet principal zoomé de près pour une mise en page destinée aux mobiles. On résout alors ce problème avec [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture).
+- **la commutation de résolution**&nbsp;: cette méthode consiste à servir des images issues de fichiers plus petits pour les périphériques à petit écran, car ils n'ont que faire des grosses images prévues pour les écrans d'ordinateurs de bureau — et en plus, en option, adapter la résolution de l'image aux écrans de faible ou grande densité. On résout ce problème avec l'utilisation de [graphiques vectoriels](/fr/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) (images SVG) ainsi qu'à l'aide des attributs [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#attr-srcset) et [`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#attr-sizes).
 
-Cet article est aussi la conclusion de l'ensemble du module [Multimedia et intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding)&nbsp;! Avant de passer à autre chose, il vous reste à essayer notre évaluation multimédia et à voir comment vous vous en sortez. Amusez-vous bien.
+Cet article est aussi la conclusion de l'ensemble du module [Multimedia et intégration](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content)&nbsp;! Avant de passer à autre chose, il vous reste à essayer notre évaluation multimédia et à voir comment vous vous en sortez. Amusez-vous bien.
 
 ## Voir aussi
 
 - [L'excellente introduction aux images adaptatives de Jason Grigsby](http://blog.cloudfour.com/responsive-images-101-definitions)
 - [Images adaptatives&nbsp;: si vous changez juste de résolution, utilisez `srcset`](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — comporte plus d'explications sur la façon dont le navigateur retravaille l'image à utiliser
-- [`<img>`](/fr/docs/Web/HTML/Element/img)
-- [`<picture>`](/fr/docs/Web/HTML/Element/picture)
-- [`<source>`](/fr/docs/Web/HTML/Element/source)
+- [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img)
+- [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture)
+- [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}

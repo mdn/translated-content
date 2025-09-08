@@ -54,4 +54,4 @@ Obtenez des détails complets sur les méthodes, les propriétés, les types et 
 
 ### Les clés du manifeste
 
-Obtenez tous les détails sur [les clés du manifeste d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), y compris toutes leurs propriétés et paramètres. Vous y trouverez également des informations détaillées sur la [compatibilité](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) de chaque clé pour les principaux navigateurs.
+Obtenez tous les détails sur [les clés du manifeste d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), y compris toutes leurs propriétés et paramètres. Vous y trouverez également des informations détaillées sur la [compatibilité](/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/manifest.json) de chaque clé pour les principaux navigateurs.

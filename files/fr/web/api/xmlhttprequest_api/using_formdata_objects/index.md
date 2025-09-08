@@ -40,7 +40,7 @@ Dans cet exemple, une instance `FormData` contenant les valeurs des champs «&nb
 
 ## Récupération d'un objet `FormData` dans un formulaire HTML
 
-Pour construire un objet `FormData` contenant les données d'un élément HTML [`<form>`](/fr/docs/Web/HTML/Element/form) existant, spécifiez cet élément lors de la création de l'objet&nbsp;:
+Pour construire un objet `FormData` contenant les données d'un élément HTML [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) existant, spécifiez cet élément lors de la création de l'objet&nbsp;:
 
 ```js
 const formData = new FormData(unElementDeFormulaire);
@@ -70,7 +70,7 @@ Vous pouvez ainsi ajouter des données au formulaire avant de l'envoyer, pour y 
 
 ## Envoi de fichiers via un objet `FormData`
 
-L'objet `FormData` vous permet également d'envoyer des fichiers. Il vous suffit d'inclure un élément HTML [`<input>`](/fr/docs/Web/HTML/Element/input) de type `file` dans votre élément [`<form>`](/fr/docs/Web/HTML/Element/form)&nbsp;:
+L'objet `FormData` vous permet également d'envoyer des fichiers. Il vous suffit d'inclure un élément HTML [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `file` dans votre élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)&nbsp;:
 
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
@@ -135,10 +135,10 @@ form.addEventListener(
 ```
 
 > [!NOTE]
-> Si vous passez une référence dans le formulaire, [la méthode HTTP spécifiée](/fr/docs/Web/HTTP/Methods) dans ce dernier sera utilisée au lieu de celle définie dans l'appel de la méthode `open()`.
+> Si vous passez une référence dans le formulaire, [la méthode HTTP spécifiée](/fr/docs/Web/HTTP/Reference/Methods) dans ce dernier sera utilisée au lieu de celle définie dans l'appel de la méthode `open()`.
 
 > [!WARNING]
-> Lors de l'utilisation de `FormData` pour envoyer des requêtes POST à l'aide de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou de [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) pour du contenu de type `multipart/form-data` (par exemple pour téléverser des fichiers ou des blobs vers le serveur), _il ne faut pas indiquer de façon explicite_ l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur la requête. Si vous le faites, cela empêchera le navigateur de renseigner l'en-tête `Content-Type` avec l'expression de limite qui sera utilisée pour délimiter les champs du formulaire dans le corps de la requête.
+> Lors de l'utilisation de `FormData` pour envoyer des requêtes POST à l'aide de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou de [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) pour du contenu de type `multipart/form-data` (par exemple pour téléverser des fichiers ou des blobs vers le serveur), _il ne faut pas indiquer de façon explicite_ l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Reference/Headers/Content-Type) sur la requête. Si vous le faites, cela empêchera le navigateur de renseigner l'en-tête `Content-Type` avec l'expression de limite qui sera utilisée pour délimiter les champs du formulaire dans le corps de la requête.
 
 Vous pouvez également ajouter un objet [`File`](/fr/docs/Web/API/File) ou [`Blob`](/fr/docs/Web/API/Blob) directement dans l'objet [`FormData`](/fr/docs/Web/API/FormData)&nbsp;:
 
@@ -196,7 +196,7 @@ formElem.addEventListener("formdata", (e) => {
 
 ## Points d'attention
 
-L'objet `FormData` n'inclut pas les données du formulaire pour les champs ou ensembles de champs ([`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset)) qui sont désactivés.
+L'objet `FormData` n'inclut pas les données du formulaire pour les champs ou ensembles de champs ([`<fieldset>`](/fr/docs/Web/HTML/Reference/Elements/fieldset)) qui sont désactivés.
 
 ## Voir aussi
 

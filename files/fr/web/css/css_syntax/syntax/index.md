@@ -36,7 +36,7 @@ Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
 ![css syntax - declarations block.png](declaration-block.png)
 
 > [!NOTE]
-> Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style).
+> Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML [`style`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-style).
 
 ## Ensembles de règles CSS
 
@@ -48,7 +48,7 @@ Une règle CSS est visualisé dans le diagramme ci-dessous.
 
 ![css syntax - ruleset.png](ruleset.png)
 
-Comme un élément de la page peut correspondre à plusieurs sélecteurs, et donc par plusieurs règles contenant potentiellement plusieurs fois une même propriété, avec des valeurs différentes, la norme CSS définit laquelle a priorité sur l'autre et doit être appliquée&nbsp;: c'est ce qu'on appelle la [cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+Comme un élément de la page peut correspondre à plusieurs sélecteurs, et donc par plusieurs règles contenant potentiellement plusieurs fois une même propriété, avec des valeurs différentes, la norme CSS définit laquelle a priorité sur l'autre et doit être appliquée&nbsp;: c'est ce qu'on appelle la [cascade](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
 
 > [!NOTE]
 > Même si on peut utiliser une règle utilisant un groupe de sélecteurs afin d'éviter de dupliquer une même règle pour chaque sélecteur distinct de ce groupe, cela n'a pas exactement le même effet. En effet, si on utilise un groupe de sélecteurs contenant un sélecteur invalide, c'est tout le groupe qui sera invalide et la règle sera ignoré. Si on utilise plusieurs règles pour chacun des sélecteurs individuels, seule celle du sélecteur invalide ne sera pas appliquée.
@@ -64,30 +64,30 @@ Une **instruction** est un bloc de construction qui commence par n'importe quel 
 Il existe deux types de déclarations&nbsp;:
 
 - Les **règles** qui associent une collection de déclarations CSS à une condition décrite par un [sélecteur](/fr/docs/Web/CSS/CSS_selectors).
-- Les **règles @** qui commencent par une arobase, '`@`' (`U+0040 COMMERCIAL AT`), suivie d'un identifiant et se poursuivant jusqu'à la fin de l'instruction, c'est-à-dire jusqu'à au prochain point-virgule (;) en dehors d'un bloc, ou à la fin du bloc suivant. Chaque type de [règles @](/fr/docs/Web/CSS/At-rule), défini par l'identifiant, peut avoir sa propre syntaxe interne, et bien sûr sa sémantique. Ils sont utilisés pour transmettre des informations de métadonnées (comme [`@charset`](/fr/docs/Web/CSS/@charset) ou [`@import`](/fr/docs/Web/CSS/@import)), des informations conditionnelles (comme [`@media`](/fr/docs/Web/CSS/@media) ou [`@document`](/fr/docs/Web/CSS/@document)), ou des informations descriptives (comme [`@font-face`](/fr/docs/Web/CSS/@font-face)).
+- Les **règles @** qui commencent par une arobase, '`@`' (`U+0040 COMMERCIAL AT`), suivie d'un identifiant et se poursuivant jusqu'à la fin de l'instruction, c'est-à-dire jusqu'à au prochain point-virgule (;) en dehors d'un bloc, ou à la fin du bloc suivant. Chaque type de [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule), défini par l'identifiant, peut avoir sa propre syntaxe interne, et bien sûr sa sémantique. Ils sont utilisés pour transmettre des informations de métadonnées (comme [`@charset`](/fr/docs/Web/CSS/@charset) ou [`@import`](/fr/docs/Web/CSS/@import)), des informations conditionnelles (comme [`@media`](/fr/docs/Web/CSS/@media) ou [`@document`](/fr/docs/Web/CSS/@document)), ou des informations descriptives (comme [`@font-face`](/fr/docs/Web/CSS/@font-face)).
 
 Toute instruction qui n'est pas une règle ou une règle @ est invalide et ignorée.
 
 ### Instructions imbriquées
 
-Il existe un autre groupe d'instructions&nbsp;: les **instructions imbriquées**. Ce sont des instructions qui peuvent être utilisées dans un sous-ensemble spécifique de règles @&nbsp;: les _[règles de groupe conditionnelles](/fr/docs/Web/CSS/At-rule#les_règles_de_groupe_conditionnelles)_. Ces déclarations ne s'appliquent que si une condition spécifique est satisfaite. Par exemple, le contenu d'une règle @ `@media` est appliqué uniquement si l'appareil sur lequel le navigateur s'exécute correspond à la condition exprimée.
+Il existe un autre groupe d'instructions&nbsp;: les **instructions imbriquées**. Ce sont des instructions qui peuvent être utilisées dans un sous-ensemble spécifique de règles @&nbsp;: les _[règles de groupe conditionnelles](/fr/docs/Web/CSS/CSS_syntax/At-rule#les_règles_de_groupe_conditionnelles)_. Ces déclarations ne s'appliquent que si une condition spécifique est satisfaite. Par exemple, le contenu d'une règle @ `@media` est appliqué uniquement si l'appareil sur lequel le navigateur s'exécute correspond à la condition exprimée.
 
 ## Voir aussi
 
 - Concepts clés CSS&nbsp;:
   - **Syntaxe CSS**
-  - [Commentaires](/fr/docs/Web/CSS/Comments)
-  - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/Inheritance)
+  - [Commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
+  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [Mode de mise en page](/fr/docs/Web/CSS/Layout_mode)
-  - [Modèle de mise en forme visuelles](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Mode de mise en page](/fr/docs/Glossary/Layout_mode)
+  - [Modèle de mise en forme visuelles](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
-    - [Valeur initiale](/fr/docs/Web/CSS/initial_value)
-    - [Valeur calculée](/fr/docs/Web/CSS/computed_value)
-    - [Valeur utilisée](/fr/docs/Web/CSS/used_value)
-    - [Valeur réelle](/fr/docs/Web/CSS/actual_value)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-  - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-  - [Élément remplacé](/fr/docs/Web/CSS/Replaced_element)
+    - [Valeur initiale](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
+    - [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [Valeur utilisée](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
+    - [Valeur réelle](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
