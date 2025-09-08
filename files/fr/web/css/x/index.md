@@ -8,7 +8,7 @@ l10n:
 La propriété [CSS](/fr/docs/Web/CSS) **`x`** définit la coordonnée de l'axe x du coin supérieur gauche de l'élément de forme SVG {{SVGElement("rect")}}, d'image {{SVGElement("image")}}, de fenêtre {{SVGElement("foreignObject")}} et de l'élément imbriqué {{SVGElement("svg")}} par rapport au plus proche `<svg>` présent dans le [système de coordonée](/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems). S'il est présent, il remplace l'attribut {{SVGAttr("x")}}.
 
 > [!NOTE]
-> La propriété `x` ne s'applique qu'aux éléments {{SVGElement("rect")}}, {{SVGElement("image")}}, {{SVGElement("foreignObject")}}, et {{SVGElement("svg")}} imbriqués dans un élément `<svg>`. Il n'a aucun effet sur les zones ultrapériphériques `<svg>` et ne s'applique pas aux autres éléments SVG ni aux éléments HTML ou pseudo-éléments.
+> La propriété `x` ne s'applique qu'aux éléments {{SVGElement("rect")}}, {{SVGElement("image")}}, {{SVGElement("foreignObject")}}, et {{SVGElement("svg")}} imbriqués dans un élément `<svg>`. Il n'a aucun effet sur les zones  `<svg>` extérieures et ne s'applique pas aux autres éléments SVG ni aux éléments ou pseudo-éléments HTML.
 
 ## Syntaxe
 
@@ -64,7 +64,7 @@ Nous incluons quatre SVG identiques de l'élément `<rect>`&nbsp;; leurs valeurs
 
 #### CSS
 
-Nous stylisons tous les rectangles pour qu'ils aient une bordure noire et soient légèrement transparents, de sorte que les rectangles qui se chevauchent soient visibles. Nous fournissons au rectangle différents remplissages {{cssxref("fill")}} et valeurs en `x`.
+Nous stylisons tous les rectangles pour qu'ils aient une bordure noire et soient légèrement transparents, de sorte que les rectangles qui se chevauchent soient visibles. Nous fournissons aux rectangles différents remplissages {{cssxref("fill")}} et valeurs en `x`.
 
 ```css
 svg {
