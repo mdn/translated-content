@@ -1,6 +1,8 @@
 ---
 title: y
 slug: Web/CSS/y
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`y`** définit la coordonnée de l'axe y du coin supérieur gauche de l'élément de forme SVG {{SVGElement("rect")}}, d'image {{SVGElement("image")}}, de fenêtre {{SVGElement("foreignObject")}} et de l'élément imbriqué {{SVGElement("svg")}} par rapport au plus proche `<svg>` présent dans le [système de coordonée](/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems). S'il est présent, il remplace l'attribut {{SVGAttr("y")}}.
