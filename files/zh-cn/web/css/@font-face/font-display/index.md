@@ -49,10 +49,11 @@ font-display: optional;
 ## 例子
 
 ```css
-@ font-face {
+@font-face {
   font-family: ExampleFont;
-  src: url（/path/to/fonts/examplefont.woff）format（'woff'），
-       url（/path/to/fonts/examplefont.eot）format（'eot'）;
+  src:
+    url("/path/to/fonts/example-font.woff") format("woff"),
+    url("/path/to/fonts/example-font.eot") format("embedded-opentype");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

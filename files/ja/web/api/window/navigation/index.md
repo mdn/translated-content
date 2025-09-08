@@ -10,7 +10,7 @@ l10n:
 
 **`navigation`** は {{domxref("Window")}} インターフェイスの読み取り専用のプロパティであり、現在の `window` に関連付けられた {{domxref("Navigation")}} オブジェクトを返します。
 
-これは{{domxref("ナビゲーション API", "", "", "nocode")}} のエントリーポイントです。
+これは{{domxref("Navigation API", "ナビゲーション API", "", "nocode")}} のエントリーポイントです。
 
 ## 値
 

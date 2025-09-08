@@ -1,9 +1,9 @@
 ---
-title: メディアのガイド
+title: メディアガイド
 short-title: ガイド
 slug: Web/Media/Guides
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 27bceead8e9b1fe9c92df0fa5e418f81bd5b9fdf
 ---
 
 このページでは、ウェブ上のメディアに関するガイドが掲載されています。
