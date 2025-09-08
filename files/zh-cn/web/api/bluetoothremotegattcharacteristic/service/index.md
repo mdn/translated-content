@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTCharacteristic.service`** 只读属性返回此特征所属的 {{domxref("BluetoothRemoteGATTService")}}。
+**`BluetoothRemoteGATTCharacteristic.service`** 只读属性返回此特性所属的 {{domxref("BluetoothRemoteGATTService")}}。
 
 ## 值
 
