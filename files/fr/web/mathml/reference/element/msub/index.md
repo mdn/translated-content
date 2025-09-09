@@ -19,7 +19,7 @@ L'élément MathML `<msub>` est utilisé pour attaché un indice à une expressi
 - mathcolor
   - : La couleur du texte. Vous pouvez utiliser `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#les_mots-clés).
 - subscriptshift
-  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value](/fr/docs/Web/MathML/Values#lengths).
+  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value](/fr/docs/Web/MathML/Reference/Values#lengths).
 
 ## Example
 

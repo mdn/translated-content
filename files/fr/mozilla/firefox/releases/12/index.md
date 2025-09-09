@@ -25,7 +25,7 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 - {{domxref("DOMParser")}} supporte désormais l'analyse de fragments de documents HTML.
 - {{domxref("XMLHttpRequest")}} supporte désormais des délais d'attente en utilisant la propriété `timeout` et l'évènement "timeout", ainsi que le gestionnaire d'évènements `ontimeout` de l'interface {{domxref("XMLHttpRequestEventTarget")}}.
-- {{domxref("XMLHttpRequest")}} peut désormais se charger à partir des [URIs `data:`](/fr/docs/Web/URI/Schemes/data).
+- {{domxref("XMLHttpRequest")}} peut désormais se charger à partir des [URIs `data:`](/fr/docs/Web/URI/Reference/Schemes/data).
 - Lors du téléchargement de grandes quantités de données, les gestionnaires d'événements {{domxref("XMLHttpRequest")}} de progression sont désormais appelés régulièrement avec l'ensemble `responseType` vers "moz-blob" et la réponse étant un {{domxref("Blob")}} contenant toutes les données reçues jusqu'ici. Cela permet aux gestionnaires de progression de commencer le traitement des données sans avoir à tout attendre.
 - Gecko supporte désormais le [multi-touch](/fr/docs/Web/API/Touch_events) (au lieu d'une touche à la fois) sur Android.
 - Lorsque vous éditez du texte à l'aide d'un IME, l'événement `input` est à présent envoyé chaque fois que le contenu de l'élément en cours d'édition a été changé, ce qui se passe après l'événement `compositionupdate` est envoyé pour indiquer que le texte de l'IME a été modifié. Vous pouvez donc utiliser le gestionnaire d'événements `input`, pour suivre l'évolution du contenu réel de l'élément.
@@ -49,7 +49,7 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### MathML
 
-- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/fr/docs/Web/MathML/Element#éléments_textuels). C'est particulièrement important pour certaines [notations mathématiques Arabes](https://www.w3.org/TR/arabic-math/).
+- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/fr/docs/Web/MathML/Reference/Element#éléments_textuels). C'est particulièrement important pour certaines [notations mathématiques Arabes](https://www.w3.org/TR/arabic-math/).
 - L'attribut d'alignement `align` definit dans MathML3 a été implementé pour {{MathMLElement("munder")}}, {{MathMLElement("mover")}} et {{MathMLElement("munderover")}}.
 
 ### Réseau

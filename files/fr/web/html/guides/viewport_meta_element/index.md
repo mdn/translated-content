@@ -57,7 +57,7 @@ Pour les pages qui définissent une échelle initiale ou maximale, cela signifie
 <meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
-Les autres [attributs](/fr/docs/Web/HTML/Element/meta#attributes) disponibles sont `minimum-scale`, `maximum-scale` et `user-scalable`. Ces propriétés affectent l'échelle et la largeur initiales, ainsi que la limitation des changements de niveau de zoom.
+Les autres [attributs](/fr/docs/Web/HTML/Reference/Elements/meta#attributes) disponibles sont `minimum-scale`, `maximum-scale` et `user-scalable`. Ces propriétés affectent l'échelle et la largeur initiales, ainsi que la limitation des changements de niveau de zoom.
 
 Tous les navigateurs mobiles ne gèrent pas les changements d'orientation de la même manière. Par exemple, Mobile Safari se contente souvent de zoomer la page lors du passage du portrait au paysage, au lieu de la disposer comme elle le ferait si elle était initialement chargée en paysage. Si les développeurs et développeuses Web veulent que leurs paramètres d'échelle restent cohérents lors du changement d'orientation sur l'iPhone, ils/elles doivent ajouter une valeur `maximum-scale` pour empêcher ce zoom, ce qui a l'effet secondaire parfois indésirable d'empêcher les utilisateurs/utilisatrices de faire un zoom avant&nbsp;:
 

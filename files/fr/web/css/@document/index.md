@@ -5,7 +5,7 @@ slug: Web/CSS/@document
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La [règle @ CSS](/fr/docs/Web/CSS/At-rule) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
+La [règle @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
 
 ```css
 @document url("https://www.example.com/")

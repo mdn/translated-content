@@ -183,7 +183,7 @@ function App(props) {
 }
 ```
 
-Ouvrez maintenant `public/index.html` et changez l'élément [`<title>`](/fr/docs/Web/HTML/Element/title) pour y inscrire `TodoMatic`. De cette façon, cela correspondra à la balise [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements) en haut de notre application.
+Ouvrez maintenant `public/index.html` et changez l'élément [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title) pour y inscrire `TodoMatic`. De cette façon, cela correspondra à la balise [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) en haut de notre application.
 
 ```html
 <title>TodoMatic</title>
@@ -195,10 +195,10 @@ Après avoir rafraîchi la page dans votre navigateur, vous pourrez voir quelque
 
 C'est plutôt laid et cela ne fonctionne pas encore, mais ce n'est pas grave&nbsp;: nous allons ajouter la mise en forme dans un instant. Tout d'abord, revoyons le JSX utilisé plus tôt et comment il correspond à nos scénarios d'utilisation&nbsp;:
 
-- Nous avons un élément [`<form>`](/fr/docs/Web/HTML/Element/form), avec un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text) qui permet d'écrire une nouvelle tâche, ainsi qu'un bouton pour soumettre le formulaire.
+- Nous avons un élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form), avec un élément [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text) qui permet d'écrire une nouvelle tâche, ainsi qu'un bouton pour soumettre le formulaire.
 - Nous avons une série de boutons qui seront utilisés pour filtrer nos tâches.
 - Nous avons également un titre qui nous indique le nombre de tâches restantes.
-- Nos trois tâches sont présentées sous forme de liste non-ordonnée. Chaque tâche est un élément de liste ([`<li>`](/fr/docs/Web/HTML/Element/li)), et dispose de boutons pour la modifier et la supprimer, ainsi qu'une case à cocher pour la marquer comme terminée.
+- Nos trois tâches sont présentées sous forme de liste non-ordonnée. Chaque tâche est un élément de liste ([`<li>`](/fr/docs/Web/HTML/Reference/Elements/li)), et dispose de boutons pour la modifier et la supprimer, ainsi qu'une case à cocher pour la marquer comme terminée.
 
 Le formulaire nous permettra de _créer_ des tâches&nbsp;; les boutons nous permettront de les _filtrer_&nbsp;; l'en-tête et la liste nous permettront de les _lire_. L'interface utilisateur pour l'_édition_ d'une tâche est manifestement absente pour le moment. Rien de trop grave, nous l'écrirons plus tard.
 
@@ -218,7 +218,7 @@ Ici, `aria-pressed` indique aux outils d'assistance (comme les lecteurs d'écran
 
 La classe `visually-hidden` n'a pas encore d'effet, car nous n'avons pas inclus de CSS. Une fois que nous aurons mis en place nos styles, tout élément avec cette classe ne sera plus visible à l'écran, mais toujours disponible pour les personnes navigant à l'aide de lecteurs d'écran. En effet, ces mots ne sont pas nécessaires pour les personnes voyantes&nbsp;; ils sont là pour fournir plus d'informations sur ce que fait le bouton pour les personnes utilisant des lecteurs d'écran qui n'ont pas le contexte visuel supplémentaire pour les aider.
 
-Plus bas, vous pouvez trouver notre élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)&nbsp;:
+Plus bas, vous pouvez trouver notre élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)&nbsp;:
 
 ```html
 <ul

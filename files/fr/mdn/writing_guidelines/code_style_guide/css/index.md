@@ -45,7 +45,7 @@ Dans le même esprit que la directive précédente, n'écrivez pas de code d'exe
 
 ### Utiliser des unités flexibles/relatives
 
-Pour une flexibilité maximale sur le plus grand nombre possible d'appareils, il est judicieux de dimensionner les conteneurs, le `padding`, etc. en utilisant des unités relatives comme les `em` et les `rem`, ou des pourcentages et des unités de « viewport » si vous souhaitez qu'ils varient en fonction de la largeur du « viewport ». Vous pouvez en savoir plus à ce sujet dans notre article [Éléments de construction d'un design adaptatif (Responsive Design)](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design#fluid_grids).
+Pour une flexibilité maximale sur le plus grand nombre possible d'appareils, il est judicieux de dimensionner les conteneurs, le `padding`, etc. en utilisant des unités relatives comme les `em` et les `rem`, ou des pourcentages et des unités de « viewport » si vous souhaitez qu'ils varient en fonction de la largeur du « viewport ». Vous pouvez en savoir plus à ce sujet dans notre article [Éléments de construction d'un design adaptatif (Responsive Design)](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#fluid_grids).
 
 ### Ne pas utiliser de réinitialisation
 
@@ -213,7 +213,7 @@ Lorsque vous incluez différents ensembles de styles pour différentes tailles d
 }
 ```
 
-Cela présente de nombreux avantages, exposés dans notre article [Priorité aux mobiles](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
+Cela présente de nombreux avantages, exposés dans notre article [Priorité aux mobiles](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ## Sélecteurs
 

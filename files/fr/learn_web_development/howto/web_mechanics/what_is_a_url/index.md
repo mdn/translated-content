@@ -65,7 +65,7 @@ _Le schéma_ est la première partie d'une URL et indique le protocole que le na
 
 Ensuite, on trouve _l'autorité_, séparée du schéma par les caractères `://`. Si elle est présente, l'autorité inclut _le domaine_ (par exemple `www.example.com`) et _le port_ (`80`), séparés par un double-point&nbsp;:
 
-- Le domaine indique le serveur web auquel s'adresse la requête. Il s'agit généralement [d'un nom de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name), mais on peut aussi trouver [une adresse IP](/fr/docs/Glossary/IP_Address) (ce qui est plus rare, car moins pratique).
+- Le domaine indique le serveur web auquel s'adresse la requête. Il s'agit généralement [d'un nom de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name), mais on peut aussi trouver [une adresse IP](/fr/docs/Glossary/IP_Address) (ce qui est plus rare, car moins pratique).
 - Le port indique la «&nbsp;porte&nbsp;» technique utilisée pour accéder aux ressources sur le serveur web. Cette information est généralement omise si le serveur web utilise les ports standard du protocole HTTP (80 pour HTTP, et 443 pour HTTPS) pour permettre l'accès aux ressources. Si le port utilisé n'est pas standard, il doit nécessairement être précisé.
 
 > [!NOTE]
@@ -95,15 +95,15 @@ Ensuite, on trouve _l'autorité_, séparée du schéma par les caractères `://`
 
 N'importe quelle URL peut être saisie dans la barre d'adresse du navigateur pour récupérer la ressource correspondante, mais ce n'est que la partie visible de l'iceberg&nbsp;!
 
-Le langage [HTML](/fr/docs/Glossary/HTML) [que nous aborderons plus tard](/fr/docs/Learn/HTML/Introduction_to_HTML) utilise énormément les URL&nbsp;:
+Le langage [HTML](/fr/docs/Glossary/HTML) [que nous aborderons plus tard](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8) utilise énormément les URL&nbsp;:
 
-- Pour créer des liens vers d'autres documents grâce aux éléments [`<a>`](/fr/docs/Web/HTML/Element/a)&nbsp;;
-- Pour rattacher un document aux ressources qui lui sont liées, par exemple grâce aux éléments [`<link>`](/fr/docs/Web/HTML/Element/link) ou [`<script>`](/fr/docs/Web/HTML/Element/script)&nbsp;;
-- Pour afficher des médias comme des images (avec l'élément [`<img>`](/fr/docs/Web/HTML/Element/img)), des vidéos (grâce à l'élément [`<video>`](/fr/docs/Web/HTML/Element/video)), des sons et de la musique (avec l'élément [`<audio>`](/fr/docs/Web/HTML/Element/audio)), etc.&nbsp;;
-- Pour afficher d'autres documents HTML à l'aide de l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+- Pour créer des liens vers d'autres documents grâce aux éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)&nbsp;;
+- Pour rattacher un document aux ressources qui lui sont liées, par exemple grâce aux éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) ou [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script)&nbsp;;
+- Pour afficher des médias comme des images (avec l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img)), des vidéos (grâce à l'élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)), des sons et de la musique (avec l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio)), etc.&nbsp;;
+- Pour afficher d'autres documents HTML à l'aide de l'élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 > [!NOTE]
-> Lorsqu'on fournit une URL pour charger des ressources au sein d'une page (par exemple en utilisant les éléments `<script>`, `<audio>`, `<img>`, `<video>` ou autre), on utilise généralement uniquement des URL HTTP et HTTPS, sauf exception (notamment pour les [URL de données](/fr/docs/Web/URI/Schemes/data) qui utilisent le protocole `data:`). Ainsi, le protocole FTP, par exemple, n'est pas sécurisé et n'est plus pris en charge par les navigateurs récents.
+> Lorsqu'on fournit une URL pour charger des ressources au sein d'une page (par exemple en utilisant les éléments `<script>`, `<audio>`, `<img>`, `<video>` ou autre), on utilise généralement uniquement des URL HTTP et HTTPS, sauf exception (notamment pour les [URL de données](/fr/docs/Web/URI/Reference/Schemes/data) qui utilisent le protocole `data:`). Ainsi, le protocole FTP, par exemple, n'est pas sécurisé et n'est plus pris en charge par les navigateurs récents.
 
 D'autres technologies comme [CSS](/fr/docs/Glossary/CSS) ou [JavaScript](/fr/docs/Glossary/JavaScript) utilisent également fréquemment les URL et constituent les briques de base du Web.
 
@@ -146,4 +146,4 @@ Les ordinateurs et serveurs se fichent bien des sémantiques linguistiques et vo
 
 ## Voir aussi
 
-[Les URL de données](/fr/docs/Web/URI/Schemes/data) sont des URL préfixées par le schéma `data:` qui permettent d'embarquer de petits fichiers à même le document.
+[Les URL de données](/fr/docs/Web/URI/Reference/Schemes/data) sont des URL préfixées par le schéma `data:` qui permettent d'embarquer de petits fichiers à même le document.

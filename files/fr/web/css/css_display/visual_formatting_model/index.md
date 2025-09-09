@@ -6,7 +6,7 @@ original_slug: Web/CSS/Visual_formatting_model
 
 {{CSSRef}}
 
-En CSS, le modèle de mise en forme visuelle est un algorithme qui traite un document afin de l'afficher sur un support visuel. Chaque élément du document est ainsi transformé en zéro, une ou plusieurs boîtes qui s'inscrivent dans [le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model). La disposition de chaque boîte est dictée par :
+En CSS, le modèle de mise en forme visuelle est un algorithme qui traite un document afin de l'afficher sur un support visuel. Chaque élément du document est ainsi transformé en zéro, une ou plusieurs boîtes qui s'inscrivent dans [le modèle de boîtes CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model). La disposition de chaque boîte est dictée par :
 
 - Les dimensions de la boîte qui peuvent être définies explicitement, contraintes ou non
 - Le type de la boîte : en ligne, en ligne et de niveau (_inline-level_), atomique, en bloc
@@ -24,7 +24,7 @@ Lors de cette étape, on crée les boîtes à partir des éléments du document.
 
 ### Les éléments de bloc et les boîtes de bloc
 
-Un élément est dit « de bloc » lorsque [la valeur calculée](/fr/docs/Web/CSS/computed_value) de la propriété {{cssxref("display")}} qui lui est appliquée vaut : `block`, `list-item` ou `table`. Un élément de bloc est représenté sous la forme d'un bloc (comme un paragraphe par exemple) et les blocs sont empilés verticalement les uns sur les autres.
+Un élément est dit « de bloc » lorsque [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de la propriété {{cssxref("display")}} qui lui est appliquée vaut : `block`, `list-item` ou `table`. Un élément de bloc est représenté sous la forme d'un bloc (comme un paragraphe par exemple) et les blocs sont empilés verticalement les uns sur les autres.
 
 Chaque boîte de bloc contribue au [contexte de mise en forme des blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context). Chaque élément de bloc génère au moins une boîte de niveau bloc, qu'on appelle la boîte de bloc principale. Certains éléments (comme les éléments d'une liste par exemple) génèrent d'autres boîtes afin de gérer les puces ou d'autres éléments typographiques.
 
@@ -168,18 +168,18 @@ Pour un élément positionné de façon fixe, le bloc englobant sera la zone d'a
 
 - [La référence CSS](/fr/docs/Web/CSS/Reference)
 - Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
-  - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/Inheritance)
+  - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Modes d'affichage](/fr/docs/Glossary/Layout_mode)
+  - [Modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/initial_value)
-    - [Calculées](/fr/docs/Web/CSS/computed_value)
-    - [Utilisées](/fr/docs/Web/CSS/used_value)
-    - [Effectives](/fr/docs/Web/CSS/actual_value)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-  - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-  - [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+    - [Initiales](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
+    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [Utilisées](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
+    - [Effectives](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)

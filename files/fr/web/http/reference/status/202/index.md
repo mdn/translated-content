@@ -24,4 +24,4 @@ Cette réponse est sans suite (<i lang="en">non-committal</i>)&nbsp;: HTTP ne re
 
 ## Voir aussi
 
-- [`Accept`](/fr/docs/Web/HTTP/Headers/Accept)
+- [`Accept`](/fr/docs/Web/HTTP/Reference/Headers/Accept)

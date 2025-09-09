@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/dfn
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<dfn>`** (aussi nommé « définition ») est utilisé pour indiquer le terme défini dans le contexte d'une expression ou d'une phrase de définition. L'élément [`<p>`](/fr/docs/Web/HTML/Element/p), le couple [`<dt>`](/fr/docs/Web/HTML/Element/dt)/[`<dd>`](/fr/docs/Web/HTML/Element/dd) ou l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) qui est le plus proche ancêtre de `<dfn>` est considéré comme la définition du terme.
+L'élément HTML **`<dfn>`** (aussi nommé « définition ») est utilisé pour indiquer le terme défini dans le contexte d'une expression ou d'une phrase de définition. L'élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p), le couple [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)/[`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd) ou l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) qui est le plus proche ancêtre de `<dfn>` est considéré comme la définition du terme.
 
 {{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
 
@@ -90,7 +90,7 @@ dfn {
 
 ## Attributs
 
-Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur `<dfn>`.
+Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur `<dfn>`.
 
 Pour cet élément, l'attribut **`title`** possède un sens particulier noté ci-après.
 
@@ -102,8 +102,8 @@ L'utilisation de l'élément `<dfn>` présente certains aspects peu évidents. N
 
 Le terme à définir est identifié selon ces règles :
 
-1. Si l'élément `<dfn>` possède un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title), la valeur de l'attribut `title` est considérée comme étant le terme défini. L'élément doit toujours contenir du texte, mais ce texte peut être une abréviation (peut-être en utilisant [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)) ou une autre forme du terme.
-2. Si le `<dfn>` contient un seul élément enfant et n'a pas de contenu textuel propre, et que l'élément enfant est un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) avec un attribut `title` lui-même, alors la valeur exacte du `<abbr>` de l'élément `title` est le terme défini.
+1. Si l'élément `<dfn>` possède un attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-title), la valeur de l'attribut `title` est considérée comme étant le terme défini. L'élément doit toujours contenir du texte, mais ce texte peut être une abréviation (peut-être en utilisant [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr)) ou une autre forme du terme.
+2. Si le `<dfn>` contient un seul élément enfant et n'a pas de contenu textuel propre, et que l'élément enfant est un élément [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr) avec un attribut `title` lui-même, alors la valeur exacte du `<abbr>` de l'élément `title` est le terme défini.
 3. Sinon, le contenu textuel de l'élément `<dfn>` est le terme défini. Ceci est illustré [dans le premier exemple ci-dessous](#basic_identification_of_a_term).
 
 > [!NOTE]
@@ -111,7 +111,7 @@ Le terme à définir est identifié selon ces règles :
 
 ### Liens vers des éléments de type `<dfn>`
 
-Si vous incluez un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) sur l'élément `<dfn>`, vous pouvez ensuite créer un lien vers celui-ci en utilisant des éléments [`<a>`](/fr/docs/Web/HTML/Element/a). Ces liens doivent être des utilisations du terme, l'objectif étant que le lecteur puisse accéder rapidement à la définition du terme s'il ne la connaît pas déjà, en cliquant sur le lien du terme.
+Si vous incluez un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id) sur l'élément `<dfn>`, vous pouvez ensuite créer un lien vers celui-ci en utilisant des éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a). Ces liens doivent être des utilisations du terme, l'objectif étant que le lecteur puisse accéder rapidement à la définition du terme s'il ne la connaît pas déjà, en cliquant sur le lien du terme.
 
 C'est ce que montre l'exemple sous [Liens vers les définitions](#links_to_definitions) ci-dessous.
 
@@ -140,7 +140,7 @@ L'élément `<dfn>` n'ayant ici pas d'attribut `title`, c'est le contenu textuel
 
 ### Liens vers des définitions
 
-Il est possible d'utiliser l'attribut `id` afin de créer des liens avec des éléments [`<a>`](/fr/docs/Web/HTML/Element/a) qui pointent vers la définition.
+Il est possible d'utiliser l'attribut `id` afin de créer des liens avec des éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) qui pointent vers la définition.
 
 #### HTML
 
@@ -175,7 +175,7 @@ Il est possible d'utiliser l'attribut `id` afin de créer des liens avec des él
 </p>
 ```
 
-On voit ici que l'élément possède désormais un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) avec la valeur `"definition-dfn"`. Cet attribut permet d'utiliser l'élément comme cible d'un lien. Plus bas, on crée un tel lien avec un élément [`<a>`](/fr/docs/Web/HTML/Element/a) dont l'attribut [`href`](/fr/docs/Web/HTML/Element/a#attr-href) vaut `"#definition-dfn"`, ce qui permet de remonter à la définition.
+On voit ici que l'élément possède désormais un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id) avec la valeur `"definition-dfn"`. Cet attribut permet d'utiliser l'élément comme cible d'un lien. Plus bas, on crée un tel lien avec un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) dont l'attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#attr-href) vaut `"#definition-dfn"`, ce qui permet de remonter à la définition.
 
 #### Résultat
 
@@ -183,7 +183,7 @@ On voit ici que l'élément possède désormais un attribut [`id`](/fr/docs/Web/
 
 ### Utiliser les abréviations et les définitions
 
-Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le définit. Pour cela, on peut utiliser `<dfn>` et [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) de la façon suivante :
+Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le définit. Pour cela, on peut utiliser `<dfn>` et [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr) de la façon suivante :
 
 #### HTML
 
@@ -218,5 +218,5 @@ On notera que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'él
 
 ## Voir aussi
 
-- Éléments liés aux listes de définitions : [`<dl>`](/fr/docs/Web/HTML/Element/dl), [`<dt>`](/fr/docs/Web/HTML/Element/dt), [`<dd>`](/fr/docs/Web/HTML/Element/dd)
-- L'élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)
+- Éléments liés aux listes de définitions : [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl), [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt), [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)
+- L'élément [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr)

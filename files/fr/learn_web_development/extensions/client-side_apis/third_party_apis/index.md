@@ -28,11 +28,11 @@ Les API tierces sont des API qui sont fournis par des tiers, généralement des 
 Regardons [cet exemple qui utilise l'API MapQuest](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/) et voyons avec lui les différences entre les API tierces et celles du navigateur.
 
 > [!NOTE]
-> Vous pouvez [récupérer l'ensemble des exemples de code](/fr/docs/Learn#obtenir_nos_exemples_de_code) en une seule fois. Dans ce cas, il vous suffit de rechercher dans votre dépôt les fichiers utilisés pour chaque section.
+> Vous pouvez [récupérer l'ensemble des exemples de code](/fr/docs/Learn_web_development#obtenir_nos_exemples_de_code) en une seule fois. Dans ce cas, il vous suffit de rechercher dans votre dépôt les fichiers utilisés pour chaque section.
 
 ### Elles sont situées sur des serveurs tiers
 
-Les API fournies par le navigateur sont construites **dans** le navigateur et on peut y accéder immédiatement avec du code JavaScript. Ainsi, l'API Web Audio [que nous avons vu dans cet article introductif](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#comment_les_api_fonctionnent-elles) s'utilise via l'objet [`AudioContext`](/fr/docs/Web/API/AudioContext) qui est fourni nativement&nbsp;:
+Les API fournies par le navigateur sont construites **dans** le navigateur et on peut y accéder immédiatement avec du code JavaScript. Ainsi, l'API Web Audio [que nous avons vu dans cet article introductif](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#comment_les_api_fonctionnent-elles) s'utilise via l'objet [`AudioContext`](/fr/docs/Web/API/AudioContext) qui est fourni nativement&nbsp;:
 
 ```js
 const audioCtx = new AudioContext();
@@ -43,7 +43,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
 ```
 
-En revanche, les API tierces sont situées sur des serveurs tiers. Pour y accéder avec JavaScript, il faut d'abord se connecter aux fonctionnalités de l'API afin de les rendre disponibles sur la page. Cela implique généralement de charger une bibliothèque JavaScript disponible sur le serveur via un élément [`<script>`](/fr/docs/Web/HTML/Element/script). Pour notre exemple avec MapQuest, voici ce que ça donne&nbsp;:
+En revanche, les API tierces sont situées sur des serveurs tiers. Pour y accéder avec JavaScript, il faut d'abord se connecter aux fonctionnalités de l'API afin de les rendre disponibles sur la page. Cela implique généralement de charger une bibliothèque JavaScript disponible sur le serveur via un élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script). Pour notre exemple avec MapQuest, voici ce que ça donne&nbsp;:
 
 ```html
 <script
@@ -67,7 +67,7 @@ const map = L.mapquest.map("map", {
 
 Ici on crée une variable dans laquelle on enregistre les informations de la carte puis on crée une nouvelle carte à l'aide de la méthode `mapquest.map()` qui prend comme argument&nbsp;:
 
-- l'identifiant (la valeur de l'attribut `id`) d'un élément [`<div>`](/fr/docs/Web/HTML/Element/div) dans lequel on souhaite afficher la carte (ici, c'est `"map"`)
+- l'identifiant (la valeur de l'attribut `id`) d'un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) dans lequel on souhaite afficher la carte (ici, c'est `"map"`)
 - un objet indiquant les options pour la carte qu'on souhaite afficher. Ici, on indique les coordonnées du centre de la carte, le pavage utilisé (ici on utilise la méthode `mapquest.tileLayer()` ainsi que le niveau de zoom.
 
 C'est tout ce dont l'API MapQuest a besoin pour dessiner une carte. C'est le serveur auquel on se connecte qui gère les aspects plus compliqués (comme afficher les bonnes tuiles pour la zone géographique, etc.).
@@ -77,7 +77,7 @@ C'est tout ce dont l'API MapQuest a besoin pour dessiner une carte. C'est le ser
 
 ### Des clés d'API sont nécessaires pour les utiliser
 
-Dans les navigateurs, [comme nous l'avons vu dans le premier article](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#elles_disposent_de_mécanismes_de_sécurité_supplémentaires_adéquats), les sécurités relatives aux API sont gérées via des permissions afin d'avertir l'utilisatrice ou l'utilisateur afin d'éviter les utilisations malveillantes de la part des sites.
+Dans les navigateurs, [comme nous l'avons vu dans le premier article](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#elles_disposent_de_mécanismes_de_sécurité_supplémentaires_adéquats), les sécurités relatives aux API sont gérées via des permissions afin d'avertir l'utilisatrice ou l'utilisateur afin d'éviter les utilisations malveillantes de la part des sites.
 
 Pour les API tierces, le système est légèrement différent. Généralement, ce sont des clés qui sont utilisées afin de fournir l'accès aux fonctionnalités de l'API. Dans ce système, la clé sert à protéger des abus de la part de celles et ceux qui développent envers le site tiers plutôt qu'à protéger la personne qui utilise le site.
 
@@ -100,7 +100,7 @@ L'existence d'une telle clé d'API permet au fournisseur tiers de contrôler les
 
 Ajoutons quelques fonctionnalités à cet exemple MapQuest afin d'illustrer le fonctionnement d'autres aspects de l'API.
 
-1. Pour commencer cette section, copiez [le fichier initial](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html) dans un nouveau répertoire. Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn#obtenir_nos_exemples_de_code), vous disposez déjà d'une copie située sous le répertoire _javascript/apis/third-party-apis/mapquest/start_.
+1. Pour commencer cette section, copiez [le fichier initial](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html) dans un nouveau répertoire. Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn_web_development#obtenir_nos_exemples_de_code), vous disposez déjà d'une copie située sous le répertoire _javascript/apis/third-party-apis/mapquest/start_.
 2. Ensuite, [rendez-vous sur le site MapQuest pour le développement](https://developer.mapquest.com/), créez un compte puis créez une clé de développement (au moment où nous écrivons ces lignes, sur le site, le nom utilisé est "<i lang="en">consumer key</i>" et la procédure de création demande aussi la saisie d'une URL "<i lang="en">callback URL</i>" qui est optionnelle (vous pouvez la laisser vide).
 3. Ouvrez un éditeur pour éditer le fichier initial et remplacez la valeur pour la clé d'API avec la vôtre.
 
@@ -182,7 +182,7 @@ La plupart des API reposent sur l'obtention et l'utilisation d'une clé de déve
 
 1. Demandez une clé pour l'API Article Search — créez une nouvelle application et sélectionnez cette API, fournissez un nom et une description pour votre application, activez le bouton sous "<i lang="en">Article Search API</i>" puis cliquez sur "<i lang="en">Create</i>").
 2. Vous pouvez alors récupérer la clé d'API à partir de la page suivante.
-3. Pour construire le socle de notre exemple, copiez le répertoire [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start). Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn#obtenir_nos_exemples_de_code), vous disposez déjà d'un exemplaire de ces fichiers et vous pourrez les trouver sous le répertoire _javascript/apis/third-party-apis/nytimes/start_. L'élément `<script>` contient un certain nombre de variables nécessaires à l'initialisation de l'exemple. Nous allons ensuite remplir les fonctionnalités nécessaires.
+3. Pour construire le socle de notre exemple, copiez le répertoire [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start). Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn_web_development#obtenir_nos_exemples_de_code), vous disposez déjà d'un exemplaire de ces fichiers et vous pourrez les trouver sous le répertoire _javascript/apis/third-party-apis/nytimes/start_. L'élément `<script>` contient un certain nombre de variables nécessaires à l'initialisation de l'exemple. Nous allons ensuite remplir les fonctionnalités nécessaires.
 
 Au final, on souhaite que l'application permette de saisir un terme de recherche, des dates optionnelles pour le début et la fin de la période à rechercher. Nous utiliserons alors ces paramètres afin d'envoyer des requêtes sur l'API Article Search puis nous afficherons les résultats obtenus.
 
@@ -190,7 +190,7 @@ Au final, on souhaite que l'application permette de saisir un terme de recherche
 
 ### Connecter l'API à l'application
 
-Tout d'abord, vous devrez créer une connexion entre l'API et votre application. Pour cette API, vous devez fournir la clé d'API comme paramètre [GET](/fr/docs/Web/HTTP/Methods/GET) à chaque requête.
+Tout d'abord, vous devrez créer une connexion entre l'API et votre application. Pour cette API, vous devez fournir la clé d'API comme paramètre [GET](/fr/docs/Web/HTTP/Reference/Methods/GET) à chaque requête.
 
 1. Localisez la ligne qui suit et remplacez la valeur avec la clé de développement que vous avez obtenu plus tôt&nbsp;:
 
@@ -236,7 +236,7 @@ Tout d'abord, vous devrez créer une connexion entre l'API et votre application.
 - L'URL de base (telle que fournie par la variable `baseURL`).
 - La clé d'API qui a été passée au paramètre d'URL `api-key` et dont la valeur dans notre script est fournie par la variable `key`.
 - Le nombre de pages est fourni dans l'URL avec le paramètre `page` et provient de la variable `pageNumber` dans notre script.
-- Le terme de la recherche est fourni dans l'URL avec le paramètre `q` et provient du texte `searchTerm` fourni par l'élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+- Le terme de la recherche est fourni dans l'URL avec le paramètre `q` et provient du texte `searchTerm` fourni par l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 - Le type de document qu'on souhaite obtenir dans les résultats est une expression passée via le paramètre `fq` de l'URL. Ici, on souhaite obtenir les articles.
 
 Après, on utilise un ensemble d'instructions [`if()`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) pour vérifier si des valeurs ont été fournies pour les champs `startDate` et `endDate` dans le formulaire. Si c'est le cas, on utilise ces valeurs pour renseigner les paramètres d'URL `begin_date` et/ou `end_date`.
@@ -251,7 +251,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=VOTRE-CLE-D-API
 > Pour en savoir plus sur les différents paramètres d'URL qui peuvent être utilisés, vous pouvez consulter [la documentation du NYTimes pour le développement](https://developer.nytimes.com/).
 
 > [!NOTE]
-> Dans cet exemple, la validation du formulaire est assez rudimentaire&nbsp;: le terme recherché doit nécessairement être renseigné avant de pouvoir valider le formulaire grâce à l'attribut `required`. Les champs pour les dates doivent suivre un format particulier et elles ne seront pas envoyées tant que leur valeur ne se composera pas de 8 chiffres (en HTML, c'est ce qui est indiqué par l'attribut `pattern="[0-9]{8}"`). Voir la page sur [la validation des données d'un formulaire](/fr/docs/Learn/Forms/Form_validation) pour en savoir plus sur ce fonctionnement.
+> Dans cet exemple, la validation du formulaire est assez rudimentaire&nbsp;: le terme recherché doit nécessairement être renseigné avant de pouvoir valider le formulaire grâce à l'attribut `required`. Les champs pour les dates doivent suivre un format particulier et elles ne seront pas envoyées tant que leur valeur ne se composera pas de 8 chiffres (en HTML, c'est ce qui est indiqué par l'attribut `pattern="[0-9]{8}"`). Voir la page sur [la validation des données d'un formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation) pour en savoir plus sur ce fonctionnement.
 
 ### Récupérer des données depuis l'API
 
@@ -335,12 +335,12 @@ function displayResults(json) {
 
 Il y a pas mal de code ici. Reprenons étape par étape pour l'expliquer&nbsp;:
 
-- La boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while) est utilisée afin de supprimer tout le contenu d'un élément du DOM. Dans ce cas, on enlève ce qu'il y a dans l'élément [`<section>`](/fr/docs/Web/HTML/Element/section). On teste si la `<section>` possède un élément enfant et si c'est le cas, on retire le premier, ainsi de suite jusqu'à ce que l'élément `<section>` n'ait plus d'éléments enfants.
+- La boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while) est utilisée afin de supprimer tout le contenu d'un élément du DOM. Dans ce cas, on enlève ce qu'il y a dans l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section). On teste si la `<section>` possède un élément enfant et si c'est le cas, on retire le premier, ainsi de suite jusqu'à ce que l'élément `<section>` n'ait plus d'éléments enfants.
 - Ensuite, on renseigne la variable `articles` avec `json.response.docs`&nbsp;: le tableau contenant les objets qui représentent les articles renvoyés par la recherche. Ce renommage sert uniquement à rendre le code plus simple.
-- Le premier bloc [`if()`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) vérifie si 10 articles ont été renvoyés par l'API (cette dernière envoie les articles par bloc de 10 à chaque appel). Dans ce cas, on affiche l'élément [`<nav>`](/fr/docs/Web/HTML/Element/nav) qui contient des boutons de pagination _10 articles précédents_/_10 articles suivants_. S'il y a moins de 10 articles, tout le contenu tiendra sur une page et il ne sera pas nécessaire d'avoir les boutons. Nous verrons comment «&nbsp;câbler&nbsp;» ces boutons pour qu'ils fonctionnent dans la prochaine section.
-- Le bloc `if()` suivant sert à vérifier si aucun article n'a été renvoyé. Lorsqu'il n'y a aucun résultat, on crée un élément [`<p>`](/fr/docs/Web/HTML/Element/p) qui affiche le texte "Aucun résultat reçu" puis on insère ce paragraphe dans l'élément `<section>`.
+- Le premier bloc [`if()`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) vérifie si 10 articles ont été renvoyés par l'API (cette dernière envoie les articles par bloc de 10 à chaque appel). Dans ce cas, on affiche l'élément [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav) qui contient des boutons de pagination _10 articles précédents_/_10 articles suivants_. S'il y a moins de 10 articles, tout le contenu tiendra sur une page et il ne sera pas nécessaire d'avoir les boutons. Nous verrons comment «&nbsp;câbler&nbsp;» ces boutons pour qu'ils fonctionnent dans la prochaine section.
+- Le bloc `if()` suivant sert à vérifier si aucun article n'a été renvoyé. Lorsqu'il n'y a aucun résultat, on crée un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) qui affiche le texte "Aucun résultat reçu" puis on insère ce paragraphe dans l'élément `<section>`.
 - Si des articles sont renvoyés, on commence par créer les éléments qu'on souhaite utiliser afin de les afficher puis on insère le contenu dans chaque puis on insère ces éléments dans le DOM. Pour connaître les propriétés des objets obtenues via l'API, nous avons consulté la référence de l'API _Article Search_ (voir [les API NYTimes](https://developer.nytimes.com/apis)). La plupart de ces opérations sont assez parlantes mais voici quelques-unes qui sont notables&nbsp;:
-  - On utilise une boucle [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) pour parcourir les mots-clés associés à chaque article et on insère ces mots-clés dans des éléments [`<span>`](/fr/docs/Web/HTML/Element/span) à l'intérieur d'un paragraphe `<p>`. De cette façon, nous pourrons plus facilement mettre en forme ces mots-clés.
+  - On utilise une boucle [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) pour parcourir les mots-clés associés à chaque article et on insère ces mots-clés dans des éléments [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) à l'intérieur d'un paragraphe `<p>`. De cette façon, nous pourrons plus facilement mettre en forme ces mots-clés.
   - On utilise un bloc `if()` (`if(current.multimedia.length > 0) { … }`) afin de voir si l'article possède des images associées. Si c'est le cas, on affiche la première image qui existe.
 
 ### Câbler les boutons de pagination

@@ -10,7 +10,7 @@ L'élément HTML **`<param>`** définit les paramètres qui peuvent être employ
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `name`
   - : Le nom du paramètre

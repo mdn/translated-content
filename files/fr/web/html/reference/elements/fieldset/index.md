@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/fieldset
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<fieldset>`** est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes ([`<label>`](/fr/docs/Web/HTML/Element/label)) dans un formulaire HTML.
+L'élément HTML **`<fieldset>`** est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes ([`<label>`](/fr/docs/Web/HTML/Reference/Elements/label)) dans un formulaire HTML.
 
 {{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
 
@@ -39,21 +39,21 @@ input {
 }
 ```
 
-Comme on peut le voir dans l'exemple ci-avant, l'élément `<fieldset>` permet de regrouper une partie d'un formulaire HTML et d'associer une légende ([`<legend>`](/fr/docs/Web/HTML/Element/legend)) décrivant ce groupe. Cet élément utilise quelques attributs et notamment `form` dont la valeur correspond à la valeur de l'attribut `id` d'un élément [`<form>`](/fr/docs/Web/HTML/Element/form) de la même page. De cette façon, on peut avoir un élément `<fieldset>` qui soit rattaché à un formulaire mais qui ne soit pas imbriqué dans ce formulaire. L'attribut `disabled` permet de désactiver l'élément `<fieldset>` ainsi que l'ensemble de son contenu via une seule valeur.
+Comme on peut le voir dans l'exemple ci-avant, l'élément `<fieldset>` permet de regrouper une partie d'un formulaire HTML et d'associer une légende ([`<legend>`](/fr/docs/Web/HTML/Reference/Elements/legend)) décrivant ce groupe. Cet élément utilise quelques attributs et notamment `form` dont la valeur correspond à la valeur de l'attribut `id` d'un élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) de la même page. De cette façon, on peut avoir un élément `<fieldset>` qui soit rattaché à un formulaire mais qui ne soit pas imbriqué dans ce formulaire. L'attribut `disabled` permet de désactiver l'élément `<fieldset>` ainsi que l'ensemble de son contenu via une seule valeur.
 
 ## Attributs
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `disabled`
-  - : Si cet attribut booléen est utilisé, les contrôles de formulaires des éléments descendants sont désactivés (ils ne peuvent pas être édités). Bien qu'ils ne soient pas éditables, les données de ces contrôles seront envoyées avec le formulaire. Ces contrôles ne recevront pas les évènements liés à la navigation (tels que ceux liés aux clics ou au focus). La plupart du temps, ces contrôles désactivés apparaissent comme grisés. On notera que les éléments de formulaires au sein de l'élément [`<legend>`](/fr/docs/Web/HTML/Element/legend) ne seront pas désactivés.
+  - : Si cet attribut booléen est utilisé, les contrôles de formulaires des éléments descendants sont désactivés (ils ne peuvent pas être édités). Bien qu'ils ne soient pas éditables, les données de ces contrôles seront envoyées avec le formulaire. Ces contrôles ne recevront pas les évènements liés à la navigation (tels que ceux liés aux clics ou au focus). La plupart du temps, ces contrôles désactivés apparaissent comme grisés. On notera que les éléments de formulaires au sein de l'élément [`<legend>`](/fr/docs/Web/HTML/Reference/Elements/legend) ne seront pas désactivés.
 - `form`
-  - : La valeur de cet attribut correspond à la valeur de l'attribut `id` de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel il est rattaché. La valeur par défaut est l'identifiant du plus proche élément [`<form>`](/fr/docs/Web/HTML/Element/form) dont l'élément `<fieldset>` est le descendant. Attention, cet attribut peut être source de confusion, tout élément `<input>` contenu au sein du `<fieldset>` et qui devra être associé au formulaire devra également avoir l'attribut `form` explicitement défini. En JavaScript, on pourra utiliser la propriété [`HTMLFormElement.elements`](/fr/docs/Web/API/HTMLFormElement/elements) pour vérifier le bon rattachement des éléments au formulaire.
+  - : La valeur de cet attribut correspond à la valeur de l'attribut `id` de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel il est rattaché. La valeur par défaut est l'identifiant du plus proche élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) dont l'élément `<fieldset>` est le descendant. Attention, cet attribut peut être source de confusion, tout élément `<input>` contenu au sein du `<fieldset>` et qui devra être associé au formulaire devra également avoir l'attribut `form` explicitement défini. En JavaScript, on pourra utiliser la propriété [`HTMLFormElement.elements`](/fr/docs/Web/API/HTMLFormElement/elements) pour vérifier le bon rattachement des éléments au formulaire.
 - `name`
   - : Le nom associé au groupe.
 
     > [!NOTE]
-    > L'étiquette du groupe de contrôle est donné par le premier élément enfant [`<legend>`](/fr/docs/Web/HTML/Element/legend) du `<fieldset>`.
+    > L'étiquette du groupe de contrôle est donné par le premier élément enfant [`<legend>`](/fr/docs/Web/HTML/Reference/Elements/legend) du `<fieldset>`.
 
 ## Mise en forme avec CSS
 
@@ -61,7 +61,7 @@ L'élément `<fieldset>` est quelque peu particulier pour la mise en forme.
 
 La valeur initiale de la propriété [`display`](/fr/docs/Web/CSS/display) pour cet élément est `block` et l'élément crée un [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context). Si l'élément `<fieldset>` est mis en forme avec une valeur `display` qui correspond à un style en ligne, celui-ci se comportera comme `inline-block` et sinon comme `block`. Par défaut, une bordure de 2 pixels ondulée entoure le contenu de l'élément et il y a un léger _padding_. Par défaut, l'élément a `min-inline-size: min-content`.
 
-Si un élément [`<legend>`](/fr/docs/Web/HTML/Element/legend) est présent, il est placé au-dessus de la bordure située au début de l'axe de bloc. L'élément `<legend>` se réduit si besoin et établit également un contexte de formatage. Sa valeur `display` utilisée est `block` (autrement dit, on pourra le cibler avec `display: inline`, il continuera de se comporter comme `block`).
+Si un élément [`<legend>`](/fr/docs/Web/HTML/Reference/Elements/legend) est présent, il est placé au-dessus de la bordure située au début de l'axe de bloc. L'élément `<legend>` se réduit si besoin et établit également un contexte de formatage. Sa valeur `display` utilisée est `block` (autrement dit, on pourra le cibler avec `display: inline`, il continuera de se comporter comme `block`).
 
 Une boîte anonyme contiendra le contenu de `<fieldset>` et héritera de certaines propriétés de `<fieldset>`. Si l'élément `<fieldset>` est mis en forme avec `display: grid` ou `display: inline-grid`, la boîte anonyme aura un contexte de formatage de grille. Si `<fieldset>` est mis en forme avec `display: flex` ou `display: inline-flex`, la boîte anonyme aura un contexte de formatage flexible. Dans tous les autres cas, la boîte anonyme aura un contexte de formatage de bloc.
 
@@ -208,7 +208,7 @@ Dans cet exemple, on voit comment l'attribut `disabled` permet de désactiver un
 
 ## Voir aussi
 
-- L'élément [`<legend>`](/fr/docs/Web/HTML/Element/legend)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
-- L'élément [`<label>`](/fr/docs/Web/HTML/Element/label)
-- L'élément [`<form>`](/fr/docs/Web/HTML/Element/form)
+- L'élément [`<legend>`](/fr/docs/Web/HTML/Reference/Elements/legend)
+- L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
+- L'élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label)
+- L'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)
