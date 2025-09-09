@@ -38,7 +38,7 @@ Le système de fichiers d'origine privé (OPFS) est un point de terminaison de s
 
 Voici quelques cas d'utilisation possibles&nbsp;:
 
-- Applications avec téléchargeur persistant
+- Applications avec téléchargement persistant
   - Lorsqu'un fichier ou un répertoire est sélectionné pour téléchargement, vous pouvez copier le fichier dans un bac à sable local et télécharger un morceau à la fois.
   - L'application peut reprendre les téléchargements après une interruption, comme la fermeture ou le plantage du navigateur, une perte de connexion ou l'arrêt de l'ordinateur.
 
@@ -145,7 +145,7 @@ const dirName = "directoryToGetName";
 const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ```
 
-La fonction asynchrone suivante utilise `resolve()` Pour trouver le chemin d'accès à un fichier choisi, par rapport à un <i lang="en">handle</i> de répertoire spécifiée.
+La fonction asynchrone suivante utilise `resolve()` Pour trouver le chemin d'accès à un fichier choisi, par rapport à un <i lang="en">handle</i> de répertoire spécifié.
 
 ```js
 async function returnPathDirectories(directoryHandle) {
@@ -265,5 +265,5 @@ onmessage = async (e) => {
 
 ## Voir aussi
 
-- [L'API d'accès au système de fichiers&nbsp;: simplifiant l'accès aux fichiers locaux](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
-- [Le système de fichiers d'origine privé](https://web.dev/articles/origin-private-file-system)
+- [L'API d'accès au système de fichiers&nbsp;: simplifiant l'accès aux fichiers locaux <sup>(angl.)</sup>](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
+- [Le système de fichiers d'origine privé <sup>(angl.)</sup>](https://web.dev/articles/origin-private-file-system)
