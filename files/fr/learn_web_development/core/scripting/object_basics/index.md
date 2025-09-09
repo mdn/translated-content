@@ -255,7 +255,7 @@ salutation: function() {
 }
 ```
 
-Vous vous demandez probablement ce que signifie « `this` ». Le mot-clé `this` se réfère à l'objet courant dans lequel le code est éxécuté — dans notre cas, `this` est l'équivalent de `personne`. Alors, pourquoi ne pas écrire `personne` à la place ? Comme vous le verrez dans l'article [la programmation JavaScript orientée objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS), `this` est très utile — il permet de s'assurer que les bonnes valeurs sont utilisées quand le contexte d'éxécution change (on peut par exemple avoir deux personnes, sous la forme de deux objets, avec des noms de variable différents).
+Vous vous demandez probablement ce que signifie « `this` ». Le mot-clé `this` se réfère à l'objet courant dans lequel le code est éxécuté — dans notre cas, `this` est l'équivalent de `personne`. Alors, pourquoi ne pas écrire `personne` à la place ? Comme vous le verrez dans l'article [la programmation JavaScript orientée objet pour les débutants](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript), `this` est très utile — il permet de s'assurer que les bonnes valeurs sont utilisées quand le contexte d'éxécution change (on peut par exemple avoir deux personnes, sous la forme de deux objets, avec des noms de variable différents).
 
 Essayons d'illustrer nos propos par une paire d'objet `personne` simplifiée :
 
