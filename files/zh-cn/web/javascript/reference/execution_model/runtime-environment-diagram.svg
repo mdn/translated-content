@@ -192,7 +192,7 @@
     <polygon class="cls-3" points="233.7 222.44 229 225.05 229.93 222.89 228.52 221.01 233.7 222.44"/>
   </g>
   <circle class="cls-20" cx="307.3" cy="181.2" r="17.88"/>
-  <text class="cls-10" transform="translate(261.2 158.61)"><tspan x="0" y="0">一个 SharedArrayBuffer</tspan></text>
+  <text class="cls-10" transform="translate(261.2 158.61)"><tspan x="0" y="0">SharedArrayBuffer</tspan></text>
   <rect class="cls-16" x="24.67" y="376.85" width="542.86" height="283.71"/>
   <rect class="cls-16" x="415.25" y="390.62" width="137.44" height="250.65"/>
   <rect class="cls-18" x="425.24" y="585.24" width="117.46" height="46.62"/>
@@ -243,13 +243,13 @@
     <polygon class="cls-3" points="202.47 430.52 198.15 433.72 198.79 431.45 197.15 429.78 202.47 430.52"/>
   </g>
   <circle class="cls-20" cx="300.8" cy="430.52" r="17.88"/>
-  <text class="cls-10" transform="translate(234.45 461.36)"><tspan x="0" y="0">一个 SharedArrayBuffer</tspan></text>
+  <text class="cls-10" transform="translate(234.45 461.36)"><tspan x="0" y="0">SharedArrayBuffer</tspan></text>
   <g>
     <line class="cls-22" x1="303.94" y1="206.19" x2="300.9" y2="405.58"/>
     <polygon class="cls-3" points="304.05 199.13 299.83 209.01 303.93 206.71 307.96 209.14 304.05 199.13"/>
     <polygon class="cls-3" points="300.8 412.64 296.88 402.63 300.91 405.05 305.01 402.75 300.8 412.64"/>
   </g>
-  <text class="cls-12" transform="translate(307.81 359.56)"><tspan x="0" y="0">共享存储</tspan></text>
+  <text class="cls-12" transform="translate(307.81 359.56)"><tspan x="0" y="0">共享内存</tspan></text>
   <text class="cls-12" transform="translate(380.97 291.91)"><tspan x="0" y="0">执行</tspan></text>
   <text class="cls-12" transform="translate(379.14 622.03)"><tspan x="0" y="0">执行</tspan></text>
 </svg>

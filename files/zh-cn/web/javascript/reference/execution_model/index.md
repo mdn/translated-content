@@ -25,7 +25,7 @@ JavaScript 引擎实现了 [ECMAScript（JavaScript）语言](/zh-CN/docs/Web/Ja
 - [（作业）**队列**](#作业队列和事件循环)：这在 HTML 中（通常）被称为事件循环（_event loop_），它可以在 JavaScript 中实现异步编程，同时又是单线程的。之所以称其为队列，是因为它通常是先入先出：先执行的工作在后执行的工作之前。
 - [（执行上下文）**栈**](#栈与执行上下文)：这就是所谓的调用栈（_call stack_），允许通过进入和退出执行上下文（如函数）来传输控制流。之所以称为栈，是因为它是后进先出的。每个任务进入时都会向（空）栈中推入一个新帧，退出时则会清空栈。
 
-这是三种不同的数据结构，用于跟踪不同的数据。我们将在下面的章节中详细介绍队列和堆栈。要了解堆内存如何分配和释放，请参阅 [内存管理](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)。
+这是三种不同的数据结构，用于跟踪不同的数据。我们将在下面的章节中详细介绍队列和堆栈。要了解堆内存如何分配和释放，请参阅[内存管理](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)。
 
 每个代理都类似于一个线程（注意，底层实现可能是也可能不是实际的操作系统线程）。每个代理可以拥有多个[域](#域)（与全局对象一一对应），这些代理可以同步访问彼此，因此需要在单个执行线程中运行。一个代理也有一个单一的内存模型，表明它是否是小端序的、是否可以[同步阻塞](#并发性与确保进展)、原子操作是否[无锁](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree)等。
 
@@ -201,7 +201,7 @@ promise.then(() => {
 
 ### 跨代理交流与内存模型
 
-如前所述，代理通过共享内存进行通信。在网络上，内存是通过 [`postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 方法共享的。[使用 web worker 指南](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)对此进行了概述。通常情况下，数据只按值传递（通过[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)），因此不涉及任何并发复杂性。要共享内存，必须发布一个 {{jsxref("SharedArrayBuffer")}} 对象，多个代理可以同时访问该对象。两个代理通过 `SharedArrayBuffer` 共享同一内存后，就可以通过 {{jsxref("Atomics")}} 对象同步执行。
+如前所述，代理通过共享内存进行通信。在网络上，内存是通过 [`postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 方法共享的。[使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) 指南对此进行了概述。通常情况下，数据只按值传递（通过[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)），因此不涉及任何并发复杂性。要共享内存，必须发布一个 {{jsxref("SharedArrayBuffer")}} 对象，多个代理可以同时访问该对象。两个代理通过 `SharedArrayBuffer` 共享同一内存后，就可以通过 {{jsxref("Atomics")}} 对象同步执行。
 
 访问共享内存有两种方式：普通内存访问（非原子访问）和原子内存访问。后者是[顺序一致的](https://en.wikipedia.org/wiki/Sequential_consistency)（这意味着集群中的所有代理都同意对事件进行严格的总排序），而前者是无序的（这意味着不存在排序）。JavaScript 不提供具有其他排序保证的操作。
 
