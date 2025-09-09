@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-**`DeviceMotionEventRotationRate`** 接口的 {{domxref("Device Orientation Events", "", "", "nocode")}} 提供有关设备绕三个轴旋转速度的信息。
+{{domxref("Device Orientation Events", "设备方向事件", "", "nocode")}}的 **`DeviceMotionEventRotationRate`** 接口提供有关设备绕三个轴旋转速度的信息。
 
 ## 实例属性
 
