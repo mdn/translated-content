@@ -115,7 +115,8 @@ utilisant {{JSXref("encodeURI()")}} s'il est un descendant d'un élément `.esca
 <hr />
 <div class="escape">
   <div>
-    Ceci est échappé. <span class="no-escape">Mais ceci n'est pas échappé.</span>
+    Ceci est échappé.
+    <span class="no-escape">Mais ceci n'est pas échappé.</span>
   </div>
   <div class="no-escape">Ceci n'est pas échappé.</div>
 </div>
