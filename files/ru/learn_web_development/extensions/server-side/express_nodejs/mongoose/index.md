@@ -2,8 +2,6 @@
 title: "Учебник Express часть 3: Использование базы данных (с помощью Mongoose)"
 short-title: "3: Использование баз данных с Mongoose"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
-page-type: learn-module-chapter
-sidebar: learnsidebar
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
