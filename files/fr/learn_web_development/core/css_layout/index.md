@@ -20,7 +20,7 @@ original_slug: Learn/CSS/CSS_layout
 
 Avant de commencer ce module, vous devriez déjà :
 
-1. Connaître les bases du HTML, telles qu'exposées dans le module [Introduction au HTML.](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8)
+1. Connaître les bases du HTML, telles qu'exposées dans le module [Introduction au HTML.](/fr/docs/Learn_web_development/Core/Structuring_content)
 2. Être à l'aise avec les fondamentaux du CSS, telles qu'exposés dans [Introduction à CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f).
 3. Savoir [mettre en forme les boîtes.](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics)
 

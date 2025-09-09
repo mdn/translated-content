@@ -95,7 +95,7 @@ Ensuite, on trouve _l'autorité_, séparée du schéma par les caractères `://`
 
 N'importe quelle URL peut être saisie dans la barre d'adresse du navigateur pour récupérer la ressource correspondante, mais ce n'est que la partie visible de l'iceberg&nbsp;!
 
-Le langage [HTML](/fr/docs/Glossary/HTML) [que nous aborderons plus tard](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8) utilise énormément les URL&nbsp;:
+Le langage [HTML](/fr/docs/Glossary/HTML) [que nous aborderons plus tard](/fr/docs/Learn_web_development/Core/Structuring_content) utilise énormément les URL&nbsp;:
 
 - Pour créer des liens vers d'autres documents grâce aux éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)&nbsp;;
 - Pour rattacher un document aux ressources qui lui sont liées, par exemple grâce aux éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) ou [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script)&nbsp;;

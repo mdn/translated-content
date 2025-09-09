@@ -13,7 +13,7 @@ original_slug: Learn/JavaScript
 JavaScript est sans doute plus difficile à apprendre que les technologies connexes telles que [HTML](/fr/docs/Learn_web_development/Core/Structuring_content) et [CSS](/fr/docs/Learn_web_development/Core/Styling_basics). Avant d'essayer d'apprendre le JavaScript, il est fortement conseillé de se familiariser d'abord avec au moins ces deux technologies, et peut-être aussi avec d'autres. Commencez par travailler sur les modules suivants&nbsp;:
 
 - [Commencer avec le Web](/fr/docs/Learn_web_development/Getting_started/Your_first_website)
-- [Introduction au HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8)
+- [Introduction au HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
 - [Introduction à CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f)
 
 Avoir une expérience antérieure avec d'autres langages de programmation peut également aider.

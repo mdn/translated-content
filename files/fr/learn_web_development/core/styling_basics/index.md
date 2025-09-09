@@ -10,7 +10,7 @@ original_slug: Learn/CSS
 
 ## Parcours d'apprentissage
 
-Vous devriez vraiment apprendre les bases du HTML avant d'essayer n'importe quelles CSS. Nous vous recommandons de travailler d'abord notre module [Introduction au HTML —](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8) vous pourrez ensuite en apprendre davantage au sujet&nbsp;:
+Vous devriez vraiment apprendre les bases du HTML avant d'essayer n'importe quelles CSS. Nous vous recommandons de travailler d'abord notre module [Introduction au HTML](/fr/docs/Learn_web_development/Core/Structuring_content) — vous pourrez ensuite en apprendre davantage au sujet&nbsp;:
 
 - des CSS, en commençant avec le module [Introduction aux CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f)
 - des [Modules HTML](/fr/docs/Learn_web_development/Core/Structuring_content#modules) plus avancés

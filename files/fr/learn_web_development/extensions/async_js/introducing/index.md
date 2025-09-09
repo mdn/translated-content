@@ -204,7 +204,7 @@ La description des fonctions asynchrones que nous venons de faire peut vous rapp
 
 Certaines des premières API asynchrones utilisaient les évènements de cette façon. L'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) permet d'envoyer des requêtes HTTP à un serveur distant en JavaScript. Étant donné qu'une requête peut prendre beaucoup de temps, il s'agit d'une API asynchrone, et on reçoit une notification sur l'avancement (voire la complétion) de la requête en attachant des gestionnaires d'évènements à l'objet `XMLHttpRequest`.
 
-L'exemple qui suit permet de voir ça concrètement. Cliquez sur le bouton «&nbsp;Cliquez pour envoyer une requête&nbsp;» afin d'envoyer une requête. Le programme crée alors un nouvel objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et écoute les évènements [`loadend`](/fr/docs/Web/API/XMLHttpRequest/loadend_event) associés. Le gestionnaire affiche un message «&nbsp;Terminé&nbsp;» dans la console avec le code de statut HTTP.
+L'exemple qui suit permet de voir ça concrètement. Cliquez sur le bouton «&nbsp;Cliquez pour envoyer une requête&nbsp;» afin d'envoyer une requête. Le programme crée alors un nouvel objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et écoute les évènements [`loadend`](/fr/docs/Web/API/XMLHttpRequestEventTarget/loadend_event) associés. Le gestionnaire affiche un message «&nbsp;Terminé&nbsp;» dans la console avec le code de statut HTTP.
 
 Après avoir ajouté le gestionnaire d'évènement, on envoie la requête. Une fois ceci effectué, on peut afficher «&nbsp;Requête XHR initiée&nbsp;» dans la console, notre programme répond et continue son exécution pendant que la requête est en cours. Le gestionnaire d'évènement sera appelé une fois la requête terminée.
 

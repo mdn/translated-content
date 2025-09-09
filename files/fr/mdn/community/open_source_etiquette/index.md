@@ -87,7 +87,7 @@ Dans de nombreux cas, les choses sont comme elles sont sur les OSP pour une rais
 
 ## Suivez le guide
 
-Les bons OSP rendront toujours la documentation des contributeurs facilement accessible. Sur les projets GitHub, elle se trouve généralement dans le fichier CONTRIBUTING.md du dépôt, ou parfois dans le fichier README.md du projet. Étant un projet de documentation, le contenu de MDN dispose d'un [README](https://github.com/mdn/translated-content/blob/main/README.md) et d'un ensemble décent de docs pour les contributeurs sur le site lui-même (voir [Contribuer à MDN](/fr/docs/conflicting/MDN/Community)).
+Les bons OSP rendront toujours la documentation des contributeurs facilement accessible. Sur les projets GitHub, elle se trouve généralement dans le fichier CONTRIBUTING.md du dépôt, ou parfois dans le fichier README.md du projet. Étant un projet de documentation, le contenu de MDN dispose d'un [README](https://github.com/mdn/translated-content/blob/main/README.md) et d'un ensemble décent de docs pour les contributeurs sur le site lui-même (voir [Contribuer à MDN](/fr/docs/MDN/Community)).
 
 La seule chose à demander ici est de ne pas avoir peur de demander de l'aide, mais de TOUJOURS essayer de trouver la réponse à votre question avant de la poser. De cette façon, vous développez votre connaissance du projet et devenez plus indépendant, et vous n'imposez pas une charge inutile aux autres contributeurs.
 
