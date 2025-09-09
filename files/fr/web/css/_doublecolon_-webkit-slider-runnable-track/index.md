@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-slider-runnable-track"
+title: ::-webkit-slider-runnable-track
 slug: Web/CSS/::-webkit-slider-runnable-track
 ---
 
@@ -19,7 +19,6 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 - {{cssxref("::-webkit-slider-thumb")}}
 - Similar pseudo-elements used by other browsers:
-
   - {{cssxref("::-ms-track")}}
   - {{cssxref("::-moz-range-track")}}
 

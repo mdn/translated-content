@@ -1,15 +1,23 @@
 ---
 title: Array.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`filter()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された配列の中から指定された関数で実装されているテストに合格した要素だけを抽出した[シャローコピー](/ja/docs/Glossary/Shallow_copy)を作成します。
 
-{{EmbedInteractiveExample("pages/js/array-filter.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.filter()", "shorter")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// 予想される結果: Array ["exuberant", "destruction", "present"]
+```
 
 ## 構文
 
@@ -21,7 +29,6 @@ filter(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : 配列のそれぞれの要素に対して実行する関数です。この関数は、配列の要素を保持する場合は[真値](/ja/docs/Glossary/Truthy)、保持しない場合は[偽値](/ja/docs/Glossary/Falsy)を返します。この関数は以下の引数で呼び出されます。
     - `element`
       - : 配列内で処理中の現在の要素です。
@@ -39,18 +46,9 @@ filter(callbackFn, thisArg)
 
 ## 解説
 
-`filter()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された `callbackFn` 関数を配列の各要素に対して一度ずつ呼び出し、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返したすべての要素からなる新しい配列を生成します。 `callbackFn` は値が代入されている配列の添字に対してのみ呼び出されます。
+`filter()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された `callbackFn` 関数を配列の各要素に対して一度ずつ呼び出し、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返したすべての要素からなる新しい配列を生成します。 `callbackFn` テストに合格しなかった配列要素は、新しい配列には含まれません。これらのメソッドが一般的にどのように動作するのかについての詳細は、[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)の節をご覧ください。
 
 `callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
-
-`filter()` メソッドは[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。これは `this` を変更するのではなく、元の配列と同じ要素を格納した[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返します。しかし、 `callbackFn` として指定された関数は配列を変更することができます。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
-
-- `callbackFn` は、 `every()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
-- 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
-- まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、`callbackFn` に渡される値はその要素が取得された時点での値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は処理されません。
-
-> [!WARNING]
-> 上記のように進行中の配列に対して変更を行うと、理解しにくいコードになることが多いので、（特別な場合を除いて）避けるのが一般的です。
 
 `filter()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` の値に `length` プロパティと整数のキーを持ったプロパティがあることだけを求めます。
 
@@ -76,17 +74,26 @@ const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 ```js
 const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-function isPrime(num) {
-  for (let i = 2; num > i; i++) {
-    if (num % i === 0) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return num > 1;
+  return true;
 }
 
 console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 ```
+
+> [!NOTE]
+> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、高度に最適化されたアルゴリズムを使用することをお勧めします。
 
 ### JSON の不正な内容を取り除く
 
@@ -117,12 +124,12 @@ function filterByID(item) {
 
 const arrByID = arr.filter(filterByID);
 
-console.log("Filtered Array\n", arrByID);
-// Filtered Array
+console.log("絞り込みされた配列\n", arrByID);
+// 絞り込みされた配列
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log("Number of Invalid Entries =", invalidEntries);
-// Number of Invalid Entries = 5
+console.log("無効な項目の数 =", invalidEntries);
+// 無効な項目の数 = 5
 ```
 
 ### 配列内の検索
@@ -133,7 +140,7 @@ console.log("Number of Invalid Entries =", invalidEntries);
 const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
- * Filter array items based on search criteria (query)
+ * 検索条件（クエリー）に基づいて配列のアイテムをフィルターする
  */
 function filterItems(arr, query) {
   return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
@@ -142,6 +149,26 @@ function filterItems(arr, query) {
 console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
 console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```
+
+### callbackFn の第 3 引数の使用
+
+`array` 引数は、配列の別の要素にアクセスしたい場合、特に、その配列を参照する既存の変数がない場合に便利です。次の例では、まず `map()` を使用してそれぞれの名前から数値 ID を抽出し、次に `filter()` を使用して、その数値が隣の数値よりも大きいものを選択しています。
+
+```js
+const names = ["JC63", "Bob132", "Ursula89", "Ben96"];
+const greatIDs = names
+  .map((name) => parseInt(name.match(/\d+/)[0], 10))
+  .filter((id, idx, arr) => {
+    // arr 引数がない場合、変数に保存せずに中間配列に
+    // 簡単にアクセスする方法はありません。
+    if (idx > 0 && id <= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && id <= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(greatIDs); // [132, 96]
+```
+
+`array` 引数は、構築中の配列ではありません。コールバック関数から構築中の配列にアクセスする方法はありません。
 
 ### 疎配列に対する filter() の使用
 
@@ -168,46 +195,6 @@ console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 // [ 'a', 'b' ]
 ```
 
-### 初期の配列への影響（変更、追加、削除）
-
-以下の例は、配列が変更された時の `filter` の動作をテストするものです。
-
-```js
-// それぞれの単語を変更
-let words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
-
-const modifiedWords = words.filter((word, index, arr) => {
-  arr[index + 1] += " extra";
-  return word.length < 6;
-});
-
-console.log(modifiedWords);
-// 6 文字未満の語は 3 つあるが、変更されているので 1 つしか返されない
-// ["spray"]
-
-// new の単語を追加
-words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
-const appendedWords = words.filter((word, index, arr) => {
-  arr.push("new");
-  return word.length < 6;
-});
-
-console.log(appendedWords);
-// `words` 自体には 6 文字未満の単語がたくさん増えたが、条件に合うのは 3 つだけ
-// ["spray" ,"limit" ,"elite"]
-
-// 単語の削除
-words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
-const deleteWords = words.filter((word, index, arr) => {
-  arr.pop();
-  return word.length < 6;
-});
-
-console.log(deleteWords);
-// 'elite' はフィルターが取得する前に 'words' から取り出されているので、取得されていないことに注意
-// ["spray" ,"limit"]
-```
-
 ## 仕様書
 
 {{Specifications}}
@@ -219,7 +206,9 @@ console.log(deleteWords);
 ## 関連情報
 
 - [`Array.prototype.filter` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.filter` のポリフィル](https://www.npmjs.com/package/array.prototype.filter)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.map()")}}

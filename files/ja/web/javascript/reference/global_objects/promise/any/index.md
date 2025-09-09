@@ -1,15 +1,26 @@
 ---
 title: Promise.any()
+short-title: any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 l10n:
-  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Promise.any()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、入力のプロミスのいずれかが履行されたときに、この最初の履行値で履行されます。入力のプロミスがすべて拒否された場合（空の反復可能オブジェクトが渡された場合を含む）、拒否理由の配列を格納した {{jsxref("AggregateError")}} で、拒否されます。
 
-{{EmbedInteractiveExample("pages/js/promise-any.html")}}
+{{InteractiveExample("JavaScript デモ: Promise.any()")}}
+
+```js interactive-example
+const promise1 = Promise.reject(new Error("error"));
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, "quick"));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, "slow"));
+
+const promises = [promise1, promise2, promise3];
+
+Promise.any(promises).then((value) => console.log(value));
+
+// 予想される結果: "quick"
+```
 
 ## 構文
 
@@ -37,9 +48,9 @@ Promise.any(iterable)
 > [!NOTE]
 > 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
 
-{{JSxRef("Promise.all()")}} が履行された値の _配列_ を返すのとは異なり、 1 つの履行値だけを取得します（少なくとも 1 つのプロミスが履行されることを想定しています）。これは、履行されるプロミスが 1 つだけ必要で、どれが履行されるかは気にしない場合、有益なことがあります。もう一つの異なる形に注意してください。このメソッドは、_空の反復可能オブジェクト_ を受け取ると拒否します。なぜなら、正直に言うと、反復処理オブジェクトには、履行されるアイテムが格納されていないからです。`Promise.any()` と `Promise.all()` を {{jsxref("Array.prototype.some()")}} と {{jsxref("Array.prototype.every()")}} で比較することができます。
+{{jsxref("Promise.all()")}} が履行された値の配列を返すのとは異なり、 1 つの履行値だけを取得します（少なくとも 1 つのプロミスが履行されることを想定しています）。これは、履行されるプロミスが 1 つだけ必要で、どれが履行されるかは気にしない場合、有益なことがあります。もう一つの異なる形に注意してください。このメソッドは、_空の反復可能オブジェクト_ を受け取ると拒否します。なぜなら、正直に言うと、反復処理オブジェクトには、履行されるアイテムが格納されていないからです。`Promise.any()` と `Promise.all()` を {{jsxref("Array.prototype.some()")}} と {{jsxref("Array.prototype.every()")}} で比較することができます。
 
-また、 {{JSxRef("Promise.race()")}} が最初の _決定された_ 値（履行されたか拒否されたか）を返すのとは異なり、このメソッドは最初の _履行された_ 値を返します。このメソッドは、最初に履行されたプロミスまでのすべての拒否されたプロミスを無視します。
+また、 {{jsxref("Promise.race()")}} が最初の _決定された_ 値（履行されたか拒否されたか）を返すのとは異なり、このメソッドは最初の _履行された_ 値を返します。このメソッドは、最初に履行されたプロミスまでのすべての拒否されたプロミスを無視します。
 
 ## 例
 
@@ -49,15 +60,15 @@ Promise.any(iterable)
 
 ```js
 const pErr = new Promise((resolve, reject) => {
-  reject("Always fails");
+  reject(new Error("常に失敗します"));
 });
 
 const pSlow = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "Done eventually");
+  setTimeout(resolve, 500, "結局、完了しました");
 });
 
 const pFast = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, "Done quick");
+  setTimeout(resolve, 100, "すばやく終わります");
 });
 
 Promise.any([pErr, pSlow, pFast]).then((value) => {
@@ -74,7 +85,7 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
 
 ```js
 const failure = new Promise((resolve, reject) => {
-  reject("Always fails");
+  reject(new Error("常に失敗します"));
 });
 
 Promise.any([failure]).catch((err) => {
@@ -91,9 +102,9 @@ Promise.any([failure]).catch((err) => {
 async function fetchAndDecode(url, description) {
   const res = await fetch(url);
   if (!res.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+    throw new Error(`HTTP error! status: ${res.status}`);
   }
-  const data = await response.blob();
+  const data = await res.blob();
   return [data, description];
 }
 
@@ -124,7 +135,8 @@ Promise.any([coffee, tea])
 ## 関連情報
 
 - [`Promise.any` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-promise)
-- {{JSxRef("Promise")}}
-- {{JSxRef("Promise.all()")}}
-- {{JSxRef("Promise.allSettled()")}}
-- {{JSxRef("Promise.race()")}}
+- [es-shims による `Promise.any` のポリフィル](https://www.npmjs.com/package/promise.any)
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}
+- {{jsxref("Promise.allSettled()")}}
+- {{jsxref("Promise.race()")}}

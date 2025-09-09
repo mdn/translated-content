@@ -1,15 +1,24 @@
 ---
 title: Array.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`map()`** は {{jsxref("Array")}} インスタンスのメソッドで、与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.map()")}}
+
+```js interactive-example
+const array = [1, 4, 9, 16];
+
+// 関数を map に渡す
+const mapped = array.map((x) => x * 2);
+
+console.log(mapped);
+// 予想される結果: Array [2, 8, 18, 32]
+```
 
 ## 構文
 
@@ -37,18 +46,9 @@ map(callbackFn, thisArg)
 
 ## 解説
 
-`map()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された関数 `callbackFn` を配列に含まれる各要素に対して一度ずつ呼び出し、その結果から新しい配列を構築します。
+`map()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された関数 `callbackFn` を配列に含まれる各要素に対して一度ずつ呼び出し、その結果から新しい配列を構築します。これらのメソッドが一般的にどのように動作するのかについての詳細は、[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)の節をご覧下さい。
 
 `callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で空のスロットに対しては呼び出されません。
-
-`map()` メソッドは[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。これは `this` を変更しません。しかし、 `callbackFn` に指定された関数は変更することがあります。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
-
-- `callbackFn` は `map()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
-- 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
-- まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は処理されません。
-
-> [!WARNING]
-> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 `map()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
@@ -90,16 +90,61 @@ console.log(kvArray);
 // ]
 ```
 
-### 引数を含む関数を使用して数値配列を対応付ける
+### parseInt() を map() で使用
 
-次のコードは、1 つの引数を必要とする関数を使用するときに `map` がどのように動作するかを示しています。引数は元の配列を通した `map` ループとして、配列の各要素に自動的に割り当てられます。
+コールバックは、1 つの引数（走査中の要素）とともに使用するのが一般的です。一部の関数は、追加のオプション引数を取っても、1 つの引数とともに使用されることがよくあります。このような習慣は、混乱を招く動作につながる可能性があります。次の例を考えてみましょう。
 
 ```js
-const numbers = [1, 4, 9];
-const doubles = numbers.map((num) => num * 2);
+["1", "2", "3"].map(parseInt);
+```
 
-console.log(doubles); // [2, 8, 18]
-console.log(numbers); // [1, 4, 9]
+返値は `[1, 2, 3]` となりそうですが、実際には `[1, NaN, NaN]` となります。
+
+{{jsxref("parseInt")}} は大抵一つの引数のみで使われますが、実際には 2 つの引数を取っています。 1 つ目は数値文字列、 2 つ目は基数です。 `Array.prototype.map` はコールバックに、要素、インデックス、配列の 3 つの引数を与えています。 {{jsxref("parseInt")}} は 3 つ目の引数を無視しますが、 2 つ目の引数は無視しません。これは混乱を起こす可能性があるソースです。
+
+繰り返し手順の正確な例は以下の通りです。
+
+```js
+/* 最初の反復処理  （インデックスは 0）: */ parseInt("1", 0); // 1
+/* 2 つ目の反復処理（インデックスは 1）: */ parseInt("2", 1); // NaN
+/* 3 つ目の反復処理（インデックスは 2）: */ parseInt("3", 2); // NaN
+```
+
+これを解決するには、引数を 1 つだけ取る別の関数を定義します。
+
+```js
+["1", "2", "3"].map((str) => parseInt(str, 10)); // [1, 2, 3]
+```
+
+また、引数を 1 つだけ取る {{jsxref("Number")}} 関数を使用することもできます。
+
+```js
+["1", "2", "3"].map(Number); // [1, 2, 3]
+
+// parseInt() とは違って、 Number() は float または (解決した) 指数表現を返します。
+["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
+
+// 比較のために、上記の配列に parseInt() を用いると次のようになります。
+["1.1", "2.2e2", "3e300"].map((str) => parseInt(str, 10)); // [1, 2, 3]
+```
+
+詳しい説明は、 [A JavaScript optional argument hazard](https://wirfs-brock.com/allen/posts/166) (Allen Wirfs-Brock) を参照してください。
+
+### undefined を持つ対応付けられた配列
+
+{{jsxref("undefined")}} が返されるか、または何も返されない場合、結果の配列には `undefined` が含まれます。要素を削除したい場合は、 {{jsxref("Array/filter", "filter()")}} メソッドをチェーンするか、 {{jsxref("Array/flatMap", "flatMap()")}} メソッドを使用して、削除を示す空の配列を返します。
+
+```js
+const numbers = [1, 2, 3, 4];
+const filteredNumbers = numbers.map((num, index) => {
+  if (index < 3) {
+    return num;
+  }
+});
+
+// index は 0 から始まるので、 filterNumbers は 1,2,3 および undefined になります。
+// filteredNumbers は [1, 2, 3, undefined]
+// numbers は [1, 2, 3, 4] のまま
 ```
 
 ### 副作用のある対応付け
@@ -150,9 +195,58 @@ products.forEach((product) => {
 あるいは、代わりに新しい配列を作成することもできます。
 
 ```js
-const productsWithPrice = products.map((product) => {
-  return { ...product, price: 100 };
-});
+const productsWithPrice = products.map((product) => ({
+  ...product,
+  price: 100,
+}));
+```
+
+### callbackFn の第 3 引数の使用
+
+`array` 引数は、配列の別の要素にアクセスしたい場合、特に、その配列を参照する既存の変数がない場合に便利です。次の例では、まず `filter()` を使用して正の値を抽出し、次に `map()` を使用して、それぞれの要素が隣接する要素とその自身の平均値である新しい配列を作成しています。
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const averaged = numbers
+  .filter((num) => num > 0)
+  .map((num, idx, arr) => {
+    // arr 引数がない場合、変数に保存せずに中間配列に
+    // 簡単にアクセスする方法はない
+    const prev = arr[idx - 1];
+    const next = arr[idx + 1];
+    let count = 1;
+    let total = num;
+    if (prev !== undefined) {
+      count++;
+      total += prev;
+    }
+    if (next !== undefined) {
+      count++;
+      total += next;
+    }
+    const average = total / count;
+    // 小数点以下 2 桁を保持する
+    return Math.round(average * 100) / 100;
+  });
+console.log(averaged); // [2, 2.67, 2, 3.33, 5, 5.33, 5.67, 4]
+```
+
+`array` 引数は、構築中の配列ではありません。コールバック関数から構築中の配列にアクセスする方法はありません。
+
+### 疎配列に対する map() の使用
+
+疎配列は `map()` の後も疎配列のままです。空のスロットのインデックスは返された配列においても空のままであり、コールバック関数が呼び出されることはありません。
+
+```js
+console.log(
+  [1, , 3].map((x, index) => {
+    console.log(`Visit ${index}`);
+    return x * 2;
+  }),
+);
+// Visit 0
+// Visit 2
+// [2, empty, 6]
 ```
 
 ### 配列以外のオブジェクトに対する map() の呼び出し
@@ -171,11 +265,7 @@ console.log(Array.prototype.map.call(arrayLike, (x) => x ** 2));
 // [ 4, 9, 16 ]
 ```
 
-### map() を汎用的に NodeList で使用
-
-この例では、 `querySelectorAll` によって収集されたオブジェクトのコレクションを反復処理する方法を示します。これは `querySelectorAll` が `NodeList` （オブジェクトの集合）を返すためです。
-
-この場合、画面に選択されているすべての `option` の値を返します。
+この例では、 `querySelectorAll` によって収集されたオブジェクトのコレクションを反復処理する方法を示します。これは `querySelectorAll` が `NodeList` （オブジェクトの集合）を返すためです。この場合、画面に選択されているすべての `option` の値を返します。
 
 ```js
 const elems = document.querySelectorAll("select option:checked");
@@ -183,102 +273,6 @@ const values = Array.prototype.map.call(elems, ({ value }) => value);
 ```
 
 もっと簡単な方法は {{jsxref("Array.from()")}} メソッドを使用することです。
-
-### 疎配列に対する map() の使用
-
-疎配列は `map()` の後も疎配列のままです。空のスロットのインデックスは返された配列においても空のままであり、コールバック関数が呼び出されることはありません。
-
-```js
-console.log(
-  [1, , 3].map((x, index) => {
-    console.log(`Visit ${index}`);
-    return x * 2;
-  }),
-);
-// Visit 0
-// Visit 2
-// [2, empty, 6]
-```
-
-### parseInt() を map() で使用
-
-([このブログの記事に創発されました](https://wirfs-brock.com/allen/posts/166))
-
-コールバック関数は第一引数（変換するべき要素）だけを意識して指定するケースがほとんどだと思います。
-しかし一般的に第一引数しか使わないような関数でも、実は追加のオプション引数を受け取っている場合があります。これは混乱につながる可能性があります。
-
-まずこの例をご覧ください。
-
-```js
-["1", "2", "3"].map(parseInt);
-```
-
-返値は `[1, 2, 3]` となりそうですが、実際には `[1, NaN, NaN]` となります。
-
-{{jsxref("parseInt")}} は大抵一つの引数のみで使われますが、実際には 2 つの引数を取っています。 1 つ目は数値文字列、 2 つ目は基数です。 `Array.prototype.map` はコールバックに次の 3 つの引数を与えています。
-
-- その要素
-- その添字
-- その配列
-
-{{jsxref("parseInt")}} は 3 つ目の引数を無視しますが、 2 つ目の引数は無視*しません*。これは混乱を起こす可能性があるソースです。
-
-繰り返し手順の正確な例は以下の通りです。
-
-```js
-// parseInt(string, radix) -> map(parseInt(value, index))
-/* first iteration  (index is 0): */ parseInt("1", 0); // 1
-/* second iteration (index is 1): */ parseInt("2", 1); // NaN
-/* third iteration  (index is 2): */ parseInt("3", 2); // NaN
-```
-
-解決策を考えてみましょう。
-
-```js
-const returnInt = (element) => parseInt(element, 10);
-
-["1", "2", "3"].map(returnInt); // [1, 2, 3]
-// 期待した通り、数値の配列が返る。
-
-// アロー関数構文を使って、より簡潔に上記と同じ結果を得ることが出来ます。
-["1", "2", "3"].map((str) => parseInt(str)); // [1, 2, 3]
-
-// ちなみにこの命題ではもっと簡単に同じ結果を得る方法があります。
-["1", "2", "3"].map(Number); // [1, 2, 3]
-
-// parseInt() とは違って、 Number() は float または (解決した) 指数表現を返します。
-["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
-
-// 比較のために、上記の配列に parseInt() を用いると次のようになります。
-["1.1", "2.2e2", "3e300"].map((str) => parseInt(str)); // [1, 2, 3]
-```
-
-{{jsxref("parseInt")}} を引数として呼び出された map メソッドの代替出力の 1 つは、次のように実行されます。
-
-```js
-const strings = ["10", "10", "10"];
-const numbers = strings.map(parseInt);
-
-console.log(numbers);
-// 実際の結果 [10, NaN, 2] は上記の説明からすると意外なものかもしれません。
-```
-
-### undefined を持つ対応付けられた配列
-
-{{jsxref("undefined")}} または nothing を返すと、以下のものを返します。
-
-```js
-const numbers = [1, 2, 3, 4];
-const filteredNumbers = numbers.map((num, index) => {
-  if (index < 3) {
-    return num;
-  }
-});
-
-// index は 0 から始まるので、 filterNumbers は 1,2,3 および undefined になります。
-// filteredNumbers は [1, 2, undefined, undefined]
-// numbers は [1, 2, 3, 4] のまま
-```
 
 ## 仕様書
 
@@ -291,6 +285,7 @@ const filteredNumbers = numbers.map((num, index) => {
 ## 関連情報
 
 - [`Array.prototype.map` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.map` のポリフィル](https://www.npmjs.com/package/array.prototype.map)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}

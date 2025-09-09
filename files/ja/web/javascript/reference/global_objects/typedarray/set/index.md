@@ -9,7 +9,19 @@ l10n:
 
 **`set()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、複数の値を指定した配列から入力値を読み込み、型付き配列に格納します。
 
-{{EmbedInteractiveExample("pages/js/typedarray-set.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.set()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
+
+// Copy the values into the array starting at index 3
+uint8.set([1, 2, 3], 3);
+
+console.log(uint8);
+// Expected output: Uint8Array [0, 0, 0, 1, 2, 3, 0, 0]
+```
 
 ## 構文
 

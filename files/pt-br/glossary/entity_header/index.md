@@ -22,4 +22,4 @@ Content-Length: 128
 
 ### Conhecimento técnico
 
-- [List of all HTTP headers](/pt-BR/docs/Web/HTTP/Headers)
+- [List of all HTTP headers](/pt-BR/docs/Web/HTTP/Reference/Headers)

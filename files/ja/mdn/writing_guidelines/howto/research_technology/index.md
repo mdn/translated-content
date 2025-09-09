@@ -44,7 +44,7 @@ MDN Web Docs で文書化や更新を始めるには、実際に書き始める�
 - [How to read web specs part I – or: WebVR, how do you work?](https://surma.dev/things/reading-specs/) は WebVR 仕様書固有の読み方について書かれていますが、 Web API 仕様書を読むための素晴らしい入門書です。
 - [How to read web specs part IIa – or: ECMAScript Symbols](https://surma.dev/things/reading-specs-2/) 上記リンクの第 2 章には、 JavaScript 言語のアウトラインである ECMAScript 仕様を理解するための情報が含まれています。
 
-さらに、 [WebIDL ファイルに含まれる情報](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file)ガイドもあり、 Web API 仕様書を読む際に実に役立ちます。
+さらに、 [WebIDL ファイルに含まれる情報](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file)ガイドもあり、 Web API 仕様書を読む際に実に役立ちます。
 
 ## 機能を探索
 
@@ -60,7 +60,7 @@ MDN Web Docs で文書化や更新を始めるには、実際に書き始める�
 
 ### サイドバー
 
-書くページのサイドバーも定義したり更新したりする必要がある可能性があります。サイドバーが必要かどうか、またその方法を調べるには、[サイドバーガイド](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)を調べてください。
+書くページのサイドバーも定義したり更新したりする必要がある可能性があります。サイドバーが必要かどうか、またその方法を調べるには、[サイドバーガイド](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)を調べてください。
 
 ### サンプルコード
 
@@ -86,7 +86,6 @@ MDN Web Docs のサンプルコードの一部は別個のリポジトリーに�
 
 - Web_Audio_API
 - AudioContext
-
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
@@ -96,7 +95,6 @@ MDN Web Docs のサンプルコードの一部は別個のリポジトリーに�
   - ...
 
 - AudioNode
-
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
@@ -106,7 +104,6 @@ MDN Web Docs のサンプルコードの一部は別個のリポジトリーに�
 
 - AudioParam
 - Events (update list)
-
   - start
   - end
   - …

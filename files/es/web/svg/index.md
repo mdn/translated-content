@@ -5,23 +5,23 @@ slug: Web/SVG
 
 {{SVGRef}}
 
-**[Comenzando con SVG](/es/docs/SVG/Tutorial)**
+**[Comenzando con SVG](/es/docs/Web/SVG/Tutorials/SVG_from_scratch)**
 Este tutorial te ayudará a comenzar a usar SVG.
 
-**Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/XML_Introduction) para describir [gráficos vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/web/HTML) es al texto.
+**Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/Web/XML/Guides/XML_introduction) para describir [gráficos vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/Web/HTML) es al texto.
 
-SVG es un estándar Web abierto basado en texto. Está expresamente diseñado para trabajar con otros estándares web como [CSS](/es/docs/CSS), [DOM](/es/docs/DOM), y [SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL).
+SVG es un estándar Web abierto basado en texto. Está expresamente diseñado para trabajar con otros estándares web como [CSS](/es/docs/Web/CSS), [DOM](/es/docs/Web/API/Document_Object_Model), y [SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL).
 
 ## Documentación
 
-- [Referencia de elementos SVG](/es/docs/Web/SVG/Element)
+- [Referencia de elementos SVG](/es/docs/Web/SVG/Reference/Element)
   - : Detalles sobre cada uno de los elementos SVG.
-- [Referencia de atributos SVG](/es/docs/Web/SVG/Attribute)
+- [Referencia de atributos SVG](/es/docs/Web/SVG/Reference/Attribute)
   - : Detalles sobre cada uno de los atributos SVG.
-- [Referencia del interfaz DOM SVG](/es/docs/DOM/DOM_Reference#SVG_interfaces)
+- [Referencia del interfaz DOM SVG](/es/docs/Web/API/Document_Object_Model#svg_interfaces)
   - : Detalles acerca del API SVG DOM, para interacción con JavaScript.
-- [Aplicando efectos SVG a contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-  - : SVG trabaja con with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}. Usa SVG para [mejorar una página HTML normal o aplicación web](/es/docs/SVG_In_HTML_Introduction).
+- [Aplicando efectos SVG a contenido HTML](/es/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
+  - : SVG trabaja con with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}. Usa SVG para [mejorar una página HTML normal o aplicación web](/es/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
 
 ## Comunidad
 
@@ -32,22 +32,22 @@ SVG es un estándar Web abierto basado en texto. Está expresamente diseñado pa
 
 ## Herramientas
 
-- [Área de pruebas SVG](http://www.w3.org/Graphics/SVG/Test/)
+- [Área de pruebas SVG](https://www.w3.org/Graphics/SVG/Test/)
 - [Validador SVG](http://jiggles.w3.org/svgvalidator/) (Discontinuado)
 - [Más Herramientas...](/es/docs/tag/SVG:Tools)
-- Otros recursos: [XML](/es/docs/XML), [CSS](/es/docs/CSS), [DOM](/es/docs/DOM), [Canvas](/es/docs/HTML/Canvas)
+- Otros recursos: [XML](/es/docs/Web/XML), [CSS](/es/docs/Web/CSS), [DOM](/es/docs/Web/API/Document_Object_Model), [Canvas](/es/docs/Web/API/Canvas_API)
 
 ## Ejemplos
 
 - Google [Maps](https://maps.google.com) (superposición de rutas) & [Docs](https://docs.google.com) (gráficos con hojas de cálculo)
 - [Menús SVG de burbuja](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
-- [Directríces de autoría de SVG](http://jwatt.org/svg/authoring/)
+- [Directríces de autoría de SVG](https://jwatt.org/svg/authoring/)
 - Una visión general del [Proyecto SVG de Mozilla](/es/docs/Mozilla_SVG_Project)
 - [Preguntas frecuentes](/es/docs/SVG/FAQ) acerca de SVG y Mozilla
-- Diapositivas y demos de la charla sobre [SVG y Mozilla](http://jwatt.org/svg-open-US/docs/2009/slides.xhtml) en el SVG Open 2009
-- [SVG como imagen](/es/docs/SVG/SVG_as_an_Image)
-- [Animación SVG con SMIL](/es/docs/SVG/SVG_animation_with_SMIL)
-- [Galería de arte SVG](http://plurib.us/1shot/2007/svg_gallery/)
+- Diapositivas y demos de la charla sobre [SVG y Mozilla](https://jwatt.org/svg-open-US/docs/2009/slides.xhtml) en el SVG Open 2009
+- [SVG como imagen](/es/docs/Web/SVG/SVG_as_an_Image)
+- [Animación SVG con SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL)
+- [Galería de arte SVG](https://plurib.us/1shot/2007/svg_gallery/)
 - Más ejemplos ([carto.net](http://www.carto.net/papers/svg/samples/))
 
 ### Animaciones e interacciones
@@ -63,9 +63,9 @@ Al igual que HTML, SVG tiene un modelo de objetos de documento (DOM) y eventos, 
 
 Aunque un poco de SVG puede dar mucho recorrido a la hora de mejorar contenidos web, aquí tienes algunos ejemplos de uso de gran cantidad de SVG.
 
-- [Tetris](http://www.codedread.com/yastframe.php)
+- [Tetris](https://www.codedread.com/yastframe.php)
 - [Connect 4](https://web.archive.org/web/20131019072450/http://www.treebuilder.de/svg/connect4.svg)
 - [Mapa de población de los Estados Unidos de América](http://www.carto.net/papers/svg/us_population/index.html)
 - [Caja 3D box](http://www.treebuilder.de/default.asp?file=441875.xml) y [Cajas 3D](http://www.treebuilder.de/default.asp?file=206524.xml)
-- [jVectorMap](http://jvectormap.com/) (mapas interactivos para visualización de datos)
+- [jVectorMap](https://jvectormap.com/) (mapas interactivos para visualización de datos)
 - [JointJS](https://jointjs.com) (Librería JavaScript para la creación de diagramas)

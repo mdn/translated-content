@@ -15,10 +15,10 @@ slug: orphaned/Web/SVG/Element/hatchpath
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
-- [グローバルイベント属性](/ja/docs/Web/SVG/Attribute#Global_event_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#Presentation_attributes)
-- [スタイル属性](/ja/docs/Web/SVG/Attribute#Style_attributes)
+- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [グローバルイベント属性](/ja/docs/Web/SVG/Reference/Attribute#global_event_attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)
+- [スタイル属性](/ja/docs/Web/SVG/Reference/Attribute#style_attributes)
 
 ### 固有の属性
 

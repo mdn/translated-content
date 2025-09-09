@@ -3,11 +3,70 @@ title: font-feature-settings
 slug: Web/CSS/font-feature-settings
 ---
 
-{{CSSRef}}
-
 **`font-feature-settings`** 属性用于控制 OpenType 字体中的高级印刷功能。
 
-{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
+{{InteractiveExample("CSS Demo: font-feature-settings")}}
+
+```css interactive-example-choice
+font-feature-settings: normal;
+```
+
+```css interactive-example-choice
+font-feature-settings: "liga" 0;
+```
+
+```css interactive-example-choice
+font-feature-settings: "tnum";
+```
+
+```css interactive-example-choice
+font-feature-settings: "smcp", "zero";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+    <table>
+      <tr>
+        <td><span class="tabular">0O</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 ## 语法
 
@@ -44,7 +103,7 @@ font-feature-settings: unset;
   - : 文本使用默认设置进行布局。
 - `<feature-tag-value>`
   - : 在呈现文本时，OpenType 要素标记值的列表被传递到文本布局引擎以启用或禁用字体特征。标签始终是 4 个 ASCII 字符的 {{cssxref("&lt;string&gt;")}} 。如果是 U + 20 - U + 7E 代码点范围以外的字符或字符个数不对，则整个属性无效。
-    值是一个正整数。两个关键字 on 和 off 分别是 1 和 0 的同义词。如果未设置任何值，则默认值为 1。对于非布尔型 OpenType 功能（例如，文体替代 [stylistic alternates](http://www.microsoft.com/typography/otspec/features_pt.htm#salt)），该值意味着要选择特定的字形；对于布尔值，它是一个开关。
+    值是一个正整数。两个关键字 on 和 off 分别是 1 和 0 的同义词。如果未设置任何值，则默认值为 1。对于非布尔型 OpenType 功能（例如，文体替代 [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)），该值意味着要选择特定的字形；对于布尔值，它是一个开关。
 
 ### 形式语法
 
@@ -106,5 +165,5 @@ td.tabular {
 ## 其他参考
 
 - [FontFont OpenType User Guide (pdf)](https://www.fontfont.com/staticcontent/downloads/FF_OT_User_Guide.pdf)
-- [OpenType Feature Tags](http://www.microsoft.com/typography/otspec/featurelist.htm) 列表
-- [Using the whole font](http://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx) ( -moz 语法是旧的。在 Gecko 上，使用-ms 语法，但使用-moz ).
+- [OpenType Feature Tags](https://www.microsoft.com/typography/otspec/featurelist.htm) 列表
+- [Using the whole font](https://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx) ( -moz 语法是旧的。在 Gecko 上，使用-ms 语法，但使用-moz ).

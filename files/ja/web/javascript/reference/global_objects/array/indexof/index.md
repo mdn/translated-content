@@ -1,15 +1,28 @@
 ---
 title: Array.prototype.indexOf()
+short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`indexOf()`** は {{jsxref("Array")}} インスタンスのメソッドで、引数に与えられた内容と同じ内容を持つ最初の配列要素の添字を返します。存在しない場合は -1 を返します。
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.indexOf()")}}
+
+```js interactive-example
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// 予想される結果: 1
+
+// Start from index 2
+console.log(beasts.indexOf("bison", 2));
+// 予想される結果: 4
+
+console.log(beasts.indexOf("giraffe"));
+// 予想される結果: -1
+```
 
 ## 構文
 
@@ -24,7 +37,7 @@ indexOf(searchElement, fromIndex)
   - : 検索する配列要素です。
 - `fromIndex` {{optional_inline}}
   - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。ただし、この場合でも配列は前から後ろに向けて検索されます。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。ただし、この場合でも配列は前から後ろに向けて検索されます。
     - `fromIndex < -array.length` または `fromIndex` が省略された場合は `0` が使用され、配列全体に対して検索が行われます。
     - `fromIndex >= array.length` の場合、配列の検索は行われず、 `false` が返されます。
 
@@ -134,6 +147,7 @@ console.log(Array.prototype.indexOf.call(arrayLike, 5));
 ## 関連情報
 
 - [`Array.prototype.indexOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.indexOf` のポリフィル](https://www.npmjs.com/package/array.prototype.indexof)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

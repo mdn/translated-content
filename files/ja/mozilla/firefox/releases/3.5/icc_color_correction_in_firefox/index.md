@@ -3,9 +3,7 @@ title: Firefox の ICC カラーコレクション
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 ---
 
-{{FirefoxSidebar}}
-
-色補正のサポートは Firefox 3 で導入されましたが、デフォルトでは無効になっています。これを有効にするには、about:config ウィンドウを少し修正する必要があります。 Firefox 3.5 では、以前のバージョンではデフォルトで無効になっていた問題が解決されました。現在 [International Color Consortium](http://www.color.org/) (ICC) タグの画像は、デフォルトで色補正されています。
+色補正のサポートは Firefox 3 で導入されましたが、デフォルトでは無効になっています。これを有効にするには、about:config ウィンドウを少し修正する必要があります。 Firefox 3.5 では、以前のバージョンではデフォルトで無効になっていた問題が解決されました。現在 [International Color Consortium](https://www.color.org/) (ICC) タグの画像は、デフォルトで色補正されています。
 
 下の画像は 3 つのセクションに分割されています。 左上隅には、Firefox 2 でレンダリングされた画像が表示されます。右上隅には、Firefox 3 での画像のレンダリング方法が表示されます。下には、Photoshop でレンダリングされた画像が表示されます。
 
@@ -50,11 +48,11 @@ slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 
 ### 警告
 
-Firefox 3.5 で導入された新しい QCMS カラーマネジメントシステムは、バージョン 4 ではなく、ICC カラープロファイルのバージョン 2 のみをサポートしています。画像が暗すぎることがあります。[bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) と[ICC version 4 profile test](http://www.color.org/version4html.xalter) を参照してください。
+Firefox 3.5 で導入された新しい QCMS カラーマネジメントシステムは、バージョン 4 ではなく、ICC カラープロファイルのバージョン 2 のみをサポートしています。画像が暗すぎることがあります。[bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) と[ICC version 4 profile test](https://www.color.org/version4html.xalter) を参照してください。
 
 ## 関連情報
 
 - [So Many Colors](http://bholley.wordpress.com/2008/09/12/so-many-colors/) (blog post)
 - [Firefox 3: Color profile support](http://www.dria.org/wordpress/archives/2008/04/29/633/) (blog post)
 - [Color Profiles in Firefox 3](http://ejohn.org/blog/color-profiles/) (blog post)
-- [International Color Consortium](http://www.color.org/)
+- [International Color Consortium](https://www.color.org/)

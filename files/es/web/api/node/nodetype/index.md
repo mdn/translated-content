@@ -22,9 +22,9 @@ la variable type será un entero positivo con alguno de los siguientes valores:
 | `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                         | `5`   |
 | `ENTITY_NODE` {{deprecated_inline()}}                                   | `6`   |
 | [`PROCESSING_INSTRUCTION_NODE`](/es/docs/Web/API/ProcessingInstruction) | `7`   |
-| [`COMMENT_NODE`](/es/docs/Web/API/document.createComment)               | `8`   |
-| [`DOCUMENT_NODE`](/es/docs/Web/HTML/Element/html)                       | `9`   |
-| [`DOCUMENT_TYPE_NODE`](/es/docs/Web/API/document.doctype)               | `10`  |
+| [`COMMENT_NODE`](/es/docs/Web/API/Document/createComment)               | `8`   |
+| [`DOCUMENT_NODE`](/es/docs/Web/HTML/Reference/Elements/html)            | `9`   |
+| [`DOCUMENT_TYPE_NODE`](/es/docs/Web/API/Document/doctype)               | `10`  |
 | [`DOCUMENT_FRAGMENT_NODE`](/es/docs/Web/API/DocumentFragment)           | `11`  |
 | `NOTATION_NODE` {{deprecated_inline()}}                                 | `12`  |
 
@@ -40,6 +40,6 @@ if (node.nodeType != Node.COMMENT_NODE)
 
 ## Especificación
 
-- [DOM Level 2 Core: Node.nodeType](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-111237558)
-- [DOM Level 3 Core: Node.nodeType](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-111237558)
-- [DOM Standard](http://dom.spec.whatwg.org/#node)
+- [DOM Level 2 Core: Node.nodeType](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-111237558)
+- [DOM Level 3 Core: Node.nodeType](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-111237558)
+- [DOM Standard](https://dom.spec.whatwg.org/#node)

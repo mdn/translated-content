@@ -30,5 +30,5 @@ _`Position` 介面沒有繼承任何屬性_
 
 ## 請參考
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)
 - {{domxref("Geolocation")}} 介面使用此物件。

@@ -265,7 +265,7 @@ function loop(x) {
 loop(0);
 ```
 
-Sin embargo, algunos algoritmos no pueden ser simples bucles iterativos. Por ejemplo, obtener todos los nodos de una estructura de árbol (como [DOM](/es/docs/DOM)) es más fácil a través de la recursividad:
+Sin embargo, algunos algoritmos no pueden ser simples bucles iterativos. Por ejemplo, obtener todos los nodos de una estructura de árbol (como [DOM](/es/docs/Web/API/Document_Object_Model)) es más fácil a través de la recursividad:
 
 ```js
 function walkTree(node) {

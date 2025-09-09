@@ -8,7 +8,7 @@ slug: Web/API/Element/keypress_event
 L'évènement **`keypress`** est déclenché lorsqu'une touche produisant un caractère est pressée. Cela concerne les touches qui produisent des caractères alphabétiques, des caractères numériques et des signes de ponctuations. Les touches <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd> ou <kbd>Meta</kbd> ne sont pas concernées.
 
 > [!WARNING]
-> Cet évènement est déprécié et il faudrait plutôt utiliser [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event) ou [`keydown`](/fr/docs/Web/API/Document/keydown_event).
+> Cet évènement est déprécié et il faudrait plutôt utiliser [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event) ou [`keydown`](/fr/docs/Web/API/Element/keydown_event).
 
 <table class="properties">
   <thead></thead>
@@ -86,7 +86,6 @@ document.onkeypress = logKey;
 - {{domxref("GlobalEventHandlers.onkeypress")}}
 - L'interface {{domxref("Element")}} que cet évènement cible
 - Les évènements associés :
-
-  - [`keydown`](/fr/docs/Web/API/Document/keydown_event)
-  - [`keyup`](/fr/docs/Web/API/Document/keyup_event)
-  - [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event)
+  - [`keydown`](/fr/docs/Web/API/Element/keydown_event)
+  - [`keyup`](/fr/docs/Web/API/Element/keyup_event)
+  - [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)

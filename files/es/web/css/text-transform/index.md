@@ -3,8 +3,6 @@ title: text-transform
 slug: Web/CSS/text-transform
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`text-transform`** especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas, o con la primera letra de cada palabra en mayúscula.
@@ -23,7 +21,7 @@ Por otro lado, algunas reglas de mapeo específicas no son tomada en cuenta por 
 
 El idioma es definido por el atributo HTML `lang` o el atributo `xml:lang`.
 
-El soporte para estos casos específicos varía de un navegador a otro, véase la [tabla de compatibilidad de navegadores](#Compatibilidad_de_navegadores).
+El soporte para estos casos específicos varía de un navegador a otro, véase la [tabla de compatibilidad de navegadores](#compatibilidad_de_navegadores).
 
 {{cssinfo}}
 
@@ -46,7 +44,6 @@ text-transform: unset;
 ### Valores
 
 - `capitalize`
-
   - : Es una palabra clave que fuerza a que la primera _letra_ de cada palabra sea convertida a mayúscula. EL resto de caracteres no es modificado; eso significa que mantienen su tamaño original, como haya sido escrito en el texto del elemento. Una letra es cualquier caracter Unicode que sea parte de la categoría general de Letras o Números {{experimental_inline}}: esto excluye cualquier signo de puntuación o símbolos al principio de la palabra.
 
     > [!NOTE]
@@ -370,7 +367,7 @@ Algunos caracteres existen en dos formas, de anchura normal y de anchura complet
 
 Usuarios con discapacidades cognitivas como dislexia pueden encontrar dificultad al leer textos largos cuando se aplica la propiedad `text-transform` con el valor de `uppercase`.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Especificaciones

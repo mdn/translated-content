@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
 
 L'API `pkcs11` permet à une extension d'énumérer les modules de sécurité [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11), et de rendre accessibles au navigateur en tant que sources clés et de certificats.
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "pkcs11".
+Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "pkcs11".
 
 ## Utilisation de la boîte de dialogue Préférences Firefox pour installer les modules PKCS #11
 
@@ -32,18 +32,18 @@ Effectuez les étapes suivantes :
 ## Provisionnement des modules PKCS #11
 
 > [!NOTE]
-> A partir de Firefox 58, les extensions peuvent utiliser l'API [pkcs11](/fr/Add-ons/WebExtensions/API/pkcs11) pour énumérer les modules PKCS #11 et les rendre accessibles au navigateur comme sources de clés et certificats.
+> A partir de Firefox 58, les extensions peuvent utiliser l'API [pkcs11](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) pour énumérer les modules PKCS #11 et les rendre accessibles au navigateur comme sources de clés et certificats.
 
 Il y a 2 pré-requis pour pouvoir utiliser cette API:
 
 - un ou plusieurs modules PKCS # 11 doivent être installés sur l'ordinateur de l'utilisateur
-- pour chaque module PKCS # 11 installé, il doit y avoir un fichier [manifest natif](/fr/Add-ons/WebExtensions/manifests_native) qui permet au navigateur de localiser le module.
+- pour chaque module PKCS # 11 installé, il doit y avoir un fichier [manifest natif](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) qui permet au navigateur de localiser le module.
 
 Très probablement, l'utilisateur ou l'administrateur du périphérique installerait le module `PKCS #11`, et son installateur installerait le fichier de manifeste natif en même temps.
 
 Cependant, le module et le manifeste ne peuvent pas être installés dans le cadre du processus d'installation de l'extension.
 
-Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, voir [Manifest natifs](/fr/Add-ons/WebExtensions/Native_manifests).
+Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, voir [Manifest natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
 ## Fonctions
 

@@ -3,8 +3,6 @@ title: transform-box
 slug: Web/CSS/transform-box
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 **`transform-box`** 属性定义了与 {{cssxref("transform")}}、{{cssxref("transform-origin")}} 这两个属性有关联的布局框。
@@ -52,4 +50,4 @@ transform-box: unset;
 
 ## 参见
 
-- [使用 CSS 变换](/zh-CN/docs/CSS/Using_CSS_transforms)
+- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/in
 
 L'**opérateur `in`** renvoie `true` si une propriété donnée appartient à l'objet donné (directement ou via sa chaîne de prototype).
 
-{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+
+```js interactive-example
+const car = { make: "Honda", model: "Accord", year: 1998 };
+
+console.log("make" in car);
+// Expected output: true
+
+delete car.make;
+if ("make" in car === false) {
+  car.make = "Suzuki";
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
+```
 
 ## Syntaxe
 
@@ -106,4 +121,4 @@ L'opérateur `in` renvoie `true` pour les propriétés qui appartiennent à la c
 - {{jsxref("Opérateurs/L_opérateur_delete","delete")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
-- [Caractère énumérable des propriétés et rattachement](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Caractère énumérable des propriétés et rattachement](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

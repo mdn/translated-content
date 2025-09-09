@@ -11,7 +11,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 보다 일반적으로 왼쪽에서 오른쪽으로 평가할 때 연산자는 처음으로 만나는 {{Glossary("falsy", "거짓 같은")}} 피연산자의
 값을 반환합니다. 혹은 모두 {{Glossary("truthy", "참 같은 값")}}이라면 마지막 피연산자의 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## 구문
 
@@ -46,7 +54,7 @@ result = 2 && 0; // result 에 0 이 할당됩니다
 result = "foo" && 4; // result 에 4 가 할당됩니다.
 ```
 
-`&&` 연산자는 불리언이 아닌 피연산자와 함께 사용할 수 있지만, 반환 값은 항상 [원시형 불리언](/ko/docs/Web/JavaScript/Data_structures#boolean_타입)으로
+`&&` 연산자는 불리언이 아닌 피연산자와 함께 사용할 수 있지만, 반환 값은 항상 [원시형 불리언](/ko/docs/Web/JavaScript/Guide/Data_structures#boolean_타입)으로
 변환할 수 있기 때문에 불리언 연산자로 간주합니다. 반환값이나 어떠한 일반적인 표현식을 명시적으로 해당 불리언 값으로 변환하려면 이중
 [`NOT 연산자`](/ko/docs/Web/JavaScript/Reference/Operators/Logical_NOT)를 사용하거나
 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 생성자를 사용하시기 바랍니다.
@@ -87,7 +95,7 @@ console.log(A() && B());
 ### 연산자 우선순위
 
 AND 연산자는 OR 연산자보다 높은 우선 순위를 가지며, 이는 `&&` 연산자가 `||` 연산자보다 먼저 실행된다는 것을 의미합니다.
-([연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)참고).
+([연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)참고).
 
 ```js
 true || (false && false); // returns true
@@ -155,8 +163,8 @@ bCondition1 || (bCondition2 && bCondition3);
 
 언제나 다음과 같습니다.
 
-```js
-bCondition1 || (bCondition2 && bCondition3);
+```js-nolint
+bCondition1 || bCondition2 && bCondition3;
 ```
 
 ## 명세서

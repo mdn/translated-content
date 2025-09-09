@@ -122,7 +122,7 @@ Les guides et didacticiels suivants sont une excellente ressource pour apprendre
   - : Dans cet exemple et tutoriel, nous utilisons les informations apprises tout au long de la documentation WebXR pour créer une scène contenant un cube et l'utilisateur peut déplacer autour en utilisant à la fois le casque VR, le clavier et la souris.
 - [Inputs and input sources](/fr/docs/Web/API/WebXR_Device_API/Inputs)
   - : Un guide sur les sources d'entrée et comment gérer efficacement les périphériques d'entrée utilisés pour contrôler la session WebXR, et comment recevoir et traiter les entrées utilisateur de ces périphériques.
-- [Targeting and hit detection](/fr/docs/Web/API/Web_Audio_API/Targeting)
+- [Targeting and hit detection](/fr/docs/Web/API/WebXR_Device_API/Targeting)
   - : Comment utiliser le mode rayon de ciblage et l'espace de rayon de ciblage d'une source d'entrée pour afficher un rayon de ciblage, identifier les surfaces ou les objets ciblés et effectuer des tâches associées.
 - [Using WebXR input profiles](/fr/docs/Web/API/WebXR_Device_API/Input_profiles)
   - : Un guide pour interpréter les données {{Glossary ("JSON")}} fournies par le [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry), qui peut être utilisé pour déterminer les options et commandes disponibles sur les périphériques d'entrée de l'utilisateur.
@@ -153,8 +153,8 @@ Les guides et didacticiels suivants sont une excellente ressource pour apprendre
 
 ## Voir aussi
 
-- [Graphics on the web](/fr/docs/Web/Guide/Graphics)
-- [Drawing graphics](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Graphics on the web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [Drawing graphics](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [WebGL API](/fr/docs/Web/API/WebGL_API): Graphiques 2D et 3D sur le web
 - [Canvas API](/fr/docs/Web/API/Canvas_API): Le dessin en 2D pour le web
 - [Canvas tutorial](/fr/docs/Web/API/Canvas_API/Tutorial)

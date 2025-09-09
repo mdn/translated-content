@@ -5,12 +5,12 @@ slug: Web/CSS/@media/prefers-contrast
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#caractéristiques_média_media_features) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si l'utilisatrice ou l'utilisateur a configuré son système pour utiliser un contraste élevé (ou faible).
+La [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#caractéristiques_média_media_features) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si l'utilisatrice ou l'utilisateur a configuré son système pour utiliser un contraste élevé (ou faible).
 
 ## Syntaxe
 
 - `no-preference`
-  - : Cette valeur indique que qu'aucune préférence particulière n'a été exprimée. La valeur de ce mot-clé est évaluée à `false` dans un contexte booléen.
+  - : Cette valeur indique qu'aucune préférence particulière n'a été exprimée. La valeur de ce mot-clé est évaluée à `false` dans un contexte booléen.
 - `more`
   - : Cette valeur indique que le système a été configuré afin d'avoir un contraste plus élevé.
 - `less`

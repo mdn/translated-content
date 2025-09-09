@@ -5,7 +5,7 @@ slug: Web/API/DOMStringList
 
 {{ APIRef("DOM") }}
 
-Um tipo retornado por algumas APIs, que contém uma lista de [DOMString](/En/DOM/DOMString) (strings).
+Um tipo retornado por algumas APIs, que contém uma lista de [DOMString](/en-US/DOM/DOMString) (strings).
 
 ## Propriedades
 

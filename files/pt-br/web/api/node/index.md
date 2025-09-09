@@ -68,14 +68,12 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 ### Propriedades obsoletas
 
 - {{domxref("Node.localName")}}{{readonlyInline}}
-
   - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.
 
     > [!NOTE]
     > No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML.
 
 - {{domxref("Node.namespaceURI")}}{{readonlyInline}}
-
   - : O espaço de nomes URI desse nó, ou `null` se não estiver no espaço de nomes.
 
     > [!NOTE]
@@ -155,14 +153,14 @@ DOMComb(parentNode, callbackFunction);
 
 #### Descrição
 
-Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `parentNode` e executa a `callbackFunction` em cada um deles como [`this`](/pt-BR/docs/JavaScript/Reference/Operators/this).
+Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `parentNode` e executa a `callbackFunction` em cada um deles como [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
 
 #### Parâmetros
 
 - `parentNode`
-  - : O nó pai ([`Object`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object)`do tipo Node`).
+  - : O nó pai ([`Object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object)`do tipo Node`).
 - `callbackFunction`
-  - : A função de callback ([`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function)).
+  - : A função de callback ([`Function`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function)).
 
 #### Exemplo de uso
 

@@ -1,11 +1,13 @@
 ---
 title: 関数
 slug: Web/JavaScript/Guide/Functions
+l10n:
+  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
-関数は、 JavaScript の基本的な構成要素のひとつです。 JavaScript の関数は、プロシージャに似ています。 — タスクを実行したり値を計算したりする一連の文ですが、プロシージャが関数として認められるためには、何らかの入力を受け取り、入力と出力の間に何らかの明白な関係がある出力を返す必要があります。関数を使用するには、呼び出したいスコープのどこかで関数を定義する必要があります。
+関数は、 JavaScript の基本的な構成要素のひとつです。 JavaScript の関数は、プロシージャに似ています。タスクを実行したり値を計算したりする一連の文ですが、プロシージャが関数として認められるためには、何らかの入力を受け取り、入力と出力の間に何らかの明白な関係がある出力を返す必要があります。関数を使用するには、呼び出したいスコープのどこかで関数を定義する必要があります。
 
 より詳しくは [JavaScript の関数に関する完全なリファレンスについての章](/ja/docs/Web/JavaScript/Reference/Functions)をご覧ください。
 
@@ -17,9 +19,9 @@ slug: Web/JavaScript/Guide/Functions
 
 - 関数の名前。
 - 関数への引数のリスト。丸括弧でくくり、カンマで区切ります。
-- 関数を定義する JavaScript の文。波括弧 `{...}` でくくります。
+- 関数を定義する JavaScript の文。波括弧 `{ /* … */ }` でくくります。
 
-例えば、次のコードは `square` という名前の簡単な関数を定義します。
+例えば、次のコードは `square` という名前の関数を定義します。
 
 ```js
 function square(number) {
@@ -27,30 +29,54 @@ function square(number) {
 }
 ```
 
-関数 `square` は `number` という名前の引数を 1 つとります。この関数は、引数 (すなわち `number`) の 2 乗を返すように指示する 1 つの文で構成されています。[`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は、関数が返す値を指定します。
+関数 `square` は `number` という名前の引数を 1 つとります。この関数は、引数 (すなわち `number`) の 2 乗を返すように指示する 1 つの文で構成されています。[`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は、関数が返す値、すなわち `number * number` を指定します。
 
-```js
-return number * number;
-```
+引数は基本的に関数に**値渡し**されます。そのため、関数本体のコードで関数に渡された引数に完全に新しい値を代入しても、**その変更はグローバルまたはその関数を呼び出したコードには反映されません**。
 
-プリミティブな引数 (数値など) は**値渡し**で関数に渡されます。つまり、値は関数に渡されますが、関数が引数の値を変更しても、**この変更はグローバルな値や関数の呼び出し元の値には影響を与えません**。
-
-オブジェクト (すなわち非プリミティブ値、例えば {{jsxref("Array")}} オブジェクトやユーザー定義オブジェクトなど) を引数として渡すと、関数がオブジェクトのプロパティを変更した場合、その変更が関数外でも有効になります。次の例をご覧ください。
+オブジェクトを引数として渡すと、関数がオブジェクトのプロパティを変更した場合、次の例にみられるように、その変更は関数の外側でも反映されます。
 
 ```js
 function myFunc(theObject) {
   theObject.make = "Toyota";
 }
 
-var mycar = { make: "Honda", model: "Accord", year: 1998 };
-var x, y;
+const myCar = {
+  make: "Honda",
+  model: "Accord",
+  year: 1998,
+};
 
-x = mycar.make; // x は "Honda" という値になる
-
-myFunc(mycar);
-y = mycar.make; // y は "Toyota" という値になる
-// (プロパティが関数で変更されている)
+console.log(myCar.make); // "Honda"
+myFunc(myCar);
+console.log(myCar.make); // "Toyota"
 ```
+
+配列を引数として渡すと、関数が配列の値を変更した場合、次の例にあるように、その変更は関数の外でも反映されます。
+
+```js
+function myFunc(theArr) {
+  theArr[0] = 30;
+}
+
+const arr = [45];
+
+console.log(arr[0]); // 45
+myFunc(arr);
+console.log(arr[0]); // 30
+```
+
+関数の宣言と式は入れ子にすることができ、これにより「スコープチェーン」が形成されます。例を示します。
+
+```js
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
+```
+
+詳しくは、[関数スコープとクロージャ](#関数スコープとクロージャ)を参照してください。
 
 ### 関数式
 
@@ -62,7 +88,8 @@ y = mycar.make; // y は "Toyota" という値になる
 const square = function (number) {
   return number * number;
 };
-var x = square(4); // x の値は 16 となる
+
+console.log(square(4)); // 16
 ```
 
 ただし、関数式には名前を指定することもできます。名前を指定することで、関数が自分自身を参照することができ、また、デバッガーのスタックトレースで関数を特定しやすくなります。
@@ -72,43 +99,31 @@ const factorial = function fac(n) {
   return n < 2 ? 1 : n * fac(n - 1);
 };
 
-console.log(factorial(3));
+console.log(factorial(3)); // 6
 ```
 
-関数式は、ある関数を別の関数の引数として渡すときに便利です。次の例では、第 1 引数に関数を、第 2 引数に配列を受け取るべき `map` 関数を示しています。
+関数式は、ある関数を別の関数の引数として渡す場合に便利です。次の例では、最初の引数に関数、2 番目の引数に配列を受け取る `map` 関数を定義しています。そして、関数式で定義した関数で呼び出します。
 
 ```js
 function map(f, a) {
-  let result = []; // 新しい配列を作成
-  let i; // 変数の宣言
-  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
+  const result = new Array(a.length);
+  for (let i = 0; i < a.length; i++) {
+    result[i] = f(a[i]);
+  }
   return result;
 }
-```
 
-下記のコードでは、この関数は関数式で定義された関数を受け取って、2 つ目の引数で受け取った配列の各要素に対して実行しています。
-
-```js
-function map(f, a) {
-  let result = []; // 新しい配列を作成
-  let i; // 変数の宣言
-  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
-  return result;
-}
-const f = function (x) {
+const numbers = [0, 1, 2, 5, 10];
+const cubedNumbers = map(function (x) {
   return x * x * x;
-};
-let numbers = [0, 1, 2, 5, 10];
-let cube = map(f, numbers);
-console.log(cube);
+}, numbers);
+console.log(cubedNumbers); // [0, 1, 8, 125, 1000]
 ```
-
-これは `[0, 1, 8, 125, 1000]` を返します。
 
 JavaScript では、条件に基づいて関数を定義することもできます。例えば次の関数の定義は、 `myFunc` という関数を、変数 `num` が `0` に等しい場合のみ定義します。
 
 ```js
-var myFunc;
+let myFunc;
 if (num === 0) {
   myFunc = function (theObject) {
     theObject.make = "Toyota";
@@ -132,134 +147,98 @@ square(5);
 
 この文は `5` という引数とともに関数を呼び出します。関数は自身の文を実行し、 `25` という値を返します。
 
-関数を呼び出すときは*スコープ内*になければいけませんが、次の例のように、関数の宣言を巻き上げる (呼び出しより後に置く) ことができます。
+関数を呼び出すときは*スコープ内*になければいけませんが、次の例のように、関数の宣言を[巻き上げる](#関数の巻き上げ)（呼び出しより後に置く）ことができます。関数宣言のスコープは、自身が宣言された関数内（あるいは最上位で宣言されたのであればプログラム全体）になります。
 
-```js
-console.log(square(5));
-/* ... */
-function square(n) {
-  return n * n;
-}
-```
-
-関数のスコープは自身が宣言された関数内、あるいは最上位で宣言されたのであればプログラム全体になります。
-
-> [!NOTE]
-> この動作は、上記の構文 (すなわち `function funcName(){}`) を用いて関数を定義したときに限ることに注意してください。次のコードは動作しません。
->
-> これは、関数の巻き上げが*関数式*ではなく*関数宣言*でしか機能しないことを意味しています。
->
-> ```js example-bad
-> console.log(square); // square は初期値が undefined の状態で巻き上げられています。
-> console.log(square(5)); // Uncaught TypeError: square is not a function
-> const square = function (n) {
->   return n * n;
-> };
-> ```
-
-関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`show_props` 関数 ([オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)の章で定義) は、オブジェクトを引数にとる関数の例です。
+関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`showProps()` 関数 ([オブジェクトの利用](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)の章で定義) は、オブジェクトを引数にとる関数の例です。
 
 関数はその関数自身を呼び出すこともできます。例えば、ここに階乗を計算する関数を示します。
 
 ```js
 function factorial(n) {
-  if (n === 0 || n === 1) return 1;
-  else return n * factorial(n - 1);
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
 }
 ```
 
 1 から 5 までの階乗の計算は、次のようになります。
 
 ```js
-var a, b, c, d, e;
-a = factorial(1); // a の値は 1 となる
-b = factorial(2); // b の値は 2 となる
-c = factorial(3); // c の値は 6 となる
-d = factorial(4); // d の値は 24 となる
-e = factorial(5); // e の値は 120 となる
+console.log(factorial(1)); // 1
+console.log(factorial(2)); // 2
+console.log(factorial(3)); // 6
+console.log(factorial(4)); // 24
+console.log(factorial(5)); // 120
 ```
 
 関数を呼び出す方法は他にもあります。関数を動的に呼び出す必要があったり、関数の引数の数が変化したり、関数呼び出しのコンテキストを実行時に決定された特定のオブジェクトに設定する必要があったりする場合がよくあります。
 
-*関数はそれ自体がオブジェクト*です。 — そして、それらのオブジェクトはメソッドを持っています。 ({{jsxref("Function")}} オブジェクトを参照してください。) そのうちのひとつ、 {{jsxref("Function.apply", "apply()")}} メソッドを使って、この目的を達成することができます。
+*関数はそれ自体がオブジェクト*です。 — そして、それらのオブジェクトはメソッドを持っています。 ({{jsxref("Function")}} オブジェクトを参照してください。) [`call()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call) and [`apply()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) メソッドを使って、この目的を達成することができます。
 
-## 関数のスコープ
+### 関数の巻き上げ
 
-関数の内部で宣言された変数は、関数の外部からアクセスすることができません。これは、変数が関数のスコープ内でのみ定義されているためです。その一方、関数は自身が定義されたスコープ内で定義されているすべての変数や関数にアクセスできます。
-
-言い換えると、グローバルスコープで定義された関数は、グローバルスコープで定義されたすべての変数にアクセスできます。ある関数の内部で宣言された関数は、自身の親となる関数内で定義されたすべての変数や、その関数がアクセス権を持つ他の変数にもアクセスできます。
+以下の例があったとします。
 
 ```js
-// 以下の変数はグローバルスコープで定義
-var num1 = 20,
-  num2 = 3,
-  name = "Chamakh";
+console.log(square(5)); // 25
 
-// この関数はグローバルスコープで定義
-function multiply() {
-  return num1 * num2;
+function square(n) {
+  return n * n;
 }
-
-multiply(); // 60 を返す
-
-// 入れ子になっている関数の例
-function getScore() {
-  var num1 = 2,
-    num2 = 3;
-
-  function add() {
-    return name + " scored " + (num1 + num2);
-  }
-
-  return add();
-}
-
-getScore(); // "Chamakh scored 5" を返す
 ```
 
-## スコープと関数スタック
+関数 `square()` が宣言される前に呼び出されていますが、このコードはエラーなく実行されます。これは、JavaScript インタープリターが関数宣言全体を現在のスコープの先頭に巻き上げるためです。したがって、上記のコードは次のコードと同等です。
+
+```js
+// すべての関数宣言は、事実上、スコープの最上位にある
+function square(n) {
+  return n * n;
+}
+
+console.log(square(5)); // 25
+```
+
+関数巻き上げは関数宣言でのみ作業し、関数式では動作しません。次のコードは動作しません。
+
+```js example-bad
+console.log(square(5)); // ReferenceError: Cannot access 'square' before initialization
+const square = function (n) {
+  return n * n;
+};
+```
 
 ### 再帰
 
-関数は自身を参照し、呼び出すことができます。関数が自身を参照する方法は 3 種類あります。
-
-1. 関数名
-2. [`arguments.callee`](/ja/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-3. 関数を参照しているスコープ内の変数
-
-例えば、以下のような関数定義を考えてみましょう。
+関数は自身を参照し、呼び出すことができます。関数が自身を参照する方法は 3 種類あります。関数式または宣言の名前、あるいは関数オブジェクトを参照するスコープ内の変数によって参照できます。例えば、以下のような関数定義を考えてみましょう。
 
 ```js
-var foo = function bar() {
+const foo = function bar() {
   // ここには文が来る
 };
 ```
 
-関数本体の中で、以下のものはすべて同様の意味となります。
+関数本体内では、関数自体を `bar` または `foo` として参照し、`bar()` または `foo()` を使用して呼び出すことができます。
 
-1. `bar()`
-2. `arguments.callee()`
-3. `foo()`
+自身を呼び出す関数のことを**再帰関数**と言います。いくつかの点で、再帰はループに似ています。どちらも同じコードを何度も実行しますし、（無限ループを防ぐため、というより無限再帰を防ぐために）条件が必要です。
 
-自身を呼び出す関数のことを**再帰関数**と言います。いくつかの点で、再帰はループに似ています。どちらも同じコードを何度も実行しますし、 (無限ループを防ぐため、というより無限再帰を防ぐために) 条件が必要です。
-
-例えば、以下のループは・・・
+例えば、以下のループを考えてみてください。
 
 ```js
-var x = 0;
+let x = 0;
+// "x < 10" がループの条件
 while (x < 10) {
-  // "x < 10" がループ条件
   // 何らかの処理を行う
   x++;
 }
 ```
 
-再帰関数の宣言とその呼び出しとに置き換えることができます。
+再帰関数宣言に変換することができ、その関数を呼び出すことで続きます。
 
 ```js
 function loop(x) {
+  // "x >= 10" が終了条件 ("!(x < 10)" と同等)
   if (x >= 10) {
-    // "x >= 10" が終了条件  ("!(x < 10)" と同等)
     return;
   }
   // 何らかの処理を行う
@@ -272,11 +251,11 @@ loop(0);
 
 ```js
 function walkTree(node) {
-  if (node == null) {
+  if (node === null) {
     return;
   }
   // ノードに対し処理を行う
-  for (var i = 0; i < node.childNodes.length; i++) {
+  for (let i = 0; i < node.childNodes.length; i++) {
     walkTree(node.childNodes[i]);
   }
 }
@@ -290,15 +269,16 @@ function walkTree(node) {
 
 ```js
 function foo(i) {
-  if (i < 0) return;
-  console.log("begin: " + i);
+  if (i < 0) {
+    return;
+  }
+  console.log(`begin: ${i}`);
   foo(i - 1);
-  console.log("end: " + i);
+  console.log(`end: ${i}`);
 }
 foo(3);
 
 // 出力:
-
 // begin: 3
 // begin: 2
 // begin: 1
@@ -309,54 +289,148 @@ foo(3);
 // end: 3
 ```
 
-### 入れ子の関数とクロージャ
+### 即時実行関数式 (IIFE)
 
-関数の中に関数を入れ子に (ネスト) することができます。入れ子になった (内側の) 関数は、それを含んでいる (外側の) 関数の外には非公開となります。
-
-これにより**クロージャ**が作られます。クロージャとは、環境に束縛された (式によって「閉じ込められた」) 変数を自由に持たせることができる式 (通常は一つの関数) のことです。
-
-入れ子になった関数はクロージャなので、これはつまり、入れ子になった関数は内包する関数の引数と変数を「継承」することができるということです。別の言い方をすれば、内側の関数は外側の関数のスコープを持っているということです。
-
-まとめると、次のようになります。
-
-- 内側の関数へは、外側の関数の中にある文からのみアクセスできます。
-- 内側の関数はクロージャを形成します。内側の関数は外側の関数の引数と変数を利用できますが、外側の関数は内側の関数の引数と変数を利用できません。
-
-以下の例では入れ子になった関数が示されています。
+[即時実行関数式 (IIFE)](/ja/docs/Glossary/IIFE) は、式として定義された関数を直接呼び出すコードパターンです。次のように見ていきます。
 
 ```js
-function addSquares(a, b) {
-  function square(x) {
-    return x * x;
-  }
-  return square(a) + square(b);
-}
-a = addSquares(2, 3); // 13 を返す
-b = addSquares(3, 4); // 25 を返す
-c = addSquares(4, 5); // 41 を返す
+(function () {
+  // 何かする
+})();
+
+const value = (function () {
+  // 何かする
+  return someValue;
+})();
 ```
 
-内側の関数はクロージャとなるので、外側の関数からクロージャを呼び出し、外部と内部両方の関数に対し引数を指定することができます。
+関数を変数に保存する代わりに、関数はすぐに呼び出されます。これは、関数の本体を記述するのとほぼ同じですが、いくつかの固有の利点があります。
+
+- これにより、変数の追加の[スコープ](#関数スコープとクロージャ)が作成され、変数を有用な場所に限定するのに役立ちます。
+- これで、一連の文ではなく、式になります。これにより、変数を初期化するときに複雑な計算ロジックを書くことができます。
+
+詳しくは、用語集の項目の [IIFE](/ja/docs/Glossary/IIFE) を参照してください。
+
+## 関数スコープとクロージャ
+
+関数の内部で宣言された変数は、関数の外部からアクセスすることができません。これは、変数が関数のスコープ内でのみ定義されているためです。その一方、関数は自身が定義されたスコープ内で定義されているすべての変数や関数にアクセスできます。
+言い換えると、グローバルスコープで定義された関数は、グローバルスコープで定義されたすべての変数にアクセスできます。ある関数の内部で宣言された関数は、自身の親となる関数内で定義されたすべての変数や、その関数がアクセス権を持つ他の変数にもアクセスできます。
+
+関数は変数の[スコープ](/ja/docs/Glossary/Scope)を形成します。つまり、関数内で定義された変数は、その関数の外部からはアクセスできません。関数のスコープは、それより上のすべてのスコープから継承されます。例えば、グローバルスコープで定義された関数は、グローバルスコープで定義されたすべての変数にアクセスできます。別の関数内で定義された関数も、その親関数で定義されたすべての変数、および親関数がアクセスできるその他の変数にアクセスできます。一方、親関数（およびその他の親スコープ）は、内部関数内で定義された変数や関数にアクセスできません。これにより、内部関数内の変数が一種のカプセル化されます。
 
 ```js
-function outside(x) {
-  function inside(y) {
-    return x + y;
-  }
-  return inside;
-}
-fn_inside = outside(3); // 渡されたものに 3 を加算する関数を取得する、と
-// 考えてください。
-result = fn_inside(5); // 8 を返す
+// 以下の変数はグローバルスコープで定義
+const num1 = 20;
+const num2 = 3;
+const name = "Chamakh";
 
-result1 = outside(3)(5); // 8 を返す
+// この関数はグローバルスコープで定義
+function multiply() {
+  return num1 * num2;
+}
+
+console.log(multiply()); // 60
+
+// 入れ子になっている関数の例
+function getScore() {
+  const num1 = 2;
+  const num2 = 3;
+
+  function add() {
+    return `${name} scored ${num1 + num2}`;
+  }
+
+  return add();
+}
+
+console.log(getScore()); // "Chamakh scored 5"
 ```
 
-### 変数の保護
+### クロージャ
 
-`inside` が返されるとき、変数 `x` がどのように保護されるのかに注目してください。クロージャはそれ自身が参照しているすべてのスコープ内の引数と変数を保護することになります。それぞれの呼び出しには異なる引数が渡される可能性があるので、 `outside` を呼び出すたびに新しいクロージャが作られます。返された `inside` がもはやアクセスできなくなった時にのみメモリーが解放されます。
+関数本体を「クロージャ」とも呼びます。クロージャは、いくつかの変数を参照するソースコードの一部 （最も一般的には関数） で、これらの変数が宣言されたスコープが終了しても、その変数を「記憶」します。
 
-これはその他のオブジェクトの内部で参照を保持する場合と違いはないのですが、クロージャの場合は直接参照を設定せず、また情報を取得できないので、明白さは劣ります。
+クロージャは通常、親スコープの寿命を超えて変数を記憶していることを示すために、入れ子になった関数で表現されます。しかし、実際には、入れ子になった関数は必要ありません。技術的には、 JavaScript のすべての関数はクロージャを形成しています。ただし、何らかの情報を取得しないものもあり、クロージャは関数である必要もありません。「有用な」クロージャの重要な要素は、次のとおりです。
+
+- いくつかの変数や関数を定義する親スコープ。これは明確な有効期間を持つ必要があります。つまり、ある時点で実行が完了する必要があります。グローバルスコープ以外のすべてのスコープは、この要件を満たします。これには、ブロック、関数、モジュールなどが含まれます。
+- 親スコープ内で定義され、親スコープで定義された変数や関数を参照する内部スコープ。
+- 内側のスコープは、親スコープの有効期間を超えて存続します。例えば、親スコープの外で定義された変数に保存されるか、親スコープから返されます （親スコープが関数である場合）。
+- その後、親スコープの外で関数を呼び出しても、親スコープの実行が完了していても、親スコープで定義された変数や関数にアクセスすることができます。
+
+次の例は、クロージャの典型的な例です。
+
+```js
+// 外側の関数は変数 "name" を定義
+const pet = function (name) {
+  const getName = function () {
+    // 内側の関数は外側の関数の変数 "name" にアクセス可能
+    return name;
+  };
+  return getName; // 内側の関数を返すことで、外側の関数に公開する
+};
+const myPet = pet("Vivie");
+
+console.log(myPet()); // "Vivie"
+```
+
+上記のコードより複雑なコードにすることもできます。外側の関数の内部にある変数を操作するメソッドを含む、オブジェクトを返すことができます。
+
+```js
+const createPet = function (name) {
+  let sex;
+
+  const pet = {
+    // setName(newName) is equivalent to setName: function (newName)
+    // in this context
+    setName(newName) {
+      name = newName;
+    },
+
+    getName() {
+      return name;
+    },
+
+    getSex() {
+      return sex;
+    },
+
+    setSex(newSex) {
+      if (
+        typeof newSex === "string" &&
+        (newSex.toLowerCase() === "male" || newSex.toLowerCase() === "female")
+      ) {
+        sex = newSex;
+      }
+    },
+  };
+
+  return pet;
+};
+
+const pet = createPet("Vivie");
+console.log(pet.getName()); // Vivie
+
+pet.setName("Oliver");
+pet.setSex("male");
+console.log(pet.getSex()); // male
+console.log(pet.getName()); // Oliver
+```
+
+上記の例で、外側の関数の変数 `name` は内側の関数からアクセスでき、また内側の関数を通さずに内側の変数へアクセスする他の方法はありません。内側の関数の内部変数は、内側の関数の安全な保存領域として振る舞います。それらは内側の関数と連動するデータを、「永続的」かつ「安全に」保持します。関数は変数を割り当てる必要さえなく、また名前を持つ必要もありません。
+
+```js
+const getCode = (function () {
+  const apiCode = "0]Eal(eh&2"; // 外側の関数が変更できないようにしたいコード
+
+  return function () {
+    return apiCode;
+  };
+})();
+
+console.log(getCode()); // "0]Eal(eh&2"
+```
+
+上記のコードでは、 [IIFE](#即時実行関数式_iife) パターンを使用しています。この IIFE スコープ内には、2 つの値、つまり変数 `apiCode` と、返され、変数 `getCode` に代入される無名関数が存在します。 `apiCode` は、返される無名関数のスコープ内にはありますが、プログラムの他の部分には属していないため、 `getCode` 関数以外では `apiCode` の値を読み取る方法はありません。
 
 ### 多重入れ子関数
 
@@ -366,9 +440,7 @@ result1 = outside(3)(5); // 8 を返す
 - 関数 `B` と `C` はクロージャとなるので、 `B` は `A` にアクセスでき、 `C` は `B` にアクセスできます。
 - さらに、 `C` は `A` にアクセス可能な `B` にアクセスできるので、 `C` は `A` にもアクセスできます。
 
-このようにして、クロージャは多重スコープを導入できます。つまり関数のスコープが再帰的に包含されているのです。これを*スコープチェーン*と呼びます。 (なぜ「チェーン」と呼ぶのかは後で説明します。)
-
-次の例を見てみましょう。
+このようにして、クロージャは多重スコープを導入できます。つまり関数のスコープが再帰的に包含されているのです。これを「スコープチェーン」と呼びます。次の例を見てみましょう。
 
 ```js
 function A(x) {
@@ -383,124 +455,31 @@ function A(x) {
 A(1); // 6 がログに出力される (1 + 2 + 3)
 ```
 
-この例では、関数 `C` は関数 `B` の引数 `y` と関数 `A` の引数 `x` にアクセスしています。
-
-なぜこれが可能かというと、
+この例では、関数 `C` は関数 `B` の引数 `y` と関数 `A` の引数 `x` にアクセスしています。なぜこれが可能かというと、
 
 1. 関数 `B` は関数 `A` に含まれたクロージャとなっています (すなわち、 `B` は `A` の引数と変数にアクセスできます)。
 2. 関数 `C` は関数 `B` に含まれたクロージャとなっています。
-3. クロージャ `B` は `A` の中にあり、 `C` のクロージャも `A` の中にあるので、 `C` は `B` _と_ `A` の*両方*の引数と変数にアクセスできます。言い換えれば、`C` は `B`、`A` の順でスコープがつながっている (_chain_) のです。
+3. `C` のクロージャには `B` が含まれ、 `B` のクロージャには `A` が含まれます。つまり、 `C` のクロージャには `A` も含まれます。これは、 `C` が `B` と `A` の引数や変数にアクセスできるということを意味しています。言い換えれば、 `C` は `B` と `A` のスコープを順番に連結しているということです。
 
 その一方で、逆は成り立ちません。 `A` は `C` にアクセスできません。なぜなら `A` は、 `C` を変数の一つとして持っている `B` の引数や変数にはアクセスできないからです。このように `C` は `B` の外に対してのみ非公開となっています。
 
 ### 名前の衝突
 
-クロージャ中のスコープに同じ名前の 2 つの引数や変数がある場合、*名前の衝突*が生じます。より内側のスコープが優先されるので、最も内側にあるスコープが最優先に、最も外側のスコープが最も低い優先度となります。これがスコープチェーンです。チェーンの最初は最も内側のスコープ、そして最後は最も外側のスコープとなります。次の例を見てみましょう。
+クロージャ中のスコープに同じ名前の 2 つの引数や変数がある場合、**名前の衝突**が生じます。より内側のスコープが優先されるので、最も内側にあるスコープが最優先に、最も外側のスコープが最も低い優先度となります。これがスコープチェーンです。チェーンの最初は最も内側のスコープ、そして最後は最も外側のスコープとなります。次の例を見てみましょう。
 
 ```js
 function outside() {
-  var x = 5;
+  const x = 5;
   function inside(x) {
     return x * 2;
   }
   return inside;
 }
 
-outside()(10); // 10 ではなく 20 を返す
+console.log(outside()(10)); // 10 ではなく 20 を返す
 ```
 
-文 `return x` の箇所で、`inside` の引数 `x` と `outside` の変数 `x` との間に名前の衝突が発生しています。ここでのスコープチェーンは、{ `inside`, `outside`, グローバルオブジェクト } です。したがって `inside` の `x` が `outside` の `x` より優先され、結果 10 (`outside` の `x`) ではなく、20 (`inside` の `x`) が返されます。
-
-## クロージャ
-
-クロージャは、 JavaScript でもっとも強力な機能のひとつです。 JavaScript では関数の入れ子が可能であることに加えて、内側の関数が外側の関数内で定義されたすべての変数や関数に対し (外側の関数がアクセスできる、他の変数や関数すべてにも) 自由にアクセスできます。
-
-しかし、外側の関数は内側の関数内で定義された変数や関数にアクセスできません。これは、内側の関数の変数に対する一種のセキュリティ機構を提供します。
-
-また、内側の関数は外側の関数のスコープにアクセスできることから、もし内側の関数が外側の関数よりも長く生存できた場合、外側の関数内で定義された変数や関数は外側の関数よりも長く残る可能性があります。クロージャは、内側の関数が何かしらの形で外側の関数のスコープ外のどこかで使用可能になった場合に作られます。
-
-```js
-var pet = function (name) {
-  // 外側の関数は変数 "name" を定義
-  var getName = function () {
-    return name; // 内側の関数は外側の関数の変数 "name" にアクセス可能
-  };
-  return getName; // 内側の関数を返すことで、外側の関数に公開する
-};
-myPet = pet("Vivie");
-
-myPet(); // "Vivie" を返す
-```
-
-上記のコードより複雑なコードにすることもできます。外側の関数の内部にある変数を操作するメソッドを含む、オブジェクトを返すことができます。
-
-```js
-var createPet = function (name) {
-  var sex;
-
-  return {
-    setName: function (newName) {
-      name = newName;
-    },
-
-    getName: function () {
-      return name;
-    },
-
-    getSex: function () {
-      return sex;
-    },
-
-    setSex: function (newSex) {
-      if (
-        typeof newSex === "string" &&
-        (newSex.toLowerCase() === "male" || newSex.toLowerCase() === "female")
-      ) {
-        sex = newSex;
-      }
-    },
-  };
-};
-
-var pet = createPet("Vivie");
-pet.getName(); // Vivie
-
-pet.setName("Oliver");
-pet.setSex("male");
-pet.getSex(); // male
-pet.getName(); // Oliver
-```
-
-上記の例で、外側の関数の変数 `name` は内側の関数からアクセスでき、また内側の関数を通さずに内側の変数へアクセスする他の方法はありません。内側の関数の内部変数は、内側の関数の安全な保存領域として振る舞います。それらは内側の関数と連動するデータを、「永続的」かつ「安全に」保持します。関数は変数を割り当てる必要さえなく、また名前を持つ必要もありません。
-
-```js
-var getCode = (function () {
-  var apiCode = "0]Eal(eh&2"; // 外側の関数が変更できないようにしたいコード
-
-  return function () {
-    return apiCode;
-  };
-})();
-
-getCode(); // シークレットコードを返す
-```
-
-> [!NOTE]
-> クロージャを使用する際に注意すべき落とし穴がいくつかあります。
->
-> 取り囲まれている関数で外部スコープの変数と同じ名前の変数を定義した場合、外部スコープにある変数を再び参照する方法がなくなります。 (プログラムが内部スコープを終了するまで、内部スコープ変数は外部変数を「上書き」します。)
->
-> ```js example-bad
-> var createPet = function (name) {
->   // 外側の関数で "name" という変数を定義します。
->   return {
->     setName: function (name) {
->       // 内側の関数も "name" という変数を定義します
->       name = name; // 外側の関数で定義した "name" へどのようにしてアクセスするのか？
->     },
->   };
-> };
-> ```
+`return x * 2` の文では、`inside` の引数 `x` と `outside` の変数 `x` の間で名前の競合が発生します。この場合のスコープチェーンは、`inside` => `outside` => グローバルオブジェクトとなります。したがって、`inside`の`x`が`outside`の`x`よりも優先され、`10` (`outside`の`x`)ではなく、`20` (`inside`の`x`)が返されます。
 
 ## arguments オブジェクトの使用
 
@@ -518,10 +497,9 @@ arguments[i];
 
 ```js
 function myConcat(separator) {
-  var result = ""; // リストを初期化する
-  var i;
+  let result = ""; // リストを初期化する
   // 引数について繰り返し
-  for (i = 1; i < arguments.length; i++) {
+  for (let i = 1; i < arguments.length; i++) {
     result += arguments[i] + separator;
   }
   return result;
@@ -531,14 +509,14 @@ function myConcat(separator) {
 この関数に引数をいくつも渡すことができます。そして、各引数を文字列の「リスト」に連結します。
 
 ```js
-// "red, orange, blue, " を返す
-myConcat(", ", "red", "orange", "blue");
+console.log(myConcat(", ", "red", "orange", "blue"));
+// "red, orange, blue, "
 
-// "elephant; giraffe; lion; cheetah; " を返す
-myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+console.log(myConcat("; ", "elephant", "giraffe", "lion", "cheetah"));
+// "elephant; giraffe; lion; cheetah; "
 
-// "sage. basil. oregano. pepper. parsley. " を返す
-myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+console.log(myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley"));
+// "sage. basil. oregano. pepper. parsley. "
 ```
 
 > [!NOTE]
@@ -548,13 +526,11 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 ## 関数の引数
 
-ECMAScript 2015 から、新しい形の引数が 2 つあります。それが*デフォルト引数*と*残余引数*です。
+特殊な種類の引数の構文が 2 つあります。それが*デフォルト引数*と*残余引数*です。
 
 ### デフォルト引数
 
 JavaScript では、関数の引数は既定で `undefined` となります。しかし、別の既定値が設定されていれば便利だという状況もあるでしょう。デフォルト引数がここで役に立ちます。
-
-#### デフォルト引数がない場合 (ECMAScript 2015 以前)
 
 以前、既定値を設定する一般的な方法は、関数の本体で引数の値をテストし、`undefined` だった場合にある値を割り当てる、というものでした。
 
@@ -563,14 +539,11 @@ JavaScript では、関数の引数は既定で `undefined` となります。�
 ```js
 function multiply(a, b) {
   b = typeof b !== "undefined" ? b : 1;
-
   return a * b;
 }
 
-multiply(5); // 5
+console.log(multiply(5)); // 5
 ```
-
-#### デフォルト引数がある場合 (ECMAScript 2015 以降)
 
 *デフォルト引数*を使えば、関数本体での引数チェックはもう必要ありません。これからは、関数の最初で単純に `b` に `1` を代入することができます。
 
@@ -579,7 +552,7 @@ function multiply(a, b = 1) {
   return a * b;
 }
 
-multiply(5); // 5
+console.log(multiply(5)); // 5
 ```
 
 詳細については、リファレンスの[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)をご覧ください。
@@ -595,13 +568,13 @@ function multiply(multiplier, ...theArgs) {
   return theArgs.map((x) => multiplier * x);
 }
 
-var arr = multiply(2, 1, 2, 3);
+const arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]
 ```
 
 ## アロー関数
 
-[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (以前、そして今も誤って**ファットアロー関数**とも呼ばれる) は関数式と比較してより短い構文を持ち、[`this`](/ja/docs/Web/JavaScript/Reference/Operators/this)、[arguments](/ja/docs/Web/JavaScript/Reference/Functions/arguments)、[super](/ja/docs/Web/JavaScript/Reference/Operators/super)、[new.target](/ja/docs/Web/JavaScript/Reference/Operators/new.target) の値を持ちません。アロー関数は常に無名関数です。 hacks.mozilla.org によるブログ記事、 "[ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)" も参照してください。
+[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（将来の JavaScript で想定される `->` 構文と区別するために**ファットアロー関数**とも呼ばれる）は関数式と比較してより短い構文を持ち、[`this`](/ja/docs/Web/JavaScript/Reference/Operators/this)、[`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments)、[`super`](/ja/docs/Web/JavaScript/Reference/Operators/super)、[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) の値を持ちません。アロー関数は常に無名関数です。
 
 アロー関数の導入には 2 つの要素が絡んでいます。それは*短縮形の関数*と `this` との*結びつけがない*ことです。
 
@@ -610,20 +583,20 @@ console.log(arr); // [2, 4, 6]
 関数パターンによっては、短縮形の関数がうってつけです。比較してみましょう。
 
 ```js
-var a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+const a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-var a2 = a.map(function (s) {
+const a2 = a.map(function (s) {
   return s.length;
 });
 
-console.log(a2); // logs [8, 6, 7, 9]
+console.log(a2); // [8, 6, 7, 9]
 
-var a3 = a.map((s) => s.length);
+const a3 = a.map((s) => s.length);
 
-console.log(a3); // logs [8, 6, 7, 9]
+console.log(a3); // [8, 6, 7, 9]
 ```
 
-### 独自の `this` を持たない
+### 独自の this を持たない
 
 アロー関数の導入以前は、すべての新しい関数には独自の [this](/ja/docs/Web/JavaScript/Reference/Operators/this) 値が定義されていました (コンストラクターの場合は新しいオブジェクトに、 [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) の関数呼び出しの場合は undefined に、関数が「オブジェクトのメソッド」として呼び出された場合はその基底オブジェクトに、といったように) 。これはオブジェクト指向プログラミングにとっては厄介です。
 
@@ -640,15 +613,16 @@ function Person() {
   }, 1000);
 }
 
-var p = new Person();
+const p = new Person();
 ```
 
 ECMAScript 3/5 では、`this` の値をアクセス可能な別の値に割り当てることでこの問題を解決します。
 
 ```js
 function Person() {
-  var self = this; // `self` の代わりに `that` を選ぶ人もいます。
+  // `self` の代わりに `that` を選ぶ人もいます。
   // どちらか一方を選び、そちらだけを使うようにしましょう。
+  const self = this;
   self.age = 0;
 
   setInterval(function growUp() {
@@ -672,36 +646,7 @@ function Person() {
   }, 1000);
 }
 
-var p = new Person();
+const p = new Person();
 ```
-
-## 定義済み関数
-
-JavaScript には、定義済みの最上位関数がいくつかあります。
-
-- {{jsxref("Global_Objects/eval", "eval()")}}
-  - : **`eval()`** メソッドは文字列として書き表された JavaScript のコードを評価します。
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
-  - : **`uneval()`** メソッドは{{jsxref("Object","オブジェクト","",1)}}のソースコードを表す文字列を生成します。
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-  - : このグローバル関数 **`isFinite()`** は渡された値が有限数であるかを判定します。必要であれば、引数は初めに数値へと変換されます。
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : **`isNaN()`** 関数は値が {{jsxref("Global_Objects/NaN", "NaN")}} (非数) であるかどうかを判定します。注: `isNaN` 関数内での強制型変換は[変わった](/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description)ルールを持っています。値が非数であるかを判定するには、代わりに ECMAScript 2015 で定義された {{jsxref("Number.isNaN()")}} か、 [`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) を使うことができます。
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-  - : **`parseFloat()`** 関数は引数の文字列を解釈して浮動小数点数を返します。
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-  - : **`parseInt()`** 関数は引数の文字列を解釈して指定された基数 (数学的記数法における基数) による整数を返します。
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-  - : **`decodeURI()`** 関数は前もって {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 関数によって、または同様の方法で作られた URL (Uniform Resource Identifier) をデコードします。
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-  - : **`decodeURIComponent()`** メソッドは前もって {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 関数によって、あるいは同様の方法で作られた部分的な URI をデコードします。
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-  - : **`encodeURI()`** メソッドは、特定の文字をそれぞれ UTF-8 文字エンコーディングで表された 1 から 4 つのエスケープシーケンス (4 つのエスケープシーケンスはサロゲートペア文字のみ) に置き換えることで URI をエンコードします。
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-  - : **`encodeURIComponent()`** メソッドは、特定の文字をそれぞれ UTF-8 文字エンコーディングで表された 1 から 4 つのエスケープシーケンス (4 つのエスケープシーケンスはサロゲートペア文字のみ) に置き換えることで部分的な URI をエンコードします。
-- {{jsxref("Global_Objects/escape", "escape()")}}
-  - : 非推奨の **`escape()`** メソッドはある文字列を 16 進数によるエスケープシーケンスで置換した新しい文字列を計算します。代わりに {{jsxref("Global_Objects/encodeURI", "encodeURI")}} または {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} を使用してください。
-- {{jsxref("Global_Objects/unescape", "unescape()")}}
-  - : 非推奨の **`unescape()`** メソッドはある文字列中の 16 進数によるエスケープシーケンスを、それが表す所定の文字に置換した新しい文字列を計算します。エスケープシーケンスは {{jsxref("Global_Objects/escape", "escape")}} といった関数によって提供されているかもしれません。 `unescape()` は非推奨なので、代わりに {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} または {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} を使用してください。
 
 {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

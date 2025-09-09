@@ -299,10 +299,9 @@ log("Main program exiting");
 
 - [In depth: Microtasks and the JavaScript runtime environment](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}
-- [Asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-
-  - [General asynchronous programming concepts](/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts)
-  - [Introducing asynchronous JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/zh-CN/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-  - [Graceful asynchronous programming with Promises](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
-  - [Choosing the right approach](/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+- [Asynchronous JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
+  - [General asynchronous programming concepts](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [Introducing asynchronous JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
+  - [Graceful asynchronous programming with Promises](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises)
+  - [Choosing the right approach](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)

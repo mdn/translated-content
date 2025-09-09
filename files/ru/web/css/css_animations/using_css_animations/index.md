@@ -407,4 +407,4 @@ function listener(e) {
 ## Смотрите также
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Использование CSS-переходов](/ru/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Использование CSS-переходов](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

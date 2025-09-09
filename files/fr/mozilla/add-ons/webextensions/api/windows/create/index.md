@@ -15,7 +15,7 @@ Lorsque vous créez la fenêtre, vous pouvez :
 - Créez une fenêtre de style "panneau" qui, dans ce contexte, désigne une fenêtre sans l'interface utilisateur UI (barre d'adresse, barre d'outils, etc.).
 - Définissez différentes propriétés de la fenêtre, par exemple, qu'elle soit concentrée ou privée.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -28,15 +28,11 @@ var creating = browser.windows.create(
 ### Paramètres
 
 - `createData`{{optional_inline}}
-
   - : `object`.
-
     - `allowScriptsToClose` {{optional_inline}}
-
       - : `boolean`. Lorsque la fenêtre est ouverte, elle contiendra un seul onglet, ou plus d'un onglet si `url` est donnée et comprendra un tableau contenant plus d'une URL. Par défaut, les scripts s'exécutant dans ces pages ne sont pas autorisés à fermer leur onglet en utilisant [`window.close()`](/fr/docs/Web/API/Window/close). Si vous incluez `allowScriptsToClose` et le mettez à `true` , alors ce comportement par défaut est modifié, de sorte que les scripts peuvent fermer leurs onglets. Notez cela :
-
         - Ceci ne s'applique qu'aux onglets qui ont été ouverts lors de la création de la fenêtre. Si l'utilisateur ouvre plus d'onglets dans cette fenêtre, les scripts ne pourront pas fermer ces nouveaux onglets.
-        - Si la ou les url(s) donnée(s) dans `url` pointent vers les [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Bundled_web_pages) (c'est-à-dire qu'il s'agit de pages incluses avec cette extension et chargées avec le protocole "moz-extension:") alors les scripts _sont_ par défaut autorisés à fermer ces onglets.
+        - Si la ou les url(s) donnée(s) dans `url` pointent vers les [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages) (c'est-à-dire qu'il s'agit de pages incluses avec cette extension et chargées avec le protocole "moz-extension:") alors les scripts _sont_ par défaut autorisés à fermer ces onglets.
 
     - `cookieStoreId` {{optional_inline}}
       - : `integer`. S'il est présent, spécifie le `CookieStoreId` pour tous les onglets qui seront créés lorsque la fenêtre sera ouverte.
@@ -65,7 +61,7 @@ var creating = browser.windows.create(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la nouvelle fenêtre. Cet objet de fenêtre aura toujours son ensemble de propriétés d'onglets, contrairement aux objets de fenêtre retournés à partir de {{WebExtAPIRef("windows.get()")}} et d'API similaires, qui contiennent uniquement des onglets si l'option de remplissage est passée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la nouvelle fenêtre. Cet objet de fenêtre aura toujours son ensemble de propriétés d'onglets, contrairement aux objets de fenêtre retournés à partir de {{WebExtAPIRef("windows.get()")}} et d'API similaires, qui contiennent uniquement des onglets si l'option de remplissage est passée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -140,8 +136,6 @@ browser.browserAction.onClicked.addListener((tab) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

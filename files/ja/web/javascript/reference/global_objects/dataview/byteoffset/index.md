@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 
 **`byteOffset`** アクセサープロパティは、このビューの {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の先頭からオフセットを表します。
 
-{{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}
+{{InteractiveExample("JavaScript デモ: DataView.byteOffset")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+
+console.log(view.byteOffset);
+// Expected output: 12
+```
 
 ## 解説
 

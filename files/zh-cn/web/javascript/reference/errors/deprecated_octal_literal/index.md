@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4e0349ec31c38bebd56e56782170666e11ae5ad3
 ---
 
-{{jsSidebar("Errors")}}
-
 仅在 JavaScript [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下出现的异常“0-prefixed octal literals are deprecated; use the "0o" prefix instead”在使用了已被弃用的八进制字面量（`0` 后跟数字）时出现。
 
 ## 错误提示
@@ -51,4 +49,4 @@ SyntaxError: Decimal integer literals with a leading zero are forbidden in stric
 
 ## 参见
 
-- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#八进制)
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#八进制)

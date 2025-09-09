@@ -15,7 +15,7 @@ l10n:
 
 {{jsxref("String", "Строка")}} с сообщением о состоянии ответа HTTP. Значение по умолчанию — "".
 
-Смотрите [Коды состояния ответа HTTP](/ru/docs/Web/HTTP/Status) для получения списка кодов и связанных с ними сообщений о сосотоянии.
+Смотрите [Коды состояния ответа HTTP](/ru/docs/Web/HTTP/Reference/Status) для получения списка кодов и связанных с ними сообщений о сосотоянии.
 Обратите внимание, что HTTP/2 [не поддерживает](https://fetch.spec.whatwg.org/#concept-response-status-message) сообщения о состоянии.
 
 ## Примеры
@@ -52,5 +52,5 @@ fetch(myRequest)
 ## Смотрите также
 
 - [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

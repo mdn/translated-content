@@ -2,14 +2,24 @@
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
 
-**`toISOString()`** メソッドは、*簡潔な*拡張表記の ISO 形式 ([ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601)) の文字列を返します。これは、常に 24 文字または 27 文字の長さになります（それぞれ、`YYYY-MM-DDTHH:mm:ss.sssZ` または `±YYYYYY-MM-DDTHH:mm:ss.sssZ`）。タイムゾーンは常に 0 UTC オフセットになり、接尾辞 `Z` で表記されます。
+**`toISOString()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時を[日時文字列形式](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#日時文字列形式)で表す文字列を返します。この形式は、[ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) に基づく簡略化された形式で、常に 24 または 27 文字の長さです（`YYYY-MM-DDTHH:mm:ss.sssZ` または `±YYYYYY-MM-DDTHH:mm:ss.sssZ`）。タイムゾーンは常に 0 UTC オフセットになり、接尾辞 `Z` で表記されます。
 
-{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}
+{{InteractiveExample("JavaScript デモ: Date.toISOString()")}}
+
+```js interactive-example
+const event = new Date("05 October 2011 14:48 UTC");
+console.log(event.toString());
+// 予想される結果: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toISOString());
+// 予想される結果: "2011-10-05T14:48:00.000Z"
+```
 
 ## 構文
 
@@ -17,21 +27,28 @@ l10n:
 toISOString()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-協定世界時に基づき、与えられた日付を [ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) 形式で表す文字列。 [`Date.parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#date_time_string_format) で認識するために必要な形式と同じ形式です。
+協定世界時に基づき、指定された日付を[日時文字列形式](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#日時文字列形式)で表す文字列。 {{jsxref("Date.parse()")}} で認識するために求められる形式と同じ形式です。
+
+### 例外
+
+- {{jsxref("RangeError")}}
+  - : 日付が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)であるか、日時文字列形式で表せない年に相当する場合に発生します。
 
 ## 例
 
 ### toISOString() の使用
 
 ```js
-const today = new Date("05 October 2011 14:48 UTC");
+const d = new Date(0);
 
-console.log(today.toISOString()); // 2011-10-05T14:48:00.000Z を返す
+console.log(d.toISOString()); // "1970-01-01T00:00:00.000Z"
 ```
-
-上記の例は、Mozilla 以外のブラウザーでは正しく解析されない、非標準の文字列値を解析するのに使います。
 
 ## 仕様書
 
@@ -44,6 +61,5 @@ console.log(today.toISOString()); // 2011-10-05T14:48:00.000Z を返す
 ## 関連情報
 
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toString()")}}
 - {{jsxref("Date.prototype.toUTCString()")}}
-- [ポリフィル](https://github.com/behnammodi/polyfill/blob/master/date.polyfill.js)

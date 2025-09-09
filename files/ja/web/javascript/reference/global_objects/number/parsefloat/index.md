@@ -1,15 +1,29 @@
 ---
 title: Number.parseFloat()
+short-title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Number.parseFloat()`** は静的メソッドで、引数を解釈して浮動小数点値を返します。引数の数値が解釈できない場合は、 {{jsxref("NaN")}} を返します。
 
-{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
+{{InteractiveExample("JavaScript デモ: Number.parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  if (Number.isNaN(Number.parseFloat(r))) {
+    return 0;
+  }
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference("4.567abcdefgh"));
+// 予想される結果: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// 予想される結果: 0
+```
 
 ## 構文
 
@@ -53,5 +67,6 @@ Number.parseFloat === parseFloat; // true
 ## 関連情報
 
 - [`Number.parseFloat` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims による `Number.parseFloat` のポリフィル](https://www.npmjs.com/package/number.parsefloat)
 - {{jsxref("Number")}}
 - {{jsxref("parseFloat()")}}

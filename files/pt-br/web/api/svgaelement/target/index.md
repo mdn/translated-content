@@ -23,7 +23,7 @@ Valores para {{domxref("target")}} você pode ver [aqui](https://www.w3.org/TR/2
 
 ## Exemplo
 
-O código é foi retirado de ["SVGAElement example code"](/pt-BR/docs/Web/API/SVGAElement#Example)
+O código é foi retirado de ["SVGAElement example code"](/pt-BR/docs/Web/API/SVGAElement#example)
 
 ```js
 ...

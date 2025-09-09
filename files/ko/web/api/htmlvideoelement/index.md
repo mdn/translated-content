@@ -7,7 +7,7 @@ slug: Web/API/HTMLVideoElement
 
 **`HTMLVideoElement`** 인터페이스는 Video object를 조작하는데 필요한 프로퍼티와 메소드를 제공합니다. {{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}를 상속합니다.
 
-[지원하는 미디어 포맷](/ko/docs/HTML/Supported_media_formats) 목록은 브라우저마다 다릅니다. 여러분은 적절한 범위의 브라우저에서 지원하는 한가지 비디어 포맷을 제공하던가, 지원할 모든 브라우저를 위한 여러 종류의 미디어 포맷을 제공해야 합니다.
+[지원하는 미디어 포맷](/ko/docs/Web/Media/Formats) 목록은 브라우저마다 다릅니다. 여러분은 적절한 범위의 브라우저에서 지원하는 한가지 비디어 포맷을 제공하던가, 지원할 모든 브라우저를 위한 여러 종류의 미디어 포맷을 제공해야 합니다.
 
 {{InheritanceDiagram(600, 140)}}
 
@@ -16,15 +16,15 @@ slug: Web/API/HTMLVideoElement
 _{{domxref("HTMLMediaElement")}}와_ _{{domxref("HTMLElement")}}의 속성들도 상속 받습니다._
 
 - {{domxref("HTMLVideoElement.height")}}
-  - : 표시 영역의 높이를 나타내는 HTML Attribute [`height`](/ko/docs/Web/HTML/Element/video#height)의 값을 {{domxref("DOMString")}}으로 반환합니다. 단위는 pixel입니다.
+  - : 표시 영역의 높이를 나타내는 HTML Attribute [`height`](/ko/docs/Web/HTML/Reference/Elements/video#height)의 값을 {{domxref("DOMString")}}으로 반환합니다. 단위는 pixel입니다.
 - {{domxref("HTMLVideoElement.poster")}}
-  - : 비디오 데이터가 없을 때 보여줄 이미지를 지정하는 HTML Attribute [`poster`](/ko/docs/Web/HTML/Element/video#poster)의 값을 {{domxref("DOMString")}}로 반환합니다.
+  - : 비디오 데이터가 없을 때 보여줄 이미지를 지정하는 HTML Attribute [`poster`](/ko/docs/Web/HTML/Reference/Elements/video#poster)의 값을 {{domxref("DOMString")}}로 반환합니다.
 - {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
   - : 비디오의 height를 부호 없는 정수로 나타낸 값을 반환합니다. 비디오가 없는 경우 0을 반환합니다.
 - {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
   - : 비디오의 width를 부호 없는 정수로 나타낸 값을 반환합니다. 비디오가 없는 경우 0을 반환합니다.
 - {{domxref("HTMLVideoElement.width")}}
-  - : 표시 영역의 높이를 나타내는 HTML Attribute [`width`](/ko/docs/Web/HTML/Element/video#width)의 값을 {{domxref("DOMString")}}으로 반환합니다. 단위는 pixel입니다.
+  - : 표시 영역의 높이를 나타내는 HTML Attribute [`width`](/ko/docs/Web/HTML/Reference/Elements/video#width)의 값을 {{domxref("DOMString")}}으로 반환합니다. 단위는 pixel입니다.
 
 ### Gecko 전용 속성
 
@@ -78,5 +78,5 @@ _{{domxref("HTMLMediaElement")}}와 {{domxref("HTMLElement")}}의 이벤트를 �
 ## 더 보기
 
 - HTML 엘리먼트 구현체: {{HTMLElement("video")}}.
-- [Demo of video paint statistics](http://people.mozilla.org/~cpearce/paint-stats-demo.html)(링크 소멸)
-- [지원하는 미디어 포맷](/ko/docs/HTML/Supported_media_formats)
+- [Demo of video paint statistics](https://people.mozilla.org/~cpearce/paint-stats-demo.html)(링크 소멸)
+- [지원하는 미디어 포맷](/ko/docs/Web/Media/Formats)

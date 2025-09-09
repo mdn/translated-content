@@ -41,7 +41,7 @@ location.reload(true);
 
 ### Ejemplo 3
 
-Considerando el siguiente ejemplo, el cual recargará la página usando el método [`replace()`](/es/docs/Web/API/Location.replace) para insertar un valor de location.pathname dentro del hash:
+Considerando el siguiente ejemplo, el cual recargará la página usando el método [`replace()`](/es/docs/Web/API/Location/replace) para insertar un valor de location.pathname dentro del hash:
 
 ```js
 function reloadPageWithHash() {
@@ -381,7 +381,7 @@ La siguiente URL con "?Some%20data" anexa es enviada al servidor (Si no hay ning
 ```
 
 > [!NOTE]
-> La función showNode es también un ejemplo del uso del ciclo [`for`](/en/JavaScript/Reference/Statements/for) sin una sección de `statement`. En este caso **un punto y coma es siempre puesto inmediatamente después de la declaración de el ciclo.**
+> La función showNode es también un ejemplo del uso del ciclo [`for`](/es/docs/Web/JavaScript/Reference/Statements/for) sin una sección de `statement`. En este caso **un punto y coma es siempre puesto inmediatamente después de la declaración de el ciclo.**
 
 …De igual manera pero con un scroll animado:
 
@@ -450,7 +450,7 @@ var showBookmark = (function () {
         nTop += oNode.offsetTop,
         oNode = oNode.offsetParent
     );
-    (_nodeX = nLeft), (_nodeY = nTop), (_itFrame = 1);
+    ((_nodeX = nLeft), (_nodeY = nTop), (_itFrame = 1));
     if (_scrollId === -1) {
       _scrollId = setInterval(_next, Math.round(nDuration / nFrames));
     }
@@ -470,5 +470,5 @@ var showBookmark = (function () {
 
 - La interfaz de retorno de un valor, {{domxref("Location")}}.
 - Información similar, pero agregando contexto del navegador, {{domxref("Document.location")}}
-- [Manipulando el historial del navegador](/es/docs/DOM/Mozilla_event_reference/hashchange)
-- [hashchange](/es/docs/DOM/Mozilla_event_reference/hashchange)
+- [Manipulando el historial del navegador](/es/docs/Web/API/Window/hashchange_event)
+- [hashchange](/es/docs/Web/API/Window/hashchange_event)

@@ -5,11 +5,22 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 
 {{JSRef}}
 
-La méthode **`find()`** renvoie une **valeur** du tableau typé si un élément du tableau remplit la condition définie par la fonction de test fournie. Si aucun élément ne remplit la condition, la valeur {{jsxref("undefined")}} sera renvoyée. Pour la suite de cet article _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`find()`** renvoie une **valeur** du tableau typé si un élément du tableau remplit la condition définie par la fonction de test fournie. Si aucun élément ne remplit la condition, la valeur {{jsxref("undefined")}} sera renvoyée. Pour la suite de cet article _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 Voir également la page sur la méthohde {{jsxref("TypedArray.findIndex", "findIndex()")}} qui renvoie l'**indice** de l'élément trouvé (et non sa valeur).
 
-{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.find()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, 0, -10, 20, -30, 40, -50]);
+
+console.log(int8.find(isNegative));
+// Expected output: -10
+```
 
 ## Syntaxe
 
@@ -20,9 +31,7 @@ typedarray.find(callback[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à exécuter pour chaque valeur du tableau typé. Elle prend trois arguments :
-
     - `élément`
       - : L'élément du tableau typé en cours de traitement.
     - `index`

@@ -21,7 +21,7 @@ Você mesmo pode definir qual propriedade será transicionada e de qual maneira.
 > A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
 
 > [!NOTE]
-> O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico`, podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
+> O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Reference/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico`, podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
 
 ## Definindo transições
 
@@ -34,7 +34,6 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
 - {{cssxref("transition-property")}}
   - : Especifica o nome ou nomes das propriedades CSS que as transições serão aplicadas. Somente as propriedades listadas aqui serão animadas durante a transição; alterações e todas outras propriedades ocorrem instantaneamente.
 - {{cssxref("transition-duration")}}
-
   - : Especifica a duração em que as transições devem ocorrer. Você pode especificar uma única duração que se aplica a todas as propriedades durante a transição ou vários valores para permitir que cada propriedade faça a transição em um período de tempo diferente.
 
     `transition-duration: 0.5s`
@@ -322,8 +321,7 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
     {{EmbedLiveSample("duration_4s",275,150)}}
 
 - {{cssxref("transition-timing-function")}}
-
-  - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As [timing functions](/pt-BR/docs/Web/CSS/timing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](http://easings.net/).
+  - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As [timing functions](/pt-BR/docs/Web/CSS/easing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](https://easings.net/).
 
     `transition-timing-function: ease`
 
@@ -602,7 +600,6 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
     {{EmbedLiveSample("ttf_step4end",275,150)}}
 
 - {{cssxref("transition-delay")}}
-
   - : Define quanto tempo esperar entre o momento que uma propriedade é alterada e a transição começa.
 
     `transition-delay: 0.5s`
@@ -1106,7 +1103,7 @@ Você pode brincar um pouco aqui: <https://jsfiddle.net/9h261pzo/291/>
 
 ### Detectando o começo e a completude de uma transição
 
-Você pode usar o evento {{event("transitionend")}} para detectar a uma animação que estava sendo executada chegou ao fim. Esse é o objeto {{domxref("TransitionEvent")}}, que possúi duas propriedades adicionadas além do objeto típico
+Você pode usar o evento [`transitionend`](/pt-BR/docs/Web/API/Element/transitionend_event) para detectar a uma animação que estava sendo executada chegou ao fim. Esse é o objeto {{domxref("TransitionEvent")}}, que possúi duas propriedades adicionadas além do objeto típico
 
 - `propertyName`
   - : A string indicando o nome da propriedade CSS cuja transição será completada
@@ -1119,7 +1116,7 @@ As usual, you can use the {{domxref("EventTarget.addEventListener", "addEventLis
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-Você detecta o começo de uma transição usando {{event("transitionrun")}} (antes do delay) e {{event("transitionstart")}} (depois do delay):
+Você detecta o começo de uma transição usando [`transitionrun`](/pt-BR/docs/Web/API/Element/transitionrun_event) (antes do delay) e [`transitionstart`](/pt-BR/docs/Web/API/Element/transitionstart_event) (depois do delay):
 
 ```js
 el.addEventListener("transitionrun", signalStart, true);
@@ -1134,5 +1131,5 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## Veja Também
 
-- The {{domxref("TransitionEvent")}} interface and the {{event("transitionend")}} event.
-- [Utilizando animações css](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- The {{domxref("TransitionEvent")}} interface and the [`transitionend`](/pt-BR/docs/Web/API/Element/transitionend_event) event.
+- [Utilizando animações css](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)

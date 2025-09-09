@@ -3,8 +3,6 @@ title: lch()
 slug: Web/CSS/color_value/lch
 ---
 
-{{CSSRef}}
-
 函数记号 **`lch()`** 在 LCH 颜色空间中表示指定颜色。此函数记号与 {{CSSXref("color_value/lab", "lab()")}} 有相同的 L 轴，但使用极坐标 C（色度）和 H（色相）。
 
 ## 语法
@@ -18,7 +16,6 @@ lch(52.2345% 72.2 56.2 / .5);
 ### 取值
 
 - 函数记号：`lch(L C H [/ A])`
-
   - `L` 为介于 `0` 和 `100` 之间的 {{CSSXref("&lt;number&gt;")}} 或介于 `0%` 和 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}}，指定了 CIE 明度，此处数值 `0` 对应 `0%`（黑），数值 `100` 对应 `100%`（白）。
 
   - `C` 为 {{CSSXref("&lt;number&gt;")}} 或 {{CSSXref("&lt;percentage&gt;")}}，此处 `0%` 对应 `0`，`100%` 对应数值 `150`。此值衡量了色度（大概表示“颜色的量”），其有用的最小值为 `0`，最大值无理论上限（但实际不超过 `230`）。

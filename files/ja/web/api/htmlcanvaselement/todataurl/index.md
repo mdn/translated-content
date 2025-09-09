@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** メソッドは、 `type` 引数で指定された形式で画像を表現したものが入った[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) を返します。
+**`HTMLCanvasElement.toDataURL()`** メソッドは、 `type` 引数で指定された形式で画像を表現したものが入った[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を返します。
 
 希望するファイル形式や画像品質を指定することができます。
 ファイル形式を指定しなかった場合、または指定された形式に対応していない場合は、データは `image/png` として書き出されます。
@@ -37,9 +37,9 @@ toDataURL(type, encoderOptions)
 
 ### 返値
 
-要求された[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) の入った文字列です。
+要求された[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) の入った文字列です。
 
-キャンバスの高さまたは幅が `0` または[キャンバスの最大サイズ](/ja/docs/Web/HTML/Element/canvas#キャンバスの最大寸法)より大きい場合、 `"data:,"` という文字列が返されます。
+キャンバスの高さまたは幅が `0` または[キャンバスの最大サイズ](/ja/docs/Web/HTML/Reference/Elements/canvas#キャンバスの最大寸法)より大きい場合、 `"data:,"` という文字列が返されます。
 
 ### 例外
 
@@ -141,4 +141,4 @@ function removeColors() {
 
 ## 関連情報
 
-- [データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)（[HTTP](/ja/docs/Web/HTTP) リファレンス）
+- [データ URL](/ja/docs/Web/URI/Reference/Schemes/data)（[HTTP](/ja/docs/Web/HTTP) リファレンス）

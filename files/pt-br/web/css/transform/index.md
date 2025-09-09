@@ -9,7 +9,41 @@ slug: Web/CSS/transform
 
 A propriedade CSS `transform` permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.
 
-{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{InteractiveExample("CSS Demo: transform")}}
+
+```css interactive-example-choice
+transform: matrix(1, 2, 3, 4, 5, 6);
+```
+
+```css interactive-example-choice
+transform: translate(120px, 50%);
+```
+
+```css interactive-example-choice
+transform: scale(2, 0.5);
+```
+
+```css interactive-example-choice
+transform: rotate(0.5turn);
+```
+
+```css interactive-example-choice
+transform: skew(30deg, 20deg);
+```
+
+```css interactive-example-choice
+transform: scale(0.5) translate(-100%, -100%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 Se a propriedade tem um valor diferente de `none`, um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para `position: fixed` para os elementos que estão contidos.
 
@@ -58,7 +92,7 @@ Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das m
 
 ## Exemplos
 
-Veja [Using CSS transforms](/En/CSS/Using_CSS_transforms).
+Veja [Using CSS transforms](/en-US/CSS/Using_CSS_transforms).
 
 ### Exemplo ao vivo
 
@@ -222,6 +256,6 @@ Translates the element by the given amount along the Y axis.
 
 ## See also
 
-- [Using CSS Transforms](/pt-BR/docs/CSS/Using_CSS_transforms)
-- [More info](http://paulirish.com/2010/introducing-css3please/#comment-36380) on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.
+- [Using CSS Transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [More info](https://paulirish.com/2010/introducing-css3please/#comment-36380) on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.
 - A cross-browser 2D [transform plugin for jQuery](http://plugins.jquery.com/project/jquery-transform)

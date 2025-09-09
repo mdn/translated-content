@@ -36,29 +36,23 @@ Les événements ont trois fonctions:
 ### Paramètres
 
 - `function`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
-
     - `message`
       - : `object`. Le message lui-même. C'est un objet JSON-ifiable.
 
     <!---->
-
     - `sender`
       - : Un objet {{WebExtAPIRef('runtime.MessageSender')}} représentant l'expéditeur du message.
 
     <!---->
-
     - `sendResponse`
-
       - : Une fonction à appeler, au plus une fois, pour envoyer une réponse au message. La fonction prend un seul argument, qui peut être n'importe quel objet JSON-ifiable. Cet argument est renvoyé à l'expéditeur du message.
 
         Si vous avez plus d'un écouteur `onMessageExternal` dans le même document, un seul peut envoyer une réponse.
 
         To send a response synchronously, call `sendResponse` before the listener function returns. To send a response asynchronously:
-
         - Soit garder une référence à l'argumen `sendResponse` et retourne `true` à partir de la fonction d'écouteur. Vous pourrez ensuite appeler `sendResponse` après le retour de la fonction d'écouteur..
-        - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
+        - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
 
 ## Compatibilité des navigateurs
 
@@ -93,8 +87,6 @@ browser.runtime.onMessageExternal.addListener(handleMessage);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-[CORS-безопасный заголовок запроса](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) (также известный как «простой заголовок») — это один из следующих [HTTP-заголовков](/ru/docs/Web/HTTP/Headers):
+[CORS-безопасный заголовок запроса](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) (также известный как «простой заголовок») — это один из следующих [HTTP-заголовков](/ru/docs/Web/HTTP/Reference/Headers):
 
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Language")}}

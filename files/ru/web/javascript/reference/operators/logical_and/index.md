@@ -9,7 +9,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 
 В целом, оператор вернёт значение первого {{Glossary("falsy", "ложноподобного")}} операнда при вычислении, либо значение последнего операнда, если все операнды оказались {{Glossary("truthy", "истиноподобными")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## Синтаксис
 
@@ -40,7 +48,7 @@ result = 2 && 0; // result is assigned 0
 result = "foo" && 4; // result is assigned 4
 ```
 
-Несмотря на то, что оператор `&&` может использоваться с операндами, не содержащие логических значений, он всё равно останется булевым оператором, поскольку его возвращаемое значение всегда можно преобразовать в [булевый примитив](/ru/docs/Web/JavaScript/Data_structures#Boolean_type).
+Несмотря на то, что оператор `&&` может использоваться с операндами, не содержащие логических значений, он всё равно останется булевым оператором, поскольку его возвращаемое значение всегда можно преобразовать в [булевый примитив](/ru/docs/Web/JavaScript/Guide/Data_structures#boolean_type).
 Чтобы явно преобразовать возвращаемое значение этого оператора (или вообще любое выражение) в соответствующее значение булевого типа, используйте двойной [`оператор НЕ`](/ru/docs/Web/JavaScript/Reference/Operators/Logical_NOT) или конструктор {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
 
 ### Сокращённое вычисление
@@ -76,7 +84,7 @@ console.log(A() && B());
 
 ### Приоритет операторов
 
-Оператор И имеет более высокий приоритет, чем оператор ИЛИ, поэтому оператор `&&` выполнится раньше оператора `||` (см. [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+Оператор И имеет более высокий приоритет, чем оператор ИЛИ, поэтому оператор `&&` выполнится раньше оператора `||` (см. [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js
 false || (true && true); // вернёт true

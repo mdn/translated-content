@@ -11,9 +11,9 @@ Vous pouvez spécifier une seule icône comme chemin d'accès à un fichier ou u
 
 Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
 
-Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est [`default_icon`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
+Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est [`default_icon`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -26,11 +26,8 @@ var settingIcon = browser.browserAction.setIcon(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet contenant des propriétés `imageData` ou `path`, et éventuellement une propriété `tabId` .
-
     - `imageData`{{optional_inline}}
-
       - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` ou `object`. Il s'agit soit d'un seul objet `ImageData` ou un dictionnaire d'objet.
 
         Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet `ImageData`, et son nom est sa taille, comme ceci :
@@ -42,10 +39,9 @@ var settingIcon = browser.browserAction.setIcon(
         }
         ```
 
-        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choix de la tailles d'icônes](/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes) pour plus d'informations à ce sujet.
+        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choix de la tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
 
     - `path`{{optional_inline}}
-
       - : `string` or `object`. Il s'agit du chemin relatif d'un fichier d'icône ou d'un objet de dictionnaire.
 
         Utilisez un dictionnaire d'objet pour spécifier plusieurs fichiers d'icônes dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différentes. Si `path` est un dictionnaire, la valeur de chaque propriété est un chemin relatif , et son nom est sa taille, comme ceci :
@@ -57,7 +53,7 @@ var settingIcon = browser.browserAction.setIcon(
         }
         ```
 
-        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choix de la tailles d'icônes](/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes) pour plus d'informations à ce sujet.
+        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choix de la tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
 
     - `tabId`{{optional_inline}}
       - : `integer`. Définit l'icône uniquement pour l'onglet donné. L'icône est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
@@ -77,7 +73,7 @@ Si chaque `imageData` et `path` est un objet `undefined`, `null` ou vide :
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments une fois que l'icône a été définie.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments une fois que l'icône a été définie.
 
 ## Exemples
 
@@ -151,8 +147,6 @@ browser.browserAction.onClicked.addListener((tab) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

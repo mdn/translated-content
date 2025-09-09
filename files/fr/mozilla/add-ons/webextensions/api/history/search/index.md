@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history/search
 
 Recherche dans l'historique du navigateur les objets {{WebExtAPIRef("history.HistoryItem")}} correspondant aux critères donnés.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -20,11 +20,8 @@ var searching = browser.history.search(
 ### Paramètres
 
 - `query`
-
   - : Un objet qui indique ce qu'il faut rechercher dans l'historique du navigateur. Cet objet a les champs suivants :
-
     - `text`
-
       - : `string`. Rechercher des éléments d'historique par URL et titre. La chaîne est divisée en termes de recherche distincts aux limites de l'espace. Chaque terme de recherche est insensible à la casse par rapport à l'URL et au titre de l'élément d'historique. L'élément d'historique sera renvoyé si tous les termes de recherche correspondent.
 
         Par exemple, considérez cet article :
@@ -52,7 +49,7 @@ var searching = browser.history.search(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie avec un tableau d'objets de type {{WebExtAPIRef("history.HistoryItem")}}, chacun décrivant un seul élément d'historique correspondant. Les articles sont triés dans l'ordre chronologique inverse.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie avec un tableau d'objets de type {{WebExtAPIRef("history.HistoryItem")}}, chacun décrivant un seul élément d'historique correspondant. Les articles sont triés dans l'ordre chronologique inverse.
 
 ## Exemples
 
@@ -117,8 +114,6 @@ searching.then(onGot);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

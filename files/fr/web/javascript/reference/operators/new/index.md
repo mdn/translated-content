@@ -14,7 +14,20 @@ Le mot-clé `new`, utilisé avec une fonction, applique les 4 étapes suivantes 
 3. Le nouvel objet, créé à l'étape 1, est passé comme valeur `this` à la fonction
 4. Si la fonction ne renvoie pas d'objet, c'est la valeur `this` qui est renvoyée.
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## Syntaxe
 
@@ -46,7 +59,7 @@ Lorsque le code `new Toto(...)` est exécuté, voici ce qui se passe :
 
 Il est toujours possible d'ajouter une propriété à un objet défini précédemment. Par exemple, l'instruction `voiture1.couleur = "noir"` ajoute une propriété couleur à `voiture1`, et lui assigne une valeur : "`noir`". Cependant, ceci n'affecte aucunement les autres objets. Pour ajouter une nouvelle propriété à tous les objets du même type, cette propriété doit être ajoutée à la définition du type d'objet `Voiture`.
 
-Il est possible d'ajouter une propriété partagée par tous les objets d'un type déjà défini auparavant en utilisant sa propriété [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/prototype). Ceci permet de définir une propriété partagée par tous les objets créés avec cette fonction, plutôt que simplement par une seule instance de ce type d'objet. Le code qui suit ajoute une propriété couleur avec la valeur `"couleur standard"` à tous les objets de type `Voiture`, et redéfinit ensuite cette valeur avec la chaîne "`noir`" uniquement pour l'instance d'objet `voiture1`. Pour plus d'informations, voir la page sur [prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Il est possible d'ajouter une propriété partagée par tous les objets d'un type déjà défini auparavant en utilisant sa propriété [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function). Ceci permet de définir une propriété partagée par tous les objets créés avec cette fonction, plutôt que simplement par une seule instance de ce type d'objet. Le code qui suit ajoute une propriété couleur avec la valeur `"couleur standard"` à tous les objets de type `Voiture`, et redéfinit ensuite cette valeur avec la chaîne "`noir`" uniquement pour l'instance d'objet `voiture1`. Pour plus d'informations, voir la page sur [prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ```js
 function Voiture() {}

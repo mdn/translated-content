@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a6313e45a6ae4c356325f06d0e7e8919bab251a8
 ---
 
-{{AddonSidebar}}
-
 **`tabs.Tab`** 类型包含有关标签页的信息。这提供了访问有关标签页内容、大小、特殊状态或限制等的信息。
 
 ## 类型
@@ -14,7 +12,6 @@ l10n:
 该类型的值为对象，包含以下属性：
 
 - `active`
-
   - : `boolean`。标签页是否在其窗口中处于活动状态。即使标签页的窗口当前未被聚焦，此属性也可能为 true。
 
     活动标签页通常是选定的标签页。但是，在 Android 版 Firefox 上，扩展弹出窗口会在新标签页中打开。当选择弹出窗口标签页时，活动标签页将是打开弹出窗口的标签页。
@@ -36,7 +33,6 @@ l10n:
 - `hidden`
   - : `boolean`。标签页是否隐藏。
 - `highlighted`
-
   - : `boolean`。标签页是否被突出显示，即是否为当前选定的标签页。活动标签页始终处于突出显示状态，但某些浏览器允许额外的标签页被突出显示，例如通过按住 <kbd>Ctrl</kbd>、<kbd>Shift</kbd> 或 <kbd>⌘ Command</kbd> 键点击它们。
 
     Android 版 Firefox 不支持突出显示多个标签页。
@@ -85,7 +81,7 @@ l10n:
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#type-Tab) API。本文档来源于 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#type-Tab) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

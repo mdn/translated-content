@@ -9,7 +9,21 @@ l10n:
 
 **`continue`** 文は、現在のループまたはラベル付きループの現在反復処理中の文の実行を終了し、次の反復処理としてループの実行を続けます。
 
-{{EmbedInteractiveExample("pages/js/statement-continue.html")}}
+{{InteractiveExample("JavaScript デモ: Statement - Continue")}}
+
+```js interactive-example
+let text = "";
+
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text = text + i;
+}
+
+console.log(text);
+// Expected output: "012456789"
+```
 
 ## 構文
 

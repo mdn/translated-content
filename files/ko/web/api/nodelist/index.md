@@ -42,9 +42,9 @@ for (var i = 0; i < myNodeList.length; ++i) {
 }
 ```
 
-**리스트의 항목(items)을 열거하기 위해 [for...in](/ko/docs/JavaScript/Reference/Statements/for...in) 또는 [for each...in](/ko/docs/JavaScript/Reference/Statements/for_each...in)를 사용하지 않길 바랍니다.** `NodeList`의 길이와 항목 속성까지 열거합니다. 또한 스크립트가 요소({{domxref("element")}}) 객체만 처리한다고 가정하면 오류가 발생할 수 있습니다. 게다가, `for..in`은 고정된 순서로 각 속성들을 접근한다는 보장이 없습니다.
+**리스트의 항목(items)을 열거하기 위해 [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 또는 [for each...in](/ko/docs/JavaScript/Reference/Statements/for_each...in)를 사용하지 않길 바랍니다.** `NodeList`의 길이와 항목 속성까지 열거합니다. 또한 스크립트가 요소({{domxref("element")}}) 객체만 처리한다고 가정하면 오류가 발생할 수 있습니다. 게다가, `for..in`은 고정된 순서로 각 속성들을 접근한다는 보장이 없습니다.
 
-[`for...of`](/ko/docs/JavaScript/Reference/Statements/for...of) 루프는 `NodeList` 객체를 올바르게 반복합니다.
+[`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 루프는 `NodeList` 객체를 올바르게 반복합니다.
 
 ```js
 var list = document.querySelectorAll("input[type=checkbox]");

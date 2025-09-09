@@ -1,15 +1,23 @@
 ---
 title: Array.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toLocaleString()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の要素を表す文字列を返します。配列の要素は、それぞれの `toLocaleString` メソッドを使い、ロケール固有の文字列に変換されます（例えばカンマ "," など）。
 
-{{EmbedInteractiveExample("pages/js/array-tolocalestring.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.toLocaleString()", "shorter")}}
+
+```js interactive-example
+const array = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];
+const localeString = array.toLocaleString("en", { timeZone: "UTC" });
+
+console.log(localeString);
+// 予想される結果: "1,a,12/21/1997, 2:12:00 PM",
+// "en" ロケールおよび UTC タイムゾーンを想定したもの。結果は異なることがある
+```
 
 ## 構文
 
@@ -24,7 +32,7 @@ toLocaleString(locales, options)
 - `locales` {{optional_inline}}
   - : BCP 47 言語タグの文字列か、その配列です。`locales` 引数の一般的な形式と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 - `options` {{optional_inline}}
-  - : 設定プロパティのオブジェクトです。数値に関しては {{jsxref("Number.prototype.toLocaleString()")}} を、日付に関しては {{jsxref("Date.prototype.toLocaleString()")}} を見てください。
+  - : 設定プロパティのオブジェクトです。ここで渡すことができるものは、変換される要素によって異なります。例えば、数値の場合は {{jsxref("Number.prototype.toLocaleString()")}} を参照してください。
 
 ### 返値
 
@@ -32,7 +40,10 @@ toLocaleString(locales, options)
 
 ## 解説
 
-`Array.prototype.toLocaleString` メソッドは、その内容を走査し、すべての要素に対して `toLocaleString` メソッドを、引数 `locales` と `options` を指定して呼び出し、実装で定義された区切り文字 (",") でその結果を連結したものを返します。このメソッド自身は、この 2 つの引数を使用せず、各要素に対する `toLocaleString()` の呼び出しで渡すだけであることに注意してください。区切り文字列の選択はホストの現在のロケールに依存し、 `locales` 引数は使用しません。
+`Array.prototype.toLocaleString` メソッドは、その内容を走査し、すべての要素に対して `toLocaleString` メソッドを、引数 `locales` と `options` を指定して呼び出し、実装で定義された区切り文字（例えばカンマ ","）でその結果を連結したものを返します。
+
+> [!NOTE]
+> `locales` または `options` 引数は、配列要素間の区切り文字を制御するものではありません。これらは、それぞれの要素の `toLocaleString()` メソッドに渡されるだけです。実際の区切り文字（通常はカンマ）は、ホストの現在のロケールにのみ依存します。ローカライズされたリストの書式化が必要な場合は、代わりに {{jsxref("Intl.ListFormat")}} を使用することを検討してください。
 
 要素が `undefined`、`null` の場合、文字列 `"null"` または `"undefined"` の代わりに空文字列に変換されます。
 
@@ -44,13 +55,7 @@ toLocaleString(locales, options)
 
 ### locales と options の使用
 
-配列の要素は、その `toLocaleString` メソッドを使用して文字列に変換されます。
-
-- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
-- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
-- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
-
-`prices` 配列内の文字列と数値の通貨を常に表示します。
+配列の要素は、その `toLocaleString` メソッドを使用して文字列に変換されます。例えば、このスニペットは、`prices` 配列の文字列および数値の通貨を表示するために、{{jsxref("Number.prototype.toLocaleString()")}} メソッドを暗黙的に呼び出します。
 
 ```js
 const prices = ["￥7", 500, 8123, 12];
@@ -59,7 +64,21 @@ prices.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 // "￥7,￥500,￥8,123,￥12"
 ```
 
-それ以外の例については、 [`Intl.NumberFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) や [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) のページを参照してください。
+### リストの区切り文字
+
+リストの区切り文字は、`locales` 引数の影響を受けません。これを設定するには、代わりに {{jsxref("Intl.ListFormat")}} を使用してください。
+
+```js
+const nums = [8888, 9999];
+console.log(nums.toLocaleString("zh")); // "8,888,9,999"
+
+const formatter = new Intl.ListFormat("zh", {
+  type: "conjunction",
+  style: "narrow",
+});
+console.log(formatter.format(nums.map((x) => x.toLocaleString("zh"))));
+// "8,888、9,999"
+```
 
 ### 疎配列に対する toLocaleString() の使用
 
@@ -103,4 +122,4 @@ console.log(Array.prototype.toLocaleString.call(arrayLike));
 - {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Object.prototype.toLocaleString()")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainDate/toLocaleString", "Temporal.PlainDate.prototype.toLocaleString()")}}

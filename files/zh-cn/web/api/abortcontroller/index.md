@@ -24,17 +24,18 @@ l10n:
 ## 实例方法
 
 - {{domxref("AbortController.abort()")}}
-  - : 中止一个尚未完成的异步操作。这能够中止 [fetch 请求](/zh-CN/docs/Web/API/fetch)及任何响应体和流的使用。
+  - : 中止一个尚未完成的异步操作。这能够中止 [fetch 请求](/zh-CN/docs/Web/API/Window/fetch)及任何响应体和流的使用。
 
 ## 示例
 
-> **备注：** {{domxref("AbortSignal")}} 中还有其他额外的示例。
+> [!NOTE]
+> {{domxref("AbortSignal")}} 中还有其他额外的示例。
 
 在下面的代码片段中，我们想通过 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 下载一段视频。
 
 我们先使用 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数创建一个控制器，然后使用 {{domxref("AbortController.signal")}} 属性获取其关联 {{domxref("AbortSignal")}} 对象的引用。
 
-当 [fetch 请求](/zh-CN/docs/Web/API/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
+当 [fetch 请求](/zh-CN/docs/Web/API/Window/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
 
 ```js
 let controller;

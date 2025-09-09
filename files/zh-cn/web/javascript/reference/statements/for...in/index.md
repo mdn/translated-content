@@ -5,11 +5,22 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{jsSidebar("Statements")}}
+**`for...in`** 语句迭代一个对象的所有[可枚举字符串属性](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)（除 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 以外），包括继承的可枚举属性。
 
-**`for...in`** 语句迭代一个对象的所有[可枚举字符串属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)（除 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 以外），包括继承的可枚举属性。
+{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
 
-{{EmbedInteractiveExample("pages/js/statement-forin.html")}}
+```js interactive-example
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// Expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+```
 
 ## 语法
 
@@ -21,7 +32,7 @@ for (variable in object)
 ### 参数
 
 - `variable`
-  - : 在每次迭代时接收一个字符串属性名。它可以通过使用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 进行声明，也可以是一个[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如，先前声明的变量、对象属性或[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...in` 循环所在的作用域相同。
+  - : 在每次迭代时接收一个字符串属性名。它可以通过使用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 进行声明，也可以是一个[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如，先前声明的变量、对象属性或[解构模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...in` 循环所在的作用域相同。
 - `object`
   - : 被迭代非符号可枚举属性的对象。
 - `statement`
@@ -35,7 +46,7 @@ for (variable in object)
 
 根据现代 ECMAScript 规范的定义，遍历的顺序是一致且可预测的。在原型链的每个组件中，所有非负整数键（可以作为数组索引）将首先按值升序遍历，然后是其他字符串键按属性创建的先后顺序升序遍历。
 
-在 `for...in` 循环中，`variable` 部分可以接受任何在 `=` 运算符之前的内容。只要在循环体内部不重新赋值（可以在迭代之间更改，因为它们是两个独立的变量），你可以使用 {{jsxref("Statements/const", "const")}} 来声明变量。否则，你可以使用 {{jsxref("Statements/let", "let")}}。你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来为多个局部变量赋值，或者使用属性访问器（例如 `for (x.y in iterable)`）将值赋给对象属性。
+在 `for...in` 循环中，`variable` 部分可以接受任何在 `=` 运算符之前的内容。只要在循环体内部不重新赋值（可以在迭代之间更改，因为它们是两个独立的变量），你可以使用 {{jsxref("Statements/const", "const")}} 来声明变量。否则，你可以使用 {{jsxref("Statements/let", "let")}}。你可以使用[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)来为多个局部变量赋值，或者使用属性访问器（例如 `for (x.y in iterable)`）将值赋给对象属性。
 
 一种[遗留的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#语句)允许在 `for...in` 循环中的 `var` 声明的循环变量具有初始值。在严格模式下，这会抛出[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)，而在非严格模式下则会被忽略。
 
@@ -231,7 +242,7 @@ for (const prop in obj) {
 
 - {{jsxref("Statements/for...of", "for...of")}}
 - {{jsxref("Statements/for", "for")}}
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

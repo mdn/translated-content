@@ -3,12 +3,10 @@ title: 代码示例
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 ---
 
-{{MDNSidebar}}
-
 在 MDN 上，你会看到整个页面中有许多代码示例插入，以展示 web 平台功能的使用。本文讨论了在页面中添加代码示例的不同机制，以及你应该使用哪些机制和何时使用。
 
 > [!NOTE]
-> 如果你想了解 MDN 文章中出现的代码的风格和提示，而不是包含代码的不同方式，请参见我们的[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+> 如果你想了解 MDN 文章中出现的代码的风格和提示，而不是包含代码的不同方式，请参见我们的[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide)。
 
 ## 都有哪些类型的代码示例可用？
 
@@ -49,10 +47,6 @@ slug: MDN/Writing_guidelines/Page_structures/Code_examples
 const test = "Hello";
 console.log(test);
 ```
-
-另外，你可能想显示含有代码输出结果的静态图像。比如：
-
-![Screenshot of a console output in developer tools](console-example.png)
 
 ## 交互示例
 
@@ -185,5 +179,5 @@ p.fancy {
 
 ### GitHub 在线实例指引
 
-- 显然，你需要先把一个合适的代码示例放置到 [MDN GitHub 组织](https://github.com/mdn/)上，这需要使用 Git 来完成。如果你不熟悉 Git，请查看[如何使用 GitHub Pages？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)文章，以及[准备添加数据](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#为添加数据做好准备)以了解更进一步的用途。
-- 你的代码样本需要适合展示你所要展示的内容——它应该包含一个简单的例子，能很好地完成一件事，里面不应该有攻击性的内容，并且应该遵循 MDN [代码示例指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+- 显然，你需要先把一个合适的代码示例放置到 [MDN GitHub 组织](https://github.com/mdn/)上，这需要使用 Git 来完成。如果你不熟悉 Git，请查看[如何使用 GitHub Pages？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)文章，以及[准备添加数据](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#为添加数据做好准备)以了解更进一步的用途。
+- 你的代码样本需要适合展示你所要展示的内容——它应该包含一个简单的例子，能很好地完成一件事，里面不应该有攻击性的内容，并且应该遵循 MDN [代码示例指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide)。

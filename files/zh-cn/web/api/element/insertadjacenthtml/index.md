@@ -14,9 +14,7 @@ insertAdjacentHTML(position, text)
 ```
 
 - `position`
-
   - : 一个 {{domxref("DOMString")}}，表示插入内容相对于元素的位置，并且必须是以下字符串之一：
-
     - `'beforebegin'`：元素自身的前面。
     - `'afterbegin'`：插入元素内部的第一个子节点之前。
     - `'beforeend'`：插入元素内部的最后一个子节点之后。
@@ -69,6 +67,6 @@ d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 ## 参见
 
-- 包括 Henri Sivonen 在内的某些 [hacks.mozilla.org 客座文章](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) 显示，`insertAdjacentHTML` 在某些情况下可以更快。
+- 包括 Henri Sivonen 在内的某些 [hacks.mozilla.org 客座文章](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) 显示，`insertAdjacentHTML` 在某些情况下可以更快。
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentText()")}}

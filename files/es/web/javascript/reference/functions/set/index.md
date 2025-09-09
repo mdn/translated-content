@@ -17,7 +17,6 @@ La sintaxis **`set`** asocia la propiedad de un objeto a una función que será 
 ### Parámetros
 
 - _`prop`_
-
   - : El nombre de la propiedad a asociar con la función dada.
 
 - _`val`_
@@ -32,7 +31,7 @@ En JavaScript, un setter puede ser usado para ejecutar una función donde sea qu
 Tenga en cuenta lo siguiente al trabajar con setters:
 
 - Puede tener un identificador ya sea number o string;
-- Debe tener exactamente un parámentro (ver [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para más información);
+- Debe tener exactamente un parámentro (ver [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para más información);
 - No debe aparecer en un objeto de notación literal con otro `set` o con otra entrada de datos con la misma propiedad.
   ( `{ set x(v) { }, set x(v) { } }` y `{ x: ..., set x(v) { } }` están prohibidos )
 
@@ -60,7 +59,7 @@ Note que `actual` no está definido y cualquier intento de accederlo devolverá 
 
 ### Eliminando un setter con el operador `delete`
 
-Si desea eliminar el setter, puede simplemente aplicar [`delete`](/es/docs/Web/JavaScript/Referencia/Operadores/delete) en él:
+Si desea eliminar el setter, puede simplemente aplicar [`delete`](/es/docs/Web/JavaScript/Reference/Operators/delete) en él:
 
 ```js
 delete lenguaje.actual;
@@ -118,4 +117,4 @@ console.log(obj.baz); // "baz"
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Definiendo Getters y Setters](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) en la Guía JavaScript
+- [Definiendo Getters y Setters](/es/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) en la Guía JavaScript

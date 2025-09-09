@@ -163,11 +163,11 @@ Naomi와 Priya는 채팅 소프트웨어를 사용해 대화에 참여했고 Nao
 </div>
 ```
 
-위에 있는 page structure은 [`<div>`](/ko/docs/Web/HTML/Element/div)태그를 이용하고 CSS 사용을 허용함으로써 페이지 레이아웃 전체를 구성한다. 여기서는 레이아웃에 관한 자세한 내용은 스킵하지만, 위의 코드가 어떻게 돌아가는지 확인해보자. [take a look at the CSS](https://www.gitbook.com/book/gustnxodjs/webrtc-kor/edit#) on Github. 두개의 [`<video>`](/ko/docs/Web/HTML/Element/Video) 중 하나는 너의 self video이고 다른 하나는 상대방의 video를 위한 요소이다.
+위에 있는 page structure은 [`<div>`](/ko/docs/Web/HTML/Reference/Elements/div)태그를 이용하고 CSS 사용을 허용함으로써 페이지 레이아웃 전체를 구성한다. 여기서는 레이아웃에 관한 자세한 내용은 스킵하지만, 위의 코드가 어떻게 돌아가는지 확인해보자. [take a look at the CSS](https://www.gitbook.com/book/gustnxodjs/webrtc-kor/edit#) on Github. 두개의 [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video) 중 하나는 너의 self video이고 다른 하나는 상대방의 video를 위한 요소이다.
 
 `id`가 "`received_video`" 인 `<video>`element는 연결된 상대방으로부터 수신되는 비디오를 보여주는 곳이다. `autoplay`attribute는 비디오가 도달하기 시작하면 즉시 재생시키는 역할을 한다. 이것은 따로 재생에 관련된 코드를 처리할 필요를 없애준다. `id`가 "`local_video`" 인 `<video>`element에는 너의 카메라의 영상이 나오게된다. `muted` attribute는 너의 로컬 오디오를 음소거한다.
 
-마지막으로, 통화를 끊을 수 있는 `id`가 "`hangup-button`"인 [`<button>`](/ko/docs/Web/HTML/Element/button)은 비활성화 된 상태(아무 전화도 연결되지 않은 default 상태)로 구성된다. 그리고 이 버튼을 클릭시에 `hangUpCall()`함수가 실행 된다. 이 함수의 역할은 현재 연결된 call을 끊고 다른 피어에게 연결을 끊으라는 메세지를 전달한다.
+마지막으로, 통화를 끊을 수 있는 `id`가 "`hangup-button`"인 [`<button>`](/ko/docs/Web/HTML/Reference/Elements/button)은 비활성화 된 상태(아무 전화도 연결되지 않은 default 상태)로 구성된다. 그리고 이 버튼을 클릭시에 `hangUpCall()`함수가 실행 된다. 이 함수의 역할은 현재 연결된 call을 끊고 다른 피어에게 연결을 끊으라는 메세지를 전달한다.
 
 ### The JavaScript code
 
@@ -204,7 +204,7 @@ function handleUserlistMsg(msg) {
   // …
 ```
 
-`listElem`변수를 통해 username들의 리스트인 [`<ul>`](/ko/docs/Web/HTML/Element/ul)을 참조한다. 그런 다음에 각 child element를 하나씩 제거하면서 목록을 비운다 .
+`listElem`변수를 통해 username들의 리스트인 [`<ul>`](/ko/docs/Web/HTML/Reference/Elements/ul)을 참조한다. 그런 다음에 각 child element를 하나씩 제거하면서 목록을 비운다 .
 
 > [!NOTE]
 > 명백히, 바뀔 때마다 전체 리스트를 새로 만드는 것보다, 개개인을 추가 및 제거 후 업데이트하는 것이 더 효율적이다. 그러나, 예제이므로 단순하게 하겠다.
@@ -224,7 +224,7 @@ function handleUserlistMsg(msg) {
 }
 ```
 
-다음으로 (채팅 서버에) 현재 연결된 각 유저들 각각을 나타내는 [`<li>`](/ko/docs/Web/HTML/Element/li)element들을 DOM에 추가한다. 그런 다음에, username이 클릭 되었을 때 `invite()`함수를 실행시키는 listener을 추가한다. 이 함수 이것은 다른 유저에게 call을 하는 process를 시작한다.
+다음으로 (채팅 서버에) 현재 연결된 각 유저들 각각을 나타내는 [`<li>`](/ko/docs/Web/HTML/Reference/Elements/li)element들을 DOM에 추가한다. 그런 다음에, username이 클릭 되었을 때 `invite()`함수를 실행시키는 listener을 추가한다. 이 함수 이것은 다른 유저에게 call을 하는 process를 시작한다.
 
 #### Starting a call
 
@@ -268,7 +268,7 @@ function invite(evt) {
 
 그 다음에 call을 하려는 유저의 이름을 `targetUsername`변수 안에 넣고 `createPeerConnection()`함수를 실행시킨다. 이 함수는 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection) 의 기본적인 구성과 기능을 수행한다.
 
-`RTCPeerConnection` 이 생성되면, [`Navigator.mediaDevices.getUserMedia`](/ko/docs/Web/API/MediaDevices/getUserMedia)함수를 통해 유저의 카메라와 마이크에 권한을 요청한다. 카메라와 마이크에서 나오는 로컬 스트림을 로컬 비디오 preview의 [`srcObject`](/ko/docs/Web/API/MediaElement/srcObject)property에 설정한다. 그리고 [`<video>`](/ko/docs/Web/HTML/Element/Video)element가 자동으로 들어오는 비디오를 재생하도록 구성되었기 때문에, stream은 로컬 preview box에서 재생을 시작한다.
+`RTCPeerConnection` 이 생성되면, [`Navigator.mediaDevices.getUserMedia`](/ko/docs/Web/API/MediaDevices/getUserMedia)함수를 통해 유저의 카메라와 마이크에 권한을 요청한다. 카메라와 마이크에서 나오는 로컬 스트림을 로컬 비디오 preview의 [`srcObject`](/ko/docs/Web/API/MediaElement/srcObject)property에 설정한다. 그리고 [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video)element가 자동으로 들어오는 비디오를 재생하도록 구성되었기 때문에, stream은 로컬 preview box에서 재생을 시작한다.
 
 그 다음에 [`RTCPeerConnection`](/ko/docs/Web/API/RTCPeerConnection)에 stream을 추가하기 위해 [`myPeerConnection.addStream()`](/ko/docs/Web/API/RTCPeerConnection/addStream)함수를 실행한다. WebRTC 커녁션이 완전히 준비되지 않았더라도 WebRTC 커넥션에 stream을 보내기 시작한다.
 
@@ -357,7 +357,7 @@ function createPeerConnection() {
 - {{domxref("RTCPeerConnection.onicecandidate")}}
   - : 로컬 ICE layer는 시그널링 서버를 통해 다른 피어에 ICE candidate를 전송하고자 할 때, 너의 [`icecandidate`](/ko/docs/Web/API/RTCPeerConnection/icecandidate_event)event handler를 호출한다.
 - {{domxref("RTCPeerConnection.onaddstream")}}
-  - : [`addstream`](/ko/docs/Web/Events/addstream)event를 위한 이 핸들러는 너의 커넥션에 remote stream이 추가된 것을 알려주기 위해, 로컬 WebRTC layer에 의해 불려진다. 예를들어, 이것은 들어오는 stream을 element에 연결시켜 디스플레이 되게 만들 때 사용된다. 더 자세한 내용은 [Receiving new streams](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#Receiving_new_streams) 을 참조해라.
+  - : [`addstream`](/ko/docs/Web/API/RTCPeerConnection/addstream_event)event를 위한 이 핸들러는 너의 커넥션에 remote stream이 추가된 것을 알려주기 위해, 로컬 WebRTC layer에 의해 불려진다. 예를들어, 이것은 들어오는 stream을 element에 연결시켜 디스플레이 되게 만들 때 사용된다. 더 자세한 내용은 [Receiving new streams](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling?document_saved=true#Receiving_new_streams) 을 참조해라.
 - {{domxref("RTCPeerConnection.onremovestream")}}
   - : 커넥션에서 remote가 stream을 제거할 때, `onaddstream`의 반대인 `onremovestream은` [`removestream`](/ko/docs/Web/API/RTCPeerConnection/removestream_event) event을 처리하기위해 실행된다.
 - {{domxref("RTCPeerConnection.oniceconnectionstatechange")}}
@@ -538,7 +538,7 @@ function handleAddStreamEvent(event) {
 }
 ```
 
-이 함수는 들어오는 stream을 id가 `"received_video"`인 [`<video>`](/ko/docs/Web/HTML/Element/Video)element에 할당하고, 유저가 전화를 받을 수 있도록 버튼을 활성화한다.
+이 함수는 들어오는 stream을 id가 `"received_video"`인 [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video)element에 할당하고, 유저가 전화를 받을 수 있도록 버튼을 활성화한다.
 
 이 코드가 제대로 실행된다면, 드디어 다른 피어에서 오는 비디오를 로컬 브라우저에서 볼 수 있게 된다!
 
@@ -605,7 +605,7 @@ function closeVideoCall() {
 }
 ```
 
-2개의 [`<video>`](/ko/docs/Web/HTML/Element/Video)element를 참조한 이후에, WebRTC 커넥션이 존재하는지 체크한다. 만약 있다면, call을 끊고 닫는다:
+2개의 [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video)element를 참조한 이후에, WebRTC 커넥션이 존재하는지 체크한다. 만약 있다면, call을 끊고 닫는다:
 
 1. 리모트와 로컬 비디오 stream에 대해서, 각 track들 마다 [`MediaTrack.stop()`](/ko/docs/Web/API/MediaTrack/stop)를 실행시킨다.
 2. 양 비디오의 [`HTMLMediaElement.srcObject`](/ko/docs/Web/API/HTMLMediaElement/srcObject)property를 `null`로 바꿔 stream에 관한 모든 참조를 푼다.

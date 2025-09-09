@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
 
 {{AddonSidebar}}
 
-Définit le titre de l'action du navigateur. Le titre est affiché dans une infobulle au-dessus de l'icône de l'action du navigateur. Vous pouvez passer un `tabId` dans ou une `windowId` comme paramètre optionnel — si vous le faites, le titre est changé seulement pour l'onglet donné ou la fenêtre donnée. Les onglets ou les fenêtres sans titre spécifique hériteront du texte du titre global, qui est par défaut à l'option [`default_title`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) ou [`name`](/fr/Add-ons/WebExtensions/manifest.json/name) specifié dans le manifest.
+Définit le titre de l'action du navigateur. Le titre est affiché dans une infobulle au-dessus de l'icône de l'action du navigateur. Vous pouvez passer un `tabId` dans ou une `windowId` comme paramètre optionnel — si vous le faites, le titre est changé seulement pour l'onglet donné ou la fenêtre donnée. Les onglets ou les fenêtres sans titre spécifique hériteront du texte du titre global, qui est par défaut à l'option [`default_title`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) ou [`name`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) specifié dans le manifest.
 
 ## Syntaxe
 
@@ -18,17 +18,13 @@ browser.browserAction.setTitle(
 ### Paramètres
 
 - `details`
-
   - : `object`. Le nouveau titre et éventuellement l'ID de l'onglet ou de la fenêtre à cibler.
-
     - `title`
-
       - : `string` ou `null`. La chaîne de caractères que l'action du navigateur doit afficher lorsqu'il y a une souris.
 
         Si `title` est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("browserAction.getTitle")}} fournira toujours la chaîne vide.
 
         Si `title` est `null`:
-
         - Si `tabId` est spécifié, et que l'onglet a un jeu de titres spécifiques aux onglets, alors l'onglet héritera du titre de la fenêtre à laquelle il appartient.
         - Si `windowId` est spécifié, et que la fenêtre a un titre spécifique à la fenêtre, alors la fenêtre héritera du titre global.
         - Sinon, le titre global sera réinitialisé au titre du manifest.
@@ -71,8 +67,6 @@ browser.browserAction.onClicked.addListener(() => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

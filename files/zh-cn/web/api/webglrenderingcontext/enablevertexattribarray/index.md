@@ -10,7 +10,7 @@ slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 > [!NOTE]
 > 你可以通过以下方法关闭顶点属性数组 {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
 
-在 WebGL 中，作用于顶点的数据会先储存在[attributes](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)。这些数据仅对 JavaScript 代码和顶点着色器可用。属性由索引号引用到 GPU 维护的属性列表中。在不同的平台或 GPU 上，某些顶点属性索引可能具有预定义的值。创建属性时，WebGL 层会分配其他属性。
+在 WebGL 中，作用于顶点的数据会先储存在[attributes](/zh-CN/docs/Web/API/WebGL_API/Data#attributes)。这些数据仅对 JavaScript 代码和顶点着色器可用。属性由索引号引用到 GPU 维护的属性列表中。在不同的平台或 GPU 上，某些顶点属性索引可能具有预定义的值。创建属性时，WebGL 层会分配其他属性。
 
 无论怎样，都需要你使用 `enableVertexAttribArray()` 方法，来激活每一个属性以便使用，不被激活的属性是不会被使用的。一旦激活，以下其他方法就可以获取到属性的值了，包括{{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}、{{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}} 和 {{domxref("WebGLRenderingContext.getVertexAttrib", "getVertexAttrib()")}}。
 
@@ -58,7 +58,7 @@ gl.vertexAttribPointer(
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```
 
-该段代码来自于 "A basic 2D WebGL animation example." 中的 [the function `animateScene()`](/zh-CN/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene) 。通过连接来查看全文，你可以查看产生的动画效果。
+该段代码来自于 "A basic 2D WebGL animation example." 中的 [the function `animateScene()`](/zh-CN/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) 。通过连接来查看全文，你可以查看产生的动画效果。
 
 以上代码中，使用了{{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}来设置将用于绘图的顶点数据的缓存。然后使用{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}来获取顶点数据在 shader 函数中的索引。
 

@@ -1,15 +1,27 @@
 ---
 title: Array.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`values()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の各要素の値を含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/array-values.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.values()")}}
+
+```js interactive-example
+const array = ["a", "b", "c"];
+const iterator = array.values();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// 予想される結果: "a"
+// 予想される結果: "b"
+// 予想される結果: "c"
+```
 
 ## 構文
 
@@ -173,6 +185,7 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 ## 関連情報
 
 - [`Array.prototype.values` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.values` のポリフィル](https://www.npmjs.com/package/array.prototype.values)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}

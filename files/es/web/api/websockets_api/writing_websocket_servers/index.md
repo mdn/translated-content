@@ -14,7 +14,7 @@ Un servidor WebSocket puede ser escrito en cualquier lenguaje de programación S
 Necesitarás conocer como trabaja el protocolo HTTP y una experiencia intermedia en programación. Dependiendo de las capacidades de tu lenguaje puede ser necesario tener conocimientos en sockets TCP. Esta guía te dará el conocimiento necesario para escribir un servidor con WebSocket.
 
 > [!NOTE]
-> Lea las últimas especificaciones oficiales de WebSocket [RFC 6455](http://datatracker.ietf.org/doc/rfc6455/?include_text=1). Las secciones 1 y 4-7 son especialmente interesantes para personas que deseen implementar servidores. La sección 10 abarca temas de seguridad y definitivamente deberías leerla antes de exponer tu servidor a la red.
+> Lea las últimas especificaciones oficiales de WebSocket [RFC 6455](https://datatracker.ietf.org/doc/rfc6455/?include_text=1). Las secciones 1 y 4-7 son especialmente interesantes para personas que deseen implementar servidores. La sección 10 abarca temas de seguridad y definitivamente deberías leerla antes de exponer tu servidor a la red.
 
 Un servidor WebSocket es explicado a un muy bajo nivel aquí. Los servidores WebSocket usualmente estan separados y especializados (por una cuestión de balance de cargas y otra razones prácticas), por lo tanto deberías usar un [Reverse Proxy](https://en.wikipedia.org/wiki/Reverse_proxy) (semejante a un servidor HTTP común) casi siempre para detectar los Handshakes de WebSocket, preprocesarlos, y reenviar los datos de los clientes al servidor WebSocket real.
 
@@ -40,17 +40,18 @@ Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
 ```
 
-El cliente puede solicitar aquí extensiones y/o sub protocolos; vea [Misceláneos](#Miscellaneous) para más detalles. También, cabeceras comunes como `User-Agent`, `Referer`, `Cookie`, or cabeceras de autenticación podrían ser incluidos. Haz lo que quieras con ellos; no pertencen a WebSocket. También puedes ignorarlos. En muchas configuraciones comunes, un proxy inverso ya ha tratado con ellos.
+El cliente puede solicitar aquí extensiones y/o sub protocolos; vea [Misceláneos](#miscellaneous) para más detalles. También, cabeceras comunes como `User-Agent`, `Referer`, `Cookie`, or cabeceras de autenticación podrían ser incluidos. Haz lo que quieras con ellos; no pertencen a WebSocket. También puedes ignorarlos. En muchas configuraciones comunes, un proxy inverso ya ha tratado con ellos.
 
-Si alguna cabecera no se entiende o posee un valor incorrecto, el servidor debe responder "[400 Bad Request](/es/docs/HTTP/Response_codes#400)" e inmediatamente cerrar la conexión. Normalmente, también puede dar la razón porque falló el _handshake_ en el cuerpo de la respuesta HTTP, pero el mensaje podría no ser mostrado (el browser no lo muestra). Si el servidor no comprende que la versión del WebSockets, debería enviar una cabecera `Sec-WebSocket-Version` que contenga la(s) versión(es) no entendidas. (Esta guía explica v13, la más nueva). Ahora, vamos a ver la cabecera más curiosa, `Sec-WebSocket-Key`.
+Si alguna cabecera no se entiende o posee un valor incorrecto, el servidor debe responder "[400 Bad Request](/es/docs/Web/HTTP/Reference/Status#400)" e inmediatamente cerrar la conexión. Normalmente, también puede dar la razón porque falló el _handshake_ en el cuerpo de la respuesta HTTP, pero el mensaje podría no ser mostrado (el browser no lo muestra). Si el servidor no comprende que la versión del WebSockets, debería enviar una cabecera `Sec-WebSocket-Version` que contenga la(s) versión(es) no entendidas. (Esta guía explica v13, la más nueva). Ahora, vamos a ver la cabecera más curiosa, `Sec-WebSocket-Key`.
 
 > [!NOTE]
-> Todos los **navegadores** deben enviar una [`cabecera Origin`](/es/docs/HTTP/Access_control_CORS#Origin). Tu puedes usar esta cabecera por seguridad (revisando por el mismo origen, listas blancas/ listas negras, etc.) y enviar un [403 Forbidden](/es/docs/HTTP/Response_codes#403) si no te gusta lo que ves. Sin embargo, se advierte que los agentes no navegadores pueden enviar un falso `Origin`. La mayoría de las aplicaciones rechazaran las solicitudes sin esta cabecera.
+> Todos los **navegadores** deben enviar una [`cabecera Origin`](/es/docs/Web/HTTP/Guides/CORS#origin). Tu puedes usar esta cabecera por seguridad (revisando por el mismo origen, listas blancas/ listas negras, etc.) y enviar un [403 Forbidden](/es/docs/Web/HTTP/Reference/Status#403) si no te gusta lo que ves. Sin embargo, se advierte que los agentes no navegadores pueden enviar un falso `Origin`. La mayoría de las aplicaciones rechazaran las solicitudes sin esta cabecera.
 
 > [!NOTE]
 > The request-uri (`/chat` here) has no defined meaning in the spec. So many people cleverly use it to let one server handle multiple WebSocket applications. For example, `example.com/chat` could invoke a multiuser chat app, while `/game` on the same server might invoke a multiplayer game.
 
-> **Nota:** [Regular HTTP status codes](/es/docs/HTTP/Response_codes) can only be used before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
+> [!NOTE]
+> [Regular HTTP status codes](/es/docs/Web/HTTP/Reference/Status) can only be used before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
 
 ### Respuesta de Handshake del servidor
 
@@ -63,7 +64,7 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-Adicionalmente, el servidor puede decidir respecto de las solicitudes "extension/subprotocol" en este punto (ver [Miscelláneos](#Miscellaneous) para más detalles). La cabecera `Sec-WebSocket-Accept` es interesante. El servidor debe derivarla a partir de la cabecera `Sec-WebSocket-Key` enviada anteriormente por el cliente. Para lograr esto se deben concatenar la cabecera del cliente `Sec-WebSocket-Key` y el string "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (es un "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), calcular el [hash SHA-1](https://en.wikipedia.org/wiki/SHA-1) del resultado y devolver el string codificado en [base64](https://en.wikipedia.org/wiki/Base64) de este hash.
+Adicionalmente, el servidor puede decidir respecto de las solicitudes "extension/subprotocol" en este punto (ver [Miscelláneos](#miscellaneous) para más detalles). La cabecera `Sec-WebSocket-Accept` es interesante. El servidor debe derivarla a partir de la cabecera `Sec-WebSocket-Key` enviada anteriormente por el cliente. Para lograr esto se deben concatenar la cabecera del cliente `Sec-WebSocket-Key` y el string "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (es un "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), calcular el [hash SHA-1](https://en.wikipedia.org/wiki/SHA-1) del resultado y devolver el string codificado en [base64](https://en.wikipedia.org/wiki/Base64) de este hash.
 
 > [!NOTE]
 > Este aparentemente complicado e innecesario proceso se realiza de manera que sea obvio para el cliente si el servidor soporta o noWebSockets. Esto es importante de realizar, ya que podrían crearse problemas de seguridad si el servidor acepta conexiones WebSockets pero interpreta los datos como solicitudes HTTP.
@@ -108,7 +109,7 @@ Cada trama de datos (desde el cliente al servidor o viceversa) sigue este mismo 
 
 Los RSV1-3 se pueden ignorar, son para las extensiones.
 
-El bit MASK simplemente indica si el mensaje está codificado. Los mensajes del cliente deben estar enmascarados, por lo que tu servidor debe esperar que valga 1. (De hecho, la [sección 5.1 de las espeficicaciones](http://tools.ietf.org/html/rfc6455#section-5.1) dice que tu servidor debe desconectarse de un cliente si ese cliente envía un mensaje sin enmascarar). Cuando se envía una trama al cliente, no lo ocultes y no pongas el bit de la máscara. Te explicaremos el enmascaramiento más tarde. _Nota: Tienes que enmascarar los mensajes incluso cuando uses un socket seguro._
+El bit MASK simplemente indica si el mensaje está codificado. Los mensajes del cliente deben estar enmascarados, por lo que tu servidor debe esperar que valga 1. (De hecho, la [sección 5.1 de las espeficicaciones](https://tools.ietf.org/html/rfc6455#section-5.1) dice que tu servidor debe desconectarse de un cliente si ese cliente envía un mensaje sin enmascarar). Cuando se envía una trama al cliente, no lo ocultes y no pongas el bit de la máscara. Te explicaremos el enmascaramiento más tarde. _Nota: Tienes que enmascarar los mensajes incluso cuando uses un socket seguro._
 
 El campo opcode define cómo interpretar los datos de la carga útil: `0x0` para continuar, `0x1` para texto (que siempre se codifica con UTF-8), `0x2` para datos binarios, otros llamados "códigos de control" se explican más tarde. En esta versión de WebSockets, de `0x3` a `0x7` y de `0xB` a `0xF` no tienen significado.
 
@@ -152,7 +153,7 @@ Client: FIN=1, opcode=0x0, msg="year!"
 Server: (process complete message) Happy new year to you too!
 ```
 
-Notice the first frame contains an entire message (has `FIN=1` and `opcode!=0x0`), so the server can process or respond as it sees fit. The second frame sent by the client has a text payload (`opcode=0x1`), but the entire message has not arrived yet (`FIN=0`). All remaining parts of that message are sent with continuation frames (`opcode=0x0`), and the final frame of the message is marked by `FIN=1`. [Section 5.4 of the spec](http://tools.ietf.org/html/rfc6455#section-5.4) describes message fragmentation.
+Notice the first frame contains an entire message (has `FIN=1` and `opcode!=0x0`), so the server can process or respond as it sees fit. The second frame sent by the client has a text payload (`opcode=0x1`), but the entire message has not arrived yet (`FIN=0`). All remaining parts of that message are sent with continuation frames (`opcode=0x0`), and the final frame of the message is marked by `FIN=1`. [Section 5.4 of the spec](https://tools.ietf.org/html/rfc6455#section-5.4) describes message fragmentation.
 
 ## Pings and Pongs: The Heartbeat of WebSockets
 
@@ -165,18 +166,19 @@ A ping or pong is just a regular frame, but it's a **control frame**. Pings have
 
 ## Step 4: Closing the connection
 
-To close a connection either the client or server can send a control frame with data containing a specified control sequence to begin the closing handshake (detailed in [Section 5.5.1](http://tools.ietf.org/html/rfc6455#section-5.5.1)). Upon receiving such a frame, the other peer sends a Close frame in response. The first peer then closes the connection. Any further data received after closing of connection is then discarded.
+To close a connection either the client or server can send a control frame with data containing a specified control sequence to begin the closing handshake (detailed in [Section 5.5.1](https://tools.ietf.org/html/rfc6455#section-5.5.1)). Upon receiving such a frame, the other peer sends a Close frame in response. The first peer then closes the connection. Any further data received after closing of connection is then discarded.
 
 ## Miscellaneous
 
 > [!NOTE]
-> WebSocket codes, extensions, subprotocols, etc. are registered at the [IANA WebSocket Protocol Registry](http://www.iana.org/assignments/websocket/websocket.xml).
+> WebSocket codes, extensions, subprotocols, etc. are registered at the [IANA WebSocket Protocol Registry](https://www.iana.org/assignments/websocket/websocket.xml).
 
-WebSocket extensions and subprotocols are negotiated via headers during [the handshake](#Handshake). Sometimes extensions and subprotocols seem too similar to be different things, but there is a clear distinction. Extensions control the WebSocket **frame** and **modify** the payload, while subprotocols structure the WebSocket **payload** and **never modify** anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).
+WebSocket extensions and subprotocols are negotiated via headers during [the handshake](#handshake). Sometimes extensions and subprotocols seem too similar to be different things, but there is a clear distinction. Extensions control the WebSocket **frame** and **modify** the payload, while subprotocols structure the WebSocket **payload** and **never modify** anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).
 
 ### Extensions
 
-> **Nota:** **This section needs expansion. Please edit if you are equipped to do so.**
+> [!NOTE]
+> **This section needs expansion. Please edit if you are equipped to do so.**
 
 Think of an extension as compressing a file before e-mailing it to someone. Whatever you do, you're sending the _same_ data in different forms. The recipient will eventually be able to get the same data as your local copy, but it is sent differently. That's what an extension does. WebSockets defines a protocol and a simple way to send data, but an extension such as compression could allow sending the same data but in a shorter format.
 
@@ -224,6 +226,6 @@ If you want your server to obey certain subprotocols, then naturally you'll need
 
 ## Related
 
-- [Tutorial: Websocket server in C#](/es/docs/WebSockets/Writing_WebSocket_server)
-- [Writing WebSocket client applications](/es/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Tutorial: Websocket server in C#](/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
+- [Writing WebSocket client applications](/es/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
 - [Tutorial: Websocket server in VB.NET](/es/docs/WebSockets/WebSocket_Server_Vb.NET)

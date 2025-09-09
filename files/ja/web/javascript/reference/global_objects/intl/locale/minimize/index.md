@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 
 **`Intl.Locale.prototype.minimize()`** メソッドは、 {{jsxref("Intl/Locale/maximize", "Locale.maximize()")}} を呼び出したことで追加されるロケールに関する情報を削除しようとします。
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.Locale.prototype.minimize()", "taller")}}
+
+```js interactive-example
+const english = new Intl.Locale("en-Latn-US");
+const korean = new Intl.Locale("ko-Kore-KR");
+const arabic = new Intl.Locale("ar-Arab-EG");
+
+console.log(english.minimize().baseName);
+// Expected output: "en"
+
+console.log(korean.minimize().baseName);
+// Expected output: "ko"
+
+console.log(arabic.minimize().baseName);
+// Expected output: "ar"
+```
 
 ## 構文
 

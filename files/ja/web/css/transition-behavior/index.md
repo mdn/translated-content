@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
 ---
 
-{{CSSRef}}
-
 **`transition-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、アニメーションの動作が[離散](/ja/docs/Web/CSS/CSS_animated_properties#離散)であるプロパティにトランジションを始めるかどうかを指定します。
 
 ## 構文
@@ -91,7 +89,7 @@ transition-behavior: unset;
 
 #### HTML
 
-この HTML では、 {{htmlelement("div")}} 要素に [popover](/ja/docs/Web/HTML/Global_attributes/popover) 属性を用いてポップオーバーとして宣言し、 {{htmlelement("button")}} 要素に [popovertarget](/ja/docs/Web/HTML/Element/button#popovertarget) 属性を用いてポップオーバーの表示コントロールとして指定しています。
+この HTML では、 {{htmlelement("div")}} 要素に [popover](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を用いてポップオーバーとして宣言し、 {{htmlelement("button")}} 要素に [popovertarget](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性を用いてポップオーバーの表示コントロールとして指定しています。
 
 ```html-nolint
 <button popovertarget="mypopover">ポップオーバーを表示</button>

@@ -1,15 +1,38 @@
 ---
 title: handler.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`handler.get()`** は、オブジェクトの `[[Get]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)などの操作で使用されます。
 
-**`handler.get()`** は、オブジェクトの `[[Get]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)などの操作で使用されます。
+{{InteractiveExample("JavaScript デモ: handler.get()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}
+```js interactive-example
+const monster = {
+  secret: "easily scared",
+  eyeCount: 4,
+};
+
+const handler = {
+  get(target, prop, receiver) {
+    if (prop === "secret") {
+      return `${target.secret.substring(0, 4)} ... shhhh!`;
+    }
+    return Reflect.get(...arguments);
+  },
+};
+
+const proxy = new Proxy(monster, handler);
+
+console.log(proxy.eyeCount);
+// 予想される結果: 4
+
+console.log(proxy.secret);
+// 予想される結果: "easi ... shhhh!"
+```
 
 ## 構文
 
@@ -17,7 +40,7 @@ l10n:
 new Proxy(target, {
   get(target, property, receiver) {
   }
-});
+})
 ```
 
 ### 引数
@@ -25,11 +48,11 @@ new Proxy(target, {
 次の引数が `get()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
 - `target`
-  - : ターゲットオブジェクト
+  - : ターゲットオブジェクトです。
 - `property`
-  - : 取得するプロパティの名称
+  - : プロパティの名称を表す文字列または {{jsxref("Symbol")}} です。
 - `receiver`
-  - : プロキシー、またはプロキシーから継承するオブジェクトのどちらか
+  - : `this` 値はゲッター用です。 {{jsxref("Reflect.get()")}} を参照してください。これは通常、プロキシー自身か、プロキシーを継承するオブジェクトです。
 
 ### 返値
 
@@ -48,10 +71,10 @@ new Proxy(target, {
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+プロキシーの内部メソッド `[[Get]]` は、ハンドラー定義が以下の不変条件のいずれかに違反している場合、 {{jsxref("TypeError")}} が発生します。
 
-- ターゲットオブジェクトプロパティが書き込み不可、構成不可の自分自身のデータプロパティである場合、プロパティとして報告される値は、対応するターゲットオブジェクトプロパティの値と同じでなければなりません。
-- 対応する対象オブジェクトのプロパティが、`[[Get]]` 属性として `undefined` を持つ、構成不可の自分自身のアクセサープロパティである場合、プロパティに対して報告される値は undefined でなければなりません。
+- このプロパティで報告される値は、ターゲットオブジェクトのプロパティが書き込み不可かつ構成不可の自身で所有するデータプロパティである場合、対応するターゲットオブジェクトのプロパティの値と同じでなければなりません。つまり、 {{jsxref("Reflect.getOwnPropertyDescriptor()")}} が、 `target` のプロパティに対して `configurable: false, writable: false` を返した場合、トラップは、 `target` のプロパティ記述子の `value` 属性と同じ値を返さなければなりません。
+- 対応するターゲットオブジェクトプロパティが、undefined ゲッターを持つ構成不可な自身のアクセサープロパティである場合、プロパティに対して報告される値は `undefined` でなければなりません。つまり、 {{jsxref("Reflect.getOwnPropertyDescriptor()")}} が、`target` のプロパティに対して `configurable: false, get: undefined` を返す場合、トラップは `undefined` を返す必要があります。
 
 ## 例
 

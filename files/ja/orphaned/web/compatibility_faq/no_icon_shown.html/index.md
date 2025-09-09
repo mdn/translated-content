@@ -74,7 +74,7 @@ slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
     webkit 指定の描画やサイズ指定を他ブラウザーでも互換性を維持できるよう下記記載のものに修正することで正しく表示可能となります。
 
     - [border-radius](/ja/docs/Web/CSS/border-radius)プロパティ
-    - [linear-gradient()](/ja/docs/Web/CSS/linear-gradient)関数
+    - [linear-gradient()](/ja/docs/Web/CSS/gradient/linear-gradient)関数
     - [box-shadow](/ja/docs/Web/CSS/box-shadow)プロパティ
     - [transform](/ja/docs/Web/CSS/transform)プロパティ
     - [background-size](/ja/docs/Web/CSS/background-size)プロパティ
@@ -133,4 +133,4 @@ slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
 ・他のブラウザーでも互換性を維持することができます。
 ・全体のレイアウトを見直すことにより、その後の変更修正も容易になります。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

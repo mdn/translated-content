@@ -5,7 +5,7 @@ slug: Web/API/Document/getElementById
 
 {{ ApiRef("DOM") }}
 
-Devuelve una referencia al elemento por su [ID](/es/docs/DOM/element.id).
+Devuelve una referencia al elemento por su [ID](/es/docs/Web/API/Element/id).
 
 ## Sintaxis
 
@@ -95,7 +95,7 @@ element.id = "testqq";
 var el = document.getElementById("testqq"); // el será null!
 ```
 
-**Documentos no-HTML**. La implementación de DOM debe tener información que diga que atributos son del tipo ID. Los atributos con el nombre "id" son son del tipo ID a menos que se los defina en el DTD del documento. El atributo `id` es definido para ser del tipo ID en los casos comunes de [XHTML](/es/docs/XHTML), [XUL](/es/docs/Mozilla/Tech/XUL), y otros. Las implementaciones que no sepan si los atributos son o no del tipo ID se espera que retornen null.
+**Documentos no-HTML**. La implementación de DOM debe tener información que diga que atributos son del tipo ID. Los atributos con el nombre "id" son son del tipo ID a menos que se los defina en el DTD del documento. El atributo `id` es definido para ser del tipo ID en los casos comunes de [XHTML](/es/docs/Glossary/XHTML), [XUL](/es/docs/Mozilla/Tech/XUL), y otros. Las implementaciones que no sepan si los atributos son o no del tipo ID se espera que retornen null.
 
 ## Especificaciones
 
@@ -107,6 +107,6 @@ var el = document.getElementById("testqq"); // el será null!
 
 ## Ver también
 
-- La referencia [document](/es/docs/DOM/document) para otros métodos y propiedades que se pueden usar para obtener referencias a elementos en el documento.
-- [document.querySelector()](/es/docs/Web/API/document.querySelector) para selectores via consultas como `'div.myclass'`
+- La referencia [document](/es/docs/Web/API/Document) para otros métodos y propiedades que se pueden usar para obtener referencias a elementos en el documento.
+- [document.querySelector()](/es/docs/Web/API/Document/querySelector) para selectores via consultas como `'div.myclass'`
 - [xml:id](/es/docs/xml/xml:id) - tiene un método utilitario para permitir que `getElementById()` obtenga 'xml:id' en documentos XML documents (como los retornados por llamadas Ajax.

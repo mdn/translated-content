@@ -1,15 +1,28 @@
 ---
 title: Object.isFrozen()
+short-title: isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.isFrozen()`** はオブジェクトが{{jsxref("Object/freeze", "凍結されている", "", 1)}}かどうかを判定します。
 
-{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
+{{InteractiveExample("JavaScript デモ: Object.isFrozen()")}}
+
+```js interactive-example
+const object = {
+  property1: 42,
+};
+
+console.log(Object.isFrozen(object));
+// 予想される結果: false
+
+Object.freeze(object);
+
+console.log(Object.isFrozen(object));
+// 予想される結果: true
+```
 
 ## 構文
 

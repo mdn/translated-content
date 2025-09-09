@@ -27,9 +27,9 @@ div {
 
 ### Culture générale
 
-- [Apprendre CSS](/fr/Apprendre/CSS)
+- [Apprendre CSS](/fr/docs/Learn_web_development/Core/Styling_basics)
 
 ### Références techniques
 
 - [Référence CSS](/fr/docs/Web/CSS/Reference) sur MDN
-- [The CSS Working Group current work](http://www.w3.org/Style/CSS/current-work) (en)
+- [The CSS Working Group current work](https://www.w3.org/Style/CSS/current-work) (en)

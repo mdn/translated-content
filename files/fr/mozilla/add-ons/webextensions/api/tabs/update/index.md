@@ -9,7 +9,7 @@ Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'
 
 Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet `updateProperties` contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans `updateProperties` ne sont pas modifiées.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -25,21 +25,17 @@ var updating = browser.tabs.update(
 - `tabId`{{optional_inline}}
   - : `integer`. Par défaut à l'onglet sélectionné de la fenêtre en cours.
 - `updateProperties`
-
   - : `object`. L'ensemble des propriétés à mettre à jour pour cet onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
-
     - `active`{{optional_inline}}
       - : `boolean`. Si l'onglet doit devenir actif. Ne modifie pas le focus de la fenêtre (voir {{WebExtAPIRef('windows.update')}}). Si `true`, les onglets surlignés non actifs cesseront d'être surlignés. Si `false`, ne fait rien.
     - `autoDiscardable`{{optional_inline}}
       - : `boolean`. Si l'onglet doit être supprimé automatiquement par le navigateur lorsque les ressources sont faibles.
     - `highlighted`{{optional_inline}}
-
       - : `boolean`. Ajoute ou supprime l'onglet de la sélection courante. Si `true` et que l'onglet n'est pas surligné, il deviendra actif par défaut.
 
         Si vous voulez seulement mettre en surbrillance l'onglet sans l'activer, Firefox accepte le réglage `highlighted` à `true` et `active` à `false`. D'autres navigateurs peuvent activer l'onglet même dans ce cas.
 
     - `loadReplace`{{optional_inline}}
-
       - : `boolean`. Si la nouvelle URL doit remplacer l'ancienne URL dans l'historique de navigation de l'onglet, accessible via le bouton "Retour".
 
         Par exemple, supposons que l'utilisateur crée un nouvel onglet en utilisant Ctrl + T. Par défaut, dans Firefox, cela chargerait "about:newtab". Si votre extension met alors à jour cette page en utilisant {{WebExtAPIRef("tabs.update")}}, sans `loadReplace`, le bouton "retour" sera activé et ramènera l'utilisateur à "about:newtab". Si l'extension définit `loadReplace`, le bouton "retour" sera désactivé et ce sera comme si l'URL fournie par l'extension était la première page visitée dans cet onglet.
@@ -57,11 +53,9 @@ var updating = browser.tabs.update(
     - `successorTabId` {{optional_inline}}
       - : `integer`. L'identifiant de l'ID du successeur de l'onglet.
     - `url`{{optional_inline}}
-
       - : `string`. Une URL pour naviguer dans l'onglet.
 
         Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera, avec {{WebExtAPIRef("runtime.lastError")}} étant défini sur un message d'erreur :
-
         - chrome: URLs
         - javascript: URLs
         - data: URLs
@@ -72,7 +66,7 @@ var updating = browser.tabs.update(
 
 ### Valeur retournée
 
-A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet mis à jour. L'objet {{WebExtAPIRef('tabs.Tab')}} ne contient pas d' `url`, `title` et `favIconUrl` sauf si la permission `"tabs"` a été demandée. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+A [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet mis à jour. L'objet {{WebExtAPIRef('tabs.Tab')}} ne contient pas d' `url`, `title` et `favIconUrl` sauf si la permission `"tabs"` a été demandée. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -123,8 +117,6 @@ querying.then(updateFirstTab, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -2,7 +2,7 @@
 title: プロミスの使用
 slug: Web/JavaScript/Guide/Using_promises
 l10n:
-  sourceCommit: f1d6263254646ef9c03cfd4b684716a13fe56686
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
@@ -35,13 +35,13 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 
 ## 連鎖
 
-よくあるニーズは、 2 つ以上の非同期処理を連続して実行することで、前回の処理が成功したときに、その結果をもとに後続の処理を始めることです。昔は、複数の非同期処理を連続して実行すると、古典的なコールバックピラミッドに陥っていました。
+よくあるニーズは、 2 つ以上の非同期処理を連続して実行することで、前回の処理が成功したときに、その結果をもとに後続の処理を始めることです。昔は、複数の非同期処理を連続して実行すると、古典的な[コールバック地獄](http://callbackhell.com/)に陥っていました。
 
 ```js-nolint
 doSomething(function (result) {
   doSomethingElse(result, function (newResult) {
     doThirdThing(newResult, function (finalResult) {
-      console.log(`Got the final result: ${finalResult}`);
+      console.log(`最終結果: ${finalResult}`);
     }, failureCallback);
   }, failureCallback);
 }, failureCallback);
@@ -58,6 +58,24 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 2 つ目のプロミス (`promise2`) は `doSomething()` の完了を表すだけではなく、渡した `successCallback` もしくは `failureCallback` の完了も表し、これらのコールバックはプロミスを返すまた別の非同期関数であっても構いません。その場合、`promise2` に追加されたコールバックはいずれもプロミスのキューにおいて、`successCallback` または `failureCallback` が返すプロミスの後ろに追加されます。
 
+> [!NOTE]
+> この例を実際に試してみたい場合は、次のテンプレートを使用することで、プロミスを返す任意の関数を作成することができます。
+>
+> ```js
+> function doSomething() {
+>   return new Promise((resolve) => {
+>     setTimeout(() => {
+>       // プロミスの完了前にやるべき他のこと
+>       console.log("何かを行いました");
+>       // プロミスの履行値
+>       resolve("https://example.com/");
+>     }, 200);
+>   });
+> }
+> ```
+>
+> 実装については、下記「[古いコールバック API をラップする Promise の作成](#古いコールバック_api_をラップする_promise_の作成)」の章で詳しく説明します。
+
 このパターンを使うと、より長い処理の連鎖を作成することができ、それぞれのプロミスは連鎖の中の非同期ステップの完了を表します。さらに、 `then` の引数はオプションで、`catch(failureCallback)` は `then(null, failureCallback)` の省略形です。エラー処理するコードがすべての手順で同じであれば、それをチェーンの終わりに付けることができます。
 
 ```js
@@ -69,7 +87,7 @@ doSomething()
     return doThirdThing(newResult);
   })
   .then(function (finalResult) {
-    console.log(`Got the final result: ${finalResult}`);
+    console.log(`最終結果: ${finalResult}`);
   })
   .catch(failureCallback);
 ```
@@ -81,35 +99,48 @@ doSomething()
   .then((result) => doSomethingElse(result))
   .then((newResult) => doThirdThing(newResult))
   .then((finalResult) => {
-    console.log(`Got the final result: ${finalResult}`);
+    console.log(`最終結果: ${finalResult}`);
   })
   .catch(failureCallback);
 ```
 
-**重要:** コールバック関数から処理結果を返すのを忘れないでください。さもないと後続のコールバック関数からその処理結果を利用することができなくなります（アロー関数を使った `() => x` は `() => { return x; }` の短縮形です）。前回ハンドラーがプロミスを始めたが、それを返さなかった場合、その決定を追跡する方法はもうなく、プロミスは「浮動」していると言います。
+> [!NOTE]
+> アロー関数式は[暗黙の返値](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions#関数の本体)を持つことができます。したがって、 `() => x` は `() => { return x; }` の短縮形です。
+
+`doSomethingElse` と `doThirdThing` は、どのような値でも返すことができます。プロミスを返す場合は、まずそのプロミスが確定するまで待機され、次のコールバックにはプロミス自体ではなく履行値が返されます。 プロミスが常に `undefined` に解決される場合でも、`then` コールバックから常にプロミスを返すことが重要です。前回ハンドラーがプロミスを始めたが、それを返さなかった場合、その決定を追跡する方法はもうなく、プロミスは「浮いている」 (floating) と言います。
 
 ```js example-bad
 doSomething()
   .then((url) => {
-    // これを返すのを忘れていた
+    // fetch(url) の前に return キーワードを忘れている
     fetch(url);
   })
   .then((result) => {
-    // 結果は未定義です。前回ハンドラーからは何も
-    // 返されないからです。
-    // fetch() 呼び出しの返値を知る方法はもうありませんし、
-    // 成功したかどうかもすべてわかりません。
+    // 結果は未定義です。直前のハンドラーからは何も返されないからです。 fetch() 呼び出しの返値を知る方法はもうありませんし、成功したかどうかもまったくわかりません。
   });
 ```
 
-もし最後のハンドラーのプロミスが返されなければ、次の `then` ハンドラーが早く呼び出され、そのハンドラーが読み取る値が不完全になる可能性があります。
+`fetch`の呼び出し結果（プロミス）を返すことで、どちらもその完了を追跡し、完了時にその値を受け取ることができます。
+
+```js example-good
+doSomething()
+  .then((url) => {
+    // `return` キーワードを追加
+    return fetch(url);
+  })
+  .then((result) => {
+    // 結果は Response オブジェクト
+  });
+```
+
+浮いているプロミスは、競合する条件が存在する場合に、さらに悪い結果を招く可能性があります。もし最後のハンドラーのプロミスが返されなければ、次の `then` ハンドラーが早く呼び出され、そのハンドラーが読み取る値が不完全になる可能性があります。
 
 ```js example-bad
 const listOfIngredients = [];
 
 doSomething()
   .then((url) => {
-    // これを返すのを忘れていた
+    // fetch(url) の前に return キーワードを忘れている
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -118,7 +149,7 @@ doSomething()
   })
   .then(() => {
     console.log(listOfIngredients);
-    // Always [], because the fetch request hasn't completed yet.
+    // listOfIngredients は常に [] となります。フェッチリクエストはまだ完了していないからです。
   });
 ```
 
@@ -128,19 +159,23 @@ doSomething()
 const listOfIngredients = [];
 
 doSomething()
-  .then((url) =>
-    fetch(url)
+  .then((url) => {
+    // fetch 呼び出しの前に `return` キーワードを入れるようにした
+    return fetch(url)
       .then((res) => res.json())
       .then((data) => {
         listOfIngredients.push(data);
-      }),
-  )
+      });
+  })
   .then(() => {
     console.log(listOfIngredients);
+    // listOfIngredients には fetch 呼び出しから取得されたデータが入るようになる
   });
+```
 
-// または
+さらに、入れ子になったチェーンを単一のチェーンにフラット化することで、よりシンプルになり、エラー処理も容易になります。詳細は、下記の[入れ子](#入れ子)の節で説明します。
 
+```js
 doSomething()
   .then((url) => fetch(url))
   .then((res) => res.json())
@@ -152,11 +187,72 @@ doSomething()
   });
 ```
 
+[`async`/`await`](/ja/docs/Web/JavaScript/Reference/Statements/async_function) を使用すると、より直感的なコードを書くことができ、同期コードに似たコードを書くことができます。次の例は、 `async`/`await` を使用しておなじことをしています。
+
+```js
+async function logIngredients() {
+  const url = await doSomething();
+  const res = await fetch(url);
+  const data = await res.json();
+  listOfIngredients.push(data);
+  console.log(listOfIngredients);
+}
+```
+
+コードはプロミスの前に `await` キーワードがあることを除いて、同期的なコードとまったく同じに見えることに注目してください。トレードオフの1つは、[`await`](/ja/docs/Web/JavaScript/Reference/Statements/async_function) キーワードを簡単に忘れてしまう可能性があることです。これは、型不一致（例えば、プロミスを値として使用しようとするなど）がある場合にのみ修正することができます。
+
+`async`/`await` はプロミスを基に構築されています。例えば、`doSomething()` は以前と同じ関数であるため、プロミスから `async`/`await` に変更するために必要なリファクタリングは最小限で済みます。 `async`/`await` の構文については、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)および [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) のリファレンスで詳しく説明されています。
+
+> [!NOTE]
+> `async`/`await` は通常のプロミス連鎖と同じ並列処理の意味論をもちます。 1 つの非同期関数内で `await` を使用しても、プログラム全体が停止するわけではなく、その値に依存する部分のみが停止します。そのため、 `await` が待機中の間にも、他にも非同期のジョブが実行される可能性があります。
+
+## エラー処理
+
+先ほどの死のピラミッドでは `failureCallback` を 3 回見たことを思い出すかもしれません。一方、プロミス連鎖の最後の 1 回だけです。
+
+```js
+doSomething()
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => console.log(`最終結果: ${finalResult}`))
+  .catch(failureCallback);
+```
+
+例外が発生すると、ブラウザーは連鎖をたどって `.catch()` ハンドラーか `onRejected` を探します。この動作は同期的なコードの動作ととてもよく似ています。
+
+```js
+try {
+  const result = syncDoSomething();
+  const newResult = syncDoSomethingElse(result);
+  const finalResult = syncDoThirdThing(newResult);
+  console.log(`最終結果: ${finalResult}`);
+} catch (error) {
+  failureCallback(error);
+}
+```
+
+これに対応するものを `async`/`await` の構文で非同期コードに集約したものです。
+
+```js
+async function foo() {
+  try {
+    const result = await doSomething();
+    const newResult = await doSomethingElse(result);
+    const finalResult = await doThirdThing(newResult);
+    console.log(`最終結果: ${finalResult}`);
+  } catch (error) {
+    failureCallback(error);
+  }
+}
+```
+
+プロミスは、コールバックの死のピラミッドの根本的な欠陥を解決します。例外やプログラミングエラーなど、すべてのエラーを捕捉します。これは非同期操作の機能合成に不可欠です。これで、エラーはすべてチェーンの終わりにある [`catch()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) メソッドで処理されることになり、 `async`/`await` を使用せずに `try`/`catch` を使用する必要はほとんどなくなります。
+
 ### 入れ子
 
-上の2つの例では、最初のプロミス連鎖は別の `then()` ハンドラーの返値に入れ子になっていますが、 2 つ目は完全にフラットな連鎖を使用しています。単純なプロミス連鎖は、入れ子をせずにフラットに保つのがベストです。入れ子にすると、不注意な合成の結果になってしまう可能性があるからです。[よくある間違い](#よくある間違い)を参照してください。
+上の `listOfIngredients` に関する例では、最初のプロミス連鎖は別の `then()` ハンドラーの返値に入れ子になっていますが、 2 つ目は完全にフラットな連鎖を使用しています。単純なプロミス連鎖は、入れ子をせずにフラットに保つのがベストです。入れ子にすると、不注意な合成の結果になってしまう可能性があるからです。
 
-入れ子は、`catch` 文の範囲を制限するための制御構造です。具体的には、入れ子になった `catch` は、そのスコープ以下のエラーのみを捕捉し、入れ子になったスコープの外側にある連鎖の上位のエラーは捕捉しません。正しく使用すれば、エラー回復の精度が高まります。
+入れ子は、 `catch` 文の範囲を制限するための制御構造です。具体的には、入れ子になった `catch` は、そのスコープ以下のエラーのみを捕捉し、入れ子になったスコープの外側にある連鎖の上位のエラーは捕捉しません。正しく使用すれば、エラー回復の精度が高まります。
 
 ```js
 doSomethingCritical()
@@ -173,26 +269,44 @@ doSomethingCritical()
 
 内側の `catch` 文は `doSomethingOptional()` と `doSomethingExtraNice()` からの失敗だけを捕捉し、捕捉したあと `moreCriticalStuff()` へと処理が続きます。重要なのは、もし `doSomethingCritical()` が失敗したらそのエラーは最後 (外側) の `catch` によってだけ捕捉されるということです。
 
+`async`/`await` の場合、このコードは次のようになります。
+
+```js
+async function main() {
+  try {
+    const result = await doSomethingCritical();
+    try {
+      const optionalResult = await doSomethingOptional(result);
+      await doSomethingExtraNice(optionalResult);
+    } catch (e) {
+      // オプション段階での失敗は無視して、次に進む
+    }
+    await moreCriticalStuff();
+  } catch (e) {
+    console.error(`Critical failure: ${e.message}`);
+  }
+}
+```
+
+> [!NOTE]
+> 高度なエラー処理が存在しないのであれば、入れ子になった `then` ハンドラーが必要になることはまずありません。 その代わりに、フラットチェーンを使用し、エラー処理ロジックを文末に配置してください。
+
 ### catch の後の連鎖
 
 失敗、つまり `catch` の後に連鎖することも可能で、これは連鎖内の動作が失敗した後でも新しい動作を行うのに便利です。次の例を読んでください。
 
 ```js
-new Promise((resolve, reject) => {
-  console.log("Initial");
-
-  resolve();
-})
+doSomething()
   .then(() => {
-    throw new Error("Something failed");
+    throw new Error("何か失敗した");
 
-    console.log("Do this");
+    console.log("これを実行");
   })
   .catch(() => {
-    console.error("Do that");
+    console.error("あれを実行");
   })
   .then(() => {
-    console.log("Do this, no matter what happened before");
+    console.log("以前に何が起こったとしても、これを行う");
   });
 ```
 
@@ -200,107 +314,31 @@ new Promise((resolve, reject) => {
 
 ```plain
 Initial
-Do that
-Do this, no matter what happened before
+あれを実行
+以前に何が起こったとしても、これを行う
 ```
 
 > [!NOTE]
-> "Do this" のテキストは "Something failed" エラーが拒否をを引き起こしたため出力されないことに注意してください。
+> 「これを実行」のテキストは「何か失敗した」エラーが拒否をを引き起こしたため、出力されないことに注意してください。
 
-## よくある間違い
-
-プロミス連鎖を合成するときは以下のようなよくある間違いに気をつける必要があります。以下の例にいくつかの間違いが含まれています。
-
-```js example-bad
-// 悪い例。間違いを 3 つ見つけてください。
-
-doSomething()
-  .then(function (result) {
-    // 内側の連鎖でプロミスを返していない + 不必要な入れ子
-    doSomethingElse(result).then((newResult) => doThirdThing(newResult));
-  })
-  .then(() => doFourthThing());
-// 連鎖の最後で catch を忘れている
-```
-
-最初の間違いは適切に連鎖を構成できていないことです。これは、新しいプロミスを作成したものの、それを返すのを忘れているときに起きます。結果として連鎖は壊れ、2 つの連鎖が独立して実行されることになります。これはつまり `doFourthThing()` は `doSomethingElse()` や `doThirdThing()` の終了を待たないことになり、おそらく意図せず並行して実行されることになります。別々の連鎖では別々のエラーハンドリングが行われるため、捕捉されないエラーが発生することになります。
-
-2 つ目の間違いは不必要に入れ子にしていることです。入れ子にするということは内側のエラーハンドラーのスコープが制限されるということであり、もしこれが意図していないものであれば、エラーが捕捉されない場合があります。これの変化形で[プロミスのコンストラクターアンチパターン](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it)というものがあり、ネストに加えて、プロミスを既に使用しているコードを不必要なプロミスのコンストラクターでラップするというものです。
-
-3 つ目の間違いは連鎖を `catch` で終わらせていないことです。プロミス連鎖が終わっていないと、多くのブラウザーでは、プロミスの拒否が捕捉されないことになります。下記の[エラー処理](#エラー処理)を参照してください。
-
-常識的には、常にプロミス連鎖を返すか終了させるかのどちらかで、新しいプロミスを受け取ったらすぐに返すようにして、物事をフラットにするのが良いでしょう。
-
-```js example-good
-doSomething()
-  .then(function (result) {
-    // 完全な関数式を使用する場合は、プロミスを返します
-    return doSomethingElse(result);
-  })
-  // アロー関数を使用する場合は、中括弧を省略し、暗黙のうちに結果を返す
-  .then((newResult) => doThirdThing(newResult))
-  // 前の連鎖したプロミスが結果を返しても、次のプロミスは必ずしも
-  // それを使う必要はない。結果を消費しないハンドラーを渡すことが
-  // できる
-  .then((/* 結果は無視されます */) => doFourthThing())
-  // プロミスの連鎖は必ず catch ハンドラーで終わらせ、拒否が処理
-  // されなくなることを避けるようにしましょう
-  .catch((error) => console.error(error));
-```
-
-`() => x` は `() => { return x; }` の短縮形であることに注意してください。
-
-これで適切なエラー処理が行われる 1 本の連鎖ができました。
-
-[`async`/`await`](/ja/docs/Web/JavaScript/Reference/Statements/async_function) を使えば、すべてではないにしてもほとんどの問題は解決します。それと引き換えに、この構文で最もよくある間違いが [`await`](/ja/docs/Web/JavaScript/Reference/Statements/async_function) キーワードを忘れることです。
-
-## エラーの伝播
-
-以前のコールバック地獄形式の記述方法では `failureCallback` を 3 回書く必要がありましたが、プロミス連鎖では 1 回で済みます。
+`async`/`await` では、このコードは次のようになります。
 
 ```js
-doSomething()
-  .then((result) => doSomethingElse(result))
-  .then((newResult) => doThirdThing(newResult))
-  .then((finalResult) => console.log(`Got the final result: ${finalResult}`))
-  .catch(failureCallback);
-```
-
-例外が発生すると、ブラウザーは連鎖をたどって `.catch()` ハンドラーか `onRejected` を探します。この動作は同期的なコードの動作ととてもよく似ています。
-
-```js
-try {
-  const result = syncDoSomething();
-  const newResult = syncDoSomethingElse(result);
-  const finalResult = syncDoThirdThing(newResult);
-  console.log(`Got the final result: ${finalResult}`);
-} catch (error) {
-  failureCallback(error);
-}
-```
-
-ECMAScript 2017 の糖衣構文 [`async`/`await`](/ja/docs/Web/JavaScript/Reference/Statements/async_function) を使えば、非同期コードとそっくりになります。
-
-```js
-async function foo() {
+async function main() {
   try {
-    const result = await doSomething();
-    const newResult = await doSomethingElse(result);
-    const finalResult = await doThirdThing(newResult);
-    console.log(`Got the final result: ${finalResult}`);
-  } catch (error) {
-    failureCallback(error);
+    await doSomething();
+    throw new Error("何か失敗した");
+    console.log("これを実行");
+  } catch (e) {
+    console.error("あれを実行");
   }
+  console.log("以前に何が起こったとしても、これを行う");
 }
 ```
 
-例えば、 `doSomething()` は以前と同じ関数なので、プロミスから `async`/`await` への変更に必要なリファクタリングは最小限です。`async`/`await` の構文については、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)と [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) を参照してください。
+### プロミスの拒否イベント
 
-プロミスは、発生する例外やプログラミングエラーも含めて、すべてのエラーを捕捉することで、コールバックピラミッドの根本的な欠陥を解決します。これは非同期処理を機能的に構成するために不可欠です。
-
-## プロミスの拒否イベント
-
-プロミス拒否イベントがどのハンドラーによっても処理されなかった場合、そのイベントは呼び出しスタックの先頭にバブルし、ホスティングはそれを表面化する必要があります。ウェブでは、プロミスが拒否されるたびに、 2 種類のイベントのどちらかがグローバルスコープに送られます（一般的には、[`window`](/ja/docs/Web/API/Window)か、ウェブワーカーで使用する場合は、[`Worker`](/ja/docs/Web/API/Worker)、または他のワーカーベースのインターフェイスです）。この 2 つのイベントは次の通りです。
+プロミス拒否イベントがどのハンドラーによっても処理されなかった場合、そのイベントは呼び出しスタックの先頭にバブリングし、ホストはそれを表面化させる必要があります。ウェブでは、プロミスが拒否されるたびに、 2 種類のイベントのどちらかがグローバルスコープに送られます（一般的には、 [`window`](/ja/docs/Web/API/Window) か、ウェブワーカーで使用する場合は、 [`Worker`](/ja/docs/Web/API/Worker)、または他のワーカーベースのインターフェイスです）。この 2 つのイベントは次の通りです。
 
 - [`unhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event)
   - : プロミスが拒否されたものの、拒否ハンドラーが利用できない場合に送られます。
@@ -355,7 +393,7 @@ Promise.resolve()
   .then(func2)
   .then(func3)
   .then((result3) => {
-    // result3 を使用
+    /* result3 を使用 */
   });
 ```
 
@@ -376,7 +414,7 @@ const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);
 ```
 
-直列的な合成は async/await でもっと単純に書くことができます。
+直列的な合成は async/await でもっと簡単に書くことができます。
 
 ```js
 let result;
@@ -388,19 +426,23 @@ for (const f of [func1, func2, func3]) {
 
 しかし、プロミスを逐次的に構成する前に、それが実に必要かどうかを検討してください。あるプロミスの実行が他のプロミスの結果に依存していない限り、それらが不必要にブロックし合わないように、常にプロミス並列処理を実行する方がよいのです。
 
+## キャンセル
+
+`Promise` 自体には取り消し用の第一級プロトコルは存在しませんが、通常は [`AbortController`](/ja/docs/Web/API/AbortController) を使用して、基盤となる非同期操作を直接取り消すことができる場合があります。
+
 ## 古いコールバック API をラップする Promise の作成
 
 {{jsxref("Promise")}} は[コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)を使って 1 から生成すこともできます。これが必要になるのは古い API をラップする場合のみでしょう。
 
-理想的には、すべての非同期関数はプロミスを返すはずですが、残念ながら API の中にはいまだに古いやり方で成功/失敗用のコールバックを渡しているものがあります。顕著な例としては [`setTimeout()`](/ja/docs/Web/API/setTimeout) 関数があります。
+理想的には、すべての非同期関数はプロミスを返すはずですが、残念ながら API の中にはいまだに古いやり方で成功/失敗用のコールバックを渡しているものがあります。顕著な例としては {{domxref("Window.setTimeout", "setTimeout()")}} 関数があります。
 
 ```js
 setTimeout(() => saySomething("10 seconds passed"), 10 * 1000);
 ```
 
-古い様式であるコールバックとプロミスの混在は問題を引き起こします。というのは、`saySomething()` が失敗したりプログラミングエラーを含んでいた場合に、そのエラーをとらえられないからです。`setTimeout` にその責任があります。
+古い様式であるコールバックとプロミスの混在は問題を引き起こします。というのは、`saySomething()` が失敗したりプログラミングエラーを含んでいた場合に、そのエラーをとらえられないからです。`setTimeout()` にその責任があります。
 
-幸いにも `setTimeout` をプロミスの中にラップすることができます。良いやり方は、問題のある関数をできる限り低い水準でラップした上で、直接呼び出さないようにすることです。
+幸いにも `setTimeout()` をプロミスの中にラップすることができます。良いやり方は、問題のある関数をできる限り低い水準でラップした上で、直接呼び出さないようにすることです。
 
 ```js
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -442,7 +484,7 @@ console.log(value); // 1 or 2?
 
 一方で、プロミスは[制御の反転](https://ja.wikipedia.org/wiki/制御の反転)という形です。コールバックが呼び出されるタイミングを API 実装者が制御することはありません。その代わりに、コールバックキューを維持し、いつコールバックを呼び出すかを決定する仕事はプロミスの実装に委ねられ、 API ユーザーと API 開発者の両方は、自動的に以下のような強力な意味づけ保証を得ることができます。
 
-- [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) で追加されたコールバックは、 JavaScript のイベントループの[現在の実行の完了](/ja/docs/Web/JavaScript/Event_loop#run-to-completion)より前に呼び出されることはありません。
+- [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) で追加されたコールバックは、 JavaScript のイベントループの[現在の実行の完了](/ja/docs/Web/JavaScript/Reference/Execution_model#run-to-completion)より前に呼び出されることはありません。
 - これらのコールバックは、プロミスが表す非同期処理の成功や失敗の後に追加されても呼び出されます。
 - [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) を複数回呼び出すことで、複数のコールバックを追加することができます。これらは挿入された順に次々と呼び出されます。
 
@@ -468,7 +510,7 @@ console.log(1); // 1, 2, 3, 4
 
 ### タスクキューとマイクロタスク
 
-プロミスのコールバックは[マイクロタスク](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)として処理され、 [`setTimeout()`](/ja/docs/Web/API/setTimeout) コールバックはタスクキューとして扱われます。
+プロミスのコールバックは[マイクロタスク](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)として処理され、 {{domxref("Window.setTimeout", "setTimeout()")}} コールバックはタスクキューとして扱われます。
 
 ```js
 const promise = new Promise((resolve, reject) => {
@@ -494,13 +536,13 @@ Promise callback (.then)
 event-loop cycle: Promise (fulfilled) Promise {<fulfilled>}
 ```
 
-詳しくは、[タスクとマイクロタスク](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks)を参照してください。
+詳しくは、[タスクとマイクロタスク](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#タスクとマイクロタスク)を参照してください。
 
 ### プロミスとタスクが衝突するとき
 
 プロミスとタスク（イベントやコールバックなど）が予測不可能な順序で発行されている状況に遭遇した場合、マイクロタスクを使用して状態をチェックしたり、プロミスが条件付きで作成されている場合にプロミスのバランスを取ったりすることが有益である可能性があります。
 
-マイクロタスクがこの問題の解決に役立つと思われる場合は、[マイクロタスクガイド](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)で [`queueMicrotask()`](/ja/docs/Web/API/queueMicrotask) を使用して関数をマイクロタスクとしてキューに入れる方法について詳しく説明しています。
+マイクロタスクがこの問題の解決に役立つと思われる場合は、[マイクロタスクガイド](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)で {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} を使用して関数をマイクロタスクとしてキューに入れる方法について詳しく説明しています。
 
 ## 関連情報
 
@@ -508,6 +550,6 @@ event-loop cycle: Promise (fulfilled) Promise {<fulfilled>}
 - {{jsxref("Statements/async_function", "async function")}}
 - {{jsxref("Operators/await", "await")}}
 - [Promises/A+ specification](https://promisesaplus.com/)
-- [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) on pouchdb.com (2015)
+- [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) (pouchdb.com, 2015)
 
 {{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}

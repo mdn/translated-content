@@ -1,15 +1,29 @@
 ---
 title: Map.prototype.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`keys()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.keys()")}}
+
+```js interactive-example
+const map = new Map();
+
+map.set("0", "foo");
+map.set(1, "bar");
+
+const iterator = map.keys();
+
+console.log(iterator.next().value);
+// 予想される結果: "0"
+
+console.log(iterator.next().value);
+// 予想される結果: 1
+```
 
 ## 構文
 

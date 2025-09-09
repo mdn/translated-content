@@ -1,17 +1,25 @@
 ---
 title: String.prototype.charAt()
+short-title: charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`charAt()`** は {{jsxref("String")}} 値のメソッドは、指定されたインデックスにある単一の UTF-16 コード単位からなる新しい文字列を返します。
+**`charAt()`** は {{jsxref("String")}} 値のメソッドで、指定されたインデックスにある単一の UTF-16 コード単位からなる新しい文字列を返します。
 
 `charAt()` は常に文字列を [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして索引付けます。そのため、孤立したサロゲートを返す可能性があります。指定されたインデックスの完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} および {{jsxref("String.fromCodePoint()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/string-charat.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.charAt()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+// 予想される結果: "The character at index 4 is q"
+```
 
 ## 構文
 
@@ -87,7 +95,8 @@ console.log(String.fromCodePoint(str.codePointAt(0))); // "𠮷"
 console.log([...str][0]); // "𠮷"
 ```
 
-> **メモ:** `charAt()` を使用して上記の解決策を再実装することは避けてください。孤立サロゲートの検出とそのペアリングは複雑で、文字列の内部表現を直接使用する組み込み API の方がパフォーマンスが高いかもしれません。必要であれば、上記の API のポリフィルをインストールしてください。
+> [!NOTE]
+> `charAt()` を使用して上記の解決策を再実装することは避けてください。孤立サロゲートの検出とそのペアリングは複雑で、文字列の内部表現を直接使用する組み込み API の方がパフォーマンスが高いかもしれません。必要であれば、上記の API のポリフィルをインストールしてください。
 
 ## 仕様書
 

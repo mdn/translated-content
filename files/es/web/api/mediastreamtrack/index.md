@@ -24,9 +24,7 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
   - : Retona un valor Booleano con un valor de `true` si la pista es de solo lectura ( una fuente de archivo de vídeo o una cámara que los ajustes no puedan ser modificados), de lo contrario `false`.
 - {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}
-
   - : Retorna un valor enumerado dando el estado de la pista. Este toma uno de los siguientes valores:
-
     - `"live"` el cual indica que una entrada es conectada y hace de esta el mejor esfuerzo en proveer datos en tiempo real. En este caso, la salida de datos puede ser cambiada a on u off usando el atributo `MediaStreamTrack.enabled`.
     - `"ended"` este indica que la entrada no esta obteniendo algun dato mas y negará proporcionar nuevos datos.
 
@@ -71,4 +69,4 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 
 ## Ver támbien
 
-- [Using the MediaStream API](/es/docs/WebRTC/MediaStream_API)
+- [Using the MediaStream API](/es/docs/Web/API/Media_Capture_and_Streams_API)

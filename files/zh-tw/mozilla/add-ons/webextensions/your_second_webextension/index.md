@@ -3,17 +3,14 @@ title: 你的第二個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 
-{{AddonSidebar}}
-
-假如你已經讀過了 [你的第一個 WebExtension](/zh-TW/Add-ons/WebExtensions/Your_first_WebExtension)，你也已經知道該如何寫一個 extension（外掛），在這篇文章中我們將會教你寫一個稍微複雜一點的 extension，來 demo 一些 API 的使用。
+假如你已經讀過了 [你的第一個 WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)，你也已經知道該如何寫一個 extension（外掛），在這篇文章中我們將會教你寫一個稍微複雜一點的 extension，來 demo 一些 API 的使用。
 
 在這個 extension 中，將會新增一個按鈕到 Firefox 的工具列上，當使用者按下按鈕後，將會顯示一個彈出視窗 (pop-up) 並可選擇一個動物。當使用者選擇了一個動物後，將會在當前的網頁中顯示使用者所選的動物圖片。
 
 為了實作這個，我們將需要：
 
-- **定義一個 [browser action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_action) 給新增於 Firefox 工具列的按鈕。**
+- **定義一個 [browser action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) 給新增於 Firefox 工具列的按鈕。**
   這個按鈕，我們將提供以下功能：
-
   - 按鈕的 icon，命名為 "beasts-32.png"
   - 當按下按鈕時顯示一個彈出視窗 (pop-up)，這個 pop-up 將會包含 HTML, CSS 和 JavaScript。
 
@@ -80,12 +77,11 @@ cd beastify
 }
 ```
 
-- 最前面的三個 key：[`manifest_version`](/zh-TW/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-TW/Add-ons/WebExtensions/manifest.json/name)、[`version`](/zh-TW/Add-ons/WebExtensions/manifest.json/version) 必須寫進去，它包含了附加元件的基本詮釋資料（metadata）。
+- 最前面的三個 key：[`manifest_version`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)、[`version`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) 必須寫進去，它包含了附加元件的基本詮釋資料（metadata）。
 - [`description`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 和 [`homepage_url`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) 為非必要但建議加上：主要在說明該 extension。
 - [`icons`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 為非必要但建議加上：它允許附加元件指定圖示、也會在附加元件的管理員顯示
-- [`permissions`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 列出了該 extension 所需要的權限。這邊我們只會要求 [`activeTab` permission](/zh-TW/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) 。
+- [`permissions`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 列出了該 extension 所需要的權限。這邊我們只會要求 [`activeTab` permission](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) 。
 - [`browser_action`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 定義工具列的按鈕，在這邊我們將會提供三種 key：
-
   - `default_icon` 為必要的：告訴 button 該使用的 icon 為何
   - `default_title`為非必要的：該 value 會顯示在 button 的 tip 裡
   - `default_popup` 如果想要顯示 pop-up，此為必要的 key：此教學中有使用到 pop-up 故為必要的，並將 HTML 檔案指給他。
@@ -111,7 +107,7 @@ cd beastify
 
 ### 工具列按鈕(The toolbar button)
 
-工具列按鈕也需要一個 icon，在 manifest.json 裡 "browser_action" 物件中的 "default_icon" 中告訴他要使用 "icons/beasts-32.png" 路徑下的 icon。。
+工具列按鈕也需要一個 icon，在 manifest.json 裡 "browser_action" 物件中的 "default_icon" 中告訴他要使用 "icons/beasts-32.png" 路徑下的 icon。
 
 準備一個命名為 "beasts-32.png" 的 icon，並存在 "beastify/icons" 資料夾中（你可以使用[範例圖檔](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png)，圖檔來源：[IconBeast Lite icon set](http://www.iconbeast.com/free)，遵守[使用條款](http://www.iconbeast.com/faq/)來使用）。
 
@@ -162,7 +158,7 @@ HTML 內容長得像這樣：
 </html>
 ```
 
-我們在 ID 為 `"popup-content"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元件裡建立了一個包含每種動物選項的元件。當載入 popup 發生問題時，用另外一個 ID 為 `"error-content"` 且類別定義為 `"hidden"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元件來處理。
+我們在 ID 為 `"popup-content"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Reference/Elements/div) 元件裡建立了一個包含每種動物選項的元件。當載入 popup 發生問題時，用另外一個 ID 為 `"error-content"` 且類別定義為 `"hidden"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Reference/Elements/div) 元件來處理。
 
 值得注意的是我們在這個檔案裡引用了 CSS 與 JS 檔案，就如同一般網頁。
 
@@ -360,7 +356,7 @@ beastify/
 
 ## 透過命令行佈署
 
-你可以利用[web-ext](/zh-TW/Add-ons/WebExtensions/Getting_started_with_web-ext)自動化暫時載入。
+你可以利用 [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 自動化暫時載入。
 試試看:
 
 ```bash

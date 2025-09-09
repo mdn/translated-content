@@ -16,7 +16,7 @@ Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés su
 - `expirationDate`{{optional_inline}}
   - : Un `number` représentant la date d'expiration du cookie en tant que nombre de secondes depuis l'époque UNIX. Non fourni pour les cookies de session.
 - `firstPartyDomain`
-  - : Une `chaîne` représentant le domaine de la première partie associé au cookie. Cela sera une chaine vide si le cookie a été défini alors que l'isolation de la première partie est désactivée. Voir [Isolement de la première partie](/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie).
+  - : Une `chaîne` représentant le domaine de la première partie associé au cookie. Cela sera une chaine vide si le cookie a été défini alors que l'isolation de la première partie est désactivée. Voir [Isolement de la première partie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#isolement_de_la_première_partie).
 - `hostOnly`
   - : Un `booléen`, `true` si le cookie est un cookie hôte uniquement (c'est à dire que l'hôte de la requête doit correspondre exactement au domaine du cookie), ou `false` dans la case contraire.
 - `httpOnly`
@@ -65,8 +65,6 @@ gettingAll.then(logCookies);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

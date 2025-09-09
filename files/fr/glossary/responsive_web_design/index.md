@@ -11,5 +11,5 @@ slug: Glossary/Responsive_web_design
 
 ### Culture générale
 
-- [Guide MDN sur la conception adaptative](/fr/Apps/Progressive/Adaptative)
+- [Guide MDN sur la conception adaptative](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 - [Responsive Web Design HTML5](http://msdn.microsoft.com/en-us/magazine/hh653584.aspx) (en)

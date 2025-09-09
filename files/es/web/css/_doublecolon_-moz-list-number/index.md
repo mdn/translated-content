@@ -1,9 +1,9 @@
 ---
-title: "::-moz-list-number"
+title: ::-moz-list-number
 slug: Web/CSS/::-moz-list-number
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

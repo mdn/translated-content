@@ -108,7 +108,7 @@ const xr = getXR("if-needed"); // navigator.xr がない場合にのみポリフ
 
 ### 権限とセキュリティ
 
-WebXR を中心に展開する多くのセキュリティ対策があります。 まず、ユーザーの世界観を完全に置き換える `immersive-vr` モードを使用するには、`xr-spatial-tracking` [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)を設定する必要があります。 それに加えて、ドキュメントは安全で現在フォーカスされている必要があります。 最後に、{{domxref("Element.click_event", "click")}} イベントのハンドラーなどのユーザーイベントハンドラーから {{domxref("XRSystem.requestSession", "requestSession()")}} を呼び出す必要があります。
+WebXR を中心に展開する多くのセキュリティ対策があります。 まず、ユーザーの世界観を完全に置き換える `immersive-vr` モードを使用するには、`xr-spatial-tracking` [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を設定する必要があります。 それに加えて、ドキュメントは安全で現在フォーカスされている必要があります。 最後に、{{domxref("Element.click_event", "click")}} イベントのハンドラーなどのユーザーイベントハンドラーから {{domxref("XRSystem.requestSession", "requestSession()")}} を呼び出す必要があります。
 
 安全な WebXR の活動と使用方法の詳細については、[WebXR の権限とセキュリティ](/ja/docs/Web/API/WebXR_Device_API/Permissions_and_security)の記事を参照してください。
 
@@ -265,9 +265,9 @@ async function runSession(session) {
 この時点で、`XRSession` 自体が完全に構成されているため、レンダリングを開始できます。 まず、その世界の座標が記述される参照空間が必要です。 `XRSession` の {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} メソッドを呼び出すことにより、セッションの初期参照空間を取得できます。 `requestReferenceSpace()` を呼び出すときに、必要な参照空間のタイプの名前を指定します。 この場合、`unbounded` です。 ニーズに応じて、`local` または `viewer` を簡単に指定できます。
 
 > [!NOTE]
-> ニーズに合った適切な参照空間を選択する方法を理解するには、[WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)の[参照空間タイプの選択](/ja/docs/Web/API/WebXR_Device_API/Geometry#Selecting_the_reference_space_type)を参照してください。
+> ニーズに合った適切な参照空間を選択する方法を理解するには、[WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)の[参照空間タイプの選択](/ja/docs/Web/API/WebXR_Device_API/Geometry#selecting_the_reference_space_type)を参照してください。
 
-`requestReferenceSpace()` によって返される参照空間は、原点 (0, 0, 0) を空間の中心に配置します。 これは素晴らしいことです — プレイヤーの視点が世界の正確な中心から始まる場合は。 しかし、ほとんどの場合、そうではありません。 その場合は、最初の参照空間で {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} を呼び出して、(0, 0, 0) がビューアーの位置に配置されるように[座標系をオフセット](/ja/docs/Web/API/WebXR_Device_API/Geometry#Establishing_the_reference_space)し、同様に顔を望ましい方向にシフトする*新しい*参照空間を作成します。 `getOffsetReferenceSpace()` への入力値は、デフォルトの世界座標で指定されたプレーヤーの位置と方向をカプセル化する {{domxref("XRRigidTransform")}} です。
+`requestReferenceSpace()` によって返される参照空間は、原点 (0, 0, 0) を空間の中心に配置します。 これは素晴らしいことです — プレイヤーの視点が世界の正確な中心から始まる場合は。 しかし、ほとんどの場合、そうではありません。 その場合は、最初の参照空間で {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} を呼び出して、(0, 0, 0) がビューアーの位置に配置されるように[座標系をオフセット](/ja/docs/Web/API/WebXR_Device_API/Geometry#establishing_the_reference_space)し、同様に顔を望ましい方向にシフトする*新しい*参照空間を作成します。 `getOffsetReferenceSpace()` への入力値は、デフォルトの世界座標で指定されたプレーヤーの位置と方向をカプセル化する {{domxref("XRRigidTransform")}} です。
 
 新しい参照空間が手中にあり、保管するために `worldData` オブジェクトに格納された状態で、セッションの {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} メソッドを呼び出して、WebXR セッションのアニメーションの次のフレームをレンダリングするときにコールバックが実行されるようにスケジュールします。 戻り値は、必要に応じて後でリクエストをキャンセルするために使用できる ID であるため、`worldData` にも保存します。
 
@@ -308,11 +308,12 @@ session.onvisibilitychange = (event) => {
 
 ### 参照空間のリセットの検出
 
-時折、ユーザーの世界での位置を追跡しているときに、[ネイティブの原点](/ja/docs/Web/API/WebXR_Device_API/Geometry#On_the_origins_of_spaces)に不連続またはジャンプが発生することがあります。 これが発生する最も一般的なシナリオは、ユーザーが XR デバイスの再キャリブレーションを要求したとき、または XR ハードウェアから受信した追跡データの流れに一時的な障害が発生したときです。 これらの状況により、ネイティブの原点は、ネイティブの原点をユーザーの位置と向きに合わせるために必要な距離と方向の角度で突然ジャンプします。
+時折、ユーザーの世界での位置を追跡しているときに、[ネイティブの原点](/ja/docs/Web/API/WebXR_Device_API/Geometry#on_the_origins_of_spaces)に不連続またはジャンプが発生することがあります。 これが発生する最も一般的なシナリオは、ユーザーが XR デバイスの再キャリブレーションを要求したとき、または XR ハードウェアから受信した追跡データの流れに一時的な障害が発生したときです。 これらの状況により、ネイティブの原点は、ネイティブの原点をユーザーの位置と向きに合わせるために必要な距離と方向の角度で突然ジャンプします。
 
 これが発生すると、{{domxref("XRReferenceSpace.reset_event", "reset")}} イベントがセッションの {{domxref("XRReferenceSpace")}} に送信されます。 イベントの {{domxref("XRReferenceSpaceEvent.transform", "transform")}} プロパティは、ネイティブの原点を再調整するために必要な変換を詳述する {{domxref("XRRigidTransform")}} です。
 
-> **メモ:** `reset` イベントは {{domxref("XRSession")}} ではなく {{domxref("XRReferenceSpace")}} で発生することに注意してください。
+> [!NOTE]
+> `reset` イベントは {{domxref("XRSession")}} ではなく {{domxref("XRReferenceSpace")}} で発生することに注意してください。
 
 `reset` イベントのもう 1 つの一般的な原因は、制限付き参照空間（{{domxref("XRReferenceSpaceType")}} が `bounded-floor` である参照空間）が、{{domxref("XRBoundedReferenceSpace")}} のプロパティ {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} の変更によって指定されたジオメトリを持っている場合です。
 

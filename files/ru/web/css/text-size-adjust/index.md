@@ -70,5 +70,5 @@ text-size-adjust: unset;
 ## Смотрите также
 
 - [Документация](https://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html) от Apple.
-- [Описание поведения](http://dbaron.org/log/20111126-font-inflation) Gecko от L. David Baron.
+- [Описание поведения](https://dbaron.org/log/20111126-font-inflation) Gecko от L. David Baron.
 - [Документация](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff462082(v=vs.105).aspx>) от Microsoft.

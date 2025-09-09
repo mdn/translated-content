@@ -18,9 +18,11 @@ fetch(url).then(function (response) {
 });
 ```
 
-> **备注：** `put()` 将覆盖先前存储在匹配请求的 cache 中的任何键/值对。
+> [!NOTE]
+> `put()` 将覆盖先前存储在匹配请求的 cache 中的任何键/值对。
 
-> **备注：** {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不会缓存 `Response.status` 值不在 200 范围内的响应，而 {{domxref("Cache.put")}} 允许你存储任何请求/响应对。因此，{{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不能用于不透明的响应，而 {{domxref("Cache.put")}} 可以。
+> [!NOTE]
+> {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不会缓存 `Response.status` 值不在 200 范围内的响应，而 {{domxref("Cache.put")}} 允许你存储任何请求/响应对。因此，{{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不能用于不透明的响应，而 {{domxref("Cache.put")}} 可以。
 
 > [!NOTE]
 > 当响应主体完全写入磁盘时，初始 Cache 执行 (在 Blink 和 Gecko 中) resolve {{domxref("Cache.add")}}、{{domxref("Cache.addAll")}} 和 {{domxref("Cache.put")}} promise. 更新的规范版本中声明：即使响应主体仍在流式传输，一旦条目被记录到数据库中，浏览器就可以 resolve promise.
@@ -82,6 +84,6 @@ var cachedResponse = caches
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

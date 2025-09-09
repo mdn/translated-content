@@ -1,19 +1,24 @@
 ---
 title: String.fromCharCode()
+short-title: fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 l10n:
-  sourceCommit: a49d60648404407784b04ff5ff7e16a6a8d1ac25
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`String.fromCharCode()`** 静的メソッドは、指定された UTF-16 コード単位の並びから生成された文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/string-fromcharcode.html","shorter")}}
+{{InteractiveExample("JavaScript デモ: String.fromCharCode()", "shorter")}}
+
+```js interactive-example
+console.log(String.fromCharCode(189, 43, 190, 61));
+// 予想される結果: "½+¾="
+```
 
 ## 構文
 
 ```js-nolint
+String.fromCharCode()
 String.fromCharCode(num1)
 String.fromCharCode(num1, num2)
 String.fromCharCode(num1, num2, /* …, */ numN)
@@ -21,7 +26,7 @@ String.fromCharCode(num1, num2, /* …, */ numN)
 
 ### 引数
 
-- `numN`
+- `num1`, …, `numN`
   - : UTF-16 コード単位を表す数値の並びです。範囲は `0` から `65535` (`0xFFFF`) までです。数値が `0xFFFF` を超えた場合は切り捨てられます。妥当性チェックは行われません。
 
 ### 返値

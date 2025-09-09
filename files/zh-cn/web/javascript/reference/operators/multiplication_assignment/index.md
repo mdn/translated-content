@@ -3,11 +3,19 @@ title: 乘法赋值（*=）
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 **乘法赋值**（**`*=`**）运算符将变量乘以右操作数的值，并将结果赋值给该变量。
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication assignment operator")}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a *= 3));
+// Expected output: 6
+
+console.log((a *= "hello"));
+// Expected output: NaN
+```
 
 ## 语法
 

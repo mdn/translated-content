@@ -54,5 +54,5 @@ history.go(2); // 跳出 "location: http://example.com/example.html?page=3, stat
 ## 請參照
 
 - {{domxref("window.history")}}
-- [Manipulating the browser history](/zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history)
-- [Ajax navigation example](/zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example)
+- [Manipulating the browser history](/zh-TW/docs/Web/API/History_API)
+- [Ajax navigation example](/zh-TW/docs/Web/API/History_API/Working_with_the_History_API)

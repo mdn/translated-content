@@ -9,7 +9,7 @@ Met à jour un élément de menu précédemment créé.
 
 Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -25,15 +25,11 @@ var updating = browser.menus.update(
 - `id`
   - : `integer` ou `string`. L'ID de l'article à mettre à jour.
 - `updateProperties`
-
   - : `object`. Les propriétés à mettre à jour. Identique à l'objet `createProperties` passé à {{WebExtAPIRef("menus.create()", "menus.create()")}}, sauf que l'`id` ne peut être défini. En outre, les `icônes` ne peuvent être modifiées que dans les commandes de menu, et non dans le menu contextuel de niveau supérieur. L'icône de niveau supérieur correspond à l'icône principale de l'extension telle que déclarée dans le fichier manifeste de l'extension.
-
     - `checked` {{optional_inline}}
       - : `boolean`. L'état initial d'une case à cocher ou d'un élément radio : `true` fpour sélectionné et `false` pour non sélectionné. Un seul élément radio peut être sélectionné à la fois dans un groupe donné d'éléments radio.
     - `command` {{optional_inline}}
-
       - : `string`. Chaîne décrivant une action qui doit être effectuée lorsque l'utilisateur clique sur l'élément. Les valeurs possibles sont :
-
         - `"_execute_browser_action"`: simuler un clic sur l'action du navigateur de l'extension, en ouvrant son popup s'il en a un
         - `"_execute_page_action"`: simuler un clic sur l'action de la page de l'extension, en ouvrant son popup si elle en a une
         - `"_execute_sidebar_action"`: ouvre la barre latérale de l'extension
@@ -41,9 +37,7 @@ var updating = browser.menus.update(
         Cliquer sur l'élément déclenchera toujours l'événement {{WebExtAPIRef("menus.onClicked")}}, mais rien ne garantit l'ordre ici: la commande peut être exécutée avant le lancement de `onClicked`.
 
     - `contexts` {{optional_inline}}
-
       - : `array` de `{{WebExtAPIRef('menus.ContextType')}}`. Tableau des contextes dans lesquels cet élément de menu apparaîtra. Si cette option est omise :
-
         - si le parent de l'élément a des contextes définis, alors cet élément héritera des contextes de son parent
         - sinon, l'élément reçoit un tableau de contexte de \["page"].
 
@@ -52,7 +46,6 @@ var updating = browser.menus.update(
     - `enabled` {{optional_inline}}
       - : `boolean`. Si cet élément de menu est activé ou désactivé. La valeur par défaut est `true`.
     - `icons` {{optional_inline}}
-
       - : `object`. Une ou plusieurs icônes personnalisées à afficher à côté de l'élément. Les icônes personnalisées ne peuvent être définies que pour les éléments apparaissant dans les sous-menus. Cette propriété est un objet avec une propriété pour chaque icône fournie : le nom de la propriété doit inclure la taille de l'icône en pixels, et le chemin est relatif à l'icône du répertoire racine de l'extension. Le navigateur essaie de choisir une icône 16x16 pixels pour un affichage normal ou une icône 32x32 pixels pour un affichage haute densité. Pour éviter toute mise à l'échelle, vous pouvez spécifier des icônes comme celle-ci :
 
         ```json
@@ -82,13 +75,11 @@ var updating = browser.menus.update(
     - `targetUrlPatterns` {{optional_inline}}
       - : `array` de `string`. Similairer à `documentUrlPatterns`, mais vous permet de filtrer en fonction de la `href` des balises d'ancre et l'attribut `src` des balises img/audio/video. Ce paramètre prend en charge n'importe quel schéma d'URL, même ceux qui ne sont généralement pas autorisés dans un modèle de correspondance.
     - `title` {{optional_inline}}
-
       - : `string`. Le texte à afficher dans le poste. Obligatoire sauf si le `type` est "separateur".
 
         Vous pouvez utiliser "`%s`" dans la chaîne de caractères. Si vous le faites dans un élément de menu, et qu'un texte est sélectionné dans la page lorsque le menu est affiché, le texte sélectionné sera interpolé dans le titre. Par exemple, si `title` est "Traduction '%s' à Pig Latin" et que l'utilisateur sélectionne le mot "cool", puis active le menu, alors le titre de l'élément de menu sera : "Traduction 'cool' à Pig Latin".
 
         Si le titre contient une esperluette "&", le caractère suivant sera utilisé comme clé d'accès pour l'élément et l'esperluette ne sera pas affichée. Les exceptions à cette règle sont les suivantes :
-
         - Si le caractère suivant est également une esperluette : alors une esperluette simple sera affichée et aucune clé d'accès ne sera définie. En effet, "&&" est utilisé pour afficher une seule esperluette.
         - Si les caractères suivants sont la directive d'interpolation "%s" : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
         - Si l'esperluette est le dernier caractère du titre : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
@@ -104,7 +95,7 @@ var updating = browser.menus.update(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite sans argument si la mise à jour a réussi, ou rejetée avec un message d'erreur si la mise à jour a échoué.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera satisfaite sans argument si la mise à jour a réussi, ou rejetée avec un message d'erreur si la mise à jour a échoué.
 
 ## Exemples
 

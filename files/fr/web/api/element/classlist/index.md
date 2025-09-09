@@ -15,7 +15,7 @@ L'utilisation de `classList` est une alternative à la propriété {{domxref("el
 const elementClasses = elementNodeReference.classList;
 ```
 
-_elementClasses_ est une [DOMTokenList](/fr/docs/DOM/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
+_elementClasses_ est une [DOMTokenList](/fr/docs/Web/API/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
 
 ## Méthodes
 
@@ -137,15 +137,15 @@ if (!"".trim)
           v !== argLen;
           ++v
         ) {
-          (val = arguments[v] + ""), checkIfValidClassListEntry("add", val);
+          ((val = arguments[v] + ""), checkIfValidClassListEntry("add", val));
           for (var i = 0, Len = proto.length, resStr = val; i !== Len; ++i)
             if (this[i] === val) continue a;
             else resStr += " " + this[i];
-          (this[Len] = val), (proto.length += 1), (proto.value = resStr);
+          ((this[Len] = val), (proto.length += 1), (proto.value = resStr));
         }
-        (skipPropChange = 1),
+        ((skipPropChange = 1),
           (ele.className = proto.value),
-          (skipPropChange = 0);
+          (skipPropChange = 0));
       };
       DOMTokenList.prototype.remove = function () {
         for (
@@ -157,7 +157,8 @@ if (!"".trim)
           v !== argLen;
           ++v
         ) {
-          (val = arguments[v] + ""), checkIfValidClassListEntry("remove", val);
+          ((val = arguments[v] + ""),
+            checkIfValidClassListEntry("remove", val));
           for (
             var i = 0, Len = proto.length, resStr = "", is = 0;
             i !== Len;
@@ -173,11 +174,11 @@ if (!"".trim)
               }
             }
           if (!is) continue;
-          delete this[Len], (proto.length -= 1), (proto.value = resStr);
+          (delete this[Len], (proto.length -= 1), (proto.value = resStr));
         }
-        (skipPropChange = 1),
+        ((skipPropChange = 1),
           (ele.className = proto.value),
-          (skipPropChange = 0);
+          (skipPropChange = 0));
       };
       window.DOMTokenList = DOMTokenList;
       function whenPropChanges() {
@@ -207,10 +208,10 @@ if (!"".trim)
           }
           for (var i = cLen - sub; i < oldLen; ++i) delete resTokenList[i]; //remove trailing indexs
           if (prop !== "classList") return;
-          (skipPropChange = 1),
+          ((skipPropChange = 1),
             (target.classList = resTokenList),
-            (target.className = strval);
-          (skipPropChange = 0), (resTokenList.length = tokens.length - sub);
+            (target.className = strval));
+          ((skipPropChange = 0), (resTokenList.length = tokens.length - sub));
         }
       }
       function polyfillClassList(ele) {
@@ -241,9 +242,9 @@ if (!"".trim)
             }
           this[cI - sub] = toks[cI];
         }
-        (protoObjProto.length = cLen - sub),
+        ((protoObjProto.length = cLen - sub),
           (protoObjProto.value = ele.className),
-          (protoObjProto[" uCL"] = ele);
+          (protoObjProto[" uCL"] = ele));
         if (defineProperty) {
           defineProperty(ele, "classList", {
             // IE8 & IE9 allow defineProperty on the DOM
@@ -253,9 +254,9 @@ if (!"".trim)
             },
             configurable: 0,
             set: function (newVal) {
-              (skipPropChange = 1),
+              ((skipPropChange = 1),
                 (ele.className = protoObjProto.value = newVal += ""),
-                (skipPropChange = 0);
+                (skipPropChange = 0));
               var toks = newVal.trim().split(wsRE),
                 oldLen = protoObjProto.length;
               a: for (
@@ -289,9 +290,9 @@ if (!"".trim)
             value: ele,
           });
         } else {
-          (ele.classList = resTokenList),
+          ((ele.classList = resTokenList),
             (ele[" uCL"] = resTokenList),
-            (ele[" uCLp"] = protoObj.prototype);
+            (ele[" uCLp"] = protoObj.prototype));
         }
         ele.attachEvent("onpropertychange", whenPropChanges);
       }
@@ -332,20 +333,20 @@ if (!"".trim)
     if (!DOMTokenListProto.toggle || testClass.toggle("a", 0) !== false)
       DOMTokenListProto.toggle = function (val) {
         if (arguments.length > 1)
-          return this[arguments[1] ? "add" : "remove"](val), !!arguments[1];
+          return (this[arguments[1] ? "add" : "remove"](val), !!arguments[1]);
         var oldValue = this.value;
         return (
           this.remove(oldValue),
-          oldValue === this.value && (this.add(val), true) /*|| false*/
-        );
+          oldValue === this.value && (this.add(val), true)
+        ) /*|| false*/;
       };
     if (
       !DOMTokenListProto.replace ||
       typeof testClass.replace("a", "b") !== "boolean"
     )
       DOMTokenListProto.replace = function (oldToken, newToken) {
-        checkIfValidClassListEntry("replace", oldToken),
-          checkIfValidClassListEntry("replace", newToken);
+        (checkIfValidClassListEntry("replace", oldToken),
+          checkIfValidClassListEntry("replace", newToken));
         var oldValue = this.value;
         return (
           this.remove(oldToken),

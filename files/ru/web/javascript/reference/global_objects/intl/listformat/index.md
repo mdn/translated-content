@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 
 Объект **`Intl.ListFormat`** представляет собой конструктор объектов, включающих языка-зависимое форматирование списков.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 ## Синтаксис
 
@@ -20,9 +42,7 @@ new Intl.ListFormat([locales[, options]])
 - `locales`
   - : Необязательный параметр. Строка с языковой меткой BCP 47 или массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на странице {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}}.
 - `options`
-
   - : Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:
-
     - `localeMatcher`
       Используемый алгоритм сопоставления локалей. Возможные значения: `"lookup"` и `"best fit"`; по умолчанию используется `"best fit"`. Подробнее см. на странице [`Intl`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation).
     - `type`

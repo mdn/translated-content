@@ -3,8 +3,6 @@ title: Actualizar aplicaciones web para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 ---
 
-{{FirefoxSidebar}}
-
 Existen varios cambios en el próximo Firefox 3 que pueden afectar tu sitio web o aplicación web, así como nuevas características que se pueden aprovechar. Este artículo servirá como punto de partida para actualizar el contenido web de modo que se pueda aprovechar Firefox 3 al máximo.
 
 ### Cambios DOM
@@ -79,7 +77,7 @@ En versiones anteriores de Firefox, había casos en los que cuando el usuario se
 
 ### Cambios en JavaScript
 
-Firefox 3 soporta [JavaScript 1.8](/en/New_in_JavaScript_1.8). Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los Script obsoletos y no-estandar no son soportados. Esto no es la etiqueta `<script>`, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.
+Firefox 3 soporta [JavaScript 1.8](/en-US/New_in_JavaScript_1.8). Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los Script obsoletos y no-estandar no son soportados. Esto no es la etiqueta `<script>`, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.
 
 ### Vea también
 

@@ -15,7 +15,7 @@ Usar `classList` es una forma práctica de acceder a la lista de clases de un el
 var elementClasses = elementNodeReference.classList;
 ```
 
-_elementClasses_ es un [DOMTokenList](/es/docs/DOM/DOMTokenList) que representa el atributo clase de _elementNodeReference_. Si el atributo clase no está definido o está vacío, _elementClasses.length_ devuelve 0. `element.classList` por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos `add()` y `remove()`.
+_elementClasses_ es un [DOMTokenList](/es/docs/Web/API/DOMTokenList) que representa el atributo clase de _elementNodeReference_. Si el atributo clase no está definido o está vacío, _elementClasses.length_ devuelve 0. `element.classList` por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos `add()` y `remove()`.
 
 ## Métodos
 

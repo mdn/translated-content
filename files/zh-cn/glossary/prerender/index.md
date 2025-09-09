@@ -30,7 +30,7 @@ l10n:
 
 ## 参见
 
-- [推测加载](/zh-CN/docs/Web/Performance/Speculative_loading)
+- [推测性加载](/zh-CN/docs/Web/Performance/Guides/Speculative_loading)
 - [预取](/zh-CN/docs/Glossary/Prefetch)
 - developer.chrome.google.cn 上的[在 Chrome 中预渲染页面，以实现快速的页面导航](https://developer.chrome.google.cn/docs/web-platform/prerender-pages#prerendering-from-the-address-bar)（2023）
 - [推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API)

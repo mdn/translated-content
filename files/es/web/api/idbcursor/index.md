@@ -5,7 +5,7 @@ slug: Web/API/IDBCursor
 
 {{APIRef("IndexedDB")}}
 
-La interfaz **`IDBCursor`** de la [IndexedDB API](/es/docs/IndexedDB) representa un [cursor](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravesar o iterar varios registros de una base de datos.
+La interfaz **`IDBCursor`** de la [IndexedDB API](/es/docs/Web/API/IndexedDB_API) representa un [cursor](/es/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_cursor) para atravesar o iterar varios registros de una base de datos.
 
 El cursor tiene una fuente que indica el índice o el almacén de objetos sobre el que se está iterando. Tiene una posición dentro del rango y se mueve en una dirección que aumenta o disminuye en el orden de las Keys de registro. El cursor permite a una aplicación procesar asincrónicamente todos los registros del rango del cursor.
 
@@ -23,7 +23,6 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 <!---->
 
 - {{domxref("IDBCursor.delete()")}}
-
   - : Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, elimina el registro en la posición del cursor, sin cambiar la posición del cursor. Esto se puede utilizar para borrar registros específicos.
 
     {{domxref("IDBCursor.update()")}}

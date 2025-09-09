@@ -64,7 +64,7 @@ La versión de Gecko 1.9 para Macintosh no es capaz de recuperar el estado previ
 
 ### Especificaciones
 
-- [Especificaciones de Microsoft](http://msdn2.microsoft.com/en-us/library/ms533883.aspx)
+- [Especificaciones de Microsoft](https://msdn2.microsoft.com/en-us/library/ms533883.aspx)
 
 ### Compatibilidad entre navegadores
 
@@ -72,4 +72,4 @@ La propiedad `ime-mode` es soportada en Firefox 3 y posteriores, así como en In
 
 Categorías
 
-Interwiki Languages [zh tw:CSS:ime-mode](/zh_tw/CSS/ime-mode)
+Interwiki Languages [zh tw:CSS:ime-mode](/es/docs/orphaned/Web/CSS/ime-mode)

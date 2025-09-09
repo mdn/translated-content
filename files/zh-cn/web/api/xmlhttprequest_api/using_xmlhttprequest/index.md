@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 
 在该教程中，我们将使用{{domxref("XMLHttpRequest")}} 来发送 [HTTP](/zh-CN/docs/Web/HTTP) 请求以实现网站和服务器之间的数据交换。`XMLHttpRequest`常见和晦涩的使用情况都将包含在例子中。
 
-发送一个 HTTP 请求，需要创建一个 `XMLHttpRequest` 对象，打开一个 URL，最后发送请求。当所有这些事务完成后，该对象将会包含一些诸如响应主体或 [HTTP status](/zh-CN/docs/Web/HTTP/Status) 的有用信息。
+发送一个 HTTP 请求，需要创建一个 `XMLHttpRequest` 对象，打开一个 URL，最后发送请求。当所有这些事务完成后，该对象将会包含一些诸如响应主体或 [HTTP status](/zh-CN/docs/Web/HTTP/Reference/Status) 的有用信息。
 
 ```js
 function reqListener() {
@@ -27,7 +27,8 @@ oReq.send();
 > [!NOTE]
 > 由于对用户体验的负面影响，从 Gecko 30.0 版本开始，在主线程上的同步请求已经被弃用。
 
-> **备注：** `XMLHttpRequest` 构造函数并不仅限于 XML 文档。它之所以使用“XML”开头是因为在它诞生之时，原先用于异步数据交换的主要格式便是 XML。
+> [!NOTE]
+> `XMLHttpRequest` 构造函数并不仅限于 XML 文档。它之所以使用“XML”开头是因为在它诞生之时，原先用于异步数据交换的主要格式便是 XML。
 
 ## 处理响应
 
@@ -37,15 +38,16 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 
 如果你使用 `XMLHttpRequest` 来获得一个远程的 XML 文档的内容，{{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性将会是一个由 XML 文档解析而来的 DOM 对象，这很难被操作和分析。这里有五种主要的分析 XML 文档的方式：
 
-1. 使用 [XPath](/zh-CN/docs/Web/XPath) 定位到文档的指定部分。
-2. 手动[解析和序列化 XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML) 为字符串或对象。
+1. 使用 [XPath](/zh-CN/docs/Web/XML/XPath) 定位到文档的指定部分。
+2. 手动[解析和序列化 XML](/zh-CN/docs/Web/XML/Guides/Parsing_and_serializing_XML) 为字符串或对象。
 3. 使用 [XMLSerializer](/zh-CN/docs/Web/API/XMLSerializer) 把 DOM 树序列化成字符串或文件。
 4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
 
 > [!NOTE]
-> 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
+> 在 W3C [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
 
-> **备注：** `XMLHttpRequest` 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 这篇文章了解相关用法。
+> [!NOTE]
+> `XMLHttpRequest` 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 这篇文章了解相关用法。
 
 ### 解析和操作包含 HTML 文档的 responseText 属性
 
@@ -89,9 +91,9 @@ oReq.send();
 
 `XMLHttpRequest` 提供了各种在请求被处理期间发生的事件以供监听。这包括定期进度通知、错误通知，等等。
 
-支持 DOM 的 progress 事件监测之于 `XMLHttpRequest` 传输，遵循 Web API [进度事件规范](http://dev.w3.org/2006/webapi/progress/Progress.html)：这些事件实现了 {{domxref("ProgressEvent")}} 接口。
+支持 DOM 的 progress 事件监测之于 `XMLHttpRequest` 传输，遵循 Web API [进度事件规范](https://dev.w3.org/2006/webapi/progress/Progress.html)：这些事件实现了 {{domxref("ProgressEvent")}} 接口。
 
-- [`progress`](/zh-CN/docs/Web/API/XMLHttpRequest/progress_event)
+- [`progress`](/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/progress_event)
   - : 检索的数据量发生了变化。
 - [`load`](/zh-CN/docs/Web/API/Window/load_event)
   - : 传输完成，所有数据保存在 `response` 中。
@@ -217,7 +219,7 @@ foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
   The second line.
   ```
 
-- 方法：`POST`；编码类型：[`multipart/form-data`](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)：
+- 方法：`POST`；编码类型：[`multipart/form-data`](/zh-CN/docs/Web/HTTP/Guides/MIME_types#multipartform-data)：
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
@@ -623,7 +625,7 @@ AJAXSubmit(myForm);
 
 ### 使用 FormData 对象
 
-{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 `XMLHttpRequest` 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 `submit()` 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data"。FormData 对象可以被结合 `XMLHttpRequest` 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequest，请转到[使用 FormData 对象](/zh-CN/docs/DOM/XMLHttpRequest/XMLHttpRequest_API/Using_FormData_Objects)页面。为了说教的目的，这里有一个早期的[示例](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#一个小框架)，被转译成了使用 **`FormData` API** 的形式。注意以下代码片段：
+{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 `XMLHttpRequest` 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 `submit()` 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data"。FormData 对象可以被结合 `XMLHttpRequest` 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequest，请转到[使用 FormData 对象](/zh-CN/docs/DOM/XMLHttpRequest/XMLHttpRequest_API/Using_FormData_Objects)页面。为了说教的目的，这里有一个早期的[示例](#一个小框架)，被转译成了使用 **`FormData` API** 的形式。注意以下代码片段：
 
 ```html
 <!doctype html>
@@ -792,7 +794,7 @@ AJAXSubmit(myForm);
 ```
 
 > [!NOTE]
-> 如之前所述，{{domxref("FormData")}} 对象并不是 [可字符串化 (stringifiable)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的对象。如果你想要字符串化一个提交数据，请使用这个 [早期的纯 AJAX 例子](#A_little_vanilla_framework). 同时也要注意，尽管这个例子中有一些 `file` {{ HTMLElement("input") }} 字段，**但当你通过** `FormData` API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API: 文件被自动加载并上传。
+> 如之前所述，{{domxref("FormData")}} 对象并不是 [可字符串化 (stringifiable)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的对象。如果你想要字符串化一个提交数据，请使用这个 [早期的纯 AJAX 例子](#a_little_vanilla_framework). 同时也要注意，尽管这个例子中有一些 `file` {{ HTMLElement("input") }} 字段，**但当你通过** `FormData` API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API: 文件被自动加载并上传。
 
 ## 获取最后修改日期
 
@@ -859,7 +861,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 
 ## 跨站的 XMLHttpRequest
 
-现代浏览器通过实现[跨源资源共享](/zh-CN/docs/Web/HTTP/CORS)（CORS）标准来支持跨站请求。只要服务器端的配置允许你从你的 Web 应用发送请求，就可以使用 `XMLHttpRequest`。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
+现代浏览器通过实现[跨源资源共享](/zh-CN/docs/Web/HTTP/Guides/CORS)（CORS）标准来支持跨站请求。只要服务器端的配置允许你从你的 Web 应用发送请求，就可以使用 `XMLHttpRequest`。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
 
 ## 绕过缓存
 
@@ -900,7 +902,7 @@ req.send(null);
 ## 参见
 
 - [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
 - [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

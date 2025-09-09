@@ -9,7 +9,7 @@ l10n:
 
 **`FormDataEvent`** インターフェイスは [`formdata` イベント](/ja/docs/Web/API/HTMLFormElement/formdata_event)を表します。 — このようなイベントは {{domxref("HTMLFormElement")}} オブジェクトで、フォームデータを表すエントリーリストが構築された後に発行されます。これはフォームが送信されようとするときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターの呼び出しでも発行させることができます。
 
-これにより、 {{domxref("XMLHttpRequest")}} などのメソッドでフォームデータを送信する際に、自分で用意しなくても、 `formdata` イベントの発行に応じて、 {{domxref("FormData")}} オブジェクトをすばやく取得することができます（[FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)を参照）。
+これにより、 {{domxref("XMLHttpRequest")}} などのメソッドでフォームデータを送信する際に、自分で用意しなくても、 `formdata` イベントの発行に応じて、 {{domxref("FormData")}} オブジェクトをすばやく取得することができます（[FormData オブジェクトの使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)を参照）。
 
 {{InheritanceDiagram}}
 
@@ -76,5 +76,5 @@ formElem.addEventListener("formdata", (e) => {
 
 - {{domxref("XMLHTTPRequest")}}
 - {{domxref("FormData")}}
-- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

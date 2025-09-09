@@ -1,9 +1,9 @@
 ---
-title: "-webkit-mask-position"
+title: -webkit-mask-position
 slug: Web/CSS/mask-position
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Sumario
 

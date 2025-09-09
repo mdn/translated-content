@@ -211,7 +211,7 @@ It could be useful in order to interact in the background with the server or to 
 
 ### Adapting Sync XHR usecases to the Beacon API
 
-There are some cases in which the synchronous usage of XMLHttpRequest was not replaceable, like during the [`window.onunload`](/ru/docs/Web/API/WindowEventHandlers/onunload) and [`window.onbeforeunload`](/ru/docs/Web/API/WindowEventHandlers/onbeforeunload) events. You should consider using the `fetch` API with `keepalive` flag. When `fetch` with `keepalive` isn't available, you can consider using the [navigator.sendBeacon](/ru/docs/Web/API/Navigator/sendBeacon) API can support these use cases typically while delivering a good UX.
+There are some cases in which the synchronous usage of XMLHttpRequest was not replaceable, like during the [`window.onunload`](/ru/docs/Web/API/Window/unload_event) and [`window.onbeforeunload`](/ru/docs/Web/API/Window/beforeunload_event) events. You should consider using the `fetch` API with `keepalive` flag. When `fetch` with `keepalive` isn't available, you can consider using the [navigator.sendBeacon](/ru/docs/Web/API/Navigator/sendBeacon) API can support these use cases typically while delivering a good UX.
 
 The following example (from the [sendBeacon docs](/ru/docs/Web/API/Navigator/sendBeacon)) shows a theoretical analytics code that attempts to submit data to a server by using a synchronous XMLHttpRequest in an unload handler. This results in the unloading of the page to be delayed.
 

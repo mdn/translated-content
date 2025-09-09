@@ -9,7 +9,19 @@ l10n:
 
 기본값 함수 매개변수 (**default function parameter**)를 사용하면 값이 전달되지 않거나 `undefined`인 경우 명명된 매개변수를 기본값으로 초기화할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/functions-default.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Default")}}
+
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
 
 ## 구문
 
@@ -210,7 +222,7 @@ withoutDefaults.call({ value: "=^_^=" });
 
 ### 기본값이 할당된 구조화된 매개변수
 
-[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 구문을 사용하여 기본값 할당을 사용할 수 있습니다.
+[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring) 구문을 사용하여 기본값 할당을 사용할 수 있습니다.
 
 이를 수행하는 일반적인 방법은 빈 객체/배열을 구조 분해된 매개변수의 기본값으로 설정하는 것입니다.(예: `[x = 1, y = 2] = []`) 이렇게 하면 함수에 아무 것도 전달하지 않고도 해당 값이 미리 채워져 있을 수 있습니다.
 

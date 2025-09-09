@@ -106,10 +106,8 @@ video.onended = (event) => {
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Streams_API)
-
-  - [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Streams_API)[：ended 事件](/zh-CN/docs/Web/API/MediaStreamTrack/ended_event)
+- [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)
+  - [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)[：ended 事件](/zh-CN/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
-
   - [Web audio API: ended 事件](/zh-CN/docs/Web/API/AudioScheduledSourceNode/ended_event)

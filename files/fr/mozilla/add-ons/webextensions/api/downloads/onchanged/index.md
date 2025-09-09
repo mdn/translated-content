@@ -31,11 +31,9 @@ Les événements ont trois fonctions :
 ### Parameters
 
 - `callback`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
-
     - `downloadDelta`
-      - : Un [`objet`](#downloadDelta) représentant l'objet {{WebExtAPIRef('downloads.DownloadItem')}} qui a été modifié, ainsi que l'état de toutes les propriétés qui y ont été modifiées.
+      - : Un [`objet`](#downloaddelta) représentant l'objet {{WebExtAPIRef('downloads.DownloadItem')}} qui a été modifié, ainsi que l'état de toutes les propriétés qui y ont été modifiées.
 
 ## Objets supplémentaires
 
@@ -95,8 +93,6 @@ browser.downloads.onChanged.addListener(handleChanged);
 > [!NOTE]
 >
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onChanged) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

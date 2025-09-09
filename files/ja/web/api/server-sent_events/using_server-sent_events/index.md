@@ -61,7 +61,8 @@ evtSource.addEventListener("ping", (event) => {
 
 このコードは、サーバーが `event` フィールドを `ping` に設定したメッセージを送信するたびに呼び出されます。こちらは `data` フィールドの JSON を解釈して、情報を出力します。
 
-> **警告:** **HTTP/2 上で使用されていない**場合、 SSE は開くことができる接続の最大数に制限を受けます。この制限は*ブラウザー単位*で設定されており、非常に小さい数 (6) に設定されているため、複数のタブを開くと特に痛みを伴う場合があります。この問題は、 [Chrome](https://crbug.com/275955) と [Firefox](https://bugzil.la/906896) で「修正予定なし」と示されています。この制限はブラウザー + ドメインごとに設定されており、`www.example1.com` への SSE 接続をすべてのタブで 6 つ、 `www.example2.com` への SSE 接続をさらに 6 つ開くことができることを意味します（[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159) によれば）。 HTTP/2 を使用する場合、同時に使用することができる *HTTP ストリーム*の最大数は、サーバーとクライアントの間で交渉が行われます（既定値は 100 です）。
+> [!WARNING]
+> **HTTP/2 上で使用されていない**場合、 SSE は開くことができる接続の最大数に制限を受けます。この制限は*ブラウザー単位*で設定されており、非常に小さい数 (6) に設定されているため、複数のタブを開くと特に痛みを伴う場合があります。この問題は、 [Chrome](https://crbug.com/275955) と [Firefox](https://bugzil.la/906896) で「修正予定なし」と示されています。この制限はブラウザー + ドメインごとに設定されており、`www.example1.com` への SSE 接続をすべてのタブで 6 つ、 `www.example2.com` への SSE 接続をさらに 6 つ開くことができることを意味します（[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159) によれば）。 HTTP/2 を使用する場合、同時に使用することができる *HTTP ストリーム*の最大数は、サーバーとクライアントの間で交渉が行われます（既定値は 100 です）。
 
 ## サーバーからのイベントの送信
 
@@ -114,7 +115,7 @@ while (true) {
 
 ## エラー処理
 
-問題が発生した場合（ネットワークのタイムアウトや[アクセス制御](/ja/docs/Web/HTTP/CORS)に関する問題など）は、エラーイベントが生成されます。これをプログラムで処理するには、 `onerror` コールバックを `EventSource` に実装してください。
+問題が発生した場合（ネットワークのタイムアウトや[アクセス制御](/ja/docs/Web/HTTP/Guides/CORS)に関する問題など）は、エラーイベントが生成されます。これをプログラムで処理するには、 `onerror` コールバックを `EventSource` に実装してください。
 
 ```js
 evtSource.onerror = (err) => {

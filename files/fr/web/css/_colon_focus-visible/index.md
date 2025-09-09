@@ -1,5 +1,5 @@
 ---
-title: ":focus-visible"
+title: :focus-visible
 slug: Web/CSS/:focus-visible
 ---
 
@@ -56,7 +56,7 @@ button {
 
 ### Choisir d'afficher l'indicateur de focus
 
-Un contrôle personnalisé (par exemple un bouton provenant d'un _[custom element](/fr/docs/Web/Web_Components/Using_custom_elements)_) peut utiliser `:focus-visible` afin d'appliquer ou non un indicateur de focus pour la navigation au clavier afin de calquer au comportement natif de {{htmlelement("button")}}.
+Un contrôle personnalisé (par exemple un bouton provenant d'un _[custom element](/fr/docs/Web/API/Web_components/Using_custom_elements)_) peut utiliser `:focus-visible` afin d'appliquer ou non un indicateur de focus pour la navigation au clavier afin de calquer au comportement natif de {{htmlelement("button")}}.
 
 #### HTML
 

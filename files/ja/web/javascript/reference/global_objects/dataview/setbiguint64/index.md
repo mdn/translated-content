@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 
 **`setBigUint64()`** メソッドは、符号なし 64 ビット整数 (unsigned long long) を {{jsxref("DataView")}} の先頭からのバイト単位の指定されたオフセット位置に格納します。
 
-{{EmbedInteractiveExample("pages/js/dataview-setbiguint64.html")}}
+{{InteractiveExample("JavaScript デモ: DataView.setBigUint64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Highest possible BigInt value that fits in an unsigned 64-bit integer
+const max = 2n ** 64n - 1n;
+
+const view = new DataView(buffer);
+view.setBigUint64(1, max);
+
+console.log(view.getBigUint64(1));
+// Expected output: 18446744073709551615n
+```
 
 ## 構文
 

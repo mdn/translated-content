@@ -1,43 +1,44 @@
 ---
 title: CloseEvent
 slug: Web/API/CloseEvent
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Websockets API")}}
+{{APIRef("Websockets API")}}{{AvailableInWorkers}}
 
-當 WebSocket 連線關閉時，客戶端會收到一個 `CloseEvent`，由 `WebSocket` 物件 `onclose` 屬性表示的監聽器接收。
+當連線關閉時，{{Glossary("WebSockets", "WebSocket")}} 會傳送一個 `CloseEvent` 給用戶端。這個事件會傳遞給 `WebSocket` 物件的 `onclose` 屬性所指定的監聽器。
 
-## 屬性
+{{InheritanceDiagram}}
 
-| 屬性       | 形態                                    | 描述                                                             |
-| ---------- | --------------------------------------- | ---------------------------------------------------------------- |
-| `code`     | [`unsigned long`](/zh-TW/unsigned_long) | WebSocket 伺服器給予的連線關閉代碼。「狀態代碼」列有所有可能值。 |
-| `reason`   | {{ domxref("DOMString") }}              | 表示伺服器關閉連線的原因，這因不同的伺服器與子協定而定。         |
-| `wasClean` | `boolean`                               | 表示連線關閉情況是否乾淨。                                       |
+## 建構子
 
-## 狀態代碼
+- {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}
+  - : 建立一個新的 `CloseEvent`。
 
-以下列有所有合法的狀態代碼。
+## 實例屬性
 
-| 狀態代碼  | 描述                                                                             |
-| --------- | -------------------------------------------------------------------------------- |
-| 0-999     | **尚未使用的保留值。**                                                           |
-| 1000      | 正常關閉，連線成功地達到建立時的目標。                                           |
-| 1001      | 端點去離，伺服器故障或是瀏覽器從開啟連線的頁面離去的情形。                       |
-| 1002      | 因協定錯誤造成連線被端點消滅。                                                   |
-| 1003      | 因端點接收不能處理的資料形態（舉例來說，文字端點收到二進制資料）而消滅連線。     |
-| 1004      | 端點收到過大的資料幀而消滅連線。                                                 |
-| 1005      | **保留值**。表示意外地未給予狀態代碼的情形。                                     |
-| 1006      | **保留值**。用以表示在預期收到狀態代碼的情形下不正常（即未送關閉幀）的連線關閉。 |
-| 1007-1999 | **保留以作為未來的 WebSocket 標準之用。**                                        |
-| 2000-2999 | **保留以作為 WebSocket 擴展之用。**                                              |
-| 3000-3999 | 程式庫與框架使用的值，應用程式**可不**使用。                                     |
-| 4000-4999 | 應用程式使用的值。                                                               |
+_此介面也繼承自其父介面 {{domxref("Event")}} 的屬性。_
+
+- {{domxref("CloseEvent.code")}} {{ReadOnlyInline}}
+  - : 回傳一個包含關閉碼的 `unsigned short`。
+- {{domxref("CloseEvent.reason")}} {{ReadOnlyInline}}
+  - : 回傳一個字串，指出伺服器關閉連線的原因。這個原因依據特定伺服器與子協議而有所不同。
+- {{domxref("CloseEvent.wasClean")}} {{ReadOnlyInline}}
+  - : 回傳一個布林值，指出連線是否乾淨地關閉。
+
+## 實例方法
+
+_此介面也繼承自其父介面 {{domxref("Event")}} 的方法。_
+
+## 規範
+
+{{Specifications}}
+
+## 瀏覽器相容性
+
+{{Compat}}
 
 ## 參見
 
-- [`WebSocket`](/zh_tw/WebSockets/WebSockets_reference/WebSocket)
-
-## 瀏覽器兼容
-
-{{Compat}}
+- {{domxref("WebSocket")}}

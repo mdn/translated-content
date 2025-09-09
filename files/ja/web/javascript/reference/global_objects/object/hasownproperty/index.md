@@ -1,17 +1,31 @@
 ---
 title: Object.prototype.hasOwnProperty()
+short-title: hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 l10n:
-  sourceCommit: 619eb04efb7c6171fd4385fd4ba926805ee08a35
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`hasOwnProperty()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクト自身が（継承されていない）指定されたプロパティを持っているかどうかを示す論理値を返します。
 
-> **メモ:** {{jsxref("Object.hasOwn()")}} は `hasOwnProperty()` よりもブラウザーの対応状況の面で推奨されます。
+> [!NOTE]
+> {{jsxref("Object.hasOwn()")}} は `hasOwnProperty()` よりもブラウザーの対応状況の面で推奨されます。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
+{{InteractiveExample("JavaScript デモ: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object = {};
+object.foo = 42;
+
+console.log(object.hasOwnProperty("foo"));
+// 予想される結果: true
+
+console.log(object.hasOwnProperty("toString"));
+// 予想される結果: false
+
+console.log(object.hasOwnProperty("hasOwnProperty"));
+// 予想される結果: false
+```
 
 ## 構文
 
@@ -157,8 +171,8 @@ foo.hasOwnProperty("prop"); // Uncaught TypeError: foo.hasOwnProperty は関数�
 ## 関連情報
 
 - {{jsxref("Object.hasOwn()")}}
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

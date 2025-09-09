@@ -13,21 +13,21 @@ A coisa mais importante para se entender antes de começarmos é que, mesmo que 
 
 ### Inicializando os shaders
 
-Shaders são especificados ao usar a [Linguagem de Shading OpenGL ES](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf). Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina `initShaders()`, que cuida dessa tarefa:
+Shaders são especificados ao usar a [Linguagem de Shading OpenGL ES](https://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf). Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina `initShaders()`, que cuida dessa tarefa:
 
 ```js
 function initShaders() {
   var fragmentShader = getShader(gl, "shader-fs");
   var vertexShader = getShader(gl, "shader-vs");
 
-  // Cria o progrma shader
+  // Cria o programa shader
 
   shaderProgram = gl.createProgram();
   gl.attachShader(shaderProgram, vertexShader);
   gl.attachShader(shaderProgram, fragmentShader);
   gl.linkProgram(shaderProgram);
 
-  // Se falhar ao criar o progrma shader, alerta
+  // Se falhar ao criar o programa shader, alerta
 
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
     alert("Não foi possível inicializar o programa shader.");
@@ -143,7 +143,7 @@ A vértice (vertex) do shader define a posição e a forma de cada vértice.
 
 ## Criando um objeto
 
-Before we can render our square, we need to create the buffer that contains its vertices. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more — and more complex — 3D objects.
+Antes de podermos renderizar nosso quadrado, precisamos criar o buffer que contém seus vértices. Nós faremos isso usando uma função que chamaremos de `initBuffers()`; à medida que exploramos conceitos da WebGL mais avançados, esta rotina será aumentada para criar mais — e mais complexos — objetos 3D.
 
 ```js
 var horizAspect = 480.0 / 640.0;
@@ -160,13 +160,13 @@ function initBuffers() {
 }
 ```
 
-This routine is pretty simplistic given the basic nature of the scene in this example. It starts by calling the `gl` object's `createBuffer()` method to obtain a buffer into which we'll store the vertices. This is then bound to the context by calling the `bindBuffer()` method.
+Esta rotina é bem simples dada a natureza básica da cena nesse exemplo. Ela começa chamando o método `createBuffer()` do objeto `gl` para obter um buffer no qual armazenaremos os vértices. Isso é então vinculado ao contexto chamando o método `bindBuffer()`.
 
-Once that's done, we create a JavaScript array containing the coordinates for each vertex of the square. This is then converted into an array of WebGL floats and passed into the `gl` object's `bufferData()` method to establish the vertices for the object.
+Uma vez que isso foi feito, nós criamos um array Javascript contendo as coordenadas para cada vértice do quadrado. Isso é então convertido em um array de floats WebGL e passado no método `bufferData()` do objeto `gl` para estabelecer as vértices para o objeto.
 
 ## Renderizando a cena
 
-Once the shaders are established and the object constructed, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
+Uma vez que os shaders estão estabelecidos e o objeto construído, nós podemos realmente renderizar a cena. Já que não estamos animando nada neste exemplo, nossa função `drawScene()` é bem simples. Ele usa algumas rotinas de utilidade que abordaremos curtamente.
 
 ```js
 function drawScene() {
@@ -184,21 +184,21 @@ function drawScene() {
 }
 ```
 
-The first step is to clear the context to our background color; then we establish the camera's perspective. We set a field of view of 45°, with a width to height ratio of 640/480 (the dimensions of our canvas). We also specify that we only want objects between 0.1 and 100 units from the camera to be rendered.
+O primeiro passo é para limpar o contexto para nossa cor de fundo; então estabelecemos a perspectiva da câmera. Nós definimos um campo de visão de 45°, com uma proporção de largura pra altura de 640/480 (as dimensões do nosso canvas). Nós também especificamos que apenas queremos objetos entre 0.1 e 100 unidades da câmera para serem renderizadas.
 
-Then we establish the position of the square by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the context, configure it, and draw the object by calling the `drawArrays()` method.
+Então estabelecemos a posição do quadrado carregando a identidade de posição e transladando para longe da câmera por 6 unidades. Depois disso, nós vinculamos o buffer do vértice do quadrado para o contexto, configura ele, e desenha o objeto chamando o método `drawArrays()`.
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
+[Veja o código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Abra essa demo em uma nova página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Operações úteis da Matrix
 
-Matrix operations are complicated enough. Nobody really wants to write all the code needed to handle them on their own. Fortunately, there's [Sylvester](http://sylvester.jcoglan.com/), a very handy library for handling vector and matrix operations from JavaScript.
+Opetações da Matriz são complicadas demais. Ninguém realmente quer escrever todo o código necessário para cuidar delas por conta própria. Felizmente, há [Sylvester](http://sylvester.jcoglan.com/), uma biblioteca bem útil para lidar com operações de vetores e matrix do JavaScript.
 
-The `glUtils.js` file used by this demo is used by a number of WebGL demos floating around on the Web. Nobody seems entirely clear on where it came from, but it does simplify the use of Sylvester even further by adding methods for building special types of matrices, as well as outputting HTML for displaying them.
+O arquivo `glUtils.js` usado por essa demo é usado por um número de demos do WebGL flutuando pela Web. Ninguém parece totalmente claro de onde ele veio, mas ele simplifica o uso do Sylvester mais ainda adicionando métodos para construir tipos especiais de matrizes, assim como gerar HTML para exibir elas.
 
-In addition, this demo defines a few helpful routines to interface with these libraries for specific tasks. What exactly they do is beyond the scope of this demo, but there are plenty of good references on matrices available online; see the [See also](#see_also) section for a list of a few.
+Além disso, essa demo define algumas rotinas úteis para interagir com essas bibliotecas para tarefas específicas. O que exatamente elas fazem está além do escopo dessa demo, mas há muitas boas referências sobre matrizes disponíveis online; veja a seção [See also](#see_also) para uma lista de algumas.
 
 ```js
 function loadIdentity() {
@@ -228,7 +228,7 @@ function setMatrixUniforms() {
 
 ## Ver Também
 
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
+- [Matrizes](https://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
 - [Matriz](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) na Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

@@ -2,17 +2,29 @@
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 l10n:
-  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Objects")}}
 
 > [!WARNING]
 > 文字列から JavaScript を実行することは、非常に大きなセキュリティリスクを伴います。`eval()` を使用すると、悪意のある者が任意のコードを実行することがあまりにも簡単になります。下記の [eval() を使わないでください!](#eval_を使わないでください!)を参照してください。
 
 **`eval()`** 関数は、文字列として表現された JavaScript コードを評価します。ソースはスクリプトとして解釈されます。
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript デモ: eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// 予想される結果: 4
+
+console.log(eval(new String("2 + 2")));
+// 予想される結果: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// 予想される結果: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// 予想される結果: false
+```
 
 ## 構文
 
@@ -62,29 +74,32 @@ const expression = new String("2 + 2");
 eval(String(expression)); // 4 を返します
 ```
 
-### 直接的または間接的な eval
+### 直接または間接 eval
 
-`eval()` の呼び出しには、直接的な eval と間接的な eval の 2 つのモードがあります。直接的な eval は `eval( )` が唯一の形です（呼び出す関数の名前は `eval` で、その値はグローバルな `eval` 関数です）。それ以外のすべて は、エイリアス変数経由、メンバーアクセスやその他の式経由、またはオプショナルチェーン [`?.`](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 演算子を使用して呼び出すことも含めて、間接的なものです。
+`eval()` の呼び出しには、直接 eval と間接 eval の 2 つのモードがあります。直接 eval は、その名前が示すとおり、グローバルな `eval` 関数を `eval(...)` で直接呼び出すことを指します。それ以外のすべては、エイリアス変数経由、メンバーアクセスやその他の式経由、またはオプショナルチェーン [`?.`](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 演算子を使用して呼び出すことも含めて、間接的なものです。
 
 ```js
-// eval を返すためにカンマ演算子を使用する間接的呼び出し
+// 直接呼び出し
+eval("x + y");
+
+// eval を返すためにカンマ演算子を使用する間接呼び出し
 (0, eval)("x + y");
 
-// オプショナルチェーンによる間接的呼び出し
+// オプショナルチェーンによる間接呼び出し
 eval?.("x + y");
 
-// eval を格納し返すために変数を使用する間接的呼び出し
-const geval = eval;
-geval("x + y");
+// eval を格納し返すために変数を使用する間接呼び出し
+const myEval = eval;
+myEval("x + y");
 
-// メンバーアクセスによる間接的呼び出し
+// メンバーアクセスによる間接呼び出し
 const obj = { eval };
 obj.eval("x + y");
 ```
 
-間接的な eval は、コードが別個の `<script>` タグの中で評価されるように見ることができます。これはつまり次のような意味です。
+間接 eval は、コードが別個の `<script>` タグの中で評価されるように見ることができます。これはつまり次のような意味です。
 
-- 間接的な eval はローカルスコープではなくグローバルスコープで動作し、評価されるコードは呼び出されるスコープ内のローカル変数にアクセスすることはありません。
+- 間接 eval はローカルスコープではなくグローバルスコープで動作し、評価されるコードは呼び出されるスコープ内のローカル変数にアクセスすることはありません。
 
   ```js
   function test() {
@@ -92,14 +107,17 @@ obj.eval("x + y");
     const y = 4;
     // 直接呼び出し、ローカルスコープを使用
     console.log(eval("x + y")); // 結果は 6
-    // eval を返すカンマ演算子を使用した間接呼び出し
-    console.log(eval?.("x + y")); // グローバルスコープを使用、x は未定義のため例外が発生
+    // 間接呼び出し、グローバルスコープを使用
+    console.log(eval?.("x + y")); // x がグローバルスコープで定義されていないため、例外が発生
   }
   ```
 
 - 間接的な `eval` は周囲のコンテキストの厳格さを継承せず、ソース文字列自体に `"use strict"` ディレクティブがある場合にのみ [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) になります。
 
   ```js
+  function nonStrictContext() {
+    eval?.(`with (Math) console.log(PI);`);
+  }
   function strictContext() {
     "use strict";
     eval?.(`with (Math) console.log(PI);`);
@@ -108,11 +126,12 @@ obj.eval("x + y");
     "use strict";
     eval?.(`"use strict"; with (Math) console.log(PI);`);
   }
+  nonStrictContext(); // Logs 3.141592653589793
   strictContext(); // Logs 3.141592653589793
-  strictContextStrictEval(); // 文字列が厳格モードであるため SyntaxError を発生します。
+  strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   ```
 
-  一方、直接的な eval は、呼び出すコンテキストの厳格さを継承します。
+  一方、直接 eval は、呼び出すコンテキストの厳格さを継承します。
 
   ```js
   function nonStrictContext() {
@@ -122,11 +141,16 @@ obj.eval("x + y");
     "use strict";
     eval(`with (Math) console.log(PI);`);
   }
+  function strictContextStrictEval() {
+    "use strict";
+    eval(`"use strict"; with (Math) console.log(PI);`);
+  }
   nonStrictContext(); // Logs 3.141592653589793
-  strictContext(); // 厳格モードなので SyntaxError が発生します。
+  strictContext(); // Uncaught SyntaxError: Strict mode code may not include a with statement
+  strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   ```
 
-- もしソース文字列が厳格モードで解釈されていない場合、 `var` で宣言された変数と [関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function) は周囲のスコープに入ってしまいます。厳格モードのコンテキストでの直接的な eval であった場合、または `eval` のソース文字列自体が厳格モードであった場合、 `var` と関数宣言は周囲のスコープに「漏れる」ことはありません。
+- もしソース文字列が厳格モードで解釈されていない場合、 `var` で宣言された変数と [関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function) は周囲のスコープに入ってしまいます。厳格モードのコンテキストでの直接 eval であった場合、または `eval` のソース文字列自体が厳格モードであった場合、 `var` と関数宣言は周囲のスコープに「漏れる」ことはありません。
 
   ```js
   // コンテキストもソース文字列も厳格モードではないため、 var は周囲のスコープで変数を作成します。
@@ -159,18 +183,18 @@ obj.eval("x + y");
   new Ctor(); // [Function: Ctor]
   ```
 
-## eval() を使わないでください!
+## 直接 eval() を使わないでください!
 
-直接的な `eval()` はいくつもの問題を引き起こします。
+直接 `eval()` はいくつもの問題を引き起こします。
 
-- `eval()` は呼び出し元の権限で渡されたコードを実行します。悪意のある第三者に影響を受ける可能性のある文字列で `eval()` を実行すると、そのウェブページや拡張機能の権限において、ユーザーのマシン上で悪意のあるコードを実行してしまう可能性があります。さらに重要なことに、サードパーティのコードが `eval()` が（直接的な eval であれば）呼び出されたスコープを見ることができるため、攻撃者がローカル変数を読み取ったり変更したりすることができてしまいます。
+- `eval()` は呼び出し元の権限で渡されたコードを実行します。悪意のある第三者に影響を受ける可能性のある文字列で `eval()` を実行すると、そのウェブページや拡張機能の権限において、ユーザーのマシン上で悪意のあるコードを実行してしまう可能性があります。さらに重要なことに、サードパーティのコードが `eval()` が（直接 eval であれば）呼び出されたスコープを見ることができるため、攻撃者がローカル変数を読み取ったり変更したりすることができてしまいます。
 - 現代の JavaScript では多くの構造が JS エンジンによって最適化されているため、`eval()` は他の方法よりも低速です。
 - 現代の JavaScript インタープリターは JavaScript を機械語に変換します。これは、変数の名前の概念がすべて消滅することを意味します。したがって、`eval()` を使用すると、ブラウザーは長い高価な変数名検索を実行して、変数が機械語のどこに存在しているかを把握し、その値を設定します。さらに、`eval()` が変数の型の変更など、その変数に新しい変数をもたらす可能性もあり、生成されたすべての機械語を再評価して補正させられる可能性があります。
 - スコープが `eval()` によって推移的に依存されている場合、ミニファイヤーはミニ化をあきらめます。そうしないと `eval()` は実行時に正しい変数を読み込むことができないからです。
 
 `eval()` や関連のメソッドを使用することで、最適化したり、完全に避けることができる用途はたくさんあります。
 
-#### 間接的 eval() の使用
+#### 間接 eval() の使用
 
 このコードを考えてみてください。
 
@@ -178,31 +202,31 @@ obj.eval("x + y");
 function looseJsonParse(obj) {
   return eval(`(${obj})`);
 }
-console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
+console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Map() }"));
 ```
 
-間接的 eval を使用して厳格モードを強制するだけで、コードはずっと良くなります。
+間接 eval を使用して厳格モードを強制するだけで、コードはずっと良くなります。
 
 ```js
 function looseJsonParse(obj) {
   return eval?.(`"use strict";(${obj})`);
 }
-console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
+console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Map() }"));
 ```
 
 上記の 2 つのコードスニペットは同じように動作するように見えるかもしれませんが、そうではありません。前者は直接的 eval を使用しているので、複数の問題が発生します。
 
-- より多くの範囲を検査するため、非常に時間がかかります。評価される文字列中の `c: new Date()` に注目してください。間接的 eval のバージョンでは、オブジェクトはグローバルスコープで評価されるので、インタープリターは `Date` が `Date` という名前のローカル変数ではなく、グローバルな `Date()` コンストラクターを参照しているとみなされます。しかし、直接的 eval を使用するコードでは、インタープリターはこれを想定することができません。例えば、次の例では、評価された文字列の `Date` は `window.Date()` を参照しません。
+- より多くの範囲を検査するため、非常に時間がかかります。評価される文字列中の `c: new Map()` に注目してください。間接的 eval のバージョンでは、オブジェクトはグローバルスコープで評価されるので、インタープリターは `Map` が `Map` という名前のローカル変数ではなく、グローバルな `Map()` コンストラクターを参照しているとみなされます。しかし、直接的 eval を使用するコードでは、インタープリターはこれを想定することができません。例えば、次の例では、評価された文字列の `Map` は `window.Map()` を参照しません。
 
   ```js
   function looseJsonParse(obj) {
-    function Date() {}
+    class Map {}
     return eval(`(${obj})`);
   }
-  console.log(looseJsonParse(`{ a: 4 - 1, b: function () {}, c: new Date() }`));
+  console.log(looseJsonParse(`{ a: 4 - 1, b: function () {}, c: new Map() }`));
   ```
 
-  したがって、この `eval()` バージョンでは、ブラウザーは高価なルックアップ呼び出しを行い、`Date()` というローカル変数があるかどうかを確認します。
+  したがって、この `eval()` バージョンでは、ブラウザーは高価なルックアップ呼び出しを行い、`Map()` というローカル変数があるかどうかを確認します。
 
 - 厳格モードを使用していない場合、 `eval()` ソース内の `var` 宣言は周囲のスコープの変数になります。これは、文字列が外部入力から取得された場合、特に同じ名前の既存の変数がある場合に、デバッグしにくい課題につながります。
 - 直接的 eval は、周囲のスコープのバインディングを読み込んだり、変更したりすることができます。
@@ -219,24 +243,16 @@ console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
 `Function()` コンストラクターは、変数を引数として渡して eval ソース内でローカルバインディングを作成したい場合に有益です。
 
 ```js
-function Date(n) {
-  return [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ][n % 7 || 0];
+function add(a, b) {
+  return a + b;
 }
-function runCodeWithDateFunction(obj) {
-  return Function("Date", `"use strict";return (${obj});`)(Date);
+function runCodeWithAddFunction(obj) {
+  return Function("add", `"use strict";return (${obj});`)(add);
 }
-console.log(runCodeWithDateFunction("Date(5)")); // Saturday
+console.log(runCodeWithAddFunction("add(5, 7)")); // 12
 ```
 
-`eval()` と `Function()` はどちらも暗黙的に任意のコードを評価するので、厳格な [CSP](/ja/docs/Web/HTTP/CSP) 設定では禁止されています。また、一般的な用途では `eval()` や `Function()` に代わる、より安全な（そして、より高速な）方法が他にもあります。
+`eval()` と `Function()` はどちらも暗黙的に任意のコードを評価するので、厳格な [CSP](/ja/docs/Web/HTTP/Guides/CSP) 設定では禁止されています。また、一般的な用途では `eval()` や `Function()` に代わる、より安全な（そして、より高速な）方法が他にもあります。
 
 #### ブラケットアクセサーの使用
 
@@ -298,7 +314,7 @@ const propPath = getPropPath(); // "a.b.c" などを返す
 const result = setDescendantProp(obj, propPath, 1); // obj.a.b.c は 1 になる
 ```
 
-しかし、制約のない入力でブラケットアクセッサを使用することも安全ではありません。[オブジェクトインジェクション攻撃](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md)を許す可能性もあります。
+しかし、制約のない入力でブラケットアクセッサを使用することも安全ではありません。[オブジェクトインジェクション攻撃](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md)を許す可能性もあります。
 
 #### コールバックの使用
 
@@ -316,7 +332,7 @@ elt.addEventListener("click", () => {
 });
 ```
 
-文字列を連結せずにパラメーター化した関数を作成する方法としては、[クロージャ](/ja/docs/Web/JavaScript/Closures)を使う方法も便利です。
+文字列を連結せずにパラメーター化した関数を作成する方法としては、[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を使う方法も便利です。
 
 ### JSON の使用
 
@@ -324,20 +340,20 @@ elt.addEventListener("click", () => {
 
 JSON の構文は JavaScript の構文に比べて制限があり、多くの有効な JavaScript リテラルが JSON としては解釈されないことに注意してください。例えば、最後にカンマを付けることは JSON では許されておらず、オブジェクトリテラル内のプロパティ名（キー）は引用符で囲む必要があります。後で JSON として解析される文字列を生成するには、JSON シリアライザーを使うようにしてください。
 
-任意のコードではなく、注意深く制約されたデータを渡すことは、一般的によい考えです。例えば、ウェブページの内容を取得できるよう設計された拡張であれば、JavaScript コードの代わりに <a href="/ja/docs/Web/XPath">XPath</a> を使って取得ルールを定義できます。
+任意のコードではなく、注意深く制約されたデータを渡すことは、一般的によい考えです。例えば、ウェブページの内容を取得できるよう設計された拡張であれば、JavaScript コードの代わりに [XPath](/ja/docs/Web/XML/XPath) を使って取得ルールを定義できます。
 
 ## 例
 
 ### eval() の使用
 
-次のコードでは、`eval` を含むどちらの文も 42 を返します。最初のコードは文字列 "`x + y + 1`" を評価します。2 番目のコードは文字列 "`42`" を評価します。
+次のコードでは、`eval()` を含むどちらの文も 42 を返します。最初のコードは文字列 `"x + y + 1"` を評価します。2 番目のコードは文字列 `"42"` を評価します。
 
 ```js
 const x = 2;
 const y = 39;
 const z = "42";
-eval("x + y + 1"); // 42 が返される
-eval(z); // 42 が返される
+eval("x + y + 1"); // 42
+eval(z); // 42
 ```
 
 ### 評価される最後の式について
@@ -347,12 +363,12 @@ eval(z); // 42 が返される
 ```js
 const str = "if (a) { 1 + 1 } else { 1 + 2 }";
 let a = true;
-let b = eval(str); // 2 が返される
+let b = eval(str);
 
 console.log(`b is: ${b}`); // b is: 2
 
 a = false;
-b = eval(str); // 3 が返される
+b = eval(str);
 
 console.log(`b is: ${b}`); // b is: 3
 ```
@@ -408,4 +424,4 @@ const fct2 = eval(fctStr2); // 関数 `b` を返す
 ## 関連情報
 
 - [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [WebExtensions: コンテンツスクリプトでの eval() の使用](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval_in_content_scripts)
+- [WebExtensions: コンテンツスクリプトでの eval の使用](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval_in_content_scripts)

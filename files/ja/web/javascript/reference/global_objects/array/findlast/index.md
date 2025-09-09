@@ -1,11 +1,10 @@
 ---
 title: Array.prototype.findLast()
+short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`findLast()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列を逆順に反復処理し、指定されたテスト関数を満たす最初の要素の値を返します。
 テスト関数を満たす要素がない場合は {{jsxref("undefined")}} が返されます。
@@ -20,7 +19,16 @@ l10n:
   こちらも、テスト関数を使用する代わりに、各要素が値と等しいかどうかを調べます。
 - 指定されたテスト関数を満たす要素を得るには {{jsxref("Array/some", "some()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.findLast()", "shorter")}}
+
+```js interactive-example
+const array = [5, 12, 50, 130, 44];
+
+const found = array.findLast((element) => element > 45);
+
+console.log(found);
+// 予想される結果: 130
+```
 
 ## 構文
 
@@ -48,18 +56,9 @@ findLast(callbackFn, thisArg)
 
 ## 解説
 
-`findLast()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。配列の要素のそれぞれに対して、インデックスの降順に一度ずつ `callbackFn` 関数を実行し、`callbackFn` 関数が[真値](/ja/docs/Glossary/Truthy)を返すまで繰り返します。 `findLast()` はその要素を返し、配列の反復処理を停止します。もし `callbackFn` が真値を返さない場合、 `find()` は {{jsxref("undefined")}} を返します。
+`findLast()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。配列の要素のそれぞれに対して、インデックスの降順に一度ずつ `callbackFn` 関数を実行し、`callbackFn` 関数が[真値](/ja/docs/Glossary/Truthy)を返すまで繰り返します。 `findLast()` はその要素を返し、配列の反復処理を停止します。もし `callbackFn` が真値を返さない場合、 `findLast()` は {{jsxref("undefined")}} を返します。これらのメソッドが一般的にどのように動作するのかについての詳細は、[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)の節をご覧ください。
 
-`callbackFn` は、値が割り当てられているものに限らず、配列中の*すべて*のインデックスに対して呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)では、空のスロットは `undefined` と同じ動作をします。
-
-`findLast()` は、呼び出した配列を変更 (mutate) しませんが、`callbackFn` で提供された関数は変更する可能性があります。しかし、配列の長さは最初に `callbackFn` が呼び出される*前に*設定されます。したがって、
-
-- `callbackFn` は `findLast()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
-- 既に訪問した位置を変更しても、 `callbackFn` が再度呼び出されることはありません。
-- まだ訪問していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除された](/ja/docs/Web/JavaScript/Reference/Operators/delete) 要素は `undefined` であるかのように処理されます。
-
-> [!WARNING]
-> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
+`callbackFn` は、値が割り当てられているものに限らず、配列中のすべてのインデックスに対して呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)では、空のスロットは `undefined` と同じ動作をします。
 
 `findLast()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
@@ -86,9 +85,9 @@ console.log(inventory.findLast(isNotEnough));
 // { name: "fish", quantity: 1 }
 ```
 
-#### アロー関数と分割代入の使用
+#### アロー関数と構造分解の使用
 
-先の例は、アロー関数と[オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#オブジェクトの分割代入)を使用して書くことができるかもしれません。
+先の例は、アロー関数と[オブジェクトの構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#オブジェクトの構造分解)を使用して書くことができるかもしれません。
 
 ```js
 const inventory = [
@@ -109,12 +108,15 @@ console.log(result);
 以下の例では、配列の最後の要素で素数の最後の要素を返します。素数がない場合は {{jsxref("undefined")}} を返しています。
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -125,7 +127,28 @@ console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
 
-### 存在しない要素や削除された要素に対しても呼び出される
+> [!NOTE]
+> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、高度に最適化されたアルゴリズムを使用することをお勧めします。
+
+### callbackFn の第 3 引数の使用
+
+`array` 引数は、配列内の別の要素にアクセスする場合、特に、その配列を参照する既存の変数がない場合に便利です。次の例では、最初に `filter()` を使用して正の値を抽出し、次に `findLast()` を使用して、その隣よりも小さい最後の要素を探します。
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const lastTrough = numbers
+  .filter((num) => num > 0)
+  .findLast((num, idx, arr) => {
+    // arr 引数がない場合、変数に保存せずに中間配列に簡単に
+    // アクセスする方法はありません。
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(lastTrough); // 2
+```
+
+### findLast() を疎配列で使用
 
 疎配列の空のスロットは処理され、 `undefined` と同じように扱われます。
 
@@ -136,6 +159,7 @@ const array = [0, 1, , , , 5, 6];
 // 値が割り当てられているインデックスだけでなく、すべてのインデックスを表示
 array.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
+  return false;
 });
 // Visited index 6 with value 6
 // Visited index 5 with value 5
@@ -154,6 +178,7 @@ array.findLast((value, index) => {
   }
   // 要素 5 は削除されたにもかかわらず、処理される
   console.log(`Visited index ${index} with value ${value}`);
+  return false;
 });
 // Deleting array[5] with value 5
 // Visited index 6 with value 6
@@ -193,6 +218,7 @@ console.log(
 ## 関連情報
 
 - [`Array.prototype.findLast` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-find-from-last)
+- [es-shims による `Array.prototype.findLast` のポリフィル](https://www.npmjs.com/package/array.prototype.findlast)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}

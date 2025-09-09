@@ -7,7 +7,32 @@ slug: Web/HTML/Element/input/password
 
 Elementos `<input>` do tipo **`"password"`** são uma maneira do usuário digitar senhas com segurança. O elemento é mostrado como um controle de edição de texto de uma linha, no qual o texto é omitido para que não possa ser lido, geralmente substituindo cada caractere por um símbolo como o astesrisco ("\*") ou um ponto ("•"). Esse caracter varia dependendo do {{Glossary("agente de usuário")}} e do {{Glossary("OS")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+</div>
+
+<div>
+  <label for="pass">Password (8 characters minimum):</label>
+  <input type="password" id="pass" name="password" minlength="8" required />
+</div>
+
+<input type="submit" value="Sign in" />
+```
+
+```css interactive-example
+label {
+  display: block;
+}
+
+input[type="submit"],
+label {
+  margin-top: 1rem;
+}
+```
 
 Os detalhes de como o processo de inserção do texto funciona podem variar dependendo do navegador. Dispositivos móveis, por exemplo, frequentemente mostram o caractere digitado por um breve momento antes de ser ocultado, de forma que o usuário possa verificar se realmente digitou o caractere pretendido. Isso é útil devido ao tamanho reduzido das teclas e a facilidade de se pressionar a tecla errada, principalmente em teclados virtuais.
 
@@ -26,7 +51,7 @@ Os detalhes de como o processo de inserção do texto funciona podem variar depe
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("change")}} e {{event("input")}}</td>
+      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event)</td>
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>

@@ -43,4 +43,4 @@ window.addEventListener("beforeprint", (evenement) => {
 
 ## Evénements liés
 
-- [afterprint](/fr/docs/Mozilla_event_reference/afterprint)
+- [afterprint](/fr/docs/Web/API/Window/afterprint_event)

@@ -8,7 +8,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 JavaScript 개발자로서, 프로그래밍적으로 네트워크로부터 받은 데이터 스트림을 Chunk단위로 읽고 다루는 것은 매우 유용합니다! 그러나 어떻게 스트림 API의 Readable stream을 잘 사용할수 있을까요. 이번 내용은 그것을 설명하고 있습니다.
 
 > [!NOTE]
-> This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/ko/docs/Web/API/Streams_API#Concepts_and_usage) and dedicated [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts) article, then come back.
+> This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/ko/docs/Web/API/Streams_API#concepts_and_usage) and dedicated [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts) article, then come back.
 
 > [!NOTE]
 > If you are looking for information on writable streams try [Using writable streams](/ko/docs/Web/API/Streams_API/Using_writable_streams) instead.
@@ -202,7 +202,7 @@ simple example code 를 다시한번 살펴보면, `ReadableStream()` 생성자�
 
 ### ReadableStream controllers
 
-ReadableStrem() 생성자에 인자로 전달된 객체안의 `start()` 와 `pull()` 메서드에 controller라는 인자가 전달되는 것을 볼수 있습니다. 이것은 {{domxref("ReadableStreamDefaultController")}} 클래스의 인스턴스이며 우리의 스트림을 제어하는데 사용 됩니다.
+ReadableStream() 생성자에 인자로 전달된 객체안의 `start()` 와 `pull()` 메서드에 controller라는 인자가 전달되는 것을 볼수 있습니다. 이것은 {{domxref("ReadableStreamDefaultController")}} 클래스의 인스턴스이며 우리의 스트림을 제어하는데 사용 됩니다.
 
 우리의 예제에서, 우리는 fetch된 body로부터 chunk의 값을 읽은 뒤 그 값을 커스텀 스트림에 집어 넣기 위해 Controller의 {{domxref("ReadableStreamDefaultController.enqueue","enqueue()")}} 메서드를 상용하고 있습니다.
 

@@ -2,10 +2,8 @@
 title: tabs.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 l10n:
-  sourceCommit: 44c93b0fb4940a9b9b9942a0a6ca28305c62078f
+  sourceCommit: 934dace5fd2f456fb9178b687ad0abb6e4b0a049
 ---
-
-{{AddonSidebar}}
 
 标签页更新时触发。
 
@@ -40,9 +38,7 @@ browser.tabs.onUpdated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。更新的标签页的 ID。
     - `changeInfo`
@@ -51,15 +47,11 @@ browser.tabs.onUpdated.hasListener(listener)
       - : {{WebExtAPIRef('tabs.Tab')}}。标签页的新状态。
 
 - `filter` {{optional_inline}}
-
   - : `object`。一组过滤器，限制发送给此监听器的事件。此对象可以具有以下属性之一或多个。仅当事件满足提供的所有过滤器时才发送事件。
-
     - `urls`
       - : `Array`。一个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)数组。仅当标签页的当前 `url` 属性匹配任意一个模式时才触发事件。
     - `properties`
-
       - : `Array`。一个由支持的 {{WebExtAPIRef("tabs.Tab")}} 对象属性名称组成的字符串数组。仅当更改了数组中的某个属性时才触发事件。可以使用这些属性：
-
         - `"attention"`
         - `"autoDiscardable"`
         - `"audible"`
@@ -68,12 +60,14 @@ browser.tabs.onUpdated.hasListener(listener)
         - `"hidden"`
         - `"isArticle"`
         - `"mutedInfo"`
+        - `"openerTabId"`
         - `"pinned"`
         - `"status"`
         - `"title"`
         - `"url"`
 
-        > **备注：** `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
+        > [!NOTE]
+        > `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
 
     - `tabId`
       - : `Integer`。仅针对此 ID 标识的标签页触发该事件。
@@ -99,9 +93,11 @@ browser.tabs.onUpdated.hasListener(listener)
 - `hidden` {{optional_inline}}
   - : `boolean`。如果标签页是{{WebExtAPIRef("tabs.hide()", "隐藏的", "", 1)}}，则为 `true`。
 - `isArticle` {{optional_inline}}
-  - : `boolean`。如果标签页是文章，因此可以显示在{{WebExtAPIRef("tabs.toggleReaderMode()", "阅读模式", "", 1)}}中，则为 `true`。
+  - : `boolean`。如果标签页是文章，因此可以显示在[阅读模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)中，则为 `true`。
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}。标签页的新静音状态及更改原因。
+- `openerTabId` {{optional_inline}}
+  - : `integer`。打开了当前标签页的标签页的 ID（如果存在）。仅当打开当前标签页的标签页存在且与当前标签页在同一窗口中时，才会出现此属性。
 - `pinned` {{optional_inline}}
   - : `boolean`。标签页的新固定状态。
 - `status` {{optional_inline}}
@@ -139,11 +135,11 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### 过滤示例
 
-仅当标签页的 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mozilla.social/@mdn` 时记录更改：
+仅当标签页的 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mastodon.social/@mdn` 时记录更改：
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -174,11 +170,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-组合前两个过滤器，仅当标签页的 `pinned` 属性更改且 `url` 属性匹配 `https://developer.mozilla.org/*` 或 `https://mozilla.social/@mdn` 时记录更改：
+组合前两个过滤器，仅当标签页的 `pinned` 属性更改且 `url` 属性匹配 `https://developer.mozilla.org/*` 或 `https://mastodon.social/@mdn` 时记录更改：
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -194,11 +190,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-仅当标签页的 `pinned` 属性更改且 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mozilla.social/@mdn` 且在事件触发时标签页属于当前浏览器窗口时记录更改：
+仅当标签页的 `pinned` 属性更改且 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mastodon.social/@mdn` 且在事件触发时标签页属于当前浏览器窗口时记录更改：
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -222,7 +218,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onUpdated) API。此文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onUpdated) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
@@ -253,5 +249,3 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-
-{{AddonSidebar}}

@@ -3,11 +3,53 @@ title: visibility
 slug: Web/CSS/visibility
 ---
 
-{{CSSRef}}
-
 **`visibility`** CSS 속성은 문서의 레이아웃을 변경하지 않고 요소를 보이거나 숨깁니다. `visibility`로 {{htmlelement("table")}}의 행이나 열을 숨길 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/css/visibility.html")}}
+{{InteractiveExample("CSS Demo: visibility")}}
+
+```css interactive-example-choice
+visibility: visible;
+```
+
+```css interactive-example-choice
+visibility: hidden;
+```
+
+```css interactive-example-choice
+visibility: collapse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Hide me</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 문서를 숨기고, **레이아웃에서도 제외**하려면, `visibility`를 사용하는 대신 {{cssxref("display")}} 속성을 `none`으로 설정하세요.
 
@@ -30,13 +72,10 @@ visibility: unset;
 - `visible`
   - : 요소가 보임.
 - `hidden`
-
-  - : 요소가 숨겨짐(그려지지 않음). 레이아웃에는 숨겨지지 않았을 때와 동일한 영향을 줍니다. `visibility`를 `visible`로 설정한 자손은 화면에 보입니다. 숨겨진 요소는 포커스([탭 인덱스](/ko/docs/Web/HTML/Global_attributes/tabindex)로 탐색 등)를 받을 수 없습니다.
+  - : 요소가 숨겨짐(그려지지 않음). 레이아웃에는 숨겨지지 않았을 때와 동일한 영향을 줍니다. `visibility`를 `visible`로 설정한 자손은 화면에 보입니다. 숨겨진 요소는 포커스([탭 인덱스](/ko/docs/Web/HTML/Reference/Global_attributes/tabindex)로 탐색 등)를 받을 수 없습니다.
 
 - `collapse`
-
   - : The `collapse` keyword has different effects for different elements:
-
     - {{HTMLElement("table")}}의 행, 열, 행 그룹과 열 그룹에 적용하면 {{cssxref("display")}}를 `none`으로 설정한 것과 동일하게 요소를 숨기고 차지하던 공간도 제거합니다. 그러나 다른 행(열)의 크기는 `collapse`를 적용한 행(열)이 보이는 것 처럼 취급해 계산합니다. 따라서 표의 너비나 높이의 재계산 없이 빠르게 행이나 열을 제거할 수 있습니다.
     - 플렉스 아이템에 적용하면 요소를 숨기고 차지하던 공간도 제거합니다.
     - [XUL](/ko/docs/Mozilla/Tech/XUL) 요소에 적용하면 다른 스타일과 관계 없이 크기의 계산값으로 항상 0을 사용합니다. 그러나 {{cssxref("margin")}}은 바뀌지 않습니다.
@@ -122,7 +161,7 @@ td {
 
 ## 접근성 고려사항
 
-`visibility` 값을 `hidden`으로 설정한 요소는 [접근성 트리](/ko/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs)에서 제외됩니다. 즉 해당 요소와, 그 모든 자손 요소는 스크린 리더가 읽지 않습니다.
+`visibility` 값을 `hidden`으로 설정한 요소는 [접근성 트리](/ko/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)에서 제외됩니다. 즉 해당 요소와, 그 모든 자손 요소는 스크린 리더가 읽지 않습니다.
 
 ## 참고
 

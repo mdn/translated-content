@@ -19,6 +19,6 @@ let pageloadtime = time.loadEventStart - time.navigationStart;
 
 ## 関連情報
 
-- [ナビゲーションおよびリソースタイミング](/ja/docs/Web/Performance/Navigation_and_resource_timings)
+- [ナビゲーションおよびリソースタイミング](/ja/docs/Web/Performance/Guides/Navigation_and_resource_timings)
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformanceResourceTiming")}},

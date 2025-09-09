@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
 
 La méthode `BrowserSetting.get()` obtient la valeur actuelle du paramètre du navigateur et une énumération indiquant comment la valeur du paramètre est actuellement controléee..
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,12 +24,12 @@ var getting = setting.get(
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet avec les propriétés suivantes :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet avec les propriétés suivantes :
 
 - `value`
   - : La valeur du paramètre. Le type de cette propriété est déterminé par le paramètre particulier.
 - `levelOfControl`
-  - : `string`. Cela représente la façon dont la paramètre est actuellement controllé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le paramètre. Voir [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
+  - : `string`. Cela représente la façon dont la paramètre est actuellement controllé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le paramètre. Voir [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
       <tbody>
         <tr>
           <td><code>"not_controllable"</code></td>
@@ -75,8 +75,6 @@ getting.then((got) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

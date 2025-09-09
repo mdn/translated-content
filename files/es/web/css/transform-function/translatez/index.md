@@ -3,17 +3,102 @@ title: translateZ()
 slug: Web/CSS/transform-function/translateZ
 ---
 
-{{CSSRef}}
-
 La función **`translateZ()`** [CSS](/es/docs/Web/CSS) reposiciona un elemento a lo largo del eje-z (z-axis) en el espacio 3D, es decir, más cerca o mas lejos del espectador. Su resultado es un {{cssxref("&lt;transform-function&gt;")}} tipo de dato.
 
-{{EmbedInteractiveExample("pages/css/function-translateZ.html")}}
+{{InteractiveExample("CSS Demo: translateZ()")}}
+
+```css interactive-example-choice
+transform: translateZ(0);
+```
+
+```css interactive-example-choice
+transform: translateZ(42px);
+```
+
+```css interactive-example-choice
+transform: translateZ(-9.7rem);
+```
+
+```css interactive-example-choice
+transform: translateZ(-3ch);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 Esta transformación es definida por una {{cssxref("&lt;length&gt;")}} la cual especifica que tan lejos hacia denttro o hacia afuera el elemento o los elementos se mueven.
 
 En los ejemplos interacticos anteriores, [`perspective: 550px;`](/es/docs/Web/CSS/perspective) (para crear un espacio 3D) y [`transform-style: preserve-3d;`](/es/docs/Web/CSS/transform-style) (los elementos hijos, los 6 lados del cubo, estan también posicionados en el espacio 3D), es decir, han sido establecidos en el cubo.
 
-> **Nota:** `translateZ(tz)` es equivalente a `translate3d(0, 0, tz)`.
+> [!NOTE]
+> `translateZ(tz)` es equivalente a `translate3d(0, 0, tz)`.
 
 ## Syntax
 
@@ -139,7 +224,7 @@ Si el valor `perspective()` es menor que el valor `translateZ()`, como `transfor
 
 ## Compatibilidad con navegador
 
-Por favor observe la propiedad [`<transform-function>`](/es/docs/Web/CSS/transform-function#Browser_compatibility) para información de compatibilidad.
+Por favor observe la propiedad [`<transform-function>`](/es/docs/Web/CSS/transform-function#browser_compatibility) para información de compatibilidad.
 
 ## Véase también
 

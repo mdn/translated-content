@@ -10,7 +10,31 @@ l10n:
 El objeto **`Map`** retiene tuplas de llave-valor y mantiene el orden de inserción de las llaves.
 Cualquier valor (ambos objetos y {{Glossary("Primitive", "valores primitivos")}}) puede ser usado como llave o valor.
 
-{{EmbedInteractiveExample("pages/js/map.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("a", 1);
+map1.set("b", 2);
+map1.set("c", 3);
+
+console.log(map1.get("a"));
+// Expected output: 1
+
+map1.set("a", 97);
+
+console.log(map1.get("a"));
+// Expected output: 97
+
+console.log(map1.size);
+// Expected output: 3
+
+map1.delete("b");
+
+console.log(map1.size);
+// Expected output: 2
+```
 
 ## Descripción
 
@@ -20,7 +44,7 @@ La especificación requiere que los _maps_ sean implementados "que, en promedio,
 
 ### Igualdad de llaves
 
-La igualdad de valores se basa en el algoritmo [Igualdad SameValueZero](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness#igualdad_same-value-zero). (Se solía usar [igualdad SameValue](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness#igualdad_same-value), el cual trataba `0` y `-0` como diferentes. Revise [compatibilidad con navegadores](#compatibilidad_con_navegadores).) Lo que significa que {{jsxref("NaN")}} es conciderado lo mismo que `NaN` (a pesar de que `NaN !== NaN`) y todos los otros valores son conciderados iguales, de acuerdo a la semantica del operador `===`.
+La igualdad de valores se basa en el algoritmo [Igualdad SameValueZero](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#igualdad_same-value-zero). (Se solía usar [igualdad SameValue](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#igualdad_same-value), el cual trataba `0` y `-0` como diferentes. Revise [compatibilidad con navegadores](#compatibilidad_con_navegadores).) Lo que significa que {{jsxref("NaN")}} es conciderado lo mismo que `NaN` (a pesar de que `NaN !== NaN`) y todos los otros valores son conciderados iguales, de acuerdo a la semantica del operador `===`.
 
 ### Objects vs. Maps
 

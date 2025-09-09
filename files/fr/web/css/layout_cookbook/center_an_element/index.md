@@ -34,5 +34,5 @@ Cependant, sa prise en charge dans ce cas (disposition en bloc) est actuellement
 
 ## Voir aussi
 
-- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [CSS Box alignment guide](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [CSS Box alignment guide](/fr/docs/Web/CSS/CSS_box_alignment)

@@ -67,7 +67,7 @@ Habría sido mucho más simple usar el elemento nativo {{HTMLElement('progress')
 
 Como cualquier otra tecnología web, existen diversos grados de soporte para ARIA. El soporte se basa en el sistema operativo y el navegador que se utiliza, así como en el tipo de tecnología de asistencia que interactúa con él. Además, la versión del sistema operativo, el navegador y la tecnología de asistencia son factores que contribuyen. Es posible que las versiones de software anteriores no admitan ciertas funciones de ARIA, solo tengan compatibilidad parcial o informen incorrectamente su funcionalidad.
 
-También es importante reconocer que algunas personas que confían en la tecnología de asistencia son reacias a actualizar su software por temor a perder la capacidad de interactuar con su computadora y navegador. Debido a esto, es importante [usar elementos HTML semánticos](/es/docs/Learn/Accessibility/HTML) siempre que sea posible, ya que el HTML semántico es mucho más compatible con la tecnología de asistencia.
+También es importante reconocer que algunas personas que confían en la tecnología de asistencia son reacias a actualizar su software por temor a perder la capacidad de interactuar con su computadora y navegador. Debido a esto, es importante [usar elementos HTML semánticos](/es/docs/Learn_web_development/Core/Accessibility/HTML) siempre que sea posible, ya que el HTML semántico es mucho más compatible con la tecnología de asistencia.
 
 También es importante probar su ARIA creado con tecnología de asistencia real. Así como los emuladores y simuladores de navegador no son una solución efectiva para probar el soporte completo, las soluciones de tecnología de asistencia de emuladas no son suficientes para garantizar completamente la funcionalidad.
 
@@ -84,7 +84,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 
 - [Mejora de la navegación de páginas con referencias de ARIA](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : Una buena introducción al uso de los puntos de referencia de ARIA para mejorar la navegación de la página web para los usuarios de lectores de pantalla. [Consulte también las notas de implementación históricas de ARIA](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) y ejemplos en sitios reales (actualizado en julio de 2011).
-- [Mejorando la accesibilidad de los formularios](/es/docs/Web/Accessibility/ARIA/forms)
+- [Mejorando la accesibilidad de los formularios](/es/docs/conflicting/Web/Accessibility/ARIA_44f49c8e1fe8e4c12920395d890bd793)
   - : ¡ARIA no es solo para contenido dinámico! Aprenda a mejorar la accesibilidad de los formularios HTML utilizando atributos ARIA adicionales.
 
 ## ARIA para widgets con scripts
@@ -100,7 +100,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 
 - [Funciones ARIA](/es/docs/Web/Accessibility/ARIA/Roles)
   - : Páginas de referencia que cubren todos los roles de WAI-ARIA discutidos en MDN.
-- [Estados y propiedades de ARIA](/es/docs/Web/Accessibility/ARIA/Attributes)
+- [Estados y propiedades de ARIA](/es/docs/Web/Accessibility/ARIA/Reference/Attributes)
   - : Páginas de referencia que cubren todos los estados y propiedades de WAI-ARIA discutidos en MDN.rted por NVDA con Firefox y VoiceOver con Safari.
 
 ## Esfuerzos de estandarización
@@ -122,4 +122,4 @@ Las siguientes charlas son una excelente manera de entender ARIA:
 
 ## Temas relacionados
 
-[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/es/docs/Web/Guide/AJAX), [JavaScript](/es/docs/Web/JavaScript)
+[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/es/docs/Web/JavaScript)

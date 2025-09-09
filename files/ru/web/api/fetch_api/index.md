@@ -30,7 +30,7 @@ Fetch обеспечивает обобщённое определение об�
 - `fetch()` не будет посылать куки-файлы, если только не указано `credentials: 'same-origin'`.
 
 > [!NOTE]
-> Узнайте больше об использовании Fetch API на [Using Fetch](/ru/docs/Web/API/Fetch_API/Using_Fetch) и изучите концепции на [Fetch basic concepts](/ru/docs/Web/API/Fetch_API/Basic_concepts).
+> Узнайте больше об использовании Fetch API на [Using Fetch](/ru/docs/Web/API/Fetch_API/Using_Fetch) и изучите концепции на [Fetch basic concepts](/ru/docs/Web/API/Fetch_API/Using_Fetch).
 
 ### Прерывание выборки
 
@@ -62,8 +62,8 @@ Fetch обеспечивает обобщённое определение об�
 
 ## Смотрите также
 
-- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ru/docs/Web/HTTP)
 - [Fetch полифил](https://github.com/github/fetch)
-- [Fetch базовые понятия](/ru/docs/Web/API/Fetch_API/Basic_concepts)
+- [Fetch базовые понятия](/ru/docs/Web/API/Fetch_API/Using_Fetch)

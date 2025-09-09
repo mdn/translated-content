@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/alarms
 
 {{AddonSidebar}}
 
-Executar um código agendado para um horário específico no futuro. Isto é como o [`setTimeout()`](/pt-BR/docs/Web/API/WindowTimers/setTimeout) e [`setInterval()`](/pt-BR/docs/Web/API/WindowTimers/setInterval), exceto essas funções não funcionam no segundo plano com páginas carregadas sob demanda.
+Executar um código agendado para um horário específico no futuro. Isto é como o [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTimeout) e [`setInterval()`](/pt-BR/docs/Web/API/Window/setInterval), exceto essas funções não funcionam no segundo plano com páginas carregadas sob demanda.
 
 Para usar estas API você precisa ter a "alarms" [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 

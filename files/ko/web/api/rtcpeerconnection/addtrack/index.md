@@ -181,7 +181,7 @@ pc.setRemoteDescription(desc)
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)
 - [Introduction to the Real-time Transport Protocol (RTP)](/ko/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.ontrack")}}
 - {{DOMxRef("RTCPeerConnection/track_event", "track")}}

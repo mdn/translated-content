@@ -23,15 +23,12 @@ unicode-range: U+0025-00FF, U+4??; /* plusieurs valeurs             */
 Une valeur de type `<unicode-range>` peut se présenter de trois façons différentes&nbsp;:
 
 - Un seul point de code
-
   - : Par exemple `U+26`
 
 - Un intervalle spécifique de points de code
-
   - : Par exemple `U+0025-00FF` indique que l'intervalle contient tous les caractères contenus entre les points de code `U+0025` et `U+00FF`
 
 - Un intervalle de substitution indiqué par `?`
-
   - : Un intervalle de points de code Unicode indiqué par une valeur contenant un point d'interrogation. Ainsi, `U+4??` signifie «&nbsp;tous les caractères contenus dans l'intervalle entre les points de code `U+400` et `U+4FF`&nbsp;».
 
 ## Description
@@ -48,7 +45,7 @@ Le but de ce descripteur est de segmenter les ressources liées aux polices afin
 
 ## Exemples
 
-Dans cet exemple, on crée un élément HTML [`<div>`](/fr/docs/Web/HTML/Element/div) pour lequel on veut que l'esperluette soit mise en forme avec une police différente. Pour que le résultat soit apparent, on utilisera une police sans empattement pour le texte (_Helvetica_) et une police avec des empattements (_Times New Roman_) pour l'esperluette.
+Dans cet exemple, on crée un élément HTML [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) pour lequel on veut que l'esperluette soit mise en forme avec une police différente. Pour que le résultat soit apparent, on utilisera une police sans empattement pour le texte (_Helvetica_) et une police avec des empattements (_Times New Roman_) pour l'esperluette.
 
 ### HTML
 
@@ -58,7 +55,7 @@ Dans cet exemple, on crée un élément HTML [`<div>`](/fr/docs/Web/HTML/Element
 
 ### CSS
 
-Dans la feuille de style CSS, on définit une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) qui n'inclue qu'un seul caractère. Cela signifie que seul ce caractère sera affiché avec cette police. On aurait également pu encadrer l'esperluette dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) et appliquer une autre règle sur cet élément, mais on aurait alors eu un balisage plus lourd et une règle spécifique en plus sur la feuille de style.
+Dans la feuille de style CSS, on définit une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) qui n'inclue qu'un seul caractère. Cela signifie que seul ce caractère sera affiché avec cette police. On aurait également pu encadrer l'esperluette dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) et appliquer une autre règle sur cet élément, mais on aurait alors eu un balisage plus lourd et une règle spécifique en plus sur la feuille de style.
 
 ```css
 @font-face {
@@ -92,7 +89,7 @@ div {
 - [`font-stretch`](/fr/docs/Web/CSS/@font-face/font-stretch)
 - [`font-style`](/fr/docs/Web/CSS/@font-face/font-style)
 - [`font-weight`](/fr/docs/Web/CSS/@font-face/font-weight)
-- [`font-variant`](/fr/docs/Web/CSS/@font-face/font-variant)
+- [`font-variant`](/fr/docs/Web/CSS/@font-face)
 - [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings)
 - [`font-variation-settings`](/fr/docs/Web/CSS/@font-face/font-variation-settings)
 - [`src`](/fr/docs/Web/CSS/@font-face/src)

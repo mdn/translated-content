@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 
 国際化対応 (i18n) した拡張機能は、ロケール固有のメッセージを提供する少なくとも 1 個の `messages.json` というファイルを持っています。このページでは、`messages.json` の書式を説明します。
 
-> **メモ:** **補足**: 拡張機能を国際化する方法についての情報は、[i18n](/ja/Add-ons/WebExtensions/WebExtension_i18n) ガイドを参照してください。
+> [!NOTE]
+> **補足**: 拡張機能を国際化する方法についての情報は、[i18n](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtension_i18n) ガイドを参照してください。
 
 ## messages.json example
 
@@ -64,7 +65,7 @@ name には、次の文字が使用できます:
 - @
 
 > [!NOTE]
-> @@ で始まる name を定義してはいけません。この名前は [事前定義されたメッセージ](/ja/Add-ons/WebExtensions/Internationalization#Predefined_messages) で予約されています。
+> @@ で始まる name を定義してはいけません。この名前は [事前定義されたメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#predefined_messages) で予約されています。
 
 ### message
 
@@ -107,7 +108,7 @@ name には、次の文字が使用できます:
 
 #### content
 
-"content" アイテムは、placeholder の内容を定義します。これは、"My placeholder" などハードコードされた文字列にすることができますが、{{WebExtAPIRef("i18n.getMessage()")}} 呼び出しから取得した値も含められます。詳しい情報は、[JavaScript からメッセージ文字列を取得する](/ja/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript) を参照してください。
+"content" アイテムは、placeholder の内容を定義します。これは、"My placeholder" などハードコードされた文字列にすることができますが、{{WebExtAPIRef("i18n.getMessage()")}} 呼び出しから取得した値も含められます。詳しい情報は、[JavaScript からメッセージ文字列を取得する](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#retrieving_message_strings_from_javascript) を参照してください。
 
 #### example
 

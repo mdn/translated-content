@@ -31,7 +31,7 @@ var promise = HTMLImageElement.decode();
 
 ## 例子
 
-以下例子展示了如何使用 `decode()` 方法来控制一个图像插入 DOM 的时机。若不使用 {{domxref('Promise')}} 返回方法，你将在图像的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理函数中将图像加入 DOM 中，通过 [`error`](/zh-CN/docs/Web/API/Element/error_event) 事件处理函数处理错误。
+以下例子展示了如何使用 `decode()` 方法来控制一个图像插入 DOM 的时机。若不使用 {{domxref('Promise')}} 返回方法，你将在图像的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理函数中将图像加入 DOM 中，通过 [`error`](/zh-CN/docs/Web/API/HTMLElement/error_event) 事件处理函数处理错误。
 
 ```js
 const img = new Image();

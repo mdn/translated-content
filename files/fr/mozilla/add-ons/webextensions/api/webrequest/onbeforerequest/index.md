@@ -12,13 +12,13 @@ Pour annuler ou rediriger la requête, incluez d'abord `"blocking"` dans l'argum
 - pour annuler la demande, inclure une propriété `cancel` avec la valeur `true`.
 - pour rediriger la requête, inclure une propriété `redirectUrl` avec la valeur fixée à l'URL vers laquelle vous voulez rediriger.
 
-Si une extension veut rediriger une URL publique (par exemple HTTPS) ver une [page d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages), de l'extension doit contenir une clé [web_accessible_resources](/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
+Si une extension veut rediriger une URL publique (par exemple HTTPS) ver une [page d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), de l'extension doit contenir une clé [web_accessible_resources](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
 
 Lorsque plusieurs gestionnaires de blocage modifient une requête, une seule série de modifications prend effet. Les redirections et les annulations ont la même priorité. Ainsi, si vous avez annulé une requête, vous pouvez voir une autre requête avec la même `requestId` à nouveau si un autre gestionnaire de blocage a redirigé la requête.
 
-A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
+A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
 
-Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
+Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans votre manifest.json.
 
 ## Syntaxe
 
@@ -46,20 +46,16 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
-
     - `details`
       - : [`object`](#details). Détails sur la demande. Voir les [`details`](#details) ci-dessous.
 
-    Les retours : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si `"blocking"`est spécifié dans le paramètre `extraInfoSpec`, l'auditeur d'événement doit retourner un objet `BlockingResponse`, et peut définir soit son `annulation`, soit ses propriétés `redirectUrl`. A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`,l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
+    Les retours : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si `"blocking"`est spécifié dans le paramètre `extraInfoSpec`, l'auditeur d'événement doit retourner un objet `BlockingResponse`, et peut définir soit son `annulation`, soit ses propriétés `redirectUrl`. A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`,l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
 - `extraInfoSpec`{{optional_inline}}
-
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
-
     - `"blocking"`: rendre la requête synchrone, de sorte que vous pouvez annuler ou rediriger la requête
     - `"requestBody"`: include `requestBody` dans l'objet `details` transmis à l'auditeur
 
@@ -70,9 +66,7 @@ Les événements ont trois fonctions :
 - `documentUrl`
   - : `string`. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https\://example.com" contient une image ou un iframe, alors le `documentUrl` pour l'image ou l'iframe sera "https\://example.com". Pour un document de niveau supérieur, `documentUrl` n'est pas défini.
 - `frameAncestors`
-
   - : `array`. Contient des informations pour chaque document dans la hiérarchie des cadres jusqu'au document de niveau supérieur. Le premier élément du tableau contient des informations sur le parent immédiat du document demandé, et le dernier élément contient des informations sur le document de niveau supérieur. Si la charge est réellement pour le document de niveau supérieur, alors ce tableau est vide.
-
     - `url`
       - : `string`. URL à partir de laquelle le document a été chargé.
     - `frameId`
@@ -83,7 +77,6 @@ Les événements ont trois fonctions :
 - `method`
   - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
 - `originUrl`
-
   - : `string`. URL de la ressource qui a déclenché la requête. Par exemple, si "https\://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors `originUrl` de la requête résultante est "https\://example.com".
 
     L'`originUrl` est souvent mais pas toujours la même chose que `documentUrl`.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le `documentUrl` pour la requête résultante sera le document parent de l'iframe, mais l'`originUrl` sera l'URL du document dans l'iframe qui contenait le lien.
@@ -91,17 +84,13 @@ Les événements ont trois fonctions :
 - `parentFrameId`
   - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
 - `proxyInfo`
-
   - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
-
     - `host`
       - : `string`. Le nom d'hôte du serveur proxy.
     - `port`
       - : `integer`. Le numéro de port du serveur proxy.
     - `type`
-
       - : `string`. Le type de serveur proxy. L'un des :
-
         - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
         - "https": proxy HTTP sur connexion TLS vers proxy
         - "socks": SOCKS v5 proxy
@@ -117,13 +106,10 @@ Les événements ont trois fonctions :
       - : `integer`. Délai d'attente de basculement en secondes. Si la connexion par proxy échoue, le proxy ne sera pas utilisé à nouveau pendant cette période.
 
 - `requestBody`{{optional_inline}}
-
   - : `object`. Contient les données du corps de la requête HTTP. Seulement si `extraInfoSpec` contient `"requestBody"`.
-
     - `error`{{optional_inline}}
       - : `string`. Ce paramètre est défini si des erreurs ont été rencontrées lors de l'obtention des données du corps de la demande.
     - `formData`{{optional_inline}}
-
       - : `object`. Cet objet est présent si la méthode de requête est POST et que le corps est une séquence de paires clé-valeur codées en UTF-8 sous la forme "multipart/form-data" ou "application/x-www-form-urlencoded".
 
         Il s'agit d'un dictionnaire dans lequel chaque clé contient la liste de toutes les valeurs de cette clé. Par exemple: `{'key': ['value1', 'value2']}`. Si les données sont d'un autre type de support, ou si elles sont malformées, l'objet n'est pas présent.
@@ -152,7 +138,7 @@ En ce qui concerne la résolution DNS lorsque BlockingResponse est utilisé avec
 
 ## Exemples
 
-Ce code enregistre l'URL de chaque ressource demandée qui correspond au modèle [\<all_urls>](/fr/Add-ons/WebExtensions/Match_patterns#<all_urls>) :
+Ce code enregistre l'URL de chaque ressource demandée qui correspond au modèle [\<all_urls>](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#<all_urls>) :
 
 ```js
 function logURL(requestDetails) {
@@ -212,7 +198,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Ce code est exactement comme l'exemple précédent, sauf que l'auditeur traite la requête de manière asynchrone. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui définit une minuterie et se résout avec l'URL de redirection lorsque la minuterie expire :
+Ce code est exactement comme l'exemple précédent, sauf que l'auditeur traite la requête de manière asynchrone. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui définit une minuterie et se résout avec l'URL de redirection lorsque la minuterie expire :
 
 ```js
 // match pattern for the URLs to redirect
@@ -247,8 +233,6 @@ browser.webRequest.onBeforeRequest.addListener(
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

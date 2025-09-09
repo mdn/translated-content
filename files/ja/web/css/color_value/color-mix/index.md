@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c754ecfaf2d24aa9e130efde70c743f03421db40
 ---
 
-{{CSSRef}}
-
 **`color-mix()`** 関数記法は 2 つの {{cssxref("&lt;color&gt;")}} 値を採り、指定された色空間の指定された量で混合した結果を返します。
 
 ## 構文
@@ -23,17 +21,13 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 - 関数記法: `color-mix(method, color1[ p1], color2[ p2])`
 
 - `method`
-
   - : {{CSSXref("&lt;color-interpolation-method&gt;")}} で、色補間に使用する色空間を指定します。
 
 - `color1`, `color2`
-
   - : 混合する {{CSSXref("&lt;color&gt;")}} 値です。
 
 - `p1`, `p2` {{optional_inline}}
-
   - : {{CSSXref("&lt;percentage&gt;")}} 値で `0%` から `100%` までであり、混合する各色の量を指定します。これらは以下のように正規化されます。
-
     - `p1` と `p2` の両方が省略された場合は、 `p1 = p2 = 50%` となります。
     - `p1` が省略されたら、 `p1 = 100% - p2` となります。
     - `p2` が省略されたら、 `p2 = 100% - p1` となります。

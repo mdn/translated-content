@@ -7,7 +7,7 @@ slug: Web/API/HTMLElement/click
 
 La méthode **`HTMLElement.click()`** simule un clic de souris sur un élément.
 
-Lorsque `click()` est appelée sur les éléments qui la prenne en charge (par exemple un élément [`<input>`](/fr/docs/Web/HTML/Element/Input)), elle déclenche l'évènement `click` de cet élément. L'évènement remonte alors vers les éléments situés plus haut dans l'arbre du document (ou le long de la chaîne d'évènement) et déclenche leurs évènements `click` respectifs.
+Lorsque `click()` est appelée sur les éléments qui la prenne en charge (par exemple un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)), elle déclenche l'évènement `click` de cet élément. L'évènement remonte alors vers les éléments situés plus haut dans l'arbre du document (ou le long de la chaîne d'évènement) et déclenche leurs évènements `click` respectifs.
 
 ## Syntaxe
 
@@ -59,6 +59,6 @@ function maFonction() {
 ## Voir aussi
 
 - Les gestionnaires d'évènements associés&nbsp;:
-  - [`GlobalEventHandlers.onclick`](/fr/docs/Web/API/GlobalEventHandlers/onclick)
-  - [`GlobalEventHandlers.ondblclick`](/fr/docs/Web/API/GlobalEventHandlers/ondblclick)
-  - [`GlobalEventHandlers.onauxclick`](/fr/docs/Web/API/GlobalEventHandlers/onauxclick)
+  - [`GlobalEventHandlers.onclick`](/fr/docs/Web/API/Element/click_event)
+  - [`GlobalEventHandlers.ondblclick`](/fr/docs/Web/API/Element/dblclick_event)
+  - [`GlobalEventHandlers.onauxclick`](/fr/docs/Web/API/Element/auxclick_event)

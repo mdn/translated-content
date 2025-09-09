@@ -3,11 +3,23 @@ title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 ---
 
-{{jsSidebar("Objects")}}
-
 **`eval()`** 函数会将传入的字符串当做 JavaScript 代码进行执行。
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## 语法
 
@@ -46,7 +58,7 @@ var expression = new String("2 + 2");
 eval(expression.toString());
 ```
 
-如果你间接的使用 `eval()`，比如通过一个引用来调用它，而不是直接的调用 `eval`。从 [ECMAScript 5](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) 起，它工作在全局作用域下，而不是局部作用域中。这就意味着，例如，下面的代码的作用声明创建一个全局函数，并且 `eval` 中的这些代码在执行期间不能在被调用的作用域中访问局部变量。
+如果你间接的使用 `eval()`，比如通过一个引用来调用它，而不是直接的调用 `eval`。从 [ECMAScript 5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) 起，它工作在全局作用域下，而不是局部作用域中。这就意味着，例如，下面的代码的作用声明创建一个全局函数，并且 `eval` 中的这些代码在执行期间不能在被调用的作用域中访问局部变量。
 
 ```js
 function test() {
@@ -223,7 +235,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener('click', function() { ... } , false);
 ```
 
-[闭包](/zh-CN/docs/Web/JavaScript/Closures) 也有助于创建参数化函数而不用连接字符串。
+[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures) 也有助于创建参数化函数而不用连接字符串。
 
 ### 解析 JSON（将字符串转化为 JavaScript 对象）
 
@@ -314,4 +326,4 @@ var fct2 = eval(fctStr2); // 返回一个函数
 ## 参见
 
 - [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [WebExtension：在 content script 中使用 eval](/zh-CN/Add-ons/WebExtensions/Content_scripts#在_content_script_中使用_eval)
+- [WebExtension：在 content script 中使用 eval](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#在_content_script_中使用_eval)

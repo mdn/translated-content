@@ -45,7 +45,7 @@ _親インターフェイスである {{domxref("EventTarget")}} から継承し
 
 ## インスタンスメソッド
 
-_親インターフェースである {{domxref("EventTarget")}} から継承したメソッドも実装しています。_
+_親インターフェイスである {{domxref("EventTarget")}} から継承したメソッドも実装しています。_
 
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
   - : {{domxref("Notification")}} オブジェクトの配列に解決される {{jsxref("Promise")}} を返します。

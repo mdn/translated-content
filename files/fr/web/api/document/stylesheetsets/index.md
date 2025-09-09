@@ -39,7 +39,7 @@ La liste des jeux de feuilles de styles disponibles est construite par énuméra
 
 ## Spécifications
 
-- [HTML5 : Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [HTML5 : Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
 
 ## Voir aussi
 

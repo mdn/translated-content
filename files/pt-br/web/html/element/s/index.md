@@ -7,7 +7,19 @@ slug: Web/HTML/Element/s
 
 O **elemento HTML `<s>`** renderiza um texto tachado ou uma linha cortando o texto. Use o elemento `<s>` para representar texto que não sejam relevante ou que não estam corretos. Não é apropriado o uso do `<s>` indicar edições no texto; para indicar edições no texto utilize {{HTMLElement("del")}} e {{HTMLElement("ins")}}, que são elementos mais apropriados.
 
-{{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p><s>There will be a few tickets available at the box office tonight.</s></p>
+
+<p>SOLD OUT!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+s {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -106,7 +118,7 @@ s::after {
 Algumas pessoas que usam leitores de tela que desativam deliberadamente o anúncio de conteúdo que criados com muita verbosidade. Por esse motivo, é importante não abusar dessa técnica e aplicá-la apenas nas situações em que o desconhecimento do conteúdo foi eliminado e que afetaria negativamente a compreensão.
 
 - [Nota curta sobre como deixar sua marca (mais acessível) | O Grupo Paciello](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Ajustando estilos de texto | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Ajustando estilos de texto | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Especificações
 

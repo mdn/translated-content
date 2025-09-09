@@ -3,19 +3,17 @@ title: Firefox 65 для разработчиков
 slug: Mozilla/Firefox/Releases/65
 ---
 
-{{FirefoxSidebar}}
-
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 29 января 2019 года.
 
 ## Изменения для веб-разработчиков
 
 ### Инструменты разработчика
 
-- Включён по умолчанию [инспектор Flexbox](/ru/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts).
-- [Отладчик JavaScript](/ru/docs/Tools/Debugger) получил поддержку точек останова XHR ([Firefox bug 821610](https://bugzil.la/821610)).
-- Щелчок правой кнопкой по элементу дерева доступности позволяет [вывести его в JSON-формате](/ru/docs/Tools/Accessibility_inspector#Вывод_дерева_доступности_в_JSON-формате).
-- Если фон текста является сложным (например, градиент или сложное изображение), инструмент [цветового контраста](/ru/docs/Tools/Инспектор_доступности#Цветовой_контраст) в инспекторе доступности покажет диапазон значений цветового контраста.
-- Во вкладку «Заголовки» [сетевого монитора](/ru/docs/Tools/Network_Monitor) добавлено отображение политики Referrer для выбранного запроса ([Firefox bug 1496742](https://bugzil.la/1496742)).
+- Включён по умолчанию [инспектор Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html).
+- [Отладчик JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) получил поддержку точек останова XHR ([Firefox bug 821610](https://bugzil.la/821610)).
+- Щелчок правой кнопкой по элементу дерева доступности позволяет [вывести его в JSON-формате](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#вывод_дерева_доступности_в_json-формате).
+- Если фон текста является сложным (например, градиент или сложное изображение), инструмент [цветового контраста](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#цветовой_контраст) в инспекторе доступности покажет диапазон значений цветового контраста.
+- Во вкладку «Заголовки» [сетевого монитора](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) добавлено отображение политики Referrer для выбранного запроса ([Firefox bug 1496742](https://bugzil.la/1496742)).
 - При просмотре трассировки стека (например, в журналах консоли или отладчике JavaScript) вызовы методов фреймворка распознаются и по умолчанию сворачиваются, что облегчает размещение вашего кода.
 - Подобно традиционным терминалам теперь можно использовать обратный поиск в истории консоли JavaScript(
 
@@ -54,14 +52,13 @@ slug: Mozilla/Firefox/Releases/65
 
 - События теперь отправляются на отключённые элементы HTML, то есть элементы {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}} и {{htmlelement("textarea")}} с установленными атрибутами `disabled` ([Firefox bug 329509](https://bugzil.la/329509)).
 - Как в Chrome и Safari, удаление атрибута `src` у элемента {{htmlelement("iframe")}} загружает в него `about:blank` ([Firefox bug 1501418](https://bugzil.la/1501418)) . До этого удаление `src` не влияло на содержимое `iframe`.
-- Добавлена поддержка атрибута [`referrerpolicy`](/ru/docs/Web/HTML/Element/script#referrerpolicy) у элементов {{htmlelement("script")}} ([Firefox bug 1460920](https://bugzil.la/1460920)).
+- Добавлена поддержка атрибута [`referrerpolicy`](/ru/docs/Web/HTML/Reference/Elements/script#referrerpolicy) у элементов {{htmlelement("script")}} ([Firefox bug 1460920](https://bugzil.la/1460920)).
 
 ### CSS
 
 - Убран префикс у значения `crisp-edges` свойства {{cssxref("image-rendering")}} ([Firefox bug 1496617](https://bugzil.la/1496617)).
 - Значение `auto` {{cssxref("scrollbar-color")}} теперь разрешается в `auto`, а не в два цвета ([Firefox bug 1501418](https://bugzil.la/1501418)).
 - Реализована поддержка свойств `break-*` ([Firefox bug 775618](https://bugzil.la/775618)):
-
   - {{cssxref("break-before")}} → {{cssxref("page-break-before")}}.
   - {{cssxref("break-after")}} → {{cssxref("page-break-after")}}.
   - {{cssxref("break-inside")}} → {{cssxref("page-break-inside")}}.
@@ -69,13 +66,11 @@ slug: Mozilla/Firefox/Releases/65
 - Реализована поддержка значения `anywhere` у свойства {{cssxref("overflow-wrap")}} ([Firefox bug 1505786](https://bugzil.la/1505786)).
 - Добавлены новые ключевые слова `jump-start`, `jump-end`, `jump-none` и `jump-both`, используемые внутри [временной функции steps()](</ru/docs/Web/CSS/single-transition-timing-function#The_steps()_class_of_timing_functions>) ([Firefox bug 1496619](https://bugzil.la/1496619)). Функция `frames()`, ранее использовавшаяся для этого, объявлена устаревшей.
 - Для совместимости с прочими браузерами добавлены несколько новых значений {{cssxref("appearance", "-webkit-appearance")}}. В частности:
-
   - `meter`, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("meter")}}; существующее значение `meterbar` теперь является псевдонимом `meter` ([Firefox bug 1501483](https://bugzil.la/1501483)).
   - `progress-bar`, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("progress")}}; существующее значение `progressbar` теперь является псевдонимом `progress-bar` ([Firefox bug 1501506](https://bugzil.la/1501506)).
   - `textarea`, которое отныне используется в качестве значения по умолчанию для элементов {{htmlelement("textarea")}}; существующее значение `textfield-multiline` теперь является псевдонимом `textarea` ([Firefox bug 1507905](https://bugzil.la/1507905))
 
 - Изменено поведение {{cssxref("user-select")}}, чтобы достичь сходства с прочими браузерами ([Firefox bug 1506547](https://bugzil.la/1506547)). Конкретно:
-
   - `user-select: all`, установленное на элемент, больше не перекрывает значения `user-select` дочерних элементов. Пример:
 
     ```html
@@ -126,7 +121,7 @@ _Без изменений._
 #### События DOM
 
 - За одно событие разрешено не более одного вызова {{domxref("Window.open()")}} ([Firefox bug 675574](https://bugzil.la/675574)).
-- События [`keyup`](/ru/docs/Web/Events/keyup) и [`keydown`](/ru/docs/Web/Events/keydown) в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ([Firefox bug 354358](https://bugzil.la/354358)).
+- События [`keyup`](/ru/docs/Web/API/Element/keyup_event) и [`keydown`](/ru/docs/Web/API/Element/keydown_event) в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ([Firefox bug 354358](https://bugzil.la/354358)).
 
 #### Веб-воркеры
 
@@ -135,7 +130,7 @@ _Без изменений._
 #### Fetch и сервис-воркеры
 
 - Метод {{domxref("Response.redirect()")}} теперь корректно выбрасывает `TypeError`, если в качестве первого параметра указан невалидный URL ([Firefox bug 1503276](https://bugzil.la/1503276)).
-- Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными [MIME-типом JavaScript](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
+- Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными [MIME-типом JavaScript](/ru/docs/Web/HTTP/Guides/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
 - Добавлена поддержка свойств {{domxref("FetchEvent.replacesClientId")}} и {{domxref("FetchEvent.resultingClientId")}} ([Firefox bug 1264177](https://bugzil.la/1264177)).
 - Реализована поддержка {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} и {{domxref("ServiceWorkerContainer.onmessageerror")}} ([Firefox bug 1399446](https://bugzil.la/1399446)).
 - Заголовок {{httpheader("Origin")}} больше не устанавливается у запросов Fetch с методом {{HTTPMethod("HEAD")}} или {{HTTPMethod("GET")}} ([Firefox bug 1508661](https://bugzil.la/1508661)).
@@ -151,11 +146,11 @@ _Без изменений._
 
 #### Удалено
 
-- Отключена [мутация событий](/ru/docs/Web/Guide/Events/Mutation_events) в теневых деревьях ([Firefox bug 1489858](https://bugzil.la/1489858)).
+- Отключена [мутация событий](/ru/docs/Web/API/MutationEvent) в теневых деревьях ([Firefox bug 1489858](https://bugzil.la/1489858)).
 - Удалено нестандартное свойство `currentTime` {{domxref("MediaStream")}} ([Firefox bug 1502927](https://bugzil.la/1502927)).
 - Удалены настройки `dom.webcomponents.shadowdom.enabled` и `dom.webcomponents.customelements.enabled` — больше нельзя отключить поддержку Shadow DOM и Custom Elements через `about:config` ([Firefox bug 1503019](https://bugzil.la/1503019)).
 - Удалено нестандартное событие DOM `text`, срабатывавшее, чтобы уведомить пользовательский интерфейс редактора браузера о строках данных композиции IME и диапазоне выбора ([Firefox bug 1288640](https://bugzil.la/1288640)).
-- Событие {{event("keypress")}} больше не срабатывает для [непечатаемых клавиш](</ru/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)) за исключением клавиши&#x20;
+- Событие [`keypress`](/ru/docs/Web/API/Element/keypress_event) больше не срабатывает для [непечатаемых клавиш](</ru/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)) за исключением клавиши&#x20;
 
   <kbd>Enter</kbd>
 
@@ -206,8 +201,7 @@ _Без изменений._
 
 ### Прочее
 
-- Добавлена поддержка изображений в формате [WebP](/ru/docs/Glossary/webp) ([Firefox bug 1294490](https://bugzil.la/1294490)).
-
+- Добавлена поддержка изображений в формате [WebP](/ru/docs/Glossary/WebP) ([Firefox bug 1294490](https://bugzil.la/1294490)).
   - Кроме того, для улучшения кросс-браузерной совместимости MIME-тип WebP (`image/webp`) был добавлен в стандартный заголовок HTTP-запроса {{httpheader ("Accept")}} для файлов HTML ([Firefox bug 1507691](https://bugzil.la/1507691)).
 
 ## Изменения для разработчиков дополнений
@@ -217,7 +211,6 @@ _Без изменений._
 #### Вкладки
 
 - {{WebExtAPIRef("tabs", "tabs API", "", "1")}} обзавёлся поддержкой наследников вкладок — вкладке можно назначить ID вкладки-наследника, которая станет активной, когда первая вкладка закроется ([Firefox bug 1500479](https://bugzil.la/1500479), см. также [эту запись в блоге](https://qiita.com/piroor/items/ea7e727735631c45a366) для получения подробных сведений). В частности:
-
   - Тип {{WebExtAPIRef("tabs.Tab")}} получил свойство `successorId`, используемое для хранения/получения ID вкладки-наследника.
   - Колбэк обработчика событий {{WebExtAPIRef("tabs.onActivated")}} получил новый параметр, `previousTabId`, содержащий ID предыдущей активированной вкладки, если она всё ещё открыта.
   - Объект `updateProperties` функции {{WebExtAPIRef("tabs.update()")}} обзавёлся новым свойством `successorTabId`, которое служит для его обновления.

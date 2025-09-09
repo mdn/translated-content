@@ -66,4 +66,4 @@ Voir la page sur [`BaseAudioContext.createGain()`](/fr/docs/Web/API/BaseAudioCon
 
 ## Voir aussi
 
-- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

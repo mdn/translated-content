@@ -20,7 +20,6 @@ var altEnabled = touchEvent.altKey;
 ### Возвращаемое значение
 
 - `altEnabled`
-
   - : `true` если клавиша&#x20;
 
     <kbd>alt</kbd>
@@ -31,7 +30,7 @@ var altEnabled = touchEvent.altKey;
 
 Данный пример демонстрирует доступ к свойствам клавиш-модификаторов события {{domxref("TouchEvent")}}: {{domxref("TouchEvent.altKey")}}, {{domxref("TouchEvent.ctrlKey")}}, {{domxref("TouchEvent.metaKey")}} и {{domxref("TouchEvent.shiftKey")}}.
 
-В фрагменте кода ниже обработчик события {{event("touchstart")}} логирует состояние клавиш-модификаторов события.
+В фрагменте кода ниже обработчик события [`touchstart`](/ru/docs/Web/API/Element/touchstart_event) логирует состояние клавиш-модификаторов события.
 
 ```js
 someElement.addEventListener(

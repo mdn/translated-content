@@ -9,7 +9,24 @@ l10n:
 
 **`unicode`** 접근자 속성은 {{jsxref("RegExp")}} 인스턴스의 속성으로, 이 정규 표현식에 `u` 플래그가 사용되었는지 여부를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.unicode", "taller")}}
+
+```js interactive-example
+const regex1 = new RegExp("\u{61}");
+const regex2 = new RegExp("\u{61}", "u");
+
+console.log(regex1.unicode);
+// Expected output: false
+
+console.log(regex2.unicode);
+// Expected output: true
+
+console.log(regex1.source);
+// Expected output: "a"
+
+console.log(regex2.source);
+// Expected output: "a"
+```
 
 ## 설명
 

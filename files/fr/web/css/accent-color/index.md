@@ -5,7 +5,7 @@ slug: Web/CSS/accent-color
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`accent-color`** définit la couleur d'accentuation ({{Glossary("accent")}}) des éléments. Une accentuation est présente sur des éléments HTML tels que des {{HTMLElement("input")}} de type [`checkbox`](/fr/docs/Web/HTML/Element/input/checkbox) ou [`radio`](/fr/docs/Web/HTML/Element/input/radio).
+La propriété [CSS](/fr/docs/Web/CSS) **`accent-color`** définit la couleur d'accentuation ({{Glossary("accent")}}) des éléments. Une accentuation est présente sur des éléments HTML tels que des {{HTMLElement("input")}} de type [`checkbox`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) ou [`radio`](/fr/docs/Web/HTML/Reference/Elements/input/radio).
 
 ## Syntaxe
 
@@ -82,6 +82,6 @@ input.custom {
 ## Voir aussi
 
 - L'élément {{HTMLElement("input")}}
-- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 - Le type de donnée {{cssxref("&lt;color&gt;")}}
 - Les autres propriétés relatives aux couleurs&nbsp;: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}

@@ -5,11 +5,24 @@ l10n:
   sourceCommit: 145e8c316fcdd8f67f3595fc52b0bbfacf7b949d
 ---
 
-{{jsSidebar("Operators")}}
+
 
 **幂赋值**（**`**=`**）对两个操作数执行[幂运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)，并将结果赋给左操作数。
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation assignment operator")}}
+
+```js interactive-example
+let a = 3;
+
+console.log((a **= 2));
+// Expected output: 9
+
+console.log((a **= 0));
+// Expected output: 1
+
+console.log((a **= 'hello'));
+// Expected output: NaN
+```
 
 ## 语法
 

@@ -16,9 +16,7 @@ isClosed = windowRef.closed;
 ```
 
 - `isClosed`
-
   - : Um booleano. Valores possíveis:
-
     - `true`: A janela foi fechada.
     - `false`: A janela está aberta.
 
@@ -26,7 +24,7 @@ isClosed = windowRef.closed;
 
 ### Mudar a URL de uma janela a partir de um popup
 
-O seguinte exemplo demonstra com uma janela de popup pode alterar a URL da janela que abriu ela. Antes de tentarmos mudar a URL da janela que a abriu, verificamos se a janela atual tem uma janela pai que a abriu usando a propriedade [window.opener](/pt-BR/docs/DOM/window.opener) e que esta não está fechada:
+O seguinte exemplo demonstra com uma janela de popup pode alterar a URL da janela que abriu ela. Antes de tentarmos mudar a URL da janela que a abriu, verificamos se a janela atual tem uma janela pai que a abriu usando a propriedade [window.opener](/pt-BR/docs/Web/API/Window/opener) e que esta não está fechada:
 
 ```js
 // Verifique se o opener existe e não está fechado

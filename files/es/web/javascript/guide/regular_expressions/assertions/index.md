@@ -7,7 +7,23 @@ slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 
 Las aserciones incluyen límites, que indican el comienzo y el final de líneas y palabras, y otros patrones que indican de alguna manera que el reconocimiento es posible (incluidas las expresiones anticipadas, condicionales e inversas).
 
-{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp Assertions", "taller")}}
+
+```js interactive-example
+const text = "A quick fox";
+
+const regexpLastWord = /\w+$/;
+console.log(text.match(regexpLastWord));
+// Expected output: Array ["fox"]
+
+const regexpWords = /\b\w+\b/g;
+console.log(text.match(regexpWords));
+// Expected output: Array ["A", "quick", "fox"]
+
+const regexpFoxQuality = /\w+(?= fox)/;
+console.log(text.match(regexpFoxQuality));
+// Expected output: Array ["quick"]
+```
 
 ## Tipos
 
@@ -201,7 +217,6 @@ Para obtener información sobre la compatibilidad del navegador, consulta la {{J
 ## Ve también
 
 - {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
-
   - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
   - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
   - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}

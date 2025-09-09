@@ -21,7 +21,7 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet qui a les propriétés suivantes :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet qui a les propriétés suivantes :
 
 - **`name`**: Valeur de chaîne représentant le nom du navigateur, par exemple "Firefox".
 - **`vendor`**: Valeur de chaîne représentant le fournisseur du navigateur, par exemple "Mozilla".
@@ -48,5 +48,3 @@ gettingInfo.then(gotBrowserInfo);
 {{WebExtExamples}}
 
 > [!NOTE]
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

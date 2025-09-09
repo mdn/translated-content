@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 
 O método **`toString()`** retorna uma cadeia de caracteres (_string_) representando o objeto {{jsxref("Date")}} especificado.
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.toString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toString());
+// Expected output: "Tue Aug 19 1975 23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Sintaxe
 
@@ -39,14 +47,12 @@ Instâncias de {{jsxref("Date")}} herdam o método `toString()` de {{jsxref("Dat
 - espaço
 - A _string_ "GMT"
 - Sinal do deslocamento do fuso horário, pode ser:
-
   - "+" para deslocamentos positivos (0 ou maior)
   - "-" para deslocamentos negativos (menores que 0)
 
 - Dois dígitos da hora do deslocamento, e.g. "14"
 - Dois dígitos dos minutos do deslocamento, e.g. "00"
 - Opcionalmente, um nome de fuso horário consistindo de:
-
   - espaço
   - parênteses esquerdo, i.e. "("
   - Uma representação de _string_ dependente da implementação do fuso horário, que pode ser uma abreviação ou o nome completo (não há um padrão para nomes ou abreviação de fusos horários), e.g. "Line Islands Time" ou "LINT"

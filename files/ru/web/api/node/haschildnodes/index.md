@@ -5,7 +5,7 @@ slug: Web/API/Node/hasChildNodes
 
 {{APIRef("DOM")}}
 
-Метод **`Node.hasChildNodes()`** возвращает {{jsxref("Boolean")}} значение показывающее имеет ли текущий {{domxref("Node")}} [дочерние узлы](/ru/docs/Web/API/Node.childNodes) или нет.
+Метод **`Node.hasChildNodes()`** возвращает {{jsxref("Boolean")}} значение показывающее имеет ли текущий {{domxref("Node")}} [дочерние узлы](/ru/docs/Web/API/Node/childNodes) или нет.
 
 ## Синтаксис
 

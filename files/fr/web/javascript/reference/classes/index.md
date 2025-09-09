@@ -9,7 +9,7 @@ Les classes JavaScript ont été introduites avec ECMAScript 2015. Elles sont un
 
 ## Définir des classes
 
-En réalité, les classes sont juste des [fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions) spéciales. Ainsi, les classes sont définies de la même façon que les fonctions : par déclaration, ou par expression.
+En réalité, les classes sont juste des [fonctions](/fr/docs/Web/JavaScript/Reference/Functions) spéciales. Ainsi, les classes sont définies de la même façon que les fonctions : par déclaration, ou par expression.
 
 ### Les déclarations de classes
 
@@ -26,7 +26,7 @@ class Rectangle {
 
 #### Remontée des déclarations (_hoisting_)
 
-[Les déclarations de fonctions](/fr/docs/Web/JavaScript/Reference/Instructions/function) sont remontées dans le code. En revanche, ce n'est pas le cas pour les déclarations de classes. Ainsi, il est nécessaire de déclarer la classe avant de l'instancier. Dans le cas contraire, on obtient une {{jsxref("ReferenceError")}} :
+[Les déclarations de fonctions](/fr/docs/Web/JavaScript/Reference/Statements/function) sont remontées dans le code. En revanche, ce n'est pas le cas pour les déclarations de classes. Ainsi, il est nécessaire de déclarer la classe avant de l'instancier. Dans le cas contraire, on obtient une {{jsxref("ReferenceError")}} :
 
 ```js example-bad
 const p = new Rectangle(); // ReferenceError
@@ -100,7 +100,7 @@ console.log(carré.area);
 
 ### Méthodes statiques
 
-Le mot-clé [`static`](/fr/docs/Web/JavaScript/Reference/Classes/static) permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport à la classe entière et non par rapport à une [instance](/fr/docs/Web/JavaScript/Introduction_à_JavaScript_orienté_objet#L'instance) donnée (ces méthodes ne peuvent pas être appelées « depuis » une instance). Ces méthodes sont généralement utilisées sous formes d'utilitaires au sein d'applications.
+Le mot-clé [`static`](/fr/docs/Web/JavaScript/Reference/Classes/static) permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport à la classe entière et non par rapport à une [instance](/fr/docs/Learn/JavaScript/Objects#l'instance) donnée (ces méthodes ne peuvent pas être appelées « depuis » une instance). Ces méthodes sont généralement utilisées sous formes d'utilitaires au sein d'applications.
 
 ```js
 class Point {
@@ -336,7 +336,7 @@ console.log(mapped instanceof Array); // true
 
 ## Utiliser super pour la classe parente
 
-Le mot-clé [`super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super) est utilisé pour appeler les fonctions rattachées à un objet parent.
+Le mot-clé [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super) est utilisé pour appeler les fonctions rattachées à un objet parent.
 
 ```js
 class Chat {
@@ -398,7 +398,7 @@ Pour relancer une définition, il faut utiliser le menu Exécuter > Recharger et
 
 ## Voir aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions)
+- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Instructions/class", "Les déclarations de classes","",1)}}
 - {{jsxref("Opérateurs/class", "Les expressions de classes","",1)}}
 - {{jsxref("Opérateurs/super", "super")}}

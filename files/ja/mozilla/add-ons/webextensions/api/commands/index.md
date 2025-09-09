@@ -5,12 +5,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/commands
 
 {{AddonSidebar}}
 
-[`commands` manifest.json キー](/ja/Add-ons/WebExtensions/manifest.json/commands)を使って、登録したコマンドをユーザーが実行するのをリッスンします。
+[`commands` manifest.json キー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)を使って、登録したコマンドをユーザーが実行するのをリッスンします。
 
 ## 型
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : コマンドを表す型。これは [manifest.json の `commands` キー](/ja/Add-ons/WebExtensions/manifest.json/commands)のコマンドで指定された情報が入っています。
+  - : コマンドを表す型。これは [manifest.json の `commands` キー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)のコマンドで指定された情報が入っています。
 
 ## 関数
 
@@ -27,7 +27,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/commands
 {{Compat}} {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> この API は Chromium の [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API に基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

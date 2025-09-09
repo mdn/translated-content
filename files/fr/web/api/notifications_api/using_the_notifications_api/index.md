@@ -27,7 +27,7 @@ Avant qu'une application puisse envoyer une notification, l'utilisatrice ou l'ut
 
 En raison d'abus des notifications par le passé, les équipes des navigateurs web ont commencé à mettre en place des stratégies pour limiter ce problème. Dans la pratique, vous ne devriez demander la permission à une personne uniquement après que celle-ci a interagi avec votre site/application (par exemple en ayant cliqué sur un bouton). Il ne s'agit pas seulement d'une bonne pratique (on ne devrait pas ennuyer les utilisatrices et utilisateurs avec de trop nombreuses notifications indésirées) mais d'une méthode qui sera implémentée par les différents navigateurs&nbsp;: Firefox le fait depuis Firefox 72 et Safari le fait également depuis quelque temps.
 
-De plus, pour Chrome et Firefox, il n'est pas possible de demander la permission d'afficher des notifications à moins que le site soit servi dans un contexte sécurisé (c'est-à-dire avec HTTPS) et il n'est plus possible de demander une telle permission depuis une [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) d'une origine tierce.
+De plus, pour Chrome et Firefox, il n'est pas possible de demander la permission d'afficher des notifications à moins que le site soit servi dans un contexte sécurisé (c'est-à-dire avec HTTPS) et il n'est plus possible de demander une telle permission depuis une [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) d'une origine tierce.
 
 ### Vérifier l'état de la permission
 
@@ -108,7 +108,7 @@ const notification = new Notification("Liste de trucs à faire", {
 
 ## Fermer les notifications
 
-On utilisera la méthode [`close()`](/fr/docs/Web/API/Notification/close) afin de retirer une notification qui n'est plus pertinente (par exemple parce que la personne l'a déjà lue sur la page web s'il s'agit d'une messagerie ou, dans le cas d'un lecteur de musique, si la chanson en cours de lecture a déjà changé). La plupart des navigateurs effacent les notifications après un certain délai (généralement autour de 4 secondes), mais ça ne devrait pas être un souci particulier, car cette tâche est souvent gérée par la personne ou l'agent utilisateur. La fermeture peut également être gérée par le système d'exploitation et les utilisatrices et utilisateurs doivent avoir la main sur ce comportement. D'anciennes versions de Chrome ne retiraient pas les automatiquement les notifications et vous pouvez donc utiliser un [`setTimeout()`](/fr/docs/Web/API/setTimeout) uniquement pour ces versions historiques.
+On utilisera la méthode [`close()`](/fr/docs/Web/API/Notification/close) afin de retirer une notification qui n'est plus pertinente (par exemple parce que la personne l'a déjà lue sur la page web s'il s'agit d'une messagerie ou, dans le cas d'un lecteur de musique, si la chanson en cours de lecture a déjà changé). La plupart des navigateurs effacent les notifications après un certain délai (généralement autour de 4 secondes), mais ça ne devrait pas être un souci particulier, car cette tâche est souvent gérée par la personne ou l'agent utilisateur. La fermeture peut également être gérée par le système d'exploitation et les utilisatrices et utilisateurs doivent avoir la main sur ce comportement. D'anciennes versions de Chrome ne retiraient pas les automatiquement les notifications et vous pouvez donc utiliser un [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout) uniquement pour ces versions historiques.
 
 ```js
 const n = new Notification("Une super chanson");

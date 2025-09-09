@@ -12,13 +12,11 @@ L'API <i lang="en">History</i> permet à un site web d'interagir avec l'historiq
 L'interface principale de cette API est l'interface [`History`](/fr/docs/Web/API/History) qui définit deux ensembles de méthodes&nbsp;:
 
 - Les méthodes pour naviguer vers une page de l'historique&nbsp;:
-
   - [`History.back()`](/fr/docs/Web/API/History/back)
   - [`History.forward()`](/fr/docs/Web/API/History/forward)
   - [`History.go()`](/fr/docs/Web/API/History/go)
 
 - Les méthodes pour modifier l'historique de la session&nbsp;:
-
   - [`History.pushState()`](/fr/docs/Web/API/History/pushState)
   - [`History.replaceState()`](/fr/docs/Web/API/History/replaceState)
 
@@ -26,7 +24,7 @@ Dans ce guide, nous nous intéresserons surtout au deuxième groupe, dont le com
 
 La méthode `pushState()` permet d'ajouter une nouvelle entrée dans l'historique. La méthode `replaceState()` met à jour l'historique de la session pour la page courante. Ces deux méthodes prennent un paramètre `state` qui peut contenir n'importe quel [objet sérialisable](/fr/docs/Glossary/Serializable_object). Lorsqu'on utilise le navigateur pour accéder à cette entrée d'historique, il déclenchera un évènement [`popstate`](/fr/docs/Web/API/Window/popstate_event) qui contient l'objet d'état associé à cette entrée.
 
-L'objectif principal de cette API est d'assister les [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA) qui utilisent les API comme [`fetch()`](/fr/docs/Web/API/fetch) pour mettre à jour la page avec du nouveau contenu plutôt que de charger une nouvelle page complète.
+L'objectif principal de cette API est d'assister les [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA) qui utilisent les API comme [`fetch()`](/fr/docs/Web/API/Window/fetch) pour mettre à jour la page avec du nouveau contenu plutôt que de charger une nouvelle page complète.
 
 ## SPA et historique de session
 
@@ -40,7 +38,7 @@ Si cette approche peut très bien convenir pour de nombreux sites, elle possède
 C'est pour ces raisons que certains sites sont désormais implémentés sous la forme de [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA), où le site est en réalité une seule page, et où lorsqu'une personne clique sur un lien, la page&nbsp;:
 
 1. Empêche l'action par défaut du navigateur consistant à charger une nouvelle page
-2. Récupère avec [`fetch()`](/fr/docs/Web/API/fetch) le nouveau contenu à afficher
+2. Récupère avec [`fetch()`](/fr/docs/Web/API/Window/fetch) le nouveau contenu à afficher
 3. Met à jour la page avec le nouveau contenu
 
 Par exemple&nbsp;:
@@ -133,7 +131,7 @@ Dans cet exemple, nous appelons `pushState()` avec trois arguments&nbsp;:
 - `""`
   - : Cet argument est nécessaire pour la rétrocompatibilité avec les anciens sites et devrait toujours être une chaîne de caractères vide.
 - `creature`
-  - : Cette valeur sera utilisée comme URL pour l'entrée d'historique. Elle sera affichée dans la barre d'URL du navigateur et utilisée comme valeur pour l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) des requêtes HTTP effectuées par la page. Cette valeur doit avoir la [même origine](/fr/docs/Glossary/Same-origin_policy) que la page.
+  - : Cette valeur sera utilisée comme URL pour l'entrée d'historique. Elle sera affichée dans la barre d'URL du navigateur et utilisée comme valeur pour l'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) des requêtes HTTP effectuées par la page. Cette valeur doit avoir la [même origine](/fr/docs/Glossary/Same-origin_policy) que la page.
 
 ## Utiliser l'évènement `popstate`
 

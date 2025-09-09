@@ -11,7 +11,7 @@ La regla "CSS `@supports"`asocia un conjunto de declaraciones anidadas en un blo
 
 `@supports` otorga la habilidad de realizar consultas que comprueben si ciertas funcionalidades están disponibles _(feature query)_.
 
-La regla `@supports` puede ser usada tanto en el nivel superior de una hoja de estilos, como dentro de cualquier [regla de grupo condicional](/en/CSS/At-rule#Conditional_Group_Rules) y se puede acceder a ella a través del modelo de objetos de CSS {{domxref("CSSSupportsRule")}}.
+La regla `@supports` puede ser usada tanto en el nivel superior de una hoja de estilos, como dentro de cualquier [regla de grupo condicional](/es/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules) y se puede acceder a ella a través del modelo de objetos de CSS {{domxref("CSSSupportsRule")}}.
 
 ## Sintaxis
 

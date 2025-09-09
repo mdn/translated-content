@@ -3,8 +3,6 @@ title: 使用 Phaser 开发 2D breakout game
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
 
 在这个手把手的教程中，我们将使用 Phaser 框架制作一个使用 JavaScript 构建简单的 MDN 消除游戏。
@@ -19,24 +17,24 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 所有的课程 — 以及我们接下来将一起做的各个版本的 [MDN Breakout game](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/lesson16.html) 都能在 [GitHub](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/)上找到
 
-1. [初始化框架](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework)
-2. [缩放](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling)
-3. [加载资源并在屏幕上打印](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)
-4. [移动小球](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball)
-5. [物理](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Physics)
-6. [从墙上弹开](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls)
-7. [弹块和控制](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls)
-8. [游戏结束](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Game_over)
-9. [建立砖块](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field)
-10. [碰撞检测](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Collision_detection)
-11. [得分](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score)
-12. [胜利](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Win_the_game)
-13. [额外生命](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Extra_lives)
-14. [动画与补间](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens)
-15. [按钮](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons)
-16. [随机游戏](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay)
+1. [初始化框架](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
+2. [缩放](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling)
+3. [加载资源并在屏幕上打印](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)
+4. [移动小球](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
+5. [物理](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
+6. [从墙上弹开](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
+7. [弹块和控制](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
+8. [游戏结束](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
+9. [建立砖块](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
+10. [碰撞检测](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
+11. [得分](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
+12. [胜利](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
+13. [额外生命](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
+14. [动画与补间](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
+15. [按钮](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
+16. [随机游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
-学习路线的小提示 — 最好先熟悉使用原生 JavaScript 进行网页游戏开发，这样可以打下坚实的基础。如果你还不熟悉原生 javascript 开发，我们建议你先过一遍这个系列，[使用原生 Javascript 开发 MDN 消除游戏](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript).
+学习路线的小提示 — 最好先熟悉使用原生 JavaScript 进行网页游戏开发，这样可以打下坚实的基础。如果你还不熟悉原生 javascript 开发，我们建议你先过一遍这个系列，[使用原生 Javascript 开发 MDN 消除游戏](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript).
 
 在那之后，你就能随意挑选框架并用在你的项目中;我们选择了 Phaser 这个稳定优越的框架，它有着好的支持和社区环境以及大量优秀的插件。框架加速了开发并能帮你管理无趣的部分，让你专注于有意思的事务。然而，框架也有不好的地方，所以当一些意想不到的事情发生了或者想实现一些框架没有提供的功能时，你就将需要原生的 JavaScript 知识了。
 
@@ -45,6 +43,6 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 ## Next steps
 
-好了，那我们就开始吧！前往系列第一部分 — [初始化框架](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework).
+好了，那我们就开始吧！前往系列第一部分 — [初始化框架](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework).
 
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}

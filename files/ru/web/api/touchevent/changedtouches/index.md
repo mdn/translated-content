@@ -30,7 +30,7 @@ var changes = touchEvent.changedTouches;
 
 Этот пример демонстрирует свойство {{domxref("TouchEvent.changedTouches")}} объекта {{domxref("TouchEvent")}}. Свойство {{domxref("TouchEvent.changedTouches")}} это — объект {{domxref("TouchList")}}, который содержит объект {{domxref("Touch")}} для каждой точки, где произошло событие.
 
-В этом фрагменте кода обработчик события {{event("touchmove")}} выполняет перебор списка `changedTouches` и выводит в консоль идентификатор каждой точки касания, где произошло изменение с последнего события.
+В этом фрагменте кода обработчик события [`touchmove`](/ru/docs/Web/API/Element/touchmove_event) выполняет перебор списка `changedTouches` и выводит в консоль идентификатор каждой точки касания, где произошло изменение с последнего события.
 
 ```js
 someElement.addEventListener(

@@ -351,8 +351,8 @@ div {
 
 ```css
 .superposition {
-  background: linear-gradient(to right, transparent, mistyrose),
-    url("critters.png");
+  background:
+    linear-gradient(to right, transparent, mistyrose), url("critters.png");
 }
 ```
 
@@ -377,11 +377,8 @@ div {
 
 ```css
 .linear-gradient {
-  background: linear-gradient(
-      217deg,
-      rgba(255, 0, 0, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
+  background:
+    linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }
@@ -786,7 +783,8 @@ div {
 
 ```css
 .multi-repeating-linear {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       190deg,
       rgba(255, 0, 0, 0.5) 40px,
       rgba(255, 153, 0, 0.5) 80px,
@@ -841,7 +839,8 @@ div {
 
 ```css
 .plaid-gradient {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent,
       transparent 50px,
@@ -886,7 +885,8 @@ div {
       rgba(143, 77, 63, 0.25) 10px
     );
 
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent 0 50px,
       rgba(255, 127, 0, 0.25) 50px 56px,
@@ -990,7 +990,6 @@ div {
 ## Voir aussi
 
 - Les fonctions de manipulation des dégradés&nbsp;:
-
   - [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient)
   - [`radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient)
   - [`conic-gradient`](/fr/docs/Web/CSS/gradient/conic-gradient)
@@ -999,12 +998,10 @@ div {
   - [`repeating-conic-gradient`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)
 
 - Les types de donnée CSS relatifs aux dégradés&nbsp;:
-
   - [`<gradient>`](/fr/docs/Web/CSS/gradient)
   - [`<image>`](/fr/docs/Web/CSS/image)
 
 - Certaines propriétés CSS qui permettent d'utiliser des dégradés&nbsp;:
-
   - [`background`](/fr/docs/Web/CSS/background)
   - [`background-image`](/fr/docs/Web/CSS/background-image)
 

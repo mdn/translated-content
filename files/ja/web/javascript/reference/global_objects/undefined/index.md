@@ -1,27 +1,39 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Objects")}}
+グローバルの **`undefined`** プロパティはプリミティブ値の [`undefined`](/ja/docs/Web/JavaScript/Guide/Data_structures#undefined_型) を表します。これは JavaScript における{{Glossary("Primitive", "プリミティブ型")}}の一つです。
 
-グローバルの **`undefined`** プロパティはプリミティブ値の `{{Glossary("Undefined", "undefined")}}` を表します。これは JavaScript における{{Glossary("Primitive", "プリミティブ型")}}の一つです。
+{{InteractiveExample("JavaScript デモ: undefined")}}
 
-{{js_property_attributes(0,0,0)}}
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+let x;
 
-## 構文
-
-```js
-undefined;
+console.log(test(x));
+// 予想される結果: "Undefined value!"
 ```
+
+## 値
+
+プリミティブ値の [`undefined`](/ja/docs/Web/JavaScript/Guide/Data_structures#undefined_型) です。
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 解説
 
-`undefined` は、*グローバルオブジェクト*のプロパティです。すなわちグローバルスコープ内の変数です。 `undefined` の初期値はプリミティブ値である `{{Glossary("Undefined", "undefined")}}` です。
+`undefined` は、グローバルオブジェクトのプロパティです。すなわちグローバルスコープ内の変数です。
 
-最近のブラウザー (JavaScript 1.8.5 / Firefox 4 以降) での `undefined` は、 ECMAScript 5 仕様により、設定不可、書込不可のプロパティとなります。 (そうでない場合でも、上書きは避けてください。)
+古いブラウザーを除くすべてのブラウザーでは、 `undefined` は、設定不可、書込不可のプロパティとなります。 (そうでない場合でも、上書きは避けてください。)
 
 まだ値が代入されていない変数は `undefined` 型となります。評価しようとしている変数に値が代入されていない場合、メソッドや文も `undefined` を返します。値を {{jsxref("Statements/return", "return")}} しない関数も `undefined` を返します。
 
@@ -31,15 +43,13 @@ undefined;
 > ```js example-bad
 > //こんなことはしないこと！
 >
-> // "foo string" をログ出力する
-> (function () {
->   var undefined = "foo";
->   console.log(undefined, typeof undefined);
+> (() => {
+>   const undefined = "foo";
+>   console.log(undefined, typeof undefined); // foo string
 > })();
 >
-> // "foo string" をログ出力する
-> (function (undefined) {
->   console.log(undefined, typeof undefined);
+> ((undefined) => {
+>   console.log(undefined, typeof undefined); // foo string
 > })("foo");
 > ```
 
@@ -50,7 +60,7 @@ undefined;
 `undefined` と厳密等価・非等価演算子を使って、変数に値があるか調べることができます。次のコードでは、変数 `x` が定義されていないため、 `if` 文は true に評価されます。
 
 ```js
-var x;
+let x;
 if (x === undefined) {
   // ここの文は実行される
 } else {
@@ -61,14 +71,14 @@ if (x === undefined) {
 > [!NOTE]
 > ここでは、標準の等価演算子ではなく厳密等価演算子を使わないといけません。厳密等価演算子とは違い、 `x == undefined` は、 `x` が `null` であるかどうかもチェックするからです。 `null` は `undefined` と等しくありません。
 >
-> 詳しくは、{{jsxref("Operators", "比較演算子","",1)}}を参照してください。
+> 詳しくは、[等価比較と同一性](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)を参照してください。
 
 ### typeof 演算子と undefined
 
 代わりに、 {{jsxref("Operators/typeof", "typeof")}} を使用することができます。
 
 ```js
-var x;
+let x;
 if (typeof x === "undefined") {
   // ここの文は実行される
 }
@@ -78,13 +88,13 @@ if (typeof x === "undefined") {
 
 ```js
 // 直前まで x は宣言されていない
+// エラーなしで true と評価される
 if (typeof x === "undefined") {
-  // エラーなしで true と評価される
   // ここの文は実行される
 }
 
+// ReferenceError が発生
 if (x === undefined) {
-  // ReferenceError が発生
 }
 ```
 
@@ -103,7 +113,7 @@ if ("x" in window) {
 3 つ目の方法として、{{jsxref("Operators/void", "void")}} 演算子があります。
 
 ```js
-var x;
+let x;
 if (x === void 0) {
   // ここの文は実行される
 }
@@ -124,5 +134,5 @@ if (y === void 0) {
 
 ## 関連情報
 
-- JavaScript の {{Glossary("Primitive", "プリミティブ型")}}
+- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
 - [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)

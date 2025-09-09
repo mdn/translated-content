@@ -26,7 +26,7 @@ onbeforematch = (event) => {};
 
 ## 使用上のメモ
 
-HTML の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性は、`until-found` の値を受け入れます。この値が指定されると、要素は非表示になりますが、ブラウザーの「ページ内検索」機能やフラグメントナビゲーションではそのコンテンツにアクセスできるようになります。これらの機能により、"hidden until found" のサブツリーの要素にスクロールが発生した場合、ブラウザーは次のようになります。
+HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性は、`until-found` の値を受け入れます。この値が指定されると、要素は非表示になりますが、ブラウザーの「ページ内検索」機能やフラグメントナビゲーションではそのコンテンツにアクセスできるようになります。これらの機能により、"hidden until found" のサブツリーの要素にスクロールが発生した場合、ブラウザーは次のようになります。
 
 - 非表示の要素で `beforematch` イベントが発生する
 - その要素から `hidden` 属性が除去される
@@ -38,7 +38,7 @@ HTML の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性は、`unt
 
 この例では、次のものがあります。
 
-- 2 つの {{HTMLElement("div")}} 要素。最初の要素は非表示で、2 つ目には `hidden="until-found"` と `id="until-found-box"` 属性があります。
+- 2 つの {{HTMLElement("div")}} 要素。最初の要素は非表示になっていませんが、2 つ目には `hidden="until-found"` と `id="until-found-box"` 属性があります。
 - `"until-found-box"` フラグメントをターゲットとしたリンク。
 
 また、hidden until found 要素で発行される `beforematch` イベントを待ち受けする JavaScript もあります。イベントハンドラーはボックスのテキストコンテンツを変更します。
@@ -112,4 +112,4 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 ## 関連情報
 
-- HTML の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性
+- HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性

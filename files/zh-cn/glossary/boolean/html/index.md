@@ -32,7 +32,7 @@ l10n:
 
 ## 参见
 
-- [布尔属性](/zh-CN/docs/Web/HTML/Attributes#布尔属性)
+- [布尔属性](/zh-CN/docs/Web/HTML/Reference/Attributes#布尔属性)
 - HTML 规范中的[布尔属性](https://html.spec.whatwg.org/#boolean-attributes)
 - 相关术语：
   - {{Glossary("Attribute", "属性")}}

@@ -2,24 +2,22 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Object`** 型は [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)の一つを表します。これは様々なキー付きコレクションとより複雑な実態を格納するために使用されます。 Object は {{jsxref("Object/Object", "Object()")}} コンストラクターまたは[オブジェクト初期化子/リテラル構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)を使用して生成することができます。
+**`Object`** 型は [JavaScript のデータ型](/ja/docs/Web/JavaScript/Guide/Data_structures)の一つを表します。これは様々なキー付きコレクションとより複雑な実体を格納するために使用されます。 Object は {{jsxref("Object/Object", "Object()")}} コンストラクターまたは[オブジェクト初期化子/リテラル構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)を使用して生成することができます。
 
 ## 解説
 
-JavaScript のほぼすべての[オブジェクト](/ja/docs/Web/JavaScript/Data_structures#オブジェクト)が `Object` のインスタンスです。一般的なオブジェクトは、プロパティを (メソッドを含めて) `Object.prototype` から継承していますが、これらのプロパティはシャドウ化 (別名オーバーライド) されている場合があります。 `Object.prototype` を継承しないオブジェクトは、 [`null` プロトタイプ](#null-プロトタイプオブジェクト)を持つオブジェクトか、その他の `null` プロトタイプオブジェクトの子孫だけです。
+JavaScript のほぼすべての[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)が `Object` のインスタンスです。一般的なオブジェクトは、プロパティを（メソッドを含めて） `Object.prototype` から継承していますが、これらのプロパティはシャドウ化（別名オーバーライド）されている場合があります。 `Object.prototype` を継承しないオブジェクトは、 [`null` プロトタイプ](#null-プロトタイプオブジェクト)を持つオブジェクトか、その他の `null` プロトタイプオブジェクトの子孫だけです。
 
-`Object` プロトタイプオブジェクトへの変更は、その変更の対象となるプロパティやメソッドがプロトタイプチェーンに沿ってさらにオーバーライドされない限り、プロトタイプチェーンを通して**すべての**オブジェクトに反映されます。これはとても強力ですが、オブジェクトの動作をオーバーライドしたり拡張したりするのは潜在的に危険をはらむ仕組みでもあります。より安全にするために、 `Object.prototype` は JavaScript のコア言語で唯一、[不変のプロトタイプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#解説)を持つオブジェクトです。 `Object.prototype` のプロトタイプは常に `null` であり、変更できません。
+`Object.prototype` オブジェクトへの変更は、その変更の対象となるプロパティやメソッドがプロトタイプチェーンに沿ってさらにオーバーライドされない限り、プロトタイプチェーンを通して**すべての**オブジェクトに反映されます。これはとても強力ですが、オブジェクトの動作をオーバーライドしたり拡張したりするのは潜在的に危険をはらむ仕組みでもあります。より安全にするために、 `Object.prototype` は JavaScript のコア言語で唯一、[不変のプロトタイプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#解説)を持つオブジェクトです。 `Object.prototype` のプロトタイプは常に `null` であり、変更できません。
 
 ### Object の prototype プロパティ
 
-インスタンスから `Object.prototype` メソッドを直接呼び出すことは避けるべきです。特に、多態性が意図されていないメソッド（つまり、初期の動作だけが意味を持ち、子孫オブジェクトが意味のある方法でそれを上書きすることはできないメソッド）は避けるべきです。 `Object.prototype` から子孫するすべてのオブジェクトは、同じ名前を持つが、期待するものとはまったく異なる意味づけを持つ、カスタムの自分自身でプロパティを定義することができます。さらに、これらのプロパティは [`null` プロトタイプオブジェクト](#null_プロトタイプオブジェクト)には継承されません。オブジェクトを作業するための現行の JavaScript ユーティリティはすべて[静的](#静的メソッド)です。もっと具体的には、次の通りです。
+インスタンスから `Object.prototype` のメソッドを直接呼び出すことは避けるべきです。特に、多態性が意図されていないメソッド（つまり、初期の動作だけが意味を持ち、子孫オブジェクトが意味のある方法でそれを上書きすることはできないメソッド）は避けるべきです。 `Object.prototype` から子孫するすべてのオブジェクトは、同じ名前を持つが、期待するものとはまったく異なる意味づけを持つ、カスタムの自分自身でプロパティを定義することができます。さらに、これらのプロパティは [`null` プロトタイプオブジェクト](#null_プロトタイプオブジェクト)には継承されません。オブジェクトを作業するための現行の JavaScript ユーティリティはすべて[静的](#静的メソッド)です。もっと具体的には、次の通りです。
 
-- [`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)、[`toLocaleString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) は多態的な実装として存在し、オブジェクトが賢明な振る舞いを持つ自分自身の実装を定義していることを期待する必要があるので、インスタンスメソッドとして呼び出すことができます。しかし、`valueOf()` と `toString()` は通常、[型変換](/ja/docs/Web/JavaScript/Data_structures#型変換)によって暗黙のうちに呼び出されるので、コードの中で自分で呼び出す必要はありません。
+- [`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)、[`toLocaleString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) は多態的な実装として存在し、オブジェクトが賢明な振る舞いを持つ自分自身の実装を定義していることを期待する必要があるので、インスタンスメソッドとして呼び出すことができます。しかし、`valueOf()` と `toString()` は通常、[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)によって暗黙のうちに呼び出されるので、コードの中で自分で呼び出す必要はありません。
 - [`__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)、[`__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)、[`__lookupGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)、[`__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) は非推奨であり、使用すべきではありません。代わりに静的な代替である {{jsxref("Object.defineProperty()")}} や {{jsxref("Object.getOwnPropertyDescriptor()")}} を使用してください。
 - [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティは非推奨であり、使用すべきではありません。代替である {{jsxref("Object.getPrototypeOf()")}} および {{jsxref("Object.setPrototypeOf()")}} は静的メソッドです。
 - [`propertyIsEnumerable()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) および [`hasOwnProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) メソッドは、それぞれ {{jsxref("Object.getOwnPropertyDescriptor()")}} および {{jsxref("Object.hasOwn()")}} 静的メソッドに置き換えることができます。
@@ -48,7 +46,7 @@ Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true; 期待通りの
 
 ### null プロトタイプオブジェクト
 
-JavaScript では、ほぼすべてのオブジェクトが最終的に `Object.prototype` から継承しています（[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)を参照）。ただし、 `null` プロトタイプオブジェクトは [`Object.create(null)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) や[オブジェクト初期化子構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer) で `__proto__: null` とすることで作成することができます（注: オブジェクトリテラル内の `__proto__` キーは非推奨の [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティとは異なります）。既存のオブジェクトのプロトタイプを `null` に変更するには、 [`Object.setPrototypeOf(obj, null)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) を呼び出してください。
+JavaScript では、ほぼすべてのオブジェクトが最終的に `Object.prototype` から継承しています（[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を参照）。ただし、 `null` プロトタイプオブジェクトは [`Object.create(null)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) や[オブジェクト初期化子構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer) で `__proto__: null` とすることで作成することができます（注: オブジェクトリテラル内の `__proto__` キーは非推奨の [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティとは異なります）。既存のオブジェクトのプロトタイプを `null` に変更するには、 [`Object.setPrototypeOf(obj, null)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) を呼び出してください。
 
 ```js
 const obj = Object.create(null);
@@ -86,7 +84,7 @@ nullProtoObj.constructor; // "undefined" と表示
 `toString` メソッドを null プロトタイプオブジェクトに割り当てることで追加することができます。
 
 ```js
-nullProtoObj.toString = Object.prototype.toString; // 新しいオブジェクトに toString が書けているため、元の汎用的なものを追加しなおす
+nullProtoObj.toString = Object.prototype.toString; // 新しいオブジェクトに toString が欠けているため、元の汎用的なものを追加しなおす
 
 console.log(nullProtoObj.toString()); // "[object Object]" と表示
 console.log(`nullProtoObj is: ${nullProtoObj}`); // "nullProtoObj is: [object Object]" と表示
@@ -172,7 +170,7 @@ JavaScript でほぼ同じ効果を得るには 2 つの方法があります。
 - プリミティブ値はプロパティを持たないため、プリミティブ値に対してプロパティがアクセスされると自動的にボックス化されます。
 - 厳格モードでない関数を呼び出したときの [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) 値。プリミティブはボックス化され、 `null` と `undefined` は[グローバルオブジェクト](/ja/docs/Glossary/Global_object)に置き換わります。
 
-[プリミティブ変換](/ja/docs/Web/JavaScript/Data_structures#プリミティブ変換)とは異なり、オブジェクト変換処理は `toString` メソッドや `valueOf` メソッドのようなカスタムコードを呼び出さないので、それ自体は何か方法で監視することはできません。
+[プリミティブ変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)とは異なり、オブジェクト変換処理は `toString` メソッドや `valueOf` メソッドのようなカスタムコードを呼び出さないので、それ自体は何か方法で監視することはできません。
 
 ## コンストラクター
 
@@ -252,7 +250,7 @@ JavaScript でほぼ同じ効果を得るには 2 つの方法があります。
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
   - : このメソッドが呼び出されたオブジェクトが、指定されたオブジェクトのプロトタイプチェーンにあるかどうかを示す論理値を返します。
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-  - : 指定したプロパティが、このオブジェクトの[列挙可能な自分自身](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)のプロパティであるかどうかを示す論理値を返します。
+  - : 指定したプロパティが、このオブジェクトの[列挙可能な自分自身](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)のプロパティであるかどうかを示す論理値を返します。
 - {{jsxref("Object.prototype.toLocaleString()")}}
   - : {{jsxref("Object.toString", "toString()")}} を呼び出します。
 - {{jsxref("Object.prototype.toString()")}}
@@ -301,20 +299,19 @@ const current = Object.prototype.valueOf;
 Object.prototype.valueOf = function (...args) {
   if (Object.hasOwn(this, "-prop-value")) {
     return this["-prop-value"];
-  } else {
-    // 私のオブジェクトのようには見えないので、現在の動作をできる限り再現して、
-    // 既定の動作にフォールバックします。
-    // apply は、他のいくつかの言語における "super" のような動作をします。
-    // valueOf() は引数を取りませんが、他のフックによっては取るかもしれません。
-    return current.apply(this, args);
   }
+  // 私のオブジェクトのようには見えないので、現在の動作をできる限り再現して、
+  // 既定の動作にフォールバックします。
+  // apply は、他のいくつかの言語における "super" のような動作をします。
+  // valueOf() は引数を取りませんが、他のフックによっては取るかもしれません。
+  return current.apply(this, args);
 };
 ```
 
 > [!WARNING]
 > 組み込みコンストラクターの `prototype` プロパティを変更することは、悪い習慣であり、前方互換性を危険にさらすものです。
 
-プロトタイプについては[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)で詳しく説明されています。
+プロトタイプについては[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)で詳しく説明されています。
 
 ## 仕様書
 

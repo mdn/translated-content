@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 
 La méthode statique **`Atomics.sub()`** permet de soustraire une valeur donnée à une position donnée du tableau partagé. Elle renvoie l'ancienne valeur qui était contenue dans le tableau avant l'opération. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
-{{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.sub()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 - 2 = 5
+console.log(Atomics.sub(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+```
 
 ## Syntaxe
 

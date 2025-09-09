@@ -65,6 +65,6 @@ document.body.insertAdjacentHTML("afterbegin", inp_xmls);
 
 ## 関連情報
 
-- [XML の解釈とシリアライズ](/ja/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("DOMParser")}}

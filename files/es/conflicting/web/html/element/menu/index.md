@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/contextmenu
 
 {{HTMLSidebar("Global_attributes")}}
 
-El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **contextmenu** es el [**id**](/es/docs/Web/HTML/Atributos_Globales/id) de un {{HTMLElement("menu")}} para nosotros como el menu contextual para este elemento .
+El [atributo global](/es/docs/Web/HTML/Reference/Global_attributes) **contextmenu** es el [**id**](/es/docs/Web/HTML/Reference/Global_attributes/id) de un {{HTMLElement("menu")}} para nosotros como el menu contextual para este elemento .
 
 Un _menu contextual_ es un menu que aparece sobre la interacción del usuario , como por ejemplo un click derecho . HTML5 ahora permite modificar este menú . Aquí hay unos ejemplos de implementación , incluyendo menús anidados .
 
@@ -68,4 +68,4 @@ El [atributo `contextmenu` está obsoleto](https://html.spec.whatwg.org/multipag
 
 ## Ver también
 
-- [atributos globales](/es/docs/Web/HTML/Atributos_Globales)
+- [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes)

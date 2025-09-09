@@ -30,7 +30,7 @@ Un {{domxref("MediaElementAudioSourceNode")}}.
 Cet exemple simple crée une source depuis un élément {{ htmlelement("audio") }} grâce à `createMediaElementSource()`, puis passe le signal audio à travers un {{ domxref("GainNode") }} avant de l'injecter dans le {{ domxref("AudioDestinationNode") }} pour la lecture. Quand le pointeur de la souris est déplacé, la fonction `updatePage()` est invoquée, et calcule le gain actuel comme rapport de la position Y de la souris divisée par la hauteur totale de la fenêtre. Vous pouvez ainsi augmenter ou diminuer le volume de la musique jouée, en déplaçant le pointeur de la souris vers le haut ou vers le bas.
 
 > [!NOTE]
-> Vous pouvez également [voir cet exemple en temps réel](http://mdn.github.io/webaudio-examples/media-source-buffer/), ou [examiner le code source](https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer).
+> Vous pouvez également [voir cet exemple en temps réel](https://mdn.github.io/webaudio-examples/media-source-buffer/), ou [examiner le code source](https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

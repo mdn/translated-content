@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/let
 
 **`let`** 명령문은 블록 스코프의 범위를 가지는 지역 변수를 선언하며, 선언과 동시에 임의의 값으로 초기화할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## 구문
 
@@ -22,7 +36,7 @@ let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];
 - `valueN` {{optional_inline}}
   - : 각각의 변수 선언에 대해, 유효한 JavaScript 표현식을 지정해 변수의 초기 값을 지정할 수 있습니다.
 
-이 구문 대신 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 사용해서 변수를 선언할 수도 있습니다.
+이 구문 대신 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 사용해서 변수를 선언할 수도 있습니다.
 
 ```js
 let { bar } = foo; // foo = { bar: 10, baz: 12 };
@@ -77,7 +91,7 @@ console.log(this.y); // undefined
 
 ### 비공개 멤버 모사
 
-[생성자](/ko/docs/Glossary/Constructor)와 `let`을 함께 사용하면 [클로저](/ko/docs/Web/JavaScript/Closures)를 사용하지 않아도 비공개 멤버를 나타낼 수 있습니다.
+[생성자](/ko/docs/Glossary/Constructor)와 `let`을 함께 사용하면 [클로저](/ko/docs/Web/JavaScript/Guide/Closures)를 사용하지 않아도 비공개 멤버를 나타낼 수 있습니다.
 
 ```js
 var Thing;

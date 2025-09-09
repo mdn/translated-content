@@ -5,13 +5,62 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
-
 La propiedad **`filter`** de [CSS](/es/docs/Web/CSS) aplica efectos gráficos como desenfoque o cambio de color a un elemento. Los filtros se usan comúnmente para ajustar la representación de imágenes, fondos y bordes.
 
 Varias [funciones](#funciones), como `blur()` y `contrast()`, están disponibles para ayudarte a lograr efectos predefinidos.
 
-{{EmbedInteractiveExample("pages/css/filter.html")}}
+{{InteractiveExample("CSS Demo: filter")}}
+
+```css interactive-example-choice
+filter: url("/shared-assets/images/examples/shadow.svg#element-id");
+```
+
+```css interactive-example-choice
+filter: blur(5px);
+```
+
+```css interactive-example-choice
+filter: contrast(200%);
+```
+
+```css interactive-example-choice
+filter: grayscale(80%);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(90deg);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(16px 16px 20px red) invert(75%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: #fff;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#example-element {
+  flex: 1;
+  padding: 30px;
+}
+```
 
 ## Sintaxis
 
@@ -229,4 +278,4 @@ Los filtros se aplican en orden. Esta es la razón por la cual las sombras paral
 - Módulo de [composición y combinación](/es/docs/Web/CSS/CSS_compositing_and_blending) de CSS, incluidas las propiedades CSS {{cssxref("background-blend-mode")}} y {{cssxref("mix-blend-mode")}}.
 - La propiedad CSS {{cssxref("mask")}}
 - [SVG](/es/docs/Web/SVG), incluido el elemento SVG {{SVGElement("filter")}} y el atributo SVG {{SVGAttr("filter")}}.
-- [Aplicación de efectos SVG al contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Aplicación de efectos SVG al contenido HTML](/es/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

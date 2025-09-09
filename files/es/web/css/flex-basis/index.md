@@ -3,8 +3,6 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`flex-basis`** especifíca la base flexible, la cual es el **tamaño inicial** de un elemento flexible. Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando {{Cssxref("box-sizing")}}.
@@ -39,7 +37,6 @@ flex-basis: unset;
 - `width`
   - : Definido por un número seguido de una unidad absoluta tal como `px`, `mm` o `pt`, o un porcentaje del tamaño principal de un contenedor flexible padre. Los valores negativos no son válidos.
 - `content`
-
   - : Indica el dimensionamiento automático, basado en el contenido del elemento flexible.
 
     > [!NOTE]
@@ -179,5 +176,5 @@ flex-basis: unset;
 
 ## Ver también
 
-- [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes)
+- [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - {{cssxref("width")}}

@@ -1,15 +1,22 @@
 ---
 title: String.raw()
+short-title: raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
 l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`String.raw()`** 静的メソッドは、[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)のためのタグ関数です。この関数は Python の文字列リテラルの `r` 接頭辞や C# の文字列リテラルの `@` 接頭辞に似ています。この関数は、テンプレートリテラルの生の文字列形式を取得するために使用されます。つまり、置換（`${foo}` など）は行われますが、エスケープ（`\n` など）は実行されません。
 
-{{EmbedInteractiveExample("pages/js/string-raw.html")}}
+{{InteractiveExample("JavaScript デモ: String.raw()")}}
+
+```js interactive-example
+// バックスラッシュをエスケープせずに Windows パスを使用する変数を作成
+const filePath = String.raw`C:\Development\profile\about.html`;
+
+console.log(`The file was uploaded from: ${filePath}`);
+// 予想される結果: "The file was uploaded from: C:\Development\profile\about.html"
+```
 
 ## 構文
 
@@ -46,7 +53,8 @@ String.raw`templateString`
 
 `String.raw()` はテンプレートリテラルの唯一の組み込みタグ関数です。既定のテンプレート関数のように動作し、連結を行います。通常の JavaScript コードで再実装することができます。
 
-> **警告:** `String.raw` を直接「識別」タグとして使用しないでください。この実装方法については[識別タグの構築](#識別タグの構築)を参照してください。
+> [!WARNING]
+> `String.raw` を直接「識別」タグとして使用しないでください。この実装方法については[識別タグの構築](#識別タグの構築)を参照してください。
 
 `String.raw()` が `raw` プロパティに `length` プロパティがないか、正でない `length` を持つオブジェクトで呼び出された場合、空の文字列 `""` を返します。もし `substitutions.length < strings.raw.length - 1` （つまり、プレースホルダーを埋めるだけの置換がない - 整形式タグ付きテンプレートリテラルでは起こりえない）場合、残りのプレースホルダーは空の文字列で埋められます。
 
@@ -75,22 +83,52 @@ String.raw`Hi \${name}!`;
 // 'Hi \\${name}!' です。ドル記号がエスケープされます。補間は行われません。
 ```
 
+### String.raw と RegExp の使用
+
+`String.raw` テンプレートリテラルと {{jsxref("RegExp/RegExp", "RegExp()")}} コンストラクターを組み合わせることで、次のことが可能になります。
+正規表現リテラルでは使用できない、動的な部分を含む正規表現を作成する正規表現のエスケープシーケンスを二重エスケープ (`\\`) する必要がありません（通常の文字列リテラルでは使用できません）。これは、ファイルパスや URL など、スラッシュが多く含まれている文字列でも役立ちます。
+
+```js-nolint
+// String.raw テンプレートを使用すると、 URL と照合する、かなり読み取り可能な正規表現を作成できる
+const reRawTemplate = new RegExp(
+  String.raw`https://developer\.mozilla\.org/en-US/docs/Web/JavaScript/Reference/`,
+);
+
+// 正規表現リテラルで同じことを見ていくと、それぞれのフォワードスラッシュは
+// \/ で置き換えられます。
+const reRegexpLiteral =
+  /https:\/\/developer\.mozilla\.org\/en-US\/docs\/Web\/JavaScript\/Reference\//;
+
+// RegExp コンストラクターと、各ピリオドに \\. を使用した従来の文字列リテラルで
+// 同じことを記述すると、次のようになります。
+const reStringLiteral = new RegExp(
+  "https://developer\\.mozilla\\.org/en-US/docs/Web/JavaScript/Reference/",
+);
+
+// String.raw では、動的な部分も含むことができる
+function makeURLRegExp(path) {
+  return new RegExp(String.raw`https://developer\.mozilla\.org/${path}`);
+}
+
+const reDynamic = makeURLRegExp("en-US/docs/Web/JavaScript/Reference/");
+const reWildcard = makeURLRegExp(".*");
+```
+
 ### 識別タグの構築
 
 多くのツールは、特定の名前でタグ付けされたリテラルを特別扱いします。
 
 ```js-nolint
 // フォーマッターによっては、このリテラルのコンテンツを HTML として書式化する
-const doc = html`<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>Hello world!</h1>
-  </body>
-</html>
-`;
+const doc = html`<!doctype html>
+  <html lang="en-US">
+    <head>
+      <title>Hello</title>
+    </head>
+    <body>
+      <h1>Hello world!</h1>
+    </body>
+  </html>`;
 ```
 
 `html` タグを素朴に実装するためには、次のようにします。
@@ -132,6 +170,7 @@ String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 ## 関連情報
 
 - [`String.raw` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.raw` のポリフィル](https://www.npmjs.com/package/string.raw)
 - [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
 - [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9c8c461dc350668ad326fa9aad604ce9da800df2
 ---
 
-{{CSSRef}}
-
 **CSS 그라디언트**는 두 개 혹은 그 이상의 색상들 사이에서 점진적인 변화를 만들어내는 {{cssxref("&lt;gradient&gt;")}} 데이터 타입, 그 중에서도 {{cssxref("&lt;image&gt;")}} 타입을 대표합니다. {{cssxref("gradient/linear-gradient", "linear-gradient()")}} 함수를 이용한 선형, {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 함수를 이용한 방사형, {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 함수를 이용한 원뿔형, 세 개의 그라디언트 타입 중 하나를 골라 사용할 수 있습니다. 또한 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, 그리고 {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 함수들을 사용하면 반복되는 그라디언트를 만들 수도 있습니다.
 
 그라디언트는 배경과 같이 `<image>` 를 사용할 수 있는 어디에서나 사용될 수 있습니다. 그라디언트는 동적으로 생성이 되기 때문에, 같은 효과를 내기 위해 사용하던 전통적인 래스터 이미지 파일의 필요성을 없앨 수 있었습니다. 또한, 그라디언트는 브라우저에 의해 생성되므로 이를 확대했을 때 래스터 이미지보다 더 나아 보이고 실시간으로 크기를 조절할 수 있습니다.
@@ -328,8 +326,8 @@ div {
 
 ```css
 .layered-image {
-  background: linear-gradient(to right, transparent, mistyrose),
-    url("critters.png");
+  background:
+    linear-gradient(to right, transparent, mistyrose), url("critters.png");
 }
 ```
 
@@ -352,11 +350,8 @@ div {
 
 ```css
 .stacked-linear {
-  background: linear-gradient(
-      217deg,
-      rgb(255 0 0 / 80%),
-      rgb(255 0 0 / 0%) 70.71%
-    ),
+  background:
+    linear-gradient(217deg, rgb(255 0 0 / 80%), rgb(255 0 0 / 0%) 70.71%),
     linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
     linear-gradient(336deg, rgb(0 0 255 / 80%), rgb(0 0 255 / 0%) 70.71%);
 }
@@ -387,7 +382,8 @@ div {
 
 ```css
 div {
-  background: linear-gradient(to top, red, blue),
+  background:
+    linear-gradient(to top, red, blue),
     linear-gradient(to right, #5500ff, #00ff55);
 }
 
@@ -793,7 +789,8 @@ div {
 
 ```css
 .multi-repeating-linear {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       190deg,
       rgb(255 0 0 / 50%) 40px,
       rgb(255 153 0 / 50%) 80px,
@@ -848,7 +845,8 @@ div {
 
 ```css
 .plaid-gradient {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent,
       transparent 50px,
@@ -893,7 +891,8 @@ div {
       rgb(143 77 63 / 25%) 10px
     );
 
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent 0 50px,
       rgb(255 127 0 / 25%) 50px 56px,
@@ -1038,7 +1037,8 @@ div {
 
 ```css
 .multi-repeating-conic {
-  background: repeating-conic-gradient(
+  background:
+    repeating-conic-gradient(
       from 0deg at 80% 50%,
       #5691f580 0% 8.25%,
       #b338ff80 8.25% 16.5%,

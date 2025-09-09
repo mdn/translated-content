@@ -14,7 +14,7 @@ l10n:
 
 プロトコルハンドラーを登録するには、ウェブサイトが `registerProtocolHandler()` を呼び出し、登録するプロトコルとテンプレート URL を渡します。
 
-ユーザーが登録されたプロトコルを使用するリンクを起動すると、ブラウザーはハンドラー登録時に指定された URL テンプレートに起動したリンクの [`href`](/ja/docs/Web/HTML/Element/a#href) を挿入し、現在のページを生成された URL に移動します。
+ユーザーが登録されたプロトコルを使用するリンクを起動すると、ブラウザーはハンドラー登録時に指定された URL テンプレートに起動したリンクの [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) を挿入し、現在のページを生成された URL に移動します。
 
 ブラウザーは、プロトコルが登録されたとき、またはユーザーがリンクを起動したときに、ページがプロトコルを処理することを許可するかどうかを確認するようユーザーに要求することがあります。
 
@@ -27,17 +27,14 @@ registerProtocolHandler(scheme, url)
 ### 引数
 
 - `scheme`
-
   - : サイトが扱いたいプロトコルのスキームが入った文字列です。
 
     次のようなスキーム名のカスタムスキームにすることができます。
-
     - `web+` で始まる
     - `web+` 接頭辞の後に 1 文字以上ある
     - 小文字の {{Glossary("ASCII")}} 文字のみが含まれている
 
     それ以外の場合はスキームは以下のいずれかでなければなりません。
-
     - `bitcoin`
     - `ftp`
     - `ftps`
@@ -66,7 +63,6 @@ registerProtocolHandler(scheme, url)
     <!-- これは https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme と同じものです -->
 
 - `url`
-
   - : ハンドラーの URL を指定する文字列。
     この URL には `%s` を含める必要があり、これは取り扱う URL を[エスケープした](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)もので置き換得られるプレイスホルダーとして扱われます。
 
@@ -79,13 +75,11 @@ registerProtocolHandler(scheme, url)
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-
   - : ユーザーエージェントが登録をブロックしました。
     以下のような場合に起こる可能性があります。
-
     - ブラウザーが自身が処理するスキーム（`https:`, `about:`, など）であるなど、登録されているスキーム（プロトコル）が無効である場合。
     - ハンドラーの URL の{{Glossary("origin", "オリジン")}}が、本 API を呼び出すページのオリジンと一致しない場合。
-    - ブラウザーが、この関数を安全なコンテキストから呼び出すことを要求している場合。
+    - ブラウザーが、この関数を保護されたコンテキストから呼び出すことを要求している場合。
     - ブラウザーが、ハンドラーの URL が HTTPS であることを要求している場合。
 
 - `SyntaxError` {{domxref("DOMException")}}

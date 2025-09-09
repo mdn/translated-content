@@ -1,17 +1,39 @@
 ---
 title: Promise.prototype.finally()
+short-title: finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`finally()`** は {{jsxref("Promise")}} インスタンスのメソッドで、プロミスが決定したとき（履行されたか拒否されたかのどちらか）に呼び出される関数を準備します。直ちに他の {{jsxref("Promise")}} オブジェクトを返すため、プロミスの他のメソッドを[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)呼び出しすることができます。
 
 これによって、プロミスの {{jsxref("Promise/then", "then()")}} ハンドラーと {{jsxref("Promise/catch", "catch()")}} ハンドラーでコードが重複することを避けることができます。
 
-{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Promise.finally()", "taller")}}
+
+```js interactive-example
+function checkMail() {
+  return new Promise((resolve, reject) => {
+    if (Math.random() > 0.5) {
+      resolve("Mail has arrived");
+    } else {
+      reject(new Error("Failed to arrive"));
+    }
+  });
+}
+
+checkMail()
+  .then((mail) => {
+    console.log(mail);
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+  .finally(() => {
+    console.log("Experiment completed");
+  });
+```
 
 ## 構文
 
@@ -40,7 +62,8 @@ promiseInstance.finally(onFinally)
   - `Promise.resolve(2).then(() => 77, () => {})` が最終的に `77` の値で履行されるプロミスを返すのとは異なり、`Promise.resolve(2).finally(() => 77)` は最終的に `2` の値で履行されるプロミスを返します。
   - 同様に、`Promise.reject(3).then(() => {}, () => 88)` が最終的に `88` の値で履行されるプロミスを返すのとは異なり、`Promise.reject(3).finally(() => 88)` は最終的に `3` の値で拒否されるプロミスを返します。
 
-> **メモ:** `finally` コールバックの中で `throw` （あるいは拒否されたプロミスを返すこと）しても、返されたプロミスは拒否されます。例えば、 `Promise.reject(3).finally(() => { throw 99; })` と `Promise.reject(3).finally(() => Promise.reject(99))` はどちらも `99` という理由をつけて、返ってきたプロミスを拒否することになります。
+> [!NOTE]
+> `finally` コールバックの中で `throw` （あるいは拒否されたプロミスを返すこと）しても、返されたプロミスは拒否されます。例えば、 `Promise.reject(3).finally(() => { throw 99; })` と `Promise.reject(3).finally(() => Promise.reject(99))` はどちらも `99` という理由をつけて、返ってきたプロミスを拒否することになります。
 
 {{jsxref("Promise/catch", "catch()")}} と同様に、 `finally()` は内部的に呼び出されたオブジェクトの `then` メソッドを呼び出します。もし `onFinally` が関数でない場合、 `then()` は `onFinally` を両方の引数として呼び出されます。これは {{jsxref("Promise.prototype.then()")}} にとって、有益なハンドラーが添付されないということを意味します。そうでなければ、`then()` は内部で作成された 2 つの関数で呼び出され、以下のような振る舞いをします。
 
@@ -96,6 +119,7 @@ fetch(myRequest)
 ## 関連情報
 
 - [`Promise.prototype.finally` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims による `Promise.prototype.finally` のポリフィル](https://www.npmjs.com/package/promise.prototype.finally)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
 - {{jsxref("Promise.prototype.catch()")}}

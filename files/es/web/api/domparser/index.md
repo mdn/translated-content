@@ -7,7 +7,7 @@ slug: Web/API/DOMParser
 
 `DOMParser` puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un [Documento](/es/docs/Web/API/Document) DOM. `DOMParser` está especificado en [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
 
-Tener en cuenta que [XMLHttpRequest](/es/docs/DOM/XMLHttpRequest) soporta parsear XML y HTML desde recursos direccionables por URL.
+Tener en cuenta que [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) soporta parsear XML y HTML desde recursos direccionables por URL.
 
 ## Creando un DOMParser
 
@@ -114,7 +114,7 @@ Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
 ## Ver también
 
-- [Parsing and serializing XML](/es/docs/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/es/docs/XMLHttpRequest)
-- [XMLSerializer](/es/docs/XMLSerializer)
-- [Parsing HTML to DOM](/es/Add-ons/Code_snippets/HTML_to_DOM)
+- [Parsing and serializing XML](/es/docs/Web/XML/Guides/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest)
+- [XMLSerializer](/es/docs/Web/API/XMLSerializer)
+- [Parsing HTML to DOM](/es/docs/Mozilla/Add-ons/Code_snippets/HTML_to_DOM)

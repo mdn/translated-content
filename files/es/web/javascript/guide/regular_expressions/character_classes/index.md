@@ -7,7 +7,19 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 
 Las clases de caracteres distinguen tipos de caracteres como, por ejemplo, distinguen entre letras y dígitos.
 
-{{EmbedInteractiveExample("pages/js/regexp-character-classes.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+
+```js interactive-example
+const chessStory = "He played the King in a8 and she moved her Queen in c2.";
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+// Expected output: Array [ 'a8', 'c2']
+
+const moods = "happy 🙂, confused 😕, sad 😢";
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+// Expected output: Array ['🙂', '😕', '😢']
+```
 
 ## Tipos
 
@@ -188,7 +200,6 @@ Para obtener información sobre la compatibilidad del navegador, consulta la {{J
 ## Ve también
 
 - {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
-
   - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
   - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
   - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}

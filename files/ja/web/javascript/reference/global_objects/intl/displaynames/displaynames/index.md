@@ -9,7 +9,20 @@ l10n:
 
 **`Intl.DisplayNames()`** コンストラクターは、 {{jsxref("Intl.DisplayNames")}} オブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.DisplayNames")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
+});
+
+console.log(regionNamesInEnglish.of("US"));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of("US"));
+// Expected output: "美國"
+```
 
 ## 構文
 
@@ -17,7 +30,8 @@ l10n:
 new Intl.DisplayNames(locales, options)
 ```
 
-> **メモ:** `Intl.DisplayNames()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築できます。 `new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Intl.DisplayNames()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築できます。 `new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

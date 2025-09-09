@@ -3,11 +3,50 @@ title: border-block-start
 slug: Web/CSS/border-block-start
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-start`** es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para establecer los valores lógicos individuales del borde de bloque inicial en un solo lugar en la hoja de estilos.
+La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-start`** es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para establecer los valores lógicos individuales del borde de bloque inicial en un solo lugar en la hoja de estilos.
 
-{{EmbedInteractiveExample("pages/css/border-block-start.html")}}
+{{InteractiveExample("CSS Demo: border-block-start")}}
+
+```css interactive-example-choice
+border-block-start: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-start: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-start: 1rem solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-start: thick double #32a1ce;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Sintaxis
 

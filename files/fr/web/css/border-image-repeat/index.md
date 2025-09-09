@@ -7,7 +7,50 @@ slug: Web/CSS/border-image-repeat
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisées pour s'étendre sur chacun des côtés de la bordure.
 
-{{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
+{{InteractiveExample("CSS Demo: border-image-repeat")}}
+
+```css interactive-example-choice
+border-image-repeat: stretch;
+```
+
+```css interactive-example-choice
+border-image-repeat: repeat;
+```
+
+```css interactive-example-choice
+border-image-repeat: round;
+```
+
+```css interactive-example-choice
+border-image-repeat: space;
+```
+
+```css interactive-example-choice
+border-image-repeat: round stretch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 ## Syntaxe
 
@@ -104,5 +147,5 @@ repetition.addEventListener("change", function (evt) {
 
 ## Voir aussi
 
-- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)
-- [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

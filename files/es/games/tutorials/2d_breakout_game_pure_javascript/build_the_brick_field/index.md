@@ -3,11 +3,9 @@ title: Construye el muro de ladrillos
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones")}}
 
-Este es el **sexto** paso de 10 del [Tutorial del Lienzo (Canvas) para desarrollar juegos (Gamedev Canvas Tutorial)](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro). Puedes encontrar el código fuente como debería quedar tras completar esta lección en [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
+Este es el **sexto** paso de 10 del [Tutorial del Lienzo (Canvas) para desarrollar juegos (Gamedev Canvas Tutorial)](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras completar esta lección en [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
 
 Hemos cambiado la mecánica del juego y ahora ya podemos perder. Esto es genial porque significa que el juego finalmente se comporta como un juego. Sin embargo, pronto resultará aburrido si todo lo que puedes conseguir es hacer rebotar la pelota en las paredes y en la pala. Lo que el juego necesitamos es romper ladrillos con la bola. Ahora vamos a dibujar los ladrillos.
 
@@ -127,6 +125,6 @@ Compara tu código con este:
 
 ## Pasos siguientes
 
-¡Así que ahora tenemos ladrillos! Un gran avance pero... la pelota no los rompe, simplemente los atraviesa. En el siguiente capítulo lo arreglaremos: [Detección de colisiones](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones).
+¡Así que ahora tenemos ladrillos! Un gran avance pero... la pelota no los rompe, simplemente los atraviesa. En el siguiente capítulo lo arreglaremos: [Detección de colisiones](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones")}}

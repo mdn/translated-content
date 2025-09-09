@@ -5,11 +5,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 {{JSRef}}
 
-El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
+El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
 
-{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}
+{{InteractiveExample("JavaScript Demo: Array.flatMap()")}}
 
-La fuente de este ejemplo interactivo, se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción.
+```js interactive-example
+const arr1 = [1, 2, 1];
+
+const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+
+console.log(result);
+// Expected output: Array [1, 2, 2, 1]
+```
 
 ## Sintaxis
 
@@ -22,11 +29,8 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ### Parámetros
 
 - `callback`
-
   - : Función que produce un elemento de la nueva matriz, tomando tres argumentos:
-
     - `currentValue`
-
       - : El elemento actual que se procesa en la matriz.
 
     - `index`{{optional_inline}}
@@ -43,7 +47,7 @@ Una nueva matriz con cada elemento es el resultado de la función de devolución
 
 ## Descripción
 
-Ver {{jsxref("Array.prototype.map()")}} para una descripción detallada de la función de devolución de llamada. El método `flatMap` es idéntico a [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de una llamada a [`flatten`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten) de profundidad 1.
+Ver {{jsxref("Array.prototype.map()")}} para una descripción detallada de la función de devolución de llamada. El método `flatMap` es idéntico a [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de una llamada a [`flatten`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) de profundidad 1.
 
 ## Ejemplos
 

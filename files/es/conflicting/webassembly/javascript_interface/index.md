@@ -50,7 +50,7 @@ Los usos primarios para el objeto `WebAssembly` son:
 
 ## Ejemplos
 
-Después de obtener algún bytecode de WebAssembly usando la sentencia fetch, nosotros compilamos e instanciamos el módulo usando la función {{jsxref("WebAssembly.instantiate()")}} , importando una función de JavaScript en el WebAssembly Module en el proceso. Esta premisa resuelve a un objeto (`result`) que contenga un objeto [`Module`](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) compilado y un objeto [`Instance`](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance) . Entonces tenemos una llamada a [Exported WebAssembly function](/es/docs/WebAssembly/Exported_functions) que es exportada por `Instance`.
+Después de obtener algún bytecode de WebAssembly usando la sentencia fetch, nosotros compilamos e instanciamos el módulo usando la función {{jsxref("WebAssembly.instantiate()")}} , importando una función de JavaScript en el WebAssembly Module en el proceso. Esta premisa resuelve a un objeto (`result`) que contenga un objeto [`Module`](/es/docs/WebAssembly/JavaScript_interface/Module) compilado y un objeto [`Instance`](/es/docs/WebAssembly/JavaScript_interface/Instance) . Entonces tenemos una llamada a [Exported WebAssembly function](/es/docs/WebAssembly/Exported_functions) que es exportada por `Instance`.
 
 ```js
 var importObject = {
@@ -76,5 +76,5 @@ fetch('simple.wasm').then(response =>
 ## Ver también
 
 - [Vista General de WebAssembly](/es/docs/WebAssembly)
-- [Conceptos de WebAssembly](/es/docs/WebAssembly/Concepts)
+- [Conceptos de WebAssembly](/es/docs/WebAssembly/Guides/Concepts)
 - [Uso de la API de JavaScript de WebAssembly](/es/docs/WebAssembly/Using_the_JavaScript_API)

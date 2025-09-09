@@ -14,7 +14,7 @@ element = baseElement.querySelector(selectors);
 ```
 
 - `element` и `baseElement` это {{domxref("element")}} объекты.
-- `selectors` - это группа [селекторов](/ru/docs/Web/Guide/CSS/Getting_Started/Selectors) для поиска совпадения.
+- `selectors` - это группа [селекторов](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) для поиска совпадения.
 
 ## Пример
 

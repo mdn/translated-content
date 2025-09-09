@@ -3,11 +3,11 @@ title: border
 slug: Web/CSS/border
 ---
 
-{{CSSRef}}{{ PreviousNext("Guía de referencia de CSS", "CSS:border-color") }}
+{{ PreviousNext("Guía de referencia de CSS", "CSS:border-color") }}
 
 ### Propiedades Constitutivas
 
-Esta es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para las siguientes propiedades CSS:
+Esta es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para las siguientes propiedades CSS:
 
 - border-color
 - border-style
@@ -40,7 +40,7 @@ border: [border-width || border-style || border-color | inherit] ;
 
 ### Ejemplos
 
-[Ver ejemplo en vivo](/samples/cssref/border.html)
+[Ver ejemplo en vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {

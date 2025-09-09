@@ -16,7 +16,7 @@ L'API d'identité fournit la fonction {{WebExtAPIRef("identity.launchWebAuthFlow
 
 L'extension termine alors le flux OAuth2 pour obtenir un jeton d'accès validé, et peut ensuite l'utiliser dans les requêtes HTTP pour accéder aux données de l'utilisateur en fonction de l'autorisation donnée par l'utilisateur.
 
-Pour utiliser cette API, vous devez posséder la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "identity"
+Pour utiliser cette API, vous devez posséder la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "identity"
 
 ## Installer
 
@@ -26,7 +26,7 @@ Il y a une certaine configuration que vous devez faire avant de publier votre ex
 
 L'[URL de redirection](https://www.oauth.com/oauth2-servers/redirect-uris/) représente le point final de {{WebExtAPIRef("identity.launchWebAuthFlow()")}}, dans lequel le jeton d'accès ou le code d'autorisation est remis à l'extension..
 
-Vous pouvez obtenir une URL de redirection en appelant {{WebExtAPIRef("identity.getRedirectURL()")}}. Cette fonction dérive une URL de redirection à partir de l'ID du module, donc si vous voulez l'utiliser, vous devez probablement définir explicitement l'ID de votre module en utilisant la clé des [`applications`](/fr/Add-ons/WebExtensions/manifest.json/applications) (sinon, chaque fois que vous [installez temporairement le module complémentaire](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), vous obtiendrez une URL de redirection différente).
+Vous pouvez obtenir une URL de redirection en appelant {{WebExtAPIRef("identity.getRedirectURL()")}}. Cette fonction dérive une URL de redirection à partir de l'ID du module, donc si vous voulez l'utiliser, vous devez probablement définir explicitement l'ID de votre module en utilisant la clé des [`applications`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) (sinon, chaque fois que vous [installez temporairement le module complémentaire](/fr/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), vous obtiendrez une URL de redirection différente).
 
 Vous n'avez pas besoin d'utiliser l'URL de redirection retournée par `identity.getRedirectURL()`: vous pouvez fournir la vôtre, et cela peut être tout ce que le service redirigera. Cependant, il devrait utiliser un domaine que vous contrôlez.
 
@@ -57,8 +57,6 @@ Cela aura tendance à être spécifique au fournisseur de services, mais en gén
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

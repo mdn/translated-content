@@ -3,13 +3,21 @@ title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
 
-{{JSRef}}
-
 **`localeCompare()`** 回傳一個數字，用來表示其與被比較的字串的先後順序。
 
 如果環境中有支援[`Intl.Collator` API](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)，這個方法實際上是調用 `Intl.Collator` API。
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 ## 語法
 
@@ -29,13 +37,11 @@ localeCompare(compareString, locales, options)
 - `compareString`
   - : 要和`referenceStr`進行比較的字串
 - `locales` {{optional_inline}}
-
   - : 「BCP 47 語言標籤」的字串或是陣列。相當於`Intl.Collator()`的[`locales`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 參數。
 
     如果使用的環境並未實現 `Intl.Collator`，此參數會被忽略，並且視同採用當前主機的語言環境
 
 - `options` {{optional_inline}}
-
   - : 一個處理輸出格式的物件。相當於`Intl.Collator()`的 [`options`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options)參數。
 
     如果使用的環境並未實現`Intl.Collator` ，此參數會被忽略。

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 
 Obtient toutes les alarmes actives pour le poste.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -21,7 +21,7 @@ Aucun
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) dont la valeur de résolution sera un tableau d'objets [`Alarm`](/fr/Add-ons/WebExtensions/API/alarms/Alarm). Chaque élément de ce tableau représente une alarme active de l'extension. Si aucune alarme n'est active, le tableau sera vide.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera un tableau d'objets [`Alarm`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/alarms/Alarm). Chaque élément de ce tableau représente une alarme active de l'extension. Si aucune alarme n'est active, le tableau sera vide.
 
 ## Exemples
 
@@ -45,5 +45,3 @@ getAlarms.then(gotAll);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

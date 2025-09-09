@@ -4,7 +4,7 @@ slug: orphaned/Web/CSS/-webkit-overflow-scrolling
 original_slug: Web/CSS/-webkit-overflow-scrolling
 ---
 
-{{CSSRef}} {{Non-standard_header}}
+{{Non-standard_header}}
 
 [CSS](/ko/docs/Web/CSS) **`-webkit-overflow-scrolling`** 속성은 터치 단말기에서 주어진 요소의 모멘텀 기반 스크롤 활성화 여부를 결정합니다.
 
@@ -74,4 +74,4 @@ p {
 
 ## 같이 보기
 
-- [CSS-Tricks article with demo](http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+- [CSS-Tricks article with demo](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)

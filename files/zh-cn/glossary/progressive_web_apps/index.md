@@ -16,4 +16,4 @@ l10n:
 ## 参见
 
 - MDN 上的[渐进式 Web 应用程序](/zh-CN/docs/Web/Progressive_web_apps)
-- web.dev 上的[渐进式 Web 应用程序](https://web.dev/explore/progressive-web-apps)
+- web.developers.google.cn 上的[渐进式 Web 应用程序](https://web.developers.google.cn/explore/progressive-web-apps)

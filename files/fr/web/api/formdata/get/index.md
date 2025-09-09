@@ -21,11 +21,11 @@ formData.get(name);
 ### Paramètres
 
 - `name`
-  - : Une chaîne de caractères [`USVString`](/fr/docs/Web/API/USVString) représentant le nom de la clé que vous souhaitez retrouver.
+  - : Une chaîne de caractères [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le nom de la clé que vous souhaitez retrouver.
 
 ### Valeur de retour
 
-Un objet [`FormDataEntryValue`](/fr/docs/Web/API/FormDataEntryValue) contenant la valeur. Si la clé n'existe pas, la méthode renvoie `null`.
+Un objet [`FormDataEntryValue`](/fr/docs/Web/API/FormData) contenant la valeur. Si la clé n'existe pas, la méthode renvoie `null`.
 
 ## Exemple
 
@@ -59,6 +59,6 @@ formData.get("username"); // Renvoie "Chris"
 ## Voir aussi
 
 - [`XMLHTTPRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- [Utiliser XMLHttpRequest](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Utiliser les objets `FormData`](/fr/docs/Web/API/FormData/Using_FormData_Objects)
-- [`<form>`](/fr/docs/Web/HTML/Element/Form)
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)

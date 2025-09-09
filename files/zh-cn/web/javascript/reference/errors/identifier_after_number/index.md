@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Errors")}}
-
 当标识符以数字开头时，JavaScript 会出现“identifier starts immediately after numeric literal”的异常。标识符只能以字母、下划线（\_）或美元符号（$）开头。
 
 ## 错误信息
@@ -53,5 +51,5 @@ const foo = life1;
 
 ## 参见
 
-- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [语法和数据类型](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types)指南
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [语法与类型](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types)指南

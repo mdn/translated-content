@@ -3,16 +3,16 @@ title: 內容腳本
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
 
-{{AddonSidebar}}內容腳本（content script）是擴充套件的一部分，它會在在特定的網頁執行（與之相對的則是同樣屬於套件的後端腳本（background scripts）或者網站本身的腳本，像是那些那些透過 {{HTMLElement("script")}} 標籤讀取的內容）
+內容腳本（content script）是擴充套件的一部分，它會在在特定的網頁執行（與之相對的則是同樣屬於套件的後端腳本（background scripts）或者網站本身的腳本，像是那些那些透過 {{HTMLElement("script")}} 標籤讀取的內容）
 
-[後端腳本](/zh-TW/Add-ons/WebExtensions/Background_scripts)可以使用所有的 [擴充套件 JavaScript APIs](/zh-TW/Add-ons/WebExtensions/API)，但它們無法直接使用網頁中的內容。所以如果你的套件必須要透過 content scripts 才能使用它們。
+[後端腳本](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)可以使用所有的 [擴充套件 JavaScript API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API)，但它們無法直接使用網頁中的內容。所以如果你的套件必須要透過 content scripts 才能使用它們。
 
 就像一般網頁裡的 scripts 一樣，content scripts 可以透過 standard DOM APIs 存取並修改頁面內容。
 
-Content scripts 只能使用 can only access [一小部分的擴充套件 APIs](/zh-TW/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)，但它們可以透過一個訊息系統[來與後端腳本溝通](/zh-TW/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts)，從而間接地使用擴充套件 APIs。
+Content scripts 只能使用[一小部分的擴充套件 API](#擴充套件_api)，但它們可以透過一個訊息系統[來與後端腳本溝通](#與後端腳本溝通)，從而間接地使用擴充套件 API。
 
 > [!NOTE]
-> 留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 [CSP](/zh-TW/docs/Web/HTTP/CSP) 錯誤。
+> 留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 [CSP](/zh-TW/docs/Web/HTTP/Guides/CSP) 錯誤。
 
 > [!NOTE]
 > 由於錯誤 [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996)，透過 `var foo` or `window.foo = "bar"` 加入 content script 的 global 作用域的值可能會消失。
@@ -21,9 +21,9 @@ Content scripts 只能使用 can only access [一小部分的擴充套件 APIs](
 
 你可以透過下列三種方式將內容腳本讀入頁面：
 
-1. **在安裝時讀入至符合 URL 模式的頁面：**透過你的 manifest.json 中的 [`content_scripts`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 鍵，你可以要求瀏覽器在每次讀取 URL[符合給定模式](/zh-TW/Add-ons/WebExtensions/Match_patterns)的頁面時讀入內容腳本。
-2. **在執行時讀入至符合 URL 模式的頁面：**透過 [`content_scripts`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) API，你可以要求瀏覽器在每次讀取 URL[符合給定模式](/zh-TW/Add-ons/WebExtensions/Match_patterns)的頁面時讀入內容腳本。這就像第一種方法，不同的是你可以在執行時增加或移除內容腳本。
-3. **在執行時讀入至特定的頁籤：透過** [`tabs.executeScript()`](/zh-TW/Add-ons/WebExtensions/API/Tabs/executeScript) API，你可以在任何時候將內容腳本讀入特定的頁籤：舉例來說可以在使用者點擊[工具列按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_action)時給予回應。
+1. **在安裝時讀入至符合 URL 模式的頁面：**透過你的 manifest.json 中的 [`content_scripts`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 鍵，你可以要求瀏覽器在每次讀取 URL[符合給定模式](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的頁面時讀入內容腳本。
+2. **在執行時讀入至符合 URL 模式的頁面：**透過 [`content_scripts`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) API，你可以要求瀏覽器在每次讀取 URL[符合給定模式](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的頁面時讀入內容腳本。這就像第一種方法，不同的是你可以在執行時增加或移除內容腳本。
+3. **在執行時讀入至特定的頁籤：透過** [`tabs.executeScript()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/executeScript) API，你可以在任何時候將內容腳本讀入特定的頁籤：舉例來說可以在使用者點擊[工具列按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)時給予回應。
 
 每個套件的每個架構裡都只有一個全局作用域，所以一個內容腳本的變數可以直接被其他內容腳本使用，不管那個內容腳本是怎麼被讀入的。
 
@@ -40,7 +40,7 @@ Content scripts 只能使用 can only access [一小部分的擴充套件 APIs](
 - 內容腳本看不見頁面腳本的 Javascript 變數
 - 如果頁面腳本修改了原有 DOM 的屬性，內容腳本會看見原來的屬性而非被修改過的。
 
-在 Gecko 裡，這種行爲稱爲 [X 光視野](/zh-TW/docs/Xray_vision)。
+在 Gecko 裡，這種行爲稱爲 [X 光視野](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html)。
 
 舉例來說，有這樣一個網頁：
 
@@ -112,16 +112,16 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()
 
 注意到 Firefox 提供了一些 API 來使用被頁面腳本產生的 Javascript 物件以及對頁面腳本公開自己的 Javascript 物件。詳閱[與頁面腳本共用物件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)。
 
-### 擴充套件 APIs
+### 擴充套件 API
 
 除標準 DOM APIs 之外，內容腳本可以使用下列 擴充套件 APIs：
 
-來自 [`extension`](/zh-TW/Add-ons/WebExtensions/API/extension):
+來自 [`extension`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/extension):
 
 - [`getURL()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL)
-- [`inIncognitoContext`](/zh-TW/Add-ons/WebExtensions/API/extension#inIncognitoContext)
+- [`inIncognitoContext`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/extension#inincognitocontext)
 
-來自 [`runtime`](/zh-TW/Add-ons/WebExtensions/API/runtime):
+來自 [`runtime`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/runtime):
 
 - [`connect()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect)
 - [`getManifest()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)
@@ -143,9 +143,9 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()
 
 內容腳本可以透過一般的 [`window.XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 與 [`window.fetch()`](/zh-TW/docs/Web/API/Fetch_API) APIs 來發出請求。
 
-內容腳本跟套件的其他部分擁有相同的跨網域權限： 所以如果套件在 manifest.json 中透過 [`permissions`](/zh-TW/Add-ons/WebExtensions/manifest.json/permissions) 鍵要求了某一網域的使用，那麼它的內容腳本也能使用同樣的網域。
+內容腳本跟套件的其他部分擁有相同的跨網域權限： 所以如果套件在 manifest.json 中透過 [`permissions`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 鍵要求了某一網域的使用，那麼它的內容腳本也能使用同樣的網域。
 
-這是透過公開更多內容腳本中授權的 XHR 以及 fetch 實例來達成的。這件事情會導致標頭中不會設置 [`Origin`](/zh-TW/docs/Web/HTTP/Headers/Origin) 與 [`Referer`](/zh-TW/docs/Web/HTTP/Headers/Referer)的副作用，就像頁面請求自己一樣，一般會避免請求將跨來源泄露出去。從 58 版本號以後套件要傳送一些彷彿是頁面內容自己傳送的請求時可以改用 `content.XMLHttpRequest` 與 `content.fetch()`。對跨瀏覽器套件來說，這些事情的存在必須要能被做特徵檢測。
+這是透過公開更多內容腳本中授權的 XHR 以及 fetch 實例來達成的。這件事情會導致標頭中不會設置 [`Origin`](/zh-TW/docs/Web/HTTP/Reference/Headers/Origin) 與 [`Referer`](/zh-TW/docs/Web/HTTP/Reference/Headers/Referer)的副作用，就像頁面請求自己一樣，一般會避免請求將跨來源泄露出去。從 58 版本號以後套件要傳送一些彷彿是頁面內容自己傳送的請求時可以改用 `content.XMLHttpRequest` 與 `content.fetch()`。對跨瀏覽器套件來說，這些事情的存在必須要能被做特徵檢測。
 
 ## 與後端腳本溝通
 
@@ -277,7 +277,6 @@ document.body.addEventListener("click", function () {
 
 - 監聽來自內容腳本的連線請求
 - 當它收到連線請求：
-
   - 將端口儲存在 `portFromCS` 這個變數
   - 透過端口傳送訊息給內容腳本
   - 開始監聽並記錄端口上的訊息
@@ -444,7 +443,7 @@ In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-這些也適用於 [`setTimeout()`](/zh-TW/docs/Web/API/setTimeout)、{{domxref("Window.setInterval", "setInterval()")}} 與 [`Function()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function)。
+這些也適用於 [`setTimeout()`](/zh-TW/docs/Web/API/Window/setTimeout)、{{domxref("Window.setInterval", "setInterval()")}} 與 [`Function()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function)。
 
 當在頁面執行程式碼時一定要小一萬個心，頁面的環境有可能被惡意的網頁所控制，它們可以重新定義與你互動的物件來作出一些出乎意料的行爲：
 

@@ -9,7 +9,17 @@ El método **`localeCompare()`** retorna un número indicando si una cadena de
 carateres de referencia va antes, después o si es la misma que la cadena dada en
 orden alfabético.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 Los nuevos argumentos `locales` y `options` permiten a las aplicaciones
 especificar el idioma cuyo orden alfabético se debe usar y configurar el
@@ -30,7 +40,6 @@ localeCompare(compareString, locales, options);
 - `compareString`
   - : La cadena de caracteres contra la cual se compara la `referenceStr`.
 - `locales` y `options`
-
   - : Estos argumentos configuran el comportamiento de la función y le permiten
     a las aplicaciones especificar el idioma cuyas convenciones de formato se
     deben usar. En implementaciones que ignoran los argumentos `locales` y
@@ -38,7 +47,7 @@ localeCompare(compareString, locales, options);
     completamente dependientes de la implementación.
 
     Consulte el
-    [constructor de `Intl.Collator()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator)
+    [constructor de `Intl.Collator()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)
     para obtener detalles sobre estos parámetros y cómo usarlos.
 
 ### Valor de retorno

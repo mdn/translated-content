@@ -1,67 +1,94 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
+l10n:
+  sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`AbortController`** 介面代表一個控制器物件，讓你可以在需要時中斷一個或多個 DOM 請求。
+**`AbortController`** 介面表示一個控制器物件，允許你在需要時中止一個或多個 Web 請求。
 
-你可以使用 {{domxref("AbortController.AbortController()")}} 建立一個新的 `AbortController` 物件。與 DOM 請求溝通時則是使用 {{domxref("AbortSignal")}} 物件。
+你可以使用 {{domxref("AbortController.AbortController()", "AbortController()")}} 建構子來建立新的 `AbortController` 物件。與非同步操作的通訊是透過 {{domxref("AbortSignal")}} 物件完成的。
 
 ## 建構子
 
-- {{domxref("AbortController.AbortController()")}}
-  - : 建立一個新的 `AbortController` 物件實體。
+- {{domxref("AbortController.AbortController()", "AbortController()")}}
+  - : 建立一個新的 `AbortController` 物件實例。
 
-## 屬性
+## 實例屬性
 
-- {{domxref("AbortController.signal")}} {{readonlyInline}}
-  - : 回傳一個 {{domxref("AbortSignal")}} 物件實體，可以用來中斷一個 DOM 請求、或是與其溝通。
+- {{domxref("AbortController.signal")}} {{ReadOnlyInline}}
+  - : 回傳一個 {{domxref("AbortSignal")}} 物件實例，可用於與非同步操作進行通訊或中止操作。
 
-## 方法
+## 實例方法
 
 - {{domxref("AbortController.abort()")}}
-  - : 在一個 DOM 請求完成前中斷他。這可以用來中斷 [fetch 請求](/zh-TW/docs/Web/API/fetch)、對任何 Response {{domxref("Body")}} 的讀取、或是資料流。
+  - : 在非同步操作完成之前中止該操作。這可以中止 [fetch 請求](/zh-TW/docs/Web/API/Window/fetch)、任何回應主體的消耗以及串流。
 
 ## 範例
 
-在下面的程式碼片段中，我們要用 [Fetch API](/zh-TW/docs/Web/API/Fetch_API) 來下載一部影片。
+> [!NOTE]
+> 在 {{domxref("AbortSignal")}} 參考中有更多範例。
 
-我們首先用 {{domxref("AbortController.AbortController","AbortController()")}} 建立一個控制器，然後透過 {{domxref("AbortController.signal")}} 屬性取得他的 {{domxref("AbortSignal")}} 物件。
+在以下範例中，我們嘗試使用 [Fetch API](/zh-TW/docs/Web/API/Fetch_API) 下載一個影片。
 
-在初始化 [fetch 請求](/zh-TW/docs/Web/API/fetch) 的時候，我們把 `AbortSignal` 作為選項傳入該請求的選項物件中（參考下方的 `{signal}`）。這樣會把剛才的中斷訊號與控制器跟 fetch 請求關聯起來，讓我們可以透過呼叫 {{domxref("AbortController.abort()")}} 來中斷該請求。請參考下方範例中第二個事件處理器。
+我們首先使用 {{domxref("AbortController.AbortController","AbortController()")}} 建構子建立一個控制器，然後使用 {{domxref("AbortController.signal")}} 屬性獲取其關聯的 {{domxref("AbortSignal")}} 物件。
+
+當 [fetch 請求](/zh-TW/docs/Web/API/Window/fetch)初始化時，我們將 `AbortSignal` 作為選項的一部分（如下的 `{signal}`）傳遞到請求的選項物件中。這將信號和控制器與 fetch 請求關聯起來，並允許我們通過調用 {{domxref("AbortController.abort()")}} 來中止它，如以下第二個事件監聽器所示。
+
+當 `abort()` 被調用時，`fetch()` 的 promise 會以名為 `AbortError` 的 `DOMException` 被拒絕。
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+let controller;
+const url = "video.mp4";
 
-var downloadBtn = document.querySelector('.download');
-var abortBtn = document.querySelector('.abort');
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', function() {
-  controller.abort();
-  console.log('下載已中斷');
+abortBtn.addEventListener("click", () => {
+  if (controller) {
+    controller.abort();
+    console.log("下載已中止");
+  }
 });
 
-function fetchVideo() {
-  ...
-  fetch(url, {signal}).then(function(response) {
-    ...
-  }).catch(function(e) {
-    reports.textContent = '下載錯誤: ' + e.message;
-  })
+async function fetchVideo() {
+  controller = new AbortController();
+  const signal = controller.signal;
+
+  try {
+    const response = await fetch(url, { signal });
+    console.log("下載完成", response);
+    // 進一步處理回應
+  } catch (err) {
+    console.error(`下載錯誤：${err.message}`);
+  }
 }
 ```
 
-> [!NOTE]
-> 當 `abort()` 被呼叫的時候，`fetch()` 回傳的 Promise 會被以 `AbortError` 拒絕。
+如果在 `fetch()` 呼叫兌現後但在回應主體被讀取之前中止請求，那麼嘗試讀取回應主體將會以 `AbortError` 例外被拒絕。
 
-在 GitHub 有個完整的範例可供參考 — 請參見 [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api)（[或是也可以實際體驗看看](https://mdn.github.io/dom-examples/abort-api/)）。
+```js
+async function get() {
+  const controller = new AbortController();
+  const request = new Request("https://example.org/get", {
+    signal: controller.signal,
+  });
 
-## 規格
+  const response = await fetch(request);
+  controller.abort();
+  // 下一行將拋出 `AbortError`
+  const text = await response.text();
+  console.log(text);
+}
+```
+
+你可以在 [GitHub 上找到完整的範例](https://github.com/mdn/dom-examples/tree/main/abort-api)；你也可以[查看線上運行範例](https://mdn.github.io/dom-examples/abort-api/)。
+
+## 規範
 
 {{Specifications}}
 
@@ -72,4 +99,4 @@ function fetchVideo() {
 ## 參見
 
 - [Fetch API](/zh-TW/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/)，来自 Jake Archibald

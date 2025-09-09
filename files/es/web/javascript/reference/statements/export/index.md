@@ -161,4 +161,4 @@ Tenga en cuenta que no es posible usar `var`, `let` o `const` con `export defaul
 - {{jsxref("Sentencias/import", "import")}}
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), publicación del blog de Hacks por Jason Orendorff
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), publicación del blog de Hacks por Lin Clark
-- [Libro de Axel Rauschmayer: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Libro de Axel Rauschmayer: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

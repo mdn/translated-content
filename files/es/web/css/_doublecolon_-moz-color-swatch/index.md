@@ -1,9 +1,9 @@
 ---
-title: "::-moz-color-swatch"
+title: ::-moz-color-swatch
 slug: Web/CSS/::-moz-color-swatch
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 El **`::-moz-color-swatch`** [pdseudo-elemento CSS](/es/docs/Web/CSS) es una [extension de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) que representa el color seleccionado en un {{HTMLElement("input")}} de `type="color"`.
 
@@ -46,5 +46,4 @@ No es parte de ninguna especificacion. Es un pseudo-elemento patentado específi
 ## Ver tambien
 
 - Pseudo-elementos similares usados por otros buscadores:
-
   - {{cssxref("::-webkit-color-swatch")}}, pseudo-elemento soportado por WebKit y Blink (Safari, Chrome, and Opera)

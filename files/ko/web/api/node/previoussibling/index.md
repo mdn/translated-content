@@ -28,13 +28,13 @@ Gecko 기반 브라우저는 소스 마크업에서 공백을 나타내기 위�
 그러므로 예를 들어 [`Node.firstChild`](/ko/docs/Web/API/Node/firstChild)나 [`Node.previousSibling`](/ko/docs/Web/API/Node/previousSibling)을 통해서 얻은 노드는 작성자가 얻으려 한 실제 요소와는
 달리 공백 텍스트 노드를 참조할 지도 모릅니다.
 
-더 많은 정보는 [Whitespace in the DOM](/ko/docs/Whitespace_in_the_DOM)과
-[W3C DOM 3 FAQ: Why are some Text nodes empty?](http://www.w3.org/DOM/faq.html#emptytext)를 보세요.
+더 많은 정보는 [Whitespace in the DOM](/ko/docs/Web/API/Document_Object_Model/Whitespace)과
+[W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext)를 보세요.
 
-To navigate the opposite way through the child nodes list use [Node.nextSibling](/ko/docs/Web/API/Node.nextSibling).
+To navigate the opposite way through the child nodes list use [Node.nextSibling](/ko/docs/Web/API/Node/nextSibling).
 
 ## Specification
 
-- [DOM Level 1 Core: previousSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling)
-- [DOM Level 2 Core: previousSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8)
-- [DOM Level 3 Core: previousSibling](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)
+- [DOM Level 1 Core: previousSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling)
+- [DOM Level 2 Core: previousSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8)
+- [DOM Level 3 Core: previousSibling](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)

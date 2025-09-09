@@ -67,7 +67,7 @@ Para criar uma camada usando caminhos (regiões ou _paths_) é necessário algun
 
 - {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}
   - : Cria um novo path. Uma vez criado, futuros comandos de desenho são direcionados do path atual para a construção de um novo path no canvas.
-- [Métodos de Caminhos (Path)](/pt-BR/docs/Web/API/CanvasRenderingContext2D#Paths)
+- [Métodos de Caminhos (Path)](/pt-BR/docs/Web/API/CanvasRenderingContext2D#paths)
   - : Métodos para manipuliar diferentes paths para objetos.
 - {{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}
   - : Finaliza o path para futuros comandos de desenho, fazendo com que voltem a ser direcionados ao contexto.
@@ -493,7 +493,7 @@ new Path2D(path); // cópia de outro objeto de Path2D
 new Path2D(d); // objeto criado a partir de paths em SVG
 ```
 
-Todos os [métodos de caminho (path methods)](/pt-BR/docs/Web/API/CanvasRenderingContext2D#Paths) como `moveTo`, `rect`, `arc` ou `quadraticCurveTo`, etc., que temos de saber acima, estão disponíveis em `Path2D`.
+Todos os [métodos de caminho (path methods)](/pt-BR/docs/Web/API/CanvasRenderingContext2D#paths) como `moveTo`, `rect`, `arc` ou `quadraticCurveTo`, etc., que temos de saber acima, estão disponíveis em `Path2D`.
 
 A API `Path2D` também adiciona uma maneira de combinar caminhos usando o método `addPath`. Isso pode ser útil quando você deseja criar objetos com vários componentes, por exemplo.
 
@@ -537,7 +537,7 @@ function draw() {
 
 Outro recurso poderoso da nova API de Path2D é a utilização de dados de _path_ em SVG para inicializar caminhos (_paths_) no canvas. Isso permite que você crie dados de _paths_ que possam ser utilizados tanto no SVG como no canvas.
 
-O caminho se moverá para o ponto `(M10 10)` e então se moverá horizontalmente 80 pontos para a direita `(h 80)`, depois 80 pontos para baixo `(v 80)`, então 80 pontos para a esquerda (h -80) e, por fim, volta para o início (`z`). Você pode ver este exemplo na página do [construtor do Path2D](/pt-BR/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
+O caminho se moverá para o ponto `(M10 10)` e então se moverá horizontalmente 80 pontos para a direita `(h 80)`, depois 80 pontos para baixo `(v 80)`, então 80 pontos para a esquerda (h -80) e, por fim, volta para o início (`z`). Você pode ver este exemplo na página do [construtor do Path2D](/pt-BR/docs/Web/API/Path2D/Path2D#using_svg_paths).
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

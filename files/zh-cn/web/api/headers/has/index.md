@@ -1,55 +1,57 @@
 ---
-title: Headers.has()
+title: Headers：has() 方法
 slug: Web/API/Headers/has
+l10n:
+  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
-{{domxref("Headers")}} 接口的 **`has()`**方法返回一个布尔值来声明一个 `Headers`对象 是否包含特定的头信息。
+{{domxref("Headers")}} 接口的 **`has()`** 方法返回一个布尔值来声明一个 `Headers` 对象是否包含特定的标头。
 
-考虑到安全因素，一些头信息只能被 user agent 来管理。这些头信息包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+出于安全考虑，某些标头只能由用户代理控制。这些标头包括{{Glossary("Forbidden_request_header", "禁止修改的请求标头")}}和{{Glossary("Forbidden_response_header_name", "禁止修改的响应标头")}}。
 
-## Syntax
+## 语法
 
-```js
-myHeaders.has(name);
+```js-nolint
+has(name)
 ```
 
-### Parameters
+### 参数
 
-- _name_
-  - : 你要测试的 HTTP 头字段的名称。如果给出的名称不在 HTTP 头中，将爬出异常{{jsxref("TypeError")}}。
+- `name`
+  - : 你要测试的 HTTP 标头的名称。如果给出的名称不是合法的 HTTP 标头名称，将抛出 {{jsxref("TypeError")}}。
 
-### Returns
+### 返回值
 
-A {{domxref("Boolean")}}.
+一个布尔值。
 
-## Example
+## 示例
 
-创建一个空的 Headers 对象是简单的：
+创建一个空的 `Headers` 对象非常简单：
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // 当前为空
 ```
 
-你可以使用 {{domxref("Headers.append")}} 来向 myHeaders 添加一个头信息，然后使用 `has()` 方法来测试是否添加成功：
+你可以使用 {{domxref("Headers.append")}} 来添加一个标头，然后使用 `has()` 方法来测试是否添加成功：
 
 ```js
 myHeaders.append("Content-Type", "image/jpeg");
-myHeaders.has("Content-Type"); // Returns true
-myHeaders.has("Accept-Encoding"); // Returns false
+myHeaders.has("Content-Type"); // 返回 true
+myHeaders.has("Accept-Encoding"); // 返回 false
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

@@ -1,13 +1,13 @@
 ---
-title: "-moz-user-modify"
+title: -moz-user-modify
 slug: Web/CSS/user-modify
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 
-La propiedad `-moz-user-modify` determina si el contenido de un elemento puede ser editado por el usuario. Se relaciona con el atributo [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) . `user-focus` , que es una propiedad similar, fue propuesta como parte de los [borradores iniciales de un predecesor de la especificación CSS3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216) ,pero fue rechazada por el grupo de trabajo.
+La propiedad `-moz-user-modify` determina si el contenido de un elemento puede ser editado por el usuario. Se relaciona con el atributo [`contenteditable`](/es/docs/Web/HTML/Reference/Global_attributes#contenteditable) . `user-focus` , que es una propiedad similar, fue propuesta como parte de los [borradores iniciales de un predecesor de la especificación CSS3 UI](https://www.w3.org/TR/2000/WD-css3-userint-20000216) ,pero fue rechazada por el grupo de trabajo.
 
 {{cssinfo}}
 
@@ -61,7 +61,7 @@ La propiedad `-moz-user-modify` determina si el contenido de un elemento puede s
 
 ## Especificaciones
 
-`user-modify` en [una versión inicial de la especificación CSS 3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216#user-modify) (Borrador de trabajo Febrero del 2000, Working Draft February 2000 que ya ha sido reeemplazado por _CSS 3 UI_)
+`user-modify` en [una versión inicial de la especificación CSS 3 UI](https://www.w3.org/TR/2000/WD-css3-userint-20000216#user-modify) (Borrador de trabajo Febrero del 2000, Working Draft February 2000 que ya ha sido reeemplazado por _CSS 3 UI_)
 
 ## Compatibilidad con navegadores
 

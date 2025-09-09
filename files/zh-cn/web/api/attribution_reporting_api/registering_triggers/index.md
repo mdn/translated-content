@@ -44,13 +44,12 @@ l10n:
    ```
 
    这里指定的字段如下：
-
    - `"event_trigger_data"`：一个表示触发器数据的对象。包括：
-     - `"trigger_data"`：与触发器相关的数据，通常用于指示事件，如“用户将物品添加到购物车”或“用户注册到邮件列表”。此值将包含在生成的报告中（如果有），尽管它将根据归因来源的 [`"trigger_data_matching"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) 字段进行修改。
+     - `"trigger_data"`：与触发器相关的数据，通常用于指示事件，如“用户将物品添加到购物车”或“用户注册到邮件列表”。此值将包含在生成的报告中（如果有），尽管它将根据归因来源的 [`"trigger_data_matching"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) 字段进行修改。
        > [!NOTE]
        > 用于表示每个事件的值以及数组中的元素数量完全是任意的，由作为开发人员的你定义。数组可以包含未使用的值，但在触发器注册时，必须在数组中存在值，以便浏览器将其归因于来源。
      - `"priority"`：表示归因触发器优先级的字符串值。有关更多信息，请参见[报告优先级和限制](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#报告优先级和限制)。
-     - `"deduplication_key"`：表示唯一键的字符串，用于防止归因重复——例如，如果用户多次将同一项添加到购物车。有关更多信息，请参见[防止报告重复](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/prevent-duplication)。
+     - `"deduplication_key"`：表示唯一键的字符串，用于防止归因重复——例如，如果用户多次将同一项添加到购物车。有关更多信息，请参见[防止报告重复](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/prevent-duplication)。
    - `"debug_key"`：表示调试键的数字。如果你希望生成[调试报告](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#调试报告)，请设置此项。
 
    请参见 {{httpheader("Attribution-Reporting-Register-Trigger")}} 以获取所有可用字段的详细描述。
@@ -81,14 +80,12 @@ l10n:
    ```
 
    此示例中的字段为：
-
    - `"aggregatable_trigger_data"`：一个对象数组，每个对象定义了一个聚合键，用于应用到不同的来源键上。
    - `"aggregatable_values"`：一个对象，包含 `"aggregatable_trigger_data"` 中定义的每个数据点的值。
 
    同样，请参见 {{httpheader("Attribution-Reporting-Register-Trigger")}} 以获取所有可用字段的详细描述。
 
-3. 当用户与归因触发器交互时，浏览器会尝试将触发器与浏览器私有本地缓存中存储的任何归因来源条目进行匹配。要成功匹配，`Attribution-Reporting-Register-Trigger` 的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) 必须与 {{httpheader("Attribution-Reporting-Register-Source")}} 的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data) 中提供的一个值匹配，并且注册触发器的顶级页面的站点（方案 + [eTLD+1](/zh-CN/docs/Glossary/eTLD)）必须：
-
+3. 当用户与归因触发器交互时，浏览器会尝试将触发器与浏览器私有本地缓存中存储的任何归因来源条目进行匹配。要成功匹配，`Attribution-Reporting-Register-Trigger` 的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) 必须与 {{httpheader("Attribution-Reporting-Register-Source")}} 的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data) 中提供的一个值匹配，并且注册触发器的顶级页面的站点（方案 + [eTLD+1](/zh-CN/docs/Glossary/eTLD)）必须：
    - 与来源的相关数据中指定的 `destination` 的站点之一匹配。
    - 与指定来源注册的请求同源。
 
@@ -96,10 +93,9 @@ l10n:
    > 这些要求提供了隐私保护，但也提供了灵活性——来源*和*触发器可以嵌入在 {{htmlelement("iframe")}} 中或位于顶级站点上。
 
    还有许多其他因素会阻碍匹配的成功；例如：
-
    - 触发器的过滤器与来源的过滤器数据不匹配（有关详细信息，请参见[过滤器](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#过滤器)）。
-   - 来源的 [`"trigger_data_matching"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) 设置导致没有匹配发生。
-   - 来源的 [`"max_event_level_reports"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#max_event_level_reports) 限制已达到。
+   - 来源的 [`"trigger_data_matching"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) 设置导致没有匹配发生。
+   - 来源的 [`"max_event_level_reports"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#max_event_level_reports) 限制已达到。
    - 由于浏览器的随机响应算法，没有报告成功的匹配。有关详细信息，请参见[为报告添加噪声](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#为报告添加噪声)。
 
 4. 如果找到成功的匹配项，浏览器将根据来源和触发器数据[生成报告](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports)并将其发送到报告端点。

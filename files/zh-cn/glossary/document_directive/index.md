@@ -11,19 +11,17 @@ l10n:
 
 文档指令不将 {{CSP("default-src")}} 指令作为回退机制。
 
-参见[文档指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#文档指令_document_directives)获取一个完整的列表。
+参见[文档指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#文档指令_document_directives)获取一个完整的列表。
 
 ## 参见
 
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("CSP", "内容安全策略")}}
   - {{Glossary("Reporting directive", "报告指令")}}
   - {{Glossary("Fetch directive", "Fetch 指令")}}
   - {{Glossary("Navigation directive", "导航指令")}}
 
 - 参考
-
   - <https://www.w3.org/TR/CSP/#directives-document>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}

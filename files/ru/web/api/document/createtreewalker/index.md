@@ -18,8 +18,7 @@ document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]
 - `root`
   - : корневой узел {{domxref("Node")}} для {{domxref("TreeWalker")}}. Чаще всего это элемент принадлежащий document.
 - `whatToShow` {{optional_inline}}
-
-  - : A `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF` representing the `SHOW_ALL` constant.
+  - : A `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF` representing the `SHOW_ALL` constant.
 
     | Константа                                                | Числовое значение                               | Описание                                                                                                                                                                                                                                                                                                                                                                                  |
     | -------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,18 +1,33 @@
 ---
 title: Atomics.or()
+short-title: or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Atomics.or()`** は静的メソッドで、配列内の指定した位置の値に指定した値でビット単位の OR を計算し、その位置にあった古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
 
-静的な **`Atomics.or()`** メソッドは、配列内の指定した位置の値に指定した値でビット単位の OR を計算し、その位置にあった古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
+{{InteractiveExample("JavaScript デモ: Atomics.or()")}}
 
-{{EmbedInteractiveExample("pages/js/atomics-or.html")}}
+```js interactive-example
+// バイト単位でサイズを指定して SharedArrayBuffer を作成
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+// 5 (0101) OR 2 (0010) = 7 (0111)
+console.log(Atomics.or(uint8, 0, 2));
+// 予想される結果: 5
+
+console.log(Atomics.load(uint8, 0));
+// 予想される結果: 7
+```
 
 ## 構文
 
-```js
-Atomics.or(typedArray, index, value);
+```js-nolint
+Atomics.or(typedArray, index, value)
 ```
 
 ### 引数
@@ -30,8 +45,10 @@ Atomics.or(typedArray, index, value);
 
 ### 例外
 
-- `typedArray` が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- `index` が `typedArray` の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- {{jsxref("TypeError")}}
+  - : `typedArray` が許可された整数型のいずれでもない場合に発生します。
+- {{jsxref("RangeError")}}
+  - : `index` が `typedArray` の範囲を超えている場合に発生します。
 
 ## 解説
 

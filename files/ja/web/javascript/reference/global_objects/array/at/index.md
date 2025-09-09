@@ -1,15 +1,28 @@
 ---
 title: Array.prototype.at()
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`at()`** は {{jsxref("Array")}} インスタンスのメソッドで、整数値を受け取り、そのインデックスにある項目を返します。正の整数値と負の整数値が使用できます。負の整数は、配列の最後の項目から前へ数えます。
 
-**`at()`** は {{jsxref("Array")}} インスタンスのメソッドで、整数値を受け取り、その位置にある項目を返します。正の整数値と負の整数値が使用できます。負の整数は、配列の最後の項目から前へ数えます。
+{{InteractiveExample("JavaScript デモ: Array.prototype.at()")}}
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+```js interactive-example
+const array = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`${index} のインデックスは ${array.at(index)} を返します`);
+// 予想される結果: "2 のインデックスは 8 を返します"
+
+index = -2;
+
+console.log(`${index} のインデックスは ${array.at(index)} を返します`);
+// 予想される結果: "-2 のインデックスは 130 を返します"
+```
 
 ## 構文
 
@@ -20,15 +33,15 @@ at(index)
 ### 引数
 
 - `index`
-  - : 返される配列要素のゼロ基点の添字（位置）で、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion)。負の添字を使用した場合は、配列の末尾から逆に数えた位置です。`index < 0` であれば、 `index + array.length` がアクセスされます。
+  - : 返される配列要素のゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion)。負の添字を使用した場合は、配列の末尾から逆に数えたインデックスです。`index < 0` であれば、 `index + array.length` がアクセスされます。
 
 ### 返値
 
-配列の中で指定された位置に一致する要素です。`index < -array.length` または `index >= array.length` の場合は、対応するプロパティにアクセスしようとせず、常に {{jsxref("undefined")}} を返します。
+配列の中で指定されたインデックスに一致する要素です。`index < -array.length` または `index >= array.length` の場合は、対応するプロパティにアクセスしようとせず、常に {{jsxref("undefined")}} を返します。
 
 ## 解説
 
-`at()` メソッドは、`index` が負でない場合、ブラケット記法と等価です。例えば、`array[0]` と `array.at(0)` は、どちらも最初の項目を返します。しかし、配列の末尾から要素を数える場合、PythonやRのように `array[-1]` を使用することはできません。角括弧内の値はすべて文字列プロパティとしてリテラルに扱われるため、結局、配列のインデックスではなく通常の文字列プロパティである `array["-1"]` を読むことになります。
+`at()` メソッドは、`index` が負の整数でない場合、ブラケット記法と等価です。例えば、`array[0]` と `array.at(0)` は、どちらも最初の項目を返します。しかし、配列の末尾から要素を数える場合、 Python や R のように `array[-1]` を使用することはできません。角括弧内の値はすべて文字列プロパティとしてリテラルで扱われるため、結局、配列のインデックスではなく通常の文字列プロパティである `array["-1"]` を読むことになります。
 
 通常、{{jsxref("Array/length", "length")}} にアクセスし、そこからインデックスを計算します。例えば、 `array[array.length - 1]` のようになります。 `at()` メソッドでは相対インデックスが可能なので、これを短縮して `array.at(-1)` とすることができます。
 
@@ -108,6 +121,7 @@ console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 ## 関連情報
 
 - [`Array.prototype.at` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#relative-indexing-method)
+- [es-shims による `Array.prototype.at` のポリフィル](https://www.npmjs.com/package/array.prototype.at)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

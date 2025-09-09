@@ -3,11 +3,9 @@ title: Propiedades lógicas para márgenes, bordes y rellenos
 slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
 ---
 
-{{CSSRef}}
-
 La [especificación de Propiedades y Valores Lógicos](https://drafts.csswg.org/css-logical/) define asignaciones relativas al flujo para las diversas propiedades de margen, borde, relleno y sus abreviaturas. En esta guía echamos un vistazo a estos.
 
-Si ha visto la página principal de [Propiedades y Valores Lógicos de CSS](/es/docs/Web/CSS/CSS_Logical_Properties), verá que hay una gran cantidad de propiedades en la lista. Esto se debe principalmente al hecho de que hay cuatro valores a largo plazo para cada margen, borde y lado de relleno, más todos los valores abreviados.
+Si ha visto la página principal de [Propiedades y Valores Lógicos de CSS](/es/docs/Web/CSS/CSS_logical_properties_and_values), verá que hay una gran cantidad de propiedades en la lista. Esto se debe principalmente al hecho de que hay cuatro valores a largo plazo para cada margen, borde y lado de relleno, más todos los valores abreviados.
 
 ## Asignaciones para márgenes, bordes, y rellenos
 

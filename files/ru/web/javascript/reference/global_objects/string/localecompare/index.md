@@ -11,7 +11,17 @@ l10n:
 
 При сравнении большого количества строк, например при сортировке больших массивов, лучше создать объект {{jsxref("Intl.Collator")}} и использовать предоставляемый им метод {{jsxref("Intl/Collator/compare", "compare()")}}.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 ## Синтаксис
 
@@ -30,13 +40,11 @@ localeCompare(compareString, locales, options)
 - `compareString`
   - : Строка, с которой сравнивается `referenceStr`. Все значения [приводятся к строкам](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), поэтому отсутствие значения или значение `undefined` приводит к тому, что `localeCompare()` будет сравнивать со строкой `"undefined"`, а это скорее всего не то, что вы ожидаете.
 - `locales` {{optional_inline}}
-
   - : Строка с языковым тегом BCP 47 или массив таких строк. Соответствует параметру [`locales`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) конструктора `Intl.Collator()`.
 
     В реализациях без поддержки `Intl.Collator` этот параметр игнорируется и обычно используется локаль устройства.
 
 - `options` {{optional_inline}}
-
   - : Объект определяющий выходной формат. Соответствует параметру [`options`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options) конструктора `Intl.Collator()`.
 
     В реализациях без поддержки `Intl.Collator` этот параметр игнорируется.

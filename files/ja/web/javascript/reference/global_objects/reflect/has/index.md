@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 
 静的な **`Reflect.has()`** メソッドは、機能としては [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)のように動作します。
 
-{{EmbedInteractiveExample("pages/js/reflect-has.html")}}
+{{InteractiveExample("JavaScript デモ: Reflect.has()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Reflect.has(object1, "property1"));
+// Expected output: true
+
+console.log(Reflect.has(object1, "property2"));
+// Expected output: false
+
+console.log(Reflect.has(object1, "toString"));
+// Expected output: true
+```
 
 ## 構文
 

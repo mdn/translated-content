@@ -19,11 +19,9 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 ### 参数
 
 - `transformer`{{Optional_Inline}}
-
   - : 一个表示 `transformer` 的对象。如果未提供，则生成的流将是一个**恒等变换流**，它将所有写入可写端的分块转发到可读端，不会有任何改变。
 
     transformer 对象可以包含以下任何方法。每个方法的 `controller` 都是一个 {{domxref("TransformStreamDefaultController")}} 实例。
-
     - `start(controller)`
       - : 当 `TransformStream` 被构造时调用。它通常用于使用 {{domxref("TransformStreamDefaultController.enqueue()")}} 对分块进行排队。
     - `transform(chunk, controller)`
@@ -32,18 +30,14 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
       - : 当所有写入可写端的分块成功转换后被调用，并且可写端将会关闭。
 
 - `writableStrategy`{{Optional_Inline}}
-
   - : 一个定义了队列策略的可选对象。它需要两个参数：
-
     - `highWaterMark`
       - : 一个非负整数。它定义了在应用背压之前内部队列包含的分块的总数。
     - `size(chunk)`
       - : 一个包含参数 `chunk` 的方法。它表示用于每一个块的大小，以字节为单位。
 
 - `readableStrategy`{{Optional_Inline}}
-
   - : 一个定义了队列策略的可选对象。它需要两个参数：
-
     - `highWaterMark`
       - : 一个非负整数。它定义了在应用背压之前内部队列包含的分块的总数。
     - `size(chunk)`
@@ -56,7 +50,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 
 ### 将文本转换为大写
 
-以下示例将文本逐块转换为大写。这个示例来自[数据流——权威指南](https://web.dev/articles/streams)，它有关于不同类型流的一些示例。
+以下示例将文本逐块转换为大写。这个示例来自[数据流——权威指南](https://web.developers.google.cn/articles/streams)，它有关于不同类型流的一些示例。
 
 ```js
 function upperCaseStream() {

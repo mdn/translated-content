@@ -49,7 +49,7 @@ HTML должен предоставлять структуру информац
 
 ## Семантические элементы
 
-Вот _некоторые_ из примерно 100 доступных семантических [элементов](/ru/docs/Web/HTML/Element):
+Вот _некоторые_ из примерно 100 доступных семантических [элементов](/ru/docs/Web/HTML/Reference/Elements):
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -67,14 +67,12 @@ HTML должен предоставлять структуру информац
 
 ## Learn more
 
-- [HTML element reference](/ru/docs/Web/HTML/Element#Inline_text_semantics) on MDN
-- [Using HTML sections and outlines](/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Problems_solved_by_HTML5) on MDN
+- [HTML element reference](/ru/docs/Web/HTML/Reference/Elements#inline_text_semantics) on MDN
+- [Using HTML sections and outlines](/ru/docs/Web/HTML/Reference/Elements/Heading_Elements#problems_solved_by_html5) on MDN
 - [MDN Web Docs Glossary](/ru/docs/Glossary)
-
   - {{Glossary("SEO")}}
 
 - Some of semantic elements in HTML
-
   - {{htmlelement("article")}}
   - {{htmlelement("aside")}}
   - {{htmlelement("details")}}

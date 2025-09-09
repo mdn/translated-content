@@ -5,11 +5,24 @@ l10n:
   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
-{{jsSidebar("Classes")}}
+**静态初始化块**是在 {{jsxref("Statements/class", "class")}} 中声明的。它包含在类初始化过程中要求值的语句。与 {{jsxref("Classes/static", "static")}} 属性相比，它允许更灵活的初始化逻辑，例如使用 `try...catch` 或用单个值设置多个字段。初始化是在当前类声明的上下文中进行的，并可访问私有状态，这允许类与在同一作用域中声明的其他类或函数共享其私有元素信息（类似于 C++ 中的“友元”类）。
 
-**静态初始化块**是在 {{jsxref("Statements/class", "class")}} 中声明的。它包含在类初始化过程中要求值的语句。与 {{jsxref("Classes/static", "static")}} 属性相比，它允许更灵活的初始化逻辑，例如使用 `try...catch` 或用单个值设置多个字段。初始化是在当前类声明的上下文中进行的，并可访问私有状态，这允许类与在同一作用域中声明的其他类或函数共享其私有属性信息（类似于 C++ 中的“友元”类）。
+{{InteractiveExample("JavaScript Demo: Class Static Initialization Blocks")}}
 
-{{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
+```js interactive-example
+class ClassWithStaticInitializationBlock {
+  static staticProperty1 = "Property 1";
+  static staticProperty2;
+  static {
+    this.staticProperty2 = "Property 2";
+  }
+}
+
+console.log(ClassWithStaticInitializationBlock.staticProperty1);
+// Expected output: "Property 1"
+console.log(ClassWithStaticInitializationBlock.staticProperty2);
+// Expected output: "Property 2"
+```
 
 ## 语法
 
@@ -59,11 +72,11 @@ console.log(y); // '外部的 y'
 
 这些语句是同步执行的。在这些代码块中不能使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}。（将初始化语句视为隐式封装在函数中。）
 
-静态代码块的作用域嵌套在类主体的词法作用域*内*，并且可以访问类内声明的[私有名称](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)，而不会导致语法错误。
+静态代码块的作用域嵌套在类主体的词法作用域*内*，并且可以访问类内声明的[私有名称](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)，而不会导致语法错误。
 
 [静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)初始化器和静态初始化块是逐个求值的。初始化块可以引用其上方的字段值，但不能引用其下方的字段值。所有静态方法都会事先添加并可以访问，但如果这些方法引用的字段位于当前块的下方，则调用这些方法时可能会出现与预期不符的情况。
 
-> **备忘：** 对于[私有静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出{{jsxref("SyntaxError")}}。）
+> **备忘：** 对于[私有静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出{{jsxref("SyntaxError")}}。）
 
 静态初始化块可能没有装饰器（类本身可能有）。
 
@@ -121,7 +134,7 @@ class B extends A {
 // '静态字段'
 ```
 
-### 访问私有属性
+### 访问私有元素
 
 下面的示例展示了如何从类之外的对象访问类的私有实例字段（示例来自 [v8.dev 博客](https://v8.dev/features/class-static-initializer-blocks#access-to-private-fields)）：
 

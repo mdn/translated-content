@@ -40,5 +40,5 @@ console.log(el.allowFullscreen); // 出力: true
 
 - [全画面 API](/ja/docs/Web/API/Fullscreen_API)
 - {{domxref("Element.requestFullscreen()")}}
-- [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
+- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
 - {{httpheader("Permissions-Policy/fullscreen", "fullscreen")}} 権限ポリシーディレクティブ

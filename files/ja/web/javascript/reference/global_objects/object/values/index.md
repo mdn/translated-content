@@ -1,15 +1,25 @@
 ---
 title: Object.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 l10n:
-  sourceCommit: 4ce6b9526bfa5b44a518e8ecb21a9894973136bd
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Object.values()`** は静的メソッドで、指定されたオブジェクトが持つ列挙可能なプロパティの文字列キーのプロパティ値を配列で返します。
 
-**`Object.values()`** 静的メソッドは、指定されたオブジェクトが持つ列挙可能なプロパティの文字列キーのプロパティ値を配列で返します。
+{{InteractiveExample("JavaScript デモ: Object.values()")}}
 
-{{EmbedInteractiveExample("pages/js/object-values.html")}}
+```js interactive-example
+const object = {
+  a: "some string",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object));
+// 予想される結果: Array ["somestring", 42, false]
+```
 
 ## 構文
 
@@ -87,7 +97,8 @@ console.log(Object.values(100)); // []
 ## 関連情報
 
 - [`Object.values` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [es-shims による `Object.values` のポリフィル](https://www.npmjs.com/package/object.values)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

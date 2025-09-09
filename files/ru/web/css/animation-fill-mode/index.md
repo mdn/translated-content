@@ -7,7 +7,7 @@ slug: Web/CSS/animation-fill-mode
 
 ## Описание
 
-[CSS](/en/CSS) свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
+[CSS](/en-US/CSS) свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
 
 {{cssinfo}}
 
@@ -31,7 +31,6 @@ animation-fill-mode: both, forwards, none;
 - `none`
   - : Стили анимации не будут применены к элементу до и после её выполнения.
 - `forwards`
-
   - : По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}:
 
     | `animation-direction` | `animation-iteration-count` | последний ключевой кадр |
@@ -44,8 +43,7 @@ animation-fill-mode: both, forwards, none;
     | `alternate-reverse`   | нечётное                    | `0%` или `from`         |
 
 - `backwards`
-
-  - : Элемент сохранит стиль первого [ключевого кадра](/ru/docs/CSS/@keyframes) на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}:
+  - : Элемент сохранит стиль первого [ключевого кадра](/ru/docs/Web/CSS/@keyframes) на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}:
 
     | `animation-direction`             | первый ключевой кадр |
     | --------------------------------- | -------------------- |
@@ -125,5 +123,5 @@ animation-fill-mode: both, forwards, none;
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

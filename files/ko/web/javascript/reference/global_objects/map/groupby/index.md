@@ -14,7 +14,25 @@ l10n:
 
 이 메서드는 주로 객체와 연관된 요소를 그룹화할 때, 특히 객체가 시간이 지남에 따라 변경될 수 있는 경우에 유용합니다. 객체가 불변인 경우 대신 문자열을 사용하여 객체를 표현하고 {{jsxref("Object.groupBy()")}}로 요소를 그룹화할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 구문
 
@@ -78,7 +96,7 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-함수의 인수 `{ quantity }`는 [함수 인수의 객체 구조 분해 구문](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter)의 기본 예시입니다. 이렇게 하면 매개변수로 전달된 객체의 `quantity` 속성을 풀고 함수 본문에 있는 `quantity`이라는 변수에 할당합니다. 이는 함수 내에서 요소의 관련 값에 접근하는 매우 간단명료한 방법입니다.
+함수의 인수 `{ quantity }`는 [함수 인수의 객체 구조 분해 구문](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#unpacking_properties_from_objects_passed_as_a_function_parameter)의 기본 예시입니다. 이렇게 하면 매개변수로 전달된 객체의 `quantity` 속성을 풀고 함수 본문에 있는 `quantity`이라는 변수에 할당합니다. 이는 함수 내에서 요소의 관련 값에 접근하는 매우 간단명료한 방법입니다.
 
 `Map`의 키는 수정한 후에도 계속 사용할 수 있습니다. 그러나 키를 다시 생성하여 계속 사용할 수는 없습니다. 따라서 맵을 사용해야 하는 모든 것이 해당 키에 대한 참조를 유지하는 것이 중요합니다.
 

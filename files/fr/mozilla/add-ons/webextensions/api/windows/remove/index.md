@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
 
 Ferme une fenêtre et tous les onglets à l'intérieur, compte tenu de l'ID de la fenêtre.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ var removing = browser.windows.remove(
 
 ### Valeur retournée
 
-Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque la fenêtre a été fermée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque la fenêtre a été fermée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -72,8 +72,6 @@ Dans Firefox, la même chose pourrait être réalisée avec la propriété de cr
 > [!NOTE]
 >
 > Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -21,11 +21,9 @@ animate(keyframes, options);
 - `keyframes`
   - : Un tableau d'objets représentant les étapes **ou** un objet dont les propriétés sont les tableaux des valeurs sur lesquelles itérer. Voir [les formats de <i lang="en">keyframe</i>](/fr/docs/Web/API/Web_Animations_API/Keyframe_Formats) pour plus de détails.
 - `options`
-
   - : Soit **un entier indiquant la durée de l'animation** en millisecondes, **ou** un objet qui contient une ou plusieurs propriétés de temporisation décrites dans [le paramètre `options` pour `KeyframeEffect()`](/fr/docs/Web/API/KeyframeEffect/KeyframeEffect#paramètres) et/ou les options suivantes&nbsp;:
-
     - `id` {{optional_inline}}
-      - : Une propriété unique pour `animate()`&nbsp;: il s'agit d'une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qu'on pourra utiliser pour faire référence à l'animation en question.
+      - : Une propriété unique pour `animate()`&nbsp;: il s'agit d'une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qu'on pourra utiliser pour faire référence à l'animation en question.
 
 ### Valeur de retour
 

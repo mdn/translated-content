@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 この記事では、ゲームパッド API を使用してウェブゲーム用の効果的なクロスブラウザー制御システムを実装し、ゲーム機のゲームコントローラーを使用してウェブゲームを制御できるようにします。 [Enclave Games](http://enclavegames.com/) によって作成されたケーススタディゲーム Hungry Fridge を掲載しています。
 
 ## ウェブゲームのコントロール
@@ -15,7 +13,7 @@ l10n:
 
 ## API ステータスとブラウザーサポート
 
-[ゲームパッド API](http://www.w3.org/TR/gamepad/) は W3C のプロセスではまだ草案の状態であり、まだ実装が変わることがありますが、[ブラウザーの対応](http://caniuse.com/gamepad)はかなり良い状態です。 Firefox 29 以降はそのまま使用できます。 Opera はバージョン 22 以降で API に対応しています（Chrome の Blink エンジンを使用していることを考えると驚くことではありません）。 Microsoft は Edge にて API をサポートしており、ゲームパッド API は 4 つの主要なブラウザーが現在対応しています。
+[ゲームパッド API](https://www.w3.org/TR/gamepad/) は W3C のプロセスではまだ草案の状態であり、まだ実装が変わることがありますが、[ブラウザーの対応](http://caniuse.com/gamepad)はかなり良い状態です。 Firefox 29 以降はそのまま使用できます。 Opera はバージョン 22 以降で API に対応しています（Chrome の Blink エンジンを使用していることを考えると驚くことではありません）。 Microsoft は Edge にて API をサポートしており、ゲームパッド API は 4 つの主要なブラウザーが現在対応しています。
 
 ## どのゲームパッドが良いか？
 

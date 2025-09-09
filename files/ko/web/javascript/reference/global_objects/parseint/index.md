@@ -7,7 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/parseInt
 
 **`parseInt()`** 함수는 문자열 인자를 파싱하여 특정 진수(수의 진법 체계에서 기준이 되는 값)의 정수를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+
+```js interactive-example
+console.log(parseInt("123"));
+// 123 (default base-10)
+console.log(parseInt("123", 10));
+// 123 (explicitly specify base-10)
+console.log(parseInt("   123 "));
+// 123 (whitespace is ignored)
+console.log(parseInt("077"));
+// 77 (leading zeros are ignored)
+console.log(parseInt("1.9"));
+// 1 (decimal part is truncated)
+console.log(parseInt("ff", 16));
+// 255 (lower-case hexadecimal)
+console.log(parseInt("0xFF", 16));
+// 255 (upper-case hexadecimal with "0x" prefix)
+console.log(parseInt("xyz"));
+// NaN (input can't be converted to an integer)
+```
 
 ## 구문
 
@@ -21,7 +40,6 @@ parseInt(string, radix);
 - `string`
   - : 파싱할 값입니다. 문자열이 아닐 경우 [`ToString`](https://tc39.es/ecma262/#sec-tostring) 추상 연산을 사용해 문자열로 변환합니다. 문자열의 선행 공백은 무시합니다.
 - `radix` {{optional_inline}}
-
   - : `string`의 진수를 나타내는 `2`부터 `36`까지의 정수입니다. 주의하세요. 기본 값이 `10`이 **아닙니다!** `Number` 자료형이 아닌 경우 `Number`로 변환합니다.
 
     > **경고:** `radix`를 생략할 경우 발생하는 일에 대해서는 [아래 설명](#설명)에서 자세히 알아볼 수 있습니다.

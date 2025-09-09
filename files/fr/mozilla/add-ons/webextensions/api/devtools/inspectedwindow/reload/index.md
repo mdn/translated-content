@@ -18,13 +18,11 @@ browser.devtools.inspectedWindow.reload(
 ### Paramètres
 
 - `reloadOptions`{{optional_inline}}
-
   - : `object`. Options pour la fonction, comme suit
-
     - `ignoreCache`{{optional_inline}}
       - : `boolean`. S'il est vrai, cela fait que le rechargement ignore le cache du navigateur (comme si l'utilisateur avait appuyé sur Shift+Ctrl+R).
     - `userAgent`{{optional_inline}}
-      - : `string`. Définissez un agent utilisateur personnalisé pour la page. Ici, la chaîne fournie sera envoyée dans l'en-tête de l'[Agent utilisateur](/fr/docs/Web/HTTP/Headers/User-Agent), et sera renvoyée par les appels à [`navigator.userAgent`](/fr/docs/Web/API/NavigatorID/userAgent) réalisé par des scripts s'exécutant sur la page.
+      - : `string`. Définissez un agent utilisateur personnalisé pour la page. Ici, la chaîne fournie sera envoyée dans l'en-tête de l'[Agent utilisateur](/fr/docs/Web/HTTP/Headers/User-Agent), et sera renvoyée par les appels à [`navigator.userAgent`](/fr/docs/Web/API/Navigator/userAgent) réalisé par des scripts s'exécutant sur la page.
     - `injectedScript` {{optional_inline}}
       - : `string`. Injectez l'expression JavaScript donnée dans toutes les images de la page, avant tout autre script.
 
@@ -52,8 +50,6 @@ reloadButton.addEventListener("click", () => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

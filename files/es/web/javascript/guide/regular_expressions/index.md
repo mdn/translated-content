@@ -29,10 +29,10 @@ Construyes una expresión regular en una de estas dos formas:
 
 ## Escribir un patrón de expresión regular
 
-Un patrón de expresión regular se compone de caracteres simples, como `/abc/`, o una combinación de caracteres simples y especiales, como `/ab*c/` o `/Capítulo (\d)\.\d*/`. El último ejemplo incluye paréntesis, que se utilizan como dispositivos de memoria. La coincidencia realizada con esta parte del patrón se recuerda para su uso posterior, como se describe en [Uso de grupos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#Using_groups).
+Un patrón de expresión regular se compone de caracteres simples, como `/abc/`, o una combinación de caracteres simples y especiales, como `/ab*c/` o `/Capítulo (\d)\.\d*/`. El último ejemplo incluye paréntesis, que se utilizan como dispositivos de memoria. La coincidencia realizada con esta parte del patrón se recuerda para su uso posterior, como se describe en [Uso de grupos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups).
 
 > [!NOTE]
-> Si ya estás familiarizado con las formas de una expresión regular, también puedes leer [la hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) para una búsqueda rápida de un patrón/construcción específica.
+> Si ya estás familiarizado con las formas de una expresión regular, también puedes leer [la hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) para una búsqueda rápida de un patrón/construcción específica.
 
 ### Usar patrones simples
 
@@ -44,28 +44,29 @@ Cuando la búsqueda de una coincidencia requiere algo más que una coincidencia 
 
 Las siguientes páginas proporcionan listas de los diferentes caracteres especiales que encajan en cada categoría, junto con descripciones y ejemplos.
 
-- [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+- [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - : Las aserciones incluyen límites, que indican el comienzo y el final de líneas y palabras, y otros patrones que indican de alguna manera que el reconocimiento es posible (incluidas las expresiones anticipadas, inversas y condicionales).
-- [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+- [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - : Distingue diferentes tipos de caracteres. Por ejemplo, distinguir entre letras y dígitos.
-- [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+- [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
   - : Indica grupos y rangos de caracteres de expresión.
-- [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+- [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - : Indica el número de caracteres o expresiones que deben coincidir.
-- [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+- [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - : Distinguir según las propiedades de los caracteres Unicode, por ejemplo, letras mayúsculas y minúsculas, símbolos matemáticos y de puntuación.
 
 Si deseas ver todos los caracteres especiales que se pueden usar en expresiones regulares en una sola tabla, consulta lo siguiente:
 
-| Caracteres/construcciones                                                                                                    | Artículo correspondiente                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `\`, `.`, `\cX`, `\d`, `\D`, `\f`, `\n`, `\r`, `\s`, `\S`, `\t`, `\v`, `\w`, `\W`, `\0`, `\xhh`, `\uhhhh`, `\uhhhhh`, `[\b]` | [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)                  |
-| `^`, `$`, `x(?=y)`, `x(?!y)`, `(?<=y)x`, `(?<!y)x`, `\b`, `\B`                                                               | [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)                                   |
-| `(x)`, `(?:x)`, `(?<Name>x)`, `x\|y`, `[xyz]`, `[^xyz]`, `\Number`                                                           | [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)                       |
-| `*`, `+`, `?`, `x{n}`, `x{n,}`, `x{n,m}`                                                                                     | [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)                             |
-| `\p{UnicodeProperty}`, `\P{UnicodeProperty}`                                                                                 | [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) |
+| Caracteres/construcciones                                                                                                    | Artículo correspondiente                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `\`, `.`, `\cX`, `\d`, `\D`, `\f`, `\n`, `\r`, `\s`, `\S`, `\t`, `\v`, `\w`, `\W`, `\0`, `\xhh`, `\uhhhh`, `\uhhhhh`, `[\b]` | [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)                            |
+| `^`, `$`, `x(?=y)`, `x(?!y)`, `(?<=y)x`, `(?<!y)x`, `\b`, `\B`                                                               | [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)                                             |
+| `(x)`, `(?:x)`, `(?<Name>x)`, `x\|y`, `[xyz]`, `[^xyz]`, `\Number`                                                           | [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)                         |
+| `*`, `+`, `?`, `x{n}`, `x{n,}`, `x{n,m}`                                                                                     | [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)                                       |
+| `\p{UnicodeProperty}`, `\P{UnicodeProperty}`                                                                                 | [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) |
 
-> **Nota:** [También está disponible una hoja de referencia más grande](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet) (solo agregando partes de esos artículos individuales).
+> [!NOTE]
+> [También está disponible una hoja de referencia más grande](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (solo agregando partes de esos artículos individuales).
 
 ### Escapando
 
@@ -85,13 +86,13 @@ function escapeRegExp(string) {
 }
 ```
 
-La "g" después de la expresión regular es una opción o indicador que realiza una búsqueda global, buscando en toda la cadena y devolviendo todas las coincidencias. Se explica en detalle a continuación en [Búsqueda avanzada con indicadores](/es/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags).
+La "g" después de la expresión regular es una opción o indicador que realiza una búsqueda global, buscando en toda la cadena y devolviendo todas las coincidencias. Se explica en detalle a continuación en [Búsqueda avanzada con indicadores](#advanced_searching_with_flags).
 
 _¿Por qué no está integrada en JavaScript?_ Existe una propuesta para agregar esta función a RegExp, pero fue [rechazada por TC39.](https://github.com/benjamingr/RegExp.escape/issues/37)
 
 ### Usando paréntesis
 
-Los paréntesis alrededor de cualquier parte del patrón de expresión regular hacen que se recuerde esa parte de la subcadena coincidente. Una vez reconocida, la subcadena se puede recuperar para otro uso. Consulta [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#Using_groups) para obtener más detalles.
+Los paréntesis alrededor de cualquier parte del patrón de expresión regular hacen que se recuerde esa parte de la subcadena coincidente. Una vez reconocida, la subcadena se puede recuperar para otro uso. Consulta [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups) para obtener más detalles.
 
 ## Usar expresiones regulares en JavaScript
 
@@ -289,7 +290,7 @@ La bandera `m` se utiliza para especificar que una cadena de entrada de varias l
 > También hay varios ejemplos disponibles en:
 >
 > - Las páginas de referencia para {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}}
-> - Artículos de esta guía: [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges), [cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [escapes de propiedades Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+> - Artículos de esta guía: [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences), [cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers), [escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 
 ### Usar caracteres especiales para verificar la entrada
 

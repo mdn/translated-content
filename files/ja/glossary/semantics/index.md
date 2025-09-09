@@ -49,7 +49,7 @@ HTML は既定の表示スタイルに基づくのではなく、入力される
 
 ## セマンティック要素
 
-これらは、およそ 100 ある利用可能なセマンティック[要素](/ja/docs/Web/HTML/Element)の*一部*です。
+これらは、およそ 100 ある利用可能なセマンティック[要素](/ja/docs/Web/HTML/Reference/Elements)の*一部*です。
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -67,18 +67,16 @@ HTML は既定の表示スタイルに基づくのではなく、入力される
 
 ## より詳しく知る
 
-- MDN の [HTML 要素リファレンス](/ja/docs/Web/HTML/Element#Inline_text_semantics)
-- MDN の [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Problems_solved_by_HTML5)
+- MDN の [HTML 要素リファレンス](/ja/docs/Web/HTML/Reference/Elements#inline_text_semantics)
+- MDN の [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements#problems_solved_by_html5)
 - Wikipedia 上の [コンピュータ科学におけるセマンティクスの意味](https://ja.wikipedia.org/wiki/意味論#コンピュータ科学)
 
 <!---->
 
 - 関連用語:
-
   - {{Glossary("SEO")}}
 
 - HTML におけるセマンティック要素の一部
-
   - {{htmlelement("article")}}
   - {{htmlelement("aside")}}
   - {{htmlelement("details")}}

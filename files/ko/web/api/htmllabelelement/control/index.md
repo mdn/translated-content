@@ -35,4 +35,4 @@ l10n:
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLElement")}}
 - {{HTMLElement("label")}}
-- [HTML 폼 안내서](/ko/docs/Learn/Forms)
+- [HTML 폼 안내서](/ko/docs/Learn_web_development/Extensions/Forms)

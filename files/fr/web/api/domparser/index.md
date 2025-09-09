@@ -64,7 +64,7 @@ console.log(doc3.body.firstChild.textContent);
 
 ## Voir aussi
 
-- [Analyse syntaxique et sérialisation du XML](/fr/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Analyse syntaxique et sérialisation du XML](/fr/docs/Web/XML/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - contrepartie pour les documents {{jsxref("JSON")}}.

@@ -9,22 +9,22 @@ slug: Web/API/WebSockets_API
 
 ## Документация
 
-- [Writing WebSocket client applications](/ru/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Writing WebSocket client applications](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
   - : Учебник описывающий как написать WebSocket клиента работающего в браузере.
-- [Справочник по WebSocket](/ru/docs/WebSockets/WebSockets_reference)
+- [Справочник по WebSocket](/ru/docs/Web/API/WebSockets_API)
   - : A reference to the client-side WebSocket API.
-- [(TBD) Writing WebSocket servers](/ru/docs/WebSockets/Writing_WebSocket_servers)
+- [(TBD) Writing WebSocket servers](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
   - : A guide to writing server-side code to handle the WebSocket protocol.
 
 ## Tools
 
-- [Socket.IO](http://socket.io): A powerful cross-platform WebSocket API for [Node.js](http://nodejs.org).
-- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): A WebSocket server API implementation for [Node.js](http://nodejs.org).
+- [Socket.IO](http://socket.io): A powerful cross-platform WebSocket API for [Node.js](https://nodejs.org).
+- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): A WebSocket server API implementation for [Node.js](https://nodejs.org).
 - [A more extensive list of frameworks and libraries here](http://ajf.me/websocket/#libs)
 
 ## Related Topics
 
-- [AJAX](/ru/docs/AJAX), [JavaScript](/ru/docs/JavaScript)
+- [AJAX](/ru/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/ru/docs/Web/JavaScript)
 
 ## Совместимость с браузерами
 
@@ -32,7 +32,7 @@ slug: Web/API/WebSockets_API
 
 ## Смотрите также
 
-- [RFC 6455 - The WebSocket Protocol](http://tools.ietf.org/html/rfc6455)
-- [WebSocket API Specification](http://www.w3.org/TR/websockets/)
-- [Server-Sent Events](/ru/docs/Server-sent_events)
+- [RFC 6455 - The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
+- [WebSocket API Specification](https://www.w3.org/TR/websockets/)
+- [Server-Sent Events](/ru/docs/Web/API/Server-sent_events)
 - [WebSocket.us](http://websocket.us/) - a community-run, not-for-profit site about WebSocket

@@ -7,7 +7,8 @@ slug: Web/API/EventTarget/addEventListener
 
 **EventTarget.addEventListener()** 方法将指定的监听器注册到 {{domxref("EventTarget")}} 上，当该对象触发指定的事件时，指定的回调函数就会被执行。事件目标可以是一个文档上的元素 {{domxref("Element")}}、{{domxref("Document")}} 和 {{domxref("Window")}}，也可以是任何支持事件的对象（比如 {{domxref("XMLHttpRequest")}}）。
 
-> **备注：** *推荐*使用 `addEventListener()` 来注册一个事件监听器，理由如下：
+> [!NOTE]
+> *推荐*使用 `addEventListener()` 来注册一个事件监听器，理由如下：
 >
 > - 它允许为一个事件添加多个监听器。特别是对库、JavaScript 模块和其他需要兼容第三方库/插件的代码来说，这一功能很有用。
 > - 相比于 `onXYZ` 属性绑定来说，它提供了一种更精细的手段来控制 `listener` 的触发阶段。（即可以选择捕获或者冒泡）。
@@ -33,13 +34,11 @@ addEventListener(type, listener, useCapture);
 ### 参数
 
 - `type`
-  - : 表示监听[事件类型](/zh-CN/docs/Web/Events)的大小写敏感的字符串。
+  - : 表示监听[事件类型](/zh-CN/docs/Web/API/Document_Object_Model/Events)的大小写敏感的字符串。
 - `listener`
   - : 当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。`listener` 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)。有关回调本身的详细信息，请参阅[事件监听回调](#事件监听回调)
 - `options` {{optional_inline}}
-
   - : 一个指定有关 `listener` 属性的可选参数对象。可用的选项如下：
-
     - `capture` {{optional_inline}}
       - : 一个布尔值，表示 `listener` 会在该类型的事件捕获阶段传播到该 `EventTarget` 时触发。
     - `once` {{optional_inline}}
@@ -50,7 +49,6 @@ addEventListener(type, listener, useCapture);
       - : {{domxref("AbortSignal")}}，该 `AbortSignal` 的 {{domxref("AbortController/abort()", "abort()")}} 方法被调用时，监听器会被移除。
 
 - `useCapture` {{optional_inline}}
-
   - : 一个布尔值，表示在 DOM 树中注册了 `listener` 的元素，是否要先于它下面的 `EventTarget` 调用该 `listener`。当 useCapture（设为 true）时，沿着 DOM 树向上冒泡的事件不会触发 listener。当一个元素嵌套了另一个元素，并且两个元素都对同一事件注册了一个处理函数时，所发生的事件冒泡和事件捕获是两种不同的事件传播方式。事件传播模式决定了元素以哪个顺序接收事件。进一步的解释可以查看 [DOM Level 3 事件](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)及 [JavaScript 事件顺序](https://www.quirksmode.org/js/events_order.html#link4)文档。如果没有指定，`useCapture` 默认为 `false`。
 
     > [!NOTE]
@@ -604,7 +602,7 @@ myObject.register();
 
 ### 在使用监听器时进行数据交换
 
-事件监听器看起来就像一个“孤岛”，要向它传入数据非常困难，更别说是要在它被调用后获取任何数据了。事件监听器仅仅接受[事件对象](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件对象)这一个自动传入的参数，并且它的返回值还会被忽略。那怎样才能与事件监听器交换数据呢？其实有很多种方法可以做到。
+事件监听器看起来就像一个“孤岛”，要向它传入数据非常困难，更别说是要在它被调用后获取任何数据了。事件监听器仅仅接受[事件对象](/zh-CN/docs/Learn_web_development/Core/Scripting/Events#事件对象)这一个自动传入的参数，并且它的返回值还会被忽略。那怎样才能与事件监听器交换数据呢？其实有很多种方法可以做到。
 
 #### 使用 `this` 传入数据
 
@@ -765,5 +763,5 @@ window.addEventListener(
 ## 参见
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [创建和触发自定义事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+- [创建和触发自定义事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)
 - [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)

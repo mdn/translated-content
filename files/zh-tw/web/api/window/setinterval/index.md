@@ -1,13 +1,13 @@
 ---
 title: Window：setInterval() 方法
 slug: Web/API/Window/setInterval
+l10n:
+  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("Window")}} 介面的 **`setInterval()`** 方法作用為重複地執行一個函式呼叫或一個程式碼片斷，每一次執行間隔固定的延遲時間。
-
-此方法呼叫時將傳回一個間隔 ID 用以識別該間隔程序，因此後續你可以呼叫 {{domxref("Window.clearInterval", "clearInterval()")}} 移除該間隔程序。
+{{domxref("Window")}} 介面的 **`setInterval()`** 方法用於以固定的時間間隔重複呼叫函式或執行一段程式碼。
 
 ## 語法
 
@@ -22,292 +22,162 @@ setInterval(func, delay, arg1, arg2)
 setInterval(func, delay, arg1, arg2, /* …, */ argN)
 ```
 
-### Parameters
+### 參數
 
 - `func`
-  - : A {{jsxref("function")}} to be executed every `delay` milliseconds. The function is not passed any arguments, and no return value is expected.
+  - : 一個 {{jsxref("function")}}，每隔 `delay` 毫秒執行一次。第一次執行會在 `delay` 毫秒後觸發。
 - `code`
-  - : An optional syntax allows you to include a string instead of a function, which is compiled and executed every `delay` milliseconds. This syntax is _not recommended_ for the same reasons that make using {{jsxref("eval", "eval()")}} a security risk.
-- `delay`{{optional_inline}}
-  - : The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code. See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
-- `arg1, ..., argN` {{optional_inline}}
-  - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
+  - : 一種可選語法，允許使用字串代替函式，該字串會被編譯並在每個 `delay` 毫秒執行一次。由於與使用 {{jsxref("Global_Objects/eval", "eval()")}} 帶來的安全風險相同，*不建議*使用此語法。
+- `delay` {{optional_inline}}
+  - : 定時器在每次執行指定函式或程式碼之間應延遲的時間，以毫秒（千分之一秒）為單位。如果未指定，默認為 0。詳情請見下方的[延遲限制](#延遲限制)。
+- `arg1`、……、`argN` {{optional_inline}}
+  - : 額外的參數。當定時器到期時，這些參數將傳遞給 _func_ 指定的函式。
 
-> [!NOTE]
-> Passing additional arguments to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#Callback_arguments) section).
+### 返回值
 
-### Return value
+`setInterval()` 方法返回一個正整數（通常在 1 到 2,147,483,647 的範圍內），用於唯一標識由該調用創建的間隔計時器。此標識符通常被稱為「間隔 ID」，可以傳遞給 {{domxref("Window.clearInterval", "clearInterval()")}} 來停止指定函數的重複執行。
 
-The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("Window.clearInterval", "clearInterval()")}} to cancel the timeout.
+在相同的全域環境（例如特定的窗口或 worker）中，間隔 ID 保證保持唯一，並且只要原始計時器仍然活動，就不會被重新用於任何新的間隔計時器。然而，不同的全域環境會維護各自獨立的間隔 ID 池。
 
-It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
+請注意，`setInterval()` 和 {{domxref("Window.setTimeout", "setTimeout()")}} 共用相同的 ID 池，並且 `clearInterval()` 和 {{domxref("Window.clearTimeout", "clearTimeout()")}} 在技術上可以互換使用。但為了程式碼的清晰性，應儘量匹配使用，以免維護時造成混淆。
 
-> [!NOTE]
-> The `delay` argument is converted to a signed 32-bit integer. This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
+> [!NOTE] `delay` 參數會被轉換為有號 32 位整數。這實際上將 `delay` 限制在 2147483647 毫秒（大約 24.8 天）以內，因為在 IDL 中它被指定為有號整數。
 
-## Examples
+## 範例
 
-### Example 1: Basic syntax
+### 範例 1：基本語法
 
-The following example demonstrates `setInterval()`'s basic syntax.
+以下範例展示了 `setInterval()` 的基本語法。
 
 ```js
-var intervalID = window.setInterval(
-  myCallback,
-  500,
-  "Parameter 1",
-  "Parameter 2",
-);
+const intervalID = setInterval(myCallback, 500, "參數 1", "參數 2");
 
 function myCallback(a, b) {
-  // Your code here
-  // Parameters are purely optional.
+  // 你的程式碼可以放在這裡
+  // 傳入的參數是完全可選的。
   console.log(a);
   console.log(b);
 }
 ```
 
-### Example 2: Alternating two colors
+### 範例 2：交替切換兩種顏色
 
-The following example calls the `flashtext()` function once a second until the Stop button is pressed.
+以下範例每秒呼叫一次 `flashtext()` 函數，直到按下停止按鈕為止。
+
+#### HTML
 
 ```html
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>setInterval/clearInterval example</title>
-
-    <script>
-      var nIntervId;
-
-      function changeColor() {
-        nIntervId = setInterval(flashText, 1000);
-      }
-
-      function flashText() {
-        var oElem = document.getElementById("my_box");
-        oElem.style.color = oElem.style.color == "red" ? "blue" : "red";
-        // oElem.style.color == 'red' ? 'blue' : 'red' is a ternary operator.
-      }
-
-      function stopTextColor() {
-        clearInterval(nIntervId);
-      }
-    </script>
-  </head>
-
-  <body onload="changeColor();">
-    <div id="my_box">
-      <p>Hello World</p>
-    </div>
-
-    <button onclick="stopTextColor();">Stop</button>
-  </body>
-</html>
+<div id="my_box">
+  <h3>哈囉世界</h3>
+</div>
+<button id="start">開始</button>
+<button id="stop">停止</button>
 ```
 
-## Callback arguments
+#### CSS
 
-As previously discussed, Internet Explorer versions 9 and below do not support the passing of arguments to the callback function in either `setTimeout()` or `setInterval()`. The following **IE-specific** code demonstrates a method for overcoming this limitation. To use, simply add the following code to the top of your script.
-
-```js
-/*\
-|*|
-|*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
-|*|  callback functions of javascript timers (HTML5 standard syntax).
-|*|
-|*|  https://developer.mozilla.org/zh-TW/docs/Web/API/window.setInterval
-|*|  https://developer.mozilla.org/User:fusionchess
-|*|
-|*|  Syntax:
-|*|  var timeoutID = window.setTimeout(func, delay[, arg1, arg2, ...]);
-|*|  var timeoutID = window.setTimeout(code, delay);
-|*|  var intervalID = window.setInterval(func, delay[, arg1, arg2, ...]);
-|*|  var intervalID = window.setInterval(code, delay);
-|*|
-\*/
-
-if (document.all && !window.setTimeout.isPolyfill) {
-  var __nativeST__ = window.setTimeout;
-  window.setTimeout = function (
-    vCallback,
-    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
-  ) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeST__(
-      vCallback instanceof Function
-        ? function () {
-            vCallback.apply(null, aArgs);
-          }
-        : vCallback,
-      nDelay,
-    );
-  };
-  window.setTimeout.isPolyfill = true;
+```css
+.go {
+  color: green;
 }
-
-if (document.all && !window.setInterval.isPolyfill) {
-  var __nativeSI__ = window.setInterval;
-  window.setInterval = function (
-    vCallback,
-    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
-  ) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeSI__(
-      vCallback instanceof Function
-        ? function () {
-            vCallback.apply(null, aArgs);
-          }
-        : vCallback,
-      nDelay,
-    );
-  };
-  window.setInterval.isPolyfill = true;
+.stop {
+  color: red;
 }
 ```
 
-Another possibility is to use an anonymous function to call your callback, although this solution is a bit more expensive. Example:
+#### JavaScript
 
 ```js
-var intervalID = setInterval(function () {
-  myFunc("one", "two", "three");
-}, 1000);
+// 用於存儲 intervalID 的變數
+let intervalId;
+
+function changeColor() {
+  // 檢查 interval 是否已經設置
+  intervalId ??= setInterval(flashText, 1000);
+}
+
+function flashText() {
+  const oElem = document.getElementById("my_box");
+  oElem.className = oElem.className === "go" ? "stop" : "go";
+}
+
+function stopTextColor() {
+  clearInterval(intervalId);
+  // 從變數中釋放 intervalID
+  intervalId = null;
+}
+
+document.getElementById("start").addEventListener("click", changeColor);
+document.getElementById("stop").addEventListener("click", stopTextColor);
 ```
 
-Another possibility is to use [function's bind](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). Example:
+#### 結果
+
+{{EmbedLiveSample("範例 2：交替切換兩種顏色")}}
+
+## 「this」問題
+
+當你將一個方法傳遞給 `setInterval()` 或其他任何函數時，它會以錯誤的 [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) 值被調用。這個問題在 [JavaScript 參考資料](/zh-TW/docs/Web/JavaScript/Reference/Operators/this#回呼)中有詳細說明。
+
+### 解釋
+
+由 `setInterval()` 執行的程式碼運行在與呼叫它的函數不同的執行上下文中。因此，對於被呼叫的函數，`this` 關鍵字會被設置為 `window`（或 `global`）對象，而不是與呼叫 `setTimeout` 的函數相同的 `this` 值。以下是使用 `setTimeout()`（而非 `setInterval()`）的範例。實際上，這個問題對於兩個定時器來說是相同的：
 
 ```js
-var intervalID = setInterval(function (arg1) {}.bind(undefined, 10), 1000);
-```
-
-### Inactive tabs
-
-Starting in Gecko 5.0, intervals are clamped to fire no more often than once per second in inactive tabs.
-
-## The "[`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this)" problem
-
-When you pass a method to `setInterval()` or any other function, it is invoked with the wrong [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) value. This problem is explained in detail in the [JavaScript reference](/zh-TW/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method).
-
-### Explanation
-
-Code executed by `setInterval()` runs in a separate execution context than the function from which it was called. As a consequence, the [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) keyword for the called function is set to the `window` (or `global`) object, it is not the same as the `this` value for the function that called `setTimeout`. See the following example (which uses `setTimeout()` instead of `setInterval()` – the problem, in fact, is the same for both timers):
-
-```js
-myArray = ["zero", "one", "two"];
-
+myArray = ["零", "一", "二"];
 myArray.myMethod = function (sProperty) {
   alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
-myArray.myMethod(); // prints "zero,one,two"
-myArray.myMethod(1); // prints "one"
-setTimeout(myArray.myMethod, 1000); // prints "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1,5 seconds
-// passing the 'this' object with .call won't work
-// because this will change the value of this inside setTimeout itself
-// while we want to change the value of this inside myArray.myMethod
-// in fact, it will be an error because setTimeout code expects this to be the window object:
-setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
+myArray.myMethod(); // 輸出「零,一,二」
+myArray.myMethod(1); // 輸出「一」
+setTimeout(myArray.myMethod, 1000); // 1 秒後輸出「[object Window]」
+setTimeout(myArray.myMethod, 1500, "1"); // 1.5 秒後輸出「undefined」
+// 使用 .call 傳遞「this」物件將不起作用
+// 因為這樣會改變 setTimeout 內部的 this 值
+// 而我們想改變的是 myArray.myMethod 內部的 this 值。
+// 事實上，這會導致錯誤，因為 setTimeout 的程式碼預期 this 是 window 物件：
+setTimeout.call(myArray, myArray.myMethod, 2000); // 錯誤: 「NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object」
+setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 相同的錯誤
 ```
 
-As you can see there are no ways to pass the `this` object to the callback function in the legacy JavaScript.
+如你所見，在舊版 JavaScript 中沒有辦法將 `this` 物件傳遞給回呼函數。
 
-### A possible solution
+### 可能的解決方案
 
-A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones that enable their invocation through the [`Function.prototype.call`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
+所有現代 JavaScript 執行環境（包括瀏覽器等）都支持[箭頭函數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，其具有詞法作用域的 `this`——使我們可以在 `myArray` 方法內寫 `setInterval(() => this.myMethod())`。
 
-```js
-// Enable the passage of the 'this' object through the JavaScript timers
+如果需要支持 IE，可以使用 [`Function.prototype.bind()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法，該方法讓你為所有對某個函數的調用指定應該作為 `this` 的值。這使你能夠輕鬆繞過由於函數的調用上下文不明確而導致的 `this` 問題。
 
-var __nativeST__ = window.setTimeout,
-  __nativeSI__ = window.setInterval;
+## 使用注意事項
 
-window.setTimeout = function (
-  vCallback,
-  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
-) {
-  var oThis = this,
-    aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeST__(
-    vCallback instanceof Function
-      ? function () {
-          vCallback.apply(oThis, aArgs);
-        }
-      : vCallback,
-    nDelay,
-  );
-};
+`setInterval()` 函數常用來設定重複執行的延遲，比如動畫等。你可以使用 {{domxref("Window.clearInterval", "clearInterval()")}} 來取消間隔。
 
-window.setInterval = function (
-  vCallback,
-  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
-) {
-  var oThis = this,
-    aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeSI__(
-    vCallback instanceof Function
-      ? function () {
-          vCallback.apply(oThis, aArgs);
-        }
-      : vCallback,
-    nDelay,
-  );
-};
-```
+如果你希望在指定的延遲後只執行一次函數，請使用 {{domxref("Window.setTimeout", "setTimeout()")}}。
 
-> [!NOTE]
-> These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#Callback_arguments) for a _standard-compliant_ polyfill.
+### 延遲限制
 
-New feature test:
+間隔可以是巢狀的。也就是說 `setInterval()` 的回呼函數可以再次調用 `setInterval()` 來啟動另一個間隔，即使第一個間隔仍在運行。為了減輕這對性能的潛在影響，當間隔巢狀超過五層時，瀏覽器會自動強制間隔的最小值為 4 毫秒。在深度巢狀的 `setInterval()` 調用中，嘗試指定小於 4 毫秒的值將被固定為 4 毫秒。
 
-```js
-myArray = ["zero", "one", "two"];
+在某些情況下，瀏覽器可能會強制執行更嚴格的最小間隔值，儘管這不應該是常見情況。還需要注意的是，回呼函數之間實際經過的時間可能會長於指定的 `delay`；有關更長延遲的原因，請參見[延遲長於指定的原因](/zh-TW/docs/Web/API/Window/setTimeout#延遲長於指定的原因)的範例。
 
-myArray.myMethod = function (sProperty) {
-  alert(arguments.length > 0 ? this[sProperty] : this);
-};
+### 確保執行時間短於間隔頻率
 
-setTimeout(alert, 1500, "Hello world!"); // the standard use of setTimeout and setInterval is preserved, but...
-setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after 2 seconds
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
-```
+如果你的邏輯執行可能需要比間隔時間更長，建議你使用 {{domxref("Window.setTimeout", "setTimeout()")}} 遞迴調用一個命名函數。例如，如果使用 `setInterval()` 每 5 秒輪詢一次遠程伺服器，網路延遲、伺服器無反應以及其他問題可能會阻止請求在指定的時間內完成。因此，你可能會發現排隊的 XHR 請求未必會按順序返回。
 
-Another, more complex, solution for **the [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#MiniDaemon_-_A_framework_for_managing_timers).
-
-> [!NOTE]
-> JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
-
-## Usage notes
-
-The `setInterval()` function is commonly used to set a delay for functions that are executed again and again, such as animations. You can cancel the interval using {{domxref("Window.clearInterval", "clearInterval()")}}.
-
-If you wish to have your function called _once_ after the specified delay, use {{domxref("setTimeout()")}}.
-
-### Delay restrictions
-
-It's possible for intervals to be nested; that is, the callback for `setInterval()` can in turn call `setInterval()` to start another interval running, even though the first one is still going. To mitigate the potential impact this can have on performance, once intervals are nested beyond five levels deep, the browser will automatically enforce a 4 ms minimum value for the interval. Attempts to specify a value less than 4 ms in deeply-nested calls to `setInterval()` will be pinned to 4 ms.
-
-Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common. Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/zh-TW/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for examples.
-
-### Ensure that execution duration is shorter than interval frequency
-
-If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("setTimeout()")}}. For example, if using `setInterval()` to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time. As such, you may find yourself with queued up XHR requests that won't necessarily return in order.
-
-In these cases, a recursive `setTimeout()` pattern is preferred:
+在這些情況下，推薦使用遞迴的 `setTimeout()` 模式：
 
 ```js
 (function loop() {
-  setTimeout(function () {
-    // Your logic here
+  setTimeout(() => {
+    // 在這裡執行你的邏輯
 
     loop();
   }, delay);
 })();
 ```
 
-In the above snippet, a named function `loop()` is declared and is immediately executed. `loop()` is recursively called inside `setTimeout()` after the logic has completed executing. While this pattern does not guarantee execution on a fixed interval, it does guarantee that the previous interval has completed before recursing.
+在上述程式碼片段中，宣告了一個命名函數 `loop()` 並立即執行。在執行完邏輯後，`loop()` 會在 `setTimeout()` 內部被遞迴調用。雖然這個模式無法保證在固定的間隔執行，但它能保證在遞迴之前，前一個間隔已經執行完成。
 
 ## 規範
 
@@ -319,8 +189,8 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ## 參見
 
-- [`core-js` 中 `setInterval` 的 polyfill，允許將參數傳遞給回調](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout()")}}
-- {{domxref("Window.clearInterval()")}} 與 {{domxref("WorkerGlobalScope.clearInterval()")}}
+- [`core-js` 中 `setInterval` 的 polyfill，允許將參數傳遞給回呼函式。](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- {{domxref("Window.clearInterval()")}}
 - {{domxref("WorkerGlobalScope.setInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}} 與 {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("Window.requestAnimationFrame()")}}

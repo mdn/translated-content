@@ -31,7 +31,6 @@ Como cada valor no Set deve ser único, a igualdade será checada e não é base
 ## Propriedades
 
 - `Set.length`
-
   - : O valor da propriedade comprimento é 0.
 
     Para contar o número de elementos de um `Set`, use {{jsxref("Set.prototype.size")}}.
@@ -47,11 +46,11 @@ Todas as instâncias de `Set` herdam de {{jsxref("Set.prototype")}}.
 
 ### Propriedades
 
-{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties') -->
 
 ### Métodos
 
-{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods') -->
 
 ## Exemplos
 

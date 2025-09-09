@@ -7,7 +7,7 @@ slug: Web/CSS/animation-iteration-count
 
 ## Resumen
 
-La propiedad [CSS](/en/CSS) `animation-iteration-count` define el numero de veces que un ciclo de animación debe ser ejecutado antes de detenerse.
+La propiedad [CSS](/es/docs/Web/CSS) `animation-iteration-count` define el numero de veces que un ciclo de animación debe ser ejecutado antes de detenerse.
 
 A menudo es conveniente utilizar la propiedad {{ cssxref("animation") }} para ajustar todas las propiedades de animación a la vez.
 
@@ -34,7 +34,7 @@ animation-iteration-count: 2, 0, infinite;
 
 ## Ejemplos
 
-Ver ejemplos [CSS animations](/es/docs/CSS/Using_CSS_animations).
+Ver ejemplos [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Especificaciones
 
@@ -46,5 +46,5 @@ Ver ejemplos [CSS animations](/es/docs/CSS/Using_CSS_animations).
 
 ## Ver también
 
-- [Usando animaciones CSS](/es/docs/CSS/Tutorials/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

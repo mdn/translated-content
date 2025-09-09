@@ -5,7 +5,7 @@ slug: MDN/Community/Learn_forum
 
 {{MDNSidebar}}
 
-Nos pages [Apprendre le développement web](/fr/docs/Learn) obtiennent plus d'un million de vues par mois, et ont [des forums actifs](https://discourse.mozilla.org/c/mdn/learn/250) où les utilisateurs vont pour demander une aide générale, ou demander que leurs évaluations soient notées. Nous aimerions avoir de l'aide pour répondre aux messages et développer notre communauté d'apprentissage.
+Nos pages [Apprendre le développement web](/fr/docs/Learn_web_development) obtiennent plus d'un million de vues par mois, et ont [des forums actifs](https://discourse.mozilla.org/c/mdn/learn/250) où les utilisateurs vont pour demander une aide générale, ou demander que leurs évaluations soient notées. Nous aimerions avoir de l'aide pour répondre aux messages et développer notre communauté d'apprentissage.
 
 ## De quoi avons-nous besoin ?
 
@@ -27,32 +27,27 @@ Dans le [forum d'apprentissage du MDN](https://discourse.mozilla.org/c/mdn/learn
 
 ## Comment aider
 
-1. Tout d'abord, [créez-vous un compte MDN](/fr/docs/MDN/Contribute/Getting_started#step_1_create_an_account_on_mdn), si vous n'en avez pas déjà un. Vous n'avez pas nécessairement besoin de le faire pour contribuer à l'espace d'apprentissage, mais cela vous sera utile à long terme.
+1. Tout d'abord, [créez-vous un compte MDN](/fr/docs/MDN/Community/Getting_started#step_1_create_an_account_on_mdn), si vous n'en avez pas déjà un. Vous n'avez pas nécessairement besoin de le faire pour contribuer à l'espace d'apprentissage, mais cela vous sera utile à long terme.
 2. Inscrivez-vous également à [Mozilla Discourse](https://discourse.mozilla.org/), si ce n'est pas déjà fait.
-3. Jetez un coup d'œil à la section [Apprendre le développement web](/fr/docs/Learn) et acquérez un niveau de familiarité de base avec ce qui s'y trouve, si ce n'est pas déjà fait (voir la section [Structure de l'espace d'apprentissage MDN](Structure_of_the_MDN_Learning_Area) ci-dessous pour vous aider).
+3. Jetez un coup d'œil à la section [Apprendre le développement web](/fr/docs/Learn_web_development) et acquérez un niveau de familiarité de base avec ce qui s'y trouve, si ce n'est pas déjà fait (voir la section [Structure de l'espace d'apprentissage MDN](Structure_of_the_MDN_Learning_Area) ci-dessous pour vous aider).
 
 ### Une fois que vous êtes prêt
 
 1. Jetez un coup d'œil au [forum d'apprentissage](https://discourse.mozilla.org/c/mdn/learn/250) et voyez s'il y a des messages qui n'ont pas de réponses - c'est le meilleur endroit pour commencer.
-
    - Conseil : si vous ne trouvez aucune réponse, consultez les autres pages qui ont été récemment mises à jour et voyez si vous pouvez ajouter quelque chose d'utile qui n'a pas déjà été dit.
 
 2. Si le message auquel vous répondez est une demande d'aide générale, répondez-lui et donnez-lui autant d'aide que vous en avez le temps.
 3. Si le message auquel vous répondez demande une évaluation pour l'une des tâches "tester vos compétences"/"évaluation" :
-
    1. Identifiez l'article/tâche évalué(e) et trouvez le guide de notation qui lui est associé. Vous pouvez tout à fait demander à la personne qui a envoyé le message si elle peut vous donner le lien vers l'évaluation/le test de compétences.
    2. Identifiez le code de la personne - elle devrait vous le donner sous la forme d'un lien CodePen/JSFiddle/JSBin, ou similaire. Si elle ne le fournit pas sous une forme facile à évaluer, il est parfaitement acceptable de lui demander de le mettre dans CodePen, JSFiddle, ou similaire.
-
       - Un problème courant est celui des personnes qui publient leur code directement dans un message de discourse - discourse rend les éléments HTML et transforme les guillemets en smartquotes, ce qui casse le code. Il est préférable de l'envoyer sous forme d'URL vers une application d'édition de code partageable.
 
    3. Lisez le code et évaluez-le
-
       1. Est-ce qu'il fonctionne, et vous donne-t-il le résultat qu'il devrait donner ?
       2. Si non, pourquoi ne fonctionne-t-il pas ?
       3. Avez-vous des conseils à donner à la personne pour améliorer le code (plus efficace, meilleure pratique, etc.) ?
 
    4. Donnez-leur un rapport sur leurs résultats :
-
       1. Certains guides de notation suggèrent un schéma de notation avec des points pour chaque partie de la question, mais vous n'avez pas besoin d'être aussi précis.
       2. Si la personne s'est bien débrouillée, à l'exception de quelques détails, dites-lui ces détails, mais félicitez-la aussi.
       3. Si la personne était sur le point d'atteindre son objectif, mais que son travail n'était pas tout à fait correct, dites-lui qu'elle s'est très bien débrouillée, mais indiquez-lui les corrections à apporter pour que cela fonctionne, et peut-être même un lien vers le guide de notation pour qu'elle puisse voir ce que nous avons fait.
@@ -64,18 +59,16 @@ Dans le [forum d'apprentissage du MDN](https://discourse.mozilla.org/c/mdn/learn
 
 ## Structure de l'espace d'apprentissage MDN
 
-Lorsque vous aidez à répondre aux questions liées à la section [Apprendre le développement web](/fr/docs/Learn) de MDN, il est bon d'y jeter un coup d'œil et d'acquérir un niveau de familiarité de base avec ce qui s'y trouve.
+Lorsque vous aidez à répondre aux questions liées à la section [Apprendre le développement web](/fr/docs/Learn_web_development) de MDN, il est bon d'y jeter un coup d'œil et d'acquérir un niveau de familiarité de base avec ce qui s'y trouve.
 
 1. Examinez la structure de la page en général.
 2. Regardez en particulier les types d'évaluations disponibles,
-
-   - À partir des nombreux articles "testez vos compétences" disponibles (voir par exemple [/fr/docs/Learn/JavaScript/Building_blocks/conditionals#Test_your_skills!](/fr/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
-   - Aux évaluations plus approfondies à la fin de certains modules (voir par exemple [/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery](/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery))
+   - À partir des nombreux articles "testez vos compétences" disponibles (voir par exemple [/fr/docs/Learn/JavaScript/Building_blocks/conditionals#Test_your_skills!](/fr/docs/Learn_web_development/Core/Scripting/Conditionals#test_your_skills!))
+   - Aux évaluations plus approfondies à la fin de certains modules (voir par exemple [/fr/docs/Learn_web_development/Core/Scripting/Image_gallery](/fr/docs/Learn_web_development/Core/Scripting/Image_gallery))
 
 3. Jetez un œil aux dépôts GitHub associés à la zone d'apprentissage (la plupart des fichiers sont disponibles dans <https://github.com/mdn/learning-area/>, certains sont dans <https://github.com/mdn/css-examples/tree/master/learn>). La plupart des exemples sur lesquels les apprenants voudront de l'aide sont contenus ici.
 4. Chaque évaluation/épreuve de compétence est associée à un guide de notation et à une solution recommandée pour vous aider à évaluer leur travail.
 5. Il existe des modèles qui facilitent la recherche de ces ressources, par exemple :
-
    - Le guide de notation "testez vos compétences" ci-dessus et les ressources sont disponibles sur <https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals>
    - Le guide de notation de l'évaluation ci-dessus et les ressources sont disponibles sur <https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/gallery>
 

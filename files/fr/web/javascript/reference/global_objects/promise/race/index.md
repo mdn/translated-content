@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 La méthode **`Promise.race()`** renvoie une promesse qui est résolue ou rejetée dès qu'une des promesses de l'itérable passé en argument est résolue ou rejetée. La valeur (dans le cas de la résolution) ou la raison (dans le cas d'un échec) utilisée est celle de la promesse de l'itérable qui est resolue/qui échoue.
 
-{{EmbedInteractiveExample("pages/js/promise-race.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.race()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, "one");
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // Both resolve, but promise2 is faster
+});
+// Expected output: "two"
+```
 
 ## Syntaxe
 
@@ -18,7 +34,7 @@ Promise.race(itérable);
 ### Paramètres
 
 - `itérable`
-  - : Un objet itérable, par exemple un {{jsxref("Array")}}. Voir la page [itérable](/fr/docs/Web/JavaScript/Guide/iterable).
+  - : Un objet itérable, par exemple un {{jsxref("Array")}}. Voir la page [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ### Valeur de retour
 
@@ -155,7 +171,7 @@ Promise.race([p5, p6]).then(
 ```
 
 > [!NOTE]
-> Voir la documentation sur [`setTimeout`.](/fr/docs/Web/API/WindowTimers/setTimeout)
+> Voir la documentation sur [`setTimeout`.](/fr/docs/Web/API/Window/setTimeout)
 
 ## Spécifications
 

@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 
 **`DataView()`** コンストラクターは、 {{jsxref("DataView")}} オブジェクトを生成するために使用します。
 
-{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
+{{InteractiveExample("JavaScript デモ: DataView Constructor")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Create a couple of views
+const view1 = new DataView(buffer);
+const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+view1.setInt8(12, 42); // Put 42 in slot 12
+
+console.log(view2.getInt8(0));
+// Expected output: 42
+```
 
 ## 構文
 
@@ -33,7 +46,6 @@ new DataView(buffer [, byteOffset [, byteLength]])
 ### 例外
 
 - {{jsxref("RangeError")}}
-
   - : `byteOffset` や `byteLength` 引数の値がバッファーの末尾を超えて広がる結果になる場合に発生します。
 
     例えば、バッファーが 16 バイトの長さで、 `byteOffset` が 8 バイト、 `byteLength` が 10 バイトの場合、バッファーの全長を 2 バイト超えるビューを展開しようとするので、このエラーが発生します。

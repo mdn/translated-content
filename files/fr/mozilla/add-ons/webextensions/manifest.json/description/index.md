@@ -28,7 +28,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
 
 Une brève description de l'extension, destinée à être affichée dans l'interface utilisateur du navigateur.
 
-Ceci est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Ceci est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Exemple
 

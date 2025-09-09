@@ -3,11 +3,56 @@ title: flex
 slug: Web/CSS/flex
 ---
 
-{{CSSRef}}
+`flex` [CSS 简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。
 
-`flex` [CSS 简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。
+{{InteractiveExample("CSS Demo: flex")}}
 
-{{EmbedInteractiveExample("pages/css/flex.html")}}
+```css interactive-example-choice
+flex: 1;
+```
+
+```css interactive-example-choice
+flex: 2;
+```
+
+```css interactive-example-choice
+flex: 1 30px;
+```
+
+```css interactive-example-choice
+flex: 1 1 100px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change me</div>
+  <div>flex: 1</div>
+  <div>flex: 1</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## 成分属性
 
@@ -54,21 +99,17 @@ flex: unset;
 可以使用一个，两个或三个值来指定 `flex` 属性。
 
 - **单值语法**：值必须是以下之一：
-
   - 一个 {{cssxref("&lt;flex-grow&gt;")}} 的有效值：此时简写会扩展为 `flex: <flex-grow> 1 0`。
   - 一个 {{cssxref("&lt;flex-basis&gt;")}} 的有效值：此时简写会扩展为 `flex: 1 1 <flex-basis>`。
   - 关键字 `none` 或者全局关键字之一。
 
 - **双值语法**：
-
   - 第一个值必须是一个 {{cssxref("flex-grow")}} 的有效值。
   - 第二个值必须是以下之一：
-
     - 一个 {{cssxref("flex-shrink")}} 的有效值：此时简写会扩展为 `flex: <flex-grow> <flex-shrink> 0`。
     - 一个 {{cssxref("flex-basis")}} 的有效值：此时简写会扩展为 `flex: <flex-grow> 1 <flex-basis>`。
 
 - **三值语法**：值必须按照以下顺序指定：
-
   1. 一个 {{cssxref("flex-grow")}} 的有效值。
   2. 一个 {{cssxref("flex-shrink")}} 的有效值。
   3. 一个 {{cssxref("flex-basis")}} 的有效值。

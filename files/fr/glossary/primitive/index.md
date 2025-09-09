@@ -21,11 +21,11 @@ Excepté dans les cas de `null` ou `undefined`, pour chaque valeur primitive il 
 - {{jsxref("Symbol")}} pour la primitive `symbol`;
 - {{jsxref("Bigint")}} pour la primitive `bigint`;
 
-La méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/valueOf) de ces objets retourne la valeur primitive encapsulée correspondante.
+La méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) de ces objets retourne la valeur primitive encapsulée correspondante.
 
 ## Voir aussi
 
 ### Culture générale
 
-- [Introduction aux types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données)
+- [Introduction aux types de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
 - [Type](<https://fr.wikipedia.org/wiki/Type_(informatique)>) sur Wikipédia

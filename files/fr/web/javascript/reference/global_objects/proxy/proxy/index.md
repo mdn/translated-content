@@ -38,7 +38,7 @@ Toutes ces trappes sont optionnelles. Si une trappe n'a pas été définie, le c
 - {{jsxref("Objets_globaux/Proxy/handler/construct", "handler.construct()")}}
   - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
 
-Certaines trappes non standards sont désormais [obsolètes et ont été supprimées](/fr/docs/JavaScript/Reference/Annexes/Fonctionnalités_dépréciées#Proxy).
+Certaines trappes non standards sont désormais [obsolètes et ont été supprimées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#proxy).
 
 ## Spécifications
 

@@ -3,14 +3,26 @@ title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
 
-{{JSRef}}
-
 **`indexOf()`** 方法會回傳給定元素於陣列中第一個被找到之索引，若不存在於陣列中則回傳 -1。
 
 > [!NOTE]
 > 若是調用字串的方法，請參閱 {{jsxref("String.prototype.indexOf()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+
+```js interactive-example
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf("bison", 2));
+// Expected output: 4
+
+console.log(beasts.indexOf("giraffe"));
+// Expected output: -1
+```
 
 ## 語法
 
@@ -31,7 +43,7 @@ arr.indexOf(searchElement[, fromIndex])
 
 ## 說明
 
-`indexOf()` 用[嚴格相等（strict equality，`===`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)的方式比較陣列中的元素與 `searchElement` 是否相等。
+`indexOf()` 用[嚴格相等（strict equality，`===`）](/zh-TW/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators)的方式比較陣列中的元素與 `searchElement` 是否相等。
 
 ## 範例
 

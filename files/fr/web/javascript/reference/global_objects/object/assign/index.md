@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 La méthode **`Object.assign()`** est utilisée afin de copier les valeurs de toutes les propriétés directes (non héritées) d'un objet qui sont énumérables sur un autre objet cible. Cette méthode renvoie l'objet cible.
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## Syntaxe
 
@@ -198,5 +211,5 @@ console.log(copie);
 ## Voir aussi
 
 - {{jsxref("Object.defineProperties()")}}
-- [Le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
-- [La décomposition des littéraux objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition#Utiliser_la_décomposition_avec_les_littéraux_objet)
+- [Le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [La décomposition des littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax#utiliser_la_décomposition_avec_les_littéraux_objet)

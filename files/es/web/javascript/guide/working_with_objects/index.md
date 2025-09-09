@@ -30,7 +30,7 @@ myCar.model = "Mustang";
 myCar.year = 1969;
 ```
 
-El ejemplo anterior también se podría escribir usando un **[iniciador de objeto](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Object_initializers)**, que es una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves (`{}`):
+El ejemplo anterior también se podría escribir usando un **[iniciador de objeto](#object_initializers)**, que es una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves (`{}`):
 
 ```js
 var myCar = {
@@ -46,7 +46,7 @@ Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y no {{js
 myCar.color; // undefined
 ```
 
-También puedes acceder o establecer las propiedades de los objetos en JavaScript mediante la notación de corchetes ↑[]↓ (Para más detalle ve [Accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Los objetos, a veces son llamados _arreglos asociativos_, debido a que cada propiedad está asociada con un valor de cadena que se puede utilizar para acceder a ella. Por lo tanto, por ejemplo, puedes acceder a las propiedades del objeto `myCar` de la siguiente manera:
+También puedes acceder o establecer las propiedades de los objetos en JavaScript mediante la notación de corchetes ↑[]↓ (Para más detalle ve [Accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors)). Los objetos, a veces son llamados _arreglos asociativos_, debido a que cada propiedad está asociada con un valor de cadena que se puede utilizar para acceder a ella. Por lo tanto, por ejemplo, puedes acceder a las propiedades del objeto `myCar` de la siguiente manera:
 
 ```js
 myCar["make"] = "Ford";
@@ -176,7 +176,7 @@ El siguiente ejemplo crea `myHonda` con tres propiedades. Observa que la propied
 var myHonda = { color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 ```
 
-También puedes utilizar iniciadores de objetos para crear arreglos. Consulta [arreglos literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals).
+También puedes utilizar iniciadores de objetos para crear arreglos. Consulta [arreglos literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals).
 
 ### Usar una función constructora
 
@@ -417,10 +417,10 @@ Un captador ([getter](/es/docs/Web/JavaScript/Reference/Functions/get)) es un m�
 
 En principio, los captadores y establecedores pueden ser
 
-- definido usando [iniciadores de objeto](#Iniciadores_de_objeto), o
+- definido usando [iniciadores de objeto](#iniciadores_de_objeto), o
 - agregado posteriormente a cualquier objeto en cualquier momento usando un método de adición para el captador o el establecedor.
 
-Al definir captadores y establecedores usando [iniciadores de objeto](#Iniciadores_de_objeto), todo lo que necesitas hacer es prefijar un método captador con `get` y un método establecedor con `set`. Por supuesto, el método captador no debe esperar un parámetro, mientras que el método establecedor espera exactamente un parámetro (el nuevo valor a establecer). Por ejemplo:
+Al definir captadores y establecedores usando [iniciadores de objeto](#iniciadores_de_objeto), todo lo que necesitas hacer es prefijar un método captador con `get` y un método establecedor con `set`. Por supuesto, el método captador no debe esperar un parámetro, mientras que el método establecedor espera exactamente un parámetro (el nuevo valor a establecer). Por ejemplo:
 
 ```js
 var o = {
@@ -519,11 +519,11 @@ fruit.name = "grape";
 console.log(fruitbear); // Produce: { name: "grape" }, en lugar de { name: "apple" }
 ```
 
-Para obtener más información sobre los operadores de comparación, consulta [Operadores de comparación](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).
+Para obtener más información sobre los operadores de comparación, consulta [Operadores de comparación](/es/docs/Web/JavaScript/Reference/Operators).
 
 ## Ve también
 
-- Para profundizar más, lee sobre los [detalles del modelo de objetos de JavaScript](/es/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+- Para profundizar más, lee sobre los [detalles del modelo de objetos de JavaScript](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain).
 - Para obtener más información sobre las clases de ECMAScript 2015 (una forma alternativa de crear objetos), lee el capítulo [Clases de JavaScript](/es/docs/Web/JavaScript/Reference/Classes).
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

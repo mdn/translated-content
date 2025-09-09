@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 
 **`getMonth()`** 메서드는 `Date` 객체의 월 값을 현지 시간에 맞춰 반환합니다. 월은 0부터 시작합니다.
 
-{{EmbedInteractiveExample("pages/js/date-getmonth.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMonth()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getMonth()); // (January gives 0)
+// Expected output: 6
+```
 
 ## 구문
 

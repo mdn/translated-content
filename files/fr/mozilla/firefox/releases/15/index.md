@@ -3,8 +3,6 @@ title: Firefox 15 pour les développeurs
 slug: Mozilla/Firefox/Releases/15
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web
@@ -28,35 +26,35 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 ### DOM
 
 - Les méthodes [`KeyboardEvent.getModifierState()`](/fr/docs/Web/API/KeyboardEvent/getModifierState) et [`MouseEvent.getModifierState()`](/fr/docs/Web/API/MouseEvent/getModifierState) de DOM Events Level 3, qui vous permettent de demander l'état des touches de modification, comme `Ctrl` ou `Shift`, ont été implémentées ([bug Firefox 630811](https://bugzil.la/630811) et [bug Firefox 731878](https://bugzil.la/731878)). Mais le comportement est conforme au dernier brouillon de D3E. Donc, certains noms de touches de modification diffèrent de IE ([bug Firefox 769190](https://bugzil.la/769190)).
-- Sur les évènements de la souris, l'attribut [`MouseEvent.buttons`](/fr/docs/DOM/MouseEvent) pour interroger l'état des boutons de la souris, a été implémenté.
-- Sur les évènements du clavier, l'attribut [KeyboardEvent.location](/fr/docs/DOM/KeyboardEvent#Attributes_location) pour interroger l'emplacement de la clé (standard, à gauche ou à droite de la touche de modification, dans le pavé numérique), a été implémenté ([bug Firefox 166240](https://bugzil.la/166240)).
-- Le résultat de KeyboardEvent.keyCode a été calculé à partir de meilleures règles qui étaient presque identiques sous Windows/Linux/Mac. Et désormais elles sont disponibles sur certaines configurations de clavier qui n'ont pas la disposition ASCII sur Linux et Mac, comme l'arabe, le cyrillique, thaï et ainsi de suite. Voir [le document des codes pour les touches virtuelles](/fr/docs/DOM/KeyboardEvent#Virtual_key_codes).
-- La méthode [`range.detach()`](/fr/docs/DOM/range.detach) a été tranformée en no-op et sera probablement supprimée dans le futur.
+- Sur les évènements de la souris, l'attribut [`MouseEvent.buttons`](/fr/docs/Web/API/MouseEvent) pour interroger l'état des boutons de la souris, a été implémenté.
+- Sur les évènements du clavier, l'attribut [KeyboardEvent.location](/fr/docs/Web/API/KeyboardEvent#attributes_location) pour interroger l'emplacement de la clé (standard, à gauche ou à droite de la touche de modification, dans le pavé numérique), a été implémenté ([bug Firefox 166240](https://bugzil.la/166240)).
+- Le résultat de KeyboardEvent.keyCode a été calculé à partir de meilleures règles qui étaient presque identiques sous Windows/Linux/Mac. Et désormais elles sont disponibles sur certaines configurations de clavier qui n'ont pas la disposition ASCII sur Linux et Mac, comme l'arabe, le cyrillique, thaï et ainsi de suite. Voir [le document des codes pour les touches virtuelles](/fr/docs/Web/API/KeyboardEvent#virtual_key_codes).
+- La méthode [`range.detach()`](/fr/docs/Web/API/Range/detach) a été tranformée en no-op et sera probablement supprimée dans le futur.
 - La méthode `HTMLVideoElement.mozHasAudio()` a été implémentée. Elle indique si une piste audio est associée à un élément vidéo. ([bug Firefox 480376](https://bugzil.la/480376))
 - L'API `Performance` a une nouvelle méthode, `now()`, supportant les horloges haute résolution du type de `DOMHighResTimeStamp`. ([bug Firefox 539095](https://bugzil.la/539095)).
 - L'[API WebSMS](/fr/docs/API/WebSMS) a été mise à jour et supporte à présent l'attribut `read` indiquant si un SMS est lu ou non.
 - L'[API FileHandle](https://wiki.mozilla.org/WebAPI/FileHandleAPI) a été implémentée.
-- Le constructeur [`Blob`](/fr/docs/DOM/Blob) prend désormais `ArrayBufferView` comme un membre du paramètre `blobParts` en plus de `ArrayBuffer`. ([bug Firefox 752402](https://bugzil.la/752402))
-- {{domxref("DeviceLightEvent")}} spécifié dans [Ambient Light Events](http://www.w3.org/TR/ambient-light/) a été implémenté.
-- {{domxref("DeviceProximityEvent")}} et {{domxref("UserProximityEvent")}} de [Proximity Events](http://www.w3.org/TR/proximity/) ont été implementés.
+- Le constructeur [`Blob`](/fr/docs/Web/API/Blob) prend désormais `ArrayBufferView` comme un membre du paramètre `blobParts` en plus de `ArrayBuffer`. ([bug Firefox 752402](https://bugzil.la/752402))
+- {{domxref("DeviceLightEvent")}} spécifié dans [Ambient Light Events](https://www.w3.org/TR/ambient-light/) a été implémenté.
+- {{domxref("DeviceProximityEvent")}} et {{domxref("UserProximityEvent")}} de [Proximity Events](https://www.w3.org/TR/proximity/) ont été implementés.
 
 ### JavaScript
 
-- Le support de l'interface [`DataView`](/fr/docs/JavaScript_typed_arrays/DataView) a été ajouté à partir de la spécification des tableaux typés. Cela fournit un accès de bas niveau aux données contenues dans un [`ArrayBuffer`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/ArrayBuffer).
-- Le support de [`Number.isNaN`](/fr/docs/JavaScript/Reference/Global_Objects/Number/isNaN) d'ECMAScript Harmony a été ajouté. ([bug Firefox 749818](https://bugzil.la/749818), [bug Firefox 761495](https://bugzil.la/761495), [bug Firefox 761480](https://bugzil.la/761480))
+- Le support de l'interface [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) a été ajouté à partir de la spécification des tableaux typés. Cela fournit un accès de bas niveau aux données contenues dans un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+- Le support de [`Number.isNaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN) d'ECMAScript Harmony a été ajouté. ([bug Firefox 749818](https://bugzil.la/749818), [bug Firefox 761495](https://bugzil.la/761495), [bug Firefox 761480](https://bugzil.la/761480))
 - Le support du paramètre default d'ECMAScript Harmony a été ajouté. ([bug Firefox 757676](https://bugzil.la/757676))
 - Le support du paramètre rest d'ECMAScript Harmony a été ajouté. ([bug Firefox 574132](https://bugzil.la/574132))
 
 ### WebGL
 
-- Le support de l'extension [`WEBGL_compressed_texture_s3tc`](/fr/docs/WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc) a été ajouté. Les textures compressées réduisent la quantité de mémoire nécessaire pour stocker une texture sur le GPU, ce qui permet d'utiliser des textures en plus hautes résolutions ou plus de textures de même résolution.
+- Le support de l'extension [`WEBGL_compressed_texture_s3tc`](/fr/docs/Web/API/WebGL_API/Using_Extensions#webgl_compressed_texture_s3tc) a été ajouté. Les textures compressées réduisent la quantité de mémoire nécessaire pour stocker une texture sur le GPU, ce qui permet d'utiliser des textures en plus hautes résolutions ou plus de textures de même résolution.
 
 ### MathML
 
 - Les opérateurs mathématiques peuvent désormais utiliser les polices téléchargeables spécifiés avec {{cssxref("@font-face")}}. Cela permet à [l'extension MathML-fonts](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) de travailler également avec les opérateurs extensibles.
 - L'attribut `selection` de {{MathMLElement("maction")}} est désormais uniquement pris en compte avec l'actiontype `toggle`.
-- [L'obsolète et contraignant namedspace](http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) a été supprimé ([bug Firefox 673759](https://bugzil.la/673759)).
-- La prise en charge de la syntaxe des valeurs de [Length](/fr/docs/MathML/Attributes/Values) et {{MathMLElement("mpadded")}} a été améliorée selon la spécification MathML3.
+- [L'obsolète et contraignant namedspace](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) a été supprimé ([bug Firefox 673759](https://bugzil.la/673759)).
+- La prise en charge de la syntaxe des valeurs de [Length](/fr/docs/Web/MathML/Reference/Values) et {{MathMLElement("mpadded")}} a été améliorée selon la spécification MathML3.
 - Les nouveaux opérateurs MathML pour les maths arabes ont été ajoutés au dictionnaire opérateur ([bug Firefox 757125](https://bugzil.la/757125)).
 
 ### Réseau

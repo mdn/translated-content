@@ -23,7 +23,7 @@ La technologie d'extensions Firefox est, en grande partie, compatible avec l'[AP
 
 ## Premiers pas
 
-Découvrez [ce que peuvent faire les extensions Firefox](/fr/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) avant [de construire votre première extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension). Découvrez [la structure d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) et obtenez un aperçu [du processus de développement et de publication d'extension pour Firefox](/fr/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview). Explorez un peu plus en profondeur leur fonctionnement avec un large éventail d'[exemples d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples) que vous pouvez exécuter directement sur Firefox.
+Découvrez [ce que peuvent faire les extensions Firefox](/fr/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) avant [de construire votre première extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension). Découvrez [la structure d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) et obtenez un aperçu [du processus de développement et de publication d'extension pour Firefox](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/). Explorez un peu plus en profondeur leur fonctionnement avec un large éventail d'[exemples d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples) que vous pouvez exécuter directement sur Firefox.
 
 ## Concepts
 
@@ -54,4 +54,4 @@ Obtenez des détails complets sur les méthodes, les propriétés, les types et 
 
 ### Les clés du manifeste
 
-Obtenez tous les détails sur [les clés du manifeste d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), y compris toutes leurs propriétés et paramètres. Vous y trouverez également des informations détaillées sur la [compatibilité](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) de chaque clé pour les principaux navigateurs.
+Obtenez tous les détails sur [les clés du manifeste d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), y compris toutes leurs propriétés et paramètres. Vous y trouverez également des informations détaillées sur la [compatibilité](/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/manifest.json) de chaque clé pour les principaux navigateurs.

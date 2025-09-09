@@ -5,10 +5,10 @@ slug: Glossary/Method
 
 {{GlossarySidebar}}
 
-Un **metodo** es una {{glossary("function", "función")}} la cual es {{glossary("property", "propiedad")}} de un {{glossary("Objecto", "Objeto")}}. Existen dos tipos de métodos: _Métodos de Instancia_ los cuales son tareas integradas realizadas por la instacia de un objeto, y los _Métodos Estáticos_ que son tareas que pueden ser llamadas directamente en el constructor de un objeto.
+Un **método** es una {{glossary("function", "función")}} la cual es {{glossary("property", "propiedad")}} de un {{glossary("Objecto", "objeto")}}. Existen dos tipos de métodos: _Métodos de Instancia_, los cuales son tareas integradas realizadas por la instacia de un objeto; y los _Métodos Estáticos_, que son tareas que pueden ser llamadas directamente en el constructor de un objeto.
 
 > [!NOTE]
-> En JavaScript las funciones en si son objetos, asi que, en ese contexto, un método es de hecho un {{glossary("Object Reference", "objeto de referencia")}} a una función.
+> En JavaScript las funciones en sí son objetos, así que, en ese contexto, un método es un {{glossary("Object Reference", "objeto de referencia")}} a una función.
 
 ## Aprender más
 
@@ -19,4 +19,4 @@ Un **metodo** es una {{glossary("function", "función")}} la cual es {{glossary(
 
 ### Referencia Técnica
 
-- [Lista de los métodos integrados de JavaScript](/es/docs/Web/JavaScript/Reference/Methods_Index)
+- [Lista de los métodos integrados de JavaScript](/es/docs/Web/JavaScript/Reference)

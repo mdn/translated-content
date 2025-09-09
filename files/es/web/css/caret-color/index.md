@@ -3,8 +3,6 @@ title: caret-color
 slug: Web/CSS/caret-color
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`caret-color`** especifica el color del cursor de texto, el indicador visible del punto de inserción en un elemento donde el usuario puede introducir texto u otro contenido.
 
 ```css
@@ -30,7 +28,6 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 ### Valores
 
 - `auto`
-
   - : Los agentes usuarios deberán usar `currentcolor`, pero podrían ajustar automáticamente el color del cursor para asegurar la correcta visibilidad y contraste con el contenido alrededor, posiblemente con base en `currentcolor`, el fondo, sombras, etc.
 
     > [!NOTE]

@@ -9,7 +9,17 @@ O **operador de coalescência nula (`??`)** é um operador lógico que retorna o
 
 Ao contrário do [operador lógico OR (`||`)](</pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#OR_Lógico_()>), o operando esquerdo é retornado se houver um valor _[falsy](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#Short-Circuit_Evaluation)_ (falso) que não seja `null` ou `undefined`. Em outras palavras, se você usar `||` para obter algum valor padrão para outra variável `foo`, você pode enfrentar comportamentos inesperados se você considerar algum valor falseável como utilizável (eg. `''` ou `0`). Veja abaixo alguns exemplos:
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## Sintaxe
 
@@ -142,4 +152,4 @@ console.log(valC); // 42
 
 - [The optional chaining operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [The logical OR (`||`) operator](</pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#OR_Lógico_()>)
-- [Default parameters in functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos)
+- [Default parameters in functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters)

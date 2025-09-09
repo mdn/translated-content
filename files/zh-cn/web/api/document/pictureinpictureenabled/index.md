@@ -2,14 +2,14 @@
 title: Document：pictureInPictureEnabled 属性
 slug: Web/API/Document/pictureInPictureEnabled
 l10n:
-  sourceCommit: 04ebe57066db2cff350018649bdb15b2a10c67ba
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Picture-in-Picture API")}}
 
 {{domxref("Document")}} 接口的 **`pictureInPictureEnabled`** 只读属性表示画中画模式是否可用。
 
-除非[权限策略](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture)另有指定，否则画中画模式默认是可用的。
+除非[权限策略](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture)另有指定，否则画中画模式默认是可用的。
 
 尽管这个属性是只读的，但是即使它被修改（甚至是在严格模式下），也不会抛出错误；setter 是无操作的并且将会被忽略。
 

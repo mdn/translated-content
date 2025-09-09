@@ -3,11 +3,9 @@ title: Inicializar el framework
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}
 
-Este es el primero de los 16 tutoriales para aprender a usar [Gamedev Phaser](/es/docs/Games/Workflows/2D_Breakout_game_Phaser). Luego de completar este tutorial, puede encontrar el código fuente de esta sección en [Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html).
+Este es el primero de los 16 tutoriales para aprender a usar [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Luego de completar este tutorial, puede encontrar el código fuente de esta sección en [Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html).
 
 Antes de que podamos comenzar a escribir la funcionalidad del juego, necesitamos crear una estructura básica para procesarlo. Esto podemos hacerlo usando HTML — el framework de Phaser va a generar el elemento {{htmlelement("canvas")}} requerido.
 
@@ -63,7 +61,6 @@ El elemento {{htmlelement("canvas")}} es generado automaticamente por el framewo
 - El método de renderizado. Las otras tres opciones son `AUTO`, `CANVAS` y `WEBGL`. Podemos establecer uno de los dos últimos explícitamente o usar `AUTO` para dejar que Phaser decida cuál usar. Usualmente usa WebGL si está disponible en el navegador, volviendo a Canvas 2D si no es así.
 - El `id` del {{htmlelement("canvas")}} se utilizará para renderizar si ya existe en la pagina (hemos especificado null porque queremos que Phaser cree el suyo propio).
 - Los nombres que se usarán para las tres funciones claves del Phaser que cargan e incian el juego, y actualizan el bucle del juego en cada fotograma; usaremos los mismos nombres para mantenerlo limpio.
-
   - `preload` se encargará de precargar los assets
   - `create` se ejecuta una vez cuando todo está cargado y listo
   - `update` se ejecuta en cada fotograma.
@@ -76,6 +73,6 @@ Aquí está el código fuente completo de la primera lección, ejecutándose en 
 
 ## Pasos siguientes
 
-Ahora hemos configurado el HTML básico y aprendido un poco sobre la inicialización de Phaser, continuemos con la segunda lección y aprendamos sobre [scaling](/es/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling).
+Ahora hemos configurado el HTML básico y aprendido un poco sobre la inicialización de Phaser, continuemos con la segunda lección y aprendamos sobre [scaling](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}

@@ -20,7 +20,7 @@ La propiedad `rightContext` es estática, no es una propiedad de un objeto de ex
 
 El valor de la propiedad `rightContext` es de solo lectura y se modifica cada que hay una coincidencia exitosa.
 
-Tenga presente que no puede usar la abreviatura (`RegExp.$'`), porque el analizador espera una cadena de inicio, si lo hace optendra un error de sintaxis {{jsxref("SyntaxError")}} , para este caso, usted debe usar corchetes. consulte [notación de paréntesis para acceso a la propiedad](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
+Tenga presente que no puede usar la abreviatura (`RegExp.$'`), porque el analizador espera una cadena de inicio, si lo hace optendra un error de sintaxis {{jsxref("SyntaxError")}} , para este caso, usted debe usar corchetes. consulte [notación de paréntesis para acceso a la propiedad](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors).
 
 ## Ejemplos
 

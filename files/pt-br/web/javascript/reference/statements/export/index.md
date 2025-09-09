@@ -179,7 +179,7 @@ console.log(foo); // 4.555806215962888
 É importante notar o seguinte:
 
 - Você pode incluir esse script no seu código HTML através do elemento {{htmlelement("script")}} do tipo="module", de modo que ele seja reconhecido e tratado apropriadamente.
-- Você não pode executar módulos JS através de `file://` URL — você receberá errors [CORS](/pt-BR/docs/Web/HTTP/CORS). Você deve rodá-los através de um servidor HTTP.
+- Você não pode executar módulos JS através de `file://` URL — você receberá errors [CORS](/pt-BR/docs/Web/HTTP/Guides/CORS). Você deve rodá-los através de um servidor HTTP.
 
 ### Usando a exportação padrão
 
@@ -211,4 +211,4 @@ console.log(cube(3)); // 27
 
 - {{jsxref("Statements/import", "import")}}
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

@@ -3,8 +3,6 @@ title: Selectores de atributo
 slug: Web/CSS/Attribute_selectors
 ---
 
-{{CSSRef}}
-
 El **selector de atributos** CSS coincide con los elementos en función de la presencia o el valor de un atributo determinado.
 
 ```css
@@ -160,7 +158,7 @@ div[data-lang="zh-TW"] {
 
 {{SeeCompatTable}}
 
-La especificación HTML requiere que el atributo [`type`](/es/docs/Web/HTML/Element/input#type) distinga entre mayúsculas y minúsculas debido a que se usa principalmente en el elemento {{HTMLElement("input")}}, tratando de usar selectores de atributos con el atributo [`type`](/es/docs/Web/HTML/Element/ol#type) de una {{HTMLElement("ol", "lista ordenada")}} no funciona sin el modificador de mayúsculas y minúsculas.
+La especificación HTML requiere que el atributo [`type`](/es/docs/Web/HTML/Reference/Elements/input#type) distinga entre mayúsculas y minúsculas debido a que se usa principalmente en el elemento {{HTMLElement("input")}}, tratando de usar selectores de atributos con el atributo [`type`](/es/docs/Web/HTML/Reference/Elements/ol#type) de una {{HTMLElement("ol", "lista ordenada")}} no funciona sin el modificador de mayúsculas y minúsculas.
 
 #### CSS
 

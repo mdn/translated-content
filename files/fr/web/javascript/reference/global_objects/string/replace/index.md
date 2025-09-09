@@ -9,7 +9,18 @@ La méthode **`replace()`** renvoie une nouvelle chaîne de caractères dans laq
 
 La chaîne de caractère originale reste inchangée.
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## Syntaxe
 
@@ -24,9 +35,9 @@ chn.replace(regexp | souschn, nouvSouschn | fonction);
 - `souschn` (modèle)
   - : Une {{jsxref("String")}} qui est à remplacer par `nouvSouschn`. Elle est traitée comme une chaîne de caractères verbatim et elle n'est _pas_ interprétée comme une expression régulière. Seule la première occurrence sera remplacée.
 - `nouvSouschn` (remplacement)
-  - : La {{jsxref("String")}} qui remplace la chaîne de caractères indiquée par le paramètre `regexp` ou `souschn`. Un certain nombre de modèles de remplacement spéciaux sont supportés ; voir la section "[Indiquer une chaîne de caractères comme paramètre](#Indiquer_une_chaîne_de_caractère_comme_paramètre)" ci-dessous.
+  - : La {{jsxref("String")}} qui remplace la chaîne de caractères indiquée par le paramètre `regexp` ou `souschn`. Un certain nombre de modèles de remplacement spéciaux sont supportés ; voir la section "[Indiquer une chaîne de caractères comme paramètre](#indiquer_une_chaîne_de_caractère_comme_paramètre)" ci-dessous.
 - `fonction` (remplacement)
-  - : Une fonction à appeler pour créer la nouvelle sous-chaîne de caractères à utiliser pour remplacer la `regexp` ou la `souschn` donnée. Les arguments passés à cette fonction sont décrits dans la section "[Indiquer une fonction comme paramètre](#Indiquer_une_fonction_comme_paramètre)" ci-dessous.
+  - : Une fonction à appeler pour créer la nouvelle sous-chaîne de caractères à utiliser pour remplacer la `regexp` ou la `souschn` donnée. Les arguments passés à cette fonction sont décrits dans la section "[Indiquer une fonction comme paramètre](#indiquer_une_fonction_comme_paramètre)" ci-dessous.
 
 ### Valeur retournée
 
@@ -166,7 +177,7 @@ console.log(nouvChn); // Twas the night before Christmas...
 Cela affiche 'Twas the night before Christmas...'.
 
 > [!NOTE]
-> Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) pour plus d'explications concernant les expressions régulières.
+> Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Regular_expressions) pour plus d'explications concernant les expressions régulières.
 
 ### Utilisation de `global` et `ignore` avec `replace()`
 

@@ -2,7 +2,7 @@
 title: CookieChangeEvent：CookieChangeEvent() 构造函数
 slug: Web/API/CookieChangeEvent/CookieChangeEvent
 l10n:
-  sourceCommit: 74206b3f81736bac558470f36222544cc67ba9e2
+  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
@@ -25,9 +25,9 @@ new CookieChangeEvent(type, options)
   - : 包含事件名称的字符串。它区分大小写，且浏览器总是将其设置为 `change`。
 - `options` {{Optional_Inline}}
   - : 一个对象，该对象*除了在 {{domxref("Event/Event", "Event()")}} 中定义的属性之外*，还可以具有以下属性：
-    - `changed`{{Optional_Inline}}
+    - `changed` {{Optional_Inline}}
       - : 一个包含已被修改的 cookie 的数组。
-    - `deleted`{{Optional_Inline}}
+    - `deleted` {{Optional_Inline}}
       - : 一个包含已被删除的 cookie 的数组。
 
 ### 返回值

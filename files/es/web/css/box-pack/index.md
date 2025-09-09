@@ -1,18 +1,16 @@
 ---
-title: "-moz-box-pack"
+title: -moz-box-pack
 slug: Web/CSS/box-pack
 ---
-
-{{CSSRef}}
 
 > [!WARNING]
 > Esta propiedad es parte del módulo estándar original para el diseño de las cajas CSS Flexible que fue sustituida por un nuevo estándar.
 
-Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para más información.
+Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información.
 
 ## Resumen
 
-Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-pack` y `-webkit-box-pack` especifican cómo una `-moz-box` o un `-webkit-box` empaquetan o disponen su contenido en la dirección de su diseño o esquema. El efecto de esto sólo es visible si hay expacio extra en la caja. Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes#Flexible_box_properties) para más información sobre las propiedades de los elementos flexbox.
+Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-pack` y `-webkit-box-pack` especifican cómo una `-moz-box` o un `-webkit-box` empaquetan o disponen su contenido en la dirección de su diseño o esquema. El efecto de esto sólo es visible si hay expacio extra en la caja. Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox#flexible_box_properties) para más información sobre las propiedades de los elementos flexbox.
 
 La dirección del esquema o diseño (layout) depende de la orientación del elemento: vertical o horizontal.
 
@@ -111,7 +109,7 @@ Si el empaquetado se establece usando el atributo `pack` del elemento el estilo 
 
 ## Especificaciones
 
-Esta propiedad es no estándar aunque una propiedad similar apareción en [draft of CSS3 Flexbox](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/), que a su vez ha sido sustituida para nuevas versiones de la especificación.
+Esta propiedad es no estándar aunque una propiedad similar apareción en [draft of CSS3 Flexbox](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/), que a su vez ha sido sustituida para nuevas versiones de la especificación.
 
 ## Compatibilidad con navegadores
 

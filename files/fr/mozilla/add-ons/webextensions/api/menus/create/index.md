@@ -23,15 +23,11 @@ browser.menus.create(
 ### Paramètres
 
 - `createProperties`
-
   - : `object`. Propriétés pour le nouvel élément de menu.
-
     - `checked` {{optional_inline}}
       - : `boolean`. L'état initial d'une case à cocher ou d'un élément radio : `true` pour selected et `false` pour non sélectionné. Un seul élément radio peut être sélectionné à la fois dans un groupe donné d'éléments radio.
     - `command` {{optional_inline}}
-
       - : `string`. Chaîne décrivant une action à effectuer lorsque l'utilisateur clique sur l'élément. Les valeurs possibles sont:
-
         - `"_execute_browser_action"`: simule un clic sur l'action du navigateur de l'extension, en ouvrant son popup s'il en a un
         - `"_execute_page_action"`: simule un clic sur l'action de la page de l'extension, en ouvrant son popup s'il en a un
         - `"_execute_sidebar_action"`: ouvre la barre latérale de l'extension
@@ -39,18 +35,15 @@ browser.menus.create(
         Cliquer sur l'élément déclenchera toujours l'événement {{WebExtAPIRef("menus.onClicked")}}, mais il n'y a aucune garantie de la commande ici: la commande peut être exécutée avant les incendies `onClicked`.
 
     - `contexts` {{optional_inline}}
-
       - : `array` de `{{WebExtAPIRef('menus.ContextType')}}`. Tableau des contextes dans lesquels cet élément de menu apparaîtra. Si cette option est omise :
-
         - Si l'élément parent a des contextes définis, alors cet élément héritera des contextes de ses parents
         - sinon, l'élément reçoit un tableau de contexte de \["page"].
 
     - `documentUrlPatterns` {{optional_inline}}
-      - : `array` de `string`. Vous permet de restreindre l'élément à appliquer uniquement aux documents dont l'URL correspond à l'un des [motifs](/fr/Add-ons/WebExtensions/Match_patterns) données. Cela s'applique également aux cadres.
+      - : `array` de `string`. Vous permet de restreindre l'élément à appliquer uniquement aux documents dont l'URL correspond à l'un des [motifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) données. Cela s'applique également aux cadres.
     - `enabled` {{optional_inline}}
       - : `boolean`. Si cet élément de menu est activé ou désactivé. Par défaut à `true`.
     - `icons` {{optional_inline}}
-
       - : `object`. Une ou plusieurs icônes personnalisées à afficher en regard de l'élément. Les icônes personnalisées ne peuvent être définies que pour les éléments apparaissant dans les sous-menus. Cette propriété est un objet avec une propriété pour chaque icône fournie: le nom de la propriété est la taille de l'icône en pixels et sa valeur est un chemin vers l'icône à partir du répertoire racine de l'extension. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute densité. Donc, pour éviter toute mise à l'échelle, vous pouvez spécifier des icônes comme ceci :
 
         ```json
@@ -69,7 +62,7 @@ browser.menus.create(
         ```
 
         > [!NOTE]
-        > L'élément de menu de niveau supérieur utilise les [icônes](/fr/Add-ons/WebExtensions/manifest.json/icons) spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.
+        > L'élément de menu de niveau supérieur utilise les [icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.
 
     - `id` {{optional_inline}}
       - : `string`. Identifiant unique à attribuer à cet élément Obligatoire pour les pages d'événement. Ne peut pas être identique à un autre ID pour cette extension.
@@ -80,13 +73,11 @@ browser.menus.create(
     - `targetUrlPatterns` {{optional_inline}}
       - : `array` de `string`. Similaire à `documentUrlPatterns`, mais vous permet de filtrer en fonction du `href` des balises d'ancrage et de l'attribut `src` des balises img/audio/video tags. Ce paramètre prend en charge n'importe quel schéma d'URL, même ceux qui ne sont généralement pas autorisés dans un modèle de correspondance.
     - `title` {{optional_inline}}
-
       - : `string`. Le texte à afficher dans l'article. Obligatoire sauf si le `type` est "separator".
 
         Vous pouvez utiliser "`%s`" dans la chaîne. Si vous le faites dans un élément de menu et que du texte est sélectionné dans la page lorsque le menu est affiché, le texte sélectionné sera interpolé dans le titre. Par exemple, si le `titre` est "traduire '%s' en Pig Latin" et que l'utilisateur sélectionne le mot "cool", alors le menu est activé, le titre de l'élément de menu sera : "Traduire 'cool' en Pig Latin".
 
         Si le titre contient une esperluette "&" le caractère suivant sera utilisé comme clé d'accès pour l'élément et l'esperluette ne sera pas affichée. Les exceptions à cette règle sont les suivantes :
-
         - Si le caractère suivant est également une esperluette : alors une esperluette simple sera affichée et aucune clé d'accès ne sera définie. En effet, "&&" est utilisé pour afficher une seule esperluette.
         - Si les caractères suivants sont la directive d'interpolation "%s" : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
         - Si l'esperluette est le dernier caractère du titre : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
@@ -125,7 +116,7 @@ browser.menus.onClicked.addListener(function (info, tab) {
 });
 ```
 
-Cet exemple ajoute deux éléments radio, que vous pouvez utiliser pour choisir d'appliquer une bordure verte ou bleue à la page. Notez que cet exemple nécessitera la [permission activeTab](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+Cet exemple ajoute deux éléments radio, que vous pouvez utiliser pour choisir d'appliquer une bordure verte ou bleue à la page. Notez que cet exemple nécessitera la [permission activeTab](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
 ```js
 function onCreated() {

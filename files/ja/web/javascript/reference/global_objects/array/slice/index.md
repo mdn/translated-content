@@ -1,16 +1,37 @@
 ---
 title: Array.prototype.slice()
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`slice()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の一部を `start` から `end` （`end` は含まれない）までの範囲で、選択した新しい配列オブジェクトに[シャローコピー](/ja/docs/Glossary/Shallow_copy)して返します。
 ここで `start` と `end` はその配列に含まれる項目のインデックスを表します。元の配列は変更されません。
 
-{{EmbedInteractiveExample("pages/js/array-slice.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.slice()", "taller")}}
+
+```js interactive-example
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+// 予想される結果: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// 予想される結果: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// 予想される結果: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// 予想される結果: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// 予想される結果: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// 予想される結果: Array ["ant", "bison", "camel", "duck", "elephant"]
+```
 
 ## 構文
 
@@ -24,15 +45,15 @@ slice(start, end)
 
 - `start` {{optional_inline}}
   - : 抽出を始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `start < 0` の場合、 `start + array.length` が使用されます。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= start < 0` の場合、 `start + array.length` が使用されます。
     - `start < -array.length` または `start` が省略された場合は `0` が使用されます。
-    - `start >= array.length` の場合、何も抽出されません。
+    - `start >= array.length` の場合、空の配列が返されます。
 - `end` {{optional_inline}}
   - : 抽出し終える位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。 `slice()` は `end` を含まず、その直前までを抽出します。
-    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `end < 0` の場合、 `end + array.length` が使用されます。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= end < 0` の場合、 `end + array.length` が使用されます。
     - `end < -array.length` の場合は `0` が使用されます。
     - `end >= array.length` または `end` が省略された場合は `array.length` が使用され、最後まですべての要素が抽出されます。
-    - 正規化後に `end` が `start` より前か同じ位置になった場合、何も抽出されません。
+    - `end` が `start` が示す位置よりも前またはその位置を示す場合、空の配列が返されます。
 
 ### 返値
 
@@ -58,7 +79,64 @@ const citrus = fruits.slice(1, 3);
 // citrus には ['Orange','Lemon'] が含まれる
 ```
 
-### slice の使用
+この例では、`slice(1, 3)` は、インデックス `1` からインデックス `3` まで（ただし `3` 自体は含まない）の要素を抽出して、新しい配列 `['Orange', 'Lemon']` を作成します。
+
+### end 引数の省略
+
+```js
+const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+
+const tropical = fruits.slice(2);
+console.log(tropical); // ['Orange', 'Mango', 'Pineapple']
+```
+
+この例では、`slice(2)` は、インデックス `2` から配列の末尾までの要素を抽出します。
+
+### 負のインデックスの使用
+
+```js
+const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+
+const lastTwo = fruits.slice(-2);
+console.log(lastTwo); // ['Mango', 'Pineapple']
+```
+
+この例では、`slice(-2)` は配列の最後の 2 つの要素を抽出します。`slice` メソッドで負のインデックスを使用する場合、負のインデックスは配列の末尾からカウントされ、最後の要素は `-1`、2 つ目の要素は `-2` というように続きます。負のインデックス `-2` 自体は、抽出の開始点であるため、含まれます。
+
+```plain
+|     |     |     |     |     |
+|  S  |  L  |  I  |  C  |  E  |
+|     |     |     |     |     |
+  -5    -4    -3    -2    -1
+
+<--- 逆方向に読む
+```
+
+### 正の開始インデックスと負の終了インデックスを使用する場合
+
+```js
+const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+
+// 正の開始インデックスと負の終了インデックスを使用する
+const sliceExample = fruits.slice(1, -1);
+console.log(sliceExample); // ['Banana', 'Orange', 'Mango']
+```
+
+この例では、`slice(1, -1)` は、インデックス `1` から抽出し、インデックス `-1` (最後の要素) まで抽出しますが、この要素は含まれません。その結果、 `['Banana', 'Orange', 'Mango']` という新しい配列が作成されます。 `slice` メソッドは、指定した最後のインデックスの要素が正の値であるか負の値であるかを問わず、常にその要素を除外します。
+
+```plain
+先頭から読む --->
+
+   0     1     2     3     4
+|     |     |     |     |     |
+|  S  |  L  |  I  |  C  |  E  |
+|     |     |     |     |     |
+  -5    -4    -3    -2    -1
+
+<--- 逆方向に読む
+```
+
+### sliceをオブジェクトの配列で使用
 
 以下の例で、`slice` は新しい配列 `newCar` を `myCar` から生成します。両者ともオブジェクト `myHonda` への参照を含んでいます。`myHonda` の色が purple に変更されると、両方の要素がその変更を反映します。
 
@@ -130,7 +208,7 @@ function list() {
   return slice(arguments);
 }
 
-const list1 = list(1, 2, 3); // [1, 2, 3]
+const listResult = list(1, 2, 3); // [1, 2, 3]
 ```
 
 ### 疎配列に対する slice() の使用
@@ -152,6 +230,7 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 ## 関連情報
 
 - [`Array.prototype.slice` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.slice` のポリフィル](https://www.npmjs.com/package/array.prototype.slice)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}

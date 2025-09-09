@@ -1,15 +1,37 @@
 ---
 title: handler.setPrototypeOf()
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`handler.setPrototypeOf()`** メソッドは、オブジェクトの `[[SetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Object.setPrototypeOf()")}} などの操作で使用されます。
 
-**`handler.setPrototypeOf()`** メソッドは、オブジェクトの `[[SetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.setPrototypeOf()")}} などの操作で使用されます。
+{{InteractiveExample("JavaScript デモ: handler.setPrototypeOf()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller")}}
+```js interactive-example
+const handler = {
+  setPrototypeOf(monster, monsterProto) {
+    monster.geneticallyModified = true;
+    return false;
+  },
+};
+
+const monsterProto = {};
+const monster = {
+  geneticallyModified: false,
+};
+
+const proxy = new Proxy(monster, handler);
+// Object.setPrototypeOf(proxy, monsterProto); // TypeError が発生
+
+console.log(Reflect.setPrototypeOf(proxy, monsterProto));
+// 予想される結果: false
+
+console.log(monster.geneticallyModified);
+// 予想される結果: true
+```
 
 ## 構文
 
@@ -17,7 +39,7 @@ l10n:
 new Proxy(target, {
   setPrototypeOf(target, prototype) {
   }
-});
+})
 ```
 
 ### 引数
@@ -31,7 +53,9 @@ new Proxy(target, {
 
 ### 返値
 
-`setPrototypeOf()` メソッドは `[[Prototype]]` の変更に成功したら `true` を返し、そうでない場合は `false` を返します。
+`setPrototypeOf()` メソッドは、プロトタイプが正常に変更されたかどうかを示す {{jsxref("Boolean")}} を返す必要があります。それ以外の値は[論理値に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#論理型への変換)。
+
+多くの操作（{{jsxref("Object.setPrototypeOf()")}} を含む）では、内部メソッド `[[SetPrototypeOf]]` が `false` を返した場合、{{jsxref("TypeError")}} が発生します。
 
 ## 解説
 
@@ -46,9 +70,9 @@ new Proxy(target, {
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+プロキシーの `[[SetPrototypeOf]]` 内部メソッドでは、ハンドラー定義が次の不変条件のいずれかに違反する場合、{{jsxref("TypeError")}} を発生します。
 
-- `target` が拡張可能でない場合、引数の `prototype` は `Object.getPrototypeOf(target)` と同じ値でなければなりません。
+- 対象とするオブジェクトが拡張不可の場合は、プロトタイプを変更できません。つまり、{{jsxref(「Reflect.isExtensible()」)}} が `target` に対して `false` を返す場合、かつ `prototype` が `Reflect.getPrototypeOf(target)` の結果と一致しない場合、トラップは偽値を返す必要があります。
 
 ## 例
 

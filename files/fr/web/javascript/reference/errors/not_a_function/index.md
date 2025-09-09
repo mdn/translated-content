@@ -25,11 +25,9 @@ Il est possible qu'il y ait une coquille dans le nom de la fonction. Peut être 
 Il existe de nombreuses fonctions natives qui fonctionnent à l'aide d'une fonction (_callback_) passée en argument :
 
 - Pour les objets {{jsxref("Array")}} ou {{jsxref("TypedArray")}}, voici les fonctions qui utilisent une fonction en argument :
-
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - Pour les objets {{jsxref("Map")}} et {{jsxref("Set")}}, voici les méthodes concernées :
-
   - {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}}
 
 ## Exemples
@@ -154,4 +152,4 @@ import helpers from "./helpers";
 
 ## Voir aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions)
+- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)

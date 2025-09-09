@@ -41,4 +41,4 @@ new PageSwapEvent(type, init)
 
 ## 関連情報
 
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)

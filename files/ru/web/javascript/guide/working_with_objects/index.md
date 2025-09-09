@@ -36,7 +36,7 @@ myCar.year = 1969;
 myCar.color; // undefined
 ```
 
-Свойства объектов JavaScript также могут быть доступны или заданы с использованием скобочной записи (более подробно см. [property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)). Объекты иногда называются _ассоциативными массивами_, поскольку каждое свойство связано со строковым значением, которое можно использовать для доступа к нему. Так, например, вы можете получить доступ к свойствам объекта `myCar` следующим образом:
+Свойства объектов JavaScript также могут быть доступны или заданы с использованием скобочной записи (более подробно см. [property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors)). Объекты иногда называются _ассоциативными массивами_, поскольку каждое свойство связано со строковым значением, которое можно использовать для доступа к нему. Так, например, вы можете получить доступ к свойствам объекта `myCar` следующим образом:
 
 ```js
 myCar["make"] = "Ford";
@@ -74,7 +74,7 @@ propertyName = "model";
 myCar[propertyName] = "Mustang";
 ```
 
-Вы можете пользоваться квадратными скобками в конструкции [for...in](/ru/docs/JavaScript/Guide/Statements#for...in_Statement) чтобы выполнить итерацию всех свойств объекта, для которых она разрешена. Чтобы показать как это работает, следующая функция показывает все свойства объекта, когда вы передаёте в неё сам объект и его имя как аргументы функции:
+Вы можете пользоваться квадратными скобками в конструкции [for...in](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#for...in_statement) чтобы выполнить итерацию всех свойств объекта, для которых она разрешена. Чтобы показать как это работает, следующая функция показывает все свойства объекта, когда вы передаёте в неё сам объект и его имя как аргументы функции:
 
 ```js
 function showProps(obj, objName) {
@@ -100,11 +100,11 @@ myCar.year = 1969;
 
 Начиная с [ECMAScript 5](/ru/docs/JavaScript/ECMAScript_5_support_in_Mozilla), есть три способа перечислить все свойства объекта (получить их список):
 
-- циклы [for...in](/ru/docs/JavaScript/Reference/Statements/for...in)
+- циклы [for...in](/ru/docs/Web/JavaScript/Reference/Statements/for...in)
   Этот метод перебирает все перечисляемые свойства объекта и его цепочку прототипов
-- [Object.keys(o)](/ru/docs/JavaScript/Reference/Global_Objects/Object/keys)
+- [Object.keys(o)](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
   Этот метод возвращает массив со всеми собственными (те, что в цепочке прототипов, не войдут в массив) именами перечисляемых свойств объекта `o`.
-- [Object.getOwnPropertyNames(o)](/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [Object.getOwnPropertyNames(o)](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
   Этот метод возвращает массив содержащий все имена своих свойств (перечисляемых и неперечисляемых) объекта `o`.
 
 До ECMAScript 5 не было встроенного способа перечислить все свойства объекта. Однако это можно сделать с помощью следующей функции:
@@ -300,7 +300,7 @@ Car.prototype.color = null;
 car1.color = "black";
 ```
 
-Смотрите [свойство `prototype`](/ru/docs/JavaScript/Reference/Global_Objects/Function/prototype) объекта `Function` в [Справочнике JavaScript](/ru/docs/JavaScript/Reference) для получения деталей.
+Смотрите [свойство `prototype`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) объекта `Function` в [Справочнике JavaScript](/ru/docs/Web/JavaScript/Reference) для получения деталей.
 
 ## Определение методов
 
@@ -424,7 +424,7 @@ console.log(o.a); // 25
 - `o.b` — геттер, который возвращает `o.a` плюс 1
 - `o.c` — сеттер, который присваивает значение `o.a` половине значения которое передано в `o.c`
 
-Следует особо отметить, что имена функций, указанные в литеральной форме "\[gs]et _propertyName_() { }" не будут в действительности являться именами геттера и сеттера. Чтобы задать в качестве геттера и сеттера функции с явно определёнными именами, используйте метод [`Object.defineProperty`](/ru/docs/JavaScript/Reference/Global_Objects/Object/defineProperty) (или его устаревший аналог [`Object.prototype.__defineGetter__`](/ru/docs/JavaScript/Reference/Global_Objects/Object/defineGetter)).
+Следует особо отметить, что имена функций, указанные в литеральной форме "\[gs]et _propertyName_() { }" не будут в действительности являться именами геттера и сеттера. Чтобы задать в качестве геттера и сеттера функции с явно определёнными именами, используйте метод [`Object.defineProperty`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) (или его устаревший аналог [`Object.prototype.__defineGetter__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)).
 
 В коде ниже показано, как с помощью геттера и сеттера можно расширить прототип объекта {{jsxref("Date")}} и добавить ему свойство `year,` которое будет работать у всех экземпляров класса `Date`. Этот код использует существующие методы класса `Date` - `getFullYear` и `setFullYear` для работы геттера и сеттера.
 
@@ -454,10 +454,10 @@ console.log(now);
 
 В принципе, геттеры и сеттеры могут быть либо:
 
-- определены при использовании [Инициализаторов объекта](#Использование_инициализаторов_объекта), или
+- определены при использовании [Инициализаторов объекта](#использование_инициализаторов_объекта), или
 - добавлены существующему объекту в любой момент, при использовании методов добавления геттеров и сеттеров.
 
-Когда определение геттера и сеттера использует [инициализаторы объекта](#Использование_инициализаторов_объекта), всё что вам нужно, это дополнить геттер префиксом `get` а сеттер префиксом `set`. При этом, метод геттера не должен ожидать каких либо параметров, в то время как метод сеттера принимает один единственный параметр (новое значение для присвоения свойству). Например:
+Когда определение геттера и сеттера использует [инициализаторы объекта](#использование_инициализаторов_объекта), всё что вам нужно, это дополнить геттер префиксом `get` а сеттер префиксом `set`. При этом, метод геттера не должен ожидать каких либо параметров, в то время как метод сеттера принимает один единственный параметр (новое значение для присвоения свойству). Например:
 
 ```js
 var o = {
@@ -546,11 +546,11 @@ fruit.name = "grape";
 console.log(fruitbear); // вернёт { name: "grape" } вместо { name: "apple" }
 ```
 
-Подробнее смотрите [Операторы сравнения](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).
+Подробнее смотрите [Операторы сравнения](/ru/docs/Web/JavaScript/Reference/Operators).
 
 ## Смотрите также
 
-- Для детального изучения читайте [подробнее об объектной модели JavaScript](/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+- Для детального изучения читайте [подробнее об объектной модели JavaScript](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 - Для изучения классов ECMAScript 2015 (новый способ определения объектов), читайте главу [классы JavaScript](/ru/docs/Web/JavaScript/Reference/Classes).
 
 {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

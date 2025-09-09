@@ -17,7 +17,7 @@ Chaque métrique de performance est représentée par un objet [`PerformanceEntr
 
 La plupart des entrées de performance sont enregistrées sans que vous ayez à faire quoi que ce soit. Elles sont disponibles via la méthode [`Performance.getEntries()`](/fr/docs/Web/API/Performance/getEntries) ou (encore mieux) grâce aux instances de [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver). On a par exemple les entrées natives [`PerformanceEventTiming`](/fr/docs/Web/API/PerformanceEventTiming) qui sont enregistrées pour les évènements dont la durée dépasse un seuil donné. L'API Performance permet aussi de définir et d'enregistrer des évènements sur mesure à l'aide des interfaces [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark) et [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure).
 
-L'interface [`Performance`](/fr/docs/Web/API/Performance) est disponible sur chaque contexte global à l'aide de [`self.performance`](/fr/docs/Web/API/performance_property) et permet d'ajouter des entrées de performance spécifiques, de récupérer ou de purger les entrées de performance.
+L'interface [`Performance`](/fr/docs/Web/API/Performance) est disponible sur chaque contexte global à l'aide de [`self.performance`](/fr/docs/Web/API/Window/performance) et permet d'ajouter des entrées de performance spécifiques, de récupérer ou de purger les entrées de performance.
 
 L'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) permet d'écouter les évènements liés à l'enregistrement des différents types d'entrée de performance.
 
@@ -38,7 +38,7 @@ L'API Performance définit les interfaces suivantes&nbsp;:
 - [`LayoutShiftAttribution`](/fr/docs/Web/API/LayoutShiftAttribution)
   - : Fournit des informations de débogage pour les éléments qui subissent un décalage sur la page.
 - [`Performance`](/fr/docs/Web/API/Performance)
-  - : L'interface principale permettant d'accéder aux mesures de performance. Elle est disponible dans les contextes des fenêtres et des <i lang="en">workers</i> via [`self.performance`](/fr/docs/Web/API/performance_property).
+  - : L'interface principale permettant d'accéder aux mesures de performance. Elle est disponible dans les contextes des fenêtres et des <i lang="en">workers</i> via [`self.performance`](/fr/docs/Web/API/Window/performance).
 - [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming)
   - : Mesure les horodatages pour le rendu d'éléments spécifiques.
 - [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry)
@@ -94,4 +94,4 @@ Les guides qui suivent vous permettront de comprendre les concepts fondamentaux 
 ## Voir aussi
 
 - [La gestion des performances sur le Web](/fr/docs/Web/Performance)
-- [Apprendre&nbsp;: les performances sur le Web](/fr/docs/Learn/Performance)
+- [Apprendre&nbsp;: les performances sur le Web](/fr/docs/Learn_web_development/Extensions/Performance)

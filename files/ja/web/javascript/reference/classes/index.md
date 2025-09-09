@@ -2,12 +2,12 @@
 title: クラス
 slug: Web/JavaScript/Reference/Classes
 l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
 ---
 
 {{jsSidebar("Classes")}}
 
-クラスはオブジェクトを作成するためのテンプレートです。処理するためのコードでデータをカプセル化します。 JS のクラスは[プロトタイプ](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)に基づいて構築されていますが、一部の構文や意味はクラスに固有です。
+クラスはオブジェクトを作成するためのテンプレートです。処理するためのコードでデータをカプセル化します。 JS のクラスは[プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)に基づいて構築されていますが、一部の構文や意味はクラスに固有です。
 
 例や説明については、[クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイドを参照してください。
 
@@ -69,11 +69,11 @@ const Rectangle = class Rectangle2 {
   - : パブリックインスタンスフィールド
 - [`static`](/ja/docs/Web/JavaScript/Reference/Classes/static)
   - : パブリック静的メソッド、ゲッター、セッター、フィールド
-- [プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
   - : プライベートなものすべて
 
 > [!NOTE]
-> プライベート機能には、同じクラスで宣言するプロパティ名はすべて固有のものでなければならないという制約があります。他のすべてのパブリックプロパティにはこの制限はなく、同じ名前の複数のパブリックプロパティを持つことができ、最後のプロパティが他のプロパティを上書きします。これは[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#重複したプロパティ名)での処理と同じです。
+> プライベート要素には、同じクラスで宣言するプロパティ名はすべて固有のものでなければならないという制約があります。他のすべてのパブリックプロパティにはこの制限はなく、同じ名前の複数のパブリックプロパティを持つことができ、最後のプロパティが他のプロパティを上書きします。これは[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#重複したプロパティ名)での処理と同じです。
 
 さらに、特別なクラス要素の構文として、 [`constructor`](#コンストラクター) と[静的初期化ブロック](#静的初期化ブロック)の 2 つがあり、自分自身で参照します。
 
@@ -180,13 +180,13 @@ class Rectangle {
 }
 ```
 
-クラスのフィールドはオブジェクトのプロパティに似ていて変数ではないので、宣言するために `const` などのキーワードは使用しません。 JavaScript では、[プライベート機能](#プライベートクラス機能)は特別な識別子構文を使うので、 `public` や `private` のような修飾子キーワードも使うべきではありません。
+クラスのフィールドはオブジェクトのプロパティに似ていて変数ではないので、宣言するために `const` などのキーワードは使用しません。 JavaScript では、[プライベート要素](#プライベート要素)は特別な識別子構文を使うので、 `public` や `private` のような修飾子キーワードも使うべきではありません。
 
 上で見たように、フィールドは既定値付きで宣言することも、既定値なしで宣言することもできます。既定値のないフィールドは `undefined` が既定値となります。フィールドを前もって宣言することで、クラスの宣言がよりドキュメント化され、フィールドが常に存在するようになり、最適化しやすくします。
 
 詳細は[パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を参照してください。
 
-#### プライベートプロパティ
+#### プライベート要素
 
 プライベートフィールドを使うと、宣言は下記のように宣言できます。
 
@@ -206,7 +206,7 @@ class Rectangle {
 
 プライベートフィールドは、フィールド宣言でのみ宣言できます。通常のプロパティのように、後から割り当てることで作成することはできません。
 
-詳細情報については、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を参照してください。
+詳細情報については、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 
 ### 継承
 
@@ -273,7 +273,7 @@ l.speak();
 4. メソッドとアクセサーは宣言順にインストールされます。インスタンスメソッドとアクセサーは現在のクラスの `prototype` プロパティにインストールされ、静的メソッドとアクセサーはクラス自体にインストールされます。プライベートインスタンスメソッドとアクセサーは、後でインスタンスに直接インストールするために保存されます。この段階は観察することができません。
 5. これでクラスは `extends` で指定したプロトタイプと `constructor` で指定した実装で初期化されます。上記のすべての段階で、評価された式がクラスの名前にアクセスしようとすると、クラスがまだ初期化されていないため {{jsxref("ReferenceError")}} が発生します。
 6. クラス要素の値は宣言順に評価されます。
-   - [インスタンスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)（パブリックまたはプライベート）ごとに、その初期化子式が保存されます。初期化子はインスタンス生成時、コンストラクタの開始時（基底クラスの場合）、または `super()` 呼び出しが返す直前（派生クラスの場合）に評価されます。
+   - [インスタンスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)（パブリックまたはプライベート）ごとに、その初期化子式が保存されます。初期化子はインスタンス生成時、コンストラクターの開始時（基底クラスの場合）、または `super()` 呼び出しが返す直前（派生クラスの場合）に評価されます。
    - それぞれの[静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/static)（パブリックまたはプライベート）について、その初期化子は `this` をクラス自身に設定した状態で評価され、プロパティがクラス上に作成されます。
    - [静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)は `this` をクラス自身に設定した状態で評価されます。
 7. これでクラスは完全に初期化され、コンストラクター関数として使用することができます。

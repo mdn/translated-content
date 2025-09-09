@@ -7,7 +7,60 @@ slug: Web/CSS/scroll-behavior
 
 La propriété **`scroll-behavior`** définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.
 
-{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
+{{InteractiveExample("CSS Demo: scroll-behavior")}}
+
+```css interactive-example-choice
+scroll-behavior: auto;
+```
+
+```css interactive-example-choice
+scroll-behavior: smooth;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="container">
+    <p class="nav">
+      Scroll to:
+      <a href="#pageA">A</a>
+      <a href="#pageB">B</a>
+      <a href="#pageC">C</a>
+    </p>
+    <scroll-container id="example-element">
+      <scroll-page id="pageA">A</scroll-page>
+      <scroll-page id="pageB">B</scroll-page>
+      <scroll-page id="pageC">C</scroll-page>
+    </scroll-container>
+  </div>
+</section>
+```
+
+```css interactive-example
+/* stylelint-disable selector-type-no-unknown */
+.container {
+  flex-direction: column;
+}
+
+.nav a {
+  color: #009e5f;
+}
+
+scroll-container {
+  border: 1px solid black;
+  display: block;
+  height: 200px;
+  overflow-y: scroll;
+  width: 200px;
+}
+
+scroll-page {
+  align-items: center;
+  display: flex;
+  font-size: 5em;
+  height: 100%;
+  justify-content: center;
+}
+```
 
 Pour les autres défilements, tels que ceux appliqués par l'utilisateur, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (<i lang="en">viewport</i>). Lorsque cette propriété est indiquée sur l'élément `body`, elle _ne se propage pas_ à la zone d'affichage (<i lang="en">viewport</i>).
 

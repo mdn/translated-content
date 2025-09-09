@@ -3,8 +3,6 @@ title: 类型选择器
 slug: Web/CSS/Type_selectors
 ---
 
-{{CSSRef}}
-
 CSS **类型选择器**通过节点名称匹配元素。换句话说，它选择一个文件中所有给定类型的元素。
 
 ```css
@@ -70,4 +68,4 @@ example|h1 {
 ## 参见
 
 - [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
-- [学习 CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
+- [学习 CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

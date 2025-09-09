@@ -44,7 +44,7 @@ JavaScript 응용 프로그램은 적절한 구문을 갖는 문으로 구성됩
 - {{jsxref("Statements/function", "function")}}
   - : 지정된 매개변수를 갖는 함수를 선언합니다.
 - {{jsxref("Statements/function*", "function*")}}
-  - : [반복기](/ko/docs/Web/JavaScript/Guide/The_Iterator_protocol)를 더 쉽게 작성할 수 있게 하는 생성기 함수.
+  - : [반복기](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)를 더 쉽게 작성할 수 있게 하는 생성기 함수.
 - {{jsxref("Statements/return", "return")}}
   - : 함수에 의해 반환되는 값을 지정합니다.
 - {{jsxref("Statements/class", "class")}}
@@ -61,7 +61,7 @@ JavaScript 응용 프로그램은 적절한 구문을 갖는 문으로 구성됩
 - {{jsxref("Statements/for...in", "for...in")}}
   - : 임의의 순서로 객체의 열거 속성을 반복합니다. 각 개별 속성에 대해, 문은 실행될 수 있습니다.
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : 반복 가능한 객체 ({{jsxref("Global_Objects/Array","배열","",1)}}, 배열 같은 객체, [반복기 및 생성기](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators) 포함) 를 반복합니다, 각 개별 속성값에 대해 실행되는 문을 가진 사용자 정의 반복 후크를 호출하는.
+  - : 반복 가능한 객체 ({{jsxref("Global_Objects/Array","배열","",1)}}, 배열 같은 객체, [반복기 및 생성기](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) 포함) 를 반복합니다, 각 개별 속성값에 대해 실행되는 문을 가진 사용자 정의 반복 후크를 호출하는.
 - {{jsxref("Statements/while", "while")}}
   - : 테스트 조건이 true로 평가되는 한 지정된 문을 실행하는 루프를 만듭니다. 조건은 문을 실행하기 전에 평가됩니다.
 
@@ -74,7 +74,6 @@ JavaScript 응용 프로그램은 적절한 구문을 갖는 문으로 구성됩
 - {{jsxref("Statements/import", "import")}}
   - : 외부 모듈, 다른 스크립트에서 내보낸 함수를 가져오는데 사용됩니다.
 - {{jsxref("Statements/label", "label")}}
-
   - : `break` 또는 `continue` 문을 사용하여 참조할 수 있는 식별자 있는 문을 제공합니다.
 
 - {{jsxref("Statements/with", "with")}} {{deprecated_inline}}

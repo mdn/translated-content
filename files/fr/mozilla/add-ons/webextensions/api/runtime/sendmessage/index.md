@@ -13,10 +13,10 @@ Si vous envoyez une extension différente, ajouter l'argument `extensionId` à l
 
 Les extensions ne peuvent pas envoyer de messages aux scripts de contenu en utilisant cette méthode. Pour envoyer des messages aux scripts de contenu, utilisez {{WebExtAPIRef('tabs.sendMessage')}}.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 > [!NOTE]
-> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
+> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communication_avec_les_scripts_darrière-plan).
 
 ## Syntaxe
 
@@ -31,17 +31,14 @@ var sending = browser.runtime.sendMessage(
 ### Paramètres
 
 - `extensionId`{{optional_inline}}
-
-  - : `string`. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) dans mnifest.json, `extensionId` doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.
+  - : `string`. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) dans mnifest.json, `extensionId` doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.
 
     Si `extensionId` est omis, le message sera envoyé à votre propre extension.
 
 - `message`
   - : `any`. Un objet qui peut être structuré clone sérialisé.
 - `options`{{optional_inline}}
-
   - : `object`.
-
     - `includeTlsChannelId`{{optional_inline}}
       - : `boolean`. Indique si l'ID de canal TLS sera transmis à {{WebExtAPIRef('runtime.onMessageExternal')}} pour les processus qui écoutent l'événement de connexion.
     - `toProxyScript{{optional_inline}}`
@@ -51,9 +48,7 @@ En fonction des arguments qui lui sont donnés, cette API est parfois ambiguë. 
 
 - **Si un argument est donné**, c'est le message à envoyer, et le message sera envoyé en interne.
 - **Si deux arguments sont donnés :**
-
   - Les arguments sont interprétés comme (message, options) et le message est envoyé en interne si le second argument est l'un des suivants :
-
     1. Un objet d'options valide (c'est-à-dire un objet qui ne contient que les propriétés des options supportés par le navigateur)
     2. null
     3. indéfini
@@ -66,7 +61,7 @@ Notez qu'avant Firefox 55, le règles étaient différentes dans le cas des 2 ar
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -115,8 +110,6 @@ browser.runtime.onMessage.addListener(handleMessage);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

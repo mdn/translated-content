@@ -7,7 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 
 静态方法 **`Reflect.apply()`** 通过指定的参数列表发起对目标 (target) 函数的调用。
 
-{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.apply()")}}
+
+```js interactive-example
+console.log(Reflect.apply(Math.floor, undefined, [1.75]));
+// Expected output: 1
+
+console.log(
+  Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]),
+);
+// Expected output: "hello"
+
+console.log(
+  Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index,
+);
+// Expected output: 4
+
+console.log(Reflect.apply("".charAt, "ponies", [3]));
+// Expected output: "i"
+```
 
 ## 语法
 

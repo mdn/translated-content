@@ -7,15 +7,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 
 Récupère l'objet [`Window`](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
 
-Cela consiste un moyen pratique pour d'autres scripts d'extension privilégiés d'accéder directement à la portée du script d'arrière plan. Cela leur permet d'accéder aux variables ou aux fonctions d'appel définies dans cette portée. Le "script privilégié" inclut ici les scripts s'exécutant dans les [pages d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages), ou les scripts s'exécutant dans les fenêtres d'[action du navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) ou d'[action page](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions), mais n'inclut pas les [scripts de contenu](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts).
+Cela consiste un moyen pratique pour d'autres scripts d'extension privilégiés d'accéder directement à la portée du script d'arrière plan. Cela leur permet d'accéder aux variables ou aux fonctions d'appel définies dans cette portée. Le "script privilégié" inclut ici les scripts s'exécutant dans les [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), ou les scripts s'exécutant dans les fenêtres d'[action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) ou d'[action page](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions), mais n'inclut pas les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts).
 
-Notez que les variables déclarées à l'aide de [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const) ou [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) n'apparaissaient pas dans l'objet window retourné par cette fonction.
+Notez que les variables déclarées à l'aide de [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) ou [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) n'apparaissaient pas dans l'objet window retourné par cette fonction.
 
 **Notez également que cette méthode ne peut pas être utilisée dans une fenêtre privée dans Firefox**—Elle renvoie toujours `null`. Pour plus d'informations voir le [bug lié à bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1329304).
 
 Si la page d'arrière plan est une page événement, le système s'assuera qu'il est chargé avant de résoudre la promise.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -29,7 +29,7 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec l'objet [Window](/fr/docs/User%3Amaybe/webidl_mdn/Window) pour la page d'arrière plan, s'il y en a une. Si l'extension n'inclut pas de page d'arrière-plan, la promise est rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec l'objet [Window](/fr/docs/User%3Amaybe/webidl_mdn/Window) pour la page d'arrière plan, s'il y en a une. Si l'extension n'inclut pas de page d'arrière-plan, la promise est rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -37,7 +37,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Supposons un [script d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) définisse une fonction `foo()`:
+Supposons un [script d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) définisse une fonction `foo()`:
 
 ```js
 // background.js
@@ -47,7 +47,7 @@ function foo() {
 }
 ```
 
-Un script exécuté dans un [popup](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) peut appeler cette fonction directement comme ceci :
+Un script exécuté dans un [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) peut appeler cette fonction directement comme ceci :
 
 ```js
 // popup.js
@@ -69,8 +69,6 @@ getting.then(onGot, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

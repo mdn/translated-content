@@ -3,8 +3,6 @@ title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 27 est sorti le 4 Février 2014. Cet article répertorie les modofications clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
 
 ## Changements pour les développeurs Web
@@ -34,20 +32,20 @@ Plus de détails dans [cet article](https://hacks.mozilla.org/2013/11/firefox-de
 
 ### HTML
 
-- La valeur `color` de l'attribut {{HTMLElement("input")}} [`type`](/fr/docs/Web/HTML/Element/input#type) a été implémentée sur les plates-formes de bureau. Il était déjà disponible sur les mobiles.
-- La directive `allow-popups` est désormais prise en charge avec l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) de l'élément {{HTMLElement("iframe")}} ([bug Firefox 766282](https://bugzil.la/766282)).
+- La valeur `color` de l'attribut {{HTMLElement("input")}} [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) a été implémentée sur les plates-formes de bureau. Il était déjà disponible sur les mobiles.
+- La directive `allow-popups` est désormais prise en charge avec l'attribut [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) de l'élément {{HTMLElement("iframe")}} ([bug Firefox 766282](https://bugzil.la/766282)).
 - Le mélange d'éléments HTML à l'aide de la propriété {{cssxref("mix-blend-mode")}} a été implémenté. La préférence `layout.css.mix-blend-mode.enabled` doit être définie sur `true` ([bug Firefox 902525](https://bugzil.la/902525)).
-- L'attribut [`typemustmatch`](/fr/docs/Web/HTML/Element/object#typemustmatch) de l'élément {{HTMLElement("object")}} est désormais pris en charge ([bug Firefox 827160](https://bugzil.la/827160)).
+- L'attribut [`typemustmatch`](/fr/docs/Web/HTML/Reference/Elements/object#typemustmatch) de l'élément {{HTMLElement("object")}} est désormais pris en charge ([bug Firefox 827160](https://bugzil.la/827160)).
 
 ### JavaScript
 
 L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) se poursuit!
 
-- L'[opérateur de diffusion](/fr/docs/Web/JavaScript/Reference/Operators/Spread_operator) est désormais pris en charge dans les appels de fonction ([bug Firefox 762363](https://bugzil.la/762363)).
+- L'[opérateur de diffusion](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) est désormais pris en charge dans les appels de fonction ([bug Firefox 762363](https://bugzil.la/762363)).
 - La fonction mathématique {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} a été implémentée ([bug Firefox 896264](https://bugzil.la/896264)).
 - L'expression {{jsxref("Operators/yield*", "yield*")}} est maintenant implémentée ([bug Firefox 666396](https://bugzil.la/666396)).
 - Les objets `MapIterator`, `SetIterator` et `ArrayIterator` correspondent désormais à la spécification ([bug Firefox 881226](https://bugzil.la/881226)).
-- [for..of](/fr/docs/Web/JavaScript/Reference/Statements/for...of) boucles s'attendent maintenant à ce que le [protocole d'itérateur](/fr/docs/Web/JavaScript/Guide/The_Iterator_protocol) standard ES6 s'éloigne de l'ancien protocole d'itérateur de SpiderMonkey utilisant `StopIteration`.
+- [for..of](/fr/docs/Web/JavaScript/Reference/Statements/for...of) boucles s'attendent maintenant à ce que le [protocole d'itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) standard ES6 s'éloigne de l'ancien protocole d'itérateur de SpiderMonkey utilisant `StopIteration`.
 - {{jsxref("String.match")}} et {{jsxref("String.replace")}} sont maintenant réinitialisés {{jsxref("RegExp.lastIndex")}} ([bug Firefox 501739](https://bugzil.la/501739)).
 
 ### Interfaces/APIs/DOM
@@ -63,7 +61,7 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 - La méthode {{domxref("Navigator.vibrate()")}} a été adaptée pour correspondre à la spécification finale: elle retourne désormais `false` lorsque la liste est trop longue ou contient des entrées trop volumineuses, au lieu de lancer ([bug Firefox 884935](https://bugzil.la/884935)).
 - Dans le cadre de l'effort continu de normalisation des objets globaux, les interfaces d'événment de changement de feuille de style non standard, notamment `StyleRuleChangeEvent`, `StyleSheetApplicableStateChangeEvent` et `StyleSheetChangeEvent`, ne sont plus disponibles à partir du contenu Web. L'interface `CSSGroupRuleRuleList`, le détail d'implémentation de {{domxref("CSSRuleList")}}, a également été supprimée ([bug Firefox 872934](https://bugzil.la/872934) et [bug Firefox 916871](https://bugzil.la/916871)).
 - `atob` ignore désormais les espaces ([bug Firefox 711180](https://bugzil.la/711180)).
-- [WebGL](/fr/docs/Web/WebGL): les chaînes d'extension avec préfixe `MOZ_` sont obsolètes. Le support pour eux sera supprimé à l'avenir. Utilisez uniquement une chaîne d'extension sans préfixe. Pour obtenir des brouillons d'extensions, définissez les préférences `webgl.enable-draft-extensions` ([bug Firefox 924176](https://bugzil.la/924176)).
+- [WebGL](/fr/docs/Web/API/WebGL_API): les chaînes d'extension avec préfixe `MOZ_` sont obsolètes. Le support pour eux sera supprimé à l'avenir. Utilisez uniquement une chaîne d'extension sans préfixe. Pour obtenir des brouillons d'extensions, définissez les préférences `webgl.enable-draft-extensions` ([bug Firefox 924176](https://bugzil.la/924176)).
 
 ### MathML
 
@@ -84,7 +82,7 @@ _Pas de changement._
 
 ## Voir aussi
 
-- [Liste des changements](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27) dans [Marionette](/fr/docs/Mozilla/QA/Marionette) pour Firefox 27.
+- [Liste des changements](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27) dans [Marionette](https://firefox-source-docs.mozilla.org/testing/marionette/marionette/index.html) pour Firefox 27.
 
 ### Anciennes versions
 

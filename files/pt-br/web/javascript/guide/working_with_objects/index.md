@@ -102,11 +102,11 @@ Em JavaScript, quase tudo é um objeto. Todos os tipos primitivos - com exceçã
 
 Começando com a [ECMAScript 5](/pt-BR/docs/JavaScript/ECMAScript_5_support_in_Mozilla), há três formas nativas de se listar (ou "caminhar por") as propriedades de um objeto:
 
-- [for...in](/pt-BR/docs/JavaScript/Reference/Statements/for...in) loops
+- [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) loops
   Esse método caminha por todas as propriedades enumeráveis de um objeto e sua cadeia de protótipos
-- [Object.keys(o)](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/keys)
+- [Object.keys(o)](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
   Esse método retorna um array com todos os nomes ("chaves") de propriedades próprios de um objeto `o` (mas não na cadeia de protótipos).
-- [Object.getOwnPropertyNames(o)](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [Object.getOwnPropertyNames(o)](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
   Esse método retorna um array contendo todos os nomes de propriedades próprios (enumeráveis ou não) de um objeto `o`.
 
 Antes, na ECMAScript 5, não existia uma forma nativa de se listar todas as propriedades de um objeto. No entanto, isso pode ser feito com a seguinte função:
@@ -171,7 +171,7 @@ var minhaHonda = {
 };
 ```
 
-Você pode também usar inicializadores de objeto para criar arrays. Veja [arrays literais](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals).
+Você pode também usar inicializadores de objeto para criar arrays. Veja [arrays literais](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals).
 
 ### Usando uma função construtora
 
@@ -301,7 +301,7 @@ Carro.prototype.cor = null;
 carro1.cor = "preto";
 ```
 
-Consulte a [propriedade](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype) [`prototype`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype) do objeto `Function` na [Referência](/pt-BR/docs/JavaScript/Reference) [JavaScript](/pt-BR/docs/JavaScript/Reference) para mais informações.
+Consulte a [propriedade](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) [`prototype`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) do objeto `Function` na [Referência](/pt-BR/docs/Web/JavaScript/Reference) [JavaScript](/pt-BR/docs/Web/JavaScript/Reference) para mais informações.
 
 ## Definindo métodos
 
@@ -460,10 +460,10 @@ console.log(now);
 
 A principio, getters e setters podem ser ou
 
-- definidos usando [objetos inicializadores](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers), ou
+- definidos usando [objetos inicializadores](#Using_object_initializers), ou
 - adicionar posteriormente para qualquer objeto a qualquer tempo usando um método getter ou setter adicionado
 
-Ao definir getters e setters usando [objetos inicializadores](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers) tudo o que você precisa fazer é prefixar um método getter com `get` e um método setter com `set`. Claro, o método getter não deve esperar um parâmetro, enquanto o método setter espera exatamente um parâmetro (novo valor para definir). Por exemplo:
+Ao definir getters e setters usando [objetos inicializadores](#Using_object_initializers) tudo o que você precisa fazer é prefixar um método getter com `get` e um método setter com `set`. Claro, o método getter não deve esperar um parâmetro, enquanto o método setter espera exatamente um parâmetro (novo valor para definir). Por exemplo:
 
 ```js
 var o = {
@@ -546,11 +546,11 @@ fruit == fruitbear; // return true
 fruit === fruitbear; // return true
 ```
 
-Para mais informações sobre comparaçāo de operadores, veja [Operadores de comparaçāo](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).
+Para mais informações sobre comparaçāo de operadores, veja [Operadores de comparaçāo](/pt-BR/docs/Web/JavaScript/Reference/Operators).
 
 ## Veja também
 
-- Para se aprofundar, leia sobre os [detalhes do modelo de objetos javaScript](/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
+- Para se aprofundar, leia sobre os [detalhes do modelo de objetos javaScript](/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain).
 - Para saber mais sobre classes em ECMAScript6 (uma nova forma de criar objetos), veja o capítulo [JavaScript classes](/pt-BR/docs/Web/JavaScript/Reference/Classes).
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

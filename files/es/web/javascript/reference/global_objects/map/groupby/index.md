@@ -8,13 +8,31 @@ l10n:
 {{JSRef}}
 
 > [!NOTE]
-> En algunas versiones de algunos navegadores, este método fué implementado como el método `Array.prototype.groupToMap()`. Debido a problemas de compatibilidad web, ahora es implementado como un método estático. Revise la [tabla de compatibilidad con navegadores](#compatibilidad_con_navegadores) para más detalles.
+> En algunas versiones de algunos navegadores, este método fue implementado como el método `Array.prototype.groupToMap()`. Debido a problemas de compatibilidad web, ahora es implementado como un método estático. Revise la [tabla de compatibilidad con navegadores](#compatibilidad_con_navegadores) para más detalles.
 
 El método estático **`Map.groupBy()`** agrupa los elementos de un iterable, utilizando los valores regresados por la función provista. El objeto {{jsxref("Map")}} regresado utiliza los valores únicos de la función de prueba como llaves, los cuales pueden utilizarse para obtener el arreglo de elementos en cada grupo.
 
 El método es útil principalmente cuando se quiere agrupar elementos que están asociados con un objeto, y particularmente cuando el objeto puede cambiar con el tiempo. Si el objeto es invariante, podrías en su lugar representarlo utilizando una cadena de caracteres _string_, y agrupando los elementos con {{jsxref("Object.groupBy()")}}.
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## Sintaxis
 
@@ -46,7 +64,7 @@ Los elementos en el objeto {{jsxref("Map")}} regresado por la función y en el i
 Este método es util cuando necesitas agrupar información que está relacionada a un objeto en particular y que potencialmente puede cambiar con el tiempo. Esto es debido a que, incluseo si el objeto es modificado, continuará funcionando como llave para el objeto `Map` regresado por la función. Si en su lugar creas una representación _string_ para el objeto y la utilizas como la llave para agrupar en {{jsxref("Object.groupBy()")}}, debes mantener el mapeo entre el objeto original y su representacion de acuerdo a como el objeto cambia.
 
 > [!NOTE]
-> Para accesar los grupos en el objeto `Map` regresado por la función, debes utilizar el mismo objeto que fué usado como llave en el `Map` (a pesar de que puedes modificar sus propiedades). No puedes usar otro objeto que de casulaidad tiene el mismo nombre y las mismas propiedades.
+> Para accesar los grupos en el objeto `Map` regresado por la función, debes utilizar el mismo objeto que fue usado como llave en el `Map` (a pesar de que puedes modificar sus propiedades). No puedes usar otro objeto que de casulaidad tiene el mismo nombre y las mismas propiedades.
 
 `Map.groupBy` no lee el valor de `this`. Puede ser llamado en cualquier objeto y regresará una nueva instancia de {{jsxref("Map")}}.
 
@@ -78,7 +96,7 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-Note que el argumento `{ quantity }` de la función, es un ejemplo básico de la [sintaxis de destructuración de objetos pasados como parámetros de función](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#desempacar_campos_de_objetos_pasados_como_parámetro_de_función). Esto desempaca la propiedad `quantity` del objeto pasado como parámetro, y lo asigna a la variable llamada `quantity` en el cuerpo de la función. Esta es una forma muy concisa de accesar los valores relevantes de elementos, dentro de una función.
+Note que el argumento `{ quantity }` de la función, es un ejemplo básico de la [sintaxis de destructuración de objetos pasados como parámetros de función](/es/docs/Web/JavaScript/Reference/Operators/Destructuring#desempacar_campos_de_objetos_pasados_como_parámetro_de_función). Esto desempaca la propiedad `quantity` del objeto pasado como parámetro, y lo asigna a la variable llamada `quantity` en el cuerpo de la función. Esta es una forma muy concisa de accesar los valores relevantes de elementos, dentro de una función.
 
 La llave de un `Map` puede ser modificada y aún usarse. Sin embargo no puedes recrear la llave y aún usarla. Por esa razón es importante que cualquiera que necesite usar el _map_ mantenga una referencia de sus llaves.
 

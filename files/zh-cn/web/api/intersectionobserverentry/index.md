@@ -22,7 +22,7 @@ slug: Web/API/IntersectionObserverEntry
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
   - : 与根出现相交区域改变的元素 ({{domxref("Element")}}).
 - {{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}
-  - : 返回一个记录从 `IntersectionObserver` 的时间原点 ([time origin](/zh-CN/docs/Web/API/DOMHighResTimeStamp#The_time_origin)) 到交叉被触发的时间的时间戳 ({{domxref("DOMHighResTimeStamp")}}).
+  - : 返回一个记录从 `IntersectionObserver` 的时间原点 ([time origin](/zh-CN/docs/Web/API/DOMHighResTimeStamp#the_time_origin)) 到交叉被触发的时间的时间戳 ({{domxref("DOMHighResTimeStamp")}}).
 
 ## 方法
 

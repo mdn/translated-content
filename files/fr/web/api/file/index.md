@@ -17,7 +17,7 @@ Dans Gecko, le code privilégié peut créer des objets `File` représentant tou
 
 Un objet `File` est un genre spécifique de {{domxref("Blob")}}, et peut être utilisé dans tout contexte où un blob peut l'être. En particulier, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, et {{domxref("XMLHttpRequest", "", "send()")}} acceptent indifféremment des `Blob`s et des `File`s.
 
-Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/Using_files_from_web_applications) pour plus d'informations et des exemples.
+Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications) pour plus d'informations et des exemples.
 
 {{InheritanceDiagram}}
 
@@ -42,7 +42,7 @@ Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/
 - {{domxref("File.size")}} {{readonlyinline}}
   - : Renvoie la taille du fichier en octets.
 - {{domxref("File.type")}} {{readonlyinline}}
-  - : Renvoie le type [MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)du fichier.
+  - : Renvoie le type [MIME](/fr/docs/Web/HTTP/Guides/MIME_types/Common_types)du fichier.
 
 ## Méthodes
 
@@ -83,6 +83,6 @@ new File(
 
 ## Voir aussi
 
-- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/Using_files_from_web_applications)
+- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("FileReader")}}
 - [Using the DOM File API in chrome code](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (pour du code privilégié s'exécutant dans Gecko, tel que des extensions de Firefox)

@@ -5,11 +5,25 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 
 {{jsSidebar("Objects")}}
 
-La propriété globale **`undefined`** représente la valeur primitive [`undefined`](/fr/docs/Glossary/undefined). Cette valeur est l'[un des types primitifs](/fr/docs/Web/JavaScript/Data_structures#le_type_indéfini) de JavaScript.
+La propriété globale **`undefined`** représente la valeur primitive [`undefined`](/fr/docs/Glossary/Undefined). Cette valeur est l'[un des types primitifs](/fr/docs/Web/JavaScript/Guide/Data_structures#le_type_indéfini) de JavaScript.
 
 {{js_property_attributes(0,0,0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+```
 
 ## Syntaxe
 
@@ -19,7 +33,7 @@ undefined;
 
 ## Description
 
-`undefined` est une propriété de _l'objet global_, c'est-à-dire qu'elle est accessible globalement. La valeur initiale d'`undefined` est la valeur primitive [`undefined`](/fr/docs/Glossary/undefined).
+`undefined` est une propriété de _l'objet global_, c'est-à-dire qu'elle est accessible globalement. La valeur initiale d'`undefined` est la valeur primitive [`undefined`](/fr/docs/Glossary/Undefined).
 
 Dans les navigateurs modernes (JavaScript 1.8.5 / Firefox 4+), d'après la spécification ECMAScript 5, `undefined` est une propriété non-configurable et non accessible en écriture. Si, toutefois, elle peut être modifiée dans l'environnement utilisé, il faut éviter de l'écraser.
 
@@ -126,4 +140,4 @@ if (y === void 0) {
 ## Voir aussi
 
 - Les [valeurs primitives](/fr/docs/Glossary/Primitive) de JavaScript
-- [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null)
+- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null)

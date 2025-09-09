@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 
 {{AddonSidebar}}
 
-Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la [`default_popup`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) spécifiée dans le manifest.
+Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la [`default_popup`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) spécifiée dans le manifest.
 
 ## Syntaxe
 
@@ -18,15 +18,12 @@ browser.browserAction.setPopup(
 ### Paramètres
 
 - `details`
-
   - : `object`.
-
     - `tabId`{{optional_inline}}
       - : `integer`. Définit la fenêtre contextuelle uniquement pour un onglet spécifique. La fenêtre contextuelle est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
     - `windowId`{{optional_inline}}
       - : `integer`. Définit le popup uniquement pour la fenêtre spécifiée.
     - `popup`
-
       - : `string` ou `null`. Le fichier HTML à afficher dans un popup, spécifié comme URL.
 
         Ceci peut pointer vers un fichier empaqueté dans l'extension (par exemple, créé à l'aide de {{WebExtAPIRef("extension.getURL")}}), ou un document distant (par exemple `https://example.org/`).
@@ -99,8 +96,6 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

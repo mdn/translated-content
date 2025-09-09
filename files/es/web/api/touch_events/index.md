@@ -108,7 +108,7 @@ Esto se repite también en los toques cambiados, pero mira en nuestra matriz de 
 
 Esto nos permite conseguir las coordenadas de la posición previa de cada toque y usar el método apropiado de contexto para dibujar un segmento de línea uniendo dos posiciones a la vez.
 
-Después de dibujar la línea, llamamos a [`Array.splice()`](/en/JavaScript/Reference/Global_Objects/Array/splice) para reemplazar la información previa sobre el punto de toque con la información actual de la matriz `ongoingTouches`.
+Después de dibujar la línea, llamamos a [`Array.splice()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) para reemplazar la información previa sobre el punto de toque con la información actual de la matriz `ongoingTouches`.
 
 ### Manejando el final de un toque
 
@@ -136,7 +136,7 @@ function handleEnd(evt) {
 }
 ```
 
-Esto es muy similar a la función previa; la única diferencia real es que cuando llamamos a [`Array.splice()`](/en/JavaScript/Reference/Global_Objects/Array/splice), simplemente remueve la antigua entrada de la lista de toques en marcha, sin añadir la información actualizada. El resultado es que detenemos el seguimiento del punto de toque.
+Esto es muy similar a la función previa; la única diferencia real es que cuando llamamos a [`Array.splice()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), simplemente remueve la antigua entrada de la lista de toques en marcha, sin añadir la información actualizada. El resultado es que detenemos el seguimiento del punto de toque.
 
 ### Manejando los toques cancelados
 
@@ -190,7 +190,7 @@ function ongoingTouchIndexById(idToFind) {
 }
 ```
 
-[Ver ejemplo en vivo](/samples/domref/touchevents.html)
+[Ver ejemplo en vivo](https://mdn.dev/archives/media/samples/domref/touchevents.html)
 
 ## Consejos adicionales
 

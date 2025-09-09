@@ -42,7 +42,7 @@ window.getComputedStyle(element).overflowY !== "hidden";
 
 ### 텍스트를 다 읽었는지 확인하기
 
-[`onscroll`](/ko/docs/DOM/element.onscroll) 이벤트를 함께 사용하여, 내용을 다 읽었는지 확인할 수 있습니다. ([`element.scrollTop`](/ko/docs/DOM/element.scrollTop) 과 [`element.clientHeight`](/ko/docs/DOM/element.clientHeight) 를 참조하세요).
+[`onscroll`](/ko/docs/Web/API/Element/scroll_event) 이벤트를 함께 사용하여, 내용을 다 읽었는지 확인할 수 있습니다. ([`element.scrollTop`](/ko/docs/Web/API/Element/scrollTop) 과 [`element.clientHeight`](/ko/docs/Web/API/Element/clientHeight) 를 참조하세요).
 
 #### HTML
 
@@ -145,4 +145,4 @@ onload = function () {
 
 - {{domxref("Element.clientHeight")}}
 - {{domxref("Element.offsetHeight")}}
-- [Determining the dimensions of elements](/ko/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/ko/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

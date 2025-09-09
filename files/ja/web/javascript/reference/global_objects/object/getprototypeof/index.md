@@ -1,15 +1,22 @@
 ---
 title: Object.getPrototypeOf()
+short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.getPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部プロパティ `[[Prototype]]` の値) を返します。
 
-{{EmbedInteractiveExample("pages/js/object-getprototypeof.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Object.getPrototypeOf()", "shorter")}}
+
+```js interactive-example
+const prototype = {};
+const object = Object.create(prototype);
+
+console.log(Object.getPrototypeOf(object) === prototype);
+// 予想される結果: true
+```
 
 ## 構文
 
@@ -58,6 +65,7 @@ Object.getPrototypeOf("foo");
 ## 関連情報
 
 - [`Object.getPrototypeOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims による `Object.getPrototypeOf` のポリフィル](https://www.npmjs.com/package/object.getprototypeof)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

@@ -9,7 +9,21 @@ l10n:
 
 {{jsxref("Intl.RelativeTimeFormat")}} 인스턴스의 **`resolvedOptions()`** 메서드는 이 `Intl.RelativeTimeFormat` 객체의 초기화 중 계산된 상대 시간 형식 옵션과 로케일을 반영하는 속성을 가진 새 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.resolvedOptions")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "narrow" });
+const options1 = rtf1.resolvedOptions();
+
+const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+const options2 = rtf2.resolvedOptions();
+
+console.log(`${options1.locale}, ${options1.style}, ${options1.numeric}`);
+// Expected output: "en, narrow, always"
+
+console.log(`${options2.locale}, ${options2.style}, ${options2.numeric}`);
+// Expected output: "es, long, auto"
+```
 
 ## 구문
 
@@ -32,17 +46,13 @@ resolvedOptions()
 - `locale`
   - : 실제로 사용된 로케일에 대한 BCP 47 언어 태그입니다. 이 로케일로 이어지는 입력 BCP 47 언어 태그에 유니코드 확장 값이 요청된 경우, 이 로케일에 대해 요청되고 지원되는 키-값 쌍이 `locale`에 포함됩니다.
 - `style`
-
   - : 국제화된 메시지의 길이입니다. 가능한 값은 다음과 같습니다.
-
     - `"long"` (기본 값, 예를 들어 `in 1 month`)
     - `"short"` (예를 들어 `in 1 mo.`),
     - 혹은 `"narrow"` (예를 들어 `in 1 mo.`). 좁은 스타일은 일부 로케일의 경우 짧은 스타일과 유사할 수 있습니다.
 
 - `numeric`
-
   - : 출력 메시지의 형식입니다. 아래 값이 올 수 있습니다.
-
     - `"always"` (기본 값, 예를 들어 `1 day ago`),
     - 혹은 `"auto"` (예를 들어 `yesterday`). `"auto"` 값을 사용하면 출력에 항상 숫자 값을 사용할 필요가 없습니다.
 

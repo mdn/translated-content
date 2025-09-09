@@ -9,11 +9,11 @@ L'objet **`Boolean`** est une enveloppe objet pour représenter une valeur bool�
 
 ## Description
 
-La valeur passée en premier paramètre est, si nécessaire, convertie en valeur booléenne. Si la valeur est omise ou est `0`, `-0`, [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), `false`, [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN), [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) ou une chaîne de caractères vide (`""`), l'objet a une valeur initiale de `false` (faux). Toutes les autres valeurs, y compris n'importe quel objet, un tableau vide (`[]`), ou une chaîne de caractères `"false"`, créent un objet avec une valeur initiale de `true` (vrai).
+La valeur passée en premier paramètre est, si nécessaire, convertie en valeur booléenne. Si la valeur est omise ou est `0`, `-0`, [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), `false`, [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN), [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) ou une chaîne de caractères vide (`""`), l'objet a une valeur initiale de `false` (faux). Toutes les autres valeurs, y compris n'importe quel objet, un tableau vide (`[]`), ou une chaîne de caractères `"false"`, créent un objet avec une valeur initiale de `true` (vrai).
 
 Il ne faut pas confondre les valeurs primitives booléennes `true` et `false` avec les valeurs `true` et `false` d'un objet `Boolean`.
 
-Tout objet dont la valeur n'est ni [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) ni [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), incluant un objet `Boolean` dont la valeur est fausse, est évalué à `true` lorsqu'il est utilisé dans une instruction conditionnelle. Par exemple, la condition de l'instruction [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) dans le code suivant est validée, car l'expression `x` est évaluée à `true`&nbsp;:
+Tout objet dont la valeur n'est ni [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) ni [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), incluant un objet `Boolean` dont la valeur est fausse, est évalué à `true` lorsqu'il est utilisé dans une instruction conditionnelle. Par exemple, la condition de l'instruction [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) dans le code suivant est validée, car l'expression `x` est évaluée à `true`&nbsp;:
 
 ```js
 var x = new Boolean(false);
@@ -115,5 +115,5 @@ var bObjProto = new Boolean({});
 ## Voir aussi
 
 - [Booléen](/fr/docs/Glossary/Boolean)
-- [Valeurs primitives booléennes](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives)
+- [Valeurs primitives booléennes](/fr/docs/Web/JavaScript/Guide/Data_structures#les_valeurs_primitives)
 - [Le type de données booléen sur Wikipédia](https://fr.wikipedia.org/wiki/Booléen)

@@ -3,8 +3,6 @@ title: Firefox 19 pour les développeurs
 slug: Mozilla/Firefox/Releases/19
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 19, basé sur Gecko 19.0, est sorti le 19 février 2013. Cette page résume les principaux changements dans Firefox 19 qui sont utiles aux développeurs.
 
 Vous voulez aider à documenter Firefox 19 ? Regardez la [liste des bugs qui ont besoin de rédaction](http://beta.elchi3.de/doctracker/#list=fx&version=19.0) et lancez-vous !
@@ -13,8 +11,8 @@ Vous voulez aider à documenter Firefox 19 ? Regardez la [liste des bugs qui ont
 
 ### JavaScript
 
-- La méthode `size()` des objets [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set) devient la propriété `size` ([bug Firefox 807001](https://bugzil.la/807001))
-- Les objets [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set) ont maintenant une méthode `clear()`. ([bug Firefox 805003](https://bugzil.la/805003))
+- La méthode `size()` des objets [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) devient la propriété `size` ([bug Firefox 807001](https://bugzil.la/807001))
+- Les objets [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) ont maintenant une méthode `clear()`. ([bug Firefox 805003](https://bugzil.la/805003))
 
 ### CSS
 
@@ -57,7 +55,7 @@ Le support des [XForms](/fr/docs/XForms) a été [**retiré**](http://www.philip
 
 ## Voir aussi
 
-- [Notes de versions de Firefox 19](http://www.mozilla.org/en-US/firefox/19.0beta/releasenotes/)
+- [Notes de versions de Firefox 19](https://www.mozilla.org/en-US/firefox/19.0beta/releasenotes/)
 - [Compatibilité des sites avec Firefox 19](/fr/docs/Site_Compatibility_for_Firefox_19)
 
 ### Anciennes versions

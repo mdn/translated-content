@@ -5,7 +5,7 @@ slug: Web/API/console/trace_static
 
 {{APIRef("Console API")}}
 
-**`console.trace()`** 메서드는 [웹 콘솔](/ko/docs/Tools/Web_Console)에 스택 추적을 출력합니다.
+**`console.trace()`** 메서드는 [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)에 스택 추적을 출력합니다.
 
 {{AvailableInWorkers}}
 

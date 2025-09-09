@@ -3,11 +3,24 @@ title: in
 slug: Web/JavaScript/Reference/Operators/in
 ---
 
-{{jsSidebar("Operators")}}
-
 如果指定的属性在指定的对象或其原型链中，则 **`in`** **运算符**返回 `true`。
 
-{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+
+```js interactive-example
+const car = { make: "Honda", model: "Accord", year: 1998 };
+
+console.log("make" in car);
+// Expected output: true
+
+delete car.make;
+if ("make" in car === false) {
+  car.make = "Suzuki";
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
+```
 
 ## 语法
 
@@ -58,7 +71,7 @@ var color2 = "coral";
 
 ### 对被删除或值为 undefined 的属性使用`in`
 
-如果你使用 [`delete`](/zh-CN/docs/JavaScript/Reference/Operators/delete) 运算符删除了一个属性，则 `in` 运算符对所删除属性返回 `false`。
+如果你使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 运算符删除了一个属性，则 `in` 运算符对所删除属性返回 `false`。
 
 ```js
 var mycar = { make: "Honda", model: "Accord", year: 1998 };
@@ -103,7 +116,7 @@ trees[3] = undefined;
 ## 参见
 
 - [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`delete`](/zh-CN/docs/JavaScript/Reference/Operators/delete)
+- [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

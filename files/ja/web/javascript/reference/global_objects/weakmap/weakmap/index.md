@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 
 **`WeakMap()` コンストラクター**は、キーが弱く参照されている、キーと値の組のコレクションである `WeakMap` オブジェクトを生成します。キーはオブジェクトでなければならず、値は任意の値を指定することができます。
 
-`WeakMap` については、[キー付きコレクション](/ja/docs/Web/JavaScript/Guide/Keyed_collections)の [WeakMap オブジェクト](/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)の節を参照してください。
+`WeakMap` については、[キー付きコレクション](/ja/docs/Web/JavaScript/Guide/Keyed_collections)の [WeakMap オブジェクト](/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)の節を参照してください。
 
 ## 構文
 
@@ -64,8 +64,8 @@ wm1.has(o1); // false
 
 ## 関連情報
 
-- [`WeakMap` (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- [`WeakMap` (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

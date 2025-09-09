@@ -3,7 +3,7 @@ title: JavaScript 概觀
 slug: Web/JavaScript/Guide/Introduction
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
+{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 這個章節的內容主要是介紹 JavaScript 和討論一些 JavaScript 的基本概念。
 
@@ -53,7 +53,7 @@ Java 是一個為了快速執行與安全型態而設計的基於類別的程式
 | 變數資料型態沒有宣告就可使用（動態定型，dynamic typing）。                                                                          | 變數資料型態必須宣告才可使用（靜態定型，static typing）。                                                                     |
 | 無法自動覆寫到硬碟。                                                                                                                | 無法自動覆寫到硬碟。                                                                                                          |
 
-更多關於 JavaScript 和 Java 的差異比較，請參見 [Details of the Object Model](/zh-TW/docs/JavaScript/Guide/Details_of_the_Object_Model) 。
+更多關於 JavaScript 和 Java 的差異比較，請參見 [Details of the Object Model](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 。
 
 ## JavaScript 與 ECMAScript 規格
 
@@ -128,7 +128,7 @@ ECMAScript 規格（ECMA-262）在 Netscape 和 Ecma International 的密切合�
 > [!NOTE]
 > ECMA-262 第 2 版是由已修正錯誤的第 1 版並加上些微的更動構成。現今由 Ecma International 的 TC39 工作組（TC39 Working Group）所發行的版本是 ECMAScript 5.1 版
 
-[JavaScript Reference](/zh-TW/docs/JavaScript/Reference) 指出了哪些 JavaScript 的特性是相容於 ECMAScript 的。
+[JavaScript Reference](/zh-TW/docs/Web/JavaScript/Reference) 指出了哪些 JavaScript 的特性是相容於 ECMAScript 的。
 
 JavaScript 永遠包含許多非 ECMAScript 規格中的特性；
 

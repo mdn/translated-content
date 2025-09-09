@@ -3,14 +3,14 @@ title: webNavigation.TransitionQualifier
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
 ---
 
-{{AddonSidebar}}Informations supplémentaires sur une transition.Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la [table de compatibilité](/fr/Add-ons/WebExtensions/API/WebNavigation/TransitionQualifier#Browser_compatibility) pour plus de détails.
+{{AddonSidebar}}Informations supplémentaires sur une transition.Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la [table de compatibilité](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier#browser_compatibility) pour plus de détails.
 
 ## Type
 
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 - "client_redirect"
-  - : Redirection(s) provoquée par le JavaScript en cours d'exécution dans la page ou un pragma "actualiser" dans la balise [meta](/fr/docs/Web/HTML/Element/meta) de la page.
+  - : Redirection(s) provoquée par le JavaScript en cours d'exécution dans la page ou un pragma "actualiser" dans la balise [meta](/fr/docs/Web/HTML/Reference/Elements/meta) de la page.
 - "server_redirect"
   - : Redirection(s) provoquée par un [code status HTTP 3XX](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) envoyé par le serveur.
 - "forward_back"
@@ -27,8 +27,6 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

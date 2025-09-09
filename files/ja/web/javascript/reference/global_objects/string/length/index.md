@@ -1,15 +1,21 @@
 ---
 title: "String: length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`length`** データプロパティは、{{jsxref("String")}} オブジェクトの文字列長を UTF-16 コード単位の数で表します。
 
-{{EmbedInteractiveExample("pages/js/string-length.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.length", "shorter")}}
+
+```js interactive-example
+const str = "Life, the universe and everything. Answer:";
+
+console.log(`${str} ${str.length}`);
+// 予想される結果: "Life, the universe and everything. Answer: 42"
+```
 
 ## 値
 

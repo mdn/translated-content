@@ -11,7 +11,16 @@ l10n:
 
 また、 {{jsxref("Function")}} のコンストラクターと{{jsxref("Operators/function", "関数式", "", 1)}}を使用して関数を定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/statement-function.html","shorter")}}
+{{InteractiveExample("JavaScript デモ: Statement - Function", "shorter")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 ## 構文
 
@@ -44,7 +53,8 @@ function name(param0, param1, /* … ,*/ paramN) {
 
 ### 条件付きで作成される関数
 
-> **警告:** [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)ではない場合、ブロック内での関数宣言は奇妙な動きをします。ブロック内での関数宣言は、厳格モード時のみ行ってください。
+> [!WARNING]
+> [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)ではない場合、ブロック内での関数宣言は奇妙な動きをします。ブロック内での関数宣言は、厳格モード時のみ行ってください。
 
 関数は条件付きで宣言できます。つまり、関数文を [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の中に入れ子にすることができますが、結果は実装によって一貫性がないので、このパターンを本番コードでは使用すべきではありません。条件付きの関数の作成には、代わりに関数式を使用してください。
 

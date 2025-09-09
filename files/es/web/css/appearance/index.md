@@ -1,15 +1,16 @@
 ---
-title: "-moz-appearance (-webkit-appearance)"
+title: -moz-appearance (-webkit-appearance)
 slug: Web/CSS/appearance
 ---
 
-{{non-standard_header}}{{CSSRef}}
+{{non-standard_header}}
 
 La propiedad CSS `-moz-appearance` se utiliza en Gecko (Firefox) para visualizar un elemento utilizando una plataforma nativa basada en el estilo del tema del sistema operativo.
 
 Esta propiedad es frecuentemente utilizada en hojas de estilo [XUL](/es/docs/Mozilla/Tech/XUL/Tutorial) para diseñar widgets personalizados con un estilo apropiado a la plataforma. También se utiliza en las implementaciones [XBL](/es/docs/XBL) de los widgets que se arman en la plataforma Mozilla.
 
-> **Nota:** _No utilizar_ esta propiedad en sitios Web: no sólo porque no es estándar, sinó porque su comportamiento cambia de un navegador a otro. Incluso la palabra clave `none` no tiene el mismo comportamiento en cada elemento de formulario a través de diferentes navegadores, y alguno no la soporta en absoluto.
+> [!NOTE]
+> _No utilizar_ esta propiedad en sitios Web: no sólo porque no es estándar, sinó porque su comportamiento cambia de un navegador a otro. Incluso la palabra clave `none` no tiene el mismo comportamiento en cada elemento de formulario a través de diferentes navegadores, y alguno no la soporta en absoluto.
 
 {{cssinfo}}
 
@@ -168,5 +169,5 @@ La propiedad `appearance` no se encuentra actualmente presente en ninguna nueva 
 
 ## Ver también
 
-- [Definición de `appearance` en CSS 3 Interfaz Básico de Usuario](http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidata a Recomendación desde 2004-05-11), desactualizada (La propiedad `appearance` se ha abandonado en las nuevas versiones de esta especificación.)
-- [Características CSS3 abandonadas en la UI especificación.](http://wiki.csswg.org/spec/css4-ui#dropped-css3-features)
+- [Definición de `appearance` en CSS 3 Interfaz Básico de Usuario](https://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidata a Recomendación desde 2004-05-11), desactualizada (La propiedad `appearance` se ha abandonado en las nuevas versiones de esta especificación.)
+- [Características CSS3 abandonadas en la UI especificación.](https://wiki.csswg.org/spec/css4-ui#dropped-css3-features)

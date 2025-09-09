@@ -1,11 +1,9 @@
 ---
-title: "::spelling-error"
+title: ::spelling-error
 slug: Web/CSS/::spelling-error
 l10n:
   sourceCommit: c72b86b3d6818ec6c8df1d52a77513d769f4164e
 ---
-
-{{CSSRef}}
 
 **`::spelling-error`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 {{glossary("user agent", "사용자 에이전트")}}가 철자가 틀린 것으로 표기한 텍스트 세그먼트를 나타냅니다.
 

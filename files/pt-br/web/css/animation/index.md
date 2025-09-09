@@ -5,9 +5,51 @@ slug: Web/CSS/animation
 
 {{CSSRef}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) [abreviada](/pt-BR/docs/Web/CSS/Shorthand_properties) **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) [abreviada](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.
 
-{{EmbedInteractiveExample("pages/css/animation.html")}}
+{{InteractiveExample("CSS Demo: animation")}}
+
+```css interactive-example-choice
+animation: 3s ease-in 1s infinite reverse both running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite alternate slidein;
+```
+
+```css interactive-example-choice
+animation: 0.5s linear 1s infinite alternate slidein;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  margin: 20px;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+```
 
 ## Propriedades constituintes
 
@@ -45,7 +87,6 @@ Cada animação individual é especificada como:
 - zero, uma ou duas ocorrências do valor {{cssxref("&lt;time&gt;")}}
 
 - zero ou uma ocorrência dos seguintes valores:
-
   - {{cssxref("animation", "&lt;single-easing-function&gt;", "#single-easing-function")}}
   - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
   - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}
@@ -100,7 +141,7 @@ Considere fornecer um mecanismo para pausar ou desabilitar a animação, bem com
 ## Exemplos
 
 > [!NOTE]
-> A animação das propriedades do [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_Box_Model) não é recomendada. A animação de qualquer propriedade de box model é inerentemente para a CPU; considere animar a propriedade [transform](/pt-BR/docs/Web/CSS/transform).
+> A animação das propriedades do [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_box_model) não é recomendada. A animação de qualquer propriedade de box model é inerentemente para a CPU; considere animar a propriedade [transform](/pt-BR/docs/Web/CSS/transform).
 
 ### Nascer do Sol
 
@@ -286,7 +327,7 @@ embora uma animação de ascensão seja definida. A propriedade de transformaç�
 
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
-Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#examples) para exemplos adicionais.
+Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples) para exemplos adicionais.
 
 ## Especificações
 
@@ -298,5 +339,5 @@ Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_anima
 
 ## Veja também
 
-- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - API JavaScript {{domxref("AnimationEvent")}}

@@ -8,7 +8,22 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 **_TypedArray_** 객체는 [이진 데이터 버퍼](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)에 기초하여 배열과 같은 보기를 만들어냅니다.
 하지만 `TypedArray`라는 전역 속성은 존재하지 않으며, 직접 볼 수 있는 `TypedArray` 생성자도 존재하지 않습니다. 대신 아래에 있는 특정 요소 유형에 대한 형식화 배열 생성자를 가지는 다양한 전역 속성을 사용할 수 있습니다. 다음 페이지에서는 모든 유형의 요소를 포함하는 모든 유형의 배열에서 사용할 수 있는 공통 속성과 메서드를 살펴보겠습니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
+
+```js interactive-example
+// Create a TypedArray with a size in bytes
+const typedArray1 = new Int8Array(8);
+typedArray1[0] = 32;
+
+const typedArray2 = new Int8Array(typedArray1);
+typedArray2[1] = 42;
+
+console.log(typedArray1);
+// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+
+console.log(typedArray2);
+// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+```
 
 ## 설명
 
@@ -167,8 +182,7 @@ new TypedArray(buffer, byteOffset, length);
   - : 배열 및 해당 요소를 나타내는 지역화된 문자열을 반환합니다. {{jsxref("Array.prototype.toLocaleString()")}}도 참조하시기 바랍니다.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : 배열과 해당 요소를 나타내는 문자열을 반환합니다. {{jsxref("Array.prototype.toString()")}}도 참조하시기 바랍니다.
-- {{jsxref("TypedArray.prototype.@@iterator()",
-    "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
   - : 배열의 각 인덱스에 대한 값을 포함하는 새 **배열 반복기** 객체를 반환합니다.
 
 ## 예제
@@ -248,7 +262,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## 같이 보기
 
 - [`core-js`에서의 형식화 배열 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays) 안내서
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - {{domxref("TextDecoder")}}

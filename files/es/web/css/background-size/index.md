@@ -23,16 +23,13 @@ background-size:  background-size[ background-size]*
 donde **:**
 
 - _**background-size**_
-
   - : Es una de las palabras claves:
-
     - **`contain`**
       Escala la imagen al mayor tamaño posible sin recortarla ni estirarla.
     - **`cover`**
       Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío.
 
     O bien, uno o dos de los siguientes valores, que denota el tamaño horizontal y el tamaño vertical respectivamente (si sólo es especificado uno, el valor predeterminado para el segundo es auto):
-
     - Un valor {{cssxref("&lt;percentage&gt;")}} que escala la imagen de fondo en la dimensión correspondiente al porcentaje especificado del área de posicionamiento de fondo, que viene el valor determinado {{ cssxref("background-origin") }}. El área de posicionamiento del fondo es, por defecto, el área que contiene el contenido de la caja y su relleno, el área también se puede cambiar a simplemente el contenido o el área que contiene bordes, el relleno y contenido. Si el fondo de {{cssxref("background-attachment", "attachment")}} es fija, el área de posicionamiento del fondo es más bien toda el área de la ventana del navegador, sin incluir el área cubierta por las barras de desplazamiento si están presentes. Porcentajes negativos no son permitidos.
     - Un valor {{cssxref("&lt;length&gt;")}} que escala la imagen de fondo a la longitud especificada en la dimensión correspondiente. Longitudes negativas no están permitidos.
     - La palabra clave auto que escala el fondo de la imagen en la dirección correspondiente de modo que su proporción escencial se mantiene.
@@ -97,6 +94,6 @@ Tenga en cuenta que particularmente no es recomendado usar una dimensión de pí
 
 ## Ver también
 
-- [CSS Reference](/es/docs/CSS/CSS_Reference)
-- [Multiple backgrounds](/es/docs/CSS/Multiple_backgrounds)
-- [Scaling background images](/es/docs/CSS/Scaling_background_images)
+- [CSS Reference](/es/docs/Web/CSS/Reference)
+- [Multiple backgrounds](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Scaling background images](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)

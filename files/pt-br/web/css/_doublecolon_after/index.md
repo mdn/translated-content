@@ -1,11 +1,11 @@
 ---
-title: "::after (:after)"
+title: ::after (:after)
 slug: Web/CSS/::after
 ---
 
 {{CSSRef}}
 
-Em CSS, **`::after`** cria um [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade {{cssxref("content")}}. É inline por padrão.
+Em CSS, **`::after`** cria um [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade {{cssxref("content")}}. É inline por padrão.
 
 ```css
 /* Adiciona uma seta após os links */
@@ -79,7 +79,7 @@ Podemos estilizar textos ou imagens na propriedade {{cssxref("content")}} pratic
 
 ### Dicas
 
-O exemplo a seguir mostra o uso do `::after` [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) em conjunto com a expressão CSS [`attr()`](/pt-BR/docs/Web/CSS/attr) e um [atributo data personalizado](/pt-BR/docs/Web/HTML/Global_attributes#dataset) `data-descr` para criar uma _dica_ em forma de glossário feito em CSS puro. Verifique a visualização abaixo, ou veja este exemplo em [página separada.](/files/4591/css-only_tooltips.html)
+O exemplo a seguir mostra o uso do `::after` [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) em conjunto com a expressão CSS [`attr()`](/pt-BR/docs/Web/CSS/attr) e um [atributo data personalizado](/pt-BR/docs/Web/HTML/Global_attributes#dataset) `data-descr` para criar uma _dica_ em forma de glossário feito em CSS puro. Verifique a visualização abaixo, ou veja este exemplo em [página separada.](/files/4591/css-only_tooltips.html)
 
 ```html
 <p>

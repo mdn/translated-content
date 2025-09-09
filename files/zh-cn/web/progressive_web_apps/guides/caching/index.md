@@ -12,7 +12,7 @@ slug: Web/Progressive_web_apps/Guides/Caching
 - **离线操作**：缓存使 PWA 能够在设备没有网络连接时进行工作。
 - **响应速度**：即使设备在线，如果其用户界面是从缓存中获取的，PWA 通常会更加响应迅速。
 
-当然，主要的缺点是**新鲜度（freshness）**：对于需要保持最新的资源，缓存是不太适合的。此外，对于一些类型的请求，如 [POST](/zh-CN/docs/Web/HTTP/Methods/POST) 请求，缓存从来都不适合。
+当然，主要的缺点是**新鲜度（freshness）**：对于需要保持最新的资源，缓存是不太适合的。此外，对于一些类型的请求，如 [POST](/zh-CN/docs/Web/HTTP/Reference/Methods/POST) 请求，缓存从来都不适合。
 
 这意味着你是否以及何时应该缓存一个资源非常依赖于该资源本身，一个 PWA 通常会对不同的资源采取不同的策略。在本指南中，我们将研究一些 PWA 常用的缓存策略，看看哪些策略适用于哪些资源。
 
@@ -208,5 +208,5 @@ PWA 应该在 service worker 的 {{domxref("ServiceWorkerGlobalScope.activate_ev
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - [存储配额和驱逐标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
-- developer.chrome.com 上的 [service worker 缓存策略](https://developer.chrome.google.cn/docs/workbox/caching-strategies-overview)（2021）
-- web.dev 上的[离线应用程序开发指南](https://web.dev/articles/offline-cookbook)（2020）
+- developer.chrome.google.cn 上的 [service worker 缓存策略](https://developer.chrome.google.cn/docs/workbox/caching-strategies-overview)（2021）
+- web.developers.google.cn 上的[离线应用程序开发指南](https://web.developers.google.cn/articles/offline-cookbook)（2020）

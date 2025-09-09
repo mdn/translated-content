@@ -113,7 +113,7 @@ console.log(nonenum_only);
 
 ## Ver también
 
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable")}}
 - {{jsxref("Object.create")}}

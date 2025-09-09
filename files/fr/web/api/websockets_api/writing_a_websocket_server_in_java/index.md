@@ -15,7 +15,7 @@ Ce serveur respecte la [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455)
 
 ## Premiers pas
 
-WebSockets communique via une connexion [TCP (Transmission Control Protocol)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol). La classe Java [ServerSocket](http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) est située dans le paquet _java.net_.
+WebSockets communique via une connexion [TCP (Transmission Control Protocol)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol). La classe Java [ServerSocket](https://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) est située dans le paquet _java.net_.
 
 ### ServerSocket
 
@@ -50,9 +50,9 @@ public class Server{
 
 Méthodes :
 
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
+- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
   Renvoie un flux d'entrée pour ce socket.
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
+- `java.net.`[Socket](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
   Renvoie un flux sortant pour ce socket.
 
 ### OutputStream
@@ -174,7 +174,7 @@ Si nous envoyons « abcdef », nous obtenons :
 | 1                                     | 0    | 0    | 0    | 0x1=0001 |
 
 FIN : votre message peut être transmis en plusieurs morceaux, mais restons simple pour l'instant.
-Opcode _0x1_ signifie que ceci est un texte. [Liste exhaustive des Opcodes](http://tools.ietf.org/html/rfc6455#section-5.2)
+Opcode _0x1_ signifie que ceci est un texte. [Liste exhaustive des Opcodes](https://tools.ietf.org/html/rfc6455#section-5.2)
 
 \- 134:
 
@@ -205,4 +205,4 @@ for (int i = 0; i < encoded.length; i++) {
 
 ## Voir aussi
 
-- [Écriture de serveurs WebSocket](/fr/docs/WebSockets/Writing_WebSocket_servers)
+- [Écriture de serveurs WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

@@ -3,9 +3,9 @@ title: Заключение
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
-{{GamesSidebar}}{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}
+{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}
 
-Это 10-й и заключительный шаг в [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код, как он должен выглядеть, после завершения этого урока в [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
+Это 10-й и заключительный шаг в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код, как он должен выглядеть, после завершения этого урока в [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 
 В любой игре, которую мы пишем, всегда есть место для улучшений. Например, мы можем предложить игроку несколько жизней. Они могут сделать несколько ошибок и всё равно закончить игру. Мы также можем улучшить отрисовку кода.
 
@@ -100,8 +100,8 @@ requestAnimationFrame(draw);
 
 ## Игра закончена - на данный момент!
 
-Вы закончили все уроки — поздравляем! К этому моменту вы должны знать основы манипулирования canvas и логику простых 2D-игр. Сейчас самое время изучить некоторые фреймворки и продолжить разработку игр. Вы можете проверить аналог этой серии, [2D breakout game using Phaser](/ru/docs/Games/Workflows/2D_breakout_game_Phaser) или [Cyber Orb built in Phaser](/ru/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation) учебник. Вы также можете просмотреть раздел [Games section on MDN](/ru/docs/Games) для вдохновения и увеличения знаний.
+Вы закончили все уроки — поздравляем! К этому моменту вы должны знать основы манипулирования canvas и логику простых 2D-игр. Сейчас самое время изучить некоторые фреймворки и продолжить разработку игр. Вы можете проверить аналог этой серии, [2D breakout game using Phaser](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser) или [Cyber Orb built in Phaser](/ru/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation) учебник. Вы также можете просмотреть раздел [Games section on MDN](/ru/docs/Games) для вдохновения и увеличения знаний.
 
-Вы также можете вернуться на [this tutorial series' index page](/ru/docs/Games/Workflows/Breakout_game_from_scratch) учебника. Получайте удовольствие от написания кода!
+Вы также можете вернуться на [this tutorial series' index page](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) учебника. Получайте удовольствие от написания кода!
 
 {{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

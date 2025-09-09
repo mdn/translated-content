@@ -3,8 +3,6 @@ title: 多个背景的应用
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
-{{CSSRef}}
-
 你可以应用**多个背景**到元素。这些图层彼此叠加，第一个提供的背景位于最上层，最后一个提供的背景位于最下层。只有最后一个背景可以包含背景颜色。
 
 指定多个背景很简单：
@@ -37,7 +35,8 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 .multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(firefox.png), url(bubbles.png),
+  background-image:
+    url(firefox.png), url(bubbles.png),
     linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:
@@ -57,4 +56,4 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 ## 参见
 
-- [Using CSS gradients](/zh-CN/docs/CSS/Using_CSS_gradients)
+- [Using CSS gradients](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)

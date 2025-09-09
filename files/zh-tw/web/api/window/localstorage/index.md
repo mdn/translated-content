@@ -1,62 +1,69 @@
 ---
-title: Window.localStorage
+title: Window：localStorage 屬性
 slug: Web/API/Window/localStorage
+l10n:
+  sourceCommit: 3e097148b4c6cb9c6d8824275599f855ca63827b
 ---
 
 {{APIRef("Web Storage API")}}
 
-**`localStorage`** 為一唯讀屬性, 此屬性允許你存取目前文件({{DOMxRef("Document")}})隸屬網域來源的 {{DOMxRef("Storage")}} 物件; 與 sessionStorage 不同的是其儲存資料的可存取範圍為跨瀏覽頁狀態(Browser Sessions). `localStorage` 的應用與 {{DOMxRef("Window.sessionStorage", "sessionStorage")}} 相似, 除了 `localStorage` 的儲存資料並無到期的限制, 而 `sessionStorage` 的儲存資料於目前瀏覽頁狀態結束的同時將一併被清除 — 也就是目前瀏覽器頁面被關閉的同時.
+{{domxref("window")}} 介面的 **`localStorage`** 唯讀屬性允許你存取一個用於{{DOMxRef("Document", "文件", "", "1")}}的{{glossary("origin", "源")}}的 {{DOMxRef("Storage")}} 物件；儲存的資料會跨瀏覽器工作階段保存。
 
-值得注意的是不論 `localStorage` 或者 `sessionStorage` **皆為專屬於目前瀏覽器頁面的通訊協定(Protocol)**.
+`localStorage` 與 {{DOMxRef("Window.sessionStorage", "sessionStorage")}} 相似，不同之處在於 `localStorage` 的資料沒有過期時間，而 `sessionStorage` 的資料會在頁面工作階段結束時（也就是頁面關閉時）清除。（在「私密瀏覽」或「無痕」模式中載入的文件，其 `localStorage` 資料會在最後一個「私密」分頁關閉時清除。）
 
-鍵值名稱和值皆為**字串型式**(請留意, 當其為物件, 整數等將自動轉換為字串型式).
+## 值
 
-## Syntax
+一個 {{DOMxRef("Storage")}} 物件，可用於存取目前同源的本機儲存空間。
 
-```plain
-myStorage = window.localStorage;
-```
-
-### Value
-
-{{DOMxRef("Storage")}} 物件 which can be used to access the current origin's local storage space.
-
-### Exceptions
+### 例外
 
 - `SecurityError`
-  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/zh-TW/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) (this can happen if the origin uses the `file:` or `data:` scheme, for example). 舉例來說，使用者 may have their browser configured to deny permission to persist data for the specified origin.
+  - : 在以下情況之一會拋出：
+    - 同源不是[一個有效的協定／主機／埠元組](/zh-TW/docs/Web/Security/Same-origin_policy#同源定義)。舉例來說，如果同源使用 `file:` 或 `data:` 協定，就可能發生這種情況。
+    - 請求違反了政策決定。例如，使用者已將瀏覽器組態為防止頁面保存資料。
 
-## Example
+    請注意，如果使用者封鎖了 Cookie，瀏覽器可能會將此解釋為防止頁面保存資料的指令。
 
-下列的程式碼片段讀取了目前域名內的 local {{DOMxRef("Storage")}} 物件 ，並用{{DOMxRef("Storage.setItem()")}}，增加一個資料物件 item 到其中
+## 描述
+
+使用 `localStorage` 儲存的鍵和值是 {{glossary("UTF-16")}} 字串格式。與物件一樣，整數鍵會自動轉換為字串。
+
+`localStorage` 的資料**與文件的協定有關**。具體來說，對於透過 HTTP（例如 `http://example.com`）載入的網站，`localStorage` 回傳的物件與透過 HTTPS（例如 `https://example.com`）載入的相應網站的 `localStorage` 不同。
+
+對於從 `file:` URL 載入的文件（也就是直接從使用者的本機檔案系統在瀏覽器中開啟的檔案，而不是由 web 伺服器提供），`localStorage` 的行為要求是未定義的，且可能因瀏覽器而異。
+
+在所有目前的瀏覽器中，`localStorage` 似乎會為每個 `file:` URL 回傳一個不同的物件。換句話說，每個 `file:` URL 似乎都有自己獨特的本機儲存區域。但這種行為沒有保證，所以你不應該依賴它，因為如上所述，`file:` URL 的要求仍然是未定義的。因此，瀏覽器可能隨時更改其對 `localStorage` 的 `file:` URL 處理方式。事實上，一些瀏覽器隨著時間的推移*已經*改變了它們的處理方式。
+
+## 範例
+
+以下程式碼片段存取目前網域的本機 {{DOMxRef("Storage")}} 物件，並使用 {{DOMxRef("Storage.setItem()")}} 向其新增一個資料項目。
 
 ```js
 localStorage.setItem("myCat", "Tom");
 ```
 
-讀取 `localStorage` 內物件的語法如下：
+讀取 `localStorage` 項目的語法如下：
 
 ```js
-var cat = localStorage.getItem("myCat");
+const cat = localStorage.getItem("myCat");
 ```
 
-移除 `localStorage` 內物件的語法如下：
+移除 `localStorage` 項目的語法如下：
 
 ```js
 localStorage.removeItem("myCat");
 ```
 
-刪除 `localStorage` 內所有物件的語法如下：
+移除所有 `localStorage` 項目的語法如下：
 
 ```js
-// Clear all items
 localStorage.clear();
 ```
 
 > [!NOTE]
-> Please refer to the [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
+> 請參閱[使用 Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 文章以取得完整範例。
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
@@ -64,8 +71,7 @@ localStorage.clear();
 
 {{Compat}}
 
-## See also
+## 參見
 
-- [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Local storage with Window.localStorage](/zh-TW/docs/Web/API/Web_Storage_API/Local_storage)
+- [使用 Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - {{DOMxRef("Window.sessionStorage")}}

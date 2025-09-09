@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
 
 Supprime toutes les visites à l'URL donnée de l'historique du navigateur.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -20,15 +20,13 @@ var deletingUrl = browser.history.deleteUrl(
 ### Paramètres
 
 - `details`
-
   - : `object`. Objet contenant l'URL dont les visites doivent être supprimées.
-
     - `url`
       - : `string`. L'URL dont les visites doivent être supprimées.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètres lorsque les visites auront été supprimées.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans paramètres lorsque les visites auront été supprimées.
 
 ## Compatibilité des navigateurs
 
@@ -95,8 +93,6 @@ searching.then(onGot);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,8 +3,6 @@ title: calc()
 slug: Web/CSS/calc
 ---
 
-{{CSSRef}}
-
 **`calc()`** [CSS](/ko/docs/Web/API/CSS) 함수를 사용하면 CSS 속성의 값으로 계산식을 지정할 수 있습니다. {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, 또는 {{cssxref("&lt;integer&gt;")}}를 받는 속성의 값으로 사용할 수 있습니다.
 
 ## 구문
@@ -100,7 +98,7 @@ input {
 
 ### CSS 변수와 중첩 `calc()`
 
-[CSS 변수](/ko/docs/Web/CSS/CSS_Variables)도 `calc()`와 같이 사용할 수 있습니다. 다음 코드를 살펴보세요.
+[CSS 변수](/ko/docs/Web/CSS/CSS_cascading_variables)도 `calc()`와 같이 사용할 수 있습니다. 다음 코드를 살펴보세요.
 
 ```css
 .foo {

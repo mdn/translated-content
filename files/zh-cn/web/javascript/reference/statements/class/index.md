@@ -5,13 +5,22 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 **`class`** 声明创建一个{{Glossary("binding", "绑定")}}到给定名称的新[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)。
 
 你也可以使用 [`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)来定义类。
 
-{{EmbedInteractiveExample("pages/js/statement-class.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Class")}}
+
+```js interactive-example
+class Polygon {
+  constructor(height, width) {
+    this.area = height * width;
+  }
+}
+
+console.log(new Polygon(4, 3).area);
+// Expected output: 12
+```
 
 ## 语法
 

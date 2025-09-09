@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Statements/for
 
 **`for` 문**은 괄호로 감싸고 세미콜론으로 구분한 세 개의 선택식과, 반복을 수행할 문(주로 {{jsxref("Statements/block", "블럭문", "", 0)}})으로 이루어져 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 구문
 
@@ -17,7 +28,6 @@ for ([initialization]; [condition]; [final-expression])
 ```
 
 - `initialization`
-
   - : 식(할당식 포함) 또는 변수 선언. 주로 카운터 변수를 초기화할 때 사용합니다. `var` 또는 `let` 키워드를 사용해 새로운 변수를 선언할 수도 있습니다. `var` 키워드로 선언한 변수는 반복문에 제한되지 않습니다. 즉 `for` 문과 같은 범위에 위치합니다. `let` 키워드로 선언한 변수는 반복문의 지역 변수가 됩니다.
 
     식의 결과는 버려집니다.

@@ -5,11 +5,48 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-right-width`** 用于设置元素右边框的宽度。
 
-{{EmbedInteractiveExample("pages/css/border-right-width.html")}}
+{{InteractiveExample("CSS Demo: border-right-width")}}
+
+```css interactive-example-choice
+border-right-width: thick;
+```
+
+```css interactive-example-choice
+border-right-width: 2em;
+```
+
+```css interactive-example-choice
+border-right-width: 4px;
+```
+
+```css interactive-example-choice
+border-right-width: 2ex;
+```
+
+```css interactive-example-choice
+border-right-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 语法
 
@@ -35,9 +72,7 @@ border-right-width: unset;
 ### 值
 
 - `<line-width>`
-
   - : 定义边框的宽度，明确的非负 {{cssxref("&lt;length&gt;")}} 值或者是关键字。如果它是关键字，则必须是以下值之一：
-
     - `thin`
     - `medium`
     - `thick`

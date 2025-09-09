@@ -1,5 +1,5 @@
 ---
-title: ":optional"
+title: :optional
 slug: Web/CSS/:optional
 ---
 
@@ -47,4 +47,4 @@ Entradas requeridas devem ser indicadas visualmente, utilizando um tratamento qu
 ## Ver também
 
 - Outra pseudo-classes de validação relacionadas: {{ cssxref(":required") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Validação de dados de formulário](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
+- [Validação de dados de formulário](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation)

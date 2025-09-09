@@ -5,7 +5,7 @@ slug: Web/CSS/@color-profile
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profile`** définit et nomme un profil de couleur qui peut être utilisé ensuite avec la fonction [`color()`](/fr/docs/Web/CSS/color_value/color) afin d'indiquer une couleur.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profile`** définit et nomme un profil de couleur qui peut être utilisé ensuite avec la fonction [`color()`](/fr/docs/Web/CSS/color_value/color) afin d'indiquer une couleur.
 
 ## Syntaxe
 
@@ -20,11 +20,9 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profil
 - `src`
   - : Indique l'URL où sont situées les informations sur le profil de couleur.
 - `rendering-intent`
-
-  - : Si le profil de couleur contient plusieurs indications de rendu, ce descripteur permet de sélectionner celui à utiliser pour définir la correspondance de la couleur sur [les gamuts](/fr/docs/Glossary/gamut) plus petits pour lesquels ce profil est défini.
+  - : Si le profil de couleur contient plusieurs indications de rendu, ce descripteur permet de sélectionner celui à utiliser pour définir la correspondance de la couleur sur [les gamuts](/fr/docs/Glossary/Gamut) plus petits pour lesquels ce profil est défini.
 
     Si ce descripteur est utilisé, sa valeur doit être l'un des mots-clés suivants&nbsp;:
-
     - `relative-colorimetric`
       - : La colorimétrie relative au média implique de garder inchangées les couleurs sources qui sont présentes dans le gamut du médium cible, relativement aux points blancs respectifs du média. Les couleurs sources situées en dehors du gamut du medium cible sont ramenées aux couleurs des bords du gamut en utilisant différentes méthodes.
     - `absolute-colorimetric`

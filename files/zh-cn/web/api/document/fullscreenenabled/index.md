@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Document")}} 接口上的只读属性 **`fullscreenEnabled`** 表明全屏模式是否可用。
 
-全屏模式仅适用于不包含任何窗口化插件的页面，或者页面中的所有 {{HTMLElement("iframe")}} 元素都设置了 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性。
+全屏模式仅适用于不包含任何窗口化插件的页面，或者页面中的所有 {{HTMLElement("iframe")}} 元素都设置了 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性。
 
 尽管这个属性是只读的，但如果修改它，即使在严格模式下也不会抛出错误；它的 `setter` 方法是空操作将被忽略。
 
@@ -47,4 +47,4 @@ function requestFullscreen() {
 - {{domxref("Document.exitFullscreen()")}}
 - {{domxref("Document.fullscreenElement")}}
 - {{cssxref(":fullscreen") }} 和 {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性
+- {{HTMLElement("iframe")}} [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性

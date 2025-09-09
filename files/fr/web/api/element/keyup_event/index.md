@@ -30,7 +30,7 @@ L'évènement `keyup` se déclenche lorsque qu'une touche du clavier qui a été
 
 ### Voir aussi
 
-[onkeypress](/fr/DOM/element.onkeypress) [onkeydown](/fr/DOM/element.onkeydown)
+[onkeypress](/fr/docs/Web/API/Element/keypress_event) [onkeydown](/fr/docs/Web/API/Element/keydown_event)
 
 ### Spécification
 

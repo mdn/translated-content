@@ -9,4 +9,4 @@ La última versión estable de [HTML](/es/docs/Glossary/HTML), HTML5 convierte a
 
 ## Aprenda más
 
-- [Nuestra guía HTML5](/es/docs/Web/Guide/HTML/HTML5)
+- [Nuestra guía HTML5](/es/docs/Glossary/HTML5)

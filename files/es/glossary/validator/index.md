@@ -12,4 +12,4 @@ Un validador es un programa que comprueba errores de sintaxis en el código. Las
 ### Conocimiento general
 
 - [Validador](https://es.wikipedia.org/wiki/Validador) en Wikipedia
-- [Lista de validadores](/es/docs/Tools/Validators)
+- [Lista de validadores](https://firefox-source-docs.mozilla.org/devtools-user/validators/index.html)

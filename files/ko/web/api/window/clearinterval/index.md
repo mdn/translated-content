@@ -30,7 +30,7 @@ clearInterval(intervalID)
 
 ## 예제
 
-[`setInterval()` examples](/ko/docs/Web/API/setInterval#examples)를 확인하세요.
+[`setInterval()` examples](/ko/docs/Web/API/Window/setInterval#examples)를 확인하세요.
 
 ## 명세서
 

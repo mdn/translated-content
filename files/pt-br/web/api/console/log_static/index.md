@@ -25,7 +25,7 @@ console.log(msg[, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : Strings ou objetos JavaScript para substituirem as marcações de substituição em `msg`. Estas substituições ocorrem de um para um e na ordem em que são passadas para a console.log.
 
-Veja [Exibindo texto na console](/pt-BR/docs/DOM/console#Outputting_text_to_the_console) na documentação do objeto {{domxref("console")}} para mais detalhes.
+Veja [Exibindo texto na console](/pt-BR/docs/Web/API/console#outputting_text_to_the_console) na documentação do objeto {{domxref("console")}} para mais detalhes.
 
 ## Especificação
 
@@ -37,7 +37,7 @@ Não faz parte de nenhuma especificação.
 
 ## Ver também
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Firebug wiki: Console API](http://getfirebug.com/wiki/index.php/Console_API) - Firebug supports additional features in its console.log() implementation, such as [styled logging](http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
-- [NodeJS: Console API](http://nodejs.org/docs/latest/api/console.html#console_console_log_data)
+- [Firebug wiki: Console API](https://getfirebug.com/wiki/index.php/Console_API) - Firebug supports additional features in its console.log() implementation, such as [styled logging](http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
+- [NodeJS: Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)

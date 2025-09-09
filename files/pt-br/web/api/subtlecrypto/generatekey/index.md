@@ -15,18 +15,15 @@ var result = crypto.subtle.generateKey(algo, extractable, keyUsages);
 
 ### Parâmetros
 
-- _`algo`_ é um objeto do dicionário definindo a função utilizada da geração da key. algo suportados são : [AES-CBC](/pt-BR/docs/Web/API/Web_Crypto_API/Supported_algorithms#AES-CBC), `AES-CTR`, `AES-GCM`, `RSA-OAEP`, `AES-KW`, `HMAC`, `RSASSA-PKCS1-v1_5`, `ECDSA`, `ECDH`, e `DH`. Os formatos de objetos do dicionário são:
-
+- _`algo`_ é um objeto do dicionário definindo a função utilizada da geração da key. algo suportados são : [AES-CBC](/pt-BR/docs/Web/API/SubtleCrypto#aes-cbc), `AES-CTR`, `AES-GCM`, `RSA-OAEP`, `AES-KW`, `HMAC`, `RSASSA-PKCS1-v1_5`, `ECDSA`, `ECDH`, e `DH`. Os formatos de objetos do dicionário são:
   - `"name"`, o qual corresponde com um dos algo's suportados listados acima,
   - `"modulusLength"`, o qual corresponde com o número de dígitos usado nos módulos
   - `"publicExponent`", uma {{jsxref("Uint8Array")}} representando o exponencial público
   - `"hash"`, um objeto do dicionário referenciando o uso do algoritmo hash. Por exemplo:
-
     - `{name: "SHA-512"}`
 
 - `extractable` é um {{jsxref("Boolean")}} indicando se a key pode ser extraída do objeto {{domxref("CryptoKey")}} em um estágio mais tardio.
 - `keyUsages` é uma {{jsxref("Array")}} indicando o que pode ser feito com uma key recentemente gerada. Os possíveis valores da array são:
-
   - `"encrypt"`, permitindo que a key seja utilizada para {{glossary("encryption", "encrypting")}} mensagens.
   - `"decrypt"`, permitindo que a key seja utilizada para {{glossary("decryption", "decrypting")}} mensagens.
   - `"sign"`, permitindo que a key seja utilizada para {{glossary("signature", "signing")}} mensagens.

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 
 {{JSRef}} {{deprecated_header}}
 
-> **`function.arguments`** 속성은 함수로 부터 넘겨 받은 arguments에 해당하는 배열과 같은 객체이다. 간단하게 {{jsxref("Functions/arguments", "arguments")}}를 대신 사용하자. 이 속성은 strict mode에서 [꼬리 호출 최적화](http://www.ecma-international.org/ecma-262/6.0/#sec-addrestrictedfunctionproperties) 때문에 금지 된다.
+> **`function.arguments`** 속성은 함수로 부터 넘겨 받은 arguments에 해당하는 배열과 같은 객체이다. 간단하게 {{jsxref("Functions/arguments", "arguments")}}를 대신 사용하자. 이 속성은 strict mode에서 [꼬리 호출 최적화](https://www.ecma-international.org/ecma-262/6.0/#sec-addrestrictedfunctionproperties) 때문에 금지 된다.
 
 ## 설명
 

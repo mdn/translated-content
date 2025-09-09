@@ -3,10 +3,10 @@ title: "Request: destination プロパティ"
 short-title: destination
 slug: Web/API/Request/destination
 l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`destination`** は **{{domxref("Request")}}** インターフェイスの読み取り専用プロパティで、リクエストされたコンテンツの種類を記述した文字列を返します。
 
@@ -28,10 +28,9 @@ l10n:
 使用可能な値は以下の通りです。
 
 - `""`
-
   - : 空文字列は既定値であり、独自の値を持たない出力先に対して使用されます。これは、以下の API（その他多数）を使用してリクエストが行われた場合の値です。
-    - [`<a ping>`](/ja/docs/Web/HTML/Element/a#ping)
-    - [`<area ping>`](/ja/docs/Web/HTML/Element/area#ping)
+    - [`<a ping>`](/ja/docs/Web/HTML/Reference/Elements/a#ping)
+    - [`<area ping>`](/ja/docs/Web/HTML/Reference/Elements/area#ping)
     - {{domxref("Cache")}}
     - {{domxref("EventSource")}}
     - {{domxref("Window/fetch", "fetch()")}}
@@ -100,5 +99,5 @@ const myDestination = myRequest.destination; // returns the empty string by defa
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

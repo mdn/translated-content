@@ -3,7 +3,7 @@ title: user-modify
 slug: Web/CSS/user-modify
 ---
 
-{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 **`user-modify`** プロパティは Firefox では効果がありません。元々は要素の内容をユーザーが編集できるかどうかを決める予定でした。
 
@@ -21,7 +21,7 @@ user-modify: unset;
 ```
 
 > [!WARNING]
-> このプロパティは [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性に置き換えられました。
+> このプロパティは [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性に置き換えられました。
 
 ## 構文
 

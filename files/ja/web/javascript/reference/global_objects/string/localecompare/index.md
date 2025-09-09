@@ -1,17 +1,26 @@
 ---
 title: String.prototype.localeCompare()
+short-title: localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 l10n:
-  sourceCommit: cda36825f2a7e12f0ebff9d9f257dae8a1171dbd
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`localeCompare()`** メソッドは、参照文字列がソート順で指定された文字列の前か後か、または同じかを示す数値を返します。[`Intl.Collator` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) に対応している実装では、このメソッドは単に `Intl.Collator` を呼び出します。
+**`localeCompare()`** は {{jsxref("String")}} 値のメソッドで、参照文字列がソート順で指定された文字列の前か後か、または同じかを示す数値を返します。[`Intl.Collator` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) に対応している実装では、このメソッドは単に `Intl.Collator` を呼び出します。
 
 大量の文字列を比較する場合、例えば巨大な配列を並べ替えしている時は、{{jsxref("Intl.Collator")}} オブジェクトを生成してそれが提供する {{jsxref("Intl/Collator/compare", "compare()")}} メソッドを使用したほうがいいでしょう。
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// 予想される結果: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// 予想される結果: 0
+```
 
 ## 構文
 
@@ -30,13 +39,11 @@ localeCompare(compareString, locales, options)
 - `compareString`
   - : この文字列と比較される文字列です。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`localeCompare()` は `"undefined"` という文字列と比較を行います。これはおそらく望むところではないでしょう。
 - `locales` {{optional_inline}}
-
   - : BCP 47 言語タグの文字列、またはそのような文字列の配列です。`Intl.Collator()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 引数に対応します。
 
     `Intl.Collator` の対応がない実装では、この引数は無視され、普通はホストのロケールが使用されます。
 
 - `options` {{optional_inline}}
-
   - : 出力形式を調整するオブジェクトです。`Intl.Collator()` コンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options) 引数に対応します。
 
     `Intl.Collator` の対応がない実装では、この引数は無視されます。

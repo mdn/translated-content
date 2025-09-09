@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当窗口中被高亮的标签页集合更改时触发。
 
 请注意，在 63 版本之前，Firefox 没有高亮多个标签页的概念，因此此事件只是 {{WebExtAPIRef("tabs.onActivated")}} 的别名。
@@ -33,9 +31,7 @@ browser.tabs.onHighlighted.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `highlightInfo`
       - : `object`。被高亮标签页的 ID 及其窗口的 ID。详见 [highlightInfo](#highlightinfo_2) 部分。
 
@@ -67,7 +63,7 @@ browser.tabs.onHighlighted.addListener(handleHighlighted);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onHighlighted) API。此文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onHighlighted) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

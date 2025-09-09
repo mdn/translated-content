@@ -9,7 +9,22 @@ l10n:
 
 **`some()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の中に指定された関数で実装されているテストに合格する要素が 1 つでもあるかどうかをテストします。型付き配列の中に指定された関数が true を返す要素があれば true を返し、なければ false を返します。型付き配列を変更することはありません。このメソッドは {{jsxref("Array.prototype.some()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.some()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, 20, -30, 40, -50]);
+const positives = new Int8Array([10, 20, 30, 40, 50]);
+
+console.log(int8.some(isNegative));
+// Expected output: true
+
+console.log(positives.some(isNegative));
+// Expected output: false
+```
 
 ## 構文
 
@@ -21,7 +36,6 @@ some(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返す必要があります。この関数は以下の引数で呼び出されます。
     - `element`
       - : 現在処理されている型付き配列の要素です。

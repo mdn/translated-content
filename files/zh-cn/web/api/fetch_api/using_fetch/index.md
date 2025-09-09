@@ -7,12 +7,12 @@ slug: Web/API/Fetch_API/Using_Fetch
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 提供了一个 JavaScript 接口，用于访问和操纵 HTTP 管道的一些具体部分，例如请求和响应。它还提供了一个全局 {{domxref("fetch()")}} 方法，该方法提供了一种简单，合理的方式来跨网络异步获取资源。
 
-这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如 {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 [CORS](/zh-CN/docs/Web/HTTP/CORS) 和 HTTP 的扩展。
+这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如 {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 和 HTTP 的扩展。
 
 请注意，`fetch` 规范与 `jQuery.ajax()` 主要有以下的不同：
 
 - 当接收到一个代表错误的 HTTP 状态码时，从 `fetch()` 返回的 Promise **不会被标记为 reject**，即使响应的 HTTP 状态码是 404 或 500。相反，它会将 Promise 状态标记为 resolve（如果响应的 HTTP 状态码不在 200 - 299 的范围内，则设置 resolve 返回值的 {{domxref("Response/ok", "ok")}} 属性为 false），仅当网络故障时或请求被阻止时，才会标记为 reject。
-- `fetch` **不会发送跨域 cookie**，除非你使用了 _credentials_ 的[初始化选项](/zh-CN/docs/Web/API/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585)以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
+- `fetch` **不会发送跨域 cookie**，除非你使用了 _credentials_ 的[初始化选项](/zh-CN/docs/Web/API/Window/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585)以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
 
 一个基本的 fetch 请求设置起来很简单。看看下面的代码：
 
@@ -26,9 +26,10 @@ fetch("http://example.com/movies.json")
 
 当然它只是一个 HTTP 响应，而不是真的 JSON。为了获取 JSON 的内容，我们需要使用 {{domxref("Response.json()", "json()")}} 方法（该方法返回一个将响应 body 解析成 JSON 的 promise）。
 
-> **备注：** [Body](#body) 还有其他相似的方法，用于获取其他类型的内容。
+> [!NOTE]
+> [Body](#body) 还有其他相似的方法，用于获取其他类型的内容。
 
-最好使用符合[内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)的链接而不是使用直接指向资源地址的方式来进行 fetch 的请求。
+最好使用符合[内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)的链接而不是使用直接指向资源地址的方式来进行 fetch 的请求。
 
 ### 支持的请求参数
 
@@ -82,7 +83,7 @@ fetch("https://example.com", {
 > 当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
 
 > [!NOTE]
-> 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
+> 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/Guides/CORS#附带身份凭证的请求)
 
 如果你只想在请求 URL 与调用脚本位于同一起源处时发送凭据，请添加 `credentials: 'same-origin'`。
 
@@ -270,7 +271,8 @@ const anotherRequest = new Request(myRequest, myInit);
 
 这个很有用，因为 request 和 response bodies 只能被使用一次（译者注：这里的意思是因为设计成了 stream 的方式，所以它们只能被读取一次）。创建一个拷贝就可以再次使用 request/response 了，当然也可以使用不同的 `init` 参数。创建拷贝必须在读取 body 之前进行，而且读取拷贝的 body 也会将原始请求的 body 标记为已读。
 
-> **备注：** {{domxref("Request.clone","clone()")}} 方法也可以用于创建一个拷贝。它和上述方法一样，如果 request 或 response 的 body 已经被读取过，那么将执行失败。区别在于， `clone()` 出的 body 被读取不会导致原 body 被标记为已读取。
+> [!NOTE]
+> {{domxref("Request.clone","clone()")}} 方法也可以用于创建一个拷贝。它和上述方法一样，如果 request 或 response 的 body 已经被读取过，那么将执行失败。区别在于， `clone()` 出的 body 被读取不会导致原 body 被标记为已读取。
 
 ## Headers
 
@@ -311,7 +313,7 @@ console.log(myHeaders.get("X-Custom-Header")); // null
 
 虽然一些操作只能在 {{domxref("Service_Worker_API","ServiceWorkers")}} 中使用，但是它提供了更方便的操作 Headers 的 API。
 
-如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（[见下方](#Guard)），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
+如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（[见下方](#guard)），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
 
 ```js
 const myResponse = Response.error();
@@ -432,7 +434,7 @@ if (window.fetch) {
 ## 参见
 
 - {{domxref("Service_Worker_API", "ServiceWorker API")}}
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch examples on GitHub](https://github.com/mdn/fetch-examples/)

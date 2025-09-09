@@ -7,9 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 
 La méthode **`groupToMap()`** permet de grouper les éléments du tableau appelant selon les valeurs renvoyées par la fonction de test passée en argument. L'objet [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) renvoyé utilise les valeurs uniques fournies par la fonction de test comme clés, et les valeurs correspondantes sont des tableaux avec les éléments du groupe correspondant.
 
-<!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
-
-Cette méthode est notamment utile lorsqu'on veut grouper des éléments associés avec un objet, notamment lorsque cet objet évolue avec le temps. Si cet objet ne varie, vous pouvez à la place utiliser une chaîne de caractères comme clé de regroupement et utiliser la méthode [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/group).
+Cette méthode est notamment utile lorsqu'on veut grouper des éléments associés avec un objet, notamment lorsque cet objet évolue avec le temps. Si cet objet ne varie, vous pouvez à la place utiliser une chaîne de caractères comme clé de regroupement et utiliser la méthode [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy).
 
 ## Syntaxe
 
@@ -33,11 +31,9 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
 ### Paramètres
 
 - `fnRappel`
-
   - : La fonction à exécuter pour chaque élément du tableau.
 
     Elle est appelée avec les arguments suivants&nbsp;:
-
     - `element`
       - : La valeur de l'élément du tableau en cours de traitement.
     - `index`
@@ -48,7 +44,6 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
     La valeur (que ce soit un objet ou une valeur primitive) renvoyée par la fonction de rappel indique le groupe de l'élément courant.
 
 - `thisArg` {{optional_inline}}
-
   - : L'objet à utiliser comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) pour `fnRappel`.
 
     Cet argument est ignoré pour les fonctions fléchées qui disposent de leur propre portée lexicale, utilisée à la place. Sinon, si `thisArg` n'est pas fourni, c'est la valeur `this` de la portée d'exécution qui est appelée, ou `undefined` si la fonction est appelée en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
@@ -76,7 +71,7 @@ La méthode `groupToMap()` est [une méthode de copie](/fr/docs/Web/JavaScript/R
 
 La méthode `groupToMap()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques). Elle s'attend uniquement à ce que la valeur `this` ait une propriété `length` et des propriétés dont les clés sont des entiers.
 
-Cette méthode s'avère utile lorsqu'on veut regrouper les informations associées à un objet donné qui peut évoluer au cours du temps. En effet, si l'objet est modifié, il pourra toujours être utilisé comme clé pour la `Map` renvoyée. En revanche, si on utilise une chaîne de caractères comme représentation d'un objet et qu'on l'utilise comme clé de groupement pour [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/group), il faudra maintenir la correspondance entre l'objet original et sa représentation lorsque l'objet évolue.
+Cette méthode s'avère utile lorsqu'on veut regrouper les informations associées à un objet donné qui peut évoluer au cours du temps. En effet, si l'objet est modifié, il pourra toujours être utilisé comme clé pour la `Map` renvoyée. En revanche, si on utilise une chaîne de caractères comme représentation d'un objet et qu'on l'utilise comme clé de groupement pour [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy), il faudra maintenir la correspondance entre l'objet original et sa représentation lorsque l'objet évolue.
 
 > [!NOTE]
 > Pour accéder aux groupes dans l'objet `Map` renvoyé, il faut utiliser le même objet que celui qui a été initialement utilisé comme clé (même si ses propriétés peuvent être modifiées). On ne peut pas utiliser un autre objet qui aurait seulement le même nom et les mêmes propriétés.
@@ -123,7 +118,7 @@ console.log(resultat.get(restock));
 // résultat attendu : Array [Object { nom: "banane", type: "fruit", quantite: 5 }]
 ```
 
-Ici, l'argument `{ quantite }` passé à la fonction est un exemple de [décomposition objet pour les arguments d'une fonction](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#décomposer_les_propriétés_dobjets_passés_en_arguments). Cela récupère la propriété `quantite` de l'objet passé en paramètre et affecte cette valeur à une variable nommée `quantite` dans le corps de la fonction. Il s'agit d'une écriture concise pour accéder aux valeurs des propriétés pertinentes d'un objet dans une fonction.
+Ici, l'argument `{ quantite }` passé à la fonction est un exemple de [décomposition objet pour les arguments d'une fonction](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#décomposer_les_propriétés_dobjets_passés_en_arguments). Cela récupère la propriété `quantite` de l'objet passé en paramètre et affecte cette valeur à une variable nommée `quantite` dans le corps de la fonction. Il s'agit d'une écriture concise pour accéder aux valeurs des propriétés pertinentes d'un objet dans une fonction.
 
 La clé d'un objet `Map` peut être modifiée et continuer d'être utilisée. Toutefois, on ne peut pas recréer un autre objet ayant la même structure que la clé et l'utiliser. Il est donc important que tout ce qui doit utiliser la `Map` garde une référence vers ses clés.
 
@@ -173,5 +168,5 @@ console.log(Array.prototype.groupToMap.call(semblableTableau, (x) => x % 2));
 
 ## Voir aussi
 
-- [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/group)
+- [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy)
 - [Une prothèse d'émulation de `Array.prototype.groupToMap()` dans la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#array-grouping)

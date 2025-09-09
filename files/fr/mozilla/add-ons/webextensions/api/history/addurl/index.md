@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 
 Ajoute un enregistrement à l'historique du navigateur d'une visite à l'URL donnée. L'heure de la visite est enregistrée comme l'heure de l'appel, et le {{WebExtAPIRef("history.TransitionType", "TransitionType")}} est enregistré comme "liens".
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -20,9 +20,7 @@ var addingUrl = browser.history.addUrl(
 ### Paramètres
 
 - `details`
-
   - : `object`. Objet contenant l'URL à ajouter.
-
     - `url`
       - : `string`. L'URL à ajouter.
     - `title`{{optional_inline}}
@@ -34,7 +32,7 @@ var addingUrl = browser.history.addUrl(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera rempli sans paramètres lorsque l'élément a été ajouté.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera rempli sans paramètres lorsque l'élément a été ajouté.
 
 ## Compatibilité des navigateurs
 
@@ -103,8 +101,6 @@ addingUrl.then(onAdded);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

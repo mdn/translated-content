@@ -2,14 +2,67 @@
 title: pointer-events
 slug: Web/CSS/pointer-events
 l10n:
-  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
-
-{{CSSRef}}
 
 **`pointer-events`** は [CSS](/ja/docs/Web/CSS) のプロパティで、特定のグラフィック要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になる可能性のある環境（存在する場合）を設定します。
 
-{{EmbedInteractiveExample("pages/css/pointer-events.html")}}
+{{InteractiveExample("CSS デモ: pointer-events")}}
+
+```css interactive-example-choice
+pointer-events: auto;
+```
+
+```css interactive-example-choice
+pointer-events: none;
+```
+
+```css interactive-example-choice
+pointer-events: stroke; /* SVG-only */
+```
+
+```css interactive-example-choice
+pointer-events: fill; /* SVG-only */
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element">
+    <p>
+      <a href="#">example link</a>
+    </p>
+    <p>
+      <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <a xlink:href="#">
+          <circle
+            cx="50"
+            cy="50"
+            fill="#3E6E84"
+            r="40"
+            stroke="#ffb500"
+            stroke-width="5"></circle>
+          <text fill="white" text-anchor="middle" x="50" y="55">SVG</text>
+        </a>
+      </svg>
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-weight: bold;
+}
+
+#example-element a {
+  color: #009e5f;
+}
+
+#example-element svg {
+  width: 10em;
+  height: 10em;
+}
+```
 
 ## 構文
 
@@ -17,14 +70,17 @@ l10n:
 /* キーワード値 */
 pointer-events: auto;
 pointer-events: none;
-pointer-events: visiblePainted; /* SVG のみ */
-pointer-events: visibleFill; /* SVG のみ */
-pointer-events: visibleStroke; /* SVG のみ */
-pointer-events: visible; /* SVG のみ */
-pointer-events: painted; /* SVG のみ */
-pointer-events: fill; /* SVG のみ */
-pointer-events: stroke; /* SVG のみ */
-pointer-events: all; /* SVG のみ */
+
+/* SVG で使われる値 */
+pointer-events: visiblePainted;
+pointer-events: visibleFill;
+pointer-events: visibleStroke;
+pointer-events: visible;
+pointer-events: painted;
+pointer-events: fill;
+pointer-events: stroke;
+pointer-events: bounding-box;
+pointer-events: all;
 
 /* グローバル値 */
 pointer-events: inherit;
@@ -43,6 +99,9 @@ pointer-events: unset;
 - `none`
   - : 要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になることはありません。しかし、子孫要素が `pointer-events` の別の値をセットされていた場合は、その子孫要素自体はポインターイベントのターゲットとなりえます。その場合、ポインターイベントはイベントキャプチャ/[バブリング](/ja/docs/Web/API/Event/bubbles)の過程で必要に応じて親要素のイベントリスナーをトリガーします。
 
+    > [!NOTE]
+    > `pointerenter` イベントと `pointerleave` イベントは、ポインティングデバイスが要素またはその子孫の 1 つに移動されたときに発行されます。そのため、 `pointer-events: none` が親要素に設定され、子要素に設定されていない場合でも、ポインターが子要素に移動したり、子要素から離れたりすると、親要素でイベントが発生します。
+
 #### SVG のみ（HTML では実験的）
 
 - `visiblePainted`
@@ -56,9 +115,11 @@ pointer-events: unset;
 - `painted`
   - : SVG の場合のみ（HTML では実験的）の値です。 `fill` プロパティが `none` 以外にセットされている塗りの（すなわち `fill` ）要素、もしくは `stroke` のプロパティが `none` 以外にセットされている線の（すなわち `stroke` ）要素の上にマウスカーソルがいる場合にのみ要素がポインターイベントのターゲットになりえます。 `visibility` プロパティの値はイベントプロセスに影響を与えません。
 - `fill`
-  - : SVG の場合のみの値です。塗り (`fill`) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `fill` プロパティや `visibility` プロパティの値でイベント処理が変化することはありません。
+  - : SVG の場合のみの値です。塗り (fill) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `fill` プロパティや `visibility` プロパティの値でイベント処理が変化することはありません。
 - `stroke`
-  - : SVG の場合のみの値です。線 (`stroke`) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `stroke` プロパティや `visibility` の値でイベント処理が変化することはありません。
+  - : SVG の場合のみの値です。線 (stroke) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `stroke` プロパティや `visibility` の値でイベント処理が変化することはありません。
+- `bounding-box`
+  - : SVG のみ。要素がポインターイベントの対象となるのは、ポインターが要素の[境界ボックス](/ja/docs/Glossary/Bounding_box)上にある場合のみです。
 - `all`
   - : SVG の場合のみ（HTML では実験的）の値です。塗り (`fill`) と線 (`stroke`) の上にマウスカーソルがある場合にのみ要素がポインターイベントのターゲットになりえます。 `fill` や `stroke` や `visibility` の値でイベント処理が変化することはありません。
 
@@ -130,5 +191,6 @@ a[href="http://example.com"]
 
 - SVG 属性 {{SVGAttr("pointer-events")}}
 - SVG 属性 {{SVGAttr("visibility")}}
+- {{domxref("PointerEvent")}} API
 - (X)HTML で使うことを踏まえた [WebKit の PointerEventsProperty の仕様書](https://webkit.org/specs/PointerEventsProperty.html)
 - {{cssxref("user-select")}} - ユーザーがテキストを選択できるかどうかの制御

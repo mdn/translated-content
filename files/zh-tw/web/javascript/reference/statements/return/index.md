@@ -3,11 +3,24 @@ title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
 
-{{jsSidebar("Statements")}}
-
 **`return` 表達式**會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## 語法
 
@@ -44,7 +57,7 @@ return x + y / 3;
 
 ### 自動插入分號
 
-`return` 宣告會受[自動插入分號](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the `return` keyword and the expression.
+`return` 宣告會受[自動插入分號](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the `return` keyword and the expression.
 
 ```js
 return;
@@ -104,7 +117,7 @@ counter();
 
 ### 函式回傳
 
-請參見[閉包](/zh-TW/docs/Web/JavaScript/Closures)。
+請參見[閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)。
 
 ```js
 function magic(x) {
@@ -127,5 +140,5 @@ answer(1337); // 56154
 
 ## 參見
 
-- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope)
-- [閉包](/zh-TW/docs/Web/JavaScript/Closures)
+- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions)
+- [閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)

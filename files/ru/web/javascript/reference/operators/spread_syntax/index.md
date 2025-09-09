@@ -9,7 +9,21 @@ slug: Web/JavaScript/Reference/Operators/Spread_syntax
 - для элементов (литералов массива)
 - для выражений объектов: в местах, где количество пар "ключ-значение" должно быть равно нулю или больше (для объектных литералов)
 
-{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+
+```js interactive-example
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// Expected output: 6
+
+console.log(sum.apply(null, numbers));
+// Expected output: 6
+```
 
 ## Синтаксис
 
@@ -220,7 +234,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ## Rest синтаксис (параметры)
 
-Синтаксис для rest оператора выглядит таким же как и для spread оператора, однако он используется для деструктуризации массивов и объектов. Фактически, rest оператор противоположен spread оператору: последний раскладывает массив на элементы, тогда как первый собирает много элементов в один. См. [rest parameters.](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters)
+Синтаксис для rest оператора выглядит таким же как и для spread оператора, однако он используется для деструктуризации массивов и объектов. Фактически, rest оператор противоположен spread оператору: последний раскладывает массив на элементы, тогда как первый собирает много элементов в один. См. [rest parameters.](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
 ## Спецификации
 
@@ -232,5 +246,5 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ## Смотрите также
 
-- [Rest parameters](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also '`...`')
+- [Rest parameters](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters) (also '`...`')
 - [fn.apply](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (also '`...`')

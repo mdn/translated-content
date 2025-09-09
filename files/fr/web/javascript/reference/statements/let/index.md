@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/let
 
 L'instruction **`let`** permet de déclarer une variable dont la portée est celle du bloc courant, éventuellement en initialisant sa valeur.
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## Syntaxe
 
@@ -24,7 +38,7 @@ let var1 [= valeur1] [, var2 [= valeur2]] [, …, varN [= valeurN]];
 
 ## Description
 
-`let` permet de déclarer des variables dont la portée est limitée à celle du [bloc](/fr/docs/Web/JavaScript/Reference/Instructions/bloc) dans lequel elles sont déclarées. Le mot-clé {{jsxref("Instructions/var","var")}}, quant à lui, permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction).
+`let` permet de déclarer des variables dont la portée est limitée à celle du [bloc](/fr/docs/Web/JavaScript/Reference/Statements/block) dans lequel elles sont déclarées. Le mot-clé {{jsxref("Instructions/var","var")}}, quant à lui, permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction).
 
 Une autre différence entre `let` et `var` est la façon dont la variable est initialisée : pour `let`, la variable est initialisée à l'endroit où le parseur évalue son contenu (cf. ci-après).
 
@@ -133,7 +147,7 @@ console.log(y); // "global2"
 
 ### Émuler le fonctionnement des interfaces privées
 
-En utilisant l'instruction `let` avec [des constructeurs](/fr/docs/Glossaire/Constructeur), on peut créer des _interfaces privées_ sans avoir à utiliser [de fermetures](/fr/docs/Web/JavaScript/Closures) :
+En utilisant l'instruction `let` avec [des constructeurs](/fr/docs/Glossary/Constructor), on peut créer des _interfaces privées_ sans avoir à utiliser [de fermetures](/fr/docs/Web/JavaScript/Guide/Closures) :
 
 ```js
 var Truc;
@@ -250,7 +264,7 @@ console.log(a); // 11
 console.log(b); // 2
 ```
 
-Cependant, la combinaison utilisée ci-après déclenchera une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError) car la déclaration avec `var` est remontée en haut du bloc et il y a donc une redéclaration implicite de la variable (également utilisée avec `let`).
+Cependant, la combinaison utilisée ci-après déclenchera une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) car la déclaration avec `var` est remontée en haut du bloc et il y a donc une redéclaration implicite de la variable (également utilisée avec `let`).
 
 ```js example-bad
 let x = 1;

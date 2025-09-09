@@ -7,9 +7,23 @@ slug: Web/JavaScript/Reference/Functions/rest_parameters
 
 La sintaxis de los **parámetros rest** nos permiten representar un número indefinido de argumentos como un array.
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
 
-La fuente interactiva de este ejemplo es almacenado en un repositorio de GitHub. Si a ti te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona este repositorio <https://github.com/mdn/interactive-examples> y envíanos un pull-request.
+```js interactive-example
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
 
 ## Sintaxis
 
@@ -76,7 +90,7 @@ function f(...args) {
 
 ### Desestructuración de los parametros rest
 
-Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ```js
 function f(...[a, b, c]) {
@@ -193,10 +207,10 @@ Para poder usar los métodos de `Array` en el objeto `arguments`, se debe conver
 
 ## Ver también
 
-- [Spread Operator](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [Spread Operator](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Arguments object](/es/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Functions](/es/docs/Web/JavaScript/Reference/Functions)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
-- [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring)

@@ -1,5 +1,5 @@
 ---
-title: ":defined"
+title: :defined
 slug: Web/CSS/:defined
 ---
 
@@ -95,4 +95,4 @@ Ces dernières règles sont utiles lorsqu'on a un élément personnalisé comple
 
 ## Voir aussi
 
-- [Les composants web](/fr/docs/Web/Web_Components)
+- [Les composants web](/fr/docs/Web/API/Web_components)

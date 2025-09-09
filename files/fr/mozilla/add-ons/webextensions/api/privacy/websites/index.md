@@ -12,13 +12,10 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
 ## Propriétés
 
 - `cookieConfig`
-
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un objet.
 
     L'objet a deux propriétés :
-
     - `behavior`: une chaîne qui peut prendre l'une des valeurs suivantes:
-
       - "allow_all": accepte tous les cookies
       - "reject_all": rejeter tous les cookies
       - "reject_third_party": rejeter tous les cookies tiers
@@ -28,7 +25,6 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
     - `nonPersistentCookies`: un booléen. Si la valeur est true, tous les cookies seront traités comme des cookies de session.
 
 - `firstPartyIsolate`
-
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen.
 
     SI `true`, la préférence `firstPartyIsolate` permet au navigateur d'associer toutes les données (y compris les cookies, les données HSTS, les images mises en cache, etc.) pour tous les domaines tiers avec le domaine dans la barre d'adresse. Cela empêche les suiveurs tiers d'utiliser directement les informations stockées pour identifier l'utilisateur sur différents sites Web, mais peut interrompre les sites Web dans lesquels l'utilisateur se connecte avec un compte tiers (tel qu'un compte Facebook ou Google).
@@ -40,9 +36,8 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
 - `protectedContentEnabled`
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Disponible uniquement sur Windows. Si `true`, le navigateur fournit un ID unique aux plugins afin d'exécuter le contenu protégé.
 - `referrersEnabled`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si activé, le navigateur envoie les en-têtes de [référence](/fr/docs/Web/HTTP/Headers/Referer) avec vos demandes.
+  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si activé, le navigateur envoie les en-têtes de [référence](/fr/docs/Web/HTTP/Reference/Headers/Referer) avec vos demandes.
 - `resistFingerprinting`
-
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen.
 
     Les empreintes digitales des navigateurs sont la pratique par laquelle les sites Web utilisent les API Web pour collecter des données d'état ou de configuration associées au navigateur ou à l'appareil sur lequel il s'exécute. En faisant cela, ils peuvent construire une empreinte numérique qu'ils peuvent utiliser pour identifier et suivre un utilisateur particulier.
@@ -52,11 +47,9 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
     Par défaut à `false`.
 
 - `thirdPartyCookiesAllowed`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si `false`, le navigateur bloque les [cookies tiers](/fr/docs/Web/HTTP/Cookies#Third-party_cookies).
+  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si `false`, le navigateur bloque les [cookies tiers](/fr/docs/Web/HTTP/Guides/Cookies#third-party_cookies).
 - `trackingProtectionMode`
-
   - : La "protection de suivi" est une fonctionnalité de navigateur qui bloque les requêtes faites sur des domaines qui sont connus pour s'engager dans le suivi multi-sites des utilisateurs. Les sites qui suivent les utilisateurs sont généralement des sites publicitaires et analytiques tiers. Ce paramètre est un objet {{WebExtAPIRef("types.BrowserSetting")}} qui détermine si le navigateur doit activer la protection de suivi. Sa valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs :
-
     - `"always"`: La protection de suivi est activée.
     - `"never"`: La protection de suivi est désactivée.
     - `"private_browsing"`: La protection de suivi est activée uniquement dans les fenêtres de navigation privée.
@@ -102,8 +95,6 @@ browser.browserAction.onClicked.addListener(() => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy). Cette documentation est dérivée de [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 
 Crée une instance d'un objet JavaScript **`Date`** qui représente un instant donné de façon indépendante de la plateforme. Les objets `Date` contiennent un nombre (`Number`) qui représente le nombre de millisecondes écoulées depuis le premier janvier 1970 (UTC).
 
-{{EmbedInteractiveExample("pages/js/date-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Date Constructor")}}
+
+```js interactive-example
+const date1 = new Date("December 17, 1995 03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+const date2 = new Date("1995-12-17T03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+console.log(date1 === date2);
+// Expected output: false
+
+console.log(date1 - date2);
+// Expected output: 0
+```
 
 ## Syntaxe
 
@@ -55,7 +69,6 @@ Lorsqu'aucun paramètre n'est fourni, le nouvel objet `Date` ainsi créé repré
 Soient au moins une année et un mois, cette forme de `Date()` renvoie un objet `Date` dont les valeurs des composantes (année, mois, jour, heure, minute, seconde, et milliseconde) proviennent des paramètres suivants. Chaque champ manquant prendra la valeur la plus basse possible (soit `1` pour le paramètre `day` et `0` pour les autres). Les valeurs des paramètres sont évaluées selon le fuseau horaire local et pas UTC.
 
 - `year`
-
   - : Une valeur entière représentant l'année.
 
     Les valeurs de `0` à `99` correspondent aux années `1900` à `1999`. Les autres valeurs correspondent aux années avec cette valeur. Voir [l'exemple](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#les_années_sur_deux_chiffres_correspondent_à_la_période_1900_–_1999).

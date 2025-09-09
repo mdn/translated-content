@@ -39,10 +39,10 @@ document.onclick = function (event) {
 
 ## Voir aussi
 
-- [Utiliser le mode plein écran](/fr/docs/Web/Guide/DOM/Using_full_screen_mode)
+- [Utiliser le mode plein écran](/fr/docs/Web/API/Fullscreen_API)
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}
-- [`allowfullscreen`](/fr/docs/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/fr/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

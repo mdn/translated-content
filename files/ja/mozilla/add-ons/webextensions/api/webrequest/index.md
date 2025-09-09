@@ -11,7 +11,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
 ![](webRequest-flow.png)
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} はリクエストの期間中のあらゆる時に発火します。また注意点としてイベントシーケンスがこれと違うこともあります: 例えば、Firefox では、[HSTS](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security) 更新の時には、`onBeforeRequest` のすぐ後に `onBeforeRedirect` イベントが発火します。
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} はリクエストの期間中のあらゆる時に発火します。また注意点としてイベントシーケンスがこれと違うこともあります: 例えば、Firefox では、[HSTS](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) 更新の時には、`onBeforeRequest` のすぐ後に `onBeforeRedirect` イベントが発火します。
 
 `onErrorOccurred` を除くすべてのイベントは `addListener()` への次の 3 つの引数を取ります:
 
@@ -21,7 +21,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
 リスナー関数はリクエストの情報を含む `details` オブジェクトを渡されます。これにはリクエスト ID が入っていて、その ID でアドオンは単一のリクエストとイベントを関連付けられます。これはブラウザーセッションとアドオンのコンテキストごとにユニークです。リダイレクトと認証交換であっても、リクエストを通じて同じ値を保ちます。
 
-あるホストに webRequest API を使うには、拡張機能は "webRequest" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) とそのホストの [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) を持たねばなりません。「ブロッキング」機能を使うためには、拡張機能は "webRequestBlocking" API 権限も必要です。
+あるホストに webRequest API を使うには、拡張機能は "webRequest" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) とそのホストの [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) を持たねばなりません。「ブロッキング」機能を使うためには、拡張機能は "webRequestBlocking" API 権限も必要です。
 
 ページに読み込まれるリソース (例えば画像、スクリプト、スタイルシート) を中断するには、拡張機能はそのメインページと同様にリソースの host パーミッションも持っている必要があります。例えば、"https\://developer.mozilla.org" のページが "https\://mdn.mozillademos.org" から画像を読み込む場合、画像のリクエストを中断するには拡張機能は両方の host パーミッションを持たねばなりません。
 
@@ -30,26 +30,21 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 いくつかのイベントでは、リクエストを修正できます。特に、次のことが可能:
 
 - 次の API でリクエストをキャンセル:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 - 次の API でリクエストをリダイレクト:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 次の API でリクエストヘッダーの修正:
-
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
 - 次の API でレスポンスヘッダーの修正:
-
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 次の API で認証資格情報の提供:
-
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 これを行うには、イベント `addListener()` の `extraInfoSpec` の引数に"blocking"の値のオプションを渡す必要があります。これによりリスナーが同期します。このリスナーでは {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} オブジェクトを返すことができ、このオブジェクトは加えた修正を指し示します: 例えば、送信したい修正後のリクエストヘッダーなど。
@@ -67,7 +62,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 {{WebExtAPIRef("webRequest.filterResponseData")}} にリクエスト ID を渡すことで得られる {{WebExtAPIRef("webRequest.StreamFilter")}} を使うと、ブラウザーが受け取った HTTP リクエストのレスポンス本文を検査したり修正したりすることができます。
 
-そのためには、"webRequestBlocking" パーミッションと "webRequest" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 、さらに修正したい対象のリクエスト URL にあてはまる [host permission](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 権限を得ている必要があります。
+そのためには、"webRequestBlocking" パーミッションと "webRequest" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) 、さらに修正したい対象のリクエスト URL にあてはまる [host permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) 権限を得ている必要があります。
 
 ## 型
 
@@ -127,12 +122,12 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 {{Compat}}
 
-[Extra notes on Chrome incompatibilities](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
+[Extra notes on Chrome incompatibilities](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities).
 
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

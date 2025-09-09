@@ -5,13 +5,20 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 **`function`** 声明创建一个{{Glossary("binding", "绑定")}}到给定名称的新函数。
 
 你也可以使用 [`function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)来定义函数。
 
-{{EmbedInteractiveExample("pages/js/statement-function.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function", "shorter")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 ## 语法
 

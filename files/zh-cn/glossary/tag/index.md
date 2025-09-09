@@ -15,4 +15,4 @@ HTML 元素的名称是出现在元素的开始标签的开头和结束标签的
 
 - 维基百科上的 [HTML 元素](https://zh.wikipedia.org/wiki/HTML元素)
 - {{glossary("WHATWG")}} 上的 [HTML 元素语法](https://html.spec.whatwg.org/multipage/syntax.html#elements-2)
-- [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
+- [HTML 简介](/zh-CN/docs/Learn_web_development/Core/Structuring_content)

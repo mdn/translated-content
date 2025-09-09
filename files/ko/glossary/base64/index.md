@@ -21,7 +21,7 @@ Base64 인코딩 체계는 일반적으로 ASCII 텍스트만 처리할 수 있�
 
 - [MIME](https://en.wikipedia.org/wiki/MIME)를 통한 이메일
 - [XML](/ko/docs/Web/XML)에 복잡한 데이터 저장
-- [`data:` URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)에 포함될 수 있도록 바이너리 데이터를 인코딩
+- [`data:` URL](/ko/docs/Web/URI/Reference/Schemes/data)에 포함될 수 있도록 바이너리 데이터를 인코딩
 
 ## 인코딩된 크기 증가
 
@@ -33,8 +33,8 @@ Base64 인코딩 체계는 일반적으로 ASCII 텍스트만 처리할 수 있�
 
 브라우저는 기본적으로 Base64 문자열을 디코딩하고 인코딩하기 위한 두 가지 JavaScript 함수를 제공합니다.
 
-- [`btoa`](/ko/docs/Web/API/btoa): 이진 데이터 문자열에서 Base64로 인코딩된 ASCII 문자열을 생성합니다("btoa"는 "binary to ASCII"로 읽어야 합니다).
-- [`atob`](/ko/docs/Web/API/atob): Base64로 인코딩된 문자열을 디코딩합니다("atob"는 "ASCII to binary"로 읽어야 합니다).
+- [`btoa`](/ko/docs/Web/API/Window/btoa): 이진 데이터 문자열에서 Base64로 인코딩된 ASCII 문자열을 생성합니다("btoa"는 "binary to ASCII"로 읽어야 합니다).
+- [`atob`](/ko/docs/Web/API/Window/atob): Base64로 인코딩된 문자열을 디코딩합니다("atob"는 "ASCII to binary"로 읽어야 합니다).
 
 > [!NOTE]
 > Base64는 텍스트 인코딩이 아닌 바이너리 인코딩이지만, 바이너리 데이터 타입을 지원하기 전에 `btoa` 및 `atob`가 웹 플랫폼에 추가되었습니다. 결과적으로 두 함수는 문자열을 사용하여 이진 데이터를 나타내며, 각 문자의 코드 포인트는 각 바이트 값을 나타냅니다. 이로 인해, `btoa`를 사용하여 임의의 텍스트 데이터를 인코딩할 수 있다는 일반적인 오해가 생겼습니다. 예를 들어, 텍스트 또는 HTML 문서의 Base64 `data:` URL을 생성하는 것입니다.

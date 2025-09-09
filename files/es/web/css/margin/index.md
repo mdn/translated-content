@@ -3,8 +3,6 @@ title: margin
 slug: Web/CSS/margin
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`margin`** establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen: {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }} y {{ cssxref("margin-left") }}.
@@ -127,4 +125,4 @@ Sin embargo, en navegadores antiguos como IE8-9, **flexbox** no está disponible
 
 ## Ver también
 
-- [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing)
+- [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)

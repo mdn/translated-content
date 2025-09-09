@@ -5,11 +5,25 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{jsSidebar("Statements")}}
-
 **`for await...of`** 语句创建一个循环，该循环遍历[异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)以及[同步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。该语句只能在可以使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 的上下文中使用，包括[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)体内以及[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)中。
 
-{{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - For Await...Of", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield 1;
+  yield 2;
+}
+
+(async function () {
+  for await (const num of foo()) {
+    console.log(num);
+    // Expected output: 1
+
+    break; // Closes iterator, triggers return
+  }
+})();
+```
 
 ## 语法
 
@@ -19,7 +33,7 @@ for await (variable of iterable)
 ```
 
 - `variable`
-  - : 每次迭代时从序列接收一个值。可以是用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量，也可以是[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如之前声明的变量、对象属性或[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for await...of` 循环所在的作用域相同。
+  - : 每次迭代时从序列接收一个值。可以是用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量，也可以是[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如之前声明的变量、对象属性或[解构模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for await...of` 循环所在的作用域相同。
 - `iterable`
   - : 异步可迭代对象或同步可迭代对象。循环操作的序列值的来源。
 - `statement`

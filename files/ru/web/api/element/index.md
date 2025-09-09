@@ -44,11 +44,10 @@ _Наследует свойства от родительского узла {{
 - {{ domxref("Element.innerHTML") }} {{experimental_inline}}
   - : Является {{domxref("DOMString")}}, представляющей разметку контента элемента.
 - {{domxref("Element.namespaceURI")}} {{readonlyInline}}
-
   - : Пространство имён URI элемента или null, если это не пространство имён.
 
     > [!NOTE]
-    > В Firefox версии 3.5 и ранее, HTML-элементы не находятся в пространстве имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) как в деревьях HTML, так и XML.
+    > В Firefox версии 3.5 и ранее, HTML-элементы не находятся в пространстве имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) как в деревьях HTML, так и XML.
 
 - {{ domxref("ParentNode.lastElementChild") }}
   - : Является {{ domxref("Element") }}, последним непосредственным дочерним элементом данного элемента, или `null`, если у элемента нет дочерних элементов.
@@ -87,9 +86,9 @@ _Наследует свойства от родительского узла {{
 ### Обработчики событий
 
 - {{ domxref("Element.ongotpointercapture") }}
-  - : Возвращает обработчик событий для событий типа {{event("gotpointercapture")}}.
+  - : Возвращает обработчик событий для событий [`gotpointercapture`](/ru/docs/Web/API/Element/gotpointercapture_event).
 - {{ domxref("Element.onlostpointercapture") }}
-  - : Возвращает обработчик событий для событий типа {{event("lostpointercapture")}}.
+  - : Возвращает обработчик событий для событий [`lostpointercapture`](/ru/docs/Web/API/Element/lostpointercapture_event).
 
 #### Устаревшие обработчики событий
 

@@ -16,7 +16,7 @@ Le contexte du _worker_ est représenté par un objet {{domxref("DedicatedWorker
 > [!NOTE]
 > Voir [la page d'entrée pour l'API Web Workers](/fr/docs/Web/API/Web_Workers_API) pour consulter la documentation de référence sur les _workers_ et d'autres guides.
 
-Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/API_IndexedDB). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/IndexedDB_API). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 Les données sont échangées entre le _thread_ du _worker_ et le _thread_ principal par l'intermédiaire de messages. Chaque partie peut envoyer des messages à l'aide de la méthode `postMessage()` et réagir aux messages reçus grâce au gestionnaire d'évènement `onmessage` (le message sera contenu dans l'attribut `data` de l'évènement [`message`](/fr/docs/Web/API/Worker/message_event) associé). Les données sont copiées dans le message, elles ne sont pas partagées.
 
@@ -217,21 +217,21 @@ Toutefois, la communication entre les _web workers_ est contrôlée explicitemen
 
 ## Règles de sécurité du contenu (_content security policy_, CSP)
 
-Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
+Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/Guides/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
 
 ```
 Content-Security-Policy: script-src 'self'
 ```
 
-Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
+Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
 
-Pour appliquer une règle de sécurité au _worker_, il faudra fournir un en-tête [Content-Security-Policy](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) approprié pour la requête responsable du service du script du _worker_.
+Pour appliquer une règle de sécurité au _worker_, il faudra fournir un en-tête [Content-Security-Policy](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) approprié pour la requête responsable du service du script du _worker_.
 
 Si l'origine du script du _worker_ est un identifiant global unique (si son URL utilise le schéma `data://` ou `blob://` par exemple), le _worker_ héritera du CSP associé au document responsable de sa création.
 
 ## Échanger des données avec les _workers_ : plus de détails
 
-Les données échangées entre le document principal et les _workers_ sont **copiées** et non partagées. Lorsqu'ils sont envoyés au _worker_, les objets sont sérialisés (puis désérialisés à leur réception). La page et le _worker_ **ne partagent pas le même exemplaire** et on a donc deux versions d'une part et d'autre. La plupart des navigateurs implémentent cette approche avec [une clonage structurel](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure).
+Les données échangées entre le document principal et les _workers_ sont **copiées** et non partagées. Lorsqu'ils sont envoyés au _worker_, les objets sont sérialisés (puis désérialisés à leur réception). La page et le _worker_ **ne partagent pas le même exemplaire** et on a donc deux versions d'une part et d'autre. La plupart des navigateurs implémentent cette approche avec [une clonage structurel](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 Pour illustrer ce point, on prendra une fonction intitulée `emulateMessage()` et qui simule le comportement d'une valeur clonée (pas partagée) avec un _worker_ attaché à la page principale et réciproquement :
 
@@ -299,7 +299,7 @@ onmessage = function (oEvent) {
 };
 ```
 
-L'[algorithme de clonage structurel](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure) permet de sérialiser aussi bien des données JSON que d'autres formats et permet notamment de gérer les références circulaires (ce que JSON ne permet pas de gérer nativement).
+L'[algorithme de clonage structurel](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) permet de sérialiser aussi bien des données JSON que d'autres formats et permet notamment de gérer les références circulaires (ce que JSON ne permet pas de gérer nativement).
 
 ### Les objets transférables - échanger des données avec transfert de la propriété
 
@@ -493,8 +493,8 @@ Les ordinateurs dotés de plusieurs coeurs se généralisent et il peut s'avére
 
 En plus des web _workers_ (dédiés et partagés), il existe d'autres types de _workers_ :
 
-- [Les service _workers_](/fr/docs/Web/API/ServiceWorker_API) peuvent notamment servir de serveurs mandataires (_proxy_) entre les applications web, le navigateur et le réseau (lorsque celui-ci est disponible). Ces _workers_ sont conçus afin de permettre des utilisations hors-ligne en interceptant les requêtes réseau et en déclenchant les actions nécessaires selon que le réseau est disponible ou non et que les ressources souhaitées sont disponibles sur le serveur. Ces _workers_ permettent de déclencher des notifications _push_ et d'utiliser des API de synchronisation en arrière-plan.
-- [Les _worklets_ audio](/fr/docs/Web/API/Web_Audio_API#Audio_processing_in_JavaScript) permettent de traiter des signaux audios en arrière-plan (fonctionnalité expérimentale).
+- [Les service _workers_](/fr/docs/Web/API/Service_Worker_API) peuvent notamment servir de serveurs mandataires (_proxy_) entre les applications web, le navigateur et le réseau (lorsque celui-ci est disponible). Ces _workers_ sont conçus afin de permettre des utilisations hors-ligne en interceptant les requêtes réseau et en déclenchant les actions nécessaires selon que le réseau est disponible ou non et que les ressources souhaitées sont disponibles sur le serveur. Ces _workers_ permettent de déclencher des notifications _push_ et d'utiliser des API de synchronisation en arrière-plan.
+- [Les _worklets_ audio](/fr/docs/Web/API/Web_Audio_API#audio_processing_in_javascript) permettent de traiter des signaux audios en arrière-plan (fonctionnalité expérimentale).
 
 ## Fonctions et interfaces disponibles pour les _workers_
 
@@ -508,7 +508,7 @@ La plupart des fonctionnalités JavaScript standard peuvent être utilisées dan
 En revanche, un _worker_ ne pourra pas directement manipuler la page parente et notamment le DOM et les objets de la page. Il faudra effectuer ce traitement indirectement, via des messages.
 
 > [!NOTE]
-> Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+> Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## Spécifications
 
@@ -518,4 +518,4 @@ En revanche, un _worker_ ne pourra pas directement manipuler la page parente et 
 
 - [L'interface `Worker`](/fr/docs/Web/API/Worker)
 - [L'interface `SharedWorker`](/fr/docs/Web/API/SharedWorker)
-- [Les fonctions disponibles dans les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
+- [Les fonctions disponibles dans les _workers_](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)

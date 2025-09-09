@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Operator_precedence
 
 La **precedencia de operadores** determina el orden en el cual los operadores son evaluados uno respecto del otro. Los operadores con mayor precedencia se convierten en los operandos de los operadores con menor precedencia.
 
-{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+
+```js interactive-example
+console.log(3 + 4 * 5); // 3 + 20
+// Expected output: 23
+
+console.log(4 * 3 ** 2); // 4 * 9
+// Expected output: 36
+
+let a;
+let b;
+
+console.log((a = b = 5));
+// Expected output: 5
+```
 
 ## Precedencia y Asociatividad
 
@@ -243,8 +257,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td rowspan="5">18</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Acceso a propiedades (notación por punto)", "#notaci.c3.b3n_por_punto",
-                1)}}
+        {{jsxref("Operators/Property_Accessors", "Acceso a propiedades (notación por punto)", "#notaci.c3.b3n_por_punto", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… . …</code></td>

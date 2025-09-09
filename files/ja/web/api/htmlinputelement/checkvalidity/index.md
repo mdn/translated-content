@@ -8,10 +8,10 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`checkValidity()`** は {{domxref("HTMLInputElement")}} インターフェイスのメソッドで、その要素が適用された[制約検証](/ja/docs/Web/HTML/Constraint_validation)ルールを満たしているかどうかを示す論理値を返します。false の場合は、メソッドは要素上で {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントも発行します。`checkValidity()` には既定でブラウザーの動作が設定されていないため、この `invalid` イベントをキャンセルしても効果はありません。
+**`checkValidity()`** は {{domxref("HTMLInputElement")}} インターフェイスのメソッドで、その要素が適用された[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)ルールを満たしているかどうかを示す論理値を返します。false の場合は、メソッドは要素上で {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントも発行します。`checkValidity()` には既定でブラウザーの動作が設定されていないため、この `invalid` イベントをキャンセルしても効果はありません。
 
 > [!NOTE]
-> HTML の {{htmlelement("select")}} 要素で、{{domxref("HTMLInputElement.validationMessage", "validationMessage")}} が null 以外の値を持つものは不正なものと見なされ、CSS の {{cssxref(":invalid")}} 擬似クラスに一致し、`checkValidity()` が false を返すようになります。 {{domxref("HTMLInputElement.setCustomValidity()")}} メソッドを使用して、{{domxref("HTMLInputElement.validationMessage")}} を空文字列に設定すると、{{domxref("HTMLInputElement.validity", "validity")}} 状態が妥当となります。
+> HTML の {{htmlelement("input")}} 要素で、{{domxref("HTMLInputElement.validationMessage", "validationMessage")}} が null 以外の値を持つものは不正なものと見なされ、CSS の {{cssxref(":invalid")}} 擬似クラスに一致し、`checkValidity()` が false を返すようになります。 {{domxref("HTMLInputElement.setCustomValidity()")}} メソッドを使用して、{{domxref("HTMLInputElement.validationMessage")}} を空文字列に設定すると、{{domxref("HTMLInputElement.validity", "validity")}} 状態が妥当となります。
 
 ## 構文
 
@@ -83,6 +83,6 @@ checkButton.addEventListener("click", () => {
 - {{domxref("HTMLInputElement.reportValidity()")}}
 - {{HTMLElement("input")}}
 - {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス

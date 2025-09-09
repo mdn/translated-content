@@ -46,7 +46,7 @@ var expression = new String("2 + 2");
 eval(expression.toString()); // retorna 4
 ```
 
-Se você usar a função `eval` _indiretamente_, invocando-a por outra referência além de `eval`, [a partir do ECMAScript 5](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) funciona no escopo global ao invés do escopo local. Significa que, por exemplo, aquelas declarações de funções criam funções globais e que o código que está sendo avaliado não tem acesso às variáveis locais dentro do escopo onde está sendo chamada.
+Se você usar a função `eval` _indiretamente_, invocando-a por outra referência além de `eval`, [a partir do ECMAScript 5](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) funciona no escopo global ao invés do escopo local. Significa que, por exemplo, aquelas declarações de funções criam funções globais e que o código que está sendo avaliado não tem acesso às variáveis locais dentro do escopo onde está sendo chamada.
 
 ```js
 function test() {
@@ -78,7 +78,7 @@ var propname = getPropName(); //retorna "a" ou "b"
 eval("var result = obj." + propname);
 ```
 
-No entanto, `eval()` não é necessário aqui. De fato, sua utilização não é recomendada. Ao invés disso, utilize os [operadores de acesso](/pt-BR/docs/Web/JavaScript/Reference/Operators/Member_Operators), que são mais rápidos e seguros:
+No entanto, `eval()` não é necessário aqui. De fato, sua utilização não é recomendada. Ao invés disso, utilize os [operadores de acesso](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors), que são mais rápidos e seguros:
 
 ```js
 var obj = { a: 20, b: 30 };
@@ -102,13 +102,13 @@ elt.addEventListener("click", function() { ... } , false);
 
 ### Analisando JSON (convertendo string para objetos JavaScript)
 
-Se a string para a qual você está chamando o `eval()` contém dados (por exemplo, um array: `"[1, 2, 3]"`), ao invés de código, você deve considerar mudar para [JSON](/pt-BR/docs/JSON), que permite a string usar um subconjunto de sintaxe Javascript para representar dados. Veja também [Downloading JSON and JavaScript in extensions](/pt-BR/docs/Downloading_JSON_and_JavaScript_in_extensions).
+Se a string para a qual você está chamando o `eval()` contém dados (por exemplo, um array: `"[1, 2, 3]"`), ao invés de código, você deve considerar mudar para [JSON](/pt-BR/docs/Glossary/JSON), que permite a string usar um subconjunto de sintaxe Javascript para representar dados. Veja também [Downloading JSON and JavaScript in extensions](/pt-BR/docs/Downloading_JSON_and_JavaScript_in_extensions).
 
 Perceba que como a sintaxe JSON é limitada comparada com a sintaxe JavaScript, muitos literais JavaScript válidos não serão analisados como JSON. Por exemplo, trailing commas não são permitidas em JSON, e nomes de propriedades (keys) em literais de objetos devem ser colocados entre aspas. Certifique-se de usar um serializados JSON para gerar strings que serão analisadas como JSON mais tarde.
 
 ### Passar dados em vez de códigos
 
-Por exemplo, uma extensão concebida para raspar conteúdos de páginas web pode ter as regras de raspagem definidas no [XPath](/pt-BR/docs/XPath) em vez de código JavaScript.
+Por exemplo, uma extensão concebida para raspar conteúdos de páginas web pode ter as regras de raspagem definidas no [XPath](/pt-BR/docs/Web/XPath) em vez de código JavaScript.
 
 ### Rodando o código com privilégios limitados
 
@@ -116,7 +116,7 @@ Se você precisa executar o código, considere executá-lo com privilégios limi
 
 ## Exemplos
 
-Os exemplos a seguir mostram o retorno do [`document.write`](/pt-BR/docs/Web/API/document.write). No JavaScript rodando no server-side, você pode obter o mesmo resultado chamando o método `write()ao invés` de usar o `document.write()`.
+Os exemplos a seguir mostram o retorno do [`document.write`](/pt-BR/docs/Web/API/Document/write). No JavaScript rodando no server-side, você pode obter o mesmo resultado chamando o método `write()ao invés` de usar o `document.write()`.
 
 ### Exemplo: Usando `eval`
 
@@ -178,4 +178,4 @@ var fct2 = eval(fctStr2); // return a function
 ## Veja também
 
 - {{jsxref("Global_Objects/uneval", "uneval()")}}
-- [Member operators](/pt-BR/docs/Web/JavaScript/Reference/Operators/Member_Operators)
+- [Member operators](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors)

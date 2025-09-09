@@ -39,4 +39,4 @@ function potentiallyBuggyCode() {
 ## Смотрите также
 
 - [Debugging JavaScript](/ru/docs/Debugging_JavaScript)
-- [The Debugger in the Firefox Developer Tools](/ru/docs/Tools/Debugger)
+- [The Debugger in the Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

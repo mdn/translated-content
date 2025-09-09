@@ -17,7 +17,7 @@ _A interface AbortSignal também herda propriedades de sua interface pai, {{domx
 ### Handlers de Eventos
 
 - {{domxref("AbortSignal.onabort")}}
-  - : Invocado quando um {{event("abort_(dom_abort_api)", "abort")}} evento dispara, ex: quando as requests do DOM que o sinal estão se comunicando são/estão abortadas.
+  - : Invocado quando um [`abort`](</pt-BR/docs/Web/Events/abort_(dom_abort_api)>) evento dispara, ex: quando as requests do DOM que o sinal estão se comunicando são/estão abortadas.
 
 ## Métodos
 
@@ -29,7 +29,7 @@ No exemplo de código a seguir, nós vamos focar em fazer download de um vídeo 
 
 Nós primeiro criaremos um controller usando o construtor do {{domxref("AbortController.AbortController","AbortController()")}}, e então pegar a referência de seu objeto {{domxref("AbortSignal")}} associado usando a propriedade {{domxref("AbortController.signal")}}.
 
-Quando a [requisição Fetch](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) é iniciada, nós passamos o `AbortSignal` como uma opção dentro do objeto de opções da request (veja `{signal}`, abaixo). Isso associa o sinal e o controller com a requisição fetch e nos permite aborta-la chamando {{domxref("AbortController.abort()")}}, como visto abaixo no segundo `event listener`.
+Quando a [requisição Fetch](/pt-BR/docs/Web/API/Window/fetch) é iniciada, nós passamos o `AbortSignal` como uma opção dentro do objeto de opções da request (veja `{signal}`, abaixo). Isso associa o sinal e o controller com a requisição fetch e nos permite aborta-la chamando {{domxref("AbortController.abort()")}}, como visto abaixo no segundo `event listener`.
 
 ```js
 var controller = new AbortController();

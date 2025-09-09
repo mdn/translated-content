@@ -1,15 +1,28 @@
 ---
 title: Set.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`values()`** は {{jsxref("Set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。これはこの集合のそれぞれの要素をの値を挿入順に返します。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.values")}}
+
+```js interactive-example
+const set = new Set();
+set.add(42);
+set.add("forty two");
+
+const iterator = set.values();
+
+console.log(iterator.next().value);
+// 予想される結果: 42
+
+console.log(iterator.next().value);
+// 予想される結果: "forty two"
+```
 
 ## 構文
 

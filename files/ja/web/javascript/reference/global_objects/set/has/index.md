@@ -1,15 +1,27 @@
 ---
 title: Set.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`has()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値をもつ要素がこの集合内に存在するかどうかを示す論理値を返します。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.has()")}}
+
+```js interactive-example
+const set = new Set([1, 2, 3, 4, 5]);
+
+console.log(set.has(1));
+// 予想される結果: true
+
+console.log(set.has(5));
+// 予想される結果: true
+
+console.log(set.has(6));
+// 予想される結果: false
+```
 
 ## 構文
 
@@ -37,13 +49,13 @@ mySet.add("foo");
 console.log(mySet.has("foo")); // true
 console.log(mySet.has("bar")); // false
 
-const set1 = new Set();
+const set = new Set();
 const obj1 = { key1: 1 };
-set1.add(obj1);
+set.add(obj1);
 
-console.log(set1.has(obj1)); // true
-console.log(set1.has({ key1: 1 })); // オブジェクト参照が異なるため false を返す
-console.log(set1.add({ key1: 1 })); // set1 には 2 つの項目が含まれるようになる
+console.log(set.has(obj1)); // true
+console.log(set.has({ key1: 1 })); // オブジェクト参照が異なるため false を返す
+console.log(set.add({ key1: 1 })); // set には 2 つの項目が含まれるようになる
 ```
 
 ## 仕様書

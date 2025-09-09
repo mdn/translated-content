@@ -3,13 +3,109 @@ title: position
 slug: Web/CSS/position
 ---
 
-{{CSSRef}}A propriedade **`position`**, encontrada no [CSS](/pt-BR/docs/Web/CSS), define como um elemento pode ser posicionado (renderizado) no documento (página). Essa propriedade (**`position`**) pode ser acompanhada de outras, tais como, {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}}, que determinam como ficará a localização final do objeto, permitindo seu deslocamento, como será apresentado adiante.{{EmbedInteractiveExample("pages/css/position.html")}}
+{{CSSRef}}
+
+A propriedade **`position`**, encontrada no [CSS](/pt-BR/docs/Web/CSS), define como um elemento pode ser posicionado (renderizado) no documento (página). Essa propriedade (**`position`**) pode ser acompanhada de outras, tais como, {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}}, que determinam como ficará a localização final do objeto, permitindo seu deslocamento, como será apresentado adiante.
+
+{{InteractiveExample("CSS Demo: position")}}
+
+```css interactive-example-choice
+position: static;
+```
+
+```css interactive-example-choice
+position: relative;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: absolute;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: sticky;
+top: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element-container">
+    <p>
+      In this demo you can control the <code>position</code> property for the
+      yellow box.
+    </p>
+    <div class="box"></div>
+    <div class="box" id="example-element"></div>
+    <div class="box"></div>
+    <p class="clear">
+      To see the effect of <code>sticky</code> positioning, select the
+      <code>position: sticky</code> option and scroll this container.
+    </p>
+    <p>
+      The element will scroll along with its container, until it is at the top
+      of the container (or reaches the offset specified in <code>top</code>),
+      and will then stop scrolling, so it stays visible.
+    </p>
+    <p>
+      The rest of this text is only supplied to make sure the container
+      overflows, so as to enable you to scroll it and see the effect.
+    </p>
+    <hr />
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.box {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  float: left;
+  width: 65px;
+  height: 65px;
+}
+
+.box + .box {
+  margin-left: 10px;
+}
+
+.clear {
+  clear: both;
+  padding-top: 1em;
+}
+
+#example-element-container {
+  position: relative;
+  text-align: left;
+}
+
+#example-element {
+  background-color: yellow;
+  border: 3px solid red;
+  z-index: 1;
+}
+```
 
 ### Tipos de posicionamentos
 
-- Um **elemento posicionado** é um elemento cujo valor de sua posição pode ser [computado (calculado)](/pt-BR/docs/CSS/computed_value) como `relative`, `absolute`, `fixed`, or `sticky`. ( Em outras palavras, são todos esses, com exceção do `static`, sendo estático o valor como padrão do elemento.)
-- Um elemento denominado com **posicionamento relativo**, ou **relatively positioned element**, é um elemento cuja função é [calculada](/pt-BR/docs/CSS/computed_value) ao ser definida a `position` como valor `relative`. Com isso, a propriedade {{Cssxref("top")}} e {{Cssxref("bottom")}} determinam o deslocamento ou projeção vertical a posição padrão do elemento que estava definida por `static`; Não sendo outro, o {{Cssxref("left")}} e o {{Cssxref("right")}}, por sua vez, determinam o deslocamento horizontal.
-- Um elemento denominado com **posicionamento absoluto**, ou **absolutely positioned element**, é um elemento determinado e calculado ao atribuir ao `position` o valor `absolute` ou `fixed`. Com {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} é possível especificar o deslocamento das laterais (bordas) dos blocos que contêm ([containing block](/pt-BR/docs/Web/CSS/Containing_Block)) os elementos. (O containing block, ou blocos que envolvem um elemento é definido como um antecessor relativo ao qual o elemento está posicionado, acomplado ou englobado. Se por ventura o elemento tiver definido margens (margin), ele são adicionados ao deslocamento (offset). O elemento estabelecerá um novo [contexto de formatação do bloco](/pt-BR/docs/Web/Guide/CSS/Block_formatting_context) (BFC) para seus conteúdos.
+- Um **elemento posicionado** é um elemento cujo valor de sua posição pode ser [computado (calculado)](/pt-BR/docs/Web/CSS/CSS_cascade/computed_value) como `relative`, `absolute`, `fixed`, or `sticky`. ( Em outras palavras, são todos esses, com exceção do `static`, sendo estático o valor como padrão do elemento.)
+- Um elemento denominado com **posicionamento relativo**, ou **relatively positioned element**, é um elemento cuja função é [calculada](/pt-BR/docs/Web/CSS/CSS_cascade/computed_value) ao ser definida a `position` como valor `relative`. Com isso, a propriedade {{Cssxref("top")}} e {{Cssxref("bottom")}} determinam o deslocamento ou projeção vertical a posição padrão do elemento que estava definida por `static`; Não sendo outro, o {{Cssxref("left")}} e o {{Cssxref("right")}}, por sua vez, determinam o deslocamento horizontal.
+- Um elemento denominado com **posicionamento absoluto**, ou **absolutely positioned element**, é um elemento determinado e calculado ao atribuir ao `position` o valor `absolute` ou `fixed`. Com {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} é possível especificar o deslocamento das laterais (bordas) dos blocos que contêm ([containing block](/pt-BR/docs/Web/CSS/Containing_Block)) os elementos. (O containing block, ou blocos que envolvem um elemento é definido como um antecessor relativo ao qual o elemento está posicionado, acomplado ou englobado. Se por ventura o elemento tiver definido margens (margin), ele são adicionados ao deslocamento (offset). O elemento estabelecerá um novo [contexto de formatação do bloco](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) para seus conteúdos.
 - Um elemento denominado com **posicionamento adesivo** ( ! ), ou **stickily positioned element**, é um elemento determinado e calculado ao atribuir ao `position` como valor `sticky`. Sendo tratado como um posicionamento relativo até que ultrapasse (atinja) os limites do [bloco no qual está contido](/pt-BR/docs/docs/Web/CSS/Containing_Block). (Se assemelha a configurar a propriedade {{Cssxref("top")}} com um valor diferente de automático (auto)) Dentro do seu fluxo principal (fluxo raiz, ou o contêiner no qual ele desloca-se), No momento que há o deslocamento da página o elemento é tratado como "preso" ou "stuck" até encontrar-se com as paredes opostas do [bloco no qual esteja contido](/pt-BR/docs/docs/Web/CSS/Containing_Block).
 
 Maior parte do tempo, um **elemento de posicionamento absoluto** que tem {{Cssxref("height")}} e {{Cssxref("width")}} configurados como `auto` são dimensionados de acordo com seu conteúdo interno. However, non-[replaced](/pt-BR/docs/Web/CSS/Replaced_element), absolutely positioned elements can be made to fill the available vertical space by specifying both {{Cssxref("top")}} and {{Cssxref("bottom")}} and leaving {{Cssxref("height")}} unspecified (that is, `auto`). They can likewise be made to fill the available horizontal space by specifying both {{Cssxref("left")}} and {{Cssxref("right")}} and leaving {{Cssxref("width")}} as `auto`.
@@ -28,28 +124,24 @@ A propriedade `position` é definida com apenas uma palavra-chave da lista abaix
 - `static`
   - : O elemento é posicionado de acordo com o fluxo normal do documento. O {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, e {{cssxref("z-index")}} propriedades _não têm efeito._. Este é o valor padrão.
 - `relative`
-
   - : O elemento é posicionado de acordo com o fluxo normal do documento e, em seguida, deslocado _em relação a si mesmo_ com base nos valores de `top`, `right`, `bottom`, e `left`. O deslocamento não afeta a posição de nenhum outro elemento; assim, o espaço dado para o elemento no layout da página é o mesmo que se a posição fosse `static`.
 
-    Este valor cria um novo [stacking context (contexto de empilhamento)](/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) quando o valor de `z-index` não for `auto`. Seu efeito em `table-*-group`, `table-row`, `table-column`, `table-cell` e os elementos `table-caption` são indefinidos.
+    Este valor cria um novo [stacking context (contexto de empilhamento)](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) quando o valor de `z-index` não for `auto`. Seu efeito em `table-*-group`, `table-row`, `table-column`, `table-cell` e os elementos `table-caption` são indefinidos.
 
 - `absolute`
-
   - : O elemento é removido do fluxo normal de documentos e nenhum espaço é criado para o elemento no layout da página. Ele é posicionado em relação ao seu ancestral posicionado mais próximo, se houver; caso contrário, ele é colocado em relação ao inicial [containing block](/pt-BR/docs/Web/CSS/Containing_Block). Sua posição final é determinada pelos valores de `top`, `right`, `bottom`, e `left`.
 
-    Este valor cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) quando o valor de `z-index` não é `auto`. As margens das caixas posicionadas absolutamente não [collapse](/pt-BR/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) com outras margens.
+    Este valor cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) quando o valor de `z-index` não é `auto`. As margens das caixas posicionadas absolutamente não [collapse](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) com outras margens.
 
 - `fixed`
-
   - : O elemento é removido do fluxo normal de documentos e nenhum espaço é criado para o elemento no layout da página. Ele está posicionado em relação ao inicial [containing block](/pt-BR/docs/Web/CSS/Containing_Block) estabelecido pelo {{glossary("viewport")}}, exceto quando um de seus ancestrais tiver uma propriedade `transform`, `perspective` ou `filter` definida como algo diferente de `none` (see the [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), nesse caso, esse ancestral se comporta como o bloco que o contém. (Observe que há inconsistências no navegador com `perspective` e `filter` contribuindo para conter a formação do bloco.) Sua posição final é determinada pelos valores de `top`, `right`, `bottom` e `left`.
 
-    Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). Em documentos impressos, o elemento é colocado na mesma posição em _todas as páginas_.
+    Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Em documentos impressos, o elemento é colocado na mesma posição em _todas as páginas_.
 
 - `sticky`
-
   - : O elemento é posicionado de acordo com o fluxo normal do documento e, em seguida, deslocado em relação ao _ancestral de rolagem mais próximo_ e [containing block](/pt-BR/docs/Web/CSS/Containing_Block) (ancestral de nível de bloco mais próximo), incluindo elementos relacionados à tabela, com base nos valores de `top`, `right`, `bottom` e `left`. O deslocamento não afeta a posição de nenhum outro elemento.
 
-    Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). Observe que um elemento sticky "gruda" em seu ancestral mais próximo que possui um "mecanismo de rolagem" (criado quando `overflow` é `hidden`, `scroll`, `auto` ou `overlay`), mesmo que esse ancestral não seja o ancestral de rolagem mais próximo. Isso inibe efetivamente qualquer comportamento "pegajoso" (see the [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
+    Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Observe que um elemento sticky "gruda" em seu ancestral mais próximo que possui um "mecanismo de rolagem" (criado quando `overflow` é `hidden`, `scroll`, `auto` ou `overlay`), mesmo que esse ancestral não seja o ancestral de rolagem mais próximo. Isso inibe efetivamente qualquer comportamento "pegajoso" (see the [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
 
 ### Sintáxe formal
 

@@ -9,7 +9,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 
 > **경고:** **주의**: 스스로를 결정하는 thenable 에서 `Promise.resolve` 를 호출하면 안됩니다. 이는 무한히 중첩된 프로미스를 펼치려고하므로 무한 재귀를 유발할 것입니다. Angular 에서 `async` Pipe 를 함께 사용한 [예제](https://stackblitz.com/edit/angular-promiseresovle-with-async-pipe?file=src/app/app.component.ts)입니다. 자세한 내용은 [여기](https://angular.io/guide/template-syntax#avoid-side-effects)에서 확인하세요.
 
-{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.resolve()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(123);
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: 123
+});
+```
 
 ## 구문
 

@@ -3,11 +3,73 @@ title: background-attachment
 slug: Web/CSS/background-attachment
 ---
 
-{{CSSRef}}
+[CSS](/ko/docs/Web/CSS) **`background-attachment`** 속성은 배경 이미지를 {{glossary("viewport", "뷰포트")}} 내에서 고정할지, 아니면 자신의 컨테이닝 블록과 함께 스크롤할지 지정합니다.
 
-[CSS](/ko/docs/CSS) **`background-attachment`** 속성은 배경 이미지를 {{glossary("viewport", "뷰포트")}} 내에서 고정할지, 아니면 자신의 컨테이닝 블록과 함께 스크롤할지 지정합니다.
+{{InteractiveExample("CSS Demo: background-attachment")}}
 
-{{EmbedInteractiveExample("pages/css/background-attachment.html")}}
+```css interactive-example-choice
+background-attachment: scroll;
+```
+
+```css interactive-example-choice
+background-attachment: fixed;
+```
+
+```css interactive-example-choice
+background-attachment: local;
+```
+
+```css interactive-example-choice
+background-attachment: local, scroll;
+```
+
+```css interactive-example-choice
+background-attachment: scroll, local;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
+    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
+    Implacable November weather. As much mud in the streets as if the waters had
+    but newly retired from the face of the earth, and it would not be wonderful
+    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
+    lizard up Holborn Hill.
+  </div>
+</section>
+```
+
+```css interactive-example
+body {
+  overflow: scroll;
+}
+
+#default-example {
+  height: 600px;
+}
+
+#example-element {
+  max-width: 20rem;
+  height: 100%;
+  background:
+    url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
+      no-repeat,
+    url("/shared-assets/images/examples/moon.jpg") center / 10rem;
+  color: #ff5454;
+  font-size: 1.5em;
+  font-weight: bold;
+  overflow: auto;
+  padding: 20px;
+  text-shadow:
+    0 0 0.6rem #000,
+    0 0 0.6rem #000;
+}
+```
 
 ## 구문
 
@@ -60,7 +122,7 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
@@ -95,7 +157,7 @@ p {
 
 ```css
 p {
-  background-image: url("starsolid.gif"), url("startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -115,4 +177,4 @@ p {
 
 ## 같이 보기
 
-- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

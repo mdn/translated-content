@@ -3,10 +3,8 @@ title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
-> 本文描述的是适用于 web 扩展技术的 manifest.json。若你正在寻找适用于 PWA 的 manifest.json 的有关信息，请参考这篇文章：[Web App 清单](/zh-CN/docs/Web/Manifest)。
+> 本文描述的是适用于 web 扩展技术的 manifest.json。若你正在寻找适用于 PWA 的 manifest.json 的有关信息，请参考这篇文章：[Web App 清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)。
 
 `manifest.json` 是每个使用 WebExtension API 的扩展必须包含的唯一文件。
 
@@ -159,8 +157,6 @@ browser.runtime.getManifest().version;
 ```
 
 ## 浏览器兼容性
-
-有关所有清单键及其子键的完整概览，请参阅[完整的 `manifest.json` 浏览器兼容性表](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)。
 
 {{Compat}}
 

@@ -13,7 +13,7 @@ Vous pouvez ensuite restaurer une fenêtre ou un onglet en utilisant la fonction
 
 Cette API fournit également un groupe de fonctions permettant à une extension de stocker un état supplémentaire associé à un onglet ou une fenêtre. Ensuite, si l'onglet ou la fenêtre est fermé et restauré ultérieurement, l'extension peut récupérer l'état. Par exemple, une extension de groupe d'onglets peut l'utiliser pour se souvenir du groupe dans lequel se trouve un onglet, afin de le restaurer dans le bon groupe si l'utilisateur restaure l'onglet.
 
-Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) de "sessions".
+Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) de "sessions".
 
 ## Types
 
@@ -25,7 +25,7 @@ Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/Add-o
 ## Propriétés
 
 - {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}
-  - : Le nombre maximum de sessions qui seront retournées par un appel à [`sessions.getRecentlyClosed()`](/fr/Add-ons/WebExtensions/API/sessions/getRecentlyClosed).
+  - : Le nombre maximum de sessions qui seront retournées par un appel à [`sessions.getRecentlyClosed()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed).
 
 ## Fonctions
 
@@ -64,8 +64,6 @@ Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/Add-o
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -85,4 +85,4 @@ Esta API es claramente accesible a través de dispositivos móbiles. Vibration A
 ## Ver También
 
 - {{domxref("window.navigator.vibrate()")}}
-- [Vibration API - David Walsh](http://davidwalsh.name/vibration-api)
+- [Vibration API - David Walsh](https://davidwalsh.name/vibration-api)

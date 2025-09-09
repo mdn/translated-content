@@ -14,4 +14,4 @@ Les 128 premiers caractères UTF-8 correspondent exactement aux 128 premiers car
 ### Culture générale
 
 - [UTF-8](https://fr.wikipedia.org/wiki/UTF-8) sur Wikipédia
-- [FAQ sur l'UTF-8, sur le site web d'Unicode](http://www.unicode.org/faq/utf_bom.html#UTF8)
+- [FAQ sur l'UTF-8, sur le site web d'Unicode](https://www.unicode.org/faq/utf_bom.html#UTF8)

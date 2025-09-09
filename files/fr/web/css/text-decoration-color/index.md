@@ -9,7 +9,47 @@ La propriété **`text-decoration-color`** définit la couleur utilisée pour de
 
 La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.
 
-{{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-color")}}
+
+```css interactive-example-choice
+text-decoration-color: red;
+```
+
+```css interactive-example-choice
+text-decoration-color: #21ff21;
+```
+
+```css interactive-example-choice
+text-decoration-color: rgb(255, 90, 255);
+```
+
+```css interactive-example-choice
+text-decoration-color: hsl(70, 100%, 40%);
+```
+
+```css interactive-example-choice
+text-decoration-color: currentColor;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 > [!NOTE]
 > Lorsqu'on définit plusieurs décorations à la fois, il peut être plus pratique d'utiliser la propriété raccourcie {{cssxref("text-decoration")}}.
@@ -88,4 +128,4 @@ text-decoration-color: unset;
 - La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer `text-decoration-color`.
 - Le type de données {{cssxref("&lt;color&gt;")}}
 - D'autres propriétés relatives aux couleurs : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- [Appliquer des couleurs aux éléments HTML](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs aux éléments HTML](/fr/docs/Web/CSS/CSS_colors/Applying_color)

@@ -11,9 +11,9 @@ Pour que les en-têtes de requête soient passés dans l'écouteur avec le reste
 
 Pour modifier les en-têtes de façon synchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre événement écouté, retournez un [`BlockingResponse`](/fr/Add-ons/WebExtensions/API/webRequest/BlockingResponse 'An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.') avec une propriété nommée `requestHeaders`, dont la valeur est l'ensemble des en-têtes de requête à envoyer.
 
-Pour modifier les en-têtes de façon asynchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre event listener, retournez une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec une `BlockingResponse`.
+Pour modifier les en-têtes de façon asynchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre event listener, retournez une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec une `BlockingResponse`.
 
-Si vous utilisez le `"blocking"`, vous devez avoir la ["permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
+Si vous utilisez le `"blocking"`, vous devez avoir la ["permission de l'API "webRequestBlocking"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans votre manifest.json.
 
 Il est possible d'étendre le conflit ici. Si deux extensions écoutent `onBeforeSendHeaders` pour la même requête, le deuxième auditeur verra les modifications apportées par le premier auditeur et pourra annuler les modifications apportées par le premier auditeur. Par exemple, si le premier auditeur ajoute un en-tête `Cookie`, et que le deuxième auditeur supprime tous les en-têtes `Cookie`, les modifications apportées par le premier auditeur seront perdues. Si vous voulez voir les en-têtes qui sont effectivement envoyés, sans risque qu'une autre extension les modifie par la suite, utilisez {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}, bien que vous ne puissiez pas modifier les en-têtes sur cet événement.
 
@@ -57,9 +57,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
-
     - `details`
       - : [`object`](#details). Détails de la demande. Ceci inclura les en-têtes de demande si vous avez inclus `"requestHeaders"` dans `extraInfoSpec`.
 
@@ -68,9 +66,7 @@ Les événements ont trois fonctions :
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur.
 - `extraInfoSpec`{{optional_inline}}
-
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
-
     - `"blocking"`: rendre la requête synchrone, ce qui vous permet de modifier les en-têtes de requête
     - `"requestHeaders"`: inclure les en-têtes de requête dans l'objet `details` transmis à l'auditeur
 
@@ -85,7 +81,6 @@ Les événements ont trois fonctions :
 - `method`
   - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
 - `originUrl`
-
   - : `string`. URL de la ressource qui a déclenché la requête. Par exemple, si "https\://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors `originUrl` de la requête résultante est "https\://example.com".
 
     L'`originUrl` est souvent mais pas toujours la même chose que `documentUrl`.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le `documentUrl` pour la requête résultante sera le document parent de l'iframe, mais l'`originUrl` sera l'URL du document dans l'iframe qui contenait le lien.
@@ -93,17 +88,13 @@ Les événements ont trois fonctions :
 - `parentFrameId`
   - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
 - `proxyInfo`
-
   - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
-
     - `host`
       - : `string`. Le nom d'hôte du serveur proxy.
     - `port`
       - : `integer`. Le numéro de port du serveur proxy.
     - `type`
-
       - : `string`. Le type de serveur proxy. L'un des :
-
         - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
         - "https": proxy HTTP sur connexion TLS vers proxy
         - "socks": SOCKS v5 proxy
@@ -178,7 +169,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 );
 ```
 
-Ce code est exactement comme l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec les nouveaux en-têtes :
+Ce code est exactement comme l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec les nouveaux en-têtes :
 
 ```js
 "use strict";
@@ -230,8 +221,6 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

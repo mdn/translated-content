@@ -2,10 +2,10 @@
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
 l10n:
-  sourceCommit: a631fd40bdc682a82be57be9932c9853a86ac1b5
+  sourceCommit: 9f09d944bca13b61293b4cc93cb52011c6134b0d
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 **`DOMRectReadOnly`** インターフェイスは（{{domxref("DOMRect")}} でも使用される）標準プロパティを設定し、すべてのプロパティが変更不可の矩形を定義します。
 
@@ -37,6 +37,11 @@ l10n:
 
 - {{domxref("DOMRectReadOnly/fromRect_static", "DOMRectReadOnly.fromRect()")}}
   - : 指定された位置と大きさで、新しい `DOMRectReadOnly` オブジェクトを生成します。
+
+## インスタンスメソッド
+
+- {{domxref("DOMRectReadOnly.toJSON()")}}
+  - : この `DOMRectReadOnly` オブジェクトの JSON 表現を返します。
 
 ## 仕様書
 

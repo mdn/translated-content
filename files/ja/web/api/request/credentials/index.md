@@ -3,10 +3,10 @@ title: "Request: credentials プロパティ"
 short-title: credentials
 slug: Web/API/Request/credentials
 l10n:
-  sourceCommit: 09937df677a7c057656d7a2f5fcab7699b1e4bb9
+  sourceCommit: d6528c3d7881662e6aaa77cd2a1a49e3af349088
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`credentials`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、[`credentials`](/ja/docs/Web/API/RequestInit#credentials) オプションで指定された {{domxref("Request.Request()", "Request()")}} コンストラクターの値を反映します。このプロパティは、ブラウザーがリクエストに資格情報を送信するかどうか、また、**`Set-Cookie`** レスポンスヘッダーが尊重されるかどうかを決定します。
 
@@ -31,7 +31,7 @@ l10n:
 
 ```js
 const request = new Request("flowers.jpg");
-const request = request.request; // 既定で "same-origin" を返す
+const credentials = request.credentials; // 既定で "same-origin" を返す
 ```
 
 ## 仕様書
@@ -45,5 +45,5 @@ const request = request.request; // 既定で "same-origin" を返す
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

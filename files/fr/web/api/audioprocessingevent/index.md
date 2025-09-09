@@ -8,7 +8,7 @@ slug: Web/API/AudioProcessingEvent
 AudioProcessingEvent représente l'évènement qui est passé lorsqu'un tampon {{domxref ("ScriptProcessorNode")}} est prêt à être traité.
 
 > [!NOTE]
-> Cette fonctionnalité est dépréciée à partir de la version du 29 Août 2014 de la spécification Web Audio API, elle sera remplacée par les [Audio Workers](/fr/docs/Web/API/Web_Audio_API#Audio_Workers).
+> Cette fonctionnalité est dépréciée à partir de la version du 29 Août 2014 de la spécification Web Audio API, elle sera remplacée par les [Audio Workers](/fr/docs/Web/API/Web_Audio_API#audio_workers).
 
 ## Propriétés
 

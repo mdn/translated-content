@@ -3,8 +3,6 @@ title: 일반 형제 결합자
 slug: Web/CSS/Subsequent-sibling_combinator
 ---
 
-{{CSSRef}}
-
 **일반 형제 결합자**(`~`)는 두 개의 선택자 사이에 위치하여 뒤쪽 선택자의 요소와 앞쪽 선택자 요소의 부모 요소가 같고, 뒤쪽 선택자의 요소가 뒤에 위치할 때 선택합니다. 두 요소가 서로 붙어있을 필요는 없습니다.
 
 ```css
@@ -55,4 +53,4 @@ p ~ span {
 
 ## 같이 보기
 
-- [인접 형제 결합자](/ko/docs/Web/CSS/인접_형제_선택자)
+- [인접 형제 결합자](/ko/docs/Web/CSS/Next-sibling_combinator)

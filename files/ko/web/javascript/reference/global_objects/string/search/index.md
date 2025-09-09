@@ -10,7 +10,20 @@ l10n:
 {{jsxref("String")}} 값의 **`search()`** 메서드는 정규식과 이 문자열 간에 일치하는 항목이 있는지 검색하여
 문자열에서 첫 번째로 일치하는 항목의 인덱스를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-search.html")}}
+{{InteractiveExample("JavaScript Demo: String.search()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// Anything not a word character, whitespace or apostrophe
+const regex = /[^\w\s']/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 41
+
+console.log(paragraph[paragraph.search(regex)]);
+// Expected output: "!"
+```
 
 ## 구문
 
@@ -21,7 +34,6 @@ search(regexp)
 ### 매개변수
 
 - `regexp`
-
   - : 정규식 객체 또는 [`Symbol.search`](/ko/docs/Web/JavaScript/Rference/Global_Objects/Symbol/search) 메서드가 있는 모든 객체입니다.
 
     `regexp`가 `RegExp` 객체가 아니고 `Symbol.search` 메서드가 없는 경우, `new RegExp(regexp)`를 사용하여 암시적으로 {{jsxref("RegExp")}}로 변환됩니다.

@@ -1,17 +1,20 @@
 ---
-title: MouseEvent.initMouseEvent()
+title: MouseEvent：initMouseEvent() 方法
 slug: Web/API/MouseEvent/initMouseEvent
+l10n:
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
 {{APIRef("UI Events")}}{{deprecated_header}}
 
-**`MouseEvent.initMouseEvent()`** 方法用以在鼠标事件创建时 (一般用 {{domxref("Document.createEvent()")}}方法创建) 初始化其属性的值。
+**`MouseEvent.initMouseEvent()`** 方法用于在鼠标事件创建时（一般通过 {{domxref("Document.createEvent()")}} 方法创建）初始化其属性的值。
 
-事件初始化是在事件被{{ domxref("Document.createEvent()") }}方法创建后必需的。这个方法必须在事件被{{ domxref("EventTarget.dispatchEvent()") }}方法发送出来前调用。一旦事件被发送后，它将不再起任何作用。
-
-> **备注：** **不要再用此方法，已过时。**
+> [!NOTE]
+> **该方法已被弃用，请勿再使用。**
 >
-> 使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。[创建并发送事件](/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events) 页面里有更多的使用信息。
+> 使用特定的事件构造器，如 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} 替代它。[创建和派发事件](/zh-CN/docs/Web/API/Document_Object_Model/Events#创建和派发事件)一节提供了更多有关使用这些事件的方法的信息。
+
+以这种方式初始化的事件必须是用 {{domxref("Document.createEvent()")}} 方法创建的。在使用 {{ domxref("EventTarget.dispatchEvent()") }} 派发事件之前，必须调用该方法来设置事件。
 
 ## 语法
 
@@ -24,120 +27,78 @@ initMouseEvent(type, canBubble, cancelable, view,
 
 ### 参数
 
-- _`type`_
-  - : 设置事件类型{{domxref("Event.type", "type")}} 的字符串，包含以下几种鼠标事件：`click`，`mousedown`，`mouseup`，`mouseover`，`mousemove`，`mouseout`。
-- _`canBubble`_
-  - : 是否可以冒泡。取值集合见{{domxref("Event.bubbles")}}。
-- _`cancelable`_
-  - : 是否可以阻止事件默认行为。取值集合见{{domxref("Event.cancelable")}}。
-- _`view`_
-  - : 事件的 AbstractView 对象引用，这里其实指向{{domxref("window")}} 对象。取值集合见 {{domxref("UIEvent.view")}}。
-- _`detail`_
-  - : 事件的鼠标点击数量。取值集合见{{domxref("Event.detail")}}。
-- _`screenX`_
-  - : 事件的屏幕的 x 坐标。取值集合见{{domxref("MouseEvent.screenX")}}。
-- _`screenY`_
-  - : 事件的屏幕的 y 坐标。取值集合见{{domxref("MouseEvent.screenY")}}。
-- _`clientX`_
-  - : 事件的客户端 x 坐标。取值集合见{{domxref("MouseEvent.clientX")}}。
-- _`clientY`_
-  - : 事件的客户端 y 坐标。取值集合见{{domxref("MouseEvent.clientY")}}。
-- _`ctrlKey`_
+- `type`
+  - : 设置事件类型（{{domxref("Event.type", "type")}}）的字符串，包含以下几种鼠标事件：`click`、`mousedown`、`mouseup`、`mouseover`、`mousemove`、`mouseout`。
+- `canBubble`
+  - : 是否可以冒泡。设置 {{domxref("Event.bubbles")}} 的值。
+- `cancelable`
+  - : 是否可以阻止事件默认行为。设置 {{domxref("Event.cancelable")}} 的值。
+- `view`
+  - : 事件的 AbstractView 对象引用，需要在这里传递 {{domxref("window")}} 对象。设置 {{domxref("UIEvent.view")}} 的值。
+- `detail`
+  - : 事件的鼠标点击数量。设置 {{domxref("UIEvent.detail")}} 的值。
+- `screenX`
+  - : 事件的屏幕 x 坐标。设置 {{domxref("MouseEvent.screenX")}} 的值。
+- `screenY`
+  - : 事件的屏幕 y 坐标。设置 {{domxref("MouseEvent.screenY")}} 的值。
+- `clientX`
+  - : 事件的客户端 x 坐标。设置 {{domxref("MouseEvent.clientX")}} 的值。
+- `clientY`
+  - : 事件的客户端 y 坐标。设置 {{domxref("MouseEvent.clientY")}} 的值。
+- `ctrlKey`
+  - : 事件发生时 <kbd>control</kbd> 键是否被按下。设置 {{domxref("MouseEvent.ctrlKey")}} 的值。
 
-  - : 事件发生时&#x20;
+- `altKey`
+  - : 事件发生时 <kbd>alt</kbd> 键是否被按下。设置 {{domxref("MouseEvent.altKey")}} 的值。
 
-    <kbd>control</kbd>
+- `shiftKey`
+  - : 事件发生时 <kbd>shift</kbd> 键是否被按下。设置 {{domxref("MouseEvent.shiftKey")}} 的值。
 
-    &#x20;键是否被按下。取值集合见{{domxref("MouseEvent.ctrlKey")}}。
-
-- _`altKey`_
-
-  - : 事件发生时&#x20;
-
-    <kbd>alt</kbd>
-
-    &#x20;键是否被按下。取值集合见{{domxref("MouseEvent.altKey")}}。
-
-- _`shiftKey`_
-
-  - : 事件发生时&#x20;
-
-    <kbd>shift</kbd>
-
-    &#x20;键是否被按下。取值集合见{{domxref("MouseEvent.shiftKey")}}。
-
-- _`metaKey`_
-
-  - : 事件发生时&#x20;
-
-    <kbd>meta</kbd>
-
-    &#x20;键是否被按下。取值集合见{{domxref("MouseEvent.metaKey")}}。
+- `metaKey`
+  - : 事件发生时 <kbd>meta</kbd> 键是否被按下。设置 {{domxref("MouseEvent.metaKey")}} 的值。
 
 - _`button`_
-  - : 鼠标按键值 {{domxref("MouseEvent.button", "button")}}。
-- _`relatedTarget`_
-  - : 事件的[相关对象](/zh-CN/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其他的传 null。
+  - : 事件的鼠标 {{domxref("MouseEvent.button", "button")}}。
+- `relatedTarget`
+  - : 事件的[相关对象](/zh-CN/docs/Web/API/MouseEvent/relatedTarget)。只在某些事件类型有用（`mouseover` 和 `mouseout`）。其他的情况下，传递 `null`。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-### HTML
-
-```html
-<div style="background:red;width:180px;padding:10px;">
-  <div id="out"></div>
-  <input type="text" />
-</div>
-```
-
-### JavaScript
-
 ```js
-document.body.onclick = function () {
-  e = arguments[0];
-  var dt = e.target,
-    stag = dt.tagName.toLowerCase();
-  document.getElementById("out").innerHTML = stag;
-};
-var simulateClick = function () {
-  var evt = document.createEvent("MouseEvents");
-  evt.initMouseEvent(
-    "click",
-    true,
-    true,
-    window,
-    0,
-    0,
-    0,
-    80,
-    20,
-    false,
-    false,
-    false,
-    false,
-    0,
-    null,
-  );
-  document.body.dispatchEvent(evt);
-};
-simulateClick(); //Why it can not show "input" ?
+const event = document.createEvent("MouseEvents");
+event.initMouseEvent(
+  "click",
+  true,
+  true,
+  window,
+  0,
+  0,
+  0,
+  80,
+  20,
+  false,
+  false,
+  false,
+  false,
+  0,
+  null,
+);
+document.body.dispatchEvent(event);
 ```
-
-这里有个在线演示
-
-{{EmbedLiveSample('示例', 200, 36)}}
 
 ## 规范
 
-此特性不属于任何规范，也不再有望成为标准。
-
-请使用 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} 构造函数代替。
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- {{domxref("MouseEvent.MouseEvent()","MouseEvent()")}}构造器，更标准的创建{{domxref("MouseEvent")}}对象方法。
-- {{domxref("Event.initEvent()")}}可以简单达到相同目的的方法。它已过时不再使用。
+- {{domxref("MouseEvent.MouseEvent()","MouseEvent()")}} 构造函数，更标准的创建 {{domxref("MouseEvent")}} 对象方法。
+- {{domxref("Event.initEvent()")}} 可以简单达到相同目的的方法。它已过时，不应再使用。

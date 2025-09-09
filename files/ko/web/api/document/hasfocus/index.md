@@ -78,4 +78,4 @@ focused = document.hasFocus();
 
 ## 관련 참고
 
-- [페이지 가시성 API 사용하기](/ko/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API)
+- [페이지 가시성 API 사용하기](/ko/docs/Web/API/Page_Visibility_API)

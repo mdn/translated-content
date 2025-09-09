@@ -3,7 +3,7 @@ title: 使用对象
 slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
 
 JavaScript 的设计是一个简单的基于对象的范式。一个对象就是一系列属性的集合，一个属性包含一个名和一个值。一个属性的值可以是函数，这种情况下属性也被称为*方法*。除了浏览器里面预定义的那些对象之外，你也可以定义你自己的对象。本章节讲述了怎么使用对象、属性、函数和方法，怎样实现自定义对象。
 
@@ -75,7 +75,7 @@ propertyName = "model";
 myCar[propertyName] = "Mustang";
 ```
 
-你可以在 [for...in](/zh-CN/docs/JavaScript/Guide/Statements#for...in_Statement) 语句中使用方括号标记以枚举一个对象的所有属性。为了展示它如何工作，下面的函数当你将对象及其名称作为参数传入时，显示对象的属性：
+你可以在 [for...in](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#for...in_statement) 语句中使用方括号标记以枚举一个对象的所有属性。为了展示它如何工作，下面的函数当你将对象及其名称作为参数传入时，显示对象的属性：
 
 ```js
 function showProps(obj, objName) {
@@ -101,11 +101,11 @@ myCar.year = 1969;
 
 从 [ECMAScript 5](/zh-CN/docs/JavaScript/ECMAScript_5_support_in_Mozilla) 开始，有三种原生的方法用于列出或枚举对象的属性：
 
-- [for...in](/zh-CN/docs/JavaScript/Reference/Statements/for...in) 循环
+- [for...in](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环
   该方法依次访问一个对象及其原型链中所有可枚举的属性。
-- [Object.keys(o)](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/keys)
+- [Object.keys(o)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
   该方法返回对象 `o` 自身包含（不包括原型中）的所有可枚举属性的名称的数组。
-- [Object.getOwnPropertyNames(o)](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [Object.getOwnPropertyNames(o)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
   该方法返回对象 `o` 自身包含（不包括原型中）的所有属性 (无论是否可枚举) 的名称的数组。
 
 在 ECMAScript 5 之前，没有原生的方法枚举一个对象的所有属性。然而，可以通过以下函数完成：
@@ -278,7 +278,7 @@ fish.displayType(); // Output:Fishes
 
 ## 继承
 
-所有的 JavaScript 对象至少继承于一个对象。被继承的对象被称作原型，并且继承的属性可通过构造函数的 `prototype` 对象找到。查看更多详细 [Inheritance and the prototype chain](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+所有的 JavaScript 对象至少继承于一个对象。被继承的对象被称作原型，并且继承的属性可通过构造函数的 `prototype` 对象找到。查看更多详细 [Inheritance and the prototype chain](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 ## 对象属性索引
 
@@ -297,7 +297,7 @@ Car.prototype.color = null;
 car1.color = "black";
 ```
 
-参见 [JavaScript Reference](/zh-CN/docs/JavaScript/Reference) 中 Function 对象的 [`prototype` 属性](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype) 。
+参见 [JavaScript Reference](/zh-CN/docs/Web/JavaScript/Reference) 中 Function 对象的 [`prototype` 属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 。
 
 ## 定义方法
 
@@ -429,7 +429,7 @@ console.log(o.a); // 25
 - `o.b` — 返回 `o.a` + 1 的 getter
 - `o.c` — 由 `o.c 的值所设置 o.a 值的` setter
 
-请注意在一个对象字面量语法中定义 getter 和 setter 使用"\[gs]et property()"的方式（相比较于\_\_define\[GS]etter\_\_) 时，并不是获取和设置某个属性自身，容易让人误以为是"\[gs]et propertyName(){ }"这样错误的使用方法。定义一个 getter 或 setter 函数使用语法"\[gs]et property()"，定义一个已经声明的函数作为的 getter 和 setter 方法，使用[`Object.defineProperty`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineProperty)(或者 [`Object.prototype.__defineGetter__`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineGetter) 旧语法回退)
+请注意在一个对象字面量语法中定义 getter 和 setter 使用"\[gs]et property()"的方式（相比较于\_\_define\[GS]etter\_\_) 时，并不是获取和设置某个属性自身，容易让人误以为是"\[gs]et propertyName(){ }"这样错误的使用方法。定义一个 getter 或 setter 函数使用语法"\[gs]et property()"，定义一个已经声明的函数作为的 getter 和 setter 方法，使用[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)(或者 [`Object.prototype.__defineGetter__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 旧语法回退)
 
 下面这个例子展示使用 getter 和 setter 方法扩展 {{jsxref("Date")}}原型，为预定义好的 Date 类添加一个 year 的属性。定义属性 year 的 getter 和 setter 方法用到了 Date 类中已存在的 getFullYear 和 setFullYear 方法。
 
@@ -547,11 +547,11 @@ fruit == fruitbear; // return true
 fruit === fruitbear; // return true
 ```
 
-了解更多关于比较操作符的用法，查看 [Comparison operators](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).
+了解更多关于比较运算符的用法，查看[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#相等运算符)。
 
-## 附加参考
+## 参见
 
-- 想要深入了解，请阅读[details of javaScript's objects model](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)。
-- 想要学习 ECMAScript 2015 中类（一种创建对象的新方式），请阅读 [JavaScript classes](/zh-CN/docs/Web/JavaScript/Reference/Classes) 章节。
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}

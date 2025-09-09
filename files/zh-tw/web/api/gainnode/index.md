@@ -1,69 +1,73 @@
 ---
 title: GainNode
 slug: Web/API/GainNode
+l10n:
+  sourceCommit: fa1301aead2cee37516b7ad5a5ec2fb21e004227
 ---
 
 {{ APIRef("Web Audio API") }}
 
-`GainNode` 介面代表的是音量改變。 這是 {{domxref("AudioNode")}} 音訊處理模組，可以對輸入的訊號做增益 (gain) 後輸出。一個 `GainNode` 有一個輸入和一個輸出，兩者有相同的聲道數。
+`GainNode` 介面表示音量的改變。它是一個 {{domxref("AudioNode")}} 音訊處理模組，會將指定的增益應用於輸入資料，然後再傳播到輸出。`GainNode` 總是只有一個輸入和一個輸出，兩者都有相同數量的聲道。
 
-增益 (gain) 是無單位的數值，隨時間變化，會用來和所有輸入聲道的取樣做相乘。 如果更改的話，新的增益會用 de-zippering 演算法處理，以避免輸出聲音出現難聽的「喀」聲。
+增益是一個無單位的數值，會隨時間變化，並與所有輸入聲道的每個對應取樣相乘。如果修改了增益，新的增益會立即套用，導致在最終的音訊中產生不悅耳的「喀嚓聲」。為了避免這種情況發生，切勿直接改變數值，而應使用 {{domxref("AudioParam")}} 介面上的指數內插法。
 
-![The GainNode is increasing the gain of the output.](webaudiogainnode.png)
+![GainNode 正在增加輸出的增益。](webaudiogainnode.png)
+
+{{InheritanceDiagram}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code> (not used in the default count mode)</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">輸入數量</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">輸出數量</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">聲道計數模式</th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">聲道計數</th>
+      <td><code>2</code>（在預設計數模式下未使用）</td>
+    </tr>
+    <tr>
+      <th scope="row">聲道詮釋</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-## Constructor
+## 建構子
 
 - {{domxref("GainNode.GainNode", "GainNode()")}}
-  - : Creates a new instance of an GainNode object.
+  - : 建立並回傳一個新的 `GainNode` 物件。或者你也可以使用 {{domxref("BaseAudioContext.createGain()")}} 工廠方法；參見[建立 AudioNode](/zh-TW/docs/Web/API/AudioNode#建立_audionode)。
 
-## Properties
+## 實體屬性
 
-_Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
+_繼承其父介面 {{domxref("AudioNode")}} 的屬性。_
 
-- {{domxref("GainNode.gain")}} {{readonlyinline}}
-  - : 是 [a-rate](/zh-TW/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} ，代表增益值
+- {{domxref("GainNode.gain")}} {{ReadOnlyInline}}
+  - : 一個 [a-rate](/zh-TW/docs/Web/API/AudioParam#a-rate) 的 {{domxref("AudioParam")}}，表示要應用的增益量。你必須設定 {{domxref("AudioParam.value")}} 或使用 `AudioParam` 的方法來改變增益的效果。
 
-## Methods
+## 實體方法
 
-_No specific method; inherits methods from its parent,_ _{{domxref("AudioNode")}}_.
+_沒有自身的方法；繼承其父介面 {{domxref("AudioNode")}} 的方法。_
 
-## Example
+## 範例
 
-See [`BaseAudioContext.createGain()`](/zh-TW/docs/Web/API/BaseAudioContext/createGain#example) for example code showing how to use an `AudioContext` to create a `GainNode`.
+參見 [`BaseAudioContext.createGain()`](/zh-TW/docs/Web/API/BaseAudioContext/createGain#範例) 的範例程式碼，其中展示了如何使用 `AudioContext` 來建立 `GainNode`。
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
-- [Using the Web Audio API](/zh-TW/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

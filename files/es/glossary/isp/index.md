@@ -11,5 +11,5 @@ Un ISP (del inglés _Internet Service Provider_, Proveedor de servicios de Inter
 
 ### Conocimiento General
 
-- [¿Cómo funciona internet?](/es/docs/Learn/Common_questions/How_does_the_Internet_work) (explicación para principiantes)
+- [¿Cómo funciona internet?](/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (explicación para principiantes)
 - [Proveedor de servicios de Internet](https://es.wikipedia.org/wiki/Proveedor_de_servicios_de_Internet) en Wikipedia

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 
 La propriété **`length`** définit le nombre de paramètres attendus par la fonction.
 
-{{EmbedInteractiveExample("pages/js/function-length.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.length")}}
+
+```js interactive-example
+function func1() {}
+
+function func2(a, b) {}
+
+console.log(func1.length);
+// Expected output: 0
+
+console.log(func2.length);
+// Expected output: 2
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## Description
 

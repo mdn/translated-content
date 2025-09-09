@@ -19,4 +19,4 @@ WebKit est une marque déposée par Apple, et le framework est distribué sous u
 
 ### Référence technique
 
-- [Extensions CSS de WebKit](/fr/docs/Web/CSS/Reference/Webkit_Extensions)
+- [Extensions CSS de WebKit](/fr/docs/Web/CSS/WebKit_Extensions)

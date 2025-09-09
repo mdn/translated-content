@@ -3,8 +3,6 @@ title: background
 slug: Web/CSS/background
 ---
 
-{{CSSRef}}
-
 La propiedad `background` es un atajo para definir los valores individuales del fondo en una única regla CSS. Se puede usar `background` para definir los valores de una o de todas las propiedades siguientes: {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color", "color") }}, {{ Cssxref("background-image", "image") }}, {{ Cssxref("background-position", "position") }}, {{ Cssxref("background-repeat", "repeat") }}.
 
 - {{ Cssxref("initial", "Valor inicial") }}: ver propiedades individuales
@@ -35,7 +33,6 @@ La propiedad `background` se especifica como una o más capas de fondo, separada
 La sintaxis de cada capa es la siguiente:
 
 - Cada capa puede incluir cero o una ocurrencia de cualquiera de los siguientes valores
-
   - [`<attachment>`](#attachment)
   - [`<bg-image>`](#bg-image)
   - [`<position>`](#position)
@@ -49,15 +46,15 @@ La sintaxis de cada capa es la siguiente:
 ## Valores
 
 - background-color
-  - : ver [`color`](/es/CSS/background-color).
+  - : ver [`color`](/es/docs/Web/CSS/background-color).
 - background-image
-  - : ver [`image`](/es/CSS/background-image).
+  - : ver [`image`](/es/docs/Web/CSS/background-image).
 - background-repeat
-  - : ver [`repeat`](/es/CSS/background-repeat).
+  - : ver [`repeat`](/es/docs/Web/CSS/background-repeat).
 - background-attachment
-  - : ver [`background-attachment`](/es/CSS/background-attachment).
+  - : ver [`background-attachment`](/es/docs/Web/CSS/background-attachment).
 - background-position
-  - : ver [`position`](/es/CSS/background-position).
+  - : ver [`position`](/es/docs/Web/CSS/background-position).
 
 ## Ejemplos
 
@@ -80,7 +77,7 @@ La sintaxis de cada capa es la siguiente:
 }
 
 .topbanner {
-  background: url("starsolid.gif") #00d repeat-y fixed;
+  background: url("star-solid.gif") #00d repeat-y fixed;
 }
 ```
 

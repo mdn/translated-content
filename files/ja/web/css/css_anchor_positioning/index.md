@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
 ---
 
-{{CSSRef}}
-
 **CSS アンカー位置指定**モジュールでは、要素を互いに結びつける機能を定義しています。特定の要素が**アンカー要素**として定義され、**アンカー位置指定要素**は、結びつけられたアンカー要素のサイズと位置に基づいて、サイズと位置を設定することができます。
 
 さらに、この仕様では、次の機能を CSS のみで実装する方法も提供します。
@@ -49,7 +47,7 @@ l10n:
 
 ### HTML 属性
 
-- [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) {{non-standard_inline}}
+- [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) {{non-standard_inline}}
 
 ### インターフェイス
 
@@ -60,11 +58,9 @@ l10n:
 ## ガイド
 
 - [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)
-
   - : 基本的なアンカー位置指定の概念を紹介するガイドで、アンカーへの関連付け、位置指定、相対的なサイズ指定の方法を示します。
 
 - [オーバーフローの扱い: 代替や条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
-
   - : CSS アンカー位置指定で提供された、アンカーで位置指定された要素がコンテナーそのものやビューポートから溢れるのを防ぐためのメカニズムのガイドです。位置指定の代替オプションや、条件付きで要素を隠す方法などが含まれます。
 
 ## 関連概念
@@ -110,6 +106,6 @@ l10n:
 
 ## 関連情報
 
-- [学習: CSS 位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
+- [学習: CSS 位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
-- [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [CSS によるサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)

@@ -37,4 +37,4 @@ myReq.setRequestHeader(header, value);
 
 ## 더 보기
 
-[Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+[Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

@@ -3,8 +3,6 @@ title: Firefox 29 для разработчика
 slug: Mozilla/Firefox/Releases/29
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 29 был выпущен 29 апреля 2014 года. Список ключевых изменений, предоставленный в данной статье будет полезен не только веб-разработчикам, но и Firefox-, Gecko-разработчикам и разработчикам дополнений.
 
 Хотите помочь документировать Firefox 29? Просмотрите [список недостатков, которые надо устранить](http://beta.elchi3.de/doctracker/#list=fx&version=28.0) и приступайте!
@@ -16,18 +14,18 @@ Firefox 29 был выпущен 29 апреля 2014 года. Список к�
 Важные изменения:
 
 - Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their url, etc.
-- Added the [console API](/docs/Web/API/console) to Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Now you can log messages to the Web Console from Web Workers.
-- The [Network Monitor](/ru/docs/Tools/Network_Monitor) tool now shows performance statistics using pie charts ([Firefox bug 846601](https://bugzil.la/846601)).
-- On the [Inspector](/ru/docs/Tools/Page_Inspector), preview tooltips of CSS transforms are now available ([Firefox bug 726427](https://bugzil.la/726427)).
+- Added the [console API](/ru/docs/Web/API/console) to Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Now you can log messages to the Web Console from Web Workers.
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tool now shows performance statistics using pie charts ([Firefox bug 846601](https://bugzil.la/846601)).
+- On the [Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), preview tooltips of CSS transforms are now available ([Firefox bug 726427](https://bugzil.la/726427)).
 - DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.
-- A CSS source map is now supported by the [Style Editor](/ru/docs/Tools/Style_Editor) ([Firefox bug 926014](https://bugzil.la/926014)).
-- Autocompletion of CSS properties and values has been added to the [Style Editor](/ru/docs/Tools/Style_Editor) ([Firefox bug 717369](https://bugzil.la/717369)).
+- A CSS source map is now supported by the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ([Firefox bug 926014](https://bugzil.la/926014)).
+- Autocompletion of CSS properties and values has been added to the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ([Firefox bug 717369](https://bugzil.la/717369)).
 
 _Больше деталей и изменений смотрите в [блоге Mozilla Hacks](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/)._
 
 ### CSS
 
-- [CSS variables](/ru/docs/Web/CSS/Using_CSS_variables) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). Mozilla Hacks article can be found [here](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
+- [CSS variables](/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). Mozilla Hacks article can be found [here](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
 - Добавлена поддержка {{cssxref("visibility")}}`: collapse` в
   Flexboxes ([Firefox bug 783470](https://bugzil.la/783470)).
 - Свойство {{cssxref("box-sizing")}} больше не нуждается в префиксе ([Firefox bug 243412](https://bugzil.la/243412)).
@@ -44,16 +42,13 @@ _Больше деталей и изменений смотрите в [блог
 ### JavaScript
 
 - Реализованы новые методы строк в ECMAScript 6: {{jsxref("String.prototype.codePointAt()")}} и {{jsxref("String.prototype.fromCodePoint()")}} ([Firefox bug 918879](https://bugzil.la/918879)).
-- The [ECMAScript Internationalization API (ECMA-402)](http://www.ecma-international.org/ecma-402/1.0/) has been implemented and is now enabled by default in Firefox Desktop ([Firefox bug 853301](https://bugzil.la/853301)):
-
+- The [ECMAScript Internationalization API (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) has been implemented and is now enabled by default in Firefox Desktop ([Firefox bug 853301](https://bugzil.la/853301)):
   - New objects in the new {{jsxref("Intl")}} object namespace:
-
     - {{jsxref("Collator", "Intl.Collator")}}
     - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 
   - The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the `locales` and `options` arguments per ECMA-402:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -81,7 +76,7 @@ _Больше деталей и изменений смотрите в [блог
 - {{domxref("Window._content")}} is no longer available to Web content ([Firefox bug 946564](https://bugzil.la/946564)).
 - {{domxref("URLUtils.port")}} behavior has been slightly changed: set to `''` will set it to the default port associated with the protocol, and `0` to `0.` ([Firefox bug 930450](https://bugzil.la/930450))
 - {{domxref("Document.referrer")}} is now based on the incumbent script ([Firefox bug 887928](https://bugzil.la/887928)).
-- [Gamepad API](/ru/docs/Web/Guide/API/Gamepad) включён по умолчанию ([Firefox bug 878828](https://bugzil.la/878828)).
+- [Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) включён по умолчанию ([Firefox bug 878828](https://bugzil.la/878828)).
 
 ### MathML
 
@@ -97,7 +92,7 @@ _Без изменений._
 
 ## Изменения для разработчиков дополнений
 
-- [Совместимость дополнений с Australis](/en-US/Firefox/Australis_add-on_compat) - Это существенное изменение темы Firefox, что влияет на большинство расширений, связанных с пользовательским интерфейсом Firefox.
+- [Совместимость дополнений с Australis](/ru/docs/Mozilla/Firefox/Australis_add-on_compat) - Это существенное изменение темы Firefox, что влияет на большинство расширений, связанных с пользовательским интерфейсом Firefox.
 
 Об изменениях, не касающихся Austrlis, будет объявлено позднее.
 

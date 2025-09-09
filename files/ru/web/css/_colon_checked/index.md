@@ -1,11 +1,11 @@
 ---
-title: ":checked"
+title: :checked
 slug: Web/CSS/:checked
 ---
 
 {{CSSRef}}
 
-CSS [псевдоклассы](/ru/docs/Web/CSS/Псевдо-классы) **`:checked`** CSS находит любые элементы **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) или **option** ({{ HTMLElement("option") }} внутри {{ HTMLElement("select") }}), которые выбраны или включены. Пользователь может изменить это состояние, нажав на элемент, или выбрав другое значение, в этом случае `:checked` повторно не применится к элементу, а сохранится.
+CSS [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) **`:checked`** CSS находит любые элементы **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) или **option** ({{ HTMLElement("option") }} внутри {{ HTMLElement("select") }}), которые выбраны или включены. Пользователь может изменить это состояние, нажав на элемент, или выбрав другое значение, в этом случае `:checked` повторно не применится к элементу, а сохранится.
 
 ## Синтаксис
 

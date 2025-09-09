@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 
 {{jsxref("WeakMap")}} 实例的 **`delete()`** 方法从该 `WeakMap` 中删除指定的元素。
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+
+weakmap1.set(object1, 42);
+
+console.log(weakmap1.delete(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object1));
+// Expected output: false
+```
 
 ## 概述
 

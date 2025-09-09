@@ -69,6 +69,20 @@
         "searchScope": "text",
       },
       {
+        "name": "google-dev-mirror-links",
+        "message": "Use the CN mirror site for developers.google.com",
+        "searchPattern": "/\\]\\(https:\\/\\/developers.google.com\\//g",
+        "replace": "](https://developers.google.cn/",
+        "searchScope": "text",
+      },
+      {
+        "name": "web-dev-mirror-links",
+        "message": "Use the CN mirror site for web.dev",
+        "searchPattern": "/\\]\\(https:\\/\\/web.dev\\//g",
+        "replace": "](https://web.developers.google.cn/",
+        "searchScope": "text",
+      },
+      {
         "name": "localhost-links",
         "message": "Don't use localhost for links",
         "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
@@ -91,7 +105,7 @@
       {
         "name": "gfm-alert",
         "message": "Use the GFM syntax: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#备注、警告和标注",
-        "searchPattern": "/^ *> \\*\\*(Note|Warning|Callout):\\*\\*(?! [[{`_*])/gm",
+        "searchPattern": "/^ *> \\*\\*(备注|警告|标注)：\\*\\*/gm",
         "searchScope": "text",
       },
       {

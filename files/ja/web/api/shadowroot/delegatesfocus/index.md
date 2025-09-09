@@ -14,7 +14,7 @@ l10n:
 
 キーボードのユーザー（スクリーンリーダーを使用するユーザーも含む）にとっては、フォーカスが特に重要です。 `delegatesFocus` の既定の動作は、最初のフォーカス可能な要素にフォーカスを当てるというものです。これは、その要素がタブ順序の一部として意図されていない場合（例えば、`tabindex="-1"` の要素）や、より「重要な」フォーカス可能な要素に初期フォーカスを当てるべき場合（例えば、最初のテキストフィールドをその前にある「閉じる」ボタンより優先させるなど）には望ましくない場合があります。このような場合、初期フォーカスを受け取る要素に `autofocus` 属性を指定することができます。 `autofocus` 属性は、アクセシビリティに関する課題を引き起こす可能性があるため、使用する際には注意が必要です。例えば、DOM の順序が後にある要素にフォーカスが設定されているために気づかないような重要なコンテンツを回避するといった課題です。
 
-このプロパティ値は、元々、{{domxref("Element.attachShadow()")}} に渡すオブジェクトの `delegatesFocus` プロパティを使用するか、またはシャドウルートを宣言的に作成する際の [`<template>`](/ja/docs/Web/HTML/Element/template) 要素の [`shadowrootdelegatesfocus`](/ja/docs/Web/HTML/Element/template#shadowrootclonable) 属性を使用して設定します。
+このプロパティ値は、元々、{{domxref("Element.attachShadow()")}} に渡すオブジェクトの `delegatesFocus` プロパティを使用するか、またはシャドウルートを宣言的に作成する際の [`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) 要素の [`shadowrootdelegatesfocus`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性を使用して設定します。
 
 ### 値
 
@@ -32,7 +32,7 @@ let shadow = customElem.shadowRoot;
 let hostElem = shadow.delegatesFocus;
 ```
 
-`<template>` のドキュメント内の[フォーカスのｐ譲渡を伴う宣言的シャドウ DOM](/ja/docs/Web/HTML/Element/template#フォーカスを譲渡を伴う宣言的シャドウ_dom)の例では、フォーカスを譲ることの効果が示されています。
+`<template>` のドキュメント内の[フォーカスのｐ譲渡を伴う宣言的シャドウ DOM](/ja/docs/Web/HTML/Reference/Elements/template#フォーカスを譲渡を伴う宣言的シャドウ_dom)の例では、フォーカスを譲ることの効果が示されています。
 
 ## 仕様書
 

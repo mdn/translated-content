@@ -6,7 +6,7 @@ slug: Glossary/CORS-safelisted_request_header
 {{GlossarySidebar}}
 
 Un [encabezado de solicitud incluido en la lista segura de CORS](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)
-es uno de los siguientes [encabezados HTTP](/es/docs/Web/HTTP/Headers):
+es uno de los siguientes [encabezados HTTP](/es/docs/Web/HTTP/Reference/Headers):
 
 - {{HTTPHeader("Accept")}},
 - {{HTTPHeader("Accept-Language")}},

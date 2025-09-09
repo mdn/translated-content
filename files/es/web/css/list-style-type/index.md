@@ -7,7 +7,7 @@ slug: Web/CSS/list-style-type
 
 ### Resumen
 
-El {{ Cssxref("list-style-type", "tipo de estilo de lista") }} especifica la apariencia del [listado](/es/HTML/Element/li).
+El {{ Cssxref("list-style-type", "tipo de estilo de lista") }} especifica la apariencia del [listado](/es/docs/Web/HTML/Reference/Elements/li).
 
 - {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("disc", "disco/punto") }}
 - Se aplica a: elementos con 'display: list-item'
@@ -101,9 +101,9 @@ ol.shortcut {
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#list-style-type)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/generate.html#propdef-list-style-type)
-- [css3-lists](http://www.w3.org/TR/css3-lists/#list-style-type)
+- [CSS 1](https://www.w3.org/TR/CSS1#list-style-type)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/generate.html#propdef-list-style-type)
+- [css3-lists](https://www.w3.org/TR/css3-lists/#list-style-type)
 
 ### Compatibilidad con navegadores
 

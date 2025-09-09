@@ -21,11 +21,9 @@ write(data)
 ### 引数
 
 - `data`
-
   - : ファイルに書き込むデータを表す {{jsxref("ArrayBuffer")}}・{{jsxref("TypedArray")}}・
     {{jsxref("DataView")}}・{{domxref('Blob')}}・{{jsxref("String")}} オブジェクト・文字列リテラルのいずれかです。
     もしくは、以下のプロパティを持つオブジェクトです。
-
     - `type`
       - : `"write"`・`"seek"`・`"truncate"` のいずれかの文字列です。
     - `data`
@@ -101,5 +99,5 @@ writableStream.write({ type: "truncate", size });
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

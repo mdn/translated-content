@@ -29,7 +29,7 @@ _{{domxref("EventTarget")}}_ 의 속성들을 상속 받습니다. 그리고 _{{
 
 ## 예제
 
-[Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/)) 를 보시면 2개의 HTML 페이지가 있습니다. 각각 간단한 계산을 위해 JavaScript를 사용합니다. 각기 다른 스크립트가 계산을 위해 같은 워커 파일을 사용합니다 — 두 개 페이지가 모두 다른 윈도우창에서 실행되더라도 같은 워커에 접근할 수 있습니다.
+[Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)) 를 보시면 2개의 HTML 페이지가 있습니다. 각각 간단한 계산을 위해 JavaScript를 사용합니다. 각기 다른 스크립트가 계산을 위해 같은 워커 파일을 사용합니다 — 두 개 페이지가 모두 다른 윈도우창에서 실행되더라도 같은 워커에 접근할 수 있습니다.
 
 아래 코드 스니펫은 {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} 생성자를 이용해 `SharedWorker` 객체를 생성합니다. 두 스크립트 모두 아래를 포함합니다.
 
@@ -88,4 +88,4 @@ onconnect = function (e) {
 ## 같이 보기
 
 - {{domxref("Worker")}}
-- [Using web workers](/ko/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)

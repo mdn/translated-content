@@ -3,7 +3,7 @@ title: with
 slug: Web/JavaScript/Reference/Statements/with
 ---
 
-{{jsSidebar("Statements")}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > 不建议使用 `with` 语句，因为它可能是混淆错误和兼容性问题的根源。有关详细信息，请参阅下面“描述”一节中的“语意不明的弊端”部分。
@@ -87,6 +87,6 @@ with (Math) {
 ## 参见
 
 - {{jsxref("Statements/block", "block")}}
-- [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
 - [`Array.prototype[Symbol.unscopables]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)

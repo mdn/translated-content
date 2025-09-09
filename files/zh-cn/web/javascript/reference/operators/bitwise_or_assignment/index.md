@@ -3,11 +3,17 @@ title: 按位或赋值（|=）
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 **按位或赋值**（**`|=`**) 运算符使用两个操作数的二进制表示，对它们执行按位或运算并将结果分配给变量。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-or-assignment.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR assignment", "shorter")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a |= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000111
+// Expected output: 7
+```
 
 ## 语法
 

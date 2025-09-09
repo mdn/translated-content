@@ -1,23 +1,30 @@
 ---
 title: Array.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`reduce()`** は {{jsxref("Array")}} インターフェイスのメソッドで、配列のそれぞれの要素に対して、ユーザーが提供した「縮小」コールバック関数を呼び出します。その際、直前の要素の計算結果の返値を渡します。配列のすべての要素に対して「縮小」コールバック関数を実行した最終結果は、単一の値となります。
 
-コールバックの初回実行時には「直前の計算の返値」は存在しません。
-初期値が与えらえた場合は、代わりに使用されることがあります。
-そうでない場合は、配列の要素 0 が初期値として使用され、次の要素（0 の位置ではなく 1 の位置）から反復処理が開始されます。
+コールバックの初回実行時には「直前の計算の返値」は存在しません。初期値が与えらえた場合は、代わりに使用されることがあります。そうでない場合は、配列の要素 0 が初期値として使用され、次の要素（0 の位置ではなく 1 の位置）から反復処理が開始されます。
 
-`reduce()` で一番わかりやすいのは、配列のすべての要素の和を返す場合でしょう。
+{{InteractiveExample("JavaScript デモ: Array.prototype.reduce()")}}
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+```js interactive-example
+const array = [1, 2, 3, 4];
 
-縮小関数は配列を要素ごとに走査し、それぞれの段階で、前の段階の結果に現在の配列の値を加えていきます (この結果は、それ以前のすべての段階を合算したものです)。
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// 予想される結果: 10
+```
 
 ## 構文
 
@@ -54,22 +61,13 @@ reduce(callbackFn, initialValue)
 
 ## 解説
 
-`reduce()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。「縮小」コールバック関数を配列に含まれる各要素に対して昇順に一度ずつ呼び出し、その結果を単一の値に積算します。毎回、 `callbackFn` の返値は次回の `callbackFn` の呼び出しで `accumulator` として渡されます。最終的な `accumulator` の値（配列の最終反復処理において `callbackFn` から返される値）が `reduce()` の返値となります。
+`reduce()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。「縮小」コールバック関数を配列に含まれる各要素に対して昇順に一度ずつ呼び出し、その結果を単一の値に積算します。毎回、 `callbackFn` の返値は次回の `callbackFn` の呼び出しで `accumulator` として渡されます。最終的な `accumulator` の値（配列の最終反復処理において `callbackFn` から返される値）が `reduce()` の返値となります。これらのメソッドが一般的にどのように動作するのかについての詳細は、[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)の節をご覧下さい。
 
 `callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
 
 他の[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)とは異なり、 `reduce()` は `thisArg` 引数を受け入れません。 `callbackFn` は常に `undefined` を `this` として呼び出され、 `callbackFn` が厳格モードでない場合は `globalThis` に置き換えられます。
 
-`reduce()` は[関数型プログラミング](https://ja.wikipedia.org/wiki/関数型プログラミング)の中心的な概念です。ここでは、どの値も変異させることができないので、配列のすべての値を積算するには、反復処理のたびに新しい積算値を返さなければなりません。この約束事は JavaScript の `reduce()` にも当てはまります。[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や他の可能な限りコピーする方法を使用して、既存のものを変更せずに、アキュームレーターとして新しい配列やオブジェクトを作成すべきなのです。もし、アキュームレーターをコピーする代わりに変化させることにした場合、コールバックで変更したオブジェクトを返すことを忘れないでください、さもなければ、次の反復処理で undefined を受け取ることになります。
-
-`reduce()` メソッドは呼び出し元の配列を変更しませんが、 `callbackFn` に指定された関数は変更することがあります。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
-
-- `callbackFn` は `reduce()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
-- 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
-- まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は `undefined` であるかのように処理されます。
-
-> [!WARNING]
-> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
+`reduce()` は[関数型プログラミング](https://ja.wikipedia.org/wiki/関数型プログラミング)の中心的な概念です。ここでは、どの値も変異させることができないので、配列のすべての値を積算するには、反復処理のたびに新しい積算値を返さなければなりません。この約束事は JavaScript の `reduce()` にも当てはまります。[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や他の可能な限りコピーする方法を使用して、既存のものを変更せずに、アキュームレーターとして新しい配列やオブジェクトを作成すべきなのです。もし、アキュームレーターをコピーする代わりに変化させることにした場合、コールバックで変更したオブジェクトを返すことを忘れないでください、さもなければ、次の反復処理で undefined を受け取ることになります。ただし、アキュムレーターをコピーすると、メモリー使用量が増加し、パフォーマンスが低下する可能性があることに注意してください。詳細については、 [reduce() を使用すべきでない場合用しない場合](#reduce_を使用すべきでない場合) を参照してください。このような場合、パフォーマンスの低下やコードの可読性の低下を避けるために、代わりに `for` ループを使用することをお勧めします。
 
 `reduce()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
@@ -282,7 +280,7 @@ const countedNames = names.reduce((allNames, name) => {
 
 このコードは非効率的です。というのも、各イテレーターは `allNames` オブジェクト全体をコピーする必要があり、これは固有の名前がいくつあるかによってサイズが大きくなってしまうからです。このコードは最悪の場合、 `N` が `names` の長さだとすると `O(N^2)` のパフォーマンスになります。
 
-各反復処理で `allNames` オブジェクトを変更したほうがよりよいでしょう。しかし、 `allNames` がいずれにせよ変更されるのであれば、 `reduce()` を単純な `for` ループに変換した方がより明確です。
+各反復処理で `allNames` オブジェクトを変更したほうがよりよいでしょう。しかし、 `allNames` がいずれにせよ変更されるのであれば、 `reduce()` を `for` ループに変換した方がより明確です。
 
 ```js example-bad
 const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
@@ -303,7 +301,7 @@ for (const name of names) {
 }
 ```
 
-したがって、アキュムレーターが配列やオブジェクトで、反復処理ごとに配列やオブジェクトをコピーしている場合、誤ってコードに 2 次的な複雑さを導入してしまい、大きなデータですぐにパフォーマンスが低下してしまう可能性があります。
+したがって、アキュムレーターが配列やオブジェクトで、反復処理ごとに配列やオブジェクトをコピーしている場合、誤ってコードに 2 次的な複雑さを導入してしまい、大きなデータですぐにパフォーマンスが低下してしまう可能性があります。これは実際のコードでも現れています。例えば、 [Making Tanstack Table 1000x faster with a 1 line change](https://jpcamara.com/2023/03/07/making-tanstack-table.html) を参照してください。
 
 `reduce()` の受け入れられる用途のいくつかは上で指定されたものです（特に、配列の合計、プロミスの順序付け、関数のパイプ処理）。他にも `reduce()` よりも優れた代替手段が存在する場合があります。
 
@@ -405,6 +403,7 @@ for (const name of names) {
 ## 関連情報
 
 - [`Array.prototype.reduce` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.reduce` のポリフィル](https://www.npmjs.com/package/array.prototype.reduce)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.map()")}}

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Subtraction
 
 減算演算子 (`-`) は 2 つのオペランドの間で減算し、それらの差を生成します。
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Subtraction operator")}}
+
+```js interactive-example
+console.log(5 - 3);
+// Expected output: 2
+
+console.log(3.5 - 5);
+// Expected output: -1.5
+
+console.log(5 - "hello");
+// Expected output: NaN
+
+console.log(5 - true);
+// Expected output: 4
+```
 
 ## 構文
 

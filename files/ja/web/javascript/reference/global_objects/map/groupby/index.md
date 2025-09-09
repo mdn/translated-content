@@ -1,20 +1,37 @@
 ---
 title: Map.groupBy()
+short-title: groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 l10n:
-  sourceCommit: c607c483fe079c61de5e32fba1a6cce61896e97d
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 > [!NOTE]
 > 一部のブラウザーのあるバージョンでは、このメソッドは `Array.prototype.groupToMap()` というメソッドとして実装されていました。ウェブの互換性の問題により、現在は静的メソッドとして実装されています。詳細は[ブラウザーの互換性](#ブラウザーの互換性)を確認してください
 
-**Map.groupBy()** 静的メソッドは、指定されたコールバック関数によって返された値を使用して、指定された反復可能な要素をグループ化します。最終的に返される {{jsxref("Map")}} は、テスト関数からの一意な値をキーとして使用し、各グループの要素の配列を取得するために使用できます。
+**`Map.groupBy()`** は静的メソッドで、指定されたコールバック関数によって返された値を使用して、指定された反復可能な要素をグループ化します。最終的に返される {{jsxref("Map")}} は、テスト関数からの一意な値をキーとして使用し、各グループの要素の配列を取得するために使用できます。
 
 このメソッドは主に、あるオブジェクトに関連する要素をグループ化するときに便利で、特にそのオブジェクトが時間の経過とともに変化する可能性がある場合に便利です。オブジェクトが不変である場合は、代わりに文字列を使用してそれを表現し、{{jsxref("Object.groupBy()")}} で要素をグループ化することができます。
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Map.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 構文
 
@@ -78,7 +95,7 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-関数の引数 `{ quantity }` は、[関数の引数に対するオブジェクトの分割構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。これは、引数として渡されたオブジェクトの `quantity` プロパティを展開し、関数本体の `quantity` という変数に代入します。これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
+関数の引数 `{ quantity }` は、[関数の引数に対するオブジェクトの構造分解構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。これは、引数として渡されたオブジェクトの `quantity` プロパティを展開し、関数本体の `quantity` という変数に代入します。これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
 
 キーである `Map` は内容を変更しても使用し続けることができます。しかし、キーを再作成して使用することはできません。このため、`Map` を使用する必要があるものは、そのキーへの参照を保持し続けることが重要です。
 
@@ -104,6 +121,7 @@ console.log(result.get(restock2)); // undefined
 ## 関連情報
 
 - [`Map.groupBy` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-grouping)
+- [es-shims による `Map.groupBy` のポリフィル](https://www.npmjs.com/package/map.groupby)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Map/Map", "Map()")}}

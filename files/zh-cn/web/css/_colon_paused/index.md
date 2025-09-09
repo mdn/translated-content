@@ -1,9 +1,7 @@
 ---
-title: ":paused"
+title: :paused
 slug: Web/CSS/:paused
 ---
-
-{{CSSRef}}
 
 **`:paused`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器表示一个处于“暂停”状态（即非“播放”状态）的可播放的元素，如 {{htmlelement("audio")}} 或 {{htmlelement("video")}}。
 

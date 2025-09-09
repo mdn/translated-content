@@ -2,15 +2,37 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Map`** オブジェクトはキーと値のペアを保持し、キーが最初に挿入された順序を覚えています。
 キーや値には任意の値（オブジェクトと{{Glossary("Primitive", "プリミティブ値")}}）を使用することができます。
 
-{{EmbedInteractiveExample("pages/js/map.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Map", "taller")}}
+
+```js interactive-example
+const map = new Map();
+
+map.set("a", 1);
+map.set("b", 2);
+map.set("c", 3);
+
+console.log(map.get("a"));
+// 予想される結果: 1
+
+map.set("a", 97);
+
+console.log(map.get("a"));
+// 予想される結果: 97
+
+console.log(map.size);
+// 予想される結果: 3
+
+map.delete("b");
+
+console.log(map.size);
+// 予想される結果: 2
+```
 
 ## 解説
 
@@ -20,7 +42,7 @@ l10n:
 
 ### キーの等価性
 
-キー値の等価性は [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいて評価されます。（以前は [SameValue](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) が使われており、 `0` と `-0` が異なるものとして扱われていました。[ブラウザーの互換性](#ブラウザーの互換性)をチェックしてください）。これは {{jsxref("NaN")}} を `NaN` と等価と見なすもので（`NaN !== NaN` ですが）、他の値はすべて `===` 演算子の意味に従って等価性が考慮されます。
+キー値の等価性は [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいて評価されます。（以前は [SameValue](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) が使われており、 `0` と `-0` が異なるものとして扱われていました。[ブラウザーの互換性](#ブラウザーの互換性)をチェックしてください）。これは {{jsxref("NaN")}} を `NaN` と等価と見なすもので（`NaN !== NaN` ですが）、他の値はすべて `===` 演算子の意味に従って等価性が考慮されます。
 
 ### Object と Map の比較
 
@@ -83,7 +105,7 @@ l10n:
       <th scope="row">キーの順序</th>
       <td>
         <p>
-          <code>Map</code> のキーは、単純で直感的な方法で順序付けられます。すなわち、反復処理を行うと、 <code>Map</code> オブジェクトは挿入順でキーを返します。
+          <code>Map</code> のキーは、直感的な方法で順序付けられます。すなわち、反復処理を行うと、 <code>Map</code> オブジェクトは挿入順でキーを返します。
         </p>
       </td>
       <td>
@@ -235,8 +257,8 @@ interface RTCStatsReport {
 
 `Map` 風オブジェクトは読み取り専用のことも、読み書き可能なこともあります。(上の IDL の `readonly` キーワードに注目してください)
 
-- 読み取り専用の `Map` 風オブジェクトは、プロパティ [`size`](#map.prototype.size) と、メソッド [`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`get()`](#map.prototype.get)、[`has()`](#map.prototype.has)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values)、[`Symbol.iterator`](#map.prototypeiterator) を持ちます。
-- 書き込み可能な `Map` 風オブジェクトは、これに加えてメソッド [`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete)、[`set()`](#map.prototype.set) を持ちます。
+- 読み取り専用の `Map` 風オブジェクトは、プロパティ {{jsxref("Map/size", "size")}} と、メソッド {{jsxref("Map/entries", "entries()")}}, {{jsxref("Map/forEach", "forEach()")}}, {{jsxref("Map/get", "get()")}}, {{jsxref("Map/has", "has()")}}, {{jsxref("Map/keys", "keys()")}}, {{jsxref("Map/values", "values()")}}, [`Symbol.iterator()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator) を持ちます。
+- 書き込み可能な `Map` 風オブジェクトは、これに加えてメソッド {{jsxref("Map/clear", "clear()")}}, {{jsxref("Map/delete", "delete()")}}, {{jsxref("Map/set", "set()")}} を持ちます。
 
 これらのメソッドとプロパティは、キーと値の型の制約を除いて、`Map` の対応するエンティティと同様にふるまいます。
 
@@ -307,7 +329,7 @@ const myMap = new Map();
 
 const keyString = "文字列";
 const keyObj = {};
-const keyFunc = function () {};
+const keyFunc = () => {};
 
 // 値を設定する
 myMap.set(keyString, "'文字列' と結び付けられた値");
@@ -323,7 +345,7 @@ console.log(myMap.get(keyFunc)); // "keyFunc と結び付けられた値"
 
 console.log(myMap.get("文字列")); // "'文字列' と結び付けられた値"。 keyString === '文字列' であるため
 console.log(myMap.get({})); // undefined, keyObj !== {} であるため
-console.log(myMap.get(function () {})); // undefined, keyFunc !== function () {} であるため
+console.log(myMap.get(() => {})); // undefined, keyFunc !== () => {} であるため
 ```
 
 ### NaN を Map のキーとして使用
@@ -421,11 +443,11 @@ const original = new Map([[1, "one"]]);
 const clone = new Map(original);
 
 console.log(clone.get(1)); // one
-console.log(original === clone); // false (useful for shallow comparison)
+console.log(original === clone); // false （シャロー比較に便利）
 ```
 
 > [!NOTE]
-> データ自身は複製されないことに注意しておいてください。
+> データ自身は複製されないことに注意しておいてください。言い換えれば、これは `Map` の[シャローコピー](/ja/docs/Glossary/Shallow_copy)にすぎません。
 
 マップはキーの固有性を保持しながら混合可能です。
 
@@ -465,9 +487,9 @@ const second = new Map([
 ]);
 
 // マップと配列を混合します。重複するキーは後勝ちになります。
-const merged = new Map([...first, ...second, [1, "eins"]]);
+const merged = new Map([...first, ...second, [1, "un"]]);
 
-console.log(merged.get(1)); // eins
+console.log(merged.get(1)); // un
 console.log(merged.get(2)); // dos
 console.log(merged.get(3)); // three
 ```
@@ -483,6 +505,7 @@ console.log(merged.get(3)); // three
 ## 関連情報
 
 - [`Map` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#map)
+- [es-shims による `Map` のポリフィル](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

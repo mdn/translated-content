@@ -10,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
 
 Envoie une seule requête au(x) script(s) de contenu dans l'onglet spécifié, avec un rappel facultatif à exécuter lorsqu'une réponse est renvoyée. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque script de contenu exécuté dans l'onglet spécifié pour l'extension en cours.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -30,7 +30,7 @@ var sending = browser.tabs.sendRequest(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec l'objet de réponse JSON envoyé par le gestionnaire du message dans le script de contenu, ou sans arguments si le script de contenu n'a pas envoyé de réponse. Si une erreur survient lors de la connexion à l'onglet spécifié ou si une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec l'objet de réponse JSON envoyé par le gestionnaire du message dans le script de contenu, ou sans arguments si le script de contenu n'a pas envoyé de réponse. Si une erreur survient lors de la connexion à l'onglet spécifié ou si une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -39,8 +39,6 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 > [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,8 +3,6 @@ title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 ---
 
-{{JSRef}}
-
 **`Map`** 是保存了鍵值對（key-value pairs）的物件。任何值（包括物件及{{Glossary("Primitive", "基本型別（primitive）值")}}）都可以作為鍵或值。
 
 ## 語法
@@ -16,7 +14,7 @@ new Map([iterable])
 ### 參數
 
 - `iterable`
-  - : 為一個{{jsxref("Array", "陣列")}}或其他元素成鍵值對的[可迭代](/zh-TW/docs/Web/JavaScript/Guide/iterable)物件（有兩個元素的陣列，例如 `[[ 1, 'one' ],[ 2, 'two' ]]`）。每一個鍵值對都會被加入至新的 `Map`；`null` 會被視為 `undefined`。
+  - : 為一個{{jsxref("Array", "陣列")}}或其他元素成鍵值對的[可迭代](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)物件（有兩個元素的陣列，例如 `[[ 1, 'one' ],[ 2, 'two' ]]`）。每一個鍵值對都會被加入至新的 `Map`；`null` 會被視為 `undefined`。
 
 ## 描述
 
@@ -24,7 +22,7 @@ new Map([iterable])
 
 ### 鍵的相等性
 
-鍵相等是基於 [SameValueZero](/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) 的演算法：`NaN` 被認為與 `NaN` 相同（即使 `NaN !== NaN`）並且根據 `===` 運算符的語義，所有其他值都被認為相等。在目前的 ECMAScript 規範中，`-0` 和 `+0` 被認為是相等的，儘管在早期的草案中並非如此。詳細的內容請參閱 [瀏覽器相容性](#瀏覽器相容性) 表中的 "Value equality for -0 and 0"。
+鍵相等是基於 [SameValueZero](/zh-TW/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) 的演算法：`NaN` 被認為與 `NaN` 相同（即使 `NaN !== NaN`）並且根據 `===` 運算符的語義，所有其他值都被認為相等。在目前的 ECMAScript 規範中，`-0` 和 `+0` 被認為是相等的，儘管在早期的草案中並非如此。詳細的內容請參閱 [瀏覽器相容性](#瀏覽器相容性) 表中的 "Value equality for -0 and 0"。
 
 ### Object 及 Map 的比較
 
@@ -32,7 +30,7 @@ new Map([iterable])
 
 - `Object` 的鍵是 {{jsxref("String", "字串")}} 和 {{jsxref("Symbol", "Symbol")}}，而它們在 `Map` 中可以是任意的資料型態，包括函數，對象以及原始的資料型態。
 - 你可以使用 `size` 屬性輕鬆地獲得 `Map` 的大小，而 `Object` 中的屬性數量必須手動確認。
-- `Map` 是可迭代（[iterable](/zh-TW/docs/Web/JavaScript/Guide/iterable)）的，因此可以直接迭代，而在 `Object` 上迭代則需要以某種方式獲取其鍵並對其進行迭代。
+- `Map` 是可迭代（[iterable](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)）的，因此可以直接迭代，而在 `Object` 上迭代則需要以某種方式獲取其鍵並對其進行迭代。
 - `Object` 有一個原型，所以如果不小心，映射中有一些默認鍵可能與鍵發生衝突。從 ES5 開始，這可以通過使用 `map = Object.create(null)` 來繞過這個問題，但是很少這樣做。
 - 在涉及頻繁添加和刪除鍵值對的場景中，`Map` 可能表現得更好。
 

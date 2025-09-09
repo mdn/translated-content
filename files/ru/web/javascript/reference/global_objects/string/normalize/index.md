@@ -27,9 +27,7 @@ str.normalize([form])
 ### Параметры
 
 - `form`
-
   - : Одно из значений `"NFC"`, `"NFD"`, `"NFKC"` или `"NFKD"`, определяющих форму нормализации Юникода. Если параметр опущен или равен {{jsxref("Global_Objects/undefined", "undefined")}}, будет использоваться значение `"NFC"`.
-
     - `NFC` — форма нормализации канонической композицией (Normalization Form Canonical Composition, 'NFC'), по умолчанию;
     - `NFD` — форма нормализации канонической декомпозицией (Normalization Form Canonical Decomposition, 'NFD');
     - `NFKC` — форма нормализации совместимой композицией (Normalization Form Compatibility Composition, 'NFKC');
@@ -96,5 +94,5 @@ valueStrNorm.join(", "); //-> ae, g, h, s, æ, ġ, ĥ, ș
 
 ## Смотрите также
 
-- [Приложение №15 к стандарту Юникода: формы нормализации Юникода](http://www.unicode.org/reports/tr15/)
+- [Приложение №15 к стандарту Юникода: формы нормализации Юникода](https://www.unicode.org/reports/tr15/)
 - [Эквивалентность в Юникоде](http://en.wikipedia.org/wiki/Unicode_equivalence)

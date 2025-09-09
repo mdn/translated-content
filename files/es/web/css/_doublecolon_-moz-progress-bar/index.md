@@ -1,9 +1,9 @@
 ---
-title: "::-moz-progress-bar"
+title: ::-moz-progress-bar
 slug: Web/CSS/::-moz-progress-bar
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::-moz-progress-bar`** de [CSS](/es/docs/Web/CSS) es una [extensión de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) que representa la barra de progreso dentro de un elemento {{HTMLElement("progress")}}. (La barra representa la cantidad de progreso que se ha realizado).
 

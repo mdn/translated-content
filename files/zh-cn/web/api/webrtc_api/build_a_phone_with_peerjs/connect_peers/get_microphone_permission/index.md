@@ -29,9 +29,8 @@ l10n:
    ```
 
    让我们解释一下最重要的几行：
-
    - `window.localStream = stream` 将 `MediaStream` 对象（我们在上一行赋值给 `stream` 的对象）附加到窗口的 `localStream`。
-   - `window.localAudio.srcObject = stream` 将 ID 为 `localAudio` 的 [`<audio>` 元素](/zh-CN/docs/Web/HTML/Element/audio)的 `src` 属性设置为由 promise 返回的 `MediaStream`，以便它会播放我们的流。
+   - `window.localAudio.srcObject = stream` 将 ID 为 `localAudio` 的 [`<audio>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/audio)的 `src` 属性设置为由 promise 返回的 `MediaStream`，以便它会播放我们的流。
    - `window.localAudio.autoplay = true` 将 `<audio>` 元素的 `autoplay` 属性设置为 true，以便音频自动播放。
 
    > [!WARNING]

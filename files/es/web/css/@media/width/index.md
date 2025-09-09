@@ -3,9 +3,7 @@ title: width
 slug: Web/CSS/@media/width
 ---
 
-{{cssref}}
-
-El **`width`** [CSS](/es/docs/CSS) {{cssxref("@media")}} media caracteristica puede ser usada para aplicar estilos basados en el ancho de el {{glossary("viewport")}} (o la caja de la pagina, para [paged media](/es/docs/Web/CSS/Paged_media)).
+El **`width`** [CSS](/es/docs/Web/CSS) {{cssxref("@media")}} media caracteristica puede ser usada para aplicar estilos basados en el ancho de el {{glossary("viewport")}} (o la caja de la pagina, para [paged media](/es/docs/Web/CSS/CSS_paged_media)).
 
 ## Syntax
 

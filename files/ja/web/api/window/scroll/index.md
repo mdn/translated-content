@@ -24,7 +24,6 @@ window.scroll(options)
 または
 
 - `options` : 三つのプロパティを持たせられるオブジェクト
-
   - `top` `y-coord` と同じです
   - `left` `x-coord` と同じです
   - `behavior` `smooth`、 `instant`、 `auto` のうちどれか一つを含む文字列。初期値は `auto` です
@@ -54,6 +53,6 @@ window.scroll({
 
 次のページもご覧下さい : {{domxref("window.scrollByLines")}} 、 {{domxref("window.scrollByPages")}} 、 {{domxref("Element.scrollIntoView()")}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}

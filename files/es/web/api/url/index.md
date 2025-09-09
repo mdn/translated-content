@@ -130,6 +130,6 @@ const response = await fetch(
 
 - [Polyfill de `URL` en `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [API de URL](/es/docs/Web/API/URL_API)
-- [¿Qué es una URL?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [¿Qué es una URL?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - Propiedad para obtener un objeto `URL`: {{domxref("URL")}}.
 - {{domxref("URLSearchParams")}}.

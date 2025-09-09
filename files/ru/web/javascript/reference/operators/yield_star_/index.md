@@ -142,7 +142,6 @@ console.log(result); // "foo"
 ## Специфичные для Firefox примечания
 
 - Начиная с Gecko 33, разбор выражений yield было приведено к соответствию с последними спецификациями ES6 ([Firefox bug 981599](https://bugzil.la/981599)):
-
   - Реализована корректная обработка разрыва строки. Разрыва строки между "yield" и "\*" быть не может. Такой код вызовет {{jsxref("SyntaxError")}}:
 
     ```js
@@ -154,7 +153,7 @@ console.log(result); // "foo"
 
 ## Смотрите также
 
-- [The Iterator protocol](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

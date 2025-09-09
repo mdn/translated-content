@@ -9,7 +9,14 @@ l10n:
 
 **`TypedArray.of()`** メソッドは、引数の変数番号から新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)を生成します。このメソッドは {{jsxref("Array.of()")}} とほぼ同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-of.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.of()", "shorter")}}
+
+```js interactive-example
+const int16array = Int16Array.of("10", "20", "30", "40", "50");
+
+console.log(int16array);
+// Expected output: Int16Array [10, 20, 30, 40, 50]
+```
 
 ## 構文
 

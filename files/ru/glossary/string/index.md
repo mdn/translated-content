@@ -13,4 +13,4 @@ slug: Glossary/String
 
 ### Общие сведения
 
-- [JavaScript data types and data structures](/ru/docs/Web/JavaScript/Data_structures#String_type)
+- [JavaScript data types and data structures](/ru/docs/Web/JavaScript/Guide/Data_structures#string_type)

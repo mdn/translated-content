@@ -13,12 +13,12 @@ l10n:
 
 有许多不同类型的事件，其中一些使用基于 `Event` 主接口的其他接口。`Event` 本身包含适用于所有事件的属性和方法。
 
-很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过 [`EventTarget.addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法可以将事件处理器绑定到不同的 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上（比如 `<button>`、`<div>`、`<span>` 等等）。这种方式基本替换了老版本中使用 HTML [事件处理器属性](/zh-CN/docs/Web/HTML/Global_attributes)的方式。此外，在正确添加后，还可以使用 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 方法移除这些事件处理器。
+很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过 [`EventTarget.addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法可以将事件处理器绑定到不同的 [HTML 元素](/zh-CN/docs/Web/HTML/Reference/Elements)上（比如 `<button>`、`<div>`、`<span>` 等等）。这种方式基本替换了老版本中使用 HTML [事件处理器属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)的方式。此外，在正确添加后，还可以使用 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 方法移除这些事件处理器。
 
 > [!NOTE]
 > 一个元素可以绑定多个事件处理器，甚至是对于完全相同的事件。尤其是相互独立的代码模块出于不同的目的附加事件处理器。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放。）
 
-当有很多嵌套的元素，每个元素都有着自己的事件处理器，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定完全相同的事件时，因为结构上的重叠，事件在技术层面发生在两个元素中，触发的顺序取决于每个处理器的[事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)的设置。
+当有很多嵌套的元素，每个元素都有着自己的事件处理器，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定完全相同的事件时，因为结构上的重叠，事件在技术层面发生在两个元素中，触发的顺序取决于每个处理器的[事件冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)的设置。
 
 ## 基于 Event 的接口
 
@@ -62,7 +62,6 @@ l10n:
 - {{domxref("RTCPeerConnectionIceEvent")}}
 - {{domxref("StorageEvent")}}
 - {{domxref("SubmitEvent")}}
-- {{domxref("SVGEvent")}} {{Deprecated_Inline}}
 - {{domxref("TimeEvent")}}
 - {{domxref("TouchEvent")}}
 - {{domxref("TrackEvent")}}
@@ -138,7 +137,7 @@ l10n:
 
 ## 参见
 
-- 可用的事件类型：[Event 参考](/zh-CN/docs/Web/Events)
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
-- [创建和触发自定义事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+- 可用的事件类型：[Event 参考](/zh-CN/docs/Web/API/Document_Object_Model/Events)
+- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
+- [事件冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)
+- [创建和触发自定义事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)

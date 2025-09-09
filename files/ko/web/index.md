@@ -11,14 +11,16 @@ slug: Web
 
 ## 웹 개발자를 위한 문서
 
-- [웹 개발자 안내서](/ko/docs/Web/Guide)
+- [웹 개발자 안내서](/ko/docs/MDN/Guides)
   - : 웹 개발자 안내서는 원하는 것과 필요한 것을 웹으로 만들 때 유용한 도움말을 제공합니다.
-- [웹 개발자를 위한 자습서](/ko/docs/Web/Tutorials)
+- [웹 개발자를 위한 자습서](/ko/docs/MDN/Tutorials)
   - : HTML, CSS, JavaScript, Web API에 대한 단계별 학습을 제공하는 문서 목록입니다.
 - [접근성](/ko/docs/Web/Accessibility)
   - : 가능한 한 많은 사람들이 웹사이트를 사용할 수 있게 합니다. 비록 이러한 사람들의 능력이 어떤 식으로든 제한되어 있는 경우에도 말이죠.
 - [성능](/ko/docs/Web/Performance)
   - : 가능한 한 빠르게 콘텐츠를 사용 가능하게 하고 가능하면 상호작용이 기능하게 만듭니다.
+- [개인정보](/ko/docs/Web/Privacy)
+  - : 사용자의 개인 데이터를 보호합니다.
 - [보안](/ko/docs/Web/Security)
   - : 데이터 유출 및 도난, 부채널 공격(side-channel attacks) 및 크로스 사이트 스크립팅, 콘텐츠 주입 및 클릭 재킹과 같은 공격으로부터 사용자를 보호합니다.
 
@@ -44,13 +46,13 @@ slug: Web
   - : Scalable Vector Graphics(SVG)는 어떠한 크기로 확대해도 부드러운 이미지를 만들수 있습니다.
 - [MathML](/ko/docs/Web/MathML)
   - : MathML은 복잡한 수학 표기법을 웹에 표시할 수 있습니다.
-- [웹 컴포넌트](/ko/docs/Web/Web_Components)
+- [웹 컴포넌트](/ko/docs/Web/API/Web_components)
   - : 웹 컴포넌트는 개발자가 직접 정의하고 재사용할 수 있는 사용자 정의 요소입니다.
 - [WebDriver](/ko/docs/Web/WebDriver)
   - : 웹드라이버(WebDriver)는 브라우저를 사용하는 실제 사람의 행위를 모방하여 원격으로 브라우저를 제어하는 브라우저-자동화 메커니즘입니다. 웹 앱의 브라우저간 테스트를 위해 폭넓게 사용합니다.
 - [Web Extensions](/ko/docs/Mozilla/Add-ons/WebExtensions)
   - : 웹 확장 기능(Web Extensions)은 브라우저에서 사용자에게 향상된 기능을 제공합니다. 광고 및 기타 컨텐츠 차단, 페이지 모양 사용자 지정 등을 수행할 수 있습니다.
-- [Web App Manifests](/ko/docs/Web/Manifest)
+- [Web App Manifests](/ko/docs/Web/Progressive_web_apps/Manifest)
   - : 웹 앱 매니페스트(Web App Manifest)를 사용하면 사용자가 세로/가로 화면 방향과 디스플레이 모드(예: 전체 화면)를 미리 설정하여 장치의 홈 스크린에 웹 앱을 설치할 수 있습니다.
 - [프로그레시브 웹 앱(PWAs)](/ko/docs/Web/Progressive_web_apps)
   - : 프로그레시브 웹 앱(Progressive Web App)은 네이티브 모바일 앱과 유사한 사용자 경험을 제공합니다.

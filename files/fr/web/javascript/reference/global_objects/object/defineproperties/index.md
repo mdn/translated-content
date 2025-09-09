@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 
 La méthode **`Object.defineProperties()`** permet de définir ou de modifier les propriétés d'un objet directement sur celui-ci. La valeur renvoyée est l'objet modifié.
 
-{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperties()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperties(object1, {
+  property1: {
+    value: 42,
+    writable: true,
+  },
+  property2: {},
+});
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -20,9 +35,7 @@ Object.defineProperties(obj, props);
 - `obj`
   - : L'objet dont on souhaite modifier ou définir certaines propriétés.
 - `props`
-
   - : Un objet dont les propriétés propres et énumérables sont des descripteurs de propriétés pour les propriétés à définir ou à modifier. Les descripteurs de propriétés peuvent avoir deux formes (voir {{jsxref("Object.defineProperty()")}} pour plus d'informations) : un descripteur de donnée ou un descripteur d'accesseur. Les descripteurs de donnée et d'accesseur peuvent avoir les clés suivantes :
-
     - `configurable`
       - : `true` si et seulement si le type de ce descripteur peut être modifié et si la propriété peut être supprimée de l'objet.
         **Par défaut : `false`.**
@@ -31,7 +44,6 @@ Object.defineProperties(obj, props);
         **Par défaut : `false`.**
 
     Un descripteur de donnée pourra avoir les clés suivantes :
-
     - `value`
       - : La valeur associée à la propriété. Cela peut être n'importe quelle valeur valide en JavaScript (un nombre, un objet, etc.).
         **Par défaut : {{jsxref("undefined")}}.**
@@ -40,7 +52,6 @@ Object.defineProperties(obj, props);
         **Par défaut : `false`.**
 
     Un descripteur d'accesseur pourra avoir les clés suivantes :
-
     - `get`
       - : Une fonction utilisée comme accesseur pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas d'accesseur. La fonction renvoyée sera utilisée comme valeur pour la propriété.
         **Par défaut : {{jsxref("undefined")}}.**
@@ -151,4 +162,4 @@ function defineProperties(obj, properties) {
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Détention et énumération des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Détention et énumération des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

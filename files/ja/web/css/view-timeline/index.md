@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-**`view-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインを定義するために使用します。 `view-timeline` は主体要素に設定します。
+**`view-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインを定義するために使用します。 `view-timeline` は主体要素に設定します。
 
 既定では、主体要素がスクローラーの一方の端に初めて表示されるとタイムラインは 0% になり、反対側の端に達すると 100% になります。
 
@@ -44,12 +44,12 @@ view-timeline: --custom_name_for_timeline;
 
 `view-timeline` の一括指定プロパティは `<view-timeline-name>` と `<view-timeline-axis>` の値の組み合わせとしてコンテナー要素に適用することができます。少なくともどちらか一方の値を指定しなければなりません。両方の値を指定する場合は、 `<view-timeline-name>` 値の後に `<view-timeline-axis>` 値が続く順序でなければなりません。
 
-> **メモ:** `<view-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値で、 `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
+> [!NOTE]
+> `<view-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値で、 `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
 
 ### 値
 
 - `<view-timeline-name>`
-
   - : [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name) を参照してください。
 
 - `<view-timeline-axis>`

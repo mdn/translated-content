@@ -7,10 +7,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 
 {{WebExtAPIRef("runtime.onMessage")}}. Les gestionnaires d'évènements peuvent optionellement envoyé une réponse en retour au script d'arrière plan en utilisant l'argument `sendResponse`.
 
-Il s'agit d'une fonction asynchrone qui renvoit un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoit un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 > [!NOTE]
-> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
+> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communication_avec_les_scripts_darrière-plan).
 
 ## Syntaxe
 
@@ -29,15 +29,13 @@ var sending = browser.tabs.sendMessage(
 - `message`
   - : `any`. Un objet qui peut être sérialisé en JSON.
 - `options`{{optional_inline}}
-
   - : `object`.
-
     - `frameId`{{optional_inline}}
-      - : `integer`. Envoie le message à un cadre (_iframe_) spécifique identifiée par `frameId` au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre `all_frames` dans la section [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) de manifest.json.
+      - : `integer`. Envoie le message à un cadre (_iframe_) spécifique identifiée par `frameId` au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre `all_frames` dans la section [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) de manifest.json.
 
 ### Valeur renvoyée
 
-Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli avec une réponse objet au format JSON envoyé par le gestionnaire de message dans le script de contenu, ou sans arguments si le script de contenu n'a pas renvoyé de réponses. Si une erreur survient durant la connexion avec l'onglet spécifié, ou si n'importe quelle erreur survient, la promesse sera rejeté avec un message d'erreur. Si plusieurs trames répondent au message, la promesse est résolue en une des réponses
+Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli avec une réponse objet au format JSON envoyé par le gestionnaire de message dans le script de contenu, ou sans arguments si le script de contenu n'a pas renvoyé de réponses. Si une erreur survient durant la connexion avec l'onglet spécifié, ou si n'importe quelle erreur survient, la promesse sera rejeté avec un message d'erreur. Si plusieurs trames répondent au message, la promesse est résolue en une des réponses
 
 ## Exemples
 
@@ -96,8 +94,6 @@ browser.runtime.onMessage.addListener((request) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

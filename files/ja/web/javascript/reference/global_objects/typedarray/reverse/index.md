@@ -9,7 +9,15 @@ l10n:
 
 **`reverse()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列を[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) で反転し、同じ型付き配列への参照を返します。型付き配列の最初の要素は最後になり、型付き配列の最後の要素は最初になります。言い換えれば，型付き配列の他の要素の順序は，以前とは逆の順序になります。このメソッドは {{jsxref("Array.prototype.reverse()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-reverse.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.reverse()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.reverse();
+
+console.log(uint8);
+// Expected output: Uint8Array [3, 2, 1]
+```
 
 ## 構文
 

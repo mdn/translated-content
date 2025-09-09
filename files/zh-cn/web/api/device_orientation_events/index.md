@@ -54,4 +54,4 @@ l10n:
 
 ## 参见
 
-- [设备方向与运动](https://web.dev/articles/device-orientation)，来自 web.dev
+- [设备方向与运动](https://web.developers.google.cn/articles/device-orientation)，来自 web.developers.google.cn

@@ -79,7 +79,7 @@ Si comme pour la plupart des jeux, vous utilisez une image de fond statique, pr�
 
 ### Redimensionner les canvas avec CSS transform
 
-[Les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS) sont plus rapides car elles utilisent le GPU. Le mieux est d'utiliser un canvas plus grand et de réduire sa taille. Pour Firefox OS, les dimensions sont de 480 x 320 px.
+[Les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) sont plus rapides car elles utilisent le GPU. Le mieux est d'utiliser un canvas plus grand et de réduire sa taille. Pour Firefox OS, les dimensions sont de 480 x 320 px.
 
 ```js
 var scaleX = window.innerWidth / canvas.width;
@@ -106,7 +106,7 @@ Si le canvas n'a pas besoin de transparence, ajouter l'attribut `moz-opaque` dan
 - Éviter de refaire un rendu si ce n'est pas nécessaire.
 - Rendre uniquement les différences, pas tout le canvas.
 - Éviter la propriété {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} quand c'est possible.
-- Empêcher [le rendu de texte](/fr/docs/Dessin_de_texte_avec_canvas) quand c'est possible.
+- Empêcher [le rendu de texte](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text) quand c'est possible.
 - Essayer différents moyens d'effacer le canvas : ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. redimensionner le canevas).
 - Avec les animations, utiliser {{domxref("window.requestAnimationFrame()")}} plutôt que {{domxref("window.setInterval()")}}.
 - Faire attention aux bibliothèques physiques lourdes.
@@ -114,7 +114,7 @@ Si le canvas n'a pas besoin de transparence, ajouter l'attribut `moz-opaque` dan
 
 ## Voir aussi
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](http://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
+- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}

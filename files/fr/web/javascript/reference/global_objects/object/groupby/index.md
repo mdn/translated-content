@@ -14,7 +14,25 @@ La méthode statique **`Object.groupBy()`** groupe les éléments d'un itérable
 
 Cette méthode devrait être utilisée lorsque les noms des groupes peuvent être représentés par des chaînes de caractères. S'il vous faut grouper des éléments selon une clé qui peut être une valeur arbitraire, privilégiez la méthode [`Map.groupBy()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy).
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## Syntaxe
 
@@ -81,7 +99,7 @@ const resultat = Object.groupBy(inventaire, ({ type }) => type);
 */
 ```
 
-La fonction fléchée renvoie la valeur de `type` pour chaque élément du tableau. On notera que l'argument `{ type }` est un exemple [de la syntaxe de décomposition d'objet pour les arguments de fonction](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#décomposer_les_propriétés_dobjets_passés_en_arguments). Cela extrait la propriété `type` d'un objet passé en paramètre et affecte la valeur à une variable nommée `type` dans le corps de la fonction. On peut ainsi écrire succinctement l'accès aux propriétés d'un élément dans une fonction.
+La fonction fléchée renvoie la valeur de `type` pour chaque élément du tableau. On notera que l'argument `{ type }` est un exemple [de la syntaxe de décomposition d'objet pour les arguments de fonction](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#décomposer_les_propriétés_dobjets_passés_en_arguments). Cela extrait la propriété `type` d'un objet passé en paramètre et affecte la valeur à une variable nommée `type` dans le corps de la fonction. On peut ainsi écrire succinctement l'accès aux propriétés d'un élément dans une fonction.
 
 On pourrait également créer des groupes selon les valeurs d'une ou plusieurs propriétés de l'élément. Dans l'exemple qui suit, on place les aliments dans deux groupes `ok` ou `restock` selon la valeur de leur propriété `quantite`.
 

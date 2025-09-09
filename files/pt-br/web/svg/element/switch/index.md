@@ -19,10 +19,10 @@ Observe que os valores das propriedades `display` e `visibility` não possuem ef
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

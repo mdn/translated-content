@@ -33,9 +33,9 @@ _Этот интерфейс наследует свойства своего р
 ### Обработчики событий
 
 - {{domxref("MediaStream.onaddtrack")}}
-  - : Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("addtrack")}} при добавлении нового объекта {{domxref("MediaStreamTrack")}}.
+  - : Объект [`event handler`](/ru/docs/Web/Events/Event_handlers), содержащий действие, которое должно выполняться, когда случается событие [`addtrack`](/ru/docs/Web/API/VideoTrackList/addtrack_event) при добавлении нового объекта {{domxref("MediaStreamTrack")}}.
 - {{domxref("MediaStream.onremovetrack")}}
-  - : Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("removetrack")}} при удалении объекта {{domxref("MediaStreamTrack")}}.
+  - : Объект [`event handler`](/ru/docs/Web/Events/Event_handlers), содержащий действие, которое должно выполняться, когда случается событие [`removetrack`](/ru/docs/Web/API/VideoTrackList/removetrack_event) при удалении объекта {{domxref("MediaStreamTrack")}}.
 
 ## Методы
 
@@ -75,10 +75,10 @@ _Этот интерфейс наследует методы своего род
 
 - [`addtrack`](/ru/docs/Web/API/MediaStream/addtrack_event)
   - : Вызывается при добавлении нового объекта {{domxref("MediaStreamTrack")}}.
-    Также доступно как свойство [`onaddtrack`](/ru/docs/Web/API/MediaStream/onaddtrack).
+    Также доступно как свойство [`onaddtrack`](/ru/docs/Web/API/MediaStream/addtrack_event).
 - [`removetrack`](/ru/docs/Web/API/MediaStream/removetrack_event)
   - : Вызывается при удалении объекта {{domxref("MediaStreamTrack")}}.
-    Также доступно как свойство [`onremovetrack`](/ru/docs/Web/API/MediaStream/onremovetrack).
+    Также доступно как свойство [`onremovetrack`](/ru/docs/Web/API/MediaStream/removetrack_event).
 
 ## Спецификации
 

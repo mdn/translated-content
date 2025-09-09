@@ -3,9 +3,7 @@ title: <position>
 slug: Web/CSS/position_value
 ---
 
-{{CSSRef}}
-
-[CSS](/ko/docs/Web/CSS) **`<position>`** (또는 **`<bg-position>`**) [자료형](/ko/docs/Web/CSS/CSS_Types)은 요소 박스에 대한 상대 좌표를 나타내는 2차원 좌표입니다. {{cssxref("background-position")}}, {{cssxref("offset-anchor")}} 속성에서 사용합니다.
+[CSS](/ko/docs/Web/CSS) **`<position>`** (또는 **`<bg-position>`**) [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 요소 박스에 대한 상대 좌표를 나타내는 2차원 좌표입니다. {{cssxref("background-position")}}, {{cssxref("offset-anchor")}} 속성에서 사용합니다.
 
 > **참고:** `<position>` 값이 설명하는 최종 위치가 요소 박스 내에 위치해야 할 필요는 없습니다.
 
@@ -52,7 +50,7 @@ keyword value keyword value /* Each value is an offset from the keyword that pre
 
 ## 보간
 
-애니메이션에서 점의 가로 값과 세로 값은 각각 따로 보간됩니다. 그러나 두 좌표 모두에 대한 보간 속도는 하나의 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정하므로, 점은 직선을 따라 이동하게 됩니다.
+애니메이션에서 점의 가로 값과 세로 값은 각각 따로 보간됩니다. 그러나 두 좌표 모두에 대한 보간 속도는 하나의 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정하므로, 점은 직선을 따라 이동하게 됩니다.
 
 ## 예제
 
@@ -89,7 +87,7 @@ bottom top
 ## 같이 보기
 
 - [CSS 값과 단위](/ko/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 값과 단위 소개](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS 값과 단위 소개](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("radial-gradient()")}}
 - {{cssxref("conic-gradient()")}}

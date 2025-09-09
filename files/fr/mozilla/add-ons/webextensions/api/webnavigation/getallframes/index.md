@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 
 Étant donné un ID d'onglet, récupère des informations sur toutes les images qu'il contient.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -20,15 +20,13 @@ var gettingFrames = browser.webNavigation.getAllFrames(
 ### Paramètres
 
 - `details`
-
   - : `object`. Informations sur l'onglet pour récupérer toutes les images.
-
     - `tabId`
       - : `integer`. L'identifiant de l'onglet
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera accompli avec un tableau d'objets, dont chacun a les propriétés suivantes :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera accompli avec un tableau d'objets, dont chacun a les propriétés suivantes :
 
 - `errorOccurred`
   - : `boolean`. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.
@@ -84,8 +82,6 @@ browser.browserAction.onClicked.addListener(function () {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

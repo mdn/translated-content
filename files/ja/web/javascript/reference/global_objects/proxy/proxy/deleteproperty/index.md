@@ -1,15 +1,39 @@
 ---
 title: handler.deleteProperty()
+short-title: deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`handler.deleteProperty()`** メソッドは、オブジェクトの `[[Delete]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Operators/delete", "delete")}} などの操作で使用されます。
 
-**`handler.deleteProperty()`** メソッドは、オブジェクトの `[[Get]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/delete", "delete")}} などの操作で使用されます。
+{{InteractiveExample("JavaScript デモ: handler.deleteProperty()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
+```js interactive-example
+const monster = {
+  texture: "scaly",
+};
+
+const handler = {
+  deleteProperty(target, prop) {
+    if (prop in target) {
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      // 予想される結果: "property removed: texture"
+    }
+  },
+};
+
+console.log(monster.texture);
+// 予想される結果: "scaly"
+
+const proxy = new Proxy(monster, handler);
+delete proxy.texture;
+
+console.log(monster.texture);
+// 予想される結果: undefined
+```
 
 ## 構文
 
@@ -17,7 +41,7 @@ l10n:
 new Proxy(target, {
   deleteProperty(target, property) {
   }
-});
+})
 ```
 
 ### 引数
@@ -32,7 +56,7 @@ new Proxy(target, {
 
 ### 返値
 
-`deleteProperty()` メソッドはプロパティが正しく削除されたかどうか示す[論理値](/ja/docs/Web/JavaScript/Data_structures#論理型)を返さなければなりません。
+`deleteProperty()` メソッドはプロパティが正しく削除されたかどうか示す[論理値](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)を返さなければなりません。
 
 ## 解説
 
@@ -96,5 +120,5 @@ console.log(result2); // false
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/delete", "delete")}} operator
+- {{jsxref("Operators/delete", "delete")}} 演算子
 - {{jsxref("Reflect.deleteProperty()")}}

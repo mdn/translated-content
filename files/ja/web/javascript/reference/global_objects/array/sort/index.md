@@ -1,11 +1,10 @@
 ---
 title: Array.prototype.sort()
+short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`sort()`** は {{jsxref("Array")}} のメソッドで、配列の要素を[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) でソートし、ソートされた同じ配列の参照を返します。既定のソート順は昇順で、要素を文字列に変換してから、 UTF-16 コード単位の値の並びとして比較します。
 
@@ -13,7 +12,19 @@ l10n:
 
 元の配列を変更せずに配列内の要素をソートするには、 {{jsxref("Array/toSorted", "toSorted()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/array-sort.html")}}
+{{InteractiveExample("JavaScript デモ: Array.sort()")}}
+
+```js interactive-example
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+console.log(months);
+// 予想される結果: Array ["Dec", "Feb", "Jan", "March"]
+
+const array = [1, 30, 4, 21, 100000];
+array.sort();
+console.log(array);
+// 予想される結果: Array [1, 100000, 21, 30, 4]
+```
 
 ## 構文
 
@@ -25,15 +36,20 @@ sort(compareFn)
 ### 引数
 
 - `compareFn` {{optional_inline}}
-
-  - : ソート順を定義する関数です。返値は、 2 つの要素の相対順序を示す符号を持つ数値である必要があります。 `a` が `b` より小さい場合は負の値、`a` が `b` より大きい場合は正の値、等しい場合は 0 とします。 `NaN` は `0` として扱われます。この関数は次の引数で呼び出されます。
-
+  - : 要素の順序を決定する関数。この関数は、次の引数で呼び出されます。
     - `a`
       - : 比較する第一要素。 `undefined` になることはありません。
     - `b`
       - : 比較する第二要素。 `undefined` になることはありません。
 
-    省略した場合、配列の要素は文字列に変換され、各文字の Unicode コードポイント値に従って並べ替えられます。
+    これは、以下の数値を返します。
+    - 負の値は、`a` が `b` より前に来るべきであることを示します。
+    - 正の値は、`a` が `b` の後に来るべきであることを示します。
+    - 0 または `NaN` は、`a` と `b` が等しいとみなされることを示します。
+
+    これを覚えるには、`(a, b) => a - b` は数値を昇順でソートすることを覚えておいてください。
+
+    省略した場合、配列の要素は文字列に変換され、それぞれの文字の Unicode コードポイントの値に従ってソートされます。
 
 ### 返値
 
@@ -177,9 +193,7 @@ items.sort((a, b) => a.localeCompare(b));
 const data = ["delta", "alpha", "charlie", "bravo"];
 
 // 位置とソート値を持つオブジェクトを保持する一時的な配列です。
-const mapped = data.map((v, i) => {
-  return { i, value: someSlowOperation(v) };
-});
+const mapped = data.map((v, i) => ({ i, value: someSlowOperation(v) }));
 
 // 削減された値を含む対応付けられた配列のソート
 mapped.sort((a, b) => {

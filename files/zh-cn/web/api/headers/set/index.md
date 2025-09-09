@@ -1,68 +1,70 @@
 ---
-title: Headers.set()
+title: Headers：set() 方法
 slug: Web/API/Headers/set
+l10n:
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
-{{domxref("Headers")}} 接口中 **`set()`** 方法在可以在已经声明中的 **`headers`** 对象修改已有的一组键值对或者创建一个新的键值对。
+{{domxref("Headers")}} 接口的 **`set()`** 方法为 `Headers` 对象中已存在的标头设置新值，或在标头不存在的情况下添加该标头。
 
-**`set()`** 方法和 [append()](/zh-CN/docs/Web/API/Headers/append)方法不同的是声明的 **`Headers`** 对象是否已经存在对应的 **`keys`** 是否已经存在并且已经赋值。**`set()`** 方法将会覆盖之前的 **`value`**，然而 [append()](/zh-CN/docs/Web/API/Headers/append)方法只会在 **`Headers`** 对象的尾部添加一个新的键值对。
+`set()` 和 {{domxref("Headers.append")}} 的不同之处在于：如果指定的标头已经存在且其可以接受多个值，`set()` 会使用新值覆盖已存在的值，而 {{domxref("Headers.append")}} 将新值追加到值集合的末尾。
 
-为了安全策略，一些 **`Headers`**对象中的键值对只能客户端去控制。这些 **`key`** 包括[Forbidden response header name](/zh-CN/docs/Glossary/Forbidden_header_name) 和 [Forbidden responese header names](/zh-CN/docs/Glossary/Forbidden_response_header_name) 。
+出于安全考虑，某些标头只能由用户代理控制。这些标头包括{{Glossary("Forbidden_request_header", "禁止修改的请求标头")}}和{{Glossary("Forbidden_response_header_name", "禁止修改的响应标头")}}。
 
 ## 语法
 
-```plain
-myHeaders.set(name, value);
+```js-nolint
+set(name, value)
 ```
 
 ### 参数
 
 - `name`
-  - : **`name`**就是需要对 HTTP header 设置新值的 key，一般为字符串。如果设置的**`name`** 不是 HTTP header 规范里面规定的 name，那么将会抛出错误"TypeError"。
+  - : 你想要为其设置新值的 HTTP 标头的名称。如果给定名称不属于 HTTP 标头的名称，那么该方法会抛出 {{jsxref("TypeError")}}。
 - `value`
-  - : **`value`** 就是 **`name`** 对应的值。
+  - : 你想要设置的新值。
 
-### 返回
+### 返回值
 
-Void.
+无（{{jsxref("undefined")}}）。
 
-## Example
+## 示例
 
-创建一个新的 `Headers` 对象：
+创建一个空的 `Headers` 对象很简单：
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // 目前为空
 ```
 
-你可以用[append()](/zh-CN/docs/Web/API/Headers/append)方法给`Headers` 对象增添一个新的键值对，然后用 **`set()`** 方法去改变这个键值对：
+你可以使用 {{domxref("Headers.append")}} 方法来添加标头，然后使用 `set()` 来为这个标头设置新值。
 
 ```js
 myHeaders.append("Content-Type", "image/jpeg");
 myHeaders.set("Content-Type", "text/html");
 ```
 
-如果这个键值对不存在，那么 **`set()`** 方法首先创建一个键值对，然后给它赋值。如果这个键值对存在，那么 **`set()`** 方法将会覆盖之前的 **`value`** 值：
+如果指定的标头不存在，那么 `set()` 会创建它，并将其值设置为指定值。如果指定的标头存在且其可以接受多个值，那么 `set()` 方法将会使用新值覆盖已有的值：
 
 ```js
 myHeaders.set("Accept-Encoding", "deflate");
 myHeaders.set("Accept-Encoding", "gzip");
-myHeaders.get("Accept-Encoding"); // Returns 'gzip'
+myHeaders.get("Accept-Encoding"); // 返回“gzip”
 ```
 
-如果你需要增加一个键值对，而不是要覆盖之前的键值对，那么你需要用[append()](/zh-CN/docs/Web/API/Headers/append)方法。
+如果你想要将新值追加到已有的值中（而不是覆盖它），那么你需要使用 {{domxref("Headers.append")}} 方法。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

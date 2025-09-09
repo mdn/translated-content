@@ -1,9 +1,7 @@
 ---
-title: ":lang"
+title: :lang
 slug: Web/CSS/:lang
 ---
-
-{{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:lang()`** de [CSS](/es/docs/Web/CSS) es utilizada para modificar elementos en función del idioma en el que se determina que están.
 
@@ -15,7 +13,7 @@ p:lang(en) {
 ```
 
 > [!NOTE]
-> En HTML, el lenguaje está determinado por una combinación del atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang), el elemento {{HTMLElement("meta")}} y posiblemente por la información del protocolo (como los encabezados HTTP). Para otros tipos de documentos, puede haber otros métodos de documentos para determinar el idioma.
+> En HTML, el lenguaje está determinado por una combinación del atributo [`lang`](/es/docs/Web/HTML/Reference/Global_attributes#lang), el elemento {{HTMLElement("meta")}} y posiblemente por la información del protocolo (como los encabezados HTTP). Para otros tipos de documentos, puede haber otros métodos de documentos para determinar el idioma.
 
 ## Sintaxis
 
@@ -30,7 +28,7 @@ p:lang(en) {
 
 ## Ejemplo
 
-En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los elementos primarios de los elementos de cita ({{htmlElement("q")}}) utilizando [selectores de hijo](/es/docs/Web/CSS/Child_selectors). Tenga en cuenta que esto no ilustra la única manera de hacerlo, y que el mejor método para usar depende del tipo de documento. También tenga en cuenta que los valores de {{glossary("Unicode")}} se utilizan para especificar algunos de los caracteres de comillas especiales.
+En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los elementos primarios de los elementos de cita ({{htmlElement("q")}}) utilizando [selectores de hijo](/es/docs/Web/CSS/Child_combinator). Tenga en cuenta que esto no ilustra la única manera de hacerlo, y que el mejor método para usar depende del tipo de documento. También tenga en cuenta que los valores de {{glossary("Unicode")}} se utilizan para especificar algunos de los caracteres de comillas especiales.
 
 ### HTML
 
@@ -75,5 +73,5 @@ En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los eleme
 ## Ver también
 
 - Pseudo-clases relacionadas con el lenguaje: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- Atributo HTML [`lang`](/es/docs/Web/HTML/Global_attributes#lang)
+- Atributo HTML [`lang`](/es/docs/Web/HTML/Reference/Global_attributes#lang)
 - [BCP 47 - Etiquetas para identificar idiomas](https://tools.ietf.org/html/bcp47)

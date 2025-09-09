@@ -9,7 +9,7 @@ Obtient la fenêtre actuelle du navigateur, en passant ses détails dans un rapp
 
 La fenêtre "actuelle" n'est pas nécessairement la même que la fenêtre ayant actuellement le focus. Si cette fonction est appelée à partir d'un script en arrière-plan, elle renvoie la fenêtre ayant actuellement le focus. Mais s'il est appelé à partir d'un script dont le document est associé à une fenêtre de navigateur particulière, il retourne la fenêtre de ce navigateur. Par exemple, si le navigateur affiche une barre latérale, chaque fenêtre de navigateur possède sa propre instance du document de la barre latérale. Si un script exécuté dans le document de la barre latérale appelle `getCurrent()`, il renverra la fenêtre de ce document de la barre latérale.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -22,9 +22,7 @@ var gettingCurrent = browser.windows.getCurrent(
 ### Paramètres
 
 - `getInfo`{{optional_inline}}
-
   - : `object`.
-
     - `populate`{{optional_inline}}
       - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets de la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl` si le fichier manifest de l'extension comprend la permission `"tabs"`.
     - `windowTypes`{{optional_inline}}
@@ -36,7 +34,7 @@ var gettingCurrent = browser.windows.getCurrent(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`windows.Window`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet [`windows.Window`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -68,8 +66,6 @@ browser.browserAction.onClicked.addListener((tab) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -11,7 +11,15 @@ l10n:
 
 **`SharedArrayBuffer()`** 생성자는 {{jsxref("SharedArrayBuffer")}} 객체를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 구문
 

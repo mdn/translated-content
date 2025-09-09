@@ -3,11 +3,9 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
-La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica la distancia entre los bordes de celdas adyacentes (sólo para el modelo de [separación de borde](/es/CSS/border-collapse)). Es el equivalente al atributo `cellspacing` en HTML.
+La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica la distancia entre los bordes de celdas adyacentes (sólo para el modelo de [separación de borde](/es/docs/Web/CSS/border-collapse)). Es el equivalente al atributo `cellspacing` en HTML.
 
 - {{ Cssxref("initial", "Valor inicial") }}: 0
 - Se aplica a: tablas y elementos con la propiedad `inline-table`
@@ -26,7 +24,7 @@ border-spacing: \<length> | \<length> \<length> | inherit
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border-spacing.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border-spacing.html)
 
 ```
 table#space {

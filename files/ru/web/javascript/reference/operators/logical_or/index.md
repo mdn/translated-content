@@ -9,7 +9,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_OR
 
 Обычно используется с {{jsxref("Boolean", "булевыми")}} (логическими) значениями. Тогда возвращается булевое значение. Однако фактически оператор `||` возвращает значение одного из операндов, поэтому если этот оператор используется с небулевыми значениями, он вернет небулевое значение.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 || b > 0);
+// Expected output: true
+```
 
 ## Синтаксис
 
@@ -31,7 +39,7 @@ expr1 || expr2;
 - пустая строка (`""`, `''`, ` `` `);
 - `undefined`.
 
-Несмотря на то, что оператор `||` может использоваться с операндами без логических значений, это всё равно булевый оператор, поскольку его возвращаемое значение всегда можно преобразовать в [булевый примитив](/ru/docs/Web/JavaScript/Data_structures#Boolean_type).
+Несмотря на то, что оператор `||` может использоваться с операндами без логических значений, это всё равно булевый оператор, поскольку его возвращаемое значение всегда можно преобразовать в [булевый примитив](/ru/docs/Web/JavaScript/Guide/Data_structures#boolean_type).
 Чтобы явно преобразовать возвращаемое значение этого оператора (или вообще любое выражение) в соответствующее значение булевого типа, используйте двойной {{JSxRef("Operators/Logical_NOT", "оператор НЕ")}} или конструктор {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
 
 ### Сокращённое вычисление
@@ -60,7 +68,7 @@ console.log(B() || A());
 
 ### Приоритет операторов
 
-Следующие выражения могут показаться эквивалентными, но это не так, потому что оператор `&&` выполняется до оператора `||` (см. [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+Следующие выражения могут показаться эквивалентными, но это не так, потому что оператор `&&` выполняется до оператора `||` (см. [приоритет операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js
 true || (false && false); // вернёт true, поскольку сначала вычисляется &&
@@ -87,7 +95,7 @@ o10 = false || varObject; // f || object вернёт varObject
 ```
 
 > [!NOTE]
-> Если вы используете этот оператор, чтобы задать значение по умолчанию для некоторой переменной, имейте в виду, что любое _ложноподобное_ будет проигнорировано. Если вам нужно исключить только {{jsxref("null")}} или {{jsxref("undefined")}}, попробуйте воспользоваться [оператором нулевого слияния](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
+> Если вы используете этот оператор, чтобы задать значение по умолчанию для некоторой переменной, имейте в виду, что любое _ложноподобное_ будет проигнорировано. Если вам нужно исключить только {{jsxref("null")}} или {{jsxref("undefined")}}, попробуйте воспользоваться [оператором нулевого слияния](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
 
 ### Правила конвертации для булевых значений
 
@@ -145,7 +153,7 @@ bCondition1 && (bCondition2 || bCondition3);
 
 ## Смотрите также
 
-- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

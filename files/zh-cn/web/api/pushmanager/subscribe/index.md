@@ -18,9 +18,7 @@ subscribe(options)
 ### 参数
 
 - `options {{optional_inline}}`
-
   - : `一个包含可选配置参数的对象。包含以下属性：`
-
     - `userVisibleOnly`: 布尔值，表示返回的推送订阅将只能被用于对用户可见的消息。
     - applicationServerKey：推送服务器用来向客户端应用发送消息的公钥。该值是应用程序服务器生成的签名密钥对的一部分，可使用在 P-256 曲线上实现的椭圆曲线数字签名（ECDSA）。可以是{{domxref("DOMString")}} 或 {{domxref("ArrayBuffer")}}。
 
@@ -66,4 +64,4 @@ navigator.serviceWorker
 
 ## 参见
 
-- [使用 Push API](/zh-CN/docs/Web/API/Push_API/Using_the_Push_API)
+- [使用 Push API](/zh-CN/docs/Web/API/Push_API)

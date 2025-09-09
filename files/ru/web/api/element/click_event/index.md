@@ -16,7 +16,7 @@ slug: Web/API/Element/click_event
 element.onclick = functionRef;
 ```
 
-где _functionRef_ это функция - зачастую это имя функции, которая объявлена где-то в другом месте или же _функциональное выражение_. См. "[JavaScript Guide:Functions](/ru/docs/JavaScript/Guide/Functions)".
+где _functionRef_ это функция - зачастую это имя функции, которая объявлена где-то в другом месте или же _функциональное выражение_. См. "[JavaScript Guide:Functions](/ru/docs/Web/JavaScript/Guide/Functions)".
 
 Единственный аргумент, переданный в определённую функцию обработчик события это {{domxref("MouseEvent")}} объект. `this` внутри обработчика будет указывать на элемент, на котором было вызвано событие.
 
@@ -77,8 +77,7 @@ p.onclick = function (event) {
 
 ## Смотрите также
 
-- {{event("click")}} event
+- [`click`](/ru/docs/Web/API/Element/click_event) event
 - Related event handlers
-
   - {{domxref("GlobalEventHandlers.onauxclick")}}
   - {{domxref("GlobalEventHandlers.ondblclick")}}

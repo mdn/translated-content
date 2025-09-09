@@ -23,7 +23,7 @@ webSocket = new WebSocket(url, protocols);
 ```
 
 - `url`
-  - : 要连接的 URL；这应当是 WebSocket 服务器会响应的 URL。
+  - : 要连接的 URL，即 WebSocket 服务器将响应的地址。其应使用 URL 方案 `wss://`，尽管某些软件在本地连接时可能允许使用不安全的 `ws://`。[大多数现代浏览器版本](/zh-CN/docs/Web/API/WebSocket/WebSocket#浏览器兼容性)也支持相对 URL 值以及 `https://` 和 `http://` 方案。
 - `protocols` {{ optional_inline() }}
   - : 一个协议字符串或一个协议字符串数组。这些字符串用来指定子协议，这样一个服务器就可以实现多个 WebSocket 子协议（比如你可能希望一个服务器可以根据指定的 `protocol` 来应对不同的互动情况）。如果不指定协议字符串则认为是空字符串。
 
@@ -36,7 +36,7 @@ webSocket = new WebSocket(url, protocols);
 
 如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 [`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) 对象（然后调用其`onerror` handler），然后 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 被发送给[`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) （然后调用其 `onclose` handler）以说明连接关闭的原因。
 
-在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
+在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
 
 ### 示例
 
@@ -62,7 +62,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
 
 一旦连接建立了（也就是说 `readyState` 是 `OPEN`） `exampleSocket.protocol` 就会告诉你服务器选择了哪个协议。
 
-上面的例子中 `ws` 替代了 `http`，同样地 `wss 也会替代 https`. 建立 WebSocket 链接有赖于 [HTTP Upgrade mechanism](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism), 所以当我们使用 `ws://www.example.com`或者 `wss://www.example.com`来访问 HTTP 服务器的时候协议会隐式地升级。
+上面的例子中 `ws` 替代了 `http`，同样地 `wss 也会替代 https`. 建立 WebSocket 链接有赖于 [HTTP Upgrade mechanism](/zh-CN/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism), 所以当我们使用 `ws://www.example.com`或者 `wss://www.example.com`来访问 HTTP 服务器的时候协议会隐式地升级。
 
 ## 向服务器发送数据
 
@@ -72,7 +72,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer)来发送。
+你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)来发送。
 
 因为连接的建立是异步的，而且容易失败，所以不能保证刚创建 WebSocket 对象时使用 `send()` 方法会成功。我们至少可以确定企图在链接建立起来之后立马发送数据，可以通过注册 `onopen` 事件处理器解决：
 
@@ -171,7 +171,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-这里我们使用 [`JSON.parse()`](/zh-CN/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
+这里我们使用 [`JSON.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
 
 ### 文本数据的格式
 

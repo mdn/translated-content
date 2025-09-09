@@ -3,15 +3,13 @@ title: Firefox 13 pour les développeurs
 slug: Mozilla/Firefox/Releases/13
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume les principaux changements dans Firefox 13 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web
 
 ### HTML
 
-- L'attribut [`cellspacing`](/fr/docs/Web/HTML/Element/table#cellspacing) de {{htmlelement("table")}} est désormais analysé de la manière qu'il soit en mode quirks ou non. Autrement dit, si une valeur est spécifiée en pourcentage, elle est traitée comme un certain nombre de pixels, puisque les valeurs en pourcentage ne sont pas réellement autorisée selon la spécification.
+- L'attribut [`cellspacing`](/fr/docs/Web/HTML/Reference/Elements/table#cellspacing) de {{htmlelement("table")}} est désormais analysé de la manière qu'il soit en mode quirks ou non. Autrement dit, si une valeur est spécifiée en pourcentage, elle est traitée comme un certain nombre de pixels, puisque les valeurs en pourcentage ne sont pas réellement autorisée selon la spécification.
 - L'élément {{htmlelement("wbr")}} a vu son comportement bi-directionnel corrigé. Il se comporte à présent comme l'Unicode `U+200B ZERO-WIDTH SPACE` et n'affecte donc plus la bi-directionnalité de son élément parent.
 - La peusdo-classe {{Cssxref(":invalid")}} peut à présent être appliquée à l'élément {{htmlelement("form")}}.
 
@@ -25,8 +23,8 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 ### JavaScript
 
-- Le support pour la construction [`for..of`](/fr/docs/JavaScript/Reference/Statements/for...of) de l'ECMAScript 6 a été ajouté.
-- Le support expérimental pour les objets ECMAScript 6 [Map](/fr/docs/JavaScript/Reference/Global_Objects/Map) and [Set](/fr/docs/JavaScript/Reference/Global_Objects/Set) a été ajouté.
+- Le support pour la construction [`for..of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) de l'ECMAScript 6 a été ajouté.
+- Le support expérimental pour les objets ECMAScript 6 [Map](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) and [Set](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) a été ajouté.
 
 ### DOM
 
@@ -34,7 +32,7 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 - Les méthodes {{domxref("window.setTimeout()")}} et {{domxref("window.setInterval()")}} ne transmettent plus l'argument supplémentaire "lateness" lors du rappel de routine.
 - La méthode {{domxref("Blob","Blob.mozSlice()")}} n'a plus de préfixe.
 - Le support du constructeur {{domxref("Blob")}} a été ajouté.
-- Le support de [`globalStorage`](/fr/docs/DOM/Storage#globalStorage) a été retiré.
+- Le support de [`globalStorage`](/fr/docs/Web/API/Web_Storage_API#globalstorage) a été retiré.
 - La nouvelle interface {{domxref("DOMRequest")}}, utilisée pour rapporté l'état et le résultat des opérations en arrière-plan, a été ajoutée.
 - La méthode {{domxref("HTMLOptionElement", "HTMLOptionElement.index()")}} renvoie désormais `0` au lieu de l'incorrect `-1` lorsque {{HTMLElement("option")}} est à l'intérieur d'un élément {{HTMLElement("datalist")}}.
 - {{domxref("DOMException")}} a été implémenté selon la spécification DOM Level 4.
@@ -50,16 +48,16 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 ### SVG
 
-- L'interface DOM {{domxref("SVGStringList")}} est désormais indexable comme [`Array`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/Array) (voir [bug Firefox 722071](https://bugzil.la/722071)).
+- L'interface DOM {{domxref("SVGStringList")}} est désormais indexable comme [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) (voir [bug Firefox 722071](https://bugzil.la/722071)).
 
 ### WebGL
 
-- Le support pour l'extension [`EXT_texture_filter_anisotropic`](/fr/docs/WebGL/Using_Extensions#EXT_texture_filter_anisotropic) a été ajouté. Le filtrage des textures anisotrope améliore la qualité de l'accès aux textures mipmapped lors de la visualisation d'une primitive texturée à un angle oblique.
+- Le support pour l'extension [`EXT_texture_filter_anisotropic`](/fr/docs/Web/API/WebGL_API/Using_Extensions#ext_texture_filter_anisotropic) a été ajouté. Le filtrage des textures anisotrope améliore la qualité de l'accès aux textures mipmapped lors de la visualisation d'une primitive texturée à un angle oblique.
 
 ### MathML
 
 - Le support pour l'attribut `width` sur l'élément {{MathMLElement("mtable")}} a été ajouté ([bug Firefox 722880](https://bugzil.la/722880)).
-- La [police MathJax](http://www.mathjax.org/demos/tex-samples/) est désormais utilisée comme police par défaut pour le texte mathématique are now used as the default fonts for mathematical text. Voir [les polices pour le moteur MathML de Mozilla](/fr/docs/Mozilla_MathML_Project/Fonts) pour plus d'informations.
+- La [police MathJax](https://www.mathjax.org/demos/tex-samples/) est désormais utilisée comme police par défaut pour le texte mathématique are now used as the default fonts for mathematical text. Voir [les polices pour le moteur MathML de Mozilla](/fr/docs/Mozilla_MathML_Project/Fonts) pour plus d'informations.
 
 ### Réseau
 
@@ -73,8 +71,8 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 #### Améliorations du panneau de style
 
-- En cliquant sur l'en-tête d'une règle dans le [panneau de style](/fr/docs/Tools/Page_Inspector/Style_panel) ouvre à présent [l'Editeur de style](/fr/docs/Outils/Éditeur_de_Style) correspondant au CSS.
-- Un clique droit sur une règle dans le [panneau de style](/fr/docs/Tools/Page_Inspector/Style_panel) offre à présent une option pour copier la règle dans le presse-papiers.
+- En cliquant sur l'en-tête d'une règle dans le [panneau de style](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#CSS_pane) ouvre à présent [l'Editeur de style](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) correspondant au CSS.
+- Un clique droit sur une règle dans le [panneau de style](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#CSS_pane) offre à présent une option pour copier la règle dans le presse-papiers.
 - La saisie d'un nom de propriété inconnue, ou d'une valeur de propriété illégale, affiche une icône d'avertissement près de cette propriété.
 
 #### Amélioration de l'Ardoise

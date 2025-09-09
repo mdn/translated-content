@@ -3,16 +3,14 @@ title: Firefox 19 for developers
 slug: Mozilla/Firefox/Releases/19
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 19 を搭載した Firefox 19 は米国時間 2013 年 2 月 19 日にリリースされました。このページでは、開発者に影響する Firefox 19 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### JavaScript
 
-- [`Map`](/ja/docs/JavaScript/Reference/Global_Objects/Map) オブジェクトおよび [`Set`](/ja/docs/JavaScript/Reference/Global_Objects/Set) オブジェクトは、`size()` メソッドを持つオブジェクトから `size` プロパティを持つオブジェクトに変わりました。([Firefox バグ 807001](https://bugzil.la/807001))
-- [`Map`](/ja/docs/JavaScript/Reference/Global_Objects/Map) オブジェクトおよび [`Set`](/ja/docs/JavaScript/Reference/Global_Objects/Set) オブジェクトに `clear()` メソッドが追加されました。([Firefox バグ 805003](https://bugzil.la/805003))
+- [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトおよび [`Set`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set) オブジェクトは、`size()` メソッドを持つオブジェクトから `size` プロパティを持つオブジェクトに変わりました。([Firefox バグ 807001](https://bugzil.la/807001))
+- [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトおよび [`Set`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set) オブジェクトに `clear()` メソッドが追加されました。([Firefox バグ 805003](https://bugzil.la/805003))
 
 ### CSS
 

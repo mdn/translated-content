@@ -44,4 +44,4 @@ l10n:
 - {{cssxref("text-align")}}
 - {{cssxref(":nth-child()")}}
 - {{cssxref(":nth-last-child()")}}
-- [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [样式化表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables)

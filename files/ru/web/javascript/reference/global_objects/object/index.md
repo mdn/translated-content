@@ -5,11 +5,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 {{JSRef}}
 
-Тип **`Object`** представляет один из [типов данных JavaScript](/ru/docs/Web/JavaScript/Data_structures). Он используется для хранения различных коллекций с ключами и более сложных сущностей. Объекты могут быть созданы с использованием конструктора {{jsxref("Object/Object", "Object()")}} или [синтаксиса инициализатора / литерала объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+Тип **`Object`** представляет один из [типов данных JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures). Он используется для хранения различных коллекций с ключами и более сложных сущностей. Объекты могут быть созданы с использованием конструктора {{jsxref("Object/Object", "Object()")}} или [синтаксиса инициализатора / литерала объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Описание
 
-Почти все [объекты](/ru/docs/Web/JavaScript/Data_structures#объекты) в JavaScript являются экземплярами `Object`; типичный объект наследует свойства (включая методы) от `Object.prototype`, хотя эти свойства могут быть затенены (т.е. переопределены). Единственные объекты, которые не наследуют от `Object.prototype`, - это те, у которых [прототип `null`](#null-prototype_objects), или которые происходят от других объектов с прототипом `null`.
+Почти все [объекты](/ru/docs/Web/JavaScript/Guide/Data_structures#объекты) в JavaScript являются экземплярами `Object`; типичный объект наследует свойства (включая методы) от `Object.prototype`, хотя эти свойства могут быть затенены (т.е. переопределены). Единственные объекты, которые не наследуют от `Object.prototype`, - это те, у которых [прототип `null`](#null-prototype_objects), или которые происходят от других объектов с прототипом `null`.
 
 Изменения в объекте `Object.prototype` видны всем объектам с помощью цепочки прототипов, если свойства и методы, подверженные этим изменениям, не переопределены дальше по цепочке прототипов. Это предоставляет очень мощный, хотя и потенциально опасный механизм для переопределения или расширения поведения объектов. Для обеспечения большей безопасности, `Object.prototype` - единственный объект в основном языке JavaScript, у которого [неизменяемый прототип](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#описание) - прототип `Object.prototype` всегда `null` и не может быть изменен.
 
@@ -104,7 +104,7 @@ new Object([value])
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
   - : Возвращает логическое значение, указывающее, входит ли объект, у которого вызван метод, в цепочку прототипов другого объекта.
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-  - : Возвращает логическое значение, указывающее, является ли указанное свойство свойством объекта [enumerable own](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+  - : Возвращает логическое значение, указывающее, является ли указанное свойство свойством объекта [enumerable own](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
 - {{jsxref("Object.prototype.toLocaleString()")}}
   - : Вызывает {{jsxref("Object/toString", "toString()")}}.
 - {{jsxref("Object.prototype.toString()")}}

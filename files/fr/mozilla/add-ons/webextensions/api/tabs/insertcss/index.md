@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 Injecter du code CSS dans une page web.
 
-Pour utiliser cette API vous devez avoir la permission "[host permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)" ou utiliser la permission "[activeTab permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)".
+Pour utiliser cette API vous devez avoir la permission "[host permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)" ou utiliser la permission "[activeTab permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)".
 
 Vous ne pouvez injecter du CSS que dans des pages dont l'URL peut être exprimée en utilisant un [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), ce qui signifie que son schéma doit être "http", "https", "file", "ftp". Cela signifie que vous ne pouvez pas injecter de CSS dans les pages intégrées du navigateur, telles que about:debugging, about:addons, ou la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.
 
@@ -32,15 +32,13 @@ var inserting = browser.tabs.insertCSS(
 - `tabId` {{optional_inline}}
   - : `integer`. L'ID de l'onglet dans lequel insérer le CSS. Par défaut à l'onglet actif de la fenêtre en cours.
 - `details`
-
   - : Un objet décrivant le CSS à insérer. Il contient les propriétés suivantes :
-
     - `allFrames`{{optional_inline}}
       - : `boolean`. Si `true`, le CSS sera injecté dans toutes les images de la page en cours. Si c'est `false`, CSS est seulement injecté dans le cadre supérieur. Par défaut à `false`.
     - `code`{{optional_inline}}
       - : `string`. Code à injecter, sous la forme d'une chaîne de texte.
     - `cssOrigin`{{optional_inline}}
-      - : `string`. Cela peut prendre l'une des deux valeurs suivantes: "utilisateur", pour ajouter le CSS en tant que feuille de style utilisateur, ou "auteur" pour l'ajouter en tant que feuille de style auteur. Spécifier "utilisateur" vous permet d'empêcher les sites Web de surcharger le CSS que vous insérez: voir [la commande en cascade](/fr/docs/Web/CSS/Cascade#Cascading_order). Si cette option est omise, le CSS est ajouté en tant que feuille de style auteur.
+      - : `string`. Cela peut prendre l'une des deux valeurs suivantes: "utilisateur", pour ajouter le CSS en tant que feuille de style utilisateur, ou "auteur" pour l'ajouter en tant que feuille de style auteur. Spécifier "utilisateur" vous permet d'empêcher les sites Web de surcharger le CSS que vous insérez: voir [la commande en cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade#cascading_order). Si cette option est omise, le CSS est ajouté en tant que feuille de style auteur.
     - `file`{{optional_inline}}
       - : `string`. Chemin d'accès à un fichier contenant le code à injecter. Dans Firefox, les URL relatives sont résolues par rapport à l'URL de la page en cours. Dans Chrome, ces URL sont résolues par rapport à l'URL de base de l'extension. Pour travailler avec plusieurs navigateurs, vous pouvez spécifier le chemin comme une URL absolue, en commençant à la racine de l'extension, comme ceci : `"/path/to/stylesheet.css"`.
     - `frameId`{{optional_inline}}
@@ -93,8 +91,6 @@ browser.browserAction.onClicked.addListener(() => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

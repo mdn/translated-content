@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Animations_basiques", "Tutoriel_canvas/Pixel_manipulation_with_canvas")}}
 
-Dans le dernier chapitre, nous avons réalisé des [animations basiques](/fr/docs/Tutoriel_canvas/Animations_basiques) et avons appris comment faire en sorte que les éléments se déplacent. Dans cette partie, nous allons regarder de prêt le mouvement lui-même et ajouter un peu de physique afin de réaliser nos animations avancées.
+Dans le dernier chapitre, nous avons réalisé des [animations basiques](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations) et avons appris comment faire en sorte que les éléments se déplacent. Dans cette partie, nous allons regarder de prêt le mouvement lui-même et ajouter un peu de physique afin de réaliser nos animations avancées.
 
 ## Dessinons une balle
 
@@ -42,7 +42,7 @@ Il n'y a rien de spécial ici, la balle est pour le moment un simple cercle qui 
 
 ## Ajout de la vitesse
 
-Maintenant que nous avons une balle, nous sommes prêts à ajouter une animation simple comme nous avons pu le voir dans le [dernier chapitre](/fr/docs/Tutoriel_canvas/Animations_basiques) de ce tutoriel. Une fois encore, {{domxref("window.requestAnimationFrame()")}} nous aide à contrôler l'animation. Il est possible de déplacer la balle en ajoutant un vecteur de vitesse à la position. Pour chaque "frame", nous avons aussi {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} _(nettoyé)_ les canvas pour supprimer les anciens cercles des "frames" précédents.
+Maintenant que nous avons une balle, nous sommes prêts à ajouter une animation simple comme nous avons pu le voir dans le [dernier chapitre](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations) de ce tutoriel. Une fois encore, {{domxref("window.requestAnimationFrame()")}} nous aide à contrôler l'animation. Il est possible de déplacer la balle en ajoutant un vecteur de vitesse à la position. Pour chaque "frame", nous avons aussi {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} _(nettoyé)_ les canvas pour supprimer les anciens cercles des "frames" précédents.
 
 ```js
 var canvas = document.getElementById("canvas");
@@ -294,7 +294,7 @@ ball.draw();
 
 ## Ajout d'un contrôle de souris
 
-Afin d'obtenir quelques contrôles sur la balle, nous pouvons faire suivre notre souris en utilisant l'événement [`mousemove`](/fr/docs/Web/Reference/Events/mousemove), par exemple. L'événement [`click`](/fr/docs/Web/Events/click) relâche la balle et la laisse rebondir à nouveau.
+Afin d'obtenir quelques contrôles sur la balle, nous pouvons faire suivre notre souris en utilisant l'événement [`mousemove`](/fr/docs/Web/API/Element/mousemove_event), par exemple. L'événement [`click`](/fr/docs/Web/API/Element/click_event) relâche la balle et la laisse rebondir à nouveau.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
@@ -373,11 +373,11 @@ Déplacez la balle en utilisant votre souris et relâchez-la avec un click.
 
 ## Casse-briques
 
-Ce petit chapitre explique seulement quelques techniques pour créer des animations avancées. Il en existe bien davantage ! Que diriez-vous d'ajouter une raquette, des briques et de transformer cette démo en une partie de casse-briques ? Consultez notre zone de développement de jeux pour plus d'articles liés [aux jeux](/fr/docs/Jeux).
+Ce petit chapitre explique seulement quelques techniques pour créer des animations avancées. Il en existe bien davantage ! Que diriez-vous d'ajouter une raquette, des briques et de transformer cette démo en une partie de casse-briques ? Consultez notre zone de développement de jeux pour plus d'articles liés [aux jeux](/fr/docs/Games).
 
 ## Voir aussi
 
 - {{domxref("window.requestAnimationFrame()")}}
-- [Animation efficace pour les jeux vidéo](/fr/docs/Games/Techniques/Efficient_animation_for_web_games)
+- [Animation efficace pour les jeux vidéo](/fr/docs/Games/Techniques)
 
 {{PreviousNext("Tutoriel_canvas/Animations_basiques", "Tutoriel_canvas/Pixel_manipulation_with_canvas")}}

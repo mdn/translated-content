@@ -1,15 +1,29 @@
 ---
 title: Object.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 l10n:
-  sourceCommit: 4ce6b9526bfa5b44a518e8ecb21a9894973136bd
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.entries()`** は静的メソッドで、与えられたオブジェクトが所有する、文字列をキーとした列挙可能なプロパティのキーと値の組の配列を返します。
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript デモ: Object.entries()")}}
+
+```js interactive-example
+const object = {
+  a: "some string",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object)) {
+  console.log(`${key}: ${value}`);
+}
+
+// 予想される結果:
+// "a: some string"
+// "b: 42"
+```
 
 ## 構文
 
@@ -85,7 +99,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### Object の反復処理
 
-[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#配列の分割代入)を使って、オブジェクトを簡単に反復処理することができます。
+[配列の構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#配列の構造分解)を使って、オブジェクトを簡単に反復処理することができます。
 
 ```js
 // for...of ループの使用
@@ -111,7 +125,8 @@ Object.entries(obj).forEach(([key, value]) => {
 ## 関連情報
 
 - [`Object.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [es-shims による `Object.entries` のポリフィル](https://www.npmjs.com/package/object.entries)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

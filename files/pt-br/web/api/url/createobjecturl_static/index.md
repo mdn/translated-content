@@ -35,7 +35,7 @@ Uma {{domxref("DOMString")}} contendo o objeto URL e pode ser usado para referen
 
 ## Exemplos
 
-Veja [Usando objeto URL para exibir imagens](/pt-BR/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+Veja [Usando objeto URL para exibir imagens](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Notas de uso
 
@@ -64,8 +64,8 @@ Em versões antigas da especificação Media Source, anexar stream a um elemento
 
 ## Veja também
 
-- [Usando arquivos de aplicativos da web](/pt-BR/docs/Web/API/File/Using_files_from_web_applications)
-- [Usando objetos URLs para exibir imagens](/pt-BR/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
+- [Usando arquivos de aplicativos da web](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications)
+- [Usando objetos URLs para exibir imagens](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

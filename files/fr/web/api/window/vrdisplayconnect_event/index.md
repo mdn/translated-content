@@ -45,7 +45,7 @@ window.addEventListener("vrdisplayconnect", function () {
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplayconnect`](/fr/docs/Web/API/Window/onvrdisplayconnect) :
+Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplayconnect`](/fr/docs/Web/API/Window/vrdisplayconnect_event) :
 
 ```js
 window.onvrdisplayconnect = function () {

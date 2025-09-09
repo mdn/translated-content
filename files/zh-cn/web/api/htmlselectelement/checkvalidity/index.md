@@ -33,4 +33,4 @@ checkValidity()
 
 ## 参见
 
-- [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
+- [约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)

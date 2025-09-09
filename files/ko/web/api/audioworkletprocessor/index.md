@@ -43,7 +43,6 @@ _`AudioWorkletProcessor` 인터페이스는 어떠한 이벤트에도 응답하�
 
 1. 별도의 파일을 생성합니다.
 2. 그 파일에서
-
    1. `AudioWorkletProcessor` 클래스를 확장하고 (["클래스 파생" 섹션](#클래스_파생)을 참고하세요) 여러분만의 {{domxref("AudioWorkletProcessor.process", "process()")}} 메서드를 그 안에 제공하세요.
    2. {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} 메서드를 사용해 프로세서를 등록하세요.
 

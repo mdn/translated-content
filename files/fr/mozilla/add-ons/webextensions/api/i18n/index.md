@@ -5,12 +5,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 {{AddonSidebar}}
 
-Fonctions permettant d'internationaliser votre extension. Vous pouvez utiliser ces API pour obtenir des chaînes localisées à partir de fichiers locaux conditionnés avec votre extension, connaître la langue actuelle du navigateur et en connaître la valeur de son [En-tete "Accept-Language"](/fr/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header).
+Fonctions permettant d'internationaliser votre extension. Vous pouvez utiliser ces API pour obtenir des chaînes localisées à partir de fichiers locaux conditionnés avec votre extension, connaître la langue actuelle du navigateur et en connaître la valeur de son [En-tete "Accept-Language"](/fr/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header).
 
 Pour plus de détails sur l'utilisation de i18n pour votre extension, voir :
 
-- [Internationalization](/fr/Add-ons/WebExtensions/Internationalization): un guide d'utilisation du système WebExtension i18n.
-- [Référence de message spécifique aux paramètres régionaux](/fr/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)&nbsp;: Les extensions fournissent des chaînes de caractères locales dans des fichiers appelés `messages.json`. Cette page décrit le format de `messages.json`.
+- [Internationalization](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization): un guide d'utilisation du système WebExtension i18n.
+- [Référence de message spécifique aux paramètres régionaux](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)&nbsp;: Les extensions fournissent des chaînes de caractères locales dans des fichiers appelés `messages.json`. Cette page décrit le format de `messages.json`.
 
 ## Types
 
@@ -20,7 +20,7 @@ Pour plus de détails sur l'utilisation de i18n pour votre extension, voir :
 ## Fonctions
 
 - {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
-  - : Obtient les [accept-languages](/fr/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) du navigateur. Ceci est différent des paramètres régionaux utilisés par le navigateur. Pour obtenir les paramètres régionaux, utilisez {{WebExtAPIRef('i18n.getUILanguage')}}.
+  - : Obtient les [accept-languages](/fr/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header) du navigateur. Ceci est différent des paramètres régionaux utilisés par le navigateur. Pour obtenir les paramètres régionaux, utilisez {{WebExtAPIRef('i18n.getUILanguage')}}.
 - {{WebExtAPIRef("i18n.getMessage()")}}
   - : Obtient la chaîne localisée pour le message spécifié.
 - {{WebExtAPIRef("i18n.getUILanguage()")}}
@@ -36,5 +36,3 @@ Pour plus de détails sur l'utilisation de i18n pour votre extension, voir :
 
 > [!NOTE]
 > Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

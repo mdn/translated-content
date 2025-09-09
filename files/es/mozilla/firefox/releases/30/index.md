@@ -3,8 +3,6 @@ title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
 ---
 
-{{FirefoxSidebar}}
-
 Want to help document Firefox 30? See the [list of bugs that need to be written about](http://beta.elchi3.de/doctracker/#list=fx&version=30.0) and pitch in!
 
 ## Cambios para los Desarrolladores Web
@@ -29,8 +27,8 @@ _Sin cambios._
 
 ### JavaScript
 
-- New ES6-compatible [array comprehensions](/es/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) `[for (item of iterable) item]` and [generator comprehensions](/es/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) `(for (item of iterable) item)` have been implemented ([Error 979865 en Firefox](https://bugzil.la/979865)).
-- [Typed arrays](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Property_access) are now extensible and support new named properties ([Error 695438 en Firefox](https://bugzil.la/695438)).
+- New ES6-compatible [array comprehensions](/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `[for (item of iterable) item]` and [generator comprehensions](/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `(for (item of iterable) item)` have been implemented ([Error 979865 en Firefox](https://bugzil.la/979865)).
+- [Typed arrays](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access) are now extensible and support new named properties ([Error 695438 en Firefox](https://bugzil.la/695438)).
 - The {{jsxref("Error.prototype.stack")}} property now contains column numbers ([Error 762556 en Firefox](https://bugzil.la/762556)) and has been improved [when using `Function()` and `eval()` calls](/es/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack#Stack_of_eval'ed_code). This can help you to better debug minified or generated JavaScript code.
 - The `Promise.cast()` method has been renamed to {{jsxref("Promise.resolve()")}} ([Error 966348 en Firefox](https://bugzil.la/966348)).
 

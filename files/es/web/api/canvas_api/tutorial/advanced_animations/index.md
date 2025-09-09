@@ -290,7 +290,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 ## Agregar control de ratón
 
-Para controlar la bola, podemos hacerla seguir nuestro ratón usando el evento [`mousemove`](/es/docs/Web/Reference/Events/mousemove), por ejemplo. El evento [`click`](/es/docs/Web/Events/click) solta la bola y la deja rebotar de nuevo.
+Para controlar la bola, podemos hacerla seguir nuestro ratón usando el evento [`mousemove`](/es/docs/Web/API/Element/mousemove_event), por ejemplo. El evento [`click`](/es/docs/Web/API/Element/click_event) solta la bola y la deja rebotar de nuevo.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
@@ -374,6 +374,6 @@ Este capítulo corto sólo explica algunas técnicas para crear animaciones más
 ## Vea también
 
 - {{domxref("window.requestAnimationFrame()")}}
-- [Efficient animation for web games](/es/docs/Games/Techniques/Efficient_animation_for_web_games)
+- [Efficient animation for web games](/es/docs/Games/Techniques)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

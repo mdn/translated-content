@@ -44,7 +44,6 @@ addEventListener(type, listener, useCapture);
 - `listener`
   - : 지정한 이벤트({{domxref("Event")}} 인터페이스를 구현한 객체)를 수신할 객체입니다. `handleEvent()` 메서드를 포함하는 객체 또는 JavaScript [함수](/ko/docs/Web/JavaScript/Guide/Functions)여야 합니다. [이벤트 수신기 콜백](#이벤트_수신기_콜백)에서 콜백 자체에 대한 정보를 더 알아보세요.
 - `options` {{optional_inline}}
-
   - : 이벤트 수신기의 특징을 지정할 수 있는 객체입니다. 가능한 옵션은 다음과 같습니다.
     - `capture`
       - : 이벤트 대상의 DOM 트리 하위에 위치한 자손 `EventTarget`으로 이벤트가 전달되기 전에, 이 수신기가 먼저 발동돼야 함을 나타내는 불리언 값입니다. 명시하지 않을 경우 기본 값은 `false`입니다.
@@ -56,7 +55,6 @@ addEventListener(type, listener, useCapture);
       - : {{domxref("AbortSignal")}}입니다. 지정한 `AbortSignal` 객체의 {{domxref("AbortController.abort", "abort()")}} 메서드를 호출하면 이 수신기가 제거됩니다. 명시하지 않을 경우 이벤트 수신기가 아무 `AbortSignal`에도 연결되지 않습니다.
 
 - `useCapture` {{optional_inline}}
-
   - : 이벤트 대상의 DOM 트리 하위에 위치한 자손 `EventTarget`으로 이벤트가 전달되기 전에, 이 수신기가 먼저 발동돼야 함을 나타내는 불리언 값입니다. 캡처 모드인 수신기는 DOM 트리의 위쪽으로 버블링 중인 이벤트에 의해선 발동하지 않습니다. 이벤트 버블링과 캡처링은 조상-자손 관계를 가진 두 개의 요소가 동일한 이벤트 유형에 대한 수신기를 가지고 있을 때, 두 요소에 이벤트가 전파되는 방법을 말합니다. 이벤트 전파 모드에 따라 두 요소 중 이벤트를 먼저 수신하는 쪽이 달라집니다. [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)와 [JavaScript Event 순서](https://www.quirksmode.org/js/events_order.html#link4)에서 자세한 설명을 확인하세요. 기본 값은 `false`입니다.
 
     > [!NOTE]
@@ -566,7 +564,7 @@ myObject.register();
 
 ### 이벤트 수신기 안팎으로 데이터 옮기기
 
-이벤트 수신기에 데이터를 제공하는 것은 물론, 수신기 실행이 끝난 후 결과를 가져오는 것 또한 매우 어려워보일 것입니다. 이벤트 수신기는 유일한 매개변수로 [이벤트 객체](/ko/docs/Learn/JavaScript/Building_blocks/Events#이벤트_객체)만 받으며, 반환하는 모든 값은 무시됩니다. 그러면 어떻게 수신기에 데이터를 전달하거나, 그 밖으로 데이터를 가져올 수 있을까요? 몇 가지 좋은 방법을 소개합니다.
+이벤트 수신기에 데이터를 제공하는 것은 물론, 수신기 실행이 끝난 후 결과를 가져오는 것 또한 매우 어려워보일 것입니다. 이벤트 수신기는 유일한 매개변수로 [이벤트 객체](/ko/docs/Learn_web_development/Core/Scripting/Events#이벤트_객체)만 받으며, 반환하는 모든 값은 무시됩니다. 그러면 어떻게 수신기에 데이터를 전달하거나, 그 밖으로 데이터를 가져올 수 있을까요? 몇 가지 좋은 방법을 소개합니다.
 
 #### this로 이벤트 수신기에 데이터 전달하기
 
@@ -754,5 +752,5 @@ window.addEventListener(
 ## 같이 보기
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [이벤트 생성 및 발동](/ko/docs/DOM/Creating_and_triggering_events)
+- [이벤트 생성 및 발동](/ko/docs/Web/API/Document_Object_Model/Events)
 - [이벤트 처리기의 `this`에 관한 더 자세한 정보](https://www.quirksmode.org/js/this.html)

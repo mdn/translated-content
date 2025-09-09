@@ -18,7 +18,7 @@ Certains types communs utilisés dans d'autres APIs WebExtensions.
 - {{WebExtAPIRef("extensionTypes.RunAt")}}
   - : Le plus tot que le Javascript ou le CSS est injecté dans l'onglet.
 - `extensionTypes.CSSOrigin`
-  - : Indique si une feuille de style CSS injectée par [`tabs.insertCSS`](/fr/Add-ons/WebExtensions/API/tabs/insertCSS) doit être traitée comme une feuille de style "auteur" ou "utilisateur".
+  - : Indique si une feuille de style CSS injectée par [`tabs.insertCSS`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) doit être traitée comme une feuille de style "auteur" ou "utilisateur".
 
 ## Compatibilité des navigateurs
 
@@ -29,8 +29,6 @@ Certains types communs utilisés dans d'autres APIs WebExtensions.
 > [!NOTE]
 >
 > Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

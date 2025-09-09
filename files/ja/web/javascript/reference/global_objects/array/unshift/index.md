@@ -1,15 +1,24 @@
 ---
 title: Array.prototype.unshift()
+short-title: unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`unshift()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された要素を配列の先頭に追加し、新しい配列の長さを返します。
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.unshift()")}}
+
+```js interactive-example
+const array = [1, 2, 3];
+
+console.log(array.unshift(4, 5));
+// 予想される結果: 5
+
+console.log(array);
+// 予想される結果: Array [4, 5, 1, 2, 3]
+```
 
 ## 構文
 
@@ -31,11 +40,11 @@ unshift(element1, element2, /* …, */ elementN)
 
 ## 解説
 
-`unshift` メソッドは、与えられた要素を配列風オブジェクトの一番最初に挿入します。
+`unshift()` メソッドは、与えられた要素を配列風オブジェクトの一番最初に挿入します。
 
 {{jsxref("Array.prototype.push()")}} は `unshift()` と似た動作をしますが、配列の末尾に対して行う点が異なります。
 
-複数の要素が引数として渡された場合、引数として渡されたものと全く同じ順番で、オブジェクトの最初のチャンクに挿入されることに注意してください。したがって、 `unshift` を `n` 個の引数で **1 回**呼び出すのと、**1 個**の引数で `n` 回（例えばループを使って）呼び出すのとでは同じ結果にはなりません。
+複数の要素が引数として渡された場合、引数として渡されたものと全く同じ順番で、オブジェクトの最初のチャンクに挿入されることに注意してください。したがって、 `unshift()` を `n` 個の引数で **1 回**呼び出すのと、**1 個**の引数で `n` 回（例えばループを使って）呼び出すのとでは同じ結果にはなりません。
 
 例をご覧ください。
 
@@ -110,6 +119,7 @@ console.log(plainObj);
 ## 関連情報
 
 - [`Array.prototype.unshift` の修正を含むポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.unshift` のポリフィル](https://www.npmjs.com/package/array.prototype.unshift)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}

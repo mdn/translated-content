@@ -8,7 +8,31 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 **`Map`** 객체는 키-값 쌍과 키의 원래 삽입 순서를 기억합니다. 모든 값(객체 및
 {{glossary("Primitive", "원시 값")}} 모두)은 키 또는 값으로 사용될 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/map.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("a", 1);
+map1.set("b", 2);
+map1.set("c", 3);
+
+console.log(map1.get("a"));
+// Expected output: 1
+
+map1.set("a", 97);
+
+console.log(map1.get("a"));
+// Expected output: 97
+
+console.log(map1.size);
+// Expected output: 3
+
+map1.delete("b");
+
+console.log(map1.size);
+// Expected output: 2
+```
 
 ## 설명
 
@@ -24,8 +48,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 
 ### 키 동일성
 
-값 동일성은 [`SameValueZero`](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)을
-기반으로 합니다.(`0`과 `-0`을 다르게 취급하는 [등가 같음](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is)을
+값 동일성은 [`SameValueZero`](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality)을
+기반으로 합니다.(`0`과 `-0`을 다르게 취급하는 [등가 같음](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is)을
 사용하였습니다. [브라우저 호환성](#browser_compatibility)을 확인해보세요). 즉, `NaN !== NaN`에도 불구하고
 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며, 다른 모든 값은 `===` 연산자의 의미론에 따라 동일하게 간주됩니다.
 

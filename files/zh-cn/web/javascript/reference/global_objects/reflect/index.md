@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 
 {{JSRef}}
 
-**Reflect** 是一个内置的对象，它提供拦截 JavaScript 操作的方法。这些方法与 [proxy handler](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) 的方法相同。`Reflect` 不是一个函数对象，因此它是不可构造的。
+**Reflect** 是一个内置的对象，它提供拦截 JavaScript 操作的方法。这些方法与 [proxy handler](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy) 的方法相同。`Reflect` 不是一个函数对象，因此它是不可构造的。
 
 ## 描述
 

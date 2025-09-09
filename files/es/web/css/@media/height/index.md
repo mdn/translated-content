@@ -3,9 +3,7 @@ title: Altura
 slug: Web/CSS/@media/height
 ---
 
-{{cssref}}
-
-Las [CSS](/es/docs/CSS) [media feature (consulta de medios)](/es/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`height`** puede ser usada para aplicar estilos basados en la altura del {{glossary("viewport")}} (o la caja de la página, para [paged media](/es/docs/Web/CSS/Paged_media)).
+Las [CSS](/es/docs/Web/CSS) [media feature (consulta de medios)](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) **`height`** puede ser usada para aplicar estilos basados en la altura del {{glossary("viewport")}} (o la caja de la página, para [paged media](/es/docs/Web/CSS/CSS_paged_media)).
 
 ## Sintáxis
 

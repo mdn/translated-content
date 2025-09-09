@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/slice
 
 O método `slice()` extrai uma parte de uma string e a retorna como uma nova string, sem modificar a string original.
 
-{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.slice()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+console.log(str.slice(31));
+// Expected output: "the lazy dog."
+
+console.log(str.slice(4, 19));
+// Expected output: "quick brown fox"
+
+console.log(str.slice(-4));
+// Expected output: "dog."
+
+console.log(str.slice(-9, -5));
+// Expected output: "lazy"
+```
 
 ## Sintaxe
 
@@ -20,7 +36,6 @@ str.slice(startIndex[, endIndex])
 ### Paramêtros
 
 - `startIndex`
-
   - : É o índice, de base zero, onde se inicia a extração. Se for um número negativo, será o mesmo que executar _`str.length + startIndex`_ (por exemplo, se _`startIndex`_ for _`-3`_, será o mesmo que executar _`str.length - 3`_).
 
     ```js
@@ -36,7 +51,6 @@ str.slice(startIndex[, endIndex])
     ```
 
 - `endIndex`
-
   - : Opcional. É o índice, de base zero, onde termina a extração. O caractere que possuir este índice não será incluso.
 
     Se omitido ou possuir valor de _`undefined`_, ou for maior que `str.length`, _`slice()`_ extrairá até o fim da string.

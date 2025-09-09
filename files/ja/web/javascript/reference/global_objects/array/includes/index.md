@@ -1,15 +1,29 @@
 ---
 title: Array.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`includes()`** は {{jsxref("Array")}} インスタンスのメソッドで、特定の要素が配列に含まれているかどうかを `true` または `false` で返します。
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.includes()")}}
+
+```js interactive-example
+const array = [1, 2, 3];
+
+console.log(array.includes(2));
+// 予想される結果: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// 予想される結果: true
+
+console.log(pets.includes("at"));
+// 予想される結果: false
+```
 
 ## 構文
 
@@ -24,7 +38,7 @@ includes(searchElement, fromIndex)
   - : 検索する値です。
 - `fromIndex` {{optional_inline}}
   - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。ただし、この場合でも配列は前から後ろに向けて検索されます。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。ただし、この場合でも配列は前から後ろに向けて検索されます。
     - `fromIndex < -array.length` または `fromIndex` が省略された場合は `0` が使用され、配列全体に対して検索が行われます。
     - `fromIndex >= array.length` の場合、配列の検索は行われず、 `false` が返されます。
 
@@ -34,7 +48,7 @@ includes(searchElement, fromIndex)
 
 ## 解説
 
-`includes()` は `searchElement` を [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して比較します。ゼロの値は符号に関わらず、すべて等しい（すなわち、`-0` は `0` と等しい）とみなされますが、`false` は `0` と同じとはみなされ*ません*。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) は正しく検索することができます。
+`includes()` は `searchElement` を [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して比較します。ゼロの値は符号に関わらず、すべて等しい（すなわち、`-0` は `0` と等しい）とみなされますが、`false` は `0` と同じとはみなされ*ません*。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) は正しく検索することができます。
 
 [疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で使用する場合、 `includes()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
 
@@ -118,6 +132,7 @@ console.log(Array.prototype.includes.call(arrayLike, 1));
 ## 関連情報
 
 - [`Array.prototype.includes` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.includes` のポリフィル](https://www.npmjs.com/package/array-includes)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.indexOf()")}}

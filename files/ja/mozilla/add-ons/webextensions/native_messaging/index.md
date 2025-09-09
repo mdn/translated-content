@@ -32,7 +32,7 @@ GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" 
 
 もし拡張機能をネイティブアプリケーションと通信させたい場合、
 
-- `"nativeMessaging"` [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)または[オプション権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)を [`manifest.json`](/ja/Add-ons/WebExtensions/manifest.json) ファイルに設定する必要があります。
+- `"nativeMessaging"` [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)または[オプション権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)を [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルに設定する必要があります。
 - アドオンIDを明示的に指定します。 [`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) マニフェストキーを使用してください（アプリのマニフェストは、 ID への接続を許可する拡張機能のセットを識別します）。
 
 以下に manifest.json の例を示します。
@@ -132,11 +132,9 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 `ping_pong` の例にならって、 Firefox を使用する場合（[Chrome の場合はこのページ](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)を参照）、メッセージングが動作するように 2 つのレジストリー項目を作成する必要があります。
 
 - `HKEY_CURRENT_USER\Software\Mozilla\NativeMessagingHosts\ping_pong`
-
   - このキーの既定値は、*アプリケーションマニフェスト*へのパスとなります。例: `C:\Users\<myusername>\webextensions-examples\native-messaging\app\ping_pong.json`
 
 - `HKEY_LOCAL_MACHINE\Software\Mozilla\NativeMessagingHosts\ping_pong`
-
   - このキーの既定値は、アプリケーションマニフェストへのパスへのパスとなります。
 
 > [!NOTE]
@@ -407,7 +405,7 @@ while True:
 
 - `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
 - OS X/Linux: アプリマニフェストのファイル名が `<name>.json` となっていることを確認してください。
-- OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_OS_X)で述べているところにあるのを確認してください。
+- OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_os_x)で述べているところにあるのを確認してください。
 - Windows: レジストリキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。
 - Windows: レジストリキーに指定されたパスがアプリマニフェストを指していることを確認してください。
 

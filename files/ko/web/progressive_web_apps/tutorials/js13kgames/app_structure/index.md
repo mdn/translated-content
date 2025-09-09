@@ -28,7 +28,7 @@ App shell 개념은 가능한 최소한의 사용자 인터페이스를 로딩�
 
 ### 이걸 사용해야 하는 이유가 무엇인가요?
 
-이 구조는 웹 사이트에 모든 PWA 기능들로부터 최고의 이점을 제공합니다. App shell을 캐싱하고 동적인 컨텐츠를 관리하여 훌륭하게 성능을 향상시킵니다. 기본 shell과 더불어, 앱이 사용자들의 브라우저에서 지원되지 않을 때도 여전히 사용하다는 전제하에 [홈 화면에 추가](/ko/docs/Web/Apps/Progressive/Add_to_home_screen) 또는 [푸시 알림](/ko/docs/Web/API/Push_API)과 같은 다른 기능들도 추가할 수 있습니다. 이 점이 점진적인 향상의 아름다움입니다.
+이 구조는 웹 사이트에 모든 PWA 기능들로부터 최고의 이점을 제공합니다. App shell을 캐싱하고 동적인 컨텐츠를 관리하여 훌륭하게 성능을 향상시킵니다. 기본 shell과 더불어, 앱이 사용자들의 브라우저에서 지원되지 않을 때도 여전히 사용하다는 전제하에 [홈 화면에 추가](/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) 또는 [푸시 알림](/ko/docs/Web/API/Push_API)과 같은 다른 기능들도 추가할 수 있습니다. 이 점이 점진적인 향상의 아름다움입니다.
 
 웹 사이트는 웹의 이점들을 모두 유지하면서 즉각적인 반응과 견고한 성능을 가진 네이티브 앱처럼 느껴집니다.
 
@@ -38,7 +38,7 @@ App shell 개념은 가능한 최소한의 사용자 인터페이스를 로딩�
 
 - 연결 가능: 네이티브 앱처럼 동작한다고해도 이는 여전히 웹 사이트입니다. 여러분은 페이지의 링크를 클릭할 수 있고, 누군가에게 URL을 공유할 수 있습니다.
 - 점진적: "좋은 오래된 기본적인 웹사이트"로 시작해서 새로운 기능을 점진적으로 추가하되, 브라우저에서 지원하지 않는 기능을 감지하고 이에 대한 적절한 에러 처리를 할 것을 기억하시기 바랍니다. 예를 들어, service worker의 도움을 통한 오프라인 모드는 더 나은 웹 사이트 경험을 제공하는 부가적인 특성일 뿐, 없어도 충분히 사용이 가능합니다.
-- 반응형: 반응형 웹 디자인 또한 프로그레시브 웹 앱에 적용됩니다. 둘 다 주로 모바일 기기에 해당됩니다. 기기와 브라우저는 아주 다양합니다. 따라서 [뷰포트 meta 태그](/ko/docs/Mozilla/Mobile/Viewport_meta_tag), [CSS 미디어 쿼리](/ko/docs/Web/CSS/Media_Queries/Using_media_queries), [Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout), [CSS Grid](/ko/docs/Web/CSS/CSS_Grid_Layout) 와 같은 기술들을 사용해 여러분의 웹사이트를 다양한 화면 크기, 뷰포트 또는 픽셀 밀도에서 동작하도록 준비하는 것이 중요합니다.
+- 반응형: 반응형 웹 디자인 또한 프로그레시브 웹 앱에 적용됩니다. 둘 다 주로 모바일 기기에 해당됩니다. 기기와 브라우저는 아주 다양합니다. 따라서 [뷰포트 meta 태그](/ko/docs/Mozilla/Mobile/Viewport_meta_tag), [CSS 미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries), [Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout), [CSS Grid](/ko/docs/Web/CSS/CSS_grid_layout) 와 같은 기술들을 사용해 여러분의 웹사이트를 다양한 화면 크기, 뷰포트 또는 픽셀 밀도에서 동작하도록 준비하는 것이 중요합니다.
 
 ## 다른 개념: streams
 

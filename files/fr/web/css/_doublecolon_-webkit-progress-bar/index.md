@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-progress-bar"
+title: ::-webkit-progress-bar
 slug: Web/CSS/::-webkit-progress-bar
 ---
 
@@ -49,7 +49,6 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 ## Voir aussi
 
 - Les pseudo-éléments relatifs à WebKit/Blink qui permettent de mettre en forme les autres parties des éléments {{HTMLElement("progress")}} :
-
   - {{cssxref("::-webkit-progress-value")}}
   - {{cssxref("::-webkit-progress-inner-element")}}
 

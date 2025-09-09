@@ -9,7 +9,7 @@ Lancé lorsqu'une requête réseau est terminée et que ses détails sont dispon
 
 La requête est donnée en tant qu'[objet d'entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries), qui est également doté d'une méthode `getContent()` asynchrone qui récupère le contenu du corps de la réponse.
 
-Notez que bien que votre extension puisse ajouter un écouteur à tout moment,elle commencera seulement à se déclencher après que l'utilisateur a activé le [moniteur réseau](/fr/docs/Outils/Moniteur_réseau) du navigateur au moins une fois.
+Notez que bien que votre extension puisse ajouter un écouteur à tout moment,elle commencera seulement à se déclencher après que l'utilisateur a activé le [moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) du navigateur au moins une fois.
 
 ## Syntaxe
 
@@ -33,11 +33,9 @@ Les événements ont trois fonctions
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `request`
-      - : `object`. Un objet représentant la requête. Cet objet est un seul objet d'[entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries). Il définit également une méthode `getContent()` asynchrone, qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se résout avec le corps de la réponse.
+      - : `object`. Un objet représentant la requête. Cet objet est un seul objet d'[entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries). Il définit également une méthode `getContent()` asynchrone, qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout avec le corps de la réponse.
 
 ## Compatibilité des navigateurs
 

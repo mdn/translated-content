@@ -76,4 +76,4 @@ String(sym); // "Symbol(example)"
 
 ## 같이 보기
 
-- [텍스트 서식](/ko/docs/Web/JavaScript/Guide/Text_formatting) 안내서
+- [텍스트 서식](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings) 안내서

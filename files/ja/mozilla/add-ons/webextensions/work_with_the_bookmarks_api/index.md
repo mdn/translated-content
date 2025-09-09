@@ -22,7 +22,6 @@ Bookmarks API を利用するには、拡張機能の manifest.json ファイル
 Bookmarks API は、拡張機能にとって、ユーザーがブックマークとその機能でできることを可能にします:
 
 - 基本的なブックマーク項目の操作:
-
   - 追加 ({{WebExtAPIRef("bookmarks.create")}}).
   - 取得 ({{WebExtAPIRef("bookmarks.get")}}).
   - 更新 ({{WebExtAPIRef("bookmarks.update")}}).
@@ -32,14 +31,12 @@ Bookmarks API は、拡張機能にとって、ユーザーがブックマーク
 
 - 最近追加したブックマークの取得 ({{WebExtAPIRef("bookmarks.getRecent")}}).
 - ブックマークのフォルダーツリー操作:
-
   - ツリー情報取得 ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, {{WebExtAPIRef("bookmarks.getSubTree")}}).
   - ブランチの追加 ({{WebExtAPIRef("bookmarks.create")}}).
   - ノードの削除 ({{WebExtAPIRef("bookmarks.removeTree")}}).
   - ノードの移動 ({{WebExtAPIRef("bookmarks.move")}}).
 
 - ブックマーク (やブックマークツリーフォルダー) のイベント監視:
-
   - 追加 ({{WebExtAPIRef("bookmarks.onCreated")}}).
   - 変更 ({{WebExtAPIRef("bookmarks.onChanged")}}).
   - 移動 ({{WebExtAPIRef("bookmarks.onMoved")}}.
@@ -47,7 +44,6 @@ Bookmarks API は、拡張機能にとって、ユーザーがブックマーク
   - 削除 ({{WebExtAPIRef("bookmarks.onRemoved")}}).
 
 - ブックマークインポートの監視、これは他のブックマーク処理をブックマークのインポートが進行する間サスペンドするのに使われます:
-
   - インポート開始 ({{WebExtAPIRef("bookmarks.onImportBegan")}}).
   - インポート終了 ({{WebExtAPIRef("bookmarks.onImportEnded")}}).
 
@@ -217,4 +213,4 @@ browser.windows.onFocusChanged.addListener(updateActiveTab);
 
 ## 関連項目
 
-より詳しく学習するには、[Bookmarks API リファレンス](/ja/Add-ons/WebExtensions/API/bookmarks)を見てみてください。
+より詳しく学習するには、[Bookmarks API リファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)を見てみてください。

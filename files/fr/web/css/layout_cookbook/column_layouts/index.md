@@ -78,6 +78,6 @@ On utiliser les grilles CSS lorsque :
 
 ## Voir aussi
 
-- [Guide pour les dispositions multi-colonnes](/fr/docs/Web/CSS/CSS_Columns)
-- [Guide pour les boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout)
-- [Guide pour les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout)
+- [Guide pour les dispositions multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout)
+- [Guide pour les boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Guide pour les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)

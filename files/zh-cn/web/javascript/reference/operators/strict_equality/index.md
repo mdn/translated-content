@@ -3,11 +3,23 @@ title: 严格相等（===）
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 ---
 
-{{jsSidebar("Operators")}}
-
 严格相等运算符（`===`）会检查它的两个操作数是否相等，并且返回一个布尔值结果。与[相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符不同，严格相等运算符总是认为不同类型的操作数是不同的。
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Strict equality operator")}}
+
+```js interactive-example
+console.log(1 === 1);
+// Expected output: true
+
+console.log("hello" === "hello");
+// Expected output: true
+
+console.log("1" === 1);
+// Expected output: false
+
+console.log(0 === false);
+// Expected output: false
+```
 
 ## 语法
 
@@ -17,14 +29,13 @@ x === y
 
 ## 描述
 
-严格相等运算符（`===` 和 `!==`）提供了[严格相等判定](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)语义。
+严格相等运算符（`===` 和 `!==`）提供了[严格相等判定](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#严格相等)语义。
 
 - 如果操作数的类型不同，则返回 `false`。
 - 如果两个操作数都是对象，只有当它们指向同一个对象时才返回 `true`。
 - 如果两个操作数都为 `null`，或者两个操作数都为 `undefined`，返回 `true`。
 - 如果两个操作数有任意一个为 `NaN`，返回 `false`。
 - 否则，比较两个操作数的值：
-
   - 数字类型必须拥有相同的数值。`+0` 和 `-0` 会被认为是相同的值。
   - 字符串类型必须拥有相同顺序的相同字符。
   - 布尔运算符必须同时为 `true` 或同时为 `false`。

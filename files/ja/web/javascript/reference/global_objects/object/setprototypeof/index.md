@@ -1,20 +1,32 @@
 ---
 title: Object.setPrototypeOf()
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Object.setPrototypeOf()`** 静的メソッドは、指定されたオブジェクトのプロトタイプ（つまり、内部の `[[Prototype]]` プロパティ）を、別のオブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定します。
+**`Object.setPrototypeOf()`** は静的メソッドで、指定されたオブジェクトのプロトタイプ（つまり、内部の `[[Prototype]]` プロパティ）を、別のオブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定します。
 
 > [!WARNING]
 > オブジェクトの `[[Prototype]]` を変更すると、 [最近の JavaScript エンジンがプロパティへのアクセスを最適化する方法](https://mathiasbynens.be/notes/prototypes)の特質上、すべてのブラウザーや JavaScript エンジンで、操作がとても低速になります。さらに、プロトタイプを変更することの性能への影響は細かく広範囲にわたり、 `Object.setPrototypeOf(...)` 文に費やされる時間だけではなく、 `[[Prototype]]` が変更されたすべてのオブジェクトへのアクセスを持つ**_すべて_**のコードに影響する可能性があります。詳しくは [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes) をお読みください。
 >
 > この機能は言語の一部であるため、その機能の実装による負荷は (理念上は) エンジンの開発者によります。エンジンの開発者がこの問題に対処するまでの間、性能が気になる場合は、オブジェクトの `[[Prototype]]` を変更することは避けるべきです。代わりに、 {{jsxref("Object.create()")}} を使用して必要な `[[Prototype]]` をもつオブジェクトを生成してください。
 
-{{EmbedInteractiveExample("pages/js/object-setprototypeof.html")}}
+{{InteractiveExample("JavaScript デモ: Object.setPrototypeOf()")}}
+
+```js interactive-example
+const obj = {};
+const parent = { foo: "bar" };
+
+console.log(obj.foo);
+// 予想される結果: undefined
+
+Object.setPrototypeOf(obj, parent);
+
+console.log(obj.foo);
+// 予想される結果: "bar"
+```
 
 ## 構文
 
@@ -99,13 +111,14 @@ console.log(superMan.fly());
 console.log(superMan.speak());
 ```
 
-上記のような古典的継承（クラスによる継承）と擬似古典的継承（コンストラクターの `prototype` プロパティによる継承）の類似性については、[継承チェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#より長い継承のチェーンの構築)で述べられています。
+上記のような古典的継承（クラスによる継承）と擬似古典的継承（コンストラクターの `prototype` プロパティによる継承）の類似性については、[継承チェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#より長い継承のチェーンの構築)で述べられています。
 
 関数コンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティは書き込み可能なので、 [`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create#classical_inheritance_with_object.create) で作成した新しいオブジェクトに再割り当てすることで、同じ継承連鎖を実現できます。 `create()` を使用する際には、 [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) プロパティを再度追加することを忘れないようにするなどの注意点があります。
 
 以下の例でもクラスを使用していますが、 `SuperHero` は `extends` を使用せずに、代わりに `setPrototypeOf()` を使用して `Human` を継承しています。
 
-> **警告:** `extends` の代わりに `setPrototypeOf()` を使うことは、パフォーマンスや可読性の点からお勧めできません。
+> [!WARNING]
+> `extends` の代わりに `setPrototypeOf()` を使うことは、パフォーマンスや可読性の点からお勧めできません。
 
 ```js
 class Human {}
@@ -137,5 +150,5 @@ const superMan = new SuperHero();
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- [継承チェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
+- [継承チェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
 - [ES6 In Depth: Subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/) on hacks.mozilla.org (2015)

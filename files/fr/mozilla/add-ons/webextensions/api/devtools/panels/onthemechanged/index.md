@@ -29,11 +29,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Function qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
-
     - `themeName`
-      - : `string`. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour [`devtools.panels.themeName`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName).
+      - : `string`. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour [`devtools.panels.themeName`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName).
 
 ## Compatibilité des navigateurs
 
@@ -52,5 +50,3 @@ browser.devtools.panels.onThemeChanged.addListener((newThemeName) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

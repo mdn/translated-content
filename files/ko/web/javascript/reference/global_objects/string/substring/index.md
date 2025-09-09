@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substring
 
 **`substring()`** 메소드는 string 객체의 시작 인덱스로 부터 종료 인덱스 전 까지 문자열의 부분 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-substring.html")}}
+{{InteractiveExample("JavaScript Demo: String.substring()")}}
+
+```js interactive-example
+const str = "Mozilla";
+
+console.log(str.substring(1, 3));
+// Expected output: "oz"
+
+console.log(str.substring(2));
+// Expected output: "zilla"
+```
 
 ## 사용방법
 
@@ -20,7 +30,6 @@ str.substring(indexStart[, indexEnd])
 - `indexStart`
   - : 반환문자열의 시작 인덱스
 - `indexEnd`
-
   - : 옵션. 반환문자열의 마지막 인덱스 (포함하지 않음.)
 
 ### 반환값

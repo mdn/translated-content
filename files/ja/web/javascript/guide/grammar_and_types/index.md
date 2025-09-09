@@ -2,7 +2,7 @@
 title: 文法とデータ型
 slug: Web/JavaScript/Guide/Grammar_and_types
 l10n:
-  sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
+  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
@@ -30,7 +30,7 @@ JavaScript では、命令は{{Glossary("Statement", "文")}} (statement) と呼
 
 必須ではないとしても、文の後に常にセミコロンを記述することをお勧めします。これによって、コード中にバグが発生する機会を減らすことができます。
 
-JavaScript のソーステキストは左から右にスキャンされ、_トークン_、_制御文字_、_改行文字_、_コメント_、{{glossary("whitespace", "ホワイトスペース")}}等の入力要素の並びに変換されます。（空白、タブ、改行はホワイトスペースとみなされます。）
+JavaScript のソーステキストは左から右にスキャンされ、_トークン_、_制御文字_、_改行文字_、_コメント_、{{Glossary("whitespace", "ホワイトスペース")}}等の入力要素の並びに変換されます。（空白、タブ、改行はホワイトスペースとみなされます。）
 
 ## コメント
 
@@ -46,7 +46,7 @@ JavaScript のソーステキストは左から右にスキャンされ、_ト�
 
 ブロックコメントを入れ子にすることはできません。これは、コメントに誤って `*/` シーケンスを記載してしまい、コメントが終了してしまう場合によく起こります。
 
-```js example-bad
+```js-nolint example-bad
 /* ただし、/* 入れ子のコメントは */ できず、SyntaxError となります */
 ```
 
@@ -80,7 +80,7 @@ JavaScript には変数を宣言する方法が 3 種類あります。
 
 JavaScript の識別子は必ず文字、アンダースコア (`_`)、あるいはドル記号 (`$`) から始まらなくてはなりません。続く文字には数字 (`0`–`9`) も使用できます。JavaScript は大文字と小文字を区別するため、使用できる文字には "`A`" から "`Z`" （大文字）に加えて "`a`" から "`z`" （小文字）も含まれます。
 
-`å` や `ü` などの ISO 8859-1 や Unicode 文字（詳しくは[このブログ記事](https://mathiasbynens.be/notes/javascript-identifiers-es6)または[字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)のリファレンスを参照）も識別子に使用することができます。[Unicode エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#文字列リテラル)も識別子に使用することができます。
+`å` や `ü` などの Unicode 文字（詳しくは[字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)のリファレンスを参照）も識別子に使用することができます。 [Unicode エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#文字列リテラル)を使用して識別子の文字を表すこともできます。
 
 `Number_hits`、`temp99`、`_name` などは、正しい名前の一例です。
 
@@ -91,7 +91,7 @@ JavaScript の識別子は必ず文字、アンダースコア (`_`)、あるい
 - キーワード {{jsxref("Statements/var", "var")}} を使う（例 `var x = 42`）。この構文は、*実行コンテキスト*によって、**ローカル変数**と**グローバル変数**の両方の宣言に使用できます。
 - {{jsxref("Statements/const", "const")}} または {{jsxref("Statements/let", "let")}} キーワードを使う。例えば、`let y = 13`。この構文はブロックスコープのローカル変数を宣言することができます。（以下にある[変数のスコープ](#変数のスコープ)をご覧ください。）
 
-[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文を使用して、複数の変数を宣言することができます。例えば、`const { bar } = foo` とします。これは `bar` という名前の変数を作成し、オブジェクト `foo` の同名キーから対応する値を代入します。
+[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)構文を使用して、複数の変数を宣言することができます。例えば、`const { bar } = foo` とします。これは `bar` という名前の変数を作成し、オブジェクト `foo` の同名キーから対応する値を代入します。
 
 変数は使用する前に常に宣言するようにしてください。 JavaScript は未宣言の変数に代入することができ、 **[未宣言のグローバル](/ja/docs/Web/JavaScript/Reference/Statements/var#解説)** 変数を生成します。これは[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#assigning_to_undeclared_variables)ではエラーとなるものであり、完全に避けるべきです。
 
@@ -108,7 +108,7 @@ console.log(x); // "undefined" を出力
 
 `const` 宣言は宣言後のあらゆる代入を禁止しているため、常に初期化子が必要です。暗黙のうちに `undefined` で初期化することは、おそらくプログラマーのミスです。
 
-```js example-bad
+```js-nolint example-bad
 const x; // SyntaxError: Missing initializer in const declaration
 ```
 
@@ -118,7 +118,7 @@ const x; // SyntaxError: Missing initializer in const declaration
 
 - グローバルスコープ: スクリプトモードで実行するすべてのコードの既定のスコープです。
 - モジュールスコープ: モジュールモードで実行されるコードのスコープです。
-- 関数スコープ: {{glossary("function", "関数")}}で作成されるスコープです。
+- 関数スコープ: {{Glossary("function", "関数")}}で作成されるスコープです。
 
 それに加えて、 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) または [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) で宣言された変数は、もう一つのスコープに所属します。
 
@@ -148,7 +148,7 @@ console.log(x); // x は 5
 
 ### 変数の巻き上げ
 
-`var` で宣言された変数は[巻き上げ](/ja/docs/Glossary/Hoisting)が行われ、その変数がまだ宣言されていない場合でも、そのスコープ内のどこでも参照することができるようになります。変数 `var` の宣言は、その関数やグローバルスコープの先頭に「持ち上げられる」ように見ることができます。しかし、宣言される前に変数にアクセスすると、その値は常に `undefined` となります。なぜなら、その変数の _宣言_ だけが巻き上げられ、 _初期化_ は巻き上げられないからです。
+`var` で宣言された変数は[巻き上げ](/ja/docs/Glossary/Hoisting)が行われ、その変数がまだ宣言されていない場合でも、そのスコープ内のどこでも参照することができるようになります。変数 `var` の宣言は、その関数やグローバルスコープの先頭に「持ち上げられる」ように見ることができます。しかし、宣言される前に変数にアクセスすると、その値は常に `undefined` となります。その変数の「既定の（`undefined` での）初期化」だけが巻き上げられ、「値の代入」は巻き上げられないからです。
 
 ```js
 console.log(x === undefined); // true
@@ -192,7 +192,7 @@ let y = 3;
 
 グローバル変数は、実際には*グローバルオブジェクト*のプロパティです。
 
-ウェブページでのグローバルオブジェクトは {{domxref("window")}} になります。そのため `window.変数名` という構文を用いてグローバル変数の設定やアクセスができます。すべての環境において、グローバル変数にアクセスするために [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 変数（これ自体がグローバル変数です）を使用することができます。
+ウェブページでのグローバルオブジェクトは {{domxref("window")}} になります。そのため、グローバル変数の読み取りや設定を行うには、 `window.変数名` という構文を用います。すべての環境において、 [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 変数（これ自体がグローバル変数です）を使用してグローバル変数の読み取りや設定を行うことができます。これはさまざまな JavaScript ランタイム間で一貫性のあるインターフェイスを提供するためのものです。
 
 したがって、あるウィンドウやフレームで宣言したグローバル変数は、そのウィンドウやフレームの名前を指定することで別の `window` や `frame` からアクセスできます。例えば `phoneNumber` 変数を文書内で宣言すると、`iframe` から `parent.phoneNumber` としてその変数を参照できます。
 
@@ -208,7 +208,7 @@ const PI = 3.14;
 
 以下の例のように、同一スコープ内で関数や変数と同じ名前の定数を宣言することはできません。
 
-```js example-bad
+```js-nolint example-bad
 // THIS WILL CAUSE AN ERROR
 function f() {}
 const f = 5;
@@ -217,8 +217,6 @@ const f = 5;
 function f() {
   const g = 5;
   var g;
-
-  // ここには文が来る
 }
 ```
 
@@ -244,16 +242,15 @@ console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 最新の ECMAScript 標準では、以下の 8 つのデータ型が定義されています。
 
 - {{Glossary("Primitive", "プリミティブ型")}}のデータ型が 7 つあります。
-
-  1. {{Glossary("Boolean")}} （論理値）。`true` または `false`。
+  1. {{Glossary("Boolean", "論理型")}}。 `true` または `false`。
   2. {{Glossary("null")}}。null 値を意味する特殊なキーワードです。（JavaScript は大文字・小文字を区別するため、`null` は `Null` や `NULL` などと同じではありません。）
-  3. {{Glossary("undefined")}} （未定義）。値が未定義の最上位プロパティです。
-  4. {{Glossary("Number")}} （数値）。整数または浮動小数点数。例えば `42` や `3.14159` など。
-  5. {{Glossary("BigInt")}} （長整数）。精度が自由な整数値。例えば `9007199254740992n` など。
-  6. {{Glossary("String")}} （文字列）。テキストの値を表す連続した文字。"Howdy" など。
-  7. [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) （シンボル）。インスタンスが固有で不変となるデータ型。
+  3. {{Glossary("undefined")}}。値が未定義である最上位プロパティです。
+  4. {{Glossary("Number", "数値型")}}。整数または浮動小数点数。例えば `42` や `3.14159` など。
+  5. {{Glossary("BigInt", "長整数型")}}。精度が自由な整数値。例えば `9007199254740992n` など。
+  6. {{Glossary("String", "文字列型")}}。テキストの値を表す連続した文字。"Howdy" など。
+  7. [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。インスタンスが固有で不変となるデータ型。
 
-- そして {{Glossary("Object")}} （オブジェクト）。
+- そして{{Glossary("Object", "オブジェクト")}}です。
 
 このようにデータ型の種類は比較的少ないですが、アプリケーションで有益な演算を実行することができます。整数と実数の間に明確な違いはありません。[関数](/ja/docs/Web/JavaScript/Guide/Functions)もこの言語の基本的な要素です。関数は厳密にはオブジェクトの一種であり、オブジェクトは値を収める名前付きコンテナーとして、関数はスクリプトを実行可能にする手続きとして考えることができます。
 
@@ -296,8 +293,8 @@ z = "37" + 7; // "377"
 
 数値を表す値が文字列として記憶されている場合、それを変換するメソッドがあります。
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("parseFloat()")}}
 
 `parseInt` は整数のみを返すので、小数は切り捨てられます。
 
@@ -311,7 +308,7 @@ parseInt("101", 2); // 5
 文字列から数値を取り出す代替手段は、`+` (単項プラス) 演算子を使う方法です。
 
 ```js-nolint
-"1.1" + "1.1"; // "1.11.1"
+"1.1" + "1.1"; // '1.11.1'
 (+"1.1") + (+"1.1"); // 2.2
 // 注: 括弧は明確さのために追加したもので、必須ではありません
 ```
@@ -337,7 +334,7 @@ JavaScript では値の表現に _リテラル_ を使います。これらは�
 const coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-最上位のスクリプト内でリテラルを用いて配列を作成した場合、JavaScript は配列リテラルを含む式を評価するたびに配列を解釈します。さらに関数内で使用されたリテラルは、関数が呼び出されるたびに生成されます。
+配列リテラルは、リテラルが評価されるたびに新しい配列オブジェクトを作成します。例えば、グローバルスコープでリテラルを使用して配列を定義すると、スクリプトが読み込まれた時点で配列が作成されます。しかし、配列リテラルが関数内部にある場合、その関数が呼び出されるたびに新しい配列が作成されます。
 
 > [!NOTE]
 > 配列リテラルは `Array` オブジェクトを生成します。`Array` オブジェクトの詳細は {{jsxref("Array")}} と[インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)をご覧ください。
@@ -357,14 +354,14 @@ console.log(fish);
 // [ 'Lion', <1 empty item>, 'Angel' ]
 ```
 
-2 つ目のアイテムは "empty" であり、実際の `undefined` 値と全く同じではないことに注意してください。[`Array.prototype.map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) のような配列の走査メソッドを使用する場合、空のスロットはスキップされます。しかし、インデックスにアクセスする `fish[1]` は `undefined` を返します。
+2 つ目のアイテムは "empty" であり、実際の `undefined` 値と全く同じではないことに注意してください。 [`Array.prototype.map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) のような配列の走査メソッドを使用する場合、空のスロットはスキップされます。しかし、インデックスにアクセスする `fish[1]` は `undefined` を返します。
 
 要素のリストの最後にカンマを付けた場合、そのカンマは無視されます。
 
 次の例では、配列の長さ (`length`) は 3 です。`myList[3]` は存在しません。リスト内の他のカンマはすべて、新しい要素を示します。
 
-```js-nolint
-const myList = ["home", , "school", ];
+```js
+const myList = ["home", , "school"];
 ```
 
 次の例では、配列の長さ (`length`) は 4 になります。`myList[0]` と `myList[2]` が抜けています。
@@ -379,7 +376,8 @@ const myList = [, "home", , "school"];
 const myList = ["home", , "school", ,];
 ```
 
-> **メモ:** [末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)は、複数行の配列を保有するときに git diff をきれいに保つのに役立ちます。なぜなら、項目を最後に追加しても一行追加するだけで、前の行は変更されないからです。
+> [!NOTE]
+> [末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)は、複数行の配列を保有するときに git diff をきれいに保つのに役立ちます。なぜなら、項目を最後に追加しても一行追加するだけで、前の行は変更されないからです。
 >
 > ```diff
 > const myList = [
@@ -414,17 +412,17 @@ JavaScript で数値リテラルには、様々な形の整数リテラルと、
 
 #### 整数リテラル
 
-整数および {{jsxref("BigInt")}} 型は、10 進数、16 進数、8 進数、2 進数で書くことができます。
+整数および長整数 ({{jsxref("BigInt")}}) リテラルは、10 進数、16 進数、8 進数、2 進数で書くことができます。
 
-- _10 進数_ の整数リテラルは、先頭が `0` （ゼロ）ではない一連の数字で構成されます。
-- 先頭に `0` （ゼロ）である整数リテラル、または先頭の `0o` （または `0O`）は *8 進数*を示します。8 進数の数値には、`0` から `7` の数字のみが使用できます。
+- 10 進数の整数リテラルは、先頭が `0` （ゼロ）ではない一連の数字で構成されます。
+- 先頭に `0` （ゼロ）である整数リテラル、または先頭の `0o` （または `0O`）は「8 進数」を示します。8 進数の数値には、`0` から `7` の数字のみが使用できます。
 - 先頭の `0x` （または `0X`）は、*16 進数*の整数リテラルであることを意味します。16 進数の数値は数字 (`0` から `9`) と `a` から `f` および `A` から `F` のアルファベットで構成されます。（大文字小文字の違いは値には影響しません。たとえば `0xa` = `0xA` = `10` で `0xf` = `0xF` = `15` です。）
 - 先頭の `0b` （または `0B`）は、*2 進数*の整数リテラルを表します。2 進数の数値は `0` と `1` の数字のみで構成されます。
-- 整数リテラルの末尾に `n` の接尾辞を付けると、 {{jsxref("BigInt")}} リテラルを表します。この整数リテラルは上記のどの基数も使用することができます。`0123n` のような先頭が 0 の 8 進数の構文は許されませんが、 `0o123n` は問題ありません。
+- 整数リテラルの末尾に `n` の接尾辞を付けると、長整数 ({{jsxref("BigInt")}}) リテラルを表します。この長整数リテラルは上記のどの基数も使用することができます。`0123n` のような先頭が 0 の 8 進数の構文は許されませんが、 `0o123n` は問題ありません。
 
 数値リテラルの例は以下のようになります。
 
-```
+```plain
 0, 117, 123456789123456789n             （10 進数）
 015, 0001, 0o777777777777n              （8 進数）
 0x1123, 0x00111, 0x123456789ABCDEFn     （16 進数）
@@ -433,7 +431,7 @@ JavaScript で数値リテラルには、様々な形の整数リテラルと、
 
 詳しい情報は、[字句文法リファレンスの数値リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値リテラル)をご覧ください。
 
-### 浮動小数点リテラル
+#### 浮動小数点リテラル
 
 浮動小数点リテラルは、以下の部分で構成されます。
 
@@ -446,17 +444,17 @@ JavaScript で数値リテラルには、様々な形の整数リテラルと、
 
 より簡潔に書けば、次の形式になります。
 
-```
+```plain
 [digits].[digits][(E|e)[(+|-)]digits]
 ```
 
-例えば以下の通りです。
+例えば次のようになります。
 
-```js
-3.1415926;
-0.123456789;
-3.1e12;
-0.1e-23;
+```js-nolint
+3.1415926
+.123456789
+3.1E+12
+.1e-23
 ```
 
 ### オブジェクトリテラル
@@ -468,34 +466,34 @@ JavaScript で数値リテラルには、様々な形の整数リテラルと、
 
 以下にオブジェクトリテラルの例を示します。`car` オブジェクトの最初の要素には `myCar` プロパティが定義され、新規文字列 `"Saturn"` が割り当てられています。2 番目の要素、`getCar` プロパティには関数 `(carTypes("Honda"))`; によって呼び出された結果が即座に割り当てられます。3 番目の要素、`special` プロパティには既存の変数 (`sales`) が使われています。
 
-```js
-const sales = "Toyota";
+```js-nolint
+const sales = "トヨタ";
 
 function carTypes(name) {
-  return name === "Honda" ? name : `Sorry, we don't sell ${name}.`;
+  return name === "ホンダ" ? name : `申し訳ありません。${name}は販売しておりません。`;
 }
 
-const car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
+const car = { myCar: "サターン", getCar: carTypes("ホンダ"), special: sales };
 
-console.log(car.myCar); // Saturn
-console.log(car.getCar); // Honda
-console.log(car.special); // Toyota
+console.log(car.myCar); // サターン
+console.log(car.getCar); // ホンダ
+console.log(car.special); // トヨタ
 ```
 
 さらに、数値リテラルや文字列リテラルをプロパティ名に使用したり、オブジェクトを別のオブジェクトの入れ子にすることができます。以下の例では、これらの機能を使用しています。
 
 ```js
-const car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
+const car = { manyCars: { a: "サーブ", b: "ジープ" }, 7: "マツダ" };
 
-console.log(car.manyCars.b); // Jeep
-console.log(car[7]); // Mazda
+console.log(car.manyCars.b); // ジープ
+console.log(car[7]); // マツダ
 ```
 
 オブジェクトのプロパティには空の文字列を含むあらゆる文字列が使えます。もしプロパティ名が JavaScript で有効な{{Glossary("Identifier", "識別子")}}か数値でなければ、引用符で囲む必要があります。
 
 有効でない識別子によるプロパティ名には、ドット演算子 (`.`) を使ってアクセスできません。
 
-```js example-bad
+```js-nolint example-bad
 const unusualPropertyNames = {
   '': '空文字列',
   '!': 'バン！'
@@ -535,7 +533,7 @@ const obj = {
 
 ### 正規表現リテラル
 
-正規表現リテラル（[後で](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)詳しく定義）は、スラッシュで囲まれたパターンです。以下は正規表現リテラルの例です。
+正規表現リテラル（[後で](/ja/docs/Web/JavaScript/Guide/Regular_expressions)詳しく定義）は、スラッシュで囲まれたパターンです。以下は正規表現リテラルの例です。
 
 ```js
 const re = /ab+c/;
@@ -548,11 +546,11 @@ const re = /ab+c/;
 以下が文字列リテラルの例です。
 
 ```js-nolint
-'foo';
-"bar";
-'1234';
-'one line \n another line';
-"Joyo's cat";
+'foo'
+"bar"
+'1234'
+'one line \n another line'
+"Joyo's cat"
 ```
 
 特に `String` オブジェクトを使用する必要がない限り、文字列リテラルを使用してください。 `String` オブジェクトの詳細については、{{jsxref("String")}} を参照してください。
@@ -568,19 +566,18 @@ console.log("Joyo's cat".length); // この場合は 10 が出力される。
 
 テンプレート文字列は文字列の構築に糖衣構文を利用することができます。（これは Perl や Python などの文字列補完機能に似ています。）
 
-```js
+```js-nolint
 // 基本的な文字列リテラルの作成
-`In JavaScript '\n' is a line-feed.`;
+`In JavaScript '\n' is a line-feed.`
 
 // 複数行の文字列
 `In JavaScript, template strings can run
  over multiple lines, but double and single
- quoted strings cannot.`;
+ quoted strings cannot.`
 
 // 文字列補完
-const name = "Lev",
-  time = "today";
-`Hello ${name}, how are you ${time}?`;
+const name = 'Lev', time = 'today';
+`Hello ${name}, how are you ${time}?`
 ```
 
 [タグ付きテンプレート](/ja/docs/Web/JavaScript/Reference/Template_literals#タグ付きテンプレート)は、テンプレートリテラルを指定するためのコンパクトな構文と、それを解釈するための「タグ」関数の呼び出しを組み合わせたものです。タグ付きテンプレートは、文字列と関連する値の集合を処理する関数を呼び出すための、より簡潔で意味づけされた方法にすぎません。以下の例では、テンプレートタグ関数の名前が `print` であり、テンプレートタグ関数の名前がテンプレートリテラルの前にあります。`print` 関数は引数を補間し、オブジェクトや配列をシリアライズするので、厄介な `[object Object]` になることを避けることができます。
@@ -672,7 +669,7 @@ console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, progress);
 | `\xXX`      | `00` から `FF` までの 2 桁の 16 進数 _XX_ で指定された、Latin-1 エンコーディングの文字。 例えば、`\xA9` は著作権記号を示します。                                                                            |
 |             |                                                                                                                                                                                                             |
 | `\uXXXX`    | 4 桁の 16 進数 _XXXX_ で指定された Unicode 文字。 例えば、`\u00A9` は著作権記号を示します。[Unicode エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#文字列リテラル)をご覧ください。 |
-| `\u{XXXXX}` | Unicode コードポイントエスケープです。 例えば `\u{2F804}` は単純な Unicode エスケープである `\uD87E\uDC04` と同じです。                                                                                     |
+| `\u{XXXXX}` | Unicode コードポイントエスケープです。 例えば `\u{2F804}` は Unicode エスケープである `\uD87E\uDC04` と同じです。                                                                                           |
 
 #### 文字のエスケープ
 
@@ -687,7 +684,7 @@ console.log(quote);
 
 この結果は次のようになります。
 
-```
+```plain
 He read "The Cremation of Sam McGee" by R.W. Service.
 ```
 
@@ -712,10 +709,10 @@ console.log(str); // この文字列は複数行にわたって分解されま�
 
 本章では宣言とデータ型についての基本文法に重点を置いています。JavaScript の言語構成についてより詳しく知りたければ、当ガイドの以下に挙げた章をご覧ください。
 
-- [制御フローとエラー処理](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [制御フローとエラー処理](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)ガイド
 - [ループと反復処理](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [関数](/ja/docs/Web/JavaScript/Guide/Functions)
-- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)ガイド
 
 次章では、制御フローの構造とエラー処理について見ていきます。
 

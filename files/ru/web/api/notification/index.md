@@ -52,13 +52,11 @@ slug: Web/API/Notification
 - {{domxref("Notification.image")}} {{readonlyinline}}
   - : URL изображения, которое должно быть изображено в уведомлении, указывается в опциях как параметр конструктора.
 - {{domxref("Notification.renotify")}} {{readonlyinline}}
-
   - : Определяет, должен ли пользователь снова быть уведомлен, если новое уведомление заменяет предыдущее.
 
 - {{domxref("Notification.requireInteraction")}} {{readonlyinline}}
   - : [Булево значение](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Boolean), отражающее, останется ли уведомление активным до тех пор, пока пользователь вручную не кликнет или не закроет его, в противоположность автоматическому закрытию со временем.
 - {{domxref("Notification.silent")}} {{readonlyinline}}
-
   - : Указывает, должно ли уведомление не сопровождаться звуковым или вибро сигналом, независимо от настроек устройства.
 
 - {{domxref("Notification.timestamp")}} {{readonlyinline}}
@@ -80,18 +78,18 @@ slug: Web/API/Notification
 #### Обработчики событий
 
 - {{domxref("Notification.onclick")}}
-  - : Обработчик события {{event("click")}}. Срабатывает каждый раз, когда пользователь кликает по уведомлению.
+  - : Обработчик события [`click`](/ru/docs/Web/API/Element/click_event). Срабатывает каждый раз, когда пользователь кликает по уведомлению.
 - {{domxref("Notification.onerror")}}
-  - : Обработчик события {{event("error")}}. Срабатывает каждый раз, когда уведомление сталкивается с ошибкой.
+  - : Обработчик события [`error`](/ru/docs/Web/API/HTMLElement/error_event). Срабатывает каждый раз, когда уведомление сталкивается с ошибкой.
 
 #### Устаревшие обработчики событий
 
 Следующие обработчики событий все ещё поддерживаются, как указано в разделе [browser compatibility](#browser_compatibility) ниже, но более не входят в актуальную спецификацию. Небезосновательно можно предположить, что они устарели и могут перестать работать в будущих версиях браузеров.
 
 - {{domxref("Notification.onclose")}}
-  - : Обработчик события {{event("close")}}. Срабатывает при закрытии уведомления пользователем.
+  - : Обработчик события [`close`](/ru/docs/Web/API/HTMLDialogElement/close_event). Срабатывает при закрытии уведомления пользователем.
 - {{domxref("Notification.onshow")}}
-  - : Обработчик события {{event("show")}}. Срабатывает при отображении уведомления.
+  - : Обработчик события [`show`](/ru/docs/Web/Events/show). Срабатывает при отображении уведомления.
 - {{domxref("Notification.sound")}} {{readonlyinline}}
   - : Определяет звуковой файл для воспроизведения при уведомлении, по умолчанию установлен системный звук.
 
@@ -106,7 +104,7 @@ slug: Web/API/Notification
 
 ### Методы экземпляра
 
-Следующие методы доступны только для экземпляров объекта `Notification`, либо через его [`прототип`](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). Объект `Notification` также наследует методы интерфейса {{domxref("EventTarget")}}.
+Следующие методы доступны только для экземпляров объекта `Notification`, либо через его [`прототип`](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). Объект `Notification` также наследует методы интерфейса {{domxref("EventTarget")}}.
 
 - {{domxref("Notification.close()")}}
   - : Программно закрывает уведомление.
@@ -152,7 +150,7 @@ function notifyMe() {
 
 {{EmbedLiveSample('Пример', '100%', 30)}}
 
-В большинстве случаев вам не надо быть столь многословными. Например в нашем [демо Emogotchi](http://mdn.github.io/emogotchi/) ([исходный код](https://github.com/mdn/emogotchi)), мы просто запускаем {{domxref("Notification.requestPermission")}} несмотря ни на что, чтобы быть уверенными, что мы сможем получить разрешение на отправку уведомлений (тут используется синтаксис новейшего promise-based метода):
+В большинстве случаев вам не надо быть столь многословными. Например в нашем [демо Emogotchi](https://mdn.github.io/emogotchi/) ([исходный код](https://github.com/mdn/emogotchi)), мы просто запускаем {{domxref("Notification.requestPermission")}} несмотря ни на что, чтобы быть уверенными, что мы сможем получить разрешение на отправку уведомлений (тут используется синтаксис новейшего promise-based метода):
 
 ```js
 Notification.requestPermission().then(function (result) {

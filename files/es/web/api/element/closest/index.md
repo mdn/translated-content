@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef('DOM')}}
 
-El método **`closest()`** de la interfaz {{domxref("Element")}} recorre el elemento y sus padres (dirigiéndose hacia la raiz del documento) hasta encontrar un nodo que coincida con el [CSS selector](/es/docs/Learn/CSS/Building_blocks/Selectors) especificado.
+El método **`closest()`** de la interfaz {{domxref("Element")}} recorre el elemento y sus padres (dirigiéndose hacia la raiz del documento) hasta encontrar un nodo que coincida con el [CSS selector](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) especificado.
 
 ## Sintaxis
 
@@ -18,7 +18,7 @@ closest(selectors)
 ### Parámetros
 
 - `selectors`
-  - : Una cadena de [selector de CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) válido para comparar {{domxref("Element")}} y sus ancestros.
+  - : Una cadena de [selector de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) válido para comparar {{domxref("Element")}} y sus ancestros.
 
 ### Valor de retorno
 
@@ -77,5 +77,5 @@ console.log(el.closest(":not(div)")); // <article>
 
 ## Véase también
 
-- [Referencia de selectores CSS](/es/docs/Web/CSS/CSS_Selectors)
+- [Referencia de selectores CSS](/es/docs/Web/CSS/CSS_selectors)
 - Otros métodos {{domxref("Element")}} que toman selectores: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}} y {{domxref("Element.matches()")}}.

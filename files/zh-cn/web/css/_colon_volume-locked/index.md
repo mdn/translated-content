@@ -1,11 +1,9 @@
 ---
-title: ":volume-locked"
+title: :volume-locked
 slug: Web/CSS/:volume-locked
 l10n:
   sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
 ---
-
-{{CSSRef}}
 
 **`:volume-locked`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器表示能够发出声音，但其音量目前被用户“锁定”的媒体元素，如 {{htmlelement("audio")}} 或 {{htmlelement("video")}}。
 

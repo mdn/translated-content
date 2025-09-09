@@ -8,7 +8,8 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-> **警告:** `document.write()` メソッドの使用は固く避けるべきです。
+> [!WARNING]
+> `document.write()` メソッドの使用は固く避けるべきです。
 >
 > [HTML 仕様書自体で次のように警告しています](<https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()>)。
 >
@@ -17,7 +18,8 @@ l10n:
 
 **`Document.write()`** メソッドは、テキストの文字列を {{domxref("document.open()")}} で開かれた文書ストリームに書き込みます。
 
-> **メモ:** `document.write()` は文書の**ストリーム**に書き込みを行うため、閉じられた (読み込み済みの) 文書で `document.write()` を呼び出すと、自動的に `document.open()` が呼び出され、[文書がクリアされます](/ja/docs/Web/API/Document/open#メモ)。
+> [!NOTE]
+> `document.write()` は文書の**ストリーム**に書き込みを行うため、閉じられた (読み込み済みの) 文書で `document.write()` を呼び出すと、自動的に `document.open()` が呼び出され、[文書がクリアされます](/ja/docs/Web/API/Document/open#メモ)。
 
 ## 構文
 
@@ -72,9 +74,11 @@ write(markup)
 </script>
 ```
 
-> **メモ:** `document.write()` および {{domxref("document.writeln")}} は、 XHTML 文書では動作しません（エラーコンソールに "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] エラーが表示されます）。これは、 .xhtml の拡張子を持つローカルファイルを開いたり、何らかの文書が `application/xhtml+xml` の {{Glossary("MIME type", "MIME タイプ")}}で提供されたときに発生します。詳細は [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite) で確認することができます。
+> [!NOTE]
+> `document.write()` および {{domxref("document.writeln")}} は、 XHTML 文書では動作しません（エラーコンソールに "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] エラーが表示されます）。これは、 .xhtml の拡張子を持つローカルファイルを開いたり、何らかの文書が `application/xhtml+xml` の {{Glossary("MIME type", "MIME タイプ")}}で提供されたときに発生します。詳細は [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite) で確認することができます。
 
-> **メモ:** `document.write` は [deferred](/ja/docs/Web/HTML/Element/script#attr-defer) または [asynchronous](/ja/docs/Web/HTML/Element/script#attr-async) のスクリプト内では無視され、エラーコンソールに "A call to `document.write()` from an asynchronously-loaded external script was ignored" などのメッセージが表示されます。
+> [!NOTE]
+> `document.write` は [deferred](/ja/docs/Web/HTML/Reference/Elements/script#attr-defer) または [asynchronous](/ja/docs/Web/HTML/Reference/Elements/script#attr-async) のスクリプト内では無視され、エラーコンソールに "A call to `document.write()` from an asynchronously-loaded external script was ignored" などのメッセージが表示されます。
 
 > [!NOTE]
 > Edge のみ、`document.write()` を {{HTMLElement("iframe")}} 内で複数回呼び出すと、 SCRIPT70: Permission denied エラーが発生します。

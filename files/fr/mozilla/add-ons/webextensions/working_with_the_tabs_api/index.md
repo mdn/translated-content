@@ -18,14 +18,14 @@ Dans cet article, nous allons regarder :
 Nous concluons ensuite en examinant d'autres fonctionnalités diverses offertes par l'API.
 
 > [!NOTE]
-> Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts) et le guide pratique [modifier une page web](/fr/Add-ons/WebExtensions/Modify_a_web_page).
+> Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) et le guide pratique [modifier une page web](/fr/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
 
 ## Permissions et l'API Tabs
 
 Pour la majorité des fonctions de l'API Tabs, vous n'avez besoin d'aucune autorisation. Cependant, il y a certaines exceptions :
 
-- permission `"tabs`" est nécessaire pour accéder aux propriétés de `Tab.url`, `Tab.title`, et `Tab.favIconUrl` de l'objet Tab. Dans Firefox, vous avez également besoin de `"tabs"` pour effectuer une [requête](/fr/Add-ons/WebExtensions/API/tabs/query) par URL.
-- [persmission de l'hote](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) est nécessaire pour {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}}.
+- permission `"tabs`" est nécessaire pour accéder aux propriétés de `Tab.url`, `Tab.title`, et `Tab.favIconUrl` de l'objet Tab. Dans Firefox, vous avez également besoin de `"tabs"` pour effectuer une [requête](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) par URL.
+- [persmission de l'hote](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) est nécessaire pour {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}}.
 
 Vous pouvez demander la permission `"tabs"` dans le fichier manifest.json de votre extension :
 
@@ -36,12 +36,12 @@ Vous pouvez demander la permission `"tabs"` dans le fichier manifest.json de vot
 ],
 ```
 
-Cette requête vous permet d'utiliser toutes les fonctionnalités de l'API Tabs sur tous les sites Web que vos utilisateurs visitent. Il existe également une autre méthode pour demander la permission d'utiliser {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}} où vous n'avez pas besoin de la permission de l'hôte, sous la forme [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission). Cette permission fournit les mêmes droits que les `"onglets"` avec `<all_urls>`, mais avec deux restrictions:
+Cette requête vous permet d'utiliser toutes les fonctionnalités de l'API Tabs sur tous les sites Web que vos utilisateurs visitent. Il existe également une autre méthode pour demander la permission d'utiliser {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}} où vous n'avez pas besoin de la permission de l'hôte, sous la forme [`"activeTab"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Cette permission fournit les mêmes droits que les `"onglets"` avec `<all_urls>`, mais avec deux restrictions:
 
 - l'utilisateur doit interagir avec l'extension via son navigateur ou l'action de la page, le menu contextuel ou la touche de raccourci.
 - il accorde uniquement la permission dans l'onglet actif..
 
-L'avantage de cette approche est que l'utilisateur ne recevra pas d'avertissement d'autorisation indiquant que votre extension peut "Accéder à vos données pour tous les sites Web". En effet, la permission `<all_urls>` permet à une extension d'exécuter des scripts dans n'importe quel onglet, à tout moment, alors que [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) se limite à autoriser l'extension à effectuer une action demandée par l'utilisateur dans l'onglet en cours.
+L'avantage de cette approche est que l'utilisateur ne recevra pas d'avertissement d'autorisation indiquant que votre extension peut "Accéder à vos données pour tous les sites Web". En effet, la permission `<all_urls>` permet à une extension d'exécuter des scripts dans n'importe quel onglet, à tout moment, alors que [`"activeTab"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) se limite à autoriser l'extension à effectuer une action demandée par l'utilisateur dans l'onglet en cours.
 
 ## En savoir plus sur les onglets et leurs propriétés
 
@@ -173,7 +173,6 @@ Ensuite, nous allons créer les liens pour chaque onglet :
 
 1. Boucle les 5 premiers éléments de l'objet {{WebExtAPIRef("tabs.Tab")}}.
 2. Pour chaque poste, ajoutez un hyperlien vers le fragment de document.
-
    - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
    - L'adresse du lien est définie à l'aide de l'ID de l'onglet.
 
@@ -320,7 +319,7 @@ if (e.target.id === "tabs-move-beginning") {
 }
 ```
 
-Il est intéressant de noter l'utilisation de console.log. Cela vous permet de générer des informations sur la console du [debugger](/fr/Add-ons/WebExtensions/Debugging), ce qui peut être utile lors de la résolution des problèmes rencontrés lors du développement.
+Il est intéressant de noter l'utilisation de console.log. Cela vous permet de générer des informations sur la console du [debugger](/fr/docs/Mozilla/Add-ons/WebExtensions/Debugging), ce qui peut être utile lors de la résolution des problèmes rencontrés lors du développement.
 
 ![](console.png)
 
@@ -443,7 +442,7 @@ Voyons comment cela se passe.
 
 Pour utiliser les fonctionnalités CSS dont vous avez besoin :
 
-- Permission `"tabs"` et [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) ou
+- Permission `"tabs"` et [permission hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) ou
 - Permission `"activeTab"`.
 
 Ce dernier est le plus utile, car il permet à une extension d'utiliser {{WebExtAPIRef("tabs.insertCSS")}} et {{WebExtAPIRef("tabs.removeCSS")}} dans l'onglet actif lorsqu'il est exécuté depuis le navigateur de l'extension ou action de la page, menu contextuel ou un raccourci.
@@ -531,12 +530,10 @@ browser.pageAction.onClicked.addListener(toggleCSS);
 `toggleCSS()` obtient le titre de la `pageAction` puis prend l'action décrite :
 
 - **Pour "Appliquer CSS":**
-
   - Basculer l'icône `pageAction` et le titre dans les versions "supprimer".
   - Applique le CSS en utilisant {{WebExtAPIRef("tabs.insertCSS")}}.
 
 - **Pour "Supprimer CSS":**
-
   - Basculer l'icône `pageAction` et le titre dans les versions "apply".
   - Supprime le CSS en utilisant {{WebExtAPIRef("tabs.removeCSS")}}.
 
@@ -579,5 +576,5 @@ Il existe deux autres fonctionnalités de l'API Tabs qui ne rentrent pas dans l'
 
 Si vous voulez en savoir plus sur l'API Tabs, consultez le :
 
-- [Tabs API reference.](/fr/Add-ons/WebExtensions/API/tabs)
-- [example extensions](/fr/Add-ons/WebExtensions/Examples), car beaucoup d'entre eux utilisent l'API Tabs.
+- [Tabs API reference.](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+- [example extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples), car beaucoup d'entre eux utilisent l'API Tabs.

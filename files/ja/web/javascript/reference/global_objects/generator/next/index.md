@@ -16,7 +16,6 @@ generatorObject.next(value)
 ### 引数
 
 - `value`
-
   - : ジェネレーターへ送る値です。
 
     この値は `yield` 式の結果として代入されます。例えば `variable = yield expression` の場合、 `.next()` 関数に渡された値は `variable` に代入されます。
@@ -26,7 +25,6 @@ generatorObject.next(value)
 以下の 2 つのプロパティを持った {{jsxref("Object")}} です。
 
 - `done` (boolean)
-
   - : イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの _返値_ を指定します。
 
     イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
@@ -106,4 +104,4 @@ g.next(2);
 ## 関連情報
 
 - {{jsxref("Statements/function*", "function*")}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)

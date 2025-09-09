@@ -11,5 +11,5 @@ slug: Glossary/First_contentful_paint
 
 ## Смотрите также
 
-- [First Meaningful Paint](/ru/docs/Glossary/first_meaningful_paint)
+- [First Meaningful Paint](/ru/docs/Glossary/First_meaningful_paint)
 - [Paint Timing specification](https://w3c.github.io/paint-timing/#first-contentful-paint)

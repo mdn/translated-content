@@ -3,7 +3,6 @@ title: CSS Containment
 slug: Web/CSS/CSS_containment
 ---
 
-{{CSSRef}}
 CSS Containment 사양의 목표는 개발자가 페이지의 하위 트리(subtree)를 페이지의 나머지 부분과 분리할 수 있도록 하여 웹 페이지의 성능을 향상시키는 것입니다. 브라우저가 페이지의 일부가 독립적임을 인식하면 렌더링을 최적화 하고 성능을 개선 할 수 있습니다. 사양은 단일 CSS 속성(property) {{cssxref("contain")}}을 정의합니다. 이 문서는 사양의 기본 목표를 설명합니다.
 
 ## 기본 예제
@@ -93,7 +92,7 @@ article {
 }
 ```
 
-style containment 는 이름에도 불구하고 [Shadow DOM](/ko/docs/Web/Web_Components/Using_shadow_DOM)에서 얻을 수 있는 범위(scope) 스타일을 제공하지 않습니다. 주요 사용 사례는, 요소에서 [CSS Counter](/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) 가 변경되어 나머지 트리에 영향을 미칠 수 있는 상황을 방지하는 것입니다.
+style containment 는 이름에도 불구하고 [Shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM)에서 얻을 수 있는 범위(scope) 스타일을 제공하지 않습니다. 주요 사용 사례는, 요소에서 [CSS Counter](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) 가 변경되어 나머지 트리에 영향을 미칠 수 있는 상황을 방지하는 것입니다.
 
 `contain: style` 을 사용하면 {{cssxref("counter-increment")}} 와 {{cssxref("counter-set")}} 속성이 해당 하위 트리로만 범위가 지정된 새 카운터를 만들 수 있습니다.
 

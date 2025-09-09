@@ -16,19 +16,14 @@ var maRequete = new Request(entree[, init]);
 ### Paramètres
 
 - _entree_
-
   - : Définit la ressource que vous souhaitez récupérer. Cela peut être soit :
-
     - Une {{domxref("USVString")}} contenant l'URL directe de la ressource que vous voulez récupérer.
     - Un objet {{domxref("Request")}}, ce qui crée en fait une copie. Notez les mises à jour de comportement suivantes pour conserver la sécurité, tout en rendant le constructeur moins susceptible de déclencher des exceptions :
-
       - Si cet objet existe depuis une autre origine lors de l'appel du constructeur, le {{domxref("Request.referrer")}} est enlevé.
       - Si cet objet a un {{domxref("Request.mode")}} à `navigate`, la valeur de `mode` est convertie en `same-origin`.
 
 - _init_ {{optional_inline}}
-
   - : Un objet d'options contenant tous les paramètres personnalisés que vous voulez appliquer à la requête. Les options possibles sont :
-
     - `method`: La méthode de la requête, par ex., `GET`, `POST`.
     - `headers`: Tous les entêtes que vous voulez ajouter à votre requête, contenus dans un objet {{domxref("Headers")}} ou un littéral d'objet avec des valeurs {{domxref("ByteString")}}.
     - `body`: Tout corps que vous voulez ajouter à votre requête : cela peut être un objet {{domxref ("Blob")}}, {{domxref ("BufferSource")}}, {{domxref ("FormData")}}, {{domxref ("URLSearchParams")}}, {{domxref ("USVString")}} ou {{domxref ("ReadableStream")}}. Notez qu'une requête utilisant la méthode GET ou HEAD ne peut pas avoir de corps .
@@ -47,7 +42,7 @@ var maRequete = new Request(entree[, init]);
 
 ## Exemple
 
-Dans notre [exemple de Fetch Request](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (voir [Fetch Request en direct](http://mdn.github.io/fetch-examples/fetch-request/)), nous créons un nouvel objet `Request` en utilisant le constructeur, puis nous le récupérons en utilisant un appel à {{domxref ("GlobalFetch.fetch")}}. Puisque nous récupérons une image, nous lançons {{domxref ("Body.blob")}} sur la réponse pour lui donner le bon type MIME afin qu'il soit géré correctement, puis nous en créons une
+Dans notre [exemple de Fetch Request](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (voir [Fetch Request en direct](https://mdn.github.io/fetch-examples/fetch-request/)), nous créons un nouvel objet `Request` en utilisant le constructeur, puis nous le récupérons en utilisant un appel à {{domxref ("GlobalFetch.fetch")}}. Puisque nous récupérons une image, nous lançons {{domxref ("Body.blob")}} sur la réponse pour lui donner le bon type MIME afin qu'il soit géré correctement, puis nous en créons une
 
 Object URL et nous l'affichons dans un élément {{htmlelement ("img")}}.
 
@@ -66,7 +61,7 @@ fetch(maRequete)
   });
 ```
 
-Dans notre [exemple de Fetch Request avec init](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (see [Fetch Request init en direct](http://mdn.github.io/fetch-examples/fetch-request-with-init/)), nous faisons la même chose, excepté que nous passons un objet init quand nous invoquons `fetch()`:
+Dans notre [exemple de Fetch Request avec init](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (see [Fetch Request init en direct](https://mdn.github.io/fetch-examples/fetch-request-with-init/)), nous faisons la même chose, excepté que nous passons un objet init quand nous invoquons `fetch()`:
 
 ```js
 var monImage = document.querySelector('img');
@@ -116,7 +111,7 @@ var copie = new Request(maRequete);
 ```
 
 > [!NOTE]
-> Cette dernière utilisation n'est probablement utile que dans [ServiceWorkers](/fr/docs/Web/API/ServiceWorker_API).
+> Cette dernière utilisation n'est probablement utile que dans [ServiceWorkers](/fr/docs/Web/API/Service_Worker_API).
 
 ## Spécifications
 
@@ -128,6 +123,6 @@ var copie = new Request(maRequete);
 
 ## Voir aussi
 
-- [L'API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API)
-- [Le contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
+- [Le contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

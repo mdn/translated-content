@@ -13,7 +13,7 @@ URL API는 유효한 {{Glossary("URL", "Uniform Resource Locator")}}를 구성�
 
 ## URL 개념 및 사용법
 
-URL 표준의 대부분은 [URL의 정의](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)와 구조 및 구문 분석 방식입니다. 또한 네트워크상의 컴퓨터 주소 지정과 관련된 다양한 용어에 대한 정의와 IP 주소 및 DOM 주소 구문 분석 알고리즘이 명시되어 있습니다. 대부분의 개발자에게 더 흥미로운 것은 API 자체입니다.
+URL 표준의 대부분은 [URL의 정의](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)와 구조 및 구문 분석 방식입니다. 또한 네트워크상의 컴퓨터 주소 지정과 관련된 다양한 용어에 대한 정의와 IP 주소 및 DOM 주소 구문 분석 알고리즘이 명시되어 있습니다. 대부분의 개발자에게 더 흥미로운 것은 API 자체입니다.
 
 ### URL 요소 접근
 

@@ -9,7 +9,18 @@ l10n:
 
 **`reduce()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のそれぞれの要素に対して、ユーザーが提供した「縮小」コールバック関数を呼び出します。その際、直前の要素における計算結果の返値を渡します。型付き配列のすべての要素に対して縮小関数を実行した結果が単一の値が最終結果になります。このメソッドは、{{jsxref("Array.prototype.reduce()")}}と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-reduce.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.reduce()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([0, 1, 2, 3]);
+
+function sum(accumulator, currentValue) {
+  return accumulator + currentValue;
+}
+
+console.log(uint8.reduce(sum));
+// Expected output: 6
+```
 
 ## 構文
 
@@ -21,7 +32,6 @@ reduce(callbackFn, initialValue)
 ### 引数
 
 - `callbackFn`
-
   - : 型付き配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出す際の `accumulator` 引数の値になります。最後の呼び出しでは、返値は `reduce()` の返値となります。この関数は以下の引数で呼び出されます。
     - `accumulator`
       - : 前回 `callbackFn` を呼び出した結果の値。最初の呼び出しでは、後で `initialValue` を指定した場合はその値になり、指定されなかった場合は `array[0]` になります。

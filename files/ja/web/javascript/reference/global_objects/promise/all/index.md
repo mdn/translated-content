@@ -1,15 +1,27 @@
 ---
 title: Promise.all()
+short-title: all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 l10n:
-  sourceCommit: 850c667d5df58af4f13085d82ecfff17b24187a7
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Promise.all()`** は静的メソッドで、入力としてプロミスの集合の反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返却されたプロミスは、入力されたプロミスがすべて履行されたとき（空のイテレーターが渡されたときを含む）、その履行された値の配列で、履行されます。入力されたプロミスのいずれかが拒否されると、その最初の拒否理由とともに拒否されます。
 
-{{EmbedInteractiveExample("pages/js/promise-all.html")}}
+{{InteractiveExample("JavaScript デモ: Promise.all()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "foo");
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+  console.log(values);
+});
+// 予想される結果: Array [3, 42, "foo"]
+```
 
 ## 構文
 
@@ -69,7 +81,7 @@ const p = Promise.all([1, 2, 3]);
 const p2 = Promise.all([1, 2, 3, Promise.resolve(444)]);
 // 1 つの（そして唯一の）入力プロミスが拒否される。
 // したがって、返されたプロミスも拒否される。
-const p3 = Promise.all([1, 2, 3, Promise.reject(555)]);
+const p3 = Promise.all([1, 2, 3, Promise.reject(new Error("bad"))]);
 
 // setTimeout を使うことで、キューが空になってからコードを実行することができる
 setTimeout(() => {
@@ -81,7 +93,7 @@ setTimeout(() => {
 // ログ出力
 // Promise { <state>: "fulfilled", <value>: Array[3] }
 // Promise { <state>: "fulfilled", <value>: Array[4] }
-// Promise { <state>: "rejected", <reason>: 555 }
+// Promise { <state>: "rejected", <reason>: Error: bad }
 ```
 
 ### Promise.all の非同期性・同期性
@@ -112,7 +124,10 @@ setTimeout(() => {
 `Promise.all` が拒否されたときも同じことが起きます。
 
 ```js
-const mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
+const mixedPromisesArray = [
+  Promise.resolve(33),
+  Promise.reject(new Error("bad")),
+];
 const p = Promise.all(mixedPromisesArray);
 console.log(p);
 setTimeout(() => {
@@ -123,7 +138,7 @@ setTimeout(() => {
 // ログ出力
 // Promise { <state>: "pending" }
 // キューが空になりました
-// Promise { <state>: "rejected", <reason>: 44 }
+// Promise { <state>: "rejected", <reason>: Error: bad }
 ```
 
 しかし、`Promise.all` は渡された*反復可能*オブジェクトが空の場合だけ同期的に解決します。
@@ -195,7 +210,7 @@ async function getPrice() {
 }
 ```
 
-ただし、`promptForChoice` と `fetchPrices` の実行は、互いの結果には依存しないことに注意してください。ユーザーが料理を選んでいる間、バックグラウンドで価格が取得されても問題ありませんが、上記のコードでは [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) 演算子によって選択が行われるまで非同期関数が一時停止し、その後価格が取得されるまで再度一時停止します。`Promise.all` を使用すれば、結果が指定される前にユーザーが価格の取得を待たずに、これらを並行して実行することができます。
+ただし、`promptForDishChoice` と `fetchPrices` の実行は、互いの結果には依存しないことに注意してください。ユーザーが料理を選んでいる間、バックグラウンドで価格が取得されても問題ありませんが、上記のコードでは [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) 演算子によって選択が行われるまで非同期関数が一時停止し、その後価格が取得されるまで再度一時停止します。`Promise.all` を使用すれば、結果が指定される前にユーザーが価格の取得を待たずに、これらを並行して実行することができます。
 
 ```js example-good
 async function getPrice() {
@@ -209,7 +224,7 @@ async function getPrice() {
 
 `Promise.all` はエラー処理が直感的であるため、ここでの[並行処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)には最適な選択です。もしいずれかのプロミスが拒否されたら、結果がもう利用できなくなり、 await 式全体が例外を発生します。
 
-`Promise.all` はプロミスの反復可能オブジェクトを受け入れるので、いくつかの非同期関数の実行を並列化するために使用するには、非同期関数を呼び出して返されたプロミスを使用する必要があります。関数はプロミスではないので、 `Promise.all` に直接渡しても動作しません。
+`Promise.all` は、プロミスの反復可能オブジェクトを受け取ります。したがって、複数の非同期関数を同時に実行するためにこれを使用する場合は、非同期関数を呼び出し、返されたプロミスを使用する必要があります。関数はプロミスではないため、関数を `Promise.all` に直接渡しても動作しません。
 
 ```js example-bad
 async function getPrice() {

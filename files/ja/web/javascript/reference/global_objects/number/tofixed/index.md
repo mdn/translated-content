@@ -1,15 +1,29 @@
 ---
 title: Number.prototype.toFixed()
+short-title: toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`toFixed()`** は {{jsxref("Number")}} 値のメソッドで、指定された小数点以下の桁数で[固定小数点表記](https://ja.wikipedia.org/wiki/固定小数点数)を使用して、これの数値を表す文字列を返します。
 
-**`toFixed()`** メソッドは、数を固定小数点表記を用いて整形します。
+{{InteractiveExample("JavaScript デモ: Number.prototype.toFixed()")}}
 
-{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
+```js interactive-example
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+console.log(financial(123.456));
+// 予想される結果: "123.46"
+
+console.log(financial(0.004));
+// 予想される結果: "0.00"
+
+console.log(financial("1.23e+5"));
+// 予想される結果: "123000.00"
+```
 
 ## 構文
 
@@ -25,9 +39,9 @@ toFixed(digits)
 
 ### 返値
 
-与えられた数値を固定小数点表記を用いて表した文字列です。
+指定された数値を固定小数点表記で表します。数値の大きさ（符号を無視）が 10<sup>21</sup> 以上の場合、科学記数法を使用します（{{jsxref("Number.prototype.toString()")}} と同じ返値）。
 
-## 例外
+### 例外
 
 - {{jsxref("RangeError")}}
   - : `digits` が `0` 以上 `100` 以下ではない場合に発生します。
@@ -36,9 +50,9 @@ toFixed(digits)
 
 ## 解説
 
-`toFixed()` メソッドは `numObj` の文字列表記を、指数表記を使用せず、小数点以下を正確に `digits` 桁として返します。必要に応じて数値は丸められ、小数部は指定された長さになるよう必要に応じて 0 で埋められます。
+`toFixed()` メソッドは、[指数表記](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential)を使用せずに、小数点以下の桁数が正確に `digits` 桁である数値の文字列表現を返します。必要に応じて数値は丸められ、小数点以下の桁数が指定された長さに合わせるために必要に応じてゼロで埋められます。
 
-`numObj` の絶対値が `1e+21` 以上の場合は、このメソッドは単純に {{jsxref("Number.prototype.toString()")}} を呼び出し、指数表記での文字列を返します。`toFixed()` は `numObj` の値が有限数でない場合、`"Infinity"`、`"NaN"`、`"-Infinity"` の何れかを返します。
+数値の絶対値が `1e+21` 以上の場合は、このメソッドは単純に {{jsxref("Number.prototype.toString()")}} を呼び出し、指数表記での文字列を返します。`toFixed()` は数値が有限数でない場合、`"Infinity"`、`"NaN"`、`"-Infinity"` の何れかを返します。
 
 `toFixed()` の出力は、一部の値では [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) よりも正確かもしれませんが、これは `toString()` が隣の数値と区別できる程度の有効数字しか出力しないためです。例えば、次のようになります。
 
@@ -71,10 +85,10 @@ numObj.toFixed(6); // '12345.678900'を返す。0 を追加
 // 浮動小数点数で正確に表せず、最も近い浮動小数点数の
 // 方が低いため、切り捨てられる。
 (2.449999999999999999).toFixed(1); // '2.5'
-// 2.45 との差が NUMBER.EPSILON 未満なので、切り上げ
+// 2.45 との差が Number.EPSILON 未満なので、切り上げ
 // このリテラルは、実際には 2.45 と同じ数値をエンコードしている
 
-(6.02 * 10 ** 23).toFixed(50); // 6.019999999999999e+23; 巨大な数値は指数表記を使用
+(6.02 * 10 ** 23).toFixed(50); // '6.019999999999999e+23'; 巨大な数値は指数表記を使用
 ```
 
 ### toFixed() を負の数に使用
@@ -82,7 +96,7 @@ numObj.toFixed(6); // '12345.678900'を返す。0 を追加
 メンバーアクセスは単項マイナスよりも[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)が高いので、文字列を取得するためには負の数の式全体をグループ化する必要があります。
 
 ```js-nolint
--2.34.toFixed(1); // -2.3, a number
+-2.34.toFixed(1); // -2.3; 数値
 (-2.34).toFixed(1); // '-2.3'
 ```
 

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 ## Resumen
 
-El método **apply()** invoca una determinada función asignando explícitamente el objeto **this** y un array o similar ([array like object](/es/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)) como parámetros (**argumentos)** para dicha función.
+El método **apply()** invoca una determinada función asignando explícitamente el objeto **this** y un array o similar ([array like object](/es/docs/Web/JavaScript/Guide#working_with_array-like_objects)) como parámetros (**argumentos)** para dicha función.
 
 > [!NOTE]
 > Aunque la sintaxis de esta función es casi idéntica a {{jsxref("Function.call", "call()")}}, la diferencia fundamental es que `call()` acepta una lista de argumentos, mientras que `apply()` acepta un simple array con los argumentos.
@@ -23,7 +23,7 @@ fun.apply(thisArg[, argsArray])
 - `thisArg`
   - : El valor del objeto **this** a utilizar dentro de la llamada a _fun_. Cabe mencionar que éste puede no ser el valor visto por el método: si el método es una función del tipo {{jsxref("Functions_and_function_scope/Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} o {{jsxref("Global_Objects/undefined", "undefined")}} será reemplazado por el objeto global, y los valores primitivos serán encapsulados.
 - `argsArray`
-  - : Un objeto similar a un array ([array like object](/es/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)), que contiene los parámetros con los que será llamada _`fun`_, o `null` o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase [browser compatibility](#browser_compatibility) para mayor información.
+  - : Un objeto similar a un array ([array like object](/es/docs/Web/JavaScript/Guide#working_with_array-like_objects)), que contiene los parámetros con los que será llamada _`fun`_, o `null` o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase [browser compatibility](#browser_compatibility) para mayor información.
 
 ### Valor de retorno
 
@@ -95,7 +95,7 @@ var max = Math.max.apply(
 var min = Math.min.apply(null, numbers);
 
 /* vs. simple loop based algorithm */
-(max = -Infinity), (min = +Infinity);
+((max = -Infinity), (min = +Infinity));
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) max = numbers[i];
@@ -138,7 +138,7 @@ someobject.foo = function () {
 };
 ```
 
-Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos `.on` (eventos`[event]...,`como los que se usan en el [Devtools Inspector](/es/docs/Tools/Page_Inspector#Developer_API))
+Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos `.on` (eventos`[event]...,`como los que se usan en el [Devtools Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#developer_api))
 
 ## Especificaciones
 

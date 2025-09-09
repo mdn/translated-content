@@ -11,7 +11,23 @@ Ceci résulte en des expressions plus courtes et plus simples lors de l'accès �
 
 Le chainage optionnel ne peut pas être utilisé sur un objet initialement inexistant. Il ne remplace pas les vérifications du type `if (typeof a == "undefined")`.
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## Syntaxe
 
@@ -64,7 +80,7 @@ let result = uneInterface.uneMéthode?.();
 
 #### Réaliser des fonctions de rappel optionnelles ou des écouteurs d'évènements
 
-Si vous utilisez des fonctions ou des méthodes de recherche depuis un objet avec [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring), vous pourriez avoir des valeurs inexistantes que vous ne pouvez appeler comme fonction à moins que vous ayez vérifié leur existance. En utilisant `?.`, vous pourriez vous passer de cette vérification supplémentaire :
+Si vous utilisez des fonctions ou des méthodes de recherche depuis un objet avec [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring), vous pourriez avoir des valeurs inexistantes que vous ne pouvez appeler comme fonction à moins que vous ayez vérifié leur existance. En utilisant `?.`, vous pourriez vous passer de cette vérification supplémentaire :
 
 ```js
 // ES2019
@@ -93,7 +109,7 @@ function doSomething(onContent, onError) {
 
 ### Chaînage optionnel avec les expressions
 
-Vous pouvez aussi utiliser l'opérateur de chaînage optionnel lorsque vous accédez aux propriétés avec une expression en utilisant [la notation avec crochets des accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation) :
+Vous pouvez aussi utiliser l'opérateur de chaînage optionnel lorsque vous accédez aux propriétés avec une expression en utilisant [la notation avec crochets des accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation) :
 
 ```js
 let nestedProp = obj?.["propName"];

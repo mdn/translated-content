@@ -11,7 +11,27 @@ l10n:
 
 非同期ジェネレーター関数は、{{jsxref("AsyncGeneratorFunction")}} コンストラクターや [`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)の構文を使用して定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## 構文
 

@@ -3,13 +3,11 @@ title: Columnas con CSS-3
 slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 ---
 
-{{CSSRef}}
-
 ### Introducción
 
 Cuando leemos un texto, las líneas muy largas resultan incómodas. Si son demasiado largas, al cambiar de línea nuestros ojos pueden perder la pista de la línea en la que estabas (al ir de un extremo al otro de la página). Por ello, pensando en los usuarios con monitores grandes, los autores deben limitar la anchura del texto dividiéndolo en columnas, más o menos, como hacen los periódicos. Por desgracia esto no es posible con HTML y CSS-2, a no ser que fuerces la ruptura de las columnas en puntos fijos, limites en gran medida el código a utilizar, o uses scripts complejos.
 
-[El borrador de CSS-3](http://www.w3.org/TR/css3-multicol/) propone algunas nuevas propiedades para dar respuesta a esta necesidad. En Firefox 1.5 y superior hemos implementado algunas de estas propiedades para comportarnos según lo descrito en el borrador de CSS-3 (con una excepción explicada abajo)
+[El borrador de CSS-3](https://www.w3.org/TR/css3-multicol/) propone algunas nuevas propiedades para dar respuesta a esta necesidad. En Firefox 1.5 y superior hemos implementado algunas de estas propiedades para comportarnos según lo descrito en el borrador de CSS-3 (con una excepción explicada abajo)
 
 [El blog de Robert O'Callahan](http://weblogs.mozillazine.org/roc/)usa columnas CSS, pruébalo con Firefox 1.5
 
@@ -49,7 +47,7 @@ Se visualizará así:
 
 Cuando leemos un texto las líneas muy largas resultan incómodas, si son demasiado largas, al cambiar de línea nuestros ojos pueden perder la pista de la línea en la que estabas. Por ello, pensando en los usuarios con monitores grandes, los autores deben limitar la anchura del texto dividiéndolo en columnas, más o menos, como hacen los periódicos.
 
-Los detalles exactos son descritos en [El borrador de CSS3](http://www.w3.org/TR/css3-multicol/).
+Los detalles exactos son descritos en [El borrador de CSS3](https://www.w3.org/TR/css3-multicol/).
 
 En un bloque multicolumna, el contenido fluye automáticamente de una columna a otra según sea necesario. Todas las funcionalidades de HTML, CSS, y DOM están soportadas dentro de las columnas, tanto al editar como al imprimir.
 

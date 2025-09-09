@@ -5,7 +5,7 @@ slug: Web/API/Window/matchMedia
 
 {{ApiRef}}
 
-Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères [media query](/fr/docs/CSS/Media_queries) spécifiée.
+Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères [media query](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) spécifiée.
 
 ## Syntaxe
 
@@ -27,7 +27,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 Ce code permet de gérer la mise en page d'une manière différente quand l'écran est moins large.
 
-Voir [Utiliser les media queries avec du code](/fr/docs/DOM/Using_media_queries_from_code) pour plus d'exemples.
+Voir [Utiliser les media queries avec du code](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries) pour plus d'exemples.
 
 ## Spécifications
 
@@ -39,7 +39,7 @@ Voir [Utiliser les media queries avec du code](/fr/docs/DOM/Using_media_queries_
 
 ## Voir aussi
 
-- [Media queries](/fr/docs/CSS/Media_queries)
-- [Using media queries from code](/fr/docs/DOM/Using_media_queries_from_code)
+- [Media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

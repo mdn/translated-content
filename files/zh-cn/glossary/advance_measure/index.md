@@ -14,5 +14,5 @@ l10n:
 ## 参见
 
 - {{cssxref("&lt;length&gt;")}}
-- [学习：CSS 取值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [学习：CSS 取值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [TextMetrics API](/zh-CN/docs/Web/API/TextMetrics)

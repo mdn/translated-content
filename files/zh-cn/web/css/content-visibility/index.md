@@ -3,7 +3,7 @@ title: content-visibility
 slug: Web/CSS/content-visibility
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`content-visibility`** 控制元素是否渲染其内容，以及施加一组强局限，由此允许用户代理有机会在不需要时省略大片的布局和渲染工作。此属性使用户代理得以在不需要时跳过元素的渲染工作（包括布局和绘制）——由此使页面的初始加载明显变快。
 
@@ -152,4 +152,4 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 - [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
 - {{CSSXref("contain-intrinsic-size")}}
 - {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
-- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/articles/content-visibility)（web.dev）
+- [content-visibility：提高渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（web.developers.google.cn）

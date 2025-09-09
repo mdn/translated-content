@@ -11,4 +11,4 @@ Il existe un projet de [spécification de beacon W3C](https://w3c.github.io/beac
 
 ## Voir aussi
 
-- [Surveillance des utilisateurs réels (RUM)](/fr/docs/Glossaire/Real_User_Monitoring)
+- [Surveillance des utilisateurs réels (RUM)](/fr/docs/Glossary/Real_User_Monitoring)

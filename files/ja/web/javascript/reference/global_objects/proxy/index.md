@@ -2,10 +2,8 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 l10n:
-  sourceCommit: 0d4a751b6265b81a6564dde51318b2e391639713
+  sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
-
-{{JSRef}}
 
 **`Proxy`** オブジェクトにより別なオブジェクトのプロキシーを作成することができ、そのオブジェクトの基本的な操作に介入したり再定義したりすることができます。
 
@@ -55,9 +53,9 @@ const handler2 = {
 const proxy2 = new Proxy(target, handler2);
 ```
 
-ここで {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} ハンドラーを実装し、ターゲットのプロパティへのアクセスに介入します。
+ここで {{jsxref("Proxy/Proxy/get", "get()")}} ハンドラーを実装し、ターゲットのプロパティへのアクセスに介入します。
 
-ハンドラー関数は*トラップ*と呼ばれることがありますが、これはおそらくターゲットオブジェクトへの呼び出しをトラップするからでしょう。上記の `handler2` のとても単純なトラップは、すべてのプロパティアクセサーを再定義します。
+ハンドラー関数は*トラップ*と呼ばれることがありますが、これはおそらくターゲットオブジェクトへの呼び出しをトラップするからでしょう。上記の `handler2` のトラップは、すべてのプロパティアクセサーを再定義します。
 
 ```js
 console.log(proxy2.message1); // world
@@ -99,14 +97,14 @@ console.log(proxy3.message2); // world
   - : 対応する[オブジェクト内部メソッド](#オブジェクト内部メソッド)の振る舞いを定義する関数です。（これは、オペレーティングシステムにおける「トラップ」の概念に似ています。）
 - ターゲット
   - : プロキシーが仮想化するオブジェクト。プロキシーのストレージバックエンドとして多く使用されます。オブジェクトの非拡張性または設定不可能なプロパティに関するインバリアント（変更されない意味づけ）は、対象に対して検証されます。
-- 不変条件
+- {{Glossary("invariant", "不変条件")}}
   - : カスタム処理を実装しても変わらない意味づけ。トラップの実装がハンドラーの不変条件に違反する場合、{{jsxref("TypeError")}}が発生します。
 
 ### オブジェクト内部メソッド
 
-[オブジェクト](/ja/docs/Web/JavaScript/Data_structures#オブジェクト)はプロパティの集合体です。しかし、この言語では、オブジェクトに格納されたデータを直接操作するための仕組みは提供されていません。むしろ、オブジェクトは、オブジェクトと対話する方法を指定するいくつかの内部メソッドを定義します。例えば、`obj.x` を読んだとき、以下のようなことが起こると予想されます。
+[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)はプロパティの集合体です。しかし、この言語では、オブジェクトに格納されたデータを直接操作するための仕組みは提供されていません。むしろ、オブジェクトは、オブジェクトと対話する方法を指定するいくつかの内部メソッドを定義します。例えば、`obj.x` を読んだとき、以下のようなことが起こると予想されます。
 
-- `x` プロパティは、得られるまで[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)が検索される。
+- `x` プロパティは、得られるまで[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)が検索される。
 - `x` がデータプロパティの場合、プロパティ記述子の `value` 属性が返される。
 - `x` がアクセサプロパティの場合、ゲッターを呼び出すと、ゲッターの返値が返される。
 
@@ -145,10 +143,11 @@ console.log(proxy3.message2); // world
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
+- {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : 新しい `Proxy` オブジェクトを生成します。
 
-> **メモ:** `Proxy.prototype` プロパティはないので、`Proxy` インスタンスには特別なプロパティやメソッドはありません。
+> [!NOTE]
+> `Proxy.prototype` プロパティはないので、`Proxy` インスタンスには特別なプロパティやメソッドはありません。
 
 ## 静的メソッド
 
@@ -159,7 +158,7 @@ console.log(proxy3.message2); // world
 
 ### 基本的な例
 
-この例では、与えられたプロパティ名がオブジェクトに存在しない場合、既定値である `37` を返します。ここでは {{jsxref("Global_Objects/Proxy/Proxy/get", "get")}} ハンドラーを使用しています。
+この例では、与えられたプロパティ名がオブジェクトに存在しない場合、既定値である `37` を返します。ここでは {{jsxref("Proxy/Proxy/get", "get()")}} ハンドラーを使用しています。
 
 ```js
 const handler = {
@@ -190,11 +189,11 @@ p.a = 37; // 操作はプロキシーへ転送されます
 console.log(target.a); // 37 （操作は正しく転送されました）
 ```
 
-この「何もしないプロキシー」はプレーンな JavaScript オブジェクトに対してはうまくいきますが、DOM 要素、[`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトなどのネイティブオブジェクト、あるいは内部スロットを持つ何かのオブジェクトに対しては機能しないことに注意してください。詳細は[プライベートプロパティは転送できない](#プライベートプロパティは転送できない)を参照してください。
+この「何もしないプロキシー」はプレーンな JavaScript オブジェクトに対してはうまくいきますが、DOM 要素、[`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトなどのネイティブオブジェクト、あるいは内部スロットを持つ何かのオブジェクトに対しては機能しないことに注意してください。詳細は[プライベートフィールドは転送できない](#プライベートフィールドは転送できない)を参照してください。
 
-### プライベートプロパティは転送できない
+### プライベートフィールドは転送できない
 
-プロキシーは、やはり異なるアイデンティティを持つ別のオブジェクトであり、ラップされたオブジェクトと外部との間を運営する _プロキシー_ です。そのため、プロキシーは元オブジェクトの[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields)に直接アクセスすることができません。
+プロキシーは、やはり異なるアイデンティティを持つ別のオブジェクトであり、ラップされたオブジェクトと外部との間を運営する _プロキシー_ です。そのため、プロキシーは元オブジェクトの[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)に直接アクセスすることができません。
 
 ```js
 class Secret {
@@ -207,17 +206,17 @@ class Secret {
   }
 }
 
-const aSecret = new Secret("123456");
-console.log(aSecret.secret); // [REDACTED]
+const secret = new Secret("123456");
+console.log(secret.secret); // [REDACTED]
 // 何もしない転送のように見える
-const proxy = new Proxy(aSecret, {});
+const proxy = new Proxy(secret, {});
 console.log(proxy.secret); // TypeError: Cannot read private member #secret from an object whose class did not declare it
 ```
 
 これは、プロキシーの `get` トラップを呼び出すと、`this` の値が元の `secret` ではなく `proxy` になるため、`#secret` にはアクセスできないためです。これを修正するには、元の `secret` を `this` として使用してください。
 
 ```js
-const proxy = new Proxy(aSecret, {
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     // 既定では、Reflect.get(target, prop, receiver) のようになり、
     // `this` の値が異なるようになります。
@@ -237,8 +236,8 @@ class Secret {
   }
 }
 
-const aSecret = new Secret();
-const proxy = new Proxy(aSecret, {
+const secret = new Secret();
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     const value = target[prop];
     if (value instanceof Function) {
@@ -252,7 +251,7 @@ const proxy = new Proxy(aSecret, {
 console.log(proxy.x());
 ```
 
-JavaScript のネイティブオブジェクトの中には、_[内部スロット](https://tc39.es/ecma262/#sec-object-internal-methods-and-internal-slots)_ という、JavaScript コードからはアクセスできないプロパティを持つものがあります。例えば、[`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトは `[[MapData]]` という内部スロットを持っており、これはマップのキーと値のペアを格納しています。そのため、マップの転送プロキシーを些細なことで作成することはできません。
+JavaScript のネイティブオブジェクトの中には、_[内部スロット](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-object-internal-methods-and-internal-slots)_ という、JavaScript コードからはアクセスできないプロパティを持つものがあります。例えば、[`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトは `[[MapData]]` という内部スロットを持っており、これはマップのキーと値のペアを格納しています。そのため、マップの転送プロキシーを些細なことで作成することはできません。
 
 ```js
 const proxy = new Proxy(new Map(), {});
@@ -263,7 +262,7 @@ console.log(proxy.size); // TypeError: get size method called on incompatible Pr
 
 ### 検証
 
-`Proxy` を使うと、オブジェクトに渡された値を簡単に検証できます。この例では {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} ハンドラーを使用しています。
+`Proxy` を使うと、オブジェクトに渡された値を簡単に検証できます。この例では {{jsxref("Proxy/Proxy/set", "set()")}} ハンドラーを使用しています。
 
 ```js
 const validator = {
@@ -307,20 +306,20 @@ const view = new Proxy(
     selected: null,
   },
   {
-    set(obj, prop, newval) {
-      const oldval = obj[prop];
+    set(obj, prop, newVal) {
+      const oldVal = obj[prop];
 
       if (prop === "selected") {
-        if (oldval) {
-          oldval.setAttribute("aria-selected", "false");
+        if (oldVal) {
+          oldVal.setAttribute("aria-selected", "false");
         }
-        if (newval) {
-          newval.setAttribute("aria-selected", "true");
+        if (newVal) {
+          newVal.setAttribute("aria-selected", "true");
         }
       }
 
       // 値を保存する既定の挙動
-      obj[prop] = newval;
+      obj[prop] = newVal;
 
       // 成功を示す
       return true;
@@ -405,131 +404,6 @@ console.log(products.latestBrowser);
 //  'Edge'
 ```
 
-### 配列要素のオブジェクトをそのプロパティから検索
-
-このプロキシーは配列をいくつかの実用機能で拡張しています。見ての通り、 {{jsxref("Object.defineProperties", "Object.defineProperties()")}} を使わなくても柔軟にプロパティを「定義」できます。この例は、テーブルの列をそのセルから検索するようなコードに応用できます。その場合、ターゲットは {{domxref("HTMLTableElement.rows", "table.rows")}} となります。
-
-```js
-const products = new Proxy(
-  [
-    { name: "Firefox", type: "browser" },
-    { name: "SeaMonkey", type: "browser" },
-    { name: "Thunderbird", type: "mailer" },
-  ],
-  {
-    get(obj, prop) {
-      // 値を返す既定の挙動、prop は通常整数値
-      if (prop in obj) {
-        return obj[prop];
-      }
-
-      // 製品の数を取得、products.length のエイリアス
-      if (prop === "number") {
-        return obj.length;
-      }
-
-      let result;
-      const types = {};
-
-      for (const product of obj) {
-        if (product.name === prop) {
-          result = product;
-        }
-        if (types[product.type]) {
-          types[product.type].push(product);
-        } else {
-          types[product.type] = [product];
-        }
-      }
-
-      // 製品を名前で取得
-      if (result) {
-        return result;
-      }
-
-      // 製品を種類で取得
-      if (prop in types) {
-        return types[prop];
-      }
-
-      // 製品の種類を取得
-      if (prop === "types") {
-        return Object.keys(types);
-      }
-
-      return undefined;
-    },
-  },
-);
-
-console.log(products[0]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Firefox"]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Chrome"]); // undefined
-console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
-console.log(products.types); // ['browser', 'mailer']
-console.log(products.number); // 3
-```
-
-### 完全なトラップリストの例
-
-ここで、教育的な目的のために、完全なサンプル `traps` リストを作成するために、この種の処理に特に適している _ネイティブ_ オブジェクト、すなわち[単純な Cookie のフレームワーク](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework)が作成した `docCookies` グローバルオブジェクトをプロキシー化してみることにしましょう。
-
-```js
-/*
-  const docCookies = ... "docCookies" オブジェクトは下記から取得しています。
-  https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
-*/
-
-const docCookies = new Proxy(docCookies, {
-  get(target, key) {
-    return target[key] ?? target.getItem(key) ?? undefined;
-  },
-  set(target, key, value) {
-    if (key in target) {
-      return false;
-    }
-    return target.setItem(key, value);
-  },
-  deleteProperty(target, key) {
-    if (!(key in target)) {
-      return false;
-    }
-    return target.removeItem(key);
-  },
-  ownKeys(target) {
-    return target.keys();
-  },
-  has(target, key) {
-    return key in target || target.hasItem(key);
-  },
-  defineProperty(target, key, descriptor) {
-    if (descriptor && "value" in descriptor) {
-      target.setItem(key, descriptor.value);
-    }
-    return target;
-  },
-  getOwnPropertyDescriptor(target, key) {
-    const value = target.getItem(key);
-    return value
-      ? {
-          value,
-          writable: true,
-          enumerable: true,
-          configurable: false,
-        }
-      : undefined;
-  },
-});
-
-/* Cookie のテスト */
-
-console.log((docCookies.myCookie1 = "First value"));
-console.log(docCookies.getItem("myCookie1"));
-
-docCookies.setItem("myCookie1", "Changed value");
-console.log(docCookies.myCookie1);
-```
-
 ## 仕様書
 
 {{Specifications}}
@@ -540,5 +414,4 @@ console.log(docCookies.myCookie1);
 
 ## 関連情報
 
-- ["Proxies are awesome" Brendan Eich の JSConf でのプレゼンテーション](https://www.youtube.com/watch?v=sClk6aB_CPk) ([スライド](https://www.slideshare.net/BrendanEich/metaprog-5303821))
-- [プロキシーのチュートリアル](https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/)
+- [Proxies are awesome](https://youtu.be/sClk6aB_CPk) プレゼンテーション (Brendan Eich, JSConf, 2014)

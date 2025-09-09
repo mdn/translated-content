@@ -32,11 +32,11 @@ Gecko-based browsers insert text nodes into a document to represent whitespace i
 Therefore a node obtained, for example, using [`Node.firstChild`](/es/docs/Web/API/Node/firstChild) or [`Node.previousSibling`](/es/docs/Web/API/Node/previousSibling) may refer to a
 whitespace text node rather than the actual element the author intended to get.
 
-See [Whitespace in the DOM](/es/docs/Web/Guide/DOM/Whitespace_in_the_DOM) and
-[W3C DOM 3 FAQ: Why are some Text nodes empty?](http://www.w3.org/DOM/faq.html#emptytext)
+See [Whitespace in the DOM](/es/docs/Web/CSS/CSS_text/Whitespace) and
+[W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext)
 for more information.
 
-Para navegar en el sentido opuesto de la lista de nodos hijos se utiliza [Node.nextSibling](/es/docs/Web/API/Node.nextSibling).
+Para navegar en el sentido opuesto de la lista de nodos hijos se utiliza [Node.nextSibling](/es/docs/Web/API/Node/nextSibling).
 
 ## Especificaciones
 

@@ -1,15 +1,25 @@
 ---
 title: Object.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 l10n:
-  sourceCommit: 4ce6b9526bfa5b44a518e8ecb21a9894973136bd
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`Object.keys()`** は静的メソッドで、指定されたオブジェクトが持つプロパティの**名前**の配列を、通常のループで取得するのと同じ順序で返します。
 
-**`Object.keys()`** 静的メソッドは、指定されたオブジェクトが持つプロパティの**名前**の配列を、通常のループで取得するのと同じ順序で返します。
+{{InteractiveExample("JavaScript デモ: Object.keys()")}}
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+```js interactive-example
+const object = {
+  a: "some string",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object));
+// 予想される結果: Array ["a", "b", "c"]
+```
 
 ## 構文
 
@@ -37,7 +47,7 @@ Object.keys(obj)
 ### Object.keys() の使用
 
 ```js
-// 単純な配列
+// 基本的な配列
 const arr = ["a", "b", "c"];
 console.log(Object.keys(arr)); // ['0', '1', '2']
 
@@ -92,7 +102,8 @@ console.log(Object.keys(100)); // []
 ## 関連情報
 
 - [`Object.keys` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [es-shims による `Object.keys` のポリフィル](https://www.npmjs.com/package/object-key)
+- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

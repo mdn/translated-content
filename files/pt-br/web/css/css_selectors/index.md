@@ -31,19 +31,19 @@ Os Seletores definem quais elementos um conjunto de regras CSS se aplica.
 
 ## Combinadores
 
-- [Seletores de irmãos adjacentes](/pt-BR/docs/Web/CSS/Adjacent_sibling_selectors)
+- [Seletores de irmãos adjacentes](/pt-BR/docs/Web/CSS/Next-sibling_combinator)
   - : O combinador `+` seleciona os nós que seguem imediatamente o elemento especificado anteriormente.
     **Sintaxe:** `A + B`
     **Exemplo:** `ul + li` irá corresponder a qualquer elemento {{HTMLElement('li')}} que segue imediatamente após um elemento {{HTMLElement('ul')}}.
-- [Seletores gerais de irmãos](/pt-BR/docs/Web/CSS/General_sibling_selectors)
+- [Seletores gerais de irmãos](/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator)
   - : O combinador `~` seleciona os nós que seguem (não necessariamente imediatamente) o elemento especificado anteriormente, se ambos os elementos compartilham o mesmo pai.
     **Sintaxe:** `A ~ B`
     **Exemplo:** `p ~ span` irá corresponder a todo elemento {{HTMLElement('span')}} que seguir um elemento {{HTMLElement('p')}} dentro de um mesmo elemento pai.
-- [Seletor de filhos](/pt-BR/docs/Web/CSS/Child_selectors)
+- [Seletor de filhos](/pt-BR/docs/Web/CSS/Child_combinator)
   - : O combinador `>` seleciona nós que são filhos diretos do elemento especificado anteriormente.
     **Sintaxe:** `A > B`
     **Exemplo:** `ul > li` irá corresponder a todo elemento {{HTMLElement('li')}} que estiver diretamente dentro de um elemento {{HTMLElement('ul')}} especificado.
-- [Seletor de descendentes](/pt-BR/docs/Web/CSS/Descendant_selectors)
+- [Seletor de descendentes](/pt-BR/docs/Web/CSS/Descendant_combinator)
   - : O combinador " " seleciona os nós que são filhos do elemento especificado anteriormente (não é necessário que seja um filho direto). **Sintaxe:** `A B`**Exemplo:**`div span` irá corresponder a todo e qualquer elemento {{HTMLElement('span')}} que estiver dentro do elemento {{HTMLElement('div')}}.
 
 ## Pseudo-classes
@@ -52,7 +52,7 @@ Os Seletores definem quais elementos um conjunto de regras CSS se aplica.
 
 ## Pseudo-elementos
 
-[Pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elementos) são asbtrações da árvore que representam entidades além do que o HTML faz. Por exemplo, o HTML não tem um elemento que descreva a primeira letra ou linha de um parágrafo, ou o marcador de uma lista. Os pseudo-elementos representam essas entidades e permitem que as regras CSS sejam associadas a elas. Desta forma, essas entidades podem ser denominadas independentemente.
+[Pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements) são asbtrações da árvore que representam entidades além do que o HTML faz. Por exemplo, o HTML não tem um elemento que descreva a primeira letra ou linha de um parágrafo, ou o marcador de uma lista. Os pseudo-elementos representam essas entidades e permitem que as regras CSS sejam associadas a elas. Desta forma, essas entidades podem ser denominadas independentemente.
 
 ## Especificações
 

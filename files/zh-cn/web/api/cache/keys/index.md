@@ -29,9 +29,7 @@ cache.keys(request, { options }).then(function (keys) {
 - request {{optional_inline}}
   - : 如果一个相关键被指定，则返对应的 {{domxref("Request")}} 。
 - options {{optional_inline}}
-
   - : 一个对象，它的属性决定了 keys 操作中的匹配操作是如何执行的。可选的属性有：
-
     - `ignoreSearch`: 一个 {{domxref("Boolean")}} 值，指定了匹配操作是否忽略 url 中的查询部分。如果为 true，在执行匹配操作时， `http://foo.com/?value=bar` 的 `?value=bar` 部分将会被忽。默认为 `false`。
     - `ignoreMethod`: 一个 {{domxref("Boolean")}} 值，当为 true 时，将会阻止匹配操作验证 {{domxref("Request")}} 的 HTTP 方法（通常只有 GET 和 HEAD 方法被允许）。默认为 false。
     - `ignoreVary`: 一个 {{domxref("Boolean")}} 值，当为 `true 时，告诉匹配操作不要验证 VARY 头部。换句话说，如果 URL 匹配，你会得到一个匹配而不管` {{domxref("Response")}} 对象是否有 VARY 头部。默认为 false。
@@ -59,6 +57,6 @@ caches.open("v1").then(function (cache) {
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

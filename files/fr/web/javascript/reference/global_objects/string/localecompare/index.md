@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 La méthode **`localeCompare()`** renvoie un nombre indiquant si la chaîne de caractères courante se situe avant, après ou est la même que la chaîne passée en paramètre, selon l'ordre lexicographique de la locale.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 Les arguments `locales` et `options` permettent de définir la locale et des options pour adapter le comportement de la fonction. Pour les anciennes implémentations qui ignorent les arguments `locales` et `options`, l'ordre de tri utilisé sera entièrement dépendant de l'implémentation.
 
@@ -22,14 +32,12 @@ localeCompare(chaineAComparer, locales, options);
 ### Paramètres
 
 - `chaineAComparer`
-
   - : La chaîne avec laquelle on souhaite comparer la chaîne de caractères courante.
 
 - `locales` et `options`
-
   - : Ces arguments permettent d'adapter le comportement de la fonction pour que les applications puissent indiquer la locale dont les conventions doivent être utilisées. Pour les implémentations qui ignorent les arguments `locales` et `options`, la locale et le format de la chaîne qui est renvoyée dépendent entièrement de l'implémentation.
 
-    Voir [la page du constructeur `Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator) pour plus de détails sur ces paramètres et leur utilisation.
+    Voir [la page du constructeur `Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) pour plus de détails sur ces paramètres et leur utilisation.
 
 ### Valeur de retour
 
@@ -52,7 +60,7 @@ Cette méthode renvoie&nbsp;:
 
 ## Performances
 
-Pour comparer un grand nombre de chaînes de caractères, par exemple pour trier de grands tableaux, il est préférable de créer un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) et d'utiliser la fonction fournie par la propriété [`compare`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare).
+Pour comparer un grand nombre de chaînes de caractères, par exemple pour trier de grands tableaux, il est préférable de créer un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) et d'utiliser la fonction fournie par la propriété [`compare`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare).
 
 ## Exemples
 

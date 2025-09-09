@@ -2,10 +2,10 @@
 title: インデックス付きコレクション
 slug: Web/JavaScript/Guide/Indexed_collections
 l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 この章では、インデックス値により順序付けされたデータのコレクションを紹介します。これには配列と、{{jsxref("Array")}} オブジェクトや {{jsxref("TypedArray")}} オブジェクトなどの配列風の構造物があります。
 
@@ -15,16 +15,16 @@ l10n:
 
 JavaScript は明確な配列データ型を持っていません。しかし、アプリケーションでは配列として機能する定義済みの `Array` オブジェクトとそのメソッドを利用することができます。`Array` オブジェクトには、結合、反転、ソートなど様々な方法で配列を操作するメソッドがあります。また、配列の長さを特定するプロパティや、正規表現で使用するプロパティなどがあります。
 
-この記事では配列を中心に説明しますが、配列と型付き配列には共通するメソッドが多いため、同じ概念の多くが型付き配列にも当てはまります。型付き配列の詳細については、[型付き配列のリファレンス](/ja/docs/Web/JavaScript/Typed_arrays)を参照してください。
+この記事では配列を中心に説明しますが、配列と型付き配列には共通するメソッドが多いため、同じ概念の多くが型付き配列にも当てはまります。型付き配列の詳細については、[型付き配列ガイド](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を参照してください。
 
 ## 配列の生成
 
 以下の文は同じ配列を生成します。
 
 ```js
-const arr1 = new Array(element0, element1, /* … ,*/ elementN);
-const arr2 = Array(element0, element1, /* … ,*/ elementN);
-const arr3 = [element0, element1, /* … ,*/ elementN];
+const arr1 = new Array(element0, element1, /* …, */ elementN);
+const arr2 = Array(element0, element1, /* …, */ elementN);
+const arr3 = [element0, element1, /* …, */ elementN];
 ```
 
 `element0, element1, …, elementN` は配列要素になる値のリストです。これらの値が指定されると、この配列の要素はそれらの値に初期化されます。配列の `length` プロパティは引数の数に設定されます。
@@ -53,22 +53,29 @@ arr3.length = arrayLength;
 ```js
 const obj = {};
 // …
-obj.prop = [element0, element1, /* … ,*/ elementN];
+obj.prop = [element0, element1, /* …, */ elementN];
 
 // または
-const obj = { prop: [element0, element1, /* … ,*/ elementN] };
+const obj = { prop: [element0, element1, /* …, */ elementN] };
 ```
 
 単一の要素で配列を初期化しようとして、その要素が `Number` である場合、角括弧の構文を使用する必要があります。単一の `Number` 値が `Array()` コンストラクターや関数に渡されると、単一の数値要素としてではなく、`arrayLength` として解釈されます。
 
+これは、数値 42 の要素一つだけの配列を生成します。
+
 ```js
-// これは、数値 42 の要素一つだけの配列を生成します。
 const arr = [42];
+```
 
-// これは、要素がなく arr.length が 42 に設定された配列を生成します。
+これは、要素がなく arr.length が 42 に設定された配列を生成します。
+
+```js
 const arr = Array(42);
+```
 
-// これは次のコードと同じです。
+これは次のコードと同じです。
+
+```js
 const arr = [];
 arr.length = 42;
 ```
@@ -89,7 +96,7 @@ const wisenArray = Array.of(9.3); // wisenArray は 1 つの要素 9.3 だけを
 
 ## 配列要素の参照
 
-要素はプロパティでもあるので、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使ってアクセスすることができます。以下の配列を定義するとします。
+要素はプロパティでもあるので、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使ってアクセスすることができます。以下の配列を定義するとします。
 
 ```js
 const myArray = ["Wind", "Rain", "Fire"];
@@ -97,7 +104,8 @@ const myArray = ["Wind", "Rain", "Fire"];
 
 要素のインデックスは 0 から始まるので、配列の 1 番目の要素を `myArray[0]`、2 番目の要素を `myArray[1]` と呼ぶことができます。
 
-> **メモ:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
+> [!NOTE]
+> [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
 >
 > ```js
 > const arr = ["one", "two", "three"];
@@ -168,7 +176,7 @@ console.log(cats); // [ <3 つの空アイテム> ]
 
 ### 配列の反復処理
 
-よく行われるのは配列に含まれる値に対し、それぞれの値について、なんらかの処理を行うことです。これを行う一番簡単な方法は次のとおりです。
+よく行われるのは配列に含まれる値に対し、それぞれの値について、次のようになんらかの処理を行うことです。
 
 ```js
 const colors = ["red", "green", "blue"];
@@ -229,7 +237,7 @@ nonsparseArray.forEach((element) => {
 // fourth
 ```
 
-JavaScript では、配列の要素は標準的なオブジェクトプロパティとして保存されるので、{{jsxref("Statements/for...in","for...in")}} ループを使って JavaScript 配列を反復処理するのはお勧めできません。というのも、通常の要素とすべての列挙可能なプロパティが現れるからです。
+JavaScript では、配列の要素は標準的なオブジェクトプロパティとして保存されるので、{{jsxref("Statements/for...in", "for...in")}} ループを使って JavaScript 配列を反復処理するのはお勧めできません。というのも、通常の要素とすべての列挙可能なプロパティが現れるからです。
 
 ### 配列のメソッド
 
@@ -493,6 +501,51 @@ console.log(total); // 60
 
 `reduce` と `reduceRight` もある意味では配列の反復処理メソッドです。要素列を単一の値に還元するために、再帰的に 2 つの値を組み合わせるアルゴリズムにこれらのメソッドを使用してください。
 
+## 配列の変換
+
+配列と他のデータ構造の間で相互に変換することができます。
+
+### 配列の要素のグループ化
+
+{{jsxref("Object.groupBy()")}} メソッドを使用して、現在の要素のグループを示す文字列を返すテスト関数を使用して、配列の要素をグループ化することができます。
+
+こちらは商品の配列で、 `name` と `type` がある "food" オブジェクトがあります。
+
+```js
+const inventory = [
+  { name: "asparagus", type: "vegetables" },
+  { name: "bananas", type: "fruit" },
+  { name: "goat", type: "meat" },
+  { name: "cherries", type: "fruit" },
+  { name: "fish", type: "meat" },
+];
+```
+
+`Object.groupBy()` を使用するにあたっては、現在の要素で呼び出されるコールバック関数を指定します。オプションで現在のインデックスと配列を指定することもでき、要素のグループを示す文字列を返します。
+
+次のコードでは、アロー関数を使用して配列のそれぞれの要素の型を返します（これは、[関数の引数にオブジェクトの構造分解構文を使用](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#関数の引数として渡されたオブジェクトからのプロパティの展開)して、渡されたオブジェクトから型要素を展開します）。結果は、コールバック関数によって返された一意の文字列を名前とするプロパティを持つオブジェクトとなります。それぞれのプロパティには、グループ内の要素を含む配列が割り当てられます。
+
+```js
+const result = Object.groupBy(inventory, ({ type }) => type);
+console.log(result);
+// Logs
+// {
+//   vegetables: [{ name: 'asparagus', type: 'vegetables' }],
+//   fruit: [
+//     { name: 'bananas', type: 'fruit' },
+//     { name: 'cherries', type: 'fruit' }
+//   ],
+//   meat: [
+//     { name: 'goat', type: 'meat' },
+//     { name: 'fish', type: 'meat' }
+//   ]
+// }
+```
+
+返されたオブジェクトは元の配列と同じ要素を参照していることに注意してください（{{Glossary("deep copy", "ディープコピー")}}ではありません）これらの要素の内部構造を変更すると、元の配列と返されたオブジェクトの両方に反映されます。
+
+文字列をキーとして使用できない場合、例えばグループ化する情報が変更される可能性のあるオブジェクトに関連付けられた場合、代わりに {{jsxref("Map.groupBy()")}} を使用することができます。これは、配列の要素を任意の値（{{Glossary("object", "オブジェクト")}} または{{Glossary("primitive", "プリミティブ")}}）をキーとして使用することができる {{jsxref("Map")}} にグループ化するという点を除いて、 `Object.groupBy()` とよく似ています。
+
 ## 疎配列
 
 配列は「空のスロット」を格納することができます。これは、値が `undefined` で満たされたスロットとは異なります。空のスロットは、以下のいずれかの方法で作成することができます。
@@ -531,7 +584,7 @@ for (const i of arr) {
 }
 // 出力: 1 2 undefined undefined 5
 
-// 分割代入
+// 構造分解
 const another = [...arr]; // "another" は [ 1, 2, undefined, undefined, 5 ]
 ```
 
@@ -573,7 +626,7 @@ for (let i = 0; i < 4; i++) {
 
 この例では、次のテーブル行を持つ配列を作成しています。
 
-```
+```plain
 Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
 Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
 Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
@@ -590,11 +643,11 @@ arr.property = "value";
 console.log(arr.property); // "value"
 ```
 
-例えば、配列が正規表現と文字列の一致した結果である場合、配列は一致した情報を提供するプロパティや要素を返します。[`RegExp.prototype.exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.prototype. match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.prototype.split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) は配列を返します。正規表現での配列の使用に関する情報については、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を参照してください。
+例えば、配列が正規表現と文字列の一致した結果である場合、配列は一致した情報を提供するプロパティや要素を返します。[`RegExp.prototype.exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.prototype. match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.prototype.split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) は配列を返します。正規表現での配列の使用に関する情報については、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を参照してください。
 
 ### 配列風オブジェクトの扱い
 
-[`document.getElementsByTagName()`](/ja/docs/Web/API/Document/getElementsByTagName) によって返される [`NodeList`](/ja/docs/Web/API/NodeList) や、関数本体内で利用できる {{jsxref("Functions/arguments","arguments")}} オブジェクトのように、表面上は配列のようにふるまう JavaScript オブジェクトがありますが、これらはメソッドすべてを共有してはいません。例えば、 `arguments` オブジェクトには {{jsxref("Global_Objects/Function/length","length")}} 属性がありますが、{{jsxref("Array.forEach", "forEach()")}} メソッドは実装されていません。
+[`document.getElementsByTagName()`](/ja/docs/Web/API/Document/getElementsByTagName) によって返される [`NodeList`](/ja/docs/Web/API/NodeList) や、関数本体内で利用できる {{jsxref("Functions/arguments", "arguments")}} オブジェクトのように、表面上は配列のようにふるまう JavaScript オブジェクトがありますが、これらはメソッドすべてを共有してはいません。例えば、 `arguments` オブジェクトには {{jsxref("Function/length","length")}} 属性がありますが、 [`forEach()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) メソッドは実装されていません。
 
 配列風オブジェクトに対して配列メソッドを直接呼び出すことはできません。
 
@@ -606,7 +659,7 @@ function printArguments() {
 }
 ```
 
-これを行うには、 {{jsxref("Global_Objects/Function/call","Function.prototype.call()")}} を使って間接的に呼び出します。
+これを行うには、 {{jsxref("Function.prototype.call()")}} を使って間接的に呼び出します。
 
 ```js example-good
 function printArguments() {
@@ -624,4 +677,4 @@ Array.prototype.forEach.call("a string", (chr) => {
 });
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}

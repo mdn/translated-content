@@ -33,7 +33,7 @@ const stateObj = { foo: "bar" };
 history.pushState(stateObj, "", "bar.html");
 ```
 
-위 두 줄에 대한 설명은 [Working with the History API](/ko/docs/Web/API/History_API/Working_with_the_History_API) 문서의 [Example of `pushState()` method](/ko/docs/Web/API/History_API/Working_with_the_History_API#Example_of_pushState_method)에서 확인할 수 있습니다. 그 다음, `http://www.mozilla.org/bar.html` 에서 아래와 같은 JavaScript를 실행한다고 가정해보세요:
+위 두 줄에 대한 설명은 [Working with the History API](/ko/docs/Web/API/History_API/Working_with_the_History_API) 문서의 [Example of `pushState()` method](/ko/docs/Web/API/History_API/Working_with_the_History_API#example_of_pushstate_method)에서 확인할 수 있습니다. 그 다음, `http://www.mozilla.org/bar.html` 에서 아래와 같은 JavaScript를 실행한다고 가정해보세요:
 
 ```js
 history.replaceState(stateObj, "", "bar2.html");

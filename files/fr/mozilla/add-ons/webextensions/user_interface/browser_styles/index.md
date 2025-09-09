@@ -5,10 +5,10 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 
 {{AddonSidebar}}
 
-Certains composants de l'interface utilisateur - les [fenêtres contextuelles](/fr/Add-ons/WebExtensions/user_interface/Popups), [fenêtres latérales](/fr/Add-ons/WebExtensions/user_interface/Sidebars), et les [pages d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages) du navigateur et de la page - sont spécifiés par votre extension de la même manière :
+Certains composants de l'interface utilisateur - les [fenêtres contextuelles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [fenêtres latérales](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), et les [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) du navigateur et de la page - sont spécifiés par votre extension de la même manière :
 
 1. créer un fichier HTML définissant la structure de l'élément d'interface utilisateur
-2. ajoutez une clé manifest.json ([`browser_action`](/fr/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/fr/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action), ou [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui)) pointant vers ce fichier HTML.
+2. ajoutez une clé manifest.json ([`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), ou [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) pointant vers ce fichier HTML.
 
 L'un des défis de cette approche est de styliser l'élément de telle sorte qu'il s'intègre au style du navigateur.
 Pour aider à cela, les clés manifest.json keys incluent une propriété optionnelle supplémentaire : `browser_style`.

@@ -15,10 +15,7 @@ slug: MDN/Community
 
 В GitHub хранится [оригинальная документация](https://github.com/mdn/content/) и [переведённый контент](https://github.com/mdn/translated-content), в том числе [русскоязычный перевод](https://github.com/mdn/translated-content/tree/main/files/ru).
 
-Для получения дополнительной информации о вкладе в MDN, смотрите:
-
-- [Начало работы](/ru/docs/Project:Getting_started) для идей о вещах, которые вы можете сделать.
-- [Вклад в MDN](/ru/docs/MDN/Contribute)
+Для получения дополнительной информации о вкладе в MDN, смотрите [Начало работы](/ru/docs/MDN/Community/Getting_started).
 
 ## Присоединение к беседе
 

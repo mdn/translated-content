@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 ブラウザーは拡張機能がローカルストレージエリアに保存できるデータ量を制限します。
 
-- Chrome では、この API を使用して、["unlimitedStorage"](/ja/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage)パーミッションを許可しない場合は 5MB まで保存できます。
+- Chrome では、この API を使用して、["unlimitedStorage"](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage)パーミッションを許可しない場合は 5MB まで保存できます。
 - Firefox ではバージョン 56 以降で"unlimitedStorage"パーミッションを利用できます。保存できるデータ量は現在では制限していませんが、将来的には制限するため、もし大きなデータ量を保存するのであれば"unlimitedStorage"パーミッションを今から使用するとよいでしょう。
 
 拡張機能をアンインストールすると、関連するローカルストレージは削除されます。
@@ -40,7 +40,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-local) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json)における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-local) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json)における Chromium のコードに基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

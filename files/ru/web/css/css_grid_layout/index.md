@@ -119,31 +119,31 @@ slug: Web/CSS/CSS_grid_layout
 - [Grid Area](/ru/docs/Glossary/Grid_Areas)
 - [Gutters](/ru/docs/Glossary/Gutters)
 - [Grid Axis](/ru/docs/Glossary/Grid_Axis)
-- [Grid row](/ru/docs/Glossary/Grid_Rows)
+- [Grid row](/ru/docs/Glossary/Grid_Row)
 - [Grid column](/ru/docs/Glossary/Grid_Column)
 
 ## Руководства
 
-- [Базовая концепция Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [Связь Grid Layout с другими методами компоновки](/ru/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- [Шаблон области сетки](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Использование именованных линий](/ru/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [Авторазмещение в CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [Выравнивание блока в CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [CSS Сетка, логические Значения и Режимы Редактирования](/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-- [CSS Grid Layout и доступность](/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [CSS Grid and progressive enhancement](/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [Реализация общих макетов используя CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_)
-- [Subgrid](/ru/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [Базовая концепция Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Связь Grid Layout с другими методами компоновки](/ru/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Шаблон области сетки](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Использование именованных линий](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [Авторазмещение в CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [Выравнивание блока в CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS Сетка, логические Значения и Режимы Редактирования](/ru/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [CSS Grid Layout и доступность](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [CSS Grid and progressive enhancement](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Реализация общих макетов используя CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [Subgrid](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
 - [Masonry Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
 
 ## Внешние ресурсы
 
-- [Примеры от Jen Simmons](http://labs.jensimmons.com/)
-- [Grid by Example - Коллекция примеров использования и видео уроки](http://gridbyexample.com/)
+- [Примеры от Jen Simmons](https://labs.jensimmons.com/)
+- [Grid by Example - Коллекция примеров использования и видео уроки](https://gridbyexample.com/)
 - [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](/ru/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
 ## Спецификации
 

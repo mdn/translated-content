@@ -12,8 +12,7 @@ l10n:
 **`setInterval()`** 메서드는 각 호출 사이에 고정된 시간 지연으로
 함수를 반복적으로 호출하거나 코드 스니펫을 실행합니다.
 
-이 메서드는 간격(interval)을 고유하게 식별할 수 있는 interval ID를 반환하므로 나중에 {{domxref("clearInterval",
-  "clearInterval()")}} 함수를 호출하여 제거할 수 있습니다.
+이 메서드는 간격(interval)을 고유하게 식별할 수 있는 interval ID를 반환하므로 나중에 {{domxref("clearInterval", "clearInterval()")}} 함수를 호출하여 제거할 수 있습니다.
 
 ## 구문
 
@@ -129,7 +128,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
-같이 보기: [`clearInterval()`](/ko/docs/Web/API/clearInterval)
+같이 보기: [`clearInterval()`](/ko/docs/Web/API/Window/clearInterval)
 
 ## "this" 문제
 
@@ -195,7 +194,7 @@ interval을 취소할 수 있습니다.
 브라우저는 일부 상황에서 간격에 대해 훨씬 더 엄격한 최소 값을 적용할 수
 있지만 이러한 경우는 일반적이지 않아야 합니다. 또한 콜백 호출 사이의 실제 경과 시간은
 주어진 `delay` 보다 길 수 있습니다.
-더 많은 예제는 [지정된 값보다 더 오래 지연되는 이유](/ko/docs/Web/API/setTimeout#딜레이가_지정한_값보다_더_긴_이유)를 참고하세요.
+더 많은 예제는 [지정된 값보다 더 오래 지연되는 이유](/ko/docs/Web/API/Window/setTimeout#딜레이가_지정한_값보다_더_긴_이유)를 참고하세요.
 
 ### 실행 시간이 간격 빈도보다 짧은지 확인
 

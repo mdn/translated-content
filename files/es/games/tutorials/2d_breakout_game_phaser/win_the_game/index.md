@@ -3,11 +3,9 @@ title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
 
-Este es el paso **12º** del tutorial 16 de [Gamedev Phaser](/es/docs/Games/Workflows/2D_Breakout_game_Phaser). Puedes encontrar el código fuente tal y como queda al completar el tutorial en [Gamedev-Phaser-Content-Kit/demos/lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html).
+Este es el paso **12º** del tutorial 16 de [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y como queda al completar el tutorial en [Gamedev-Phaser-Content-Kit/demos/lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html).
 
 Implementar las victorias en nuestro juego es fácil: si destruyes todos los ladrillos, ganas.
 

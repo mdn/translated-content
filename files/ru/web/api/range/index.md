@@ -26,7 +26,6 @@ Range может быть создан с помощью метода {{ domxref
 - {{domxref("Range.endOffset")}} {{readonlyInline}}
   - : Возвращает число равное расположению `endContainer` в `Range` .
 - {{domxref("Range.startOffset")}} {{readonlyInline}}
-
   - : Returns a number representing where in the `startContainer` the `Range` starts.
 
 ## Конструктор
@@ -99,4 +98,4 @@ _Не имеют унаследованных свойств._
 
 ## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)

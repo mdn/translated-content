@@ -3,8 +3,6 @@ title: CSS Containment
 slug: Web/CSS/CSS_containment
 ---
 
-{{CSSRef}}
-
 El objetivo de la especificación CSS Containment es mejorar el rendimiento de las páginas web, permitiendo a los desarrolladores aislar un subárbol del resto de la página. Si el navegador sabe si una parte de la página es independiente, se puede optimizar la renderización y el rendimiento mejora. La especificación define una única propiedad CSS {{cssxref("contain")}}. Este documento relata los objetivos básicos de la especificación.
 
 ## Ejemplo básico
@@ -94,11 +92,12 @@ article {
 }
 ```
 
-Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM). The main use case is to prevent situations where a [CSS Counter](/es/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
+Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM). The main use case is to prevent situations where a [CSS Counter](/es/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
 
 Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
 
-> **Nota:** `style` containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).
+> [!NOTE]
+> `style` containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).
 
 ### Special values
 

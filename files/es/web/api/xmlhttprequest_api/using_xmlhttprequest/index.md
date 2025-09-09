@@ -37,7 +37,7 @@ de forma asíncrona o sincrónica. El tipo de petición viene dictado por el arg
 no se especifica, la `XMLHttpRequest` se procesa de forma asíncrona, de lo contrario
 el proceso se realiza de forma síncrona. Una discusión detallada y demostraciones de estos
 de estos dos tipos de peticiones en la página [peticiones síncronas
-y asíncronas](/es/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). No utilice solicitudes sincrónicas fuera de los Web
+y asíncronas](/es/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests). No utilice solicitudes sincrónicas fuera de los Web
 Workers.
 
 > [!NOTE]
@@ -65,7 +65,7 @@ Principalmente hay cuatro formas de analizar este documento XML:
 1. Usando [XPath](/es/docs/Web/XPath) para dirigir (o apuntar a) partes
    del mismo.
 2. Manualmente [Analizar y
-   serializar el XML](/es/docs/Web/Guide/Parsing_and_serializing_XML) a cadenas u objetos.
+   serializar el XML](/es/docs/Web/XML/Parsing_and_serializing_XML) a cadenas u objetos.
 3. Usando {{domxref("XMLSerializer")}} para serializar **árboles DOM a cadenas o a
    archivos**.
 4. {{jsxref("RegExp")}} se puede utilizar si siempre se conoce el contenido del documento XML
@@ -73,10 +73,11 @@ Principalmente hay cuatro formas de analizar este documento XML:
    escanear en lo que respecta a los saltos de línea. Sin embargo, este método es un "último recurso" ya que si el
    código XML cambia ligeramente, el método probablemente fallará.
 
-> **Nota:** `XMLHttpRequest` ahora puede interpretar HTML por ti
+> [!NOTE]
+> `XMLHttpRequest` ahora puede interpretar HTML por ti
 > utilizando la propiedad {{domxref("XMLHttpRequest.responseXML", "responseXML")}}. Lea el
 > artículo sobre [HTML
-> en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) para aprender como hacerlo.
+> en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) para aprender como hacerlo.
 
 ### Procesamiento de una propiedad responseText que contiene un documento HTML
 
@@ -87,7 +88,7 @@ tres formas de analizar y parsear esta cadena de HTML en bruto:
 
 1. Utilizar la propiedad `XMLHttpRequest.responseXML` como se explica en el artículo
    [HTML en
-   XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+   XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
 2. Inyectar el contenido en el cuerpo de un [fragmento de documento](/es/docs/Web/API/DocumentFragment) mediante
    `fragment.body.innerHTML` y recorrer el DOM del fragmento.
 3. {{jsxref("RegExp")}} puede utilizarse si siempre se conoce el contenido del HTML
@@ -100,8 +101,7 @@ tres formas de analizar y parsear esta cadena de HTML en bruto:
 Aunque {{domxref("XMLHttpRequest")}} se utiliza normalmente para enviar y recibir
 datos textuales, puede utilizarse para enviar y recibir contenido binario. Existen varios
 métodos probados para forzar a la respuesta de un `XMLHttpRequest` para que envíe datos
-binarios. Se trata de utilizar la función {{domxref("XMLHttpRequest.overrideMimeType",
-  "overrideMimeType()")}} en el objeto `XMLHttpRequest` y es una
+binarios. Se trata de utilizar la función {{domxref("XMLHttpRequest.overrideMimeType", "overrideMimeType()")}} en el objeto `XMLHttpRequest` y es una
 solución viable.
 
 ```js
@@ -133,7 +133,7 @@ oReq.send();
 ```
 
 Para ver más ejemplos, consulte la página [Envío y
-recepción de datos binarios](/es/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
+recepción de datos binarios](/es/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data)
 
 ## Seguimiento del progreso
 
@@ -141,12 +141,12 @@ recepción de datos binarios](/es/docs/Web/API/XMLHttpRequest/Sending_and_Receiv
 ocurrir mientras se procesa la solicitud. Esto incluye notificaciones periódicas
 del progreso, notificaciones de error, etc.
 
-La implementación para la monitorización de eventos DOM [`progress`](/es/docs/Web/Reference/Events/progress) de transferencias `XMLHttpRequest`
+La implementación para la monitorización de eventos DOM [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event) de transferencias `XMLHttpRequest`
 sigue la [especificación de eventos de progreso](https://xhr.spec.whatwg.org/#interface-progressevent): estos
 eventos implementan la interfaz {{domxref("ProgressEvent")}}. Los eventos reales que puedes monitorizar
 para determinar el estado de una transferencia en curso son:
 
-- [`progress`](/es/docs/Web/Reference/Events/progress)
+- [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event)
   - : La cantidad de datos que se han recibido ha cambiado.
 - {{domxref("XMLHttpRequest/load_event", "load")}}
   - : La transferencia se ha completado; todos los datos están ahora en el `response`.
@@ -297,7 +297,7 @@ dependiendo del tipo de codificación que esté utilizando:
   ```
 
 - Método: `POST`; Tipo de codificación:
-  [`multipart/form-data`](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data):
+  [`multipart/form-data`](/es/docs/Web/HTTP/MIME_types#multipartform-data):
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
@@ -718,7 +718,7 @@ datos clave del usuario. Los datos transmitidos tienen el mismo formato que el m
 del formulario para enviar los datos, si el tipo de codificación del formulario se establece como
 "multipart/form-data". Los objetos FormData pueden utilizarse de varias maneras con un método
 `XMLHttpRequest`. Para ver ejemplos y explicaciones de cómo se puede utilizar
-FormData con XMLHttpRequests, consulte la sección [Utilizando objetos FormData](/es/docs/Web/API/FormData/Using_FormData_Objects).
+FormData con XMLHttpRequests, consulte la sección [Utilizando objetos FormData](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).
 Para fines didácticos aquí hay **una _traducción_ del [ejemplo anterior](#un_pequeño_framework_vanilla) transformado para usar la
 API `FormData`**. Nótese la brevedad del código:
 
@@ -1006,7 +1006,7 @@ XMLHttpRequest se crea cuando la ventana a cerrar sigue ahí, y finalmente
 enviar la petición (en otras palabras, `open()`) cuando esta ventana ha perdido su foco
 y otra ventana toma el foco. La forma más eficaz de evitar este problema es
 es establecer una escucha en el evento [`activate`](/es/docs/Web/Reference/Events/activate) de la nueva ventana que se activa una vez que la
-ventana terminada tenga su evento [`unload`](/es/docs/Web/Reference/Events/unload) disparado.
+ventana terminada tenga su evento [`unload`](/es/docs/Web/API/Window/unload_event) disparado.
 
 ## Workers
 
@@ -1023,8 +1023,8 @@ Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
 
 ## Véase también
 
-1. [MDN introducción a AJAX](/es/docs/Web/Guide/AJAX/Getting_Started)
-2. [HTML en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+1. [MDN introducción a AJAX](/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e)
+2. [HTML en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 3. [Control de acceso HTTP](/es/docs/Web/HTTP/CORS)
 4. [XMLHttpRequest - REST y la experiencia de usuario enriquecida](https://www.peej.co.uk/articles/rich-user-experience.html)
 5. [Documentación de Microsoft](https://msdn.microsoft.com/library/ms535874)

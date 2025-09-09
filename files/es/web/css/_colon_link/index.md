@@ -1,9 +1,7 @@
 ---
-title: ":link"
+title: :link
 slug: Web/CSS/:link
 ---
-
-{{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:link`** [CSS](/es/docs/Web/CSS) representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado {{HTMLElement("a")}}, {{HTMLElement("area")}}, o {{HTMLElement("link")}} que tiene un atributo `href`.
 

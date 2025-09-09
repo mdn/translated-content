@@ -9,7 +9,7 @@ Déplace un ou plusieurs onglets vers une nouvelle position dans la même fenêt
 
 Vous pouvez uniquement déplacer des onglets vers et à partir de fenêtres dont {{WebExtAPIRef('windows.WindowType', 'WindowType')}} est `"normal"`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -25,13 +25,10 @@ var moving = browser.tabs.move(
 - `tabIds`
   - : `integer` ou `array` d'`integer`. ID du {{WebExtAPIRef('tabs.Tab', 'tab')}}à déplacer, ou un tableau d'ID d'onglet.
 - `moveProperties`
-
   - : `object`. Un objet qui spécifie où déplacer le(s) onglet(s).
-
     - `windowId`{{optional_inline}}
       - : `integer`. 'ID de la fenêtre dans laquelle vous souhaitez déplacer les onglet(s). Si vous omettez cela, chaque onglet de `tabIds` sera déplacé vers l' `index` dans sa fenêtre actuelle. Si vous incluez ceci, et `tabIds` contient plus d'un onglet, alors le premier onglet de `tabIds` sera déplacé vers l'`index`, et les autres onglets le suivront dans l'ordre donné dans `tabIds`.
     - `index`
-
       - : `integer`. La position de l'index pour déplacer la tabulation à, en commençant à 0. Une valeur de -1 placera la tabulation à la fin de la fenêtre.
 
         Si vous passez une valeur inférieure à -1, la fonction renvoie une erreur.
@@ -40,7 +37,7 @@ var moving = browser.tabs.move(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite avec un objet `{{WebExtAPIRef('tabs.Tab')}}` ou un `tableau` d'objets `{{WebExtAPIRef('tabs.Tab')}}`, contenant des détails sur les onglets déplacés. Si aucun onglet n'a été déplacé (par exemple, parce que vous avez essayé de déplacer un onglet non épinglé avant un onglet épinglé), il s'agira d'un tableau vide. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera satisfaite avec un objet `{{WebExtAPIRef('tabs.Tab')}}` ou un `tableau` d'objets `{{WebExtAPIRef('tabs.Tab')}}`, contenant des détails sur les onglets déplacés. Si aucun onglet n'a été déplacé (par exemple, parce que vous avez essayé de déplacer un onglet non épinglé avant un onglet épinglé), il s'agira d'un tableau vide. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -128,8 +125,6 @@ browser.browserAction.onClicked.addListener(function () {
 > [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

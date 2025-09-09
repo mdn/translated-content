@@ -1,15 +1,24 @@
 ---
 title: Array.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 l10n:
-  sourceCommit: 28232983aa91026e50ec4300ddcb1b1d894a93b9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`some()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された関数で実装されているテストに、配列の中の少なくとも 1 つの要素が合格するかどうかを判定します。配列の中で指定された関数が true を返す要素を見つけた場合は true を返し、そうでない場合は false を返します。配列は変更しません。
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// 要素が偶数であるかどうかを調べる
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// 予想される結果: true
+```
 
 ## 構文
 
@@ -21,7 +30,6 @@ some(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : 配列のそれぞれの要素に対して実行する関数です。この関数は、要素がテストに合格したことを示すには[真値](/ja/docs/Glossary/Truthy)を、そうでない場合は[偽値](/ja/docs/Glossary/Falsy)を返します。この関数は以下の引数で呼び出されます。
     - `element`
       - : 配列内で処理中の現在の要素です。
@@ -39,7 +47,7 @@ some(callbackFn, thisArg)
 
 ## 解説
 
-`some()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された `callbackFn` 関数を配列の各要素に対して一度ずつ、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返すまで呼び出します。該当する要素が見つかった場合は、 `some()` は直ちに `true` を返し、配列の反復処理を中止します。一方、 `callbackFn` がすべての要素に対して[偽値](/ja/docs/Glossary/Falsy)を返した場合、 `some()` は `false` を返します。
+`some()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された `callbackFn` 関数を配列の各要素に対して一度ずつ、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返すまで呼び出します。該当する要素が見つかった場合は、 `some()` は直ちに `true` を返し、配列の反復処理を中止します。一方、 `callbackFn` がすべての要素に対して[偽値](/ja/docs/Glossary/Falsy)を返した場合、 `some()` は `false` を返します。これらのメソッドが一般的にどのように動作するのかについての詳細は、[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)の節を参照してください。
 
 `some()` は数学の量化子 "there exists" のような働きをします。特に、空配列の場合、どのような条件でも `false` を返します。
 
@@ -91,7 +99,7 @@ function checkAvailability(arr, val) {
   return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "grapefruit"); // false
 checkAvailability(fruits, "banana"); // true
 ```
 
@@ -112,6 +120,23 @@ getBoolean(false); // false
 getBoolean("false"); // false
 getBoolean(1); // true
 getBoolean("true"); // true
+```
+
+### callbackFn の第 3 引数の使用
+
+`array` 引数は、配列内の別の要素にアクセスしたい場合、特に、その配列を参照する既存の変数がない場合に便利です。次の例では、まず `filter()` を使用して正の値を抽出し、次に `some()` を使用して、配列が厳密に増加しているかどうかを確認しています。
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5];
+const isIncreasing = !numbers
+  .filter((num) => num > 0)
+  .some((num, idx, arr) => {
+    // arr 引数がない場合、変数に保存せずに中間配列に簡単に
+    // アクセスする方法はありません。
+    if (idx === 0) return false;
+    return num <= arr[idx - 1];
+  });
+console.log(isIncreasing); // false
 ```
 
 ### 疎配列に対する some() の使用
@@ -151,6 +176,7 @@ console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 ## 関連情報
 
 - [`Array.prototype.some` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.some` のポリフィル](https://www.npmjs.com/package/array.prototype.some)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.every()")}}

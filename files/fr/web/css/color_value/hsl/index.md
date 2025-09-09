@@ -9,7 +9,37 @@ l10n:
 
 La notation fonctionnelle **`hsl()`** exprime une couleur [sRGB](/fr/docs/Glossary/RGB) selon ses composantes de _teinte_ (<i lang="en">hue</i> en anglais), _saturation_, et _luminosité_. Une composante _alpha_ optionnelle représente l'opacité de la couleur.
 
-{{EmbedInteractiveExample("pages/css/function-hsl.html")}}
+{{InteractiveExample("CSS Demo: hsl()")}}
+
+```css interactive-example-choice
+background: hsl(50 80% 40%);
+```
+
+```css interactive-example-choice
+background: hsl(150deg 30% 60%);
+```
+
+```css interactive-example-choice
+background: hsl(0.3turn 60% 45% / 0.7);
+```
+
+```css interactive-example-choice
+background: hsl(0 80% 50% / 25%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 Il est facile d'utiliser des _couleurs complémentaires_ avec `hsl()`, car celles-ci sont positionnées à l'opposé du cercle de couleur utilisé par la teinte. Ainsi, si `theta` est l'angle de la teinte d'une couleur, on pourra obtenir la couleur complémentaire avec l'angle `180deg-theta`.
 
@@ -28,19 +58,15 @@ hsl(teinte, saturation, luminosite, alpha)
 ### Valeurs
 
 - `teinte`
-
   - : Un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc. Ce cercle chromatique pourra vous aider à trouver l'angle associé à une couleur donnée&nbsp;: ![Un cercle chromatique indiquant l'angle de la teinte pour les couleurs primaires (rouge-vert-bleu) et secondaires (jaune-cyan-magenta).](hue-wheel.png)
 
 - `saturation`
-
   - : Un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) où `100%` indique une couleur complètement saturée et où `0%` indique une couleur complètement désaturée, c'est-à-dire un niveau de gris.
 
 - `luminosite`
-
   - : Un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) où `100%` fournit du blanc, où `0%` fournit du noir, et où `50%` fournit une couleur «&nbsp;normale&nbsp;».
 
 - `alpha` {{optional_inline}}
-
   - : `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète) et `0` à `0%` (transparence complète).
 
 ## Exemples
@@ -82,6 +108,6 @@ div {
 
 ## Voir aussi
 
-- La fonction [`hsla()`](/fr/docs/Web/CSS/color_value/hsla), un synonyme historique pour cette fonction.
+- La fonction [`hsla()`](/fr/docs/Web/CSS/color_value/hsl), un synonyme historique pour cette fonction.
 - Le type [`<color>`](/fr/docs/Web/CSS/color_value) qui permet de représenter n'importe quelle couleur en CSS.
 - [Un sélecteur de couleur HSL](https://hslpicker.com/)

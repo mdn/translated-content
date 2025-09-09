@@ -3,15 +3,13 @@ title: Firefox 13 for developers
 slug: Mozilla/Firefox/Releases/13
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました。この記事は開発者に影響がある Firefox 13 での変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- テーブルの [`cellspacing`](/ja/docs/Web/HTML/Element/table#cellspacing) 属性は、Quirks モード以外でも Quirks モードと同様に解析するようになりました。これは値をパーセント値で指定した場合に、仕様書で実際はパーセント値が認められていないため代わりにピクセル数として扱うものです。
+- テーブルの [`cellspacing`](/ja/docs/Web/HTML/Reference/Elements/table#cellspacing) 属性は、Quirks モード以外でも Quirks モードと同様に解析するようになりました。これは値をパーセント値で指定した場合に、仕様書で実際はパーセント値が認められていないため代わりにピクセル数として扱うものです。
 - {{ htmlelement("wbr") }} 要素の双方向テキストに関する動作を修正しました。Unicode の `U+200B ZERO-WIDTH SPACE` 文字と同様の動作になり、従って親要素の双方向性に影響を与えません。
 - {{ Cssxref(":invalid") }} 擬似クラスを {{ htmlelement("form") }} 要素へ適用できるようになりました。
 
@@ -25,8 +23,8 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 ### JavaScript
 
-- ECMAScript 6 の [`for..of`](/ja/JavaScript/Reference/Statements/for...of) 構造をサポートしました。
-- ECMAScript 6 の [`Map`](/ja/JavaScript/Reference/Global_Objects/Map) と [`Set`](/ja/JavaScript/Reference/Global_Objects/Set) オブジェクトの実験的サポートを実装しました。
+- ECMAScript 6 の [`for..of`](/ja/docs/JavaScript/Reference/Statements/for...of) 構造をサポートしました。
+- ECMAScript 6 の [`Map`](/ja/docs/JavaScript/Reference/Global_Objects/Map) と [`Set`](/ja/docs/JavaScript/Reference/Global_Objects/Set) オブジェクトの実験的サポートを実装しました。
 
 ### DOM
 
@@ -34,7 +32,7 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 - {{ domxref("window.setTimeout()") }} および {{ domxref("window.setInterval()") }} メソッドは、付加的な引数である "遅延" をコールバックルーチンに渡さないようになりました。
 - {{ domxref("Blob","Blob.mozSlice()") }} メソッドの接頭辞を削除しました。
 - {{ domxref("Blob") }} コンストラクターをサポートしました。
-- [`globalStorage`](/ja/DOM/Storage#globalStorage) のサポートを削除しました。
+- [`globalStorage`](/ja/docs/Web/API/Web_Storage_API#globalstorage) のサポートを削除しました。
 - バックグラウンドの処理の状態や結果を報告するために用いる {{ domxref("DOMRequest") }} インターフェイスを新たに追加しました。
 - {{ domxref("HTMLOptionElement", "HTMLOptionElement.index()") }} メソッドは、{{ HTMLElement("option") }} が {{ HTMLElement("datalist") }} HTML 要素の内部にあるときに誤った値 `-1` ではなく `0` を返すようになりました。
 - {{ domxref("DOMException") }} のうち DOM Level 4 で定義された部分を実装しました。
@@ -50,7 +48,7 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 ### SVG
 
-- {{ domxref("SVGStringList") }} DOM インターフェイスが [`Array`](/ja/JavaScript/Reference/Global_Objects/Array) と同様に添字を利用可能になりました。[Firefox バグ 722071](https://bugzil.la/722071) をご覧ください。
+- {{ domxref("SVGStringList") }} DOM インターフェイスが [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) と同様に添字を利用可能になりました。[Firefox バグ 722071](https://bugzil.la/722071) をご覧ください。
 
 ### WebGL
 
@@ -69,13 +67,13 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 #### スタイルパネルの改良
 
-- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールの見出しをクリックすると、対応する CSS を [スタイルエディター](/ja/Tools/Style_Editor) で開くようになりました。
-- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールを右クリックすると、そのルールをクリップボードへコピーできるようになりました。
+- [スタイルパネル](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) でルールの見出しをクリックすると、対応する CSS を [スタイルエディター](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) で開くようになりました。
+- [スタイルパネル](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) でルールを右クリックすると、そのルールをクリップボードへコピーできるようになりました。
 - 未知のプロパティ名や誤った値を入力すると、プロパティの隣に警告アイコンを表示します。
 
 #### スクラッチパッドの改良
 
-- [スクラッチパッド](/ja/Tools/Scratchpad) のヘルプメニューに、MDN のスクラッチパッドに関する文書を開くための項目を追加しました。
+- [スクラッチパッド](/ja/docs/Tools/Scratchpad) のヘルプメニューに、MDN のスクラッチパッドに関する文書を開くための項目を追加しました。
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
 

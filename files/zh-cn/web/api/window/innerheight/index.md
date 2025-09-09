@@ -38,8 +38,6 @@ var intOuterFramesetHeight = top.innerHeight;
 // 返回最外部 frameset 的视口的高度
 ```
 
-{{todo("link to an interactive demo here")}}
-
 改变一个窗口的大小，可以查看 {{domxref("window.resizeBy()")}} 和 {{domxref("window.resizeTo()")}}。
 
 想获取窗口的外层高度（outer height），即整个浏览器窗口的高度，请查看 {{domxref("window.outerHeight")}}。

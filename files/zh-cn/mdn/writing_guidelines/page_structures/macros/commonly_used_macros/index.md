@@ -1,13 +1,11 @@
 ---
 title: 常用的宏
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
+l10n:
+  sourceCommit: 7819249f906dcfc59a2c4cb702b80a35b7964842
 ---
 
-{{MDNSidebar}}
-
-本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读[使用宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros)这篇文章。
-
-还有一些不常用或只在特定上下文中使用的，以及一些弃用的宏的信息，参见[其他宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other)。
+本页列举了一些 MDN 中的常用宏命令。对于在 MDN 内容中使用这些宏的通用信息，请阅读[使用宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros)这篇文章。
 
 ## 链接
 
@@ -38,13 +36,13 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs">CSSxRef</a></td>
+      <td><a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/cssxref.rs">CSSxRef</a></td>
       <td><a href="/zh-CN/docs/Web/CSS/Reference">CSS 参考文档</a>（/Web/CSS/Reference）</td>
       <td><code>\{{CSSxRef("cursor")}}</code> 会生成 {{CSSxRef("cursor")}}。</td>
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
+        <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/domxref.rs">DOMxRef</a>
       </td>
       <td><a href="/zh-CN/docs/Web/API">DOM 参考文档</a>（/Web/API）</td>
       <td><code>\{{DOMxRef("Document")}}</code> 或 <code>\{{DOMxRef("document")}}</code> 都生成 {{DOMxRef("Document")}}。<br>
@@ -55,49 +53,49 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a></code>
+        <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs">HTMLElement</a></code>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element">HTML 元素参考</a>（/Web/HTML/Element）</td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements">HTML 元素参考</a>（/Web/HTML/Reference/Elements）</td>
       <td><code>\{{HTMLElement("select")}}</code> 会生成 {{HTMLElement("select")}}。</td>
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
+        <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/jsxref.rs">JSxRef</a>
       </td>
       <td><a href="/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考</a>（/Web/JavaScript/Reference）</td>
       <td><code>\{{JSxRef("Promise")}}</code> 会生成 {{JSxRef("Promise")}}。</td>
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
+        <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs">SVGAttr</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/SVG/Attribute">SVG 属性参考</a>（/Web/SVG/Attribute）</td>
+      <td><a href="/zh-CN/docs/Web/SVG/Reference/Attribute">SVG 属性参考</a>（/Web/SVG/Reference/Attribute）</td>
       <td><code>\{{SVGAttr("d")}}</code> 会生成 {{SVGAttr("d")}}。</td>
     </tr>
     <tr>
-      <td><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a></td>
-      <td><a href="/zh-CN/docs/Web/SVG/Element">SVG 元素参考</a>（/Web/SVG/Element）</td>
+      <td><a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs">SVGElement</a></td>
+      <td><a href="/zh-CN/docs/Web/SVG/Reference/Element">SVG 元素参考</a>（/Web/SVG/Reference/Element）</td>
       <td><code>\{{SVGElement("view")}}</code> 会生成 {{SVGElement("view")}}。</td>
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a>
+        <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPHeader</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 标头</a>（/Web/HTTP/Headers）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Headers">HTTP 标头</a>（/Web/HTTP/Reference/Headers）</td>
       <td><code>\{{HTTPHeader("ACCEPT")}}</code> 会生成 {{HTTPHeader("ACCEPT")}}。</td>
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
+        <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPMethod</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Methods">HTTP 请求方法</a>（/Web/HTTP/Methods）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Methods">HTTP 请求方法</a>（/Web/HTTP/Reference/Methods）</td>
       <td><code>\{{HTTPMethod("HEAD")}}</code> 会生成 {{HTTPMethod("HEAD")}}。</td>
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
+        <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPStatus</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Status">HTTP 响应状态码</a>（/Web/HTTP/Status）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Status">HTTP 响应状态码</a>（/Web/HTTP/Reference/Status）</td>
       <td><code>\{{HTTPStatus("404")}}</code> 会生成 {{HTTPStatus("404")}}。</td>
     </tr>
   </tbody>
@@ -105,29 +103,21 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 ### 多页面间的导航栏
 
-[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) 和 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) 为序列中的文章提供导航控件。对于单向的模板，唯一需要的参数是序列中的上一篇或下一篇文章的 wiki 位置。对于 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs)，需要的两个参数是相应文章的 wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。
+[`Previous`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs)、[`Next`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) 和 [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) 为序列中的文章提供导航控件。对于单向的模板，唯一需要的参数是序列中的上一篇或下一篇文章的 wiki 位置。对于 [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs)，需要的两个参数是相应文章的 wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。
 
 ## 代码示例
 
 ### 运行实例
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) 可以在当前页面中嵌入一个代码示例的实际展示效果（使用方法参见[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)）。
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) 创建指向包含页面上代码示例输出的页面的链接，如[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)中所述。
-- [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) 提供了一种新的运行实例编写和使用方式，你可以在 [Github 在线实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_在线实例)中了解更多信息。
+- [`EmbedLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_live_sample.rs) 可以在当前页面中嵌入一个代码示例的实际展示效果（使用方法参见[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)）。
+- [`LiveSampleLink`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/live_sample_link.rs) 创建指向包含页面上代码示例输出的页面的链接，如[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)中所述。
+- [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) 允许从 GitHub Pages 中嵌入运行实例，你可以在 [Github 在线实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_在线实例)中了解更多信息。
 
-## 侧边栏生成
-
-几乎每个大型页面集合都有模板。它们通常会链接回参考/指南/教程的主页（这通常是需要的，因为我们的面包屑有时无法做到这一点）并将文章放入适当的类别中。
-
-- [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) 生成 CSS 参考页的侧边栏。
-- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) 生成 HTML 参考页的侧边栏。
-- [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) 生成 Web API 参考页的侧边栏。
-
-## 通用的文章格式化工具
+## 通用格式化
 
 ### API 文档的行内指示器
 
-[`optional_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) 和 [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) 被用于 API 文档，通常在描述对象的属性列表或函数的参数时使用。
+[`optional_inline`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) 和 [`ReadOnlyInline`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) 被用于 API 文档，通常在描述对象的属性列表或函数的参数时使用。
 
 用法：`\{{Optional_Inline}}` 或 `\{{ReadOnlyInline}}`。示例：
 
@@ -142,7 +132,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 #### 非标准
 
-[`non-standard_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Inline.ejs) 插入一个行内标记，表示 API 尚未标准化并且未被标准化追踪。
+[`Non-standard_Inline`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) 插入一个行内标记，表示 API 尚未标准化并且未被标准化追踪。
 
 ##### 语法
 
@@ -154,7 +144,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 #### 实验性
 
-[`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) 插入一个行内标记，表示当前 API 尚未被广泛地实现，并且以后可能会发生变化。有关**实验性**定义的更多信息，请参阅[实验性、已弃用和过时](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)文档。
+[`Experimental_Inline`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) 插入一个行内标记，表示当前 API 尚未被广泛地实现，并且以后可能会发生变化。有关**实验性**定义的更多信息，请参阅[实验性、已弃用和过时](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)文档。
 
 ##### 语法
 
@@ -168,7 +158,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 #### 已弃用
 
-[`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) 会插入一个行内的已弃用标记（{{Deprecated_Inline}}）以不鼓励使用官方已弃用（或已删除）的 API。有关**已弃用**定义的更多信息，请参阅[实验性、已弃用和过时](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)文档。
+[`Deprecated_Inline`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) 会插入一个行内的已弃用标记（{{Deprecated_Inline}}）以不鼓励使用官方已弃用（或已删除）的 API。有关**已弃用**定义的更多信息，请参阅[实验性、已弃用和过时](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)文档。
 
 ##### 语法
 
@@ -182,23 +172,40 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 这些模板与上述的行内指示器具有相同的语义。这些模板应直接放置在参考页面的主页标题（或面包屑导航栏，如果有的话）下，也可以用于标记页面上的某个部分。
 
-- [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs)：`\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) 应该用于记录[实验性特性](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性)的页面。示例：`\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
-- [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs)：应该用于接口页面、API 概览页面和 API 入口点（例如 `navigator.xyz`）等主要页面，但通常不在方法和属性页面等子页面上使用。示例：`\{{SecureContext_Header}}` {{SecureContext_Header}}
+- [`Non-standard_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)：`\{{Non-standard_Header}}` {{Non-standard_Header}}
+- [`SeeCompatTable`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) 应该用于记录[实验性特性](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性)的页面。示例：`\{{SeeCompatTable}}` {{SeeCompatTable}}
+- [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)：`\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`SecureContext_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)：应该用于接口页面、API 概览页面和 API 入口点（例如 `navigator.xyz`）等主要页面，但通常不在方法和属性页面等子页面上使用。示例：`\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 ### 表明某个特性在 Web Worker 中可用的指示器
 
-[`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 宏插入一个本地化的注释框，表明一个特性在 [Web worker](/zh-CN/docs/Web/API/Web_Workers_API) 上下文中可用。它还有一个可选参数，当带有 `notservice` 时，表示该特性在 Web Worker 中可用但在 Servcie Worker 中不可用。
+[`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) 宏插入一个本地化的注释框，表明一个特性在 [Web worker](/zh-CN/docs/Web/API/Web_Workers_API) 上下文中可用。你还可以传递一些参数来指示某个特性在指定的 worker 上下文中可用。
 
 #### 语法
 
 ```plain
 \{{AvailableInWorkers}}
-\{{AvailableInWorkers("notservice")}}
+\{{AvailableInWorkers("window_and_worker_except_service")}}
 ```
 
 #### 示例
 
 {{AvailableInWorkers}}
-{{AvailableInWorkers("notservice")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
+
+## 浏览器兼容性和规范宏
+
+以下宏包含在所有参考页中，但也被所有页面类型所支持。
+
+- `\{{Compat}}`
+  - : 为页面元数据（front matter）中的 `browser-compat` 定义的特性生成[兼容性表格](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)。
+- `\{{Specifications}}`
+  - : 包含用于展示相关特性的[规范表格](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Specification_tables)，特性由页面元数据中的 `spec-urls`（如果存在）或页面元数据中的 `browser-compat` 定义的浏览器兼容性数据所列的规范定义。
+
+## 参见
+
+- [侧边栏宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [页面模板](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types#页面模板)
+- [页面组件](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide#页面组件)
+- [特性状态宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [其他宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other)：不常用或弃用的宏

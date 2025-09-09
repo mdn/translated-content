@@ -1,11 +1,9 @@
 ---
-title: "::highlight()"
+title: ::highlight()
 slug: Web/CSS/::highlight
 l10n:
   sourceCommit: 47ed48a36b456f8ea9ab6aaa5969c55d2912edcb
 ---
-
-{{CSSRef}}
 
 **`::highlight()`** CSS [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 스타일에 사용자 정의 하이라이트를 적용합니다.
 

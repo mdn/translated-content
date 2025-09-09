@@ -30,7 +30,7 @@ CSS 中的第一个“C”（Cascading）表示“层叠”，意为多个选择
 
 ## 参见
 
-- [学习 CSS](/zh-CN/docs/Learn/CSS)
+- [学习 CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 - [CSS 文档](/zh-CN/docs/Web/CSS)
 - 维基百科上的 [CSS](https://zh.wikipedia.org/wiki/CSS)
 - [CSS 工作组的当前工作](https://www.w3.org/Style/CSS/current-work)

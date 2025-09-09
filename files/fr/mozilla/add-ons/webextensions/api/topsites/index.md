@@ -9,7 +9,7 @@ Utilisez l'API topSites pour obtenir un tableau contenant les pages que l'utilis
 
 Les navigateurs maintiennent ceci pour aider l'utilisateur à retourner à ces endroits facilement. Par exemple, Firefox fournit par défaut une liste des pages les plus visitées dans la page "Nouvel onglet".
 
-Pour utiliser l'API topSites, vous devez disposez de l' [API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "topSites".
+Pour utiliser l'API topSites, vous devez disposez de l' [API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "topSites".
 
 ## Types
 
@@ -30,8 +30,6 @@ Pour utiliser l'API topSites, vous devez disposez de l' [API permission](/fr/Add
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

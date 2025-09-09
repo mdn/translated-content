@@ -32,7 +32,7 @@ Les caractères d'espacement (blancs) sont utilisés pour des raisons de lisibil
 
 ## Terminateurs de lignes
 
-En plus des blancs, les caractères de fin de ligne (terminateurs de lignes) sont utilisés pour améliorer la lisibilité du texte. Cependant, dans certains cas, les terminateurs de lignes peuvent influencer l'exécution du code JavaScript là où ils sont interdits. Les terminateurs de lignes affectent également le processus d'[insertion automatique des points-virgules](#Automatic_semicolon_insertion). Les terminateurs de lignes correspondent à la classe **\s** [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières).
+En plus des blancs, les caractères de fin de ligne (terminateurs de lignes) sont utilisés pour améliorer la lisibilité du texte. Cependant, dans certains cas, les terminateurs de lignes peuvent influencer l'exécution du code JavaScript là où ils sont interdits. Les terminateurs de lignes affectent également le processus d'[insertion automatique des points-virgules](#automatic_semicolon_insertion). Les terminateurs de lignes correspondent à la classe **\s** [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
 
 Seuls les points de code Unicode qui suivent sont traités comme des fins de lignes en ECMAScript, les autres caractères sont traités comme des blancs (par exemple : _Next Line_ (nouvelle ligne) : NEL, U+0085 est considéré comme un blanc).
 
@@ -298,7 +298,33 @@ Le type {{jsxref("BigInt")}} est un type numérique primitif de JavaScript qui p
 0b0101010101110101n (nombre binaire, en base 2)
 ```
 
-Voir aussi [le paragraphe sur les grands entiers/BigInt sur les structures de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données#Le_type_BigInt).
+Voir aussi [le paragraphe sur les grands entiers/BigInt sur les structures de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures#le_type_bigint).
+
+#### Séparateurs numériques
+
+Pour améliorer la lisibilité des littéraux numériques, des underscores (`_`, `U+005F`) peuvent être utilisés comme séparateurs&nbsp;:
+
+```js-nolint
+1_000_000_000_000
+1_050.95
+0b1010_0001_1000_0101
+0o2_2_5_6
+0xA0_B0_C0
+1_000_000_000_000_000_000_000n
+```
+
+Ils ont quelques limitations&nbsp;:
+
+```js-nolint example-bad
+// Il ne peut pas y avoir plus d'un underscore consécutif
+100__000; // SyntaxError
+
+// Ils ne sont pas autorisés à la fin d'un littéral numérique
+100_; // SyntaxError
+
+// Ils ne sont pas autorisés après un zéro qui débute un littéral
+0_1; // SyntaxError
+```
 
 ### Littéraux objets
 
@@ -375,7 +401,7 @@ Voir également {{jsxref("String.fromCodePoint()")}} et {{jsxref("String.prototy
 
 ### Littéraux d'expressions rationnelles
 
-Voir la page [`RegExp`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp) pour plus d'informations.
+Voir la page [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d'informations.
 
 ```js
 /ab+c/g
@@ -388,7 +414,7 @@ Voir la page [`RegExp`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp)
 
 ### Littéraux modèles (gabarits ou _templates_)
 
-Voir également la page sur [les gabarits de chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères) pour plus d'informations.
+Voir également la page sur [les gabarits de chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Template_literals) pour plus d'informations.
 
 ```js
 `chaîne de caractères`;
@@ -415,7 +441,7 @@ Certaines [instructions JavaScript](/fr/docs/Web/JavaScript/Reference/Statements
 
 La spécification ECMAScript mentionne [trois règles quant à l'insertion de points-virgules](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion) :
 
-1\. Un point-vrigule est inséré avant un [terminateur de ligne](#Line_terminators) ou une accolade ("}") quand celui ou celle-ci n'est pas autorisé par la grammaire
+1\. Un point-vrigule est inséré avant un [terminateur de ligne](#line_terminators) ou une accolade ("}") quand celui ou celle-ci n'est pas autorisé par la grammaire
 
 ```js
 { 1 2 } 3
@@ -425,7 +451,7 @@ La spécification ECMAScript mentionne [trois règles quant à l'insertion de po
 
 2\. Un point-virgule est inséré à la fin lorsqu'on détecte la fin d'une série de jetons en flux d'entrée et que le parseur est incapable d'analyser le flux d'entrée comme un programme complet.
 
-Ici `++` n'est pas traité comme [opérateur postfixe](/fr/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) s'appliquant à la variable `b` car il y a un terminateur de ligne entre `b` et `++`.
+Ici `++` n'est pas traité comme [opérateur postfixe](/fr/docs/Web/JavaScript/Reference/Operators#increment) s'appliquant à la variable `b` car il y a un terminateur de ligne entre `b` et `++`.
 
 ```js
 a = b;
@@ -466,8 +492,8 @@ a + b;
 
 ## Voir aussi
 
-- [Jeff Walden : Nombres binaires et forme octale (en anglais)](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens : Séquences d'échappements de caractères (en anglais)](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden : Nombres binaires et forme octale (en anglais)](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens : Séquences d'échappements de caractères (en anglais)](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

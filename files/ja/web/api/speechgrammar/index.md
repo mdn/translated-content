@@ -7,7 +7,7 @@ slug: Web/API/SpeechGrammar
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechGrammar`** インターフェイスは、認識サービスに認識させたい単語のセットまたは単語パターンを表します。
 
-文法は、[JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**) を使用して定義されています。他の形式も将来サポートされる可能性があります。
+文法は、[JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) を使用して定義されています。他の形式も将来サポートされる可能性があります。
 
 ## コンストラクター
 
@@ -35,7 +35,7 @@ console.log(speechRecognitionList[0].src); // grammar 変数の内容と同じ�
 console.log(speechRecognitionList[0].weight); // 4 行目で設定された weight と同じ値の 1 が返される
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

@@ -15,7 +15,7 @@ slug: Web/API/Element/attributes
 var attrs = element.attributes;
 ```
 
-반환하는 개체는 `Attr` 노드를 포함하는 [NamedNodeMap](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1780488922) 형입니다. 요소가 지정된 속성이 없으면, 반환하는 개체는 길이가 0입니다. 이 속성은 읽기 전용입니다.
+반환하는 개체는 `Attr` 노드를 포함하는 [NamedNodeMap](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1780488922) 형입니다. 요소가 지정된 속성이 없으면, 반환하는 개체는 길이가 0입니다. 이 속성은 읽기 전용입니다.
 
 ## 예시
 
@@ -74,7 +74,7 @@ var atts = para.attributes;
 
 `NamedNodeMap`은 배열처럼 반복될 수 있지만, `join`, `split` 등과 같은 `Array`에 있는 어떤 특수 메소드는 없습니다.
 
-이름으로 특정 속성에 접근하려면, [getAttribute](/ko/DOM/element.getAttribute) 메소드를 쓰세요.
+이름으로 특정 속성에 접근하려면, [getAttribute](/ko/docs/DOM/element.getAttribute) 메소드를 쓰세요.
 
 ## 명세
 

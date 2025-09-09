@@ -5,9 +5,9 @@ l10n:
   sourceCommit: b03632b84049c5110d9ee466307f7e2d28959be5
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-**`animation-range`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、タイムラインに沿ったアニメーションの適用範囲の先頭と末尾を設定します。つまり、タイムラインのどこでアニメーションが始まり、どこで終わるかを設定するために使用します。
+**`animation-range`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、タイムラインに沿ったアニメーションの適用範囲の先頭と末尾を設定します。つまり、タイムラインのどこでアニメーションが始まり、どこで終わるかを設定するために使用します。
 
 ## 構成要素のプロパティ
 
@@ -58,9 +58,7 @@ animation-range: entry 10% 90%;
 - `<length-percentage>`
   - : タイムラインの始めからの長さまたはパーセント値。
 - `<timeline-range-name>`
-
   - : 全体のタイムライン内の固有のタイムライン範囲です。可能な値は次の通りです。
-
     - `cover`
       - : 名前付きビュー進行タイムラインの全範囲を表します（詳細は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を参照）。主体要素が最初にスクロールポートのビュー進行の可視範囲に入り始めた時点（進行度 0%）から、完全にその範囲から離れた時点（進行度 100%）までです。
     - `contain`

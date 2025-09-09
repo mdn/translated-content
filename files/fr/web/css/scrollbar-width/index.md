@@ -7,7 +7,39 @@ slug: Web/CSS/scrollbar-width
 
 La propriété **`scrollbar-width`** permet à un auteur de définir l'épaisseur maximale à utiliser pour la barre de défilement si celle-ci est affichée.
 
-{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}
+{{InteractiveExample("CSS Demo: scrollbar-width")}}
+
+```css interactive-example-choice
+scrollbar-width: none;
+```
+
+```css interactive-example-choice
+scrollbar-width: thin;
+```
+
+```css interactive-example-choice
+scrollbar-width: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+    corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+    fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+    earthnut pea peanut soko zucchini.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+}
+```
 
 ## Syntaxe
 
@@ -26,7 +58,6 @@ scrollbar-width: unset;
 ### Valeurs
 
 - `<scrollbar-width>`
-
   - : Une valeur qui définit l'épaisseur de la barre de défilement. Cette valeur est une longueur (cf. {{cssxref("&lt;length&gt;")}}) positive ou bien un mot-clé. Si c'est un mot-clé, ce dernier doit avoir l'une des valeurs suivantes :
 
     <table class="standard-table">

@@ -2,16 +2,27 @@
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+  sourceCommit: e439cd79166dbfd9bbe3a003abaf5898ae165509
 ---
 
 {{JSRef}}
 
-**`Date.parse()`** メソッドは、日時を表す文字列を解釈し、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間を表すミリ秒単位の数値を返します。または、文字列を解釈できなかったり不正な日付（例えば 2015-02-31）が指定されたりした場合は `NaN` を返します。
+**`Date.parse()`** は静的メソッドで、日時の文字列表現を解釈し、その日付の[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)を返します。
 
-対応するよう明示的に指定されているのは [ISO 8601 形式](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) のみです。他の形式は実装で定義されており、すべてのブラウザーで動作するとは限りません。多くの様々な形式に対応するためには、ライブラリーが役に立ちます。
+{{InteractiveExample("JavaScript デモ: Date.parse()")}}
 
-{{EmbedInteractiveExample("pages/js/date-parse.html")}}
+```js interactive-example
+// 標準の日付時刻文字列の書式
+const unixTimeZero = Date.parse("1970-01-01T00:00:00Z");
+// UTCString() に似た標準ではない書式化
+const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
+
+console.log(unixTimeZero);
+// 予想される結果: 0
+
+console.log(javaScriptRelease);
+// 予想される結果: 818035920000
+```
 
 ## 構文
 
@@ -22,77 +33,25 @@ Date.parse(dateString)
 ### 引数
 
 - `dateString`
-  - : 文字列で、[ISO 8601 カレンダー日付拡張形式の簡略化されたもの](#日付と時刻の文字列書式)を表します。
-    （その他の形式も使用することができますが、結果は実装依存になります。）
+  - : 文字列で、[日時文字列形式](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format)です。さまざまな書式を使用する場合の注意事項については、リンク先の参照をご覧ください。
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 UTC からの経過時間をミリ秒単位で表す数値。このメソッドに与えられた日付を表す文字列の解釈により取得される日付。引数に正しい値が与えられなかった場合、 {{jsxref("NaN")}} を返します。
+指定された日時の[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)を表す数値。 `dateString` が有効な日時として解釈できない場合、{{jsxref("NaN")}} が返されます。
 
 ## 解説
 
-`parse()` メソッドは、日時の文字列（例えば `"2011-10-10T14:48:00"`）を取り、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からのミリ秒単位の経過時間を表す数値を返します。
+この関数は、 {{jsxref("Date/setTime", "setTime()")}} メソッドと組み合わせて、文字列値に基づいて日時の値を設定する場合などに便利です。
 
-この関数は、例えば {{jsxref("Date.prototype.setTime()", "setTime()")}} メソッドと {{jsxref("Global_Objects/Date", "Date")}} オブジェクトを組み合わせて使う場合など、文字列値を基にして日時の値を設定するときに便利です。
+`parse()` が処理できる書式は明示的に指定されていませんが、いくつかの不変条件があります。
 
-### 日付と時刻の文字列書式
+- [日時文字列の書式](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format)（{{jsxref("Date/toISOString", "toISOString()")}} によって生成される）に対応している必要があります。
+- `x` がミリ秒の値が 0 の日付である場合、 `x.valueOf()` は、`Date.parse(x.toString())`、`Date.parse(x.toUTCString())`、`Date.parse(x.toISOString())` のいずれかと同じでなければなりません。これは、 {{jsxref("Date/toString", "toString()")}} および {{jsxref("Date/toUTCString", "toUTCString()")}} によって生成される書式も対応している必要があるということです。
+- 仕様上は、 {{jsxref("Date/toLocaleString", "toLocaleString()")}} によって生成される書式化に対応することは要求されていません。ただし、主要なエンジンはすべて `toLocaleString("en-US")` による書式化に対応しようとしています。
 
-日時文字列の標準的な文字列表現は、 ISO 8601 のカレンダー日付拡張形式を簡略化したものです。（詳しくは、 ECMAScript 仕様書の [Date Time String Format](https://tc39.es/ecma262/#sec-date-time-string-format) の章を参照してください。）
+その他の書式は実装によって定義されており、すべてのブラウザーで動作するとは限りません。さまざまな書式に対応する必要がある場合は、ライブラリーが役立ちます。実際、`Date.parse()` の信頼性の低さが、 {{jsxref("Temporal")}} API が導入された理由のひとつです。
 
-例えば、 `"2011-10-10"` （*日付のみ*の形式）、`"2011-10-10T14:48:00"` （*日時*形式）、`"2011-10-10T14:48:00.000+09:00"` （*日時*形式にミリ秒とタイムゾーンがついたもの）を渡し、解釈することができます。タイムゾーンのオフセットがない場合は、日付のみの形式では UTC 時刻と解釈され、日時形式では地方時として解釈されます。
-
-タイムゾーン指定子は、日付文字列の解析中に引数を解釈するために使用されますが、返される値は常に、 1970 年 1 月 1 日 00:00:00 UTC と、引数で表される時点との間のミリ秒数または `NaN` です。
-
-`parse()` は {{jsxref("Date")}} の静的メソッドですので、 {{jsxref("Date")}} インスタンスのメソッドとしてではなく `Date.parse()` として呼び出されます。
-
-### 実装依存の日付形式へのフォールバック
-
-> [!NOTE]
-> この節では実装依存の動作を説明しており、実装間で一貫性がない可能性があります。
-
-ECMAScript 仕様書は、文字列が標準の書式に準拠していない場合、この関数は実装固有の検出方法や実装固有の解析アルゴリズムにフォールバックすることがあり、解釈できない文字列や ISO 書式文字列における不正な要素値を含む日付を渡すと、 `Date.parse()` が {{jsxref("NaN")}} を返すと規定しています。
-
-しかし、 ECMA-262 で定義されている簡略化 ISO 書式として解釈できない日付文字列の無効な値は、ブラウザーや与えられた値に依存して、 {{jsxref("NaN")}} を返したり返さなかったりすることがあります。次の例を参照してください。
-
-```js
-// 不正な値を持つ 非 ISO 文字列
-new Date("23/25/2014");
-```
-
-これは、 Firefox 30 では、地方時の 2015 年 11 月 25 日として扱われ、 Safari 7 では不正な値として処理されます。
-
-しかし、文字列が ISO 書式の文字列として解釈され、不正な値を含む場合、 ES5 以降の仕様に準拠するすべてのブラウザーが {{jsxref("NaN")}} を返します。
-
-```js
-// 不正な値を持つ ISO 文字列
-new Date("2014-25-23").toISOString();
-// ES5 準拠のすべてのブラウザーが "RangeError: invalid date" を返す
-```
-
-SpiderMonkey の実装特有のヒューリスティックは、[`jsdate.cpp`](https://searchfox.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889) にあります。 `"10 06 2014"` の文字列は、非 ISO 書式の例として挙げられており、このようにカスタム処理にフォールバックされます。この解釈の動作を説明する[およそのアウトライン](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) も参照してください。
-
-```js
-new Date("10 06 2014");
-```
-
-これは、2014 年 6 月 10 日ではなく、地方時の 2014 年 10 月 6 日 として扱われます。
-
-他の例です。
-
-```js
-new Date("foo-bar 2014").toString();
-// 返値: "Invalid Date"
-
-Date.parse("foo-bar 2014");
-// 返値: NaN
-```
-
-### 想定されるタイムゾーンの違い
-
-> [!NOTE]
-> この節では実装依存の動作を説明しており、実装間で一貫性がない可能性があります。
-
-標準外の日付文字列である `"March 7, 2014"` を渡すと、 `parse()` はタイムゾーンとして地方時を想定しますが、 `"2014-03-07"` のような ISO 書式を与えると UTC をタイムゾーンとして想定します (ES5 および ECMAScript 2015 の仕様)。したがって、これらの文字列を使用して生成される {{jsxref("Date")}} オブジェクトは、システムが UTC の地方時に設定されていない限り、対応している ECMAScript のバージョンによって異なる時刻を表す可能性があります。つまり、同じように見える 2 つの日付文字列が、変換される文字列の形式によって 2 つの異なる値になる可能性があるということです。
+`parse()` は `Date` の静的メソッドであるため、作成した `Date` オブジェクトのメソッドとしてではなく、常に `Date.parse()` として使用します。
 
 ## 例
 
@@ -112,54 +71,133 @@ Date.parse("2019-01-01T00:00:00.000+00:00");
 Date.parse("2019-01-01T00:00:00");
 ```
 
+### toString() および toUTCString() 形式
+
+標準の日付時刻文字列の書式化とは別に、 {{jsxref("Date/toString", "toString()")}} および {{jsxref("Date/toUTCString", "toUTCString()")}} の書式化にも対応しています。
+
+```js
+// toString() 形式
+Date.parse("Thu Jan 01 1970 00:00:00 GMT-0500 (Eastern Standard Time)");
+// すべての実装で、すべてのタイムゾーンにおける 18000000
+
+// toUTCString() 形式
+Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
+// すべての実装で、すべてのタイムゾーンにおける 0
+```
+
 ### 標準外の日付文字列
 
 > [!NOTE]
-> この節では実装依存の動作を説明しており、実装間で一貫性がない可能性があります。
+> この節には、ブラウザーやブラウザーのバージョンによって不整合が生じる可能性のある、実装固有の動作について記載しています。これは、包括的なブラウザーの互換性表を網羅したものではありません。コードで書式を使用する前に、常に自分自身でテストを行ってください。
 
-`IPOdate` が既存の {{jsxref("Date")}} オブジェクトならば、次のようにして、これを 1995 年 8 月 9 日 (地方時) にセットできます:
+実装では通常、日付文字列が標準ではない場合、既定で地方時が使用されます。一貫性を保つため、ここでは、実行時が UTC タイムゾーンを使用すると想定し、特に指定がない限り、出力は端末のタイムゾーンによって異なるものとします。[地方時の夏時間 (DST) も、これに影響を与える可能性があります](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#varied_results_in_daylight_saving_time_dst_regions)。
 
-```js
-IPOdate.setTime(Date.parse("Aug 9, 1995"));
-```
+標準外の日付文字列の例をいくつか挙げます。ブラウザーは日付文字列の解析にとても寛容で、解析できない文字列の部分は破棄する場合があります。互換性の理由から、ブラウザーは互いの動作をコピーすることが多いため、このような処理パターンはブラウザー間で広まる傾向があります。前述のように、次の例はあくまで説明のためのものであり、決して網羅的なものではありません。
 
-それ以外の標準外の日付文字列の解釈の例を示します。
-
-```js
-Date.parse("Aug 9, 1995");
-```
-
-GMT-0300 のタイムゾーンでは `807937200000` を返し、他のタイムゾーンでは他の値を返します。タイムゾーンが指定されておらず ISO 書式でないため、既定で地方時のタイムゾーンが使用されます。
-
-```js
-Date.parse("Wed, 09 Aug 1995 00:00:00 GMT");
-```
-
-GMT (UTC) が指定されているため、地方時のタイムゾーンに関係なく `807926400000` を返します。
-
-```js
-Date.parse("Wed, 09 Aug 1995 00:00:00");
-```
-
-GMT-0300 のタイムゾーンでは `807937200000` を返し、他のタイムゾーンでは他の値を返します。引数にタイムゾーンが指定されておらず、 ISO 書式ではないため、地方時として扱われます。
-
-```js
-Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
-```
-
-GMT (UTC) のタイムゾーンが指定されているため、地方時のタイムゾーンに関係なく `0` を返します。
-
-```js
-Date.parse("Thu, 01 Jan 1970 00:00:00");
-```
-
-GMT-0400 のタイムゾーンでは `14400000` を返し、他のタイムゾーンでは他の値を返します。タイムゾーンが指定されておらず、 ISO 書式ではないため、地方時のタイムゾーンが使用されます。
-
-```js
-Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
-```
-
-GMT (UTC) のタイムゾーンが指定されているため、地方時のタイムゾーンに関係なく `14400000` を返します。
+<table>
+<thead>
+<tr>
+<th>説明</th>
+<th>例</th>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Safari</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">単一の数値</td>
+<td><code>0</code> （1 桁）</td>
+<td colspan="2">946684800000 (Jan 01 2000); NaN (Firefox ≤122)</td>
+<td>-62167219200000 (Jan 01 0000)</td>
+</tr>
+<tr>
+<td><code>31</code> （2 桁）</td>
+<td colspan="2">NaN</td>
+<td>-61188912000000 (Jan 01 0031)</td>
+</tr>
+<tr>
+<td><code>999</code> （3 桁または 4 桁）</td>
+<td colspan="3">-30641733102000 (Jan 01 0999)</td>
+</tr>
+<tr>
+<td rowspan="4">さまざまな区切り文字を使用した日時文字列</td>
+<td><code>1970-01-01</code> （標準）</td>
+<td colspan="3">0 （すべてのタイムゾーン）</td>
+</tr>
+<tr>
+<td><code>1970/01/01</code></td>
+<td colspan="3">0</td>
+</tr>
+<tr>
+<td><code>1970,01,01</code></td>
+<td colspan="2">0</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td><code>1970 01 01</code></td>
+<td colspan="2">0</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td><code>toString()</code> のような文字列</td>
+<td><code>Thu&nbsp;Jan&nbsp;01&nbsp;1970&nbsp;00:00:00</code><br><code>Thu Jan 01 1970</code><br><code>Jan 01 1970 00:00:00</code><br><code>Jan 01 1970</code></td>
+<td colspan="3">0</td>
+</tr>
+<tr>
+<td><code>toUTCString()</code> のような文字列</td>
+<td><code>Thu, 01 Jan 1970 00:00:00</code><br><code>Thu, 01 Jan 1970</code><br><code>01 Jan 1970 00:00:00</code><br><code>01 Jan 1970</code></td>
+<td colspan="3">0</td>
+</tr>
+<tr>
+<td rowspan="4">最初の日付成分が 2 桁の場合</td>
+<td><code>01-02-03</code> （最初の部分は有効な月である可能性がある）</td>
+<td colspan="2">1041465600000 (Jan 02 2003)</td>
+<td>-62132745600000 (Feb 03 0001)<br>メモ: Safari は常に YY-MM-DD と推測し、 MM/DD/YY にはなりません。</td>
+</tr>
+<tr>
+<td><code>27-02-03</code> （最初の部分は有効な日であるが、月ではない）</td>
+<td colspan="2">NaN</td>
+<td>-61312291200000 (Feb 03 0027)</td>
+</tr>
+<tr>
+<td><code>49-02-03</code> （最初の部分は有効な日ではなく、 &lt;50）</td>
+<td colspan="2">2495923200000 (Feb 03 2049)</td>
+<td>-60617980800000 (Feb 03 0049)</td>
+</tr>
+<tr>
+<td><code>50-02-03</code> （最初の部分は有効な日ではなく、 ≥50）</td>
+<td colspan="2">-628300800000 (Feb 03 1950)</td>
+<td>-60586444800000 (Feb 03 0050)</td>
+</tr>
+<tr>
+<td rowspan="3">範囲を外れた日付成分</td>
+<td><code>2014-25-23</code><br><code>Mar 32, 2014</code><br><code>2014/25/23</code></td>
+<td colspan="3">NaN</td>
+</tr>
+<tr>
+<td><code>2014-02-30</code></td>
+<td colspan="2">1393718400000 (Mar 02 2014)</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td><code>02/30/2014</code></td>
+<td colspan="3">1393718400000</td>
+</tr>
+<tr>
+<td rowspan="5">月名の後の余分な文字</td>
+<td><code>04 Dec 1995</code><br><code>04 Decem 1995</code><br><code>04 December 1995</code></td>
+<td colspan="3">818031600000</td>
+</tr>
+<tr>
+<td><code>04 DecFoo 1995</code></td>
+<td colspan="3">818031600000<br>最初の 3 文字のみが読み込まれます。<br>Firefox ≤121 は、有効な月名までを読み込み、 "F" を見つけると NaN を返します。</td>
+</tr>
+<tr>
+<td><code>04 De 1995</code></td>
+<td colspan="3">NaN</td>
+</tr>
+</table>
 
 ## 仕様書
 
@@ -168,11 +206,6 @@ GMT (UTC) のタイムゾーンが指定されているため、地方時のタ�
 ## ブラウザーの互換性
 
 {{Compat}}
-
-### 互換性ノート
-
-- Firefox 49 で、2 桁の「年」の解釈が、 Internet Explorer に代わって Google Chrome ブラウザーに準拠するように変更されました。現在、 `50` 以下の 2 桁の「年」は 21 世紀の年として解釈されます。例えば `04/16/17` は、以前は 1917 年 4 月 16 日と解釈されていましたが、 2017 年 4 月 16 日と解釈されるようになりました。相互運用性の問題や年があいまいになることを回避するには、 ISO 8601 書式 (`"2017-04-16"` など) の使用が推奨されます ([bug 1265136](https://bugzilla.mozilla.org/show_bug.cgi?id=1265136))。
-- Google Chrome は数値の文字列を有効な `dateString` 引数として受け付けます。これは、すなわち、 `!!Date.parse("42")` は Firefox では `false` として評価されるのに対して、 Google Chrome では `true` として評価されます。 "`42`" は 2042 年 1 月 1 日と解釈されるからです。
 
 ## 関連情報
 

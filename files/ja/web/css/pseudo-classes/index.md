@@ -2,10 +2,8 @@
 title: 擬似クラス
 slug: Web/CSS/Pseudo-classes
 l10n:
-  sourceCommit: ff07c2fc3bee874e6f1e7398c42cfa702d520009
+  sourceCommit: 4f81c863e2e5a4fb26585000bbdf7faca2b05f29
 ---
-
-{{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の**擬似クラス** (_pseudo-classes_) は、セレクターに付加するキーワードであり、選択された要素に対して特定の状態を指定します。例えば、擬似クラス {{CSSxRef(":hover")}} を使用すると、ユーザーのポインターがボタンの上に乗ったときにボタンを選択し、この選択されたボタンをスタイル設定することができます。
 
@@ -70,6 +68,8 @@ button:hover {
   - : フォーム要素が必須項目である場合に一致します。
 - {{CSSxRef(":optional")}}
   - : フォーム要素が省略可能である場合に一致します。
+- {{CSSxRef(":user-valid")}}
+  - : 正しく入力された要素を表します。ただし、ユーザーがその要素を操作した場合のみです。
 - {{CSSxRef(":user-invalid")}}
   - : 不正確な値が入力されている要素を表します。ただし、ユーザーがその要素を操作した場合のみです。
 
@@ -224,11 +224,11 @@ F
 - {{CSSxRef(":first")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}}
 - {{CSSxRef(":focus-within")}}
+- {{CSSxRef(":fullscreen")}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
 
 H
 
@@ -262,9 +262,7 @@ N
 
 - {{CSSxRef(":not", ":not()")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
@@ -278,9 +276,9 @@ O
 P
 
 - {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":paused")}}
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
-- {{CSSxRef(":paused")}}
 - {{CSSxRef(":playing")}}
 
 R

@@ -5,11 +5,20 @@ l10n:
   sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
-{{jsSidebar("Statements")}}
-
 **`for` 语句**用于创建一个循环，它包含了三个可选的表达式，这三个表达式被包围在圆括号之中，使用分号分隔，后跟一个用于在循环中执行的语句（通常是一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)）。
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 语法
 
@@ -19,13 +28,11 @@ for (initialization; condition; afterthought)
 ```
 
 - `initialization` {{optional_inline}}
-
   - : 在循环开始前初始化的表达式（包含[赋值表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)）或者变量声明。通常用于初始化计数器变量。该表达式可以选择使用 `var` 或 `let` 关键字声明新的变量，使用 `var` 声明的变量不是该循环的局部变量，而是与 `for` 循环处在同样的作用域中。用 `let` 声明的变量是语句的局部变量。
 
     该表达式的结果会被丢弃。
 
 - `condition` {{optional_inline}}
-
   - : 每次循环迭代之前要判定的表达式。如果该表达式的[判定结果为真](/zh-CN/docs/Glossary/Truthy)，`statement` 将被执行。如果[判定结果为假](/zh-CN/docs/Glossary/Falsy)，那么执行流程将退出循环，并转到 `for` 结构后面的第一条语句。
 
     这个条件测试是可选的。如果省略，该条件总是计算为真。
@@ -125,7 +132,7 @@ while (i <= 3) {
 
 ### 初始化块中的词法声明
 
-在初始化块中声明变量与在上层[作用域](/zh-CN/docs/Glossary/Scope)中声明它有着重要的区别，尤其是在循环体中创建[闭包](/zh-CN/docs/Web/JavaScript/Closures)时。例如，对于以下代码：
+在初始化块中声明变量与在上层[作用域](/zh-CN/docs/Glossary/Scope)中声明它有着重要的区别，尤其是在循环体中创建[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)时。例如，对于以下代码：
 
 ```js
 for (let i = 0; i < 3; i++) {

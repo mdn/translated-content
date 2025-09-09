@@ -1,68 +1,107 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Objects")}}
+**`encodeURI()`** 関数は、特定の文字を、その文字の {{Glossary("UTF-8")}} エンコードを表す 1～4 つのエスケープシーケンスに置き換えて、{{Glossary("URI")}} をエンコードします（2 つのサロゲート文字で構成される文字の場合は、 4 つのエスケープシーケンスのみになります）。{{jsxref("encodeURIComponent()")}} と比較すると、この関数はエンコードする文字の数が少なく、URI 構文の一部である文字はそのまま残します。
 
-**`encodeURI()`** 関数は、{{glossary("URI")}} (Uniform Resource Identifier; 統一資源識別子) をエンコードし、各文字のインスタンスをそれぞれ {{glossary("UTF-8")}} 符号の文字を表す 1 個から 4 個のエスケープシーケンスに置き換えます (サロゲート文字のペアのみ 4 個のエスケープシーケンスになります)。
+{{InteractiveExample("JavaScript デモ: encodeURI()")}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// 予想される結果: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // 予想される結果: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## 構文
 
-```
-encodeURI(URI)
+```js-nolint
+encodeURI(uri)
 ```
 
 ### 引数
 
-- `URI`
-  - : 完全 URI です。
+- `uri`
+  - : URI としてエンコードされる文字列です。
 
 ### 返値
 
-URI (Uniform Resource Identifier) としてエンコードされた指定された文字列を表す新しい文字列です。
+指定された文字列を URI としてエンコードした新しい文字列を表します。
+
+### 例外
+
+- {{jsxref("URIError")}}
+  - : `uri` に[孤立サロゲート](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)が含まれている場合に発生します。
 
 ## 解説
 
-`encodeURI()` 関数では、 URI において特別な意味を持つ文字 (予約文字) はエンコードされません。下記の例は URI "scheme" に含まれる可能性がある全ての箇所を示しています。特定の文字がどのように特殊な意味を表すために使われているかに注意してください。
+`encodeURI()` は、グローバルオブジェクトの関数プロパティです。
 
+`encodeURI()` 関数は、UTF-8 コード単位で文字をエスケープし、それぞれのオクテットを `%XX` の書式でエンコードし、必要に応じて左側に 0 を補います。UTF-16 の孤立サロゲートは、有効な Unicode 文字をエンコードしないため、`encodeURI()` に {{jsxref("URIError")}} を発生させます。
+
+`encodeURI()` は、以下の文字を**除く**すべての文字をエスケープします。
+
+```plain
+A–Z a–z 0–9 - _ . ! ~ * ' ( )
+
+; / ? : @ & = + $ , #
 ```
+
+2 行目の文字は URI 構文の一部である可能性のある文字であり、`encodeURIComponent()` によってのみエスケープされます。`encodeURI()` と `encodeURIComponent()` はどちらも、「非予約マーク」として知られる `-.!~*'()` という文字をエンコードしません。これらの文字は予約された用途は持っていませんが、URI では「そのまま」使用することができます。（[RFC2396](https://datatracker.ietf.org/doc/html/rfc2396) を参照してください。）
+
+`encodeURI()` 関数は、URI に対して特別な意味を持つ文字（予約文字）はエンコードしません。次の例は、URI に含まれる可能性のあるすべての部分を示しています。特定の文字が特別な意味を表すために使用されていることに注意してください。
+
+```url
 http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
 ```
 
-したがって、 `encodeURI()` は完全な URI を表すのに必要な文字はエンコード**しません**。また、 `encodeURI()` は "unreserved marks" (予約されていないが "そのまま" URI に使用できる) 文字をエンコード**しません**。 ([RFC2396](https://www.ietf.org/rfc/rfc2396.txt) を確認してください。)
+`encodeURI` は、その名前が示すとおり、URL がすでに正しい形式であると仮定して、URL 全体をエンコードするために使用します。文字列の値を動的に URL に組み立てたい場合は、不要な場所に URL 構文文字が入らないように、それぞれの動的セグメントに {{jsxref("encodeURIComponent()")}} を使用することをお勧めします。
 
-`encodeURI()` は下記**以外**の全ての文字をエスケープします。
+```js
+const name = "Ben & Jerry's";
 
-```
-エスケープされないもの:
+// This is bad:
+const link = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Ben%20&%20Jerry's"
+console.log([...new URL(link).searchParams]); // [['choice', 'Ben '], [" Jerry's", '']
 
-    A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+// Instead:
+const link = encodeURI(
+  `https://example.com/?choice=${encodeURIComponent(name)}`,
+);
+// "https://example.com/?choice=Ben%2520%2526%2520Jerry's"
+console.log([...new URL(link).searchParams]); // [['choice', "Ben%20%26%20Jerry's"]]
 ```
 
 ## 例
 
-### encodeURI と encodeURIComponent
+### encodeURI() と encodeURIComponent()
 
-`encodeURI()` は以下のように {{jsxref("encodeURIComponent", "encodeURIComponent()")}} とは異なります。
+`encodeURI()` は以下のように {{jsxref("encodeURIComponent()")}} とは異なります。
 
 ```js
-var set1 = ";,/?:@&=+$#"; // 予約文字
-var set2 = "-_.!~*'()"; // 予約されていない記号
-var set3 = "ABC abc 123"; // 英数字 + 空白
+const set1 = ";/?:@&=+$,#"; // 予約文字
+const set2 = "-.!~*'()"; // 予約されていない記号
+const set3 = "ABC abc 123"; // 英数字 + 空白
 
-console.log(encodeURI(set1)); // ;,/?:@&=+$#
-console.log(encodeURI(set2)); // -_.!~*'()
+console.log(encodeURI(set1)); // ;/?:@&=+$,#
+console.log(encodeURI(set2)); // -.!~*'()
 console.log(encodeURI(set3)); // ABC%20abc%20123 (空白は %20 にエンコードされる)
 
 console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24%23
-console.log(encodeURIComponent(set2)); // -_.!~*'()
+console.log(encodeURIComponent(set2)); // -.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (空白は %20 にエンコードされる)
 ```
-
-なお、`encodeURI()` のみでは、 HTTP の {{HTTPMethod("GET")}} および {{HTTPMethod("POST")}} リクエストを {{domxref("XMLHttpRequest")}} のように適切に構成できません。なぜなら、 "`&`", "`+`", "`=`" は `GET` および `POST` リクエストにおいて特別な文字であり、それらがエンコードされないからです。 `encodeURIComponent()` の場合、それらがエンコードされます。
 
 ### 単独のサロゲート文字のエンコード
 
@@ -79,13 +118,21 @@ console.log(encodeURI("\uD800"));
 console.log(encodeURI("\uDFFF"));
 ```
 
-### IPv6 のエンコード
+このエラーを避けるには、孤立サロゲートを Unicode 置換文字 (U+FFFD) に置き換える {{jsxref(String.prototype.toWellFormed())}} を使用することができます。また、文字列を `encodeURI()` に渡す前に、その文字列に孤立サロゲートが含まれているかどうかを調べるには、{{jsxref(String.prototype.isWellFormed())}} を使用することができます。
 
-また、 URL 記述のために最近の [RFC3986](http://tools.ietf.org/html/rfc3986) 仕様に従おうとする場合、角括弧 `[]` は ({{glossary("IPv6")}} 用の) 予約文字となっているため、角括弧が (ホスト名など) URL の一部を形成している場合はエンコードされていないほうがよいでしょう。そういう場合は以下のコードが役に立ちます。
+### RFC3986 のエンコード
+
+最近の [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) では、角括弧は（{{glossary("IPv6")}} 用の）予約文字となっているため、角括弧が（ホスト名など） URL の一部を形成している場合はエンコードされていないほうがよいでしょう。また、URI の区切り文字として正式に使用されていない !, ', (, ), \* も予約文字として予約されています。次の関数は、RFC3986 準拠の URL 書式に文字列をエンコードします。
 
 ```js
-function fixedEncodeURI(str) {
-  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
+function encodeRFC3986URI(str) {
+  return encodeURI(str)
+    .replace(/%5B/g, "[")
+    .replace(/%5D/g, "]")
+    .replace(
+      /[!'()*]/g,
+      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+    );
 }
 ```
 
@@ -99,6 +146,6 @@ function fixedEncodeURI(str) {
 
 ## 関連情報
 
-- {{jsxref("decodeURI", "decodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}
+- {{jsxref("decodeURIComponent()")}}

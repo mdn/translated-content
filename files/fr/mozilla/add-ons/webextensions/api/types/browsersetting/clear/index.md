@@ -7,9 +7,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 
 Utilisez `BrowserSetting.clear()` pour effacer toutes les modification apportées à l'extension du navigateur. Le paramètre du navigateur revient à sa valeur précédente.
 
-L'extensions annulera également le contrôle du paramètre, permettant une extension avec une ancienne précédente (c'est à dire, une extensions qui a été installée avant celle-ci) à modifier la paramètre. Voir [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour en savoir plus sur le contrôle des paramètres.
+L'extensions annulera également le contrôle du paramètre, permettant une extension avec une ancienne précédente (c'est à dire, une extensions qui a été installée avant celle-ci) à modifier la paramètre. Voir [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour en savoir plus sur le contrôle des paramètres.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la compensation a échoué, la promesse renvoie une valeur à `false`. Si l'effacement de la valeur a réussi, il se résout à `true`.
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si la compensation a échoué, la promesse renvoie une valeur à `false`. Si l'effacement de la valeur a réussi, il se résout à `true`.
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ var clearing = setting.clear(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli avec un `booléen`: `true` Si le paramètre est effacé, `false` sinon.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli avec un `booléen`: `true` Si le paramètre est effacé, `false` sinon.
 
 ## Compatibilité des navigateurs
 
@@ -54,8 +54,6 @@ clearing.then(onCleared);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

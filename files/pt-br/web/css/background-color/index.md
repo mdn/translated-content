@@ -7,7 +7,45 @@ slug: Web/CSS/background-color
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-color`** define a cor de fundo de um elemento.
 
-{{EmbedInteractiveExample("pages/css/background-color.html")}}
+{{InteractiveExample("CSS Demo: background-color")}}
+
+```css interactive-example-choice
+background-color: brown;
+```
+
+```css interactive-example-choice
+background-color: #74992e;
+```
+
+```css interactive-example-choice
+background-color: rgb(255, 255, 128);
+```
+
+```css interactive-example-choice
+background-color: rgba(255, 255, 128, 0.5);
+```
+
+```css interactive-example-choice
+background-color: hsl(50, 33%, 25%);
+```
+
+```css interactive-example-choice
+background-color: hsla(50, 33%, 25%, 0.75);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## Sintaxe
 
@@ -112,7 +150,7 @@ A cor do contrast é determinada comparando a luminância da cor do texto e da c
 
 ## Veja também
 
-- [Multiple backgrounds](/pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds)
+- [Multiple backgrounds](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/pt-BR/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/pt-BR/docs/Web/CSS/CSS_colors/Applying_color)

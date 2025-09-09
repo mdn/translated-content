@@ -3,9 +3,7 @@ title: A-Frame を使った基本的なデモの作成
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
 ---
 
-{{GamesSidebar}}
-
-[WebVR](/ja/docs/Games/Techniques/3D_on_the_web/WebVR) API と [WebGL](/ja/docs/Web/API/WebGL_API) API によって、ウェブブラウザー内で仮想現実 (VR) 体験を作成し始めることが可能になっていますが、コミュニティはもっと簡単に作れるツールやライブラリーが現れるのを待っています。Mozilla の [A-Frame](https://aframe.io/) フレームワークは、ウェブ開発者が慣れ親しんでいるシステムを用いて 3D VR 空間を構築するマークアップ言語を提供しています。このシステムはゲーム開発のコーディング原則に従っています。これはプロトタイプやデモを、大量の JavaScript や GLSL を書かずに、迅速にうまく構築するのに役立ちます。この記事では A-Frame をどうやって起動するか、そしてそれをつかって簡単なデモを構築する方法を説明します。
+[WebVR](/ja/docs/Games/Techniques/3D_on_the_web/WebXR) API と [WebGL](/ja/docs/Web/API/WebGL_API) API によって、ウェブブラウザー内で仮想現実 (VR) 体験を作成し始めることが可能になっていますが、コミュニティはもっと簡単に作れるツールやライブラリーが現れるのを待っています。Mozilla の [A-Frame](https://aframe.io/) フレームワークは、ウェブ開発者が慣れ親しんでいるシステムを用いて 3D VR 空間を構築するマークアップ言語を提供しています。このシステムはゲーム開発のコーディング原則に従っています。これはプロトタイプやデモを、大量の JavaScript や GLSL を書かずに、迅速にうまく構築するのに役立ちます。この記事では A-Frame をどうやって起動するか、そしてそれをつかって簡単なデモを構築する方法を説明します。
 
 ## 高水準の概要
 
@@ -259,7 +257,8 @@ render();
 
 利用可能な VR 機器を持っていれば、それを使ってあなたのシーンを試す良いタイミングです。
 
-> **メモ:** [Github で確認](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html)することもできます。
+> [!NOTE]
+> [Github で確認](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html)することもできます。
 
 思ったより簡単だったでしょう？ A-Frame はウェブ開発者を対象に、簡単に使用できるウェブマークアップと、それがもたらす JavaScript 操作などのあらゆる利点を提供します。簡単に始められるだけでなく、高度なコンセプトや、ブラウザー間の差異などを扱うための強力な API も提供しています。対応する VR 機器の数と同じように、コミュニティも増えてきており、このようなフレームワークの実験を始めるには絶好の機会です。
 

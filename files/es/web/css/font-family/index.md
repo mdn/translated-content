@@ -3,8 +3,6 @@ title: font-family
 slug: Web/CSS/font-family
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad `font-family` define una lista de fuentes o familias de fuentes, con un orden de prioridad, para utilizar en un elemento seleccionado. A diferencia de la mayoría de las propiedades CSS, los valores se separan con comas (",") para indicar que son valores alternativos.
@@ -28,7 +26,7 @@ font-family: <familia o nombre genérico> [, <familia o nombre genérico>]* | in
 
 ## Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/font-family.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font-family.html)
 
 ```
 body { font-family: "Gill Sans Extrabold", Helvetica, sans-serif }
@@ -46,9 +44,9 @@ Cuando una fuente no está disponible en algún {{ Cssxref("font-style", "estilo
 
 ## Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#font-family)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/fonts.html#font-family-prop)
-- [CSS 3](http://www.w3.org/TR/2002/WD-css3-fonts-20020802/#font-family-prop)
+- [CSS 1](https://www.w3.org/TR/CSS1#font-family)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/fonts.html#font-family-prop)
+- [CSS 3](https://www.w3.org/TR/2002/WD-css3-fonts-20020802/#font-family-prop)
 
 ## Compatibilidades
 

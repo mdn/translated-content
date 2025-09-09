@@ -31,9 +31,9 @@ document.bgColor = "darkblue";
 
 在 Mozilla Firefox 中，该属性的默认值是黑色.(`black 或者#000000`).
 
-`document.fgColor` 属性已经在[DOM Level 2](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)中被废弃。推荐使用的`css`属性为{{ Cssxref("color") }} (用法为 `document.body.style.color = "red"`).
+`document.fgColor` 属性已经在[DOM Level 2](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)中被废弃。推荐使用的`css`属性为{{ Cssxref("color") }} (用法为 `document.body.style.color = "red"`).
 
-另外一个类似的属性是 `document.body.text`, 该属性也在 [HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-text) 中被废弃，推荐使用 CSS 属性。
+另外一个类似的属性是 `document.body.text`, 该属性也在 [HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-text) 中被废弃，推荐使用 CSS 属性。
 
 ### 规范
 

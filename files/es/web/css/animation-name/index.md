@@ -3,11 +3,11 @@ title: animation-name
 slug: Web/CSS/animation-name
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS) animation-name especifica una lista de animaciones que se deben aplicar al elemento seleccionado. Cada nombre indica un {{cssxref("@keyframes")}} esta regla define los valores de las propiedades de la secuencia de animación.
+La propiedad [CSS](/es/docs/Web/CSS) animation-name especifica una lista de animaciones que se deben aplicar al elemento seleccionado. Cada nombre indica un {{cssxref("@keyframes")}} esta regla define los valores de las propiedades de la secuencia de animación.
 
 A menudo es conveniente utilizar la propiedad abrevieda {{cssxref("animation")}} para ajustar todas las propiedades de animación a la vez.
 
@@ -43,7 +43,7 @@ animation-name: unset;
 
 ## Ejemplos
 
-Ver ejemplos [CSS animations](/es/docs/CSS/CSS_animations).
+Ver ejemplos [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Especificaciones
 
@@ -55,5 +55,5 @@ Ver ejemplos [CSS animations](/es/docs/CSS/CSS_animations).
 
 ## Ver también
 
-- [Usando CSS animations](/es/docs/CSS/Tutorials/Using_CSS_animations)
+- [Usando CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

@@ -3,8 +3,6 @@ title: Diseño de caja flexible CSS
 slug: Web/CSS/CSS_flexible_box_layout
 ---
 
-{{CSSRef}}
-
 El diseño **CSS Flexbox** es un módulo de CSS que define un modelo de caja, optimizado para el diseño de interfaces de usuario. En el diseño flex, los nodos hijo se pueden distribuir en dirección vertical u horizontal y se pueden "flexibilizar" sus tamaños, bien sea rellenando el espacio disponible o encogiéndose para evitar salirse del contorno del nodo padre. Se puede manipular fácilmente tanto la alineación horizontal como la vertical, de los nodos hijo. La anidación de estas cajas (horizontal dentro de vertical o vertical dentro de horizontal) se puede usar para construir diseños en dos dimensiones.
 
 ## Ejemplo Básico
@@ -54,21 +52,21 @@ Las propiedades `align-content`, `align-self`, `align-items` y `justify-content`
 
 ## Guías
 
-- [Conceptos básicos de Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [Conceptos básicos de Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - : Una visión general de las características de flexbox
 - [Relación de flexbox con otros métodos de diseño.](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
   - : Cómo flexbox se relaciona con otros métodos de diseño y otras especificaciones de CSS
-- [Alinear elementos en un contenedor flexible](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [Alinear elementos en un contenedor flexible](/es/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
   - : Cómo funcionan las propiedades de Alineación de cuadro con flexbox.
 - [Ordenando elementos flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
   - : Explicando las diferentes formas de cambiar el orden y la dirección de los elementos, y cubriendo los problemas potenciales al hacerlo.
-- [Control de proporción de elementos flex a lo largo del eje principal](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+- [Control de proporción de elementos flex a lo largo del eje principal](/es/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
   - : Este artículo explica las propiedades de flex-grow, flex-shrink y flex-basis.
 - [Dominar el envoltorio de elementos flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
   - : Cómo crear contenedores flex con múltiples líneas y controlar la visualización de los elementos en esas líneas.
-- [Casos de uso típicos de flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
+- [Casos de uso típicos de flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : Patrones de diseño comunes que son los típicos casos de uso de flexbox.
-- [Compatibilidad con versiones anteriores de Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [Compatibilidad con versiones anteriores de Flexbox](/es/docs/conflicting/Glossary/Flexbox)
   - : Estado del navegador de flexbox, problemas de interoperabilidad y compatibilidad con navegadores antiguos y versiones de la especificación
 
 ## Especificaciones
@@ -79,5 +77,5 @@ Las propiedades `align-content`, `align-self`, `align-items` y `justify-content`
 
 - [Flexbugs](https://github.com/philipwalton/flexbugs)
   - : una lista comisariada por la comunidad de errores y soluciones del navegador Flexbox
-- [Combinaciones (Mixins) Flexbox para varios navegadores](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins)
+- [Combinaciones (Mixins) Flexbox para varios navegadores](/es/docs/Glossary/Flexbox)
   - : Este artículo proporciona un conjunto de combinaciones(mixins)para aquellos que desean crear experiencias de flexbox en varios navegadores que incluso funcionan en navegadores antiguos que no admiten la sintaxis moderna de flexbox.

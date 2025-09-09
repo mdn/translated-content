@@ -5,18 +5,58 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`accent-color`** [CSS](/ko/docs/Web/CSS) 속성은 일부 요소에 의하여 생성된 사용자 인터페이스 컨트롤의 {{Glossary("accent", "강조")}} 색상을 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/accent-color.html")}}
+{{InteractiveExample("CSS Demo: accent-color")}}
+
+```css interactive-example-choice
+accent-color: red;
+```
+
+```css interactive-example-choice
+accent-color: #74992e;
+```
+
+```css interactive-example-choice
+accent-color: rgb(255, 255, 128);
+```
+
+```css interactive-example-choice
+accent-color: hsl(250, 100%, 34%);
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div>
+    <input checked="" id="example-element" type="checkbox" />
+    <label for="example-element" id="example-label">Example Label</label>
+  </div>
+</section>
+```
+
+```css interactive-example
+.container > div {
+  display: flex;
+  align-items: center;
+}
+
+#example-element {
+  width: 40px;
+  height: 40px;
+}
+
+#example-label {
+  margin-left: 10px;
+  font-size: x-large;
+}
+```
 
 현재 `accent-color` 를 지원하는 브라우저에서는 다음 HTML 요소들에 이를 적용합니다.
 
-- [`<input type="checkbox">`](/ko/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="checkbox">`](/ko/docs/Web/HTML/Reference/Elements/input/checkbox)
 - [`<input type="radio">`](/ko/docs/Web/HTML/Element/input/radio)
 - [`<input type="range">`](/ko/docs/Web/HTML/Element/input/range)
-- [`<progress>`](/ko/docs/Web/HTML/Element/progress)
+- [`<progress>`](/ko/docs/Web/HTML/Reference/Elements/progress)
 
 각각의 사용자 에이전트는 가독성과 대비를 보장하기 위해 변형된 강조 색상을 가지고 있습니다. 강조 색상은 모든 사용자 인터페이스 컨트롤이나 컨트롤의 모든 상태에 사용되는 것은 아닙니다. `accent-color` 는 강조 색상을 사용하는 사용자 인터페이스 컨트롤에만, 그리고 해당 색상이 적용될 수 있는 상태에만 적용됩니다.
 

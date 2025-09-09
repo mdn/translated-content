@@ -9,7 +9,17 @@ l10n:
 
 **`try...catch`** 문은 `try` 블록과 `catch` 블록, `finally` 블록 중 하나 혹은 두 블록으로 구성됩니다. `try` 블록 내 코드가 먼저 실행되고, 만약 그 안에서 예외가 발생한다면 `catch` 블록 내 코드가 실행됩니다. `finally` 블록 내 코드는 항상 실행되며, 제어 흐름이 전체 구문을 종료하기 전에 실행됩니다.
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```
 
 ## 문법
 
@@ -59,7 +69,7 @@ catch (e) console.log(e);
 
 `try` 블록에서 예외가 발생하면, `exceptionVar`(즉, `catch (e)` 에서의 `e`)에 예외 값이 저장됩니다. 이 {{Glossary("binding")}}을 이용해 발생한 예외에 대한 정보를 얻을 수 있습니다. 이 {{Glossary("binding")}}은 `catch` 블록의 {{Glossary("Scope", "scope")}} 내에서만 사용할 수 있습니다.
 
-`exceptionVar`는 반드시 단일 식별자일 필요가 없습니다. [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 사용하여 여러 개의 식별자를 한 번에 할당할 수 있습니다.
+`exceptionVar`는 반드시 단일 식별자일 필요가 없습니다. [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 사용하여 여러 개의 식별자를 한 번에 할당할 수 있습니다.
 
 ```js
 try {

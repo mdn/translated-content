@@ -13,4 +13,4 @@ l10n:
 
 ## 参见
 
-- [懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)
+- [懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)

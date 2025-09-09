@@ -9,7 +9,15 @@ l10n:
 
 {{jsxref("BigInt")}}의 **`valueOf()`** 메서드는 {{jsxref("BigInt")}} 객체의 감싸진 원시값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/bigint-valueof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: BigInt.valueOf()", "shorter")}}
+
+```js interactive-example
+console.log(typeof Object(1n));
+// Expected output: "object"
+
+console.log(typeof Object(1n).valueOf());
+// Expected output: "bigint"
+```
 
 ## 구문
 

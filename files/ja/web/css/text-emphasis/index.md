@@ -5,17 +5,48 @@ l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
+**`text-emphasis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxref("text-emphasis-style")}} と {{cssxref("text-emphasis-color")}} の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
 
-**`text-emphasis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxref("text-emphasis-style")}} と {{cssxref("text-emphasis-color")}} の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)です。
+{{InteractiveExample("CSS デモ: text-emphasis")}}
 
-{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
+```css interactive-example-choice
+text-emphasis: none;
+```
+
+```css interactive-example-choice
+text-emphasis: filled red;
+```
+
+```css interactive-example-choice
+text-emphasis: "x";
+```
+
+```css interactive-example-choice
+text-emphasis: filled double-circle #ffb703;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 `text-emphasis` プロパティは、 {{cssxref("text-decoration")}} とは大きく異なります。 `text-decoration` プロパティは継承されず、指定される装飾は要素全体にわたって適用されます。しかし、 `text-emphasis` は継承されます。これは、子孫に対して圏点を変更できることを意味します。
 
 圏点の大きさは、ルビと同様にフォントの大きさの約 50% であり、 `text-emphasis` は現在の行間隔が圏点を表示するのに十分でない場合、行の高さに影響を与えることがあります。
 
-> **メモ:** `text-emphasis` は、 {{cssxref("text-emphasis-position")}} の値をリセットしません。これは、圏点のスタイルと色がテキストで異なる場合に、圏点の位置を要求することがほとんど見込まれないためです。珍しくもこれを必要とするような場合は、プロパティ {{cssxref("text-emphasis-position")}} を使用してください。
+> [!NOTE]
+> `text-emphasis` は、 {{cssxref("text-emphasis-position")}} の値をリセットしません。これは、圏点のスタイルと色がテキストで異なる場合に、圏点の位置を要求することがほとんど見込まれないためです。珍しくもこれを必要とするような場合は、プロパティ {{cssxref("text-emphasis-position")}} を使用してください。
 
 ## 構成要素のプロパティ
 

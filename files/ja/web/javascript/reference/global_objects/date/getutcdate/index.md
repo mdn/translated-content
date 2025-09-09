@@ -2,14 +2,25 @@
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
 
-**`getUTCDate()`** メソッドは、協定世界時に基づき、指定された日時の月内の日（1 ～ 31）を返します。
+**`getUTCDate()`** は {{jsxref("Date")}} インスタンスのメソッドで、協定世界時に基づき、指定された日時の月内の日を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getutcdate.html")}}
+{{InteractiveExample("JavaScript デモ: Date.prototype.getUTCDate()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCDate());
+// 予想される結果: 19
+
+console.log(date2.getUTCDate());
+// 予想される結果: 20
+```
 
 ## 構文
 
@@ -17,11 +28,13 @@ l10n:
 getUTCDate()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-数字です。
-`Date` オブジェクトが有効な日時を表している場合は、指定された日時の曜日を表す 1 から 31 までの整数値（世界標準時による）。
-それ以外の場合は、 `Date` オブジェクトが有効な日時を表していない場合は [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) を返します。
+指定された日時の協定世界時に基づく月内の日を表す、1 から 31 までの整数です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 例
 
@@ -44,6 +57,6 @@ const dayOfMonth = today.getUTCDate();
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
 - {{jsxref("Date.prototype.getDay()")}}
 - {{jsxref("Date.prototype.setUTCDate()")}}

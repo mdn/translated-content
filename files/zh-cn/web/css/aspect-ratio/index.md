@@ -3,11 +3,43 @@ title: aspect-ratio
 slug: Web/CSS/aspect-ratio
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`aspect-ratio`** 为盒子规定了**首选纵横比**，这个纵横比可以用于计算 auto 尺寸以及其他布局函数。
 
-{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
+{{InteractiveExample("CSS Demo: aspect-ratio")}}
+
+```css interactive-example-choice
+aspect-ratio: auto;
+```
+
+```css interactive-example-choice
+aspect-ratio: 1 / 1;
+```
+
+```css interactive-example-choice
+aspect-ratio: 16 / 9;
+```
+
+```css interactive-example-choice
+aspect-ratio: 0.5;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    height="640"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria.jpg"
+    width="466" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: auto;
+}
+```
 
 ```css
 aspect-ratio: 1 / 1;
@@ -24,7 +56,7 @@ aspect-ratio: unset;
 ### 取值
 
 - `auto`
-  - : 具有固有纵横比的[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)将使用此纵横比，否则盒子无首选纵横比。涉及固有纵横比的尺寸计算始终使用内容盒的尺寸。
+  - : 具有固有纵横比的{{glossary("Replaced elements", "可替换元素")}}将使用此纵横比，否则盒子无首选纵横比。涉及固有纵横比的尺寸计算始终使用内容盒的尺寸。
 - {{cssxref("&lt;ratio&gt;")}}
   - : 盒子的首选纵横比为指定的 `width` / `height` 比率。如果省略 `height` 和前面的斜杠字符，则 `height` 默认为 `1`。涉及首选纵横比的尺寸计算使用由 `box-sizing` 所指定的盒子的尺寸。
 
@@ -56,6 +88,6 @@ aspect-ratio: 0.5;
 
 ## 参见
 
-- [图像的 aspect-ratio：防止卡顿](/zh-CN/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
+- [图像的 aspect-ratio：防止卡顿](/zh-CN/docs/Learn_web_development/Extensions/Performance/Multimedia#渲染策略：在加载图像时避免卡顿)
 - [为 CSS 设计纵横比单位](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
 - [设置图像的高度和宽度再次变得重要起来](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)

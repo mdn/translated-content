@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 
 **`slice()`** 方法将一个类型化数组的一部分浅拷贝到一个新的类型化数组对象中并返回。此方法采用与 {{jsxref("Array.prototype.slice()")}} 相同的算法。_TypedArray_ 指[类型化数组的类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)中的一员。
 
-{{EmbedInteractiveExample("pages/js/typedarray-slice.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.slice()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const array1 = uint8.slice(1, 3);
+
+console.log(array1);
+// Expected output: Uint8Array [20, 30]
+```
 
 ## 语法
 

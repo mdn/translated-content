@@ -3,7 +3,7 @@ title: 初始值
 slug: Web/CSS/@property/initial-value
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`initial-value`** [CSS](/zh-CN/docs/Web/CSS)描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}的时候是必需的，除非 syntax 属性接受了任何有效的 token 流。它为属性设置初始值。
 
@@ -41,7 +41,7 @@ slug: Web/CSS/@property/initial-value
 
 为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/At-rule):
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule):
 
 ```css
 @property --my-color {
@@ -75,4 +75,4 @@ window.CSS.registerProperty({
 - [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
 - [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/zh-CN/docs/Web/Houdini)
+- [CSS Houdini](/zh-CN/docs/Web/API/Houdini_APIs)

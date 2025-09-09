@@ -12,7 +12,7 @@ CSS は強力な機能を多数提供していますが、その中には使い�
 
 - CSS アニメーション - [Stylie](http://jeremyckahn.github.io/stylie/)
 - 端末のディスプレイ情報を調べる ({{Glossary("responsive web design")}} で役立ちます) - [mydevice.io](http://mydevice.io)
-- CSS メニュー - [cssmenumaker.com](http://cssmenumaker.com/)
+- CSS メニュー - [cssmenumaker.com](https://cssmenumaker.com/)
 - 強力でモダンな CSS リンターで、一貫性のある規約を施行し、スタイルシートでのエラーを回避するのに役立ちます - [stylelint](https://stylelint.io/)
 
 ## 関連情報

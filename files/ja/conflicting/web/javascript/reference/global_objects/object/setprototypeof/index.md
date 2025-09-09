@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/The_performance_hazards_of_prototype_mutation
 
 {{jsSidebar("Advanced")}}
 
-すべての JavaScript オブジェクトは `[[Prototype]]` を持っています。 オブジェクトのプロパティを取得するには、まずそのオブジェクトを検索し、次にそのオブジェクトの `[[Prototype]]` を検索し、さらにそのオブジェクトの `[[Prototype]]` を検索し、プロパティが見つかるかチェーンが終了するまで検索します。 `[[Prototype]]` チェーンは特に[オブジェクトの継承](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)に有用です。
+すべての JavaScript オブジェクトは `[[Prototype]]` を持っています。 オブジェクトのプロパティを取得するには、まずそのオブジェクトを検索し、次にそのオブジェクトの `[[Prototype]]` を検索し、さらにそのオブジェクトの `[[Prototype]]` を検索し、プロパティが見つかるかチェーンが終了するまで検索します。 `[[Prototype]]` チェーンは特に[オブジェクトの継承](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)に有用です。
 
 ECMAScript 6 では、 `[[Prototype]]` を変異させる方法が導入されています。 この柔軟性は、性能を大幅に低下させるという代償を伴います。**`[[Prototype]]` の変更は、現代の*すべての* JavaScript エンジンにおいて性能上の害になります。** この記事では、`[[Prototype]]`の変更がなぜ*すべての*ブラウザーで遅くなるのかを説明し、代わりに使用すべき代替手段を説明します。
 

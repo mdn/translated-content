@@ -7,9 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 
 **`Intl.Collator.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.Collator.prototype.resolvedOptions")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const numberDe = new Intl.NumberFormat("de-DE");
+const numberAr = new Intl.NumberFormat("ar");
+
+console.log(numberDe.resolvedOptions().numberingSystem);
+// Expected output: "latn"
+
+console.log(numberAr.resolvedOptions().numberingSystem);
+// Expected output: "arab"
+```
 
 ## 構文
 

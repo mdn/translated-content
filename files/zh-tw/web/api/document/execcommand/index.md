@@ -1,167 +1,227 @@
 ---
-title: Document.execCommand()
+title: Document：execCommand() 方法
 slug: Web/API/Document/execCommand
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-當 HTML 文件（document）被切換到 [`designMode`](/zh-TW/docs/Web/API/Document/designMode) 時，它的 `document` 物件就會對外暴露 **`execCommand`** 方法作為操控目前可編輯區域的指令，譬如 [form inputs](/zh-TW/docs/Web/HTML/Element/input) 或 [`contentEditable`](/zh-TW/docs/Web/HTML/Global_attributes/contenteditable) 元素。
+**`execCommand`** 方法實現了多種不同的命令。其中一些提供對剪貼簿的存取，而其他則用於編輯[表單輸入](/zh-TW/docs/Web/HTML/Reference/Elements/input)、[`contenteditable`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/contenteditable) 元素或整個文件（當切換到[設計模式](/zh-TW/docs/Web/API/Document/designMode)時）。
 
-多數的指令會作用在文件的[選取](/zh-TW/docs/Web/API/Selection) （粗體、斜體等），而其他則像是插入新的元素（新增一個連結）或是影響一整列的文字（縮排）。當使用 `contentEditable` 時， `execCommand()` 會作用在目前活躍的可編輯元素上。
+若要存取剪貼簿，建議使用較新的 [Clipboard API](/zh-TW/docs/Web/API/Clipboard_API) 來取代 `execCommand()`。然而，對於編輯命令則沒有替代方案：與直接操作 DOM 不同，`execCommand()` 所執行的修改會保留撤銷緩衝區（編輯歷史）。
+
+大多數命令會影響文件的[選取範圍](/zh-TW/docs/Web/API/Selection)。例如，一些命令（粗體、斜體等）會格式化當前選取的文字，而其他命令則刪除選取範圍、插入新元素（取代選取範圍）或影響整行（縮排）。只有當前處於活動狀態的可編輯元素可以被修改，但某些命令（例如 `copy`）可以在沒有可編輯元素的情況下運作。
+
+> [!NOTE]
+> `execCommand()` 所執行的修改可能會或可能不會觸發 {{domxref("Element/beforeinput_event", "beforeinput")}} 和 {{domxref("Element/input_event", "input")}} 事件，這取決於瀏覽器和配置。如果觸發，這些事件的處理器會在 `execCommand()` 回傳之前執行。作者需要注意這類遞迴呼叫，特別是在回應這些事件時呼叫 `execCommand()` 的情況下。從 Firefox 82 開始，巢狀的 `execCommand()` 呼叫將始終失敗，詳見 [bug 1634262](https://bugzil.la/1634262)。
 
 ## 語法
 
-```plain
-document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+```js-nolint
+execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
-
-### 回傳值
-
-如果該指令不被支援或停用將回傳一個 `false` 的 {{jsxref('Boolean')}} 值。
-
-> [!NOTE]
-> 只有在使用者互動的部分回傳 `true` 。請不要嘗試在呼叫指令前使用回傳值來確認瀏覽器是否支援。
 
 ### 參數
 
 - `aCommandName`
-  - : 一個 {{domxref("DOMString")}} 作為指定要執行的指令。所有可用的指令列表請見 [指令](#指令) 。
+  - : 指定要執行的命令名稱的字串。以下命令被指定：
+    - `backColor`
+      - : 更改文件背景顏色。在 `styleWithCss` 模式下，它會改變包含區塊的背景顏色。這需要傳遞一個 {{cssxref("&lt;color&gt;")}} 值字串作為引數值。
+    - `bold`
+      - : 切換選取範圍或插入點的粗體開／關。
+    - `contentReadOnly`
+      - : 使內容文件變為唯讀或可編輯。這需要一個布林值 true／false 作為引數值。
+    - `copy`
+      - : 將當前選取範圍複製到剪貼簿。此行為的啟用條件因瀏覽器而異，並隨時間演變。請檢查相容性表以確定是否可以在你的情況下使用。
+    - `createLink`
+      - : 從選取範圍創建一個超連結，但僅在有選取範圍時才有效。需要一個 {{Glossary("URI")}} 字串作為超連結 `href` 的引數值。URI 必須至少包含一個字元，可以是空白字元。
+    - `cut`
+      - : 移除當前選取範圍並將其複製到剪貼簿。此行為的啟用時間因瀏覽器而異，其條件也隨時間演變。請檢查[相容性表](#瀏覽器相容性)以獲取使用細節。
+    - `decreaseFontSize`
+      - : 在選取範圍或插入點周圍添加一個 {{HTMLElement("small")}} 標籤。
+    - `defaultParagraphSeparator`
+      - : 更改在可編輯文字區域中創建新段落時使用的段落分隔符。
+    - `delete`
+      - : 刪除當前選取範圍。
+    - `enableAbsolutePositionEditor`
+      - : 啟用或停用允許絕對定位元素移動的抓取器。從 Firefox 64 開始，抓取器預設為停用（[Firefox bug 1490641](https://bugzil.la/1490641)）。
+    - `enableInlineTableEditing`
+      - : 啟用或停用表格列／欄插入和刪除控制項。從 Firefox 64 開始，控制項預設為停用（[Firefox bug 1490641](https://bugzil.la/1490641)）。
+    - `enableObjectResizing`
+      - : 啟用或停用圖像、表格、絕對定位元素和其他可調整大小物件上的調整大小控制點。從 Firefox 64 開始，控制點預設為停用（[Firefox bug 1490641](https://bugzil.la/1490641)）。
+    - `fontName`
+      - : 更改選取範圍或插入點的字體名稱。這需要一個字體名稱字串（例如 `"Arial"`）作為引數值。
+    - `fontSize`
+      - : 更改選取範圍或插入點的字體大小。這需要一個從 `1` 到 `7` 的整數作為引數值。
+    - `foreColor`
+      - : 更改選取範圍或插入點的字體顏色。這需要一個十六進位顏色值字串作為引數值。
+    - `formatBlock`
+      - : 在包含當前選取範圍的行周圍添加一個 HTML 區塊級元素，若存在則替換包含該行的區塊元素（在 Firefox 中，{{HTMLElement("blockquote")}} 是例外——它會包裹任何包含的區塊元素）。需要一個標籤名稱字串作為引數值。幾乎所有區塊級元素都可以使用。（舊版 Edge 僅支援標題標籤 `H1` – `H6`、`ADDRESS` 和 `PRE`，這些標籤必須用尖括號包裹，例如 `"<H1>"`。）
+    - `forwardDelete`
+      - : 刪除[游標](https://zh.wikipedia.org/wiki/游標)位置前的字元，與按下 Windows 鍵盤上的 Delete 鍵相同。
+    - `heading`
+      - : 在選取範圍或插入點行周圍添加一個標題元素。需要標籤名稱字串作為引數值（例如 `"H1"`、`"H6"`）。(Safari 不支援。)
+    - `highlightColor`
+      - : 更改選取範圍或插入點的背景顏色。需要一個顏色值字串作為引數值。`useCSS` 必須為 `true` 才能運作。
+    - `increaseFontSize`
+      - : 在選取範圍或插入點周圍添加一個 {{HTMLElement("big")}} 標籤。
+    - `indent`
+      - : 縮排包含選取範圍或插入點的行。在 Firefox 中，如果選取範圍跨越多行且縮排層級不同，則僅會縮排選取範圍中縮排最少的行。
+    - `insertBrOnReturn`
+      - : 控制 Enter 鍵是插入 {{HTMLElement("br")}} 元素，還是將當前區塊元素分成兩個。
+    - `insertHorizontalRule`
+      - : 在插入點插入一個 {{HTMLElement("hr")}} 元素，或用它取代選取範圍。
+    - `insertHTML`
+      - : 在插入點插入一個 HTML 字串（刪除選取範圍）。需要一個有效的 HTML 字串作為引數值。
+    - `insertImage`
+      - : 在插入點插入一個圖像（刪除選取範圍）。需要一個圖像 `src` 的 URL 字串作為引數值。此字串的要求與 `createLink` 相同。
+    - `insertOrderedList`
+      - : 為選取範圍或插入點創建一個[編號的有序列表](/zh-TW/docs/Web/HTML/Reference/Elements/ol)。
+    - `insertUnorderedList`
+      - : 為選取範圍或插入點創建一個[帶點的無序列表](/zh-TW/docs/Web/HTML/Reference/Elements/ul)。
+    - `insertParagraph`
+      - : 在選取範圍或當前行周圍插入一個[段落](/zh-TW/docs/Web/HTML/Reference/Elements/p)。
+    - `insertText`
+      - : 在插入點插入給定的純文字（刪除選取範圍）。
+    - `italic`
+      - : 切換選取範圍或插入點的斜體開／關。
+    - `justifyCenter`
+      - : 將選取範圍或插入點置中。
+    - `justifyFull`
+      - : 將選取範圍或插入點對齊。
+    - `justifyLeft`
+      - : 將選取範圍或插入點向左對齊。
+    - `justifyRight`
+      - : 將選取範圍或插入點向右對齊。
+    - `outdent`
+      - : 凸排包含選取範圍或插入點的行。
+    - `paste`
+      - : 在插入點貼上剪貼簿內容（取代當前選取範圍）。對於 Web 內容不可用。
+    - `redo`
+      - : 重做上一個撤銷命令。
+    - `removeFormat`
+      - : 移除當前選取範圍的所有格式。
+    - `selectAll`
+      - : 選取可編輯區域的所有內容。
+    - `strikeThrough`
+      - : 切換選取範圍或插入點的刪除線開／關。
+    - `subscript`
+      - : 切換選取範圍或插入點的[下標](/zh-TW/docs/Web/HTML/Reference/Elements/sub)開／關。
+    - `superscript`
+      - : 切換選取範圍或插入點的[上標](/zh-TW/docs/Web/HTML/Reference/Elements/sup)開／關。
+    - `underline`
+      - : 切換選取範圍或插入點的[底線](/zh-TW/docs/Web/HTML/Reference/Elements/u)開／關。
+    - `undo`
+      - : 撤銷最後執行的命令。
+    - `unlink`
+      - : 從選取的超連結中移除[錨點元素](/zh-TW/docs/Web/HTML/Reference/Elements/a)。
+    - `useCSS` {{Deprecated_inline}}
+      - : 切換生成標記時使用 HTML 標籤或 CSS。需要一個布林值 true/false 作為引數值。
+        > [!NOTE]
+        > 此參數在邏輯上是反向的（即，使用 `false` 表示使用 CSS，使用 `true` 表示使用 HTML）。此功能已被 `styleWithCSS` 取代。
+    - `styleWithCSS`
+      - : 取代 `useCSS` 命令。`true` 修改／生成標記中的 `style` 屬性，`false` 生成展示用元素。
+    - `AutoUrlDetect`
+      - : 更改瀏覽器的自動連結行為。
+
 - `aShowDefaultUI`
-  - : 一個 {{jsxref("Boolean")}} 作為指示是否顯示預設的使用者介面。 Mozilla 並未實作這項功能。
+  - : 一個布林值，指示是否應顯示預設的使用者介面。Mozilla 中未實作此功能。
 - `aValueArgument`
-  - : 針對需要提供輸入引數的指令，藉由 {{domxref("DOMString")}} 提供相關的資訊。譬如， `insertImage` 需要提供圖片的 URL 。若沒有引數的需求則可指定為 `null` 。
+  - : 對於需要輸入引數的命令，是一個提供該資訊的字串。例如，`insertImage` 需要插入圖像的 URL。若不需要引數，請指定 `null`。
 
-### 指令
+### 回傳值
 
-- `backColor`
-  - : 變更文件的背景色彩。在 `styleWithCss` 模式中，它作用於涵蓋區域的背景色彩。這個指令需要提供一個 {{cssxref("&lt;color&gt;")}} 值字串作為引數值。請留意， Internet Explorer 使用這個指令作為設定文字的背景色彩。
-- `bold`
-  - : 切換選取區域插入點的粗體與否。 Internet Explorer 使用 {{HTMLElement("strong")}} 標籤而不是 {{HTMLElement("b")}}.
-- `ClearAuthenticationCache`
-  - : 清除所有快取中的驗證憑證。
-- `contentReadOnly`
-  - : 使內容文件成為唯讀或可編輯。此指令需要提供布林值 true/false 作為引數值。（Internet Explorer 不支援）。
-- `copy`
-  - : 複製目前選取的區域到剪貼簿。各個瀏覽器對於這個指令的行為可能有所差異且不斷變更。如果你有使用這個指令的情境，請先查閱相容性表格來決定如何使用。
-- `createLink`
-  - : 對選取的區域建立超連結，僅限於有選取內容。需要提供一個 [URI](/zh-TW/docs/Archive/Mozilla/URIs_and_URLs) 字串值作為超連結的 `href` 。 URI 必須最少包含一個字元且可以是空白字元（Internet Explorer 會建立一個 `null` 值的連結）。
-- `cut`
-  - : 移除目前選取的區域並複製到剪貼簿。各個瀏覽器對於這個指令的行為可能有所差異且不斷變更。使用細節請查閱[相容性表格](#Browser_compatibility)。
-- `decreaseFontSize`
-  - : 在選取區域或插入點的前後加入一個 {{HTMLElement("small")}} 標籤（ Internet Explorer 不支援）
-- `defaultParagraphSeparator`
-  - : 變更可編輯文字區域於新增段落時的段落分隔器。更多細節請查閱 [產生 markup 的區別](/zh-TW/docs/Web/Guide/HTML/Editable_content#Differences_in_markup_generation)。
-- `delete`
-  - : 刪除目前選取的區域。
-- `enableAbsolutePositionEditor`
-  - : 啟用或停用用於移動絕對定位元素的抓取器。這個指令在 Firefox 63 Beta/Dev 版本中預設停用（[Firefox bug 1449564](https://bugzil.la/1449564)）。
-- `enableInlineTableEditing`
-  - : 啟用或停用表格的列 / 欄的插入及刪除。此指令在 Firefox 63 Beta/Dev 版本中預設停用（[Firefox bug 1449564](https://bugzil.la/1449564)）。
-- `enableObjectResizing`
-  - : 啟用或停用圖片、表格、絕對定位元素、其他可重設大小物件的重設大小處理。此指令在 Firefox 63 Beta/Dev 版本中預設停用（[Firefox bug 1449564](https://bugzil.la/1449564)）。
-- `fontName`
-  - : 變更選取區域或插入點的字型名稱。此指令需要字型名稱字串（如「Arial」）作為引數值。
-- `fontSize`
-  - : 變更選取區域或插入點的字型大小。此指令需要 `1`-`7` 的整數作為引數值。
-- `foreColor`
-  - : 變更選取區域或插入點的字型色彩。此指令需要十六進位的色彩字串作為引數值。
-- `formatBlock`
-  - : 在目前選取區域的前後加入一個 HTML 區塊層級元素，若選取區域已經存在區塊元素則取代之。（在 Firefox 中， {{HTMLElement("blockquote")}} 是個例外——它會包裹住任何所包含的區塊元素）。 此指令需要一個標籤名稱字串作為引數值。幾乎所有區塊層級元素都可以使用（Internet Explorer and Edge 僅支援標題標籤 `H1`–`H6` 、 `ADDRESS` 、 `PRE` 且必須由角括號包裹起來，譬如 `"<H1>"` ）。
-- `forwardDelete`
-  - : 刪除游標位置後的字元，等同於在 Windows 按下 Delete 鍵盤按鍵。
-- `heading`
-  - : 在選取區域或插入點前後加入一個標題元素。此指令需要標籤名稱字串作為引數值（例：`"H1"`, `"H6"` ）（Internet Explorer 及 Safari 不支援）。
-- `hiliteColor`
-  - : 變更選取區域或插入點的背景色彩。此指令需要一個色彩字串作為引數值。 `useCSS` 必須為 `true` 才能有作用（Internet Explorer 不支援）。
-- `increaseFontSize`
-  - : 在選取區域或插入點前後加入一個 {{HTMLElement("big")}} 標題（Internet Explorer 不支援）。
-- `indent`
-  - : 縮排選取區域或插入點所包含的列。在 Firefox ，如果選取的範圍跨越多列且不同的縮排層級，只有選取中最淺層縮排列的才會被縮排。
-- `insertBrOnReturn`
-  - : 控制 Enter 按鍵按下時在目前區塊元素中插入 {{HTMLElement("br")}} 元素或分割成為兩個元素（Internet Explorer 不支援）。
-- `insertHorizontalRule`
-  - : 在插入點插入一個 {{HTMLElement("hr")}} 元素或以它取代選取的內容。
-- `insertHTML`
-  - : 在插入點插入一個 HTML 字串（會刪除選取內容）需要一個有效的 HTML 字串作為引數值（Internet Explorer 不支援）。
-- `insertImage`
-  - : 在插入點插入一個圖片（會刪除選取內容）。需要一個 URL 字串作為圖片的 `src` 引數值。這個需求跟 `createLink` 的字串是一樣的。
-- `insertOrderedList`
-  - : 在選取區域或插入點建立一個[有序的清單](/zh-TW/docs/Web/HTML/Element/ol)。
-- `insertUnorderedList`
-  - : 在選取區域或插入點建立一個[無序的清單](/zh-TW/docs/Web/HTML/Element/ul)。
-- `insertParagraph`
-  - : 在選取區域或目前列的前後插入[段落](/zh-TW/docs/Web/HTML/Element/p)（Internet Explorer 會在插入點插入段落並刪除選取的內容）。
-- `insertText`
-  - : 在插入點處插入給予的純文字（選取內容將被刪除）。
-- `italic`
-  - : 切換選取區域或插入點的斜體開關（Internet Explorer 使用 {{HTMLElement("em")}} 元素而不是 {{HTMLElement("i")}} ）。
-- `justifyCenter`
-  - : 置中對齊選取區域或插入點的內容。
-- `justifyFull`
-  - : 左右對齊選取區域或插入點的內容。
-- `justifyLeft`
-  - : 靠左對齊選取區域或插入點的內容。
-- `justifyRight`
-  - : 靠右對齊選取區域或插入點的內容。
-- `outdent`
-  - : 凸排選取區域或插入點所包含的列。
-- `paste`
-  - : 在目前的插入點貼上剪貼簿的內容（取代目前選取的項目）。網頁內容無法使用。詳閱 \[1]。
-- `redo`
-  - : 復原上一個取消的指令。
-- `removeFormat`
-  - : 移除目前選取區域所有的格式。
-- `selectAll`
-  - : 選取可編輯區域的所有內容。
-- `strikeThrough`
-  - : 切換選取區域或插入點的刪除線開關。
-- `subscript`
-  - : 切換選取區域或插入點的 [subscript](/zh-TW/docs/Web/HTML/Element/sub) 開關。
-- `superscript`
-  - : 切換選取區域或插入點的 [superscript](/zh-TW/docs/Web/HTML/Element/sup) 開關。
-- `underline`
-  - : 切換選取區域或插入點的[底線](/zh-TW/docs/Web/HTML/Element/u)開關。
-- `undo`
-  - : 取消上一個執行的指令。
-- `unlink`
-  - : 從選取的超連結刪除[錨點元素](/zh-TW/docs/Web/HTML/Element/a)。
-- `useCSS` {{Deprecated_inline}}
-  - : 針對產生的 markup 使用 HTML 標籤或 CSS。此指令需要一個布林值 true/false 作為引數值。注意：這個引述在邏輯上是反向的（舉例：使用 `false` 會使用 CSS ，反之使用 `true` 則使用 HTML 且 Internet Explorer 不支援。這個指令已經被棄用並由 `styleWithCSS` 取而代之。
-- `styleWithCSS`
-  - : 取代 `useCSS` 的指令。 `true` 會在 markup 修改 / 產生 `style` 屬性， false 會產生展示用的元素。
+一個布林值，若命令不支援或已停用則為 `false`。
+
+> [!NOTE]
+> 只有在作為使用者互動的一部分被呼叫時，`document.execCommand()` 才會回傳 `true`。你不能用它來在呼叫指令之前驗證瀏覽器是否支援該指令。
 
 ## 範例
 
-一個在 CodePen 上展示[如果使用](https://codepen.io/chrisdavidmills/full/gzYjag/)的範例。
+[如何使用 execCommand 與 contentEditable 元素的範例](https://codepen.io/chrisdavidmills/full/gzYjag/)（CodePen）。
 
-## 規格
+### 使用 insertText
 
-<table class="spectable standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">規格</th>
-      <th scope="col">狀態</th>
-      <th scope="col">備註</th>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://w3c.github.io/editing/execCommand.html#execcommand()"
-          >execCommand</a
-        >
-      </td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+此範例展示了兩個非常基本的 HTML 編輯器，一個使用 {{HTMLElement("textarea")}} 元素，另一個使用帶有 [`contenteditable`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/contenteditable) 屬性的 {{HTMLElement("pre")}} 元素。
+
+點擊「粗體」或「斜體」按鈕會在元素中插入相應的標籤，使用 `insertText` 來保留編輯歷史，因此使用者可以撤銷操作。
+
+#### HTML
+
+```html
+<h2>textarea</h2>
+
+<div class="actions" data-for="textarea">
+  <button data-el="b">粗體</button>
+  <button data-el="i">斜體</button>
+</div>
+
+<textarea class="editarea">一些文字。</textarea>
+
+<h2>contenteditable</h2>
+
+<div class="actions" data-for="pre">
+  <button data-el="b">粗體</button>
+  <button data-el="i">斜體</button>
+</div>
+
+<pre contenteditable="true" class="editarea">一些文字。</pre>
+```
+
+#### JavaScript
+
+```js
+// 準備操作按鈕
+const buttonContainers = document.querySelectorAll(".actions");
+
+for (const buttonContainer of buttonContainers) {
+  const buttons = buttonContainer.querySelectorAll("button");
+  const pasteTarget = buttonContainer.getAttribute("data-for");
+
+  for (const button of buttons) {
+    const elementName = button.getAttribute("data-el");
+    button.addEventListener("click", () =>
+      insertText(`<${elementName}></${elementName}>`, pasteTarget),
+    );
+  }
+}
+
+// 在游標處插入文字，或取代選取的文字
+function insertText(newText, selector) {
+  const textarea = document.querySelector(selector);
+  textarea.focus();
+
+  let pasted = true;
+  try {
+    if (!document.execCommand("insertText", false, newText)) {
+      pasted = false;
+    }
+  } catch (e) {
+    console.error("捕獲的錯誤：", e);
+    pasted = false;
+  }
+
+  if (!pasted) {
+    console.error("貼上失敗，execCommand 不支援");
+  }
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("使用 insertText", 100, 300)}}
+
+## 規範
+
+{{Specifications}}
 
 ## 瀏覽器相容性
 
 {{Compat}}
 
-## 相關資訊
+## 參見
 
+- [Clipboard API](/zh-TW/docs/Web/API/Clipboard_API)
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}
-- [Rich-Text Editing in Mozilla](/zh-TW/docs/Rich-Text_Editing_in_Mozilla)
-- [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md) with bugs related to `document.execCommand`.

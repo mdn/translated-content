@@ -3,8 +3,6 @@ title: 游戏开发
 slug: Games
 ---
 
-{{GamesSidebar}}
-
 游戏是最流行的计算机活动之一。新技术不断涌现，使得开发者有可能开发出更好、更强大、可以在任何符合标准的 web 浏览器运行的游戏。
 
 ## 开发网页游戏
@@ -14,7 +12,7 @@ slug: Games
 我们同样提供了参考部分，因此你可以轻易地找到有关游戏开发所有常用的 API。
 
 > [!NOTE]
-> 在创建一个网页游戏之前你至少需要掌握几种核心的 web 技术，例如 HTML、CSS 和 Javascript。你可以在[学习区](/zh-CN/docs/Learn)开始这些基础知识的学习。
+> 在创建一个网页游戏之前你至少需要掌握几种核心的 web 技术，例如 HTML、CSS 和 Javascript。你可以在[学习区](/zh-CN/docs/Learn_web_development)开始这些基础知识的学习。
 
 ## 将本地游戏移植到 web
 

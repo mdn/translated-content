@@ -1,15 +1,27 @@
 ---
 title: Object.assign()
+short-title: assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 l10n:
-  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Object.assign()`** は静的メソッドで、すべての{{jsxref("Object/propertyIsEnumerable", "列挙可能", "", 1)}}な{{jsxref("Object/hasOwn", "自身のプロパティ", "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
 
-**`Object.assign()`** 静的メソッドは、すべての{{jsxref("Object/propertyIsEnumerable", "列挙可能", "", 1)}}な{{jsxref("Object/hasOwn", "自身のプロパティ", "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
+{{InteractiveExample("JavaScript デモ: Object.assign()")}}
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// 予想される結果: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// 予想される結果: true
+```
 
 ## 構文
 
@@ -23,13 +35,20 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 ### 引数
 
 - `target`
-  - : コピー先オブジェクト — コピー元のプロパティを適用するもので、変更後に返されます。
+  - : コピー先オブジェクト — コピー元のプロパティを適用するもので、変更後に返されます。対象とするプリミティブ値が指定された場合、その値はオブジェクトに変換されます。
 - `source1`, …, `sourceN`
   - : コピー元オブジェクト (単数または複数) — 適用したいプロパティを含むオブジェクトです。
 
 ### 返値
 
 コピー先オブジェクトです。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : 次のいずれかの場合に発生します。
+    - `target` 引数は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} です。
+    - ターゲット オブジェクトのプロパティへの代入に失敗しました。例えば、ターゲット オブジェクトでプロパティが書き込み不可であるため、またはそのセッターがエラーを発生させたためです。
 
 ## 解説
 
@@ -43,7 +62,8 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 
 エラーが発生した場合、例えばプロパティが書き込み不可の場合は、 {{jsxref("TypeError")}} が発生しますが、エラーが発生する前にプロパティが追加される場合、 `target` オブジェクトが変更されることがあります。
 
-> **メモ:** `Object.assign()` はコピー元の値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} でも例外を発生させません。
+> [!NOTE]
+> `Object.assign()` はコピー元の値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} でも例外を発生させません。
 
 ## 例
 
@@ -155,6 +175,19 @@ const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // プリミティブ値はラップされ、 null と undefined は無視される
 // なお、文字列をラップした時だけ、直接所有で列挙可能なプロパティが存在する
 console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+
+// プリミティブ型をターゲットとして扱う場合も、オブジェクトでラップする
+const number = Object.assign(3, { a: 1 });
+console.log(number); // Number {3, a: 1}
+console.log(typeof number); // object
+console.log(number.a); // 1
+
+// null と undefined を対象として指定すると TypeError が発生します。
+try {
+  Object.assign(null, { a: 1 });
+} catch (e) {
+  console.log(e.message); // "Cannot convert undefined or null to object"
+}
 ```
 
 ### 例外が発生すると実行中のコピー作業が中断される
@@ -227,6 +260,7 @@ console.log(copy);
 ## 関連情報
 
 - [`Object.assign` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object) で利用できます
+- [es-shims による `Object.assign` のポリフィル](https://www.npmjs.com/package/object.assign)
 - {{jsxref("Object.defineProperties()")}}
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [オブジェクトリテラルでのスプレッド構文の使用](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

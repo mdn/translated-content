@@ -3,11 +3,9 @@ title: Botones
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}
 
-Este es el **paso 15** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Workflows/2D_Breakout_game_Phaser). Puedes encontrar el código fuente como debería quedar después de completar el tutorial en [Gamedev-Phaser-Content-Kit/demos/lesson15.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html).
+Este es el **paso 15** de 16 del tutorial [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente como debería quedar después de completar el tutorial en [Gamedev-Phaser-Content-Kit/demos/lesson15.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html).
 
 En lugar de comenzar el juego de inmediato, podemos dejar la decisión en el jugador añadiendo un botón de Inicio que pueda pulsar. Vamos a investigar cómo hacerlo.
 

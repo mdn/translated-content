@@ -2,16 +2,30 @@
 title: async function* 式
 slug: Web/JavaScript/Reference/Operators/async_function*
 l10n:
-  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`async function*`** キーワードは、式の内部で非同期ジェネレーター関数を定義するために使用できます。
 
 また、 [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*) を使って非同期ジェネレーター関数を定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: async function* 式", "taller")}}
+
+```js interactive-example
+async function joinAll(generator) {
+  let str = "";
+  for await (const val of generator()) {
+    str += val;
+  }
+  return str;
+}
+joinAll(async function* () {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}).then((str) => console.log(str));
+// 予想される結果: "abc"
+```
 
 ## 構文
 
@@ -37,7 +51,8 @@ async function* name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **メモ:** [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement) は、 [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)との曖昧さを避けるために、キーワード `async function` で始めることはできません。 `async function` キーワードは、文を受け付けないコンテキストに現れたときのみ、式を開始します。
+> [!NOTE]
+> [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement) は、 [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)との曖昧さを避けるために、キーワード `async function` で始めることはできません。 `async function` キーワードは、文を受け付けないコンテキストに現れたときのみ、式を開始します。
 
 ### 引数
 
@@ -54,7 +69,7 @@ async function* name(param0, param1, /* …, */ paramN) {
 
 ## 例
 
-### async function\* の使用
+### async function\* 式の使用
 
 次の例では、無名の非同期ジェネレーター関数を定義し、それを `x` に代入しています。この関数は引数の2乗を返します。
 
@@ -77,9 +92,10 @@ x(6)
 
 ## 関連情報
 
+- [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("AsyncGeneratorFunction")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Functions", "Functions", "", 1)}}

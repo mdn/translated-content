@@ -180,7 +180,7 @@ El valor de la propiedad `origin` del evento despachado no se ve afectado por el
 
 Para nombres de host IDN solamente, el valor de la propiedad `origin` no es consistentemente Unicode o punycode; para una mayor compatibilidad, verifica tanto los valores IDN como punycode cuando uses esta propiedad si esperas mensajes de sitios IDN. Este valor eventualmente será consistentemente IDN, pero por ahora debes manejar ambas formas, IDN y punycode.
 
-El valor de la propiedad `origin` cuando la ventana que envía contiene una URL [`javascript:`](/es/docs/Web/URI/Schemes/javascript) o [`data:`](/es/docs/Web/URI/Schemes/data) es el origen del script que cargó la URL.
+El valor de la propiedad `origin` cuando la ventana que envía contiene una URL [`javascript:`](/es/docs/Web/URI/Schemes/javascript) o [`data:`](/es/docs/Web/URI/Reference/Schemes/data) es el origen del script que cargó la URL.
 
 ### Uso de window\.postMessage en extensiones {{Non-standard_inline}}
 

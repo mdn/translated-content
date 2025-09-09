@@ -18,7 +18,7 @@ sel.addRange(range)
 ### Parámetros
 
 - _`range`_
-  - : Un objeto [range](/es/DOM/range) que será añadido a la selección.
+  - : Un objeto [range](/es/docs/Web/API/Range) que será añadido a la selección.
 
 ### Ejemplos
 

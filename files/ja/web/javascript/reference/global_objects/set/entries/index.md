@@ -1,15 +1,28 @@
 ---
 title: Set.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`entries()`** は {{jsxref("Set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。これは **`[value, value]` の配列**の形で集合の各要素を挿入順に返します。 `Set` オブジェクトは、`Map` オブジェクトのように `key` を持つことはありません。しかしながら、`Map` オブジェクトと似た API をもつために、それぞれの項目は _key_ と _value_ に対して同じ値を持ちます。そのため、配列 `[value, value]` が返されます。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.entries()")}}
+
+```js interactive-example
+const set = new Set();
+set.add(42);
+set.add("forty two");
+
+const iterator = set.entries();
+
+for (const entry of iterator) {
+  console.log(entry);
+  // 予想される結果: Array [42, 42]
+  // 予想される結果: Array ["forty two", "forty two"]
+}
+```
 
 ## 構文
 

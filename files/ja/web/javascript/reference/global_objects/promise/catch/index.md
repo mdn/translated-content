@@ -1,40 +1,48 @@
 ---
 title: Promise.prototype.catch()
+short-title: catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`catch()`** は {{jsxref("Promise")}} インスタンスのメソッドで、プロミスが拒否されたときに呼び出される関数をスケジュールします。これは即座に同等の {{jsxref("Promise")}} オブジェクトを返すので、他のプロミスのメソッドを[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)して呼び出すことができます。これは {{jsxref("Promise/then", "then(undefined, onRejected)")}} の省略形です。
 
-**`catch()`** は {{jsxref("Promise")}} オブジェクトのメソッドで、プロミスが拒否されたときに呼び出される関数をスケジュールします。これは即座に同等の {{jsxref("Promise")}} オブジェクトを返すので、他のプロミスのメソッドを[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#chaining) して呼び出すことができます。これは {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}} の省略形です。
+{{InteractiveExample("JavaScript デモ: Promise.catch()")}}
 
-{{EmbedInteractiveExample("pages/js/promise-catch.html")}}
+```js interactive-example
+const promise = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise.catch((error) => {
+  console.error(error);
+});
+// 予想される結果: Error: Uh-oh!
+```
 
 ## 構文
 
 ```js-nolint
-catch(onRejected)
-
-catch((reason) => {
-  // 拒否ハンドラー
-})
+promiseInstance.catch(onRejected)
 ```
 
 ### 引数
 
 - `onRejected`
-  - : `Promise` が拒否された時に呼び出される {{jsxref("Function")}} です。この関数は 1 つの引数、 _拒否された理由_ を取ります。
+  - : このプロミスが拒否されたときに非同期的に実行される関数。その返値は、`catch()` によって返されるプロミスの履行値になります。この関数は、次の引数で呼び出されます。
+    - `reason`
+      - : プロミスが拒否された値。
 
 ### 返値
 
-新しい {{jsxref("Promise")}} を返します。この新しいプロミスは、現在のプロミスの状態に関係なく、返すときには常に待機状態です。`onRejected` がエラーを発生させるか、それ自身が拒否されたプロミスを返す場合、最終的に拒否されます。そうでなければ、最終的に履行されます。
+新しい {{jsxref("Promise")}} を返します。この新しいプロミスは、現在のプロミスの状態に関係なく、返すときには常に待機状態です。 `onRejected` が呼び出された場合、返されたプロミスは、この呼び出しの返値に基づいて解決されるか、この呼び出しから発生したエラーで拒否されます。現在のプロミスが履行された場合、 `onRejected` は呼び出されず、返されたプロミスは同じ値で履行されます。
 
 ## 解説
 
 `catch` メソッドは複合したプロミスの複合のエラー処理に使用されます。これは {{jsxref("Promise")}} を返すので、姉妹メソッドである {{jsxref("Promise/then", "then()")}} と同様の方法で[連鎖が可能](/ja/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch)です。
 
-もしプロミスが拒否され、呼び出すべき拒否ハンドラーがない場合（ハンドラーは {{jsxref("Promise/then", "then()")}}, {{jsxref("Promise/catch", "catch()")}}, {{jsxref("Promise/finally", "finally()")}} のいずれかを通して装着されます）、拒否イベントはホストから表面化されます。ブラウザーでは、これは [`unhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event) イベントとして発生します。もし、拒否されたプロミスにハンドラーが装着され、その拒否がすでに `unhandledrejection` イベントを発生していた場合、別の [`rejectionhandled`](/ja/docs/Web/API/Window/rejectionhandled_event) イベントが発行されます。
+もしプロミスが拒否され、呼び出すべき拒否ハンドラーがない場合（ハンドラーは {{jsxref("Promise/then", "then()")}}, `catch()`, {{jsxref("Promise/finally", "finally()")}} のいずれかを通して装着されます）、拒否イベントはホストから表面化されます。ブラウザーでは、これは [`unhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event) イベントとして発生します。もし、拒否されたプロミスにハンドラーが装着され、その拒否がすでに `unhandledrejection` イベントを発生していた場合、別の [`rejectionhandled`](/ja/docs/Web/API/Window/rejectionhandled_event) イベントが発行されます。
 
 `catch()` は内部的に、呼び出されたオブジェクトに対して `then()` を呼び出し、引数として `undefined` と `onRejected` を渡します。その呼び出された値がそのまま返されます。これは、メソッドをラップすればオブザーバーで監視することができます。
 
@@ -86,20 +94,20 @@ p1.then((value) => {
     console.error(e.message); // "oh, no!"
   })
   .then(
-    () => console.log("after a catch the chain is restored"),
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
     () => console.log("Not fired due to the catch"),
   );
 
 // 以下は、上記と同様に動作します
 p1.then((value) => {
   console.log(value); // "Success!"
-  return Promise.reject("oh, no!");
+  return Promise.reject(new Error("oh, no!"));
 })
   .catch((e) => {
-    console.error(e); // "oh, no!"
+    console.error(e); // Error: oh, no!
   })
   .then(
-    () => console.log("after a catch the chain is restored"),
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
     () => console.log("Not fired due to the catch"),
   );
 ```

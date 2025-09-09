@@ -22,5 +22,5 @@ Tous les principaux {{Glossary("Navigateur","navigateurs")}} prennent maintenant
 
 ### Article technique
 
-- [WebGL sur MDN](/fr/docs/Web/WebGL)
+- [WebGL sur MDN](/fr/docs/Web/API/WebGL_API)
 - [Tableau du support WebGL](http://caniuse.com/#feat=webgl)

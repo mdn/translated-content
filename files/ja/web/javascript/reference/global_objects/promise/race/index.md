@@ -1,15 +1,30 @@
 ---
 title: Promise.race()
+short-title: race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Promise.race()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを受け取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、最初に決定したプロミスの最終的な状態で決定されます。
 
-{{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Promise.race()", "taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, "one");
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // 両方とも解決されるが、promise2 の方が先
+});
+// 予想される結果: "two"
+```
 
 ## 構文
 
@@ -46,9 +61,9 @@ function sleep(time, value, state) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === "fulfill") {
-        return resolve(value);
+        resolve(value);
       } else {
-        return reject(new Error(value));
+        reject(new Error(value));
       }
     }, time);
   });
@@ -196,7 +211,9 @@ function promiseState(promise) {
 ```js
 const p1 = new Promise((res) => setTimeout(() => res(100), 100));
 const p2 = new Promise((res) => setTimeout(() => res(200), 200));
-const p3 = new Promise((res, rej) => setTimeout(() => rej(300), 100));
+const p3 = new Promise((res, rej) =>
+  setTimeout(() => rej(new Error("失敗")), 100),
+);
 
 async function getStates() {
   console.log(await promiseState(p1));
@@ -219,10 +236,11 @@ setTimeout(() => {
 // After waiting for 100ms:
 // { status: 'fulfilled', value: 100 }
 // { status: 'pending' }
-// { status: 'rejected', reason: 300 }
+// { status: 'rejected', reason: Error: failed }
 ```
 
-> **メモ:** `promiseState` 関数は非同期で実行されます。プロミスの値を同期的に取得する方法がないからです（つまり、 `then()` や `await` がない場合）、たとえプロミスが既に決定されていたとしてもです。しかし、`promiseState()` は常に 1 ティック以内に履行され、実際にプロミスの決定を待つことはありません。
+> [!NOTE]
+> `promiseState` 関数は非同期で実行されます。プロミスの値を同期的に取得する方法がないからです（つまり、 `then()` や `await` がない場合）、たとえプロミスが既に決定されていたとしてもです。しかし、`promiseState()` は常に 1 ティック以内に履行され、実際にプロミスの決定を待つことはありません。
 
 ### Promise.any() との比較
 

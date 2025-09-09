@@ -23,13 +23,13 @@ _このインターフェイスには {{domxref("HTMLElement")}} から継承し
 - {{domxref("HTMLTemplateElement.content", "content")}} {{ReadOnlyInline}}
   - : 読み取り専用の {{domxref("DocumentFragment")}} で、 {{HTMLElement("template")}} 要素のテンプレートの内容を表す DOM サブツリーを返します。
 - {{domxref("HTMLTemplateElement.shadowRootMode", "shadowRootMode")}}
-  - : 文字列で、関連付けられた `<template>` 要素の [`shadowrootmode`](/ja/docs/Web/HTML/Element/template#shadowrootmode) 属性の値を反映します。
+  - : 文字列で、関連付けられた `<template>` 要素の [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性の値を反映します。
 - {{domxref("HTMLTemplateElement.shadowRootDelegatesFocus", "shadowRootDelegatesFocus")}}
-  - : 論理値で、関連付けられた `<template>` 要素の [`shadowrootdelegatesfocus`](/ja/docs/Web/HTML/Element/template#shadowrootdelegatesfocus) 属性の値を反映します。
+  - : 論理値で、関連付けられた `<template>` 要素の [`shadowrootdelegatesfocus`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootdelegatesfocus) 属性の値を反映します。
 - {{domxref("HTMLTemplateElement.shadowRootClonable", "shadowRootClonable")}}
-  - : 論理値で、関連付けられた `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Element/template#shadowrootclonable) 属性の値を反映します。
+  - : 論理値で、関連付けられた `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性の値を反映します。
 - {{domxref("HTMLTemplateElement.shadowRootSerializable", "shadowRootSerializable")}}
-  - : 論理値で、関連付けられた `<template>` 要素の [`shadowrootserializable`](/ja/docs/Web/HTML/Element/template#shadowrootserializable) 属性の値を反映します。
+  - : 論理値で、関連付けられた `<template>` 要素の [`shadowrootserializable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) 属性の値を反映します。
 
 ## インスタンスメソッド
 

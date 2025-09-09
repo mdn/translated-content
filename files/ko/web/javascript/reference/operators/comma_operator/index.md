@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Comma_operator
 
 **쉼표 연산자**는 각각의 피연산자를 왼쪽에서 오른쪽 순서로 평가하고, 마지막 연산자의 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}
+
+```js interactive-example
+let x = 1;
+
+x = (x++, x);
+
+console.log(x);
+// Expected output: 2
+
+x = (2, 3);
+
+console.log(x);
+// Expected output: 3
+```
 
 ## 구문
 
@@ -38,12 +52,12 @@ for (let i = 0, j = 9; i <= 9; i++, j--) {
 }
 ```
 
-쉼표 연산자를 할당에 사용하면, 할당 연산이 표현식에 포함되지 않아 예상한 결과와는 다소 다를 수 있습니다. 다음 예제에서, `a`는 `b = 3`의 값(3)을 할당받지만, `c = 4` 표현식 역시 평가되어 콘솔에 기록됩니다. [연산자 우선순위와 결합성](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) 때문입니다.
+쉼표 연산자를 할당에 사용하면, 할당 연산이 표현식에 포함되지 않아 예상한 결과와는 다소 다를 수 있습니다. 다음 예제에서, `a`는 `b = 3`의 값(3)을 할당받지만, `c = 4` 표현식 역시 평가되어 콘솔에 기록됩니다. [연산자 우선순위와 결합성](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence) 때문입니다.
 
 ```js
 var a, b, c;
 
-(a = b = 3), (c = 4); // 콘솔에는 4를 반환
+((a = b = 3), (c = 4)); // 콘솔에는 4를 반환
 console.log(a); // 3 (제일 왼쪽)
 
 var x, y, z;
@@ -60,7 +74,7 @@ console.log(x); // 6 (제일 오른쪽)
 function myFunc() {
   var x = 0;
 
-  return (x += 1), x; // ++x 와 같은 효과
+  return ((x += 1), x); // ++x 와 같은 효과
 }
 ```
 

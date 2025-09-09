@@ -3,8 +3,6 @@ title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 7 は 2011 年 9 月 27 日にリリースされました。このページは Firefox 7 のリリースにあたり、開発者に関係する変更についてまとめたものです。
 
 ## ウェブ開発者向けの変更点一覧
@@ -14,8 +12,8 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - {{ domxref("HTMLHeadElement") }} の `profile` プロパティが削除されました。このプロパティは Gecko 2.0 から非推奨となっていました。
 - {{ domxref("HTMLImageElement") }} の `x` プロパティと `y` プロパティが削除されました。
 - {{ domxref("HTMLSelectElement") }} の `add()` メソッドの `before` 引数が optional となりました。
-- {{ HTMLElement("body") }} の [`background`](/ja/docs/Web/HTML/Element/body#background) 属性が URI として解決されなくなりました。この変更は HTML 仕様への準拠によるものです。
-- {{ HTMLElement("option") }} の [`label`](/ja/docs/Web/HTML/Element/option#label) 属性が指定されていない場合、要素の内容テキストを反映するようになりました。
+- {{ HTMLElement("body") }} の [`background`](/ja/docs/Web/HTML/Reference/Elements/body#background) 属性が URI として解決されなくなりました。この変更は HTML 仕様への準拠によるものです。
+- {{ HTMLElement("option") }} の [`label`](/ja/docs/Web/HTML/Reference/Elements/option#label) 属性が指定されていない場合、要素の内容テキストを反映するようになりました。
 
 #### Canvas
 
@@ -27,7 +25,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - `toDataURL()` が JPEG の品質を制御する引数を受け付けるようになりました。
 - `globalCompositeOperation` の値から、非標準だった `clear` と `over` が削除されました。
 - [影](/ja/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows) が `source-over` 合成処理の場合にのみ描画されるようになりました。
-- Canvas の塗りつぶし方を設定する [`mozFillRule`](/ja/docs/DOM/CanvasRenderingContext2D#Attributes) アトリビュートが追加されました。
+- Canvas の塗りつぶし方を設定する [`mozFillRule`](/ja/docs/Web/API/CanvasRenderingContext2D#attributes) アトリビュートが追加されました。
 
 ### CSS
 
@@ -39,7 +37,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - XLink href が復活し、また MathML3 の `href` 属性もサポートされました。リンクには後者の属性を使うことが望まれます。
 - {{ MathMLElement("mpadded") }} 要素に `voffset` 属性のサポートが追加されました。また `lspace` 属性の挙動も修正されました。
 - トップレベル要素である {{ MathMLElement("math") }} 要素が {{ MathMLElement("mstyle") }} 要素のもつ属性すべてを受け入れるようになりました。
-- [Asana Math](http://www.ctan.org/tex-archive/fonts/Asana-Math/) フォントのサポートが追加されました。
+- [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/) フォントのサポートが追加されました。
 - {{ MathMLElement("mfrac") }} 要素によって表される分数の線の太さ `medium` が修正され、規定の太さになりました。
 - [負のスペースを表すキーワード](</ja/docs/MathML/Attributes/Values#Constants_(namedspaces)> "MathML/Attributes/Values#Constants_(namedspaces)") がサポートされました。
 
@@ -54,13 +52,13 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - `index` が範囲外の場合、{{ domxref("DOMTokenList.item") }} が `undefined` を返すようになりました。これまでは `null` を返していました。
 - `Node.getFeature` が削除されました。
 - `HTMLInsElement` インターフェイスと `HTMLDelElement` インターフェイスが削除されました。これは {{ HTMLElement("ins") }} と {{ HTMLElement("del") }} 要素が実際には {{ domxref("HTMLModElement") }} を使用していたためです。
-- 新しい [DOM4](http://www.w3.org/TR/dom/) 仕様にある {{ domxref("Attr") }} が {{ domxref("Node") }} を継承しない (DOM Core 1, 2, 3 まではしていた) という定義に準拠するため、{{ domxref("Attr") }} インターフェイス上の {{ domxref("Node") }} プロパティやメソッドについて、将来的にこれらを削除するといった意味の [警告を出す](/ja/docs/DOM/Attr#Deprecated_properties_and_methods) ようになりました。
+- 新しい [DOM4](https://www.w3.org/TR/dom/) 仕様にある {{ domxref("Attr") }} が {{ domxref("Node") }} を継承しない (DOM Core 1, 2, 3 まではしていた) という定義に準拠するため、{{ domxref("Attr") }} インターフェイス上の {{ domxref("Node") }} プロパティやメソッドについて、将来的にこれらを削除するといった意味の [警告を出す](/ja/docs/Web/API/Attr#deprecated_properties_and_methods) ようになりました。
 - {{ domxref("Window") }} オブジェクトに {{ domxref("window.ondeviceorientation") }} プロパティと {{ domxref("window.ondevicemotion") }} プロパティのサポートを追加しました。
 - {{ domxref("window.resizeTo") }}、{{ domxref("window.resizeBy") }}、{{ domxref("window.moveTo") }}、{{ domxref("window.moveBy") }} はメインウィンドウに適用されなくなりました。
 
 ### JavaScript
 
-- [`Function.arity`](/ja/docs/JavaScript/Reference/Global_Objects/Function/arity) プロパティが削除されました。今後は [`Function.length`](/ja/docs/JavaScript/Reference/Global_Objects/Function/length) を利用してください。
+- [`Function.arity`](/ja/docs/JavaScript/Reference/Global_Objects/Function/arity) プロパティが削除されました。今後は [`Function.length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/length) を利用してください。
 
 ### WebSocket
 
@@ -70,19 +68,19 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 
 ### Console API
 
-- [web console](/ja/docs/Using_the_Web_Console) が開かれる前に `console.log` によって記録されたメッセージもあらかじめ記録され、[web console](/ja/docs/Using_the_Web_Console) が開かれた時に表示されるようになりました。
+- [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) が開かれる前に `console.log` によって記録されたメッセージもあらかじめ記録され、[web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) が開かれた時に表示されるようになりました。
 
 ### Web Timing
 
-- [Navigation Timing](http://www.w3.org/TR/navigation-timing/) 仕様の初期実装が完了しました。
+- [Navigation Timing](https://www.w3.org/TR/navigation-timing/) 仕様の初期実装が完了しました。
 
 ### XML
 
-- XSLT スタイルシートはこれまでサポートされていた `text/xsl` に加えて、正式な `MIME` 型 `application/xslt+xml` も利用可能になりました。(スタイルシート処理命令もしくは [HTTP Link ヘッダー](http://tools.ietf.org/html/rfc5988)で利用できます。)
+- XSLT スタイルシートはこれまでサポートされていた `text/xsl` に加えて、正式な `MIME` 型 `application/xslt+xml` も利用可能になりました。(スタイルシート処理命令もしくは [HTTP Link ヘッダー](https://tools.ietf.org/html/rfc5988)で利用できます。)
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
 
-これらの変更は、アドオン開発者と、Mozilla 本体のコードに関わっている開発者の双方に影響するものです。アドオン開発者は [アドオンの Firefox 7 対応](/ja/docs/Firefox/Updating_extensions_for_Firefox_7) に書かれている追加情報も参照してください。
+これらの変更は、アドオン開発者と、Mozilla 本体のコードに関わっている開発者の双方に影響するものです。アドオン開発者は [アドオンの Firefox 7 対応](/ja/docs/Mozilla/Firefox/Updating_extensions_for_Firefox_7) に書かれている追加情報も参照してください。
 
 > [!NOTE]
 > Firefox 7 では、従来のメジャーリリースと同様に、バイナリーコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリーインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
@@ -119,7 +117,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 
 ### インターフェイスの変更
 
-- [`nsISocketTransport`](/ja/docs/XPCOM_Interface_Reference/nsISocketTransport) に新しい接続フラグ `DISABLE_IPV6` が追加されました。これは、利用可能な IPv6 アドレスがあってもそれを無視して、IPv4 アドレスのみに接続するようソケットを設定するものです。また、[`nsIDNSService`](/ja/docs/XPCOM_Interface_Reference/nsIDNSService) に新しい解決フラグ `RESOLVE_DISABLE_IPV6` が追加されました。これは、利用可能な IPv6 アドレスがあってもそれを無視して、IPv4 ホストのみを考慮してドメイン名解決を行うものです。これらの変更は、IPv4 と IPv6 の両方に対応している (その中でも特に IPv6 接続がうまくいかない) ホストへ接続する際の応答時間を短縮する [「幸せな目玉」戦略](http://tools.ietf.org/html/draft-wing-http-new-tech-00) を実装するために使われます。
+- [`nsISocketTransport`](/ja/docs/XPCOM_Interface_Reference/nsISocketTransport) に新しい接続フラグ `DISABLE_IPV6` が追加されました。これは、利用可能な IPv6 アドレスがあってもそれを無視して、IPv4 アドレスのみに接続するようソケットを設定するものです。また、[`nsIDNSService`](/ja/docs/XPCOM_Interface_Reference/nsIDNSService) に新しい解決フラグ `RESOLVE_DISABLE_IPV6` が追加されました。これは、利用可能な IPv6 アドレスがあってもそれを無視して、IPv4 ホストのみを考慮してドメイン名解決を行うものです。これらの変更は、IPv4 と IPv6 の両方に対応している (その中でも特に IPv6 接続がうまくいかない) ホストへ接続する際の応答時間を短縮する [「幸せな目玉」戦略](https://tools.ietf.org/html/draft-wing-http-new-tech-00) を実装するために使われます。
 - [`inIDOMUtils`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils) に 2 つのメソッドが追加されました。あるノードの子ノード一覧を返す [`getChildrenForNode()`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils#getChildrenForNode%28%29) と、選択範囲内で使用されているフォントフェイス一覧を返す [`getUsedFontFaces()`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils#getUsedFontFaces%28%29) です。
 - `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` インターフェイスは [`nsIMarkupDocumentViewer`](/ja/docs/XPCOM_Interface_Reference/nsIMarkupDocumentViewer) インターフェイスへ統合されました。
 - `nsIDOMWindow2` インターフェイスは [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インターフェイスへ統合されました。

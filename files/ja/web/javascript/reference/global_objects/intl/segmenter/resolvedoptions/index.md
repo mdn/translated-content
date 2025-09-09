@@ -9,7 +9,18 @@ l10n:
 
 **`Intl.Segmenter.prototype.resolvedOptions()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.Segmenter.prototype.resolvedOptions")}}
+
+```js interactive-example
+const segmenter1 = new Intl.Segmenter("fr-FR");
+const options1 = segmenter1.resolvedOptions();
+
+console.log(options1.locale);
+// Expected output: "fr-FR"
+
+console.log(options1.granularity);
+// Expected output: "grapheme"
+```
 
 ## 構文
 

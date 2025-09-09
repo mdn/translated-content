@@ -27,7 +27,7 @@ let arr = [element0, element1, ..., elementN]
 
 `element0, element1, ..., elementN` es una lista de valores para los elementos del arreglo. Cuando se especifican estos valores, el arreglo se inicia con ellos como elementos del arreglo. La propiedad `length` del arreglo se establece en el número de argumentos.
 
-La sintaxis de corchetes se denomina "arreglo literal" o "iniciador de arreglo". Es más corto que otras formas de creación de arreglos, por lo que generalmente se prefiere. Consulta [Arreglos literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Arreglos_literales) para obtener más detalles.
+La sintaxis de corchetes se denomina "arreglo literal" o "iniciador de arreglo". Es más corto que otras formas de creación de arreglos, por lo que generalmente se prefiere. Consulta [Arreglos literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#arreglos_literales) para obtener más detalles.
 
 Para crear un arreglo con una longitud distinta de cero, pero sin ningún elemento, se puede utilizar cualquiera de las siguientes:
 
@@ -87,7 +87,7 @@ let wisenArray = Array.of(9.3); // wisenArray contiene solo un elemento 9.3
 
 ### Refiriéndose a elementos del arreglo
 
-Dado que los elementos también son propiedades, puedes acceder a ellos usando la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors). Supongamos que defines el siguiente arreglo:
+Dado que los elementos también son propiedades, puedes acceder a ellos usando la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors). Supongamos que defines el siguiente arreglo:
 
 ```js
 let myArray = ["Wind", "Rain", "Fire"];
@@ -96,7 +96,7 @@ let myArray = ["Wind", "Rain", "Fire"];
 Puedes referirte al primer elemento del arreglo como `myArray[0]`, al segundo elemento del arreglo como `myArray[1]`, etc… El índice de los elementos comienza en cero.
 
 > [!NOTE]
-> También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para acceder a otras propiedades del arreglo, como con un objeto.
+> También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors) para acceder a otras propiedades del arreglo, como con un objeto.
 >
 > ```js
 > let arr = ["one", "two", "three"];
@@ -176,7 +176,7 @@ for (let i = 0; i < colors.length; i++) {
 }
 ```
 
-Si sabes que ninguno de los elementos de tu arreglo se evalúa como `false` en un contexto booleano, si tu arreglo consta solo de nodos [DOM](/es/docs/DOM), por ejemplo, puedes usar un lenguaje eficiente:
+Si sabes que ninguno de los elementos de tu arreglo se evalúa como `false` en un contexto booleano, si tu arreglo consta solo de nodos [DOM](/es/docs/Web/API/Document_Object_Model), por ejemplo, puedes usar un lenguaje eficiente:
 
 ```js
 let divs = document.getElementsByTagName("div");
@@ -484,7 +484,7 @@ console.log(arr.property); // Registra "value"
 
 ### Arreglos y expresiones regulares
 
-Cuando un arreglo es el resultado de una coincidencia entre una expresión regular y una cadena, el arreglo devuelve propiedades y elementos que proporcionan información sobre la coincidencia. Un arreglo es el valor de retorno de {{jsxref("Global_Objects/RegExp/exec", "RegExp.exec()")}}, {{jsxref("Global_Objects/String/match", "String.match()")}} y {{jsxref("Global_Objects/String/split", "String.split()")}}. Para obtener información sobre el uso de arreglos con expresiones regulares, consulta [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions).
+Cuando un arreglo es el resultado de una coincidencia entre una expresión regular y una cadena, el arreglo devuelve propiedades y elementos que proporcionan información sobre la coincidencia. Un arreglo es el valor de retorno de {{jsxref("Global_Objects/RegExp/exec", "RegExp.exec()")}}, {{jsxref("Global_Objects/String/match", "String.match()")}} y {{jsxref("Global_Objects/String/split", "String.split()")}}. Para obtener información sobre el uso de arreglos con expresiones regulares, consulta [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ### Trabajar con objetos tipo array
 
@@ -521,7 +521,7 @@ Array.prototype.forEach.call("a string", function (chr) {
 
 ## Arrays tipados
 
-[Los arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Typed_arrays) son objetos similares a arreglos y proporcionan un mecanismo para acceder a datos binarios sin procesar. Como ya sabes, los objetos {{jsxref("Array")}} crecen y se encogen dinámicamente y pueden tener cualquier valor de JavaScript. Los motores de JavaScript realizan optimizaciones para que estos arreglos sean rápidos. Sin embargo, a medida que las aplicaciones web se vuelven cada vez más poderosas, agregando características como manipulación de audio y video, acceso a datos sin procesar usando [WebSockets](/es/docs/WebSockets), y así sucesivamente, ha quedado claro que hay momentos en los que sería útil para que el código JavaScript pueda manipular rápida y fácilmente datos binarios sin procesar en arreglos tipados.
+[Los arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) son objetos similares a arreglos y proporcionan un mecanismo para acceder a datos binarios sin procesar. Como ya sabes, los objetos {{jsxref("Array")}} crecen y se encogen dinámicamente y pueden tener cualquier valor de JavaScript. Los motores de JavaScript realizan optimizaciones para que estos arreglos sean rápidos. Sin embargo, a medida que las aplicaciones web se vuelven cada vez más poderosas, agregando características como manipulación de audio y video, acceso a datos sin procesar usando [WebSockets](/es/docs/Web/API/WebSockets_API), y así sucesivamente, ha quedado claro que hay momentos en los que sería útil para que el código JavaScript pueda manipular rápida y fácilmente datos binarios sin procesar en arreglos tipados.
 
 ### Búferes y vistas: arquitectura de los arreglos con tipo
 
@@ -551,6 +551,6 @@ Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vi
 | {{jsxref("BigInt64Array")}}     | `-263` a `263-1`               | 8               | Dos enteros complementarios de 64 bits con signo                                                 | `bigint`                   | `int64_t (long long con signo)`  |
 | {{jsxref("BigUint64Array")}}    | `0` a `264-1`                  | 8               | Entero de 64 bits sin signo                                                                      | `bigint`                   | `uint64_t (long long sin signo)` |
 
-Para obtener más información, consulta [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Typed_arrays) y la documentación de referencia para los diferentes objetos {{jsxref("TypedArray")}}.
+Para obtener más información, consulta [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) y la documentación de referencia para los diferentes objetos {{jsxref("TypedArray")}}.
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

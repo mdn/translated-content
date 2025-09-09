@@ -2,14 +2,31 @@
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Objects")}}
 
 **`parseInt()`** 関数は、文字列の引数を解釈し、指定された[基数](https://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0) （数学的記数法の底）の整数値を返します。
 
-{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}
+{{InteractiveExample("JavaScript デモ: parseInt()")}}
+
+```js interactive-example
+console.log(parseInt("123"));
+// 123 (default base-10)
+console.log(parseInt("123", 10));
+// 123 (explicitly specify base-10)
+console.log(parseInt("   123 "));
+// 123 (whitespace is ignored)
+console.log(parseInt("077"));
+// 77 (leading zeros are ignored)
+console.log(parseInt("1.9"));
+// 1 (decimal part is truncated)
+console.log(parseInt("ff", 16));
+// 255 (lower-case hexadecimal)
+console.log(parseInt("0xFF", 16));
+// 255 (upper-case hexadecimal with "0x" prefix)
+console.log(parseInt("xyz"));
+// NaN (input can't be converted to an integer)
+```
 
 ## 構文
 
@@ -23,7 +40,6 @@ parseInt(string, radix)
 - `string`
   - : 整数で始まる文字列です。この引数では先頭の{{Glossary("whitespace", "ホワイトスペース")}}は無視されます。
 - `radix` {{optional_inline}}
-
   - : `2` から `36` までの整数で、`string` の*基数*（数学的記数法の底）を表します。これは [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion)に変換されます。変換後にそれが 0 でなく、 \[2, 36] の範囲外であった場合、この関数は常に `NaN` を返します。`0` または指定されなかった場合、基数は `string` の値に基づいて推測されます。既定で常に `10` になるわけではありません。[下記の解説](#解説)では、 `radix` が提供されなかった場合に何が起こるかをもっと詳細に説明しています。
 
 ### 返値
@@ -58,7 +74,7 @@ parseInt(string, radix)
 
 `parseInt` は 2 つの符号を正確に理解します。`+` は正の符号で、`-` は負の符号です。これは解釈の最初の段階で、ホワイトスペースを除去した後に行われます。符号が見つからなかった場合は、アルゴリズムは次の段階に移行します。そうでなければ、符号を取り除いて残りの文字列の数値の解釈を実行します。
 
-もし `parseInt` が `radix` で指定された基数に含まれる数字以外の文字に遭遇した場合、その文字とそれに続くすべての文字を無視し、この点まで解釈できた整数値を返します。例えば、 `1e3` は技術的には整数をエンコードしたものですが、（そして [`parseFloat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) では正しく `1000` と解釈されますが）、 `parseInt("1e3", 10)` は `1` を返します。 `e` は基数 10 の有効な数字ではないからです。 `.` も数字ではないので、返値は常に整数になります。
+`parseInt` は、入力文字列の中で、指定された `radix` で有効な数字ではない文字を見つけた場合、その文字とそれ以降のすべての文字を無視し、その時点までに構文解析した整数値返します。例えば、`parseInt("2", 2)` は、`2` は 2 進数では有効な数字ではないため、`NaN` を返します。例えば、 `1e3` は技術的には整数をエンコードしたものですが、（そして [`parseFloat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) では正しく `1000` と解釈されますが）、 `parseInt("1e3", 10)` は `1` を返します。 `e` は基数 10 の有効な数字ではないからです。 `.` も数字ではないので、返値は常に整数になります。
 
 最初の文字が使用している基数で数字に変換できなかった場合は、 `parseInt` は `NaN` を返します。先頭のホワイトスペースは許容されます。
 

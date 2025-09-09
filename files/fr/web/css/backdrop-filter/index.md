@@ -44,7 +44,7 @@ backdrop-filter: unset;
 - `none`
   - : Un mot-clé qui indique qu'aucun filtre n'est appliqué sur l'ombre portée.
 - `<filter-function-list>`
-  - : Une liste de fonctions de filtre (cf. [`<filter-function>`](/fr/docs/Web/CSS/filter-function)), séparées par des espaces et qui seront appliquées à l'ombre. On peut également utiliser [un filtre SVG](/fr/docs/Web/SVG/Element/filter).
+  - : Une liste de fonctions de filtre (cf. [`<filter-function>`](/fr/docs/Web/CSS/filter-function)), séparées par des espaces et qui seront appliquées à l'ombre. On peut également utiliser [un filtre SVG](/fr/docs/Web/SVG/Reference/Element/filter).
 
 ## Définition formelle
 
@@ -89,7 +89,8 @@ body {
 }
 
 body {
-  background-image: url(https://picsum.photos/id/1080/6858/4574),
+  background-image:
+    url(https://picsum.photos/id/1080/6858/4574),
     linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
   background-position: center center;
   background-repeat: no-repeat;

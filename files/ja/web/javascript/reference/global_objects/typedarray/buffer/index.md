@@ -9,7 +9,16 @@ l10n:
 
 **`buffer`** は {{jsxref("TypedArray")}} インスタンスのアクセサープロパティで、構築時点にこの型付き配列が参照する {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} を返します。
 
-{{EmbedInteractiveExample("pages/js/typedarray-buffer.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.buffer", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint16 = new Uint16Array(buffer);
+
+console.log(uint16.buffer.byteLength);
+// Expected output: 8
+```
 
 ## 解説
 

@@ -39,9 +39,7 @@ browser.find.find(
 - `queryphrase`
   - : `string`. 検索語。
 - `options`{{optional_inline}}
-
   - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
-
     - `tabId`
       - : `integer`. ID of the tab to search. Defaults to the active tab.
     - `caseSensitive`
@@ -60,13 +58,11 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 - `count`
   - : `integer`. The number of results found.
 - `rangeData`{{optional_inline}}
-
   - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. `それぞれのRangeData` は DOM ツリー構造をしています。検索語の周りを表示することなどにも使えます。
 
-    次の `rectData`, も同様に配列で `rangeData[i]` と `rectData[i]`は 1 対 1 で対応します。.
+    次の `rectData`, も同様に配列で `rangeData[i]` と `rectData[i]`は 1 対 1 で対応します。
 
     Each `RangeData` contains the following properties:
-
     - `framePos`
       - : マッチした frame 番号(訳注： iframe ごとで変わる番号). 0 は通常のページ部分で親です。 Note that the order of objects in the `rangeData` array will sequentially line up with the order of frame indexes: for example, `framePos` for the first sequence of `rangeData` objects will be 0, `framePos` for the next sequence will be 1, and so on.
     - `startTextNodePos`
@@ -79,15 +75,11 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
       - : 終端 Node 内の 終わりの文字列の位置
 
 - `rectData`{{optional_inline}}
-
-  - : `array`. 呼び出し時に`optionsで` `includeRectData` 引数を与えると結果を返します。 `RectData` objects の配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。.
+  - : `array`. 呼び出し時に`optionsで` `includeRectData` 引数を与えると結果を返します。 `RectData` objects の配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。
 
     Each `RectData` object はそれぞれ 1 つのマッチに対して 2 つのプロパティを持ちます。
-
     - `rectsAndTexts`
-
       - : 1 対 1 の関係となる２つの配列を持ちます:
-
         - `rectList`: ４つの integer をもつ配列: `top`, `left`, `bottom`, `right`. その位置情報は viewport における左上からの位置です。
         - `textList`: 上記`rectList[i]`に含まれた `textList[i]` (string)を持つ配列です。
 
@@ -96,7 +88,6 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
         ![](rects-1.png) "You may"を探すと 2 つの矩形エリアで表現されます。:
 
         ![](rects-2.png) `RectData` はこのようにマッチし、 `rectsAndTexts.rectList` と `rectsAndTexts.textList`は次のようになります。
-
         - `textList[0]` = "You ", `rectList[0]` は HTML 上の境界を表す矩形エリアを含みます。
         - `textList[1]` = "may", `rectList[1]`も"may"について同様です。
 
@@ -124,7 +115,7 @@ function found(results) {
 browser.find.find("banana").then(found);
 ```
 
-Search for "banana" across all tabs (note that this requires the "tabs" [permission](/ja/Add-ons/WebExtensions/manifest.json/permissions), because it accesses `tab.url`):
+Search for "banana" across all tabs (note that this requires the "tabs" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), because it accesses `tab.url`):
 
 ```js
 async function findInAllTabs(allTabs) {

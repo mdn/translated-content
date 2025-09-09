@@ -111,7 +111,6 @@ console.log(result); // "foo"
 ## Notas específicas do Firefox
 
 - A partir do Gecko 33, o tratamento da expressão yield foi atualizado para se conformar com a espeficação do ES2015 ([Erro do Firefox 981599](https://bugzil.la/981599)):
-
   - A restrição de linha finalizadora agora está implementada. Nenhuma linha finalizadora entre "yield" e "\*" é permitida. Código como o a seguir irá invocar uma exception {{jsxref("SyntaxError")}}:
 
     ```js
@@ -123,7 +122,7 @@ console.log(result); // "foo"
 
 ## Veja também
 
-- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

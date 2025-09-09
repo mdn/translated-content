@@ -2,7 +2,7 @@
 title: CookieStore：set() 方法
 slug: Web/API/CookieStore/set
 l10n:
-  sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
+  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
@@ -28,9 +28,7 @@ set(options)
 或
 
 - `options` {{optional_inline}}
-
   - : 一个包括以下属性的对象：
-
     - `domain` {{Optional_Inline}}
       - : 记录 cookie 域名的字符串。默认为 `null`。
     - `expires` {{Optional_Inline}}
@@ -38,19 +36,17 @@ set(options)
     - `name`
       - : 记录 cookie 名称的字符串。
     - `partitioned` {{Optional_Inline}}
-      - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅 [具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+      - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
     - `path` {{Optional_Inline}}
       - : 记录 cookie 路径的字符串。默认为 `/`。
     - `sameSite` {{Optional_Inline}}
-
-      - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
-
+      - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
         - `"strict"`
           - : Cookie 只会在第一方上下文中发送，不会与第三方网站发起的请求一起发送。
         - `"lax"`
           - : Cookie 不会在正常的跨站点子请求（例如将图像或框架加载到第三方站点）中发送，而是在用户在原始站点内导航时（即点击链接时）发送。
         - `"none"`
-          - : Cookie 将被发送至所有上下文。
+          - : Cookie 将会在所有上下文中发送。
 
     - `value`
       - : 表示 cookie 的值的字符串。

@@ -25,7 +25,7 @@ node.removeChild(child);
 
 Le nœud enfant retiré existe toujours en mémoire, mais ne fait plus partie du DOM. Avec la première syntaxe, il est possible de réutiliser ultérieurement dans le code le nœud retiré, à l'aide de la référence à l'objet `ancienEnfant`_._
 
-Avec la seconde forme montrée en exemple, aucune référence à l'objet `ancienEnfant` n'est conservée ; ainsi, en supposant que votre code n'a conservé nulle part ailleurs cette référence à ce nœud, il devient immédiatement inutilisable et irrécupérable, et sera en général [automatiquement supprimé](/fr/docs/Web/JavaScript/Gestion_de_la_mémoire) de la mémoire après un court moment.
+Avec la seconde forme montrée en exemple, aucune référence à l'objet `ancienEnfant` n'est conservée ; ainsi, en supposant que votre code n'a conservé nulle part ailleurs cette référence à ce nœud, il devient immédiatement inutilisable et irrécupérable, et sera en général [automatiquement supprimé](/fr/docs/Web/JavaScript/Guide/Memory_management) de la mémoire après un court moment.
 
 Si `child` n'est pas un enfant du nœud `element`, la méthode provoque une exception. Une exception sera aussi lancée dans le cas où le nœud `child` est bien un enfant du nœud `element` au moment de l'appel à la méthode, mais qu'il a été retiré par un gestionnaire d'évènement invoqué dans la cadre d'une tentative de suppression du nœud `element` (comme `blur`).
 
@@ -98,9 +98,9 @@ while (element.firstChild) {
 
 ## Spécifications
 
-- [DOM Level 1 Core: removeChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild) — [traduction en français](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild) (non normative)
-- [DOM Level 2 Core: removeChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-1734834066) (non normative)
-- [DOM Level 3 Core: removeChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
+- [DOM Level 1 Core: removeChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild) — [traduction en français](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild) (non normative)
+- [DOM Level 2 Core: removeChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-1734834066) (non normative)
+- [DOM Level 3 Core: removeChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
 
 ## Voir aussi
 

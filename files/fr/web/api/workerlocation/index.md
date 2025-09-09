@@ -50,4 +50,4 @@ _L'interface `WorkerLocation` n'hérite d'aucune méthode mais implémente les m
 ## Voir aussi
 
 - Autres interfaces apparentées au _Worker_: {{domxref("Worker")}}, {{domxref("WorkerNavigator")}} et {{domxref("WorkerGlobalScope")}}.
-- [Utilisation des web workers](/fr/docs/Utilisation_des_web_workers)
+- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)

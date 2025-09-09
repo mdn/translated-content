@@ -21,9 +21,7 @@ showSaveFilePicker()
 ### 매개변수
 
 - `options` {{Optional_Inline}}
-
   - : 아래의 옵션을 포함하는 객체입니다.
-
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : 기본 값 `false`인 불리언입니다.
         기본적으로 파일 선택창에는 파일 유형 필터(아래의 `type` 참고)를
@@ -39,15 +37,13 @@ showSaveFilePicker()
     - `suggestedName` {{Optional_Inline}}
       - : 추천하는 파일 이름을 지정하는 {{jsxref('String')}}입니다.
     - `types` {{Optional_Inline}}
-
       - : 저장 가능한 파일 유형들의 {{jsxref('Array')}}입니다.
         각 요소는 아래의 옵션을 포함하는 객체입니다.
-
         - `description` {{Optional_Inline}}
           - : 사용 가능한 파일 유형에 대한 설명입니다.
             기본 값은 빈 문자열입니다.
         - `accept`
-          - : 키는 [MIME 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)이고 값은 파일 확장자들의 {{jsxref('Array')}}인 {{jsxref('Object')}}입니다
+          - : 키는 [MIME 유형](/ko/docs/Web/HTTP/Guides/MIME_types/Common_types)이고 값은 파일 확장자들의 {{jsxref('Array')}}인 {{jsxref('Object')}}입니다
             (아래 예제를 참고하세요).
 
 ### 반환 값

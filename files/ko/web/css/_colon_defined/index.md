@@ -1,9 +1,7 @@
 ---
-title: ":defined"
+title: :defined
 slug: Web/CSS/:defined
 ---
-
-{{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`:defined`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 정의된 요소를 선택합니다. 정의된 요소란 브라우저에 내장된 표준 요소와, 성공적으로 정의({{domxref("CustomElementRegistry.define()")}} 메서드 등)한 사용자 지정 요소를 의미합니다.
 
@@ -97,4 +95,4 @@ simple-custom:defined {
 
 ## 같이 보기
 
-- [웹 컴포넌트](/ko/docs/Web/Web_Components)
+- [웹 컴포넌트](/ko/docs/Web/API/Web_components)

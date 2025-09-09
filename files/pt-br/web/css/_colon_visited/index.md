@@ -1,5 +1,5 @@
 ---
-title: ":visited"
+title: :visited
 slug: Web/CSS/:visited
 ---
 
@@ -21,7 +21,6 @@ Styles definidos pela pseudo-classe `:visited` vão ser substituidos por qualque
 Por razões de privacidade, navegadores limitam estritamente quais estilos você pode aplicar usando esta pseudo-class, como elas podem ser usadas:
 
 - Propriedades admicíveis no CSS são:
-
   - {{ cssxref("color") }};
   - {{ cssxref("background-color") }};
   - {{ cssxref("border-color") }};
@@ -37,7 +36,7 @@ Por razões de privacidade, navegadores limitam estritamente quais estilos você
 - Embora esses estilos podem mudar como as cores serão mostradas ao usuário, o método {{domxref("window.getComputedStyle")}} vai mentir e sempre retornar o valor da cor em non-`:visited.`
 
 > [!NOTE]
-> Para mais informações quanto a essas limitações e as razões por trás delas, veja [Privacy and the :visited selector](/pt-BR/docs/CSS/Privacy_and_the_:visited_selector). Obs: No momento estará apenas disponível em inglês.
+> Para mais informações quanto a essas limitações e as razões por trás delas, veja [Privacy and the :visited selector](/pt-BR/docs/Web/CSS/Privacy_and_the_:visited_selector). Obs: No momento estará apenas disponível em inglês.
 
 ## Syntaxe
 
@@ -97,5 +96,5 @@ a:visited {
 
 ## Veja também (inglês)
 
-- [Privacy and the :visited selector](/pt-BR/docs/CSS/Privacy_and_the_:visited_selector)
+- [Privacy and the :visited selector](/pt-BR/docs/Web/CSS/Privacy_and_the_:visited_selector)
 - Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

@@ -7,7 +7,7 @@ slug: Glossary/Accessibility_tree
 
 A **árvore de acessibilidade** contém informação relacionada à {{Glossary("accessibility", "acessibilidade")}} para a maioria dos elementos HTML.
 
-Navegadores convertem a marcação em uma representação interna chamada [árvore do DOM](/pt-BR/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree). A árvore do DOM contém objetos representando todas as marcações de elementos, atributos e nós de texto. Os navegadores, então, criam uma árvore de acessibilidade baseada na árvore do DOM, a qual é usada por APIs específicas de plataforma para fornecer uma representação que possa ser entendida por tecnologias assistivas, como leitores de tela.
+Navegadores convertem a marcação em uma representação interna chamada [árvore do DOM](/pt-BR/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model). A árvore do DOM contém objetos representando todas as marcações de elementos, atributos e nós de texto. Os navegadores, então, criam uma árvore de acessibilidade baseada na árvore do DOM, a qual é usada por APIs específicas de plataforma para fornecer uma representação que possa ser entendida por tecnologias assistivas, como leitores de tela.
 
 Há quatro coisas em um objeto da árvore de acessibilidade:
 
@@ -24,7 +24,6 @@ Adicionalmente, a árvore de acessibilidade frequentemente contém informação 
 
 Enquanto continua em forma de rascunho na Web Incubator Community Group, o Modelo de Objeto de Acessibilidade (**[Accessibility Object Model](https://wicg.github.io/aom/explainer.html),** AOM), tem a intenção de incubar APIs que facilitam expressar a semântica de acessibilidade e potencialmente permitir acesso de leitura à árvore de acessibilidade computada.
 
-1. [Glossário](/pt-BR/docs/Glossario)
-
+1. [Glossário](/pt-BR/docs/Glossary)
    1. {{Glossary("Accessibility", "Acessibilidade")}}
    2. {{Glossary("ARIA")}}

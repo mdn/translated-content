@@ -14,7 +14,7 @@ var node = document.importNode(externalNode, deep);
 ```
 
 - `node`
-  - : El nuevo nodo importado al documento actual. El [`parentNode`](/es/docs/DOM/Node.parentNode) del nuevo nodo es `null`, ya que aun no ha sido insertado en el arbol del documento.
+  - : El nuevo nodo importado al documento actual. El [`parentNode`](/es/docs/Web/API/Node/parentNode) del nuevo nodo es `null`, ya que aun no ha sido insertado en el arbol del documento.
 - `externalNode`
   - : El nodo externo a ser importado
 - `deep`

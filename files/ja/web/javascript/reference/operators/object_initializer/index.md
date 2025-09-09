@@ -9,7 +9,27 @@ l10n:
 
 **オブジェクト初期化子** (object initializer) は、オブジェクトのプロパティ名と関連する値の 0 個以上のペアを中括弧 (`{}`) で囲んだカンマ区切りのリストです。オブジェクトは [`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) や [`new`](/ja/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) 演算子で[コンストラクター関数を呼び出して](/ja/docs/Web/JavaScript/Reference/Operators/new)使用することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Object initializer", "taller")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+```
 
 ## 構文
 
@@ -132,7 +152,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-ES2015 以降、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#プロパティ名の重複)を含むあらゆる場所でプロパティ名の重複が許されるようになりました。また、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)内でプロパティ名の重複を保有することもできます。ただし、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)だけは例外で、クラス本体で固有のプロパティでなければなりません。
+ES2015 以降、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#プロパティ名の重複)を含むあらゆる場所でプロパティ名の重複が許されるようになりました。また、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)内でプロパティ名の重複を保有することもできます。ただし、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)だけは例外で、クラス本体で固有のプロパティでなければなりません。
 
 ### メソッドの定義
 
@@ -229,7 +249,8 @@ const mergedObj = { ...obj1, ...obj2 };
 // { foo: "baz", x: 42, y: 13 }
 ```
 
-> **警告:** {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
+> [!WARNING]
+> {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
 
 ### プロトタイプセッター
 

@@ -21,7 +21,7 @@ createDataChannel(label, options)
 - `label`
   - : 一个便于理解的通道名。该字符串不能长于 65,535 _字节_.
 - `options` {{optional_inline}}
-  - : 提供 data channel 设置的一个 [`RTCDataChannelInit` dictionary](#RTCDataChannelInit_dictionary)
+  - : 提供 data channel 设置的一个 [`RTCDataChannelInit` dictionary](#rtcdatachannelinit_dictionary)
 
 ### RTCDataChannelInit dictionary
 
@@ -52,9 +52,7 @@ A new {{domxref("RTCDataChannel")}} object with the specified `label`, configure
 - `InvalidStateError`
   - : The {{domxref("RTCPeerConnection")}} is closed.
 - `TypeError`
-
   - : This can happen in a couple of situations:
-
     - The label and/or protocol string is too long; these cannot be longer than 65,535 bytes (bytes, rather than characters).
     - The `id` is 65535. While this is a valid unsigned 16-bit value, it's not a permitted value for `id`.
 

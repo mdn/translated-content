@@ -24,9 +24,7 @@ getDisplayMedia(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : オプションのオブジェクトで、返される {{domxref("MediaStream")}} の要件を指定します。 `getDisplayMedia()` のオプションは {{domxref("MediaDevices.getUserMedia()")}} メソッドの [constraints](/ja/docs/Web/API/MediaDevices/getUserMedia#parameters) と同じように動作しますが、ただし `audio` および `video` が指定された場合のみです。`getDisplayMedia()` の利用可能なオプションプロパティの一覧は次の通りです。
-
     - `video` {{optional_inline}}
       - : 論理値または {{domxref("MediaTrackConstraints")}} インスタンスで、既定値は `true` です。このオプションを省略するか、`true` に設定すると、ストリームに映像トラックが格納されます。`true` の値は、返す {{domxref("MediaStream")}} に映像トラックが格納されることを示します。`getDisplayMedia()` は映像トラックを必要とするので、このオプションを `false` に設定すると、プロミスは `TypeError` で拒否されます。
     - `audio` {{optional_inline}}
@@ -34,10 +32,10 @@ getDisplayMedia(options)
     - `controller` {{Experimental_Inline}} {{optional_inline}}
       - : 含まれている場合、キャプチャセッションをさらに操作するために使用できるメソッドを持つ {{domxref("CaptureController")}} オブジェクトのインスタンスです。
     - `monitorTypeSurfaces` {{optional_inline}}
-
       - : 列挙値で、ブラウザーがユーザーに表示する画面キャプチャオプションに、タブやウィンドウオプションと一緒に画面全体を含めるかどうかを指定します。このオプションは、テレビ会議アプリを使用する際に、従業員のミスによる企業機密情報の漏洩を防ぐことを意図しています。 値として指定できるのは、画面オプションを含めるべきであることを示す `include` と、除外すべきであることを示す `exclude` です。 既定値は仕様で規定されていません。個々のブラウザーの既定値については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
-        > **メモ:** `monitorTypeSurfaces: "exclude"` を設定するには、[`displaySurface: "monitor"`](/ja/docs/Web/API/MediaTrackConstraints/displaySurface) を同時に設定することはできません。2 つの設定は矛盾しているためです。 矛盾した設定を試みると、`getDisplayMedia()` を呼び出した際に `TypeError` が発生します。
+        > [!NOTE]
+        > `monitorTypeSurfaces: "exclude"` を設定するには、[`displaySurface: "monitor"`](/ja/docs/Web/API/MediaTrackConstraints/displaySurface) を同時に設定することはできません。2 つの設定は矛盾しているためです。 矛盾した設定を試みると、`getDisplayMedia()` を呼び出した際に `TypeError` が発生します。
 
     - `preferCurrentTab` {{non-standard_inline}} {{Experimental_Inline}} {{optional_inline}}
       - : 論理値です。`true` とすると、ブラウザーが現在のタブを最も推奨するキャプチャソースとして提供するように指示します。つまり、ユーザーに表示される「共有するものを選んでください」オプションの中に、別個の「このタブ」オプションとして表示されます。これは、一般的に多くの種類のアプリが現在のタブを共有したいだけなので有益なことです。例えば、スライドデッキアプリは、ユーザーが仮想会議にプレゼンテーションを格納する現在のタブをストリーミングできるようにすることができます。既定値は仕様書では定められていません。ブラウザー別の既定値については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
@@ -50,7 +48,8 @@ getDisplayMedia(options)
     - `monitorTypeSurfaces` {{Experimental_Inline}} {{optional_inline}}
       - : 列挙値で、アプリケーションがユーザーエージェントに、モニター型である表示面の選択オプションをユーザーに提供するかどうかを指定します。 可能な値は、モニター型である表示面を含めるようブラウザーに指示する `include` と、含まれないよう指示する `exclude` です。既定値は仕様書では定められていません。ブラウザー別の既定値については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
-> **メモ:** [能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事を見ると、これらのオプションがどのように動作するかのもっと詳細があります。
+> [!NOTE]
+> [能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事を見ると、これらのオプションがどのように動作するかのもっと詳細があります。
 
 ### 返値
 
@@ -66,7 +65,7 @@ getDisplayMedia(options)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : `getDisplayMedia()` を呼び出すコードが、イベントハンドラーなど、{{glossary("transient activation", "一時的な活性化")}}により実行されている場合、例外が発生します。 また、ブラウザーのコンテキストが完全にアクティブでない場合やフォーカスされていない場合にも発生します。 また、`controller` オプションが、別の {{domxref("MediaStream")}} を生成する際にすでに使用されている場合にも発生します。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : ユーザーによって画面領域へのアクセス許可が拒否された場合、または現在の閲覧インスタンスが画面共有へのアクセスを（例えば[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)で）許可されていない場合に発生します。
+  - : ユーザーによって画面領域へのアクセス許可が拒否された場合、または現在の閲覧インスタンスが画面共有へのアクセスを（例えば[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)で）許可されていない場合に発生します。
 - `NotFoundError` {{domxref("DOMException")}}
   - : キャプチャ可能な画面映像のソースが存在しない場合に発生します。
 - `NotReadableError` {{domxref("DOMException")}}
@@ -82,7 +81,7 @@ getDisplayMedia(options)
 
 - 指定されたオプションは、ユーザーが利用できるオプションを制限するために使用することはできません。代わりに、ユーザーがソースを選択した後、オプションに一致する出力を生成するために適用する必要があります。
 - `getDisplayMedia()` を使用するための go-ahead 権限は、再利用のために永続化することはできません。ユーザーは毎回、許可を求めるプロンプトを表示しなければなりません。
-- [単発のユーザーにようる有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能を動作させるためには、ユーザーがページや UI 要素を操作する必要があります。
+- [単発のユーザーによる有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能を動作させるためには、ユーザーがページや UI 要素を操作する必要があります。
 - `getDisplayMedia()`の呼び出しは、イベントハンドラーのようなユーザーのアクションに反応して実行されるコードから行われなければなりません。
 - ブラウザーは、ブラウザーを含むディスプレイやウィンドウを共有することについての警告をユーザーに提供し、他のコンテンツがキャプチャされて他のユーザーに表示される可能性があることに注意することが推奨されます。
 
@@ -120,7 +119,8 @@ async function startCapture(displayMediaOptions) {
 
 これは {{jsxref("Operators/await", "await")}} を使用して、 `getDisplayMedia()` が {{domxref("MediaStream")}} で解決するのを非同期に待ち、指定したオプションで要求された表示コンテンツを含むストリームを生成します。ストリームは、ストリームからビデオトラックを追加するために {{domxref("RTCPeerConnection.addTrack()")}} を使用して WebRTC 呼び出しに追加するために使用する呼び出し側に返されます。
 
-> **メモ:** [画面共有コントロール](https://screen-sharing-controls.glitch.me/)のデモでは、完全に実装されたものを提供しており、`getDisplayMedia()` の制約とオプションを自由に選択して画面キャプチャを作成することができます。
+> [!NOTE]
+> [画面共有コントロール](https://screen-sharing-controls.glitch.me/)のデモでは、完全に実装されたものを提供しており、`getDisplayMedia()` の制約とオプションを自由に選択して画面キャプチャを作成することができます。
 
 ## 仕様書
 

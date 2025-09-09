@@ -3,8 +3,6 @@ title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 La propiedad `border-bottom-color` define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave `transparent`.
@@ -41,7 +39,7 @@ border-bottom-color: couleur | transparent | inherit
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {

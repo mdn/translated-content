@@ -62,7 +62,7 @@ if (done is true) {
 // SyntaxError: missing ) after condition
 ```
 
-代わりに、正しい[比較演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)を使うべきです。例を示します。
+代わりに、正しい[比較演算子](/ja/docs/Web/JavaScript/Reference/Operators)を使うべきです。例を示します。
 
 ```js example-good
 if (done === true) {
@@ -73,5 +73,5 @@ if (done === true) {
 ## 関連項目
 
 - [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
-- [比較演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [比較演算子](/ja/docs/Web/JavaScript/Reference/Operators)
+- [コードでの意思決定 — 条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals)

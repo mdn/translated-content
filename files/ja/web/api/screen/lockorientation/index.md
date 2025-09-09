@@ -1,6 +1,9 @@
 ---
-title: Screen.lockOrientation()
+title: "Screen: lockOrientation() メソッド"
+short-title: lockOrientation()
 slug: Web/API/Screen/lockOrientation
+l10n:
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
@@ -15,18 +18,16 @@ slug: Web/API/Screen/lockOrientation
 
 ## 構文
 
-```js
-lockOrientation(orientation);
+```js-nolint
+lockOrientation(orientation)
 ```
 
 ### 引数
 
 - `orientation`
-
   - : 画面をロックする向きです。文字列または文字列の配列で指定します。複数の文字列を渡したときは、選択した向きでのみ回転できるようになります。
 
     以下の文字列表現が向きとして指定できます。
-
     - `portrait-primary`
       - : 第一ポートレートモードである画面の向きを表します。
         第一ポートレートモードとは、端末を通常の向きが縦向きの場合と、端末の通常の位置が横向きの場合に時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、端末によって異なります。
@@ -102,4 +103,4 @@ if (
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.unlockOrientation()")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [画面の向きの管理](/ja/docs/Managing_screen_orientation)
+- [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

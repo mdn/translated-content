@@ -11,7 +11,7 @@ l10n:
 
 ### title と slug
 
-ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug` を `ARIA/NameOfTheRole_role` としてください。例えば、 [button ロール](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)は `title` が `ARIA: button ロール` で、 `slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、 [aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
+ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug` を `ARIA/NameOfTheRole_role` としてください。例えば、 [button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)は `title` が `ARIA: button ロール` で、 `slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、 [aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
 
 ### 先頭のマクロ
 
@@ -21,7 +21,8 @@ ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug`
 
 ### 状態
 
-> **注目:** **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
+> [!CALLOUT]
+> **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 
 （適切な）機能状態キーを含めるマクロです。 [**実験的**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)、[**非推奨**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)、**標準外**があります。 — [機能状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能状態を追加または更新する方法)の節を参照してください。
 

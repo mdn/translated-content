@@ -5,7 +5,7 @@ slug: Glossary/Grid_Areas
 
 {{GlossarySidebar}}
 
-Un **grid area** es una o más {{glossary("grid cell", "grid cells")}} que forman un área rectangular en la cuadrícula. Los grid areas se crean cuando se coloca un elemento usando [disposición basada en líneas](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) o cuando se definen áreas usando [grid areas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas).
+Un **grid area** es una o más {{glossary("grid cell", "grid cells")}} que forman un área rectangular en la cuadrícula. Los grid areas se crean cuando se coloca un elemento usando [disposición basada en líneas](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) o cuando se definen áreas usando [grid areas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas).
 
 ![Imagen mostrando una grid area resaltada](1_grid_area.png)
 
@@ -74,6 +74,6 @@ En el siguiente ejemplo, tengo un contenedor de cuadrícula con dos elementos. L
 
 ### Otras lecturas
 
-- Guía de diseño Grid CSS: _[Conceptos básicos de grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Guía de diseño Grid CSS: _[Conceptos básicos de grid layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
 - Guía de diseño Grid CSS: _[Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
 - [Definición de Grid Areas en la especificación de Grid Layout CSS](https://drafts.csswg.org/css-grid/#grid-area-concept)

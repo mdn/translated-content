@@ -1,28 +1,21 @@
 ---
-title: Le projet MDN
+title: MDN Web Docs
 slug: MDN
+l10n:
+  sourceCommit: cdf5bebefe9bb292b3aa6c9e733ba06a8466016e
 ---
 
-{{MDNSidebar}}
+Le **Mozilla Developer Network** (MDN) est une ressource gratuite qui documente les technologies Web ouvertes.
+Notre mission est de fournir aux développeurs les informations dont ils ont besoin pour créer facilement des projets sur la plate-forme Web.
+Les ressources ci-dessous décrivent le fonctionnement du site, comment nous rédigeons la documentation, les directives et les conventions que nous suivons et comment vous pouvez vous impliquer.
 
-Le **Mozilla Developer Network** (MDN) est un wiki sur lequel sont documentés le Web ouvert, les technologies Mozilla, Firefox OS et d'autres sujets intéressant les développeurs. Nous accueilllons tout le monde pour modifier et ajouter du contenu. Nul besoin d'être un développeur ou de connaître très bien ces technologies. De nombreuses actions sont possibles, des plus simples (comme des relectures et corrections) aux plus complexes (documentation des API).
-
-Le but du projet MDN est de documenter le Web ouvert, les technologies Mozilla et les projets Mozilla. Nous vous invitons à nous aider !
-
-Nous avons besoin de votre aide ! C'est facile. Ne vous souciez pas de demander permission ou d'avoir peur de faire des erreurs. D'autre part, n'hésitez pas à connaître la [communauté MDN](/fr/docs/MDN/Rejoindre_la_communauté), nous sommes là pour aider ! La documentation ci-dessous vous aidera à débuter.
-
-- [Pour commencer](/fr/docs/MDN/Débuter_sur_MDN)
-
-  Vous êtes nouveau sur MDN et voulez apprendre comment le rendre meilleur ? Commencez par là !
-
-- [Je suis un utilisateur avancé](/fr/docs/MDN/Contribute)
-
-  Accédez à notre guide complet pour les contributeurs de MDN afin d'en apprendre plus une fois que vous êtes à l'aise.
-
-- [Faites passer le mot](/fr/docs/MDN/Promotion_de_MDN)
-
-  Si vous aimez MDN, faites le savoir ! Vous trouverez ici des outils et guides pour promouvoir MDN.
-
-## Voir aussi
-
-- [Rejoindre la communauté MDN](/fr/docs/MDN/Rejoindre_la_communauté)
+- [Tutoriels de développement Web](/fr/docs/MDN/Tutorials)
+  - : Une liste organisée de tutoriels sur les documents du MDN et le matériel d'apprentissage pour les débutants, le niveau intermédiaire ou les développeurs avancés. Explorez des tutoriels détaillés pour les technologies Web comme CSS, JavaScript, HTML, etc.
+- [Guides du développeur](/fr/docs/MDN/Guides)
+  - : Une collection de guides ciblés et axés sur les objectifs qui vous apprennent à utiliser des fonctionnalités ou des API à travers des exemples pratiques. Ces guides fournissent des explications pratiques pour vous aider à comprendre et à appliquer de nouveaux concepts.
+- [Communauté MDN Web Docs](/fr/docs/MDN/Community)
+  - : Ces pages décrivent comment commencer à contribuer aux documents du MDN. Vous pouvez savoir où chercher des réponses, comment travailler sur les problèmes de github, ouvrir des discussions ou suggérer de nouveaux contenus. Si vous avez besoin d'aide ou que vous souhaitez nous contacter, vous trouverez toutes les informations ici.
+- [Écriture de lignes directrices](/fr/docs/MDN/Writing_guidelines)
+  - : Ces guides décrivent comment rédiger pour MDN Web Docs. Ils contiennent les politiques éditoriales définissant les types de contenu que nous rédigeons et ceux que nous ne rédigeons pas. Vous y trouverez notre guide de style rédactionnel, des guides pratiques pour des tâches spécifiques et des informations sur la structure des différents types de pages.
+- [À propos des documents Web MDN](/fr/about)
+  - : Le MDN sert des millions de lecteurs chaque mois et met à la disposition des développeurs les outils et les informations dont ils ont besoin pour créer facilement des projets sur le Web ouvert. Découvrez l'histoire du MDN, l'équipe qui travaille sur MDN Web Docs, nos valeurs et nos partenaires.

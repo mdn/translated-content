@@ -7,7 +7,33 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 
 La méthode **`handler.has()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  has(target, key) {
+    if (key[0] === "_") {
+      return false;
+    }
+    return key in target;
+  },
+};
+
+const monster1 = {
+  _secret: "easily scared",
+  eyeCount: 4,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+console.log("eyeCount" in proxy1);
+// Expected output: true
+
+console.log("_secret" in proxy1);
+// Expected output: false
+
+console.log("_secret" in monster1);
+// Expected output: true
+```
 
 ## Syntaxe
 
@@ -40,7 +66,7 @@ Cette trappe permet d'intercepter les opérations suivantes :
 
 - L'accès à une propriété : `toto in proxy`
 - L'accès à une propriété héritée : `toto in Object.create(proxy)`
-- Accès via l'instruction [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with) : `with(proxy) { (foo); }`
+- Accès via l'instruction [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with) : `with(proxy) { (foo); }`
 - {{jsxref("Reflect.has()")}}
 
 ### Invariants

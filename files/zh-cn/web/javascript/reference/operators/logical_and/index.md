@@ -3,13 +3,19 @@ title: 逻辑与（&&）
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 ---
 
-{{jsSidebar("Operators")}}
-
 当且仅当所有操作数为 `true` 时，一组布尔操作数的**逻辑与**（**`&&`**，逻辑连接）运算结果为 `true`，否则为 `false`。
 
 一般来说，当从左到右求值时，该操作符返回第一个{{Glossary("falsy","假值")}}操作数的值；如果它们都是{{Glossary("truthy","真值")}}，则返回最后一个操作数的值。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## 语法
 
@@ -40,7 +46,7 @@ result = 2 && 0; // 结果被赋值为 0
 result = "foo" && 4; // 结果被赋值为 4
 ```
 
-尽管 `&&` 运算符可以与非布尔操作数一起使用，但它仍然被认为是一个布尔运算符，因为它的返回值总是可以被转换为[布尔基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)。要明确地将其返回值（或任何一般的表达式）转换为相应的布尔值，请使用双[`非运算符`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_NOT)或 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 构造函数。
+尽管 `&&` 运算符可以与非布尔操作数一起使用，但它仍然被认为是一个布尔运算符，因为它的返回值总是可以被转换为[布尔基本类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#boolean_类型)。要明确地将其返回值（或任何一般的表达式）转换为相应的布尔值，请使用双[`非运算符`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_NOT)或 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 构造函数。
 
 ### 短路求值
 

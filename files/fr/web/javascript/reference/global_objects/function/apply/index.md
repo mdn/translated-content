@@ -5,15 +5,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 {{JSRef}}
 
-La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` et des `arguments` sous forme d'un tableau (ou d'un objet [semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Manipuler_des_objets_semblables_aux_tableaux)).
+La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` et des `arguments` sous forme d'un tableau (ou d'un objet [semblable à un tableau](/fr/docs/Web/JavaScript/Guide#manipuler_des_objets_semblables_aux_tableaux)).
 
 > [!NOTE]
 > Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.call", "call()")}}, elle est différente car `call()` accepte **une liste d'arguments**, tandis que `apply()` accepte un **tableau d'arguments**.
 
 > [!NOTE]
-> Quand on utilise {{jsxref("undefined")}} ou {{jsxref("null")}} comme premier argument pour cette fonction, on peut obtenir un résultat similaire avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition).
+> Quand on utilise {{jsxref("undefined")}} ou {{jsxref("null")}} comme premier argument pour cette fonction, on peut obtenir un résultat similaire avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## Syntaxe
 
@@ -133,7 +147,7 @@ var max = Math.max.apply(null, nombres);
 var min = Math.min.apply(null, nombres);
 
 /* vs. algorithme trivial avec une boucle */
-(max = -Infinity), (min = +Infinity);
+((max = -Infinity), (min = +Infinity));
 
 for (var i = 0; i < nombres.length; i++) {
   if (nombres[i] > max) max = nombres[i];
@@ -177,4 +191,4 @@ var min = minimumDuTableau([5, 6, 2, 3, 7]);
 - {{jsxref("Function.prototype.call()")}}
 - {{jsxref("Fonctions", "Les fonctions et portées de fonctions", "", 1)}}
 - {{jsxref("Reflect.apply()")}}
-- [La syntaxe de décomposition permettant d'exploser un tableau](/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition)
+- [La syntaxe de décomposition permettant d'exploser un tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)

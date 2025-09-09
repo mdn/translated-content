@@ -5,9 +5,17 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 
 {{JSRef}}
 
-La méthode **`sort()`** permet de trier numériquement les éléments d'un tableau typé, à même ce tableau. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.sort()")}} en triant les valeurs par ordre numérique plutôt que par ordre lexicographique*.* Par la suite, _TypedArray_ désigne l'un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray) here.
+La méthode **`sort()`** permet de trier numériquement les éléments d'un tableau typé, à même ce tableau. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.sort()")}} en triant les valeurs par ordre numérique plutôt que par ordre lexicographique*.* Par la suite, _TypedArray_ désigne l'un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray) here.
 
-{{EmbedInteractiveExample("pages/js/typedarray-sort.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.sort()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([40, 10, 50, 20, 30]);
+uint8.sort();
+
+console.log(uint8);
+// Expected output: Uint8Array [10, 20, 30, 40, 50]
+```
 
 ## Syntaxe
 

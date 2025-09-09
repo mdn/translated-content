@@ -9,7 +9,15 @@ l10n:
 
 El **operador lógico OR (`||`)** (disyunción lógica) es verdadero para un conjunto de operandos si y solo si uno o más de sus operandos es verdadero. Es normalmente usado con valores booleanos (lógicos). Cuando es así, retorna un valor booleano. Sin embargo, el operador `||` puede retornar el valor de uno de los operandos especificados, por lo que si este operador es usado con valores no booleanos, retornará un valor no booleano.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 || b > 0);
+// Expected output: true
+```
 
 ## Sintaxis
 
@@ -31,7 +39,7 @@ Ejemplos de expresiones que pueden ser convertidas a `false` son:
 - cadena vacía (`""` o `''` o ` `` `);
 - `undefined`.
 
-Aunque el operador `||` puede ser usado con operandos que no son valores booleanos, aún puede ser considerado un operador booleano ya que su valor de retorno siempre puede ser convertido a un [booleano primitivo](/es/docs/Web/JavaScript/Data_structures#boolean_type).
+Aunque el operador `||` puede ser usado con operandos que no son valores booleanos, aún puede ser considerado un operador booleano ya que su valor de retorno siempre puede ser convertido a un [booleano primitivo](/es/docs/Web/JavaScript/Guide/Data_structures#boolean_type).
 Para explícitamente convertir su valor de retorno (o cualquier expresión en general) al correspondiente valor booleano, se debe usar un doble ({{JSxRef("Operators/Logical_NOT", "operador lógico NOT", "", 1)}}) o el contructor del objeto {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
 
 ### Evaluación de cortocircuito (Short-circuit)

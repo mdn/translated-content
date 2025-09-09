@@ -16,9 +16,9 @@ otherWindow.postMessage(message, targetOrigin, [transfer]);
 ```
 
 - `otherWindow`
-  - : Ссылка на другое окно; такая ссылка может быть получена, к примеру, при использовании свойства `contentWindow` элемента `iframe` , объекта, возвращаемого [window.open](/ru/docs/DOM/window.open), или по именованному и числовому индексу {{domxref("Window.frames")}}, если вы пытаетесь запустить сообщение из iframe в родительском окне, то родитель также является действительной ссылкой.
+  - : Ссылка на другое окно; такая ссылка может быть получена, к примеру, при использовании свойства `contentWindow` элемента `iframe` , объекта, возвращаемого [window.open](/ru/docs/Web/API/Window/open), или по именованному и числовому индексу {{domxref("Window.frames")}}, если вы пытаетесь запустить сообщение из iframe в родительском окне, то родитель также является действительной ссылкой.
 - `message`
-  - : Данные, которые нужно отправить в другое окно. Данные сериализуются с использованием алгоритма структурированного клона. Это означает, что вы можете безопасно передавать большое количество объектов данных в окно назначения без необходимости их сериализации. \[[1](/ru/docs/)]
+  - : Данные, которые нужно отправить в другое окно. Данные сериализуются с использованием алгоритма структурированного клона. Это означает, что вы можете безопасно передавать большое количество объектов данных в окно назначения без необходимости их сериализации. \[[1](/ru/docs/Web)]
 - `targetOrigin`
   - : Specifies what the origin of `otherWindow` must be for the event to be dispatched, either as the literal string `"*"` (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, or port of `otherWindow`'s document does not match that provided in `targetOrigin`, the event will not be dispatched; only if all three match will the event be dispatched. This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. **Always provide a specific `targetOrigin`, not `*`, if you know where the other window's document should be located. Failing to provide a specific target discloses the data you send to any interested malicious site.**
 - `transfer` {{optional_Inline}}
@@ -45,7 +45,7 @@ function receiveMessage(event) {
 - `origin`
   - : The [origin](/ru/docs/Origin) of the window that sent the message at the time `postMessage` was called. This string is the concatenation of the protocol and "://", the host name if one exists, and ":" followed by a port number if a port is present and differs from the default port for the given protocol. Examples of typical origins are `https://example.org` (implying port `443`), `http://example.net` (implying port `80`), and `http://example.com:8080`. Note that this origin is _not_ guaranteed to be the current or future origin of that window, which might have been navigated to a different location since `postMessage` was called.
 - `source`
-  - : Ссылка на объект [`window`](/ru/docs/DOM/window) , который отправил сообщение; может быть использована для установки двустороннего соединения между окнами с разными `origins`.
+  - : Ссылка на объект [`window`](/ru/docs/Web/API/Window) , который отправил сообщение; может быть использована для установки двустороннего соединения между окнами с разными `origins`.
 
 ## Вопросы безопасности
 

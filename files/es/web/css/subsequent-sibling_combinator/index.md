@@ -3,8 +3,6 @@ title: Selectores de hermanos generales
 slug: Web/CSS/Subsequent-sibling_combinator
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El combinador `~` separa dos selectores y selecciona el segundo elemento sólo si está precedido por el primero y ambos comparten un padre común.
@@ -45,4 +43,4 @@ p ~ span {
 
 ## Ver también
 
-- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Adjacent_sibling_selectors)
+- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Next-sibling_combinator)

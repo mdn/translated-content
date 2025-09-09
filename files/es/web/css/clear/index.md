@@ -3,15 +3,13 @@ title: clear
 slug: Web/CSS/clear
 ---
 
-{{CSSRef}}
+La propiedad [CSS](/es/docs/Web/CSS) **`clear`** especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/Web/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.
 
-La propiedad [CSS](/es/docs/CSS) **`clear`** especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.
+Cuando es aplicado a bloques no flotantes, mueve el [border edge](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) del elemento hacia abajo hasta que este debajo del [margin edge](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) de todos los floats relevantes. Este movimiento (cuando acontece) causa que [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) no ocurra.
 
-Cuando es aplicado a bloques no flotantes, mueve el [border edge](/es/docs/CSS/box_model) del elemento hacia abajo hasta que este debajo del [margin edge](/es/docs/CSS/box_model) de todos los floats relevantes. Este movimiento (cuando acontece) causa que [margin collapsing](/es/docs/CSS/margin_collapsing) no ocurra.
+Cuando se aplica a elementos flotantes, mueve el [margin edge](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) del elemento debajo del [margin edge](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) de todos los floats relevantes. Esto afecta la posición de floats posteriores, ya que estos no pueden ser posicionados más arriba que los primeros.
 
-Cuando se aplica a elementos flotantes, mueve el [margin edge](/es/docs/CSS/box_model) del elemento debajo del [margin edge](/es/docs/CSS/box_model) de todos los floats relevantes. Esto afecta la posición de floats posteriores, ya que estos no pueden ser posicionados más arriba que los primeros.
-
-Los floats que son relevantes para ser limpiados (cleared) son los primeros floats dentro del mismo [contexto de formato de bloque](/es/docs/Web/Guide/CSS/Block_formatting_context).
+Los floats que son relevantes para ser limpiados (cleared) son los primeros floats dentro del mismo [contexto de formato de bloque](/es/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 > [!NOTE]
 > Si deseas que un elemento contenga todos los elementos flotantes dentro, puedes hacer dos cosas, o bien flotar el contenedor también o usar `clear` en un [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) {{cssxref("::after")}}.

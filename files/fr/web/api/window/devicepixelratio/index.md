@@ -23,7 +23,7 @@ Une valeur décimale à double précision qui indique le ratio de entre la réso
 
 ### Corriger la résolution dans un élément `<canvas>`
 
-Un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) pourra apparaître flou sur un écran Retina. `window.devicePixelRatio` pourra être utilisé afin de déterminer la densité de pixel supplémentaire qui peut être ajoutée pour obtenir une image plus nette.
+Un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) pourra apparaître flou sur un écran Retina. `window.devicePixelRatio` pourra être utilisé afin de déterminer la densité de pixel supplémentaire qui peut être ajoutée pour obtenir une image plus nette.
 
 #### HTML
 
@@ -171,7 +171,7 @@ body {
 
 ## Voir aussi
 
-- [Les requêtes média](/fr/docs/Web/CSS/Media_Queries)
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Les requêtes média](/fr/docs/Web/CSS/CSS_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [La caractéristique média CSS `resolution`](/fr/docs/Web/CSS/@media/resolution)
 - La propriété CSS [`image-resolution`](/fr/docs/Web/CSS/image-resolution)

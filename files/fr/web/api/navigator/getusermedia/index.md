@@ -21,10 +21,9 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 ### Paramètres
 
 - `constraints`
-  - : Un objet spécifiant les types de médias à récupérer, ainsi que les contraintes pour chaque type de média. Pour plus de détails, voir la section [contraintes](/fr/docs/Web/API/MediaDevices/getUserMedia#paramètres) de la méthode [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia), ainsi que l'article [Capacités, constraintes, et configurations](/fr/docs/Web/API/Media_Streams_API/Constraints).
+  - : Un objet spécifiant les types de médias à récupérer, ainsi que les contraintes pour chaque type de média. Pour plus de détails, voir la section [contraintes](/fr/docs/Web/API/MediaDevices/getUserMedia#paramètres) de la méthode [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia), ainsi que l'article [Capacités, constraintes, et configurations](/fr/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 - `successCallback`
-
-  - : Une fonction qui est invoquée lorsque la demande d'accès aux entrées média est acceptée. Cette fonction est appelée avec un paramètre&nbsp;: l'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) qui contient les flux de médias. La fonction de rappel peut alors affecter le flux à l'objet souhaité (par exemple un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video)), comme dans l'exemple suivant&nbsp;:
+  - : Une fonction qui est invoquée lorsque la demande d'accès aux entrées média est acceptée. Cette fonction est appelée avec un paramètre&nbsp;: l'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) qui contient les flux de médias. La fonction de rappel peut alors affecter le flux à l'objet souhaité (par exemple un élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) ou [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)), comme dans l'exemple suivant&nbsp;:
 
     ```js
     function(stream) {
@@ -102,5 +101,5 @@ Voir [`permission: audio-capture`](/fr/docs/Web/Apps/Developing/App_permissions#
 
 - [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) qui remplace cette méthode dépréciée.
 - [La page d'introduction à l'API WebRTC](/fr/docs/Web/API/WebRTC_API)
-- L'API [<i lang="en">MediaStream</i>](/fr/docs/Web/API/Media_Streams_API) pour les flux média
-- [Prendre des photos avec la webcam](/fr/docs/Web/API/WebRTC_API/Taking_still_photos) - un tutoriel sur l'utilisation de `getUserMedia()` pour prendre des photos plutôt que des vidéos.
+- L'API [<i lang="en">MediaStream</i>](/fr/docs/Web/API/Media_Capture_and_Streams_API) pour les flux média
+- [Prendre des photos avec la webcam](/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - un tutoriel sur l'utilisation de `getUserMedia()` pour prendre des photos plutôt que des vidéos.

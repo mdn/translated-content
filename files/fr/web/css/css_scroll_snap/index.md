@@ -45,8 +45,8 @@ slug: Web/CSS/CSS_scroll_snap
 
 ## Guides
 
-- [Concepts de bases pour _CSS Scroll Snap_](/fr/docs/Web/CSS/CSS_Scroll_Snap/Concepts_de_base)
-- [Compatiblité des navigateurs et _CSS Scroll Snap_](/fr/docs/Web/CSS/CSS_Scroll_Snap/Compatibilité_navigateurs)
+- [Concepts de bases pour _CSS Scroll Snap_](/fr/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
+- [Compatiblité des navigateurs et _CSS Scroll Snap_](/fr/docs/Web/CSS/CSS_scroll_snap)
 
 ## Spécifications
 

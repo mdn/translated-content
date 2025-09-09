@@ -2,7 +2,7 @@
 title: FileSystemDirectoryReader：readEntries() 方法
 slug: Web/API/FileSystemDirectoryReader/readEntries
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: cbe4c570701052c120808ea54c24c46ec9734084
 ---
 
 {{APIRef("File and Directory Entries API")}}
@@ -46,6 +46,5 @@ readEntries(successCallback, errorCallback)
 ## 参见
 
 - [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- [文件与目录条目 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystem")}}

@@ -14,7 +14,7 @@ slug: Web/API/XMLHttpRequestEventTarget
 ## Propriétés
 
 - {{ domxref("XMLHttpRequestEventTarget.onabort") }}
-  - : Contient la fonction à appeler lorsqu'une demande est abandonnée et que l'événement [`abort`](/fr/docs/Web/API/XMLHttpRequest/abort_event) est reçu par cet objet.
+  - : Contient la fonction à appeler lorsqu'une demande est abandonnée et que l'événement [`abort`](/fr/docs/Web/API/XMLHttpRequestEventTarget/abort_event) est reçu par cet objet.
 - {{ domxref("XMLHttpRequestEventTarget.onerror") }}
   - : Contient la fonction à appeler lorsqu'une demande rencontre une erreur et que l'événement [`error`](/fr/docs/Web/API/XMLHttpRequest/error_event) est reçu par cet objet.
 - {{ domxref("XMLHttpRequestEventTarget.onload") }}
@@ -26,7 +26,7 @@ slug: Web/API/XMLHttpRequestEventTarget
 - {{ domxref("XMLHttpRequestEventTarget.ontimeout") }}
   - : Contient la fonction qui est appelée si l'événement expire et que l'événement [`timeout`](/fr/docs/Web/API/XMLHttpRequest/timeout_event) est reçu par cet objet ; cela ne se produit que si un délai d'attente a été préalablement établi en définissant la valeur de l'attribut timeout de l'objet XMLHttpRequest.
 - {{ domxref("XMLHttpRequestEventTarget.onloadend") }}
-  - : Contient la fonction qui est appelée lorsque le chargement est terminé, même si la demande a échoué, et que l'événement [`loadend`](/fr/docs/Web/API/XMLHttpRequest/loadend_event) est reçu par cet objet.
+  - : Contient la fonction qui est appelée lorsque le chargement est terminé, même si la demande a échoué, et que l'événement [`loadend`](/fr/docs/Web/API/XMLHttpRequestEventTarget/loadend_event) est reçu par cet objet.
 
 ## Spécifications
 
@@ -39,4 +39,4 @@ slug: Web/API/XMLHttpRequestEventTarget
 ## Voir aussi
 
 - {{ domxref("XMLHttpRequest") }}
-- [Using XMLHttpRequest](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

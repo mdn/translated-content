@@ -18,11 +18,11 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 
 ## Quel est le problème ?
 
-On a voulu [raccourcir la longueur d'un tableau](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/length#Tronquer_un_tableau) mais l'un des éléments de ce tableau est [non-configurable](/fr/docs/Web/JavaScript/Structures_de_données#Propriétés). Lorsqu'on tronque un tableau, les éléments situés au-delà de la nouvelle longueur seront supprimés. Dans ce cas, c'est cette suppression qui n'a pas pu être effectuée.
+On a voulu [raccourcir la longueur d'un tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length#tronquer_un_tableau) mais l'un des éléments de ce tableau est [non-configurable](/fr/docs/Web/JavaScript/Guide/Data_structures#propriétés). Lorsqu'on tronque un tableau, les éléments situés au-delà de la nouvelle longueur seront supprimés. Dans ce cas, c'est cette suppression qui n'a pas pu être effectuée.
 
 L'attribut `configurable` permet de contrôler si la propriété peut être supprimée d'un objet et si ses attributs (en dehors de `writable`) peuvent être modifiés.
 
-La plupart du temps, les propriétés d'un objet créé avec [un littéral de tableau](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array#Syntaxe) sont configurables. Toutefois, si on utilise {{jsxref("Object.defineProperty()")}} par exemple, la propriété n'est pas configurable par défaut.
+La plupart du temps, les propriétés d'un objet créé avec [un littéral de tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#syntaxe) sont configurables. Toutefois, si on utilise {{jsxref("Object.defineProperty()")}} par exemple, la propriété n'est pas configurable par défaut.
 
 ## Exemples
 
@@ -75,7 +75,7 @@ copie.length = 1;
 
 ## Voir aussi
 
-- [La propriété interne `[[Configurable]]`](/fr/docs/Web/JavaScript/Structures_de_données#Propriétés)
+- [La propriété interne `[[Configurable]]`](/fr/docs/Web/JavaScript/Guide/Data_structures#Propriétés)
 - {{jsxref("Array.length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

@@ -7,7 +7,43 @@ slug: Web/CSS/background-image
 
 La propriété **`background-image`** permet de définir une ou plusieurs images comme arrière(s)-plan(s) pour un élément.
 
-{{EmbedInteractiveExample("pages/css/background-image.html")}}
+{{InteractiveExample("CSS Demo: background-image")}}
+
+```css interactive-example-choice
+background-image: url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/lizard.png"),
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/star.png"),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 Les images sont dessinées les unes au-dessus des autres. La première image indiquée est dessinée comme étant la plus proche de l'utilisateur.
 
@@ -25,15 +61,12 @@ Si une image donnée ne peut pas être chargée (par exemple lorsqu'il est impos
 background-image: url("https://example.com/bck.png");
 
 /* Plusieurs valeurs */
-background-image: url("https://example.com/top.png"),
-  url("https://example.com/bottom.png");
+background-image:
+  url("https://example.com/top.png"), url("https://example.com/bottom.png");
 
-background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  ),
-  url("catfront.png");
+background-image:
+  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
+  url("cat-front.png");
 
 /* Valeur avec un mot-clé */
 background-image: none;
@@ -56,7 +89,7 @@ background-image: unset;
 
 Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisatrices et utilisateurs. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
 
-- [Comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content)
+- [Comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de succès 1.1.1 — Comprendre les règles du WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Définition formelle
@@ -103,7 +136,7 @@ div {
 }
 
 .catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```
@@ -122,21 +155,21 @@ div {
 
 ## Voir aussi
 
-- [Implémenter des sprites en CSS](/fr/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
-- L'élément HTML [`<img>`](/fr/docs/Web/HTML/Element/Img),
+- [Implémenter des sprites en CSS](/fr/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
+- L'élément HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img),
 - Les types de données CSS relatifs aux images&nbsp;:
   - [`<image>`](/fr/docs/Web/CSS/image)
   - [`<gradient>`](/fr/docs/Web/CSS/gradient)
 - Les fonctions CSS relatives aux images&nbsp;:
-  - [`cross-fade()`](</fr/docs/Web/CSS/cross-fade()>)
-  - [`element()`](</fr/docs/Web/CSS/element()>)
+  - [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+  - [`element()`](/fr/docs/Web/CSS/element)
   - [`image()`](</fr/docs/Web/CSS/image/image()>)
   - [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
-  - [`linear-gradient`](</fr/docs/Web/CSS/gradient/linear-gradient()>)
+  - [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient)
   - [`radial-gradient`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
   - [`conic-gradient`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
   - [`repeating-linear-gradient`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
   - [`repeating-radial-gradient`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)
   - [`repeating-conic-gradient`](</fr/docs/Web/CSS/gradient/repeating-conic-gradient()>)
   - [`paint()`](</fr/docs/Web/CSS/image/paint()>)
-  - [`url()`](</fr/docs/Web/CSS/url()>)
+  - [`url()`](/fr/docs/Web/CSS/url_value)

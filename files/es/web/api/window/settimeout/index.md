@@ -30,7 +30,6 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 - `code`
   - : Una sintaxis alternativa que le permite incluir una cadena en lugar de una función, que se compila y ejecuta cuando expira el temporizador. Esta sintaxis **no se recomienda** por las mismas razones que hacen que el uso de {{jsxref("Global_Objects/eval", "eval()")}} sea un riesgo para la seguridad.
 - `delay` {{optional_inline}}
-
   - : El tiempo, en milisegundos, que el temporizador debe esperar antes de que se ejecute la función o el código especificado. Si se omite este parámetro, se utiliza un valor de 0, lo que significa ejecutar "inmediatamente", o más exactamente, el siguiente ciclo de eventos.
 
     Tenga en cuenta que, en cualquier caso, la demora real puede ser mayor de lo previsto; consulte [Motivos de los retrasos superiores a los especificados](#motivos_de_los_retrasos_superiores_a_los_especificados) a continuación.
@@ -38,7 +37,6 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
     También tenga en cuenta que si el valor no es un número, se realiza una [coerción](/es/docs/Glossary/Type_coercion) implícita silenciosamente en el valor para convertirlo en un número, lo que puede generar resultados inesperados y sorprendentes; consulte [Los valores de retardo no numéricos se transforman silenciosamente en números](#los_valores_de_retardo_no_numéricos_se_convierten_silenciosamente_en_números) para ver un ejemplo.
 
 - `param1`, …, `paramN` {{optional_inline}}
-
   - : Argumentos adicionales que se pasan a través de la función especificada por `functionRef`.
 
 ### Valor devuelto
@@ -387,7 +385,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Configuración_y_borrado_de_tiempos_de_espera')}}
 
-Ver también el [ejemplo `clearTimeout()`](/es/docs/Web/API/clearTimeout#example).
+Ver también el [ejemplo `clearTimeout()`](/es/docs/Web/API/Window/clearTimeout#example).
 
 ## Especificaciones
 

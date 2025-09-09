@@ -9,7 +9,7 @@ Representa el área de almacenamiento de sincronización. Los elementos en el al
 
 Para Firefox, un usuario debe tener complementos seleccionados en las opciones de "about:preferences".
 
-Tenga en cuenta que la implementación de storage.sync en Firefox se basa en la ID del complemento. Si usa storage.sync, debe establecer una ID para su extensión usando la clave [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) manifest.json.
+Tenga en cuenta que la implementación de storage.sync en Firefox se basa en la ID del complemento. Si usa storage.sync, debe establecer una ID para su extensión usando la clave [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json.
 
 El principal caso de uso de esta API es almacenar las preferencias sobre su extensión y permitir que el usuario las sincronice con diferentes perfiles. Puede almacenar hasta 100 KB de datos utilizando esta API. Si intenta almacenar más que esto, la llamada fallará con un mensaje de error. La API se proporciona sin ninguna garantía sobre el tiempo de actividad o el rendimiento.
 
@@ -34,11 +34,10 @@ El objeto de sincronización implementa los métodos definidos en el {{WebExtAPI
 
 {{WebExtExamples}}
 
-> **Nota:** **Agradecimientos**
+> [!NOTE]
+> **Agradecimientos**
 >
 > Esta API está basada en la API de Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-sync) API. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
->
-> Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

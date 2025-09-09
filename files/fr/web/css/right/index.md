@@ -7,7 +7,57 @@ slug: Web/CSS/right
 
 La propriété **`right`** définit, en partie, la position des éléments positionnés. La propriété `right` n'a aucun effet sur les éléments non-positionnés.
 
-{{EmbedInteractiveExample("pages/css/right.html")}}
+{{InteractiveExample("CSS Demo: right")}}
+
+```css interactive-example-choice
+right: 0;
+```
+
+```css interactive-example-choice
+right: 4em;
+```
+
+```css interactive-example-choice
+right: 10%;
+```
+
+```css interactive-example-choice
+right: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 L'effet de la propriété `right` dépend de la façon dont l'élément est positionné (c'est-à-dire de la valeur de la propriété {{cssxref("position")}}) :
 
@@ -42,18 +92,14 @@ right: unset;
 ### Valeurs
 
 - `<length>`
-
   - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui peut être négative, positive ou nulle et représente :
-
     - pour les éléments à positionnement absolu : la distance jusqu'au bord droit du bloc englobant.
     - pour les éléments à positionnement relatif : le décalage à droite que l'élément subit par rapport à sa position dans le flux normal s'il n'était pas positionné.
 
 - `<percentage>`
   - : Une valeur de type {{cssxref("&lt;percentage&gt;")}} représentant le pourcentage de la largeur du bloc englobant.
 - `auto`
-
   - : Un mot-clé qui représente :
-
     - pour les éléments à positionnement absolu : la position de l'élément fondé sur la propriété {{cssxref("left")}} et considère `width: auto` comme une largeur fondée sur le contenu ; ou, si `left` vaut aussi `auto`, l'élément serait positionné horizontalement comme s'il avait été un élément statique.
     - pour les éléments à positionnement relatif : le décalage à droite de l'élément par rapport à sa position originale fondé sur la propriété {{cssxref("left")}} ou, si `left` vaut également `auto`, aucun décalage.
 

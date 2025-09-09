@@ -1,45 +1,38 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{JSSidebar("Statements")}}
 
 **`import.meta`** オブジェクトはコンテキスト固有のメタデータを JavaScript のモジュールに公開します。これには、モジュールの URL のようなモジュールに関する情報が含まれています。
 
 ## 構文
 
-```
+```js-nolint
 import.meta
 ```
 
-## 説明
+### 値
 
-構文は、`import` キーワードとドット、プロパティ名の `meta` で構成されています。通常、ドットの左側はプロパティアクセスが実行されるオブジェクトですが、ここでの `import` はオブジェクトではありません。
+`import.meta` オブジェクトはホスト環境によって生成され、拡張可能な [`null` プロトタイプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)オブジェクトとして、すべてのプロパティが書き込み可能、構成不可、列挙可能となります。仕様では定義すべきプロパティは指定されていませんが、ホストは通常次のプロパティを実装します。
 
-`import.meta` オブジェクトは ECMAScript 実装によって生成され、プロトタイプは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。オブジェクトは拡張でき、そのプロパティは書き込み、構成、列挙可能です。
+- `url`
+  - : モジュールの完全な URL。クエリーの引数やハッシュ（`?` または `#`）を含みます。ブラウザーでは、これはスクリプトが取得された URL （外部スクリプトの場合）か、包含文書の URL （インラインスクリプトの場合）のいずれかです。 Node.js では、これはファイルパス（`file://` プロトコルを含む）です。
+- [`resolve`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta/resolve)
+  - : 現在のモジュールの URL を基点として、モジュール指定子を URL に解決します。
+
+## 解説
+
+`import.meta` 構文は、キーワード `import`、ドット、識別子 `meta` で構成されます。 `import` は識別子ではなく[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#予約語)であるため、これは[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)ではなく、特別な式構文です。
+
+`import.meta` メタプロパティは JavaScript でモジュール内で利用できます。モジュール外（モジュール内の [直接 `eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#直接または間接_eval) を含む）で `import.meta` を使用すると構文エラーになります。
 
 ## 例
 
-### import.meta を使用する
+### クエリー引数を渡す
 
-`my-module.mjs` モジュールを指定します。
-
-```html
-<script type="module" src="my-module.js"></script>
-```
-
-`import.meta` オブジェクトを使用してモジュールのメタ情報にアクセスできます。
-
-```js
-console.log(import.meta); // { url: "file:///home/user/my-module.js" }
-```
-
-モジュールのベース URL を示す `url` プロパティを持つオブジェクトを返します。これは、外部スクリプトの場合はスクリプトを取得した URL、インラインスクリプトの場合はそれを含むドキュメントのベース URL です。
-
-これには、クエリパラメータまたはハッシュ（つまり、`?` または `#`）が含まれることに注意してください。
-
-例えば、以下のような HTML で
+`import`指定子で引数を指定することで、モジュール固有の引数渡しが可能になります。これは、アプリケーション全体の [`window.location`](/ja/docs/Web/API/Window/location) （Node.js では `process.argv` 経由）から引数を取得する手法を補完するものです。例えば、以下の HTML では、
 
 ```html
 <script type="module">
@@ -47,7 +40,7 @@ console.log(import.meta); // { url: "file:///home/user/my-module.js" }
 </script>
 ```
 
-以下の JavaScript ファイルは、`someURLInfo` パラメータをログに記録します。
+`index.mjs` モジュールは、`import.meta` を通じて `someURLInfo` 引数を取得できます。
 
 ```js
 // index.mjs
@@ -64,19 +57,40 @@ import "./index2.mjs?someURLInfo=5";
 new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
-メモ: 後者の例のように Node.js はクエリパラメータ（またはハッシュ）を渡しますが、Node 14.1.0 以降、クエリパラメータを持つ URL を `node --experimental-modules index.mjs?someURLInfo=5` という形式で読み込むとエラーになることに注意してください（この文脈では URL ではなくファイルとして扱われます）。
+Node.js の ES モジュール実装は、後者の例のようにクエリー引数（またはハッシュ）を含むモジュール指定子の解決に対応状況を示しています。ただし、 CLI コマンド（例えば `node index.mjs?someURLInfo=5`）でモジュールを指定する場合、クエリーやハッシュは使用できません。 CLI のエントリーポイントは CommonJS に似た解決モードを採用しており、パスを URL ではなくファイルパスとして扱うためです。エントリポイントモジュールに引数を渡すには、同様に CLI 引数を使用し、 `process.argv` を通じて読み取ってください（例: `node index.mjs --someURLInfo=5`）。
 
-このようなファイル固有の引数の受け渡しは、アプリケーション全体の `location.href`（HTML ファイルパスの後にクエリ文字列やハッシュを追加したもの \[Node.js では `process.argv` を介して]）で使用されているものを補完する場合があります。
+### 現在のファイルからの相対パスによるファイルの解決
 
-## 仕様
+Node.js の CommonJS モジュールでは、現在のモジュールを含むフォルダー内の絶対パスを保持する `__dirname` 変数が存在し、相対パスの解決に有用です。一方、ESモジュールでは `import.meta` を除きコンテキスト変数を使用することはできません。そのため、相対ファイルを解決するには `import.meta.url` を使用することができます。これはファイルシステムパスではなく URL が使用されています。
+
+使用前 (CommonJS):
+
+```js
+const fs = require("fs/promises");
+const path = require("path");
+
+const filePath = path.join(__dirname, "someFile.txt");
+fs.readFile(filePath, "utf8").then(console.log);
+```
+
+使用後 (ES modules):
+
+```js
+import fs from "node:fs/promises";
+
+const fileURL = new URL("./someFile.txt", import.meta.url);
+fs.readFile(fileURL, "utf8").then(console.log);
+```
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- {{JSxRef("Statements/import", "import")}}
-- {{JSxRef("Statements/export", "export")}}
+- {{jsxref("Statements/import", "import")}}
+- {{jsxref("Statements/export", "export")}}

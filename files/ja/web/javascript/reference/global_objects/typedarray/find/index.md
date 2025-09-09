@@ -9,7 +9,18 @@ l10n:
 
 **`find()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.find()")}} と同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.find()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, 0, -10, 20, -30, 40, -50]);
+
+console.log(int8.find(isNegative));
+// Expected output: -10
+```
 
 ## 構文
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 重新加载一个标签页，可选择是否绕过本地 web 缓存。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -25,7 +23,6 @@ let reloading = browser.tabs.reload(
 - `tabId` {{optional_inline}}
   - : `integer`。要重新加载的标签页的 ID。默认为当前窗口中选定的标签页。
 - `reloadProperties` {{optional_inline}}
-
   - : 一个包含以下属性的对象：
     - `bypassCache` {{optional_inline}}
       - : `boolean`。是否绕过本地 web 缓存。默认为 `false`。
@@ -70,7 +67,7 @@ reloading.then(onReloaded, onError);
 {{Compat}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-reload) API。本文档源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-reload) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

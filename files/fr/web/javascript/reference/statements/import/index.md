@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/import
 
 {{jsSidebar("Statements")}}
 
-L'instruction **`import`** est utilisée pour importer des liens qui sont exportés par un autre module. Les modules importés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `import` ne peut pas être utilisée dans les scripts embarqués sauf si ceux-ci proviennent de ressources avec [`type="module"`](/fr/docs/Web/HTML/Element/script#Attributs).
+L'instruction **`import`** est utilisée pour importer des liens qui sont exportés par un autre module. Les modules importés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `import` ne peut pas être utilisée dans les scripts embarqués sauf si ceux-ci proviennent de ressources avec [`type="module"`](/fr/docs/Web/HTML/Reference/Elements/script#attributs).
 
 > [!NOTE]
 > Il existe également une forme fonctionnelle, `import()` (cf. [ci-après](#dyn)) qui permet d'avoir des chargements dynamiques. La compatibilité ascendante peut être atteinte en utilisant l'attribut `nomodule` sur la balise {{HTMLElement("script")}}.
@@ -201,7 +201,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 ## Voir aussi
 
 - {{jsxref("Instructions/export", "export")}}
-- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Instructions/import.meta)
+- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta)
 - Limin Zhu, Brian Terlson et l'équipe Microsoft Edge : [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [Jason Orendorff : ES6 en détails : les modules](https://tech.mozfr.org/post/2015/08/21/ES6-en-details-%3A-les-modules)
 - [Le livre d'Axel Rauschmayer : Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)

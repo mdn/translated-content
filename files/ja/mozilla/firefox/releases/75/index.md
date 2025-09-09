@@ -3,8 +3,6 @@ title: Firefox 75 for developers
 slug: Mozilla/Firefox/Releases/75
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 75 の変更点をまとめています。
 
 **付随する hacks ブログの記事「[Firefox 75: Ambitions for April](https://hacks.mozilla.org/2020/04/firefox-75-ambitions-for-april/)」もご覧ください。**
@@ -13,14 +11,14 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 
 ### 開発者ツール
 
-- [測定ツール](/ja/docs/Tools/Measure_a_portion_of_the_page) で長方形のリサイズが可能になりました ([Firefox バグ 1152321](https://bugzil.la/1152321))。
-- [インスペクター](/ja/docs/Tools/Page_Inspector) で、以前から使用できていた CSS セレクターに加えて、[XPath](/ja/docs/Web/XPath) の式を使用して要素を示すことが可能になりました ([Firefox バグ 963933](https://bugzil.la/963933))。
-- プレーンテキストによる検索に加えて、スラッシュの間に [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions) を記述することで [WebSocket](/ja/docs/Web/API/WebSockets_API) メッセージをフィルタリングできるようになりました ([Firefox バグ 1593837](https://bugzil.la/1593837))。
+- [測定ツール](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) で長方形のリサイズが可能になりました ([Firefox バグ 1152321](https://bugzil.la/1152321))。
+- [インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) で、以前から使用できていた CSS セレクターに加えて、[XPath](/ja/docs/Web/XML/XPath) の式を使用して要素を示すことが可能になりました ([Firefox バグ 963933](https://bugzil.la/963933))。
+- プレーンテキストによる検索に加えて、スラッシュの間に [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions) を記述することで [WebSocket](/ja/docs/Web/API/WebSockets_API) メッセージをフィルタリングできるようになりました ([Firefox バグ 1593837](https://bugzil.la/1593837))。
 
 ### HTML
 
-- {{HTMLElement("img")}} 要素の [`loading`](/ja/docs/Web/HTML/Element/img#loading) 属性を実装しました。この文字列値は `lazy` を設定することで、画像を [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) するべきであると示します ([Firefox バグ 1542784](https://bugzil.la/1542784))。
-- [`<style>`](/ja/docs/Web/HTML/Element/style) 要素の `type` 属性の値を、仕様書に従って `text/css` のみに限定しました ([Firefox バグ 1614329](https://bugzil.la/1614329))。
+- {{HTMLElement("img")}} 要素の [`loading`](/ja/docs/Web/HTML/Reference/Elements/img#loading) 属性を実装しました。この文字列値は `lazy` を設定することで、画像を [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading) するべきであると示します ([Firefox バグ 1542784](https://bugzil.la/1542784))。
+- [`<style>`](/ja/docs/Web/HTML/Reference/Elements/style) 要素の `type` 属性の値を、仕様書に従って `text/css` のみに限定しました ([Firefox バグ 1614329](https://bugzil.la/1614329))。
 
 ### CSS
 
@@ -29,11 +27,11 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 
 ### アクセシビリティ
 
-[ARIA annotations](/ja/docs/Web/Accessibility/ARIA/Annotations) に関する新しいロールやオブジェクトを、Windows および Linux の Firefox で公開しました (これらはスクリーンリーダーがサポートするまで使用できないことを覚えておいてください):
+[ARIA annotations](/ja/docs/Web/Accessibility/ARIA) に関する新しいロールやオブジェクトを、Windows および Linux の Firefox で公開しました (これらはスクリーンリーダーがサポートするまで使用できないことを覚えておいてください):
 
 - `aria-description` ([Firefox バグ 1608961](https://bugzil.la/1608961))
-- [`role="mark"`](/ja/docs/Web/Accessibility/ARIA/Roles/Mark_role) および [`role="suggestion"`](/ja/docs/Web/Accessibility/ARIA/Roles/Suggestion_role) ([Firefox バグ 1608965](https://bugzil.la/1608965))
-- [`role="comment"`](/ja/docs/Web/Accessibility/ARIA/Roles/Comment_role) ([Firefox バグ 1608969](https://bugzil.la/1608969))
+- [`role="mark"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role) および [`role="suggestion"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role) ([Firefox バグ 1608965](https://bugzil.la/1608965))
+- [`role="comment"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role) ([Firefox バグ 1608969](https://bugzil.la/1608969))
 - `aria-details` で複数の ID ([Firefox バグ 1608883](https://bugzil.la/1608883))
 
 > [!NOTE]
@@ -41,8 +39,8 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 
 ### JavaScript
 
-- [Public static class fields](/ja/docs/Web/JavaScript/Reference/Classes/Class_fields#Public_static_fields) をサポートしました ([Firefox バグ 1535804](https://bugzil.la/1535804))。
-- [`Intl.Locale`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Locale) クラスをサポートしました ([Firefox バグ 1613713](https://bugzil.la/1613713))。
+- [Public static class fields](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields#public_static_fields) をサポートしました ([Firefox バグ 1535804](https://bugzil.la/1535804))。
+- [`Intl.Locale`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) クラスをサポートしました ([Firefox バグ 1613713](https://bugzil.la/1613713))。
 - [`Function.caller`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/caller) プロパティを、最新の [ECMAScript 仕様の提案](https://github.com/claudepache/es-legacy-function-reflection) に合わせて更新しました。呼び出し元が strict、async、あるいは generator 関数であった場合に、以前は `TypeError` が発生していましたが、`null` を返すようになりました ([Firefox バグ 1610206](https://bugzil.la/1610206))。
 
 ### API
@@ -57,10 +55,9 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 
 Firefox 75 で、[Web Animations API](/ja/docs/Web/API/Web_Animations_API) に複数の機能を追加しました:
 
-- ほかの無期限に実行されるアニメーションによって置き換えられたアニメーションを自動的に削除するような、[Implicit to/from keyframes](/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats#Implicit_tofrom_keyframes) をサポートしました ([Firefox バグ 1618773](https://bugzil.la/1618773))。これは以下のサポートを含みます:
-
+- ほかの無期限に実行されるアニメーションによって置き換えられたアニメーションを自動的に削除するような、[Implicit to/from keyframes](/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats#implicit_tofrom_keyframes) をサポートしました ([Firefox バグ 1618773](https://bugzil.la/1618773))。これは以下のサポートを含みます:
   - [`Animation.commitStyles()`](/ja/docs/Web/API/Animation/commitStyles)
-  - [`Animation.onremove`](/ja/docs/Web/API/Animation/onremove)
+  - [`Animation.onremove`](/ja/docs/Web/API/Animation/remove_event)
   - [`Animation.persist()`](/ja/docs/Web/API/Animation/persist)
   - [`Animation.replaceState`](/ja/docs/Web/API/Animation/replaceState)
 
@@ -77,7 +74,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- CSS セレクターや `.getAttribute("nonce")` の呼び出しなど、スクリプト以外をソースとする [CSP](/ja/docs/Web/HTTP/CSP) nonce が隠されるようになりました。代わりに、スクリプトから nonce へアクセスするには [`.nonce`](/ja/docs/Web/API/HTMLOrForeignElement/nonce) プロパティを確認してください ([Firefox バグ 1374612](https://bugzil.la/1374612))。
+- CSS セレクターや `.getAttribute("nonce")` の呼び出しなど、スクリプト以外をソースとする [CSP](/ja/docs/Web/HTTP/Guides/CSP) nonce が隠されるようになりました。代わりに、スクリプトから nonce へアクセスするには [`.nonce`](/ja/docs/Web/API/HTMLElement/nonce) プロパティを確認してください ([Firefox バグ 1374612](https://bugzil.la/1374612))。
 
 ### プラグイン
 
@@ -98,7 +95,6 @@ _変更なし。_
 ### API の変更点
 
 - {{WebExtAPIRef("browserSettings")}} に新たな設定を追加しました ([Firefox バグ 1286953](https://bugzil.la/1286953)):
-
   - ズームがサイトごとかタブごとかを制御する {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}。
   - ズームがページ全体に適用されるかテキストのみに適用されるかを制御する {{WebExtAPIRef("browserSettings.zoomFullPage")}}。
 

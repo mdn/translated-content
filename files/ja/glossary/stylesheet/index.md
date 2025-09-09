@@ -2,7 +2,7 @@
 title: Stylesheet (スタイルシート)
 slug: Glossary/Stylesheet
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{GlossarySidebar}}
@@ -13,5 +13,5 @@ l10n:
 
 ## 関連情報
 
-- [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)
+- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
 - [スタイルシート](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%B7%E3%83%BC%E3%83%88)（ウィキペディア）

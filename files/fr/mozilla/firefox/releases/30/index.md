@@ -3,8 +3,6 @@ title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
 ---
 
-{{FirefoxSidebar}}
-
 ## Changements pour les développeurs Web
 
 ### Outils de développement
@@ -27,9 +25,9 @@ _Pas de changement._
 
 ### JavaScript
 
-- Nouvelles [compréhensions de tableaux](/fr/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) compatibles ES6 `[for (item of iterable) item]` et [compréhensions de générateur](/fr/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) `(for (item of iterable) item)` ont été implémentées ([bug Firefox 979865](https://bugzil.la/979865)).
-- [Les tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Property_access) sont désormais extensibles et prennent en charge de nouvelles propriétés nommées ([bug Firefox 695438](https://bugzil.la/695438)).
-- La propriété {{jsxref("Error.prototype.stack")}} contient désormais des numéros de colonne ([bug Firefox 762556](https://bugzil.la/762556)) et a été améliorée [lors de l'utilisation des appels `Function()` et `eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack#Stack_of_eval'ed_code). Cela peut vous aider à mieux déboguer le code JavaScript minifié ou généré.
+- Nouvelles [compréhensions de tableaux](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) compatibles ES6 `[for (item of iterable) item]` et [compréhensions de générateur](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `(for (item of iterable) item)` ont été implémentées ([bug Firefox 979865](https://bugzil.la/979865)).
+- [Les tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access) sont désormais extensibles et prennent en charge de nouvelles propriétés nommées ([bug Firefox 695438](https://bugzil.la/695438)).
+- La propriété {{jsxref("Error.prototype.stack")}} contient désormais des numéros de colonne ([bug Firefox 762556](https://bugzil.la/762556)) et a été améliorée [lors de l'utilisation des appels `Function()` et `eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack#stack_of_eval'ed_code). Cela peut vous aider à mieux déboguer le code JavaScript minifié ou généré.
 - La méthode `Promise.cast()` a été renommée {{jsxref("Promise.resolve()")}} ([bug Firefox 966348](https://bugzil.la/966348)).
 
 ### Interfaces/APIs/DOM

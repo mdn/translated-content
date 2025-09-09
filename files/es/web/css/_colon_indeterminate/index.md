@@ -1,9 +1,7 @@
 ---
-title: ":indeterminate"
+title: :indeterminate
 slug: Web/CSS/:indeterminate
 ---
-
-{{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario cuyo estado sea indeterminado.
 
@@ -16,8 +14,8 @@ input:indeterminate {
 
 Los elementos seleccionados por este selector son:
 
-- Elementos [`<input type="checkbox">`](/es/docs/Web/HTML/Element/input/checkbox) cuya propiedad `indeterminate` se establece en `true` por [JavaScript](/es/docs/Web/JavaScript)
-- Elementos [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio), cuando todos los radio buttons con el mismo valor `name` en el formulario no están marcados
+- Elementos [`<input type="checkbox">`](/es/docs/Web/HTML/Reference/Elements/input/checkbox) cuya propiedad `indeterminate` se establece en `true` por [JavaScript](/es/docs/Web/JavaScript)
+- Elementos [`<input type="radio">`](/es/docs/Web/HTML/Reference/Elements/input/radio), cuando todos los radio buttons con el mismo valor `name` en el formulario no están marcados
 - Elementos {{HTMLElement("progress")}} en un estado indeterminado
 
 ## Sintaxis

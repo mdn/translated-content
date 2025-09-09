@@ -50,7 +50,7 @@ l10n:
 
 音楽的な側面に精通し、音楽理論の概念に精通し、楽器の構築を開始したい場合は、発展的チュートリアルやその他の解説を基に制作に移る事ができるでしょう(上記のリンク付きチュートリアルでは、スケジューリングに関する注意事項、オーダーメイドの発振器やエンベロープの作成、LFO などについて説明しています) 。
 
-プログラミングの基本に慣れていない場合は、まず初級者向けの JavaScript チュートリアルを参照してから、このページに戻ってください。[初級者向けの JavaScript 学習モジュール](/ja/docs/Learn/JavaScript)を参照してください。
+プログラミングの基本に慣れていない場合は、まず初級者向けの JavaScript チュートリアルを参照してから、このページに戻ってください。[初級者向けの JavaScript 学習モジュール](/ja/docs/Learn_web_development/Core/Scripting)を参照してください。
 
 ## ウェブオーディオ API インターフェイス
 
@@ -97,7 +97,7 @@ l10n:
 これらを利用すると、音源からの音声にエフェクトをかけられます。
 
 - {{domxref("BiquadFilterNode")}}
-  - : **`BiquadFilterNode`** インターフェースは、単純な低次フィルタを表します。これは {{domxref("AudioNode")}} であり、異なる形のフィルター、トーンコントロール機器、グラフィックイコライザーを表すことができます。 `BiquadFilterNode` には常に 1 つの入力と 1 つの出力があります。
+  - : **`BiquadFilterNode`** インターフェイスは、単純な低次フィルタを表します。これは {{domxref("AudioNode")}} であり、異なる形のフィルター、トーンコントロール機器、グラフィックイコライザーを表すことができます。 `BiquadFilterNode` には常に 1 つの入力と 1 つの出力があります。
 - {{domxref("ConvolverNode")}}
   - : **`ConvolverNode`** インターフェイスは {{domxref("AudioNode")}} であり、指定された {{domxref("AudioBuffer")}} に対してリニアコンボリューションを行うもので、リバーブ効果を得るために使用されることが多いものです。
 - {{domxref("DelayNode")}}
@@ -209,14 +209,14 @@ GitHub の [webaudio-example リポジトリー](https://github.com/mdn/webaudio
 - [ウェブオーディオ API の背後にある基本概念](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 - [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [高度なテクニック: 音の作成、シーケンス、タイミング、スケジューリング](/ja/docs/Web/API/Web_Audio_API/Advanced_techniques)
-- [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
+- [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)
 - [Using IIR filters](/ja/docs/Web/API/Web_Audio_API/Using_IIR_filters)
 - [ウェブオーディオ API による視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [ウェブオーディオの空間設定の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
+- [ウェブオーディオの空間設定の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [ConstantSourceNode で複数の引数を制御する](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
 - [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
-- [webkitAudioContext のコードを標準ベースの AudioContext に移植する](/ja/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [webkitAudioContext のコードを標準ベースの AudioContext に移植する](/ja/docs/Web/API/Web_Audio_API)
 
 ### ライブラリー
 
@@ -231,4 +231,4 @@ GitHub の [webaudio-example リポジトリー](https://github.com/mdn/webaudio
 ### 関連トピック
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [ウェブのメディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
+- [ウェブのメディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)

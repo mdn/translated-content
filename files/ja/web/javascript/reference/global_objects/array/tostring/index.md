@@ -1,15 +1,21 @@
 ---
 title: Array.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toString()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された配列とその要素を表す文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.toString()", "shorter")}}
+
+```js interactive-example
+const array = [1, 2, "a", "1a"];
+
+console.log(array.toString());
+// 予想される結果: "1,2,a,1a"
+```
 
 ## 構文
 
@@ -64,9 +70,9 @@ console.log(arr.toString()); // 1,3,,4,2
 ### toString() の使用
 
 ```js
-const array1 = [1, 2, "a", "1a"];
+const array = [1, 2, "a", "1a"];
 
-console.log(array1.toString()); // "1,2,a,1a"
+console.log(array.toString()); // "1,2,a,1a"
 ```
 
 ### 疎配列における toString() の使用

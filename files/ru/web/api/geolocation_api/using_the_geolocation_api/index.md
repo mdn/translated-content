@@ -57,7 +57,7 @@ navigator.geolocation.clearWatch(watchID);
 
 ### Точная настройка отклика
 
-{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} и {{domxref("Geolocation.watchPosition()","watchPosition()")}} принимают колбэк-функцию при успехе, необязательную колбэк-функцию при ошибке и необязательный объект [`PositionOptions`](/ru/docs/Web/API/PositionOptions).
+{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} и {{domxref("Geolocation.watchPosition()","watchPosition()")}} принимают колбэк-функцию при успехе, необязательную колбэк-функцию при ошибке и необязательный объект [`PositionOptions`](/ru/docs/Web/API/Geolocation/getCurrentPosition).
 
 Этот объект позволяет вам включить возможность определения позиции с высокой точностью, указать максимальное время кеширования значения позиции (при повторных запросах, пока время не вышло, вам будет возвращается кешированное значение; после браузер будет запрашивать актуальные данные), а также указать значение, устанавливающее интервал — как часто браузер должен пытаться получить данные о местоположении, прежде чем выйдет время.
 

@@ -29,16 +29,13 @@ Les événements ont trois fonctions :
 ### Parameters
 
 - `callback`
-
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
-
     - `id`
       - : `string`. ID of the item that was moved.
 
     <!---->
-
     - `moveInfo`
-      - : [`object`](#moveInfo). Object containing more details about the move.
+      - : [`object`](#moveinfo). Object containing more details about the move.
 
 ## Objets supplémentaires
 
@@ -80,8 +77,6 @@ browser.browserAction.onClicked.addListener(handleClick);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

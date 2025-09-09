@@ -9,7 +9,7 @@ slug: Web/CSS/overflow
 
 A propriedade `overflow` especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento.
 
-O uso da propriedade `overflow` com valor diferente de `visible` (seu valor padrão), criará um novo [contexto de formatação de bloco](/pt-BR/docs/CSS/block_formatting_context). Isto é tecnicamente necessário para evitar que um conteúdo flutuante que entre em contato com o objeto dentro da área de rolamento e quebre as linhas do conteúdo para ajustar a disposição do texto. A quebra das linhas ocorre sempre que a barra de rolagem é utilizada, tornando a experiência de rolagem lenta.
+O uso da propriedade `overflow` com valor diferente de `visible` (seu valor padrão), criará um novo [contexto de formatação de bloco](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context). Isto é tecnicamente necessário para evitar que um conteúdo flutuante que entre em contato com o objeto dentro da área de rolamento e quebre as linhas do conteúdo para ajustar a disposição do texto. A quebra das linhas ocorre sempre que a barra de rolagem é utilizada, tornando a experiência de rolagem lenta.
 
 > [!NOTE]
 > Ao definir a propredade `scrollTop` para o `elemento` HTML relevante, mesmo que o valor de `overflow` seja `hidden`, o conteúdo ainda pode precisar rolar.

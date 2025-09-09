@@ -3,22 +3,110 @@ title: position
 slug: Web/CSS/position
 ---
 
-{{CSSRef}}
-
 La propiedad **`position`** de [CSS](/es/docs/Web/CSS) especifica cómo un elemento es posicionado en el documento. Las propiedades {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, y {{Cssxref("left")}} determinan la ubicación final de los elementos posicionados.
 
-{{EmbedInteractiveExample("pages/css/position.html")}}
+{{InteractiveExample("CSS Demo: position")}}
 
-El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio de GitHub. Si quisiera contribuir al proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíenos sus contribuciones como un pull request.
+```css interactive-example-choice
+position: static;
+```
+
+```css interactive-example-choice
+position: relative;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: absolute;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: sticky;
+top: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element-container">
+    <p>
+      In this demo you can control the <code>position</code> property for the
+      yellow box.
+    </p>
+    <div class="box"></div>
+    <div class="box" id="example-element"></div>
+    <div class="box"></div>
+    <p class="clear">
+      To see the effect of <code>sticky</code> positioning, select the
+      <code>position: sticky</code> option and scroll this container.
+    </p>
+    <p>
+      The element will scroll along with its container, until it is at the top
+      of the container (or reaches the offset specified in <code>top</code>),
+      and will then stop scrolling, so it stays visible.
+    </p>
+    <p>
+      The rest of this text is only supplied to make sure the container
+      overflows, so as to enable you to scroll it and see the effect.
+    </p>
+    <hr />
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.box {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  float: left;
+  width: 65px;
+  height: 65px;
+}
+
+.box + .box {
+  margin-left: 10px;
+}
+
+.clear {
+  clear: both;
+  padding-top: 1em;
+}
+
+#example-element-container {
+  position: relative;
+  text-align: left;
+}
+
+#example-element {
+  background-color: yellow;
+  border: 3px solid red;
+  z-index: 1;
+}
+```
 
 ### Tipos de posicionamiento
 
-- Un **elemento posicionado** es un elemento cuyo valor [computado](/es/docs/Web/CSS/computed_value) de `position` es `relative`, `absolute`, `fixed`, o `sticky`. (En otras palabras, cualquiera excepto `static`).
-- Un **elemento posicionado relativamente** es un elemento cuyo valor [computado](/es/docs/Web/CSS/computed_value) de `position` es `relative`. Las propiedades {{Cssxref("top")}} y {{Cssxref("bottom")}} especifican el desplazamiento vertical desde su posición original; las propiedades {{Cssxref("left")}} y {{Cssxref("right")}} especifican su desplazamiento horizontal.
-- Un **elemento posicionado absolutamente** es un elemento cuyo valor [computado](/es/docs/Web/CSS/computed_value) de `position` es `absolute` o `fixed`. Las propiedades {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, y {{Cssxref("left")}} especifican el desplazamiento desde los bordes del [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) del elemento. (El bloque contenedor es el ancestro relativo al cual el elemento está posicionado). Si el elemento tiene márgenes, se agregarán al desplazamiento. el elemento establece un nuevo contexto de formato de bloque para su contenido
-- Un **elemento posicionado fijamente** es un elemento cuyo valor de [`position` computado](/es/docs/Web/CSS/computed_value) es `sticky`. Es tratado como un elemento posicionado relativamente hasta que su [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) cruza un límite establecido (como por ejemplo dando a {{Cssxref("top")}} cualquier valor distinto de auto), dentro de su flujo principal (o el contenedor dentro del cual se mueve), desde el cual es tratado como "fijo" hasta que alcance el borde opuesto de su [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block).
+- Un **elemento posicionado** es un elemento cuyo valor [computado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) de `position` es `relative`, `absolute`, `fixed`, o `sticky`. (En otras palabras, cualquiera excepto `static`).
+- Un **elemento posicionado relativamente** es un elemento cuyo valor [computado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) de `position` es `relative`. Las propiedades {{Cssxref("top")}} y {{Cssxref("bottom")}} especifican el desplazamiento vertical desde su posición original; las propiedades {{Cssxref("left")}} y {{Cssxref("right")}} especifican su desplazamiento horizontal.
+- Un **elemento posicionado absolutamente** es un elemento cuyo valor [computado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) de `position` es `absolute` o `fixed`. Las propiedades {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, y {{Cssxref("left")}} especifican el desplazamiento desde los bordes del [bloque contenedor](/es/docs/Web/CSS/Containing_block) del elemento. (El bloque contenedor es el ancestro relativo al cual el elemento está posicionado). Si el elemento tiene márgenes, se agregarán al desplazamiento. el elemento establece un nuevo contexto de formato de bloque para su contenido
+- Un **elemento posicionado fijamente** es un elemento cuyo valor de [`position` computado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) es `sticky`. Es tratado como un elemento posicionado relativamente hasta que su [bloque contenedor](/es/docs/Web/CSS/Containing_block) cruza un límite establecido (como por ejemplo dando a {{Cssxref("top")}} cualquier valor distinto de auto), dentro de su flujo principal (o el contenedor dentro del cual se mueve), desde el cual es tratado como "fijo" hasta que alcance el borde opuesto de su [bloque contenedor](/es/docs/Web/CSS/Containing_block).
 
-La mayoría de las veces, los elementos absolutamente posicionados que tienen su {{Cssxref("height")}} y {{Cssxref("width")}} establecidos en `auto` son ajustados hasta acomodarse a su contenido. Sin embargo, elementos non-[replaced](/es/docs/Web/CSS/Replaced_element) y absolutamente posicionados se pueden crear para llenar el espacio vertical disponible, especificando tanto {{Cssxref("top")}} como {{Cssxref("bottom")}}, y dejando {{Cssxref("height")}} sin especificar (es decir, `auto`). De igual manera se pueden utilizar para llenar el espacio horizontal disponible especificando tanto {{Cssxref("left")}} como {{Cssxref("right")}}, y dando a {{Cssxref("width")}} el valor de `auto`.
+La mayoría de las veces, los elementos absolutamente posicionados que tienen su {{Cssxref("height")}} y {{Cssxref("width")}} establecidos en `auto` son ajustados hasta acomodarse a su contenido. Sin embargo, elementos non-[replaced](/es/docs/Web/CSS/CSS_images/Replaced_element_properties) y absolutamente posicionados se pueden crear para llenar el espacio vertical disponible, especificando tanto {{Cssxref("top")}} como {{Cssxref("bottom")}}, y dejando {{Cssxref("height")}} sin especificar (es decir, `auto`). De igual manera se pueden utilizar para llenar el espacio horizontal disponible especificando tanto {{Cssxref("left")}} como {{Cssxref("right")}}, y dando a {{Cssxref("width")}} el valor de `auto`.
 
 A excepción del caso anteriormente descrito (de elementos posicionados absolutamente rellenando el espacio disponible):
 
@@ -34,24 +122,21 @@ La propiedad `position` es especificada como una palabra única elegida de la si
 - `static`
   - : El elemento es posicionado de acuerdo al flujo normal del documento. Las propiedades {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("z-index")}} _no tienen efecto_. Este es el valor por defecto.
 - `relative`
-  - : El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado _con relación a sí mismo_, con base en los valores de `top`, `right`, `bottom`, and `left`. El desplazamiento no afecta la posición de ningún otro elemento; por lo que, el espacio que se le da al elemento en el esquema de la página es el mismo como si la posición fuera `static`. Este valor crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context), donde el valor de `z-index` no es `auto`. El efecto que tiene `relative` sobre los elementos `table-*-group`, `table-row`, `table-column`, `table-cell`, y `table-caption` no está definido.
+  - : El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado _con relación a sí mismo_, con base en los valores de `top`, `right`, `bottom`, and `left`. El desplazamiento no afecta la posición de ningún otro elemento; por lo que, el espacio que se le da al elemento en el esquema de la página es el mismo como si la posición fuera `static`. Este valor crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context), donde el valor de `z-index` no es `auto`. El efecto que tiene `relative` sobre los elementos `table-*-group`, `table-row`, `table-column`, `table-cell`, y `table-caption` no está definido.
 - `absolute`
+  - : El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el elemento en el esquema de la página. Es posicionado relativo a su ancestro posicionado más cercano, si lo hay; de lo contrario, se ubica relativo al [bloque contenedor](/es/docs/Web/CSS/Containing_block) inicial. Su posición final está determinada por los valores de `top`, `right`, `bottom`, y `left`.
 
-  - : El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el elemento en el esquema de la página. Es posicionado relativo a su ancestro posicionado más cercano, si lo hay; de lo contrario, se ubica relativo al [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) inicial. Su posición final está determinada por los valores de `top`, `right`, `bottom`, y `left`.
-
-    Este valor crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) cuando el valor de `z-index` no es `auto`. Elementos absolutamente posicionados pueden tener margen, y no colapsan con ningún otro margen.
+    Este valor crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context) cuando el valor de `z-index` no es `auto`. Elementos absolutamente posicionados pueden tener margen, y no colapsan con ningún otro margen.
 
 - `fixed`
+  - : El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el elemento en el esquema de la página. Es posicionado con relación al [bloque contenedor](/es/docs/Web/CSS/Containing_block) inicial establecido por el {{glossary("viewport")}}, excepto cuando uno de sus ancestros tiene una propiedad `transform`, `perspective`, o `filter` establecida en algo que no sea `none` (ver [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), en cuyo caso ese ancestro se comporta como el bloque contenedor. (Notar que hay inconsistencias del navegador con `perspective` y `filter` contribuyendo a la formación del bloque contenedor.) Su posición final es determinada por los valores de `top`, `right`, `bottom`, y `left`.
 
-  - : El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el elemento en el esquema de la página. Es posicionado con relación al [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) inicial establecido por el {{glossary("viewport")}}, excepto cuando uno de sus ancestros tiene una propiedad `transform`, `perspective`, o `filter` establecida en algo que no sea `none` (ver [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), en cuyo caso ese ancestro se comporta como el bloque contenedor. (Notar que hay inconsistencias del navegador con `perspective` y `filter` contribuyendo a la formación del bloque contenedor.) Su posición final es determinada por los valores de `top`, `right`, `bottom`, y `left`.
-
-    Estos valores siempre crean un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). En documentos impresos, el elemento se coloca en la misma posición en _cada página_.
+    Estos valores siempre crean un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context). En documentos impresos, el elemento se coloca en la misma posición en _cada página_.
 
 - `sticky` {{experimental_inline}}
+  - : El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado _con relación a su ancestro que se desplace más cercano y su_ [bloque contenedor](/es/docs/Web/CSS/Containing_block) (ancestro en nivel de bloque más cercano) incluyendo elementos relacionados a tablas, basados en los valores de `top`, `right`, `bottom`, y `left`. El desplazamiento no afecta la posición de ningún otro elmento.
 
-  - : El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado _con relación a su ancestro que se desplace más cercano y su_ [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) (ancestro en nivel de bloque más cercano) incluyendo elementos relacionados a tablas, basados en los valores de `top`, `right`, `bottom`, y `left`. El desplazamiento no afecta la posición de ningún otro elmento.
-
-    Estos valores siempre crean un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Nótese que un elemento sticky se "adhiere" a su ancestro más cercano que tiene un "mecanismo de desplazamiento" (creado cuando el `overflow` es `hidden`, `scroll`, `auto`, o bien `overlay`), aún si ese ancestro no es el ancestro con desplazamiento más cercano. Esto inhibe efectivamente el comportamiento "sticky" (ver el [Github issue en W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
+    Estos valores siempre crean un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context). Nótese que un elemento sticky se "adhiere" a su ancestro más cercano que tiene un "mecanismo de desplazamiento" (creado cuando el `overflow` es `hidden`, `scroll`, `auto`, o bien `overlay`), aún si ese ancestro no es el ancestro con desplazamiento más cercano. Esto inhibe efectivamente el comportamiento "sticky" (ver el [Github issue en W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).
 
 ### Sintaxis formal
 
@@ -95,7 +180,7 @@ CSS
 
 ### Posicionamiento absoluto
 
-Los elementos posicionados relativamente se mantienen en el flujo normal del documento. Por el contrario, un elemento posicionado absolutamente es removido del flujo de esta manera, los demás elementos se posicionan como si el mismo no existiera. El elemento posicionado absolutamente se posiciona relativamente a su _ancestro posicionado más cercano_ (es decir, el ancestro más cercano que no es `static`). Si no hay ningún ancestro posicionado se ubica relativo al [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block) inicial. En el ejemplo siguiente, la caja "Two" no tiene un ancestro posicionado, por lo tanto se posiciona relativo al `<body>` del documento.
+Los elementos posicionados relativamente se mantienen en el flujo normal del documento. Por el contrario, un elemento posicionado absolutamente es removido del flujo de esta manera, los demás elementos se posicionan como si el mismo no existiera. El elemento posicionado absolutamente se posiciona relativamente a su _ancestro posicionado más cercano_ (es decir, el ancestro más cercano que no es `static`). Si no hay ningún ancestro posicionado se ubica relativo al [bloque contenedor](/es/docs/Web/CSS/Containing_block) inicial. En el ejemplo siguiente, la caja "Two" no tiene un ancestro posicionado, por lo tanto se posiciona relativo al `<body>` del documento.
 
 HTML
 
@@ -289,7 +374,7 @@ dd + dd {
 
 Asegurarse de que los elementos posicionados con valor `absolute` o `fixed` no oscurezcan el resto del contenido cuando la página sea ampliada para aumentar el tamaño del texto.
 
-- [MDN entendiendo el WCAG, explicaciones de los lineamientos 1.4.](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN entendiendo el WCAG, explicaciones de los lineamientos 1.4.](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Presentación visual: Entendiendo SC 1.4.8 | Entendiendo WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ### Performance y accesibilidad

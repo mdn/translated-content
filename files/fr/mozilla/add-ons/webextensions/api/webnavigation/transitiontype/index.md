@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 
 Cause de la navigation: par exemple, l'utilisateur a cliqué sur un lien, ou a tapé une adresse, ou a cliqué sur un signet.
 
-Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la [table de compatibilité du navigateur](/fr/Add-ons/WebExtensions/API/WebNavigation/TransitionType#Browser_compatibility) pour plus de détails.
+Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la [table de compatibilité du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType#browser_compatibility) pour plus de détails.
 
 ## Type
 
@@ -45,8 +45,6 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

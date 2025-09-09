@@ -7,7 +7,7 @@ slug: Web/CSS/width
 
 ## Resumo
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **width** determina a largura da área de conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area) fica dentro do preenchimento, da borda, e da margem de um elemento.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **width** determina a largura da área de conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area) fica dentro do preenchimento, da borda, e da margem de um elemento.
 
 As propriedades {{cssxref("min-width")}} e {{cssxref("max-width")}} sobrescrevem o {{cssxref("width")}}.
 
@@ -59,9 +59,7 @@ width: unset;
 - `available` {{experimental_inline}}
   - : Do bloco contendo a largura menos a margin horizontal, borda ou preenchimento.
 - `fit-content` {{experimental_inline}}
-
   - : A largura:
-
     - do comprimento interno mínimo.
     - do menor comprimento interno preferível e da largura disponível.
 
@@ -173,4 +171,4 @@ p.minblue {
 
 ## Veja também
 
-- [box model](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

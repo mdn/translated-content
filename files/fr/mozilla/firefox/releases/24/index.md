@@ -3,8 +3,6 @@ title: Firefox 24 pour les développeurs
 slug: Mozilla/Firefox/Releases/24
 ---
 
-{{FirefoxSidebar}}
-
 ## Changements pour les développeurs Web
 
 ### CSS
@@ -18,8 +16,8 @@ slug: Mozilla/Firefox/Releases/24
 
 ### JavaScript
 
-- Les [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) ne sont plus automatiquement en mode strict sauf si c'est spécifié avec `"use strict"` ([bug Firefox 852762](https://bugzil.la/852762)).
-- La méthode [`String.prototype.repeat`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/repeat) a été implémentée ([bug Firefox 815431](https://bugzil.la/815431)).
+- Les [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ne sont plus automatiquement en mode strict sauf si c'est spécifié avec `"use strict"` ([bug Firefox 852762](https://bugzil.la/852762)).
+- La méthode [`String.prototype.repeat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) a été implémentée ([bug Firefox 815431](https://bugzil.la/815431)).
 - Les méthodes {{jsxref("Set.prototype.values()")}}, {{jsxref("Set.prototype.keys()")}} et {{jsxref("Set.prototype.entries()")}} de l'objet {{jsxref("Set")}} ont été implémentées ([bug Firefox 869996](https://bugzil.la/869996)).
 
 ### DOM

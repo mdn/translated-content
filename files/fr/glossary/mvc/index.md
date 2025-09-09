@@ -21,4 +21,4 @@ Les 3 parties du modèle de conception de logiciel MVC peuvent être décrites c
 
 ### Apprentissage de MVC
 
-- [MVC architecture](/fr/Apps/Build/Architecture_d_une_application_web_moderne/MVC_architecture)
+- [MVC architecture](/fr/docs/Web/Apps/Build/Architecture_d_une_application_web_moderne/MVC_architecture)

@@ -3,9 +3,9 @@ title: Создаём зону кирпичей
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
-{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
 
-Это 6 шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код, как он будет выглядеть после завершения этого урока, тут - [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
+Это 6 шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код, как он будет выглядеть после завершения этого урока, тут - [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
 
 После изменения механики игрового процесса мы теперь можем проиграть - это здорово, так как это означает, что игра, наконец, больше похожа на игру. Тем не менее, он быстро станет скучным, если все, что вы делаете, это отскок шара от стен и биты. То, что действительно нужно для прорыва - это кирпичи, которые нужно уничтожить мячом, и это то, что мы сейчас создадим!
 
@@ -106,6 +106,6 @@ drawBricks();
 
 ## Следующие шаги
 
-Итак, теперь у нас есть кирпичи! Но мяч вообще не взаимодействует с ними - мы изменим это, поскольку мы переходим в седьмую главу: [Collision detection](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection).
+Итак, теперь у нас есть кирпичи! Но мяч вообще не взаимодействует с ними - мы изменим это, поскольку мы переходим в седьмую главу: [Collision detection](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}

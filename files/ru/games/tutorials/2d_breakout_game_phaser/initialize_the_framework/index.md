@@ -3,7 +3,7 @@ title: Инициализация фреймворка
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 ---
 
-{{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling")}}
+{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling")}}
 
 Это первый из 16 уроков о том, как пользоваться [Gamedev Phaser](/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser). После прочтения вы можете найти исходный код для этого урока на [Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html).
 
@@ -61,7 +61,6 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 - Метод рендеринга. Здесь есть три опции `AUTO`, `CANVAS` и `WEBGL`. Мы можем установить одно из двух последних значений или `AUTO`, чтобы Phaser сам определил, что использовать. Обычно используется WebGL, но если браузер его не поддерживает, то Canvas 2D.
 - `id` элемента {{htmlelement("canvas")}} используется для рендеринга, если один {{htmlelement("canvas")}} уже есть (мы установили значение `null`, чтобы Phaser создал свой собственный).
 - Дальше идут названия трёх ключевых функций Phaser: загрузки (load), старта (start) и обновления (update) игры на каждом кадре; мы выбрали такие же названия, чтобы сохранять чистоту кода.
-
   - `preload` заботится о предзагрузке ресурсов игры
   - `create` вызывается только один раз, когда всё загружено и готово
   - `update` вызывается на каждом кадре

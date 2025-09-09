@@ -3,11 +3,24 @@ title: delete 运算符
 slug: Web/JavaScript/Reference/Operators/delete
 ---
 
-{{jsSidebar("Operators")}}
-
 **`delete`** 运算符用于删除对象的一个属性；如果该属性的值是一个对象，并且没有更多对该对象的引用，该属性所持有的对象最终会自动释放。
 
-{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+
+```js interactive-example
+const Employee = {
+  firstname: "Maria",
+  lastname: "Sanchez",
+};
+
+console.log(Employee.firstname);
+// Expected output: "Maria"
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+// Expected output: undefined
+```
 
 ## 语法
 
@@ -46,7 +59,7 @@ delete identifier;
 delete object.#privateProperty;
 ```
 
-因为[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)自动处于严格模式，而[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)只能在类体内合法引用，这意味着私有属性永远不能被删除。虽然 `delete identifier` 在 `identifier` 指的是全局对象的可配置属性时[可能有效](#删除全局属性)，但是你应该避免这种形式，而是用 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 作为前缀。
+因为[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)自动处于严格模式，而[私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)只能在类体内合法引用，这意味着私有元素永远不能被删除。虽然 `delete identifier` 在 `identifier` 指的是全局对象的可配置属性时[可能有效](#删除全局属性)，但是你应该避免这种形式，而是用 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 作为前缀。
 
 虽然其他表达式是可以接受的，但是它们并不导致有意义的行为：
 
@@ -55,7 +68,7 @@ delete console.log(1);
 // 输出 1，返回 true，但是没有删除任何东西
 ```
 
-`delete` 运算符从一个对象中删除一个给定的属性。在成功删除时，它将返回 `true`，否则将返回 `false`。不像一般人认为的那样（也许是由于其他编程语言，如 [C++ 中的 delete](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)），`delete` 操作符与直接释放内存**没有**关系。内存管理是通过破坏引用间接完成的。更多细节请参见[内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)页面。
+`delete` 运算符从一个对象中删除一个给定的属性。在成功删除时，它将返回 `true`，否则将返回 `false`。不像一般人认为的那样（也许是由于其他编程语言，如 [C++ 中的 delete](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)），`delete` 操作符与直接释放内存**没有**关系。内存管理是通过破坏引用间接完成的。更多细节请参见[内存管理](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)页面。
 
 但是，以下情况需要重点考虑：
 

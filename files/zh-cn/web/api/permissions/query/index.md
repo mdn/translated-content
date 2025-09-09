@@ -2,7 +2,7 @@
 title: Permissions：query() 方法
 slug: Web/API/Permissions/query
 l10n:
-  sourceCommit: 3fde60e07c74ad4954a0c77fdd80958c7d07f088
+  sourceCommit: d74e45a592f785d22d8771f37861f795386b03a4
 ---
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}
@@ -22,19 +22,15 @@ query(permissionDescriptor)
 ### 参数
 
 - `permissionDescriptor`
-
   - : 设置 `query` 操作选项的对象。此描述符的可用选项取决于权限类型。所有权限都有一个名称：
-
     - `name`
-      - : 包含要查询其权限的 API 名称的字符串，例如 `camera`、`bluetooth`、`camera`、`geolocation`（有关更完整的列表，请参阅 [`Permissions`](/zh-CN/docs/Web/API/Permissions#浏览器兼容性)）。如果浏览器不支持权限名称，则返回的 {{jsxref("Promise")}} 将使用 {{jsxref("TypeError")}} 拒绝。
+      - : 包含要查询其权限的 API 名称的字符串，例如 `camera`、`bluetooth`、`microphone`、`geolocation`（有关更完整的列表，请参阅 [`Permissions`](/zh-CN/docs/Web/API/Permissions#浏览器兼容性)）。如果浏览器不支持权限名称，则返回的 {{jsxref("Promise")}} 将使用 {{jsxref("TypeError")}} 拒绝。
 
     对于 `push` 权限，你还可以指定：
-
     - `userVisibleOnly` {{optional_inline}}
       - : （仅推送，Firefox 不支持——请参阅下面的浏览器支持部分）表示你是否要为每条消息显示通知或能够发送静默推送通知。默认值为 `false`。
 
     对于 `midi` 权限，你还可以指定：
-
     - `sysex` {{optional_inline}}
       - : 指示是否需要接收系统独有消息。默认值为 `false`。
 
@@ -132,7 +128,15 @@ async function processPermissions() {
 // 在 try...catch 块中查询单个权限并返回结果
 async function getPermission(permission) {
   try {
-    const result = await navigator.permissions.query({ name: permission });
+    let result;
+    if (permission === "top-level-storage-access") {
+      result = await navigator.permissions.query({
+        name: permission,
+        requestedOrigin: window.location.origin,
+      });
+    } else {
+      result = await navigator.permissions.query({ name: permission });
+    }
     return `${permission}：${result.state}`;
   } catch (error) {
     return `${permission}（不支持）`;

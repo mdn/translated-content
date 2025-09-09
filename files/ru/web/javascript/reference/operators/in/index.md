@@ -11,7 +11,22 @@ l10n:
 
 Оператор `in` не может быть использован для поиска значений в других видах коллекций. Чтобы проверить, существует ли определённое значение в массиве, можно использовать {{jsxref("Array.prototype.includes()")}}. А у наборов есть метод {{jsxref("Set.prototype.has()")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+
+```js interactive-example
+const car = { make: "Honda", model: "Accord", year: 1998 };
+
+console.log("make" in car);
+// Expected output: true
+
+delete car.make;
+if ("make" in car === false) {
+  car.make = "Suzuki";
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
+```
 
 ## Синтаксис
 
@@ -23,8 +38,7 @@ prop in object
 ### Параметры
 
 - `prop`
-
-  - : Строковое или символьное значение, представляющее название свойства (несимвольные значения будут [преобразованы в строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#приведение_к_строке)). Также может быть [именем приватного свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties).
+  - : Строковое или символьное значение, представляющее название свойства (несимвольные значения будут [преобразованы в строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#приведение_к_строке)). Также может быть [именем приватного свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_elements).
 
 - `object`
   - : Объект, для которого будет производится проверка, содержит ли он (или его цепочка прототипов) свойство с указанным именем (`prop`).
@@ -40,7 +54,7 @@ prop in object
 
 Свойство может существовать в объекте, но иметь значение `undefined`. Поэтому `x in obj` не то же самое, что `obj.x !== undefined`. Для того, чтобы оператор `in` возвращал значение `false`, используйте оператор [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete) вместо присваивания свойству значения `undefined`.
 
-Также можно использовать оператор `in`, чтобы проверить, существует ли в объекте [приватное поле класса или метод](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties). Оператор `in` возвращает `true`, если свойство определено и `false` в противном случае. Такая проверка называется _бренд-чек_, потому что `in` возвращает `true` только в том случае, когда объект был создан с помощью конструктора класса и имеет доступ к приватным свойствам.
+Также можно использовать оператор `in`, чтобы проверить, существует ли в объекте [приватное поле класса или метод](/ru/docs/Web/JavaScript/Reference/Classes/Private_elements). Оператор `in` возвращает `true`, если свойство определено и `false` в противном случае. Такая проверка называется _бренд-чек_, потому что `in` возвращает `true` только в том случае, когда объект был создан с помощью конструктора класса и имеет доступ к приватным свойствам.
 
 В этом случае используется особый синтаксис: левая сторона оператора `in` является идентификатором свойства, а не выражением, но без кавычек (иначе это будет свойством с типом строка, а не приватным свойством).
 
@@ -269,7 +283,7 @@ if (p1 instanceof Person && p2 instanceof Person) {
 }
 ```
 
-Дополнительные примеры есть в разделе «[Приватные свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties)» и в [руководстве по классам](/ru/docs/Web/JavaScript/Guide/Using_classes#private_fields).
+Дополнительные примеры есть в разделе «[Приватные свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_elements)» и в [руководстве по классам](/ru/docs/Web/JavaScript/Guide/Using_classes#private_fields).
 
 ## Спецификации
 
@@ -285,4 +299,4 @@ if (p1 instanceof Person && p2 instanceof Person) {
 - [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
-- [Перечисляемость и владение свойствами](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и владение свойствами](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

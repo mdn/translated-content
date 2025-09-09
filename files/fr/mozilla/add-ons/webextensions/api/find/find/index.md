@@ -15,7 +15,7 @@ Par défaut, la fonction renvoie juste le nombre de correspondances trouvées. E
 
 Cette fonction stocke les résultats en interne, donc la prochaine fois qu'une extension appelle {{WebExtAPIRef("find.highlightResults()")}}, alors les résultats de cet appel _find_ seront mis en surbrillance, jusqu'à ce que quelqu'un appelle `find()`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -31,9 +31,7 @@ browser.find.find(
 - `queryphrase`
   - : `string`. Le texte à rechercher
 - `options`{{optional_inline}}
-
   - : `object`. Un objet spécifiant des options supplémentaires. Il peut prendre l'une des propriétés suivantes, toutes facultatives :
-
     - `tabId`
       - : `integer`. ID de l'onglet à rechercher. Par défaut à l'onglet actif
     - `caseSensitive`
@@ -47,18 +45,16 @@ browser.find.find(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet contenant jusqu'à trois propriétés :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet contenant jusqu'à trois propriétés :
 
 - `count`
   - : `integer`. Le nombre de résultat trouvés.
 - `rangeData`{{optional_inline}}
-
   - : `array`. Si `includeRangeData` a été donné dans le paramètre `options`, cette propriété sera incluse. Il est fourni sous la forme d'un tableau d'objets `RangeData`, un pour chaque correspondance. Chaque objet `RangeData` décrit où la correspondance a été trouvée dans l'arborescence DOM. Cela permettrait, par exemple, une extension pour obtenir le texte entourant chaque correspondance, afin d'afficher le contexte pour les correspondances.
 
     Les élements correspondent aux éléments données dans `rectData`, donc `rangeData[i]` décrit la même correspondance que `rectData[i]`.
 
     Chaque `RangeData` contient les propriétés suivantes :
-
     - `framePos`
       - : L'index de l'image contenant la correspondance. 0 correspond à une fenêtre parente. Notez que l'ordre des objets dans un tableau `rangeData` s'alignera séquentiellement avec l'ordre des index d'images : par exemple, `framePos` pour la première séquence d'objets `rangeData` sera 0, `framePos` pour la séquence suivante sera 1, et ainsi de suite.
     - `startTextNodePos`
@@ -71,15 +67,11 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
       - : La position de la chaîne de caractères ordinale de la fin du mot trouvé dans le nœud de texte final.
 
 - `rectData`{{optional_inline}}
-
   - : `array`. Si `includeRectData` a été donné dans les paramètres des `options`, cette propriété sera incluse. C'est un tableau d'objets `RectData` . Il contient des rectangles clients pour tout le texte correspondant à la recherche, par rapport à la partie supérieure gauche de la fenêtre. Les extensions peuvent l'utiliser pour fournir une mise en évidence personnalisée les résultats..
 
     Chaque objet `RectData` contient des données rectangle pour une seule correspondance. Il a deux propriétés :
-
     - `rectsAndTexts`
-
       - : Un objet contenant deux propriétés, les deux tableaux :
-
         - `rectList`: un tableau d'objets ayant chacun quatre propriétés entières : `top`, `left`, `bottom`, `right`. Ceux-ci décrivent un rectangle par rapport à la partie supérieure gauche de la fenêtre.
         - `textList`: un tableau de chaînes, correspondant au tableau `rectList`. L'entrée de `textList[i]` contient la partie du match délimitée par le rectangle de `rectList[i]`.
 
@@ -88,7 +80,6 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
         ![](rects-1.png)Si vous recherchez "You may", la comparaison doit être décrit par deux rectangles :
 
         ![](rects-2.png)Dans le cas, dans le `RectData` qui décrit cette correspondance, `rectsAndTexts.rectList` et `rectsAndTexts.textList` auront chacun 2 éléments.
-
         - `textList[0]` contiendra "You ", et `rectList[0]` contiendra son rectangle de délimitation.
         - `textList[1]` contiendra "may", et `rectList[1]` contiendra son rectangle de délimitation.
 
@@ -116,7 +107,7 @@ function found(results) {
 browser.find.find("banana").then(found);
 ```
 
-Rechercher "banana" dans tous les onglets (notez que cela nécessite la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs", car il accède à `tab.url`):
+Rechercher "banana" dans tous les onglets (notez que cela nécessite la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabs", car il accède à `tab.url`):
 
 ```js
 async function findInAllTabs(allTabs) {

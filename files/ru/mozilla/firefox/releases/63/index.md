@@ -3,22 +3,20 @@ title: Firefox 63 для разработчиков
 slug: Mozilla/Firefox/Releases/63
 ---
 
-{{FirefoxSidebar}}
-
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 63 был выпущен 23 октября 2018 года.
 
 ## Изменения для веб-разработчиков
 
 ### Инструменты разработчика
 
-- Вкладка [инспектора](/ru/docs/Tools/Page_Inspector) «Шрифты» обзавелась редактором, облегчающим просмотр и правку настроек используемых шрифтов. Подробнее см. в [Edit fonts](/ru/docs/Tools/Page_Inspector/How_to/Edit_fonts).
-- Включён по умолчанию [инспектор поддержи доступности](/ru/docs/Tools/Accessibility_inspector) ([Firefox bug 1482454](https://bugzil.la/1482454)).
-- При наведении курсора на объект в [инспекторе поддержки доступности](/ru/docs/Tools/Accessibility_inspector), [элемент будет подсвечен](/ru/docs/Tools/Accessibility_inspector#Highlighting_of_UI_items), а его роль и имя показаны в информационной панели на странице ([Firefox bug 1473030](https://bugzil.la/1473030)).
-- Командная строка [веб-консоли](/ru/docs/Tools/Web_Console) теперь находится не внизу окна, а прямо после вывода консоли ([Firefox bug 1136299](https://bugzil.la/1136299)).
-- Если адрес принадлежит домену, о котором известно, что он отслеживает пользователей, [сетевой монитор](/ru/docs/Tools/Network_Monitor) покажет специальный значок перед этой ссылкой — см. [Значки безопасности](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-monitor-request-list-security-icons) ([Firefox bug 1333994](https://bugzil.la/1333994)).
+- Вкладка [инспектора](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) «Шрифты» обзавелась редактором, облегчающим просмотр и правку настроек используемых шрифтов. Подробнее см. в [Edit fonts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html).
+- Включён по умолчанию [инспектор поддержи доступности](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) ([Firefox bug 1482454](https://bugzil.la/1482454)).
+- При наведении курсора на объект в [инспекторе поддержки доступности](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), [элемент будет подсвечен](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting_of_ui_items), а его роль и имя показаны в информационной панели на странице ([Firefox bug 1473030](https://bugzil.la/1473030)).
+- Командная строка [веб-консоли](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) теперь находится не внизу окна, а прямо после вывода консоли ([Firefox bug 1136299](https://bugzil.la/1136299)).
+- Если адрес принадлежит домену, о котором известно, что он отслеживает пользователей, [сетевой монитор](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) покажет специальный значок перед этой ссылкой — см. [Значки безопасности](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-monitor-request-list-security-icons) ([Firefox bug 1333994](https://bugzil.la/1333994)).
 - Настройка `devtools.aboutdebugging.showSystemAddons` отныне по умолчанию имеет значение `false`, что означает — системные дополнения не будут показаны на странице `about:debugging`. Значение этой настройки можно изменить на странице `about:config` ([Firefox bug 1425347](https://bugzil.la/1425347)).
-- Упрощена панель инструментов [режима адаптивного дизайна](/ru/docs/Tools/Responsive_Design_Mode), кроме того, добавлена возможность выровнять область просмотра по левому краю.
-- Для пользовательских элементов инспектор теперь показывает [ссылку на определение класса](/ru/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Custom_element_definition) ([Firefox bug 1443923](https://bugzil.la/1443923)).
+- Упрощена панель инструментов [режима адаптивного дизайна](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), кроме того, добавлена возможность выровнять область просмотра по левому краю.
+- Для пользовательских элементов инспектор теперь показывает [ссылку на определение класса](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#custom_element_definition) ([Firefox bug 1443923](https://bugzil.la/1443923)).
 
 ### HTML
 
@@ -31,16 +29,16 @@ slug: Mozilla/Firefox/Releases/63
 ### CSS
 
 - Добавлена поддержка псевдокласса {{CSSxRef(":defined")}} ([Firefox bug 1331334](https://bugzil.la/1331334)).
-- В [Flexbox-раскладку](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#The_gap_properties) добавлена поддержка {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} и {{CSSxRef("gap")}} ([Firefox bug 1398483](https://bugzil.la/1398483)).
+- В [Flexbox-раскладку](/ru/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) добавлена поддержка {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} и {{CSSxRef("gap")}} ([Firefox bug 1398483](https://bugzil.la/1398483)).
 - Снова включена поддержка [запросов pixel-density правила @media](/ru/docs/Web/CSS/@media/-webkit-device-pixel-ratio), у которых есть префикс -webkit ([Firefox bug 1444139](https://bugzil.la/1444139)).
-- Реализована поддержка свойств [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}} и {{CSSxRef("align-items")}}, а также {{CSSxRef("justify-content")}} ([Firefox bug 1472843](https://bugzil.la/1472843)).
+- Реализована поддержка свойств [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}} и {{CSSxRef("align-items")}}, а также {{CSSxRef("justify-content")}} ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Реализована функция `path` для {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).
-- Внесены [улучшения синтаксиса из спецификации Media Queries Level 4](/ru/docs/Web/JavaScript/Reference/Errors/cant_access_property) ([Firefox bug 1472843](https://bugzil.la/1472843)).
+- Внесены [улучшения синтаксиса из спецификации Media Queries Level 4](/ru/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Свойства `offset-*` переименованы в {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}} и {{CSSxRef("inset-inline-end")}} ([Firefox bug 1464782](https://bugzil.la/1464782)).
 - Добавлена поддержка [prefers-reduced-motion](/ru/docs/Web/CSS/@media/prefers-reduced-motion) ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
 - Свойство {{CSSxRef("resize")}} обзавелось относительно-направленными значениями (`block`, `inline`) ([Firefox bug 1464786](https://bugzil.la/1464786)).
 - Реализована flexbox-раскладка для значений `safe` и `unsafe` в {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}} и {{CSSxRef("justify-content")}} ([Firefox bug 1297774](https://bugzil.la/1297774)).
-- [Логические свойства](/ru/docs/Web/CSS/CSS_Logical_Properties) (там, где это необходимо) стали анимируемыми ([Firefox bug 1309752](https://bugzil.la/1309752)).
+- [Логические свойства](/ru/docs/Web/CSS/CSS_logical_properties_and_values) (там, где это необходимо) стали анимируемыми ([Firefox bug 1309752](https://bugzil.la/1309752)).
 
 #### Удалено
 
@@ -54,7 +52,7 @@ _Без изменений._
 
 - Реализована поддержка свойства {{JSxRef("Symbol.prototype.description")}} ([Firefox bug 1472170](https://bugzil.la/1472170)).
 - Добавлен метод {{JSxRef("Object.fromEntries")}} ([Firefox bug 1469019](https://bugzil.la/1469019)).
-- Существенно улучшено сообщение об ошибке, выдаваемое при попытке доступа к свойству не определённого объекта. В случае, когда `x` не определён, а вы пытаетесь получить доступ к `x.y`, консоль вернёт более понятное [`x не определён; невозможно получить доступ к его свойству "y"`](/ru/docs/Web/JavaScript/Reference/Errors/cant_access_property) вместо `TypeError: x не определён` ([Firefox bug 1259822](https://bugzil.la/1259822)).
+- Существенно улучшено сообщение об ошибке, выдаваемое при попытке доступа к свойству не определённого объекта. В случае, когда `x` не определён, а вы пытаетесь получить доступ к `x.y`, консоль вернёт более понятное [`x не определён; невозможно получить доступ к его свойству "y"`](/ru/docs/Web/JavaScript/Reference/Errors/Unexpected_type) вместо `TypeError: x не определён` ([Firefox bug 1259822](https://bugzil.la/1259822)).
 
 #### Удалено
 
@@ -64,7 +62,7 @@ _Без изменений._
 
 #### Новые API
 
-- Включена по умолчанию поддержка API Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) и Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)); см. [Веб-компоненты](/ru/docs/Web/Web_Components) для получения подробных сведений.
+- Включена по умолчанию поддержка API Shadow DOM ([Firefox bug 1471947](https://bugzil.la/1471947)) и Custom Elements ([Firefox bug 1471948](https://bugzil.la/1471948)); см. [Веб-компоненты](/ru/docs/Web/API/Web_components) для получения подробных сведений.
 - Реализован API {{domxref("Media_Capabilities_API", "Media Capabilities", "", "1")}} ([Firefox bug 1409664](https://bugzil.la/1409664)).
 - Реализована и включена по умолчанию поддержка {{domxref("Clipboard", "API Async Clipboard", "", "1")}} ([Firefox bug 1461465](https://bugzil.la/1461465)). Как и в Chrome, в Firefox реализованы лишь методы {{domxref("Clipboard.writeText", "writeText()")}} и {{domxref("Clipboard.readText", "readText()")}}, но, в отличие от Chrome, `readText()` доступен лишь [дополнениям](/ru/docs/Mozilla/Add-ons/WebExtensions).
 - Поддерживается интерфейс {{DOMxRef("SecurityPolicyViolationEvent")}}. Он позволяет отправлять события при нарушении {{HTTPHeader("Content-Security-Policy")}} ([Firefox bug 1472661](https://bugzil.la/1472661)).
@@ -72,7 +70,6 @@ _Без изменений._
 #### DOM
 
 - Включены по умолчанию следующие элементы API {{domxref("Web_Animations_API", "Web Animations", "", "1")}} (см. [Firefox bug 1476158](https://bugzil.la/1476158)):
-
   - Свойства {{DOMxRef("Animation.ready", "ready")}} и {{DOMxRef("Animation.finished", "finished")}} {{DOMxRef("Animation")}}, указывающие на {{JSxRef("Promise")}} `ready` и `finished` объекта `Animation`.
   - Свойство {{DOMxRef("Animation.effect", "effect")}} объекта {{DOMxRef("Animation")}}.
   - Интерфейсы {{DOMxRef("KeyframeEffect")}} и {{DOMxRef("AnimationEffect")}}.
@@ -134,7 +131,7 @@ _Без изменений._
 
 ### Безопасность
 
-- Фавиконы сайтов отныне подчиняются [политике защиты контента](/ru/docs/Web/HTTP/CSP) (CSP), если она настроена ([Firefox bug 1297156](https://bugzil.la/1297156)).
+- Фавиконы сайтов отныне подчиняются [политике защиты контента](/ru/docs/Web/HTTP/Guides/CSP) (CSP), если она настроена ([Firefox bug 1297156](https://bugzil.la/1297156)).
 - Выражение `'report-sample'` директивы CSP `script-src` отныне учитывается при создании отчёта о нарушении. Эта директива указывает, что в отчёт должен быть включён краткий пример того, где произошло нарушение. До этого Firefox всегда включал такой пример в отчёт ([Firefox bug 1473218](https://bugzil.la/1473218)).
 - Библиотеки NSS обновлены до версии 3.39 ([Firefox bug 1470914](https://bugzil.la/1470914)).
 
@@ -182,7 +179,6 @@ _Без изменений._
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} и {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} позволяют получать и настраивать цвет текста значков {{WebExtAPIRef("browserAction")}} ([Firefox bug 1424620](https://bugzil.la/1424620)).
 - Объект `colors` ключа `theme` теперь поддерживает свойства `ntp_text` (для указания цвета текста в новой вкладке) и `ntp_background` (для указания цвета фона) ([Firefox bug 1347204](https://bugzil.la/1347204)).
 - Темы получили возможность настраивать цвет боковых панелей, например, боковой панели закладок ([Firefox bug 1418602](https://bugzil.la/1418602)). Соответствующие свойства:
-
   - `sidebar`: цвет фона.
   - `sidebar_text`: цвет текста.
   - `sidebar_highlight`: цвет фона выделенного элемента.
@@ -212,7 +208,7 @@ _Без изменений._
 - {{WebExtAPIRef("menus.create()")}} теперь позволяет создавать невидимые пункты меню, {{WebExtAPIRef("menus.update()")}} позволяет переключать видимость пунктов меню ([Firefox bug 1482529](https://bugzil.la/1482529)).
 - Элементы, созданные с помощью API {{WebExtAPIRef("menus")}}, обзавелись поддержкой клавиш доступа ([Firefox bug 1320462](https://bugzil.la/1320462)).
 - Параметр {{WebExtApiRef("menus.create()")}} и {{WebExtApiRef("menus.update()")}} `targetUrlPatterns` теперь поддерживает любые схемы URL-адресов, даже те, которые обычно не допускаются в шаблоне соответствия ([Firefox bug 1280370](https://bugzil.la/1280370)).
-- При нажатии на элемент контекстного меню вкладки, [разрешение "activeTab"](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) будет дано этой вкладке, даже если она не является активной ([Firefox bug 1446956](https://bugzil.la/1446956)).
+- При нажатии на элемент контекстного меню вкладки, [разрешение "activeTab"](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) будет дано этой вкладке, даже если она не является активной ([Firefox bug 1446956](https://bugzil.la/1446956)).
 
 #### Прочее
 

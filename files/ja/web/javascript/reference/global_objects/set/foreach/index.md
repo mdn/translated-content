@@ -1,15 +1,26 @@
 ---
 title: Set.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`forEach()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された関数をこの集合のそれぞれの値に対して一回ずつ、挿入順で実行します。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.forEach()")}}
+
+```js interactive-example
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
+
+// 予想される結果: "s[foo] = foo"
+// 予想される結果: "s[bar] = bar"
+// 予想される結果: "s[undefined] = undefined"
+```
 
 ## 構文
 
@@ -21,9 +32,7 @@ forEach(callbackFn, thisArg)
 ### 引数
 
 - `callback`
-
   - : この集合のそれぞれの項目に対して実行する関数です。この関数は次の引数で呼び出されます。
-
     - `value`
       - : それぞれの反復処理の値です。
     - `key`

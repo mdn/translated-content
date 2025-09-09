@@ -30,7 +30,7 @@ Este valor tiene un comportamiento ligeramente diferente que el del infinito mat
 
 Muchos métodos JavaScript (tales como el constructor del objeto `Number`, `parseFloat`, y `parseInt`) retornan `NaN` si el valor especifico en el párametro es significativamente menor a `Number.MIN_VALUE`.
 
-Podrías utilizar la propiedad `Number.NEGATIVE_INFINITY` para indicar una condición de error que retorne un numero finito en caso de que esto suceda. Note, sin embargo, que [`isFinite`](/es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/isFinite) seria mas apropiado en estos casos.
+Podrías utilizar la propiedad `Number.NEGATIVE_INFINITY` para indicar una condición de error que retorne un numero finito en caso de que esto suceda. Note, sin embargo, que [`isFinite`](/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite) seria mas apropiado en estos casos.
 
 ## Example
 

@@ -3,8 +3,6 @@ title: border-collapse
 slug: Web/CSS/border-collapse
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 La propiedad `border-collapse` se utiliza para fusionar los bordes. Ésto tiene una gran influencia sobre la presentación y el estilo de las celdas de tabla. La representación de los bordes de tabla es dividida en dos categorías en CSS2 - "fusión" y "separación" (collapsed - separated). Esta propiedad especifica que modo de presentación de borde hay que usar.
@@ -32,7 +30,7 @@ border-collapse: value
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border-collapse.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border-collapse.html)
 
 ```
 <table border="1" style="border-collapse: collapse" bordercolor="#111111" width="500">

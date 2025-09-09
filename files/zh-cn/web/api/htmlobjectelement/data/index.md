@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLObjectElement")}} 接口的 **`data`** 属性返回反映 [`data`](/zh-CN/docs/Web/HTML/Element/object#data) HTML 属性的字符串，指定资源数据的地址。
+{{domxref("HTMLObjectElement")}} 接口的 **`data`** 属性返回反映 [`data`](/zh-CN/docs/Web/HTML/Reference/Elements/object#data) HTML 属性的字符串，指定资源数据的地址。
 
 ## 值
 

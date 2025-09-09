@@ -3,8 +3,6 @@ title: <display-outside>
 slug: Web/CSS/display-outside
 ---
 
-{{CSSRef}}
-
 `<display-outside>` 关键字指定了元素的外侧显示（{{CSSXref("display")}}）类型，即元素在流式布局中的角色。这些关键字用作 `display` 属性的值，且有作为单个关键字的旧式用法，或按第 3 级规范的定义与 {{CSSXref("&lt;display-inside&gt;")}} 关键字中的值一同使用。
 
 ## 语法
@@ -53,12 +51,11 @@ span {
 ## 参见
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [正常流中的块向与行向布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [格式化上下文介绍](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [正常流中的块向与行向布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [格式化上下文介绍](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)

@@ -3,13 +3,11 @@ title: transition
 slug: Web/CSS/transition
 ---
 
-{{ CSSRef("CSS Transitions") }}
-
 {{ SeeCompatTable() }}
 
 ## Sumario
 
-La propiedad `transition` es una [propiedad abreviada](/es/docs/CSS/Shorthand_properties) de {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, y {{ cssxref("transition-delay") }}. Permite definir la transición entre dos estados de un elemento. Hay diferentes estados que pueden ser definidos utilizando [pseudo-clases](/es/docs/CSS/Pseudo-classes) como {{cssxref(":hover")}} o {{cssxref(":active")}} o aplicado dinámicamente usando JavaScript.
+La propiedad `transition` es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) de {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, y {{ cssxref("transition-delay") }}. Permite definir la transición entre dos estados de un elemento. Hay diferentes estados que pueden ser definidos utilizando [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) como {{cssxref(":hover")}} o {{cssxref(":active")}} o aplicado dinámicamente usando JavaScript.
 
 {{cssinfo}}
 
@@ -35,9 +33,9 @@ transition:
 transition: all 0.5s ease-out;
 ```
 
-Nótese que el orden es importante dentro de los elementos de la propiedad. El primer valor que puede ser analizado como tiempo es asignado a la propiedad [transition-duration](/es/docs/CSS/transition-duration), y el segundo valor que puede ser analizado como tiempo es asignado a la propiedad [transition-delay](/es/docs/CSS/transition-delay).
+Nótese que el orden es importante dentro de los elementos de la propiedad. El primer valor que puede ser analizado como tiempo es asignado a la propiedad [transition-duration](/es/docs/Web/CSS/transition-duration), y el segundo valor que puede ser analizado como tiempo es asignado a la propiedad [transition-delay](/es/docs/Web/CSS/transition-delay).
 
-Véase [cuando la lista de valores de propiedades son de diferentes tamaños](/en/CSS/CSS_transitions#When_property_value_lists_are_of_different_lengths) para más detalles de cómo se manejan las cosas cuando la lista de valores de propiedades no son de tamaños iguales. En resumen, las descripciones extras más allá del número de propiedades que son animadas son ignoradas.
+Véase [cuando la lista de valores de propiedades son de diferentes tamaños](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths) para más detalles de cómo se manejan las cosas cuando la lista de valores de propiedades no son de tamaños iguales. En resumen, las descripciones extras más allá del número de propiedades que son animadas son ignoradas.
 
 ### Sintaxis formal
 
@@ -45,7 +43,7 @@ Véase [cuando la lista de valores de propiedades son de diferentes tamaños](/e
 
 ## Ejemplos
 
-Hay muchos ejemplos de transiciones CSS en el artículo principal [CSS transitions](/en/CSS/CSS_transitions).
+Hay muchos ejemplos de transiciones CSS en el artículo principal [CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 ## Especificaciones
 
@@ -57,5 +55,5 @@ Hay muchos ejemplos de transiciones CSS en el artículo principal [CSS transitio
 
 ## Véase también
 
-- [Usando transiciones CSS](/es/docs/CSS/Using_CSS_transitions)
+- [Usando transiciones CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

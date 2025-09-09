@@ -19,12 +19,12 @@ l10n:
 - _大端序_：`0x12 0x34 0x56 0x78`
 - _混合序_（曾经的做法，非常罕见）：`0x34 0x12 0x78 0x56`
 
-类型化数组指南提供了[将任何数字转换为给定字节序的二进制表示](/zh-CN/docs/Web/JavaScript/Typed_arrays#视图)的一个示例。
+类型化数组指南提供了[将任何数字转换为给定字节序的二进制表示](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays#视图)的一个示例。
 
 ## 参见
 
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - 维基百科上的[字节序](https://zh.wikipedia.org/wiki/字节序)
 - {{Glossary("Data structure", "数据结构")}}

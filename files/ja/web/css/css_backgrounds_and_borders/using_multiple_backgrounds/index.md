@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
-
 **複数の背景画像**を要素に適用できます。これらは、最初に記述した背景が一番上になり、後に記述した背景がその下になるように重ね合わされます。最後の背景にだけ、背景色が指定できます。
 
 複数の背景の指定は、下記のように簡単です。
@@ -38,7 +36,8 @@ l10n:
 .multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(firefox.png), url(bubbles.png),
+  background-image:
+    url(firefox.png), url(bubbles.png),
     linear-gradient(to right, rgb(30 75 115 / 100%), rgb(255 255 255 / 0%));
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:

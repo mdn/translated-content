@@ -21,7 +21,7 @@ l10n:
 
 `ArrayBuffer` オブジェクトは `maxByteLength` オプションを指定して {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} コンストラクターを呼び出すことで、サイズを変更することができるようになります。`ArrayBuffer` がサイズ変更可能かどうか、またその最大サイズを知るには、それぞれ {{jsxref("ArrayBuffer/resizable", "resizable")}} と {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} のプロパティにアクセスすれば分かります。サイズ変更可能な `ArrayBuffer` には、 {{jsxref("ArrayBuffer/resize", "resize()")}} を呼び出して新しいサイズを割り当てることができます。新しいバイトは 0 に初期化されます。
 
-これらの機能により、`ArrayBuffer` のサイズ変更がより効率的になります。そうしないと、新しいサイズのバッファーのコピーを持たなければなりません。また、この点で JavaScript が WebAssembly と同等になります（WASM のリニアメモリーは [`WebAssembly.Memory.prototype.grow()`](/ja/docs/WebAssembly/JavaScript_interface/Memory/grow) でサイズ変更が可能です）。
+これらの機能により、`ArrayBuffer` のサイズ変更がより効率的になります。そうしないと、新しいサイズのバッファーのコピーを持たなければなりません。また、この点で JavaScript が WebAssembly と同等になります（WASM のリニアメモリーは [`WebAssembly.Memory.prototype.grow()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) でサイズ変更が可能です）。
 
 ## コンストラクター
 
@@ -30,7 +30,7 @@ l10n:
 
 ## 静的プロパティ
 
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[Symbol.species]")}}
   - : 派生オブジェクトを作成する際に使用するコンストラクター関数です。
 
 ## 静的メソッド
@@ -50,7 +50,7 @@ l10n:
   - : 読み取り専用。`ArrayBuffer` のサイズを変更できる場合は `true` を、変更できない場合は `false` を返します。
 - {{jsxref("Object/constructor", "ArrayBuffer.prototype.constructor")}}
   - : インスタンスオブジェクトを作成したコンストラクター関数。`ArrayBuffer` インスタンスの場合、初期値は {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer")}} コンストラクターです。
-- `ArrayBuffer.prototype[@@toStringTag]`
+- `ArrayBuffer.prototype[Symbol.toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"ArrayBuffer"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
@@ -82,6 +82,6 @@ const view = new Int32Array(buffer);
 ## 関連情報
 
 - [`ArrayBuffer` ポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: invalid array length](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

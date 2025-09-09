@@ -1,42 +1,43 @@
 ---
-title: PositionError
+title: GeolocationPositionError
 slug: Web/API/GeolocationPositionError
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef("Geolocation API")}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`PositionError`** 介面表示使用定位設備時發生錯誤的原因。
+**`GeolocationPositionError`** 介面表示使用地理定位裝置時發生錯誤的原因。
 
-## 屬性
+## 實例屬性
 
-_`PositionError` 介面沒有繼承任何屬性_。
+_`GeolocationPositionError` 介面不繼承任何屬性。_
 
-- {{domxref("PositionError.code")}} {{readonlyInline}}
+- {{domxref("GeolocationPositionError.code")}} {{ReadOnlyInline}}
+  - : 回傳一個 `unsigned short`，表示錯誤代碼。可能的值如下：
 
-  - : 回傳一個無符號整數（`unsigned short`）來表示錯誤碼。以下列出可能的值：
+    | 值  | 相關常數               | 描述                                                                                                                 |
+    | --- | ---------------------- | -------------------------------------------------------------------------------------------------------------------- |
+    | `1` | `PERMISSION_DENIED`    | 獲取地理定位訊息失敗，因為頁面沒有必要的權限，例如被[權限政策](/zh-TW/docs/Web/HTTP/Guides/Permissions_Policy)阻擋。 |
+    | `2` | `POSITION_UNAVAILABLE` | 獲取地理定位失敗，因為至少一個內部位置來源回傳了內部錯誤。                                                           |
+    | `3` | `TIMEOUT`              | 在獲取到訊息之前，已達到獲取地理定位所允許的時間。                                                                   |
 
-    | 值  | 相對應的常數           | 描述                                                                                        |
-    | --- | ---------------------- | ------------------------------------------------------------------------------------------- |
-    | `1` | `PERMISSION_DENIED`    | 取得地理資訊失敗，因為此頁面沒有獲取地理位置信息的權限。                                    |
-    | `2` | `POSITION_UNAVAILABLE` | 取得地理資訊失敗，因為至少有一個地理位置信息內的資訊回傳了錯誤。                            |
-    | `3` | `TIMEOUT`              | 取得地理資訊超過時限，利用{{domxref("PositionOptions.timeout")}} 來定義取得地理資訊的時限。 |
+- {{domxref("GeolocationPositionError.message")}} {{ReadOnlyInline}}
+  - : 回傳一個人類可讀的字串，描述錯誤的詳細資訊。規範指出，這主要用於除錯，不應直接顯示在使用者介面中。
 
-- {{domxref("PositionError.message")}} {{readonlyInline}}
-  - : 回傳一個可讀的 {{domxref("DOMString")}} 來描述錯誤的詳細訊息。注意規格中指出此訊息是用來除錯而非直接顯示在使用者介面。
+## 實例方法
 
-## 方法
+_`GeolocationPositionError` 介面既不實作也不繼承任何方法。_
 
-**`PositionError` 介面沒有實作也沒有繼承任何方法**。
-
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
-- {{domxref("Geolocation")}} 介面使用此物件。
+- [使用 Geolocation API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("Geolocation")}}

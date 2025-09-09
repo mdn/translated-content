@@ -47,7 +47,7 @@ getImageData(sx, sy, sw, sh, settings)
   - : 如果 `sw` 或 `sh` 中有任何一个为零时抛出。
 - `SecurityError` {{domxref("DOMException")}}
   - : 画布包含或可能包含从与文档本身加载的原点不同的源加载的像素。
-    要避免在此情况下抛出 `SecurityError` {{domxref("DOMException")}}，请配置 CORS 允许以这种方式使用源图像。参见[允许图片和 canvas 跨源使用](/zh-CN/docs/Web/HTML/CORS_enabled_image)。
+    要避免在此情况下抛出 `SecurityError` {{domxref("DOMException")}}，请配置 CORS 允许以这种方式使用源图像。参见[允许图片和 canvas 跨源使用](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)。
 
 ## 示例
 

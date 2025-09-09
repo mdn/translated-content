@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls")}}
 
-이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Workflows/Breakout_game_from_scratch)의 10단계 중 두 번째 과정입니다. [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
+이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10단계 중 두 번째 과정입니다. [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
 
 여러분은 이전 과정에서 어떻게 공이 그려지는지 배웠습니다. 이젠 공을 움직이게 만들어보죠! 기술적으로는 화면에 공을 그렸다가 지우는 과정을 반복하게 되는데, 매 프레임마다 공의 위치를 조금씩 다르게 해서 그리면 공이 움직이는것 처럼 보이게 됩니다. 마치 영화 화면이 움직이는 방식처럼 말이죠!
 

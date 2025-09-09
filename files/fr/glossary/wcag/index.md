@@ -24,4 +24,4 @@ WCAG utilise trois niveaux d'accessibilité :
 ### Connaissances techniques
 
 - [Informations d'accessibilité sur MDN](/fr/docs/Web/Accessibility/Information_for_Web_authors)
-- [La recommandation WCAG 2.0 sur le W3C](http://www.w3.org/TR/WCAG20/)
+- [La recommandation WCAG 2.0 sur le W3C](https://www.w3.org/TR/WCAG20/)

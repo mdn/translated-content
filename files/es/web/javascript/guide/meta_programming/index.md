@@ -44,7 +44,7 @@ Los siguientes términos se utilizan cuando se habla de la funcionalidad de los 
 
 ## Controladores y trampas
 
-La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve las [páginas de referencia](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) para explicaciones detalladas y ejemplos.
+La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve las [páginas de referencia](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy) para explicaciones detalladas y ejemplos.
 
 <table class="standard-table">
     <thead>
@@ -269,7 +269,7 @@ Reflect.has(Object, "assign"); // true
 
 ### Una mejor función `apply`
 
-En ES5, normalmente usas el método {{jsxref("Function.prototype.apply()")}} para llamar a una función con un valor `this` y `arguments` proporcionado como un arreglo (o un [objeto similar a un arreglo](/es/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+En ES5, normalmente usas el método {{jsxref("Function.prototype.apply()")}} para llamar a una función con un valor `this` y `arguments` proporcionado como un arreglo (o un [objeto similar a un arreglo](/es/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);

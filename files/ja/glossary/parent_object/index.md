@@ -9,4 +9,4 @@ slug: Glossary/Parent_object
 
 ## 関連項目
 
-- [JavaScript の継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript の継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -3,11 +3,24 @@ title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 ---
 
-{{jsSidebar("Statements")}}
-
 **`function*`** 宣告式（`function` 關鍵字後面跟著一個星號）定義了一個*生成器函式（generator function）*，他會回傳一個{{jsxref("Global_Objects/Generator","生成器（Generator）")}}物件。
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 你可以透過 {{jsxref("GeneratorFunction")}} 建構式來定義生成器函式。
 
@@ -138,7 +151,7 @@ const bar = foo();console.log(bar.next()); // {value: 10, done: false}
 
 #### Generators and iterators in Firefox versions before 26
 
-Older Firefox versions implement an older version of the generators proposal. In the older version, generators were defined using a regular `function` keyword (without an asterisk) among other differences. See [Legacy generator function](/zh-TW/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) for further information.
+Older Firefox versions implement an older version of the generators proposal. In the older version, generators were defined using a regular `function` keyword (without an asterisk) among other differences. See [Legacy generator function](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) for further information.
 
 #### `IteratorResult` object returned instead of throwing
 
@@ -156,7 +169,6 @@ Starting with Gecko 29, the completed generator function no longer throws a {{js
 - {{jsxref("Operators/function", "function expression")}}
 - {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
 - Other web resources:
-
   - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
   - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](https://github.com/mozilla/task.js)

@@ -238,5 +238,5 @@ O "oops" externo não é lançado devido ao retorno do bloco `finally`. O mesmo 
 
 ## Vejam também
 
-- [throw](/pt-BR/JavaScript/Reference/Statements/throw)
-- [Error](/pt-BR/JavaScript/Reference/Global_Objects/Error)
+- [throw](/pt-BR/docs/JavaScript/Reference/Statements/throw)
+- [Error](/pt-BR/docs/JavaScript/Reference/Global_Objects/Error)

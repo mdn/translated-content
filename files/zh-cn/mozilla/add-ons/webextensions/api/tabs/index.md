@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bb031733da9f5678de3cdc5b561123b111b3b2fc
 ---
 
-{{AddonSidebar}}
-
 与浏览器标签系统进行交互。
 
 > [!NOTE]
@@ -17,12 +15,11 @@ l10n:
 你可以在不需要任何特殊权限的情况下使用该 API 的大部分，除了：
 
 - 要访问 `Tab.url`、`Tab.title` 和 `Tab.favIconUrl`（或通过 {{WebExtAPIRef("tabs.query()")}} 过滤这些属性），需要具备 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，或者具备匹配 `Tab.url` 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
-
   - 自 Firefox 86 和 Chrome 50 起，基于主机权限访问这些属性得到了支持。在 Firefox 85 及更早版本中，则需要“tabs”权限。
 
-- 使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} 你必须在目标标签拥有[主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)。
+- 使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} 你必须在目标标签拥有[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)。
 
-或者你可以仅仅只为当前的活动标签临时的获取这些权限并且仅仅只响应一个显示的用户行为，请查看 [`"activeTab"` 的权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)。
+或者你可以仅仅只为当前的活动标签临时的获取这些权限并且仅仅只响应一个显示的用户行为，请查看 [`"activeTab"` 的权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)。
 
 许多标签页操作使用标签页 `id`。标签页 `id` 在浏览器会话内对每个标签页是唯一的。如果浏览器重启，那么它可以并且会重新使用标签页 `id`。要在浏览器重启后仍与标签页关联信息，请使用 {{WebExtAPIRef("sessions.setTabValue()")}}。
 
@@ -75,7 +72,7 @@ l10n:
 - {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
   - : 获取指定窗口所有标签的详细信息。
 - {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : 返回一个 [`tabs.Tab`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab)。该对象包含了该脚本当前的宿主标签的信息。
+  - : 返回一个 [`tabs.Tab`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)。该对象包含了该脚本当前的宿主标签的信息。
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
   - : 获取在指定窗口被选定的标签。**已弃用**：请改用 [`tabs.query({active: true})`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。
 - {{WebExtAPIRef("tabs.getZoom()")}}
@@ -163,7 +160,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

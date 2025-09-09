@@ -9,4 +9,4 @@ La dernière version stable du {{Glossary("HTML")}}, HTML5, transforme le HTML q
 
 ## Pour en savoir plus
 
-- [notre guide HTML5](/fr/docs/Web/Guide/HTML/HTML5)
+- [notre guide HTML5](/fr/docs/Glossary/HTML5)

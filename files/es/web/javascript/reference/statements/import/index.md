@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Statements/import
 La sentencia **`import`** se usa para importar funciones que han sido exportadas desde un módulo externo.
 
 > [!NOTE]
-> Por el momento, esta característica sólo está [comenzando a ser implementada](https://jakearchibald.com/2017/es-modules-in-browsers/) de forma nativa en los navegadores. Está implementada en muchos transpiladores, tales como Typescript y [Babel](http://babeljs.io/), y en empaquetadores como [Rollup](https://github.com/rollup/rollup) y [Webpack](https://webpack.js.org/).
+> Por el momento, esta característica sólo está [comenzando a ser implementada](https://jakearchibald.com/2017/es-modules-in-browsers/) de forma nativa en los navegadores. Está implementada en muchos transpiladores, tales como Typescript y [Babel](https://babeljs.io/), y en empaquetadores como [Rollup](https://github.com/rollup/rollup) y [Webpack](https://webpack.js.org/).
 
 ## Sintaxis
 
@@ -47,7 +47,7 @@ Esto inserta `myModule` en el ámbito actual, que contiene todos los elementos e
 import * as myModule from "/modules/my-module.js";
 ```
 
-Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembre exportado llamado `doAllTheAmazingThings()`, habría que invocarlo de la siguiente manera:
+Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembro exportado llamado `doAllTheAmazingThings()`, habría que invocarlo de la siguiente manera:
 
 ```js
 myModule.doAllTheAmazingThings();
@@ -69,7 +69,7 @@ Esto inserta `foo` y `bar` en el ámbito actual.
 import { foo, bar } from "my-module.js";
 ```
 
-### Importa un miembre con un alias mas conveniente
+### Importa un miembro con un alias más conveniente
 
 Se puede renombrar un miembro exportado cuando se importa. Por ejemplo, esto inserta `shortName` en el ámbito actual.
 
@@ -88,9 +88,9 @@ import {
 } from "/modules/my-module.js";
 ```
 
-### Importa un módulo entero para efectos secundarios sólamente
+### Importa un módulo entero para efectos secundarios solamente
 
-Importa un módulo entero para efectos secundarios sólamente, sin importar ningun elemento. Esto ejecuta el código global del módulo, pero no importa ningún valor.
+Importa un módulo entero para efectos secundarios solamente, sin importar ningun elemento. Esto ejecuta el código global del módulo, pero no importa ningún valor.
 
 ```js
 import "/modules/my-module.js";
@@ -164,4 +164,4 @@ getUsefulContents("http://www.example.com", (data) => {
 - {{jsxref("Sentencias/export", "export")}}
 - [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

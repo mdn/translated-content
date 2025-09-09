@@ -23,10 +23,10 @@ Peu de temps après avoir inventé le web, Tim Berners-Lee a fondé le {{Glossar
 
 ### Apprendre sur ce sujet
 
-- [Apprendre le Web](/fr/Apprendre)
+- [Apprendre le Web](/fr/docs/Learn_web_development)
 - [Web literacy map](https://learning.mozilla.org/en-US/web-literacy) (inventaire des compétences requises pour le développement web)
 
 ### Culture générale
 
 - [<i lang="en">World Wide Web</i>](https://fr.wikipedia.org/wiki/World_Wide_Web) sur Wikipédia
-- [Le site web du W3C](http://w3.org)
+- [Le site web du W3C](https://w3.org)

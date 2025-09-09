@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 
 El método **`matchAll()`** retorna un iterador de todos los resultados de ocurrencia en una _cadena de texto_ contra una expresión regular, incluyendo grupos de captura.
 
-{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+
+```js interactive-example
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
+
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// Expected output: Array ["test2", "e", "st2", "2"]
+```
 
 ## Sintaxis
 
@@ -22,7 +35,7 @@ cadena.matchAll(expresionRegular)
 
 ### Valor devuelto
 
-Un [iterador](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators) (el cual no es reiniciable).
+Un [iterador](/es/docs/Web/JavaScript/Guide/Iterators_and_generators) (el cual no es reiniciable).
 
 ## Ejemplo
 

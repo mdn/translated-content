@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 
 El método **`copyWithin()`** transfiere una copia plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve.
 
-{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
+{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c", "d", "e"];
+
+// Copy to index 0 the element at index 3
+console.log(array1.copyWithin(0, 3, 4));
+// Expected output: Array ["d", "b", "c", "d", "e"]
+
+// Copy to index 1 all elements from index 3 to the end
+console.log(array1.copyWithin(1, 3));
+// Expected output: Array ["d", "d", "e", "d", "e"]
+```
 
 ## Sintaxis
 
@@ -20,19 +32,16 @@ arr.copyWithin(target, start, end)
 ### Parámetros
 
 - `target`
-
   - : Índice basado en cero que establece en dónde dentro de la secuencia original se insertará la secuencia copiada. Si es negativo, `target` se contará desde el final. -1 es el último elemento, -2 el penúltimo, etc.
 
     Si `target` es igual o mayor que `arr.length`, no se copiará nada. Si `target` es posicionado después de `start`, la secuencia copiada se recortará para que encaje con `arr.length`.
 
 - `start` {{optional_inline}}
-
   - : Índice basado en cero a partir del cual comenzar la copia de elementos. Si es negativo, start comenzará a contarse desde el final.
 
     Si `start` es omitido, `copyWithin` copiará desde el principio (por defecto es 0).
 
 - `end` {{optional_inline}}
-
   - : Índice basado en cero hasta el cual se copiarán los elementos. `copyWithin` copiará hasta pero sin incluir el end. Si es negativo, `end` será contado desde el final.
 
     Si `end` es omitido, `copyWithin` copiará hasta el final ( por defecto es `arr.length`).

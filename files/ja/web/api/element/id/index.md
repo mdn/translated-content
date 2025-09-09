@@ -8,7 +8,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-**`id`** は {{domxref("Element")}} インターフェイスのプロパティで、グローバル属性の [**`id`**](/ja/docs/Web/HTML/Global_attributes/id) を反映した要素の識別子を表します。
+**`id`** は {{domxref("Element")}} インターフェイスのプロパティで、グローバル属性の [**`id`**](/ja/docs/Web/HTML/Reference/Global_attributes/id) を反映した要素の識別子を表します。
 
 `id` の値が空文字列でない場合は、文書内で固有でなければなりません。
 
@@ -31,4 +31,4 @@ l10n:
 
 ## 関連情報
 
-- DOM の [**id**](/ja/docs/Web/HTML/Global_attributes/id) グローバル属性
+- DOM の [**id**](/ja/docs/Web/HTML/Reference/Global_attributes/id) グローバル属性

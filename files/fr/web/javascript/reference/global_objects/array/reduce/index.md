@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 La méthode **`reduce()`** applique une fonction qui est un « accumulateur » et qui traite chaque valeur d'une liste (de la gauche vers la droite) afin de la réduire à une seule valeur.
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 ## Syntaxe
 
@@ -19,9 +33,7 @@ arr.reduce(callback, valeurInitiale);
 ### Paramètres
 
 - `callback`
-
   - : La fonction à exécuter sur chaque valeur de la liste (sauf le premier si aucune `valeurInitiale` n'est fournie), elle prend quatre arguments en entrée :
-
     - `accumulateur`
       - : La valeur précédemment retournée par le dernier appel du callback, ou `valeurInitiale`, si elle est fournie (voir ci-après) (c'est la valeur « accumulée » au fur et à mesure des appels
     - `valeurCourante`

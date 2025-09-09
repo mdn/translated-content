@@ -15,7 +15,7 @@ A [Fetch API](/pt-BR/docs/Web/API/Fetch_API) fornece uma interface para buscar r
 
 O coração do Fetch são as abstrações da Interface do HTTP {{domxref("Request")}}, {{domxref("Response")}}, {{domxref("Headers")}}, e {{domxref("Body")}} payloads, juntamente com {{domxref("GlobalFetch.fetch","global fetch")}} método para iniciar requisições de recursos assíncronos. Como os componentes principais do HTTP são abstraidos como objetos de JavaScript, torna-se fácil APIs fazer uso das funcionalidades.
 
-[Service Workers](/pt-BR/docs/Web/API/ServiceWorker_API) é um exemplo de uma API que faz um grande uso de Fecth.
+[Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) é um exemplo de uma API que faz um grande uso de Fecth.
 
 Fetch leva a assincronicidade um passo além. A API é completamente baseada em {{jsxref("Promise")}}.
 

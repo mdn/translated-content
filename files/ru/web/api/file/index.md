@@ -11,7 +11,7 @@ slug: Web/API/File
 
 Объект `File` - особый вид {{domxref("Blob")}}, и может быть использован в любом контексте так же, как и Blob. В частности, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, и {{domxref("XMLHttpRequest", "", "send()")}} допускают и `Blob,` и `File`.
 
-Смотри [Использование файлов в веб приложениях](/ru/docs/Using_files_from_web_applications) для получения более подробной информации и примеров.
+Смотри [Использование файлов в веб приложениях](/ru/docs/Web/API/File_API/Using_files_from_web_applications) для получения более подробной информации и примеров.
 
 ## Свойства экземпляра
 
@@ -28,7 +28,7 @@ _Интерфейс `File` также наследует свойства от {
 - {{domxref("File.webkitRelativePath")}} {{readonlyinline}} {{non-standard_inline}}
   - : Возвращает URL адрес, где расположен {{domxref("File")}}.
 - {{domxref("File.type")}} {{readonlyinline}}
-  - : Возвращает [MIME](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types) тип файла.
+  - : Возвращает [MIME](/ru/docs/Web/HTTP/Guides/MIME_types) тип файла.
 
 ## Методы экземпляра
 
@@ -44,5 +44,5 @@ _Интерфейс `File` не определяет собственных ме
 
 ## Смотрите также
 
-- [Использование файлов из веб-приложений](/ru/docs/Using_files_from_web_applications)
+- [Использование файлов из веб-приложений](/ru/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("FileReader")}}

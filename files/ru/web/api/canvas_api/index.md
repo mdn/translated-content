@@ -5,13 +5,13 @@ slug: Web/API/Canvas_API
 
 {{DefaultAPISidebar("Canvas API")}}
 
-Элемент {{HTMLElement("canvas")}}, добавленный в [HTML5](/ru/docs/HTML/HTML5), предназначен для создания графики с помощью [JavaScript](/ru/docs/JavaScript). Например, его используют для рисования графиков, создания фотокомпозиций, анимаций и даже обработки и рендеринга видео в реальном времени.
+Элемент {{HTMLElement("canvas")}}, добавленный в [HTML5](/ru/docs/HTML/HTML5), предназначен для создания графики с помощью [JavaScript](/ru/docs/Web/JavaScript). Например, его используют для рисования графиков, создания фотокомпозиций, анимаций и даже обработки и рендеринга видео в реальном времени.
 
 _«Canvas»_ в переводе с английского означает _«холст»_.
 
-Приложения от Mozilla поддерживают `<canvas>` начиная с Gecko 1.8 (т.е. [с Firefox 1.5](/ru/docs/Firefox_1.5_for_developers)). Этот элемент первоначально был представлен Apple для OS X [Dashboard](http://www.apple.com/macosx/features/dashboard/) и Safari. Internet Explorer поддерживает `<canvas>` начиная с 9 версии; для более ранних версий IE поддержку для \<canvas> можно добавить с помощью скрипта из проекта Google's [Explorer Canvas](http://excanvas.sourceforge.net/). Google Chrome и Opera 9 также поддерживают `<canvas>`.
+Приложения от Mozilla поддерживают `<canvas>` начиная с Gecko 1.8 (т.е. [с Firefox 1.5](/ru/docs/Mozilla/Firefox/Releases/1.5)). Этот элемент первоначально был представлен Apple для OS X [Dashboard](https://www.apple.com/macosx/features/dashboard/) и Safari. Internet Explorer поддерживает `<canvas>` начиная с 9 версии; для более ранних версий IE поддержку для \<canvas> можно добавить с помощью скрипта из проекта Google's [Explorer Canvas](http://excanvas.sourceforge.net/). Google Chrome и Opera 9 также поддерживают `<canvas>`.
 
-Элемент `<canvas>` также используется технологией [WebGL](/ru/docs/WebGL) для отрисовки аппаратно-ускоренной 3D-графики на веб-страницах.
+Элемент `<canvas>` также используется технологией [WebGL](/ru/docs/Web/API/WebGL_API) для отрисовки аппаратно-ускоренной 3D-графики на веб-страницах.
 
 ## Пример
 
@@ -86,13 +86,13 @@ window.addEventListener("load", drawCanvas);
 - {{domxref("TextMetrics")}}
 - {{domxref("Path2D")}} {{experimental_inline}}
 
-Интерфейсы, связанные с `WebGLRenderingContext`, ссылаются на [WebGL](/ru/docs/Web/WebGL).
+Интерфейсы, связанные с `WebGLRenderingContext`, ссылаются на [WebGL](/ru/docs/Web/API/WebGL_API).
 
 ## Руководства
 
 - [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial)
   - : Подробный учебник, охватывающий как основное использование `<canvas>`, так и его расширенные функции.
-- [Фрагменты кода: Canvas](/en-US/Add-ons/Code_snippets/Canvas)
+- [Фрагменты кода: Canvas](/ru/docs/Mozilla/Add-ons/Code_snippets/Canvas)
   - : Некоторые фрагменты кода, ориентированные на разработчиков, с использованием `<canvas>`.
 - [Drawing DOM objects into a canvas](/ru/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas)
   - : Как рисовать DOM контент, таких как HTML-элементы, в canvas.
@@ -103,8 +103,8 @@ window.addEventListener("load", drawCanvas);
 
 ### Основное
 
-- [HTML5 Canvas Deep Dive](http://joshondesign.com/p/books/canvasdeepdive/title.html)
-- [Справочник по Canvas](http://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
+- [HTML5 Canvas Deep Dive](https://joshondesign.com/p/books/canvasdeepdive/title.html)
+- [Справочник по Canvas](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
 
 ### Библиотеки
 
@@ -112,13 +112,13 @@ window.addEventListener("load", drawCanvas);
 - [Kinetic.js](https://github.com/ericdrowell/KineticJS) это canvas библиотека с открытым исходным кодом ориентированная на интерактивность для настольных и мобильных приложений.
 - [Paper.js](http://paperjs.org/) это программируемый фреймворк векторной графики с открытым исходным кодом который запускается на HTML5 Canvas.
 - [libCanvas](http://libcanvas.github.com/) это мощный и лёгкий canvas фреймворк.
-- [Processing.js](http://processingjs.org) является портом языка обработки визуализации.
+- [Processing.js](https://processingjs.org) является портом языка обработки визуализации.
 - [PlayCanvas](https://playcanvas.com/) игровой движок с открытым исходным кодом.
-- [Pixi.js](http://www.pixijs.com/) игровой движок с открытым исходным кодом.
+- [Pixi.js](https://www.pixijs.com/) игровой движок с открытым исходным кодом.
 - [PlotKit](http://www.liquidx.net/plotkit/) библиотека создание графиков и графики.
 - [Rekapi](https://github.com/jeremyckahn/rekapi) API анимации для canvas.
 - [PhiloGL](http://senchalabs.github.com/philogl/) WebGL фреймворк для визуализации данных, для креативного написания кода и разработки игр.
-- [JavaScript InfoVis Toolkit](http://thejit.org/) создаёт интерактивные 2D Canvas визуализации данных для интернета.
+- [JavaScript InfoVis Toolkit](https://thejit.org/) создаёт интерактивные 2D Canvas визуализации данных для интернета.
 
 ## Спецификации
 
@@ -130,4 +130,4 @@ window.addEventListener("load", drawCanvas);
 
 ## Смотрите также
 
-- [WebGL](/ru/docs/Web/WebGL)
+- [WebGL](/ru/docs/Web/API/WebGL_API)

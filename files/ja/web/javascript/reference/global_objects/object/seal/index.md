@@ -1,15 +1,29 @@
 ---
 title: Object.seal()
+short-title: seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 l10n:
-  sourceCommit: 0c2f10d728d1018f1b21c3e96267c5d586ff0ae3
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`Object.seal()`** は静的メソッドで、オブジェクトを封印します。オブジェクトを封印すると、[拡張を抑止し](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)、既存のすべてのプロパティを構成不可にします。封印されたオブジェクトは、固定されたプロパティ一式を持ちます。新しいプロパティを追加したり、既存のプロパティを除去したり、列挙可能性や構成可能性を変更したり、プロトタイプを再割り当てしたりすることはできません。既存のプロパティの値は、書き込み可能である限り変更することができます。 `seal()` は渡したオブジェクトを返します。
 
-**`Object.seal()`** 静的メソッドは、オブジェクトを封印します。オブジェクトを封印すると、[拡張を抑止し](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)、既存のすべてのプロパティを構成不可にします。封印されたオブジェクトは、固定されたプロパティ一式を持ちます。新しいプロパティを追加したり、既存のプロパティを除去したり、列挙可能性や構成可能性を変更したり、プロトタイプを再割り当てしたりすることはできません。既存のプロパティの値は、書き込み可能である限り変更することができます。 `seal()` は渡したオブジェクトを返します。
+{{InteractiveExample("JavaScript デモ: Object.seal()")}}
 
-{{EmbedInteractiveExample("pages/js/object-seal.html")}}
+```js interactive-example
+const object = {
+  foo: 42,
+};
+
+Object.seal(object);
+object.foo = 33;
+console.log(object.foo);
+// 予想される結果: 33
+
+delete object.foo; // 封印時は削除不可
+console.log(object.foo);
+// 予想される結果: 33
+```
 
 ## 構文
 
@@ -30,7 +44,7 @@ Object.seal(obj)
 
 オブジェクトを封印すると、[拡張を抑止し](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)、既存のすべての[プロパティの記述子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description)を `configurable: false` に変更します。これは、オブジェクトにあるプロパティ一式を固定かつ不変にする効果があります。すべてのプロパティを構成不可にすることで、データプロパティからアクセサプロパティへの変換やその逆を抑制しますが、データプロパティの値の変更は抑制しません。封印されたオブジェクトでプロパティの削除や追加、あるいはデータプロパティからアクセサプロパティへの変換およびその逆をしようとすると、暗黙的に失敗するか、（一般的に{{jsxref("Strict_mode", "厳格モード", "", 1)}}においてですが、それに限らず） {{jsxref("TypeError")}} が発生して失敗します。
 
-[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)にはプロパティ記述子の概念はありません。プライベートプロパティは、オブジェクトが封印されているかどうかに関わらず、オブジェクトに追加したり除去したりすることはできません。
+[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)はプロパティではなく、プロパティ記述子の概念がありません。プライベート要素は、オブジェクトが封印されているかどうかに関わらず、オブジェクトに追加したり除去したりすることはできません。
 
 プロトタイプチェーンには手をつけず、そのままにします。ただし、[拡張の抑止](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)の影響により、 `[[Prototype]]` は再代入できません。
 

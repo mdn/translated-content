@@ -13,7 +13,22 @@ slug: Web/JavaScript/Reference/Functions/arguments
 > [!NOTE]
 > "`Array` 형태"란 `arguments`가 {{jsxref("Array.length", "length")}} 속성과 더불어 0부터 인덱스 된 다른 속성을 가지고 있지만, {{jsxref("Array")}}의 {{jsxref("Array.prototype.forEach()", "forEach")}}, {{jsxref("Array.prototype.map()", "map")}}과 같은 내장 메서드를 가지고 있지 않다는 뜻입니다.
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 ## 구문
 
@@ -46,14 +61,14 @@ var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
 ```
 
-`arguments`를 실제 `Array`로 변환하기 위해 ES2015의 {{jsxref("Array.from()")}} 메서드 또는 [전개 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator)를 사용할 수도 있습니다.
+`arguments`를 실제 `Array`로 변환하기 위해 ES2015의 {{jsxref("Array.from()")}} 메서드 또는 [전개 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)를 사용할 수도 있습니다.
 
 ```js
 var args = Array.from(arguments);
 var args = [...arguments];
 ```
 
-당신이 형식상 받기로 선언된 것보다 많은 인수로 함수를 호출하는 경우 `arguments` 객체를 사용할 수 있습니다. 이 기법은 가변 인수가 전달될 수 있는 함수에 유용합니다. 함수에 전달된 인수의 수를 결정하기 위해 [`arguments.length`](/ko/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)를 쓰세요, 그 뒤에 `arguments` 객체를 사용하여 각 인수를 처리하세요. 함수 [signature](/ko/docs/Glossary/Signature/Function)에 매개변수의 수를 결정하기 위해서는, [`Function.length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 속성을 쓰세요.
+당신이 형식상 받기로 선언된 것보다 많은 인수로 함수를 호출하는 경우 `arguments` 객체를 사용할 수 있습니다. 이 기법은 가변 인수가 전달될 수 있는 함수에 유용합니다. 함수에 전달된 인수의 수를 결정하기 위해 [`arguments.length`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/length)를 쓰세요, 그 뒤에 `arguments` 객체를 사용하여 각 인수를 처리하세요. 함수 [signature](/ko/docs/Glossary/Signature/Function)에 매개변수의 수를 결정하기 위해서는, [`Function.length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 속성을 쓰세요.
 
 ## 속성
 
@@ -63,7 +78,7 @@ var args = [...arguments];
   - : 현재 실행 중인 함수를 호출한 함수를 가리킵니다.
 - [`arguments.length`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : 함수에 전달된 인수의 수를 가리킵니다.
-- [`arguments[@@iterator]`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+- [`arguments[@@iterator]`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
   - : arguments의 각 인덱스 값을 포함하는 새로운 Array Iterator 객체를 반환합니다.
 
 ## 예제
@@ -121,7 +136,7 @@ var listHTML = list("u", "One", "Two", "Three");
 
 ### 나머지, 기본 및 비구조화된 매개변수
 
-`arguments` 객체는 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)와 함께 사용될 수 있습니다.
+`arguments` 객체는 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)와 함께 사용될 수 있습니다.
 
 ```js
 function foo(...args) {
@@ -130,7 +145,7 @@ function foo(...args) {
 foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
 ```
 
-그러나, 비엄격 함수에서는 **mapped `arguments` 객체**는 함수가 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)든 포함하지 **않는** 경우에만 제공됩니다. 예를 들어, 기본 매개변수를 사용하는 다음 함수에서는, 100 대신에 `10`이 반환됩니다:
+그러나, 비엄격 함수에서는 **mapped `arguments` 객체**는 함수가 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)든 포함하지 **않는** 경우에만 제공됩니다. 예를 들어, 기본 매개변수를 사용하는 다음 함수에서는, 100 대신에 `10`이 반환됩니다:
 
 ```js
 function bar(a = 1) {
@@ -140,7 +155,7 @@ function bar(a = 1) {
 bar(10); // 10
 ```
 
-이 예에서, 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)가 없는 경우에는, 100이 반환됩니다:
+이 예에서, 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)가 없는 경우에는, 100이 반환됩니다:
 
 ```js
 function zoo(a) {

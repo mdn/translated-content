@@ -9,9 +9,20 @@ La función **`Math.atan()`** retorna el arcotangente (en radianes) de un number
 
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> el único </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext> tal que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan}(x)} = \arctan(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \tan(y) = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-atan.html")}}
+{{InteractiveExample("JavaScript Demo: Math.atan()")}}
 
-La fuente para este ejemplo interactivo se encuentra almacenado en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, por favor clona el repositorio que hay en este link: <https://github.com/mdn/interactive-examples> ; y envíanos una _pull request_.
+```js interactive-example
+// Calculates angle of a right-angle triangle in radians
+function calcAngle(opposite, adjacent) {
+  return Math.atan(opposite / adjacent);
+}
+
+console.log(calcAngle(8, 10));
+// Expected output: 0.6747409422235527
+
+console.log(calcAngle(5, 3));
+// Expected output: 1.0303768265243125
+```
 
 ## Sintaxis
 

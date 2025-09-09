@@ -1,11 +1,10 @@
 ---
 title: Markdown の書き方
+short-title: Markdown の書き方
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 l10n:
-  sourceCommit: 134cdabf5742ed1fd65b1c90ee19d8cc425ce999
+  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
-
-{{MDNSidebar}}
 
 このページでは、 Markdown を使用してどのように MDN Web Docs のドキュメントを書くかを説明します。ベースラインとして GitHub-Flavored Markdown (GFM) を選択し、 GFM では容易にサポートされていない MDN で行う必要のあるいくつかのことに対応するために、いくつかの拡張機能を追加しました。
 
@@ -99,7 +98,7 @@ MDN では、書き手はコードブロックのサンプルにコードフェ�
   - `django` - Django テンプレート
   - `svelte` - Svelte テンプレート
   - `handlebars` - Handlebars テンプレート
-  - `pug` - [Pug テンプレート](https://pugjs.org/api/getting-started.html) （[Express](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer) で使用される可能性がある）
+  - `pug` - [Pug テンプレート](https://pugjs.org/api/getting-started.html) （[Express](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer) で使用される可能性がある）
 - その他
   - `plain` - プレーンテキスト
   - `diff` - 差分ファイル
@@ -177,15 +176,18 @@ const greeting = "I'm a bad example";
 
 ## メモ、警告、コールアウト
 
-コンテンツの一部に特別な注意を喚起したい場合があります。そのためには、特別な最初の段落を持つ GFM ブロック引用を使用します。 GFM ブロック引用には、「メモ」「警告」「コールアウト」の 3 種類があります。
+執筆者は [GFM アラート構文](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)を使用して、コンテンツに特別な注意を促すことができます。アラートには、「メモ」「警告」「コールアウト」の 3 種類があります。
 
-- メモを追加するには、 GFM ブロック引用の最初の段落を `**メモ:**` で始めてください。
-- 警告を追加するには、 GFM ブロック引用の最初の段落を `**警告:**` で始めてください。
-- コールアウトを追加するには、 GFM ブロック引用の最初の段落を `**注目:**` で始めてください。
+> [!NOTE]
+> MDN Web Docs は GFM アラートに対応する前から独自の構文でアラートに対応しており、それらを「ノートブロック」と呼んでいました。
+> MDN では GFM アラートのうち、 `[!TIP]`, `[!CAUTION]`, `[!IMPORTANT]` には対応していません。
+> GFM は `[!CALLOUT]` には対応していません。
+
+- メモを追加するには、ブロック引用の最初の行を `[!NOTE]` にしてください。
+- 警告を追加するには、ブロック引用の最初の行を `[!WARNING]` にしてください。
+- コールアウトを追加するには、ブロック引用の最初の行を `[!CALLOUT]` にしてください。
 
 メモと警告は、出力に **メモ:** または **警告:** というテキストが表示されますが、コールアウトは表示されません。このため、コールアウトは、独自のタイトルを提供したい場合に適しています。
-
-マークアップの処理は、指定された正確な文字ではなく、生成された AST に基づいて行われます。つまり、 `<strong>メモ:</strong>` もメモを生成します。ただし、スタイルの問題として Markdown の構文が必要です。
 
 複数行は、通常の段落と同じように、空のブロック引用行によって生成されます。さらに、スペースのない複数の行は通常の Markdown の行と同様に扱われ、連結されます。
 
@@ -246,7 +248,9 @@ const greeting = "I'm a bad example";
 #### コールアウト（英語版では Callout）
 
 ```md
-> **注目:** **これがコールアウトの書き方です。**
+> [!CALLOUT]
+>
+> **これがコールアウトの書き方です。**
 >
 > 複数の段落を入れることもできます。
 ```
@@ -267,27 +271,6 @@ const greeting = "I'm a bad example";
 > **これがコールアウトの書き方です。**
 >
 > 複数の段落を入れることもできます。
-
-#### 翻訳された警告
-
-"Note:" や "Warning:" はレンダリング出力にも現れるので、翻訳に対応させる必要があります。実際には、 MDN が対応しているすべてのロケールがこれらの文字列を自分自身で翻訳し、プラットフォームが特別な対応が必要であることを示すものとして認識しなければならないことを意味します。
-
-ローカライズは [gettext](https://www.gnu.org/software/gettext/) 形式の JSON ファイルとして [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) に格納されています。これらのファイルを参照して、そのロケールの "Note:" や "Warning:" の代わりに使用する文字列を決定してください。ロケールファイルを定義されていない場合、フォールバックとして英語が使用されます。
-
-例えば、ドイツ語の "Warnung" を "Warning" に使用した場合、ドイツ語のページではこう書きます。
-
-```md
-> [!WARNING]
-> So schreibt man eine Warnung.
-```
-
-これは次のように表示されます。
-
-```html
-<div class="notecard warning">
-  <p><strong>Warnung:</strong> So schreibt man eine Warnung.</p>
-</div>
-```
 
 #### コードブロックを含むメモ
 
@@ -322,7 +305,7 @@ const greeting = "I'm a bad example";
 > [!NOTE]
 > これがメモの書き方です。
 >
-> コードブロックを含むことができます。.
+> コードブロックを含むことができます。
 >
 > ```js
 > const s = "コードブロックの中です";
@@ -351,11 +334,9 @@ const greeting = "I'm a bad example";
 
 ````md
 - term1
-
   - : My description of term1
 
 - `term2`
-
   - : My description of term2
 
     複数の段落やコードブロックを格納することもできます。

@@ -3,8 +3,6 @@ title: JavaScript 指南
 slug: Web/JavaScript/Guide
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 JavaScript 指南會讓你了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaScript) 並給你這個語言的概觀。若你需要語言功能詳細資訊請參考 [JavaScript 參考文件](/zh-TW/docs/Web/JavaScript/Reference)。
 
 ## 章節
@@ -15,22 +13,22 @@ JavaScript 指南會讓你了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaSc
 
 概述：[簡介](/zh-TW/docs/Web/JavaScript/Guide/Introduction)
 
-- [關於本指南](/zh-TW/docs/Web/JavaScript/Guide/Introduction#Where_to_find_JavaScript_information)
-- [關於 JavaScript](/zh-TW/docs/Web/JavaScript/Guide/Introduction#What_is_JavaScript)
-- [JavaScript 與 Java](/zh-TW/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_Java)
-- [ECMAScript](/zh-TW/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_the_ECMAScript_Specification)
-- [工具](/zh-TW/docs/Web/JavaScript/Guide/Introduction#Getting_started_with_JavaScript)
-- [Hello World](/zh-TW/docs/Web/JavaScript/Guide/Introduction#Hello_world)
+- [關於本指南](/zh-TW/docs/Web/JavaScript/Guide/Introduction#where_to_find_javascript_information)
+- [關於 JavaScript](/zh-TW/docs/Web/JavaScript/Guide/Introduction#what_is_javascript)
+- [JavaScript 與 Java](/zh-TW/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
+- [ECMAScript](/zh-TW/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
+- [工具](/zh-TW/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
+- [Hello World](/zh-TW/docs/Web/JavaScript/Guide/Introduction#hello_world)
 
 ## 語法與型別
 
 概述：[語法與型別](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types)
 
-- [基礎語法 & 註解](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Basics)
-- [宣告](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
-- [變數範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope)
-- [變數提升（Hoisting）](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_hoisting)
-- [資料結構與型態](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Data_structures_and_types)
+- [基礎語法 & 註解](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#basics)
+- [宣告](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+- [變數範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)
+- [變數提升（Hoisting）](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
+- [資料結構與型態](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#data_structures_and_types)
 - [字面值](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%AD%97%E9%9D%A2%E5%80%BC%EF%BC%88Literals%EF%BC%89)
 
 ## 流程控制與錯誤處理
@@ -39,9 +37,9 @@ JavaScript 指南會讓你了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaSc
 
 - [`if...else`](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
 - [`switch`](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement)
-- [`try`/`catch`/`throw`](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Exception_handling_statements)
-- [Error 物件](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Utilizing_Error_objects)
-- [Promises](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Promises)
+- [`try`/`catch`/`throw`](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)
+- [Error 物件](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utilizing_error_objects)
+- [Promises](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#promises)
 
 ## 迴圈與迭代
 
@@ -59,13 +57,13 @@ JavaScript 指南會讓你了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaSc
 
 概述：[函數](/zh-TW/docs/Web/JavaScript/Guide/Functions)
 
-- [定義函數](/zh-TW/docs/Web/JavaScript/Guide/Functions#Defining_functions)
-- [呼叫函數](/zh-TW/docs/Web/JavaScript/Guide/Functions#Calling_functions)
-- [函數範圍](/zh-TW/docs/Web/JavaScript/Guide/Functions#Function_scope)
-- [閉包（Closure）](/zh-TW/docs/Web/JavaScript/Guide/Functions#Closures)
-- [參數值](/zh-TW/docs/Web/JavaScript/Guide/Functions#Using_the_arguments_object)
-- [參數](/zh-TW/docs/Web/JavaScript/Guide/Functions#Function_parameters)
-- [箭頭函數](/zh-TW/docs/Web/JavaScript/Guide/Functions#Arrow_functions)
+- [定義函數](/zh-TW/docs/Web/JavaScript/Guide/Functions#defining_functions)
+- [呼叫函數](/zh-TW/docs/Web/JavaScript/Guide/Functions#calling_functions)
+- [函數範圍](/zh-TW/docs/Web/JavaScript/Guide/Functions#function_scope)
+- [閉包（Closure）](/zh-TW/docs/Web/JavaScript/Guide/Functions#closures)
+- [參數值](/zh-TW/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object)
+- [參數](/zh-TW/docs/Web/JavaScript/Guide/Functions#function_parameters)
+- [箭頭函數](/zh-TW/docs/Web/JavaScript/Guide/Functions#arrow_functions)
 
 ## 運算式與運算子
 
@@ -80,26 +78,26 @@ JavaScript 指南會讓你了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaSc
 
 ## 數字與日期
 
-概述：[數字與日期](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates)
+概述：[數字與日期](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [數字書寫法](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Numbers)
-- [`Number` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Number_object)
-- [`Math` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Math_object)
-- [`Date` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Date_object)
+- [數字書寫法](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
+- [`Number` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#number_object)
+- [`Math` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#math_object)
+- [`Date` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#date_object)
 
 ## 文字格式
 
-概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting)
+概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [字串書寫法](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#String_literals)
-- [`String` 物件](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#String_objects)
-- [模板書寫法](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#Multi-line_template_literals)
-- [國際化](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#Internationalization)
-- [正規表示法](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [字串書寫法](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#String_literals)
+- [`String` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#String_objects)
+- [模板書寫法](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#Multi-line_template_literals)
+- [國際化](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#Internationalization)
+- [正規表示法](/zh-TW/docs/Web/JavaScript/Guide/Regular_expressions)
 
 ## 具索引的集合
 
-概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting)
+概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
 - [陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Array_object)
 - [型態化陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Typed_Arrays)
@@ -124,11 +122,11 @@ JavaScript 指南會讓你了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaSc
 
 ## 深入了解物件模型
 
-概述：[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+概述：[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
-- [以原形（Prototype）為基礎的 OOP](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages)
-- [建立物件層級](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Creating_the_hierarchy)
-- [繼承](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Property_inheritance_revisited)
+- [以原形（Prototype）為基礎的 OOP](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#class-based_vs._prototype-based_languages)
+- [建立物件層級](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#creating_the_hierarchy)
+- [繼承](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#property_inheritance_revisited)
 
 ## 迭代器與產生器
 

@@ -7,9 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 
 **`Intl.DisplayNames.prototype.of()`** メソッドは、コードを受け取り、Intl.DisplayNames をインスタンス化するときに指定されたロケールとオプションに基づいて文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.DisplayNames")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(['zh-Hant'], {
+  type: 'region',
+});
+
+console.log(regionNamesInEnglish.of('US'));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of('US'));
+// Expected output: "美國"
+```
 
 ## 構文
 

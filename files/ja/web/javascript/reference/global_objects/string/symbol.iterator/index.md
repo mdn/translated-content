@@ -1,15 +1,29 @@
 ---
 title: String.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`[Symbol.iterator]()`** は {{jsxref("String")}} 値のメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループなど、反復可能オブジェクトを期待するほとんどの構文で文字列が利用できるようにします。これは、文字列値の Unicode コードポイントを個別の文字列として返す[文字列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
-{{EmbedInteractiveExample("pages/js/string-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript デモ: String.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const str = "The quick red fox jumped over the lazy dog's back.";
+
+const iterator = str[Symbol.iterator]();
+let theChar = iterator.next();
+
+while (!theChar.done && theChar.value !== " ") {
+  console.log(theChar.value);
+  theChar = iterator.next();
+  // 予想される結果: "T"
+  //                 "h"
+  //                 "e"
+}
+```
 
 ## 構文
 
@@ -84,6 +98,6 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 ## 関連情報
 
 - [`String.prototype[Symbol.iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [テキスト処理](/ja/docs/Web/JavaScript/Guide/Text_formatting)ガイド
+- [数値と文字列](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)ガイド
 - {{jsxref("Symbol.iterator")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -1,11 +1,9 @@
 ---
-title: ":picture-in-picture"
+title: :picture-in-picture
 slug: Web/CSS/:picture-in-picture
 l10n:
   sourceCommit: 04ebe57066db2cff350018649bdb15b2a10c67ba
 ---
-
-{{CSSRef}}
 
 **`:picture-in-picture`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配当前处于画中画模式的元素。
 

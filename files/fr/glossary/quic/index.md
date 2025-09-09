@@ -26,4 +26,4 @@ La prise en charge du navigateur et du serveur pour QUIC est aujourd'hui limité
 
 ## Voir aussi
 
-- [HTTP/2](/fr/docs/Glossaire/HTTP_2)
+- [HTTP/2](/fr/docs/Glossary/HTTP_2)

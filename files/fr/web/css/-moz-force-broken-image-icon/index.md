@@ -1,5 +1,5 @@
 ---
-title: "-moz-force-broken-image-icon"
+title: -moz-force-broken-image-icon
 slug: Web/CSS/-moz-force-broken-image-icon
 ---
 
@@ -12,7 +12,6 @@ La propriété **`-moz-force-broken-image-icon`** est une propriété CSS non-st
 ### Valeurs
 
 - {{cssxref("&lt;integer&gt;")}}
-
   - : Une valeur de 1 indique qu'une icône d'image brisée est affichée même si l'image possède un attribut {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}}. `0` indique que seul l'attribut `alt` doit être affiché.
 
     > [!NOTE]

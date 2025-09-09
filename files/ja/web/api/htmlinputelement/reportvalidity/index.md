@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`reportValidity()`** は {{domxref('HTMLInputElement')}} インターフェイスのメソッドで、 {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}} メソッドと同じ検証のチェック手順を実行します。値が無効であった場合、このメソッドはその要素に {{domxref("HTMLInputElement.invalid_event", "invalid")}} イベントを発行し、（そのイベントがキャンセルされなければ）ユーザーに問題を報告します。
+**`reportValidity()`** は {{domxref('HTMLInputElement')}} インターフェイスのメソッドで、 {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}} メソッドと同じ検証のチェック手順を実行します。値が無効であった場合、このメソッドはその要素に {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントを発行し、（そのイベントがキャンセルされなければ）ユーザーに問題を報告します。
 
 ## 構文
 
@@ -163,6 +163,6 @@ const validateAge = () => {
 - {{domxref("HTMLInputElement.checkValidity()")}}
 - {{HTMLElement("input")}}
 - {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス

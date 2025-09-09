@@ -9,7 +9,7 @@ O objeto **Proxy** é usado para definir comportamentos customizados para opera�
 
 ## Terminologia
 
-- [handler](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
+- [handler](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
   - : Objeto marcador que contém _traps_.
 - traps
   - : Métodos que fornecem acesso à propriedade. Isto é análogo ao conceito de _traps_ (armadilhas) em sistemas operacionais
@@ -38,13 +38,13 @@ var p = new Proxy(target, handler);
 
 O objeto manipulado é um objeto reservado que contém traps para `Proxy.`
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods')  -->
 
 ## Exemplos
 
 ### Exemplo básico
 
-Neste exemplo simples, o número `37` é retornado como o valor padrão quando o nome da propriedade não está no objeto. Usa-se o manipulador [`get`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get).
+Neste exemplo simples, o número `37` é retornado como o valor padrão quando o nome da propriedade não está no objeto. Usa-se o manipulador [`get`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get).
 
 ```js
 var handler = {
@@ -76,7 +76,7 @@ console.log(target.a); // 37. A operação foi devidamente encaminhada
 
 ### Validação
 
-Com um `Proxy`, você pode validar facilmente o valor passado para um objeto. Este exemplo usa o manipulador [`set`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set).
+Com um `Proxy`, você pode validar facilmente o valor passado para um objeto. Este exemplo usa o manipulador [`set`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set).
 
 ```js
 let validator = {
@@ -108,7 +108,7 @@ person.age = 300; // Lança uma exceção
 
 ### Construtor de extensão
 
-Um proxy de função poderia facilmente estender um construtor com um novo construtor. Este exemplo usa os manipuladores [`construct`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct) e [`apply`](/pt-BR/docs/Web/JavaScript/Referência/Global_Objects/Proxy/handler/apply).
+Um proxy de função poderia facilmente estender um construtor com um novo construtor. Este exemplo usa os manipuladores [`construct`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct) e [`apply`](/pt-BR/docs/Web/JavaScript/Referência/Global_Objects/Proxy/handler/apply).
 
 ```js
 function extend(sup, base) {
@@ -152,7 +152,7 @@ console.log(Peter.age); // 13
 
 ### DOM manipulação de nós
 
-Às vezes, você deseja alternar o atributo ou o nome da classe de dois elementos diferentes. Veja como usar o manipulador [`set`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set).
+Às vezes, você deseja alternar o atributo ou o nome da classe de dois elementos diferentes. Veja como usar o manipulador [`set`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set).
 
 ```js
 let view = new Proxy(
@@ -240,7 +240,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 ### Encontrando um item de objeto em uma matriz por propriedade
 
-Esta proxy estende uma matriz com alguns recursos de utilidade. Como você vê, você pode "definir" propriedades flexíveis sem usar [`Object.defineProperties`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Este exemplo pode ser adaptado para encontrar uma linha de tabela por sua célula. Nesse caso, o alvo será [`table.rows`](/pt-BR/docs/DOM/table.rows)
+Esta proxy estende uma matriz com alguns recursos de utilidade. Como você vê, você pode "definir" propriedades flexíveis sem usar [`Object.defineProperties`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Este exemplo pode ser adaptado para encontrar uma linha de tabela por sua célula. Nesse caso, o alvo será [`table.rows`](/pt-BR/docs/Web/API/HTMLTableElement/rows)
 
 ```js
 let products = new Proxy(
@@ -382,7 +382,7 @@ console.log(docCookies.my_cookie1);
 
 ## Veja também
 
-- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](http://www.slideshare.net/BrendanEich/metaprog-5303821))
+- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](https://www.slideshare.net/BrendanEich/metaprog-5303821))
 - [ECMAScript Harmony Proxy proposal page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) e [ECMAScript página de semântica de proxy Harmony](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
 - [Tutorial em proxies](http://soft.vub.ac.be/~tvcutsem/proxies/)
 - [SpiderMonkey specific Old Proxy API](/pt-BR/docs/JavaScript/Old_Proxy_API)
@@ -390,4 +390,4 @@ console.log(docCookies.my_cookie1);
 
 ## `Nota de licença`
 
-Alguns conteúdos (texto, exemplos) nesta página foram copiados ou adaptados do [ECMAScript wiki](http://wiki.ecmascript.org/doku.php) que contém à licença de conteúdo [CC 2.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/).
+Alguns conteúdos (texto, exemplos) nesta página foram copiados ou adaptados do [ECMAScript wiki](http://wiki.ecmascript.org/doku.php) que contém à licença de conteúdo [CC 2.0 BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/2.0/).

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 
 **`bookmarks.getChildren()`** récupère tous les enfants immédiats d'un dossier de signets donné, identifié comme {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ var gettingChildren = browser.bookmarks.getChildren(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode). Chaque entrée représente un seul noeud enfant. La liste est triée dans le même ordre dans lequel les signets apparaissent dans l'interface utilisateur. Les séparateurs ne sont actuellement pas inclus dans les résultats. La liste inclut les sous-dossiers, mais n'inclut aucun enfant contenu dans les sous-dossiers.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode). Chaque entrée représente un seul noeud enfant. La liste est triée dans le même ordre dans lequel les signets apparaissent dans l'interface utilisateur. Les séparateurs ne sont actuellement pas inclus dans les résultats. La liste inclut les sous-dossiers, mais n'inclut aucun enfant contenu dans les sous-dossiers.
 
 Si le noeud spécifié n'a pas d'enfants, le tableau est vide.Si le noeud identifié par `id` n'est pas trouvé, la promise est rejetée avec un message d'erreur.
 
@@ -54,8 +54,6 @@ gettingChildren.then(onFulfilled, onRejected);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

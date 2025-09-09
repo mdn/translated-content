@@ -9,7 +9,18 @@ l10n:
 
 **`includes()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の項目内に特定の値が含まれているかどうかを判断し、その結果に応じて `true` か `false` を返します。このメソッドは {{jsxref("Array.prototype.includes()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-includes.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.includes()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.includes(20));
+// Expected output: true
+
+// Check from position 3
+console.log(uint8.includes(20, 3));
+// Expected output: false
+```
 
 ## 構文
 

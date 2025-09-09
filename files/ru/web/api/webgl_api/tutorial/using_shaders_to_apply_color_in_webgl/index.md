@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 
 {{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
-В [предыдущей статье](/ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context) мы создали квадрат, следующим шагом будет добавление ему цвета. Мы можем сделать это, используя шейдеры.
+В [предыдущей статье](/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context) мы создали квадрат, следующим шагом будет добавление ему цвета. Мы можем сделать это, используя шейдеры.
 
 ## Задание цвета вершинам
 
@@ -92,7 +92,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
 gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
 ```
 
-На этом этапе, вы можете посмотреть [результат работы написанного кода](/samples/webgl/sample3/index.html), если используете браузер, поддерживающий WebGL. Вы увидите нечто похожее на следующий рисунок (расположенный по центру в большом чёрном поле):
+На этом этапе, вы можете посмотреть [результат работы написанного кода](http://mdn.github.io/webgl-examples/tutorial/sample3/index.html), если используете браузер, поддерживающий WebGL. Вы увидите нечто похожее на следующий рисунок (расположенный по центру в большом чёрном поле):
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
 

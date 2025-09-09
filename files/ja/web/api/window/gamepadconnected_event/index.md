@@ -10,7 +10,7 @@ l10n:
 
 `gamepadconnected` イベントは、ゲームパッドが接続されたことをブラウザーが検出したとき、またはゲームパッドのボタン/軸が初めて使用されたときに発生します。
 
-このイベントは、文書の {{httpheader('Permissions-Policy/gamepad','gamepad')}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)が不許可になっている場合には発生しません。
+このイベントは、文書の {{httpheader('Permissions-Policy/gamepad','gamepad')}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が不許可になっている場合には発生しません。
 
 このイベントはキャンセル不可で、バブリングしません。
 

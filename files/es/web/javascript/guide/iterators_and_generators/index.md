@@ -18,7 +18,7 @@ Para más información, véase:
 
 En JavaScript, un **iterador** es un objeto que permite recorrer una colección y devolver un valor al terminar.
 
-Específicamente, un iterador es un objeto que implementa el [protocolo de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol) a través del método `next()`, el cual devuelve un objeto con dos propiedades:
+Específicamente, un iterador es un objeto que implementa el [protocolo de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) a través del método `next()`, el cual devuelve un objeto con dos propiedades:
 
 - `value`
   - : El siguiente valor en la secuencia de iteración.
@@ -78,7 +78,7 @@ console.log(gen.next().value); // 2
 
 Un objeto es **iterable** si define cómo se itera. Un ejemplo son los valores que se iteran en un bucle {{jsxref("Sentencias/for...of", "for...of")}}. Algunos tipos integrados de datos, como {{jsxref("Array")}} o {{jsxref("Map")}}, tienen una forma de iteración ya definida, mientras que otras no (como {{jsxref("Object")}}).
 
-Con el fin de ser **iterable**, un objeto debe implementar el método **@@iterator**. Esto quiere decir que dicho objeto (o alguno en su [cadena de prototipos](/es/docs/Web/JavaScript/Herencia_y_la_cadena_de_protipos)) debe tener una propiedad definida usando la llave {{jsxref("Symbol.iterator")}}. Esta función debería regresar un nuevo iterador en cada invocación, pero no es obligatorio.
+Con el fin de ser **iterable**, un objeto debe implementar el método **@@iterator**. Esto quiere decir que dicho objeto (o alguno en su [cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) debe tener una propiedad definida usando la llave {{jsxref("Symbol.iterator")}}. Esta función debería regresar un nuevo iterador en cada invocación, pero no es obligatorio.
 
 ### Iterables definidos por el usuario
 

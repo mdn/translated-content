@@ -5,7 +5,7 @@ slug: Web/API/FileReader/readAsText
 
 {{APIRef("File API")}}
 
-Метод **`readAsText()`** используется для чтения содержимого указанного {{domxref("Blob")}} или {{domxref("File")}}. Когда операция закончится, {{domxref("FileReader.readyState","readyState")}} примет значение `DONE` и будет вызвано событие {{event("loadend")}}. В то же время, атрибут {{domxref("FileReader.result","result")}} будет содержать данные файла как строку.
+Метод **`readAsText()`** используется для чтения содержимого указанного {{domxref("Blob")}} или {{domxref("File")}}. Когда операция закончится, {{domxref("FileReader.readyState","readyState")}} примет значение `DONE` и будет вызвано событие [`loadend`](/ru/docs/Web/API/XMLHttpRequestEventTarget/loadend_event). В то же время, атрибут {{domxref("FileReader.result","result")}} будет содержать данные файла как строку.
 
 ## Syntax
 

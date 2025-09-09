@@ -69,15 +69,15 @@ svg|a:active {
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} or URL fragment the hyperlink points to.
-    _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: **[\<URL>](/pt-BR/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
 - [`hreflang`](/pt-BR/docs/Web/HTML/Element/a#hreflang)
   - : The human language of the URL or URL fragment that the hyperlink points to.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
 - [`ping`](/pt-BR/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
-  - : A space-separated list of URLs to which, when the hyperlink is followed, [`POST`](/pt-BR/docs/Web/HTTP/Methods/POST) requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see [Navigator.sendBeacon()](/pt-BR/docs/Web/API/Navigator/sendBeacon).
-    _Value type_: **[\<list-of-URLs>](/docs/Web/SVG/Content_type#List-of-Ts)** ; _Default value_: _none_; _Animatable_: **no**
+  - : A space-separated list of URLs to which, when the hyperlink is followed, [`POST`](/pt-BR/docs/Web/HTTP/Reference/Methods/POST) requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see [Navigator.sendBeacon()](/pt-BR/docs/Web/API/Navigator/sendBeacon).
+    _Value type_: **[\<list-of-URLs>](/pt-BR/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: _none_; _Animatable_: **no**
 - [`referrerpolicy`](/pt-BR/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
-  - : Which [referrer](/pt-BR/docs/Web/HTTP/Headers/Referer) to send when fetching the {{Glossary("URL")}}.
+  - : Which [referrer](/pt-BR/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the {{Glossary("URL")}}.
     _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
 - [`rel`](/pt-BR/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
   - : The relationship of the target object to the link object.
@@ -90,7 +90,7 @@ svg|a:active {
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.
-    _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: **[\<URL>](/pt-BR/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
 
 ### Global attributes
 

@@ -9,7 +9,7 @@ slug: Web/API/EventTarget
 
 Наиболее частые генераторы событий - {{domxref("Element")}}, {{domxref("document")}}, и {{domxref("window")}}, но другие объекты так же могут использоваться в качестве источников событий , например {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}}, и другие.
 
-Многие источники событий (включая элементы, документ и окно) также поддерживают установку [обработчиков событий](/ru/docs/Web/Guide/DOM/Events/Event_handlers) с помощью on`...` свойств и атрибутов.
+Многие источники событий (включая элементы, документ и окно) также поддерживают установку [обработчиков событий](/ru/docs/Web/Events/Event_handlers) с помощью on`...` свойств и атрибутов.
 
 ## Методы
 
@@ -30,6 +30,6 @@ slug: Web/API/EventTarget
 
 ## Смотрите также
 
-- [Event reference](/ru/docs/Web/Reference/Events) - доступные события на платформе.
+- [Event reference](/ru/docs/Web/API/Document_Object_Model/Events) - доступные события на платформе.
 - [Event developer guide](/ru/docs/Web/Guide/DOM/Events)
 - {{domxref("Event")}} interface

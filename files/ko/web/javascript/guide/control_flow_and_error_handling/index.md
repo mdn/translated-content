@@ -10,7 +10,7 @@ JavaScript는 애플리케이션에 다양한 상호작용을 추가하기 위�
 
 여기서 다룬 명령문들의 자세한 설명은 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Statements)에서 읽을 수 있습니다. 세미콜론(`;`)은 두 명령문을 분리하기 위해 사용했습니다.
 
-모든 JavaScript 표현식은 명령문이기도 합니다. 표현식에 대한 자세한 정보는 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)에서 확인하세요.
+모든 JavaScript 표현식은 명령문이기도 합니다. 표현식에 대한 자세한 정보는 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators)에서 확인하세요.
 
 ## 블록문
 
@@ -433,5 +433,4 @@ catch (e) {
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
-  "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

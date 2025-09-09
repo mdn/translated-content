@@ -1,9 +1,9 @@
 ---
-title: 索引集合类
+title: 索引集合
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 本章介绍按索引值排序的数据集合。包括数组和类数组结构，如 {{jsxref("Array")}} 对象和 {{jsxref("TypedArray")}} 对象。
 
@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Indexed_collections
 
 JavaScript 中没有明确的数组数据类型。但是，你可以使用预定义的 `Array` 对象及其方法来处理应用程序中的数组。`Array` 对象具有以各种方式操作数组的方法，例如连接、反转和排序。它有一个用于确定数组长度的属性和用于正则表达式的其他属性。
 
-在这篇文章中，我们将专注于数组，但许多相同的概念也适用于类型化数组，因为数组和类型化数组共享许多类似的方法。关于类型化数组的更多信息，请参见[类型化数组参考](/zh-CN/docs/Web/JavaScript/Typed_arrays)。
+在这篇文章中，我们将专注于数组，但许多相同的概念也适用于类型化数组，因为数组和类型化数组共享许多类似的方法。关于类型化数组的更多信息，请参见[类型化数组参考](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)。
 
 ## 创建数组
 
@@ -587,7 +587,7 @@ arr.property = "value";
 console.log(arr.property); // "value"
 ```
 
-例如，当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。[`RegExp.prototype.exec()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec)、[`String.prototype.match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 和 [`String.prototype.split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的返回值是一个数组。使用数组和正则表达式的更多信息，参见[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
+例如，当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。[`RegExp.prototype.exec()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)、[`String.prototype.match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 和 [`String.prototype.split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的返回值是一个数组。使用数组和正则表达式的更多信息，参见[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
 
 ## 使用类数组对象
 

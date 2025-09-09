@@ -3,11 +3,23 @@ title: 严格不相等（!==）
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
 
-{{jsSidebar("Operators")}}
-
 严格不相等运算符（`!==`）检查它的两个对象是否不相等，返回一个布尔结果。与[不相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)运算符不同，严格不相等运算符总是认为不同类型的对象是不同的。
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Strict inequality operator")}}
+
+```js interactive-example
+console.log(1 !== 1);
+// Expected output: false
+
+console.log("hello" !== "hello");
+// Expected output: false
+
+console.log("1" !== 1);
+// Expected output: true
+
+console.log(0 !== false);
+// Expected output: true
+```
 
 ## 语法
 

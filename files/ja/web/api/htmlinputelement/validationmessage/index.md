@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`validationMessage`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、{{htmlelement("select")}} コントロールが満たさない（もしあれば）検証制約を記述したローカライズされたメッセージを表す文字列を返します。
+**`validationMessage`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、（もしあれば）この {{htmlelement("input")}} コントロールが満たしていない検証制約を記述したローカライズされたメッセージを表す文字列を返します。
 
 この `<input>` 要素が制約検証の対象ではない場合（{{domxref("HTMLInputElement.willValidate")}} が `false` の場合）、または制約を満たしている場合は空文字列 (`""`) となります。
 
@@ -42,6 +42,6 @@ const errorMessage = input.validationMessage;
 - {{domxref("HTMLInputElement.checkValidity()")}}
 - {{domxref("HTMLInputElement.reportValidity()")}}
 - {{domxref("HTMLInputElement.setCustomValidity()")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - CSS {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス

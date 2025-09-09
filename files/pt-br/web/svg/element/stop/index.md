@@ -49,8 +49,8 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#Core) »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#Presentation) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 

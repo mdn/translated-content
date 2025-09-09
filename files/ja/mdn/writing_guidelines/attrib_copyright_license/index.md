@@ -1,11 +1,9 @@
 ---
-title: 帰属表示と著作権使用許諾
+title: 出典表示と著作権使用許諾
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 l10n:
-  sourceCommit: 6aa3327d5e4251de82ba7d3bc5355aabf00d1e72
+  sourceCommit: 24b4a3d9e5488d5c5600cf8eb278484d47bca07e
 ---
-
-{{MDNSidebar}}
 
 MDN Web Docs のコンテンツは無料で利用でき、様々なオープンソースライセンスのもとで利用することができます。
 
@@ -18,21 +16,25 @@ MDN Web Docs のコンテンツは無料で利用でき、様々なオープン�
 > [!NOTE]
 > MDN Web Docs のコンテンツは、 Mozilla の内外の執筆者の協力により作成されています。特に明記されていない限り、コンテンツは [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 もしくはそれ以上のバージョンの条件の下で利用可能です。
 
-ここでのコンテンツの再利用は、元のコンテンツと同じライセンス、CC-BY-SA v2.5 またはそれ以降のバージョン、の下で公開する必要があります。 MDN Web Docs のコンテンツを再利用する場合、"Mozilla Contributors" だけでなく、元ののコンテンツにも帰属することを確認する必要があります。出典となるコンテンツの特定のページへのハイパーリンク（オンライン）または URL （印刷物）入れてください。例：この記事の帰属表示を提供するには、次のように書きます。
+ここでのコンテンツの再利用は、元のコンテンツと同じライセンス、 CC-BY-SA v2.5 またはそれ以降のバージョンの下で公開する必要があります。
+MDN Web Docs のコンテンツを再利用する場合は、 "Mozilla Contributors" だけでなく、元の素材の[帰属を確認する](https://creativecommons.org/licenses/by/2.5/deed.en#ref-appropriate-credit)必要があります。
+適切な出典の表記とは、文書の**タイトル**に、出典となるコンテンツの特定のページへのハイパーリンク（オンライン）または URL （印刷物）を記載し、加えた変更点について簡単に記述することです。
+例えば、この記事の出典表示を提供するには、次のように書きます。
 
-> [帰属表示と著作権使用許諾](/ja/docs/MDN/Writing_guidelines/Attrib_copyright_license)は [Mozilla Contributors](/ja/docs/MDN/Community/Roles_teams#contributor) によって [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) の元でライセンスされています。
+> 『[出典表示と著作権使用許諾](/ja/docs/MDN/Writing_guidelines/Attrib_copyright_license)』（Mozilla Contributors によって [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) のに基づきライセンスされています）
 
-この例では、 "Mozilla Contributors" が引用ページの履歴にリンクしていることに注意してください。詳しい説明は[推奨される帰属表示の方法](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)を参照してください。
+また、適切な場合には、 "Mozilla Contributors" の部分を、ページのフッターにリンクされている、著者の一覧が掲載されている `contributors.txt` ファイルにリンクすることもできます。
+詳しい説明は[推奨される出典表示の方法](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)を参照してください。
 
 ### サンプルコード
 
 2010 年 8 月 20 日以降に追加された例は、[パブリックドメイン CC0](https://creativecommons.org/publicdomain/zero/1.0/) にあります。ライセンス表記は必要ありませんが、必要な場合は、 `すべての著作権はパブリックドメインに帰属します。https://creativecommons.org/publicdomain/zero/1.0/` が使用できます。
 
-2010 年 8 月 20 日より前に追加されたコードサンプルは [MIT ライセンス](https://opensource.org/license/mit/)の下で利用可能です。帰属情報 "© \<ページの最終改訂日> \<Wiki に掲載した人の名前>" を MIT のテンプレートに挿入する必要があります。
+2010 年 8 月 20 日より前に追加されたコードサンプルは [MIT ライセンス](https://opensource.org/license/mit)の下で利用可能です。出典情報 "© \<ページの最終改訂日> \<Wiki に掲載した人の名前>" を MIT のテンプレートに挿入する必要があります。
 
 2020 年 12 月 14 日に MDN では新しい Yari プラットフォームが開始されたため、現在、どちらが必要かを判断する方法がありません。これについては、現在対応中であり、近日中にこのコンテンツを更新する予定です。
 
-### 貢献
+### 協力
 
 MDN Web Docs に協力したい場合は、 Attribution-ShareAlike ライセンス（または編集中のページで既に指定されている代替ライセンス）で文書を公開し、サンプルコードは [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) （パブリックドメインへの寄付）で公開する必要があります。
 
@@ -53,7 +55,7 @@ Mozilla Foundation の商標、ロゴ、サービスマークの権利、およ�
 MDN は可能な限り独自のコンテンツで構成すべきです。
 もし私たちがプルリクエストを受け取り、それが盗用コンテンツを含むことが判明した場合、私たちはそのプルリクエストを閉じ、提出者に自分自身でコンテンツを書き直した変更を再提出してもらうようリクエストします。
 
-### コンテンツを再利用または転載する場合
+### 自分のコンテンツを MDN でコンテンツを再利用または転載する
 
 > [!NOTE]
 > コンテンツを転載する正当な理由がない限り、私たちはおそらく「ノー」と言います。

@@ -1,6 +1,6 @@
 ---
 title: "console : méthode statique groupEnd()"
-slug: Web/API/console/groupend_static
+slug: Web/API/console/groupEnd_static
 l10n:
   sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
@@ -36,4 +36,4 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 ## Voir aussi
 
 - [`console.group()`](/fr/docs/Web/API/console/group_static)
-- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupcollapsed_static)
+- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupCollapsed_static)

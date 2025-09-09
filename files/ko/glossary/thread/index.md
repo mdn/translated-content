@@ -19,9 +19,8 @@ l10n:
 
 ## 같이 보기
 
-- [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous)
+- [비동기 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS)
 - [Web worker API](/ko/docs/Web/API/Web_Workers_API)
 - [Service worker API](/ko/docs/Web/API/Service_Worker_API)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Main thread")}}

@@ -5,7 +5,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/map
 
 {{JSRef}}
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## Resumo
 
@@ -20,9 +30,7 @@ arr.map(callback[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função cujo retorno produz o elemento do novo Array. Recebe três argumentos:
-
     - `valorAtual`
       - : O valor do elemento original do Array de origem.
     - `indice`

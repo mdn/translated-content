@@ -13,4 +13,4 @@ l10n:
 
 ## 参见
 
-- [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)

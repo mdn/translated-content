@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 124 中影响开发者的变更信息。Firefox 124 于 [2024 年 2 月 20 日](https://whattrainisitnow.com/release/?version=124)发布。
 
 ## 为 Web 开发者带来的变化
@@ -35,7 +33,7 @@ l10n:
 
 #### WebDriver BiDi
 
-- 实现了 [storage.getCookies](https://w3c.github.io/webdriver-bidi/#command-storage-getCookies) 命令，其允许用户检索 cookie。此命令接受两个可选参数。客户端可以提供 `filter` 参数，以仅返回符合特定条件的 cookie。`partition` 参数可用于构建分区键并检索[由相应分区持有](/zh-CN/docs/Web/Privacy/State_Partitioning)的 cookie。（[Firefox bug 1854580](https://bugzil.la/1854580)）
+- 实现了 [storage.getCookies](https://w3c.github.io/webdriver-bidi/#command-storage-getCookies) 命令，其允许用户检索 cookie。此命令接受两个可选参数。客户端可以提供 `filter` 参数，以仅返回符合特定条件的 cookie。`partition` 参数可用于构建分区键并检索[由相应分区持有](/zh-CN/docs/Web/Privacy/Guides/State_Partitioning)的 cookie。（[Firefox bug 1854580](https://bugzil.la/1854580)）
 - 实现了 [storage.setCookie](https://w3c.github.io/webdriver-bidi/#command-storage-setCookie) 命令，其用于创建新的 cookie。用户可以在 `cookie` 参数中提供有关 cookie 的信息，并可选地提供 `partition` 参数以构建应持有该 cookie 的分区的分区键。（[Firefox bug 1854582](https://bugzil.la/1854582)）
 - 实现了一些用于拦截请求的命令：
   - [network.addIntercept](https://w3c.github.io/webdriver-bidi/#command-network-addIntercept)：允许用户定义用于在网络事件生命周期的各个阶段拦截网络请求的 URL 模式。此命令返回表示创建的网络拦截的唯一 ID。（[Firefox bug 1826192](https://bugzil.la/1826192)）

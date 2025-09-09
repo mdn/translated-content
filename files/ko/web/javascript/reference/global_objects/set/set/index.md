@@ -9,7 +9,20 @@ l10n:
 
 **`Set()`** 생성자는 {{jsxref("Set")}} 객체를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## 구문
 
@@ -23,7 +36,6 @@ new Set(iterable)
 ### 매개변수
 
 - `iterable` {{optional_inline}}
-
   - : [순회 가능한 객체](/ko/docs/Web/JavaScript/Reference/Statements/for...of)가 전달되면 모든 요소가 새로운 `Set`에 추가됩니다.
 
     이 매개변수를 지정하지 않거나 값이 `null`일 경우 새로운 `Set`은 비어있게 됩니다.

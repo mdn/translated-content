@@ -17,7 +17,7 @@ var visualViewport = Window.visualViewport
 
 {{domxref("VisualViewport")}} はオブジェクトです。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

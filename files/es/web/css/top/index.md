@@ -15,12 +15,12 @@ Para los elementos con una posición relativa (aquellos que tienen la propiedad 
 
 Cuando se define tanto la propiedad `top` como {{cssxref("bottom")}} para un elemento, y {{cssxref("height")}} no se ha definido, tiene un valor `auto` o 100%, tanto la distancia `top` como {{cssxref("bottom")}} se respetan. Si {{cssxref("height")}} está definida, la aplicación de la propiedad `top` tiene precedencia y {{cssxref("bottom")}} será ignorada.
 
-- {{ Xref_cssinitial() }}: {{ Cssxref("auto") }}
-- Aplicable a: [Posicionar Elementos](/es/CSS/position)
-- {{ Xref_cssinherited() }}: no
+- [Valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing): {{ Cssxref("auto") }}
+- Aplicable a: [Posicionar Elementos](/es/docs/Web/CSS/position)
+- [Heredable](/es/docs/Web/CSS/CSS_cascade/Inheritance): no
 - Porcentajes: se refieren a la altura del bloque contenedor.
 - Medio: {{cssxref("Media/Visual", "visual")}}
-- {{ Xref_csscomputed() }}: valor absoluto, porcentaje ó auto.
+- [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d): valor absoluto, porcentaje ó auto.
 
 ### Sintaxis
 

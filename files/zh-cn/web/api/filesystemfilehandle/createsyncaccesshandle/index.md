@@ -2,12 +2,12 @@
 title: FileSystemFileHandle：createSyncAccessHandle() 方法
 slug: Web/API/FileSystemFileHandle/createSyncAccessHandle
 l10n:
-  sourceCommit: 2b6f99e45534ce662f842d8b4d2f7845492e353c
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
-{{domxref("FileSystemFileHandle")}} 接口的 **`createSyncAccessHandle()`** 方法返回一个 {{jsxref('Promise')}} 对象，可兑现一个用于同步读写文件的 {{domxref('FileSystemSyncAccessHandle')}} 对象。此方法的同步特性带来了性能优势，但是只能在专用于操作[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件的 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
+{{domxref("FileSystemFileHandle")}} 接口的 **`createSyncAccessHandle()`** 方法返回一个 {{jsxref('Promise')}} 对象，可兑现一个用于同步读写文件的 {{domxref('FileSystemSyncAccessHandle')}} 对象。此方法的同步特性带来了性能优势，但是只能在专用 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件。
 
 创建 {{domxref('FileSystemSyncAccessHandle')}} 会对与文件句柄关联的文件进行独占锁定。这用于在文件已有的访问句柄被关闭前，阻止对文件创建更多的 {{domxref('FileSystemSyncAccessHandle')}} 或 {{domxref('FileSystemWritableFileStream')}}。
 
@@ -21,9 +21,7 @@ createSyncAccessHandle(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 一个具有以下属性的对象：
-
     - `mode` {{optional_inline}} {{non-standard_inline}}
       - : 指定访问句柄的锁定模式的字符串。默认值为 `"readwrite"`。可能的值包括：
         - `"read-only"`
@@ -40,7 +38,7 @@ createSyncAccessHandle(options)
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果在读写（`readwrite`）模式下句柄的 {{domxref("PermissionStatus.state")}} 不是 `granted`，则抛出该错误。
+  - : 如果在读写（`readwrite`）模式下句柄的 {{domxref("PermissionStatus.state")}} 不是 `granted`，抛出此异常。
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 如果 {{domxref('FileSystemSyncAccessHandle')}} 对象代表的不是[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件，抛出此异常。
 - `NotFoundError` {{domxref("DOMException")}}
@@ -87,15 +85,15 @@ onmessage = async (e) => {
 ```html
 <ol>
   <li>
-    <label for="filetext">输入要写入文件的文本：</label>
-    <input type="text" id="filetext" name="filetext" />
+    <label for="file-text">输入要写入文件的文本：</label>
+    <input type="text" id="file-text" name="file-text" />
   </li>
   <li>将你的文本写入文件：<button class="write">写入文本</button></li>
   <li>如果文件太满，则清空该文件：<button class="empty">清空文件</button></li>
 </ol>
 ```
 
-#### 主线程 JavaScript
+#### 主线程中的 JavaScript
 
 HTML 文件中的主线程 JavaScript 如下所示。我们获取对写入文本按钮、清空文件按钮和文本输入字段的引用，然后使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个新的 Web Worker。然后我们定义两个函数并将它们设置为按钮上的事件处理器：
 
@@ -105,7 +103,7 @@ HTML 文件中的主线程 JavaScript 如下所示。我们获取对写入文本
 ```js
 const writeBtn = document.querySelector(".write");
 const emptyBtn = document.querySelector(".empty");
-const fileText = document.querySelector("#filetext");
+const fileText = document.querySelector("#file-text");
 
 const opfsWorker = new Worker("worker.js");
 
@@ -128,11 +126,11 @@ writeBtn.addEventListener("click", writeToOPFS);
 emptyBtn.addEventListener("click", emptyOPFS);
 ```
 
-#### Worker 线程 JavaScript
+#### Worker 线程中的 JavaScript
 
 worker JavaScript 如下所示。
 
-首先，我们运行一个名为 `initOPFS()` 的函数，该函数使用 {{domxref("StorageManager.getDirectory()")}} 获取对 OPFS 根的引用，使用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 创建文件并返回其句柄，然后使用 `createSyncAccessHandle()` 返回 {{domxref("FileSystemSyncAccessHandle")}}。此调用包括 `mode: "readwrite-unsafe"` 属性，允许多个句柄同时访问同一文件。
+首先，我们运行一个名为 `initOPFS()` 的函数，该函数使用 {{domxref("StorageManager.getDirectory()")}} 获取对 OPFS 根目录的引用，使用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 创建文件并返回其句柄，然后使用 `createSyncAccessHandle()` 返回 {{domxref("FileSystemSyncAccessHandle")}}。此调用包括 `mode: "readwrite-unsafe"` 属性，允许多个句柄同时访问同一文件。
 
 ```js
 let accessHandle;

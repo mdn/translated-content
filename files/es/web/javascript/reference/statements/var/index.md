@@ -16,7 +16,6 @@ var nombreDeVariable1 [= valor1] [, nombreDeVariable2 [= valor2] ... [, nombreDe
 ```
 
 - `nombreDeVariableN`
-
   - : Representa el nombre que el programador da a la variable. Puede ser cualquier identificador legal.
 
 - `valorN`
@@ -68,7 +67,7 @@ console.log(a, b); // Lanza un error de tipo "ReferenceError".
 // La propiedad 'b' se eliminó y ya no existe.
 ```
 
-Debido a esas tres diferencias, fallar al declarar variables muy probablemente llevará a resultados inesperados. Por tanto **se recomienda siempre declarar las variables, sin importar si están en una función o un ámbito global**. Y en el modo estricto ([strict mode](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)) de ECMAScript 5, asignar valor a una variable sin declarar lanzará un error.
+Debido a esas tres diferencias, fallar al declarar variables muy probablemente llevará a resultados inesperados. Por tanto **se recomienda siempre declarar las variables, sin importar si están en una función o un ámbito global**. Y en el modo estricto ([strict mode](/es/docs/Web/JavaScript/Reference/Strict_mode)) de ECMAScript 5, asignar valor a una variable sin declarar lanzará un error.
 
 ### Elevación de variables
 

@@ -1,15 +1,27 @@
 ---
 title: Array.prototype.join()
+short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`join()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の全要素を順に連結した新しい文字列を返します。区切り文字はカンマ、または指定された文字列です。配列にアイテムが一つしかない場合は、区切り文字を使用せずにアイテムが返されます。
 
-{{EmbedInteractiveExample("pages/js/array-join.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.join()")}}
+
+```js interactive-example
+const elements = ["Fire", "Air", "Water"];
+
+console.log(elements.join());
+// 予想される結果: "Fire,Air,Water"
+
+console.log(elements.join(""));
+// 予想される結果: "FireAirWater"
+
+console.log(elements.join("-"));
+// 予想される結果: "Fire-Air-Water"
+```
 
 ## 構文
 
@@ -110,6 +122,7 @@ console.log(Array.prototype.join.call(arrayLike, "."));
 ## 関連情報
 
 - [`Array.prototype.join` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.join` のポリフィル](https://www.npmjs.com/package/array.prototype.join)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}

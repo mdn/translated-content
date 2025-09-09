@@ -3,8 +3,6 @@ title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 错误信息
 
 ```plain
@@ -18,13 +16,13 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 ## 发生了什么错误？
 
-这个值作为 [for…of](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 的表达式右值，或者作为一个函数的参数，如 {{jsxref("Promise.all")}} 或者 {{jsxref("TypedArray.from")}}, 不是一个 [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols). 一个可迭代对象可以是一个内置可迭代类型，如{{jsxref("Array")}}, {{jsxref("String")}} 或 {{jsxref("Map")}}, 一个 generator 生成结果，或者一个实现了 [可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) 的对象
+这个值作为 [for…of](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 的表达式右值，或者作为一个函数的参数，如 {{jsxref("Promise.all")}} 或者 {{jsxref("TypedArray.from")}}, 不是一个 [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols). 一个可迭代对象可以是一个内置可迭代类型，如{{jsxref("Array")}}, {{jsxref("String")}} 或 {{jsxref("Map")}}, 一个 generator 生成结果，或者一个实现了 [可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) 的对象
 
 ## 示例
 
 ### Iterating over Object properties
 
-在 JavaScript 中，{{jsxref("Object")}} 是不可迭代的，除非它们实现了[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol). 因此，你不能使用 [for…of](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 来迭代对象的属性。
+在 JavaScript 中，{{jsxref("Object")}} 是不可迭代的，除非它们实现了[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). 因此，你不能使用 [for…of](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 来迭代对象的属性。
 
 ```js example-bad
 var obj = { France: "Paris", England: "London" };
@@ -122,7 +120,7 @@ Array.from(myEmptyIterable); // []
 
 ## 参阅
 
-- [iterable protocol](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
+- [iterable protocol](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}

@@ -59,7 +59,7 @@ function f(p,) {}
 (p,) => {};
 ```
 
-Висящая запятая также работает с [определением методов](/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов) для классов или объектов:
+Висящая запятая также работает с [определением методов](/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions) для классов или объектов:
 
 ```js
 class C {
@@ -87,7 +87,7 @@ Math.max(10, 20,);
 
 ### Недопустимые висящие запятые
 
-Определение параметров функции или вызов функции, содержащих только запятую будет генерировать {{Jsxref("SyntaxError")}}. Кроме того, при использовании [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) не допускается использовать висящие запятые:
+Определение параметров функции или вызов функции, содержащих только запятую будет генерировать {{Jsxref("SyntaxError")}}. Кроме того, при использовании [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters) не допускается использовать висящие запятые:
 
 ```js example-bad
 function f(,) {} // SyntaxError: missing formal parameter
@@ -100,7 +100,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ## Висящие запятые в деструктурировании
 
-Висящие запятые так же можно использовать слева при использовании [деструктурирующего присваивания](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+Висящие запятые так же можно использовать слева при использовании [деструктурирующего присваивания](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring):
 
 ```js-nolint
 // массив деструктурируется с висящей запятой

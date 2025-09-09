@@ -1,9 +1,9 @@
 ---
-title: ":first"
+title: :first
 slug: Web/CSS/:first
 ---
 
-{{CSSRef}}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:first` de [CSS](/es/docs/Web/CSS), utilizada con la [regla-at](/es/docs/Web/CSS/At-rule) {{cssxref("@page")}}, representa la primera página de un documento impreso.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:first` de [CSS](/es/docs/Web/CSS), utilizada con la [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@page")}}, representa la primera página de un documento impreso.
 
 ```css
 /* Selecciona la primera página al imprimir */
@@ -14,7 +14,7 @@ slug: Web/CSS/:first
 ```
 
 > [!NOTE]
-> No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, {{cssxref("orphans")}}, {{cssxref("widows")}} y saltos de página del documento. Además, solo puede usar unidades de [longitud absoluta](/es/docs/Web/CSS/length#Absolute_length_units) al definir los márgenes. Todas las otras propiedades serán ignoradas.
+> No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, {{cssxref("orphans")}}, {{cssxref("widows")}} y saltos de página del documento. Además, solo puede usar unidades de [longitud absoluta](/es/docs/Web/CSS/length#absolute_length_units) al definir los márgenes. Todas las otras propiedades serán ignoradas.
 
 ## Sintaxis
 

@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`find()`** 메서드는 제공된 형식화 배열에서 제공된 테스트 함수를 만족하는 첫 번째 요소를 반환합니다. 테스트 함수를 만족하는 값이 없으면 {{jsxref("undefined")}}가 반환됩니다. 이 메서드는 {{jsxref("Array.prototype.find()")}}와 동일한 알고리즘을 가집니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.find()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, 0, -10, 20, -30, 40, -50]);
+
+console.log(int8.find(isNegative));
+// Expected output: -10
+```
 
 ## 구문
 

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet possède la propriété spécifiée "en propre", sans que celle-ci provienne de la chaîne de prototypes de l'objet.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty("property1"));
+// Expected output: true
+
+console.log(object1.hasOwnProperty("toString"));
+// Expected output: false
+
+console.log(object1.hasOwnProperty("hasOwnProperty"));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -114,8 +128,8 @@ La dernière version utilisée permet de ne pas créer d'objet supplémentaire.
 
 ## Voir aussi
 
-- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Instructions/for...in", "for...in")}}
 - {{jsxref("Opérateurs/L_opérateur_in", "in")}}
-- [Guide JavaScript : Retours sur l'héritage](/fr/docs/Web/JavaScript/Guide/Retours_sur_héritage)
+- [Guide JavaScript : Retours sur l'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

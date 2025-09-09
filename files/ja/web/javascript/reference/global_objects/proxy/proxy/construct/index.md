@@ -1,15 +1,34 @@
 ---
 title: handler.construct()
+short-title: construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`handler.construct()`** メソッドは、オブジェクトの `[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/new", "new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシーを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
 
-**`handler.construct()`** メソッドは、オブジェクトの `[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/new", "new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
+{{InteractiveExample("JavaScript デモ: handler.construct()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}
+```js interactive-example
+function Monster(disposition) {
+  this.disposition = disposition;
+}
+
+const handler = {
+  construct(target, args) {
+    console.log(`Creating a ${target.name}`);
+    // 予想される結果: "Creating a monster1"
+
+    return new target(...args);
+  },
+};
+
+const ProxiedMonster = new Proxy(Monster, handler);
+
+console.log(new ProxiedMonster("fierce").disposition);
+// 予想される結果: "fierce"
+```
 
 ## 構文
 
@@ -17,7 +36,7 @@ l10n:
 new Proxy(target, {
   construct(target, argumentsList, newTarget) {
   }
-});
+})
 ```
 
 ### 引数
@@ -25,15 +44,15 @@ new Proxy(target, {
 次の引数が `construct()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
 - `target`
-  - : ターゲットオブジェクト
+  - : ターゲットのコンストラクターオブジェクトです。
 - `argumentsList`
-  - : コンストラクタに対する引数のリスト
+  - : コンストラクターに渡された引数の入った配列 ({{jsxref("Array")}}) です。
 - `newTarget`
-  - : 上記の `p` に呼び出された元のコンストラクターです。
+  - : 呼び出された元のコンストラクターです。
 
 ### 返値
 
-`construct` メソッドはオブジェクトを返す必要があります。
+`construct` メソッドは新しく作成されたオブジェクトを表すオブジェクトを返す必要があります。
 
 ## 解説
 
@@ -48,9 +67,10 @@ new Proxy(target, {
 
 ### 不変条件
 
-以下の不変条件に違反している場合、呼び出されるとトラップで {{jsxref("TypeError")}} が発生します。
+プロキシーの `[[Construct]]` 内部メソッドは、以下の不変条件に違反している場合、呼び出されるとトラップで {{jsxref("TypeError")}} が発生します。
 
-- 結果が `Object` でならなければならない。
+- `target` がコンストラクター自身でなければならない。
+- 返値は {{jsxref("Object")}} でなければならない。
 
 ## 例
 
@@ -109,5 +129,5 @@ new p(); // TypeError is thrown, "p" is not a constructor
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/new", "new")}} 演算子
+- {{jsxref("Operators/new", "new")}}
 - {{jsxref("Reflect.construct()")}}

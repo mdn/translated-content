@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 
 O método **`toTimeString()`** retorna uma porção de tempo de um objeto {{jsxref("Date")}} de forma legível para um ser humano em Inglês Americano.
 
-{{EmbedInteractiveExample("pages/js/date-totimestring.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.toTimeString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toTimeString());
+// Expected output: "23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Sintaxe
 
@@ -23,7 +31,7 @@ Uma _string_ representando a porção de tempo da data de forma legível para um
 
 Instâncias de {{jsxref("Date")}} referem-se a um ponto específico no tempo. Chamando {{jsxref("Date.prototype.toString()", "toString()")}} irá retornar uma data formatada de forma legível para um ser humano em Inglês Americano. No [SpiderMonkey](/pt-BR/docs/SpiderMonkey), isso consiste na porção da data (dia, mês e ano) seguido pela porção de tempo (horas, minutos, segundos e fuso horário). Algumas vezes é desejável obter a _string_ da porção do tempo; tal coisa pode ser atingida utilizando o método `toTimeString()`.
 
-O `toTimeString()` método é especialmente útil por que motores parecidos que implementam a [ECMA-262](/pt-BR/docs/ECMAScript) podem ter _strings_ diferentes obtidas de {{jsxref("Date.prototype.toString()", "toString()")}} para objetos {{jsxref("Date")}}, como o formato é dependente de implementação; abordagens de corte simples de _strings_ pode não produzir resultados consistentes entre múltiplos motores.
+O `toTimeString()` método é especialmente útil por que motores parecidos que implementam a [ECMA-262](/pt-BR/docs/Web/JavaScript/Reference/JavaScript_technologies_overview) podem ter _strings_ diferentes obtidas de {{jsxref("Date.prototype.toString()", "toString()")}} para objetos {{jsxref("Date")}}, como o formato é dependente de implementação; abordagens de corte simples de _strings_ pode não produzir resultados consistentes entre múltiplos motores.
 
 ## Exemplos
 

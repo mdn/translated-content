@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 
 La méthode **`reduceRight()`** applique une fonction sur un accumulateur et chaque valeur d'un tableau (de la droite vers la gauche) de sorte à réduire le tableau en une seule valeur.
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduceRight()")}}
+
+```js interactive-example
+const array1 = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+
+const result = array1.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+
+console.log(result);
+// Expected output: Array [4, 5, 2, 3, 0, 1]
+```
 
 Voir également {{jsxref("Array.prototype.reduce()")}} pour une méthode qui réduit de gauche à droite.
 
@@ -20,9 +35,7 @@ arr.reduceRight(callback[, valeurInitiale])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à éxécuter sur chaque valeur de la liste. Elle utilise quatres arguments :
-
     - `accumulator`
       - : La valeur précédemment retournée par le dernier appel de la fonction `callback`, ou `valeurInitial` si elle est fournie. (Voir ci-après.)
     - `valeurCourante`

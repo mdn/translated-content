@@ -41,4 +41,4 @@ Content-Length: 128
 
 ### Технические знания
 
-- [Список всех HTTP заголовков](/ru/docs/Web/HTTP/Заголовки)
+- [Список всех HTTP заголовков](/ru/docs/Web/HTTP/Reference/Headers)

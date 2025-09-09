@@ -18,7 +18,7 @@ Un {{domxref("Boolean")}}.
 
 ## Ejemplo
 
-En nuestro [ejemplo de Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (véase [Fetch Response en vivo](http://mdn.github.io/fetch-examples/fetch-response/)) creamos un nuevo {{domxref("Request")}} usando el constructor {{domxref("Request.Request","Request()")}}, pasando una ruta a un JPG. Luego traemos esta petición usando {{domxref("GlobalFetch.fetch","fetch()")}}, extraemos un blob de la respuesta usando {{domxref("Body.blob")}}, creamos un objeto URL usando {{domxref("URL.createObjectURL")}}, y mostrar esto en un {{htmlelement("img")}}.
+En nuestro [ejemplo de Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (véase [Fetch Response en vivo](https://mdn.github.io/fetch-examples/fetch-response/)) creamos un nuevo {{domxref("Request")}} usando el constructor {{domxref("Request.Request","Request()")}}, pasando una ruta a un JPG. Luego traemos esta petición usando {{domxref("GlobalFetch.fetch","fetch()")}}, extraemos un blob de la respuesta usando {{domxref("Body.blob")}}, creamos un objeto URL usando {{domxref("URL.createObjectURL")}}, y mostrar esto en un {{htmlelement("img")}}.
 
 > [!NOTE]
 > En la parte superior del bloque de `fetch()` imprimimos el valor de `ok` en la consola.
@@ -47,6 +47,6 @@ fetch(peticion).then(function (respuesta) {
 
 ## Ver también
 
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)

@@ -1,15 +1,24 @@
 ---
 title: Array.prototype.lastIndexOf()
+short-title: lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 l10n:
-  sourceCommit: 85d7482697cc2bf407c58e809a2a754180d6714c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`lastIndexOf()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列中で与えられた要素が見つかった最後の添字を返します。もし存在しなければ -1 を返します。配列は `fromIndex` から逆向きに検索されます。
 
-{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.lastIndexOf()")}}
+
+```js interactive-example
+const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+
+console.log(animals.lastIndexOf("Dodo"));
+// 予想される結果: 3
+
+console.log(animals.lastIndexOf("Tiger"));
+// 予想される結果: 1
+```
 
 ## 構文
 
@@ -26,7 +35,7 @@ lastIndexOf(searchElement, fromIndex)
   - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
     - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。
     - `fromIndex < -array.length` の場合、配列は検索が行われず、 `-1` が返されます。概念的には、配列の先頭より前の存在しない位置から始めて、そこから逆方向に進むと考えることができます。途中には配列要素はないので、 `searchElement` は決して見つかりません。
-    - `fromIndex >= array.length` または `fromIndex` が省略された場合、 `array.length - 1` が使用され、配列全体が検索されます。概念的には、配列の末尾の先にある存在しない位置から始めて、そこから後方に進むと考えることができます。最終的に配列の本当の末尾に到達し、この点から実在する配列要素を逆探索し始めます。
+    - `fromIndex >= array.length` または `fromIndex` が省略されているか `undefined` の場合、`array.length - 1` が使用され、配列全体が検索されるようにします。概念的には、配列の末尾の先にある存在しない位置から始めて、そこから後方に進むと考えることができます。最終的に配列の本当の末尾に到達し、この点から実在する配列要素を逆探索し始めます。
 
 ### 返値
 
@@ -122,6 +131,7 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 ## 関連情報
 
 - [`Array.prototype.lastIndexOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.lastIndexOf` のポリフィル](https://www.npmjs.com/package/array.prototype.lastindexof)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

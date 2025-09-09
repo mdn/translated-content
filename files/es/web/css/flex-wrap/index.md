@@ -3,11 +3,9 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 ---
 
-{{ CSSRef("CSS Flexible Boxes") }}
-
 ## Resumen
 
-La propiedad **`flex-wrap`** de [CSS](/es/docs/CSS) especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.
+La propiedad **`flex-wrap`** de [CSS](/es/docs/Web/CSS) especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.
 
 {{cssinfo}}
 

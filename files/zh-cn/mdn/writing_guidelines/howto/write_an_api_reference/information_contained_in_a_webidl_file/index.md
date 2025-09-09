@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 24b4448c9dbaf3cb9084ad69a85c72e6aa2f72f9
 ---
 
-{{MDNSidebar}}
-
 在编写有关 API 的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。WebIDL 文件是一种非常简洁的方式，可以提供很多（但不是全部）有关 API 的信息。本文档提供了有助于理解 WebIDL 语法的参考。
 
 IDL 代表**_接口定义语言_**，它用于描述 API。在更广泛的计算领域，IDL 有不同的种类。在浏览器领域，我们使用的 IDL 被称为 _WebIDL_。有两种 WebIDL 可用：一种是在 WebIDL 规范中给出的，一种是在浏览器中实现的。规范是标准参考，而浏览器的 WebIDL 描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释、有关非标准元素的信息，以及对 IDL 规范的特定于浏览器的扩展。
@@ -17,7 +15,6 @@ WebIDL 可以在多个位置找到：
 
 - 每个规范都在文本中包含 WebIDL：它是一种传达精确定义的非常方便的方法。这些描述了 API 的语法。虽然是标准参考，但我们必须记住，它们可能与实际实现不同。在 MDN 上，我们希望内容实用，因此记录 Web 平台的真实情况，而不是想法应该是什么样的。因此，请仔细检查实现中的内容（如果发现不清楚的内容，请不要犹豫并立即报告错误内容）。
 - 三个浏览器引擎使用（修改后的）WebIDL 作为其工具链的一部分：Gecko、Chromium/Blink 和 WebCore/WebKit。Edge 之前不基于 Chromium 内核的版本在内部使用它，但遗憾的是它们并不公开。
-
   - 对于 Gecko，所有 WebIDL 文件都被归类在一个目录中：<https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>。它们的扩展名是 `.webidl`。Gecko 源代码树中还有其他的 `*.idl` 文件，但它们不是 WebIDL，因此你可以忽略它们。旧版本的 Gecko 有一些 WebIDL 分散在其他地方，甚至可能使用 Mozilla 的 IDL 而不是 WebIDL 来描述一些 Web 接口，但这在任何最近的 Gecko 代码中都不会成为问题。
   - 对于 Chromium，它们分布在两个位置，都是 [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) 源代码目录的两个子目录：[`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) 和 [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/)。Chromium 源代码中的一些 IDL 文件分散在其他位置，但这些属于测试系统，与 API 实现无关。
   - 对于 WebCore，它们分散在源代码中，因此你需要进一步发掘：例如 <https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>

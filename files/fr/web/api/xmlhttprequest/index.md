@@ -74,7 +74,7 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
 
 Le gestionnaire `onreadystatechange`, comme propriété des instances `XMLHttpRequest`, est pris en charge par l'ensemble des navigateurs.
 
-D'autres gestionnaires d'évènements ont également été implémentés dans différents navigateurs (`onload`, `onerror`, `onprogress`, etc.). Voir le guide [Manipuler XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest).
+D'autres gestionnaires d'évènements ont également été implémentés dans différents navigateurs (`onload`, `onerror`, `onprogress`, etc.). Voir le guide [Manipuler XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 La plupart des navigateurs récents gère également les évènements via la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} (en plus des méthodes `on*`).
 
@@ -141,10 +141,9 @@ La plupart des navigateurs récents gère également les évènements via la mé
 
 - {{domxref("XMLSerializer")}} : sérialiser un arbre DOM en XML
 - Les tutoriels MDN sur `XMLHttpRequest`:
-
-  - [Introduction à AJAX](/fr/docs/Web/Guide/AJAX/Premiers_pas)
-  - [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-  - [Manipuler le HTML avec XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+  - [Introduction à AJAX](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
+  - [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+  - [Manipuler le HTML avec XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [L'API Fetch](/fr/docs/Web/API/Fetch_API)
 
 - [HTML5 Rocks — Nouvelles astuces avec XMLHttpRequest2 (en anglais)](https://www.html5rocks.com/en/tutorials/file/xhr2/)

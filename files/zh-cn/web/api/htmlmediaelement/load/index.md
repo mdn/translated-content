@@ -25,7 +25,7 @@ None.
 
 ## 使用说明
 
-调用 `load()` 会使媒体上所有正在进行的操作中止，然后根据 `audio` 或者 `video` 元素的 `src` 或者 `source` 属性里寻找合适的播放源并重新加载媒体内容。更多查看 [Supporting multiple formats](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#Supporting_multiple_formats) 和 [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) 。
+调用 `load()` 会使媒体上所有正在进行的操作中止，然后根据 `audio` 或者 `video` 元素的 `src` 或者 `source` 属性里寻找合适的播放源并重新加载媒体内容。更多查看 [Supporting multiple formats](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#supporting_multiple_formats) 和 [Video and audio content](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) 。
 
 The process of aborting any ongoing activities will cause any outstanding {{jsxref("Promise")}}s returned by {{domxref("HTMLMediaElement.play", "play()")}} being resolved or rejected as appropriate based on their status before the loading of new media can begin. Pending play promises are aborted with an `"AbortError"` {{domxref("DOMException")}}.
 

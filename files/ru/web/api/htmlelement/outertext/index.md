@@ -9,7 +9,7 @@ slug: Web/API/HTMLElement/outerText
 
 ## Пример
 
-[См. ответ на StackOverflow.](http://stackoverflow.com/a/18481435)
+[См. ответ на StackOverflow.](https://stackoverflow.com/a/18481435)
 
 ## Спецификации
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---
 
-{{FirefoxSidebar}}
-
 もしあなたが開発者で、Firefox 3 における新機能全体について情報を得ようとしているなら、ここは理解を深めるのに最も適した場所です。この記事は、Firefox 3 に追加された機能をカバーする新しい記事の一覧を提供します。小さな変更が必ずしもすべてカバーされているわけではありませんが、主要な改善を学ぶ助けにはなるでしょう。
 
 ## Firefox 3 の開発者向け新機能
@@ -17,13 +15,13 @@ l10n:
   - : Firefox 3 における新機能を活用するためにウェブサイトやウェブアプリケーションで必要となるかもしれない変更についての情報を提供します。
 - [オンライン・オフラインイベント](/ja/docs/Web/API/Navigator/onLine)
   - : Firefox 3 は WHATWG のオンライン・オフラインイベントをサポートします。これは、ウェブアプリケーションや拡張機能から、インターネットに接続しているかどうかや、接続開始・終了のタイミングを検出できるようにします。
-- [ウェブベースのプロトコルハンドラー](/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [ウェブベースのプロトコルハンドラー](/ja/docs/Web/API/Navigator/registerProtocolHandler)
   - : `navigator.registerProtocolHandler()` メソッドを利用して、ウェブアプリケーションをプロトコルハンドラーとして登録できるようになりました。
 - [キャンバスを使用したテキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
   - : Firefox 3 でサポートされた標準化されていない API を利用して、キャンバス内にテキストを描画できるようになりました。
 - [キャンバスの座標変換の対応](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations#transforms)
   - : Firefox がキャンバスの `transform()` と `setTransform()` メソッドをサポートするようになりました。
-- [マイクロフォーマットの使用](/ja/docs/Web/HTML/microformats)
+- [マイクロフォーマットの使用](/ja/docs/Web/HTML/Guides/Microformats)
   - : Firefox にマイクロフォーマットを扱うための API が実装されました。
 - [ドラッグ & ドロップイベント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
   - : Firefox 3 は、ドラッグが開始されるときと終了したときにドラッグ操作に対するソースノードへ送られる新しいイベントをサポートします。
@@ -37,11 +35,11 @@ l10n:
   - : Firefox 3 は、DOM 実装において、いくつかの Internet Explorer 独自拡張を含む、多くの新機能を提供します。
 - [JavaScript 1.8 対応](/ja/docs/New_in_JavaScript_1.8)
   - : Firefox 3 は JavaScript 1.8 をサポートします。
-- [EXSLT support](/ja/docs/Web/EXSLT)
-  - : Firefox 3 は、 [XSLT](/ja/docs/Web/XSLT) の拡張となる [EXSLT](/ja/docs/Web/EXSLT) の実質的なサブセットのサポートを提供します。
+- [EXSLT support](/ja/docs/Web/XML/EXSLT)
+  - : Firefox 3 は、 [XSLT](/ja/docs/Web/XML/XSLT) の拡張となる [EXSLT](/ja/docs/Web/XML/EXSLT) の実質的なサブセットのサポートを提供します。
 - [Firefox 3 での SVG の改良](/ja/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
   - : Firefox 3 での SVG サポートは、24 を超える新しいフィルター、いくつかの新しい要素と属性、そして、その他の改良を含み、大幅に強化されました。
-- [アニメーション PNG グラフィック](/ja/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)
+- [アニメーション PNG グラフィック](/ja/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics)
   - : Firefox 3 は、アニメーション PNG (APNG) 画像形式をサポートしています。
 
 ### XUL と拡張機能開発者向け
@@ -64,7 +62,7 @@ l10n:
   - : パスワードマネージャーは、新しいログインマネージャーに置き換えられました。
 - [埋め込み XBL バインディング](/ja/docs/XBL/XBL_1.0_Reference/Elements#binding)
   - : XBL バインディングを、別の XML ファイルから読み込む代わりに、Chrome コードから `data:` URL スキーマを使って直接組み込むことができるようになりました。
-- [拡張機能の説明のローカライズ](/ja/docs/Localizing_extension_descriptions)
+- [拡張機能の説明のローカライズ](/ja/docs/orphaned/Localizing_extension_descriptions)
   - : Firefox 3 では、アドオンのメタデータをローカライズする新しい方法がサポートされました。これにより、アドオンのダウンロード直後や無効時にローカライズされた詳細説明が表示されるようになりました。
 - [ローカライズと複数形](/ja/docs/Localization_and_Plurals)
   - : Firefox 3 では、新しい PluralForm モジュールがサポートされました。このモジュールは、複数のローカライゼーションで複数形の単語を正しく扱うためのツールを提供します。

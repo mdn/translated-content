@@ -49,7 +49,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
-Подробные детали описаны в [CSS3 спецификации](http://www.w3.org/TR/css3-multicol/).
+Подробные детали описаны в [CSS3 спецификации](https://www.w3.org/TR/css3-multicol/).
 
 В многоколончатом блоке, содержимое автоматически перетекает из одной колонки в следующую, как это необходимо. Вся HTML, CSS и DOM функциональность поддерживается внутри колонок, как например редактирование и печать.
 

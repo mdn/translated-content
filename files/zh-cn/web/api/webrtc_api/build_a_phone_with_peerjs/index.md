@@ -19,7 +19,7 @@ WebRTC 的主要问题之一是它相当复杂，使用和开发起来很复杂�
 
 - [原生 JavaScript](/zh-CN/docs/Web/JavaScript)
 - [Node](https://nodejs.org/en/docs/)
-- [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs)
+- [Express](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
 - [HTML](/zh-CN/docs/Web/HTML)
 
 在开始之前，你需要确保已经安装了 [node](https://nodejs.org/en/download/) 和 [Yarn](https://classic.yarnpkg.com/en/docs/install)（后续文章中的说明假设使用 Yarn，但你也可以选择使用 [npm](https://docs.npmjs.com/getting-started/) 或其他包管理器）。
@@ -30,15 +30,13 @@ WebRTC 的主要问题之一是它相当复杂，使用和开发起来很复杂�
 ### 目录
 
 1. [设置](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup)
-2. [连接对等方](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers)
-
+2. [构建服务器](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Build_the_server)
+3. [连接对等方](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers)
    1. [获取麦克风权限](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
    2. [显示和隐藏 HTML](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)
    3. [创建对等连接](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)
    4. [创建呼叫](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call)
    5. [接听呼叫](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call)
-   6. [结束呼叫](/zh-CN/docs/Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call)
-
-3. [部署和进一步阅读](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading)
+   6. [结束呼叫](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call)
 
 {{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}

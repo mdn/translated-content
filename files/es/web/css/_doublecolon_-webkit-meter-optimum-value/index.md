@@ -1,9 +1,9 @@
 ---
-title: "::-webkit-meter-optimum-value"
+title: ::-webkit-meter-optimum-value
 slug: Web/CSS/::-webkit-meter-optimum-value
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

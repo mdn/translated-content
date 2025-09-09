@@ -3,8 +3,6 @@ title: matrix()
 slug: Web/CSS/transform-function/matrix
 ---
 
-{{CSSRef}}
-
 **`matrix()`** [CSS](/ko/docs/Web/CSS) 함수는 2D 변형 동차 행렬을 선언합니다. 결과는 {{cssxref("&lt;transform-function&gt;")}} 데이터 타입입니다.
 
 > **경고:** `matrix(a, b, c, d, tx, ty)` 는 `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` 를 짧게 쓴 것입니다.
@@ -121,7 +119,7 @@ div {
 
 ## Browser compatibility
 
-호환성 정보는 [`<transform-function>`](/ko/docs/Web/CSS/transform-function#Browser_compatibility) 데이터 타입을 확인하세요.
+호환성 정보는 [`<transform-function>`](/ko/docs/Web/CSS/transform-function#browser_compatibility) 데이터 타입을 확인하세요.
 
 ## See also
 

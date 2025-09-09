@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`validity`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティは、この要素の有効状態を表す {{domxref("ValidityState")}} オブジェクトを返します。
+**`validity`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、この要素の有効状態を表す {{domxref("ValidityState")}} オブジェクトを返します。
 
 ## 値
 
@@ -39,5 +39,5 @@ if (!validityState.valid) {
 - {{domxref("HTMLInputElement.checkValidity()")}}
 - {{HTMLElement("input")}}
 - {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)

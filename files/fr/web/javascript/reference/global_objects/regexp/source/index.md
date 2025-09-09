@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 
 La propriété **`source`** renvoie une chaîne de caractères qui contient le texte du motif à rechercher (_pattern_), sans les barres obliques (_slashes_). C'est une propriété en lecture seule liée à l'instance. **`source`** ne contient aucun des options ou drapeaux (_flags_) (tels que "g", "i" ou "m") de l'expression rationnelle.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.source")}}
+
+```js interactive-example
+const regex1 = /fooBar/gi;
+
+console.log(regex1.source);
+// Expected output: "fooBar"
+
+console.log(new RegExp().source);
+// Expected output: "(?:)"
+
+console.log(new RegExp("\n").source === "\\n");
+// Expected output: true (starting with ES5)
+// Due to escaping
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## Exemples
 

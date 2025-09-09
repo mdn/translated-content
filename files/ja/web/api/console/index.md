@@ -112,7 +112,7 @@ obj.prop = 123;
 console.log(JSON.parse(JSON.stringify(obj)));
 ```
 
-ブラウザーで動作する他の選択肢として、[`structuredClone()`](/ja/docs/Web/API/structuredClone) があり、これはさまざまな種類のオブジェクトを複製するのに有効です。
+ブラウザーで動作する他の選択肢として、[`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) があり、これはさまざまな種類のオブジェクトを複製するのに有効です。
 
 #### 複数のオブジェクトの出力
 
@@ -145,7 +145,7 @@ My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 - `%f`
   - : 浮動小数点数値を出力します。
 - `%c`
-  - : 以下のテキストすべてに CSS スタイルルールを適用します。[コンソール出力のスタイル設定](#styling_console_output)を参照してください。
+  - : 以下のテキストすべてに CSS スタイルルールを適用します。[コンソール出力のスタイル設定](#コンソールの出力のスタイル付け)を参照してください。
 
 ブラウザーによっては追加の書式を指定します。例えば、Safari と Firefox は C スタイルの精度書式 `%.<精度>f` に対応しています。例えば、`console.log("Foo %.2f", 1.1)` は小数点以下 2 桁の数値を出力し、`Foo 1.10` となります。`console.log("Foo %.2d", 1.1)` は有効数字 2 桁に先頭の 0 を加えた数値を出力し、 `Foo 01` となります。
 

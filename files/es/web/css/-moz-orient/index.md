@@ -1,9 +1,9 @@
 ---
-title: "-moz-orient"
+title: -moz-orient
 slug: Web/CSS/-moz-orient
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The `-moz-orient` [CSS](/es/docs/Web/CSS) especifica la orientación del elemento al que se aplica.
 

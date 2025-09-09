@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 ## Общие сведения
 
-Метод **`apply()`** вызывает функцию с указанным значением `this` и аргументами, предоставленными в виде массива (либо [массивоподобного объекта](/ru/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)).
+Метод **`apply()`** вызывает функцию с указанным значением `this` и аргументами, предоставленными в виде массива (либо [массивоподобного объекта](/ru/docs/Web/JavaScript/Guide#working_with_array-like_objects)).
 
 > [!NOTE]
 > Хотя синтаксис этой функции практически полностью идентичен функции {{jsxref("Function.prototype.call()", "call()")}}, фундаментальное различие между ними заключается в том, что функция `call()` принимает список аргументов, в то время как функция `apply()` принимает единичный массив аргументов.
@@ -103,7 +103,7 @@ var max = Math.max.apply(
 var min = Math.min.apply(null, numbers);
 
 /* сравним с простым алгоритмом с циклом */
-(max = -Infinity), (min = +Infinity);
+((max = -Infinity), (min = +Infinity));
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -148,7 +148,7 @@ someobject.foo = function () {
 };
 ```
 
-Этот метод особенно удобен, когда вам нужно отладить события, либо интерфейс с чем-то, что не имеет API, вроде различных событий `.on([event]...`, например, тех что используются в [Инспекторе инструментов разработчика](/ru/docs/Tools/Page_Inspector#Developer_API)).
+Этот метод особенно удобен, когда вам нужно отладить события, либо интерфейс с чем-то, что не имеет API, вроде различных событий `.on([event]...`, например, тех что используются в [Инспекторе инструментов разработчика](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#developer_api)).
 
 ## Спецификации
 

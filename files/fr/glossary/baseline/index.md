@@ -19,4 +19,4 @@ Les écritures est-asiatique n'ont pas de ligne de base. Leurs glyphes sont plac
 
 ### Référence technique
 
-- [Alignement des boites en CSS](/fr/docs/Web/CSS/CSS_Box_Alignment#Types_d'alignement) sur MDN
+- [Alignement des boites en CSS](/fr/docs/Web/CSS/CSS_box_alignment#types_d'alignement) sur MDN

@@ -26,7 +26,6 @@ Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}
 ### Valores
 
 - `{{cssxref("&lt;time&gt;")}}`
-
   - : O deslocamento do tempo, a partir do momento em que a animação é aplicada ao elemento, no qual a animação deve começar. Isso pode ser especificado em segundos (`s`) ou milesegundos or milliseconds (`ms`). A unidade é necessaria.
 
     Um valor positivo indica que a animação deve começar após o período de especificação ter decorrido. O valor de `0s`, que é o padrão, incida que a animação deve começar desde que foi aplicada.
@@ -34,7 +33,7 @@ Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}
     Um valor negativo faz com que a animação comece imediatamente, mas parcialmente através do seu ciclo. Por exemplo, se você específicar `-1s` como tempo da animation-delay , a animação vai começar imediatamente, mas começará 1 segundo na sequência de animação. Se você específicar um valor negativo para a animation-delay, mas o valor inicial é implícito, o valor inicial é retirado do momento em que a animação é aplicada ao elemento.
 
 > [!NOTE]
-> Quando você especifica vários valores separados por vírgula em uma propriedade `animation-*` , eles serão atribuídos às animações especificadas na propriedade {{cssxref("animation-name")}} em diferentes modos, dependendo de quantos existam. Para mais informações veja [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values).
+> Quando você especifica vários valores separados por vírgula em uma propriedade `animation-*` , eles serão atribuídos às animações especificadas na propriedade {{cssxref("animation-name")}} em diferentes modos, dependendo de quantos existam. Para mais informações veja [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ### Sintaxe formal
 
@@ -42,7 +41,7 @@ Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}
 
 ## Exemplos
 
-Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations) para exemplos.
+Veja [CSS animations](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations) para exemplos.
 
 ## Especificações
 
@@ -54,5 +53,5 @@ Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations) para exemplos.
 
 ## Veja também
 
-- [Using CSS animations](/pt-BR/docs/CSS/Tutorials/Using_CSS_animations)
+- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

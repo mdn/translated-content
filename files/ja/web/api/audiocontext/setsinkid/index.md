@@ -12,7 +12,7 @@ l10n:
 
 音声機器を既定でない機器に設定するには、開発者は音声機器にアクセスする許可を得る必要があります。必要な場合、{{domxref("MediaDevices.getUserMedia()")}} を呼ぶことによりユーザーに必要な許可を求めるプロンプトを表示することができます。
 
-さらに、この機能は [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされる場合があります。
+さらに、この機能は [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によりブロックされる場合があります。
 
 ## 構文
 

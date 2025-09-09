@@ -66,5 +66,5 @@ console.log(num1); // 2
 ## Смотрите также
 
 - {{Glossary("Scope")}} - область видимости
-- [Объявление переменных в руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Объявления)
-- [Область видимости функций в руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Functions#Область_данных_и_замыкания)
+- [Объявление переменных в руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#объявления)
+- [Область видимости функций в руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Functions#область_данных_и_замыкания)

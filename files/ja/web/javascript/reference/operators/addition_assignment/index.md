@@ -1,15 +1,24 @@
 ---
-title: 加算代入 (+=)
+title: 加算代入演算子 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 l10n:
-  sourceCommit: 71cf0cb885d46d83af054ae4df350248e246f006
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **加算代入 (`+=`)** 演算子は、 2 つのオペランドの[加算](/ja/docs/Web/JavaScript/Reference/Operators/Addition)（数値の加算または文字列の結合のどちらか）を実行し、左オペランドへ結果を代入します。
 
-{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+{{InteractiveExample("JavaScript デモ: 加算代入演算子 (+=)")}}
+
+```js interactive-example
+let a = 2;
+let b = "hello";
+
+console.log((a += 3)); // 加算
+// 予想される結果: 5
+
+console.log((b += " world")); // 結合
+// 予想される結果: "hello world"
+```
 
 ## 構文
 
@@ -23,46 +32,39 @@ x += y
 
 ## 例
 
-### 加算代入の使用
-
-```js
-let baz = true;
-
-// 論理値 + 数値 -> 加算
-baz += 1; // 2
-
-// 論理値 + 論理値 -> 加算
-baz += false; // 2
-```
-
-```js
-let foo = "foo";
-
-// 文字列 + 論理値 -> 連結
-foo += false; // "foofalse"
-
-// 文字列 + 文字列 -> 連結
-foo += "bar"; // "foofalsebar"
-```
+### 数値を使用した加算代入
 
 ```js
 let bar = 5;
-
-// 数値 + 数値 -> 加算
 bar += 2; // 7
-
-// 数値 + 文字列 -> 連結
-bar += "foo"; // "7foo"
 ```
+
+それ以外の文字列でも長整数でもない値は、数値に変換されます。
+
+```js
+let baz = true;
+baz += 1; // 2
+baz += false; // 2
+```
+
+### 長整数を使用した加算代入
 
 ```js
 let x = 1n;
-
-// 長整数 + 長整数 -> 加算
 x += 2n; // 3n
 
-// 長整数 + 数値 -> TypeError が発生
 x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
+
+### 文字列を使用した加算代入
+
+```js
+let foo = "foo";
+foo += false; // "foofalse"
+foo += "bar"; // "foofalsebar"
+
+let bar = 5;
+bar += "foo"; // "5foo"
 ```
 
 ## 仕様書
@@ -76,4 +78,4 @@ x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversion
 ## 関連情報
 
 - [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
-- [加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
+- [加算演算子 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Addition)

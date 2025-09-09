@@ -1,13 +1,12 @@
 ---
 title: Proxy() コンストラクター
+short-title: Proxy()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Proxy()`** コンストラクターは {{jsxref("Proxy")}} オブジェクトを生成するために使用します。
+**`Proxy()`** コンストラクターは {{jsxref("Proxy")}} オブジェクトを生成します。
 
 ## 構文
 
@@ -15,7 +14,8 @@ l10n:
 new Proxy(target, handler)
 ```
 
-> **メモ:** `Proxy()` は、[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Proxy()` は、[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
@@ -32,38 +32,38 @@ new Proxy(target, handler)
 - `target` はプロキシーを作成するオブジェクトです。
 - `handler` はプロキシーのカスタム動作を定義するオブジェクトです。
 
-handler を空にすると、ほとんどすべての点でターゲットとまったく同じように振る舞うプロキシーを作成します。 `handler` オブジェクト上で関数群のいずれかを定義することで、プロキシーの動作の特定の側面をカスタマイズすることができます。例えば、 `get()` を定義することで、 ターゲットの[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)のカスタマイズされたバージョンを提供することができます。
+handler を空にすると、ほとんどすべての点でターゲットとまったく同じように振る舞うプロキシーを作成します。 `handler` オブジェクト上で関数群のいずれかを定義することで、プロキシーの動作の特定の側面をカスタマイズすることができます。例えば、 `get()` を定義することで、 ターゲットの[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)のカスタマイズされたバージョンを提供することができます。
 
 ### ハンドラー関数
 
 この節では、定義することができるすべてのハンドラー関数を列挙します。ハンドラー関数は、対象オブジェクトの呼び出しをトラップするので、*トラップ*と呼ばれることがあります。
 
-- {{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}
+- {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
   - : 関数呼び出しのトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/construct", "handler.construct()")}}
-  - : {{JSxRef("Operators/new", "new")}} 演算子のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
-  - : {{JSxRef("Object.defineProperty")}} のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : {{JSxRef("Operators/delete", "delete")}} 演算子のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}
+- {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
+  - : {{jsxref("Operators/new", "new")}} 演算子のトラップです。
+- {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
+  - : {{jsxref("Object.defineProperty")}} のトラップです。
+- {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
+  - : {{jsxref("Operators/delete", "delete")}} 演算子のトラップです。
+- {{jsxref("Proxy/Proxy/get", "handler.get()")}}
   - : プロパティ値の取得のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
-  - : {{JSxRef("Object.getOwnPropertyDescriptor")}} のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
-  - : {{JSxRef("Object.getPrototypeOf")}} のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/has", "handler.has()")}}
-  - : {{JSxRef("Operators/in", "in")}} 演算子のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
-  - : {{JSxRef("Object.isExtensible")}} のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
-  - : {{JSxRef("Object.getOwnPropertyNames")}} や {{JSxRef("Object.getOwnPropertySymbols")}} のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
-  - : {{JSxRef("Object.preventExtensions")}} のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}
+- {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+  - : {{jsxref("Object.getOwnPropertyDescriptor")}} のトラップです。
+- {{jsxref("Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
+  - : {{jsxref("Object.getPrototypeOf")}} のトラップです。
+- {{jsxref("Proxy/Proxy/has", "handler.has()")}}
+  - : {{jsxref("Operators/in", "in")}} 演算子のトラップです。
+- {{jsxref("Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
+  - : {{jsxref("Object.isExtensible")}} のトラップです。
+- {{jsxref("Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
+  - : {{jsxref("Object.getOwnPropertyNames")}} や {{jsxref("Object.getOwnPropertySymbols")}} のトラップです。
+- {{jsxref("Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
+  - : {{jsxref("Object.preventExtensions")}} のトラップです。
+- {{jsxref("Proxy/Proxy/set", "handler.set()")}}
   - : プロパティ値の設定のトラップです。
-- {{JSxRef("Global_Objects/Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
-  - : {{JSxRef("Object.setPrototypeOf")}} のトラップです。
+- {{jsxref("Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
+  - : {{jsxref("Object.setPrototypeOf")}} のトラップです。
 
 ## 例
 
@@ -102,5 +102,5 @@ console.log(proxy.proxied); // "replaced value"
 
 ## 関連情報
 
-- [JavaScript Guide ガイドの `Proxy` と `Reflect`](/ja/docs/Web/JavaScript/Guide/Meta_programming)
-- {{jsxref("Global_Objects/Reflect", "Reflect")}}
+- [メタプログラミング](/ja/docs/Web/JavaScript/Guide/Meta_programming) guide
+- {{jsxref("Reflect")}}

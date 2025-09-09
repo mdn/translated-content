@@ -32,14 +32,13 @@ The `text-transform` property takes into account language-specific case mapping 
 
 The language is defined by the `lang` HTML attribute or the `xml:lang` XML attribute.
 
-Support for these specific cases vary from one browser to the other, so check the [browser compatibility table](#Browser_compatibility).
+Support for these specific cases vary from one browser to the other, so check the [browser compatibility table](#browser_compatibility).
 
 {{cssinfo}}
 
 ## Syntax
 
 - `capitalize`
-
   - : Is a keyword forcing the first _letter_ of each word to be converted to uppercase. Other characters are unchanged; that is, they retain their original case as written in the element's text. A letter is any Unicode character part of the Letter or Number general categories {{experimental_inline}} : it excludes any punctuation marks or symbols at the beginning of the word.
 
     > [!NOTE]

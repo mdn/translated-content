@@ -61,19 +61,15 @@ greetUser("Veronica");
 这段程序代码包含了三个执行上下文，其中有些会在程序运行的过程中多次创建和销毁。每个上下文创建的时候会被推入**执行上下文栈**。当退出的时候，它会从上下文栈中移除。
 
 - 程序开始运行时，全局上下文就会被创建好。
-
   - 当执行到 `greetUser("Mike")` 的时候，会为 `greetUser()` 函数创建一个它的上下文。这个执行上下文会被推入执行上下文栈中。
-
     - 当 `greetUser()` 调用 `localGreeting()` 的时候，会为该方法创建一个新的上下文。当 `localGreeting()` 返回的时候，它的上下文也会从执行栈中弹出并销毁。程序会从栈中获取下一个上下文并恢复执行，也就是从 `greetUser()` 剩下的部分开始执行。
     - `greetUser()` 执行完毕并退出，其上下文也从栈中弹出并销毁。
 
   - 当执行到 `greetUser("Teresa")` 的时候，程序又会为它创建一个上下文并推入栈顶。
-
     - 当 `greetUser()` 调用 `localGreeting()` 的时候，会为该方法创建一个新的上下文。当 `localGreeting()` 返回的时候，它的上下文也会从执行栈中弹出并销毁。然后，继续执行 `greetUser()` 剩下的部分。
     - `greetUser()` 执行完毕并退出，其上下文也从栈中弹出并销毁。
 
   - 当执行到 `greetUser("Veronica")` 的时候，程序又会为它创建一个上下文并推入栈顶。
-
     - 当 `greetUser()` 调用 `localGreeting()` 的时候，会为该方法创建一个新的上下文。当 `localGreeting()` 返回的时候，它的上下文也会从执行栈中弹出并销毁。
     - `greetUser()` 执行完毕并退出，其上下文也从栈中弹出并销毁。
 
@@ -135,7 +131,7 @@ greetUser("Veronica");
 
 使用 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 可以让主线程另起新的线程来运行脚本，这能够缓解上面的情况。一个设计良好的网站或应用会把一些复杂的或者耗时的操作交给 worker 去做，这样可以让主线程除了更新、布局和渲染网页之外，尽可能少的去做其他事情。
 
-通过使用像 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 这样的[异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous) 技术可以使得主线程在等待请求返回结果的同时继续往下执行，这能够更进一步减轻上面提到的情况。然而，一些更接近于基础功能的代码——比如一些框架代码，可能更需要将代码安排在主线程上一个安全的时间来运行，它与任何请求的结果或者任务无关。
+通过使用像 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 这样的[异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS) 技术可以使得主线程在等待请求返回结果的同时继续往下执行，这能够更进一步减轻上面提到的情况。然而，一些更接近于基础功能的代码——比如一些框架代码，可能更需要将代码安排在主线程上一个安全的时间来运行，它与任何请求的结果或者任务无关。
 
 微任务是另一种解决该问题的方案，通过将代码安排在下一次事件循环开始之前运行而不是必须要等到下一次开始之后才执行，这样可以提供一个更好的访问级别。
 
@@ -145,7 +141,7 @@ greetUser("Veronica");
 
 - [微任务指南](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - {{domxref("Window.queueMicrotask()")}}
-- [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-  - [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [合作的异步 JavaScript：超时和间隔](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-  - [用 Promise 进行优雅的异步编程](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
+- [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
+  - [异步 JavaScript 简介](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [合作的异步 JavaScript：超时和间隔](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
+  - [用 Promise 进行优雅的异步编程](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises)

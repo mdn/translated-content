@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 Объект **`Promise`** используется для отложенных и асинхронных вычислений.
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Promise Constructor")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## Синтаксис
 
@@ -53,19 +69,16 @@ new Promise(function(resolve, reject) { ... });
 ## Методы
 
 - {{jsxref("Promise.all", "Promise.all(iterable)")}}
-
   - : Ожидает исполнения всех промисов или отклонения любого из них.
 
     Возвращает промис, который исполнится после исполнения всех промисов в `iterable`. В случае, если любой из промисов будет отклонён, `Promise.all` будет также отклонён.
 
 - {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
-
   - : Ожидает завершения всех полученных промисов (как исполнения так и отклонения).
 
     Возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.
 
 - {{jsxref("Promise.race", "Promise.race(iterable)")}}
-
   - : Ожидает исполнения или отклонения любого из полученных промисов.
 
     Возвращает промис, который будет исполнен или отклонён с результатом исполнения первого исполненного или отклонённого промиса из `iterable`.

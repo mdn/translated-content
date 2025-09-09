@@ -20,9 +20,7 @@ read(buffer, FileSystemReadWriteOptions)
 - `buffer`
   - : ファイルの内容を読み込むバッファーを表す {{jsxref("ArrayBuffer")}} または ({{jsxref("DataView")}} などの) `ArrayBufferView` です。`ArrayBuffer` の内容を直接操作することはできないことに注意してください。かわりに、バッファーを特定のフォーマットで表す {{jsxref("Int8Array")}} などの型付き配列のうちの一つ、もしくは {{jsxref("DataView")}} のオブジェクトを作成し、それを用いてバッファーの内容を読み書きします。
 - `FileSystemReadWriteOptions` {{optional_inline}}
-
   - : 以下のプロパティを持つオプションオブジェクトです。
-
     - `at`
       - : ファイルをどこから読み込むかのバイト単位のオフセットを表す数値です。
 
@@ -88,5 +86,5 @@ onmessage = async (e) => {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

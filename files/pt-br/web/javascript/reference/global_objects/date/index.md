@@ -26,35 +26,27 @@ new Date(ano, mês, dia, hora, minuto, segundo, milissegundo);
 Nota: Quando Date for chamado como um construtor com mais de um argumento, se os valores forem maiores do que seu limite lógico (e.g. se 13 for fornecido como um valor para mês ou 70 for o valor para minuto), o valor adjacente será ajustado. E.g. new Date(2013, 13, 1) é equivalente a new Date(2014, 1, 1), ambos criam uma data para 2014-02-01 (note que o mês começa em 0). Similarmente para outros valores: new Date(2013, 2, 1, 0, 70) é equivalente a new Date(2013, 2, 1, 1, 10), pois ambos criam uma data para 2013-03-01T01:10:00.
 
 - _`value`_
-
   - : Um valor inteiro representando o número de milisegundos desde 1 de Janeiro de 1970 00:00:00 UTC (Era Unix ou Marco Zero).
 
 - _`dataString`_
-
-  - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](http://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
+  - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](https://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](https://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
 
 - _`year`_
-
   - : Um valor inteiro que representa o ano. Valores de 0 a 99 correspondem aos anos de 1900 a 1999. Veja o [exemplo abaixo](<#Two digit years>).
 
 - _`month`_
-
   - : Um valor inteiro que representa o mês, começando com 0 para Janeiro até 11 para Dezembro.
 
 - _`day`_
-
   - : Um valor inteiro que representa o dia do mês.
 
 - _`hour`_
-
   - : Um valor inteiro que representa a hora do dia.
 
 - _`minute`_
-
   - : Um valor inteiro que representa o segmento de um minuto de tempo.
 
 - _`second`_
-
   - : Um valor inteiro que representa o segmento de segundo do tempo.
 
 - _`millisecond`_
@@ -91,7 +83,7 @@ Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O obj
 
 ### Métodos
 
-{{ page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
+<!-- TODO: page macro not supported:  page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods")  -->
 
 ## Exemplos
 

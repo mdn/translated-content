@@ -54,7 +54,7 @@ typeof Object(1n) === "object"; // true
 
 Следующие операторы могут использоваться с `BigInt` (или объектом-обёрткой `BigInt`): `+`, `*`, `-`, `**`, `%`.
 
-[Побитовые операции](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) также поддерживаются, кроме `>>>` (сдвиг вправо с заполнением нулями).
+[Побитовые операции](/ru/docs/Web/JavaScript/Reference/Operators) также поддерживаются, кроме `>>>` (сдвиг вправо с заполнением нулями).
 
 Не поддерживаемый унарный оператор (`+`) [больше не ломает asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 

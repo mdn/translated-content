@@ -2,14 +2,25 @@
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 l10n:
-  sourceCommit: e7fab5265b54dc9faeff7e8cf4972cc171ec856b
+  sourceCommit: c3951963f6d3397d21624cfc94a72203acad6412
 ---
 
 {{JSRef}}
 
 **`JSON.parse()`** 静的メソッドは、文字列を JSON として解析し、文字列によって記述されている JavaScript の値やオブジェクトを構築します。オプションの**リバイバー**関数で、生成されたオブジェクトが返される前に変換を実行することができます。
 
-{{EmbedInteractiveExample("pages/js/json-parse.html")}}
+{{InteractiveExample("JavaScript デモ: JSON.parse()")}}
+
+```js interactive-example
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// Expected output: 42
+
+console.log(obj.result);
+// Expected output: true
+```
 
 ## 構文
 
@@ -46,7 +57,7 @@ JSON.parse(text, reviver)
 
 `JSON.parse()` は、 [JSON の文法](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON#full_json_grammar)に従って JSON 文字列を構文解析し、 JavaScript 式であるかのように文字列を評価します。 JSON テキストの一部が、同じ JavaScript 式と異なる値を表す唯一の例は、 `"__proto__"` キーを扱う場合です。[オブジェクトリテラル構文 vs. JSON](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#オブジェクトリテラル表記法_vs_json) を参照してください。
 
-### リバイバー引数
+### reviver 引数
 
 `reviver` を指定すると、構文解析で計算された値を変換してから返します。具体的には、計算された値とそのすべてのプロパティ（最も奥になったプロパティから、元の値自身へと[深さ優先](https://en.wikipedia.org/wiki/Depth-first_search)で）が個別にリバイバーに実行されます。
 
@@ -152,19 +163,35 @@ JSON には型メタデータを記すための構文空間がないため、プ
 - データの構造に基づいて「推測」する（例えば、 2 つのメンバーからなる配列）。
 - 本体の形が定型である場合、プロパティ名から推測する（例えば、`registry` と呼ばれるプロパティはすべて `Map` オブジェクトを保持しているなど）。
 
-### JSON.parse() は末尾のカンマを許容しない
+### 不正な JSON
+
+`JSON.parse` が JSON の文法に適合しない文字列を受け取った場合、 `SyntaxError` が発生します。
+
+JSON において、配列とオブジェクトには[末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)を置くことができません。
 
 ```js example-bad
-// 両方とも SyntaxError が発生
 JSON.parse("[1, 2, 3, 4, ]");
-JSON.parse('{"foo" : 1, }');
+// SyntaxError: Unexpected token ] in JSON at position 13
+
+JSON.parse('{"foo": 1, }');
+// SyntaxError: Unexpected token } in JSON at position 12
 ```
 
-### JSON.parse() は単一引用符を許容しない
+JSON の文字列は（単一引用符でなく）二重引用符で区切らなければなりません。
 
 ```js example-bad
-// SyntaxError が発生
 JSON.parse("{'foo': 1}");
+// SyntaxError: Unexpected token ' in JSON at position 1
+
+JSON.parse("'string'");
+// SyntaxError: Unexpected token ' in JSON at position 0
+```
+
+JavaScript の文字列リテラル内で JSON を書く場合は、 JavaScript の文字列リテラルを区切るのに単一引用符を使用するか、 JSON 文字列を区切る二重引用符をエスケープする必要があります。
+
+```js-nolint example-good
+JSON.parse('{"foo": 1}'); // OK
+JSON.parse("{\"foo\": 1}"); // OK
 ```
 
 ## 仕様書
@@ -177,5 +204,5 @@ JSON.parse("{'foo': 1}");
 
 ## 関連情報
 
-- [現行の `JSON.parse` の動作のポリフィル（リバイバーの `context` 引数） (`core-js`)](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [現行の `JSON.parse` の動作（reviver の `context` 引数）のポリフィル (`core-js`)](https://github.com/zloirock/core-js#jsonparse-source-text-access)
 - {{jsxref("JSON.stringify()")}}

@@ -3,8 +3,6 @@ title: ナビゲーションの分割
 slug: Web/CSS/Layout_cookbook/Split_Navigation
 ---
 
-{{CSSRef}}
-
 1 つ以上の要素が他のナビゲーション項目から分離されているナビゲーションのパターンです。
 
 ![2つのグループに分けられた項目。](split-navigation.png)
@@ -39,4 +37,4 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 ## 関連情報
 
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)

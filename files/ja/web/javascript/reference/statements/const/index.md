@@ -7,9 +7,24 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`const`** 宣言はブロックスコープのローカル変数（定数）を宣言します。定数の値は[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)を使用して再代入することができませんが、定数が[オブジェクト](/ja/docs/Web/JavaScript/Data_structures#オブジェクト)であった場合、そのプロパティを追加したり、更新したり、削除したりすることができます。
+**`const`** 宣言はブロックスコープのローカル変数（定数）を宣言します。定数の値は[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)を使用して再代入することができませんが、定数が[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)であった場合、そのプロパティを追加したり、更新したり、削除したりすることができます。
 
-{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{InteractiveExample("JavaScript デモ: Statement - Const")}}
+
+```js interactive-example
+const number = 42;
+
+try {
+  number = 99;
+} catch (err) {
+  console.log(err);
+  // Expected output: TypeError: invalid assignment to const 'number'
+  // (Note: the exact output may be browser-dependent)
+}
+
+console.log(number);
+// Expected output: 42
+```
 
 ## 構文
 
@@ -20,7 +35,7 @@ const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : 宣言する変数名。それぞれ、正当な JavaScript [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)または[分割結合パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)でなければなりません。
+  - : 宣言する変数名。それぞれ、正当な JavaScript [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)または[分割結合パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)でなければなりません。
 - `valueN`
   - : 変数の初期値。正式な式であれば何でもかまいません。
 
@@ -46,7 +61,7 @@ const FOO; // SyntaxError: Missing initializer in const declaration
 
 `const` 宣言は値への不変の参照を作成します。これはその値が不変であるという意味ではなく、変数の識別子が再割り当てできないという意味です。例えば、内容がオブジェクトの場合、これはオブジェクトの内容（例えばプロパティ）は変更できることを意味しています。 `const` 宣言は「アイデンティティが一定の変数を作成する」のであって、「値が一定の変数を作成する」のではありません。また、「不変の{{Glossary("binding", "バインド")}}」を作成するのであって、「不変の値」を作成するのではありません。
 
-多くのスタイルガイド（[MDN](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#変数の宣言) のものも含む）では、変数がそのスコープで再代入されない場合は、 `const` を {{jsxref("Statements/let", "let")}} の代わりに使用することを推奨しています。これにより、変数の型（プリミティブの場合は値）が変更されることはないという意図が明確になります。他にも、プリミティブ以外の変数が変更される場合は `let` を推奨する人もいます。
+多くのスタイルガイド（[MDN](/ja/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript#変数の宣言) のものも含む）では、変数がそのスコープで再代入されない場合は、 `const` を {{jsxref("Statements/let", "let")}} の代わりに使用することを推奨しています。これにより、変数の型（プリミティブの場合は値）が変更されることはないという意図が明確になります。他にも、プリミティブ以外の変数が変更される場合は `let` を推奨する人もいます。
 
 `const` キーワードに続くリストは{{Glossary("binding","バインディング")}}リストと呼ばれ、カンマで区切られます。カンマは[カンマ演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comma_operator)ではなく、 `=` は[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)ではありません。後の変数の初期化子は、リスト内の前の変数を参照することができます。
 
@@ -122,7 +137,7 @@ MY_ARRAY = ["B"];
 MY_ARRAY.push("A"); // ["A"]
 ```
 
-### 分割代入による宣言
+### 構造分解による宣言
 
 それぞれの `=` の左辺はバインドパターンにもなります。これにより、一度に複数の変数を作成することができます。
 
@@ -132,7 +147,7 @@ const [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-詳しくは、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)を参照してください。
+詳しくは、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を参照してください。
 
 ## 仕様書
 

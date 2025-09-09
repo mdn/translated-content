@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture","Web/CSS/CSS_Grid_Layout")}}
 
-Si vous connaissez [les boîtes flexibles (flexbox)](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.
+Si vous connaissez [les boîtes flexibles (flexbox)](/fr/docs/Web/CSS/CSS_flexible_box_layout) vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.
 
 Chaque méthode de disposition qui implémente cette nouvelle spécification se comportera légèrement différemment selon les différences de contraintes et de fonctionnalités (et aussi selon le comportement historique). On ne pourra donc pas avoir un alignement exactement homogène. La spécification pour l'alignement des boîtes détaille le fonctionnement de chaque méthode mais malheureusement, à l'heure actuelle, aucun navigateur ne prend en charge cette spécification. À l'heure actuelle, les navigateurs respectent les règles de cette spécification pour l'alignement et la répartition de l'espace lorsqu'on utilise une disposition en grille. Dans cet article, nous verrons comment celles-ci fonctionnent. On retrouvera de nombreux points communs avec les boîtes flexibles pour le fonctionnement de ces propriétés et valeurs. Toutefois, les grilles fonctionnant sur deux axes et les boîtes flexibles sur un seul, il faudra faire attention à quelques différences. Commençons par analyser les deux axes utilisés lorsqu'il s'agit d'aligner des objets sur une grille.
 
@@ -655,7 +655,7 @@ Dans l'exemple qui suit, pour l'objet 1, on utilise une marge à gauche avec `au
 
 {{EmbedLiveSample('Alignement_et_marges_automatiques', '500', '500')}}
 
-On peut voir comment l'objet est aligné grâce à [l'outil de mise en évidence des grilles dans Firefox](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts).
+On peut voir comment l'objet est aligné grâce à [l'outil de mise en évidence des grilles dans Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html).
 
 ![](7_auto_margins.png)
 

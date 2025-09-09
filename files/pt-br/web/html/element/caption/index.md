@@ -7,7 +7,88 @@ slug: Web/HTML/Element/caption
 
 O elemento [HTML](/pt-BR/docs/Web/HTML) **`caption`** especifica a legenda (ou título) de uma tabela.
 
-{{EmbedInteractiveExample("pages/tabbed/caption.html", "tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;caption&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    He-Man and Skeletor facts
+  </caption>
+  <tr>
+    <td></td>
+    <th scope="col" class="heman">He-Man</th>
+    <th scope="col" class="skeletor">Skeletor</th>
+  </tr>
+  <tr>
+    <th scope="row">Role</th>
+    <td>Hero</td>
+    <td>Villain</td>
+  </tr>
+  <tr>
+    <th scope="row">Weapon</th>
+    <td>Power Sword</td>
+    <td>Havoc Staff</td>
+  </tr>
+  <tr>
+    <th scope="row">Dark secret</th>
+    <td>Expert florist</td>
+    <td>Cries at romcoms</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th {
+  background-color: rgb(230 230 230);
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250 250 250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(240 240 240);
+}
+
+.heman {
+  font: 1.4rem molot;
+  text-shadow:
+    1px 1px 1px #fff,
+    2px 2px 1px #000;
+}
+
+.skeletor {
+  font: 1.7rem rapscallion;
+  letter-spacing: 3px;
+  text-shadow:
+    1px 1px 0 #fff,
+    0 0 9px #000;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -61,16 +142,14 @@ O elemento [HTML](/pt-BR/docs/Web/HTML) **`caption`** especifica a legenda (ou t
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ### Atributos obsoletos
 
 Os seguintes atributos são obsoletos e não devem ser usados. Estão documentados abaixo apenas como referência ao atualizar o código, e interesse histórico.
 
 - `align` {{deprecated_inline}}
-
   - : Esse atributo [enumerado](/pt-BR/docs/Glossary/Enumerated) indica como a legenda deve ser alinhada em relação à tabela. Ele pode ter um dos seguintes valores:
-
     - `left`
       - : A legenda é exibida à esquerda da tabela.
     - `top`
@@ -143,5 +222,4 @@ td {
 ## Veja também
 
 - Propriedades CSS que podem ser especialmente úteis para estilizar o elemento {{HTMLElement("caption")}}:
-
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.

@@ -16,7 +16,6 @@ generatorObject.next(value);
 ### 매개변수
 
 - `value`
-
   - : 제너레이터로 보낼 값입니다.
 
     값은 `yield` 식의 결과로 할당됩니다. 예를 들어 `variable = yield 식`에서 `.next()` 함수에 전달된 값은 `variable`에 할당됩니다.
@@ -26,7 +25,6 @@ generatorObject.next(value);
 두 개의 속성을 가진 {{jsxref("Object", "객체")}}이고, 이 속성은 다음과 같습니다.
 
 - `done` (boolean)
-
   - : 반복자가 반복 시퀀스의 끝을 지난 경우 `true`입니다. 이 경우 `value`는 선택적으로 반복자의 *반환 값*을 지정합니다.
 
     반복자가 시퀀스에서 다음 값을 생성할 수 있는 경우 `false`입니다. 이는 `done` 속성을 완전히 지정하지 않는 것과 같습니다.
@@ -119,4 +117,4 @@ g.next(2);
 ## 같이 보기
 
 - {{jsxref("Statements/function*", "function*")}}
-- [반복자와 제너레이터](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [반복자와 제너레이터](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)

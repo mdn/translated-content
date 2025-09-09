@@ -2,16 +2,29 @@
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 l10n:
-  sourceCommit: c607c483fe079c61de5e32fba1a6cce61896e97d
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`reduceRight()`** は {{jsxref("Array")}} インスタンスのメソッドで、アキュームレーターと配列のそれぞれの値に対して（右から左へ）関数を適用して、単一の値にします。
 
 左から右へ適用する場合は {{jsxref("Array.prototype.reduce()")}} を参照してください。
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.reduceRight()")}}
+
+```js interactive-example
+const array = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+
+const result = array.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+
+console.log(result);
+// 予想される結果: Array [4, 5, 2, 3, 0, 1]
+```
 
 ## 構文
 
@@ -23,7 +36,6 @@ reduceRight(callbackFn, initialValue)
 ### 引数
 
 - `callbackFn`
-
   - : 配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出す際の `accumulator` 引数の値になります。最後の呼び出しでは、返値は `reduceRight()` の返値となります。この関数は以下の引数で呼び出されます。
     - `accumulator`
       - : 前回の `callbackFn` の呼び出し結果の値です。初回の呼び出しでは `initialValue` が指定されていた場合はその値、そうでない場合はこの配列の末尾の要素の値です。
@@ -42,22 +54,15 @@ reduceRight(callbackFn, initialValue)
 
 ## 解説
 
-`reduceRight()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。「縮小」コールバック関数を配列に含まれる各要素に対して昇順に一度ずつ呼び出し、その結果を単一の値に積算します。
+`reduceRight()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。「縮小」コールバック関数を配列に含まれる各要素に対して昇順に一度ずつ呼び出し、その結果を単一の値に積算します。これらのメソッドが一般的にどのように動作するのかについての詳細は、[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)の節をご覧下さい。
 
 `callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
 
 他の[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)とは異なり、 `reduceRight()` は `thisArg` 引数を受け入れません。 `callbackFn` は常に `undefined` を `this` として呼び出され、 `callbackFn` が厳格モードでない場合は `globalThis` に置き換えられます。
 
-`reduceRight()` メソッドは呼び出し元の配列を変更しませんが、 `callbackFn` に指定された関数は変更することがあります。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
-
-- `callbackFn` は `reduceRight()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
-- 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
-- まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は `undefined` であるかのように処理されます。
-
-> [!WARNING]
-> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
-
 `reduceRight()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
+
+[reduce() を使用すべきでない場合](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#reduce_を使用すべきでない場合)で説明されている `reduce` に関するすべての注意点は、`reduceRight` にも当てはまります。JavaScript には遅延評価の意味づけがないため、`reduce` と `reduceRight` の間にパフォーマンスの違いはありません。
 
 ## 例
 
@@ -140,7 +145,7 @@ const randInt = (max) => Math.floor(Math.random() * max);
 const add5 = (callback, x) => {
   setTimeout(callback, randInt(1000), x + 5);
 };
-const mult3 = (callback, x) => {
+const mul3 = (callback, x) => {
   setTimeout(callback, randInt(1000), x * 3);
 };
 const sub2 = (callback, x) => {
@@ -156,17 +161,17 @@ const div4 = (callback, x) => {
   setTimeout(callback, randInt(1000), x / 4);
 };
 
-const computation = waterfall(add5, mult3, sub2, split, add, div4);
-computation(console.log, 5); // -> 14
+const computation = waterfall(add5, mul3, sub2, split, add, div4);
+computation(console.log, 5); // 14 をログ出力
 
-// same as:
+// 次のものと同じ
 
 const computation2 = (input, callback) => {
   const f6 = (x) => div4(callback, x);
   const f5 = (x, y) => add(f6, x, y);
   const f4 = (x) => split(f5, x);
   const f3 = (x) => sub2(f4, x);
-  const f2 = (x) => mult3(f3, x);
+  const f2 = (x) => mul3(f3, x);
   add5(f2, input);
 };
 ```
@@ -243,6 +248,7 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 ## 関連情報
 
 - [`Array.prototype.reduceRight` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.reduceRight` のポリフィル](https://www.npmjs.com/package/array.prototype.reduceright)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.map()")}}

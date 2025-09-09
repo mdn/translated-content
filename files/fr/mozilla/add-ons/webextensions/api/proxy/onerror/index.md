@@ -31,11 +31,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `newState`
-      - : `Object`. Un objet [Error](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error) représentant l'erreur.
+      - : `Object`. Un objet [Error](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) représentant l'erreur.
 
 {{WebExtExamples}}
 

@@ -41,7 +41,7 @@ location.reload(true);
 
 ### Пример №3
 
-Рассмотрим следующий пример, который будет перезагружать страницу используя метод [`replace()`](/ru/docs/Web/API/Location.replace) для вставки значения `location.pathname` в хэш:
+Рассмотрим следующий пример, который будет перезагружать страницу используя метод [`replace()`](/ru/docs/Web/API/Location/replace) для вставки значения `location.pathname` в хэш:
 
 ```js
 function reloadPageWithHash() {
@@ -381,7 +381,7 @@ function sendData(sData) {
 ```
 
 > [!NOTE]
-> Функция `showNode` является также примером использования цикла [`for`](/en/JavaScript/Reference/Statements/for) без раздела `statement`. В этом случае **точка с запятой всегда добавляется сразу после декларации цикла.**
+> Функция `showNode` является также примером использования цикла [`for`](/en-US/JavaScript/Reference/Statements/for) без раздела `statement`. В этом случае **точка с запятой всегда добавляется сразу после декларации цикла.**
 
 …тоже самое только с анимированной прокруткой страницы:
 
@@ -450,7 +450,7 @@ var showBookmark = (function () {
         nTop += oNode.offsetTop,
         oNode = oNode.offsetParent
     );
-    (_nodeX = nLeft), (_nodeY = nTop), (_itFrame = 1);
+    ((_nodeX = nLeft), (_nodeY = nTop), (_itFrame = 1));
     if (_scrollId === -1) {
       _scrollId = setInterval(_next, Math.round(nDuration / nFrames));
     }
@@ -470,5 +470,5 @@ var showBookmark = (function () {
 
 - Интерфейс возвращающий значение, {{domxref("Location")}}.
 - Подобная информация, но привязанная к контексту браузера, {{domxref("Document.location")}}
-- [Манипулирование историей браузера](/en/DOM/Manipulating_the_browser_history)
-- [hashchange](/ru/docs/DOM/Mozilla_event_reference/hashchange)
+- [Манипулирование историей браузера](/en-US/DOM/Manipulating_the_browser_history)
+- [hashchange](/ru/docs/Web/API/Window/hashchange_event)

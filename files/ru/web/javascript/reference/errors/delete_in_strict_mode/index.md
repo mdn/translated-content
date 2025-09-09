@@ -25,7 +25,7 @@ SyntaxError: Cannot delete unqualified property 'a' in strict mode. (Safari)
 
 Оператор `delete` может удалять только свойства объекта. Свойства объекта "квалифицированы", если они конфигурируемы.
 
-В отличие от общепринятого мнения, оператор `delete` не имеет ничего общего с непосредственным освобождением памяти. Управление памятью осуществляется косвенным образом через удаление ссылок, читайте подробнее в разделе [про управление памятью](/ru/docs/Web/JavaScript/Memory_management), а также на странице оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
+В отличие от общепринятого мнения, оператор `delete` не имеет ничего общего с непосредственным освобождением памяти. Управление памятью осуществляется косвенным образом через удаление ссылок, читайте подробнее в разделе [про управление памятью](/ru/docs/Web/JavaScript/Guide/Memory_management), а также на странице оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
 
 Эта ошибка возникает только [в строгом режиме](/ru/docs/Web/JavaScript/Reference/Strict_mode). В нестрогом режиме операция просто возвращает `false`.
 
@@ -62,5 +62,5 @@ x = null;
 ## Смотрите также
 
 - [Оператор `delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
-- [Управление памятью](/ru/docs/Web/JavaScript/Memory_Management)
+- [Управление памятью](/ru/docs/Web/JavaScript/Guide/Memory_management)
 - [TypeError: property "x" is non-configurable and can't be deleted](/ru/docs/Web/JavaScript/Reference/Errors/Cant_delete)

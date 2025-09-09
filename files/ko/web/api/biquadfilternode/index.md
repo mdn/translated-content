@@ -50,7 +50,6 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
 - {{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}
   - : Is an [a-rate](/ko/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](http://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
 - {{domxref("BiquadFilterNode.type")}}
-
   - : Is a string value defining the kind of filtering algorithm the node is implementing.
 
     <table class="standard-table">
@@ -201,4 +200,4 @@ See [`AudioContext.createBiquadFilter`](/ko/docs/Web/API/BaseAudioContext/create
 
 ## See also
 
-- [Using the Web Audio API](/ko/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

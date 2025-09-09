@@ -9,7 +9,46 @@ La propriété **`border-image-outset`** définit la distance avec laquelle la b
 
 Les fragments de l'image de bordure qui sont affichées en dehors de la boîte de bordure suite à l'utilisation de cette propriété n'entraîneront pas la création de barres de défilement. Ces zones ne capturent ni n'entraînent d'évènements de pointeur par rapport à l'élément concerné.
 
-{{EmbedInteractiveExample("pages/css/border-image-outset.html")}}
+{{InteractiveExample("CSS Demo: border-image-outset")}}
+
+```css interactive-example-choice
+border-image-outset: 0;
+```
+
+```css interactive-example-choice
+border-image-outset: 15px;
+```
+
+```css interactive-example-choice
+border-image-outset: 30px;
+```
+
+```css interactive-example-choice
+border-image-outset: 40px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 ## Syntaxe
 
@@ -97,5 +136,5 @@ La propriété `border-image-outset` peut être définie à l'aide d'une, deux, 
 
 ## Voir aussi
 
-- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)
-- [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

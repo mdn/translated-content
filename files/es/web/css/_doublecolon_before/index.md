@@ -1,9 +1,7 @@
 ---
-title: "::before (:before)"
+title: ::before (:before)
 slug: Web/CSS/::before
 ---
-
-{{CSSRef}}
 
 En CSS, `::before` crea un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad {{cssxref("content")}}. Este elemento se muestra en línea con el texto de forma predeterminada.
 
@@ -15,7 +13,7 @@ a::before {
 ```
 
 > [!NOTE]
-> Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
+> Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
 
 ## Sintaxis
 

@@ -9,7 +9,7 @@ La fonction **`acceptDanger()`** de l'API {{WebExtAPIRef("downloads")}} invite l
 
 Cette fonction ne peut pas être appelée à partir de scripts d'arrière-plan, uniquement dans les scripts qui s'exécutent dans une fenêtre visible (par exemple un navigateur ou une fenêtre d'action de page).
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ var prompting = browser.downloads.acceptDanger(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Lorsque la boîte de dialogue se ferme, la promesse sera remplie sans arguments.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Lorsque la boîte de dialogue se ferme, la promesse sera remplie sans arguments.
 
 ## Compatibilité des navigateurs
 
@@ -37,8 +37,6 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Lorsq
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

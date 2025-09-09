@@ -3,7 +3,7 @@ title: 地址栏按钮
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 
-{{AddonSideBar}}通常来说的 page action，是添加到浏览器地址栏中的按钮。用户通过点击这个按钮与你的扩展进行交互。
+通常来说的 page action，是添加到浏览器地址栏中的按钮。用户通过点击这个按钮与你的扩展进行交互。
 
 ![](address_bar_button.png)
 
@@ -14,12 +14,10 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 其不同之处为：
 
 - 位置：
-
   - 地址栏按钮是显示在浏览器的地址栏内；
   - 工具栏按钮不是显示在地址栏内，而是在浏览器的工具栏上。
 
 - 可见性：
-
   - 地址栏按钮默认是隐藏的（尽管可以通过 manifest 中“show_matches 和 hide_matches 来改变），而你可以在特定 tabs 中调用 pageAction.show() 和 pageAction.hide() 来显示或隐藏它。
   - 工具栏按钮总是可见的。
 
@@ -73,7 +71,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 browser.pageAction.onClicked.addListener(handleClick);
 ```
 
-如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见[Popup](/zh-CN/Add-ons/WebExtensions/Popups)可获得创建和管理 popups 更详细内容。
+如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见[Popup](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Popups)可获得创建和管理 popups 更详细内容。
 
 注意你的扩展只能有一个地址栏按钮。
 

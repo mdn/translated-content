@@ -16,7 +16,7 @@ elementList = parentNode.querySelectorAll(selectors);
 ### Paramètres
 
 - `selectors`
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les [sélecteurs CSS](/fr/docs/Web/CSS/CSS_Selectors)&nbsp;; si ce n'est pas le cas, une exception `SyntaxError` est levée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)&nbsp;; si ce n'est pas le cas, une exception `SyntaxError` est levée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.
 
 > [!NOTE]
 > Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échappement des caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#échappement_des_caractères) pour plus d'informations.
@@ -37,26 +37,26 @@ Une [`NodeList`](/fr/docs/Web/API/NodeList) statique contenant un objet [`Elemen
 
 ### Obtenir d'une liste de correspondances
 
-Pour obtenir une [`NodeList`](/fr/docs/Web/API/NodeList) de tous les éléments [`<p>`](/fr/docs/Web/HTML/Element/p) contenus dans l'élément `myBox`&nbsp;:
+Pour obtenir une [`NodeList`](/fr/docs/Web/API/NodeList) de tous les éléments [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) contenus dans l'élément `myBox`&nbsp;:
 
 ```js
 let matches = myBox.querySelectorAll("p");
 ```
 
-Cet exemple renvoie une liste de tous les éléments [`<div>`](/fr/docs/Web/HTML/Element/div) dans `myBox` avec une classe `note` ou `alert`&nbsp;:
+Cet exemple renvoie une liste de tous les éléments [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) dans `myBox` avec une classe `note` ou `alert`&nbsp;:
 
 ```js
 let matches = myBox.querySelectorAll("div.note, div.alert");
 ```
 
-Ici, nous obtenons une liste d'éléments `<p>` du document, dont le parent immédiat est un [`<div>`](/fr/docs/Web/HTML/Element/div) qui a la classe `highlighted` et qui sont inclus dans un conteneur dont l'`id` est `test`&nbsp;:
+Ici, nous obtenons une liste d'éléments `<p>` du document, dont le parent immédiat est un [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) qui a la classe `highlighted` et qui sont inclus dans un conteneur dont l'`id` est `test`&nbsp;:
 
 ```js
 let container = document.querySelector("#test");
 let matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour renvoyer une liste d'éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) du document lesquels contiennent un attribut nommé `data-src`&nbsp;:
+Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour renvoyer une liste d'éléments [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) du document lesquels contiennent un attribut nommé `data-src`&nbsp;:
 
 ```js
 let matches = document.querySelectorAll("iframe[data-src]");
@@ -92,7 +92,7 @@ highlightedItems.forEach(function (userItem) {
 
 ### HTML
 
-Considérons ce code HTML, avec ses trois blocs [`<div>`](/fr/docs/Web/HTML/Element/div) imbriqués.
+Considérons ce code HTML, avec ses trois blocs [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) imbriqués.
 
 ```html
 <div class="outer">
@@ -130,9 +130,9 @@ inner.length; // 0
 
 ## Voir aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
-- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) dans la zone d'apprentissage de MDN
+- [Sélecteurs d'attribut](/fr/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) dans la zone d'apprentissage de MDN
 - [`Element.querySelector()`](/fr/docs/Web/API/Element/querySelector)
 - [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
 - [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)

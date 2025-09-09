@@ -5,11 +5,47 @@ l10n:
   sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
 
-{{CSSRef}}
-
 **`circle()`** CSS [함수](/ko/docs/Web/CSS/CSS_Functions) 는 둥글기와 위치를 이용하여 원 도형을 정의합니다. {{cssxref("&lt;basic-shape&gt;")}} 데이터 타입 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/css/function-circle.html")}}
+{{InteractiveExample("CSS Demo: circle()")}}
+
+```css interactive-example-choice
+clip-path: circle(50px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at right center);
+```
+
+```css interactive-example-choice
+clip-path: circle(10% at 2rem 90%);
+```
+
+```css interactive-example-choice
+clip-path: circle(closest-side at 5rem 6rem);
+```
+
+```css interactive-example-choice
+clip-path: circle(farthest-side);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 구문
 
@@ -21,9 +57,7 @@ clip-path: circle(6rem at 12rem 8rem);
 ### 값
 
 - `<shape-radius>`
-
   - : {{cssxref("length")}} 나 {{cssxref("percentage")}} 혹은 `closest-side` 와 `farthest-side` 값도 가능합니다.
-
     - `closest-side`
       - : 도형의 중심에서 기준 박스의 가장 가까운 면까지의 길이를 사용합니다. 원 도형의 경우에는, 모든 차원에서 가장 가까운 면을 사용합니다.
     - `farthest-side`

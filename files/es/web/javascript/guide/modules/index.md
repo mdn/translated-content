@@ -21,7 +21,7 @@ La buena noticia es que los navegadores modernos han comenzado a admitir la func
 
 ## Introducción — un ejemplo
 
-Para demostrar el uso de módulos, hemos creado un [sencillo conjunto de ejemplos](https://github.com/mdn/js-examples/tree/master/module-examples) que puedes encontrar en GitHub. Estos ejemplos demuestran un sencillo conjunto de módulos que crean un elemento [`<canvas>`](/es/docs/Web/HTML/Element/canvas) en una página web, y luego dibujan (y reportan información sobre) diferentes formas en el lienzo.
+Para demostrar el uso de módulos, hemos creado un [sencillo conjunto de ejemplos](https://github.com/mdn/js-examples/tree/master/module-examples) que puedes encontrar en GitHub. Estos ejemplos demuestran un sencillo conjunto de módulos que crean un elemento [`<canvas>`](/es/docs/Web/HTML/Reference/Elements/canvas) en una página web, y luego dibujan (y reportan información sobre) diferentes formas en el lienzo.
 
 Estos son bastante triviales, pero se han mantenido deliberadamente simples para demostrar los módulos con claridad.
 
@@ -46,12 +46,10 @@ modules/
 Los dos módulos del directorio `modules` se describen a continuación:
 
 - `canvas.js` — contiene funciones relacionadas con la configuración del lienzo (`canvas`):
-
-  - `create()` — crea un lienzo (`canvas`) con un `width` y `height` especificados dentro de un contenedor [`<div>`](/es/docs/Web/HTML/Element/div) con un ID especificado, que a su vez se añade dentro de un elemento padre especificado. Devuelve un objeto que contiene el contexto 2D del lienzo y el ID del contenedor.
+  - `create()` — crea un lienzo (`canvas`) con un `width` y `height` especificados dentro de un contenedor [`<div>`](/es/docs/Web/HTML/Reference/Elements/div) con un ID especificado, que a su vez se añade dentro de un elemento padre especificado. Devuelve un objeto que contiene el contexto 2D del lienzo y el ID del contenedor.
   - `createReportList()` — crea una lista desordenada adjunta dentro de un elemento contenedor específico, que se puede usar para generar datos de informes. Devuelve el ID de la lista.
 
 - `square.js` — contiene:
-
   - `name` — una constante que contiene la cadena 'square'.
   - `draw()` — dibuja una figura cuadrada en un lienzo específico, con un tamaño, posición y color específicos. Devuelve un objeto que contiene el tamaño, la posición y el color del cuadrado.
   - `reportArea()` — escribe el área de un cuadrado en una lista de informes específica, dada su longitud.
@@ -66,7 +64,7 @@ A través de este artículo, usaremos extensiones `.js` para nuestros archivos d
 
 Sin embargo, decidimos seguir usando `.js`, al menos por el momento. Para que los módulos funcionen correctamente en un navegador, debes asegurarte de que tu servidor los esté sirviendo con un encabezado `Content-Type` que contenga un tipo MIME de JavaScript como `text/javascript`. Si no lo haces, obtendrás un estricto error de verificación de tipo MIME como "El servidor respondió con un tipo MIME que no es JavaScript" y el navegador no ejecutará tu JavaScript. La mayoría de los servidores ya configuran el tipo correcto para archivos `.js`, pero todavía no para archivos `.mjs`. Los servidores que ya sirven archivos `.mjs` incluyen [GitHub Pages](https://pages.github.com/) y [`http-server`](https://github.com/http-party/http-server#readme) para Node.js.
 
-Esto está bien si ya estás utilizando un entorno de este tipo, o si no, pero sabes lo que estás haciendo y tiene acceso (es decir, puedes configurar tu servidor para establecer el [`Content-Type`](/es/docs/Web/HTTP/Headers/Content-Type) para archivos `.mjs`). Sin embargo, podría causar confusión si no controlas el servidor desde el que estás sirviendo archivos, o si estás publicando archivos para uso público, como lo hacemos aquí.
+Esto está bien si ya estás utilizando un entorno de este tipo, o si no, pero sabes lo que estás haciendo y tiene acceso (es decir, puedes configurar tu servidor para establecer el [`Content-Type`](/es/docs/Web/HTTP/Reference/Headers/Content-Type) para archivos `.mjs`). Sin embargo, podría causar confusión si no controlas el servidor desde el que estás sirviendo archivos, o si estás publicando archivos para uso público, como lo hacemos aquí.
 
 Por motivos de aprendizaje y portabilidad, decidimos mantenernos en `.js`.
 
@@ -154,7 +152,7 @@ reportPerimeter(square1.length, reportList);
 
 Ahora solo necesitamos aplicar el módulo `main.js` a nuestra página HTML. Esto es muy similar a cómo aplicamos un script normal a una página, con algunas diferencias notables.
 
-En primer lugar, debes incluir `type="module"` en el elemento [`<script>`](/es/docs/Web/HTML/Element/script), para declarar este script como un módulo. Para importar el script `main.js`, usamos esto:
+En primer lugar, debes incluir `type="module"` en el elemento [`<script>`](/es/docs/Web/HTML/Reference/Elements/script), para declarar este script como un módulo. Para importar el script `main.js`, usamos esto:
 
 ```html
 <script type="module" src="main.js"></script>
@@ -174,7 +172,7 @@ Solo puede usar instrucciones `import` y `export` dentro de los módulos, no en 
 
 - Debes prestar atención a las pruebas locales — si intentas cargar el archivo HTML localmente (es decir, con una URL `file:///`), te encontrarás con errores de CORS debido a los requisitos de seguridad del módulo JavaScript. Necesitas hacer tus pruebas a través de un servidor.
 - Además, ten en cuenta que puedes obtener un comportamiento diferente de las secciones del script definidas dentro de los módulos en comparación con los scripts estándar. Esto se debe a que los módulos automáticamente usan {{jsxref("Strict_mode", "strict mode", "", 1)}}.
-- No es necesario utilizar el atributo `defer` (ve [atributos de `<script>`](/es/docs/Web/HTML/Element/script#Attributes)) al cargar un script de módulo; los módulos se difieren automáticamente.
+- No es necesario utilizar el atributo `defer` (ve [atributos de `<script>`](/es/docs/Web/HTML/Reference/Elements/script#Attributes)) al cargar un script de módulo; los módulos se difieren automáticamente.
 - Los módulos solo se ejecutan una vez, incluso si se les ha hecho referencia en varias etiquetas `<script>`.
 - Por último, pero no menos importante, dejemos esto en claro — las características del módulo se importan al alcance de un solo script — no están disponibles en el alcance global. Por lo tanto, solo podrás acceder a las funciones importadas en el script en el que se importan y no podrás acceder a ellas desde la consola de JavaScript, por ejemplo. Seguirás recibiendo errores de sintaxis en DevTools, pero no podrás utilizar algunas de las técnicas de depuración que esperabas utilizar.
 
@@ -213,7 +211,7 @@ import { default as randomSquare } from "./modules/square.js";
 ```
 
 > [!NOTE]
-> La sintaxis as para cambiar el nombre de los elementos exportados se explica a continuación en la sección [Renombrar importaciones y exportaciones](#Renombrar_impotaciones_y_exportaciones).
+> La sintaxis as para cambiar el nombre de los elementos exportados se explica a continuación en la sección [Renombrar importaciones y exportaciones](#renombrar_impotaciones_y_exportaciones).
 
 ## Evitar conflictos de nombres
 
@@ -454,7 +452,7 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 La parte más nueva de la funcionalidad de los módulos de JavaScript que estará disponible en los navegadores es la carga dinámica de módulos. Esto te permite cargar módulos dinámicamente solo cuando son necesarios, en lugar de tener que cargar todo por adelantado. Esto tiene algunas obvias ventajas de rendimiento; sigue leyendo y veamos cómo funciona.
 
-Esta nueva funcionalidad te permite llamar a {{jsxref("Statements/import", "import()", "#Importaciones_Dinámicas")}} como una función, pasándole la ruta al módulo como parámetro. Devuelve una {{jsxref("Promise")}}, que se cumple con un objeto `module` (consulta [Crear un objeto `module`](#Crear_un_objeto_module)) que te da acceso a las exportaciones de ese objeto, p. ej.
+Esta nueva funcionalidad te permite llamar a {{jsxref("Statements/import", "import()", "#Importaciones_Dinámicas")}} como una función, pasándole la ruta al módulo como parámetro. Devuelve una {{jsxref("Promise")}}, que se cumple con un objeto `module` (consulta [Crear un objeto `module`](#crear_un_objeto_module)) que te da acceso a las exportaciones de ese objeto, p. ej.
 
 ```js
 import("./modules/myModule.js").then((module) => {
@@ -507,6 +505,6 @@ Aquí hay algunos consejos que te pueden ayudar si tienes problemas para hacer q
 - [Uso de módulos JavaScript en la web](https://developers.google.com/web/fundamentals/primers/modules#mjs), por Addy Osmani y Mathias Bynens
 - [Módulos ES: un análisis profundo de dibujos animados](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), publicación en el blog Hacks de Lin Clark
 - [ES6 en profundidad: Módulos](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), publicación en el blog Hacks de Jason Orendorff
-- Libro de Axel Rauschmayer [Explorando JS: Módulos](http://exploringjs.com/es6/ch_modules.html)
+- Libro de Axel Rauschmayer [Explorando JS: Módulos](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

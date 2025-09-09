@@ -1,17 +1,31 @@
 ---
 title: Object.prototype.isPrototypeOf()
+short-title: isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`isPrototypeOf()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトが別のオブジェクトのプロトタイプチェーンに存在するかどうかを判定します。
 
-> **メモ:** `isPrototypeOf()` は、 [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子とは異なります。 `object instanceof AFunction` という式では、`object` のプロトタイプチェーンは `AFunction` 自身ではなく、`AFunction.prototype` に対して判定されます。
+> [!NOTE]
+> `isPrototypeOf()` は、 [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子とは異なります。 `object instanceof AFunction` という式では、`object` のプロトタイプチェーンは `AFunction` 自身ではなく、`AFunction.prototype` に対して判定されます。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
+{{InteractiveExample("JavaScript デモ: Object.prototype.isPrototypeOf()")}}
+
+```js interactive-example
+function Foo() {}
+function Bar() {}
+
+Bar.prototype = Object.create(Foo.prototype);
+
+const bar = new Bar();
+
+console.log(Foo.prototype.isPrototypeOf(bar));
+// 予想される結果: true
+console.log(Bar.prototype.isPrototypeOf(bar));
+// 予想される結果: true
+```
 
 ## 構文
 
@@ -76,7 +90,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-しかし、 `Foo.prototype` が `baz` のプロトタイプチェーンに存在したからといって、 `baz` が `Foo` をコンストラクターとして使用して作成されたとは限りません。例えば、 `baz` が `Foo.prototype` をプロトタイプとして直接割り当てることもできます。この場合、コードが `baz` から `Foo` の[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を読み込んでも、失敗します。
+しかし、 `Foo.prototype` が `baz` のプロトタイプチェーンに存在したからといって、 `baz` が `Foo` をコンストラクターとして使用して作成されたとは限りません。例えば、 `baz` が `Foo.prototype` をプロトタイプとして直接割り当てることもできます。この場合、コードが `baz` から `Foo` の[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を読み込んでも、失敗します。
 
 ```js
 class Foo {
@@ -127,4 +141,4 @@ if (Foo.isFoo(baz)) {
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -3,8 +3,6 @@ title: バッジ付きリストグループ
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
 ---
 
-{{CSSRef}}
-
 このレシピでは、カウントを示すバッジ付きのリストグループのパターンを作成します。
 
 ![テキストの右側に表示されるカウントを示すバッジ付きの項目のリスト。](list-group-badges.png)
@@ -43,5 +41,5 @@ slug: Web/CSS/Layout_cookbook/List_group_with_badges
 
 ## 関連情報
 
-- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)

@@ -1,9 +1,9 @@
 ---
-title: ":-moz-broken"
+title: :-moz-broken
 slug: Web/CSS/:-moz-broken
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

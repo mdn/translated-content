@@ -8,9 +8,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 **`Intl.ListFormat()`** コンストラクターは、言語を考慮したリストの書式化を可能にする
 {{jsxref("Intl/ListFormat", "Intl.ListFormat")}} オブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.ListFormat", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 ## 構文
 
@@ -25,9 +45,7 @@ new Intl.ListFormat(locales, options);
 - `locales` {{optional_inline}}
   - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
-
   - : 以下のプロパティの一部またはすべてを持つオブジェクトです。
-
     - `localeMatcher`
       - : 使用するロケール照合アルゴリズム。取りうる値は以下の通りです。
         - "`best fit`" （既定値）

@@ -14,7 +14,7 @@ slug: Glossary/Method
 
 ### Узнайте об этом
 
-- [Определение методов в JavaScript](/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов) (сравнение традиционного синтаксиса и нового короткого)
+- [Определение методов в JavaScript](/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions) (сравнение традиционного синтаксиса и нового короткого)
 
 ### Техническая информация
 
@@ -23,10 +23,9 @@ slug: Glossary/Method
 <!---->
 
 - [Глоссарий MDN](/ru/docs/Glossary)
-
   - {{Glossary("function","Функция")}}
   - {{Glossary("object","Объект")}}
   - {{Glossary("property","Свойство")}}
   - {{Glossary("static method","Статический метод")}}
 
-- [Определение методов в JavaScript](/ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов)
+- [Определение методов в JavaScript](/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions)

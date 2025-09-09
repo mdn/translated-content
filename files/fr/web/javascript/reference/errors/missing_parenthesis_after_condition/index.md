@@ -18,7 +18,7 @@ SyntaxError: missing ) after condition (Firefox)
 
 ## Quel est le problème ?
 
-Il y a une erreur pour la condition écrite dans l'instruction [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else). Pour chaque langage de programmation, on utilise des instructions pour choisir quel bloc d'instructions exécuter selon les différentes entrées. L'instruction `if` permet d'exécuter une instruction si une condition donnée est vérifiée. En JavaScript, il faut que cette condition apparaisse entre parenthèses après le mot-clé `if` :
+Il y a une erreur pour la condition écrite dans l'instruction [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else). Pour chaque langage de programmation, on utilise des instructions pour choisir quel bloc d'instructions exécuter selon les différentes entrées. L'instruction `if` permet d'exécuter une instruction si une condition donnée est vérifiée. En JavaScript, il faut que cette condition apparaisse entre parenthèses après le mot-clé `if` :
 
 ```js
 if (condition) {
@@ -56,7 +56,7 @@ if (done is true) {
 // SyntaxError: missing ) after condition
 ```
 
-Pour corriger cette erreur, on utilisera [un opérateur de comparaison](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison) correct :
+Pour corriger cette erreur, on utilisera [un opérateur de comparaison](/fr/docs/Web/JavaScript/Reference/Operators) correct :
 
 ```js example-good
 if (done === true) {
@@ -66,6 +66,6 @@ if (done === true) {
 
 ## Voir aussi
 
-- [`if...else`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else)
-- [Les opérateurs de comparaisons](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison)
-- [Choisir quel code exécuter : les structures conditionnelles](/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Les opérateurs de comparaisons](/fr/docs/Web/JavaScript/Reference/Operators)
+- [Choisir quel code exécuter : les structures conditionnelles](/fr/docs/Learn_web_development/Core/Scripting/Conditionals)

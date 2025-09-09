@@ -35,7 +35,7 @@ _特定のプロパティを実装していませんが、親である {{domxref
 _親である {{domxref("Event")}} からメソッドを継承しています。_
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : イベントの存続期間を延長します。 これは、インストール中 ({{domxref("ServiceWorkerRegistration.installing", "installing")}}) のワーカーの [`install`](/ja/docs/Web/API/ServiceWorkerGlobalScope/install) [イベントハンドラー](/ja/docs/Web/Events/Event_handlers) と、アクティブ ({{domxref("ServiceWorkerRegistration.active", "active")}}) ワーカーの [`activate`](/ja/docs/Web/API/ServiceWorkerGlobalScope/activate) [イベントハンドラー](/ja/docs/Web/Events/Event_handlers) で呼び出すためのものです。
+  - : イベントの存続期間を延長します。 これは、インストール中 ({{domxref("ServiceWorkerRegistration.installing", "installing")}}) のワーカーの [`install`](/ja/docs/Web/API/ServiceWorkerGlobalScope/install_event) [イベントハンドラー](/ja/docs/Web/API/Document_Object_Model/Events) と、アクティブ ({{domxref("ServiceWorkerRegistration.active", "active")}}) ワーカーの [`activate`](/ja/docs/Web/API/ServiceWorkerGlobalScope/activate_event) [イベントハンドラー](/ja/docs/Web/API/Document_Object_Model/Events) で呼び出すためのものです。
 
 ## 例
 

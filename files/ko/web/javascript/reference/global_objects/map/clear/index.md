@@ -9,7 +9,22 @@ l10n:
 
 {{jsxref("Map")}}의 **`clear()`** 메서드는 해당 Map의 모든 요소를 제거합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("bar", "baz");
+map1.set(1, "foo");
+
+console.log(map1.size);
+// Expected output: 2
+
+map1.clear();
+
+console.log(map1.size);
+// Expected output: 0
+```
 
 ## 구문
 

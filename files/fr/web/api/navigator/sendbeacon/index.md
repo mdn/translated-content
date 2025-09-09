@@ -50,7 +50,7 @@ function enregistrerDonnees() {
 }
 ```
 
-C'est là qu'entre en jeu **`sendBeacon()`**. En utilisant la méthode `sendBeacon()`, les données sont transmises de façon asynchrone au serveur web lorsque l'Agent Utilisateur a l'opportunité de le faire, sans retarder le déchargement ou affecter la performance de la navigation suivante. Cela résoud tous les problèmes avec la soumission de données analytiques : les données sont envoyées de façon fiable, asynchrone, et cela n'impacte pas le chargement de la page suivante. De plus, ce code est en fait plus simple à écrire que n'importe quelle de ces autres techniques!
+C'est là qu'entre en jeu **`sendBeacon()`**. En utilisant la méthode `sendBeacon()`, les données sont transmises de façon asynchrone au serveur web lorsque l'Agent Utilisateur a l'opportunité de le faire, sans retarder le déchargement ou affecter la performance de la navigation suivante. Cela résout tous les problèmes avec la soumission de données analytiques : les données sont envoyées de façon fiable, asynchrone, et cela n'impacte pas le chargement de la page suivante. De plus, ce code est en fait plus simple à écrire que n'importe quelle de ces autres techniques!
 
 L'exemple suivant montre un patron de code analytique théorique qui soumet des données à un serveur en utilisant la méthode `sendBeacon()`.
 

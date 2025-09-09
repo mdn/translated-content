@@ -12,7 +12,7 @@ l10n:
 
 この要素のすべての子孫が検索されますが、要素そのものは検索されません。返されるリストは*生きており*、 DOM ツリーとともに自動的に更新されます。したがって、同じ要素と引数で `Element.getElementsByTagName()` を繰り返し呼び出す必要はなく、呼び出しの間に DOM が変化しても大丈夫です。
 
-HTML 文書内の HTML 要素に対して呼び出された場合、 `getElementsByTagName` は引数を小文字に変換してから検索を行います。これは、HTML 文書内のキャメルケースの SVG 要素（例えば [`<linearGradient>`](/ja/docs/Web/SVG/Element/linearGradient)）と照合しようとする場合には望ましくありません。代わりに、 {{ domxref("Element.getElementsByTagNameNS()") }} を使ってください。この場合、タグ名の大文字と小文字は区別されます。
+HTML 文書内の HTML 要素に対して呼び出された場合、 `getElementsByTagName` は引数を小文字に変換してから検索を行います。これは、HTML 文書内のキャメルケースの SVG 要素（例えば [`<linearGradient>`](/ja/docs/Web/SVG/Reference/Element/linearGradient)）と照合しようとする場合には望ましくありません。代わりに、 {{ domxref("Element.getElementsByTagNameNS()") }} を使ってください。この場合、タグ名の大文字と小文字は区別されます。
 
 `Element.getElementsByTagName` は {{domxref("Document.getElementsByTagName()")}} に似ていますが、指定した要素の子孫の要素のみを検索する点が異なります。
 

@@ -1,11 +1,9 @@
 ---
-title: ":in-range"
+title: :in-range
 slug: Web/CSS/:in-range
 ---
 
-{{CSSRef}}
-
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:in-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max).
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:in-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos [`min`](/es/docs/Web/HTML/Reference/Elements/input#min) y [`max`](/es/docs/Web/HTML/Reference/Elements/input#max).
 
 ```css
 /* Selecciona cualquier <input>, pero solo cuando tiene un rango
@@ -92,4 +90,4 @@ input:out-of-range + label::after {
 ## Ver también
 
 - {{cssxref(":out-of-range")}}
-- [Validación de datos de formulario](/es/docs/Learn/HTML/Forms/Form_validation)
+- [Validación de datos de formulario](/es/docs/Learn_web_development/Extensions/Forms/Form_validation)

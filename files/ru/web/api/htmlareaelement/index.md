@@ -14,9 +14,9 @@ _Наследует свойства от его родителя, {{domxref("HT
 - {{domxref("HTMLAreaElement.accessKey")}}
   - : Это {{domxref("DOMString")}} содержащий единственный символ, который переключает фокус ввода для управления.
 - {{domxref("HTMLAreaElement.alt")}}
-  - : Это {{domxref("DOMString")}} которое отображает [`alt`](/ru/docs/Web/HTML/Element/area#alt) HTML атрибут, содержащий альтернативный текст для элемента.
+  - : Это {{domxref("DOMString")}} которое отображает [`alt`](/ru/docs/Web/HTML/Reference/Elements/area#alt) HTML атрибут, содержащий альтернативный текст для элемента.
 - {{domxref("HTMLAreaElement.coords")}}
-  - : Это {{domxref("DOMString")}} который отображает [`coords`](/ru/docs/Web/HTML/Element/area#coords) HTML атрибут, содержащий координаты активного участка региона.
+  - : Это {{domxref("DOMString")}} который отображает [`coords`](/ru/docs/Web/HTML/Reference/Elements/area#coords) HTML атрибут, содержащий координаты активного участка региона.
 - {{domxref("HTMLAreaElement.download")}} {{experimental_inline}}
   - : Это {{domxref("DOMString")}} показывает что связанный ресурс предназначен для загрузки, а не для отображения в браузере. Значение представляет собой предполагаемое имя файла. Если имя не является допустимым именем файла в данной ОС, браузер будет адаптировать его.
 - {{domxref("URLUtils.hash")}}
@@ -26,11 +26,11 @@ _Наследует свойства от его родителя, {{domxref("HT
 - {{domxref("URLUtils.hostname")}}
   - : Это {{domxref("DOMString")}} содержащий имя хоста в указанном URL.
 - {{domxref("URLUtils.href")}}
-  - : Это {{domxref("DOMString")}} содержание которого отображает [`href`](/ru/docs/Web/HTML/Element/area#href) HTML атрибут, содержащий действительный URL связанного с ним ресурса.
+  - : Это {{domxref("DOMString")}} содержание которого отображает [`href`](/ru/docs/Web/HTML/Reference/Elements/area#href) HTML атрибут, содержащий действительный URL связанного с ним ресурса.
 - {{domxref("HTMLAreaElement.hreflang")}}
-  - : Это {{domxref("DOMString")}} содержание которого отображает [`hreflang`](/ru/docs/Web/HTML/Element/area#hreflang) HTML атрибут, показывающий язык связанного с ним ресурса.
+  - : Это {{domxref("DOMString")}} содержание которого отображает [`hreflang`](/ru/docs/Web/HTML/Reference/Elements/area#hreflang) HTML атрибут, показывающий язык связанного с ним ресурса.
 - {{domxref("HTMLAreaElement.media")}}
-  - : Это {{domxref("DOMString")}} содержание которого отображает [`media`](/ru/docs/Web/HTML/Element/area#media) HTML атрибут, показывающий целевое media, связанного с ним ресурса.
+  - : Это {{domxref("DOMString")}} содержание которого отображает [`media`](/ru/docs/Web/HTML/Reference/Elements/area#media) HTML атрибут, показывающий целевое media, связанного с ним ресурса.
 - {{domxref("HTMLAreaElement.noHref")}}
   - : Это {{domxref("Boolean")}} флаг показывающий, если зона неактивна (`true`) или активна (`false`).
 - {{domxref("URLUtils.password")}}
@@ -44,21 +44,21 @@ _Наследует свойства от его родителя, {{domxref("HT
 - {{domxref("URLUtils.protocol")}}
   - : Это {{domxref("DOMString")}} содержащий компоненту протокола (в том числе двоеточия `':'`), в указанном URL.
 - {{domxref("HTMLAreaElement.referrer")}} {{experimental_inline}}
-  - : Это {{domxref("DOMString")}} который отображает [`referrer`](/ru/docs/Web/HTML/Element/area#referrer) HTML атрибут, показывающий какой referrer используется когда извлекается связанны с ним ресурс.
+  - : Это {{domxref("DOMString")}} который отображает [`referrer`](/ru/docs/Web/HTML/Reference/Elements/area#referrer) HTML атрибут, показывающий какой referrer используется когда извлекается связанны с ним ресурс.
 - {{domxref("HTMLAreaElement.rel")}}
-  - : Это {{domxref("DOMString")}} который отображает [`rel`](/ru/docs/Web/HTML/Element/area#rel) HTML атрибут,показывая отношения текущего документа со связанным с ним ресурсом.
+  - : Это {{domxref("DOMString")}} который отображает [`rel`](/ru/docs/Web/HTML/Reference/Elements/area#rel) HTML атрибут,показывая отношения текущего документа со связанным с ним ресурсом.
 - {{domxref("HTMLAreaElement.relList")}} {{readOnlyInline}}
-  - : Возвращает {{domxref("DOMTokenList")}} который отображает [`rel`](/ru/docs/Web/HTML/Element/area#rel) HTML атрибут, показывая отношения текущего документа к связанному с ним ресурса, как список токенов.
+  - : Возвращает {{domxref("DOMTokenList")}} который отображает [`rel`](/ru/docs/Web/HTML/Reference/Elements/area#rel) HTML атрибут, показывая отношения текущего документа к связанному с ним ресурса, как список токенов.
 - {{domxref("HTMLAreaElement.search")}}
   - : Это {{domxref("DOMString")}} содержащий найденный элемент (включая начальный знак вопроса`'?'`), если таковой имеется, в указанном URL.
 - {{domxref("HTMLAreaElement.shape")}}
-  - : Это {{domxref("DOMString")}} который отображается [`shape`](/ru/docs/Web/HTML/Element/area#shape) HTML атрибут, включающий вид активного участка, ограниченный известными значениями.
+  - : Это {{domxref("DOMString")}} который отображается [`shape`](/ru/docs/Web/HTML/Reference/Elements/area#shape) HTML атрибут, включающий вид активного участка, ограниченный известными значениями.
 - {{domxref("HTMLAreaElement.tabIndex")}}
   - : Как `long` содержащий положение элемента в порядке табуляции.
 - {{domxref("HTMLAreaElement.target")}}
-  - : Это {{domxref("DOMString")}} которое отображает [`target`](/ru/docs/Web/HTML/Element/area#target) HTML атрибут, включая контекст просмотра, в котором открыт связанный с ним ресурс.
+  - : Это {{domxref("DOMString")}} которое отображает [`target`](/ru/docs/Web/HTML/Reference/Elements/area#target) HTML атрибут, включая контекст просмотра, в котором открыт связанный с ним ресурс.
 - {{domxref("HTMLAreaElement.type")}}
-  - : Это {{domxref("DOMString")}} которое отображает [`type`](/ru/docs/Web/HTML/Element/area#type) HTML атрибут, показывающий MIME тип связанного с ним ресурса.
+  - : Это {{domxref("DOMString")}} которое отображает [`type`](/ru/docs/Web/HTML/Reference/Elements/area#type) HTML атрибут, показывающий MIME тип связанного с ним ресурса.
 - {{domxref("URLUtils.username")}}
   - : Это {{domxref("DOMString")}} содержащий имя пользователя. определённое перед доменным именем.
 

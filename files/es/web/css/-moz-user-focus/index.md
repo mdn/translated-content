@@ -1,9 +1,9 @@
 ---
-title: "-moz-user-focus"
+title: -moz-user-focus
 slug: Web/CSS/-moz-user-focus
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 
@@ -51,7 +51,7 @@ Al poner el valor de esta propiedad a `ignore`, deshabilitas el hecho de que el 
 
 ## Especificaciones
 
-Esta propiedad no es parte de ninguna especificación. Una propiedad similar `user-focus` fue propuesta en [borradores previos de la especificación CSS 3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216) pero finalmente fué rechazada por el grupo de trabajo.
+Esta propiedad no es parte de ninguna especificación. Una propiedad similar `user-focus` fue propuesta en [borradores previos de la especificación CSS 3 UI](https://www.w3.org/TR/2000/WD-css3-userint-20000216) pero finalmente fué rechazada por el grupo de trabajo.
 
 ## Compatibilidad con navegadores
 

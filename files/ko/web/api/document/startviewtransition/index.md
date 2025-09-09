@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("View Transitions API", "View Transitions API", "", "nocode")}}의 **`startViewTransition()`** 메서드는 새로운 뷰 전환을 시작하고 이를 나타내는 {{domxref("ViewTransition")}} 객체를 반환합니다.
 
-`startViewTransition()`이 호출되면 [뷰 전환 과정](/ko/docs/Web/API/View_Transitions_API#뷰_전환_프로세스)에 설명된 대로 일련의 단계를 따릅니다.
+`startViewTransition()`이 호출되면 [뷰 전환 과정](/ko/docs/Web/API/View_Transition_API#뷰_전환_프로세스)에 설명된 대로 일련의 단계를 따릅니다.
 
 ## 구문
 
@@ -31,7 +31,7 @@ startViewTransition(callback)
 
 ### 기본 사용법
 
-[기본 뷰 전환 데모](https://mdn.github.io/dom-examples/view-transitions/)에서 `updateView()` 함수는 View Transitions API를 지원하는 브라우저와 지원하지 않는 브라우저 모두 처리합니다. 지원 브라우저에서는 반환 값에 대한 걱정없이 `startViewTransition()`을 호출하여 뷰 전환 과정을 설정합니다.
+[기본 뷰 전환 SPA 데모](https://mdn.github.io/dom-examples/view-transitions/spa/)에서 `updateView()` 함수는 View Transitions API를 지원하는 브라우저와 지원하지 않는 브라우저 모두 처리합니다. 지원 브라우저에서는 반환 값에 대한 걱정없이 `startViewTransition()`을 호출하여 뷰 전환 과정을 설정합니다.
 
 ```js
 function updateView(event) {

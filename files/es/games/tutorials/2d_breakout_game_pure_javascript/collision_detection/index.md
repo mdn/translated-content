@@ -3,11 +3,9 @@ title: Detección de colisiones
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win")}}
 
-Este es el **séptimo** paso de los 10 del juego ["Gamedev Canvas tutorial"](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código como deberá quedar después de completar la leción en [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
+Este es el **séptimo** paso de los 10 del juego ["Gamedev Canvas tutorial"](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código como deberá quedar después de completar la leción en [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
 
 Ya tenemos los ladrillos en la pantalla pero el juego todavía no es muy interesante, porque la bola los atraviesa. Tenemos que pensar una manera de detectar colisiones para que la bola pueda rebotar en los ladrillos y romperlos.
 
@@ -132,6 +130,6 @@ Ahora se comprueban las colisiones cada vez que se dibuja un fotograma. Concreta
 
 ## Pasos siguientes
 
-Definitivamente, lo estamos consiguiendo. ¡Adelanteeee! En el capítulo octavo nos ocuparemos de la [Puntuación y fin del juego ganando](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win).
+Definitivamente, lo estamos consiguiendo. ¡Adelanteeee! En el capítulo octavo nos ocuparemos de la [Puntuación y fin del juego ganando](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win")}}

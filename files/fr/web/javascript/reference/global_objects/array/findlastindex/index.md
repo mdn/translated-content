@@ -9,7 +9,17 @@ l10n:
 
 La méthode **`findLastIndex()`** parcourt le tableau en sens inverse et renvoie l'indice du premier élément qui correspond au critère fourni par une fonction de test. Si aucun élément ne correspond à ce critère, c'est `-1` qui est renvoyé.
 
-{{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLastIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const isLargeNumber = (element) => element > 45;
+
+console.log(array1.findLastIndex(isLargeNumber));
+// Expected output: 3
+// Index of element with value: 130
+```
 
 Voir aussi la méthode [`findLast()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast) qui renvoie la valeur du dernier élément qui satisfait au critère de la fonction de test (plutôt que son indice).
 
@@ -35,11 +45,9 @@ findLastIndex(function(element, index, array) { /* … */ }, thisArg)
 ### Paramètres
 
 - `fnRappel`
-
   - : Une fonction utilisée pour tester les éléments du tableau.
 
     La fonction est appelée avec les arguments suivants&nbsp;:
-
     - `element`
       - : L'élément du tableau en cours de traitement.
     - `index`

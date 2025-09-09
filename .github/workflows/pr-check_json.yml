@@ -10,6 +10,8 @@ on:
       - "**/*.jsonc"
       - .github/workflows/pr-check_json.yml
 
+permissions: {}
+
 jobs:
   docs:
     # do not run on PRs in forks
@@ -17,7 +19,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v5
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4

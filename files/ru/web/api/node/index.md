@@ -28,7 +28,7 @@ _Наследует свойства от родителей {{domxref("EventTar
 - {{domxref("Node.localName")}}{{readonlyInline}}
   - : Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML-элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML. Хотя недавние спецификации требуют от `localName` быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.
 - {{domxref("Node.namespaceURI")}}{{readonlyInline}}
-  - : Пространство имён URI данного узла или `null,` если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML-элементы не имеют пространства имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) для деревьев HTML и XML.
+  - : Пространство имён URI данного узла или `null,` если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML-элементы не имеют пространства имён. В более поздних версиях, HTML-элементы находятся в пространстве имён [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) для деревьев HTML и XML.
     Хотя недавние спецификации требуют `namespaceURI` быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
   - : Возвращает {{domxref("Node")}} представляющий следующий узел в древе или `null,` если не такого узла.
@@ -37,7 +37,6 @@ _Наследует свойства от родителей {{domxref("EventTar
 - {{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}
   - : `nsIPrincipal` представляет основной узел.
 - {{domxref("Node.nodeType")}}{{readonlyInline}}
-
   - : Возвращает беззнаковое короткое число `(unsigned short`) представляющее тип узла. Возможные значения:
 
     | Имя                                             | Значение |
@@ -137,14 +136,14 @@ DOMComb(parentNode, callbackFunction);
 
 #### Описание
 
-Рекурсивный цикл всех дочерних узлов `parentNode` и самого `parentNode`, выполняет `callbackFunction` относительно их как [`эти`](/ru/docs/JavaScript/Reference/Operators/this) объекты.
+Рекурсивный цикл всех дочерних узлов `parentNode` и самого `parentNode`, выполняет `callbackFunction` относительно их как [`эти`](/ru/docs/Web/JavaScript/Reference/Operators/this) объекты.
 
 #### Параметры
 
 - `parentNode`
   - : Родительский узел (`Node Object`).
 - `callbackFunction`
-  - : Колбэк-функции ([`Function`](/ru/docs/JavaScript/Reference/Global_Objects/Function)).
+  - : Колбэк-функции ([`Function`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function)).
 
 #### Пример использования
 

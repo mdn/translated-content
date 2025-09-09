@@ -11,7 +11,7 @@ Eventos inicializados desta maneira precisam ter sido criados com o método {{ d
 
 > **Nota:** **Não use esse método mais, pois está depreciado.**
 >
-> Ao invés, use construtores de eventos específicos, como {{domxref("Event.Event", "Event()")}}. A página sobre [Criando e disparando eventos](/pt-BR/docs/Web/Guide/Events/Creating_and_triggering_events) detalha mais informações sobre o uso desses eventos.
+> Ao invés, use construtores de eventos específicos, como {{domxref("Event.Event", "Event()")}}. A página sobre [Criando e disparando eventos](/pt-BR/docs/Web/Events/Creating_and_triggering_events) detalha mais informações sobre o uso desses eventos.
 
 ## Syntax
 

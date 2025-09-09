@@ -22,13 +22,11 @@ target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-stand
 ### Paramètres
 
 - `type`
-  - : Une chaîne sensible à la casse représentant le [type d'évènement](/fr/docs/Web/Events) à écouter.
+  - : Une chaîne sensible à la casse représentant le [type d'évènement](/fr/docs/Web/API/Document_Object_Model/Events) à écouter.
 - `listener`
   - : L'objet qui recevra un évènement (c'est-à-dire un objet qui implémente l'interface {{domxref("Event")}}) lorsqu'un évènement du type spécifié se produit. Cet argument doit être un objet implémentant l'interface {{domxref("EventListener")}} ou une [fonction](/fr/docs/Web/JavaScript/Guide/Functions) JavaScript. Voir [Fonction de rappel (<i>callback</i>) pour le gestionnaire d'évènement](#fonction_de_rappel_pour_le_gestionnaire_dévènement) pour plus de détails sur le fonctionnement d'une fonction de rappel.
 - `options` {{optional_inline}}
-
   - : Un objet options spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
-
     - `capture`
       - : Un booléen ({{jsxref("Boolean")}}) indiquant que les évènements de ce type seront distribués au `listener` enregistré avant d'être distribués à tout `EventTarget` située en dessous dans l'arborescence DOM.
     - `once`
@@ -37,7 +35,7 @@ target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-stand
       - : Un booléen ({{jsxref("Boolean")}}) qui, si `true`, indique que la fonction spécifiée par `listener` n'appellera jamais {{domxref("Event.preventDefault", "preventDefault()")}}. Si un écouteur passif appelle `preventDefault()`, l'agent utilisateur ne fera rien d'autre que de générer un avertissement dans la console. Voir [Amélioration des performances de défilement avec les écouteurs passifs](#amélioration_des_performances_de_défilement_avec_les_écouteurs_passifs) pour en apprendre davantage.
 
 - `useCapture` {{optional_inline}}
-  - : Un booléen ({{jsxref("Boolean")}}) indiquant si les évènements de ce type seront distribués au `listener` enregistré avant d'être distribués à toute `EventTarget` (« cible d'évènement ») située en dessous dans l'arborescence DOM. Les évènements qui se propagent vers le haut dans l'arborescence ne déclencheront pas un écouteur indiqué comme utilisant la capture. La propagation et la capture d'évènements sont deux manières de propager des évènements qui se produisent dans un élément imbriqué dans un autre, lorsque les deux éléments ont enregistré un gestionnaire pour cet évènement. Le mode de propagation de l'évènement détermine l'ordre dans lequel les éléments reçoivent l'évènement. Voir les [DOM Level 3 Events](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) et [JavaScript Event order](http://www.quirksmode.org/js/events_order.html#link4) pour une explication détaillée. S'il n'est pas spécifié, `useCapture` aura `false` comme valeur par défaut.
+  - : Un booléen ({{jsxref("Boolean")}}) indiquant si les évènements de ce type seront distribués au `listener` enregistré avant d'être distribués à toute `EventTarget` (« cible d'évènement ») située en dessous dans l'arborescence DOM. Les évènements qui se propagent vers le haut dans l'arborescence ne déclencheront pas un écouteur indiqué comme utilisant la capture. La propagation et la capture d'évènements sont deux manières de propager des évènements qui se produisent dans un élément imbriqué dans un autre, lorsque les deux éléments ont enregistré un gestionnaire pour cet évènement. Le mode de propagation de l'évènement détermine l'ordre dans lequel les éléments reçoivent l'évènement. Voir les [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) et [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) pour une explication détaillée. S'il n'est pas spécifié, `useCapture` aura `false` comme valeur par défaut.
 
 > [!NOTE]
 > Pour les écouteurs attachés à la cible d'évènement, l'évènement se trouve dans la phase cible, plutôt que dans les phases de propagation et de capture. Les évènements dans la phase cible déclencheront tous les écouteurs d'un élément dans l'ordre où ils ont été enregistrés, indépendamment du paramètre `useCapture`.
@@ -563,7 +561,7 @@ myObject.register();
 
 ### Passer des données à et depuis un écouteur d'évènements
 
-On peut avoir l'impression que les écouteurs d'évènements sont comme des îles et qu'il est extrêmement difficile de leur passer des données quelconques, encore moins d'en récupérer après qu'ils ont été exécutés. Les écouteurs d'évènements ne prennent qu'un seul argument, l'objet [`event`](/fr/docs/Learn/JavaScript/Building_blocks/Events#event_objects), qui est passé automatiquement à l'écouteur, et la valeur retournée est ignorée. Aussi, comment pouvons-nous leur passer des données et en récupérer ? Il y a un certain nombre de bonnes méthodes pour ce faire.
+On peut avoir l'impression que les écouteurs d'évènements sont comme des îles et qu'il est extrêmement difficile de leur passer des données quelconques, encore moins d'en récupérer après qu'ils ont été exécutés. Les écouteurs d'évènements ne prennent qu'un seul argument, l'objet [`event`](/fr/docs/Learn_web_development/Core/Scripting/Events#event_objects), qui est passé automatiquement à l'écouteur, et la valeur retournée est ignorée. Aussi, comment pouvons-nous leur passer des données et en récupérer ? Il y a un certain nombre de bonnes méthodes pour ce faire.
 
 #### Passer des données à un écouteur d'évènement en utilisant "this"
 
@@ -757,7 +755,7 @@ Vous pouvez contourner le fait que `addEventListener()`, `removeEventListener()`
 
 ### Ancienne manière d'enregistrer les écouteurs d'évènements
 
-La méthode `addEventListener()` a été ajoutée dans la spécification DOM 2 [Events](http://www.w3.org/TR/DOM-Level-2-Events). Avant cela, les écouteurs d'évènements étaient enregistrés de la manière suivante :
+La méthode `addEventListener()` a été ajoutée dans la spécification DOM 2 [Events](https://www.w3.org/TR/DOM-Level-2-Events). Avant cela, les écouteurs d'évènements étaient enregistrés de la manière suivante :
 
 ```js
 // Passage d'une référence à une fonction
@@ -884,5 +882,5 @@ Vous n'avez pas besoin de vous inquiéter de la valeur de `passive` pour l'évè
 ## Voir aussi
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [Création et déclenchement d'évènements](/fr/docs/Web/Guide/Events/Creating_and_triggering_events)
-- [Plus de détails sur l'utilisation de `this` dans les gestionnaires d'évènements](http://www.quirksmode.org/js/this.html)
+- [Création et déclenchement d'évènements](/fr/docs/conflicting/Web/API/Document_Object_Model/Events)
+- [Plus de détails sur l'utilisation de `this` dans les gestionnaires d'évènements](https://www.quirksmode.org/js/this.html)
