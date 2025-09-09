@@ -25,8 +25,8 @@ createTreeWalker(root, whatToShow, filter)
 - `whatToShow` {{optional_inline}}
   - : Un `unsigned long` représentant un masque de bits créé par combinaison des propriétés de constante de [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter). C'est un moyen pratique de filtrer pour certains types de noeuds. Il est par défaut `0xFFFFFFFF`, représentant la constante `NodeFilter.SHOW_ALL`.
 
-    | Constante                                                | Valeur numérique | Description                                             |
-    | -------------------------------------------------------- | ---------------- | ------------------------------------------------------- |
+    | Constante                                                | Valeur numérique | Description                                              |
+    | -------------------------------------------------------- | ---------------- | -------------------------------------------------------- |
     | `NodeFilter.SHOW_ALL`                                    | ` 0xFFFFFFFF`    | Affiche tous les noeuds.                                 |
     | `NodeFilter.SHOW_ATTRIBUTE`                              | ` 0x2`           | Affiche les noeuds {{domxref("Attr")}}.                  |
     | `NodeFilter.SHOW_CDATA_SECTION`                          | ` 0x8`           | Affiche les noeuds {{domxref("CDATASection")}}.          |
