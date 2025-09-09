@@ -1,6 +1,8 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{ApiRef("Document")}}
@@ -9,48 +11,48 @@ La méthode de création **`Document.createTreeWalker()`** renvoie un nouvel obj
 
 ## Syntaxe
 
-```js
-treeWalker = document.createTreeWalker(root, whatToShow, filter);
+```js-nolint
+createTreeWalker(root)
+createTreeWalker(root, whatToShow)
+createTreeWalker(root, whatToShow, filter)
 ```
 
 ### Paramètres
 
-- _root_
-  - : est le {{domxref("Node")}} (_nœud_) racine du {{domxref("TreeWalker")}} à traverser. Généralement, ce sera un
-    élément appartenant au document.
-- _whatToShow {{optional_inline}}_
-  - : est un `unsigned long` (_long non signé_) facultatif représentant un masque de bits créé par combinaison des
-    propriétés de constante de
-    [`NodeFilter`](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen
-    pratique de filtrage pour certains types de nœuds. Par défaut `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
+- `root`
+  - : Un {{domxref("Node")}} (nœud) racine de l'objet `TreeWalker`, qui est la valeur initiale de {{domxref("TreeWalker.currentNode")}}.
 
-| Constante                                                | Valeur numérique | Description                                                                                                                                                                                                                                                                                                                                                                                                            |
-| -------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF`     | Affiche tous les nœuds.                                                                                                                                                                                                                                                                                                                                                                                                |
-| `NodeFilter.SHOW_ATTRIBUTE`                              | `0x2`            | Affiche les nœuds {{domxref("Attr")}}. N'a de sens que lors de la création d'un {{domxref("TreeWalker")}} avec un nœud {{domxref("Attr")}} comme racine ; dans ce cas, cela signifie que le nœud d'attribut apparaîtra dans la première position de l'itération ou de la traversée. Comme les attributs ne sont jamais des enfants d'autres nœuds, ils n'apparaissent pas lors de la traversée de l'arbre du document. |
-| `NodeFilter.SHOW_CDATA_SECTION`                          | `0x8`            | Affiche les nœuds {{domxref("CDATASection")}}.                                                                                                                                                                                                                                                                                                                                                                         |
-| `NodeFilter.SHOW_COMMENT`                                | `0x80`           | Affiche les nœuds {{domxref("Comment")}}.                                                                                                                                                                                                                                                                                                                                                                              |
-| `NodeFilter.SHOW_DOCUMENT`                               | `0x100`          | Affiche les nœuds {{domxref("Document")}}.                                                                                                                                                                                                                                                                                                                                                                             |
-| `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `0x400`          | Affiche les nœuds {{domxref("DocumentFragment")}}.                                                                                                                                                                                                                                                                                                                                                                     |
-| `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `0x200`          | Affiche les nœuds {{domxref("DocumentType")}}.                                                                                                                                                                                                                                                                                                                                                                         |
-| `NodeFilter.SHOW_ELEMENT`                                | `0x1`            | Affiche les nœuds {{domxref("Element")}}.                                                                                                                                                                                                                                                                                                                                                                              |
-| `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `0x20`           | Ancien, n'est plus effectif.                                                                                                                                                                                                                                                                                                                                                                                           |
-| `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `0x10`           | Ancien, n'est plus effectif.                                                                                                                                                                                                                                                                                                                                                                                           |
-| `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `0x800`          | Ancien, n'est plus effectif.                                                                                                                                                                                                                                                                                                                                                                                           |
-| `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `0x40`           | Affiche les nœuds {{domxref("ProcessingInstruction")}}.                                                                                                                                                                                                                                                                                                                                                                |
-| `NodeFilter.SHOW_TEXT`                                   | `0x4`            | Affiche les nœuds {{domxref("Text")}}.                                                                                                                                                                                                                                                                                                                                                                                 |
+- `whatToShow` {{optional_inline}}
+  - : Un `unsigned long` représentant un masque de bits créé par combinaison des propriétés de constante de [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter). C'est un moyen pratique de filtrer pour certains types de nœuds. Il est par défaut `0xFFFFFFFF`, représentant la constante `NodeFilter.SHOW_ALL`.
+
+    | Constante | Valeur numérique | Description |
+    | -------------------------------------------------------- | --------------- | ------------------------------------------------- |
+    | `NodeFilter.SHOW_ALL`                                    | ` 0xFFFFFFFF`    |Affiche tous les nœuds.|
+    | `NodeFilter.SHOW_ATTRIBUTE`                              | ` 0x2`           |Affiche les nœuds {{domxref("Attr")}}.|
+    | `NodeFilter.SHOW_CDATA_SECTION`                          | ` 0x8`           |Affiche les nœuds {{domxref("CDATASection")}}.|
+    | `NodeFilter.SHOW_COMMENT`                                | ` 0x80`          |Affiche les nœuds {{domxref("Comment")}}.|
+    | `NodeFilter.SHOW_DOCUMENT`                               | ` 0x100`         |Affiche les nœuds {{domxref("Document")}}.|
+    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | ` 0x400`         |Affiche les nœuds {{domxref("DocumentFragment")}}.|
+    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | ` 0x200`         |Affiche les nœuds {{domxref("DocumentType")}}.|
+    | `NodeFilter.SHOW_ELEMENT`                                | ` 0x1`           |Affiche les nœuds {{domxref("Element")}}.|
+    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `0x20`          |Héritage, qui n'est plus en vigueur.|
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | ` 0x10`          |Héritage, qui n'est plus en vigueur.|
+    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `0x800`         |Héritage, qui n'est plus en vigueur.|
+    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | ` 0x40`          |Affiche les nœuds {{domxref("ProcessingInstruction")}}.|
+    | `NodeFilter.SHOW_TEXT`                                   | ` 0x4`           |Affiche les nœuds {{domxref("Text")}}.|
+
+    > [!NOTE]
+    > Étant donné que le parent de tout nœud `Attr` est toujours `null`, {{DOMXref("TreeWalker.nextNode()")}} et {{DOMXref("TreeWalker.previousNode()")}} ne renverront jamais un nœud `Attr`. Pour parcourir les nœuds `Attr`, utilisez plutôt {{DOMXref("Element.attributes")}}.
 
 - `filter` {{optional_inline}}
-  - : est un {{domxref("NodeFilter")}} (_filtre de nœud_) facultatif, c'est-à-dire un objet avec une méthode
-    `acceptNode` appelé par {{domxref("TreeWalker")}} pour déterminer s'il doit accepter ou non un nœud qui a passé le
-    test `whatToShow`.
-- `entityReferenceExpansion` {{optional_inline}} {{deprecated_inline}}a
-  - : **ancien paramètre à ne plus utiliser !** Était un {{domxref("Boolean")}} (_booléen_) indiquant si, lors de la
-    suppression d'une {{domxref("EntityReference")}}, son sous-arbre doit être supprimé en même temps.
+  - : Une fonction de rappel ou un objet avec une méthode `acceptNode()`, qui retourne `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, ou `NodeFilter.FILTER_SKIP`. La fonction ou la méthode sera appelée pour chaque nœud de la sous-arborescence basée sur `root` qui est accepté comme incluse par l'indicateur `whatToShow` pour déterminer s'il faut ou non l'inclure dans la liste des nœuds itérables&nbsp;:
+    - Si la valeur retournée est `NodeFilter.FILTER_ACCEPT`, ce nœud est inclus.
+    - Si la valeur retournée est `NodeFilter.FILTER_REJECT`, aucun nœud de la sous-arborescence basée sur ce nœud n'est inclus.
+    - Si la valeur retournée est `NodeFilter.FILTER_SKIP`, ce nœud n'est pas inclus.
 
-### Return value
+### Valeur de retour
 
-A new {{domxref("TreeWalker")}} object.
+Un nouvel objet {{domxref("TreeWalker")}}.
 
 ## Exemples
 
@@ -91,11 +93,11 @@ while (treeWalker.nextNode()) {
 }
 ```
 
-#### Result
+#### Résultat
 
-{{EmbedLiveSample("using_whattoshow", "100%", 100)}}
+{{EmbedLiveSample("utiliser_whattoshow", "100%", 100)}}
 
-### Utiliser un filtre
+### Utilisation du filtre
 
 Cet exemple utilise un filtre pour échapper les contenus textuels. Pour tout nœud textuel, son contenu sera échappé en
 utilisant {{JSXref("encodeURI()")}} s'il est un descendant d'un élément `.escape` mais pas d'un élément `.no-escape`.
@@ -131,7 +133,6 @@ div {
   margin: 0.25em 0;
   padding: 0.25em;
 }
-
 span {
   display: inline-block;
 }
@@ -141,7 +142,6 @@ span {
 .escape {
   border: dashed;
 }
-
 .no-escape {
   border: solid;
 }
@@ -171,9 +171,9 @@ while (treeWalker.nextNode()) {
 }
 ```
 
-#### Result
+#### Résultat
 
-{{EmbedLiveSample("using_filter", "100%", 400)}}
+{{EmbedLiveSample("utilisation_du_filtre", "100%", 400)}}
 
 ## Spécifications
 
@@ -185,4 +185,4 @@ while (treeWalker.nextNode()) {
 
 ## Voir aussi
 
-- L'interface de l'objet qu'il crée : {{domxref("TreeWalker")}}.
+- L'interface de l'objet qu'il crée&nbsp;: {{domxref("TreeWalker")}}.
