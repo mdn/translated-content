@@ -10,7 +10,7 @@ l10n:
 
 **`<samp>`** は [HTML](/ja/docs/Web/HTML) の要素で、コンピュータープログラムからのサンプル出力を表すインラインのテキストを収めるために使用されます。内容は普通、ブラウザーの既定の等幅フォント（[Courier](<https://ja.wikipedia.org/wiki/Courier_(書体)>) や Lucida Console など）を使用して表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;samp&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>I was trying to boot my computer, but I got this hilarious message:</p>

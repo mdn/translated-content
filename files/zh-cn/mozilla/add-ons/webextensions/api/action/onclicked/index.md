@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 当浏览器操作图标被点击时触发。如果浏览器操作有一个弹出窗口，此事件将不会触发。
 
 > [!NOTE]

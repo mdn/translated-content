@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段の間に引かれる線（段間罫）のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: column-rule-style")}}
+{{InteractiveExample("CSS デモ: column-rule-style")}}
 
 ```css interactive-example-choice
 column-rule-style: none;

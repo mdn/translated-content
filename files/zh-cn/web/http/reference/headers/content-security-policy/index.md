@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
-{{HTTPSidebar}}
-
 HTTP 响应标头 **`Content-Security-Policy`** 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定源服务器和脚本端点。这将帮助防止{{Glossary("cross-site scripting", "跨站脚本攻击")}}。
 
 参见[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)，以查看 CSP 发送到浏览器的细节，它长什么样，及其用例和部署策略。

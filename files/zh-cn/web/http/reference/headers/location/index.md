@@ -3,8 +3,6 @@ title: Location
 slug: Web/HTTP/Reference/Headers/Location
 ---
 
-{{HTTPSidebar}}
-
 **`Location`** 首部指定的是需要将页面重新定向至的地址。一般在响应码为 3xx 的响应中才会有意义。
 
 发送新请求，获取 Location 指向的新页面所采用的方法与初始请求使用的方法以及重定向的类型相关：

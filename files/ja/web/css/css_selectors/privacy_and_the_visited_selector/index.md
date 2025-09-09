@@ -1,14 +1,12 @@
 ---
 title: プライバシーと :visited セレクター
+short-title: プライバシーと :visited
 slug: Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
-original_slug: Web/CSS/Privacy_and_the_:visited_selector
 l10n:
-  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-およそ 2010 年よりも前、 [CSS](/ja/docs/Web/CSS) の {{ cssxref(":visited") }} セレクターによって、ウェブサイトがユーザーの閲覧履歴を明らかにし、ユーザーがどのサイトを訪問したかを把握することができました。これは {{domxref("window.getComputedStyle")}} およびその他の技術を用いて行われていました。この処理はすばやく実行され、ユーザーがどこを訪れたかを特定できるだけでなく、ユーザーの身元に関する多くの情報を推測することも可能になりました。
+もともと、 [CSS](/ja/docs/Web/CSS) の {{ cssxref(":visited") }} セレクターによって、ウェブサイトがユーザーの閲覧履歴を明らかにし、ユーザーがどのサイトを訪問したかを把握することができました。これは {{domxref("window.getComputedStyle")}} およびその他の技術を用いて行われていました。この処理はすばやく実行され、ユーザーがどこを訪れたかを特定できるだけでなく、ユーザーの身元に関する多くの情報を推測することも可能になりました。
 
 この問題を緩和するために、ブラウザーは訪問済みリンクから受け取ることができる情報量を制限されるようになりました。
 
@@ -33,7 +31,7 @@ l10n:
 - {{ cssxref("text-emphasis-color") }}
 - {{SVGAttr("fill")}} および {{SVGAttr("stroke")}} プロパティの色の部分
 
-さらに、訪問済みリンクに設定できるプロパティであっても、未訪問リンクと訪問済みリンク間で不透明度を変えることはできません。これは、別の状況なら、[`rgb()`](/ja/docs/Web/CSS/color_value/rgb) や [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) のカラー値、もしくは [`transparent`](/ja/docs/Web/CSS/named-color#transparent) キーワードを使ってできた操作でした。
+さらに、上記のスタイルであっても、未訪問リンクと訪問済みリンクの透過率の違いは適用されません。この制限により、さまざまな {{cssxref("color_value", "&lt;color&gt;")}} 関数や [`transparent`](/ja/docs/Web/CSS/named-color#transparent) キーワードを使用して、2 つの状態を判別することができなくなります。
 
 制限内でスタイルづけをする方法を、次の例で示します。
 
@@ -46,21 +44,19 @@ l10n:
 }
 
 :visited {
-  outline-color: orange; /* オレンジのアウトライン */
-  background-color: green; /* グリーンの背景 */
-  color: yellow; /* 黄色のテキスト */
+  outline-color: orange; /* 訪問したリンクはオレンジ色の概要で表示されます */
+  background-color: green; /* 訪問したリンクは緑色の背景で表示されます */
+  color: yellow; /* 訪問したリンクは黄色で表示されます */
 }
 ```
 
 ## ウェブ開発者への影響度
 
-全体として、ウェブ開発者にそれほど大きな影響はないでしょう。しかしながら、サイトの変更が必要になるような特殊なケースが少しだけあります。
+サイトを開発する際には、次の点を考慮するとよいでしょう。
 
-- 背景画像を使ってリンクをスタイルづけし、訪問済みかどうかを表示する方法はもう動作しないでしょう。訪問済みリンクのスタイルには色以外は使えないからです。
+- リンクの訪問状態に基づいて {{cssxref("background-image")}} の値を変更しても、訪問したリンクのスタイル設定には色しか使用できないため、動作しません。
 - それ以外の透明な色は、 `:visited` セレクター内でスタイル付けした場合には表示されません。
 
 ## 関連情報
 
-- [CSS の :visited に行われるプライバシー対策](https://dev.mozilla.jp/2010/04/privacy-related-changes-coming-to-css-vistited/) on Mozilla Hacks ブログ翻訳
-- [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) on the Mozilla Security Blog
-- [Preventing attacks on a user's history through CSS :visited selectors](https://dbaron.org/mozilla/visited-privacy)
+- [Preventing attacks on a user's history through CSS `:visited` selectors](https://dbaron.org/mozilla/visited-privacy) (2010)

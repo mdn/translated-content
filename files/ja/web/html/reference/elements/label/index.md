@@ -10,7 +10,7 @@ l10n:
 
 **`<label>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーインターフェイスの項目のキャプションを表します。
 
-{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;label&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <div class="preference">
@@ -73,7 +73,8 @@ l10n:
 
     複数の `label` 要素の `for` 属性に同じ値を指定することができます。そうすると、関連するフォームコントロール（`for` 値が参照するフォームコントロール）は複数のラベルを持つことになります。
 
-    > **メモ:** `<label>` 要素は、包含するコントロール要素が `for` 属性が指す要素である場合、 `for` 属性を持ちつつ、中にコントロール要素を含めることができます。
+    > [!NOTE]
+    > `<label>` 要素は、包含するコントロール要素が `for` 属性が指す要素である場合、 `for` 属性を持ちつつ、中にコントロール要素を含めることができます。
 
 ## CSS のスタイル付け
 

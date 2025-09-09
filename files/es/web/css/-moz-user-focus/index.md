@@ -3,7 +3,7 @@ title: -moz-user-focus
 slug: Web/CSS/-moz-user-focus
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

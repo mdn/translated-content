@@ -2,10 +2,8 @@
 title: 段抜きと段の均衡
 slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
 l10n:
-  sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 このガイドでは、段組みコンテナー内で段抜きを作成する方法、段がどのように充足されるかを制御する方法を見てみます。
 

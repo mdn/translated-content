@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
-
 **`border-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された要素の周りに画像を描きます。これは要素の通常の[境界](/ja/docs/Web/CSS/border)を置き換えます。
 
-{{InteractiveExample("CSS Demo: border-image")}}
+{{InteractiveExample("CSS デモ: border-image")}}
 
 ```css interactive-example-choice
 border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
@@ -95,7 +93,8 @@ border-image: unset;
 
 `border-image` プロパティは以下に挙げた 1 つから 5 つの値で指定します。
 
-> **メモ:** {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
+> [!NOTE]
+> {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
 
 ### 値
 

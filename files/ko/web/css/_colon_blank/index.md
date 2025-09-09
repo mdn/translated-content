@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 > [!NOTE] > `:blank` 선택자는 CSSWG가 지속적으로 변경하고 있음에 따라 위험 요소로 간주됩니다.
 >

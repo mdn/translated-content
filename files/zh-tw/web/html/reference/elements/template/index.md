@@ -3,8 +3,6 @@ title: <template>
 slug: Web/HTML/Reference/Elements/template
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<template>` 元素**是用作保存用戶端內容的機制。該內容在頁面載入時不受渲染，但可以在運行時使用 JavaScript 實例化。
 
 你可以把 template 想成文件裡面，被儲存以待稍後使用的內容片段。在頁面載入時，解析器雖然會處理 `<template>` 元件的內容，但元素本身並不會被渲染。

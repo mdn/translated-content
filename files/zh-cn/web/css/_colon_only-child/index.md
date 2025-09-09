@@ -3,8 +3,6 @@ title: :only-child
 slug: Web/CSS/:only-child
 ---
 
-{{CSSRef}}
-
 **`:only-child`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示没有任何兄弟元素的元素。这与 `:first-child:last-child` 或 `:nth-child(1):nth-last-child(1)` 相同，但前者具有更小的权重性。
 
 {{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}

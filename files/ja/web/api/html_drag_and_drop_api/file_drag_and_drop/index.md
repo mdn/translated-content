@@ -44,7 +44,8 @@ HTML ドラッグ & ドロップインターフェイスは、ウェブアプリ
 }
 ```
 
-> **メモ:** {{domxref("HTMLElement/dragstart_event", "dragstart")}} および {{domxref("HTMLElement/dragend_event", "dragend")}} イベントは、 OS からブラウザーへファイルをドラッグしているときには発生しません。 OS のファイルがブラウザーへドラッグされてきたことを検出するには、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragleave_event", "dragleave")}} を使用してください。
+> [!NOTE]
+> {{domxref("HTMLElement/dragstart_event", "dragstart")}} および {{domxref("HTMLElement/dragend_event", "dragend")}} イベントは、 OS からブラウザーへファイルをドラッグしているときには発生しません。 OS のファイルがブラウザーへドラッグされてきたことを検出するには、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragleave_event", "dragleave")}} を使用してください。
 
 ## ドロップの処理
 

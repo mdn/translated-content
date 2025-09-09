@@ -29,7 +29,8 @@ Asi que intente realizar la actualización del código descrito abajo para crear
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
 
-> **Nota:** [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math1-download.html) para trabajar en su propio editor o en un editor en línea.
+> [!NOTE]
+> [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math1-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Matemáticas 2
 
@@ -46,7 +47,8 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
-> **Nota:** [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math2-download.html) para trabajar en su propio editor o en un editor en línea.
+> [!NOTE]
+> [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math2-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Matemáticas 3
 
@@ -54,7 +56,8 @@ En la tarea final de este artículo, queremos que escriba algunas pruebas. Tiene
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 400)}}
 
-> **Nota:** [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math3-download.html) para trabajar en su propio editor o en un editor en línea.
+> [!NOTE]
+> [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math3-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

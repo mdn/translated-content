@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Server`** {{Glossary("response header", "响应标头")}}用于描述处理请求并生成响应的源服务器所使用的软件信息。
 
 通过该标头公开服务器类型和版本的好处在于，它有助于进行分析，并识别特定兼容性问题的普遍程度。以往，客户端会利用服务器的版本信息来规避已知的限制，例如某些软件版本中对[范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)支持不一致的问题。

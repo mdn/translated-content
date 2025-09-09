@@ -376,7 +376,8 @@ const myList = [, "home", , "school"];
 const myList = ["home", , "school", ,];
 ```
 
-> **メモ:** [末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)は、複数行の配列を保有するときに git diff をきれいに保つのに役立ちます。なぜなら、項目を最後に追加しても一行追加するだけで、前の行は変更されないからです。
+> [!NOTE]
+> [末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)は、複数行の配列を保有するときに git diff をきれいに保つのに役立ちます。なぜなら、項目を最後に追加しても一行追加するだけで、前の行は変更されないからです。
 >
 > ```diff
 > const myList = [

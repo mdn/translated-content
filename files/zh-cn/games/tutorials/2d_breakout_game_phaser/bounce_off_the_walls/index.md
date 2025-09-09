@@ -3,8 +3,6 @@ title: Bounce off the walls
 slug: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)的**第 6 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson06.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html)完成本课后，你可以找到源代码。

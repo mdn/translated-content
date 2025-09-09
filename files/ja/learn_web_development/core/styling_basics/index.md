@@ -52,11 +52,11 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
   - : HTML 表を装飾することは、世界で最も魅力的な仕事ではありませんが、時にはそれをしなければならないこともあります。この記事では、表をスタイル設定するテクニックとともに、HTML 表を見栄え良くするためのガイドを提供します。
 - [CSS のデバッグ](/ja/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
   - : この記事では CSS の問題をデバッグする方法について案内し、何が起こっているかを調べるのに、すべてのモダンブラウザーに入っている開発者ツールがどう役立つかを示します。
-- [課題: 基本的な CSS の理解](/ja/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension) <sup>課題</sup>
+- [課題: 基本的な CSS の理解](/ja/docs/Learn_web_development/Core/Styling_basics) <sup>課題</sup>
   - : この課題では、最終的なデザイン（名刺/ゲーム用カード/ソーシャルメディアのプロフィール）を作成するために、完了しなければならない数々の関連の演習を提供しています。
-- [課題: 装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper) <sup>課題</sup>
+- [課題: 装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn_web_development/Core/Styling_basics) <sup>課題</sup>
   - : 好印象を与えたいのなら、素敵なレターヘッドの便箋に手紙を書くのはとても良い考えです。この評価では、そのような見た目のオンラインテンプレートの作成に挑戦します。
-- [課題: かっこいいボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box) <sup>課題</sup>
+- [課題: かっこいいボックス](/ja/docs/conflicting/Learn_web_development/Core/Styling_basics) <sup>課題</sup>
   - : この課題では、かっこいいボックスをいくつか作成する練習をします。目を引くボックスを作成してみましょう。
 
 ## 追加のチュートリアル

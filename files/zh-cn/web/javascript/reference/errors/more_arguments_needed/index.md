@@ -3,8 +3,6 @@ title: "TypeError: More arguments needed"
 slug: Web/JavaScript/Reference/Errors/More_arguments_needed
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 信息
 
 ```plain

@@ -5,7 +5,7 @@ slug: Web/CSS/::-moz-range-progress
 
 {{CSSRef}}{{Non-standard_header}}
 
-Le pseudo-élément **`::-moz-range-progress`** représente la portion de la piste d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`, qui correspond aux valeurs inférieures à la valeur sélectionnée par le curseur.
+Le pseudo-élément **`::-moz-range-progress`** représente la portion de la piste d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `range`, qui correspond aux valeurs inférieures à la valeur sélectionnée par le curseur.
 
 > [!NOTE]
 > Si `::-moz-range-progress` est utilisé sur autre chose qu'un élément `<input type="range">`, il n'aura aucun effet.
@@ -49,7 +49,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Voir aussi
 
-- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`&nbsp;:
+- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `range`&nbsp;:
   - [`::-moz-range-thumb`](/fr/docs/Web/CSS/::-moz-range-thumb)
   - [`::-moz-range-track`](/fr/docs/Web/CSS/::-moz-range-track)
 

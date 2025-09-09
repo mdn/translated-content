@@ -3,10 +3,10 @@ title: "XMLHttpRequest: response プロパティ"
 short-title: response
 slug: Web/API/XMLHttpRequest/response
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 {{domxref("XMLHttpRequest")}} の **`response`** プロパティは、そのリクエストの本体の内容を、 {{jsxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}、JavaScript の {{jsxref("Object")}}、文字列など、リクエストの {{domxref("XMLHttpRequest.responseType", "responseType")}} プロパティの値に応じた形で返します。
 
@@ -20,11 +20,10 @@ l10n:
 
 この例で紹介している `load()` 関数は、サーバーからページを読み込み処理するものです。これは、 {{domxref("XMLHttpRequest")}} オブジェクトを作成し、 {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} イベントのリスナーを生成して、その中で `readyState` イベントが `DONE` (4) に変わると `response` が取得し、 `load()` に渡されたコールバック関数に渡しています。
 
-コンテンツは生のテキストデータとして扱われます（ここでは、既定の
-{{domxref("XMLHttpRequest.responseType", "responseType")}} を上書きするものがないため）。
+コンテンツは生のテキストデータとして扱われます（ここでは、既定の {{domxref("XMLHttpRequest.responseType", "responseType")}} を上書きするものがないため）。
 
 ```js
-const url = "somePage.html"; //A local page
+const url = "somePage.html"; // ローカルページ
 
 function load(url, callback) {
   const xhr = new XMLHttpRequest();
@@ -50,5 +49,5 @@ function load(url, callback) {
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - テキストと HTML/XML データの取得: {{domxref("XMLHttpRequest.responseText")}} および {{domxref("XMLHttpRequest.responseXML")}}

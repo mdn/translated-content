@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 49bbddc34034e59a63c0b2cda79e45c94ea9daa9
 ---
 
-{{CSSRef}}
-
 **`<text-edge>`** は{{glossary("enumerated", "列挙")}}[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、フォントのブロックの先頭と末尾の端の特定の領域を表すフォントメトリックを指定するキーワードを定義します。各キーワードは、フォントの上端や下端の端の位置を指定します。
 
 `<text-edge>` の値は、 {{cssxref("text-box-edge")}} プロパティで使用され、テキスト要素のブロックコンテナーのブロックの先頭端および末尾端から切り取る空間の大きさを指定します。
@@ -19,7 +17,8 @@ l10n:
   [ text | ideographic | ideographic-ink | cap | ex ] [ text | ideographic | ideographic-ink | alphabetic ]
 ```
 
-> **メモ:** `ideographic` および `ideographic-ink` のキーワードは、 [CJK 言語](https://https://ja.wikipedia.org/wiki/CJKV)の文字に固有の上端と下端の位置を指定するために用意されています。現在、これらのキーワードの正確な動作については議論が分かれており、どのブラウザーも対応していません。
+> [!NOTE]
+> `ideographic` および `ideographic-ink` のキーワードは、 [CJK 言語](https://https://ja.wikipedia.org/wiki/CJKV)の文字に固有の上端と下端の位置を指定するために用意されています。現在、これらのキーワードの正確な動作については議論が分かれており、どのブラウザーも対応していません。
 
 ## 値
 
