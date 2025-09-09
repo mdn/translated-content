@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-[Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的 `AnimationPlaybackEvent` 接口表示动画事件。
+[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 的 `AnimationPlaybackEvent` 接口表示动画事件。
 
 当动画播放时，其会通过动画事件报告其 {{domxref("Animation.playState", "playState")}} 的变化。
 
@@ -35,5 +35,5 @@ l10n:
 
 ## 参见
 
-- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation.playState")}}
