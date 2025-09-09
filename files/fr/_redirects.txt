@@ -1243,7 +1243,6 @@
 /fr/docs/Firefox_9_for_developers	/fr/docs/Mozilla/Firefox/Releases/9
 /fr/docs/Firefox_pour_les_développeurs	/fr/docs/Mozilla/Firefox/Releases
 /fr/docs/Games/Index	/fr/docs/Games
-/fr/docs/Games/Introduction_to_HTML5_Game_Development	/fr/docs/conflicting/Games/Tools
 /fr/docs/Games/Workflows	/fr/docs/Games/Tutorials
 /fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 /fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field	/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
@@ -2961,7 +2960,6 @@
 /fr/docs/Jeux/Anatomie	/fr/docs/Games/Anatomy
 /fr/docs/Jeux/Index	/fr/docs/Games
 /fr/docs/Jeux/Introduction	/fr/docs/Games/Introduction
-/fr/docs/Jeux/Introduction_to_HTML5_Game_Gevelopment_(summary)	/fr/docs/conflicting/Games/Tools
 /fr/docs/Jeux/Publier_jeux	/fr/docs/Games/Publishing_games
 /fr/docs/Jeux/Publier_jeux/Game_monetization	/fr/docs/Games/Publishing_games/Game_monetization
 /fr/docs/L'interface_XSLT_JavaScript_dans_Gecko/Définition_de_paramètres	/fr/docs/Web/API/XSLTProcessor
