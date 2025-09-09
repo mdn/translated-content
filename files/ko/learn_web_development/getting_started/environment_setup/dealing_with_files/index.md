@@ -6,7 +6,7 @@ original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-웹사이트는 문자, 코드, 스타일시트, 미디어 등 수많은 파일로 구성되어 있습니다. 웹사이트를 제작할 때, 여러분은 이러한 파일들을 여러분의 컴퓨터에 적당한 양식에 맞춰 정리해야 하고, 서로가 잘 작동하는지 확인해야 하며, 최종적으로 [서버에 업로드하기](/ko/docs/Learn/Getting_started_with_the_web/Publishing_your_website) 전에 모든 내용이 올바르게 나타나게 해야 합니다. 파일 다루기에서는 여러분의 웹사이트를 위한 적당한 양식을 만들기 위해 여러분이 알아야 하는 몇 가지 문제들에 대해 이야기 할 것입니다.
+웹사이트는 문자, 코드, 스타일시트, 미디어 등 수많은 파일로 구성되어 있습니다. 웹사이트를 제작할 때, 여러분은 이러한 파일들을 여러분의 컴퓨터에 적당한 양식에 맞춰 정리해야 하고, 서로가 잘 작동하는지 확인해야 하며, 최종적으로 [서버에 업로드하기](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) 전에 모든 내용이 올바르게 나타나게 해야 합니다. 파일 다루기에서는 여러분의 웹사이트를 위한 적당한 양식을 만들기 위해 여러분이 알아야 하는 몇 가지 문제들에 대해 이야기 할 것입니다.
 
 ## 웹사이트는 컴퓨터의 어디에 두어야 할까요?
 
@@ -38,7 +38,7 @@ original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 ## 파일 경로
 
-파일들이 서로 의사소통할 수 있도록 하려면 여러분은 서로에게 각자의 파일 경로를 제공해야 합니다 — 기본적으로 다른 파일이 어디있는지 알 수 있도록 경로를 제공해야하는 것이죠. 이것을 시연해보기 위해, 우리는 `index.html`파일에 약간의`HTML`을 작성할 것입니다, 그리고 ["웹사이트의 외관은 어떻게 할까요?"](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 라는 글에서 여러분이 선택한 이미지를 보여주게 할 것입니다.
+파일들이 서로 의사소통할 수 있도록 하려면 여러분은 서로에게 각자의 파일 경로를 제공해야 합니다 — 기본적으로 다른 파일이 어디있는지 알 수 있도록 경로를 제공해야하는 것이죠. 이것을 시연해보기 위해, 우리는 `index.html`파일에 약간의`HTML`을 작성할 것입니다, 그리고 ["웹사이트의 외관은 어떻게 할까요?"](/ko/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like) 라는 글에서 여러분이 선택한 이미지를 보여주게 할 것입니다.
 
 1. `images`폴더 안에 여러분이 선택한 이미지를 복사해 넣으세요.
 2. `index.html` 파일을 열고, 아래의 코드를 보이는 그대로 집어 넣습니다. 지금은 이 모든게 무슨 뜻인지 걱정할 필요가 없습니다 — 본 시리즈에서 나중에 이 구조에 대해 더 자세히 살펴볼 겁니다.

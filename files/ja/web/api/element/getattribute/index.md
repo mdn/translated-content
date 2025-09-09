@@ -56,7 +56,7 @@ HTML 文書とされている DOM の HTML 要素に対して呼び出すと、 
 
 ### ノンス値の受け取り
 
-セキュリティ上の理由で、スクリプト以外、例えば CSS セレクターから来た [CSP](/ja/docs/Web/HTTP/CSP) のノンスと、 `.getAttribute("nonce")` の呼び出しは隠蔽されます。
+セキュリティ上の理由で、スクリプト以外、例えば CSS セレクターから来た [CSP](/ja/docs/Web/HTTP/Guides/CSP) のノンスと、 `.getAttribute("nonce")` の呼び出しは隠蔽されます。
 
 ```js example-bad
 let nonce = script.getAttribute("nonce");

@@ -5,7 +5,49 @@ slug: Web/CSS/align-self
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`align-self`** alinha itens-flex da linha flex alvo, sobreescrevendo o valor {{cssxref("align-items")}}. Se alguma dos eixos das margens do dado item está estabelecido como `auto`, então `align-self` é ignorado.
 
-{{EmbedInteractiveExample("pages/css/align-self.html")}}
+{{InteractiveExample("CSS Demo: align-self")}}
+
+```css interactive-example-choice
+align-self: stretch;
+```
+
+```css interactive-example-choice
+align-self: center;
+```
+
+```css interactive-example-choice
+align-self: start;
+```
+
+```css interactive-example-choice
+align-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 A propriedade não se aplica a caixas _block-level_, ou células de tabela.
 
@@ -47,9 +89,7 @@ align-self: unset;
 - `auto`
   - : O valor {{cssxref("align-items")}} é originado do valor de seu pai.
 - `normal`
-
   - : O efeito dessa palavra-chave depende do modo de layout em que nos encontramos:
-
     - Em layouts absolutamente posicionados, a palavra-chave se comporta como `start` em caixas absolutamente posicionadas _replaced_, e como `stretch` em caixas absolutamente posicionadas _all other_.
     - Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como `stretch`.
     - Para itens-flex, a palavra-chave se comporta como `stretch`.

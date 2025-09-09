@@ -9,31 +9,31 @@ Express представляет собой популярный веб-фрей
 
 ## Предварительные требования
 
-Перед началом этого модуля вам необходимо представлять, что из себя представляет серверное программирование и веб-фреймворки, желательно из прочтения статей другого модуля [Server-side website programming first steps](/ru/docs/Learn/Server-side/First_steps). Знакомство с основными концепциями программирования и языком программирования [JavaScript](/ru/docs/Web/JavaScript) будет очень полезным, но оно не является обязательным для понимания базовых понятий этого модуля.
+Перед началом этого модуля вам необходимо представлять, что из себя представляет серверное программирование и веб-фреймворки, желательно из прочтения статей другого модуля [Server-side website programming first steps](/ru/docs/Learn_web_development/Extensions/Server-side/First_steps). Знакомство с основными концепциями программирования и языком программирования [JavaScript](/ru/docs/Web/JavaScript) будет очень полезным, но оно не является обязательным для понимания базовых понятий этого модуля.
 
 > [!NOTE]
-> Этот веб-сайт содержит множество источников для изучения JavaScript _в контексте разработки на стороне клиента_: [JavaScript](/ru/docs/Web/JavaScript), [JavaScript Guide](/ru/docs/Web/JavaScript/Guide), [JavaScript Basics](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [JavaScript](/ru/docs/Learn/JavaScript) (изучение). Ключевые особенности и концепции языка JavaScript остаются сходными и для серверной разработки на Node.js и используемый материал достаточно релевантен. Node.js предоставляет [additional APIs](https://nodejs.org/dist/latest-v6.x/docs/api/) для обеспечения функциональности, которая полезна для "безбраузерной" разработки, т.е. для создания HTTP-сервера и доступа к файловой системе, но не поддерживает JavaScript APIs для работы с браузером и DOM.
+> Этот веб-сайт содержит множество источников для изучения JavaScript _в контексте разработки на стороне клиента_: [JavaScript](/ru/docs/Web/JavaScript), [JavaScript Guide](/ru/docs/Web/JavaScript/Guide), [JavaScript Basics](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity), [JavaScript](/ru/docs/Learn/JavaScript) (изучение). Ключевые особенности и концепции языка JavaScript остаются сходными и для серверной разработки на Node.js и используемый материал достаточно релевантен. Node.js предоставляет [additional APIs](https://nodejs.org/dist/latest-v6.x/docs/api/) для обеспечения функциональности, которая полезна для "безбраузерной" разработки, т.е. для создания HTTP-сервера и доступа к файловой системе, но не поддерживает JavaScript APIs для работы с браузером и DOM.
 >
 > Это руководство обеспечит вас некоторой информацией о работе с Node.js и Express, но также существуют и другие многочисленные отличные ресурсы в Интернете и книгах — некоторые из них доступны из тем [How do I get started with Node.js](https://stackoverflow.com/a/5511507/894359) (StackOverflow) и [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora).
 
 ## Руководства
 
-- [Введение в Express/Node](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Введение в Express/Node](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction)
   - : В первой статье об Express мы ответим на вопросы "Что такое Node?" и "Что такое Express?" и дадим вам представление о том, что делает веб-фреймворк Express особенным. Мы расскажем об основных функциях и покажем вам некоторые из основных строительных блоков приложений Express (хотя на данный момент у вас ещё нет среды разработки, в которой можно её протестировать).
-- [Настройка среды разработки Node (Express)](/ru/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Настройка среды разработки Node (Express)](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)
   - : Теперь, когда вы знаете, что такое Express, мы покажем вам, как настроить и протестировать среду разработки Node/Express в Windows, Linux (Ubuntu) и Mac OS X. Независимо от того, какую популярную операционную систему вы используете, эта статья даст вам то, что вам нужно, чтобы начать разработку приложений Express.
-- [Учебник Express: сайт LocalLibrary](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Учебник Express: сайт LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
   - : Первая статья в нашей серии практических уроков объясняет, что вы будете изучать, и предоставит обзор веб-сайта «локальной библиотеки», над которым мы будем работать и развивать в последующих статьях.
-- [Учебник Express часть 2: Создание скелета веб-сайта](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Учебник Express часть 2: Создание скелета веб-сайта](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
   - : В этой статье показано, как вы можете создать «скелет» веб-сайта, который затем можно будет заполнить с помощью маршрутов сайта, шаблонов/представлений и баз данных.
-- [Учебник Express часть 3: Использование базы данных (с помощью Mongoose)](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Учебник Express часть 3: Использование базы данных (с помощью Mongoose)](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)
   - : В этой статье кратко представлены базы данных для Node/Express. Затем показывается, как мы можем использовать [Mongoose](http://mongoosejs.com/) для обеспечения доступа к баз данных для сайта _LocalLibrary_. В уроке объясняется, как объявляются объектная схема и модели, основные типы полей и базовая валидация. Также кратко показаны некоторые из основных способов доступа к данным модели.
-- [Учебник Express часть 4: Маршруты и контроллеры](/ru/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Учебник Express часть 4: Маршруты и контроллеры](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)
   - : В этом уроке мы создадим маршруты (код обработки URL) с "фиктивным" обработчиком функций для всех конечных точек ресурсов, которые нам в конечном итоге понадобятся для сайта _LocalLibrary_. По завершении мы будем иметь модульную структуру нашего кода обработки маршрута, который мы можем расширить с помощью функций реального обработчика в следующих статьях. Мы также будем очень хорошо понимать, как создавать модульные маршруты, используя Express.
-- [Учебник Express часть 5: Отображение данных библиотеки](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Учебник Express часть 5: Отображение данных библиотеки](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
   - : Теперь мы готовы добавить страницы, на которых будут отображаться книги веб-сайта _LocalLibrary_ и другие данные. Страницы будут включать главную страницу, которая показывает сколько записей определённого типа мы имеем и отдельную страницу для детального просмотра записи. По пути мы получим практический опыт в получении записей из баз данных и использовании шаблонов.
-- [Учебник Express часть 6: Работы с формами](/ru/docs/Learn/Server-side/Express_Nodejs/forms)
-  - : В этой части мы покажем вам, как работать с [HTML формами](/ru/docs/Learn/Forms) в Express, используя Pug, и в частности, как создавать, обновлять и удалять документы из базы данных.
+- [Учебник Express часть 6: Работы с формами](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
+  - : В этой части мы покажем вам, как работать с [HTML формами](/ru/docs/Learn_web_development/Extensions/Forms) в Express, используя Pug, и в частности, как создавать, обновлять и удалять документы из базы данных.
 - [Учебник Express часть 7: Выкладка в production](/ru/docs/Learn/Server-side/Express_Nodejs/deployment)
   - : Теперь когда вы создали восхитительный сайт _LocalLibrary_, вы захотите установить его на общедоступном сервере, чтобы он мог дать доступ персоналу библиотеки и пользователям в Интернет. В этой статье представлен обзор того, как вы можете найти хост для развёртывания вашего сайта и что вам нужно сделать, чтобы подготовить ваш сайт к публикации.
 

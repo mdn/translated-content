@@ -40,11 +40,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 ## 静态方法
 
 - `Error.captureStackTrace()` {{non-standard_inline}}
-
   - : 一个非标准的 V8 函数，用于在 Error 实例上创建 {{JSxRef("Error.prototype.stack", "stack")}} 属性。
 
 - `Error.stackTraceLimit` {{non-standard_inline}}
-
   - : 一个非标准的 V8 数值属性，用于限制错误堆栈跟踪中包含堆栈帧数量。
 
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}

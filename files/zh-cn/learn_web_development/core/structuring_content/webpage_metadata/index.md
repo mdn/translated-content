@@ -1,10 +1,9 @@
 ---
 title: “头”里有什么——HTML 元信息
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
-original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
 
 在页面加载完成的时候，HTML 文档中的{{glossary("Head", "头部")}}是不会显示在 web 浏览器的。它包含了诸如页面的 {{htmlelement("title")}}（标题）、指向 {{glossary("CSS")}} 的链接（如果你选择用 CSS 来为 HTML 内容添加样式）、指向自定义网页图标的链接和其他的元数据（描述 HTML 的数据，比如作者和描述文档的重要关键词）等信息。Web 浏览器将使用文档{{glossary("Head", "头部")}}的信息正确渲染 HTML 文档。本文将涵盖上述内容并拓展，以便为你的标记工作打下良好基础。
 
@@ -59,7 +58,6 @@ HTML 头部包含 HTML {{htmlelement("head")}} 元素的内容，与 {{htmleleme
 ### 主动学习：一个简单的示例
 
 1. 为了开始这个练习，我们希望你到我们的 GitHub 库中下载一份 [title-example.html 网页](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html)副本。要做到这一点，你可以选择下面两种操作之一：
-
    1. 使用你的代码编辑器，从页面中拷贝粘贴代码到一个新的文本文件中，然后将其保存到一个适当的地方。
    2. 按下 GitHub 页面中的“Raw”按钮（可能会在浏览器新标签中显示源代码），从浏览器的菜单中选择 _另存为..._，然后选择一个地方来保存这个文件。
 
@@ -240,7 +238,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
 不用担心现在实现所有这些类型的图标——这是一个相当先进的特性，不要求你有这方面的知识来通过课程的进展。这里的主要目的是让你提前了解有这一样东西，以防当你浏览其他网站的源代码时不理解源代码的含义。如果你确实想了解更多关于所有这些值以及如何选择它们，请阅读 {{HTMLElement("link")}} 元素的参考页面。
 
 > [!NOTE]
-> 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在 favicon 图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) 没有阻止访问图标。
+> 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在 favicon 图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) 没有阻止访问图标。
 
 ## 在 HTML 中应用 CSS 和 JavaScript
 
@@ -258,7 +256,8 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
   <script src="my-js-file.js" defer></script>
   ```
 
-> **备注：** `<script>` 元素看起来像一个{{glossary("void element","空元素")}}，但它并不是，因此需要一个结束标记。还可以选择将脚本放入 `<script>` 元素中，而不是指向外部脚本文件。
+> [!NOTE]
+> `<script>` 元素看起来像一个{{glossary("void element","空元素")}}，但它并不是，因此需要一个结束标记。还可以选择将脚本放入 `<script>` 元素中，而不是指向外部脚本文件。
 
 ### 主动学习：在网页中应用 CSS 和 JavaScript
 
@@ -278,7 +277,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
 
 ## 为文档设定主语言
 
-最后，值得一提的是可以（而且有必要）为站点设定语言，这个可以通过添加 [lang 属性](/zh-CN/docs/Web/HTML/Global_attributes/lang)到 HTML 开始的标签中来实现（就像 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html) 那样），如下所示：
+最后，值得一提的是可以（而且有必要）为站点设定语言，这个可以通过添加 [lang 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang)到 HTML 开始的标签中来实现（就像 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html) 那样），如下所示：
 
 ```html
 <html lang="zh-CN">

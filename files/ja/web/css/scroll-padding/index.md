@@ -1,13 +1,73 @@
 ---
 title: scroll-padding
 slug: Web/CSS/scroll-padding
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
+**`scroll-padding`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のすべての辺に一度にスクロールパディングを設定します。 {{cssxref("padding")}} プロパティで要素のパディングを設定するのとよく似ています。
 
-**`scroll-padding`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のすべての辺に一度にスクロールパディングを設定します。 {{cssxref("padding")}} プロパティで要素のパディングを設定するのとよく似ています。
+{{InteractiveExample("CSS デモ: scroll-padding")}}
 
-{{EmbedInteractiveExample("pages/css/scroll-padding.html")}}
+```css interactive-example-choice
+scroll-padding: 0;
+```
+
+```css interactive-example-choice
+scroll-padding: 20px;
+```
+
+```css interactive-example-choice
+scroll-padding: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller" id="example-element">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <div class="info">スクロール »</div>
+</section>
+```
+
+```css interactive-example
+.default-example .info {
+  inline-size: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+  writing-mode: vertical-rl;
+}
+
+.scroller {
+  text-align: left;
+  height: 250px;
+  width: 270px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 `scroll-padding-*` プロパティは、スクロールポートの*最適な表示領域*のオフセットを定義します。これにより、スクロールポートの中で他のコンテンツ (固定配置されたツールバーやサイドバーなど) に隠れてしまう領域を除外したり、ターゲット要素とスクロールポートの縁の間に余裕を持たせたりすることができます。
 
@@ -35,6 +95,7 @@ scroll-padding: 10%;
 scroll-padding: inherit;
 scroll-padding: initial;
 scroll-padding: revert;
+scroll-padding: revert-layer;
 scroll-padding: unset;
 ```
 
@@ -64,4 +125,4 @@ scroll-padding: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

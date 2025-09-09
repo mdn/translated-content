@@ -3,11 +3,45 @@ title: min-height
 slug: Web/CSS/min-height
 ---
 
-{{CSSRef}}
+**`max-height`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 최소 높이를 설정합니다. `min-height`는 {{cssxref("height")}} 속성의 [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)이 자신의 값보다 작아지는걸 방지합니다.
 
-**`max-height`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 최소 높이를 설정합니다. `min-height`는 {{cssxref("height")}} 속성의 [사용값](/ko/docs/Web/CSS/used_value)이 자신의 값보다 작아지는걸 방지합니다.
+{{InteractiveExample("CSS Demo: min-height")}}
 
-{{EmbedInteractiveExample("pages/css/min-height.html")}}
+```css interactive-example-choice
+min-height: 150px;
+```
+
+```css interactive-example-choice
+min-height: 7em;
+```
+
+```css interactive-example-choice
+min-height: 75%;
+```
+
+```css interactive-example-choice
+min-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum height. <br />If there is
+    more content than the minimum the box will grow to the height needed by the
+    content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `min-height`가 {{cssxref("max-height")}} 또는 {{cssxref("height")}}보다 커지면 요소의 높이는 `min-height`의 값을 사용합니다.
 
@@ -37,7 +71,7 @@ min-height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 고정 길이로 나타낸 최대 높이. 음수 값은 유효하지 않습니다.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이에 대한 백분율로 나타낸 최대 높이. 음수 값은 유효하지 않습니다.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이에 대한 백분율로 나타낸 최대 높이. 음수 값은 유효하지 않습니다.
 
 #### 키워드 값
 

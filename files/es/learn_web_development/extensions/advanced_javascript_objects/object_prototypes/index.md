@@ -8,9 +8,9 @@ original_slug: Learn/JavaScript/Objects/Object_prototypes
 
 Los prototipos son un mecanismo mediante el cual los objetos en JavaScript heredan características entre sí. En este artículo, explicaremos como funcionan los prototipos y también cómo se pueden usar las propiedades de estos para añadir métodos a los contructores existentes.
 
-| Prerrequisitios: | Conocer las funciones en Javascript, conocimientos básicos de Javascript (ver [Primeros Pasos](/es/docs/Learn/JavaScript/First_steps) y [Building blocks](/es/docs/Learn/JavaScript/Building_blocks)) y Javascript orientado a Objetos (ver [Introducción a Objetos](/es/docs/Learn/JavaScript/Objects/Basics)). |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:        | Comprender los prototipos de objectos de Javascript, cómo funciona la cadena de prototype, y cómo añadir nuevos métodos a la propiedad prototype.                                                                                                                                                                |
+| Prerrequisitios: | Conocer las funciones en Javascript, conocimientos básicos de Javascript (ver [Primeros Pasos](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Building blocks](/es/docs/Learn_web_development/Core/Scripting)) y Javascript orientado a Objetos (ver [Introducción a Objetos](/es/docs/Learn_web_development/Core/Scripting/Object_basics)). |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivo:        | Comprender los prototipos de objectos de Javascript, cómo funciona la cadena de prototype, y cómo añadir nuevos métodos a la propiedad prototype.                                                                                                                                                                                                           |
 
 ## ¿Un lenguaje basado en prototipos?
 
@@ -112,7 +112,8 @@ var myString = "Esto es mi String.";
 
 `myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
 
-> **Advertencia:** **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
+> [!WARNING]
+> **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
 
 ## Revisando create()
 

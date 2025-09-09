@@ -1,10 +1,7 @@
 ---
 title: 何为无障碍？
 slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-original_slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
 ---
-
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
 本文介绍了 Web 无障碍背后的一些基本概念。
 
@@ -27,7 +24,7 @@ original_slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibi
 
 ## 主动学习
 
-_还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
+_还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Getting_started)。_
 
 ## 深入探索
 
@@ -44,7 +41,6 @@ _还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Co
 我们考虑一个视频：
 
 - 听力障碍
-
   - : 听障人士如何从视频中受益？你需要提供字幕，或者更好的是全文转录。
 
     此外，还要确保人们可以调节音量，以满足他们的独特需求。

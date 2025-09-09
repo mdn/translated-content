@@ -16,13 +16,13 @@ l10n:
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLParamElement.name")}} {{Deprecated_Inline}}
-  - : 文字列で、引数の名前を表します。 [`name`](/ja/docs/Web/HTML/Element/param#name) 属性を反映しています。
+  - : 文字列で、引数の名前を表します。 [`name`](/ja/docs/Web/HTML/Reference/Elements/param#name) 属性を反映しています。
 - {{domxref("HTMLParamElement.value")}} {{Deprecated_Inline}}
-  - : 文字列で、この引数に関連付けられた値を表します。 [`value`](/ja/docs/Web/HTML/Element/param#value) 属性を反映しています。
+  - : 文字列で、この引数に関連付けられた値を表します。 [`value`](/ja/docs/Web/HTML/Reference/Elements/param#value) 属性を反映しています。
 - {{domxref("HTMLParamElement.type")}} {{Deprecated_Inline}}
-  - : 文字列で、 `valueType` が `"ref"` の値であった場合の引数の型を示します。 [`type`](/ja/docs/Web/HTML/Element/param#type) 属性を反映しています。
+  - : 文字列で、 `valueType` が `"ref"` の値であった場合の引数の型を示します。 [`type`](/ja/docs/Web/HTML/Reference/Elements/param#type) 属性を反映しています。
 - {{domxref("HTMLParamElement.valueType")}} {{Deprecated_Inline}}
-  - : 文字列で、 `value` の型を表します。これは [`valuetype`](/ja/docs/Web/HTML/Element/param#valuetype) 属性を反映しており、値は `"data"`, `"ref"`, `"object"` のいずれかになります。
+  - : 文字列で、 `value` の型を表します。これは [`valuetype`](/ja/docs/Web/HTML/Reference/Elements/param#valuetype) 属性を反映しており、値は `"data"`, `"ref"`, `"object"` のいずれかになります。
 
 ## インスタンスメソッド
 

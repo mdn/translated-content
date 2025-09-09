@@ -5,11 +5,51 @@ l10n:
   sourceCommit: b505d75f1dbc5f31dd06eecab86e0b86159a4caa
 ---
 
-{{CSSRef}}
+**`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を一度に指定することができます。このプロパティは、ブロックレベルのボックス、絶対位置指定のボックス、グリッドアイテムに適用されます。 2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
 
-**`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を一度に指定することができます。このプロパティは、ブロックレベルのボックス、絶対位置指定のボックス、グリッドアイテムに適用されます。 2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
+{{InteractiveExample("CSS デモ: place-self")}}
 
-{{EmbedInteractiveExample("pages/css/place-self.html")}}
+```css interactive-example-choice
+place-self: stretch center;
+```
+
+```css interactive-example-choice
+place-self: center start;
+```
+
+```css interactive-example-choice
+place-self: start end;
+```
+
+```css interactive-example-choice
+place-self: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -52,7 +92,6 @@ place-self: unset;
 - `auto`
   - : 親の {{cssxref("align-items")}} の値で計算します。
 - `normal`
-
   - : このキーワードの効果は、現在のレイアウトモードに依存します。
     - 絶対位置のレイアウトでは、このキーワードは*置換*の絶対位置ボックスには `start` のように動作し、*その他*の絶対位置ボックスには `stretch` のように動作します。
     - 絶対位置指定レイアウトの固定位置指定時は、このキーワードは `stretch` と同様に動作します。

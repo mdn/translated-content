@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocal
 
 **`Intl.DateTimeFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含む配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.supportedLocalesOf", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat.supportedLocalesOf", "shorter")}}
 
 ```js interactive-example
 const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
@@ -30,9 +30,7 @@ Intl.DateTimeFormat.supportedLocalesOf(locales, options);
 - `locales`
   - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
-
   - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
-
     - `localeMatcher`
       - : 使用するロケールの一致アルゴリズムです。指定可能な値は `lookup` および `best fit` で、既定値は `best fit` です。このオプションの詳細は、 {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} のページを参照してください。
 

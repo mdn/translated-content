@@ -97,7 +97,7 @@ l10n:
 
 ここで実際の例に行き、[ブラウザーの開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を使用してリスト要素を調べると、次のようないくつかの既定のスタイル設定に気付くでしょう。
 
-- {{htmlelement("ul")}} 要素と {{htmlelement("ol")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`)、{{cssxref("padding-left")}} は `40px` (`2.5em`) です。書字方向属性の [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) が右書き（`rtl`）に設定されている場合、 `ul` および `ol` 要素では、 {{cssxref("padding-right")}} が効果を発揮し、その既定値は `40px` (`2.5em`) です。
+- {{htmlelement("ul")}} 要素と {{htmlelement("ol")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`)、{{cssxref("padding-left")}} は `40px` (`2.5em`) です。書字方向属性の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) が右書き（`rtl`）に設定されている場合、 `ul` および `ol` 要素では、 {{cssxref("padding-right")}} が効果を発揮し、その既定値は `40px` (`2.5em`) です。
 - リスト項目 ({{htmlelement("li")}} 要素) には、間隔の設定に関する既定はありません。
 - {{htmlelement("dl")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`) ですが、パディングの設定はありません。
 - {{htmlelement("dd")}} 要素の {{cssxref("margin-left")}} は `40px` (`2.5em`) です。
@@ -223,7 +223,6 @@ ul li {
 - {{htmlelement("ul")}} の {{cssxref("padding-left")}} を既定の `40px` から `20px` に減らし、リスト項目にも同じ量を設定します。 これにより、リスト項目は全体的にはまだ順序リスト項目や説明リストの説明文が並んでいますが、リスト項目には背景画像が入るように多少のパディングが入っています。これをしないと、背景画像がリスト項目のテキストと重なってしまい、見た目がごちゃごちゃしてしまいます。
 - 既定で行頭記号が表示されないように、{{cssxref("list-style-type")}} を `none` に設定します。 代わりに、行頭記号を処理するために {{cssxref("background")}} プロパティを使用します。
 - 各順序なしリスト項目に行頭記号を挿入しました。 関連するプロパティは次のとおりです。
-
   - {{cssxref("background-image")}}: 行頭記号として使用する画像ファイルへのパスを参照します。
   - {{cssxref("background-position")}}: これは選択した要素の背景のどこに画像を表示するかを定義します。 この場合は `0 0` としています。 つまり、各リスト項目の左上に行頭記号が表示されます。
   - {{cssxref("background-size")}}: 背景画像のサイズを設定します。 行頭記号のサイズをリスト項目と同じサイズ (または、ごくわずかに大きいか小さい) にすることをお勧めします。 サイズは `1.6rem` (`16px`) を使用しています。 これは、行頭記号を内部に配置できる `20px` のパディングに非常によく合っています — 行頭記号とリスト項目のテキストの間に 16px + 4px のスペースがあるとうまくいきます。
@@ -261,7 +260,7 @@ ul {
 
 ### start
 
-[`start`](/ja/docs/Web/HTML/Element/ol#start) 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、
+[`start`](/ja/docs/Web/HTML/Reference/Elements/ol#start) 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、
 
 ```html
 <ol start="4">
@@ -280,7 +279,7 @@ ul {
 
 ### reversed
 
-[`reversed`](/ja/docs/Web/HTML/Element/ol#reversed) 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、
+[`reversed`](/ja/docs/Web/HTML/Reference/Elements/ol#reversed) 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、
 
 ```html
 <ol start="4" reversed>
@@ -302,7 +301,7 @@ ul {
 
 ### 値
 
-[`value`](/ja/docs/Web/HTML/Element/ol#value) 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、
+[`value`](/ja/docs/Web/HTML/Reference/Elements/ol#value) 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、
 
 ```html
 <ol>

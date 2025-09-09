@@ -2,17 +2,61 @@
 title: cursor
 slug: Web/CSS/cursor
 l10n:
-  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
+  sourceCommit: 64d85b74ce1cce6a24ae8979da4f3f4a01a47229
 ---
-
-{{CSSRef}}
 
 **`cursor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マウスポインターが要素の上にいるときに表示されるマウスカーソルを設定します。
 
 カーソル設定により、テキスト選択、ヘルプやコンテキストメニューの有効化、コンテンツのコピー、表のリサイズなど、現在の位置で実行できるマウス操作をユーザーに知らせるべきです。
 キーワードを使用してカーソルの種類を指定するか、使用する固有のアイコンを読み込むことができます（オプションで代替画像、そして最終的なフォールバックとしてキーワードが必須です）。
 
-{{EmbedInteractiveExample("pages/css/cursor.html")}}
+{{InteractiveExample("CSS デモ: cursor")}}
+
+```css interactive-example-choice
+cursor: help;
+```
+
+```css interactive-example-choice
+cursor: wait;
+```
+
+```css interactive-example-choice
+cursor: crosshair;
+```
+
+```css interactive-example-choice
+cursor: not-allowed;
+```
+
+```css interactive-example-choice
+cursor: zoom-in;
+```
+
+```css interactive-example-choice
+cursor: grab;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div id="example-element">
+    Move over this element to see the cursor style.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  background-color: #1766aa;
+  color: white;
+  height: 180px;
+  width: 360px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+  padding: 5px;
+}
+```
 
 ## 構文
 
@@ -61,7 +105,6 @@ cursor: unset;
   - : `url()` またはカンマ区切りのリスト `url(), url(), …` で画像の URL を指定します。複数の {{cssxref("url_value", "&lt;url&gt;")}} は、一部のカーソル画像形式に対応していなかった場合の代替として設定できます。
     代替リストの最後には、キーワード値のいずれか 1 つ以上を指定*しなければなりません*。
 - `<x>`, `<y>` {{optional_inline}}
-
   - : 任意でホットスポットの x 座標と y 座標を指定します。これはカーソルが指している先の詳細な位置です。
 
     数値は画像ピクセル単位です。
@@ -69,7 +112,6 @@ cursor: unset;
     これらの値が指定されていない場合、ファイル自体から読み込まれることがあり、そうでない場合は画像の左上隅が既定値となります。
 
 - `keyword`
-
   - : キーワード値は指定する必要があり、使用するカーソルの種類、または指定したアイコンをすべて読み込めなかった場合に使用する代替カーソルのどちらか示します。
 
     利用可能なキーワードは以下の一覧表に掲載されています。カーソルなしを意味している `none` 以外には、カーソルがどのように表示されるかを示す画像があります。表の行にマウスカーソルを当てると、さまざまなカーソルキーワードの値が現在のブラウザーに与える影響を見ることができます。
@@ -340,7 +382,7 @@ cursor: unset;
 
 ### アイコンの大きさの制限
 
-仕様書では `cursor` の画像サイズは制限されていませんが、{{Glossary("user agent", "ユーザーエージェント")}}は一般的に誤用を防ぐために制限をしています。
+仕様書では `cursor` の画像サイズは制限されていませんが、{{Glossary("User agent", "ユーザーエージェント")}}は一般的に誤用を防ぐために制限をしています。
 例えば、Firefox と Chromium ではカーソル画像は既定では 128x128 ピクセルに制限されていますが、カーソル画像のサイズは 32x32 ピクセルに制限することを推奨します。ユーザーエージェントが対応している最大サイズよりも大きな画像を使用してカーソルを変更しても、通常は無視されます。
 
 ### 対応している画像ファイル形式
@@ -390,3 +432,4 @@ iPadOS はトラックパッドやマウスなどのポインター機器に対�
 
 - {{cssxref("pointer-events")}}
 - {{cssxref("url_value", "&lt;url&gt;")}} 型
+- SVG の {{SVGAttr("cursor")}} 属性

@@ -32,4 +32,4 @@ dump(window.navigator.doNotTrack);
 
 ## Voir aussi
 
-- [Le guide pratique Do Not Track](/fr/docs/Web/HTTP/Headers/DNT)
+- [Le guide pratique Do Not Track](/fr/docs/Web/HTTP/Reference/Headers/DNT)

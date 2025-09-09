@@ -7,7 +7,49 @@ slug: Web/CSS/gradient/conic-gradient
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** permet de créer une image constituée d'un dégradé radial pour lequel les transitions entre les couleurs ont lieu autour d'un centre plutôt que depuis le centre. Un dégradé conique pourra par exemple de dessiner un graphique en camembert. Le résultat de la fonction `conic-gradient()` est un objet du type de données [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un type particulier d'[`<image>`](/fr/docs/Web/CSS/image).
 
-{{EmbedInteractiveExample("pages/css/function-conic-gradient.html")}}
+{{InteractiveExample("CSS Demo: conic-gradient()")}}
+
+```css interactive-example-choice
+background: conic-gradient(red, orange, yellow, green, blue);
+```
+
+```css interactive-example-choice
+background: conic-gradient(
+  from 0.25turn at 50% 30%,
+  #f69d3c,
+  10deg,
+  #3f87a6,
+  350deg,
+  #ebf8e1
+);
+```
+
+```css interactive-example-choice
+background: conic-gradient(from 3.1416rad at 10% 50%, #e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: conic-gradient(
+  red 6deg,
+  orange 6deg 18deg,
+  yellow 18deg 45deg,
+  green 45deg 110deg,
+  blue 110deg 200deg,
+  purple 200deg
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Syntaxe
 
@@ -48,7 +90,7 @@ background: conic-gradient(
   - : Une indication d'[interpolation](/fr/docs/Glossary/Interpolation) qui définit la façon dont le dégradé progresse entre deux arrêts de couleur adjacents. La longueur définit le point auquel la couleur du dégradé doit être la couleur intermédiaire entre les deux couleurs d'arrêt. Si cette valeur est absente, la valeur intermédiaire est située à mi-parcours entre les deux arrêts de couleur.
 
 > [!NOTE]
-> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que les [arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que les [arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ## Description
 
@@ -118,7 +160,7 @@ On voit avec l'exemple précédent qu'il est aussi possible de mélanger différ
 
 Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Aussi, bien qu'il soit possible de créer des camemberts graphiques, des damiers ou d'autres effets grâce aux dégradés coniques, les images construites en CSS ne sont pas accessibles. Les images créées avec des dégradés coniques ne sont donc pas accessibles non plus. Si l'image contient des informations essentielles à la compréhension du document, mieux vaudra la décrire de façon sémantique dans le document afin que ce dernier soit correctement accessible.
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Exemples

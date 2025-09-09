@@ -18,9 +18,9 @@ removeNamedItem(namespace, localName);
 ### 引数
 
 - `namespace`
-
   - : このマップから取り除く属性の名前空間です。
-    > **警告:** `namespace` は名前空間の URI であり、接頭辞ではありません。
+    > [!WARNING]
+    > `namespace` は名前空間の URI であり、接頭辞ではありません。
 
 - `localName`
   - : このマップから取り除く属性のローカル名です。

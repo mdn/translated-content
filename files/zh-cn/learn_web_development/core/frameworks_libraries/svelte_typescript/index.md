@@ -1,12 +1,10 @@
 ---
 title: Svelte 对 TypeScript 的支持
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
 l10n:
   sourceCommit: 7ff3d643b325985bf4b4b756a15f2fef347e7e8c
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_stores","Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们学习了 Svelte store 的知识，并且实现了自己的自定义 store 来将应用程序的信息持久化到 Web 存储中。我们还学习了如何使用 transition 指令在 Svelte 中为 DOM 元素实现动画效果。
@@ -155,7 +153,8 @@ npm run dev                                       # 以开发模式启动应用�
 > [!NOTE]
 > 如果在 `import` 语句中使用 `.ts` 文件扩展名，TypeScript 会抛出错误，因此如果你有名为 `./foo.ts` 的文件，你必须将其导入为 `"./foo"`。更多信息请参阅 TypeScript 手册中的[捆绑程序、TypeScript 运行时和 Node.js 加载器的模块解析](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders)部分。
 
-> **备注：** [目前尚不支持](https://github.com/sveltejs/svelte/issues/4701)在组件标记部分使用 TypeScript。你需要在标记中使用 JavaScript，并在 `<script lang='ts'>` 部分中使用 TypeScript。
+> [!NOTE]
+> [目前尚不支持](https://github.com/sveltejs/svelte/issues/4701)在组件标记部分使用 TypeScript。你需要在标记中使用 JavaScript，并在 `<script lang='ts'>` 部分中使用 TypeScript。
 
 ## 使用 TypeScript 改进开发者体验
 

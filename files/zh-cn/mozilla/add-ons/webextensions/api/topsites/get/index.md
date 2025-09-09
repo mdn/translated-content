@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 获取包含用户最近经常访问的页面信息的数组。
 
 浏览器会保留用最近经常访问的页面的列表。它们使用此列表来帮助用户轻松返回这些地方。例如，Firefox 默认提供了在“新标签”页中显示的最常访问页面的列表。
@@ -32,9 +30,7 @@ let gettingTopSites = browser.topSites.get(
 ### 参数
 
 - `options`
-
   - : `object`。用于修改返回页面列表的选项。可以包含如下属性：
-
     - `includeBlocked` {{optional_inline}}
       - : `Boolean`。包含用户已从“新标签”页面中移除的页面。默认为 `false`。
     - `includeFavicon` {{optional_inline}}
@@ -100,7 +96,7 @@ browser.topSites
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.topSites`](https://developer.chrome.google.cn/docs/extensions/reference/api/topSites) API。
+> 此 API 基于 Chromium 的 [`chrome.topSites`](https://developer.chrome.google.cn/docs/extensions/reference/api/topSites) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -29,4 +29,4 @@ selectElt.setCustomValidity(string);
 
 ## 查看更多
 
-- [Form validation.](/zh-CN/docs/Web/HTML/Constraint_validation)
+- [Form validation.](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)

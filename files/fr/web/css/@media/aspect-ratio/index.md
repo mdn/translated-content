@@ -22,7 +22,7 @@ aspect-ratio: 16 / 9;
 
 ## Correspondance entre width et height et aspect-ratio
 
-Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'applique aux [éléments remplacés](/fr/docs/Web/CSS/Replaced_element) et aux autres éléments associés qui acceptent des attributs `width` et `height`. Celle-ci apparaît dans la feuille de style interne de l'agent utilisateur.
+Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'applique aux [éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) et aux autres éléments associés qui acceptent des attributs `width` et `height`. Celle-ci apparaît dans la feuille de style interne de l'agent utilisateur.
 
 Pour Firefox, la feuille de style interne ressemble à :
 

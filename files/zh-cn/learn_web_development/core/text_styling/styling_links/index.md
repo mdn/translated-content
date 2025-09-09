@@ -1,12 +1,11 @@
 ---
 title: 样式化链接
 slug: Learn_web_development/Core/Text_styling/Styling_links
-original_slug: Learn/CSS/Styling_text/Styling_links
 l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 当为[链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)添加样式时，理解利用伪类有效地建立链接状态是很重要的，以及如何为链接添加样式来实现常用的功能（如导航菜单和选项卡）。我们将在本文中关注所有这些主题。
 
@@ -389,11 +388,12 @@ a[href^="http"] {
 
 最后，我们在链接上设置 {{cssxref("padding-right")}} ，为背景图片留出空间，这样就不会让它和文本重叠了。
 
-最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的 [HTML 链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#标签属性选择器)——`a[href^="http"]`——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性，且属性的值以“http”开头的 {{htmlelement("a")}} 元素。
+最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的 [HTML 链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#标签属性选择器)——`a[href^="http"]`——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) 属性，且属性的值以“http”开头的 {{htmlelement("a")}} 元素。
 
 就是这样。重温上文的动手练习部分，试试这种新技巧吧！
 
-> **备注：** `href` 值看起来很奇怪——我们在这里使用的是虚拟链接，并没有真正指向任何地方。这样做的原因是，如果我们使用真正的链接，就可以在实时示例嵌入的 `<iframe>` 中加载外部网站，从而丢失示例。
+> [!NOTE]
+> `href` 值看起来很奇怪——我们在这里使用的是虚拟链接，并没有真正指向任何地方。这样做的原因是，如果我们使用真正的链接，就可以在实时示例嵌入的 `<iframe>` 中加载外部网站，从而丢失示例。
 
 > [!NOTE]
 > 如果你对[背景](/zh-CN/docs/Learn_web_development/Core/Styling_basics)和[响应式 web 设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)还不熟悉，也不用担心，其他地方会有解释。

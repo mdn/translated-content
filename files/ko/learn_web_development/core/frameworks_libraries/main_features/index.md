@@ -50,7 +50,7 @@ const header = (
 );
 ```
 
-이 표현식은 [`<h1>`](/ko/docs/Web/HTML/Element/Heading_Elements)이 있는 HTML [`<header>`](/ko/docs/Web/HTML/Element/header) 요소를 나타냅니다. 4행에서 `subject` 주변의 중괄호는 애플리케이션이 `subject` 상수의 값을 읽고 이를 `<h1>`에 삽입하도록 지시합니다.
+이 표현식은 [`<h1>`](/ko/docs/Web/HTML/Reference/Elements/Heading_Elements)이 있는 HTML [`<header>`](/ko/docs/Web/HTML/Reference/Elements/header) 요소를 나타냅니다. 4행에서 `subject` 주변의 중괄호는 애플리케이션이 `subject` 상수의 값을 읽고 이를 `<h1>`에 삽입하도록 지시합니다.
 
 React와 함께 사용하면, 이전 코드 조각의 JSX가 다음과 같이 컴파일됩니다.
 
@@ -158,7 +158,7 @@ function AuthorCredit(props) {
 />
 ```
 
-그러면 궁극적으로 다음 [`<figure>`](/ko/docs/Web/HTML/Element/figure) 요소가 렌더링됩니다. 구조는 `AuthorCredit` 컴포넌트에 정의된 대로, 콘텐츠는`AuthorCredit` 컴포넌트 호출에 포함된 속성에 정의된 대로 표시됩니다.
+그러면 궁극적으로 다음 [`<figure>`](/ko/docs/Web/HTML/Reference/Elements/figure) 요소가 렌더링됩니다. 구조는 `AuthorCredit` 컴포넌트에 정의된 대로, 콘텐츠는`AuthorCredit` 컴포넌트 호출에 포함된 속성에 정의된 대로 표시됩니다.
 
 ```html
 <figure>
@@ -279,7 +279,7 @@ Angular는 이 과정을 [의존성 주입](https://angular.io/guide/dependency-
 
 ## 라우팅
 
-[이전 장에서 언급했던 라우팅](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#routing)은 웹 경험의 중요한 부분입니다. 많은 시각적인 요소가 포함되어 충분히 복잡한 앱에서 중단되는 경험을 방지하기 위해, 이 모듈에서 다루는 각 프레임워크는 개발자가 애플리케이션에서 클라이언트 측 라우팅을 구현하는 데 도움이 되는 라이브러리(또는 둘 이상의 라이브러리)를 제공합니다.
+[이전 장에서 언급했던 라우팅](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Introduction#routing)은 웹 경험의 중요한 부분입니다. 많은 시각적인 요소가 포함되어 충분히 복잡한 앱에서 중단되는 경험을 방지하기 위해, 이 모듈에서 다루는 각 프레임워크는 개발자가 애플리케이션에서 클라이언트 측 라우팅을 구현하는 데 도움이 되는 라이브러리(또는 둘 이상의 라이브러리)를 제공합니다.
 
 ## 테스팅
 
@@ -322,10 +322,10 @@ it("Increments the count when clicked", () => {
 
 프레임워크를 사용하여 애플리케이션을 만들 때, 사용할 실제 언어, 기능 및 도구에 대해 아이디어가 좀 더 떠올랐나요? 지금부터 열정적으로 시작하고 실제로 코딩해보세요. 지금 학습을 시작할 프레임워크를 선택해보세요.
 
-- [React](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [React](/ko/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
 - [Ember](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-- [Vue](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-- [Svelte](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+- [Vue](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
+- [Svelte](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
 - [Angular](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

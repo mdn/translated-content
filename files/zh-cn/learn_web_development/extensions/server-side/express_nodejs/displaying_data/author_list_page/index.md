@@ -1,7 +1,6 @@
 ---
 title: 作者清单面页、分类清单页面挑战
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
 
 作者列表页面，需要呈现数据库中所有作者的列表，有每位作者的名字，并连结到作者详细内容页面。出生与死亡日期应该在名字后面，并且在同一列。
@@ -79,7 +78,6 @@ block content
 
 1. 你需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
 2. 实现方式几乎与`author_list()`控制器完全相同。
-
    - 按名称以上升顺序，对结果进行排序。
 
 3. 要呈现的模板，应命名为 **genre_list.pug**。

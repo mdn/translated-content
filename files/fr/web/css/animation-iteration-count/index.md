@@ -9,7 +9,104 @@ La propriété **`animation-iteration-count`** indique le nombre de cycles utili
 
 Si plusieurs valeurs sont indiquées, à chaque lancement de l'animation, c'est la valeur suivante de la liste qui est utilisée. Lorsqu'on arrive à la fin de la liste, on reprend avec la première valeur de la liste.
 
-{{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}
+{{InteractiveExample("CSS Demo: animation-iteration-count")}}
+
+```css interactive-example-choice
+animation-iteration-count: 0;
+```
+
+```css interactive-example-choice
+animation-iteration-count: 2;
+```
+
+```css interactive-example-choice
+animation-iteration-count: 1.5;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div>Animation <span id="playstatus"></span></div>
+  <div id="example-element">Select a count to start!</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  align-items: center;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: center;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+#playstatus {
+  font-weight: bold;
+}
+
+.animating {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const status = document.getElementById("playstatus");
+
+  function update() {
+    status.textContent = "delaying";
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className = "animating";
+      });
+    });
+  }
+
+  el.addEventListener("animationstart", () => {
+    status.textContent = "playing";
+  });
+
+  el.addEventListener("animationend", () => {
+    status.textContent = "finished";
+  });
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+});
+```
 
 Généralement, on utilisera la propriété raccourcie {{cssxref("animation")}} afin de définir toutes les propriétés relatives à une animation.
 

@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-[이전 글](/ko/docs/Learn/Forms/Basic_native_form_controls)에서는 초기 HTML 시대부터 사용 가능한 `type` 속성의 원래 값을 사용하여 {{htmlelement("input")}} 요소를 살펴보았습니다. 이제 HTML5에서 추가된 특정 유형의 데이터 수집을 허용하기 위해 추가된 몇 가지 새로운 입력 유형을 포함하여 더 많은 폼 컨트롤의 기능에 대해 자세히 살펴보겠습니다.
+[이전 글](/ko/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)에서는 초기 HTML 시대부터 사용 가능한 `type` 속성의 원래 값을 사용하여 {{htmlelement("input")}} 요소를 살펴보았습니다. 이제 HTML5에서 추가된 특정 유형의 데이터 수집을 허용하기 위해 추가된 몇 가지 새로운 입력 유형을 포함하여 더 많은 폼 컨트롤의 기능에 대해 자세히 살펴보겠습니다.
 
 <table>
   <tbody>
@@ -31,7 +31,7 @@ l10n:
 </table>
 
 > [!NOTE]
-> 이 글에서 다루는 대부분의 기능은 브라우저 간에 다양하게 지원됩니다. 예외 사항은 알려 드리겠습니다. 브라우저 지원에 대한 자세한 내용을 원하신다면, [HTML 폼 요소 참조](/ko/docs/Web/HTML/Element#forms) 및 특히 상세한 [\<input> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
+> 이 글에서 다루는 대부분의 기능은 브라우저 간에 다양하게 지원됩니다. 예외 사항은 알려 드리겠습니다. 브라우저 지원에 대한 자세한 내용을 원하신다면, [HTML 폼 요소 참조](/ko/docs/Web/HTML/Reference/Elements#forms) 및 특히 상세한 [\<input> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
 
 웹 개발자들은 때때로 사용자 지정 폼 컨트롤을 만들기 위해 HTML 폼 컨트롤 외관을 디자인 사양과 다르게 만들기도 합니다. 우리는 고급 튜토리얼에서 이것을 다룹니다. [사용자 정의 폼 위젯 만들기](/ko/docs/Learn/Forms/How_to_build_custom_form_controls).
 

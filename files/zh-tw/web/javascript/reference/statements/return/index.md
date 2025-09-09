@@ -3,8 +3,6 @@ title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
 
-{{jsSidebar("Statements")}}
-
 **`return` 表達式**會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。
 
 {{InteractiveExample("JavaScript Demo: Statement - Return")}}
@@ -119,7 +117,7 @@ counter();
 
 ### 函式回傳
 
-請參見[閉包](/zh-TW/docs/Web/JavaScript/Closures)。
+請參見[閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)。
 
 ```js
 function magic(x) {
@@ -143,4 +141,4 @@ answer(1337); // 56154
 ## 參見
 
 - [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions)
-- [閉包](/zh-TW/docs/Web/JavaScript/Closures)
+- [閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)

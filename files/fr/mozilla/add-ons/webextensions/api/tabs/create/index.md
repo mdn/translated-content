@@ -20,9 +20,7 @@ var creating = browser.tabs.create(
 ### Paramètres
 
 - `createProperties`
-
   - : `object`.Propriétés pour donner le nouvel onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
-
     - `active`{{optional_inline}}
       - : `boolean`. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est `false`, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à `true`.
     - `cookieStoreId` {{optional_inline}}
@@ -36,20 +34,17 @@ var creating = browser.tabs.create(
     - `pinned`{{optional_inline}}
       - : `boolean`. Si l'onglet doit être épinglé. Par défaut à `false`.
     - `selected`{{optional_inline}}
-
       - : `boolean`. Si l'onglet doit devenir l'onglet sélectionné dans la fenêtre. Par défaut à `true`.
 
         > [!WARNING]
         > Cette propriété est obsolète et n'est pas prise en charge dans Firefox. Utilisez `actif` à la place.
 
     - `url`{{optional_inline}}
-
       - : `string`. 'URL permettant de naviguer dans l'onglet initialement. Par défaut à la page Nouvel onglet.
 
         Les URL complètes doivent inclure un schéma (i.e. 'http\://www\.google.com', par 'www\.google.com').
 
         Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera :
-
         - chrome: URLs
         - javascript: URLs
         - data: URLs
@@ -96,8 +91,6 @@ browser.browserAction.onClicked.addListener(function () {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

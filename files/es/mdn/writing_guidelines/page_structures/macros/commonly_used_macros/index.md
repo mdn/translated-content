@@ -18,11 +18,9 @@ En general, no es necesario utilizar macros para crear enlaces arbitrarios. Util
 - La macro [`Glossary`](https://github.com/mdn/yari/tree/main/kumascript/macros/Glossary.ejs) crea un vínculo a la entrada de un término específico en el [glosario](/es/docs/Glossary) de MDN. Esta macro acepta un parámetro obligatorio y dos opcionales:
 
   Ejemplos:
-
   1. El nombre del término (tal como "HTML").
   2. El texto que se mostrará en el artículo en lugar del nombre del término (esto se debe usar con poca frecuencia).{{Optional_Inline}}
   3. Si se especifica este parámetro y no es cero, no se aplica el estilo personalizado que normalmente se aplica a los enlaces del glosario.{{Optional_Inline}}
-
   - `\{{Glossary("HTML")}}` produce {{Glossary("HTML")}}
   - `\{{Glossary("CSS", "Hojas de estilo en cascada")}}` produce {{Glossary("CSS", "Hojas de estilo en cascada")}}
   - `\{{Glossary("HTML", "", 1)}}` produce {{Glossary("HTML", "", 1)}}
@@ -38,9 +36,9 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 - [`jsxref`](https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs) enlaza a una página en la {{JSxRef("Referencia", "Referencia de JavaScript")}}.
 - [`SVGAttr`](https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs) enlaza a un atributo SVG específico. Por ejemplo, `\{{SVGAttr("d")}}` crea este enlace: {{SVGAttr("d")}}.
 - [`SVGElement`](https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs) enlaza a un elemento SVG en la Referencia SVG.
-- [`httpheader`](https://github.com/mdn/yari/tree/main/kumascript/macros/httpheader.ejs) enlaza a un [header de HTTP](/es/docs/Web/HTTP/Headers).
-- [`HTTPMethod`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs) enlaza a un [método de solicitud HTTP](/es/docs/Web/HTTP/Methods).
-- [`HTTPStatus`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs) enlaces a un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Status).
+- [`httpheader`](https://github.com/mdn/yari/tree/main/kumascript/macros/httpheader.ejs) enlaza a un [header de HTTP](/es/docs/Web/HTTP/Reference/Headers).
+- [`HTTPMethod`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs) enlaza a un [método de solicitud HTTP](/es/docs/Web/HTTP/Reference/Methods).
+- [`HTTPStatus`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs) enlaces a un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Reference/Status).
 
 ### Ayuda a la navegación para guías multipágina
 

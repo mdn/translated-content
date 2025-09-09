@@ -3,11 +3,48 @@ title: border-width
 slug: Web/CSS/border-width
 ---
 
-{{CSSRef}}
+[CSS](/ko/docs/Web/CSS) **`border-width`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소 네 면 테두리의 너비를 설정합니다.
 
-[CSS](/ko/docs/Web/CSS) **`border-width`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소 네 면 테두리의 너비를 설정합니다.
+{{InteractiveExample("CSS Demo: border-width")}}
 
-{{EmbedInteractiveExample("pages/css/border-width.html")}}
+```css interactive-example-choice
+border-width: thick;
+```
+
+```css interactive-example-choice
+border-width: 1em;
+```
+
+```css interactive-example-choice
+border-width: 4px 1.25em;
+```
+
+```css interactive-example-choice
+border-width: 2ex 1.25ex 0.5ex;
+```
+
+```css interactive-example-choice
+border-width: 0 4px 8px 12px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구성 속성
 
@@ -55,7 +92,6 @@ border-width: unset;
 ### 값
 
 - `<line-width>`
-
   - : 테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
 
     | `thin`   |     | 얇은 테두리 |

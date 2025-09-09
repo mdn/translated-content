@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
 {{jsSidebar("Errors")}}
 
 A exceção do Javascript "can't redefine non-configurable property" ocorre quando é
-feita a tentativa de redefinir uma propriedade, mas essa propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Data_structures#properties).
+feita a tentativa de redefinir uma propriedade, mas essa propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#properties).
 
 ## Mensagem
 
@@ -22,7 +22,7 @@ TypeError: Cannot redefine property: "x" (Chrome)
 
 ## O que deu errado?
 
-Foi feita a tentativa de redefinir uma propriedade, mas essa propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Data_structures#properties). O
+Foi feita a tentativa de redefinir uma propriedade, mas essa propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#properties). O
 atributo `configurable` controla se a propriedade pode ser deletada do
 objeto e se seus atributos (Exceto `writable`) podem ser alterados.
 Geralmente, propriedades de um objeto criado por um [inicializador de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer)
@@ -54,5 +54,5 @@ Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
 
 ## Veja também
 
-- [\[\[Configurable\]\]](/pt-BR/docs/Web/JavaScript/Data_structures#properties)
+- [\[\[Configurable\]\]](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#properties)
 - {{jsxref("Object.defineProperty()")}}

@@ -12,7 +12,7 @@ slug: Web/API/EventTarget/dispatchEvent
 > [!NOTE]
 > 在调用此方法时，{{domxref("Event.target")}} 属性默认为当前的 `EventTarget`。
 
-和经由浏览器触发，并通过[事件循环](/zh-CN/docs/Web/JavaScript/Event_loop)异步调用事件处理程序的“原生”事件不同，`dispatchEvent()` 会*同步*调用事件处理函数。在 `dispatchEvent()` 返回之前，所有监听该事件的事件处理程序将在代码继续前执行并返回。
+和经由浏览器触发，并通过[事件循环](/zh-CN/docs/Web/JavaScript/Reference/Execution_model)异步调用事件处理程序的“原生”事件不同，`dispatchEvent()` 会*同步*调用事件处理函数。在 `dispatchEvent()` 返回之前，所有监听该事件的事件处理程序将在代码继续前执行并返回。
 
 ## 语法
 
@@ -39,7 +39,7 @@ dispatchEvent(event)
 
 ## 示例
 
-请参考[创建和触发事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)。
+请参考[创建和触发事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)。
 
 ## 规范
 

@@ -54,7 +54,7 @@ Use a class-specific style when you want to apply the styling rules to many bloc
 
 Stylesheets with fewer rules are usually more performant. It is therefore recommended to use classes as much as possible, and to reserve the use of id for specific uses (like to connect label and form elements or for styling elements that must be semantically unique).
 
-See [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+See [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
 ## How do I restore the default value of a property?
 
@@ -166,7 +166,7 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 
 ### Specificity in CSS
 
-When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/Web/CSS/Specificity). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
+When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/Web/CSS/CSS_cascade/Specificity). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
 
 ```
 div { color: black; }

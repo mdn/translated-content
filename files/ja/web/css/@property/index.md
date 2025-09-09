@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{CSSRef}}
-
-**`@property`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、 API の [CSS Houdini](/ja/docs/Web/API/Houdini_APIs) の傘下にあるものです。開発者が明示的に {{cssxref('--*', 'CSS カスタムプロパティ')}}を定義し、プロパティ型のチェック、既定値の設定、プロパティが値を継承するかどうかの定義ができるようになっています。
+**`@property`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、 API の [CSS Houdini](/ja/docs/Web/API/Houdini_APIs) の傘下にあるものです。開発者が明示的に {{cssxref('--*', 'CSS カスタムプロパティ')}}を定義し、プロパティ型のチェック、既定値の設定、プロパティが値を継承するかどうかの定義ができるようになっています。
 
 `@property` ルールは、 JS を実行することなく、スタイルシートの中で直接カスタムプロパティの登録を表します。有効な `@property` ルールは、あたかも {{domxref('CSS.registerProperty_static', 'registerProperty()')}} が同等の引数で呼び出されたかのように、登録されたカスタムプロパティを生成します。
 
@@ -24,7 +22,6 @@ l10n:
 ### 記述子
 
 - {{cssxref("@property/syntax","syntax")}}
-
   - : プロパティに許容される構文を記述します。 `<length>`, `<number>`, `<percentage>`, `<length-percentage>`, `<color>`, `<image>`, `<url>`, `<integer>`, `<angle>`, `<time>`, `<resolution>`, `<transform-function>`, `<custom-ident>` のいずれか、またはデータ型とキーワード値のリストです。
 
     `+` （スペース区切り）と `#` （カンマ区切り）の量化子は、値のリストが期待されることを示します。例えば、 `<color>#` は `<color>` 値のカンマ区切りのリストが期待される構文であることを意味しています。
@@ -38,7 +35,7 @@ l10n:
 
 `@property` ルールには {{cssxref("@property/syntax","syntax")}} および {{cssxref("@property/inherits","inherits")}} 記述子を含める必要があります。どちらかがない場合は、 `@property` ルール全体が無効となり、無視されます。
 {{cssxref("@property/initial-value","initial-value")}} 記述子は構文が [`*` 全称構文定義](https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition)（例えば `syntax: "*"`）である場合のみ省略可能で、それ以外の場合は必須です。
-`initial-vaue` 記述子が必須である場合にこれが省略されると、ルール全体が無効となって無視されます。
+`initial-value` 記述子が必須である場合にこれが省略されると、ルール全体が無効となって無視されます。
 
 未知の記述子は無効で無視されますが、 `@property` ルールは無効になりません。
 
@@ -137,5 +134,5 @@ window.CSS.registerProperty({
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
 - [Houdini API](/ja/docs/Web/API/Houdini_APIs)
-- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)ガイド
+- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)ガイド
 - [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュール

@@ -35,7 +35,6 @@ Además del cliente y el servidor, también tenemos que saludar a:
 - **HTTP:** el **Protocolo de Transferencia de Hipertexto** es un protocolo de aplicación que define un idioma para que los clientes y servidores se puedan comunicar. Esto es como el idioma que utilizas para ordenar tus compras.
 
 - **Archivos componentes**: un sitio web se compone de muchos archivos diferentes, que son como las diferentes partes de los productos que comprarás en la tienda. Estos archivos se dividen en dos tipos principales:
-
   - **Archivos de código**: los sitios web se construyen principalmente con HTML, CSS y JavaScript, aunque te encontrarás con otras tecnologías más adelante.
   - **Recursos:** este es un nombre colectivo para el resto de materiales que conforman un sitio web, como imágenes, música, video, documentos de Word, archivos PDF, etc.
 
@@ -62,7 +61,7 @@ Anteriormente hemos utilizado el término _**paquetes**_ para describir el forma
 
 ## Ver también
 
-- [¿Cómo funciona Internet](/es/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [¿Cómo funciona Internet](/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 - [HTTP: Un protocolo de nivel de aplicación](https://dev.opera.com/articles/http-basic-introduction/) (en inglés)
 - [HTTP: Trabajemos con él](https://dev.opera.com/articles/http-lets-get-it-on/) (en inglés)
 - [Códigos de respuesta: HTTP](https://dev.opera.com/articles/http-response-codes/) (en inglés)

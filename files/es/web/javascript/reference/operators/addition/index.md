@@ -23,8 +23,6 @@ console.log(2001 + ": A Space Odyssey");
 // Expected output: "2001: A Space Odyssey"
 ```
 
-La fuente para este ejemplo interactivo está almacenado en un repositorio Github. Si te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envianos una pull-request.
-
 ## Sintaxis
 
 ```

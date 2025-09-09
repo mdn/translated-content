@@ -41,11 +41,9 @@ normalize(form)
 ### 参数
 
 - `form` {{optional_inline}}
-
   - : 是 `"NFC"`、`"NFD"`、`"NFKC"` 或 `"NFKD"` 其中之一，用于指定 Unicode 标准化形式。如果省略或为 {{jsxref("undefined")}}，则使用 `"NFC"`。
 
     这些值具有以下含义：
-
     - `"NFC"`
       - : 规范分解，然后进行规范组合。
     - `"NFD"`

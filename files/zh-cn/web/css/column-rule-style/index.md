@@ -5,11 +5,50 @@ l10n:
   sourceCommit: 489dbd4d8e2e099733d3bb04ad3f97678c54ac8e
 ---
 
-{{CSSRef}}
-
 **`column-rule-style`** [CSS](/zh-CN/docs/Web/CSS) 属性设置多列布局中列之间绘制的线条的样式。
 
-{{EmbedInteractiveExample("pages/css/column-rule-style.html")}}
+{{InteractiveExample("CSS Demo: column-rule-style")}}
+
+```css interactive-example-choice
+column-rule-style: none;
+```
+
+```css interactive-example-choice
+column-rule-style: dotted;
+```
+
+```css interactive-example-choice
+column-rule-style: solid;
+```
+
+```css interactive-example-choice
+column-rule-style: double;
+```
+
+```css interactive-example-choice
+column-rule-style: ridge;
+column-rule-color: #88f;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  columns: 3;
+  column-rule: solid;
+  text-align: left;
+}
+```
 
 ## 语法
 

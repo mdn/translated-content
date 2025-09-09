@@ -3,8 +3,6 @@ title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 7 は 2011 年 9 月 27 日にリリースされました。このページは Firefox 7 のリリースにあたり、開発者に関係する変更についてまとめたものです。
 
 ## ウェブ開発者向けの変更点一覧
@@ -14,8 +12,8 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - {{ domxref("HTMLHeadElement") }} の `profile` プロパティが削除されました。このプロパティは Gecko 2.0 から非推奨となっていました。
 - {{ domxref("HTMLImageElement") }} の `x` プロパティと `y` プロパティが削除されました。
 - {{ domxref("HTMLSelectElement") }} の `add()` メソッドの `before` 引数が optional となりました。
-- {{ HTMLElement("body") }} の [`background`](/ja/docs/Web/HTML/Element/body#background) 属性が URI として解決されなくなりました。この変更は HTML 仕様への準拠によるものです。
-- {{ HTMLElement("option") }} の [`label`](/ja/docs/Web/HTML/Element/option#label) 属性が指定されていない場合、要素の内容テキストを反映するようになりました。
+- {{ HTMLElement("body") }} の [`background`](/ja/docs/Web/HTML/Reference/Elements/body#background) 属性が URI として解決されなくなりました。この変更は HTML 仕様への準拠によるものです。
+- {{ HTMLElement("option") }} の [`label`](/ja/docs/Web/HTML/Reference/Elements/option#label) 属性が指定されていない場合、要素の内容テキストを反映するようになりました。
 
 #### Canvas
 

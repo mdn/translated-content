@@ -23,11 +23,12 @@ const AsyncIteratorPrototype = Object.getPrototypeOf(
 
 これらの非同期イテレーターはそれぞれ個別のプロトタイプオブジェクトを持っており、特定の非同期イテレーターが使用する `next()` メソッドを定義しています。これらのプロトタイプオブジェクトはすべて `AsyncIterator.prototype` を継承しています。これは非同期イテレータオブジェクト自身を返す [`@@asyncIterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) メソッドを提供し、非同期イテレーターを[非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)にもします。
 
-> **メモ:** `AsyncIterator.prototype` は [`@@iterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) を実装していないので、非同期イテレーターは既定では[同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)ではありません。
+> [!NOTE]
+> `AsyncIterator.prototype` は [`@@iterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) を実装していないので、非同期イテレーターは既定では[同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)ではありません。
 
 ## インスタンスメソッド
 
-- [`AsyncIterator.prototype[@@asyncIterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator)
+- [`AsyncIterator.prototype[Symbol.asyncIterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator)
   - : 非同期イテレーターオブジェクト自身を返します。これにより、非同期イテレーターオブジェクトも非同期反復可能オブジェクトになります。
 
 ## 例

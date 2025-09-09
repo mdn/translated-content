@@ -3,8 +3,6 @@ title: mask
 slug: Web/CSS/mask
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`mask`** 允许使用者通过遮罩或者裁切特定区域的图片的方式来隐藏一个元素的部分或者全部可见区域。
 
 ```css
@@ -83,5 +81,5 @@ mask: unset;
 
 - {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
 - [CSS Shapes, clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Applying SVG effects to HTML content](/zh-CN/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/zh-CN/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - [SVG](/zh-CN/docs/Web/SVG)

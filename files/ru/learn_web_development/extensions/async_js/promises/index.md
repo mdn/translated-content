@@ -391,7 +391,7 @@ async function timeTest() {
 
 ## Async/await class methods
 
-В качестве последнего замечания, вы можете использовать `async` перед методами классов или объектов, вынуждая их возвращать promises. А также `await` внутри методов объявленных таким образом. Посмотрите на пример [ES class code, который мы видели в статье object-oriented JavaScript](/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#ecmascript_2015_classes) и сравните его с модифицированной (асинхронной) `async` версией ниже:
+В качестве последнего замечания, вы можете использовать `async` перед методами классов или объектов, вынуждая их возвращать promises. А также `await` внутри методов объявленных таким образом. Посмотрите на пример [ES class code, который мы видели в статье object-oriented JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#ecmascript_2015_classes) и сравните его с модифицированной (асинхронной) `async` версией ниже:
 
 ```js
 class Person {

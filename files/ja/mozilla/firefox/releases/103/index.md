@@ -3,8 +3,6 @@ title: Firefox 103 for developers
 slug: Mozilla/Firefox/Releases/103
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 103 の変更点をまとめています。Firefox 103 は、2022 年 7 月 26 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -52,8 +50,8 @@ slug: Mozilla/Firefox/Releases/103
   転送後は、元のオブジェクトを使用できなくなります。
   詳しくは [Firefox バグ 1659025](https://bugzil.la/1659025) をご覧ください。
 
-- [`caches`](/ja/docs/Web/API/Window/caches)、[`CacheStorage`](/ja/docs/Web/API/CacheStorage)、[`Cache`](/ja/docs/Web/API/Cache) で [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) が必要になりました。安全でないコンテキストで使用すると、プロパティやインターフェイスが定義されません。
-  以前の `cache` は、安全なコンテキストの外で使用すると例外が発生する `CacheStorage` を返していました。
+- [`caches`](/ja/docs/Web/API/Window/caches)、[`CacheStorage`](/ja/docs/Web/API/CacheStorage)、[`Cache`](/ja/docs/Web/API/Cache) で [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) が必要になりました。保護されていないコンテキストで使用すると、プロパティやインターフェイスが定義されません。
+  以前の `cache` は、保護されたコンテキストの外で使用すると例外が発生する `CacheStorage` を返していました。
   詳しくは [Firefox バグ 1112134](https://bugzil.la/1112134) をご覧ください。
 
 #### DOM

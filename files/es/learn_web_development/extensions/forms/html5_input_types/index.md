@@ -6,7 +6,7 @@ original_slug: Learn/Forms/HTML5_input_types
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
-En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimos el elemento {{htmlelement("input")}} y los valores de su atributo `type`, disponibles desde los inicios de HTML. Ahora veremos en detalle la funcionalidad de los controles de formulario más recientes, incluyendo algunos tipos de input nuevos, los cuales fueron añadidos en HTML5 para permitir la recolección de tipos de datos específicos
+En el [artículo anterior](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) vimos el elemento {{htmlelement("input")}} y los valores de su atributo `type`, disponibles desde los inicios de HTML. Ahora veremos en detalle la funcionalidad de los controles de formulario más recientes, incluyendo algunos tipos de input nuevos, los cuales fueron añadidos en HTML5 para permitir la recolección de tipos de datos específicos
 
 <table>
   <tbody>
@@ -30,23 +30,23 @@ En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimo
 </table>
 
 > [!NOTE]
-> La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/es/docs/Web/HTML/Element#forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
+> La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/es/docs/Web/HTML/Reference/Elements#forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Reference/Elements/input).
 
-Debido a que la apariéncia de un control de formulario puede ser algo distinta con respecto a unas especificaciones del diseñador, los desarrolladores web a veces construyen sus propios controles de formulario personalizados. Cubrimos este aspecto en un tutorial avanzado: [Cómo construir widgets de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls).
+Debido a que la apariéncia de un control de formulario puede ser algo distinta con respecto a unas especificaciones del diseñador, los desarrolladores web a veces construyen sus propios controles de formulario personalizados. Cubrimos este aspecto en un tutorial avanzado: [Cómo construir widgets de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
 
 ## Campo de dirección de correo electrónico
 
-Este tipo de campo se define utilizando el valor `email` en el atributo [`type`](/es/docs/Web/HTML/Element/input#type) del elemento \<input>:
+Este tipo de campo se define utilizando el valor `email` en el atributo [`type`](/es/docs/Web/HTML/Reference/Elements/input#type) del elemento \<input>:
 
 ```html
 <input type="email" id="email" name="email" />
 ```
 
-Cuando se utiliza este valor [`type`](/es/docs/Web/HTML/Element/input#type) , se le obliga al usuario a escribir dentro del campo una dirección de correo electrónico válida. Cualquier otro contenido ocasiona que el navegador muestre un mensaje de error cuando se envía el formulario. Puedes verlo en acción en la siguiente captura de pantalla
+Cuando se utiliza este valor [`type`](/es/docs/Web/HTML/Reference/Elements/input#type) , se le obliga al usuario a escribir dentro del campo una dirección de correo electrónico válida. Cualquier otro contenido ocasiona que el navegador muestre un mensaje de error cuando se envía el formulario. Puedes verlo en acción en la siguiente captura de pantalla
 
 ![﻿An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
-Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input `email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
+Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Reference/Attributes/multiple) en combinación con el tipo input `email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
 
 ```html
 <input type="email" id="email" name="email" multiple />
@@ -65,16 +65,16 @@ Mejorar la experiéncia del usuario para usuarios con estos dispositivos, es otr
 
 Como puedes haber visto anteriormente, `email`, junto con otros tipos de `input` más recientes, proporciona la validación de errores _en el lado cliente_ de forma predeterminada, realizados por el navegador antes de que los datos obtenidos se envíen al servidor. _Es_ una ayuda útil guiar a los usuarios a rellenar un formulario de forma precisa y puede ahorrar tiempo: es útil saber de inmediato que tu dato no es correcto, en vez de tener que esperar el viaje de ida y vuelta al servidor.
 
-Pero _no debería ser considerado_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad en cada dato, tanto en el _lado servidor_ como en el lado cliente debido a que la validación en el lado cliente es muy fácil desactivarla, por lo que usuarios malintencionados pueden enviar fácilmente datos incorrectos al servidor. Lee [Seguridad en el sitio web](/es/docs/Learn/Server-side/First_steps/Website_security) para tener una idea de lo que _podría_ ocurrir; Implementar validación en el lado servidor está más allá del alcance de este módulo-guía, pero debería tenerlo en cuenta.
+Pero _no debería ser considerado_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad en cada dato, tanto en el _lado servidor_ como en el lado cliente debido a que la validación en el lado cliente es muy fácil desactivarla, por lo que usuarios malintencionados pueden enviar fácilmente datos incorrectos al servidor. Lee [Seguridad en el sitio web](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) para tener una idea de lo que _podría_ ocurrir; Implementar validación en el lado servidor está más allá del alcance de este módulo-guía, pero debería tenerlo en cuenta.
 
-Ten en cuenta que `a@b` es una dirección de correo electrónico válida de acuerdo a las restricciones proporcionadaas por defecto. Esto es debido a que el tipo de input `email`, permite por defecto direcciones de correo electrónico de una intranet. Para implementar un comportamiento diferente de validación puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), y también puedes utilizar mensajes de error personalizados; Hablaremos de cómo utilizar estas características en [Validación de formularios en el lado cliente](/es/docs/Learn/Forms/Form_validation) en un artículo posterior.
+Ten en cuenta que `a@b` es una dirección de correo electrónico válida de acuerdo a las restricciones proporcionadaas por defecto. Esto es debido a que el tipo de input `email`, permite por defecto direcciones de correo electrónico de una intranet. Para implementar un comportamiento diferente de validación puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), y también puedes utilizar mensajes de error personalizados; Hablaremos de cómo utilizar estas características en [Validación de formularios en el lado cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation) en un artículo posterior.
 
 > [!NOTE]
 > Si los datos introducidos no son una dirección de correo electrónico, habrá coincidéncia con la pseudo clase {{cssxref(':invalid')}}, y la propiedad {{domxref('validityState.typeMismatch')}} devolverá `true`.
 
 ## Campo de búsqueda
 
-Los campos de búsqueda están destinados a ser utilizados para crear cajas de búsqueda en páginas y aplicaciones. Este tipo de campo se define utilizando el valor `search` en su atributo [`type`](/es/docs/Web/HTML/Element/input#type):
+Los campos de búsqueda están destinados a ser utilizados para crear cajas de búsqueda en páginas y aplicaciones. Este tipo de campo se define utilizando el valor `search` en su atributo [`type`](/es/docs/Web/HTML/Reference/Elements/input#type):
 
 ```html
 <input type="search" id="search" name="search" />
@@ -90,7 +90,7 @@ Otra característica que vale la pena señalar es que se puede guardar los valor
 
 ## Campo número de teléfono
 
-Se puede crear un campo especial para introducir números de teléfono utilizando `tel` como valor del atributo [`type`](/es/docs/Web/HTML/Element/input#type):
+Se puede crear un campo especial para introducir números de teléfono utilizando `tel` como valor del atributo [`type`](/es/docs/Web/HTML/Reference/Elements/input#type):
 
 ```html
 <input type="tel" id="tel" name="tel" />
@@ -104,11 +104,11 @@ La siguiente captura de pantalla del teclado de Firefox para Android proporciona
 
 Debido a la gran variedad de formatos de número de teléfono existentes, este tipo de campo no cumple con ningún tipo de restricción sobre el valor introducido por el usuario. (Esto significa que puede incluir letras, etc...).
 
-Como mencionamos anteriormente, se puede utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) para que asuma restricciones, sobre el cuál aprenderemos en [Validación de formulario en el lado cliente](/es/docs/Learn/Forms/Form_validation).
+Como mencionamos anteriormente, se puede utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) para que asuma restricciones, sobre el cuál aprenderemos en [Validación de formulario en el lado cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 ## Campo URL
 
-Se puede crear un tipo especial de campo para introducir URLs utilizando el valor `url` para el atributo [`type`](/es/docs/Web/HTML/Element/input#type):
+Se puede crear un tipo especial de campo para introducir URLs utilizando el valor `url` para el atributo [`type`](/es/docs/Web/HTML/Reference/Elements/input#type):
 
 ```html
 <input type="url" id="url" name="url" />
@@ -125,13 +125,13 @@ Mira el siguiente ejemplo tomado de Firefox para Android:
 
 ## Campo numérico
 
-Se pueden crear controles para introducir números con el [`type`](/es/docs/Web/HTML/Element/input#type) `number` de {{HTMLElement("input")}}. Este control se parece a un campo de texto pero solo permite números de punto flotante, y normalmente proporciona botones deslizadores para incrementar o reducir el valor del control. En dispositivos con teclados dinámicos generalmente se muestra el teclado numérico.
+Se pueden crear controles para introducir números con el [`type`](/es/docs/Web/HTML/Reference/Elements/input#type) `number` de {{HTMLElement("input")}}. Este control se parece a un campo de texto pero solo permite números de punto flotante, y normalmente proporciona botones deslizadores para incrementar o reducir el valor del control. En dispositivos con teclados dinámicos generalmente se muestra el teclado numérico.
 
 La siguiente captura de pantalla tomada de Firefox para Android proporciona un ejemplo:
 
 ![firefox for android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
-Con el tipo de input `number` puedes limitar los valores mínimo y máximo permitidos definiendo los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max).
+Con el tipo de input `number` puedes limitar los valores mínimo y máximo permitidos definiendo los atributos [`min`](/es/docs/Web/HTML/Reference/Elements/input#min) y [`max`](/es/docs/Web/HTML/Reference/Elements/input#max).
 
 También puedes utilizar el atributo `step` para cambiar el incremento y decremento causado por los botones deslizadores. Por defecto, el tipo de input number sólo valida si el número es un entero. Para permitir números decimales, especifica [`step="any"`](/es/docs/Web/HTML/Attributes/step). Si se omite, su valor por defecto es `1`, lo que significa que solo son válidos números enteros.
 
@@ -160,9 +160,9 @@ Otra forma de tomar un número es usando un **slider**. Podrás observar cómo s
 
 Usage-wise, sliders are less accurate than text fields. Therefore, they are used to pick a number whose _precise_ value is not necessarily important.
 
-A slider is created using the {{HTMLElement("input")}} with its [`type`](/es/docs/Web/HTML/Element/input#type) attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
+A slider is created using the {{HTMLElement("input")}} with its [`type`](/es/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
 
-It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/es/docs/Web/HTML/Attributes/min), [`max`](/es/docs/Web/HTML/Attributes/max), and [`step`](/es/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum and increment values, respectively.
+It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/es/docs/Web/HTML/Reference/Attributes/min), [`max`](/es/docs/Web/HTML/Attributes/max), and [`step`](/es/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum and increment values, respectively.
 
 Let's look at the code behind the above example, so you can see how its done. First of all, the basic HTML:
 
@@ -198,7 +198,8 @@ price.addEventListener("input", function () {
 
 Here we store references to the `range` input and the `output` in two variables. Then we immediately set the `output`'s [`textContent`](/es/docs/Web/API/Node/textContent) to the current `value` of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the `output`'s `textContent` is updated to the new value.
 
-> **Nota:** `range` inputs are not supported in versions of Internet Explorer below 10.
+> [!NOTE]
+> `range` inputs are not supported in versions of Internet Explorer below 10.
 
 ## Date and time pickers
 
@@ -206,7 +207,7 @@ Gathering date and time values has traditionally been a nightmare for web develo
 
 HTML date controls are available to handle this specific kind of data, providing calendar widgets and making the data uniform.
 
-A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the [`type`](/es/docs/Web/HTML/Element/input#type) attribute, depending on whether you wish to collect dates, times, or both. Here's a live example that falls back to {{htmlelement("select")}} elements in non-supporting browsers:
+A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the [`type`](/es/docs/Web/HTML/Reference/Elements/input#type) attribute, depending on whether you wish to collect dates, times, or both. Here's a live example that falls back to {{htmlelement("select")}} elements in non-supporting browsers:
 
 {{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
 
@@ -214,7 +215,7 @@ Let's look at the different available types in brief. Note that the usage of the
 
 ### `datetime-local`
 
-[`<input type="datetime-local">`](/es/docs/Web/HTML/Element/input/datetime-local) creates a widget to display and pick a date with time with no specific time zone information.
+[`<input type="datetime-local">`](/es/docs/Web/HTML/Reference/Elements/input/datetime-local) creates a widget to display and pick a date with time with no specific time zone information.
 
 ```html
 <input type="datetime-local" name="datetime" id="datetime" />
@@ -248,7 +249,7 @@ Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each 
 
 ### Constraining date/time values
 
-All date and time controls can be constrained using the [`min`](/es/docs/Web/HTML/Attributes/min) and [`max`](/es/docs/Web/HTML/Attributes/max) attributes, with further constraining possible via the [`step`](/es/docs/Web/HTML/Attributes/step) attribute (whose value varies according to input type).
+All date and time controls can be constrained using the [`min`](/es/docs/Web/HTML/Reference/Attributes/min) and [`max`](/es/docs/Web/HTML/Attributes/max) attributes, with further constraining possible via the [`step`](/es/docs/Web/HTML/Attributes/step) attribute (whose value varies according to input type).
 
 ```html
 <label for="myDate">When are you available this summer?</label>
@@ -271,7 +272,7 @@ The reference pages linked to above provide suggestions on how to program fallba
 
 Colors are always a bit difficult to handle. There are many ways to express them: RGB values (decimal or hexadecimal), HSL values, keywords, etc.
 
-A `color` control can be created using the {{HTMLElement("input")}} element with its [`type`](/es/docs/Web/HTML/Element/input#type) attribute set to the value `color`:
+A `color` control can be created using the {{HTMLElement("input")}} element with its [`type`](/es/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value `color`:
 
 ```html
 <input type="color" name="color" id="color" />
@@ -287,7 +288,8 @@ And here is a live example for you to try out:
 
 The value returned is always a lowercase 6-value hexidecimal color.
 
-> **Nota:** `color` inputs are not supported in Internet Explorer.
+> [!NOTE]
+> `color` inputs are not supported in Internet Explorer.
 
 ## Summary
 
@@ -297,6 +299,6 @@ That brings us to the end of our tour of the HTML5 form input types. There are a
 
 ### Advanced Topics
 
-- [How to build custom form controls](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [How to build custom form controls](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Sending forms through JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
 - [Property compatibility table for form widgets](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

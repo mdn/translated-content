@@ -104,7 +104,8 @@ const myArray = ["Wind", "Rain", "Fire"];
 
 要素のインデックスは 0 から始まるので、配列の 1 番目の要素を `myArray[0]`、2 番目の要素を `myArray[1]` と呼ぶことができます。
 
-> **メモ:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
+> [!NOTE]
+> [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
 >
 > ```js
 > const arr = ["one", "two", "three"];
@@ -522,7 +523,7 @@ const inventory = [
 
 `Object.groupBy()` を使用するにあたっては、現在の要素で呼び出されるコールバック関数を指定します。オプションで現在のインデックスと配列を指定することもでき、要素のグループを示す文字列を返します。
 
-次のコードでは、アロー関数を使用して配列のそれぞれの要素の型を返します（これは、[関数の引数にオブジェクトの分割代入構文を使用](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#関数の引数として渡されたオブジェクトからのプロパティの展開)して、渡されたオブジェクトから型要素を展開します）。結果は、コールバック関数によって返された一意の文字列を名前とするプロパティを持つオブジェクトとなります。それぞれのプロパティには、グループ内の要素を含む配列が割り当てられます。
+次のコードでは、アロー関数を使用して配列のそれぞれの要素の型を返します（これは、[関数の引数にオブジェクトの構造分解構文を使用](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#関数の引数として渡されたオブジェクトからのプロパティの展開)して、渡されたオブジェクトから型要素を展開します）。結果は、コールバック関数によって返された一意の文字列を名前とするプロパティを持つオブジェクトとなります。それぞれのプロパティには、グループ内の要素を含む配列が割り当てられます。
 
 ```js
 const result = Object.groupBy(inventory, ({ type }) => type);
@@ -583,7 +584,7 @@ for (const i of arr) {
 }
 // 出力: 1 2 undefined undefined 5
 
-// 分割代入
+// 構造分解
 const another = [...arr]; // "another" は [ 1, 2, undefined, undefined, 5 ]
 ```
 

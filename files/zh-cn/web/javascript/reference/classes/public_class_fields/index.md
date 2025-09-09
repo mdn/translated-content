@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
-{{JsSidebar("Classes")}}
-
 **公有字段**是可编辑、可枚举和可配置的属性。因此，不同于私有对应值（private counterpart）的是，它们参与原型的继承。
 
 ## 语法
@@ -30,7 +28,7 @@ class ClassWithField {
 本页面将详细介绍公共实例字段。
 
 - 有关公共静态字段，请参阅 [`static`](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)。
-- 关于私有字段，请参阅[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
+- 关于私有字段，请参阅[私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)。
 - 公共方法请参见[方法的定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
 - 有关公共访问器，请参阅 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。
 
@@ -143,7 +141,7 @@ console.log(instance.b); // undefined
 ```
 
 > [!NOTE]
-> 这对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
+> 这对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
 
 由于类字段是使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 语义（本质上是 {{jsxref("Object.defineProperty()")}}）添加的，因此派生类中的字段声明不会调用基类中的 setter。这种行为不同于在构造函数中使用 `this.field = …`。
 
@@ -249,7 +247,7 @@ console.log(new Professor("Radev", 54).name); // "Radev 教授"
 
 - [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)指南
 - [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
-- [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - {{jsxref("Statements/class", "class")}}
 - [所有 JS 类元素的语义](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 - v8.dev 站点中关于[公有和私有类字段](https://v8.dev/features/class-fields)的文章

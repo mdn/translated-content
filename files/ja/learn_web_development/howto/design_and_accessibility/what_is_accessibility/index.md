@@ -1,12 +1,9 @@
 ---
 title: アクセシビリティとは
 slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-original_slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 この記事はウェブアクセシビリティの背景にある基本的な概念を紹介します。
 
@@ -29,7 +26,7 @@ l10n:
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Contributing/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Getting_started)。_
 
 ## より深く掘り下げる
 
@@ -46,7 +43,6 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 動画について考えてみましょう。
 
 - 聴覚障碍
-
   - : 聴覚障碍者は動画からどのような恩恵を受けるのでしょうか？字幕を提供するか、あるいはそれより良いことは、全文を書き起こす必要があります。
 
     また、人それぞれのニーズに合わせて、音量を調整できるようにしましょう。
@@ -84,5 +80,5 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 アクセシビリティは、ウェブサイトのデザインと技術的な構造の両方に影響を与える可能性があります。
 
-- 私たちはデザインの観点から、[すべての種類のユーザーのためのデザイン](/ja/docs/Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users)について学ぶことを提案します。
-- もし、技術的な側面の興味を持っているなら、[ウェブページにおける埋め込み画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)の方法を勉強することができます。
+- 私たちはデザインの観点から、[すべての種類のユーザーのためのデザイン](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users)について学ぶことを提案します。
+- もし、技術的な側面の興味を持っているなら、[ウェブページにおける埋め込み画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)の方法を勉強することができます。

@@ -5,15 +5,66 @@ l10n:
   sourceCommit: cdc0015b727804fa293bb33e5abcefce688729ab
 ---
 
-{{CSSRef}}
-
 **`counter-set`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を指定された値に設定します。
 
 そのカウンターが存在しない場合、`counter-set`プロパティは、空白で区切られたカウンターと値のペアのリストに名前付きカウンターが含まれている場合、新しいカウンターを作成します。しかし、新しいカウンターを作成するには、 {{cssxref("counter-reset")}} プロパティを使用することをお勧めします。
 
 リストに含まれている名前付きカウンターに値が設定されていない場合、そのカウンターの値は `0` に設定されます。
 
-{{EmbedInteractiveExample("pages/css/counter-set.html")}}
+{{InteractiveExample("CSS デモ: counter-set")}}
+
+```css interactive-example-choice
+counter-set: none;
+```
+
+```css interactive-example-choice
+counter-set: chapter-count 0;
+```
+
+```css interactive-example-choice
+counter-set: chapter-count;
+```
+
+```css interactive-example-choice
+counter-set: chapter-count 5;
+```
+
+```css interactive-example-choice
+counter-set: chapter-count -5;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="chapters">
+    <h1>Alice's Adventures in Wonderland</h1>
+    <h2>Down the Rabbit-Hole</h2>
+    <h2 id="example-element">The Pool of Tears</h2>
+    <h2>A Caucus-Race and a Long Tale</h2>
+    <h2>The Rabbit Sends in a Little Bill</h2>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  text-align: left;
+  counter-set: chapter-count;
+}
+
+#example-element {
+  background-color: #37077c;
+  color: white;
+}
+
+h2 {
+  counter-increment: chapter-count;
+  font-size: 1em;
+}
+
+h2::before {
+  content: "Chapter " counter(chapter-count) ": ";
+}
+```
 
 > [!NOTE]
 > カウンターの値は {{cssxref("counter-increment")}} プロパティを使用して増減させることができます。

@@ -98,7 +98,7 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 オブジェクトは、 {{jsxref("Statements/for...of", "for...of")}} 構文でループされる値など反復動作を定義する場合、**反復可能**です。{{jsxref("Array")}} や {{jsxref("Map")}} のような組み込み型の中には既定の反復動作を持つものがありますが、他の型 ({{jsxref("Object")}} など) は持っていません。
 
-**反復可能**にするには、オブジェクトは `[Symbol.iterator]()`メソッドを実装する必要があります。つまり、オブジェクト (または[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)上のオブジェクトのうちの 1 つ) に {{jsxref("Symbol.iterator")}} キーを持つプロパティが必要です 。
+**反復可能**にするには、オブジェクトは `[Symbol.iterator]()`メソッドを実装する必要があります。つまり、オブジェクト (または[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)上のオブジェクトのうちの 1 つ) に {{jsxref("Symbol.iterator")}} キーを持つプロパティが必要です 。
 
 反復可能オブジェクトは 1 回だけでも 2 回以上でも反復することができます。どちらが当てはまるかは、プログラマに任されています。
 
@@ -161,7 +161,7 @@ for (const value of myIterable) {
 
 ### 反復可能オブジェクトが必要な構文
 
-{{jsxref("Statements/for...of", "for...of")}} ループ、{{jsxref("Operators/Spread_syntax", "スプレッド構文", "", 1)}}、{{jsxref("Operators/yield*", "yield*")}}、{{jsxref("Operators/Destructuring_assignment", "分割代入", "", 1)}}などの文や式は、反復可能オブジェクトを必要とします。
+{{jsxref("Statements/for...of", "for...of")}} ループ、{{jsxref("Operators/Spread_syntax", "スプレッド構文", "", 1)}}、{{jsxref("Operators/yield*", "yield*")}}、{{jsxref("Operators/Destructuring_assignment", "構造分解", "", 1)}}などの文や式は、反復可能オブジェクトを必要とします。
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -192,7 +192,8 @@ a;
 
 ジェネレーターの内部状態を変更するのための値を {{jsxref("Generator/next","next()")}} メソッドで受け入れることもできます。`next()` に渡された値は `yield` が受け取ります。
 
-> **メモ:** `next()` の最初の呼び出しに渡された値は常に無視されます。
+> [!NOTE]
+> `next()` の最初の呼び出しに渡された値は常に無視されます。
 
 以下のフィボナッチ数列ジェネレーターでは数列を再起動するのに `next(x)` を使っています。
 

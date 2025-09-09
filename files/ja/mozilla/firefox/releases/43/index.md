@@ -3,8 +3,6 @@ title: Firefox 43 for developers
 slug: Mozilla/Firefox/Releases/43
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -45,7 +43,7 @@ Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされまし�
 
 - ES2015 仕様に合致するよう、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) は自身の [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトを持たないようになりました。`arguments` オブジェクトは Lexical にバインドされます (外側の関数から継承)。たいていの場合、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters) が `(...args) => args[i]` のよい代替になります。[Firefox バグ 889158](https://bugzil.la/889158) をご覧ください。
 - [arguments](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトは、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters) と共に使用できるようになりました ([Firefox バグ 1133298](https://bugzil.la/1133298))。
-- 厳格モードではない関数にマップされた [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトは、関数が[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割引数](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) のいずれも**含まない**場合に限り提供されるようになりました ([Firefox バグ 1175394](https://bugzil.la/1175394))。
+- 厳格モードではない関数にマップされた [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトは、関数が[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割引数](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) のいずれも**含まない**場合に限り提供されるようになりました ([Firefox バグ 1175394](https://bugzil.la/1175394))。
 
 #### その他の変更点
 

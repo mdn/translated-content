@@ -3,8 +3,6 @@ title: Firefox 15 pour les développeurs
 slug: Mozilla/Firefox/Releases/15
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web
@@ -31,7 +29,7 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 - Sur les évènements de la souris, l'attribut [`MouseEvent.buttons`](/fr/docs/Web/API/MouseEvent) pour interroger l'état des boutons de la souris, a été implémenté.
 - Sur les évènements du clavier, l'attribut [KeyboardEvent.location](/fr/docs/Web/API/KeyboardEvent#attributes_location) pour interroger l'emplacement de la clé (standard, à gauche ou à droite de la touche de modification, dans le pavé numérique), a été implémenté ([bug Firefox 166240](https://bugzil.la/166240)).
 - Le résultat de KeyboardEvent.keyCode a été calculé à partir de meilleures règles qui étaient presque identiques sous Windows/Linux/Mac. Et désormais elles sont disponibles sur certaines configurations de clavier qui n'ont pas la disposition ASCII sur Linux et Mac, comme l'arabe, le cyrillique, thaï et ainsi de suite. Voir [le document des codes pour les touches virtuelles](/fr/docs/Web/API/KeyboardEvent#virtual_key_codes).
-- La méthode [`range.detach()`](/fr/docs/Web/API/range/detach) a été tranformée en no-op et sera probablement supprimée dans le futur.
+- La méthode [`range.detach()`](/fr/docs/Web/API/Range/detach) a été tranformée en no-op et sera probablement supprimée dans le futur.
 - La méthode `HTMLVideoElement.mozHasAudio()` a été implémentée. Elle indique si une piste audio est associée à un élément vidéo. ([bug Firefox 480376](https://bugzil.la/480376))
 - L'API `Performance` a une nouvelle méthode, `now()`, supportant les horloges haute résolution du type de `DOMHighResTimeStamp`. ([bug Firefox 539095](https://bugzil.la/539095)).
 - L'[API WebSMS](/fr/docs/API/WebSMS) a été mise à jour et supporte à présent l'attribut `read` indiquant si un SMS est lu ou non.
@@ -56,7 +54,7 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 - Les opérateurs mathématiques peuvent désormais utiliser les polices téléchargeables spécifiés avec {{cssxref("@font-face")}}. Cela permet à [l'extension MathML-fonts](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) de travailler également avec les opérateurs extensibles.
 - L'attribut `selection` de {{MathMLElement("maction")}} est désormais uniquement pris en compte avec l'actiontype `toggle`.
 - [L'obsolète et contraignant namedspace](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) a été supprimé ([bug Firefox 673759](https://bugzil.la/673759)).
-- La prise en charge de la syntaxe des valeurs de [Length](/fr/docs/Web/MathML/Values) et {{MathMLElement("mpadded")}} a été améliorée selon la spécification MathML3.
+- La prise en charge de la syntaxe des valeurs de [Length](/fr/docs/Web/MathML/Reference/Values) et {{MathMLElement("mpadded")}} a été améliorée selon la spécification MathML3.
 - Les nouveaux opérateurs MathML pour les maths arabes ont été ajoutés au dictionnaire opérateur ([bug Firefox 757125](https://bugzil.la/757125)).
 
 ### Réseau

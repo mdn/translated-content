@@ -5,11 +5,51 @@ l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`justify-self`** プロパティは、配置コンテナーの適切な軸に沿って内部でボックスの位置合わせをする方法を設定します。
 
-{{EmbedInteractiveExample("pages/css/justify-self.html")}}
+{{InteractiveExample("CSS デモ: justify-self")}}
+
+```css interactive-example-choice
+justify-self: stretch;
+```
+
+```css interactive-example-choice
+justify-self: center;
+```
+
+```css interactive-example-choice
+justify-self: start;
+```
+
+```css interactive-example-choice
+justify-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 このプロパティの効果は、現在のレイアウトモードに依存します。
 
@@ -61,7 +101,6 @@ justify-self: unset;
 - 基本キーワード: キーワード値 `normal`, `auto`, `stretch` のうちの一つ。
 - ベースラインによる配置: `baseline` キーワードに加えて、任意で `first` または `last` のどちらか。
 - 位置による配置:
-
   - `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left`, `right` のうちの一つ。
   - 加えて任意で `safe` または `unsafe`。
 
@@ -70,9 +109,7 @@ justify-self: unset;
 - `auto`
   - : 使用される値は、ボックスに親があれば、親ボックスの `justify-items` プロパティ、そうでなければ絶対位置であり、このような場合、 `auto` は `normal` を表します。
 - `normal`
-
   - : このキーワードの効果は、レイアウトモードに依存します。
-
     - ブロックレベルレイアウトでは、このキーワードは `start` の別名です。
     - 絶対位置のレイアウトでは、このキーワードは*置換*の絶対位置ボックスには `start` のように振舞い、*その他*の絶対位置ボックスには `stretch` のように振舞います。
     - 表のセルレイアウトでは、このキーワードは意味を持たず、*無視*されます。

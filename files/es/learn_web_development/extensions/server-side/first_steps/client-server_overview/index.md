@@ -32,13 +32,12 @@ No hay código real en el debate porque ¡todavía no hemos seleccionado el fram
 
 ## Servidores Web y HTTP (iniciación)
 
-Los exploradores web se comunican con los [servidores web](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) usando el Protocolo de Transferencia de HyperTexto (**H**yper**T**ext**T**ransfer **P**rotocol [HTTP](/es/docs/Web/HTTP)). Cuando pinchas en un enlace sobre una página web, envías un formulario o ejecutas una búsqueda, el explorador envía una petición (_Request)_ HTTP al servidor.
+Los exploradores web se comunican con los [servidores web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) usando el Protocolo de Transferencia de HyperTexto (**H**yper**T**ext**T**ransfer **P**rotocol [HTTP](/es/docs/Web/HTTP)). Cuando pinchas en un enlace sobre una página web, envías un formulario o ejecutas una búsqueda, el explorador envía una petición (_Request)_ HTTP al servidor.
 
 Esta petición incluye:
 
 - Una URL que identifica el servidor de destino y un recurso (ej. un fichero HTML, un punto de datos particular en el servidor, o una herramienta a ejecutar).
 - Un método que define la acción requerida (por ejemplo, obtener un fichero o salvar o actualizar algunos datos). Los diferentes métodos/verbos y sus acciones asociadas se listan debajo:
-
   - `GET`: Obtener un recurso específico (ej. un fichero HTML que contiene información acerca de un producto o una lista de productos).
   - `POST`: Crear un nuevo recurso (ej. añadir un nuevo artículo a una wiki, añadir un nuevo contacto a una base de datos).
   - `HEAD`: Obtener la información de los metadatos sobre un recurso específico sin obtener el cuerpo entero tal como haría `GET`. Podrías, por ejemplo, usar una petición `HEAD` para encontrar la última vez que un recurso fue actualizado, y a continuación usar la petición `GET` (más "cara") para descargar el recurso sólo si éste ha cambiado.
@@ -47,12 +46,11 @@ Esta petición incluye:
   - `TRACE`, `OPTIONS`, `CONNECT`, `PATCH`: Estos verbos son para tareas menos comunes/avanzadas, por lo que no los trataremos aquí.
 
 - Se puede codificar información adicional con la petición (por ejemplo, datos de un formulario HTML). La información puede ser codificada como:
-
   - Parámetros URL: Las peticiones `GET` codifican los datos en la URL enviada al servidor añadiendo al final pares nombre/valor — por ejemplo, `http://mysite.com?name=Fred&age=11`. Siempre encontrarás un signo de interrogación(`?`) separando los parámetros URL del resto de la misma, un signo igual (`=`) separando cada nombre de su valor asociado y un ampersand (`&`) separando cada par. Los parámetros URL son inherentemente "inseguros" ya que pueden ser modificados por los usuarios y ser enviados de nuevo. Como consecuencia los parámetros URL/peticiones `GET` no se usan para peticiones de actualización de datos en el servidor.
   - Datos `POST`. Las peticiones `POST` añaden nuevos recursos, cuyos datos están codificados dentro del cuerpo de la petición.
   - Cookies de lado cliente. Los Cookies contienen datos de sesión acerca del cliente, incluyendo las claves que el servidor puede usar para determinar su estado de incio de sesión y los permisos/accesos a los recursos.
 
-Los servidores web esperan los mensajes de petición de los clientes, los procesan cuando llegan y responden al explorador web con un mensaje de respuesta HTTP. La respuesta contiene un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Status) que indica si la petición ha tenido éxito o no (ej. "`200 OK`" para indicar éxito, "`404 Not Found`" si el resurso no ha podido ser encontrado, "`403 Forbidden`" si el usuario no está autorizado a acceder al recurso, etc). El cuerpo de la respuesta de éxito a una petición `GET` contendría el recurso solicitado.
+Los servidores web esperan los mensajes de petición de los clientes, los procesan cuando llegan y responden al explorador web con un mensaje de respuesta HTTP. La respuesta contiene un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Reference/Status) que indica si la petición ha tenido éxito o no (ej. "`200 OK`" para indicar éxito, "`404 Not Found`" si el resurso no ha podido ser encontrado, "`403 Forbidden`" si el usuario no está autorizado a acceder al recurso, etc). El cuerpo de la respuesta de éxito a una petición `GET` contendría el recurso solicitado.
 
 Cuando se devuelve una página HTML es renderizada por el explorador web. Como parte del procesamiento el explorador puede descubrir enlaces a otros recursos (ej. una página HTML normalmente referencia las páginas JavaScript y CSS), y enviará peticiones HTTP separadas para descargar estos ficheros.
 
@@ -67,7 +65,7 @@ Puedes realizar una petición `GET` simplemente pinchando sobre un enlace o busc
 
 #### La petición
 
-Cada linea de la petición contiene información sobre ella. La primera parte se llama **cabecera** o **header**, y contiene información útil sobre la petición, de la misma manera que un [HTML head](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) contiene información útil sobre un documento (pero no el contenido mismo, que está en el cuerpo):
+Cada linea de la petición contiene información sobre ella. La primera parte se llama **cabecera** o **header**, y contiene información útil sobre la petición, de la misma manera que un [HTML head](/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) contiene información útil sobre un documento (pero no el contenido mismo, que está en el cuerpo):
 
 ```
 GET https://developer.mozilla.org/en-US/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
@@ -217,7 +215,7 @@ Recapitulemos cómo funciona ésto, mirando otra vez el diagrama de la arquitect
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
-Cuando un usuario quiere navegar a una página, el explorador envía una petición HTTP `GET` especificando la URL de su página HTML. El servidor recupera el documento solicitado de su sistema de ficheros y devuelve una respuesta HTTP conteniendo el documento y un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Status) "`200 OK`" (indicando éxito). El servidor podría devolver un código de estado diferente, por ejemplo "`404 Not Found`" si el fichero no está presente en el servidor, o "`301 Moved Permanently`" si el fichero existe pero ha sido redirigido a una localización diferente.
+Cuando un usuario quiere navegar a una página, el explorador envía una petición HTTP `GET` especificando la URL de su página HTML. El servidor recupera el documento solicitado de su sistema de ficheros y devuelve una respuesta HTTP conteniendo el documento y un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Reference/Status) "`200 OK`" (indicando éxito). El servidor podría devolver un código de estado diferente, por ejemplo "`404 Not Found`" si el fichero no está presente en el servidor, o "`301 Moved Permanently`" si el fichero existe pero ha sido redirigido a una localización diferente.
 
 El servidor de un sitio estático sólo tendrá que procesar peticiones GET, ya que el servidor no almacena ningún dato modificable. Tampoco cambia sus respuestas basádonse en los datos de la petición HTTP (ej. parámetros URL o cookies).
 

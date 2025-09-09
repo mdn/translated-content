@@ -56,10 +56,9 @@ X-Cache-Info: cached
 
 ## 参见
 
-- [HTTP 标头列表](/zh-CN/docs/Web/HTTP/Headers)
+- [HTTP 标头列表](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - HTTP 规范中[标头](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2)的语法
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("HTTP header", "HTTP 标头")}}
   - {{Glossary("Request header", "请求标头")}}
   - {{Glossary("Response header", "响应标头")}}

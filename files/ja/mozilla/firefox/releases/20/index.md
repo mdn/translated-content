@@ -3,16 +3,14 @@ title: Firefox 20 for developers
 slug: Mozilla/Firefox/Releases/20
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 20 を搭載した Firefox 20 は米国時間 2013 年 4 月 2 日にリリースされました。このページでは、開発者に影響する Firefox 20 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- {{HTMLElement("a")}} 要素および {{HTMLElement("area")}} 要素で [`download`](/ja/docs/Web/HTML/Element/a#download) 属性をサポートしました ([Firefox バグ 676619](https://bugzil.la/676619))。
-- [グローバル属性](/ja/docs/Web/HTML/Global_attributes) [`dir`](/ja/docs/Web/HTML/Global_attributes#attr-dir) の値 `auto`を実装しました ([Firefox バグ 548206](https://bugzil.la/548206))。
+- {{HTMLElement("a")}} 要素および {{HTMLElement("area")}} 要素で [`download`](/ja/docs/Web/HTML/Reference/Elements/a#download) 属性をサポートしました ([Firefox バグ 676619](https://bugzil.la/676619))。
+- [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) の値 `auto`を実装しました ([Firefox バグ 548206](https://bugzil.la/548206))。
 
 ### JavaScript
 

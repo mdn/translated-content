@@ -2,14 +2,72 @@
 title: background-attachment
 slug: Web/CSS/background-attachment
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: b17ca921175c0a92d21c6c4effbc7fa3dc348a8e
 ---
-
-{{CSSRef}}
 
 **`background-attachment`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定背景圖片的位置是否固定在{{glossary("viewport", "視區")}}內，或者跟隨其包含區塊一起滑動。
 
-{{EmbedInteractiveExample("pages/css/background-attachment.html")}}
+{{InteractiveExample("CSS Demo: background-attachment")}}
+
+```css interactive-example-choice
+background-attachment: scroll;
+```
+
+```css interactive-example-choice
+background-attachment: fixed;
+```
+
+```css interactive-example-choice
+background-attachment: local;
+```
+
+```css interactive-example-choice
+background-attachment: local, scroll;
+```
+
+```css interactive-example-choice
+background-attachment: scroll, local;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    倫敦。麥可彌撒學期剛結束，大法官正坐鎮於林肯茲印大廳。
+    無情的十一月天氣。街道上滿是泥濘，彷彿洪水剛剛退去一般，
+    若在霍爾本山看到一隻約四十英尺長、像大象般蹣跚行走的巨蜥——甲龍獸，也不足為奇。
+    倫敦。麥可彌撒學期剛結束，大法官正坐鎮於林肯茲印大廳。無情的十一月天氣。
+    街道上滿是泥濘，彷彿洪水剛剛退去一般，
+    若在霍爾本山看到一隻約四十英尺長、像大象般蹣跚行走的巨蜥——甲龍獸，也不足為奇。
+  </div>
+</section>
+```
+
+```css interactive-example
+body {
+  overflow: scroll;
+}
+
+#default-example {
+  height: 600px;
+}
+
+#example-element {
+  max-width: 20rem;
+  height: 100%;
+  background:
+    url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
+      no-repeat,
+    url("/shared-assets/images/examples/moon.jpg") center / 10rem;
+  color: #ff5454;
+  font-size: 1.5em;
+  font-weight: bold;
+  overflow: auto;
+  padding: 20px;
+  text-shadow:
+    0 0 0.6rem #000,
+    0 0 0.6rem #000;
+}
+```
 
 ## 語法
 
@@ -48,7 +106,7 @@ background-attachment: unset;
 
 ## 範例
 
-### 簡單範例
+### 基本範例
 
 #### HTML
 
@@ -69,7 +127,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("簡單範例")}}
+{{EmbedLiveSample("基本範例")}}
 
 ### 多重背景圖片
 

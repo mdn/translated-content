@@ -11,4 +11,4 @@ l10n:
 
 ## 参见
 
-- [讨论 JavaScript 中的继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [讨论 JavaScript 中的继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -9,7 +9,7 @@ l10n:
 
 **`Symbol.hasInstance`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.hasInstance` を表します。{{jsxref("Operators/instanceof", "instanceof")}} 演算子は右辺オペランドに対して、コンストラクターオブジェクトがオブジェクトをそのインスタンスとして認識するかどうかを判断する際に使用されるメソッドを、このシンボルで探します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
+{{InteractiveExample("JavaScript デモ: Symbol.hasInstance")}}
 
 ```js interactive-example
 class Array1 {

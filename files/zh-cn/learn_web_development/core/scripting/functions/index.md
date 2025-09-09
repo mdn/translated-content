@@ -1,12 +1,11 @@
 ---
 title: 函数——可复用的代码块
 slug: Learn_web_development/Core/Scripting/Functions
-original_slug: Learn/JavaScript/Building_blocks/Functions
 l10n:
   sourceCommit: d36a0f08f71bc7e17a013da81ed63144a96f7699
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
 在 JavaScript 中另一个基本概念是**函数**, 它允许你在一个代码块中存储一段用于处理单任务的代码，然后在任何你需要的时候用一个简短的命令来调用，而不是把相同的代码写很多次。在本文中，我们将探索函数的基本概念，如函数的基本语法、如何定义和调用函数、函数的作用域和参数。
 
@@ -158,7 +157,7 @@ const newString = myText.replace("字符串", "香肠");
 const myArray = ["我", "爱", "巧克力", "青蛙"];
 const madeAString = myArray.join(" ");
 console.log(madeAString);
-// 返回 '我爱巧克力青蛙'
+// 返回“我 爱 巧克力 青蛙”
 
 const madeAnotherString = myArray.join();
 console.log(madeAnotherString);
@@ -463,7 +462,7 @@ function greeting() {
 
 ## 技能测试！
 
-你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[技能测试：函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions)。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
+你已经来到了本文章的结尾，但是你还能记得最重要的知识吗？你可以在离开这里找到一些更深度的测试来证实你已经记住了这些知识——查看[技能测试：函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions)。后两章文本包含了这个测试需要的技能，所以你可能先需要阅读再尝试该测试。
 
 ## 总结
 

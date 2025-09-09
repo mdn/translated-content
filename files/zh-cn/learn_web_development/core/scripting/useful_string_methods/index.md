@@ -1,10 +1,9 @@
 ---
 title: 有用的字符串方法
 slug: Learn_web_development/Core/Scripting/Useful_string_methods
-original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 现在我们学习基本的字符串语法，让我们开始思考一下我们可以对内置方法的字符串做什么有用的操作，例如查找文本字符串的长度，加入和分割字符串，将字符串中的一个字符替换为另一个字符。
 
@@ -208,7 +207,8 @@ browserType[browserType.length - 1];
 
    这返回“zilla”——这是因为 2 的字符位置是字母 z，并且因为没有包含第二个参数，所以返回的子字符串是字符串中的所有剩余字符。
 
-> **备注：** `slice()`的第二个参数是可选的：如果没有传入这个参数，分片结束位置会在原始字符串的末尾。这个方法也有其他的选项；学习{{jsxref("String.prototype.slice()", "slice()")}}这页，来看看你还能发现什么其他作用。
+> [!NOTE]
+> `slice()`的第二个参数是可选的：如果没有传入这个参数，分片结束位置会在原始字符串的末尾。这个方法也有其他的选项；学习{{jsxref("String.prototype.slice()", "slice()")}}这页，来看看你还能发现什么其他作用。
 
 ### 转换大小写
 

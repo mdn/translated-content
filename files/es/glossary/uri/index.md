@@ -13,5 +13,5 @@ Un **URI** _(Identificador Uniforme de Recursos de sus siglas en inglés: Unifor
 
 - [URI](https://es.wikipedia.org/wiki/URI) en Wikipedia
 - [RFC 3986 on URI](https://tools.ietf.org/html/rfc3986)
-- [data URIs](/es/docs/Web/URI/Schemes/data)
-- [www vs non-www](/es/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
+- [data URIs](/es/docs/Web/URI/Reference/Schemes/data)
+- [www vs non-www](/es/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)

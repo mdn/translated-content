@@ -7,7 +7,47 @@ slug: Web/CSS/transition-property
 
 La propriété **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) devrait être appliqué.
 
-{{EmbedInteractiveExample("pages/css/transition-property.html")}}
+{{InteractiveExample("CSS Demo: transition-property")}}
+
+```css interactive-example-choice
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-property: all;
+```
+
+```css interactive-example-choice
+transition-property: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 > **Note :** [L'ensemble des propriétés CSS qui peuvent être animées](/fr/docs/Web/CSS/CSS_animated_properties) évolue. Vous devriez donc éviter de lister ici des propriétés qui, actuellement, ne sont pas animées car elles pourraient l'être demain et cela pourrait affecter votre document.
 

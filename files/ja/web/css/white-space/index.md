@@ -5,11 +5,61 @@ l10n:
   sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
 
-{{CSSRef}}
-
 **`white-space`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。
 
-{{EmbedInteractiveExample("pages/css/white-space.html")}}
+{{InteractiveExample("CSS デモ: white-space")}}
+
+```css interactive-example-choice
+white-space: normal;
+```
+
+```css interactive-example-choice
+white-space: pre;
+```
+
+```css interactive-example-choice
+white-space: pre-wrap;
+```
+
+```css interactive-example-choice
+white-space: pre-line;
+```
+
+```css interactive-example-choice
+white-space: wrap;
+```
+
+```css interactive-example-choice
+white-space: collapse;
+```
+
+```css interactive-example-choice
+white-space: preserve nowrap;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <p>
+      But ere she from the church-door stepped She smiled and told us why: 'It
+      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
+      smiled, and passed it off Ere from the door she stept—
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 16rem;
+}
+
+#example-element p {
+  border: 1px solid #c5c5c5;
+  padding: 0.75rem;
+  text-align: left;
+}
+```
 
 このプロパティは 2 つのことを指定します。
 
@@ -57,9 +107,7 @@ white-space: unset;
 - `pre-line`
   - : 連続するホワイトスペースは[統合して](#ホワイトスペースの統合) 1 つになります。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行われます。
 - `break-spaces`
-
   - : 下記の点を除いて、動作は `pre-wrap` と同じです。
-
     - そのまま残された連続するホワイトスペースは、行末にあるものを含め、空間を占有します。
     - 残されたそれぞれのホワイトスペースの後で、ホワイトスペースの間を含め、改行する可能性があります。
     - そのような残された空白は空間を占有し、ぶら下がらず、ボックスの内在の寸法 ({{cssxref("min-content")}} および {{cssxref("max-content")}} の大きさ) に影響します。
@@ -131,7 +179,8 @@ white-space: unset;
 
 タブの既定値は 8 文字で、 [`tab-size`](/ja/docs/Web/CSS/tab-size) プロパティを使用して設定できます。`normal`、`nowrap`、`pre-line` の値の場合、すべてのタブは空白文字 (U+0020) 文字に変換されます。
 
-> **メモ:** **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
+> [!NOTE]
+> **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
 >
 > - 空白
 >   - : 空白 (U+0020)、タブ (U+0009)、区切り文字 (改行など)。

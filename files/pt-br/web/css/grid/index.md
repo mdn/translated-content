@@ -3,9 +3,60 @@ title: grid
 slug: Web/CSS/grid
 ---
 
-A propriedade **`grid`** do CSS é uma [abreviação](/pt-BR/docs/Web/CSS/Shorthand_properties) das propriedades que definem todas as propriedades da grade explícita ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, e {{cssxref("grid-template-areas")}}), e todas as propriedades implícitas da grade ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, e {{cssxref("grid-auto-flow")}}), em uma única declaração.
+A propriedade **`grid`** do CSS é uma [abreviação](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) das propriedades que definem todas as propriedades da grade explícita ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, e {{cssxref("grid-template-areas")}}), e todas as propriedades implícitas da grade ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, e {{cssxref("grid-auto-flow")}}), em uma única declaração.
 
-{{EmbedInteractiveExample("pages/css/grid.html")}}
+{{InteractiveExample("CSS Demo: grid")}}
+
+```css interactive-example-choice
+grid: auto-flow / 1fr 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid: auto-flow dense / 40px 40px 1fr;
+```
+
+```css interactive-example-choice
+grid: repeat(3, 80px) / auto-flow;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element :nth-child(1) {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element :nth-child(2) {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+  grid-column: auto / span 3;
+  grid-row: auto / span 2;
+}
+
+#example-element :nth-child(3) {
+  background-color: rgba(94, 255, 0, 0.2);
+  border: 3px solid green;
+  grid-column: auto / span 2;
+}
+```
 
 > [!NOTE]
 > Você pode especificar apenas as propriedades explícitas _ou_ implícitas da grade em uma única declaração `grid`. As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.
@@ -47,13 +98,11 @@ grid: unset;
 - `<'grid-template'>`
   - : Define o {{cssxref("grid-template")}} incluindo {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} e {{cssxref("grid-template-areas")}}.
 - `<'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?`
-
   - : Configura um fluxo automático definindo as faixas de linha explicitamente por meio da propriedade {{cssxref("grid-template-rows")}} (e a propriedade {{cssxref("grid-template-columns")}} para `none`) e especificando como repetir automaticamente as faixas da coluna via {{cssxref("grid-auto-columns")}} (e setando {{cssxref("grid-auto-rows")}} para `auto`). {{cssxref("grid-auto-flow")}} também é definido para a `column`, de acordo com `dense`, se especificado.
 
     Todas as outras subpropriedades `grid` são redefinidas para seus valores iniciais.
 
 - `[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>`
-
   - : Configura um fluxo automático definindo as faixas da coluna explicitamente por meio da propriedade {{cssxref("grid-template-columns")}} (e a propriedade {{cssxref("grid-template-rows")}} para `none`) e especificando como repetir automaticamente as faixas de linha via {{cssxref("grid-auto-rows")}} (e setando {{cssxref("grid-auto-columns")}} para `auto`). {{cssxref("grid-auto-flow")}} também é definido para `row` de acordo com `dense`, se especificado.
 
     Todas as outras subpropriedades `grid` são redefinidas para seus valores iniciais.
@@ -118,7 +167,6 @@ grid: unset;
 2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)
 3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
 4. **Guias**
-
    1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -132,7 +180,6 @@ grid: unset;
    11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Propriedades**
-
    1. [grid](/pt-BR/docs/Web/CSS/grid)
    2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
@@ -153,7 +200,6 @@ grid: unset;
    18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
 
 6. **Glossário**
-
    1. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
    2. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
    3. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)

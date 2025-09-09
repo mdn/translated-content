@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 将脚本注入目标上下文。默认情况下脚本将在 `document_idle` 时运行。
 
 > [!NOTE]
@@ -31,9 +29,7 @@ let results = await browser.scripting.executeScript(
 ### 参数
 
 - `details`
-
   - : 描述注入脚本的对象，包含以下属性：
-
     - `args` {{optional_inline}}
       - : 传递到函数中的参数数组，仅在指定了 `func` 参数时有效。参数必须是可 JSON 序列化的。
     - `files` {{optional_inline}}
@@ -60,7 +56,6 @@ let results = await browser.scripting.executeScript(
 - `result` {{optional_inline}}
   - : `any`。脚本执行的结果。
 - `error` {{optional_inline}}
-
   - : `any`。如果发生错误，包含脚本抛出或拒绝的值。通常这是一个带有消息（message）属性的错误对象，但它可以是任何值（包括原始值和 `undefined`）。
 
     Chrome 尚不支持 `error` 属性（参见 [Issue 1271527: Propagate errors from scripting.executeScript to InjectionResult](https://crbug.com/1271527)）。作为替代，可以通过将要执行的代码包装在 try-catch 语句中来捕获运行时错误。未捕获的错误也会报告到目标标签页的控制台。
@@ -122,4 +117,4 @@ browser.action.onClicked.addListener(async (tab) => {
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#method-executeScript) API。
+> 此 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#method-executeScript) API。

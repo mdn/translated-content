@@ -21,8 +21,7 @@ new BroadcastChannel(channelName)
 ### 매개변수
 
 - `channelName`
-  - : 채널의 이름을 나타내는 문자열로, {{glossary("origin","출처")}}가 동일한 모든 {{glossary("browsing
-    context", "브라우징 맥락들")}}에 대해 이 이름을 가진 채널이 단 하나만 존재합니다.
+  - : 채널의 이름을 나타내는 문자열로, {{glossary("origin","출처")}}가 동일한 모든 {{glossary("browsing context", "브라우징 맥락들")}}에 대해 이 이름을 가진 채널이 단 하나만 존재합니다.
 
 ## 예제
 

@@ -1,12 +1,9 @@
 ---
 title: scope
 slug: Web/Progressive_web_apps/Manifest/Reference/scope
-original_slug: Web/Manifest/Reference/scope
 l10n:
-  sourceCommit: 1e660f71a4741c5fdf36bb7ac8dc7acfbc9cfb49
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 `scope` はマニフェストメンバーで、ウェブアプリケーションのページとサブディレクトリーを格納する最上位の URL パスを指定するために使用します。
 ユーザーがウェブアプリをインストールして使用すると、スコープ内のページがアプリのようなインターフェイスを提供します。
@@ -28,7 +25,6 @@ l10n:
 ### 値
 
 - `scope`
-
   - : URL を表す文字列です。
     これは絶対 URL にも相対 URL にもすることができます。
     値が相対 URL の場合、マニフェストファイルの URL に対して解決されます。
@@ -49,8 +45,9 @@ URL が「スコープ内」とみなされるのは、その URL のパスが `
 ユーザーがアプリのスコープ外のページに移動した場合でも、概ねアプリのようなインターフェイスが提供されますが、これらのページでは、ブラウザーは URL バーなどの追加の UI 要素を表示します。
 これにより、ユーザーはアプリの定義されたスコープ外のページを表示していることを理解しやすくなります。
 
-> **メモ:** `scope` メンバーは、ユーザーが定義したスコープ外のアプリページに移動することを妨げるものではありません。
-> スコープ外のナビゲーションはブラウザーによってブロックされず、新しい最上位の閲覧コンテキストで開かれることもありません。
+> [!NOTE]
+> `scope` メンバーは、ユーザーが定義したスコープ外のアプリページに移動することを妨げるものではありません。
+> スコープ外のナビゲーションはブラウザーによってブロックされず、新しい最上位の閲覧コンテキストで開くことができます。
 
 次のディレクトリー構造をもつ、ハイキングコースを探索するためのウェブアプリを想定してみましょう。
 
@@ -162,5 +159,5 @@ web-app/
 
 ## 関連情報
 
-- [`start_url`](/ja/docs/Web/Manifest/start_url) マニフェストメンバー
+- [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) マニフェストメンバー
 - {{Glossary("Application_context", "アプリケーションコンテキスト")}}

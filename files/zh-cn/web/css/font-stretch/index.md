@@ -5,11 +5,60 @@ l10n:
   sourceCommit: 7b029638cf0f82b3e70a3e7c242db001d198c047
 ---
 
-{{CSSRef}}
-
 **`font-stretch`** [CSS](/zh-CN/docs/Web/CSS) 属性可从字体中选择正常、压缩或扩展的字体外观。
 
-{{EmbedInteractiveExample("pages/css/font-stretch.html")}}
+{{InteractiveExample("CSS Demo: font-stretch")}}
+
+```css interactive-example-choice
+font-stretch: condensed;
+```
+
+```css interactive-example-choice
+font-stretch: expanded;
+```
+
+```css interactive-example-choice
+font-stretch: ultra-expanded;
+```
+
+```css interactive-example-choice
+font-stretch: 50%;
+```
+
+```css interactive-example-choice
+font-stretch: 100%;
+```
+
+```css interactive-example-choice
+font-stretch: 150%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p class="transition-all" id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
+  font-family: League;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 50% 200%; /* Required by Chrome - allow 50% to 200% */
+}
+
+section {
+  font-size: 1.2em;
+  font-family: League, sans-serif;
+}
+```
 
 ## 语法
 
@@ -49,7 +98,6 @@ font-stretch: unset;
 - `semi-expanded`、`expanded`、`extra-expanded` 和 `ultra-expanded`
   - : 指定比普通字体更扩展的字体，其中 `ultra-expanded` 为扩展程度最大的字体。
 - `<percentage>`
-
   - : 介于 50% 和 200% 之间的 {{cssxref("&lt;percentage&gt;")}} 值（包含两侧）。此属性不允许使用负值。
 
 ### 关键字到数值的映射
@@ -214,7 +262,8 @@ td {
 
 {{Specifications}}
 
-> **备注：** `font-stretch` 属性最初是在 CSS 2 中定义的，但在 CSS 2.1 中由于缺乏浏览器实现而被取消。在 CSS 3 中，该属性被重新定义。
+> [!NOTE]
+> `font-stretch` 属性最初是在 CSS 2 中定义的，但在 CSS 2.1 中由于缺乏浏览器实现而被取消。在 CSS 3 中，该属性被重新定义。
 
 ## 浏览器兼容性
 

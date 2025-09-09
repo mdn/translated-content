@@ -3,12 +3,10 @@ title: 子资源完整性
 slug: Web/Security/Subresource_Integrity
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
-
-**子资源完整性**（Subresource Integrity，SRI）是允许浏览器检查其获得的资源（例如从 [CDN](/zh-CN/docs/Glossary/CDN) 获得的）是否被篡改的一项安全特性。它通过验证获取文件的哈希值是否和你提供的哈希值一样来判断资源是否被篡改。
+**子资源完整性**（Subresource Integrity，SRI）是允许浏览器检查其获得的资源（例如从 [CDN](/zh-CN/docs/Glossary/CDN) 获得的）是否被篡改的一项安全特性。它通过验证获取文件的散列值是否和你提供的散列值一样来判断资源是否被篡改。
 
 > [!NOTE]
-> 对于从嵌入文件以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
+> 对于从嵌入文件以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
 
 ## SRI 如何工作
 
@@ -18,11 +16,12 @@ slug: Web/Security/Subresource_Integrity
 
 ## SRI 如何使用
 
-使用子资源完整性功能的方法是，在任何 {{HTMLElement("script")}} 或 {{HTMLElement("link")}} 元素的 `integrity` 属性值中，指定你要告诉浏览器所获取的资源（或文件）的 base64 编码的加密哈希值。
+使用子资源完整性功能的方法是，在任何 {{HTMLElement("script")}} 或 {{HTMLElement("link")}} 元素的 `integrity` 属性值中，指定你要告诉浏览器所获取的资源（或文件）的 base64 编码的加密散列值。
 
-`integrity` 值至少由一个字符串开始，每个字符串包括一个前缀，表示一个特定的哈希算法（目前允许的前缀是 `sha256`、`sha384` 和 `sha512`），后面是一个短横线（-），最后是实际的 base64 编码的哈希。
+`integrity` 值至少由一个字符串开始，每个字符串包括一个前缀，表示一个特定的散列算法（目前允许的前缀是 `sha256`、`sha384` 和 `sha512`），后面是一个短横线（-），最后是实际的 base64 编码的散列。
 
-> **备注：** **integrity** 值可以包含多个由空格分隔的哈希值，只要文件匹配其中任意一个哈希值，就可以通过校验并加载该资源。
+> [!NOTE]
+> **integrity** 值可以包含多个由空格分隔的散列值，只要文件匹配其中任意一个散列值，就可以通过校验并加载该资源。
 
 使用 base64 编码 sha384 算法计算出摘要后的 `integrity` 值的示例：
 
@@ -30,16 +29,16 @@ slug: Web/Security/Subresource_Integrity
 sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 ```
 
-`oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` 即“哈希”部分，`sha384` 前缀说明使用的是 sha384 哈希方法。
+`oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` 即“散列”部分，`sha384` 前缀说明使用的是 sha384 散列方法。
 
 > [!NOTE]
-> 严格来说，`integrity` 值的“哈希”部分是通过对一些输入（例如，一个脚本或样式表文件）应用一个特定的哈希函数而形成的**加密摘要**。但人们通常用“哈希”来表示**加密摘要**，所以本文就用了这个词。
+> 严格来说，`integrity` 值的“散列”部分是通过对一些输入（例如，一个脚本或样式表文件）应用一个特定的散列函数而形成的**加密摘要**。但人们通常用“散列”来表示**加密摘要**，所以本文就用了这个词。
 
-### 生成 SRI 哈希的工具
+### 生成 SRI 散列的工具
 
-[SRI Hash Generator](https://srihash.org/) 是一个在线生成 SRI 哈希值的工具。
+[SRI Hash Generator](https://srihash.org/) 是一个在线生成 SRI 散列值的工具。
 
-也可以用 **openssl** 在命令行中执行如下命令来生成 SRI 哈希值：
+也可以用 **openssl** 在命令行中执行如下命令来生成 SRI 散列值：
 
 ```bash
 cat FILENAME.js | openssl dgst -sha384 -binary | openssl base64 -A
@@ -56,7 +55,7 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 > - 通过管道连接的 `xxd` 步骤从 `shasum` 中获取十六进制的输出，并将其转换为二进制。
 > - 通过管道连接的 `awk` 的步骤是必要的，因为 `shasum` 会将其输出中的散列文件名传递给 `xxd`。如果文件名中恰好有有效的十六进制字符，这将产生灾难性的后果——因为 `xxd` 也会对其进行解码并传递给 `base64`。
 
-在 Windows 环境下，你可以使用以下代码创建生成 SRI 哈希的工具：
+在 Windows 环境下，你可以使用以下代码创建生成 SRI 散列的工具：
 
 ```batch
 @echo off
@@ -77,7 +76,7 @@ pause
 
 ## 跨源资源共享和子资源完整性
 
-对于从嵌入文档以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。因此，资源必须使用 [`Access-Control-Allow-Origin`](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) 标头来提供，以允许资源与请求方共享；例如：
+对于从嵌入文档以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。因此，资源必须使用 [`Access-Control-Allow-Origin`](/zh-CN/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) 标头来提供，以允许资源与请求方共享；例如：
 
 ```http
 Access-Control-Allow-Origin: *
@@ -89,7 +88,7 @@ Access-Control-Allow-Origin: *
 
 ### 在 \<script> 元素中确保 SRI
 
-你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 `https://example.com/example-framework.js` 中的内容之前，必须先比较该文件的哈希值是否和预期的一致，并验证是否匹配。
+你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 `https://example.com/example-framework.js` 中的内容之前，必须先比较该文件的散列值是否和预期的一致，并验证是否匹配。
 
 ```html
 <script
@@ -99,15 +98,15 @@ Access-Control-Allow-Origin: *
 ```
 
 > [!NOTE]
-> 有关 `crossorigin` 属性的更多信息，见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)。
+> 有关 `crossorigin` 属性的更多信息，见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)。
 
 ## 浏览器如何处理 SRI
 
 浏览器根据以下步骤处理 SRI：
 
-1. 当浏览器在 {{HTMLElement("script")}} 或者 {{HTMLElement("link")}} 标签中遇到 `integrity` 属性之后，会在执行脚本或者应用样式表之前对比所加载文件的哈希值和期望的哈希值。
+1. 当浏览器在 {{HTMLElement("script")}} 或者 {{HTMLElement("link")}} 标签中遇到 `integrity` 属性之后，会在执行脚本或者应用样式表之前对比所加载文件的散列值和期望的散列值。
 
-   对于从其他来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
+   对于从其他来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
 
 2. 如果脚本或样式表不符合其相关的 `integrity` 值，浏览器必须拒绝执行该脚本或拒绝应用该样式表，并且必须返回一个网络错误，表明该脚本或样式表的获取失败。
 
@@ -121,7 +120,7 @@ Access-Control-Allow-Origin: *
 
 ## 相关资料
 
-- [内容安全策略](/zh-CN/docs/Web/HTTP/CSP)
+- [内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)
 - HTTP 标头 {{httpheader("Content-Security-Policy")}}
 - [一个不能对你进行 XSS 的 CDN：使用 SRI](https://frederik-braun.com/using-subresource-integrity.html)
 - [来自 W3C 的 SRI 测试](https://w3c-test.org/subresource-integrity/subresource-integrity.html)

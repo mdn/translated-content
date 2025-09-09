@@ -3,11 +3,49 @@ title: box-shadow
 slug: Web/CSS/box-shadow
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`box-shadow`** 属性用于在元素的框架上添加阴影效果。你可以在同一个元素上设置多个阴影效果，并用逗号将他们分隔开。该属性可设置的值包括阴影的 X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色。
 
-{{EmbedInteractiveExample("pages/css/box-shadow.html")}}
+{{InteractiveExample("CSS Demo: box-shadow")}}
+
+```css interactive-example-choice
+box-shadow: 10px 5px 5px red;
+```
+
+```css interactive-example-choice
+box-shadow: 60px -16px teal;
+```
+
+```css interactive-example-choice
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+```
+
+```css interactive-example-choice
+box-shadow: inset 5em 1em gold;
+```
+
+```css interactive-example-choice
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>This is a box with a box-shadow around it.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  margin: 20px auto;
+  padding: 0;
+  border: 2px solid #333;
+  width: 80%;
+  text-align: center;
+}
+```
 
 你几乎可以在任何元素上使用`box-shadow`来添加阴影效果。如果元素同时设置了 {{ cssxref("border-radius") }}属性，那么阴影也会有圆角效果。多个阴影在 z 轴上的顺序和多个 [text shadows](/zh-CN/docs/Web/CSS/text-shadow) 规则相同 (第一个阴影在最上面)。
 
@@ -42,7 +80,6 @@ box-shadow: unset;
 向元素添加单个 box-shadow 效果时使用以下规则：
 
 - 当给出两个、三个或四个 [`<length>`](/zh-CN/docs/Web/CSS/length)值时。
-
   - 如果只给出两个值，那么这两个值将会被当作 `<offset-x><offset-y>` 来解释。
   - 如果给出了第三个值，那么第三个值将会被当作`<blur-radius>`解释。
   - 如果给出了第四个值，那么第四个值将会被当作`<spread-radius>`来解释。

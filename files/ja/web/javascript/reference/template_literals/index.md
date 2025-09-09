@@ -84,7 +84,7 @@ string text line 2`);
 
 ### 文字列の補間
 
-テンプレートリテラルなしで、式からの出力と文字列を結合したい場合、[結合](/ja/docs/Learn/JavaScript/First_steps/Strings#_を用いた連結)は[加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition) `+` を使用して行うことになります。
+テンプレートリテラルなしで、式からの出力と文字列を結合したい場合、[結合](/ja/docs/Learn_web_development/Core/Scripting/Strings#_を用いた連結)は[加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition) `+` を使用して行うことになります。
 
 ```js
 const a = 5;
@@ -322,7 +322,8 @@ const doc = html`<!doctype html>
 - `\u` に `{` が続かず、 4 桁以下（ないものも含む）の 16 進数が通づいたもの。例えば `\uz`
 - `\u{}` で有効な Unicode コードポイントを囲んだもの。ここには 16 進数以外のもの、まてゃあ `10FFFF` 以上の値。例えば `\u{110000}` や `\u{z}`
 
-> **メモ:** `\` に他の文字が続くと、何もエスケープされていないので、無意味かもしれませんが、構文エラーではありません。
+> [!NOTE]
+> `\` に他の文字が続くと、何もエスケープされていないので、無意味かもしれませんが、構文エラーではありません。
 
 しかし、これはタグ付きテンプレートにとっては問題です。「加工済み」リテラルに加えて、生のリテラルにもアクセスできるからです（エスケープシーケンスはそのまま保持されます）。
 
@@ -366,7 +367,7 @@ const bad = `bad escape sequence: \unicode`;
 
 ## 関連情報
 
-- [テキスト整形](/ja/docs/Web/JavaScript/Guide/Text_formatting)ガイド
+- [テキスト整形](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)ガイド
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)

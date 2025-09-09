@@ -9,7 +9,7 @@ l10n:
 
 L'objet **`console`** permet d'accéder à la console de débogage de l'environnement JavaScript (par exemple [la console web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) de Firefox). Son fonctionnement varie d'un navigateur à l'autre, mais certaines fonctionnalités sont standardisées et généralement fournies.
 
-On peut accéder à l'objet `console` depuis n'importe quel objet global, [`Window`](/fr/docs/Web/API/Window) pour les contextes de navigation classiques et [`WorkerGlobalScope`](/fr/docs/Web/API/WorkerGlobalScope) dans les <i lang="en">workers</i>, grâce à la propriété `console`. Exposé via [`Windows.console`](/fr/docs/Web/API/Window/console), on peut y faire référence avec `console`. Par exemple&nbsp;:
+On peut accéder à l'objet `console` depuis n'importe quel objet global, [`Window`](/fr/docs/Web/API/Window) pour les contextes de navigation classiques et [`WorkerGlobalScope`](/fr/docs/Web/API/WorkerGlobalScope) dans les <i lang="en">workers</i>, grâce à la propriété `console`. Exposé via [`Windows.console`](/fr/docs/conflicting/Web/API/console), on peut y faire référence avec `console`. Par exemple&nbsp;:
 
 ```js
 console.log("Erreur à l'ouverture du lien indiqué.");

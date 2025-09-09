@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当窗口中的活动标签页更改时触发。请注意，此事件触发时，标签页的 URL 可能尚未设置，但你可以监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件，以便在设置 URL 时收到通知。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.tabs.onActivated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `activeInfo`
       - : `object`。被激活的标签页的 ID 及其窗口的 ID。详见 [activeInfo](#activeinfo_2) 部分。
 
@@ -67,7 +63,7 @@ browser.tabs.onActivated.addListener(handleActivated);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onActivated) API。此文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onActivated) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

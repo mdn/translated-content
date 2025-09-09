@@ -18,7 +18,6 @@ slug: Web/CSS/display-outside
 - `inline`
   - : Элемент создаёт один или более строковых (inline) боксов элемента, которые не создают разрывов строк перед собой или после себя. В нормальном потоке следующий элемент будет находиться на той же линии, если есть пробел.
 - `run-in` {{Experimental_Inline}}
-
   - : Элемент генерирует run-in бокс. Если соседний родственный (sibling) элемент определён как `display: run-in, тогда` бокс является блоковым боксом, `run-in` бокс становится первым строковым (inline) боксом блокового бокса, который следует за ним.
 
     Run-in элементы ведут себя как строковые (inlines) или блоковые, в зависимости от окружающих элементов. Если run-in бокс содержит блоковый бокс, тогда он сам считается блоковым. Если блоковый бокс следует за run-in боксом, тогда run-in бокс становится первым строковым (inline) боксом блокового бокса. Если за ним следует строковый (inline) бокс, тогда run-in бокс становится блоковым боксом.
@@ -58,4 +57,4 @@ span {
 - {{CSSxRef("display")}}
 - {{CSSxRef("&lt;display-inside&gt;")}}
 - [Block and Inline layout in Normal Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Formatting Contexts explained](/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [Formatting Contexts explained](/ru/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)

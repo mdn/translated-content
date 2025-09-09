@@ -3,10 +3,10 @@ title: "XMLHttpRequest: getResponseHeader() メソッド"
 short-title: getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 {{DOMxRef("XMLHttpRequest")}} の **`getResponseHeader()`** メソッドは、特定のヘッダー値のテキストを含んだ文字列を返します。
 
@@ -61,8 +61,8 @@ client.onreadystatechange = () => {
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}
-- リクエストヘッダーの設定: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}
+- リクエストヘッダーの設定: {{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

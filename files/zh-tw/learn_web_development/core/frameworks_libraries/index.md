@@ -1,10 +1,7 @@
 ---
 title: 理解 JavaScript 前端框架
 slug: Learn_web_development/Core/Frameworks_libraries
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
-
-{{LearnSidebar}}
 
 JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師透過千錘百鍊的工具，建立擴展性高、互動性強的網路程式。多數公司也視 JavaScript 框架為重要的前端工具。因此多數前端工程師，會需要擁有前端框架的技能。
 

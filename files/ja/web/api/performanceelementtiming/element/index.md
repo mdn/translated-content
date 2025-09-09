@@ -18,7 +18,7 @@ l10n:
 
 ### 監視対象の要素のログ出力
 
-この例では、 [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加して {{HTMLElement("img")}} 要素を監視しています。また、 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグが使用されます。監視された DOM 要素はコンソールにログ出力されます。
+この例では、 [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して {{HTMLElement("img")}} 要素を監視しています。また、 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグが使用されます。監視された DOM 要素はコンソールにログ出力されます。
 
 ```html
 <img src="image.jpg" alt="a nice image" elementtiming="big-image" />

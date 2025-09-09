@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**コンテンツヘッダー**は、HTTP メッセージ本体のコンテンツを説明する [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)のグループであり、本体に指定されたメッセージフレームが除去された後のものです。
+**コンテンツヘッダー**は、HTTP メッセージ本体のコンテンツを説明する [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)のグループであり、本体に指定されたメッセージフレームが除去された後のものです。
 コンテンツの長さ、転送エンコード方式、リソースのどの部分がデータに含まれているか（マルチパートメッセージの場合）、メッセージの完全性チェックなど、転送中の具体的なメッセージで伝達される{{Glossary("HTTP Content", "メッセージコンテンツ")}}のプロパティが特に記述されています。
 これらは、エンコード方式、メディアタイプ、言語、リソースの他の特性を記述し、基礎となるデータの解釈を可能にする「{{Glossary("Representation header", "表現ヘッダー")}}」とは異なります。
 
@@ -28,7 +28,7 @@ l10n:
 
 ## 関連情報
 
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
 - 関連用語項目:
   - {{Glossary("Representation header", "表現ヘッダー")}}
   - {{Glossary("HTTP Content", "HTTP コンテンツ")}}

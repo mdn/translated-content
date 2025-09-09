@@ -3,8 +3,6 @@ title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 ---
 
-{{jsSidebar("Objects")}}
-
 **`eval()`** 函数会将传入的字符串当做 JavaScript 代码进行执行。
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
@@ -237,7 +235,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener('click', function() { ... } , false);
 ```
 
-[闭包](/zh-CN/docs/Web/JavaScript/Closures) 也有助于创建参数化函数而不用连接字符串。
+[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures) 也有助于创建参数化函数而不用连接字符串。
 
 ### 解析 JSON（将字符串转化为 JavaScript 对象）
 

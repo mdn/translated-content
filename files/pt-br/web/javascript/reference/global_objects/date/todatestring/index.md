@@ -17,7 +17,7 @@ objetoDate.toDateString()
 
 Exemplares de {{jsxref("Date")}} referem-se a um ponto específico no tempo. Chamar {{jsxref("Date.prototype.toString()", "toString()")}} retorna a data num formato legível para humanos em inglês dos Estados Unidos. No [SpiderMonkey](/pt-BR/docs/SpiderMonkey), isso consiste na porção da data (dia, mês e ano) seguida pela porção da hora (horas, minutos, segundos e fuso horário). Ás vezes, deseja-se obter uma string apenas da porção da data; Isso pode ser conseguido com o método `toDateString()`.
 
-`O método toDateString()` é especialmente útil porque motores que implementam o padrão [ECMA-262](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview) podem divergir na string retornada pelo {{jsxref("Date.prototype.toString()", "toString()")}} de objetos {{jsxref("Date")}} , pois o formato é dependente da implentação e abordagens simples que repartem a string podem não produzir resultados consistentes nos vários motores.
+`O método toDateString()` é especialmente útil porque motores que implementam o padrão [ECMA-262](/pt-BR/docs/Web/JavaScript/Reference/JavaScript_technologies_overview) podem divergir na string retornada pelo {{jsxref("Date.prototype.toString()", "toString()")}} de objetos {{jsxref("Date")}} , pois o formato é dependente da implentação e abordagens simples que repartem a string podem não produzir resultados consistentes nos vários motores.
 
 ## Exemplos
 

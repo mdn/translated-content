@@ -72,5 +72,5 @@ WebAssembly.compileStreaming(fetch("simple-name-section.wasm")).then(
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

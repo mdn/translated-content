@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 72304bf90ccd530ff9dc9e5ff12397b2600248ed
 ---
 
-{{CSSRef}}
-
 **CSS 媒体查询**（media query）是[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)的关键组成部分，你可以根据各种设备特征和参数是否存在以及对应的值来应用 CSS 样式。
 
 通常根据{{Glossary("viewport", "视口")}}大小来应用媒体查询，以便可以为不同屏幕大小的设备做出布局调整。例如，你可以为小屏设备设置较小的字体，在纵向模式下查看页面时增加段落间的边距，或者增加触摸屏上按钮的大小。
@@ -21,9 +19,9 @@ l10n:
 
 在 [HTML](/zh-CN/docs/Web/HTML) 中，媒体查询可以应用于各种元素：
 
-- 在 {{HTMLElement("link")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Element/link#media) 属性中，其定义待应用链接资源（通常是 CSS）的媒体。
-- 在 {{HTMLElement("source")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Element/source#media) 属性中，其定义待应用源的媒体。（这仅在 {{HTMLElement("picture")}} 元素内有效。）
-- 在 {{HTMLElement("style")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Element/style#media) 属性中，其定义待应用样式的媒体。
+- 在 {{HTMLElement("link")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性中，其定义待应用链接资源（通常是 CSS）的媒体。
+- 在 {{HTMLElement("source")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/source#media) 属性中，其定义待应用源的媒体。（这仅在 {{HTMLElement("picture")}} 元素内有效。）
+- 在 {{HTMLElement("style")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/style#media) 属性中，其定义待应用样式的媒体。
 
 ### 在 JavaScript 中使用媒体查询
 

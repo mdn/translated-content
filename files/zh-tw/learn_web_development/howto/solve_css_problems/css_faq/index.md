@@ -1,10 +1,7 @@
 ---
 title: CSS 一般問題
 slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
-original_slug: Learn/CSS/Howto/CSS_FAQ
 ---
-
-{{LearnSidebar}}
 
 ## 我的 CSS 合乎規格，但繪出的版面有誤
 

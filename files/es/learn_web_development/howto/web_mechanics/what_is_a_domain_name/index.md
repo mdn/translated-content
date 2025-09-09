@@ -54,7 +54,6 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 <!-- -->
 
 - {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
-
   - : El TLD proporciona la información más genérica. Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (.com, .org, .net) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
 
     **Etiqueta (o componente)**
@@ -150,6 +149,6 @@ Como ya hemos visto, cuando usted quiere visualizar una página web en su navega
 Bien, hemos hablado mucho sobre procesos y arquitectura. Es hora de seguir adelante.
 
 - Si quieres ponerte manos a la obra, es buen momento para comenzar a profundizar en el diseño y explorar [la estructura de una página web](/es/docs/Learn/Common_questions/dise%C3%B1os_web_comunes).
-- Vale la pena señalar que algunos aspectos de construcción de un sitio web cuestan dinero. Por favor, remítase a [cuánto cuesta construir un sitio web](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost).
+- Vale la pena señalar que algunos aspectos de construcción de un sitio web cuestan dinero. Por favor, remítase a [cuánto cuesta construir un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
 - O lea más sobre [Nombre de Dominio](https://es.wikipedia.org/wiki/Dominio) en la Wikipedia.
 - Puede encontrar además [aquí](https://howdns.works/) una explicación colorida y divertida de cómo los DNS trabajan.

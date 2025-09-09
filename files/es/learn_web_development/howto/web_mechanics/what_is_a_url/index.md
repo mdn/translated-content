@@ -41,7 +41,7 @@ Junto con el {{Glossary("Hypertext", "Hipertexto")}} y {{Glossary("HTTP")}}, las
 
 ## Aprendizaje activo
 
-_Por el momento no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Contributing/Getting_started)._
+_Por el momento no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Getting_started)._
 
 ## Profundizando
 
@@ -85,7 +85,7 @@ Puede pensar en una URL como una dirección de correo postal normal: el protocol
 
 Se puede escribir cualquier URL dentro de la barra de direcciones del navegador para acceder al recurso que se encuentra detrás. ¡Pero esto es sólo la punta del iceberg!
 
-El lenguaje {{Glossary("HTML")}} — [que se discutirá más adelante](/es/docs/Learn/HTML/Introduction_to_HTML) — hace un uso extensivo de las URL:
+El lenguaje {{Glossary("HTML")}} — [que se discutirá más adelante](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) — hace un uso extensivo de las URL:
 
 - para crear enlaces a otros documentos con el elemento {{HTMLElement("a")}};
 - para vincular un documento con sus recursos relacionados a través de varios elementos como {{HTMLElement("link")}} o {{HTMLElement("script")}};
@@ -194,4 +194,4 @@ La semántica lingüística es, por supuesto, irrelevante para las computadoras.
 
 ## Próximos pasos
 
-- [Comprendiendo nombres de dominio](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Comprendiendo nombres de dominio](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

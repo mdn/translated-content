@@ -3,8 +3,6 @@ title: Firefox 32 для разработчиков
 slug: Mozilla/Firefox/Releases/32
 ---
 
-{{FirefoxSidebar}}
-
 Хотите помочь с документированием Firefox 32? Взгляните на [список ошибок, о которых нужно написать](http://beta.elchi3.de/doctracker/#list=fx&version=32.0) и приступайте!
 
 ## Изменения для Web Разработчиков
@@ -33,12 +31,11 @@ slug: Mozilla/Firefox/Releases/32
 
 ### HTML
 
-- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Element/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ([Firefox bug 870021](https://bugzil.la/870021)).
+- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Reference/Elements/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ([Firefox bug 870021](https://bugzil.la/870021)).
 
 ### JavaScript
 
 - Реализованы новые встроенные методы ECMAScript 6:
-
   - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723))
   - {{jsxref("Array.prototype.copyWithin()")}}
   - {{jsxref("Number.isSafeInteger()")}}

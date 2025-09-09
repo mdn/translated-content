@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaLive`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が更新されることを示す [`aria-live`](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 属性の値を反映し、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
+**`ariaLive`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が更新されることを示す [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) 属性の値を反映し、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
 
 ## 値
 
@@ -23,7 +23,7 @@ l10n:
 
 ## 例
 
-この例では、ID が `planetInfo` の要素の [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性は "polite" に設定されています。次に、値を "assertive" に更新します。
+この例では、ID が `planetInfo` の要素の [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性は "polite" に設定されています。次に、値を "assertive" に更新します。
 
 ```html
 <div role="region" id="planetInfo" aria-live="polite">

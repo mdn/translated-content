@@ -38,7 +38,7 @@ Object.create(proto, propertiesObject)
 - `proto`
   - : 新创建对象的原型对象。
 - `propertiesObject` {{Optional_inline}}
-  - : 如果该参数被指定且不为 {{jsxref("undefined")}}，则该传入对象[可枚举的自有属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)将为新创建的对象添加具有对应属性名称的属性描述符。这些属性对应于 {{jsxref("Object.defineProperties()")}} 的第二个参数。
+  - : 如果该参数被指定且不为 {{jsxref("undefined")}}，则该传入对象[可枚举的自有属性](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)将为新创建的对象添加具有对应属性名称的属性描述符。这些属性对应于 {{jsxref("Object.defineProperties()")}} 的第二个参数。
 
 ### 返回值
 

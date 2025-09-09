@@ -4,8 +4,6 @@ slug: orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types
 original_slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`plugin-types`** restreint l'ensemble des greffons pouvant être intégrés dans un document en limitant les types de ressources pouvant être chargées.
 
 L'instanciation d'éléments {{HTMLElement("embed")}}, {{HTMLElement("object")}} ou {{HTMLElement("applet")}} échouera si :
@@ -33,7 +31,7 @@ L'instanciation d'éléments {{HTMLElement("embed")}}, {{HTMLElement("object")}}
 
 ## Syntaxe
 
-Un ou plusieurs [types MIME](/fr/docs/Web/HTTP/MIME_types) peuvent être autorisées pour cette directive :
+Un ou plusieurs [types MIME](/fr/docs/Web/HTTP/Guides/MIME_types) peuvent être autorisées pour cette directive :
 
 ```
 Content-Security-Policy: plugin-types <type>/<subtype>;
@@ -41,7 +39,7 @@ Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 ```
 
 - \<type>/\<subtype>
-  - : Un [type MIME](/fr/docs/Web/HTTP/MIME_types/Common_types) valide.
+  - : Un [type MIME](/fr/docs/Web/HTTP/Guides/MIME_types/Common_types) valide.
 
 ## Exemples
 

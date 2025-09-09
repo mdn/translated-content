@@ -74,7 +74,7 @@ HTML не является языком программирования; это
 
 ### Анатомия HTML документа
 
-Мы завершили изучение основ отдельных HTML элементов, но они не очень полезны сами по себе. Теперь мы посмотрим, как отдельные элементы объединяются в целую HTML страницу. Давайте вернёмся к коду, который мы записывали в наш `index.html` (с которым мы впервые встретились в статье [Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)):
+Мы завершили изучение основ отдельных HTML элементов, но они не очень полезны сами по себе. Теперь мы посмотрим, как отдельные элементы объединяются в целую HTML страницу. Давайте вернёмся к коду, который мы записывали в наш `index.html` (с которым мы впервые встретились в статье [Работа с файлами](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)):
 
 ```html
 <!doctype html>
@@ -222,6 +222,6 @@ HTML не является языком программирования; это
 
 Если вы застряли, вы всегда можете сравнить свою работу с нашим [готовым примером кода](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) на GitHub.
 
-Здесь вы узнали только самую поверхность HTML. Чтобы узнать больше, перейдите на страницу [Обучение HTML: руководства и уроки](/ru/docs/Learn/HTML).
+Здесь вы узнали только самую поверхность HTML. Чтобы узнать больше, перейдите на страницу [Обучение HTML: руководства и уроки](/ru/docs/Learn_web_development/Core/Structuring_content).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}

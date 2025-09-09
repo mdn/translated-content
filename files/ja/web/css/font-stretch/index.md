@@ -5,14 +5,64 @@ l10n:
   sourceCommit: 6de7472d2f9ff0a78a0098721df1d5473d51b953
 ---
 
-{{CSSRef}}
-
-> **メモ:** `font-stretch` プロパティは仕様書において [`font-width` に名前が変更されました](https://drafts.csswg.org/css-fonts/#font-stretch-desc)。 `font-stretch` は `font-width` プロパティの別名として維持されることになりました。
+> [!NOTE]
+> `font-stretch` プロパティは仕様書において [`font-width` に名前が変更されました](https://drafts.csswg.org/css-fonts/#font-stretch-desc)。 `font-stretch` は `font-width` プロパティの別名として維持されることになりました。
 > 新しい `font-width` という名前には、まだどのブラウザーでも対応していません。
 
 **`font-stretch`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの normal, condensed, expanded のフェイスを選択します。
 
-{{EmbedInteractiveExample("pages/css/font-stretch.html")}}
+{{InteractiveExample("CSS デモ: font-stretch")}}
+
+```css interactive-example-choice
+font-stretch: condensed;
+```
+
+```css interactive-example-choice
+font-stretch: expanded;
+```
+
+```css interactive-example-choice
+font-stretch: ultra-expanded;
+```
+
+```css interactive-example-choice
+font-stretch: 50%;
+```
+
+```css interactive-example-choice
+font-stretch: 100%;
+```
+
+```css interactive-example-choice
+font-stretch: 150%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p class="transition-all" id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
+  font-family: League;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 50% 200%; /* Required by Chrome - allow 50% to 200% */
+}
+
+section {
+  font-size: 1.2em;
+  font-family: League, sans-serif;
+}
+```
 
 ## 構文
 
@@ -52,7 +102,6 @@ font-stretch: unset;
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : 通常より幅の広い (expanded) フォントフェイスを指定します。最も幅の広いフェイスは ultra-expanded です。
 - `<percentage>`
-
   - : {{cssxref("&lt;percentage&gt;")}} 値です。このプロパティでは負の数は許可されていません。
 
 ### キーワードと数値の対応
@@ -258,5 +307,5 @@ p {
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール

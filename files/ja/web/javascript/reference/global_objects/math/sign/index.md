@@ -9,7 +9,7 @@ l10n:
 
 **`Math.sign()`** 静的メソッドは 1 または -1 を返し、引数として渡された値の符号を表します。入力値が 0 または -0 ならば、そのまま返します。
 
-{{InteractiveExample("JavaScript Demo: Math.sign()")}}
+{{InteractiveExample("JavaScript デモ: Math.sign()")}}
 
 ```js interactive-example
 console.log(Math.sign(3));

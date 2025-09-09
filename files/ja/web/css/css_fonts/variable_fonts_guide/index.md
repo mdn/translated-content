@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
-{{CSSRef}}
-
 **可変フォント** (Variable fonts) は幅、太さ、スタイルごとに個別のフォントファイルを用意するのではなく、書体のさまざまなバリエーションを 1 つのファイルに組み込むことができる OpenType フォント仕様の進化版です。CSS および単一の {{cssxref("@font-face")}} 参照を介して、特定のフォントファイルに含まれるすべてのバリエーションにアクセスできます。この記事では、可変フォントの使用を開始するために知っておく必要があるすべての内容を説明します。
 
 > [!NOTE]
@@ -59,7 +57,7 @@ l10n:
 
    `wght` (太さ) は登録済みの軸で、`GRAD` (等級) はカスタム軸です。
 
-2. `font-variation-settings` を使って値を設定していて、そのうちの 1 つの値を変更したい場合は、すべての値を再宣言しなければなりません ({{cssxref("font-feature-settings")}} を使って OpenType フォントの特性を設定したときと同じ方法です)。この制限を回避するには、個々の値に [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) (CSS 変数)を使用し、個々のカスタムプロパティの値を変更してください。ガイドの最後にサンプルコードを掲載しています。
+2. `font-variation-settings` を使って値を設定していて、そのうちの 1 つの値を変更したい場合は、すべての値を再宣言しなければなりません ({{cssxref("font-feature-settings")}} を使って OpenType フォントの特性を設定したときと同じ方法です)。この制限を回避するには、個々の値に [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) (CSS 変数)を使用し、個々のカスタムプロパティの値を変更してください。ガイドの最後にサンプルコードを掲載しています。
 
 ### 太さ
 
@@ -695,7 +693,8 @@ angle.addEventListener("input", (e) => {
 > [!NOTE]
 > すべてのブラウザーがフォント指定形式の完全な構文を実装しているわけではないので、慎重にテストしてください。可変フォントに対応しているブラウザーはすべて、形式を format-variations ではなく、ファイル形式だけに設定してもレンダリングされますが (例：`woff2-variations` ではなく `woff2`)、可能であれば適切な構文を使用することをお勧めします。
 
-> **メモ:** `font-weight`, `font-stretch`, `font-style` に値の範囲を指定した場合は、適切な属性 (すなわち `font-weight` や `font-stretch`) を使用していると、ブラウザーがその範囲外の軸をレンダリングしようとしないようにしますが、`font-variation-settings` で無効な値を指定した場合には、それを阻止することはできませんので注意して使用してください。
+> [!NOTE]
+> `font-weight`, `font-stretch`, `font-style` に値の範囲を指定した場合は、適切な属性 (すなわち `font-weight` や `font-stretch`) を使用していると、ブラウザーがその範囲外の軸をレンダリングしようとしないようにしますが、`font-variation-settings` で無効な値を指定した場合には、それを阻止することはできませんので注意して使用してください。
 
 ## 古いブラウザーでの作業
 

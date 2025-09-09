@@ -3,7 +3,7 @@ title: 迭代器和生成器
 slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
 
 迭代器和生成器将迭代的概念直接带入核心语言，并提供了一种机制来自定义 {{jsxref("Statements/for...of","for...of")}} 循环的行为。
 
@@ -68,7 +68,8 @@ while (!result.done) {
 console.log(`已迭代序列的大小：${result.value}`); // 5
 ```
 
-> **备注：** [反射性](https://zh.wikipedia.org/wiki/反射式编程)地知道特定对象是否是迭代器是不可能的。如果你需要这样做，请使用[可迭代对象](#可迭代对象)。
+> [!NOTE]
+> [反射性](https://zh.wikipedia.org/wiki/反射式编程)地知道特定对象是否是迭代器是不可能的。如果你需要这样做，请使用[可迭代对象](#可迭代对象)。
 
 ## 生成器函数
 
@@ -95,7 +96,7 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 若一个对象拥有迭代行为，比如在 {{jsxref("Statements/for...of", "for...of")}} 中会循环一些值，那么那个对象便是一个可迭代对象。一些内置类型，如 {{jsxref("Array")}} 或 {{jsxref("Map")}} 拥有默认的迭代行为，而其他类型（比如 {{jsxref("Object")}}）则没有。
 
-为了实现**可迭代**，对象必须实现 `[Symbol.iterator]()` 方法，这意味着这个对象（或其[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的任意一个对象）必须具有一个键值为 {{jsxref("Symbol.iterator")}} 的属性。
+为了实现**可迭代**，对象必须实现 `[Symbol.iterator]()` 方法，这意味着这个对象（或其[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中的任意一个对象）必须具有一个键值为 {{jsxref("Symbol.iterator")}} 的属性。
 
 程序员应知道一个可迭代对象可以多次迭代，还是只能迭代一次。
 

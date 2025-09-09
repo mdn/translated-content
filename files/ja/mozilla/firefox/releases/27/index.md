@@ -3,8 +3,6 @@ title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリリースされました。このページでは、開発者に影響する Firefox 27 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -34,8 +32,8 @@ Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリ�
 
 ### HTML
 
-- デスクトッププラットフォームにおいて、{{HTMLElement("input")}} の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性で値 "color" を実装しました。これは、モバイルプラットフォームですでに利用できていました。
-- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性で、`allow-popups` ディレクティブをサポートしました ([Firefox バグ 766282](https://bugzil.la/766282))。
+- デスクトッププラットフォームにおいて、{{HTMLElement("input")}} の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性で値 "color" を実装しました。これは、モバイルプラットフォームですでに利用できていました。
+- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性で、`allow-popups` ディレクティブをサポートしました ([Firefox バグ 766282](https://bugzil.la/766282))。
 - {{cssxref("mix-blend-mode")}} プロパティを使用した HTML 要素のブレンドを実装しました。設定項目 `layout.css.mix-blend-mode.enabled` を `true` に設定しなければなりません ([Firefox バグ 902525](https://bugzil.la/902525))。
 
 ### JavaScript

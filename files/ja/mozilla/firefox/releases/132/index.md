@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3661f58cce5f12ee603d1140aa7fbdff4ad7821c
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 132 の変更点をまとめています。Firefox 132 は、米国時間 [2024 年 10 月 29 日](https://whattrainisitnow.com/release/?version=132) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -22,7 +20,7 @@ l10n:
 
 #### 廃止
 
-- [`-moz-user-modify`](/ja/docs/Web/CSS/user-modify) CSS プロパティを削除しました。このプロパティは、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) グローバル属性が支持されたため非推奨になっていました ([Firefox bug 1920118](https://bugzil.la/1920118))。
+- [`-moz-user-modify`](/ja/docs/Web/CSS/user-modify) CSS プロパティを削除しました。このプロパティは、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性が支持されたため非推奨になっていました ([Firefox bug 1920118](https://bugzil.la/1920118))。
 
 ### JavaScript
 
@@ -68,7 +66,6 @@ l10n:
 - **Cookie Store API:** `dom.cookieStore.enabled`。
 
   [Cookie Store API](/ja/docs/Web/API/Cookie_Store_API) は新しい {{jsxref("Promise")}} ベースの Cookie 管理方法で、イベントループをブロックせず、{{domxref("Document")}} に依存しません (このため [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) で使用できます)。Firefox 132 では Cookie Store API のサブセットを実装しました ([Firefox bug 1800882](https://bugzil.la/1800882))。以下のプロパティが含まれます:
-
   - [`CookieStore`](/ja/docs/Web/API/CookieStore) インターフェイス。ただし戻り値に `partitioned` は含まれません。
   - [`CookieChangeEvent`](/ja/docs/Web/API/CookieChangeEvent) インターフェイス。ただし `partitioned` プロパティを除きます。
   - [`Window.cookieStore`](/ja/docs/Web/API/Window/cookieStore) プロパティ。
@@ -78,7 +75,7 @@ l10n:
 
   {{domxref('Window.fetch','fetch()')}} グローバルメソッドに [`keepalive`](/ja/docs/Web/API/RequestInit#keepalive) 初期化オプションがあります。`keepalive` を `true` に設定すると、ブラウザーはリクエストが完了する前にリクエストを開始したページがアンロードされても、関連するリクエストを中止しません。
 
-  これはセッションの終了時に分析情報を送信するときに {{domxref("Navigator.sendBeacon()")}} の代替として読み込みリクエストが機能することを可能にして、いくつかの利点をもたらします ([`POST`](/ja/docs/Web/HTTP/Methods/POST) 以外の HTTP メソッドを利用する、リクエストのプロパティをカスタマイズする、あるいは読み込みの {{jsxref("Promise")}} のフルフィルメントを通してサーバーのレスポンスにアクセスすることが可能です)。これは [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) でも使用できます ([Firefox bug 1906952](https://bugzil.la/1906952))。
+  これはセッションの終了時に分析情報を送信するときに {{domxref("Navigator.sendBeacon()")}} の代替として読み込みリクエストが機能することを可能にして、いくつかの利点をもたらします ([`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) 以外の HTTP メソッドを利用する、リクエストのプロパティをカスタマイズする、あるいは読み込みの {{jsxref("Promise")}} のフルフィルメントを通してサーバーのレスポンスにアクセスすることが可能です)。これは [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) でも使用できます ([Firefox bug 1906952](https://bugzil.la/1906952))。
 
 - **`CloseWatcher`**: <code>dom.closewatcher.enabled</code>。
   {{domxref("CloseWatcher")}} インターフェイスは、組み込みコンポーネントと同じようにデバイスのネイティブな仕組みを使用して閉じることが可能なコンポーネントを開発者が実装することを可能にします。たとえば Android では、戻るボタンを使用してダイアログを閉じることができます。このインターフェイスで、独自のサイドバーを同じように閉じることができます ([Firefox bug 1888729](https://bugzil.la/1888729))。

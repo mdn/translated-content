@@ -14,21 +14,21 @@ original_slug: Web/Media/Formats
 
 ### 画像
 
-- [画像ファイルの種類と形式のガイド](/ja/docs/Web/Media/Formats/Image_types)
+- [画像ファイルの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)
   - : 主要なウェブブラウザーが対応している画像ファイルの種類とコンテンツ形式をカバーし、それぞれの種類についての基本的な情報を提供しています。利点、制限、使用例など、ウェブデザイナーや開発者が興味を持つ情報を提供します。
 - [ウェブデザイナーのための画像ファイル形式](/ja/docs/Web/Media/Formats/Images_for_web_designers)
   - : ウェブデザイナーにとって有用な様々な画像ファイルの種類についての基本的な情報であり、各種類のベストプラクティスや使用例、特定のコンテンツの種類に適した画像ファイル形式を選択するためのガイドラインなどが含まれています。
 
 ### メディアファイルの種類とコーデック
 
-- [メディアコンテナー (ファイルの種類)](/ja/docs/Web/Media/Formats/Containers)
+- [メディアコンテナー (ファイルの種類)](/ja/docs/Web/Media/Guides/Formats/Containers)
   - : メディアデータを含むファイルの種類のガイド。オーディオに特化したものもあれば、オーディオや映画などの複合視聴覚コンテンツに使われるものもあります。主要なウェブブラウザーが対応している各ファイル種別の概要と、ブラウザーの対応情報、対応している機能が含まれています。
 
 <!---->
 
 - [ウェブ音声コーデックガイド](/ja/docs/Web/Media/Formats/Audio_codecs)
   - : 一般的なメディアコンテナーや主要なブラウザーで許可されているオーディオコーデックのガイド。メリット、制限、主要な仕様と機能、ユースケースが含まれています。また、与えられたコンテナーでコーデックを使用するための各ブラウザーのサポートもカバーしています。
-- [ウェブ動画コーデックガイド](/ja/docs/Web/Media/Formats/Video_codecs)
+- [ウェブ動画コーデックガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)
   - : この記事では、主要なブラウザーが対応してている動画コーデックについての基本的な情報と、一般的には対応されていないが、まだ遭遇する可能性のあるいくつかの情報を提供します。また、コーデックの機能、利点、制限、ブラウザーの対応レベルと制限についても説明します。
 - [一般的なメディアタイプの "codecs" 引数](/ja/docs/Web/Media/Formats/codecs_parameter)
   - : メディア形式を記述する MIME タイプを指定するときは、 type 文字列の一部として `codecs` 引数を使用して詳細を提供できます。このガイドでは、一般的なメディアタイプの `codecs` 引数の形式と可能な値について説明します。
@@ -46,7 +46,7 @@ original_slug: Web/Media/Formats
 
 ### チュートリアルと how-to
 
-- [学習: 動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [学習: 動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : このチュートリアルでは、ウェブ上でのメディアの利用方法を紹介し、詳細を説明します。
 - [ウェブコンテンツにおけるメディア対応の課題への対応](/ja/docs/Web/Media/Formats/Support_issues)
   - : このガイドでは、メディア形式を賢く選択し、フォールバックや代替形式を提供することで、可能な限り幅広い互換性を提供しながら、品質やパフォーマンスを最大化するウェブコンテンツを構築する方法を見ていきます。

@@ -3,8 +3,6 @@ title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
 
-{{JSRef}}
-
 **`reduce()`** 方法將一個累加器及陣列中每項元素（由左至右）傳入回呼函式，將陣列化為單一值。
 
 {{InteractiveExample("JavaScript Demo: Array.reduce()")}}
@@ -32,9 +30,7 @@ arr.reduce(callback[accumulator, currentValue, currentIndex, array], initialValu
 ### 參數
 
 - `callback`
-
   - : 用於處理陣列中每個元素的函式，可傳入四個參數：
-
     - `accumulator`
       - : 用來累積回呼函式回傳值的累加器（accumulator）或 `initialValue`（若有提供的話，詳如下敘）。累加器是上一次呼叫後，所回傳的累加數值。
     - `currentValue`

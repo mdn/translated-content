@@ -3,8 +3,6 @@ title: 严格模式
 slug: Web/JavaScript/Reference/Strict_mode
 ---
 
-{{JsSidebar("More")}}
-
 > [!NOTE]
 > 有时你会看到非严格模式，被称为“**[sloppy mode](/zh-CN/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。
 
@@ -18,7 +16,7 @@ slug: Web/JavaScript/Reference/Strict_mode
 
 ## 调用严格模式
 
-严格模式可以应用到整个脚本或个别函数中。不要在封闭大括弧 `{}` 内这样做，在这样的上下文中这么做是没有效果的。在 `eval` 、`Function`、[事件处理器](/zh-CN/docs/Web/HTML/Attributes#事件处理器属性)属性、{{domxref("Window.setTimeout", "setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本，它们会如预期一样工作。
+严格模式可以应用到整个脚本或个别函数中。不要在封闭大括弧 `{}` 内这样做，在这样的上下文中这么做是没有效果的。在 `eval` 、`Function`、[事件处理器](/zh-CN/docs/Web/HTML/Reference/Attributes#事件处理器属性)属性、{{domxref("Window.setTimeout", "setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本，它们会如预期一样工作。
 
 ### 为脚本开启严格模式
 

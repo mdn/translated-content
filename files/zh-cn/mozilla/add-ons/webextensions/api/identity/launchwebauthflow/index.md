@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8ed4ae6a9a60693920043935d2531921ae9e483
 ---
 
-{{AddonSidebar}}
-
 执行 [OAuth2](https://oauth.net/2/) 流程的第一部分，包括用户身份验证和客户端授权。
 
 此函数的唯一必需参数是服务提供商的授权 URL，且它必须包含一些特定 URL 参数：[重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_url) 和扩展的[客户端 ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#注册你的扩展)。然后服务提供商将：
@@ -18,7 +16,7 @@ l10n:
 
 此函数还接受一个可选参数 `interactive`：如果省略或设置为假时，则强制流程在没有任何用户交互的情况下完成。在这种情况下，如果用户需要进行身份验证或授权，则操作将失败。
 
-此函数返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果身份验证和授权成功，该 Promise 将兑现为一个包含一些 URL 参数的重定向 URL。根据服务提供商实现的 OAuth2 流程，扩展需要进一步的步骤来获取有效的访问代码，然后扩展可以使用该访问代码来访问用户的数据。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。如果身份验证和授权成功，该 Promise 将兑现为一个包含一些 URL 参数的重定向 URL。根据服务提供商实现的 OAuth2 流程，扩展需要进一步的步骤来获取有效的访问代码，然后扩展可以使用该访问代码来访问用户的数据。
 
 如果出现任何错误，Promise 将被拒绝并返回一个错误消息。错误条件可能包括：
 
@@ -40,15 +38,12 @@ let authorizing = browser.identity.launchWebAuthFlow(
 ### 参数
 
 - `details`
-
   - : `object`，对验证流程而言，可选的包含如下属性的对象：
-
     - `url`
       - : `string`，OAuth2 服务提供商提供的获取访问令牌的 URL。这个 URL 的详细信息应该在服务提供商的文档中给出，但 URL 参数应该始终包括[重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_url) 和扩展的[客户端 ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#注册你的扩展)。
     - `redirect_uri` {{optional_inline}}
       - : `string`，代表流程完成时扩展被重定向到的 URI。如果与生成的重定向 URL 匹配，则并不需要提供这一属性供浏览器端的验证流程使用。参见[获取重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_url)。
     - `interactive` {{optional_inline}}
-
       - : `boolean`，如果被省略或被设为 `false`，则将强制流程在无用户交互的情况下静默完成。
 
         如果用户已经登录并已经授权扩展访问，那么 `launchWebAuthFlow()` 可以在没有任何用户交互的情况下完成。否则（如果服务提供商需要用户登录，或者需要用户授权扩展），`launchWebAuthFlow()` 将提醒用户执行相应操作：也就是说，此时流程将会是交互式的。
@@ -99,4 +94,4 @@ function getAccessToken() {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`identity`](https://developer.chrome.google.cn/docs/extensions/reference/api/identity) API。
+> 此 API 基于 Chromium 的 [`identity`](https://developer.chrome.google.cn/docs/extensions/reference/api/identity) API。

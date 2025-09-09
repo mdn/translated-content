@@ -5,9 +5,7 @@ l10n:
   sourceCommit: d40917d744ecad97190fc92e8db659538c488d51
 ---
 
-{{JsSidebar("Classes")}}
-
-类是用于创建对象的模板。它们用代码封装数据以对其进行处理。JS 中的类建立在[原型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)之上，同时还具有一些类独有的语法和语义。
+类是用于创建对象的模板。它们用代码封装数据以对其进行处理。JS 中的类建立在[原型](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)之上，同时还具有一些类独有的语法和语义。
 
 更多的示例和释义，参见[使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)教程。
 
@@ -69,11 +67,11 @@ const Rectangle = class Rectangle2 {
   - : 公有的实例字段
 - [`static`](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)
   - : 公有的静态方法、静态 getter、静态 setter 和静态字段
-- [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)
   - : 所有私有的元素
 
 > [!NOTE]
-> 私有属性具有在同一个类种声明的所有属性的名称必须唯一的限制。其他所有的公有属性都没有这个限制——你可以写多个同名的公有属性，但是最后一个会覆盖掉其他的。此种表现与[对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#重复属性名)相同。
+> 私有元素具有在同一个类种声明的所有元素的名称必须唯一的限制。其他所有的公有属性都没有这个限制——你可以写多个同名的公有属性，但是最后一个会覆盖掉其他的。此种表现与[对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#重复属性名)相同。
 
 另外，有两种特殊的类元素语法：[`constructor`](#构造函数) 和[静态初始化块](#静态初始化块)，它们有自己的参考资料。
 
@@ -180,13 +178,13 @@ class Rectangle {
 }
 ```
 
-类字段与对象属性相似，不属于变量，所以我们不需要使用诸如 `const` 一类的关键字去声明它们。在 JavaScript 中，[私有属性](#私有属性_2)使用了一种特殊的语法，所以不应当使用像 `public` 和 `private` 这样的修饰符关键字。
+类字段与对象属性相似，不属于变量，所以我们不需要使用诸如 `const` 一类的关键字去声明它们。在 JavaScript 中，[私有元素](#私有元素)使用了一种特殊的语法，所以不应当使用像 `public` 和 `private` 这样的修饰符关键字。
 
 如上文所示，声明字段时有没有默认值都可以。没有默认值的字段其值默认为 `undefined`。通过预先声明字段，类声明会变得自我文档化，并且字段始终显现，有助于优化代码。
 
 参见[公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)获取更多信息。
 
-#### 私有属性
+#### 私有元素
 
 使用私有字段，上文的声明可以细化为如下形式：
 
@@ -205,7 +203,9 @@ class Rectangle {
 
 私有字段只能在字段声明中预先声明。它们不像普通属性那样可以通过赋值创建。
 
-更多信息，参见[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
+私有方法和访问器也可以使用与公有方法和访问器相同的语法来定义，但标识符以 `#` 开头。
+
+更多信息，参见[私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)。
 
 ### 继承
 

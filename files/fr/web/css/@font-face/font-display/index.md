@@ -54,8 +54,8 @@ font-display: optional;
 @font-face {
   font-family: FonteExemple;
   src:
-    url(/chemin/vers/fonts/examplefont.woff) format("woff"),
-    url(/chemin/vers/fonts/examplefont.eot) format("eot");
+    url("/chemin/vers/fonts/example-font.woff") format("woff"),
+    url("/chemin/vers/fonts/example-font.eot") format("embedded-opentype");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

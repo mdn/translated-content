@@ -3,11 +3,70 @@ title: clip-path
 slug: Web/CSS/clip-path
 ---
 
-{{CSSRef}}
-
 **`clip-path`** [CSS](/zh-CN/docs/Web/CSS) 属性使用裁剪方式创建元素的可显示区域。区域内的部分显示，区域外的隐藏。
 
-{{EmbedInteractiveExample("pages/css/clip-path.html")}}
+{{InteractiveExample("CSS Demo: clip-path")}}
+
+```css interactive-example-choice
+clip-path: circle(40%);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(130px 140px at 10% 20%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```
+
+```css interactive-example-choice
+clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+```
+
+```css interactive-example-choice
+clip-path: rect(5px 145px 160px 5px round 20%);
+```
+
+```css interactive-example-choice
+clip-path: xywh(0 5px 100% 75% round 15% 0);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      class="transition-all"
+      id="example-element"
+      src="/shared-assets/images/examples/balloon-small.jpg"
+      width="150" />
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+}
+
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  margin: 20px;
+}
+```
 
 ## 语法
 
@@ -54,9 +113,7 @@ clip-path: unset;
 - `<clip-source>`
   - : 用 {{cssxref("url_value", "&lt;url&gt;")}} 引用 [SVG](/zh-CN/docs/Web/SVG) 的 {{SVGElement("clipPath")}} 元素
 - {{cssxref("&lt;basic-shape&gt;")}}
-
   - : 一种形状，其大小和位置由 `<geometry-box>` 的值定义。如果没有指定 `<geometry-box>`，则将使用 `border-box` 用为参考框。取值可为以下值中的任意一个：
-
     - {{cssxref("basic-shape/inset","inset()")}}
       - : 定义一个 inset 矩形。
     - {{cssxref("basic-shape/circle","circle()")}}
@@ -69,9 +126,7 @@ clip-path: unset;
       - : 定义一个任意形状（使用一个可选的 SVG 填充规则和一个 SVG 路径定义）。
 
 - `<geometry-box>`
-
   - : 如果同 `<basic-shape>` 一起声明，它将为基本形状提供相应的参考框盒。通过自定义，它将利用确定的盒子边缘包括任何形状边角（比如说，被 {{cssxref("border-radius")}} 定义的剪切路径）。几何框盒可以有以下的值中的一个：
-
     - `margin-box`
       - : 使用 [margin box](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) 作为引用框。
     - `border-box`
@@ -91,7 +146,7 @@ clip-path: unset;
   - : 不创建剪切路径。
 
 > [!NOTE]
-> CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
+> CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
 
 ## 形式定义
 
@@ -624,8 +679,7 @@ clipPathSelect.addEventListener("change", function (evt) {
 ## 参见
 
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [在 HTML 内容中应用 SVG 效果](/zh-CN/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [在 HTML 内容中应用 SVG 效果](/zh-CN/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - SVG 属性：
-
   - {{SVGAttr("clip-path")}}
   - {{SVGAttr("clip-rule")}}

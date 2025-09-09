@@ -61,7 +61,6 @@ l10n:
 - **DNS**: Domain Name System はウェブサイトの住所録のようなものです。ブラウザーにウェブアドレスを入力すると、ブラウザーはウェブサイトを取得する前に DNS を見て、ウェブサイトの IP アドレスを探します。ブラウザーはウェブサイトがどのサーバーにいるかを探し出す必要があり、それで HTTP のメッセージを正しい場所（下記参照）に送ることができます。これはお店の所在地を探してからお店に行くようなものです。
 - **HTTP**: Hypertext Transfer Protocol は、クライアントとサーバーが対話をする方法を定義するアプリケーション{{Glossary("Protocol", "プロトコル")}}です。これは商品を注文するための言語のようなものです。
 - **コンポーネントファイル**: ウェブサイトは多くの異なるファイルで構成されます。これはお店で複数の部品を買うようなものです。これらのファイルは主に 2 種類に当てはまります。
-
   - **コードファイル**: ウェブサイトは主に HTML、CSS、JavaScript から作られます。しかし、ちょっと後で他の技術にも出会うことになるでしょう。
   - **資産** (Assets): これは画像、音楽、動画、Word 文書、PDF といったウェブサイトを構成するコード以外のすべての材料の集合的な名前です。
 
@@ -76,11 +75,11 @@ l10n:
 
 ## 構成するファイルが解釈される順序
 
-ブラウザーがサーバーに HTML ファイルのリクエストを送信するとき、こうした HTML ファイルには {{htmlelement("link")}} 要素が外部の [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) スタイルシートを参照していたり、 {{htmlelement("script")}} 要素が外部の [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) のスクリプトを参照していたりすることがよくあります。ブラウザーがページを読み込むときに、これらのファイルが[ブラウザーによって構文解析される](/ja/docs/Web/Performance/How_browsers_work#構文解析)順序を知ることが重要です。
+ブラウザーがサーバーに HTML ファイルのリクエストを送信するとき、こうした HTML ファイルには {{htmlelement("link")}} 要素が外部の [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) スタイルシートを参照していたり、 {{htmlelement("script")}} 要素が外部の [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) のスクリプトを参照していたりすることがよくあります。ブラウザーがページを読み込むときに、これらのファイルが[ブラウザーによって構文解析される](/ja/docs/Web/Performance/Guides/How_browsers_work#構文解析)順序を知ることが重要です。
 
 - ブラウザーはまず HTML ファイルを解釈し、 `<link>` 要素による外部 CSS スタイルシートへの参照や、 `<script>` 要素によるスクリプトへの参照を認識するようになります。
 - ブラウザーは HTML を解釈しながら、 `<link>` 要素から見つかった CSS ファイルと `<script>` 要素から見つかった JavaScript ファイルに対してサーバーにリクエストを送り返し、それらから CSS と JavaScript を解釈します。
-- ブラウザーは解釈された HTML からメモリー内にある [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーを生成し、解釈された CSS からメモリー内に [CSSOM](/ja/docs/Glossary/CSSOM) 構造を生成し、解釈された JavaScript を[コンパイルして実行](/ja/docs/Web/Performance/How_browsers_work#javascript_のコンパイル)します。
+- ブラウザーは解釈された HTML からメモリー内にある [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーを生成し、解釈された CSS からメモリー内に [CSSOM](/ja/docs/Glossary/CSSOM) 構造を生成し、解釈された JavaScript を[コンパイルして実行](/ja/docs/Web/Performance/Guides/How_browsers_work#javascript_のコンパイル)します。
 - ブラウザーが DOM ツリーを構築し、 CSSOM ツリーからスタイルを適用して JavaScript を実行すると、ページの視覚表現が画面に描かれ、ユーザーはページの内容を見て、それとの対話を始めることができます。
 
 ## DNS の説明

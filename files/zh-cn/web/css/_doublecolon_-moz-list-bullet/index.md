@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`::-moz-list-bullet`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示无序列表（{{htmlelement("ul")}}）中的列表项（{{htmlelement("li")}}）的标记（通常是项目符号）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
 

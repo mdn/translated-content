@@ -3,8 +3,6 @@ title: "SyntaxError: missing } after function body"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 错误提示
 
 ```plain
@@ -46,7 +44,7 @@ var charge = function () {
 };
 ```
 
-当使用立即调用函数表达式（{{Glossary("IIFE")}}）、[闭包](/zh-CN/docs/Web/JavaScript/Closures)或者其他使用了大量的花括号以及括号的结构体的时候，问题会更加隐蔽。
+当使用立即调用函数表达式（{{Glossary("IIFE")}}）、[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)或者其他使用了大量的花括号以及括号的结构体的时候，问题会更加隐蔽。
 
 ```js example-bad
 (function() { if (true) { return false; } );

@@ -9,7 +9,38 @@ l10n:
 
 CSS-свойство **`outline-offset`** задаёт расстояние между [обводкой](/ru/docs/Web/CSS/outline) и краем или рамкой элемента.
 
-{{EmbedInteractiveExample("pages/css/outline-offset.html")}}
+{{InteractiveExample("CSS Demo: outline-offset")}}
+
+```css interactive-example-choice
+outline-offset: 4px;
+```
+
+```css interactive-example-choice
+outline-offset: 0.6rem;
+```
+
+```css interactive-example-choice
+outline-offset: 12px;
+outline: 5px dashed blue;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px solid crimson;
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Синтаксис
 

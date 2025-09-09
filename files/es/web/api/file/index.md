@@ -29,7 +29,6 @@ Ver [Utilizando archivos desde aplicaciones web (Using files from web applicatio
 - {{DOMxRef("File.name")}}{{ReadOnlyInline}}
   - : Retorna el nombre del archivo referenciada por el objeto `File`.
 - {{DOMxRef("File.webkitRelativePath")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-
   - : Retorna la ruta relativa de la URL del {{DOMxRef("File")}}.
 
     `File` implementa {{DOMxRef("Blob")}}, así que también cuenta con las siguientes propiedades:
@@ -37,7 +36,7 @@ Ver [Utilizando archivos desde aplicaciones web (Using files from web applicatio
 - {{DOMxRef("File.size")}}{{ReadOnlyInline}}
   - : Retorna el tamaño del archivo en bytes.
 - {{DOMxRef("File.type")}}{{ReadOnlyInline}}
-  - : Retorna el tipo [MIME](/es/docs/Web/HTTP/MIME_types)del archivo.
+  - : Retorna el tipo [MIME](/es/docs/Web/HTTP/Guides/MIME_types)del archivo.
 
 ## Métodos
 

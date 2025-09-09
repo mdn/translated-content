@@ -10,7 +10,7 @@ Una tarea muy común en HTML es la estructuración de datos, y para esto hay mú
 
 ## Requisitos previos
 
-Antes de comenzar este módulo, deberías de saber las cosas básicas de HTML — ver [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML).
+Antes de comenzar este módulo, deberías de saber las cosas básicas de HTML — ver [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content).
 
 > [!NOTE]
 > Si estas trabjando en un ordenador/tableta/otro dispositivo en el que no puedes crear tus propios archivos, puedes probar la mayoría de ejemplos online en webs como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
@@ -19,12 +19,12 @@ Antes de comenzar este módulo, deberías de saber las cosas básicas de HTML �
 
 Este módulo contiene los siguientes artículos:
 
-- [Comenzando con tablas HTML](/es/docs/Learn/HTML/Tables/Basics)
+- [Comenzando con tablas HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : Este artículo te introduce en las tablas HTML , cubriendo las cosas más basicas como las líneas y las celdas, encabezados, crear celdas de multiples líneas y columnas, y como agrupar todas las celdas en una columna con fines estilisticos.
-- [Características avanzadas y accesibilidad en tablas HTML](/es/docs/Learn/HTML/Tables/Advanced)
+- [Características avanzadas y accesibilidad en tablas HTML](/es/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
   - : En el segundo artículo de este módulo, veremos algunas características avanzadas de las tablas HTML — como subtítulos/resumenes y agrupar líneas en la cabeza, cuerpo y pie de la tabla — además de realizar tablas accesibles para aquellos usuarios con problemas de visión.
 
 ## Evaluación
 
-- [Estructurar datos planetarios](/es/docs/Learn/HTML/Tables/Structuring_planet_data)
+- [Estructurar datos planetarios](/es/docs/Learn_web_development/Core/Structuring_content/Planet_data_table)
   - : En nuestra evaluación, te proporcionamos datos sobre los planetas de nuestro sistemas solar y tu los estructurarás en una tabla HTML.

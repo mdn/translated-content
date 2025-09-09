@@ -2,16 +2,14 @@
 title: FileReader
 slug: Web/API/FileReader
 l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
 **`FileReader`** 接口允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。
 
-文件对象可以从用户使用 {{HTMLElement("input")}} 元素选择文件而返回的 {{domxref("FileList")}} 对象中获取，或者从拖放操作的 {{ domxref("DataTransfer")}} 对象中获取。
-
-`FileReader` 只能访问用户明确选择的文件内容，无论是使用 HTML `<input type="file">` 元素还是通过拖放。它不能用于从用户的文件系统中按路径名读取文件。要按路径名读取客户端文件系统上的文件，请使用[文件系统访问 API](/zh-CN/docs/Web/API/File_System_API)。要读取服务器端文件，请使用 {{domxref("Window/fetch", "fetch()")}}，如果跨源读取，则需要 [CORS](/zh-CN/docs/Web/HTTP/CORS) 权限。
+文件对象可以从用户使用 `<input type="file">` 元素选择文件而返回的 {{domxref("FileList")}} 对象中获取，或者从拖放操作的 {{ domxref("DataTransfer")}} 对象中获取。`FileReader` 只能访问用户明确选择的文件内容，它不能用于从用户的文件系统中按路径名读取文件。要按路径名读取客户端文件系统上的文件，请使用[文件系统访问 API](/zh-CN/docs/Web/API/File_System_API)。要读取服务器端文件，请使用 {{domxref("Window/fetch", "fetch()")}}，如果跨源读取，则需要 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 权限。
 
 {{InheritanceDiagram}}
 
@@ -27,8 +25,7 @@ l10n:
 - {{domxref("FileReader.error")}} {{ReadOnlyInline}}
   - : 一个表示在读取文件时发生的错误的 {{domxref("DOMException")}}。
 - {{domxref("FileReader.readyState")}} {{ReadOnlyInline}}
-
-  - : 表示`FileReader`状态的数字。取值如下：
+  - : 表示 `FileReader` 状态的数字。以下值之一：
 
     | 常量名    | 值  | 描述                   |
     | --------- | --- | ---------------------- |
@@ -68,6 +65,68 @@ l10n:
   - : 读取开始时触发。
 - {{domxref("FileReader/progress_event", "progress")}}
   - : 读取数据时定期触发。
+
+## 示例
+
+### 使用 FileReader
+
+此示例直接在浏览器中读取并显示文本文件的内容。
+
+#### HTML
+
+```html
+<h1>文件读取器</h1>
+<input type="file" id="file-input" />
+<div id="message"></div>
+<pre id="file-content"></pre>
+```
+
+#### JavaScript
+
+```js
+const fileInput = document.getElementById("file-input");
+const fileContentDisplay = document.getElementById("file-content");
+const messageDisplay = document.getElementById("message");
+
+fileInput.addEventListener("change", handleFileSelection);
+
+function handleFileSelection(event) {
+  const file = event.target.files[0];
+  fileContentDisplay.textContent = ""; // 清除之前的文件内容
+  messageDisplay.textContent = ""; // 清除之前的消息
+
+  // 验证文件是否存在及其类型
+  if (!file) {
+    showMessage("未选择文件。请选择一个文件。", "error");
+    return;
+  }
+
+  if (!file.type.startsWith("text")) {
+    showMessage("不支持的文件类型。请选择一个文本文件。", "error");
+    return;
+  }
+
+  // 读取文件
+  const reader = new FileReader();
+  reader.onload = () => {
+    fileContentDisplay.textContent = reader.result;
+  };
+  reader.onerror = () => {
+    showMessage("读取文件时出错。请重试。", "error");
+  };
+  reader.readAsText(file);
+}
+
+// 向用户显示一条消息
+function showMessage(message, type) {
+  messageDisplay.textContent = message;
+  messageDisplay.style.color = type === "error" ? "red" : "green";
+}
+```
+
+### 结果
+
+{{EmbedLiveSample("使用 FileReader", 640, 300)}}
 
 ## 规范
 

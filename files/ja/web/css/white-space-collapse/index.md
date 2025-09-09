@@ -5,11 +5,10 @@ l10n:
   sourceCommit: 63e23080dd90d7802be807ac9beca286f6f31f7f
 ---
 
-{{CSSRef}}
-
 **`white-space-collapse`** は CSS プロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}を統合する方法を制御します。
 
-> **メモ:** `white-space-collapse` および {{CSSxRef("text-wrap")}} プロパティは、 {{CSSxRef("white-space")}} 一括指定プロパティを用いて一緒に宣言することができます。
+> [!NOTE]
+> `white-space-collapse` および {{CSSxRef("text-wrap")}} プロパティは、 {{CSSxRef("white-space")}} 一括指定プロパティを用いて一緒に宣言することができます。
 
 ## 構文
 
@@ -47,7 +46,8 @@ white-space-collapse: unset;
     - 維持されたホワイトスペース文字の後には、ホワイトスペース文字間も含め、改行の機会があります。
     - 維持されたスペースは空間を確保し、ぶら下がらないため、ボックスの内在サイズ（{{cssxref("min-content")}} のサイズと {{cssxref("max-content")}} のサイズ）に影響します。
 
-> **メモ:** _区間区切り文字_ とは、テキストを新しい行に改行させる行送り文字などのことです。
+> [!NOTE]
+> _区間区切り文字_ とは、テキストを新しい行に改行させる行送り文字などのことです。
 
 ## ホワイトスペースの統合
 

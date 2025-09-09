@@ -3,8 +3,6 @@ title: Firefox 76 for developers
 slug: Mozilla/Firefox/Releases/76
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 76 の変更点をまとめています。Firefox 76 は、[2020 年 5 月 5 日](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/) にリリースされました。
 
 **付随する hacks ブログの記事「[Firefox 76: Audio worklets and other tricks](https://hacks.mozilla.org/2020/05/firefox-76-audio-worklets-and-other-tricks/)」もご覧ください。**
@@ -35,7 +33,7 @@ slug: Mozilla/Firefox/Releases/76
 
 ### HTML
 
-- {{HTMLElement("input")}} 要素の [`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性が、値が周期的な (すなわち、ある時点で値が最小値に戻る) コントロールで `min` の値が `max` の値より大きい場合に、正しく動作するようになりました。これは、例えば日付や時刻の入力で午後 11 時から午前 2 時の範囲を指定するようなときに、特に役に立ちます ([Firefox バグ 1608010](https://bugzil.la/1608010))。
+- {{HTMLElement("input")}} 要素の [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性が、値が周期的な (すなわち、ある時点で値が最小値に戻る) コントロールで `min` の値が `max` の値より大きい場合に、正しく動作するようになりました。これは、例えば日付や時刻の入力で午後 11 時から午前 2 時の範囲を指定するようなときに、特に役に立ちます ([Firefox バグ 1608010](https://bugzil.la/1608010))。
 
 ### CSS
 
@@ -58,7 +56,7 @@ _変更なし。_
 #### DOM
 
 - {{domxref("window.open()")}} の引数 `windowFeatures` の UI 部品に関する項目で、UI 部品ごとに表示・非表示を制御できなくなり、ポップアップウィンドウを開くか否かの条件になりました ([Firefox バグ 1507375](https://bugzil.la/1507375))。
-- [`location.href`](/ja/docs/Web/API/Location/href) や [`<meta http-equiv="refresh">`](/ja/docs/Web/HTML/Element/meta) のような方法を使用して未知のプロトコルへ移動しようとするとブロックされるようになりました ([Firefox バグ 1528305](https://bugzil.la/1528305)、詳しくは [未知のプロトコルへのページ遷移はブロックされます](https://www.fxsitecompat.dev/ja/docs/2020/navigation-to-unknown-protocol-will-be-blocked/) をご覧ください)。
+- [`location.href`](/ja/docs/Web/API/Location/href) や [`<meta http-equiv="refresh">`](/ja/docs/Web/HTML/Reference/Elements/meta) のような方法を使用して未知のプロトコルへ移動しようとするとブロックされるようになりました ([Firefox バグ 1528305](https://bugzil.la/1528305)、詳しくは [未知のプロトコルへのページ遷移はブロックされます](https://www.fxsitecompat.dev/ja/docs/2020/navigation-to-unknown-protocol-will-be-blocked/) をご覧ください)。
 - {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} コンストラクターが、`root` として {{domxref("Element")}} オブジェクトと同様に {{domxref("Document")}} オブジェクトも受け入れるようになりました ([Firefox バグ 1623623](https://bugzil.la/1623623))。これにより、要素間交差の境界としてウィンドウのコンテンツ領域全体を明示的に使用できます。
 - [Fetch API](/ja/docs/Web/API/Fetch_API) で、要求の `audioworklet` {{domxref("Request.destination", "destination")}} をサポートしました。これにより、受信したデータが {{domxref("AudioWorklet")}} へ送られます ([Firefox バグ 1402784](https://bugzil.la/1402784))。
 

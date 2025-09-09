@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une liste de nœuds [`NodeList`](/fr/docs/Web/API/NodeList) contenant les éléments [`<label>`](/fr/docs/Web/HTML/Element/label) (les libellés) associés à l'élément [`<button>`](/fr/docs/Web/HTML/Element/button) courant.
+La propriété en lecture seule **`HTMLButtonElement.labels`** renvoie une liste de nœuds [`NodeList`](/fr/docs/Web/API/NodeList) contenant les éléments [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) (les libellés) associés à l'élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) courant.
 
 ### Valeur de retour
 

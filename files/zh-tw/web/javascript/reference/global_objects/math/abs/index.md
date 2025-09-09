@@ -2,10 +2,8 @@
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 l10n:
-  sourceCommit: dc90e6a09235136e0e5113e1fab2c11053e467d7
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
-
-{{JSRef}}
 
 **`Math.abs()`** 靜態方法會回傳一個數字的絕對值。
 
@@ -17,13 +15,13 @@ function difference(a, b) {
 }
 
 console.log(difference(3, 5));
-// Expected output: 2
+// 預期輸出：2
 
 console.log(difference(5, 3));
-// Expected output: 2
+// 預期輸出：2
 
 console.log(difference(1.23456, 7.89012));
-// Expected output: 6.6555599999999995
+// 預期輸出：6.6555599999999995
 ```
 
 ## 語法

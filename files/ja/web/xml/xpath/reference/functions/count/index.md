@@ -1,17 +1,16 @@
 ---
 title: count
 slug: Web/XML/XPath/Reference/Functions/count
-original_slug: Web/XPath/Reference/Functions/count
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `count` 関数はノード集合に含まれるノードの数を数え、その整数を返します。
 
-### 構文
+## 構文
 
-```
-count(node-set )
+```plain
+count( node-set )
 ```
 
 ### 引数
@@ -23,10 +22,10 @@ count(node-set )
 
 ノード集合に含まれるノードの数を表す整数。
 
-### 定義
+## 仕様書
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-count)
+[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-count)
 
-### Gecko での対応
+## Gecko の対応
 
 対応済み。

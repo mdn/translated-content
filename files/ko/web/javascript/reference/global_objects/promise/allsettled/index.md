@@ -102,6 +102,6 @@ console.log(values);
 - [core-js](https://github.com/zloirock/core-js#ecmascript-promise)에서 사용가능한 `Promise.allSettled`의 폴리필
 - [Promises](/ko/docs/Archive/Add-ons/Techniques/Promises)
 - [Using promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
-- [Graceful asynchronous programming with promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Graceful asynchronous programming with promises](/ko/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}

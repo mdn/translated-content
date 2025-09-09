@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6f56b2dbc0229d381a5e63cf763a77883ee23906
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 122 の変更点をまとめています。Firefox 122 は、米国時間 [2024 年 1 月 23 日](https://whattrainisitnow.com/release/?version=122) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -79,7 +77,6 @@ l10n:
   {{htmlelement("template")}} 要素で `shadowrootmode` 属性をサポートしました。{{domxref("Element.attachShadow()", "attachShadow()")}} メソッドの `mode` オプションと同じく、`open` または `closed` を設定できます。これは、シャドウ DOM のサブツリーを宣言的に作成することを可能にします ([Firefox bug 1712140](https://bugzil.la/1712140))。
 
 - **シャドウ DOM の cloneable オプションとプロパティ**
-
   - {{domxref("Element.attachShadow()")}} メソッドで `clonable` ブール型オプションをサポートしました。これは、作成したシャドウルートが複製可能かを指定します。既定値は `false` であり、`true` に設定すると {{domxref("Node.cloneNode()")}} または {{domxref("Document.importNode()")}} で複製されたシャドウホストは、複製にシャドウルートが含まれます。
   - {{domxref("ShadowRoot")}} インターフェイスで、読み取り専用の {{domxref("ShadowRoot.clonable", "clonable")}} プロパティをサポートしました。シャドウルートが複製可能である場合は `true`、そうでない場合は `false` を返します。宣言的なシャドウ DOM で作成したシャドウルートは常に `true` を返します。
 

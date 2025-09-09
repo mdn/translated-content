@@ -3,8 +3,6 @@ title: Firefox 32 for developers
 slug: Mozilla/Firefox/Releases/32
 ---
 
-{{FirefoxSidebar}}
-
 ## 普通 Web 开发者应该注意的变化
 
 ### 开发者工具
@@ -31,8 +29,8 @@ Highlights:
 
 ### HTML
 
-- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
-- [**id**](/zh-CN/docs/Web/HTML/Global_attributes/id) and [**class**](/zh-CN/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/zh-CN/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
+- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
+- [**id**](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) and [**class**](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class) are now true [global attributes](/zh-CN/docs/Web/HTML/Reference/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
 
 ### JavaScript
 

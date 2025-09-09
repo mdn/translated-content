@@ -9,7 +9,7 @@ l10n:
 
 **`stepMismatch`** は **[`ValidityState`](/ja/docs/Web/API/ValidityState)** オブジェクトの読み取り専用プロパティで、 {{HTMLElement("input")}} の値がユーザーに変更された後、その要素の `step` 属性に設定された制約に適合しないことを示します。
 
-フィールドが数値の性質を持つ場合、例えば {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} の何れかの型であり、 step の値が `any` ではなく、値が [`step`](/ja/docs/Web/HTML/Attributes/step) と [`min`](/ja/docs/Web/HTML/Attributes/min) の値に設定された制約に適合しない場合に、 `stepMismatch` が true になります。フォームコントロールの値から [`min`](/ja/docs/Web/HTML/Attributes/min) の値を引き、 [`step`](/ja/docs/Web/HTML/Attributes/step) 値 (省略時は既定で 1) がゼロでない場合、一致しないと言えます。
+フィールドが数値の性質を持つ場合、例えば {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} の何れかの型であり、 step の値が `any` ではなく、値が [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) と [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) の値に設定された制約に適合しない場合に、 `stepMismatch` が true になります。フォームコントロールの値から [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) の値を引き、 [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 値 (省略時は既定で 1) がゼロでない場合、一致しないと言えます。
 
 次のようになっていたとします。
 
@@ -31,6 +31,6 @@ l10n:
 
 ## 関連情報
 
-- [制約検証](/ja/docs/Web/HTML/Constraint_validation)
-- [フォーム: データフォームの検証](/ja/docs/Learn/Forms/Form_validation)
-- [`step` 属性](/ja/docs/Web/HTML/Attributes/step)
+- [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
+- [フォーム: データフォームの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [`step` 属性](/ja/docs/Web/HTML/Reference/Attributes/step)

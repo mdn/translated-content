@@ -2,35 +2,34 @@
 title: Window：showDirectoryPicker() 方法
 slug: Web/API/Window/showDirectoryPicker
 l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+  sourceCommit: b58a5b506fdc086f442104ccdee547b9df0cb6a7
 ---
 
 {{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
-{{domxref("Window")}} 接口的 **`showDirectoryPicker()`** 方法用于显示一个目录选择器，以允许用户选择一个目录。
+{{domxref("Window")}} 接口的 **`showDirectoryPicker()`** 方法用于显示一个允许用户选择一个目录的目录选择器。
 
 ## 语法
 
 ```js-nolint
 showDirectoryPicker()
+showDirectoryPicker(options)
 ```
 
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 选项对象，包含以下属性：
-
     - `id` {{optional_inline}}
-      - : 通过指定 ID，浏览器可以为不同的 ID 记住不同的目录。如果相同的 ID 用于另一个选择器，则该选择器将在同一目录中打开。
+      - : 通过指定 ID，浏览器可以记住不同 ID 所对应的目录。如果在另一个选择器中使用了相同的 ID，则选择器将在同一目录中打开。
     - `mode` {{optional_inline}}
-      - : 字符串，默认为 `"read"`，用于只读访问，或 `"readwrite"` 用于读写访问。
+      - : 字符串，默认为 `"read"`，用于只读访问，或 `"readwrite"`，用于读写访问。
     - `startIn` {{optional_inline}}
-      - : 一个 `FileSystemHandle` 对象或者代表某个众所周知的目录的字符串（如：`"desktop"`、`"documents"`、`"downloads"`、`"music"`、`"pictures"`、`"videos"`），用于指定选择器的起始目录。
+      - : 一个 {{domxref("FileSystemHandle")}} 对象或者代表某个众所周知的目录的字符串（如：`"desktop"`、`"documents"`、`"downloads"`、`"music"`、`"pictures"`、`"videos"`），用于指定选择器的起始目录。
 
 ### 返回值
 
-一个 {{jsxref("Promise")}} 对象，会兑现一个 {{domxref('FileSystemDirectoryHandle')}} 对象。
+一个 {{jsxref("Promise")}} 对象，其兑现一个 {{domxref('FileSystemDirectoryHandle')}} 对象。
 
 ### 异常
 

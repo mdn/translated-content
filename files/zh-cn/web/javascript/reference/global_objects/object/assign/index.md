@@ -51,7 +51,8 @@ Object.assign(target, ...sources)
 
 如果赋值期间出错，例如如果属性不可写，则会抛出 {{jsxref("TypeError")}}；如果在抛出异常之前已经添加了一些属性，则这些属性会被保留，而 `target` 对象也会被修改。
 
-> **备注：** `Object.assign()` 不会在源对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
+> [!NOTE]
+> `Object.assign()` 不会在源对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
 
 ## 示例
 
@@ -236,5 +237,5 @@ console.log(copy);
 
 - [`core-js` 中 `Object.assign` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.defineProperties()")}}
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [构造字面量对象时使用展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax#构造字面量对象时使用展开语法)

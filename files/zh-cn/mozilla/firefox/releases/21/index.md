@@ -3,13 +3,11 @@ title: Firefox 21 for developers
 slug: Mozilla/Firefox/Releases/21
 ---
 
-{{FirefoxSidebar}}
-
 ## Web 开发者需要注意的变化
 
 ### HTML
 
-- 实现了{{HTMLElement("style")}}元素上的[`scoped`](/zh-CN/docs/Web/HTML/Element/style#scoped)属性。拥有该属性的{{HTMLElement("style")}}元素可以通过在 Firefox 20 中实现的 CSS 伪类{{cssxref(":scope")}}选择器选择到.([Firefox bug 508725](https://bugzil.la/508725)).
+- 实现了{{HTMLElement("style")}}元素上的[`scoped`](/zh-CN/docs/Web/HTML/Reference/Elements/style#scoped)属性。拥有该属性的{{HTMLElement("style")}}元素可以通过在 Firefox 20 中实现的 CSS 伪类{{cssxref(":scope")}}选择器选择到.([Firefox bug 508725](https://bugzil.la/508725)).
 - 实现了新的{{HTMLElement("main")}}元素 ([Firefox bug 820508](https://bugzil.la/820508)).
 
 ### JavaScript
@@ -40,16 +38,13 @@ slug: Mozilla/Firefox/Releases/21
 ### 网络
 
 - 更新 CSP 实现到最新的 CSP 规范 1.0(CR):
-
   - Support for the spec-compliant `Content-Security-Policy` HTTP header (in addition to the experimental `X-Content-Security-Policy`) has been added ([Firefox bug 783049](https://bugzil.la/783049)). **Note**: the patch for this new header landed in Firefox 21, it is disabled on builds ([Firefox bug 842657](https://bugzil.la/842657)).
 
 ## 附加组件和 Mozilla 开发者需要注意的变化
 
 - FUEL applications cannot use the Livemarks service anymore ([Firefox bug 834492](https://bugzil.la/834492)). The Livemarks service is deprecated and phased out in favor of the new async interface.
 - History API saw numerous deprecated API being removed:
-
   - Replaced by `mozIAsyncFavicons`:
-
     - `nsIFaviconService::setFaviconUrlForPage`
     - `nsIFaviconService::setFaviconData`
     - `nsIFaviconService::getFaviconData`
@@ -59,33 +54,27 @@ slug: Mozilla/Firefox/Releases/21
     - `nsIFaviconService::getFaviconDataAsDataURL`
 
   - Replaced by `mozIAsyncLivemarks`:
-
     - `nsILivemarkService::*`
     - `PlacesUtils.itemIsLivemark`
     - `PlacesUtils.nodeIsLivemarkContainer`
     - `PlacesUtils.nodeIsLivemarkItem`
 
   - Removed only third argument:
-
     - `PlacesUIUtils.showBookmarkDialog`
 
   - No more implemented by Places, use `mozIAsyncHistory` instead:
-
     - `nsIGlobalHistory2::addURI`
     - `nsIGlobalHistory2::isVisited`
     - `nsIGlobalHistory2::setPageTitle`
 
   - No more needed, use `onDeleteURI` or `onItemRemoved`:
-
     - `nsINavHistoryObserver::OnBeforeDeleteURI`
     - `nsINavBookmarkObserver::OnBeforeItemRemoved`
 
   - Never implemented properly:
-
     - `nsINavHistoryFullVisitResultNode`
 
   - Deprecated, use `mozIAsyncHistory::updatePlaces` instead:
-
     - `nsINavHistoryService::AddVisit`
 
 ## 参见

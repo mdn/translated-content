@@ -2,14 +2,44 @@
 title: column-width
 slug: Web/CSS/column-width
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`column-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで理想的な段の幅を設定します。コンテナーは `column-width` の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、指定された幅よりも狭い単一の段になることがあります。
 
-{{EmbedInteractiveExample("pages/css/column-width.html")}}
+{{InteractiveExample("CSS デモ: column-width")}}
+
+```css interactive-example-choice
+column-width: auto;
+```
+
+```css interactive-example-choice
+column-width: 6rem;
+```
+
+```css interactive-example-choice
+column-width: 120px;
+```
+
+```css interactive-example-choice
+column-width: 18ch;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ロンドン。ミカエル学期の終わり、リンカーンズ・イン・ホールに大法官が座っています。容赦のない 11 月の天候。街は、まるで地球から水が引き始めたばかりのように泥だらけで、ホルボーン・ヒルを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  columns: auto;
+  text-align: left;
+}
+```
 
 このプロパティは様々な画面の大きさに合うレスポンシブデザインを作成するのに役立ちます。特に (優先度の高い) {{cssxref("column-count")}} プロパティがある場合、正確な段の幅を設定するには、すべての幅の値を指定する必要があります。横書きでは、これらは {{cssxref('width')}}, `column-width`, {{cssxref('column-gap')}}, {{cssxref('column-rule-width')}} です。
 

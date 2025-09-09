@@ -1,10 +1,9 @@
 ---
 title: 设置 Node 开发环境
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
-original_slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 你已经了解了 Express 的用途，接下来将在 Windows、Linux（Ubuntu）和 Mac OS X 下搭建 Node/Express 开发环境。本节将介绍主流操作系统下开发 Express 程序的必备知识。
 
@@ -68,7 +67,6 @@ Express 应选用最新版本。
 在 Windows 和 macOS 上安装 Node 和 NPM 非常简单明了，使用现成的安装包就行了：
 
 1. 下载安装包：
-
    1. 访问 <https://nodejs.org/zh-cn/>
    2. 左侧按钮上写着“推荐多数用户使用（LTS）”，点击下载。
 
@@ -274,7 +272,8 @@ npm install eslint --save-dev
 
 在 **package.json** 中，除了定义和获取依赖，还可以定义脚本，然后通过 NPM 的 [run-script](https://docs.npmjs.com/cli/run-script) 命令来运行。这个用法普遍用于自动运行测试单元或部分应用，也可用于构建工具链（比如运行工具来压缩 JavaScript 文件或图片，lint 或分析代码，等等）。
 
-> **备注：** [Gulp](http://gulpjs.com/) 和 [Grunt](http://gruntjs.com/) 等任务运行器可用于运行测试单元或其他外部工具。
+> [!NOTE]
+> [Gulp](http://gulpjs.com/) 和 [Grunt](http://gruntjs.com/) 等任务运行器可用于运行测试单元或其他外部工具。
 
 比如，可以在 **package.json** 文件中添加以下内容来定义一个脚本，从而对上文的代码运行 eslint（假设应用代码在 /src/js 文件夹下）：
 

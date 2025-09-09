@@ -17,5 +17,5 @@ CSS는 미디어 **타입**(예, 스크린 또는 인쇄 등 두 가지를 들 �
 
 - [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)
-- {{cssxref("@media")}} [at-rule](/ko/docs/Web/CSS/At-rule): 미디어 쿼리 결과를 바탕으로, [스타일시트](/ko/docs/Learn/CSS/First_steps/How_CSS_works#applying_css_to_the_dom)의 일부를 조건부로 적용할 수 있습니다.
+- {{cssxref("@media")}} [at-rule](/ko/docs/Web/CSS/CSS_syntax/At-rule): 미디어 쿼리 결과를 바탕으로, [스타일시트](/ko/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#applying_css_to_the_dom)의 일부를 조건부로 적용할 수 있습니다.
 - {{domxref("Window.matchMedia()")}}: 미디어 쿼리에 대해 시청 장치 테스트

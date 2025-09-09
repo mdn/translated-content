@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**禁止修改的请求标头**指的是不能在代码中通过编程的方式进行修改的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)，具体地，这是 HTTP **请求**标头名称（和{{Glossary("Forbidden response header name", "禁止修改的响应标头")}}形成对比）。
+**禁止修改的请求标头**指的是不能在代码中通过编程的方式进行修改的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)，具体地，这是 HTTP **请求**标头名称（和{{Glossary("Forbidden response header name", "禁止修改的响应标头")}}形成对比）。
 
 因为用户代理保留对此类标头的完全控制，所以它们被禁止修改。例如，{{HTTPHeader("Date")}} 标头是禁止修改的标头，因此代码无法设置消息的 `Date` 字段：
 

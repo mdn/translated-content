@@ -1,34 +1,55 @@
 ---
 title: :nth-last-of-type()
 slug: Web/CSS/:nth-last-of-type
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`:nth-last-of-type()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で指定された型の要素を、最後から数えた位置に基づいて選択します。
 
-```
-/* 兄弟の <p> 要素の中で、
-   後ろから数えて 3 つおきに選択 */
-p:nth-last-of-type(4n) {
-  color: lime;
+{{InteractiveExample("CSS デモ: :nth-last-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:nth-last-of-type(3n) {
+  border: 2px solid orange;
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-of-type.html", "tabbed-shorter")}}
-
-> [!NOTE]
-> この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-of-type")}} と同じです。
+```html interactive-example
+<dl>
+  <dt>野菜:</dt>
+  <dd>1. トマト</dd>
+  <dd>2. きゅうり</dd>
+  <dd>3. キノコ</dd>
+  <dt>果物:</dt>
+  <dd>4. リンゴ</dd>
+  <dd>5. マンゴー</dd>
+  <dd>6. なし</dd>
+  <dd>7. オレンジ</dd>
+</dl>
+```
 
 ## 構文
 
-`nth-last-of-type` 擬似クラスは、要素を選択する最後から数えるパターンを表す引数を 1 つ取ります。
+```css-nolint
+:nth-last-of-type(<An+B> | even | odd) {
+  /* ... */
+}
+```
+
+### 引数
+
+擬似クラス `:nth-last-of-type()` は、要素の照合パターンを表す単一の引数で指定します。
 
 構文の詳しい説明は {{Cssxref(":nth-last-child")}} を参照してください。
-
-```
-:nth-last-of-type( <an-plus-b> | even | odd )
-```
 
 ## 例
 
@@ -36,12 +57,12 @@ p:nth-last-of-type(4n) {
 
 ```html
 <div>
-  <span>This is a span.</span>
-  <span>This is another span.</span>
-  <em>This is emphasized.</em>
-  <span>Wow, this span gets limed!!!</span>
-  <del>This is struck through.</del>
-  <span>Here is one last span.</span>
+  <span>これは span です。</span>
+  <span>これも span です。</span>
+  <em>これは em です。</em>
+  <span>おお、この span はライム色になりました！</span>
+  <del>これは取り消し線です。</del>
+  <span>これは最後の span です。</span>
 </div>
 ```
 
@@ -55,7 +76,7 @@ span:nth-last-of-type(2) {
 
 #### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('例')}}
 
 ## 仕様書
 

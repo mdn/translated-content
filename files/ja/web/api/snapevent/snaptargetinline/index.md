@@ -3,7 +3,7 @@ title: "SnapEvent: snapTargetInline プロパティ"
 short-title: snapTargetInline
 slug: Web/API/SnapEvent/snapTargetInline
 l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("Snap Events")}}{{SeeCompatTable}}
@@ -15,7 +15,7 @@ l10n:
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベントの場合、これは待機中のインライン方向のスナップターゲット（つまり、現在のスクロール捜査が終了したときに選択されるもの）を参照します。
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベントの場合、これは新しく選択されたインライン方向のスナップターゲットを参照します。
 
-`SnapEvent` で利用可能なプロパティ値は、スクロールコンテナ－に設定された {{cssxref("scroll-snap-type")}} プロパティの値に直接対応します。 `snapTargetInline` は、スナップ軸が `inline` （または、現在の書字方向で `inline` に相当する物理軸値の場合）または `both` と指定されている場合、要素参照のみを返します。
+`SnapEvent` で利用可能なプロパティ値は、スクロールコンテナーに設定された {{cssxref("scroll-snap-type")}} プロパティの値に直接対応します。 `snapTargetInline` は、スナップ軸が `inline` （または、現在の書字方向で `inline` に相当する物理軸値の場合）または `both` と指定されている場合、要素参照のみを返します。
 
 ## 値
 

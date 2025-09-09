@@ -73,7 +73,8 @@ Principalmente hay cuatro formas de analizar este documento XML:
    escanear en lo que respecta a los saltos de línea. Sin embargo, este método es un "último recurso" ya que si el
    código XML cambia ligeramente, el método probablemente fallará.
 
-> **Nota:** `XMLHttpRequest` ahora puede interpretar HTML por ti
+> [!NOTE]
+> `XMLHttpRequest` ahora puede interpretar HTML por ti
 > utilizando la propiedad {{domxref("XMLHttpRequest.responseXML", "responseXML")}}. Lea el
 > artículo sobre [HTML
 > en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) para aprender como hacerlo.
@@ -100,8 +101,7 @@ tres formas de analizar y parsear esta cadena de HTML en bruto:
 Aunque {{domxref("XMLHttpRequest")}} se utiliza normalmente para enviar y recibir
 datos textuales, puede utilizarse para enviar y recibir contenido binario. Existen varios
 métodos probados para forzar a la respuesta de un `XMLHttpRequest` para que envíe datos
-binarios. Se trata de utilizar la función {{domxref("XMLHttpRequest.overrideMimeType",
-  "overrideMimeType()")}} en el objeto `XMLHttpRequest` y es una
+binarios. Se trata de utilizar la función {{domxref("XMLHttpRequest.overrideMimeType", "overrideMimeType()")}} en el objeto `XMLHttpRequest` y es una
 solución viable.
 
 ```js

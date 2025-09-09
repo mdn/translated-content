@@ -61,13 +61,15 @@ l10n:
 - [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
   - : 場合によってはネイティブのフォームウィジェットが必要となるものを提供していないことがあるでしょう。例えばスタイル設定や機能で。この場合、生の HTML から自分自身のフォームウィジェットを作る必要があります。この記事ではその方法と考慮すべき点を、実際のケーススタディと一緒に説明します。
 - [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-  - : この記事では、標準フォームの送信ではなく、カスタム JavaScript 内で HTTP リクエストを組み立てて送る方法を見ます。またそうしたい理由と、そうする意味も見ていきます（[FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)もご覧ください）。
+  - : この記事では、標準フォームの送信ではなく、カスタム JavaScript 内で HTTP リクエストを組み立てて送る方法を見ます。またそうしたい理由と、そうする意味も見ていきます（[FormData オブジェクトの使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)もご覧ください）。
+- [カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+  - : この記事では、最新の HTML と CSS の専用機能を使用して、完全にカスタマイズした {{htmlelement("select")}} 要素を作成する方法について説明します。
 
 ## 関連情報
 
-- [HTML フォーム要素リファレンス](/ja/docs/Web/HTML/Element#forms)
-- [HTML \<input> 型リファレンス](/ja/docs/Web/HTML/Element/input)
-- [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
+- [HTML フォーム要素リファレンス](/ja/docs/Web/HTML/Reference/Elements#forms)
+- [HTML \<input> 型リファレンス](/ja/docs/Web/HTML/Reference/Elements/input)
+- [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
 - [ユーザー入力とコントロール](/ja/docs/Learn_web_development/Extensions/Forms/User_input_methods)
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}

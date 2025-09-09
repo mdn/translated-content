@@ -21,15 +21,13 @@ matchAll(request,options)
 - `request`
   - : 取得したい record の {{domxref("Request")}}。これは {{domxref("Request")}} オブジェクトまたは URL です。
 - `options` {{optional_inline}}
-
   - : `match` 操作のオプションを指定するオブジェクトです。以下が利用可能です。
-
     - `ignoreSearch`
       - : URL 中のクエリー文字列を無視するかどうか指定するbool 値です。例えば `true` のとき、`http://foo.com/?value=bar` の `?value=bar` 部分はマッチ処理で無視されます。デフォルトは `false` です。
     - `ignoreMethod`
       - : bool 値です。`true` のとき、マッチ処理は {{domxref("Request")}} の `http` メソッドを検証しません。`false` (デフォルト値)の場合、`GET` と `HEAD` のみ許可されます。
     - `ignoreVary`
-      - : bool 値です。`true` は [`VARY`](/ja/docs/Web/HTTP/Headers/Vary) ヘッダーを無視することを意味します。デフォルトは `false` です。
+      - : bool 値です。`true` は [`VARY`](/ja/docs/Web/HTTP/Reference/Headers/Vary) ヘッダーを無視することを意味します。デフォルトは `false` です。
 
 ### 返値
 

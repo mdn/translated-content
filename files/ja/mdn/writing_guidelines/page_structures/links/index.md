@@ -2,10 +2,8 @@
 title: リンクマクロ
 slug: MDN/Writing_guidelines/Page_structures/Links
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
-
-{{MDNSidebar}}
 
 MDN には MDN コンテンツへの常に最新のリンクを作成するためのマクロが数多く指定されています。このガイドでは、別のページへの単一のリンクや、文書のサブページすべてへのリンクのリストを含めるために使用することができる MDN 相互参照マクロについて学びます。
 
@@ -13,16 +11,13 @@ MDN には MDN コンテンツへの常に最新のリンクを作成するた�
 
 MDN はリンクのリストを作成するマクロを提供しています。
 
-- [`\{{LandingPageListSubPages}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs)
-
+- [`\{{SubpagesWithSummaries}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs)
   - : 現在のページのサブページの定義リスト ({{HTMLElement("dl")}}) を挿入し、各ページのタイトルを {{HTMLElement("dt")}} の項、最初の段落を {{HTMLElement("dd")}} の項に入れます。
 
-- [`\{{ListSubpagesForSidebar()}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/ListSubpagesForSidebar.ejs)
+- [`\{{ListSubpagesForSidebar()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/list_subpages_for_sidebar.rs)
+  - : 引数なしで記載された場合、現在のページのサブページへのリンクの順序付きリストを挿入します。このマクロは[サイドバー](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)（マクロの名前の由来）内で使用することが多く、箇条書きは表示されません。最初の引数はリンクツリーの親ページのスラッグです。リンクテキストはコードとして表示されます。 2 つ目の引数に `true` または `1` を設定するには、リンクをプレーンテキストに変換します。 3 つ目の引数に `true` または `1` を設定すると、リストの一番上にあるスラッグ（親）ページへのリンクを "Overview" というリンクテキストで追加します。
 
-  - : 引数なしで記載された場合、現在のページのサブページへのリンクの順序付きリストを挿入します。このマクロは[サイドバー](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars#sidebars_adding_additional_content)（マクロの名前の由来）内で使用することが多く、箇条書きは表示されません。最初の引数はリンクツリーの親ページのスラッグです。リンクテキストはコードとして表示されます。 2 つ目の引数に `true` または `1` を設定するには、リンクをプレーンテキストに変換します。 3 つ目の引数に `true` または `1` を設定すると、リストの一番上にあるスラッグ（親）ページへのリンクを "Overview" というリンクテキストで追加します。
-
-- [`\{{QuickLinksWithSubpages()}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
-
+- [`\{{QuickLinksWithSubpages()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
   - : 現在のページ （または指定したページ） の子を出力先として使用するクイックリンクのセットを作成します。これは 2 階層までの階層リストを作成します。ページのタイトルはリンクテキストとして、概要はツールチップとして使用します。
 
 ### リンクリストの例
@@ -43,15 +38,15 @@ MDN はリンクのリストを作成するマクロを提供しています。
 
 次のマクロがあります。
 
-- [`\{{CSSxRef("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/cssxref.ejs)
-- [`\{{DOMxRef("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/DOMxRef.ejs)
-- [`\{{HTMLElement("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs)
-- [`\{{glossary("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/Glossary.ejs)
-- [`\{{JSxRef("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/jsxref.ejs)
-- [`\{{SVGAttr("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/SVGAttr.ejs)
-- [`\{{SVGElement("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/SVGElement.ejs)
-- [`\{{HTTPMethod("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPMethod.ejs)
-- [`\{{HTTPStatus("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPStatus.ejs)
+- [`\{{CSSxRef("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/cssxref.rs)
+- [`\{{DOMxRef("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/domxref.rs)
+- [`\{{HTMLElement("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs)
+- [`\{{glossary("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/glossary.rs)
+- [`\{{JSxRef("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/jsxref.rs)
+- [`\{{SVGAttr("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs)
+- [`\{{SVGElement("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs)
+- [`\{{HTTPMethod("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
+- [`\{{HTTPStatus("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
 
 これらのマクロの最初の引数には、参照する文書のスラッグの最後の部分を指定します。例えば、 HTML 要素の場合は `\{{HTMLElement("")}}` を記載し、スラッグの `Web/HTML/Element/` の後に来る部分を最初の引数にします。 `\{{CSSxRef("")}}` では、スラッグの `Web/CSS/` の後に来る部分を追加します。リンク先はこのページになります。
 
@@ -63,7 +58,7 @@ MDN はリンクのリストを作成するマクロを提供しています。
 
 HTML コードの意味づけと CSS コードをコーディングスタイルにしないために、一部の相互参照マクロは `"nocode"` という引数を記載して、このスタイル設定を無効にしています。
 
-例えば、`\{{CSSxRef("background-color")}}` はコードリンク "{{CSSxRef("background-color")}}" を作成し、 `\{{domxref("CSS.supports_static", "check support", "nocode")}}` はプレーンテキストリンク "{{domxref("CSS.supports_static", "check support", "nocode")}}" を作成します。
+例えば、`\{{CSSxRef("background-color")}}` はコードリンク "{{CSSxRef("background-color")}}" を作成し、 `\{{domxref("CSS.supports_static", "check support", "", "nocode")}}` はプレーンテキストリンク "{{domxref("CSS.supports_static", "check support", "", "nocode")}}" を作成します。
 
 使用するマクロがどのように動作するのか、また様々な引数を理解するために、必ずソースコードを見てください。引数は一般的に文書化されていますが、 `\{{HTMLElement("")}}` マクロで見た「2 つ目の引数に空白が含まれる場合はコードとしてレンダリングしない」というような例外は、コード内にはありますが、それ以外で文書化されていません。
 
@@ -72,6 +67,5 @@ HTML コードの意味づけと CSS コードをコーディングスタイル�
 ## 関連情報
 
 - [マクロの使用](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)
-- [Macros](https://github.com/mdn/yari/tree/main/kumascript/macros) (Github)
 - [よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)、 BCD マクロ (`\{{Compat}}`, `\{{Compat(&lt;feature>)}}`, `\{{Compat(&lt;feature>, &lt;depth>)}}`) や仕様書マクロ (`\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`)
 - [バナーと通知のガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)、`\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, `\{{SecureContext_Header}}` などのマクロ。

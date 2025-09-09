@@ -2,10 +2,8 @@
 title: src
 slug: Web/CSS/@font-face/src
 l10n:
-  sourceCommit: 0326d9301650304ef67a56e88b542b160093042e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`src`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、フォントデータを含むリソースを指定します。 `@font-face` ルールを有効にするためには必要です。
 
@@ -13,10 +11,9 @@ l10n:
 
 ```css
 /* <url> 値 */
-src: url(https://somewebsite.com/path/to/font.woff); /* 絶対 URL */
-src: url(path/to/font.woff); /* 相対 URL */
+src: url("https://somewebsite.com/path/to/font.woff"); /* 絶対 URL */
 src: url("path/to/font.woff"); /* 引用符付きの URL */
-src: url(path/to/svgfont.svg#example); /* フラグメントで識別するフォント */
+src: url("path/to/svgFont.svg#example"); /* フラグメントで識別するフォント */
 
 /* <font-face-name> 値 */
 src: local(font); /* 引用符なしの名前 */
@@ -25,17 +22,17 @@ src: local("font"); /* 引用符付きの名前 */
 src: local("some font"); /* 引用符付きの空白を含む */
 
 /* <tech(<font-tech>)> 値 */
-src: url(path/to/fontCOLRv1.otf) tech(color-COLRv1);
-src: url(path/to/fontCOLR-svg.otf) tech(color-SVG);
+src: url("path/to/fontCOLRv1.otf") tech(color-COLRv1);
+src: url("path/to/fontCOLR-svg.otf") tech(color-SVG);
 
 /* <format(<font-format>)> 値 */
-src: url(path/to/font.woff) format("woff");
-src: url(path/to/font.otf) format("opentype");
+src: url("path/to/font.woff") format("woff");
+src: url("path/to/font.otf") format("opentype");
 
 /* 複数のリソース */
 src:
-  url(path/to/font.woff) format("woff"),
-  url(path/to/font.otf) format("opentype");
+  url("path/to/font.woff") format("woff"),
+  url("path/to/font.otf") format("opentype");
 
 /* フォントの形式と技術のついた複数のリソース */
 src:
@@ -46,7 +43,6 @@ src:
 ### 値
 
 - `url()`
-
   - : {{cssxref("url_value", "&lt;url&gt;")}} で構成される外部参照を指定し、その後にオプションで `format()` と `tech()` 成分値を使用して、URL で参照するリソースの書式とフォント技術を指定します。 `format()` と `tech()` の部分は、既知の[フォント形式](#フォント形式)とフォント技術の文字列をカンマで区切ったリストです。ユーザーエージェントがフォント技術や形式に対応していない場合は、フォントリソースのダウンロードをスキップします。形式や技術のヒントが与えられない場合、フォントリソースは常にダウンロードされます。
 
 - `format()`
@@ -58,7 +54,6 @@ src:
   - : オプション宣言で `url()` の値に続き、ユーザーエージェントにフォント技術のヒントを提供します。
     `tech()` の値には、[フォント技術](#フォント技術)で説明するキーワードのいずれかを指定します。
 - `local(<font-face-name>)`
-
   - : ユーザーの端末で利用できるフォントの名前を指定します。フォント名を引用符で囲むことはオプションです。
 
     > [!NOTE]
@@ -75,7 +70,8 @@ src:
   - : ローカルにインストールされているフォントフェイスの完全な名前または PostScript 名を `local()` の部分値を使って指定します。
     名前はオプションで、引用符で囲むこともできます。フォントフェイス名は[大文字小文字を区別しません](https://drafts.csswg.org/css-fonts-3/#font-family-casing)。
 
-> **メモ:** {{domxref("Local Font Access API", "ローカルフォントアクセス API", "", "nocode")}} を使用することで、ユーザーがローカルにインストールしたフォントデータにアクセスすることができます。これは、名前、スタイル設定、ファミリーなどの高水準の詳細と、基盤となるフォントファイルの生のバイトを含みます。
+> [!NOTE]
+> {{domxref("Local Font Access API", "ローカルフォントアクセス API", "", "nocode")}} を使用することで、ユーザーがローカルにインストールしたフォントデータにアクセスすることができます。これは、名前、スタイル設定、ファミリーなどの高水準の詳細と、基盤となるフォントファイルの生のバイトを含みます。
 
 ## 解説
 
@@ -118,7 +114,7 @@ src: url(fonts.svg#WhichFont);
 
 > [!NOTE]
 >
-> - `format(svg)` は [SVG フォント](/ja/docs/Web/SVG/Tutorial/SVG_fonts)を表し、 `tech(color-SVG)` は [SVG 表を持つ OpenType フォント](https://learn.microsoft.com/typography/opentype/spec/svg)（OpenType-SVG 色フォントとも呼ばれる）を表し、これらは完全に異なります。
+> - `format(svg)` は [SVG フォント](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)を表し、 `tech(color-SVG)` は [SVG 表を持つ OpenType フォント](https://learn.microsoft.com/typography/opentype/spec/svg)（OpenType-SVG 色フォントとも呼ばれる）を表し、これらは完全に異なります。
 > - `opentype` 値 と `truetype` 値は、フォントファイルが 3 次ベジェ曲線（CFF/CFF2 表内）を用いているか、 2 次ベジェ曲線（字体テーブル内）を用いているかにかかわらず等価です。
 
 古い正規化されていない `format()` の値には、次のような構文があります。後方互換性のために引用符で囲まれた文字列として指定されます。

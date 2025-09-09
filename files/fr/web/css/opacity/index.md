@@ -7,7 +7,39 @@ slug: Web/CSS/opacity
 
 La propriété **`opacity`** définit la transparence d'un élément. Autrement dit, elle permet de définir le degré de visibilité de l'arrière-plan sur lequel est placé l'élément.
 
-{{EmbedInteractiveExample("pages/css/opacity.html")}}
+{{InteractiveExample("CSS Demo: opacity")}}
+
+```css interactive-example-choice
+opacity: 0;
+```
+
+```css interactive-example-choice
+opacity: 0.33;
+```
+
+```css interactive-example-choice
+opacity: 1;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #963770;
+  color: white;
+  padding: 1em;
+}
+```
 
 La valeur s'applique à l'ensemble de l'élément et à ce qu'il contient même si la valeur n'est pas héritée par les éléments fils. Ainsi, un élément et les fils qu'il contient auront tous la même opacité relative à l'arrière-plan, même si l'élément et ses descendants ont des opacités différentes. Si on souhaite utiliser différentes opacités pour les différents éléments enfants, plutôt que d'utiliser `opacity`, on pourra utiliser la propriété {{cssxref("background")}} avec une composante alpha différente de 1 (par exemple : `background: rgba(0, 0, 0, 0.4);`).
 
@@ -35,7 +67,6 @@ opacity: unset;
 ### Valeurs
 
 - `<number>`
-
   - : Une valeur de type {{cssxref("&lt;number&gt;")}} dans l'intervalle \[`0.0`, `1.0]` qui représente l'opacité de l'élément, la valeur de son canal alpha. Les valeurs en dehors de cet intervalle seront considérées comme valides mais ramenées dans cet intervalle (ainsi `6` sera équivalent à `1` et -2 sera équivalent à `0`).
 
     | Valeur                                                                                   | Signification                                                         |
@@ -131,7 +162,7 @@ Si l'opacité du texte est modifiée, il est nécessaire de vérifier que le con
 Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte (dont l'opacité a été adaptée) et celle de l'arrière-plan. Les recommandations du [WCAG](https://www.w3.org/WAI/intro/wcag) conseillent un ratio de 4.5:1 pour les textes normaux et 3:1 pour les textes plus grands (un texte est considéré comme grand s'il est en gras et dont les lettres mesurent 18.66px ou si ses lettres mesurent 24px ou plus).
 
 - [Vérificateur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_Understanding Success Criterion 1.4.3, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Spécifications

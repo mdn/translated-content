@@ -434,7 +434,7 @@ background-position:
 
 ### 背景についてのアクセシビリティの考慮
 
-テキストを背景画像や背景色の上に配置する際には、閲覧者がテキストを読み取れるだけの十分な[コントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)を確保するよう注意する必要があります。画像の上にテキストを配置する場合は、画像が読み込まれない場合でもテキストが読み取れるような背景色も指定する必要があります。
+テキストを背景画像や背景色の上に配置する際には、閲覧者がテキストを読み取れるだけの十分な[コントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)を確保するよう注意する必要があります。画像の上にテキストを配置する場合は、画像が読み込まれない場合でもテキストが読み取れるような背景色も指定する必要があります。
 
 スクリーンリーダーは背景画像を解釈できないため、画像は装飾としての役割のみを担うべきです。重要なコンテンツはすべて HTML ページの中で表現するべきで、背景画像の中に含めるべきではありません。
 
@@ -557,7 +557,7 @@ h2 {
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders)を見てください。
 
 ## まとめ
 

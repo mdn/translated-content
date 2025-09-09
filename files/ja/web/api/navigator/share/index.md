@@ -13,7 +13,7 @@ l10n:
 このメソッドは {{jsxref("Promise")}} を `undefined` で解決します。
 Windows では、これは共有ポップアップが起動されたときに発生し、Android では、データが共有ターゲットに正常に渡されたときにプロミスが解決されます。
 
-[ウェブ共有 API](/ja/docs/Web/API/Web_Share_API) は、[web-share](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 権限ポリシーで制限されます。
+[ウェブ共有 API](/ja/docs/Web/API/Web_Share_API) は、[web-share](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 権限ポリシーで制限されます。
 `share()` メソッドは、その権限に対応してはいるが許可されていない場合に例外を発生させます。
 
 ## 構文
@@ -25,14 +25,12 @@ navigator.share(data)
 ### 引数
 
 - `data` {{optional_inline}}
-
   - : 共有するデータを含むオブジェクト。
 
     ユーザーエージェントにとって未知のプロパティは無視され、共有データはユーザーエージェントが理解するプロパティにのみ評価されます。
     すべてのプロパティは任意であるが，少なくとも一つの既知のデータプロパティを指定しなければならない。
 
     使用可能な値は以下の通りです。
-
     - `url` {{optional_inline}}
       - : 共有される URL を表す文字列。
     - `text` {{optional_inline}}
@@ -53,11 +51,9 @@ navigator.share(data)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 文書が完全にアクティブになっていない、または他にも共有操作が進行中です。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : `web-share` [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってこの機能の使用がブロックされているか、ウィンドウが{{Glossary("transient activation", "一時的な有効化")}}されていないか、セキュリティ上の配慮からファイル共有がブロックされているかです。
+  - : `web-share` [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってこの機能の使用がブロックされているか、ウィンドウが{{Glossary("transient activation", "一時的な有効化")}}されていないか、セキュリティ上の配慮からファイル共有がブロックされているかです。
 - {{jsxref("TypeError")}}
-
   - : 指定した共有データを検証することができません。想定される理由は以下の通りです。
-
     - `data` 引数が除外されているか、不明な値を持つプロパティしかない場合。ユーザーエージェントが認識できないプロパティは無視されることに注意してください。
     - URL の形式が正しくない場合。
     - ファイルが指定されているが、実装がファイル共有に対応していない場合。
@@ -121,7 +117,7 @@ navigator.share(data)
 
 ## セキュリティ
 
-このメソッドは、現在の文書が [web-share](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 権限ポリシーと{{Glossary("transient activation", "一時的な有効化")}}を持っていることが必要です（ボタンクリックなどのUIイベントをきっかけに起動しなければならず、スクリプトによって任意の時点で起動させることはできない）。さらに、このメソッドでは、ネイティブ実装で共有に対応している有効なデータを指定する必要があります。
+このメソッドは、現在の文書が [web-share](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 権限ポリシーと{{Glossary("transient activation", "一時的な有効化")}}を持っていることが必要です（ボタンクリックなどのUIイベントをきっかけに起動しなければならず、スクリプトによって任意の時点で起動させることはできない）。さらに、このメソッドでは、ネイティブ実装で共有に対応している有効なデータを指定する必要があります。
 
 ## 例
 

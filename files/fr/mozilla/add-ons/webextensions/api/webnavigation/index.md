@@ -14,20 +14,18 @@ Chaque evenement correspond directement à un état précis dans la navigation. 
 ![](we-flow.png)
 
 - Le flux primaire est :
-
   - `{{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}`
   - `{{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}`
   - `{{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}`
   - `{{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}`.
 
 - Adionellement :
-
   - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` est déclenché avant `onBeforeNavigate` si le navigateur a besoin de créer un nouvel onglet ou une nouvelle fenêtre pour la navigation (par exemple, parce que l'utilisateur a ouvert un lien dans un nouvel onglet).
   - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} est déclenché si une page utilise l'[API historique](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur.
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} est déclenché si [l'identificateur de fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page est modifié.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} peut être déclenché à tout moment.
 
-Chaque navigation est une transition d'URL dans un cadre de navigateur particulier. Le cadre du navigateur est identifié par un ID d'onglet et un ID de trame. Le cadre peut être le contexte de navigation de niveau supérieur dans l'onglet ou peut être un contexte de navigation imbriqué implémenté en tant qu'[iframe](/fr/docs/Web/HTML/Element/iframe).
+Chaque navigation est une transition d'URL dans un cadre de navigateur particulier. Le cadre du navigateur est identifié par un ID d'onglet et un ID de trame. Le cadre peut être le contexte de navigation de niveau supérieur dans l'onglet ou peut être un contexte de navigation imbriqué implémenté en tant qu'[iframe](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 L'appel `addListener()` de chaque événement accepte un paramètre de filtre facultatif. Le filtre spécifiera un ou plusieurs modèles d'URL, et l'événement ne sera alors déclenché que pour les navigations dans lesquelles l'URL cible correspond à l'un des modèles.
 
@@ -45,7 +43,7 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-o
 ## Functions
 
 - {{WebExtAPIRef("webNavigation.getFrame()")}}
-  - : Récupère des informations sur un cadre particulier. Ce cadre peut être le cadre de niveau supérieur dans un onglet ou un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué, et est identifié de manière unique par un ID d'onglet et un ID de _frame_.
+  - : Récupère des informations sur un cadre particulier. Ce cadre peut être le cadre de niveau supérieur dans un onglet ou un [iframe](/fr/docs/Web/HTML/Reference/Elements/iframe) imbriqué, et est identifié de manière unique par un ID d'onglet et un ID de _frame_.
 - {{WebExtAPIRef("webNavigation.getAllFrames()")}}
   - : Étant donné un ID d'onglet, récupère des informations sur tous les cadres qu'il contient.
 
@@ -79,8 +77,6 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-o
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

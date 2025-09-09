@@ -3,8 +3,6 @@ title: Firefox 71 for Developers
 slug: Mozilla/Firefox/Releases/71
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされました。このページでは、開発者に影響する Firefox 71 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -67,7 +65,7 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 - CSS Grid Level 2 から値 [subgrid](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid) を、{{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} に追加しました ([Firefox バグ 1580894](https://bugzil.la/1580894))。
 - [段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout) で {{cssxref("column-span")}} をサポートしました ([Firefox バグ 1426010](https://bugzil.la/1426010))。
 - {{cssxref("clip-path")}} で `path()` の値をサポートしました ([Firefox バグ 1488530](https://bugzil.la/1488530))。
-- {{htmlelement("img")}} 要素の `height` および `width` HTML 属性を、内部の {{cssxref("aspect-ratio")}} プロパティにマッピングしました ([Firefox バグ 1585637](https://bugzil.la/1585637))。[この機能について、MDN のガイドをご覧ください](/ja/docs/Learn/Performance/Multimedia)。
+- {{htmlelement("img")}} 要素の `height` および `width` HTML 属性を、内部の {{cssxref("aspect-ratio")}} プロパティにマッピングしました ([Firefox バグ 1585637](https://bugzil.la/1585637))。[この機能について、MDN のガイドをご覧ください](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia)。
 
 #### 廃止
 
@@ -83,7 +81,7 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 
 ### MathML
 
-- [MathML 要素](/ja/docs/Web/MathML/Element) が MathML DOM を実装しました。クラスは {{domxref("MathMLElement")}} です。例えば適切な MathML DOM と、`mathmlEl.style`、グローバルイベントハンドラーを使用できます。従来は MathML 要素が {{domxref("Element")}} クラスのみ実装していました ([Firefox バグ 1571487](https://bugzil.la/1571487))。
+- [MathML 要素](/ja/docs/Web/MathML/Reference/Element) が MathML DOM を実装しました。クラスは {{domxref("MathMLElement")}} です。例えば適切な MathML DOM と、`mathmlEl.style`、グローバルイベントハンドラーを使用できます。従来は MathML 要素が {{domxref("Element")}} クラスのみ実装していました ([Firefox バグ 1571487](https://bugzil.la/1571487))。
 
 ### API
 
@@ -127,7 +125,6 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 ### API の変更点
 
 - {{WebExtAPIRef("downloads.download")}} が、以下の HTTP レスポンスコードをエラーとして識別および報告するようになりました:
-
   - 404 で `SERVER_BAD_CONTENT` を返します
   - 403 で `SERVER_FORBIDDEN` を返します
   - 402 および Proxy 407 で `SERVER_UNAUTHORIZED` を返します
@@ -137,7 +134,7 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 
 #### 廃止
 
-- [`proxy.register()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) および [`proxy.unregister()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) 関数を削除しました ([Firefox バグ 1443259](https://bugzil.la/1443259))。要求のプロキシ使用を制御するには {{WebExtAPIRef("proxy.onRequest")}} を使用してください。
+- [`proxy.register()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) および [`proxy.unregister()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) 関数を削除しました ([Firefox バグ 1443259](https://bugzil.la/1443259))。要求のプロキシー使用を制御するには {{WebExtAPIRef("proxy.onRequest")}} を使用してください。
 
 ## 関連情報
 

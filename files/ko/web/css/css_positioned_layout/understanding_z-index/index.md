@@ -3,8 +3,6 @@ title: CSS z-index 이해하기
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 ---
 
-{{CSSRef}}
-
 우리들은 HTML 페이지를 2차원 평면으로 생각한다. 왜냐하면 여러 텍스트, 이미지와 다른 엘리먼트들이 서로 겹치지 않고 배열되기 때문이다. 하나의 렌더링 흐름만이 존재하며 모든 엘리먼트들은 다른 엘리먼트들이 어떤 공간을 차지하고 있는지 알고 있다.
 
 > _In CSS 2.1, each box has a position in three dimensions. In addition to their horizontal and vertical positions, boxes lie along a "z-axis" and are formatted one on top of the other. Z-axis positions are particularly relevant when boxes overlap visually._
@@ -17,13 +15,13 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 
 이 문서에서는 몇가지 간단한 예를 들어 쌓임 규칙에 대해 설명하려고 한다.
 
-1. [z-index가 없는 경우의 쌓임](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : 기본 쌓임 규칙
-2. [floating 엘리먼트의 쌓임](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements) : floating 엘리먼트들은 어떻게 다루어지는가
-3. [z-index 적용](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index) : 기본 쌓임 순서를 변경하기 위해 z-index 사용하기
-4. [쌓임 맥락(stacking context) 이야기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) : 쌓임 맥락(stacking context) 이야기
-5. [쌓임 맥락 예제1](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : 2레벨 HTML 계층구조, 마지막 레벨에서 z-index가 지정된 경우
-6. [쌓임 맥락 예제2](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : 2레벨 HTML 계층구조, 모든 레벨에서 z-index가 지정된 경우
-7. [쌓임 맥락 예제3](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3) : 3레벨 HTML 계층구조, 두번째 레벨에서 z-index가 지정된 경우
+1. [z-index가 없는 경우의 쌓임](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : 기본 쌓임 규칙
+2. [floating 엘리먼트의 쌓임](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements) : floating 엘리먼트들은 어떻게 다루어지는가
+3. [z-index 적용](/ko/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : 기본 쌓임 순서를 변경하기 위해 z-index 사용하기
+4. [쌓임 맥락(stacking context) 이야기](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context) : 쌓임 맥락(stacking context) 이야기
+5. [쌓임 맥락 예제1](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : 2레벨 HTML 계층구조, 마지막 레벨에서 z-index가 지정된 경우
+6. [쌓임 맥락 예제2](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2) : 2레벨 HTML 계층구조, 모든 레벨에서 z-index가 지정된 경우
+7. [쌓임 맥락 예제3](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3) : 3레벨 HTML 계층구조, 두번째 레벨에서 z-index가 지정된 경우
 
 _저자의 말: 검토를 해준 Wladimir Palant씨와 Rod Whiteley씨에게 감사의 말을 전합니다._
 

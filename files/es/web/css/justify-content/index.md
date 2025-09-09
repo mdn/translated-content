@@ -3,8 +3,6 @@ title: justify-content
 slug: Web/CSS/justify-content
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad [CSS](/es/docs/Web/CSS) **`justify-content`** define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.

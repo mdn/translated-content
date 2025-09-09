@@ -9,7 +9,68 @@ l10n:
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule la zone spécifique de l'élément à l'intérieur de la région sera affichée, le reste sera masqué.
 
-{{EmbedInteractiveExample("pages/css/clip-path.html")}}
+{{InteractiveExample("CSS Demo: clip-path")}}
+
+```css interactive-example-choice
+clip-path: circle(40%);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(130px 140px at 10% 20%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```
+
+```css interactive-example-choice
+clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+```
+
+```css interactive-example-choice
+clip-path: rect(5px 145px 160px 5px round 20%);
+```
+
+```css interactive-example-choice
+clip-path: xywh(0 5px 100% 75% round 15% 0);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      class="transition-all"
+      id="example-element"
+      src="/shared-assets/images/examples/balloon-small.jpg"
+      width="150" />
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+}
+
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  margin: 20px;
+}
+```
 
 ## Syntaxe
 
@@ -56,13 +117,10 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 ### Valeurs
 
 - `<clip-source>`
-
-  - : Une [`url()`](/fr/docs/Web/CSS/url_value) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Element/clipPath).
+  - : Une [`url()`](/fr/docs/Web/CSS/url_value) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Reference/Element/clipPath).
 
 - [`<basic-shape>`](/fr/docs/Web/CSS/basic-shape)
-
   - : Une forme dont la taille et la position sont définies par la valeur `<geometry-box>`. Si aucune valeur de géométrie n'est fournie, `border-box` sera utilisée comme boîte de référence. La forme peut être définie avec l'une de ces valeurs&nbsp;:
-
     - [`inset()`](/fr/docs/Web/CSS/basic-shape/inset)
       - : Définit un rectangle.
     - [`circle()`](/fr/docs/Web/CSS/basic-shape/circle)
@@ -75,9 +133,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
       - : Définit une forme en utilisant une règle de remplissage SVG optionnelle et une définition de chemin SVG.
 
 - `<geometry-box>`
-
   - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définira la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec [`border-radius`](/fr/docs/Web/CSS/border-radius)) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
-
     - `margin-box`
       - : La [boîte de marge](/fr/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
     - `border-box`
@@ -91,13 +147,13 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
     - `stroke-box`
       - : La boîte de contour de la boîte englobante est utilisée comme boîte de référence.
     - `view-box`
-      - : La zone d'affichage SVG la plus proche est utilisée comme boîte de référence. Si un attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée la zone d'affichage SVG, la boîte de référence est située à l'origine du système construit par `viewBox` et les dimensions de la boîte de référence sont les valeurs de hauteur et de largeur de l'attribut `viewBox`.
+      - : La zone d'affichage SVG la plus proche est utilisée comme boîte de référence. Si un attribut [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) est défini pour l'élément qui crée la zone d'affichage SVG, la boîte de référence est située à l'origine du système construit par `viewBox` et les dimensions de la boîte de référence sont les valeurs de hauteur et de largeur de l'attribut `viewBox`.
 
 - `none`
   - : Aucun chemin de rognage n'est créé.
 
 > [!NOTE]
-> Si [la valeur calculée](/fr/docs/Web/CSS/computed_value) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) (de la même façon qu'[`opacity`](/fr/docs/Web/CSS/opacity) avec des valeurs différentes de `1`).
+> Si [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context) (de la même façon qu'[`opacity`](/fr/docs/Web/CSS/opacity) avec des valeurs différentes de `1`).
 
 ## Définition formelle
 
@@ -633,7 +689,7 @@ clipPathSelect.addEventListener("change", (evt) => {
   - [`mask`](/fr/docs/Web/CSS/mask)
   - [`filter`](/fr/docs/Web/CSS/filter)
 - Les attributs SVG
-  - [`clip-path`](/fr/docs/Web/SVG/Attribute/clip-path)
+  - [`clip-path`](/fr/docs/Web/SVG/Reference/Attribute/clip-path)
   - [`clip-rule`](/fr/docs/Web/SVG/Attribute/clip-rule)
-- [Appliquer des effets SVG sur du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Appliquer des effets SVG sur du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - [Les formes CSS, le rognage et le masquage&nbsp;: comment les utiliser (un billet de blog Hacks en anglais)](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)

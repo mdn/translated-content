@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2ef2c905a7322f5a533cf7c96ec5a337fc614359
 ---
 
-{{CSSRef}}
-
 **CSS ボックスサイズ指定**モジュールは、要素のサイズをどのようにコンテンツに合わせるか、または特定のレイアウトコンテキストに合わせるかを開発者が指定できるようにします。このモジュールでは、サイズ指定、最小サイズ指定、最大サイズ指定のプロパティを定義しており、コンテンツに基づく{{glossary("intrinsic size", "内在サイズ")}}とコンテキストに基づく[外在](/ja/docs/Glossary/Intrinsic_Size#外在サイズ)サイズを表すキーワードで CSS サイズ指定のプロパティを拡張します。
 
 要素は、外在的にも内在的にもサイズを設定することができます。[CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)は、要素の大きさを明示的に、つまり「外在的」に設定するためのページに相対的なプロパティ、たとえば `width`、`height`、`padding`、`margin` などのプロパティ（[CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュールで定義されている `border` プロパティも含む）を定義しています。この CSS ボックスサイズ指定モジュールは、CSS ボックスモデルモジュールを拡張し、コンテンツのサイズに基づいて要素のサイズを設定することで、要素を内在的にサイズ指定できるようにします。
@@ -60,23 +58,18 @@ l10n:
 ## ガイド
 
 - [アスペクト比を理解する](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-
   - : `aspect-ratio` プロパティについて学び、置換要素と非置換要素のアスペクト比について議論し、一般的なアスペクト比の使用例を検討します。
 
 - [CSS ボックスモデルの紹介](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-
   - : CSS の基本概念のひとつであるボックスモデルについての解説です。このモデルは、CSS が要素をどのようにレイアウトするかを定義するもので、コンテンツ、パディング、境界、マージン領域などが含まれます。
 
 - [マージンの相殺をマスターする](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-
   - : 隣接する 2 つのマージンが 1 つに折りたたまれることがあります。この記事では、この現象がいつ、なぜ起こるのか、そしてどのように制御するのかについて説明します。
 
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - : 視覚整形モデルを説明します。
 
 - [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-
   - : 内在的なサイズ調整について、{{CSSxRef("flex-grow")}}、{{CSSxRef("flex-shrink")}}、{{CSSxRef("flex-basis")}} を使用して主軸に沿ってフレックスアイテムのサイズと柔軟性を制御する方法を理解する前段階として説明します。
 
 ## 関連概念

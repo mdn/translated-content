@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 
 {{JSRef}}
 
-**`Object.is()`** 静态方法确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。
+**`Object.is()`** 静态方法确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。
 
 {{InteractiveExample("JavaScript Demo: Object.is()")}}
 
@@ -43,7 +43,7 @@ Object.is(value1, value2)
 
 ## 描述
 
-`Object.is()` 确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。如果以下其中一项成立，则两个值相同：
+`Object.is()` 确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。如果以下其中一项成立，则两个值相同：
 
 - 都是 {{jsxref("undefined")}}
 - 都是 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)
@@ -53,7 +53,6 @@ Object.is(value1, value2)
 - 都是 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 且具有相同的数值
 - 都是 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 且引用相同的 symbol 值
 - 都是数字且
-
   - 都是 `+0`
   - 都是 `-0`
   - 都是 {{jsxref("NaN")}}
@@ -104,4 +103,4 @@ Object.is(NaN, Number.NaN); // true
 ## 参见
 
 - [`core-js` 中 `Object.is` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [JavaScript 中的相等性判断](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)——三种内置相等性工具的比较
+- [JavaScript 中的相等性判断](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)——三种内置相等性工具的比较

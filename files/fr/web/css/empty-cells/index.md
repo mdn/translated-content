@@ -7,7 +7,50 @@ slug: Web/CSS/empty-cells
 
 La propriété **`empty-cells`** définit la façon dont l'agent utilisateur doit afficher les bordures et l'arrière-plan des cellules d'un tableau ({{HTMLElement("table")}}) qui n'ont aucun contenu visible.
 
-{{EmbedInteractiveExample("pages/css/empty-cells.html")}}
+{{InteractiveExample("CSS Demo: empty-cells")}}
+
+```css interactive-example-choice
+empty-cells: show;
+```
+
+```css interactive-example-choice
+empty-cells: hide;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <th>Client Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>Louise Q.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Owen B.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Stan L.</td>
+      <td>71</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+th,
+td {
+  border: 2px solid #a19;
+  padding: 0.25rem 0.5rem;
+}
+```
 
 Cette propriété est uniquement appliquée lorsque `border-collapse` vaut `separate`.
 

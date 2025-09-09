@@ -10,13 +10,13 @@ l10n:
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスで「貼り付け」操作を行ったときに発生します。
 
-カーソルが編集可能なコンテキストにある場合（{{HTMLElement("textarea")}} や [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性が `true` の要素など）、既定のアクションはクリップボードの内容を文書のカーソル位置に挿入します。
+カーソルが編集可能なコンテキストにある場合（{{HTMLElement("textarea")}} や [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性が `true` の要素など）、既定のアクションはクリップボードの内容を文書のカーソル位置に挿入します。
 
 このイベントのハンドラーは、イベントの `clipboardData` プロパティにある {{domxref("DataTransfer/getData", "getData()")}} を呼び出すことでクリップボードの中身にアクセスすることができます。
 
 既定の動作を上書きする場合（例えば、別なデータを挿入したりクリップボードの内容を変換したりする場合など）、イベントハンドラーで {{domxref("Event/preventDefault", "event.preventDefault()")}} を使用して既定のアクションをキャンセルした上で、必要なデータを手動で挿入してください。
 
-[合成した](/ja/docs/Web/Events/Creating_and_triggering_events) `paste` イベントを構築して配信することができますが、文書の内容には影響しません。
+[合成した](/ja/docs/Web/API/Document_Object_Model/Events) `paste` イベントを構築して配信することができますが、文書の内容には影響しません。
 
 ## 構文
 

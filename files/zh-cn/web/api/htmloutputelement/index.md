@@ -18,13 +18,13 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLOutputElement.defaultValue")}}
   - : 一个表示元素默认值的字符串，初始为空字符串。
 - {{domxref("HTMLOutputElement.form")}} {{ReadOnlyInline}}
-  - : 一个表示与控件关联的表单的 {{domxref("HTMLFormElement")}}，如果定义了 [`form`](/zh-CN/docs/Web/HTML/Element/output#form) HTML 属性，则反映该属性。
+  - : 一个表示与控件关联的表单的 {{domxref("HTMLFormElement")}}，如果定义了 [`form`](/zh-CN/docs/Web/HTML/Reference/Elements/output#form) HTML 属性，则反映该属性。
 - {{domxref("HTMLOutputElement.htmlFor")}} {{ReadOnlyInline}}
-  - : 一个反映 [`for`](/zh-CN/docs/Web/HTML/Element/output#for) HTML 属性的 {{domxref("DOMTokenList")}}，包含同一文档中有助于（或以其它方式影响）计算出 `value` 的其它元素的 ID 列表。
+  - : 一个反映 [`for`](/zh-CN/docs/Web/HTML/Reference/Elements/output#for) HTML 属性的 {{domxref("DOMTokenList")}}，包含同一文档中有助于（或以其它方式影响）计算出 `value` 的其它元素的 ID 列表。
 - {{domxref("HTMLOutputElement.labels")}} {{ReadOnlyInline}}
   - : 一个包含与此元素有关联的 {{HTMLElement("label")}} 元素的 {{domxref("NodeList")}}。
 - {{domxref("HTMLOutputElement.name")}}
-  - : 一个反映 [`name`](/zh-CN/docs/Web/HTML/Element/output#name) HTML 属性的字符串，包含与表单数据一起提交的控件的名称。
+  - : 一个反映 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/output#name) HTML 属性的字符串，包含与表单数据一起提交的控件的名称。
 - {{domxref("HTMLOutputElement.type")}} {{ReadOnlyInline}}
   - : 字符串“`output`”。
 - {{domxref("HTMLOutputElement.validationMessage")}} {{ReadOnlyInline}}
@@ -43,7 +43,6 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 - {{domxref("HTMLOutputElement.checkValidity()")}}
   - : 检查元素的有效性，返回一个保存检查结果的布尔值。
 - {{domxref("HTMLOutputElement.reportValidity()")}}
-
   - : 此方法报告元素约束的问题，如果有的话，报给用户。如果有问题，在当前元素上触发 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件，且返回 `false`；如果没有问题，则返回 `true`。
 
     当报告问题时，用户代理可以聚焦元素并更改文档的滚动位置，或执行一些其它动作来引起用户的注意。如果此元素同时出现多个问题，用户代理可能报告多个约束违规。如果元素没有渲染，则用户代理可能报告正在允许的脚本错误，而不是通知用户。

@@ -3,8 +3,6 @@ title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 
-{{AddonSidebar}}
-
 附加元件是一群檔案的集合，基於發布及安裝的目的而包裝成一個檔案。在這個章節，我們將快速地瀏覽這些可能會放在附加元件中的檔案。
 
 ## manifest.json
@@ -134,6 +132,6 @@ See the [content scripts](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scri
 
 Web accessible resources are resources such as images, HTML, CSS, and JavaScript that you include in the extension and want to make accessible to content scripts and page scripts. Resources which are made web-accessible can be referenced by page scripts and content scripts using a special URI scheme.
 
-For example, if a content script wants to insert some images into web pages, you could include them in the extension and make them web accessible. Then the content script could create and append [`img`](/zh-TW/docs/Web/HTML/Element/img) tags which reference the images via the `src` attribute.
+For example, if a content script wants to insert some images into web pages, you could include them in the extension and make them web accessible. Then the content script could create and append [`img`](/zh-TW/docs/Web/HTML/Reference/Elements/img) tags which reference the images via the `src` attribute.
 
 To learn more, see the documentation for the [web_accessible_resources](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) manifest.json key.

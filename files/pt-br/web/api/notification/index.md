@@ -84,7 +84,7 @@ Estes métodos estão disponíveis apenas no próprio objeto `Notification`.
 
 ### Métodos de instância
 
-Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu [`prototype`](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). O objeto de notificação também herda a interface {{domxref("EventTarget")}}.
+Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu [`prototype`](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). O objeto de notificação também herda a interface {{domxref("EventTarget")}}.
 
 - {{domxref("Notification.close()")}}
   - : Programaticamente fecha uma notificação.

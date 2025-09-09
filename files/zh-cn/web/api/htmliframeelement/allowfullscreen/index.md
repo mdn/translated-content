@@ -39,5 +39,5 @@ console.log(el.allowFullscreen); // 输出：true
 
 - [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)
 - {{domxref("Element.requestFullscreen()")}}
-- [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)
+- [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)
 - {{httpheader("Permissions-Policy/fullscreen", "fullscreen")}} 权限策略指令

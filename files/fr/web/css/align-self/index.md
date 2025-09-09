@@ -9,7 +9,49 @@ La propriété CSS **`align-self`** permet d'aligner les objets flexibles d'une 
 
 Si l'un des objet a une marge automatique (`auto`) pour l'axe perpendiculaire à l'axe principal, `align-self` sera ignoré. Lorsque le conteneur est une grille, `align-self` permet d'aligner l'élément au sein de [la zone de grille](/fr/docs/Glossary/Grid_Areas). Si le conteneur est une boîte flexible, l'alignement se fait selon [l'axe secondaire](/fr/docs/Glossary/Cross_Axis).
 
-{{EmbedInteractiveExample("pages/css/align-self.html")}}
+{{InteractiveExample("CSS Demo: align-self")}}
+
+```css interactive-example-choice
+align-self: stretch;
+```
+
+```css interactive-example-choice
+align-self: center;
+```
+
+```css interactive-example-choice
+align-self: start;
+```
+
+```css interactive-example-choice
+align-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+<div class="example-container">
+<div class="transition-all" id="example-element">One</div>
+<div>Two</div>
+<div>Three</div>
+</div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 Cette propriété ne s'applique pas aux boîtes qui sont des blocs ou aux cellules d'un tableau.
 

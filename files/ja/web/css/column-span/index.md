@@ -2,14 +2,52 @@
 title: column-span
 slug: Web/CSS/column-span
 l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`column-span`** は [CSS](/ja/docs/Web/CSS) のプロパティで、値に `all` を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。
 
-{{EmbedInteractiveExample("pages/css/column-span.html")}}
+{{InteractiveExample("CSS デモ: column-span")}}
+
+```css interactive-example-choice
+column-span: none;
+```
+
+```css interactive-example-choice
+column-span: all;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <div class="multicol-element">
+    <p>
+      ロンドン。ミカエルマス学期が終わり、リンカーンズ・イン・ホールで大法官が座っています。
+    </p>
+    <div id="example-element">段抜き?</div>
+    <p>
+      容赦のない 11 月の天候。街はまるで地球の表面から水が引き始めたばかりのように泥だらけで、ホルボーン・ヒルを象のようなトカゲのようによちよちと歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.multicol-element {
+  width: 100%;
+  text-align: left;
+  column-count: 3;
+}
+
+.multicol-element p {
+  margin: 0;
+}
+
+#example-element {
+  background-color: rebeccapurple;
+  padding: 10px;
+  color: #fff;
+}
+```
 
 複数の段にまたがる要素は**段抜き要素** (spanning element) と呼びます。
 

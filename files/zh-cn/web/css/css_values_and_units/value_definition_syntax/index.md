@@ -3,8 +3,6 @@ title: CSS 属性值定义语法
 slug: Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 ---
 
-{{CSSRef}}
-
 **CSS 属性值定义语法**（CSS value definition syntax）是用来限定 CSS 属性合法取值的专门语法。在此基础之上，一个 CSS 属性的合法取值也由语义所限制，比如一些数字必须是正数。
 
 CSS 属性值定义语法描述了哪些值是可取的 CSS 属性，基本组成元素包括关键字、符号与带类型的参数。
@@ -108,7 +106,7 @@ bold && <length>
 
 ### “或”组合符：||
 
-*“或”组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。“或”组合符通常用来描述[属性缩写](/zh-CN/docs/Web/CSS/Shorthand_properties)中的各部分。
+*“或”组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。“或”组合符通常用来描述[属性缩写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)中的各部分。
 
 ```css
 <'border-width'> || <'border-style'> || <'border-color'>
@@ -379,25 +377,23 @@ bold smaller#
 ## 参见
 
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
+    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - {{glossary("Replaced elements", "可替换元素")}}

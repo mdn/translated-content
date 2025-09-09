@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
 
-Este segundo artículo de nuestro [Tutorial Express](/es/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) muestra cómo puede crear un "esqueleto" para un proyecto de sitio web que luego puede completar con rutas, plantillas/vistas, y llamadas a base de datos especifícas del sitio.
+Este segundo artículo de nuestro [Tutorial Express](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) muestra cómo puede crear un "esqueleto" para un proyecto de sitio web que luego puede completar con rutas, plantillas/vistas, y llamadas a base de datos especifícas del sitio.
 
 <table>
   <tbody>
@@ -33,7 +33,7 @@ Este segundo artículo de nuestro [Tutorial Express](/es/docs/Learn/Server-side/
 
 ## Visión General
 
-Este artículo muestra cómo puede crear un sitio web "esqueleto" usando la herramienta [Generador de Aplicaciones Express](https://expressjs.com/en/starter/generator.html), que luego puede completar con rutas, vistas/plantillas, y llamadas a base de datos especifícas del sitio. En este caso usaremos la herramienta para crear el framework para nuestro [website Local Library](/es/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), al que luego agregaremos todo el código que el sitio necesite. El proceso es extremadamente simple, requiriendo sólo que se invoque el generador en la línea de comandos con un nombre para el nuevo proyecto, opcionalmente especificando también el motor de plantillas y el generador de CSS a utilizar.
+Este artículo muestra cómo puede crear un sitio web "esqueleto" usando la herramienta [Generador de Aplicaciones Express](https://expressjs.com/en/starter/generator.html), que luego puede completar con rutas, vistas/plantillas, y llamadas a base de datos especifícas del sitio. En este caso usaremos la herramienta para crear el framework para nuestro [website Local Library](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), al que luego agregaremos todo el código que el sitio necesite. El proceso es extremadamente simple, requiriendo sólo que se invoque el generador en la línea de comandos con un nombre para el nuevo proyecto, opcionalmente especificando también el motor de plantillas y el generador de CSS a utilizar.
 
 Las siguientes secciones muestran como puede llamar al generador de aplicaciones, y proporcionan una pequeña explicación sobre las diferentes opciones para vistas y CSS. También explicaremos como está estructurado el esqueleto del sitio web. Al final, mostraremos como puede ejecutar el sitio web para verificar que funciona.
 
@@ -42,7 +42,7 @@ Las siguientes secciones muestran como puede llamar al generador de aplicaciones
 
 ## Usando el generador de aplicaciones
 
-Ya debe haber instalado el generador como parte de [Configurar un entorno de desarrollo de Node](/es/docs/Learn/Server-side/Express_Nodejs/development_environment). Como un rápido recordatorio, la herramienta generador se instala para todos los sitios usando el manejador de paquetes NPM, como se muestra:
+Ya debe haber instalado el generador como parte de [Configurar un entorno de desarrollo de Node](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment). Como un rápido recordatorio, la herramienta generador se instala para todos los sitios usando el manejador de paquetes NPM, como se muestra:
 
 ```bash
 npm install express-generator -g
@@ -94,7 +94,6 @@ Generalmente hablando debe seleccionar un motor de plantillas que le brinde toda
 - Estilo — Algunos motores de plantillas usan marcas específicas para indicar inserción de contenido dentro del HTML "ordinario", mientras que otros construyen el HTML usando una sintaxis diferente (por ejemplo, usando indentación (sangría) y nombres de bloque).
 - Tiempo Renderizado/desempeño.
 - Características — debe considerar si los motores que elija poseen las siguientes características disponibles:
-
   - Herencia del diseño: Le permite definir una plantilla base y luego "heredar" sólo las partes que desea que sean diferentes para una página particular. Típicamente esto es un mejor enfoque que construir plantillas incluyendo un número de componentes requeridos, contruyéndolas desde cero cada vez.
   - Soporte para incluir: Le permite construir plantillas incluyendo otras plantillas.
   - Control consiso de la sintanxis de variables y ciclos.
@@ -175,7 +174,6 @@ En este punto tenemos un esqueleto completo de nuestro proyecto. El sitio web no
    ```
 
 2. Luego ejecute la aplicación.
-
    - En Windows, use este comando:
 
      ```bash
@@ -348,7 +346,8 @@ El archivo **/bin/www** es el punto de entrada de la aplicación. Lo primero que
 var app = require("../app");
 ```
 
-> **Nota:** `require()` es una función de node global que se usa para importar módulos en el archivo actual. Aquí especificamos el módulo app.js utilizando una ruta relativa y omitiendo la extensión de archivo opcional (.js).
+> [!NOTE]
+> `require()` es una función de node global que se usa para importar módulos en el archivo actual. Aquí especificamos el módulo app.js utilizando una ruta relativa y omitiendo la extensión de archivo opcional (.js).
 
 El resto del código en este archivo configura un servidor HTTP de node con la aplicación configurada en un puerto específico (definido en una variable de entorno o 3000 si la variable no está definida), y comienza a escuchar e informar errores y conexiones del servidor. Por ahora no necesita saber nada más sobre el código (todo en este archivo es "repetitivo"), pero siéntase libre de revisarlo si está interesado.
 
@@ -496,7 +495,7 @@ Create a new route in **/routes/users.js** that will display the text "_You're s
 
 ## Summary
 
-You have now created a skeleton website project for the [Local Library](/es/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) and verified that it runs using _node_. Most important, you also understand how the project is structured, so you have a good idea where we need to make changes to add routes and views for our local library.
+You have now created a skeleton website project for the [Local Library](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) and verified that it runs using _node_. Most important, you also understand how the project is structured, so you have a good idea where we need to make changes to add routes and views for our local library.
 
 Next we'll start modifying the skeleton so that works as a library website.
 

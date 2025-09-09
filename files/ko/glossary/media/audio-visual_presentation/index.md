@@ -17,5 +17,5 @@ l10n:
 
 - 위키백과의 [멀티미디어](https://en.wikipedia.org/wiki/Multimedia)
 - [웹 미디어 기술](/ko/docs/Web/Media): 웹 콘텐츠에서 미디어를 사용할 수 있는 모든 방법에 대한 안내서
-- MDN 학습 범위 :[멀티미디어 및 임베딩](/ko/docs/Learn/HTML/Multimedia_and_embedding)
+- MDN 학습 범위 :[멀티미디어 및 임베딩](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b)
 - {{Glossary("HTML")}} 문서에서 미디어를 보여주는 데 사용되는 {{HTMLElement("audio")}} 및 {{HTMLElement("video")}} 요소

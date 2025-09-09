@@ -11,7 +11,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
 ![](webRequest-flow.png)
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} はリクエストの期間中のあらゆる時に発火します。また注意点としてイベントシーケンスがこれと違うこともあります: 例えば、Firefox では、[HSTS](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security) 更新の時には、`onBeforeRequest` のすぐ後に `onBeforeRedirect` イベントが発火します。
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} はリクエストの期間中のあらゆる時に発火します。また注意点としてイベントシーケンスがこれと違うこともあります: 例えば、Firefox では、[HSTS](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) 更新の時には、`onBeforeRequest` のすぐ後に `onBeforeRedirect` イベントが発火します。
 
 `onErrorOccurred` を除くすべてのイベントは `addListener()` への次の 3 つの引数を取ります:
 
@@ -30,26 +30,21 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 いくつかのイベントでは、リクエストを修正できます。特に、次のことが可能:
 
 - 次の API でリクエストをキャンセル:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 - 次の API でリクエストをリダイレクト:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 次の API でリクエストヘッダーの修正:
-
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
 - 次の API でレスポンスヘッダーの修正:
-
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 次の API で認証資格情報の提供:
-
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 これを行うには、イベント `addListener()` の `extraInfoSpec` の引数に"blocking"の値のオプションを渡す必要があります。これによりリスナーが同期します。このリスナーでは {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} オブジェクトを返すことができ、このオブジェクトは加えた修正を指し示します: 例えば、送信したい修正後のリクエストヘッダーなど。
@@ -132,7 +127,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

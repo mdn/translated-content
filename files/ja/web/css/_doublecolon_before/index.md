@@ -3,8 +3,6 @@ title: ::before (:before)
 slug: Web/CSS/::before
 ---
 
-{{CSSRef}}
-
 CSS において **`::before`** は、選択した要素の最初の子要素として[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
 
 ```css
@@ -14,9 +12,39 @@ a::before {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-before.html", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: ::before", "tabbed-standard")}}
 
-> **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/Replaced_element)には適用されません。
+```css interactive-example
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+a::before {
+  content: "🔗";
+}
+
+.local-link::before {
+  content: url("/shared-assets/images/examples/firefox-logo.svg");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+```
+
+```html interactive-example
+<p>
+  Learning resources for web developers can be found all over the internet. Try
+  out
+  <a href="https://web.dev/">web.dev</a>,
+  <a href="https://www.w3schools.com/">w3schools.com</a> or our
+  <a href="https://developer.mozilla.org/" class="local-link">MDN web docs</a>.
+</p>
+```
+
+> [!NOTE]
+> `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)には適用されません。
 
 ## 構文
 

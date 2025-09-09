@@ -5,13 +5,50 @@ l10n:
   sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---
 
-{{CSSRef}}
-
 **`flex-shrink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムのフレックス縮小係数を設定します。すべてのフレックスアイテムの寸法がフレックスコンテナーより大きい場合、フレックスアイテムは `flex-shrink` 値に従って[収縮します](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#flex-shrink_プロパティ)。それぞれのフレックス行の[負の余白](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#正と負の余白)は、その行の `flex-shrink` 値が `0` より大きいフレックスアイテム間で分配されます。
 
-> **メモ:** {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-shrink`、{{cssxref("flex-grow")}}、{{cssxref("flex-basis")}} の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-shrink` プロパティについて説明していますので、ここではこれらを別個のものとしています。
+> [!NOTE]
+> {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-shrink`、{{cssxref("flex-grow")}}、{{cssxref("flex-basis")}} の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-shrink` プロパティについて説明していますので、ここではこれらを別個のものとしています。
 
-{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
+{{InteractiveExample("CSS デモ: flex-shrink")}}
+
+```css interactive-example-choice
+flex-shrink: 0;
+```
+
+```css interactive-example-choice
+flex-shrink: 1;
+```
+
+```css interactive-example-choice
+flex-shrink: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">I shrink</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
+}
+```
 
 ## 構文
 

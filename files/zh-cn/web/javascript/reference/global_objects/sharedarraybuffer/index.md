@@ -36,8 +36,8 @@ worker.postMessage(sab);
 
 对于顶级文档，需要设置两个标头来实现你网站的跨源隔离：
 
-- [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 设置为 `same-origin`（来保护你的源站点免受攻击）
-- [`Cross-Origin-Embedder-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) 设置为 `require-corp` 或 `credentialless`（保护受害者免受你的源站点的影响）
+- [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) 设置为 `same-origin`（来保护你的源站点免受攻击）
+- [`Cross-Origin-Embedder-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) 设置为 `require-corp` 或 `credentialless`（保护受害者免受你的源站点的影响）
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
@@ -60,9 +60,9 @@ if (crossOriginIsolated) {
 
 在设置了这两个标头后，`postMessage()` 不再为 `SharedArrayBuffer` 对象抛出错误，因此，跨线程共享内存现在可用。
 
-嵌套文档和专用 worker 线程也需要将 [`Cross-Origin-Embedder-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) 标头设置为同样的值。对于同源嵌套文档和子资源，不需要进行任何其他更改。同站（但跨源）嵌套文档和子资源需要将 [`Cross-Origin-Resource-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) 标头设置为 `same-site`。而它们的跨源（和跨站点）的对应部分也需要将同样的标头设置为 `cross-origin`。请注意，将 [`Cross-Origin-Resource-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) 标头设置为除 `same-origin` 之外的任何值，都会使资源暴露于潜在的攻击中，比如[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)。
+嵌套文档和专用 worker 线程也需要将 [`Cross-Origin-Embedder-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) 标头设置为同样的值。对于同源嵌套文档和子资源，不需要进行任何其他更改。同站（但跨源）嵌套文档和子资源需要将 [`Cross-Origin-Resource-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) 标头设置为 `same-site`。而它们的跨源（和跨站点）的对应部分也需要将同样的标头设置为 `cross-origin`。请注意，将 [`Cross-Origin-Resource-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) 标头设置为除 `same-origin` 之外的任何值，都会使资源暴露于潜在的攻击中，比如[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)。
 
-请注意，[`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 标头会限制你对弹出窗口引用的保留能力。两个顶级窗口上下文之间的直接访问基本上只在它们同源且携带相同的两个标头（且具有相同的值）时才可行。
+请注意，[`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) 标头会限制你对弹出窗口引用的保留能力。两个顶级窗口上下文之间的直接访问基本上只在它们同源且携带相同的两个标头（且具有相同的值）时才可行。
 
 ### API 可用性
 

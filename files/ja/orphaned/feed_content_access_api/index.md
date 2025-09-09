@@ -95,7 +95,7 @@ slug: orphaned/Feed_content_access_API
 
         doc.open();
 
-        // HTML ヘッダとページタイトルを書き込む
+        // HTML ヘッダーとページタイトルを書き込む
 
         doc.write("<html><head><title>Feed: " + feed.title.text + "</title></head><body>");
         doc.write("<h1>" + feed.title.text + "</h1><p>");

@@ -7,7 +7,39 @@ slug: Web/CSS/gradient
 
 Le type de donnée CSS **`<gradient>`** permet de représenter une {{cssxref("&lt;image&gt;")}} contenant un dégradé entre deux ou plusieurs couleurs. Un dégradé CSS n'est pas une couleur CSS (type {{cssxref("&lt;color&gt;")}}) mais une image [sans dimension intrinsèque](/fr/docs/Web/CSS/image) (elle n'a aucune taille naturelle ou ratio), sa taille réelle sera celle de l'élément auquel elle est appliquée.
 
-{{EmbedInteractiveExample("pages/css/type-gradient.html")}}
+{{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
+
+```css interactive-example-choice
+background: linear-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: radial-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: conic-gradient(#f69d3c, #3f87a6);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 Comme pour l'interpolation des autres couleurs, les dégradés sont calculés dans l'espace de couleurs alpha prémultiplié. Cela permet d'éviter l'apparition de nuances de gris lorsque la couleur et l'opacité varient (on peut constater ce problème avec le mot-clé `transparent` dans d'anciens navigateurs).
 
@@ -165,6 +197,6 @@ div {
 - {{cssxref("radial-gradient", "radial-gradient()")}}
 - {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}
 - {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [Les types de donnée en CSS](/fr/docs/Web/CSS/CSS_Types)
+- [Les types de donnée en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [Les unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction à CSS : les unités et les valeurs](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Introduction à CSS : les unités et les valeurs](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

@@ -2,12 +2,12 @@
 title: キャンバスのチュートリアル
 slug: Web/API/Canvas_API/Tutorial
 l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
 
-このチュートリアルは、 [**`<canvas>`**](/ja/docs/Web/HTML/Element/canvas) 要素を使用して二次元のグラフィックを描画する方法を、基本から説明します。ここでの例は、キャンバスで何ができるかを明確に示すものであり、独自のコンテンツを作成するためのコードスニペットも提供しています。
+このチュートリアルは、 [**`<canvas>`**](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素を使用して二次元のグラフィックを描画する方法を、基本から説明します。ここでの例は、キャンバスで何ができるかを明確に示すものであり、独自のコンテンツを作成するためのコードスニペットも提供しています。
 
 `<canvas>` は [HTML](/ja/docs/Web/HTML) の要素であり、スクリプト（ふつうは [JavaScript](/ja/docs/Glossary/JavaScript)）を使ってグラフィックを描くことができます。これは例えば、グラフを描いたり、写真を合成したり、簡単なアニメーションを作成したりすることができます。
 
@@ -35,7 +35,6 @@ l10n:
 ## 関連情報
 
 - [Canvas トピックのページ](/ja/docs/Web/API/Canvas_API)
-- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
 
 ## 貢献者へのメモ
 

@@ -6,7 +6,7 @@ original_slug: Web/API/performance_property
 
 {{APIRef("High Resolution Time")}}
 
-{{domxref("Window")}} インタフェースのパフォーマンスプロパティは、現在のドキュメントに関するパフォーマンス情報を収集するために使用できる {{domxref("Performance")}} オブジェクトを返します。これはパフォーマンスタイムライン API、高解像度時間 API、[ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing)、[ユーザータイミング API](/ja/docs/Web/API/Performance_API/User_timing) および[リソースタイミング API](/ja/docs/Web/API/Performance_API/Resource_timing) の公開ポイントとして機能します。
+{{domxref("Window")}} インターフェイスのパフォーマンスプロパティは、現在のドキュメントに関するパフォーマンス情報を収集するために使用できる {{domxref("Performance")}} オブジェクトを返します。これはパフォーマンスタイムライン API、高解像度時間 API、[ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing)、[ユーザータイミング API](/ja/docs/Web/API/Performance_API/User_timing) および[リソースタイミング API](/ja/docs/Web/API/Performance_API/Resource_timing) の公開ポイントとして機能します。
 
 ## 構文
 
@@ -22,6 +22,6 @@ performanceData = window.performance;
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}

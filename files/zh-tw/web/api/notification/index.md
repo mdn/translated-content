@@ -90,7 +90,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 
 ### 實例方法
 
-These properties are available only on an instance of the `Notification` object or through its [`prototype`](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
+These properties are available only on an instance of the `Notification` object or through its [`prototype`](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
 
 - {{domxref("Notification.close()")}}
   - : 透過這個方法關閉 Notification 。

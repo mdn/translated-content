@@ -3,8 +3,6 @@ title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 
-{{JSRef}}
-
 **`has()`** 方法對一個指定值元素在 `Set` 物件中的存在與否回傳一個布林值。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
@@ -38,7 +36,7 @@ mySet.has(value);
 回傳 `true` 如果給定值存在在 `Set` 物件中；反之回傳 `false`。
 
 > [!NOTE]
-> 技術上來說，`has()` 使用了 [`sameValueZero`](/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) 算法來判斷給定元素的存在與否。
+> 技術上來說，`has()` 使用了 [`sameValueZero`](/zh-TW/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) 算法來判斷給定元素的存在與否。
 
 ## 範例
 

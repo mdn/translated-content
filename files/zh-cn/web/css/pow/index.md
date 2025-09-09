@@ -3,8 +3,6 @@ title: pow()
 slug: Web/CSS/pow
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`pow()`** 为指数型函数，返回底数的某数次方的值。
 
 {{CSSXref("exp")}} 函数为 `pow()` 的特例，其底数为数学常数 [e](<https://zh.wikipedia.org/wiki/E_(数学常数)>)。
@@ -23,11 +21,9 @@ width: calc(10px * pow(2, 10)); /* 10px * 1024 = 10240px */
 `pow(base, number)` 函数接受两个以逗号分隔的值作为其参数。
 
 - `base`
-
   - : 解析为 {{CSSXref("&lt;number&gt;")}} 的计算式，表示底数。
 
 - `number`
-
   - : 解析为 {{CSSXref("&lt;number&gt;")}} 的计算式，表示指数。
 
 ### 返回值

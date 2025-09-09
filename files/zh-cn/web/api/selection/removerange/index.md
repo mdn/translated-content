@@ -1,38 +1,50 @@
 ---
-title: Selection.removeRange()
+title: Selection：removeRange() 方法
 slug: Web/API/Selection/removeRange
+l10n:
+  sourceCommit: 29601e9dc567c497143866aa9c2eca9358e9f449
 ---
 
-{{ ApiRef() }}
+{{ ApiRef("DOM") }}
 
-### 概述
+**`Selection.removeRange()`** 方法用于从当前选区中移除一个范围。
 
-将一个区域从选区中移除。
+## 语法
 
-### 语法
-
-```plain
-sel.removeRange(range)
+```js-nolint
+removeRange(range)
 ```
 
 ### 参数
 
-- _`range`_
-  - : Range 对象将从选区当中移除。
+- `range`
+  - : 一个将被从选区中移除的 Range 对象。
 
-### Examples
+### 返回值
 
-```plain
-/* 通过设计一段 js 代码，我们可以获得多个区域，
- * 这段代码可以移除除了第一个区域之外的所有区域。
- *（此代码在 Chrome 中不生效，因为 Chrome 当中只能
- * 选择一个选区，哎我为什么要在 Mozilla 的网站上
- * 说这个？译者注）*/
+无（{{jsxref("undefined")}}）。
 
-s = window.getSelection();
-if(s.rangeCount > 1) {
- for(var i = 1; i < s.rangeCount; i++) {
-  s.removeRange(s.getRangeAt(i));
- }
+## 示例
+
+```js
+/* 在程序层面，可以选中多个范围。
+ * 此操作将移除除第一个范围外的所有其他范围。*/
+const s = window.getSelection();
+if (s.rangeCount > 1) {
+  for (let i = 1; i < s.rangeCount; i++) {
+    s.removeRange(s.getRangeAt(i));
+  }
 }
 ```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- 所属接口：{{domxref("Selection")}}。

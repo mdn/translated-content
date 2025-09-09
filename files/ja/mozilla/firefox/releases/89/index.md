@@ -3,8 +3,6 @@ title: Firefox 89 for developers
 slug: Mozilla/Firefox/Releases/89
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 89 の変更点をまとめています。Firefox 89 は、米国時間 2021 年 6 月 1 日にリリースされました。
 
 > [!NOTE]
@@ -40,12 +38,11 @@ _変更なし。_
 #### DOM
 
 - {{domxref("PerformanceEventTiming")}} をデフォルトで有効にしました ([Firefox バグ 1701029](https://bugzil.la/1701029))。
-- {{htmlelement("input")}} および {{htmlelement("textarea")}} 要素の内容物を、デフォルトで {{domxref("Document.execCommand()")}} コマンドを使用して操作できるようになりました。[`contentEditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) などの冗長な回避策なしに、編集履歴の維持やほかのブラウザーとの同等性を提供します ([Firefox バグ 1220696](https://bugzil.la/1220696))。
+- {{htmlelement("input")}} および {{htmlelement("textarea")}} 要素の内容物を、デフォルトで {{domxref("Document.execCommand()")}} コマンドを使用して操作できるようになりました。[`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) などの冗長な回避策なしに、編集履歴の維持やほかのブラウザーとの同等性を提供します ([Firefox バグ 1220696](https://bugzil.la/1220696))。
 
 #### 廃止
 
 - 以下のセンサーイベントおよび関連するハンドラーを削除しました (主にほかの主要なブラウザーエンジンとの互換性を向上するため、またプライバシー侵害の懸念に対処するため):
-
   - {{domxref("DeviceProximityEvent")}} および `window.ondeviceproximity` イベントハンドラー ([Firefox バグ 1699707](https://bugzil.la/1699707))。
   - {{domxref("UserProximityEvent")}} および `window.onuserproximity`) イベントハンドラー ([Firefox バグ 1699707](https://bugzil.la/1699707))。
   - `DeviceLightEvent` および `window.ondevicelight` イベントハンドラー ([Firefox バグ 1701824](https://bugzil.la/1701824))。

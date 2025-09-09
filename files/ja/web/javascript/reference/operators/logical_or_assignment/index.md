@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 
 論理和代入演算子 (`x ||= y`) は、`x` が{{Glossary("falsy", "偽値")}}である場合にのみ代入を行います。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical OR assignment")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Logical OR assignment")}}
 
 ```js interactive-example
 const a = { duration: 50, title: "" };

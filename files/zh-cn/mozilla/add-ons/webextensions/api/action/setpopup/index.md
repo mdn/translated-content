@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 指定用户单击浏览器操作图标时以弹窗形式打开的 HTML 文档。没有特定弹窗的标签页将继承全局弹窗，其默认值为清单中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
 
 > [!NOTE]
@@ -23,15 +21,12 @@ browser.action.setPopup(
 ### 参数
 
 - `details`
-
   - : 一个含有下列属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`，指定要设置弹窗的标签页。当用户导航到新页面时，弹窗会被重置。
     - `windowId` {{optional_inline}}
       - : `integer`，指定要设置弹窗的窗口。
     - `popup`
-
       - : `string` 或 `null`，指定作为弹窗的 HTML 文件的 URL。
 
         这可以指向打包在扩展中的文件（例如使用 {{WebExtAPIRef("extension.getURL")}} 创建的文件），或远程文档（例如 `https://example.org/`）。
@@ -39,7 +34,6 @@ browser.action.setPopup(
         若传入空字符串（`""`），则禁用弹窗，扩展将接收 {{WebExtAPIRef("action.onClicked")}} 事件。
 
         若 `popup` 为 `null`：
-
         - 若指定了 `tabId`，则移除标签页特定的弹窗，使标签页继承其所属窗口的弹窗。
         - 若指定了 `windowId`，则移除窗口特定的弹窗，使窗口继承全局弹窗。
         - 若 `tabId` 和 `windowId` 都被省略，则将全局弹窗恢复为默认值。
@@ -100,7 +94,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-setPopup) API。本文衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-setPopup) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

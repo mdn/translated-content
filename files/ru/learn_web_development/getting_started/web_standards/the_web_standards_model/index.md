@@ -57,7 +57,7 @@ You're a digital creative now. Enjoy the experience, and the potential for earni
 
 ## Overview of modern web technologies
 
-There are a number of technologies to learn if you want to be a front-end web developer. In this section we will describe them briefly. For a more detailed explanation of how some of them work together, read our article [How the web works](/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works).
+There are a number of technologies to learn if you want to be a front-end web developer. In this section we will describe them briefly. For a more detailed explanation of how some of them work together, read our article [How the web works](/ru/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works).
 
 ### Browsers
 
@@ -116,8 +116,8 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
 Once you've learned the "raw" technologies that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
 
-- The [developer tools](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
-- [Testing tools](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing) that can be used to run tests to show whether your code is behaving as you intended it to.
+- The [developer tools](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
+- [Testing tools](/ru/docs/Learn_web_development/Extensions/Testing) that can be used to run tests to show whether your code is behaving as you intended it to.
 - Libraries and frameworks built on top of JavaScript that allow you to build certain types of web site much more quickly and effectively.
 - So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
 - Minifiers, which remove all the whitespace from your code files to make it so that they are smaller and therefore download from the server more quickly.
@@ -155,4 +155,4 @@ You'll come across the below concepts at some point in your studies.
 ## Смотрите также
 
 - [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [How does the internet work?](/ru/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [How does the internet work?](/ru/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)

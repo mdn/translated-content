@@ -21,9 +21,7 @@ isSessionSupported(mode)
 ### 引数
 
 - `mode`
-
   - : 文字列 ({{jsxref("String")}}) で、対応を調べる WebXR セッションモードを指定します。調べる可能なモード：
-
     - `immersive-ar` {{Experimental_Inline}}
     - `immersive-vr`
     - `inline`
@@ -37,7 +35,7 @@ isSessionSupported(mode)
 `isSessionSupported()` は実際の例外を発生させるのではなく、{{domxref("DOMException")}} という名前の文字列をハンドラーに渡して、返されたプロミスを拒否します。
 
 - `SecurityError`
-  - : この機能の使用が `xr-spatial-tracking` [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされています。
+  - : この機能の使用が `xr-spatial-tracking` [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされています。
 
 ## 例
 

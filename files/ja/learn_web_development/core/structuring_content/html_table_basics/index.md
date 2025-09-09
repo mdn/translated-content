@@ -240,8 +240,8 @@ HTML の表は表形式のデータに使用する必要があります。その
 表の理論については十分に説明したので、実用的な例に飛び込み、簡単な表を作成しましょう。
 
 1. まず最初に、ローカルマシンの新しいディレクトリーに、[blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) のローカルコピーを作成しましょう。
-2. すべての表の内容は、**[`<table></table>`](/ja/docs/Web/HTML/Element/table)** という 2 つのタグで囲まれています。HTML の本体の中にこれらを追加してください。
-3. 表内の最小のコンテナーは、**[`<td>`](/ja/docs/Web/HTML/Element/td)** 要素によって作成される表セルです ('td' は 'table data' を表します)。表タグ内に次のコードを追加します。
+2. すべての表の内容は、**[`<table></table>`](/ja/docs/Web/HTML/Reference/Elements/table)** という 2 つのタグで囲まれています。HTML の本体の中にこれらを追加してください。
+3. 表内の最小のコンテナーは、**[`<td>`](/ja/docs/Web/HTML/Reference/Elements/td)** 要素によって作成される表セルです ('td' は 'table data' を表します)。表タグ内に次のコードを追加します。
 
    ```html
    <td>やあ、これは最初のセルです。</td>
@@ -258,7 +258,7 @@ HTML の表は表形式のデータに使用する必要があります。その
 
 お分かりのように、セルは互いの下に配置されているのではなく、同じ行に配置されています。 各 `<td>` 要素は単一のセルを作成し、それらが一緒になって最初の行を構成します。 追加するセルごとに行が長くなります。
 
-この行が大きくなるのを防ぎ、後続のセルを 2 行目に配置するには、**[`<tr>`](/ja/docs/Web/HTML/Element/tr)** 要素を使用する必要があります ('tr' は 'table row' を表します)。今これを調査しましょう。
+この行が大きくなるのを防ぎ、後続のセルを 2 行目に配置するには、**[`<tr>`](/ja/docs/Web/HTML/Reference/Elements/tr)** 要素を使用する必要があります ('tr' は 'table row' を表します)。今これを調査しましょう。
 
 1. 以下のように、既に作成した 4 つのセルを `<tr>` タグ内に配置します。
 
@@ -377,7 +377,7 @@ th {
 この表を改良してみましょう。
 
 1. まず、あなたのローカルマシンの新しいディレクトリーに [dogs-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) ファイルのローカルコピーを作ります。HTML には、上で見たのと同じ Dogs の例が含まれています。
-2. 表の見出しを視覚的にも意味的にも見出しとして認識させるには、**[`<th>`](/ja/docs/Web/HTML/Element/th)** 要素を使用します ('th' は 'table header' を表します)。これは `<td>` とまったく同じように機能しますが、通常のセルではなく見出しを表す点が異なります。HTML を開き、表の見出しを囲む全ての `<td>` 要素を `<th>` 要素に変更してください。
+2. 表の見出しを視覚的にも意味的にも見出しとして認識させるには、**[`<th>`](/ja/docs/Web/HTML/Reference/Elements/th)** 要素を使用します ('th' は 'table header' を表します)。これは `<td>` とまったく同じように機能しますが、通常のセルではなく見出しを表す点が異なります。HTML を開き、表の見出しを囲む全ての `<td>` 要素を `<th>` 要素に変更してください。
 3. HTML を保存してブラウザーにロードすると、見出しが見出しらしく見えます。
 
 > [!NOTE]

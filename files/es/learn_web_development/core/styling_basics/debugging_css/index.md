@@ -40,7 +40,7 @@ Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace
 
 ## Cómo acceder a las DevTools de los navegadores
 
-El artículo [¿Qué son las herramientas de desarrollo de los navegadores?](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) es una guía actualizada que explica cómo acceder a las herramientas en varios navegadores y plataformas. Si bien puedes optar por desarrollar principalmente en un navegador en particular y, por lo tanto, te familiarizarás más con las herramientas incluidas en ese navegador, vale la pena saber cómo acceder a ellas en otros navegadores. Esto ayudará si haces pruebas de las representaciones que dan diferentes navegadores.
+El artículo [¿Qué son las herramientas de desarrollo de los navegadores?](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) es una guía actualizada que explica cómo acceder a las herramientas en varios navegadores y plataformas. Si bien puedes optar por desarrollar principalmente en un navegador en particular y, por lo tanto, te familiarizarás más con las herramientas incluidas en ese navegador, vale la pena saber cómo acceder a ellas en otros navegadores. Esto ayudará si haces pruebas de las representaciones que dan diferentes navegadores.
 
 También te darás cuenta de que los diversos navegadores han optado por centrarse en áreas diferentes al crear sus DevTools. Por ejemplo, en Firefox hay algunas herramientas excelentes para trabajar visualmente con la compaginación con CSS, que te permiten inspeccionar y editar [Compaginaciones de cuadrícula](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), [Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) y [formas](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html). Sin embargo, todos los navegadores tienen herramientas fundamentales similares. Por ejemplo, para inspeccionar las propiedades y los valores que se aplican a los elementos de tu página, y hacer cambios desde el editor.
 
@@ -91,7 +91,7 @@ Puedes añadir propiedades usando las DevTools. ¿Te has dado cuenta de que quiz
 
 ## Comprender el modelo de cajas
 
-En artículos anteriores hemos expuesto el [modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model), y el hecho de que tengamos un modelo de cajas alternativo que cambia la forma en que se calcula el tamaño de los elementos en función del tamaño que les asignas, más el relleno y los bordes. Las DevTools realmente pueden ayudarte a comprender cómo se calcula el tamaño de un elemento.
+En artículos anteriores hemos expuesto el [modelo de cajas](/es/docs/Learn_web_development/Core/Styling_basics/Box_model), y el hecho de que tengamos un modelo de cajas alternativo que cambia la forma en que se calcula el tamaño de los elementos en función del tamaño que les asignas, más el relleno y los bordes. Las DevTools realmente pueden ayudarte a comprender cómo se calcula el tamaño de un elemento.
 
 [El panel de disposición](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#panel_css) muestra un diagrama del modelo de cajas en el elemento seleccionado, junto con una descripción de las propiedades y los valores que cambian la forma en que el elemento se presenta. Esto incluye una descripción de las propiedades que puedes no haber utilizado explícitamente en el elemento, pero que tienen valores iniciales establecidos.
 
@@ -127,7 +127,7 @@ Sin embargo, un poco más arriba en la hoja de estilo hay una regla con un selec
 }
 ```
 
-Como recordarás del artículo sobre [cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), en que hablamos sobre la especificidad, los selectores de clase son más específicos que los selectores de elemento, por lo que este es el valor que se aplica. DevTools puede ayudarte a encontrar estos problemas, especialmente si la información está oculta en algún lugar de una extensa hoja de estilo.
+Como recordarás del artículo sobre [cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts), en que hablamos sobre la especificidad, los selectores de clase son más específicos que los selectores de elemento, por lo que este es el valor que se aplica. DevTools puede ayudarte a encontrar estos problemas, especialmente si la información está oculta en algún lugar de una extensa hoja de estilo.
 
 **Inspecciona `<em>` con la clase `.special` y DevTools te mostrará que el naranja es el color que se aplica, y también te muestra la propiedad `color` aplicada al em tachado. Aquí puedes ver que la clase anula el selector de elemento.**
 

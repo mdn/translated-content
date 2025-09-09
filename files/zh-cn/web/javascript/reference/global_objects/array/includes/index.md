@@ -47,7 +47,7 @@ includes(searchElement, fromIndex)
 
 ## 描述
 
-`includes()` 方法使用[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法将 `searchElement` 与数组中的元素进行比较。0 值都被认为是相等的，不管符号是什么。（即 `-0` 等于 `0`），但 `false` *不*被认为与 `0` 相同。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 可以被正确搜索到。
+`includes()` 方法使用[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法将 `searchElement` 与数组中的元素进行比较。0 值都被认为是相等的，不管符号是什么。（即 `-0` 等于 `0`），但 `false` *不*被认为与 `0` 相同。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 可以被正确搜索到。
 
 当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用时，`includes()` 方法迭代空槽，就像它们的值是 `undefined` 一样。
 

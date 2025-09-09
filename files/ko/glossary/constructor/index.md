@@ -31,5 +31,5 @@ const defaultReference = new Default();
 ## 같이 보기
 
 - 위키백과의 [생성자](https://en.wikipedia.org/wiki/Constructor_%28object-oriented_programming%29)
-- MDN의 [JavaScript용 객체 지향 프로그래밍의 생성자](/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#classes_and_constructors)
+- MDN의 [JavaScript용 객체 지향 프로그래밍의 생성자](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#classes_and_constructors)
 - MDN의 [JavaScript의 새로운 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)

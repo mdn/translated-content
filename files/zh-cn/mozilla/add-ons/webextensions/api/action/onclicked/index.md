@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 当浏览器操作图标被点击时触发。如果浏览器操作有一个弹出窗口，此事件将不会触发。
 
 > [!NOTE]
@@ -25,26 +23,22 @@ browser.action.onClicked.hasListener(listener)
 事件包含三个函数：
 
 - `addListener(listener)`
-  - : 为该事件添加一个监听器。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
-  - : 停止监听该事件。`listener` 参数用于指定要移除的监听器。
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否有注册到该事件的上。若正在监听，返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
 ### 参数
 
 - `listener`
-
   - : 该函数将在事件触发时被调用。会为该函数传递以下参数：
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}，当图标被点击时的活动标签页。
     - `OnClickData`
-
       - : 包含有关点击的信息的对象。
-
         - `modifiers`
           - : `array`，点击时活动的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
         - `button`
@@ -70,7 +64,7 @@ browser.action.onClicked.addListener((tab) => {
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#event-onClicked) API。本文衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#event-onClicked) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

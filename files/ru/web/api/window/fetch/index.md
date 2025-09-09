@@ -23,16 +23,12 @@ Promise<Response> fetch(input[, init]);
 ### Аргументы
 
 - _input_
-
   - : Определяет желаемый для получения ресурс. Это может быть:
-
     - {{domxref("USVString")}} (строка), содержащая прямую URL ссылку на ресурс. Некоторые браузеры принимают `blob:` и `data:` , как схемы.
     - {{domxref("Request")}} объект (объект ответа).
 
 - _init_ {{optional_inline}}
-
   - : Объект с опциями, содержащий пользовательские настройки, которые вы желаете применить к запросу. Возможные варианты:
-
     - `method`: Метод запроса, например, `GET`, `POST`.
     - `headers`: Заголовки, содержащиеся в объекте {{domxref("Headers")}} или в объекте литерале с побитовыми значениями ({{domxref("ByteString")}}).
     - `body`: Тело запроса, которое может быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, или {{domxref("USVString")}} объектами. Обратите внимание, что `GET` или `HEAD` запрос не может иметь тела.
@@ -129,5 +125,5 @@ var myRequest = new Request("flowers.jpg", myInit);
 
 - [Fetch API](/ru/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

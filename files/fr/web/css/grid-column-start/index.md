@@ -9,7 +9,54 @@ l10n:
 
 La propriété **`grid-column-start`** définit la position du début d'un élément au sein de la grille de façon automatique, absolue ou relative par rapport à la fin de l'élément. La position de début définit le bord de la [zone de grille](/fr/docs/Glossary/Grid_Areas) selon l'axe logique de bloc (celui orthogonal au sens de lecteur).
 
-{{EmbedInteractiveExample("pages/css/grid-column-start.html")}}
+{{InteractiveExample("CSS Demo: grid-column-start")}}
+
+```css interactive-example-choice
+grid-column-start: auto;
+```
+
+```css interactive-example-choice
+grid-column-start: 2;
+```
+
+```css interactive-example-choice
+grid-column-start: -1;
+```
+
+```css interactive-example-choice
+grid-column-start: span 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Syntaxe
 
@@ -48,11 +95,9 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 ### Valeurs
 
 - `auto`
-
   - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (<i lang="en">span</i>) automatique ou une taille par défaut de `1`.
 
 - [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident)
-
   - : S'il existe une ligne nommée avec '\<custom-ident>-start', le début de l'élément coincide avec la première ligne correspondante.
 
     > [!NOTE]
@@ -61,7 +106,6 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
     Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
 
 - `<integer> && <custom-ident>?`
-
   - : Le début de l'élément est placé sur la n-ième ligne de la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
 
     Si un nom est fourni pour `<custom-ident>`, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront considérées afin de trouver la position.
@@ -69,7 +113,6 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
     Une valeur entière de `0` sera considérée comme invalide.
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Le début de l'élément est placé relativement au bord de fin pour occuper n colonnes.
 
     Si un nom fourni pour `<custom-ident>`, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, toutes les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées pour l'étendue de l'élément.

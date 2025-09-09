@@ -16,4 +16,4 @@ slug: Glossary/Tag
 
 ### 技術リファレンス
 
-- [HTML 概論](/ja/docs/Learn/HTML/Introduction_to_HTML)
+- [HTML 概論](/ja/docs/Learn_web_development/Core/Structuring_content)

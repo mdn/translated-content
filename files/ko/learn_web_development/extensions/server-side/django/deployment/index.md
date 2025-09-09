@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Deployment
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-당신은 이제 놀라운 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트를 (테스트도 마치고) 만들었으니, 도서관 스태프나 회원들이 인터넷을 통해 이용할 수 있도록 공개된 웹 서버에 설치하길 원할 것이다. 이번 장에서는 웹사이트를 배포할수 있는 호스트를 살펴보는 방법에 대한 개요와 사이트를 실제 운운영하기위해 필요한 것들에 대해 설명한다.
+당신은 이제 놀라운 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 웹사이트를 (테스트도 마치고) 만들었으니, 도서관 스태프나 회원들이 인터넷을 통해 이용할 수 있도록 공개된 웹 서버에 설치하길 원할 것이다. 이번 장에서는 웹사이트를 배포할수 있는 호스트를 살펴보는 방법에 대한 개요와 사이트를 실제 운운영하기위해 필요한 것들에 대해 설명한다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -90,7 +90,7 @@ Django에 대한 지원이 활발하게 이루어지거나 Django가 잘 동작�
 
 ## 웹사이트에서 공개(publish)준비 하기
 
-django-admin과 manage.py 도구로 생성된 [Django 뼈대 웹사이트](/ko/docs/Learn/Server-side/Django/skeleton_website)는 개발환경에 최적화 되어 설정되었다. 개발환경이 아닌 운영환경에서는 ( **settings.py**에 설정되어 있는 ) Django 프로젝트 설정의 많은 부분이, 보안상 혹은 성능상 이유로, 변경되어야 한다.
+django-admin과 manage.py 도구로 생성된 [Django 뼈대 웹사이트](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)는 개발환경에 최적화 되어 설정되었다. 개발환경이 아닌 운영환경에서는 ( **settings.py**에 설정되어 있는 ) Django 프로젝트 설정의 많은 부분이, 보안상 혹은 성능상 이유로, 변경되어야 한다.
 
 > **참고:** **한가지 팁:** 운영환경용으로 별도의 **settings.py** 파일을 유지하고 민감한 설정들은 별도의 파일이나 시스템의 환경변수에 저장하는 것이 일반적이다. 소스코드의 다른 부분은 공개된 저장소에 보관하더라도, 이 파일은 격리되어 보호되어야 한다.
 
@@ -155,7 +155,6 @@ Heroku는 현재까지 가장 오래 운영된 서비스들중 하나이며, 인
 - Heroku는 정말 돈 낼 필요가 없는 [무료 단계 (free tier)](https://www.heroku.com/pricing) 를 지원한다. (물론 약간의 제약이 있긴하다).
 - Heroku는 PaaS 개념의 서비스로 많은 웹 기반환경의 관리를 제공한다. 서버관리, 로드 밸런싱, 역방향 프록시등 여러가지 웹 기반환경들을 Heroku가 내부적으로 모두 제공하므로 이에 대한 걱정을 덜고 쉽게 개발을 시작할수 있다.
 - 제약이 있긴하지만, 이 제약들은 우리가 진행하려는 어플리케이션 개발에는 영향이 없을 것이다. 예를 들면 다음과 같다:
-
   - 무료 단계의 Heroku는 활성주기가 짧은 저장공간을 제공하므로 유저가 업로드한 파일을 Heroku 자체에 안전하게 저장할 수는 없다.
   - 무료 단계에서는 30분동안 아무런 요청도 없다면 웹 앱은 비활성화 될 것이다. 이 후에 요청이 오면 응답하는데 몇 초정도 약간의 시간이 더 필요하게 될것이다.
   - 무료 단계에서는 웹 사이트의 동작 가능 시간이 매월 특정시간 만큼으로 제한된다 ( 사이트가 "비활성(asleep)"상태인 경우의 시간은 제외된다). 이 제약은 사용빈도가 낮고/ 예제 확인용 사이트인 경우는 문제가 되지 않지만, 계속 활성화 상태가 필요한 앱의 경우에는 적합하지 않을것이다.
@@ -199,7 +198,6 @@ git 으로 작업하는 수많은 방법이 있지만, [Github](https://github.c
 1. 이곳( <https://github.com/> )을 방문하여 계정을 생성하라.
 2. 로그인 해서 꼭대기 툴바의 **+** 링크를 클릭하여 **New repository**를 선택하라.
 3. 이 폼의 모든 필드에 기입하라. 그렇지 않으면 진행이 불가한 것은 아니지만, 모두 채울것을 강력 추천한다.
-
    - 새로운 저장소 이름 (예시: _django_local_library_)과 설명 (예시: "Local Library website written in Django")을 입력하라.
    - "_Add .gitignore" 선택 목록에서 "_**Python**_"을 선택하라_.
    - "_Add a license" 선택 목록에서 선호하는 라이센스 유형을 선택하라_.
@@ -302,7 +300,7 @@ web: gunicorn locallibrary.wsgi --log-file -
 
 개발기간중에는 LocalLibrary 어플리케이션을 서비스하기 위해 Gunicorn을 필요로 하진 않겠지만, Heroku에서 원격 서버를 셋업하기 위한 [요구조건](#requirements) 의 일부이므로 Gunicorn을 설치할 것이다.
 
-아래와 같이 커맨드라인에서 pip를 이용하여 _Gunicorn_ 설치한다 (pip는 [개발 환경 구축하기](/ko/docs/Learn/Server-side/Django/development_environment) 단계에서 설치했다):
+아래와 같이 커맨드라인에서 pip를 이용하여 _Gunicorn_ 설치한다 (pip는 [개발 환경 구축하기](/ko/docs/Learn_web_development/Extensions/Server-side/Django/development_environment) 단계에서 설치했다):
 
 ```bash
 pip3 install gunicorn
@@ -365,7 +363,7 @@ Django 웹 어플리케이션으로부터 분리하여 정적파일을 쉽게 �
 
 관련 설정 변수는 다음과 같다:
 
-- `STATIC_URL`: 이것은 베이스 URL 위치인데 이곳에서 정적 파일들이 지원된다. 예를 들면 CDN과 같은곳이다. 베이스 템플릿에서 접근하는 정적 템플릿 변수에 사용된다. ( [Django 튜토리얼 파트 5: 홈페이지 작성하기](/ko/docs/Learn/Server-side/Django/Home_page) 를 참고하라).
+- `STATIC_URL`: 이것은 베이스 URL 위치인데 이곳에서 정적 파일들이 지원된다. 예를 들면 CDN과 같은곳이다. 베이스 템플릿에서 접근하는 정적 템플릿 변수에 사용된다. ( [Django 튜토리얼 파트 5: 홈페이지 작성하기](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Home_page) 를 참고하라).
 - `STATIC_ROOT`: 이것은 Django의 "collectstatic" 도구로 템플릿에서 참조하는 모든 정적 파일을 모집하는 디렉토리로 가는 절대 경로이다. 일단 수집되면, 이것들은 파일이 어떤곳에서 호스팅되든지 단체로 업로드 될 수 있다.
 - `STATICFILES_DIRS`: 이것은 Django의 colletstatic 도구가 정적 파일을 탐색할 추가적인 디렉토리를 나열한다.
 
@@ -629,7 +627,6 @@ heroku ps   #Display dyno status
 ## See also
 
 - [Deploying Django](https://docs.djangoproject.com/en/2.0/howto/deployment/) (Django docs)
-
   - [Deployment checklist](https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/) (Django docs)
   - [Deploying static files](https://docs.djangoproject.com/en/2.0/howto/static-files/deployment/) (Django docs)
   - [How to deploy with WSGI](https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/) (Django docs)
@@ -637,7 +634,6 @@ heroku ps   #Display dyno status
   - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Heroku
-
   - [Configuring Django apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration) (Heroku docs)
   - [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) (Heroku docs)
   - [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku docs)
@@ -651,7 +647,6 @@ heroku ps   #Display dyno status
   - [Other Heroku Django docs](https://devcenter.heroku.com/search?q=django)
 
 - Digital Ocean
-
   - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
   - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 

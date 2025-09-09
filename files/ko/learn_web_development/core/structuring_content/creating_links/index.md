@@ -48,7 +48,7 @@ l10n:
 
 ## 링크의 구조
 
-기본 링크는 텍스트 또는 기타 내용([Block level links](#block_level_links))을 {{htmlelement("a")}} 요소 안에 감싸고 웹 주소를 포함하는 [`href`](/ko/docs/Web/HTML/Element/a#href) 속성(**Hypertext Reference** 또는 **target**)을 사용하여 생성됩니다.
+기본 링크는 텍스트 또는 기타 내용([Block level links](#block_level_links))을 {{htmlelement("a")}} 요소 안에 감싸고 웹 주소를 포함하는 [`href`](/ko/docs/Web/HTML/Reference/Elements/a#href) 속성(**Hypertext Reference** 또는 **target**)을 사용하여 생성됩니다.
 
 ```html
 <p>
@@ -63,7 +63,7 @@ l10n:
 
 ### Block level 링크들
 
-이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, 다음 코드 스니펫과 같이 `{{htmlelement("a")}}` 요소로 이미지를 감싸면 됩니다.
+이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, 다음 코드 스니펫과 같이 `{{htmlelement("a")}}` 요소로 이미지를 감싸면 됩니다.
 
 ```html
 <a href="https://developer.mozilla.org/en-US/">
@@ -171,7 +171,7 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 
 ### 문서 조각
 
-문서 상단이 아닌 HTML 문서 내부의 특정 부분(Document fragments(문서 조각)에 연결할 수 있습니다. 그러기 위해 먼저 여러분은 연결하고 싶은 태그에 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 속성을 넣어주어야 합니다. 일반적으로는 아래와 같이 특정 헤드라인에 연결하는 것이 타당합니다.
+문서 상단이 아닌 HTML 문서 내부의 특정 부분(Document fragments(문서 조각)에 연결할 수 있습니다. 그러기 위해 먼저 여러분은 연결하고 싶은 태그에 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 속성을 넣어주어야 합니다. 일반적으로는 아래와 같이 특정 헤드라인에 연결하는 것이 타당합니다.
 
 예제
 
@@ -326,7 +326,7 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 이렇게 되면 다음과 같은 링크가 생성됩니다. [아무데나 전자 메일 보내기](mailto:nowhere@mozilla.org).
 
-사실, 이메일 주소는 심지어 선택사항입니다. 그것을 생략하면(즉, 당신의 [`href`](/ko/docs/Web/HTML/Element/a#href) 아직 목적지 주소가 지정되지 않은 사용자의 메일 클라이언트에 의해 새로운 발신 이메일 창이 열립니다. 이것은 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로서 유용합니다.
+사실, 이메일 주소는 심지어 선택사항입니다. 그것을 생략하면(즉, 당신의 [`href`](/ko/docs/Web/HTML/Reference/Elements/a#href) 아직 목적지 주소가 지정되지 않은 사용자의 메일 클라이언트에 의해 새로운 발신 이메일 창이 열립니다. 이것은 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로서 유용합니다.
 
 ### 세부 사항 지정하기
 
@@ -361,6 +361,6 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 ## 요약
 
-이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 이 과정의 링크로 돌아올 것입니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급의 다른 기능들을 살펴보도록 하겠습니다. 다음에 알아볼 내용은 [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)입니다.
+이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 이 과정의 링크로 돌아올 것입니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급의 다른 기능들을 살펴보도록 하겠습니다. 다음에 알아볼 내용은 [Advanced text formatting](/ko/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)입니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

@@ -11,7 +11,7 @@ L'objet global **`Array`** est utilisé pour créer des tableaux. Les tableaux s
 
 Les tableaux sont des objets semblables à des listes dont le prototype possède des méthodes qui permettent de parcourir et de modifier le tableau. Ni la longueur ni le type des éléments d'un tableau JavaScript sont fixés. Comme la longueur d'un tableau peut varier à tout moment et que les données peuvent être stockées à des emplacements qui ne sont pas nécessairement contigus, les tableaux JavaScript ne sont pas forcément «&nbsp;pleins&nbsp;» / denses. Généralement, ces particularités sont appréciables mais si elles ne correspondent pas à votre usage, vous pourriez vouloir utiliser les tableaux typés.
 
-Les tableaux ne peuvent pas utiliser de chaînes de caractères comme indices pour les éléments (à la façon des [tableaux associatifs](https://fr.wikipedia.org/wiki/Tableau_associatif)) mais doivent utiliser des entiers. Définir une valeur ou tenter d'y accéder avec un indice non-entier via [la notation entre crochet](/fr/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties) (ou [la notation avec le point](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)) ne définira ou ne récupèrera pas la valeur mais définira ou récupèrera une variable associée [aux propriétés de l'objet](/fr/docs/Web/JavaScript/Data_structures#properties) formé par le tableau. Les propriétés et les éléments d'un tableau sont distincts et [les opérations de parcours et de modification du tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) ne peuvent pas être appliquées à ces propriétés.
+Les tableaux ne peuvent pas utiliser de chaînes de caractères comme indices pour les éléments (à la façon des [tableaux associatifs](https://fr.wikipedia.org/wiki/Tableau_associatif)) mais doivent utiliser des entiers. Définir une valeur ou tenter d'y accéder avec un indice non-entier via [la notation entre crochet](/fr/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties) (ou [la notation avec le point](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)) ne définira ou ne récupèrera pas la valeur mais définira ou récupèrera une variable associée [aux propriétés de l'objet](/fr/docs/Web/JavaScript/Guide/Data_structures#properties) formé par le tableau. Les propriétés et les éléments d'un tableau sont distincts et [les opérations de parcours et de modification du tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) ne peuvent pas être appliquées à ces propriétés.
 
 ### Opérations fréquentes
 
@@ -274,7 +274,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 
 ## Propriétés statiques
 
-- [`get Array[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species)
+- [`get Array[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : La fonction de construction utilisée pour créer les objets dérivés.
 
 ## Méthodes statiques
@@ -290,7 +290,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 
 - [`Array.prototype.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
   - : La propriété de longueur pour le constructeur `Array`, elle vaut 1.
-- [`Array.prototype[@@unscopables]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables)
+- [`Array.prototype[@@unscopables]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : Un symbole contenant les noms des propriétés à exclure d'une portée de liaison avec [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with).
 
 ## Méthodes des instances

@@ -18,23 +18,23 @@ _Cette interface hérite aussi des propriétés de son parent {{domxref("HTMLEle
 - {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
   - : Une valeur de type `long` indiquant le nombre de contrôles dans le formulaire.
 - {{domxref("HTMLFormElement.name")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`name`](/fr/docs/Web/HTML/Element/form#name) pour ce formulaire et qui correspond au nom du formulaire.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`name`](/fr/docs/Web/HTML/Reference/Elements/form#name) pour ce formulaire et qui correspond au nom du formulaire.
 - {{domxref("HTMLFormElement.method")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`method`](/fr/docs/Web/HTML/Element/form#method) pour ce formulaire et qui correspond à la méthode HTTP utilisée pour envoyer le formulaires. Seules certaines valeurs peuvent être utilisées avec cette propriété.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method) pour ce formulaire et qui correspond à la méthode HTTP utilisée pour envoyer le formulaires. Seules certaines valeurs peuvent être utilisées avec cette propriété.
 - {{domxref("HTMLFormElement.target")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`target`](/fr/docs/Web/HTML/Element/form#target) pour ce formulaire et qui indique l'emplacement où seront affichées les résultats après envoi du formulaire.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`target`](/fr/docs/Web/HTML/Reference/Elements/form#target) pour ce formulaire et qui indique l'emplacement où seront affichées les résultats après envoi du formulaire.
 - {{domxref("HTMLFormElement.action")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Element/form#action) pour ce formulaire et qui contient l'URI d'un programme traitant les informations transmises via le formulaire.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) pour ce formulaire et qui contient l'URI d'un programme traitant les informations transmises via le formulaire.
 - {{domxref("HTMLFormElement.encoding")}} ou {{domxref("HTMLFormElement.enctype")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`enctype`](/fr/docs/Web/HTML/Element/form#enctype) pour ce formulaire et qui correspond au type de contenu utilisé pour transmettre les données du formulaire vers le serveur. Seules certaines valeurs peuvent être utilisées pour cette propriété. Les deux noms indiqués pour la méthode sont synonymes.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#enctype) pour ce formulaire et qui correspond au type de contenu utilisé pour transmettre les données du formulaire vers le serveur. Seules certaines valeurs peuvent être utilisées pour cette propriété. Les deux noms indiqués pour la méthode sont synonymes.
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`accept-charset`](/fr/docs/Web/HTML/Element/form#accept-charset) pour ce formulaire et qui correspond au jeu de caractères / à l'encodage pris en charge par le serveur.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`accept-charset`](/fr/docs/Web/HTML/Reference/Elements/form#accept-charset) pour ce formulaire et qui correspond au jeu de caractères / à l'encodage pris en charge par le serveur.
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`autocomplete`](/fr/docs/Web/HTML/Element/form#autocomplete) pour ce formulaire et qui indique si les contrôles du formulaire sont automatiquement renseignés par le navigateur.
+  - : Une chaîne {{domxref("DOMString")}} indiquant la valeur de l'attribut HTML [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/form#autocomplete) pour ce formulaire et qui indique si les contrôles du formulaire sont automatiquement renseignés par le navigateur.
 - {{domxref("HTMLFormElement.noValidate")}}
-  - : Un booléen indiquant la valeur de l'attribut HTML [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) pour ce formulaire et qui indique si le formulaire ne devrait pas être validé.
+  - : Un booléen indiquant la valeur de l'attribut HTML [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) pour ce formulaire et qui indique si le formulaire ne devrait pas être validé.
 
-Les champs de saisie nommés sont ajoutés comme propriétés sur leurs formulaires associés. Ces propriétés peuvent surcharger les propriétés natives si elles utilisent le même nom ! Par exemple, un formulaire disposant d'un {{HTMLElement("&lt;input&gt;")}} nommé `action` surchargera la propriété native `action` et tout appel renverra le champ `input` plutôt que la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Element/form#action).
+Les champs de saisie nommés sont ajoutés comme propriétés sur leurs formulaires associés. Ces propriétés peuvent surcharger les propriétés natives si elles utilisent le même nom ! Par exemple, un formulaire disposant d'un {{HTMLElement("&lt;input&gt;")}} nommé `action` surchargera la propriété native `action` et tout appel renverra le champ `input` plutôt que la valeur de l'attribut HTML [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action).
 
 ## Méthodes
 
@@ -74,7 +74,7 @@ Les éléments qui sont inclus par `HTMLFormElement.elements` et `HTMLFormElemen
 
 - {{HTMLElement("button")}} (_bouton_)
 - {{HTMLElement("fieldset")}} (*champ*s)
-- {{HTMLElement("input")}} (_entrée_) (à l'exception de ceux dont [`type`](/fr/docs/Web/HTML/Element/input#type) est `"image"` omis pour des raisons historiques)
+- {{HTMLElement("input")}} (_entrée_) (à l'exception de ceux dont [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) est `"image"` omis pour des raisons historiques)
 - {{HTMLElement("object")}} (_objet_)
 - {{HTMLElement("output")}} (_sortie_)
 - {{HTMLElement("select")}} (_sélection_)

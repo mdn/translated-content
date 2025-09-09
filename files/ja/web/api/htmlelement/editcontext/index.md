@@ -16,9 +16,9 @@ l10n:
 
 `editContext` プロパティを設定して動作するのは、一部の種類の要素だけです。
 
-- HTML 要素のうち、 [`<article>`](/ja/docs/Web/HTML/Element/article), [`<aside>`](/ja/docs/Web/HTML/Element/aside), [`<blockquote>`](/ja/docs/Web/HTML/Element/blockquote), [`<body>`](/ja/docs/Web/HTML/Element/body), [`<div>`](/ja/docs/Web/HTML/Element/div), [`<footer>`](/ja/docs/Web/HTML/Element/footer), [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements), [`<header>`](/ja/docs/Web/HTML/Element/header), [`<main>`](/ja/docs/Web/HTML/Element/main), [`<nav>`](/ja/docs/Web/HTML/Element/nav), [`<p>`](/ja/docs/Web/HTML/Element/p), [`<section>`](/ja/docs/Web/HTML/Element/section), [`<span>`](/ja/docs/Web/HTML/Element/span) のいずれか。
+- HTML 要素のうち、 [`<article>`](/ja/docs/Web/HTML/Reference/Elements/article), [`<aside>`](/ja/docs/Web/HTML/Reference/Elements/aside), [`<blockquote>`](/ja/docs/Web/HTML/Reference/Elements/blockquote), [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body), [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div), [`<footer>`](/ja/docs/Web/HTML/Reference/Elements/footer), [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h2>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h3>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h4>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h5>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<header>`](/ja/docs/Web/HTML/Reference/Elements/header), [`<main>`](/ja/docs/Web/HTML/Reference/Elements/main), [`<nav>`](/ja/docs/Web/HTML/Reference/Elements/nav), [`<p>`](/ja/docs/Web/HTML/Reference/Elements/p), [`<section>`](/ja/docs/Web/HTML/Reference/Elements/section), [`<span>`](/ja/docs/Web/HTML/Reference/Elements/span) のいずれか。
 - 有効な[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)。
-- [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素。
+- [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素。
 
 上記以外の要素で `editContext` プロパティを設定しようとすると、`NotSupportedError` の {{domxref("DOMException")}} が発生します。
 

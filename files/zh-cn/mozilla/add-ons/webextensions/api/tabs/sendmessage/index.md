@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 从扩展的后台脚本（或其他特权脚本，如弹出窗口脚本或选项页脚本）向任何运行在指定标签页中的[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)或在扩展的页面或 iframe 发送一条消息。
 
 该消息将在扩展上下文中由监听 [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) 事件的监听器接收。监听器可以选择性地返回一个响应给发送者。
@@ -33,9 +31,7 @@ const sending = browser.tabs.sendMessage(
 - `message`
   - : `any`。可序列化的对象（参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#数据克隆算法)）。
 - `options` {{optional_inline}}
-
   - : `object`。
-
     - `frameId` {{optional_inline}}
       - : `integer`。将消息发送到指定的框架（frame），而不是标签页中的所有框架。内容脚本是否在所有框架中执行取决于 `manifest.json` 的 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 部分中的 `all_frames` 设置。
 
@@ -102,7 +98,7 @@ browser.runtime.onMessage.addListener((request) => {
 {{Compat}}
 
 > [!NOTE]
-> 这个 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-sendMessage) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-sendMessage) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

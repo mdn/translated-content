@@ -3,11 +3,54 @@ title: grid-template-columns
 slug: Web/CSS/grid-template-columns
 ---
 
-{{CSSRef}}
-
 **`grid-template-columns`** 该属性是基于{{glossary("grid column", "网格列")}}的维度，去定义网格线的名称和网格轨道的尺寸大小。
 
-{{EmbedInteractiveExample("pages/css/grid-template-columns.html")}}
+{{InteractiveExample("CSS Demo: grid-template-columns")}}
+
+```css interactive-example-choice
+grid-template-columns: 60px 60px;
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr 60px;
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr 2fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: 8ch auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 语法
 
@@ -60,7 +103,6 @@ grid-template-columns: unset;
 - {{cssxref("minmax", "minmax(min, max)")}}
   - : 是一个来定义大小范围的属性，大于等于 min 值，并且小于等于 max 值。如果 max 值小于 min 值，则该值会被视为 min 值。最大值可以设置为网格轨道系数值`<flex>` ，但最小值则不行。
 - `auto`
-
   - : 如果该网格轨道为最大时，该属性等同于 `<max-content>`，为最小时，则等同于 `<min-content>`。
 
     > [!NOTE]

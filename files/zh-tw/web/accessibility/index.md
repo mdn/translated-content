@@ -3,11 +3,9 @@ title: 無障礙網頁
 slug: Web/Accessibility
 ---
 
-{{AccessibilitySidebar}}
-
 網路開發中的無障礙網頁，意味著盡可能令所有人都能使用網站，就算是在某些感官方面受限的人也不例外。本頁面會提供一些關於無障礙網頁的資訊。
 
-「理想的無障礙環境就是在各方面都營造一個無障礙的環境。在有形方面，所應該考量事情包括，生活上、行動上、教育上所可能遭受到的障礙，並提供其足以克服這些環境的需求，此等需求包括個體本身的配備，如點字機……以及周圍環境中的裝設，如扶手、導盲磚……」 [中文維基百科的「無障礙環境」、「理想無障礙環境」章節](https://zh.wikipedia.org/wiki/%E7%84%A1%E9%9A%9C%E7%A4%99%E7%92%B0%E5%A2%83)
+「理想的無障礙環境就是在各方面都營造一個無障礙的環境。在有形方面，所應該考量事情包括，生活上、行動上、教育上所可能遭受到的障礙，並提供其足以克服這些環境的需求，此等需求包括個體本身的配備，如點字機……以及周圍環境中的裝設，如扶手、導盲磚……」 [中文維基百科的「無障礙環境」、「理想無障礙環境」章節](https://zh.wikipedia.org/wiki/無障礙環境)
 
 「**從根本上，網路是為了在所有人面前都能運行而設計的**，無論他們使用的軟硬體、語言文化、地理位置、抑或身心功能如何。當聽覺、運動、視力或認知能力障礙的人，都能訪問網路的時候，這個目標才算達成。」[W3C - Accessibility](https://www.w3.org/standards/webdesign/accessibility)
 
@@ -30,7 +28,7 @@ MDN [Accessibility Learning Area](/zh-TW/docs/Learn_web_development/Core/Accessi
 
 ## 其他文件
 
-- [Understanding the Web Content Accessibility Guidelines](/zh-TW/docs/Web/Accessibility/Understanding_WCAG)
+- [Understanding the Web Content Accessibility Guidelines](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG)
   - : This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the W3C Web Content Accessibility Guidelines 2.0 (WCAG 2.0 or just WCAG, for the purposes of this writing).
 - [Keyboard-navigable JavaScript widgets](/zh-TW/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : Until now, web developers who want to make their styled \<div> and \<span> based widgets have lacked the proper techniques. **Keyboard accessibility** is part of the minimum accessibility requirements which a developer should be aware of.
@@ -38,5 +36,5 @@ MDN [Accessibility Learning Area](/zh-TW/docs/Learn_web_development/Core/Accessi
   - : A collection of articles to learn how to use ARIA to make your HTML documents more accessible.
 - [Assistive technology (AT) development](/zh-TW/docs/Accessibility/AT_Development)
   - : A collection of articles intended for AT developers
-- [Mobile accessibility checklist](/zh-TW/docs/Web/Accessibility/Mobile_accessibility_checklist)
+- [Mobile accessibility checklist](/zh-TW/docs/Web/Accessibility/Guides/Mobile_accessibility_checklist)
   - : This document provides a concise checklist of accessibility requirements for mobile app developers.

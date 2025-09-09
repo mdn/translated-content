@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 
 The **`Intl.DateTimeFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.DateTimeFormat")}} オブジェクトのロケールと整形オプションに従って日付や時刻を整形します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.format", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat.prototype.format", "taller")}}
 
 ```js interactive-example
 const options1 = {
@@ -79,7 +79,7 @@ console.log(formatted.join("; "));
 
 ### 書式化された日付値を固定値と比較することは避ける
 
-ほとんどの場合、 `format()` が返す書式は一貫しています。しかし、これは将来的に変更される可能性があり、すべての言語で保証されているわけではありません — 出力のバリエーションは設計上のものであり、仕様上は許容されています。最も注目すべきは、 IE や Edge ブラウザは日付の周りに双方向の制御文字を挿入するため、他のテキストと連結したときに出力テキストが適切に流れることです。
+ほとんどの場合、 `format()` が返す書式は一貫しています。しかし、これは将来的に変更される可能性があり、すべての言語で保証されているわけではありません — 出力のバリエーションは設計上のものであり、仕様上は許容されています。最も注目すべきは、 IE や Edge ブラウザーは日付の周りに双方向の制御文字を挿入するため、他のテキストと連結したときに出力テキストが適切に流れることです。
 
 このことから、 `format()` の結果と固定値を比較することができると期待してはいけません。
 

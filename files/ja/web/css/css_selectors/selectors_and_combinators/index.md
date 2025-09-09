@@ -1,11 +1,10 @@
 ---
 title: CSS セレクターと結合子
+short-title: セレクターと結合子
 slug: Web/CSS/CSS_selectors/Selectors_and_combinators
 l10n:
-  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 CSS セレクターは、選択した要素に一連の CSS ルールを適用するために、選択する要素のパターンを定義するために使用します。結合子は、セレクター間の関係を定義します。様々なセレクターと結合子を使用することで、入力する要素の型、属性、状態、他の要素との関係に基づいて、必要な要素を正確に選択し、スタイル設定することができます。
 
@@ -17,7 +16,7 @@ CSS セレクターは、選択した要素に一連の CSS ルールを適用�
 
 [要素型セレクター](/ja/docs/Web/CSS/Type_selectors)は、指定されたノード名を持つすべての要素を選択します。例えば `div` ですべての {{HTMLElement("div")}} 要素を選択し、 `input` ですべての {{HTMLElement("input")}} 要素に一致します。アスタリスク (`*`) で示される[全称セレクター](/ja/docs/Web/CSS/Universal_selectors)は、すべての要素を選択する特殊な種類のセレクターです。
 
-[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)は、指定された `class` 属性を持つ要素をすべて選択します。クラス名の接頭辞はピリオド (`.`) です。例えば、 `.index` は `class="index"` のついたすべての要素に一致します。 [ID セレクター](/ja/docs/Web/CSS/ID_selectors)は、 `id` 属性の値に基づいて要素を選択します。セレクターは `id` の接頭辞に「ナンバーサイン」 (U+0023, `#`) を付けたものです。例えば、 `#toc` は `id="toc"` のついた要素に一致します。 [`class`](/ja/docs/Web/HTML/Global_attributes/class) と [`id`](/ja/docs/Web/HTML/Global_attributes/id) はどちらもグローバル属性です。 1 つの文書の中で
+[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)は、指定された `class` 属性を持つ要素をすべて選択します。クラス名の接頭辞はピリオド (`.`) です。例えば、 `.index` は `class="index"` のついたすべての要素に一致します。 [ID セレクター](/ja/docs/Web/CSS/ID_selectors)は、 `id` 属性の値に基づいて要素を選択します。セレクターは `id` の接頭辞に「ナンバーサイン」 (U+0023, `#`) を付けたものです。例えば、 `#toc` は `id="toc"` のついた要素に一致します。 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) と [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) はどちらもグローバル属性です。 1 つの文書の中で
 ある `id` を持つ要素は 1 つだけであるべきですが、もし複数の要素が存在した場合、 ID セレクターはその `id` を持つすべての要素に一致します。
 
 要素型セレクターまたは全称セレクターと、クラスセレクターまたは id セレクターを組み合わせて[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)を作成する場合、要素型セレクターや全称セレクターはクラスまたは id の前になければなりません。
@@ -53,7 +52,7 @@ p.myClass#myId {
 
 #### 結果
 
-{{EmbedLiveSample("Basic selectors", "100%", 100)}}
+{{EmbedLiveSample("Basic selectors", "100%", 120)}}
 
 ## 結合子
 
@@ -69,7 +68,7 @@ CSS の結合子を用いることで、セレクターを組み合わせて、�
 
 ### 後続兄弟結合子
 
-子孫セレクターに加えて、 CSS は兄弟関係に基づいて要素を選択することもできます。[後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)はチルダ (`~`) で示され、兄弟を選択します。 `A ~ B` と指定された場合、 `A` の前に `B` があり、 `A` と `B` が同じ親であれば、`B` に一致する要素がすべて選択されます。例えば、 `h2 ~ p` は、 {{HTMLElement("Heading_Elements", "h2")}} の直後またはその後に続くすべての {{HTMLElement("p")}} 要素に一致します。
+子孫セレクターに加えて、 CSS は兄弟関係に基づいて要素を選択することもできます。[後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)はチルダ (`~`) で示され、兄弟を選択します。 `A ~ B` と指定された場合、 `B` の前に `A` があり、 `A` と `B` が同じ親を共有していれば、`B` に一致する要素がすべて選択されます。例えば、 `h2 ~ p` は、 {{HTMLElement("Heading_Elements", "h2")}} の直後またはその後に続くすべての {{HTMLElement("p")}} 要素に一致します。
 
 ### 次兄弟結合子
 
@@ -100,7 +99,7 @@ h2 + p + p {
 #myId > .myClass {
   outline: 3px dashed red;
 }
-> p {
+* > p {
   font-size: 1.1rem;
 }
 ```
@@ -125,7 +124,7 @@ h2 + p + p {
 
 #### 結果
 
-{{EmbedLiveSample("Combinators", "100%", 300)}}
+{{EmbedLiveSample("Combinators", "100%", 500)}}
 
 ### CSS 入れ子による複雑セレクターの作成
 
@@ -156,8 +155,10 @@ h2 {
     outline: 3px dashed red;
   }
 }
-> p {
-  font-size: 1.1rem;
+* {
+  & > p {
+    font-size: 1.1rem;
+  }
 }
 ```
 
@@ -192,12 +193,12 @@ h2 {
 
 ## 擬似クラスセレクター
 
-[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュールでは、 60 以上の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) を定義しています。擬似クラスはコロン (`:`) を接頭辞とする[単純セレクター](#単純セレクター)で、文書ツリー内に含まれない状態の情報に基づいて要素を選択できるようにします。{{CSSxRef("pseudo-classes", "擬似クラス")}}を使用することで、状態にに基づいて要素をスタイル設定することができます。
+[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュールでは、 60 以上の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)を定義しています。擬似クラスはコロン (`:`) を接頭辞とする[単純セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#単純セレクター)で、文書ツリー内に含まれない状態の情報に基づいて要素を選択できるようにします。{{CSSxRef("pseudo-classes", "擬似クラス")}}を使用することで、状態にに基づいて要素をスタイル設定することができます。
 例えば、 {{cssxref(":target")}} 単純セレクターはフラグメント識別子を持つ URL の要素を対象とし、 [`a:visited`](/ja/docs/Web/CSS/:visited) [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)はユーザーが訪問したすべての {{HTMLElement("a")}} 要素に一致します。
 
 擬似クラスは、[要素の表示状態](/ja/docs/Web/CSS/Pseudo-classes#表示状態擬似クラス)、[入力](/ja/docs/Web/CSS/Pseudo-classes#入力擬似クラス)、[言語](/ja/docs/Web/CSS/Pseudo-classes#言語擬似クラス)、[位置](/ja/docs/Web/CSS/Pseudo-classes#位置擬似クラス)、[リソース状態](/ja/docs/Web/CSS/Pseudo-classes#リソース状態擬似クラス)、[時間軸](/ja/docs/Web/CSS/Pseudo-classes#時間軸擬似クラス)、[ツリー構造](/ja/docs/Web/CSS/Pseudo-classes#ツリー構造擬似クラス)、[ユーザー操作](/ja/docs/Web/CSS/Pseudo-classes#ユーザー操作擬似クラス)、[関数](/ja/docs/Web/CSS/Pseudo-classes#関数擬似クラス)に分類することができます。
 
-複数の擬似クラスを組み合わせて[複合セレクター](#複合セレクター)を作成することができます。擬似クラスを要素型セレクターや全称セレクターと複合セレクターに結合する場合、擬似クラスは、要素型セレクターや全称セレクターの後に置かなければなりません。
+複数の擬似クラスを組み合わせて[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)を作成することができます。擬似クラスを要素型セレクターや全称セレクターと複合セレクターに結合する場合、擬似クラスは、要素型セレクターや全称セレクターの後に置かなければなりません。
 
 ## 擬似要素セレクター
 
@@ -215,5 +216,5 @@ CSS [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は接頭辞としてコロ�
 
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
-- [詳細度](/ja/docs/Web/CSS/Specificity)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS 入れ子モジュール](/ja/docs/Web/CSS/CSS_nesting)

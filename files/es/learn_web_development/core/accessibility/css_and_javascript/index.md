@@ -42,7 +42,7 @@ Comencemos estudiando CSS.
 
 ### Semántica correcta y expectativas del usuario
 
-Es posible usar CSS para hacer que cualquier elemento HTML se vea como _cualquier cosa_, pero esto no significa que deba hacerse. Como mencionamos con frecuencia en nuestro artículo [HTML: Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML), debes usar el elemento semántico apropiado para cada cosa, siempre que sea posible. Si no lo haces, puede causar confusión y problemas de usabilidad para todos, pero especialmente para los usuarios con discapacidades. El uso de la semántica correcta tiene mucho que ver con las expectativas del usuario: los elementos se ven y se comportan de cierta manera, de acuerdo con su funcionalidad, y los usuarios esperan estas convenciones comunes.
+Es posible usar CSS para hacer que cualquier elemento HTML se vea como _cualquier cosa_, pero esto no significa que deba hacerse. Como mencionamos con frecuencia en nuestro artículo [HTML: Una buena base para la accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/HTML), debes usar el elemento semántico apropiado para cada cosa, siempre que sea posible. Si no lo haces, puede causar confusión y problemas de usabilidad para todos, pero especialmente para los usuarios con discapacidades. El uso de la semántica correcta tiene mucho que ver con las expectativas del usuario: los elementos se ven y se comportan de cierta manera, de acuerdo con su funcionalidad, y los usuarios esperan estas convenciones comunes.
 
 Por ejemplo, un usuario de lector de pantalla no puede navegar por una página a través de elementos de encabezado si el desarrollador no ha utilizado adecuadamente los elementos de encabezado para marcar el contenido. Del mismo modo, un encabezado pierde su propósito visual si se le aplica un estilo para que no parezca un encabezado.
 
@@ -83,7 +83,7 @@ Deberías:
 - Asegurarte de que los títulos destaquen del texto del cuerpo, generalmente grandes y en negrita como estilo predeterminado. Tus listas deben parecer
 - El color del texto debe contrastar bien con el color de fondo.
 
-Consulte [Fundamentos del texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) y [Estilo de texto](/es/docs/Learn/CSS/Styling_text) para obtener más información.
+Consulte [Fundamentos del texto HTML](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) y [Estilo de texto](/es/docs/Learn_web_development/Core/Text_styling) para obtener más información.
 
 #### Texto enfatizado
 
@@ -107,7 +107,7 @@ em {
 }
 ```
 
-Sin embargo, rara vez necesitarás dar estilo a elementos de énfasis de manera significativa. Las convenciones estándar de texto en negrita y cursiva son muy reconocibles y cambiar el estilo puede causar confusión. Para obtener más información sobre el énfasis, consulte [Énfasis e importancia](/es/docs/Learn/HTML/Introduccion_a_HTML/texto#%C3%89nfasis_e_importancia).
+Sin embargo, rara vez necesitarás dar estilo a elementos de énfasis de manera significativa. Las convenciones estándar de texto en negrita y cursiva son muy reconocibles y cambiar el estilo puede causar confusión. Para obtener más información sobre el énfasis, consulte [Énfasis e importancia](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#%C3%89nfasis_e_importancia).
 
 #### Abreviaciones
 
@@ -128,7 +128,7 @@ abbr {
 }
 ```
 
-La convención de estilo reconocida para las abreviaturas es un subrayado punteado, y no es aconsejable desviarse significativamente de esto. Para obtener más información sobre abreviaturas, consulte [Abreviaturas](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abreviaturas).
+La convención de estilo reconocida para las abreviaturas es un subrayado punteado, y no es aconsejable desviarse significativamente de esto. Para obtener más información sobre abreviaturas, consulte [Abreviaturas](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abreviaturas).
 
 #### Enlaces
 
@@ -214,7 +214,8 @@ A los usuarios de lectores de pantalla no les importa nada de esto: están conte
 
 Por otro lado, no debes usar {{cssxref ("visibility")}}`: hidden` o {{cssxref ("display")}}`: none`, porque ocultan el contenido de los lectores de pantalla. A menos que, por supuesto, exista una buena razón por la que desees ocultar este contenido a los lectores de pantalla.
 
-> **Nota:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) tiene muchos más detalles útiles sobre este tema.
+> [!NOTE]
+> [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) tiene muchos más detalles útiles sobre este tema.
 
 ### Acepta que los usuarios pueden saltarse tus estilos
 
@@ -231,12 +232,12 @@ JavaScript también puede romper la accesibilidad, dependiendo de cómo se use.
 
 El JavaScript moderno es un lenguaje poderoso, y podemos hacer mucho con él actualmente, desde contenido simple y actualizaciones de la interfaz de usuario hasta juegos 2D y 3D completos. No existe una regla que diga que todo el contenido debe ser 100% accesible para todas las personas; solo debe hacer lo que pueda y hacer que sus aplicaciones sean lo más accesibles posible.
 
-Se puede decir que el contenido y la funcionalidad simples son fáciles de hacer accesibles; por ejemplo, texto, imágenes, tablas, formularios y botones que activan funciones. Como vimos en nuestro artículo [HTML: Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML), las consideraciones clave son:
+Se puede decir que el contenido y la funcionalidad simples son fáciles de hacer accesibles; por ejemplo, texto, imágenes, tablas, formularios y botones que activan funciones. Como vimos en nuestro artículo [HTML: Una buena base para la accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/HTML), las consideraciones clave son:
 
 - Buena semántica: usar el elemento correcto para el trabajo correcto. Por ejemplo, asegúrate de usar encabezados y párrafos, y elementos {{htmlelement ("button")}} y {{htmlelement ("a")}}
 - Asegurarse de que el contenido esté disponible como texto, ya sea directamente como contenido de texto, buenas etiquetas de texto para los elementos de formulario o alternativas de texto, p.ej. texto alternativo para imágenes.
 
-También vimos un ejemplo de cómo usar JavaScript para incorporar la funcionalidad donde faltaba; consulta [Volver a añadir la accesibilidad del teclado](/es/docs/Learn/Accessibility/HTML#volver_a_añadir_la_accesibilidad_del_teclado). Esto no es ideal; en realidad, deberías usar el elemento correcto para el trabajo correcto, pero demuestra que es posible en situaciones en las que, por alguna razón, no puedes controlar el marcado que se utiliza. Otra forma de mejorar la accesibilidad de los widgets no semánticos que funcionan con JavaScript es utilizar WAI-ARIA para proporcionar semántica adicional para los usuarios de lectores de pantalla. El próximo artículo también cubrirá esto en detalle.
+También vimos un ejemplo de cómo usar JavaScript para incorporar la funcionalidad donde faltaba; consulta [Volver a añadir la accesibilidad del teclado](/es/docs/Learn_web_development/Core/Accessibility/HTML#volver_a_añadir_la_accesibilidad_del_teclado). Esto no es ideal; en realidad, deberías usar el elemento correcto para el trabajo correcto, pero demuestra que es posible en situaciones en las que, por alguna razón, no puedes controlar el marcado que se utiliza. Otra forma de mejorar la accesibilidad de los widgets no semánticos que funcionan con JavaScript es utilizar WAI-ARIA para proporcionar semántica adicional para los usuarios de lectores de pantalla. El próximo artículo también cubrirá esto en detalle.
 
 Las funcionalidades complejas como los juegos en 3D no son tan fáciles de hacer accesibles: un juego en 3D complejo creado con [WebGL](/es/docs/Web/API/WebGL_API) se renderizará en un elemento {{htmlelement ("canvas")}}, que en este momento no tiene la capacidad de proporcionar alternativas de texto u otros información que pueden utilizar los usuarios con discapacidad visual grave. Se puede argumentar que un juego de este tipo no tiene realmente a este grupo de personas como parte de su público objetivo principal, y no sería razonable esperar que lo hicieras 100% accesible para las personas ciegas; sin embargo, podrías implementar controles de teclado para que sea utilizable por usuarios que no utilizan el ratóny hacer que el esquema de color sea lo suficientemente contrastante como para que lo puedan usar aquellos con deficiencias de color.
 
@@ -339,7 +340,8 @@ Explicaremos estos atributos en nuestro próximo artículo, que cubre [WAI-ARIA]
 > [!NOTE]
 > Algunos de vosotros probablemente estaréis pensando en el hecho de que los formularios HTML5 tienen mecanismos de validación integrados como los atributos `required`, `min` / `minlength` y `max` / `maxlength` (consultad la referencia del elemento {{htmlelement("input")}} para más información). No los hemos usado en la demostración porque la compatibilidad entre navegadores es irregular (por ejemplo, solo funciona en IE10 y versiones superiores).
 
-> **Nota:** [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/), de WebAIM, proporciona más información útil sobre la validación de formularios accesibles.
+> [!NOTE]
+> [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/), de WebAIM, proporciona más información útil sobre la validación de formularios accesibles.
 
 ### Otros potenciales problemas de accesibilidad de JavaScript
 
@@ -365,7 +367,7 @@ imgThumb.onblur = hideImg;
 
 Las dos primeras líneas ejecutan las funciones cuando el puntero del ratón se desplaza sobre la miniatura y deja de hacerlo, respectivamente. Sin embargo, esto no nos permite acceder a la vista ampliada con el teclado; para hacerlo hemos incluido las dos últimas líneas, que ejecutan las funciones cuando la imagen toma y pierde el foco. Esto se puede hacer presionando el tabulador hasta llegar a la imagen, porque le hemos dado `tabindex="0"`.
 
-El evento de `click` es interesante: parece dependiente del ratón, pero la mayoría de los navegadores activan los controladores de eventos `onclick` al presionar Enter / Return en un enlace o elemento de formulario que tenga foco, o cuando dicho elemento se toca en un dispositivo de pantalla táctil. Sin embargo, esto no funciona por defecto cuando permites que un evento no enfocable por defecto adquiera el foco usando tabindex; en tales casos, debe detectar específicamente cuándo se presiona esa tecla exacta (consulte [Volver a añadir la accesibilidad del teclado](/es/docs/Learn/Accessibility/HTML#volver_a_añadir_la_accesibilidad_del_teclado)).
+El evento de `click` es interesante: parece dependiente del ratón, pero la mayoría de los navegadores activan los controladores de eventos `onclick` al presionar Enter / Return en un enlace o elemento de formulario que tenga foco, o cuando dicho elemento se toca en un dispositivo de pantalla táctil. Sin embargo, esto no funciona por defecto cuando permites que un evento no enfocable por defecto adquiera el foco usando tabindex; en tales casos, debe detectar específicamente cuándo se presiona esa tecla exacta (consulte [Volver a añadir la accesibilidad del teclado](/es/docs/Learn_web_development/Core/Accessibility/HTML#volver_a_añadir_la_accesibilidad_del_teclado)).
 
 ## ¡Pon a prueba tus habilidades
 

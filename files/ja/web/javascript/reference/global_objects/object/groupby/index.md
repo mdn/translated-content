@@ -1,20 +1,35 @@
 ---
 title: Object.groupBy()
+short-title: groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 l10n:
-  sourceCommit: f15b8d5828c480af144a9b8f88b2724e2997f571
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 > [!NOTE]
 > 一部のブラウザーのあるバージョンでは、このメソッドは `Array.prototype.group()` というメソッドとして実装されていました。ウェブの互換性の問題により、現在は静的メソッドとして実装されています。詳細は[ブラウザーの互換性](#ブラウザーの互換性)を確認してください。
 
-**`Object.groupBy()`** 静的メソッドは、指定されたコールバック関数によって返された文字列値に従って、指定された反復可能な要素をグループ化します。返されるオブジェクトには、グループごとに個別のプロパティがあり、グループ内の要素を含む配列が格納されます。
+**`Object.groupBy()`** は静的メソッドで、指定されたコールバック関数によって返された文字列値に従って、指定された反復可能な要素をグループ化します。返されるオブジェクトには、グループごとに個別のプロパティがあり、グループ内の要素を含む配列が格納されます。
 
 このメソッドは、グループ名が文字列で表現できる場合に使用します。任意の値をキーとして要素をグループ化する必要がある場合は、代わりに {{jsxref("Map.groupBy()")}} を使用してください。
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript デモ: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 構文
 
@@ -39,7 +54,7 @@ Object.groupBy(items, callbackFn)
 
 ## 解説
 
-`Object.groupBy()` は、指定された `callbackFn` 関数を反復可能な要素ごとに 1 回呼び出します。コールバック関数は、関連付けられた要素のグループを示す文字列またはシンボル（どちらの型でもない値は[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)されます）を返す必要があります。`callbackFn` が返す値は、`Map.groupBy()` が返すオブジェクトのキーとして使用されます。各キーには、コールバックが同じ値を返したすべての要素を含む連想配列があります。
+`Object.groupBy()` は、指定された `callbackFn` 関数を反復可能な要素ごとに 1 回呼び出します。コールバック関数は、関連付けられた要素のグループを示す文字列またはシンボル（どちらの型でもない値は[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)されます）を返す必要があります。 `callbackFn` が返す値は、`Object.groupBy()` が返すオブジェクトのキーとして使用されます。各キーには、コールバックが同じ値を返したすべての要素を含む連想配列があります。
 
 返されたオブジェクトの要素と元の反復可能な要素は同じです（{{Glossary("deep copy", "ディープコピー")}}ではありません）。要素の内部構造を変更すると、反復可能な要素と返されたオブジェクトの両方に反映されます。
 
@@ -81,7 +96,7 @@ const result = Object.groupBy(inventory, ({ type }) => type);
 */
 ```
 
-このアロー関数は、呼び出されるたびに配列のそれぞれの要素の 型 を返すだけです。 関数の引数 { type } は、[関数の引数に対するオブジェクトの分割構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。 これは、引数として渡されたオブジェクトの `type` プロパティを展開し、関数本体の `type` という名前の変数に代入します。 これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
+このアロー関数は、呼び出されるたびに配列のそれぞれの要素の 型 を返すだけです。 関数の引数 { type } は、[関数の引数に対するオブジェクトの構造分解構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。 これは、引数として渡されたオブジェクトの `type` プロパティを展開し、関数本体の `type` という名前の変数に代入します。 これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
 
 また、要素の 1 つまたは複数のプロパティの値から推測されるグループを作成することもできます。 以下は、`quantity` フィールドの値に基づいて、項目を `ok` または `restock` グループに入れる、とても似たような例です。
 
@@ -118,6 +133,7 @@ const result2 = Object.groupBy(inventory, myCallback);
 ## 関連情報
 
 - [`Object.groupBy` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-grouping)
+- [es-shims による `Object.groupBy` のポリフィル](https://www.npmjs.com/package/object.groupby)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Object.fromEntries()")}}

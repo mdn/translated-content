@@ -5,7 +5,7 @@ slug: Web/API/Document/cookie
 
 {{APIRef("DOM")}}
 
-获取并设置与当前文档相关联的 [cookie](/zh-CN/docs/Web/HTTP/Cookies)。可以把它当成一个 `getter and setter`。
+获取并设置与当前文档相关联的 [cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)。可以把它当成一个 `getter and setter`。
 
 ## 语法
 
@@ -26,12 +26,10 @@ document.cookie = newCookie;
 `newCookie` 是一个键值对形式的字符串。需要注意的是，用这个方法一次只能对一个 cookie 进行设置或更新。
 
 - 以下可选的 cookie 属性值可以跟在键值对后，用来具体化对 cookie 的设定/更新，使用分号以作分隔：
-
   - `;path=path` (例如 '/', '/mydir') 如果没有定义，默认为当前文档位置的路径。
   - `;domain=domain` (例如 'example.com'， 'subdomain.example.com') 如果没有定义，默认为当前文档位置的路径的域名部分。与早期规范相反的是，在域名前面加 . 符将会被忽视，因为浏览器也许会拒绝设置这样的 cookie。如果指定了一个域，那么子域也包含在内。
   - `;max-age=max-age-in-seconds` (例如一年为 60\*60\*24\*365)
   - `;expires=date-in-GMTString-format` 如果没有定义，cookie 会在对话结束时过期
-
     - 这个值的格式参见[Date.toUTCString()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString)
 
   - `;secure` (cookie 只通过 https 协议传输)
@@ -316,7 +314,7 @@ alert(docCookies.getItem("test1;="));
 
 ## 安全
 
-路径限制并**不能**阻止从其他路径访问 cookie. 使用简单的 DOM 即可轻易地绕过限制 (比如创建一个指向限制路径的，隐藏的[iframe](/zh-CN/docs/Web/HTML/Element/iframe), 然后访问其 `contentDocument.cookie` 属性). 保护 cookie 不被非法访问的唯一方法是将它放在另一个域名/子域名之下，利用[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)保护其不被读取。
+路径限制并**不能**阻止从其他路径访问 cookie. 使用简单的 DOM 即可轻易地绕过限制 (比如创建一个指向限制路径的，隐藏的[iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe), 然后访问其 `contentDocument.cookie` 属性). 保护 cookie 不被非法访问的唯一方法是将它放在另一个域名/子域名之下，利用[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)保护其不被读取。
 
 Web 应用程序通常使用 cookies 来标识用户身份及他们的登录会话。因此通过窃听这些 cookie，就可以劫持已登录用户的会话。窃听的 cookie 的常见方法包括社会工程和 XSS 攻击 -
 
@@ -339,5 +337,5 @@ new Image().src =
 
 ## 参见
 
-- [HTTP cookies](/zh-CN/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/zh-CN/docs/Web/HTTP/Guides/Cookies)
 - [Cookies](/zh-CN/docs/Code_snippets/Cookies) (Code snippets)

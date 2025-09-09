@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 调用此函数来建立扩展的后台脚本（或其他特权脚本，如弹出窗口脚本或选项页脚本）与属于该扩展并正在指定标签中运行的任何内容脚本之间的连接。此函数返回一个 {{WebExtAPIRef("runtime.Port")}} 对象。
 
 调用此函数后，将在任何属于此扩展并在指定标签中运行的内容脚本中触发 {{WebExtAPIRef('runtime.onConnect')}} 事件。事件监听器将会收到另一个 {{WebExtAPIRef("runtime.Port")}} 对象。两侧可以使用 `Port` 对象来交换消息。
@@ -25,9 +23,7 @@ browser.tabs.connect(
 - `tabId`
   - : `integer`。要连接到其内容脚本的标签页的 ID。
 - `connectInfo` {{optional_inline}}
-
   - : 包含以下属性的对象：
-
     - `name` {{optional_inline}}
       - : `string`。将传递给属于此扩展并在指定标签页中运行的内容脚本的 {{WebExtAPIRef("runtime.onConnect")}} 事件监听器。
     - `frameId` {{optional_inline}}
@@ -71,7 +67,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{Compat}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-connect) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-connect) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

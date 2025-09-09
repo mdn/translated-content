@@ -1,10 +1,9 @@
 ---
 title: JavaScript 基礎
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript 是一個可以幫你在網站裡加入互動功能的程式語言（舉例來說，一個遊戲可能會在按鈕按下或資料被輸入表單內時回應、動態更改樣式、以及展示動畫等）。這篇文章會幫助你踏上學習這個令人興奮的語言的旅程，並展示她可以實現的所有可能。
 
@@ -107,7 +106,7 @@ let myVariable = 'Bob';
 myVariable = 'Steve';
 ```
 
-請記得這些變數有著不同的[資料型態](/zh-TW/docs/Web/JavaScript/Data_structures)：
+請記得這些變數有著不同的[資料型態](/zh-TW/docs/Web/JavaScript/Guide/Data_structures)：
 
 <table class="standard-table">
   <thead>
@@ -319,7 +318,8 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **備註：** [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#變數範圍)）
+> [!NOTE]
+> [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#變數範圍)）
 
 ### 事件（Events）
 
@@ -379,7 +379,6 @@ myHTML.onclick = function () {};
 
 1. 我們會去取得圖片中 `src` 屬性的數值
 2. 我們用一個條件判斷式，來檢查 `src` 的數值是否跟原始圖片的位址相同：
-
    1. 如果兩者相同，那我們就把 `src` 的數值更改為第二個圖片的位址，也就是在 {{htmlelement("image")}} 元素裡強迫讀取另外一張圖片。
    2. 如果兩者不同（也就是圖片已經被切換過了），我們就把 `src` 的數值更改為原始圖片的位址，圖片就會被切換回原來那張。
 

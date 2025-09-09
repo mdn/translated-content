@@ -7,7 +7,46 @@ slug: Web/CSS/word-spacing
 
 La propriété **`word-spacing`** définit la règle d'espacement utilisée entre les balises et entre les mots.
 
-{{EmbedInteractiveExample("pages/css/word-spacing.html")}}
+{{InteractiveExample("CSS Demo: word-spacing")}}
+
+```css interactive-example-choice
+word-spacing: normal;
+```
+
+```css interactive-example-choice
+word-spacing: 1rem;
+```
+
+```css interactive-example-choice
+word-spacing: 4px;
+```
+
+```css interactive-example-choice
+word-spacing: -0.4ch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+section {
+  font-size: 1.2em;
+  font-family: Amstelvar;
+}
+```
 
 ## Syntaxe
 
@@ -79,7 +118,7 @@ Utiliser des valeurs trop importantes (positives ou négatives) pour `word-spaci
 
 La bonne valeur à utiliser pour `word-spacing` doit être déterminée au cas par cas, en fonction du type de police utilisé et de la largeur de celle-ci.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Spécifications

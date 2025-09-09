@@ -2,14 +2,13 @@
 title: overflow-block
 slug: Web/CSS/overflow-block
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 737125e41bb99b0cf1c733aac13f79f806f7f296
 ---
-
-{{CSSRef}}
 
 **`overflow-block`** は [CSS](/ja/docs/Web/CSS) プロパティで、コンテンツがブロックの先頭およびブロックの末尾の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。
 
-> **メモ:** `overflow-block` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
+> [!NOTE]
+> `overflow-block` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
 
 ## 構文
 
@@ -162,4 +161,4 @@ div {
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
 - [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
 - [書字方向](/ja/docs/Web/CSS/CSS_writing_modes)
-- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)

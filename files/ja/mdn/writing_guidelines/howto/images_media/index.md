@@ -1,27 +1,47 @@
 ---
-title: 画像やメディアの追加方法
+title: 画像、メディア、資産の追加方法
+short-title: メディアの追加
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
+  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
 
-{{MDNSidebar}}
+このページでは、 MDN で文書内のページに画像やメディアを追加する方法について記述しています。
 
-## 画像の追加
+## 共有資産のメディアを格納して使用する
 
+画像やメディアを追加する前に（特に、メディアコンテンツが二次的な技術をデモする場合）、 [mdn/shared-assets リポジトリー](https://github.com/mdn/shared-assets)にすでに存在するものを使用できるかどうか調べます。
+このリポジトリーを、ストレージ、展開、ライセンスを心配することなく、例えば適切なリソースを選択するために参照できる**メディアライブラリー**として扱います。
+
+リポジトリーには、音声、映像、フォント、写真、図表、アイコンなどの画像、PDF、字幕ファイル、色プロファイルなどの各種ファイルが含まれます。
+リポジトリーに適当なものがなければ、追加したいメディアのソースファイルとともにリソースを追加することができます。
+例は、[共有資産のための HTTP ディレクトリー](https://github.com/mdn/shared-assets/tree/main/images/diagrams/http)にあります。
+
+MDN ページで shared-assets リポジトリー内の何かを使用するには、プロジェクト README の [Using shared assets in documentation](https://github.com/mdn/shared-assets?tab=readme-ov-file#using-shared-assets-in-documentation) の節を参照してください。
+
+## ベクター形式の使用
+
+一般的に、画像、特に図表を追加する場合は、次の理由から、 SVG のようなベクター形式を使用することを検討してください。
+
+- 任意の統合開発環境 (IDE) やオンラインツールを使用して、**開発者が SVG を直接編集することができます。**
+  .png の編集には通常、ゼロから資産を再作成するか、画像編集ソフトウェアを使用する必要があるため、エラーの可能性があり、視覚的または圧縮アーティファクトが発生する可能性があります。
+- **SVG は Git で差分が取れます**。一方、ファイル全体が変更されるとバイナリーでの変更として差分が比較されるため、変更された .png ファイルが 1MB の場合、マージコミットのたびにリポジトリーサイズが1MB増加します。
+- **柔軟な UX**。 SVG はベクター形式なので、どんなに拡大してもぼやけることはありません。
+
+## コンテンツリポジトリーへの画像のコミット
+
+shared-assets リポジトリーが用途に適していない場合は、画像を content （en-USの場合、または translated-content）リポジトリーに追加することができます。
 文書に画像を追加するには、文書のフォルダーに画像ファイルを追加し、文書の `index.md` ファイルで [Markdown の画像構文（英語）](https://github.github.com/gfm/#images) または HTML の `<img>` 要素を使用して画像を参照してください。
 
 例を通して説明しましょう。
 
-1. `mdn` リモートの `main` ブランチから、最新の内容を含む新しい作業用ブランチを作成することから始めましょう。
+1. まず、 `mdn` リモートの `main` ブランチから、最新の内容を含む新しい作業用ブランチを作成しましょう。
 
    ```bash
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
-   # 最新の Yari の依存関係をインストールしたことを確認する
-   # ために、もう一度 "yarn" を実行します。
-   yarn
+   # "yarn" を実行して、 yarn が最新の状態であることを確認する
    git checkout -b my-images
    ```
 
@@ -39,7 +59,7 @@ l10n:
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
-4. 文書内で画像用の Markdown 構文を使って画像を参照し、画像を記述する括弧の間に [`alt` 属性用の説明テキスト](/ja/docs/Learn/Accessibility/HTML#代替テキスト)を記述するか、 `files/en-us/web/css/index.md` 内に `alt` 属性を持つ {{htmlelement("img")}} 要素を記述してください。
+4. 文書内で画像用の Markdown 構文を使って画像を参照し、画像を記述する括弧の間に [`alt` 属性用の説明テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト)を記述するか、 `alt` 属性を持つ {{htmlelement("img")}} 要素を `files/en-us/web/css/index.md` 内に記述してください。
 
    ```md
    ![My cool image](my-cool-image.png)
@@ -89,6 +109,7 @@ Markdown と HTML での構文は以下の通りです。
 ```
 
 純粋に装飾的な画像は空の `alt` を設定すべきですが、 MDN ドキュメント内の画像には何らかの目的があるはずなので、空ではない文字列の記述が必要です。
+代替テキストに関するヒントについては、 [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) を参照して、さまざまな状況で画像に alt 属性を使用する方法を学んでください。
 
 ## 画像の圧縮
 
@@ -104,7 +125,7 @@ MDN Web Docs のページに画像を追加する場合、読者のためにダ�
 yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 
-## 動画の追加
+## 動画を MDN ページへ追加
 
 MDN Web Docs は動画が多いサイトではありませんが、動画コンテンツを記事の一部として使用することに意味がある場所がいくつかあります。
 この記事では、 MDN の記事に動画を含めることが適切な場合について説明し、シンプルだが効果的な動画を予算内で作成するためのヒントを提供します。
@@ -132,8 +153,6 @@ MDN は動画主体のサイトではありませんが、動画は特定の文�
 
 このような場合、「何を意味しているのか」を**見せる**方が効果的なことが多いのです。
 
-<!--私たちは、 [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) の機能を説明するときに、最もよく動画を使用します。 -->
-
 ## 動画コンテンツのガイドライン
 
 MDN 用の動画は以下のようにあるべきです。
@@ -152,7 +171,7 @@ MDN 用の動画は以下のようにあるべきです。
 さらに、以下のことを考慮してください。
 
 - 動画は、埋め込み前に YouTube にアップロードしてください。
-  この用途では、アスペクト比 16:9 を推奨します。そうすれば、表示フレーム全体が埋まり、動画の上下（または左右）に醜い黒帯が発生することはありません。
+  この用途では、{{glossary("Aspect ratio", "アスペクト比")}}は 16:9 を推奨します。そうすれば、表示フレーム全体が埋まり、動画の上下（または左右）に醜い黒帯が発生することはありません。
   そのため、例えば 1024×576、1152×648、1280×720 の解像度を選択するとよいでしょう。
 - アップロード時に見栄えが良くなるように、動画は HD で録画してください。
 - DevTools の動画では、ページのコンテンツとは対照的なテーマを選択することをお勧めします、例えば、例のウェブページが明るいテーマであれば、暗いテーマを選択してください。
@@ -161,7 +180,7 @@ MDN 用の動画は以下のようにあるべきです。
 - デモしようとしているものがマウスカーソルで覆い隠されていないことを確認してください。
 - 画面録画ツールで、マウスクリックの視覚的なインジケーターを表示するように設定することが有用であるかどうかを検討してください。
 
-## 動画ツール
+## 動画ツールとソフトウェア
 
 動画を録画するためには、何らかのツールが必要です。
 無料のものから高価なものまで、またシンプルなものから複雑なものまで、さまざまなものがあります。
@@ -179,7 +198,7 @@ MDN 用の動画は以下のようにあるべきです。
 | ScreenFlow                | macOS                 | 中     | あり                       |
 | Kazam                     | Linux                 | フリー | 最小限                     |
 
-### QuickTime Player のコツ
+#### QuickTime Player のコツ
 
 macOS をお使いの場合は、 QuickTime Player が利用できるはずです。
 実はこれもかなり簡単な簡易録画機能を備えています。
@@ -194,16 +213,13 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 
 ### その他のリソース
 
-- [How to Add Custom Callouts to Screencast Videos in Screenflow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
+- [How to Add Custom Callouts to Screencast Videos in ScreenFlow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
-## 動画を作成するためのワークフロー
+### 動画を作成するためのワークフロー
 
 以下の節では、動画を作成して MDN ページに表示させるための一般的な手順を説明します。
 
-### 準備
-
 まず、撮影したい流れを計画します。開始と終了の最適なポイントを検討します。
-
 デスクトップの背景とブラウザーのプロファイルがきれいであることを確認します。
 特に複数のウィンドウを使用する場合は、ブラウザーのウィンドウの大きさと配置を計画します。
 
@@ -213,7 +229,6 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
   例えば、短い DevTools の動画では、 DevTools を開くところから始めて、視聴者が方向感覚を掴めるようにするのがよい考えです。
 - 操作の内容を考え、スピードを落とし、明確にしてください。
   ある動作（例えば、アイコンをクリックする）をしなければならないときは、ゆっくり明確に操作してください。例えば、
-
   - マウスをアイコンの上に移動させる
   - 強調またはズーム（常にではなく、必要性を感じるかどうかによる）
   - 一旦停止する
@@ -226,7 +241,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 > [!NOTE]
 > あまりにズームしすぎて、見せている UI が見慣れなくなったり、醜く見えたりならないようにしてください。
 
-### 録画
+#### 録画
 
 見せたいワークフローを録音するときは、スムーズかつ着実に流れを進めてください。
 ボタンをクリックするなど、重要な場面では 1 〜 2 秒の間、一時停止してください。
@@ -235,9 +250,9 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 最後に 1 ～ 2 秒の間を置いて、流れの結果を示すことを忘れないでください。
 
 > [!NOTE]
-> QuickTime Player のような本当にシンプルなツールを使っていて、何らかの理由で後処理ができない場合、見せたい領域を表示するために正しいサイズのウィンドウをセットアップしておく必要があります。 Firefox DevTools の [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) を使うと、ビューポートが録画に適したアスペクト比になっていることを確認することができます。
+> QuickTime Player のような本当にシンプルなツールを使っていて、何らかの理由で後処理ができない場合、見せたい領域を表示するために正しいサイズのウィンドウをセットアップしておく必要があります。 Firefox 開発ツールの[目盛りツール](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html)を使うと、ビューポートが録画に適したアスペクト比になっていることを確認することができます。
 
-### 後処理
+#### 後処理
 
 後処理では、重要な瞬間を強調することができます。
 ハイライトはいくつかの要素で構成されており、それらを組み合わせて使うことが多いでしょう。
@@ -247,13 +262,12 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 
 ワークフローの重要な瞬間、特に詳細が見えにくい部分を強調します。例えば、特定のアイコンをクリックする、特定の URL を入力するなどです。
 ハイライトは 1 〜 2 秒を目安に。
-ハイライトの最初と最後に、短いトランジション（200～300ミリ秒）を追加するとよいでしょう。
+ハイライトの最初と最後に、短いトランジション（200 ～ 300 ミリ秒）を追加するとよいでしょう。
 
 ズームイン、ズームアウトの連続では、視聴者が船酔いしてしまいますので、ほどほどに。
-
 必要であれば、動画を希望するアスペクト比に切り抜いてください。
 
-### アップロード
+### アップロードと動画の埋め込み
 
 現在 MDN で動画を表示するには YouTube にアップロードする必要があります。例えば [mozhacks](https://www.youtube.com/user/mozhacks/videos) チャンネルなどです。
 もし適切な場所がなければ、 MDN スタッフにアップロードを依頼してください。
@@ -263,7 +277,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 
 ### 埋め込み
 
-アップロードした動画は、[`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) というマクロを使って、ページ内に埋め込むことができます。
+アップロードした動画は、 [`EmbedYouTube`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_youtube.rs) というマクロを使って、ページ内に埋め込むことができます。
 これは、ページ内の動画を表示させたい位置に以下のように挿入することで使用します。
 
 ```plain
@@ -276,3 +290,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 ```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
 ```
+
+## 関連情報
+
+- [Using SVG format instead of .png images](https://github.com/orgs/mdn/discussions/631) (MDN GitHub discussion)

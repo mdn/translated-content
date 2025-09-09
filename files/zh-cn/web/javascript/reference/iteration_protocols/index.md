@@ -3,8 +3,6 @@ title: 迭代协议
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
 
-{{jsSidebar("More")}}
-
 **迭代协议**并不是新的内置实现或语法，而是*协议*。这些协议可以被任何遵循某些约定的对象来实现。
 
 迭代协议具体分为两个协议：[可迭代协议](#可迭代协议)和[迭代器协议](#迭代器协议)。
@@ -13,7 +11,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 **可迭代协议**允许 JavaScript 对象定义或定制它们的迭代行为，例如，在一个 {{jsxref("Statements/for...of", "for..of")}} 结构中，哪些值可以被遍历到。一些内置类型同时是[内置的可迭代对象](#内置的可迭代对象)，并且有默认的迭代行为，比如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}，而其他内置类型则不是（比如 {{jsxref("Object")}}）。
 
-要成为**可迭代**对象，该对象必须实现 **`[Symbol.iterator]()`** 方法，这意味着对象（或者它[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)上的某个对象）必须有一个键为 `[Symbol.iterator]` 的属性，可通过常量 {{jsxref("Symbol.iterator")}} 访问该属性：
+要成为**可迭代**对象，该对象必须实现 **`[Symbol.iterator]()`** 方法，这意味着对象（或者它[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)上的某个对象）必须有一个键为 `[Symbol.iterator]` 的属性，可通过常量 {{jsxref("Symbol.iterator")}} 访问该属性：
 
 - `[Symbol.iterator]`
   - : 一个无参数的函数，其返回值为一个符合[迭代器协议](#迭代器协议)的对象。
@@ -36,7 +34,6 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 所有迭代器协议的方法（`next()`、`return()` 和 `throw()`）都应返回实现 `IteratorResult` 接口的对象。它必须有以下属性：
 
 - `done` {{optional_inline}}
-
   - : 如果迭代器能够生成序列中的下一个值，则返回 `false` 布尔值。（这等价于没有指定 `done` 这个属性。）
 
     如果迭代器已将序列迭代完毕，则为 `true`。这种情况下，`value` 是可选的，如果它依然存在，即为迭代结束之后的默认返回值。
@@ -167,7 +164,7 @@ new WeakSet(
 
 ### 期待迭代对象的语法
 
-一些语句和表达式期望可迭代对象，例如 {{jsxref("Statements/for...of", "for...of")}} 循环、[数组和参数扩展](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}} 和[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)：
+一些语句和表达式期望可迭代对象，例如 {{jsxref("Statements/for...of", "for...of")}} 循环、[数组和参数扩展](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}} 和[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)：
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -344,7 +341,7 @@ console.log(it.next().value); // 2
 
 ### 使用类定义一个可迭代对象
 
-状态封装也可以对[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)进行。
+状态封装也可以对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)进行。
 
 ```js
 class SimpleClass {

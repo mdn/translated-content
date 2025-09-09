@@ -1,10 +1,9 @@
 ---
 title: 多媒体：图片
 slug: Learn_web_development/Extensions/Performance/Multimedia
-original_slug: Learn/Performance/Multimedia
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 媒体，即图片和视频，占据了平均网站下载字节的 70% 以上。从下载性能的角度来看，消除媒体和减少文件大小是最容易解决的问题。本文将介绍优化图像和视频以改善网页性能的方法。
 
@@ -84,7 +83,7 @@ PNG 可以以三种不同的输出组合进行保存：
 - [AVIF](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_图像)——由于其是高性能和免版税的图像格式（甚至比 WebP 更高效），它是用于图像和动图的不错选择（尽管不太广泛）。它现在受 Chrome、Opera 和 Firefox 的支持。[Squoosh](https://squoosh.app/) 是一款出色的，可以将其他图像格式转换为 AVIF 的在线工具。
 - **JPEG2000**——曾经是 JPEG 的继任者，但仅受 Safari 支持。也不支持渐进式显示。
 
-鉴于 JPEG-XR 和 JPEG2000 的支持范围很窄，并且还要考虑解码成本，JPEG 的唯一真正竞争对手是 WebP。这就是为什么你也可以以该格式提供图像。这可以通过使用配备了 [type 属性](/zh-CN/docs/Web/HTML/Element/picture#type_属性)的 `<picture>` 元素和 `<source>` 元素来完成。
+鉴于 JPEG-XR 和 JPEG2000 的支持范围很窄，并且还要考虑解码成本，JPEG 的唯一真正竞争对手是 WebP。这就是为什么你也可以以该格式提供图像。这可以通过使用配备了 [type 属性](/zh-CN/docs/Web/HTML/Reference/Elements/picture#type_属性)的 `<picture>` 元素和 `<source>` 元素来完成。
 
 如果所有这些对你的团队来说听起来有点复杂或感觉有太多的工作要做，那么还有一些在线服务，你可以将其用作图像 CDN，它们将根据请求图像的设备或浏览器类型自动提供正确的图像格式。这其中最大的就是 [Cloudinary](https://cloudinary.com/blog/make_all_images_on_your_website_responsive_in_3_easy_steps) 和 [Image Engine](https://imageengine.io/)。
 
@@ -100,7 +99,7 @@ PNG 可以以三种不同的输出组合进行保存：
 
 #### 提供最佳尺寸
 
-在图像传输中，采用“一刀切”的方法不会得到最佳结果，这意味着对于较小的屏幕，你希望提供更低分辨率的图像，而对于较大的屏幕则相反。此外，你还希望为那些具有高 DPI 屏幕（例如“Retina”）的设备提供更高分辨率的图像。因此，除了创建许多中间图像变体之外，你还需要一种方法将正确的文件提供给正确的浏览器。这就是你需要通过使用 [media](/zh-CN/docs/Web/HTML/Element/source#media) 和/或 [sizes](/zh-CN/docs/Web/HTML/Element/source#sizes) 属性来升级你的 `<picture>` 和 `<source>` 元素的地方。有关如何组合所有这些属性的详细文章可以在[这里](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)找到。
+在图像传输中，采用“一刀切”的方法不会得到最佳结果，这意味着对于较小的屏幕，你希望提供更低分辨率的图像，而对于较大的屏幕则相反。此外，你还希望为那些具有高 DPI 屏幕（例如“Retina”）的设备提供更高分辨率的图像。因此，除了创建许多中间图像变体之外，你还需要一种方法将正确的文件提供给正确的浏览器。这就是你需要通过使用 [media](/zh-CN/docs/Web/HTML/Reference/Elements/source#media) 和/或 [sizes](/zh-CN/docs/Web/HTML/Reference/Elements/source#sizes) 属性来升级你的 `<picture>` 和 `<source>` 元素的地方。有关如何组合所有这些属性的详细文章可以在[这里](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)找到。
 
 关于高 DPI 屏幕，有两个有趣的效果需要记住：
 

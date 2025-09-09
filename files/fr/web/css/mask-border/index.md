@@ -5,7 +5,7 @@ slug: Web/CSS/mask-border
 
 {{cssref}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-border`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de créer un masque le long de la bordure d'un élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`mask-border`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de créer un masque le long de la bordure d'un élément.
 
 ## Propriétés détaillées correspondantes
 

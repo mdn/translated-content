@@ -7,7 +7,47 @@ slug: Web/CSS/flex-wrap
 
 La propriété **`flex-wrap`** indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.
 
-{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
+{{InteractiveExample("CSS Demo: flex-wrap")}}
+
+```css interactive-example-choice
+flex-wrap: nowrap;
+```
+
+```css interactive-example-choice
+flex-wrap: wrap;
+```
+
+```css interactive-example-choice
+flex-wrap: wrap-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+    <div>Item Four</div>
+    <div>Item Five</div>
+    <div>Item Six</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
 
 Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
 

@@ -17,4 +17,4 @@ slug: Web/JavaScript/Reference/Errors
 
 ## Смотрите также
 
-- [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong): Вводный Учебник для начинающих для исправления ошибок JavaScript.
+- [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn_web_development/Core/Scripting/What_went_wrong): Вводный Учебник для начинающих для исправления ошибок JavaScript.

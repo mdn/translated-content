@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d150067b98ab6e79e6f6b0bf8343ae3ebd2b641
 ---
 
-{{AddonSidebar}}
-
 使用身份 API（identity API）以获取 [OAuth2](https://oauth.net/2/) 授权码或访问令牌，这样扩展就可以使用这一授权码或访问令牌从支持 OAuth2 访问的服务（例如 Google 或 Facebook）处访问用户数据。
 
 不同服务提供商的 OAuth2 流程不同，因此如果想要将此 API 与特定服务提供商一并使用，请参阅相应的文档。例如：
@@ -64,7 +62,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.identity`](https://developer.chrome.google.cn/docs/extensions/reference/api/identity) API。
+> 此 API 基于 Chromium 的 [`chrome.identity`](https://developer.chrome.google.cn/docs/extensions/reference/api/identity) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

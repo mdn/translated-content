@@ -52,12 +52,10 @@ modules/
 Os dois módulos do diretório modules são descritos abaixo:
 
 - `canvas.js` — contém funções relacionadas à configuração da tela:
-
   - `create()` — cria uma tela com uma largura e altura especificadas dentro de um invólucro [`<div>`](/pt-BR/docs/Web/HTML/Element/div) com um ID especificado, que é anexado dentro de um elemento pai especificado. Retorna um objeto que contém o contexto 2D da tela e o ID do [wrapper](/pt-BR/docs/Glossary/Wrapper).
   - `createReportList()` — cria uma lista não ordenada anexada dentro de um elemento de wrapper especificado, que pode ser usado para gerar dados de relatório. Retorna o ID da lista.
 
 - `square.js` — contém:
-
   - `name` — uma constante contendo a string 'square'.
   - `draw()` — desenha um quadrado em uma tela especificada, com um tamanho, posição e cor especificados. Retorna um objeto que contém o tamanho, a posição e a cor do quadrado.
   - `reportArea()` — grava a área de um quadrado em uma lista de relatórios específica, considerando seu tamanho.
@@ -72,7 +70,7 @@ Neste artigo, usamos extensões .js para nossos arquivos de módulo, mas em outr
 
 No entanto, decidimos continuar usando .js, pelo menos por enquanto. Para que os módulos funcionem corretamente em um navegador, você precisa garantir que seu servidor os esteja servindo com um cabeçalho Content-Type que contenha um tipo MIME JavaScript, como text / javascript. Caso contrário, você receberá um erro estrito de verificação do tipo MIME, de acordo com as linhas "O servidor respondeu com um tipo MIME não JavaScript" e o navegador não executará seu JavaScript. A maioria dos servidores já define o tipo correto para arquivos .js, mas ainda não para arquivos .mjs. Servidores que já veiculam arquivos .mjs incluem corretamente [GitHub Pages](https://pages.github.com/) e [`http-server`](https://github.com/http-party/http-server#readme) para Node.js.
 
-Tudo bem se você já estiver usando esse ambiente ou se não estiver, mas souber o que está fazendo e tiver acesso (ou seja, você pode configurar o servidor para definir a configuração correta [`Content-Type`](/pt-BR/docs/Web/HTTP/Headers/Content-Type) para arquivos `.mjs`). No entanto, isso pode causar confusão se você não controlar o servidor do qual está servindo arquivos ou publicar arquivos para uso público, como estamos aqui.
+Tudo bem se você já estiver usando esse ambiente ou se não estiver, mas souber o que está fazendo e tiver acesso (ou seja, você pode configurar o servidor para definir a configuração correta [`Content-Type`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Type) para arquivos `.mjs`). No entanto, isso pode causar confusão se você não controlar o servidor do qual está servindo arquivos ou publicar arquivos para uso público, como estamos aqui.
 
 Para fins de aprendizado e portabilidade, decidimos manter o`.js`.
 

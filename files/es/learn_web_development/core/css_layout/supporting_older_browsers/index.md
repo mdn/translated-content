@@ -61,7 +61,7 @@ Una opción es dejar esta vista simple del sitio como alternativa para las perso
 
 Las especificaciones CSS contienen información que explica qué hace el navegador cuando se aplican dos métodos de diseño al mismo elemento. Esto significa que hay una definición de lo que sucede si un elemento flotante, por ejemplo, también es un elemento Grid que usa diseño de cuadrícula CSS. Combina esta información con el conocimiento de que los navegadores ignoran el CSS que no entienden, y tienes una manera de crear diseños simples utilizando las [técnicas heredadas](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) que ya hemos expuesto, que luego se sobrescriben con tu diseño de cuadrícula en los navegadores modernos que lo entienden.
 
-En el ejemplo siguiente hemos especificado tres elementos de flotación `<div>` para que se muestren en una fila. Cualquier navegador que no sea compatible con el método de compaginación [CSS Grid](/es/docs/Learn/CSS/CSS_layout/Grids) verá la hilera de cajas como un diseño con el método de flotación. Un elemento de flotación que se convierte en un elemento de cuadrícula pierde el comportamiento de flotación, lo que significa que al convertir el contenedor en un contenedor de cuadrícula, los elementos de flotación se convierten en elementos de cuadrícula. Si el navegador admite el diseño de cuadrícula, muestra la vista de cuadrícula; si no, ignora las propiedades relacionadas con el diseño de cuadrícula y utiliza el diseño de flotación.
+En el ejemplo siguiente hemos especificado tres elementos de flotación `<div>` para que se muestren en una fila. Cualquier navegador que no sea compatible con el método de compaginación [CSS Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) verá la hilera de cajas como un diseño con el método de flotación. Un elemento de flotación que se convierte en un elemento de cuadrícula pierde el comportamiento de flotación, lo que significa que al convertir el contenedor en un contenedor de cuadrícula, los elementos de flotación se convierten en elementos de cuadrícula. Si el navegador admite el diseño de cuadrícula, muestra la vista de cuadrícula; si no, ignora las propiedades relacionadas con el diseño de cuadrícula y utiliza el diseño de flotación.
 
 ```css
 * {
@@ -110,7 +110,7 @@ Numerosos métodos de compaginación se pueden usar de manera similar a este eje
 - Compaginación en columnas
   - : definida y se convierte en un contenedor con comportamiento de cuadrícula, se anula el comportamiento en columnas.
 - Flexbox como opción alternativa a la cuadrícula
-  - : [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox) tiene una compatibilidad mayor con los navegadores que Grid porque es compatible con Internet Explorer 10 y 11, aunque te recomendamos que consultes la información que encontrarás más adelante en este artículo sobre la compatibilidad bastante irregular y confusa de Flexbox en navegadores más antiguos. Si conviertes un contenedor flexible en un contenedor de cuadrícula, se ignorará cualquier propiedad `flex` aplicada a los elementos secundarios.
+  - : [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) tiene una compatibilidad mayor con los navegadores que Grid porque es compatible con Internet Explorer 10 y 11, aunque te recomendamos que consultes la información que encontrarás más adelante en este artículo sobre la compatibilidad bastante irregular y confusa de Flexbox en navegadores más antiguos. Si conviertes un contenedor flexible en un contenedor de cuadrícula, se ignorará cualquier propiedad `flex` aplicada a los elementos secundarios.
 
 Observa que si usas el CSS de esta manera puedes proporcionar una experiencia de usuario decente para ajustar muchas compaginaciones en navegadores antiguos. Añadimos una compaginación más simple basada en técnicas antiguas y con buena compatibilidad, y luego usamos el CSS más nuevo para crear la compaginación que va a ver más del 90% de tu público. Sin embargo, hay casos en los que el código alternativo va a tener que incluir algo que también van a interpretar los navegadores nuevos. Un buen ejemplo de esto es si queremos añadir anchos en porcentaje a nuestros elementos de flotación para que el aspecto de las columnas reproduzca mejor la visualización en cuadrícula, expandiendo para llenar el contenedor.
 
@@ -210,7 +210,7 @@ La guía de [Mejora progresiva en la compaginación en cuadrícula](/es/docs/Web
 
 ## Pruebas con navegadores antiguos
 
-Una forma es utilizar una herramienta de prueba en línea como Sauce Labs, como se detalla en el módulo de [comprobación de compatibilidad entre navegadores](/es/docs/Learn/Tools_and_testing/Cross_browser_testing).
+Una forma es utilizar una herramienta de prueba en línea como Sauce Labs, como se detalla en el módulo de [comprobación de compatibilidad entre navegadores](/es/docs/Learn_web_development/Extensions/Testing).
 
 ## Resumen
 

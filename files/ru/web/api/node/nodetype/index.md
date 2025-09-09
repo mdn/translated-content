@@ -25,7 +25,7 @@ var type = node.nodeType;
 | `ENTITY_NODE` {{deprecated_inline()}}                                   | `6`   |
 | [`PROCESSING_INSTRUCTION_NODE`](/ru/docs/Web/API/ProcessingInstruction) | `7`   |
 | [`COMMENT_NODE`](/ru/docs/Web/API/Document/createComment)               | `8`   |
-| [`DOCUMENT_NODE`](/ru/docs/Web/HTML/Element/html)                       | `9`   |
+| [`DOCUMENT_NODE`](/ru/docs/Web/HTML/Reference/Elements/html)            | `9`   |
 | [`DOCUMENT_TYPE_NODE`](/ru/docs/Web/API/Document/doctype)               | `10`  |
 | [`DOCUMENT_FRAGMENT_NODE`](/ru/docs/Web/API/DocumentFragment)           | `11`  |
 | `NOTATION_NODE` {{deprecated_inline()}}                                 | `12`  |

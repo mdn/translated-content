@@ -2,7 +2,7 @@
 title: 点击劫持
 slug: Web/Security/Attacks/Clickjacking
 l10n:
-  sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
+  sourceCommit: ade8d870ed7e18a71dc51fe25aa13d812fb82558
 ---
 
 在**点击劫持**攻击中，攻击者诱骗用户以非预期的方式与目标网站进行交互。
@@ -54,19 +54,15 @@ iframe {
 
 有两种相关的工具：
 
-- [内容安全策略](/zh-CN/docs/Web/HTTP/CSP)中的 [`frame-ancestors` 指令](/zh-CN/docs/Web/HTTP/CSP#clickjacking_protection)
+- [内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)中的 [`frame-ancestors` 指令](/zh-CN/docs/Web/HTTP/Guides/CSP#clickjacking_protection)
 - {{httpheader("X-Frame-Options")}} 响应标头。
 
-`frame-ancestors` 指令是 `X-Frame-Options` 的代替。通过设置 `X-Frame-Options` 和 `frame-ancestors`，你可以阻止在不支持 `frame-ancestors` 的浏览器中的嵌入。由于[浏览器对 `frame-ancestors` 的支持非常好](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors#浏览器兼容性)，因此这不是主要的问题。
+`frame-ancestors` 指令是 `X-Frame-Options` 的代替。通过设置 `X-Frame-Options` 和 `frame-ancestors`，你可以阻止在不支持 `frame-ancestors` 的浏览器中的嵌入。由于[浏览器对 `frame-ancestors` 的支持非常好](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors#浏览器兼容性)，因此这不是主要的问题。
 
 如果同时设置了 `frame-ancestors` 和 `X-Frame-Options`，则支持 `frame-ancestors` 的浏览器会忽略 `X-Frame-Options`。
 
-作为一部分额外的缓解措施，站点应该将会话 cookie 的 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookie 属性设置为 `Lax` 或 `Strict`。来自与顶级文档不在{{glossary("Site", "同一站点")}}的嵌入上下文（例如 `<iframe>` 元素）的请求将不包含这些 cookie，因此服务器不会将该请求视为来自已登陆的用户。
+作为一部分额外的缓解措施，站点应该将会话 cookie 的 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookie 属性设置为 `Lax` 或 `Strict`。来自与顶级文档不在{{glossary("Site", "同一站点")}}的嵌入上下文（例如 `<iframe>` 元素）的请求将不包含这些 cookie，因此服务器不会将该请求视为来自已登陆的用户。
 
 ## 参见
 
 - [owasp.org](https://owasp.org/) 上的[点击劫持防御备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html)
-
-<section id="Quick_links">
-{{ListSubpages("/zh-CN/docs/Web/Security", "1", "0", "1")}}
-</section>

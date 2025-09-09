@@ -246,7 +246,7 @@ CSS에서 텍스트 문자열을 삽입하는 것은 실제로 웹에서 매우 
 
 의사 클래스를 사용하면 해당 상태에 대한 클래스를 DOM에 추가한 것처럼 특정 상태에 있는 요소를 대상으로 지정할 수 있습니다. 의사 요소는 DOM에 완전히 새로운 요소를 추가한 것처럼 작동하며 스타일을 지정할 수 있습니다. `::before` 및 `::after` 의사 요소를 사용하면 CSS를 사용하여 문서에 콘텐츠를 삽입할 수 있습니다.
 
-다음 글에서는 [combinators](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)에 대해 알아보겠습니다.
+다음 글에서는 [combinators](/ko/docs/Learn_web_development/Core/Styling_basics/Combinators)에 대해 알아보겠습니다.
 
 ## See also
 

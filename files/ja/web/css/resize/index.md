@@ -5,11 +5,47 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`resize`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します。
 
-{{EmbedInteractiveExample("pages/css/resize.html")}}
+{{InteractiveExample("CSS デモ: resize")}}
+
+```css interactive-example-choice
+resize: both;
+```
+
+```css interactive-example-choice
+resize: horizontal;
+```
+
+```css interactive-example-choice
+resize: vertical;
+```
+
+```css interactive-example-choice
+resize: none;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">Try resizing this element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background: linear-gradient(135deg, #0ff 0%, #0ff 94%, #fff 95%);
+  border: 3px solid #c5c5c5;
+  overflow: auto;
+  width: 250px;
+  height: 250px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+```
 
 `resize` は以下のものには適用されません。
 

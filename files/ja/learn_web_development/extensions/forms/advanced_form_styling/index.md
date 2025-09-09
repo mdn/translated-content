@@ -32,15 +32,15 @@ l10n:
 **不良**: スタイルの設定が難しく複雑なトリックが必要であり、時に CSS の高度な知識が必要である要素です。
 
 - チェックボックスやラジオボタン
-- [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search)
 
 **劣悪**: 一部の要素は CSS でスタイル設定できません。例えば以下のものです。
 
 - ドロップダウンウィジェットを作成する要素、{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む
-- [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color)
-- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local) のような日付関連コントロール
-- [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color)
+- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local) のような日付関連コントロール
+- [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} および {{HTMLElement("meter")}}
 
 最初に [`appearance`](/ja/docs/Web/CSS/appearance) プロパティについて説明します。これは上記のすべてをよりスタイル付けできるようにするためにかなり有用なプロパティです。
@@ -96,7 +96,7 @@ input {
 
 ### 検索ボックスの変更
 
-[`<input type="search">`](/ja/docs/Web/HTML/Element/input/search) は基本的に単なるテキスト入力ですが、なぜ `appearance: none;` が便利なのでしょうか? 答えは Safari では、検索ボックスにスタイル設定の制限があるからです。例えば `height` や `font-size` を自在に調整できません。
+[`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search) は基本的に単なるテキスト入力ですが、なぜ `appearance: none;` が便利なのでしょうか? 答えは Safari では、検索ボックスにスタイル設定の制限があるからです。例えば `height` や `font-size` を自在に調整できません。
 
 これは、我々の友人である `appearance: none;` を使用して修正することができます。これは既定の外見を無効化するものです。
 
@@ -246,7 +246,7 @@ input[type="checkbox"]:disabled {
 
 ## 「劣悪」要素に何ができるか
 
-今度は「劣悪」コントロールに注目しましょう。これは完全にスタイル設定するのが本当に難しいものです。簡単にいうと、これはドロップダウンボックス、 [`color`](/ja/docs/Web/HTML/Element/input/color) や [`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local) のような複合コントロール型、 {{HTMLElement("progress")}} や {{HTMLElement("meter")}} のようなコントロール志向のフィードバックです。
+今度は「劣悪」コントロールに注目しましょう。これは完全にスタイル設定するのが本当に難しいものです。簡単にいうと、これはドロップダウンボックス、 [`color`](/ja/docs/Web/HTML/Reference/Elements/input/color) や [`datetime-local`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local) のような複合コントロール型、 {{HTMLElement("progress")}} や {{HTMLElement("meter")}} のようなコントロール志向のフィードバックです。
 
 問題は、要素はブラウザー同士でいろいろな既定の見た目があって、それにスタイル設定できても、内部のいくつかはスタイル設定できないことです。
 
@@ -324,7 +324,7 @@ button {
 > [!NOTE]
 > 多数のブラウザーで同時にこの例をテストしたい場合、[ライブ版をここで見つけてください](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html))。
 >
-> また JavaScript をページに追加してコントロール自身の下にあるファイルピッカー自身で選択されたファイルを一覧しているのを心に留めておいてください。これは [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file#例) リファレンスページの例を簡単にしたバージョンです。
+> また JavaScript をページに追加してコントロール自身の下にあるファイルピッカー自身で選択されたファイルを一覧しているのを心に留めておいてください。これは [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file#例) リファレンスページの例を簡単にしたバージョンです。
 
 見ての通り、最近のブラウザーでは統一された外見を確保することができました。
 
@@ -422,16 +422,16 @@ select {
 
 ### 日付入力型
 
-日付/時間の入力型 ([`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local), [`time`](/ja/docs/Web/HTML/Element/input/time), [`week`](/ja/docs/Web/HTML/Element/input/week), [`month`](/ja/docs/Web/HTML/Element/input/month)) にはすべて同じ重大な関連した問題があります。実際のボックスは、テキスト入力と同様に簡単にスタイルを設定することができ、このデモではうまく表示されています。
+日付/時間の入力型 ([`datetime-local`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local), [`time`](/ja/docs/Web/HTML/Reference/Elements/input/time), [`week`](/ja/docs/Web/HTML/Reference/Elements/input/week), [`month`](/ja/docs/Web/HTML/Reference/Elements/input/month)) にはすべて同じ重大な関連した問題があります。実際のボックスは、テキスト入力と同様に簡単にスタイルを設定することができ、このデモではうまく表示されています。
 
 しかし、コントロールの内部部品（日付をピックアップするのに使うポップアップカレンダー、値を増減するスピナーなど）はまったくスタイル設定できず、 `appearance: none;` を使ってもスタイルを除去できません。スタイル設定を完全に制御する必要がある場合は、カスタムコントロールを生成するライブラリーを使うか、自分で作らなければなりません。
 
 > [!NOTE]
-> ここでも[`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) は触れる価値があります、これもまた、値を増加/減少させるために使用することができるスピナーがあるので、同じ問題に悩まされる可能性があります。しかし、 `number` 型の場合、収集するデータはより単純で、代わりに `tel` 入力型を使用するのも簡単です。これは `text` のような外観ですが、タッチキーボードを搭載した機器ではテンキーを表示することができます。
+> ここでも[`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) は触れる価値があります、これもまた、値を増加/減少させるために使用することができるスピナーがあるので、同じ問題に悩まされる可能性があります。しかし、 `number` 型の場合、収集するデータはより単純で、代わりに `tel` 入力型を使用するのも簡単です。これは `text` のような外観ですが、タッチキーボードを搭載した機器ではテンキーを表示することができます。
 
 ### Range 入力型
 
-[`<input type="range">`](/ja/docs/Web/HTML/Element/input/range) はスタイル設定が困難です。以下のように使用することで、既定値のスライダートラックを完全に削除し、カスタムスタイル（この例では、細い赤のトラック）に置き換えることができます。
+[`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) はスタイル設定が困難です。以下のように使用することで、既定値のスライダートラックを完全に削除し、カスタムスタイル（この例では、細い赤のトラック）に置き換えることができます。
 
 ```css
 input[type="range"] {
@@ -503,7 +503,7 @@ label[for="file"]:active {
 
 ### meter とプログレスバー
 
-[`<meter>`](/ja/docs/Web/HTML/Element/meter) と [`<progress>`](/ja/docs/Web/HTML/Element/progress) は多くの中で最悪かもしれません。先ほどの例で見たように、幅は比較的希望通りに設定することができます。しかし、それ以上に、どのような方法でもスタイルを設定することは本当に困難です。また、背景には色をつけることができますが、前面のバーには色をつけることができませんし、 `appearance: none` を設定すると、良くなるどころか悪化してしまいます。
+[`<meter>`](/ja/docs/Web/HTML/Reference/Elements/meter) と [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) は多くの中で最悪かもしれません。先ほどの例で見たように、幅は比較的希望通りに設定することができます。しかし、それ以上に、どのような方法でもスタイルを設定することは本当に困難です。また、背景には色をつけることができますが、前面のバーには色をつけることができませんし、 `appearance: none` を設定すると、良くなるどころか悪化してしまいます。
 
 スタイル設定を制御したい場合は、この機能のカスタムソリューションを作ったり、[progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#例) のようなサードパーティのソリューションを使ったりした方が簡単です。
 

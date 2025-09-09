@@ -7,9 +7,9 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 
 Данная статья описывает Единый локатор ресурсов или Uniform Resource Locators (URLs), объясняет, что это такое, и описывает его структуру.
 
-| Предварительно: | Вам нужно узнать [как работает интернет](/ru/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work), [что такое Веб сервер](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) and [что лежит в основе веб ссылок](/ru/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks). |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:           | Вы узнаете, что такое URL и как они работают в вебе.                                                                                                                                                                                                                                                                   |
+| Предварительно: | Вам нужно узнать [как работает интернет](/ru/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work), [что такое Веб сервер](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) and [что лежит в основе веб ссылок](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks). |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:           | Вы узнаете, что такое URL и как они работают в вебе.                                                                                                                                                                                                                                                                                  |
 
 ## Введение
 
@@ -19,7 +19,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 
 ## Активное обучение
 
-_Активного обучения пока не существует. [Пожалуйста подумайте, возможно вы сможете внести свой вклад](/ru/docs/MDN/Community/Contributing/Getting_started)._
+_Активного обучения пока не существует. [Пожалуйста подумайте, возможно вы сможете внести свой вклад](/ru/docs/MDN/Community/Getting_started)._
 
 ## Подробная информация
 
@@ -63,7 +63,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 Каждый URL может быть напечатан напрямую в адресной строке браузера, чтобы сразу получить запрошенный ресурс. Но это только вершина айсберга!
 
-Язык {{Glossary("HTML")}} — [который будет обсуждать позже](/ru/docs/Learn/HTML/Introduction_to_HTML) — позволяет активно использовать URL для:
+Язык {{Glossary("HTML")}} — [который будет обсуждать позже](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content) — позволяет активно использовать URL для:
 
 - создания ссылок на другие документы с помощью тега {{HTMLElement("a")}};
 - связывания документа с его дополнительными файлами, например с помощью тегов {{HTMLElement("link")}} или {{HTMLElement("script")}};
@@ -88,7 +88,6 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 #### Примеры абсолютных URL
 
 - Полный URL (такой же, как обсуждали в начале статьи)
-
   - :&#x20;
 
     ```
@@ -96,7 +95,6 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
     ```
 
 - Скрыт протокол
-
   - :&#x20;
 
     ```
@@ -106,7 +104,6 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
     В этом случае браузер использует тот же протокол, что использовался для загрузки текущего документа.
 
 - Скрыт домен
-
   - :&#x20;
 
     ```
@@ -120,7 +117,6 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 Для лучшего понимания следующих примеров, давайте договоримся, что мы обращаемся к URL из документа, который опубликован по адресу: `https://developer.mozilla.org/ru/docs/Learn`
 
 - Дочерние ресурсы
-
   - :&#x20;
 
     ```
@@ -130,7 +126,6 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
     Поскольку URL не начинается с `/`, браузер сделает попытку найти документ в поддиректории относительно текущего документа. В данном примере будет запрошен этот URL: `https://developer.mozilla.org/ru/docs/Learn/Skills/Infrastructure/Understanding_URLs`
 
 - Назад по дереву папок
-
   - :&#x20;
 
     ```
@@ -151,4 +146,4 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 ## Следующие шаги
 
-- [Понимание доменных имён](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Понимание доменных имён](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

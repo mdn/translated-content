@@ -17,7 +17,7 @@ l10n:
 - ファイルが指定されているが、実装がファイル共有に対応していない場合。
 - 指定したデータを共有すると、ユーザーエージェントから「敵対的な共有」と見なされる場合。
 
-[ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)は [web-share](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 権限ポリシーによって制限されています。
+[ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)は [web-share](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 権限ポリシーによって制限されています。
 `canShare()` メソッドは、その権限に対応しているが付与されていない場合、 `false` を返します。
 
 ## 構文
@@ -30,7 +30,6 @@ canShare(data)
 ### 引数
 
 - `data` {{optional_inline}}
-
   - : テストする共有データを定義したオブジェクトです。
     通常、この呼び出しが `true` を返す場合、同じプロパティを持つオブジェクトが {{domxref("navigator.share()")}} に渡されます。
 
@@ -38,7 +37,6 @@ canShare(data)
     プロパティはすべて任意ですが、少なくともひとつの既知のデータプロパティを指定しなければ、このメソッドは `false` を返します。
 
     使用可能な値は以下の通りです。
-
     - `url` {{optional_inline}}
       - : 共有される URL を表す文字列。
     - `text` {{optional_inline}}

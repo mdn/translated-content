@@ -3,11 +3,108 @@ title: animation-delay
 slug: Web/CSS/animation-delay
 ---
 
-{{CSSRef}}
-
 **`animation-delay`** [CSS](/ko/docs/Web/CSS) 속성은 애니메이션이 시작할 시점을 지정합니다. 시작 즉시, 잠시 후에, 또는 애니메이션이 일부 진행한 시점부터 시작할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/css/animation-delay.html")}}
+{{InteractiveExample("CSS Demo: animation-delay")}}
+
+```css interactive-example-choice
+animation-delay: 250ms;
+```
+
+```css interactive-example-choice
+animation-delay: 2s;
+```
+
+```css interactive-example-choice
+animation-delay: -2s;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div>Animation <span id="playstatus"></span></div>
+  <div id="example-element">Select a delay to start!</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  color: white;
+  margin: auto;
+  margin-left: 0;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#playstatus {
+  font-weight: bold;
+}
+
+.animating {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const status = document.getElementById("playstatus");
+
+  function update() {
+    status.textContent = "delaying";
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className = "animating";
+      });
+    });
+  }
+
+  el.addEventListener("animationstart", () => {
+    status.textContent = "playing";
+  });
+
+  el.addEventListener("animationend", () => {
+    status.textContent = "finished";
+  });
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+});
+```
 
 {{cssxref("animation")}} 단축 속성을 사용해 애니메이션 관련 속성을 편리하게 같이 지정할 수 있습니다.
 
@@ -26,7 +123,6 @@ animation-delay: 2.1s, 480ms;
 ### 값
 
 - `{{cssxref("&lt;time&gt;")}}`
-
   - : 애니메이션이 시작될 요소가 적용되는 순간부터의 시간 오프셋입니다. 이 값은 초 또는 밀리 초 (ms)로 지정할 수 있습니다. 이 값은 필수입니다.
 
     양수 값은 지정된 시간이 경과 한 후 애니메이션이 시작되어야 함을 나타냅니다. 기본값인 0의 값은 애니메이션이 적용되는 즉시 시작해야 함을 나타냅니다.

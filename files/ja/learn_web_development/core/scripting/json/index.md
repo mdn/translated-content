@@ -213,7 +213,8 @@ JSON を取得するには、[フェッチ](/ja/docs/Web/API/Fetch_API)という
 - {{domxref("Window/fetch", "fetch()")}} 関数を使用してネットワーク要求を行い、{{domxref("Response")}} オブジェクトを返します。
 - レスポンスオブジェクトの {{domxref("Response/json", "json()")}} 関数を使用して、レスポンスを JSON で取得します。
 
-> **メモ:** `fetch()` API は**非同期**です。非同期関数については[次のモジュール](/ja/docs/Learn_web_development/Extensions/Async_JS)でたくさん学びますが、今は、フェッチ API を使用する関数名の前にキーワード {{jsxref("Statements/async_function", "async")}}、あらゆる非同期関数への呼び出し前にキーワード {{jsxref("Operators/await", "await")}} が必要だということだけ言っておきます。
+> [!NOTE]
+> `fetch()` API は**非同期**です。非同期関数については[次のモジュール](/ja/docs/Learn_web_development/Extensions/Async_JS)でたくさん学びますが、今は、フェッチ API を使用する関数名の前にキーワード {{jsxref("Statements/async_function", "async")}}、あらゆる非同期関数への呼び出し前にキーワード {{jsxref("Operators/await", "await")}} が必要だということだけ言っておきます。
 
 すべて完了すると、`superHeroes` 変数に JSON を基にした JavaScript オブジェクトが格納されます。最初のオブジェクトは `<header>` を正しいデータで満たし、2 つ目はチームの各ヒーローの情報カードを作成し、それを `<section>` に挿入しています。
 
@@ -346,7 +347,7 @@ myString;
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: JSON](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: JSON](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON)を参照してください。
 
 ## まとめ
 
@@ -357,6 +358,6 @@ myString;
 - [JSON リファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [フェッチ API の概要](/ja/docs/Web/API/Fetch_API)
 - [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 13746bf1d5d8e5c7c7bce5e1281e6eeee77b3d44
 ---
 
-{{CSSRef}}
-
 **CSS 入れ子** (CSS nesting) モジュールは、セレクターを入れ子にする構文を定義し、親ルールのセレクターに対して子ルールのセレクターを相対的に指定することで、あるスタイルルールを別のスタイルルールの中に入れ子にする機能を提供します。
 
 CSS 入れ子は、 [Sass](https://sass-lang.com/) のような CSS プリプロセッサーとは異なり、 CSS プリプロセッサーによって事前にコンパイルされるのではなく、ブラウザーで解釈されます。
@@ -40,6 +38,6 @@ CSS 入れ子は、 CSS スタイルシートの可読性、モジュール性�
 
 ## 関連情報
 
-- [詳細度](/ja/docs/Web/CSS/Specificity)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS カスケードと継承モジュール](/ja/docs/Web/CSS/CSS_cascade)
 - [CSS セレクターモジュール](/ja/docs/Web/CSS/CSS_selectors)

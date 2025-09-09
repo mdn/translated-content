@@ -3,8 +3,6 @@ title: Firefox 2 for developers
 slug: Mozilla/Firefox/Releases/2
 ---
 
-{{FirefoxSidebar}}
-
 ## 開発者のための Firefox 2 の新機能
 
 Firefox 2 ではたくさんの新機能と能力を導入します。この記事は新機能を取り上げている記事へのリンクを提供します。
@@ -17,19 +15,19 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
   - : マイクロサマリジェネレーター (microsummary generator)の作り方のチュートリアル
 - [マイクロサマリ XML 文法リファレンス](/ja/docs/Microsummary_XML_grammar_reference)
   - : マイクロサマリジェネレーターで使われる XML 文法のリファレンスガイド
-- [Firefox 用 OpenSearch プラグインの作成](/ja/docs/Web/OpenSearch)
+- [Firefox 用 OpenSearch プラグインの作成](/ja/docs/Web/XML/Guides/OpenSearch)
   - : Firefox 2 は OpenSearch 検索エンジンフォーマットをサポートします。
 - [MozSearch プラグインの作成](/ja/docs/Creating_MozSearch_plugins)
   - : Firefox 2 は OpenSearch を元にした検索プラグインフォーマットの MozSearch をサポートしますが、しかし内部利用目的のみのものです。
 - [検索プラグインでの検索サジェスト機能のサポート](/ja/docs/Supporting_search_suggestions_in_search_plugins)
   - : 検索バーで入力中にドロップダウンリストが現れる検索サジェスト機能 (search suggestions)をサポートした MozSearch プラグインの作り方。
 - [New in JavaScript 1.7](/ja/docs/New_in_JavaScript_1.7)
-  - : Firefox 2 は JavaScript 1.7 をサポートします。JavaScript 1.7 には `let` や、分割代入 (destructuring assignment)、ジェネレーター (generator)とイテレーター (iterators)、配列内包 (array comprehensions)などの新機能が含まれます。
+  - : Firefox 2 は JavaScript 1.7 をサポートします。JavaScript 1.7 には `let` や、構造分解 (destructuring assignment)、ジェネレーター (generator)とイテレーター (iterators)、配列内包 (array comprehensions)などの新機能が含まれます。
 - [WHATWG のクライアントサイドのセッション及び永続ストレージ (DOM ストレージ)](/ja/docs/Web/API/Web_Storage_API)
   - : クライアントサイドのセッション及び永続ストレージにより、ウェブアプリケーションは構造化されたデータをクライアントサイドに保存できるようになります。
 - [SVG in Firefox](/ja/docs/SVG_in_Firefox)
   - : Firefox 2 はスケーラブルベクタグラフィックス (SVG) のサポートを改善します。`<textPath>` 要素と以前にサポートされていなかったいくつかの属性を実装しました。
-- [HTML フォームのスペルチェックを制御する](/ja/docs/Web/HTML/Global_attributes/spellcheck)
+- [HTML フォームのスペルチェックを制御する](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)
   - : Firefox 2 ではテキストエリアとテキストフィールドでのインラインスペルチェックがサポートされます。この記事は個々のフォーム要素についてスペルチェックを有効、無効にする HTML の書きかたを説明します。
 
 ### XUL と拡張機能の開発者向け
@@ -42,7 +40,7 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
   - : 開発者が RSS および Atom フィードをアクセスおよびパースできる API。
 - [SAX サポート](/ja/docs/SAX)
   - : イベントベースの XML パーサー API.
-- [ウェブページから検索エンジンを追加する](/ja/docs/Web/OpenSearch)
+- [ウェブページから検索エンジンを追加する](/ja/docs/Web/XML/Guides/OpenSearch)
   - : JavaScript コードは Firefox に新しい検索プラグインをインストールするように命令することができます。OpenSearch か Sherlock フォーマットのどちらかを利用して検索プラグインを書くことができます。
 - [XUL でのスペルチェック](/ja/docs/Using_spell_checking_in_XUL)
   - : コードから単語のスペルをチェックしたり、スペルの候補リストを得る方法。
@@ -55,7 +53,6 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
 - [Firefox 2 のテーマ変更](/ja/docs/Theme_changes_in_Firefox_2)
   - : 既存のテーマを更新して Firefox 2 で動作させるために必要な変更についての説明。
 - Textbox の改良 (Firefox 2.0.0.1 以降のみ)
-
   - : `<textbox>` に、テキストボックスの値を既定値にリセットする `reset()` メソッドが追加されました。テキストボックスの既定値を取得および変更するには `defaultValue` プロパティを使用してください ([Firefox バグ 312867](https://bugzil.la/312867))。
 
     テキストフィールド内部の [nsIEditor](/ja/docs/NsIEditor) を取得するための `editor` プロパティがサポートされました ([Firefox バグ 312867](https://bugzil.la/312867))。

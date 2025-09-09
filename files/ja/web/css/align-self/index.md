@@ -5,11 +5,51 @@ l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}
-
 **`align-self`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッドやフレックスのアイテムの {{cssxref("align-items")}} の値を上書きします。グリッドでは、アイテムは{{glossary("Grid Areas", "グリッド領域")}}内で配置されます。フレックスボックスでは、アイテムは{{glossary("cross axis", "交差軸")}}上で配置されます。
 
-{{EmbedInteractiveExample("pages/css/align-self.html")}}
+{{InteractiveExample("CSS デモ: align-self")}}
+
+```css interactive-example-choice
+align-self: stretch;
+```
+
+```css interactive-example-choice
+align-self: center;
+```
+
+```css interactive-example-choice
+align-self: start;
+```
+
+```css interactive-example-choice
+align-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 このプロパティは、ブロックレベルのボックスやテーブルのセルには適用されません。フレックスボックスの交差軸のマージンが `auto` の場合、`align-self` は無視されます。
 
@@ -54,9 +94,7 @@ align-self: unset;
 - `auto`
   - : 親の {{cssxref("align-items")}} の値で計算します。
 - `normal`
-
   - : このキーワードの効果は、現在のレイアウトモードに依存します。
-
     - 絶対位置のレイアウトでは、このキーワードは*置換*の絶対位置ボックスには `start` のように動作し、*その他*の絶対位置ボックスには `stretch` のように動作します。
     - 絶対位置指定レイアウトの固定位置指定時は、このキーワードは `stretch` と同様に動作します。
     - フレックスアイテムでは、このキーワードは `stretch` と同様に動作します。

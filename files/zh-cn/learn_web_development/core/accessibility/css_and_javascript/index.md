@@ -1,10 +1,9 @@
 ---
 title: CSS 和 JavaScript 无障碍最佳实践
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
-original_slug: Learn/Accessibility/CSS_and_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
 当 CSS 和 JavaScript 使用得当，很有可能改善 Web 访问体验，相反如果滥用的话，则会在极大程度上损害无障碍。本文概述了一些应该被考虑的 CSS 和 JavaScript 的最佳实践，这些实践保证了即使是复杂的内容也可以尽可能的容易被访问。
 
@@ -206,7 +205,8 @@ a:active {
 
 另一方面，不应使用 {{cssxref("visibility")}}`:hidden` 或 {{cssxref("display")}}`:none`，因为它们会隐藏屏幕阅读器中的内容。当然，除非你希望从屏幕阅读器中隐藏此内容，这是有充分理由的。
 
-> **备注：** [专为屏幕阅读器用户设计的不可见内容](https://webaim.org/techniques/css/invisiblecontent/)有围绕本主题的更多有用详细信息。
+> [!NOTE]
+> [专为屏幕阅读器用户设计的不可见内容](https://webaim.org/techniques/css/invisiblecontent/)有围绕本主题的更多有用详细信息。
 
 ### 接受用户覆盖样式
 

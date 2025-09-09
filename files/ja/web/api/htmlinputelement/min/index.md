@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`min`** は {{domxref("HTMLInputElement")}} インターフェースのプロパティで、この {{HTMLElement("input")}} 要素の [`min`](/ja/docs/Web/HTML/Element/input#min) 属性を反映します。この属性は通常、数値または日付時刻入力の有効な最小値を定義します。この属性が明示的に設定されていない場合、`min` プロパティは空文字列となります。
+**`min`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、この {{HTMLElement("input")}} 要素の [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) 属性を反映します。この属性は通常、数値または日付時刻入力の有効な最小値を定義します。この属性が明示的に設定されていない場合、`min` プロパティは空文字列となります。
 
 ## 値
 

@@ -1,7 +1,6 @@
 ---
 title: 轴
 slug: Web/XML/XPath/Reference/Axes
-original_slug: Web/XPath/Axes
 ---
 
 [XPath](/zh-CN/docs/Web/XML/XPath) 规范中定义了 13 种不同的轴（axes）。轴表示与上下文节点的关系，并用于定位树上相对于该节点的节点。

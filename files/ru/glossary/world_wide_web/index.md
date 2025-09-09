@@ -23,7 +23,7 @@ slug: Glossary/World_Wide_Web
 
 ### Обучение
 
-- [Изучение веб-разработки](/ru/docs/Learn)
+- [Изучение веб-разработки](/ru/docs/Learn_web_development)
 - [Web literacy map](https://learning.mozilla.org/web-literacy) (знания и умения, необходимые для веб-разработки)
 
 ### Общие ведомости

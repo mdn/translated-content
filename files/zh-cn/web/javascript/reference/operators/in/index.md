@@ -3,8 +3,6 @@ title: in
 slug: Web/JavaScript/Reference/Operators/in
 ---
 
-{{jsSidebar("Operators")}}
-
 如果指定的属性在指定的对象或其原型链中，则 **`in`** **运算符**返回 `true`。
 
 {{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
@@ -121,4 +119,4 @@ trees[3] = undefined;
 - [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

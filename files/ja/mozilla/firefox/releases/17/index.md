@@ -3,8 +3,6 @@ title: Firefox 17 for developers
 slug: Mozilla/Firefox/Releases/17
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 17 を搭載した Firefox 17 は米国時間 2012 年 11 月 20 日にリリースされました。このページでは、開発者に影響する Firefox 17 の変更点をまとめています。
 
 Want to help document Firefox 17? See the [list of bugs that need to be written about](http://beta.elchi3.de/doctracker/#list=fx&version=17.0) and pitch in!
@@ -13,7 +11,7 @@ Want to help document Firefox 17? See the [list of bugs that need to be written 
 
 ### HTML
 
-- {{HTMLElement("iframe")}} 要素で [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性をサポートしました。([Firefox バグ 341604](https://bugzil.la/341604))
+- {{HTMLElement("iframe")}} 要素で [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性をサポートしました。([Firefox バグ 341604](https://bugzil.la/341604))
 - {{HTMLElement("input")}} 要素で `inputmode` 属性をサポートしました。(注意: 現在 Gecko が提供する値は、WHATWG HTML 仕様書のものと異なります。) ([Firefox バグ 746142](https://bugzil.la/746142))
 
 ### CSS

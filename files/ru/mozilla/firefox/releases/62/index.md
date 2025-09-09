@@ -3,8 +3,6 @@ title: Firefox 62 для разработчиков
 slug: Mozilla/Firefox/Releases/62
 ---
 
-{{FirefoxSidebar}}
-
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 62 был выпущен 5 сентября 2018 года.
 
 ## Изменения для веб-разработчиков
@@ -103,7 +101,7 @@ _Без изменений._
 
 - Поддержка событий [`userproximity`](/ru/docs/Web/Events/userproximity), [`deviceproximity`](/ru/docs/Web/Events/deviceproximity) (см. {{domxref("UserProximityEvent")}} и {{domxref("DeviceProximityEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.proximity.enabled` ([Firefox bug 1462308](https://bugzil.la/1462308)).
 - Поддержка события [`devicelight`](/ru/docs/Web/Events/devicelight) (см. также {{domxref("DeviceLightEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.ambientLight.enabled` ([Firefox bug 1462308](https://bugzil.la/1462308)).
-- [События мутации](/ru/docs/Web/API/MutationEvent) [`DOMSubtreeModified`](/ru/docs/Web/Events/DOMSubtreeModified) и [`DOMAttrModified`](/ru/docs/Web/Events/DOMAttrModified) больше не выбрасываются, когда атрибут [`style`](/ru/docs/Web/HTML/Global_attributes#style) изменяется с помощью CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295)).
+- [События мутации](/ru/docs/Web/API/MutationEvent) [`DOMSubtreeModified`](/ru/docs/Web/Events/DOMSubtreeModified) и [`DOMAttrModified`](/ru/docs/Web/Events/DOMAttrModified) больше не выбрасываются, когда атрибут [`style`](/ru/docs/Web/HTML/Reference/Global_attributes#style) изменяется с помощью CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295)).
 - Прекращена поддержка {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} ([Firefox bug 1408301](https://bugzil.la/1408301)).
 - Прекращена поддержка {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}} и {{domxref("CSSValueList")}} ([Firefox bug 1459871](https://bugzil.la/1459871)).
 - {{domxref("window.getComputedStyle()")}} больше не возвращает `null`, если вызван на `Window`, у которого нет представления ([Firefox bug 1467722](https://bugzil.la/1467722)).
@@ -161,7 +159,6 @@ _Без изменений._
 
 - Новое свойство `open_at_install` ключа [`sidebar_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) манифеста позволяет дополнениям при установке автоматически открывать или не открывать боковые панели ([Firefox bug 1460910](https://bugzil.la/1460910)).
 - Изменено свойство `browser_style` различных ключей манифеста:
-
   - У [`page_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) и [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) оно по умолчанию стало `false`.
   - У [`sidebar_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) и [`options_ui`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) оно по умолчанию стало `true`.
 

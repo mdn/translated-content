@@ -3,8 +3,6 @@ title: 要素型セレクター
 slug: Web/CSS/Type_selectors
 ---
 
-{{CSSRef}}
-
 CSS の**要素型セレクター** (type selector) は、ノード名で要素を一致させます。つまり、文書内にある指定された型の要素をすべて選択します。
 
 ```css
@@ -70,4 +68,4 @@ example|h1 {
 ## 関連情報
 
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-- [CSS の学習: セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+- [CSS の学習: セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

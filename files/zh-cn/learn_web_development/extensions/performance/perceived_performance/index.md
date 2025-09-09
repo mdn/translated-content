@@ -1,10 +1,9 @@
 ---
 title: 感知性能
 slug: Learn_web_development/Extensions/Performance/Perceived_performance
-original_slug: Learn/Performance/Perceived_performance
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/what_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/what_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
 
 [**感知性能**](/zh-CN/docs/Glossary/Perceived_performance)是用户对网站速度的感受。用户如何看待性能与任何客观统计数据一样重要，甚至更重要，但它是主观的，并且不易测量。感知性能是用户视角，而不是指标。
 

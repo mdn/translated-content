@@ -1,13 +1,14 @@
 ---
 title: "HTMLAreaElement: rel プロパティ"
+short-title: rel
 slug: Web/API/HTMLAreaElement/rel
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAreaElement.rel`** プロパティは [`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性を反映しています。これは、空白で区切られたリンク種別のリストの入った文字列であり、{{HTMLElement("area")}} 要素で表されるリソースと現在の文書との関係を示します。
+**`HTMLAreaElement.rel`** プロパティは [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性を反映しています。これは、空白で区切られたリンク種別のリストの入った文字列であり、{{HTMLElement("area")}} 要素で表されるリソースと現在の文書との関係を示します。
 
 ## 値
 

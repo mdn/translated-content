@@ -22,7 +22,7 @@ WCAG 使用三个一致性水平：
 ## 参见
 
 - 维基百科上的 [WCAG](https://zh.wikipedia.org/wiki/Web内容无障碍指南)
-- [MDN 上的无障碍信息](/zh-CN/docs/Web/Accessibility/Information_for_Web_authors)
+- [MDN 上的无障碍信息](/zh-CN/docs/Web/Accessibility/Guides/Information_for_Web_authors)
 - [W3C 上的 WCAG 2.0 推荐标准](https://www.w3.org/Translations/WCAG20-zh/)
 - [Web 内容无障碍指南（WCAG）2.2：候选推荐标准](https://www.w3.org/TR/WCAG22/)
 - [W3C 内容无障碍指南（WCAG）3.0：工作草案](https://www.w3.org/TR/wcag-3.0/)

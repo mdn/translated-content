@@ -47,7 +47,7 @@ Web Audio API는 [futurelibrary.no](https://www.futurelibrary.no/)에서와 같�
 
 만약에 프로그래밍보다는 음악이 친숙하고, 음악 이론에 익숙하며, 악기를 만들고 싶으시다면 바로 상급자용 튜토리얼부터 시작하여 여러가지를 만들기 시작하시면 됩니다. 위의 튜토리얼은 음표를 배치하는 법, 저주파 발진기 등 맞춤형 Oscillator(발진기)와 Envelope를 설계하는 법 등을 설명하고 있으니, 이를 읽으며 사이드바의 자료를 참고하시면 될 것입니다.
 
-프로그래밍에 전혀 익숙하지 않으시다면 JavaScript 기초 튜토리얼을 먼저 읽고 이 문서를 다시 읽으시는 게 나을 수도 있습니다. Mozilla의 [JavaScript 기초](/ko/docs/Learn/JavaScript)만큼 좋은 자료도 몇 없죠.
+프로그래밍에 전혀 익숙하지 않으시다면 JavaScript 기초 튜토리얼을 먼저 읽고 이 문서를 다시 읽으시는 게 나을 수도 있습니다. Mozilla의 [JavaScript 기초](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)만큼 좋은 자료도 몇 없죠.
 
 ## Web Audio API 인터페이스
 
@@ -204,7 +204,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 - [Web Audio API의 기본 개념](/ko/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 - [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [고급 기술: 소리 생성, 시퀸싱, 타이밍, 스케쥴링](/ko/docs/Web/API/Web_Audio_API/Advanced_techniques)
-- [미디어와 Web Audio API에 대한 자동 재생 가이드](/ko/docs/Web/Media/Autoplay_guide)
+- [미디어와 Web Audio API에 대한 자동 재생 가이드](/ko/docs/Web/Media/Guides/Autoplay)
 - [IIR 필터 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_IIR_filters)
 - [Web Audio API 시각화](/ko/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio 공간화 기초](/ko/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

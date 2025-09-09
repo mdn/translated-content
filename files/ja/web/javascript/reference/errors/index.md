@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Errors
 
 ウェブコンソールに表示されたエラーには、コードにある問題を速やかに理解するのに役立つ、関連ページへのリンクが含まれていることがあります。
 
-JavaScript のエラーを修正するための初心者向け導入用チュートリアルについては、[何が間違っている? JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)を参照してください。
+JavaScript のエラーを修正するための初心者向け導入用チュートリアルについては、[何が間違っている? JavaScript のトラブルシューティング](/ja/docs/Learn_web_development/Core/Scripting/What_went_wrong)を参照してください。
 
 ## エラーのリスト
 

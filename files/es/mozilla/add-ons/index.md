@@ -45,7 +45,7 @@ Además de las extensiones, hay algunos otros tipos de complemento que permiten 
 
 - [Temas ligeros](/docs/Mozilla/Add-ons/Themes/Background) Son una forma sencilla de proporcionar una personalización limitada para Firefox.
 - [Complementos para móviles](/es/docs/Mozilla/Add-ons/Firefox_for_Android) son complementos de Firefox para Android. Observe que, aunque, tenemos la intención de reemplazar parte de la tecnología subyacente a estas API. En el futuro, WebExtensions será totalmente compatible con Firefox para Android.
-- [Plugins de motores de búsqueda](/es/docs/Web/OpenSearch) agrega nuevos motores de búsqueda a la barra de búsqueda del navegador.
+- [Plugins de motores de búsqueda](/es/docs/Web/XML/Guides/OpenSearch) agrega nuevos motores de búsqueda a la barra de búsqueda del navegador.
 - [Diccionarios del usuario](/es/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) son complementos que le permiten revisar la ortografía en diferentes idiomas.
 - [Paquetes de idiomas](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack) son complementos que le permiten tener más idiomas disponibles para la interfaz de usuario de Firefox.
 

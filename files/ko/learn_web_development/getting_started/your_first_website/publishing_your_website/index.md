@@ -18,7 +18,7 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 만약 여러분이 출판된 웹사이트에 대한 모든 컨트롤를 원한다면, 이것들을 구매해야 할 것입니다:
 
-- 호스팅 — 호스팅 회사의 [웹 서버](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) 에서 빌린 파일 공간. 이 공간에 여러분의 웹사이트 파일을 놓을 것입니다, 그리고 웹 서버는 컨텐트를 요청하는 웹 유저에게 그 컨텐트를 제공합니다.
+- 호스팅 — 호스팅 회사의 [웹 서버](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) 에서 빌린 파일 공간. 이 공간에 여러분의 웹사이트 파일을 놓을 것입니다, 그리고 웹 서버는 컨텐트를 요청하는 웹 유저에게 그 컨텐트를 제공합니다.
 - [도메인 이름](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) — `http://www.mozilla.org`, `또는 http://www.bbc.co.uk` 같이, 사람들이 여러분의 웹사이트를 찾을 수 있는 특정 주소. **도메인 등록 기관**으로부터 몇 년간 사용할 수 있는 여러분의 도메인을 빌리세요.
 
 많은 전문적인 웹사이트들은 이 방법으로 온라인에 진출합니다.
@@ -143,7 +143,7 @@ _another commit_ 대신에 여러분이 막 변경했던 것을 설명할 수 �
 
 ## 더 읽을거리
 
-- [웹 서버는 무엇일까요](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [웹 서버는 무엇일까요](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [도메인 이름 이해하기](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
 - [웹에서 무언가를 하기 위한 비용은 얼마나 들까요](/ko/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.

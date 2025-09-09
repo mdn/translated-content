@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-[장고 튜토리얼](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)의 두 번째 기사에서는 웹 사이트 프로젝트의 기본 뼈대(skeleton)를 만들고, 사이트의 특성에 맞춰 설정, 경로, 모델, 뷰 및 템플릿을 다루는 방법을 보여줍니다.
+[장고 튜토리얼](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)의 두 번째 기사에서는 웹 사이트 프로젝트의 기본 뼈대(skeleton)를 만들고, 사이트의 특성에 맞춰 설정, 경로, 모델, 뷰 및 템플릿을 다루는 방법을 보여줍니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -48,7 +48,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 3. 프로젝트에 포함시키기 위해 새 어플리케이션들을 등록(register)합니다.
 4. 각 어플리케이션에 대해 url/mapper를 연결(hook up)합니다.
 
-[Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 용으로 웹사이트 폴더와 프로젝트 폴더는 locallibrary라고 이름지어질 것입니다. 그리고 catalog라는 단 하나의 어플리케이션을 가질 겁니다. 그러므로 최상위 폴더 구조는 아래와 같습니다:
+[Local Library website](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 용으로 웹사이트 폴더와 프로젝트 폴더는 locallibrary라고 이름지어질 것입니다. 그리고 catalog라는 단 하나의 어플리케이션을 가질 겁니다. 그러므로 최상위 폴더 구조는 아래와 같습니다:
 
 ```bash
 locallibrary/         # Website folder
@@ -61,7 +61,7 @@ locallibrary/         # Website folder
 
 ## 프로젝트 만들기
 
-먼저 명령 프롬프트 또는 터미널을 열어서, 당신이 [virtual environment](/ko/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment) 안에 있는지 확인하고, 어디에 당신의 장고 앱을 (당신의 '문서'와 같이 찾기 쉬운 어딘가로 하세요) 저장하기 원하는지 탐색합니다. 그리고 당신의 새로운 웹사이트 폴더를 만드세요 (이 예제에서는: _locallibrary_). 그리고 cd 명령어를 사용하여 해당 폴더로 들어가세요:
+먼저 명령 프롬프트 또는 터미널을 열어서, 당신이 [virtual environment](/ko/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#using_a_virtual_environment) 안에 있는지 확인하고, 어디에 당신의 장고 앱을 (당신의 '문서'와 같이 찾기 쉬운 어딘가로 하세요) 저장하기 원하는지 탐색합니다. 그리고 당신의 새로운 웹사이트 폴더를 만드세요 (이 예제에서는: _locallibrary_). 그리고 cd 명령어를 사용하여 해당 폴더로 들어가세요:
 
 ```bash
 mkdir locallibrary
@@ -156,7 +156,7 @@ INSTALLED_APPS = [
 
 새로운 행은 어플리케이션 구성 객체(application configuration object)(`CatalogConfig`)를 지정하게 됩니다. 이것은 어플리케이션을 생성할 때 **/locallibrary/catalog/apps.py** 안에 생성됩니다.
 
-> **참고:** **주의**: 설정 파일에 이미 많은 `INSTALLED_APPS` 항목과 `MIDDLEWARE` 항목이 있음을 알 수 있습니다. 이를 통해 [장고 관리 사이트](/ko/docs/Learn/Server-side/Django/Admin_site)를 지원할 수 있으며 결과적으로 세션, 인증 등을 포함한 많은 기능이 사용됩니다.
+> **참고:** **주의**: 설정 파일에 이미 많은 `INSTALLED_APPS` 항목과 `MIDDLEWARE` 항목이 있음을 알 수 있습니다. 이를 통해 [장고 관리 사이트](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site)를 지원할 수 있으며 결과적으로 세션, 인증 등을 포함한 많은 기능이 사용됩니다.
 
 ## 데이터베이스 설정
 
@@ -363,7 +363,7 @@ python3 manage.py runserver
 
 이제 urls, models, views, 그리고 templates으로 채울 수 있는 완벽한 뼈대 웹사이트 프로젝트를 만들었습니다.
 
-[Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)를 위한 뼈대는 완성되어서 실행되고 있고, 이제는 이 웹사이트가 해야 할 일을 하게 만드는 코드를 작성할 시간입니다.
+[Local Library website](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)를 위한 뼈대는 완성되어서 실행되고 있고, 이제는 이 웹사이트가 해야 할 일을 하게 만드는 코드를 작성할 시간입니다.
 
 ## 참고 항목
 

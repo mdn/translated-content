@@ -63,7 +63,7 @@ Angular는 선언적 HTML 템플릿을 사용하는 컴포넌트 기반 프레�
 
 Vue는 [AngularJS](https://angularjs.org/)와 마찬가지로 일부 자체 코드로 HTML을 확장합니다. 그 외에도 주로 최신 표준 JavaScript에 의존합니다.
 
-[Vue 학습 시작](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+[Vue 학습 시작](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
 
 ### React
 
@@ -73,7 +73,7 @@ React와 ReactDOM은 함께 사용되는 경우가 많기 때문에, React는 �
 
 React는 [JSX](https://reactjs.org/docs/introducing-jsx.html)로 알려진 HTML과 유사한 구문으로 JavaScript를 확장합니다.
 
-[React 학습 시작](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+[React 학습 시작](/ko/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
 
 ## 프레임워크가 존재하는 이유는 무엇입니까?
 
@@ -98,7 +98,7 @@ const state = [
 ];
 ```
 
-이러한 작업 중 하나를 사용자에게 어떻게 표시합니까? 각 작업을 목록 항목으로 나타내려고 합니다. 순서가 지정되지 않은 목록 요소(a [`<ul>`](/ko/docs/Web/HTML/Element/ul)) 안에 HTML[`<li>`](/ko/docs/Web/HTML/Element/li) 요소를 어떻게 만들까요? 다음과 같이 보일 수 있습니다.
+이러한 작업 중 하나를 사용자에게 어떻게 표시합니까? 각 작업을 목록 항목으로 나타내려고 합니다. 순서가 지정되지 않은 목록 요소(a [`<ul>`](/ko/docs/Web/HTML/Reference/Elements/ul)) 안에 HTML[`<li>`](/ko/docs/Web/HTML/Reference/Elements/li) 요소를 어떻게 만들까요? 다음과 같이 보일 수 있습니다.
 
 ```js
 function buildTodoItemEl(id, name) {

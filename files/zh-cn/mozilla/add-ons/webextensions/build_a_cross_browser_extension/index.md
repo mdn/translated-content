@@ -3,8 +3,6 @@ title: 构建一个跨浏览器的扩展程序
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 ---
 
-{{AddonSidebar}}
-
 浏览器扩展 API 的引入为浏览器扩展的开发创造了“一次开发跨浏览器”的前景。然而，在使用扩展 API 的浏览器中 (主要是 Chrome、Firefox、Opera 和 Edge) ，API 的实现和覆盖范围都存在差异。除此之外，Safari 使用了它自己的 Safari 扩展脚本系统。
 
 最大化兼容浏览器扩展意味着至少在两个不同的浏览器上兼容同一个扩展。本文探讨了在创建跨浏览器扩展时所面临的六个主要挑战，并在每种情况下提出了如何应对这些挑战。
@@ -105,7 +103,7 @@ if (typeof <function> === "function") {
 
 ### Manifest 字段
 
-4 个主要浏览器支持的 [`manifest.json`](/zh-CN/docs_zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) 文件字段的差异大致可分为三类：
+主要浏览器支持的 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件字段的差异大致可分为三类：
 
 - **扩展信息属性。**例如，在撰写本文时，Firefox 和 Opera 包含和 [`author`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility) 地位相等的 [`developer`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) 关键字，以获取扩展的开发者和作者的详细信息。
 - **扩展功能。**例如，在编写本文时，Edge 不支持扩展定义快捷键的 [`commands`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#Browser_compatibility) 字段。

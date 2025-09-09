@@ -5,13 +5,55 @@ l10n:
   sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
-{{CSSRef}}
-
 **`row-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のグリッド行の間のすき間（{{glossary("gutters", "溝")}}）の寸法を定義します。
 
 仕様書の初期バージョンでは、このプロパティは `grid-row-gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `grid-row-gap` を `row-gap` の別名として受け入れます。
 
-{{EmbedInteractiveExample("pages/css/row-gap.html")}}
+{{InteractiveExample("CSS デモ: row-gap")}}
+
+```css interactive-example-choice
+row-gap: 0;
+```
+
+```css interactive-example-choice
+row-gap: 1ch;
+```
+
+```css interactive-example-choice
+row-gap: 1em;
+```
+
+```css interactive-example-choice
+row-gap: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 構文
 

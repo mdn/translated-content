@@ -35,7 +35,7 @@ slug: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Изменяет существующее свойство CSS или создаёт новое свойство CSS в блоке объявления.
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}
-  - : Поддерживается только через getComputedStyle в Firefox. Возвращает значение свойства в виде {{ domxref ("CSSPrimitiveValue")}} или `null` [для сокращённых свойств.](/ru/docs/Web/CSS/Shorthand_properties)
+  - : Поддерживается только через getComputedStyle в Firefox. Возвращает значение свойства в виде {{ domxref ("CSSPrimitiveValue")}} или `null` [для сокращённых свойств.](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 
 ## Пример
 

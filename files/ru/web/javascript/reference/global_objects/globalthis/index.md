@@ -42,7 +42,7 @@ globalThis
 
 ## Примеры
 
-До `globalThis` единственным кросс-платформенным путём получения глобального объекта в любой среде было `Function('return this')()`. Однако, это нарушает [CSP](/ru/docs/Web/HTTP/CSP) в некоторых случаях. Например, [es6-shim](https://github.com/paulmillr/es6-shim) делает такую проверку:
+До `globalThis` единственным кросс-платформенным путём получения глобального объекта в любой среде было `Function('return this')()`. Однако, это нарушает [CSP](/ru/docs/Web/HTTP/Guides/CSP) в некоторых случаях. Например, [es6-shim](https://github.com/paulmillr/es6-shim) делает такую проверку:
 
 ```js
 var getGlobal = function () {

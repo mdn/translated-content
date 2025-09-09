@@ -12,7 +12,7 @@ Une commande peut être définie explicitement, avec un texte et éventuellement
 
 ## Attributs
 
-Cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Global_attributes) et notamment `title` qui peut être utilisé afin de décrire une commande ou pour fournir des indications quant à l'utilisation de celle-ci.
+Cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) et notamment `title` qui peut être utilisé afin de décrire une commande ou pour fournir des indications quant à l'utilisation de celle-ci.
 
 - `checked`
   - : Un attribut booléen qui indique si la commande est sélectionné. Cet attribut peut uniquement être utilisé lorsque l'attribut `type` vaut `checkbox` ou `radio`.
@@ -52,7 +52,7 @@ Cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Glo
   <menuitem
     type="command"
     label="Cette commande ne fait rien"
-    icon="https://developer.mozilla.org/static/img/favicon144.png">
+    icon="/shared-assets/images/examples/favicon144.png">
     Les commandes n'affichent pas leurs contenus.
   </menuitem>
   <menuitem

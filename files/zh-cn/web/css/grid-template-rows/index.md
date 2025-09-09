@@ -3,11 +3,54 @@ title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 ---
 
-{{CSSRef}}
-
 `grid-template-rows` 该属性是基于 {{glossary("grid rows", "网格行")}} 的维度，去定义网格线的名称和网格轨道的尺寸大小。
 
-{{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}
+{{InteractiveExample("CSS Demo: grid-template-rows")}}
+
+```css interactive-example-choice
+grid-template-rows: auto;
+```
+
+```css interactive-example-choice
+grid-template-rows: 40px 4em 40px;
+```
+
+```css interactive-example-choice
+grid-template-rows: 1fr 2fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template-rows: 3ch auto minmax(10px, 60px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 语法
 
@@ -64,13 +107,11 @@ grid-template-rows: unset;
 - `min-content`
   - : 是一个用来表示以网格项的最大的最小内容来占据网格轨道的关键字。
 - {{cssxref("minmax", "minmax(min, max)")}}
-
   - : 是一个来定义大小范围的属性，大于等于 min 值，并且小于等于 max 值。如果 max 值小于 min 值，则该值会被视为 min 值。最大值可以设置为网格轨道系数值`<flex>` ，但最小值则不行。
 
     Note: 该规范在将来可能会允许设置最小值为 `flex` ，也会调整网格轨道算法 ([track sizing algorithm](https://www.w3.org/TR/css-grid-1/#track-sizing-algorithm)) 计算出正确的大小。
 
 - `auto`
-
   - : 如果该网格轨道为最大时，该属性等同于 `<max-content>` ，为最小时，则等同于 `<min-content>` 。
 
     Note: 网格轨道大小为 `auto` (且只有为 `auto` ) 时，才可以被属性{{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 拉伸。

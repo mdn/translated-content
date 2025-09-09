@@ -5,11 +5,44 @@ l10n:
   sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---
 
-{{CSSRef}}
+`min-width` [CSS](/zh-CN/docs/Web/CSS) 属性为给定元素设置最小宽度。它可以阻止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)小于 `min-width` 指定的值。
 
-`min-width` [CSS](/zh-CN/docs/Web/CSS) 属性为给定元素设置最小宽度。它可以阻止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)小于 `min-width` 指定的值。
+{{InteractiveExample("CSS Demo: min-width")}}
 
-{{EmbedInteractiveExample("pages/css/min-width.html")}}
+```css interactive-example-choice
+min-width: 150px;
+```
+
+```css interactive-example-choice
+min-width: 20em;
+```
+
+```css interactive-example-choice
+min-width: 75%;
+```
+
+```css interactive-example-choice
+min-width: 40ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the minimum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 当 `min-width` 大于 {{Cssxref("max-width")}} 或 {{Cssxref("width")}} 时，元素的宽度将被设置为 `min-width` 的值。
 

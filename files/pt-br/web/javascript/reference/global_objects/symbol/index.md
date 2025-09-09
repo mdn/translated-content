@@ -183,4 +183,4 @@ obj[Object(sym)]; // still 1
 
 - [Glossary: Symbol data type](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [Data types and data structures](/pt-BR/docs/Web/JavaScript/Data_structures)
+- [Data types and data structures](/pt-BR/docs/Web/JavaScript/Guide/Data_structures)

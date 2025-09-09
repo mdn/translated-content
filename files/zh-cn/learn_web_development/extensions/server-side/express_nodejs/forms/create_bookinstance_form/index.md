@@ -1,7 +1,6 @@
 ---
 title: 创建书本实例表单
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form
-original_slug: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 ---
 
 本章节演示如何定义一个页面/表单，以创建`BookInstance` 物件。这很像我们用来创建书本 `Book` 物件的表单。

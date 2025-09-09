@@ -1,10 +1,8 @@
 ---
 title: Svelte 进阶：响应式、生命周期以及无障碍
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_components","Learn_web_development/Core/Frameworks_libraries/Svelte_stores", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们为待办事项列表添加了更多功能，并开始将应用程序组织成组件。在本文中，我们将添加应用程序的最终功能，并进一步组件化我们的应用程序。我们将学习处理与更新对象和数组相关的响应式问题。为了避免常见的问题，我们需要深入了解 Svelte 的响应式系统。我们还将解决一些无障碍聚焦问题，以及其他一些问题。
@@ -348,7 +346,8 @@ const checkAllTodos = (completed) => {
 
    `addTodo()` 现在直接接收新待办事项的名称，因此我们不再需要 `newTodoName` 变量来提供值。这部分由我们的 `NewTodo` 组件处理。
 
-   > **备注：** `{ name }` 的语法只是 `{ name: name }` 的简写形式。它来自 JavaScript 本身，与 Svelte 无关，只是为 Svelte 的缩写语法提供了一些灵感。
+   > [!NOTE]
+   > `{ name }` 的语法只是 `{ name: name }` 的简写形式。它来自 JavaScript 本身，与 Svelte 无关，只是为 Svelte 的缩写语法提供了一些灵感。
 
 5. 最后，在此部分中，将 NewTodo 表单标记替换为对 `NewTodo` 组件的调用，如下所示：
 

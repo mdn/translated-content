@@ -1,10 +1,7 @@
 ---
 title: 传统的布局方法
 slug: Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
-original_slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 ---
-
-{{LearnSidebar}}
 
 在 CSS 布局中，网格系统是一种非常常见的布局方式，并且在 CSS 网格布局之前，它们倾向于由浮动和其他的布局功能实现。假想你的布局是一组数字标注的列（例如 4、6 或者 12），然后把你的内容填充到这些想象的列中。这篇文章将要探讨这种早期的方法是怎么实现的，来帮助你在旧项目工作时更好地理解他们。
 
@@ -571,7 +568,8 @@ body {
 
 Skeleton 不仅包含了网格系统，它还包含了用于排版和其他能作为起始点的页面元素上的 CSS。我们现在把这些部分留作默认值，我们在这里真正感兴趣的是网格。
 
-> **备注：** [Normalize](https://necolas.github.io/normalize.css/) 是由 Nicolas Gallagher 编写的一个很有用的小 CSS 库，它自动做了一些有用的基础布局修正，让元素默认的样式化在不同浏览器中更加协调。
+> [!NOTE]
+> [Normalize](https://necolas.github.io/normalize.css/) 是由 Nicolas Gallagher 编写的一个很有用的小 CSS 库，它自动做了一些有用的基础布局修正，让元素默认的样式化在不同浏览器中更加协调。
 
 我们将会使用和在前面的示例中相似的 HTML。将下面的内容加到你的 HTML body 中：
 

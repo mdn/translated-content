@@ -5,11 +5,48 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 **`border-top-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/border-top-width.html")}}
+{{InteractiveExample("CSS デモ: border-top-width")}}
+
+```css interactive-example-choice
+border-top-width: thick;
+```
+
+```css interactive-example-choice
+border-top-width: 2em;
+```
+
+```css interactive-example-choice
+border-top-width: 4px;
+```
+
+```css interactive-example-choice
+border-top-width: 2ex;
+```
+
+```css interactive-example-choice
+border-top-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構文
 
@@ -35,9 +72,7 @@ border-top-width: unset;
 ### 値
 
 - `<line-width>`
-
   - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合は、以下の値の何れかでなければなりません。
-
     - `thin`
     - `medium`
     - `thick`

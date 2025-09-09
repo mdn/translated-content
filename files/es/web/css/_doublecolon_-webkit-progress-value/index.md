@@ -3,7 +3,7 @@ title: ::-webkit-progress-value
 slug: Web/CSS/::-webkit-progress-value
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 
@@ -51,7 +51,6 @@ No es parte de ninguna especificación. Es un elemento propietario y específico
 ## Ver además
 
 - Los pseudo-elemento de WebKit/Blink para dar estilos a otras partes de un elemento {{HTMLElement("progress")}}:
-
   - {{ cssxref("::-webkit-progress-bar") }}
   - {{ cssxref("::-webkit-progress-inner-element") }}
 

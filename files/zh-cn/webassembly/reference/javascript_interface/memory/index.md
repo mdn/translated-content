@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Memory()
 slug: WebAssembly/Reference/JavaScript_interface/Memory
-original_slug: WebAssembly/JavaScript_interface/Memory
 ---
 
 **`WebAssembly.Memory()`** 构造函数创建一个新的 `Memory` 对象。该对象的 {{jsxref("WebAssembly/Memory/buffer","buffer")}} 属性是一个可调整大小的 [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ，其内存储的是 WebAssembly `实例` 所访问内存的原始字节码。
@@ -17,9 +16,7 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 ### 参数
 
 - _memoryDescriptor_
-
   - : 一个可包含以下成员的对象：
-
     - _initial_
       - : WebAssembly 内存的初始大小，以 WebAssembly 页面为单位。
     - _maximum {{optional_inline}}_

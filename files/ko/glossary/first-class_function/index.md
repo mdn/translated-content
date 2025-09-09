@@ -66,7 +66,6 @@ JavaScript에서 함수들은 값들로서 다루어질 수 있기 때문에 함
 
 - 위키피디아의 [일급 함수](https://en.wikipedia.org/wiki/First-class_function)
 - [MDN Web Docs 용어 사전](/ko/docs/Glossary)
-
   - {{glossary("Callback function", "콜백 함수")}}
   - {{glossary("Function", "함수")}}
   - {{glossary("Variable", "변수")}}

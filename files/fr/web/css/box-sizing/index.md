@@ -5,9 +5,58 @@ slug: Web/CSS/box-sizing
 
 {{CSSRef}}
 
-La propriété CSS **`box-sizing`** définit la façon dont la hauteur et la largeur totale d'un élément est calculée (avec [le modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)).
+La propriété CSS **`box-sizing`** définit la façon dont la hauteur et la largeur totale d'un élément est calculée (avec [le modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)).
 
-{{EmbedInteractiveExample("pages/css/box-sizing.html")}}
+{{InteractiveExample("CSS Demo: box-sizing")}}
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+```
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```css interactive-example-choice
+box-sizing: border-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-parent">
+    <p>Parent container</p>
+    <div class="transition-all" id="example-element">
+      <p>Child container</p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-parent {
+  width: 220px;
+  height: 200px;
+  border: solid 10px #ffc129;
+  margin: 0.8em;
+}
+
+#example-element {
+  height: 60px;
+  margin: 2em auto;
+  background-color: rgba(81, 81, 81, 0.6);
+}
+
+#example-element > p {
+  margin: 0;
+}
+```
 
 En CSS, la largeur et la hauteur affectées à un élément s'appliquent par défaut à la boîte de contenu (_content box_) de l'élément. Si l'élément possède une bordure (_border_) ou du remplissage (_padding_), celui-ci est ajouté à la largeur et/ou à la hauteur de la boîte affichée à l'écran. Cela signifie qu'il faut ajuster les valeurs de hauteur et de largeur afin qu'elles permettent d'ajouter n'importe quelle bordure ou n'importe quel remplissage qui serait ajouté par la suite.
 
@@ -39,8 +88,7 @@ La propriété `box-sizing` peut être définie avec l'un des mots-clés suivant
 - `content-box`
   - : C'est la valeur initiale et la valeur par défaut, spécifiée dans le standard CSS. Les propriétés {{cssxref("width")}} et {{cssxref("height")}} sont mesurées en incluant le contenu, mais pas le remplissage, la bordure, la marge extérieure ou intérieure. Les dimensions de l'élément sont donc calculées à partir de la hauteur et de la largeur du contenu (on ne tient pas compte de la bordure ou du remplissage (_padding_)). Ainsi, `.box {width: 350px; border:10px solid black;}` fournira une boîte dont la largeur vaut `370px`.
 - `border-box`
-
-  - : Les propriétés {{cssxref("width")}} et {{cssxref("height")}} incluent le contenu, le remplissage (_padding_), la bordure, mais pas la marge. C'est le [modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model) utilisé par Internet Explorer lorsque le document est en mode de compatibilité (Quirks). La boîte de contenu ne peut pas être négative et est ramenée à 0 si nécessaire, il est donc impossible d'utiliser `border-box` pour faire disparaître l'élément. Les dimensions de l'élément sont calculées comme la somme de la bordure, du remplissage (_padding_) et du contenu.
+  - : Les propriétés {{cssxref("width")}} et {{cssxref("height")}} incluent le contenu, le remplissage (_padding_), la bordure, mais pas la marge. C'est le [modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) utilisé par Internet Explorer lorsque le document est en mode de compatibilité (Quirks). La boîte de contenu ne peut pas être négative et est ramenée à 0 si nécessaire, il est donc impossible d'utiliser `border-box` pour faire disparaître l'élément. Les dimensions de l'élément sont calculées comme la somme de la bordure, du remplissage (_padding_) et du contenu.
 
     Ici, les dimensions de l'élément sont calculées comme suit : _largeur = bordure + marge interne + largeur du contenu_, et _hauteur = bordure + marge interne + hauteur du contenu_.
 
@@ -107,4 +155,4 @@ div {
 
 ## Voir aussi
 
-- [Apprendre : Le modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Apprendre : Le modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)

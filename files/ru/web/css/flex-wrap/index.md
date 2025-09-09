@@ -7,7 +7,47 @@ slug: Web/CSS/flex-wrap
 
 Свойство [CSS](/ru/docs/Web/CSS) **`flex-wrap`** задаёт правила вывода flex-элементов — в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.
 
-{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
+{{InteractiveExample("CSS Demo: flex-wrap")}}
+
+```css interactive-example-choice
+flex-wrap: nowrap;
+```
+
+```css interactive-example-choice
+flex-wrap: wrap;
+```
+
+```css interactive-example-choice
+flex-wrap: wrap-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+    <div>Item Four</div>
+    <div>Item Five</div>
+    <div>Item Six</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
 
 {{cssinfo}}
 

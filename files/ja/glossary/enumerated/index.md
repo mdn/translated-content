@@ -11,9 +11,9 @@ l10n:
 
 ## HTML 列挙型属性
 
-HTMLでは、[列挙型属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)は、限定された、あらかじめ設定されたテキスト値の集合を持つ属性です。例えば、グローバル HTML の [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性には、3 つの有効な値、`ltr`, `rtl`, `auto` があります。
+HTMLでは、[列挙型属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)は、限定された、あらかじめ設定されたテキスト値の集合を持つ属性です。例えば、グローバル HTML の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性には、3 つの有効な値、`ltr`, `rtl`, `auto` があります。
 
-それぞれの列挙型属性には、属性が値なしで存在する（値がない）場合の既定値、及び属性に無効な値が割り当てられている場合の既定値があります。HTML の[論理](/ja/docs/Glossary/Boolean)属性が、値が存在するか、省略されるか、または無効であるかに関わらず、属性が存在する場合は常に真となるのに対して、HTML の列挙型属性では、値が省略された場合の既定値は、無効な値の場合の既定値と異なることがあります。例えば、グローバル HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性には、2 つの有効なキーワード、`true` と `false` があります。この属性が表示されているが値が設定されていない場合、その値は `true` となります。値が設定されているが、 `contenteditable="contenteditable"` のような無効な値の場合、その値は 3 つ目の状態である `inherit` が割り当てられます。
+それぞれの列挙型属性には、属性が値なしで存在する（値がない）場合の既定値、及び属性に無効な値が割り当てられている場合の既定値があります。HTML の[論理](/ja/docs/Glossary/Boolean)属性が、値が存在するか、省略されるか、または無効であるかに関わらず、属性が存在する場合は常に真となるのに対して、HTML の列挙型属性では、値が省略された場合の既定値は、無効な値の場合の既定値と異なることがあります。例えば、グローバル HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性には、2 つの有効なキーワード、`true` と `false` があります。この属性が表示されているが値が設定されていない場合、その値は `true` となります。値が設定されているが、 `contenteditable="contenteditable"` のような無効な値の場合、その値は 3 つ目の状態である `inherit` が割り当てられます。
 
 ## ARIA 列挙型属性
 
@@ -28,5 +28,5 @@ JavaScript で、列挙可能なプロパティとは、内部の列挙可能フ
 ## 関連情報
 
 - [論理型](/ja/docs/Glossary/Boolean)
-- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
 - HTML 標準の [enumerated attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)

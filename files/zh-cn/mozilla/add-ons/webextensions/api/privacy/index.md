@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 访问和修改多个与隐私相关的浏览器设置。
 
 要使用隐私 API，你必须预先取得“privacy”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
@@ -27,7 +25,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。
+> 此 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

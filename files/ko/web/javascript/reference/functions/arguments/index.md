@@ -78,7 +78,7 @@ var args = [...arguments];
   - : 현재 실행 중인 함수를 호출한 함수를 가리킵니다.
 - [`arguments.length`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : 함수에 전달된 인수의 수를 가리킵니다.
-- [`arguments[@@iterator]`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+- [`arguments[@@iterator]`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
   - : arguments의 각 인덱스 값을 포함하는 새로운 Array Iterator 객체를 반환합니다.
 
 ## 예제
@@ -136,7 +136,7 @@ var listHTML = list("u", "One", "Two", "Three");
 
 ### 나머지, 기본 및 비구조화된 매개변수
 
-`arguments` 객체는 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)와 함께 사용될 수 있습니다.
+`arguments` 객체는 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)와 함께 사용될 수 있습니다.
 
 ```js
 function foo(...args) {
@@ -145,7 +145,7 @@ function foo(...args) {
 foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
 ```
 
-그러나, 비엄격 함수에서는 **mapped `arguments` 객체**는 함수가 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)든 포함하지 **않는** 경우에만 제공됩니다. 예를 들어, 기본 매개변수를 사용하는 다음 함수에서는, 100 대신에 `10`이 반환됩니다:
+그러나, 비엄격 함수에서는 **mapped `arguments` 객체**는 함수가 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)든 포함하지 **않는** 경우에만 제공됩니다. 예를 들어, 기본 매개변수를 사용하는 다음 함수에서는, 100 대신에 `10`이 반환됩니다:
 
 ```js
 function bar(a = 1) {
@@ -155,7 +155,7 @@ function bar(a = 1) {
 bar(10); // 10
 ```
 
-이 예에서, 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)가 없는 경우에는, 100이 반환됩니다:
+이 예에서, 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)가 없는 경우에는, 100이 반환됩니다:
 
 ```js
 function zoo(a) {

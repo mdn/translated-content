@@ -30,7 +30,7 @@ slug: orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 
 ### Webkit CSS 拡張仕様 (-webkit-)
 
-詳細は、[WebKit 独自の CSS 拡張](/ja/docs/Web/CSS/Webkit_Extensions) をご覧ください。
+詳細は、[WebKit 独自の CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) をご覧ください。
 
 ＜表 2 : -webkit-指定された値と mobile 版 Firefox 向け対処法＞
 

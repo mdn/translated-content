@@ -2,12 +2,10 @@
 title: <filter-function>
 slug: Web/CSS/filter-function
 l10n:
-  sourceCommit: 5755d6dfbac15abc29ddcd924cee110c4139b073
+  sourceCommit: b17ca921175c0a92d21c6c4effbc7fa3dc348a8e
 ---
 
-{{CSSRef}}
-
-**`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。
+**`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。
 
 ## 構文
 
@@ -42,7 +40,7 @@ l10n:
 
 ### フィルター関数の比較
 
-この例では、シンプルなグラフィックに加えて、さまざまな種類のフィルター機能を選択するための選択メニューと、フィルター機能内で使用される値を変化させるためのスライダーが用意されています。コントロールを更新すると、フィルター効果がリアルタイムで更新されるので、さまざまなフィルターの効果を調べることができます。
+この例には、グラフィックと、種類のフィルター機能を選択するための選択メニュー、フィルター機能内で使用される値を変化させるためのスライダーが用意されています。コントロールを更新すると、フィルター効果がリアルタイムで更新されるので、さまざまなフィルターの効果を調べることができます。
 
 ```css
 div {

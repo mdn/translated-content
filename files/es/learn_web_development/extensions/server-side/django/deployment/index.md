@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Deployment
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), querrás instalarlo en un servidor web público de manera que pueda ser accedido por el personal y los miembros de la biblioteca a través de Internet. Este artículo proporciona una visión general de cómo buscar un host para desplegar tu sitio web y de lo que necesitas hacer para conseguir que tu sitio esté listo en producción.
+Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Local](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), querrás instalarlo en un servidor web público de manera que pueda ser accedido por el personal y los miembros de la biblioteca a través de Internet. Este artículo proporciona una visión general de cómo buscar un host para desplegar tu sitio web y de lo que necesitas hacer para conseguir que tu sitio esté listo en producción.
 
 <table>
   <tbody>
@@ -95,7 +95,7 @@ Muchos proveedores disponen también de un nivel "básico" que proporciona nivel
 
 ## Preparando tu sitio web para hacerlo público
 
-La [Django skeleton website](/es/docs/Learn/Server-side/Django/skeleton_website) creada usando las herramientas _django-admin_ y _manage.py_ están configuradas para hacer más sencillo el desarrollo. Muchos de los ajustes del proyecto Django (especificados en **settings.py**) deberían ser distintos en producción, por razones tanto de seguridad como de rendimiento.
+La [Django skeleton website](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) creada usando las herramientas _django-admin_ y _manage.py_ están configuradas para hacer más sencillo el desarrollo. Muchos de los ajustes del proyecto Django (especificados en **settings.py**) deberían ser distintos en producción, por razones tanto de seguridad como de rendimiento.
 
 > [!NOTE]
 > Es bastante común disponer de un archivo **settings.py** separado en producción, e importar los ajustes sensibles desde un archivo aparte o desde una variable de entorno. Este archivo debería, por tanto, estar protegido, aún cuando el resto del código fuente esté disponible en un repositorio público.
@@ -160,7 +160,6 @@ Vamos a elegir Heroku por varias razones:
 - Heroku tiene un nivel gratuito ([free tier](https://www.heroku.com/pricing)) que es _verdaderamente_ gratuito (aunque con algunas limitaciones).
 - Como PaaS, Heroku se hace cargo de gran parte de la infraestructura web por nosotros. Esto hace mucho más sencillos los comienzos, al no tener que preocuparnos por servidores, balanceadores de carga, proxys inversos, o cualquier otro aspecto de la infraestructura web, de los que Heroku se ocupa por nosotros en un segundo plano.
 - Aunque tenga algunas limitaciones, éstas no afectarán a nuestra aplicación particular. Por ejemplo:
-
   - Heroku sólo proporciona almacenamiento efímero, por lo que los archivos subidos por el usuario no pueden almacenarse de forma segura en el propio Heroku.
   - El nivel gratuito mantendrá dormida cualquier aplicación web inactiva que no haya tenido requerimientos dentro de un periodo de media hora. El sitio puede tardar varios segundos en responder cuando se le despierte.
   - El nivel gratuito limita el tiempo que el sitio puede estar en ejecución a cierta cantidad de horas al mes (sin contar el tiempo que el sitio permanece "dormido"). Esto está bien para un sitio de poco uso o de demostración, pero no es asumible si se necesita una disponibilidad del 100%.
@@ -206,7 +205,6 @@ Existen muchas formas de trabajar con git, pero una de las más sencillas es cre
 1. Visita <https://github.com/> y crea una cuenta.
 2. Una vez conectado, haz click en el enlace **+** de la barra de tareas superior y selecciona **New repository**.
 3. Rellena todos los campos de este formulario. Aunque no son obligatorios, es muy recomendable que los rellenes todos.
-
    - Introduce el nombre del nuevo repositorio (por ejemplo, _django_local_library_), y una descripción (por ejemplo "Sitio web de la Biblioteca Local escrita en Django").
    - Selecciona **Python** en la lista de selección _Add .gitignore._
    - Selecciona tu licencia en la lista de selección _Add license_.
@@ -310,7 +308,7 @@ La palabra "`web:`" le dice a Heroku que se trata de una web dyno y puede ser en
 
 Aunque no necesitaremos _Gunicorn_ para servir nuestra aplicación LocalLibrary durante el desarrollo, lo instalaremos de manera que sean parte de nuestros [requerimientos](#requirements) de Heroku para instalar en el servidor remoto.
 
-Instala _Gunicorn_ localmente usando _pip_ en la línea de comandos (que instalamos en [configurar el entorno de desarrollo](/es/docs/Learn/Server-side/Django/development_environment)):
+Instala _Gunicorn_ localmente usando _pip_ en la línea de comandos (que instalamos en [configurar el entorno de desarrollo](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)):
 
 ```bash
 pip3 install gunicorn
@@ -374,7 +372,7 @@ Para facilitar el alojamiento de archivos estáticos de forma separada de la apl
 
 Las variables de configuración más relevantes son:
 
-- `STATIC_URL`: Es la localización URL base desde la cual se servirán los archivos estáticos, por ejemplo en una CDN. Se usa para variables de plantilla estáticas a las que se acceden en nuestra plantilla base (ver [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)).
+- `STATIC_URL`: Es la localización URL base desde la cual se servirán los archivos estáticos, por ejemplo en una CDN. Se usa para variables de plantilla estáticas a las que se acceden en nuestra plantilla base (ver [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn_web_development/Extensions/Server-side/Django/Home_page)).
 - `STATIC_ROOT`: Es la ruta absoluta a un directorio en el que la herramienta "collectstatic" de Django reunirá todos los archivos estáticos referenciados en nuestras plantillas. Una vez recopilados, podrán ser cargados como un grupo a donde hayan de ser alojados.
 - `STATICFILES_DIRS`: Relaciona directorios adicionales en los que la herramienta collestatic de Django debería buscar archivos estáticos.
 
@@ -642,7 +640,6 @@ El siguiente paso sería leer nuestros últimos artículos, y finalmente complet
 ## Ver también
 
 - [Implementando Django](https://docs.djangoproject.com/en/1.10/howto/deployment/) (documentación de Django)
-
   - [Lista de verificación de implementación](https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/) (documentación de Django)
   - [Implementar archivos estáticos](https://docs.djangoproject.com/en/1.10/howto/static-files/deployment/) (documentación de Django)
   - [Cómo implementar con WSGI](https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/) (documentación de Django)
@@ -650,7 +647,6 @@ El siguiente paso sería leer nuestros últimos artículos, y finalmente complet
   - [Cómo usar Django con Gunicorn](https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/gunicorn/) (documentación de Django)
 
 - Heroku
-
   - [Configurar aplicaciones Django para Heroku](https://devcenter.heroku.com/articles/django-app-configuration) (documentación de Heroku)
   - [Comenzando con Heroku con Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) (documentación de Heroku)
   - [Django y activos estáticos](https://devcenter.heroku.com/articles/django-assets) (documentación de Heroku)
@@ -664,7 +660,6 @@ El siguiente paso sería leer nuestros últimos artículos, y finalmente complet
   - [Otros documentos de Heroku Django](https://devcenter.heroku.com/search?q=django)
 
 - Digital Ocean
-
   - [Cómo servir aplicaciones Django con uWSGI y Nginx en Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
   - [Otros documentos de la comunidad Digital Ocean Django](https://www.digitalocean.com/community/tutorials?q=django)
 

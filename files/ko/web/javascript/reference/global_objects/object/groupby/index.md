@@ -14,7 +14,25 @@ l10n:
 
 이 메서드는 그룹 이름을 문자열로 표현할 수 있을 때 사용해야 합니다. 만약 임의의 값을 키로 사용하여 요소들을 그룹화해야 한다면, 대신 {{jsxref("Map.groupBy()")}}를 사용하세요.
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 구문
 
@@ -81,7 +99,7 @@ const result = Object.groupBy(inventory, ({ type }) => type);
 */
 ```
 
-화살표 함수는 호출될 때마다 각 배열 요소의 `type`을 반환합니다. 함수 인자 `{ type }`은 [함수 인자를 위한 객체 구조 분해 문법](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter)의 기본적인 예시라는 점 명심하시기 바랍니다. 이는 매개변수로 전달된 객체에서 `type` 속성을 꺼내어 함수 본문 내에서 `type`이라는 이름의 변수에 할당합니다.
+화살표 함수는 호출될 때마다 각 배열 요소의 `type`을 반환합니다. 함수 인자 `{ type }`은 [함수 인자를 위한 객체 구조 분해 문법](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#unpacking_properties_from_objects_passed_as_a_function_parameter)의 기본적인 예시라는 점 명심하시기 바랍니다. 이는 매개변수로 전달된 객체에서 `type` 속성을 꺼내어 함수 본문 내에서 `type`이라는 이름의 변수에 할당합니다.
 
 이는 함수 내에서 요소들의 관련 값에 접근하는 매우 간결한 방법입니다.
 

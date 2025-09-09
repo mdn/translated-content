@@ -2,10 +2,8 @@
 title: font-style
 slug: Web/CSS/@font-face/font-style
 l10n:
-  sourceCommit: 418b3ebf6464716649125199385c39d86c944973
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`font-style`** は CSS の記述子で、 {{cssxref("@font-face")}} アットルールの中で指定されたフォントのフォントスタイルを指定することができます。
 

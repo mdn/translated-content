@@ -5,11 +5,40 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
-
 **`text-decoration-thickness`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内のテキストに用いられる装飾線、例えば取り消し線、下線、上線の太さを設定します。
 
-{{EmbedInteractiveExample("pages/css/text-decoration-thickness.html")}}
+{{InteractiveExample("CSS デモ: text-decoration-thickness")}}
+
+```css interactive-example-choice
+text-decoration-line: underline;
+text-decoration-thickness: 3px;
+```
+
+```css interactive-example-choice
+text-decoration-line: line-through;
+text-decoration-thickness: 0.4rem;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline overline;
+text-decoration-thickness: from-font;
+font-size: 2rem;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    Confusion kissed me on the cheek, and left a taste so bittersweet
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+  text-decoration-color: #ff0000;
+}
+```
 
 ## 構文
 

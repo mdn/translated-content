@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 读取和修改使用 [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) 清单键定义的浏览器地址栏按钮的属性，并监听按钮的点击事件。
 
 [地址栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)是一个添加到浏览器地址栏中的按钮。
@@ -59,7 +57,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction) API。本文衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction) API。该文档衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

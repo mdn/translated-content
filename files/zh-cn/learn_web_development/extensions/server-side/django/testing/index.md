@@ -1,10 +1,9 @@
 ---
 title: "Django 教程 10: 测试 Django 网页应用"
 slug: Learn_web_development/Extensions/Server-side/Django/Testing
-original_slug: Learn/Server-side/Django/Testing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 随着网站的增长，他们越来越难以手动测试。不仅要进行更多的测试，而且随着组件之间的交互变得越来越复杂，一个区域的小改变可能会影响到其他区域，所以需要做更多的改变来确保一切正常运行，并且在进行更多更改时不会引入错误。减轻这些问题的一种方法是编写自动化测试，每当你进行更改时，都可以轻松可靠地运行测试。本教程演示如何使用 Django 的测试框架自动化你的网站的*单元测试*。
 
@@ -73,7 +72,8 @@ class YourTestClass(TestCase):
 
 大多数测试的最佳基类是 [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase)。此测试类在运行测试之前，创建一个干净的数据库，并在自己的事务中，运行每个测试函数。该类还拥有一个[测试客户端](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.Client)，你可以使用该客户端，模拟在视图级别与代码交互的用户。在下面的部分中，我们将集中讨论使用此[TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 基类创建的单元测试。
 
-> **备注：** [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 类非常方便，但可能会导致某些测试，比它们需要的速度慢（并非每个测试，都需要设置自己的数据库，或模拟视图交互）。一旦熟悉了这个类可以做什么，你可能希望用可以用更简单的测试类，替换一些测试。
+> [!NOTE]
+> [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 类非常方便，但可能会导致某些测试，比它们需要的速度慢（并非每个测试，都需要设置自己的数据库，或模拟视图交互）。一旦熟悉了这个类可以做什么，你可能希望用可以用更简单的测试类，替换一些测试。
 
 ### 你应该测试什么？
 

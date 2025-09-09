@@ -39,4 +39,4 @@ for (var i=0; i < 4; i++) {
 ### 技術リファレンス
 
 - JavaScript のグローバルオブジェクト: {{jsxref("Boolean")}}
-- [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)

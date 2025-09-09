@@ -18,7 +18,7 @@ import { hideBin } from "yargs/helpers";
 import { fromMarkdown } from "mdast-util-from-markdown";
 import { visit } from "unist-util-visit";
 
-const spinner = ora().start();
+const spinner = ora({ isEnabled: false }).start();
 
 const IGNORE_BLOCK_STRINGS = [
   "<!-- url-locale-check ignore-start -->",

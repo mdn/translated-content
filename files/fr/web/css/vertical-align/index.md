@@ -7,11 +7,53 @@ slug: Web/CSS/vertical-align
 
 La propriété [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignement vertical d'une boîte en ligne (<i lang="en">inline</i>), en ligne / bloc (<i lang="en">inline-block</i>) ou d'une boîte de cellule de tableau.
 
-{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
+{{InteractiveExample("CSS Demo: vertical-align")}}
+
+```css interactive-example-choice
+vertical-align: baseline;
+```
+
+```css interactive-example-choice
+vertical-align: top;
+```
+
+```css interactive-example-choice
+vertical-align: middle;
+```
+
+```css interactive-example-choice
+vertical-align: bottom;
+```
+
+```css interactive-example-choice
+vertical-align: sub;
+```
+
+```css interactive-example-choice
+vertical-align: text-top;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p>
+    Align the star:
+    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+  </p>
+</section>
+```
+
+```css interactive-example
+#default-example > p {
+  line-height: 3em;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-decoration: underline overline;
+}
+```
 
 La propriété `vertical-align` peut être utilisée dans deux contextes&nbsp;:
 
-- Afin d'aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur (par exemple pour aligner verticalement une image ([`<img>`](/fr/docs/Web/HTML/Element/img) sur une ligne de texte)
+- Afin d'aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur (par exemple pour aligner verticalement une image ([`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) sur une ligne de texte)
 - ou pour aligner verticalement le contenu d'une cellule dans un tableau
 
 `vertical-align` ne s'applique qu'aux cellules de tableaux, aux éléments en ligne (<i lang="en">inline</i>) ou en ligne / bloc (<i lang="en">inline-block</i>), elle ne peut pas être utilisée pour aligner verticalement [les éléments de bloc](/fr/docs/Glossary/Block-level_content).
@@ -54,7 +96,7 @@ La propriété `vertical-align` s'utilise avec une des valeurs suivantes.
 Ces valeurs alignent l'élément verticalement, relativement à son élément parent.
 
 - `baseline`
-  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/Replaced_element), comme [`<textarea>`](/fr/docs/Web/HTML/Element/textarea), n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
+  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties), comme [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea), n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
 - `sub`
   - : Aligne la ligne de base sur la ligne de base inférieure (celle utilisée pour les indices) de l'élément parent.
 - `super`

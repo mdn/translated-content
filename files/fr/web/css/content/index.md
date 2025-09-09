@@ -5,9 +5,34 @@ slug: Web/CSS/content
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace un élément avec une valeur générée. Les objets insérés via la propriété `content` sont des **[éléments remplacés anonymes](/fr/docs/Web/CSS/Replaced_element)**.
+La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace un élément avec une valeur générée. Les objets insérés via la propriété `content` sont des **[éléments remplacés anonymes](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)**.
 
-{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+
+```css interactive-example
+.topic-games::before {
+  content: "🎮 ";
+}
+
+.topic-weather::before {
+  content: "⛅ ";
+}
+
+.topic-hot::before {
+  content: url("/shared-assets/images/examples/fire.png");
+  margin-right: 6px;
+}
+```
+
+```html interactive-example
+<p class="topic-games">Game News: A new inFamous is not planned</p>
+
+<p class="topic-weather">
+  Weather for Today: Heat, violent storms and twisters
+</p>
+
+<p class="topic-hot">Trending Article: Must-watch videos of the week</p>
+```
 
 ## Syntaxe
 
@@ -66,7 +91,6 @@ content: unset;
 - [`<image>`](/fr/docs/Web/CSS/image)
   - : Une image (valeur de type [`<image>`](/fr/docs/Web/CSS/image)) avec une [`url()`](/fr/docs/Web/CSS/url_value) ou [`<gradient>`](/fr/docs/Web/CSS/gradient) ou une partie de la page web fournie par la fonction [`element()`](/fr/docs/Web/CSS/element) et qui indique le contenu à afficher.
 - [`counter()`](/fr/docs/Web/CSS/counter)
-
   - : Un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), généralement un nombre, produit via les propriétés [`<counter-reset>`](/fr/docs/Web/CSS/counter-reset) et [`<counter-increment>`](/fr/docs/Web/CSS/counter-increment) et qui peut être affiché grâce à la fonction [`counter()`](/fr/docs/Web/CSS/counter) ou [`counters()`](/fr/docs/Web/CSS/counters).
 
     [`counter()`](/fr/docs/Web/CSS/counter) possède deux formes&nbsp;: `counter(_name_)` ou `counter(_name_, _style_)`. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément&nbsp;; il est formaté selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
@@ -82,10 +106,10 @@ content: unset;
 
 ## Accessibilité
 
-Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model/Introduction). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
+Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model/Introduction). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
 
 - [La prise en charge relative à l'accessibilité pour les contenus générés par CSS — Tink (en anglais)](https://tink.uk/accessibility-support-for-css-generated-content/)
-- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [Comprendre les critères de succès 1.3.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Définition formelle
@@ -292,7 +316,7 @@ Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est p
 
 ## Voir aussi
 
-- [Les éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+- [Les éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - [`::after`](/fr/docs/Web/CSS/::after)
 - [`::before`](/fr/docs/Web/CSS/::before)
 - [`::marker`](/fr/docs/Web/CSS/::marker)

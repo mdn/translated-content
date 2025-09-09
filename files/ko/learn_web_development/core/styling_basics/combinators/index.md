@@ -110,6 +110,6 @@ ul > li[class="a"] {
 
 ## 요약
 
-이 부분은 선택자에 대한 강의 마지막 세션입니다. 다음으로 CSS의 또 다른 중요한 부분인 [cascade, specificity, and inheritance](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)으로 이동합니다.
+이 부분은 선택자에 대한 강의 마지막 세션입니다. 다음으로 CSS의 또 다른 중요한 부분인 [cascade, specificity, and inheritance](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)으로 이동합니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}

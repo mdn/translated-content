@@ -42,14 +42,12 @@ PWA は、次のようなウェブサイトの長所を備えています。
 PWAは、次のようなプラットフォーム専用のアプリの利点も数多く備えています。
 
 - [**PWA は端末にインストールできます**](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)。つまり、
-
   - PWA はプラットフォームのアプリストアからインストールすることも、ウェブアプリケーションから直接インストールすることもできます。
   - PWA はプラットフォーム専用のアプリのようにインストールでき、インストールプロセスをカスタマイズできます。
   - インストールされると、PWA はプラットフォーム専用のアプリと並んで端末上にアイコンができます。
   - インストールされると、PWA はブラウザー上のウェブサイトではなく、スタンドアロンアプリとして起動できます。
 
 - [**PWA はバックグラウンドやオフラインで動作できます**](/ja/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)。一般的なウェブサイトは、ページがブラウザーに読み込まれている間だけアクティブになります。PWA には次のことが可能です。
-
   - 端末がネットワークに接続していない状態での動作。
   - バックグラウンドでのコンテンツ更新。
   - サーバーからの[プッシュメッセージ](/ja/docs/Web/API/Push_API)への応答。
@@ -75,14 +73,14 @@ PWA はウェブサイトなので、他にもウェブサイトと同じ基本�
 
 それに加えて、PWA にはいくつかの追加機能があります。
 
-- [ウェブアプリマニフェスト](/ja/docs/Web/Manifest)ファイル。少なくとも、ブラウザーが PWA をインストールするために必要な情報（アプリ名やアイコンなど）を提供します。
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)ファイル。少なくとも、ブラウザーが PWA をインストールするために必要な情報（アプリ名やアイコンなど）を提供します。
 - オプションとして、オフライン操作を提供する[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)。
 
 #### ウェブアプリマニフェスト
 
 PWA にはウェブアプリマニフェストが必要であり、[マニフェストにはブラウザーが PWA をインストールするのに十分な情報が記載されていなければなりません](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)。
 
-マニフェストでは、PWA の外見に関するその他の多くの側面を定義することができます。例えば[テーマ色](/ja/docs/Web/Manifest/theme_color)や[背景色](/ja/docs/Web/Manifest/background_color)、他のアプリからのデータの[共有対象として機能](/ja/docs/Web/Manifest/share_target)する機能や、[特定のファイル形式を処理](/ja/docs/Web/Manifest/file_handlers)する機能などです。
+マニフェストでは、PWA の外見に関するその他の多くの側面を定義することができます。例えば[テーマ色](/ja/docs/Web/Progressive_web_apps/Manifest/theme_color)や[背景色](/ja/docs/Web/Progressive_web_apps/Manifest/background_color)、他のアプリからのデータの[共有対象として機能](/ja/docs/Web/Progressive_web_apps/Manifest/share_target)する機能や、[特定のファイル形式を処理](/ja/docs/Web/Progressive_web_apps/Manifest/file_handlers)する機能などです。
 
 #### サービスワーカー
 

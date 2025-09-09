@@ -2,22 +2,75 @@
 title: :where()
 slug: Web/CSS/:where
 l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
+`:where()` と {{CSSxRef(":is", ":is()")}} の違いは、 `:where()` の[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が常に 0 であるのに対し、 `:is()` は引数の中で最も詳細度の高いセレクターの詳細度を継承する点です。
 
-`:where()` と {{CSSxRef(":is", ":is()")}} の違いは、 `:where()` は[詳細度](/ja/docs/Web/CSS/Specificity)が常に 0 であるのに対して、 `:is()` は引数内で最も詳細度の高いセレクターの詳細度を取ります。
+{{InteractiveExample("CSS デモ: :where", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+/* 詳細度が低いため、ol には適用されない */
+:where(ol, ul, menu:unsupported) :where(ol, ul) {
+  color: green;
+}
+
+:where(ol, ul) :where(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturn</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
+
+## 構文
+
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
+```
+
+### 引数
+
+`:where()` 擬似クラスは引数として、 1 つ以上のセレクターをカンマで区切った[セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#セレクターリスト)を必要とします。このリストには[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めることはできませんが、その他の単純、複合、複雑セレクターは利用できます。
 
 ### 寛容なセレクター解釈
 
 仕様では、`:is()` と `:where()` が[寛容なセレクターリスト](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)を受け入れると定義されています。
 
-CSS では、セレクターリストを使用する場合、いずれかのセレクターが無効であれば、リスト全体が無効であると判断されます。 `is()` や `:where()` を使用する場合、 1 つでも解釈に失敗するとセレクターリスト全体が無効とみなされるのではなく、不正確または対応していないセレクターは無視され、他のものが使用されます。
+CSS では、セレクターリストを使用する場合、いずれかのセレクターが無効であれば、リスト全体が無効であると判断されます。 `:is()` や `:where()` を使用する場合、 1 つでも解釈に失敗するとセレクターリスト全体が無効とみなされるのではなく、不正確または対応していないセレクターは無視され、他のものが使用されます。
 
 ```css
 :where(:valid, :unsupported) {
@@ -46,7 +99,7 @@ CSS では、セレクターリストを使用する場合、いずれかのセ�
 
 ```html
 <article>
-  <h2>:is() でスタイル付けしたリンク</h2>
+  <h2>:is() でスタイル設定したリンク</h2>
   <section class="is-styling">
     <p>
       こちらがメインコンテンツです。これは<a href="https://mozilla.org"
@@ -72,7 +125,7 @@ CSS では、セレクターリストを使用する場合、いずれかのセ�
 </article>
 
 <article>
-  <h2>:where() でスタイル付けしたリンク</h2>
+  <h2>:where() でスタイル設定したリンク</h2>
   <section class="where-styling">
     <p>
       こちらがメインコンテンツです。これは<a href="https://mozilla.org"
@@ -130,17 +183,9 @@ footer a {
 しかし、 `:where()` 内のセレクターは詳細度が 0 なので、オレンジ色のフッターリンクは単純セレクターによって上書きされます。
 
 > [!NOTE]
-> この例は GitHub からも見ることができます。 [is-where](https://mdn.github.io/css-examples/is-where/) を参照してください。
+> この例は GitHub でも見ることができます。 [is-where](https://mdn.github.io/css-examples/is-where/) を参照してください。
 
 {{EmbedLiveSample('Examples', '100%', 600)}}
-
-## 構文
-
-```css-nolint
-:where(<complex-selector-list>) {
-  /* ... */
-}
-```
 
 ## 仕様書
 

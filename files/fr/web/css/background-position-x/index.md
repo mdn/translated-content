@@ -9,7 +9,42 @@ La propriété **`background-position-x`** définit la position horizontale init
 
 Pour plus d'informations, se référer à la documentation de la propriété {{cssxref("background-position")}} qui existe depuis plus longtemps.
 
-{{EmbedInteractiveExample("pages/css/background-position-x.html")}}
+{{InteractiveExample("CSS Demo: background-position-x")}}
+
+```css interactive-example-choice
+background-position-x: left;
+```
+
+```css interactive-example-choice
+background-position-x: center;
+```
+
+```css interactive-example-choice
+background-position-x: 25%;
+```
+
+```css interactive-example-choice
+background-position-x: 2rem;
+```
+
+```css interactive-example-choice
+background-position-x: right 32px;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 > [!NOTE]
 > La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration de `background-position-x`.

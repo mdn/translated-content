@@ -3,8 +3,6 @@ title: 你的第二个 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 
-{{AddonSidebar}}
-
 如果你已经阅读了 [你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)，那么你现在已经知道如何写一个扩展了。在这篇文章，我们将写一个稍微复杂一点点的扩展来为你展示更多的一些 API。
 
 这个扩展会添加一个新按钮到 Firefox 的工具栏。在用户点击该按钮时，我们会显示一个弹出窗（popup）来让他们选择一种动物。在他们选择之后，我们会将当前网页替换为他所选动物的图片。
@@ -13,7 +11,6 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 - **定义一个浏览器动作 (browser action)，这用来附加一个按钮到 Firefox 的工具栏。**
   对于该按钮，我们将提供：
-
   - 一个文件名为 "beasts-32.png" 的图标
   - 按钮被按下时要打开的弹出窗。该弹出窗将包含 HTML、CSS 和 JavaScript。
 
@@ -85,7 +82,6 @@ cd beastify
 - [icons](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 也是可选但推荐的，它决定了插件在附加组件中的图标。
 - **`permissions`** 列出了插件所需要的权限。在这里我们仅需要 [activeTab permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)。
 - **`browser_action`** 指定了工具栏按钮。我们在这里提供了三个信息片段：
-
   - **`default_icon`** 是必须的，指定了按钮的图标。
   - **`default_title`** 是可选的，用于按钮的提示。
   - **`default_popup`** 在你想要当用户点击按钮时显示出一个弹出窗时使用。而在这里，我们需要，所以我们列入这个键并将其指向扩展中包括的一个 HTML 文件。
@@ -162,7 +158,7 @@ HTML 文件就像这样：
 </html>
 ```
 
-我们有一个 ID 为 `"popup-content"` 的[\<div>](/zh-CN/docs/Web/HTML/Element/div)元素包含了每个动物选择。我们还有另外一个`<div>` 元素，它的 ID 为 `"error-content"` ，class 为`"hidden"`。我们将会使用它以防初始化弹窗的时候出问题。
+我们有一个 ID 为 `"popup-content"` 的[\<div>](/zh-CN/docs/Web/HTML/Reference/Elements/div)元素包含了每个动物选择。我们还有另外一个`<div>` 元素，它的 ID 为 `"error-content"` ，class 为`"hidden"`。我们将会使用它以防初始化弹窗的时候出问题。
 
 注意我们引入了 CSS 和 JS 文件，就像网页一样。
 
@@ -389,7 +385,7 @@ content script 做的第一件事是检查全局变量 `window.hasRun`：如果�
 
 然后，从第 40 行开始，content script 监听来自弹出窗的信息，使用[`browser.runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) API。在上面我们看到弹出窗脚本能够发送两种不同的信息："beastify" and "reset"。
 
-- 如果信息是 "beastify"，我们期待它包含一个指向动物图片的 URL。我们移除先前调用添加的动物图片，然后构造并添加一个 src 属性被设置动物图片 URL 的[`<img>`](/zh-CN/docs/Web/HTML/Element/img) 元素。
+- 如果信息是 "beastify"，我们期待它包含一个指向动物图片的 URL。我们移除先前调用添加的动物图片，然后构造并添加一个 src 属性被设置动物图片 URL 的[`<img>`](/zh-CN/docs/Web/HTML/Reference/Elements/img) 元素。
 - 如果信息是 "reset"，我们只需要移除所有被添加的动物片。
 
 ### 动物们

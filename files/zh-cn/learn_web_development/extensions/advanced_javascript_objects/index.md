@@ -1,16 +1,13 @@
 ---
 title: JavaScript 对象入门
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects
-original_slug: Learn/JavaScript/Objects
 ---
-
-{{LearnSidebar}}
 
 在 JavaScript 中，大多数事物都是对象，从作为核心功能的字符串和数组，到建立在 JavaScript 之上的浏览器 {{Glossary("API", "API")}} 。你甚至可以自己创建对象，将相关的函数和变量高效地封装打包成便捷的数据容器。对于进一步学习 JavaScript 语言知识而言，理解这种面向对象（object-oriented, OO）的特性是必不可少的，所以，我们提供了这个模块来帮助你了解这一切。这里我们会先详细介绍对象的理论和语法，再介绍如何创建对象。
 
 ## 预备知识
 
-开始这个模块之前，你应当已经对 HTML 和 CSS 有所了解。我们建议你通读 [HTML 入门](/zh-CN/docs/learn/HTML/Introduction_to_HTML)和 [CSS 入门](/zh-CN/docs/Learn_web_development/Core/Styling_basics)模块，再开始了解 JavaScript。
+开始这个模块之前，你应当已经对 HTML 和 CSS 有所了解。我们建议你通读 [HTML 入门](/zh-CN/docs/Learn_web_development/Core/Structuring_content)和 [CSS 入门](/zh-CN/docs/Learn_web_development/Core/Styling_basics)模块，再开始了解 JavaScript。
 
 详细了解 JavaScript 对象之前，你应当已经对 JavaScript 基础有所熟悉。尝试这个模块之前，请通读 [JavaScript 第一步](/zh-CN/docs/Learn_web_development/Core/Scripting) 和 [JavaScript 基础要件](/zh-CN/docs/Learn_web_development/Core/Scripting)
 

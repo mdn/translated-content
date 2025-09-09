@@ -8,9 +8,9 @@ original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 実用的なチュートリアルシリーズの最初の記事では、これから学ぶことについて説明します。そして、私たちがこれから取り組んでいき、その後の記事で進化していく「地域図書館」のサンプルウェブサイトの概要を説明します。
 
-| 前提条件: | [Express のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)を読んでください。以下の記事では、[Node 開発環境を設定する](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)必要もあります。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 目標:     | このチュートリアルで使用されているサンプルアプリケーションを紹介し、どのトピックがカバーされるのかを読者が理解できるようにします。                                                                                                   |
+| 前提条件: | [Express のイントロダクション](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction)を読んでください。以下の記事では、[Node 開発環境を設定する](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)必要もあります。 |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 目標:     | このチュートリアルで使用されているサンプルアプリケーションを紹介し、どのトピックがカバーされるのかを読者が理解できるようにします。                                                                                                                                                         |
 
 ## 概要
 
@@ -51,6 +51,6 @@ _LocalLibrary_ は、この一連のチュートリアルの過程で作成お�
 
 ## まとめ
 
-_LocalLIbrary_ ウェブサイトと、これから学ぶことについて少し知りました。今度は私たちの例を含む[スケルトンプロジェクト](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)の作成を開始します。
+_LocalLIbrary_ ウェブサイトと、これから学ぶことについて少し知りました。今度は私たちの例を含む[スケルトンプロジェクト](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)の作成を開始します。
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}

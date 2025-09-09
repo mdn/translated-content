@@ -3,11 +3,56 @@ title: grid-row
 slug: Web/CSS/grid-row
 ---
 
-{{CSSRef}}
+**`grid-row`** 属性是一种 {{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 的缩写（[shorthand](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)）形式，它定义了网格单元与网格行（row）相关的尺寸和位置，可以通过在网格布局中的基线（line）、跨度（span），或者什么也不做（自动），从而指定{{glossary("grid areas", "网格区域")}}的行起始与行结束。
 
-**`grid-row`** 属性是一种 {{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 的缩写（[shorthand](/zh-CN/docs/Web/CSS/Shorthand_properties)）形式，它定义了网格单元与网格行（row）相关的尺寸和位置，可以通过在网格布局中的基线（line），跨度（span），或者什么也不做（自动），从而指定 {{glossary("grid areas", "grid area")}} 的行起始与行结束。
+{{InteractiveExample("CSS Demo: grid-row")}}
 
-{{EmbedInteractiveExample("pages/css/grid-row.html")}}
+```css interactive-example-choice
+grid-row: 1;
+```
+
+```css interactive-example-choice
+grid-row: 1 / 3;
+```
+
+```css interactive-example-choice
+grid-row: 2 / -1;
+```
+
+```css interactive-example-choice
+grid-row: 1 / span 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 如果指定了两个 \<grid-line> 值，那么斜杠号前的值就被指定为 `grid-row-start`，斜杠后面的值就被指定为 `grid-row-end` 的值。
 
@@ -15,19 +60,19 @@ slug: Web/CSS/grid-row
 
 ```css
 /* 不同类型的属性值 */
-/* Keyword values */
+/* 关键字值 */
 grid-row: auto;
 grid-row: auto / auto;
 
-/* <custom-ident> values */
+/* <custom-ident> 值 */
 grid-row: somegridarea;
 grid-row: somegridarea / someothergridarea;
 
-/* <integer> + <custom-ident> values */
+/* <integer> + <custom-ident> 值 */
 grid-row: somegridarea 4;
 grid-row: 4 somegridarea / 6;
 
-/* span + <integer> + <custom-ident> values */
+/* span + <integer> + <custom-ident> 值 */
 grid-row: span 3;
 grid-row: span somegridarea;
 grid-row: 5 somegridarea span;
@@ -35,7 +80,7 @@ grid-row: span 3 / 6;
 grid-row: span somegridarea / span someothergridarea;
 grid-row: 5 somegridarea span / 2 span;
 
-/* Global values */
+/* 全局值 */
 grid-row: inherit;
 grid-row: initial;
 grid-row: unset;
@@ -46,7 +91,6 @@ grid-row: unset;
 - `auto`
   - : 表示对网格的布置行为不做干涉，即自动布置，自动的 span 或者默认 span 值为 1。
 - `<custom-ident>`
-
   - : 如果存在自定义的基线名（'\<custom-ident>-start'/'\<custom-ident>-end'），它就将第一个这样的基线贡献给网格单元。
 
     **注意：** 被命名的网格区域（grid areas）会自动生成隐式的被命名的基线，因此指定 `grid-row: foo;` 将会选择这个命名区域的开始和结束的边界（除非在它之前存在显式指定的以 `foo-start`/`foo-end` 命名的其他基线）。
@@ -57,7 +101,6 @@ grid-row: unset;
   - : 将第 n 条网格基线贡献给网格单元布置。如果指定的是负数，则指的是从下边界向上边界计算的反向顺序。如果提供的是 \<custom-ident>，那么只有以此命名的基线才会被计算。如果所命名的基线数超过了网格线数，为了找到该位置，所有隐式的网格线会被假定拥有这个命名。
     {{cssxref("integer")}} 值不能为 `0`。
 - `span && [ <integer> || <custom-ident> ]`
-
   - : 为网格单元定义一个跨度，使得网格单元的网格区域中的一条边界远离另一条边界线 n 条基线。如果提供的是 \<custom-ident>，则只有以此命名的基线才会被计算。如果网格线不足，则假定与搜索方向对应的显式网格一侧的所有隐式网格线都具有该名称。
 
     如果忽略 \<integer> ，它就默认设为 `1`。它的值也不能为 0。

@@ -5,11 +5,36 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 **`appearance`** は CSS のプロパティで、オペレーティングシステムのテーマに基づいた、プラットフォーム固有のスタイル設定で UI 要素を表示するために使用します。
 
-{{EmbedInteractiveExample("pages/css/appearance.html")}}
+{{InteractiveExample("CSS デモ: appearance")}}
+
+```css interactive-example-choice
+appearance: none;
+```
+
+```css interactive-example-choice
+appearance: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="background">
+    <button id="example-element">button</button>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
+```
 
 標準化以前は、このプロパティによって、ボタンやチェックボックスのような要素をウィジェットとして表示できました。しかし、これは誤った機能であると考えられ、現在では標準的なキーワードのみを使用することが推奨されています。
 
@@ -43,20 +68,16 @@ appearance: checkbox;
 いくつかの例を指定しましたが、リストは完全ではありません。
 
 - `none`
-
   - : select要素に掲載されている、リストが展開されたことを示す矢印など、ウィジェットの特定の機能を非表示にします。
 
 - `auto`
-
   - : 特別なスタイル設定のない要素に対しては `none` として動作します。
 
 - `<compat-special>`
-
   - : `menulist-button` または `textfield` のどちらかです。
     これらの値はどちらも、特別なスタイル設定のない要素では `auto` と等価です。
 
 - `<compat-auto>`
-
   - : 利用可能な値は `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, `textarea` です。
     古いブラウザーとの互換性を保つための `auto` に相当するキーワードです。
 

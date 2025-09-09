@@ -130,7 +130,7 @@ console.log(nonenumOnly);
 ## 参见
 
 - [`core-js` 中 `Object.getOwnPropertyNames` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

@@ -2,7 +2,7 @@
 title: 帰属レポート API
 slug: Web/API/Attribution_Reporting_API
 l10n:
-  sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
+  sourceCommit: f5fd4776d1c0cd6e4cffc9649f7c4f44badb7ae2
 ---
 
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}
@@ -35,7 +35,7 @@ l10n:
 
 オンラインショップのオーナーは、広告を操作するユーザー、サイト上の製品ページを閲覧するユーザー、ショッピングカートに製品を入れるユーザーから、どれだけのコンバージョンを獲得しているかを測定したいと考えています。
 
-![Image representation of the steps described below](ara-flow.png)
+![下記に記述されている段階の画像表現](ara-flow.svg)
 
 手順は次のとおりです。
 
@@ -47,7 +47,7 @@ l10n:
 3. ユーザーが後で `shop.example` を訪問すると、このサイトは、コンバージョンが発生したことを示す操作が行われた際に（例えば、ユーザーが `shop.example` 上の「カートに追加する」ボタンをクリックした場合など）、**帰属トリガー**を登録することができます。すると、ブラウザーは、レスポンスが帰属トリガーの登録に適していることを示すために、 {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーとともにリクエストを送信します。レスポンスに適切な {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーが記載されていれば、登録は完全に完了します。帰属トリガーは、例えば以下のようなものです。
    - ショッピングカートアイコンや、 1x1 の透明トラッキングピクセルなどの画像。この場合、操作とはユーザーがページを訪問することです。開始する条件は、画像が読み込まれたとき、すなわちサーバーが画像リクエストに応答したときに登録されます。
    - フェッチリクエスト（{{domxref("Window/fetch", "fetch()")}} または {{domxref("XMLHttpRequest")}}）。この場合、操作はアプリにとって意味のあるものとして指定することができます。例えば、フェッチリクエストは `click` や `submit` イベントによって呼び出されるようにできます。レスポンスが返されると、トリガーが登録されます。
-4. トリガーの帰属が完全に完了すると、ブラウザーは [Attribution-Reporting-Register-Trigger](/ja/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) ヘッダーのデータと、プライベートローカルキャッシュ（2.を参照）に保存されているソースデータ項目を照合しようと試みます。 照合の方法と要求される条件については、「[帰属トリガーの登録](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers)」を参照してください。
+4. トリガーの帰属が完全に完了すると、ブラウザーは [Attribution-Reporting-Register-Trigger](/ja/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger) ヘッダーのデータと、プライベートローカルキャッシュ（2.を参照）に保存されているソースデータ項目を照合しようと試みます。 照合の方法と要求される条件については、「[帰属トリガーの登録](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers)」を参照してください。
 5. 一致するものが見つかると、ブラウザーはレポートデータを、広告テクノロジープロバイダーが仕様上所有するレポートサーバー上のエンドポイントに送信し、そこで安全に分析されます。クッキーとは異なり、データは送信先の特定のサイトでのみ利用でき、他の場所で共有されることはありません。これらのレポートは次のいずれかになります。
    - **イベントレベルレポート**: 詳細なソースデータが生トリガーデータと関連付けられ、属性ソースイベントに基づきレポートします。例えば、「`ad.shop.example` のクリック ID 200498 が `shop.example` での購入につながった」というレポートを見ていくと、「クリック ID 200498」が詳細ソースデータであり、「購入」が生トリガーデータです。詳細ソースデータはソースページからの最初のデータまたはコンテキストデータをエンコード方式で表し、トリガーデータはトリガーページからのイベントをエンコードして表します。
    - **概要レポート**: ソース側とトリガー側の両方で複数のコンバージョンからデータを結合した、より詳細なレポート。例えば、「`news.example` のキャンペーン ID 774653 により、イタリアのユーザーによる `shop.example` でのウィジェットの販売が 654 件発生しており、総収益は 9540 ドルです。」 概要レポートをコンパイルするには、集約サービス（例えば [Google 集約サービス](https://github.com/privacysandbox/aggregation-service) など）を使用する事が必要です。
@@ -91,7 +91,7 @@ l10n:
 
 ## 登録およびローカルテスト
 
-自分のサイトで帰属レポート API を使用するには、[プライバシーサンドボックス登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)でそれを指定する必要があります。これを行わないと、 API フローはレスポンス時点でブロックされ、レスポンスヘッダーが無視され、ソースとトリガーが登録されません。
+自分のサイトで帰属レポート API を使用するには、[プライバシーサンドボックス登録プロセス](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)でそれを指定する必要があります。これを行わないと、 API フローはレスポンス時点でブロックされ、レスポンスヘッダーが無視され、ソースとトリガーが登録されません。
 
 ローカルで、登録せずに帰属レポート API のコードをテストすることは可能です。ローカルでテストできるようにするには、次の Chrome 開発者フラグを有効にしてください。
 
@@ -112,6 +112,6 @@ l10n:
 ## 関連情報
 
 - [Attribution Reporting Header Validation tool](https://wicg.github.io/attribution-reporting-api/validate-headers)
-- [Attribution reporting](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/) (developers.google.com, 2023)
-- [Enable conversion measurement](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/enable-conversion-measurement) (developers.google.com, 2023)
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox/) (developers.google.com, 2023)
+- [Attribution reporting](https://privacysandbox.google.com/private-advertising/attribution-reporting/) on privacysandbox.google.com (2023)
+- [Enable conversion measurement](https://privacysandbox.google.com/private-advertising/attribution-reporting/enable-conversion-measurement) on privacysandbox.google.com (2023)
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com (2023)

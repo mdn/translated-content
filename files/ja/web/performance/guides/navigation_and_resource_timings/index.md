@@ -178,7 +178,7 @@ let time = window.performance.timing;
         {{domxref("PerformanceTiming.domContentLoadedEventStart","domContentLoadedEventStart")}}
       </td>
       <td>
-        パーサーが <code><a href="/ja/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a><//code> イベントを送信する直前、つまり解釈直後に実行できるスクリプトがすべて実行された直後。
+        パーサーが <code><a href="/ja/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a></code> イベントを送信する直前、つまり解釈直後に実行できるスクリプトがすべて実行された直後。
       </td>
     </tr>
     <tr>
@@ -194,7 +194,7 @@ let time = window.performance.timing;
         {{domxref("PerformanceTiming.domComplete","domComplete")}}
       </td>
       <td>
-        パーサーがメイン文書での作業を完了した時点、すなわち <a href="/ja/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> が <code>'complete'</code> に変わり、対応する <code><a href="/ja/docs/Web/API/Document/readystatechange_event">readystatechange</a><//code> イベントが発生した時点。
+        パーサーがメイン文書での作業を完了した時点、すなわち <a href="/ja/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> が <code>'complete'</code> に変わり、対応する <code><a href="/ja/docs/Web/API/Document/readystatechange_event">readystatechange</a></code> イベントが発生した時点。
       </td>
     </tr>
     <tr>
@@ -300,7 +300,7 @@ performance.getEntriesByType("frame").forEach((frame) => {
 
 ## ナビゲーションタイミング
 
-ユーザーがウェブサイトやアプリケーションをリクエストすると、[ブラウザーに表示するために](/ja/docs/Web/Performance/How_browsers_work)、ユーザーエージェントは {{glossary('DNS')}} 参照、 {{glossary('TCP handshake', 'TCP ハンドシェイク')}}、 TLS ネゴシエーションを含む一連の手順を経て、ユーザーエージェントが実際のリクエストを行い、サーバーがリクエストされた資産を返します。その後、ブラウザーは受け取ったコンテンツを解釈し、DOM、CSSOM、アクセシビリティ、レンダリングツリーを構築し、最終的にページをレンダリングします。ユーザーエージェントが文書の解釈をやめると、ユーザーエージェントは文書の準備状態を _interactive_ に設定します。解釈する必要のある遅延スクリプトがある場合は、それを実行し、[DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event) を発行します。これで文書は読み込み後のタスクを処理できるようになり、この時点で文書は完全に読み込まれたとみなされます。
+ユーザーがウェブサイトやアプリケーションをリクエストすると、[ブラウザーに表示するために](/ja/docs/Web/Performance/Guides/How_browsers_work)、ユーザーエージェントは {{glossary('DNS')}} 参照、 {{glossary('TCP handshake', 'TCP ハンドシェイク')}}、 TLS ネゴシエーションを含む一連の手順を経て、ユーザーエージェントが実際のリクエストを行い、サーバーがリクエストされた資産を返します。その後、ブラウザーは受け取ったコンテンツを解釈し、DOM、CSSOM、アクセシビリティ、レンダリングツリーを構築し、最終的にページをレンダリングします。ユーザーエージェントが文書の解釈をやめると、ユーザーエージェントは文書の準備状態を _interactive_ に設定します。解釈する必要のある遅延スクリプトがある場合は、それを実行し、[DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event) を発行します。これで文書は読み込み後のタスクを処理できるようになり、この時点で文書は完全に読み込まれたとみなされます。
 
 ```js
 const navigationTimings = performance.getEntriesByType("navigation");

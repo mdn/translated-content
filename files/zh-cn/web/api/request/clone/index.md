@@ -49,5 +49,5 @@ const newRequest = myRequest.clone(); // 请求的副本现已存储在 newReque
 ## 参见
 
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

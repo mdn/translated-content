@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d45f6c3733728f0eefdb7fd4b9a84c4858b35fd1
 ---
 
-{{CSSRef}}
-
 **{{cssxref("background-size")}}** は CSS のプロパティで、要素の背景画像の大きさを変更し、画像の幅や高さから見た完全な大きさの画像をタイル表示するという既定の動作を変更することができます。こうすることで、画像を必要に応じて拡大したり縮小したりすることができます。
 
 ## 巨大な画像を並べて表示
@@ -136,4 +134,4 @@ background-size: 300px 150px;
 
 - {{cssxref("background-size")}}
 - {{cssxref("background")}}
-- [SVG の背景画像の拡大縮小](/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [SVG の背景画像の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)

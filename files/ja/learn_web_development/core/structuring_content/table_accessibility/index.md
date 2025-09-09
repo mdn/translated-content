@@ -103,7 +103,8 @@ l10n:
 
 しかし、あなたが視覚的な結びつけができなかったら、どうですか？ その場合は、どのようにして上記のような表を読むことができますか？ 視覚障碍者は、ウェブページの情報を読み上げるスクリーンリーダーをよく使用します。 平文を読んでいるときはこれは問題ありませんが、表を解釈することは視覚障碍者にとっては非常に困難な場合があります。 それでも、適切なマークアップを使用して、視覚的な関連付けをプログラムによる関連付けに置き換えることができます。
 
-> **メモ:** [WHO のデータ](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment)によると、2017 年の視覚障碍者は約 253 百万人です。
+> [!NOTE]
+> [WHO のデータ](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment)によると、2017 年の視覚障碍者は約 253 百万人です。
 
 記事のこの節では、可能な限りアクセス可能な表にするためのその他の手法について説明します。
 
@@ -131,7 +132,8 @@ l10n:
 
 キャプションは `<table>` タグのすぐ下に配置します。
 
-> **メモ:** [`summary`](/ja/docs/Web/HTML/Element/table#summary) 属性は、`<table>` 要素で説明を提供するためにも使用できます。 これはスクリーンリーダーによっても読み上げられます。しかし、`<caption>`要素を使用することをお勧めします。なぜなら、`summary` は非推奨であり、視覚ユーザーには読めないからです（ページに現れません）。
+> [!NOTE]
+> [`summary`](/ja/docs/Web/HTML/Reference/Elements/table#summary) 属性は、`<table>` 要素で説明を提供するためにも使用できます。 これはスクリーンリーダーによっても読み上げられます。しかし、`<caption>`要素を使用することをお勧めします。なぜなら、`summary` は非推奨であり、視覚ユーザーには読めないからです（ページに現れません）。
 
 ### アクティブラーニング: キャプションの追加
 
@@ -156,7 +158,8 @@ l10n:
 - `<tbody>` 要素は、表のヘッダーまたはフッターではない表のコンテンツの他の部分を囲む必要があります。
 - `<tfoot>` 要素は、表のフッター部分を囲む必要があります。これは、例えば、前の行の項目が合計された最終行になります。
 
-> **メモ:** `<tbody>` は常に全ての表に含まれていて、コードで指定しない場合にも暗黙的に含まれます。 これを確認するには、`<tbody>` を含まない以前の例の 1 つを開き、[ブラウザー開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)の HTML コードを調べます — ブラウザーによってこのタグが追加されたことがわかります。 なぜそれを含まないのかと疑問に思うかもしれません — すべき、表の構造とスタイリングがより細かく制御できるためです。
+> [!NOTE]
+> `<tbody>` は常に全ての表に含まれていて、コードで指定しない場合にも暗黙的に含まれます。 これを確認するには、`<tbody>` を含まない以前の例の 1 つを開き、[ブラウザー開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)の HTML コードを調べます — ブラウザーによってこのタグが追加されたことがわかります。 なぜそれを含まないのかと疑問に思うかもしれません — すべき、表の構造とスタイリングがより細かく制御できるためです。
 
 ### アクティブラーニング: 表構造の追加
 
@@ -164,7 +167,7 @@ l10n:
 
 1. まず、新しいフォルダーに [spending-record.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) のローカルコピーを作成します。
 2. 明白なヘッダー行を `<thead>` 要素内に、 "SUM" 行を `<tfoot>` 要素内に、そして残りの内容を `<tbody>` 要素内に配置します。
-3. 次に、[`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を追加して "SUM" セルを最初の 4 列にまたがるようにします。そのため、実際の数は "Cost" 列の下部に表示されます。
+3. 次に、[`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を追加して "SUM" セルを最初の 4 列にまたがるようにします。そのため、実際の数は "Cost" 列の下部に表示されます。
 4. これらの要素が CSS を適用するためにどれほど有用であるかのアイデアをあなたに与えるために、表にいくつかの簡単な追加のスタイリングを追加しましょう。 HTML 文書の `<head>` の中には、空の {{htmlelement("style")}} 要素があります。 この要素内に、次の CSS コード行を追加します。
 
    ```css
@@ -192,7 +195,7 @@ l10n:
 
 ### `scope` 属性
 
-この記事の新しい話題は [`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性です。 これは `<th>` 要素に追加して、見出しがどのセルの見出しであるかをスクリーンリーダーに正確に伝えることができます — 例えば、それが入っているのは行の見出しなのか、それとも列の見出しなのか？ 先ほどの支出記録の例を振り返ると、次のように列見出しを列見出しとして明確に定義できます。
+この記事の新しい話題は [`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope) 属性です。 これは `<th>` 要素に追加して、見出しがどのセルの見出しであるかをスクリーンリーダーに正確に伝えることができます — 例えば、それが入っているのは行の見出しなのか、それとも列の見出しなのか？ 先ほどの支出記録の例を振り返ると、次のように列見出しを列見出しとして明確に定義できます。
 
 ```html
 <thead>
@@ -255,7 +258,7 @@ l10n:
 
 ### id 属性と headers 属性
 
-`scope` 属性を使用する代わりに、[`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性と [`headers`](/ja/docs/Web/HTML/Element/td#headers) 属性を使用して、見出しとセル間の関連付けを作成することもできます。
+`scope` 属性を使用する代わりに、[`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性と [`headers`](/ja/docs/Web/HTML/Reference/Elements/td#headers) 属性を使用して、見出しとセル間の関連付けを作成することもできます。
 
 `headers` 属性は空白区切りの{{Glossary("string", "文字列")}}の順不同リストを取ります。それぞれが、データセル（`<td>` 要素）または別の見出しセル（`<th>` 要素）の見出しを提供する `<th>` 要素の一意の `id` に対応します。
 

@@ -3,13 +3,51 @@ title: min-block-size
 slug: Web/CSS/min-block-size
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`min-block-size`** 根据元素的书写模式定义了元素区块的横向或纵向最小尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("min-width")}} 或 {{CSSXref("min-height")}} 属性。
 
 若为纵向书写模式，则 `min-block-size` 的值对应于元素的最小宽度；否则对应于元素的最小高度。与此相关的属性为 {{CSSXref("min-inline-size")}}，此属性定义了元素另一方向的尺度。
 
-{{EmbedInteractiveExample("pages/css/min-block-size.html")}}
+{{InteractiveExample("CSS Demo: min-block-size")}}
+
+```css interactive-example-choice
+min-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+min-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-block-size: 15em;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum block size. <br />If there is
+    more content than the minimum the box will grow in the block dimension as
+    needed by the content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 语法
 

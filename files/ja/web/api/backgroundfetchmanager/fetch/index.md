@@ -21,15 +21,12 @@ fetch(id, requests, options)
 - `id`
   - : この操作の {{domxref("BackgroundFetchRegistration")}} を取得するために、他のメソッドに渡すことができる、開発者定義の識別子です。
 - `requests`
-
   - : `RequestInfo` オブジェクトまたは `RequestInfo` お武衛ジェクトの配列です。
 
     それぞれの `RequestInfo` オブジェクトは {{domxref("Request")}} オブジェクト、または {{domxref("Request.Request()", "Request()")}} コンストラクターの `input` 引数として与えられる文字列です。
 
 - `options` {{optional_inline}}
-
   - : ブラウザーの表示するフェッチ進捗ダイアログをカスタマイズするために使用されるオブジェクトです。以下のプロパティがあります。
-
     - `title`
       - : 文字列で、進捗ダイアログのタイトルとして使われます。
     - `icons`
@@ -37,13 +34,12 @@ fetch(id, requests, options)
         - `src`
           - : アイコンファイルの URL を表す文字列。
         - `sizes`
-          - : 画像の大きさを表す文字列で、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性と同じ構文を使用して表します。 {{optional_inline}}
+          - : 画像の大きさを表す文字列で、 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性と同じ構文を使用して表します。 {{optional_inline}}
         - `type`
           - : アイコンの {{Glossary("MIME")}} タイプを表す文字列です。 {{optional_inline}}
         - `label`
           - : アイコンのアクセシブル名を表す文字列です。 {{optional_inline}}
     - `downloadTotal`
-
       - : フェッチ操作の推定総ダウンロードサイズを表す数値（バイト単位）。これは、ダウンロードの大きさをユーザーに示すため、また、ユーザーのダウンロードの進捗状況を示すために使用されます。
 
         ダウンロードサイズの合計が `downloadTotal` を超えると、すぐに取得が中止されます。

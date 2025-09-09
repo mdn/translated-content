@@ -20,20 +20,18 @@ browser.alarms.onAlarm.hasListener(listener)
 このイベントには 3 つのメソッドが用意されています。
 
 - `addListener(callback)`
-  - : イベントリスナを追加します。
+  - : イベントリスナーを追加します。
 - `removeListener(listener)`
-  - : イベントリスナを削除します。引数 `listener` には削除したいリスナを指定します。
+  - : イベントリスナーを削除します。引数 `listener` には削除したいリスナーを指定します。
 - `hasListener(listener)`
-  - : `listener` がイベントリスナとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
+  - : `listener` がイベントリスナーとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
 
 ## addListener の構文
 
 ### 引数
 
 - `callback`
-
   - : このイベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
-
     - `alarm`
       - : 発火するアラーム {{WebExtAPIRef('alarms.Alarm')}} が入ります。発火したアラームを判別するには `Alarm.name` が利用できます。
 

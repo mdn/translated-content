@@ -9,7 +9,38 @@ l10n:
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`repeating-linear-gradient()`** créé une image composée de dégradés qui se répètent. Cela fonctionne de manière similaire aux dégradés linéaires simples représentés par [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient), mais les arrêts de couleurs sont automatiquement répétés, indéfiniment, dans toutes les directions pour couvrir l'ensemble du conteneur. Le résultat de cette fonction est un objet de type [`<gradient>`](/fr/docs/Web/CSS/gradient), un type spécifique d'[image](/fr/docs/Web/CSS/image).
 
-{{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-linear-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-linear-gradient(
+  #e66465,
+  #e66465 20px,
+  #9198e5 20px,
+  #9198e5 25px
+);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+```
+
+```css interactive-example-choice
+background:
+  repeating-linear-gradient(transparent, #4d9f0c 40px),
+  repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 La longueur du dégradé répété est la distance entre le premier et le dernier arrêt de couleur. Si la première couleur n'a pas de longueur explicite pour placer l'arrêt, celle-ci vaut 0 par défaut. Pour chaque répétition, les positions des arrêts de couleur sont décalées d'un multiple de la longueur du dégradé unitaire. Par conséquent, la ligne de la couleur de fin coïncide toujours avec la ligne de la couleur de début. Si les deux ne sont pas identiques, on obtiendra alors une transition abrupte. On peut résoudre ce point en réutilisant la première couleur comme dernière couleur.
 
@@ -44,7 +75,6 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 ### Valeurs
 
 - `<side-or-corner>`
-
   - : La position du point de départ de la ligne du dégradé. Si elle est indiquée, elle se compose du mot-clé `to` suivi d'un à deux mots-clés&nbsp;: le premier indiquant le côté horizontal (`left` pour gauche ou `right` pour droite), et le second indiquant le côté vertical (`top` pour haut ou `bottom` pour bas). L'ordre des mots-clés pour le côté n'a pas d'importance. Si cette valeur n'est pas indiquée, elle vaudra `to bottom` par défaut.
 
     Les valeurs `to top`, `to bottom`, `to left`, and `to right` sont respectivement équivalentes aux angles `0deg`, `180deg`, `270deg`, et `90deg`. Les autres valeurs sont converties en un angle correspondant.
@@ -57,7 +87,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
   - : L'indication de couleur est une indication pour l'interpolation des couleurs le long du dégradé et entre deux points d'arrêt de couleur. La longueur définit à quel point, entre deux arrêts de couleur, la couleur du dégradé doit atteindre le point médian de la transition de couleur. Si cette valeur est absente, le niveau intermédiaire de la transition se situera à équidistance des deux points d'arrêt de couleur.
 
 > [!NOTE]
-> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que [les arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que [les arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ### Syntaxe formelle
 

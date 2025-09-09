@@ -3,8 +3,6 @@ title: 默认参数值
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 
-{{jsSidebar("Functions")}}
-
 **函数默认参数**允许在没有值或 `undefined` 被传入时使用默认形参。
 
 {{InteractiveExample("JavaScript Demo: Functions Default")}}
@@ -207,7 +205,7 @@ f(2); // [2, undefined]
 
 ### 有默认值的解构参数
 
-你可以通过[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)为参数赋值：
+你可以通过[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)为参数赋值：
 
 ```js
 function f([x, y] = [1, 2], { z: z } = { z: 3 }) {

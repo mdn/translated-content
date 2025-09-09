@@ -3,8 +3,6 @@ title: CSS 滚动吸附
 slug: Web/CSS/CSS_scroll_snap
 ---
 
-{{CSSRef}}
-
 **CSS 滚动吸附**模块所提供的属性可通过定义吸附位置控制滑屏和滚动行为。当用户在{{Glossary("Scroll container", "滚动容器")}}中滚动溢出的内容时，内容可吸附至特定位置，由此提供分页和滚动定位效果。
 
 此模块包含滚动容器的滚动内边距属性，用于调整滚入视野操作中分页的最佳可见区域。此模块还包含设置于滚动容器子元素的滚动外边距和滚动对齐方式属性，用于调整子元素在滚入视野时的可见区域，以及用于使滚动强制止于各子元素的属性。
@@ -13,7 +11,228 @@ slug: Web/CSS/CSS_scroll_snap
 
 为在下方的框中查看滚动吸附，可在滚动式视口中上下左右地滚动经过含 45 个带编号盒子的网格。
 
-{{EmbedGHLiveSample("css-examples/modules/scroll_snap.html", "100%", 250)}}
+```js hidden live-sample___scroll_snap
+const positions = ["start", "center", "end"];
+const inlineDirection = document.getElementById("inline");
+const blockDirection = document.getElementById("block");
+const stop = document.getElementById("stop");
+const snap = document.getElementById("snap");
+const all = document.querySelector("article");
+const rules = document.styleSheets[0].cssRules;
+
+inlineDirection.addEventListener("change", () => {
+  setSSA();
+});
+blockDirection.addEventListener("change", () => {
+  setSSA();
+});
+stop.addEventListener("change", () => {
+  setSST();
+});
+window.addEventListener("load", () => {
+  setSST();
+  setSSA();
+});
+snap.addEventListener("change", () => {
+  all.classList.toggle("snapDisabled");
+});
+
+function setSSA() {
+  rules[0].style.scrollSnapAlign = `${positions[blockDirection.value]} ${
+    positions[inlineDirection.value]
+  }`;
+}
+
+function setSST() {
+  if (stop.checked) {
+    rules[0].style.scrollSnapStop = "always";
+  } else {
+    rules[0].style.scrollSnapStop = "normal";
+  }
+}
+```
+
+```html hidden live-sample___scroll_snap
+<article>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div>
+    <fieldset>
+      <legend>Change the options</legend>
+      <p>
+        <label
+          ><input
+            type="range"
+            min="0"
+            max="2"
+            value="1"
+            list="places"
+            id="block" />
+          block position</label
+        >
+      </p>
+      <p>
+        <label>
+          <input
+            type="range"
+            min="0"
+            max="2"
+            value="1"
+            list="places"
+            id="inline" />
+          inline position
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" id="stop" />
+          Prevent scrolling past boxes
+        </label>
+      </p>
+    </fieldset>
+
+    <p>
+      <label><input type="checkbox" id="snap" /> disable snapping</label>
+    </p>
+
+    <datalist id="places">
+      <option value="0">start</option>
+      <option value="1">center</option>
+      <option value="2">end</option>
+    </datalist>
+  </div>
+</article>
+```
+
+```css hidden live-sample___scroll_snap
+li {
+  /*
+  starts with:
+      scroll-snap-align: center center;
+      scroll-snap-stop: normal (defaults);
+
+  CSS gets changed with JavaScript when you change the controls.
+  the following can be set:
+      scroll-snap-stop: always | normal;
+      scroll-snap-align: start | center | end {2}
+        */
+}
+ul {
+  overflow: auto;
+  scroll-snap-type: both mandatory;
+  overscroll-behavior-x: contain;
+}
+article.snapDisabled fieldset {
+  opacity: 20%;
+  pointer-events: none;
+}
+article.snapDisabled ul {
+  scroll-snap-type: initial;
+  overscroll-behavior-x: initial;
+}
+
+@layer pageSetup {
+  article {
+    display: flex;
+    gap: 2vw;
+  }
+  div {
+    flex: 1;
+  }
+  ul {
+    display: grid;
+    gap: 6.25vw;
+    padding: 12.5vw;
+    box-sizing: border-box;
+    border: 1px solid;
+    grid-template-columns: repeat(5, 1fr);
+    background: conic-gradient(
+      at bottom left,
+      red 0deg,
+      yellow 15deg,
+      green 30deg,
+      blue 45deg,
+      purple 60deg,
+      magenta 75deg
+    );
+    background-attachment: local;
+    margin: auto;
+    width: 20vw;
+    height: 20vw;
+  }
+  li {
+    scroll-snap-align: center;
+    height: 12.5vw;
+    width: 12.5vw;
+    outline: 3px inset;
+    list-style-type: none;
+    background: white;
+    font-family: monospace;
+    font-size: 3rem;
+    line-height: 12vw;
+    text-align: center;
+    counter-increment: items 1;
+  }
+  li::after {
+    content: counter(items);
+  }
+  input {
+    vertical-align: bottom;
+  }
+  p {
+    font-family: monospace;
+  }
+}
+```
+
+{{EmbedLiveSample("scroll_snap", "", "250px")}}
 
 在有滚动吸附时，所滚动的带编号盒子中的一者将吸附至指定位置。初始的 CSS 代码使带编号盒子吸附至视口中心，可使用滑块改变块向和行向的吸附位置。
 
@@ -70,7 +289,7 @@ slug: Web/CSS/CSS_scroll_snap
 - Element {{DOMXref("Element.scrollIntoView", "scrollIntoView()")}} 方法
 - Element {{DOMXref("Element.scrollTo", "scrollTo()")}} 方法
 - Document {{DOMXref("Document.scroll_event", "scroll")}} 事件
-- ARIA 角色 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
+- ARIA 角色 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
 - 术语{{Glossary("Scroll container", "滚动容器")}}
 
 ## 规范

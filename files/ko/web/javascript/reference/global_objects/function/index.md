@@ -47,7 +47,7 @@ l10n:
 - {{jsxref("Function.prototype.toString()")}}
   - : 함수의 소스 코드를 나타내는 문자열을 반환합니다.
     {{jsxref("Object.prototype.toString")}} 메서드를 재정의합니다.
-- [`Function.prototype[@@hasInstance]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance)
+- [`Function.prototype[@@hasInstance]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)
   - : 생성자 함수가 객체를 생성자의 인스턴스 중 하나로 인식할지 여부를 결정하는 기본 절차를 지정합니다. [`instanceof`](/ko/docs/Web/JavaScript/Reference/Operators/instanceof) 연산자에 의해 호출됩니다.
 
 ## 예제

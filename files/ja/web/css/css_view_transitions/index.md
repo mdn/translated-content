@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ef793e5764cf3b6371f275233a8e278e692d2ff8
 ---
 
-{{CSSRef}}
-
 **CSS ビュー遷移**モジュールは、[ビュー遷移 API](/ja/docs/Web/API/View_Transition_API) の動作を定義します。これにより、開発者は文書内の異なる状態間や文書間でアニメーションする遷移を作成することができます。このモジュールは、これらの遷移をスタイル設定するための CSS プロパティと擬似要素も定義します。
 
 ## リファレンス
@@ -47,7 +45,6 @@ l10n:
 ## ガイド
 
 - [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transition_API/Using)
-
   - : ビュー遷移を作成する方法と、ビュー遷移のアニメーションをカスタマイズする方法について説明します。アクティブなビュー遷移の操作方法についても記載しています。
 
 ## 関連概念
@@ -57,7 +54,6 @@ l10n:
 - {{domxref("Document.visibilityState")}}
 
 - [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
-
   - {{cssxref("animation")}}
   - {{cssxref("@keyframes")}}
   - {{domxref("CSSKeyframesRule")}}
@@ -65,7 +61,6 @@ l10n:
   - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
 
 - [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)モジュール
-
   - {{cssxref("transform")}}
   - {{cssxref("transform-function")}}
 
@@ -77,4 +72,4 @@ l10n:
 
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
 - [関数擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#関数擬似クラス)
-- [CSS の構成要素: 擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [CSS の構成要素: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

@@ -18,7 +18,7 @@ slug: Web/API/Headers
 一个实现了`Headers` 的对象可以直接用于 {{jsxref("Statements/for...of", "for...of")}} 结构中，而不是 {{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` 等价于 `for (var p of myHeaders.entries())`.
 
 > [!NOTE]
-> 你可以通过阅读我们的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)参考找到更多关于可用 headers 的信息。
+> 你可以通过阅读我们的 [HTTP headers](/zh-CN/docs/Web/HTTP/Reference/Headers)参考找到更多关于可用 headers 的信息。
 
 ## 构造函数
 
@@ -74,5 +74,5 @@ myHeaders.get("Content-Type");
 ## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
