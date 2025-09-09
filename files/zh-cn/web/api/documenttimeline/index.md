@@ -33,7 +33,7 @@ _此接口继承自其父接口 {{domxref("AnimationTimeline")}}。_
 
 ## 参见
 
-- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("AnimationTimeline")}}
 - {{domxref("AnimationTimeline.currentTime")}}
 - {{domxref("Document.timeline")}}
