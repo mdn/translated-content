@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-一个以毫秒为单位的数字，或 `null`。
+以毫秒为单位的数字或 `null`。
 
 ## 规范
 
@@ -24,6 +24,6 @@ l10n:
 
 ## 参见
 
-- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("AnimationPlayBackEvent")}}
 - {{domxref("AnimationTimeline")}}
