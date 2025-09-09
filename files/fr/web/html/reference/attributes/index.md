@@ -2,9 +2,9 @@
 title: Référence des attributs HTML
 slug: Web/HTML/Reference/Attributes
 original_slug: Web/HTML/Attributes
+l10n:
+  sourceCommit: f29e825161ee6776a395cd846f8570686f784341
 ---
-
-{{HTMLSidebar("Attributes")}}
 
 Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.
 
