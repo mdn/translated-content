@@ -35,9 +35,9 @@ createTreeWalker(root, whatToShow, filter)
     | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | ` 0x400`         | Affiche les noeuds {{domxref("DocumentFragment")}}.      |
     | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | ` 0x200`         | Affiche les noeuds {{domxref("DocumentType")}}.          |
     | `NodeFilter.SHOW_ELEMENT`                                | ` 0x1`           | Affiche les noeuds {{domxref("Element")}}.               |
-    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `0x20`           | Héritage, qui n'est plus en vigueur.                    |
-    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | ` 0x10`          | Héritage, qui n'est plus en vigueur.                    |
-    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `0x800`          | Héritage, qui n'est plus en vigueur.                    |
+    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `0x20`           | Héritage, qui n'est plus en vigueur.                     |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | ` 0x10`          | Héritage, qui n'est plus en vigueur.                     |
+    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `0x800`          | Héritage, qui n'est plus en vigueur.                     |
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | ` 0x40`          | Affiche les noeuds {{domxref("ProcessingInstruction")}}. |
     | `NodeFilter.SHOW_TEXT`                                   | ` 0x4`           | Affiche les noeuds {{domxref("Text")}}.                  |
 
