@@ -3278,11 +3278,9 @@
 /fr/docs/MDN/About	/fr/docs/MDN/Writing_guidelines
 /fr/docs/MDN/At_ten	/fr/docs/orphaned/MDN/At_ten
 /fr/docs/MDN/At_ten/History_of_MDN	/fr/docs/orphaned/MDN/At_ten/History_of_MDN
-/fr/docs/MDN/Community/Contributing	/fr/docs/conflicting/MDN/Community
 /fr/docs/MDN/Community/Contributing/Getting_started	/fr/docs/MDN/Community/Getting_started
 /fr/docs/MDN/Community/Contributing/Our_repositories	/fr/docs/orphaned/MDN/Community/Contributing/Our_repositories
 /fr/docs/MDN/Community/Contributing/Translated_content	/fr/docs/MDN/Community/Translated_content
-/fr/docs/MDN/Contribute	/fr/docs/conflicting/MDN/Community
 /fr/docs/MDN/Contribute/Contenu	/fr/docs/MDN/Writing_guidelines
 /fr/docs/MDN/Contribute/Contenu/Code_lignesdirectrices	/fr/docs/MDN/Writing_guidelines/Code_style_guide
 /fr/docs/MDN/Contribute/Documentation_priorities	https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/
@@ -3292,14 +3290,12 @@
 /fr/docs/MDN/Contribute/GitHub_best_practices	/fr/docs/MDN/Community/Issues
 /fr/docs/MDN/Contribute/GitHub_cheatsheet	/fr/docs/MDN/Community/Issues
 /fr/docs/MDN/Contribute/Help_beginners	/fr/docs/MDN/Community/Learn_forum
-/fr/docs/MDN/Contribute/Howto	/fr/docs/conflicting/MDN/Community
 /fr/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /fr/docs/MDN/Contribute/Howto/Create_and_edit_pages	/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /fr/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/fr/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /fr/docs/MDN/Contribute/Howto/convertir_code_pour_etre_direct	/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /fr/docs/MDN/Contribute/Localize	/fr/docs/MDN/Community/Translated_content
 /fr/docs/MDN/Contribute/Open_source_etiquette	/fr/docs/MDN/Community/Open_source_etiquette
-/fr/docs/MDN/Contribute/Processes	/fr/docs/conflicting/MDN/Community
 /fr/docs/MDN/Contribute/Structures/Macros	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /fr/docs/MDN/Contribute/Tools	https://github.com/mdn/yari/tree/main/docs
@@ -3333,7 +3329,6 @@
 /fr/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell	/fr/docs/MDN/Writing_guidelines/Code_style_guide/Shell
 /fr/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /fr/docs/MDN_a_dix_ans	/fr/docs/orphaned/MDN/At_ten
-/fr/docs/MDN_a_dix_ans/Contribuer_à_MDN	/fr/docs/conflicting/MDN/Community
 /fr/docs/MDN_a_dix_ans/Histoire_MDN	/fr/docs/orphaned/MDN/At_ten/History_of_MDN
 /fr/docs/Manuel_de_référence_Javascript_1.5_(ECMA-262,_Edition_3)	/fr/docs/Web/JavaScript/Reference
 /fr/docs/MathML	/fr/docs/Web/MathML
@@ -7588,10 +7583,6 @@
 /fr/docs/conflicting/Learn_370bfb0fa23e42f4384f010341852c43	/fr/docs/Learn_web_development
 /fr/docs/conflicting/Learn_6767a192c90d2c9c5179cf004fce2ee8	/fr/docs/Learn_web_development
 /fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8	/fr/docs/Learn_web_development/Core/Structuring_content
-/fr/docs/conflicting/MDN/Community/Contributing	/fr/docs/conflicting/MDN/Community
-/fr/docs/conflicting/MDN/Community/Contributing/Getting_started	/fr/docs/MDN/Community/Getting_started
-/fr/docs/conflicting/MDN/Community/Issues	/fr/docs/MDN/Community/Issues
-/fr/docs/conflicting/MDN/Contribute	/fr/docs/conflicting/MDN/Community
 /fr/docs/conflicting/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
 /fr/docs/conflicting/MDN/Writing_guidelines	/fr/docs/MDN/Writing_guidelines
 /fr/docs/conflicting/MDN/Writing_guidelines/Page_structures	/fr/docs/MDN/Writing_guidelines/Page_structures
