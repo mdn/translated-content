@@ -7587,6 +7587,7 @@
 /fr/docs/conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript	/fr/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
 /fr/docs/conflicting/Learn_370bfb0fa23e42f4384f010341852c43	/fr/docs/Learn_web_development
 /fr/docs/conflicting/Learn_6767a192c90d2c9c5179cf004fce2ee8	/fr/docs/Learn_web_development
+/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8	/fr/docs/Learn_web_development/Core/Structuring_content
 /fr/docs/conflicting/MDN/Community/Contributing	/fr/docs/conflicting/MDN/Community
 /fr/docs/conflicting/MDN/Community/Contributing/Getting_started	/fr/docs/MDN/Community/Getting_started
 /fr/docs/conflicting/MDN/Community/Issues	/fr/docs/MDN/Community/Issues

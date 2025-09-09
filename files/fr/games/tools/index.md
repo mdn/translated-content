@@ -103,7 +103,7 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
   - : Stocker les données des utilisateurs sur leur propre ordinateur ou appareil.
 - [Javascript](/fr/docs/Web/JavaScript)
   - : Langue de programmation Web rapide pour écrire le code de votre jeu.
-    Pour porter facilement vos jeux existants [Emscripten](https://github.com/emscripten-core/emscripten/wiki) ou [Asm.js](http://asmjs.org/spec/latest/)
+    Pour porter facilement vos jeux existants [Emscripten](https://github.com/emscripten-core/emscripten/wiki) ou [Asm.js](https://asmjs.org/spec/latest/)
 - [API de verrouillage du pointeur](/fr/docs/Web/API/Pointer_Lock_API)
   - : Verrouiller la souris ou un autre appareil de pointage dans l'interface de votre jeu.
 - [SVG](/fr/docs/Web/SVG) (Graphiques vectoriels évolutifs)
