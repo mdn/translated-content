@@ -53,7 +53,7 @@ OPTIONS *|<request-target>["?"<query>] HTTP/1.1
 - `<request-target>`
   - : 与 {{HTTPHeader("Host")}} 标头提供的信息结合使用时，可标识请求的目标资源。请求源服务器时是绝对路径（例如，`/path/to/file.html`），请求代理服务器时是绝对 URL（例如，`http://www.example.com/path/to/file.html`）。
 - `<query>` {{optional_inline}}
-  - : 可选的查询组件，以问号 `?` 开头。 通常用于以 `key=value` 对的形式承载识别信息。
+  - : 可选的查询组件，以问号 `?` 开头。通常用于以 `key=value` 对的形式承载识别信息。
 
 ## 示例
 
