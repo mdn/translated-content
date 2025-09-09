@@ -66,8 +66,8 @@ l'élément `#root`.
 
 ```html
 <div id="root">
-  This is a text node.
-  <span>And this is a <code>span</code> element.</span>
+  Ceci est un nœud textuel.
+  <span>Et ceci est un élément <code>span</code>.</span>
 </div>
 ```
 
@@ -107,22 +107,22 @@ utilisant {{JSXref("encodeURI()")}} s'il est un descendant d'un élément `.esca
 ```html
 <div>
   <div>
-    This is not escaped. <span class="escape">But this is escaped.</span>
+    Ceci n'est pas échappé. <span class="escape">Mais ceci est échappé.</span>
   </div>
-  <div class="escape">This is escaped.</div>
-  <div class="no-escape">This is not escaped.</div>
+  <div class="escape">Ceci est échappé.</div>
+  <div class="no-escape">Ceci n'est pas échappé.</div>
 </div>
 <hr />
 <div class="escape">
   <div>
-    This is escaped. <span class="no-escape">But this is not escaped.</span>
+    Ceci est échappé. <span class="no-escape">Mais ceci n'est pas échappé.</span>
   </div>
-  <div class="no-escape">This is not escaped.</div>
+  <div class="no-escape">Ceci n'est pas échappé.</div>
 </div>
 <hr />
 <div class="no-escape">
-  <div>This is not escaped.</div>
-  <div class="escape">This is not escaped.</div>
+  <div>Ceci n'est pas échappé.</div>
+  <div class="escape">Ceci n'est pas échappé.</div>
 </div>
 ```
 
@@ -164,7 +164,7 @@ const treeWalker = document.createTreeWalker(
 while (treeWalker.nextNode()) {
   for (const node of treeWalker.currentNode.childNodes) {
     if (node.nodeType === Node.TEXT_NODE && /\S/.test(node.data)) {
-      // Exclude whitespace-only text nodes
+      // Exclure les nœuds textuels ne contenant que des espaces
       node.data = encodeURI(node.data.replace(/\s+/g, " "));
     }
   }
