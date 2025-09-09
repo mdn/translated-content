@@ -14,7 +14,7 @@ original_slug: Web/Guide
   - : Il est possible d'intégrer de l'audio et de la vidéo à du contenu web de différentes façons : que ce soit des fichiers statiques ou des flux adaptatifs. Cet article est une introduction à ces différentes méthodes et à la compatibilité pour les principaux navigateurs web.
 - [Manipuler des données audio ou vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_manipulation)
   - : Il est possible de combiner les technologies web et les médias afin de créer de nouveaux usages. Dans cet article, nous verrons comment utiliser des technologies web telles que {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou l'API [Web Audio](/fr/docs/Web/API/Web_Audio_API) afin de modifier les fichiers audio ou vidéo directement (en ajoutant des effets de réverbération ou des filtres de couleurs).
-- [Guide sur les évènements](/fr/docs/Web/Events)
+- [Guide sur les évènements](/fr/docs/Web/API/Document_Object_Model/Events)
   - : Les évènements peuvent désigner deux concepts : un patron de conception permettant de gérer de façon asynchrone ce qui se produit lors de la vue d'une page web d'une part et la liste, les noms et les caractéristiques desdits évènements d'autre part.
 - [AJAX](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
   - : AJAX est un terme regroupant différentes technologies qui permettent aux applications web d'appliquer des mises à jour incrémentales au contenu de la page sans mettre à jour l'intégralité de la page. Cela permet d'obtenir des applications plus rapides et plus réactives.

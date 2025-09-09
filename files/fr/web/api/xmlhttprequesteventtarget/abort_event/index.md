@@ -42,5 +42,5 @@ L'événement **abort** est déclenché lorsque la progression a été interompu
   - [`load`](/fr/docs/Web/API/XMLHttpRequest/load_event)
   - [`progress`](/fr/docs/Web/API/XMLHttpRequest/progress_event)
   - [`error`](/fr/docs/Web/API/XMLHttpRequest/error_event)
-  - [`loadend`](/fr/docs/Web/API/XMLHttpRequest/loadend_event)
+  - [`loadend`](/fr/docs/Web/API/XMLHttpRequestEventTarget/loadend_event)
 - [Surveillance de la progression](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
