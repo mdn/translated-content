@@ -16,7 +16,7 @@ l10n:
 - [グレゴリオ暦](https://ja.wikipedia.org/wiki/グレゴリオ暦)の正確な日付 (時刻やタイムゾーンを伴うことも可能)
 - [有効な期間](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string)
 
-{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;time&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
@@ -64,7 +64,6 @@ _datetime 値_（機械可読な日時の値）は要素の `datetime` 属性の
 - 有効な週の文字列
   - : `2011-W47`
 - 有効な時刻の文字列
-
   - : `14:54`
 
     `14:54:39`
@@ -72,13 +71,11 @@ _datetime 値_（機械可読な日時の値）は要素の `datetime` 属性の
     `14:54:39.929`
 
 - 有効なローカル日時の文字列
-
   - : `2011-11-18T14:54:39.929`
 
     `2011-11-18 14:54:39.929`
 
 - 有効なグローバル日時の文字列
-
   - : `2011-11-18T14:54:39.929Z`
 
     `2011-11-18T14:54:39.929-0400`

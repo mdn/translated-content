@@ -11,7 +11,7 @@ l10n:
 
 既定では、HTML のボタンは{{Glossary("user agent", "ユーザーエージェント")}}が実行されているホストのプラットフォームのスタイルと似ていますが、 [CSS](/ja/docs/Web/CSS) を使用してボタンの外見を変更することができます。
 
-{{InteractiveExample("HTML Demo: &lt;button&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;button&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <button class="favorite styled" type="button">お気に入りに追加</button>
@@ -55,13 +55,10 @@ l10n:
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `autofocus`
-
   - : 論理属性で、ページ読み込み時にこのボタンが入力[フォーカス](/ja/docs/Web/API/HTMLElement/focus)を持つべきであることを指定します。**この属性を設定することができるのは、文書中の要素一つだけです。**
 
 - `command`
-
   - : 制御ボタンの `<button>` によって制御される、 `commandfor` 属性で指定した要素に対して実行するアクションを指定します。実現可能な値は次のとおりです。
-
     - `"show-modal"`
       - : このボタンは、 {{htmlelement("dialog")}} をモーダルとして表示させます。ダイアログがすでにモーダルである場合は、何もしません。これは、ダイアログ要素で [`.showModal()`](/ja/docs/Web/API/HTMLDialogElement/showModal) メソッドを呼び出すことと同じ意味の宣言的な方法です。
     - `"close"`
@@ -82,7 +79,6 @@ l10n:
 - [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
   - : これは論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。
 - `form`
-
   - : ボタンに関連付けられた {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同一文書内の `<form>` 要素の `id` 属性と同一でなければなりません。（この属性を設定しなかった場合、 `<button>` は祖先に `<form>` 要素が存在すれば、その要素に関連付けられます。）
 
     この属性によって `<button>` 要素が `<form>` の中になくても、同一文書内にある任意の `<form>` 要素に関連付けることが可能になりました。また、祖先の `<form>` 要素を上書きすることができます。
@@ -90,9 +86,7 @@ l10n:
 - `formaction`
   - : このボタンによって送信された情報を処理する URL です。このボタンのフォームオーナーの [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性よりも優先されます。フォームオーナーがない場合は何もしません。
 - `formenctype`
-
   - : このボタンが送信ボタンである場合（`<form>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合）、送信されるフォームデータのエンコード方法を指定します。指定可能な値は以下の通りです。
-
     - `application/x-www-form-urlencoded`: この属性が使用されなかった場合の既定値。
     - `multipart/form-data`: {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性に `file` を指定して使用する場合に使用します。
     - `text/plain`: デバッグ目的で指定されるものです。実際のフォーム送信で使用すべきではありません。
@@ -100,9 +94,7 @@ l10n:
     この属性が指定された場合、そのボタンのフォームオーナーの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性より優先されます。
 
 - `formmethod`
-
   - : このボタンが送信ボタンである場合（`<form>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合）、この属性はこのフォームを送信するのに使用される [HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)を指定します。指定可能な値は以下の通りです。
-
     - `post`: フォームのデータは、サーバーへ送信する際に HTTP リクエストの本文に含められます。フォームにパスワードなどの公開するべきではない情報が含まれている場合は、このメソッドを使用してください。
     - `get`: フォームのデータは、フォームの `action` の URL に、セパレーターとして '?' を使用して追加され、その結果となる URL をサーバーへ送信します。検索フォームのように、まったく[副作用がない](/ja/docs/Glossary/Idempotent)場合にのみ、このメソッドを使用してください。
     - `dialog`: このメソッドは、ボタンが関連付けられた[ダイアログ](/ja/docs/Web/HTML/Reference/Elements/dialog)を閉じ、フォームデータをまったく送信しないことを示すために使用します。
@@ -110,35 +102,27 @@ l10n:
     指定された場合、この属性はボタンのフォームオーナーの [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性より優先して使用されます。
 
 - `formnovalidate`
-
   - : 論理属性で、ボタンが送信ボタンである場合に、フォームデータ送信時に内容を[検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)しないように指定するものです。この属性が指定された場合、ボタンの属するフォームオーナーの [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性より優先して使用されます。
 
     この属性は [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) および [`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit) 要素でも使用できます。
 
 - `formtarget`
-
   - : ボタンが送信ボタンである場合、フォームの送信後に受信するレスポンスを表示する場所を示すユーザー定義の名前、もしくはアンダースコアから始まる標準化されたキーワードです。これは、_閲覧コンテキスト_（タブ、ウィンドウ、{{HTMLElement("iframe")}}）の `name` またはそれを表すキーワードです。この属性が指定された場合、ボタンのフォームオーナーの [`target`](/ja/docs/Web/HTML/Reference/Elements/form#target) 属性より優先されます。以下のキーワードは特別な意味を持ちます。
-
     - `_self`: レスポンスを同じ閲覧コンテキストに読み込みます。これは、属性が指定されていない場合の既定値です。
     - `_blank`: レスポンスを新しい無名の閲覧コンテキスト — 普通は、ブラウザーの設定に従い、新しいタブまたはウィンドウ — に読み込みます。
     - `_parent`: レスポンスを現在のコンテキストの親の閲覧コンテキストに読み込みます。親要素がない場合、このオプションは `_self` と同じ振る舞いをします。
     - `_top`: レスポンスを最上位の閲覧コンテキスト (現在のコンテキストの祖先で、それ以前の祖先をもたない閲覧コンテキスト) に読み込みます。親要素がない場合、このオプションは `_self` と同じ振る舞いをします。
 
 - `name`
-
   - : このボタンの名前で、フォームデータの一部としてこのボタンの `value` との組み合わせで送信されます。
 
 - `popovertarget`
-
   - : `<button>` 要素をポップオーバーの制御ボタンに変換します。制御するポップオーバー要素の ID を値として受け取ります。 `popovertarget` 属性を使用してポップオーバーとその呼び出し元ボタンとの関連付けを設定すると、2 つの有益な効果が追加されます。
-
     - ブラウザーは、ポップオーバーと呼び出し元との間に暗黙の [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) および [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の関係を作成し、ポップオーバーが表示されたときに、キーボードフォーカスナビゲーションの順序で論理的な位置にポップオーバーを配置します。これにより、キーボードおよび支援技術 (AT) のユーザーもポップオーバーにアクセスしやすくなります （「[ポップオーバーのアクセシビリティ機能](/ja/docs/Web/API/Popover_API/Using#popover_accessibility_features)」も参照してください）。
     - ブラウザーは、2 つの間に暗黙のアンカー参照を作成するため、[CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)を使用して、コントロールを基準にしてポップオーバーを相対的に位置指定することがとても便利です。詳細については、「[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#popover_anchor_positioning)」を参照してください。
 
 - `popovertargetaction`
-
   - : 制御用 `<button>` によって制御されているポップオーバー要素に対して実行される動作を指定します。使用可能な値は以下の通りです。
-
     - `"hide"`
       - : このボタンは、表示されているポップオーバーを非表示にします。非表示になっているポップオーバーを非表示にしようとした場合、何も行われません。
     - `"show"`
@@ -147,9 +131,7 @@ l10n:
       - : ポップオーバーの表示・非表示を切り替えるボタンです。ポップオーバーが非表示の場合は表示され、ポップオーバーが表示されている場合は非表示になります。`popovertargetaction` が省略された場合、`"toggle"` がこのコントロールボタンによって実行される既定の動作です。
 
 - `type`
-
   - : このボタンの既定の動作です。以下の値が指定可能です。
-
     - `submit`: このボタンはフォームのデータをサーバーへ送信します。これはこの属性が `<form>` に関連付けられたボタンに指定されていない場合、またはこの属性が空であったり不正な値であったりした場合の既定値です。
     - `reset`: このボタンはすべてのコントロールを初期値に初期化します。 [\<input type="reset">](/ja/docs/Web/HTML/Reference/Elements/input/reset) と同様です。 (この動作はユーザーを困らせる傾向があります。)
     - `button`: ボタンには既定の動作がなく、既定では押されても何も行いません。この要素のイベントを待ち受けし、イベントが発生すると起動されるクライアント側スクリプトを設定することができます。

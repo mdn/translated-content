@@ -29,9 +29,7 @@ original_slug: Learn/CSS/Building_blocks
 - [계단식 (cascade) 및 상속 (inheritance)](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : 이번 수업의 목적은 CSS 가 HTML 에 적용되는 방법과 충돌을 해결하는 방법을 제어하는 CSS 의 가장 기본적인 개념인 — 계단식, 우선 순위 및 상속 — 에 대한 이해를 발전시키는 것입니다.
 - [CSS 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : 사용 가능한 다양한 CSS 선택자가 있으며, 스타일을 지정할 요소를 선택할 때 세밀한 정밀도를 허용합니다. 이 기사와 하위 기사에서는 다양한 유형을 자세히 살펴보고 작동 방식을 살펴 보겠습니다. 하위 기사는 다음과 같습니다.
-
     - [Type, class 및 ID 선택자](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
     - [속성 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
     - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
@@ -64,9 +62,9 @@ CSS 기술을 테스트하고 싶습니까? 다음 평가는 위 안내서에서
 
 - [기본 CSS 이해](/ko/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
   - : 이 평가는 기본적인 구문, 선택자, 우선 순위, 박스 모델 등에 대한 이해를 테스트 합니다.
-- [멋진 편지지 만들기](/ko/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper)
+- [멋진 편지지 만들기](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3)
   - : 올바른 인상을 남기고 싶다면, 멋진 편지지에 편지를 쓰는 것이 정말 좋습니다. 이 평가에서는 이러한 모양을 달성하기 위해 온라인 템플릿을 작성해야 합니다.
-- [멋진 박스](/ko/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box)
+- [멋진 박스](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3)
   - : 여기에서는 배경 및 테두리 스타일을 사용하여 눈길을 끄는 박스를 만드는 방법을 연습합니다.
 
 ## 참고 항목

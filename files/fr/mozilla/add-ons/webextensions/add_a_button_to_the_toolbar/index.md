@@ -200,7 +200,6 @@ Alors que les actions du navigateur sont toujours affichées, les actions de la 
 - `Clé de manifest browser_action`
 - `API browserAction`
 - Exemples d'actions du navigateur&nbsp;:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [Bookmark it&nbsp;!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
   - [favourite‐colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
@@ -210,5 +209,4 @@ Alors que les actions du navigateur sont toujours affichées, les actions de la 
 - `Clé de manifest page_action`
 - `API pageAction`
 - Exemple d'action de page
-
   - [chill‐out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)

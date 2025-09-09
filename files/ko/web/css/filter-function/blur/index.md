@@ -3,8 +3,6 @@ title: blur()
 slug: Web/CSS/filter-function/blur
 ---
 
-{{cssref}}
-
 **`blur()`** [CSS](/ko/docs/Web/CSS) 함수는 주어진 이미지에 [가우시안 블러](https://en.wikipedia.org/wiki/Gaussian_blur)를 적용합니다. 반환 값은 {{cssxref("&lt;filter-function&gt;")}}입니다.
 
 {{InteractiveExample("CSS Demo: blur()")}}

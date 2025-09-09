@@ -14,10 +14,9 @@ TCP의 역할은 에러가 없이 패킷이 신뢰할 수 있게 전달 되었�
 ## 같이 보기
 
 - 위키백과 의 [전송 제어 프로토콜](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
-- [HTTP 개요](/ko/docs/Web/HTTP/Overview)
-- [브라우저는 어떻게 작동하는가](/ko/docs/Web/Performance/How_browsers_work)
+- [HTTP 개요](/ko/docs/Web/HTTP/Guides/Overview)
+- [브라우저는 어떻게 작동하는가](/ko/docs/Web/Performance/Guides/How_browsers_work)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("IPv4")}}
   - {{Glossary("IPv6")}}
   - {{Glossary("Packet")}}

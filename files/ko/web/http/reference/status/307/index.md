@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/307
 original_slug: Web/HTTP/Status/307
 ---
 
-{{HTTPSidebar}}
-
 {{Glossary("HTTP")}} **`307 Temporary Redirect`** 리다이렉트 상태 응답 코드는 요청한 리소스가 {{HTTPHeader("Location")}} 헤더에 주어진 URL 로 임시로 옮겨졌다는 것을 나타냅니다.
 
 원래 요청한 메소드와 Body 를 재사용하여 요청을 리다이렉트 합니다. 여기서 메소드를 {{HTTPMethod("GET")}}으로 바꾸기 위해서 {{HTTPStatus("303", "303 See Other")}}를 사용하시면 됩니다. 이것은 {{HTTPMethod("PUT")}}요청에 업로드된 리소스가 아닌 "You successfully uploaded XYZ"와 같은 확인메시지 응답을 제공 하는데에 유용합니다.

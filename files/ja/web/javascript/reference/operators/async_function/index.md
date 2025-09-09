@@ -2,10 +2,8 @@
 title: async function 式
 slug: Web/JavaScript/Reference/Operators/async_function
 l10n:
-  sourceCommit: 9a7e014bc1ee2ce53751b47adbe48d3180bc2d54
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`async function`** キーワードは、式の中で非同期関数を定義するために使用できます。
 
@@ -35,7 +33,8 @@ async function name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **メモ:** [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)は `async function` キーワードを使用することができません。[`async function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function)との混同を防ぐためです。`async function` キーワードは文を受け付けることができないコンテキストで現れた場合のみ、式の始まりになります。
+> [!NOTE]
+> [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)は `async function` キーワードを使用することができません。[`async function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function)との混同を防ぐためです。`async function` キーワードは文を受け付けることができないコンテキストで現れた場合のみ、式の始まりになります。
 
 ### 引数
 

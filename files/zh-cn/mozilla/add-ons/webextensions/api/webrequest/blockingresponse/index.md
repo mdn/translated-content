@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{AddonSidebar}}
-
 在 `extraInfoSpec` 参数中设置了 `"blocking"` 参数的事件监听器将返回该类型的对象。
 
 通过设置 `BlockingResponse` 中的特定属性，监听器可以修改网络请求。
@@ -18,9 +16,7 @@ l10n:
 该类型的取值是一个对象。其包含以下属性：
 
 - `authCredentials` {{optional_inline}}
-
   - : `object`。若设置，则请求将使用给定的凭据进行。你只能在 {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}} 中设置该属性。`authCredentials` 属性是包含下列属性的对象：
-
     - `username`
       - : `string`。要提供的用户名。
     - `password`
@@ -29,7 +25,6 @@ l10n:
 - `cancel` {{optional_inline}}
   - : `boolean`。若为 `true`，则请求被取消。你只能在 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}、{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}、{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} 和 {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}} 中设置该属性。
 - `redirectUrl` {{optional_inline}}
-
   - : `string`。如果设置，则原始请求将被重定向到该 URL。你只能在 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} 或 {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} 中设置该属性。
 
     你可以重定向到非 HTTP 方案（例如 `data:`）。重定向将使用与原始请求相同的请求方法，除非是从 `onHeadersReceived` 阶段发起的，此时重定向将使用 GET 方法。

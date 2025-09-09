@@ -247,7 +247,7 @@ HTML에는 인용구 표시에 사용할 수 있는 요소가 존재합니다. �
 
 ### 블록 인용구
 
-블록 레벨 컨텐츠의 섹션(문단, 여러 단락, 리스트 등)이 인용된 경우, 이를 나타내는 {{htmlelement("blockquote")}} 요소로 감싸야합니다. 그리고 [`cite`](/ko/docs/Web/HTML/Element/blockquote#cite) 속성에 출처를 표기합니다. 아래의 예시는 MDN `<blockquote>` 요소 페이지를 인용한 것 입니다.
+블록 레벨 컨텐츠의 섹션(문단, 여러 단락, 리스트 등)이 인용된 경우, 이를 나타내는 {{htmlelement("blockquote")}} 요소로 감싸야합니다. 그리고 [`cite`](/ko/docs/Web/HTML/Reference/Elements/blockquote#cite) 속성에 출처를 표기합니다. 아래의 예시는 MDN `<blockquote>` 요소 페이지를 인용한 것 입니다.
 
 ```html
 <p>
@@ -292,7 +292,7 @@ HTML에는 인용구 표시에 사용할 수 있는 요소가 존재합니다. �
 
 ### 인용
 
-[`cite`](/ko/docs/Web/HTML/Element/blockquote#cite) 속성의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는 JavaScript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 `cite` 컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 링크나 다른 적절한 방법을 통해 텍스트에서 볼 수 있게 만들어야 합니다.
+[`cite`](/ko/docs/Web/HTML/Reference/Elements/blockquote#cite) 속성의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는 JavaScript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 `cite` 컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 링크나 다른 적절한 방법을 통해 텍스트에서 볼 수 있게 만들어야 합니다.
 
 {{htmlelement("cite")}} 요소가 있지만 이는 인용되는 자료의 제목(예: 책 이름)을 포함하기 위한 것입니다. 그러나 `<cite>` 안에 있는 텍스트를 어떤 식으로든 인용 출처에 연결하지 못할 이유는 없습니다.
 
@@ -471,7 +471,7 @@ textarea.onkeyup = () => {
 
 웹에서 흔히 볼 수 있는 또 다른 요소는 약어 또는 약어를 둘러싸는 데 사용되는 {{htmlelement("abbr")}}입니다. 약어나 약어를 포함할 때는 처음 사용할 때 약어를 표시하는 `<abbr>`과 함께 해당 용어의 전체 내용을 일반 텍스트로 제공하세요. 이렇게 하면 사용자 에이전트에게 콘텐츠를 공지/표시하는 방법에 대한 힌트를 제공하는 동시에 모든 사용자에게 약어가 무엇을 의미하는지 알릴 수 있습니다.
 
-약어 외에 확장어를 제공하는 것이 의미가 없고 약어 또는 약어가 상당히 단축된 용어인 경우에는 해당 용어의 전체 확장어를 [`title`](/ko/docs/Web/HTML/Global_attributes#title) 속성의 값으로 제공합니다.
+약어 외에 확장어를 제공하는 것이 의미가 없고 약어 또는 약어가 상당히 단축된 용어인 경우에는 해당 용어의 전체 확장어를 [`title`](/ko/docs/Web/HTML/Reference/Global_attributes#title) 속성의 값으로 제공합니다.
 
 ### 약어 예제
 
@@ -775,6 +775,6 @@ HTML은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 날
 
 ## 요약
 
-HTML 텍스트 의미론에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Element)를 살펴보십시오.([인라인 텍스트 시멘틱](/ko/docs/Web/HTML/Element#인라인 텍스트 시멘틱) 섹션은 시작하기에 좋은 장소입니다). 다음 장에서는 [HTML 문서의 다른 부분을 구조화](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)하는 데 사용할 HTML 요소를 살펴 보겠습니다.
+HTML 텍스트 의미론에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Reference/Elements)를 살펴보십시오.([인라인 텍스트 시멘틱](/ko/docs/Web/HTML/Element#인라인 텍스트 시멘틱) 섹션은 시작하기에 좋은 장소입니다). 다음 장에서는 [HTML 문서의 다른 부분을 구조화](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)하는 데 사용할 HTML 요소를 살펴 보겠습니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}

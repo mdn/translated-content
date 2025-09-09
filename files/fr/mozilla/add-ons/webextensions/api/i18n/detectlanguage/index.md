@@ -29,9 +29,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 - `isReliable`
   - : `boolean`. Si la langue a été détectée de manière fiable.
 - `languages`
-
   - : `array` d'objets, dont chacun a deux propriétés:
-
     - `language`
       - : {{WebExtAPIRef('i18n.LanguageCode')}}. La langue détectée.
     - `percentage`
@@ -62,8 +60,6 @@ detecting.then(onLanguageDetected);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

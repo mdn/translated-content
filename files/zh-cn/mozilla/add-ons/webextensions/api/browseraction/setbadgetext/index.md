@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 设置浏览器操作的徽章文本。徽章显示在图标顶部。
 
 没有特定徽章文本的标签页将继承全局徽章文本，默认情况下为 `""`。
@@ -24,11 +22,8 @@ browser.browserAction.setBadgeText(
 ### 参数
 
 - `details`
-
   - : 一个包含以下属性的对象：
-
     - `text`
-
       - : `string` 或 `null`。可以传递任意数量的字符，但空间只能容纳大约四个字符。
 
         如果不需要徽章，请使用空字符串 `""`。
@@ -38,11 +33,9 @@ browser.browserAction.setBadgeText(
         如果指定了 `windowId`，`null` 将移除特定窗口的徽章文本，使标签页继承全局徽章文本。否则将全局徽章文本恢复为 `""`。
 
     - `tabId` {{optional_inline}}
-
       - : `integer`。仅为指定的标签页设置徽章文本。当用户将该标签页导航到新页面时，文本会重置。
 
     - `windowId` {{optional_inline}}
-
       - : `integer`。为指定的窗口设置徽章文本。
 
 <!---->

@@ -15,4 +15,4 @@ Le calcul prend en compte quel pourcentage de la page est visuellement complet Ã
 
 ## Voir aussi
 
-- [Apprendre les performances web](/fr/docs/Learn/Performance)
+- [Apprendre les performances web](/fr/docs/Learn_web_development/Extensions/Performance)

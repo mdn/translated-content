@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされました。このページでは、開発者に影響する Firefox 36 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -47,7 +45,6 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 ### JavaScript
 
 - [ECMAScript 6](/ja/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) の Symbol データ型をデフォルトで有効にしました (Firefox 33 より、Nightly チャンネルでは使用できていました) ([Firefox バグ 1066322](https://bugzil.la/1066322)):
-
   - {{jsxref("Symbol")}}
   - {{jsxref("Symbol.for()")}}
   - {{jsxref("Symbol.keyFor()")}}
@@ -55,12 +52,10 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 
 - [イテレート可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)なインターフェイスのプロパティキーのための、旧来のプレースホルダ文字列である `"@@iterator"` を、ES6 で周知のシンボルである {{jsxref("Symbol.iterator")}} に置き換えました ([Firefox バグ 918828](https://bugzil.la/918828))。
 - 仕様内部の抽象的な演算である `ToNumber(string)` で 2 進 (`0b`) および 8 進 (`0o`) リテラルをサポートしました。これは潜在的に、ES5 からの破壊的な変更になります ([Firefox バグ 1079120](https://bugzil.la/1079120))。
-
   - `Number("0b11")` は、`NaN` ではなく `3` を返します。
   - `"0o11" == 9` は、`false` ではなく `true` を返します。
 
 - [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) 宣言はブロックスコープが設定されるようになりました。また、初期化子が必要になりました ([Firefox バグ 611388](https://bugzil.la/611388))。さらに、再宣言が不可になりました ([Firefox バグ 1095439](https://bugzil.la/1095439))。
-
   - `{const a=1}; a;` は `1` が返らずに {{jsxref("ReferenceError")}} が発生します。これはブロックスコープがあるためです。
   - `const a;` は {{jsxref("SyntaxError")}} ("missing = in const declaration") が発生します。初期化子が必要です。
   - `const a = 1; a = 2;` は {{jsxref("SyntaxError")}} ("invalid assignment to const a") が発生します。
@@ -75,7 +70,6 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 - Canvas API の {{domxref("CanvasRenderingContext2D.resetTransform()")}} メソッドを実装しました ([Firefox バグ 1099148](https://bugzil.la/1099148))。
 - Web Crypto API で ECDSA をサポートしました ([Firefox バグ 1034854](https://bugzil.la/1034854))。
 - WebGL 2.0 の実験的な実装を進めています!
-
   - {{domxref("WebGLQuery")}} インターフェイスが利用可能になりました ([Firefox バグ 1048719](https://bugzil.la/1048719))。
   - {{domxref("WebGL2RenderingContext.invalidateFrameBuffer()")}} メソッドを実装しました ([Firefox バグ 1076456](https://bugzil.la/1076456))。
 

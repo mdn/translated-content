@@ -5,7 +5,7 @@ slug: Web/CSS/::placeholder
 
 {{CSSRef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::placeholder`** représente [le texte de substitution](/fr/docs/Learn/Forms#the_placeholder_attribute) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}. Cela permet aux développeurs web de personnaliser l'apparence de ce texte.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::placeholder`** représente [le texte de substitution](/fr/docs/conflicting/Learn_web_development/Extensions/Forms#the_placeholder_attribute) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}. Cela permet aux développeurs web de personnaliser l'apparence de ce texte.
 
 ```css
 ::placeholder {
@@ -67,12 +67,12 @@ La valeur du contraste est déterminée en comparant la luminosité de la couleu
 Autres ressources :
 
 - [WebAIM : vérificateur de contraste](https://webaim.org/resources/contrastchecker/)
-- [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 #### Utilisabilité
 
-Les textes de substitution avec un contraste suffisamment élevé peuvent être pris pour des textes saisis par l'utilisateur. De plus, les textes de substituion disparaissent lorsqu'une personne saisit du contenu dans l'élément {{htmlelement("input")}}. Pour ces deux raisons, les textes de subsitution peuvent gêner la complétion du formulaire, notamment pour les personnes souffrant de troubles cognitifs.
+Les textes de substitution avec un contraste suffisamment élevé peuvent être pris pour des textes saisis par l'utilisateur. De plus, les textes de substitution disparaissent lorsqu'une personne saisit du contenu dans l'élément {{htmlelement("input")}}. Pour ces deux raisons, les textes de subsitution peuvent gêner la complétion du formulaire, notamment pour les personnes souffrant de troubles cognitifs.
 
 Une autre méthode consiste à fournir cette information en l'incluant à proximité du champ mais en dehors et d'utiliser l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) afin de relier l'élément {{HTMLElement("input")}} à l'indication associée.
 
@@ -101,7 +101,7 @@ Lorsque le [mode de contraste élevé de Windows](/fr/docs/Web/CSS/@media/-ms-hi
 
 ### Libellés ({{HTMLElement("&lt;label&gt;")}})
 
-Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement("label")}}. Sans libellé associé grâce à [`for`](/fr/docs/Web/HTML/Element/label#for) et à [`id`](/fr/docs/Web/HTML/Global_attributes#id), les outils d'assistance tels que les lecteurs d'écran ne peuvent pas correctement analyser les éléments {{htmlelement("input")}}.
+Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement("label")}}. Sans libellé associé grâce à [`for`](/fr/docs/Web/HTML/Reference/Elements/label#for) et à [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id), les outils d'assistance tels que les lecteurs d'écran ne peuvent pas correctement analyser les éléments {{htmlelement("input")}}.
 
 - [Fournir des indications simples dans un formulaire](/fr/docs/Web/Accessibility/ARIA)
 - [_Placeholders in Form Fields Are Harmful_ — Nielsen Norman Group (en anglais)](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -118,11 +118,10 @@ Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement
 
 - {{cssxref(":placeholder-shown")}} qui permet de mettre en forme un élément qui possède un _placeholder_ actif
 
-- [Les formulaires HTML](/fr/docs/Learn/Forms)
+- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - {{HTMLElement("textarea")}}
 - Les équivalents **non-standards** :
-
   - {{cssxref("::-webkit-input-placeholder")}}
   - {{cssxref("::placeholder")}}
   - {{cssxref(":-ms-input-placeholder")}}

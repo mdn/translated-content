@@ -5,14 +5,13 @@ l10n:
   sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
 ---
 
-{{CSSRef}}
-
 要素はクエリーコンテナーを確立するのに、 **`container-type`** という [CSS](/ja/docs/Web/CSS) プロパティを使用することができます。 `container-type` は、コンテナークエリーで使用されるコンテナーコンテキストの種類を定義するために使用されます。利用できるコンテナーコンテキストは次のとおりです。
 
 - [サイズ](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries): 最大または最小サイズ、アスペクト比、方向などの一般的なサイズまたはインラインサイズの条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
 - [スクロール状態](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries): コンテナーが途中までスクロールされているスクロールコンテナーであるかどうか、コンテナーがスクロールスナップコンテナーにスナップされている[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)であるかどうかなどのスクロール状態の条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
 
-> **メモ:** `container-type` および {{cssxref("container-name")}} プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
+> [!NOTE]
+> `container-type` および {{cssxref("container-name")}} プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
 
 ## 構文
 
@@ -39,22 +38,18 @@ container-type: unset;
 `container-type` プロパティは、以下のリスト内の 1 つの値、または 2 つの値（そのうちの 1 つは `scroll-state` で、もう 1 つは `inline-size` または `size`）を指定できます。言い換えれば、要素は、サイズクエリーコンテナー、スクロール状態クエリーコンテナー、その両方、またはどちらでもないものとして設定できます。
 
 - `inline-size`
-
   - : コンテナーの[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)上のサイズクエリー用のクエリーコンテナーを確立します。
     要素にレイアウト、スタイル、インラインサイズ抑制を適用します。
 
     インラインサイズ抑制が要素に適用されます。要素のインラインサイズは、子要素を無視して[単独で計算](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ抑制)することができます （[CSS コンテナーの使用](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)を参照してください）。
 
 - `normal`
-
   - : この要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、[コンテナースタイルクエリー](/ja/docs/Web/CSS/@container#コンテナースタイルクエリー)のクエリーコンテナーであることに変わりはありません。
 
 - `scroll-state`
-
   - : コンテナーのスクロール状態クエリー用のクエリコンテナーを設定します。この場合、要素のサイズは単独で計算されず、抑制は適用されません。
 
 - `size`
-
   - : [インラインおよびブロック](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)の両方の寸法で コンテナーサイズクエリーのためのクエリー コンテナーを確立します。
     コンテナーにレイアウト抑制、スタイル抑制、サイズ抑制を適用します。
 

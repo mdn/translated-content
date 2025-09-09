@@ -3,8 +3,6 @@ title: Assertions
 slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 断言的组成之一是边界。对于文本、词或模式，边界可以用来表明它们的起始或终止部分（如先行断言，后行断言以及条件表达式）。
 
 {{InteractiveExample("JavaScript Demo: RegExp Assertions", "taller")}}
@@ -114,7 +112,8 @@ console.log(text.match(regexpFoxQuality));
 
 ### 其他断言
 
-> **备注：** `？`字符也可用作量词
+> [!NOTE]
+> `？`字符也可用作量词
 
 <table class="standard-table">
   <thead>

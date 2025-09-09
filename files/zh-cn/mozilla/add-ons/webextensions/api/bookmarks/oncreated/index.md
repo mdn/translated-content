@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当创建书签项（书签或文件夹）时触发。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.bookmarks.onCreated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `id`
       - : `string`。新书签项的 ID。
     - `bookmark`

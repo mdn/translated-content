@@ -381,7 +381,6 @@ if (document.prerendering) {
 - 下载链接，即带有 `download` 属性的 {{htmlelement("a")}} 和 {{htmlelement("area")}} 元素，其下载将被推迟，直到预渲染完成。
 - 不允许跨站点导航：任何导航到不同站点的预渲染文档将在发送对这类其他站点的请求之前立即被丢弃。
 - 受限的 URL：预渲染文档不能托管非 HTTP（S）顶级 URL。包含以下 URL 类型将导致预渲染立即被丢弃：
-
   - [`javascript:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/javascript)
   - [`data:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data)
   - `blob:` URL
@@ -390,7 +389,6 @@ if (document.prerendering) {
 - 会话存储：{{domxref("Window.sessionStorage")}} 可以使用，但行为非常特定，以避免影响到那些对会话存储有预期的网站，这些网站的设计是基于一个前提：同一时间只有一个页面能够访问标签页的会话存储。因此，预渲染页面在开始时会获得一个克隆，这个克隆是基于页面创建时标签页会话存储的状态。在激活时，预渲染页面的存储克隆被丢弃，取而代之的是标签页的主存储状态。使用会话存储的页面可以使用 {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} 事件来检测何时发生此存储交换。
 - {{domxref("Window.print()")}}：对该方法的任何调用都将被忽略。
 - “简单对话框方法”限制如下：
-
   - {{domxref("Window.alert()")}} 立即返回而不显示对话框。
   - {{domxref("Window.confirm()")}} 立即返回 `false` 而不显示对话框。
   - {{domxref("Window.prompt()")}} 立即返回一个空字符串（`""`）而不显示对话框。

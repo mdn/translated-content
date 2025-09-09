@@ -65,20 +65,16 @@ Este elemento incluye atributos globales.
 - `align` {{deprecated_inline}}
   - : Alineamiento de la texto respecto al contexto que la rodea.
 - `alt`
-
   - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](#supported_image_formats) o si la imagen aún no se ha descargado.
 
     > [!NOTE]
     > Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
 
 - `border` {{deprecated_inline}}
-
   - : Anchura del borde alrededor de la imagen.
 
 - `crossorigin`
-
   - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/How_to/CORS_enabled_image) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
-
     - `"anonymous"`
       - : Una petición cross-origin (i.e., with `Origin:` HTTP header) es realizada. Sin embargo, no fueron enviadas credenciales "_(i.e., no cookie, no X.509 certificate, and no HTTP Basic authentication is sent)_". Sí el servidor no emite credenciales al sitio de origen (no ajustando el `Access-Control-Allow-Origin:` HTTP header), la imagen será pintada y su uso restringido.
     - `"use-credentials"`
@@ -91,7 +87,6 @@ Este elemento incluye atributos globales.
 - `hspace` {{deprecated_inline}}
   - : El número de píxeles de espaciado a la izquierda y la derecha de la imagen.
 - `ismap`
-
   - : Este atributo boleano indica que la imagen es parte del mapa del lado del servidor. Así que, se envían las coordenadas precisas de un clic.
 
     > [!NOTE]
@@ -102,9 +97,7 @@ Este elemento incluye atributos globales.
 - `name` {{deprecated_inline}}
   - : El nombre para el elemento. Soportado en HTML4 solo para compatibilidad con versiones anteriores. En su lugar, usa el atributo **`id`**.
 - `referrerpolicy` {{experimental_inline}}
-
   - : Una cadena indicando que referencia usar cuando buscas un recurso:
-
     - `"no-referrer"`: la cabecera no se envia.
     - "`no-referrer-when-downgrade`": la cabecera no será enviada cuando navegas hacia un origen sin TLS (HTTPS). Es el comportamiento predeterminado, si no se especifica en ninguna política.
     - `"origin"`: el referente será el origen de la página; lo que sería el esquema, el anfitrión (host) y el puerto.
@@ -112,9 +105,7 @@ Este elemento incluye atributos globales.
     - `"unsafe-url"`: el referente incluirá el origen y el camino (pero no el fragment, contraseña, o nombre de usuario). Este caso es arriegasdo porque puede haber una fuga del origen o el camino desde los recursos protegidos por TLS desde orígenes inseguros.
 
 - `sizes`
-
   - : Una lista de una o más cadenas separadas por comas indicando el tamaño de la fuente. Cada tamaño de la fuente consiste en:
-
     1. Codición de medios. Debe omitirse en el último ítem.
     2. Valor del tamaño.
 
@@ -123,12 +114,9 @@ Este elemento incluye atributos globales.
 - `src`
   - : La URL de la imagen. Este atributo es obligatorio para el elemento \<img>. En navegadores que soportan `srcset`, `src` es tratado como imagen candidata con una densidad del píxel `1x` sino una imagen estará definida en `srcset` o `srcset` contiene ancho.
 - `srcset`
-
   - : Una lista de una o más cadenas separadas por comas indicando las posibles fuentes para usar. Cada cadena está compuesta por:
-
     1. URL de la imagen
     2. Opcionalmente, espacios en blanco seguidos de:
-
        - Un ancho, que es un entero positivo seguido directamente por `'w'`. El ancho está dividido por el tamaño de la fuente dada en el atributo `sizes` para calcular la densidad del píxel.
        - Densidad del píxel, un positivo decimal seguido directamente de `'x'`.
 
@@ -141,7 +129,6 @@ Este elemento incluye atributos globales.
 - `width`
   - : El ancho de la imagen en píxeles CSS en HTML5, o píxeles o porcentaje en HTML4.
 - `usemap`
-
   - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/Web/HTML/Reference/Elements/map) asociado a un elemento.
 
     > [!NOTE]

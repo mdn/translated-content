@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Status/402
 original_slug: Web/HTTP/Status/402
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 O código de status HTTP **`402 Payment Required`** é um termo despadronizado para respostas de Status, podendo-se ter usos futuros.
 

@@ -31,9 +31,7 @@ browser.tabs.onCreated.hasListener(listener);
 ### パラメーター
 
 - `callback`
-
   - : このイベントが発生したときに呼び出される関数です。関数は次の引数を渡されます:
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}。生成されたタブの詳細です。
 

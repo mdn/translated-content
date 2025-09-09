@@ -91,7 +91,8 @@ if (navigator.mediaDevices) {
 pre.innerHTML = myScript.innerHTML;
 ```
 
-> **备注：** **注意**: 调用`createMediaStreamSource()`, 来自于媒体流的音频回放将被重新传到 AudioContext 的处理器中。所以播放/暂停流仍然是可以通过 media 元素的 API 和自带的控制器控制。
+> [!NOTE]
+> 调用 `createMediaStreamSource()`，来自于媒体流的音频回放将被重新传到 AudioContext 的处理器中。所以播放/暂停流仍然是可以通过 media 元素的 API 和自带的控制器控制。
 
 ## 规范
 

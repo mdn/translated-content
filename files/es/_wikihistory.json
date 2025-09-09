@@ -2307,17 +2307,17 @@
       "javierpolit"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
-    "modified": "2020-07-16T22:25:06.606Z",
-    "contributors": [
-      "Loba25",
-      "henardemiguel"
-    ]
-  },
   "Learn_web_development/Core/Structuring_content/Planet_data_table": {
     "modified": "2020-07-16T22:25:29.339Z",
     "contributors": [
       "IXTRUnai"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Splash_page": {
+    "modified": "2020-07-16T22:25:06.606Z",
+    "contributors": [
+      "Loba25",
+      "henardemiguel"
     ]
   },
   "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content": {
@@ -2768,18 +2768,6 @@
       "OMEGAYALFA",
       "chrisdavidmills",
       "cizquierdof"
-    ]
-  },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Input_types": {
-    "modified": "2020-07-16T22:22:11.445Z",
-    "contributors": [
-      "Enesimus"
-    ]
-  },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls": {
-    "modified": "2020-07-16T22:22:12.140Z",
-    "contributors": [
-      "Enesimus"
     ]
   },
   "Learn_web_development/Extensions/Forms/Your_first_form": {
@@ -5040,6 +5028,14 @@
       "Nathymig"
     ]
   },
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-23T23:21:27.399Z",
+    "contributors": [
+      "ExE-Boss",
+      "wbamberg",
+      "gabo8611"
+    ]
+  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2019-03-23T23:51:24.173Z",
     "contributors": [
@@ -5073,12 +5069,6 @@
       "lajaso",
       "jucazam",
       "pablo.turati"
-    ]
-  },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-08-24T04:42:05.596Z",
-    "contributors": [
-      "Nachec"
     ]
   },
   "Web/API/DragEvent": {
@@ -8386,12 +8376,6 @@
       "pekechis"
     ]
   },
-  "Web/CSS/-moz-image-region": {
-    "modified": "2019-03-23T22:35:58.872Z",
-    "contributors": [
-      "pekechis"
-    ]
-  },
   "Web/CSS/-moz-orient": {
     "modified": "2019-03-23T22:38:38.798Z",
     "contributors": [
@@ -9780,6 +9764,12 @@
     "modified": "2019-03-23T22:36:23.444Z",
     "contributors": [
       "pekechis"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-08-24T04:42:05.596Z",
+    "contributors": [
+      "Nachec"
     ]
   },
   "Web/CSS/CSS_transforms/Using_CSS_transforms": {
@@ -11897,14 +11887,6 @@
       "carloque",
       "Sebastianz",
       "pekechis"
-    ]
-  },
-  "Web/Events": {
-    "modified": "2019-03-23T23:21:27.399Z",
-    "contributors": [
-      "ExE-Boss",
-      "wbamberg",
-      "gabo8611"
     ]
   },
   "Web/HTML": {
@@ -14655,7 +14637,7 @@
       "GoToLoop"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_properties": {
+  "Web/JavaScript/Reference/Classes/Private_elements": {
     "modified": "2020-10-15T22:33:54.045Z",
     "contributors": [
       "aronvx"
@@ -19365,6 +19347,18 @@
       "RaulHernandez"
     ]
   },
+  "conflicting/Learn_web_development/Extensions/Forms": {
+    "modified": "2020-07-16T22:22:12.140Z",
+    "contributors": [
+      "Enesimus"
+    ]
+  },
+  "conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771": {
+    "modified": "2020-07-16T22:22:11.445Z",
+    "contributors": [
+      "Enesimus"
+    ]
+  },
   "conflicting/Learn_web_development/Extensions/Testing": {
     "modified": "2020-07-16T22:38:54.378Z",
     "contributors": [
@@ -19865,6 +19859,12 @@
       "Mgjbot",
       "Firewordy",
       "HenryGR"
+    ]
+  },
+  "conflicting/Web/CSS/clip": {
+    "modified": "2019-03-23T22:35:58.872Z",
+    "contributors": [
+      "pekechis"
     ]
   },
   "conflicting/Web/CSS/cursor": {

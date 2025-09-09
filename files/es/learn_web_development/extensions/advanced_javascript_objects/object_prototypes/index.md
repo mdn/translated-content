@@ -112,7 +112,8 @@ var myString = "Esto es mi String.";
 
 `myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
 
-> **Advertencia:** **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
+> [!WARNING]
+> **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
 
 ## Revisando create()
 

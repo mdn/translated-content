@@ -14,5 +14,4 @@ l10n:
 - 위키백과의 [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol)
 - [RFC 7826](https://datatracker.ietf.org/doc/html/rfc7826) (프로토콜의 작동 방식을 정확하게 표시한 문서 중 하나)
 - [용어사전](/ko/docs/Glossary)
-
   - {{Glossary("RTSP")}}

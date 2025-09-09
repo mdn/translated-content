@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_syntax/At-rule
 original_slug: Web/CSS/At-rule
 ---
 
-{{cssref}}
-
 Una **regla-at** es una [declaración CSS](/es/docs/Web/CSS/CSS_syntax/Syntax#css_statements) que comienza con el símbolo arroba, '@' (U+0040 COMMERCIAL AT), seguido por un identificador, e incluye todo el contenido hasta el siguiente punto y coma, ';' (U+003B SEMICOLON), o el siguiente [bloque CSS](/es/docs/Web/CSS/CSS_syntax/Syntax#css_declarations_blocks), lo que sea primero.
 
 Hay varias reglas-at, designadas por sus identificadores, cada una con sintaxis distinta:
@@ -14,7 +12,6 @@ Hay varias reglas-at, designadas por sus identificadores, cada una con sintaxis 
 - {{cssxref("@import")}} — Indica al motor de CSS que incluya una hoja de estilos externa.
 - {{cssxref("@namespace")}} — Indica al motor de CSS que todo el contenido usa como prefijo un espacio de nombres XML.
 - **_Reglas-at anidadas_** — Un subconjunto de declaraciones anidadas, que pueden ser usadas como declaraciones de estilos, así como grupos de reglas condicionadas internas:
-
   - {{cssxref("@media")}} — Un grupo de reglas condicional que aplicará su contenido si el dispositivo cumple los criterios de las condiciones definidas usando un _media query_.
   - {{cssxref("@supports")}} {{experimental_inline}} — Un grupo de reglas condicional que aplicará su contenido si el navegador cumple los criterios de la condición dada.
   - {{cssxref("@document")}} {{experimental_inline}} — Un grupo de reglas condicionadas que aplicará su contenido si el documento donde se aplica la hoja de estilos cumple los criterios de la condición dada. _(diferida al Nivel 4 de la Especificación CSS)_

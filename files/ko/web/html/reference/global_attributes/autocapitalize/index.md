@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/autocapitalize
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`autocapitalize`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 사용자가 입력하거나 수정하는 텍스트를 자동으로 대문자로 바꾸는 방식을 제어하는 열거형 특성입니다. 가능한 값은 다음과 같습니다.
+**`autocapitalize`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 사용자가 입력하거나 수정하는 텍스트를 자동으로 대문자로 바꾸는 방식을 제어하는 열거형 특성입니다. 가능한 값은 다음과 같습니다.
 
 - `off` 또는 `none`: 대문자로 변환하지 않음 (모든 문자의 기본값 소문자)
 - `on` 또는 `sentences`: 각 문장의 첫 번째 문자는 기본값 대문자, 다른 모든 문자는 기본값 소문자

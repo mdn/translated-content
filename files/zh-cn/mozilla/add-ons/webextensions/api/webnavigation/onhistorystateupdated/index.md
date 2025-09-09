@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7f038f6e3dea639a8e5432569f37ecf81d1ce0f9
 ---
 
-{{AddonSidebar}}
-
 当页面使用 [history API](/zh-CN/docs/Web/API/History_API/Working_with_the_History_API) 更新浏览器地址栏中显示的 URL 时触发此事件。此框架的所有后续事件将使用更新后的 URL。
 
 ## 语法
@@ -34,9 +32,7 @@ browser.webNavigation.onHistoryStateUpdated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `details`
       - : `object`。有关导航事件的详细信息。参见 [details](#details) 部分以了解更多信息。
 

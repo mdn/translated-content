@@ -3,8 +3,6 @@ title: width
 slug: Web/CSS/width
 ---
 
-{{CSSRef}}
-
 CSS **`width`** 속성은 요소의 너비를 설정합니다. 기본값은 콘텐츠 영역의 너비이지만, {{cssxref("box-sizing")}}이 `border-box`라면 테두리 영역의 너비를 설정합니다.
 
 {{InteractiveExample("CSS Demo: width")}}
@@ -81,7 +79,7 @@ width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 너비의 절댓값.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비의 백분율. 컨테이닝 블록이 요소 너비에 영향을 받는 경우의 결과 레이아웃은 정해지지 않습니다.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 너비의 백분율. 컨테이닝 블록이 요소 너비에 영향을 받는 경우의 결과 레이아웃은 정해지지 않습니다.
 - `auto`
   - : 요소의 너비를 브라우저가 계산해 지정합니다.
 - `max-content`

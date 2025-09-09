@@ -2,10 +2,8 @@
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
 l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
-
-{{JSRef}}
 
 **`Math.E`** 靜態資料屬性代表歐拉數（Euler's number），即自然對數的底數 e ，其值約為 2.718。
 

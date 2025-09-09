@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d13c1276b80bbfc940a1091b62f333fe9edc78a2
 ---
 
-{{CSSRef}}
-
 グラフィックのコンテキストでピクセルの位置を指定する場合（ちょうど[代数学](https://ja.wikipedia.org/wiki/代数学)で座標系を指定する場合と同様）、その位置はコンテキスト内の固定点を基準として定義されます。この固定点は[原点](<https://ja.wikipedia.org/wiki/原点_(数学)>)と呼ばれています。位置は、コンテキストの各次元に沿った原点からのピクセル単位のオフセットで指定されます。
 
 このガイドでは、 CSS オブジェクトモデルで使われる標準的な座標系を説明します。これらは一般に、原点がどこにあるかという点でのみ異なっています。
@@ -142,14 +140,12 @@ HTML は `"log"` クラスを持つ `<p>` を収めており、マウスイベ�
 - [ビューポートの概念](/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts)
 - [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): 座標系を変更する方法
 - {{domxref("MouseEvent")}} の座標:
-
   - {{domxref("MouseEvent.offsetX")}} と {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} と {{domxref("MouseEvent.clientY")}}
   - {{domxref("MouseEvent.pageX")}} と {{domxref("MouseEvent.pageY")}}
   - {{domxref("MouseEvent.screenX")}} と {{domxref("MouseEvent.screenY")}}
 
 - {{domxref("Touch")}} の座標:
-
   - {{domxref("Touch.clientX")}} と {{domxref("Touch.clientY")}}
   - {{domxref("Touch.pageX")}} と {{domxref("Touch.pageY")}}
   - {{domxref("Touch.screenX")}} と {{domxref("Touch.screenY")}}

@@ -155,4 +155,4 @@ afficher.call(); // prenom est Archibald
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects)
+- [Introduction à JavaScript orienté objet](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

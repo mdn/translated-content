@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
-{{CSSRef}}
-
 每个 CSS 声明都由一个属性/值对组成。值的具体形式因属性而异，例如：单个整数、关键字、函数，或是不同元素的组合；部分值具有单位，而另一些则没有单位。所有属性都接受 CSS 全局值（CSS-wide value）。CSS 值和单位模块定义了 CSS 属性所接受的数据类型，包括各类值和单位。该模块还定义了 CSS 值定义语法（即形式语法），用于规范所有 CSS 属性和函数的有效取值范围。
 
 ## 参考
@@ -182,37 +180,29 @@ l10n:
 ## 指南
 
 - [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-
   - : CSS 数据类型的简介，这些数据类型定义了 CSS 属性和函数接受的典型值。
 
 - [数值数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-
   - : 数值数据类型的概述，包括整数、数字、百分比和尺寸，以及相对与绝对长度、角度和时间单位。
 
 - [文本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
-
   - : 文本数据类型的概述，包括预定义关键字值、全局 CSS 关键字值以及 URL。
 
 - [CSS 值函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
-
   - : 概述那些通过特殊数据处理或计算来返回 CSS 属性值的 CSS 语句。
 
 - [使用 CSS 数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
-
   - : CSS 数学函数允许将属性值写成数学表达式的形式。
 
 - [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-
   - : 用于定义 CSS 属性和函数的有效值集合的形式语法。
 
 - [学习：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-
   - : 了解一些最常用的值类型，它们是什么，以及它们是如何工作的。
 
 ## 相关
 
 - [CSS 层叠与继承](/zh-CN/docs/Web/CSS/CSS_cascade)模块
-
   - {{cssxref("initial")}}
   - {{cssxref("inherit")}}
   - {{cssxref("revert")}}
@@ -221,22 +211,18 @@ l10n:
   - {{cssxref("all")}}
 
 - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)模块
-
   - {{cssxref("&lt;flex&gt;")}}
   - [弹性单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#弹性单位)（`fr`）
 
 - [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块
-
   - [容器单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#容器单位)（`cqb`、`cqh`、`cqi`、`cqmax`、`cqmin`、`cqw`）
 
 - [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)模块
-
   - {{cssxref("&lt;color&gt;")}}
   - {{cssxref("system-color")}}
   - [`color-mix()`](/zh-CN/docs/Web/CSS/color_value/color-mix)
 
 - [CSS 图像](/zh-CN/docs/Web/CSS/CSS_images)模块
-
   - {{cssxref("&lt;image&gt;")}}
   - {{cssxref("&lt;gradient&gt;")}}
 

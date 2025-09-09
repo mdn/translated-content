@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 758ddcdfb06f53955fa3c05dd32e7e4e53fd3009
 ---
 
-{{CSSRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!WARNING]
 > 若有可能，建議作者使用較新的 {{cssxref("clip-path")}} 屬性來取代。
@@ -32,7 +32,6 @@ clip: unset;
 ### 值
 
 - `rect()`
-
   - : 使用 `rect()` 函式定義的矩形，其語法形式為為 `rect(<top>, <right>, <bottom>, <left>)`。`<top>` 和 `<bottom>` 值是從盒子*內部上邊框邊緣*的偏移，而 `<right>` 和 `<left>` 是從*內部左邊框邊緣*的偏移，即填充區域的範圍。
 
     `<top>`、`<right>`、`<bottom>` 和 `<left>` 的值可以是 {{cssxref("&lt;length&gt;")}} 或 `auto`。若任何邊的值為 `auto`，元素將會被裁切至該邊的*內部邊框邊緣*。

@@ -30,13 +30,13 @@ MDN의 초심자용 서버측 프로그래밍 코스에 오신 것을 환영합�
 
 ## 서버측 웹 사이트 프로그래밍이 무엇인가요?
 
-[web servers](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)와 통신하는 웹 브라우저는 **H**yper**T**ext **T**ransport **P**rotocol ({{glossary("HTTP")}})을사용하고 있습니다. 당신이 웹 페이지의 링크를 클릭하거나 폼을 전송하거나 검색을 시작할 때 당신의 웹 브라우저는 **HTTP request**를 목적 서버에 전달합니다. 요청에는 영향을받는 리소스를 식별하는 URL, 필요한 작업을 정의하는 메서드가 포함됩니다 (예를 들면 리소스를 가져 오거나, 삭제하거나 게시하는 방법), 그리고 URL매개변수([query 문자열](https://en.wikipedia.org/wiki/Query_string)을 통해 전송된 필드 값-쌍), POST 데이터 ([HTTP POST method](/ko/docs/Web/HTTP/Methods/POST)에 의해 전송된 데이터), 또는{{glossary("Cookie", "associated cookies")}}를 이용하여 인코딩된 추가 정보를 포함 할 수 있습니다.
+[web servers](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)와 통신하는 웹 브라우저는 **H**yper**T**ext **T**ransport **P**rotocol ({{glossary("HTTP")}})을사용하고 있습니다. 당신이 웹 페이지의 링크를 클릭하거나 폼을 전송하거나 검색을 시작할 때 당신의 웹 브라우저는 **HTTP request**를 목적 서버에 전달합니다. 요청에는 영향을받는 리소스를 식별하는 URL, 필요한 작업을 정의하는 메서드가 포함됩니다 (예를 들면 리소스를 가져 오거나, 삭제하거나 게시하는 방법), 그리고 URL매개변수([query 문자열](https://en.wikipedia.org/wiki/Query_string)을 통해 전송된 필드 값-쌍), POST 데이터 ([HTTP POST method](/ko/docs/Web/HTTP/Reference/Methods/POST)에 의해 전송된 데이터), 또는{{glossary("Cookie", "associated cookies")}}를 이용하여 인코딩된 추가 정보를 포함 할 수 있습니다.
 
 웹 서버는 클라이언트의 요청이 오길 기다리고, 요청이 도착하면 작업을 진행하여, 웹 브라우저에 **HTTP 응답** 메시지를 보냅니다. 그 응답은 요청이 성공 또는 실패를 지시하는 상태 라인을 포함하고 있습니다 (예: "HTTP/1.1 200 OK" for success). 요청에 대한 응답이 성공적이라면 본문은 요청 리소스(예. 새로운 HTML 페이지, 또는 이미지, 기타 등등...)를 포함 할 것이며 이는 웹 브라우저에 보여질 수 있습니다.
 
 ### 정적 웹 사이트(Static sites)
 
-_아래의 다이어그램은 정적사이트의 기본적인 웹 구조를 보여주고 있습니다_(정적 사이트는 특별한 리소스 요청이 들어올 때 서버에서 하드 코딩된 동일한 콘텐츠를 반환합니다). 사용자가 페이지를 탐색하거나, 브라우저가 지정된 URL에 HTTP "GET"요청을 보낼 때 서버는 파일 시스템에서 요청한 문서를 검색하고 문서와 [success status](/ko/docs/Web/HTTP/Status#successful_responses) (보통 200 OK)를 포함한 HTTP응답을 반환 합니다. 만약 어떠한 이유 때문에 파일을 검색하면 error status([client error responses](/ko/docs/Web/HTTP/Status#client_error_responses) 그리고 [server error responses](/ko/docs/Web/HTTP/Status#server_error_responses)를 참고 하십시오)가 반환됩니다.
+_아래의 다이어그램은 정적사이트의 기본적인 웹 구조를 보여주고 있습니다_(정적 사이트는 특별한 리소스 요청이 들어올 때 서버에서 하드 코딩된 동일한 콘텐츠를 반환합니다). 사용자가 페이지를 탐색하거나, 브라우저가 지정된 URL에 HTTP "GET"요청을 보낼 때 서버는 파일 시스템에서 요청한 문서를 검색하고 문서와 [success status](/ko/docs/Web/HTTP/Reference/Status#successful_responses) (보통 200 OK)를 포함한 HTTP응답을 반환 합니다. 만약 어떠한 이유 때문에 파일을 검색하면 error status([client error responses](/ko/docs/Web/HTTP/Reference/Status#client_error_responses) 그리고 [server error responses](/ko/docs/Web/HTTP/Reference/Status#server_error_responses)를 참고 하십시오)가 반환됩니다.
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 

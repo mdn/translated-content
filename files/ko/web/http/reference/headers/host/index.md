@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Host
 original_slug: Web/HTTP/Headers/Host
 ---
 
-{{HTTPSidebar}}
-
 **`Host`** 요청 헤더는 (가상 호스팅을 위해) 서버의 도메인명과 서버가 리스닝하는 (부가적인) TCP 포트를 특정합니다.
 
 포트가 주어지지 않으면, 요청된 서버의 기본 포트(예를 들어, HTTP URL은 "80")를 의미합니다.

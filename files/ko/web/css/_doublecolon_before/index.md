@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
 ---
 
-{{CSSRef}}
-
 CSS에서, **`::before`** 는 선택된 요소의 첫번째 자식인 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 생성합니다. 이는 종종 {{cssxref("content")}} 속성을 활용하여 요소에 장식 콘텐츠를 추가하는 데에 사용됩니다. 기본적으로 인라인 형식입니다.
 
 {{InteractiveExample("CSS Demo: ::before", "tabbed-standard")}}
@@ -40,7 +38,7 @@ a::before {
 </p>
 ```
 
-> [!NOTE] > `::before` 와 `::after` 로 생성된 의사 요소들은 마치 해당 요소가 적용된 요소의 직속 자식인 것처럼 생성된 박스입니다. 즉, 원본 요소의 직계 자식이기 때문에 {{htmlelement("img")}} 처럼 콘텐츠가 CSS 서식 모델의 범위를 벗어나는 [대체 요소](/ko/docs/Web/CSS/Replaced_element) 에는 적용할 수 없습니다.
+> [!NOTE] > `::before` 와 `::after` 로 생성된 의사 요소들은 마치 해당 요소가 적용된 요소의 직속 자식인 것처럼 생성된 박스입니다. 즉, 원본 요소의 직계 자식이기 때문에 {{htmlelement("img")}} 처럼 콘텐츠가 CSS 서식 모델의 범위를 벗어나는 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties) 에는 적용할 수 없습니다.
 
 ## 구문
 

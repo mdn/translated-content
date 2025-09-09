@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **컬럼 결합자** (`||`)는 CSS 선택자 사이에 위치합니다. 이는 첫번째 선택자에 의해 일치되는 컬럼 요소에 속하는 두번째 선택자와 일치되는 요소들만을 매칭합니다.
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b54373ab9025ceb6eb404bd2538ebd4c01576c60
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Cross-Origin-Resource-Policy`** 响应标头表示期望浏览器阻止对给定资源在 no-cors 模式下的跨源或跨站点请求。
 
 <table class="properties">

@@ -3,8 +3,6 @@ title: background-image
 slug: Web/CSS/background-image
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`background-image`** 属性用于为一个元素设置一个或者多个背景图像。
 
 {{InteractiveExample("CSS Demo: background-image")}}
@@ -139,7 +137,6 @@ div {
 - {{HTMLElement("img")}}
 - 与图像相关的数据类型：{{cssxref("&lt;image&gt;")}}、{{cssxref("&lt;gradient&gt;")}}
 - 与图像相关的函数：
-
   - {{cssxref("cross-fade", "cross-fade()")}}
   - {{cssxref("element", "element()")}}
   - {{cssxref("image/image", "image()")}}

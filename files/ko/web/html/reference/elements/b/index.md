@@ -81,7 +81,7 @@ b {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
@@ -90,7 +90,6 @@ b {
 - `&#x3C;b>` 요소와 {{HTMLElement("strong")}}, {{HTMLElement("em")}}, {{HTMLElement("mark")}} 요소를 혼동하지 않도록 주의하세요. {{HTMLElement("strong")}} 요소는 **중요**한 글을, {{HTMLElement("em")}} 요소는 약간의 강조가 필요한 글을, {{HTMLElement("mark")}} 요소는 관련성이 있는 글을 나타냅니다. `&#x3C;b>` 요소는 아무런 의미도 갖지 않으므로 다른 요소가 적합하지 않을 때만 사용하세요.
 
 - 비슷한 이유로 `&#x3C;b>` 요소로만 제목을 만들어선 안됩니다. 제목은 {{HTMLElement("h1")}}에서 {{HTMLElement("h6")}} 태그로 표현하세요. 특히 스타일 시트를 사용해 제목 요소의 스타일을 바꿀 수 있다는 점을 생각해보면, 제목이 꼭 굵은 글씨체일 필요는 없습니다.
-
   - It is a good practice to use the **class** attribute on the `&#x3C;b>` in order to convey additional semantic information (for example `&#x3C;b class="lede">` for the first sentence in a paragraph). This eases the development of several stylings of a web document, without the need to change its HTML code.
 
 - 과거 `&#x3C;b>` 요소는 굵을 글씨를 만들 때 사용했습니다. HTML4부터 스타일 정보는 사용하지 않으므로 `&#x3C;b>` 요소의 의미도 바뀌었습니다.

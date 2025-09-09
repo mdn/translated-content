@@ -2,10 +2,8 @@
 title: 値定義構文
 slug: Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 l10n:
-  sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **CSS の値定義構文**は、形式文法であり、 CSS プロパティや関数の有効な値の組み合わせ定義するのに使われます。この構文に加えて、有効な値の組み合わせは意味的な制約で有効値の集まりをさらに制限できます (例えば、数値を正の値に限定します)。
 
@@ -50,9 +48,7 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 
 角括弧はいくつかの対象、結合子、乗算子を取り囲み、単一の成分に変換します。**ひとまとまりの成分の優先順位を無視する**ために使われます。
 
-```css
-bold [ thin && <length> ]
-```
+{{CSSSyntaxRaw(`example = bold [ thin && <length> ]`)}}
 
 この例は次の値に一致します。
 
@@ -68,9 +64,7 @@ bold [ thin && <length> ]
 
 いくつかのキーワード、リテラル、データ型を順に配置し、1 つ以上の空白で区切る置き方を「並列」と呼びます。並列の成分は**どれも必須で、記述順どおりに出現する必要があります**。
 
-```css
-bold <length>, thin
-```
+{{CSSSyntaxRaw(`example = bold <length>, thin`)}}
 
 この例は次の値に一致します。
 
@@ -89,9 +83,7 @@ bold <length>, thin
 
 2 つ以上の成分を二重アンパサンド `&&` で区切ると、対象すべてが**必須だが出現順は問わない**という意味になります。
 
-```css
-bold && <length>
-```
+{{CSSSyntaxRaw(`example = bold && <length>`)}}
 
 この例は次の値に一致します。
 
@@ -112,15 +104,13 @@ bold && <length>
 
 2 つ以上の成分を二重バー `||` で区切ると、すべての対象が省略可能であることを意味します。**少なくともいずれか 1 つが存在する必要がありますが、順序は問いません**。[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の値定義に使われます。
 
-```css
-<'border-width'> || <'border-style'> || <'border-color'>
-```
+{{CSSSyntaxRaw(`example = <number> || <length> || <color>`)}}
 
 この例は次の値に一致します。
 
-- `1em solid blue`
+- `1em 1 blue`
 - `blue 1em`
-- `solid 1px yellow`
+- `1 1px yellow`
 
 次の値には一致しません。
 
@@ -134,9 +124,7 @@ bold && <length>
 
 2 つ以上の対象を単一バー `|` で区切ると、全対象が排他的な選択肢であることを意味します。**選択肢のうち 1 つだけが存在する必要があります**。利用可能なキーワードを列挙する際によく使われます。
 
-```css
-<percentage> | <length> | left | center | right | top | bottom
-```
+{{CSSSyntaxRaw(`example = <percentage> | <length> | left | center | right | top | bottom`)}}
 
 この例は次の値に一致します。
 
@@ -167,9 +155,7 @@ bold && <length>
 
 アスタリスク乗算子は、対象の **0 回以上**の出現を示します。
 
-```css
-bold smaller*
-```
+{{CSSSyntaxRaw(`example = bold smaller*`)}}
 
 この例は次の値に一致します。
 
@@ -186,9 +172,7 @@ bold smaller*
 
 プラス乗算子は、対象の **1 回以上**の出現を示します。
 
-```css
-bold smaller+
-```
+{{CSSSyntaxRaw(`example = bold smaller+`)}}
 
 この例は次の値に一致します。
 
@@ -205,9 +189,7 @@ bold smaller+
 
 疑問符乗算子は、対象は省略可能で、**0 回または 1 回**出現することを意味します。
 
-```css
-bold smaller?
-```
+{{CSSSyntaxRaw(`example = bold smaller?`)}}
 
 この例は次の値に一致します。
 
@@ -223,9 +205,7 @@ bold smaller?
 
 波括弧乗算子は、カンマで区切った 2 つの整数を囲うもので、対象が**少なくとも A 回、最大で B 回**出現することを示します。
 
-```css
-bold smaller{1,3}
-```
+{{CSSSyntaxRaw(`example = bold smaller{1,3}`)}}
 
 この例は次の値に一致します。
 
@@ -243,9 +223,7 @@ bold smaller{1,3}
 
 ハッシュ記号乗算子は、対象が (プラス乗算子のように) 1 回以上繰り返されるが、それぞれをカンマ (',') で区切る必要があることを示します。
 
-```css
-bold smaller#
-```
+{{CSSSyntaxRaw(`example = bold smaller#`)}}
 
 この例は次の値に一致します。
 
@@ -261,9 +239,7 @@ bold smaller#
 
 ハッシュ記号は、オプションとして次の波括弧が続くことで、その実体が繰り返される回数を示します。
 
-```css
-bold smaller#{1,3}
-```
+{{CSSSyntaxRaw(`example = bold smaller#{1,3}`)}}
 
 この例は次の値と一致します。
 
@@ -275,9 +251,7 @@ bold smaller#{1,3}
 
 - `bold smaller, smaller, smaller, smaller`。 `smaller` は最大で 3 回しか出現できません。
 
-```css
-bold smaller#{2}
-```
+{{CSSSyntaxRaw(`example = bold smaller#{2}`)}}
 
 この例は次の値と一致します。
 
@@ -291,9 +265,7 @@ bold smaller#{2}
 
 グループの後の「強調点乗算子」は、グループが必須であり、少なくとも 1 つの値を生み出す必要があることを示します。グループ内の項目の構文が内容全体を省略することができるとしていても、少なくとも 1 つの成分値を省略することはできません。
 
-```css
-[ bold? smaller? ]!
-```
+{{CSSSyntaxRaw(`example = [ bold? smaller? ]!`)}}
 
 この例は次の値に一致します。
 
@@ -311,9 +283,7 @@ bold smaller#{2}
 
 特定の範囲内の数値を受け入れることができる型もあります。例えば、 [`column-count`](/ja/docs/Web/CSS/column-count) プロパティは、正の値 1 から無限大までの整数値を受け入れることができます。対応する構文は次のようになります。
 
-```plain
-<integer [1,∞]>
-```
+{{CSSSyntaxRaw(`example = <integer [1,∞]>`)}}
 
 この指定した範囲外の値は、宣言全体が不正なものとみなされるため、ブラウザーはそれを無視します。
 
@@ -457,4 +427,4 @@ bold smaller#{2}
     - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
   - **値定義構文**
   - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - {{glossary("Replaced elements", "置換要素")}}

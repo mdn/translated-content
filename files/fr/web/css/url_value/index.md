@@ -61,11 +61,8 @@ La fonction **`url()`** peut être incluse comme valeur pour les propriétés [`
 ### Valeurs
 
 - `<string>`
-
   - : Une chaîne de caractères indiquant une URL ou l'identifiant d'une forme SVG.
-
     - `<url>`
-
       - : Une URL, relative ou absolue, qui pointe vers une ressource web à inclure ou un URI de données éventuellement encadrée entre quotes ou doubles quotes. Les quotes sont obligatoires si l'URL inclut des parenthèses, espaces, doubles quotes, etc. (sauf si ces caractères sont échappés) ou si l'adresse inclut des caractères de contrôle supérieurs à `0x7e`. Il n'est pas possible d'utiliser des doubles quotes dans une URL encadrée par des doubles quotes à moins de les échapper. De même, on ne peut pas utiliser une simple quote dans une URL délimitée par des simples quotes. Les déclarations suivantes seront équivalentes&nbsp;:
 
         ```css
@@ -77,7 +74,7 @@ La fonction **`url()`** peut être incluse comme valeur pour les propriétés [`
       Si vous choisissez d'écrire l'URL sans guillemets, il faudra utiliser une barre oblique inverse (`\`) avant toute parenthèse, espace ou apostrophe (`'`) ou guillemets (`"`) faisant partie de l'URL.
 
     - `chemin`
-      - : La référence à un identifiant d'une [forme SVG](/fr/docs/Web/SVG/Tutorial/Basic_Shapes), `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, ou `rect`. Ce sera alors la géométrie de la forme qui sera utilisée pour le chemin.
+      - : La référence à un identifiant d'une [forme SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes), `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, ou `rect`. Ce sera alors la géométrie de la forme qui sera utilisée pour le chemin.
 
 - `url-modifier` {{Experimental_Inline}}
   - : À l'avenir, la fonction `url()` pourrait prendre en charge un modificateur tel qu'un identifiant ou une notation fonctionnelle qui modifierait le sens de l'URL. Cette valeur n'est pas complètement définie par la spécification et n'est pas prise en charge.

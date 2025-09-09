@@ -15,5 +15,5 @@ Lorsque le serveur envoie des données dans des paquets TCP, le client de l'util
 
 ## Voir aussi
 
-- [Remplir la page: comment fonctionnent les navigateurs](/fr/docs/Web/Performance/How_browsers_work)
-- [http overview](/fr/docs/Web/HTTP/Overview)
+- [Remplir la page: comment fonctionnent les navigateurs](/fr/docs/Web/Performance/Guides/How_browsers_work)
+- [http overview](/fr/docs/Web/HTTP/Guides/Overview)

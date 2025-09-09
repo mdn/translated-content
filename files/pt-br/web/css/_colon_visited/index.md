@@ -21,7 +21,6 @@ Styles definidos pela pseudo-classe `:visited` vão ser substituidos por qualque
 Por razões de privacidade, navegadores limitam estritamente quais estilos você pode aplicar usando esta pseudo-class, como elas podem ser usadas:
 
 - Propriedades admicíveis no CSS são:
-
   - {{ cssxref("color") }};
   - {{ cssxref("background-color") }};
   - {{ cssxref("border-color") }};

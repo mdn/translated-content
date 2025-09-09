@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 91cc9e7f8ae21665b40ad4c3fa5152cebad119ce
 ---
 
-{{CSSRef}}
-
 在图形上下文中指定像素的位置时（就像[代数](https://zh.wikipedia.org/wiki/代数)中指定坐标系一样），像素的位置是相对于上下文中的一个固定点定义的，这个固定点称为[原点](https://zh.wikipedia.org/wiki/原點)。位置指定为沿上下文每个维度从原点偏移的像素数。
 
 本指南介绍了 CSS 对象模型使用的标准坐标系。这些坐标系通常只是在原点位置上有所不同。
@@ -130,14 +128,12 @@ HTML 中包含一个 `"log"` 类的 `<p>` 元素，用于显示鼠标事件的�
 
 - [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)：如何改变坐标系
 - {{domxref("MouseEvent", "鼠标事件", "", 1)}}的坐标：
-
   - {{domxref("MouseEvent.offsetX")}} 和 {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} 和 {{domxref("MouseEvent.clientY")}}
   - {{domxref("MouseEvent.pageX")}} 和 {{domxref("MouseEvent.pageY")}}
   - {{domxref("MouseEvent.screenX")}} 和 {{domxref("MouseEvent.screenY")}}
 
 - {{domxref("Touch", "触摸事件", "", 1)}}的坐标：
-
   - {{domxref("Touch.clientX")}} 和 {{domxref("Touch.clientY")}}
   - {{domxref("Touch.pageX")}} 和 {{domxref("Touch.pageY")}}
   - {{domxref("Touch.screenX")}} 和 {{domxref("Touch.screenY")}}

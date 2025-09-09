@@ -89,9 +89,7 @@ align-self: unset;
 - `auto`
   - : O valor {{cssxref("align-items")}} é originado do valor de seu pai.
 - `normal`
-
   - : O efeito dessa palavra-chave depende do modo de layout em que nos encontramos:
-
     - Em layouts absolutamente posicionados, a palavra-chave se comporta como `start` em caixas absolutamente posicionadas _replaced_, e como `stretch` em caixas absolutamente posicionadas _all other_.
     - Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como `stretch`.
     - Para itens-flex, a palavra-chave se comporta como `stretch`.

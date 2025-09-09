@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 814f49dc14eb8c8a15c6c3bdc6c83d24ed865cdf
 ---
 
-{{AddonSidebar}}
-
 更新由扩展注册的用户脚本。
 
 ## 语法
@@ -20,7 +18,6 @@ let updatingUserScript = browser.userScripts.update(
 ### 参数
 
 - `scripts`
-
   - : {{WebExtAPIRef("userScripts.RegisteredUserScript")}} 的数组（`array`）。要更新的用户脚本的详细信息。
 
     属性为 `null` 或省略时将不更改这些属性。向 `matches`、`excludeMatches`、`globs` 和 `excludeGlobs` 属性传入空数组会清除这些属性。

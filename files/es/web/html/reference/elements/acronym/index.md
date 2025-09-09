@@ -11,7 +11,6 @@ original_slug: Web/HTML/Element/acronym
 **acromym** de acromyn=acrónimo
 
 - Es el encargado para marcar estas formas abreviadas (modem, AJAX...). Además, gracias al atributo `title` podemos indicar la versión extendida del término.
-
   - : **Sus etiquetas son**: \<abbr> y \</abbr> (ambas obligatorias).
 
     **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).

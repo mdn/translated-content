@@ -11,7 +11,8 @@ slug: Web/API/Node/appendChild
 
 如果给定的子节点是 {{domxref("DocumentFragment")}}，那么 {{domxref("DocumentFragment")}} 的全部内容将转移到指定父节点的子节点列表中。
 
-> **备注：** **有更加新的 API 可供使用！** > {{domxref("ParentNode.append()")}} 方法支持多个参数，接受字符串作为参数，会将字符串转换为文本节点再附加。
+> [!NOTE]
+> **有更加新的 API 可供使用**！{{domxref("ParentNode.append()")}} 方法支持多个参数，接受字符串作为参数，会将字符串转换为文本节点再附加。
 
 ## 语法
 

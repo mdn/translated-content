@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 58f017d3bc8f78a9469055f1a7f7f3f5befa4447
 ---
 
-{{CSSRef}}
-
 **`line-clamp`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{Glossary("block", "ブロック")}}のコンテンツを指定した行数に制限することができます。
 
 > [!NOTE]

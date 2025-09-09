@@ -3,7 +3,7 @@ title: -webkit-text-stroke-width
 slug: Web/CSS/-webkit-text-stroke-width
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

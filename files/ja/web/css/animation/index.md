@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 32142cbf6ab60da6987aee2e11f59c5ee916ea49
 ---
 
-{{CSSRef}}
-
 **`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、スタイルの間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
 
-{{InteractiveExample("CSS Demo: animation")}}
+{{InteractiveExample("CSS デモ: animation")}}
 
 ```css interactive-example-choice
 animation: 3s ease-in 1s infinite reverse both running slide-in;
@@ -90,7 +88,6 @@ animation:
 - 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値
 
 - 以下の値は 0 ～ 1 回出現します。
-
   - [`<single-easing-function>`](#single-easing-function)
   - [`<single-animation-iteration-count>`](#single-animation-iteration-count)
   - [`<single-animation-direction>`](#single-animation-direction)
@@ -99,7 +96,8 @@ animation:
 
 - アニメーションの名前は任意で、 `none`, {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}} のいずれかになります。
 
-> **メモ:** {{cssxref("animation-timeline")}}、{{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}} は、現在の実装ではリセットのみであるため、現在のところこのリストには掲載されていません。つまり、 `animation` があると、それ以前に宣言した `animation-timeline` の値は `auto` に、それ以前に宣言した `animation-range-start` と `animation-range-end` の値は `normal` にリセットされますが、これらのプロパティを `animation` で設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を作成する場合、 `animation` の一括指定を宣言した後に、これらのプロパティを宣言しなければ効果を得ることはできません。
+> [!NOTE]
+> {{cssxref("animation-timeline")}}、{{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}} は、現在の実装ではリセットのみであるため、現在のところこのリストには掲載されていません。つまり、 `animation` があると、それ以前に宣言した `animation-timeline` の値は `auto` に、それ以前に宣言した `animation-range-start` と `animation-range-end` の値は `normal` にリセットされますが、これらのプロパティを `animation` で設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を作成する場合、 `animation` の一括指定を宣言した後に、これらのプロパティを宣言しなければ効果を得ることはできません。
 
 ### 値
 
@@ -148,7 +146,8 @@ animation:
 
 ## 例
 
-> **メモ:** [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に CPU に負荷がかかります。
+> [!NOTE]
+> [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に CPU に負荷がかかります。
 
 ### 日の出
 

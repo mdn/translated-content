@@ -117,7 +117,6 @@ _Cette interface hérite également des méthodes de [`EventTarget`](/fr/docs/We
 - [`setConfiguration()`](/fr/docs/Web/API/RTCPeerConnection/setConfiguration)
   - : Définit la configuration courante de la connexion en fonction des valeurs incluses dans l'objet [`RTCConfiguration`](/fr/docs/Web/API/RTCPeerConnection/RTCPeerConnection) passé en argument. Cela permet de modifier les serveurs [ICE](/fr/docs/Glossary/ICE) utilisés par la connexion ainsi que les règles de transport utilisées.
 - [`setIdentityProvider()`](/fr/docs/Web/API/RTCPeerConnection/setIdentityProvider)
-
   - : Définit le fournisseur d'identité (
 
     <i lang="en">Identity Provider</i>

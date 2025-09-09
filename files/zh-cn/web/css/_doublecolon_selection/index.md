@@ -3,8 +3,6 @@ title: ::selection
 slug: Web/CSS/::selection
 ---
 
-{{CSSRef}}
-
 **`::selection`** CSS 伪元素应用于文档中被用户高亮的部分（比如使用鼠标或其他选择设备选中的部分）。
 
 ```css
@@ -82,7 +80,8 @@ p::selection {
 
 {{Specifications}}
 
-> **备注：** `::selection` CSS 伪元素选择器是 CSS 第 3 级选择器的草案，但是在被推荐使用前就被废弃。它现在在第 4 级伪元素选择器草案中。
+> [!NOTE]
+> `::selection` CSS 伪元素选择器是 CSS 第 3 级选择器的草案，但是在被推荐使用前就被废弃。它现在在第 4 级伪元素选择器草案中。
 
 ## 浏览器兼容性
 

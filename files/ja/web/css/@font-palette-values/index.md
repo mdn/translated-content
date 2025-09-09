@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 81cab7a9c34e7bb3867f5d6d7e70fc73d0308087
 ---
 
-{{CSSRef}}
-
 **`@font-palette-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、フォントメーカーが作成した [font-palette](/ja/docs/Web/CSS/font-palette) の既定値をカスタマイズすることができます。
 
 ## 構文

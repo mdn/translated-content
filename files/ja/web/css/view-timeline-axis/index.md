@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`view-timeline-axis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）内の要素（主体要素）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインのアニメーションのタイムラインを提供するために使用される、スクロールバーの方向を指定するために使用します。 `view-timeline-axis` は主体要素に設定します。詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を参照してください。
 

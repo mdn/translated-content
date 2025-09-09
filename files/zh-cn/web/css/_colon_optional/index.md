@@ -3,8 +3,6 @@ title: :optional
 slug: Web/CSS/:optional
 ---
 
-{{CSSRef}}
-
 **`:optional`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何未设置 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性的 {{HTMLElement("input")}}、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。
 
 {{InteractiveExample("CSS Demo: :optional", "tabbed-standard")}}
@@ -46,7 +44,8 @@ label {
 
 这个伪类很有用，可以为不是必须提交的表单字段设置样式。
 
-> **备注：** {{cssxref(":required")}} 伪类选择*必填*表单字段
+> [!NOTE]
+> {{cssxref(":required")}} 伪类选择*必填*表单字段
 
 ## 语法
 

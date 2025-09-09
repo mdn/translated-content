@@ -75,7 +75,6 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 ### Valeurs
 
 - `<side-or-corner>`
-
   - : La position du point de départ de la ligne du dégradé. Si elle est indiquée, elle se compose du mot-clé `to` suivi d'un à deux mots-clés&nbsp;: le premier indiquant le côté horizontal (`left` pour gauche ou `right` pour droite), et le second indiquant le côté vertical (`top` pour haut ou `bottom` pour bas). L'ordre des mots-clés pour le côté n'a pas d'importance. Si cette valeur n'est pas indiquée, elle vaudra `to bottom` par défaut.
 
     Les valeurs `to top`, `to bottom`, `to left`, and `to right` sont respectivement équivalentes aux angles `0deg`, `180deg`, `270deg`, et `90deg`. Les autres valeurs sont converties en un angle correspondant.
@@ -88,7 +87,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
   - : L'indication de couleur est une indication pour l'interpolation des couleurs le long du dégradé et entre deux points d'arrêt de couleur. La longueur définit à quel point, entre deux arrêts de couleur, la couleur du dégradé doit atteindre le point médian de la transition de couleur. Si cette valeur est absente, le niveau intermédiaire de la transition se situera à équidistance des deux points d'arrêt de couleur.
 
 > [!NOTE]
-> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que [les arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que [les arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ### Syntaxe formelle
 

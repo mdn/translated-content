@@ -3,7 +3,7 @@ title: :-moz-window-inactive
 slug: Web/CSS/:-moz-window-inactive
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`:-moz-window-inactive`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)匹配处于非活动窗口中的任何元素。
 
@@ -64,7 +64,6 @@ slug: Web/CSS/:-moz-window-inactive
 
 - [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
 - 相关的 CSS 选择器：
-
   - [`:active`](/zh-CN/docs/Web/CSS/:active)
 
 - 常规 DOM 的 {{domxref("Document.activeElement")}} 属性和[影子 DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 根的 {{domxref("ShadowRoot.activeElement")}} 属性。

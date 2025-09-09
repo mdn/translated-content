@@ -132,7 +132,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes&nbsp;:
-
   - [`padding-top`](/fr/docs/Web/CSS/padding-top)
   - [`padding-right`](/fr/docs/Web/CSS/padding-right)
   - [`padding-bottom`](/fr/docs/Web/CSS/padding-bottom)

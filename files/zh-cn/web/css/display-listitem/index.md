@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 `list-item` 关键字会使元素生成一个 `::marker` 伪元素，其内容由元素的 {{CSSxRef("list-style")}} 属性指定（例如，一个项目符号），同时为其自身内容生成一个指定类型的主盒子。
 
 ## 语法
@@ -54,7 +52,6 @@ l10n:
 ## 参见
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

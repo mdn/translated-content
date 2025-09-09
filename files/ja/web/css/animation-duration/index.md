@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの再生時間を設定します。
 
-{{InteractiveExample("CSS Demo: animation-duration")}}
+{{InteractiveExample("CSS デモ: animation-duration")}}
 
 ```css interactive-example-choice
 animation-duration: 750ms;
@@ -113,15 +111,12 @@ animation-duration: unset;
 ### 値
 
 - `auto`
-
   - : 時間ベースのアニメーションでは、 `auto` は `0s` の値と等価です（下記参照）。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)では、 `auto` はタイムライン全体をアニメーションで埋めます。
 
 - {{cssxref("&lt;time&gt;")}}
-
   - : 1 回のアニメーションの周期にかかる時間。この値は、秒 (`s`) またはミリ秒 (`ms`) で指定することができます。値は正の数か 0 でなければならず、単位は必須です。
 
     値が指定されなかった場合、既定値である `0s` が使用され、この場合でもアニメーションは実行されます（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントが発生します）。長さが `0s` のときにアニメーションが表示されるかどうかは、下記で説明する [`animation-fill-mode`](/ja/docs/Web/CSS/animation-fill-mode) の値によります。
-
     - `animation-fill-mode` を `backwards` または `both` に設定した場合、 `animation-direction` で定義したアニメーションの最初のフレームが `animation-delay`(/ja/docs/Web/CSS/animation-delay) のカウントダウン中に表示されます。
     - `animation-fill-mode` が `forwards` または `both` に設定した場合、アニメーションの最後のフレームは `animation-delay` が経過した後に、 `animation-direction` で定義したように表示されます。
     - `animation-fill-mode` を `none` に設定すると、アニメーションは目に見える効果はありません。
@@ -129,9 +124,11 @@ animation-duration: unset;
 > [!NOTE]
 > 負の数は無効であり、宣言が無視されます。一部、初期の接頭辞付きの実装は `0s` と等価に解釈するかもしれません。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> [!NOTE]
+> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するとき、`animation-duration` の値を秒やミリ秒で指定することは実際には意味がありません。テストしたところ、スクロール進行タイムラインアニメーションには効果がないように見えましたが、ビュー進行タイムラインアニメーションでは、アニメーションがタイムラインの終わりに近づいて起こるようになるようでした。しかし、Firefox がアニメーションを正常に適用するには `animation-duration` の設定が要求されます。そのため、Firefoxでアニメーションが動作するように `animation-duration` を `1ms` に設定することをお勧めします。
+> [!NOTE]
+> [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するとき、`animation-duration` の値を秒やミリ秒で指定することは実際には意味がありません。テストしたところ、スクロール進行タイムラインアニメーションには効果がないように見えましたが、ビュー進行タイムラインアニメーションでは、アニメーションがタイムラインの終わりに近づいて起こるようになるようでした。しかし、Firefox がアニメーションを正常に適用するには `animation-duration` の設定が要求されます。そのため、Firefoxでアニメーションが動作するように `animation-duration` を `1ms` に設定することをお勧めします。
 
 ## 公式定義
 

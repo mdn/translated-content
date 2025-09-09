@@ -51,21 +51,17 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 - [Primeros pasos en CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics)
   - : CSS (Cascading Style Sheets - en español Hojas de Estilo en Cascadas) es usado para darle estilo y diseño a las páginas Web — por ejemplo, para cambiar la fuente de letra, color, tamaño y el espaciado de tu contenido; dividir en múltiples columnas, o agregar animaciones y otras propiedades decorativas. Este modulo provee un inicio suave para tu ruta de aprendizaje hacia el dominio de CSS con su funcionamiento básico, como luce su sintaxis, y cómo puedes comenzar a utilizarlo y añadir estilo a HTML.
 - [Bloques de construcción CSS](/es/docs/Learn_web_development/Core/Styling_basics)
-
   - : Este módulo retoma donde [Primeros pasos en CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics) finalizó — ahora que estás familiarizado con el lenguaje y su sintaxis, y que tienes algo de experiencia en su uso, es hora de bucear un poco más profundo. Este módulo se centra en el estilo en cascada de css y en el concepto de herencia, también veremos todos los tipos de selectores, unidades, tamaños, estilos de fondo, bordes, debugging y mucho más.
 
     El objetivo aqui es proveerte de herramientas para que puedas escribir código CSS competentemente y ayudarte a entender lo escencial de la teoría antes de centrarnos en disciplinas más específicas como [text styling](/es/docs/Learn_web_development/Core/Text_styling) y [CSS layout](/es/docs/Learn_web_development/Core/CSS_layout).
 
 - [Selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : Apunte a elementos HTML, incluso según el estado del elemento, con CSS.
 
 - [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
-
   - : Comprender el algoritmo del navegador para determinar qué declaraciones CSS se aplican a un elemento cuando hay declaraciones compitiendo, con un [cuestionario de especificidad](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
 
 - [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-
   - : El objetivo de este artículo es desarrollar la comprensión de algunos de los conceptos fundamentales de CSS (cascada, especificidad y herencia) que controlan cómo se aplica el CSS al HTML y cómo se resuelven los conflictos.
 
 - [Estilo de texto](/es/docs/Learn_web_development/Core/Text_styling)

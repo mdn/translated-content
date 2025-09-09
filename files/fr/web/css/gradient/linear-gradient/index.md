@@ -75,7 +75,6 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ### Values
 
 - `<side-or-corner>`
-
   - : La position du point de départ de la ligne selon laquelle évolue le dégradé. Si elle est indiquée, elle se compose du mot `to` et peut contenir jusqu'à deux mots-clés&nbsp;: le premier indiquant le côté horizontal (`left` ou `right` pour indiquer respectivement gauche ou droite), et le second indiquant le côté vertical (`top` ou `bottom` pour indiquer respectivement haut ou bas). L'ordre des deux mots-clés n'a pas d'importance. Si aucun n'est utilisé, la valeur par défaut sera `to bottom`.
 
     Les valeurs `to top`, `to bottom`, `to left`, et `to right` sont respectivement équivalentes aux angles `0deg`, `180deg`, `270deg`, et `90deg`. Les autres valeurs sont traduites en un angle.
@@ -88,7 +87,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
   - : Une indication d'interpolation qui définit la progression du dégradé entre deux arrêts de couleur adjacents. La longueur définit à quel point entre les deux arrêts le dégradé doit atteindre la couleur intermédiaire. Si cette valeur est absente, la valeur intermédiaire sera atteinte à mi-parcours entre les deux arrêts.
 
 > [!NOTE]
-> Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ## Description
 

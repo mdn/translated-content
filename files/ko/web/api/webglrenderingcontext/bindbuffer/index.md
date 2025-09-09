@@ -19,16 +19,13 @@ bindBuffer(target, buffer)
 ### 매개변수
 
 - `target`
-
   - : 바인딩 포인트(target)을 지정하는 {{domxref("WebGL_API/Types", "GLenum")}} 입니다. 가능한 값들은 다음과 같습니다.
-
     - `gl.ARRAY_BUFFER`
       - : 정점 좌표, 텍스처 좌표 데이터 또는 정점 색상 데이터 등의 정점 속성을 포함하는 버퍼입니다.
     - `gl.ELEMENT_ARRAY_BUFFER`
       - : 요소 인덱스를 위한 버퍼입니다.
 
     {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 를 사용하면 추가로 다음의 값들이 가능합니다.
-
     - `gl.COPY_READ_BUFFER`
       - : 한 버퍼 객체에서 다른 버퍼 객체로 복사하기 위한 버퍼입니다.
     - `gl.COPY_WRITE_BUFFER`

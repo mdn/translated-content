@@ -23,7 +23,6 @@ treeWalker = document.createTreeWalker(
 - _root_
   - : est le {{domxref("Node")}} (_noeud_) racine du {{domxref("TreeWalker")}} à traverser. Généralement, ce sera un élément appartenant au document.
 - _whatToShow {{optional_inline}}_
-
   - : est un `unsigned long` (_long non signé_) facultatif représentant un masque de bits créé par combinaison des propriétés de constante de [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen pratique de filtrage pour certains types de nœuds. Par défaut `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
 
     <table class="standard-table">

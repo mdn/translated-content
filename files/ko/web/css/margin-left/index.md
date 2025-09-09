@@ -3,8 +3,6 @@ title: margin-left
 slug: Web/CSS/margin-left
 ---
 
-{{CSSRef}}
-
 **`margin-left`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 왼쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
 
 {{InteractiveExample("CSS Demo: margin-left")}}
@@ -83,7 +81,6 @@ margin-left: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : 바깥 여백 크기와 블록 컨테이너 너비의 비율.
 - `auto`
-
   - : 사용한 레이아웃 모드에 따라 가로축 미사용 공간 너비의 일부를 바깥 여백에 할당. `margin-left`와 `margin-right`의 값이 모두 `auto`라면 너비를 양 여백에 동일하게 배정합니다. 아래 표가 가능한 여러 경우를 보입니다.
 
     | {{cssxref("display")}} 값                                                                         | {{cssxref("float")}} 값 | {{cssxref("position")}} 값 | `auto`의 계산 값                                                                                                                                                               | 설명                                                                                                  |

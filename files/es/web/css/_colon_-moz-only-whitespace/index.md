@@ -3,7 +3,7 @@ title: :-moz-only-whitespace
 slug: Web/CSS/:-moz-only-whitespace
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

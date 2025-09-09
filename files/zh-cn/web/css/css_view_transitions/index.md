@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ee7620b98800392073f3c8f94a9b2d048191356d
 ---
 
-{{CSSRef}}
-
 **CSS 视图过渡**（CSS view transition）模块定义了[视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API) 的行为，它允许开发人员在文档之内或在文档之间的不同状态之间创建动画过渡。此模块还定义了用于设置这些过渡样式的 CSS 属性和伪元素。
 
 ## 参考
@@ -44,7 +42,6 @@ l10n:
 ## 指南
 
 - [使用视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API/Using)
-
   - : 解释如何创建视图过渡和自定义过渡动画，包括操纵活动的视图过渡。
 
 ## 相关概念
@@ -54,7 +51,6 @@ l10n:
 - {{domxref("Document.visibilityState")}}
 
 - [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)模块
-
   - {{cssxref("animation")}}
   - {{cssxref("@keyframes")}}
   - {{domxref("CSSKeyframesRule")}}
@@ -62,7 +58,6 @@ l10n:
   - [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 
 - [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)模块
-
   - {{cssxref("transform")}}
   - {{cssxref("transform-function")}}
 

@@ -3,8 +3,6 @@ title: 指南：媒体对象
 slug: Web/CSS/Layout_cookbook/Media_objects
 ---
 
-{{CSSRef}}
-
 媒体对象是 web 上随处可见的一种模式。它由[Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)命名，表示一种一侧是图片并且另一侧是描述性的文字的两列盒子，比如一篇 facebook 帖子或者 tweet。
 
 ![](media-object.png)
@@ -23,7 +21,8 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}
 
-> **备注：** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
+> [!NOTE]
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
 
 ## 做出选择
 
@@ -43,7 +42,8 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}
 
-> **备注：** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
+> [!NOTE]
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
 
 一旦浮动元素成为网格项，浮动将不再被应用到网格上，因此你不需要做任何特殊的事情来清除浮动。
 

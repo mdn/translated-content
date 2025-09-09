@@ -5,7 +5,7 @@ slug: Web/CSS/text-decoration
 
 {{CSSRef}}
 
-La propriété **`text-decoration`** est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de paramétrer simultanément les propriétés « détaillées » : {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}} et {{cssxref("text-decoration-style")}}.
+La propriété **`text-decoration`** est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de paramétrer simultanément les propriétés « détaillées » : {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}} et {{cssxref("text-decoration-style")}}.
 
 {{InteractiveExample("CSS Demo: text-decoration")}}
 
@@ -143,7 +143,6 @@ text-decoration: unset;
 
 - L'attribut {{cssxref("list-style")}} qui contrôle la façon dont les éléments apparaissent dans les listes HTML {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
 - Les propriétés détaillées associées à cette propriété raccourcie :
-
   - {{cssxref("text-decoration-line")}}
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-decoration-style")}}.
