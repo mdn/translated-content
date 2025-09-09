@@ -21,7 +21,7 @@ Pour qu'une transition entre documents fonctionne, les documents actuel et cible
 
 - `navigation`
   - : Spécifie l'effet que cette règle @ aura sur le comportement de transition d'affichage du document. Les valeurs possibles sont&nbsp;:
-    - `auto`&nbsp;: Le document subira une transition d'affichage lorsqu'il prendra part à une navigation, à condition que celle-ci soit de même origine, sans redirection inter-origines, et que son {{domxref("NavigateEvent. navigationType", "navigationType")}} soit `traverse`, `push`, ou `replace`. Dans le cas de `push` ou `replace`, la navigation doit être initiée par un utilisateur ou une utilisatrice interagissant avec le contenu de la page, et non par une fonctionnalité de l'interface utilisateur du navigateur.
+    - `auto`&nbsp;: Le document subira une transition d'affichage lorsqu'il prendra part à une navigation, à condition que celle-ci soit de même origine, sans redirection inter-origines, et que son {{domxref("NavigateEvent.navigationType", "navigationType")}} soit `traverse`, `push`, ou `replace`. Dans le cas de `push` ou `replace`, la navigation doit être initiée par un utilisateur ou une utilisatrice interagissant avec le contenu de la page, et non par une fonctionnalité de l'interface utilisateur du navigateur.
 
     - `none`&nbsp;: Le document ne subira pas de transition d'affichage.
 
