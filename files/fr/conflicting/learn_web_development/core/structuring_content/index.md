@@ -34,7 +34,7 @@ Ce module contient les articles suivants, qui vous guideront à travers les fond
 
 Les évaluations qui suivent sont là pour tester votre compréhension des bases du HTML traitées dans les guides ci-dessus.
 
-- [Évaluation : page d'accueil Mozilla](/fr/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page)
+- [Évaluation : page d'accueil Mozilla](/fr/docs/Learn_web_development/Core/Structuring_content/Splash_page)
   - : Cette évaluation concernera vos connaissances de quelques unes des techniques traitées dans les articles de ce module, vous amenant à ajouter des images et vidéos à une page de garde «&nbsp;funky&nbsp;» développant les atouts de Mozilla&nbsp;!
 
 ## Voir aussi
