@@ -10,7 +10,7 @@ Jusqu'ici, nous avons vu et utilisé beaucoup de texte dans ce cours mais le web
 
 ## Prérequis
 
-Pour commencer ce module dans de bonnes conditions, vous devriez posséder les connaissances de base du HTML comme il est recommandé dans l'article : [introduction au HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8). Nous vous recommandons de passer du temps sur cette introduction en premier lieu (ou un article équivalent d'initiation au HTML) puis de repasser ici pour continuer.
+Pour commencer ce module dans de bonnes conditions, vous devriez posséder les connaissances de base du HTML comme il est recommandé dans l'article : [introduction au HTML](/fr/docs/Learn_web_development/Core/Structuring_content). Nous vous recommandons de passer du temps sur cette introduction en premier lieu (ou un article équivalent d'initiation au HTML) puis de repasser ici pour continuer.
 
 > [!NOTE]
 > Si vous travaillez sur une tablette, ordinateur ou autre périphérique où vous n'auriez pas la capacité de créer vos propres fichiers, sachez que vous pouvez tester (la plupart) de vos lignes de code sur des programmes en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).

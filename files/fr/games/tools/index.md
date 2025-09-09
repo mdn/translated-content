@@ -69,7 +69,7 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
       <td><strong>Réseau</strong></td>
       <td>
         <a href="/fr/docs/Web/API/WebRTC_API">WebRTC</a> et/ou
-        <a href="/fr/docs/Web/API/Websockets_API">WebSockets</a>
+        <a href="/fr/docs/Web/API/WebSockets_API">WebSockets</a>
       </td>
     </tr>
     <tr>

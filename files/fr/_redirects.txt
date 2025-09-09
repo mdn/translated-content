@@ -153,7 +153,6 @@
 /fr/docs/Apprendre/Découvrir_outils_développement_navigateurs	/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 /fr/docs/Apprendre/Fonctionnement_Internet	/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /fr/docs/Apprendre/HTML	/fr/docs/Learn_web_development/Core/Structuring_content
-/fr/docs/Apprendre/HTML/Balises_HTML	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8
 /fr/docs/Apprendre/HTML/Cheatsheet	/fr/docs/Web/HTML/Guides/Cheatsheet
 /fr/docs/Apprendre/HTML/Comment	/fr/docs/Learn_web_development/Howto/Solve_HTML_problems
 /fr/docs/Apprendre/HTML/Comment/Add_images_to_a_webpage	/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images
@@ -180,7 +179,7 @@
 /fr/docs/Apprendre/HTML/Comment/Mettre_l_accent_sur_un_contenu_ou_indiquer_qu_un_texte_est_important	/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 /fr/docs/Apprendre/HTML/Comment/Utiliser_JavaScript_au_sein_d_une_page_web	/fr/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /fr/docs/Apprendre/HTML/Comment/Utiliser_attributs_donnes	/fr/docs/Web/HTML/How_to/Use_data_attributes
-/fr/docs/Apprendre/HTML/Introduction_à_HTML	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8
+/fr/docs/Apprendre/HTML/Introduction_à_HTML	/fr/docs/Learn_web_development/Core/Structuring_content
 /fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks	/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /fr/docs/Apprendre/HTML/Introduction_à_HTML/Debugging_HTML	/fr/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
 /fr/docs/Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure	/fr/docs/Learn_web_development/Core/Structuring_content/Structuring_documents
@@ -1956,7 +1955,6 @@
 /fr/docs/HTML/HTML5/Introduction_to_HTML5	/fr/docs/Learn_web_development/Core/Structuring_content
 /fr/docs/HTML/HTML5/Liste_des_éléments_HTML5	/fr/docs/Web/HTML/Reference/Elements
 /fr/docs/HTML/Image_avec_ressources_origines_multiples_CORS_activees	/fr/docs/Web/HTML/How_to/CORS_enabled_image
-/fr/docs/HTML/Introduction	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8
 /fr/docs/HTML/Introduction_à_HTML5	/fr/docs/Learn_web_development/Core/Structuring_content
 /fr/docs/HTML/Manipulating_video_using_canvas	/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /fr/docs/HTML/Reglages_des_attributs_CORS	/fr/docs/Web/HTML/Reference/Attributes/crossorigin
@@ -2960,6 +2958,7 @@
 /fr/docs/Jeux/Anatomie	/fr/docs/Games/Anatomy
 /fr/docs/Jeux/Index	/fr/docs/Games
 /fr/docs/Jeux/Introduction	/fr/docs/Games/Introduction
+/fr/docs/Jeux/Introduction_to_HTML5_Game_Gevelopment_(summary)	/fr/docs/conflicting/Games/Tools
 /fr/docs/Jeux/Publier_jeux	/fr/docs/Games/Publishing_games
 /fr/docs/Jeux/Publier_jeux/Game_monetization	/fr/docs/Games/Publishing_games/Game_monetization
 /fr/docs/L'interface_XSLT_JavaScript_dans_Gecko/Définition_de_paramètres	/fr/docs/Web/API/XSLTProcessor
@@ -3136,7 +3135,7 @@
 /fr/docs/Learn/HTML/Howto/Define_terms_with_HTML	/fr/docs/Web/HTML/How_to/Define_terms_with_HTML
 /fr/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage	/fr/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /fr/docs/Learn/HTML/Howto/Use_data_attributes	/fr/docs/Web/HTML/How_to/Use_data_attributes
-/fr/docs/Learn/HTML/Introduction_to_HTML	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8
+/fr/docs/Learn/HTML/Introduction_to_HTML	/fr/docs/Learn_web_development/Core/Structuring_content
 /fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting	/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
 /fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks	/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML	/fr/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
@@ -5188,7 +5187,6 @@
 /fr/docs/Web/Guide/HTML/HTML5	/fr/docs/Glossary/HTML5
 /fr/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/fr/docs/Learn_web_development/Core/Structuring_content
 /fr/docs/Web/Guide/HTML/HTML5/Liste_des_éléments_HTML5	/fr/docs/Web/HTML/Reference/Elements
-/fr/docs/Web/Guide/HTML/Introduction	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8
 /fr/docs/Web/Guide/HTML/Liens_email	/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /fr/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/Web/HTML/Reference/Elements/Heading_Elements
@@ -5509,7 +5507,6 @@
 /fr/docs/Web/HTML/Index	/fr/docs/Web/HTML
 /fr/docs/Web/HTML/Inline_elemente	/fr/docs/Glossary/Inline-level_content
 /fr/docs/Web/HTML/Inline_elements	/fr/docs/Glossary/Inline-level_content
-/fr/docs/Web/HTML/Introduction	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8
 /fr/docs/Web/HTML/Introduction_to_HTML5	/fr/docs/Learn_web_development/Core/Structuring_content
 /fr/docs/Web/HTML/La_vérification_orthographique_dans_les_formulaires	/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck
 /fr/docs/Web/HTML/Link_types	/fr/docs/Web/HTML/Reference/Attributes/rel
@@ -7569,7 +7566,6 @@
 /fr/docs/conflicting/Learn/Getting_started_with_the_web	/fr/docs/Learn_web_development/Getting_started/Your_first_website
 /fr/docs/conflicting/Learn/Getting_started_with_the_web/Dealing_with_files	/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 /fr/docs/conflicting/Learn/Getting_started_with_the_web/JavaScript_basics	/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting	/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting_b235e00aa38ee1d4b535fc921395f446	/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
 /fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting_c8b0b9eb353375fb9a4679f68164e682	/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
