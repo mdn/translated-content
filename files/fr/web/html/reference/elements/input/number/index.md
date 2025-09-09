@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/input/number
 
 {{HTMLSidebar}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`number`** permettent à une utilisatrice ou un utilisateur de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs non-numériques.
+Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut **`number`** permettent à une utilisatrice ou un utilisateur de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs non-numériques.
 
 Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémenter/décrémenter la valeur grâce à la souris ou avec le doigt.
 
@@ -33,7 +33,7 @@ label {
 ```
 
 > [!NOTE]
-> Si un navigateur ne prend pas en charge le type `number`, le contrôle affiché sera le contrôle standard pour la saisie d'un texte (cf. [`text`](/fr/docs/Web/HTML/Element/input/text)).
+> Si un navigateur ne prend pas en charge le type `number`, le contrôle affiché sera le contrôle standard pour la saisie d'un texte (cf. [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text)).
 
 <table class="properties">
   <tbody>
@@ -62,7 +62,7 @@ label {
 
 ## Valeur
 
-Un nombre qui représente la valeur saisie dans le contrôle. Il est possible d'indiquer une valeur par défaut en utilisant l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)&nbsp;:
+Un nombre qui représente la valeur saisie dans le contrôle. Il est possible d'indiquer une valeur par défaut en utilisant l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value)&nbsp;:
 
 ```html
 <input id="number" type="number" value="42" />
@@ -72,22 +72,22 @@ Un nombre qui représente la valeur saisie dans le contrôle. Il est possible d'
 
 ## Attributs supplémentaires
 
-En complément des attributs pris en charge par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de type `number` peuvent utiliser les attributs suivants.
+En complément des attributs pris en charge par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), les champs de type `number` peuvent utiliser les attributs suivants.
 
 ### `list`
 
-La valeur de cet attribut est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document.
-L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit la liste de valeurs prédéfinies à suggérer à l'utilisatrice ou à l'utilisateur. Toute valeur de la liste qui n'est pas compatible avec ce type de champ n'est pas incluse dans les options suggérées. Les valeurs fournies sont des suggestions et pas des valeurs imposées&nbsp;: il reste possible de sélectionner des valeurs en dehors de cette liste.
+La valeur de cet attribut est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) situé dans le même document.
+L'élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) fournit la liste de valeurs prédéfinies à suggérer à l'utilisatrice ou à l'utilisateur. Toute valeur de la liste qui n'est pas compatible avec ce type de champ n'est pas incluse dans les options suggérées. Les valeurs fournies sont des suggestions et pas des valeurs imposées&nbsp;: il reste possible de sélectionner des valeurs en dehors de cette liste.
 
 ### `max`
 
-La valeur maximale qui peut être acceptée pour ce champ. Si la valeur du champ (portée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) dépasse ce seuil, l'élément [ne pourra être validé](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `max` n'est pas un nombre, l'élément n'aura pas de maximum.
+La valeur maximale qui peut être acceptée pour ce champ. Si la valeur du champ (portée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value) dépasse ce seuil, l'élément [ne pourra être validé](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `max` n'est pas un nombre, l'élément n'aura pas de maximum.
 
 Cette valeur doit être supérieure ou égale à l'attribut `min`.
 
 ### `min`
 
-La valeur minimale qui peut être acceptée pour ce champ. Si la valeur du champ (portée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) est inférieure à ce seuil, l'élément [ne pourra être validé](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `min` n'est pas un nombre, l'élément n'aura pas de minimum.
+La valeur minimale qui peut être acceptée pour ce champ. Si la valeur du champ (portée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value) est inférieure à ce seuil, l'élément [ne pourra être validé](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `min` n'est pas un nombre, l'élément n'aura pas de minimum.
 
 Cette valeur doit être inférieure ou égale à l'attribut `max`.
 
@@ -98,7 +98,7 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/LTR) ou [RTL](/fr/docs/Glossary/RTL)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus de détails.
 
 > [!NOTE]
-> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Element/input#utilisation_de_libell%c3%a9s) pour plus d'informations.
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Reference/Elements/input#utilisation_de_libell%c3%a9s) pour plus d'informations.
 
 ### `readonly`
 
@@ -141,14 +141,14 @@ Dans sa forme la plus simple, on peut implémenter un contrôle de saisie numér
 
 {{EmbedLiveSample('', 600, 40)}}
 
-Un contrôle de saisie numérique considère que la valeur est valide si elle est vide ou quand un nombre est saisi. Dans les autres cas, la valeur est considérée invalide. Si l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required) est utilisé, la valeur vide n'est plus considérée valide.
+Un contrôle de saisie numérique considère que la valeur est valide si elle est vide ou quand un nombre est saisi. Dans les autres cas, la valeur est considérée invalide. Si l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#attr-required) est utilisé, la valeur vide n'est plus considérée valide.
 
 > [!NOTE]
 > N'importe quel nombre est valide tant que c'est un nombre qui peut être représenté [comme un nombre à virgule flottante](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (autrement dit, un nombre qui n'est pas [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ou [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
 
 ### Indicateurs de saisie — <i lang="en">placeholders</i>
 
-Il est parfois utile de fournir une indication quant à la valeur qui devrait être saisie. C'est notamment le cas lorsque la disposition de la page ne permet pas d'avoir d'étiquettes suffisamment descriptives pour chaque [`<input>`](/fr/docs/Web/HTML/Element/input). Dans ces cas, on peut utiliser l'attribut `placeholder` afin de fournir une indication et qui sera le texte affiché dans le contrôle avant toute saisie ou quand la valeur est vide.
+Il est parfois utile de fournir une indication quant à la valeur qui devrait être saisie. C'est notamment le cas lorsque la disposition de la page ne permet pas d'avoir d'étiquettes suffisamment descriptives pour chaque [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input). Dans ces cas, on peut utiliser l'attribut `placeholder` afin de fournir une indication et qui sera le texte affiché dans le contrôle avant toute saisie ou quand la valeur est vide.
 
 Dans l'exemple qui suit, on utilise un élément `<input>` de type `number` avec le texte indicatif `Multiple de 10`. Vous pouvez noter la façon dont le texte disparaît/réapparaît à selon la présence ou l'absence de valeur dans le champ.
 
@@ -160,7 +160,7 @@ Dans l'exemple qui suit, on utilise un élément `<input>` de type `number` avec
 
 ### Paramétrer la taille de l'incrément
 
-Par défaut, les curseurs fournis pour incrémenter/décrémenter la valeur utilisent un pas de 1. Ce comportement par défaut peut être changé en utilisant l'attribut [`step`](/fr/docs/Web/HTML/Element/input#attr-step) dont la valeur représente le pas d'incrémentation. Dans l'exemple qui suit et parce que le texte informatif indique "Multiple de 10", on utilise un pas de 10 grâce à l'attribut `step`&nbsp;:
+Par défaut, les curseurs fournis pour incrémenter/décrémenter la valeur utilisent un pas de 1. Ce comportement par défaut peut être changé en utilisant l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#attr-step) dont la valeur représente le pas d'incrémentation. Dans l'exemple qui suit et parce que le texte informatif indique "Multiple de 10", on utilise un pas de 10 grâce à l'attribut `step`&nbsp;:
 
 ```html
 <input type="number" placeholder="Multiple de 10" step="10" />
@@ -196,7 +196,7 @@ Dans cet exemple, on peut saisir des valeurs comprises entre 0 et 10 et qui ont 
 
 ### Paramétrer la taille du contrôle
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `number` ne prennent pas en charge l'attribut [`size`](/fr/docs/Web/HTML/Element/input#attr-size) et il est donc nécessaire d'utiliser CSS afin de modifier la taille des contrôles.
+Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `number` ne prennent pas en charge l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#attr-size) et il est donc nécessaire d'utiliser CSS afin de modifier la taille des contrôles.
 
 Par exemple, si on souhaite réduire la largeur du contrôle, car il ne permet que de saisir un nombre à trois chiffres, on ajoute un identifiant sur l'élément et on réduit le texte indicatif afin qu'il ne soit pas tronqué&nbsp;:
 
@@ -224,7 +224,7 @@ Le résultat ressemblera à&nbsp;:
 
 ### Ajouter des valeurs suggérées
 
-Il est possible de fournir une liste d'options par défaut parmi lesquelles l'utilisatrice ou l'utilisateur pourra choisir. Pour cela, on renseignera l'attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list) dont la valeur est l'identifiant (attribut `id`) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) contenant autant d'éléments [`<option>`](/fr/docs/Web/HTML/Element/option) que de valeurs suggérées. La valeur de l'attribut `value` de chaque élément `<option>` sera utilisée comme suggestion pour la saisie dans le contrôle.
+Il est possible de fournir une liste d'options par défaut parmi lesquelles l'utilisatrice ou l'utilisateur pourra choisir. Pour cela, on renseignera l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#attr-list) dont la valeur est l'identifiant (attribut `id`) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) contenant autant d'éléments [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option) que de valeurs suggérées. La valeur de l'attribut `value` de chaque élément `<option>` sera utilisée comme suggestion pour la saisie dans le contrôle.
 
 ```html
 <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
@@ -246,8 +246,8 @@ Il est possible de fournir une liste d'options par défaut parmi lesquelles l'ut
 Plusieurs mécanismes de validation sont mis en place par le navigateur pour les contrôles de saisie numérique&nbsp;:
 
 - Toute valeur qui n'est pas un nombre est considérée comme invalide (la valeur vide est uniquement considérée comme valide si l'attribut `required` est absent).
-- L'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required) peut être utilisé afin qu'une valeur vide soit invalide (autrement dit, le champ devra être renseigné pour être correct).
-- Toute valeur qui n'est pas un multiple de [`step`](/fr/docs/Web/HTML/Element/input#attr-step) est considérée comme invalide.
+- L'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#attr-required) peut être utilisé afin qu'une valeur vide soit invalide (autrement dit, le champ devra être renseigné pour être correct).
+- Toute valeur qui n'est pas un multiple de [`step`](/fr/docs/Web/HTML/Reference/Elements/input#attr-step) est considérée comme invalide.
 - Toute valeur qui est inférieure à `min` ou supérieure à `max` est considérée comme invalide.
 
 L'exemple suivant illustre l'ensemble de ces fonctionnalités et quelques règles CSS ont été ajoutées afin d'afficher des icônes pour indiquer si la valeur saisie est valide ou invalide&nbsp;:
@@ -294,14 +294,14 @@ input:valid + span:after {
 }
 ```
 
-Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:valid`](/fr/docs/Web/CSS/:valid) afin d'afficher une icône selon le cas, à côté de l'élément [`<span>`](/fr/docs/Web/HTML/Element/span) adjacent. On utilise un élément `<span>` séparé pour plus de flexibilité&nbsp;: certains navigateurs n'affichent pas le contenu généré par les pseudo-classes pour certains types de contrôle (cf. [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date#validation)).
+Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:valid`](/fr/docs/Web/CSS/:valid) afin d'afficher une icône selon le cas, à côté de l'élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) adjacent. On utilise un élément `<span>` séparé pour plus de flexibilité&nbsp;: certains navigateurs n'affichent pas le contenu généré par les pseudo-classes pour certains types de contrôle (cf. [`<input type="date">`](/fr/docs/Web/HTML/Reference/Elements/input/date#validation)).
 
 > [!WARNING]
 > La validation des données des formulaires par le navigateur (côté client) doit toujours être complétée d'une validation des données côté serveur (l'utilisatrice ou l'utilisateur peut toujours modifier le HTML et envoyer les données au serveur).
 
 ### Utilisation d'un motif de validation
 
-Les éléments `<input type="number">` ne prennent pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern) qui permet de restreindre les valeurs selon une expression rationnelle.
+Les éléments `<input type="number">` ne prennent pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern) qui permet de restreindre les valeurs selon une expression rationnelle.
 
 En effet, les contrôles de saisie numérique sont destinés à contenir des nombres plutôt que des chaînes de caractères et les autres attributs permettent de paramétrer les valeurs recevables (cf. ci-avant).
 
@@ -434,7 +434,7 @@ Après avoir déclaré quelques variables, on ajoute un gestionnaire d'évèneme
 
 ## Voir aussi
 
-- [Guide sur les formulaires HTML](/fr/docs/Learn/Forms)
-- [`<input>`](/fr/docs/Web/HTML/Element/input)
-- [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/tel)
-- [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Guide sur les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
+- [`<input type="tel">`](/fr/docs/Web/HTML/Reference/Elements/input/tel)
+- [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn_web_development/Extensions/Forms)

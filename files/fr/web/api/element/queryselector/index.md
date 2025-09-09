@@ -16,7 +16,7 @@ element = baseElement.querySelector(selectors);
 ### Paramètres
 
 - `selectors`
-  - : est un groupe de [sélecteurs](/fr/docs/Learn/CSS/Building_blocks/Selectors) à faire correspondre aux éléments descendants du [`Element`](/fr/docs/Web/API/Element) `baseElement` ; cette syntaxe CSS doit être valide ou une exception SyntaxError se produit. Le premier élément trouvé correspondant à ce groupe de sélecteurs est renvoyé.
+  - : est un groupe de [sélecteurs](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors) à faire correspondre aux éléments descendants du [`Element`](/fr/docs/Web/API/Element) `baseElement` ; cette syntaxe CSS doit être valide ou une exception SyntaxError se produit. Le premier élément trouvé correspondant à ce groupe de sélecteurs est renvoyé.
 
 ### Valeur retournée
 
@@ -31,7 +31,7 @@ Si aucune correspondance n'est trouvée, la valeur retournée est `null`.
 
 ## Exemple
 
-Dans ce premier exemple, est retourné le premier élément [`<style>`](/fr/docs/Web/HTML/Element/style) dans le corps du document HTML qui, soit n'a pas de type, soit a le type `text/css`:
+Dans ce premier exemple, est retourné le premier élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) dans le corps du document HTML qui, soit n'a pas de type, soit a le type `text/css`:
 
 ```js
 var el = document.body.querySelector(
@@ -90,7 +90,7 @@ Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour 
 
 - [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
-- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) dans la zone d'apprentissage MDN
+- [Sélecteurs d'attribut](/fr/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) dans la zone d'apprentissage MDN
 - [`element.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)
 - [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
 - [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)

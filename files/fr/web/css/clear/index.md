@@ -64,9 +64,9 @@ clear: both;
 }
 ```
 
-Lorsqu'elle est appliquée aux blocs non-flottants, elle déplace [le bord de la bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de tous les éléments flottants concernés. Il y aura [fusion des marges (_margin collapsing_)](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) verticales entre l'élément flottant et le bloc non-flottant mais pas entre les élément flottants.
+Lorsqu'elle est appliquée aux blocs non-flottants, elle déplace [le bord de la bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de tous les éléments flottants concernés. Il y aura [fusion des marges (_margin collapsing_)](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) verticales entre l'élément flottant et le bloc non-flottant mais pas entre les élément flottants.
 
-Lorsqu'elle est appliquée aux éléments flottants, elle déplace [le bord de la marge](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de tous les éléments flottants concernés. Cela impacte la position des éléments flottants suivants car ceux-ci ne peuvent pas être situés plus haut que les éléments flottants qui les précèdent.
+Lorsqu'elle est appliquée aux éléments flottants, elle déplace [le bord de la marge](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) de tous les éléments flottants concernés. Cela impacte la position des éléments flottants suivants car ceux-ci ne peuvent pas être situés plus haut que les éléments flottants qui les précèdent.
 
 Les éléments flottants qui sont dégagés sont les éléments flottants précédant l'élément ciblé, au sein de du [même contexte de formatage](/fr/docs/Web/CSS/CSS_display/Block_formatting_context).
 
@@ -275,4 +275,4 @@ p {
 
 ## Voir aussi
 
-- [Le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Le modèle de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)

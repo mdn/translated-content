@@ -20,7 +20,7 @@ element(id)
 ### Paramètres
 
 - **`id`**
-  - : L'identifiant (correspondant à l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id)) de l'élément HTML visé.
+  - : L'identifiant (correspondant à l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id)) de l'élément HTML visé.
 
 ## Exemples
 

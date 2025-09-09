@@ -302,7 +302,7 @@ Ce format dispose :
 
 AVIF ne prend pas en charge l'affichage progressif et il faut donc que les fichiers soient complètement téléchargés avant de pouvoir être affichés. Cela a peu d'impact pour la plupart des fichiers AVIF qui sont plus légers que leurs équivalents JPEG ou PNG. En revanche, pour les fichiers plus volumineux, on devra considérer un format qui prend en charge le rendu progressif.
 
-La prise en charge navigateur n'étant pas aussi large que pour les autres formats, il est préférable d'utiliser l'élément HTML [`<picture>`](/fr/docs/Web/HTML/Element/picture) pour fournir des images alternatives au format [JPEG](#jpeg) ou [PNG](#png).
+La prise en charge navigateur n'étant pas aussi large que pour les autres formats, il est préférable d'utiliser l'élément HTML [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) pour fournir des images alternatives au format [JPEG](#jpeg) ou [PNG](#png).
 
 <table class="standard-table">
   <tbody>
@@ -629,12 +629,12 @@ Le format GIF est un bon choix pour les images et les animations simples, bien q
 
 ### ICO (Microsoft Windows icon)
 
-Le format de fichier ICO (Microsoft Windows icon) a été conçu par Microsoft pour les icônes de bureau des systèmes Windows. Cependant, les premières versions d'Internet Explorer ont introduit la possibilité pour un site web de fournir un fichier ICO nommé `favicon.ico` dans le répertoire racine d'un site web pour spécifier un **[favicon](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site)** — une icône à afficher dans le menu Favoris, et d'autres endroits où une représentation iconique du site serait utile.
+Le format de fichier ICO (Microsoft Windows icon) a été conçu par Microsoft pour les icônes de bureau des systèmes Windows. Cependant, les premières versions d'Internet Explorer ont introduit la possibilité pour un site web de fournir un fichier ICO nommé `favicon.ico` dans le répertoire racine d'un site web pour spécifier un **[favicon](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#ajouter_des_icônes_personnalisées_à_un_site)** — une icône à afficher dans le menu Favoris, et d'autres endroits où une représentation iconique du site serait utile.
 
 Un fichier ICO peut contenir plusieurs icônes, et commence par un répertoire contenant des détails sur chacune d'entre elles. Ce répertoire est suivi des données relatives aux icônes. Les données de chaque icône peuvent être soit une image [BMP](#bmp) sans l'en-tête du fichier, soit une image [PNG](#png) complète (y compris l'en-tête du fichier). Si vous utilisez des fichiers ICO, vous devez utiliser le format BMP, car la prise en charge du format PNG dans les fichiers ICO n'a été ajoutée qu'à partir de Windows Vista et pourrait ne pas être bien prise en charge.
 
 > [!WARNING]
-> Les fichiers ICO ne doivent pas être utilisés dans le contenu Web. En outre, leur utilisation pour les favicons a diminué au profit de l'utilisation d'un fichier PNG et de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link), comme décrit dans [cette section](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site).
+> Les fichiers ICO ne doivent pas être utilisés dans le contenu Web. En outre, leur utilisation pour les favicons a diminué au profit de l'utilisation d'un fichier PNG et de l'élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link), comme décrit dans [cette section](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#ajouter_des_icônes_personnalisées_à_un_site).
 
 <table class="standard-table">
   <tbody>
@@ -1091,8 +1091,8 @@ Les fichiers SVG sont des fichiers texte contenant le code source qui, une fois 
 
 Le SVG peut être utilisé dans le contenu du web de deux façons :
 
-1. Vous pouvez directement écrire l'élément [`<svg>`](/fr/docs/Web/HTML/Element/svg) dans le HTML, contenant des [éléments SVG](/fr/docs/Web/SVG/Element) pour dessiner l'image.
-2. Vous pouvez afficher une image SVG partout où vous pouvez utiliser les autres types d'images, y compris avec les éléments [`<img>`](/fr/docs/Web/HTML/Element/img) et [`<image>`](/fr/docs/Web/HTML/Element/img), les propriétés [`background-image`](/fr/docs/Web/CSS/background-image) du CSS, etc.
+1. Vous pouvez directement écrire l'élément [`<svg>`](/fr/docs/Web/HTML/Element/svg) dans le HTML, contenant des [éléments SVG](/fr/docs/Web/SVG/Reference/Element) pour dessiner l'image.
+2. Vous pouvez afficher une image SVG partout où vous pouvez utiliser les autres types d'images, y compris avec les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) et [`<image>`](/fr/docs/Web/HTML/Reference/Elements/img), les propriétés [`background-image`](/fr/docs/Web/CSS/background-image) du CSS, etc.
 
 Le SVG est un choix idéal pour les images qui peuvent être représentées à l'aide d'une série de commandes de dessin, en particulier si la taille à laquelle l'image sera rendue est inconnue ou peut varier, puisque le SVG s'adaptera en douceur à la taille souhaitée. Il n'est généralement pas utile pour les images strictement bitmap ou photographiques, bien qu'il soit possible d'inclure des images bitmap dans un SVG.
 
@@ -1356,7 +1356,7 @@ Le WebP prend en charge la compression avec perte via un codage prédictif basé
 
 WebP prend également en charge l'animation : dans un fichier WebP avec perte, les données d'image sont représentées par un flux binaire VP8, qui peut contenir plusieurs images. Le fichier WebP sans perte contient le fragment `ANIM`, qui décrit l'animation, et le fragment `ANMF`, qui représente une image d'une séquence d'animation. Le bouclage est pris en charge.
 
-WebP bénéficie désormais d'un large soutien dans les dernières versions des principaux navigateurs web, bien qu'il ne bénéficie pas d'un soutien historique profond. Fournir une solution de repli au format [JPEG](#jpeg) ou [PNG](#png), par exemple avec [l'élément `<picture>`](/fr/docs/Web/HTML/Element/picture).
+WebP bénéficie désormais d'un large soutien dans les dernières versions des principaux navigateurs web, bien qu'il ne bénéficie pas d'un soutien historique profond. Fournir une solution de repli au format [JPEG](#jpeg) ou [PNG](#png), par exemple avec [l'élément `<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture).
 
 <table class="standard-table">
   <tbody>
@@ -1591,7 +1591,7 @@ Pour toute image pouvant être représentée par des graphiques vectoriels, le S
 
 ## Fournir des solutions de repli en matière d'image
 
-Alors que l'élément HTML standard [`<img>`](/fr/docs/Web/HTML/Element/img) ne supporte pas les retours de compatibilité pour les images, l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) le fait. `<picture>` est utilisé comme enveloppe pour un certain nombre d'éléments [`<source>`](/fr/docs/Web/HTML/Element/source), chacun spécifiant une version de l'image dans un format différent ou sous des [conditions @media](/fr/docs/Web/CSS/@media), ainsi qu'un élément `<img>` qui définit où afficher l'image et le retour à la version par défaut ou "la plus compatible".
+Alors que l'élément HTML standard [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ne supporte pas les retours de compatibilité pour les images, l'élément [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) le fait. `<picture>` est utilisé comme enveloppe pour un certain nombre d'éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source), chacun spécifiant une version de l'image dans un format différent ou sous des [conditions @media](/fr/docs/Web/CSS/@media), ainsi qu'un élément `<img>` qui définit où afficher l'image et le retour à la version par défaut ou "la plus compatible".
 
 Par exemple, si vous affichez un diagramme mieux affiché avec SVG, mais que vous souhaitez offrir une solution de rechange à un PNG ou GIF du diagramme, vous feriez quelque chose comme ceci :
 
@@ -1611,9 +1611,9 @@ Vous pouvez spécifier autant de `<source>`s que vous le souhaitez, bien qu'il v
 
 ## Voir aussi
 
-- [Guide des types et formats de médias](/fr/docs/Web/Media/Formats)
+- [Guide des types et formats de médias](/fr/docs/Web/Media/Guides/Formats)
 - [Technologies media Web](/fr/docs/Web/Media)
 - [Guide des codecs vidéo du Web](/fr/docs/Web/Media/Formats/Video_codecs)
-- Les éléments [HTML](/fr/docs/Glossary/HTML) [`<img>`](/fr/docs/Web/HTML/Element/img) et [`<picture>`](/fr/docs/Web/HTML/Element/picture)
+- Les éléments [HTML](/fr/docs/Glossary/HTML) [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) et [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture)
 - La propriété CSS [`background-image`](/fr/docs/Web/CSS/background-image)
 - Le constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image) et l'interface [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)

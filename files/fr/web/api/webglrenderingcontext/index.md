@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext
 
 {{APIRef("WebGL")}}
 
-L'interface **`WebGLRenderingContext`** fournit une interface pour le contexte de rendu graphique OpenGL ES 2.0 de la surface de dessin fournie par un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
+L'interface **`WebGLRenderingContext`** fournit une interface pour le contexte de rendu graphique OpenGL ES 2.0 de la surface de dessin fournie par un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas).
 
 Pour obtenir un accès à un contexte WebGL pour le rendu graphique 2D et/ou 3D, on appellera [`getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) sur un élément `<canvas>` en fournissant la chaîne de caractères `webgl`&nbsp;:
 
@@ -27,7 +27,7 @@ Voir la page sur [les constantes WebGL](/fr/docs/Web/API/WebGL_API/Constants).
 Les propriétés et méthodes suivantes fournissent des informations et fonctionnalités générales pour manipuler le contexte WebGL&nbsp;:
 
 - [`WebGLRenderingContext.canvas`](/fr/docs/Web/API/WebGLRenderingContext/canvas)
-  - : Une référence en lecture seule vers l'objet [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) correspondant. Peut valoir [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) si le contexte n'est pas associé à un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
+  - : Une référence en lecture seule vers l'objet [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) correspondant. Peut valoir [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) si le contexte n'est pas associé à un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas).
 - [`WebGLRenderingContext.commit()`](/fr/docs/Web/API/WebGLRenderingContext/commit) {{experimental_inline}}
   - : Pousse les <i lang="en">frames</i> sur l'élément [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement), si le contexte n'est pas directement rattaché à un canevas donné.
 - [`WebGLRenderingContext.drawingBufferWidth`](/fr/docs/Web/API/WebGLRenderingContext/drawingBufferWidth)

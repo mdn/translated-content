@@ -40,19 +40,19 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 
 ### HTML
 
-- L'attribut `value` de [`<li>`](/fr/docs/Web/HTML/Element/li) peut désormais être négatif comme c'est indiqué dans HTML5. Auparavant les valeurs négatives été converties à 0.
-- Vous pouvez désormais [specifier le début et la fin du temps d'un média](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#specifying_playback_range) dans l'URI en utilisant les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video).
-- Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) [respectent désormais la valeur de l'attribut `lang`](/fr/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) lors de l'appel du correcteur orthographique.
-- Firefox sur Android permet désormais la prise de photo avec le téléphone sans devoir quitter le navigateur lorsque l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) est utilisé avec `type="file"` et `accept="image/*"`.
+- L'attribut `value` de [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li) peut désormais être négatif comme c'est indiqué dans HTML5. Auparavant les valeurs négatives été converties à 0.
+- Vous pouvez désormais [specifier le début et la fin du temps d'un média](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) dans l'URI en utilisant les éléments [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) et [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video).
+- Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) [respectent désormais la valeur de l'attribut `lang`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck#controlling_the_spellchecker_language) lors de l'appel du correcteur orthographique.
+- Firefox sur Android permet désormais la prise de photo avec le téléphone sans devoir quitter le navigateur lorsque l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) est utilisé avec `type="file"` et `accept="image/*"`.
 - Les images ICO de style PNG de Windows Vista sont à présent supportée.
-- Les images dessinées qui utilisent l'attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin) pour demander l'accès à CORS [n'altère plus le canvas](/fr/docs/Web/HTML/CORS_enabled_image#canevas_corrompu_et_sécurité) quand CORS est accordé.
-- La valeur de l'attribut [`rowspan`](/fr/docs/Web/HTML/Element/td#attr-rowspan) peut désormais aller jusqu'à 65 534, contre 8190 avant.
+- Les images dessinées qui utilisent l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour demander l'accès à CORS [n'altère plus le canvas](/fr/docs/Web/HTML/How_to/CORS_enabled_image#canevas_corrompu_et_sécurité) quand CORS est accordé.
+- La valeur de l'attribut [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-rowspan) peut désormais aller jusqu'à 65 534, contre 8190 avant.
 
 ### CSS
 
 - La propriété [`font-stretch`](/fr/docs/Web/CSS/font-stretch) est à présent supportée.
 - La propriété [`columns`](/fr/docs/Web/CSS/columns) est à présent supportée, avec le préfixe `-moz`. C'est un raccourci des propriétés suivantes : [`column-width`](/fr/docs/Web/CSS/column-width) et [`column-count`](/fr/docs/Web/CSS/column-count).
-- Quand une feuille de style incluse à l'aide de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link) a été entièrement chargée et analysée (mais pas encore appliquée au document), l'[`load` event](/fr/docs/Web/HTML/Element/link#stylesheet_load_events) est désormais déclenché. En outre, si une erreur survient durant le traitement d'une feuille de style, l'événement `error` est déclenché.
+- Quand une feuille de style incluse à l'aide de l'élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) a été entièrement chargée et analysée (mais pas encore appliquée au document), l'[`load` event](/fr/docs/Web/HTML/Reference/Elements/link#stylesheet_load_events) est désormais déclenché. En outre, si une erreur survient durant le traitement d'une feuille de style, l'événement `error` est déclenché.
 - Vous pouvez à présent spécifier les paramètres de débordement pour les bords, à la fois à gauche et à droite, du contenu en utilisant une nouvelle syntaxe de deux valeurs pour [`text-overflow`](/fr/docs/Web/CSS/text-overflow).
 
 ### DOM
@@ -65,9 +65,9 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 - La méthode [`Node.contains()`](/fr/docs/Web/API/Node/contains) est désormais implémentée, elle vous permet de déterminer si un nœud donné est un descendant d'un autre noeud.
 - L'attribut [`Node.parentElement`](/fr/docs/Web/API/Node/parentElement) a été implémenté, cela renvoie l'[`Element`](/fr/docs/Web/API/Element) parent d'un noeud DOM, ou `null` si le parent n'est pas un élément.
 - [Les évènements de composition](/fr/docs/Web/API/CompositionEvent) du DOM Level 3 sont à présent supportés.
-- L'attribut [`Document.scripts`](/fr/docs/Web/API/Document/scripts) a été implémenté, il renvoie [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) de tous les éléments [`<script>`](/fr/docs/Web/HTML/Element/script) du document.
+- L'attribut [`Document.scripts`](/fr/docs/Web/API/Document/scripts) a été implémenté, il renvoie [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) de tous les éléments [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) du document.
 - la méthode [`Document.queryCommandSupported()`](/fr/docs/Web/API/Document/queryCommandSupported) a été implémentée.
-- L'ensemble des événements qui peuvent être écoutés sur les éléments [`<body>`](/fr/docs/Web/HTML/Element/body) a été révisé pour correspondre à la dernière version de la spécification HTML5. La liste des événements dans la [référence d'événements DOM](/fr/docs/Web/Events) reflète ceux qui peuvent être écoutés sur les [`<body>`](/fr/docs/Web/HTML/Element/body).
+- L'ensemble des événements qui peuvent être écoutés sur les éléments [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) a été révisé pour correspondre à la dernière version de la spécification HTML5. La liste des événements dans la [référence d'événements DOM](/fr/docs/Web/Events) reflète ceux qui peuvent être écoutés sur les [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body).
 - L'évènement `readystatechange` est désormais uniquement tiré sur le document, comme prévu.
 - Les gestionnaires d'événements sont désormais implémentés comme des interfaces IDL standard. Dans la plupart des cas, cela n'affectera pas le contenu, mais [il y a des exceptions](/fr/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9).
 - Un nouveau type de réponse, "`moz-json`", a été ajouté à `XMLHttpRequest`, laissant `XMLHttpRequest` analyser automatiquement les chaînes [JSON](/fr/docs/Glossary/JSON), quand vous demandez ce type, une chaîne JSON est analysé, afin que la valeur de la propriété `response` est la résultante de l'objet JavaScript.
@@ -88,7 +88,7 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 
 ### MathML
 
-- La valeur non-standard `restyle` pour les attributs `actiontype` des éléments [`<maction>`](/fr/docs/Web/MathML/Element/maction) a été retirée.
+- La valeur non-standard `restyle` pour les attributs `actiontype` des éléments [`<maction>`](/fr/docs/Web/MathML/Reference/Element/maction) a été retirée.
 - Alors qu'il n'était pas encore supporté, l'utilisation de l'élément [`<mlabeledtr>`](/fr/docs/Web/MathML/Element/mlabeledtr) ne casse plus complètement le rendu. Voir le [bug 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641) pour l'avancement du support de cet élément.
 
 ### Réseau
@@ -97,7 +97,7 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 - Les connexions WebSocket permettent désormais des non-caractères autres que UTF-8 des trames de données devant être reçues, au lieu d'échouer.
 - L'en-tête HTTP `Accept` pour les réquêtes XSLT a été changée pour "\*/\*" pour simplifier. Puisque l'extraction d'XSLT est toujours retombée à "\* / \*", il était logique de faire la simplification.
 - Les tentatives faites par un serveur pour utiliser les codes de réponses `301 Moved Permanently` ou `307 Temporary Redirect` pour rediriger l'utilisateur vers une URI `javascript:` donne désormais [lieu à l'erreur "connexion incorrecte"](/fr/docs/Web/HTTP#more_on_redirection_responses) au lieu de vraiment rediriger. Cela évite certaines attaques de type cross-site scripting.
-- Le contenu servi par [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition) vide avait déjà été traité comme si [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition) était attachment", ce qui ne fonctionnait pas toujours comme prévu. C'est désormais traité comme si [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition) était "inline".
+- Le contenu servi par [`Content-Disposition`](/fr/docs/Web/HTTP/Reference/Headers/Content-Disposition) vide avait déjà été traité comme si [`Content-Disposition`](/fr/docs/Web/HTTP/Reference/Headers/Content-Disposition) était attachment", ce qui ne fonctionnait pas toujours comme prévu. C'est désormais traité comme si [`Content-Disposition`](/fr/docs/Web/HTTP/Reference/Headers/Content-Disposition) était "inline".
 - La taille maximale par défaut d'un élément dans le cache disque a été augmentée à 50 Mo, auparavant, seuls les éléments jusqu'à 5 Mo étaient mis en cache.
 
 ### Outils de développement

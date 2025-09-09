@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Status/412
 original_slug: Web/HTTP/Status/412
 ---
 
-Le code de réponse d'erreur HTTP **`412 Precondition Failed`** indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) et que la condition définie par les en-têtes [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since) ou [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match) n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.
+Le code de réponse d'erreur HTTP **`412 Precondition Failed`** indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) et que la condition définie par les en-têtes [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since) ou [`If-None-Match`](/fr/docs/Web/HTTP/Reference/Headers/If-None-Match) n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.
 
 ## Statut
 
@@ -29,7 +29,7 @@ Par exemple, pour un wiki dont l'empreinte du contenu du document édité serait
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-Lors d'un enregistrement demandé côté client qui correspond à une requête HTTP [`POST`](/fr/docs/Web/HTTP/Methods/POST), la requête contiendra un en-tête [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match) contenant la valeur de l'`ETag` afin de vérifier la fraîcheur du contenu.
+Lors d'un enregistrement demandé côté client qui correspond à une requête HTTP [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST), la requête contiendra un en-tête [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match) contenant la valeur de l'`ETag` afin de vérifier la fraîcheur du contenu.
 
 ```
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
@@ -47,7 +47,7 @@ Si les deux empreintes ne correspondent pas, cela signifie que le document a ét
 
 ## Voir aussi
 
-- [`304 Not Modified`](/fr/docs/Web/HTTP/Status/304)
+- [`304 Not Modified`](/fr/docs/Web/HTTP/Reference/Status/304)
 - [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since)
-- [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match)
-- [`428`](/fr/docs/Web/HTTP/Status/428)
+- [`If-None-Match`](/fr/docs/Web/HTTP/Reference/Headers/If-None-Match)
+- [`428`](/fr/docs/Web/HTTP/Reference/Status/428)

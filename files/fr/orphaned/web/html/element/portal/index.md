@@ -25,10 +25,10 @@ Un élément `<portal>` est semblable à un élément `<iframe>`. Un élément `
 
 ## Attributs
 
-Cet élément utilise [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément utilise [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - [`referrerpolicy`](#attr-referrerpolicy)
-  - : Voir la page de l'en-tête [`Referrer-Policy`](/fr/docs/Web/HTTP/Headers/Referrer-Policy) pour les valeurs. La valeur utilisée sera fournie lors de la requête vers la page située à l'URL fournie par l'attribut `src`.
+  - : Voir la page de l'en-tête [`Referrer-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy) pour les valeurs. La valeur utilisée sera fournie lors de la requête vers la page située à l'URL fournie par l'attribut `src`.
 - [`src`](#attr-src)
   - : L'URL de la page à embarquer.
 
