@@ -1,11 +1,11 @@
 ---
 title: OPTIONS 请求方法
 slug: Web/HTTP/Reference/Methods/OPTIONS
-i10n:
+l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-**HTTP `OPTIONS` 方法**请求给定的 URL 或服务器的允许通信选项。这可用于测试请求允许的 HTTP 方法，或确定在进行 CORS 预检请求时请求是否会成功。客户端可以用这个方法指定一个 URL，或者用星号（`*`）来指代整个服务器。
+**HTTP `OPTIONS` 方法**请求给定的 URL 或服务器的允许通信选项。它可用于测试一个请求允许使用的 HTTP 方法，或用于确定一个请求在发起 CORS 预检请求时是否会成功。客户端可以使用该方法指定一个 URL，或者使用星号（`*`）来指代整个服务器。
 
 <table class="properties">
   <tbody>
@@ -22,11 +22,11 @@ i10n:
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Idempotent","幂等")}}</th>
+      <th scope="row">{{Glossary("Idempotent", "幂等")}}</th>
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Cacheable","可缓存")}}</th>
+      <th scope="row">{{Glossary("Cacheable", "可缓存")}}</th>
       <td>否</td>
     </tr>
     <tr>
@@ -38,7 +38,7 @@ i10n:
   </tbody>
 </table>
 
-\* 尽管从技术上讲允许使用带有请求主体的 `OPTIONS` 消息，但它没有定义的语义。只要你提供有效的 {{HTTPHeader("Content-Type")}} 标头，并且知道服务器需要它，你就可以在 `OPTIONS` 消息中包含正文，因为行为是特定于实现的。
+\* 尽管技术上带有请求体的 `OPTIONS` 消息是允许的，但其语义未被定义。只要提供有效的 {{HTTPHeader("Content-Type")}} 标头，并且确定服务器会接受（因为行为依赖于具体实现），就可以在 `OPTIONS` 消息中包含请求体。
 
 ## 语法
 
@@ -46,14 +46,14 @@ i10n:
 OPTIONS *|<request-target>["?"<query>] HTTP/1.1
 ```
 
-请求目标可以是表示整个服务器的“星号形式” `*`，也可以是与其他方法常见的请求目标：
+请求目标可以是表示整个服务器的“星号形式” `*`，也可以是与其他方法相同的常见请求目标：
 
 - `*`
-  - : 表示客户端希望请求整个服务器的 `OPTIONS`，而不是该服务器的特定命名资源。
+  - : 表示客户端希望对整个服务器发起 `OPTIONS` 请求，而不是该服务器的某个特定资源。
 - `<request-target>`
-  - : 与 {{HTTPHeader("Host")}} 标头中提供的信息结合使用，可识别请求的目标资源。请求源服务器时是绝对路径（例如，`/path/to/file.html`），请求代理服务器时是绝对 URL（例如，`http://www.example.com/path/to/file.html`）。
+  - : 与 {{HTTPHeader("Host")}} 标头提供的信息结合使用时，可标识请求的目标资源。请求源服务器时是绝对路径（例如，`/path/to/file.html`），请求代理服务器时是绝对 URL（例如，`http://www.example.com/path/to/file.html`）。
 - `<query>` {{optional_inline}}
-  - : 可选的查询组件，以问号 `?` 开头。 通常用于以 `键=值` 对的形式承载识别信息。
+  - : 可选的查询组件，以问号 `?` 开头。 通常用于以 `key=value` 对的形式承载识别信息。
 
 ## 示例
 
