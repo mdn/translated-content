@@ -74,7 +74,7 @@ User-Agent: curl/8.7.1
 Accept: */*
 ```
 
-响应包含 {{HTTPHeader("Allow")}} 标头，其值表明了服务器支持的所有 HTTP 方法：
+响应包含 {{HTTPHeader("Allow")}} 标头，它的值将指示服务器支持的所有 HTTP 方法：
 
 ```http
 HTTP/1.1 204 No Content
