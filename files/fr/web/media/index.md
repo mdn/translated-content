@@ -42,7 +42,7 @@ Les éléments HTML suivants sont utilisés pour inclure des médias dans une pa
 - {{HTMLElement("source")}}
   - : L'élément HTML `<source>` est utilisé dans un élément {{HTMLElement("audio")}} ou {{HTMLElement("video")}} pour spécifier les médias source à présenter. Plusieurs sources peuvent être utilisées pour fournir le média dans différents formats, tailles ou résolutions. Accessible depuis JavaScript en tant qu'objets {{domxref("HTMLSourceElement")}}.
 
-### API 
+### API
 
 - [API Media Capabilities](/fr/docs/Web/API/Media_Capabilities_API)
   - : L'API Media Capabilities vous permet de déterminer les capacités d'encodage et de décodage de l'appareil sur lequel votre application ou votre site fonctionne. Vous pouvez ainsi décider en temps réel quels formats utiliser et à quel moment.
