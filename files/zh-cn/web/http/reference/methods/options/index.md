@@ -31,9 +31,9 @@ HTTP **`OPTIONS`** 方法向给定 URL 或服务器请求其允许的通信选�
     </tr>
     <tr>
       <th scope="row">
-        允许在 <a href="/zh-CN/docs/Learn_web_development/Extensions/Forms">HTML 表单</a>中使用
+        是否允许在 HTML 表单中使用
       </th>
-      <td>不允许</td>
+      <td>否</td>
     </tr>
   </tbody>
 </table>
@@ -86,7 +86,7 @@ Server: EOS (lax004/2813)
 
 ### CORS 中的预检请求
 
-在 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 中，可以使用 OPTIONS 方法发起一个[预检请求](/zh-CN/docs/Glossary/Preflight_request)，以检测实际请求是否可以被服务器所接受。在这个示例中，我们会为这些参数请求权限：
+在 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 中，可以使用 `OPTIONS` 方法发起一个[预检请求](/zh-CN/docs/Glossary/Preflight_request)，以检测实际请求是否可以被服务器所接受。在这个示例中，我们会为这些参数请求权限：
 
 - 在预检请求中发送的 {{HTTPHeader("Access-Control-Request-Method")}} 标头告知服务器实际请求所使用的 HTTP 方法，在这里将实际使用 {{HTTPMethod("POST")}} 请求方法。
 - {{HTTPHeader("Access-Control-Request-Headers")}} 标头告知服务器实际请求所携带的自定义标头，在这里会使用 `X-PINGOTHER` 和 `Content-Type` 标头。
