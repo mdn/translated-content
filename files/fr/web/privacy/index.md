@@ -92,7 +92,7 @@ Les rubriques connexes sont les suivantes&nbsp;:
 
 ### Activer les « fonctionnalités avancées »
 
-Les soi-disant fonctionnalités "puissantes" des API Web qui fournissent un accès à des données et des opérations potentiellement sensibles ne sont disponibles que dans des [contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts), ce qui signifie essentiellement uniquement HTTPS. Non seulement cela, mais ces fonctionnalités Web sont soumises à un système d'autorisations utilisateur. Les utilisateur·ice·s doivent explicitement opter pour des fonctionnalités telles que l'autorisation des notifications, l'accès aux données de géolocalisation, le passage du navigateur en mode plein écran, l'accès aux flux multimédias des webcams, l'utilisation des paiements Web, etc.
+Les soi-disant «&nbsp;fonctionnalités puissantes&nbsp;» des API Web qui fournissent un accès à des données et des opérations potentiellement sensibles ne sont disponibles que dans des [contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts), ce qui signifie essentiellement uniquement HTTPS. Non seulement cela, mais ces fonctionnalités Web sont soumises à un système d'autorisations utilisateur. Les utilisateur·ice·s doivent explicitement opter pour des fonctionnalités telles que l'autorisation des notifications, l'accès aux données de géolocalisation, le passage du navigateur en mode plein écran, l'accès aux flux multimédias des webcams, l'utilisation des paiements Web, etc.
 
 ### Technologie anti-suivi
 
@@ -158,7 +158,7 @@ Plus tôt, nous avons mentionné donner aux utilisateur·ice·s un moyen de voir
 Permettre à l'utilisateur·ice de choisir quand des portions significatives de données sont supprimées est très responsabilisant et renforce la confiance, mais il peut y avoir certaines données que vous souhaiterez gérer vous-même. Par exemple, certaines données pourraient n'être utilisées que pendant quelques heures ou minutes, puis supprimées, comme les données utilisées lors de l'administration de la session d'un·e utilisateur·ice pendant qu'il est connecté.
 
 > [!NOTE]
-> L'en-tête de réponse HTTP {{httpheader("Clear-Site-Data")}} est très utile pour effacer les données utilisateur à court terme — il indique au navigateur de vider son cache et/ou ses cookies et/ou son stockage (par exemple, [Web Storage](/fr/docs/Web/API/Web_Storage_API) ou [IndexedDB](/fr/docs/Web/API/IndexedDB_API)). Par exemple, vous pourriez demander à votre serveur de l'envoyer avec une page de "confirmation de déconnexion" afin qu'une fois l'utilisateur·ice déconnecté, ses données soient en toute sécurité supprimées.
+> L'en-tête de réponse HTTP {{httpheader("Clear-Site-Data")}} est très utile pour effacer les données utilisateur à court terme — il indique au navigateur de vider son cache et/ou ses cookies et/ou son stockage (par exemple, [Web Storage](/fr/docs/Web/API/Web_Storage_API) ou [IndexedDB](/fr/docs/Web/API/IndexedDB_API)). Par exemple, vous pourriez demander à votre serveur de l'envoyer avec une page de «&nbsp;confirmation de déconnexion&nbsp;» afin qu'une fois l'utilisateur·ice déconnecté, ses données soient en toute sécurité supprimées.
 
 ## Réduire le suivi
 
