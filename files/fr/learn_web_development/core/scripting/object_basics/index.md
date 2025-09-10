@@ -86,9 +86,9 @@ Que se passe-t-il ici&nbsp;? Eh bien, un objet est composé de plusieurs membres
 
 ```js
 const monObjet = {
-  membre1: valeurMembre1,
-  membre2: valeurMembre2,
-  membre3: valeurMembre3,
+  nomMembre1: valeurMembre1,
+  nomMembre2: valeurMembre2,
+  nomMembre3: valeurMembre3,
 };
 ```
 
