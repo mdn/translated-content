@@ -28,13 +28,13 @@ li {
 
 ## Attributs
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`download`**
   - : Sans valeur, le navigateur proposera un nom de fichier/extension, généré à partir de diverses sources :
-    - L'en-tête HTTP [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition)
+    - L'en-tête HTTP [`Content-Disposition`](/fr/docs/Web/HTTP/Reference/Headers/Content-Disposition)
     - Le segment final dans l'URL : [path](/fr/docs/Web/API/URL/pathname)
-    - Le [Type MIME](/fr/docs/Glossary/MIME_type) (de l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type), le début d'une URL [`data:`](/fr/docs/Web/URI/Schemes/data), ou [`Blob.type`](/fr/docs/Web/API/Blob/type) pour une URL [`blob:`](/fr/docs/Web/API/URL/createObjectURL_static)).
+    - Le [Type MIME](/fr/docs/Glossary/MIME_type) (de l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Reference/Headers/Content-Type), le début d'une URL [`data:`](/fr/docs/Web/URI/Reference/Schemes/data), ou [`Blob.type`](/fr/docs/Web/API/Blob/type) pour une URL [`blob:`](/fr/docs/Web/API/URL/createObjectURL_static)).
 
     La définition d'une valeur la suggère comme nom de fichier. Les caractères `/` et `\` sont convertis en caractères de soulignement (`_`). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajusteront donc le nom suggéré si nécessaire.
 
@@ -54,22 +54,22 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     - Bien que les navigateurs web puissent ne pas prendre en charge d'autres schémas d'URL, les sites web le peuvent avec [`registerProtocolHandler()`](/fr/docs/Web/API/Navigator/registerProtocolHandler).
 
 - **`hreflang`**
-  - : Donne des indications sur le langage humain de l'URL liée. Aucune fonctionnalité intégrée. Les valeurs autorisées sont les mêmes que [l'attribut global `lang`](/fr/docs/Web/HTML/Global_attributes/lang).
+  - : Donne des indications sur le langage humain de l'URL liée. Aucune fonctionnalité intégrée. Les valeurs autorisées sont les mêmes que [l'attribut global `lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang).
 - **`ping`**
-  - : Contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes [`POST`](/fr/docs/Web/HTTP/Methods/POST) avec le corps `PING` lorsque l'utilisateur suit le lien. Cet attribut est généralement utilisé pour tracer un utilisateur.
+  - : Contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST) avec le corps `PING` lorsque l'utilisateur suit le lien. Cet attribut est généralement utilisé pour tracer un utilisateur.
 - **`referrerpolicy`** {{experimental_inline}}
-  - : La portion du [referrer](/fr/docs/Web/HTTP/Headers/Referer) envoyer lors du suivi du lien. Voir [`Referrer-Policy`](/fr/docs/Web/HTTP/Headers/Referrer-Policy) pour les valeurs possibles et leurs effets.
+  - : La portion du [referrer](/fr/docs/Web/HTTP/Reference/Headers/Referer) envoyer lors du suivi du lien. Voir [`Referrer-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy) pour les valeurs possibles et leurs effets.
 - **`rel`**
-  - : Cet attribut indique la relation entre la cible du lien et l'objet faisant le lien. La valeur est une liste de [types de liens](/fr/docs/Web/HTML/Attributes/rel) séparés par des espaces.
+  - : Cet attribut indique la relation entre la cible du lien et l'objet faisant le lien. La valeur est une liste de [types de liens](/fr/docs/Web/HTML/Reference/Attributes/rel) séparés par des espaces.
 - **`target`**
-  - : Où afficher l'URL liée, comme nom d'un _contexte de navigation_ (un onglet, une fenêtre ou un [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)). Les mots-clés suivants ont des significations spéciales pour l'endroit où charger l'URL :
+  - : Où afficher l'URL liée, comme nom d'un _contexte de navigation_ (un onglet, une fenêtre ou un [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)). Les mots-clés suivants ont des significations spéciales pour l'endroit où charger l'URL :
     - `_self` : le contexte de navigation actuel. (Par défaut)
     - `_blank` : généralement un nouvel onglet, mais les utilisateurs peuvent configurer les navigateurs pour ouvrir une nouvelle fenêtre à la place.
     - `_parent` : le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, il se comporte comme `_self`.
     - `_top` : le contexte de navigation le plus haut (le contexte "le plus haut" qui est un ancêtre du contexte actuel). S'il n'a aucun ancêtre, il se comporte comme `_self`.
 
     > [!NOTE]
-    > Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
+    > Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
 
 - **`type`**
   - : Donne des indications sur le format de l'URL liée avec un [Type MIME](/fr/docs/Glossary/MIME_type). Aucune fonctionnalité intégrée.
@@ -80,7 +80,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : Fait allusion aux [encodages des caractères](/fr/docs/Glossary/Character_encoding) de l'URL liée.
 
     > [!NOTE]
-    > Cet attribut est déprécié et **ne doit pas être utilisé par les auteurs**. Utilisez l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur l'URL liée.
+    > Cet attribut est déprécié et **ne doit pas être utilisé par les auteurs**. Utilisez l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Reference/Headers/Content-Type) sur l'URL liée.
 
 - **`coords`** {{Deprecated_Inline}}
   - : Utilisé avec [l'attribut `shape`](#shape). Une liste de coordonnées séparées par des virgules.
@@ -88,7 +88,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : Était nécessaire pour définir un emplacement cible possible dans une page. En HTML 4.01, `id` et `name` pouvaient tous deux être utilisés sur `<a>`, pour autant qu'ils aient des valeurs identiques.
 
     > [!NOTE]
-    > Utilisez l'attribut universel [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) à la place.
+    > Utilisez l'attribut universel [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id) à la place.
 
 - **`rev`** {{Deprecated_Inline}}
   - : Spécifiait un lien inverse ; l'opposé de [l'attribut `rel`](#rel). Déprécié pour avoir été très confus.
@@ -96,7 +96,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : La forme de la région de l'hyperlien dans une carte d'image.
 
     > [!NOTE]
-    > Utilisez plutôt l'élément [`<area>`](/fr/docs/Web/HTML/Element/area) pour les cartes d'images.
+    > Utilisez plutôt l'élément [`<area>`](/fr/docs/Web/HTML/Reference/Elements/area) pour les cartes d'images.
 
 ## Propriétés
 
@@ -273,7 +273,7 @@ Pour créer des liens qui s'ouvrent dans le programme de messagerie de l'utilisa
 
 {{EmbedLiveSample('')}}
 
-Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'un corps de message, voir [Liens de courrier électronique](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links) ou [RFC 6068](https://tools.ietf.org/html/rfc6068).
+Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'un corps de message, voir [Liens de courrier électronique](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links#e-mail_links) ou [RFC 6068](https://tools.ietf.org/html/rfc6068).
 
 ### Créer un lien avec les numéros de téléphone
 
@@ -297,7 +297,7 @@ Voir [RFC 3966](https://tools.ietf.org/html/rfc3966) pour la syntaxe, les foncti
 
 ### Utilisation de l'attribut de téléchargement pour enregistrer un \<canvas> au format PNG
 
-Pour enregistrer le contenu d'un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sous forme d'image, vous pouvez créer un lien avec un attribut `download` et les données du canvas sous forme d'une URL `data:` :
+Pour enregistrer le contenu d'un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) sous forme d'image, vous pouvez créer un lien avec un attribut `download` et les données du canvas sous forme d'une URL `data:` :
 
 #### Exemple d'application de peinture avec lien de sauvegarde
 
@@ -368,7 +368,7 @@ document
 
 Les éléments `<a>` peuvent avoir des conséquences sur la sécurité et la vie privée des utilisateurs. Voir [`Referer` header : privacy and security concerns](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pour plus d'informations.
 
-L'utilisation de `target="_blank"` sans [`rel="noreferrer"`](/fr/docs/Web/HTML/Attributes/rel/noreferrer) et [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) rend le site web vulnérable aux attaques d'exploitation de l'API [`window.opener`](/fr/docs/Web/API/Window/opener) ([description de la vulnérabilité](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), bien qu'il faille noter que, dans les versions plus récentes du navigateur, la définition de `target="_blank"` fournit implicitement la même protection que la définition de `rel="noopener"`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour plus de détails.
+L'utilisation de `target="_blank"` sans [`rel="noreferrer"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noreferrer) et [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) rend le site web vulnérable aux attaques d'exploitation de l'API [`window.opener`](/fr/docs/Web/API/Window/opener) ([description de la vulnérabilité](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), bien qu'il faille noter que, dans les versions plus récentes du navigateur, la définition de `target="_blank"` fournit implicitement la même protection que la définition de `rel="noopener"`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour plus de détails.
 
 ## Accessibilité
 
@@ -408,7 +408,7 @@ Les ancres sont souvent détournées avec l'évènement `onclick` afin de créer
 
 Ces valeurs produisent des résultats inadéquats lorsqu'on copie/déplace des liens, qu'on ouvre des liens dans de nouveaux onglets ou fenêtres, qu'on ajoute des marque-pages ou lorsque le JavaScript est encore en train d'être téléchargé. De plus, la sémantique exposée par le document, utilisée par les outils d'assistance, est incorrecte.
 
-Dans ces cas, on privilégiera plutôt l'utilisation d'un bouton [`<button>`](/fr/docs/Web/HTML/Element/button). De façon générale, une ancre ne doit être utilisée que pour naviguer vers une URL correcte.
+Dans ces cas, on privilégiera plutôt l'utilisation d'un bouton [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button). De façon générale, une ancre ne doit être utilisée que pour naviguer vers une URL correcte.
 
 ### Liens externes, liens vers des ressources non-HTML
 
@@ -432,7 +432,7 @@ Les personnes qui utilisent des outils d'assistance à la navigation comme des l
 </a>
 ```
 
-Si une icône est utilisée en lieu et place du texte pour indiquer ce comportement, on s'assurera qu'elle contient bien [une description alternative](/fr/docs/Web/HTML/Element/img#attr-alt).
+Si une icône est utilisée en lieu et place du texte pour indiquer ce comportement, on s'assurera qu'elle contient bien [une description alternative](/fr/docs/Web/HTML/Reference/Elements/img#attr-alt).
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
@@ -453,7 +453,7 @@ Si une icône est utilisée en lieu et place du texte pour indiquer ce comportem
 
 ### _Skip links_ - liens pour l'accès rapide au contenu
 
-Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est placé le plus près possible de l'élément [`<body>`](/fr/docs/Web/HTML/Element/body) et qui renvoie au début du contenu principal de la page.
+Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est placé le plus près possible de l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) et qui renvoie au début du contenu principal de la page.
 
 ```html
 <body>
@@ -508,5 +508,5 @@ Un tel espacement peut être obtenu grâce à la propriété CSS [`margin`](/fr/
 
 ## Voir aussi
 
-- [`<link>`](/fr/docs/Web/HTML/Element/link) est similaire à `<a>`, mais représente des hyperliens de métadonnées qui sont invisibles pour les utilisateurs.
+- [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) est similaire à `<a>`, mais représente des hyperliens de métadonnées qui sont invisibles pour les utilisateurs.
 - [`:link`](/fr/docs/Web/CSS/:link) est une pseudo-classe CSS qui correspondra aux éléments `<a>` avec des attributs `href` valides.

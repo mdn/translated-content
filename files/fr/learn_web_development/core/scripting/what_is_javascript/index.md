@@ -31,7 +31,7 @@ Bienvenue dans le cours JavaScript pour débutants sur le MDN. Dans ce premier a
 
 ## Une définition générale
 
-JavaScript est un langage de programmation qui permet d'implémenter des mécanismes complexes sur une page web. À chaque fois qu'une page web fait plus que simplement afficher du contenu statique — afficher du contenu mis à jour à des temps déterminés, des cartes interactives, des animations 2D/3D, des menus vidéo défilants, ou autre, JavaScript a de bonnes chances d'être impliqué. C'est la troisième couche des technologies standards du web, les deux premières ([HTML](/fr/docs/Learn/HTML) et [CSS](/fr/docs/Learn/CSS)) étant couvertes bien plus en détail dans d'autres tutoriels sur MDN.
+JavaScript est un langage de programmation qui permet d'implémenter des mécanismes complexes sur une page web. À chaque fois qu'une page web fait plus que simplement afficher du contenu statique — afficher du contenu mis à jour à des temps déterminés, des cartes interactives, des animations 2D/3D, des menus vidéo défilants, ou autre, JavaScript a de bonnes chances d'être impliqué. C'est la troisième couche des technologies standards du web, les deux premières ([HTML](/fr/docs/Learn_web_development/Core/Structuring_content) et [CSS](/fr/docs/Learn_web_development/Core/Styling_basics)) étant couvertes bien plus en détail dans d'autres tutoriels sur MDN.
 
 ![](cake.png)
 
@@ -109,7 +109,7 @@ Elles se divisent généralement en deux catégories&nbsp;:
 - l'[API DOM (Document Object Model)](/fr/docs/Web/API/Document_Object_Model) permet de manipuler du HTML et du CSS (créer, supprimer et modifier du HTML, appliquer de nouveaux styles à la page de façon dynamique, etc.). Chaque fois que vous voyez une fenêtre popup sur une page ou du nouveau contenu apparaître (comme dans notre démonstration plus haut), il s'agit d'une action du DOM.
 - l'[API de géolocalisation](/fr/docs/Web/API/Geolocation) récupère des informations géographiques. C'est ainsi que [Google Maps](https://www.google.com/maps) peut trouver votre position et la situer sur une carte.
 - les API [Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API) permettent de créer des animations 2D et 3D. On fait des choses incroyables avec ces technologies, voyez [Chrome Experiments](https://www.chromeexperiments.com/webgl) et [webglsamples](https://webglsamples.org/).
-- [les API Audio et Video](/fr/docs/Web/Media/Audio_and_video_delivery), comme {{domxref("HTMLMediaElement")}} et [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent des actions intéressantes sur le multimédia, telles que jouer de l'audio ou de la vidéo directement dans une page web, ou récupérer le flux vidéo de votre webcam et l'afficher sur l'ordinateur de quelqu'un d'autre (essayez la [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) pour vous faire une idée).
+- [les API Audio et Video](/fr/docs/Web/Media/Guides/Audio_and_video_delivery), comme {{domxref("HTMLMediaElement")}} et [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent des actions intéressantes sur le multimédia, telles que jouer de l'audio ou de la vidéo directement dans une page web, ou récupérer le flux vidéo de votre webcam et l'afficher sur l'ordinateur de quelqu'un d'autre (essayez la [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) pour vous faire une idée).
 
 > [!NOTE]
 > Beaucoup des exemples ci-dessus ne fonctionneront pas dans un ancien navigateur. Il vaut mieux utiliser un navigateur moderne comme Firefox, Chrome, Edge ou Opera pour exécuter votre code et faire vos tests. Si vous êtes amené à écrire du code de production (c'est-à-dire destiné à de véritables utilisateurs), il vous faudra prendre en compte la compatibilité pour différents navigateurs.
@@ -128,7 +128,7 @@ Et il y a bien plus encore&nbsp;! Pas de précipitation cependant. Vous ne serez
 
 Ici nous allons commencer à réellement nous intéresser au code, et, ce faisant, à explorer ce qui se passe quand vous exécutez du JavaScript dans votre page.
 
-Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_works#comment_fonctionnent_vraiment_les_css)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
+Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#comment_fonctionnent_vraiment_les_css)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
 
 ![](execution.png)
 
@@ -177,7 +177,7 @@ Chaque approche a ses avantages, ce que nous ne développerons pas pour l'instan
 
 Vous pouvez aussi rencontrer les termes de code **côté serveur** et **côté client**, notamment dans le contexte du développement web. Le code **côté client** est du code exécuté sur l'ordinateur de l'utilisateur : quand une page web est vue, le code côté client de la page est téléchargé, puis exécuté et affiché par le navigateur. Dans ce module JavaScript, nous parlons explicitement de **JavaScript côté client**.
 
-Le code **côté serveur** quant à lui est exécuté sur le serveur, puis ses résultats sont téléchargés et affichés par le navigateur. Citons comme langages web côté serveur populaires le PHP, Python, Ruby, et ASP.NET. Et JavaScript&nbsp;! JavaScript peut aussi s'utiliser comme un langage **côté serveur**, par exemple dans le populaire environnement Node.js — vous pouvez en apprendre plus sur le JavaScript côté serveur dans notre article [Programmation de Sites Web côté serveur](/fr/docs/Learn/Server-side).
+Le code **côté serveur** quant à lui est exécuté sur le serveur, puis ses résultats sont téléchargés et affichés par le navigateur. Citons comme langages web côté serveur populaires le PHP, Python, Ruby, et ASP.NET. Et JavaScript&nbsp;! JavaScript peut aussi s'utiliser comme un langage **côté serveur**, par exemple dans le populaire environnement Node.js — vous pouvez en apprendre plus sur le JavaScript côté serveur dans notre article [Programmation de Sites Web côté serveur](/fr/docs/Learn_web_development/Extensions/Server-side).
 
 ### Code dynamique contre code statique
 
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Learn/JavaScript/Building_blocks/Events) plus tard dans le cours).
+Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Learn_web_development/Core/Scripting/Events) plus tard dans le cours).
 
 Dans l'exemple externe, nous utilisons une fonctionnalité JavaScript plus moderne pour résoudre le problème, l'attribut `async`, qui indique au navigateur de continuer à télécharger le contenu HTML une fois que l'élément de balise {{htmlelement("script")}} a été atteint.
 
@@ -400,6 +400,6 @@ for (let i = 0; i < buttons.length; i++) {
 
 Et voilà votre premier pas dans le monde du JavaScript. Nous avons commencé par la théorie seule, pour vous habituer aux raisons d'utiliser JavaScript, et à ses possibilités. Vous avez pu voir quelques exemples de code et appris comment JavaScript s'intègre avec le reste du code sur votre site web, entre autres choses.
 
-Le JavaScript peut sembler un peu impressionnant pour l'instant, mais pas d'inquiétude, ce cours progressera pas à pas. Dans le prochain article [Notre premier code JavaScript,](/fr/docs/Learn/JavaScript/First_steps/A_first_splash) nous entrons au cœur du sujet et vous réaliserez vos propres exemples de JavaScript.
+Le JavaScript peut sembler un peu impressionnant pour l'instant, mais pas d'inquiétude, ce cours progressera pas à pas. Dans le prochain article [Notre premier code JavaScript,](/fr/docs/Learn_web_development/Core/Scripting/A_first_splash) nous entrons au cœur du sujet et vous réaliserez vos propres exemples de JavaScript.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

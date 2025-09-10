@@ -5,7 +5,7 @@ slug: Web/CSS/padding-bottom
 
 {{CSSRef}}
 
-La propriété **`padding-bottom`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément. La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-bottom")}}, `padding-bottom` ne peut pas recevoir de valeurs négatives.
+La propriété **`padding-bottom`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément. La [zone de remplissage](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-bottom")}}, `padding-bottom` ne peut pas recevoir de valeurs négatives.
 
 {{InteractiveExample("CSS Demo: padding-bottom")}}
 
@@ -122,5 +122,5 @@ padding-bottom: unset;
 
 ## Voir aussi
 
-- [Le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Le modèle de boîtes CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - La propriété raccourcie {{cssxref("padding")}} qui permet de paramétrer `padding-bottom`, {{cssxref("padding-right")}}, {{cssxref("padding-top")}} et {{cssxref("padding-left")}}.

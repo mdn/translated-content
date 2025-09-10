@@ -754,7 +754,7 @@ Si vous utilisez [_Firefox Grid Inspector_ (inspecteur de grilles)](https://fire
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: Grilles](/fr/docs/Learn/CSS/CSS_layout/Grid_skills).
+Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: Grilles](/fr/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid).
 
 ## Résumé
 

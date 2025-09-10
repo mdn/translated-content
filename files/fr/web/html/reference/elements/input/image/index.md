@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/input/image
 
 {{HTMLSidebar}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`image`** sont utilisés pour créer des boutons d'envoi de formulaire graphiques. Autrement dit, il s'agit de boutons d'envoi qui affichent une image plutôt qu'un texte.
+Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut **`image`** sont utilisés pour créer des boutons d'envoi de formulaire graphiques. Autrement dit, il s'agit de boutons d'envoi qui affichent une image plutôt qu'un texte.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
 
@@ -76,7 +76,7 @@ Les éléments `<input type="image">` n'acceptent pas l'attribut `value`. Le che
 
 ## Attributs supplémentaires
 
-En complément des attributs partagés par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les boutons `image` prennent en charge les attributs suivants.
+En complément des attributs partagés par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), les boutons `image` prennent en charge les attributs suivants.
 
 ### `alt`
 
@@ -87,13 +87,13 @@ Ainsi, si un bouton graphique affiche une image avec une icône ou une image ave
 > [!NOTE]
 > Bien que l'attribut `alt` soit optionnel sur le plan technique, il devrait en pratique toujours être inclus afin de maximiser l'utilisabilité du contenu.
 
-D'un point de vue fonctionnel, l'attribut `alt` de `<input type="image">` `alt` se comporte de façon analogue à l'attribut [`alt`](/fr/docs/Web/HTML/Element/img#attr-alt) des éléments [`<img>`](/fr/docs/Web/HTML/Element/img).
+D'un point de vue fonctionnel, l'attribut `alt` de `<input type="image">` `alt` se comporte de façon analogue à l'attribut [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#attr-alt) des éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img).
 
 ### `formaction`
 
-Une chaîne de caractères qui indique l'URL vers laquelle envoyer les données du formulaire. La valeur de cet attribut surcharge celle de l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+Une chaîne de caractères qui indique l'URL vers laquelle envoyer les données du formulaire. La valeur de cet attribut surcharge celle de l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
-Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit) et [`<button>`](/fr/docs/Web/HTML/Element/button).
+Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) et [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
 
 ### `formenctype`
 
@@ -102,40 +102,40 @@ Une chaîne de caractères qui identifie la méthode d'encodage à utiliser lors
 - `application/x-www-form-urlencoded`
   - : La valeur par défaut. Les données sont envoyées sous forme d'une chaîne de caractères après l'URL en encodant le texte avec un algorithme comme celui de [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI).
 - `multipart/form-data`
-  - : Utilise l'API [`FormData`](/fr/docs/Web/API/FormData) pour gérer les données et permet d'envoyer des fichiers au serveur. Ce type d'encodage _doit_ être utilisé si le formulaire contient des éléments [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file).
+  - : Utilise l'API [`FormData`](/fr/docs/Web/API/FormData) pour gérer les données et permet d'envoyer des fichiers au serveur. Ce type d'encodage _doit_ être utilisé si le formulaire contient des éléments [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file).
 - `text/plain`
   - : Du texte simple. Ce type d'encodage est principalement utilisé pour le débogage afin de voir facilement les données envoyées.
 
-La valeur de cet attribut surcharge celle de l'attribut [`enctype`](/fr/docs/Web/HTML/Element/form#attr-enctype) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+La valeur de cet attribut surcharge celle de l'attribut [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#attr-enctype) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
-Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit) et [`<button>`](/fr/docs/Web/HTML/Element/button).
+Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) et [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
 
 ### `formmethod`
 
 Une chaîne de caractères qui indique la méthode HTTP à utiliser lors de l'envoi des données du formulaire. Les valeurs possibles sont&nbsp;:
 
 - `get`
-  - : La valeur par défaut. Une URL est construite en commençant par l'URL fournie par l'attribut `formaction` ou l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action) du formulaire, puis en ajoutant un point d'interrogation, puis en ajoutant les données du formulaire en respectant l'encodage décrit par l'attribut `formenctype` ou l'attribut [`enctype`](/fr/docs/Web/HTML/Element/form#attr-enctype) du formulaire. L'URL est alors envoyée au serveur en utilisant une requête HTTP [`GET`](/fr/docs/Web/HTTP/Methods/GET). Cette méthode fonctionne pour les formulaires simples qui ne contiennent que des caractères ASCII et qui n'ont pas d'effets de bord.
+  - : La valeur par défaut. Une URL est construite en commençant par l'URL fournie par l'attribut `formaction` ou l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) du formulaire, puis en ajoutant un point d'interrogation, puis en ajoutant les données du formulaire en respectant l'encodage décrit par l'attribut `formenctype` ou l'attribut [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#attr-enctype) du formulaire. L'URL est alors envoyée au serveur en utilisant une requête HTTP [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET). Cette méthode fonctionne pour les formulaires simples qui ne contiennent que des caractères ASCII et qui n'ont pas d'effets de bord.
 - `post`
-  - : Les données du formulaire sont incluses dans le corps de la requête qui est envoyée à l'URL fournie par l'attribut `formaction` ou l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action) du formulaire en utilisant une requête HTTP [`POST`](/fr/docs/Web/HTTP/Methods/POST). Cette méthode permet d'envoyer des données complexes et des fichiers.
+  - : Les données du formulaire sont incluses dans le corps de la requête qui est envoyée à l'URL fournie par l'attribut `formaction` ou l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) du formulaire en utilisant une requête HTTP [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST). Cette méthode permet d'envoyer des données complexes et des fichiers.
 - `dialog`
   - : Cette méthode est utilisée afin d'indiquer que le bouton ferme la boîte de dialogue à laquelle le champ est associé, aucune donnée du formulaire n'est envoyée.
 
-La valeur de cet attribut surcharge celle de l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+La valeur de cet attribut surcharge celle de l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
-Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit) et [`<button>`](/fr/docs/Web/HTML/Element/button).
+Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) et [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
 
 ### `formnovalidate`
 
 Un attribut booléen qui, s'il est présent, indique que le formulaire ne devrait pas être validé avant envoi au serveur.
 
-La valeur de cet attribut surcharge celle de l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#attr-novalidate) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+La valeur de cet attribut surcharge celle de l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#attr-novalidate) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
-Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit) et [`<button>`](/fr/docs/Web/HTML/Element/button).
+Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) et [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
 
 ### `formtarget`
 
-Une chaîne de caractères qui indique un nom ou un mot-clé indiquant où afficher la réponse reçue après l'envoi du formulaire. Cette chaîne de caractères doit être le nom d'un **contexte de navigation** (autrement dit, un onglet, une fenêtre ou une [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+Une chaîne de caractères qui indique un nom ou un mot-clé indiquant où afficher la réponse reçue après l'envoi du formulaire. Cette chaîne de caractères doit être le nom d'un **contexte de navigation** (autrement dit, un onglet, une fenêtre ou une [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 En plus des noms variables qui peuvent être donnés aux onglets, fenêtres et <i lang="en">iframes</i>, il existe certains mots-clés spéciaux qui peuvent être utilisés&nbsp;:
 
@@ -148,9 +148,9 @@ En plus des noms variables qui peuvent être donnés aux onglets, fenêtres et <
 - `_top`
   - : La réponse est chargée dans le contexte de navigation de plus haut niveau. Il s'agit du contexte de navigation qui est l'ancêtre de plus haut niveau du contexte courant. Si le contexte courant est déjà le contexte de plus haut niveau, le comportement obtenu est le même qu'avec `_self`.
 
-La valeur de cet attribut surcharge celle de l'attribut [`target`](/fr/docs/Web/HTML/Element/form#attr-target) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+La valeur de cet attribut surcharge celle de l'attribut [`target`](/fr/docs/Web/HTML/Reference/Elements/form#attr-target) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) propriétaire de cet élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
-Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit) et [`<button>`](/fr/docs/Web/HTML/Element/button).
+Cet attribut est également disponible pour les éléments [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) et [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
 
 ### `height`
 
@@ -158,7 +158,7 @@ Un nombre qui indique la hauteur, exprimée en pixels CSS, selon laquelle dessin
 
 ### `src`
 
-Une chaîne de caractères qui indique l'URL du fichier contenant l'image à afficher sur le bouton graphique. Lorsque la personne interagit avec l'image, le contrôle réagit comme un bouton d'envoi ([`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit)).
+Une chaîne de caractères qui indique l'URL du fichier contenant l'image à afficher sur le bouton graphique. Lorsque la personne interagit avec l'image, le contrôle réagit comme un bouton d'envoi ([`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit)).
 
 ### `width`
 
@@ -170,11 +170,11 @@ L'attribut qui suit a été défini en HTML 4 pour les contrôles de type `image
 
 ### `usemap`
 
-Lorsque cet attribut est indiqué, sa valeur doit être le nom d'un élément de carte d'images [`<map>`](/fr/docs/Web/HTML/Element/map), qui définit une carte d'image à utiliser sur le bouton. Cet usage est obsolète et il faut remplacer cet attribut par une utilisation de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) si on veut utiliser des cartes d'image.
+Lorsque cet attribut est indiqué, sa valeur doit être le nom d'un élément de carte d'images [`<map>`](/fr/docs/Web/HTML/Reference/Elements/map), qui définit une carte d'image à utiliser sur le bouton. Cet usage est obsolète et il faut remplacer cet attribut par une utilisation de l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) si on veut utiliser des cartes d'image.
 
 ## Utiliser les boutons d'image
 
-Un élément `<input type="image">` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element) (c'est-à-dire un élément dont le contenu n'est pas généré ou directement géré par la couche CSS), et se comporte principalement comme un élément [`<img>`](/fr/docs/Web/HTML/Element/img) classique, avec les fonctionnalités d'un [bouton d'envoi](/fr/docs/Web/HTML/Element/input/submit).
+Un élément `<input type="image">` est [un élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) (c'est-à-dire un élément dont le contenu n'est pas généré ou directement géré par la couche CSS), et se comporte principalement comme un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) classique, avec les fonctionnalités d'un [bouton d'envoi](/fr/docs/Web/HTML/Reference/Elements/input/submit).
 
 ### Fonctionnalités essentielles des boutons d'image
 
@@ -198,13 +198,13 @@ Prenons un exemple simple qui utilise les différentes fonctionnalités essentie
 
 ### Surcharger le comportement par défaut du formulaire
 
-Les éléments `<input type="image">`, comme [les boutons d'envoi classiques](/fr/docs/Web/HTML/Element/input/submit), acceptent certains attributs qui surchargent le comportement indiqué par le formulaire&nbsp;:
+Les éléments `<input type="image">`, comme [les boutons d'envoi classiques](/fr/docs/Web/HTML/Reference/Elements/input/submit), acceptent certains attributs qui surchargent le comportement indiqué par le formulaire&nbsp;:
 
-- La valeur de [`formaction`](#formaction) surcharge celle fournie par le formulaire avec [`action`](/fr/docs/Web/HTML/Element/form#attr-action)
-- La valeur de [`formenctype`](#formenctype) surcharge celle fournie par le formulaire avec [`enctype`](/fr/docs/Web/HTML/Element/form#attr-enctype)
-- La valeur de [`formmethod`](#formmethod) surcharge celle fournie par le formulaire avec [`method`](/fr/docs/Web/HTML/Element/form#attr-method)
-- La valeur de [`formnovalidate`](#formnovalidate) surcharge celle fournie par le formulaire avec [`novalidate`](/fr/docs/Web/HTML/Element/form#attr-novalidate)
-- La valeur de [`formtarget`](#formtarget) surcharge celle fournie par le formulaire avec [`target`](/fr/docs/Web/HTML/Element/form#attr-target)
+- La valeur de [`formaction`](#formaction) surcharge celle fournie par le formulaire avec [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action)
+- La valeur de [`formenctype`](#formenctype) surcharge celle fournie par le formulaire avec [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#attr-enctype)
+- La valeur de [`formmethod`](#formmethod) surcharge celle fournie par le formulaire avec [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method)
+- La valeur de [`formnovalidate`](#formnovalidate) surcharge celle fournie par le formulaire avec [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#attr-novalidate)
+- La valeur de [`formtarget`](#formtarget) surcharge celle fournie par le formulaire avec [`target`](/fr/docs/Web/HTML/Reference/Elements/form#attr-target)
 
 Voir les paragraphes précédents pour le rôle détaillé de chacun de ces attributs.
 
@@ -212,7 +212,7 @@ Voir les paragraphes précédents pour le rôle détaillé de chacun de ces attr
 
 Lors de l'envoi d'un formulaire avec un bouton graphique `<input type="image">`, deux données supplémentaires sont automatiquement envoyées au serveur par le navigateur&nbsp;: les coordonnées `x` et `y` de l'emplacement du clic sur l'image. Vous pouvez voir ceci à l'œuvre dans [l'exemple sur les coordonnées X Y](https://mdn.github.io/learning-area/html/forms/image-type-example/xy-coordinates-example.html).
 
-Lorsqu'on clique sur l'image pour envoyer le formulaire, des données sont ajoutées aux paramètres de l'URL, comme `?x=52&y=55`. Attention, si le bouton utilise un attribut [`name`](/fr/docs/Web/HTML/Element/input#attr-name), sa valeur sera utilisée comme préfixe pour chaque attribut, par exemple si `name` vaut `position`, les coordonnées envoyées dans l'URL seraient transmises sous la forme `?position.x=52&position.y=55`. Cela vaut également pour les autres attributs.
+Lorsqu'on clique sur l'image pour envoyer le formulaire, des données sont ajoutées aux paramètres de l'URL, comme `?x=52&y=55`. Attention, si le bouton utilise un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#attr-name), sa valeur sera utilisée comme préfixe pour chaque attribut, par exemple si `name` vaut `position`, les coordonnées envoyées dans l'URL seraient transmises sous la forme `?position.x=52&position.y=55`. Cela vaut également pour les autres attributs.
 
 Ces coordonnées correspondent à l'abscisse et à l'ordonnée du point où le clic a eu lieu, relatifs à une origine `(0, 0)` située dans le coin supérieur gauche de l'image. On peut utiliser ces valeurs si l'emplacement du clic a une quelconque importance, par exemple s'il s'agit d'une carte sur laquelle on clique. Le code côté serveur pourra alors déterminer l'emplacement du clic et renvoyer des informations correspondantes au lieu visé.
 
@@ -339,6 +339,6 @@ Ici, `object-position` est configuré afin que l'image soit dessinée au coin su
 
 ## Voir aussi
 
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et l'interface DOM qu'il implémente&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
+- L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface DOM qu'il implémente&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
 - Les propriétés CSS pour le positionnement et le dimensionnement de l'image dans le cadre de l'élément `<input>`&nbsp;: [`object-position`](/fr/docs/Web/CSS/object-position) et [`object-fit`](/fr/docs/Web/CSS/object-fit)
-- [Compatibilité des propriétés CSS pour les contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibilité des propriétés CSS pour les contrôles de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)

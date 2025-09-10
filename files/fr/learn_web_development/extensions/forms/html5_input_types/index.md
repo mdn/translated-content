@@ -6,7 +6,7 @@ original_slug: Learn/Forms/HTML5_input_types
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
-Dans [l'article précédent](/fr/docs/Learn/Forms/Basic_native_form_controls), nous avons vu l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et les types qu'il pouvait avoir depuis les origines de HTML. Voyons ici, en détails, les fonctionnalités offertes par les contrôles de formulaire plus récents, dont certains ont été ajoutés en HTML5 et qui permettent de récupérer des données d'un certain type.
+Dans [l'article précédent](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls), nous avons vu l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et les types qu'il pouvait avoir depuis les origines de HTML. Voyons ici, en détails, les fonctionnalités offertes par les contrôles de formulaire plus récents, dont certains ont été ajoutés en HTML5 et qui permettent de récupérer des données d'un certain type.
 
 <table>
   <tbody>
@@ -26,13 +26,13 @@ Dans [l'article précédent](/fr/docs/Learn/Forms/Basic_native_form_controls), n
 </table>
 
 > [!NOTE]
-> La plupart des fonctionnalités évoquées dans cet article sont largement prises en charge parmi les différents navigateurs. Les exceptions à ceci seront notées dans l'article. Si vous souhaitez plus de détails sur la comptabilité des navigateurs, n'hésitez pas à consulter [la référence HTML sur les éléments de formulaire](/fr/docs/Web/HTML/Element#formulaires), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Element/input).
+> La plupart des fonctionnalités évoquées dans cet article sont largement prises en charge parmi les différents navigateurs. Les exceptions à ceci seront notées dans l'article. Si vous souhaitez plus de détails sur la comptabilité des navigateurs, n'hésitez pas à consulter [la référence HTML sur les éléments de formulaire](/fr/docs/Web/HTML/Reference/Elements#formulaires), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
-L'apparence native des contrôles de formulaire HTML peut être différente de celle voulue pour un design donné. Il arrive donc que les développeuses et développeurs construisent leurs propres contrôles de formulaire sur mesure. Nous aborderons ce sujet dans un tutoriel avancé&nbsp;: [Comment construire des contrôles de formulaire sur mesure](/fr/docs/Learn/Forms/How_to_build_custom_form_controls).
+L'apparence native des contrôles de formulaire HTML peut être différente de celle voulue pour un design donné. Il arrive donc que les développeuses et développeurs construisent leurs propres contrôles de formulaire sur mesure. Nous aborderons ce sujet dans un tutoriel avancé&nbsp;: [Comment construire des contrôles de formulaire sur mesure](/fr/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
 
 ## Champ pour une adresse électronique
 
-Pour ce type de champ, on utilisera la valeur `email` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
+Pour ce type de champ, on utilisera la valeur `email` pour l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type)&nbsp;:
 
 ```html
 <input type="email" id="email" name="email" />
@@ -42,7 +42,7 @@ Lorsque ce type est utilisé, la personne doit saisir une adresse mail avec un f
 
 ![Un champ email avec une valeur invalide qui affiche le message "Please enter an email address." (veuillez saisir une adresse électronique valide)](email_address_invalid.png)
 
-Il est aussi possible d'utiliser l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) pour le type `email` afin de permettre la saisie de plusieurs adresses (séparées par des virgules)&nbsp;:
+Il est aussi possible d'utiliser l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple) pour le type `email` afin de permettre la saisie de plusieurs adresses (séparées par des virgules)&nbsp;:
 
 ```html
 <input type="email" id="email" name="email" multiple />
@@ -61,16 +61,16 @@ Voici une autre bonne raison de privilégier ces types de champ plus récents qu
 
 Comme on peut le voir ci-avant, les champs de type `email`, ainsi que les autres types d'éléments `<input>`, fournissent une validation _côté client_ qui est effectuée par le navigateur avant que les données soient envoyées au serveur. C'est _bien_ une aide utile permettant de guider les personnes pour remplir le formulaire correctement et cela peut faire gagner du temps&nbsp;: en sachant immédiatement que les données ne sont pas correctes, cela évite d'attendre un aller-retour avec le serveur.
 
-En revanche, un tel mécanisme _ne devrait pas être considéré_ comme une mesure de protection suffisante&nbsp;! Votre application devrait toujours effectuer des contrôles de sécurité _côté serveur_ pour toute donnée qui proviendrait de l'extérieur (par exemple d'un formulaire). En effet, la validation côté client peut tout à fait être contournée et une personne malveillante pourra facilement envoyer des données incorrectes vers votre serveur. Pour en savoir plus sur de tels effets néfastes qui _pourraient_ se produire, vous pouvez lire [notre article sur la sécurité web](/fr/docs/Learn/Server-side/First_steps/Website_security). L'implémentation de la validation côté serveur est en dehors du périmètre de ce module, mais il s'agit de quelque chose qu'il faut garder à l'esprit.
+En revanche, un tel mécanisme _ne devrait pas être considéré_ comme une mesure de protection suffisante&nbsp;! Votre application devrait toujours effectuer des contrôles de sécurité _côté serveur_ pour toute donnée qui proviendrait de l'extérieur (par exemple d'un formulaire). En effet, la validation côté client peut tout à fait être contournée et une personne malveillante pourra facilement envoyer des données incorrectes vers votre serveur. Pour en savoir plus sur de tels effets néfastes qui _pourraient_ se produire, vous pouvez lire [notre article sur la sécurité web](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security). L'implémentation de la validation côté serveur est en dehors du périmètre de ce module, mais il s'agit de quelque chose qu'il faut garder à l'esprit.
 
-On notera aussi que `a@b` est une adresse électronique valide pour les contraintes fournies par défaut. En effet, par défaut, un champ `email` permet de saisir des adresses intranet. Pour implémenter un comportement de validation différent, on pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern) et personnaliser les messages d'erreur affichés. Nous verrons ces fonctionnalités dans l'article [Validation d'un formulaire côté client](/fr/docs/Learn/Forms/Form_validation).
+On notera aussi que `a@b` est une adresse électronique valide pour les contraintes fournies par défaut. En effet, par défaut, un champ `email` permet de saisir des adresses intranet. Pour implémenter un comportement de validation différent, on pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Attributes/pattern) et personnaliser les messages d'erreur affichés. Nous verrons ces fonctionnalités dans l'article [Validation d'un formulaire côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 > [!NOTE]
 > Si la valeur saisie n'est pas une adresse électronique, la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/:invalid) s'appliquera, et la propriété du DOM [`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch) renverra `true`.
 
 ## Champ de recherche
 
-Les champs de recherche permettent de créer des boîtes de recherches pour les sites et applications web. Pour créer un tel champ, on utilisera la valeur `search` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
+Les champs de recherche permettent de créer des boîtes de recherches pour les sites et applications web. Pour créer un tel champ, on utilisera la valeur `search` pour l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type)&nbsp;:
 
 ```html
 <input type="search" id="search" name="search" />
@@ -86,7 +86,7 @@ On notera aussi une fonctionnalité intéressante pour les champs `search`&nbsp;
 
 ## Champ pour un numéro de téléphone
 
-Pour créer un champ permettant spécifiquement de saisir un numéro de téléphone, on pourra utiliser la valeur `tel` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
+Pour créer un champ permettant spécifiquement de saisir un numéro de téléphone, on pourra utiliser la valeur `tel` pour l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type)&nbsp;:
 
 ```html
 <input type="tel" id="tel" name="tel" />
@@ -100,11 +100,11 @@ Voici comme exemple une capture d'écran du clavier de Firefox pour Android&nbsp
 
 En raison de la diversité des formats de numéro de téléphone dans le monde, ce type de champ n'applique pas de contrainte sur la valeur saisie par la personne (autrement dit, cette valeur peut contenir des lettres, etc.).
 
-Comme mentionné précédemment, l'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern) peut être utilisé afin d'appliquer certaines contraintes, nous le verrons plus en détails dans [l'article sur la validation des formulaires côté client](/fr/docs/Learn/Forms/Form_validation).
+Comme mentionné précédemment, l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Attributes/pattern) peut être utilisé afin d'appliquer certaines contraintes, nous le verrons plus en détails dans [l'article sur la validation des formulaires côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 ## Champ pour une URL
 
-Pour créer un champ qui permette spécifiquement de saisir des URL, on utilisera la valeur `url` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
+Pour créer un champ qui permette spécifiquement de saisir des URL, on utilisera la valeur `url` pour l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type)&nbsp;:
 
 ```html
 <input type="url" id="url" name="url" />
@@ -121,15 +121,15 @@ Voici un exemple (tiré de Firefox pour Android)&nbsp;:
 
 ## Champ numérique
 
-Pour créer un contrôle permettant de saisir des nombres, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `number`. Ce contrôle ressemble à un champ textuel mais permet uniquement de saisir des nombres (y compris des nombres décimaux). Généralement, un tel contrôle fournit des boutons d'incrément ou de décrément pour augmenter ou réduire la valeur. Pour les appareils avec un clavier logiciel, c'est généralement un clavier numérique qui est affiché pour saisir dans un tel champ.
+Pour créer un contrôle permettant de saisir des nombres, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type) vaut `number`. Ce contrôle ressemble à un champ textuel mais permet uniquement de saisir des nombres (y compris des nombres décimaux). Généralement, un tel contrôle fournit des boutons d'incrément ou de décrément pour augmenter ou réduire la valeur. Pour les appareils avec un clavier logiciel, c'est généralement un clavier numérique qui est affiché pour saisir dans un tel champ.
 
 La capture d'écran qui suit (tirée de Firefox pour Android) illustre ce cas&nbsp;:
 
 ![Clavier de Firefox pour Android avec, par défaut, des chiffres, virgule et point.](fx-android-number-type-keyboard.jpg)
 
-Pour les champs de type `number`, on peut contraindre les valeurs minimales et maximales acceptées avec les attributs respectifs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max).
+Pour les champs de type `number`, on peut contraindre les valeurs minimales et maximales acceptées avec les attributs respectifs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#attr-max).
 
-On peut aussi utiliser l'attribut `step` qui permet de définir le pas (pour l'incrément et le décrément) utilisé avec les boutons pour augmenter/réduire la valeur. Par défaut, un champ numérique ne sera valide qu'avec un nombre entier. Pour permettre la saisie de valeurs décimales, on indiquera [`step="any"`](/fr/docs/Web/HTML/Attributes/step). Si cet attribut est absent, `step` aura `1` comme valeur par défaut, ce qui signifie que seuls les nombres entiers seront considérés comme valides.
+On peut aussi utiliser l'attribut `step` qui permet de définir le pas (pour l'incrément et le décrément) utilisé avec les boutons pour augmenter/réduire la valeur. Par défaut, un champ numérique ne sera valide qu'avec un nombre entier. Pour permettre la saisie de valeurs décimales, on indiquera [`step="any"`](/fr/docs/Web/HTML/Reference/Attributes/step). Si cet attribut est absent, `step` aura `1` comme valeur par défaut, ce qui signifie que seuls les nombres entiers seront considérés comme valides.
 
 Prenons quelques exemples. Dans le premier, on crée un contrôle numérique où la valeur est restreinte entre `1` et `10`, et où les boutons d'incrément/décrément utilisent un pas de `2`.
 
@@ -143,7 +143,7 @@ Dans ce deuxième exemple, on crée un contrôle numérique où la valeur doit �
 <input type="number" name="change" id="centimes" min="0" max="1" step="0.01" />
 ```
 
-Un champ de type `number` sera pertinent lorsque l'intervalle des valeurs valides est limité (par exemple pour l'âge ou la taille d'une personne). Si l'intervalle est trop grand pour qu'une augmentation incrémentale soit pertinente (par exemple pour un code postal), un champ `tel` pourra être une option plus adaptée, car le contrôle ne présente pas les boutons d'incrément/décrément mais affiche un clavier numérique (pour l'aspect relatif au clavier présenté, on pourra aussi exploiter l'attribut [`inputmode`](/fr/docs/Web/HTML/Global_attributes/inputmode)).
+Un champ de type `number` sera pertinent lorsque l'intervalle des valeurs valides est limité (par exemple pour l'âge ou la taille d'une personne). Si l'intervalle est trop grand pour qu'une augmentation incrémentale soit pertinente (par exemple pour un code postal), un champ `tel` pourra être une option plus adaptée, car le contrôle ne présente pas les boutons d'incrément/décrément mais affiche un clavier numérique (pour l'aspect relatif au clavier présenté, on pourra aussi exploiter l'attribut [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode)).
 
 ## Curseurs
 
@@ -153,9 +153,9 @@ Une autre méthode permettant de sélectionner un nombre consiste à utiliser un
 
 En termes d'utilisation, les curseurs sont moins précis que les champs dans lesquels on saisit une valeur. Aussi, on les utilise lorsque la valeur _précise_ n'est pas particulièrement importante.
 
-Pour créer un curseur, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `range`. Le curseur peut alors être déplacé le long de la piste avec une souris, au doigt pour les interfaces tactiles, ou avec les flèches du clavier.
+Pour créer un curseur, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type) vaut `range`. Le curseur peut alors être déplacé le long de la piste avec une souris, au doigt pour les interfaces tactiles, ou avec les flèches du clavier.
 
-Il est important de configurer correctement le curseur en utilisant les attributs [`min`](/fr/docs/Web/HTML/Attributes/min), [`max`](/fr/docs/Web/HTML/Attributes/max), et [`step`](/fr/docs/Web/HTML/Attributes/step) qui paramètrent respectivement le minimum, le maximum et le pas d'incrément.
+Il est important de configurer correctement le curseur en utilisant les attributs [`min`](/fr/docs/Web/HTML/Reference/Attributes/min), [`max`](/fr/docs/Web/HTML/Reference/Attributes/max), et [`step`](/fr/docs/Web/HTML/Reference/Attributes/step) qui paramètrent respectivement le minimum, le maximum et le pas d'incrément.
 
 Voyons le code utilisé pour notre exemple ci-avant. Pour commencer, le fragment HTML&nbsp;:
 
@@ -174,7 +174,7 @@ Voyons le code utilisé pour notre exemple ci-avant. Pour commencer, le fragment
 
 Dans cet exemple, on a un curseur qui peut couvrir l'intervalle entre `50000` et `500000` et dont le pas vaut 100. Ici, on a fourni la valeur par défaut de `250000` grâce à l'attribut `value`.
 
-Un des inconvénients des curseurs est l'absence de retour visuel pour indiquer la valeur courante du contrôle. C'est pour ça que nous avons ajouté un élément [`<output>`](/fr/docs/Web/HTML/Element/output) qui contient la valeur courante. On pourrait afficher la valeur saisie ou le résultat d'un calcul dans n'importe quel élément, mais `<output>` est spécial (à l'instar de `<label>`) et possède un attribut `for` qui permet de l'associer à un ou plusieurs éléments d'où proviendrait la valeur affichée à l'intérieur.
+Un des inconvénients des curseurs est l'absence de retour visuel pour indiquer la valeur courante du contrôle. C'est pour ça que nous avons ajouté un élément [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output) qui contient la valeur courante. On pourrait afficher la valeur saisie ou le résultat d'un calcul dans n'importe quel élément, mais `<output>` est spécial (à l'instar de `<label>`) et possède un attribut `for` qui permet de l'associer à un ou plusieurs éléments d'où proviendrait la valeur affichée à l'intérieur.
 
 Pour effectivement afficher la valeur courante et la mettre à jour lorsqu'elle est modifiée par l'utilisatrice ou l'utilisateur, on doit utiliser JavaScript et ces quelques lignes&nbsp;:
 
@@ -200,7 +200,7 @@ La récupération de valeurs temporelles a longtemps été un cauchemar de déve
 
 Les contrôles de date HTML permettent de gérer ce type de données en fournissant des interfaces graphiques adaptées et en utilisant un format de données normalisé.
 
-Pour créer un contrôle permettant de saisir une date et/ou une heure, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) avec une valeur appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type), qui dépendra selon qu'on veuille saisir une date, une heure ou les deux. Voici un exemple qui utilise des éléments [`<select>`](/fr/docs/Web/HTML/Element/select) en cas de recours pour les navigateurs qui ne prendraient pas en charge ces types de champ&nbsp;:
+Pour créer un contrôle permettant de saisir une date et/ou une heure, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) avec une valeur appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type), qui dépendra selon qu'on veuille saisir une date, une heure ou les deux. Voici un exemple qui utilise des éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) en cas de recours pour les navigateurs qui ne prendraient pas en charge ces types de champ&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
 
@@ -208,7 +208,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 
 ### `datetime-local`
 
-[`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local) crée un contrôle permettant d'afficher et de sélectionner une date avec une heure sans information sur le fuseau horaire.
+[`<input type="datetime-local">`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local) crée un contrôle permettant d'afficher et de sélectionner une date avec une heure sans information sur le fuseau horaire.
 
 ```html
 <input type="datetime-local" name="datetime" id="datetime" />
@@ -216,7 +216,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 
 ### `month`
 
-[`<input type="month">`](/fr/docs/Web/HTML/Element/input/month) crée un contrôle permettant d'afficher et de sélectionner un mois d'une année.
+[`<input type="month">`](/fr/docs/Web/HTML/Reference/Elements/input/month) crée un contrôle permettant d'afficher et de sélectionner un mois d'une année.
 
 ```html
 <input type="month" name="month" id="month" />
@@ -224,7 +224,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 
 ### `time`
 
-[`<input type="time">`](/fr/docs/Web/HTML/Element/input/time) crée un contrôle permettant d'afficher et de sélectionner une heure (avec des minutes). Bien que la valeur puisse être _affichée_ au format sur 12 heures, la _valeur sous-jacente_ est représentée dans un format sur 24 heures.
+[`<input type="time">`](/fr/docs/Web/HTML/Reference/Elements/input/time) crée un contrôle permettant d'afficher et de sélectionner une heure (avec des minutes). Bien que la valeur puisse être _affichée_ au format sur 12 heures, la _valeur sous-jacente_ est représentée dans un format sur 24 heures.
 
 ```html
 <input type="time" name="time" id="time" />
@@ -232,7 +232,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 
 ### `week`
 
-[`<input type="week">`](/fr/docs/Web/HTML/Element/input/week) crée un contrôle permettant d'afficher et de sélectionner une semaine dans une année.
+[`<input type="week">`](/fr/docs/Web/HTML/Reference/Elements/input/week) crée un contrôle permettant d'afficher et de sélectionner une semaine dans une année.
 
 Les semaines commencent le lundi et vont jusqu'au dimanche. De plus, la première semaine de chaque année contient le premier jeudi de cette année (la première semaine peut donc ne pas inclure le premier jour de l'année ou inclure les derniers jours de l'année précédente).
 
@@ -242,7 +242,7 @@ Les semaines commencent le lundi et vont jusqu'au dimanche. De plus, la premièr
 
 ### Restreindre les valeurs de date/heure
 
-Tous les contrôles de date et d'heure peuvent être restreints avec les attributs [`min`](/fr/docs/Web/HTML/Attributes/min), [`max`](/fr/docs/Web/HTML/Attributes/max), et éventuellement [`step`](/fr/docs/Web/HTML/Attributes/step) (dont la valeur varie en fonction du type).
+Tous les contrôles de date et d'heure peuvent être restreints avec les attributs [`min`](/fr/docs/Web/HTML/Reference/Attributes/min), [`max`](/fr/docs/Web/HTML/Reference/Attributes/max), et éventuellement [`step`](/fr/docs/Web/HTML/Reference/Attributes/step) (dont la valeur varie en fonction du type).
 
 ```html
 <label for="monDate">Quand êtes-vous disponible cet été&nbsp;?</label>
@@ -259,7 +259,7 @@ Tous les contrôles de date et d'heure peuvent être restreints avec les attribu
 
 Les couleurs sont toujours difficiles à gérer en raison des différents formats qui existent pour les représenter&nbsp;: RGB en décimal ou en hexadécimal, HSL, les mots-clés, etc.
 
-Un contrôle de sélection de couleur peut être créé avec l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `color`&nbsp;:
+Un contrôle de sélection de couleur peut être créé avec l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type) vaut `color`&nbsp;:
 
 ```html
 <input type="color" name="color" id="color" />

@@ -44,7 +44,7 @@ Presque tous les systèmes d'exploitation incluent par défaut un éditeur de te
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Getting_started)._
 
 ## Aller plus loin
 
@@ -267,12 +267,12 @@ Voici une capture d'écran d'un éditeur de texte en ligne&nbsp;:
 
 ### Transférer des fichiers vers un serveur web
 
-Lorsque votre site web est peaufiné, testé et est prêt à être publié, vous devrez téléverser (<i lang="en">uploader</i> en anglais) vos fichiers vers votre serveur web (pour l'achat de l'espace serveur, voir l'article [combien ça coûte de publier quelque chose sur le Web&nbsp;?](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)). Une fois que vous disposez d'un serveur via votre fournisseur, celui-ci vous enverra les informations d'accès FTP (pour _File Transfer Protocol_ ou protocole de transfert de fichiers), souvent en donnant une URL SFTP, un nom d'utilisateur, un mot de passe et d'autres informations nécessaires à la connexion au serveur. Sachez toutefois que le FTP est une technique vieillissante et que de nouveaux systèmes commencent à devenir populaires, comme [RSync](https://en.wikipedia.org/wiki/Rsync) et [Git/Github](https://help.github.com/articles/using-a-custom-domain-with-github-pages).
+Lorsque votre site web est peaufiné, testé et est prêt à être publié, vous devrez téléverser (<i lang="en">uploader</i> en anglais) vos fichiers vers votre serveur web (pour l'achat de l'espace serveur, voir l'article [combien ça coûte de publier quelque chose sur le Web&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)). Une fois que vous disposez d'un serveur via votre fournisseur, celui-ci vous enverra les informations d'accès FTP (pour _File Transfer Protocol_ ou protocole de transfert de fichiers), souvent en donnant une URL SFTP, un nom d'utilisateur, un mot de passe et d'autres informations nécessaires à la connexion au serveur. Sachez toutefois que le FTP est une technique vieillissante et que de nouveaux systèmes commencent à devenir populaires, comme [RSync](https://en.wikipedia.org/wiki/Rsync) et [Git/Github](https://help.github.com/articles/using-a-custom-domain-with-github-pages).
 
 > [!NOTE]
 > FTP est par nature non sécurisé. Vous devez toujours vous assurer que votre fournisseur d'hébergement vous autorise à vous connecter de manière sécurisée, c'est-à-dire via SFTP (_Secure_ FTP) ou via RSync avec SSH.
 
-Le téléversement des fichiers vers un serveur web est une étape importante dans la publication d'un site web et nous la décrivons beaucoup plus en détails [dans un article à part](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server). Voyons tout de même une liste de clients FTP basiques&nbsp;:
+Le téléversement des fichiers vers un serveur web est une étape importante dans la publication d'un site web et nous la décrivons beaucoup plus en détails [dans un article à part](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server). Voyons tout de même une liste de clients FTP basiques&nbsp;:
 
 <table class="standard-table">
   <thead>
@@ -352,12 +352,12 @@ Comme vous le savez sans doute déjà, vous avez besoin d'un navigateur web pour
 
 Si votre site s'adresse à un public particulier (par exemple un pays spécifique ou une plate-forme donnée), vous pourrez avoir à tester votre site sur des navigateurs supplémentaires comme [Opera](https://www.opera.com/fr) ou [Konqueror](https://apps.kde.org/fr/konqueror/).
 
-Cela se complique quand on réalise que certains navigateurs ne fonctionnent que sur certains systèmes d'exploitation. Apple Safari ne fonctionne que sur iOS et Mac OS, Internet Explorer ne fonctionne que sur Windows, etc. Face à ce problème, mieux vaut tirer parti de services comme [Browsershots](https://browsershots.org/) (en anglais) ou [Browserstack](https://www.browserstack.com/) (en anglais). Browsershots fournit des captures d'écran de votre site, tel qu'il est rendu dans les différents navigateurs. Browserstack vous permet de complètement contrôler des machines virtuelles afin que vous puissiez tester votre site sur les environnements les plus fréquents. Sinon, vous pouvez configurer vos propres machines virtuelles, mais cela nécessite une certaine expertise. Voir [Stratégies pour effectuer des tests&nbsp;: constituer un laboratoire de tests](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#putting_together_a_testing_lab) pour plus d'informations.
+Cela se complique quand on réalise que certains navigateurs ne fonctionnent que sur certains systèmes d'exploitation. Apple Safari ne fonctionne que sur iOS et Mac OS, Internet Explorer ne fonctionne que sur Windows, etc. Face à ce problème, mieux vaut tirer parti de services comme [Browsershots](https://browsershots.org/) (en anglais) ou [Browserstack](https://www.browserstack.com/) (en anglais). Browsershots fournit des captures d'écran de votre site, tel qu'il est rendu dans les différents navigateurs. Browserstack vous permet de complètement contrôler des machines virtuelles afin que vous puissiez tester votre site sur les environnements les plus fréquents. Sinon, vous pouvez configurer vos propres machines virtuelles, mais cela nécessite une certaine expertise. Voir [Stratégies pour effectuer des tests&nbsp;: constituer un laboratoire de tests](/fr/docs/Learn_web_development/Extensions/Testing/Testing_strategies#putting_together_a_testing_lab) pour plus d'informations.
 
 Dans tous les cas, vous devrez tester votre site sur de vrais appareils, notamment pour les appareils mobiles. La simulation mobile en est encore à ses débuts et est moins stable que la simulation d'ordinateur fixes. Bien entendu, acquérir des appareils mobiles représente un certain budget et nous vous conseillons de consulter [l'initiative Open Device Lab (en anglais)](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/#odls-have-opened-doors-for-idls). Vous pouvez également partager les appareils à plusieurs si vous souhaitez tester sur un maximum de plates-formes sans trop dépenser.
 
 ## Prochaines étapes
 
-- Certains de ces logiciels sont libres et/ou gratuits, d'autres ne le sont pas. [En savoir plus sur le coût d'un site web.](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- Si vous souhaitez en apprendre plus sur les éditeurs de texte et choisir celui qui sera le plus adapté, consultez notre article sur [comment choisir, installer et paramétrer son éditeur de texte](/fr/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
-- Si vous vous demandez comment publier votre site web sur le Web, jetez un coup d'œil à [« Comment transférer des fichiers vers un serveur web »](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+- Certains de ces logiciels sont libres et/ou gratuits, d'autres ne le sont pas. [En savoir plus sur le coût d'un site web.](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- Si vous souhaitez en apprendre plus sur les éditeurs de texte et choisir celui qui sera le plus adapté, consultez notre article sur [comment choisir, installer et paramétrer son éditeur de texte](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors).
+- Si vous vous demandez comment publier votre site web sur le Web, jetez un coup d'œil à [« Comment transférer des fichiers vers un serveur web »](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).

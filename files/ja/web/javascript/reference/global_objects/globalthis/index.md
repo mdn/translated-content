@@ -18,7 +18,7 @@ console.log(canMakeHTTPRequest());
 // Expected output (in a browser): true
 ```
 
-## 阿智
+## 値
 
 グローバルの `this` オブジェクトです。
 

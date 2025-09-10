@@ -19,7 +19,7 @@ table.set(index, valeur);
 - `index`
   - : L'index de la référence de la fonction qu'on souhaite modifier.
 - `valeur`
-  - : La valeur par laquelle on souhaite remplacer la référence. Cette valeur doit être [une fonction exportée WebAssembly](/fr/docs/WebAssembly/Exported_functions) (c'est-à-dire une enveloppe JavaScript représentant une fonction WebAssembly sous-jacente).
+  - : La valeur par laquelle on souhaite remplacer la référence. Cette valeur doit être [une fonction exportée WebAssembly](/fr/docs/WebAssembly/Guides/Exported_functions) (c'est-à-dire une enveloppe JavaScript représentant une fonction WebAssembly sous-jacente).
 
 ### Valeur de retour
 
@@ -78,5 +78,5 @@ Dans cet exemple, on montre comment créer et manipuler un tableau en JavaScript
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs/Learn/Forms) ou ouvrir une boite de dialogue.
+L'élément [HTML](/fr/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) ou ouvrir une boite de dialogue.
 
 Par défaut, les boutons HTML sont présentés dans un style ressemblant à la plate-forme d'exécution de [l'agent utilisateur](/fr/docs/Glossary/User_agent), mais vous pouvez modifier l'apparence des boutons avec [CSS](/fr/docs/Web/CSS).
 
@@ -53,7 +53,7 @@ Par défaut, les boutons HTML sont présentés dans un style ressemblant à la p
 
 ## Attributs
 
-Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `autofocus`
   - : Cet attribut booléen, **qui ne doit être défini qu'une fois par document**, indique au navigateur que cet élément doit automatiquement avoir le [focus](/fr/docs/Web/API/HTMLElement/focus) lorsque la page est chargée.
@@ -65,27 +65,27 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
     Firefox, contrairement aux autres navigateurs, [persiste l'état désactivé dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un `<bouton>` à travers les chargements de page. Utilisez l'attribut [`autocomplete`](#attr-autocomplete) pour contrôler cette fonctionnalité.
 
 - `form`
-  - : L'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel associer le bouton (son _formulaire rattaché_). Cet attribut contient l'attribut `id` de l'élément `<form>` auquel celui-ci est rattaché. Par défaut, le bouton est rattaché à l'élément `<form>` qui est son plus proche ancêtre. Cet attribut permet à un bouton d'être placé n'importe où dans le document et pas seulement comme un descendant d'éléments `<form>`. Il permet également de rattacher le bouton à un autre formulaire que son élément parent.
+  - : L'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) auquel associer le bouton (son _formulaire rattaché_). Cet attribut contient l'attribut `id` de l'élément `<form>` auquel celui-ci est rattaché. Par défaut, le bouton est rattaché à l'élément `<form>` qui est son plus proche ancêtre. Cet attribut permet à un bouton d'être placé n'importe où dans le document et pas seulement comme un descendant d'éléments `<form>`. Il permet également de rattacher le bouton à un autre formulaire que son élément parent.
 - `formaction`
-  - : L'URL qui traite les informations soumises par le bouton. Remplace l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action) du formulaire rattaché au bouton. Il ne fait rien s'il n'y a pas de formulaire rattaché.
+  - : L'URL qui traite les informations soumises par le bouton. Remplace l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) du formulaire rattaché au bouton. Il ne fait rien s'il n'y a pas de formulaire rattaché.
 - `formenctype`
   - : Lorsque l'attribut **`type`** possède la valeur `submit`, cet attribut définit le [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) qui sera utilisée pour encoder les données envoyées au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes&nbsp;:
     - `application/x-www-form-urlencoded`&nbsp;: La valeur par défaut.
-    - `multipart/form-data`&nbsp;: Utilisé pour soumettre des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont les attributs [`type`](/fr/docs/Web/HTML/Element/input#attr-type) sont définis sur `file`.
+    - `multipart/form-data`&nbsp;: Utilisé pour soumettre des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont les attributs [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type) sont définis sur `file`.
     - `text/plain`&nbsp;: Spécifié comme une aide au débogage&nbsp;; ne doit pas être utilisé pour la soumission réelle du formulaire.
 
-    Si cet attribut est spécifié, il remplace l'attribut [`enctype`](/fr/docs/Web/HTML/Element/form#attr-enctype) du formulaire rattaché au bouton.
+    Si cet attribut est spécifié, il remplace l'attribut [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#attr-enctype) du formulaire rattaché au bouton.
 
 - `formmethod`
-  - : Lorsque l'attribut **`type`** possède la valeur `submit` (explicitement ou comme valeur par défaut), cet attribut définit la [méthode HTTP](/fr/docs/Web/HTTP/Methods) qui sera utilisée pour envoyer les données au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes&nbsp;:
+  - : Lorsque l'attribut **`type`** possède la valeur `submit` (explicitement ou comme valeur par défaut), cet attribut définit la [méthode HTTP](/fr/docs/Web/HTTP/Reference/Methods) qui sera utilisée pour envoyer les données au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes&nbsp;:
     - `post`&nbsp;: Les données du formulaire sont incluses dans le corps de la requête HTTP lorsqu'elles sont envoyées au serveur. À utiliser lorsque le formulaire contient des informations qui ne devraient pas être publiques, comme les identifiants de connexion.
     - `get`&nbsp;: Les données du formulaire sont ajoutées à l'URL `action` du formulaire, avec un `?` comme séparateur, et l'URL résultante est envoyée au serveur. Utilisez cette méthode lorsque le formulaire [n'a pas d'effets secondaires](/fr/docs/Glossary/Idempotent), comme les formulaires de recherche.
-    - `dialog`&nbsp;: Cette méthode permet d'indiquer que le bouton ferme [l'élément `<dialog>`](/fr/docs/Web/HTML/Element/dialog) auquel il est associé, et n'envoie pas de données du formulaire.
+    - `dialog`&nbsp;: Cette méthode permet d'indiquer que le bouton ferme [l'élément `<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) auquel il est associé, et n'envoie pas de données du formulaire.
 
-    S'il est spécifié, cet attribut remplace l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method) du formulaire rattaché au bouton.
+    S'il est spécifié, cet attribut remplace l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method) du formulaire rattaché au bouton.
 
 - `formnovalidate`
-  - : Si le bouton est un bouton de soumission (`type` non défini ou défini avec la valeur `"submit"`), cet attribut booléen spécifie que le formulaire ne doit pas être [validé](/fr/docs/Learn/Forms/Form_validation) lorsqu'il est soumis. Si cet attribut est spécifié, il remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#attr-novalidate) du formulaire rattaché au bouton. Cet attribut est également disponible sur les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit).
+  - : Si le bouton est un bouton de soumission (`type` non défini ou défini avec la valeur `"submit"`), cet attribut booléen spécifie que le formulaire ne doit pas être [validé](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation) lorsqu'il est soumis. Si cet attribut est spécifié, il remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#attr-novalidate) du formulaire rattaché au bouton. Cet attribut est également disponible sur les éléments [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image) et [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit).
 
 - `formtarget`
   - : Lorsque l'attribut **`type`** possède la valeur `submit`, cet attribut indique le contexte de navigation (onglet, fenêtre, frame) associé avec le formulaire, sa cible. Outre un attribut **`id`** valide du document, il peut prendre l'une de ces valeurs particulières:
@@ -112,7 +112,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
 - `type`
   - : Le comportement par défaut du bouton. Les valeurs possibles sont&nbsp;:
     - `submit`&nbsp;: Le bouton soumet les données du formulaire au serveur. C'est la valeur par défaut si l'attribut n'est pas spécifié pour les boutons associés à un `<form>`, ou si l'attribut est une valeur vide ou invalide.
-    - `reset`&nbsp;: Le bouton réinitialise tous les contrôles à leur valeur initiale, comme [`<input type="reset">`](/fr/docs/Web/HTML/Element/input/reset). (Ce comportement a tendance à agacer les utilisateurs).
+    - `reset`&nbsp;: Le bouton réinitialise tous les contrôles à leur valeur initiale, comme [`<input type="reset">`](/fr/docs/Web/HTML/Reference/Elements/input/reset). (Ce comportement a tendance à agacer les utilisateurs).
     - `button`&nbsp;: Le bouton n'a pas de comportement par défaut et ne fait rien lorsqu'il est pressé par défaut. Les scripts côté client peuvent écouter les événements de l'élément, qui sont déclenchés lorsque les événements se produisent.
 
 - `value`
@@ -122,11 +122,11 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
 
 Un bouton de soumission avec l'attribut `formaction` défini, mais sans formulaire associé ne fait rien. Vous devez définir un formulaire rattaché, soit en l'enveloppant dans un `<form>`, soit en définissant la valeur de l'attribut `form` avec l'identifiant du formulaire.
 
-Les éléments `<button>` sont beaucoup plus faciles à styliser que les éléments [`<input>`](/fr/docs/Web/HTML/Element/input). Vous pouvez ajouter du contenu HTML interne (pensez à `<i>`, `<br>`, ou même `<img>`), et utiliser les pseudo-éléments [`::after`](/fr/docs/Web/CSS/::after) et [`::before`](/fr/docs/Web/CSS/::before) pour un rendu complexe.
+Les éléments `<button>` sont beaucoup plus faciles à styliser que les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input). Vous pouvez ajouter du contenu HTML interne (pensez à `<i>`, `<br>`, ou même `<img>`), et utiliser les pseudo-éléments [`::after`](/fr/docs/Web/CSS/::after) et [`::before`](/fr/docs/Web/CSS/::before) pour un rendu complexe.
 
 Si vos boutons ne servent pas à soumettre des données de formulaire à un serveur, assurez-vous de définir leur attribut `type` à `button`. Sinon, ils tenteront de soumettre des données de formulaire et de charger la réponse (inexistante), détruisant éventuellement l'état actuel du document.
 
-Bien que `<button type="button">` n'ait pas de comportement par défaut, on peut utiliser des gestionnaires d'évènements scriptés pour déclencher certaines actions. Un bouton pourra déclencher des actions grâce à [JavaScript](/fr/docs/Learn/JavaScript), par exemple pour retirer un élément d'une liste.
+Bien que `<button type="button">` n'ait pas de comportement par défaut, on peut utiliser des gestionnaires d'évènements scriptés pour déclencher certaines actions. Un bouton pourra déclencher des actions grâce à [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting), par exemple pour retirer un élément d'une liste.
 
 ## Exemples
 
@@ -140,7 +140,7 @@ Bien que `<button type="button">` n'ait pas de comportement par défaut, on peut
 
 ### Boutons avec une icône
 
-Les boutons qui reposent uniquement sur une icône pour représenter une fonctionnalité n'ont pas de nom accessible. Un nom accessible permet à un outil d'assistance (un lecteur d'écran par exemple) de générer un [arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) correct lors de l'analyse du document. Les outils d'assistance utilisent cet arbre d'accessibilité pour permettre aux utilisateurs de naviguer et d'utiliser le contenu de la page.
+Les boutons qui reposent uniquement sur une icône pour représenter une fonctionnalité n'ont pas de nom accessible. Un nom accessible permet à un outil d'assistance (un lecteur d'écran par exemple) de générer un [arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) correct lors de l'analyse du document. Les outils d'assistance utilisent cet arbre d'accessibilité pour permettre aux utilisateurs de naviguer et d'utiliser le contenu de la page.
 
 Afin de fournir un nom accessible pour un bouton, on fournira un contenu texte dans l'élément qui décrit, de façon concise, la fonctionnalité offerte par le bouton.
 
@@ -187,7 +187,7 @@ Un tel espacement peut être obtenu grâce à la propriété CSS [`margin`](/fr/
 
 ### Informations sur l'état de l'ARIA
 
-Pour décrire l'état d'un bouton, le bon attribut ARIA à utiliser est [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) et pas [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-checked) ou [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-selected). Pour en savoir plus, lisez les informations sur le [rôle ARIA de bouton](/fr/docs/Web/Accessibility/ARIA/Roles/button_role).
+Pour décrire l'état d'un bouton, le bon attribut ARIA à utiliser est [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) et pas [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-checked) ou [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-selected). Pour en savoir plus, lisez les informations sur le [rôle ARIA de bouton](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/button_role).
 
 ### Firefox
 
@@ -198,12 +198,12 @@ Si ce comportement est surchargé, il est nécessaire de vérifier que le change
 Le ratio de contraste est calculé en comparant la luminosité de la couleur du texte et celle de l'arrière-plan. Afin de respecter les [préconisations d'accessibilité sur le Web (WCAG)](https://www.w3.org/WAI/intro/wcag), un ratio minimal de 4.5:1 est obligatoire pour le contenu textuel normal et un ratio minimal de 3:1 est obligatoire pour grands textes ou les titres. Un _grand_ texte est défini comme un texte qui mesure 18.66px et qui est en gras ou comme un texte qui mesure 24px ou plus.
 
 - [Vérificateur de contraste WebAIM (en anglais)](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - _[Understanding Success Criterion 1.4.3 - W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_
 
 ### Clic et focus
 
-Le clic sur un élément `<button>` ou sur un élément [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button) peut, selon le navigateur et l'OS, lui donner le focus. Il s'agit du comportement par défaut le plus courant, mais ce n'est [intentionnellement pas le cas de Safari](https://webkit.org/b/22261).
+Le clic sur un élément `<button>` ou sur un élément [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button) peut, selon le navigateur et l'OS, lui donner le focus. Il s'agit du comportement par défaut le plus courant, mais ce n'est [intentionnellement pas le cas de Safari](https://webkit.org/b/22261).
 
 ## Résumé technique
 
