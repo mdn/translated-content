@@ -21,7 +21,7 @@ Lorsque vous cherchez à analyser le contenu de la chaîne de caractères de l'e
   - : Votre site a besoin d'une fonctionnalité qui n'est pas encore prise en charge par certains navigateurs et vous souhaitez servir à leurs utilisateurs une version plus ancienne du site, avec moins de fonctionnalités mais pour lesquelles vous avez la certitude de leur fonctionnement. Il s'agit de la pire raison pour utiliser l'en-tête `User-Agent`, car il y a de grandes chances que ces navigateurs finissent par rattraper leur retard, qu'il n'est pas pratique de tester tous les navigateurs qui existent. Dans ce cas, le mieux est d'éviter d'utiliser l'en-tête `User-Agent` et de détecter les fonctionnalités disponibles.
 
 - Voulez-vous servir un code HTML différent selon le navigateur utilisé&nbsp;?
-  - : Il s'agit généralement d'une mauvaise pratique, mais qui peut être nécessaire dans certains cas. Vous devez alors analyser la situation pour vous assurer que c'est absolument nécessaire. Pouvez-vous l'éviter en ajoutant des éléments non sémantiques tels que [`<div>`](/fr/docs/Web/HTML/Element/div) ou [`<span>`](/fr/docs/Web/HTML/Element/span)&nbsp;? La difficulté et les risque à utiliser l'en-tête `User-Agent` justifie des exceptions à la pureté du code HTML. Vous pouvez aussi repenser le design&nbsp;: pouvez-vous plutôt utiliser l'amélioration progressive ou utiliser une disposition flexible pour éviter d'y avoir recours&nbsp;?
+  - : Il s'agit généralement d'une mauvaise pratique, mais qui peut être nécessaire dans certains cas. Vous devez alors analyser la situation pour vous assurer que c'est absolument nécessaire. Pouvez-vous l'éviter en ajoutant des éléments non sémantiques tels que [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) ou [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span)&nbsp;? La difficulté et les risque à utiliser l'en-tête `User-Agent` justifie des exceptions à la pureté du code HTML. Vous pouvez aussi repenser le design&nbsp;: pouvez-vous plutôt utiliser l'amélioration progressive ou utiliser une disposition flexible pour éviter d'y avoir recours&nbsp;?
 
 ## Éviter de détecter l'agent utilisateur
 
@@ -117,9 +117,9 @@ if (hasTouchScreen)
   document.getElementById("boutonExemple").style.padding = "1em";
 ```
 
-En ce qui concerne la taille de l'écran, on utilisera `window.innerWidth` et `window.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ })`. Sur ce sujet, on ne veut pas que des informations soient masquées sur les plus petits écrans. Cela sera source de frustration et forcera à utiliser la version pour ordinateur. On essaiera plutôt d'avoir moins de colonnes d'informations sur une page plus longue pour les écrans plus étroits et une page avec plus de colonnes mais plus courte sur les écrans plus larges. On peut obtenir cet effet en CSS avec [les boîtes flexibles](/fr/docs/Learn/CSS/CSS_layout/Flexbox), voire avec [le flottement](/fr/docs/Learn/CSS/CSS_layout/Floats) comme méthode alternative de recours.
+En ce qui concerne la taille de l'écran, on utilisera `window.innerWidth` et `window.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ })`. Sur ce sujet, on ne veut pas que des informations soient masquées sur les plus petits écrans. Cela sera source de frustration et forcera à utiliser la version pour ordinateur. On essaiera plutôt d'avoir moins de colonnes d'informations sur une page plus longue pour les écrans plus étroits et une page avec plus de colonnes mais plus courte sur les écrans plus larges. On peut obtenir cet effet en CSS avec [les boîtes flexibles](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox), voire avec [le flottement](/fr/docs/Learn_web_development/Core/CSS_layout/Floats) comme méthode alternative de recours.
 
-Pour plus de détails, voir [l'article sur le <i lang="en">responsive design</i>](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
+Pour plus de détails, voir [l'article sur le <i lang="en">responsive design</i>](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ## Tirer le meilleur parti de l'analyse de la chaîne `userAgent`
 

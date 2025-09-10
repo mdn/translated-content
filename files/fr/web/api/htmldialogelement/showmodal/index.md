@@ -103,5 +103,5 @@ Contient la propriété `returnValue` telle que définie par le document ciblé 
 
 ## Voir aussi
 
-- [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) qui remplace `window.showModalDialog()`.
-- [Une prothèse d'émulation pour `showModalDialog()`](https://github.com/niutech/showModalDialog) qui utilise [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) et [les générateurs](/fr/docs/Web/JavaScript/Reference/Statements/function*)
+- [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) qui remplace `window.showModalDialog()`.
+- [Une prothèse d'émulation pour `showModalDialog()`](https://github.com/niutech/showModalDialog) qui utilise [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) et [les générateurs](/fr/docs/Web/JavaScript/Reference/Statements/function*)

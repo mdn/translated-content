@@ -5,7 +5,7 @@ slug: Web/CSS/@keyframes
 
 {{CSSRef}}
 
-La [règle](/fr/docs/Web/CSS/At-rule) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_transitions).
+La [règle](/fr/docs/Web/CSS/CSS_syntax/At-rule) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_transitions).
 
 ```css
 @keyframes slidein {

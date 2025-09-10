@@ -56,7 +56,7 @@ The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — 
 > En règle générale, on ne s'intéresse qu'à l'instance, mais il peut être utile de préserver le module afin de le mettre ultérieurement en cache, de le partager avec un autre worker ou window via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage), ou tout simplement pour créer d'autres instances.
 
 > [!NOTE]
-> Un chargement supplémentaire du module nécessite un object de type {{jsxref("WebAssembly.Module")}} comme argument, et retourne une promesse contenant directement un objet de type instance comme résultat. Voir [Second overload example](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example).
+> Un chargement supplémentaire du module nécessite un object de type {{jsxref("WebAssembly.Module")}} comme argument, et retourne une promesse contenant directement un objet de type instance comme résultat. Voir [Second overload example](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static#second_overload_example).
 
 ### Mise en marche du code webassembly
 
@@ -79,7 +79,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 ```
 
 > [!NOTE]
-> Pour plus d'informations sur la façon dont fonctionne l'exportation au sein d'un module webassembly, lisez [Using the WebAssembly JavaScript API](/fr/docs/WebAssembly/Using_the_JavaScript_API), et [Understanding WebAssembly text format](/fr/docs/WebAssembly/Understanding_the_text_format).
+> Pour plus d'informations sur la façon dont fonctionne l'exportation au sein d'un module webassembly, lisez [Using the WebAssembly JavaScript API](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API), et [Understanding WebAssembly text format](/fr/docs/WebAssembly/Understanding_the_text_format).
 
 ## En utilisant XMLHttpRequest
 

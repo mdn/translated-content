@@ -54,7 +54,7 @@ Les éléments HTML disposent par défaut leur contenu le long de l'axe en ligne
 
 ### Définir une orientation de boîte horizontale
 
-Dans cet exemple, la propriété `box-orient` placera les deux sections [`<p>`](/fr/docs/Web/HTML/Element/p) sur la même ligne.
+Dans cet exemple, la propriété `box-orient` placera les deux sections [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) sur la même ligne.
 
 #### HTML
 

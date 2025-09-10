@@ -10,7 +10,7 @@ L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'o
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `name`
   - : Le nom de l'emplacement créé.

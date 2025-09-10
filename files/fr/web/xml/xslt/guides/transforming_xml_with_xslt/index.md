@@ -8,7 +8,7 @@ l10n:
 
 {{XsltSidebar}}
 
-[Transformations XML avec XSLT](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT)
+[Transformations XML avec XSLT](/fr/docs/conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
 
 ## Publications
 

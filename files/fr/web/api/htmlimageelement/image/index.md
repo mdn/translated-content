@@ -18,9 +18,9 @@ Image(width, height);
 ### Paramètres
 
 - width
-  - : La largeur de l'image (c'est-à-dire, la valeur pour l'attribut [`width`](/fr/docs/Web/HTML/Element/img#width))
+  - : La largeur de l'image (c'est-à-dire, la valeur pour l'attribut [`width`](/fr/docs/Web/HTML/Reference/Elements/img#width))
 - height
-  - : La hauteur de l'image (c'est-à-dire, la valeur pour l'attribut [`height`](/fr/docs/Web/HTML/Element/img#height)).
+  - : La hauteur de l'image (c'est-à-dire, la valeur pour l'attribut [`height`](/fr/docs/Web/HTML/Reference/Elements/img#height)).
 
 ## Exemples
 

@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/meta/name
 
 {{HTMLSidebar}}
 
-L'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) permet de fournir des métadonnées sous forme de paires clé/valeur où l'attribut [`name`](/fr/docs/Web/HTML/Element/meta#attr-name) représente le nom et où l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#attr-content) fournit la valeur.
+L'élément [`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta) permet de fournir des métadonnées sous forme de paires clé/valeur où l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta#attr-name) représente le nom et où l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#attr-content) fournit la valeur.
 
 ### Noms de métadonnées standard définis dans la spécification HTML
 
@@ -17,7 +17,7 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
 
     > [!NOTE]
     >
-    > - Les navigateurs peuvent utiliser cette information pour identifier l'application. Cette métadonnée est différente de celle fournie par [`<title>`](/fr/docs/Web/HTML/Element/title) qui comprend généralement le nom de l'application, mais qui peut aussi contenir le nom du document ou un état.
+    > - Les navigateurs peuvent utiliser cette information pour identifier l'application. Cette métadonnée est différente de celle fournie par [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title) qui comprend généralement le nom de l'application, mais qui peut aussi contenir le nom du document ou un état.
     > - Les pages web simples ne devraient pas utiliser `application-name`.
 
 - `author`
@@ -29,7 +29,7 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
 - `keywords`
   - : Les mots-clés pertinents pour décrire le contenu de la page, séparés par des virgules.
 - `referrer`
-  - : Contrôle l'en-tête HTTP [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) pour les requêtes envoyées depuis le document&nbsp;:
+  - : Contrôle l'en-tête HTTP [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) pour les requêtes envoyées depuis le document&nbsp;:
 
     <table class="standard-table">
       <caption>Valeurs pour l'attribut <code>content</code> de <code>&lt;meta name="referrer"&gt;</code></caption>
@@ -74,14 +74,14 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
     > - L'insertion dynamique d'un élément `<meta name="referrer">` (en utilisant [`document.write()`](/fr/docs/Web/API/Document/write) ou [`appendChild()`](/fr/docs/Web/API/Node/appendChild)) rendra imprévisible le comportement du référent.
     > - Lorsque plusieurs règles contradictoires sont définies, c'est la règle `no-referrer` qui est appliquée.
 
-- [`theme-color`](/fr/docs/Web/HTML/Element/meta/name/theme-color)
+- [`theme-color`](/fr/docs/Web/HTML/Reference/Elements/meta/name/theme-color)
   - : Fournit une suggestion de couleur que les agents utilisateur peuvent utiliser afin de personnaliser l'affichage de la page ou l'interface utilisateur environnante. L'attribut `content` doit contenir une couleur CSS valide (voir la page sur le type [`<color>`](/fr/docs/Web/CSS/color_value).
 - `color-scheme`
   - : Définit un ou plusieurs schémas de couleurs avec lesquels le document est compatible.
 
     Le navigateur utilisera cette information en complément des réglages du navigateur et du système sous-jacent pour déterminer les couleurs à utiliser en arrière-plan et en premier plan pour les contrôles de formulaire et les barres de défilement. L'utilisation principale de `<meta name="color-scheme">` consiste à indiquer la compatibilité avec les modes de thèmes clair ou sombre et l'ordre de préférence associé.
 
-    Pour `color-scheme`, la valeur de l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#attr-content) peut être&nbsp;:
+    Pour `color-scheme`, la valeur de l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#attr-content) peut être&nbsp;:
     - `normal`
       - : Le document n'a pas de schéma de couleurs particulier connu et devrait être affiché avec la palette de couleurs par défaut.
     - \[`light` | `dark`]+
@@ -162,7 +162,7 @@ La spécification CSS sur l'adaptation des appareils (<i lang="en">Device Adapta
 
 Désactiver la possibilité de zoomer en utilisant `user-scalable` avec la valeur `no` empêchera les personnes ayant des troubles de la vision de pouvoir lire et comprendre le contenu de la page.
 
-- [Guide MDN pour la compréhension de WCAG, règle de bonne pratique 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Guide MDN pour la compréhension de WCAG, règle de bonne pratique 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Guide W3C pour la compréhension de WCAG 2.0 — Comprendre les critères de succès 1.4.4](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ### Autres noms de métadonnées
@@ -170,7 +170,7 @@ Désactiver la possibilité de zoomer en utilisant `user-scalable` avec la valeu
 [La page wiki du WHATWG sur les MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) contient un large ensemble de noms de métadonnées qui n'ont pas encore été formellement acceptées, mais dont certains sont déjà utilisés en pratique et dont une partie est présentée ici&nbsp;:
 
 - `creator`
-  - : Le nom de la créatrice ou du créateur du document, tel que celui de l'organisation ou de l'institution. Si plusieurs noms correspondent, on utilisera plusieurs éléments [`<meta>`](/fr/docs/Web/HTML/Element/meta).
+  - : Le nom de la créatrice ou du créateur du document, tel que celui de l'organisation ou de l'institution. Si plusieurs noms correspondent, on utilisera plusieurs éléments [`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta).
 - `googlebot`
   - : Un synonyme de `robots`, uniquement suivi par Googlebot (le robot d'indexation de Google).
 - `publisher`

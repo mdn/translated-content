@@ -138,14 +138,14 @@ Un document donné peut contenir plusieurs articles ; par exemple, sur un blog q
 
 ## Attributs
 
-Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
 
 ## Notes d'utilisation
 
 - Chaque `<article>` autonome, qui n'est pas imbriqué dans un autre élément `<article>`, devrait être identifié typiquement, en incluant un élément de titre `<h1>` à `<h6>`.
 - Quand un élément `<article>` est imbriqué dans un autre, l'élément contenu représente un article relatif à l'élément contenant. Par exemple, les commentaires d'une parution de blog peuvent être un élément `<article>` inclus dans l'`<article>` représentant la parution en elle-même.
-- Des informations à propos de l'auteur d'un élément `<article>` peuvent être fournies au travers de l'élément [`<address>`](/fr/docs/Web/HTML/Element/address), mais cela ne s'applique pas aux éléments `<article>` imbriqués.
-- La date et l'heure de publication d'un élément `<article>` peuvent être donnés en utilisant l'attribut [`datetime`](/fr/docs/Web/HTML/Element/time#attr-datetime) d'un élément [`<time>`](/fr/docs/Web/HTML/Element/time). _Notez que l'attribut [`pubdate`](/fr/docs/Web/HTML/Element/time#attr-pubdate) de [`<time>`](/fr/docs/Web/HTML/Element/time) ne fait plus partie de la norme W3C HTML 5._
+- Des informations à propos de l'auteur d'un élément `<article>` peuvent être fournies au travers de l'élément [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address), mais cela ne s'applique pas aux éléments `<article>` imbriqués.
+- La date et l'heure de publication d'un élément `<article>` peuvent être donnés en utilisant l'attribut [`datetime`](/fr/docs/Web/HTML/Reference/Elements/time#attr-datetime) d'un élément [`<time>`](/fr/docs/Web/HTML/Reference/Elements/time). _Notez que l'attribut [`pubdate`](/fr/docs/Web/HTML/Reference/Elements/time#attr-pubdate) de [`<time>`](/fr/docs/Web/HTML/Reference/Elements/time) ne fait plus partie de la norme W3C HTML 5._
 
 ## Exemples
 
@@ -203,5 +203,5 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 
 ## Voir aussi
 
-- Les autres éléments liés aux sections d'un document : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Sections et structure d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
+- Les autres éléments liés aux sections d'un document : [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body), [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside), [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Reference/Elements/hgroup), [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header), [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer), [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address)
+- [Sections et structure d'un document HTML5](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)

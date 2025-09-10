@@ -8,12 +8,12 @@ original_slug: WebAssembly/JavaScript_interface/Module/Module
 
 Le constructeur **`WebAssembly.Module()`** crée un nouvel objet `Module` contenant du code WebAssembly sans état qui a déjà été compilé par le navigateur et qui peut efficacement [être partagé avec des workers](/fr/docs/Web/API/Worker/postMessage) et être instancié plusieurs fois.
 
-Le constructeur `WebAssembly.Module()` peut être appelé de façon synchrone afin de compiler le code binaire WebAssembly correspondant. Toutefois, la méthode principale pour obtenir un `Module` consiste à utiliser une fonction de compilation asynchrone comme [`WebAssembly.compile()`](/fr/docs/WebAssembly/JavaScript_interface/compile_static).
+Le constructeur `WebAssembly.Module()` peut être appelé de façon synchrone afin de compiler le code binaire WebAssembly correspondant. Toutefois, la méthode principale pour obtenir un `Module` consiste à utiliser une fonction de compilation asynchrone comme [`WebAssembly.compile()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/compile_static).
 
 ## Syntaxe
 
 > [!WARNING]
-> Étant donné que la compilation de grands modules peut être coûteuse, il est préférable d'utiliser `Module()` uniquement lorsqu'une compilation synchrone est nécessaire. Dans tous les autres cas, on privilégiera la méthode [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/compileStreaming_static).
+> Étant donné que la compilation de grands modules peut être coûteuse, il est préférable d'utiliser `Module()` uniquement lorsqu'une compilation synchrone est nécessaire. Dans tous les autres cas, on privilégiera la méthode [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static).
 
 ```js
 new WebAssembly.Module(bufferSource);
@@ -62,5 +62,5 @@ fetch("simple.wasm")
 ## Voir aussi
 
 - La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Concepts WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

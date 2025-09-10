@@ -138,7 +138,7 @@ position: unset;
     Cette valeur crée toujours un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). Pour les documents imprimés, cela se traduit par le placement de l'élément au même endroit pour _chacune des pages_.
 
 - `sticky`
-  - : La position de la boîte est calculée en fonction du flux normal du document. Ensuite, la boîte est décalée par rapport à son ancêtre de défilement le plus proche et par rapport à [son bloc englobant](/fr/docs/Web/CSS/Containing_block) selon les valeurs de `top`, `right`, `bottom` et `left`. Dans tous les cas, y compris avec les éléments `table`, cela n'affecte pas la position des autres éléments.
+  - : La position de la boîte est calculée en fonction du flux normal du document. Ensuite, la boîte est décalée par rapport à son ancêtre de défilement le plus proche et par rapport à [son bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) selon les valeurs de `top`, `right`, `bottom` et `left`. Dans tous les cas, y compris avec les éléments `table`, cela n'affecte pas la position des autres éléments.
 
     Cette valeur entraîne toujours la création d'un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). On notera qu'un tel élément «&nbsp;adhèrera&nbsp;» à l'ancêtre le plus proche qui dispose d'un mécanisme de défilement (c'est-à-dire quand `overflow` vaut `hidden`, `scroll`, `auto` ou `overlay`) même si cet ancêtre n'est pas nécessairement l'ancêtre de défilement le plus proche&nbsp;: cette valeur ne fonctionnera pas dans un élément pour lequel la propriété vaut `overflow: hidden` ou `auto` ([cf. cette _issue_ GitHub](https://github.com/w3c/csswg-drafts/issues/865)).
 
@@ -146,7 +146,7 @@ position: unset;
 
 ### Types de positionnement
 
-- Un **élément positionné** est un élément dont la propriété de position [calculée](/fr/docs/Web/CSS/computed_value) est `relative`, `absolute`, `fixed` ou `sticky`.
+- Un **élément positionné** est un élément dont la propriété de position [calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) est `relative`, `absolute`, `fixed` ou `sticky`.
 - Un **élément positionné de façon relative** est un élément dont la propriété de position calculée est `relative`. Dans ce cas, les propriétés [`top`](/fr/docs/Web/CSS/top) ou [`bottom`](/fr/docs/Web/CSS/bottom) indiquent le décalage vertical à appliquer et [`left`](/fr/docs/Web/CSS/left) ou [`right`](/fr/docs/Web/CSS/right) indiquent le décalage horizontal.
 - Un **élément positionné de façon absolue** est un élément dont la propriété de position calculée est `absolute` ou `fixed`. Dans ce cas, les propriétés [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`right`](/fr/docs/Web/CSS/right) et [`left`](/fr/docs/Web/CSS/left) indiquent les distances entre les bords de l'élément et les bords du bloc englobant (c'est-à-dire l'ancêtre par rapport auquel l'élément est positionné). Si l'élément possède des marges, elles sont ajoutées aux décalages.
 - Un **élément positionné en adhérence** est un élément dont la propriété de position calculée vaut `sticky`. Un tel élément se comporte comme un élément positionné de façon relative jusqu'à ce que son bloc englobant dépasse un seuil donné (par exemple fourni par la valeur de [`top`](/fr/docs/Web/CSS/top)) au sein du conteneur puis il se comporte ensuite comme un élément fixe jusqu'à atteindre le bord opposé du bloc englobant.
@@ -162,7 +162,7 @@ Sauf dans le cas précédemment énoncé des éléments positionnés de façon a
 
 Il faut s'assurer que les éléments positionnés avec `absolute` ou `fixed` ne masquent pas d'autre contenu sur la page lorsqu'on zoome sur la page afin d'augmenter la taille du texte.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Présentation visuelle&nbsp;: comprendre les critères de succès 1.4.8 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ### Performance et accessibilité
@@ -471,4 +471,4 @@ dd + dd {
 
 ## Voir aussi
 
-- [Apprendre le CSS&nbsp;: le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
+- [Apprendre le CSS&nbsp;: le positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning)

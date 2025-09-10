@@ -10,23 +10,23 @@ Un objet **`WebAssembly.Module`** contient du code WebAssembly, sans état et qu
 
 ## Constructeur
 
-- [`WebAssembly.Module()`](/fr/docs/WebAssembly/JavaScript_interface/Module/Module)
+- [`WebAssembly.Module()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module/Module)
   - : Crée un nouvel objet `Module`.
 
 ## Propriétés statiques
 
-- [`WebAssembly.Module.customSections()`](/fr/docs/WebAssembly/JavaScript_interface/Module/customSections_static)
+- [`WebAssembly.Module.customSections()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module/customSections_static)
   - : Soit un objet `Module` et une chaîne de caractères, cette méthode renvoie le contenu de l'ensemble des sections spécifiques du module avec le nom correspondant à la chaîne de caractères.
-- [`WebAssembly.Module.exports()`](/fr/docs/WebAssembly/JavaScript_interface/Module/exports_static)
+- [`WebAssembly.Module.exports()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static)
   - : Soit un objet `Module`, cette méthode renvoie un tableau dont les éléments sont les descriptions de tous les exports déclarés.
-- [`WebAssembly.Module.imports()`](/fr/docs/WebAssembly/JavaScript_interface/Module/imports_static)
+- [`WebAssembly.Module.imports()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module/imports_static)
   - : Soit un objet `Module`, cette méthode renvoie un tableau dont les éléments sont les descriptions de tous les imports déclarés.
 
 ## Exemples
 
 ### Envoyer un module compilé à un <i lang="en">worker</i>
 
-Dans l'exemple qui suit (voir le fichier source [`index-compile.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) sur GitHub, et [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le byte code chargé `simple.wasm` en utilisant la méthode [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/compileStreaming_static) puis en envoyant l'instance de `Module` résultante à un [<i lang="en">worker</i>](/fr/docs/Web/API/Web_Workers_API) en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
+Dans l'exemple qui suit (voir le fichier source [`index-compile.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) sur GitHub, et [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le byte code chargé `simple.wasm` en utilisant la méthode [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) puis en envoyant l'instance de `Module` résultante à un [<i lang="en">worker</i>](/fr/docs/Web/API/Web_Workers_API) en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
 
 ```js
 let worker = new Worker("wasm_worker.js");
@@ -36,7 +36,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
 );
 ```
 
-Au sein du <i lang="en">worker</i> (voir le fichier [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js)), on définit un objet d'import pour le module à utiliser puis on définit un gestionnaire d'évènement destiné à recevoir le module depuis le fil d'exécution principal. Lorsque le module est reçu, on en crée une instance avec la méthode [`WebAssembly.instantiate()`](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static) puis on appelle une fonction exportée depuis l'instance.
+Au sein du <i lang="en">worker</i> (voir le fichier [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js)), on définit un objet d'import pour le module à utiliser puis on définit un gestionnaire d'évènement destiné à recevoir le module depuis le fil d'exécution principal. Lorsque le module est reçu, on en crée une instance avec la méthode [`WebAssembly.instantiate()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) puis on appelle une fonction exportée depuis l'instance.
 
 ```js
 let importObject = {
@@ -68,5 +68,5 @@ onmessage = function (e) {
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

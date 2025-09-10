@@ -38,7 +38,7 @@ L'environnement de développement correspond à une installation de Django sur v
 
 Le principal outil que fournit Django est un ensemble de scripts Python utilisés pour créer et travailler avec des projets Django, ainsi qu'un simple _serveur web de développement_ que vous pouvez utiliser pour tester en local (i.e. sur votre propre ordinateur, pas sur un serveur web externe) des applications web Django dans votre navigateur web.
 
-Il y a plusieurs autres outils annexes, qui font partie de l'environnement de développement, que nous ne couvrirons pas ici. Cela inclut des choses comme un [éditeur de texte](/fr/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) ou un IDE pour éditer votre code, et un outil de gestion de contrôle de version comme Git pour gérer en toute prudence les différentes versions de votre code. Nous supposerons ici que vous avez déjà un éditeur de texte installé.
+Il y a plusieurs autres outils annexes, qui font partie de l'environnement de développement, que nous ne couvrirons pas ici. Cela inclut des choses comme un [éditeur de texte](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors) ou un IDE pour éditer votre code, et un outil de gestion de contrôle de version comme Git pour gérer en toute prudence les différentes versions de votre code. Nous supposerons ici que vous avez déjà un éditeur de texte installé.
 
 ### Quelles sont les options d'installation de Django ?
 
@@ -52,7 +52,7 @@ Django est extrêmement flexible sur sa manière d'être installé et configuré
 Chacune de ces options requiert une configuration et une installation légèrement différente. Les sous-sections ci-dessous vous expliquent différents choix. Dans le reste de l'article, nous vous montrerons comment installer Django sur un nombre restreint de systèmes d'exploitation, et nous supposerons que cette installation aura été suivie pour tout le reste du module.
 
 > [!NOTE]
-> D'autres options d'installation possibles sont traitées dans la documentation officielle de Django. Les liens vers la [documentation appropriée peuvent-être trouvés ci-dessous](/fr/docs/Learn/Server-side/Django/development_environment).
+> D'autres options d'installation possibles sont traitées dans la documentation officielle de Django. Les liens vers la [documentation appropriée peuvent-être trouvés ci-dessous](/fr/docs/Learn_web_development/Extensions/Server-side/Django/development_environment).
 
 #### Quels systèmes d'exploitation sont supportés ?
 

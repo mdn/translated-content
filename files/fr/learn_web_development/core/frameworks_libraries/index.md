@@ -23,7 +23,7 @@ Après ceci, nous vous fournirons quelques tutoriels couvrant les notions fondam
 
 ## Prérequis
 
-Vous devez vraiment connaitre les bases des principaux langages du web ([HTML](/fr/docs/Learn/HTML), [CSS](/fr/docs/Learn/CSS), et particulièrement [JavaScript](/fr/docs/Learn/JavaScript)) avant d'essayer de vous lancer dans l'apprentissage des frameworks côté client.
+Vous devez vraiment connaitre les bases des principaux langages du web ([HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et particulièrement [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting)) avant d'essayer de vous lancer dans l'apprentissage des frameworks côté client.
 
 Votre code n'en sera que plus qualitatif et plus professionnel, et vous serez en mesure de résoudre vos problèmes avec plus de confiance si vous comprenez les fonctionnalités fondamentales du web sur lesquelles les frameworks s'appuient.
 
@@ -47,13 +47,13 @@ Nous avons créé un cours qui inclut toutes les informations essentielles dont 
 >
 > Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version finale de l'exemple de code d'application React dans notre [todo-react repository](https://github.com/mdn/todo-react). Pour une version exécutable en direct, voir <https://mdn.github.io/todo-react-build/>.
 
-- [1. Premier pas avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [1. Premier pas avec React](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - : Dans cet article, nous dirons bonjour à React. Nous découvrirons les prémices de son fonctionnement et de ses cas d'utilisation, configurerons une chaine d'outils React de base sur notre ordinateur local et créerons et jouerons avec une application de démarrage simple, en apprenant un peu plus sur le fonctionnement de React dans le processus.
-- [2. Début de notre liste de tâches React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+- [2. Début de notre liste de tâches React](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning)
   - : Supposons que nous ayons été chargés de créer une preuve de concept dans React – une application qui permet aux utilisateurs d'ajouter, de modifier et de supprimer les tâches sur lesquelles ils souhaitent travailler, ainsi que de marquer les tâches comme terminées sans les supprimer. Cet article vous guidera tout au long de la mise en place de la structure et du style des composants de base de l'application, prêts pour la définition et l'interactivité des composants individuels, que nous ajouterons plus tard.
-- [3. Diviser notre application React en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+- [3. Diviser notre application React en composants](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_components)
   - : À ce stade, notre application est un monolithe. Avant de pouvoir lui faire faire des choses, nous devons le diviser en composants descriptifs gérables. React n'a pas de règles strictes pour ce qui est et n'est pas un composant - c'est à vous de décider ! Dans cet article, nous allons vous montrer un moyen judicieux de diviser notre application en composants.
-- [4. Interactivité de React: évènements et états](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+- [4. Interactivité de React: évènements et états](/fr/docs/Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state)
   - : Une fois notre plan de composants élaboré, il est maintenant temps de commencer à faire évoluer notre application d'une interface utilisateur complètement statique vers une interface qui nous permet réellement d'interagir et de modifier des choses. Dans cet article, nous allons le faire, en explorant les évènements et les états en cours de route.
 - [5. Interactivité de React: modification, filtrage, rendu conditionné](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - : Alors que nous approchons de la fin de notre voyage React (pour l'instant du moins), nous ajouterons la touche finale aux principaux domaines de fonctionnalités de notre application de liste de tâches. Cela comprend la possibilité de modifier les tâches existantes et de filtrer la liste des tâches entre toutes les tâches, terminées et incomplètes. Nous examinerons le rendu conditionné de l'interface utilisateur en cours de route.
@@ -89,7 +89,7 @@ Nous avons créé un cours qui inclut toutes les informations essentielles dont 
 >
 > Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version terminée de l'exemple de code d'application Vue dans notre [todo-vue repository](https://github.com/mdn/todo-vue). Pour une version exécutable en direct, voir <https://mdn.github.io/todo-vue/dist/>.
 
-- [1. Premiers pas avec Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+- [1. Premiers pas avec Vue](/fr/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
   - : Maintenant, introduisons Vue, le troisième de nos frameworks. Dans cet article, nous allons examiner un peu le contexte de Vue, apprendre à l'installer et créer un nouveau projet, étudier la structure de haut niveau de l'ensemble du projet et d'un composant individuel, voir comment exécuter le projet localement, et préparez-le à commencer à construire notre exemple.
 - [2. Création de notre premier composant Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - : Il est maintenant temps de plonger plus profondément dans Vue et de créer notre propre composant personnalisé (nous commencerons par créer un composant pour représenter chaque élément de la liste de tâches). En cours de route, nous découvrirons quelques concepts importants tels que l'appel de composants à l'intérieur d'autres composants, leur transmission de données via des accessoires et l'enregistrement de l'état des données.

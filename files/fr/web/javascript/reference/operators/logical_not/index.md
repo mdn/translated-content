@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 
 {{jsSidebar("Operators")}}
 
-L'opérateur logique NON (`!`) prend l'opposé logique de la valeur fournie par son opérande. Vrai devient faux et vice versa. Il est généralement utilisé avec les [booléens](/fr/docs/Web/JavaScript/Data_structures#boolean_type). Lorsque cet opérateur est utilisé avec une valeur non-booléenne, il renvoie `false` si son opérande peut être converti en `true` et `true` sinon.
+L'opérateur logique NON (`!`) prend l'opposé logique de la valeur fournie par son opérande. Vrai devient faux et vice versa. Il est généralement utilisé avec les [booléens](/fr/docs/Web/JavaScript/Guide/Data_structures#boolean_type). Lorsque cet opérateur est utilisé avec une valeur non-booléenne, il renvoie `false` si son opérande peut être converti en `true` et `true` sinon.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
 
@@ -37,7 +37,7 @@ Voici des exemples d'expression qui peuvent être converties en `false` :
 - la chaîne vide (`""` ou `''` ou ` `` `) ;
 - `undefined`.
 
-Bien que l'opérateur `!` puisse être utilisé avec des opérandes non booléens, sa valeur de retour sera toujours un [booléen](/fr/docs/Web/JavaScript/Data_structures#boolean_type). Pour convertir une valeur (ou une expression) en sa valeur booléenne correspondante, on pourra utiliser un double NON ou le constructeur [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
+Bien que l'opérateur `!` puisse être utilisé avec des opérandes non booléens, sa valeur de retour sera toujours un [booléen](/fr/docs/Web/JavaScript/Guide/Data_structures#boolean_type). Pour convertir une valeur (ou une expression) en sa valeur booléenne correspondante, on pourra utiliser un double NON ou le constructeur [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
 
 ## Exemples
 

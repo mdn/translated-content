@@ -11,10 +11,10 @@ L'interface **`HTMLCanvasElement`** fournit un ensemble de propriétés et de m�
 
 _Propriétés hérités de son parent,_ _{{domxref("HTMLElement")}}._
 
-| Nom      | Type            | Description                                                                                                                                        |
-| -------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `height` | `unsigned long` | Représente l'attribut HTML [`height`](/fr/docs/Web/HTML/Element/canvas#height), qui spécifie la hauteur de l'espace des coordonnées en pixels CSS. |
-| `width`  | `unsigned long` | Représente l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/canvas#width), qui spécifie la largeur de l'espace des coordonnées en pixels CSS.   |
+| Nom      | Type            | Description                                                                                                                                                   |
+| -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `height` | `unsigned long` | Représente l'attribut HTML [`height`](/fr/docs/Web/HTML/Reference/Elements/canvas#height), qui spécifie la hauteur de l'espace des coordonnées en pixels CSS. |
+| `width`  | `unsigned long` | Représente l'attribut HTML [`width`](/fr/docs/Web/HTML/Reference/Elements/canvas#width), qui spécifie la largeur de l'espace des coordonnées en pixels CSS.   |
 
 ## Méthodes
 
