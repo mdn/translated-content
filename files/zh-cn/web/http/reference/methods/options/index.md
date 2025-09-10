@@ -49,7 +49,7 @@ OPTIONS *|<request-target>["?"<query>] HTTP/1.1
 请求目标可以是表示整个服务器的“星号形式” `*`，也可以是与其他方法相同的常见请求目标：
 
 - `*`
-  - : 表示客户端希望对整个服务器发起 `OPTIONS` 请求，而不是该服务器的某个特定资源。
+  - : 表示客户端希望对整个服务器而不仅只是该服务器的某个特定资源发起 `OPTIONS` 请求。
 - `<request-target>`
   - : 与 {{HTTPHeader("Host")}} 标头提供的信息结合使用时，可标识请求的目标资源。请求源服务器时是绝对路径（例如，`/path/to/file.html`），请求代理服务器时是绝对 URL（例如，`http://www.example.com/path/to/file.html`）。
 - `<query>` {{optional_inline}}
