@@ -114,7 +114,7 @@ const range = selObj.getRangeAt(0);
 ```
 
 - `selObj`는 Selection 객체입니다.
-- `range`는 {{DOMxRef("Range")}} 객체입니다.
+- `range`는 {{DOMxRef("Range")}} 객체입니다.
 
 [Selection API 명세에서 언급하듯이](https://w3c.github.io/selection-api/#h-note-13), Selection API는 원래 Netscape에 의해 만들어졌으며 여러 개의 범위를 허용했습니다. (예를 들어, {{HTMLElement("table")}}의 열을 사용자가 선택할 수 있도록 하기 위함이었습니다.) 그러나 Gecko 이외의 브라우저들은 다중 범위를 구현하지 않았으며, 현재 명세에서는 선택 영역이 항상 단일 범위만 가지도록 규정하고 있습니다.
 
@@ -122,7 +122,7 @@ const range = selObj.getRangeAt(0);
 
 선택 영역과 입력 포커스({{DOMxRef("Document.activeElement")}}로 표시됨)는 브라우저마다 다른 복잡한 관계를 가지고 있습니다. 크로스 브라우저 호환 코드를 작성할 때는 이 둘을 별도로 다루는 것이 더 좋습니다.
 
-Safari와 Chrome은 (Firefox와 달리) 현재 선택 영역을 프로그래밍 방식으로 수정할 때 선택 영역을 포함하는 요소에 포커스를 맞춥니다. 다만, 이는 향후 변경될 수 있습니다. (관련 내용은 [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383)과 [WebKit bug 38696](https://webkit.org/b/38696) 참고)
+Safari와 Chrome은 (Firefox와 달리) 현재 선택 영역을 프로그래밍 방식으로 수정할 때 선택 영역을 포함하는 요소에 포커스를 맞춥니다. 다만, 이는 향후 변경될 수 있습니다. (관련 내용은 [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383)과 [WebKit bug 38696](https://webkit.org/b/38696) 참고)
 
 ### **편집 호스트 포커스 변경과 관련된 Selection API의 동작**
 
