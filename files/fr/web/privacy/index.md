@@ -70,3 +70,36 @@ Par exemple, si un site web interroge le navigateur d'un utilisateur sur le temp
 
 > [!NOTE]
 > Consultez la section [Empreintes digitales <sup>(angl.)</sup>](https://web.dev/learn/privacy/fingerprinting/) sur web.dev pour obtenir des informations supplémentaires utiles.
+
+## Fonctionnalités de confidentialité fournies par les navigateurs
+
+Les fournisseurs de navigateurs sont conscients de la nécessité de protéger la vie privée des utilisateurs et des effets négatifs du suivi, de l'empreinte digitale, etc. sur l'expérience utilisateur. À cette fin, ils ont mis en place diverses fonctionnalités qui renforcent la protection de la vie privée et/ou atténuent les menaces. Dans cette section, nous examinons différentes catégories de protection de la vie privée que les navigateurs appliquent automatiquement.
+
+### HTTPS par défaut
+
+Le [protocole TLS (Transport Layer Security)](/fr/docs/Web/Security/Transport_Layer_Security) assure la sécurité et la confidentialité en chiffrant les données pendant leur transport sur le réseau. Il s'agit de la technologie qui sous-tend le protocole [HTTPS](/fr/docs/Glossary/HTTPS). Le protocole TLS est efficace pour protéger la confidentialité, car il empêche des tiers d'intercepter les données transmises et de les utiliser à des fins malveillantes, par exemple pour effectuer un suivi.
+
+Tous les navigateurs tendent à exiger le protocole HTTPS par défaut. C'est déjà pratiquement le cas, car il est difficile d'utiliser Internet sans ce protocole.
+
+Les rubriques connexes sont les suivantes&nbsp;:
+
+- [Transparence des certificats](/fr/docs/Web/Security/Certificate_Transparency)
+  - : Un standard ouvert pour surveiller et auditer les certificats, créant une base de données de journaux publics qui peut être utilisée pour aider à identifier les certificats incorrects ou malveillants.
+- [HTTP Strict Transport Security (HSTS)](/fr/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
+  - : HSTS est utilisé par les serveurs pour se protéger contre les attaques de rétrogradation de protocole et de détournement de cookies en permettant aux sites de dire aux clients qu'ils ne peuvent utiliser HTTPS que pour communiquer avec le serveur.
+- [HTTP/2](/fr/docs/Glossary/HTTP_2)
+  - : Bien que HTTP/2 n'_ait_ techniquement pas besoin d'utiliser le chiffrement, la plupart des développeurs de navigateurs ne le prennent en charge que lorsqu'il est utilisé avec HTTPS&nbsp;; à cet égard, il peut être considéré comme une fonctionnalité visant à améliorer la sécurité et la confidentialité.
+
+### Activer les « fonctionnalités avancées »
+
+Les soi-disant fonctionnalités "puissantes" des API Web qui fournissent un accès à des données et des opérations potentiellement sensibles ne sont disponibles que dans des [contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts), ce qui signifie essentiellement uniquement HTTPS. Non seulement cela, mais ces fonctionnalités Web sont soumises à un système d'autorisations utilisateur. Les utilisateurs doivent explicitement opter pour des fonctionnalités telles que l'autorisation des notifications, l'accès aux données de géolocalisation, le passage du navigateur en mode plein écran, l'accès aux flux multimédias des webcams, l'utilisation des paiements Web, etc.
+
+### Technologie anti-suivi
+
+Les navigateurs ont mis en œuvre plusieurs fonctionnalités anti-suivi qui améliorent automatiquement la protection de la vie privée de leurs utilisateurs. Beaucoup d'entre elles bloquent ou limitent la capacité des sites tiers intégrés dans des {{htmlelement("iframe")}} à accéder aux cookies définis sur le domaine de premier niveau, à exécuter des scripts de suivi, etc.
+
+- La valeur par défaut de l'attribut [`SameSite`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) de l'en-tête {{httpheader("Set-Cookie")}} a été mise à jour pour `Lax`, afin de fournir une meilleure protection contre le suivi et les attaques {{glossary("CSRF")}}. Voir [Contrôler les cookies tiers avec `SameSite`](/fr/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite) pour plus d'informations.
+- Tous les navigateurs ont commencé à bloquer les cookies tiers par défaut. Voir [Comment les navigateurs gèrent-ils les cookies tiers&nbsp;?](/fr/docs/Web/Privacy/Guides/Third-party_cookies#how_do_browsers_handle_third-party_cookies) pour plus de détails.
+- Les navigateurs mettent en œuvre des technologies permettant d'autoriser les cookies tiers uniquement dans certaines circonstances qui ne portent pas atteinte à la vie privée, ou de mettre en œuvre des cas d'utilisation courants qui nécessitent actuellement des cookies tiers par d'autres moyens. Voir [Transition depuis les cookies tiers](/fr/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies) et [Remplacer les cookies tiers](/fr/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies).
+- Plusieurs navigateurs suppriment les paramètres de suivi connus des URL — cela inclut Firefox, Safari et Brave. Les extensions de navigateur aident également à le faire, par exemple [ClearURLs <sup>(angl)</sup>](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/).
+- Les navigateurs ont mis en œuvre [la protection contre le suivi des redirections](/fr/docs/Web/Privacy/Guides/Redirect_tracking_protection).
