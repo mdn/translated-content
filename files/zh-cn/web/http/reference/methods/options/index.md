@@ -128,7 +128,7 @@ Connection: Keep-Alive
 ```
 
 > [!NOTE]
-> {{HTTPStatus("200")}} OK 和 {{HTTPStatus("204")}} No Content 都是[允许的状态码](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但是部分浏览器错误地认为 `204 No Content` 也适用于该资源，且不发送后续请求来获取资源内容。
+> {{HTTPStatus("200", "200 OK")}} 和 {{HTTPStatus("204", "204 No Content")}} 都是[允许的状态码](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但是部分浏览器错误地认为 `204 No Content` 也适用于该资源，且不发送后续请求来获取资源内容。
 
 ## 规范
 
