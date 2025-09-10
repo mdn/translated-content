@@ -10,11 +10,11 @@ l10n:
 
 {{domxref("AudioEncoder")}} 接口的 **`dequeue`** 事件会在 {{domxref("AudioEncoder.encodeQueueSize")}} 减少时触发。
 
-这避免了开发者使用 {{domxref("Window.setTimeout", "setTimeout()")}} 轮询以确定队列何时减少并需要更多工作入队的需求。
+这避免了开发者使用 {{domxref("Window.setTimeout", "setTimeout()")}} 轮询以确定队列何时减少以将更多工作加入队列的需求。
 
 ## 语法
 
-在方法中使用事件名称，例如 {{domxref("EventTarget.addEventListener", "addEventListener()")}}，或设置事件处理程序属性。
+在例如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js-nolint
 addEventListener("dequeue", (event) => { })
