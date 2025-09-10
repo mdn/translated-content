@@ -399,7 +399,7 @@ Vous utilisez une méthode disponible dans l'instance de la classe {{domxref("Do
 
 C'est également vrai pour beaucoup d'autres objets/API natifs que vous avez utilisé — {{jsxref("Array")}}, {{jsxref("Math")}}, etc.
 
-On notera que les objets/API natifs ne créent pas toujours automatiquement des instances d'objet. Par exemple, [l'API Notifications](/fr/docs/Web/API/Notifications_API) — qui permet aux navigateurs modernes de déclencher leurs propres notifications — vous demande d'instancier vous-même une nouvelle instance d'objet en utilisant le constructeur pour chaque notification que vous souhaitez lancer. Essayez d'entrer le code ci-dessous dans la console JavaScript :
+On notera que les objets/API natifs ne créent pas toujours automatiquement des instances d'objet. Par exemple, [l'API Notifications](/fr/docs/Web/API/Notifications_API) — qui permet aux navigateurs modernes de déclencher leurs propres notifications — vous demande d'instancier vous-même une nouvelle instance d'objet en utilisant le constructeur pour chaque notification que vous souhaitez lancer. Essayez d'entrer le code ci-dessous dans la console JavaScript&nbsp;:
 
 ```js
 const maNotification = new Notification("Bonjour !");
