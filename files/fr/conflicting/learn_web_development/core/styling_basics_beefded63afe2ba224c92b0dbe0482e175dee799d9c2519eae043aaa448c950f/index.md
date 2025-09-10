@@ -18,7 +18,7 @@ Avant de commencer ce module, vous devriez avoir :
 
 1. Une connaissance basique de l'utilisation d'un ordinateur, et l'utilisation passive du Web (i.e. consulter des sites, consommer le contenu s'y trouvant) ;
 2. Un environnement de travail minimal installé, comme indiqué dans la section [installer les logiciels de base](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software) et une compréhension de la façon de créer et gérer des fichiers, comme indiqué dans la section [Gérer les fichiers](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)&nbsp;;
-3. Une familiarité avec HTML, comme discuté dans le module d'[introduction à HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8).
+3. Une familiarité avec HTML, comme discuté dans le module d'[introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content).
 
 > [!NOTE]
 > Si vous travaillez sur un ordinateur / tablette / autre périphérique où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code sur des sites de programmation en ligne comme [JSBin](/fr/docs/Web) ou [Thimble](/fr/docs/Web).

@@ -34,7 +34,7 @@ Voir aussi [Objet Event référence](/fr/docs/Web/API/Event).
 
 ## Exemple
 
-Voir [Création et déclenchement d'évènements](/fr/docs/Web/Events/Creating_and_triggering_events).
+Voir [Création et déclenchement d'évènements](/fr/docs/conflicting/Web/API/Document_Object_Model/Events).
 
 ## Spécifications
 

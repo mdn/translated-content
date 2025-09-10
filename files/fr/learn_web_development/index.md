@@ -27,7 +27,7 @@ Si vous débutez complètement, le développement web peut être un réel défi&
 - Je débute complètement
   - : Si vous débutez totalement dans le développement web, nous vous recommandons de commencer par travailler notre module [«&nbsp;Premiers pas sur le Web&nbsp;»](/fr/docs/Learn_web_development/Getting_started/Your_first_website), qui est une introduction pratique au développement web.
 - Au-delà des bases
-  - : Si vous possédez déjà quelques connaissances, l'étape suivante consiste à étudier en détail [HTML](/fr/docs/Glossary/HTML) et [CSS](/fr/docs/Glossary/CSS)&nbsp;: débutez avec notre module [Introduction à HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8), puis voyez le module [Introduction à CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f).
+  - : Si vous possédez déjà quelques connaissances, l'étape suivante consiste à étudier en détail [HTML](/fr/docs/Glossary/HTML) et [CSS](/fr/docs/Glossary/CSS)&nbsp;: débutez avec notre module [Introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content), puis voyez le module [Introduction à CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f).
 - Écrire des scripts
   - : Si vous êtes déjà à l'aise avec le HTML et les CSS, ou si vous êtes plutôt intéressé par le codage, voyez le [JavaScript](/fr/docs/Glossary/JavaScript) ou le développement côté serveur. Commencez par nos modules [JavaScript&nbsp;: premiers pas](/fr/docs/Learn_web_development/Core/Scripting) et [Premiers pas côté serveur](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps).
 - Les <i lang="en">frameworks</i> et l'outillage
@@ -110,7 +110,7 @@ Vous pouvez mettre à jour le dépôt de `learning-area` pour tout changement in
 
 Si vous voulez nous contacter au sujet de quoi que ce soit, le meilleur moyen est de nous [contacter](/fr/docs/MDN/Community/Communication_channels). N'hésitez pas à nous faire part de tout ce que vous pensez être erroné ou manquant sur le site, des demandes de nouveaux sujets d'apprentissage, des demandes d'aide pour des éléments que vous ne comprenez pas ou toute autre question ou préoccupation.
 
-Si vous souhaitez aider à développer/améliorer le contenu, jetez un coup d'œil à la [façon dont vous pouvez aider](/fr/docs/conflicting/MDN/Community), et contactez-nous&nbsp;! Nous sommes plus qu'heureux de parler avec vous, que vous soyez apprenti, un enseignant, un développeur web expérimenté ou quelqu'un d'autre intéressé à améliorer l'expérience d'apprentissage.
+Si vous souhaitez aider à développer/améliorer le contenu, jetez un coup d'œil à la [façon dont vous pouvez aider](/fr/docs/MDN/Community), et contactez-nous&nbsp;! Nous sommes plus qu'heureux de parler avec vous, que vous soyez apprenti, un enseignant, un développeur web expérimenté ou quelqu'un d'autre intéressé à améliorer l'expérience d'apprentissage.
 
 ## Voir aussi
 
