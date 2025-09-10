@@ -98,7 +98,7 @@ Lorsque les membres de l'objet sont des fonctions, il y a une syntaxe plus simpl
 
 ```js
 const personne = {
-  nom: ["Bob", "Smith"],
+  nom: ["Jean", "Martin"],
   age: 32,
   bio() {
     console.log(`${this.nom[0]} ${this.nom[1]} a ${this.age} ans.`);
