@@ -51,7 +51,7 @@ OPTIONS *|<request-target>["?"<query>] HTTP/1.1
 - `*`
   - : 表示客户端希望对整个服务器而不仅只是该服务器的某个特定资源发起 `OPTIONS` 请求。
 - `<request-target>`
-  - : 与 {{HTTPHeader("Host")}} 标头提供的信息结合使用时，可标识请求的目标资源。请求源服务器时是绝对路径（例如，`/path/to/file.html`），请求代理服务器时是绝对 URL（例如，`http://www.example.com/path/to/file.html`）。
+  - : 当与 {{HTTPHeader("Host")}} 标头提供的信息结合使用时，可用于标识请求的目标资源。请求源服务器时是绝对路径（例如，`/path/to/file.html`），请求代理服务器时是绝对 URL（例如，`http://www.example.com/path/to/file.html`）。
 - `<query>` {{optional_inline}}
   - : 可选的查询组件，以问号 `?` 开头。通常用于以 `key=value` 对的形式承载识别信息。
 
