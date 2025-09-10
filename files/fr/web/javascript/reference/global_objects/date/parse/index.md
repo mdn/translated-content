@@ -5,7 +5,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 {{JSRef}}
 
-La méthode **`Date.parse()`** analyse la représentation textuelle d'une date, et renvoie le nombre de millisecondes depuis le 1er janvier 1970, 00:00:00 UTC jusqu'à cette date ou `NaN` si la chaîne n'est pas reconnue ou décrit une date invalide (par exemple 2015-02-31).
+La méthode **`Date.parse()`** analyse la représentation textuelle d'une date, et renvoie le nombre de millisecondes depuis le 1er janvier 1970, 00:00:00 UTC jusqu'à cette date ou `NaN` si la chaîne n'est pas reconnue ou décrit une date avec des composantes invalides (par exemple 2015-22-01 ou 2015-02-32).
+
+> [!WARNING]
+> Une date qui n’existe pas mais dont les composantes sont valides sera acceptée, elle ne renverra pas `NaN`. Aucune vérification du jour par rapport au mois ni des années bissextiles n’est effectuée.
 
 > [!NOTE]
 > Pour les anciennes implémentations (avant ES5), le résultat de `Date.parse` variait d'une implémentation à l'autre. Attention donc à la compatibilité avec ces anciennes versions.
