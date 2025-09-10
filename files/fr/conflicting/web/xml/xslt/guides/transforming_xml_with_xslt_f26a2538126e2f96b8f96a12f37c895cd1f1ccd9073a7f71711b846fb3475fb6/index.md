@@ -7,7 +7,7 @@ original_slug: Web/API/Document_Object_Model/Transforming_with_XSLT
 {{APIRef("XSLT")}}
 
 1. [Introduction](/fr/docs/Web/API/XSLTProcessor)
-2. [Exemple basique](/fr/docs/Web/API/Document_Object_Model/Transforming_with_XSLT)
+2. [Exemple basique](/fr/docs/conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_f26a2538126e2f96b8f96a12f37c895cd1f1ccd9073a7f71711b846fb3475fb6)
 3. [Génération de HTML](/fr/docs/conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT)
 4. [Différences entre les navigateurs](/fr/docs/XSLT_dans_Gecko/Différences_entre_les_navigateurs)
 5. [Ressources](/fr/docs/XSLT_dans_Gecko/Ressources)

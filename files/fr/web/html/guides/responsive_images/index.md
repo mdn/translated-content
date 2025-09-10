@@ -221,7 +221,7 @@ Il existe plusieurs nouveaux formats d'image très intéressants (comme WebP et 
 
 ## Testez vos compétences&nbsp;!
 
-Et vous voici à la fin de cet article, mais saurez-vous vous rappeler les informations les plus importantes&nbsp;? Vous pourrez trouver une évaluation détaillée pour tester ces compétences à la fin du module&nbsp;: voir [Créer une page de présentation de Mozilla](/fr/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page).
+Et vous voici à la fin de cet article, mais saurez-vous vous rappeler les informations les plus importantes&nbsp;? Vous pourrez trouver une évaluation détaillée pour tester ces compétences à la fin du module&nbsp;: voir [Créer une page de présentation de Mozilla](/fr/docs/Learn_web_development/Core/Structuring_content/Splash_page).
 
 ## Résumé
 

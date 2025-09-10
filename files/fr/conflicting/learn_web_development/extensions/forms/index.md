@@ -20,7 +20,7 @@ Ce module contient un ensemble d'article pour acquérir les notions fondamentale
 
 ## Prérequis
 
-Avant de démarrer ce module, vous devriez avoir lu [Introduction à HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8). Cela vous permettra de comprendre [les guides introductifs](#guides_introductifs) sans peine et d'utiliser [le guide sur les contrôles natifs de base des formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls).
+Avant de démarrer ce module, vous devriez avoir lu [Introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content). Cela vous permettra de comprendre [les guides introductifs](#guides_introductifs) sans peine et d'utiliser [le guide sur les contrôles natifs de base des formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls).
 
 Pour maîtriser les formulaires, connaître le HTML ne sera pas suffisant. Il faudra aussi apprendre certaines techniques spécifiques pour mettre en forme les contrôles de formulaire et savoir manipuler les scripts pour gérer la validation et la création de contrôles spécifiques. Toutefois, avant d'attaquer les autres sections listées ci-après, nous vous conseillons de commencer par apprendre quelques notions de [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et de [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) au préalable.
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**大なり演算子 (`>`)** は、左辺のオペランドが右辺のオペランドより大きい場合は `true` を返し、それ以外の場合は `false` を返します。
+**大なり演算子 (`>`)** は、左オペランドが右オペランドより大きい場合は `true` を返し、それ以外の場合は `false` を返します。
 
 {{InteractiveExample("JavaScript デモ: 大なり演算子 (>)")}}
 
@@ -16,7 +16,7 @@ console.log(5 > 3);
 console.log(3 > 3);
 // 予想される結果: false
 
-// Compare bigint to number
+// 長整数と数値との比較
 console.log(3n > 5);
 // 予想される結果: false
 
@@ -66,7 +66,7 @@ x > y
 3 > 5; // false
 ```
 
-### Number と BigInt の比較
+### 数値と長整数の比較
 
 ```js
 5n > 3; // true
