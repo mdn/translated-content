@@ -411,6 +411,4 @@ Vous devriez maintenant avoir une bonne idée de la manière dont fonctionnent l
 
 Dans le prochain article, nous vous proposerons quelques tests que vous pourrez utiliser pour vérifier si vous avez bien compris et retenu toutes ces informations.
 
-Dans le prochain article, nous commencerons à voir la théorie de la programmation orientée objet (POO) et comment utiliser ces techniques en JavaScript.
-
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics","Learn_web_development/Core/Scripting")}}
