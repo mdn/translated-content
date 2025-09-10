@@ -37,7 +37,7 @@ Dans cet article, nous examinerons la syntaxe fondamentale des objets JavaScript
 
 Un objet est une collection de données et/ou de fonctionnalités connexes. Ceux-ci se composent généralement de plusieurs variables et fonctions (qui sont appelées propriétés et méthodes lorsqu'elles sont à l'intérieur des objets). Passons à un exemple pour comprendre à quoi ils ressemblent.
 
-Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cette exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#la_console_javascript) ouverte et prête, pour y saisir des commandes.
+Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cet exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#la_console_javascript) ouverte et prête, pour y saisir des commandes.
 
 Comme pour beaucoup de choses dans JavaScript, la création d'un objet commence souvent par définir et initialiser une variable. Essayez de saisir la ligne suivante sous le code JavaScript qui est déjà dans votre fichier, puis enregistrer et refraîchissez la page&nbsp;:
 
@@ -308,43 +308,91 @@ Dans ce cas, `personne1.salutation()` affiche «&nbsp;Bonjour ! Je m'appelle Chr
 
 Ce n'est pas très utile lorsque vous écrivez des littéraux d'objet à la main, car l'utilisation du nom de l'objet (`personne1` et `personne2`) donne exactement le même résultat, mais cela sera essentiel lorsque nous commencerons à utiliser des **constructeurs** pour créer plusieurs objets à partir d'une seule définition d'objet, ce qui sera le sujet de la section suivante.
 
-Essayons d'illustrer nos propos par une paire d'objet `personne` simplifiée :
+## Présentation des constructeurs
+
+L'utilisation d'objets littéraux convient lorsque vous n'avez besoin de créer qu'un seul objet, mais si vous devez en créer plusieurs, comme dans la section précédente, ils s'avèrent sérieusement insuffisants. Nous devons écrire le même code pour chaque objet que nous créons, et si nous voulons modifier certaines propriétés de l'objet — comme ajouter une propriété `height` — nous devons alors penser à mettre à jour chaque objet.
+
+Nous aimerions pouvoir définir la «&nbsp;forme&nbsp;» d'un objet — l'ensemble des méthodes et des propriétés qu'il peut avoir — puis créer autant d'objets que nous le souhaitons, en mettant simplement à jour les valeurs des propriétés qui sont différentes.
+
+La première version de cette fonctionnalité est simplement une fonction&nbsp;:
 
 ```js
-var personne1 = {
-  nom: "Christophe",
-  salutation: function () {
-    alert("Bonjour ! Je suis " + this.nom + ".");
-  },
-};
-
-var personne2 = {
-  nom: "Bruno",
-  salutation: function () {
-    alert("Bonjour ! Je suis " + this.nom + ".");
-  },
-};
+function creerPersonne(nom) {
+  const obj = {};
+  obj.nom = nom;
+  obj.salutation = function () {
+    console.log(`Salut ! Je suis ${this.nom}.`);
+  };
+  return obj;
+}
 ```
 
-Dans ce cas, `personne1.salutation()` affichera "Bonjour ! Je suis Christophe.", tandis que `personne2.salutation()` affichera "Bonjour ! Je suis Bruno." alors que le code est le même dans les deux cas. Comme expliqué plus tôt, `this` est égal à l'objet pour lequel le code est éxécuté. Ce n'est pas très utile quand on écrit des objets littéraux à la main, mais ça prend tout son sens quand on génère des objets dynamiques (avec des constructeurs par exemple, comme nous le verrons dans le prochain article).
+Cette fonction crée et renvoie un nouvel objet à chaque fois qu'on l'appelle. L'objet aura deux membres&nbsp;:
 
-## Vous utilisiez des objets depuis le début !
+- une propriété `nom`
+- une méthode `salutation()`.
 
-Tout au long de ces exemples, vous vous êtes probablement dit que la notation avec un point vous était très familière. C'est parce que vous l'avez utilisée tout au long du cours ! À chaque fois que vous avez travaillé avec un exemple qui utilise une API ou un objet JavaScript natif, nous avons utilisé des objets. Ces fonctionnalités sont construites exactement comme les objets que nous avons manipulés ici, mais sont parfois plus complexes que dans nos exemples.
+Noter que `creerPersonne()` prend un paramètre `nom` pour définir la valeur de la propriété `nom`, mais la valeur de la méthode `salutation()` sera la même pour tous les objets créés à l'aide de cette fonction. Il s'agit d'un modèle très courant pour créer des objets.
 
-Ainsi, quand vous utilisez une méthode comme :
+Nous pouvons désormais créer autant d'objets que nous le souhaitons, en réutilisant la définition&nbsp;:
 
 ```js
-maChaineDeCaracteres.split(",");
+const sylvie = creerPersonne("Sylvie");
+sylvie.salutation();
+// "Salut ! Je suis Sylvie."
+
+const frank = creerPersonne("Frank");
+frank.salutation();
+// "Salut ! Je suis Frank."
 ```
 
-Vous utilisez une méthode disponible dans une instance du type {{jsxref("String")}}. Dès que vous créez une chaîne de caractères dans votre code, cette chaîne est automatiquement créée comme une instance de `String` et possède donc plusieurs méthodes/propriétés communes.
+Cela fonctionne bien, mais c'est un peu long&nbsp;: nous devons créer un objet vide, l'initialiser et le renvoyer. Une meilleure solution consiste à utiliser un **constructeur**. Un constructeur est simplement une fonction appelée à l'aide du mot-clé {{jsxref("operators/new", "new")}}. Lorsque vous appelez un constructeur, celui-ci&nbsp;:
 
-Quand vous accédez au DOM (_Document Object Model_ ou « modèle objet du document ») avec `document` et des lignes telles que :
+- Crée un nouvel objet
+- Lie `this` au nouvel objet, afin que vous puissiez vous référer à `this` dans votre code constructeur
+- Exécute le code dans le constructeur
+- Renvoie le nouvel objet.
+
+Par convention, les constructeurs commencent par une majuscule et sont nommés d'après le type d'objet qu'ils créent. Nous pourrions donc réécrire notre exemple comme suit&nbsp;:
 
 ```js
-var monDiv = document.createElement("div");
-var maVideo = document.querySelector("video");
+function Personne(nom) {
+  this.nom = nom;
+  this.salutation = function () {
+    console.log(`Salut ! Je suis ${this.nom}.`);
+  };
+}
+```
+
+Pour appeler `Personne()` en tant que constructeur, nous utilisons `new`&nbsp;:
+
+```js
+const sylvie = new Personne("Sylvie");
+sylvie.salutation();
+// "Salut ! Je suis Sylvie."
+
+const frank = new Personne("Frank");
+frank.salutation();
+// "Salut ! Je suis Frank."
+```
+
+## Vous avez toujours utilisé des objets
+
+En parcourant ces exemples, vous vous êtes probablement dit que la notation par points que vous utilisez vous est très familière. C'est parce que vous l'avez utilisée tout au long du cours&nbsp;! Chaque fois que nous avons travaillé sur un exemple utilisant une API intégrée au navigateur ou un objet JavaScript, nous avons utilisé des objets, car ces fonctionnalités sont construites à partir de structures d'objets identiques à celles que nous avons étudiées ici, bien que plus complexes que dans nos exemples personnalisés de base.
+
+Ainsi, lorsque vous avez utilisé des méthodes de chaîne de caractères telles que&nbsp;:
+
+```js
+maChaine.split(",");
+```
+
+Vous utilisiez une méthode disponible sur un objet [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String). Chaque fois que vous créez une chaîne dans votre code, cette chaîne est automatiquement créée en tant qu'instance de `String` et dispose donc de plusieurs méthodes et propriétés communes.
+
+Lorsque vous avez accédé au modèle d'objet de document à l'aide de lignes telles que celles-ci&nbsp;:
+
+```js
+const maDiv = document.createElement("div");
+const maVideo = document.querySelector("video");
 ```
 
 Vous utilisez une méthode disponible dans l'instance de la classe {{domxref("Document")}}. Pour chaque page web chargée, une instance de `Document` est créée, appelée `document` et qui représente la structure entière de la page, son contenu et d'autres caractéristiques telles que son URL. Encore une fois, cela signifie qu'elle possède plusieurs méthodes/propriétés communes.
@@ -354,19 +402,14 @@ C'est également vrai pour beaucoup d'autres objets/API natifs que vous avez uti
 On notera que les objets/API natifs ne créent pas toujours automatiquement des instances d'objet. Par exemple, [l'API Notifications](/fr/docs/Web/API/Notifications_API) — qui permet aux navigateurs modernes de déclencher leurs propres notifications — vous demande d'instancier vous-même une nouvelle instance d'objet en utilisant le constructeur pour chaque notification que vous souhaitez lancer. Essayez d'entrer le code ci-dessous dans la console JavaScript :
 
 ```js
-var maNotification = new Notification("Bonjour !");
+const maNotification = new Notification("Bonjour !");
 ```
-
-Nous verrons les constructeurs dans un prochain article.
-
-> [!NOTE]
-> On peut voir le mode de communication des objets comme un **envoi de message**. Quand un objet a besoin d'un autre pour faire une action, souvent il va envoyer un message à un autre objet via l'une de ses méthode et attendre une réponse, qui retournera une valeur.
 
 ## Résumé
 
-Félicitations, vous avez terminé notre premier article sur les objets JavaScript — vous devriez maintenant mieux comprendre comment on travaille avec des objets en JavaScript. Vous avez pu créer vos propres objets basiques. Vous devriez aussi voir que les objets sont très pratiques pour stocker des données et des fonctionnalités. Si on ne passe pas par un objet et qu'on a une variable différente pour chaque propriété et méthode de notre objet `personne`, cela sera inefficace et frustrant et vous prendrez le risque de créer des conflits avec d'autres variables et fonctions du même nom.
+Vous devriez maintenant avoir une bonne idée de la manière dont fonctionnent les objets en JavaScript — y compris la création de vos propres objets simples. Vous devriez également comprendre que les objets sont très utiles en tant que structures permettant de stocker des données et des fonctionnalités connexes — si vous essayiez de garder une trace de toutes les propriétés et méthodes de notre objet `personne` sous forme de variables et de fonctions distinctes, cela serait inefficace et frustrant, et nous courrions le risque d'entrer en conflit avec d'autres variables et fonctions portant les mêmes noms. Les objets nous permettent de conserver les informations en toute sécurité dans leur propre package, à l'abri de tout danger.
 
-Les objets permettent de conserver les informations de façon sûre, enfermées dans leur propre « paquet », hors de danger.
+Dans le prochain article, nous vous proposerons quelques tests que vous pourrez utiliser pour vérifier si vous avez bien compris et retenu toutes ces informations.
 
 Dans le prochain article, nous commencerons à voir la théorie de la programmation orientée objet (POO) et comment utiliser ces techniques en JavaScript.
 
