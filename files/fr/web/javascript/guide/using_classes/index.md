@@ -513,7 +513,7 @@ rouge.red = 0;
 console.log(rouge.red); // 255
 ```
 
-En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), la ligne `rouge.red = 0` lèvera une erreur de type&nbsp;: «&nbsp;Cannot set property red of #<Color> which has only a getter&nbsp;». En mode non strict, l'affectation est silencieusement ignorée.
+En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), la ligne `rouge.red = 0` lèvera une erreur de type&nbsp;: «&nbsp;Cannot set property red of #\<Color> which has only a getter&nbsp;». En mode non strict, l'affectation est silencieusement ignorée.
 
 ## Champs publics
 
@@ -717,7 +717,7 @@ console.log(color instanceof ColorWithAlpha); // true
 
 Ce guide a été pragmatique jusqu'ici&nbsp;: nous nous concentrons sur _comment_ utiliser les classes, mais une question demeure&nbsp;: _pourquoi_ utiliser une classe&nbsp;? Réponse&nbsp;: cela dépend.
 
-Les classes introduisent un _paradigme_, une façon d'organiser votre code. Elles sont le fondement de la programmation orientée objet, basée sur des concepts tels que l'[héritage](https://fr.wikipedia.org/wiki/H%C3%A9ritage_(programmation_objet)) et le [polymorphisme](https://fr.wikipedia.org/wiki/Polymorphisme_(informatique)) (en particulier le polymorphisme par sous‑type). Cependant, de nombreuses personnes sont philosophiquement opposées à certaines pratiques de l'OOP et n'utilisent donc pas les classes.
+Les classes introduisent un _paradigme_, une façon d'organiser votre code. Elles sont le fondement de la programmation orientée objet, basée sur des concepts tels que l'[héritage](<https://fr.wikipedia.org/wiki/H%C3%A9ritage_(programmation_objet)>) et le [polymorphisme](<https://fr.wikipedia.org/wiki/Polymorphisme_(informatique)>) (en particulier le polymorphisme par sous‑type). Cependant, de nombreuses personnes sont philosophiquement opposées à certaines pratiques de l'OOP et n'utilisent donc pas les classes.
 
 Par exemple, un aspect qui rend les objets `Date` tristement célèbres est qu'ils sont _mutables_.
 
