@@ -89,7 +89,7 @@ transition-timing-function: unset;
 ### 值
 
 - `<timing-function>`
-  - : 通过{{ cssxref("transition-property") }}中定义被过渡属性，每个 {{cssxref("&lt;easing-function&gt;")}}的值代表与这个属性相对应的 timing function.
+  - : 通过 {{cssxref("transition-property")}} 中定义被过渡属性，每个 {{cssxref("&lt;easing-function&gt;")}} 的值代表与这个属性相对应的缓动函数。
 
 ## 形式定义
 
