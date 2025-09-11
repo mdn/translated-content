@@ -698,7 +698,7 @@ Il est possible de déclencher un grand nombre d'animations sur un même éléme
 
 Les animations sont supprimées lorsque toutes les conditions suivantes sont réunies&nbsp;:
 
-- L'animation est avec remplissage (sa propriété `fill` est `forwards` si elle joue en avant, `backwards` si elle joue en arrière, ou `both`). 
+- L'animation est avec remplissage (sa propriété `fill` est `forwards` si elle joue en avant, `backwards` si elle joue en arrière, ou `both`).
 - L'animation est terminée. (Remarquez qu'à cause de `fill`, elle est toujours en vigueur.)
 - La chronologie de l'animation est monotone croissante. (C'est toujours vrai pour {{domxref("DocumentTimeline")}}&nbsp;; d'autres chronologies comme {{cssxref("scroll-timeline")}} peuvent reculer.)
 - L'animation n'est pas contrôlée par un balisage déclaratif comme le CSS.
