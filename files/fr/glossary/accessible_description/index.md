@@ -28,18 +28,18 @@ Pour les éléments HTML, s'il n'a pas de description accessible, celle‑ci doi
 4. Si aucune des options précédentes ne fournit une description, l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) est utilisé, si le `title` n'est pas le {{Glossary("Accessible_name", "nom accessible")}} de cet élément.
 5. Si aucune des options précédentes ne définit une description accessible, la description accessible est vide.
 
-Les étapes de définition de la description accessible en HTML sont décrites dans la [Description Accessible HTML-AAM](https://w3c.github.io/html-aam/#accdesc-computation)<sup>(angl.)</sup>. La description accessible des éléments SVG suit les mêmes étapes avec de petites différences énumérées dans la [Description Accessible SVG-AAM](https://w3c.github.io/svg-aam/#mapping_additional_nd)<sup>(angl.)</sup>.
+Les étapes de définition de la description accessible en HTML sont décrites dans la [Description Accessible HTML-AAM <sup>(angl.)</sup>](https://w3c.github.io/html-aam/#accdesc-computation). La description accessible des éléments SVG suit les mêmes étapes avec de petites différences énumérées dans la [Description Accessible SVG-AAM <sup>(angl.)</sup>](https://w3c.github.io/svg-aam/#mapping_additional_nd).
 
 ## Voir aussi
 
-- [Calcul du nom et de la description accessibles 1.2 (accname)](https://w3c.github.io/accname/#mapping_additional_nd_description)<sup>(angl.)</sup>
+- [Calcul du nom et de la description accessibles 1.2 (accname) <sup>(angl.)</sup>](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [Accessibilité](/fr/docs/Web/Accessibility)
 - [Apprendre l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility)
-- [Accessibilité Web](https://en.wikipedia.org/wiki/Web_accessibility)<sup>(angl.)</sup> sur Wikipedia
-- [Accessibilité Web en tête](https://webaim.org/)<sup>(angl.)</sup>
+- [Accessibilité Web <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Web_accessibility) sur Wikipedia
+- [Accessibilité Web en tête <sup>(angl.)</sup>](https://webaim.org/)
 - [ARIA](/fr/docs/Web/Accessibility/ARIA)
-- [Initiative W3C pour l'accessibilité Web (WAI)](https://www.w3.org/WAI/)<sup>(angl.)</sup>
-- [Applications Riches d'Internet Accessible (WAI-ARIA)](https://w3c.github.io/aria/)<sup>(angl.)</sup>
+- [Initiative W3C pour l'accessibilité Web (WAI) <sup>(angl.)</sup>](https://www.w3.org/WAI/)
+- [Applications Riches d'Internet Accessible (WAI-ARIA) <sup>(angl.)</sup>](https://w3c.github.io/aria/)
 - Termes de glossaire connexes&nbsp;:
   - {{Glossary("Accessibility")}}
   - {{Glossary("Accessibility_tree")}}
