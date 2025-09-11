@@ -123,7 +123,7 @@ body {
 }
 ```
 
-Cela change la couleur d'Alice et la rotation de sa transformation sur 3 secondes à un rythme constant (<i lang="en">linear</i>) et boucle indéfiniment. Dans le bloc {{cssxref("@keyframes")}}, on voit qu'à 30&nbsp;% de chaque boucle (environ 0,9&nbsp;s), la couleur d'Alice passe du noir à un bordeaux profond, puis revient au noir à la fin de la boucle.
+Cela change la couleur d'Alice et la rotation de sa transformation sur 3 secondes à un rythme constant (<i lang="en">linear</i>) et boucle indéfiniment. Dans le bloc {{cssxref("@keyframes")}}, on voit qu'à 30&nbsp;% de chaque boucle (environ 0,9s), la couleur d'Alice passe du noir à un bordeaux profond, puis revient au noir à la fin de la boucle.
 
 ### Transposer en JavaScript
 
@@ -750,13 +750,13 @@ const aliceChange = document
   );
 ```
 
-L'animation d'Alice la fait passer de la moitié de sa taille à deux fois sa taille sur 8&nbsp;secondes. Puis nous la mettons en pause&nbsp;:
+L'animation d'Alice la fait passer de la moitié de sa taille à deux fois sa taille sur 8 secondes. Puis nous la mettons en pause&nbsp;:
 
 ```js
 aliceChange.pause();
 ```
 
-Si nous l'avions laissée en pause au début, elle commencerait à la moitié de sa taille finale, comme si elle avait déjà bu toute la bouteille. Nous voulons placer la «&nbsp;tête de lecture&nbsp;» de son animation au milieu, pour qu'elle soit déjà à mi-chemin. Nous pourrions le faire en réglant {{domxref("Animation.currentTime")}} sur 4&nbsp;secondes, ainsi&nbsp;:
+Si nous l'avions laissée en pause au début, elle commencerait à la moitié de sa taille finale, comme si elle avait déjà bu toute la bouteille. Nous voulons placer la «&nbsp;tête de lecture&nbsp;» de son animation au milieu, pour qu'elle soit déjà à mi-chemin. Nous pourrions le faire en réglant {{domxref("Animation.currentTime")}} sur 4 secondes, ainsi&nbsp;:
 
 ```js
 aliceChange.currentTime = 4000;
