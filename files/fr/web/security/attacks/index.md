@@ -1,7 +1,7 @@
 ---
 title: Attaques
 slug: Web/Security/Attacks
-l10:
+l10n:
   sourceCommit: df8445288d6a7c39ef7d7c711af2189790b23831
 ---
 
