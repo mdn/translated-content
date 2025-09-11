@@ -95,5 +95,5 @@ Appliquer le rôle `application` fera que cet élément et tous ses descendants 
 
 ## Voir aussi
 
-- [Si vous utilisez le rôle WAI-ARIA `application`, faites-le avec discernement <sup>(angl.)</sup>](https://www.marcozehe.de/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - billet de blog de Marco Zehe  
-- [Utiliser le rôle ARIA `application` <sup>(angl.)</sup>](https://tink.uk/using-the-aria-application-role/) - par Léonie Watson  
+- [Si vous utilisez le rôle WAI-ARIA `application`, faites-le avec discernement <sup>(angl.)</sup>](https://www.marcozehe.de/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - billet de blog de Marco Zehe
+- [Utiliser le rôle ARIA `application` <sup>(angl.)</sup>](https://tink.uk/using-the-aria-application-role/) - par Léonie Watson
