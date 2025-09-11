@@ -12,8 +12,8 @@ Dans notre premier module consacré à JavaScript, nous allons tout d'abord rép
 
 Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable en JavaScript, mais vous devriez être familier avec HTML et CSS. Nous vous conseillons de lire les modules suivants avant d'aller plus loin&nbsp;:
 
-- [Commencer avec le Web](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)).
-- [Introduction au langage HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8).
+- [Commencer avec le Web](/fr/docs/Learn_web_development/Core/Structuring_content) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)).
+- [Introduction au langage HTML](/fr/docs/Learn_web_development/Core/Structuring_content).
 - [Introduction au langage CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f).
 
 > [!NOTE]

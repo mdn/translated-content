@@ -10,7 +10,7 @@ Dans ce module nous allons continuer à voir l'ensemble des fonctionnalités cle
 
 ## Prérequis
 
-Avant de commencer ce module, vous devriez connaître les bases du [HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8) et du [CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f) et avoir suivi le module précédent, [JavaScript Premiers Pas.](/fr/docs/Learn_web_development/Core/Scripting)
+Avant de commencer ce module, vous devriez connaître les bases du [HTML](/fr/docs/Learn_web_development/Core/Structuring_content) et du [CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f) et avoir suivi le module précédent, [JavaScript Premiers Pas.](/fr/docs/Learn_web_development/Core/Scripting)
 
 > [!NOTE]
 > Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, ce n'est pas un problème, vous pourrez essayer la plupart des exemples en lignes grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).

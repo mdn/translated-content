@@ -1238,9 +1238,9 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [languagechange](/fr/docs/Web/API/WorkerGlobalScope/languagechange_event)
 
 - {{DOMxRef("XMLHttpRequest")}}
-  - [abort](/fr/docs/Web/API/XMLHttpRequest/abort_event)
+  - [abort](/fr/docs/Web/API/XMLHttpRequestEventTarget/abort_event)
   - [error](/fr/docs/Web/API/XMLHttpRequest/error_event)
-  - [loadend](/fr/docs/Web/API/XMLHttpRequest/loadend_event)
+  - [loadend](/fr/docs/Web/API/XMLHttpRequestEventTarget/loadend_event)
   - [loadstart](/fr/docs/Web/API/XMLHttpRequest/loadstart_event)
   - [load](/fr/docs/Web/API/XMLHttpRequest/load_event)
   - [progress](/fr/docs/Web/API/XMLHttpRequest/progress_event)

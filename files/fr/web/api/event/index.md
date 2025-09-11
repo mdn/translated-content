@@ -146,6 +146,6 @@ On notera que l'ensemble des interfaces d'évènements ont un nom qui termine pa
 
 ## Voir aussi
 
-- Les types d'évènement disponibles : [Référence des évènements](/fr/docs/Web/Events)
+- Les types d'évènement disponibles : [Référence des évènements](/fr/docs/Web/API/Document_Object_Model/Events)
 - [Comparaison des cibles d'évènements](/fr/docs/Learn_web_development/Core/Scripting/Event_bubbling) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
-- [Créer et déclencher des évènements personnalisés](/fr/docs/Web/Events/Creating_and_triggering_events)
+- [Créer et déclencher des évènements personnalisés](/fr/docs/conflicting/Web/API/Document_Object_Model/Events)

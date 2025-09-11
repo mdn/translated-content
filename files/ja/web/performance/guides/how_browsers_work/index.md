@@ -1,12 +1,10 @@
 ---
 title: "ページの生成: ブラウザーの動作の仕組み"
+short-title: ブラウザーの動作の仕組み
 slug: Web/Performance/Guides/How_browsers_work
-original_slug: Web/Performance/How_browsers_work
 l10n:
-  sourceCommit: f32c38c1245815c7f520730f0cdef54960e5cee1
+  sourceCommit: 947a97f360339b3aced40748bc0c43427451e5b3
 ---
-
-{{QuickLinksWithSubPages("/ja/docs/Web/Performance")}}
 
 ユーザーは、読み込みが速く、スムーズに操作できるコンテンツを、ウェブで体験することを求めています。したがって、開発者はこれらふたつの目標を達成するために努力しなければいけません。
 
@@ -73,9 +71,9 @@ HTTPS によって確立される安全なコネクションでは、もう 1 �
     <h1 class="heading">My Page</h1>
     <p>A paragraph with a <a href="https://example.com/about">link</a></p>
     <div>
-      <img src="myimage.jpg" alt="image description" />
+      <img src="my-image.jpg" alt="image description" />
     </div>
-    <script src="anotherscript.js"></script>
+    <script src="another-script.js"></script>
   </body>
 </html>
 ```
@@ -108,7 +106,7 @@ DOM はブラウザー向けのマークアップの内部的な表現です。D
 
 ### DOM ツリーの構築
 
-[クリティカルレンダリングパス](/ja/docs/Web/Performance/Critical_rendering_path)の 5 つのステップを説明します。
+[クリティカルレンダリングパス](/ja/docs/Web/Performance/Guides/Critical_rendering_path)の 5 つのステップを説明します。
 
 最初のステップは HTML のマークアップを処理し、DOM ツリーを構築することです。HTML の構文解析は、[トークン化](/ja/docs/Web/API/DOMTokenList)とツリーの構築に分かれます。HTML のトークンは開始タグと終了タグ、属性の名前と値を含みます。文書が正しく構成されていれば構文解析は単純で、速度も速くなります。パーサーはトークン化された入力情報を文書ツリーを構成する文書に変換します。
 
@@ -124,9 +122,9 @@ DOM ツリーは文書のコンテンツを表します。 [`<html>`](/ja/docs/W
 
 ```html
 <link rel="stylesheet" href="styles.css" />
-<script src="myscript.js" async></script>
-<img src="myimage.jpg" alt="image description" />
-<script src="anotherscript.js" async></script>
+<script src="my-script.js" async></script>
+<img src="my-image.jpg" alt="image description" />
+<script src="another-script.js" async></script>
 ```
 
 この例では、メインスレッドが HTML と CSS を解釈している間に、事前読み込みスキャナーがスクリプトと画像を探索し、それらのダウンロードを開始します。これらの過程をスクリプトがブロックしないようにするには、 `async` 属性を付加するか、あるいはスクリプトの解釈と実行順が重要である場合には `defer` 属性を付加してください。
@@ -153,7 +151,7 @@ CSS が解釈され、CSSOM が生成される間、 JavaScript ファイルを�
 
 ブラウザーはコンテンツを理解し翻訳する補助機器で使用される[アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility)ツリーも構築します。アクセシビリティオブジェクトモデル (AOM) は補助機器向けの DOM のようなものです。ブラウザーは、DOM が更新されるとアクセシビリティツリーも更新します。アクセシビリティツリーは補助機能それ自体からは変更できません。
 
-AOM が構築されるまで、[スクリーンリーダー](/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide)でコンテンツにアクセスできません。
+AOM が構築されるまで、[スクリーンリーダー](/ja/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors)でコンテンツにアクセスできません。
 
 ## レンダリング
 
@@ -175,15 +173,15 @@ AOM が構築されるまで、[スクリーンリーダー](/ja/docs/Web/Access
 
 ウェブページ上では、ほとんどすべての要素はボックスです。異なるデバイス、異なるデスクトップの設定は、ビューポートの寸法の数が無制限に存在することを示しています。この段階において、ビューポートの寸法を考慮して、ブラウザーはすべての異なるボックスの画面上の寸法を決定します。ビューポートの寸法を基本として、レイアウトは一般的に body からスタートし、すべての body の子孫をそれぞれの要素のボックスモデルプロパティに合わせてレイアウトし、画像のように寸法がわからない代替要素のためのプレースホルダースペースを作成します。
 
-ノードの寸法と位置が決められる最初の瞬間を*レイアウト*と呼びます。続いて発生するノードの寸法と位置の再計算を*再フロー*と呼びます。私たちの例では、画像が返される前に最初のレイアウトが発生すると考えられます。そこでは画像の寸法を宣言していなかったため、画像の寸法がわかるとすぐに再フローが発生するのです。
+ノードの寸法と位置が決められる最初の瞬間を「レイアウト」と呼びます。続いて発生するレイアウトの再計算を「再フロー」と呼びます。私たちの例では、画像が返される前に最初のレイアウトが発生すると考えられます。そこでは画像の寸法を宣言していなかったため、画像の寸法がわかるとすぐに再フローが発生するのです。
 
 ### 描画
 
-クリティカルレンダリングパスの最後のステップは、個別のノードを画面に描画することです。最初に発生する描画を [first meaningful paint](/ja/docs/Glossary/First_meaningful_paint) と呼びます。描画またはラスタライズの段階において、ブラウザーはレイアウト段階で計算されたそれぞれのボックスを画面上の実際のピクセルに変換します。描画は、テキスト、色、境界、シャドウ、ボタンや画像のような置換要素を含む、要素のすべての視覚的な部分を画面に描くことを含みます。ブラウザーはこれを超高速で実行する必要があります。
+クリティカルレンダリングパスの最後のステップは、個別のノードを画面に描画することです。最初に発生する描画を [first Meaningful Paint](/ja/docs/Glossary/First_meaningful_paint) と呼びます。描画またはラスタライズの段階において、ブラウザーはレイアウト段階で計算されたそれぞれのボックスを画面上の実際のピクセルに変換します。描画は、テキスト、色、境界、シャドウ、ボタンや画像のような置換要素を含む、要素のすべての視覚的な部分を画面に描くことを含みます。ブラウザーはこれを超高速で実行する必要があります。
 
 スムーズなスクロールとアニメーションを実現するために、スタイルの計算や再フロー、描画などメインスレッドを占有するすべての処理は、16.67ms 未満で完了する必要があります。2048 x 1536 の解像度を持つ iPad には 3,145,000 を超えるピクセルがあります。これだけの大量のピクセルを高速に描画しなければいけません。2 回目以降の描画を最初の描画より高速にするため、一般的には画面への描画を複数のレイヤーに分解します。この場合には合成が必要になります。
 
-描画は描画ツリー内の要素をレイヤーに分解します。コンテンツを GPU (CPU 上のメインスレッドの代わりになる) 上のレイヤーに昇格させることで、描画と再描画のパフォーマンスを向上します。[`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) や[`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas)など、レイヤーを生成する特定のプロパティと要素があります。[`opacity`](/ja/docs/Web/CSS/opacity)、3D [`transform`](/ja/docs/Web/CSS/transform)、[`will-change`](/ja/docs/Web/CSS/will-change)、その他いくつかの CSS プロパティを持つ要素も同様です。これらのノードは、その子孫が上記の理由でそれ自身のレイヤーを必要とするのでなければ、子孫と一緒に自身のレイヤー上に描画されます。
+描画は描画ツリー内の要素をレイヤーに分解します。コンテンツを GPU (CPU 上のメインスレッドの代わりになる) 上のレイヤーに昇格させることで、描画と再描画のパフォーマンスを向上します。 [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) や [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) など、レイヤーを生成する特定のプロパティと要素があります。 [`opacity`](/ja/docs/Web/CSS/opacity)、3D の [`transform`](/ja/docs/Web/CSS/transform)、[`will-change`](/ja/docs/Web/CSS/will-change)、その他いくつかの CSS プロパティを持つ要素も同様です。これらのノードは、その子孫が上記の理由でそれ自身のレイヤーを必要とするのでなければ、子孫と一緒に自身のレイヤー上に描画されます。
 
 レイヤーはパフォーマンスを改善しますが、メモリー管理の面ではコストのかかる処理です。そのため、ウェブのパフォーマンス最適化戦略の中で濫用するべきものではありません。
 
@@ -199,7 +197,7 @@ AOM が構築されるまで、[スクリーンリーダー](/ja/docs/Web/Access
 
 {{glossary('Time to Interactive')}} (TTI) は、DNS 検索と TCP 接続を始める最初のリクエストからページが操作可能になるまでどのくらい時間がかかったかを示す測定値です。操作可能であるとは、ページがユーザーの操作に 50ms 以内に応答する {{glossary('First Contentful Paint')}} の後の時点を言います。メインスレッドが構文解析、コンパイル、JavaScript の実行に占有されている場合、ユーザーの操作にタイムリーに (50ms より早く) 応答することができません。
 
-以下の例では、画像の読み込みは高速かもしれませんが、`anotherscript.js` ファイルが 2MB あり、しかもユーザーのネットワークは低速です。このケースでは、ユーザーはページのコンテンツをすぐに見ることができるかもしれませんが、スクリプトがダウンロードされるまでスクロールを実行できない可能性があります。これは良いユーザー体験とは言えません。この WebPageTest の例からわかるように、メインスレッドを占有することは避けなければいけません。
+以下の例では、画像の読み込みは高速かもしれませんが、`another-script.js` ファイルが 2MB あり、しかもユーザーのネットワークは低速です。このケースでは、ユーザーはページのコンテンツをすぐに見ることができるかもしれませんが、スクリプトがダウンロードされるまでスクロールを実行できない可能性があります。これは良いユーザー体験とは言えません。この WebPageTest の例からわかるように、メインスレッドを占有することは避けなければいけません。
 
 ![メインスレッドは JavaScript ファイルのダウンロード、解釈、実行で占められています (高速接続時)。](visa_network.png)
 

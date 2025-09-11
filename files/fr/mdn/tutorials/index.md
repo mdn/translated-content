@@ -17,7 +17,7 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 
 ### Niveau d'introduction
 
-- [Introduction à HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8)
+- [Introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
   - : Ce module prépare le terrain, en vous familiarisant avec les concepts et la syntaxe importante, en examinant l'application du HTML au texte, la création d'hyperliens et l'utilisation du HTML pour structurer une page web.
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Reference/Elements)
   - : Une référence complète pour les éléments HTML et qui contient des informations de compatibilité pour la prise en charge des différents navigateurs.

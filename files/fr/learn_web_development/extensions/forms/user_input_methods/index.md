@@ -39,11 +39,11 @@ window.addEventListener("keyup", handleKeyUp, true);
 où `handleKeyDown` et `handleKeyUp` sont des fonctions implémentant les contrôles sur les événements `keydown` et `keyup`.
 
 > [!NOTE]
-> Jetez un coup d'oeil à la [Référence des événements](/fr/docs/Web/Events) et au guide {{domxref("KeyboardEvent")}} pour en savoir plus sur les événements de clavier.
+> Jetez un coup d'oeil à la [Référence des événements](/fr/docs/Web/API/Document_Object_Model/Events) et au guide {{domxref("KeyboardEvent")}} pour en savoir plus sur les événements de clavier.
 
 #### Souris
 
-Les événements qui se produisent quand l'utilisateur interagit avec un appareil de pointage comme une souris sont représentés par l'interface DOM {{domxref("MouseEvent")}}. Les événements de souris les plus communs sont [`click`](/fr/docs/Web/API/Element/click_event), [`dblclick`](/fr/docs/Web/API/Element/dblclick_event), [`mouseup`](/fr/docs/Web/API/Element/mouseup_event), et [`mousedown`](/fr/docs/Web/API/Element/mousedown_event). La liste de tous les événements souris utilisant l'interface MouseEvent est disponible dans la [Référence des événements](/fr/docs/Web/Events).
+Les événements qui se produisent quand l'utilisateur interagit avec un appareil de pointage comme une souris sont représentés par l'interface DOM {{domxref("MouseEvent")}}. Les événements de souris les plus communs sont [`click`](/fr/docs/Web/API/Element/click_event), [`dblclick`](/fr/docs/Web/API/Element/dblclick_event), [`mouseup`](/fr/docs/Web/API/Element/mouseup_event), et [`mousedown`](/fr/docs/Web/API/Element/mousedown_event). La liste de tous les événements souris utilisant l'interface MouseEvent est disponible dans la [Référence des événements](/fr/docs/Web/API/Document_Object_Model/Events).
 
 Quand le périphérique d'entrée est une souris, vous pouvez également contrôler les entrées utilisateur avec l'API Pointer Lock et implémenter le Drag & Drop (voir ci-dessous).
 

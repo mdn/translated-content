@@ -519,4 +519,4 @@ Un certain nombre de bibliothèques JavaScript audio et vidéo existent. Les plu
 - [L'API Web Audio](/fr/docs/Web/API/Web_Audio_API)
 - [L'API `MediaRecorder`](/fr/docs/Web/API/MediaStream_Recording_API)
 - [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)
-- [Référence des évènements relatifs aux médias](/fr/docs/Web/Events#media)
+- [Référence des évènements relatifs aux médias](/fr/docs/Web/API/Document_Object_Model/Events#media)

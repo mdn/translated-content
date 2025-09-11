@@ -36,7 +36,7 @@ Les articles suivants fournissent des éléments de référence utiles au dével
 
 La section [Apprendre HTML](/fr/docs/Learn_web_development/Core/Structuring_content) contient plusieurs modules pour vous apprendre à utiliser HTML — sans autre connaissance particulière.
 
-- [Une introduction à HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8)
+- [Une introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
   - : Dans ce module, on brosse un premier portrait de HTML pour présenter les concepts importants, la syntaxe. On voit comment appliquer HTML sur du texte, comment créer des hyperliens et comment structurer une page web grâce à HTML.
 - [Le multimédia et l'intégration](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content)
   - : Dans ce module, on explore comment utiliser HTML pour intégrer des fichiers multimédias dans une page web. Cela couvre les différentes façons d'inclure une image, comment ajouter une vidéo ou un fichier audio voire aussi comment intégrer d'autres pages web.

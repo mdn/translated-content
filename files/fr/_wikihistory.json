@@ -38584,14 +38584,6 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Games/Tools": {
-    "modified": "2020-09-28T01:50:43.797Z",
-    "contributors": [
-      "Voulto",
-      "JNa0",
-      "dragon38800"
-    ]
-  },
   "conflicting/Glossary/CORS-safelisted_request_header": {
     "modified": "2019-03-18T21:45:54.235Z",
     "contributors": [
@@ -38682,19 +38674,6 @@
       "Dralyab",
       "loella16",
       "tonybengue"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8": {
-    "modified": "2020-07-16T22:22:47.142Z",
-    "contributors": [
-      "bfritscher",
-      "NerOcrO",
-      "Dralyab",
-      "Ilphrin",
-      "loella16",
-      "Porkepix",
-      "Jeremie",
-      "SphinxKnight"
     ]
   },
   "conflicting/Learn_web_development/Core/Styling_basics": {

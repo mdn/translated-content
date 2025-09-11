@@ -10,7 +10,7 @@ Une tâche assez courante en HTML consiste à structurer des données sous forme
 
 ## Prérequis
 
-Avant de commencer ce module, vous devez déjà connaître les bases du HTML — voyez [Introduction au HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8).
+Avant de commencer ce module, vous devez déjà connaître les bases du HTML — voyez [Introduction au HTML](/fr/docs/Learn_web_development/Core/Structuring_content).
 
 > [!NOTE]
 > Si vous travaillez sur un ordinateur/tablette/autre appareil avec lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous devriez essayer (la plupart) des exemples de code dans un programme de codage en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).

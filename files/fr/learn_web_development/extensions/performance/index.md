@@ -16,7 +16,7 @@ Bien que la connaissance de HTML, CSS et JavaScript soit nécessaire pour mettre
 
 Il serait également utile d'approfondir un peu ces sujets, avec des modules tels que:
 
-- [Introduction au HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8)
+- [Introduction au HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
 - [Premiers pas avec CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f)
 - [Premiers pas en JavaScript](/fr/docs/Learn_web_development/Core/Scripting)
 

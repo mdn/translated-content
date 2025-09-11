@@ -363,7 +363,7 @@ De nombreux éléments de formulaire disposent d'attributs qui leur sont spécif
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin — voir l'évaluation [Testez vos compétences&nbsp;: contrôles de formulaire de base](/fr/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls).
+Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin — voir l'évaluation [Testez vos compétences&nbsp;: contrôles de formulaire de base](/fr/docs/conflicting/Learn_web_development/Extensions/Forms_b242d7f12fda9b38ebcb72516378915e5a132e3f4d3831e2ec016c23a3c36720).
 
 ## Résumé
 

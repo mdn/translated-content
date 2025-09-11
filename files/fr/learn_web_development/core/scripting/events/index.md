@@ -47,7 +47,7 @@ Dans le cas du Web, les événements sont déclenchés à l'intérieur de la fen
 - Une vidéo en cours de lecture, en pause ou en fin de lecture.
 - Une erreur qui survient.
 
-Vous vous en rendrez compte (notamment en jetant un coup d'œil à la section MDN [Référence des événements](/fr/docs/Web/Events) ), il y a **beaucoup** d'événements auxquels vous pouvez répondre.
+Vous vous en rendrez compte (notamment en jetant un coup d'œil à la section MDN [Référence des événements](/fr/docs/Web/API/Document_Object_Model/Events) ), il y a **beaucoup** d'événements auxquels vous pouvez répondre.
 
 Chaque événement disponible a un **gestionnaire d'événement**, qui est un bloc de code (généralement une fonction JavaScript définie par l'utilisateur) qui sera exécuté lorsque l'événement se déclenchera. Lorsqu'un tel bloc de code est défini pour être exécuté en réponse à un déclenchement d'événement, nous disons que nous **enregistrons un gestionnaire d'événements**. Notez que les gestionnaires d'événements sont parfois appelés **écouteurs d'événements** - ils sont à peu près interchangeables pour ce qui nous concerne, même si à la rigueur, ils fonctionnent ensemble. L'écouteur écoute l'événement qui se produit et le gestionnaire est le code qui est exécuté en réponse à ce qui se passe.
 
@@ -600,6 +600,6 @@ S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'a
 
 - [Event order](https://www.quirksmode.org/js/events_order.html) (discussion sur la capture et le bouillonnement) — une pièce superbement détaillée de Peter-Paul Koch.
 - [Event accessing](https://www.quirksmode.org/js/events_access.html) (discussion sur l'objet événement) — une autre pièce superbement détaillée de Peter-Paul Koch.
-- [Event reference](/fr/docs/Web/Events)
+- [Event reference](/fr/docs/Web/API/Document_Object_Model/Events)
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}

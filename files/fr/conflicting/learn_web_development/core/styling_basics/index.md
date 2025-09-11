@@ -16,7 +16,7 @@ Avant de commencer ce cours, nous vous recommandons :
 
 1. D'être familiarisé avec l'usage des ordinateurs et avec la navigation sur internet.
 2. De disposer d'un environnement de travail comme il est décrit dans l'article [installation des outils de base](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software) et de savoir créer et gérer des fichiers (cf. leçon [gérer les fichiers](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)).
-3. D'être suffisamment à votre aise avec HTML (voir le cours [introduction au HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8)).
+3. D'être suffisamment à votre aise avec HTML (voir le cours [introduction au HTML](/fr/docs/Learn_web_development/Core/Structuring_content)).
 4. D'avoir compris les bases du CSS telles qu'exposées dans le cours [premiers pas avec CSS.](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f)
 
 > [!NOTE]

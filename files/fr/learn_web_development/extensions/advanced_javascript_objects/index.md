@@ -20,7 +20,7 @@ En JavaScript, la plupart des valeurs manipulées sont des objets, qu'ils provie
 
 ## Prérequis
 
-Avant de commencer ce module, vous devriez connaître les bases de [HTML](/fr/docs/Glossary/HTML) et de [CSS](/fr/docs/Glossary/CSS). Nous vous conseillons de réaliser les modules [Introduction à HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8) et [Introduction à CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f) avant de commencer celui-ci sur JavaScript.
+Avant de commencer ce module, vous devriez connaître les bases de [HTML](/fr/docs/Glossary/HTML) et de [CSS](/fr/docs/Glossary/CSS). Nous vous conseillons de réaliser les modules [Introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content) et [Introduction à CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f) avant de commencer celui-ci sur JavaScript.
 
 Vous devriez également connaître les notions de bases sur JavaScript avant d'étudier les objets JavaScript en détails. Avant de démarrer ce module, lisez [Premiers pas en JavaScript](/fr/docs/Learn_web_development/Core/Scripting) et [Blocs de construction de JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting_fb235ec2f43049f379fbefbc9e0e7ee10637a460ab94430af2a806ab533a3580).
 

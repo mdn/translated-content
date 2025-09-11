@@ -17,7 +17,7 @@ Cet article décrit le flux normal des éléments, c'est-à-dire la façon dont 
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Fondamentaux en HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction au HTML</a>) et une idée du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Introduction à CSS</a>).
+        Fondamentaux en HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction au HTML</a>) et une idée du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Introduction à CSS</a>).
       </td>
     </tr>
     <tr>

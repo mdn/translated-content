@@ -1,12 +1,9 @@
 ---
 title: dns-prefetch の使用
 slug: Web/Performance/Guides/dns-prefetch
-original_slug: Web/Performance/dns-prefetch
 l10n:
-  sourceCommit: 226ae7cf624bfebf611172acb1cd992348b4f165
+  sourceCommit: e488eba036b2fee56444fd579c3759ef45ff2ca8
 ---
-
-{{QuickLinksWithSubPages("/ja/docs/Web/Performance")}}
 
 **`DNS-prefetch`** はリソースがリクエストされる前にドメイン名を解決しようとする試みです。これは後で読み込まれるファイルであったり、ユーザーが辿ろうとするリンク対象であったりします。
 
@@ -44,7 +41,7 @@ l10n:
 
 留意すべきことは主に 3 つあります。
 
-**第一**に、`dns-prefetch`は[別オリジン](/ja/docs/Web/HTTP/Guides/CORS)のドメインの DNS 検索にのみ有効なので、自分のサイトや ドメインを指すのに使用するのは避けてください。ブラウザーがヒントを見る時点で、自分のサイトのドメインの背後にある IP はすでに解決されているからです。
+**第一**に、 `dns-prefetch` は[別オリジン](/ja/docs/Web/HTTP/Guides/CORS)のドメインの DNS 検索にのみ有効なので、自分のサイトやドメインを指すのに使用するのは避けてください。ブラウザーがヒントを見る時点で、自分のサイトのドメインの背後にある IP はすでに解決されているからです。
 
 **第二**に、 `dns-prefetch` （および他のリソースヒント）を [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)の [HTTP の Link フィールド](/ja/docs/Web/HTTP/Reference/Headers/Link)を使用することで指定することも可能です。
 
@@ -69,12 +66,13 @@ Link: <https://fonts.googleapis.com/>; rel=preconnect
 
 これらのヒントをペアにしている理由は、 dns-prefetch の対応が preconnect の対応よりも優れているからです。 preconnect に対応していないブラウザーでも、 dns-prefetch に代替されることで、ある程度の好ましいことを取得することができます。これは HTML の機能なので、とても耐障害性に優れています。非対応のブラウザーが dns-prefetch のヒントや他のリソースのヒントに遭遇しても、サイトが壊れることはありません。ただ、指定されたことが提供されないだけです。
 
-フォントなど、一部のリソースは無名モードで読み込まれます。そのような場合は preconnect ヒントで [crossorigin](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性を設定する必要があります。これを除外すると、ブラウザーは DNS 検索のみを行います。
+フォントなど、一部のリソースは無名モードで読み込まれます。そのような場合は [crossorigin](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性を preconnect ヒントで設定する必要があります。これを除外すると、ブラウザーは DNS 検索のみを行います。
 
 ## 関連情報
 
-- [\<link>](/ja/docs/Web/HTML/Reference/Elements/link)
+- [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link)
 - [HTML 属性: rel](/ja/docs/Web/HTML/Reference/Attributes/rel)
+- [HTML の rel 属性: preconnect](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)
 - [crossorigin](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
 - [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
