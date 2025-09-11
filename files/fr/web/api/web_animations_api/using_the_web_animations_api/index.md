@@ -15,7 +15,7 @@ L'[API Web Animations](/fr/docs/Web/API/Web_Animations_API) ouvre le moteur d'an
 
 Avec l'API Web Animations, nous pouvons déplacer des animations interactives des feuilles de style vers JavaScript, séparant ainsi la présentation du comportement. Nous n'avons plus besoin de recourir à des techniques lourdes pour le DOM comme l'écriture de propriétés CSS et l'application de classes aux éléments pour contrôler le sens de lecture. Et contrairement au CSS purement déclaratif, JavaScript nous permet aussi de définir dynamiquement des valeurs, des propriétés jusqu'aux durées. Pour créer des bibliothèques d'animation personnalisées et des animations interactives, l'API Web Animations peut être l'outil idoine. Voyons ce qu'elle permet.
 
-Cette page contient une suite d'exemples utilisant l'[API Web Animations](/fr/docs/Web/API/Web_Animations_API), inspirés d'[Alice au pays des merveilles <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland). Ces exemples ont été créés et partagés gracieusement par [Rachel Nabors <sup>(angl.)</sup>](https://nearestnabors.com/). [L'ensemble complet d'exemples <sup>(angl.)</sup>](https://codepen.io/collection/nqNJvD) est disponible sur CodePen&nbsp;; ici, nous présentons ceux qui sont pertinents pour notre documentation.
+Cette page contient une suite d'exemples utilisant l'[API Web Animations](/fr/docs/Web/API/Web_Animations_API), inspirés d'[Alice au pays des merveilles](https://fr.wikipedia.org/wiki/Les_Aventures_d%27Alice_au_pays_des_merveilles). Ces exemples ont été créés et partagés gracieusement par [Rachel Nabors <sup>(angl.)</sup>](https://nearestnabors.com/). [L'ensemble complet d'exemples <sup>(angl.)</sup>](https://codepen.io/collection/nqNJvD) est disponible sur CodePen&nbsp;; ici, nous présentons ceux qui sont pertinents pour notre documentation.
 
 ## Écrire des animations CSS avec l'API Web Animations
 
@@ -345,7 +345,7 @@ Outre la mise en pause et la lecture, on peut utiliser les méthodes suivantes s
 - {{domxref("Animation.reverse()")}} définit le taux de lecture ({{domxref("Animation.playbackRate")}}) à une valeur négative afin qu'elle se déroule à l'envers.
 
 Regardons d'abord `playbackRate`&nbsp;: une valeur négative fait jouer une animation à l'envers.
-Dans [De l'autre côté du miroir <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Through_the_Looking-Glass), Alice se rend dans un monde où elle doit courir pour rester sur place — et courir deux fois plus vite pour avancer. Dans l'exemple de la course de la Reine Rouge, Alice et la Reine Rouge courent pour rester sur place&nbsp;:
+Dans [De l'autre côté du miroir](https://fr.wikipedia.org/wiki/De_l%27autre_c%C3%B4t%C3%A9_du_miroir), Alice se rend dans un monde où elle doit courir pour rester sur place — et courir deux fois plus vite pour avancer. Dans l'exemple de la course de la Reine Rouge, Alice et la Reine Rouge courent pour rester sur place&nbsp;:
 
 ```html hidden live-sample___red_queen_race
 <div class="wrapper">
