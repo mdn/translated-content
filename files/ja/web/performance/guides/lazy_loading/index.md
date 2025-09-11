@@ -1,12 +1,9 @@
 ---
 title: 遅延読み込み
 slug: Web/Performance/Guides/Lazy_loading
-original_slug: Web/Performance/Lazy_loading
 l10n:
-  sourceCommit: 9bbf5b1cc3cf5736fad6b3d972657df8f8cec234
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
-
-{{QuickLinksWithSubPages("/ja/docs/Web/Performance")}}
 
 **遅延読み込み** (Lazy loading) とは、リソースをノンブロッキング（クリティカルでない）ものとして識別し、必要なときだけこれらを読み込む戦略のことです。[クリティカルレンダリングパス](/ja/docs/Web/Performance/Critical_rendering_path)の長さを短縮する方法であり、ページのロード時間の短縮につながります。
 
@@ -15,7 +12,7 @@ l10n:
 ## 概要
 
 ウェブの進化に伴い、ユーザーに送信される資産の数とサイズが大幅に増加するようになりました。
-2011 年から 2019 年の間に、リソース重量の中央値は、デスクトップでは **~100KB** から **~400KB** に、モバイルでは **~50KB** から **~350KB** に増加しました。一方、画像サイズは、デスクトップで **~250KB** から **~900KB** に、モバイルで **~100KB** から **~850KB** に増加しました。
+2011 年から 2019 年の間に、リソース重量の中央値は、デスクトップでは **\~100KB** から **\~400KB** に、モバイルでは **\~50KB** から **\~350KB** に増加しました。一方、画像サイズは、デスクトップで **\~250KB** から **\~900KB** に、モバイルで **\~100KB** から **\~850KB** に増加しました。
 
 この問題に対処するために使用できる方法の 1 つが、[クリティカルレンダリングパス](/ja/docs/Web/Performance/Critical_rendering_path)の長さを短くすることで、最初のレンダリングに重要ではないリソースを遅延読み込みすることです。
 実際の例としては、e コマースサイトのトップページにカートページ/セクションへのリンクがあり、カートページのリソース（JavaScript、CSS、画像など）は、そこに移動する**までは**ダウンロードされないというものがあります。
@@ -31,7 +28,7 @@ l10n:
 JavaScript、CSS、HTML は小さな塊に分割して送信することができます。これにより、値を提供するために必要な最小限のコードを前もって送信することができ、ページの読み込み時間を改善することができます。残りはオンデマンドで読み込むことができます。
 
 - エントリーポイント分割: アプリ内のエントリーポイントごとにコードを区切ります。
-- 動的分割: [dynamic import()](/ja/docs/Web/JavaScript/Reference/Operators/import) 式を使用しているコードを区切ります。
+- 動的分割: [動的 import()](/ja/docs/Web/JavaScript/Reference/Operators/import) 式を使用しているコードを区切ります。
 
 ### JavaScript
 
@@ -53,9 +50,9 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 ### フォント
 
-既定では、フォントリクエストはレンダーツリーが構築されるまで遅延されるため、テキスト描画が遅延することがあります。
+既定では、フォントリクエストはレンダリングツリーが構築されるまで遅延されるため、テキスト描画が遅延することがあります。
 
-既定値を上書きしてウェブのフォントリソースを事前読み込みするために、`<link rel="preload">` や [CSS font-display プロパティ](/ja/docs/Web/CSS/@font-face/font-display)、[フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API) を使用することが可能です。
+既定値を上書きしてウェブのフォントリソースを事前読み込みするために、`<link rel="preload">` や [CSS `font-display` プロパティ](/ja/docs/Web/CSS/@font-face/font-display)、[フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API) を使用することが可能です。
 
 [link 要素](/ja/docs/Web/HTML/Reference/Elements/link) も参照してください。
 
@@ -95,4 +92,4 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 ## 関連情報
 
 - [Render blocking CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
-- [Use lazy loading to improve loading speed](https://web.dev/articles/lazy-loading)
+- [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading)
