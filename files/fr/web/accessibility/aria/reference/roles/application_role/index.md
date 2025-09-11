@@ -16,7 +16,7 @@ En spécifiant le rôle `application`, cela indique que cet élément `div` et t
 
 ## Description
 
-Le rôle `application` [de structure de document](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#1._document_structure_roles), indique aux technologies d'assistance que cette partie du contenu web contient des éléments qui ne se conforment à aucun autre élément HTML connu ni à aucun widget WAI-ARIA. Toute interprétation spéciale des structures HTML et des widgets doit être suspendue, et le contrôle doit être entièrement remis au navigateur et à l'application web pour gérer l'interaction par la souris, le clavier ou le toucher.
+Le rôle `application` [de structure de document](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#1._rôles_dans_la_structure_des_documents), indique aux technologies d'assistance que cette partie du contenu web contient des éléments qui ne se conforment à aucun autre élément HTML connu ni à aucun widget WAI-ARIA. Toute interprétation spéciale des structures HTML et des widgets doit être suspendue, et le contrôle doit être entièrement remis au navigateur et à l'application web pour gérer l'interaction par la souris, le clavier ou le toucher.
 
 Dans ce mode, l'auteur du site est entièrement responsable de la gestion de toutes les saisies clavier, de la gestion du focus et des autres interactions, et ne peut pas supposer que les technologies d'assistance effectueront un traitement de leur côté.
 
