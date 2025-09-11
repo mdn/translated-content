@@ -323,11 +323,11 @@ champNom.addEventListener("input", (event) => {
 
 Ce code utilise la méthode {{domxref("Document.getElementById", "getElementById()")}} de l'interface {{domxref("Document")}} pour obtenir l'objet DOM représentant les éléments {{HTMLElement("input")}} dont les ID sont `userName` et `sendButton`. Avec ceux-ci, nous pouvons accéder aux propriétés et méthodes qui fournissent des informations sur ces éléments et en donnent le contrôle.
 
-L'objet {{domxref("HTMLInputElement")}} pour la propriété {{domxref("HTMLInputElement.disabled", "disabled")}} du bouton "Send" est défini à `true`, ce qui désactive le bouton "Send" afin qu'il ne puisse pas être cliqué. De plus, le champ de saisie du nom d'utilisateur·ice est rendu actif en appelant la méthode {{domxref("HTMLElement/focus", "focus()")}} qu'il hérite de {{domxref("HTMLElement")}}.
+L'objet {{domxref("HTMLInputElement")}} pour la propriété {{domxref("HTMLInputElement.disabled", "disabled")}} du bouton «&nbsp;Envoyer&nbsp;» est défini à `true`, ce qui désactive le bouton «&nbsp;Envoyer&nbsp;» afin qu'il ne puisse pas être cliqué. De plus, le champ de saisie du nom d'utilisateur·ice est rendu actif en appelant la méthode {{domxref("HTMLElement/focus", "focus()")}} qu'il hérite de {{domxref("HTMLElement")}}.
 
-Ensuite, {{domxref("EventTarget.addEventListener", "addEventListener()")}} est appelé pour ajouter un gestionnaire pour l'événement `input` au champ de nom d'utilisateur·ice. Ce code examine la longueur de la valeur actuelle de l'entrée&nbsp;; si elle est zéro, alors le bouton "Send" est désactivé s'il ne l'est pas déjà. Sinon, le code s'assure que le bouton est activé.
+Ensuite, {{domxref("EventTarget.addEventListener", "addEventListener()")}} est appelé pour ajouter un gestionnaire pour l'événement `input` au champ de nom d'utilisateur·ice. Ce code examine la longueur de la valeur actuelle de l'entrée&nbsp;; si elle est zéro, alors le bouton «&nbsp;Envoyer&nbsp;» est désactivé s'il ne l'est pas déjà. Sinon, le code s'assure que le bouton est activé.
 
-Avec cela en place, le bouton "Send" est toujours activé lorsque le champ de saisie du nom d'utilisateur·ice a une valeur, et désactivé lorsqu'il est vide.
+Avec cela en place, le bouton «&nbsp;Envoyer&nbsp;» est toujours activé lorsque le champ de saisie du nom d'utilisateur·ice a une valeur, et désactivé lorsqu'il est vide.
 
 ### HTML
 
@@ -337,11 +337,11 @@ Le HTML du formulaire ressemble à ceci&nbsp;:
 <p>Veuillez fournir les informations ci-dessous. Les éléments marqués par "*" sont requis.</p>
 <form action="" method="get">
   <p>
-    <label for="userName" required>Votre nom&nbsp;:</label>
+    <label for="userName" required>Votre nom :</label>
     <input type="text" id="userName" /> (*)
   </p>
   <p>
-    <label for="userEmail">E-mail&nbsp;:</label>
+    <label for="userEmail">E-mail :</label>
     <input type="email" id="userEmail" />
   </p>
   <input type="submit" value="Envoyer" id="sendButton" />
