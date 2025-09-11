@@ -334,7 +334,10 @@ Avec cela en place, le bouton «&nbsp;Envoyer&nbsp;» est toujours activé lorsq
 Le HTML du formulaire ressemble à ceci&nbsp;:
 
 ```html
-<p>Veuillez fournir les informations ci-dessous. Les éléments marqués par "*" sont requis.</p>
+<p>
+  Veuillez fournir les informations ci-dessous. Les éléments marqués par "*"
+  sont requis.
+</p>
 <form action="" method="get">
   <p>
     <label for="userName" required>Votre nom :</label>
