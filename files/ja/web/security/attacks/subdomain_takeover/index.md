@@ -1,6 +1,7 @@
 ---
 title: サブドメインテイクオーバー
-slug: Web/Security/Subdomain_takeovers
+slug: Web/Security/Attacks/Subdomain_takeover
+original_slug: Web/Security/Subdomain_takeovers
 l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
