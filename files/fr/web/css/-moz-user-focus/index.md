@@ -3,12 +3,19 @@ title: -moz-user-focus
 slug: Web/CSS/-moz-user-focus
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{deprecated_header}}{{non-standard_header}}
 
 La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément peut recevoir le focus.
 
+En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'élément (l'utilisateur ne pourra pas activer l'élément) et l'élément sera sauté lors de la navigation à la tabulation.
+
+{{CSSInfo}}
+
+## Syntaxe
+
 ```css
 /* Valeurs avec un mot-clé */
+-moz-user-focus: none;
 -moz-user-focus: normal;
 -moz-user-focus: ignore;
 
@@ -18,12 +25,6 @@ La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément 
 -moz-user-focus: unset;
 ```
 
-En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'élément (l'utilisateur ne pourra pas activer l'élément) et l'élément sera sauté lors de la navigation à la tabulation.
-
-{{CSSInfo}}
-
-## Syntaxe
-
 ### Valeurs
 
 - `ignore`
@@ -31,9 +32,13 @@ En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'él
 - `normal`
   - : L'élément peut recevoir le focus normalement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-moz-user-focus = ignore | normal | none`)}}
 
 ## Exemples
 
@@ -55,9 +60,7 @@ En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'él
 
 ## Spécifications
 
-Cette propriété est une propriété propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification. Une propriété similaire : `user-focus` a été [proposée pour des brouillons de l'ancienne spécifications CSS3 pour les interfaces utilisateurs](https://www.w3.org/TR/2000/WD-css3-userint-20000216) mais a été rejetée par le groupe de travail.
-
-{{cssinfo}}
+Cette propriété ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 

@@ -3,9 +3,11 @@ title: -webkit-mask-repeat-x
 slug: Web/CSS/-webkit-mask-repeat-x
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propriété **`-webkit-mask-repeat-x`** définit la façon dont une image de masque est répétée horizontalement.
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -20,10 +22,10 @@ La propriété **`-webkit-mask-repeat-x`** définit la façon dont une image de 
 /* Valeurs globales */
 -webkit-mask-repeat-x: inherit;
 -webkit-mask-repeat-x: initial;
+-webkit-mask-repeat-x: revert;
+-webkit-mask-repeat-x: revert-layer;
 -webkit-mask-repeat-x: unset;
 ```
-
-## Syntaxe
 
 ### Valeurs
 
@@ -36,9 +38,13 @@ La propriété **`-webkit-mask-repeat-x`** définit la façon dont une image de 
 - `round`
   - : L'image est répétée et les différents exemplaires sont tous étirés de la même façon afin qu'il n'y ait pas d'espace entre chaque. Ainsi, une image qui mesure originellement 260px et qui est répétée trois fois pourra être étirée jusqu'à ce que chaque répétition soit large de 300px, ensuite une autre image sera ajoutée et toutes seront compressées à 225px.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-webkit-mask-repeat-x = [ repeat | no-repeat | space | round ]#`)}}
 
 ## Exemples
 
@@ -67,7 +73,9 @@ On peut définir un style de répétition (`<repeat-style>`) différent pour cha
 
 Chaque image aura la valeur associée, dans le même ordre.
 
-{{cssinfo}}
+## Spécifications
+
+Cette propriété ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 

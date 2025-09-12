@@ -3,9 +3,14 @@ title: -webkit-mask-composite
 slug: Web/CSS/-webkit-mask-composite
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs images de masque sont appliquées pour un même élément. Les images de masques sont composées dans l'ordre inverse dans lequel elles sont listées dans la propriété {{cssxref("-webkit-mask-image")}}.
+
+> [!NOTE]
+> La propriété {{cssxref("mask-composite")}} couvre certains aspects de cette propriété non-standard avec des mots-clés différents.
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -26,11 +31,6 @@ La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs im
 -webkit-mask-composite: initial;
 -webkit-mask-composite: unset;
 ```
-
-> [!NOTE]
-> La propriété {{cssxref("mask-composite")}} couvre certains aspects de cette propriété non-standard avec des mots-clés différents.
-
-## Syntaxe
 
 ### Valeurs
 
@@ -57,9 +57,13 @@ La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs im
 - `xor`
   - : Les pixels qui se chevauchent deviennent complètement transparents s'ils étaient complètement opaques.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-webkit-mask-composite = <composite-style>#`)}}
 
 ## Exemples
 
@@ -72,9 +76,7 @@ La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs im
 
 ## Spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
-
-{{cssinfo}}
+Cette propriété ne fait partie d'aucun standard. Cette propriété est spécifiée avec {{CSSxRef("mask-composite")}} utilisant des valeurs différentes.
 
 ## Compatibilité des navigateurs
 
