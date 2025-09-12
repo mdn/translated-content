@@ -127,8 +127,8 @@ Cet exemple HTML contient des éléments imbriqués de différents types. Le CSS
     le sélecteur de classe `.container .item`.
   </div>
   <p class="item">
-    Ce `p` est le dernier élément `p` de son parent `div`, sélectionné par
-    le sélecteur de classe `.container .item`.
+    Ce `p` est le dernier élément `p` de son parent `div`, sélectionné par le
+    sélecteur de classe `.container .item`.
   </p>
 </div>
 ```
