@@ -80,7 +80,7 @@ Cet exemple montre comment les éléments imbriqués peuvent également être ci
 <article>
   <div>Je ne suis pas rose car première `div` :(</div>
   <div>
-        Je ne suis pas rose :(
+    Je ne suis pas rose :(
     <span
       >Mais moi je suis rose car je suis le dernier `span` de mon groupe !</span
     >
@@ -116,16 +116,19 @@ Cet exemple HTML contient des éléments imbriqués de différents types. Le CSS
 <p>Ce `p` n'est pas sélectionné.</p>
 <p>Ce `p` n'est pas sélectionné non plus.</p>
 <p>
-  Ce `p` est le dernier élément `p` de son parent, par exemple `body`, sélectionné par le sélecteur de type `p`.
+  Ce `p` est le dernier élément `p` de son parent, par exemple `body`,
+  sélectionné par le sélecteur de type `p`.
 </p>
 <div class="container">
   <div class="item">Ce `div` n'est pas sélectionné.</div>
   <div class="item">Ce `div` n'est pas sélectionné non plus.</div>
   <div class="item">
-    Ce `div` est le dernier élément `div` de son parent `div`, sélectionné par le sélecteur de classe `.container .item`.
+    Ce `div` est le dernier élément `div` de son parent `div`, sélectionné par
+    le sélecteur de classe `.container .item`.
   </div>
   <p class="item">
-    Ce `p` est le dernier élément `p` de son parent `div`, sélectionné par le sélecteur de classe `.container .item`.
+    Ce `p` est le dernier élément `p` de son parent `div`, sélectionné par
+    le sélecteur de classe `.container .item`.
   </p>
 </div>
 ```
