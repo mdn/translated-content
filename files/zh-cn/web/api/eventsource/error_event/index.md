@@ -5,7 +5,7 @@ slug: Web/API/EventSource/error_event
 
 {{APIRef('WebSockets API')}}
 
-当与事件源（event source）的连接无法打开时，会触发 {{domxref("EventSource")}} API 的 [`error`](/zh-CN/docs/Web/API/HTMLElement/error_event)）事件。
+当与事件源（event source）的连接无法打开时，会触发 {{domxref("EventSource")}} API 的（[`error`](/zh-CN/docs/Web/API/HTMLElement/error_event)）事件。
 
 ## 语法
 
