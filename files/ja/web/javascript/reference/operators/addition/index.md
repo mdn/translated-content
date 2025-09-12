@@ -2,27 +2,25 @@
 title: 加算演算子 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 l10n:
-  sourceCommit: 1b7dbf06b84237832fc9108e1531542fd6a21a5b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **加算 (`+`)** 演算子は、数値オペランドの合計または文字列の連結を生成します。
 
-{{InteractiveExample("JavaScript デモ: 式 - 加算演算子")}}
+{{InteractiveExample("JavaScript デモ: 加算演算子 (+)")}}
 
 ```js interactive-example
 console.log(2 + 2);
-// 予想される出力: 4
+// 予想される結果: 4
 
 console.log(2 + true);
-// 予想される出力: 3
+// 予想される結果: 3
 
 console.log("hello " + "everyone");
-// 予想される出力: "hello everyone"
+// 予想される結果: "hello everyone"
 
 console.log(2001 + ": A Space Odyssey");
-// 予想される出力: "2001: A Space Odyssey"
+// 予想される結果: "2001: A Space Odyssey"
 ```
 
 ## 構文

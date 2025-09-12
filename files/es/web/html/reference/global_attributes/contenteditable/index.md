@@ -4,7 +4,7 @@ slug: Web/HTML/Reference/Global_attributes/contenteditable
 original_slug: Web/HTML/Global_attributes/contenteditable
 ---
 
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+{{HTMLSidebar("Global_attributes")}}
 
 El [atributo global](/es/docs/Web/HTML/Reference/Global_attributes) **contenteditable** es un atributo enumerado que indica si el elemento debe de ser editable por el usuario. Si es así, el explorador modifica su widget para permitir la edición. El atributo debe de tener alguno de los siguientes valores:
 

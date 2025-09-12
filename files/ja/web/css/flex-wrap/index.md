@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 1f12a4156d4aec63d8466c49a39b1ac76d8a5735
 ---
 
-{{CSSRef}}
-
 **`flex-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。
 
-{{InteractiveExample("CSS Demo: flex-wrap")}}
+{{InteractiveExample("CSS デモ: flex-wrap")}}
 
 ```css interactive-example-choice
 flex-wrap: nowrap;

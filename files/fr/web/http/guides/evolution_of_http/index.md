@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Evolution_of_HTTP
 original_slug: Web/HTTP/Evolution_of_HTTP
 ---
 
-{{HTTPSidebar}}
-
 **Le protocole HTTP** (HyperText Transfer Protocol) est le protocole qui sous-tend le World Wide Web. Conçu par Tim Berners-Lee et son équipe entre 1989 et 1991, HTTP a vécu de nombreux changements tout en conservant sa simplicité, étendant ainsi sa flexibilité. HTTP a évolué à partir d'un protocole sommaire d'échange de fichiers sur un réseau de confiance au sein d'un laboratoire jusqu'à devenir le labyrinthe moderne d'Internet permettant désormais le transport d'images, de vidéos en haute résolution et en 3D.
 
 ## L'invention du World Wide Web
@@ -164,7 +162,7 @@ Depuis 2005, le nombre d'APIs ouvertes sur des pages a énormément augmenté. C
 
 ### Relâcher les contraintes du modèle de sécurité du Web
 
-HTTP est indépendant du modèle de sécurité du Web, principalement créé via la _[same-origin policy](/fr/docs/Web/Security/Same-origin_policy)_. En réalité le modèle de sécurité du Web s'est développé après la création de HTTP. D'années en années, il s'est avéré utile de devenir plus tolérant en termes d'origine de contenu, en supprimant certaines restrictions, sous certaines conditions. L'étendue des restrictions levées ainsi que l'application est transmise au client à l'aide d'en-têtes HTTP. Ces en-têtes sont définis au travers des spécifications [Cross-Origin Resource Sharing](/fr/docs/Glossary/CORS) (CORS) ou [Content Security Policy](/fr/docs/Web/HTTP/CSP) (CSP).
+HTTP est indépendant du modèle de sécurité du Web, principalement créé via la _[same-origin policy](/fr/docs/Web/Security/Same-origin_policy)_. En réalité le modèle de sécurité du Web s'est développé après la création de HTTP. D'années en années, il s'est avéré utile de devenir plus tolérant en termes d'origine de contenu, en supprimant certaines restrictions, sous certaines conditions. L'étendue des restrictions levées ainsi que l'application est transmise au client à l'aide d'en-têtes HTTP. Ces en-têtes sont définis au travers des spécifications [Cross-Origin Resource Sharing](/fr/docs/Glossary/CORS) (CORS) ou [Content Security Policy](/fr/docs/Web/HTTP/Guides/CSP) (CSP).
 
 D'autres extensions de HTTP sont apparues, parfois de manière expérimentale. On mentionnera par exemple les en-têtes connus tels : Do Not Track (Ne pas me pister) ({{HTTPHeader("DNT")}}) permettant de contrôler la vie privée, {{HTTPHeader("X-Frame-Options")}}, ou {{HTTPHeader('Upgrade-Insecure-Requests')}} même s'il en existe beaucoup d'autres.
 

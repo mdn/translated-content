@@ -3,8 +3,6 @@ title: transition-property
 slug: Web/CSS/transition-property
 ---
 
-{{CSSRef}}
-
 **`transition-property`** 指定应用过渡属性的名称。
 
 {{InteractiveExample("CSS Demo: transition-property")}}

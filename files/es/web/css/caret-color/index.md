@@ -3,8 +3,6 @@ title: caret-color
 slug: Web/CSS/caret-color
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`caret-color`** especifica el color del cursor de texto, el indicador visible del punto de inserción en un elemento donde el usuario puede introducir texto u otro contenido.
 
 ```css

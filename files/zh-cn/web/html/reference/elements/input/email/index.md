@@ -3,8 +3,6 @@ title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 ---
 
-{{HTMLSidebar}}
-
 **`"email"`** 类型的 {{HTMLElement("input")}} 元素能够让用户输入或编辑一个电子邮箱地址，如果指定了 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Attributes/multiple) 属性，则可以输入多个电子邮箱地址。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}

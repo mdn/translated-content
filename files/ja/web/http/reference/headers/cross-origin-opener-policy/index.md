@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Cross-Origin-Opener-Policy`** (COOP) は{{glossary("response header","レスポンスヘッダー")}}で、使用する、ウェブサイトは、{{domxref("Window.open()")}} または新しいページへのナビゲーションによって開かれた新しい最上位文書を、同じ{{glossary("Browsing context","閲覧コンテキストグループ")}} (BCG) で開くか、新しい閲覧コンテキストグループで開くかを制御することができます。
 
 新しい BCG で開くと、新しい文書とその開いた文書間の参照は切断され、新しい文書は開いた文書からプロセス分離される場合があります。

@@ -50,9 +50,9 @@ Il y a quelques termes de la terminologie du DOM fantôme que vous devez connaî
 - **Frontière fantôme** : la limite où le DOM fantôme se termine et où le DOM principal commence.
 - **Racine fantôme** : le nœud racine de l'arbre fantôme.
 
-Vous pouvez affecter les nœuds du DOM fantôme exactement de la même manière que pour les nœuds du DOM principal — par exemple en leur ajoutant des éléments enfants ou en leur définissant des attributs, en stylisant des nœuds individuels au moyen de `element.style.propriete`, ou en ajoutant du style à l'arbre DOM fantôme entier via une balise [`<style>`](/fr/docs/Web/HTML/Element/style). La différence est que le code au sein du DOM fantôme ne peut affecter aucun élément en dehors de son arbre, permettant de mettre en œuvre une encapsulation très commode.
+Vous pouvez affecter les nœuds du DOM fantôme exactement de la même manière que pour les nœuds du DOM principal — par exemple en leur ajoutant des éléments enfants ou en leur définissant des attributs, en stylisant des nœuds individuels au moyen de `element.style.propriete`, ou en ajoutant du style à l'arbre DOM fantôme entier via une balise [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style). La différence est que le code au sein du DOM fantôme ne peut affecter aucun élément en dehors de son arbre, permettant de mettre en œuvre une encapsulation très commode.
 
-Notez que le DOM fantôme n'est pas une nouvelle chose du tout — les navigateurs l'ont utilisé depuis longtemps pour encapsuler la structure interne d'un élément. Pensez par exemple à un élément [`<video>`](/fr/docs/Web/HTML/Element/video), avec les contrôles par défaut du navigateur apparents. Tout ce que vous voyez dans le DOM est l'élément `<video>`, mais il contient plusieurs boutons et autres contrôles au sein de son DOM fantôme. La spécification du DOM fantôme a été conçue de telle manière que vous êtes autorisés à manipuler le DOM fantôme de vos propres éléments personnalisés.
+Notez que le DOM fantôme n'est pas une nouvelle chose du tout — les navigateurs l'ont utilisé depuis longtemps pour encapsuler la structure interne d'un élément. Pensez par exemple à un élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), avec les contrôles par défaut du navigateur apparents. Tout ce que vous voyez dans le DOM est l'élément `<video>`, mais il contient plusieurs boutons et autres contrôles au sein de son DOM fantôme. La spécification du DOM fantôme a été conçue de telle manière que vous êtes autorisés à manipuler le DOM fantôme de vos propres éléments personnalisés.
 
 ## Usage basique
 
@@ -148,7 +148,7 @@ icon.appendChild(img);
 
 ### Styliser le DOM fantôme
 
-Après cela, nous créons un élément [`<style>`](/fr/docs/Web/HTML/Element/style) et nous ajoutons du CSS pour personnaliser notre arbre DOM :
+Après cela, nous créons un élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) et nous ajoutons du CSS pour personnaliser notre arbre DOM :
 
 ```js
 // Créer quelque CSS à appliquer au dom fantôme
@@ -214,7 +214,7 @@ customElements.define("popup-info", PopUpInfo);
 
 ### Styles internes ou styles externes
 
-Dans l'exemple précédent, nous appliquons du style au DOM fantôme en utilisant l'élément [`<style>`](/fr/docs/Web/HTML/Element/style), mais il est parfaitement possible de le faire en référençant une feuille de style externe avec un élément [`<link>`](/fr/docs/Web/HTML/Element/link) si vous le préférez.
+Dans l'exemple précédent, nous appliquons du style au DOM fantôme en utilisant l'élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style), mais il est parfaitement possible de le faire en référençant une feuille de style externe avec un élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) si vous le préférez.
 
 Par exemple, regardez ce code tiré de l'exemple [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) (voir le [code source](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)) :
 
@@ -228,9 +228,9 @@ linkElem.setAttribute("href", "style.css");
 fantome.appendChild(linkElem);
 ```
 
-Notez que les éléments [`<link>`](/fr/docs/Web/HTML/Element/link) ne bloquent pas la peinture de la racine fantôme, donc il pourrait y avoir une latence où le contenu serait sans style (FOUC) pendant que la feuille de style se charge.
+Notez que les éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) ne bloquent pas la peinture de la racine fantôme, donc il pourrait y avoir une latence où le contenu serait sans style (FOUC) pendant que la feuille de style se charge.
 
-De nombreux navigateurs modernes implantent une optimisation pour les balises [`<style>`](/fr/docs/Web/HTML/Element/style) clonées depuis un nœud commun ou qui ont des contenus identiques à fin de leur permettre de partager une unique liste de retour. Avec cette optimisation, la performance des styles externes et internes doivent être similaires.
+De nombreux navigateurs modernes implantent une optimisation pour les balises [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) clonées depuis un nœud commun ou qui ont des contenus identiques à fin de leur permettre de partager une unique liste de retour. Avec cette optimisation, la performance des styles externes et internes doivent être similaires.
 
 ## Voir aussi
 

@@ -8,7 +8,7 @@ original_slug: Web/HTML/Global_attributes
 
 Les **attributs universels** sont des attributs communs à l'ensemble des éléments HTML. Ces attributs peuvent donc être ajoutés sur tous les éléments (dans certains cas, les attributs n'auront aucun effet).
 
-Les attributs universels peuvent être définis sur tous [les éléments HTML](/fr/docs/Web/HTML/Element), _y compris pour les éléments non définis dans le standard_. Autrement dit, les éléments non-standards doivent pouvoir accepter ces attributs. Cela permettra au navigateur de les gérer selon certains des aspects de la spécification. Par exemple, pour un navigateur conforme, un élément `<toto hidden>...</toto>` sera masqué bien que `<toto>` ne soit pas un élément HTML valide.
+Les attributs universels peuvent être définis sur tous [les éléments HTML](/fr/docs/Web/HTML/Reference/Elements), _y compris pour les éléments non définis dans le standard_. Autrement dit, les éléments non-standards doivent pouvoir accepter ces attributs. Cela permettra au navigateur de les gérer selon certains des aspects de la spécification. Par exemple, pour un navigateur conforme, un élément `<toto hidden>...</toto>` sera masqué bien que `<toto>` ne soit pas un élément HTML valide.
 
 En plus des attributs universels HTML, il existe également les attributs universels suivants :
 
@@ -35,7 +35,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
     - `false` qui indique que l'élément ne doit pas pouvoir être édité.
 
 - `contextmenu`{{deprecated_inline}}
-  - : La valeur de cet attribut correspond à la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Element/menu#id) d'un élément {{HTMLElement("menu")}} qui doit être utilisé comme menu contextuel par cet élément.
+  - : La valeur de cet attribut correspond à la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Reference/Elements/menu#id) d'un élément {{HTMLElement("menu")}} qui doit être utilisé comme menu contextuel par cet élément.
 - `data-*`
   - : Cette classe d'attribut, appelée « attributs de données personnalisés », permet d'échanger des informations dans un format propriétaire entre le HTML et le DOM afin de pouvoir les manipuler via des langage de scripts. La propriété {{domxref("HTMLElement.dataset")}} permet d'accéder à l'ensemble des attribut définis de cette façon.
 - `dir`
@@ -80,7 +80,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - `part` {{experimental_inline}}
   - : Une liste séparée par des espaces avec les noms des parties (_parts_) de l'élément. Les noms des parties permettent au CSS de cibler et de mettre en forme certains éléments d'un arbre _shadow_ via le pseudo-élément {{cssxref("::part")}}.
 - `slot`
-  - : Cet attribut affecte un créneau de l'arbre du _[shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_ pour un élément. L'élément ayant l'attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} pour lequel l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#name) correspond à la valeur de l'attribut `slot`.
+  - : Cet attribut affecte un créneau de l'arbre du _[shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_ pour un élément. L'élément ayant l'attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} pour lequel l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/slot#name) correspond à la valeur de l'attribut `slot`.
 - `spellcheck` {{experimental_inline}}
   - : Un attribut à valeur contrainte qui définit s'il faut détecter les fautes d'orthographe/grammaire dans le texte de l'élément. Les valeurs autorisées pour cet attribut sont :
     - `true` qui indique que, si possible, il faut vérifier les erreurs d'orthographe

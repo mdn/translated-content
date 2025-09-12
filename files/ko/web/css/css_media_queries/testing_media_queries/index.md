@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f7daf15512ea736498837b68bcc36d82d6a323f4
 ---
 
-{{CSSRef}}
-
 {{Glossary("DOM")}} 은 {{domxref("MediaQueryList")}} 인터페이스와 그 메서드 및 속성을 통해 {{Glossary("media query")}} 의 테스트 결과를 프로그래밍 방식의 기능을 제공합니다. `MediaQueryList` 객체를 생성하게 되면 [쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 의 결과물을 확인하거나 결과가 바뀌면 그에 대한 알림을 받을 수 있게 됩니다.
 
 ## 미디어 쿼리 목록 생성하기

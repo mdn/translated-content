@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.log()")}}
+{{InteractiveExample("JavaScript デモ: Math.log()")}}
 
 ```js interactive-example
 function getBaseLog(x, y) {

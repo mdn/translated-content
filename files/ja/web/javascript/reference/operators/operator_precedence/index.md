@@ -7,20 +7,20 @@ slug: Web/JavaScript/Reference/Operators/Operator_precedence
 
 **演算子の優先順位**は、演算子が互いにどのように解釈されるかを決定します。優先度の高い演算子は、優先度の低い演算子のオペランドになります。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Operator precedence")}}
 
 ```js interactive-example
 console.log(3 + 4 * 5); // 3 + 20
-// Expected output: 23
+// 予想される結果: 23
 
 console.log(4 * 3 ** 2); // 4 * 9
-// Expected output: 36
+// 予想される結果: 36
 
 let a;
 let b;
 
 console.log((a = b = 5));
-// Expected output: 5
+// 予想される結果: 5
 ```
 
 ## 優先度と結合性
@@ -173,7 +173,7 @@ Evaluating the right side
 
 下記の表では、**グループ化**が最上位の優先順位を持つものとして挙げられています。しかし、特に短絡が発生する場合は、グループ化記号 `( … )` の中の式が最初に評価されるとは限りません。
 
-短絡評価は、条件付き評価を表す用語です。例えば、`a && (b + c)` という式において、`a` が{{Glossary("falsy", "偽値")}}である場合、従属式である `(b + c)` は括弧で囲まれていても評価されません。この論理的分離演算子 ("OR") は「短絡的」といえるでしょう。論理的分離演算子の他にも、ほかに短絡が発生する演算子には、論理的結合 ("AND") 演算子、Null 合体演算子、オプション連鎖演算子、条件演算子があります。以下に例を示します。
+短絡評価は、条件付き評価を表す用語です。例えば、`a && (b + c)` という式において、`a` が{{Glossary("falsy", "偽値")}}である場合、従属式である `(b + c)` は括弧で囲まれていても評価されません。この論理的分離演算子 ("OR") は「短絡的」といえるでしょう。論理的分離演算子の他にも、ほかに短絡が発生する演算子には、論理的結合 ("AND") 演算子、ヌル値合体演算子、オプション連鎖演算子、条件演算子があります。以下に例を示します。
 
 ```js
 a || b * c; // 最初に `a` を評価し、 `a` が「真値」であれば `a` を出力
@@ -490,7 +490,7 @@ a?.b.c; // 最初に `a` を評価し、 `a` が `null` または `undefined` �
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Null 合体 (??)</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">ヌル値合体 (??)</a>
       </td>
       <td>左から右</td>
       <td><code>… ?? …</code></td>

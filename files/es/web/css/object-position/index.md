@@ -3,8 +3,6 @@ title: object-position
 slug: Web/CSS/object-position
 ---
 
-{{CSSRef}}
-
 ## Summary
 
 La propiedad **`object-position`** determina el alineamiento del elemento dentro de la caja.

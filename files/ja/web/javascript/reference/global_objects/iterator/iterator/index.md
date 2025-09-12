@@ -15,7 +15,8 @@ l10n:
 new Iterator()
 ```
 
-> **メモ:** `Iterator()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でしか作成できません。 `new` を使用せずに名付けると {{jsxref("TypeError")}} が発生します。さらに、 `Iterator()` は実際にはそれ自体で作成することはできません。通常は、サブクラスのコンストラクター内で [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出すことで暗黙的に作成されます。
+> [!NOTE]
+> `Iterator()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でしか作成できません。 `new` を使用せずに名付けると {{jsxref("TypeError")}} が発生します。さらに、 `Iterator()` は実際にはそれ自体で作成することはできません。通常は、サブクラスのコンストラクター内で [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出すことで暗黙的に作成されます。
 
 ### 引数
 

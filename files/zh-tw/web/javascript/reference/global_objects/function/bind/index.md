@@ -3,8 +3,6 @@ title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 
-{{JSRef}}
-
 **`bind()`** 方法，會建立一個新函式。該函式被呼叫時，會將 `this` 關鍵字設為給定的參數，並在呼叫時，帶有提供之前，給定順序的參數。
 
 ## 語法

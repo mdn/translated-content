@@ -5,7 +5,7 @@ slug: Web/CSS/outline-color
 
 {{CSSRef}}
 
-La propriété **`outline-color`** permet de définir la couleur avec laquelle on trace le contour de l'élément. Ce contour est tracé autour de [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et peut être utilisé pour faire ressortir l'élément.
+La propriété **`outline-color`** permet de définir la couleur avec laquelle on trace le contour de l'élément. Ce contour est tracé autour de [la boîte de bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et peut être utilisé pour faire ressortir l'élément.
 
 {{InteractiveExample("CSS Demo: outline-color")}}
 
@@ -116,7 +116,7 @@ La propriété `outline-color` est définie avec une des valeurs listées ci-apr
 Le ratio de contraste est déterminé en comparaisant les luminosités des deux couleurs. Pour le contraste entre un texte et son arrière-plan, les recommandations [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag) requièrent un ratio de 4.5:1 pour le contenu textuel et un ratio de 3:1 pour les titres ou les textes plus grands (18.66px et en gras ou 24px ou plus grand).
 
 - [Vérificateur de contraste WebAIM (en anglais)](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - _[Understanding Success Criterion 1.4.3 - W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_
 
 ## Spécifications

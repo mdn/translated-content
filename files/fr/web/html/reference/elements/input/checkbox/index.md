@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type **`checkbox`** sont affichés sous la forme de boîtes à cocher qui sont cochées lorsqu'elles sont activées. Elles permettent de sélectionner une ou plusieurs valeurs dans un formulaire. Leur apparence exacte dépend du navigateur utilisé. Il s'agit généralement d'une case carrée, dont les coins peuvent parfois être arrondis.
+Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type **`checkbox`** sont affichés sous la forme de boîtes à cocher qui sont cochées lorsqu'elles sont activées. Elles permettent de sélectionner une ou plusieurs valeurs dans un formulaire. Leur apparence exacte dépend du navigateur utilisé. Il s'agit généralement d'une case carrée, dont les coins peuvent parfois être arrondis.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
 
@@ -41,7 +41,7 @@ input {
 }
 ```
 
-> **Note :** [Les boutons radio](/fr/docs/Web/HTML/Element/input/radio) sont semblables aux cases à cocher, mais il existe une différence importante&nbsp;: les boutons radio permettent de sélectionner une seule valeur parmi plusieurs d'[un même groupe (identifié par le nom)](/fr/docs/Web/HTML/Element/input/radio#defining_a_radio_group) alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.
+> **Note :** [Les boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) sont semblables aux cases à cocher, mais il existe une différence importante&nbsp;: les boutons radio permettent de sélectionner une seule valeur parmi plusieurs d'[un même groupe (identifié par le nom)](/fr/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.
 
 ## Valeur
 
@@ -70,20 +70,20 @@ Dans cet exemple, on a le nom (l'attribut `name`) `subscribe` utilisé pour la c
 Si l'attribut `value` n'était pas renseigné, la valeur par défaut serait `on` (dans l'exemple, les données envoyées au serveur auraient eu la forme `subscribe=on`).
 
 > [!NOTE]
-> Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, ni le nom ni la valeur ne sont envoyés au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme `value=unchecked`)&nbsp;; la valeur n'est pas transmise au serveur du tout. Si on veut envoyer une valeur par défaut lorsque la case à cocher est décochée, une solution pourrait être d'utiliser du JavaScript pour créer un élément [`<input type="hidden">`](/fr/docs/Web/HTML/Element/input/hidden).
+> Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, ni le nom ni la valeur ne sont envoyés au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme `value=unchecked`)&nbsp;; la valeur n'est pas transmise au serveur du tout. Si on veut envoyer une valeur par défaut lorsque la case à cocher est décochée, une solution pourrait être d'utiliser du JavaScript pour créer un élément [`<input type="hidden">`](/fr/docs/Web/HTML/Reference/Elements/input/hidden).
 
 ## Attributs supplémentaires
 
-En plus des attributs qui sont partagés par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de type `checkbox` prennent aussi en charge les attributs suivants&nbsp;:
+En plus des attributs qui sont partagés par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), les champs de type `checkbox` prennent aussi en charge les attributs suivants&nbsp;:
 
 - `checked`
   - : Un attribut booléen qui indique si la case est cochée par défaut à l'ouverture de la page. Cet attribut n'indique _pas_ si la case est actuellement cochée&nbsp;: si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked` de l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) est mis à jour).
     > [!NOTE]
     > À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut `value` qui est envoyé (ou la valeur `on` si aucun attribut `value` n'est présent).
-    > À la différence des autres navigateurs, Firefox [conserve l'état coché placé dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un champ `<input>` après les rechargements de la page. L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/input#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
+    > À la différence des autres navigateurs, Firefox [conserve l'état coché placé dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un champ `<input>` après les rechargements de la page. L'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 - `value`
-  - : L'attribut `value` est partagé par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), mais il a un rôle spécifique pour les champs de type `checkbox`&nbsp;: lorsqu'un formulaire est envoyé, seules les cases à cocher qui sont cochées sont envoyées au serveur et c'est la valeur de l'attribut `value` qui est envoyée. Si l'attribut `value` n'est pas renseigné, ce sera la chaîne de caractères `"on"` qui sera envoyée par défaut (voir [la section précédente](#valeur))
+  - : L'attribut `value` est partagé par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), mais il a un rôle spécifique pour les champs de type `checkbox`&nbsp;: lorsqu'un formulaire est envoyé, seules les cases à cocher qui sont cochées sont envoyées au serveur et c'est la valeur de l'attribut `value` qui est envoyée. Si l'attribut `value` n'est pas renseigné, ce sera la chaîne de caractères `"on"` qui sera envoyée par défaut (voir [la section précédente](#valeur))
 
 ## Utiliser les cases à cocher
 
@@ -133,7 +133,7 @@ Afin qu'une case à cocher soit sélectionnée par défaut, il suffit de placer 
 
 ### Fournir une zone cliquable plus grande
 
-Dans les exemples précédents, vous avez peut-être remarqué qu'il était possible de cocher une case en cliquant sur l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) associé. Il s'agit d'une fonctionnalité particulièrement utile des étiquettes de formulaire HTML&nbsp;: il y a ainsi plus d'espace qui peut être utilisé pour sélectionner les options voulues (notamment sur les petits écrans).
+Dans les exemples précédents, vous avez peut-être remarqué qu'il était possible de cocher une case en cliquant sur l'élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) associé. Il s'agit d'une fonctionnalité particulièrement utile des étiquettes de formulaire HTML&nbsp;: il y a ainsi plus d'espace qui peut être utilisé pour sélectionner les options voulues (notamment sur les petits écrans).
 
 En plus des raisons liées à l'accessibilité, il s'agit d'une bonne raison pour indiquer correctement des éléments `<label>` dans vos formulaires.
 
@@ -197,7 +197,7 @@ function updateDisplay() {
 
 ## Validation
 
-Les cases à cocher prennent en charge la [validation](/fr/docs/Web/HTML/Constraint_validation) (comme d'autres [`<input>`](/fr/docs/Web/HTML/Element/input)). Toutefois, la plupart des propriétés de l'instance correspondante [`ValidityState`](/fr/docs/Web/API/ValidityState) vaudront toujours `false`. Si la case à cocher utilise l'attribut [`required`](/fr/docs/Web/HTML/Element/input#required), mais n'est pas cochée, [`ValidityState.valueMissing`](/fr/docs/Web/API/ValidityState/valueMissing) vaudra `true`.
+Les cases à cocher prennent en charge la [validation](/fr/docs/Web/HTML/Guides/Constraint_validation) (comme d'autres [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)). Toutefois, la plupart des propriétés de l'instance correspondante [`ValidityState`](/fr/docs/Web/API/ValidityState) vaudront toujours `false`. Si la case à cocher utilise l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required), mais n'est pas cochée, [`ValidityState.valueMissing`](/fr/docs/Web/API/ValidityState/valueMissing) vaudra `true`.
 
 ## Exemples
 
@@ -361,4 +361,4 @@ otherCheckbox.addEventListener("change", () => {
 
 - Les sélecteurs CSS qui permettent de mettre en forme les cases à cocher en fonction de leur état actuel&nbsp;: [`:checked`](/fr/docs/Web/CSS/:checked), [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate)
 - L'interface du DOM qui représente cet élément&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [Tableau de compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Tableau de compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn_web_development/Extensions/Forms)

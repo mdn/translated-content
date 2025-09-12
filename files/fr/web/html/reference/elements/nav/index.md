@@ -52,7 +52,7 @@ nav {
 
 ## Attributs
 
-Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -146,5 +146,5 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 ## Voir aussi
 
 - Les autres éléments HTML en relation avec les sections : {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Plan et section d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
+- [Plan et section d'un document HTML5](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ARIA : le rôle `navigation`](/fr/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)

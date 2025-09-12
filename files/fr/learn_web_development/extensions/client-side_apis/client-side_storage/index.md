@@ -39,7 +39,7 @@ Les navigateurs web modernes permettent aux sites web de stocker des données su
 
 ## Stockage côté client ?
 
-Ailleurs dans la zone d'apprentissage de MDN, nous avons parlé de la différence entre les [sites statiques](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#static_sites) et les [sites dynamiques](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#dynamic_sites) — ces derniers stockent des données [côté serveur](/fr/docs/Learn/Server-side) en utilisant une base de données. Ensuite, ils exécutent du code pour récupérer les données et les insérer dans des templates de page statique. Finalement, le HTML résultant est envoyé au client, qui est alors affiché par le navigateur de l'utilisateur.
+Ailleurs dans la zone d'apprentissage de MDN, nous avons parlé de la différence entre les [sites statiques](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#static_sites) et les [sites dynamiques](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#dynamic_sites) — ces derniers stockent des données [côté serveur](/fr/docs/Learn_web_development/Extensions/Server-side) en utilisant une base de données. Ensuite, ils exécutent du code pour récupérer les données et les insérer dans des templates de page statique. Finalement, le HTML résultant est envoyé au client, qui est alors affiché par le navigateur de l'utilisateur.
 
 Le stockage côté client fonctionne sur des principes similaires, mais pour une utilisation différente. Le stockage côté client repose sur des APIs JavaScript qui permettent de stocker des données sur la machine de l'utilisateur et de les récupérer au besoin. Cela peut se révéler utile dans différents cas comme :
 
@@ -55,13 +55,13 @@ Souvent, le stockage côté client et côté serveur sont utilisés ensemble. Pa
 
 ### À l'ancienne : les cookies
 
-Le concept de stockage côté client existe depuis longtemps. Au début du web, les sites utilisaient des [cookies](/fr/docs/Web/HTTP/Cookies) pour stocker des informations et personnaliser l'expérience utilisateur. C'est la méthode de stockage côté client la plus couramment utilisée et la plus ancienne.
+Le concept de stockage côté client existe depuis longtemps. Au début du web, les sites utilisaient des [cookies](/fr/docs/Web/HTTP/Guides/Cookies) pour stocker des informations et personnaliser l'expérience utilisateur. C'est la méthode de stockage côté client la plus couramment utilisée et la plus ancienne.
 
-De par leur histoire, les cookies souffrent d'un certain nombre de problèmes — tant techniques qu'au niveau de l'expérience utilisateur. Ces problèmes sont suffisamment importants pour imposer un message d'information aux utilisateurs habitant en Europe lors de leur première visite si le site utilise des cookies pour stocker des informations sur eux. Cela est dû à une loi de l'Union Européenne connue sous le nom de [directive Cookie](/fr/docs/Web/HTTP/Cookies#eu_cookie_directive).
+De par leur histoire, les cookies souffrent d'un certain nombre de problèmes — tant techniques qu'au niveau de l'expérience utilisateur. Ces problèmes sont suffisamment importants pour imposer un message d'information aux utilisateurs habitant en Europe lors de leur première visite si le site utilise des cookies pour stocker des informations sur eux. Cela est dû à une loi de l'Union Européenne connue sous le nom de [directive Cookie](/fr/docs/Web/HTTP/Guides/Cookies#eu_cookie_directive).
 
 ![](cookies-notice.png)
 
-Pour ces raisons, nous ne verrons pas dans cet article comment utiliser les cookies. Entre le fait qu'ils sont dépassés, les [problèmes de sécurité](/fr/docs/Web/HTTP/Cookies#security) qu'ils présentent et l'incapacité de stocker des données complexes, les cookies ne sont pas la meilleure manière pour stocker des données. Il y a de meilleures alternatives, modernes, permettant de stocker des données variées sur l'ordinateur de l'utilisateur.
+Pour ces raisons, nous ne verrons pas dans cet article comment utiliser les cookies. Entre le fait qu'ils sont dépassés, les [problèmes de sécurité](/fr/docs/Web/HTTP/Guides/Cookies#security) qu'ils présentent et l'incapacité de stocker des données complexes, les cookies ne sont pas la meilleure manière pour stocker des données. Il y a de meilleures alternatives, modernes, permettant de stocker des données variées sur l'ordinateur de l'utilisateur.
 
 Le seul avantage des cookies est qu'ils sont supportés par des navigateurs anciens : si votre projet requiert le support de navigateurs obsolètes (comme Internet Explorer 8 et inférieur), les cookies peuvent se révéler utiles. Pour la plupart des projets, vous ne devriez pas avoir besoin d'y recourir.
 
@@ -800,7 +800,7 @@ C'est tout pour l'instant. Nous espérons que vous avez trouvé notre récapitul
 
 - [Web storage API](/fr/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/fr/docs/Web/API/IndexedDB_API)
-- [Cookies](/fr/docs/Web/HTTP/Cookies)
+- [Cookies](/fr/docs/Web/HTTP/Guides/Cookies)
 - [Service worker API](/fr/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

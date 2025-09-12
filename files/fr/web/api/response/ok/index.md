@@ -49,5 +49,5 @@ fetch(myRequest).then(function (response) {
 ## Voir aussi
 
 - [API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
-- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/CORS)
+- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

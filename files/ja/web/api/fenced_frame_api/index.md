@@ -57,9 +57,11 @@ frame.config = frameConfig;
 
 どちらの方法でも、ブラウザーは埋め込むコンテンツのターゲット位置を含む URL を格納します。不透明な URN、または `FencedFrameConfig` 内部の `url` プロパティに割り当てられたものです。埋め込みコンテキストで実行する JavaScript では、 URL の値を読み取ることはできません。
 
-> **メモ:** [プライバシーサンドボックス](https://developer.google.com/privacy-sandbox) API への既存の実装の移行を容易にするために、`<iframe>` の不透明な URN に対応しています。この対応は一時的なものであることを意図しており、採用が進むにつれて将来的に除去される予定です。
+> [!NOTE]
+> [プライバシーサンドボックス](https://developer.google.com/privacy-sandbox) API への既存の実装の移行を容易にするために、`<iframe>` の不透明な URN に対応しています。この対応は一時的なものであることを意図しており、採用が進むにつれて将来的に除去される予定です。
 
-> **メモ:** `FencedFrameConfig` には {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} メソッドがあり、埋め込み文書内のデータを `<fencedframe>` の共有ストレージに渡すために使用します。例えば、 {{domxref("Worklet")}} で `<fencedframe>` を経由してアクセスし、レポートを作成するために使用することができます。詳しくは[共有ストレージ API](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage) を参照してください。
+> [!NOTE]
+> `FencedFrameConfig` には {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} メソッドがあり、埋め込み文書内のデータを `<fencedframe>` の共有ストレージに渡すために使用します。例えば、 {{domxref("Worklet")}} で `<fencedframe>` を経由してアクセスし、レポートを作成するために使用することができます。詳しくは[共有ストレージ API](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage) を参照してください。
 
 ### `Fence` オブジェクトにおけるフェンスフレーム期のへのアクセス
 

@@ -41,7 +41,7 @@ Dans les versions précédentes d'HTML, il représente une ligne horizontale. Bi
 
 ## Attributs
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs dépréciés, obsolètes ou non-standard
 

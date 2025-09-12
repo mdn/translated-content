@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3dce7daa89de9290c5ca04b6289756cd3c39d247
 ---
 
-{{CSSRef}}
-
 **CSS 名前空間** (CSS namespaces) は、 CSS で{{glossary("namespace", "名前空間")}}を使用するための構文を定義します。
 
 CSS は HTML のスタイル設定だけのためにあるわけではありません。スタイルシートは、SVG、MathML、XML、HTML のスタイル設定にも使用でき、これらはそれぞれ異なる名前空間があり、または複数の名前空間を含む文書を持っています。

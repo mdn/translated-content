@@ -60,7 +60,7 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
 
 ## Propriétés détaillées correspondantes
 
-C'est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir&nbsp;:
+C'est [une propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir&nbsp;:
 
 - [`border-image-outset`](/fr/docs/Web/CSS/border-image-outset)
 - [`border-image-repeat`](/fr/docs/Web/CSS/border-image-repeat)
@@ -93,7 +93,7 @@ border-image: unset;
 La propriété `border-image` peut être définie avec une à cinq valeurs parmi celles définies ci-après.
 
 > [!NOTE]
-> Si la [valeur calculée](/fr/docs/Web/CSS/computed_value) de [`border-image-source`](/fr/docs/Web/CSS/border-image-source) vaut `none` ou si l'image ne peut pas être affichée, c'est le [`border-style`](/fr/docs/Web/CSS/border-style) correspondant qui sera affiché.
+> Si la [valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de [`border-image-source`](/fr/docs/Web/CSS/border-image-source) vaut `none` ou si l'image ne peut pas être affichée, c'est le [`border-style`](/fr/docs/Web/CSS/border-style) correspondant qui sera affiché.
 
 ### Valeurs
 
@@ -112,7 +112,7 @@ La propriété `border-image` peut être définie avec une à cinq valeurs parmi
 
 Les technologies d'assistance ne peuvent pas analyser les images de bordure. Si l'image contient des informations essentielles au sens de la page, mieux vaut décrire ces informations dans le contenu sémantique du document.
 
-- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères pour 1.1.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Définition formelle

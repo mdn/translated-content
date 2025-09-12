@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
-{{CSSRef}}
-
 **`scroll-padding`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 {{cssxref("padding")}} 속성이 요소의 안쪽 여백을 설정하는 것처럼, 요소의 모든 측면에서의 스크롤 안쪽 여백을 한번에 정의합니다.
 
 {{InteractiveExample("CSS Demo: scroll-padding")}}

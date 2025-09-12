@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 La [función](/es/docs/Web/CSS/CSS_Functions) [CSS](/es/docs/Web/CSS) **`linear-gradient()`** crea una imagen que consiste en una transición progresiva entre dos o más colores a lo largo de una línea recta. Su resultado es un objeto del tipo de datos {{CSSxRef("&lt;gradient&gt;")}}, que es un tipo especial de {{CSSxRef("&lt;image&gt;")}}.
 
 {{InteractiveExample("CSS Demo: linear-gradient()")}}

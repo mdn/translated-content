@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`data-*`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一类被称为**自定义数据属性**的属性，可以通过脚本在 [HTML](/zh-CN/docs/Web/HTML) 与 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 表示之间进行专有数据的交换。
 
 {{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}

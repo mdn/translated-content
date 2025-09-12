@@ -5,13 +5,14 @@ l10n:
   sourceCommit: 016ea3d6160143ec4a05d12be1bff9cad594f0e5
 ---
 
-{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 Mozilla アプリケーションでは、 **`-moz-user-input`** はある要素がユーザーの入力を受け付けるかどうかを決定します。
 
 Firefox 60 以降、このプロパティでは、通常はユーザー入力を受け入れられない要素に、ユーザー入力を受け入れられるようにすることはできなくなりました。ユーザー入力を無効にする場合のみ、このプロパティを使用することができます。
 
-> **メモ:** `-moz-user-input` は、 CSS 3 の {{cssxref("user-input")}} プロパティの先行実装案の一つでしたが、これはまだ（実装を呼びかける）勧告候補に達していません。類似のプロパティ `user-focus` が [CSS3 UI 仕様の前身であった初期の草稿](https://www.w3.org/TR/2000/WD-css3-userint-20000216) で提案されましたが、作業グループによって却下されました。
+> [!NOTE]
+> `-moz-user-input` は、 CSS 3 の {{cssxref("user-input")}} プロパティの先行実装案の一つでしたが、これはまだ（実装を呼びかける）勧告候補に達していません。類似のプロパティ `user-focus` が [CSS3 UI 仕様の前身であった初期の草稿](https://www.w3.org/TR/2000/WD-css3-userint-20000216) で提案されましたが、作業グループによって却下されました。
 
 ## 構文
 

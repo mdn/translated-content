@@ -18,10 +18,10 @@ Notez que la valeur des propriétés `display` et `visibility` n'ont aucun effet
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#événement_graphiques)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_traitement_conditionnel)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Reference/Attribute#événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

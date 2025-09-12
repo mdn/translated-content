@@ -3,8 +3,6 @@ title: font-display
 slug: Web/CSS/@font-face/font-display
 ---
 
-{{CSSRef}}
-
 `font-display` 属性决定了一个 @font-face 在不同的下载时间和可用时间下是如何展示的。
 
 ## 字体显示时间轴
@@ -51,10 +49,11 @@ font-display: optional;
 ## 例子
 
 ```css
-@ font-face {
+@font-face {
   font-family: ExampleFont;
-  src: url（/path/to/fonts/examplefont.woff）format（'woff'），
-       url（/path/to/fonts/examplefont.eot）format（'eot'）;
+  src:
+    url("/path/to/fonts/example-font.woff") format("woff"),
+    url("/path/to/fonts/example-font.eot") format("embedded-opentype");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

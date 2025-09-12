@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Messages
 original_slug: Web/HTTP/Messages
 ---
 
-{{HTTPSidebar}}
-
 Dados são trocados entre servidor e cliente por meio de mensagens HTTP. Há dois tipos de mensagens: _requisições_ (requests) enviadas pelo cliente para disparar uma ação no servidor, e _respostas_ (responses), a réplica do servidor.
 
 Mensagens HTTP são compostas de informação textual codificada em ASCII, e se espalham por multiplas linhas. Em HTTP/1.1, e versões anteriores do protocolo, estas mensagens eram abertamente enviadas através da conexão. Em HTTP/2, a mensagem antes legível por humanos é agora dividida em quadros HTTP, resultando em otimização e melhora de desempenho.

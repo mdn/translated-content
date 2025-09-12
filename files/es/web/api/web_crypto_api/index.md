@@ -34,7 +34,8 @@ La Web Crypto API no resuelve todos los problemas criptográficos a los que un s
 - No flexibiliza el modelo de [same-origin security model](/es/docs/Web/Security/Same-origin_policy) del navegador, como los casos en que las claves son emitidas por entidades centralizadas utilizadas por varios sitios web.
 - No interactúa con hardware dedicado, tal y como smart cards, pendrives, o generadores aleatorios.
 
-> **Advertencia:** **¡Atención!**
+> [!WARNING]
+> **¡Atención!**
 >
 > - El simple hecho de hacer uso de la criptografía no hace a tu sistema seguro. La Seguridad es un **proceso** que constamentemente evalua el riesgo de un sistema en el contexto de uso. The context and the risks experienced evolve over time.
 > - Al aplicar seguridad, todo el **sistema** debe considerarse. En el caso de la Web Crypto API, los desarrolladores Web no sólo deben considerar la seguridad del script, sino también la seguridad de la conexión al servidor y los datos que éste podría comunicar sin encriptar. La seguridad en general será tan débil como la parte más débil de todo el sistema.

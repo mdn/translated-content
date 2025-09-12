@@ -3,8 +3,6 @@ title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
 ---
 
-{{CSSRef}}
-
 **Cascading Style Sheets**(**CSS**)는 [HTML](/ko/docs/Web/HTML)이나
 [XML](/ko/docs/Web/XML)(XML의 방언인 [SVG](/ko/docs/Web/SVG),
 [XHTML](/ko/docs/Glossary/XHTML) 포함)로 작성된 문서의 표시 방법을 기술하기 위한

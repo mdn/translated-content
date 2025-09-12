@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
-
 **`background-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
 
-{{InteractiveExample("CSS Demo: background-origin")}}
+{{InteractiveExample("CSS デモ: background-origin")}}
 
 ```css interactive-example-choice
 background-origin: border-box;

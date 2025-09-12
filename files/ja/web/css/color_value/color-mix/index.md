@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c754ecfaf2d24aa9e130efde70c743f03421db40
 ---
 
-{{CSSRef}}
-
 **`color-mix()`** 関数記法は 2 つの {{cssxref("&lt;color&gt;")}} 値を採り、指定された色空間の指定された量で混合した結果を返します。
 
 ## 構文

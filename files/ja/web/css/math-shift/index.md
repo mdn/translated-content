@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `math-shift` プロパティは MathML 数式の中の上付き文字を通常のシフトとコンパクトシフトのどちらで上げるべきかを示します。
 

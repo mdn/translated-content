@@ -3,8 +3,6 @@ title: <length>
 slug: Web/CSS/length
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo de dato [CSS](/es/docs/Web/CSS) `<length>` denota medidas de distancia. Es un valor {{cssxref("&lt;number&gt;")}} seguido por una unidad de longitud (`px`, `em`, `pc`, `in`, `mm`, …). Al igual que en cualquier dimensión CSS, no debe haber espacio entre la unidad y el número. La unidad de longitud es opcional después del valor {{cssxref("&lt;number&gt;")}} `0`.

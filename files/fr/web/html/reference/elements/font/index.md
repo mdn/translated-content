@@ -14,13 +14,13 @@ L'élément HTML **`<font>`** définit la taille, la couleur et la police de son
 > [!WARNING]
 > Ne pas utiliser cet élément ! Bien qu'il ait été normalisé en HTML 3.2, il a été déprécié en HTML 4.01, en même temps que tous les éléments liés uniquement au style, puis rendu obsolète en HTML5.
 >
-> À partir de HTML 4, HTML ne véhicule plus d'informations de style (en dehors de l'élément [`<style>`](/fr/docs/Web/HTML/Element/style) ou de l'attribut **style** de chaque élément). Pour tout nouveau développement web, le style doit être écrit en utilisant le [CSS](/fr/docs/Web/CSS) uniquement.
+> À partir de HTML 4, HTML ne véhicule plus d'informations de style (en dehors de l'élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) ou de l'attribut **style** de chaque élément). Pour tout nouveau développement web, le style doit être écrit en utilisant le [CSS](/fr/docs/Web/CSS) uniquement.
 >
 > L'ancien comportement de l'élément [`<font>`](font) peut être obtenu, et encore mieux contrôlé, en utilisant les propriétés CSS [relatives aux polices de caractères](/fr/docs/Web/CSS/CSS_fonts).
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `color`
   - : Cet attribut définit la couleur du texte en utilisant soit une couleur nommée, soit une couleur indiquée par le format hexadécimal #RRGGBB.

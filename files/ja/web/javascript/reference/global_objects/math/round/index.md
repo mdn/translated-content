@@ -9,7 +9,7 @@ l10n:
 
 **`Math.round()`** 関数は、引数として与えた数を四捨五入して、もっとも近似の整数を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.round()")}}
+{{InteractiveExample("JavaScript デモ: Math.round()")}}
 
 ```js interactive-example
 console.log(Math.round(0.9));
