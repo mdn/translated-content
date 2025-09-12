@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
 
-{{domxref("BeforeInstallPromptEvent")}} 接口的 **`platforms`** 属性列出了事件被分发到的平台。这适用于希望向用户提供版本选择的用户代理，例如“web”或“play”，允许用户在网页版和 Android 版之间进行选择。
+{{domxref("BeforeInstallPromptEvent")}} 接口的 **`platforms`** 属性列出了事件被分发到的平台。这适用于希望向用户提供版本选择的用户代理，例如“web”或“play”，允许用户在 Web 和 Android 版之间进行选择。
 
 ## 值
 
@@ -21,4 +21,4 @@ l10n:
 ## 参见
 
 - [使 PWA 可安装](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-- web.dev 上的[如何提供你自己的应用内安装体验](https://web.developers.google.cn/articles/customize-install)（2021）
+- web.developers.google.cn 上的[如何提供你自己的应用内安装体验](https://web.developers.google.cn/articles/customize-install)（2021）
