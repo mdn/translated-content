@@ -17,7 +17,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 
 ## Exemples
 
-### Styliser une transition de vue active
+### Mettre en forme une transition de vue active
 
 Cet exemple s'appuie sur l'exemple de [transition de vue dans le même document](/fr/docs/Web/API/Document/startViewTransition#using_a_same-document_view_transition) de la page `startViewTransition`.
 

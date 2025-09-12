@@ -66,4 +66,4 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 - Sélecteurs CSS connexes :
   - [`:active`](/fr/docs/Web/CSS/:active)
 
-- La propriété {{domxref("Document.activeElement")}} pour le DOM régulier, et la propriété {{domxref("ShadowRoot.activeElement")}} pour les racines [shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM).
+- La propriété {{domxref("Document.activeElement")}} pour le DOM régulier, et la propriété {{domxref("ShadowRoot.activeElement")}} pour les racines du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM).

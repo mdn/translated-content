@@ -20,7 +20,7 @@ li:first-child {
 ```
 
 ```html interactive-example
-<p>Champions d'athlétisme :</p>
+<p>Champions d'athlétisme&nbsp;:</p>
 <ul>
   <li>Adhemar da Silva</li>
   <li>Wang Junxia</li>

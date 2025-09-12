@@ -115,7 +115,7 @@ button {
 }
 ```
 
-Si vous cliquez sur chaque élément tour à tour, vous verrez que lorsque `:focus` est utilisé pour styliser l'anneau de focus, l'agent utilisateur dessine l'anneau de focus lorsque l'utilisateur·ice clique sur le bouton. Cependant, lorsque `:focus-visible` est utilisé pour styliser l'anneau de focus, l'agrent utilisateur ne dessine pas l'anneau de focus lorsque l'utilisateur·ice clique sur le bouton, comme dans le cas par défaut.
+Si vous cliquez sur chaque élément tour à tour, vous verrez que lorsque `:focus` est utilisé pour mettre en forme l'anneau de focus, l'agent utilisateur dessine l'anneau de focus lorsque l'utilisateur·ice clique sur le bouton. Cependant, lorsque `:focus-visible` est utilisé pour mettre en forme l'anneau de focus, l'agrent utilisateur ne dessine pas l'anneau de focus lorsque l'utilisateur·ice clique sur le bouton, comme dans le cas par défaut.
 
 Si vous parcourez ensuite chaque élément à l'aide de la touche Tab, vous constaterez que dans les trois cas — par défaut, `:focus` et `:focus-visible` — l'agent utilisateur dessine l'anneau de focus autour du bouton lorsque l'utilisateur·ice y accède à l'aide du clavier.
 

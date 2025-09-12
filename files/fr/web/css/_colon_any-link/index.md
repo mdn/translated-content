@@ -21,16 +21,16 @@ a:any-link {
 ```
 
 ```html interactive-example
-<p>Pages que vous avez peut-être consultées :</p>
+<p>Pages que vous avez peut-être consultées&nbsp;</p>
 <ul>
   <li>
     <a href="https://developer.mozilla.org/fr/">MDN Web Docs</a>
   </li>
   <li>
-    <a href="https://www.youtube.com/YouTube">Google</a>
+    <a href="https://www.youtube.com/YouTube">YouTube</a>
   </li>
 </ul>
-<p>Pages peu susceptibles d'être dans votre historique :</p>
+<p>Pages peu susceptibles d'être dans votre historique&nbsp;:</p>
 <ul>
   <li>
     <a href="https://developer.mozilla.org/missing-3">Page MDN aléatoire</a>

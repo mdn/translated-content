@@ -31,7 +31,7 @@ simple-custom:defined {
 
 ### Masquer les éléments jusqu'à ce qu'ils soient définis
 
-Dans cette démonstration, nous définissons un élément personnalisé de base nommé `<custom-element>` et utilisons les sélecteurs `:not(:defined)` et `:defined` pour styliser l'élément avant et après sa définition. Cela est utile si vous avez un élément personnalisé complexe qui prend un certain temps à se charger dans la page — vous pouvez alors masquer les instances de l'élément jusqu'à ce que la définition soit terminée afin d'éviter que des éléments non stylisés n'apparaissent de manière inesthétique sur la page.
+Dans cette démonstration, nous définissons un élément personnalisé de base nommé `<custom-element>` et utilisons les sélecteurs `:not(:defined)` et `:defined` pour mettre en forme l'élément avant et après sa définition. Cela est utile si vous avez un élément personnalisé complexe qui prend un certain temps à se charger dans la page — vous pouvez alors masquer les instances de l'élément jusqu'à ce que la définition soit terminée afin d'éviter que des éléments non stylisés n'apparaissent de manière inesthétique sur la page.
 
 #### HTML
 

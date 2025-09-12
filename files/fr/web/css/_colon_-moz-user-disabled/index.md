@@ -20,7 +20,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) `:-m
 
 ## Exemples
 
-### Styliser les éléments désactivés par l'utilisateur
+### Mettre en forme les éléments désactivés par l'utilisateur
 
 ```css
 :-moz-user-disabled {
