@@ -1,5 +1,5 @@
 ---
-title: AudioWorkletGlobalScope：port
+title: AudioWorkletGlobalScope: port
 short-title: port
 slug: Web/API/AudioWorkletGlobalScope/port
 l10n:
