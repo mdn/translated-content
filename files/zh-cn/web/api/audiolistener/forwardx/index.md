@@ -15,7 +15,7 @@ l10n:
 
 ## 值
 
-{{domxref("AudioParam")}}。默认值为 -1，范围取负无穷到正无穷。
+{{domxref("AudioParam")}}。默认值为 -1，范围可从负无穷到正无穷。
 
 ## 示例
 
@@ -31,4 +31,4 @@ l10n:
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
