@@ -37,8 +37,8 @@ input:default {
   >
 
   <label
-    ><input name="privacy" type="checkbox" /> J'ai lu et j'accepte la
-    Politique de confidentialité.</label
+    ><input name="privacy" type="checkbox" /> J'ai lu et j'accepte la Politique
+    de confidentialité.</label
   >
 
   <input type="submit" value="Soumettre le formulaire" />

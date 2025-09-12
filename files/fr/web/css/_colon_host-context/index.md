@@ -147,4 +147,4 @@ Les règles `:host-context(h1) { font-style: italic; }` et `:host-context(h1):af
 - La pseudo-classe CSS {{cssxref(":state",":state()")}}
 - Le pseudo-élément CSS {{CSSXref("::slotted")}}
 - L'élément HTML {{HTMLElement("template")}}
-- Le module [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping)
+- Le module [CSS scoping](/fr/docs/Web/CSS/CSS_scoping)

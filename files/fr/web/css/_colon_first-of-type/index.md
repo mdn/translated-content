@@ -81,7 +81,8 @@ Cet exemple montre comment les éléments imbriqués peuvent également être ci
   <div>Ce bloc est le premier !</div>
   <div>Ce <span>bloc en ligne imbriqué est le premier</span> !</div>
   <div>
-    Ce <em>texte en italique imbriqué est le premier</em>, mais ce <em>texte en italique imbriqué est le dernier</em> !
+    Ce <em>texte en italique imbriqué est le premier</em>, mais ce
+    <em>texte en italique imbriqué est le dernier</em> !
   </div>
   <div>Ce <span>bloc en ligne imbriqué est stylisé</span> !</div>
   <p>Ce paragraphe est le premier !</p>

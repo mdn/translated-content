@@ -22,7 +22,10 @@ input:is(:-webkit-autofill, :autofill) {
 
 ```html interactive-example
 <form>
-  <p>Cliquez sur la zone de texte et choisissez l'une des options proposées par votre navigateur.</p>
+  <p>
+    Cliquez sur la zone de texte et choisissez l'une des options proposées par
+    votre navigateur.
+  </p>
 
   <label for="name">Nom</label>
   <input id="name" name="name" type="text" autocomplete="name" />

@@ -42,7 +42,9 @@ Cet exemple applique des styles spéciaux aux étiquettes associées aux champs 
   <legend>Case à cocher</legend>
   <div>
     <input type="checkbox" id="checkbox" />
-    <label for="checkbox">Cette case à cocher commence avec un fond vert.</label>
+    <label for="checkbox"
+      >Cette case à cocher commence avec un fond vert.</label
+    >
   </div>
 </fieldset>
 
@@ -50,11 +52,15 @@ Cet exemple applique des styles spéciaux aux étiquettes associées aux champs 
   <legend>Radio</legend>
   <div>
     <input type="radio" id="radio1" name="radioButton" value="val1" />
-    <label for="radio1">Le premier label radio commence avec un fond vert.</label>
+    <label for="radio1"
+      >Le premier label radio commence avec un fond vert.</label
+    >
   </div>
   <div>
     <input type="radio" id="radio2" name="radioButton" value="val2" />
-    <label for="radio2">Le deuxième label radio commence également avec un fond vert.</label>
+    <label for="radio2"
+      >Le deuxième label radio commence également avec un fond vert.</label
+    >
   </div>
 </fieldset>
 ```

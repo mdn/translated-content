@@ -11,7 +11,6 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 
 ## Syntaxe
 
-
 ```css
 :-moz-drag-over {
   /* ... */

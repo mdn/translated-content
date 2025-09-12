@@ -22,7 +22,9 @@ input:in-range {
 
 ```html interactive-example
 <form>
-  <label for="amount">Combien de billets ? (Vous pouvez acheter 2 à 6 billets)</label>
+  <label for="amount"
+    >Combien de billets ? (Vous pouvez acheter 2 à 6 billets)</label
+  >
   <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
 
   <label for="dep">Date de départ : (Toute l'année 2022 est acceptable)</label>

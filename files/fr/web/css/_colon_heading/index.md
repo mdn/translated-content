@@ -9,10 +9,10 @@ l10n:
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:heading`** correspond à tous les [éléments de titre](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) dans un document. Cela vous permet de mettre en forme tous les titres en même temps, plutôt que de les correspondre et de les mettre en forme individuellement.
 
-Cette pseudo-classe ne correspond qu'aux éléments qui sont par défaut reconnus comme des titres (`<h1>` à `<h6>`). Les éléments avec [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) ne sont pas correspondus ; vous pouvez sélectionner ceux-ci en utilisant le [sélecteur d'attribut](/en-US/docs/Web/CSS/Attribute_selectors) `[role="heading"]`.
+Cette pseudo-classe ne correspond qu'aux éléments qui sont par défaut reconnus comme des titres (`<h1>` à `<h6>`). Les éléments avec [`role="heading"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) ne sont pas correspondus ; vous pouvez sélectionner ceux-ci en utilisant le [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[role="heading"]`.
 
 > [!NOTE]
-> La pseudo-classe `:heading` a la même [spécificité](/en-US/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated) qu'un sélecteur de classe, c'est-à-dire `0-1-0`. Ainsi, `:heading` aurait une spécificité de `0-1-0`, et `section:heading` aurait une spécificité de `0-1-1`.
+> La pseudo-classe `:heading` a la même [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated) qu'un sélecteur de classe, c'est-à-dire `0-1-0`. Ainsi, `:heading` aurait une spécificité de `0-1-0`, et `section:heading` aurait une spécificité de `0-1-1`.
 
 ## Syntaxe
 

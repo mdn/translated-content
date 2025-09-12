@@ -30,9 +30,9 @@ Cet exemple applique une couleur d'arrière-plan différente à un élément {{h
   <h1>Démonstration du MDN Web Docs : la pseudo-classe :fullscreen</h1>
 
   <p>
-    Cette démonstration utilise la pseudo-classe <code>:fullscreen</code> pour changer automatiquement
-    le style d'un bouton utilisé pour activer et désactiver le mode plein écran,
-    entièrement en utilisant CSS.
+    Cette démonstration utilise la pseudo-classe <code>:fullscreen</code> pour
+    changer automatiquement le style d'un bouton utilisé pour activer et
+    désactiver le mode plein écran, entièrement en utilisant CSS.
   </p>
 
   <button class="toggle">Activer/Désactiver le plein écran</button>

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-{{CSSRef}}
-
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:disabled`** permet de cibler un élément désactivé. Un élément est désactivé s'il ne peut pas être activé (sélectionné, cliqué ou saisi) ou s'il ne peut pas recevoir le focus de l'utilisateur. L'élément possède également un état activé dans lequel il peut être sélectionné ou recevoir le focus.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :disabled", "tabbed-standard")}}
@@ -92,7 +90,9 @@ input[type="text"]:disabled {
 
 ```js
 const checkbox = document.querySelector("#facturation-livraison");
-const billingItems = document.querySelectorAll('#facturation input[type="text"]');
+const billingItems = document.querySelectorAll(
+  '#facturation input[type="text"]',
+);
 
 checkbox.addEventListener("change", () => {
   billingItems.forEach((item) => {

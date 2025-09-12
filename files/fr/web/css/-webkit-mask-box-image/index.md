@@ -15,7 +15,6 @@ La propriété **`-webkit-mask-box-image`** permet de définir l'image de masque
 
 ## Syntaxe
 
-
 ```css
 /* par défaut */
 -webkit-mask-box-image: none;

@@ -128,7 +128,9 @@ Cela montre comment `:focus-visible` permet à un·e concepteur·rice de suivre 
 Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne prennent pas en charge `:focus-visible`, vérifiez la prise en charge de `:focus-visible` avec {{cssxref('@supports')}} et répétez le même style de mise en évidence, mais à l'intérieur d'une règle `:focus`. Notez que même si vous ne spécifiez rien du tout pour `:focus`, les anciens navigateurs afficheront simplement le contour natif, ce qui peut être suffisant.
 
 ```html
-<button class="button with-fallback" type="button">Bouton avec solution de repli</button>
+<button class="button with-fallback" type="button">
+  Bouton avec solution de repli
+</button>
 <button class="button without-fallback" type="button">
   Bouton sans solution de repli
 </button>

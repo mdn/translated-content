@@ -17,7 +17,9 @@ La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/W
 
 ```html interactive-example
 <p lang="fr-FR">
-  La musique pendant les trajets en voiture et les longs trajets ne pose pas de problème, mais utiliser des écouteurs n'est pas la meilleure chose à faire en conduisant.
+  La musique pendant les trajets en voiture et les longs trajets ne pose pas de
+  problème, mais utiliser des écouteurs n'est pas la meilleure chose à faire en
+  conduisant.
 </p>
 
 <p lang="pl-PL">

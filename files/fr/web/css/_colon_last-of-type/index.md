@@ -79,9 +79,15 @@ Cet exemple montre comment les éléments imbriqués peuvent également être ci
 ```html
 <article>
   <div>Je ne suis pas rose car première `div` :(</div>
-  <div>Je ne suis pas rose :( <span>Mais moi je suis rose car je suis le dernier `span` de mon groupe !</span></div>
   <div>
-    Ici <em>je ne suis pas rose :(</em>, mais ici <em>je suis rose et dernier !</em>
+        Je ne suis pas rose :(
+    <span
+      >Mais moi je suis rose car je suis le dernier `span` de mon groupe !</span
+    >
+  </div>
+  <div>
+    Ici <em>je ne suis pas rose :(</em>, mais ici
+    <em>je suis rose et dernier !</em>
   </div>
   <p>Je suis un paragraphe rose.</p>
   <div>Je suis rose car dernière `div` !</div>

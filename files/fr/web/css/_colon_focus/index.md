@@ -45,7 +45,6 @@ select:focus {
 
 ## Syntaxe
 
-
 ```css
 :focus {
   /* ... */

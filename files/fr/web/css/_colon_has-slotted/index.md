@@ -46,8 +46,8 @@ Cet exemple a deux éléments `<slot>`, dont l'un a été assigné à un contenu
         color: rebeccapurple;
       }
     </style>
-    <slot name="one">Emplacement  1</slot>
-    <slot name="two">Emplacement  2</slot>
+    <slot name="one">Emplacement 1</slot>
+    <slot name="two">Emplacement 2</slot>
   </template>
   <span slot="one">Contenu assigné</span>
 </p>

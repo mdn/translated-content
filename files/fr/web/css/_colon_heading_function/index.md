@@ -10,7 +10,7 @@ l10n:
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:heading()`** représente tous les [éléments de titre](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) qui correspondent à une valeur calculée à l'aide de la notation `An+B`. Cela vous permet de mettre en forme des éléments à des niveaux de titre spécifiques en même temps, plutôt que de les correspondre et de les mettre en forme individuellement.
 
 > [!NOTE]
-> La fonction `:heading()` a la même [spécificité](/en-US/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated) qu'un sélecteur de classe, c'est-à-dire `0-1-0`. Ainsi, `:heading()` aurait une spécificité de `0-1-0`, et `section:heading()` aurait une spécificité de `0-1-1`.
+> La fonction `:heading()` a la même [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated) qu'un sélecteur de classe, c'est-à-dire `0-1-0`. Ainsi, `:heading()` aurait une spécificité de `0-1-0`, et `section:heading()` aurait une spécificité de `0-1-1`.
 
 ## Syntaxe
 
@@ -43,7 +43,7 @@ La fonction pseudo-classe `:heading()` prend une liste séparée par des virgule
 
 ## Remarques d'utilisation
 
-La fonction pseudo-classe `:heading()` ne correspond qu'aux éléments qui sont sémantiquement reconnus comme des titres. Elle ne correspond pas aux éléments avec un attribut [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role), ni ne respecte l'attribut ARIA ['aria-level'](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level).
+La fonction pseudo-classe `:heading()` ne correspond qu'aux éléments qui sont sémantiquement reconnus comme des titres. Elle ne correspond pas aux éléments avec un attribut [`role="heading"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role), ni ne respecte l'attribut ARIA ['aria-level'](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level).
 
 ## Exemples
 

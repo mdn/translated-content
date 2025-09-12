@@ -96,7 +96,6 @@ body {
 
 {{EmbedLiveSample('Exemples','100%','105')}}
 
-
 ## Spécifications
 
 {{Specifications}}

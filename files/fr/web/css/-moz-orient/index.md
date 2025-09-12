@@ -36,7 +36,7 @@ La propriété **`-moz-orient`** définit l'orientation de l'élément sur leque
 
 {{CSSInfo}}
 
-##Syntaxe formelle
+## Syntaxe formelle
 
 {{CSSSyntaxRaw(`-moz-orient = inline | block | horizontal | vertical`)}}
 
