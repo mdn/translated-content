@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Web Animations")}}
 
-L'API Web Animations nous permet de construire des animations et de contrôler leur lecture avec JavaScript. Cet article vous mettra sur la bonne voie avec des démonstrations et des tutoriels inspirés d'«&nbsp;Alice au pays des merveilles&nbsp;».
+L'API **Web Animations** nous permet de construire des animations et de contrôler leur lecture avec JavaScript. Cet article vous mettra sur la bonne voie avec des démonstrations et des tutoriels inspirés d'«&nbsp;Alice au pays des merveilles&nbsp;».
 
 ## Découvrir l'API Web Animations
 
