@@ -113,7 +113,7 @@ l10n:
   - : 创建高性能、硬件加速的 3D（和 2D）图形。基于 [OpenGL ES](https://www.khronos.org/opengles/) 2.0。
 - [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
   - : 通过实时通信来控制音视频数据，包括电话会议以及在两个用户之间来回传输聊天等应用数据。
-- [WebSockets](/en--US/docs/Web/API/WebSockets_API)
+- [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)
   - : 将你的应用或网站连接到服务器，以实时地来回传输数据。非常适合多人在线游戏、聊天服务等。
 - [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : 为多核处理器生成运行自己 JavaScript 代码的后台线程。
