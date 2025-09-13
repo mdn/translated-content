@@ -51,7 +51,7 @@ La pseudo-classe `:fullscreen` est utilisée pour remplacer la [`background-colo
 }
 ```
 
-Le JavaScript suivant fournit une fonction de gestion d'événement qui active ou désactive le mode plein écran lorsque l'utilisateur clique sur le bouton `<button>`.
+Le JavaScript suivant fournit une fonction de gestion d'événement qui active ou désactive le mode plein écran lorsque l'utilisateur·ice clique sur le bouton `<button>`.
 
 ```js
 document.querySelector(".toggle").addEventListener("click", (event) => {

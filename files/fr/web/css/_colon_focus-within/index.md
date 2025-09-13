@@ -101,4 +101,4 @@ input {
 
 - {{cssxref(":focus")}}
 - {{CSSxRef(":focus-visible")}}
-- [Captez l'attention de vos utilisateurs grâce au sélecteur focus-within <sup>(angl.)</sup>](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)
+- [Captez l'attention de vos utilisateur·ice·s grâce au sélecteur focus-within <sup>(angl.)</sup>](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)

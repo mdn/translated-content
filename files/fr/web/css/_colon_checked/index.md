@@ -45,7 +45,7 @@ input:checked {
 </form>
 ```
 
-L'utilisateur peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.
+L'utilisateur·ice peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.
 
 > [!NOTE]
 > Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
@@ -121,7 +121,7 @@ option:checked {
 
 ### Basculer des éléments à l'aide d'une case à cocher masquée
 
-Cet exemple utilise la pseudo-classe `:checked` pour permettre à l'utilisateur de basculer le contenu en fonction de l'état d'une case à cocher, le tout sans utiliser [JavaScript](/fr/docs/Web/JavaScript).
+Cet exemple utilise la pseudo-classe `:checked` pour permettre à l'utilisateur·ice de basculer le contenu en fonction de l'état d'une case à cocher, le tout sans utiliser [JavaScript](/fr/docs/Web/JavaScript).
 
 #### HTML
 

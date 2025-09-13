@@ -31,7 +31,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 <button class="joinBtn">S'abonner</button>
 ```
 
-La pseudo-classe `:active` est également activée lorsque l'utilisateur emploie la touche de tabulation. Elle est souvent utilisée sur les éléments HTML {{HTMLElement("a")}} et {{HTMLElement("button")}} mais n'est pas restreinte à ceux-ci. Les éléments ciblés par cette pseudo-classe incluent les éléments qui contiennent l'élément activé et les éléments de formulaires activés via leur élément {{HTMLElement("label")}} associé.
+La pseudo-classe `:active` est également activée lorsque l'utilisateur·ice emploie la touche de tabulation. Elle est souvent utilisée sur les éléments HTML {{HTMLElement("a")}} et {{HTMLElement("button")}} mais n'est pas restreinte à ceux-ci. Les éléments ciblés par cette pseudo-classe incluent les éléments qui contiennent l'élément activé et les éléments de formulaires activés via leur élément {{HTMLElement("label")}} associé.
 
 La mise en forme associée peut être surchargée par les autres pseudo-classes pour les liens : {{cssxref(":link")}}, {{cssxref(":hover")}} et {{cssxref(":visited")}} lorsqu'elles sont utilisées dans des règles qui suivent. Afin de mettre en forme les liens de façon correcte, la règle avec `:active` doit être écrite après les autres : `:link` — `:visited` — `:hover` — `:active`.
 

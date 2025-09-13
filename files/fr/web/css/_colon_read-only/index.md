@@ -51,7 +51,7 @@ input[type="submit"] {
 
 ### Confirmation des informations du formulaire à l'aide de contrôles en lecture seule ou en lecture-écriture
 
-Une utilisation des contrôles de formulaire en lecture seule est de permettre à l'utilisateur de vérifier les informations qu'il a pu saisir dans un formulaire précédent (par exemple, les détails d'expédition), tout en étant en mesure de soumettre les informations avec le reste du formulaire. C'est exactement ce que nous faisons dans l'exemple ci-dessous.
+Une utilisation des contrôles de formulaire en lecture seule est de permettre à l'utilisateur·ice de vérifier les informations qu'il a pu saisir dans un formulaire précédent (par exemple, les détails d'expédition), tout en étant en mesure de soumettre les informations avec le reste du formulaire. C'est exactement ce que nous faisons dans l'exemple ci-dessous.
 
 La pseudo-classe `:read-only` est utilisée pour supprimer tout le style qui fait que les champs de saisie ressemblent à des champs cliquables, les faisant ressembler davantage à des paragraphes en lecture seule. La pseudo-classe `:read-write`, en revanche, est utilisée pour fournir un style plus agréable à la `<textarea>` modifiable.
 

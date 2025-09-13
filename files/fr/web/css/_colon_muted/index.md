@@ -7,7 +7,7 @@ l10n:
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:muted`** représente un élément capable de produire du son, tel que {{htmlelement("audio")}} ou {{htmlelement("video")}}, mais qui est muet (silencieux de force).
 
-La pseudo-classe `:muted` est différente de {{cssxref(":volume-locked")}} en ce sens que l'auteur de la page a le contrôle sur la possibilité de couper ou de rétablir le son d'un élément multimédia.
+La pseudo-classe `:muted` est différente de {{cssxref(":volume-locked")}} en ce sens que l'auteur·ice de la page a le contrôle sur la possibilité de couper ou de rétablir le son d'un élément multimédia.
 Les agents utilisateurs peuvent définir la valeur `muted` des médias en fonction des préférences d'utilisation (par exemple, en mémorisant la dernière valeur définie entre les sessions, sur une base par site, ou autrement).
 Un élément qui est `:volume-locked` ne peut pas être coupé, rétabli ou avoir son volume modifié via JavaScript en raison d'une préférence du système d'exploitation ou de l'agent utilisateur.
 

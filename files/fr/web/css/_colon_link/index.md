@@ -41,7 +41,7 @@ a:link {
 </ul>
 ```
 
-Les styles définis par les pseudo-classes `:link` et [`:visited`](/fr/docs/Web/CSS/:visited) peuvent être remplacés par toute pseudo-classe d'action utilisateur ultérieure ({{cssxref(':hover')}} ou {{cssxref(':active')}}) ayant au moins la même spécificité. Pour styliser correctement les liens, placez la règle `:link` avant toutes les autres règles liées aux liens, comme défini par l'ordre _LVHA_ : `:link` — `:visited` — `:hover` — `:active`. Les pseudo-classes `:visited` et `:link` s'excluent mutuellement.
+Les styles définis par les pseudo-classes `:link` et [`:visited`](/fr/docs/Web/CSS/:visited) peuvent être remplacés par toute pseudo-classe d'action utilisateur ultérieure ({{cssxref(':hover')}} ou {{cssxref(':active')}}) ayant au moins la même spécificité. Pour mettre en forme correctement les liens, placez la règle `:link` avant toutes les autres règles liées aux liens, comme défini par l'ordre _LVHA_ : `:link` — `:visited` — `:hover` — `:active`. Les pseudo-classes `:visited` et `:link` s'excluent mutuellement.
 
 > [!NOTE]
 > On utilisera {{cssxref(":any-link")}} pour sélectionner un élément qu'il ait été visité ou non.

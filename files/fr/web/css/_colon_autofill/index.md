@@ -91,7 +91,7 @@ input:is(:-webkit-autofill, :autofill) {
 
 ## Voir aussi
 
-- [Bug Chromium n°46543 : Le fond jaune des champs texte saisis automatiquement ne peut pas être désactivé. <sup>(angl.)</sup>](https://code.google.com/p/chromium/issues/detail?id=46543)
-- [Bug WebKit n°66032 : Permettre aux auteurs de surcharger la couleur des champs remplis automatiquement. <sup>(angl.)</sup>](https://bugs.webkit.org/show_bug.cgi?id=66032)
-- [Bug Mozilla n°740979 : Implémentation de la pseudo-classe `:-moz-autofill` pour les éléments `input` avec une valeur saisie automatiquement. <sup>(angl.)</sup>](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)
-- [Module d'interface utilisateur Niveau 4 : plus de sélecteurs <sup>(angl.)</sup>](https://wiki.csswg.org/spec/css4-ui#more-selectors)
+- [Bug Chromium n°46543&nbsp;: Le fond jaune des champs texte saisis automatiquement ne peut pas être désactivé. <sup>(angl.)</sup>](https://code.google.com/p/chromium/issues/detail?id=46543)
+- [Bug WebKit n°66032&nbsp;: Permettre aux auteur·ice·s de surcharger la couleur des champs remplis automatiquement. <sup>(angl.)</sup>](https://bugs.webkit.org/show_bug.cgi?id=66032)
+- [Bug Mozilla n°740979&nbsp;: Implémentation de la pseudo-classe `:-moz-autofill` pour les éléments `input` avec une valeur saisie automatiquement. <sup>(angl.)</sup>](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)
+- [Module d'interface utilisateur Niveau 4&nbsp;: plus de sélecteurs <sup>(angl.)</sup>](https://wiki.csswg.org/spec/css4-ui#more-selectors)

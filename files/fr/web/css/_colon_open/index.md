@@ -20,8 +20,8 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 La pseudo-classe `:open` sélectionne tout élément actuellement dans l'état ouvert, ce qui inclut les éléments suivants&nbsp;:
 
 - Les éléments {{htmlelement("details")}} et {{htmlelement("dialog")}} qui sont dans un état ouvert, c'est-à-dire qu'ils ont l'attribut `open` défini.
-- Les éléments {{htmlelement("input")}} qui affichent une interface de sélection pour que l'utilisateur choisisse une valeur (par exemple [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color)), lorsque le sélecteur est affiché.
-- Les éléments {{htmlelement("select")}} qui affichent un sélecteur déroulant pour que l'utilisateur choisisse une valeur, lorsque le sélecteur est affiché. Notez que lors de l'implémentation d'[éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select), le sélecteur lui-même peut être sélectionné à l'aide du pseudo-élément {{cssxref("::picker()", "::picker(select)")}}.
+- Les éléments {{htmlelement("input")}} qui affichent une interface de sélection pour que l'utilisateur·ice choisisse une valeur (par exemple [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color)), lorsque le sélecteur est affiché.
+- Les éléments {{htmlelement("select")}} qui affichent un sélecteur déroulant pour que l'utilisateur·ice choisisse une valeur, lorsque le sélecteur est affiché. Notez que lors de l'implémentation d'[éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select), le sélecteur lui-même peut être sélectionné à l'aide du pseudo-élément {{cssxref("::picker()", "::picker(select)")}}.
 
 Notez que les états ouvert et fermé sont des états sémantiques, et ne correspondent pas nécessairement à la visibilité de l'élément en question. Par exemple, un élément `<details>` qui est développé pour afficher son contenu est ouvert, et sera sélectionné par le sélecteur `details:open`, même s'il est masqué avec une valeur {{cssxref("visibility")}} de `hidden`.
 
@@ -121,7 +121,7 @@ Il n'y a rien de spécial dans notre sélecteur de fruits.
 
 #### CSS
 
-Dans le CSS, nous définissons une valeur {{cssxref("appearance")}} de `none` sur notre élément `<select>` pour supprimer le style OS par défaut de la boîte de sélection, et fournir quelques styles de base à nous. Plus précisément, nous définissons une image de fond {{glossary("SVG")}} d'une flèche vers le bas sur le côté droit — les utilisateurs ont tendance à reconnaître les éléments `<select>` par la flèche vers le bas, donc c'est une bonne idée de l'inclure.
+Dans le CSS, nous définissons une valeur {{cssxref("appearance")}} de `none` sur notre élément `<select>` pour supprimer le style OS par défaut de la boîte de sélection, et fournir quelques styles de base à nous. Plus précisément, nous définissons une image de fond {{glossary("SVG")}} d'une flèche vers le bas sur le côté droit — les utilisateur·ice·s ont tendance à reconnaître les éléments `<select>` par la flèche vers le bas, donc c'est une bonne idée de l'inclure.
 
 Nous définissons ensuite un peu de {{cssxref("padding")}} sur l'élément {{htmlelement("label")}} environnant, et une bordure transparente pour garder la mise en page cohérente lorsque nous ajoutons plus tard une bordure colorée.
 

@@ -49,7 +49,7 @@ label {
 
 ## Exemples
 
-Dans cet exemple, les textes des éléments activés seront verts alors que ceux des éléments désactivés seront gris. L'utilisateur peut ainsi reconnaître les éléments avec lesquels interagir.
+Dans cet exemple, les textes des éléments activés seront verts alors que ceux des éléments désactivés seront gris. L'utilisateur·ice peut ainsi reconnaître les éléments avec lesquels interagir.
 
 ### HTML
 

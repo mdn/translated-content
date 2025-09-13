@@ -45,7 +45,7 @@ label {
 </form>
 ```
 
-La pseudo-classe `:optional` est utile pour styliser les champs qui ne sont pas obligatoires pour soumettre un formulaire.
+La pseudo-classe `:optional` est utile pour mettre en forme les champs qui ne sont pas obligatoires pour soumettre un formulaire.
 
 > [!NOTE]
 > La pseudo-classe {{cssxref(":required")}} sélectionne les champs de formulaire _obligatoires_.
@@ -64,7 +64,7 @@ Si un [formulaire](/fr/docs/Web/HTML/Reference/Elements/form) contient des champ
 
 Les champs obligatoires devraient également être indiqués visuellement et cette indication ne doit pas uniquement être fournie avec une couleur. Généralement, un texte descriptif ou une icône est utilisé.
 
-- [Explications des recommendation WCAG 1.4 <sup>(angl.)</sup>](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Comprendre le critère de succès 1.4.3 | W3C Comprendre les WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Exemples

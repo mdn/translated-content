@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d64c2d5cb1f04b569e6af5d42feaadbc8c375b03
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur·ice le survole avec le pointeur, sans nécessairement l'activer.
 
 {{InteractiveExample("CSS Demo: :hover", "tabbed-shorter")}}
 
@@ -34,7 +34,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 Les styles définis par la pseudo-classe `:hover` seront remplacés par toute pseudo-classe liée à un lien ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, ou {{ cssxref(":active") }}) qui a au moins la même spécificité. Pour mettre en forme correctement les liens, placez la règle `:hover` après les règles `:link` et `:visited`, mais avant la règle `:active`, comme défini par l'ordre _LVHA_ : `:link` — `:visited` — `:hover` — `:active`.
 
 > [!NOTE]
-> Sur les écrans tactiles, `:hover` est problématique voire impossible. La pseudo-classe `:hover` n'est jamais valide, ou seulement pendant un très court instant après avoir touché l'élément. Puisque les appareils à écrans tactiles sont très courants, il est important que les développeurs web ne placent pas de contenu accessible seulement lors du survol, puisque ce contenu sera caché pour les utilisateurs de tels appareils.
+> Sur les écrans tactiles, `:hover` est problématique voire impossible. La pseudo-classe `:hover` n'est jamais valide, ou seulement pendant un très court instant après avoir touché l'élément. Puisque les appareils à écrans tactiles sont très courants, il est important que les développeur·euse·s web ne placent pas de contenu accessible seulement lors du survol, puisque ce contenu sera caché pour les utilisateur·ice·s de tels appareils.
 
 ## Syntaxe
 

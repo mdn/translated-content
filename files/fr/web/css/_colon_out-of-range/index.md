@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max). Ceci permet d'informer l'utilisateur que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max). Ceci permet d'informer l'utilisateur·ice que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :out-of-range", "tabbed-shorter")}}
 
@@ -45,7 +45,7 @@ input:out-of-range {
 </form>
 ```
 
-La pseudo-classe `:out-of-range` est utile pour donner à l'utilisateur une indication visuelle qu'une valeur de champ est en dehors des limites autorisées.
+La pseudo-classe `:out-of-range` est utile pour donner à l'utilisateur·ice une indication visuelle qu'une valeur de champ est en dehors des limites autorisées.
 
 > [!NOTE]
 > Cette pseudo-classe s'applique seulement aux éléments qui ont (et peuvent avoir) une limitation de plage. En l'absence d'une telle limitation, l'élément ne peut être ni "dans la plage" ni "hors de la plage".
