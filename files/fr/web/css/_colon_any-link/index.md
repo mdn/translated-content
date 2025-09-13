@@ -89,7 +89,7 @@ a:-webkit-any-link {
 ## See also
 
 - [Création d'hyperliens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links)
-- Associé aux éléments HTML&nbsp;: [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) et [`<area>`](/fr/docs/Web/HTML/Reference/Elements/area) avec un attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href)
+- Associé aux éléments HTML&nbsp;: {{HTMLElement("a")}} et {{HTMLElement("area")}} avec un attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href)
 - Sélecteurs CSS associés&nbsp;:
-  - [`:visited`](/fr/docs/Web/CSS/:visited)
-  - [`:link`](/fr/docs/Web/CSS/:link)
+  - {{cssxref(":visited")}}
+  - {{cssxref(":link")}}

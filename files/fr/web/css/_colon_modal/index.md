@@ -63,8 +63,8 @@ showNumber.addEventListener("click", () => {
 
 Voici des exemples d'éléments qui peuvent empêcher une interaction avec le reste de la page et qui pourront être ciblés par la pseudo-classe&nbsp;:
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) lorsqu'il est ouvert avec la méthode du DOM `showModal()`.
-- Un élément ciblé par la pseudo-classe [`:fullscreen`](/fr/docs/Web/CSS/:fullscreen) lorsqu'il est ouvert avec la méthode du DOM `requestFullscreen()`.
+- L'élément {{HTMLElement("dialog")}} lorsqu'il est ouvert avec la méthode du DOM `showModal()`.
+- Un élément ciblé par la pseudo-classe {{CSSxRef(":fullscreen")}} lorsqu'il est ouvert avec la méthode du DOM `requestFullscreen()`.
 
 ## Exemples
 
@@ -160,8 +160,8 @@ favDialog.addEventListener("close", () => {
 
 ## Voir aussi
 
-- L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog)
+- L'élément HTML {{HTMLElement("dialog")}}
 - Les autres pseudo-classes relatives à l'état d'affichage&nbsp;:
-  - [`:fullscreen`](/fr/docs/Web/CSS/:fullscreen)
-  - [`:picture-in-picture`](/fr/docs/Web/CSS/:picture-in-picture)
+  - {{CSSxRef(":fullscreen")}}
+  - {{CSSxRef(":picture-in-picture")}}
 - La liste complète des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
