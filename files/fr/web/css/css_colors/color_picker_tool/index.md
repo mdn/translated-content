@@ -28,4 +28,4 @@ Les valeurs de couleur générées peuvent être utilisées partout où le type 
 - [Comprendre la couleur et la luminance](/fr/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 - [WCAG 1.4.1: Contraste de la couleur](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [Apprendre&nbsp;: Arrière-plans et bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-- [Apprendre&nbsp;: Meilleures pratiques d'accessibilité CSS et JavaScript](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
+- [Apprendre&nbsp;: Meilleures pratiques d'accessibilité CSS et JavaScript](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur)
