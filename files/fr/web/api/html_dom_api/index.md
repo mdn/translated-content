@@ -340,11 +340,11 @@ Le HTML du formulaire ressemble à ceci&nbsp;:
 </p>
 <form action="" method="get">
   <p>
-    <label for="userName" required>Votre nom :</label>
+    <label for="userName" required>Votre nom&nbsp;:</label>
     <input type="text" id="userName" /> (*)
   </p>
   <p>
-    <label for="userEmail">E-mail :</label>
+    <label for="userEmail">E-mail&nbsp;:</label>
     <input type="email" id="userEmail" />
   </p>
   <input type="submit" value="Envoyer" id="sendButton" />
