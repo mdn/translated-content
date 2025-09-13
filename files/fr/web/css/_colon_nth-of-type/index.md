@@ -2,14 +2,12 @@
 title: :nth-of-type
 slug: Web/CSS/:nth-of-type
 l10n:
-  sourceCommit: f22e72998f4e8f48b18ef358521bfc9ad1ae9446
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-of-type()`** permet de cibler les éléments selon leur position parmi les voisins du même type (les mêmes noms de balise).
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-of-type()`** permet de cibler les éléments selon leur position parmi les voisins du même type (les mêmes noms de balise).
-
-{{InteractiveExample("CSS Demo: :nth-of-type", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: :nth-of-type", "tabbed-shorter")}}
 
 ```css interactive-example
 dt {
@@ -27,35 +25,35 @@ dd:nth-of-type(even) {
 
 ```html interactive-example
 <dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
+  <dt>Légumes&nbsp;:</dt>
+  <dd>1. Tomates</dd>
+  <dd>2. Concombres</dd>
+  <dd>3. Champignons</dd>
+  <dt>Fruits&nbsp;:</dt>
+  <dd>4. Pommes</dd>
+  <dd>5. Mangues</dd>
+  <dd>6. Poires</dd>
   <dd>7. Oranges</dd>
 </dl>
 ```
 
 ## Syntaxe
 
-La pseudo-classe `nth-of-type` ne prend qu'un argument qui représente le motif de répétition pour les éléments ciblés.
-
-Voir [`:nth-child`](/fr/docs/Web/CSS/:nth-child) pour une explication plus détaillée de sa syntaxe.
-
 ```css-nolint
-:nth-of-type(<an-plus-b> | even | odd) {
+:nth-of-type(<An+B> | even | odd) {
   /* ... */
 }
 ```
 
+### Paramètres
+
+La pseudo-classe `nth-of-type` ne prend qu'un argument qui représente le motif de répétition pour les éléments ciblés.
+
+Voir [`:nth-child`](/fr/docs/Web/CSS/:nth-child) pour une explication plus détaillée de sa syntaxe.
+
 ## Exemples
 
 ### Exemple simple
-
-Dans cet exemple nous allons colorer un paragraphe sur deux avec des couleurs différentes et mettre le premier paragraphe en gras.
 
 #### HTML
 
@@ -97,7 +95,7 @@ p.fancy:nth-of-type(2n + 1) {
 
 ### Résultat
 
-{{EmbedLiveSample('','250','250')}}
+{{EmbedLiveSample('Exemple_simple', 250, 250)}}
 
 ## Spécifications
 

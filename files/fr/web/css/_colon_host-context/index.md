@@ -2,47 +2,95 @@
 title: :host-context()
 slug: Web/CSS/:host-context
 l10n:
-  sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
+  sourceCommit: 572f56b6deaa1402c2c332aba2754a9ec727ff7b
 ---
 
-{{CSSRef}}
+{{deprecated_header}}
 
-La fonction [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte sombre (<i lang="en">shadow host</i>) du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM sombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte sombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte sombre (<i lang="en">shadow host</i>) du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM sombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte sombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
 
-Autrement dit, cela permet à un élément personnalisé, ou à n'importe quoi au sein du DOM sombre de cet élément personnalisé, d'appliquer différents styles selon sa position au sein du DOM extérieur ou des classes ou attributs appliqués aux éléments ancêtres.
+Normalement, les éléments d'un DOM ombre sont isolés du DOM extérieur. La fonction `:host-context()` vous permet de «&nbsp;jeter un œil à l'extérieur&nbsp;» de ce DOM ombre et de vérifier si l'un des éléments ancêtres correspond à un sélecteur CSS donné. Par exemple, appliquer une couleur de texte différente aux éléments d'une racine ombre lorsqu'une classe `.dark-theme` est appliquée à `<body>`.
 
-Une utilisation classique consiste à utiliser une expression avec un sélecteur de descendants, par exemple `h1`, afin de cibler uniquement les instances de l'élément personnalisé situées dans un élément `<h1>`. Un autre usage pourrait consister à permettre aux éléments internes de réagir aux classes ou attributs des éléments parmi les ancêtres (par exemple, appliquer une couleur de texte différente lorsqu'une classe `.dark-theme` est appliquée à `<body>`).
+Imaginez que vous ayez un élément personnalisé `<greenhouse>`, dans lequel vit un `<chameleon>`. Ici, le `<greenhouse>` est l'hôte du Shadow DOM et l'élément `<chameleon>` se trouve dans le Shadow DOM. La fonction `:host-context()` permet au `<chameleon>` de changer d'apparence en fonction de l'environnement du `<greenhouse>`. Si le `<greenhouse>` se trouve dans un endroit ensoleillé (il a une classe «&nbsp;sunny-theme&nbsp;»), le `<chameleon>` devient jaune. Si le `<greenhouse>` se trouve dans un endroit ombragé (une classe «&nbsp;shady-theme&nbsp;» est appliquée à la place), le `<chameleon>` devient bleu.
+
+Ce sélecteur traverse toutes les limites d'ombre. Il recherchera le thème ensoleillé ou ombragé appliqué directement à la `<greenhouse>` ou à l'un des ancêtres de l'hôte et aux DOM ancêtres jusqu'à atteindre la racine du document.
+
+Pour limiter le sélecteur uniquement à l'hôte `<greenhouse>` directement ou limiter la sélection au DOM de l'hôte, utilisez plutôt la pseudo-classe {{cssxref(":host")}} ou {{cssxref(":host_function", ":host()")}}.
 
 > [!NOTE]
-> Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un DOM sombre.
+> Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un _shadow DOM_.
+
+La [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) de `:host-context()` est celle d'une [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes), à laquelle s'ajoute la spécificité du sélecteur passé en argument à la fonction.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: :host-context()", "tabbed-shorter")}}
+
+```css interactive-example
+/* Le CSS suivant est appliqué à l'intérieur du shadow DOM. */
+
+:host-context(.container) {
+  border: 5px dashed green;
+}
+
+:host-context(h1) {
+  color: red;
+}
+```
+
+```html interactive-example
+<!-- éléments en dehors du shadow DOM -->
+<div class="container">
+  <h1 id="shadow-dom-host"></h1>
+</div>
+```
+
+```js interactive-example
+const shadowDom = init();
+
+// ajouter un élément <span> dans le shadow DOM
+const span = document.createElement("span");
+span.textContent = "À l'intérieur du shadow DOM";
+shadowDom.appendChild(span);
+
+// attacher le shadow DOM à l'élément #shadow-dom-host
+function init() {
+  const host = document.getElementById("shadow-dom-host");
+  const shadowDom = host.attachShadow({ mode: "open" });
+
+  const cssTab = document.querySelector("#css-output");
+  const shadowStyle = document.createElement("style");
+  shadowStyle.textContent = cssTab.textContent;
+  shadowDom.appendChild(shadowStyle);
+
+  cssTab.addEventListener("change", () => {
+    shadowStyle.textContent = cssTab.textContent;
+  });
+  return shadowDom;
+}
+```
 
 ```css
-/* Cible l'hôte d'une racine sombre, uniquement si elle
-   descend du sélecteur passé en argument */
+/* Sélectionne un hôte de shadow root, uniquement s'il est
+   correspondant au sélecteur passé en argument */
 :host-context(h1) {
   font-weight: bold;
 }
 
-:host-context(main article) {
-  font-weight: bold;
-}
-
-/* Change la couleur de texte d'un paragraphe de noir à
-   blanc lorsqu'une classe .dark-theme est appliquée au
-   corps du document. */
+/* Change la couleur du texte des paragraphes de noir à blanc lorsque
+   la classe .dark-theme est appliquée à l'élément body */
 p {
-  color: #000;
+  color: black;
 }
 
 :host-context(body.dark-theme) p {
-  color: #fff;
+  color: white;
 }
 ```
 
 ## Syntaxe
 
 ```css-nolint
-:host-context(<selecteur-composite>) {
+:host-context(<compound-selector>) {
+  /* ... */
 }
 ```
 
@@ -94,5 +142,9 @@ Les règles `:host-context(h1) { font-style: italic; }` et `:host-context(h1):af
 ## Voir aussi
 
 - [Les composants web](/fr/docs/Web/API/Web_components)
-- [`:host`](/fr/docs/Web/CSS/:host)
-- [`:host()`](/fr/docs/Web/CSS/:host_function)
+- La pseudo-classe CSS {{cssxref(":host")}}
+- La pseudo-classe CSS {{cssxref(":host_function", ":host()")}}
+- La pseudo-classe CSS {{cssxref(":state",":state()")}}
+- Le pseudo-élément CSS {{CSSXref("::slotted")}}
+- L'élément HTML {{HTMLElement("template")}}
+- Le module [CSS scoping](/fr/docs/Web/CSS/CSS_scoping)

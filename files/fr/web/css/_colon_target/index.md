@@ -1,11 +1,11 @@
 ---
 title: :target
 slug: Web/CSS/:target
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) correspond au fragment d'identifiant de l'URI du document.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) correspond au fragment d'identifiant de l'URI du document.
 
 ```css
 /* Cible un élément dont l'identifiant      */
@@ -15,226 +15,90 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibl
 }
 ```
 
-Les URI comportant des fragments d'identifiant peuvent être utilisées pour créer des liens vers un élément donné d'un document qu'on appellera l'élément cible (_target element_). Voici un exemple d'URI qui pointe vers une _ancre_ intitulée `section2` :
+Par exemple, l'URL suivante comporte un identifiant de fragment (indiqué par le signe _#_) qui marque l'élément avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de `section2` comme élément cible du document&nbsp;:
 
 ```
-http://exemple.com/chemin/document.html#section2
+https://exemple.fr/chemin/document.html#section2
 ```
 
-L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL précédente :
+L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL précédente&nbsp;:
 
 ```html
 <section id="section2">Exemple</section>
 ```
 
-> [!NOTE]
-> L'attribut `id` a été ajouté avec HTML 4 (décembre 1997). Dans les anciennes versions de HTML, `<a>` était nécessairement l'élément cible. La pseudo-classe `:target` permet également de gérer ces cibles.
-
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:target {
+  /* ... */
+}
+```
+
+## Description
+
+Quand un document HTML est chargé, le navigateur définit son élément cible. L'élément est identifié à l'aide de l'identifiant de fragment d'URL. Sans l'identifiant de fragment d'URL, le document n'a pas d'élément cible. La pseudo-classe `:target` permet de mettre en forme l'élément cible du document. L'élément peut être mis au point, mis en surbrillance, animé, etc.
+
+L'élément cible est défini au chargement du document et lors des appels de méthodes [`history.back()`](/fr/docs/Web/API/History/back), [`history.forward()`](/fr/docs/Web/API/History/forward) et [`history.go()`](/fr/docs/Web/API/History/forward). Mais il n'est _pas_ modifié lorsque les méthodes [`history.pushState()`](/fr/docs/Web/API/History/pushState) et [`history.replaceState()`](/fr/docs/Web/API/History/replaceState) sont appelées.
+
+> [!NOTE]
+> En raison d'un [bug possible dans la spécification CSS <sup>(angl.)</sup>](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/), `:target` ne fonctionne pas dans un [composant web](/fr/docs/Web/API/Web_components) car [la racine fantôme](/fr/docs/Web/API/ShadowRoot) ne transmet pas l'élément cible à l'arbre fantôme.
 
 ## Exemples
 
-### Exemples simples
+### Une table des matières
 
-```css
-/* Exemple de code pouvant être utilisé dans une feuille
-   de style utilisateur. Une flèche rouge/jaune indique
-   l'élément cible. */
-
-:target {
-  box-shadow: 0.2em 0.2em 0.3em #888;
-}
-
-:target:before {
-  font:
-    70% Arial,
-    "Nimbus Sans L",
-    sans-serif !important;
-  content: "\25ba"; /* ► */
-  color: red;
-  background: gold;
-  border: solid thin;
-  padding-left: 1px;
-  display: inline-block;
-  margin-right: 0.13em;
-  vertical-align: 20%;
-}
-```
-
-### Manipuler les éléments avec `display: none`
-
-La pseudo-classe `:target` s'accommode également des éléments qui ne sont pas affichés.
-
-#### CSS
-
-```css
-#newcomment {
-  display: none;
-}
-
-#newcomment:target {
-  display: block;
-}
-```
+La pseudo-classe `:target` peut être utilisée pour mettre en surbrillance la partie d'une page qui a été liée à partir d'une table des matières.
 
 #### HTML
 
 ```html
-<p><a href="#newcomment">Ajouter un commentaire</a></p>
-<div id="newcomment">
-  <form>
-    <p>
-      Saisir un commentaire :<br />
-      <textarea></textarea>
-    </p>
-  </form>
-</div>
-```
+<h3>Table des matières</h3>
+<ol>
+  <li><a href="#p1">Aller au premier paragraphe&nbsp;!</a></li>
+  <li><a href="#p2">Aller au deuxième paragraphe&nbsp;!</a></li>
+  <li>
+    <a href="#nowhere">
+      Ce lien ne mène nulle part, car la cible n'existe pas.
+    </a>
+  </li>
+</ol>
 
-#### Résultat
-
-{{EmbedLiveSample("Manipuler_les_éléments_avec_display:_none")}}
-
-### Révéler des éléments
-
-`:target` peut être utile afin de révéler/masquer certains éléments invisibles.
-
-#### CSS
-
-```css
-div.lightbox {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-div.lightbox:target {
-  display: table;
-}
-
-div.lightbox figure {
-  display: table-cell;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-}
-
-div.lightbox figure figcaption {
-  display: block;
-  margin: auto;
-  padding: 8px;
-  background-color: #ddbbff;
-  height: 250px;
-  position: relative;
-  overflow: auto;
-  border: 1px #000000 solid;
-  border-radius: 10px;
-  text-align: justify;
-  font-size: 14px;
-}
-
-div.lightbox figure .closemsg {
-  display: block;
-  margin: auto;
-  height: 0;
-  overflow: visible;
-  text-align: right;
-  z-index: 2;
-  cursor: default;
-}
-
-div.lightbox figure .closemsg,
-div.lightbox figure figcaption {
-  width: 300px;
-}
-
-.closemsg::after {
-  content: "\00D7";
-  display: inline-block;
-  position: relative;
-  right: -20px;
-  top: -10px;
-  z-index: 3;
-  color: #ffffff;
-  border: 1px #ffffff solid;
-  border-radius: 10px;
-  width: 20px;
-  height: 20px;
-  line-height: 18px;
-  text-align: center;
-  margin: 0;
-  background-color: #000000;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.closemsg::before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  opacity: 0.85;
-}
-```
-
-#### HTML
-
-```html
-<p>Un texte pour l'exemple&hellip;</p>
-<p>
-  [ <a href="#exemple1">Ouvrir l'exemple n°1</a> |
-  <a href="#exemple2"> Ouvrir l'exemple n°2</a> ]
+<h3>Mon article amusant</h3>
+<p id="p1">
+  Vous pouvez cibler <i>ce paragraphe</i> en utilisant un fragment d'URL.
+  Cliquez sur le premier lien ci-dessus pour essayer&nbsp;!
 </p>
-<p>Un autre texte pour l'exemple&hellip;</p>
-<div class="lightbox" id="exemple1">
-  <figure>
-    <a href="#" class="closemsg"></a>
-    <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
-      placerat id eleifend eu, semper vel sem. Sed interdum commodo enim
-      venenatis pulvinar. Proin mattis lorem vitae diam scelerisque hendrerit.
-      Fusce cursus imperdiet mauris, vitae hendrerit velit dignissim a.
-      Suspendisse potenti. Aenean feugiat facilisis diam, in posuere sapien
-      mattis vel. Proin molestie rutrum diam, pharetra feugiat ligula
-      sollicitudin sed. Etiam cursus diam quis tellus aliquam gravida. Aliquam
-      erat volutpat.<br />
-      Etiam varius adipiscing mi eget imperdiet. Nulla quis vestibulum leo.
-      Integer molestie massa ut massa commodo in blandit purus aliquam. Mauris
-      sit amet posuere massa. Ut a eleifend augue. Proin sodales mauris nec
-      tellus pharetra dictum.
-    </figcaption>
-  </figure>
-</div>
+<p id="p2">
+  Ceci est <i>un autre paragraphe</i>, également accessible depuis le deuxième
+  lien ci-dessus. N'est-ce pas génial&nbsp;?
+</p>
+```
 
-<div class="lightbox" id="exemple2">
-  <figure>
-    <a href="#" class="closemsg"></a>
-    <figcaption>
-      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
-      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
-      Etiam ullamcorper augue quis orci posuere et tincidunt augue semper.
-      Maecenas varius augue eu orci auctor bibendum tristique ligula egestas.
-      Morbi pharetra tortor iaculis erat porta id aliquam leo cursus. Ut nec
-      elit vel mauris dapibus lacinia eget sed odio.
-    </figcaption>
-  </figure>
-</div>
+#### CSS
+
+```css
+p:target {
+  background-color: gold;
+}
+
+/* Ajoute un pseudo-élément à l'intérieur de l'élément cible */
+p:target::before {
+  font: 70% sans-serif;
+  content: "►";
+  color: limegreen;
+  margin-right: 0.25em;
+}
+
+/* Met en surbrillance les éléments en italique dans l'élément cible */
+p:target i {
+  color: red;
+}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Révéler_des_éléments")}}
+{{EmbedLiveSample('une_table_des_matières', 500, 300)}}
 
 ## Spécifications
 
@@ -246,5 +110,4 @@ div.lightbox figure figcaption {
 
 ## Voir aussi
 
-- [Utiliser la pseudo-classe `:target` dans les sélecteurs](/fr/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors)
-- [Un exemple d'utilisation de `:target` pour un système de diapositives, sur GitHub](https://madmurphy.github.io/takefive.css/)
+- [Utiliser la pseudo-classe `:target` dans les sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)

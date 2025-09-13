@@ -3,16 +3,16 @@ title: -moz-float-edge
 slug: Web/CSS/-moz-float-edge
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage (_padding_).
 
+## Syntaxe
+
 ```css
 /* Valeurs avec un mot-clé */
--moz-float-edge: border-box;
 -moz-float-edge: content-box;
 -moz-float-edge: margin-box;
--moz-float-edge: padding-box;
 
 /* Valeurs globales */
 -moz-float-edge: inherit;
@@ -20,25 +20,20 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 -moz-float-edge: unset;
 ```
 
-## Syntaxe
-
 ### Valeurs
 
-- `border-box`
-  - : Les propriétés de hauteur et de largeur incluent le contenu, le remplissage et la bordure mais pas la marge.
 - `content-box`
   - : Les propriétés de hauteur et de largeur incluent le contenu, mais pas le remplissage, la bordure et la marge.
 - `margin-box`
   - : Les propriétés de hauteur et de largeur incluent le contenu, le remplissage, la bordure et la marge.
-- `padding-box`
-  - : Les propriétés de hauteur et de largeur incluent le contenu et le remplissage mais pas la bordure ni la marge.
 
-### Syntaxe formelle
+## Définition formelle
 
-```plain
--moz-float-edge =
-  border-box | content-box | margin-box | padding-box
-```
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-moz-float-edge = content-box | margin-box`)}}
 
 ## Exemples
 
@@ -69,9 +64,11 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 
 ## Spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+Cette propriété ne fait partie d'aucun standard.
 
-{{cssinfo}}
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
