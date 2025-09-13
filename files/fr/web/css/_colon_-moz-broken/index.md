@@ -8,7 +8,7 @@ slug: Web/CSS/:-moz-broken
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) `:-moz-broken` est une [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui s'adapte aux éléments qui représentent des liens cassés vers des images.
 
 > [!NOTE]
-> Ce sélecteur est principalement destiné à être utilisé par les développeurs de thèmes.
+> Ce sélecteur est principalement destiné à être utilisé par les développeur·euse·s de thèmes.
 
 ## Syntaxe
 

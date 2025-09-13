@@ -52,8 +52,7 @@ Dans cet exemple, nous utilisons deux blocs `@scope` séparés pour faire corres
 <div class="light-scheme">
   <p>
     Le MDN contient beaucoup d'informations sur
-    <a href="/fr/docs/Web/HTML">HTML</a>,
-    <a href="/fr/docs/Web/CSS">CSS</a>, et
+    <a href="/fr/docs/Web/HTML">HTML</a>, <a href="/fr/docs/Web/CSS">CSS</a>, et
     <a href="/fr/docs/Web/JavaScript">JavaScript</a>.
   </p>
 </div>
@@ -61,8 +60,7 @@ Dans cet exemple, nous utilisons deux blocs `@scope` séparés pour faire corres
 <div class="dark-scheme">
   <p>
     Le MDN contient beaucoup d'informations sur
-    <a href="/fr/docs/Web/HTML">HTML</a>,
-    <a href="/fr/docs/Web/CSS">CSS</a>, et
+    <a href="/fr/docs/Web/HTML">HTML</a>, <a href="/fr/docs/Web/CSS">CSS</a>, et
     <a href="/fr/docs/Web/JavaScript">JavaScript</a>.
   </p>
 </div>

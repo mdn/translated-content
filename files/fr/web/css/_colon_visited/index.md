@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:visited`** permet de modifier l'aspect d'un lien après que l'utilisateur l'a visité. Pour des raisons relatives à la vie privée, les propriétés qui peuvent être utilisées sont restreintes.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:visited`** permet de modifier l'aspect d'un lien après que l'utilisateur·ice l'a visité. Pour des raisons relatives à la vie privée, les propriétés qui peuvent être utilisées sont restreintes.
 
 {{InteractiveExample("CSS Demo: :visited", "tabbed-shorter")}}
 
@@ -70,11 +70,9 @@ Les propriétés qui n'auraient autrement aucune couleur ou seraient transparent
 ### HTML
 
 ```html
-<a href="#lien-visité-de-teste">
-  Avez-vous déjà visité cette page&nbsp;?
-</a><br />
+<a href="#lien-visité-de-teste"> Avez-vous déjà visité cette page&nbsp;? </a
+><br />
 <a href="">Vous avez déjà visité ce lien.</a>
-
 ```
 
 ### CSS
@@ -93,7 +91,6 @@ a:visited {
   border-color: hotpink;
   color: hotpink;
 }
-
 ```
 
 ### Résultat

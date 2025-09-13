@@ -26,7 +26,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 
 ### Exemple de base avec `:blank`
 
-Dans les navigateurs prenant en charge cette fonctionnalité, la pseudo-classe `:blank` permettra aux développeurs de mettre en évidence d'une certaine manière les contrôles de saisie qui ne sont pas requis, mais qui n'ont toujours aucun contenu rempli, peut-être en guise de rappel pour les utilisateurs.
+Dans les navigateurs prenant en charge cette fonctionnalité, la pseudo-classe `:blank` permettra aux développeur·euse·s de mettre en évidence d'une certaine manière les contrôles de saisie qui ne sont pas requis, mais qui n'ont toujours aucun contenu rempli, peut-être en guise de rappel pour les utilisateurs.
 
 #### HTML
 

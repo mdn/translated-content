@@ -38,8 +38,7 @@ input:valid {
   <label
     ><input name="tos" type="checkbox" required checked />
     - Acceptez-vous les CGU&nbsp;?
-    </label
-  >
+  </label>
 </form>
 ```
 
