@@ -1,17 +1,15 @@
 ---
-title: スプレッド構文
+title: スプレッド構文 (...)
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 l10n:
-  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{jsSidebar("Operators")}}
+**スプレッド構文 (`...`)** 構文を使うと、配列式や文字列などの反復可能オブジェクトを、0 個以上の引数（関数呼び出しの場合）や要素（配列リテラルの場合）を目的の場所に展開することができます。オブジェクトリテラルでは、スプレッド構文によりオブジェクトのプロパティを列挙し、作成するオブジェクトにキーと値の組を追加します。
 
-**スプレッド** (`...`) 構文を使うと、配列式や文字列などの反復可能オブジェクトを、0 個以上の引数（関数呼び出しの場合）や要素（配列リテラルの場合）を目的の場所に展開することができます。オブジェクトリテラルでは、スプレッド構文によりオブジェクトのプロパティを列挙し、作成するオブジェクトにキーと値の組を追加します。
+スプレッド構文は、残余構文とまったく同じように見えますが、ある意味では、スプレッド構文は残余構文の反対です。スプレッド構文は配列を要素に「展開」しますが、リスト構文は複数の要素を集合し、単一の要素に「圧縮」します。[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)と[残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#残余プロパティと残余要素)を参照してください。
 
-スプレッド構文は、残余構文とまったく同じように見えますが、ある意味では、スプレッド構文は残余構文の反対です。スプレッド構文は配列を要素に「展開」しますが、リスト構文は複数の要素を集合し、単一の要素に「圧縮」します。[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)と[残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_property)を参照してください。
-
-{{InteractiveExample("JavaScript デモ: Expressions - Spread syntax")}}
+{{InteractiveExample("JavaScript デモ: スプレッド構文 (...)")}}
 
 ```js interactive-example
 function sum(x, y, z) {
@@ -21,10 +19,10 @@ function sum(x, y, z) {
 const numbers = [1, 2, 3];
 
 console.log(sum(...numbers));
-// Expected output: 6
+// 予想される結果: 6
 
 console.log(sum.apply(null, numbers));
-// Expected output: 6
+// 予想される結果: 6
 ```
 
 ## 構文
@@ -59,7 +57,7 @@ const array = [1, 2, 3];
 const obj = { ...array }; // { 0: 1, 1: 2, 2: 3 }
 ```
 
-すべての[プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#primitive_values)はオブジェクトに展開できます。 文字列のみ自分自身で列挙可能なプロパティを持っており、それ以外は何らかのプロパティを新しいオブジェクトに作成することなく展開できます。
+すべての[プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)はオブジェクトに展開できます。 文字列のみ自分自身で列挙可能なプロパティを持っており、それ以外は何らかのプロパティを新しいオブジェクトに作成することなく展開できます。
 
 ```js
 const obj = { ...true, ..."test", ...10 };
@@ -339,7 +337,7 @@ const obj2 = { foo: "baz", y: 13 };
 const merge = (...objects) =>
   objects.reduce((acc, cur) => ({ ...acc, ...cur }));
 
-const mergedObj1 = merge(obj1, obj2);
+const mergedObj = merge(obj1, obj2);
 // { foo: 'baz', x: 42, y: 13 }
 ```
 
@@ -354,5 +352,5 @@ const mergedObj1 = merge(obj1, obj2);
 ## 関連情報
 
 - [残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_property)
+- [残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#残余プロパティと残余要素)
 - {{jsxref("Function.prototype.apply()")}}
