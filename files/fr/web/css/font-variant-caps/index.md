@@ -1,13 +1,13 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-caps`** contrôle l'utilisation de glyphes alternatifs pour les petites capitales (<i lang="en">small caps</i>), les très petites capitales (<i lang="en">petite caps</i>) ou les capitales de titrage.
 
-La propriété **`font-variant-caps`** permet de contrôler les glyphes utilisés pour représenter les lettres en capitales. Les scripts peuvent avoir différents glyphes de différentes tailles pour les différentes représentations des capitales et cette propriété permet de choisir une de ces formes.
-
-{{InteractiveExample("CSS Demo: font-variant-caps")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: font-variant-caps")}}
 
 ```css interactive-example-choice
 font-variant-caps: normal;
@@ -24,7 +24,7 @@ font-variant-caps: all-small-caps;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>Difficult waffles</p>
+    <p>Gaufres difficiles</p>
   </div>
 </section>
 ```
@@ -46,22 +46,22 @@ section {
 }
 ```
 
-Quand une fonte inclut des glyphes de lettres capitales avec différents corps (taille), cette propriété sélectionne la plus appropriée. Si les très petites capitales ne sont pas toutes présentes pour cette fonte, ce seront les petites capitales qui seront utilisées. Si celles-ci ne sont pas présentes, le moteur les synthétisera à partir des glyphes des capitales.
+Lorsqu'une police comprend des glyphes de capitales à plusieurs tailles, cette propriété sélectionne les plus appropriés. Si les glyphes de très petites capitales ne sont pas disponibles, ils sont rendus avec des petites capitales. S'ils ne sont pas présents non plus, le navigateur les synthétise à partir des capitales.
 
-Certains caractères sans casse (comme les caractères de ponctuation) peuvent être représentés avec différents glyphes afin de mieux les représenter avec les caractères environnants. Les caractères sans casse ne sont pas synthétisés par le navigateur s'il n'y a pas de petite capitales.
+Les polices incluent parfois des glyphes spécifiques pour divers caractères sans casse (comme la ponctuation) afin de mieux s'accorder aux caractères en capitales alentours. Cependant, des glyphes de petites capitales ne sont jamais synthétisés pour les caractères sans casse.
 
-### Règles spécifiques aux langues
+### Règles spécifiques à la langue
 
-Les règles liées à chaque langue/locale sont prises en compte avec les valeurs. Par exemple :
+Cette propriété tient compte des règles de mise en casse propres à certaines langues. Par exemple&nbsp;:
 
-- Pour les langues turques comme le turc (tr), l'azerbaidjanais (az), le tatare de Crimée (crh), le tatare de Volga et le Bashkir (ba), il y a deux types de i : avec ou sans le point et deux majuscules correspondantes `i`/`İ` et `ı`/`I`.
-- En allemand (de), le caractère `ß` devient `ẞ` (U+1E9E) en majuscule.
-- En grec (el), les voyelles perdent leur accent en majuscule lorsque tout le mot est en majuscule (`ά`/`Α`), sauf pour le êta disjonctif (`ή`/`Ή`). Les diphthongues avec un accent sur la première voyellle perdent l'accent et ajoutent une diacritique sur la deuxième voyelle (`άι`/`ΑΪ`).
+- En langues turques, comme le turc (`tr`), l'azerbaïdjanais (`az`), le tatar de Crimée (`crh`), le tatar de la Volga (`tt`) et le bachkir (`ba`), il existe deux types de `i` (avec point et sans point) et deux associations de casse&nbsp;: `i`/`İ` et `ı`/`I`.
+- En allemand (`de`), le `ß` peut devenir `ẞ` (U+1E9E) en majuscules.
+- En grec (`el`), les voyelles perdent leur accent lorsque tout le mot est en majuscules (`ά`/`Α`), sauf pour l'éta disjonctif (`ή`/`Ή`). De même, les diphtongues avec un accent sur la première voyelle perdent l'accent et gagnent un diacritique sur la seconde (`άι`/`ΑΪ`).
 
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
+/* Valeurs par mot-clé */
 font-variant-caps: normal;
 font-variant-caps: small-caps;
 font-variant-caps: all-small-caps;
@@ -73,66 +73,72 @@ font-variant-caps: titling-caps;
 /* Valeurs globales */
 font-variant-caps: inherit;
 font-variant-caps: initial;
+font-variant-caps: revert;
+font-variant-caps: revert-layer;
 font-variant-caps: unset;
 ```
 
-La valeur de cette propriété peut être l'un des mots-clés définis ci-après.
+La propriété `font-variant-caps` se définit avec un seul mot‑clé de la liste ci‑dessous. Dans chaque cas, si la police ne prend pas en charge la fonctionnalité OpenType, les glyphes sont synthétisés.
 
 ### Valeurs
 
 - `normal`
-  - : Ce mot-clé désactive l'utilisation des glyphes alternatifs.
+  - : Désactive l'utilisation de glyphes alternatifs.
 - `small-caps`
-  - : Ce mot-clé active l'utilisation de petites capitales pour les minuscules. Il correspond à la valeur OpenType `smcp` ; si la fonte ne supporte pas cette option, le moteur synthétisera les glyphes.
+  - : Active l'affichage des petites capitales (fonction OpenType&nbsp;: `smcp`). Les petites capitales reprennent généralement la forme des lettres capitales mais avec la hauteur des minuscules.
 - `all-small-caps`
-  - : Ce mot-clé active l'utilisation de petites capitales pour les minuscules. Il correspond aux valeurs OpenType `smcp` et `c2sc` ; si la fonte ne supporte pas cette option, le moteur synthétisera les glyphes.
+  - : Active l'affichage des petites capitales pour les lettres capitales et minuscules (fonctions OpenType&nbsp;: `c2sc`, `smcp`).
 - `petite-caps`
-  - : Ce mot-clé active l'utilisation de toutes petites capitales pour les minuscules. Il correspond à la valeur OpenType `pcap` ; si la fonte ne supporte pas cette option, le moteur utilisera les petites capitales.
+  - : Active l'affichage des très petites capitales (fonction OpenType&nbsp;: `pcap`).
 - `all-petite-caps`
-  - : Ce mot-clé active l'utilisation de toutes petites capitales pour les minuscules. Il correspond aux valeurs OpenType `pcap` et `c2pc` ; si la fonte ne supporte pas cette option, le moteur utilisera les petites capitales.
+  - : Active l'affichage des très petites capitales pour les lettres capitales et minuscules (fonctions OpenType&nbsp;: `c2pc`, `pcap`).
 - `unicase`
-  - : Ce mot-clé active l'utilisation de petites capitales pour les majuscules. Il correspond à la valeur OpenType `unic`.
+  - : Active un affichage «&nbsp;unicase&nbsp;» combinant petites capitales pour les majuscules et minuscules normales (fonction OpenType&nbsp;: `unic`).
 - `titling-caps`
-  - : Ce mot-clé active l'utilisation de capitales spéciales pour les titres (à la fois pour les minuscules et majuscules). Généralement, les glyphes majuscules sont conçus pour utiliser les glyphes minuscules et ils apparaissent trop gras quand il y a un long fragment de texte utilisant de tels glyphes. L'objectif de ces glyphes spéciaux est d'éviter un tel effet. Ce mot-clé correspond à la valeur OpenType `titl` ; si la fonte ne supporte pas ce cas, le mot-clé n'aura pas d'action visible.
-
-## Définition formelle
-
-{{CSSInfo}}
-
-## Syntaxe formelle
-
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
-
-```css
-.exemple {
-  font-variant-caps: small-caps;
-}
-```
-
-### HTML
-
-```html
-<p>
-  La Reine devint pourpre de colère et après l’avoir considérée un moment avec
-  des yeux flamboyants comme ceux d’une bête fauve, elle se mit à crier : «
-  <span class="exemple">Qu’on lui coupe la tête !</span> »
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples")}}
+  - : Active l'affichage des capitales de titrage (fonction OpenType&nbsp;: `titl`). Les glyphes majuscules sont souvent conçus pour l'usage avec des minuscules. Utilisés en titres tout en capitales, ils peuvent paraître trop appuyés. Les capitales de titrage sont conçues pour ce cas.
 
 ## Accessibilité
 
-L'utilisation de grandes portions de textes avec `font-style: all-small-caps` ou `font-style: all-petite-caps` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
+De larges sections de texte avec une valeur `font-variant` de `all-small-caps` ou `all-petite-caps` peuvent être difficiles à lire pour des personnes avec certains troubles cognitifs comme la dyslexie.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_W3C Understanding WCAG 2.1_ (en anglais)](https://www.w3.org/TR/WCAG21/#visual-presentation)
+- [Comprendre les WCAG, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_faciliter_la_perception_et_lécoute_du_contenu_y_compris_la_séparation_du_premier_plan_et_de_larrière_plan)
+- [W3C Understanding WCAG 2.2 <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#visual-presentation)
+
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
+
+{{csssyntax}}
+
+## Exemples
+
+### Définir la variante petites capitales
+
+#### HTML
+
+```html
+<p class="small-caps">Firefox rocks, small caps!</p>
+<p class="normal">Firefox rocks, normal caps!</p>
+```
+
+#### CSS
+
+```css
+.small-caps {
+  font-variant-caps: small-caps;
+  font-style: italic;
+}
+.normal {
+  font-variant-caps: normal;
+  font-style: italic;
+}
+```
+
+#### Résultat
+
+{{ EmbedLiveSample('définir_la_variante_petites_capitales') }}
 
 ## Spécifications
 
@@ -141,3 +147,13 @@ L'utilisation de grandes portions de textes avec `font-style: all-small-caps` ou
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [`font-variant`](/fr/docs/Web/CSS/font-variant)
+- [`font-variant-alternates`](/fr/docs/Web/CSS/font-variant-alternates)
+- [`font-variant-east-asian`](/fr/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-emoji`](/fr/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/fr/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/fr/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/fr/docs/Web/CSS/font-variant-position)
