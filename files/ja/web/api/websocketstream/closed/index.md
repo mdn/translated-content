@@ -3,7 +3,7 @@ title: "WebSocketStream: closed プロパティ"
 short-title: closed
 slug: Web/API/WebSocketStream/closed
 l10n:
-  sourceCommit: 7a418e5d057adb45a0c7c4ec3b03baa8c3be18f4
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
 {{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
