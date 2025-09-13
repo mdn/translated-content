@@ -8,12 +8,9 @@ l10n:
 {{ApiRef("Selection API")}}
 
 **`Selection`** 객체는 사용자가 선택한 텍스트 범위 또는 현재 캐럿의 위치를 나타냅니다.
+각 {{domxref("document")}}는 고유한 Selection 객체와 연결되며, 이 객체는 {{DOMxRef("document.getSelection()")}} 또는 {{domxref("window.getSelection()")}}을 통해 가져온 다음 확인하거나 수정할 수 있습니다.
 
-각 {{domxref("document")}}는 고유한 Selection 객체와 연결되며, 이 객체는 {{DOMxRef("document.getSelection()")}} 또는 {{domxref("window.getSelection()")}}을 통해 가져온 다음
-확인하거나 수정할 수 있습니다.
-
-사용자는 왼쪽에서 오른쪽(문서 순서대로) 혹은 오른쪽에서 왼쪽(문서 순서의 반대)으로 선택을 만들 수 있습니다. 선택에서 **앵커**는 사용자가 선택을 시작한 위치이고, **포커스**는 사용자가 선택을 끝낸 위치입니다. 예를 들어 데스크톱 마우스로 텍스트를 드래그하여 선택하면, 마우스 버튼을 처음 누른 위치가 앵커이고,
-버튼을 놓은 위치가 포커스가 됩니다.
+사용자는 왼쪽에서 오른쪽(문서 순서대로) 혹은 오른쪽에서 왼쪽(문서 순서의 반대)으로 선택을 만들 수 있습니다. 선택에서 **앵커**는 사용자가 선택을 시작한 위치이고, **포커스**는 사용자가 선택을 끝낸 위치입니다. 예를 들어 데스크톱 마우스로 텍스트를 드래그하여 선택하면, 마우스 버튼을 처음 누른 위치가 앵커이고, 버튼을 놓은 위치가 포커스가 됩니다.
 
 > [!NOTE]
 > 앵커와 포커스는 선택의 시작점과 끝점과 혼동해서는 안 됩니다.
@@ -42,52 +39,36 @@ l10n:
 
 - {{DOMxRef("Selection.addRange()")}}
   - : 선택 영역에 추가할 {{DOMxRef("Range")}} 객체를 지정합니다.
-
 - {{DOMxRef("Selection.collapse()")}}
   - : 현재 선택 영역을 단일 지점으로 축소합니다.
-
 - {{DOMxRef("Selection.collapseToEnd()")}}
   - : 선택 영역을 마지막 범위의 끝 지점으로 축소합니다.
-
 - {{DOMxRef("Selection.collapseToStart()")}}
   - : 선택 영역을 첫 번째 범위의 시작 지점으로 축소합니다.
-
 - {{DOMxRef("Selection.containsNode()")}}
   - : 특정 노드가 선택 영역의 일부인지 여부를 나타냅니다.
-
 - {{DOMxRef("Selection.deleteFromDocument()")}}
   - : 선택된 콘텐츠를 문서에서 삭제합니다.
-
 - {{DOMxRef("Selection.empty()")}}
   - : 선택 영역에서 모든 범위를 제거하여 아무것도 선택되지 않은 상태로 만듭니다. 이때 {{DOMxRef("Selection.anchorNode", "anchorNode")}}와 {{DOMxRef("Selection.focusNode","focusNode")}} 속성은 `null`이 됩니다.
-
 - {{DOMxRef("Selection.extend()")}}
   - : 선택 영역의 포커스를 지정한 위치로 이동합니다.
-
 - {{DOMxRef("Selection.getComposedRanges()")}}
   - : 선택 영역을 나타내는 {{DOMxRef("StaticRange")}} 객체 배열을 반환합니다. 이 배열의 각 요소는 Shadow DOM 경계를 넘을 수 있는 선택 영역을 표현합니다.
-
 - {{DOMxRef("Selection.getRangeAt()")}}
   - : 현재 선택된 범위 중 하나를 나타내는 {{DOMxRef("Range")}} 객체를 반환합니다.
-
 - {{DOMxRef("Selection.modify()")}}
   - : 현재 선택 영역을 변경합니다.
-
 - {{DOMxRef("Selection.removeRange()")}}
   - : 선택 영역에서 특정 범위를 제거합니다.
-
 - {{DOMxRef("Selection.removeAllRanges()")}}
   - : 선택 영역에서 모든 범위를 제거합니다.
-
 - {{DOMxRef("Selection.selectAllChildren()")}}
   - : 지정한 노드의 모든 자식 노드를 선택 영역에 추가합니다.
-
 - {{DOMxRef("Selection.setBaseAndExtent()")}}
   - : 선택 영역을 두 개의 지정된 DOM 노드와 그 사이에 위치한 모든 콘텐츠를 포함하는 범위로 설정합니다.
-
 - {{DOMxRef("Selection.setPosition()")}}
   - : 현재 선택 영역을 단일 지점으로 축소합니다.
-
 - {{DOMxRef("Selection.toString()")}}
   - : 선택 객체가 현재 표현하는 문자열, 즉 현재 선택된 텍스트를 반환합니다.
 
@@ -124,7 +105,7 @@ const range = selObj.getRangeAt(0);
 
 Safari와 Chrome은 (Firefox와 달리) 현재 선택 영역을 프로그래밍 방식으로 수정할 때 선택 영역을 포함하는 요소에 포커스를 맞춥니다. 다만, 이는 향후 변경될 수 있습니다. (관련 내용은 [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383)과 [WebKit bug 38696](https://webkit.org/b/38696) 참고)
 
-### **편집 호스트 포커스 변경과 관련된 Selection API의 동작**
+### 편집 호스트 포커스 변경과 관련된 Selection API의 동작
 
 Selection API는 공통된 동작(브라우저 간에 동일하게 적용되는 동작)을 가지며, 이는 특정 메서드가 호출된 이후 편집 호스트의 포커스 동작이 어떻게 바뀌는지를 정의합니다.
 
@@ -165,10 +146,8 @@ Selection API는 공통된 동작(브라우저 간에 동일하게 적용되는 
 
 - 앵커
   - : 선택 영역의 앵커는 선택의 시작 지점을 의미합니다. 마우스를 이용해 선택할 때 앵커는 문서에서 마우스 버튼을 처음 눌렀던 위치가 됩니다. 사용자가 마우스나 키보드로 선택 영역을 변경하더라도 앵커는 움직이지 않습니다.
-
 - 편집 호스트
   - : 편집 가능한 요소를 의미합니다. (예를 들어, [`contenteditable`](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable) 속성이 설정된 HTML 요소나, {{DOMxRef("Document.designMode", "designMode")}}가 활성화된 문서의 HTML 자식 요소가 편집 호스트에 해당합니다.)
-
 - 선택 영역의 포커스
   - : 선택 영역의 포커스는 선택의 끝 지점을 의미합니다. 마우스로 선택할 때 포커스는 문서에서 마우스 버튼을 놓은 위치가 됩니다. 사용자가 마우스나 키보드를 이용해 선택 영역을 변경하면, 포커스는 이동하는 선택의 끝 부분이 됩니다.
 
