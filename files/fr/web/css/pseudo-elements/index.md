@@ -41,8 +41,8 @@ Un pseudo-élément peut être sélectionné en fonction de l'état actuel de l'
 - {{CSSxRef("::first-letter")}}
   - : La première lettre, le premier chiffre ou le premier symbole de la première ligne de l'élément d'origine.
 - {{CSSxRef("::cue")}}
-  - : Les [cues WebVTT](/fr/docs/Web/API/WebVTT_API) à l'intérieur d'un élément sélectionné.
-    Cela peut être utilisé pour [mettre en forme les sous-titres et autres cues](/fr/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) dans les médias avec des pistes VTT.
+  - : Les [répliques WebVTT](/fr/docs/Web/API/WebVTT_API) à l'intérieur d'un élément sélectionné.
+    Cela peut être utilisé pour [mettre en forme les sous-titres et autres répliques](/fr/docs/Web/API/WebVTT_API#mettre_en_forme_les_sous-titres_webvtt) dans les médias avec des pistes VTT.
     Le module [CSS pseudo-éléments](/fr/docs/Web/CSS/CSS_pseudo-elements) définit également les sous-pseudo-éléments `::postfix` et `::prefix`. Ceux-ci ne sont pas encore pris en charge par aucun navigateur.
 
 ## Les pseudo-éléments de surlignage
