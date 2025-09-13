@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`style-src`** spécifie les sources valides pour les feuilles de style.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`style-src`** spécifie les sources valides pour les feuilles de style.
 
 <table class="properties">
   <tbody>
@@ -36,9 +36,9 @@ Content-Security-Policy: style-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -69,7 +69,7 @@ Ces feuilles de style seront bloquées et ne se chargeront pas&nbsp;:
 </style>
 ```
 
-De même que les styles chargés avec l'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link)&nbsp;:
+De même que les styles chargés avec l'en-tête [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link)&nbsp;:
 
 ```bash
 Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
@@ -94,7 +94,7 @@ Toutefois, les propriétés de styles qui sont définies directement dans l'attr
 document.querySelector("div").style.display = "none";
 ```
 
-Ce genre de manipulations peut être bloqué en désactivant JavaScript au moyen de la directive CSP [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+Ce genre de manipulations peut être bloqué en désactivant JavaScript au moyen de la directive CSP [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
 
 ### Styles embarqués non fiables
 
@@ -107,7 +107,7 @@ Vous pouvez autoriser les styles embarqués en spécifiant la valeur `'unsafe-in
 Content-Security-Policy: style-src 'unsafe-inline';
 ```
 
-Cette directive CSP autorisera toutes les feuilles de styles embarquées avec l'élément [`<style>`](/fr/docs/Web/HTML/Element/style) et l'attribut `style` sur tous les éléments&nbsp;:
+Cette directive CSP autorisera toutes les feuilles de styles embarquées avec l'élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) et l'attribut `style` sur tous les éléments&nbsp;:
 
 ```html
 <style>
@@ -119,13 +119,13 @@ Cette directive CSP autorisera toutes les feuilles de styles embarquées avec l'
 <div style="display:none">Toto</div>
 ```
 
-Vous pouvez aussi utiliser un nonce pour autoriser spécifiquement certains éléments [`<style>`](/fr/docs/Web/HTML/Element/style)&nbsp;:
+Vous pouvez aussi utiliser un nonce pour autoriser spécifiquement certains éléments [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style)&nbsp;:
 
 ```http
 Content-Security-Policy: style-src 'nonce-2726c7f26c'
 ```
 
-Vous devrez alors définir ce nonce sur l'élément [`<style>`](/fr/docs/Web/HTML/Element/style)&nbsp;:
+Vous devrez alors définir ce nonce sur l'élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style)&nbsp;:
 
 ```html
 <style nonce="2726c7f26c">
@@ -175,11 +175,11 @@ La valeur `'unsafe-eval'` contrôle différentes méthodes de mise en forme qui 
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`style-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem)
-- [`style-src-attr`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr)
-- [`Link`](/fr/docs/Web/HTTP/Headers/Link) header
-- [`<style>`](/fr/docs/Web/HTML/Element/style), [`<link>`](/fr/docs/Web/HTML/Element/link)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`style-src-elem`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem)
+- [`style-src-attr`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr)
+- [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link) header
+- [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link)
 - [`@import`](/fr/docs/Web/CSS/@import)
 - [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
 - [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)

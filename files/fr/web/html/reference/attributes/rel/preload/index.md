@@ -6,7 +6,7 @@ original_slug: Web/HTML/Attributes/rel/preload
 
 {{HTMLSidebar}}
 
-La valeur `preload` de l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) de l'élément {{htmlelement("link")}} permet de déclarer des requêtes à récupérer dans la partie {{htmlelement("head")}} du HTML de la page, en spécifiant les ressources dont votre page va avoir besoin dans peu de temps, et qu'il serait souhaitable de charger le plus tôt possible, avant que le rendu de la page par le navigateur ne commence. Cela permet de s'assurer que les ressources sont disponibles plus tôt et qu'elles auront moins de chances de bloquer le rendu de la page, ce qui améliore les performances.
+La valeur `preload` de l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{htmlelement("link")}} permet de déclarer des requêtes à récupérer dans la partie {{htmlelement("head")}} du HTML de la page, en spécifiant les ressources dont votre page va avoir besoin dans peu de temps, et qu'il serait souhaitable de charger le plus tôt possible, avant que le rendu de la page par le navigateur ne commence. Cela permet de s'assurer que les ressources sont disponibles plus tôt et qu'elles auront moins de chances de bloquer le rendu de la page, ce qui améliore les performances.
 
 ## Les bases
 
@@ -18,8 +18,8 @@ Pour charger un fichier CSS permettant de styler une page, on utilise le plus so
 
 Ici, nous allons utiliser la valeur `preload` sur l'attribut `rel`, ce qui transformera l'élément `<link>` en outil de préchargement utilisable pour n'importe quelle ressource. Nous devrons aussi indiquer&nbsp;:
 
-- le chemin de la ressource dans l'attribut [`href`](/fr/docs/Web/HTML/Element/link#href)&nbsp;;
-- le type de ressource dans l'attribut [`as`](/fr/docs/Web/HTML/Element/link#as)&nbsp;;
+- le chemin de la ressource dans l'attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/link#href)&nbsp;;
+- le type de ressource dans l'attribut [`as`](/fr/docs/Web/HTML/Reference/Elements/link#as)&nbsp;;
 
 Voici un exemple simple (voir nos [fichiers JS et CSS d'exemple](https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css) et le [résultat obtenu](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/))&nbsp;:
 
@@ -52,7 +52,7 @@ Dans l'exemple ci-dessus, nous préchargeons nos fichiers CSS et JavaScript afin
 
 - prioriser les ressources se chargeant avec davantage de précision&nbsp;;
 - les stocker dans le cache pour de futures requêtes, ce qui permet de réutiliser les ressources si c'est pertinent&nbsp;;
-- appliquer la bonne [stratégie de sécurité du contenu](/fr/docs/Web/HTTP/CSP) aux ressources&nbsp;;
+- appliquer la bonne [stratégie de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) aux ressources&nbsp;;
 - mettre en place les bons en-têtes de requêtes {{HTTPHeader("Accept")}} pour les ressources.
 
 ### Quels types de contenu peuvent être préchargés&nbsp;?
@@ -89,7 +89,7 @@ De nombreux différents types de contenu peuvent être préchargés. Les valeurs
 
 ## Inclure un type MIME
 
-Les éléments `<link>` peuvent accepter un attribut [`type`](/fr/docs/Web/HTML/Element/link#type), contenant le type MIME de la ressource vers laquelle pointe le document. Ceci est tout spécialement utile lorsque l'on effectue un préchargement des ressources – le navigateur utilisera alors l'attribut `type` pour vérifier s'il prend en charge la ressource et la télécharger si c'est le cas, ou l'ignorer dans le cas contraire.
+Les éléments `<link>` peuvent accepter un attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/link#type), contenant le type MIME de la ressource vers laquelle pointe le document. Ceci est tout spécialement utile lorsque l'on effectue un préchargement des ressources – le navigateur utilisera alors l'attribut `type` pour vérifier s'il prend en charge la ressource et la télécharger si c'est le cas, ou l'ignorer dans le cas contraire.
 
 Vous pouvez voir un exemple de ce fonctionnement dans notre vidéo d'exemple (voir le [code source complet](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video) ou la [version exécutable en direct](https://mdn.github.io/html-examples/link-rel-preload/video/)), utilisant le bout de code proposé ci-dessous. À noter que si ce code ne lancera pas de préchargement effectif sur aucun navigateur – le préchargement des vidéos n'est encore implémenté sur aucun navigateur – cela permet d'illustrer le fonctionnement général du préchargement.
 
@@ -112,7 +112,7 @@ Vous pouvez voir un exemple de ce fonctionnement dans notre vidéo d'exemple (vo
 </body>
 ```
 
-Le code de l'exemple ci-dessus permet le préchargement de la `video/mp4` uniquement sur les navigateurs qui prennent en charge cette fonctionnalité et pour les personnes ayant un navigateur prenant en charge le format `video/mp4` (car ce format est le premier élément {{htmlelement("source")}} spécifié). Cela devrait rendre le lecteur vidéo plus ergonomique et plus [<i lang="en">responsive</i>](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) pour ces personnes.
+Le code de l'exemple ci-dessus permet le préchargement de la `video/mp4` uniquement sur les navigateurs qui prennent en charge cette fonctionnalité et pour les personnes ayant un navigateur prenant en charge le format `video/mp4` (car ce format est le premier élément {{htmlelement("source")}} spécifié). Cela devrait rendre le lecteur vidéo plus ergonomique et plus [<i lang="en">responsive</i>](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) pour ces personnes.
 
 Concernant les personnes disposant d'un navigateur prenant en charge tout aussi bien les formats `video/mp4` et `video/webm` support, il est important de noter que si un élément `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` est aussi spécifié, alors **les deux formats `video/mp4` et `video/webm` seront préchargés** — même si un seul d'entre eux est utilisé.
 
@@ -122,7 +122,7 @@ Cependant, l'absence de préchargement n'empêche pas la vidéo `video/webm` d'�
 
 ## Récupération de l'activation du <i lang="en">CORS</i>
 
-Lors du préchargement des ressources analysées par des fonctions activant le [CORS](/fr/docs/Web/HTTP/CORS) (partage des ressources entre origines multiples), comme par exemple [`fetch()`](/fr/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou [fonts](/fr/docs/Web/CSS/@font-face)), une attention particulière doit être portée à la mise en place de l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/link#crossorigin) sur l'élément [`<link>`](/fr/docs/Web/HTML/Element/link). L'attribut à besoin d'être mis en place pour faire correspondre le <i lang="en">CORS</i> de la ressource et le mode d'identification, même s'il ne s'agit pas d'une ressource ayant une origine différente de celle de la page.
+Lors du préchargement des ressources analysées par des fonctions activant le [CORS](/fr/docs/Web/HTTP/Guides/CORS) (partage des ressources entre origines multiples), comme par exemple [`fetch()`](/fr/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou [fonts](/fr/docs/Web/CSS/@font-face)), une attention particulière doit être portée à la mise en place de l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/link#crossorigin) sur l'élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link). L'attribut à besoin d'être mis en place pour faire correspondre le <i lang="en">CORS</i> de la ressource et le mode d'identification, même s'il ne s'agit pas d'une ressource ayant une origine différente de celle de la page.
 
 Comme mentionné ci-dessus, un cas de figure intéressant est celui qui s'applique aux fichiers de polices. Pour plusieurs raisons, celles-ci doivent être analysées en utilisant le mode anonyme du <i lang="en">CORS</i> (voir cet article en anglais&nbsp;: [<i lang="en">Font fetching requirements</i>](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
@@ -157,7 +157,7 @@ En plus de fournir un type MIME avec l'attribut `type`, ce code utilise un attri
 
 ## Inclure des médias
 
-Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Element/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/@media#media_types) ou encore des [<i lang="en">media queries</i>](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
+Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Reference/Elements/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/@media#media_types) ou encore des [<i lang="en">media queries</i>](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
 
 Voici un exemple. Vous pouvez consulter son [code source sur GitHub](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media) ou étudier un [exemple de démonstration](https://mdn.github.io/html-examples/link-rel-preload/media/)&nbsp;:
 

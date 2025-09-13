@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
 
 {{SeeCompatTable}}
 
-La directive `accelerometer` de l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy) contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface [`Accelerometer`](/fr/docs/Web/API/Accelerometer).
+La directive `accelerometer` de l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy) contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface [`Accelerometer`](/fr/docs/Web/API/Accelerometer).
 
 ## Syntaxe
 
@@ -15,7 +15,7 @@ Feature-Policy: accelerometer <allowlist>;
 ```
 
 - `<allowlist>`
-  - : Une liste d'origines pour lesquelles la fonctionnalité est autorisée. Voir [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy#syntaxe).
+  - : Une liste d'origines pour lesquelles la fonctionnalité est autorisée. Voir [`Feature-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy#syntaxe).
 
 ## Règle par défaut
 
@@ -31,6 +31,6 @@ Pour cette fonctionnalité, la valeur par défaut pour `allowlist` est `'self'`.
 
 ## Voir aussi
 
-- L'en-tête [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
-- [Règles de gestion pour les fonctionnalités (<i lang="en">Feature Policy</i>)](/fr/docs/Web/HTTP/Permissions_Policy)
+- L'en-tête [`Feature-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy)
+- [Règles de gestion pour les fonctionnalités (<i lang="en">Feature Policy</i>)](/fr/docs/Web/HTTP/Guides/Permissions_Policy)
 - [Utiliser `Feature-Policy`](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

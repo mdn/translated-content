@@ -9,7 +9,7 @@ Dans ce tutoriel étape par étape, nous créons un simple jeu mobile **MDN Brea
 
 Chaque étape a des échantillons modifiables, disponibles pour jouer avec, de sorte que vous pouvez voir à quoi devraient ressembler les étapes intermédiaires. Vous apprendrez les bases de l'utilisation du framework Phaser pour implémenter les mécanismes fondamentaux du jeu comme le rendu et le mouvement des images, la détection des collisions, les mécanismes de contrôle, les fonctions d'aide spécifiques aux cadres, les animations et les interpolations, les états gagnants et perdants.
 
-Pour tirer le meilleur parti de cette série d'articles, vous devez déjà avoir des connaissances de base ou intermédiaires en [JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics). Après avoir parcouru ce tutoriel, vous devriez être capable de construire vos propres jeux Web simples avec Phaser.
+Pour tirer le meilleur parti de cette série d'articles, vous devez déjà avoir des connaissances de base ou intermédiaires en [JavaScript](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). Après avoir parcouru ce tutoriel, vous devriez être capable de construire vos propres jeux Web simples avec Phaser.
 
 ![](mdn-breakout-phaser.png)
 

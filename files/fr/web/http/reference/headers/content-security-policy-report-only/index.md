@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 L'en-tête de réponse HTTP **`Content-Security-Policy-Report-Only`** permet aux développeurs web d'expérimenter avec les règles CSP en contrôlant leur application sans bloquer de contenu. Ces rapports de violations sont constitués d'un document {{Glossary("JSON")}} envoyé via une requête HTTP `POST` à l'URI spécifiée.
 
-Pour plus d'informations, voir aussi cet article sur les [Content Security Policy (CSP)](/fr/docs/Web/HTTP/CSP).
+Pour plus d'informations, voir aussi cet article sur les [Content Security Policy (CSP)](/fr/docs/Web/HTTP/Guides/CSP).
 
 <table class="properties">
   <tbody>

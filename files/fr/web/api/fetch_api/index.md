@@ -55,7 +55,7 @@ Les navigateurs ont commencé à ajouter le support expérimental des interfaces
 ## Voir aussi
 
 - [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch basic concepts](/fr/docs/Web/API/Fetch_API/Using_Fetch)

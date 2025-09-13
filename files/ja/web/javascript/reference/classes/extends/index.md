@@ -2,14 +2,12 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 l10n:
-  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Classes")}}
 
 **`extends`** キーワードは、[クラス宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)や[クラス式](/ja/docs/Web/JavaScript/Reference/Operators/class)の中で、他のクラスの子であるクラスを生成するために使用します。
 
-{{InteractiveExample("JavaScript デモ: Classes Extends", "taller")}}
+{{InteractiveExample("JavaScript デモ: クラスの拡張", "taller")}}
 
 ```js interactive-example
 class DateFormatter extends Date {
@@ -33,7 +31,7 @@ class DateFormatter extends Date {
 }
 
 console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
-// Expected output: "19-Aug-1975"
+// 予想される結果: "19-Aug-1975"
 ```
 
 ## 構文
@@ -141,7 +139,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-親クラスのコンストラクターがオブジェクトを返す場合、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)をさらに初期化するときに、そのオブジェクトが派生クラスの `this` 値として使用されます。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を含む）を無関係なオブジェクトに定義することができます。
+親クラスのコンストラクターがオブジェクトを返す場合、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)をさらに初期化するときに、そのオブジェクトが派生クラスの `this` 値として使用されます。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)のものを含む）を無関係なオブジェクトに定義することができます。
 
 ### 組み込みクラスのサブクラス化
 
@@ -391,7 +389,7 @@ class ReadOnlyMap {
 }
 ```
 
-この場合、 `ReadOnlyMap` クラスは `Map` のサブクラスではありませんが、同じメソッドを実装しています。これはコードの重複を意味しますが、 `ReadOnlyMap` クラスは `Map` クラスと強く割り当てられているわけではなく、 `Map` クラスが変更されても簡単に壊れることはありません。例えば、 `Map` クラスが `set()` を呼び出さない [`emplace()`](https://github.com/tc39/proposal-upsert) メソッドを追加した場合、後者が `emplace()` もオーバーライドするように更新されない限り、 `ReadOnlyMap` クラスは読み取り専用ではなくなります。さらに、`ReadOnlyMap` オブジェクトは `set` メソッドをすべて持たないので、実行時にエラーを発生するよりも正確です。
+この場合、 `ReadOnlyMap` クラスは `Map` のサブクラスではありませんが、同じメソッドを実装しています。これはコードの重複を意味しますが、 `ReadOnlyMap` クラスは `Map` クラスと強く結びつけられているわけではなく、 `Map` クラスが変更されても簡単に壊れることはありません。例えば、 `Map` クラスが `set()` を呼び出さない新しいユーティリティメソッド（[`getOrInsert()`](https://github.com/tc39/proposal-upsert) など）を追加した場合、 `ReadOnlyMap` クラスは `getOrInsert()` を上書きするように更新されない限り、読み取り専用になります。さらに、`ReadOnlyMap` オブジェクトは `set` メソッドをすべて持たないので、実行時にエラーを発生させるよりも正確です。
 
 ## 仕様書
 

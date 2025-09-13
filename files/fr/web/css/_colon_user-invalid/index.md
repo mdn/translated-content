@@ -5,7 +5,7 @@ slug: Web/CSS/:user-invalid
 
 {{Non-standard_header}}{{CSSRef}}
 
-La pseudo-classe **`:-moz-ui-invalid`** représente n'importe quel élément de formulaire dont la valeur est invalide selon [ses contraintes de validation](/fr/docs/Learn/Forms#constraint_validation).
+La pseudo-classe **`:-moz-ui-invalid`** représente n'importe quel élément de formulaire dont la valeur est invalide selon [ses contraintes de validation](/fr/docs/conflicting/Learn_web_development/Extensions/Forms#constraint_validation).
 
 Cette pseudo-classe est appliquée d'après les règles suivantes :
 

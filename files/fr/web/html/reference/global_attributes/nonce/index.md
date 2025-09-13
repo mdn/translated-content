@@ -6,15 +6,15 @@ original_slug: Web/HTML/Global_attributes/nonce
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`nonce`** est un attribut de contenu qui définit un nonce cryptographique pouvant être utilisé par une [règle de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/CSP) afin de déterminer si la récupération d'un élément sera autorisée ou non.
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`nonce`** est un attribut de contenu qui définit un nonce cryptographique pouvant être utilisé par une [règle de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) afin de déterminer si la récupération d'un élément sera autorisée ou non.
 
 ## Description
 
-L'attribut `nonce` permet d'autoriser certains éléments spécifiques (comme un script ou un style donné) en évitant d'avoir à utiliser la directive [CSP](/fr/docs/Web/HTTP/CSP) `unsafe-inline` qui autoriserait _tous_ les scripts ou styles embarqués.
+L'attribut `nonce` permet d'autoriser certains éléments spécifiques (comme un script ou un style donné) en évitant d'avoir à utiliser la directive [CSP](/fr/docs/Web/HTTP/Guides/CSP) `unsafe-inline` qui autoriserait _tous_ les scripts ou styles embarqués.
 
-> **Note :** `nonce` doit uniquement être utilisé pour les cas où il n'est pas possible de faire autrement que d'utiliser un script ou un style embarqué non sécurisé. Si vous n'avez pas besoin de `nonce`, il ne faut pas l'utiliser. Si votre script est statique, vous pouvez utiliser une empreinte (<i lang="en">hash</i>) CSP à la place (voir les notes d'utilisation sur [les scripts embarqués non sécurisés](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#scripts_embarqués_non_fiables).)
+> **Note :** `nonce` doit uniquement être utilisé pour les cas où il n'est pas possible de faire autrement que d'utiliser un script ou un style embarqué non sécurisé. Si vous n'avez pas besoin de `nonce`, il ne faut pas l'utiliser. Si votre script est statique, vous pouvez utiliser une empreinte (<i lang="en">hash</i>) CSP à la place (voir les notes d'utilisation sur [les scripts embarqués non sécurisés](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#scripts_embarqués_non_fiables).)
 >
-> Mieux vaut toujours exploiter les protections [CSP](/fr/docs/Web/HTTP/CSP) au maximum et donc éviter les nonces ou les scripts embarqués non sécurisés tant que possible.
+> Mieux vaut toujours exploiter les protections [CSP](/fr/docs/Web/HTTP/Guides/CSP) au maximum et donc éviter les nonces ou les scripts embarqués non sécurisés tant que possible.
 
 ### Utiliser `non` pour autoriser un élément &lt;script&gt;
 
@@ -42,7 +42,7 @@ Le nonce généré côté serveur peut ensuite être utilisé sur le script emba
 
 #### Envoyer le nonce avec un en-tête CSP
 
-Enfin, il faut envoyer la valeur du nonce dans un en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) en préfixant la chaîne de caractères avec `nonce-`&nbsp;:
+Enfin, il faut envoyer la valeur du nonce dans un en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) en préfixant la chaîne de caractères avec `nonce-`&nbsp;:
 
 ```http
 Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
@@ -81,5 +81,5 @@ script[nonce~="peuimporte"] {
 ## Voir aussi
 
 - [`HTMLElement.nonce`](/fr/docs/Web/API/HTMLElement/nonce)
-- [Stratégie de sécurité du contenu (<i lang="en">Content Security Policy</i>) (CSP)](/fr/docs/Web/HTTP/CSP)
-- La directive CSP [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)
+- [Stratégie de sécurité du contenu (<i lang="en">Content Security Policy</i>) (CSP)](/fr/docs/Web/HTTP/Guides/CSP)
+- La directive CSP [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)

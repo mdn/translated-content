@@ -46,11 +46,11 @@ Le web se fonde sur une architecture client/serveur élémentaire&nbsp;; en rés
 Côté client, un formulaire HTML n'est rien d'autre qu'un moyen commode et convivial de configurer une requête HTTP pour envoyer des données à un serveur. L'utilisateur peut ainsi adresser des informations à joindre à la requête HTTP.
 
 > [!NOTE]
-> Pour une meilleure idée du fonctionnement de l'architecture client‑serveur, lisez notre module [Programmation d'un site web côté‑serveur&nbsp;: premiers pas](/fr/docs/Learn/Server-side/First_steps).
+> Pour une meilleure idée du fonctionnement de l'architecture client‑serveur, lisez notre module [Programmation d'un site web côté‑serveur&nbsp;: premiers pas](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps).
 
 ## Côté client : définition de la méthode d'envoi des données
 
-L'élément [`<form>`](/fr/docs/Web/HTML/Element/form) définit la méthode d'envoi des données. Tous ses attributs sont conçus pour vous permettre de configurer la requête à envoyer quand un utilisateur presse le bouton d'envoi. Les deux attributs les plus importants sont [`action`](/fr/docs/Web/HTML/Element/form#attr-action) et [`method`](/fr/docs/Web/HTML/Element/form#attr-method).
+L'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) définit la méthode d'envoi des données. Tous ses attributs sont conçus pour vous permettre de configurer la requête à envoyer quand un utilisateur presse le bouton d'envoi. Les deux attributs les plus importants sont [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) et [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method).
 
 ### L'attribut action
 
@@ -68,20 +68,20 @@ Ici, nous utilisons une URL relative — les données sont envoyées à une URL 
 <form action="/somewhere_else"></form>
 ```
 
-Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Element/form) sont envoyées à la même page que celle du formulaire :
+Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) sont envoyées à la même page que celle du formulaire :
 
 ```html
 <form></form>
 ```
 
-De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action) était requis. Il n'y en a donc plus besoin.
+De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) était requis. Il n'y en a donc plus besoin.
 
 ```html
 <form action="#"></form>
 ```
 
 > [!NOTE]
-> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
+> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
 
 ### L'attribut method
 
@@ -134,7 +134,7 @@ Host: foo.com
 
 La méthode `POST` est un peu différente.C'est la méthode que le navigateur utilise pour demander au serveur une réponse prenant en compte les données contenues dans le corps de la requête HTTP : «&nbsp;Hé serveur&nbsp;! vois ces données et renvoie-moi le résultat approprié&nbsp;». Si un formulaire est envoyé avec cette méthode, les données sont ajoutées au corps de la requête HTTP.
 
-Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method).
+Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method).
 
 ```html
 <form action="http://www.foo.com" method="POST">
@@ -240,7 +240,7 @@ Les deux prototypes référencés dans le code ci‑dessus sont les suivants&nbs
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
 
 > [!NOTE]
-> À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec «&nbsp;`pip3 install flask`&nbsp;». À ce moment‑là vous pourrez exécuter l'exemple avec «&nbsp;`python3 python-example.py`&nbsp;», puis en allant sur «&nbsp;`localhost:5000`&nbsp;» dans votre navigateur.
+> À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#installing_python_3), puis Flask avec «&nbsp;`pip3 install flask`&nbsp;». À ce moment‑là vous pourrez exécuter l'exemple avec «&nbsp;`python3 python-example.py`&nbsp;», puis en allant sur «&nbsp;`localhost:5000`&nbsp;» dans votre navigateur.
 
 ### Autres langages et canevas de structures
 
@@ -248,7 +248,7 @@ Il y a de nombreuses autres techniques côté serveur utilisables pour gérer de
 
 - [Symfony](https://symfony.com/) pour PHP
 - [Django](https://www.djangoproject.com/) pour Python
-- [Express](/fr/docs/Learn/Server-side/Express_Nodejs) pour Node.js
+- [Express](/fr/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) pour Node.js
 - [Ruby On Rails](https://rubyonrails.org/) pour Ruby
 - [Grails](https://grails.org/) pour Java
 - etc.
@@ -268,9 +268,9 @@ Cet attribut vous permet de préciser la valeur de l'en-tête HTTP `Content-Type
 
 Mais si vous voulez envoyer des fichiers, il faut faire deux choses en plus :
 
-- régler l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method) à `POST`, car un contenu de fichier ne peut pas être mis dans des paramètres d'URL.
-- régler la valeur de [`enctype`](/fr/docs/Web/HTML/Element/form#attr-enctype) `à multipart/form-data`, car les données seront coupées en plusieurs parties, une pour chaque fichier plus une pour les données dans le corps du formulaire (si du texte a aussi été entré dans le formulaire).
-- incorporer un ou plusieurs widgets de [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file) pour permettre aux utilisateurs de choisir les fichiers à téléverser.
+- régler l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method) à `POST`, car un contenu de fichier ne peut pas être mis dans des paramètres d'URL.
+- régler la valeur de [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#attr-enctype) `à multipart/form-data`, car les données seront coupées en plusieurs parties, une pour chaque fichier plus une pour les données dans le corps du formulaire (si du texte a aussi été entré dans le formulaire).
+- incorporer un ou plusieurs widgets de [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file) pour permettre aux utilisateurs de choisir les fichiers à téléverser.
 
 Par exemple :
 
@@ -293,7 +293,7 @@ Par exemple :
 
 Chaque fois qu'on envoie des données à un serveur, il faut considérer la sécurité. Les formulaires HTML sont l'un des principaux vecteurs d'attaque (emplacements d'où les attaques peuvent provenir) contre les serveurs. Les problèmes ne viennent jamais des formulaires eux-mêmes — ils proviennent de la façon dont les serveurs gèrent les données.
 
-L'article [Sécurité des sites Web](/fr/docs/Learn/Server-side/First_steps/Website_security) de notre sujet d'apprentissage [server-side](/fr/docs/Learn/Server-side) aborde en détail un certain nombre d'attaques courantes et les défenses potentielles contre celles-ci. Vous devriez aller consulter cet article, pour vous faire une idée de ce qui est possible.
+L'article [Sécurité des sites Web](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) de notre sujet d'apprentissage [server-side](/fr/docs/Learn_web_development/Extensions/Server-side) aborde en détail un certain nombre d'attaques courantes et les défenses potentielles contre celles-ci. Vous devriez aller consulter cet article, pour vous faire une idée de ce qui est possible.
 
 ### Soyez paranoïaque : ne faites jamais confiances à vos utilisateurs
 
@@ -301,7 +301,7 @@ Alors, comment combattre ces menaces ? Ce sujet va bien au-delà de ce guide, ma
 
 Toute donnée qui va dans un serveur doit être vérifiée et nettoyée. Toujours. Sans exception.
 
-- **Échappez les caractères potentiellement dangereux**. Les caractères spécifiques dont vous devez vous méfier varient en fonction du contexte dans lequel les données sont utilisées et de la plateforme serveur que vous employez, mais tous les langages côté serveur disposent de fonctions à cet effet. Les choses à surveiller sont les séquences de caractères qui ressemblent à du code exécutable (comme [JavaScript](/fr/docs/Learn/JavaScript) ou des [Commandes SQL](https://en.wikipedia.org/wiki/SQL)).
+- **Échappez les caractères potentiellement dangereux**. Les caractères spécifiques dont vous devez vous méfier varient en fonction du contexte dans lequel les données sont utilisées et de la plateforme serveur que vous employez, mais tous les langages côté serveur disposent de fonctions à cet effet. Les choses à surveiller sont les séquences de caractères qui ressemblent à du code exécutable (comme [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) ou des [Commandes SQL](https://en.wikipedia.org/wiki/SQL)).
 - **Limitez la quantité de données entrantes pour n'autoriser que ce qui est nécessaire**.
 - **Sandbox des fichiers téléchargés**. Stockez-les sur un serveur différent et n'autorisez l'accès au fichier que par un sous-domaine différent ou, mieux encore, par un domaine complètement différent.
 
@@ -309,13 +309,13 @@ Vous devriez vous éviter beaucoup de problèmes en suivant ces trois règles, m
 
 ## Conclusion
 
-Comme vous pouvez le voir, envoyer un formulaire est facile, mais sécuriser son application peut s'avérer plus délicat. N'oubliez pas qu'un développeur n'est pas celui qui doit définir le modèle de sécurité des données.Comme nous allons le voir, il est possible d'effectuer la [validation des données côté client](/fr/docs/Learn/Forms/Form_validation), mais le serveur ne peut pas faire confiance à cette validation, car il n'a aucun moyen de savoir ce qui se passe réellement du côté client.
+Comme vous pouvez le voir, envoyer un formulaire est facile, mais sécuriser son application peut s'avérer plus délicat. N'oubliez pas qu'un développeur n'est pas celui qui doit définir le modèle de sécurité des données.Comme nous allons le voir, il est possible d'effectuer la [validation des données côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation), mais le serveur ne peut pas faire confiance à cette validation, car il n'a aucun moyen de savoir ce qui se passe réellement du côté client.
 
 ## Voir aussi
 
 Si vous voulez en savoir plus par rapport aux applications web, vous pouvez consulter ces ressources :
 
-- [Programmation d'un site web côté‑serveur&nbsp;: premiers pas](/fr/docs/Learn/Server-side/First_steps)
+- [Programmation d'un site web côté‑serveur&nbsp;: premiers pas](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps)
 - [Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page) (Projet pour la sécurité des applications dans un Web ouvert)
 - [Blog de Chris Shiflett à propos de la sécurité avec PHP](https://shiflett.org/)
 
