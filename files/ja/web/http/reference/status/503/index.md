@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`503 Service Unavailable`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、サーバーがリクエストを処理する準備ができていないことを示します。
 
 よくある原因としては、サーバーがメンテナンスのために停止しているか、過負荷状態であることが挙げられます。

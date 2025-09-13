@@ -28,7 +28,8 @@ Web API はイテレーターを返すこともあります。 JavaScript のコ
 - Web API の [Map 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map#map_風のブラウザー_api)オブジェクト、たとえば [`Headers`](/ja/docs/Web/API/Headers) は、独自のイテレーター型（Headers イテレーターなど）を `keys()`、`values()`、`entries()`、`[Symbol.iterator]()` メソッドそれぞれで返します。
 - Web API の [Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set_風のブラウザー_api)オブジェクト、たとえば [`FontFaceSet`](/ja/docs/Web/API/FontFaceSet) は、独自のイテレーター型（FontFaceSet イテレーターなど）を `keys()`、`values()`、`entries()`、`[Symbol.iterator]()` メソッドそれぞれで返します。
 
-> **メモ:** [`NodeIterator`](/ja/docs/Web/API/NodeIterator) やその他の古いインターフェイスはそのような名前が付いていますが、[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)や[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)には適合していません。
+> [!NOTE]
+> [`NodeIterator`](/ja/docs/Web/API/NodeIterator) やその他の古いインターフェイスはそのような名前が付いていますが、[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)や[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)には適合していません。
 
 これらのイテレーターはそれぞれ個別のプロトタイプオブジェクトを持っており、特定のイテレーターが使用する `next()` メソッドを定義しています。例えば、すべての String イテレーターオブジェクトは、隠しオブジェクトである `StringIteratorPrototype` を継承しており、このオブジェクトは、その文字列をコードポイントごとに反復処理する `next()` メソッドを持っています。また、 `StringIteratorPrototype` は [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティを持っており、初期値は文字列 `"String Iterator"` となります。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。同様に、他のイテレータープロトタイプも自分自身で `[Symbol.toStringTag]` の値を持ち、それは上で指定された名前と同じです。
 
@@ -92,7 +93,8 @@ const firstThreeDigitTerm = seq.find((n) => n >= 100);
 
 ### イテレーターヘルパーオブジェクト
 
-> **メモ:** 「イテレーターヘルパーオブジェクト」と「イテレーターヘルパーメソッド」は、 2 つの異なる概念です。イテレーターヘルパーオブジェクトは実行時に検出可能ですが、「イテレーターヘルパーメソッド」は、理解を助けるための一連のメソッドの名前にすぎません。「イテレーターヘルパー」は、コンテキストに応じて、オブジェクトまたはメソッドのどちらかを指す場合があります。
+> [!NOTE]
+> 「イテレーターヘルパーオブジェクト」と「イテレーターヘルパーメソッド」は、 2 つの異なる概念です。イテレーターヘルパーオブジェクトは実行時に検出可能ですが、「イテレーターヘルパーメソッド」は、理解を助けるための一連のメソッドの名前にすぎません。「イテレーターヘルパー」は、コンテキストに応じて、オブジェクトまたはメソッドのどちらかを指す場合があります。
 
 イテレーターヘルパーメソッドのうち、{{jsxref("Iterator/filter", "filter()")}}、{{jsxref("Iterator/flatMap", "flatMap()")}}、{{jsxref("Iterator/map", "map()")}}、{{jsxref("Iterator/drop", "drop()")}}、{{jsxref("Iterator/take", "take()")}} は、新しいイテレーターヘルパーオブジェクトを返します。 イテレーターヘルパーは、 `Iterator` のインスタンスでもあり、これらのヘルパーメソッドを連結可能にします。 イテレーターヘルパーオブジェクトはすべて、イテレータープロトコルを実装する共通のプロトタイプオブジェクトを継承しています。
 

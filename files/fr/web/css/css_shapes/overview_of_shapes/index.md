@@ -46,7 +46,7 @@ Dans [le guide sur les formes simples](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
 
 ### Boîtes de référence
 
-Les formes sont créées sur une boîte donnée. Aussi, on peut créer une boîte par rapport à chacune des boîtes du [modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et utiliser les valeurs :
+Les formes sont créées sur une boîte donnée. Aussi, on peut créer une boîte par rapport à chacune des boîtes du [modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et utiliser les valeurs :
 
 - `border-box`
 - `padding-box`
@@ -63,7 +63,7 @@ Pour en savoir plus, voir [le guide sur les formes et les boîtes](/fr/docs/Web/
 
 Une autre méthode qui peut s'avérer utile consiste à générer une forme à partir d'une image et de son canal alpha : le texte épousera alors la forme non-transparente de l'image. On peut alors avoir un texte qui « s'écoule » dans une image ou autour. Cette méthode permet aussi d'avoir une forme plus complexe sans avoir à recourir à un polygone (il n'est pas nécessaire que l'image soit visible).
 
-Attention, les images utilisées ainsi doivent être [compatibles avec les règles CORS](/fr/docs/Web/HTTP/CORS). Se n'est pass le cas, `shape-outside` se comportera comme si elle avait reçu la valeur `none` et il n'y aura alors aucune forme.
+Attention, les images utilisées ainsi doivent être [compatibles avec les règles CORS](/fr/docs/Web/HTTP/Guides/CORS). Se n'est pass le cas, `shape-outside` se comportera comme si elle avait reçu la valeur `none` et il n'y aura alors aucune forme.
 
 Dans l'exemple qui suit, on utilise une image avec une zone complètement transparente et on utilise une image comme valeur d'URL pour `shape-outside`. La forme ainsi créée utilise la zone opaque de l'image : la forme de la montgolfière.
 

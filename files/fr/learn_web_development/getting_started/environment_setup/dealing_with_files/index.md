@@ -7,7 +7,7 @@ original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site", "Apprendre/Commencer_avec_le_web/Les_bases_HTML","Apprendre/Commencer_avec_le_web")}}
 
-Un site web est composé de nombreux fichiers : contenu textuel, code, feuilles de styles, contenus média, etc. Lors de la construction d'un site web, ces fichiers doivent être organisés et rangés sur votre ordinateur afin qu'ils puissent interagir les uns avec les autres et que le contenu s'affiche correctement. Une fois que c'est fait, vous pourrez alors [téléverser ces fichiers sur un serveur](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website). _Gérer les fichiers_ aborde certains problèmes auxquels vous devez faire attention pour mettre en place une organisation judicieuse des fichiers de votre site web.
+Un site web est composé de nombreux fichiers : contenu textuel, code, feuilles de styles, contenus média, etc. Lors de la construction d'un site web, ces fichiers doivent être organisés et rangés sur votre ordinateur afin qu'ils puissent interagir les uns avec les autres et que le contenu s'affiche correctement. Une fois que c'est fait, vous pourrez alors [téléverser ces fichiers sur un serveur](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website). _Gérer les fichiers_ aborde certains problèmes auxquels vous devez faire attention pour mettre en place une organisation judicieuse des fichiers de votre site web.
 
 ## Où placer votre site web sur votre ordinateur&nbsp;?
 
@@ -39,7 +39,7 @@ Cela dit, regardons la structure que le site de test devrait avoir. Les élémen
 
 ## Les chemins de fichiers
 
-Pour que les fichiers puissent converser entre eux, il faut préciser le chemin pour les trouver — en résumé, la route qu'un fichier doit connaître pour situer l'autre fichier. Nous allons illustrer cela avec un peu de HTML dans `index.html` pour que la page affiche l'image choisie dans l'article « [Quel aspect pour votre site web&nbsp;?](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)&nbsp;».
+Pour que les fichiers puissent converser entre eux, il faut préciser le chemin pour les trouver — en résumé, la route qu'un fichier doit connaître pour situer l'autre fichier. Nous allons illustrer cela avec un peu de HTML dans `index.html` pour que la page affiche l'image choisie dans l'article « [Quel aspect pour votre site web&nbsp;?](/fr/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)&nbsp;».
 
 1. Copiez l'image précédemment choisie dans votre dossier `images`.
 2. Ouvrez le fichier `index.html` et insérez le code suivant exactement comme indiqué. Ne vous préoccupez pas de sa signification pour le moment — nous verrons les structures plus en détail par la suite.

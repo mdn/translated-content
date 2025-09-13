@@ -3,8 +3,6 @@ title: background-clip
 slug: Web/CSS/background-clip
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`background-clip`** 속성은 요소의 배경이 테두리, 안쪽 여백, 콘텐츠 상자 중 어디까지 차지할 지 지정합니다.
 
 {{InteractiveExample("CSS Demo: background-clip")}}

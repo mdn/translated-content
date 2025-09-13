@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 这篇指南会给你入门 JavaScript 模块的全部信息。
 

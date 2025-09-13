@@ -3,8 +3,6 @@ title: Firefox 75 for developers
 slug: Mozilla/Firefox/Releases/75
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 75 の変更点をまとめています。
 
 **付随する hacks ブログの記事「[Firefox 75: Ambitions for April](https://hacks.mozilla.org/2020/04/firefox-75-ambitions-for-april/)」もご覧ください。**
@@ -32,8 +30,8 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 [ARIA annotations](/ja/docs/Web/Accessibility/ARIA) に関する新しいロールやオブジェクトを、Windows および Linux の Firefox で公開しました (これらはスクリーンリーダーがサポートするまで使用できないことを覚えておいてください):
 
 - `aria-description` ([Firefox バグ 1608961](https://bugzil.la/1608961))
-- [`role="mark"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Mark_role) および [`role="suggestion"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Suggestion_role) ([Firefox バグ 1608965](https://bugzil.la/1608965))
-- [`role="comment"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Comment_role) ([Firefox バグ 1608969](https://bugzil.la/1608969))
+- [`role="mark"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role) および [`role="suggestion"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role) ([Firefox バグ 1608965](https://bugzil.la/1608965))
+- [`role="comment"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role) ([Firefox バグ 1608969](https://bugzil.la/1608969))
 - `aria-details` で複数の ID ([Firefox バグ 1608883](https://bugzil.la/1608883))
 
 > [!NOTE]

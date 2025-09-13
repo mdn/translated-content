@@ -9,7 +9,8 @@ l10n:
 
 **`TypedArray[Symbol.species]`** は静的アクセサープロパティで、型付き配列のメソッドの返値を構築するのに使われるコンストラクターを返します。
 
-> **警告:** `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性を生み出す可能性があります。また、特定の最適化も非常に難しくなります。エンジンの実装者は[この機能を削除するかどうか調査](https://github.com/tc39/proposal-rm-builtin-subclassing)しています。可能であれば、この機能に頼ることは避けてください。
+> [!WARNING]
+> `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性を生み出す可能性があります。また、特定の最適化も非常に難しくなります。エンジンの実装者は[この機能を削除するかどうか調査](https://github.com/tc39/proposal-rm-builtin-subclassing)しています。可能であれば、この機能に頼ることは避けてください。
 
 ## 構文
 
@@ -61,7 +62,8 @@ class BadArray2 extends Int8Array {
 new BadArray2(1).map(() => 0n); // TypeError: TypedArray.prototype.map constructed typed array of different content type from |this|
 ```
 
-> **メモ:** [SpiderMonkey](https://bugzil.la/1640194) と V8 の両方にバグがあり、内容物の型が一致するかどうかが調べられません。2 つ目の例では Safari のみで {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> [SpiderMonkey](https://bugzil.la/1640194) と V8 の両方にバグがあり、内容物の型が一致するかどうかが調べられません。2 つ目の例では Safari のみで {{jsxref("TypeError")}} が発生します。
 
 ## 例
 

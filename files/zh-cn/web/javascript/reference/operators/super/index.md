@@ -3,8 +3,6 @@ title: super
 slug: Web/JavaScript/Reference/Operators/super
 ---
 
-{{jsSidebar("Operators")}}
-
 **super** 关键字用于访问对象字面量或类的原型（[[Prototype]]）上的属性，或调用父类的构造函数。
 
 `super.prop` 和 `super[expr]` 表达式在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)和[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)任何[方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)中都是有效的。`super(...args)` 表达式在类的构造函数中有效。

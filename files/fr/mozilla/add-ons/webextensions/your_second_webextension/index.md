@@ -157,7 +157,7 @@ Voici le contenu du fichier HTML :
 </html>
 ```
 
-On a un élément [`<div>`](/fr/docs/Web/HTML/Element/div) dont l'identifiant (`id`) vaut `"popup-content"` et qui contient un élément pour chaque choix d'animal. On a également un autre `<div>` avec l'identifiant `"error-content"` et une classe `"hidden"`. Nous utiliserons cet élément au cas où il y ait un problème à l'initialisation de la popup.
+On a un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) dont l'identifiant (`id`) vaut `"popup-content"` et qui contient un élément pour chaque choix d'animal. On a également un autre `<div>` avec l'identifiant `"error-content"` et une classe `"hidden"`. Nous utiliserons cet élément au cas où il y ait un problème à l'initialisation de la popup.
 
 Il est à noter que le ficher CSS et le fichier JS sont inclus depuis ce fichier, tout comme une page web normale.
 
@@ -389,7 +389,7 @@ La première chose que fait le script de contenu est de vérifier une variable g
 
 Après ça, on voit plus loin que le script de contenu utilise [`browser.runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage). Cela permet de faire le lien avec le script de popup qui envoyait deux messages : "beastify" et "reset".
 
-- Si le message est "beastify", on s'attend à ce que celui-ci contienne une URL pointant vers une image. On supprime alors toute image de bête ayant été placée par d'éventuels appels précédents puis on construit et on ajoute un élément [`<img>`](/fr/docs/Web/HTML/Element/img) dont l'attribut `src` est défini avec l'URL pointant vers l'image de la bête sélectionnée.
+- Si le message est "beastify", on s'attend à ce que celui-ci contienne une URL pointant vers une image. On supprime alors toute image de bête ayant été placée par d'éventuels appels précédents puis on construit et on ajoute un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) dont l'attribut `src` est défini avec l'URL pointant vers l'image de la bête sélectionnée.
 - Si le message est "reset", on retire toute image de bête ayant été ajoutée.
 
 ### Les bêtes

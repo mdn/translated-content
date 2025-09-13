@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`scroll-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する名前付きスクロール進行タイムラインを定義するために使用します。 `scroll-timeline` はタイムラインを提供するスクローラーに設定します。スクロール開始位置は 0% の進行を表し、スクロール終了位置は 100% の進行を表します。 0% の位置と 100% の位置が一致する場合（つまり、スクロールコンテナーがスクロールするオーバーフローがない場合）、タイムラインは非アクティブになります。
 
@@ -43,7 +43,8 @@ scroll-timeline: --custom_name_for_timeline;
 
 `scroll-timeline` 一括指定プロパティは `<scroll-timeline-name>` と `<scroll-timeline-axis>` の値の組み合わせとしてコンテナー要素に適用することができます。少なくともどちらか一方の値を指定しなければなりません。両方の値を指定する場合は、`<scroll-timeline-name>` 値の後に `<scroll-timeline-axis>` 値が続くようにしなければなりません。
 
-> **メモ:** `<scroll-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) 値でなければなりません。すなわち、 `--` で始めなければなりません。これは標準 CSS キーワードとの名前の衝突を避けるのに役立ちます。
+> [!NOTE]
+> `<scroll-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) 値でなければなりません。すなわち、 `--` で始めなければなりません。これは標準 CSS キーワードとの名前の衝突を避けるのに役立ちます。
 
 ### 値
 

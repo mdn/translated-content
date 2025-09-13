@@ -5,7 +5,7 @@ slug: Web/CSS/text-transform
 
 {{CSSRef}}
 
-La propriété **`text-transform`** définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations [Ruby](/fr/docs/Web/HTML/Element/ruby).
+La propriété **`text-transform`** définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations [Ruby](/fr/docs/Web/HTML/Reference/Elements/ruby).
 
 {{InteractiveExample("CSS Demo: text-transform")}}
 
@@ -67,7 +67,7 @@ La propriété `text-transform` gère les différences liées aux langues, par e
 - En grec (el), les voyelles perdent leur accent lorsque tout le mot est écrit en capitales (`ά`/`Α`) à l'exception du eta disjonctif (`ή`/`Ή`). Les diphtongues avec un accent sur la première voyelle perde l'accent et récupère un tréma sur la seconde voyelle (`άι`/`ΑΪ`). La lettre sigma a deux formes minuscules : `σ` et `ς`. `ς` est utilisée uniquement lorsque c'est la dernière lettre du mot. Lorsque l'agent utilisateur applique `text-transform: lowercase` à un sigma majuscule (`Σ`), il doit choisir l'une des deux formes selon le contexte.
 - En gaëlique (ga), une lettre qui préfixe un mot doit rester en minuscule lorsqu'on capitalise toutes les lettres. Ainsi, en appliquant `text-transform: uppercase` à `ar aon tslí`, on obtiendra `AR AON tSLÍ` et non `AR AON TSLÍ`. Dans certains cas, un trait d'union peut être retiré lors du passage en majuscules : `an t-uisce` deviendra `AN tUISCE` (le trait-d'union sera bien réinséré avec `text-transform: lowercase`)
 
-La langue d'un document HTML est définie par l'attribut XML `xml:lang`, qui a la priorité sur l'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes/lang).
+La langue d'un document HTML est définie par l'attribut XML `xml:lang`, qui a la priorité sur l'attribut global [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang).
 
 Le support de ces différents cas peut varier d'un navigateur à un autre. Pour plus de détails, [voir le tableau de compatibilité des navigateurs](#compat).
 
@@ -105,7 +105,7 @@ text-transform: unset;
 - `full-width` {{experimental_inline}}
   - : Ce mot-clé force l'écriture de chaque caractère dans un carré, ce qui permet de les aligner avec des scripts d'Asie Orientale (par exemple du chinois ou du japonais).
 - `full-size-kana`
-  - : Cette valeur est généralement utilisée pour [les annotations Ruby](/fr/docs/Web/HTML/Element/ruby). Ce mot-clé convertit les caractères Kana de petite taille en leur équivalent de grande taille. Cela permet de compenser les problèmes de lisibilité des tailles de police généralement utilisées pour le Ruby.
+  - : Cette valeur est généralement utilisée pour [les annotations Ruby](/fr/docs/Web/HTML/Reference/Elements/ruby). Ce mot-clé convertit les caractères Kana de petite taille en leur équivalent de grande taille. Cela permet de compenser les problèmes de lisibilité des tailles de police généralement utilisées pour le Ruby.
 
 ## Définition formelle
 
@@ -179,7 +179,7 @@ p.full-size-kana {
 
 De grandes portions de texte utilisant `text-transform` avec la valeur `uppercase` peuvent être difficilement lisibles par les personnes dyslexiques ou souffrant de problèmes cognitifs.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Spécifications

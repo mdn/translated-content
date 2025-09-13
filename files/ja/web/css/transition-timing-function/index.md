@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 2c49a844f820f191f98b13130e0075bbeed530f3
 ---
 
-{{CSSRef}}
-
 **`transition-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
 
-{{InteractiveExample("CSS Demo: transition-timing-function")}}
+{{InteractiveExample("CSS デモ: transition-timing-function")}}
 
 ```css interactive-example-choice
 transition-timing-function: linear;

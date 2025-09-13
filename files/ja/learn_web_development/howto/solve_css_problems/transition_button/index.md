@@ -67,7 +67,8 @@ button {
 
 {{EmbedLiveSample("transition-button")}}
 
-> **メモ:** {{cssxref("transition")}} プロパティは、{{cssxref("transition-delay")}}、{{cssxref("transition-duration")}}、{{cssxref("transition-property")}}、{{cssxref("transition-timing-function")}} の一括指定です。トランジションを調整する方法を調べるには、MDNでこれらのプロパティのページを参照してください。
+> [!NOTE]
+> {{cssxref("transition")}} プロパティは、{{cssxref("transition-delay")}}、{{cssxref("transition-duration")}}、{{cssxref("transition-property")}}、{{cssxref("transition-timing-function")}} の一括指定です。トランジションを調整する方法を調べるには、MDNでこれらのプロパティのページを参照してください。
 
 ## 関連情報
 

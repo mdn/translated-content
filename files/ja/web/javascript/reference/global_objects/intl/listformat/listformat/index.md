@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 **`Intl.ListFormat()`** コンストラクターは、言語を考慮したリストの書式化を可能にする
 {{jsxref("Intl/ListFormat", "Intl.ListFormat")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.ListFormat", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];

@@ -22,4 +22,4 @@ Content-Length: 128
 
 ### Connaissance technique
 
-- [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
+- [Liste de tous les en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)

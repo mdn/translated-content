@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}
-
 **`:user-valid`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示已验证的表单元素，其值是根据[验证约束](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)来进行正确验证的。然而，不同于 {{cssxref(":valid")}}，它只在用户与它进行交互后才匹配。
 
 如果表单控件有效且发生下列情况之一，则应用该伪类。

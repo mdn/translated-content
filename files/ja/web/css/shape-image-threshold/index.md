@@ -3,11 +3,9 @@ title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
 ---
 
-{{CSSRef}}
-
 **`shape-image-threshold`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("shape-outside")}} の値に指定された画像によってシェイプを抽出するために使用するアルファチャネルのしきい値を設定します。
 
-{{InteractiveExample("CSS Demo: shape-image-threshold")}}
+{{InteractiveExample("CSS デモ: shape-image-threshold")}}
 
 ```css interactive-example-choice
 shape-outside: linear-gradient(

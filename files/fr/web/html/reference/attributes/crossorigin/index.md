@@ -6,7 +6,7 @@ original_slug: Web/HTML/Attributes/crossorigin
 
 {{HTMLSidebar}}
 
-L'attribut **`crossorigin`**, valable sur les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<img>`](/fr/docs/Web/HTML/Element/img), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<script>`](/fr/docs/Web/HTML/Element/script) et [`<video>`](/fr/docs/Web/HTML/Element/video), fournit la prise en charge de [CORS](/fr/docs/Web/HTTP/CORS), définissant la manière dont l'élément traite les demandes d'origine croisée, permettant ainsi la configuration des demandes CORS pour les données extraites de l'élément. Selon l'élément, l'attribut peut être un attribut de paramètres CORS.
+L'attribut **`crossorigin`**, valable sur les éléments [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio), [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link), [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) et [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), fournit la prise en charge de [CORS](/fr/docs/Web/HTTP/Guides/CORS), définissant la manière dont l'élément traite les demandes d'origine croisée, permettant ainsi la configuration des demandes CORS pour les données extraites de l'élément. Selon l'élément, l'attribut peut être un attribut de paramètres CORS.
 
 L'attribut de contenu `crossorigin` sur les éléments médias est un attribut de paramétrage CORS.
 
@@ -29,7 +29,7 @@ Un mot-clé invalide ou une chaîne de caractères vide seront interprétés com
 
 ### Utiliser `crossorigin` avec l'élément `script`
 
-On peut utiliser l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) afin d'indiquer au navigateur d'exécuter un script (ici, `https://exemple.com/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur.
+On peut utiliser l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) afin d'indiquer au navigateur d'exécuter un script (ici, `https://exemple.com/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur.
 
 ```html
 <script
@@ -39,7 +39,7 @@ On peut utiliser l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) afin
 
 ### Utiliser des informations d'authentification avec un manifeste
 
-La valeur `use-credentials` doit être utilisée lorsqu'on récupère un [manifeste](/fr/docs/Web/Manifest) nécessitant des informations d'authentification, y compris lorsque le fichier provient de la même origine :
+La valeur `use-credentials` doit être utilisée lorsqu'on récupère un [manifeste](/fr/docs/Web/Progressive_web_apps/Manifest) nécessitant des informations d'authentification, y compris lorsque le fichier provient de la même origine :
 
 ```html
 <link rel="manifest" href="/app.manifest" crossorigin="use-credentials" />
@@ -55,5 +55,5 @@ La valeur `use-credentials` doit être utilisée lorsqu'on récupère un [manife
 
 ## Voir aussi
 
-- [Partage des ressources entre origines (CORS)](/fr/docs/Web/HTTP/CORS)
-- [L'attribut HTML `rel`](/fr/docs/Web/HTML/Attributes/rel)
+- [Partage des ressources entre origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
+- [L'attribut HTML `rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)

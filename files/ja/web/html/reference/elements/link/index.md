@@ -11,7 +11,7 @@ l10n:
 **`<link>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書と外部のリソースとの関係を指定します。
 この要素は{{Glossary("CSS", "スタイルシート")}}へのリンクに最もよく使用されますが、サイトのアイコン（"favicon" スタイルのアイコンと、モバイル端末のホーム画面やアプリのアイコンの両方）の確立や、その他のことにも使用されます。
 
-{{InteractiveExample("HTML Demo: &lt;link&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;link&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
@@ -352,7 +352,8 @@ l10n:
 </script>
 ```
 
-> **メモ:** `load` イベントはスタイルシートとスタイルシートがインポートするすべてのコンテンツの読み込みと解析が行われた後、スタイルシートがコンテンツに適用される直前に発生します。
+> [!NOTE]
+> `load` イベントはスタイルシートとスタイルシートがインポートするすべてのコンテンツの読み込みと解析が行われた後、スタイルシートがコンテンツに適用される直前に発生します。
 
 ### 先読みの例
 

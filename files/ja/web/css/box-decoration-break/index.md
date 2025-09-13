@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`box-decoration-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[断片](/ja/docs/Web/CSS/CSS_fragmentation)が複数の行、段、ページに渡る場合に描画する方法を指定します。
 
-{{InteractiveExample("CSS Demo: box-decoration-break")}}
+{{InteractiveExample("CSS デモ: box-decoration-break")}}
 
 ```css interactive-example-choice
 -webkit-box-decoration-break: slice;

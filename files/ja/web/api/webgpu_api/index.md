@@ -395,7 +395,8 @@ const bindGroup = device.createBindGroup({
 });
 ```
 
-> **メモ:** {{domxref("GPUComputePipeline.getBindGroupLayout()")}} メソッドを呼び出すことで、バインドグループの生成時に使用される暗黙のレイアウトを取得できます。さらに、レンダーパイプラインで利用可能なバージョンもあります。{{domxref("GPURenderPipeline.getBindGroupLayout()")}} を参照してください。
+> [!NOTE]
+> {{domxref("GPUComputePipeline.getBindGroupLayout()")}} メソッドを呼び出すことで、バインドグループの生成時に使用される暗黙のレイアウトを取得できます。さらに、レンダーパイプラインで利用可能なバージョンもあります。{{domxref("GPURenderPipeline.getBindGroupLayout()")}} を参照してください。
 
 ### コンピュートパイプラインの生成
 

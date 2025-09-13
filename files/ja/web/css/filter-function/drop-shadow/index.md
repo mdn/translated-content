@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`drop-shadow()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、入力画像にドロップシャドウ効果を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-{{InteractiveExample("CSS Demo: drop-shadow()")}}
+{{InteractiveExample("CSS デモ: drop-shadow()")}}
 
 ```css interactive-example-choice
 filter: drop-shadow(30px 10px 4px #4444dd);

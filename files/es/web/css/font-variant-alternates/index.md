@@ -3,8 +3,6 @@ title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`font-variant-alternates`** controla el uso de glifos alternos. Estos glifos alternos pueden ser referenciados por nombres alternativos en {{cssxref("@font-feature-values")}}.

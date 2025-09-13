@@ -30,6 +30,6 @@ element.contentEditable = "true";
 
 ## Voir aussi
 
-- [Contenu editable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
+- [Contenu editable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
 - {{domxref("HTMLElement.isContentEditable")}}
-- L'attribut global [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable) .
+- L'attribut global [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) .

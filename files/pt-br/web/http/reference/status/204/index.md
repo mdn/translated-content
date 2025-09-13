@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/204
 original_slug: Web/HTTP/Status/204
 ---
 
-{{HTTPSidebar}}
-
 O código de resposta HTTP de status de sucesso **`204 No Content`** indica que a solicitação foi bem sucedida e o cliente não precisa sair da página atual. Uma resposta `204` é armazenada em cache por padrão. Um cabeçalho {{HTTPHeader("ETag")}} está incluso na resposta.
 
 O caso de uso comum é retornar `204` como resultado de uma solicitação {{HTTPMethod("PUT")}}, atualizando um recurso, sem alterar o conteúdo atual da página exibida para o usuário. Se o recurso for criado, {{HTTPStatus("201")}} `Created` será retornado. Se a página for alterada para a página recém-atualizada, o {{HTTPStatus ("200")}} deve ser usado em vez disso.

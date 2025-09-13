@@ -19,7 +19,7 @@ WebAssembly.Module.customSections(module, nomSection)
 ### Paramètres
 
 - `module`
-  - : L'objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) pour lequel on veut obtenir les sections personnalisées.
+  - : L'objet [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module) pour lequel on veut obtenir les sections personnalisées.
 - `nomSection`
   - : Le nom de la section personnalisée qu'on souhaite obtenir.
 
@@ -29,7 +29,7 @@ Un tableau contenant des [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Globa
 
 ### Exceptions
 
-Si le module passé en argument n'est pas une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module), la méthode lèvera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+Si le module passé en argument n'est pas une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module), la méthode lèvera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
 ## Description
 
@@ -70,5 +70,5 @@ WebAssembly.compileStreaming(fetch("simple-name-section.wasm")).then((mod) => {
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

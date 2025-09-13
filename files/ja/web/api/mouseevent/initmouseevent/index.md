@@ -14,7 +14,7 @@ l10n:
 > このメソッドは非推奨になったので、今後は使用しないでください。
 >
 > 代わりに {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} など、特定のイベントのコンストラクターを使用してください。
-> [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、使用方法についての詳しい情報があります。
+> [イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)のページに、使用方法についての詳しい情報があります。
 
 この方法で初期化されるイベントは、 {{domxref("Document.createEvent()")}} メソッドで作成されたものでなければなりません。
 このメソッドは、 {{domxref("EventTarget.dispatchEvent()")}} を使用してイベントが配信される前に、イベントを設定するために呼び出す必要があります。

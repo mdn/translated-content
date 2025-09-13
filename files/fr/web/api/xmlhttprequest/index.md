@@ -141,7 +141,7 @@ La plupart des navigateurs récents gère également les évènements via la mé
 
 - {{domxref("XMLSerializer")}} : sérialiser un arbre DOM en XML
 - Les tutoriels MDN sur `XMLHttpRequest`:
-  - [Introduction à AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+  - [Introduction à AJAX](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
   - [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
   - [Manipuler le HTML avec XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [L'API Fetch](/fr/docs/Web/API/Fetch_API)

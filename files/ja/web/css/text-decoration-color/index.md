@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-{{CSSRef}}
-
 **`text-decoration-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{ cssxref("text-decoration-line") }} でテキストに追加された装飾の色を設定します。
 
 色はプロパティ値のスコープにある装飾、すなわち下線、上線、打消し線、それにスペルミスに印をつけるために使われるような波線などに適用されます。
 
-{{InteractiveExample("CSS Demo: text-decoration-color")}}
+{{InteractiveExample("CSS デモ: text-decoration-color")}}
 
 ```css interactive-example-choice
 text-decoration-color: red;

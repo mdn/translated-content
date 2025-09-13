@@ -257,5 +257,5 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
 
 ## Voir aussi
 
-- [Les types de donnée de base en CSS](/fr/docs/Web/CSS/CSS_Types)
-- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Les types de donnée de base en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
