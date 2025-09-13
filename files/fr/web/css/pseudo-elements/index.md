@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
 ---
 
-Un **pseudo-élément** [CSS](/fr/docs/Web/CSS) est un mot-clé ajouté à un sélecteur qui vous permet de styliser une partie spécifique du ou des éléments sélectionnés.
+Un **pseudo-élément** [CSS](/fr/docs/Web/CSS) est un mot-clé ajouté à un sélecteur qui vous permet de mettre en forme une partie spécifique du ou des éléments sélectionnés.
 
 ## Syntaxe
 
@@ -27,12 +27,12 @@ p::first-line {
 
 Les doubles deux-points (`::`) sont utilisés pour les pseudo-éléments. Cela distingue les pseudo-éléments des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) qui utilisent un seul deux-points (`:`) dans leur notation. Notez que les navigateurs prennent en charge la syntaxe à un seul deux-points pour les quatre pseudo-éléments d'origine&nbsp;: `::before`, `::after`, `::first-line` et `::first-letter`.
 
-Les pseudo-éléments n'existent pas indépendamment. L'élément dont un pseudo-élément fait partie est appelé son _élément d'origine_. Un pseudo-élément doit apparaître après tous les autres composants dans le sélecteur [complexe](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) ou [composé](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector). Le dernier élément du sélecteur est l'élément d'origine du pseudo-élément. Par exemple, vous pouvez sélectionner la première ligne d'un paragraphe en utilisant `p::first-line`, mais pas les enfants de la première ligne. Ainsi, `p::first-line > *` est invalide.
+Les pseudo-éléments n'existent pas indépendamment. L'élément dont un pseudo-élément fait partie est appelé son _élément d'origine_. Un pseudo-élément doit apparaître après tous les autres composants dans le sélecteur [complexe](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#sélecteur_complexe) ou [composé](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#sélecteur_composé). Le dernier élément du sélecteur est l'élément d'origine du pseudo-élément. Par exemple, vous pouvez sélectionner la première ligne d'un paragraphe en utilisant `p::first-line`, mais pas les enfants de la première ligne. Ainsi, `p::first-line > *` est invalide.
 
 Un pseudo-élément peut être sélectionné en fonction de l'état actuel de l'élément d'origine. Par exemple, `p:hover::first-line` sélectionne la première ligne (pseudo-élément) d'un paragraphe lorsque le paragraphe lui-même est survolé (pseudo-classe).
 
 > [!NOTE]
-> Quand une [liste de sélection](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contient un sélecteur invalide, l'ensemble du bloc de style est ignoré.
+> Quand une [liste de sélection](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#liste_de_sélection) contient un sélecteur invalide, l'ensemble du bloc de style est ignoré.
 
 ## Les pseudo-éléments typographiques
 
@@ -42,12 +42,12 @@ Un pseudo-élément peut être sélectionné en fonction de l'état actuel de l'
   - : La première lettre, le premier chiffre ou le premier symbole de la première ligne de l'élément d'origine.
 - {{CSSxRef("::cue")}}
   - : Les [cues WebVTT](/fr/docs/Web/API/WebVTT_API) à l'intérieur d'un élément sélectionné.
-    Cela peut être utilisé pour [styliser les sous-titres et autres cues](/fr/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) dans les médias avec des pistes VTT.
+    Cela peut être utilisé pour [mettre en forme les sous-titres et autres cues](/fr/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) dans les médias avec des pistes VTT.
     Le module [CSS pseudo-éléments](/fr/docs/Web/CSS/CSS_pseudo-elements) définit également les sous-pseudo-éléments `::postfix` et `::prefix`. Ceux-ci ne sont pas encore pris en charge par aucun navigateur.
 
-## Les pseudo-éléments de mise en surbrillance
+## Les pseudo-éléments de surlignage
 
-Sélectionne des sections de document en fonction du contenu et de l'état du document, permettant à ces zones d'être stylisées différemment pour indiquer cet état à l'utilisateur·ice.
+Sélectionne des sections de document en fonction du contenu et de l'état du document, permettant à ces zones d'être mises en forme différemment pour indiquer cet état à l'utilisateur·ice.
 
 - {{CSSxRef("::selection")}}
   - : La portion d'un document qui a été sélectionnée.
@@ -62,7 +62,7 @@ Sélectionne des sections de document en fonction du contenu et de l'état du do
 
 ## Les pseudo-éléments conformes à l'arborescence
 
-Ces pseudo-éléments se comportent comme des éléments normaux, s'intégrant parfaitement dans le modèle de boîte. Ils agissent comme un élément enfant qui peut être stylisé directement au sein de la hiérarchie de l'élément d'origine.
+Ces pseudo-éléments se comportent comme des éléments normaux, s'intégrant parfaitement dans le modèle de boîte. Ils agissent comme un élément enfant qui peut être mis en forme directement au sein de la hiérarchie de l'élément d'origine.
 
 - {{CSSxRef("::before")}}
   - : Crée un pseudo-élément qui est le premier enfant de l'élément sélectionné.
@@ -178,25 +178,25 @@ V
 
 ## Les pseudo-éléments imbriqués
 
-Vous pouvez chaîner certains sélecteurs de pseudo-éléments pour styliser des pseudo-éléments imbriqués à l'intérieur d'autres pseudo-éléments. Les combinaisons de pseudo-éléments imbriqués suivantes sont prises en charge&nbsp;:
+Vous pouvez chaîner certains sélecteurs de pseudo-éléments pour mettre en forme des pseudo-éléments imbriqués à l'intérieur d'autres pseudo-éléments. Les combinaisons de pseudo-éléments imbriqués suivantes sont prises en charge&nbsp;:
 
 - {{CSSxRef("::after")}}
-  - `::after::marker`: Sélectionne le pseudo-élément {{CSSxRef("::marker")}} d'un pseudo-élément `::after`, lorsque `::after` est stylisé comme un élément de liste, avec {{CSSxRef("display", "display: list-item")}}.
+  - `::after::marker`: Sélectionne le pseudo-élément {{CSSxRef("::marker")}} d'un pseudo-élément `::after`, lorsque `::after` est mis en forme comme un élément de liste, avec {{CSSxRef("display", "display: list-item")}}.
 - {{CSSxRef("::before")}}
-  - `::before::marker`: Sélectionne le pseudo-élément {{CSSxRef("::marker")}} d'un pseudo-élément `::before`, lorsque `::before` est stylisé comme un élément de liste, avec {{CSSxRef("display", "display: list-item")}}.
+  - `::before::marker`: Sélectionne le pseudo-élément {{CSSxRef("::marker")}} d'un pseudo-élément `::before`, lorsque `::before` est mis en forme comme un élément de liste, avec {{CSSxRef("display", "display: list-item")}}.
 
 Consultez les pages de référence des pseudo-éléments individuels pour des exemples et des informations sur la compatibilité des navigateurs.
 
 ## Héritage des pseudo-éléments de surlignage
 
-[Les pseudo-éléments de surlignage](#highlight_pseudo-elements), tels que {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, et {{CSSxref("::grammar-error")}}, suivent un modèle d'héritage cohérent qui diffère de [l'héritage des éléments réguliers](/fr/docs/Web/CSS/CSS_cascade/Inheritance).
+[Les pseudo-éléments de surlignage](#les_pseudo-éléments_de_surlignage), tels que {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, et {{CSSxref("::grammar-error")}}, suivent un modèle d'héritage cohérent qui diffère de [l'héritage des éléments réguliers](/fr/docs/Web/CSS/CSS_cascade/Inheritance).
 
 Lorsque vous appliquez des styles aux pseudo-éléments de surlignage, ils héritent à la fois de&nbsp;:
 
 1. Leurs éléments parents (suivant l'héritage normal).
 2. Les pseudo-éléments de surlignage de leurs éléments parents (suivant l'héritage des surlignages).
 
-Cela signifie que si vous stylisez à la fois le pseudo-élément de surlignage d'un élément parent et le pseudo-élément de surlignage d'un élément enfant, le texte surligné de l'enfant combinera les propriétés des deux sources.
+Cela signifie que si vous mettez en forme à la fois le pseudo-élément de surlignage d'un élément parent et le pseudo-élément de surlignage d'un élément enfant, le texte surligné de l'enfant combinera les propriétés des deux sources.
 
 Voici un exemple concret.
 
@@ -287,4 +287,4 @@ Lorsque vous utilisez le sélecteur universel avec des pseudo-éléments de surl
 - Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
 - Le module des [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
 - [Apprendre&nbsp;: Pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
-- [Changements d'héritage pour le style de sélection CSS <sup>(angl.)</sup>](https://developer.chrome.com/blog/selection-styling) - Explication détaillée des changements du modèle d'héritage des pseudo-éléments de surlignage dans Chrome 134
+- [Changements d'héritage pour le style de sélection CSS <sup>(angl.)</sup>](https://developer.chrome.com/blog/selection-styling) — Explication détaillée des changements du modèle d'héritage des pseudo-éléments de surlignage dans Chrome 134
