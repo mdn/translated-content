@@ -7,7 +7,7 @@ l10n:
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-caps`** contrôle l'utilisation de glyphes alternatifs pour les petites capitales (<i lang="en">small caps</i>), les très petites capitales (<i lang="en">petite caps</i>) ou les capitales de titrage.
 
-{{InteractiveExample("CSS Demo: font-variant-caps")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: font-variant-caps")}}
 
 ```css interactive-example-choice
 font-variant-caps: normal;
@@ -24,7 +24,7 @@ font-variant-caps: all-small-caps;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>Difficult waffles</p>
+    <p>Gaufres difficiles</p>
   </div>
 </section>
 ```
