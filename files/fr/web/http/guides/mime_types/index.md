@@ -7,7 +7,7 @@ l10n:
   sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
-Un **type de média** (anciennement appelé **<i lang="en">Multipurpose Internet Mail Extensions</i> ou type **MIME**) indique la nature et le format d'un document, d'un fichier ou d'un ensemble d'octets. Les types MIME sont définis et normalisés dans l'{{RFC(6838)}} de l'IETF.
+Un **type de média** (anciennement appelé **<i lang="en">Multipurpose Internet Mail Extensions</i>** ou type **MIME**) indique la nature et le format d'un document, d'un fichier ou d'un ensemble d'octets. Les types MIME sont définis et normalisés dans l'{{RFC(6838)}} de l'IETF.
 
 L'[Internet Assigned Numbers Authority (IANA) <sup>(angl.)</sup>](https://www.iana.org/) est responsable de tous les types MIME officiels. La liste la plus à jour et la plus complète se trouve sur la page [Media Types <sup>(angl.)</sup>](https://www.iana.org/assignments/media-types/media-types.xhtml).
 
@@ -199,7 +199,8 @@ Le `<form>` suivant&nbsp;:
   <label>Nom&nbsp;: <input name="monChampTexte" value="Test" /></label>
   <label><input type="checkbox" name="maCheckBox" /> Check</label>
   <label>
-    Charger un fichier&nbsp;: <input type="file" name="monFichier" value="test.txt" />
+    Charger un fichier&nbsp;:
+    <input type="file" name="monFichier" value="test.txt" />
   </label>
   <button>Envoyer le fichier</button>
 </form>
