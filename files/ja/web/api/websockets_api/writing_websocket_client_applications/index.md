@@ -2,187 +2,192 @@
 title: WebSocket クライアントアプリケーションを書く
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 l10n:
-  sourceCommit: 9a4005caa5cc13f5174e3b8981eeec5631ed83d1
+  sourceCommit: 20c3765ca2538a98ffef564c7eb87df43e2cef94
 ---
 
-{{DefaultAPISidebar("WebSockets API")}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("WebSockets API")}}
 
-WebSocket クライアントアプリケーションは [WebSocket API](/ja/docs/Web/API/WebSockets_API) を使用して、 WebSocket プロトコルを経由して [WebSocket サーバー](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)と通信します。
+このガイドでは、 WebSocket ベースの ping アプリケーションの実装手順を追ってみましょう。このアプリケーションでは、クライアントが 1 秒ごとにサーバーに "ping" メッセージを送信し、サーバーは "pong" メッセージで応答します。クライアントは "pong" メッセージを待ち受けしてログ出力し、メッセージをやり取りした回数を追跡します。
 
-> [!NOTE]
-> この記事のサンプルスニペットは WebSocket チャットクライアント/サーバーサンプルから取得したものです。
-> [コードはこちらからご覧ください](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
+これはごく最小限のアプリケーションですが、 WebSocket クライアントの作成に関わる基本的な点を網羅しています。
 
-## WebSocket オブジェクトの作成
+完全な例は [https://github.com/mdn/dom-examples/tree/main/websockets](https://github.com/mdn/dom-examples/tree/main/websockets) でご覧いただけます。サーバーサイドは [Deno](https://deno.com/) で記述されているため、ローカルでサンプルを実行したい場合は、まず Deno をインストールする必要があります。
 
-WebSocket プロトコルを使用して通信するには、 {{domxref("WebSocket")}} オブジェクトを作成する必要があります。これにより自動的にサーバーへの接続が開かれます。
+## `WebSocket` オブジェクトの生成
 
-WebSocket のコンストラクターは、必須 1 つ、任意 1 つの引数を受け取ります。
+WebSocket プロトコルを使用して通信するには、 {{domxref("WebSocket")}} オブジェクトを作成する必要があります。このオブジェクトを作成するとすぐに、指定されたサーバーへの接続を試行し始めます。
 
 ```js
-webSocket = new WebSocket(url, protocols);
+const wsUri = "ws://127.0.0.1/";
+const websocket = new WebSocket(wsUri);
 ```
 
-- `url`
-  - : 接続先 URL。これは、 WebSocket サーバーが応答する URL である必要があります。
-    これは URL スキームに `wss://` を使用するべきですが、ソフトウェアによってはローカル接続用に安全ではない `ws://` を使用することを許可していることがあります。
-    相対 URL 値と `https://` および `http://` スキームも、[ほとんどのブラウザーの最新バージョン](/ja/docs/Web/API/WebSocket/WebSocket#ブラウザーの互換性)で許可されています。
-- `protocols` {{optional_inline}}
-  - : 単一のプロトコル文字列または一連のプロトコル文字列。
-    これらの文字列はサブプロトコルを示すのに使用されるため、単一のサーバーで複数の WebSocket サブプロトコルを実装できます（たとえば、特定の `protocol` に応じて 1 つのサーバーで異なる種類の対話を処理できるようにする）。
-    プロトコル文字列を指定しない場合、空文字列であると仮定されます。
+`WebSocket` コンストラクターは、1つの必須引数として接続先の WebSocket サーバーの URL を取ります。この場合、サーバーをローカルで実行しているため、 localhost アドレスを使用しています。
+
+> [!NOTE]
+> この例では、接続に `ws` プロトコルを使用しています。これは例において localhost に接続しているためです。実際のアプリケーションでは、ウェブページは HTTPS を使用して提供されるべきであり、 WebSocket 接続は `wss` プロトコルを使用しましょう。
+
+コンストラクターは別のオプション引数 [`protocols`](/ja/docs/Web/API/WebSocket/WebSocket#protocols) を取ります。これにより、単一のサーバーが複数のサブプロトコルを実装できます。この例ではこの機能を使用していません。
 
 コンストラクターは、接続先がアクセスを許可していない場合に `SecurityError` 例外を発生させます。
 これは安全ではない接続を利用しようとしたときに発生することがあります（ほとんどの{{Glossary("user agent", "ユーザーエージェント")}}は、同じ機器か、可能であれば同じネットワークでない限り、すべての WebSocket 接続に安全なリンクを要求します）。
 
-### 接続エラー
+## `open` イベントの待ち受け
 
-接続を試行中にエラーが発生した場合、最初の [`error` イベント](/ja/docs/Web/API/WebSocket/error_event)が {{domxref("WebSocket")}} オブジェクトに送信され（これにより、すべてのハンドラーが呼び出されます）、接続が閉じられた理由を示す [`close` イベント](/ja/docs/Web/API/WebSocket/close_event)が続きます。
+`WebSocket` インスタンスを作成すると、サーバーへの接続確立プロセスが始まります。接続が確立されると {{domxref("WebSocket.open_event", "open")}} イベントが発生します。これ以降、ソケットはデータを送信できるようになります。
 
-ブラウザーは {{domxref("CloseEvent")}} 経由で、コンソールにも [RFC 6455 第 7.4 節](https://datatracker.ietf.org/doc/html/rfc6455#section-7.4)で定義されている終了コードと同時に、もっと説明的なエラーメッセージを出力するができます。
-
-### 例
-
-この簡単な例では新しい WebSocket を作成し、 `wss://www.example.com/socketserver` のサーバーに接続します。
-この例では、ソケットのリクエストで "protocolOne" のカスタムプロトコルが指定されていますが、省略することもできます。
+下記のサンプルコードでは、 `open` イベントが発生すると、 {{domxref("Window.setInterval()")}} API を使用して、 1 秒ごとに 1 つの "ping" メッセージをサーバーへ送信し始めます。
 
 ```js
-const exampleSocket = new WebSocket(
-  "wss://www.example.com/socketserver",
-  "protocolOne",
-);
+websocket.addEventListener("open", () => {
+  log("CONNECTED");
+  pingInterval = setInterval(() => {
+    log(`SENT: ping: ${counter}`);
+    websocket.send("ping");
+  }, 1000);
+});
 ```
 
-返されると、 {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} は `CONNECTING` です。
-`readyState` は接続がデータを転送する準備ができたら `OPEN`になります。
+## エラーの待ち受け
 
-接続を開き、サポートしているプロトコルについて柔軟に対応したい場合は、プロトコルの配列を指定することができます。
+接続の確立中または確立後にエラーが発生した場合、 {{domxref("WebSocket.error_event", "error")}} イベントが発生します。
+
+エラー発生時、このアプリケーションは何らの特別な処理も行いませんが、ログを出力します。
 
 ```js
-const exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
-  "protocolOne",
-  "protocolTwo",
-]);
+websocket.addEventListener("error", (e) => {
+  log(`ERROR`);
+});
 ```
 
-接続が確立されると（つまり `readyState` が `OPEN`）、 {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} は、サーバーが選択したプロトコルを通知します。
+エラーが発生した場合、接続は閉じられた状態になり、 `close` イベントが発行されます。
 
-WebSocket を確立するには、 [HTTP アップグレードメカニズム](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)が必要です。したがって、 HTTP サーバーを `ws://www.example.com` または `wss://www.example.com` としてアドレス指定すると、プロトコルのアップグレードのためのリクエストが暗黙的に行われます。
+## メッセージの送信
 
-## サーバーへのデータの送信
-
-接続を開くと、サーバーにデータを送信することができます。
-これを行うには、送信するメッセージごとに `WebSocket` オブジェクトの {{domxref("WebSocket.send", "send()")}} メソッドを呼び出します。
+接続が確立された後は、 {{domxref("WebSocket.send()", "send()")}} メソッドを使用することができます。
 
 ```js
-exampleSocket.send("Here's some text that the server is urgently awaiting!");
+websocket.addEventListener("open", () => {
+  log("CONNECTED");
+  pingInterval = setInterval(() => {
+    log(`SENT: ping: ${counter}`);
+    websocket.send("ping");
+  }, 1000);
+});
 ```
 
-データは文字列、 {{ domxref("Blob") }}、 {{jsxref("ArrayBuffer")}} のいずれかで送信することができます。
+この例ではテキストを送信していますが、バイナリーデータも {{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} として送信できます。
 
-接続の確立は非同期であり、失敗しやすいため、 `send()` メソッドの呼び出しが WebSocket オブジェクトの作成直後に成功するという保証はありません。
-データの送信を試みるのは、少なくともいったん接続が確立してからでなければならないので、作業を行うための {{domxref("WebSocket/open_event", "onopen")}} イベントハンドラーを定義してその中で行います。
+一般的な手法として、シリアル化された JavaScript オブジェクトをテキストとして送信するために {{glossary("JSON")}} を使用することができます。例えば、単にテキストメッセージ "ping" を送信する代わりに、クライアントはこれまでに交換されたメッセージ数を記載するシリアル化されたオブジェクトを送信できます。
 
 ```js
-exampleSocket.onopen = (event) => {
-  exampleSocket.send("Here's some text that the server is urgently awaiting!");
+const message = {
+  iteration: counter,
+  content: "ping",
 };
+websocket.send(JSON.stringify(message));
 ```
 
-### JSON を使用したオブジェクトの送信
+`send()` メソッドは非同期です。つまり、データが送信されるのを待たずに呼び出し元に戻るため、内部バッファーにデータを追加した後、送信プロセスを始めます。 {{domxref("WebSocket.bufferedAmount")}} プロパティは、まだ送信されていないバイト数を表します。 WebSockets プロトコルはテキストのエンコードに {{glossary("UTF-8")}} を使用しているため、 `bufferedAmount` はバッファリングされたテキストデータの UTF-8 エンコード方式に基づいて計算されることに注意してください。
 
-サーバーに複雑なデータを合理的に送信するのに手軽な方法の一つとして、{{glossary("JSON")}} を使用する方法があります。
-たとえば、チャットプログラムがサーバーとやり取りするのに、 JSON でカプセル化されたデータのパケットを使用して実装されたプロトコルを使用することができます。
+## メッセージの受信
+
+サーバーからのメッセージを受信するには、 {{domxref("WebSocket.message_event", "message")}} イベントの待ち受けを行います。
+
+メッセージイベントハンドラーは受信したメッセージをログ出力し、発生したメッセージ交換の回数をカウントアップします。
 
 ```js
-// Send text to all users through the server
-function sendText() {
-  // Construct a msg object containing the data the server needs to process the message from the chat client.
-  const msg = {
-    type: "message",
-    text: document.getElementById("text").value,
-    id: clientID,
-    date: Date.now(),
-  };
-
-  // Send the msg object as a JSON-formatted string.
-  exampleSocket.send(JSON.stringify(msg));
-
-  // Blank the text input element, ready to receive the next line of text from the user.
-  document.getElementById("text").value = "";
-}
+websocket.addEventListener("message", (e) => {
+  log(`RECEIVED: ${e.data}: ${counter}`);
+  counter++;
+});
 ```
 
-## サーバーからのメッセージの受信
+サーバーはバイナリーデータも送信できます。これは、 {{domxref("WebSocket.binaryType")}} プロパティの値に基づいて、クライアントに対して {{domxref("Blob")}} または {{jsxref("ArrayBuffer")}} として公開します。
 
-WebSockets はイベント駆動型 API です。メッセージを受信すると、 `message` イベント `WebSocket` オブジェクトに送信されます。これを処理するには、 `message` イベントのイベントリスナーを追加するか、 {{domxref("WebSocket/message_event", "onmessage")}} イベントハンドラーを使用するかします。受信データの待ち受けを開始するには、次のようにします。
+メッセージ送信の場合と同様に、サーバーは JSON 文字列を送信することもでき、クライアントはこれをオブジェクトに解釈できます。
 
 ```js
-exampleSocket.onmessage = (event) => {
-  console.log(event.data);
-};
+websocket.addEventListener("message", (e) => {
+  const message = JSON.parse(e.data);
+  log(`RECEIVED: ${message.iteration}: ${message.content}`);
+  counter++;
+});
 ```
 
-### JSON オブジェクトの受信と解釈
+## 切断処理
 
-まず[JSON を使用したオブジェクトの送信](#json_を使用したオブジェクトの送信)で述べられているチャットクライアントアプリケーションを考えてみましょう。クライアントが受信するデータパケットの種類は次のとおりです。
+接続が閉じられた場合（クライアントまたはサーバーが接続を閉じたり、エラーが発生したりした場合）、 {{domxref("WebSocket.close_event", "close")}} イベントが発行されます。
 
-- ログインハンドシェイク
-- メッセージテキスト
-- ユーザーリストの更新
-
-これらの受信メッセージを解釈するコードは、次のようになります。
+アプリケーションは`close`イベントを待ち受けし、それが発行されたときにはインターバルタイマーをクリーンアップします。
 
 ```js
-exampleSocket.onmessage = (event) => {
-  const f = document.getElementById("chat-box").contentDocument;
-  let text = "";
-  const msg = JSON.parse(event.data);
-  const time = new Date(msg.date);
-  const timeStr = time.toLocaleTimeString();
+websocket.addEventListener("close", () => {
+  log("DISCONNECTED");
+  clearInterval(pingInterval);
+});
+```
 
-  switch (msg.type) {
-    case "id":
-      clientID = msg.id;
-      setUsername();
-      break;
-    case "username":
-      text = `User <em>${msg.name}</em> signed in at ${timeStr}<br>`;
-      break;
-    case "message":
-      text = `(${timeStr}) ${msg.name} : ${msg.text} <br>`;
-      break;
-    case "reject-username":
-      text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
-      break;
-    case "user-list":
-      document.getElementById("user-list-box").innerText = msg.users.join("\n");
-      break;
+## bfcache の操作
+
+バック/フォワードキャッシュ（{{glossary("bfcache")}}）は、ユーザーが最近閲覧したページ間のバックおよびフォワードナビゲーションを大幅に高速化することができます。これは、 JavaScript ヒープを含むページの完全なスナップショットを格納することで実現されます。
+
+ブラウザーは、ページが bfcache に追加されるか、またはそこから復元されるかすると、 JavaScript の実行を一時停止し、その後再開します。これは、ページが実行している内容によっては、ブラウザーがそのページに対してバックグラウンドキャッシュを使用することが常に安全であるとは限らないということの意味です。ブラウザーが安全でないと判断した場合、そのページはバックグラウンドキャッシュに追加されず、ユーザーはそれがもたらすパフォーマンス上の利点を得られません。
+
+さまざまなブラウザーでの、ページを bfcache に追加する基準は異なります。 WebSocket 接続を開いていると、ブラウザーがページを bfcache に追加できなくなる可能性があるということです。そのため、ユーザーがページを完了した際には接続を閉じるとよいでしょう。この目的で最適なイベントは {{domxref("Window.pagehide_event", "pagehide")}} イベントです。
+
+これはサンプルアプリで次のようにするのが最適です。
+
+```js
+window.addEventListener("pagehide", () => {
+  if (websocket) {
+    log("CLOSING");
+    websocket.close();
+    websocket = null;
+    window.clearInterval(pingInterval);
   }
-
-  if (text.length) {
-    f.write(text);
-    document.getElementById("chat-box").contentWindow.scrollByPages(1);
-  }
-};
+});
 ```
 
-ここで {{jsxref("JSON.parse()")}} を使用して JSON オブジェクトを元のオブジェクトに変換し、その内容を調べて処理します。
-
-### テキストデータ形式
-
-WebSocket 接続を介して受信されるテキストは、 UTF-8 形式です。
-
-## 接続を閉じる
-
-WebSocket 接続の使用を終了したら、 WebSocket のメソッド {{domxref("WebSocket.close", "close()")}} を呼び出します。
+逆に、 {{domxref("Window.pageshow_event", "pageshow")}} イベントを待ち受けすることで、ページが bfcache から復元された際にシームレスに接続が再開することができます。 `pageshow` イベントはページ読み込み時にも発生するため、ページが最初に読み込まれた際に WebSocket 接続を開始するためにも使用することができます。
 
 ```js
-exampleSocket.close();
+let websocket = null;
+
+window.addEventListener("pageshow", () => {
+  log("OPENING");
+
+  websocket = new WebSocket(wsUri);
+
+  websocket.addEventListener("open", () => {
+    log("CONNECTED");
+    pingInterval = setInterval(() => {
+      log(`SENT: ping: ${counter}`);
+      websocket.send("ping");
+    }, 1000);
+  });
+
+  websocket.addEventListener("close", () => {
+    log("DISCONNECTED");
+    clearInterval(pingInterval);
+  });
+
+  websocket.addEventListener("message", (e) => {
+    log(`RECEIVED: ${e.data}: ${counter}`);
+    counter++;
+  });
+
+  websocket.addEventListener("error", (e) => {
+    log(`ERROR: ${e.data}`);
+  });
+});
 ```
 
-接続を閉じようとする前に、ソケットの {{domxref("WebSocket.bufferedAmount", "bufferedAmount")}} 属性を確認して、データがネットワーク上でまだ送信されていないかどうかを判断すると有用かもしれません。
-この値が 0 ではない場合、まだ待ち状態のデータがあるので、接続を閉じる前に待ったほうが良いかもしれません。
+この例を実行した場合、別のページに移動してからこの例に戻ってみてほしい。 Chrome では、例が接続を再開始し、元のコンテキストを維持していることが確認できるはずです。例えば、交換されたメッセージの数を記憶していることがわかります。
+
+bfcache の互換性と WebSocket API に関する詳細なコンテキストについては、[web.dev の bfcacheに関する記事（英語）](https://web.dev/articles/bfcache#close-open-connections)を参照してください。
+
+対応しているブラウザーでは、[パフォーマンス API の `notRestoredReasons` プロパティ](/ja/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons)を使って、ページが bfcache に追加されなかった理由を取得できます。
 
 ## セキュリティの考慮事項
 
