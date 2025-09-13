@@ -3,9 +3,11 @@ title: -webkit-box-reflect
 slug: Web/CSS/-webkit-box-reflect
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_Header}}
 
 La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un effet de réflexion d'un élément dans une direction donnée.
+
+## Syntaxe
 
 ```css
 /* Valeurs de directions */
@@ -23,13 +25,10 @@ La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un 
 /* Valeurs globales */
 -webkit-box-reflect: inherit;
 -webkit-box-reflect: initial;
+-webkit-border-before: revert;
+-webkit-border-before: revert-layer;
 -webkit-box-reflect: unset;
 ```
-
-> [!WARNING]
-> Cette fonctionnalité ne doit pas être utilisée sur le Web. Pour créer des effets de reflet sur le Web, on pourra utiliser la fonction CSS standard {{cssxref("element()", "element()")}}.
-
-## Syntaxe
 
 ### Valeurs
 
@@ -40,15 +39,17 @@ La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un 
 - `<image>`
   - : Le masque à appliquer au reflet, cf. {{cssxref("&lt;image&gt;")}} sur les valeurs possibles.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-webkit-box-reflect = [ above | below | right | left ]? <length>? <image>?`)}}
 
 ## Spécifications
 
-Cette propriété n'est pas en voie de standardisation et ne fera pas partie de CSS. Pour créer des reflets en CSS, on pourra utiliser la fonction standard {{cssxref("element()", "element()")}}.
-
-{{cssinfo}}
+Cette propriété ne fait partie d'aucun standard, mais on pourra utiliser la fonction CSS standardisée {{cssxref("element()", "element()")}}.
 
 ## Compatibilité des navigateurs
 

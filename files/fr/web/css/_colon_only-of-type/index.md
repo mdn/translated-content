@@ -2,14 +2,12 @@
 title: :only-of-type
 slug: Web/CSS/:only-of-type
 l10n:
-  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:only-of-type`** permet de cibler un élément qui ne possède aucun nœud frère du même type.
 
-{{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: :only-of-type", "tabbed-shorter")}}
 
 ```css interactive-example
 a:only-of-type {
@@ -23,26 +21,25 @@ dd:only-of-type {
 
 ```html interactive-example
 <p>
-  To find out more about <b>QUIC</b>, check <a href="#">RFC 9000</a> and
+  Pour en savoir plus sur <b>QUIC</b>, consultez les <a href="#">RFC 9000</a> et
   <a href="#">RFC 9114</a>.
 </p>
 
 <dl>
-  <dt>Published</dt>
+  <dt>Publication</dt>
   <dd>2021</dd>
   <dd>2022</dd>
 </dl>
 
-<p>Details about <b>QPACK</b> can be found in <a href="#">RFC 9204</a>.</p>
+<p>
+  Les détails concernant <b>QPACK</b> se trouvent dans <a href="#">RFC 9204</a>.
+</p>
 
 <dl>
-  <dt>Published</dt>
+  <dt>Publication</dt>
   <dd>2022</dd>
 </dl>
 ```
-
-> [!NOTE]
-> Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de niveau 4).
 
 ## Syntaxe
 
@@ -82,7 +79,7 @@ main :only-of-type {
 
 #### Résultat
 
-{{EmbedLiveSample('','100%',180)}}
+{{EmbedLiveSample('mettre_en_forme_des_éléments_sans_voisins_du_même_type', '100%', 180)}}
 
 ## Spécifications
 

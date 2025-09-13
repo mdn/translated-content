@@ -3,13 +3,23 @@ title: -moz-orient
 slug: Web/CSS/-moz-orient
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propriété **`-moz-orient`** définit l'orientation de l'élément sur lequel elle est appliquée.
 
 ## Syntaxe
 
-La propriété `moz-orient` est définie avec un mot-clé parmi ceux de la liste ci-après.
+```css
+/* Valeurs avec un mot-clé */
+-moz-orient: inline;
+
+/* Valeurs globales */
+-moz-orient: inherit;
+-moz-orient: initial;
+-moz-orient: revert;
+-moz-orient: revert-layer;
+-moz-orient: unset;
+```
 
 ### Valeurs
 
@@ -22,9 +32,13 @@ La propriété `moz-orient` est définie avec un mot-clé parmi ceux de la liste
 - `vertical`
   - : L'élément est affiché verticalement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-moz-orient = inline | block | horizontal | vertical`)}}
 
 ## Exemples
 
@@ -57,9 +71,7 @@ La propriété `moz-orient` est définie avec un mot-clé parmi ceux de la liste
 
 ## Spécifications
 
-Bien que [proposée](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html) au W3C, cette propriété ne fait partie d'aucune spécification standard. C'est donc une propriété propriétaire liée à Mozilla/Gecko.
-
-{{cssinfo}}
+Cette propriété ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 

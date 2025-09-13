@@ -3,20 +3,24 @@ title: :-moz-suppressed
 slug: Web/CSS/:-moz-suppressed
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
-`:-moz-suppressed` est une pseudo-classe spécifique à Mozilla qui permet de sélectionner les images qui n'ont pas été chargées car le chargement des images depuis ce site a été bloqué.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-suppressed`** est une [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui permet de sélectionner les images qui n'ont pas été chargées car le chargement des images depuis ce site a été bloqué.
 
-Ce sélecteur est principalement destiné aux développeurs de thèmes.
+> [!NOTE]
+> Cette pseudo-classe est principalement destinée aux développeur·euse·s de thèmes.
 
 ## Syntaxe
 
 ```css
 :-moz-suppressed {
+  /* ... */
 }
 ```
 
-## Exemple
+## Exemples
+
+### Éléments de style qui ont été bloqués
 
 ```css
 :-moz-suppressed {
@@ -27,7 +31,7 @@ Ce sélecteur est principalement destiné aux développeurs de thèmes.
 
 ## Spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+Cette pseudo-classe ne fait partie d'aucun standard.
 
 ## Voir aussi
 

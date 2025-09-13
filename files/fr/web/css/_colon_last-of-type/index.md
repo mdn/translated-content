@@ -1,67 +1,156 @@
 ---
 title: :last-of-type
 slug: Web/CSS/:last-of-type
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:last-of-type`** cible un élément qui est le dernier enfant d'un type donné dans la liste des enfants de l'élément parent.
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** cible un élément qui est le dernier enfant d'un type donné dans la liste des enfants de l'élément parent.
+{{InteractiveExample("Démonstration CSS&nbsp;: :last-of-type", "tabbed-shorter")}}
 
-```css
-/* Cible n'importe quel paragraphe qui est     */
-/* le dernier paragraphe de son élément parent */
-p:last-of-type {
-  color: lime;
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:last-of-type {
+  border: 2px solid orange;
 }
 ```
 
-> [!NOTE]
-> Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de CSS4).
+```html interactive-example
+<dl>
+  <dt>Légumes :</dt>
+  <dd>1. Tomates</dd>
+  <dd>2. Concombres</dd>
+  <dd>3. Champignons</dd>
+  <dt>Fruits :</dt>
+  <dd>4. Pommes</dd>
+  <dd>5. Mangues</dd>
+  <dd>6. Poires</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
 
 ## Syntaxe
 
-{{csssyntax}}
-
-## Exemples
-
-Pour cibler le dernier élément {{HTMLElement("em")}} au sein d'un élément {{HTMLElement("p")}}, on pourra utiliser la règle qui suit (illustrée ensuite sur un fragment HTML).
-
-### CSS
-
 ```css
-p em:last-of-type {
-  color: lime;
+:last-of-type {
+  /* ... */
 }
 ```
 
-### HTML
+## Exemples
+
+### Mise en forme du dernier paragraphe
+
+#### HTML
 
 ```html
-<p>
-  <em>Je ne suis pas vert :(</em>
-  <strong>Je ne suis pas vert :(</strong>
-  <em>Je suis vert :D</em>
-  <strong>Je ne suis pas vert non plus :(</strong>
-</p>
+<h2>En-tête</h2>
+<p>Paragraphe 1</p>
+<p>Paragraphe 2</p>
+```
 
-<p>
-  <em>Je ne suis pas vert :(</em>
-  <span>
-    <em>Je suis vert !</em>
-  </span>
-  <strong>Je ne suis pas vert :(</strong>
-  <em>Je suis vert :D</em>
-  <span>
-    <em>Je suis aussi vert !</em>
-    <strike>Je ne suis pas vert</strike>
-  </span>
-  <strong>Je ne suis pas vert non plus :(</strong>
-</p>
+#### CSS
+
+```css
+p:last-of-type {
+  color: red;
+  font-style: italic;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('mise_en_forme_du_dernier_paragraphe', 500)}}
+
+### Éléments imbriqués
+
+Cet exemple montre comment les éléments imbriqués peuvent également être ciblés. Notez que le [sélecteur universel](/fr/docs/Web/CSS/Universal_selectors) (`*`) est implicite lorsqu'aucun sélecteur simple n'est écrit.
+
+#### HTML
+
+```html
+<article>
+  <div>Je ne suis pas rose car première `div` :(</div>
+  <div>
+    Je ne suis pas rose :(
+    <span
+      >Mais moi je suis rose car je suis le dernier `span` de mon groupe !</span
+    >
+  </div>
+  <div>
+    Ici <em>je ne suis pas rose :(</em>, mais ici
+    <em>je suis rose et dernier !</em>
+  </div>
+  <p>Je suis un paragraphe rose.</p>
+  <div>Je suis rose car dernière `div` !</div>
+</article>
+```
+
+#### CSS
+
+```css
+article :last-of-type {
+  background-color: pink;
+}
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples','100%', '120')}}
+{{EmbedLiveSample('éléments_imbriqués', 500)}}
+
+### Éléments avec plusieurs sélecteurs
+
+Cet exemple HTML contient des éléments imbriqués de différents types. Le CSS contient à la fois des sélecteurs de type et des sélecteurs de classe.
+
+#### HTML
+
+```html
+<p>Ce `p` n'est pas sélectionné.</p>
+<p>Ce `p` n'est pas sélectionné non plus.</p>
+<p>
+  Ce `p` est le dernier élément `p` de son parent, par exemple `body`,
+  sélectionné par le sélecteur de type `p`.
+</p>
+<div class="container">
+  <div class="item">Ce `div` n'est pas sélectionné.</div>
+  <div class="item">Ce `div` n'est pas sélectionné non plus.</div>
+  <div class="item">
+    Ce `div` est le dernier élément `div` de son parent `div`, sélectionné par
+    le sélecteur de classe `.container .item`.
+  </div>
+  <p class="item">
+    Ce `p` est le dernier élément `p` de son parent `div`, sélectionné par le
+    sélecteur de classe `.container .item`.
+  </p>
+</div>
+```
+
+#### CSS
+
+```css
+p:last-of-type {
+  background: skyblue;
+}
+
+.container .item:last-of-type {
+  color: red;
+  font-weight: bold;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('éléments_avec_plusieurs_sélecteurs', 500)}}
+
+Le dernier `<div>` et le dernier `<p>` sont tous deux rouges et en gras, car le sélecteur `.item:last-of-type` sélectionne le dernier de chaque type si cet élément dernier a également la classe `item`.
 
 ## Spécifications
 
@@ -73,6 +162,5 @@ p em:last-of-type {
 
 ## Voir aussi
 
-- {{cssxref(":nth-last-of-type")}}
-- {{cssxref(":first-of-type")}}
 - {{cssxref(":last-child")}}
+- {{cssxref(":nth-last-of-type")}}
