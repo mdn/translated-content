@@ -7,13 +7,13 @@ l10n:
 
 Les gens utilisent les sites web pour plusieurs tâches importantes telles que les opérations bancaires, les achats, les loisirs et le paiement de leurs impôts. Ce faisant, ils sont tenus de partager des informations personnelles avec ces sites. Les utilisateur·ice·s accordent un certain niveau de confiance aux sites avec lesquels ils partagent leurs données. Si ces informations tombaient entre de mauvaises mains, elles pourraient être utilisées pour exploiter les utilisateur·ice·s, par exemple en établissant leur profil, en leur envoyant des publicités indésirables, voire en volant leur identité ou leur argent.
 
-Les navigateurs modernes disposent déjà d'une multitude de fonctionnalités pour protéger la vie privée des utilisateur·ice·s sur le web, mais cela ne suffit pas. Pour créer une expérience fiable et respectueuse de la vie privée, les développeurs doivent sensibiliser les utilisateur·ice·s de leurs sites aux bonnes pratiques (et les faire respecter). Les développeurs doivent également créer des sites qui collectent le moins de données possible auprès des utilisateur·ice·s, utilisent ces données de manière responsable et les transportent et les stockent en toute sécurité.
+Les navigateurs modernes disposent déjà d'une multitude de fonctionnalités pour protéger la vie privée des utilisateur·ice·s sur le web, mais cela ne suffit pas. Pour créer une expérience fiable et respectueuse de la vie privée, les développeur·euse·s doivent sensibiliser les utilisateur·ice·s de leurs sites aux bonnes pratiques (et les faire respecter). Les développeur·euse·s doivent également créer des sites qui collectent le moins de données possible auprès des utilisateur·ice·s, utilisent ces données de manière responsable et les transportent et les stockent en toute sécurité.
 
 Dans cet article, nous&nbsp;:
 
 - Définissons la confidentialité et les termes importants qui y sont liés.
 - Examinons les fonctionnalités des navigateurs qui protègent automatiquement la vie privée des utilisateur·ice·s.
-- Examinons ce que les développeurs peuvent faire pour créer un contenu web respectueux de la vie privée qui minimise le risque que les informations/données personnelles des utilisateur·ice·s soient obtenues de manière inattendue par des tiers.
+- Examinons ce que les développeur·euse·s peuvent faire pour créer un contenu web respectueux de la vie privée qui minimise le risque que les informations/données personnelles des utilisateur·ice·s soient obtenues de manière inattendue par des tiers.
 
 ## Définition des termes et concepts liés à la vie privée
 
@@ -51,7 +51,7 @@ Le **suivi** désigne le processus consistant à enregistrer l'activité d'un·e
 
 - En examinant plusieurs [cookies tiers](/fr/docs/Web/Privacy/Guides/Third-party_cookies) définis sur différents sites où du contenu tiers est intégré afin de trouver diverses informations sur l'utilisateur·ice.
 - En examinant l'en-tête {{httpheader("Referer")}} pour voir d'où vient l'utilisateur·ice.
-- En incluant des paramètres dans les URL des liens entrants (par exemple, dans les publicités intégrées renvoyant vers des pages de produits ou dans les e-mails marketing) qui peuvent révéler au site lié l'origine du lien, la campagne marketing dont il fait partie, l'adresse e-mail ou tout autre identifiant de l'utilisateur·ice qui a cliqué dessus, etc. Ce processus est appelé « décoration de lien » et donne lieu à des URL de lien qui ressemblent à ceci&nbsp;: `https://exemple.fr/article/?id=62yhgt1a&campagne=902`.
+- En incluant des paramètres dans les URL des liens entrants (par exemple, dans les publicités intégrées renvoyant vers des pages de produits ou dans les e-mails marketing) qui peuvent révéler au site lié l'origine du lien, la campagne marketing dont il fait partie, l'adresse e-mail ou tout autre identifiant de l'utilisateur·ice qui a cliqué dessus, etc. Ce processus est appelé «&nbsp;décoration de lien&nbsp;» et donne lieu à des URL de lien qui ressemblent à ceci&nbsp;: `https://exemple.fr/article/?id=62yhgt1a&campagne=902`.
 - Le suivi par redirection, qui consiste pour les trackers à rediriger momentanément (et de manière imperceptible) un·e utilisateur·ice vers leur site web afin d'utiliser le stockage de première partie pour suivre cet utilisateur sur différents sites web. Cela permet aux trackers de contourner le blocage des cookies tiers. Par exemple, si vous avez lu une critique d'un produit et que vous souhaitez cliquer pour l'acheter, vous pouvez être redirigé sans le savoir vers le tracker de redirection, puis vers le détaillant. Cela signifie que le tracker est chargé en tant que partie première et peut associer les données de suivi aux identifiants qu'il a stockés dans ses cookies de première partie avant de vous rediriger vers le détaillant.
 
 Les données de suivi peuvent être utilisées pour établir le profil d'un·e utilisateur·ice, ses centres d'intérêt et ses préférences, ce qui est généralement néfaste et peut être gênant à divers degrés. Par exemple&nbsp;:
@@ -88,7 +88,7 @@ Les rubriques connexes sont les suivantes&nbsp;:
 - [HTTP Strict Transport Security (HSTS)](/fr/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HSTS est utilisé par les serveurs pour se protéger contre les attaques de rétrogradation de protocole et de détournement de cookies en permettant aux sites de dire aux clients qu'ils ne peuvent utiliser HTTPS que pour communiquer avec le serveur.
 - [HTTP/2](/fr/docs/Glossary/HTTP_2)
-  - : Bien que HTTP/2 n'_ait_ techniquement pas besoin d'utiliser le chiffrement, la plupart des développeurs de navigateurs ne le prennent en charge que lorsqu'il est utilisé avec HTTPS&nbsp;; à cet égard, il peut être considéré comme une fonctionnalité visant à améliorer la sécurité et la confidentialité.
+  - : Bien que HTTP/2 n'_ait_ techniquement pas besoin d'utiliser le chiffrement, la plupart des développeur·euse·s de navigateurs ne le prennent en charge que lorsqu'il est utilisé avec HTTPS&nbsp;; à cet égard, il peut être considéré comme une fonctionnalité visant à améliorer la sécurité et la confidentialité.
 
 ### Activer les « fonctionnalités avancées »
 
@@ -104,9 +104,9 @@ Les navigateurs ont mis en œuvre plusieurs fonctionnalités anti-suivi qui amé
 - Plusieurs navigateurs suppriment les paramètres de suivi connus des URL — cela inclut Firefox, Safari et Brave. Les extensions de navigateur aident également à le faire, par exemple [ClearURLs <sup>(angl)</sup>](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/).
 - Les navigateurs ont mis en œuvre [la protection contre le suivi des redirections](/fr/docs/Web/Privacy/Guides/Redirect_tracking_protection).
 
-## Considérations relatives à la confidentialité pour les développeurs côté client
+## Considérations relatives à la confidentialité pour les développeur·euse·s côté client
 
-Il existe plusieurs actions que les développeurs Web peuvent et doivent entreprendre pour améliorer la confidentialité de leurs utilisateur·ice·s. Les sections ci-dessous discutent des plus importantes. Certaines des catégories ne sont pas purement des tâches techniques en tant que telles et impliqueront la collaboration avec d'autres membres de l'équipe.
+Il existe plusieurs actions que les développeur·euse·s Web peuvent et doivent entreprendre pour améliorer la confidentialité de leurs utilisateur·ice·s. Les sections ci-dessous discutent des plus importantes. Certaines des catégories ne sont pas purement des tâches techniques en tant que telles et impliqueront la collaboration avec d'autres membres de l'équipe.
 
 ## Collecter des données de manière éthique
 
@@ -135,7 +135,7 @@ Il est tentant de demander beaucoup de données à vos utilisateur·ice·s parce
 
 Il est bon d'anonymiser les données. Vous devriez également envisager si vous pouvez obtenir ce dont vous avez besoin en rendant votre demande de données moins granulaire. Par exemple, au lieu de demander à un·e utilisateur·ice ses produits préférés, vous pourriez lui demander de sélectionner entre des catégories plus générales.
 
-La meilleure façon de protéger la vie privée des utilisateur·ice·s est toutefois de minimiser les données que vous collectez. En vous référant à l'exemple précédent, vous pourriez déduire les mêmes données en examinant l'historique des achats de l'utilisateur·ice. Un autre exemple, les utilisateur·ice·s apprécient de pouvoir acheter des produits de manière anonyme. Vous ne devriez pas les obliger à créer un compte ; si ce n'est pas nécessaire au fonctionnement du service, cela devrait être leur choix.
+La meilleure façon de protéger la vie privée des utilisateur·ice·s est toutefois de minimiser les données que vous collectez. En vous référant à l'exemple précédent, vous pourriez déduire les mêmes données en examinant l'historique des achats de l'utilisateur·ice. Un autre exemple, les utilisateur·ice·s apprécient de pouvoir acheter des produits de manière anonyme. Vous ne devriez pas les obliger à créer un compte&nbsp;; si ce n'est pas nécessaire au fonctionnement du service, cela devrait être leur choix.
 
 ### Communiquez clairement comment vous allez utiliser les données que vous collectez
 
@@ -206,7 +206,7 @@ La liste suivante fournit quelques conseils sur la façon d'atténuer les risque
 
 ## Protéger les données des utilisateurs
 
-Vous devez vous assurer que les données des utilisateur·ice·s sont transmises et stockées en toute sécurité une fois que vous les avez collectées. Il s'agit davantage d'un sujet de [sécurité](/fr/docs/Web/Security), mais cela vaut la peine d'être mentionné ici : une bonne politique de confidentialité est inutile si votre sécurité est laxiste et que des attaquants peuvent voler les données.
+Vous devez vous assurer que les données des utilisateur·ice·s sont transmises et stockées en toute sécurité une fois que vous les avez collectées. Il s'agit davantage d'un sujet de [sécurité](/fr/docs/Web/Security), mais cela vaut la peine d'être mentionné ici&nbsp;: une bonne politique de confidentialité est inutile si votre sécurité est laxiste et que des attaquants peuvent voler les données.
 
 Les conseils ci-dessous offrent quelques orientations sur la protection des données de vos utilisateur·ice·s&nbsp;:
 
