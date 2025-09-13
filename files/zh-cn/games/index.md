@@ -14,7 +14,7 @@ l10n:
 我们同样提供了参考部分，因此你可以轻易地找到有关游戏开发所有常用的 API。
 
 > [!NOTE]
-> 在创建一个网页游戏之前你至少需要掌握几种核心的 web 技术，例如 HTML、CSS 和 Javascript。你可以在[学习Web开发](/zh-CN/docs/Learn_web_development)开始这些基础知识的学习。
+> 在创建一个网页游戏之前你至少需要掌握几种核心的 web 技术，例如 HTML、CSS 和 Javascript。你可以在[学习 Web 开发](/zh-CN/docs/Learn_web_development)开始这些基础知识的学习。
 
 ## 指南
 
