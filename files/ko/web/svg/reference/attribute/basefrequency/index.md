@@ -1,7 +1,6 @@
 ---
 title: baseFrequency
 slug: Web/SVG/Reference/Attribute/baseFrequency
-page-type: svg-attribute
 l10n:
   sourceCommit: a9063bb88f28dc2a9b32e39f060ab6930663da52
 ---
