@@ -1,5 +1,5 @@
 ---
-title: Techniques ARIA
+title: "Utiliser ARIA : rôles, états et propriétés"
 slug: Web/Accessibility/ARIA/Guides/Techniques
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques
 ---
