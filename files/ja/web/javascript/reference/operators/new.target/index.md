@@ -9,7 +9,7 @@ l10n:
 
 {{InteractiveExample("JavaScript デモ: new.target")}}
 
-```js interactive-example
+```js-nolint interactive-example
 function Foo() {
   if (!new.target) {
     throw new TypeError("new を付けずに Foo コンストラクターを呼び出すのは不正です");
