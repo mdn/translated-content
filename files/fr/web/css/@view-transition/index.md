@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) **`@view-transition`** de [CSS](/fr/docs/Web/CSS) est utilisée pour choisir les documents actuels et de destination qui subiront [une transition d'affichage](/fr/docs/Web/API/View_Transition_API), dans le cas d'une navigation entre plusieurs documents.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@view-transition`** est utilisée pour choisir les documents actuels et de destination qui subiront [une transition d'affichage](/fr/docs/Web/API/View_Transition_API), dans le cas d'une navigation entre plusieurs documents.
 
-Pour qu'une transition entre documents fonctionne, les documents - actuel et cible - de la navigation doivent également provenir de la même origine.
+Pour qu'une transition entre documents fonctionne, les documents — actuel et cible — de la navigation doivent également provenir de la même origine.
 
 ## Syntaxe
 
@@ -21,7 +21,7 @@ Pour qu'une transition entre documents fonctionne, les documents - actuel et cib
 
 - `navigation`
   - : Spécifie l'effet que cette règle @ aura sur le comportement de transition d'affichage du document. Les valeurs possibles sont&nbsp;:
-    - `auto`&nbsp;: Le document subira une transition d'affichage lorsqu'il prendra part à la navigation, à condition que celle-ci soit d'une même origine, sans redirection inter-origines, et que son {{domxref("NavigateEvent.navigationType", "navigationType")}} soit `traverse`, `push`, ou `replace`. Dans le cas de `push` ou `replace`, la navigation doit être initiée par un utilisateur ou une utilisatrice interagissant avec le contenu de la page, et non par une fonctionnalité de l'interface utilisateur du navigateur.
+    - `auto`&nbsp;: Le document subira une transition d'affichage lorsqu'il prendra part à la navigation, à condition que celle-ci soit d'une même origine, sans redirection inter-origines, et que son {{domxref("NavigateEvent.navigationType", "navigationType")}} soit `traverse`, `push`, ou `replace`. Dans le cas de `push` ou `replace`, la navigation doit être initiée par un·e utilisateur·ice interagissant avec le contenu de la page, et non par une fonctionnalité de l'interface utilisateur du navigateur.
 
     - `none`&nbsp;: Le document ne subira pas de transition d'affichage.
 
@@ -37,7 +37,7 @@ Les extraits de code suivants affichent des concepts clés utilisés dans une d�
 La démo utilise des transitions de vue transversale&nbsp;; une demi-deuxième transition qui se produit lors de la navigation entre deux pages d'un site.
 Pour la démo complète, voir le [Afficher la démonstration de l'application multipages avec transitions](https://mdn.github.io/dom-examples/view-transitions/mpa/).
 
-La règle `@view-transition` est spécifiée dans le CSS pour vos documents actuels et de destination d'une navigation afin de les inclure tous les deux dans la transition d'affichage :
+La règle `@view-transition` est spécifiée dans le CSS pour vos documents actuels et de destination d'une navigation afin de les inclure tous les deux dans la transition d'affichage&nbsp;:
 
 ```css
 @view-transition {
