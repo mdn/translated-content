@@ -25,6 +25,8 @@ La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un 
 /* Valeurs globales */
 -webkit-box-reflect: inherit;
 -webkit-box-reflect: initial;
+-webkit-border-before: revert;
+-webkit-border-before: revert-layer;
 -webkit-box-reflect: unset;
 ```
 

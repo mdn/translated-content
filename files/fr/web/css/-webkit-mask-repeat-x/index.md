@@ -1,6 +1,8 @@
 ---
 title: -webkit-mask-repeat-x
 slug: Web/CSS/-webkit-mask-repeat-x
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 {{Non-standard_header}}
@@ -83,5 +85,5 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("-webkit-mask-repeat")}},
+- {{cssxref("mask-repeat", "-webkit-mask-repeat")}}
 - {{cssxref("-webkit-mask-repeat-y")}}

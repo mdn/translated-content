@@ -1,17 +1,21 @@
 ---
 title: -webkit-border-before
 slug: Web/CSS/-webkit-border-before
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 {{Non-standard_header}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-border-before`** est une propriété raccourcie qui permet de définir les propriétés de la bordure pour le début d'un élément dans l'axe de bloc (l'axe logique orthogonal à l'axe de lecture).
 
-`-webkit-border-before` peut ainsi être utilisée pour définir les valeurs d'une ou plusieurs de ces propriétés : {{cssxref("-webkit-border-before-width")}}, {{cssxref("-webkit-border-before-style")}}, et {{cssxref("-webkit-border-before-color")}}. Cette propriété est une propriété logique qui correspond à une propriété physique selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}ou {{cssxref("border-left")}} selon les valeurs définies pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+## Constituent properties
 
-Cette propriété est à mettre en relation avec les propriétés {{cssxref("-webkit-border-after")}}, {{cssxref("-webkit-border-start")}}, et {{cssxref("-webkit-border-end")}} qui définissent les autres bordures de l'élément.
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
 
-L'équivalent standard de cette propriété est la propriété non-préfixée {{cssxref("border-block-start")}}.
+- {{cssxref("-webkit-border-before-color")}}
+- {{cssxref("-webkit-border-before-style")}}
+- {{cssxref("-webkit-border-before-width")}}
 
 ## Syntaxe
 
@@ -24,12 +28,14 @@ L'équivalent standard de cette propriété est la propriété non-préfixée {{
 /* Valeurs globales */
 -webkit-border-before: inherit;
 -webkit-border-before: initial;
+-webkit-border-before: revert;
+-webkit-border-before: revert-layer;
 -webkit-border-before: unset;
 ```
 
 ### Valeurs
 
-Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
+Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
 
 - `<border-width>`
   - : Voir {{cssxref("border-width")}}.

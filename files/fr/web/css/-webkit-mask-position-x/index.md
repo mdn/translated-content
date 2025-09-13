@@ -1,6 +1,8 @@
 ---
 title: -webkit-mask-position-x
 slug: Web/CSS/-webkit-mask-position-x
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 {{Non-standard_header}}
@@ -82,7 +84,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("-webkit-mask-position")}}
+- {{cssxref("mask-position", "-webkit-mask-position")}}
 - {{cssxref("-webkit-mask-position-y")}}
-- {{cssxref("-webkit-mask-origin")}}
-- {{cssxref("-webkit-mask-attachment")}}
+- {{cssxref("mask-origin", "-webkit-mask-origin")}}
