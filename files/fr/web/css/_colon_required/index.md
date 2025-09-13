@@ -84,7 +84,6 @@ Les champs obligatoires devraient également être indiqués visuellement et cet
     <input type="email" id="email-input" required />
   </div>
 </form>
-
 ```
 
 #### CSS

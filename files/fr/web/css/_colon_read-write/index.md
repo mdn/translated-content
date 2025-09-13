@@ -140,7 +140,9 @@ Ce sélecteur ne sélectionne pas seulement les éléments {{htmlElement("input"
 #### HTML
 
 ```html
-<p contenteditable>Ce paragraphe est modifiable&nbsp;; il est en lecture-écriture.</p>
+<p contenteditable>
+  Ce paragraphe est modifiable&nbsp;; il est en lecture-écriture.
+</p>
 
 <p>Ce paragraphe n'est pas modifiable&nbsp;; il est en lecture seule.</p>
 ```

@@ -185,7 +185,9 @@ textarea:read-write {
 #### HTML
 
 ```html
-<p contenteditable>Ce paragraphe est modifiable&nbsp;; il est en lecture-écriture.</p>
+<p contenteditable>
+  Ce paragraphe est modifiable&nbsp;; il est en lecture-écriture.
+</p>
 
 <p>Ce paragraphe n'est pas modifiable&nbsp;; il est en lecture seule.</p>
 ```

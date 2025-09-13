@@ -63,7 +63,6 @@ details:open > summary {
 
 #### HTML
 
-
 ```html
 <details>
   <summary>Détails</summary>

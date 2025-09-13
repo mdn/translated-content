@@ -32,9 +32,10 @@ p > :not(strong, b.important) {
 </p>
 
 <p class="irrelevant">
-  Le Jet <del>Momentum</del> Propulsion Laboratory de la <b class="important">NASA</b>
-  conçoit actuellement des concepts de mission permettant de résister aux températures
-  extrêmes et à la pression atmosphérique de <b>Vénus</b>.
+  Le Jet <del>Momentum</del> Propulsion Laboratory de la
+  <b class="important">NASA</b> conçoit actuellement des concepts de mission
+  permettant de résister aux températures extrêmes et à la pression
+  atmosphérique de <b>Vénus</b>.
 </p>
 ```
 

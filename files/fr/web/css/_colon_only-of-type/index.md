@@ -21,8 +21,8 @@ dd:only-of-type {
 
 ```html interactive-example
 <p>
-  Pour en savoir plus sur <b>QUIC</b>, consultez les <a href="#">RFC 9000</a>
-  et <a href="#">RFC 9114</a>.
+  Pour en savoir plus sur <b>QUIC</b>, consultez les <a href="#">RFC 9000</a> et
+  <a href="#">RFC 9114</a>.
 </p>
 
 <dl>
@@ -31,7 +31,9 @@ dd:only-of-type {
   <dd>2022</dd>
 </dl>
 
-<p>Les détails concernant <b>QPACK</b> se trouvent dans <a href="#">RFC 9204</a>.</p>
+<p>
+  Les détails concernant <b>QPACK</b> se trouvent dans <a href="#">RFC 9204</a>.
+</p>
 
 <dl>
   <dt>Publication</dt>

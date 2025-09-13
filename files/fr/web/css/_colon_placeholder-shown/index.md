@@ -89,7 +89,7 @@ Sur certains écrans plus étroits (tels que ceux des smartphones), la largeur d
 <input
   id="input1"
   placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !" />
-  <br /><br />
+<br /><br />
 <input
   id="input2"
   placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !" />
