@@ -42,7 +42,7 @@ El evento `loadend` es emitido cuando el progreso de la carga de un recurso se h
 - [`error`](/es/docs/Web/API/HTMLElement/error_event)
 - [`abort`](/es/docs/Web/API/HTMLMediaElement/abort_event)
 - [`load`](/es/docs/Web/API/Window/load_event)
-- [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event)
+- [`loadend`](/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event)
 
 ## Ver También
 
