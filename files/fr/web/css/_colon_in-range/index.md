@@ -27,7 +27,7 @@ input:in-range {
   >
   <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
 
-  <label for="dep">Date de départ : (Toute l'année 2022 est acceptable)</label>
+  <label for="dep">Date de départ : (Toute l'année 2022 est acceptée)</label>
   <input
     id="dep"
     name="dep"
@@ -36,7 +36,7 @@ input:in-range {
     max="2022-12-31"
     value="2025-05-05" />
 
-  <label for="ret">Date de retour : (Toute l'année 2022 est acceptable)</label>
+  <label for="ret">Date de retour : (Toute l'année 2022 est acceptée)</label>
   <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
 </form>
 ```
