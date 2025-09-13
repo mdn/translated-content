@@ -5,7 +5,7 @@ slug: Web/CSS/@color-profile
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profile`** définit et nomme un profil de couleur qui peut être utilisé ensuite avec la fonction [`color()`](/fr/docs/Web/CSS/color_value/color) afin d'indiquer une couleur.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profile`** définit et nomme un profil de couleur qui peut être utilisé ensuite avec la fonction [`color()`](/fr/docs/Web/CSS/color_value/color) afin d'indiquer une couleur.
 
 ## Syntaxe
 

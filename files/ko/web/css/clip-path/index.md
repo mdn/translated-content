@@ -3,8 +3,6 @@ title: clip-path
 slug: Web/CSS/clip-path
 ---
 
-{{CSSRef}}
-
 **`clip-path`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 클리핑 범위를 지정합니다. 클리핑 범위 안의 부분은 보여지고, 바깥은 숨겨집니다.
 
 {{InteractiveExample("CSS Demo: clip-path")}}

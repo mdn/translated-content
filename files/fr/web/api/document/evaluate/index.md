@@ -5,7 +5,7 @@ slug: Web/API/Document/evaluate
 
 {{ ApiRef("DOM") }}
 
-La méthode **`evaluate()`** renvoie un {{domxref("XPathResult")}} basé sur une expression [XPath](/fr/docs/Web/XPath) et d'autres paramètres donnés.
+La méthode **`evaluate()`** renvoie un {{domxref("XPathResult")}} basé sur une expression [XPath](/fr/docs/Web/XML/XPath) et d'autres paramètres donnés.
 
 ## Syntaxe
 
@@ -50,7 +50,7 @@ document.evaluate(" .  //h2", document.body, null, XPathResult.ANY_TYPE, null);
 
 Remarquez ci-dessus, `document.body` a été utilisé comme contexte plutôt que comme document, de sorte que le XPath commence à partir de l'élément body. (Dans cet exemple, le `"."` est important pour indiquer que l'interrogation doit commencer à partir du noeud contextuel, document.body . Si le "." est omis (en quittant `//h2`), la requête démarrera à partir du noeud racine ( `html`) ce qui serait plus inutile.)
 
-Voir [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) pour plus d'informations.
+Voir [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript) pour plus d'informations.
 
 ## Notes
 

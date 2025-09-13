@@ -16,12 +16,12 @@ La publication d'un site web n'est pas une chose simple, essentiellement du fait
 
 Pour avoir plus de contrôle sur le contenu et l'apparence du site, la plupart des gens choisissent d'acheter un hébergement web et un nom de domaine :
 
-- L'hébergement web est un espace de fichiers loué sur le [serveur web](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) d'une société d'hébergement. Vous mettez les fichiers de votre site web dans cet espace et le serveur web en fournit le contenu aux utilisateurs qui le demandent.
-- Un [nom de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) est l'adresse unique où les visiteurs peuvent trouver votre site web, comme `https://www.mozilla.org` ou `http://www.bbc.co.uk`. Vous pouvez louer votre nom de domaine pour autant d'années que vous le souhaitez auprès d'un **registraire de nom domaine**.
+- L'hébergement web est un espace de fichiers loué sur le [serveur web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) d'une société d'hébergement. Vous mettez les fichiers de votre site web dans cet espace et le serveur web en fournit le contenu aux utilisateurs qui le demandent.
+- Un [nom de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) est l'adresse unique où les visiteurs peuvent trouver votre site web, comme `https://www.mozilla.org` ou `http://www.bbc.co.uk`. Vous pouvez louer votre nom de domaine pour autant d'années que vous le souhaitez auprès d'un **registraire de nom domaine**.
 
 De nombreux sites professionnels sont mis en ligne de cette façon.
 
-En plus, vous aurez besoin d'un programme de {{Glossary("FTP", "Protocole de transfert de fichiers (FTP)")}} (voir [Combien ça coûte : les logiciels](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#software) pour plus de détails) pour faire un transfert réel des fichiers du site web sur le serveur. Les programmes FTP varient beaucoup, mais généralement, vous devrez vous connecter sur le serveur web en utilisant des identifiants fournis par votre société d'hébergement (par ex., nom d'utilisateur, mot de passe, nom d'hôte). Le logiciel utilisé pour FTP affiche alors vos fichiers locaux et les fichiers présents sur le serveur dans deux fenêtres, ainsi vous pouvez les transférer dans les deux sens :
+En plus, vous aurez besoin d'un programme de {{Glossary("FTP", "Protocole de transfert de fichiers (FTP)")}} (voir [Combien ça coûte : les logiciels](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#software) pour plus de détails) pour faire un transfert réel des fichiers du site web sur le serveur. Les programmes FTP varient beaucoup, mais généralement, vous devrez vous connecter sur le serveur web en utilisant des identifiants fournis par votre société d'hébergement (par ex., nom d'utilisateur, mot de passe, nom d'hôte). Le logiciel utilisé pour FTP affiche alors vos fichiers locaux et les fichiers présents sur le serveur dans deux fenêtres, ainsi vous pouvez les transférer dans les deux sens :
 
 ![](ftp.jpg)
 
@@ -76,9 +76,9 @@ Pour en savoir plus, voyez [GitHub Pages Help](https://docs.github.com/en/github
 
 ## Lectures pour approfondir
 
-- [Qu'est-ce qu'un serveur web](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [Comprendre les noms de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
-- [Combien ça coûte de faire quelque chose sur le Web ?](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- [Qu'est-ce qu'un serveur web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
+- [Comprendre les noms de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
+- [Combien ça coûte de faire quelque chose sur le Web ?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website)&nbsp;: un bon tutoriel de Codecademy qui va plus un peu plus loin et qui montre quelques techniques supplémentaires.
 - [Hébergement de sites web statiques gratuit ou peu cher](http://alignedleft.com/resources/cheap-web-hosting), un billet en anglais par Scott Murray qui permet d'avoir une meilleure idée des services disponibles.
 

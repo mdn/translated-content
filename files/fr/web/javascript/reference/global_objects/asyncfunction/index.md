@@ -24,7 +24,7 @@ new AsyncFunction(arg0, arg1, ...argN, corpsFonction);
 ### Paramètres
 
 - `arg1, arg2, ... argN`
-  - : Les noms à utiliser comme noms d'arguments formels. Chacun doit être une chaîne de caractères correspondant à un paramètre JavaScript valide (que ce soit [un identifiant](/fr/docs/Glossary/Identifier), [un paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)).
+  - : Les noms à utiliser comme noms d'arguments formels. Chacun doit être une chaîne de caractères correspondant à un paramètre JavaScript valide (que ce soit [un identifiant](/fr/docs/Glossary/Identifier), [un paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)).
 
     Les paramètres étant analysés comme les déclarations de fonction, les espaces et commentaires sont acceptés. Par exemple&nbsp;: `"x", "laValeur = 42", "[a, b] /* nombres */"` — ou `"x, laValeur = 42, [a, b] /* nombres */"`. (`"x, laValeur = 42", "[a, b]"` est également correct mais moins lisible.)
 

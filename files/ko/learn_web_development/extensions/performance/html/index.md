@@ -55,11 +55,11 @@ HTML은 성능 측면에서 간단합니다. 대부분 작은 용량인 글자�
 
 이른바 "모바일 우선" 기법은 기본적인 레이아웃이 작은 화면 기기를 위하도록 보장할 수 있습니다. 그래서 모바일 화면에 맞는 적합한 사진을 다운로드 할 수 있어 더 큰 데스크탑용 사진을 다운로드 하는 성능 저하가 이뤄지지 않습니다. 그러나, [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)를 CSS에서 사용하여 제어됨으로, CSS에서 불러오는 사진 성능에만 전적으로 영향을 줄 수 있게 되었습니다.
 
-아래 섹션에서, 대체되는 요소를 반응형으로 구현하는 방법을 요약합니다. 이러한 구현에 관한 더 자세한 내용은 [HTML 영상과 음성](/ko/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)과 [반응형 사진](/ko/docs/Web/HTML/Responsive_images) 안내서에서 확인할 수 있습니다.
+아래 섹션에서, 대체되는 요소를 반응형으로 구현하는 방법을 요약합니다. 이러한 구현에 관한 더 자세한 내용은 [HTML 영상과 음성](/ko/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)과 [반응형 사진](/ko/docs/Web/HTML/Guides/Responsive_images) 안내서에서 확인할 수 있습니다.
 
 ### srcset 통해 사진 해상도 다르게 제공하기
 
-기기의 해상도와 뷰포트 크기에 따라 동일한 사진의 해상도를 다르게 제공하기 위해서는, [`srcset`](/ko/docs/Web/HTML/Element/img#srcset) 속성과 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes) 속성을 사용할 수 있습니다.
+기기의 해상도와 뷰포트 크기에 따라 동일한 사진의 해상도를 다르게 제공하기 위해서는, [`srcset`](/ko/docs/Web/HTML/Reference/Elements/img#srcset) 속성과 [`sizes`](/ko/docs/Web/HTML/Reference/Elements/img#sizes) 속성을 사용할 수 있습니다.
 
 다음 예제는 화면 너비에 맞춰 다른 크기의 사진을 제공합니다.
 
@@ -260,13 +260,13 @@ HTML, CSS, JavaScript와 연관된 사진이나 글꼴 파일 같은 자원을 �
 
 다음 기사에서 `rel="preload"` 사용에 관한 더 자세한 정보를 확인해보세요.
 
-- [`rel="preload"`](/ko/docs/Web/HTML/Attributes/rel/preload)
+- [`rel="preload"`](/ko/docs/Web/HTML/Reference/Attributes/rel/preload)
 - [로딩 속도를 개선하기 위한 중요한 자산 프리로드 하기](https://web.dev/articles/preload-critical-assets) web.dev 2020
 
 > [!NOTE] > `rel="preload"`는 CSS와 JavaScript 파일에서도 사용할 수 있습니다.
 
 > [!NOTE]
-> 페이지 로딩의 다양한 측면을 향상시키기 위해 고안된 다른 [`rel`](/ko/docs/Web/HTML/Attributes/rel) 값이 있습니다. `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, `prerender`가 있습니다. 링크가 첨부된 페이지로 가서 해당 값이 어떤 동작을 하는지 알아보세요.
+> 페이지 로딩의 다양한 측면을 향상시키기 위해 고안된 다른 [`rel`](/ko/docs/Web/HTML/Reference/Attributes/rel) 값이 있습니다. `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, `prerender`가 있습니다. 링크가 첨부된 페이지로 가서 해당 값이 어떤 동작을 하는지 알아보세요.
 
 ## 같이 보기
 

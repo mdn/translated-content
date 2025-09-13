@@ -158,7 +158,11 @@ jobs:
           done
 
           yarn rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
-          yarn yari-render-html
+
+          # Workaround, as fred-ssr doesn't copy assets.
+          cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
+
+          yarn fred-ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
@@ -197,4 +201,10 @@ jobs:
           readarray -t files_to_check <<< "$GIT_DIFF_FILES"
           echo "${files_to_check[@]}"
 
-          yarn filecheck "${files_to_check[@]}"
+          ARGS=()
+          for file in "${files_to_check[@]}"; do
+              file_without_prefix="${file#files/}"
+              ARGS+=("$CONTENT_TRANSLATED_ROOT/$file_without_prefix")
+          done
+
+          yarn filecheck "${ARGS[@]}"

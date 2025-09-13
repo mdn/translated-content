@@ -53,7 +53,7 @@ Voir [`:nth-last-child`](/fr/docs/Web/CSS/:nth-last-child) pour une explication 
 
 ## Exemples
 
-Ici, on souhaite mettre en avant le deuxième élément [`<span>`](/fr/docs/Web/HTML/Element/span) en partant de la fin&nbsp;:
+Ici, on souhaite mettre en avant le deuxième élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) en partant de la fin&nbsp;:
 
 ### HTML
 

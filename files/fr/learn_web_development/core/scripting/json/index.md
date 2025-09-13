@@ -88,7 +88,7 @@ Nous disions tout à l'heure qu'un objet JSON n'était ni plus ni moins qu'un ob
 }
 ```
 
-Si nous chargeons cet objet dans un fichier Javascript au sein d'une variable appelée `superHeroes` par exemple, nous pouvons accéder à ses données de la même façon que nous l'avons fait dans l'article [Les bases de JavaScript orienté objets](/fr/docs/Learn/JavaScript/Objects/Basics) à l'aide de la notation point / crochets. Par exemple :
+Si nous chargeons cet objet dans un fichier Javascript au sein d'une variable appelée `superHeroes` par exemple, nous pouvons accéder à ses données de la même façon que nous l'avons fait dans l'article [Les bases de JavaScript orienté objets](/fr/docs/Learn_web_development/Core/Scripting/Object_basics) à l'aide de la notation point / crochets. Par exemple :
 
 ```js
 superHeroes.hometown;
@@ -196,7 +196,7 @@ Pour charger nos données JSON, nous allons utiliser l'API {{domxref("XMLHttpReq
    ```
 
    Cette méthode prend au moins deux paramètres — il y a d'autres paramètres optionnels disponibles. Deux suffiront pour notre exemple :
-   - La méthode HTTP à utiliser sur le réseau pour notre requête. Dans notre cas, la méthode [`GET`](/fr/docs/Web/HTTP/Methods/GET) est appropriée dans la mesure où nous voulons simplement récupérer quelques données.
+   - La méthode HTTP à utiliser sur le réseau pour notre requête. Dans notre cas, la méthode [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) est appropriée dans la mesure où nous voulons simplement récupérer quelques données.
    - L'URL où adresser notre requête — il s'agit de l'URL du fichier JSON dont nous parlions tout à l'heure.
 
 4. Ensuite, ajoutez les deux lignes suivantes — ici, nous attribuons la valeur `'json'` à [`responseType`](/fr/docs/Web/API/XMLHttpRequest/responseType), signalant ainsi au serveur que nous attendons une réponse au format JSON. Puis, nous envoyons notre requête à l'aide de la méthode [`send()`](/fr/docs/Web/API/XMLHttpRequest/send)&nbsp;:
@@ -279,7 +279,7 @@ function showHeroes(jsonObj) {
 
 Pour commencer, on stocke la propriété `members` de l'objet JavaScript dans une nouvelle variable. Ce tableau contient plusieurs objets contenant les informations relatives à chaque héros.
 
-Maintenant, on utilise une [boucle for](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code) pour parcourir chaque object du tableau. Pour chaque cas, il faut :
+Maintenant, on utilise une [boucle for](/fr/docs/Learn_web_development/Core/Scripting/Loops) pour parcourir chaque object du tableau. Pour chaque cas, il faut :
 
 1. Créer plusieurs nouveaux éléments : un `<article>`, un `<h2>`, trois `<p>`s, et un `<ul>`.
 2. Mettre le `name` du héros actuel dans le `<h2>`.
@@ -292,7 +292,7 @@ Maintenant, on utilise une [boucle for](/fr/docs/Learn/JavaScript/Building_block
 > Si vous ne parvenez pas à faire fonctionner l'exemple, consultez notre code source [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (ou regardez-le [en action](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html).)
 
 > [!NOTE]
-> Si vous comprenez difficilement la notation avec un point/une accolade utilisée pour accéder au JSON, ouvrez le fichier [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) dans un nouvel onglet ou dans votre éditeur de texte et consultez-le pendant la lecture de notre code Javascript. Vous pouvez également vous reporter à notre article [Les bases du JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects/Basics) pour obtenir plus de détails sur la notation avec un point et avec une accolade.
+> Si vous comprenez difficilement la notation avec un point/une accolade utilisée pour accéder au JSON, ouvrez le fichier [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) dans un nouvel onglet ou dans votre éditeur de texte et consultez-le pendant la lecture de notre code Javascript. Vous pouvez également vous reporter à notre article [Les bases du JavaScript orienté objet](/fr/docs/Learn_web_development/Core/Scripting/Object_basics) pour obtenir plus de détails sur la notation avec un point et avec une accolade.
 
 ## Conversion entre objets et textes
 
@@ -342,7 +342,7 @@ Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans 
 - [La page de référence sur l'objet JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [La page de référence sur l'objet XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest)
 - [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Les méthodes de requêtes HTTP](/fr/docs/Web/HTTP/Methods)
+- [Les méthodes de requêtes HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Le site web officiel avec un lien vers les normes de l'ECMA](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

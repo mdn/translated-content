@@ -42,7 +42,7 @@ Regardons d'abord les trois méthodes pour appliquer CSS à un document.
 
 ### Feuille de style externe
 
-Dans la leçon [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started) nous avons lié une feuille de style externe à notre document. C'est la méthode la plus commune pour appliquer CSS à un document. C'est aussi la plus utile : dans la plupart des cas, les différentes pages d'un site ont à peu près la même apparence, on peut donc utiliser le même jeu de règles pour l'apparence de base. Il est dans ce cas commode d'écrire ces règles une seule fois dans une feuille de style commune à toutes les pages.
+Dans la leçon [Démarrer avec CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started) nous avons lié une feuille de style externe à notre document. C'est la méthode la plus commune pour appliquer CSS à un document. C'est aussi la plus utile : dans la plupart des cas, les différentes pages d'un site ont à peu près la même apparence, on peut donc utiliser le même jeu de règles pour l'apparence de base. Il est dans ce cas commode d'écrire ces règles une seule fois dans une feuille de style commune à toutes les pages.
 
 Dans le cas d'une feuille de style externe, les règles CSS sont écrites dans un fichier séparé, avec l'extension `.css`. Un élément HTML `<link>` fait référence à ce fichier.
 
@@ -75,7 +75,7 @@ p {
 }
 ```
 
-L'attribut `href` de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link) doit pointer vers un fichier dans votre système de fichiers.
+L'attribut `href` de l'élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) doit pointer vers un fichier dans votre système de fichiers.
 
 Dans l'exemple ci-dessus, le fichier CSS et le document HTML sont dans le même dossier, mais vous pouvez le placer ailleurs et ajuster le chemin, par exemple :
 
@@ -92,7 +92,7 @@ Dans l'exemple ci-dessus, le fichier CSS et le document HTML sont dans le même 
 
 ### Feuille de style interne
 
-Les règles CSS peuvent être écrites directement dans l'en-tête HTML [`<head>`](/fr/docs/Web/HTML/Element/head) dans un élément [`<style>`](/fr/docs/Web/HTML/Element/style). On parle alors de feuille de style interne.
+Les règles CSS peuvent être écrites directement dans l'en-tête HTML [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) dans un élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style). On parle alors de feuille de style interne.
 
 Le code HTML ci-dessous illustre cette technique :
 
@@ -187,7 +187,7 @@ Bonne lecture !
 
 ## Sélecteurs
 
-Vous ne pouvez pas parler de CSS sans rencontrer les sélecteurs et nous en avons déjà découvert différents types dans le tutoriel [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started). Un sélecteur cible quelque chose dans le document HTML afin de lui appliquer des styles. Quand une mise en forme ne s'applique pas comme prévu, il est probable que le sélecteur concerné ne fonctionne pas comme vous l'attendiez.
+Vous ne pouvez pas parler de CSS sans rencontrer les sélecteurs et nous en avons déjà découvert différents types dans le tutoriel [Démarrer avec CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started). Un sélecteur cible quelque chose dans le document HTML afin de lui appliquer des styles. Quand une mise en forme ne s'applique pas comme prévu, il est probable que le sélecteur concerné ne fonctionne pas comme vous l'attendiez.
 
 Chaque règle CSS commence par un sélecteur ou une liste de sélecteurs afin d'indiquer au navigateur les éléments auxquels les règles doivent s'appliquer. Tous les exemples suivants sont des exemples de sélecteurs valides ou de listes de sélecteurs.
 
@@ -205,7 +205,7 @@ h1, h2, .intro
 Essayez de créer des règles CSS qui utilisent les sélecteurs ci-dessus et du code HTML à styler. Si vous ne savez pas ce que signifie la syntaxe ci-dessus, essayez de la rechercher sur MDN !
 
 > [!NOTE]
-> Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors), dans un prochain cours.
+> Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors), dans un prochain cours.
 
 ### Spécificité
 
@@ -243,7 +243,7 @@ Cependant, dans l'exemple plus haut avec le sélecteur de classe et le sélecteu
 
 **Tentez vous-même l'expérience ci-dessus** — **ajoutez le code HTML à votre expérience, puis ajoutez les deux règles `p {…}` à votre feuille de style. Ensuite, changez le premier sélecteur `p` en `.special` pour voir comment il affecte le style.**
 
-Au premier abord, les règles de cascade et de spécificité peuvent sembler compliquées ; avec une meilleure connaissance de CSS, elles vous paraîtront plus naturelles. Dans le prochain module, l'article [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) vous détaillera ces principes et expliquera notamment comment calculer la spécificité. Pour le moment, rappelez vous que de tels cas existent et que le CSS peut parfois ne pas s'appliquer comme prévu. Dans une telle situation, souvenez-vous qu'un même élément peut être la cible de plusieurs sélecteurs concurrents.
+Au premier abord, les règles de cascade et de spécificité peuvent sembler compliquées ; avec une meilleure connaissance de CSS, elles vous paraîtront plus naturelles. Dans le prochain module, l'article [Cascade et héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) vous détaillera ces principes et expliquera notamment comment calculer la spécificité. Pour le moment, rappelez vous que de tels cas existent et que le CSS peut parfois ne pas s'appliquer comme prévu. Dans une telle situation, souvenez-vous qu'un même élément peut être la cible de plusieurs sélecteurs concurrents.
 
 ## Propriétés et valeurs
 
@@ -343,7 +343,7 @@ La page devrait s'afficher comme ceci :
 
 e
 
-Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/At-rule) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
+Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/CSS_syntax/At-rule) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
 
 ```css
 @import "styles2.css";
@@ -582,6 +582,6 @@ Le navigateur ne connaît pas la propriété `padding-` . Les noms de propriét�
 
 ## À suivre…
 
-Il est utile de comprendre, au moins dans les grandes lignes, comment votre navigateur calcule le rendu d'une page web à partir des fichiers HTML et CSS. Dans la prochaine leçon — [Comment CSS fonctionne](/fr/docs/Learn/CSS/First_steps/How_CSS_works) — nous examinerons donc ce point.
+Il est utile de comprendre, au moins dans les grandes lignes, comment votre navigateur calcule le rendu d'une page web à partir des fichiers HTML et CSS. Dans la prochaine leçon — [Comment CSS fonctionne](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — nous examinerons donc ce point.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

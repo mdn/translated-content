@@ -240,8 +240,8 @@ try {
 
 1. 创建一个新的 `XMLHttpRequest` 对象。
 2. 调用它的 [`open()`](/zh-CN/docs/Web/API/XMLHttpRequest/open) 以进行初始化。
-3. 为其添加 [`load`](/zh-CN/docs/Web/API/XMLHttpRequest/load_event) 事件的事件监听器，其会在响应加载完成时触发。在监听器中，我们调用 `initialize()` 函数。
-4. 为其添加 [`error`](/zh-CN/docs/Web/API/XMLHttpRequest/error_event) 事件的事件监听器，其会在请求失败时触发。
+3. 为其添加 [`load`](/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/load_event) 事件的事件监听器，其会在响应加载完成时触发。在监听器中，我们调用 `initialize()` 函数。
+4. 为其添加 [`error`](/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/error_event) 事件的事件监听器，其会在请求失败时触发。
 5. 发送请求。
 
 我们还必须将整个事件包装在 [try...catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块中，以便处理 `open()` 或 `send()` 可能抛出的错误。

@@ -54,7 +54,7 @@ multipart/form-data
 multipart/byteranges
 ```
 
-Les types composés, aussi appelés types _multipart_ indiquent une catégorie de document qui sont constitués de différents éléments. A l'exception de `multipart/form-data`, utilisé en association avec des [formulaires HTML](/fr/docs/Learn/Forms) et la méthode {{HTTPMethod("POST")}} et de `multipart/byteranges`, utilisé avec le statut HTTP {{HTTPStatus("206")}} `Partial Content` renvoyant uniquement une sous-partie du document ce qui entraînera vraisemblablement l'apparition d'une fenêtre "Enregistrer sous" étant donné que HTTP ne gère pas ces documents de manière différente et que le navigateur ne saura pas commment afficher ce document incomplet.
+Les types composés, aussi appelés types _multipart_ indiquent une catégorie de document qui sont constitués de différents éléments. A l'exception de `multipart/form-data`, utilisé en association avec des [formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) et la méthode {{HTTPMethod("POST")}} et de `multipart/byteranges`, utilisé avec le statut HTTP {{HTTPStatus("206")}} `Partial Content` renvoyant uniquement une sous-partie du document ce qui entraînera vraisemblablement l'apparition d'une fenêtre "Enregistrer sous" étant donné que HTTP ne gère pas ces documents de manière différente et que le navigateur ne saura pas commment afficher ce document incomplet.
 
 ## Types MIME utiles pour les développeurs web
 
@@ -94,7 +94,7 @@ D'autres formats d'images peuvent constituer un document web. Par exemple, la pl
 
 ### Formats audios et vidéos
 
-Comme pour les images, HTML ne définit pas de liste de formats supportés pour les éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}}. Dès lors, seul un ensemble restreint de formats est en mesure d'être utilisé sur le Web. La page [Formats pris en charge par les balises audio et video](/fr/docs/Web/Media/Formats) détaille les codecs et les formats qui peuvent être employés.
+Comme pour les images, HTML ne définit pas de liste de formats supportés pour les éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}}. Dès lors, seul un ensemble restreint de formats est en mesure d'être utilisé sur le Web. La page [Formats pris en charge par les balises audio et video](/fr/docs/Web/Media/Guides/Formats) détaille les codecs et les formats qui peuvent être employés.
 
 Le format MIME de ces fichiers représente généralement le format du conteneur contenant le fichier. Dans le cas du Web, les formats les plus courants sont :
 
@@ -164,7 +164,7 @@ Le format MIME de ces fichiers représente généralement le format du conteneur
 
 ### `multipart/form-data`
 
-Le type `multipart/form-data` peut être utilisé lors de l'envoi du contenu d'un [formulaire HTML](/fr/docs/Learn/Forms) du navigateur vers le serveur. En tant que document composé ou _multipart_ il est constitué de différentes parties délimitées par une frontière (une chaîne de caractères débutant par un tiret double `'--'`). Chaque partie est une entité propre qui possède ses propres en-têtes {{HTTPHeader("Content-Disposition")}} et {{HTTPHeader("Content-Type")}} lorsqu'il s'agit d'un champ permettant de téléverser un fichier. L'en-tête ({{HTTPHeader("Content-Length")}} est ignorée puisque la limite est assurée par la frontière.
+Le type `multipart/form-data` peut être utilisé lors de l'envoi du contenu d'un [formulaire HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) du navigateur vers le serveur. En tant que document composé ou _multipart_ il est constitué de différentes parties délimitées par une frontière (une chaîne de caractères débutant par un tiret double `'--'`). Chaque partie est une entité propre qui possède ses propres en-têtes {{HTTPHeader("Content-Disposition")}} et {{HTTPHeader("Content-Type")}} lorsqu'il s'agit d'un champ permettant de téléverser un fichier. L'en-tête ({{HTTPHeader("Content-Length")}} est ignorée puisque la limite est assurée par la frontière.
 
 ```
 Content-Type: multipart/form-data; boundary=aChaineDeDélimitation
@@ -257,7 +257,7 @@ Content-Range: bytes 300-400/1270
 La plupart des serveurs envoient des ressources de format inconnu et donc utilisent le type par défaut `application/octet-stream`. Pour des considérations de sécurité, les navigateurs n'effectuent pas d'action par défaut pour les ressources de ce type, ce qui oblige l'utilisateur à stocker le fichier sur son dique pour l'utiliser. Voici les erreurs communes de configuration côté serveur pour les formats suivants :
 
 - Les fichiers RAR. Idéalement il faudrait définir le type MIME associé aux fichiers contenus. Ce n'est généralement pas possible étant donné que le type de ces fichiers est vraisemblablement inconnu du serveur, d'autre part, il est possible que plusieurs formats soient présents dans le fichier RAR. On pourra alors configurer le serveur pour envoyer le type MIME `application/x-rar-compressed` bien qu'il soit probable qu'aucune action par défaut pour ce type MIME n'ait été définie côté utilisateur.
-- Fichiers audios et vidéos. Seules les ressources associées à un type MIME approprié seront reconnues et lues dans les éléments {{ HTMLElement("video")}} ou {{HTMLElement("audio")}}. Vérifiez que vous utilisez [un format correct pour les fichiers audios et vidéos](/fr/docs/Web/Media/Formats).
+- Fichiers audios et vidéos. Seules les ressources associées à un type MIME approprié seront reconnues et lues dans les éléments {{ HTMLElement("video")}} ou {{HTMLElement("audio")}}. Vérifiez que vous utilisez [un format correct pour les fichiers audios et vidéos](/fr/docs/Web/Media/Guides/Formats).
 - Les fichiers au format propriétaire. Il est nécessaire d'être vigilent lorsque l'on sert des fichiers propriétaires. Evitez autant que possible l'utilisation de `application/octet-stream` puisque ce type générique ne permet pas une gestion appropriée de la ressource.
 
 ## Détection de type MIME
@@ -274,5 +274,5 @@ Les types MIME ne sont pas la seule façon existante pour gérer le format d'un 
 ## Voir aussi
 
 - [Configurer proprement les types MIME côté serveur](/fr/docs/Learn/Server-side/Configuring_server_MIME_types)
-- [Formats multimédias supportés pour les éléments HTML audio et vidéo](/fr/docs/Web/Media/Formats)
+- [Formats multimédias supportés pour les éléments HTML audio et vidéo](/fr/docs/Web/Media/Guides/Formats)
 - <https://www.iana.org/assignments/media-types/application/json>

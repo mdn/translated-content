@@ -87,7 +87,7 @@ En ce qui concerne les abréviations, il est préférable [de les identifier sé
 </p>
 ```
 
-Les technologies d'assistance à la navigation pourront tirer parti de cet attribut pour fournir un texte alternatif pour un terme donné. `aria-describedby` peut être utilisé pour n'importe quelle balise contenant un mot-clé à définir (il n'est pas nécessaire que ce soit `<dfn>`). `aria-describedby` utilise un référence à l'[`id`](/fr/docs/Web/HTML/Global_attributes#id) de l'élément qui contient la description.
+Les technologies d'assistance à la navigation pourront tirer parti de cet attribut pour fournir un texte alternatif pour un terme donné. `aria-describedby` peut être utilisé pour n'importe quelle balise contenant un mot-clé à définir (il n'est pas nécessaire que ce soit `<dfn>`). `aria-describedby` utilise un référence à l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) de l'élément qui contient la description.
 
 ## Comment construire une liste de descriptions
 
