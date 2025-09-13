@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 8b70438172c589ea52ffb24714818da73d759537
 ---
 
-{{CSSRef}}
-
 **CSS 수학 함수들** 은 요소의 `height`, `animation-duration`, 또는 `font-size` 와 같은 속성 값을 수학적 표현식으로 작성하는 것을 가능하게 합니다.
 
 수학을 사용하지 않고도 `rem`, `vw`, 그리고 `%`와 같은 내장 [CSS 단위들](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units)을 통하여 HTML 요소를 더 유연하게 스타일링하여 특정 사용자 경험을 향상시킬 수 있습니다.

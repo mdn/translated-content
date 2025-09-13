@@ -1,0 +1,82 @@
+---
+title: itemtype
+slug: Web/HTML/Reference/Global_attributes/itemtype
+original_slug: Web/HTML/Global_attributes/itemtype
+---
+
+{{HTMLSidebar("Global_attributes")}}
+
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemtype`** définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. `itemscope` est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.
+
+L'attribut `itemtype` doit avoir une valeur qui est un ensemble non ordonné de fragments uniques, sensible à la casse. Chaque fragment doit être une URL absolue valide et tous les fragments participent à la définition du même vocabulaire. La valeur de l'attribut doit avoir au moins un fragment.
+
+Les types d'objet doivent tous être définis dans des spécifications de vocabulaire (comme [schema.org](https://schema.org/)) et doivent tous être définis avec le même vocabulaire.
+
+L'attribut `itemtype` peut uniquement être défini pour les éléments qui ont un attribut `itemscope`.
+
+Google et les autres moteurs de recherche participent au vocabulaire défini par [schema.org](https://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](https://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](https://schema.org/startDate) et [`location`](https://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`http://schema.org/MusicEvent`](https://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`http://schema.org/MusicEvent`](https://schema.org/MusicEvent).
+
+> [!NOTE]
+> Vous pourrez trouver plus d'informations sur l'attribut itemtype sur <http://schema.org/Thing>
+
+## Syntaxe
+
+### Syntaxe formelle
+
+```
+itemtype = URL
+```
+
+### Exemple simple
+
+#### HTML
+
+```html
+<div itemscope itemtype="http://schema.org/Product">
+  <span itemprop="brand">ACME</span>
+  <span itemprop="name">Executive Anvil</span>
+</div>
+```
+
+#### Structure de données
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td rowspan="4"><code>itemscope</code></td>
+      <td><code>itemtype</code></td>
+      <td colspan="2" rowspan="1">http://schema.org/Product</td>
+    </tr>
+    <tr>
+      <td><code>itemprop</code></td>
+      <td><code>name</code></td>
+      <td>Executive Anvil</td>
+    </tr>
+    <tr>
+      <td><code>itemprop</code></td>
+      <td colspan="2" rowspan="1"><code>brand [Thing]</code></td>
+    </tr>
+    <tr>
+      <td><code>itemprop</code></td>
+      <td><code>name</code></td>
+      <td>ACME</td>
+    </tr>
+  </tbody>
+</table>
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
+- Les autres attributs universels relatifs aux microdonnées :
+  - [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop)
+  - [`itemref`](/fr/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes#itemscope)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Accept-Post`** {{Glossary("response header", "回應標頭")}}用於告知伺服器在 {{HTTPMethod("POST")}} 請求中接受哪些[媒體類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)。例如，伺服器接收到不支援的媒體類型的 `POST` 請求時，可能會回應 {{HTTPStatus("415", "415 Unsupported Media Type")}} 狀態碼並附上參考一個或多個支援媒體類型的 `Accept-Post` 標頭。
 
 此標頭應出現在對支援 `POST` 方法的資源的 {{HTTPMethod("OPTIONS")}} 請求的回應中。在對任何請求方法的回應中出現 `Accept-Post` 標頭，都隱含地表示允許在請求的目標資源上進行 `POST` 操作。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `GET` 方法**是用來請求指定資源的表示。使用 `GET` 的請求應僅用於請求數據（不應包含數據）。
 
 > [!NOTE]

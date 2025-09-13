@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Functions/Method_definitions
 
 ECMAScript 2015 より、オブジェクトイニシャライザーのメソッド定義のための短い構文が導入されました。これは、メソッドの名前に割り当てられた関数の簡略構文です。
 
-{{InteractiveExample("JavaScript Demo: Functions Definitions")}}
+{{InteractiveExample("JavaScript デモ: Functions Definitions")}}
 
 ```js interactive-example
 const obj = {

@@ -68,7 +68,7 @@ Tout au long de cet article, nous utiliserons l'extension `.js` pour les fichier
 
 Toutefois, nous avons décidé de conserver l'extension `.js`. Pour que les modules fonctionnent dans les navigateurs, vous devez vous assurer qu'ils sont servis avec un en-tête `Content-Type` qui contient un type MIME JavaScript comme `text/javascript`. Si ce n'est pas le cas, vous aurez une erreur de vérification du type MIME et le navigateur n'exécutera pas le JavaScript de ces fichiers. La plupart des serveurs web utilisent le type MIME correct pour les fichiers `.js` mais pas encore pour les fichiers `.mjs`. Parmi les serveurs qui servent correctement les fichiers `.mjs`, on trouve [GitHub Pages](https://pages.github.com/) et [`http-server`](https://github.com/http-party/http-server#readme) en Node.js.
 
-Il n'y a pas de problème si vous utilisez déjà un tel environnement ou si vous savez ce que vous faites et avez accès à la configuration de votre serveur pour paramétrer le bon [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) pour les fichiers `.mjs`). Cela pourrait malheureusement être source de confusion si vous ne contrôlez pas le serveur qui sert les fichiers ou que vous publiez des fichiers pour un usage public (comme nous le faisons ici).
+Il n'y a pas de problème si vous utilisez déjà un tel environnement ou si vous savez ce que vous faites et avez accès à la configuration de votre serveur pour paramétrer le bon [`Content-Type`](/fr/docs/Web/HTTP/Reference/Headers/Content-Type) pour les fichiers `.mjs`). Cela pourrait malheureusement être source de confusion si vous ne contrôlez pas le serveur qui sert les fichiers ou que vous publiez des fichiers pour un usage public (comme nous le faisons ici).
 
 Aussi, à des fins d'apprentissage et de portabilité, nous avons décidé de conserver l'extension `.js` ici.
 
@@ -178,7 +178,7 @@ Les instructions `import` et `export` ne peuvent être utilisées qu'à l'intér
 
 - Attention aux tests sur un environnement local&nbsp;: si vous chargez le fichier HTML directement depuis le système de fichier dans le navigateur (en double-cliquant dessus par exemple, ce qui donnera une URL `file://`), vous rencontrerez des erreurs CORS pour des raisons de sécurité. Il faut donc un serveur local afin de pouvoir tester.
 - On pourra avoir un comportement différent entre un même script utilisé comme un module et un script utilisé de façon « classique ». En effet, les modules utilisent automatiquement [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
-- Il n'est pas nécessaire d'utiliser l'attribut `defer` (voir [les attributs de `<script>`](/fr/docs/Web/HTML/Element/script#attributs)) lors du chargement d'un module, celui-ci étant automatiquement différé.
+- Il n'est pas nécessaire d'utiliser l'attribut `defer` (voir [les attributs de `<script>`](/fr/docs/Web/HTML/Reference/Elements/script#attributs)) lors du chargement d'un module, celui-ci étant automatiquement différé.
 - Les modules sont exécutés une seule fois, même s'ils sont référencés dans plusieurs balises `<script>`.
 - Enfin, les fonctionnalités importées ne sont disponibles qu'au sein de la portée du script qui les utilise ! Les valeurs importées ne sont manipulables que depuis le script, elles ne sont pas rattachées à la portée globale. On ne pourra par exemple pas y accéder depuis la console JavaScript. Bien que les erreurs soient toujours indiquées dans les outils de développement, certaines techniques de débogage ne seront pas disponibles.
 
@@ -506,7 +506,7 @@ On voit ici que, parce que la promesse renvoie un objet module à la résolution
 
 ### `await` au plus haut niveau
 
-L'utilisation du mot-clé `await` au plus haut niveau est une fonctionnalité disponible dans les modules. Cela permet d'avoir des modules qui agissent comme des [grandes fonctions asynchrones](/fr/docs/Learn/JavaScript/Asynchronous/Introducing), ce qui signifie que le code peut être évalué avant d'être utilisé dans des modules parents mais sans bloquer le chargement des modules frères et sœurs.
+L'utilisation du mot-clé `await` au plus haut niveau est une fonctionnalité disponible dans les modules. Cela permet d'avoir des modules qui agissent comme des [grandes fonctions asynchrones](/fr/docs/Learn_web_development/Extensions/Async_JS/Introducing), ce qui signifie que le code peut être évalué avant d'être utilisé dans des modules parents mais sans bloquer le chargement des modules frères et sœurs.
 
 Prenons un exemple. Vous trouverez les fichiers et le code de cette section au sein du répertoire [`top-level-await`](https://github.com/mdn/js-examples/tree/master/module-examples/top-level-await) qui repart des exemples précédents.
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f98675af9d0a80f33d7875c48cfdb41f71ed1de9
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) 元素 **`<iframe>`** 表示嵌套的{{Glossary("browsing context", "浏览上下文")}}。它能够将另一个 HTML 页面嵌入到当前页面中。
 
 {{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
@@ -28,7 +26,7 @@ iframe {
 }
 ```
 
-每个嵌入的浏览上下文都有自己的[文档](/zh-CN/docs/Web/API/Document)并允许并且允许 URL 导航。每个嵌入式浏览上下文的导航都会被线性嵌入到*顶级*浏览上下文的[会话历史记录](/zh-CN/docs/Web/API/History)中。包含嵌入内容的浏览上下文称为*父级浏览上下文*。*顶级*浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
+每个嵌入的浏览上下文都有自己的[文档](/zh-CN/docs/Web/API/Document)并且允许 URL 导航。每个嵌入式浏览上下文的导航都会被线性嵌入到*顶级*浏览上下文的[会话历史记录](/zh-CN/docs/Web/API/History)中。包含嵌入内容的浏览上下文称为*父级浏览上下文*。*顶级*浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
 
 > [!WARNING]
 > 页面上的每个 `<iframe>` 都需要增加内存和其他计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的 `<iframe>`，但是你最好还是先检查是否存在性能问题。

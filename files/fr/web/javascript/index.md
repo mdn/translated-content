@@ -9,7 +9,7 @@ slug: Web/JavaScript
 
 Cette section de MDN est dédiée au langage JavaScript. Pour des informations sur l'utilisation de JavaScript avec les [API](/fr/docs/Glossary/API) spécifiques des navigateurs web pour les pages web, veuillez consulter les sections sur les [API Web](/fr/docs/Web/API) (_Web API_ en anglais) et le [DOM](/fr/docs/Web/API/Document_Object_Model).
 
-Le standard qui spécifie JavaScript est [ECMAScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview). En 2012, tous les navigateurs modernes supportent complètement ECMAScript 5.1. Les anciens navigateurs supportent au minimum ECMAScript 3. Une sixième version majeure du standard a été finalisée et publiée le 17 juin 2015. Cette version s'intitule officiellement ECMAScript 2015 mais est encore fréquemment appelée ECMAScript 6 ou ES6. Étant donné que les standards ECMAScript sont désormais édités sur un rythme annuel, cette documentation fait référence à la dernière version en cours de rédaction, actuellement c'est [ECMAScript 2020](https://tc39.github.io/ecma262/).
+Le standard qui spécifie JavaScript est [ECMAScript](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview). En 2012, tous les navigateurs modernes supportent complètement ECMAScript 5.1. Les anciens navigateurs supportent au minimum ECMAScript 3. Une sixième version majeure du standard a été finalisée et publiée le 17 juin 2015. Cette version s'intitule officiellement ECMAScript 2015 mais est encore fréquemment appelée ECMAScript 6 ou ES6. Étant donné que les standards ECMAScript sont désormais édités sur un rythme annuel, cette documentation fait référence à la dernière version en cours de rédaction, actuellement c'est [ECMAScript 2020](https://tc39.github.io/ecma262/).
 
 JavaScript ne doit pas être confondu avec le [langage de programmation Java](https://fr.wikipedia.org/wiki/Java_%28langage%29). Java et JavaScript sont deux marques déposées par Oracle dans de nombreux pays mais ces deux langages de programmation ont chacun une syntaxe, une sémantique et des usages différents.
 
@@ -25,17 +25,17 @@ Apprenez comment programmer en JavaScript.
 
 ### Ressources pour commencer
 
-Si vous souhaitez apprendre JavaScript et que vous débutez en programmation ou en JavaScript, [la section JavaScript de la zone d'apprentissage de MDN (_learning area_)](/fr/docs/Learn/JavaScript) est le meilleur endroit où commencer. Cette section contient les modules suivants :
+Si vous souhaitez apprendre JavaScript et que vous débutez en programmation ou en JavaScript, [la section JavaScript de la zone d'apprentissage de MDN (_learning area_)](/fr/docs/conflicting/Learn_web_development/Core/Scripting) est le meilleur endroit où commencer. Cette section contient les modules suivants :
 
-- [Les premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps)
+- [Les premiers pas en JavaScript](/fr/docs/Learn_web_development/Core/Scripting)
   - : Cet ensemble de chapitres répond à des questions telles que « qu'est-ce que JavaScript ? », « à quoi ressemble-t-il ? », « que puis-je faire avec ? » et présente des éléments clés du langage tels que les variables, les chaînes de caractères, les nombres et les tableaux.
-- [Les principaux blocs de JavaScript](/fr/docs/Learn/JavaScript/Building_blocks)
+- [Les principaux blocs de JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting_fb235ec2f43049f379fbefbc9e0e7ee10637a460ab94430af2a806ab533a3580)
   - : On poursuit ici la présentation des fonctionnalités importantes de JavaScript, notamment celle des blocs de codes fréquemment utilisés comme les instructions conditionnelles, les boucles, les fonctions et les évènements.
-- [Une introduction aux objets JavaScript](/fr/docs/Learn/JavaScript/Objects)
+- [Une introduction aux objets JavaScript](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : JavaScript est un langage de programmation « orienté objet » et ce concept est primordial pour utiliser JavaScript au mieux, écrire du code plus efficace et comprendre son fonctionnement. Ce module présente les bases de ces concepts.
-- [La programmation asynchrone en JavaScript](/fr/docs/Learn/JavaScript/Asynchronous)
+- [La programmation asynchrone en JavaScript](/fr/docs/Learn_web_development/Extensions/Async_JS)
   - : Dans cet article, on aborde les fonctionnalités asynchrones de JavaScript, en quoi elles sont importantes et la façon dont elles peuvent être utilisées lors d'opérations bloquantes comme la récupération de ressources provenant d'un serveur.
-- [Les API Web utilisées côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs)
+- [Les API Web utilisées côté client](/fr/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : Lorsqu'on écrit du JavaScript pour un site web ou une application, il est rapidement nécessaire de manipuler les API : des interfaces qui permettent de manipuler différents aspects du navigateur, des données provenant d'autres sites ou services, etc. Dans ce module, nous verrons ce que sont les API, et comment utiliser les API les plus fréquemment utilisées.
 
 ### Guide JavaScript
@@ -45,28 +45,28 @@ Si vous souhaitez apprendre JavaScript et que vous débutez en programmation ou 
 
 ### Niveau intermédiaire
 
-- [Comprendre les _frameworks_ JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [Comprendre les _frameworks_ JavaScript côté client](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Les _frameworks_ JavaScript font partie de l'écosystème du développement web côté client. Les outils qu'ils fournissent permettent de construire des applications dynamiques sur des bases robustes. Dans ce module, on présente les notions principales de leur fonctionnement et comment ces outils peuvent rejoindre votre panoplie. Des tutoriels sur les frameworks les plus répandus suivront cet article.
-- [Une réintroduction à JavaScript](/fr/docs/Web/JavaScript/Language_overview)
+- [Une réintroduction à JavaScript](/fr/docs/Web/JavaScript/Guide/Language_overview)
   - : Un aperçu pour ceux qui _pensent_ s'y connaître en JavaScript.
-- [Structures de données JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [Structures de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
   - : Aperçu des structures de données disponibles en JavaScript.
-- [Égalité, comparaison et similarité](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [Égalité, comparaison et similarité](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript propose trois opérations de comparaison de valeurs différentes : l'égalité stricte à l'aide de `===`, l'égalité souple à l'aide de `==` et la méthode [`Object.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
-- [Closures](/fr/docs/Web/JavaScript/Closures)
+- [Closures](/fr/docs/Web/JavaScript/Guide/Closures)
   - : Une _closure_ est la combinaison d'une fonction et de l'environnement lexical dans lequel cette fonction a été déclarée.
 
 ### Niveau avancé
 
-- [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : Cette page explique l'héritage à base de prototype, un concept souvent incompris et sous-estimé.
 - [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
   - : Une variante plus restreinte de JavaScript (par exemple, on ne peut pas utiliser de variable avant de l'avoir définie). Elle permet d'obtenir de meilleures performances et de faciliter le débogage.
 - [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
   - : Les tableaux typés permettent d'accéder à des données binaires brutes, de façon organisée.
-- [La gestion de la mémoire en JavaScript](/fr/docs/Web/JavaScript/Memory_management)
+- [La gestion de la mémoire en JavaScript](/fr/docs/Web/JavaScript/Guide/Memory_management)
   - : Cet article décrit le cycle de vie des objets et de la mémoire en JavaScript, ainsi que le mécanisme du ramasse-miettes.
-- [Gestion de la concurrence et boucle des événements](/fr/docs/Web/JavaScript/Event_loop)
+- [Gestion de la concurrence et boucle des événements](/fr/docs/Web/JavaScript/Reference/Execution_model)
   - : Le modèle de concurrence utilisé par JavaScript est basé sur une « boucle d'événements »
 
 ## Référence
@@ -88,7 +88,7 @@ Voici une liste d'outils utiles pour écrire et déboguer du code **JavaScript**
 
 - [Outils de développement de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : [Console web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [profileur JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [débogueur](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), et plus.
-- [Invites de commande JavaScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview)
+- [Invites de commande JavaScript](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)
   - : Un interpréteur de commandes JavaScript vous permet de tester rapidement des extraits de code JavaScript.
 - [Apprendre le JavaScript (en anglais)](https://learnjavascript.online/)
   - : Une excellente ressource pour les développeurs web en herbe - Apprenez JavaScript dans un environnement interactif, avec des leçons courtes et des tests interactifs, guidés par une évaluation automatique. Les 40 premières leçons sont gratuites, et le cours complet est disponible moyennant un petit paiement unique.

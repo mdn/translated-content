@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d4a09bb1d0d466e0f31d1c15d1bc0d908b5d70ea
 ---
 
-{{CSSRef}}
-
 你经常需要创建具有多列的布局，而 CSS 提供了多种方法来实现这一目的。使用[多列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)、[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)还是使用[网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)布局，取决于你想要实现的目标，在本指南中，我们将探讨这些选项。
 
 ![三种不同风格的布局，在容器中分为两列](cookbook-multiple-columns.png)

@@ -14,15 +14,15 @@ Les valeurs de ce type sont des chaînes. L'élément est affiché lorsque le co
 - all
   - : La spécification de "tous" équivaut à la combinaison de tous les autres contextes, à l'exception de 'bookmark', 'tab' et 'tools_menu'.
 - audio
-  - : S'applique lorsque l'utilisateur clique sur le contexte d'un élément [audio](/fr/docs/Web/HTML/Element/audio).
+  - : S'applique lorsque l'utilisateur clique sur le contexte d'un élément [audio](/fr/docs/Web/HTML/Reference/Elements/audio).
 - bookmark
   - : S'applique lorsque l'utilisateur clique en contexte sur un élément de signet dans la barre d'outils des signets, le menu des signets, la barre latérale des signets (\<kbd>Ctrl\</kbd> + \<kbd>B\</kbd>) et la fenêtre Bibliothèque (\<kbd>Ctrl\</kbd> + \<kbd>Shift\</kbd> + \<kbd>B\</kbd>). Ces deux derniers sont supportés à partir de Firefox 66. Nécessite la [permission d'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans le manifest.
 - browser_action
   - : S'applique lorsque l'utilisateur clique en contexte sur l'action de votre navigateur. Le nombre maximal d'éléments pouvant être ajoutés au menu contextuel de l'action du navigateur de niveau supérieur est {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, mais vous pouvez ajouter n'importe quel nombre d'éléments aux sous-menus.
 - editable
-  - : S'applique lorsque l'utilisateur clique en contexte sur un élément modifiable, comme un [textarea](/fr/docs/Web/HTML/Element/textarea).
+  - : S'applique lorsque l'utilisateur clique en contexte sur un élément modifiable, comme un [textarea](/fr/docs/Web/HTML/Reference/Elements/textarea).
 - frame
-  - : S'applique lorsque l'utilisateur clique sur le contexte dans une [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué.
+  - : S'applique lorsque l'utilisateur clique sur le contexte dans une [iframe](/fr/docs/Web/HTML/Reference/Elements/iframe) imbriqué.
 - image
   - : S'applique lorsque l'utilisateur clique sur le contexte d'une image.
 - link
@@ -32,7 +32,7 @@ Les valeurs de ce type sont des chaînes. L'élément est affiché lorsque le co
 - page_action
   - : S'applique lorsque l'utilisateur clique en contexte sur l'action de votre page. Le nombre maximal d'éléments pouvant être ajoutés au menu contextuel de l'action de page de niveau supérieur est {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, mais vous pouvez ajouter n'importe quel nombre d'éléments aux sous-menus.
 - password
-  - : S'applique lorsque l'utilisateur clique en contexte sur un [élément d'entrée de mot de passe](/fr/docs/Web/HTML/Element/input/password).
+  - : S'applique lorsque l'utilisateur clique en contexte sur un [élément d'entrée de mot de passe](/fr/docs/Web/HTML/Reference/Elements/input/password).
 - selection
   - : S'applique lorsqu'une partie de la page est sélectionnée.
 - tab
@@ -40,7 +40,7 @@ Les valeurs de ce type sont des chaînes. L'élément est affiché lorsque le co
 - tools_menu
   - : L'élément sera ajouté au menu des outils du navigateur. Notez que ceci n'est disponible que si vous accédez à `ContextType` via l'espace de nom des `menus`. Il n'est pas disponible si vous y accédez via l'espace de noms `contextMenus`.
 - video
-  - : S'applique lorsque l'utilisateur clique sur le contexte d'un élément [video](/fr/docs/Web/HTML/Element/video).
+  - : S'applique lorsque l'utilisateur clique sur le contexte d'un élément [video](/fr/docs/Web/HTML/Reference/Elements/video).
 
 Notez que "launcher" n'est pas supporté.
 

@@ -4,8 +4,6 @@ slug: orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
 
-{{HTTPSidebar}}
-
 La cible d'une requête HTTP est appelée une "ressource", elle ne possède pas de type particulier. Il peut s'agir d'un document, d'une photo ou de n'importe quoi d'autre. Chaque ressource est identifiée à l'aide d'une _Uniform Resource Identifier_ ({{Glossary("URI")}}) utilisé au sein de HTTP pour identifier les ressources.
 
 L'identité et l'emplacement d'une ressource sur le Web sont souvent déterminées via une URL (*Uniform Resource Locator*° un type d'URI. Il existe des cas valides où l'identité et l'emplacement d'une ressource ne sont pas obtenus par la même URI comme lorsque l'en-tête {{HTTPHeader("Alt-Svc")}} est utilisé. La ressource requise par le client doit alors être récupérée à partir d'un emplacement différent.
@@ -53,7 +51,7 @@ Ces deux URNs correspondent :
 
 | Schéma      | Description                                                         |
 | ----------- | ------------------------------------------------------------------- |
-| data        | [URIs de données](/fr/docs/Web/URI/Schemes/data)       |
+| data        | [URIs de données](/fr/docs/Web/URI/Reference/Schemes/data)       |
 | file        | Fichiers du système hôte sur lequel est installé le navigateur      |
 | ftp         | [File Transfer Protocol](/fr/docs/Glossary/FTP)                     |
 | http/https  | [Hyper text transfer protocol (sécurisé)](/fr/docs/Glossary/HTTP)   |
@@ -109,5 +107,5 @@ urn:isbn:9780141036144
 
 ## Voir aussi
 
-- [Qu'est-ce qu'une URL ?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Qu'est-ce qu'une URL ?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [La liste des différents schémas des URIs, maintenue par l'IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

@@ -3,8 +3,6 @@ title: 511 Network Authentication Required
 slug: Web/HTTP/Reference/Status/511
 ---
 
-{{HTTPSidebar}}
-
 The HTTP **`511 Network Authentication Required`** код состояния ответа указывает, что клиент должен пройти аутентификацию, чтобы получить доступ к сети.
 
 Этот статус не генерируется серверами происхождения, а путём перехвата прокси-серверов, которые контролируют доступ к сети.

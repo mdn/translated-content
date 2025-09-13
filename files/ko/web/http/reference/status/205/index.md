@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 HTTP의 **`205 Reset Content`** 응답상태는 form의 내용을 지우거나, 캔버스 상태를 재설정하거나, UI를 새로 고치려면 client의 문서 화면 요소를 새로고침하라고 알려준다.
 
 ## 상태

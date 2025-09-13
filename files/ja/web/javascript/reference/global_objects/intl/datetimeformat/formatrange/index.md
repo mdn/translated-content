@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
 
 **`Intl.DateTimeFormat.prototype.formatRange()`** は、 {{jsxref("Intl.DateTimeFormat")}} オブジェクトがインスタンス化されたときに提供された **`locale`** と **`options`** に基づいて、もっとも簡明な方法で日付の範囲を書式化します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatRange()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat.prototype.formatRange()", "taller")}}
 
 ```js interactive-example
 const options1 = {

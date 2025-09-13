@@ -2,7 +2,7 @@
 title: ウェブアプリケーションからのファイルの使用
 slug: Web/API/File_API/Using_files_from_web_applications
 l10n:
-  sourceCommit: e4e57ab3ccb5f93319f8fe13848d4895d3e1e771
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
@@ -63,69 +63,46 @@ const numFiles = fileList.length;
 次のコードは `size` プロパティを利用する例です。
 
 ```html
-<!doctype html>
-<html lang="ja-JP">
-  <head>
-    <meta charset="UTF-8" />
-    <title>ファイルのサイズ</title>
-  </head>
+<form name="uploadForm">
+  <div>
+    <input id="uploadInput" type="file" multiple />
+    <label for="fileNum">選択されたファイル:</label>
+    <output id="fileNum">0</output>;
+    <label for="fileSize">合計サイズ:</label>
+    <output id="fileSize">0</output>
+  </div>
+  <div><input type="submit" value="Send file" /></div>
+</form>
+```
 
-  <body>
-    <form name="uploadForm">
-      <div>
-        <input id="uploadInput" type="file" multiple />
-        <label for="fileNum">選択されたファイル:</label>
-        <output id="fileNum">0</output>;
-        <label for="fileSize">合計サイズ:</label>
-        <output id="fileSize">0</output>
-      </div>
-      <div><input type="submit" value="Send file" /></div>
-    </form>
+```js
+const uploadInput = document.getElementById("uploadInput");
+uploadInput.addEventListener(
+  "change",
+  () => {
+    // 合計サイズを計算
+    let numberOfBytes = 0;
+    for (const file of uploadInput.files) {
+      numberOfBytes += file.size;
+    }
 
-    <script>
-      const uploadInput = document.getElementById("uploadInput");
-      uploadInput.addEventListener(
-        "change",
-        () => {
-          // 合計サイズを計算
-          let numberOfBytes = 0;
-          for (const file of uploadInput.files) {
-            numberOfBytes += file.size;
-          }
+    // 最も近い接頭辞単位に近似
+    const units = ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
+    const exponent = Math.min(
+      Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+      units.length - 1,
+    );
+    const approx = numberOfBytes / 1024 ** exponent;
+    const output =
+      exponent === 0
+        ? `${numberOfBytes} バイト`
+        : `${approx.toFixed(3)} ${units[exponent]} (${numberOfBytes} バイト)`;
 
-          // 最も近い接頭辞単位に近似
-          const units = [
-            "B",
-            "KiB",
-            "MiB",
-            "GiB",
-            "TiB",
-            "PiB",
-            "EiB",
-            "ZiB",
-            "YiB",
-          ];
-          const exponent = Math.min(
-            Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-            units.length - 1,
-          );
-          const approx = numberOfBytes / 1024 ** exponent;
-          const output =
-            exponent === 0
-              ? `${numberOfBytes} bytes`
-              : `${approx.toFixed(3)} ${
-                  units[exponent]
-                } (${numberOfBytes} bytes)`;
-
-          document.getElementById("fileNum").textContent =
-            uploadInput.files.length;
-          document.getElementById("fileSize").textContent = output;
-        },
-        false,
-      );
-    </script>
-  </body>
-</html>
+    document.getElementById("fileNum").textContent = uploadInput.files.length;
+    document.getElementById("fileSize").textContent = output;
+  },
+  false,
+);
 ```
 
 ## click() メソッドを使用して非表示の input 要素を使用する
@@ -135,15 +112,14 @@ const numFiles = fileList.length;
 次のような HTML を考えてみましょう。
 
 ```html
-<input
-  type="file"
-  id="fileElem"
-  multiple
-  accept="image/*"
-  style="display:none" />
-<button id="fileSelect" type="button">
-  いくつかのファイルを選択してください。
-</button>
+<input type="file" id="fileElem" multiple accept="image/*" />
+<button id="fileSelect" type="button">ファイルをいくつか選択</button>
+```
+
+```css
+#fileElem {
+  display: none;
+}
 ```
 
 `click` イベントを扱うコードは次のようなものです。
@@ -178,7 +154,7 @@ JavaScript (click() メソッド) を使用せずにファイル選択を開け�
   multiple
   accept="image/*"
   class="visually-hidden" />
-<label for="fileElem">いくつかのファイルを選択してください。</label>
+<label for="fileElem">ファイルをいくつか選択</label>
 ```
 
 そしてこの CSS です。
@@ -254,9 +230,7 @@ function drop(e) {
 
 ```js
 function handleFiles(files) {
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i];
-
+  for (const file of files) {
     if (!file.type.startsWith("image/")) {
       continue;
     }
@@ -304,16 +278,17 @@ URL.revokeObjectURL(objectURL);
 インターフェイスとなる HTML は次のようになります。
 
 ```html
-<input
-  type="file"
-  id="fileElem"
-  multiple
-  accept="image/*"
-  style="display:none" />
-<a href="#" id="fileSelect">いくつかのファイルを選択してください。</a>
+<input type="file" id="fileElem" multiple accept="image/*" />
+<a href="#" id="fileSelect">ファイルをいくつか選択</a>
 <div id="fileList">
   <p>ファイルが選択されていません。</p>
 </div>
+```
+
+```css
+#fileElem {
+  display: none;
+}
 ```
 
 これにより、ファイル {{HTMLElement("input")}} 要素と、ファイル選択を呼び出すリンクが確立されます (あまり美しくないファイル入力を非表示にするため)。これは、ファイル選択を呼び出すメソッドと同様に、[click() メソッドを使用して非表示の input 要素を使用する](#click_メソッドを使用して非表示の_input_要素を使用する)の節で説明されています。
@@ -347,16 +322,16 @@ function handleFiles() {
   } else {
     const list = document.createElement("ul");
     fileList.appendChild(list);
-    for (let i = 0; i < this.files.length; i++) {
+    for (const file of this.files) {
       const li = document.createElement("li");
       list.appendChild(li);
 
       const img = document.createElement("img");
-      img.src = URL.createObjectURL(this.files[i]);
+      img.src = URL.createObjectURL(file);
       img.height = 60;
       li.appendChild(img);
       const info = document.createElement("span");
-      info.textContent = `${this.files[i].name}: ${this.files[i].size} バイト`;
+      info.textContent = `${file.name}: ${file.size} バイト`;
       li.appendChild(info);
     }
   }
@@ -399,8 +374,8 @@ function handleFiles() {
 function sendFiles() {
   const imgs = document.querySelectorAll(".obj");
 
-  for (let i = 0; i < imgs.length; i++) {
-    new FileUpload(imgs[i], imgs[i].file);
+  for (const img of imgs) {
+    new FileUpload(img, img.file);
   }
 }
 ```
@@ -418,13 +393,12 @@ function FileUpload(img, file) {
   const xhr = new XMLHttpRequest();
   this.xhr = xhr;
 
-  const self = this;
   this.xhr.upload.addEventListener(
     "progress",
     (e) => {
       if (e.lengthComputable) {
         const percentage = Math.round((e.loaded * 100) / e.total);
-        self.ctrl.update(percentage);
+        this.ctrl.update(percentage);
       }
     },
     false,
@@ -433,8 +407,8 @@ function FileUpload(img, file) {
   xhr.upload.addEventListener(
     "load",
     (e) => {
-      self.ctrl.update(100);
-      const canvas = self.ctrl.ctx.canvas;
+      this.ctrl.update(100);
+      const canvas = this.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
     false,
@@ -593,4 +567,4 @@ URL.revokeObjectURL(objURL);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

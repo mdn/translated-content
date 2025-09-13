@@ -3,8 +3,6 @@ title: <script>
 slug: Web/HTML/Reference/Elements/script
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<script>` 元素**能嵌入或引用要執行的程式碼。最常見的用途是嵌入或引用 JavaScript 程式碼。`<script>` 元素也能執行其他語言，例如 [WebGL](/zh-TW/docs/Web/API/WebGL_API) 的 GLSL shader 程式語言。
 
 | [內容類型](/zh-TW/docs/Web/HTML/Guides/Content_categories) | [元資料內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#metadata_content)、[流型內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content)、[Phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content). |

@@ -3,8 +3,6 @@ title: border-top-color
 slug: Web/CSS/border-top-color
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`border-top-color`** establece el color superior de un elemento {{cssxref("border")}}. Tenga en cuenta que en la mayoria de los casos las propiedades abreviadas {{cssxref("border-color")}} o {{cssxref("border-top")}} son mas convenientes y preferidas.
 
 ```css

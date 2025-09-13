@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/CONNECT
 original_slug: Web/HTTP/Methods/CONNECT
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `CONNECT`** 메소드는 요청한 리소스에 대해 양방향 연결을 시작하는 메소드입니다. 이는 터널을 열기 위해서 사용될 수 있습니다.
 
 예를 들어, `CONNECT` 메소드는 {{Glossary("SSL")}} ({{Glossary("HTTPS")}})를 사용하는 웹사이트에 접속하는데 사용될 수 있습니다. 클라이언트는 원하는 목적지와의 TCP 연결을 HTTP 프록시 서버에 요청합니다. 그러면 서버는 클라이언트를 대신하여 연결의 생성을 진행합니다. 한번 서버에 의해 연결이 수립되면, 프록시 서버는 클라이언트에 오고가는 TCP 스트림을 계속해서 프록시합니다.

@@ -47,7 +47,8 @@ viewport は機能と値のペアをカンマで区切ったリストです。�
 - `interactive-widget`
   - : 仮想キーボードなどの対話型 UI ウィジェットがページのビューポートに及ぼす効果を指定します。有効な値は `resizes-visual`、`resizes-content`、`overlays-content` です。既定値は `resizes-visual` です。
 
-> **警告:** `user-scalable=no` を使用すると、弱視などの視覚的な障碍を持つユーザーに対して、アクセシビリティの問題を発生させる可能性があります。[WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする) では少なくとも 2 倍まで拡大するように要求していますが、 5 倍の拡大を可能にすることが最善の習慣とされています。
+> [!WARNING]
+> `user-scalable=no` を使用すると、弱視などの視覚的な障碍を持つユーザーに対して、アクセシビリティの問題を発生させる可能性があります。[WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする) では少なくとも 2 倍まで拡大するように要求していますが、 5 倍の拡大を可能にすることが最善の習慣とされています。
 
 ## 画面の密度
 

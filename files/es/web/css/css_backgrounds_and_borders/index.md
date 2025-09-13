@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
-
 El módulo **Fondos y bordes CSS** proporciona propiedades para agregar bordes, esquinas redondeadas y sombras de caja a los elementos.
 
 Puede agregar diferentes tipos de estilos de borde, incluidos bordes hechos de imágenes de cualquier tipo de imagen, desde imágenes rasterizadas hasta degradados CSS. Los bordes pueden ser cuadrados o redondeados, y se puede establecer un radio diferente para cada esquina. Los elementos se pueden redondear tengan o no un borde visible.

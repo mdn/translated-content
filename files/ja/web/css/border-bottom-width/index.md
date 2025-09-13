@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 **`border-bottom-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの下の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-bottom-width")}}
+{{InteractiveExample("CSS デモ: border-bottom-width")}}
 
 ```css interactive-example-choice
 border-bottom-width: thick;

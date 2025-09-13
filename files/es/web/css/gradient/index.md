@@ -3,8 +3,6 @@ title: <gradient>
 slug: Web/CSS/gradient
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo de datos [CSS](/es/docs/Web/CSS) `<gradient>` indica un tipo de {{cssxref("&lt;image&gt;")}} que consiste de una transición progresiva entre dos o más colores (Degradado).

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`accent-color`** [CSS](/ko/docs/Web/CSS) 속성은 일부 요소에 의하여 생성된 사용자 인터페이스 컨트롤의 {{Glossary("accent", "강조")}} 색상을 설정합니다.
 
 {{InteractiveExample("CSS Demo: accent-color")}}
