@@ -5,11 +5,11 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Une **description accessible** est la description d'un élément d'interface utilisateur qui fournit des informations supplémentaires pour aider les utilisateurs de technologies d'assistance à comprendre l'élément UI et son contexte. Elle est associée à un élément HTML ou SVG et donne aux utilisateurs un contexte supplémentaire sur son but au-delà de ce qui est fourni par le {{Glossary("Accessible_name", "nom accessible")}} de l'élément. C'est particulièrement important pour les utilisateurs qui se servent de technologies d'assistance telles que {{Glossary("Screen_reader", "lecteurs d'écrans")}}. La description accessible d'un élément fait partie de {{Glossary("Accessibility_tree", "l'arbre d'accessibilité")}}.
+Une **description accessible** est la description d'un élément d'interface utilisateur qui fournit des informations supplémentaires pour aider les utilisateur·ice·s de technologies d'assistance à comprendre l'élément UI et son contexte. Elle est associée à un élément HTML ou SVG et donne aux utilisateur·ice·s un contexte supplémentaire sur son but au-delà de ce qui est fourni par le {{Glossary("Accessible_name", "nom accessible")}} de l'élément. C'est particulièrement important pour les utilisateur·ice·s qui se servent de technologies d'assistance telles que {{Glossary("Screen_reader", "lecteurs d'écrans")}}. La description accessible d'un élément fait partie de {{Glossary("Accessibility_tree", "l'arbre d'accessibilité")}}.
 
 Par exemple, le nom accessible d'une {{htmlelement("table")}} est fourni par sa première {{htmlelement("caption")}}. Dans le cas de tableaux de données complexes, une ou deux phrases décrivant le tableau peuvent fournir une description. Cela peut être un paragraphe juste avant ou après le tableau, tant visuellement que dans l'ordre du code source. S'il se trouve ailleurs dans l'ordre source, ou pour rendre l'association explicite, l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) peut être utilisé pour associer le tableau à sa description.
 
-De même, lorsqu'un utilisateur doit créer un mot de passe, le `<label>` pour le {{htmlelement("input")}} de type `password` fournit son nom accessible. Une bonne description accessible inclut les exigences du mot de passe de manière visible pour tous les utilisateurs. Elle peut être explicitement associée à l'entrée via son attribut `aria-describedby`, qui l'ajoute à l'arbre d'accessibilité en tant que «&nbsp;description&nbsp;» pour ce nœud.
+De même, lorsqu'un·e utilisateur·ice doit créer un mot de passe, le `<label>` pour le {{htmlelement("input")}} de type `password` fournit son nom accessible. Une bonne description accessible inclut les exigences du mot de passe de manière visible pour tous les utilisateur·ice·s. Elle peut être explicitement associée à l'entrée via son attribut `aria-describedby`, qui l'ajoute à l'arbre d'accessibilité en tant que «&nbsp;description&nbsp;» pour ce nœud.
 
 Les descriptions sont réduites à des chaînes de texte. Dans notre exemple de mot de passe, si la valeur de l'attribut `aria-describedby` de l'entrée est l'`id` d'une {{htmlelement("ul")}} HTML contenant une liste de conditions, la description est le texte concaténé et les équivalents texte de tous les éléments de la liste.
 
@@ -35,7 +35,7 @@ Les étapes de définition de la description accessible en HTML sont décrites d
 - [Calcul du nom et de la description accessibles 1.2 (accname) <sup>(angl.)</sup>](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [Accessibilité](/fr/docs/Web/Accessibility)
 - [Apprendre l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility)
-- [Accessibilité Web <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Web_accessibility) sur Wikipedia
+- [Accessibilité du Web](https://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web) sur Wikipedia
 - [Accessibilité Web en tête <sup>(angl.)</sup>](https://webaim.org/)
 - [ARIA](/fr/docs/Web/Accessibility/ARIA)
 - [Initiative W3C pour l'accessibilité Web (WAI) <sup>(angl.)</sup>](https://www.w3.org/WAI/)
