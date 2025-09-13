@@ -7,13 +7,13 @@ l10n:
 
 WebDriver est une interface de contrôle à distance qui permet l'introspection et le contrôle des agents utilisateurs. Il fournit un protocole filaire indépendant de la plate-forme et du langage, permettant aux programmes hors processus de contrôler à distance le comportement des navigateurs web.
 
-La possibilité d'écrire des jeux d'instructions pouvant être exécutés de manière interchangeable dans de nombreux navigateurs sur différentes plateformes est essentielle pour offrir une expérience cohérente aux utilisateurs. Avec la nouvelle vague de développements sur la plateforme web, la diversité croissante des appareils et les exigences en matière d'interopérabilité réelle entre les technologies, WebDriver fournit des outils pour [les tests en navigateur croisé](/fr/docs/Learn_web_development/Extensions/Testing/Introduction).
+La possibilité d'écrire des jeux d'instructions pouvant être exécutés de manière interchangeable dans de nombreux navigateurs sur différentes plateformes est essentielle pour offrir une expérience cohérente aux utilisateur·ice·s. Avec la nouvelle vague de développements sur la plateforme web, la diversité croissante des appareils et les exigences en matière d'interopérabilité réelle entre les technologies, WebDriver fournit des outils pour [les tests en navigateur croisé](/fr/docs/Learn_web_development/Extensions/Testing/Introduction).
 
 Il fournit un ensemble d'interfaces permettant de découvrir et de manipuler des éléments DOM dans des documents Web et de contrôler le comportement d'un agent utilisateur. Il est principalement destiné à permettre aux auteurs Web d'écrire des tests qui automatisent un agent utilisateur à partir d'un processus de contrôle distinct, mais peut également être utilisé de manière à permettre à des scripts intégrés au navigateur de contrôler un navigateur — éventuellement distinct.
 
 ## Utilisation
 
-Alors, que vous permet de faire WebDriver et à quoi ressemble-t-il ? Étant donné que WebDriver est indépendant du langage de programmation, la réponse à cette question dépend du client WebDriver que vous utilisez et du langage choisi.
+Alors, que vous permet de faire WebDriver et à quoi ressemble-t-il&nbsp;? Étant donné que WebDriver est indépendant du langage de programmation, la réponse à cette question dépend du client WebDriver que vous utilisez et du langage choisi.
 
 Mais si vous utilisez un client populaire écrit en Python, votre interaction avec WebDriver pourrait ressembler à ceci&nbsp;:
 
