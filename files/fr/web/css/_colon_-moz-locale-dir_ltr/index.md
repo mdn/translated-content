@@ -50,4 +50,4 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 ## Voir aussi
 
 - {{cssxref(":dir",":dir(…)")}}
-- {{cssxref(":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}

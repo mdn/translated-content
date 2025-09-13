@@ -181,7 +181,7 @@ Si `:invalid-pseudo-class` était un sélecteur valide, les deux premières règ
 
 - Les [Pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
 - [Apprendre&nbsp;: Pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
-- Autres pseudo-classes CSS fonctionnelles :
+- Autres pseudo-classes CSS fonctionnelles&nbsp;:
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}
   - {{cssxref(":where", ":where()")}}

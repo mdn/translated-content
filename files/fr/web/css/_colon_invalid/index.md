@@ -130,7 +130,7 @@ Si un quelconque bouton radio dans un groupe (c'est-à-dire, avec la même valeu
 
 ### Gestion dans Gecko
 
-Par défaut, Gecko n'applique pas de style particulier à la pseudo-classe `:invalid` . Toutefois un style différent est appliqué (un halo rouge utilisant la propriété {{cssxref("box-shadow")}}) via la pseudo-classe {{cssxref(":-moz-ui-invalid")}}, qui s'applique dans un sous-ensemble des cas de `:invalid`.
+Par défaut, Gecko n'applique pas de style particulier à la pseudo-classe `:invalid` . Toutefois un style différent est appliqué (un halo rouge utilisant la propriété {{cssxref("box-shadow")}}) via la pseudo-classe {{cssxref(":user-invalid")}}, qui s'applique dans un sous-ensemble des cas de `:invalid`.
 
 ## Spécifications
 
@@ -142,7 +142,12 @@ Par défaut, Gecko n'applique pas de style particulier à la pseudo-classe `:inv
 
 ## Voir aussi
 
-- Autres pseudo-classes liées à la validation&nbsp;: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
-- Pseudo-classes Mozilla liées&nbsp;: {{cssxref(":user-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
+- Autres pseudo-classes liées à la validation&nbsp;:
+  - {{ cssxref(":required") }}
+  - {{ cssxref(":optional") }}
+  - {{ cssxref(":valid") }}
+- Pseudo-classes Mozilla liées&nbsp;:
+  - {{cssxref(":user-invalid")}}
+  - {{cssxref(":-moz-submit-invalid")}}
 - [Validation des données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - Accéder à l'[état de validité](/fr/docs/Web/API/ValidityState) depuis JavaScript
