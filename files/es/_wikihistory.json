@@ -2443,15 +2443,6 @@
       "editorUOC"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:11.693Z",
-    "contributors": [
-      "Creasick",
-      "Enesimus",
-      "javierpolit",
-      "DennisM"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
     "modified": "2020-08-31T14:16:45.193Z",
     "contributors": [
@@ -19345,6 +19336,15 @@
       "andrpueb",
       "Aglezabad",
       "RaulHernandez"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9": {
+    "modified": "2020-07-16T22:28:11.693Z",
+    "contributors": [
+      "Creasick",
+      "Enesimus",
+      "javierpolit",
+      "DennisM"
     ]
   },
   "conflicting/Learn_web_development/Extensions/Forms": {
