@@ -78,7 +78,7 @@ Il existe deux types multipart&nbsp;:
 - `multipart`
   - : Données composées de plusieurs éléments, pouvant chacun avoir des types MIME différents. Exemples&nbsp;: `multipart/form-data` (pour des données produites avec l'API {{domxref("FormData")}}) et `multipart/byteranges` (défini dans l'{{RFC(7233, "", "5.4.1")}} et utilisé avec le {{Glossary("HTTP")}} {{HTTPStatus(206)}} «&nbsp;Partial Content&nbsp;» lorsque la ressource renvoyée ne contient qu'une partie du contenu, par exemple via l'en‑tête {{HTTPHeader("Range")}}). [(Voir le registre des types «&nbsp;multipart&nbsp;» auprès de l'IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)
 
-## Types MIME importants pour les développeur·euses Web
+## Types MIME importants pour les développeur·euse·s Web
 
 ### application/octet-stream
 
@@ -275,7 +275,7 @@ Quelques erreurs de configuration fréquentes côté serveur&nbsp;:
 
 - Fichiers compressés RAR. L'idéal serait d'indiquer le type réel des fichiers d'origine&nbsp;; souvent impossible car un fichier .RAR peut contenir plusieurs ressources de types différents. Dans ce cas, configurez le serveur pour envoyer `application/x-rar-compressed`.
 - Audio et vidéo. Seules les ressources avec le bon type MIME seront lues dans les éléments {{HTMLElement("video")}} ou {{HTMLElement("audio")}}. Veillez à spécifier le [type de média correct pour l'audio et la vidéo](/fr/docs/Web/Media/Guides/Formats).
-- Formats propriétaires. Un type spécifique comme `application/vnd.mspowerpoint` permet aux utilisateur·ices d'ouvrir automatiquement ces fichiers dans le logiciel de présentation de leur choix.
+- Formats propriétaires. Un type spécifique comme `application/vnd.mspowerpoint` permet aux utilisateur·ice·s d'ouvrir automatiquement ces fichiers dans le logiciel de présentation de leur choix.
 
 ## Détection du type MIME (<i lang="en">MIME sniffing</i>)
 
