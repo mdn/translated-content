@@ -22,10 +22,14 @@ input:out-of-range {
 
 ```html interactive-example
 <form>
-  <label for="amount">Combien de billets&nbsp;? (Vous pouvez acheter 2 à 6 billets)</label>
+  <label for="amount"
+    >Combien de billets&nbsp;? (Vous pouvez acheter 2 à 6 billets)</label
+  >
   <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
 
-  <label for="dep">Date de départ&nbsp;: (Toute l'année 2022 est acceptée)</label>
+  <label for="dep"
+    >Date de départ&nbsp;: (Toute l'année 2022 est acceptée)</label
+  >
   <input
     id="dep"
     name="dep"
@@ -34,7 +38,9 @@ input:out-of-range {
     max="2022-12-31"
     value="2025-05-05" />
 
-  <label for="ret">Date de retour&nbsp;: (Toute l'année 2022 est acceptée)</label>
+  <label for="ret"
+    >Date de retour&nbsp;: (Toute l'année 2022 est acceptée)</label
+  >
   <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
 </form>
 ```

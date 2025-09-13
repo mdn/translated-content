@@ -33,7 +33,8 @@ label {
   <input id="birth" name="birth" type="date" />
 
   <label for="origin"
-    >Comment avez-vous entendu parler de nous&nbsp;? <span class="req">*</span></label
+    >Comment avez-vous entendu parler de nous&nbsp;?
+    <span class="req">*</span></label
   >
   <select id="origin" name="origin" required>
     <option>Google</option>
