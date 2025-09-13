@@ -165,4 +165,4 @@ Java の例です。
 
 ## 関連情報
 
-- [WebSocket サーバーの記述](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [WebSocket サーバーを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
