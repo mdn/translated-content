@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Il existe plusieurs méthodes que vous pouvez utiliser pour mettre en page vos pages Web et vos applications. MDN contient plusieurs guides détaillés sur les différentes méthodes, et cette page en présente un aperçu.
+Il existe plusieurs méthodes que vous pouvez utiliser pour mettre en page vos pages Web et vos applications. Le MDN contient plusieurs guides détaillés sur les différentes méthodes, et cette page en présente un aperçu.
 
 ## Disposition normale, en bloc et en ligne
 
@@ -94,7 +94,7 @@ La disposition en grille introduit un système de grille bidimensionnelle dans C
 
 ## Alignement
 
-- [L'alignement des boîtes pour les dispositions : en bloc, absolue, en tableau](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- [L'alignement des boîtes pour les dispositions&nbsp;: en bloc, absolue, en tableau](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
   - : Les propriétés d'alignement sont spécifiées pour la mise en page en bloc et en ligne, bien qu'il n'y ait pas encore de prise en charge par les navigateurs.
 - [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
   - : Les propriétés d'alignement sont apparues pour la première fois avec flexbox&nbsp;; ce guide explique leur fonctionnement.
