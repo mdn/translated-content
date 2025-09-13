@@ -22,10 +22,10 @@ l10n:
 ## Web 技术
 
 <table class="no-markdown standard-table">
-  <caption>Web 技术在游戏开发中的功能</caption>
+  <caption>游戏开发中的 Web 技术和他们的用途</caption>
   <thead>
     <tr>
-      <th scope="col"><strong>功能</strong></th>
+      <th scope="col"><strong>用途</strong></th>
       <th scope="col"><strong>技术</strong></th>
     </tr>
   </thead>
