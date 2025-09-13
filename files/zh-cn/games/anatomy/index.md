@@ -2,7 +2,7 @@
 title: 剖析游戏结构
 slug: Games/Anatomy
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: 21addd31954b2629ab3e186dacdf7edca813dc7d
 ---
 
 本文从技术角度分析了一般电子游戏的结构和工作流程，就此介绍主循环是如何运行的。它有助于初学者了解在现代游戏开发领域构建游戏时需要什么，以及理解像 JavaScript 这样的 Web 标准是如何成为可用于开发游戏的工具的。游戏开发经验丰富但不熟悉 Web 开发的开发者也能从本文中受益。
@@ -111,7 +111,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 ## 用 JavaScript 构建一个更优化的主循环
 
-基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于 `window.requestAnimationFrame()` 方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。[W3C 的 requestAnimationFrame 规范](https://www.w3.org/TR/animation-timing/)并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
+归根结底，在 JavaScript 中，是浏览器在运行其自身的主循环，而你的代码只是作为其部分阶段来执行。上文所述的主循环都避免了从浏览器手中夺走主线程控制权。这些方法都将自身附加到 `window.requestAnimationFrame()` 上，以此向浏览器请求对下一帧的控制权。至于如何将这些请求融入浏览器自己的主循环，则由浏览器自行决定。[HTML 规范](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#dom-animationframeprovider-requestanimationframe)并未确切定义浏览器必须在何时执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
 
 现代版的 Firefox 和 Google Chrome（可能还有其他浏览器）都尝试图在框架的时间片段的开始时*尝试*将 `requestAnimationFrame` 回调与它们的主线程进行连接。因此，浏览器的主线程*看起来*就像下面这样：
 
