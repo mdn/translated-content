@@ -1,6 +1,7 @@
 ---
 title: 하위 도메인 탈취
-slug: Web/Security/Subdomain_takeovers
+slug: Web/Security/Attacks/Subdomain_takeover
+original_slug: Web/Security/Subdomain_takeovers
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
