@@ -7,24 +7,24 @@ l10n:
 
 {{securecontext_header}} {{DefaultAPISidebar("File System API")}} {{AvailableInWorkers}}
 
-L'**API du système de fichiers** &mdash; avec des extensions fournies via l'[**API d'accès au système de fichiers**](https://wicg.github.io/file-system-access/) pour accéder aux fichiers sur le système de fichiers d'un périphérique &mdash; permet de lire, d'écrire et de gérer des fichiers.
+L'**API du système de fichiers** — avec des extensions fournies via l'[**API d'accès au système de fichiers**](https://wicg.github.io/file-system-access/) pour accéder aux fichiers sur le système de fichiers d'un périphérique — permet de lire, d'écrire et de gérer des fichiers.
 
 Voir [la relation avec d'autres API liées aux fichiers](/fr/docs/Web/API/File_API#relation_avec_d_autres_api_liées_aux_fichiers) pour une comparaison entre cette API, l'[API des entrées de fichiers et de répertoires](/fr/docs/Web/API/File_and_Directory_Entries_API) et l'[API de fichier](/fr/docs/Web/API/File_API).
 
 ## Concepts et utilisation
 
-Cette API permet d'interagir avec les fichiers présents sur le périphérique local&nbsp;&mdash;&nbsp;d'un utilisateur ou d'une utilisatrice&nbsp;&mdash;&nbsp;ou sur un système de fichiers réseau accessible à ces derniers. Les fonctionnalités de base incluent la lecture, l'écriture ou la sauvegarde de fichiers, ainsi que l'accès à la structure des répertoires.
+Cette API permet d'interagir avec les fichiers présents sur le périphérique local d'un·e utilisateur·ice ou sur un système de fichiers réseau accessible à ces derniers. Les fonctionnalités de base incluent la lecture, l'écriture ou la sauvegarde de fichiers, ainsi que l'accès à la structure des répertoires.
 
 La plupart des interactions avec les fichiers et les répertoires se font via des «&nbsp;<i lang="en">handles</i>&nbsp;». La classe parente {{domxref('FileSystemHandle')}} permet de définir deux classes enfants&nbsp;: {{domxref('FileSystemFileHandle')}} et {{domxref('FileSystemDirectoryHandle')}}, pour les fichiers et les répertoires respectivement.
 
-Les <i lang="en">handles</i> représentent un fichier ou un répertoire sur le système de l'utilisateur ou de l'utilisatrice. Vous pouvez y accéder en affichant un sélecteur de fichier ou de répertoire à l'aide de méthodes telles que {{domxref('window.showOpenFilePicker()')}} et {{domxref('window.showDirectoryPicker()')}}. Une fois ces méthodes appelées, le sélecteur s'affiche et l'utilisateur ou l'utilisatrice choisit un fichier ou un répertoire. Si la sélection est réussie, un <i lang="en">handle</i> est retourné.
+Les <i lang="en">handles</i> représentent un fichier ou un répertoire sur le système de l'utilisateur·ice. Vous pouvez y accéder en affichant un sélecteur de fichier ou de répertoire à l'aide de méthodes telles que {{domxref('window.showOpenFilePicker()')}} et {{domxref('window.showDirectoryPicker()')}}. Une fois ces méthodes appelées, le sélecteur s'affiche et l'utilisateur·ice choisit un fichier ou un répertoire. Si la sélection est réussie, un <i lang="en">handle</i> est retourné.
 
 Vous pouvez également accéder aux <i lang="en">handles</i> de fichiers via&nbsp;:
 
 - La méthode {{domxref('DataTransferItem.getAsFileSystemHandle()')}} de l'{{domxref('HTML Drag and Drop API', '', '', 'nocode')}}.
 - L'[API de gestion de fichiers <sup>(angl.)</sup>](https://developer.chrome.com/docs/capabilities/web-apis/file-handling).
 
-Chaque <i lang="en">handle</i> offre ses propres fonctionnalités et il existe quelques différences selon celui que vous utilisez (voir la section [Interfaces](#interfaces) pour plus de détails). Vous pouvez ensuite accéder aux données des fichiers ou aux informations (y compris les enfants) du répertoire sélectionné. Cette API apporte des fonctionnalités qui faisaient défaut au Web. Cependant, la sécurité a été la principale préoccupation lors de la conception de l'API, et l'accès aux fichiers ou répertoires est interdit sauf si l'utilisateur ou l'utilisatrice l'autorise explicitement (ce qui n'est pas le cas avec le [système de fichiers d'origine privé](#système_de_fichiers_d_origine_privé), qui n'est pas visible pour l'utilisateur ou l'utilisatrice).
+Chaque <i lang="en">handle</i> offre ses propres fonctionnalités et il existe quelques différences selon celui que vous utilisez (voir la section [Interfaces](#interfaces) pour plus de détails). Vous pouvez ensuite accéder aux données des fichiers ou aux informations (y compris les enfants) du répertoire sélectionné. Cette API apporte des fonctionnalités qui faisaient défaut au Web. Cependant, la sécurité a été la principale préoccupation lors de la conception de l'API, et l'accès aux fichiers ou répertoires est interdit sauf si l'utilisateur·ice l'autorise explicitement (ce qui n'est pas le cas avec le [système de fichiers d'origine privé](#système_de_fichiers_d_origine_privé), qui n'est pas visible pour l'utilisateur·ice).
 
 > [!NOTE]
 > Les différentes exceptions pouvant être levées lors de l'utilisation des fonctionnalités de cette API sont répertoriées sur des pages pertinentes, comme défini dans la spécification. Cependant, la situation est rendue plus complexe par l'interaction entre l'API et le système d'exploitation sous-jacent. Une proposition a été faite pour [énumérer les mappages d'erreurs dans la spécification <sup>(angl.)</sup>](https://github.com/whatwg/fs/issues/57), qui inclut des informations utiles à ce sujet.
@@ -43,11 +43,11 @@ Voici quelques cas d'utilisation possibles&nbsp;:
   - L'application peut reprendre les téléchargements après une interruption, comme la fermeture ou le plantage du navigateur, une perte de connexion ou l'arrêt de l'ordinateur.
 
 - Jeux vidéo ou autres applications avec beaucoup de ressources multimédias
-  - L'application télécharge un ou plusieurs gros fichiers (tarballs) et les extrait localement dans une structure de répertoires.
-  - L'application précharge les ressources en arrière-plan, afin que l'utilisateur ou l'utilisatrice puisse passer au niveau ou à la tâche suivante sans attendre un téléchargement.
+  - L'application télécharge un ou plusieurs gros fichiers (<i lang="en">tarballs</i>) et les extrait localement dans une structure de répertoires.
+  - L'application précharge les ressources en arrière-plan, afin que l'utilisateur·ice puisse passer au niveau ou à la tâche suivante sans attendre un téléchargement.
 
 - Éditeur audio ou photo avec accès hors ligne ou cache local (idéal pour les performances et la rapidité)
-  - L'application peut écrire dans les fichiers en place (par exemple, écraser uniquement les balises ID3/EXIF et non le fichier entier).
+  - L'application peut écrire dans les fichiers en place (par exemple, écraser uniquement les balises `ID3`/`EXIF` et non le fichier entier).
 
 - Visionnage vidéo hors ligne
   - L'application peut télécharger des fichiers volumineux (> 1 Go) pour une visualisation ultérieure.
@@ -90,7 +90,7 @@ Lisez notre page sur le [système de fichiers d'origine privé](/fr/docs/Web/API
 - {{domxref("Window.showSaveFilePicker()")}}
   - : Affiche un sélecteur de fichiers qui permet à un·e utilisateur·ice d'enregistrer un fichier.
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
-  - : Renvoie une promesse {{jsxref('Promise')}} qui se réalise avec un {{domxref('FileSystemFileHandle')}} si l'élément déplacé est un fichier ou s'accompagne avec un {{domxref('FileSystemDirectoryHandle')}} si l'élément déplacé est un répertoire.
+  - : Renvoie une {{jsxref('Promise')}} (promesse) qui se réalise avec un {{domxref('FileSystemFileHandle')}} si l'élément déplacé est un fichier ou s'accompagne avec un {{domxref('FileSystemDirectoryHandle')}} si l'élément déplacé est un répertoire.
 - {{domxref("StorageManager.getDirectory()")}}
   - : Utilisé pour obtenir une référence à un objet {{domxref("FileSystemDirectoryHandle")}} permettant l'accès à un répertoire et son contenu, stocké dans le [Système de fichiers privé d'origine](/fr/docs/Web/API/File_System_API/Origin_private_file_system). Renvoie une promesse {{jsxref('Promise')}} qui se complète avec un objet {{domxref("FileSystemDirectoryHandle")}}.
 
@@ -214,7 +214,7 @@ writableStream.write({ type: "truncate", size });
 
 Cet exemple lit et écrit de manière synchrone un fichier au [Système de fichiers d'origine privé](#système_de_fichiers_d_origine_privé).
 
-La fonction de gestionnaire d'événements asynchrones suivante est contenue dans un travailleur Web. En recevant un message du thread principal, elle&nbsp;:
+La fonction de gestionnaire d'événements asynchrones suivante est contenue dans un Web Worker. En recevant un message du thread principal, elle&nbsp;:
 
 - Crée une trappe d'accès aux fichiers synchrones.
 - Obtient la taille du fichier et crée un {{jsxref("ArrayBuffer")}} pour le contenir.
