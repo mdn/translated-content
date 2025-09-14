@@ -1,20 +1,30 @@
 ---
 title: arguments.callee
+short-title: callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Functions")}}
+{{Deprecated_Header}}
 
-**`arguments.callee`** プロパティは現在実行中の関数を示します。
+> [!NOTE]
+> [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、`arguments.callee` にアクセスすると {{jsxref("TypeError")}} が発生します。関数が自身を参照しなければならない場合は、[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)に名前を付けるか、[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)を使用してください。
+
+**`arguments.callee`** データプロパティは、引数が属する現在実行中の関数を保持しています。
+
+## 値
+
+現在実行中の関数への参照です。
+
+{{js_property_attributes(1, 0, 1)}}
+
+> [!NOTE]
+> `callee` は、単純な引数を持つ厳格でない関数においてのみ使用できるデータプロパティです（この場合、`arguments` オブジェクトも[自動同期化](/ja/docs/Web/JavaScript/Reference/Functions/arguments#位置を指定した代入)されます）。それ以外の場合は、ゲッターとセッターの両方が {{jsxref("TypeError")}} を発生するアクセサープロパティです。
 
 ## 解説
 
 `callee` は `arguments` オブジェクトのプロパティです。これは、現在実行中の関数を、その関数本体の内部で参照するために使用することができます。これは、名前のない関数式（「無名関数」とも呼ばれる）の中など、関数名が不明な場合に便利です。
-
-> [!WARNING]
-> ECMAScript 第 5 版では、 `arguments.callee()` を[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で使用することを禁止しています。関数式に名前を付けるか、関数が自分自身を呼び出すような関数宣言を行うことで、 `arguments.callee()` の使用を避けることができます。
-
-### なぜ `arguments.callee` は ES5 厳格モードで削除されたのか
 
 （[Stack Overflow の olliej による回答によれば](https://stackoverflow.com/questions/103598/why-was-the-arguments-callee-caller-property-deprecated-in-javascript/235760)）
 
@@ -24,7 +34,7 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 
 ```js
 function factorial(n) {
-  return !(n > 1) ? 1 : factorial(n - 1) * n;
+  return n <= 1 ? 1 : factorial(n - 1) * n;
 }
 
 [1, 2, 3, 4, 5].map(factorial);
@@ -34,7 +44,7 @@ function factorial(n) {
 
 ```js
 [1, 2, 3, 4, 5].map(function (n) {
-  return !(n > 1) ? 1 : /* ここでどうする？ */ (n - 1) * n;
+  return n <= 1 ? 1 : /* ここでどうする？ */ (n - 1) * n;
 });
 ```
 
@@ -42,44 +52,47 @@ function factorial(n) {
 
 ```js
 [1, 2, 3, 4, 5].map(function (n) {
-  return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
+  return n <= 1 ? 1 : arguments.callee(n - 1) * n;
 });
 ```
 
-しかし、これは実際には本当に悪い解決法でした。これは（他の `arguments`、`callee`、`caller` の問題と組み合わさって）、一般的な場合に、インライン化と末尾再帰が不可能になるからです（特定のケースではトレースなどを通じて実現できますが、最高のコードでも、不要な検査が入るために最適ではありません）。他の大きな問題として、再帰呼び出しにおいては `this` の値が別のものになるというものがあります。例を示します。
+しかし、`arguments.callee` の設計には複数の問題があります。最初の問題は、再帰呼び出しで異なる `this` 値が取得されることです。例えば、
 
 ```js
-var global = this;
+function sillyFunction(recursed) {
+  if (this !== globalThis) {
+    console.log("This is:", this);
+  } else {
+    console.log("This is the global");
+  }
 
-var sillyFunction = function (recursed) {
   if (!recursed) {
     return arguments.callee(true);
   }
-  if (this !== global) {
-    alert("This is: " + this);
-  } else {
-    alert("This is the global");
-  }
-};
+}
 
 sillyFunction();
+// This is the global
+// This is: [object Arguments]
 ```
+
+さらに、 `arguments.callee` への参照は、一般的なケースではインライン化と末尾再帰を不可能にします。（トレースなどを通じて選択のケースでは実現可能ですが、必要のない調べが発生するため、最良のコードでさえ最適とは言えません。）
 
 ECMAScript 3 では、以下のように名前付き関数式を許可することでこれらの問題を解決しました。
 
 ```js
 [1, 2, 3, 4, 5].map(function factorial(n) {
-  return !(n > 1) ? 1 : factorial(n - 1) * n;
+  return n <= 1 ? 1 : factorial(n - 1) * n;
 });
 ```
 
 これには多くの利点があります。
 
 - 他の関数と同様に、コード内の他のところから呼び出すことができる
-- 外側のスコープに変数を作らない ([IE 8 以前を除く](https://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope)
+- 外側のスコープに変数を作らない（[IE 8 以前を除く](https://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope)）
 - arguments オブジェクトにアクセスするよりもパフォーマンスが良い
 
-もう一つ非推奨になった機能として `arguments.callee.caller`、より具体的には `Function.caller` がありました。これはなぜでしょうか。どの時点でも、スタック上で任意の関数の最も深い呼び出し元を見つけることができますが、前述のように、コールスタックを見ることは、一つの大きな影響があります。これによって数多くの最適化が不可能になったり、はるかに困難になったりするのです。例えば、関数 `f` が未知の関数を呼び出さないことを保証できない場合、 `f` をインライン化することはできません。基本的には些細なことでインライン化できたかもしれない呼び出し箇所に、大量の防護壁が積み重なるということです。
+厳格モードでは、関数の [`caller`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/caller) プロパティ（同様にスタック情報を漏らす）が禁止されています。これは、呼び出しスタックを参照することが、多数の最適化を不可能にしたり、はるかに困難にするという重大な効果を及ぼすためです。例えば、関数 `f` が未知の関数を呼び出すことを保証できない場合、`f` をインライン化することはできません。
 
 ```js
 function f(a, b, c, d, e) {
@@ -91,7 +104,7 @@ JavaScript インタープリターは、呼び出しが行われた時点で提
 
 ## 例
 
-### 無名再帰関数内での `arguments.callee` の使用
+### 無名再帰関数内での arguments.callee の使用
 
 再帰関数は自分自身を参照する必要があります。ふつう、関数が自分自身を参照するには関数名を使用します。しかし、無名関数（[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)または [`Function` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function)で作成できる）には名前がありません。したがって、これを参照するためのアクセス可能な変数がない場合、関数が自分自身を参照できる唯一の方法が `arguments.callee` による方法になります。
 
@@ -100,29 +113,36 @@ JavaScript インタープリターは、呼び出しが行われた時点で提
 ```js
 function create() {
   return function (n) {
-    if (n <= 1) return 1;
+    if (n <= 1) {
+      return 1;
+    }
     return n * arguments.callee(n - 1);
   };
 }
 
-var result = create()(5); // 120 (5 * 4 * 3 * 2 * 1) を返す
+const result = create()(5); // 120 (5 * 4 * 3 * 2 * 1) を返す
 ```
 
-### 良い代替手段がない場合の `arguments.callee` の使用
+### Y-結合子をつけて無名関数の再帰
 
-ただし、次のような場合は `arguments.callee` に代わるものが無いため、非推奨にしたことはバグである可能性があります ([bug 725398](https://bugzilla.mozilla.org/show_bug.cgi?id=725398) を参照)。
+関数式には名前が付けられるようになりましたが、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)は常に無名関数であり、まず変数に代入されない限り自分自身を参照できません。幸いなことに、ラムダ計算には関数が無名かつ自己参照できる状態になることができる優れた解決策があります。この手法は [Y-結合子](https://ja.wikipedia.org/wiki/不動点コンビネータ#Yコンビネータ)と呼ばれます。ここではその仕組みについては説明せず、それが機能する事実のみを述べます。
 
 ```js
-function createPerson(sIdentity) {
-  var oPerson = new Function("alert(arguments.callee.identity);");
-  oPerson.identity = sIdentity;
-  return oPerson;
-}
+// The Y-combinator: a utility function!
+const Y = (hof) => ((x) => x(x))((x) => hof((y) => x(x)(y)));
 
-var john = createPerson("John Smith");
-
-john();
+console.log(
+  [1, 2, 3, 4, 5].map(
+    // Wrap the higher-order function in the Y-combinator
+    // "factorial" is not a function's name: it's introduced as a parameter
+    Y((factorial) => (n) => (n <= 1 ? 1 : factorial(n - 1) * n)),
+  ),
+);
+// [ 1, 2, 6, 24, 120 ]
 ```
+
+> [!NOTE]
+> この方法は反復処理ごとに新しいクロージャを割り当てるため、メモリー使用量が大幅に増加する可能性があります。ここでは可能性を示すためだけに存在しますが、本番環境では避けるべきです。代わりに一時変数または名前付き関数式を使用してください。
 
 ## 仕様書
 
@@ -134,4 +154,7 @@ john();
 
 ## 関連情報
 
-- {{jsxref("Function")}}
+- [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Function.prototype.caller")}}

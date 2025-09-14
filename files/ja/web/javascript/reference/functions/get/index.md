@@ -1,13 +1,13 @@
 ---
-title: ゲッター
+title: get
 slug: Web/JavaScript/Reference/Functions/get
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Functions")}}
+**`get`** 構文は、オブジェクトのプロパティを関数に結びつけ、プロパティが参照された時に関数が呼び出されるようにします。これは[クラス](/ja/docs/Web/JavaScript/Reference/Classes)でも使用できます。
 
-**`get`** 構文は、オブジェクトのプロパティを関数に結びつけ、プロパティが参照された時に関数が呼び出されるようにします。
-
-{{InteractiveExample("JavaScript デモ: Functions Getter")}}
+{{InteractiveExample("JavaScript デモ: ゲッター宣言")}}
 
 ```js interactive-example
 const obj = {
@@ -18,48 +18,43 @@ const obj = {
 };
 
 console.log(obj.latest);
-// Expected output: "c"
+// 予想される結果: "c"
 ```
 
 ## 構文
 
-```js
-{get prop() { /* ... */ } }
-{get [expression]() { /* ... */ } }
+```js-nolint
+{ get prop() { /* … */ } }
+{ get [expression]() { /* … */ } }
 ```
+
+追加の構文上の制限がいくつかあります。
+
+- ゲッターの引数は正確にゼロ個でなければなりません。
 
 ### 引数
 
 - `prop`
-  - : 与えられた関数に結び付けられるプロパティの名前
+  - : 与えられた関数に結び付けられるプロパティの名前です。他のプロパティの[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)と同じ方法で、文字列リテラル、数値リテラル、識別子のいずれかにすることができます。
 - `expression`
-  - : ECMAScript 2015 より、算出されたプロパティ名 (computed property name) の式を使用して関数に結び付けることもできます。
+  - : 算出プロパティ名 (computed property name) の式を使用して関数に結び付けることもできます。
 
 ## 解説
 
-時として、動的に計算した値を返すプロパティにアクセスを許可したほうが望ましい場合や、明示的なメソッドを呼び出すことなく内部変数に状態を反映させたい場合があります。 JavaScript では、*ゲッター*を使ってこれを行うことが可能です。
+時として、動的に計算した値を返すプロパティにアクセスを許可したほうが望ましい場合や、明示的なメソッドを呼び出すことなく内部変数に状態を反映させたい場合があります。 JavaScript では、「ゲッター」を使ってこれを行うことが可能です。
 
-プロパティに結び付けられたゲッターと、実際に値を持つプロパティを同時に持つことはできませんが、ゲッターとセッターを組み合わせて使用し、一種の擬似プロパティを作成することはできます。
+オブジェクトのプロパティは、データプロパティかアクセサープロパティのいずれかであり、両方を同時に持つことはできません。詳細は {{jsxref("Object.defineProperty()")}} を参照してください。ゲッター構文を使用すると、オブジェクト初期化子内でゲッター関数を指定することができます。
 
-`get` 構文を使用する場合は、以下のことに注意してください。
+```js
+const obj = {
+  get prop() {
+    // ゲッター、obj. prop を参照する際に実行されるコード
+    return someValue;
+  },
+};
+```
 
-- 数値または文字列による識別子を持つことができます。
-- 引数の数は 0 でなければなりません（詳しくは [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) をご覧ください）。
-- 1 つのオブジェクトリテラル中に、別の `get` が現れてはいけません。例えば次のようなことはできません。
-
-  ```js example-bad
-  {
-    get x() { }, get x() { }
-  }
-  ```
-
-- データ項目と同じ名前のプロパティが出現してはいけません。例えば次のようなことはできません。
-
-  ```js example-bad
-  {
-    x: ..., get x() { }
-  }
-  ```
+この構文を使用して定義されたプロパティは、作成されたオブジェクトの自身のプロパティであり、設定可能かつ列挙可能です。
 
 ## 例
 
@@ -71,14 +66,39 @@ console.log(obj.latest);
 const obj = {
   log: ["example", "test"],
   get latest() {
-    if (this.log.length === 0) return undefined;
-    return this.log[this.log.length - 1];
+    return this.log.at(-1);
   },
 };
 console.log(obj.latest); // "test"
 ```
 
-`latest` に値を代入しようとしても、変更はされないことに注意して下さい。
+`latest` に値を代入しようとしても、変更はされないことに注意してください。
+
+### クラス内でのゲッターの使用
+
+クラスインスタンスで利用できるパブリックインスタンスゲッターを定義する際にも、まったく同じ構文を使用することができます。クラス内では、メソッド間をカンマで区切る必要はありません。
+
+```js
+class ClassWithGetSet {
+  #msg = "hello world";
+  get msg() {
+    return this.#msg;
+  }
+  set msg(x) {
+    this.#msg = `hello ${x}`;
+  }
+}
+
+const instance = new ClassWithGetSet();
+console.log(instance.msg); // "hello world"
+
+instance.msg = "cake";
+console.log(instance.msg); // "hello cake"
+```
+
+ゲッタープロパティはクラスの `prototype` プロパティ上に定義されるため、そのクラスのすべてのインスタンスで共有されます。オブジェクトリテラル内のゲッタープロパティとは異なり、クラス内のゲッタープロパティは列挙可能ではありません。
+
+静的ゲッターとプライベートゲッターはよく似た構文を使用することができます。これらは [`static`](/ja/docs/Web/JavaScript/Reference/Classes/static) および[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)のページで説明しています。
 
 ### `delete` 演算子によるゲッターの削除
 
@@ -90,13 +110,13 @@ delete obj.latest;
 
 ### 既存のオブジェクトへの `defineProperty` を使用したゲッターの定義
 
-既存のオブジェクトに任意のタイミングでゲッターを追加するには、 {{jsxref("Object.defineProperty()")}} を使用します。
+既存のオブジェクトに任意のタイミングでゲッターを追加するには、 {{jsxref("Object.defineProperty()")}} を使用してください。
 
 ```js
 const o = { a: 0 };
 
 Object.defineProperty(o, "b", {
-  get: function () {
+  get() {
     return this.a + 1;
   },
 });
@@ -104,7 +124,7 @@ Object.defineProperty(o, "b", {
 console.log(o.b); // getter を実行。a + 1 を算出する (結果は 1)
 ```
 
-### 算出されたプロパティ名の使用
+### 算出プロパティ名の使用
 
 ```js
 const expr = "foo";
@@ -134,7 +154,7 @@ console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変�
 
 ### スマート / 自己書き換え / 遅延ゲッター
 
-ゲッターはオブジェクトのプロパティを*定義*する手段を提供しますが、アクセスされるまでプロパティの値を*計算*しません。ゲッターは値を計算するコストを、値が必要になるまで先送りします。値が必要でなければ、そのコストを負担しません。
+ゲッターはオブジェクトのプロパティを定義する手段を提供しますが、アクセスされるまでプロパティの値を計算しません。ゲッターは値を計算するコストを、値が必要になるまで先送りします。値が必要でなければ、そのコストを負担しません。
 
 プロパティの値の計算を先送りしたり後のアクセスのためにキャッシュするための付加的な最適化技術が、_スマート_（または _[メモ化](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)_）ゲッターです。初めてゲッターにアクセスされたときに、値を計算してキャッシュします。以降のアクセスでは再計算せずに、キャッシュした値を返します。これは次のような状況で役に立ちます。
 
@@ -150,13 +170,16 @@ console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変�
 以下の例では、オブジェクトが自身のプロパティとしてゲッターを持っています。プロパティを取得すると、プロパティはオブジェクトから削除された後に再追加されますが、このとき暗黙的にデータプロパティとして追加されます。最終的に、値が返されます。
 
 ```js
-get notifier() {
-  delete this.notifier;
-  return this.notifier = document.getElementById('bookmarked-notification-anchor');
-},
+const obj = {
+  get notifier() {
+    delete this.notifier;
+    this.notifier = document.getElementById("bookmarked-notification-anchor");
+    return this.notifier;
+  },
+};
 ```
 
-### `get` と `defineProperty`
+### get と defineProperty
 
 `get` キーワードと {{jsxref("Object.defineProperty()")}} の使用は似た結果になりますが、 {{jsxref("classes")}} 上で使用する場合は微妙な違いがあります。
 
@@ -192,9 +215,13 @@ console.log(
 
 ## 関連情報
 
-- [セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義) (JavaScript ガイド)
+- [オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_objects)ガイド
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
+- [`set`](/ja/docs/Web/JavaScript/Reference/Functions/set)
+- {{jsxref("Object.defineProperty()")}}
+- [オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- {{jsxref("Statements/class", "class")}}
+- [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) by Jeff Walden (2010)
+- [More SpiderMonkey changes: ancient, esoteric, very rarely used syntax for creating getters and setters is being removed](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) by Jeff Walden (2010)

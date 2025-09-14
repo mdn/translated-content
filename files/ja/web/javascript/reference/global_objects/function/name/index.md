@@ -1,11 +1,10 @@
 ---
 title: "Function: name"
+short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`name`** は {{jsxref("Function")}} オブジェクトの読み取り専用プロパティで、作成時に付けられた関数の名前、もしくは無名関数の場合は `anonymous` または `''` （空文字列）を返します。
 
@@ -91,14 +90,14 @@ const someFunction = function someFunctionName() {};
 someFunction.name; // "someFunctionName"
 ```
 
-`function` キーワードを使用して生成された関数式またはアロー関数は、名前が `""` （空文字列）になります。
+`function` キーワードまたはアロー関数構文を使用して作成される無名関数式は、既定で名前が `""` （空文字列）になります。
 
 ```js
 (function () {}).name; // ""
 (() => {}).name; // ""
 ```
 
-しかし、そのようなケースはまれです。通常、他の場所で式を参照するために、関数式には作成時に識別子に添付します（変数宣言など）。そのような場合、次のいくつかの節で示すように、名前を推測することができます。
+ただし、そのようなケースはまれです。通常、関数を別の場所で呼び出すためには、関数式は識別子に関連付けられます。無名関数式の名前は、特定の構文コンテキスト内、たとえば[変数宣言とメソッド](#変数宣言とメソッド)、[初期化子と既定値](#初期化子と既定値)で推測できます。
 
 名前付きであることが推測できない実用的な例としては、別の関数から返される関数があります。
 
@@ -177,7 +176,9 @@ foo.bind({}).name; // "bound foo"
 
 ```js
 const o = {
-  get foo() {},
+  get foo() {
+    return 1;
+  },
   set foo(x) {},
 };
 
