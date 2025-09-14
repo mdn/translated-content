@@ -104,12 +104,12 @@ L'exemple suivant montre comment appliquer des couleurs aux barres de défilemen
   <h1>Yoshi</h1>
   <p>
     Yoshi est un dinosaure fictif qui apparaît dans des jeux vidéo publiés par
-    Nintendo. Yoshi a fait ses débuts dans Super Mario World (1990) sur la SNES en tant qu'acolyte de Mario et
-    Luigi.
+    Nintendo. Yoshi a fait ses débuts dans Super Mario World (1990) sur la SNES
+    en tant qu'acolyte de Mario et Luigi.
   </p>
   <p>
-    Tout au long de la série principale de Super Mario, Yoshi sert généralement de
-    monture de confiance à Mario.
+    Tout au long de la série principale de Super Mario, Yoshi sert généralement
+    de monture de confiance à Mario.
   </p>
   <p>
     Avec un appétit glouton, Yoshi peut gober des ennemis avec sa longue langue,
