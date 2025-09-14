@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef('WebSockets API')}}
 
-当与事件源的连接无法打开时，会触发 {{domxref("EventSource")}} API 的（error）事件。
+当与事件源的连接无法打开时，会触发 {{domxref("EventSource")}} API 的（[`error`](/zh-CN/docs/Web/API/HTMLElement/error_event)）事件。
 
 该事件不可取消，也不会冒泡。
 
