@@ -7,6 +7,8 @@ slug: Web/API/EventSource/error_event
 
 当与事件源（event source）的连接无法打开时，会触发 {{domxref("EventSource")}} API 的（[`error`](/zh-CN/docs/Web/API/HTMLElement/error_event)）事件。
 
+该事件不可取消，也不会冒泡。
+
 ## 语法
 
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
