@@ -1,11 +1,10 @@
 ---
 title: Function() コンストラクター
+short-title: Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Function()`** コンストラクターは、新しい {{jsxref("Function")}} オブジェクトを生成します。コンストラクターを直接呼び出すと動的に関数を生成することができますが、セキュリティや、 {{jsxref("Global_Objects/eval", "eval()")}} と似た性能の（ただし、はるかに重要性の低い）問題を抱えます。ただし `eval` とは異なり、 `Function` コンストラクターはグローバルスコープで実行される関数のみを生成します。
 
