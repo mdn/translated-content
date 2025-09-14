@@ -124,6 +124,6 @@ l10n:
 
 可以从以下资源开始：
 
-- [关于 Emscripten](https://emscripten.org/docs/introducing_emscripten/about_emscripten.html): 可查看包含概要信息的介绍。
-- [下载和安装](https://emscripten.org/docs/getting_started/downloads.html): 安装工具链。
-- [Emscripten 教程](https://emscripten.org/docs/getting_started/Tutorial.html): 一份指导你如何上手的教程。
+- [关于 Emscripten](https://emscripten.org/docs/introducing_emscripten/about_emscripten.html)：可查看包含概要信息的介绍。
+- [下载和安装](https://emscripten.org/docs/getting_started/downloads.html)：安装工具链。
+- [Emscripten 教程](https://emscripten.org/docs/getting_started/Tutorial.html)：一份指导你如何上手的教程。
