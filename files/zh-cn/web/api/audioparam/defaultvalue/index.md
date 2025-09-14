@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Audio API")}}
 
-{{ domxref("AudioParam") }} 接口的只读属性 **`defaultValue`** 返回由创建 `AudioParam` 的特定 {{domxref("AudioNode")}} 定义的属性的初始值。
+{{ domxref("AudioParam") }} 接口的只读属性 **`defaultValue`** 表示创建该 `AudioParam` 的特定 {{domxref("AudioNode")}} 所定义属性的初始值。
 
 ## 值
 
