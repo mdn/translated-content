@@ -2,10 +2,8 @@
 title: アロー関数式
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Functions")}}
 
 **アロー関数式**は、従来の[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)の簡潔な代替構文ですが、意味的な違いや意図的な使用上の制限もあります。
 
@@ -13,13 +11,13 @@ l10n:
 - アロー関数は[コンストラクター](/ja/docs/Glossary/Constructor)として使用することはできません。 [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) をつけて呼び出すと {{jsxref("TypeError")}} が発生します。 [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) キーワードにアクセスすることもできません。
 - アロー関数は本体内で [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) を使用することができず、ジェネレーター関数として作成することもできません。
 
-{{InteractiveExample("JavaScript デモ: Functions =>")}}
+{{InteractiveExample("JavaScript デモ: アロー関数式")}}
 
 ```js interactive-example
 const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
 console.log(materials.map((material) => material.length));
-// Expected output: Array [8, 6, 7, 9]
+// 予想される結果: Array [8, 6, 7, 9]
 ```
 
 ## 構文
@@ -264,9 +262,6 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
-> [!NOTE]
-> `arguments` という変数は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#eval_および_arguments_の単純化)では宣言できないので、上のコードは構文エラーになります。これにより、 `arguments` のスコープ効果がより理解しやすくなります。
-
 多くの場合、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が `arguments` オブジェクトの代わりに使えます。
 
 ```js
@@ -379,7 +374,7 @@ promise
     // …
   });
 
-// 見た目に解析が簡単な引数なしのアロー関数
+// 引数なしのアロー関数
 setTimeout(() => {
   console.log("I happen sooner");
   setTimeout(() => {
@@ -402,9 +397,9 @@ const obj = {
 globalThis.num = 42;
 
 // 単純な従来の関数で "this" を運用する
-const add = function (a, b, c) {
+function add(a, b, c) {
   return this.num + a + b + c;
-};
+}
 
 console.log(add.call(obj, 1, 2, 3)); // 106
 console.log(add.apply(obj, [1, 2, 3])); // 106
