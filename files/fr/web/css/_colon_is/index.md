@@ -2,17 +2,15 @@
 title: :is()
 slug: Web/CSS/:is
 l10n:
-  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.
 
 > [!NOTE]
 > Cette pseudo-classe avait d'abord été intitulée `:matches()` (puis `:any()`), avant d'être renommée en `:is()` avec [le ticket CSSWG n°3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-{{InteractiveExample("CSS Demo: :is", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: :is", "tabbed-shorter")}}
 
 ```css interactive-example
 ol {
@@ -33,11 +31,11 @@ ol {
 
 ```html interactive-example
 <ol>
-  <li>Saturn</li>
+  <li>Saturne</li>
   <li>
     <ul>
       <li>Mimas</li>
-      <li>Enceladus</li>
+      <li>Encelade</li>
       <li>
         <ol>
           <li>Voyager</li>
@@ -57,7 +55,17 @@ ol {
 </ol>
 ```
 
-Les pseudo-éléments ne peuvent pas être utilisés dans la liste de sélecteurs passée à `:is()`.
+## Syntaxe
+
+```css-nolint
+:is(<forgiving-selector-list>) {
+  /* ... */
+}
+```
+
+### Paramètres
+
+La pseudo-classe `:is()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), une liste séparée par des virgules d'un ou plusieurs sélecteurs comme argument. La liste ne doit pas contenir de [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements), mais tout autre sélecteur simple, composé ou complexe est autorisé.
 
 ### Différence entre `:is()` et `:where()`
 
@@ -67,24 +75,24 @@ Contrairement à [`:where()`](/fr/docs/Web/CSS/:where) dont la spécificité vau
 
 `:is()` et `:where()` acceptent une liste permissive de sélecteurs ([voir la spécification](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)).
 
-En général, lorsqu'on utilise une liste de sélecteurs, celle-ci devient intégralement invalide dès que l'un des sélecteurs est invalide. En utilisant `:is()` ou `:where()`, si la liste contient un sélecteur incorrect ou qui n'est pas pris en charge, celui-ci sera ignoré et les autres seront utilisés.
+En CSS, lorsque vous utilisez une liste de sélecteurs, si l'un des sélecteurs n'est pas valide, toute la liste est considérée comme non valide. Lorsque vous utilisez `:is()` ou `:where()`, au lieu que toute la liste de sélecteurs soit considérée comme non valide si l'un d'entre eux ne peut être analysé, le sélecteur incorrect ou non pris en charge sera ignoré et les autres seront utilisés.
 
 ```css
-:is(:valid, :non-pris-en-charge) {
+:is(:valid, :unsupported) {
   /* … */
 }
 ```
 
-Le fragment qui précède sera interprété correctement et ciblera `:valid`, même pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, alors que&nbsp;:
+Le fragment qui précède sera interprété correctement et ciblera `:valid`, même pour les navigateurs qui ne prennent pas en charge `:unsupported`, alors que&nbsp;:
 
 ```css
 :valid,
-:non-pris-en-charge {
+:unsupported {
   /* … */
 }
 ```
 
-Sera ignoré pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, même s'ils prennent en charge `:valid`.
+Sera ignoré pour les navigateurs qui ne prennent pas en charge `:unsupported`, même s'ils prennent en charge `:valid`.
 
 ## Exemple
 
@@ -157,9 +165,9 @@ On pourra remplacer ce bloc avec&nbsp;:
 
 ### Simplifier les sélecteurs de section
 
-La pseudo-classe `:is()` est notamment utile lorsqu'on manipule [les sections et titres HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements). En effet, les éléments [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside) et [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav) sont généralement imbriqués les uns avec les autres. Sans `:is()`, leur mise en forme à différents niveaux peut s'avérer délicate.
+La pseudo-classe `:is()` est notamment utile lorsqu'on manipule [les sections et titres HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements). En effet, les éléments {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} sont généralement imbriqués les uns avec les autres. Sans `:is()`, leur mise en forme à différents niveaux peut s'avérer délicate.
 
-Ainsi, sans `:is()`, il serait très compliqué de cibler tous les éléments [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) situés à différentes profondeurs&nbsp;:
+Ainsi, sans `:is()`, il serait très compliqué de cibler tous les éléments {{HTMLElement("Heading_Elements", "h1")}} situés à différentes profondeurs&nbsp;:
 
 ```css
 /* Niveau 0 */
@@ -250,14 +258,6 @@ un-element::after {
 }
 ```
 
-## Syntaxe
-
-```css-nolint
-:is(<forgiving-selector-list>) {
-  /* … */
-}
-```
-
 ## Spécifications
 
 {{Specifications}}
@@ -268,6 +268,6 @@ un-element::after {
 
 ## Voir aussi
 
-- [`:where()`](/fr/docs/Web/CSS/:where)&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) qui vaut 0.
+- {{CSSxRef(":where", ":where()")}}&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) qui vaut 0.
 - [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list)
 - [Composants web](/fr/docs/Web/API/Web_components)

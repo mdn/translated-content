@@ -3,8 +3,6 @@ title: Propriétés personnalisées (--*)
 slug: Web/CSS/--*
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
 Les noms des propriétés qui sont préfixés par deux tirets : `--` (par exemple : `--nom-exemple`) représentent des propriétés personnalisées (_custom properties_) qui peuvent contenir une valeur qui pourra être réutilisée dans le document grâce à la fonction {{cssxref("var")}}.
 
 La portée des propriétés personnalisées est celle des éléments sur lesquels elles sont déclarées. Ces personnalisées contribuent à la cascade : la valeur utilisée d'une propriété personnalisée sera déterminée par l'algorithme de la cascade.
@@ -21,10 +19,6 @@ La portée des propriétés personnalisées est celle des éléments sur lesquel
 
 - `<declaration-value>`
   - : Cette valeur correspond à une séquence de un ou plusieurs fragments tant que la séquence ne contient pas de fragments interdits. Elle représente l'intégralité de ce qu'une déclaration valide peut avoir comme valeur.
-
-### Syntaxe formelle
-
-{{csssyntax}}
 
 ## Exemples
 

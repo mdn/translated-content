@@ -1,27 +1,62 @@
 ---
 title: :out-of-range
 slug: Web/CSS/:out-of-range
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max). Ceci permet d'informer l'utilisateur·ice que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max). Ceci permet d'informer l'utilisateur que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.
+{{InteractiveExample("Démonstration CSS&nbsp;: :out-of-range", "tabbed-shorter")}}
 
-```css
-/* Cible n'importe quel élément <input> qui possède un */
-/* attribut range et que la valeur associée est en     */
-/* dehors de cet intervalle */
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
 input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
+  background-color: orangered;
 }
 ```
 
+```html interactive-example
+<form>
+  <label for="amount"
+    >Combien de billets&nbsp;? (Vous pouvez acheter 2 à 6 billets)</label
+  >
+  <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
+
+  <label for="dep"
+    >Date de départ&nbsp;: (Toute l'année 2022 est acceptée)</label
+  >
+  <input
+    id="dep"
+    name="dep"
+    type="date"
+    min="2022-01-01"
+    max="2022-12-31"
+    value="2025-05-05" />
+
+  <label for="ret"
+    >Date de retour&nbsp;: (Toute l'année 2022 est acceptée)</label
+  >
+  <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
+</form>
+```
+
+La pseudo-classe `:out-of-range` est utile pour donner à l'utilisateur·ice une indication visuelle qu'une valeur de champ est en dehors des limites autorisées.
+
 > [!NOTE]
-> Cette pseudo-classe s'applique seulement aux éléments qui ont des valeurs limites.
+> Cette pseudo-classe s'applique seulement aux éléments qui ont (et peuvent avoir) une limitation de plage. En l'absence d'une telle limitation, l'élément ne peut être ni "dans la plage" ni "hors de la plage".
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:out-of-range {
+  /* ... */
+}
+```
 
 ## Exemples
 
@@ -59,26 +94,26 @@ input {
 }
 
 input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+  background-color: rgb(0 255 0 / 25%);
 }
 
 input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
+  background-color: rgb(255 0 0 / 25%);
   border: 2px solid red;
 }
 
 input:in-range + label::after {
-  content: " OK";
+  content: "valide.";
 }
 
 input:out-of-range + label::after {
-  content: "hors des limites !";
+  content: "hors de portée !";
 }
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples',600,140)}}
+{{EmbedLiveSample('Exemples', 600, 140)}}
 
 ## Spécifications
 

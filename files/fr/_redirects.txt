@@ -4570,7 +4570,6 @@
 /fr/docs/Web/CSS/:after_|_::after	/fr/docs/Web/CSS/::after
 /fr/docs/Web/CSS/:any	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:before	/fr/docs/Web/CSS/::before
-/fr/docs/Web/CSS/:current	/fr/docs/Web/API/WebVTT_API
 /fr/docs/Web/CSS/:host()	/fr/docs/Web/CSS/:host_function
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:nth-col	/fr/docs/Web/CSS/:nth-of-type

@@ -3,15 +3,24 @@ title: :-moz-handler-disabled
 slug: Web/CSS/:-moz-handler-disabled
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
-La pseudo-classe **`:-moz-handler-disabled`** permet de cibler un élément qui ne peut pas être affiché car le gestionnaire associé a été désactivé par l'utilisateur.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-handler-disabled`** est une [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui permet de cibler un élément qui ne peut pas être affiché car le gestionnaire associé a été désactivé par l'utilisateur·ice.
 
-Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
+> [!NOTE]
+> Cette pseudo-classe est principalement destinée aux développeur·euse·s de thèmes.
+
+## Syntaxe
+
+```css
+:-moz-handler-disabled {
+  /* ... */
+}
+```
 
 ## Spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+Cette pseudo-classe ne fait partie d'aucun standard.
 
 ## Voir aussi
 
