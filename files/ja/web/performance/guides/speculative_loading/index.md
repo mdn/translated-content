@@ -103,7 +103,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 例を示します。
 
-```js
+```html
 <link rel="modulepreload" href="main.js" />
 ```
 
@@ -119,7 +119,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 例を示します。
 
-```js
+```html
 <link rel="prefetch" href="main.js" />
 ```
 
