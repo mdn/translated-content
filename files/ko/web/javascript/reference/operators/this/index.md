@@ -1,7 +1,7 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-ll0n:
+l10n:
   sourseCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
