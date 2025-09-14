@@ -25,9 +25,7 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) 
 Normal&nbsp;: <meter min="0" max="10" value="6">Score 6/10</meter>
 <br />
 Mis en forme&nbsp;:
-<meter class="styled" min="0" max="10" value="6">
-  Score 6/10
-</meter>
+<meter class="styled" min="0" max="10" value="6">Score 6/10</meter>
 ```
 
 ### CSS
