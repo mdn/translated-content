@@ -2,7 +2,7 @@
 title: this
 slug: Web/JavaScript/Reference/Operators/this
 l10n:
-  sourseCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
 {{jsSidebar("Operators")}}
