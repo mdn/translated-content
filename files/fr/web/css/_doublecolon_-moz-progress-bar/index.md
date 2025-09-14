@@ -55,7 +55,6 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-
 - {{HTMLElement("progress")}}
 - {{ cssxref("::-webkit-progress-bar") }}
 - {{ cssxref("::-webkit-progress-value") }}
