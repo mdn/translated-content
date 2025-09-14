@@ -1,21 +1,37 @@
 ---
 title: :active
 slug: Web/CSS/:active
+l10n:
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-{{CSSRef}}
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:active`** permet de cibler un élément lorsque celui-ci est activé par l'utilisateur. Elle permet de fournir un _feedback_ indiquant que l'activation a bien été détectée par le navigateur. Lorsqu'on a une interaction avec un pointeur, il s'agit généralement du moment entre l'appui sur le pointeur et le relâchement de celui-ci.
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:active`** permet de cibler un élément lorsque celui-ci est activé par l'utilisateur. Elle permet de fournir un _feedback_ indiquant que l'activation a bien été détectée par le navigateur. Lorsqu'on a une interaction avec un pointeur, il s'agit généralement du moment entre l'appui sur le pointeur et le relâchement de celui-ci.
+{{InteractiveExample("Démonstration CSS&nbsp;: :active", "tabbed-shorter")}}
 
-```css
-/* ne cible <a> que lorsqu'il est activé */
-/* par exemple quand on clique dessus */
-a:active {
-  color: red;
+```css interactive-example
+.joinBtn {
+  width: 10em;
+  height: 5ex;
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.joinBtn:active {
+  box-shadow: 2px 2px 5px #fc894d;
 }
 ```
 
-La pseudo-classe `:active` est également activée lorsque l'utilisateur emploie la touche de tabulation. Elle est souvent utilisée sur les éléments HTML {{HTMLElement("a")}} et {{HTMLElement("button")}} mais n'est pas restreinte à ceux-ci. Les éléments ciblés par cette pseudo-classe incluent les éléments qui contiennent l'élément activé et les éléments de formulaires activés via leur élément {{HTMLElement("label")}} associé.
+```html interactive-example
+<p>Souhaitez-vous vous abonner à notre chaîne ?</p>
+<button class="joinBtn">S'abonner</button>
+```
+
+La pseudo-classe `:active` est également activée lorsque l'utilisateur·ice emploie la touche de tabulation. Elle est souvent utilisée sur les éléments HTML {{HTMLElement("a")}} et {{HTMLElement("button")}} mais n'est pas restreinte à ceux-ci. Les éléments ciblés par cette pseudo-classe incluent les éléments qui contiennent l'élément activé et les éléments de formulaires activés via leur élément {{HTMLElement("label")}} associé.
 
 La mise en forme associée peut être surchargée par les autres pseudo-classes pour les liens : {{cssxref(":link")}}, {{cssxref(":hover")}} et {{cssxref(":visited")}} lorsqu'elles sont utilisées dans des règles qui suivent. Afin de mettre en forme les liens de façon correcte, la règle avec `:active` doit être écrite après les autres : `:link` — `:visited` — `:hover` — `:active`.
 
@@ -24,7 +40,11 @@ La mise en forme associée peut être surchargée par les autres pseudo-classes 
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:active {
+  /* ... */
+}
+```
 
 ## Exemples
 
@@ -105,6 +125,7 @@ form button {
 
 ## Voir aussi
 
-- {{cssxref(":link")}}
-- {{cssxref(":visited")}}
-- {{cssxref(":hover")}}
+- Les pseudo-classes CSS en relation avec les liens&nbsp;:
+  - {{cssxref(":link")}}
+  - {{cssxref(":visited")}}
+  - {{cssxref(":hover")}}

@@ -1,11 +1,11 @@
 ---
 title: :defined
 slug: Web/CSS/:defined
+l10n:
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
-{{CSSRef}}
-
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés (« _custom elements_ ») ayant correctement été définis (c'est-à-dire grâce à la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define)).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés («&nbsp;_custom elements_&nbsp;») ayant correctement été définis (c'est-à-dire grâce à la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define)).
 
 ```css
 /* Cette règle cible tout élément défini */
@@ -21,69 +21,107 @@ simple-custom:defined {
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:defined {
+  /* ... */
+}
+```
 
 ## Exemples
 
-Les fragments de code qui suivent sont tirés [du dépôt `defined-pseudo-class`](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) ([voir le résultat en _live_](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
+### Masquer les éléments jusqu'à ce qu'ils soient définis
 
-Pour cette démonstration on définit un élément personnalisé trivial :
+Dans cette démonstration, nous définissons un élément personnalisé de base nommé `<custom-element>` et utilisons les sélecteurs `:not(:defined)` et `:defined` pour mettre en forme l'élément avant et après sa définition. Cela est utile si vous avez un élément personnalisé complexe qui prend un certain temps à se charger dans la page — vous pouvez alors masquer les instances de l'élément jusqu'à ce que la définition soit terminée afin d'éviter que des éléments non stylisés n'apparaissent de manière inesthétique sur la page.
 
-```js
-customElements.define(
-  "simple-custom",
-  class extends HTMLElement {
-    constructor() {
-      super();
+#### HTML
 
-      let divElem = document.createElement("div");
-      divElem.textContent = this.getAttribute("text");
-
-      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
-    }
-  },
-);
-```
-
-On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique `<p>` :
+Le code HTML suivant utilise l'élément personnalisé, mais celui-ci n'a pas encore été défini. Nous incluons également un élément {{htmlelement("button")}} qui définira l'élément personnalisé lorsqu'on cliquera dessus, ce qui vous permettra de voir son état avant et après la définition.
 
 ```html
-<simple-custom text="Le texte de l'élément personnalisé"></simple-custom>
+<custom-element>
+  <p>
+    Contenu chargé : Lorem ipsum tel sed tellus eiusmod tellus. Aenean. Semper
+    dolor sit nisi. Elit porttitor nisi sit vivamus.
+  </p>
+</custom-element>
 
-<p>Un paragraphe normal</p>
+<button id="btn">définir le <code>&lt;custom-element&gt;</code></button>
 ```
 
-Dans la feuille CSS, on inclut d'abord les règles suivantes :
+#### CSS
 
-```css
-// On utilise deux arrières-plans distincts pour ces deux éléments
-p {
-  background: yellow;
-}
-
-simple-custom {
-  background: cyan;
-}
-
-// On met en italique le texte de ces deux éléments
-:defined {
-  font-style: italic;
-}
-```
-
-Ensuite, on fournit les deux règles suivantes afin de masquer les instances de l'élément personnalisé qui ne sont pas définies et, pour celles qui sont définies, on indique que ce sont des éléments de bloc :
-
-```css
-simple-custom:not(:defined) {
-  display: none;
-}
-
-simple-custom:defined {
+```css hidden
+custom-element {
   display: block;
+  border: 5px dashed grey;
+  border-radius: 1rem;
+  height: 100px;
+  width: 400px;
+  padding: 1rem;
+  position: relative;
+  user-select: none;
+}
+
+code {
+  background: #cccccc;
+}
+
+#btn {
+  margin-top: 1rem;
+  cursor: pointer;
 }
 ```
 
-Ces dernières règles sont utiles lorsqu'on a un élément personnalisé complexe qui met du temps à charger : pour ceux-là, on peut vouloir les masquer jusqu'à ce que la définition soit complète afin de ne pas avoir de scintillement d'éléments non mis en forme sur la page.
+Dans le CSS suivant, nous utilisons le sélecteur `custom-element:not(:defined)` pour sélectionner l'élément et le colorer en gris lorsqu'il n'est pas défini, et le sélecteur `custom-element:defined` pour sélectionner l'élément et le colorer en noir une fois qu'il est défini.
+
+```css
+custom-element:not(:defined) {
+  border-color: grey;
+  color: grey;
+}
+
+custom-element:defined {
+  background-color: wheat;
+  border-color: black;
+  color: black;
+}
+
+/* afficher le message de chargement */
+custom-element:not(:defined)::before {
+  content: "Chargement...";
+  position: absolute;
+  inset: 0;
+  align-content: center;
+  text-align: center;
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+/* supprimer le message de chargement */
+custom-element:defined::before {
+  content: "";
+}
+```
+
+Nous avons également utilisé le pseudo-élément [`::before`](/fr/docs/Web/CSS/::before) pour afficher un message superposé «&nbsp;Chargement...&nbsp;» jusqu'à ce que l'élément soit défini. Une fois défini, il est supprimé en définissant le [`content`](/fr/docs/Web/CSS/content) sur une chaîne vide.
+
+#### JavaScript
+
+Le JavaScript suivant a été utilisé pour définir l'élément personnalisé. Pour vous permettre de voir l'état de l'élément personnalisé avant et après sa définition, nous exécutons la méthode {{domxref(« CustomElementRegistry.define », « define() »)}} lorsque vous cliquez sur le bouton.
+
+```js
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", () => {
+  customElements.define("custom-element", class extends HTMLElement {});
+  btn.remove();
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample("masquer_les_éléments_jusquà_ce_quils_soient_définis", "100%", "230")}}
 
 ## Spécifications
 

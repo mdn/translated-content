@@ -3,16 +3,18 @@ title: :-moz-broken
 slug: Web/CSS/:-moz-broken
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}{{deprecated_header}}
 
-La [pseudo-class CSS](/fr/docs/Web/CSS/Pseudo-classes) `:-moz-broken` s'adapte aux éléments qui représentent des liens cassés vers des images.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) `:-moz-broken` est une [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui s'adapte aux éléments qui représentent des liens cassés vers des images.
 
-Ce sélecteur est principalement destiné à être utilisé par les développeurs de thèmes.
+> [!NOTE]
+> Ce sélecteur est principalement destiné à être utilisé par les développeur·euse·s de thèmes.
 
 ## Syntaxe
 
 ```css
 :-moz-broken {
+  /* ... */
 }
 ```
 
@@ -37,7 +39,15 @@ Ce sélecteur est principalement destiné à être utilisé par les développeur
 
 {{EmbedLiveSample("Exemples")}}
 
+## Spécifications
+
+Cette pseudo-classe ne fait partie d'aucun standard.
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 ## Voir aussi
 
-- [bug Firefox 11011](https://bugzil.la/11011)
 - {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
+- [bug Firefox 11011](https://bugzil.la/11011)

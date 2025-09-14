@@ -1,15 +1,19 @@
 ---
 title: :fullscreen
 slug: Web/CSS/:fullscreen
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** permet de cibler tout élément qui est en mode plein écran. Si plusieurs éléments ont été mis en plein écran, tous ces éléments seront ciblés.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:fullscreen`** permet de cibler tout élément qui est en mode plein écran. Si plusieurs éléments ont été mis en plein écran, tous ces éléments seront ciblés.
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:fullscreen {
+  /* ... */
+}
+```
 
 ## Notes d'utilisation
 
@@ -17,41 +21,62 @@ La pseudo-classe `:fullscreen` permet de configurer la taille, le style ou la di
 
 ## Exemples
 
-Dans cet exemple, on change la couleur d'un bouton selon que le document est en plein écran ou non. On n'utilise pas JavaScript pour changer les styles.
+### Mise en forme d'un élément en plein écran
 
-### CSS
-
-On utilise deux règles. La première qui permet de définir la couleur d'arrière plan pour le bouton « Passer en mode plein écran » lorsque l'élément n'est pas en plein écran. Pour distinguer ce cas, on utilise `:not(:fullscreen)`, qui permet de cibler les éléments qui n'ont pas la pseudo-classe `:fullscreen`.
-
-```css
-#fs-toggle:not(:fullscreen) {
-  background-color: #afa;
-}
-```
-
-Lorsque le document est en mode plein écran, on utilise cette fois-ci la pseudo-classe `:fullscreen` et on définit une autre couleur (ici un rouge pâle).
-
-```css
-#fs-toggle:fullscreen {
-  background-color: #faa;
-}
-```
-
-### HTML
+Cet exemple applique une couleur d'arrière-plan différente à un élément {{htmlelement('div')}}, selon qu'il est ou non en mode plein écran. Il comprend un élément {{htmlelement('button')}} permettant d'activer ou de désactiver le mode plein écran.
 
 ```html
-<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
+<div class="element">
+  <h1>Démonstration du MDN Web Docs : la pseudo-classe :fullscreen</h1>
 
-<p>
-  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
-  change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.
-</p>
+  <p>
+    Cette démonstration utilise la pseudo-classe <code>:fullscreen</code> pour
+    changer automatiquement le style d'un bouton utilisé pour activer et
+    désactiver le mode plein écran, entièrement en utilisant CSS.
+  </p>
 
-<button id="fs-toggle">Toggle Fullscreen</button>
+  <button class="toggle">Activer/Désactiver le plein écran</button>
+</div>
 ```
 
-Dans ce fragment de code HTML, c'est l'élément {{HTMLElement("button")}} avec l'identifiant `"fs-toggle"` qui changera d'une couleur à une autre selon que le document est en plein écran ou non.
+La pseudo-classe `:fullscreen` est utilisée pour remplacer la [`background-color`](/fr/docs/Web/CSS/background-color) de l'élément `<div>` lorsqu'il est en mode plein écran.
+
+```css
+.element {
+  background-color: lightyellow;
+}
+
+.element:fullscreen {
+  background-color: lightpink;
+}
+```
+
+Le JavaScript suivant fournit une fonction de gestion d'événement qui active ou désactive le mode plein écran lorsque l'utilisateur·ice clique sur le bouton `<button>`.
+
+```js
+document.querySelector(".toggle").addEventListener("click", (event) => {
+  if (document.fullscreenElement) {
+    // Si un élément est en plein écran, quitter le plein écran.
+    document.exitFullscreen();
+    return;
+  }
+  // Mettre l'élément .element en plein écran.
+  document.querySelector(".element").requestFullscreen();
+});
+```
+
+```css hidden
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  padding: 1.2em;
+}
+```
+
+{{EmbedLiveSample("Styling a fullscreen element", "", "300", "", "", "", "fullscreen")}}
 
 ## Spécifications
 

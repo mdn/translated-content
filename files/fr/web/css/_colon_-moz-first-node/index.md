@@ -3,17 +3,19 @@ title: :-moz-first-node
 slug: Web/CSS/:-moz-first-node
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}{{SeeCompatTable}}
 
-La pseudo-classe **`:-moz-first-node`** correspond à un élément si celui-ci est le premier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":first-child")}} car elle ne cible pas le premier élément qui possède du texte (hors blancs).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-first-node`** correspond à un élément si celui-ci est le premier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":first-child")}} car elle ne cible pas le premier élément qui possède du texte (hors blancs).
 
 > [!NOTE]
 > Tout blanc qui serait au début d'un élément est ignoré pour la détermination de `:-moz-last-node`.
 
 ## Syntaxe
 
-```
-span:-moz-first-node { propriétés de mise en forme }
+```css
+:-moz-first-node {
+  /* ... */
+}
 ```
 
 ## Exemples
@@ -41,11 +43,15 @@ span:-moz-first-node {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples", "220", "20")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+Cette pseudo-classe ne fait partie d'aucun standard.
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

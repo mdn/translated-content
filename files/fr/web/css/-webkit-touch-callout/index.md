@@ -3,11 +3,13 @@ title: -webkit-touch-callout
 slug: Web/CSS/-webkit-touch-callout
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propriété **`-webkit-touch-callout`** permet de contrôler l'affichage de la légende (_callout_) affichée par défaut lorsque le toucher est maintenu sur un élément.
 
 Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari affiche une bulle d'informations à propos du lien. Cette propriété permet de désactiver ce fonctionnement.
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -17,10 +19,10 @@ Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari
 /* Valeurs globales */
 -webkit-touch-callout: initial;
 -webkit-touch-callout: inherit;
+-webkit-touch-callout: revert;
+-webkit-touch-callout: revert-layer;
 -webkit-touch-callout: unset;
 ```
-
-## Syntaxe
 
 ### Valeurs
 
@@ -29,9 +31,13 @@ Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari
 - `none`
   - : La légende est désactivée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-webkit-touch-callout = default | none`)}}
 
 ## Exemples
 
@@ -43,8 +49,13 @@ Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari
 
 ## Spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Elle est décrite dans [la référence CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
+Cette propriété ne fait partie d'aucun standard. Elle est décrite dans [la référence CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Extensions CSS WebKit](/fr/docs/Web/CSS/WebKit_Extensions)
+- [-webkit-touch-callout dans la documentation Apple <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)

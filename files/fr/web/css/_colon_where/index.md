@@ -2,14 +2,14 @@
 title: :where()
 slug: Web/CSS/:where
 l10n:
-  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:where()`** prend une liste de sélecteurs en argument et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
 
-{{InteractiveExample("CSS Demo: :where", "tabbed-shorter")}}
+La différence entre `:where()` et {{CSSxRef(":is", ":is()")}} réside dans le fait que `:where()` a toujours une [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) de 0, tandis que `:is()` prend la spécificité du sélecteur le plus spécifique parmi ses arguments.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: :where", "tabbed-shorter")}}
 
 ```css interactive-example
 ol {
@@ -17,8 +17,7 @@ ol {
   color: darkblue;
 }
 
-/* Not applied to ol, because of lower specificity */
-/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* Non appliqué à ol, en raison d'une spécificité inférieure */
 :where(ol, ul, menu:unsupported) :where(ol, ul) {
   color: green;
 }
@@ -31,11 +30,11 @@ ol {
 
 ```html interactive-example
 <ol>
-  <li>Saturn</li>
+  <li>Saturne</li>
   <li>
     <ul>
       <li>Mimas</li>
-      <li>Enceladus</li>
+      <li>Encelade</li>
       <li>
         <ol>
           <li>Voyager</li>
@@ -55,7 +54,17 @@ ol {
 </ol>
 ```
 
-`:where()` a toujours une spécificité de 0, tandis que `:is()` participe à la spécificité du sélecteur en prenant la spécificité de son argument le plus spécifique.
+## Syntaxe
+
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
+```
+
+## Paramètres
+
+La pseudo-classe `:where()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#liste_de_sélecteurs), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument.
 
 ### Analyse permissive de la liste des sélecteurs
 
@@ -172,15 +181,7 @@ Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité �
 > [!NOTE]
 > Vous pouvez également consulter [cet exemple sur GitHub](https://mdn.github.io/css-examples/is-where/).
 
-{{EmbedLiveSample('', '100%', 600)}}
-
-## Syntaxe
-
-```css-nolint
-:where(<complex-selector-list>) {
-  /* … */
-}
-```
+{{EmbedLiveSample('comparer_where_et_is', '100%', 600)}}
 
 ## Spécifications
 
@@ -192,6 +193,6 @@ Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité �
 
 ## Voir aussi
 
-- [`:is()`](/fr/docs/Web/CSS/:is)
+- {{CSSxRef(":is", ":is()")}}
 - [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list)
 - [Composants web](/fr/docs/Web/API/Web_components)

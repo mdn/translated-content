@@ -3,9 +3,9 @@ title: -webkit-text-stroke-color
 slug: Web/CSS/-webkit-text-stroke-color
 ---
 
-{{CSSRef}}{{Non-standard_header}}
-
 La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de la ligne utilisée pour le contour du text. Si cette propriété n'est pas définie, c'est la valeur de {{cssxref("color")}} qui sera utilisée.
+
+## Syntaxe
 
 ```css
 /* Valeurs de couleur */
@@ -17,32 +17,36 @@ La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de 
 /* Valeurs globales */
 -webkit-text-stroke-color: inherit;
 -webkit-text-stroke-color: initial;
+-webkit-text-stroke-color: revert;
+-webkit-text-stroke-color: revert-layer;
 -webkit-text-stroke-color: unset;
 ```
-
-{{cssinfo}}
-
-## Syntaxe
 
 ### Valeurs
 
 - `<color>`
   - : La couleur du contour pour les lettres.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### HTML
+### Varier la couleur du trait
+
+#### HTML
 
 ```html
 <p>Texte avec un contour</p>
 <input type="color" value="#ff0000" />
 ```
 
-### CSS
+#### CSS
 
 ```css
 p {
@@ -55,15 +59,15 @@ p {
 ```
 
 ```js hidden
-var colorPicker = document.querySelector("input");
-colorPicker.addEventListener("change", function (evt) {
+const colorPicker = document.querySelector("input");
+colorPicker.addEventListener("change", (evt) => {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
 });
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples", "500px", "100px")}}
+{{EmbedLiveSample("varier_la_couleur_du_trait", "500px", "100px")}}
 
 ## Spécifications
 
@@ -75,8 +79,8 @@ colorPicker.addEventListener("change", function (evt) {
 
 ## Voir aussi
 
-- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité (en anglais)](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [L'article de CSS-Tricks à propos de cette fonctionnalité (en anglais)](https://css-tricks.com/adding-stroke-to-web-text/)
+- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité <sup>(angl.)</sup>](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [L'article de CSS-Tricks à propos de cette fonctionnalité <sup>(angl.)</sup>](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-fill-color")}}
 - {{cssxref("-webkit-text-stroke-width")}}
 - {{cssxref("-webkit-text-stroke")}}

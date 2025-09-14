@@ -1,11 +1,11 @@
 ---
 title: :root
 slug: Web/CSS/:root
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:root`** permet de cibler la racine de l'arbre représentant le document. Pour un document HTML, `:root` ciblera donc l'élément {{HTMLElement("html")}} et aura le même comportement que le sélecteur `html` mais [sa spécificité](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#le_poids_des_sélecteurs) sera plus forte.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:root`** permet de cibler la racine de l'arbre représentant le document. Pour un document HTML, `:root` ciblera donc l'élément {{HTMLElement("html")}} et aura le même comportement que le sélecteur `html` mais [sa spécificité](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#le_poids_des_sélecteurs) sera plus forte.
 
 ```css
 /* Sélectionne l'élément racine du document */
@@ -17,7 +17,11 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:root`** permet de cibler
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:root {
+  /* ... */
+}
+```
 
 ## Exemples
 
@@ -37,3 +41,11 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:root`** permet de cibler
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'élément {{HTMLElement("html")}}
+- {{domxref("Document.rootElement")}}
+- {{domxref("Node.getRootNode()")}}
+- {{domxref("Element.shadowRoot")}}
+- {{domxref("ShadowRoot")}}

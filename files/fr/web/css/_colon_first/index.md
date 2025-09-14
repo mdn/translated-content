@@ -1,11 +1,11 @@
 ---
 title: :first
 slug: Web/CSS/:first
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-La pseudo-classe **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )
 
 ```css
 /* Cible le contenu de la première page */
@@ -16,52 +16,49 @@ La pseudo-classe **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit
 }
 ```
 
-Seul un sous-ensemble restreint de propriétés peut être modifié via cette pseudo-classe :
-
-- Les propriétés liées aux marges : {{cssxref("margin")}}
-- Les propriétés liées aux lignes veuves et orphelines : {{cssxref("orphans")}} et {{cssxref("widows")}}
-- Les propriétés liées aux sauts de page : {{cssxref("page-break")}}
-
-De plus, seules [les unités absolues](/fr/docs/Web/CSS/length#unités_de_longueur_absolues) peuvent être utilisées pour les marges.
+> [!NOTE]
+> Vous ne pouvez pas modifier toutes les propriétés CSS avec cette pseudo-classe. Vous pouvez uniquement modifier les marges, {{cssxref("orphans")}}, {{cssxref("widows")}} et les sauts de page du document. De plus, vous ne pouvez utiliser que des unités de [longueur absolues](/fr/docs/Web/CSS/length#absolute_length_units) pour définir les marges. Toutes les autres propriétés seront ignorées.
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:first {
+  /* ... */
+}
+```
 
 ## Exemples
 
-### CSS
+### Utilisation de `:first` pour les styles d'impression de page
 
-```css
+Appuyez sur le bouton «&nbsp;Imprimer !&nbsp;» pour imprimer l'exemple. Les mots sur la première page doivent être quelque part autour du centre, tandis que les autres pages auront leur contenu à la position par défauts&nbsp;:
+
+```html live-sample___colon-first
+<p>Première page.</p>
+<p>Deuxième page.</p>
+<button>Imprimer !</button>
+```
+
+```css live-sample___colon-first
 @page :first {
-  margin-left: 50%;
-  margin-top: 50%;
+  size: 8.5in 11in;
+  margin-left: 3in;
+  margin-top: 5in;
 }
 
 p {
   page-break-after: always;
+  font: 1.2em sans-serif;
 }
 ```
 
-### HTML
-
-```html
-<p>Première page.</p>
-<p>Deuxième page.</p>
-<button>Imprimer</button>
-```
-
-### JavaScript
-
-```js
+```js live-sample___colon-first
 document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```
 
-Appuyez sur le bouton "Imprimer!" pour imprimer l'exemple. Les mots sur la première page doivent être quelque part autour du centre, tandis que les autres pages auront leur contenu à la position par défaut.
-
-{{EmbedLiveSample("Exemples","80%","150px")}}
+{{EmbedLiveSample('colon-first', '100%', , , , , , "allow-modals")}}
 
 ## Spécifications
 
@@ -74,5 +71,6 @@ Appuyez sur le bouton "Imprimer!" pour imprimer l'exemple. Les mots sur la premi
 ## Voir aussi
 
 - {{cssxref("@page")}}
-- {{cssxref(":left")}}
-- {{cssxref(":right")}}
+- Les autres pseudo-classes liées à la mise en page&nbsp;:
+  - {{cssxref(":left")}}
+  - {{cssxref(":right")}}
