@@ -2,35 +2,37 @@
 title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 l10n:
-  sourceCommit: e8320dfbed49d37589d0fe759ef6506885f340f7
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La fonction **`Math.log1p()`** renvoie le logarithme népérien (en base {{jsxref("Math/E","e")}}) d'un nombre +1, donné par la formule&nbsp;:
 
-La fonction **`Math.log1p()`** renvoie le logarithme népérien (en base {{jsxref("Math/E","e")}}) d'un nombre +1, donné par la formule :
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mo>−</mo><mn>1</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟷𝚙</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x > -1,\;\mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-<math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mo>-</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log1p</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x > -1, \mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.log1p()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.log1p()")}}
 
 ```js interactive-example
 console.log(Math.log1p(1));
-// Expected output: 0.6931471805599453
+// Résultat attendu : 0.6931471805599453
 
 console.log(Math.log1p(0));
-// Expected output: 0
+// Résultat attendu : 0
 
 console.log(Math.log1p(-1));
-// Expected output: -Infinity
+// Résultat attendu : -Infinity
 
 console.log(Math.log1p(-2));
-// Expected output: NaN
+// Résultat attendu : NaN
 ```
 
 ## Syntaxe
 
-```js
-Math.log1p(x);
+```js-nolint
+Math.log1p(x)
 ```
 
 ### Paramètres
@@ -40,7 +42,7 @@ Math.log1p(x);
 
 ### Valeur de retour
 
-La valeur du logarithme naturel (en base {{jsxref("Math/E","e")}}) de `x + 1`. Si `x` est égal à `-1`, {{jsxref("Number/NEGATIVE_INFINITY")}} est renvoyée. Si `x` est inférieur à `-1`, {{jsxref("NaN")}} est renvoyée.
+La valeur du logarithme naturel (en base [e](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/E)) de `x + 1`. Si `x` est égal à `-1`, [`-Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY) est renvoyée. Si `x` est inférieur à `-1`, {{jsxref("NaN")}} est renvoyée.
 
 ## Description
 
@@ -79,9 +81,9 @@ Math.log1p(Infinity); // Infinity
 
 ## Voir aussi
 
-- Polyfill de `Math.log1p()`:
-  - [de _core-js_](https://github.com/zloirock/core-js#ecmascript-math)
-  - [de _es-shims_](https://www.npmjs.com/package/math.log1p)
+- Prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.log1p()`:
+  - [dans _core-js_ <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+  - [de _es-shims_ <sup>(angl.)</sup>](https://www.npmjs.com/package/math.log1p)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.expm1()")}}
