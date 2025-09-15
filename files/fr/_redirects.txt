@@ -4554,10 +4554,7 @@
 /fr/docs/Web/CSS/:-moz-ui-invalid	/fr/docs/Web/CSS/:user-invalid
 /fr/docs/Web/CSS/:-ms-input-placeholder	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/Web/CSS/:-webkit-autofill	/fr/docs/Web/CSS/:autofill
-/fr/docs/Web/CSS/::-moz-page	/fr/docs/orphaned/Web/CSS/::-moz-page
-/fr/docs/Web/CSS/::-moz-page-sequence	/fr/docs/orphaned/Web/CSS/::-moz-page-sequence
 /fr/docs/Web/CSS/::-moz-placeholder	/fr/docs/Web/CSS/::placeholder
-/fr/docs/Web/CSS/::-moz-scrolled-page-sequence	/fr/docs/orphaned/Web/CSS/::-moz-scrolled-page-sequence
 /fr/docs/Web/CSS/::-webkit-file-upload-button	/fr/docs/Web/CSS/::file-selector-button
 /fr/docs/Web/CSS/::-webkit-input-placeholder	/fr/docs/Web/CSS/::placeholder
 /fr/docs/Web/CSS/::cue-region	/fr/docs/Web/CSS/::cue
