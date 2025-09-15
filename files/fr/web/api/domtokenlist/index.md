@@ -41,7 +41,7 @@ L'interface **`DOMTokenList`** représente un ensemble de marques («&nbsp;<i la
 
 ## Exemples
 
-Dans l'exemple suivant, nous récupérons la liste d'un ensemble de classes définies sur un élément [`<p>`](/fr/docs/Web/HTML/Element/p) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList), ajoutons une classe en utilisant [`DOMTokenList.add()`](/fr/docs/Web/API/DOMTokenList/add), puis mettons à jour le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<p>` pour qu'il soit égal à la `DOMTokenList`.
+Dans l'exemple suivant, nous récupérons la liste d'un ensemble de classes définies sur un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList), ajoutons une classe en utilisant [`DOMTokenList.add()`](/fr/docs/Web/API/DOMTokenList/add), puis mettons à jour le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<p>` pour qu'il soit égal à la `DOMTokenList`.
 
 D'abord HTML :
 

@@ -6,7 +6,7 @@ original_slug: Web/HTML/Attributes/size
 
 {{HTMLSidebar}}
 
-L'attribut **`size`** définit la largeur de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et la hauteur de l'élément [`<select>`](/fr/docs/Web/HTML/Element/select). Pour `input`, si l'attribut `type` est [`text`](/fr/docs/Web/HTML/Element/input/text) ou [`password`](/fr/docs/Web/HTML/Element/input/password) alors c'est le nombre de caractères. Il doit s'agir d'un nombre entier de valeur 0 ou supérieure. Si aucun `size` n'est spécifié, ou si une valeur invalide est spécifiée, l'entrée n'a pas de taille déclarée, et le contrôle de formulaire aura la largeur par défaut basée sur l'agent utilisateur. Si CSS cible l'élément avec des propriétés ayant un impact sur la largeur, CSS a la priorité.
+L'attribut **`size`** définit la largeur de l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et la hauteur de l'élément [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select). Pour `input`, si l'attribut `type` est [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text) ou [`password`](/fr/docs/Web/HTML/Reference/Elements/input/password) alors c'est le nombre de caractères. Il doit s'agir d'un nombre entier de valeur 0 ou supérieure. Si aucun `size` n'est spécifié, ou si une valeur invalide est spécifiée, l'entrée n'a pas de taille déclarée, et le contrôle de formulaire aura la largeur par défaut basée sur l'agent utilisateur. Si CSS cible l'élément avec des propriétés ayant un impact sur la largeur, CSS a la priorité.
 
 L'attribut `size` n'a aucun impact sur la validation des contraintes.
 
@@ -49,6 +49,6 @@ En ajoutant `size` sur certains types d'entrée, la largeur de l'entrée peut ê
 
 ## Voir aussi
 
-- L'attribut [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength)
-- L'attribut [`minlength`](/fr/docs/Web/HTML/Attributes/minlength)
-- L'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern)
+- L'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Attributes/maxlength)
+- L'attribut [`minlength`](/fr/docs/Web/HTML/Reference/Attributes/minlength)
+- L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Attributes/pattern)

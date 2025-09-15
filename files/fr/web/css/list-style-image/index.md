@@ -5,7 +5,7 @@ slug: Web/CSS/list-style-image
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](/fr/docs/Web/HTML/Element/li).
+La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](/fr/docs/Web/HTML/Reference/Elements/li).
 
 On peut également utiliser la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style).
 
@@ -71,7 +71,7 @@ hr {
 ```
 
 > [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). Par défaut, cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
+> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). Par défaut, cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
 
 ## Syntaxe
 
@@ -166,7 +166,9 @@ ul {
 
 ## Voir aussi
 
-- [`list-style`](/fr/docs/Web/CSS/list-style)
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
-- La fonction [`url()`](/fr/docs/Web/CSS/url_value)
+- {{Cssxref("list-style")}} shorthand
+- {{Cssxref("list-style-type")}} property
+- {{Cssxref("list-style-position")}} property
+- {{cssxref("::marker")}} pseudo-element
+- Le module des [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
+- Le module des [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)

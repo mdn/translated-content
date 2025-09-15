@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr
 original_slug: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`script-src-attr`** indique les sources valides pour les gestionnaires d'évènement déclarés dans le document HTML. Cela inclut les scripts déclarés à même les attributs comme `onclick`, mais pas les URL chargées directement par des éléments [`<script>`](/fr/docs/Web/HTML/Element/script) (voir [`script-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) pour ces derniers).
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`script-src-attr`** indique les sources valides pour les gestionnaires d'évènement déclarés dans le document HTML. Cela inclut les scripts déclarés à même les attributs comme `onclick`, mais pas les URL chargées directement par des éléments [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) (voir [`script-src-elem`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem) pour ces derniers).
 
 <table class="properties">
   <tbody>
@@ -34,7 +34,7 @@ Content-Security-Policy: script-src-attr <source>;
 Content-Security-Policy: script-src-attr <source> <source>;
 ```
 
-`script-src-attr` peut être utilisée avec [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)&nbsp;:
+`script-src-attr` peut être utilisée avec [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)&nbsp;:
 
 ```http
 Content-Security-Policy: script-src <source>;
@@ -43,15 +43,15 @@ Content-Security-Policy: script-src-attr <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
 ### Valeur par défaut avec `script-src`
 
-Si la directive `script-src-attr` est absente, l'agent utilisateur se rabat sur la valeur de la directive [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src), qui elle-même a pour valeur par défaut celle de la directive [`default-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src).
+Si la directive `script-src-attr` est absente, l'agent utilisateur se rabat sur la valeur de la directive [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src), qui elle-même a pour valeur par défaut celle de la directive [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src).
 
 ## Spécifications
 
@@ -63,7 +63,7 @@ Si la directive `script-src-attr` est absente, l'agent utilisateur se rabat sur 
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<script>`](/fr/docs/Web/HTML/Element/script)
-- [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)
-- [`script-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script)
+- [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)
+- [`script-src-elem`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem)

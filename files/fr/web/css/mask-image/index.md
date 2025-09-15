@@ -3,11 +3,7 @@ title: mask-image
 slug: Web/CSS/mask-image
 ---
 
-{{CSSRef}}
-
-La propriété [CSS](/fr/docs/Web/CSS) **`mask-image`** définit l'image qui sera utilisée comme masque pour un élément.
-
-Par défaut, cela signifie que le canal alpha de l'image du masque sera multiplié par le canal alpha de l'élément. Cette combinaison peut être contrôlée avec la propriété [`mask-mode`](/fr/docs/Web/CSS/mask-mode).
+La propriété [CSS](/fr/docs/Web/CSS) **`mask-image`** définit l'image utilisée comme calque de masque pour un élément, masquant les sections de l'élément sur lesquelles l'image de masquage est définie en fonction du canal alpha de l'image de masque et, selon la valeur de la propriété {{cssxref("mask-mode")}}, de la luminosité de l'image de masque.
 
 ```css
 /* Valeur avec un mot-clé */
@@ -28,6 +24,7 @@ mask-image:
 mask-image: inherit;
 mask-image: initial;
 mask-image: revert;
+mask-image: revert-layer;
 mask-image: unset;
 ```
 
@@ -38,8 +35,8 @@ mask-image: unset;
 - `none`
   - : Le masque défini par ce mot-clé sera une image noire transparente.
 - `<mask-source>`
-  - : Une référence [`url()`](/fr/docs/Web/CSS/url_value) vers un masque SVG ([`<mask>`](/fr/docs/Web/SVG/Element/mask)) ou une image CSS.
-- [`<image>`](/fr/docs/Web/CSS/image)
+  - : Une référence {{cssxref("url_value", "&lt;url&gt;")}} vers un masque SVG {{SVGElement("mask")}} ou une image CSS.
+- {{cssxref("&lt;image&gt;")}}
   - : Une image utilisée pour le masque.
 
 ## Définition formelle

@@ -19,7 +19,7 @@ WebAssembly.Module.imports(module)
 ### Paramètres
 
 - `module`
-  - : Une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module).
+  - : Une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module).
 
 ### Valeur de retour
 
@@ -27,7 +27,7 @@ Un tableau qui contient des objets représentant les fonctions importées du mod
 
 ### Exceptions
 
-Si `module` n'est pas une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module), une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
+Si `module` n'est pas une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module), une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
 
 ## Exemples
 
@@ -57,5 +57,5 @@ Le résultat affiché dans la console ressemble alors à&nbsp;:
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

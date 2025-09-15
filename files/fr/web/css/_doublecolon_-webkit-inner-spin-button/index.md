@@ -2,18 +2,18 @@
 title: ::-webkit-inner-spin-button
 slug: Web/CSS/::-webkit-inner-spin-button
 l10n:
-  sourceCommit: 13d979ec8bc1daf315fc6a17e38cb855cf2e4ef1
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
-Le pseudo-élément CSS **`::-webkit-inner-spin-button`** permet de mettre en forme la partie intérieure de la roulette qui permet de choisir la valeur d'un élément [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number).
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-inner-spin-button`** est une [extension de WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui permet de mettre en forme la partie intérieure de la roulette qui permet de choisir la valeur d'un élément {{HTMLElement("input/number", '&lt;input type="number"&gt;')}}.
 
-## Syntaxr
+## Syntaxe
 
 ```css
 ::-webkit-inner-spin-button {
-  /* … */
+  /* ... */
 }
 ```
 
@@ -21,7 +21,17 @@ Le pseudo-élément CSS **`::-webkit-inner-spin-button`** permet de mettre en fo
 
 Ces exemples fonctionnent uniquement pour les navigateurs basés sur WebKit et Blink.
 
-### CSS
+### Changer le curseur dans les contrôles de spin
+
+Dans cet exemple, la propriété CSS {{cssxref("cursor")}} est changée en `pointer` chaque fois que le curseur est positionné sur la partie intérieure des contrôles de défilement de l'input.
+
+#### HTML
+
+```html
+<input type="number" />
+```
+
+#### CSS
 
 ```css
 input[type="number"]::-webkit-inner-spin-button {
@@ -29,19 +39,13 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<input type="number" />
-```
-
-### Résultat
-
-{{EmbedLiveSample('', 200, 30)}}
+{{EmbedLiveSample('changer_le_curseur_dans_les_contrôles_de_spin', 200, 30)}}
 
 ## Spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification standard.
+Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -49,4 +53,5 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Voir aussi
 
-- [Mettre en forme les contrôles de formulaires - WebKit (en anglais)](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)
+- {{cssxref("::-webkit-textfield-decoration-container")}}
+- [Mettre en forme les contrôles de formulaires - WebKit <sup>(angl.)</sup>](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)

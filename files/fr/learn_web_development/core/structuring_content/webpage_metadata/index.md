@@ -33,7 +33,7 @@ L'en-tête {{glossary("Head", "head")}} dans un document HTML est une partie du 
 
 ## Qu'est-ce que l'en-tête de HTML ?
 
-Revoyons le document HTML de base de l' [article précédent](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document):
+Revoyons le document HTML de base de l' [article précédent](/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document):
 
 ```html
 <!doctype html>
@@ -57,7 +57,7 @@ Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la différence du c
 </head>
 ```
 
-Toutefois dans les pages plus importantes, l'en-tête peut contenir un grand nombre d'éléments — essayez d'aller sur certains de vos sites web préférés et utilisez les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pour vérifier le contenu de l'en-tête. Notre objectif ici n'est pas de vous montrer comment utiliser tout ce qui peut être mis dans l'élément \<head>, mais plutôt de vous apprendre à utiliser les outils les plus évidents, que vous souhaiterez inclure dans l'en-tête, et vous les rendre plus familiers. Commençons.
+Toutefois dans les pages plus importantes, l'en-tête peut contenir un grand nombre d'éléments — essayez d'aller sur certains de vos sites web préférés et utilisez les [outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) pour vérifier le contenu de l'en-tête. Notre objectif ici n'est pas de vous montrer comment utiliser tout ce qui peut être mis dans l'élément \<head>, mais plutôt de vous apprendre à utiliser les outils les plus évidents, que vous souhaiterez inclure dans l'en-tête, et vous les rendre plus familiers. Commençons.
 
 ## Ajouter un titre
 
@@ -278,7 +278,7 @@ Si ç'a été fait correctement, après avoir enregistré le HTML, puis actualis
 
 ## Définition de la langue principale du document
 
-Enfin, il convient de mentionner que vous pouvez (et devrez vraiment) définir la langue de votre page. Cela peut être fait en ajoutant l'[attribut `lang`](/fr/docs/Web/HTML/Global_attributes/lang) à la balise ouvrante HTML (voir [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html).)
+Enfin, il convient de mentionner que vous pouvez (et devrez vraiment) définir la langue de votre page. Cela peut être fait en ajoutant l'[attribut `lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) à la balise ouvrante HTML (voir [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html).)
 
 ```html
 <html lang="fr"></html>

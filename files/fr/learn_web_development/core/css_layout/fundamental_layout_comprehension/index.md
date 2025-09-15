@@ -50,7 +50,7 @@ Vous devez maintenant implémenter votre mise en page. Les tâches que vous deve
 1. Pour afficher les éléments de navigation dans une ligne, avec un espace égal entre les éléments.
 2. La barre de navigation doit défiler avec le contenu, puis rester bloquée en haut de la fenêtre d'affichage quand elle l'atteint.
 3. L'image qui se trouve à l'intérieur de l'article doit être entourée de texte.
-4. Les éléments [`<article>`](/fr/docs/Web/HTML/Element/article)et [`<aside>`](/fr/docs/Web/HTML/Element/aside)doivent s'afficher sous la forme d'une disposition à deux colonnes. La taille des colonnes doit être flexible de sorte que, si la fenêtre du navigateur est réduite, les colonnes deviennent plus étroites.
+4. Les éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article)et [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside)doivent s'afficher sous la forme d'une disposition à deux colonnes. La taille des colonnes doit être flexible de sorte que, si la fenêtre du navigateur est réduite, les colonnes deviennent plus étroites.
 5. Les photographies doivent s'afficher sous forme de grille à deux colonnes avec un intervalle de 1 pixel entre les images.
 
 Vous n'aurez pas besoin de modifier le code HTML pour obtenir cette présentation. Les techniques à utiliser sont les suivantes:

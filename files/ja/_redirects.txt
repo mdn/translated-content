@@ -66,7 +66,7 @@
 /ja/docs/API/Document/getElementsByTagName	/ja/docs/Web/API/Document/getElementsByTagName
 /ja/docs/API/Document/hasFocus	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/API/Document/head	/ja/docs/Web/API/Document/head
-/ja/docs/API/Document/height	/ja/docs/conflicting/Web/API/Element/clientHeight
+/ja/docs/API/Document/height	/ja/docs/Web/API/Element/clientHeight
 /ja/docs/API/Document/hidden	/ja/docs/Web/API/Document/hidden
 /ja/docs/API/Document/images	/ja/docs/Web/API/Document/images
 /ja/docs/API/Document/implementation	/ja/docs/Web/API/Document/implementation
@@ -94,7 +94,7 @@
 /ja/docs/API/Document/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/API/Document/title	/ja/docs/Web/API/Document/title
 /ja/docs/API/Document/vlinkColor	/ja/docs/Web/API/Document/vlinkColor
-/ja/docs/API/Document/width	/ja/docs/conflicting/Web/API/Element/clientWidth
+/ja/docs/API/Document/width	/ja/docs/Web/API/Element/clientWidth
 /ja/docs/API/Document/write	/ja/docs/Web/API/Document/write
 /ja/docs/API/Document/writeln	/ja/docs/Web/API/Document/writeln
 /ja/docs/API/Document/xmlVersion	/ja/docs/Web/API/Document/xmlVersion
@@ -742,7 +742,7 @@
 /ja/docs/DOM/document.getSelection	/ja/docs/Web/API/Document/getSelection
 /ja/docs/DOM/document.hasFocus	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/DOM/document.head	/ja/docs/Web/API/Document/head
-/ja/docs/DOM/document.height	/ja/docs/conflicting/Web/API/Element/clientHeight
+/ja/docs/DOM/document.height	/ja/docs/Web/API/Element/clientHeight
 /ja/docs/DOM/document.images	/ja/docs/Web/API/Document/images
 /ja/docs/DOM/document.implementation	/ja/docs/Web/API/Document/implementation
 /ja/docs/DOM/document.importNode	/ja/docs/Web/API/Document/importNode
@@ -759,7 +759,7 @@
 /ja/docs/DOM/document.styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/DOM/document.title	/ja/docs/Web/API/Document/title
 /ja/docs/DOM/document.vlinkColor	/ja/docs/Web/API/Document/vlinkColor
-/ja/docs/DOM/document.width	/ja/docs/conflicting/Web/API/Element/clientWidth
+/ja/docs/DOM/document.width	/ja/docs/Web/API/Element/clientWidth
 /ja/docs/DOM/document.write	/ja/docs/Web/API/Document/write
 /ja/docs/DOM/document.writeln	/ja/docs/Web/API/Document/writeln
 /ja/docs/DOM/document.xmlVersion	/ja/docs/Web/API/Document/xmlVersion
@@ -3116,7 +3116,7 @@
 /ja/docs/Web/API/Document/transitionend_event	/ja/docs/Web/API/Element/transitionend_event
 /ja/docs/Web/API/Document/transitionrun_event	/ja/docs/Web/API/Element/transitionrun_event
 /ja/docs/Web/API/Document/transitionstart_event	/ja/docs/Web/API/Element/transitionstart_event
-/ja/docs/Web/API/Document/width	/ja/docs/conflicting/Web/API/Element/clientWidth
+/ja/docs/Web/API/Document/width	/ja/docs/Web/API/Element/clientWidth
 /ja/docs/Web/API/DocumentOrShadowRoot/activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint	/ja/docs/Web/API/Document/caretPositionFromPoint
 /ja/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/ja/docs/Web/API/Document/elementFromPoint
@@ -3239,7 +3239,6 @@
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/Window/fetch
 /ja/docs/Web/API/HTMLContentElement	/ja/docs/Web/API/HTMLSlotElement
 /ja/docs/Web/API/HTMLDetailsElement/toggle_event	/ja/docs/Web/API/HTMLElement/toggle_event
-/ja/docs/Web/API/HTMLDialogElement/cancel_event	/ja/docs/Web/API/HTMLDialogElement
 /ja/docs/Web/API/HTMLElement/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
 /ja/docs/Web/API/HTMLElement/animationend_event	/ja/docs/Web/API/Element/animationend_event
 /ja/docs/Web/API/HTMLElement/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
@@ -3760,7 +3759,7 @@
 /ja/docs/Web/API/document.getSelection	/ja/docs/Web/API/Document/getSelection
 /ja/docs/Web/API/document.hasFocus	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Web/API/document.head	/ja/docs/Web/API/Document/head
-/ja/docs/Web/API/document.height	/ja/docs/conflicting/Web/API/Element/clientHeight
+/ja/docs/Web/API/document.height	/ja/docs/Web/API/Element/clientHeight
 /ja/docs/Web/API/document.images	/ja/docs/Web/API/Document/images
 /ja/docs/Web/API/document.importNode	/ja/docs/Web/API/Document/importNode
 /ja/docs/Web/API/document.inputEncoding	/ja/docs/Web/API/Document/characterSet
@@ -3777,11 +3776,11 @@
 /ja/docs/Web/API/document.styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/document.title	/ja/docs/Web/API/Document/title
 /ja/docs/Web/API/document.vlinkColor	/ja/docs/Web/API/Document/vlinkColor
-/ja/docs/Web/API/document.width	/ja/docs/conflicting/Web/API/Element/clientWidth
+/ja/docs/Web/API/document.width	/ja/docs/Web/API/Element/clientWidth
 /ja/docs/Web/API/document.write	/ja/docs/Web/API/Document/write
 /ja/docs/Web/API/document.writeln	/ja/docs/Web/API/Document/writeln
 /ja/docs/Web/API/document.xmlVersion	/ja/docs/Web/API/Document/xmlVersion
-/ja/docs/Web/API/document/height	/ja/docs/conflicting/Web/API/Element/clientHeight
+/ja/docs/Web/API/document/height	/ja/docs/Web/API/Element/clientHeight
 /ja/docs/Web/API/element.blur	/ja/docs/Web/API/HTMLElement/blur
 /ja/docs/Web/API/element.className	/ja/docs/Web/API/Element/className
 /ja/docs/Web/API/element.clientTop	/ja/docs/Web/API/Element/clientTop
@@ -5963,6 +5962,7 @@
 /ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
 /ja/docs/Web/Security/Securing_your_site	/ja/docs/Web/Security/Practical_implementation_guides
 /ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/ja/docs/Web/Security/Subdomain_takeovers	/ja/docs/Web/Security/Attacks/Subdomain_takeover
 /ja/docs/Web/Security/Types_of_attacks	/ja/docs/Web/Security/Attacks
 /ja/docs/Web/Text_fragments	/ja/docs/Web/URI/Reference/Fragment/Text_fragments
 /ja/docs/Web/Tutorials	/ja/docs/MDN/Tutorials

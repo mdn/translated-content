@@ -1,18 +1,24 @@
 ---
 title: ::-moz-color-swatch
 slug: Web/CSS/::-moz-color-swatch
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-color-swatch`** est [un pseudo-élément spécifique à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente la couleur sélectionnée d'un élément {{HTMLElement("input")}} avec `type="color"`.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-color-swatch`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente la couleur sélectionnée d'un élément {{HTMLElement("input")}} avec `type="color"`.
 
 > [!NOTE]
 > Utiliser `::-moz-color-swatch` sur tout autre élément qu'un `<input type="color">` n'aura aucun effet.
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+::-moz-color-swatch {
+  /* ... */
+}
+```
 
 ## Exemples
 
@@ -37,7 +43,7 @@ input[type="color"]::-moz-color-swatch {
 
 ## Specifications
 
-Ce pseudo-élément est spécifique à Gecko et ne fait partie d'aucune spécification.
+Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -45,5 +51,5 @@ Ce pseudo-élément est spécifique à Gecko et ne fait partie d'aucune spécifi
 
 ## Voir aussi
 
-- Les pseudo-éléments semblables utilisés par les autres navigateurs :
+- Les pseudo-éléments semblables utilisés par les autres navigateurs&nbsp;:
   - {{cssxref("::-webkit-color-swatch")}} pris en charge par WebKit et Blink (utilisés par Safari, Chrome et Opera)

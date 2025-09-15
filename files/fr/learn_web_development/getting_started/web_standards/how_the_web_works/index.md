@@ -57,11 +57,11 @@ Lorsque vous saisissez une adresse web dans votre navigateur (dans notre analogi
 
 ## Ordre d'analyse des fichiers composants
 
-Lorsque les navigateurs envoient des requêtes aux serveurs pour recevoir des fichiers HTML, ceux-ci contiennent souvent des éléments [`<link>`](/fr/docs/Web/HTML/Element/link) qui référencent des feuilles de style [CSS](/fr/docs/Learn/CSS) externes et des éléments [`<script>`](/fr/docs/Web/HTML/Element/script) qui référencent des scripts [JavaScript](/fr/docs/Learn/JavaScript) externes. Il est important de connaître l'ordre selon lequel ces fichiers sont [analysés par le navigateur](/fr/docs/Web/Performance/How_browsers_work#parsing) lorsqu'il charge la page&nbsp;:
+Lorsque les navigateurs envoient des requêtes aux serveurs pour recevoir des fichiers HTML, ceux-ci contiennent souvent des éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) qui référencent des feuilles de style [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) externes et des éléments [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) qui référencent des scripts [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) externes. Il est important de connaître l'ordre selon lequel ces fichiers sont [analysés par le navigateur](/fr/docs/Web/Performance/Guides/How_browsers_work#parsing) lorsqu'il charge la page&nbsp;:
 
 - Le navigateur commence par l'analyse du fichier HTML, ce qui lui permet de reconnaître les éventuels éléments `<link>` (pour les feuilles de style CSS externes) et `<script>` (pour les scripts).
 - Pendant l'analyse du fichier HTML, le navigateur envoie des requêtes au serveur pour les différents fichiers CSS indiqués par les éléments `<link>` et pour les fichiers JavaScript indiqués par les éléments `<script>`. Lorsque le navigateur a reçu ces fichiers, il analyse alors leur contenu CSS et JavaScript.
-- En mémoire vive, le navigateur génère une structure à partir du document HTML analysé&nbsp;: un arbre, qu'on appelle le [DOM](/fr/docs/Web/API/Document_Object_Model). Pour le CSS, il génère en mémoire une structure qu'on appelle le [CSSOM](/fr/docs/Glossary/CSSOM). Le code JavaScript analysé est [compilé et exécuté](/fr/docs/Web/Performance/How_browsers_work#compilation_javascript).
+- En mémoire vive, le navigateur génère une structure à partir du document HTML analysé&nbsp;: un arbre, qu'on appelle le [DOM](/fr/docs/Web/API/Document_Object_Model). Pour le CSS, il génère en mémoire une structure qu'on appelle le [CSSOM](/fr/docs/Glossary/CSSOM). Le code JavaScript analysé est [compilé et exécuté](/fr/docs/Web/Performance/Guides/How_browsers_work#compilation_javascript).
 - Quand le navigateur construit l'arbre du DOM, lui applique les styles à partir de l'arbre du CSSOM et exécute le JavaScript, une représentation visuelle de la page est affichée à l'écran&nbsp;: l'utilisatrice ou l'utilisateur peut alors voir le contenu de la page et commencer à interagir avec.
 
 ## Des explications sur le DNS
@@ -78,7 +78,7 @@ Un peu plus haut dans l'article, nous avons utilisé le terme «&nbsp;paquet&nbs
 
 ## Voir aussi
 
-- [Le fonctionnement d'Internet](/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [Le fonctionnement d'Internet](/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 - [Le fonctionnement du DNS, une présentation de Stéphane Bortzmeyer](https://data.iletaitunefoisinternet.fr/dns-bortzmeyer/dns_bortzmeyer_slides.pdf)
 - [<i lang="en">HTTP — an Application-Level Protocol</i> (en anglais)](https://dev.opera.com/articles/http-basic-introduction/)
 - [<i lang="en">HTTP: Let's GET It On!</i> (en anglais)](https://dev.opera.com/articles/http-lets-get-it-on/)

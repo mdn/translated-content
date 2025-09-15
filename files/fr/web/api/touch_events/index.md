@@ -29,7 +29,7 @@ Les évènements tactiles sont semblables aux évènements liés à la souris, s
 
 ## Exemple
 
-Dans cet exemple, on suit plusieurs points de contact à la fois, ce qui permet à la personne de dessiner dans un canevas ([`<canvas>`](/fr/docs/Web/HTML/Element/canvas)) avec plusieurs doigts en même temps. Cet exemple ne fonctionnera qu'avec un navigateur qui prend en charge les évènements tactiles.
+Dans cet exemple, on suit plusieurs points de contact à la fois, ce qui permet à la personne de dessiner dans un canevas ([`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas)) avec plusieurs doigts en même temps. Cet exemple ne fonctionnera qu'avec un navigateur qui prend en charge les évènements tactiles.
 
 > [!NOTE]
 > Dans le texte qui suit, on utilise le terme «&nbsp;doigt&nbsp;» pour décrire le contact avec la surface. Bien entendu, il peut s'agir d'une autre méthode de contact, comme un stylet ou autre.
@@ -56,7 +56,7 @@ Journal :
 ### Mise en place des gestionnaires d'évènements
 
 Lors du chargement de la page, la fonction `startup()` détaillée ci-après sera appelée.
-Elle met en place les différents gestionnaires d'évènements de l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) afin qu'on puisse réagir aux évènements tactiles lorsqu'ils ont lieu.
+Elle met en place les différents gestionnaires d'évènements de l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) afin qu'on puisse réagir aux évènements tactiles lorsqu'ils ont lieu.
 
 ```js
 function startup() {
@@ -223,7 +223,7 @@ function colorForTouch(touch) {
 }
 ```
 
-Cette fonction produit une chaîne de caractères qu'on peut utiliser lorsqu'on appelle les fonctions de [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) qui permettent de dessiner les couleurs. Ainsi, avec une propriété [`Touch.identifier`](/fr/docs/Web/API/Touch/identifier) qui vaut 10, on obtiendra la chaîne de caractères `"#a31"`.
+Cette fonction produit une chaîne de caractères qu'on peut utiliser lorsqu'on appelle les fonctions de [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) qui permettent de dessiner les couleurs. Ainsi, avec une propriété [`Touch.identifier`](/fr/docs/Web/API/Touch/identifier) qui vaut 10, on obtiendra la chaîne de caractères `"#a31"`.
 
 #### Copier un objet de touche
 
@@ -332,7 +332,7 @@ function onTouch(evt) {
 
 ### Appeler `preventDefault()` au second contact
 
-Une technique pour éviter les évènements `pinchZoom` sur une page consiste à appeler `preventDefault()` lors du deuxième contact d'une série de touches. Ce comportement n'est pas bien défini dans la spécification des évènements tactiles et aura différents résultats selon les navigateurs (iOS empêchera le zoom mais permettra le déplacement à deux doigts, Android permettra le zoom mais pas le déplacement et Opera et Firefox empêchent tout zoom ou déplacement). À l'heure actuelle, il n'est pas recommandé d'exploiter ce comportement particulier, mais plutôt d'utiliser les informations de métadonnées ([`<meta>`](/fr/docs/Web/HTML/Element/meta/name)) sur la zone d'affichage (<i lang="en">viewport</i>) pour empêcher le zoom intempestif.
+Une technique pour éviter les évènements `pinchZoom` sur une page consiste à appeler `preventDefault()` lors du deuxième contact d'une série de touches. Ce comportement n'est pas bien défini dans la spécification des évènements tactiles et aura différents résultats selon les navigateurs (iOS empêchera le zoom mais permettra le déplacement à deux doigts, Android permettra le zoom mais pas le déplacement et Opera et Firefox empêchent tout zoom ou déplacement). À l'heure actuelle, il n'est pas recommandé d'exploiter ce comportement particulier, mais plutôt d'utiliser les informations de métadonnées ([`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta/name)) sur la zone d'affichage (<i lang="en">viewport</i>) pour empêcher le zoom intempestif.
 
 ## Spécifications
 
