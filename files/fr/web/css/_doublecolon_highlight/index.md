@@ -9,7 +9,7 @@ La fonction de [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/do
 
 Une mise en surbrillance personnalisée est une collection d'objets {{domxref("Range")}} et est enregistrée sur une page Web à l'aide de {{domxref("HighlightRegistry")}}.
 
-Le pseudo-élément `::highlight()` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en surbrillance. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments de surlignage](/fr/docs/Web/CSS/Pseudo-elements#highlight_pseudo-elements_inheritance).
+Le pseudo-élément `::highlight()` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en surbrillance. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments mise en évidence](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
 ## Propriétés autorisées
 

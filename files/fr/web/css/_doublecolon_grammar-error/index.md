@@ -7,7 +7,7 @@ l10n:
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::grammar-error`** représente une portion de texte que le navigateur signale comme contenant une ou plusieurs erreurs de grammaire.
 
-Le pseudo-élément `::grammar-error` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments de surlignage](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_surlignage).
+Le pseudo-élément `::grammar-error` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments mise en évidence](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
 ## Propriétés autorisées
 
