@@ -2,7 +2,7 @@
 title: :checked
 slug: Web/CSS/:checked
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
 **`:checked`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、**ラジオボタン** ([`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio))、 **チェックボックス** ([`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox))、 **オプションボタン** ({{HTMLElement("select")}} の中の {{HTMLElement("option")}}) 要素がチェックされていたり `on` の状態にあったりすることを表します。
@@ -46,7 +46,7 @@ input:checked {
 ユーザーは要素をチェック/選択することでこの状態にすることができ、要素のチェックや選択を外すとこの状態から外れます。
 
 > [!NOTE]
-> ブラウザーは `<option>` を{{ glossary("replaced elements", "置換要素")}}として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の機能を使用すると、対応しているブラウザーで、通常の DOM 要素と同様に、 `<option>` 要素を完全にカスタマイズすることができます。
+> ブラウザーは `<option>` を{{ glossary("replaced elements", "置換要素")}}として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の機能を使用すると、対応しているブラウザーで、通常の DOM 要素と同様に、 `<option>` 要素を完全にカスタマイズすることができます。
 
 ## 構文
 
@@ -177,7 +177,7 @@ option:checked {
 /* 開く要素は既定で隠す */
 .expandable {
   visibility: collapse;
-  background: #ddd;
+  background: #dddddd;
 }
 
 /* ボタンにスタイルを適用 */
@@ -185,7 +185,7 @@ option:checked {
   display: inline-block;
   margin-top: 12px;
   padding: 5px 11px;
-  background-color: #ff7;
+  background-color: #ffff77;
   border: 1px solid;
   border-radius: 3px;
 }
@@ -197,7 +197,7 @@ option:checked {
 
 /* チェックボックスがチェックされていたらボタンにスタイルを適用 */
 #expand-toggle:checked ~ #expand-btn {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
