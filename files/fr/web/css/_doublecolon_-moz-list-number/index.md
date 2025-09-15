@@ -48,5 +48,5 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Voir aussi
 
-- {{cssxref(":-moz-list-bullet")}}
+- {{cssxref("::-moz-list-bullet")}}
 - {{cssxref("::marker")}}
