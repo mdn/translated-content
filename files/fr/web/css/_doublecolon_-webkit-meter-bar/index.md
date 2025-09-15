@@ -1,47 +1,80 @@
 ---
 title: ::-webkit-meter-bar
 slug: Web/CSS/::-webkit-meter-bar
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}{{deprecated_header}}
 
-Le pseudo-élément **`::-webkit-meter-bar`** est un pseudo-élément spécifique à WebKit et permet de mettre en forme l'arrière-plan d'un élément {{HTMLElement("meter")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-bar`** est une [extension de WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui permet de mettre en forme l'arrière-plan d'un élément {{HTMLElement("meter")}}. Elle est utilisée pour sélectionner et appliquer des styles au conteneur d'un indicateur de mesure.
 
-## Exemples
-
-### CSS
+## Syntaxe
 
 ```css
-meter {
-  /* On réinitialise l'apparence par défaut */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-meter::-webkit-meter-bar {
-  background: #eee;
-  box-shadow: 0 2px 3px rgba (0, 0, 0, 0.2) inset;
-  border-radius: 3px;
+::-webkit-meter-bar {
+  /* ... */
 }
 ```
+
+## Exemples
 
 ### HTML
 
 ```html
-<meter min="0" max="10" value="6">Score sur 10</meter>
+Normal&nbsp;: <meter min="0" max="10" value="6">Score 6/10</meter>
+<br />
+Mis en forme&nbsp;:
+<meter id="styled" min="0" max="10" value="6">Score 6/10</meter>
+```
+
+### CSS
+
+```css hidden
+meter {
+  height: 30px;
+  width: 200px;
+  vertical-align: -0.8rem;
+}
+```
+
+```css
+.safari meter {
+  /* On réinitialise l'apparence par défaut */
+  -webkit-appearance: none;
+}
+
+#styled::-webkit-meter-bar {
+  background: lime;
+  box-shadow: 0 10px 20px grey inset;
+  border-radius: 10px;
+}
+```
+
+### JavaScript
+
+```js
+// Safari veut que les éléments <meter> aient une `appearance` de `none` pour un
+// style personnalisé utilisant les sélecteurs `::-webkit-meter-*`, mais
+// `appearance: none` casse le rendu sur Chrome.
+// Par conséquent, nous devons vérifier si le navigateur est basé sur Safari.
+
+const is_safari =
+  navigator.userAgent.includes("AppleWebKit/") &&
+  !navigator.userAgent.includes("Chrome/");
+
+if (is_safari) {
+  document.body.classList.add("safari");
+}
 ```
 
 ### Résultat
 
 {{EmbedLiveSample('Exemples')}}
 
-> [!NOTE]
-> Cela fonctionnera uniquement pour les navigateurs Webkit/Blink.
-
 ## Spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -49,7 +82,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Voir aussi
 
-- Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
+- Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}}&nbsp;:
   - {{cssxref("::-webkit-meter-inner-element")}}
   - {{cssxref("::-webkit-meter-even-less-good-value")}}
   - {{cssxref("::-webkit-meter-optimum-value")}}
