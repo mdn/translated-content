@@ -289,5 +289,5 @@ Voir la [Compatibilité des navigateurs](/fr/docs/Web/CSS/list-style-type#compat
 
 ## Voir aussi
 
-- [WebKit (-webkit-) vendor-prefixed CSS extensions](/fr/docs/Web/CSS/WebKit_Extensions)
+- [Extensions CSS préfixées par le vendeur WebKit (-webkit-)](/fr/docs/Web/CSS/WebKit_Extensions)
 - L'entrée du glossaire {{glossary("Vendor Prefix", "Préfixe vendeur")}}.
