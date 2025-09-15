@@ -640,7 +640,7 @@
 /fr/docs/CSS/transition-property	/fr/docs/Web/CSS/transition-property
 /fr/docs/CSS/transition-timing-function	/fr/docs/Web/CSS/transition-timing-function
 /fr/docs/CSS/unicode-bidi	/fr/docs/Web/CSS/unicode-bidi
-/fr/docs/CSS/uri	/fr/docs/Web/CSS/url_value
+/fr/docs/CSS/uri	/fr/docs/Web/CSS/url_function
 /fr/docs/CSS/user-ident	/fr/docs/Web/CSS/custom-ident
 /fr/docs/CSS/user-select	/fr/docs/Web/CSS/user-select
 /fr/docs/CSS/valeur_de_couleur	/fr/docs/Web/CSS/color_value
@@ -4933,7 +4933,7 @@
 /fr/docs/Web/CSS/filter-function/opacity()	/fr/docs/Web/CSS/filter-function/opacity
 /fr/docs/Web/CSS/filter-function/saturate()	/fr/docs/Web/CSS/filter-function/saturate
 /fr/docs/Web/CSS/filter-function/sepia()	/fr/docs/Web/CSS/filter-function/sepia
-/fr/docs/Web/CSS/filter-function/url	/fr/docs/Web/CSS/url_value
+/fr/docs/Web/CSS/filter-function/url	/fr/docs/Web/CSS/url_function
 /fr/docs/Web/CSS/gradient/linear-gradient()	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/grid-column-gap	/fr/docs/Web/CSS/column-gap
 /fr/docs/Web/CSS/grid-gap	/fr/docs/Web/CSS/gap
@@ -5005,9 +5005,9 @@
 /fr/docs/Web/CSS/transform-function/translateX()	/fr/docs/Web/CSS/transform-function/translateX
 /fr/docs/Web/CSS/transform-function/translateY()	/fr/docs/Web/CSS/transform-function/translateY
 /fr/docs/Web/CSS/transform-function/translateZ()	/fr/docs/Web/CSS/transform-function/translateZ
-/fr/docs/Web/CSS/uri	/fr/docs/Web/CSS/url_value
-/fr/docs/Web/CSS/url	/fr/docs/Web/CSS/url_value
-/fr/docs/Web/CSS/url()	/fr/docs/Web/CSS/url_value
+/fr/docs/Web/CSS/uri	/fr/docs/Web/CSS/url_function
+/fr/docs/Web/CSS/url	/fr/docs/Web/CSS/url_function
+/fr/docs/Web/CSS/url()	/fr/docs/Web/CSS/url_function
 /fr/docs/Web/CSS/used_value	/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2
 /fr/docs/Web/CSS/user-ident	/fr/docs/Web/CSS/custom-ident
 /fr/docs/Web/CSS/valeur_reelle	/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing
@@ -7739,8 +7739,7 @@
 /fr/docs/conflicting/Web/CSS/scroll-snap-type	/fr/docs/Web/CSS/scroll-snap-type
 /fr/docs/conflicting/Web/CSS/shape-outside	/fr/docs/Web/CSS/shape-outside
 /fr/docs/conflicting/Web/CSS/transform-function/skewX	/fr/docs/Web/CSS/transform-function/skewY
-/fr/docs/conflicting/Web/CSS/url()	/fr/docs/Web/CSS/url_value
-/fr/docs/conflicting/Web/CSS/url()_168028c4e5edd9e19c061adb4b604d4f	/fr/docs/Web/CSS/url_value
+/fr/docs/conflicting/Web/CSS/url()	/fr/docs/Web/CSS/url_function
 /fr/docs/conflicting/Web/CSS/user-select	/fr/docs/Web/CSS/user-select
 /fr/docs/conflicting/Web/CSS/width	/fr/docs/Web/CSS/width
 /fr/docs/conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7	/fr/docs/Web/CSS
