@@ -3239,7 +3239,6 @@
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/Window/fetch
 /ja/docs/Web/API/HTMLContentElement	/ja/docs/Web/API/HTMLSlotElement
 /ja/docs/Web/API/HTMLDetailsElement/toggle_event	/ja/docs/Web/API/HTMLElement/toggle_event
-/ja/docs/Web/API/HTMLDialogElement/cancel_event	/ja/docs/Web/API/HTMLDialogElement
 /ja/docs/Web/API/HTMLElement/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
 /ja/docs/Web/API/HTMLElement/animationend_event	/ja/docs/Web/API/Element/animationend_event
 /ja/docs/Web/API/HTMLElement/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
