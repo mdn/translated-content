@@ -3,12 +3,12 @@ title: "HTMLDialogElement: showModal() メソッド"
 short-title: showModal()
 slug: Web/API/HTMLDialogElement/showModal
 l10n:
-  sourceCommit: 0900a5665090b4dc3b4936af5a48591521032bfd
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`showModal()`** は {{domxref("HTMLDialogElement")}} インターフェイスのメソッドで、ダイアログをモーダルに、見えるように他のダイアログの最も上に表示します。これは {{glossary("top layer", "最上位レイヤー")}} の中に {{cssxref('::backdrop')}} 擬似要素とともに表示されます。ダイアログの外の操作はブロックされ、ダイアログの外のコンテンツは不活性にレンダリングされます。
+**`showModal()`** は {{domxref("HTMLDialogElement")}} インターフェイスのメソッドで、ダイアログをモーダルに、見えるように他のダイアログの最も上に表示します。これは {{glossary("top layer", "最上位レイヤー")}} の中に {{cssxref('::backdrop')}} 擬似要素とともに表示されます。ダイアログおよびその子要素を除く、ダイアログと同じ文書内の要素は不活性状態となります（[`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性が指定された場合と同様）。ブロック状態になるのは包含文書のみです。ダイアログが iframe 内でレンダリングされている場合、ページの残りの部分は操作可能な状態を維持します。
 
 ## 構文
 
@@ -27,13 +27,13 @@ showModal()
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : ダイアログが既に開いている場合（すなわち、`open` 属性が既に {{htmlelement("dialog")}} 要素に設定されている場合）、またはダイアログが既に示されている[ポップオーバー](/ja/docs/Web/API/Popover_API)である場合も発生します。
+  - : ダイアログが既に開いており、モーダルでない場合（つまり、すでに {{domxref("HTMLDialogElement.show()")}} で開かれている場合）に発生します。
 
 ## 例
 
 ### モーダルダイアログを開く
 
-次の例は、クリックするとフォームを含むモーダル {{htmlelement("dialog")}} を {{domxref("HTMLDialogElement.showModal()")}} 関数で開くボタンを示しています。開いている間、モーダルダイアログのコンテンツ以外は不活性になります。ここから、_Cancel_ ボタンをクリックしてダイアログを閉じたり（{{domxref("HTMLDialogElement.close()")}} 関数で）、submit ボタンによってフォームを送信したりすることができます。キャンセルボタンを選択するとダイアログが閉じられ、{{domxref("HTMLDialogElement/close_event", "close")}} イベントが作成されますが、{{domxref("HTMLElement/cancel_event", "cancel")}} イベントは作成されません。
+次の例は、クリックするとフォームを含むモーダル {{htmlelement("dialog")}} を `HTMLDialogElement.showModal()` 関数で開くボタンを示しています。開いている間、モーダルダイアログのコンテンツ以外は不活性になります。ここから、_Cancel_ ボタンをクリックしてダイアログを閉じたり（{{domxref("HTMLDialogElement.close()")}} 関数で）、submit ボタンによってフォームを送信したりすることができます。キャンセルボタンを選択するとダイアログが閉じられ、{{domxref("HTMLDialogElement/close_event", "close")}} イベントが作成されますが、{{domxref("HTMLElement/cancel_event", "cancel")}} イベントは作成されません。
 
 #### HTML
 
