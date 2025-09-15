@@ -39,9 +39,7 @@ Dans cet exemple, les navigateurs prenant en charge cette fonctionnalité devrai
 #### HTML
 
 ```html
-<p contenteditable spellcheck="true">
-  Mes amis vienent à la fête ce soir.
-</p>
+<p contenteditable spellcheck="true">Mes amis vienent à la fête ce soir.</p>
 ```
 
 #### CSS

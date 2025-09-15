@@ -151,9 +151,12 @@ On peut également aider les personnes qui naviguent au clavier avec cette techn
 <p>
   Voici l'exemple en action du code ci-dessus.<br />
   Nous avons un peu de
-  <span tabindex="0" data-description="collection de mots et de ponctuation">texte</span>
-  ici avec quelques
-  <span tabindex="0" data-description="petites fenêtres surgissantes qui se cachent aussi"
+  <span tabindex="0" data-description="collection de mots et de ponctuation"
+    >texte</span
+  >
+  ici avec quelques  <span
+    tabindex="0"
+    data-description="petites fenêtres surgissantes qui se cachent aussi"
     >bulles d'information</span
   >
   .
@@ -163,16 +166,16 @@ On peut également aider les personnes qui naviguent au clavier avec cette techn
 #### CSS
 
 ```css
-span[ data-description] {
+span[data-description] {
   position: relative;
   text-decoration: underline;
   color: blue;
   cursor: help;
 }
 
-span[ data-description]:hover::after,
-span[ data-description]:focus::after {
-  content: attr( data-description);
+span[data-description]:hover::after,
+span[data-description]:focus::after {
+  content: attr(data-description);
   position: absolute;
   left: 0;
   top: 24px;

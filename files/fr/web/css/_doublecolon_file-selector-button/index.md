@@ -52,7 +52,6 @@ input::file-selector-button {
 
 #### CSS
 
-
 ```css hidden
 form {
   display: flex;
