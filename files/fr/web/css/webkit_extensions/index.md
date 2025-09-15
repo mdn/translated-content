@@ -182,7 +182,6 @@ Si un pseudo-élément (mais pas une pseudo-classe) a un préfixe `-webkit-`, le
 
 ## Voir aussi
 
-- [La mise en forme des contrôles de formulaires sur le Trac WebKit (en anglais)](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
-- Une liste complémentaire d'extensions WebKit <https://gist.github.com/afabbro/3759334>
-- [Les extensions CSS relatives à Microsoft](/fr/docs/Web/CSS/Microsoft_CSS_extensions)
-- [Les extensions CSS relatives à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions)
+- [Extensions CSS préfixées par le vendeur Firefox (-moz-)](/fr/docs/Web/CSS/Mozilla_Extensions)
+- L'entrée de glossaire {{glossary("Vendor Prefix", "Préfixe vendeur")}}.
+- [La mise en forme des contrôles de formulaires sur le Trac WebKit <sup>(angl.)</sup>](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
