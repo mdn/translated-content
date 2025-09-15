@@ -2,7 +2,7 @@
 title: :open
 slug: Web/CSS/:open
 l10n:
-  sourceCommit: edb16c0a662d7e719efe67561389a7a087c1ace9
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`:open`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、開閉の状態を持つ要素のうち、現在開いている状態にある要素を表します。
@@ -21,7 +21,7 @@ l10n:
 
 - {{htmlelement("details")}} および {{htmlelement("dialog")}} 要素で、開いている状態、つまり `open` 属性が設定されている要素。
 - {{htmlelement("input")}} 要素のうち、ユーザーが値を選択するためのピッカーインターフェイスを表示するもの（例えば [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color)）で、ピッカーが表示されているもの。
-- {{htmlelement("select")}} 要素のうち、ユーザーが選択する値を表示するためにドロップダウンピッカーを表示するもので、そのピッカーが表示されているもの。[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)を実装する場合、ピッカー自体は {{cssxref("::picker()", "::picker(select)")}} 擬似要素を使用して選択できることに注意してください。
+- {{htmlelement("select")}} 要素のうち、ユーザーが選択する値を表示するためにドロップダウンピッカーを表示するもので、そのピッカーが表示されているもの。[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)を実装する場合、ピッカー自体は {{cssxref("::picker()", "::picker(select)")}} 擬似要素を使用して選択できることに注意してください。
 
 なお、開いている状態と閉じられた状態は意味づけの状態であり、当該要素の表示状態とは必ずしも対応していません。例えば、コンテンツを表示するために展開されている `<details>` 要素は開いている状態であり、 {{cssxref("visibility")}} の値が `hidden` であっても、 `details:open` セレクターによって選択されます。
 
