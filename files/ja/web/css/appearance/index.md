@@ -65,7 +65,6 @@ appearance: checkbox;
 
 `appearance` プロパティはすべての要素および擬似要素に適用できますが、指定された値の効果（ある場合）は、それが適用される要素によって異なります。
 
-
 - `none`
   - : ウィジェットに基本的な外観を与え、 CSS によるスタイル設定を可能にします。ただし、ウィジェットのネイティブ機能は維持されます。この値はウィジェット以外の要素には影響しません。
 
@@ -84,7 +83,7 @@ appearance: checkbox;
 
 - `<compat-auto>`
   - : 利用可能な値は `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, `textarea` です。
-  すべての値は `auto` と同様に動作します。代わりに `auto` を使用してください。
+    すべての値は `auto` と同様に動作します。代わりに `auto` を使用してください。
 
 > [!NOTE]
 > 仕様では `base` 値も定義しています。これは現在どのブラウザーも対応していません。
