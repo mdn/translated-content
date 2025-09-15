@@ -9,6 +9,66 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) 
 
 Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmlelement("template")}} et/ou dans le [le DOM fantôme (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM). On notera également que ce sélecteur ne sélectionnera pas les noeuds texte placés dans les emplacements, il ne cible que les éléments.
 
+{{InteractiveExample("Démonstration CSS&nbsp;: ::slotted()", "tabbed-shorter")}}
+
+```css interactive-example
+/* Ce CSS est appliqué à l'intérieur du shadow DOM. */
+
+::slotted(.content) {
+  background-color: aqua;
+}
+
+h2 ::slotted(span) {
+  background: silver;
+}
+```
+
+```html interactive-example
+<template id="card-template">
+  <div>
+    <h2><slot name="caption">le titre va ici</slot></h2>
+    <slot name="content">le contenu va ici</slot>
+  </div>
+</template>
+
+<my-card>
+  <span slot="caption">Erreur</span>
+  <p class="content" slot="content">Échec de la construction !</p>
+</my-card>
+```
+
+```js interactive-example
+customElements.define(
+  "my-card",
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      const template = document.getElementById("card-template");
+      const shadow = this.attachShadow({ mode: "open" });
+      shadow.appendChild(template.content.cloneNode(true));
+
+      const elementStyle = document.createElement("style");
+      elementStyle.textContent = `
+        div {
+          width: 200px;
+          border: 2px dotted red;
+          border-radius: 4px;
+        }`;
+      shadow.appendChild(elementStyle);
+
+      const cssTab = document.querySelector("#css-output");
+      const editorStyle = document.createElement("style");
+      editorStyle.textContent = cssTab.textContent;
+      shadow.appendChild(editorStyle);
+      cssTab.addEventListener("change", () => {
+        editorStyle.textContent = cssTab.textContent;
+      });
+    }
+  },
+);
+```
+
 ```css
 /* Cible n'importe quel élément placé dans un emplacement */
 ::slotted(*) {
@@ -23,7 +83,11 @@ Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmle
 
 ## Syntaxe
 
-{{csssyntax}}
+```css-nolint
+::slotted(<compound-selector>) {
+  /* ... */
+}
+```
 
 ## Exemples
 
