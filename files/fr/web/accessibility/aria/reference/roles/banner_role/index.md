@@ -39,7 +39,9 @@ Voici une fausse bannière avec un lien de saut vers la navigation, un logo, un 
 
 ```html
 <div role="banner">
-  <a href="#main" id="skipToMain" class="skiptocontent">Passer au contenu principal</a>
+  <a href="#main" id="skipToMain" class="skiptocontent"
+    >Passer au contenu principal</a
+  >
   <img src="images/w3c.png" alt="Logo W3C" />
   <h1>Repères ARIA</h1>
   <p>Identification des sous-sections de la page pour une navigation facile</p>
@@ -51,7 +53,9 @@ Nous aurions également pu écrire ce qui précède avec l'élément HTML `heade
 
 ```html
 <header>
-  <a href="#main" id="skipToMain" class="skiptocontent">Passer au contenu principal</a>
+  <a href="#main" id="skipToMain" class="skiptocontent"
+    >Passer au contenu principal</a
+  >
   <img src="images/w3c.png" alt="Logo W3C" />
   <h1>Repères ARIA</h1>
   <p>Identification des sous-sections de la page pour une navigation facile</p>
