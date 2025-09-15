@@ -31,7 +31,9 @@ details[open]::details-content {
 ## Syntaxe
 
 ```css
-selector::details-content
+selector::details-content {
+  /* ... */
+}
 ```
 
 ## Exemples
