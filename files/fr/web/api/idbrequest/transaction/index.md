@@ -23,7 +23,9 @@ L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient 
 const title = "Chien de garde";
 
 // Ouvrez une transaction comme d'habitude
-const objectStore = db.transaction(['listeDeTaches'], "readwrite").objectStore('listeDeTaches');
+const objectStore = db
+  .transaction(["listeDeTaches"], "readwrite")
+  .objectStore("listeDeTaches");
 
 // Obtenez l'objet "listeDeTaches" qui a ce titre
 const objectStoreTitleRequest = objectStore.get(title);
@@ -39,7 +41,10 @@ objectStoreTitleRequest.onsuccess = () => {
   const updateTitleRequest = objectStore.put(data);
 
   // Affiche la transaction à l'origine de la deuxième requête
-  console.log(" la transaction à l'origine de ces requêtes est " + updateTitleRequest.transaction);
+  console.log(
+    " la transaction à l'origine de ces requêtes est " +
+      updateTitleRequest.transaction,
+  );
 
   // Lorsque cette requête réussit, appelle de la fonction displayData() pour
   // mettre à jour l'affichage
