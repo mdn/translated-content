@@ -74,13 +74,13 @@ Firefox prend en charge cette fonctionnalité de façon expérimentale, elle peu
 
 Les outils de développement de Firefox affichent un message d'avertissement dans l'onglet Réseau lorsqu'une page a ce problème. La ressource chargée en HTTP sera affichée en rouge avec le texte «&nbsp;contenu mixte&nbsp;», et un lien vers cette page.
 
-![Une capture d'écran de la console avec un message d'avertissement sur le contenu mixte.](mixed_content_-_net_pane.png)
+![Une capture d'écran de la console avec un message d'avertissement sur le contenu mixte.](mixed_content_console_upgradable.png)
 
 En complément de ces alertes dans la console web, vous pouvez également utiliser [<i lang="en">Content Security Policy (CSP)</i>](/fr/docs/Web/HTTP/Guides/CSP) pour rapporter de tels problèmes. Vous pouvez aussi utiliser un outil en ligne comme [SSL-check](https://www.jitbit.com/sslcheck/) ou [Missing Padlock](https://www.missingpadlock.com/) qui vérifiera votre site de façon récursive pour trouver des liens vers du contenu non-sécurisé.
 
 À partir de Firefox 23, le contenu mixte actif est bloqué par défaut (et le contenu mixte passif peut être bloqué via une préférence). Pour que la détection de telles requêtes soit plus simple, elles sont affichées dans l'onglet Sécurité de la console&nbsp;:
 
-![Une capture d'écran avec les erreurs pour le contenu mixte bloqué dans l'onglet Sécurité de la console](mixed_content_webconsole.png)
+![Une capture d'écran avec les erreurs pour le contenu mixte bloqué dans l'onglet Sécurité de la console](mixed_content_console_displayed.png)
 
 Pour corriger ce type d'erreur, toutes les requêtes HTTP devraient être remplacées par des requêtes HTTPS. La plupart du temps, les problèmes de contenu mixte portent sur les fichiers JavaScript, les feuilles de styles, les images, les vidéos ou d'autres médias.
 
