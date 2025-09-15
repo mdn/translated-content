@@ -93,8 +93,9 @@ beaucoup de texte...<p><a name="bottom">bottom</a>?arg=val
 
 ## Voir_aussi
 
-- [Décoder et encoder en base64](/fr/docs/Glossary/Base64)
-- {{domxref("WindowBase64.atob","atob()")}}
-- {{domxref("WindowBase64.btoa","btoa()")}}
-- [CSS `url()`](/fr/docs/Web/CSS/url_value)
-- [URI](/fr/docs/Glossary/URI)
+- {{Glossary("Base64")}}
+- {{Glossary("Percent-encoding")}}
+- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
+- CSS {{CSSXref("url_value", "&lt;url&gt;")}}
+- {{Glossary("URI")}}

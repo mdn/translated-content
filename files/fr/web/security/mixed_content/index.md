@@ -34,14 +34,16 @@ Le risque induit par le contenu mixte dépend du type de site web que la personn
 
 Cette section liste certains des objets ou méthodes qui sont considérés comme du contenu actif&nbsp;:
 
-- [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) (l'attribut `src`)
-- [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) (l'attribut `href`) (cela inclut les feuilles de style CSS)
-- [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) (l'attribut `src`)
-- Les requêtes [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- Les requêtes [`fetch()`](/fr/docs/Web/API/Window/fetch)
-- En CSS, les endroits où une valeur [`url()`](/fr/docs/Web/CSS/url_value) peut être utilisée ([`@font-face`](/fr/docs/Web/CSS/@font-face), [`cursor`](/fr/docs/Web/CSS/cursor), [`background-image`](/fr/docs/Web/CSS/background-image), etc.).
-- [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object) (l'attribut `data`)
-- [`Navigator.sendBeacon`](/fr/docs/Web/API/Navigator/sendBeacon) (l'attribut `url`)
+- {{HTMLElement("script")}} (l'attribut `src`)
+- {{HTMLElement("link")}} (l'attribut `href`) (cela inclut les feuilles de style CSS)
+- {{HTMLElement("iframe")}} (l'attribut `src`)
+- Les requêtes {{domxref("Window/fetch", "fetch()")}}
+- Les requêtes {{domxref("XMLHttpRequest")}}
+- En CSS, les endroits où une valeur {{CSSXref("url_value", "&lt;url&gt;")}} peut être utilisée ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, etc.).
+- {{HTMLElement("object")}} (l'attribut `data`)
+- {{domxref("Navigator.sendBeacon")}} (l'attribut `url`)
+- {{HTMLElement("img")}} (l'attribut `srcset` ou `<picture>`)
+- Les polices de caractères Web
 
 D'autres types de ressources comme les polices de caractères ou les <i lang="en">web workers</i> peuvent être considérés comme du contenu mixte actif (comme dans Chrome).
 
