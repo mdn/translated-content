@@ -42,7 +42,7 @@ Math.log1p(x)
 
 ### Valeur de retour
 
-La valeur du logarithme naturel (en base [e](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/E)) de `x + 1`. Si `x` est égal à `-1`, [`-Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY) est renvoyée. Si `x` est inférieur à `-1`, {{jsxref("NaN")}} est renvoyée.
+La valeur du logarithme naturel (en base [e](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/E)) de `x + 1`. Si `x` est égal à `-1`, [`-Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY) est renvoyée. Si `x` est inférieur à `-1`, {{jsxref("NaN")}} est renvoyée.
 
 ## Description
 
