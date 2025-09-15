@@ -5,37 +5,37 @@ l10n:
   sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
 ---
 
-*Web 入门*是一套简明的，介绍 Web 开发实践的系列文章。你会安装构建简单网页和发布简单代码所需的工具。
-
-## 你的第一个网站
+Web 入门模块是一套介绍 Web 开发实践的系列文章。你会收集资源并编写代码来构建一个简单的网页，然后将其发布，以便全世界都能看到。
 
 创建一个专业的网站需要大量的工作，因此如果你是 Web 开发的新手，我们会鼓励你从小事做起。虽然你无法立刻再建一个 Facebook，但是做一个简单的网站并不难，我们将由此开始。
 
 ## 前提
 
 此系列假设你对 Web 技术没有了解，但你应已熟练使用你的操作系统，包括文件系统和 Web 浏览。你应该已安装代码编辑器和多个 Web 浏览器。
+
 若你尚未满足以上条件，建议你首先完成[环境设置](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)的学习。
 
-## 指南
-
-通过学习下列的文章，你将从零开始获得第一个在线网页。让我们开始旅程吧！
+## 教程
 
 - [你的网站会是什么样子？](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)
   - : 在你开始为你的网站写代码之前，你应该先计划一下。需要展示什么信息？使用什么字体和颜色？我们概述了一个简单的方法，你可以按照这个方法来规划网站的内容和设计。
 
-- [HTML 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
+- [创建内容](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : 超文本标记语言（HTML）是用于构建 Web 内容并赋予内容含义和目的的代码。例如，这个内容是段落还是列表？页面中是否插入图像？是否要有数据表格？在你的接受能力之内，这篇文章将提供足够的信息让你熟悉 HTML。
 
-- [CSS 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
+- [美化内容](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
   - : 层叠样式表（CSS）是用于为网站添加样式的代码。例如，你希望文本是黑色还是红色？内容应该绘制在屏幕的什么地方？应该用什么背景图像和颜色装饰你的网站？在这篇文章中，我们将带你学习入门所需的知识。
 
-- [JavaScript 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
+- [添加交互](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : JavaScript 是用于为网站添加交互特性的编程语言。例如，游戏、按钮按下或在表单中输入数据时会发生的事情、动态的样式效果、动画，等等。在这篇文章中，我们将让你了解这门令人兴奋的语言的潜力，以及如何入门。
 
 - [发布你的网站](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
-  - : 一旦完成了代码编写和构成网站的文件的组织工作，你就需要把它们全部放在网上，这样人们才能找到它。这篇文章描述如何以最简便的方式将你的简单示例上线至网络。
+  - : 一旦完成了代码编写和构成网站的文件的组织工作，你就需要把它们全部放在网上，这样人们才能找到它。本文将说明如何轻松地将你的示例网站上线。
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 
 ## 参见
 
-- [前端开发者职业道路](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN 课程合作伙伴_</sup>
+- [前端开发者职业道路](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学习伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#合作伙伴链接和嵌入)</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) 的*前端开发者职业道路*教授成为合格的前端 Web 开发者所需的知识，这里有有趣的交互式课程和挑战、有学识的老师以及提供帮助的社区。让你从零到获得第一份前端工作！许多课程有单独的免费版本。
+
