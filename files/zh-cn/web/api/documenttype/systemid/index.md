@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`systemId`** 只读属性返回关联 DTD 的 URL。
+{{domxref("DocumentType")}} 接口的 **`systemId`** 只读属性返回关联 DTD 的 URL。
 
 对于合成的 `DocumentType`，此属性将反映 {{domxref("DOMImplementation.createDocumentType()")}} 参数中给出的值。
 
