@@ -205,9 +205,9 @@ Comme le contenu généré est CSS, et non HTML, vous **ne pouvez pas** utiliser
   <li>Cracker des œufs dans un bol</li>
   <li>Ajouter du lait</li>
   <li>Ajouter de la farine</li>
-  <li aria-current="step"
-    >Mélanger soigneusement jusqu'à obtenir une pâte lisse</li
-  >
+  <li aria-current="step">
+    Mélanger soigneusement jusqu'à obtenir une pâte lisse
+  </li>
   <li>Verser une louche de pâte dans une poêle plate chaude et graissée</li>
   <li>Faire frémir jusqu'à ce que le dessus de la crêpe perde son éclat</li>
   <li>La retourner et faire frémir encore quelques minutes</li>

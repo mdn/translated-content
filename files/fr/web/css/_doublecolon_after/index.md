@@ -154,7 +154,8 @@ On peut également aider les personnes qui naviguent au clavier avec cette techn
   <span tabindex="0" data-description="collection de mots et de ponctuation"
     >texte</span
   >
-  ici avec quelques  <span
+  ici avec quelques
+  <span
     tabindex="0"
     data-description="petites fenêtres surgissantes qui se cachent aussi"
     >bulles d'information</span
