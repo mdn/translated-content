@@ -415,7 +415,7 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
 La spécification ne limite pas la taille de l'image `cursor`, {{Glossary("user agent", "les agents utilisateurs")}} les restreignent généralement pour éviter un usage abusif.
 Par exemple, sur Firefox et Chromium, les images de curseur sont limitées à 128x128 pixels par défaut, mais il est recommandé de limiter la taille de l'image du curseur à 32x32 pixels. Les changements de curseur qui utilisent des images plus grandes que la taille maximale prise en charge par l'agent utilisateur seront généralement ignorés.
 
-### Formats de fichiers image pris en charge  
+### Formats de fichiers image pris en charge
 
 Les agents utilisateurs sont tenus par la spécification de prendre en charge les fichiers PNG, les fichiers SVG v1.1 en mode statique sécurisé contenant une taille naturelle, et tout autre format de fichier image non animé qu'ils prennent en charge pour les images dans d'autres propriétés.
 Les navigateurs de bureau prennent également largement en charge le format de fichier `.cur`.

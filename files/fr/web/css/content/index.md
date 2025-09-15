@@ -29,7 +29,7 @@ Les objets insérés à l'aide de la propriété `content` sont **des {{glossary
 ```html interactive-example
 <p class="topic-games">
   Actualités jeux vidéo&nbsp;: aucun nouveau titre de inFamous n'est prévu
-  </p>
+</p>
 
 <p class="topic-weather">
   Météo du jour&nbsp;: chaleur, tempêtes violentes et tornades
