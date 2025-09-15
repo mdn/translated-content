@@ -56,7 +56,7 @@ selectedcontent img {
 
 ## 例
 
-`<selectedcontent>` 要素を含む完全な例は、[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)ガイドで参照できます。
+`<selectedcontent>` 要素を含む完全な例は、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)ガイドで参照できます。
 
 ## 技術的概要
 
@@ -120,4 +120,4 @@ selectedcontent img {
 - {{HTMLElement("select")}} 要素
 - {{HTMLElement("option")}} 要素
 - {{HTMLElement("optgroup")}} 要素
-- [カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)

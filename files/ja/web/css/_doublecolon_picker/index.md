@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-`::picker()` は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、要素のピッカー部分を対象とします。例えば、[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のドロップダウンピッカーなどが該当します。
+`::picker()` は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、要素のピッカー部分を対象とします。例えば、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のドロップダウンピッカーなどが該当します。
 
 ## 構文
 
@@ -22,7 +22,7 @@ l10n:
 - {{cssxref("ident")}}
   - : ターゲットとするピッカーの要素を表す文字列。次の値が利用できます。
     - `select`
-      - : カスタマイズ可能な選択要素のドロップダウンピッカーです。
+      - : カスタマイズ可能な select 要素のドロップダウンピッカーです。
 
 ## 解説
 
@@ -30,7 +30,7 @@ l10n:
 
 `::picker(select)` セレクターは、カスタマイズ可能な `<select>` 要素の子孫要素のうち、最初の `<button>` 子要素を除くすべてを対象とします。これらの子孫要素はブラウザーによってグループ化され、ピッカーとしてレンダリングされます。最初の `<button>` 子要素は、押下時にピッカーを開くためのボタンを表します。
 
-これにより、ピッカーのコンテンツすべてを単一のエンティティとして操作できます。例えば、境界線のカスタマイズ、表示・非表示時のアニメーション、既定の位置とは異なる配置などが可能です。 私たちの[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)ガイドでは、 `::picker(select)` の使用例を多数紹介しています。
+これにより、ピッカーのコンテンツすべてを単一のエンティティとして操作できます。例えば、境界線のカスタマイズ、表示・非表示時のアニメーション、既定の位置とは異なる配置などが可能です。 私たちの[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)ガイドでは、 `::picker(select)` の使用例を多数紹介しています。
 
 ### ピッカーポップオーバーの動作
 
@@ -102,4 +102,4 @@ select,
 - {{cssxref("appearance")}}
 - {{cssxref("::picker-icon")}}, {{cssxref("::checkmark")}}
 - {{cssxref(":open")}}, {{cssxref(":checked")}}
-- [カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)

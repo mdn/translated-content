@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::picker-icon`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、アイコンが関連付けられたフォームコントロール内のピッカーアイコンを対象とします。[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の場合、 `<select>` 要素に示される矢印アイコン（閉じられた状態では下向きを指す）を選択します。
+**`::picker-icon`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、アイコンが関連付けられたフォームコントロール内のピッカーアイコンを対象とします。[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の場合、 `<select>` 要素に示される矢印アイコン（閉じられた状態では下向きを指す）を選択します。
 
 ## 構文
 
@@ -21,7 +21,7 @@ l10n:
 
 `::picker-icon`擬似要素は、フォームコントロールのピッカーアイコン、すなわちコントロールボタン上に表示させるアイコンを対象とします。 元の要素にピッカーがあり、かつ {{cssxref("appearance")}} プロパティの `base-select` 値によって基本的な外観が設定されている場合にのみ、対象として利用できます。 生成されたボックスは、 {{cssxref("::after")}} 擬似要素によって生成されたボックスの後に現れ、既定のブラウザースタイルシートで指定されたアイコンが表示されます。 {{cssxref("content")}} プロパティを使用してカスタマイズできます。
 
-`::picker-icon` セレクターを使用すると、[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のインライン末尾側にある下向きの矢印を選択できます。例えば、アイコンの色やサイズをカスタマイズしたり、別のアイコンに（{{cssxref("content")}} や [SVG](/ja/docs/Web/SVG) を使用して）置き換えたり、ピッカーが開くための操作時と閉じられた時にアニメーションを適用したい場合に便利です。
+`::picker-icon` セレクターを使用すると、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のインライン末尾側にある下向きの矢印を選択できます。例えば、アイコンの色やサイズをカスタマイズしたり、別のアイコンに（{{cssxref("content")}} や [SVG](/ja/docs/Web/SVG) を使用して）置き換えたり、ピッカーが開くための操作時と閉じられた時にアニメーションを適用したい場合に便利です。
 
 現在はカスタマイズ可能な `<select>` ピッカーアイコンの選択が、 `::picker-icon` の唯一の用途ですが、将来的に追加される可能性があります。
 
@@ -74,4 +74,4 @@ select:open::picker-icon {
 - {{cssxref("appearance")}}
 - {{cssxref("::picker()", "::picker(select)")}}, {{cssxref("::checkmark")}}
 - {{cssxref(":open")}}, {{cssxref(":checked")}}
-- [カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)

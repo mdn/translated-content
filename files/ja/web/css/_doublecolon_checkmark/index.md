@@ -2,12 +2,12 @@
 title: ::checkmark
 slug: Web/CSS/::checkmark
 l10n:
-  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
 {{SeeCompatTable}}
 
-**`::checkmark`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の現在選択されている {{htmlelement("option")}} 要素内に配置されたチェックマークを対象とします。選択されているオプションを視覚的に示すために使用することができます。
+**`::checkmark`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の現在選択されている {{htmlelement("option")}} 要素内に配置されたチェックマークを対象とします。選択されているオプションを視覚的に示すために使用することができます。
 
 {{InteractiveExample("CSS デモ: ::checkmark")}}
 
@@ -80,7 +80,7 @@ option:not(option:last-of-type) {
 
 ## 解説
 
-`::checkmark`擬似要素は、[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の現在選択されている `<option>` 内に配置されたチェックマークを対象とします。
+`::checkmark`擬似要素は、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の現在選択されている `<option>` 内に配置されたチェックマークを対象とします。
 
 この機能は、親要素にピッカーが設定され、かつ {{cssxref("appearance")}} プロパティの `base-select` 値によって基本外観が設定されている場合にのみ利用可能です。生成されるボックスは、 {{cssxref("::before")}} 擬似要素によって生成されるボックスよりも先に表示されます。アイコンは {{cssxref("content")}} プロパティを使用して独自のカスタマイズが可能です。
 
@@ -130,4 +130,4 @@ option::checkmark {
 - {{cssxref("appearance")}}
 - {{cssxref("::picker()", "::picker(select)")}}, {{cssxref("::picker-icon")}}
 - {{cssxref(":open")}}, {{cssxref(":checked")}}
-- [カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)
