@@ -2,10 +2,8 @@
 title: "<button>: ボタン要素"
 slug: Web/HTML/Reference/Elements/button
 l10n:
-  sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
+  sourceCommit: f29e825161ee6776a395cd846f8570686f784341
 ---
-
-{{HTMLSidebar}}
 
 **`<button>`** は [HTML](/ja/docs/Web/HTML) の要素で、マウス、キーボード、指、音声コマンド、その他の支援技術で起動することができる操作可能要素です。起動すると、[フォーム](/ja/docs/Learn_web_development/Extensions/Forms)を送信したりダイアログを開いたりといった操作を実行します。
 
@@ -24,29 +22,29 @@ l10n:
   padding: 0 20px;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  color: white;
+  text-shadow: 1px 1px 1px black;
   border-radius: 10px;
-  background-color: rgba(220, 0, 0, 1);
+  background-color: tomato;
   background-image: linear-gradient(
     to top left,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 30%,
-    rgba(0, 0, 0, 0)
+    rgb(0 0 0 / 0.2),
+    rgb(0 0 0 / 0.2) 30%,
+    transparent
   );
   box-shadow:
-    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
 }
 
 .styled:hover {
-  background-color: rgba(255, 0, 0, 1);
+  background-color: red;
 }
 
 .styled:active {
   box-shadow:
-    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
 }
 ```
 
@@ -60,25 +58,25 @@ l10n:
 - `command`
   - : 制御ボタンの `<button>` によって制御される、 `commandfor` 属性で指定した要素に対して実行するアクションを指定します。実現可能な値は次のとおりです。
     - `"show-modal"`
-      - : このボタンは、 {{htmlelement("dialog")}} をモーダルとして表示させます。ダイアログがすでにモーダルである場合は、何もしません。これは、ダイアログ要素で [`.showModal()`](/ja/docs/Web/API/HTMLDialogElement/showModal) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+      - : このボタンは、 {{htmlelement("dialog")}} をモーダルとして表示させます。ダイアログがすでにモーダルである場合は、何もしません。これは、 {{domxref("HTMLDialogElement.showModal()")}} メソッドを `<dialog>` 要素で呼び出すことと同じ意味の宣言的な方法です。
     - `"close"`
-      - : このボタンは、 {{htmlelement("dialog")}} 要素を閉じます。ダイアログがすでに閉じられている場合、何もしません。これは、ダイアログ要素の [`.close()`](/ja/docs/Web/API/HTMLDialogElement/close) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+      - : このボタンは、 {{htmlelement("dialog")}} 要素を閉じます。ダイアログがすでに閉じられている場合、何もしません。これは、 {{domxref("HTMLDialogElement.close()")}} メソッドを `<dialog>` 要素で呼び出すことと同じ意味の宣言的な方法です。
     - `"request-close"`
-      - : このボタンは、 {{htmlelement("dialog")}} 要素を閉じるよう要求します。ダイアログがすでに閉じられている場合、何もしません。これは、ダイアログ要素の [`.requestClose()`](/ja/docs/Web/API/HTMLDialogElement/requestClose) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+      - : このボタンは、 {{domxref("HTMLDialogElement.cancel_event", "cancel")}} イベントを {{htmlelement("dialog")}} 要素上で発行し、ブラウザーにダイアログを閉じるよう要求し、続いて {{domxref("HTMLDialogElement.close_event", "close")}} イベントを発行します。これは `close` コマンドとは異なり、作成者は {{domxref("Event.preventDefault()")}} を `cancel` イベントに対して呼び出すことで `<dialog>` が閉じるのを防ぐことができます。ダイアログが既に閉じられている場合は、何も行われません。これは、 {{domxref("HTMLDialogElement.requestClose()")}} メソッドを `<dialog>` 要素に対して呼び出すことと同等の宣言的な方法です。
     - `"show-popover"`
-      - : このボタンは、非表示のポップオーバーを表示します。すでに表示されているポップオーバーを表示しようとすると、何もしません。詳細については、{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} を参照してください。これは、値 `"show"` を指定して [`popovertargetaction`](#popovertargetaction) を呼び出すことと同じです。これは、ポップオーバー要素の [`.showPopover()`](/ja/docs/Web/API/HTMLElement/showPopover) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+      - : このボタンは、非表示のポップオーバーを表示します。すでに表示されているポップオーバーを表示しようとすると、何もしません。詳細については、{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} を参照してください。これは、 `show` の値を [`popovertargetaction`](#popovertargetaction) 属性に設定することに相当し、ポップオーバー要素に対して {{domxref("HTMLElement.showPopover()")}} メソッドを呼び出すことと同じ意味の宣言的な方法です。
     - `"hide-popover"`
-      - : このボタンは、表示されているポップオーバーを非表示にします。すでに非表示になっているポップオーバーを非表示にしようとすると、何もしません。詳細については、{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} を参照してください。これは、値 `"hide"` を指定して [`popovertargetaction`](#popovertargetaction) を呼び出すことと同じです。これは、ポップオーバー要素で [`.hidePopover()`](/ja/docs/Web/API/HTMLElement/hidePopover) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+      - : このボタンは、表示されているポップオーバーを非表示にします。すでに非表示になっているポップオーバーを非表示にしようとすると、何もしません。詳細については、{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} を参照してください。これは、 `hide` の値を [`popovertargetaction`](#popovertargetaction) 属性に設定することに相当し、ポップオーバー要素で {{domxref("HTMLElement.hidePopover()")}} メソッドを呼び出すことと同じ意味の宣言的な方法です。
     - `"toggle-popover"`
-      - : このボタンは、ポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合は表示され、ポップオーバーが表示されている場合は非表示になります。詳細については、{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} を参照してください。これは、値 `"toggle"` を指定した [`popovertargetaction`](#popovertargetaction) と同じです。これは、ポップオーバー要素の [`.togglePopover()`](/ja/docs/Web/API/HTMLElement/togglePopover) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+      - : このボタンは、ポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合は表示され、ポップオーバーが表示されている場合は非表示になります。詳細については、{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} を参照してください。これは、 `toggle` の値を [`popovertargetaction`](#popovertargetaction) 属性に設定することに相当し、ポップオーバー要素で {{domxref("HTMLElement.togglePopover()")}} メソッドを呼び出すことと同じ意味の宣言的な方法です。
     - カスタム値
       - : この属性は、 2 つのハイフン文字 (`--`) を接頭辞として付加したカスタム値を表します。カスタム値を持つボタンは、制御される要素で {{domxref("CommandEvent")}} を配信します。
 
 - `commandfor`
-  - : `<button>` 要素をコマンドボタンに変え、指定された対話要素を制御します。制御する要素の ID をその値として取ります。これは [`popovertarget`](#popovertarget) のより一般的なバージョンです。
+  - : `<button>` 要素をコマンドボタンに変換し、ボタンに指定された [`command`](#command) 属性で定義されたコマンドを発行することで、指定された対話要素を制御します。 `commandfor` 属性は、制御対象となる要素の ID を値として取ります。これは [`popovertarget`](#popovertarget) のより汎用的なバージョンです。
 - [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
   - : これは論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。
-- `form`
+- [`form`](/ja/docs/Web/HTML/Reference/Attributes/form)
   - : ボタンに関連付けられた {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同一文書内の `<form>` 要素の `id` 属性と同一でなければなりません。（この属性を設定しなかった場合、 `<button>` は祖先に `<form>` 要素が存在すれば、その要素に関連付けられます。）
 
     この属性によって `<button>` 要素が `<form>` の中になくても、同一文書内にある任意の `<form>` 要素に関連付けることが可能になりました。また、祖先の `<form>` 要素を上書きすることができます。
@@ -163,7 +161,7 @@ l10n:
 
 ```html
 <button name="favorite">
-  <svg fill="#000000" viewBox="0 0 42 42">
+  <svg fill="black" viewBox="0 0 42 42">
     <path
       d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
       3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,
@@ -276,7 +274,7 @@ l10n:
           href="/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         >があってはならない。
-        <code>&lt;button&gt;</code> が<a href="/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select">カスタマイズ可能な選択要素</a>の最初の子である場合、0 個または 1 個の {{htmlelement("selectedcontent")}} 要素も含まれている場合があります。
+        <code>&lt;button&gt;</code> が<a href="/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select">カスタマイズ可能な select 要素</a>の最初の子である場合、0 個または 1 個の {{htmlelement("selectedcontent")}} 要素も含まれている場合があります。
       </td>
     </tr>
     <tr>
