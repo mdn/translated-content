@@ -236,7 +236,7 @@ input:valid + span:after {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="#取值">取值</a></strong></td>
+      <td><strong><a href="#值">值</a></strong></td>
       <td>
         一个表示日期和时间的字符串（本地时区）或空值。
       </td>
