@@ -59,7 +59,7 @@ Il est important de veiller à ce que le rapport de contraste entre la couleur d
 La valeur du contraste est déterminée en comparant la luminosité de la couleur du texte de substitution et celle de l'arrière-plan. Afin de respecter les recommandations d'accessibilité&nbsp;: [Web Content Accessibility Guidelines (WCAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/intro/wcag), un ratio de 4.5:1 est nécessaire pour le contenu textuel normal et un ratio de 3:1 est nécessaire pour les textes plus grands ou en gras. Un texte de grande taille est défini comme étant de 18,66 pixels et en gras ou plus grand, ou de 24 pixels ou plus.
 
 - [WebAIM&nbsp;: vérificateur de contraste <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/)
-- [Explications des recommendation WCAG 1.4 <sup>(angl.)</sup>](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Explications des recommendation WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Comprendre le critère de succès 1.4.3 | W3C Comprendre les WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 #### Utilisabilité

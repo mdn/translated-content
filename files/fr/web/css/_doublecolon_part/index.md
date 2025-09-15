@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La fonction de [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part()`** représente n'importe quel élément dans un [arbre fantôme](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Reference/Global_attributes#part) correspondant.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part()`** représente n'importe quel élément dans un [arbre fantôme (<i lang="en">shadow tree</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Reference/Global_attributes#part) correspondant.
 
 ```css
 custom-element::part(foo) {

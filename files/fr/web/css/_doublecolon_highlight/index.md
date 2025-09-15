@@ -5,11 +5,11 @@ l10n:
   sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
 ---
 
-La fonction de [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::highlight()`** applique des styles à une mise en surbrillance personnalisée.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::highlight()`** applique des styles à une mise en évidence personnalisée.
 
-Une mise en surbrillance personnalisée est une collection d'objets {{domxref("Range")}} et est enregistrée sur une page Web à l'aide de {{domxref("HighlightRegistry")}}.
+Une mise en évidence personnalisée est une collection d'objets {{domxref("Range")}} et est enregistrée sur une page Web à l'aide de {{domxref("HighlightRegistry")}}.
 
-Le pseudo-élément `::highlight()` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en surbrillance. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments mise en évidence](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
+Le pseudo-élément `::highlight()` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments mise en évidence](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
 ## Propriétés autorisées
 
@@ -31,13 +31,13 @@ En particulier, {{CSSxRef("background-image")}} est ignoré.
 
 ## Exemples
 
-### Mise en surbrillance des caractères
+### Mise en évidence des caractères
 
 #### HTML
 
 ```html
 <p id="rainbow-text">
-  API CSS personnalisée pour la mise en surbrillance arc-en-ciel
+  API CSS personnalisée pour la mise en évidence arc-en-ciel
 </p>
 ```
 
@@ -116,7 +116,7 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 
 #### Résultat
 
-{{ EmbedLiveSample("mise_en_surbrillance_des_caractères") }}
+{{ EmbedLiveSample("mise_en_évidence_des_caractères") }}
 
 ## Spécifications
 

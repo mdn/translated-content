@@ -34,7 +34,7 @@ Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une
 
 ### Vérification grammaticale de base des documents
 
-Dans cet exemple, les navigateurs prenant en charge cette fonctionnalité devraient mettre en surbrillance toute erreur grammaticale signalée avec les styles indiqués.
+Dans cet exemple, les navigateurs prenant en charge cette fonctionnalité devraient mettre en évidence toute erreur grammaticale signalée avec les styles indiqués.
 
 #### HTML
 
