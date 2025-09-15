@@ -207,7 +207,7 @@ input:valid + span:after {
 
 ### 设置日期和时间的最大值和最小值
 
-可以使用 [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) 属性来限制用户可选择的日期/时间范围。在下面的示例中，我们将最小日期时间设置为 `2025-06-01T08:30`，最大日期时间设置为 `2025-06-30T16:30`：
+可以使用 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性来限制用户可选择的日期/时间范围。在下面的示例中，我们将最小日期时间设置为 `2025-06-01T08:30`，最大日期时间设置为 `2025-06-30T16:30`：
 
 ```html
 <form>
