@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-{{domxref("ContactAddress")}} 接口的只读属性 **`region`** 返回表示地址所在国家的顶级行政区划的字符串。这可能是州（state）、省、州（oblast）、县（prefecture）或郡（county）。
+{{domxref("ContactAddress")}} 接口的只读属性 **`region`** 返回表示地址所在国家的顶级行政区划的字符串。这可能是州（state）、省、州（oblast）、县（prefecture）。
 
 ## 值
 
