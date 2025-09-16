@@ -1,15 +1,25 @@
 ---
 title: ::-webkit-slider-runnable-track
 slug: Web/CSS/::-webkit-slider-runnable-track
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
-Le pseudo-élément **`::-webkit-slider-runnable-track`** représente la piste utilisée par un élément {{HTMLElement("input")}} de type `"range"` (cf. {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}).
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-slider-runnable-track`** est une [extension de WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui représente la piste utilisée par un élément {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}.
+
+## Syntaxe
+
+```css
+::-webkit-slider-runnable-track {
+  /* ... */
+}
+```
 
 ## Spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
+Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -18,8 +28,8 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 ## Voir aussi
 
 - {{cssxref("::-webkit-slider-thumb")}}
-- Similar pseudo-elements used by other browsers:
-  - {{cssxref("::-ms-track")}}
+- Pseudo-éléments similaires utilisés par d'autres navigateurs&nbsp;:
   - {{cssxref("::-moz-range-track")}}
 
-- [CSS-Tricks : Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [CSS-Tricks : Gérer des champs `input` de type `range` de façon compatible entre les navigateurs <sup>(angl.)</sup>](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- Le billet de blog [QuirksMode&nbsp;: Stylisation et script des barres de défilement <sup>(angl.)</sup>](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

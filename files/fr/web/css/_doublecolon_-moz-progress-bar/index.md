@@ -1,30 +1,44 @@
 ---
 title: ::-moz-progress-bar
 slug: Web/CSS/::-moz-progress-bar
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}{{SeeCompatTable}}
 
-Le pseudo-élément **`::-moz-progress-bar`** s'appliquant à la zone d'élément HTML {{HTMLElement("progress")}} représente la valeur de la progression effectuée jusqu'à présent. Vous pourrez par exemple, modifier la couleur de la barre de progression.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-progress-bar`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente la barre de progression à l'intérieur d'un élément {{HTMLElement("progress")}}. (La barre représente la progression accomplie.)
+
+Si vous souhaitez sélectionner la partie non terminée de {{HTMLElement("progress")}} dans Mozilla, veuillez sélectionner directement l'élément {{HTMLElement("progress")}}.
 
 ## Syntaxe
 
-{{csssyntax}}
-
-## Exemples
-
-### CSS
-
 ```css
-#redbar::-moz-progress-bar {
-  background-color: red;
+::-moz-progress-bar {
+  /* ... */
 }
 ```
+
+## Exemples
 
 ### HTML
 
 ```html
-<progress id="redbar" value="30" max="100">30 %</progress>
+<progress value="30" max="100">30 %</progress>
+<progress max="100">Indéterminé</progress>
+```
+
+### CSS
+
+```css
+::-moz-progress-bar {
+  background-color: red;
+}
+
+/* Force la barre indéterminée à avoir une largeur de zéro */
+:indeterminate::-moz-progress-bar {
+  width: 0;
+}
 ```
 
 ### Résultat
@@ -33,12 +47,15 @@ Le pseudo-élément **`::-moz-progress-bar`** s'appliquant à la zone d'élémen
 
 ## Spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+Ce pseudo-élément ne fait partie d'aucun standard.
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
 - {{HTMLElement("progress")}}
-- {{cssxref("::-ms-fill")}}
-- {{cssxref("::-webkit-progress-bar")}}
-- {{cssxref("::-webkit-progress-value")}}
-- {{cssxref("::-webkit-progress-inner-element")}}
+- {{ cssxref("::-webkit-progress-bar") }}
+- {{ cssxref("::-webkit-progress-value") }}
+- {{ cssxref("::-webkit-progress-inner-element") }}

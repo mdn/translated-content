@@ -1,85 +1,81 @@
 ---
 title: IDBRequest.transaction
 slug: Web/API/IDBRequest/transaction
+l10n:
+  sourceCommit: 56de3bc3b3304ecc18775a1d0049ae4415c7cf51
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-La propriété **`transaction`** de l'interface IDBRequest renvoie la {{domxref("IDBTransaction","transaction")}} dans laquelle on fait la requête.La propriètè peut renvoiyer `null` si requête se fait sans transaction, comme un objet IDBRequest renvoyé par {{domxref("IDBFactory.open")}} dans ce cas on est juste connecté à la base de données.
+La propriété **`transaction`** en lecture seule de l'interface IDBRequest renvoie la transaction pour la requête, c'est-à-dire la transaction dans laquelle la requête est effectuée.
 
-> [!NOTE]
-> Durant la gestion d'un événement {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} qui met à jour la version de la base de données, la propriété **`transaction`** doit être une {{domxref("IDBTransaction","transaction")}} ouverte en {{domxref("IDBTransaction.mode", "mode")}} `"versionchange"`, on peut alors accéder aux {{domxref("IDBObjectStore","magasins d'objets")}} et {{domxref("IDBIndex","index")}} ou annulé la mise à niveau. Après quoi, la propriété **`transaction`** renverra encore `null`.
-
-{{AvailableInWorkers}}
-
-## Syntaxe
-
-```js
-var myTransaction = request.transaction;
-```
+Cette propriété peut être `null` pour les requêtes non effectuées dans des transactions, comme pour les requêtes renvoyées par {{domxref("IDBFactory.open")}} — dans ce cas, vous vous connectez simplement à une base de données, donc il n'y a pas de transaction à renvoyer. Si une mise à niveau de version est nécessaire lors de l'ouverture d'une base de données, alors pendant le gestionnaire d'événements {{domxref("IDBOpenDBRequest.upgradeneeded_event", "upgradeneeded")}}, la propriété **`transaction`** sera une {{domxref("IDBTransaction")}} avec {{domxref("IDBTransaction.mode", "mode")}} égal à `"versionchange"`, et peut être utilisée pour accéder aux magasins d'objets et index existants, ou annuler la mise à niveau. Après la mise à niveau, la propriété **`transaction`** sera à nouveau `null`.
 
 ### Valeur
 
-Une {{domxref("IDBTransaction","transaction")}}.
+Une {{domxref("IDBTransaction")}}.
 
 ## Exemple
 
-L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient l'enregistrement associé du {{domxref("IDBObjectStore","magasin d'objects")}} (mis à disposition en tant que `objectStoreTitleRequest.result`), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objects. La {{domxref("IDBTransaction","transaction")}} à l'origine de la deuxième {{domxref("IBBRequest","requête")}} est affichée sur la console du développeur (Ps, les deux requêtes proviennent de la même transaction). En bas est une fonction onerror qui affiche le code d'erreur si la requête échoue. Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient l'enregistrement associé du {{domxref("IDBObjectStore","magasin d'objects")}} (mis à disposition en tant que `objectStoreTitleRequest.result`), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objects. La transaction à l'origine de la deuxième requête est affichée sur la console du développeur (Ps, les deux requêtes proviennent de la même transaction). En bas est une fonction onerror qui affiche le code d'erreur si la requête échoue. Pour un exemple de travail complet, voir notre application [Notifications des tâches à faire <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
-var title = "Walk dog";
+const title = "Chien de garde";
 
 // Ouvrez une transaction comme d'habitude
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["listeDeTaches"], "readwrite")
+  .objectStore("listeDeTaches");
 
-// Obtenez l'objet toDoList qui a ce titre
-var objectStoreTitleRequest = objectStore.get(title);
+// Obtenez l'objet "listeDeTaches" qui a ce titre
+const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = () => {
   // Prenez l'objet de données renvoyé comme résultat
-  var data = objectStoreTitleRequest.result;
+  const data = objectStoreTitleRequest.result;
 
-  // Mettre à jour la valeur notified de l'objet à "yes"
-  data.notified = "yes";
+  // Mettre à jour la valeur notified de l'objet à "oui"
+  data.notified = "oui";
 
   // Créer une autre requête qui insère le nouvelle élément dans la base de données
-  var updateTitleRequest = objectStore.put(data);
+  const updateTitleRequest = objectStore.put(data);
 
   // Affiche la transaction à l'origine de la deuxième requête
-  console.log(" la transaction à l'origine de ces requêtes est " + updateTitleRequest.transaction);
+  console.log(
+    " la transaction à l'origine de ces requêtes est " +
+      updateTitleRequest.transaction,
+  );
 
-  // Lorsque cette requête réussit, appelle de la fonction displayData() pour mettre à jour l'affichage
-  updateTitleRequest.onsuccess = function() {
+  // Lorsque cette requête réussit, appelle de la fonction displayData() pour
+  // mettre à jour l'affichage
+  updateTitleRequest.onsuccess = () => {
     displayData();
   };
-
-objectStoreTitleRequest.onerror = function() {
-  // Si une erreur pendant la requête, on l'affiche
-  console.log("Il y a eu une erreur dans la récupération des données: " + objectStoreTitleRequest.error);
 };
 ```
 
-Cet exemple montre comment la propriété **`transaction`** peut être utilisé pendant une mise à niveau de version pour accéder à des {{domxref("IDBObjectStore","magasins d'objects")}} existants:
+Cet exemple montre comment la propriété **`transaction`** peut être utilisé pendant une mise à niveau de version pour accéder à des {{domxref("IDBObjectStore","magasins d'objects")}} existants&nbsp;:
 
 ```js
-var openRequest = indexedDB.open("db", 2);
+const openRequest = indexedDB.open("db", 2);
 console.log(openRequest.transaction); // Affiche "null".
 
-openRequest.onupgradeneeded = function (event) {
+openRequest.onupgradeneeded = (event) => {
   console.log(openRequest.transaction.mode); // Affiche "versionchange".
-  var db = openRequest.result;
+  const db = openRequest.result;
   if (event.oldVersion < 1) {
     // Nouvelle base de données, créer un magasin d'objets "livres".
-    db.createObjectStore("books");
+    db.createObjectStore("livres");
   }
   if (event.oldVersion < 2) {
-    // Mise à niveau de la base de données v1: ajoute un index sur "title" pour stocker les livres.
-    var bookStore = openRequest.transaction.objectStore("books");
-    bookStore.createIndex("by_title", "title");
+    // Mise à niveau de la base de données v1: ajoute un index sur "titre"
+    // pour stocker les livres.
+    const bookStore = openRequest.transaction.objectStore("livres");
+    bookStore.createIndex("par_titre", "titre");
   }
 };
 
-openRequest.onsuccess = function () {
+openRequest.onsuccess = () => {
   console.log(openRequest.transaction); // Affiche "null".
 };
 ```
@@ -94,10 +90,10 @@ openRequest.onsuccess = function () {
 
 ## Voir aussi
 
-- [Using IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Démarrer des transactions&nbsp;: {{domxref("IDBDatabase")}}
+- Utiliser des transactions&nbsp;: {{domxref("IDBTransaction")}}
+- Définir une plage de clés&nbsp;: {{domxref("IDBKeyRange")}}
+- Récupérer et modifier vos données&nbsp;: {{domxref("IDBObjectStore")}}
+- Utiliser des curseurs&nbsp;: {{domxref("IDBCursor")}}
+- Exemple de référence&nbsp;: [Notifications des tâches à faire <sup>(angl.)</sup>](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([Voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/)).

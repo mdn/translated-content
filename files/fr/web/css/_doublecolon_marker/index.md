@@ -1,57 +1,80 @@
 ---
 title: ::marker
 slug: Web/CSS/::marker
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::marker`** représente le marqueur d'un élément d'une liste à puces ou numérotée. Il fonctionne sur tout élément ou pseudo-élément défini avec [`display: list-item`](/fr/docs/Web/CSS/display), tel que les éléments {{htmlelement("li")}} et {{htmlelement("summary")}}.
 
-Le pseudo-élément **`::marker`** représente le marqueur d'un élément d'une liste (par exemple la puce ou le numéro de l'élément d'un élément {{HTMLElement("li")}}). Ce pseudo-élément ne fonctionne que pour les éléments ou pseudo-éléments pour lesquels {{cssxref("display")}} vaut `list-item` (par défaut c'est le cas des éléments {{htmlelement("li")}} et {{htmlelement("summary")}}).
+{{InteractiveExample("Démonstration CSS&nbsp;: ::marker", "tabbed-shorter")}}
 
-```css
-::marker {
-  color: red;
-  font-size: 1.5em;
+```css interactive-example
+li::marker {
+  content: "✝ ";
+  font-size: 1.2em;
 }
+```
+
+```html interactive-example
+<p>Groupe connu sous le nom de «&nbsp;Mercury Seven&nbsp;»&nbsp;:</p>
+<ul>
+  <li>Malcolm Scott Carpenter</li>
+  <li>Leroy Gordon (Gordo) Cooper Jr.</li>
+  <li>John Herschel Glenn Jr.</li>
+  <li>Virgil Ivan (Gus) Grissom</li>
+  <li>Walter Marty (Wally) Schirra Jr.</li>
+  <li>Alan Bartlett Shepard Jr.</li>
+  <li>Donald Kent (Deke) Slayton</li>
+</ul>
 ```
 
 ## Propriétés autorisées
 
-Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règle qui utilise `::marker` :
+Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règle qui utilise `::marker`&nbsp;:
 
-- {{cssxref("color")}},
-- {{cssxref("text-combine-upright")}}, {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}
-- {{cssxref("content")}}
-- [Toutes les propriétés liées aux polices (font).](/fr/docs/Web/CSS/CSS_fonts)
+- Toutes les [propriétés de police](/fr/docs/Web/CSS/CSS_fonts)
+- La propriété {{CSSxRef("white-space")}}
+- {{CSSxRef("color")}}
+- Les propriétés {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} et {{CSSxRef("direction")}}
+- La propriété {{CSSxRef("content")}}
+- Toutes les propriétés d'[animation](/fr/docs/Web/CSS/CSS_animations#propriétés_css) et de [transition](/fr/docs/Web/CSS/CSS_transitions#propriétés_css)
 
 > [!NOTE]
 > La spécification indique que d'autres propriétés CSS pourraient être prises en charge à l'avenir.
 
 ## Syntaxe
 
-{{CSSSyntax}}
-
-## Exemples
-
-### CSS
-
 ```css
-li::marker {
-  color: red;
+::marker {
+  /* ... */
 }
 ```
+
+## Exemples
 
 ### HTML
 
 ```html
-<ol>
-  <li>Savoir lacer ses chaussures</li>
-  <li>Et compter deux par deux.</li>
-</ol>
+<ul>
+  <li>Pêches</li>
+  <li>Pommes</li>
+  <li>Prunes</li>
+</ul>
+```
+
+### CSS
+
+```css
+ul li::marker {
+  color: red;
+  font-size: 1.5em;
+}
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","200","150")}}
+{{EmbedLiveSample('exemples')}}
 
 ## Spécifications
 
@@ -63,9 +86,10 @@ li::marker {
 
 ## Voir aussi
 
-- Les éléments HTML relatifs aux listes :
-  - {{htmlelement("ul")}}
+- Les éléments HTML comportant un marqueur par défaut&nbsp;:
   - {{htmlelement("ol")}}
   - {{htmlelement("li")}}
-
-- {{htmlelement("summary")}}
+  - {{htmlelement("summary")}}
+- Le module [Contenu généré par CSS](/fr/docs/Web/CSS/CSS_generated_content)
+- Le module [Listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
+- Le module [Styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)

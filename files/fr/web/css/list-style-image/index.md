@@ -166,7 +166,9 @@ ul {
 
 ## Voir aussi
 
-- [`list-style`](/fr/docs/Web/CSS/list-style)
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
-- La fonction [`url()`](/fr/docs/Web/CSS/url_value)
+- {{Cssxref("list-style")}} shorthand
+- {{Cssxref("list-style-type")}} property
+- {{Cssxref("list-style-position")}} property
+- {{cssxref("::marker")}} pseudo-element
+- Le module des [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
+- Le module des [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)

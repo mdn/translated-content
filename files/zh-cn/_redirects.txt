@@ -2488,7 +2488,8 @@
 /zh-CN/docs/Web/CSS/At-rule	/zh-CN/docs/Web/CSS/CSS_syntax/At-rule
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/CSS/CSS3中的关键帧	/zh-CN/docs/Web/CSS/@keyframes
-/zh-CN/docs/Web/CSS/CSSOM_View/坐标系	/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems
+/zh-CN/docs/Web/CSS/CSSOM_View/坐标系	/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems
+/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems	/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator

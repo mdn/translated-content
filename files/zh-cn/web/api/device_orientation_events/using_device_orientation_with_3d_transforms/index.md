@@ -13,7 +13,7 @@ l10n:
 
 [方向数据](/zh-CN/docs/Web/API/Window/deviceorientation_event)转换为[三维变换](/zh-CN/docs/Web/CSS/transform)的最简单的方式是是使用 `alpha`、`gamma` 和 `beta` 值作为 `rotateZ`、`rotateX` 和 `rotateY` 值。
 
-不过。必须牢记，设备[方向坐标系](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)与 [CSS 坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)不同。前者是[右手定则](https://zh.wikipedia.org/wiki/右手定則)，Y 轴向上为正，而后者是左手定则，Y 轴向下为正。此外，设备方向角旋转应始终按照 Z—X'—Y'' 的顺序进行，这与 [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)的顺序不一致。以下是这些差异带来的一些实际后果：
+不过。必须牢记，设备[方向坐标系](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)与 [CSS 坐标系](/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems)不同。前者是[右手定则](https://zh.wikipedia.org/wiki/右手定則)，Y 轴向上为正，而后者是左手定则，Y 轴向下为正。此外，设备方向角旋转应始终按照 Z—X'—Y'' 的顺序进行，这与 [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)的顺序不一致。以下是这些差异带来的一些实际后果：
 
 - 角度旋转的顺序很重要，因此要确保 alpha、beta 和 gamma 旋转依次进行。
 - CSS 变换的 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d) 以及 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 和 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 函数按照 Z—Y'—X'' 的顺序应用角度旋转，因此不可能通过一次调用就以正确的顺序应用阿尔法、贝塔和伽马旋转。相反，你应该按照正确的顺序单独旋转每个轴。
