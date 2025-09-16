@@ -11,7 +11,7 @@ La propiedad de solo lectura **`subgroupMaxSize`** de la interfaz {{domxref("GPU
 
 ## Valor
 
-Una cadena de texto.
+Un número.
 
 ## Ejemplos
 
