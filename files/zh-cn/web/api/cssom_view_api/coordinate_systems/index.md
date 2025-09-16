@@ -1,7 +1,6 @@
 ---
 title: 坐标系
 slug: Web/API/CSSOM_view_API/Coordinate_systems
-original_slug: Web/CSS/CSSOM_view/Coordinate_systems
 l10n:
   sourceCommit: 91cc9e7f8ae21665b40ad4c3fa5152cebad119ce
 ---
