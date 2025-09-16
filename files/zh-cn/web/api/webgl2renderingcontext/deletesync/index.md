@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-**`WebGL2RenderingContext.deleteSync()`** 方法属于 [WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API)，用于删除指定的 {{domxref("WebGLSync")}} 对象。
+[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.deleteSync()`** 方法用于删除指定的 {{domxref("WebGLSync")}} 对象。
 
 ## 语法
 
