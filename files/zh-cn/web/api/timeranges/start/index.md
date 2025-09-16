@@ -44,7 +44,7 @@ const numRanges = buf.length;
 if (buf.length === 1) {
   // 只有一个时间范围
   if (buf.start(0) === 0 && buf.end(0) === v.duration) {
-    // 这个时间范围从视频开始到视频结束，因此整个视频都已被加载。
+    // 这个时间范围覆盖了视频开始到视频结束，因此可知整个视频已加载完成。
   }
 }
 ```
