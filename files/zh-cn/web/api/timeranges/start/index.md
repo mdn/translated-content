@@ -1,5 +1,6 @@
 ---
 title: TimeRanges：start() 方法
+shortTitle: start()
 slug: Web/API/TimeRanges/start
 l10n:
   sourceCommit: c1cb822be8f98ffb74da278fa1a01dc27d3a57b9
