@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-ContactAddress 接口的只读属性 **`recipient`** 返回包含地址上的收件人、购买者或联系人的姓名的字符串。
+{{domxref("ContactAddress")}} 接口的只读属性 **`recipient`** 返回包含地址上的收件人、购买者或联系人的姓名的字符串。
 
 ## 值
 
