@@ -34,7 +34,7 @@ l10n:
 
 > [!NOTE]
 > 本系列教程可以用作游戏开发工作室的素材资源。如果你想探讨普通的游戏开发，你可以利用[Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit)以及本教程的内容。
-> 
+>
 > 如果你对使用第三方游戏资源库开发 2d 网页游戏感兴趣，可以参考本系列教程的 [2D breakout game using Phaser](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser).
 
 ## 下一步
