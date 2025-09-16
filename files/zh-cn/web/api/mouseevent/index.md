@@ -20,7 +20,7 @@ slug: Web/API/MouseEvent
 
 ## 静态属性
 
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN_static", "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}} 
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN_static", "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : 正常点击所需的最小力量。
 - {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static", "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
   - : “用力点按”所需的最小力量。
@@ -101,7 +101,6 @@ _这个接口也从父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继
 ```
 
 ### JavaScript
-
 
 ```js
 function simulateClick() {
