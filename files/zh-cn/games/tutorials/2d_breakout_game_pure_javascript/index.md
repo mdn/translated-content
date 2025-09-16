@@ -1,9 +1,11 @@
 ---
 title: 2D breakout game using pure JavaScript
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
+l10n:
+  sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
 
-{{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 在这里我们将完全使用 JavaScript 语言基于 HTML5 的 canvas 标签，一步一步的绘制一个简单的 MDN 消除游戏。
 
@@ -31,13 +33,12 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 对于实现一个网页游戏而言，最好的方式是从纯 JavaScirpt 着手，那样可以让我们建立更坚实的基础。之后你可以在你的项目中选择你喜欢的框架。框架也只是用 JavaScript 语言实现的工具；如果你想要在项目中使用框架，你必须先了解语言本身。框架可以帮你提高开发效率并生成一些基础的内容；但是如果没有达到你的预期，你只能慢慢调试或者使用原生 JavaScript 去实现解决方案。
 
 > [!NOTE]
-> 如果你对使用第三方游戏资源库开发 2d 网页游戏感兴趣，可以参考本系列教程的 [2D breakout game using Phaser](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser).
-
-> [!NOTE]
 > 本系列教程可以用作游戏开发工作室的素材资源。如果你想探讨普通的游戏开发，你可以利用[Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit)以及本教程的内容。
+> 
+> 如果你对使用第三方游戏资源库开发 2d 网页游戏感兴趣，可以参考本系列教程的 [2D breakout game using Phaser](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser).
 
 ## 下一步
 
 好，让我们开始吧。第一步 — [创建、绘制画布](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
 
-{{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
