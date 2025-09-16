@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-{{domxref("AuthenticatorAttestationResponse")}} 接口的 **`getPublicKey()`** 方法返回一个其中包含新凭据的 DER `SubjectPublicKeyInfo`（参见 [Subject Public Key Info](https://www.rfc-editor.org/rfc/rfc5280#section-4.1.2.7)）的 {{jsxref("ArrayBuffer")}}。当不可用时将返回 `null`。
+{{domxref("AuthenticatorAttestationResponse")}} 接口的 **`getPublicKey()`** 方法返回一个其中包含新凭据的 DER `SubjectPublicKeyInfo`（参见[主体公钥信息](https://www.rfc-editor.org/rfc/rfc5280#section-4.1.2.7)）的 {{jsxref("ArrayBuffer")}}。当不可用时将返回 `null`。
 
 这是一个用于方便地访问公钥的便捷函数。此密钥需要存储起来，以便验证将来的身份验证操作（例如使用 {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}）。
 
@@ -24,7 +24,7 @@ getPublicKey()
 
 ## 返回值
 
-包含新凭据的 DER `SubjectPublicKeyInfo`（参见 [Subject Public Key Info](https://www.rfc-editor.org/rfc/rfc5280#section-4.1.2.7)）的 {{jsxref("ArrayBuffer")}}。当不可用时返回 `null`。
+包含新凭据的 DER `SubjectPublicKeyInfo`（参见[主体公钥信息](https://www.rfc-editor.org/rfc/rfc5280#section-4.1.2.7)）的 {{jsxref("ArrayBuffer")}}，当不可用时返回 `null`。
 
 ## 示例
 
