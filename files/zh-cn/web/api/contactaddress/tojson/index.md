@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-ContactAddress 接口的 **`toJSON()`** 方法是一个标准序列化器，它返回 `ContactAddress` 对象属性的 JSON 表示。
+{{domxref("ContactAddress")}} 接口的 **`toJSON()`** 方法是一个标准序列化器，它返回 `ContactAddress` 对象属性的 JSON 表示。
 
 ## 语法
 
