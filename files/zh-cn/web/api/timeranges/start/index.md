@@ -42,7 +42,7 @@ const buf = v.buffered;
 const numRanges = buf.length;
 
 if (buf.length === 1) {
-  // 仅一个范围
+  // 只有一个时间范围
   if (buf.start(0) === 0 && buf.end(0) === v.duration) {
     // 这个时间范围从视频开始到视频结束，因此整个视频都已被加载。
   }
