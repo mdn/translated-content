@@ -7794,6 +7794,12 @@
       "Anonymous"
     ]
   },
+  "Web/API/CSSOM_view_API/Coordinate_systems": {
+    "modified": "2019-03-18T21:28:19.895Z",
+    "contributors": [
+      "1Cr18Ni9"
+    ]
+  },
   "Web/API/CSSPageRule": {
     "modified": "2020-10-15T22:24:48.715Z",
     "contributors": [
@@ -23417,12 +23423,6 @@
     "modified": "2019-03-23T22:13:17.107Z",
     "contributors": [
       "Pada"
-    ]
-  },
-  "Web/CSS/CSSOM_view/Coordinate_systems": {
-    "modified": "2019-03-18T21:28:19.895Z",
-    "contributors": [
-      "1Cr18Ni9"
     ]
   },
   "Web/CSS/CSSOM_view/Viewport_concepts": {
