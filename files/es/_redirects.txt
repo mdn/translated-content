@@ -1113,7 +1113,7 @@
 /es/docs/Learn/CSS/Building_blocks/Dimensionar_elementos_en_CSS	/es/docs/Learn_web_development/Core/Styling_basics/Sizing
 /es/docs/Learn/CSS/Building_blocks/El_modelo_de_caja	/es/docs/Learn_web_development/Core/Styling_basics/Box_model
 /es/docs/Learn/CSS/Building_blocks/Fondos_y_bordes	/es/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
-/es/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/es/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/es/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension	/es/docs/conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9
 /es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions	/es/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 /es/docs/Learn/CSS/Building_blocks/Images_media_form_elements	/es/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
 /es/docs/Learn/CSS/Building_blocks/Imágenes_medios_y_elementos_de_formulario	/es/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
@@ -1166,7 +1166,7 @@
 /es/docs/Learn/CSS/Introduction_to_CSS/Combinaciones_y_selectores_multiples	/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators
 /es/docs/Learn/CSS/Introduction_to_CSS/Como_funciona_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /es/docs/Learn/CSS/Introduction_to_CSS/Depuración_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS
-/es/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/es/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+/es/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension	/es/docs/conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9
 /es/docs/Learn/CSS/Introduction_to_CSS/Modelo_cajas	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
 /es/docs/Learn/CSS/Introduction_to_CSS/Pseudo-clases_y_pseudo-elementos	/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /es/docs/Learn/CSS/Introduction_to_CSS/Selectores	/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
@@ -1406,6 +1406,8 @@
 /es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 /es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 /es/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/es/docs/conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3
+/es/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper	/es/docs/conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3
+/es/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension	/es/docs/conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9
 /es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
 /es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms
 /es/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
