@@ -157,11 +157,11 @@ Les unités flexibles sont représentées par le type {{cssxref("&lt;flex&gt;")}
 
 Les unités de résolution sont représentées par le type {{cssxref("&lt;resolution&gt;")}}. Elles représentent la taille d'un seul point dans une représentation graphique, comme un écran, en indiquant combien de ces points tiennent dans un pouce, un centimètre ou un pixel CSS. Elle accepte les valeurs suivantes&nbsp;:
 
-| Unité       | Description             |
-| ----------- | ----------------------- |
-| `dpcm`      | Points par centimètre.  |
-| `dpi`       | Points par pouce.       |
-| `dppx`, `x` | Points par unité px.    |
+| Unité       | Description            |
+| ----------- | ---------------------- |
+| `dpcm`      | Points par centimètre. |
+| `dpi`       | Points par pouce.      |
+| `dppx`, `x` | Points par unité px.   |
 
 ### Pourcentages
 
