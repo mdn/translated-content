@@ -10461,6 +10461,12 @@
       "tristantheb"
     ]
   },
+  "Web/API/CSSOM_view_API/Coordinate_systems": {
+    "modified": "2019-04-06T13:17:41.411Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
   "Web/API/CSSRuleList": {
     "modified": "2019-03-23T23:28:18.630Z",
     "contributors": [
@@ -21672,12 +21678,6 @@
   },
   "Web/CSS/CSSOM_view": {
     "modified": "2020-10-15T21:47:55.001Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSSOM_view/Coordinate_systems": {
-    "modified": "2019-04-06T13:17:41.411Z",
     "contributors": [
       "SphinxKnight"
     ]

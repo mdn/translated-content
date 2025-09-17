@@ -4603,7 +4603,7 @@
 /fr/docs/Web/CSS/At-rule	/fr/docs/Web/CSS/CSS_syntax/At-rule
 /fr/docs/Web/CSS/Aural	/fr/docs/conflicting/Web/CSS/@media
 /fr/docs/Web/CSS/Block_formatting_context	/fr/docs/Web/CSS/CSS_display/Block_formatting_context
-/fr/docs/Web/CSS/CSSOM_View/Systèmes_de_coordonnées	/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems
+/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems	/fr/docs/Web/API/CSSOM_view_API/Coordinate_systems
 /fr/docs/Web/CSS/CSS_:_la_propriété_animation-iteration-count	/fr/docs/Web/CSS/animation-iteration-count
 /fr/docs/Web/CSS/CSS_:_la_propriété_animation-name	/fr/docs/Web/CSS/animation-name
 /fr/docs/Web/CSS/CSS_:_la_propriété_animation-play-state	/fr/docs/Web/CSS/animation-play-state
