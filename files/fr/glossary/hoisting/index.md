@@ -44,7 +44,7 @@ Pour plus d'informations à ce sujet, voir&nbsp;:
 
 - La remontée pour `var`/`let`/`const` dans [le guide sur la grammaire et les types en JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#remontée_de_variables_hoisting)
 - La remontée pour `function` dans [le guide sur les fonctions](/fr/docs/Web/JavaScript/Guide/Functions#remontée_des_fonctions)
-- La remontée pour `class` dans [le guide sur les classes](/fr/docs/Web/JavaScript/Guide/Using_Classes#remontée_des_déclarations_de_classe)
+- La remontée pour `class` dans [le guide sur les classes](/fr/docs/Web/JavaScript/Guide/Using_classes#remontée_des_déclarations_de_classe)
 
 ## Voir aussi
 

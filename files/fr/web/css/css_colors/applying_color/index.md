@@ -416,7 +416,7 @@ Une fois la couleur de base sélectionnée et identifiée, il existe de nombreux
 
 Voici quelques exemples (libres d'accès et gratuits au moment où nous écrivons ces lignes) de tels outils :
 
-- [Le sélecteur de couleur MDN](/fr/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Le sélecteur de couleur MDN](/fr/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Paletton](http://paletton.com) (en anglais)
 - [La roue des couleurs en ligne d'Adobe Color CC](https://color.adobe.com/fr/create/color-wheel)
 
@@ -496,4 +496,4 @@ Par défaut, la propriété `color-adjust` vaut `economy` et indique au navigate
 
 - [Dessiner des graphiques](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [Le graphisme sur le Web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [Un outil de sélection de couleur sur MDN](/fr/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Un outil de sélection de couleur sur MDN](/fr/docs/Web/CSS/CSS_colors/Color_picker_tool)
