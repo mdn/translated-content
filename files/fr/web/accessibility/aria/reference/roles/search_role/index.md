@@ -72,7 +72,10 @@ Si un rôle de point de repère `search` dans un document est répété dans un 
 …
 
 <footer>
-  <form id="site-search-bottom" role="search" aria-label="Sur l'ensemble du site">
+  <form
+    id="site-search-bottom"
+    role="search"
+    aria-label="Sur l'ensemble du site">
     <!-- champ de recherche -->
   </form>
 </footer>
