@@ -45,7 +45,7 @@ Un pseudo-élément peut être sélectionné en fonction de l'état actuel de l'
     Cela peut être utilisé pour [mettre en forme les sous-titres et autres répliques](/fr/docs/Web/API/WebVTT_API#mettre_en_forme_les_sous-titres_webvtt) dans les médias avec des pistes VTT.
     Le module [CSS pseudo-éléments](/fr/docs/Web/CSS/CSS_pseudo-elements) définit également les sous-pseudo-éléments `::postfix` et `::prefix`. Ceux-ci ne sont pas encore pris en charge par aucun navigateur.
 
-## Les pseudo-éléments de surlignage
+## Les pseudo-éléments de mise en évidence
 
 Sélectionne des sections de document en fonction du contenu et de l'état du document, permettant à ces zones d'être mises en forme différemment pour indiquer cet état à l'utilisateur·ice.
 
@@ -58,7 +58,7 @@ Sélectionne des sections de document en fonction du contenu et de l'état du do
 - {{CSSxRef("::grammar-error")}}
   - : Une portion de texte que le navigateur pense être grammaticalement incorrecte.
 - {{CSSxRef("::highlight()")}}
-  - : Les éléments dans le [registre de surlignage](/fr/docs/Web/API/CSS/highlights_static). Il est utilisé pour créer des surlignages personnalisés.
+  - : Les éléments dans le [registre de mise en évidence](/fr/docs/Web/API/CSS/highlights_static). Il est utilisé pour créer des surlignages personnalisés.
 
 ## Les pseudo-éléments conformes à l'arborescence
 
@@ -187,16 +187,16 @@ Vous pouvez chaîner certains sélecteurs de pseudo-éléments pour mettre en fo
 
 Consultez les pages de référence des pseudo-éléments individuels pour des exemples et des informations sur la compatibilité des navigateurs.
 
-## Héritage des pseudo-éléments de surlignage
+## Héritage des pseudo-éléments de mise en évidence
 
-[Les pseudo-éléments de surlignage](#les_pseudo-éléments_de_surlignage), tels que {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, et {{CSSxref("::grammar-error")}}, suivent un modèle d'héritage cohérent qui diffère de [l'héritage des éléments réguliers](/fr/docs/Web/CSS/CSS_cascade/Inheritance).
+[Les pseudo-éléments de mise en évidence](#les_pseudo-éléments_de_mise_en_évidence), tels que {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, et {{CSSxref("::grammar-error")}}, suivent un modèle d'héritage cohérent qui diffère de [l'héritage des éléments réguliers](/fr/docs/Web/CSS/CSS_cascade/Inheritance).
 
-Lorsque vous appliquez des styles aux pseudo-éléments de surlignage, ils héritent à la fois de&nbsp;:
+Lorsque vous appliquez des styles aux pseudo-éléments de mise en évidence, ils héritent à la fois de&nbsp;:
 
 1. Leurs éléments parents (suivant l'héritage normal).
-2. Les pseudo-éléments de surlignage de leurs éléments parents (suivant l'héritage des surlignages).
+2. Les pseudo-éléments de mise en évidence de leurs éléments parents (suivant l'héritage des surlignages).
 
-Cela signifie que si vous mettez en forme à la fois le pseudo-élément de surlignage d'un élément parent et le pseudo-élément de surlignage d'un élément enfant, le texte surligné de l'enfant combinera les propriétés des deux sources.
+Cela signifie que si vous mettez en forme à la fois le pseudo-élément de mise en évidence d'un élément parent et le pseudo-élément de mise en évidence d'un élément enfant, le texte surligné de l'enfant combinera les propriétés des deux sources.
 
 Voici un exemple concret.
 
@@ -245,9 +245,9 @@ Essayez de sélectionner le texte dans les éléments parent et enfant. Remarque
    - Le fond orange de `.child::selection`.
    - La couleur de texte rouge héritée du pseudo-élément `::selection` du parent.
 
-Cela démontre comment le pseudo-élément de surlignage de l'enfant hérite à la fois de son élément parent et du pseudo-élément de surlignage du parent.
+Cela démontre comment le pseudo-élément mise en évidence de l'enfant hérite à la fois de son élément parent et du pseudo-élément mise en évidence du parent.
 
-[Les propriétés CSS personnalisées (variables)](/fr/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) dans les pseudo-éléments de surlignage héritent de leur élément d'origine (l'élément auquel elles sont appliquées), et non par le biais de la chaîne d'héritage des surlignages. Par exemple&nbsp;:
+[Les propriétés CSS personnalisées (variables)](/fr/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) dans les pseudo-éléments mise en évidence héritent de leur élément d'origine (l'élément auquel elles sont appliquées), et non par le biais de la chaîne d'héritage des surlignages. Par exemple&nbsp;:
 
 ```css
 :root {
@@ -263,7 +263,7 @@ Cela démontre comment le pseudo-élément de surlignage de l'enfant hérite à 
 }
 ```
 
-Lorsque vous utilisez le sélecteur universel avec des pseudo-éléments de surlignage, cela empêche l'héritage des surlignages. Par exemple&nbsp;:
+Lorsque vous utilisez le sélecteur universel avec des pseudo-éléments mise en évidence, cela empêche l'héritage des surlignages. Par exemple&nbsp;:
 
 ```css
 /* Cela empêche l'héritage des surlignages */
@@ -287,4 +287,4 @@ Lorsque vous utilisez le sélecteur universel avec des pseudo-éléments de surl
 - Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
 - Le module des [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
 - [Apprendre&nbsp;: Pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
-- [Changements d'héritage pour le style de sélection CSS <sup>(angl.)</sup>](https://developer.chrome.com/blog/selection-styling) — Explication détaillée des changements du modèle d'héritage des pseudo-éléments de surlignage dans Chrome 134
+- [Changements d'héritage pour le style de sélection CSS <sup>(angl.)</sup>](https://developer.chrome.com/blog/selection-styling) — Explication détaillée des changements du modèle d'héritage des pseudo-éléments mise en évidence dans Chrome 134

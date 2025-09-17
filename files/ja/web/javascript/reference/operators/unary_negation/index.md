@@ -31,7 +31,7 @@ console.log(b);
 
 ## 解説
 
-`-` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。最初の[オペランドを数値に型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)を行い、その型を検査します。オペランドが長整数になった場合は長整数の否定を実行し、そうでない場合は数値の否定を実行します。
+`-` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。最初の[オペランドを数値に型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)を行い、その型を検査します。オペランドが長整数になった場合は長整数の符号反転を実行し、そうでない場合は数値の符号反転を実行します。
 
 ## 例
 

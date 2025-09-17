@@ -3,16 +3,17 @@ title: "IntersectionObserverEntry: time プロパティ"
 short-title: time
 slug: Web/API/IntersectionObserverEntry/time
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`time`** プロパティは、 {{domxref("DOMHighResTimeStamp")}} で、文書の作成時刻を基準とする交差状態が発生した時刻を示します。
+**`time`** は {{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用プロパティで、 {{domxref("DOMHighResTimeStamp")}} であり、文書の作成時刻を基準とする交差状態が発生した時刻を示します。
 
 ## 値
 
-{{domxref("DOMHighResTimeStamp")}} で、 {{domxref("IntersectionObserverEntry.target", "target")}} 要素がこの `IntersectionObserverEntry` で示す交差状態の変化を検出した時刻を表します。時刻はそれを含む文書が作成されてからのミリ秒単位で指定します。
+{{domxref("DOMHighResTimeStamp")}} で、 {{domxref("IntersectionObserverEntry.target", "target")}} 要素がこの `IntersectionObserverEntry` で示す交差状態の変化を検出した時刻を表します。
+この時刻は、それを含む文書が作成されてからのミリ秒単位で指定します。
 
 ## 例
 
