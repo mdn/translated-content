@@ -204,7 +204,7 @@ Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS 
 - {{CSSxRef("color_value/contrast-color", "contrast-color()")}}
   - : Renvoie une couleur avec un contraste maximal par rapport à une couleur donnée.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
- - : Définit les couleurs CMJN de manière dépendante du périphérique.
+  - : Définit les couleurs CMJN de manière dépendante du périphérique.
 - {{CSSxRef("color_value/light-dark", "light-dark()")}}
   - : Renvoie l'une des deux couleurs fournies en fonction du schéma de couleurs actuel.
 
