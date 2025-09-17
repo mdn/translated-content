@@ -2,7 +2,7 @@
 title: 剖析游戏结构
 slug: Games/Anatomy
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: 21addd31954b2629ab3e186dacdf7edca813dc7d
 ---
 
 本文从技术角度分析了一般电子游戏的结构和工作流程，就此介绍主循环是如何运行的。它有助于初学者了解在现代游戏开发领域构建游戏时需要什么，以及理解像 JavaScript 这样的 Web 标准是如何成为可用于开发游戏的工具的。游戏开发经验丰富但不熟悉 Web 开发的开发者也能从本文中受益。
@@ -111,7 +111,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 ## 用 JavaScript 构建一个更优化的主循环
 
-基本上，在 JavaScript 的中，浏览器有它自己的主循环，而你的代码存在于循环某些阶段。上面描述的主循环，试图避免脱离浏览器的控制。这种主循环附着于 `window.requestAnimationFrame()` 方法，该方法将在浏览器的下一帧中执行，具体取决于浏览器如何与将其自己的主循环关联起来。[W3C 的 requestAnimationFrame 规范](https://www.w3.org/TR/animation-timing/)并没有真正定义什么时候浏览器必须执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
+归根结底，在 JavaScript 中，是浏览器在运行其自身的主循环，而你的代码只是作为其部分阶段来执行。上文所述的主循环都避免了从浏览器手中夺走主线程控制权。这些方法都将自身附加到 `window.requestAnimationFrame()` 上，以此向浏览器请求对下一帧的控制权。至于如何将这些请求融入浏览器自己的主循环，则由浏览器自行决定。[HTML 规范](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#dom-animationframeprovider-requestanimationframe)并未确切定义浏览器必须在何时执行 requestAnimationFrame 回调。这有一个好处，浏览器厂商可以自由地实现他们认为最好的解决方案，并随着时间的推移进行调整。
 
 现代版的 Firefox 和 Google Chrome（可能还有其他浏览器）都尝试图在框架的时间片段的开始时*尝试*将 `requestAnimationFrame` 回调与它们的主线程进行连接。因此，浏览器的主线程*看起来*就像下面这样：
 
@@ -122,7 +122,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 你可以考虑开发实时应用程序，因为有时间做工作。所有上述步骤都必须在每 16 毫秒内进行一次，以跟上 60Hz 的显示器。浏览器会尽可能早地调用你的代码，从而给它最大的计算时间。你的主线程通常会启动一些甚至不在主线程上的工作负载（如 WebGL 的中的光栅化或着色器）。在浏览器使用其主线程管理垃圾收集，其他任务或处理异步事件时，可以在 Web Worker 或 GPU 上执行长时间的计算。
 
-当我们讨论预算时间时，许多 Web 浏览器都有一个称为*高解析度时间*的工具。{{jsxref("Date")}} 对象不再是公认的事件计时方法，因为它非常不精确，可以由系统时钟进行修改。另一方面，高解析度时间计算自 `navigationStart`（当上一个文档被卸载时）的毫秒数。这个值以小数的精度返回，精确到千分之一毫秒。它被称为 {{domxref("DOMHighResTimeStamp")}}，但是，无论出于什么意图和目的，都认为它是一个浮点数。
+当我们讨论预算时间时，许多 Web 浏览器都有一个称为*高精度时间*的工具。{{jsxref("Date")}} 对象不再是公认的事件计时方法，因为它非常不精确，可以由系统时钟进行修改。另一方面，高精度时间计算自 `navigationStart`（当上一个文档被卸载时）的毫秒数。这个值以小数的精度返回，精确到千分之一毫秒。它被称为 {{domxref("DOMHighResTimeStamp")}}，但是，无论出于什么意图和目的，都认为它是一个浮点数。
 
 > [!NOTE]
 > 系统（硬件或软件）不能达到微秒精度，则至少提供毫秒级的精度。不过，如果能够达到微秒的精度，那就应该提供这一精度。

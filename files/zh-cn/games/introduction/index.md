@@ -2,10 +2,10 @@
 title: Web 游戏开发简介
 slug: Games/Introduction
 l10n:
-  sourceCommit: e72890bafe775a38620def9a74beda8cf9c47411
+  sourceCommit: 21addd31954b2629ab3e186dacdf7edca813dc7d
 ---
 
-现代 web 已经高速发展成为一个不仅能够用来创建高质量的酷炫游戏，同时也能够用来分发这些游戏的平台。
+现代 web 已经高速发展成为一个不仅能够用来创建高质量的酷炫游戏，同时也能够用来分发这些游戏的平台。本文将向你介绍将 web 作为游戏平台的诸多优势，以及实现这一切所需的技术。
 
 它能够制作的游戏种类可以和桌面端以及原生系统相当。采用现代 web 技术和较新的浏览器，完全有可能做出令人印象深刻的顶级页面游戏。我们这里所说的，并不是很久之前就采用 Flash® 制作出的简单卡牌游戏或者多人社交游戏，而是 3D 动作射击游戏、RPG 游戏等等。得益于 [JavaScript](/zh-CN/docs/Web/JavaScript) 实时编译技术性能的大幅提升，以及新开放的 API。在制作运行在浏览器（或者是基于 [HTML5](/zh-CN/docs/Glossary/HTML5) 技术支持的设备）上的游戏时，我们不用妥协。
 
@@ -23,7 +23,7 @@ l10n:
   <tbody>
     <tr>
       <td><strong>音频</strong></td>
-      <td><a href="/zh-CN/docs/Web/API/Web_Audio_API">Web Audio API</a></td>
+      <td><a href="/zh-CN/docs/Web/API/Web_Audio_API">Web 音频 API</a></td>
     </tr>
     <tr>
       <td><strong>图形</strong></td>

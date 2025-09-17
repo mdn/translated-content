@@ -1,6 +1,6 @@
 ---
-title: 色彩选择工具
-slug: Web/CSS/CSS_colors/Color_picker_tool
+title: 色彩选择器
+slug: Web/CSS/CSS_colors/Color_picker
 ---
 
 这个工具让创建、修改和测试自定义网页颜色变得简单。它还可以轻松实现多种 [CSS](/zh-CN/docs/Web/CSS) 支持的[颜色格式](/zh-CN/docs/Web/CSS/color_value)之间的转换，包括：HEXA、RGB（红、绿、蓝）和 HSL（色相、饱和度、明度）。其中 RGB（rgba）和 HSL（hsla）格式也支持控制透明度通道（alpha channel）。
@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_colors/Color_picker_tool
 
 这个工具将帮助你找到最理想的 CSS 颜色应用到你的 [HTML](/zh-CN/docs/Web/HTML)。
 
-{{EmbedGHLiveSample("css-examples/tools/color-picker/", '100%', 900)}}
+{{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
 除非另有说明，否则你所创建生成的颜色可以应用到 CSS 和 HTML 的任何一个地方。
 

@@ -1,48 +1,55 @@
 ---
-title: TimeRanges.start()
+title: TimeRanges：start() 方法
+short-title: start()
 slug: Web/API/TimeRanges/start
+l10n:
+  sourceCommit: c1cb822be8f98ffb74da278fa1a01dc27d3a57b9
 ---
 
 {{APIRef("DOM")}}
 
-返回指定时间范围的开始偏移量。
+{{domxref("TimeRanges")}} 接口的 **`start()`** 方法会返回指定时间范围开始的时间偏移量（以秒为单位）。
 
 ## 语法
 
-```plain
-startTime = TimeRanges.start(index)
+```js-nolint
+start(index)
 ```
 
 ### 参数
 
-- `index` 想要检索的时间范围的索引值。
+- `index`
+  - : 要返回起始时间的范围编号。
+
+### 返回值
+
+一个数字。
 
 ### 异常
 
-- INDEX_SIZE_ERR
-  - : 如果不存在指定索引值的时间范围，抛出 `DOMException` 异常。
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : 如果指定的索引没有对应的时间范围，会抛出异常。
 
 ## 示例
 
-假定页面中存在一个 ID 为“myVideo”的 video 元素：
+给定一个 ID 为“myVideo”的视频元素：
 
 ```js
-var v = document.getElementById("myVideo");
+const v = document.getElementById("myVideo");
 
-var buf = v.buffered;
+const buf = v.buffered;
 
-var numRanges = buf.length;
+const numRanges = buf.length;
 
-if (buf.length == 1) {
-  // only one range
-  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
-    // The one range starts at the beginning and ends at
-    // the end of the video, so the whole thing is loaded
+if (buf.length === 1) {
+  // 只有一个时间范围
+  if (buf.start(0) === 0 && buf.end(0) === v.duration) {
+    // 这个时间范围覆盖了视频开始到视频结束，因此可知整个视频已加载完成。
   }
 }
 ```
 
-这个例子演示了如何通过 `TimeRanges` 来判断 video 是否已经完全加载。
+此示例会遍历时间范围，以检查整个视频是否已加载完成。
 
 ## 规范
 
