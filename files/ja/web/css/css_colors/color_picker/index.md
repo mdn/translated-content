@@ -1,6 +1,7 @@
 ---
 title: 色選択ツール
-slug: Web/CSS/CSS_colors/Color_picker_tool
+slug: Web/CSS/CSS_colors/Color_picker
+original_slug: Web/CSS/CSS_colors/Color_picker_tool
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

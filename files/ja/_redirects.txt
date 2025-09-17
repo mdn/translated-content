@@ -4141,6 +4141,7 @@
 /ja/docs/Web/CSS/At-rule-functions	/ja/docs/Web/CSS/CSS_syntax/At-rule_functions
 /ja/docs/Web/CSS/Background_Backup	/ja/docs/Web/CSS/background
 /ja/docs/Web/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
+/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems	/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems
 /ja/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /ja/docs/Web/CSS/CSS_Background_and_Borders	/ja/docs/Web/CSS/CSS_backgrounds_and_borders
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -4216,6 +4217,7 @@
 /ja/docs/Web/CSS/CSS_cascade/specified_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値
 /ja/docs/Web/CSS/CSS_cascade/used_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
+/ja/docs/Web/CSS/CSS_colors/Color_picker_tool	/ja/docs/Web/CSS/CSS_colors/Color_picker
 /ja/docs/Web/CSS/CSS_container_queries	/ja/docs/Web/CSS/CSS_containment/Container_queries
 /ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_flow_layout	/ja/docs/Web/CSS/CSS_display/Flow_layout
