@@ -25,15 +25,15 @@ Ces types incluent des mots-clés et des identifiants ainsi que des chaînes de 
 - Mots-clés globaux CSS
   - : Toutes les propriétés, y compris les propriétés personnalisées, acceptent les mots-clés globaux CSS&nbsp;:
     - {{CSSXref("initial")}}
-      -  La valeur spécifiée comme valeur initiale de la propriété.
+      - La valeur spécifiée comme valeur initiale de la propriété.
     - {{CSSXref("inherit")}}
-      -  La valeur calculée de la propriété sur l'élément parent.
+      - La valeur calculée de la propriété sur l'élément parent.
     - {{CSSXref("revert")}}
-      -  Rétablit la cascade à la valeur de l'origine antérieure.
+      - Rétablit la cascade à la valeur de l'origine antérieure.
     - {{CSSXref("revert-layer")}}
-      -  Rétablit la cascade à la valeur de la [couche de cascade](/fr/docs/Web/CSS/@layer) antérieure.
+      - Rétablit la cascade à la valeur de la [couche de cascade](/fr/docs/Web/CSS/@layer) antérieure.
     - {{CSSXref("unset")}}
-      -  Agit comme `inherit` ou `initial` en fonction de la propriété héritée ou non.
+      - Agit comme `inherit` ou `initial` en fonction de la propriété héritée ou non.
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Un identifiant défini par l'utilisateur·ice, par exemple le nom attribué à l'aide de la propriété {{cssxref("grid-area")}}.
 - {{cssxref("&lt;dashed-ident&gt;")}}
