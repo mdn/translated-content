@@ -138,10 +138,10 @@ Les valeurs de temps sont représentées par le type {{cssxref("&lt;time&gt;")}}
 
 Les valeurs de fréquence sont représentées par le type {{cssxref("&lt;frequency&gt;")}}. Il accepte les valeurs suivantes.
 
-| Unité | Nom       | Description                                      |
-| ----- | --------- | ------------------------------------------------ |
-| `Hz`  | Hertz     | Représente le nombre d'occurrences par seconde.  |
-| `kHz` | KiloHertz | Un kiloHertz est 1000 Hertz.                     |
+| Unité | Nom       | Description                                     |
+| ----- | --------- | ----------------------------------------------- |
+| `Hz`  | Hertz     | Représente le nombre d'occurrences par seconde. |
+| `kHz` | KiloHertz | Un kiloHertz est 1000 Hertz.                    |
 
 `1Hz`, qui peut également être écrit comme `1hz` ou `1HZ`, est un cycle par seconde.
 
