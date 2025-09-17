@@ -1,5 +1,5 @@
 ---
-title: 色彩选择
+title: 色彩选择器
 slug: Web/CSS/CSS_colors/Color_picker
 ---
 
