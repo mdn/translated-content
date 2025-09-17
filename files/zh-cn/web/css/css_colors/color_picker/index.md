@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_colors/Color_picker
 
 这个工具将帮助你找到最理想的 CSS 颜色应用到你的 [HTML](/zh-CN/docs/Web/HTML)。
 
-{{EmbedGHLiveSample("css-examples/tools/color-picker/", '100%', 900)}}
+{{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
 除非另有说明，否则你所创建生成的颜色可以应用到 CSS 和 HTML 的任何一个地方。
 
