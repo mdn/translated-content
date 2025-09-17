@@ -1,50 +1,58 @@
 ---
 title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:placeholder-shown`** représente n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder).
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder).
+{{InteractiveExample("Démonstration CSS&nbsp;: :placeholder-shown", "tabbed-shorter")}}
 
-```css
-/* Cible tout élément <input> ou <textarea> avec un */
-/* attribut placeholder actuellement affiché        */
-:placeholder-shown {
-  border: 2px solid silver;
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
 }
+
+input:placeholder-shown {
+  background-color: ivory;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Nom complet&nbsp;:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="email">Adresse e-mail&nbsp;:</label>
+  <input id="email" name="email" type="email" placeholder="name@example.com" />
+
+  <label for="age">Votre âge&nbsp;:</label>
+  <input
+    id="age"
+    name="age"
+    type="number"
+    value="18"
+    placeholder="Vous devez avoir ples de 18 ans" />
+</form>
 ```
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:placeholder-shown {
+  /* ... */
+}
+```
 
 ## Exemples
 
 ### Exemple simple
 
-#### CSS
-
-```css hidden
-input:-ms-input-placeholder {
-  border-color: silver;
-}
-
-input:-moz-placeholder {
-  border-color: silver;
-}
-```
-
-```css
-input {
-  border: 2px solid black;
-  padding: 3px;
-}
-
-:placeholder-shown {
-  border-color: silver;
-}
-```
+Cet exemple applique des styles de police et de bordure spéciaux lorsque le texte de substitution est affiché.
 
 #### HTML
 
@@ -52,9 +60,24 @@ input {
 <input placeholder="Saisir quelque chose ici" />
 ```
 
+#### CSS
+
+```css
+input {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+input:placeholder-shown {
+  border-color: teal;
+  color: purple;
+  font-style: italic;
+}
+```
+
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple", 200, 60)}}
+{{EmbedLiveSample("exemple_simple", 200, 80)}}
 
 ### Dépassement du texte
 
@@ -64,63 +87,25 @@ Sur certains écrans plus étroits (tels que ceux des smartphones), la largeur d
 
 ```html
 <input
+  id="input1"
+  placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !" />
+<br /><br />
+<input
+  id="input2"
   placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !" />
 ```
 
 #### CSS
 
-```css hidden
-input:-ms-input-placeholder {
-  text-overflow: ellipsis;
-}
-
-input:-moz-placeholder {
-  text-overflow: ellipsis;
-}
-```
-
 ```css
-input:placeholder-shown {
+#input2:placeholder-shown {
   text-overflow: ellipsis;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Dépassement_du_texte", 200, 60)}}
-
-### Texte coloré
-
-#### HTML
-
-```html
-<input placeholder="Saisir quelque chose ici" />
-```
-
-#### CSS
-
-```css hidden
-input:-ms-input-placeholder {
-  color: red;
-  font-style: italic;
-}
-
-input:-moz-placeholder {
-  color: red;
-  font-style: italic;
-}
-```
-
-```css
-input:placeholder-shown {
-  color: red;
-  font-style: italic;
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Texte_coloré")}}
+{{EmbedLiveSample("dépassement_du_texte", 200, 80)}}
 
 ### Champ de saisie personnalisé
 
@@ -129,22 +114,22 @@ input:placeholder-shown {
 ```html
 <form id="test">
   <p>
-    <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name" />
+    <label for="name">Entrer le nom d'un étudiant&nbsp;:</label>
+    <input id="name" placeholder="Nom de l'étudiant" />
   </p>
   <p>
-    <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch" />
+    <label for="branch">Entrer la filière de l'étudiant&nbsp;:</label>
+    <input id="branch" placeholder="Filière de l'étudiant" />
   </p>
   <p>
-    <label for="sid">Enter Student ID:</label>
+    <label for="sid">Entrer l'ID de l'étudiant&nbsp;:</label>
     <input
       type="number"
       pattern="[0-9]{8}"
-      title="8 digit ID"
+      title="8 chiffres"
       id="sid"
-      class="studentid"
-      placeholder="8 digit id" />
+      class="student-id"
+      placeholder="8 chiffres" />
   </p>
   <input type="submit" />
 </form>
@@ -152,27 +137,13 @@ input:placeholder-shown {
 
 #### CSS
 
-```css hidden
-input.studentid:-ms-input-placeholder {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
-}
-
-input.studentid:-moz-placeholder {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
-}
-```
-
 ```css
 input {
   background-color: #e8e8e8;
   color: black;
 }
 
-input.studentid:placeholder-shown {
+input.student-id:placeholder-shown {
   background-color: yellow;
   color: red;
   font-style: italic;
@@ -181,7 +152,7 @@ input.studentid:placeholder-shown {
 
 #### Résultat
 
-{{EmbedLiveSample("Champ_de_saisie_personnalisé", 200, 180)}}
+{{EmbedLiveSample("champ_de_saisie_personnalisé", 200, 180)}}
 
 ## Spécifications
 
@@ -193,7 +164,8 @@ input.studentid:placeholder-shown {
 
 ## Voir aussi
 
-- {{cssxref("::placeholder")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("textarea")}}
-- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- Le pseudo-élément {{cssxref("::placeholder")}} applique un style au placeholder _lui-même_.
+- Les éléments HTML associés&nbsp;:
+  - {{HTMLElement("input")}}
+  - {{HTMLElement("textarea")}}
+- [Les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)

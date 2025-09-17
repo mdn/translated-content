@@ -3,7 +3,7 @@ title: -moz-image-rect
 slug: Web/CSS/-moz-image-rect
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une image pour un arrière-plan (contrairement à [`background-image`](/fr/docs/Web/CSS/background-image)). On peut ainsi utiliser une image qui regroupe plusieurs _sprites_ à différentes fins, ce qui permet de diminuer le nombre de transfert réseau.
 
@@ -15,7 +15,7 @@ La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une im
 
 ### Valeurs
 
-- [`url()`](/fr/docs/Web/CSS/url_value)
+- {{CSSxRef("url_value", "&lt;url&gt;")}}
   - : L'URI de l'image dont on veut obtenir une portion.
 - `top`
   - : La coordonnée du bord haut de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) à partir du coin supérieur gauche.
@@ -121,7 +121,7 @@ Dans ce script, on utilise la méthode [`window.getComputedStyle()`](/fr/docs/We
 
 ## Specifications
 
-Cette propriété ne fait partie d'aucun standard.
+Cette fonction ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
