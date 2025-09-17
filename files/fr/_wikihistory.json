@@ -15767,13 +15767,6 @@
       "P45QU10U"
     ]
   },
-  "Web/API/KeyframeEffect/KeyframeEffect": {
-    "modified": "2019-03-23T22:28:20.379Z",
-    "contributors": [
-      "SphinxKnight",
-      "HereComesJuju"
-    ]
-  },
   "Web/API/Location": {
     "modified": "2020-10-15T21:27:50.600Z",
     "contributors": [
