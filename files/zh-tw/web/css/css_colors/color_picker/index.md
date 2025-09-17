@@ -1,9 +1,8 @@
 ---
-title: 顏色選擇器工具
+title: 顏色選擇器
 slug: Web/CSS/CSS_colors/Color_picker
-original_slug: Web/CSS/CSS_colors/Color_picker_tool
 l10n:
-  sourceCommit: 41cf05afdfff38fb460f7cae5b9523405c842ac6
+  sourceCommit: c148812e0874220770cab62c16f33f48ceb98e99
 ---
 
 這個工具讓你可以在 sRGB {{glossary("color space", "色彩空間")}}中選擇一個顏色，並在各種 CSS [顏色格式](/zh-TW/docs/Web/CSS/color_value)之間進行轉換，幫助你了解以下 sRGB 顏色標記法的語法：
