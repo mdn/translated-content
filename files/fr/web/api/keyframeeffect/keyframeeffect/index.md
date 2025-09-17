@@ -45,19 +45,19 @@ Le constructeur à plusieurs arguments (voir ci-dessus) crée une nouvelle insta
     - `iterations` {{optional_inline}}
       - Le nombre de fois que l'animation doit se répéter. Par défaut, `1`, et peut également prendre une valeur de {{jsxref("Infinity")}} pour la faire répéter aussi longtemps que l'élément existe.
     - `composite` {{optional_inline}}
-     - Détermine comment les valeurs sont combinées entre cette animation et d'autres animations séparées qui ne spécifient pas leur propre opération composite. Par défaut,
+      - Détermine comment les valeurs sont combinées entre cette animation et d'autres animations séparées qui ne spécifient pas leur propre opération composite. Par défaut,
         `replace`.
         - `add` indique un effet additif, où chaque itération successive s'appuie sur la précédente. Par exemple, avec `transform`, un
           `translateX(-200px)` ne remplacerait pas une valeur antérieure
           `rotate(20deg)` mais donnerait
           `translateX(-200px) rotate(20deg)`.
-        - `accumulate` est similaire mais un peu plus intelligent : `blur(2)`
+        - `accumulate` est similaire mais un peu plus intelligent&nbsp;: `blur(2)`
           et `blur(5)` deviennent `blur(7)`, pas
           `blur(2) blur(5)`.
         - `replace` écrase la valeur précédente avec la nouvelle.
 
     - `iterationComposite` {{optional_inline}}
-     - Détermine comment les valeurs évoluent d'itération en itération dans cette animation. Peut être
+      - Détermine comment les valeurs évoluent d'itération en itération dans cette animation. Peut être
         défini sur `accumulate` ou `replace` (voir ci-dessus). Par défaut,
         à `replace`.
     - `pseudoElement` {{optional_inline}}

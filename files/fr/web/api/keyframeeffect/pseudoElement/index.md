@@ -57,8 +57,7 @@ const animation = monTexte.animate([{ transform: "rotate(360deg)" }], {
 // Lit la valeur de KeyframeEffect.pseudoElement
 function logPseudoElement() {
   const keyframeEffect = animation.effect;
-  journal.textContent =
-    `Valeur du pseudoElement animé : ${keyframeEffect.pseudoElement}`;
+  journal.textContent = `Valeur du pseudoElement animé : ${keyframeEffect.pseudoElement}`;
   requestAnimationFrame(logPseudoElement);
 }
 
