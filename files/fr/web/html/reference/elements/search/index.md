@@ -1,7 +1,7 @@
 ---
 title: "<search>: l'élément de recherche"
 slug: Web/HTML/Reference/Elements/search
-l10:
+l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
