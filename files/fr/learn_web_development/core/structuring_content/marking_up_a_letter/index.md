@@ -179,7 +179,10 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Eleanor Gaye" />
-    <title>Correspondance de l'étonnement scientifique au sujet de la demande d'admission</title>
+    <title>
+      Correspondance de l'étonnement scientifique au sujet de la demande
+      d'admission
+    </title>
     <style>
       body {
         font: 1.2em / 1.5 system-ui;
