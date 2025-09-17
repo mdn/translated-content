@@ -3874,8 +3874,6 @@
 /fr/docs/Web/API/API_IndexedDB/Using_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /fr/docs/Web/API/API_fichier_systeme	/fr/docs/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/AbstractWorker	/fr/docs/Web/API/Worker
-/fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
-/fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/AnimationEvent.animationName	/fr/docs/Web/API/AnimationEvent/animationName
 /fr/docs/Web/API/AnimationEvent.elapsedTime	/fr/docs/Web/API/AnimationEvent/elapsedTime
 /fr/docs/Web/API/AnimationEvent.pseudoElement	/fr/docs/Web/API/AnimationEvent/pseudoElement
@@ -3988,8 +3986,6 @@
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C	/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_ed1f254ab62fd5902b28ca4eb72ca773
 /fr/docs/Web/API/DoubleRange	/fr/docs/Web/API/MediaTrackConstraints
-/fr/docs/Web/API/EffectTiming	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
-/fr/docs/Web/API/EffectTiming/delay	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/Element.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/Element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/Element.appendChild	/fr/docs/Web/API/Node/appendChild
@@ -7640,7 +7636,6 @@
 /fr/docs/conflicting/Web/API/IDBTransaction/complete_event	/fr/docs/Web/API/IDBTransaction/complete_event
 /fr/docs/conflicting/Web/API/IDBTransaction/error_event	/fr/docs/Web/API/IDBTransaction/error_event
 /fr/docs/conflicting/Web/API/IndexedDB_API	/fr/docs/Web/API/IndexedDB_API
-/fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/conflicting/Web/API/MediaTrackConstraints	/fr/docs/Web/API/MediaTrackConstraints
 /fr/docs/conflicting/Web/API/Navigator	/fr/docs/Web/API/Navigator
 /fr/docs/conflicting/Web/API/Node	/fr/docs/Web/API/Node
