@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-La propriété **`composite`** de l'objet {{domxref("KeyframeEffect")}} détermine comment l'animation d'un élément agit sur ses valeurs de propriété sous-jacentes.
+La propriété **`composite`** de l'interface {{domxref("KeyframeEffect")}} détermine comment l'animation d'un élément agit sur ses valeurs de propriété sous-jacentes.
 
 ## Valeur
 

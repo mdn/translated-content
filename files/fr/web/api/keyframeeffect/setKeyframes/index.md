@@ -19,7 +19,7 @@ setKeyframes(keyframes)
 ### Paramètres
 
 - `keyframes`
-  - : Un objet image-clé ou `null`. Si défini sur `null`, les images clés sont remplacées par une séquence d'images clés vides.
+  - : Un objet d'image clé (<i lang="en">keyframe</i>) ou `null`. Si défini sur `null`, les images clés sont remplacées par une séquence d'images clés vides.
 
     Plus d'informations sur le [format](/fr/docs/Web/API/Web_Animations_API/Keyframe_Formats#syntaxe) d'un objet image-clé.
 

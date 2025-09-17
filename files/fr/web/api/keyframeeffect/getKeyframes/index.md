@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-La méthode **`getKeyframes()`** de l'interface {{domxref("KeyframeEffect")}} renvoie un tableau des images clés calculées qui composent cette animation ainsi que leurs décalages calculés.
+La méthode **`getKeyframes()`** de l'interface {{domxref("KeyframeEffect")}} renvoie un tableau des images clés (<i lang="en">keyframes</i> en anglais) calculées qui composent cette animation ainsi que leurs décalages calculés.
 
 ## Syntaxe
 

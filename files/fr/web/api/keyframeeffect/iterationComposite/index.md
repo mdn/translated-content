@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-La propriété **`iterationComposite`** d'un objet {{domxref("KeyframeEffect")}} détermine comment les valeurs de propriété de l'animation s'accumulent ou se remplacent à chaque itération de l'animation.
+La propriété **`iterationComposite`** de l'interface {{domxref("KeyframeEffect")}} détermine comment les valeurs de propriété de l'animation s'accumulent ou se remplacent à chaque itération de l'animation.
 
 ## Valeur
 

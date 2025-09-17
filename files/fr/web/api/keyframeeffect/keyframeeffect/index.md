@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-Le constructeur **`KeyframeEffect()`** de l'[API Web Animations](/fr/docs/Web/API/Web_Animations_API) retourne une nouvelle instance d'objet {{domxref("KeyframeEffect")}}, et permet également de cloner une instance d'objet d'effet de keyframe existante.
+Le constructeur **`KeyframeEffect()`** de l'[API Web Animations](/fr/docs/Web/API/Web_Animations_API) retourne une nouvelle instance d'objet {{domxref("KeyframeEffect")}}, et permet également de cloner une instance d'objet d'effet d'image clé (<i lang="en">keyframe</i> en anglais) existante.
 
 ## Syntaxe
 
@@ -70,7 +70,7 @@ Le constructeur à un seul argument (voir ci-dessus) crée un clone d'une instan
 
 ## Exemples
 
-Dans l'exemple suivant, le constructeur KeyframeEffect est utilisé pour créer un ensemble d'images clés qui dictent comment l'emoji doit rouler sur le sol&nbsp;:
+Dans l'exemple suivant, le constructeur `KeyframeEffect` est utilisé pour créer un ensemble d'images clés qui dictent comment l'emoji doit rouler sur le sol&nbsp;:
 
 ```js
 const emoji = document.querySelector("div"); // l'élément à animer
@@ -112,7 +112,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample("Examples", "100%", "120") }}
+{{ EmbedLiveSample("exemples", "100%", "120") }}
 
 ## Spécifications
 
