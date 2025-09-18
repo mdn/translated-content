@@ -101,9 +101,9 @@ document.getElementById("confirm-btn").addEventListener("click", (event) => {
 
 ## Voir aussi
 
-- Élément HTML [`dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
-- Le rôle [`dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
-- Le rôle [`alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
-- L'attribut [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
+- L'élément HTML {{HTMLElement('dialog')}}
+- [ARIA&nbsp;: rôle `dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
+- [ARIA&nbsp;: rôle `alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
+- L'attribut ARIA [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
 - [`Window.alert()`](/fr/docs/Web/API/Window/alert)
 - [`Window.prompt()`](/fr/docs/Web/API/Window/prompt)
