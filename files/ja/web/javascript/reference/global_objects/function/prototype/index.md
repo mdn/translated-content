@@ -1,11 +1,10 @@
 ---
 title: "Function: prototype"
+short-title: prototype
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 l10n:
-  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`prototype`** は {{jsxref("Function")}} インスタンスのデータプロパティで、関数が [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子でコンストラクターとして使用されたときに使用されます。これは新しいオブジェクトのプロトタイプになります。
 

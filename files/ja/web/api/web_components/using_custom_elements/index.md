@@ -2,7 +2,7 @@
 title: カスタム要素の使用
 slug: Web/API/Web_components/Using_custom_elements
 l10n:
-  sourceCommit: b065c09b79d18abf0f04778c9307e1c312b8c6f9
+  sourceCommit: 35f4aaf2d213764f21e0b3efd7ff132a137afb80
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -15,16 +15,22 @@ l10n:
 
 カスタム要素には 2 つの種類があります。
 
+- **自律型カスタム要素** (Autonomous custom element) は HTML 要素の基底クラスである {{domxref("HTMLElement")}} を継承します。 1 から動作を実装する必要があります。
+
 - **カスタム組み込み要素** (Customized built-in element) は、標準 HTML 要素、例えば {{domxref("HTMLImageElement")}} や {{domxref("HTMLParagraphElement")}} を継承します。これらの実装により、標準要素の特定のインスタンスの動作が拡張されます。
 
   > [!NOTE]
-  > カスタム組み込み要素の実装に関する注意事項については、[`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is) 属性のリファレンスを参照してください。
+  > Safari はカスタム組み込み要素に対応する計画がありません。詳しくは [`is` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/is)のリファレンスを参照してください。
 
-- **自律型カスタム要素** (Autonomous custom element) は HTML 要素の基底クラスである {{domxref("HTMLElement")}} を継承します。一から動作を実装する必要があります。
+どちらの種類のカスタム要素についても、作成して使用するための基本的な段階は同じです。
+
+- 最初に[動作の実装](#カスタム要素の実装)を、 JavaScript クラスを定義することで行います。
+- それから現在のページに[カスタム要素の登録](#カスタム要素の登録)を行います。
+- 最後に、自分の HTML または JavaScript コード内で[カスタム要素を使用](#カスタム要素の使用)します。
 
 ## カスタム要素の実装
 
-カスタム要素は、{{domxref("HTMLElement")}} を拡張する[クラス](/ja/docs/Web/JavaScript/Reference/Classes)（自律型要素の場合）またはカスタマイズするインターフェイス（カスタム組み込み要素の場合）として実装されます。
+カスタム要素は、{{domxref("HTMLElement")}} を拡張する[クラス](/ja/docs/Web/JavaScript/Reference/Classes)（自律型要素の場合）またはカスタマイズするインターフェイス（カスタム組み込み要素の場合）として実装されます。このクラスは自分で呼び出すのではなく、ブラウザーによって呼び出されます。クラスを定義した後、カスタム要素を[登録](#カスタム要素の登録)する必要があります。これにより、 HTML マークアップで要素を記述したり、 {{domxref("document.createElement()")}} を呼び出したりするなど、標準的な DOM 手法を用いてそのインスタンスを作成できるようになります。
 
 以下は、最小限のカスタム要素で、{{HTMLElement("p")}} 要素をカスタマイズする実装例です。
 
@@ -58,6 +64,7 @@ class PopupInfo extends HTMLElement {
 
 - `connectedCallback()`: 要素が文書に追加されるたびに呼び出されます。仕様では、開発者は可能な限り、カスタム要素の設定をコンストラクターではなく、このコールバックで実装することを推奨しています。
 - `disconnectedCallback()`: 要素が文書から削除されるたびに呼び出されます。
+- `connectedMoveCallback()`: 定義されている場合、これは、`connectedCallback()` および `disconnectedCallback()` の代わりに、要素が {{domxref("Element.moveBefore()")}} によって DOM 内の別の場所に移動されるたびに呼び出されます。 これは、要素が実際に DOM に追加または除去されていない場合に、`connectedCallback()` および `disconnectedCallback()` コールバック内で初期化/クリーンアップコードが実行されるのを避けるために使用します。詳細は、[ライフサイクルコールバックと状態を保持した移動](#ライフサイクルコールバックと状態を保持した移動)を参照してください。
 - `adoptedCallback()`: 要素が新しい文書に移動されるたびに呼び出されます。
 - `attributeChangedCallback()`: 属性が変更、追加、削除、置換されたときに呼び出されます。このコールバックの詳細については、[属性の変更への応答](#属性の変更への応答)を参照してください。
 
@@ -81,6 +88,10 @@ class MyCustomElement extends HTMLElement {
     console.log("カスタム要素がページから除去されました。");
   }
 
+  connectedMoveCallback() {
+    console.log("カスタム要素が moveBefore() で移動されました。");
+  }
+
   adoptedCallback() {
     console.log("カスタム要素が新しいページへ移動されました。");
   }
@@ -91,6 +102,28 @@ class MyCustomElement extends HTMLElement {
 }
 
 customElements.define("my-custom-element", MyCustomElement);
+```
+
+#### ライフサイクルコールバックと状態を保持した移動
+
+カスタム要素の DOM 内の位置は、通常の HTML 要素と同様にできるが、ライフサイクルに伴う副作用を考慮しなければなりません。
+
+カスタム要素が移動されるたびに（{{domxref("Element.moveBefore()")}} や {{domxref("Node.insertBefore()")}} などのメソッドを介して）、`disconnectedCallback()` および `connectedCallback()` ライフサイクルコールバックがそれぞれの時点で発行されます。これは、要素が DOM から切断され、再接続されるためです。
+
+これは意図通りの動作かもしれません。ただし、これらのコールバックは通常、要素のライフサイクルの始まりや終わりに実行される必要な初期化やクリーンアップコードを実装するために使用されます。そのため、要素が移動された時（除去されたり挿入されたりした時ではなく）にこれらを実行すると、その状態に問題が生じる可能性があります。例えば、要素がまだ必要としている保存データを誤って削除してしまう可能性があります。
+
+要素の状態を維持したい場合は、要素クラス内で `connectedMoveCallback()` ライフサイクルコールバックを定義するのが最適であり、それから {{domxref("Element.moveBefore()")}} メソッドを使用して要素を移動します（{{domxref("Node.insertBefore()")}} などの類似メソッドの代わりに）。このことは、 `connectedMoveCallback()` を `connectedCallback()` および `disconnectedCallback()` の代わりに実行させることになります。
+
+空の `connectedMoveCallback()` を追加して、他の 2 種類 のコールバックが実行されるのを停止するか、独自のロジックを記載して移動を処理することができます。
+
+```js
+class MyComponent {
+  // ...
+  connectedMoveCallback() {
+    console.log("独自の移動処理のロジックはこちら。");
+  }
+  // ...
+}
 ```
 
 ## カスタム要素の登録
@@ -164,7 +197,7 @@ class MyCustomElement extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     console.log(
-      `Attribute ${name} has changed from ${oldValue} to ${newValue}.`,
+      `属性 ${name} は ${oldValue} から ${newValue} へ変更されました。`,
     );
   }
 }
@@ -187,8 +220,8 @@ HTML 要素に組み込まれた要素は、「ホバー」、「無効」、「
 これらの状態の一部は、HTML または JavaScript を使用して属性として設定できますが、内部的なものもあり、設定できないものもあります。
 外部または内部に関わらず、これらの状態には通常、特定の状態にある要素を選択し、スタイルを適用するために使用できる対応する [CSS 擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)が存在します。
 
-また、自律型カスタム要素（組み込み要素をベースにした要素を除く）では、擬似クラス関数 `:state()` を使用して状態を定義し、それに対して選択を行うこともできます。
-以下のコードでは、内部状態 "`collapsed`" を持つ自律型カスタム要素の例を使用して、その動作を示しています。
+また、自律型カスタム要素（組み込み要素をベースにした要素を除く）では、擬似クラス関数 [`:state()`](/ja/docs/Web/CSS/:state) を使用して状態を定義し、それに対して選択を行うこともできます。
+以下のコードでは、内部状態 `"collapsed"` を持つ自律型カスタム要素の例を使用して、その動作を示しています。
 
 `collapsed` の状態は、要素の外からは見えない論理値プロパティ（セッターとゲッターメソッド付き）として表現されます。
 この状態を CSS で選択できるようにするために、カスタム要素は最初のコンストラクターで {{domxref("HTMLElement.attachInternals()")}} を呼び出し、{{domxref("ElementInternals")}} オブジェクトを装着します。これにより、{{domxref("ElementInternals.states")}} プロパティを通じて {{domxref("CustomStateSet")}} にアクセスできるようになります。
@@ -207,16 +240,16 @@ class MyCustomElement extends HTMLElement {
 
   set collapsed(flag) {
     if (flag) {
-      // Existence of identifier corresponds to "true"
+      // 識別子の存在する場合は "true" に対応する
       this._internals.states.add("hidden");
     } else {
-      // Absence of identifier corresponds to "false"
+      // 識別子が存在しない場合は "false" に対応する
       this._internals.states.delete("hidden");
     }
   }
 }
 
-// Register the custom element
+// カスタム要素を登録
 customElements.define("my-custom-element", MyCustomElement);
 ```
 
@@ -319,7 +352,7 @@ class PopupInfo extends HTMLElement {
         width: 1.2rem;
       }
 
-    .icon:hover + .info, .icon:focus + .info {
+      .icon:hover + .info, .icon:focus + .info {
         opacity: 1;
       }
     `;
@@ -334,7 +367,7 @@ class PopupInfo extends HTMLElement {
 }
 ```
 
-前述のコードスニペットはクラスのコンストラクター（[`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)）の定義を含んでいます。ここでは常に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しいプロトタイプチェーンが確立されるようにします。
+前述のコードスニペットはクラスのコンストラクター ([`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)) の定義を含んでいます。ここでは常に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しいプロトタイプチェーンが確立されるようにします。
 
 `connectedCallback()` メソッド内で、要素が DOM に接続された際にその要素が持つすべての機能を定義します。この例では、シャドウルートをカスタム要素に割り当て、DOM 操作を使用して要素の内部シャドウルート構造を作成します（そしてシャドウルートに割り当てます）。最後に、シャドウルートにいくつかの CSS を割り当ててスタイル設定します。要素の属性は DOM に接続されるまで利用できないため、コンストラクターでは処理はうまくいきません。
 
@@ -474,15 +507,15 @@ class ExpandingList extends HTMLUListElement {
         // この span にクリックハンドラーを追加
         newSpan.addEventListener("click", (e) => {
           // span 要素の次兄弟要素は ul であるはず
-          const nextul = e.target.nextElementSibling;
+          const nextUl = e.target.nextElementSibling;
 
           // 表示状態を切り替え、ul の class 属性を更新
-          if (nextul.style.display == "block") {
-            nextul.style.display = "none";
-            nextul.parentNode.setAttribute("class", "closed");
+          if (nextUl.style.display === "block") {
+            nextUl.style.display = "none";
+            nextUl.parentNode.setAttribute("class", "closed");
           } else {
-            nextul.style.display = "block";
-            nextul.parentNode.setAttribute("class", "open");
+            nextUl.style.display = "block";
+            nextUl.parentNode.setAttribute("class", "open");
           }
         });
         // span を追加し、li から裸のテキストノードを除去
@@ -530,16 +563,20 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 クラスのコンストラクターでは、要素にシャドウ DOM を割り当て、空の {{htmlelement("div")}} および {{htmlelement("style")}} 要素をシャドウルートに追加します。
 
 ```js
-constructor() {
-  // コンストラクターでは super を常に最初に呼び出す
-  super();
+class Square extends HTMLElement {
+  // …
+  constructor() {
+    // コンストラクターでは super を常に最初に呼び出す
+    super();
 
-const shadow = this.attachShadow({ mode: "open" });
+    const shadow = this.attachShadow({ mode: "open" });
 
-const div = document.createElement("div");
-const style = document.createElement("style");
-shadow.appendChild(style);
-shadow.appendChild(div);
+    const div = document.createElement("div");
+    const style = document.createElement("style");
+    shadow.appendChild(style);
+    shadow.appendChild(div);
+  }
+  // …
 }
 ```
 
@@ -561,37 +598,53 @@ function updateStyle(elem) {
 実際の更新はすべて、メソッドとしてクラス定義内に配置されているライフサイクルコールバックによって処理されます。 `connectedCallback()` は、要素が DOM に追加されるたびに実行されます。ここでは、 `updateStyle()` 関数を実行して、正方形がその属性で定義されたスタイルになっていることを確認します。
 
 ```js
-connectedCallback() {
-  console.log("Custom square element added to page.");
-  updateStyle(this);
+class Square extends HTMLElement {
+  // …
+  connectedCallback() {
+    console.log("カスタム矩形要素がページに追加されました。");
+    updateStyle(this);
+  }
+  // …
 }
 ```
 
 `disconnectedCallback()` および `adoptedCallback()` コールバックは、要素が DOM から削除されるか、別のページに移動されたときに通知する単純なメッセージをコンソールに記録します。
 
 ```js
-disconnectedCallback() {
-  console.log("Custom square element removed from page.");
-}
+class Square extends HTMLElement {
+  // …
+  disconnectedCallback() {
+    console.log("カスタム矩形要素がページから削除されました。");
+  }
 
-adoptedCallback() {
-  console.log("Custom square element moved to new page.");
+  adoptedCallback() {
+    console.log("カスタム矩形要素が新しいページに移動しました。");
+  }
+  // …
 }
 ```
 
 `attributeChangedCallback()` コールバックは、要素の属性の 1 つが何らかの方法で変更されるたびに実行されます。その引数からわかるように、属性、属性の名前、および古い属性値と新しい属性値を個別に操作することができます。ただし、この場合は、`updateStyle()` 関数を再度実行して、新しい値に従って正方形のスタイルが更新されるようにします。
 
 ```js
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log("Custom square element attributes changed.");
-  updateStyle(this);
+class Square extends HTMLElement {
+  // …
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log("カスタム矩形要素の属性が変更されました。");
+    updateStyle(this);
+  }
+  // …
 }
 ```
 
 ある属性が変更されたときに起動する `attributeChangedCallback()` コールバックを取得するには、その属性を監視する必要があることに注意してください。これは、カスタム要素クラス内で `static get observedAttributes()` メソッドを定義することによって行われます。これは、監視したい属性の名前を含む配列を返すようにしてください。
 
 ```js
-static get observedAttributes() {
-  return ["color", "size"];
+class Square extends HTMLElement {
+  // …
+  static get observedAttributes() {
+    return ["color", "size"];
+  }
+  // …
 }
 ```

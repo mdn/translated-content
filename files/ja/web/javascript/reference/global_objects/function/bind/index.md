@@ -1,11 +1,10 @@
 ---
 title: Function.prototype.bind()
+short-title: bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`bind()`** は {{jsxref("Function")}} インスタンスのメソッドで、新しい関数を生成し、呼び出し時に、 `this` キーワードを指定された値に設定し、指定された引数の並びを、新しい関数が呼び出された際に指定されたものより前にして呼び出します。
 
@@ -14,7 +13,7 @@ l10n:
 ```js interactive-example
 const module = {
   x: 42,
-  getX: function () {
+  getX() {
     return this.x;
   },
 };
@@ -230,7 +229,7 @@ p.toString();
 // '1,2'
 
 // thisArg の値は無視されるため、重要ではない
-const YAxisPoint = Point.bind(null, 0 /*x*/);
+const YAxisPoint = Point.bind(null, 0 /* x */);
 
 const axisPoint = new YAxisPoint(5);
 axisPoint.toString(); // '0,5'
@@ -246,7 +245,7 @@ new YAxisPoint(17, 42) instanceof Point; // true
 
 ```js
 const emptyObj = {};
-const YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
+const YAxisPoint = Point.bind(emptyObj, 0 /* x */);
 
 // 普通の関数としても実行できます
 // (あまり必要にはなりませんが)
@@ -286,7 +285,7 @@ console.log(new BoundDerived() instanceof Derived); // true
 ```js
 const slice = Array.prototype.slice;
 
-// ...
+// …
 
 slice.call(arguments);
 ```
@@ -298,7 +297,7 @@ slice.call(arguments);
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 
-// ...
+// …
 
 slice(arguments);
 ```
