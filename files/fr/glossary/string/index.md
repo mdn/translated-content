@@ -14,4 +14,4 @@ En {{Glossary("JavaScript")}}, une chaîne de caractères est l'une des {{Glossa
 ### Culture générale
 
 - [Chaîne de caractères](https://fr.wikipedia.org/wiki/Chaîne_de_caractères) sur Wikipédia
-- [Structures et types de données en JavaScript](</fr/docs/Web/JavaScript/Data_structures#Le_type_chaîne_de_caractères_(String)>)
+- [Structures et types de données en JavaScript](</fr/docs/Web/JavaScript/Guide/Data_structures#Le_type_chaîne_de_caractères_(String)>)

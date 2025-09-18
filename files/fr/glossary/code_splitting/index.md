@@ -13,6 +13,6 @@ Le code splitting est une fonctionnalité prise en charge par les contructeurs (
 
 ## Voir aussi
 
-- [Lazy loading](/fr/docs/Web/Performance/Lazy_loading)
+- [Lazy loading](/fr/docs/Web/Performance/Guides/Lazy_loading)
 - [HTTP/2](/fr/docs/Glossary/HTTP_2)
 - [Tree shaking](/fr/docs/Glossary/Tree_shaking)

@@ -1,37 +1,43 @@
 ---
 title: content
 slug: Web/CSS/content
+l10n:
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace le contenu par une valeur générée. Elle peut être utilisée pour définir ce qui est affiché à l'intérieur d'un élément ou d'un pseudo-élément. Pour les éléments, la propriété `content` spécifie si l'élément s'affiche normalement (`normal` ou `none`) ou s'il est remplacé par une image (et le texte alternatif (`alt`) associé). Pour les pseudo-éléments et les marges, `content` définit le contenu comme des images, du texte, les deux ou aucun, ce qui détermine si l'élément est affiché ou non.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace un élément avec une valeur générée. Les objets insérés via la propriété `content` sont des **[éléments remplacés anonymes](/fr/docs/Web/CSS/Replaced_element)**.
+Les objets insérés à l'aide de la propriété `content` sont **des {{glossary("replaced elements", "éléments remplacés")}} anonymes**.
 
-{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: content", "tabbed-shorter")}}
 
 ```css interactive-example
 .topic-games::before {
-  content: "🎮 ";
+  content: "🎮 " / "jeux";
 }
 
 .topic-weather::before {
-  content: "⛅ ";
+  content: "⛅ " / "nuageux";
 }
 
 .topic-hot::before {
-  content: url("/shared-assets/images/examples/fire.png");
+  content: url("/shared-assets/images/examples/fire.png") / "En feu";
   margin-right: 6px;
 }
 ```
 
 ```html interactive-example
-<p class="topic-games">Game News: A new inFamous is not planned</p>
-
-<p class="topic-weather">
-  Weather for Today: Heat, violent storms and twisters
+<p class="topic-games">
+  Actualités jeux vidéo&nbsp;: aucun nouveau titre de inFamous n'est prévu
 </p>
 
-<p class="topic-hot">Trending Article: Must-watch videos of the week</p>
+<p class="topic-weather">
+  Météo du jour&nbsp;: chaleur, tempêtes violentes et tornades
+</p>
+
+<p class="topic-hot">
+  Article tendance&nbsp;: vidéos incontournables de la semaine
+</p>
 ```
 
 ## Syntaxe
@@ -51,7 +57,7 @@ content: url("http://www.example.com/test.png") / "Le texte alternatif";
 
 /* Une valeur <string>, les caractères non-latin */
 /* doivent être échappées par ex. \000A9 for &copy; */
-content: "prefix";
+content: "préfixe";
 
 /* Valeurs utilisant un compteur, éventuellement
    avec <list-style-type> */
@@ -71,46 +77,67 @@ content: no-close-quote;
 
 /* Sauf avec normal et none, on peut utiliser */
 /* plusieurs valeurs de façon simultanée */
-content: open-quote counter(compteur_chapitre);
+content: "préfixe" url("http://www.example.com/test.png");
+content: "préfixe" url("/img/test.png") "suffixe" / "Le texte alternatif";
+content: open-quote counter(chapter_counter);
 
 /* Valeurs globales */
 content: inherit;
 content: initial;
 content: revert;
+content: revert-layer;
 content: unset;
 ```
 
 ### Valeurs
 
+La valeur peut être&nbsp;:
+
+- L'un des deux mots-clés&nbsp;: `none` ou `normal`. `normal` est la valeur par défaut de la propriété.
+- `<content-replacement>` lors du remplacement d'un nœud DOM. `<content-replacement>` est toujours une `<image>`.
+- Une `<content-list>` lors du remplacement des pseudo-éléments et des marges. Une `<content-list>` est une liste d'une ou plusieurs boîtes en ligne (<i lang="en">inline box</i> en anglais) anonymes apparaissant dans l'ordre spécifié. Chaque élément de la `<content-list>` est de type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target) ou [`<leader()>`](#leader).
+- Une valeur de texte alternatif facultative d'un `<string>` ou d'un `<counter>`, précédée d'une barre oblique (`/`).
+
+Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus en détail ci-dessous&nbsp;:
+
 - `none`
-  - : Lorsque cette valeur est appliquée à un pseudo-élément, ce dernier n'est pas généré. Si elle est appliquée à un élément, la valeur n'a pas d'effet.
+  - : Quand il est appliqué à un pseudo-élément, le pseudo-élément n'est pas généré.
+    Lorsqu'il est appliqué à un élément, la valeur n'a aucun effet.
+
 - `normal`
-  - : Résulte en `none` pour les pseudo-éléments `::before` et `::after`.
-- [`<string>`](/fr/docs/Web/CSS/string)
-  - : Contenu qui indique le texte alternatif de l'élément. Les caractères non-latins doivent être encodés avec leur séquence d'échappement Unicode (`\000A9` représentera par exemple le symbole ©).
-- [`<image>`](/fr/docs/Web/CSS/image)
-  - : Une image (valeur de type [`<image>`](/fr/docs/Web/CSS/image)) avec une [`url()`](/fr/docs/Web/CSS/url_value) ou [`<gradient>`](/fr/docs/Web/CSS/gradient) ou une partie de la page web fournie par la fonction [`element()`](/fr/docs/Web/CSS/element) et qui indique le contenu à afficher.
-- [`counter()`](/fr/docs/Web/CSS/counter)
-  - : Un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), généralement un nombre, produit via les propriétés [`<counter-reset>`](/fr/docs/Web/CSS/counter-reset) et [`<counter-increment>`](/fr/docs/Web/CSS/counter-increment) et qui peut être affiché grâce à la fonction [`counter()`](/fr/docs/Web/CSS/counter) ou [`counters()`](/fr/docs/Web/CSS/counters).
+  - : Pour les pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}}, cette valeur est calculée comme `none`. Pour d'autres pseudo-éléments tels que {{cssxref("::marker")}}, {{cssxref("::placeholder")}} ou {{cssxref("::file-selector-button")}}, elle produit le contenu initial (ou normal) de l'élément. Pour les éléments réguliers ou les boîtes de marge de page, elle est calculée comme les descendants de l'élément. C'est la valeur par défaut.
 
-    [`counter()`](/fr/docs/Web/CSS/counter) possède deux formes&nbsp;: `counter(_name_)` ou `counter(_name_, _style_)`. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément&nbsp;; il est formaté selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
+- {{cssxref("&lt;string&gt;")}}
+  - : A sequence of characters enclosed in matching single or double quotes. Multiple string values will be concatenated (there is no concatenation operator in CSS).
 
-    [`counters()`](/fr/docs/Web/CSS/counters) a également deux formes&nbsp;: `counters(name, string)` ou `counters(name, string, style)`. Le texte généré est la valeur de tous les compteurs d'un nom donné dans ce pseudo-élément, depuis le moins profond jusqu'au plus profond, séparés par la chaîne définie. Les compteurs sont formatés selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
+- {{cssxref("&lt;image&gt;")}}
+  - : Une {{cssxref("&lt;image&gt;")}}, représentant une image à afficher. Cela peut être égal à une {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, ou {{cssxref("&lt;gradient&gt;")}} type de données, ou une partie de la page Web elle-même, définie par la {{cssxref("element", "element()")}} fonction.
 
-- `attr(X)`
-  - : Renvoie la valeur de l'attribut X de l'élément comme une chaîne. S'il n'existe pas d'attribut X, une chaîne vide est renvoyée. La sensibilité à la casse du nom de l'attribut dépend du langage utilisé.
-- `open-quote` | `close-quote`
-  - : Ces valeurs sont remplacées par la chaîne appropriée de la propriété [`quotes`](/fr/docs/Web/CSS/quotes).
-- `no-open-quote` | `no-close-quote`
-  - : N'introduit aucun contenu, mais incrémente (respectivement décrémente) le niveau d'imbrication des citations.
+- `<counter>`
+  - : La valeur `<counter>` est un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), généralement un nombre produit par des calculs définis par les {{cssxref("&lt;counter-reset&gt;")}} et {{cssxref("&lt;counter-increment&gt;")}} propriétés. Il peut être affiché à l'aide de la {{cssxref("counter", "counter()")}} ou {{cssxref("counters", "counters()")}} fonction.
+    - {{cssxref("counter", "counter()")}}
+      - : La {{cssxref("counter", "counter()")}} fonction a deux formes : 'counter(_name_)' ou 'counter(_name_, style)'. Le texte généré est la valeur du compteur le plus interne du nom donné dans le contexte du pseudo-élément donné. Il est formaté dans le {{cssxref("&lt;list-style-type&gt;")}} spécifié (`decimal` par défaut).
+    - {{cssxref("counters", "counters()")}}
+      - : La {{cssxref("counters", "counters()")}} fonction a également deux formes : 'counters(_name_, _string_)' ou 'counters(_name_, _string_, _style_)'. Le texte généré est la valeur de tous les compteurs avec le nom donné dans le contexte du pseudo-élément donné, du plus externe au plus interne, séparés par la chaîne spécifiée. Les compteurs sont rendus dans le {{cssxref("&lt;list-style-type&gt;")}} indiqué (`decimal` par défaut).
 
-## Accessibilité
+- `<quote>`
+  - : Le type de données `<quote>` comprend des mots-clés dépendants de la langue et de la position&nbsp;:
+    - `open-quote` et `close-quote`
+      - : Ces valeurs sont remplacées par la chaîne appropriée de la {{cssxref("quotes")}} propriété.
+    - `no-open-quote` et `no-close-quote`
+      - : N'introduit aucun contenu, mais incrémente (décrémente) le niveau de nesting pour les citations.
 
-Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model/Introduction). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
+- `<target>`
+  - : Le type de données `<target>` comprend trois fonctions cibles, `<target-counter()>`, `<target-counters()>`, et `<target-text()>` qui créent des références croisées obtenues à partir de l'extrémité cible d'un lien. Voir [Syntaxe formelle](#syntaxe_formelle).
 
-- [La prise en charge relative à l'accessibilité pour les contenus générés par CSS — Tink (en anglais)](https://tink.uk/accessibility-support-for-css-generated-content/)
-- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [Comprendre les critères de succès 1.3.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- `<leader()>`
+  - : Le type de données `<leader()>` comprend une fonction leader : `leader( <leader-type> )`. Cette fonction accepte les valeurs de mots-clés `dotted`, `solid`, ou `space` (égal à `leader(".")`, `leader("_")`, et `leader(" ")`, respectivement), ou une `<string>` comme paramètre. Lorsqu'il est pris en charge et utilisé comme valeur pour `content`, le type de leader fourni sera inséré comme un motif répétitif, reliant visuellement le contenu à travers une ligne horizontale.
+
+- `attr(x)`
+  - : La fonction CSS `attr(x)` récupère la valeur d'un attribut de l'élément sélectionné, ou de l'élément d'origine du pseudo-élément. La valeur de l'attribut `x` de l'élément est une chaîne non analysée représentant le nom de l'attribut. S'il n'y a pas d'attribut `x`, une chaîne vide est renvoyée. La sensibilité à la casse du paramètre de nom d'attribut dépend de la langue du document.
+
+- les textes alternatifs&nbsp;: `/ <string> | <counter>`
+  - : Le texte alternatif peut être spécifié pour une image ou tout élément de `<content-list>`, en ajoutant une barre oblique et ensuite une chaîne de texte ou un compteur. Le texte alternatif est destiné à la sortie vocale par les lecteurs d'écran, mais peut également être affiché dans certains navigateurs. Les types de données {{cssxref("string", "/ &lt;string>")}} ou {{cssxref("counter", "/ &lt;counter>")}} spécifient le "texte alternatif" pour l'élément.
 
 ## Définition formelle
 
@@ -120,16 +147,58 @@ Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Doc
 
 {{csssyntax}}
 
+## Accessibilité
+
+Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model/Introduction). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
+
+- [La prise en charge relative à l'accessibilité pour les contenus générés par CSS — Tink <sup>(angl.)</sup>](https://tink.uk/accessibility-support-for-css-generated-content/)
+- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Comprendre le critère de succès 1.3.1 | W3C Comprendre les WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [Non-respect du critère de succès 1.3.1&nbsp;: insertion de contenu généré non décoratif <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/F87) dans Techniques pour le WCAG 2.0
+
 ## Exemples
 
-### Titres et citations
+Les cinq premiers exemples créent du contenu généré sur des pseudo-éléments. Les trois derniers sont des [exemples de remplacement d'éléments](#exemples_de_remplacement_déléments).
 
-Dans cet exemple, on insère des marques de citation et le mot «&nbsp;Chapitre&nbsp;» pour chaque titre.
+### Ajouter du contenu en fonction de la classe d'un élément
+
+Cet exemple insère du texte généré après le texte des éléments qui ont un nom de classe particulier. Le texte est coloré en rouge.
 
 #### HTML
 
 ```html
-<h1>5</h1>
+<h2>Meilleures ventes de livres de poche</h2>
+<ol>
+  <li>Thriller politique</li>
+  <li class="new-entry">Histoires d'Halloween</li>
+  <li>Ma biographie</li>
+  <li class="new-entry">Romance vampirique</li>
+</ol>
+```
+
+#### CSS
+
+```css
+.new-entry::after {
+  content: " Nouveau !";
+  /* L'espace avant la première lettre est
+     voulu afin de détacher le mot du reste
+     du contenu */
+  color: red;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('ajouter_du_contenu_en_fonction_de_la_classe_dun_élément', '100%', 160)}}
+
+### Citations
+
+Cet exemple insère des guillemets de couleur différente autour des citations.
+
+#### HTML
+
+```html
 <p>
   Commençons par une citation de Sir Tim Berners-Lee,
   <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
@@ -139,14 +208,9 @@ Dans cet exemple, on insère des marques de citation et le mot «&nbsp;Chapitre&
   We must understand that there is nothing fundamentally wrong with building on
   the contributions of others.
 </p>
-
-<h1>6</h1>
-<p>
-  Citons le manifeste Mozilla,
-  <q cite="https://www.mozilla.org/fr/about/manifesto/">
-    Internet est une ressource publique mondiale qui doit demeurer ouverte et
-    accessible.</q
-  >
+<p lang="fr-fr">
+  Mais c'est Magritte qui a dit,
+  <q lang="fr-fr"> Ceci n'est pas une pipe. </q>.
 </p>
 ```
 
@@ -157,6 +221,13 @@ q {
   color: blue;
 }
 
+q::before,
+q::after {
+  font-size: larger;
+  color: red;
+  background: #cccccc;
+}
+
 q::before {
   content: open-quote;
 }
@@ -164,128 +235,128 @@ q::before {
 q::after {
   content: close-quote;
 }
-
-h1::before {
-  content: "Chapitre ";
-  /* L'espace après la dernière lettre est 
-     voulu afin de détacher le mot du reste
-     du contenu */
-}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('', 460, 310)}}
+{{EmbedLiveSample('citations', '100%', 200)}}
 
-### Ajouter une icône avant un lien
+Notez que le [type de guillemets générés](/fr/docs/Web/CSS/quotes#auto_quotes) est basé sur la langue. Les navigateurs ajoutent des guillemets ouvrants et fermants avant et après les éléments {{HTMLElement("q")}} par défaut, de sorte que les guillemets dans cet exemple apparaîtraient sans qu'ils soient explicitement définis. Ils auraient pu être désactivés en définissant les valeurs de propriété `content` respectives sur `no-open-quote` et `no-close-quote`, ou en les définissant toutes deux sur `none`. Ils peuvent également être désactivés en définissant la propriété {{cssxref("quotes")}} sur `none` à la place.
 
-#### HTML
+### Ajouter du texte aux compteurs d'éléments de liste
 
-```html
-<a href="https://www.mozilla.org/fr/">Accueil</a>
-```
-
-#### CSS
-
-```css
-a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
-    " MOZILLA: ";
-  font:
-    x-small Arial,
-    freeSans,
-    sans-serif;
-  color: gray;
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample('', 200, 60)}}
-
-### Utiliser les classes
+Cet exemple combine un compteur encadré entre deux `<string>`s préfixés à tous les éléments de liste, créant un marqueur plus détaillé pour les éléments de liste ({{HTMLElement("li")}}) au sein des listes non ordonnées ({{HTMLElement("ol")}}).
 
 #### HTML
 
 ```html
-<h2>Top des ventes</h2>
 <ol>
-  <li>Thriller politique</li>
-  <li class="nouveaute">Histoires effrayantes</li>
-  <li>Ma biographie</li>
-  <li class="nouveaute">Bit-lit</li>
+  <li>Chiens</li>
+  <li>Chats</li>
+  <li>
+    Oiseaux
+    <ol>
+      <li>Chouettes</li>
+      <li>Canards</li>
+      <li>Incapables de voler</li>
+    </ol>
+  </li>
+  <li>Marsupiaux</li>
 </ol>
 ```
 
 #### CSS
 
 ```css
-.nouveaute::after {
-  content: " Nouveau !";
-  color: red;
+ol {
+  counter-reset: items;
+  margin-left: 2em;
+}
+li {
+  counter-increment: items;
+}
+li::marker {
+  content: "élément " counters(items, ".", numeric) ": ";
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('', 300, 200)}}
+{{EmbedLiveSample('ajouter_du_texte_aux_compteurs_déléments_de_liste', '100%', 200)}}
 
-### Utiliser les attributs d'image et d'élément
+Le contenu généré sur le marqueur de chaque élément de liste ajoute le texte "élément " comme préfixe, y compris un espace pour séparer le préfixe du compteur, qui est suivi de ": ", d'un deux-points et d'un espace supplémentaire. La fonction {{cssxref("counters", "counters()")}} définit un compteur numérique `items`, dans lequel les numéros des listes ordonnées imbriquées ont leurs numéros séparés par un point (`.`) dans la plupart des navigateurs.
 
-Dans cet exemple, on insère une image avant chaque lien et on ajoute son identifiant après.
+### Chaînes de caractères avec valeurs d'attribut
+
+Cet exemple est utile pour les feuilles de style d'impression. Il utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour sélectionner chaque lien sécurisé entièrement qualifié, ajoutant la valeur de l'attribut `href` après le texte du lien comme contenu du pseudo-élément {{cssxref("::after")}}.
 
 #### HTML
 
 ```html
 <ul>
-  <li>
-    <a id="moz" href="https://www.mozilla.org/fr/">Page d'accueil Mozilla</a>
-  </li>
-  <li>
-    <a id="mdn" href="https://developer.mozilla.org/"
-      >Mozilla Developer Network</a
-    >
-  </li>
+  <li><a href="https://mozilla.com">Mozilla</a></li>
+  <li><a href="/">MDN</a></li>
+  <li><a href="https://openwebdocs.org">OpenWebDocs</a></li>
 </ul>
 ```
 
 #### CSS
 
 ```css
-a {
-  text-decoration: none;
-  border-bottom: 3px dotted navy;
-}
-
-a::after {
-  content: " (" attr(id) ")";
-}
-
-#moz::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico");
-}
-
-#mdn::before {
-  content: url("mdn-favicon16.png");
-}
-
-li {
-  margin: 1em;
+a[href^="https://"]::after
+{
+  content: " (Lien : " attr(href) ")";
+  color: darkgreen;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("", '100%', 160)}}
+{{EmbedLiveSample('chaînes_de_caractères_avec_valeurs_dattribut', '100%', 200)}}
 
-### Remplacer un élément
+Le contenu généré est la valeur de l'attribut `href`, précédée de "Lien : ", avec un espace, le tout entre parenthèses.
 
-Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est possible de remplacer le contenu d'un élément avec une [`url()`](/fr/docs/Web/CSS/url_value) ou une valeur de type [`<image>`](/fr/docs/Web/CSS/image). Le contenu ajouté avec `::before` ou avec `::after` ne sera plus généré car l'élément sera devenu un élément remplacé.
+### Ajouter une image avec un texte alternatif
+
+Cet exemple insère une image avant tous les liens. Deux valeurs `content` sont fournies. La dernière valeur `content` inclut une image avec un texte alternatif que les lecteurs d'écran peuvent lire à voix haute.
 
 #### HTML
 
 ```html
-<div id="replaced">Mozilla</div>
+<a href="https://www.mozilla.org/fr/">Page d'accueil de Mozilla</a>
+```
+
+#### CSS
+
+Le CSS pour afficher l'image et définir le texte alternatif est montré ci-dessous.
+Cela définit également la police et la couleur pour le contenu.
+
+```css
+a::before {
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
+    " MOZILLA: ";
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('Adding_an_image_with_alternative_text', '100%', 60)}}
+
+> [!NOTE]
+> La valeur du texte alternatif est exposée dans l'arbre d'accessibilité du navigateur. Consultez la section [Voir aussi](#voir_aussi) pour les panneaux d'accessibilité spécifiques au navigateur.
+
+Si vous utilisez un lecteur d'écran, il devrait prononcer le mot "MOZILLA" lorsqu'il atteint l'image. Vous pouvez sélectionner le pseudo-élément `::before` avec l'outil de sélection des outils de développement, et voir le {{glossary("accessible name")}} dans le panneau d'accessibilité.
+
+### Remplacement d'élément avec un lien
+
+Cet exemple remplace un élément régulier&nbsp;! Le contenu de l'élément est remplacé par un SVG utilisant le type {{cssxref("url_value", "&lt;url&gt;")}}.
+
+Les pseudo-éléments ne sont pas rendus sur les éléments remplacés. Comme cet élément est remplacé, tous les `::after` ou `::before` correspondants ne sont pas générés ou appliqués. Pour démontrer cela, nous incluons un bloc de déclaration `::after`, tentant d'ajouter l'`id` en tant que contenu généré. Ce pseudo-élément ne sera pas généré car l'élément est remplacé.
+
+#### HTML
+
+```html
+<div id="replaced">Ce contenu est remplacé&nbsp;!</div>
 ```
 
 #### CSS
@@ -295,16 +366,81 @@ Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est p
   content: url("mdn.svg");
 }
 
-#replaced::after {
-  /* Ceci ne sera pas affiché, */
-  /* l'élément sera un élément remplacé */
+/* ne s'affichera pas si le remplacement d'élément est pris en charge */
+div::after {
   content: " (" attr(id) ")";
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('', '100%', 250)}}
+{{EmbedLiveSample('remplacement_delement_avec_un_lien', '100%',400)}}
+
+Lorsqu'on génère du contenu sur des éléments réguliers (plutôt que juste sur des pseudo-éléments), l'élément entier est remplacé. Cela signifie que les pseudo-éléments `::before` et `::after` ne sont pas générés.
+
+### Remplacement d'élément avec `<gradient>`
+
+Cet exemple démontre comment le contenu d'un élément peut être remplacé par n'importe quel type d'`<image>`, dans ce cas, un dégradé CSS. Le contenu de l'élément est remplacé par un {{cssxref("gradient/linear-gradient", "linear-gradient()")}}. Nous fournissons un texte alternatif car toutes les images doivent être décrites pour l'accessibilité.
+
+#### HTML
+
+```html
+<div id="replaced">Je disparais</div>
+```
+
+#### CSS
+
+```css
+div {
+  border: 1px solid;
+  background-color: #cccccc;
+  min-height: 100px;
+  min-width: 100px;
+}
+
+#replaced {
+  content: repeating-linear-gradient(blue 0, orange 10%) /
+    "Les dégradés et le texte alternatif sont pris en charge";
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('Element_replacement_with_gradient', '100%', 200)}}
+
+Vérifiez le [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs). Tous les navigateurs prennent en charge les dégradés et tous les navigateurs prennent en charge le remplacement d'éléments par des images, mais tous les navigateurs ne prennent pas en charge les dégradés en tant que valeur `content`.
+
+### Remplacement d'élément avec `image-set()`
+
+Cet exemple remplace le contenu d'un élément par un {{cssxref("image/image-set", "image-set()")}}. Si l'affichage des utilisateurs a une résolution normale, le `1x.png` sera affiché. Les écrans avec une résolution plus élevée afficheront l'image `2x.png`.
+
+#### HTML
+
+```html
+<div id="replaced">Je disparais&nbsp;!</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  width: 100px;
+  border: 1px solid lightgrey;
+}
+```
+
+```css-nolint
+#replaced {
+  content: image-set(
+    "1x.png" 1x,
+    "2x.png" 2x
+  ) / "DPI";
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('remplacement_delement_avec_image-set', '100%', 110)}}
 
 ## Spécifications
 
@@ -316,10 +452,21 @@ Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est p
 
 ## Voir aussi
 
-- [Les éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
-- [`::after`](/fr/docs/Web/CSS/::after)
-- [`::before`](/fr/docs/Web/CSS/::before)
-- [`::marker`](/fr/docs/Web/CSS/::marker)
-- [`contain`](/fr/docs/Web/CSS/contain)
-- [`quotes`](/fr/docs/Web/CSS/quotes)
-- La fonction [`url()`](/fr/docs/Web/CSS/url_value)
+- {{Cssxref("::after")}}
+- {{Cssxref("::before")}}
+- {{Cssxref("::marker")}}
+- {{cssxref("::scroll-button()")}}
+- {{cssxref("::scroll-marker")}}
+- {{cssxref(":target-current")}}
+- {{Cssxref("contain")}}
+- {{Cssxref("quotes")}}
+- {{cssxref("gradient", "&lt;gradient&gt;")}}
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
+- {{glossary("Replaced elements")}}
+- Le module de [contenu généré par CSS](/fr/docs/Web/CSS/CSS_generated_content) module
+- Le module des [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists) module
+- Panneaux d'accessibilité du navigateur&nbsp;:
+  - [Inspecteur d'accessibilité de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)
+  - [Panneau d'accessibilité de Chrome](https://developer.chrome.com/docs/devtools/accessibility/reference#pane)
+  - [Arbre d'accessibilité de Safari](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

@@ -6,7 +6,7 @@ original_slug: Web/HTML/Attributes/accept
 
 {{HTMLSidebar}}
 
-L'attribut **`accept`** prend comme valeur une liste séparée par des virgules d'un ou plusieurs types de fichiers, ou d'une [spécification de type de fichier unique](#unique_file_type_specifiers), décrivant les types de fichiers à autoriser. La propriété `accept` est un attribut pour les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type [`file`](/fr/docs/Web/HTML/Element/input/file). Elle était prise en charge par l'élément [`<form>`](/fr/docs/Web/HTML/Element/form), mais a été supprimée au profit de [`file`](/fr/docs/Web/HTML/Element/input/file) dans HTML5.
+L'attribut **`accept`** prend comme valeur une liste séparée par des virgules d'un ou plusieurs types de fichiers, ou d'une [spécification de type de fichier unique](#unique_file_type_specifiers), décrivant les types de fichiers à autoriser. La propriété `accept` est un attribut pour les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type [`file`](/fr/docs/Web/HTML/Reference/Elements/input/file). Elle était prise en charge par l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form), mais a été supprimée au profit de [`file`](/fr/docs/Web/HTML/Reference/Elements/input/file) dans HTML5.
 
 Comme un type de fichier donné peut être identifié de plusieurs manières, il est utile de fournir un ensemble complet de spécificateurs de type lorsque vous avez besoin de fichiers d'un type spécifique, ou d'utiliser le joker pour indiquer qu'un type de n'importe quel format est accepté.
 
@@ -56,7 +56,7 @@ Notez que le dernier exemple vous permet de sélectionner plusieurs images. Voir
 
 ## Spécification de type de fichier unique
 
-Un **spécificateur de type de fichier unique** est une chaîne qui décrit un type de fichier pouvant être sélectionné par l'utilisateur dans un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `file`. Chaque spécificateur unique de type de fichier peut prendre l'une des formes suivantes :
+Un **spécificateur de type de fichier unique** est une chaîne qui décrit un type de fichier pouvant être sélectionné par l'utilisateur dans un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `file`. Chaque spécificateur unique de type de fichier peut prendre l'une des formes suivantes :
 
 - Une extension de nom de fichier valide et insensible à la casse, commençant par un caractère point (« . »). Par exemple : `.jpg`, `.pdf`, ou `.doc`.
 - Une chaîne de type MIME valide, sans extension.
@@ -107,7 +107,7 @@ L'inclusion de l'attribut [`multiple`](multiple), comme indiqué ci-dessus, spé
 
 Souvent, vous ne voudrez pas que l'utilisateur puisse choisir n'importe quel type de fichier arbitraire ; au contraire, vous voudrez souvent qu'il sélectionne des fichiers d'un ou plusieurs types spécifiques. Par exemple, si votre entrée de fichier permet aux utilisateurs de télécharger une photo de profil, vous voulez probablement qu'ils sélectionnent des formats d'image compatibles avec le Web, tels que [JPEG](/fr/docs/Glossary/JPEG) ou [PNG](/fr/docs/Glossary/PNG).
 
-Les types de fichiers acceptables peuvent être spécifiés avec l'attribut [`accept`](/fr/docs/Web/HTML/Element/input/file#attr-accept), qui prend une liste d'extensions de fichiers ou de types MIME autorisés séparés par des virgules. Quelques exemples :
+Les types de fichiers acceptables peuvent être spécifiés avec l'attribut [`accept`](/fr/docs/Web/HTML/Reference/Elements/input/file#attr-accept), qui prend une liste d'extensions de fichiers ou de types MIME autorisés séparés par des virgules. Quelques exemples :
 
 - `accept="image/png"` ou `accept=".png"` — Accepter les fichiers PNG.
 - `accept="image/png, image/jpeg"` ou `accept=".png, .jpg, .jpeg"` — Accepter les fichiers PNG ou JPEG.

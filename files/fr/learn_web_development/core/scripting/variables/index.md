@@ -28,7 +28,7 @@ Après lecture des deux articles précédents, vous savez maintenant ce qu'est J
 
 ## Outils nécessaires
 
-Tout au long de cet article, on vous demandera de saisir des lignes de code pour tester votre compréhension. Si vous vous servez du navigateur avec un ordinateur de bureau, l'endroit le plus approprié pour saisir les exemples de code est la console JavaScript du navigateur (voyez [Les outils de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pour plus d'informations sur la manière d'accéder à ces outils).
+Tout au long de cet article, on vous demandera de saisir des lignes de code pour tester votre compréhension. Si vous vous servez du navigateur avec un ordinateur de bureau, l'endroit le plus approprié pour saisir les exemples de code est la console JavaScript du navigateur (voyez [Les outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) pour plus d'informations sur la manière d'accéder à ces outils).
 
 Toutefois, nous avons aussi incorporé une console JavaScript dans cette page pour vous permettre d'y écrire le code au cas où vous n'utiliseriez pas un navigateur avec une console JavaScript facilement accessible, ou si vous estimez qu'une console incorporée est plus confortable.
 
@@ -93,7 +93,7 @@ let myName;
 let myAge;
 ```
 
-Dans ces lignes, nous venons de créer deux variables nommées respectivement `myName` et `myAge`. Saisissez les maintenant dans la console de votre navigateur, ou dans la console au bas de la page (ou utilisez la [console de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) soit dans un onglet séparé). Après cela, essayez de créer une variable (ou deux) en choisissant vous même le nom.
+Dans ces lignes, nous venons de créer deux variables nommées respectivement `myName` et `myAge`. Saisissez les maintenant dans la console de votre navigateur, ou dans la console au bas de la page (ou utilisez la [console de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) soit dans un onglet séparé). Après cela, essayez de créer une variable (ou deux) en choisissant vous même le nom.
 
 ```html hidden
 <!doctype html>

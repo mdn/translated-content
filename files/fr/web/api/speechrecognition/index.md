@@ -19,7 +19,7 @@ _`SpeechRecognition` hérite également des propriétés de son interface parent
 - {{domxref("SpeechRecognition.grammars")}}
   - : Retourne et définit une collection d'objets {{domxref("SpeechGrammar")}} représentant les grammaires qui seront comprises par `SpeechRecognition`.
 - {{domxref("SpeechRecognition.lang")}}
-  - : Retourne et définit la langue de `SpeechRecognition`. Si elle n'est pas spécifiée, prend la valeur par défaut du HTML [`lang`](/fr/docs/Web/HTML/Element/html#lang) ou le paramètre de langue du user agent si celle-ci n'est pas défini non plus.
+  - : Retourne et définit la langue de `SpeechRecognition`. Si elle n'est pas spécifiée, prend la valeur par défaut du HTML [`lang`](/fr/docs/Web/HTML/Reference/Elements/html#lang) ou le paramètre de langue du user agent si celle-ci n'est pas défini non plus.
 - {{domxref("SpeechRecognition.continuous")}}
   - : Contrôle si la reconnaissance est continue, ou retourne seulement un seul résultat. Par défaut retourne un seul résultat (`false`.)
 - {{domxref("SpeechRecognition.interimResults")}}

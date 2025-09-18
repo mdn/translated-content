@@ -5,14 +5,13 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`301 Moved Permanently`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ永久に移動したことを示します。
 
 このステータスを受け取ったブラウザーは、 `Location` ヘッダーの URL のリソースを自動的にリクエストし、ユーザーを新しいページにリダイレクトします。
 このレスポンスを受け取った検索エンジンは、リダイレクトされたリソースに元の URL へのリンクを関連付け、 {{Glossary("SEO")}} ランキングを新しい URL に渡します。
 
-> **メモ:** [フェッチ標準](https://fetch.spec.whatwg.org/#http-redirect-fetch)では、ユーザーエージェントが {{HTTPMethod("POST")}} リクエストに対して `301` をレスポンスとして受け取った場合、 HTTP [仕様書](#仕様書)で認められているように、続くリダイレクトリクエストでは {{HTTPMethod("GET")}} メソッドを使用します。
+> [!NOTE]
+> [フェッチ標準](https://fetch.spec.whatwg.org/#http-redirect-fetch)では、ユーザーエージェントが {{HTTPMethod("POST")}} リクエストに対して `301` をレスポンスとして受け取った場合、 HTTP [仕様書](#仕様書)で認められているように、続くリダイレクトリクエストでは {{HTTPMethod("GET")}} メソッドを使用します。
 > ユーザーエージェントがリクエストを変更することを避けるため、 {{HTTPStatus("308", "308 Permanent Redirect")}} を使用してください。こちらは `308` レスポンスの後にメソッドを変更することは禁止されています。
 
 ## ステータス

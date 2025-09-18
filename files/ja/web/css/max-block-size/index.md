@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{CSSRef}}
-
 **`max-block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("writing-mode")}} で指定された書字方向とは逆の向きの要素の最大寸法を指定します。すなわち、書字方向が水平 (横書き) であれば、 `max-block-size` は {{cssxref("max-height")}} と等価になります。書字方向が垂直 (縦書き) であれば、 `max-block-size` は {{cssxref("max-width")}} と同じになります。
 
 もう一方の方向の最大長は、 {{cssxref("max-inline-size")}} プロパティを使用して指定します。
@@ -15,7 +13,7 @@ l10n:
 
 ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す [`writing-mode` の例](/ja/docs/Web/CSS/writing-mode#例)を参照してください。
 
-{{InteractiveExample("CSS Demo: max-block-size")}}
+{{InteractiveExample("CSS デモ: max-block-size")}}
 
 ```css interactive-example-choice
 max-block-size: 150px;
@@ -111,7 +109,8 @@ max-block-size: unset;
 | `horizontal-tb`, `lr`, `lr-tb`, `rl`, `rb`, `rb-rl`                       | {{cssxref("max-height")}}         |
 | `vertical-rl`, `vertical-lr`, `sideways-rl`, `sideways-lr`, `tb`, `tb-rl` | {{cssxref("max-width")}}          |
 
-> **メモ:** `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
+> [!NOTE]
+> `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
 
 > [!NOTE]
 > 書字方向の `lr`, `lr-tb`, `rl`, `rb`, `rb-tl` は {{Glossary("HTML")}} のコンテキストでは許可されなくなりました。 {{Glossary("SVG")}} 1.x コンテキストでのみ利用できる可能性があります。

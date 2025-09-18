@@ -12,10 +12,10 @@ Les règles qui sont décrites dans cet article concernent la mise en forme des 
 
 Pour les règles spécifiques à chaque langage, voir ces différents articles&nbsp;:
 
-- [Règles pour HTML](/fr/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [Règles pour CSS](/fr/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [Règles pour JavaScript](/fr/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [Règles pour les instructions en ligne de commande](/fr/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [Règles pour HTML](/fr/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
+- [Règles pour CSS](/fr/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
+- [Règles pour JavaScript](/fr/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
+- [Règles pour les instructions en ligne de commande](/fr/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
 
 ## Bonnes pratiques générales
 
@@ -39,7 +39,7 @@ Parmi les bonnes pratiques&nbsp;:
 - Utilisez du code «&nbsp;nature&nbsp;» dès que possible. N'incluez pas de code côté serveur ou de bibliothèques, de <i lang="en">frameworks</i> ou de préprocesseurs. Ils rendent le code moins portable et plus compliqué à comprendre.
 - Ne partez pas du principe que les personnes qui lisent ces exemples connaissent telle bibliothèque, tel <i lang="en">framework</i>, tel préprocesseur ou telle autre fonctionnalité non native. Ainsi, on utilisera par exemple des noms de classes qui ont du sens dans l'exemple plutôt que des noms de classes qui pourraient avoir du sens pour les utilisatrices et utilisateurs de BEM ou Bootstrap.
 - Écrivez votre code afin qu'il soit aussi propre et compréhensible que possible, même si ce n'est pas la formulation la plus efficace. Mieux vaut un exemple compréhensible qu'un exemple théoriquement optimal mais difficile à déchiffrer.
-- N'utilisez pas de mauvaises pratiques à des fins de concision (comme des éléments de présentation comme [`<big>`](/fr/docs/Web/HTML/Element/big) ou [`document.write()`](/fr/docs/Web/API/Document/write). Mieux vaut un exemple légèrement plus long et bien écrit qu'un exemple qui contient des tournures déconseillées.
+- N'utilisez pas de mauvaises pratiques à des fins de concision (comme des éléments de présentation comme [`<big>`](/fr/docs/Web/HTML/Reference/Elements/big) ou [`document.write()`](/fr/docs/Web/API/Document/write). Mieux vaut un exemple légèrement plus long et bien écrit qu'un exemple qui contient des tournures déconseillées.
 - Pour les démonstrations d'API, si vous utilisez plusieurs API ensemble, indiquez les API qui sont incluses et quelles fonctionnalités proviennent de chacune.
 
 ## Règles pour le formatage
@@ -130,7 +130,7 @@ Les blocs de code doivent être aussi longs que nécessaire, mais pas plus. On v
 
 #### Formatage du code dans le texte
 
-On utilisera la balise [`<code>`](/fr/docs/Web/HTML/Element/code) pour indiquer les noms de fonctions, de variables, de méthodes et les mots-clés.
+On utilisera la balise [`<code>`](/fr/docs/Web/HTML/Reference/Elements/code) pour indiquer les noms de fonctions, de variables, de méthodes et les mots-clés.
 Par exemple&nbsp;: «&nbsp;nous allons illustrer la fonction `totoTiti()`&nbsp;».
 
 **Les noms de méthodes devraient être suivies par une paire de parenthèses.** Ainsi, on écrira&nbsp;: `faireQuelqueChose()`. Les parenthèses permettent de distinguer les méthodes des autres termes relatifs au code.

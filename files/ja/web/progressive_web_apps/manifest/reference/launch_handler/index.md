@@ -2,10 +2,10 @@
 title: launch_handler
 slug: Web/Progressive_web_apps/Manifest/Reference/launch_handler
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: c60eaa2dd90fefcaaafdaca69f3185b46d399d8b
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `launch_handler` メンバーは、ウェブアプリケーションの起動を制御する値を定義します。現時点では、このメンバーには単一の値 `client_mode` しか設定できません。この値は、アプリケーションが起動された際に読み込むべきコンテキストを指定します。例えば、アプリケーションのインスタンスを含む既存のウェブアプリケーションクライアントであったり、または新しいウェブアプリケーションクライアントであったりです。これにより、将来的に `launch_handler` の値をさらに定義できる余地が残されています。
 
@@ -49,4 +49,4 @@ l10n:
 
 - [Launch Handler API: Control how your app is launched](https://developer.chrome.com/docs/web-platform/launch-handler/)
 - {{domxref("Window.launchQueue")}}
-- [Musicr 2.0](https://launch-handler.glitch.me/) デモアプリ
+- [Musicr 2.0](https://mdn.github.io/dom-examples/launch-handler/) デモアプリ

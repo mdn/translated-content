@@ -22,7 +22,7 @@ Le fichier HTML définit une page spéciale dans l'extension, appelée la page d
 
 La page Devtools est chargée lorsque les devtools du navigateur sont ouverts et déchargés lorsqu'ils sont fermés. Notez que, parce que la fenêtre devtools est associée avec un seul onglet, il est possible que plus d'une fenêtre devtools - donc plus d'une page devtools - existe en même temps.
 
-La page devtools n'a pas de DOM visible, mais peut inclure des sources JavaScript en utilisant les balises [`<script>`](/fr/docs/Web/HTML/Element/script). Les sources doivent être regroupées avec l'extension. Les sources ont accès à :
+La page devtools n'a pas de DOM visible, mais peut inclure des sources JavaScript en utilisant les balises [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script). Les sources doivent être regroupées avec l'extension. Les sources ont accès à :
 
 - Les API DOM normales accessibles via l'objet [`window`](/fr/docs/Web/API/Window) globale
 - Les mêmes [API WebExtension que dans les Scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)

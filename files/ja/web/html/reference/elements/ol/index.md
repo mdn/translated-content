@@ -10,7 +10,7 @@ l10n:
 
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;ol&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <ol>

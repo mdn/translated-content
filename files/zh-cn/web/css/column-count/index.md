@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f30eb42442f75f493ebb5ff1f119abf263592d54
 ---
 
-{{CSSRef}}
-
 **column-count** [CSS](/zh-CN/docs/Web/CSS) 属性将一个元素的内容分成指定数量的列。
 
 {{InteractiveExample("CSS Demo: column-count")}}

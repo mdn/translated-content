@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Server
 original_slug: Web/HTTP/Headers/Server
 ---
 
-{{ HTTPSidebar }}
-
 Le paramètre d'entête **`Server`** contient des informations à propos du système (ou sous-système) en place sur le serveur qui s'occupe de la requête.
 
 Il est préférable d'éviter les valeurs excessivement longues et/ou détaillées : elles peuvent révéler des détails internes qui pourraient rendre (un peu) plus facile une attaque et l'exploitation d'une éventuelle faille de sécurité.

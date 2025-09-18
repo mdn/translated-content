@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/GET
 original_slug: Web/HTTP/Methods/GET
 ---
 
-{{HTTPSidebar}}
-
 La **méthode HTTP GET** demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.
 
 <table class="properties">

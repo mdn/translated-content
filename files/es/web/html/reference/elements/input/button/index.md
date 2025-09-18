@@ -1,5 +1,5 @@
 ---
-title: <input type ="button">
+title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 original_slug: Web/HTML/Element/input/button
 ---

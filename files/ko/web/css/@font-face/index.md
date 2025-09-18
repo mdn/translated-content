@@ -3,8 +3,6 @@ title: "@font-face"
 slug: Web/CSS/@font-face
 ---
 
-{{CSSRef}}
-
 ## 요약(Summary)
 
 [CSS](/en-US/CSS) [at-rule](/en-US/CSS/At-rule) 인 `@font-face` 를 사용하여 웹페이지의 텍스트에 온라인폰트(online fonts)를 적용할 수 있다. `@font-face` 를 사용하여 웹페이지 제작자가 원하는 폰트를 사용할 수 있게함으로써, 컴퓨터에 설치된 폰트만을 사용해야했던 제약이 없어지게되었다. `@font-face` at-rule 은 CSS의 top-level에서 뿐 아니라, [CSS conditional-group at-rule](/en-US/CSS/At-rule#conditional_group_rules) 안에서도 사용될 수도 있다.

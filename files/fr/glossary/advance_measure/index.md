@@ -14,5 +14,5 @@ Ce terme est utilisé dans la définition d'un certain nombre d'unités de longu
 ## Voir aussi
 
 - [`<length>`](/fr/docs/Web/CSS/length)
-- [Guide : Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Guide : Valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [API TextMetrics](/fr/docs/Web/API/TextMetrics)

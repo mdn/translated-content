@@ -5,7 +5,7 @@ slug: Web/CSS/font-variant
 
 {{CSSRef}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font-variant`** permet de définir tous les paramètres typographiques pour une police de caractères.
+La [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font-variant`** permet de définir tous les paramètres typographiques pour une police de caractères.
 
 On peut aussi utiliser les valeurs de la propriété `font-variant` définies avec la spécification CSS de niveau 2 (première révision), `normal` ou `small-caps`, en utilisant la propriété raccourcie [`font`](/fr/docs/Web/CSS/font).
 

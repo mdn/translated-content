@@ -57,7 +57,7 @@ Vous pouvez utiliser l'élément {{HTMLElement("script")}} suivant pour dire au 
 ```
 
 > [!NOTE]
-> Pour plus de détails sur l'objectif de l'attribut **`crossorigin`**, voir [les attributs CORS](/fr/docs/Web/HTML/Attributes/crossorigin).
+> Pour plus de détails sur l'objectif de l'attribut **`crossorigin`**, voir [les attributs CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin).
 
 ## La gestion du SRI par les navigateurs
 

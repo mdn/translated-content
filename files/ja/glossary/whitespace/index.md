@@ -22,7 +22,7 @@ l10n:
 ## 関連情報
 
 - [空白文字](https://ja.wikipedia.org/wiki/空白文字)
-- [ホワイトスペースは HTML、CSS、そしてDOM 内でどう扱われるか](/ja/docs/Web/API/Document_Object_Model/Whitespace)
+- [ホワイトスペースは HTML、CSS、そしてDOM 内でどう扱われるか](/ja/docs/Web/CSS/CSS_text/Whitespace)
 - {{cssxref("white-space")}}
 - 仕様書
   - [ASCII whitespace spec](https://infra.spec.whatwg.org/#ascii-whitespace)

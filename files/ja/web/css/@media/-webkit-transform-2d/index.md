@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}} {{ Non-standard_header }}
+{{ Non-standard_header }}
 
 > [!NOTE]
 > すべてのブラウザーが、ベンダー接頭辞なしの [`transform`](/ja/docs/Web/CSS/transform#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-transform-2d` メディア特性に対応しています。メディアクエリーとして接頭辞や `2d` なしの `transform` に対応しているブラウザーはありません代わりに、 [`@supports (transform)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。

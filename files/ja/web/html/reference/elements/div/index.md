@@ -10,7 +10,7 @@ l10n:
 
 **`<div>`** は [HTML](/ja/docs/Web/HTML) の要素で、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる（例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などの何らかのレイアウトモデルが適用されるなど）までは、コンテンツやレイアウトには影響を与えません。
 
-{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;div&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <div class="warning">
@@ -46,7 +46,8 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-> **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や [CSS フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
+> [!NOTE]
+> `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や [CSS フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
 
 ## 使用上の注意
 

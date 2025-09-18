@@ -44,7 +44,7 @@ La méthode `concat` ne modifie pas `this` ni aucun des tableaux passés en para
 
 - Pour les références à des objets (et non les objets eux-mêmes)&nbsp;: `concat` copie ces références dans le nouveau tableau. Le tableau original et le nouveau tableau feront référence au même objet. C'est-à-dire que si un objet référencé est modifié, ces changements seront visibles tant dans le nouveau que dans les tableaux originaux.
 
-- Pour les chaînes, les booléens et les nombres « primitifs » (c'est-à-dire pas les objets [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) et [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number))&nbsp;: `concat` copie les valeurs des chaînes et des nombres dans le nouveau tableau. (voir [Les types de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures#les_types_de_données)).
+- Pour les chaînes, les booléens et les nombres « primitifs » (c'est-à-dire pas les objets [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) et [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number))&nbsp;: `concat` copie les valeurs des chaînes et des nombres dans le nouveau tableau. (voir [Les types de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures#les_types_de_données)).
 
 > [!NOTE]
 > La concaténation n'affectera pas les tableaux originaux. Par la suite, toute opération sur le nouveau tableau n'aura aucun effet sur les tableaux d'origine, et vice versa.

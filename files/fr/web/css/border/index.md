@@ -5,7 +5,7 @@ slug: Web/CSS/border
 
 {{CSSRef}}
 
-La propriété CSS **`border`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir les propriétés liées à la bordure. `border` peut être utilisée pour définir les valeurs de {{cssxref("border-width")}}, {{cssxref("border-style")}} et {{cssxref("border-color")}}.
+La propriété CSS **`border`** est [une propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir les propriétés liées à la bordure. `border` peut être utilisée pour définir les valeurs de {{cssxref("border-width")}}, {{cssxref("border-style")}} et {{cssxref("border-color")}}.
 
 {{InteractiveExample("CSS Demo: border")}}
 

@@ -1,17 +1,23 @@
 ---
 title: ::-moz-range-track
 slug: Web/CSS/::-moz-range-track
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
-Le pseudo-élément **`::-moz-range-track`** est un pseudo-élément spécifique à Mozilla et représente la piste d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-range-track`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente la _piste_ (c'est-à-dire la rainure) dans laquelle l'indicateur glisse dans un élément {{HTMLElement("input")}} de type `range`.
 
 > **Note :** `::-moz-range-track` n'aura aucun effet s'il est utilisé sur autre chose qu'un élément `<input type="range">`.
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+::-moz-range-track {
+  /* ... */
+}
+```
 
 ## Exemples
 
@@ -31,7 +37,7 @@ input[type="range"]::-moz-range-track {
 
 ### Résultat
 
-{{EmbedLiveSample("", 300, 50)}}
+{{EmbedLiveSample(Exemples", 300, 50)}}
 
 Une barre de progression mise en forme de cette façon devrait ressembler à&nbsp;:
 
@@ -39,7 +45,7 @@ Une barre de progression mise en forme de cette façon devrait ressembler à&nbs
 
 ## Spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -47,12 +53,12 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Voir aussi
 
-- Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`&nbsp;:
-  - [`::-moz-range-thumb`](/fr/docs/Web/CSS/::-moz-range-thumb) qui représente le curseur qui se déplace le long de la piste.
-  - [`::-moz-range-progress`](/fr/docs/Web/CSS/::-moz-range-progress) qui représente la partie inférieure de la piste (ce qui est déjà «&nbsp;couvert&nbsp;»).
+- Les pseudo-éléments utilisés par Gecko qui permettent de mettre en forme les autres parties des éléments {{HTMLElement("input")}} de type `range`&nbsp;:
+  - {{cssxref("::-moz-range-thumb")}} représente le curseur qui se déplace le long de la piste.
+  - {{cssxref("::-moz-range-progress")}} représente la partie inférieure de la rainure.
 
 - Les pseudo-éléments utilisés par les autres navigateurs&nbsp;:
-  - [`::-webkit-slider-runnable-track`](/fr/docs/Web/CSS/::-webkit-slider-runnable-track) pour WebKit/Blink (Safari, Chrome et Opera).
-  - [`::-ms-track`](/fr/docs/Web/CSS/::-ms-track) pour Internet Explorer/Edge.
+  - {{cssxref("::-webkit-slider-runnable-track")}}, pseudo-élément pris en charge par WebKit et Blink (Safari, Chrome et Opera).
 
-- [CSS-Tricks&nbsp;: Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [CSS-Tricks&nbsp;: Gérer des champs `input` de type `range` de façon compatible entre les navigateurs <sup>(angl.)</sup>](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode&nbsp;: Mettre en forme les pistes et curseurs <sup>(angl.)</sup>](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

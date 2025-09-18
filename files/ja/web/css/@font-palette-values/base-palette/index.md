@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7eff4df25ad857f65577930903797127ebabf991
 ---
 
-{{CSSRef}}
-
 **`base-palette`** は CSS の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、新しいパレットを作成する際に使用する定義済みパレットの名前またはインデックスを指定するために使用します。指定された `base-palette` が存在しない場合、インデックス 0 で定義されたパレットが使用されます。
 
 ## 構文

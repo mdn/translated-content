@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors
 original_slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** spécifie les parents pouvant intégrer une page en utilisant {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, ou {{HTMLElement("applet")}}.
 
 Définir cette directive à `'none'` est comparable à len-tête HTTP {{HTTPHeader("X-Frame-Options")}}`: deny` (aussi supporté sur les anciens navigateurs).
@@ -61,7 +59,7 @@ La \<source> peut être une des suivantes :
 
 - \<scheme-source>
   - : Un protocole tel que `http:` or `https:`. Les deux-points sont nécessaires et vous ne devez pas mettre de guillemets. Vous pouvez aussi spécifier des schémas de données bien que ce ne soit pas recommandé.
-    - `data:` Autorise [les URI `data:`](/fr/docs/Web/URI/Schemes/data) à être utilisées comme source de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie et certainement pas pour des scripts._
+    - `data:` Autorise [les URI `data:`](/fr/docs/Web/URI/Reference/Schemes/data) à être utilisées comme source de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie et certainement pas pour des scripts._
     - `mediastream:` permet aux [URI `mediastream:`](/fr/docs/Web/API/Media_Capture_and_Streams_API) d'être utilisées comme source de contenu.
     - `blob:` permet aux [URI `blob:`](/fr/docs/Web/API/Blob) d'être utilisées comme source de contenu.
     - `filesystem:` Allows [URI `filesystem:`](/fr/docs/Web/API/FileSystem) d'être utilisées comme source de contenu.

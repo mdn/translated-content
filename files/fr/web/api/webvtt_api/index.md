@@ -5,7 +5,7 @@ slug: Web/API/WebVTT_API
 
 {{DefaultAPISidebar("WebVTT")}}
 
-Le **format Web Video Text Tracks** (**WebVTT**) est un format qui permet d'afficher des pistes de texte qui varient avec le temps (comme des sous-titres) et qui est utilisé par l'élément HTML [`<track>`](/fr/docs/Web/HTML/Element/track). L'objectif principal des fichiers WebVTT est d'ajouter un calque de texte à une vidéo (représentée en HTML par [`<video>`](/fr/docs/Web/HTML/Element/video)). WebVTT est un format texte et les données doivent être encodées en [UTF-8](/fr/docs/Glossary/UTF-8). Les espaces et les tabulations peuvent être utilisés sans distinction. Il existe également une API qui permet de représenter ces pistes et les données nécessaires à la lecture du texte au bon moment.
+Le **format Web Video Text Tracks** (**WebVTT**) est un format qui permet d'afficher des pistes de texte qui varient avec le temps (comme des sous-titres) et qui est utilisé par l'élément HTML [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track). L'objectif principal des fichiers WebVTT est d'ajouter un calque de texte à une vidéo (représentée en HTML par [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)). WebVTT est un format texte et les données doivent être encodées en [UTF-8](/fr/docs/Glossary/UTF-8). Les espaces et les tabulations peuvent être utilisés sans distinction. Il existe également une API qui permet de représenter ces pistes et les données nécessaires à la lecture du texte au bon moment.
 
 ## Fichiers WebVTT
 
@@ -173,7 +173,7 @@ video::cue(b) {
 }
 ```
 
-Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`. De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
+Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`. De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Reference/Elements/b) auront la couleur `"peachpuff"`.
 
 Le fragment de HTML suivant s'occupe quant à lui de gérer l'affichage du média.
 
@@ -300,7 +300,7 @@ Ici le troisième.
 
 Un horodatage d'une réplique indique le moment où la réplique est affichée sur la vidéo. Il est composé d'un temps de début et d'un temps de fin. Le temps de fin doit être supérieur au temps de début et le temps de début doit être supérieur ou égal aux temps de début précédents. Les répliques peuvent avoir des horodatages qui se chevauchent.
 
-Si le fichier est utilisé pour des chapitres (c'est-à-dire des éléments [`<track>`](/fr/docs/Web/HTML/Element/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#attr-kind) vaut `chapters`), le fichier ne pourra pas contenir de durées qui se chevauchent.
+Si le fichier est utilisé pour des chapitres (c'est-à-dire des éléments [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Reference/Elements/track#attr-kind) vaut `chapters`), le fichier ne pourra pas contenir de durées qui se chevauchent.
 
 Chaque horodatage contient cinq composants&nbsp;:
 
@@ -605,7 +605,7 @@ En plus des trois échappements décrits ci-avant, il existe quatre autres écha
 
 ### Balises pour les textes des répliques
 
-Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. Toutefois, si le fichier WebVTT est utilisé dans un élément [`<track>`](/fr/docs/Web/HTML/Element/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#attr-kind) vaut `chapters`, les balises ne pourront pas être utilisées.
+Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. Toutefois, si le fichier WebVTT est utilisé dans un élément [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Reference/Elements/track#attr-kind) vaut `chapters`, les balises ne pourront pas être utilisées.
 
 - **Balise d'horodatage**
   - L'horodatage porté par cette balise doit être supérieur à celui du début de la réplique, supérieur aux horodatages des balises précédentes pour cette réplique, et inférieur à l'horodatage de fin. Le _texte actif_ correspond au texte situé entre l'horodatage et le prochain horodatage (ou l'horodatage de fin de la réplique s'il n'y en a plus d'autres). Tout texte situé avant le _texte actif_ correspondra à du _texte précédent_. Tout texte situé après le _texte actif_ correspondra à du _texte futur_. Cela permet de représenter des sous-titres comme ceux utilisés au karaoké.

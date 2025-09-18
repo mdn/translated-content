@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/407
 original_slug: Web/HTTP/Status/407
 ---
 
-{{HTTPSidebar}}
-
 Le code de réponse d'erreur HTTP **`407 Proxy Authentication Required`** indique que la requête n'a pas été appliquée à cause d'un manque d'authentification pour un [serveur mandataire (<i lang="en">proxy</i>)](/fr/docs/Glossary/Proxy_server) situé entre le navigateur et le serveur qui peut accéder à la ressource demandée.
 
 Ce code de statut est envoyé avec l'en-tête [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate) qui contient les informations décrivant la façon de s'authentifier correctement.
@@ -34,9 +32,9 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 ## Voir aussi
 
-- [La gestion de l'authentification en HTTP](/fr/docs/Web/HTTP/Authentication)
-- [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate)
-- [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)
+- [La gestion de l'authentification en HTTP](/fr/docs/Web/HTTP/Guides/Authentication)
+- [`WWW-Authenticate`](/fr/docs/Web/HTTP/Reference/Headers/WWW-Authenticate)
+- [`Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Authorization)
 - [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization)
 - [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate)
-- [`401`](/fr/docs/Web/HTTP/Status/401), [`403`](/fr/docs/Web/HTTP/Status/403)
+- [`401`](/fr/docs/Web/HTTP/Reference/Status/401), [`403`](/fr/docs/Web/HTTP/Reference/Status/403)

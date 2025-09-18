@@ -17,7 +17,7 @@ Cet élément pouvait être utilisé afin d'afficher un message explicatif, dest
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 

@@ -50,7 +50,7 @@ De plus, les fichiers des images vectorielles sont plus légers que les équival
 
 ## Qu'est-ce que SVG&nbsp;?
 
-[SVG](/fr/docs/Web/SVG) est un langage basé sur [XML](/fr/docs/Glossary/XML), utilisé pour décrire des images vectorielles. Il s'agit d'un langage à balises, comme HTML, où les différents éléments permettent de décrire les formes qu'on veut dans l'image et les effets qui s'appliquent à ces formes. SVG sert à baliser des graphiques et pas du contenu. SVG définit des éléments pour créer des formes simples, comme [`<circle>`](/fr/docs/Web/SVG/Element/circle) (pour dessiner un cercle) et [`<rect>`](/fr/docs/Web/SVG/Element/circle) (pour dessiner un rectangle), ainsi que des éléments pour des formes plus complexes comme [`<path>`](/fr/docs/Web/SVG/Element/path) et [`<polygon>`](/fr/docs/Web/SVG/Element/polygon). On aura d'autres éléments pour les fonctionnalités les plus avancées de SVG, comme [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix) (qui permet d'appliquer une transformation des couleurs à l'aide d'une matrice), [`<animate>`](/fr/docs/Web/SVG/Element/animate) (qui permet d'animer certaines parties de l'image), et [`<mask>`](/fr/docs/Web/SVG/Element/mask) (qui permet d'appliquer des masques par-dessus l'image).
+[SVG](/fr/docs/Web/SVG) est un langage basé sur [XML](/fr/docs/Glossary/XML), utilisé pour décrire des images vectorielles. Il s'agit d'un langage à balises, comme HTML, où les différents éléments permettent de décrire les formes qu'on veut dans l'image et les effets qui s'appliquent à ces formes. SVG sert à baliser des graphiques et pas du contenu. SVG définit des éléments pour créer des formes simples, comme [`<circle>`](/fr/docs/Web/SVG/Reference/Element/circle) (pour dessiner un cercle) et [`<rect>`](/fr/docs/Web/SVG/Reference/Element/circle) (pour dessiner un rectangle), ainsi que des éléments pour des formes plus complexes comme [`<path>`](/fr/docs/Web/SVG/Reference/Element/path) et [`<polygon>`](/fr/docs/Web/SVG/Reference/Element/polygon). On aura d'autres éléments pour les fonctionnalités les plus avancées de SVG, comme [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix) (qui permet d'appliquer une transformation des couleurs à l'aide d'une matrice), [`<animate>`](/fr/docs/Web/SVG/Reference/Element/animate) (qui permet d'animer certaines parties de l'image), et [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask) (qui permet d'appliquer des masques par-dessus l'image).
 
 Dans le fragment de code qui suit, on crée un cercle et un rectangle&nbsp;:
 
@@ -90,7 +90,7 @@ Dans cette section, nous allons voir différentes méthodes pour ajouter des ima
 
 ### La méthode rapide&nbsp;: l'élément `<img>`
 
-Pour intégrer une image SVG à l'aide d'un élément [`<img>`](/fr/docs/Web/HTML/Element/svg), il suffit de renseigner l'attribut `src` avec le chemin du fichier. Il faudra également inclure un attribut `height` et/ou `width` (voire les deux au cas où le fichier SVG n'a pas de proportions inhérentes). Si vous ne l'avez pas déjà fait, n'hésitez pas à lire [le guide sur les images en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) avant de poursuivre.
+Pour intégrer une image SVG à l'aide d'un élément [`<img>`](/fr/docs/Web/HTML/Element/svg), il suffit de renseigner l'attribut `src` avec le chemin du fichier. Il faudra également inclure un attribut `height` et/ou `width` (voire les deux au cas où le fichier SVG n'a pas de proportions inhérentes). Si vous ne l'avez pas déjà fait, n'hésitez pas à lire [le guide sur les images en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images) avant de poursuivre.
 
 ```html
 <img
@@ -103,7 +103,7 @@ Pour intégrer une image SVG à l'aide d'un élément [`<img>`](/fr/docs/Web/HTM
 #### Avantages
 
 - Une syntaxe rapide et similaire aux images matricielles, avec une prise en charge native de l'attribut `alt`.
-- L'image peut être transformée en hyperlien en imbriquant l'élément `<img>` au sein d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a).
+- L'image peut être transformée en hyperlien en imbriquant l'élément `<img>` au sein d'un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a).
 - Le fichier SVG peut être mis en cache par le navigateur, améliorant les temps de chargement pour les pages qui utiliseraient cette image par la suite.
 
 #### Inconvénients
@@ -114,7 +114,7 @@ Pour intégrer une image SVG à l'aide d'un élément [`<img>`](/fr/docs/Web/HTM
 
 #### Diagnostic et prise en charge des anciens navigateurs
 
-Pour les navigateurs qui ne prennent pas en charge SVG (IE8 et antérieur, Android 2.3 et antérieur), vous pouvez pointer l'attribut `src` vers un fichier PNG ou JPH et utiliser un attribut [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) (pris en charge par les navigateurs plus récents) pour faire référence à l'image SVG. Ainsi, seuls les navigateurs qui prennent en charge `srcset` chargeront le fichier SVG et les navigateurs plus anciens chargeront le fichier PNG&nbsp;:
+Pour les navigateurs qui ne prennent pas en charge SVG (IE8 et antérieur, Android 2.3 et antérieur), vous pouvez pointer l'attribut `src` vers un fichier PNG ou JPH et utiliser un attribut [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#srcset) (pris en charge par les navigateurs plus récents) pour faire référence à l'image SVG. Ainsi, seuls les navigateurs qui prennent en charge `srcset` chargeront le fichier SVG et les navigateurs plus anciens chargeront le fichier PNG&nbsp;:
 
 ```html
 <img
@@ -133,7 +133,7 @@ background-size: contain;
 
 Comme pour la méthode HTML avec l'élément `<img>`, l'insertion de fichier SVG dans des images d'arrière-plan CSS signifie que le contenu SVG ne peut pas être manipulé avec JavaScript (et obéit aux mêmes limitations pour le CSS).
 
-Si vos images SVG ne s'affichent pas du tout, il se peut que votre serveur ne soit pas configuré correctement. Dans ce cas, [cet article vous aidera à corriger ce qui doit l'être](/fr/docs/Web/SVG/Tutorial/Getting_Started#un_mot_sur_les_serveurs_web).
+Si vos images SVG ne s'affichent pas du tout, il se peut que votre serveur ne soit pas configuré correctement. Dans ce cas, [cet article vous aidera à corriger ce qui doit l'être](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#un_mot_sur_les_serveurs_web).
 
 ### Inclure du code SVG dans le document HTML
 
@@ -148,20 +148,20 @@ Vous pouvez également ouvrir le fichier SVG dans un éditeur de texte, copier l
 #### Avantages
 
 - Placer le SVG en incise permet d'économiser une requête HTTP et peut donc réduire légèrement le temps de chargement.
-- Vous pouvez affecter des classes et des identifiants aux éléments SVG afin de le mettre en forme à l'aide de CSS (directement depuis le SVG ou depuis les règles CSS qui s'appliquent au document). Vous pouvez en fait utiliser [tout attribut SVG de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation) comme une propriété CSS.
+- Vous pouvez affecter des classes et des identifiants aux éléments SVG afin de le mettre en forme à l'aide de CSS (directement depuis le SVG ou depuis les règles CSS qui s'appliquent au document). Vous pouvez en fait utiliser [tout attribut SVG de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation) comme une propriété CSS.
 - C'est la seule méthode qui permet d'utiliser les pseudo-classes CSS (comme `:focus`) et les animations CSS sur une image SVG.
-- Le contenu SVG peut être transformé en hyperlien en l'insérant dans un élément [`<a>`](/fr/docs/Web/HTML/Element/a).
+- Le contenu SVG peut être transformé en hyperlien en l'insérant dans un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a).
 
 #### Inconvénients
 
 - Cette méthode s'applique uniquement si le SVG est utilisé à un seul endroit. Dupliquer du contenu intégré de cette manière compliquera largement la maintenance.
 - Tout code SVG supplémentaire augmentera la taille du fichier HTML.
 - Le navigateur ne pourra pas mettre en cache le SVG en incise, comme il peut le faire pour les autres images. Aussi, toute page qui inclurait cette image en incise (dupliquée) ne serait pas chargée plus rapidement.
-- Un contenu de secours peut être inclus dans un élément [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), mais les navigateurs qui prennent en charge SVG téléchargeront quand même l'image de secours. C'est à vous d'estimer si le coût supplémentaire du chargement de contenu de secours est pertinent pour la prise en charge des anciens navigateurs.
+- Un contenu de secours peut être inclus dans un élément [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject), mais les navigateurs qui prennent en charge SVG téléchargeront quand même l'image de secours. C'est à vous d'estimer si le coût supplémentaire du chargement de contenu de secours est pertinent pour la prise en charge des anciens navigateurs.
 
 ### Inclure du contenu SVG dans une `<iframe>`
 
-Vous pouvez ouvrir des images SVG dans votre navigateur, comme pour des pages web. On peut aussi embarquer un document SVG au sein d'un élément `<iframe>`, comme nous le présentions [dans le guide sur l'intégration de contenu tiers](/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
+Vous pouvez ouvrir des images SVG dans votre navigateur, comme pour des pages web. On peut aussi embarquer un document SVG au sein d'un élément `<iframe>`, comme nous le présentions [dans le guide sur l'intégration de contenu tiers](/fr/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies).
 
 Voici un aperçu rapide&nbsp;:
 
@@ -182,7 +182,7 @@ Cette méthode n'est pas préconisée cependant.
 
 ## Mise en pratique&nbsp;: jouer avec SVG
 
-Dans cette section de mise en pratique, nous vous invitons à jouer avec SVG. Dans la section intitulée _Code éditable_, nous vous avons fourni du code SVG comme point de départ. Vous pouvez également consulter [la référence des éléments SVG](/fr/docs/Web/SVG/Element), afin de trouver d'autres éléments avec lesquels expérimenter. Cette section est complètement dédiée à l'expérimentation, n'hésitez pas.
+Dans cette section de mise en pratique, nous vous invitons à jouer avec SVG. Dans la section intitulée _Code éditable_, nous vous avons fourni du code SVG comme point de départ. Vous pouvez également consulter [la référence des éléments SVG](/fr/docs/Web/SVG/Reference/Element), afin de trouver d'autres éléments avec lesquels expérimenter. Cette section est complètement dédiée à l'expérimentation, n'hésitez pas.
 
 Si vous coincez et que votre code ne fonctionne pas, vous pouvez toujours utiliser le bouton _Réinitialiser_.
 
@@ -328,11 +328,11 @@ textarea.onkeyup = function () {
 
 Dans cet article, nous avons fourni un aperçu des images vectorielles et de SVG. Nous avons vu à quoi ils étaient utiles et comment inclure des images SVG dans des pages web. Cet article n'est pas un guide exhaustif pour tout savoir sur SVG, juste un premier niveau pour que vous puissiez reconnaître SVG si vous le recroisez par la suite. Vous pourrez trouver ci-après quelques articles plus approfondis à propos de SVG.
 
-Dans le dernier article de ce module, nous verrons [les images adaptatives (<i lang="en">responsive</i>)](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) en détails et comment HTML permet de tirer le meilleur parti des images sur différents appareils.
+Dans le dernier article de ce module, nous verrons [les images adaptatives (<i lang="en">responsive</i>)](/fr/docs/Web/HTML/Guides/Responsive_images) en détails et comment HTML permet de tirer le meilleur parti des images sur différents appareils.
 
 ## Voir aussi
 
-- [Un tutoriel SVG sur MDN](/fr/docs/Web/SVG/Tutorial/Getting_Started)
+- [Un tutoriel SVG sur MDN](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
 - [Les billets SVG de La Cascade](https://la-cascade.io/tags/svg)
 - [Un tutoriel (en anglais) de Sara Soueidan sur les images SVG adaptatives](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Une note du W3C (en anglais) quant aux bénéfices de SVG sur l'accessibilité](https://www.w3.org/TR/SVG-access/)

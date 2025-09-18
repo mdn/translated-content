@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 获取浏览器操作的标题。
 
 就像可以使用 {{WebExtAPIRef("browserAction.setTitle()")}} 设置每个标签页的标题一样，通过将标签页的 ID 传递给此函数，也可以检索特定标签页的标题。

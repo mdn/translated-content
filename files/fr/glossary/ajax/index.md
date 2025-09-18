@@ -17,7 +17,7 @@ Cette technique est tellement courante dans le développement web moderne que le
 
 ## Voir aussi
 
-- [Récupérer des données du serveur](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Récupérer des données du serveur](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
 - L'[`API Fetch`](/fr/docs/Web/API/Fetch_API)
 - [Applications monopage](/fr/docs/Glossary/SPA)
 - L'interface [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-group`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 단일 뷰 전환 스냅샷 그룹을 나타냅니다.
 

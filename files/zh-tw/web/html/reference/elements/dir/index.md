@@ -3,7 +3,7 @@ title: <dir>：目錄元素
 slug: Web/HTML/Reference/Elements/dir
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<dir>`** [HTML](/zh-TW/docs/Web/HTML) 元素被用來作為文件和/或資料夾的目錄容器，可能會由{{Glossary("user agent", "使用者代理")}}應用樣式和圖示。請不要使用這個已過時的元素；相反地，你應該使用 {{HTMLElement("ul")}} 元素來建立列表，包括文件列表。
 

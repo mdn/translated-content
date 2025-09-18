@@ -10,7 +10,8 @@ l10n:
 
 **`exitPointerLock()`** は {{domxref("Document")}} インターフェイスのメソッドで、以前 {{domxref("Element.requestPointerLock")}} でリクエストされたポインターロックを非同期に解放します。
 
-> **メモ:** **`exitPointerLock()`** メソッドは文書に対して呼び出されるのに対し、**`requestPointerLock()`** メソッドは要素に対して呼び出されます。
+> [!NOTE]
+> **`exitPointerLock()`** メソッドは文書に対して呼び出されるのに対し、**`requestPointerLock()`** メソッドは要素に対して呼び出されます。
 
 リクエストが成功したか失敗したかを追跡するには、 {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} および {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} イベントを待ち受けする必要があります。
 

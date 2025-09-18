@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a4ae225903c2784a3d74b43f311e05f208e42c91
 ---
 
-{{CSSRef}}
-
 **`font-display`** は {{cssxref("@font-feature-values")}} アットルールの記述子は、フォントフェイスがダウンロードされるかどうか、いつかに応じて、どのように表示されるかの既定値を設定します。 `@font-feature-values` ブロック内で `font-display` 記述子に値を設定すると、 `@font-face` アットルールの `font-display` 記述子の既定値を、同じ {{cssxref("@font-face/font-family", "font-family")}} 値を持つすべてのフォントに対して設定します。
 
 ## 構文

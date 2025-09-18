@@ -97,16 +97,16 @@ Chacune des valeurs se compose :
 ### Valeurs
 
 - `clip`
-  - : La valeur par défaut de cette propriété. Ce mot-clé indique qu'on tronque le texte à la limite de [la boîte de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model). La troncature peut donc arriver sur le milieu d'un caractère. Pour que celle-ci soit appliquée entre deux caractères, on devra utiliser la chaîne vide (`''`) comme valeur pour cette propriété.
+  - : La valeur par défaut de cette propriété. Ce mot-clé indique qu'on tronque le texte à la limite de [la boîte de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model). La troncature peut donc arriver sur le milieu d'un caractère. Pour que celle-ci soit appliquée entre deux caractères, on devra utiliser la chaîne vide (`''`) comme valeur pour cette propriété.
 - `ellipsis`
-  - : Ce mot-clé indique qu'on affiche une ellipse (`'…'`, `U+2026 Horizontal Ellipsis`) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, celle-ci est rognée.
+  - : Ce mot-clé indique qu'on affiche une ellipse (`'…'`, `U+2026 Horizontal Ellipsis`) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, celle-ci est rognée.
 - `fade` {{experimental_inline}}
   - : Ce mot-clé indique que le contenu qui dépasse est rogné avec un effet de dégradé en transparence. Au bout de la boîte, le contenu est totalement transparent.
 - `fade( <length> | <percentage> )` {{experimental_inline}}
   - : Cette fonction permet de rogner le contenu qui dépasse et d'appliquer un effet de dégradé en transparence. Au bout de la boîte, on a une transparence totale.
     L'argument passé à la fonction détermine la distance sur laquelle cet effet est appliqué. La valeur en pourcentage est relative à la largeur de la boîte. Les valeurs inférieures à `0` sont ramenées à `0`. Les valeurs supérieures à la largeur de la boîte sont écrétées à la largeur de la boîte.
 - `<string>` {{experimental_inline}}
-  - : Une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) utilisée pour représentée le texte rogné. La chaîne est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne choisie, celle-ci est rognée.
+  - : Une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) utilisée pour représentée le texte rogné. La chaîne est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne choisie, celle-ci est rognée.
 
 ## Définition formelle
 

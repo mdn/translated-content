@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed
 original_slug: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 ---
 
-{{HTTPSidebar}}
-
 ## Razón
 
 ```
