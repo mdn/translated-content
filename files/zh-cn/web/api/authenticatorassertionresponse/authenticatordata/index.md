@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-{{jsxref("ArrayBuffer")}}。其 {{jsxref("ArrayBuffer.byteLength")}} 至少为 37 字节，且其中包含[认证器数据](/zh-CN/docs/Web/API/Web_Authentication_API/Authenticator_data)中解释的数据结构。
+{{jsxref("ArrayBuffer.byteLength")}} 至少为 37 字节，且其中包含[认证器数据](/zh-CN/docs/Web/API/Web_Authentication_API/Authenticator_data)中解释的数据结构的 {{jsxref("ArrayBuffer")}}。
 
 ## 示例
 
