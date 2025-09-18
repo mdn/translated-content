@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-**`DOMQuad`** 接口的 **`p2`** 属性包含一个 {{domxref("DOMPoint")}} 对象，可用于表示 `DOMQuad` 的四个角之一。当从 {{domxref("DOMQuad.fromRect_static", "DOMQuad.fromRect()")}} 创建时，它就是点 (x + width, y)。
+**`DOMQuad`** 接口的 **`p2`** 属性包含用于表示 `DOMQuad` 的四个角之一的 {{domxref("DOMPoint")}} 对象。当从 {{domxref("DOMQuad.fromRect_static", "DOMQuad.fromRect()")}} 创建时，它就是点 (x + width, y)。
 
 ## 值
 
@@ -19,7 +19,7 @@ l10n:
 - {{domxref("DOMPoint.z")}}：深度坐标。
 - {{domxref("DOMPoint.w")}}：透视值。默认值为 1.0。
 
-这些值中的每一个都是**无限制的**，这意味着它们可以是无穷大或非数（即，其值可能是 {{jsxref("NaN")}} 或 {{jsxref("Infinity", "±无穷大")}}）。
+这些值中的每一个都是**无限制的**，这意味着它们可以是无穷大或非数（即，其值可能是 {{jsxref("NaN")}} 或 {{jsxref("Infinity", "±Infinity")}}）。
 
 ## 规范
 
