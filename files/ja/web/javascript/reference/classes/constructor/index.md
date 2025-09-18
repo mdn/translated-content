@@ -194,11 +194,11 @@ const person = new Person();
 person.introduce(); // こんにちは、私は名無し
 ```
 
-コンストラクターはリテラル名でなければなりません。[計算プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名)はコンストラクターにはなれません。
+コンストラクターはリテラル名でなければなりません。[算出プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#算出プロパティ名)はコンストラクターにはなれません。
 
 ```js
 class Foo {
-  // これは計算プロパティ名です。コンストラクターとしてピックアップされることはありません。
+  // これは算出プロパティ名です。コンストラクターとしてピックアップされることはありません。
   ["constructor"]() {
     console.log("called");
     this.a = 1;
