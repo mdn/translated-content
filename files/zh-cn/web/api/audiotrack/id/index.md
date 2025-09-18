@@ -14,7 +14,7 @@ l10n:
 
 ## 值
 
-字符串。该字符串可用于调用 {{domxref("AudioTrackList")}}（如媒体元素的 {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} 属性）的 {{domxref("AudioTrackList.getTrackById", "getTrackById()")}} 方法。
+用于标识轨道的字符串。该字符串可用于调用 {{domxref("AudioTrackList")}}（如媒体元素的 {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} 属性指示的轨道列表）上的 {{domxref("AudioTrackList.getTrackById", "getTrackById()")}} 方法。
 
 ## 规范
 
