@@ -77,7 +77,7 @@ word-spacing: unset;
 
 易读的 `word-spacing` 必须根据具体情况逐一确定，因为不同的字体族具有不同的字符宽度。没有一个通用的数值能够保证所有字体族都能自动保持良好的可读性。
 
-- [MDN 了解 WCAG，第 1.4 条指南解读](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#指南_1.4_让用户更容易看见和听到内容_包括将前景与背景分离)
+- [MDN 理解 WCAG，第 1.4 条指南解读](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#指南_1.4_让用户更容易看见和听到内容_包括将前景与背景分离)
 - [理解成功准则 1.4.8 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 示例
