@@ -2,7 +2,7 @@
 title: -webkit-border-before
 slug: Web/CSS/-webkit-border-before
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 {{Non-standard_header}}
@@ -58,10 +58,7 @@ l10n:
 
 ## 形式语法
 
-```plain
--webkit-border-before =
-  <'border-width'> || <'border-style'> || <color>
-```
+{{CSSSyntaxRaw(`-webkit-border-before = <'border-width'> || <'border-style'> || <color>`)}}
 
 ## 示例
 
