@@ -84,7 +84,7 @@ Ce rôle correspond à l'élément {{HTMLElement('article')}} en HTML et, si pos
 
 ## Voir aussi
 
-- [ARIA&nbsp; rôle `feed`](/fr/docs/Web/Accessibility/ARIA/Roles/feed_role)
-- [ARIA&nbsp; rôle `section`](/fr/docs/Web/Accessibility/ARIA/Roles/section_role)
+- [ARIA&nbsp;: rôle `feed`](/fr/docs/Web/Accessibility/ARIA/Roles/feed_role)
+- [ARIA&nbsp;: rôle `section`](/fr/docs/Web/Accessibility/ARIA/Roles/section_role)
 - L'élément HTML {{HTMLElement('article')}}
 - L'entrée du glossaire {{Glossary("RSS")}}
