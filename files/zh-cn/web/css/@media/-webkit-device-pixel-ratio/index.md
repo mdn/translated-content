@@ -31,7 +31,7 @@ l10n:
   /* … */
 }
 
-/* 类似地： */
+/* 类似于： */
 @media (-webkit-max-device-pixel-ratio: 2) {
   /* … */
 }
