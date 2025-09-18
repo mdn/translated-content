@@ -114,13 +114,13 @@ document.getElementById("hiddenAlertContainer").innerHTML =
 
 ## Voir aussi
 
-- [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-- [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
-- [Rôle ARIA `log`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
-- [Rôle ARIA `marquee`](/fr/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [Rôle ARIA `status`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
-- [Rôle ARIA `timer`](/fr/docs/Web/Accessibility/ARIA/Roles/timer_role)
-- [Rôle ARIA `alertdialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
+- L'attribut ARIA [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live)
+- L'attribut ARIA [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+- [ARIA&nbsp; rôle `log`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
+- [ARIA&nbsp; rôle `marquee`](/fr/docs/Web/Accessibility/ARIA/Roles/marquee_role)
+- [ARIA&nbsp; rôle `status`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
+- [ARIA&nbsp; rôle `timer`](/fr/docs/Web/Accessibility/ARIA/Roles/timer_role)
+- [ARIA&nbsp; rôle `alertdialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [Régions dynamiques ARIA](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 - [Prise en charge du rôle ARIA `alert`, The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/aria-alert-support/)
 - [Exemple d'utilisation d'`alert` <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/alert/examples/alert/)
