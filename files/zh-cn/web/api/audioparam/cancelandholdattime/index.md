@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Audio API")}}
 
-{{domxref("AudioParam")}} 接口的 **`cancelAndHoldAtTime()`** 方法用于取消所有计划在未来的对 `AudioParam` 的更改，并将取值保持在给定时间点，直到使用其他方法进行进一步更改。
+{{domxref("AudioParam")}} 接口的 **`cancelAndHoldAtTime()`** 方法用于取消在某一时间点后所有对 `AudioParam` 的更改，使其取值一直保持与该时间点的取值相同，直到再调用其他方法对该值进行修改。
 
 ## 语法
 
