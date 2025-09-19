@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`word-spacing`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置单词之间以及标签之间的空格长度。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`word-spacing`** 用于设置单词之间以及标签之间的空格长度。
 
 {{InteractiveExample("CSS 演示：word-spacing")}}
 
