@@ -2,7 +2,7 @@
 title: -moz-float-edge
 slug: Web/CSS/-moz-float-edge
 l10n:
-  sourceCommit: 4767ebffd07b627275ae9cac6863b153e3e6746d
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
 {{Non-standard_header}}{{Deprecated_Header}}
@@ -22,7 +22,7 @@ l10n:
 -moz-float-edge: unset;
 ```
 
-### 取值
+### 值
 
 - `content-box`
   - : 高度和宽度属性包括内容，但不包括内边距、边框或外边距。
@@ -35,10 +35,7 @@ l10n:
 
 ## 形式语法
 
-```plain
--moz-float-edge =
-  content-box | margin-box
-```
+{{CSSSyntaxRaw(`-moz-float-edge = content-box | margin-box`)}}
 
 ## 示例
 
@@ -56,7 +53,7 @@ l10n:
 .box {
   display: block;
   height: 5px;
-  margin: 0.5em auto 0.5em auto;
+  margin: 0.5em auto;
   color: gray;
   -moz-float-edge: margin-box;
   box-sizing: border-box;
