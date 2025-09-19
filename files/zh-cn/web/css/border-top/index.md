@@ -93,7 +93,7 @@ border-top: unset;
 - `<br-width>`
   - : 参见 {{cssxref("border-top-width")}}。
 - `<br-style>`
-  - : 参阅 {{cssxref("border-top-style")}}。
+  - : 参见 {{cssxref("border-top-style")}}。
 - {{cssxref("&lt;color&gt;")}}
   - : 参阅 {{cssxref("border-top-color")}}。
 
