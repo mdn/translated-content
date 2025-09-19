@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`-webkit-device-pixel-ratio`** 是一个非标准的布尔型 [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#media_features)，它是标准 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性的替代方案。
+[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#media_features) **`-webkit-device-pixel-ratio`** 是一个非标准的布尔型，它是标准 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性的替代方案。
 
 > [!NOTE]
 > 如果可以，请改用标准的 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性查询。虽然此前缀媒体特性是 WebKit 的特有功能，但其他浏览器引擎也可能支持它。详见下文的[浏览器兼容性](#浏览器兼容性)。
