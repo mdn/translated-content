@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-**`-moz-orient`** [CSS](/zh-CN/docs/Web/CSS) 属性用于指定应用该属性的元素的方向。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`-moz-orient`** 用于指定应用该属性的元素的方向。
 
 ## 语法
 
