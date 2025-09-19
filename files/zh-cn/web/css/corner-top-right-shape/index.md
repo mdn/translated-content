@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`corner-top-right-shape`** [CSS](/zh-CN/docs/Web/CSS) 属性用于指定盒子右上角在 {{cssxref("border-radius")}} 区域内的形状。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`corner-top-right-shape`** 用于指定盒子右上角在 {{cssxref("border-radius")}} 区域内的形状。
 
 如需了解角形状行为的完整说明和更多示例，请参见 {{cssxref("corner-shape")}} 简写属性页面。
 
