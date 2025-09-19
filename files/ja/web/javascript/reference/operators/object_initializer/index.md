@@ -64,8 +64,8 @@ o = {
 
 オブジェクトリテラル構文は **J**ava**S**cript **O**bject **N**otation ([JSON](/ja/docs/Glossary/JSON)) とは異なります。両者は似ていますが、違いがあります。
 
-- JSON は、`"property": value` 構文を使用するプロパティ定義*のみ*を許可します。プロパティ名は二重引用符で囲まなければなりません。そして、その定義を略記にすることはできません。計算されたプロパティ名も許されません。
-- JSON オブジェクトプロパティの値で取りうるのは、文字列、数値、`true`、`false`、`null`、配列、他の JSON オブジェクトのみです。これはJSONがメソッドや、プレーンでないオブジェクト、例えば [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) や [`RegExp`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp) を表現できないことを意味しています。
+- JSON は、`"property": value` 構文を使用するプロパティ定義*のみ*を許可します。プロパティ名は二重引用符で囲まなければなりません。そして、その定義を略記にすることはできません。算出プロパティ名も許されません。
+- JSON オブジェクトプロパティの値で取りうるのは、文字列、数値、`true`、`false`、`null`、配列、他の JSON オブジェクトのみです。これは JSON がメソッドや、プレーンでないオブジェクト、例えば [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) や [`RegExp`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp) を表現できないことを意味しています。
 - JSON では、 `"__proto__"` は通常のプロパティキーです。オブジェクトリテラルでは、[オブジェクトのプロトタイプを設定します](#プロトタイプセッター)。
 
 JSON はオブジェクトリテラル構文の _厳格なサブセット_ であり、有効な JSON テキストはすべてオブジェクトリテラルとして解釈でき、構文エラーを発生させないことを意味しています。唯一の例外は、オブジェクトリテラル構文では `__proto__` キーの重複を禁止していることです。これは [`JSON.parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) には適用されません。後者は `__proto__` を通常のプロパティのように扱い、最後に出現した値をプロパティの値として導きます。オブジェクトリテラルではオブジェクトのプロトタイプを設定し、 JSON では通常のプロパティを設定します。
@@ -197,14 +197,14 @@ const o = {
 
 メソッドの詳細や例については、[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)をご覧ください。
 
-### 計算プロパティ名
+### 算出プロパティ名
 
-オブジェクト初期化子構文でも、計算プロパティ名に対応します。角括弧 `[]` の中に式を記述することができ、それが計算されてプロパティ名として使用されます。これは、プロパティの読み込みと設定に使用したことのある、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)構文のブラケット表記を彷彿とさせるものです。
+オブジェクト初期化子構文でも、算出プロパティ名に対応します。角括弧 `[]` の中に式を記述することができ、それが計算されてプロパティ名として使用されます。これは、プロパティの読み込みと設定に使用したことのある、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)構文のブラケット表記を彷彿とさせるものです。
 
 今では、オブジェクトリテラルでも同様な構文を使うことができます。
 
 ```js
-// 計算プロパティ名
+// 算出プロパティ名
 let i = 0;
 const a = {
   [`foo${++i}`]: i,

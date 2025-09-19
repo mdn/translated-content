@@ -10461,6 +10461,12 @@
       "tristantheb"
     ]
   },
+  "Web/API/CSSOM_view_API/Coordinate_systems": {
+    "modified": "2019-04-06T13:17:41.411Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
   "Web/API/CSSRuleList": {
     "modified": "2019-03-23T23:28:18.630Z",
     "contributors": [
@@ -15759,13 +15765,6 @@
       "Jeremie",
       "loella16",
       "P45QU10U"
-    ]
-  },
-  "Web/API/KeyframeEffect/KeyframeEffect": {
-    "modified": "2019-03-23T22:28:20.379Z",
-    "contributors": [
-      "SphinxKnight",
-      "HereComesJuju"
     ]
   },
   "Web/API/Location": {
@@ -21672,12 +21671,6 @@
   },
   "Web/CSS/CSSOM_view": {
     "modified": "2020-10-15T21:47:55.001Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSSOM_view/Coordinate_systems": {
-    "modified": "2019-04-06T13:17:41.411Z",
     "contributors": [
       "SphinxKnight"
     ]

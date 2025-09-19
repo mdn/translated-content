@@ -3874,8 +3874,6 @@
 /fr/docs/Web/API/API_IndexedDB/Using_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /fr/docs/Web/API/API_fichier_systeme	/fr/docs/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/AbstractWorker	/fr/docs/Web/API/Worker
-/fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
-/fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/AnimationEvent.animationName	/fr/docs/Web/API/AnimationEvent/animationName
 /fr/docs/Web/API/AnimationEvent.elapsedTime	/fr/docs/Web/API/AnimationEvent/elapsedTime
 /fr/docs/Web/API/AnimationEvent.pseudoElement	/fr/docs/Web/API/AnimationEvent/pseudoElement
@@ -3988,8 +3986,6 @@
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C	/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_ed1f254ab62fd5902b28ca4eb72ca773
 /fr/docs/Web/API/DoubleRange	/fr/docs/Web/API/MediaTrackConstraints
-/fr/docs/Web/API/EffectTiming	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
-/fr/docs/Web/API/EffectTiming/delay	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/Web/API/Element.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/Element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/Element.appendChild	/fr/docs/Web/API/Node/appendChild
@@ -4603,7 +4599,7 @@
 /fr/docs/Web/CSS/At-rule	/fr/docs/Web/CSS/CSS_syntax/At-rule
 /fr/docs/Web/CSS/Aural	/fr/docs/conflicting/Web/CSS/@media
 /fr/docs/Web/CSS/Block_formatting_context	/fr/docs/Web/CSS/CSS_display/Block_formatting_context
-/fr/docs/Web/CSS/CSSOM_View/Systèmes_de_coordonnées	/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems
+/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems	/fr/docs/Web/API/CSSOM_view_API/Coordinate_systems
 /fr/docs/Web/CSS/CSS_:_la_propriété_animation-iteration-count	/fr/docs/Web/CSS/animation-iteration-count
 /fr/docs/Web/CSS/CSS_:_la_propriété_animation-name	/fr/docs/Web/CSS/animation-name
 /fr/docs/Web/CSS/CSS_:_la_propriété_animation-play-state	/fr/docs/Web/CSS/animation-play-state
@@ -4728,6 +4724,7 @@
 /fr/docs/Web/CSS/CSS_Variables	/fr/docs/Web/CSS/CSS_cascading_variables
 /fr/docs/Web/CSS/CSS_animations/Tips	/fr/docs/Web/API/Web_Animations_API/Tips
 /fr/docs/Web/CSS/CSS_charsets	/fr/docs/Web/CSS/CSS_syntax
+/fr/docs/Web/CSS/CSS_colors/Color_picker_tool	/fr/docs/Web/CSS/CSS_colors/Color_picker
 /fr/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/fr/docs/Glossary/Flexbox
 /fr/docs/Web/CSS/CSS_flow_layout	/fr/docs/Web/CSS/CSS_display/Flow_layout
 /fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow	/fr/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
@@ -7640,7 +7637,6 @@
 /fr/docs/conflicting/Web/API/IDBTransaction/complete_event	/fr/docs/Web/API/IDBTransaction/complete_event
 /fr/docs/conflicting/Web/API/IDBTransaction/error_event	/fr/docs/Web/API/IDBTransaction/error_event
 /fr/docs/conflicting/Web/API/IndexedDB_API	/fr/docs/Web/API/IndexedDB_API
-/fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/conflicting/Web/API/MediaTrackConstraints	/fr/docs/Web/API/MediaTrackConstraints
 /fr/docs/conflicting/Web/API/Navigator	/fr/docs/Web/API/Navigator
 /fr/docs/conflicting/Web/API/Node	/fr/docs/Web/API/Node

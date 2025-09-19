@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
 
-La [function](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme {{cssxref("attr")}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style. La notation fonctionnelle `url()` correspond au type de donnée CSS `<url>`.
+La [fonction](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme {{cssxref("attr")}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style. La notation fonctionnelle `url()` correspond au type de donnée CSS `<url>`.
 
 > [!NOTE]
 > Il y a une différence entre un {{Glossary("URI")}} et une {{Glossary("URL")}}. Un URI identifie une ressource. Une URL est un type d'URI qui décrit _l'emplacement_ d'une ressource. Un URI peut être une URL ou un nom ({{Glossary("URN")}}) d'une ressource.
