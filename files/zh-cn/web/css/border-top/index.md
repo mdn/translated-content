@@ -95,7 +95,7 @@ border-top: unset;
 - `<br-style>`
   - : 参见 {{cssxref("border-top-style")}}。
 - {{cssxref("&lt;color&gt;")}}
-  - : 参阅 {{cssxref("border-top-color")}}。
+  - : 参见 {{cssxref("border-top-color")}}。
 
 ## 形式定义
 
