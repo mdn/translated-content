@@ -3,42 +3,30 @@ title: :-moz-only-whitespace
 slug: Web/CSS/:-moz-only-whitespace
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{Non-standard_header}}
 
 > [!NOTE]
-> Dans la spécification CSS4 Selectors, le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
+> Dans la spécification [CSS4 Selectors <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-only-whitespace`** correspond aux éléments qui n'ont aucun nœud enfant, aux nœuds texte vides ou aux nœuds texte ne possédant que des espaces.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-only-whitespace`** est un [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui correspond aux éléments qui n'ont aucun nœud enfant, aux nœuds texte vides ou aux nœuds texte ne possédant que des espaces.
 
 ## Syntaxe
 
-{{CSSSyntax}}
+```css
+:-moz-only-whitespace {
+  /* ... */
+}
+```
 
 ## Exemples
 
 ### HTML
 
-```html
-<div></div>
+```html-nolint
+<div> </div>
 ```
 
 ### CSS
-
-```css hidden
-:root {
-  overflow: hidden;
-  max-width: 100vw;
-  max-height: 100vh;
-}
-
-div {
-  background-color: #ccc;
-  box-sizing: border-box;
-  height: 100vh;
-  min-height: 16px;
-  min-height: 1rem;
-}
-```
 
 ```css
 div {
@@ -56,7 +44,7 @@ div {
 
 ## Spécifications
 
-{{Specifications}}
+Définie brièvement comme `:blank` dans [Selectors Level 4 <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#changes-2018-02), mais cette fonctionnalité a ensuite été fusionnée avec {{CSSxRef(":empty")}} et {{CSSxRef(":blank")}} a été redéfinie pour signifier {{HTMLElement("input")}} vide.
 
 ## Compatibilité des navigateurs
 
@@ -64,5 +52,5 @@ div {
 
 ## Voir aussi
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}}
 - {{CSSxRef(":empty")}}

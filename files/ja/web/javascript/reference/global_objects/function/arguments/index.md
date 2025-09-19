@@ -1,13 +1,15 @@
 ---
 title: Function.prototype.arguments
+short-title: arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
-> **メモ:** {{jsxref("Function")}} オブジェクトの `arguments` プロパティは非推奨です。推奨される `arguments` オブジェクトへのアクセス方法は、関数内で利用できる変数 {{jsxref("Functions/arguments", "arguments")}} を利用することです。
+> [!NOTE]
+> {{jsxref("Function")}} オブジェクトの `arguments` プロパティは非推奨です。推奨される `arguments` オブジェクトへのアクセス方法は、関数内で利用できる変数 {{jsxref("Functions/arguments", "arguments")}} を利用することです。
 
 **`arguments`** は {{jsxref("Function")}} インスタンスのアクセサープロパティで、この関数に渡された引数を返します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数では、 `arguments` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
 

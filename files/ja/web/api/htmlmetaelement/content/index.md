@@ -20,7 +20,7 @@ l10n:
 ### meta 要素の内容の読み取り
 
 次の例は `name` 属性に `keywords` という値を格納した `<meta>` 要素を問い合わせるものです。
-`content` の値がコンソールにログ出力され、文書の [keywords](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている標準メタデータ名) が表示されます。
+`content` の値がコンソールにログ出力され、文書の [keywords](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている_meta_name) が表示されます。
 
 ```js
 // <meta name="keywords" content="documentation, HTML, web"> があるとします
@@ -31,7 +31,7 @@ console.log(meta.content);
 
 ### 内容付きの meta 要素の作成
 
-次の例は、新しい `<meta>` 要素を `name` 属性に [`description`](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている標準メタデータ名) に設定して作成します。
+次の例は、新しい `<meta>` 要素を `name` 属性に [`description`](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている_meta_name) に設定して作成します。
 `content` 属性に文書の説明を設定し、文書の `<head>` に追加されます。
 
 ```js

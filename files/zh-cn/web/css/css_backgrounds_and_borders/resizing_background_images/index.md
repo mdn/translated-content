@@ -3,8 +3,6 @@ title: 调整背景图片的大小
 slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 ---
 
-{{CSSRef}}
-
 CSS 属性 **{{cssxref("background-size")}}** 可以用于调整元素的背景图片大小，通过指定图像的宽度和/或高度，覆盖默认的以全尺寸平铺图像的行为。通过这样做，你可以根据需要放大或缩小图像。
 
 ## 铺开大图像

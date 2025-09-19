@@ -1,11 +1,11 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-カスタムカウンターのスタイルを定義する際、 **`range`** 記述子により、スタイルが適用されるカウンター値の範囲を指定することができます。カウンターの値が指定された範囲の外にある場合、代替スタイルがそのマーカーの表現を構築するために使用されます。
+**`range`** 記述子を使用すると、作成者は、 {{cssxref("@counter-style")}} アットルールを使用して独自のカウンタースタイルを定義する際に、スタイルを適用するカウンター値の 1 つ以上の範囲を指定することができます。 `range` 記述子が含まれている場合、定義されたカウンターは、設定された範囲内の値にのみ使用されます。カウンター値が指定された範囲外の場合、そのマーカーの表現を構築するには代替スタイルが使用されます。
 
 ## 構文
 
@@ -30,24 +30,37 @@ range:
 
 ### 値
 
-- `auto`
-  - : 範囲はカウンターシステムによって決まります。
-    - cyclic, numeric, fixed の各システムでは、範囲は負の無限大から正の無限大までです。
-    - alphabetic および symbolic システムでは、範囲は 1 から正の無限大までです。
-    - additive システムでは、範囲は 0 から正の無限大までです。
-    - extends システムでは、範囲は拡張されたシステムのために自動的に生成されます。 複雑な定義済みスタイル（§7 複雑な定義済みカウンタースタイル）を拡張する場合、範囲はスタイルの定義範囲になります。
+値は、それぞれ下限と上限を含む、カンマで区切られた範囲のリスト、またはキーワード `auto` です。
 
-- `[ [ | infinite ]{2} ]#`
-  - : カンマで区切られた範囲のリストを定義します。個々の範囲については、最初の値が下限、 2 番目の値が上限となります。範囲は包括的であり、常に下限と上限の両方の数値を含むことを意味します。範囲の最初の値として無限大が使用された場合は負の無限大を表し、 2 番目の値として使われた場合は正の無限大を表します。カウンタースタイルの範囲は，リストで定義されたすべての範囲を合わせたものとなります。
-    いずれかの範囲の下限が上限より大きい場合は、その記述子全体は無効となり、無視されます。
+- `auto`
+  - : カウンター {{cssxref("@counter-style/system","system")}} で表現できる数値のセット全体。これらの範囲の値は、カウンターシステムによって異なります。
+    - `cyclic`, `numeric`, `fixed` の各システムでは、範囲は負の `infinity` から正の `infinity` までです。
+    - `alphabetic` および `symbolic` システムでは、範囲は `1` から正の `infinity` までです。
+    - `additive` システムでは、範囲は `0` から正の `infinity` までです。
+    - `extend` をシステム拡張に使用する場合、その範囲は、拡張されるシステムに対して `auto` が生成する範囲となり、日本語、韓国語、中国語、エチオピア語などの複雑な定義済みスタイルの拡張も含まれます。
+
+- `[ [ <integer> | infinite ]{2} ]#`
+  - : カンマで区切られた範囲のリスト内の各範囲には、2 つの値が含まれ、それぞれは {{cssxref("integer")}} またはキーワード `infinite` のいずれかです。 `infinite` が範囲の最初の値として使用されている場合、それは負の無限大を表します。2 つ目の値として使用されている場合、それは正の無限大を表します。それぞれの範囲の最初の値は範囲の下限であり、2 つ目の値は上限です（上限を含む）。リスト内のいずれかの範囲の下限が上限よりも大きい場合、その `range` 記述子全体が不正となり、無視されます。
 
 ## 解説
 
-range 記述子の値は、 auto またはカンマで区切られた下限値と上限値を整数で指定することができます。
+`range` 記述子の値は、`auto`、または負または正の整数、あるいはキーワード `infinite` を使用して指定した、下限と上限の範囲をカンマで区切ったリストのいずれかです。
 
-auto の場合、 cyclic, numeric, fixed システムでは、負の無限大から正の無限大までの範囲になります。 alphabetic および symbolic システムでは， 1 から正の無限大の範囲になります。 additive システムでは、 auto は 0 から正の無限大の範囲になります。 extends システムの場合，範囲は auto が拡張システムに対して生成するすべてのものになります。
+### `auto` を理解する
 
-range を整数で指定する場合、無限大を表す値として `infinite` を使用することができます。もし _infinite_ が範囲の最初の値として指定された場合、負の無限大として解釈されます。上限値として使われた場合は、正の無限大とみなされます。
+値が `auto` に設定されている場合、範囲はカウンターシステムの既定の範囲になります。`system` が `cyclic`、`numeric`、`fixed` のいずれか場合、範囲は負の無限大から正の無限大になります。`system` が `alphabetic` または `symbolic` の場合、範囲は `1` から正の `infinity` になります。 `system: additive` の場合、`auto` は範囲 `0` から正の `infinity` になります。
+
+カウンターを拡張する場合、`range` が `auto` に設定されていると、範囲の値は、そのカウンターの `range` 値ではなく、拡張されるカウンターの `system` の範囲になります。例えば、カウンター "B" に `system: extends A` が設定されており、カウンターが `alphabetic` カウンターである場合、 "B" に `range: auto` を設定すると、 "B" の範囲は `1` から `infinity` に設定されます。これは `alphabetic` システムの範囲であり、必ずしもカウンター "A" のスタイル定義で設定された範囲とは限りません。 `range: auto` が "B" に設定されている場合、 `range` は、カウンター A の記述子リストで設定されているe `range` 値ではなく、 `alphabetic` システムの既定の範囲に設定されます。
+
+### `infinite` の解説
+
+範囲が（`auto` ではなく）整数として指定されている場合、値 `infinite` を使用して無限大を表すことができます。 _infinite_ が範囲の最初の値として指定されている場合、それは負の無限大として解釈されます。上限として使用される場合、範囲の 2 つ目の値として、正の無限大として取られます。
+
+### 範囲のリスト
+
+`range` の値は、上記で説明した `auto`、または 1 つ以上の範囲をカンマで区切ったリストです。カウンタースタイルの範囲は、リスト内で定義されているすべての範囲の和集合になります。
+
+範囲のリスト内のそれぞれの範囲は 2 つの値を取ります。これらの値は、{{cssxref("integer")}} またはキーワード `infinite` のいずれかです。最初の値は、下限です（下限値を含む）。2 つ目の値は上限です（上限値を含む）。 2 つの整数値の場合、小さい方の値が最初に指定されなければなりません。リスト内のいずれかの範囲の下限が上限よりも大きい場合、`range` 記述子全体が不正となり、無視されます。 `infinite` キーワードは、その位置によって値が決定されるため、範囲を不正にはしません。下限の場合は負の無限大、上限の場合は正の無限大となります。
 
 ## 公式定義
 
@@ -55,14 +68,13 @@ range を整数で指定する場合、無限大を表す値として `infinite`
 
 ## 形式文法
 
-```
-[ [ <integer> | infinite ]{2} ]# |
-auto
-```
+{{csssyntax}}
 
 ## 例
 
 ### 範囲を超えるカウンタースタイルを設定
+
+#### HTML
 
 ```html
 <ul class="list">
@@ -79,6 +91,8 @@ auto
 </ul>
 ```
 
+#### CSS
+
 ```css
 @counter-style range-multi-example {
   system: cyclic;
@@ -93,9 +107,11 @@ auto
 }
 ```
 
-上記のリストは次のように表示されます。
+#### 結果
 
-{{EmbedLiveSample('Setting counter style over a range')}}:
+{{EmbedLiveSample('範囲を超えるカウンタースタイルを設定')}}
+
+最初の範囲は、2、3、4 を含む範囲のリストです。2 つ目は、7、8、9 を含みます。範囲は、これら 2 つの範囲の和集合、つまり 2、3、4、7、8、9 です。
 
 ## 仕様書
 
@@ -107,5 +123,8 @@ auto
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを生成する関数記法
+- {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
+- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール

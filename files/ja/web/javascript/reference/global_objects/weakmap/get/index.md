@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 
 **`get()`** メソッドは、`WeakMap` オブジェクトから指定された要素を返します。
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
+{{InteractiveExample("JavaScript デモ: WeakMap.prototype.get()")}}
 
 ```js interactive-example
 const weakmap1 = new WeakMap();

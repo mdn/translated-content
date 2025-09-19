@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/dl
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Element/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Element/dd)). On utilisera par exemple cet élément pour implémenter un glossaire.
+L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)). On utilisera par exemple cet élément pour implémenter un glossaire.
 
 {{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
 
@@ -140,7 +140,7 @@ dd {
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
@@ -237,7 +237,7 @@ dt::after {
 
 ### Intégration de groupes nom-valeur dans les éléments `<div>`
 
-[WHATWG](/fr/docs/Glossary/WHATWG) HTML permet d'envelopper chaque groupe nom-valeur d'un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div). Cela peut être utile lors de l'utilisation de [microdonnées](/fr/docs/Web/HTML/Microdata), ou lorsque les [attributs universels](/fr/docs/Web/HTML/Global_attributes) s'appliquent à un groupe entier, ou encore à des fins de style.
+[WHATWG](/fr/docs/Glossary/WHATWG) HTML permet d'envelopper chaque groupe nom-valeur d'un élément [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl) dans un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div). Cela peut être utile lors de l'utilisation de [microdonnées](/fr/docs/Web/HTML/Guides/Microdata), ou lorsque les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) s'appliquent à un groupe entier, ou encore à des fins de style.
 
 ```html
 <dl>
@@ -266,7 +266,7 @@ dt::after {
 
 ## Notes
 
-Cet élément ne doit pas être utilisé (de même que les éléments [`<ul>`](/fr/docs/Web/HTML/Element/ul)), dans le seul but de créer une indentation sur la page. Bien que cela fonctionne parfaitement, c'est une pratique déconseillée qui mêle mise en forme et sémantique. Cela modifie le rôle que doivent avoir les listes de définitions.
+Cet élément ne doit pas être utilisé (de même que les éléments [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)), dans le seul but de créer une indentation sur la page. Bien que cela fonctionne parfaitement, c'est une pratique déconseillée qui mêle mise en forme et sémantique. Cela modifie le rôle que doivent avoir les listes de définitions.
 
 Pour changer l'indentation de la définition d'un terme, il faut utiliser la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin).
 
@@ -287,5 +287,5 @@ Les lecteurs d'écran annoncent `<dl>` de façon différente. À partir d'iOS 14
 
 ## Voir aussi
 
-- L'élément [`<dt>`](/fr/docs/Web/HTML/Element/dt)
-- L'élément [`<dd>`](/fr/docs/Web/HTML/Element/dd)
+- L'élément [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)
+- L'élément [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)

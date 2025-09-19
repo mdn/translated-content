@@ -1,11 +1,15 @@
 ---
 title: -webkit-mask-position-x
 slug: Web/CSS/-webkit-mask-position-x
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propriété **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -32,10 +36,10 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 /* Valeurs globales */
 -webkit-mask-position-x: inherit;
 -webkit-mask-position-x: initial;
+-webkit-mask-position-x: revert;
+-webkit-mask-position-x: revert-layer;
 -webkit-mask-position-x: unset;
 ```
-
-## Syntaxe
 
 ### Valeurs
 
@@ -48,9 +52,13 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 - **`center`**
   - : Un mot-clé équivalent à `50%`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-webkit-mask-position-x = [ <length-percentage> | left | center | right ]#`)}}
 
 ## Exemples
 
@@ -68,9 +76,7 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 
 ## Spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
-
-{{cssinfo}}
+Cette propriété ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -78,7 +84,6 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Voir aussi
 
-- {{cssxref("-webkit-mask-position")}}
+- {{cssxref("mask-position", "-webkit-mask-position")}}
 - {{cssxref("-webkit-mask-position-y")}}
-- {{cssxref("-webkit-mask-origin")}}
-- {{cssxref("-webkit-mask-attachment")}}
+- {{cssxref("mask-origin", "-webkit-mask-origin")}}

@@ -3,8 +3,6 @@ title: Firefox 34 for developers
 slug: Mozilla/Firefox/Releases/34
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 34 を搭載した Firefox 34 は、米国時間 2014 年 12 月 1 日にリリースされました。このページでは、開発者に影響する Firefox 34 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -41,7 +39,7 @@ _変更なし。_
 
 ### JavaScript
 
-- ES6 の[オブジェクトリテラルにおける計算プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名) の構文を実装しました ([Firefox バグ 924688](https://bugzil.la/924688))。
+- ES6 の[オブジェクトリテラルにおける算出プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#算出プロパティ名) の構文を実装しました ([Firefox バグ 924688](https://bugzil.la/924688))。
   - これは [getter](/ja/docs/Web/JavaScript/Reference/Functions/get) および [setter](/ja/docs/Web/JavaScript/Reference/Functions/set) のメソッド名も同様に含まれており ([Firefox バグ 1048384](https://bugzil.la/1048384))、また [構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#計算されたオブジェクトのプロパティの名前と構造分解)と共に使用することもできます。
 
 - ES6 の、オブジェクトの[メソッド定義における短縮記法](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)を実装しました ([Firefox バグ 924672](https://bugzil.la/924672))。

@@ -1,11 +1,10 @@
 ---
-title: exportparts
+title: HTML exportparts グローバル属性
+short-title: exportparts
 slug: Web/HTML/Reference/Global_attributes/exportparts
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`exportparts`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) では、ネストした{{Glossary("shadow tree", "シャドウツリー")}}内に存在する要素をパーツ (`part`) 名でエクスポートして、そのスタイルを選択できるようにすることができます。
 
@@ -55,9 +54,9 @@ l10n:
 </template>
 
 <card-component>
-  <p slot="header_slot">This is the header</p>
-  <p slot="body_slot">This is the body</p>
-  <p slot="footer_slot">This is the footer</p>
+  <p slot="header_slot">これはヘッダーです</p>
+  <p slot="body_slot">これは本文です</p>
+  <p slot="footer_slot">これはフッターです</p>
 </card-component>
 ```
 
@@ -137,20 +136,20 @@ customElements.define(
 比較のために、カスタム要素 `<card-wrapper>` および `<card-component>` を含めます。
 
 ```html
-<h2>Card wrapper</h2>
+<h2>カードラッパー</h2>
 
 <card-wrapper>
-  <p slot="H">This is the header</p>
-  <p slot="B">This is the body</p>
-  <p slot="F">This is the footer</p>
+  <p slot="H">これはヘッダーです</p>
+  <p slot="B">これは本文です</p>
+  <p slot="F">これはフッターです</p>
 </card-wrapper>
 
-<h2>Card component</h2>
+<h2>カードコンポーネント　　　</h2>
 
 <card-component>
-  <p slot="header_slot">This is the header</p>
-  <p slot="body_slot">This is the body</p>
-  <p slot="footer_slot">This is the footer</p>
+  <p slot="header_slot">これはヘッダーです</p>
+  <p slot="body_slot">これは本文です</p>
+  <p slot="footer_slot">これはフッターです</p>
 </card-component>
 ```
 
@@ -240,9 +239,9 @@ card-component {
 </template>
 
 <card-wrapper>
-  <p slot="H">This is the header</p>
-  <p slot="B">This is the body</p>
-  <p slot="F">This is the footer</p>
+  <p slot="H">これはヘッダーです</p>
+  <p slot="B">これは本文です</p>
+  <p slot="F">これはフッターです</p>
 </card-wrapper>
 ```
 

@@ -1,15 +1,14 @@
 ---
 title: "Function: length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`length`** は {{jsxref("Function")}} インスタンスのプロパティで、関数が期待する引数の数を示します。
 
-{{InteractiveExample("JavaScript デモ: Function.length")}}
+{{InteractiveExample("JavaScript デモ: Function: length")}}
 
 ```js interactive-example
 function func1() {}

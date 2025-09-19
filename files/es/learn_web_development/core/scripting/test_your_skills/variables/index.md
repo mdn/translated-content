@@ -26,7 +26,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html', '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Variables 2
 
@@ -36,7 +37,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html', '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Variables 3
 
@@ -46,7 +48,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html', '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

@@ -1,11 +1,15 @@
 ---
 title: -webkit-mask-position-y
 slug: Web/CSS/-webkit-mask-position-y
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propriété **`-webkit-mask-position-y`** permet de définir la position verticale initiale d'une image de masque.
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -32,10 +36,10 @@ La propriété **`-webkit-mask-position-y`** permet de définir la position vert
 /* Valeurs globales */
 -webkit-mask-position-y: inherit;
 -webkit-mask-position-y: initial;
+-webkit-mask-position-y: revert;
+-webkit-mask-position-y: revert-layer;
 -webkit-mask-position-y: unset;
 ```
-
-## Syntaxe
 
 ### Valeurs
 
@@ -50,9 +54,13 @@ La propriété **`-webkit-mask-position-y`** permet de définir la position vert
 - **`center`**
   - : Un mot-clé équivalent à `50%`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-webkit-mask-position-y = [ <length-percentage> | top | center | bottom ]#`)}}
 
 ## Exemples
 
@@ -70,9 +78,7 @@ La propriété **`-webkit-mask-position-y`** permet de définir la position vert
 
 ## Spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
-
-{{cssinfo}}
+Cette propriété ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -80,7 +86,6 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Voir aussi
 
-- {{cssxref("-webkit-mask-position")}}
+- {{cssxref("mask-position", "-webkit-mask-position")}}
 - {{cssxref("-webkit-mask-position-x")}}
-- {{cssxref("-webkit-mask-origin")}}
-- {{cssxref("-webkit-mask-attachment")}}
+- {{cssxref("mask-origin", "-webkit-mask-origin")}}

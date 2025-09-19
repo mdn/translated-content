@@ -47,7 +47,8 @@ if (document.prerendering) {
 }
 ```
 
-> **メモ:** [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/Web/API/Speculation_Rules_API#安全でない投機的読み込み条件)の節で、遅延させたい活動の種類に関する詳細情報を参照してください。
+> [!NOTE]
+> [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/Web/API/Speculation_Rules_API#安全でない投機的読み込み条件)の節で、遅延させたい活動の種類に関する詳細情報を参照してください。
 
 事前レンダリングがアクティベーションされた頻度を測定するには、次の 3 つの API をすべて組み合わせます。 `document.prerendering` はページが現在事前レンダリング中であるかを検出し、`prerenderingchange` は事前レンダリングされた後にアクティベートされたかを監視し、`activationStart` はページが過去に事前レンダリングされたかをチェックします。
 

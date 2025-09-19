@@ -31,7 +31,7 @@ Avec une API fonctionnant avec des promesses, la fonction asynchrone démarre l'
 > Dans cet article, nous étudierons les promesses en copiant des fragments de code dans la console JavaScript du navigateur. Pour ceci&nbsp;:
 >
 > 1. Ouvrez un nouvel onglet dans votre navigateur et allez sur la page <https://example.org>.
-> 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+> 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 > 3. Lorsqu'un exemple est présent dans cet article, copiez le contenu dans la console. Vous devrez recharger la page à chaque exemple pour éviter que la console affiche une erreur sur la redéclaration de `fetchPromise()`.
 
 Dans cet exemple, nous téléchargerons le fichier JSON situé à l'adresse <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, et nous afficherons des informations à son sujet.
@@ -69,7 +69,7 @@ Requête initiée…
 Réponse reçue : 200
 ```
 
-On notera que `Requête initiée…` est affiché avant d'avoir reçu une réponse. À la différence d'une fonction synchrone, `fetch()` produit sa valeur de retour alors que la requête est toujours en cours, ce qui permet à notre programme de rester réactif. La réponse affiche [le code de statut HTTP](/fr/docs/Web/HTTP/Status) `200` (OK), ce qui indique que la requête a réussi.
+On notera que `Requête initiée…` est affiché avant d'avoir reçu une réponse. À la différence d'une fonction synchrone, `fetch()` produit sa valeur de retour alors que la requête est toujours en cours, ce qui permet à notre programme de rester réactif. La réponse affiche [le code de statut HTTP](/fr/docs/Web/HTTP/Reference/Status) `200` (OK), ce qui indique que la requête a réussi.
 
 Ça ressemble beaucoup à l'exemple du précédent article où nous avions ajouté des gestionnaires d'évènements à l'objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Ici, à la place, on passe un gestionnaire à la méthode `then()` de la promesse renvoyée par l'opération.
 
@@ -182,7 +182,7 @@ Pour commencer, une promesse peut être dans l'un de ces trois états&nbsp;:
 - **Rompue** (ou échouée ou <i lang="en">rejected</i> en anglais)
   - : La fonction asynchrone a échoué. Lorsqu'une promesse est rompue, c'est le gestionnaire passé à sa méthode `catch()` qui est appelé.
 
-On notera ici que la réussite ou l'échec dépend de l'API en question. Ainsi, l'API `fetch()` considèrera qu'une requête a réussi dans le cas où le serveur renvoie une erreur HTTP comme [`404 Not Found`](/fr/docs/Web/HTTP/Status/404), mais qu'elle a échoué si une erreur réseau a empêché l'envoi de la requête.
+On notera ici que la réussite ou l'échec dépend de l'API en question. Ainsi, l'API `fetch()` considèrera qu'une requête a réussi dans le cas où le serveur renvoie une erreur HTTP comme [`404 Not Found`](/fr/docs/Web/HTTP/Reference/Status/404), mais qu'elle a échoué si une erreur réseau a empêché l'envoi de la requête.
 
 On utilise parfois le terme **réglée** (<i lang="en">settled</i> en anglais) pour désigner les deux cas de réussite et d'échec (autrement dit, pour dire que l'opération asynchrone n'est plus en cours).
 

@@ -2,10 +2,8 @@
 title: プライベート要素
 slug: Web/JavaScript/Reference/Classes/Private_elements
 l10n:
-  sourceCommit: 48184c65d7e6d59e867806d9e349661c737bdc4b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Classes")}}
 
 **プライベート要素**は、パブリックである通常のクラスプロパティ、例えば[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)やクラスメソッドなどに対するものです。プライベート要素はハッシュ `#` 接頭辞を使用して作成され、クラスの外部から合法的に参照することはできません。これらのクラスプロパティのプライバシーカプセル化は JavaScript 自身によって強制されます。プライベート要素にアクセスするには、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ドット記法)を使用するしかなく、また、そのアクセスはプライベート要素を定義するクラス内でのみ可能です。
 

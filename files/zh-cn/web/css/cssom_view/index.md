@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 69fbf1cdb3cb8e2b3cb5ac21977ebf1b60cc0770
 ---
 
-{{CSSRef}}
-
 **CSS 对象模型视图**（CSSOM view）模块支持通过脚本操作文档的可视化视图，具体功能包括：获取元素布局盒子的位置、读取视口的宽度或高度，以及控制元素的滚动行为。
 
 ## 参考
@@ -118,7 +116,7 @@ l10n:
 
 ## 指南
 
-- [坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [坐标系](/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : 用于指定显示上下文中位置的坐标系系统，包括：显示器窗口坐标系、移动设备视口坐标系以及打印纸张位置坐标系。
 - [视口概念](/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts)
   - : 视口的概念解析：涵盖视口的本质定义，对 CSS、SVG 和移动设备的影响，以及可视视口与布局视口的关键区别。

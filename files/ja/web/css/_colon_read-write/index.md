@@ -3,8 +3,6 @@ title: :read-write
 slug: Web/CSS/:read-write
 ---
 
-{{CSSRef}}
-
 **`:read-write`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが編集できる要素 (`input` や `textarea` など) を表します。
 
 ```css
@@ -18,7 +16,7 @@ p:read-write {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :read-write", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :read-write", "tabbed-shorter")}}
 
 ```css interactive-example
 label,

@@ -3,8 +3,6 @@ title: <fieldset>
 slug: Web/HTML/Reference/Elements/fieldset
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<fieldset>`** 元素用于对表单中的控制元素进行分组（也包括 label 元素）。
 
 {{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}

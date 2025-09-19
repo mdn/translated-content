@@ -144,7 +144,7 @@ En parcourant la page de documentation, vous découvrirez qu'au lieu de supprime
 
 Jusqu'ici, nous avons mis en forme des éléments HTML repérés par leur nom de balise. Cela fonctionne tant que vous voulez appliquer le même style à tous les éléments de ce type dans le document. La plupart du temps ce n'est pas le comportement désiré ; il faut donc trouver une méthode pour sélectionner un sous-ensemble des éléments à mettre en forme sans changer l'apparence des autres éléments du même type. L'approche la plus commune pour obtenir ce comportement est d'ajouter une classe (pensez à une étiquette) aux éléments HTML à mettre en forme puis de sélectionner cette classe.
 
-Dans le document HTML, ajouter un [attribut class](/fr/docs/Web/HTML/Global_attributes/class) au deuxième item de la liste :
+Dans le document HTML, ajouter un [attribut class](/fr/docs/Web/HTML/Reference/Global_attributes/class) au deuxième item de la liste :
 
 ```html
 <ul>
@@ -217,11 +217,11 @@ L'exemple live ci-dessous inclut les deux règles précédentes. Essayez d'ajout
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
 > [!NOTE]
-> A ce point, on a déjà découvert plusieurs méthodes CSS pour cibler les éléments et pourtant on vient à peine de commencer ! Nous passerons en revue plus systématiquement tous ces sélecteurs dans la leçon [CSS Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors) du cours suivant.
+> A ce point, on a déjà découvert plusieurs méthodes CSS pour cibler les éléments et pourtant on vient à peine de commencer ! Nous passerons en revue plus systématiquement tous ces sélecteurs dans la leçon [CSS Selectors](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors) du cours suivant.
 
 ## Mise en forme basée sur l'état
 
-Pour finir ce tutoriel, voyons comment on peut appliquer une mise en forme basée sur l'état d'un élément. La mise en forme des liens illustre cela à merveille. Pour appliquer un style sur un lien, on doit cibler l'élément [`<a>`](/fr/docs/Web/HTML/Element/a) (ancre). Cet élément a différents états selon que le lien a ou n'a pas été visité (`visited`), est survolé par le curseur (`hover`), a le focus clavier (`focus`), ou si l'utilisateur est en train de cliquer sur ce lien (`active`). CSS permet de cibler ces différents états — les règles ci-dessous colorent en rose les liens non visités et en vert ceux qui l'ont été.
+Pour finir ce tutoriel, voyons comment on peut appliquer une mise en forme basée sur l'état d'un élément. La mise en forme des liens illustre cela à merveille. Pour appliquer un style sur un lien, on doit cibler l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) (ancre). Cet élément a différents états selon que le lien a ou n'a pas été visité (`visited`), est survolé par le curseur (`hover`), a le focus clavier (`focus`), ou si l'utilisateur est en train de cliquer sur ce lien (`active`). CSS permet de cibler ces différents états — les règles ci-dessous colorent en rose les liens non visités et en vert ceux qui l'ont été.
 
 ```css
 a:link {
@@ -248,7 +248,7 @@ Dans l'exemple live ci-dessous, vous pouvez explorer les valeurs des différents
 Nous avons supprimé le soulignement quand le lien est survolé.Vous pourriez supprimer le soulignement quel que soit l'état du lien. Dans un vrai site, il est quand même important que le visiteur sache qu'un lien est un lien. Le soulignement donne un indice important aux visiteurs pour réaliser qu'un bout de texte dans un paragraphe est cliquable — c'est le comportement auquel ils sont habitués. Avec le contrôle que donne CSS, les changements de style peuvent parfois rendre le document moins accessible — à chaque fois que nécessaire nous nous efforcerons de signaler les pièges classiques dans cette direction.
 
 > [!NOTE]
-> Dans ce cours et à travers le site MDN, vous rencontrerez souvent la notion d'[accessibilité](/fr/docs/Learn/Accessibility)&nbsp;: les règles pour que nos pages soient compréhensibles et utilisables par tous.
+> Dans ce cours et à travers le site MDN, vous rencontrerez souvent la notion d'[accessibilité](/fr/docs/Learn_web_development/Core/Accessibility)&nbsp;: les règles pour que nos pages soient compréhensibles et utilisables par tous.
 >
 > Vos visiteurs peuvent consulter votre page depuis un ordinateur équipé d'une souris ou d'un trackpad, ou depuis un téléphone avec un écran tactile. Ils peuvent aussi utiliser un lecteur d'écran qui parcourt le contenu du document. Ils pourraient avoir besoin d'un affichage en grands caractères, ou parcourir votre site en ne naviguant qu'avec le clavier.
 >

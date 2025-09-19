@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/505
 original_slug: Web/HTTP/Status/505
 ---
 
-{{HTTPSidebar}}
-
 Le code de réponse HTTP d'erreur serveur **`505 HTTP Version Not Supported`** indique que la version du protocole HTTP utilisée dans la requête n'est pas prise en charge par le serveur.
 
 ## Statut
@@ -24,4 +22,4 @@ Le code de réponse HTTP d'erreur serveur **`505 HTTP Version Not Supported`** i
 
 ## Voir aussi
 
-- [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade)
+- [`Upgrade`](/fr/docs/Web/HTTP/Reference/Headers/Upgrade)

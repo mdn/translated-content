@@ -12,7 +12,7 @@ Lorsqu'on parle de texte en SVG, on doit différencier deux choses pratiquement 
 
 ## Les bases
 
-Nous avons vu dans l'[exemple de l'introduction](/fr/docs/Web/SVG/Tutorial/Getting_Started) que l'élément `text` peut être utilisé pour mettre du texte dans des documents SVG:
+Nous avons vu dans l'[exemple de l'introduction](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) que l'élément `text` peut être utilisé pour mettre du texte dans des documents SVG:
 
 ```xml
 <text x="10" y="10">Hello World!</text>

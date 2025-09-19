@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
 ---
 
-{{CSSRef}}
-
 **`contain-intrinsic-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素が[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ拘束)の主体となっている場合に、ブラウザーがレイアウトに使用することができる要素の高さを設定します。
 
 ## 構文

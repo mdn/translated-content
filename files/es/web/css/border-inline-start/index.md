@@ -3,7 +3,7 @@ title: border-inline-start
 slug: Web/CSS/border-inline-start
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-start`** es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para establecer los valores de la propiedad inicial del borde individual en línea en un solo lugar en la hoja de estilos.
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7e649ddc14198ca9e55ac2ccfabc36a23bd16bb4
 ---
 
-{{CSSRef}}
-
 **CSS 座標変換** (CSS transforms) は、 CSS でスタイル付けされた要素をどのように二次元または三次元空間に座標変換するかを定義します。
 
 ## CSS 座標変換の動作
@@ -75,7 +73,7 @@ l10n:
 
 - [CSS 座標変換の利用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : CSS でスタイル付けされた要素をどのように座標変換するかについての手順を追ったチュートリアルです。
-- [座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : CSS オブジェクトモデルでピクセル位置を定義する方法を説明します。
 - [パフォーマンスの基礎: CSS 座標変換の使用](/ja/docs/Web/Performance/Guides/Fundamentals#css_変換を使用する)
   - : ウェブパフォーマンスの基礎について、 CSS 座標変換がどのようにパフォーマンスを向上させることができるかを含め、概説します。

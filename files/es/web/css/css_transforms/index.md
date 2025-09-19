@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
-{{CSSRef}}
-
 El módulo **Transformaciones CSS** define cómo los elementos diseñados con CSS se pueden transformar en un espacio bidimensional o tridimensional.
 
 ## Referencia

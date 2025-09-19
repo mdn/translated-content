@@ -358,7 +358,8 @@ a[href^="http"]::after {
 
 以上です。上のアクティブラーニングの節を再検討して、この新しいテクニックを試してみてください！
 
-> **メモ:** [背景](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)や[レスポンシブウェブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明します。
+> [!NOTE]
+> [背景](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)や[レスポンシブウェブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明します。
 
 ## リンクをボタンとしてスタイル設定
 

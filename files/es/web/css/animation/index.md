@@ -3,8 +3,6 @@ title: animation
 slug: Web/CSS/animation
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad `animation` de [CSS](/es/docs/Web/CSS) es una [propiedad abreviada (shorthand property)](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.

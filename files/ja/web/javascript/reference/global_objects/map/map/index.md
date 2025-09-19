@@ -1,11 +1,10 @@
 ---
 title: Map() コンストラクター
+short-title: Map()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Map()`** コンストラクターは、 {{jsxref("Map")}} オブジェクトを生成します。
 
@@ -16,7 +15,8 @@ new Map()
 new Map(iterable)
 ```
 
-> **メモ:** `Map()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でしか作成できません。`new` を省略して呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Map()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でしか作成できません。`new` を省略して呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
@@ -46,6 +46,7 @@ const myMap = new Map([
 ## 関連情報
 
 - [`Map` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#map)
+- [es-shims による `Map` のポリフィル](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

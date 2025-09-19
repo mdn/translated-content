@@ -28,7 +28,7 @@ original_slug: Web/XSLT
   </ol>
 </div>
 
-**Extensible Stylesheet Language Transformations (XSLT)** est un langage basé sur le [XML](/fr/docs/Web/XML/XML_introduction) utilisé avec des logiciels de traitements spécialisés pour la transformation de documents XML.
+**Extensible Stylesheet Language Transformations (XSLT)** est un langage basé sur le [XML](/fr/docs/Web/XML/Guides/XML_introduction) utilisé avec des logiciels de traitements spécialisés pour la transformation de documents XML.
 
 Bien que le traitement soit souvent qualifié de transformation, le document original reste inchangé et c'est un nouveau document XML qui est créé à partir du contenu d'un document existant. Ensuite, le nouveau document pourra être sérialisé par le mécanisme de traitement afin de produire un résultat au format XML standard ou dans un autre format comme [HTML](/fr/docs/Web/HTML) ou encore du texte brut.
 
@@ -36,13 +36,13 @@ XSLT est le plus souvent utilisé pour convertir des données entre différents 
 
 ## Documentation
 
-- [Référence des éléments XSLT](/fr/docs/Web/XSLT/Element)
+- [Référence des éléments XSLT](/fr/docs/Web/XML/XSLT/Reference/Element)
   - : La référence indiquant la documentation pour chaque élément XSLT.
-- [Transformer du XML avec XSLT](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT)
+- [Transformer du XML avec XSLT](/fr/docs/conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
   - : XSLT permet d'utiliser une feuille de style pour transformer un document XML initial de deux façons&nbsp;: manipuler et trier le contenu (y compris en réordonnant l'ensemble du document si besoin) d'une part et transformer le contenu dans un format différent d'autre part.
 - [Utiliser l'interface JavaScript Mozilla pour les transformations XSL](/fr/docs/Web/API/XSLTProcessor)
   - : Ce document décrit l'interface JavaScript pour le moteur de traitement XSLT dans Mozilla 1.2 et les versions ultérieures.
-- [Définir les paramètres utilisant des instructions de traitement](/fr/docs/Web/XSLT/PI_Parameters)
+- [Définir les paramètres utilisant des instructions de traitement](/fr/docs/Web/XML/XSLT/Guides/PI_Parameters)
   - : Firefox permet d'indiquer des paramètres de feuille de styles en utilisant l'instruction de traitement `<?xml-stylesheet?>`. Cela se fait en avec l'instruction de traitement `<?xslt-param?>`, décrite dans cet article.
 - [Tutoriel XSLT](https://www.w3schools.com/xml/xsl_intro.asp)
   - : Ce tutoriel [W3Schools](https://www.w3schools.com) indique comment utiliser XSLT pour transformer les documents XML dans d'autres formats, comme du XHTML.
@@ -53,5 +53,5 @@ XSLT est le plus souvent utilisé pour convertir des données entre différents 
 
 ## Sujets connexes
 
-- [XML](/fr/docs/Web/XML/XML_introduction)
-- [XPath](/fr/docs/Web/XPath)
+- [XML](/fr/docs/Web/XML/Guides/XML_introduction)
+- [XPath](/fr/docs/Web/XML/XPath)

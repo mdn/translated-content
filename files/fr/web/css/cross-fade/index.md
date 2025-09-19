@@ -1,17 +1,18 @@
 ---
 title: cross-fade()
 slug: Web/CSS/cross-fade
+l10n:
+  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-{{CSSRef}}
-
-La fonction [CSS](/fr/docs/Web/CSS) **`cross-fade()`** peut être utilisée afin de fusionner deux ou plusieurs images avec une transparence donnée.
-On peut l'utiliser pour de nombreuses manipulations d'image&nbsp;: teinter une image avec une couleur donnée ou mettre en avant une zone de l'image en combinant celle-ci avec un dégradé radial.
+La [fonction](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`cross-fade()`** peut être utilisée pour fusionner deux ou plusieurs images avec une transparence définie.
+Elle peut être utilisée pour de nombreuses manipulations d'images de base, telles que la coloration d'une image avec une couleur unie ou la mise en évidence d'une zone particulière de la page en combinant une image avec un dégradé radial.
 
 ## Syntaxe
 
 > [!WARNING]
-> À l'heure actuelle (janvier 2019), la syntaxe décrite par la spécification et les syntaxes implémentées sont différentes. Nous commencerons ici par définir la syntaxe telle que définie par la spécification puis celle utilisée au sein des implémentations actuelles.
+> La spécification et les implémentations actuelles ont des syntaxes différentes.
+> La syntaxe de la spécification est expliquée en premier.
 
 ### Syntaxe de la spécification
 
@@ -78,8 +79,8 @@ Dans les exemples associés à la syntaxe de la spécification, on avait un cas 
 
 Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l'image contient des informations essentielles à la compréhension du document, mieux vaudra la décrire de façon sémantique dans le document afin que ce dernier soit correctement accessible. Lorsqu'on utilisera des images d'arrière-plan, on s'assurera que le contraste est suffisamment élevé par rapport au texte qui serait affiché par-dessus.
 
-- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères de succès 1.1.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Comprendre les critères de succès 1.1.1 | W3C Comprendre WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Syntaxe formelle
 
@@ -120,15 +121,16 @@ Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l
 
 ## Voir aussi
 
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`url()`](/fr/docs/Web/CSS/url_value)
-- [`image()`](</fr/docs/Web/CSS/image/image()>)
-- [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
-- [`element()`](/fr/docs/Web/CSS/element)
+- {{cssxref("image")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
+- {{cssxref("image/image", "image()")}}
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("element")}}
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Fonctions de création de dégradés&nbsp;:
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient)
-  - [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient)
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)
-  - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
+  - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
+  - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+  - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+  - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+  - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
+  - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}

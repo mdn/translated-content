@@ -7,7 +7,7 @@ slug: Web/API/HTMLMediaElement/audioTracks
 
 La propriété **`audioTracks`** est une propriété en lecture seule rattachée à l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) qui renvoie un objet [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) répertoriant tous les objets [`AudioTrack`](/fr/docs/Web/API/AudioTrack) représentant les pistes audio de l'élément multimédia.
 
-L'élément multimédia peut être soit un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou un élément [`<video>`](/fr/docs/Web/HTML/Element/video).
+L'élément multimédia peut être soit un élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) ou un élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video).
 
 La liste renvoyée est dynamique&nbsp;; c'est-à-dire que lorsque des pistes sont ajoutées et supprimées de l'élément multimédia, le contenu de la liste change dynamiquement. Une fois que vous avez une référence à la liste, vous pouvez surveiller les modifications pour détecter l'ajout de nouvelles pistes audio ou la suppression de pistes existantes. Vous pouvez consulter les [gestionnaires d'évènements](/fr/docs/Web/API/AudioTrackList#évènements) associés à [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) pour en savoir plus sur les modifications apportées à la liste des pistes d'un élément multimédia.
 
@@ -58,5 +58,5 @@ for (let i = 0; i < video.audioTracks.length; i += 1) {
 ## Voir aussi
 
 - L'interface qui porte cette propriété, [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement).
-- [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video)
+- [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) et [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
 - [`AudioTrack`](/fr/docs/Web/API/AudioTrack) et [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList)

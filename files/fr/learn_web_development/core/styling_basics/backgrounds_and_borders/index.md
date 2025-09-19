@@ -58,7 +58,7 @@ Nous reviendrons un peu plus loin sur le fonctionnement des raccourcis. Pour l'i
 
 La propriété [`background-color`](/fr/docs/Web/CSS/background-color) définit la couleur d'arrière-plan d'un élément HTML. La propriété accepte comme valeur n'importe quelle [`<color>`](/fr/docs/Web/CSS/color_value). La `background-color` s'étend sous le contenu dans la zone de remplissage (padding box) de l'élément.
 
-Dans l'exemple ci-dessous, nous ajoutons des couleurs de fond à une boîte, un titre et un élément [`<span>`](/fr/docs/Web/HTML/Element/span).
+Dans l'exemple ci-dessous, nous ajoutons des couleurs de fond à une boîte, un titre et un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span).
 
 **Expérimentez avec ce code, en faisant varier les valeurs [\<color>](/fr/docs/Web/CSS/color_value) dans les différentes déclarations.**
 
@@ -274,7 +274,7 @@ Pour la propriété qui concerne un des côtés&nbsp;:
 ```
 
 > [!NOTE]
-> Ces propriétés pour les bordures des côtés haut, droit, bas et gauche ont également des propriétés équivalentes _logiques_ qui ciblent les différents côtés de la boîte en fonction du mode d'écriture du document (par exemple de gauche à droite, de droite à gauche ou bien encore de haut en bas). Nous aborderons celles-ci dans la prochaine leçon qui traitera [de la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> Ces propriétés pour les bordures des côtés haut, droit, bas et gauche ont également des propriétés équivalentes _logiques_ qui ciblent les différents côtés de la boîte en fonction du mode d'écriture du document (par exemple de gauche à droite, de droite à gauche ou bien encore de haut en bas). Nous aborderons celles-ci dans la prochaine leçon qui traitera [de la directionnalité du texte](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 **Il existe différents styles qui peuvent être utilisés pour les bordures. Dans l'exemple qui suit, nous avons utilisé un style différent pour chacun des côtés de la boîte. N'hésitez pas à modifier l'exemple pour modifier le style, l'épaisseur et la couleur afin de voir comment les bordures fonctionnent.**
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8fbec5312b62d720f6ff6936024a09c859f2f0f1
 ---
 
-{{HTMLSidebar}}
-
 **`<body>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示 HTML 文档的内容。文档中只能有一个 `<body>` 元素。
 
 ## 属性
@@ -188,4 +186,4 @@ l10n:
 
 - {{HTMLElement("html")}}
 - {{HTMLElement("head")}}
-- [事件处理器（概述）](/zh-CN/docs/Web/Events/Event_handlers)
+- [事件处理器（概述）](/zh-CN/docs/Web/API/Document_Object_Model/Events)

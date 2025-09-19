@@ -1,15 +1,14 @@
 ---
 title: Hoisting (remontée)
+short-title: Hoisting
 slug: Glossary/Hoisting
 l10n:
-  sourceCommit: 5272602a89c279c42e18a0ab3434396fd33808f8
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 En JavaScript, l'anglicisme **<i lang="en">hoisting</i>**, qu'on peut traduire en «&nbsp;remontée&nbsp;» (voire plus littéralement en «&nbsp;hissage&nbsp;») correspond au déplacement de la _déclaration_ de fonctions, variables ou classes en haut de leur portée avant l'exécution du code.
 
-Le hissage/la remontée n'est pas un terme défini de façon normative dans la spécification ECMAScript. La spécification définit un groupe de déclarations comme [_HoistableDeclaration_](https://tc39.es/ecma262/#prod-HoistableDeclaration), mais cela inclut uniquement les déclarations [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function), et [`async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*). La remontée est souvent associée aux déclarations [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var) d'une façon légèrement différente. Généralement, on regroupe les différents comportements suivants sous ce terme&nbsp;:
+Le hissage/la remontée n'est pas un terme défini de façon normative dans la spécification ECMAScript. La spécification définit un groupe de déclarations comme [_HoistableDeclaration_ <sup>(angl.)</sup>](https://tc39.es/ecma262/#prod-HoistableDeclaration), mais cela inclut uniquement les déclarations [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function), et [`async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*). La remontée est souvent associée aux déclarations [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var) d'une façon légèrement différente. Généralement, on regroupe les différents comportements suivants sous ce terme&nbsp;:
 
 1. Être capable d'utiliser la valeur d'une variable dans sa portée avant la ligne où elle est déclarée («&nbsp;remontée de variable&nbsp;»)
 2. Être capable de référence une variable dans sa portée avant la ligne où elle est déclarée, sans que cela déclenche une exception [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError), mais où la valeur obtenue est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) («&nbsp;remontée de déclaration&nbsp;»)
@@ -44,7 +43,8 @@ Pour plus d'informations à ce sujet, voir&nbsp;:
 
 - La remontée pour `var`/`let`/`const` dans [le guide sur la grammaire et les types en JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#remontée_de_variables_hoisting)
 - La remontée pour `function` dans [le guide sur les fonctions](/fr/docs/Web/JavaScript/Guide/Functions#remontée_des_fonctions)
-- La remontée pour `class` dans [le guide sur les classes](/fr/docs/Web/JavaScript/Guide/Using_Classes#remontée_des_déclarations_de_classe)
+- La remontée pour `class` dans [le guide sur les classes](/fr/docs/Web/JavaScript/Guide/Using_classes#remontée_des_déclarations_de_classe)
+- La remontée pour `import` dans [le module javascript](/fr/docs/Web/JavaScript/Guide/Modules#remontée_des_déclarations_de_import)
 
 ## Voir aussi
 
@@ -52,3 +52,4 @@ Pour plus d'informations à ce sujet, voir&nbsp;:
 - [L'instruction `let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
 - [L'instruction `const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
 - [L'instruction `function`](/fr/docs/Web/JavaScript/Reference/Statements/function)
+- [L'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import)

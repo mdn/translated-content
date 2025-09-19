@@ -3,8 +3,6 @@ title: :read-write
 slug: Web/CSS/:read-write
 ---
 
-{{CSSRef}}
-
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:read-write`** de [CSS](/es/docs/Web/CSS) representa un elemento (como un [input](/es/docs/Web/HTML/Reference/Elements/input)) que es editable por el usuario.
 
 ```css

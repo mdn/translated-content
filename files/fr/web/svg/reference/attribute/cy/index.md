@@ -89,7 +89,7 @@ Pour un élément {{SVGElement('ellipse')}}, `cy` définit la coordonnée y de s
 
 ## radialGradient
 
-Pour un élément {{SVGElement('radialGradient')}}, `cy` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite de dégradé](/fr/docs/Web/SVG/Element/stop) de **100%** corresponde au périmètre de ce plus grand cercle.
+Pour un élément {{SVGElement('radialGradient')}}, `cy` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite de dégradé](/fr/docs/Web/SVG/Reference/Element/stop) de **100%** corresponde au périmètre de ce plus grand cercle.
 
 <table class="standard-table">
   <tbody>
@@ -174,5 +174,5 @@ svg {
 
 ## Voir aussi
 
-- [`cx`](/fr/docs/Web/SVG/Attribute/cx)
+- [`cx`](/fr/docs/Web/SVG/Reference/Attribute/cx)
 - [`r`](/fr/docs/Web/SVG/Attribute/r)

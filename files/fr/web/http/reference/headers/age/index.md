@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Age
 original_slug: Web/HTTP/Headers/Age
 ---
 
-{{HTTPSidebar}}
-
 L'entête HTTP {{HTTPHeader("Age")}} indique le temps en secondes pendant lequel la ressource a été stockée dans un cache proxy.
 
 Sa valeur est généralement proche de zéro. Elle vaut 0 lorsque la ressource vient d'être rapatriée du serveur d'origine; autrement, sa valeur équivaut à la différence entre la date courante du proxy et la valeur de l'entête {{HTTPHeader("Date")}} inclus dans la réponse HTTP.

@@ -3,7 +3,7 @@ title: :host()
 slug: Web/CSS/:host_function
 ---
 
-{{seecompattable}}{{CSSRef}}
+{{seecompattable}}
 
 [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数 **`:host()`** 选择包含使用这段 CSS 的 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）——但前提是该函数的参数与选择的阴影宿主相匹配。
 

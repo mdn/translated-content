@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 
 **`BigInt.asUintN`** 静的メソッドは、 BigInt 値を符号なし整数に丸め、その値を返します。
 
-{{InteractiveExample("JavaScript Demo: BigInt.asUintN()", "taller")}}
+{{InteractiveExample("JavaScript デモ: BigInt.asUintN()", "taller")}}
 
 ```js interactive-example
 const U64_CEIL = 2n ** 64n;

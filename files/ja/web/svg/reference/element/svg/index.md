@@ -7,7 +7,8 @@ l10n:
 
 **`<svg>`** は [SVG](/ja/docs/Web/SVG) の要素で、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Reference/Attribute/viewBox)を定義するコンテナーです。これは SVG 文書の最も外側の要素として使用されますが、SVG または HTML 文書の中に SVG の断片を埋め込むためにも使用できます。
 
-> **メモ:** `xmlns` 属性は *SVG 文書*の最も外側の `svg` 要素、または XML シリアライズによる HTML 文書内にのみ必要です。内部の `svg` 要素や HTML シリアライズによる HTML 文書の内部には不要です。
+> [!NOTE]
+> `xmlns` 属性は *SVG 文書*の最も外側の `svg` 要素、または XML シリアライズによる HTML 文書内にのみ必要です。内部の `svg` 要素や HTML シリアライズによる HTML 文書の内部には不要です。
 
 ## 例
 

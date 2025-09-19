@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 72 は、米国時間 2020 年 1 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 72 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -58,7 +56,7 @@ _変更なし。_
 
 ### JavaScript
 
-- [Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) を実装しました ([Firefox バグ 1566141](https://bugzil.la/1566141))。
+- [ヌル値合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)を実装しました ([Firefox バグ 1566141](https://bugzil.la/1566141))。
 
 ### API
 

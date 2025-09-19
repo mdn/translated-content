@@ -61,5 +61,5 @@ _Cette interface hérite également des méthodes de son parent, {{domxref("Even
 
 ## Voir aussi
 
-- [Introduction to events](/fr/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introduction to events](/fr/docs/Learn_web_development/Core/Scripting/Events)
 - {{ domxref("Event") }}

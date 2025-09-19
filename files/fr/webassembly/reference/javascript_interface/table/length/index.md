@@ -45,5 +45,5 @@ console.log(table.length); // "3"
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

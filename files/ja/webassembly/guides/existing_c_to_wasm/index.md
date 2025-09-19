@@ -171,7 +171,8 @@ const result = new Uint8Array(resultView);
 api.free_result(resultPointer);
 ```
 
-> **メモ:** `new Uint8Array(someBuffer)` は同じメモリーチャンク上に新しいビューを作成し、 `new Uint8Array(someTypedArray)` はデータをコピーします。
+> [!NOTE]
+> `new Uint8Array(someBuffer)` は同じメモリーチャンク上に新しいビューを作成し、 `new Uint8Array(someTypedArray)` はデータをコピーします。
 
 画像のサイズによっては、 Wasm が入力画像と出力画像を格納するためのメモリーを十分に大きくすることができないというエラーが発生する可能性があります。
 

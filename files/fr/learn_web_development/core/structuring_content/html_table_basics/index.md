@@ -191,17 +191,17 @@ Lorsque cela est fait correctement, même les personnes malvoyantes peuvent inte
 
 Vous pouvez également [regarder sur l'exemple réel](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) sur GitHub ! Vous remarquerez sur celui-ci que le tableau est légèrement plus lisible — car le tableau figurant ci-dessus présente un style minimal, alors que sa version sur GitHub est liée à un CSS plus signifiant.
 
-Ne vous faites pas d'illusions ; pour obtenir un tableau avec un certain effet sur le web, vous devez fournir un minimum d'informations de style avec [CSS](/fr/docs/Learn/CSS), ainsi qu'une structure solide avec HTML. Dans ce module nous nous concentrons sur la partie HTML ; pour en savoir plus sur la partie CSS, vous devrez lire notre article [Style et tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables) quand vous aurez fini ici.
+Ne vous faites pas d'illusions ; pour obtenir un tableau avec un certain effet sur le web, vous devez fournir un minimum d'informations de style avec [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), ainsi qu'une structure solide avec HTML. Dans ce module nous nous concentrons sur la partie HTML ; pour en savoir plus sur la partie CSS, vous devrez lire notre article [Style et tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables) quand vous aurez fini ici.
 
 Nous n'approfondirons pas le CSS dans ce module, mais nous avons écrit une feuille de style minimale CSS à utiliser ici, feuille de style qui rendra les tableaux plus lisibles qu'avec un format par défaut sans style. Vous trouverez cette [feuille de style ici](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css), et également [un exemple HTML d'application de cette feuille de style là](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) — ensemble ils vous donneront un bon point de départ pour expérimenter sur les tableaux HTML.
 
 ### Quand NE PAS utiliser de tableaux en HTML ?
 
-Les tableaux HTML ne doivent être utilisés que pour des données tabulaires — c'est pour cela qu'ils sont conçus. Malheureusement, beaucoup de gens ont utilisé les tableaux HTML pour organiser des pages Web, par exemple : une ligne pour contenir l'en-tête, une ligne pour les colonnes de contenu, une ligne pour le pied de page, etc. Vous pouvez trouver plus de détails et un exemple avec [Mises en page](/fr/docs/Learn/Accessibility/HTML#page_layouts) dans notre [Module d'apprentissage à l'Accessibilité](/fr/docs/Learn/Accessibility). Cette disposition a été couramment utilisée car la prise en charge des CSS parmi les navigateurs avait pour coutume d'être effroyable ; ces mises en page sont beaucoup moins fréquentes de nos jours, mais vous pouvez toujours les voir dans certains recoins du Web.
+Les tableaux HTML ne doivent être utilisés que pour des données tabulaires — c'est pour cela qu'ils sont conçus. Malheureusement, beaucoup de gens ont utilisé les tableaux HTML pour organiser des pages Web, par exemple : une ligne pour contenir l'en-tête, une ligne pour les colonnes de contenu, une ligne pour le pied de page, etc. Vous pouvez trouver plus de détails et un exemple avec [Mises en page](/fr/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts) dans notre [Module d'apprentissage à l'Accessibilité](/fr/docs/Learn_web_development/Core/Accessibility). Cette disposition a été couramment utilisée car la prise en charge des CSS parmi les navigateurs avait pour coutume d'être effroyable ; ces mises en page sont beaucoup moins fréquentes de nos jours, mais vous pouvez toujours les voir dans certains recoins du Web.
 
-Bref, utiliser les tableaux pour la mise en page [au lieu des techniques des CSS](/fr/docs/Learn/CSS/CSS_layout) est une mauvaise idée. En voici les principales raisons&nbsp;:
+Bref, utiliser les tableaux pour la mise en page [au lieu des techniques des CSS](/fr/docs/Learn_web_development/Core/CSS_layout) est une mauvaise idée. En voici les principales raisons&nbsp;:
 
-1. **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders), utilisés par les non-voyants, interprètent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
+1. **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn_web_development/Core/Accessibility/Tooling#screenreaders), utilisés par les non-voyants, interprètent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
 2. **Les tables produisent de la bouillie :** Comme mentionné ci-dessus, les mises en page sur la base de tableaux comportent généralement des structures de balisage plus complexes que des techniques de mise en page appropriées. Le code résultant sera plus difficile à écrire, à maintenir et à déboguer.
 3. **Les tableaux ne s'adaptent pas automatiquement** : Si vous utilisez les propriétés de mise en page ({{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}} ou {{htmlelement("div")}}), leur largeur est par défaut 100% de celle du parent. Par contre, les tableaux sont dimensionnés en fonction de leur contenu par défaut, de sorte que des mesures supplémentaires sont nécessaires pour que le style du tableau fonctionne effectivement sur les différents types d'écran.
 
@@ -210,8 +210,8 @@ Bref, utiliser les tableaux pour la mise en page [au lieu des techniques des CSS
 Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et construisons un tableau simple.
 
 1. Avant tout, faites une copie locale de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire de votre ordinateur.
-2. Le contenu de chaque tableau est encadré par ces deux balises : **[`<table></table>`](/fr/docs/Web/HTML/Element/table)**. Ajoutez‑les dans le corps de votre HTML.
-3. Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
+2. Le contenu de chaque tableau est encadré par ces deux balises : **[`<table></table>`](/fr/docs/Web/HTML/Reference/Elements/table)**. Ajoutez‑les dans le corps de votre HTML.
+3. Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément **[`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
 
    ```html
    <td>Bonjour, je suis votre première cellule.</td>
@@ -228,7 +228,7 @@ Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et c
 
 Comme vous le verrez, les cellules ne sont pas placées les unes en dessous des autres, mais elles sont automatiquement affichées dans une même ligne. chaque élément `<td>` crée une cellule simple et ensemble elles forment la première ligne. Toutes les cellules que nous ajoutons allongent la ligne.
 
-Pour empêcher cette ligne de croître et commencer à placer les cellules suivantes sur une deuxième ligne, nous devons utiliser la balise **[`<tr>`](/fr/docs/Web/HTML/Element/tr)** («&nbsp;tr&nbsp;» comme «&nbsp;table rangée&nbsp;»). Étudions cela maintenant.
+Pour empêcher cette ligne de croître et commencer à placer les cellules suivantes sur une deuxième ligne, nous devons utiliser la balise **[`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)** («&nbsp;tr&nbsp;» comme «&nbsp;table rangée&nbsp;»). Étudions cela maintenant.
 
 1. Placez les quatre cellules que vous avez créées entre deux balises `<tr>` ainsi :
 
@@ -358,7 +358,7 @@ Le problème ici c'est que, bien que vous puissiez comprendre le tableau, il n'e
 Améliorons ce tableau.
 
 1. En premier lieu, faites une copie des fichiers [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le contenu HTML est similaire à l'exemple «&nbsp;Dogs&nbsp;» ci-dessus.
-2. Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise **[`<th>`](/fr/docs/Web/HTML/Element/th)** («&nbsp;th&nbsp;» comme «&nbsp;table header&nbsp;» ou en-tête de tableau). Il fonctionne exactement comme la balise `<td>`, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les `<td>` des cellules entourant le tableau par des `<th>`.
+2. Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise **[`<th>`](/fr/docs/Web/HTML/Reference/Elements/th)** («&nbsp;th&nbsp;» comme «&nbsp;table header&nbsp;» ou en-tête de tableau). Il fonctionne exactement comme la balise `<td>`, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les `<td>` des cellules entourant le tableau par des `<th>`.
 3. Enregistrez votre HTML et chargez-le dans un navigateur. Vous devriez voir que les en-têtes ressemblent maintenant à des en-têtes.
 
 > [!NOTE]
@@ -451,7 +451,7 @@ Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
 
 ## Attribuer un style commun aux colonnes
 
-Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments **[`<col>`](/fr/docs/Web/HTML/Element/col)** and **[`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)**. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne — vous devez généralement spécifier les éléments de style dans chaque `<td>` ou `<th>` de la colonne, ou utiliser un sélecteur complexe tel que {{cssxref(":nth-child()")}}.
+Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments **[`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)** and **[`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup)**. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne — vous devez généralement spécifier les éléments de style dans chaque `<td>` ou `<th>` de la colonne, ou utiliser un sélecteur complexe tel que {{cssxref(":nth-child()")}}.
 
 ### Premier exemple
 

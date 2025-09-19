@@ -2,10 +2,8 @@
 title: CSS 論理的プロパティと値
 slug: Web/CSS/CSS_logical_properties_and_values
 l10n:
-  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **CSS 論理的プロパティと値** (CSS logical properties and values) モジュールは、物理的ではなく論理的に方向や寸法を対応付けて、レイアウトを制御することができるようにします。論理的プロパティは、対応する物理的プロパティに対する書字方向に関連した同等のものを定義します。
 
@@ -113,7 +111,7 @@ CSS は当初、物理的な座標のみで設計されていました。論理�
 - [マージン、境界、パディングの論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
   - : さまざまなマージン、境界線、パディングのプロパティとその一括指定に対するフローに関連した割り当て。
 
-- [浮動と位置指定の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
+- [浮動ボックスと位置指定の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
   - : `float`、`clear`、[インセットプロパティ](/ja/docs/Glossary/Inset_properties)、`resize` の物理値と論理値間の詳細な対応付け。
 
 ## 関連概念

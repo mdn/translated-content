@@ -39,4 +39,4 @@ for (var i=0; i < 4; i++) {
 ### Informations techniques
 
 - L'objet JavaScript global : {{jsxref("Boolean")}}
-- [Structures de données JavaScript](/fr/docs/Web/JavaScript/Data_structures) sur MDN
+- [Structures de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures) sur MDN
