@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_Header}}
 
-**`-webkit-box-reflect`** [CSS](/zh-CN/docs/Web/CSS) 属性可以让你在一个特定方向上为元素的内容生成倒影。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`-webkit-box-reflect`** 可以让你在一个特定方向上为元素的内容生成倒影。
 
 ## 语法
 
