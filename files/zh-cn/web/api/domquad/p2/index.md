@@ -1,14 +1,14 @@
 ---
-title: DOMQuad：p3 属性
-short-title: p3
-slug: Web/API/DOMQuad/p3
+title: DOMQuad：p2 属性
+short-title: p2
+slug: Web/API/DOMQuad/p2
 l10n:
   sourceCommit: c486da8298cdfdba0556a190d8e3f92e9aa117bb
 ---
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-**`DOMQuad`** 接口的 **`p3`** 属性包含用于表示 `DOMQuad` 的四个角之一的 {{domxref("DOMPoint")}} 对象。当从 {{domxref("DOMQuad.fromRect_static", "DOMQuad.fromRect()")}} 创建时，它就是点 (x + width, y + height)。
+**`DOMQuad`** 接口的 **`p2`** 属性包含用于表示 `DOMQuad` 的四个角之一的 {{domxref("DOMPoint")}} 对象。当从 {{domxref("DOMQuad.fromRect_static", "DOMQuad.fromRect()")}} 创建时，它就是点 (x + width, y)。
 
 ## 值
 
@@ -31,4 +31,4 @@ l10n:
 
 ## 参见
 
-- 其他 `DOMPoint` 属性：{{domxref("DOMQuad.p1", "p1")}}、{{domxref("DOMQuad.p2", "p2")}} 和 {{domxref("DOMQuad.p4", "p4")}}。
+- 其他 `DOMPoint` 属性：{{domxref("DOMQuad.p1", "p1")}}、{{domxref("DOMQuad.p3", "p3")}} 和 {{domxref("DOMQuad.p4", "p4")}}。
