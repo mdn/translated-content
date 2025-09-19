@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.detachShader()`** 方法用于将一个先前附加到 {{domxref("WebGLShader")}} 的 {{domxref("WebGLProgram")}} 分离。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.detachShader()`** 方法用于将先前附加到 {{domxref("WebGLProgram")}} 上的 {{domxref("WebGLShader")}} 与该 WebGLProgram 分离。
 
 ## 语法
 
