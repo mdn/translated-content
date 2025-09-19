@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`id`** 属性包含一个唯一标识由 {{domxref("AudioTrack")}} 表示的轨道的字符串。
+**`id`** 属性包含唯一标识由 **{{domxref("AudioTrack")}}** 表示的轨道的字符串。
 
 此 ID 可用于与 {{domxref("AudioTrackList.getTrackById()")}} 方法结合使用，从而在与媒体元素关联的媒体中定位特定轨道。轨道 ID 还可用作加载特定轨道的 URL 的片段（如果媒体支持媒体片段）。
 
