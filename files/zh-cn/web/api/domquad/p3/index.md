@@ -19,7 +19,7 @@ l10n:
 - {{domxref("DOMPoint.z")}}：深度坐标。
 - {{domxref("DOMPoint.w")}}：透视值。默认值为 1.0。
 
-这些值中的每一个都是**无限制的**，这意味着它们可以是无穷大或非数（即，其值可能是 {{jsxref("NaN")}} 或 {{jsxref("Infinity", "±Infinity")}}）。
+这些值中的每一个都是**无限制的**，这意味着它们可以是无穷大或无效值（即，其值可能是 {{jsxref("NaN")}} 或 {{jsxref("Infinity", "±Infinity")}}）。
 
 ## 规范
 
