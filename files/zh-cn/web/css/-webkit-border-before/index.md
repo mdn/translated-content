@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-**`-webkit-border-before`** [CSS](/zh-CN/docs/Web/CSS) 属性是一个用于在样式表中统一设置逻辑块起始边框各属性值的简写属性。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`-webkit-border-before`** 是一个用于在样式表中统一设置逻辑块起始边框各属性值的简写属性。
 
 ## 组成属性
 
