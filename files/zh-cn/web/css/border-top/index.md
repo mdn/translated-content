@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-**`border-top`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)用于设置元素上[边框](/zh-CN/docs/Web/CSS/border)的所有属性。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`border-top`** 用于设置元素上[边框](/zh-CN/docs/Web/CSS/border)的所有属性。
 
 {{InteractiveExample("CSS 演示：border-top")}}
 
