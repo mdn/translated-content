@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`:local-link`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个指向同一文档的链接。因此，当某个超链接的目标绝对 URL 与其自身所在文档的 URL 相匹配时，该超链接的源锚点元素就会匹配这个伪类。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:local-link`** 表示一个指向同一文档的链接。因此，当某个超链接的目标绝对 URL 与其自身所在文档的 URL 相匹配时，该超链接的源锚点元素就会匹配这个伪类。
 
 ```css
 /* 选择任何指向当前文档的 <a> 元素 */
