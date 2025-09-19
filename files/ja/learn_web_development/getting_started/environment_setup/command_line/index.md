@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
 
-開発プロセスでは、ターミナル (または「コマンドライン」 — これらは事実上同じことです) でいくつかのコマンドを実行する必要があることは間違いありません。この記事では、ターミナルの概要、ターミナルに入力する必要がある重要なコマンド、コマンドを連結する方法、および独自のコマンドラインインターフェイス (CLI) ツールを追加する方法について説明します。
+開発プロセスでは、ターミナル (または「端末」ないし「コマンドライン」 — これらは事実上同じことです) でいくつかのコマンドを実行する必要があることは間違いありません。この記事では、ターミナルの概要、ターミナルに入力する必要がある重要なコマンド、コマンドを連結する方法、および独自のコマンドラインインターフェイス (CLI) ツールを追加する方法について説明します。
 
 <table>
   <tbody>
