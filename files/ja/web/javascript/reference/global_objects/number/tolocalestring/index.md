@@ -104,7 +104,7 @@ console.log(number.toLocaleString("de-DE"));
 console.log(number.toLocaleString("ar-EG"));
 // ١٢٣٤٥٦٫٧٨٩
 
-// インド語では thousands/lakh/crore の区切りを用いる
+// インドでは thousands/lakh/crore の区切りを用いる
 console.log(number.toLocaleString("en-IN"));
 // 1,23,456.789
 
