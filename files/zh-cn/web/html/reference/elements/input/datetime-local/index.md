@@ -10,7 +10,7 @@ l10n:
 {{InteractiveExample("HTML 演示：&lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="meeting-time">选择约定的时间：</label>
+<label for="meeting-time">选择预约的时间：</label>
 
 <input
   type="datetime-local"
@@ -44,20 +44,20 @@ label {
 你可以将一个包含日期和时间的值放在 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性中以为控件设置一个默认值，像这样：
 
 ```html
-<label for="party">输入预订宴会的日期和时间：</label>
+<label for="party">输入所预定聚会的日期和时间：</label>
 <input
   id="party"
   type="datetime-local"
-  name="partydate"
+  name="party-date"
   value="2017-06-01T08:30" />
 ```
 
 {{ EmbedLiveSample('取值', 600, 60) }}
 
-需要注意的是：显示的日期和时间的格式与实际 `value` 中的格式不同，显示的日期和时间格式以用户操作系统所的区域设置信息为准，而控件的日期/时间值 `value` 总是 `yyyy-MM-ddTHH:mm` 格式。例如，当上例中的值提交到服务器之后，将会像这样 `partydate=2017-06-01T08:30`。
+需要注意的是：显示的日期和时间的格式与实际 `value` 中的格式不同，显示的日期和时间格式以用户操作系统所的区域设置信息为准，而控件的日期/时间值 `value` 总是 `yyyy-MM-ddTHH:mm` 格式。例如，当上例中的值提交到服务器之后，将会像这样 `party-date=2017-06-01T08:30`。
 
 > [!NOTE]
-> 另外请注意，如果这样的数据以 HTTP [`GET`](/zh-CN/docs/Web/HTTP/Reference/Methods/GET) 提交，时间部分的冒号需要编码之后才能放在 URL 参数中，例如 `partydate=2017-06-01T08%3A30`。编码方法请参见 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}。
+> 另外请注意，如果这样的数据以 HTTP [`GET`](/zh-CN/docs/Web/HTTP/Reference/Methods/GET) 提交，时间部分的冒号需要编码之后才能放在 URL 参数中，例如 `party-date=2017-06-01T08%3A30`。编码方法请参见 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}。
 
 你也可以在 JavaScript 中使用 {{domxref("HTMLInputElement")}} 的 `value` 属性来获取和设置日期的值，例如：
 
@@ -88,7 +88,7 @@ dateControl.value = "2017-06-01T08:30";
 
 对于 `datetime-local` 输入，`step` 的值以秒为单位给出，并被视为等于 `step` 值乘以 1000 的毫秒数（底层数值单位为毫秒）。默认值为 60，表示 1 分钟。
 
-字符串值 `any` 表示没有步长约束，任何的值均可使用（除了其他的约束，如：[`min`](#min) 和 [`max`](#max)）。实际上，对于 `datetime-local` 输入，其效果等同于 `60`，因为此时选择器界面仅允许选择整分钟。
+字符串值 `any` 表示没有步长约束，此时用户可以使用任何的值输入（除了其他的约束，如：[`min`](#min) 和 [`max`](#max)）。实际上，对于 `datetime-local` 输入，其效果等同于 `60`，因为此时选择器界面仅允许选择整分钟。
 
 > [!NOTE]
 > 当用户输入的数据不符合配置的步长限制时，{{Glossary("user agent", "用户代理")}}可能会将其四舍五入到最近的有效值，当有两个差值相等的选项时，优先选择大于当前值的数值。
@@ -111,7 +111,7 @@ dateControl.value = "2017-06-01T08:30";
 <input type="hidden" id="timezone" name="timezone" value="-08:00" />
 ```
 
-另一方面，如果你被要求在用户输入日期时间时提供时区输入，你可以提供给用户一种输入方式，例如 {{htmlelement("select")}} 元素：
+另一方面，若需允许用户在输入日期/时间时同时选择时区，可使用 {{htmlelement("select")}} 元素，通过从预设地点列表中选择特定位置，使用户能够设置正确的时区：
 
 ```html
 <select name="timezone" id="timezone">
@@ -184,7 +184,7 @@ input:valid + span:after {
 ```
 
 > [!WARNING]
-> HTML 表单验证并*不*能取代脚本校验输入数据是否符合格式要求。有人可以非常容易地修改 HTML 以绕过验证，亦或是完全删除这个元素。同样可能的是，有人可以非常轻易做到完全绕过 HTML 而直接向你的服务器提交数据。如果你服务器代码不对接收到的数据进行校验，灾难性的打击就可能发生在这些错误格式数据提交的时候（或是数据太大，或是格式错误，等等）。
+> HTML 表单验证并*不*能取代脚本校验输入数据是否符合格式要求。用户可以非常容易地修改 HTML 以绕过验证，亦或是完全删除这个元素。同样可能的是，用户也可以非常轻易做到完全绕过 HTML 而直接向你的服务器提交数据。如果你服务器代码不对接收到的数据进行校验，在这些错误格式数据提交的时候就可能会产生灾难性问题（数据太大、格式错误等）。
 
 > [!NOTE]
 > 通过使用 `datetime-local` 输入，日期值总是被标准化为 `YYYY-MM-DDTHH:mm` 形式。
@@ -229,7 +229,7 @@ input:valid + span:after {
 有效范围涵盖 `min` 与 `max` 值之间的所有时间段；仅在范围首尾日期处对时间段进行限制。
 
 > [!NOTE]
-> 应该能够使用 [`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性来调整每次日期递增时跳跃的天数（例如，可能只想让星期六可选）。然而，截至本文撰写之时，该属性在任何实现中似乎都未能有效发挥作用。
+> 你应该能够使用 [`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性来调整每次日期递增时跳跃的天数（例如，让用户只可以选择星期六）。然而，截至本文撰写之时，该属性在任何实现中似乎都未能有效发挥作用。
 
 ## 技术概要
 
