@@ -1,4 +1,4 @@
----
+。・---
 title: "HTMLDialogElement: closedBy プロパティ"
 short-title: closedBy
 slug: Web/API/HTMLDialogElement/closedBy
@@ -25,7 +25,7 @@ l10n:
 
 ### 基本的な `closedBy` の使い方
 
-```html
+```html-nolint
 <dialog open closedby="any">
   <h2>ダイアログ</h2>
   <p>
