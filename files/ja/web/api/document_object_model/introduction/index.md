@@ -2,7 +2,7 @@
 title: DOM の紹介
 slug: Web/API/Document_Object_Model/Introduction
 l10n:
-  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
+  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -71,19 +71,16 @@ DOM を使い始めるのに、特別なものは必要ありません。
 
 ```html
 <html lang="en">
-  <head>
+  <head> </head>
+  <body>
     <script>
-      // この関数は文書が読み込まれた時に実行される
-      window.onload = () => {
-        // 空の HTML ページに 2 つの要素を作成
-        const heading = document.createElement("h1");
-        const headingText = document.createTextNode("Big Head!");
-        heading.appendChild(headingText);
-        document.body.appendChild(heading);
-      };
+      // 空の HTML ページに 2 つの要素を作成
+      const heading = document.createElement("h1");
+      const headingText = document.createTextNode("Big Head!");
+      heading.appendChild(headingText);
+      document.body.appendChild(heading);
     </script>
-  </head>
-  <body></body>
+  </body>
 </html>
 ```
 
