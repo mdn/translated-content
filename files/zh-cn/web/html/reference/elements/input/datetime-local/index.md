@@ -105,7 +105,7 @@ dateControl.value = "2017-06-01T08:30";
 
 `datetime-local` 控件并没有地方可以设置日期/时间的时区和/或区域属性。在 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local) 输入类型上提供过此功能，但这个类型现在已被废弃，也已从标准中移除。这项被移除的主要原因是缺少浏览器的支持，以及出于用户交互/用户体验方法的考量。相比之下，仅使用一个（或多个）控件来设置日期/时间，然后单独在另一控件处理时区，这样更容易一些。
 
-例如，如果你在开发一套系统，某位用户可能已经登录进来，并且已经设置了时区，你可以把时区放在一个 [`hidden`](/zh-CN/docs/Web/HTML/Reference/Elements/input/hidden) 输入控件里。例如：
+例如，如果你正在构建一个用户很可能已登录且区域设置已配置的系统，可通过 [`hidden`](/zh-CN/docs/Web/HTML/Reference/Elements/input/hidden) 输入类型提供时区。示例如下：
 
 ```html
 <input type="hidden" id="timezone" name="timezone" value="-08:00" />
