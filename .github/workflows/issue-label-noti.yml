@@ -1,0 +1,52 @@
+name: Label Notification
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  send_notification:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Trim issue body to 3 lines
+      id: trim_body
+      run: |
+        echo "${{ github.event.issue.body }}" | head -n 3 > trimmed_body.txt
+        echo "TRIMMED_BODY<<EOF" >> $GITHUB_ENV
+        while IFS= read -r line; do
+          echo "$line" >> $GITHUB_ENV
+        done < trimmed_body.txt
+        echo "EOF" >> $GITHUB_ENV
+
+    - name: Send ko-locale Discord Notification
+      if: contains(github.event.issue.labels.*.name, 'l10n-ko')
+      env:
+        TRIMMED_BODY: ${{ env.TRIMMED_BODY }}
+      run: |
+        trimmed_body=$(cat trimmed_body.txt)
+        payload=$(jq -n --arg title "${{ github.event.issue.title }}" \
+                        --arg url "${{ github.event.issue.html_url }}" \
+                        --arg body "$trimmed_body" \
+                        --arg timestamp "${{ github.event.issue.created_at }}" \
+                        '{
+                          "content": "",
+                          "embeds": [
+                            {
+                              "author": {
+                                "name": "KO ISSUE NOTIFICATION",
+                                "icon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                              },
+                              "title": $title,
+                              "url": $url,
+                              "description": $body,
+                              "footer": {
+                                "text": "Created at"
+                              },
+                              "timestamp": $timestamp
+                            }
+                          ]
+                        }')
+        curl -X POST -H "Content-Type: application/json" \
+             -d "$payload" \
+             ${{ secrets.DISCORD_INTERNATIONAL_KOREAN_WEBHOOK_URL }}
