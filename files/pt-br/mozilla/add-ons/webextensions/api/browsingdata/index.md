@@ -65,7 +65,7 @@ Para usar esta API você deve ter a [permissão de API](/pt-BR/docs/Mozilla/Add-
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) do Chromium.Os dados de compatibilidade do Microsoft Edge compatibility são fornecidos pela Microsoft Corporation e aqui estão inclusos sob a Creative Commons Attribution 3.0 United States License.
+> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) do Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
