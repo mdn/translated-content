@@ -1,10 +1,11 @@
 ---
 title: 座標系
 slug: Web/API/CSSOM_view_API/Coordinate_systems
-original_slug: Web/CSS/CSSOM_view/Coordinate_systems
 l10n:
-  sourceCommit: d13c1276b80bbfc940a1091b62f333fe9edc78a2
+  sourceCommit: 896a41d7d9832367a1e24af567fb419e9d4182f8
 ---
+
+{{DefaultAPISidebar("CSSOM view API")}}
 
 グラフィックのコンテキストでピクセルの位置を指定する場合（ちょうど[代数学](https://ja.wikipedia.org/wiki/代数学)で座標系を指定する場合と同様）、その位置はコンテキスト内の固定点を基準として定義されます。この固定点は[原点](<https://ja.wikipedia.org/wiki/原点_(数学)>)と呼ばれています。位置は、コンテキストの各次元に沿った原点からのピクセル単位のオフセットで指定されます。
 
@@ -34,7 +35,7 @@ CSS オブジェクトモデルで使用する 4 つの標準座標系があり�
 
 「オフセット」モデルを用いて指定される座標は、検査される要素またはイベントが発生した要素の左上隅を使用します。
 
-例えば、{{domxref("MouseEvent", "マウスイベント", "", 1)}}が発生すると、イベントの {{domxref("MouseEvent.offsetX", "offsetX")}} と {{domxref("MouseEvent.offsetY", "offsetY")}} 属性で指定されたマウスの位置は、イベントを配信したノードの左上の角に相対的に示されます。原点はパディング領域と境界領域の間、パディング辺だけ内側にずらされます。
+例えば、[マウスイベント](/ja/docs/Web/API/MouseEvent)が発生すると、イベントの {{domxref("MouseEvent.offsetX", "offsetX")}} と {{domxref("MouseEvent.offsetY", "offsetY")}} 属性で指定されたマウスの位置は、イベントを配信したノードの左上の角に相対的に示されます。原点はパディング領域と境界領域の間、パディング辺だけ内側にずらされます。
 
 ### ビューポート
 
