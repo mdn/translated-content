@@ -44,8 +44,7 @@ position-anchor: unset;
 
 関連付けられたアンカーが非表示の場合（{{cssxref("display", "display: none")}} や {{cssxref("visibility", "visibility: hidden")}} などによって）、または他の要素の[スキップされたコンテンツ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents)の一部となっている場合（その要素に {{cssxref("content-visibility", "content-visibility: hidden")}} が設定されている場合）、アンカー位置指定された要素は表示されません。
 
-`position-anchor` プロパティは、位置指定されたすべての要素と、それに加えて[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、例えば {{cssxref("::before")}} や {{cssxref("::after")}} などで対応しています。
-もと同様に含まれています。。擬似要素は、特に指定しない限り、その擬似要素の元の要素と同じ要素に暗黙的にアンカーされます。
+`position-anchor` プロパティは、位置指定されたすべての要素と、それに加えて[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、例えば {{cssxref("::before")}} や {{cssxref("::after")}} などで対応しています。擬似要素は、特に指定しない限り、その擬似要素の元の要素と同じ要素に暗黙的にアンカーされます。
 
 アンカー機能の詳細な情報とアンカーを使用する方法は、[CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュールのランディングページと、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイドを参照してください。
 
