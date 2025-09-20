@@ -133,7 +133,7 @@ function greet() {
 button.addEventListener("click", greet);
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, , , , , 'allow-modals') }}
 
 여기서는 팝업 대화 상자를 통해 사용자에게 질문에 대한 답변을 요청한 다음 입력한 텍스트를 지정된 변수(이 경우 이름)에 저장하는 {{domxref("window.prompt()", "window.prompt()")}} 함수를 사용하고 있습니다. 그런 다음 일반 인사말 메시지에 `name`을 삽입하는 문자열을 표시합니다.
 
