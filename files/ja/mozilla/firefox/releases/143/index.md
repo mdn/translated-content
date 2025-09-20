@@ -17,12 +17,9 @@ Firefox 143 は、米国時間 [2025 年 9 月 16 日](https://whattrainisitnow.
 
 ### CSS
 
-- {{cssxref("::details-content")}} 擬似要素をデフォルトで有効にしました。これは、{{htmlElement("details")}} 要素の内容物にスタイルを設定できます 
-  ([Firefox bug 1941406](https://bugzil.la/1941406))。
-- {{cssxref("::before")}} または {{cssxref("::after")}} 擬似要素を使用して生成したリストアイテムに、{{cssxref("::marker")}} 擬似要素を使用してスタイル設定が可能になりました。これは [`::before::marker`](/ja/docs/Web/CSS/::before#beforemarker_nested_pseudo-elements) および [`::after::marker`](/ja/docs/Web/CSS/::after#aftermarker_nested_pseudo-elements) セレクターを使用して実現します 
-  ([Firefox bug 1980215](https://bugzil.la/1980215))。
-- マルチパスのグリッドトラックサイズ調整がデフォルトで有効になり、CSS グリッド仕様書で示されているアルゴリズムに従うようになりました。マルチパスアルゴリズムでは、はじめに列のサイズを決めてから行のサイズを決めます。また、コンテナーのサイズが決まった後にパーセンテージ値を解決します。このデフォルトのサポートで、[パーセンテージに基づく](/ja/docs/Web/CSS/grid-template-rows#percentage) 行トラックやアスペクト比を伴うグリッドアイテムが、多くのケースで正しくサイズ調整されます 
-  ([Firefox bug 1957244](https://bugzil.la/1957244))。
+- {{cssxref("::details-content")}} 擬似要素をデフォルトで有効にしました。これは、{{htmlElement("details")}} 要素の内容物にスタイルを設定できます ([Firefox bug 1941406](https://bugzil.la/1941406))。
+- {{cssxref("::before")}} または {{cssxref("::after")}} 擬似要素を使用して生成したリストアイテムに、{{cssxref("::marker")}} 擬似要素を使用してスタイル設定が可能になりました。これは [`::before::marker`](/ja/docs/Web/CSS/::before#beforemarker_nested_pseudo-elements) および [`::after::marker`](/ja/docs/Web/CSS/::after#aftermarker_nested_pseudo-elements) セレクターを使用して実現します ([Firefox bug 1980215](https://bugzil.la/1980215))。
+- マルチパスのグリッドトラックサイズ調整がデフォルトで有効になり、CSS グリッド仕様書で示されているアルゴリズムに従うようになりました。マルチパスアルゴリズムでは、はじめに列のサイズを決めてから行のサイズを決めます。また、コンテナーのサイズが決まった後にパーセンテージ値を解決します。このデフォルトのサポートで、[パーセンテージに基づく](/ja/docs/Web/CSS/grid-template-rows#percentage) 行トラックやアスペクト比を伴うグリッドアイテムが、多くのケースで正しくサイズ調整されます ([Firefox bug 1957244](https://bugzil.la/1957244))。
 
 ### JavaScript
 
@@ -32,8 +29,7 @@ Firefox 143 は、米国時間 [2025 年 9 月 16 日](https://whattrainisitnow.
 
 #### 廃止
 
-- 非推奨の {{domxref("CompositionEvent.locale")}} プロパティのサポートを廃止しました 
-  ([Firefox bug 1700969](https://bugzil.la/1700969))。
+- 非推奨の {{domxref("CompositionEvent.locale")}} プロパティのサポートを廃止しました ([Firefox bug 1700969](https://bugzil.la/1700969))。
 
 ### WebDriver への適合 (WebDriver BiDi, Marionette)
 
