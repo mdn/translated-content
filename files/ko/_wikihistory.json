@@ -6925,18 +6925,18 @@
       "kidkkr"
     ]
   },
-  "Web/API/XMLHttpRequest/timeout_event": {
+  "Web/API/XMLHttpRequest/upload": {
+    "modified": "2020-10-15T22:30:03.395Z",
+    "contributors": [
+      "DeadIntegral"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/timeout_event": {
     "modified": "2019-05-28T20:54:41.611Z",
     "contributors": [
       "jswisher",
       "wbamberg",
       "ExE-Boss",
-      "DeadIntegral"
-    ]
-  },
-  "Web/API/XMLHttpRequest/upload": {
-    "modified": "2020-10-15T22:30:03.395Z",
-    "contributors": [
       "DeadIntegral"
     ]
   },
@@ -7392,7 +7392,7 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_picker": {
     "modified": "2019-03-18T21:24:14.300Z",
     "contributors": [
       "darim"

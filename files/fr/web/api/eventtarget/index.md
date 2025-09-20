@@ -89,6 +89,6 @@ EventTarget.prototype.dispatchEvent = function (event) {
 
 ## Voir aussi
 
-- [Référence d'événement](/fr/docs/Web/Events) - les événements disponibles sur la plateforme.
-- [Guide du développeur d'événements](/fr/docs/Web/Events)
+- [Référence d'événement](/fr/docs/Web/API/Document_Object_Model/Events) - les événements disponibles sur la plateforme.
+- [Guide du développeur d'événements](/fr/docs/Web/API/Document_Object_Model/Events)
 - {{domxref("Event")}} interface

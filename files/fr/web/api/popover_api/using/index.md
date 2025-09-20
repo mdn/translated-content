@@ -20,7 +20,7 @@ Dans sa forme la plus simple, un <i lang="en">popover</i> est créé en ajoutant
 > [!NOTE]
 > Définir l'attribut `popover` sans valeur est équivalent à utiliser `popover="auto"`.
 
-Ajouter cet attribut masque l'élément dès le chargement de la page, comme si on lui appliquait la déclaration CSS [`display: none`](/fr/docs/Web/CSS/display). Pour afficher/masquer le <i lang="en">popover</i>, il faut utiliser un ou plusieurs boutons de contrôle. Vous pouvez utiliser un élément [`<button>`](/fr/docs/Web/HTML/Element/button) (ou [`<input>`](/fr/docs/Web/HTML/Element/input) avec l'attribut `type="button"`) en lui ajoutant l'attribut [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget) avec la valeur de l'identifiant (attribut `id`) de l'élément <i lang="en">popover</i> à contrôler.
+Ajouter cet attribut masque l'élément dès le chargement de la page, comme si on lui appliquait la déclaration CSS [`display: none`](/fr/docs/Web/CSS/display). Pour afficher/masquer le <i lang="en">popover</i>, il faut utiliser un ou plusieurs boutons de contrôle. Vous pouvez utiliser un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) (ou [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) avec l'attribut `type="button"`) en lui ajoutant l'attribut [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget) avec la valeur de l'identifiant (attribut `id`) de l'élément <i lang="en">popover</i> à contrôler.
 
 ```html
 <button popovertarget="mypopover">Actionner le popover</button>
@@ -29,7 +29,7 @@ Ajouter cet attribut masque l'élément dès le chargement de la page, comme si 
 
 Par défaut, l'élément de contrôle bascule l'état du <i lang="en">popover</i> entre affiché et masqué.
 
-Vous pouvez modifier ce comportement en utilisant l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction) avec les valeurs `"show"`, `"hide"` ou `"toggle"`. Par exemple, pour créer des boutons différents qui affichent ou masquent le <i lang="en">popover</i>, vous pouvez utiliser le code suivant&nbsp;:
+Vous pouvez modifier ce comportement en utilisant l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction) avec les valeurs `"show"`, `"hide"` ou `"toggle"`. Par exemple, pour créer des boutons différents qui affichent ou masquent le <i lang="en">popover</i>, vous pouvez utiliser le code suivant&nbsp;:
 
 ```html
 <button popovertarget="mypopover" popovertargetaction="show">
@@ -82,7 +82,7 @@ Vous pouvez voir ce code en action dans [notre exemple de <i lang="en">popovers<
 
 Vous pouvez également afficher des <i lang="en">popovers</i> via une API JavaScript.
 
-La propriété [`HTMLElement.popover`](/fr/docs/Web/API/HTMLElement/popover) permet de lire ou de définir la valeur de l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover). Elle peut être utilisée pour créer un <i lang="en">popover</i> en JavaScript, ou servir à la détection de fonctionnalité.
+La propriété [`HTMLElement.popover`](/fr/docs/Web/API/HTMLElement/popover) permet de lire ou de définir la valeur de l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover). Elle peut être utilisée pour créer un <i lang="en">popover</i> en JavaScript, ou servir à la détection de fonctionnalité.
 
 ```js
 function supportsPopovers() {
@@ -93,9 +93,9 @@ function supportsPopovers() {
 De même&nbsp;:
 
 - [`HTMLButtonElement.popoverTargetElement`](/fr/docs/Web/API/HTMLButtonElement/popoverTargetElement) et [`HTMLInputElement.popoverTargetElement`](/fr/docs/Web/API/HTMLInputElement/popoverTargetElement)
-  - : Permettent de connaître ou définir la valeur de l'attribut [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget), ce qui permet de créer des boutons de contrôle. Notez que la valeur de cette propriété est une référence vers l'élément <i lang="en">popover</i>.
+  - : Permettent de connaître ou définir la valeur de l'attribut [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/button#popovertarget), ce qui permet de créer des boutons de contrôle. Notez que la valeur de cette propriété est une référence vers l'élément <i lang="en">popover</i>.
 - [`HTMLButtonElement.popoverTargetAction`](/fr/docs/Web/API/HTMLButtonElement/popoverTargetAction) et [`HTMLInputElement.popoverTargetAction`](/fr/docs/Web/API/HTMLInputElement/popoverTargetAction)
-  - : Permettent de connaître ou définir la valeur de l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction), ce qui permet de spécifier l'action à effectuer sur l'élément <i lang="en">popover</i> contrôlé par le bouton.
+  - : Permettent de connaître ou définir la valeur de l'attribut [`popovertargetaction`](/fr/docs/Web/HTML/Reference/Elements/button#popovertargetaction), ce qui permet de spécifier l'action à effectuer sur l'élément <i lang="en">popover</i> contrôlé par le bouton.
 
 En utilisant ces trois propriétés, vous pouvez créer un bouton de contrôle et un élément <i lang="en">popover</i> en JavaScript&nbsp;:
 
@@ -316,7 +316,7 @@ Allez voir [notre exemple de <i lang="en">popover</i> avec arrière-plan flouté
 
 ## Animer les <i lang="en">popovers</i>
 
-Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: none;` quand ils sont fermés et avec `display: block;` quand ils sont ouverts, et sont respectivement retirés/ajoutés à [la couche supérieure](/fr/docs/Glossary/Top_layer) et à [l'arbre d'accessibilité](/fr/docs/Web/Performance/How_browsers_work#construire_larbre_daccessibilité). En conséquence, pour que les <i lang="en">popovers</i> puissent être animés, la propriété [`display`](/fr/docs/Web/CSS/display) doit pouvoir être animée. Les [navigateurs compatibles](/fr/docs/Web/CSS/display#compatibilité_des_navigateurs) animent `display` avec [une variation discrète](/fr/docs/Web/CSS/CSS_animated_properties#discrete). Concrètement, le navigateur passera de la valeur `none` à une autre valeur de manière à ce que l'animation affiche le contenu tout du long. Ainsi&nbsp;:
+Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: none;` quand ils sont fermés et avec `display: block;` quand ils sont ouverts, et sont respectivement retirés/ajoutés à [la couche supérieure](/fr/docs/Glossary/Top_layer) et à [l'arbre d'accessibilité](/fr/docs/Web/Performance/Guides/How_browsers_work#construire_larbre_daccessibilité). En conséquence, pour que les <i lang="en">popovers</i> puissent être animés, la propriété [`display`](/fr/docs/Web/CSS/display) doit pouvoir être animée. Les [navigateurs compatibles](/fr/docs/Web/CSS/display#compatibilité_des_navigateurs) animent `display` avec [une variation discrète](/fr/docs/Web/CSS/CSS_animated_properties#discrete). Concrètement, le navigateur passera de la valeur `none` à une autre valeur de manière à ce que l'animation affiche le contenu tout du long. Ainsi&nbsp;:
 
 - Quand `display` est animé de `none` à `block` (ou toute autre valeur visible de `display`), la valeur passera à `block` à 0% de la durée de l'animation, ce qui la rendra visible du début à la fin.
 - Quand `display` est animé de `block` (ou toute autre valeur visible de `display`) à `none`, la valeur passera à `none` à 100% de la durée de l'animation, ce qui la rendra visible du début à la fin.
@@ -341,7 +341,7 @@ Prenons un exemple pour voir ce que ça donne.
 
 #### HTML
 
-Le code HTML comprend un élément [`<div>`](/fr/docs/Web/HTML/Element/div) transformé en <i lang="en">popover</i> avec l'attribut global [`popover`](/fr/docs/Web/HTML/Global_attributes/popover), et un élément [`<button>`](/fr/docs/Web/HTML/Element/button) qui contrôle l'affichage du <i lang="en">popover</i> avec l'attribut [`popovertarget`](/fr/docs/Web/HTML/Element/input#popovertarget).
+Le code HTML comprend un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) transformé en <i lang="en">popover</i> avec l'attribut global [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), et un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) qui contrôle l'affichage du <i lang="en">popover</i> avec l'attribut [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/input#popovertarget).
 
 ```html
 <button popovertarget="mypopover">Afficher le popover</button>
@@ -452,7 +452,7 @@ Prenons un exemple.
 
 #### HTML
 
-Le code HTML comprend un élément [`<div>`](/fr/docs/Web/HTML/Element/div), transformé en <i lang="en">popover</i> avec l'attribut global [`popover`](/fr/docs/Web/HTML/Global_attributes/popover), et un élément [`<button>`](/fr/docs/Web/HTML/Element/button) qui contrôle l'affichage du <i lang="en">popover</i> avec l'attribut [`popovertarget`](/fr/docs/Web/HTML/Element/input#popovertarget).
+Le code HTML comprend un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div), transformé en <i lang="en">popover</i> avec l'attribut global [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), et un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) qui contrôle l'affichage du <i lang="en">popover</i> avec l'attribut [`popovertarget`](/fr/docs/Web/HTML/Reference/Elements/input#popovertarget).
 
 ```html
 <button popovertarget="mypopover">Afficher le popover</button>

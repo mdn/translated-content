@@ -34,7 +34,7 @@ Il existe 4 catégories d'états et de propriétés ARIA&nbsp;:
 - [`aria-placeholder`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
 - [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-- [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+- [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
 - [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 - [`aria-sort`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
 - [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
@@ -103,7 +103,7 @@ La plupart des attributs listés avant sont universels, ce qui signifie qu'on pe
 - [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-roledescription`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
 
-Tous les attributs de cette liste sont universels et seules les propriétés `aria-label` et `aria-labelledby` ne sont pas autorisées sur les éléments dont le rôle vaut [`presentation`](/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role) ou le rôle synonyme [`none`](/fr/docs/Web/Accessibility/ARIA/Roles/none_role).
+Tous les attributs de cette liste sont universels et seules les propriétés `aria-label` et `aria-labelledby` ne sont pas autorisées sur les éléments dont le rôle vaut [`presentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) ou le rôle synonyme [`none`](/fr/docs/Web/Accessibility/ARIA/Roles/none_role).
 
 ## États et propriétés définis sur MDN
 
@@ -113,4 +113,4 @@ Les pages suivantes sont les pages de référence qui couvrent les états et pro
 
 ## Voir aussi
 
-- [Utiliser ARIA&nbsp;: rôles, états et propriétés](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Utiliser ARIA&nbsp;: rôles, états et propriétés](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques)

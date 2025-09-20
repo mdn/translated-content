@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
 **`linear-gradient()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 두 개 이상의 색상이 직선을 따라 점진적으로 변화되는 선형 그라데이션 그림을 생성합니다. 그 결과는 {{CSSxRef("&lt;gradient&gt;")}} 데이터 유형의 객체이며, 이는 {{CSSxRef("&lt;image&gt;")}}의 특별한 종류 중 하나입니다.
 
 {{InteractiveExample("CSS Demo: linear-gradient()")}}

@@ -18,8 +18,8 @@ Comme vous pouvez le voir, la couleur sans canal alpha bloque complètement le t
 ## Voir aussi
 
 - [Couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
-- [Introduction aux unités et valeurs CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Guide des types et formats des fichiers d'images](/fr/docs/Web/Media/Formats/Image_types)
+- [Introduction aux unités et valeurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- [Guide des types et formats des fichiers d'images](/fr/docs/Web/Media/Guides/Formats/Image_types)
 - [Alpha blending](https://fr.wikipedia.org/wiki/Alpha_blending) sur Wikipedia
 - [Modèle de couleur RVBA](https://fr.wikipedia.org/wiki/RVBA) sur Wikipedia
 - [Chaîne (image numérique)](<https://en.wikipedia.org/wiki/Channel_(digital_image)>) (en anglais) sur Wikipedia

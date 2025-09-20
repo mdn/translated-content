@@ -9,7 +9,7 @@ Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier 
 
 ## Définition d'un arbre de contenu
 
-Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace))&nbsp;:
+Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Web/CSS/CSS_text/Whitespace))&nbsp;:
 
 ```html
 <html>

@@ -42,22 +42,22 @@ Gecko utilise maintenant le parseur [HTML5](/fr/docs/Glossary/HTML5), qui corrig
 
 ### HTML
 
-- [Rencontrez le parseur HTML5](/fr/docs/Learn/HTML)
+- [Rencontrez le parseur HTML5](/fr/docs/Learn_web_development/Core/Structuring_content)
   - : Un aperçu sur ce que le parseur HTML5 représente pour vous et comment intégrer du contenu SVG et MathML dans votre code.
-- [Les formulaires en HTML5](/fr/docs/Learn/Forms)
-  - : Un aperçu de l'amélioration de formulaires Web en HTML5. Parmi les changements on ajoute les types d'entrée dans l'élément [`<input>`](/fr/docs/Web/HTML/Element/input), la validation des données et d'autres modifications.
+- [Les formulaires en HTML5](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+  - : Un aperçu de l'amélioration de formulaires Web en HTML5. Parmi les changements on ajoute les types d'entrée dans l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), la validation des données et d'autres modifications.
 - [Sections HTML5](/fr/docs/Sections_and_Outlines_of_an_HTML5_document)
-  - : Gecko supporte à présent les nouveaux éléments HTML5 liés aux sections dans un document : [`<article>`](/fr/docs/Web/HTML/Element/article), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header) et [`<footer>`](/fr/docs/Web/HTML/Element/footer).
-- [Attribut HTML5 hidden](/fr/docs/Web/HTML/Global_attributes#hidden)
+  - : Gecko supporte à présent les nouveaux éléments HTML5 liés aux sections dans un document : [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside), [`<hgroup>`](/fr/docs/Web/HTML/Reference/Elements/hgroup), [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header) et [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer).
+- [Attribut HTML5 hidden](/fr/docs/Web/HTML/Reference/Global_attributes#hidden)
   - : Cet attribut, commun à tous les éléments, est utilisé pour cacher le contenu d'une page Web qui n'est pas encore pertinent pour l'utilisateur.
 - Autres éléments HTML5
-  - : Gecko supporte les nouveaux éléments HTML5 suivants : [`<mark>`](/fr/docs/Web/HTML/Element/mark), [`<figure>`](/fr/docs/Web/HTML/Element/figure), et [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption).
+  - : Gecko supporte les nouveaux éléments HTML5 suivants : [`<mark>`](/fr/docs/Web/HTML/Reference/Elements/mark), [`<figure>`](/fr/docs/Web/HTML/Reference/Elements/figure), et [`<figcaption>`](/fr/docs/Web/HTML/Reference/Elements/figcaption).
 - [WebSockets](/fr/docs/Web/API/WebSockets_API)
   - : Un guide pour utiliser la nouvelle API WebSockets pour la communication entre une application web et un serveur en temps réel. A noter que WebSockets tel qu'implémenté dans Firefox 4 n'est pas compatible avec la norme finale, et ne devrait pas être utilisé.
 
 #### Améliorations de Canvas
 
-Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D) pour permettre à l'implémentation de [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) d'être en conformité avec la spécification :
+Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D) pour permettre à l'implémentation de [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) d'être en conformité avec la spécification :
 
 - La spécification d'un rayon négatif lors de l'appel d'`arc()` lance désormais correctement l'exception `INDEX_SIZE_ERR`.
 - La spécification de valeurs non finies lors de l'appel de `createLinearGradient()` et `createRadialGradient()` lance désormais `NOT_SUPPORTED_ERR` au lieu de `SYNTAX_ERR`.
@@ -69,16 +69,16 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 
 #### Autres changements HTML
 
-- L'élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) est maintenant redimensionnable par défaut ; pour le désactiver, vous pouvez utiliser la propriété CSS [`resize`](/fr/docs/Web/CSS/resize).
+- L'élément [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) est maintenant redimensionnable par défaut ; pour le désactiver, vous pouvez utiliser la propriété CSS [`resize`](/fr/docs/Web/CSS/resize).
 - `canvas.getContext` et `canvas.toDataURL` ne lancent plus d'exceptions lorsqu'ils sont appelés avec des arguments non reconnus.
-- L'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) supporte maintenant la méthode spécifique à Mozilla, `mozGetAsFile()`, qui permet d'obtenir un fichier basé sur l'image d'un contenu canvas. Voir [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) pour les détails.
+- L'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) supporte maintenant la méthode spécifique à Mozilla, `mozGetAsFile()`, qui permet d'obtenir un fichier basé sur l'image d'un contenu canvas. Voir [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) pour les détails.
 - `canvas2dcontext.lineCap` et `canvas2dcontext.lineJoin` ne lancent plus d'exceptions lorsqu'ils sont réglés avec une valeur non reconnue.
 - `canvas2dcontext.globalCompositeOperation` ne lance plus d'exception lorsqu'il est réglé avec une valeur non reconnue et ne supporte plus la valeur `darker`, qui n'est pas un standard.
 - Le support de l'élément obsolète [`<spacer>`](/fr/docs/Web/HTML/Element/spacer), était absent de tous les autres navigateurs, a été enlevé.
 - L'élément [`<isindex>`](/fr/docs/Web/HTML/Element/isindex), qui était crée par [`document.createElement()`](/fr/docs/Web/API/Document/createElement), est maintenant crée comme un simple élément sans propriétés ou méthodes.
-- Gecko supporte maintenant l'appel `click()` sur l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) pour ouvrir le sélecteur de fichiers. Voir l'[exemple](</fr/docs/Web/API/File_API/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click()_method>) dans l'article [Using files from web applications](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input) supporte un nouvel attribut [`mozactionhint`](/fr/docs/Web/HTML/Element/input#attr-mozactionhint), qui permet de spécifier l'étiquette de la touche Entrée sur un clavier virtuel.
-- L'élément [`<script>`](/fr/docs/Web/HTML/Element/script) à l'intérieur des éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<noembed>`](/fr/docs/Web/HTML/Element/noembed) et [`<noframes>`](/fr/docs/Web/HTML/Element/noframes) sont maintenant exécutés, contrairement aux versions précédentes de Firefox. Ceci est conforme à la spécification et correspond au comportement des autres navigateurs.
+- Gecko supporte maintenant l'appel `click()` sur l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) pour ouvrir le sélecteur de fichiers. Voir l'[exemple](</fr/docs/Web/API/File_API/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click()_method>) dans l'article [Using files from web applications](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
+- L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) supporte un nouvel attribut [`mozactionhint`](/fr/docs/Web/HTML/Reference/Elements/input#attr-mozactionhint), qui permet de spécifier l'étiquette de la touche Entrée sur un clavier virtuel.
+- L'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) à l'intérieur des éléments [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), [`<noembed>`](/fr/docs/Web/HTML/Reference/Elements/noembed) et [`<noframes>`](/fr/docs/Web/HTML/Reference/Elements/noframes) sont maintenant exécutés, contrairement aux versions précédentes de Firefox. Ceci est conforme à la spécification et correspond au comportement des autres navigateurs.
 
 ### CSS
 
@@ -94,7 +94,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
   - : Le support des propriétés tactiles a été ajouté. Plus de détails plus tard.
 - [Utilisation arbitraires d'élements comme fond](/fr/docs/Web/CSS/element)
   - : Vou pouvez utiliser la fonction CSS [`-moz-element`](/fr/docs/Web/CSS/element) et la fonction DOM [`document.mozSetImageElement()`](/fr/docs/Web/API/Document/mozSetImageElement) pour une utilisation arbitraire des éléments HTML comme fond.
-- [Sélecteur :visited et confidentialité](/fr/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [Sélecteur :visited et confidentialité](/fr/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : Des modifications ont étés apportées sur les informations qui peuvent être obtenues sur le style des liens visités en utilisant les sélecteurs CSS. Certaines applications Web peuvent être affectées.
 
 #### Nouvelles propriétés CSS
@@ -357,18 +357,18 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 
 - [Optimisation des performances graphique](/fr/docs/Optimizing_graphics_performance)
   - : Trucs et astuces pour profiter le maximum des performances graphiques et vidéo dans Firefox 4.
-- [Support de WebM](/fr/docs/Web/Media/Formats#webm)
+- [Support de WebM](/fr/docs/Web/Media/Guides/Formats#webm)
   - : Le nouveau format vidéo ouvert [WebM](http://www.webmproject.org/) est supporté par Gecko 2.0.
-- [Animation SVG avec SMIL](/fr/docs/Web/SVG/SVG_animation_with_SMIL)
+- [Animation SVG avec SMIL](/fr/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : Les animations SVG avec SMIL sont désomais supportées.
 - Utilisation de SVG comme image ou arrière-plan CSS
-  - : Vous pouvez maintenant utilisez SVG avec l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), ainsi qu'avec CSS [`background-image`](/fr/docs/Web/CSS/background-image).
+  - : Vous pouvez maintenant utilisez SVG avec l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), ainsi qu'avec CSS [`background-image`](/fr/docs/Web/CSS/background-image).
 - Attribut Media `buffered`
-  - : L'attribut `buffered` sur les éléments [`<video>`](/fr/docs/Web/HTML/Element/video) and [`<audio>`](/fr/docs/Web/HTML/Element/audio) est maintenant supporté, vous permettant de déterminer quel fichier multimédia a été tamponné. L'interface DOM [`TimeRanges`](/fr/docs/Web/API/TimeRanges) a été mise en place pour ce support.
+  - : L'attribut `buffered` sur les éléments [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) and [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) est maintenant supporté, vous permettant de déterminer quel fichier multimédia a été tamponné. L'interface DOM [`TimeRanges`](/fr/docs/Web/API/TimeRanges) a été mise en place pour ce support.
 - Attribut Media `preload`
-  - : L'attribut `preload` de la spécification HTML5 a été implémenté, remplaçant l'attribut `autobuffer` précédemment mis en place (et qui n'est plus pris en charge). Cela affecte les éléments [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<audio>`](/fr/docs/Web/HTML/Element/audio) ainsi que l'interface [`nsIDOMHTMLMediaElement`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMHTMLMediaElement).
+  - : L'attribut `preload` de la spécification HTML5 a été implémenté, remplaçant l'attribut `autobuffer` précédemment mis en place (et qui n'est plus pris en charge). Cela affecte les éléments [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) et [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) ainsi que l'interface [`nsIDOMHTMLMediaElement`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMHTMLMediaElement).
 - Amélioration du positionnement du texte SVG
-  - : Vous pouvez maintenant spécifier des listes des valeurs pour les propriétés `x`, `y`, `dx`, and `dy` sur les éléments SVG [`<text>`](/fr/docs/Web/SVG/Element/text) et [`<tspan>`](/fr/docs/Web/SVG/Element/tspan). Cela vous permet de contrôler le positionnement de chaque caractère d'une chaîne, individuellement.
+  - : Vous pouvez maintenant spécifier des listes des valeurs pour les propriétés `x`, `y`, `dx`, and `dy` sur les éléments SVG [`<text>`](/fr/docs/Web/SVG/Reference/Element/text) et [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan). Cela vous permet de contrôler le positionnement de chaque caractère d'une chaîne, individuellement.
 
 ### DOM
 
@@ -487,12 +487,12 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
 
 #### Divers changements DOM
 
-- L'enveloppement d'un élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) peut maintenant être commandé via l'attribut DOM `wrap`. [bug 41464](https://bugzilla.mozilla.org/show_bug.cgi?id=41464)
-- Les éléments [`<script>`](/fr/docs/Web/HTML/Element/script) crées avec [`document.createElement()`](/fr/docs/Web/API/Document/createElement) et insérés dans un document, se comportent désormais conformément à la spécification HTML5. Les scripts avec l'attribut `src` s'exécute dès que possible (sasn maintenir la commande) et les scripts sans l'attribut `src` s'exécute de manière simultanée. Pour faire des scripts d'insertion de scripts qui ont l'attribut `src` qui exécute l'ensemble dans l'ordre d'insertion, pour eux `.async=false`.
+- L'enveloppement d'un élément [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) peut maintenant être commandé via l'attribut DOM `wrap`. [bug 41464](https://bugzilla.mozilla.org/show_bug.cgi?id=41464)
+- Les éléments [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) crées avec [`document.createElement()`](/fr/docs/Web/API/Document/createElement) et insérés dans un document, se comportent désormais conformément à la spécification HTML5. Les scripts avec l'attribut `src` s'exécute dès que possible (sasn maintenir la commande) et les scripts sans l'attribut `src` s'exécute de manière simultanée. Pour faire des scripts d'insertion de scripts qui ont l'attribut `src` qui exécute l'ensemble dans l'ordre d'insertion, pour eux `.async=false`.
 - Les objets DOM [`file`](/fr/docs/Web/API/File) proposent désormais la propriété `url`.
 - Support de [FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#using_formdata_objects) pour XMLHttpRequest.
 - La propriété [`element.isContentEditable`](/fr/docs/Web/API/Element/isContentEditable) a été implémentée.
-- La propriété [`document.currentScript`](/fr/docs/Web/API/Document/currentScript) vous permet de déterminer quel script de l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) est en cours d'exécution. les nouveaux évènements [`element.onbeforescriptexecute`](/fr/docs/Web/API/Element/onbeforescriptexecute) et [`element.onafterscriptexecute`](/fr/docs/Web/API/Element/onafterscriptexecute) sont déclenchés avant et après l'éxécution d'un élément script.
+- La propriété [`document.currentScript`](/fr/docs/Web/API/Document/currentScript) vous permet de déterminer quel script de l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) est en cours d'exécution. les nouveaux évènements [`element.onbeforescriptexecute`](/fr/docs/Web/API/Element/onbeforescriptexecute) et [`element.onafterscriptexecute`](/fr/docs/Web/API/Element/onafterscriptexecute) sont déclenchés avant et après l'éxécution d'un élément script.
 - Ajout de la propriété [`mozSourceNode`](/fr/docs/Web/API/DataTransfer#mozsourcenode) à l'objet [`DragTransfer`](/fr/docs/Web/API/DataTransfer).
 - Ajout de la méthode [`selection.modify()`](/fr/docs/Web/API/Selection/modify) à l'objet [`Selection`](/fr/docs/Web/API/Selection), ce qui vous permet de facilement modifier la sélection de texte courant ou la position du curseur dans une fenêtre de navigateur.
 - Le support de l'objet `window.directories` et de la fonctionnalité `directories` pour [`window.open`](/fr/docs/Web/API/Window/open), qui ne sont plus supportés dans les autres navigateurs, ont été enlevés. Utiliser `personalbar` à la place. [bug 474058](https://bugzilla.mozilla.org/show_bug.cgi?id=474058)
@@ -501,7 +501,7 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
 - La méthode [`document.createElement`](/fr/docs/Web/API/Document/createElement) n'accepte plus `<` et `>` autour du nom de balise en mode quirks.
 - Les méthodes [`element.setCapture()`](/fr/docs/Web/API/Element/setCapture) et [`document.releaseCapture()`](/fr/docs/Web/API/Document/releaseCapture) ont été ajoutées, permettant à des éléments de poursuivre des évènements de la souris, même lorsqu'elle est en dehors de leur zone de suivi normal après que l'évènement `mousedown` soit survenu.
 - La propriété [`window.mozPaintCount`](/fr/docs/Web/API/Window) a été ajoutée, elle vous permet de déterminer le nombre de fois q'un document a été peint. Cela est particulièrement utile lors des tests de performance de votre application web.
-- Le signe de la langue a été supprimé de [`window.navigator.appVersion`](/fr/docs/Web/API/Window/navigator/appVersion) et [`window.navigator.userAgent`](/fr/docs/Web/API/Window/navigator/userAgent). Utilisez [`window.navigator.language`](/fr/docs/Web/API/Window/navigator/language) ou [l'en-tête Accept-Language](/fr/docs/Web/HTTP/Content_negotiation) à la place. [bug 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
+- Le signe de la langue a été supprimé de [`window.navigator.appVersion`](/fr/docs/Web/API/Window/navigator/appVersion) et [`window.navigator.userAgent`](/fr/docs/Web/API/Window/navigator/userAgent). Utilisez [`window.navigator.language`](/fr/docs/Web/API/Window/navigator/language) ou [l'en-tête Accept-Language](/fr/docs/Web/HTTP/Guides/Content_negotiation) à la place. [bug 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
 - L'objet [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest) expose maintenant la réponse comme un tableau JavaScript typé et aussi comme une chaîne, en utilisant la propriété, spécifique de Gecko, `mozResponseArrayBuffer`.
 - [Mouse events](/fr/docs/Web/API/MouseEvent) inclut maintenant une propriété `mozPressure` indiquant le niveau de pression supporté sur les périphériques d'entrée sensibles à la pression.
 - Les méthodes [`window.URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static) et [`window.URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL_static) vous permettent de créer des URLs d'objet qui renvoient à des fichiers locaux.
@@ -516,11 +516,11 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
 
 ### Securité
 
-- [Content Security Policy (CSP)](/fr/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/fr/docs/Web/HTTP/Guides/CSP)
   - : Content Security Policy (CSP) est une proposition de Mozilla, conçu pour aider les concepteurs de sites Web et les administrateurs de serveur en spécifiant comment le contenu sur leurs sites Web agit. L'objectif est d'aider à détecter et à atténuer les attaques incluant le cross-site scripting et des attaques par injection de données.
 - [HTTP Strict Transport Security](/fr/docs/Web/HTTP/Headers/Strict-Transport-Security)
   - : HTTP Strict Transport Security est un dispositif de sécurité qui permet à un site web d'indiquer au navigateur d'utiliser une connexion sécurisée (HTTPS) à la place du protocole HTTP.
-- [L'en-tête de réponse X-FRAME-OPTIONS](/fr/docs/Web/HTTP/Headers/X-Frame-Options)
+- [L'en-tête de réponse X-FRAME-OPTIONS](/fr/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
   - : L'en-tête de réponse X-FRAME-OPTIONS HTTP introduite dans Internet Explorer 8 est désormais supportée par Firefox. Cela permet aux sites d'indiquer si leurs pages peuvent être utilisées dans des frames ou si l'utilisation de la page doit être restreint.
 - Changement de la [chaîne de l'agent utilisateur](/fr/docs/Gecko_user_agent_string_reference)
   - : C'est un moyen de réduire la quantité et l'entropie des données envoyées dans les requêts HTPP (voir [bug 572650](https://bugzilla.mozilla.org/show_bug.cgi?id=572650)), le niveau de cryptage et le signe de la langue ont été enlevés de la chaîne de l'agent utilisateur.

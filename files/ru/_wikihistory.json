@@ -2441,20 +2441,20 @@
       "saniaky"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
+  "Learn_web_development/Core/Structuring_content/Planet_data_table": {
+    "modified": "2020-07-16T22:25:30.870Z",
+    "contributors": [
+      "Khaidarov-Dinar",
+      "Anonymous"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Splash_page": {
     "modified": "2020-12-01T05:21:19.875Z",
     "contributors": [
       "Furestry",
       "RoPy73",
       "Zekkler",
       "AlekseyCorsello"
-    ]
-  },
-  "Learn_web_development/Core/Structuring_content/Planet_data_table": {
-    "modified": "2020-07-16T22:25:30.870Z",
-    "contributors": [
-      "Khaidarov-Dinar",
-      "Anonymous"
     ]
   },
   "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content": {
@@ -2593,14 +2593,6 @@
     "contributors": [
       "shade0602",
       "Ivan961"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:13.122Z",
-    "contributors": [
-      "maxbo8",
-      "trman",
-      "VyacheslavLobanov"
     ]
   },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
@@ -10327,19 +10319,6 @@
       "fider"
     ]
   },
-  "Web/API/XMLHttpRequest/loadend_event": {
-    "modified": "2019-03-18T21:41:57.825Z",
-    "contributors": [
-      "dedotmoroz"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadstart_event": {
-    "modified": "2019-03-23T22:29:55.674Z",
-    "contributors": [
-      "fscholz",
-      "forestbird"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:01:52.733Z",
     "contributors": [
@@ -10443,6 +10422,19 @@
       "Zakhse",
       "nakhodkiin",
       "Salasar"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadend_event": {
+    "modified": "2019-03-18T21:41:57.825Z",
+    "contributors": [
+      "dedotmoroz"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadstart_event": {
+    "modified": "2019-03-23T22:29:55.674Z",
+    "contributors": [
+      "fscholz",
+      "forestbird"
     ]
   },
   "Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data": {
@@ -11453,7 +11445,7 @@
       "kasperyan"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_picker": {
     "modified": "2019-03-23T22:34:32.727Z",
     "contributors": [
       "altsab",
@@ -21964,6 +21956,14 @@
       "Ivan961",
       "fedev",
       "Tortik217"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9": {
+    "modified": "2020-07-16T22:28:13.122Z",
+    "contributors": [
+      "maxbo8",
+      "trman",
+      "VyacheslavLobanov"
     ]
   },
   "conflicting/Web/CSS/CSS_cascade/Value_processing": {

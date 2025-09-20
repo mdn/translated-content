@@ -15,7 +15,7 @@ L'objectif est de geler tout le contenu localisé (ce qui signifie que nous n'ac
 Nous avons actuellement dégelé les langues suivantes :
 
 > [!NOTE]
-> Si vous voulez contribuer à l'une des langues actives existantes, ou si vous voulez discuter du dégel d'une langue actuellement gelée, contactez l'un des membres actifs listés ci-dessous, ou [contactez-nous pour obtenir de l'aide](/fr/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+> Si vous voulez contribuer à l'une des langues actives existantes, ou si vous voulez discuter du dégel d'une langue actuellement gelée, contactez l'un des membres actifs listés ci-dessous, ou [contactez-nous pour obtenir de l'aide](/fr/docs/MDN/Community/Getting_started#step_4_ask_for_help).
 
 ### Chinois (zh-CN, zh-TW)
 

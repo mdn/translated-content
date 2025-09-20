@@ -17,7 +17,7 @@ Pour envoyer une requête HTTP, on pourra&nbsp;:
 2. Ouvrir une URL
 3. Envoyer la requête
 
-Lorsque la transaction sera terminée, l'objet `XMLHttpRequest` contiendra les informations de la réponse, comme son corps et le [statut HTTP](/fr/docs/Web/HTTP/Status) résultant.
+Lorsque la transaction sera terminée, l'objet `XMLHttpRequest` contiendra les informations de la réponse, comme son corps et le [statut HTTP](/fr/docs/Web/HTTP/Reference/Status) résultant.
 
 ```js
 function reqListener() {
@@ -45,7 +45,7 @@ Il existe plusieurs types [d'attributs de réponse](https://xhr.spec.whatwg.org/
 
 Lorsqu'on utilise `XMLHttpRequest` pour obtenir le contenu d'un document XML distant, la propriété [`responseXML`](/fr/docs/Web/API/XMLHttpRequest/responseXML) sera un objet DOM qui contient le document XML analysé. La manipulation et l'analyse d'un tel résultat n'est pas nécessairement simple. Il existe quatre méthodes principales pour analyser un tel document XML&nbsp;:
 
-1. Utiliser [XPath](/fr/docs/Web/XPath) afin de cibler certains emplacements du document.
+1. Utiliser [XPath](/fr/docs/Web/XML/XPath) afin de cibler certains emplacements du document.
 2. [Analyser et sérialiser manuellement le XML](/fr/docs/Web/XML/Parsing_and_serializing_XML) afin d'obtenir des chaînes de caractères ou des objets.
 3. Utiliser [`XMLSerializer`](/fr/docs/Web/API/XMLSerializer) afin de sérialiser **des arbres DOM en chaînes de caractères ou en fichiers**.
 4. [Les expressions rationnelles](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peuvent être utilisées pour scanner le document si on ne connaît pas son contenu au préalable. On peut ainsi retirer les sauts de ligne par exemple. Attention, cette méthode n'est à utiliser qu'en dernier recours, car si le code XML change légèrement, il faudra revoir la méthode.
@@ -239,7 +239,7 @@ Si vous souhaitez savoir si la page actuelle a changé, voyez l'article [`docume
 
 ## Utiliser `XMLHttpRequest` entre différentes origines
 
-Les navigateurs prennent en charge les requêtes entre différents sites/origines en implémentant le standard [CORS (<i lang="en">Cross-Origin Resource Sharing</i> (pour «&nbsp;partage des ressources entre différentes origines&nbsp;»)](/fr/docs/Web/HTTP/CORS). Tant que le serveur est configuré afin d'autoriser les requêtes depuis l'origine de votre application web, `XMLHttpRequest` fonctionnera correctement. Dans le cas contraire, une exception `INVALID_ACCESS_ERR` sera déclenchée.
+Les navigateurs prennent en charge les requêtes entre différents sites/origines en implémentant le standard [CORS (<i lang="en">Cross-Origin Resource Sharing</i> (pour «&nbsp;partage des ressources entre différentes origines&nbsp;»)](/fr/docs/Web/HTTP/Guides/CORS). Tant que le serveur est configuré afin d'autoriser les requêtes depuis l'origine de votre application web, `XMLHttpRequest` fonctionnera correctement. Dans le cas contraire, une exception `INVALID_ACCESS_ERR` sera déclenchée.
 
 ## Outrepasser le cache
 
@@ -263,7 +263,7 @@ req.send(null);
 
 ## Securité
 
-La méthode recommandée pour autoriser les requêtes scriptées entre différentes origines est d'inclure l'en-tête HTTP [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) dans la réponse à la requête XHR.
+La méthode recommandée pour autoriser les requêtes scriptées entre différentes origines est d'inclure l'en-tête HTTP [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) dans la réponse à la requête XHR.
 
 ### Interruptions des requêtes XHR
 
@@ -281,5 +281,5 @@ Si votre requête XHR se termine avec `status=0` et `statusText=null`, cela sign
 
 - [Utiliser l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API/Using_Fetch)
 - [Prise en charge de HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/CORS)
+- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [Spécification WHATWG pour l'objet `XMLHttpRequest`](https://xhr.spec.whatwg.org/)

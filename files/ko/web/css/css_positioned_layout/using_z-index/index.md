@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Using_z-index
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
 ---
 
-{{CSSRef}}
-
 « [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 ### {{ cssxref("z-index") }} 적용

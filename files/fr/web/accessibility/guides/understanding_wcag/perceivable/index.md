@@ -460,7 +460,7 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
 
 ## Voir aussi
 
-- [Comprendre les règles pour l'accessibilité des contenus web (WCAG)](/fr/docs/Web/Accessibility/Understanding_WCAG)
+- [Comprendre les règles pour l'accessibilité des contenus web (WCAG)](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG)
   1. Perceptible
   2. [Fonctionnel](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable)
   3. [Compréhensible](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable)

@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-Un navigateur web contient certains outils graphiques très puissants, comme le langage [SVG](/fr/docs/Web/SVG) ou les API permettant de dessiner sur des éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) (voir [l'API Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API)). Dans cet article, nous verrons une introduction au canevas et les ressources complémentaires pour approfondir ces connaissances.
+Un navigateur web contient certains outils graphiques très puissants, comme le langage [SVG](/fr/docs/Web/SVG) ou les API permettant de dessiner sur des éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) (voir [l'API Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API)). Dans cet article, nous verrons une introduction au canevas et les ressources complémentaires pour approfondir ces connaissances.
 
 <table>
   <tbody>
@@ -23,13 +23,13 @@ Un navigateur web contient certains outils graphiques très puissants, comme le 
 
 ## Les graphismes sur le Web
 
-Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img) puis avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
+Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) puis avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
 
-Toutefois, ce n'était pas encore suffisant. Il était bien possible d'utiliser [CSS](/fr/docs/Learn/CSS) et [JavaScript](/fr/docs/Learn/JavaScript) pour animer (et manipuler) les images vectorielles SVG (utilisant un format texte avec un langage de balise), mais il restait impossible de faire la même chose avec les images matricielles et les outils à disposition étaient limités. À cette époque, le Web ne permettait pas de créer des animations, des jeux ou des scènes 3D comme on pouvait en voir créés avec des langages plus bas niveau comme C++ ou Java.
+Toutefois, ce n'était pas encore suffisant. Il était bien possible d'utiliser [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) pour animer (et manipuler) les images vectorielles SVG (utilisant un format texte avec un langage de balise), mais il restait impossible de faire la même chose avec les images matricielles et les outils à disposition étaient limités. À cette époque, le Web ne permettait pas de créer des animations, des jeux ou des scènes 3D comme on pouvait en voir créés avec des langages plus bas niveau comme C++ ou Java.
 
-La situation a commencé à évoluer lorsque les navigateurs ont commencé à prendre en charge l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) et [l'API Canvas](/fr/docs/Web/API/Canvas_API) correspondante. Apple a conçu initialement cet ensemble vers 2004 et les autres éditeurs de navigateur l'ont implémenté dans les années qui ont suivi. Comme nous le verrons ci-après, le canevas fournit de nombreux outils pour créer des animations en 2D, des jeux, des visualisations de données et d'autres types d'application, notamment lorsqu'il est combiné avec les autres API Web exposées par les navigateurs.
+La situation a commencé à évoluer lorsque les navigateurs ont commencé à prendre en charge l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) et [l'API Canvas](/fr/docs/Web/API/Canvas_API) correspondante. Apple a conçu initialement cet ensemble vers 2004 et les autres éditeurs de navigateur l'ont implémenté dans les années qui ont suivi. Comme nous le verrons ci-après, le canevas fournit de nombreux outils pour créer des animations en 2D, des jeux, des visualisations de données et d'autres types d'application, notamment lorsqu'il est combiné avec les autres API Web exposées par les navigateurs.
 
-L'exemple qui suit montre une animation 2D simple sur un canevas où des balles rebondissent. Nous avions vu cette animation dans [le module d'introduction aux objets JavaScript](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)&nbsp;:
+L'exemple qui suit montre une animation 2D simple sur un canevas où des balles rebondissent. Nous avions vu cette animation dans [le module d'introduction aux objets JavaScript](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/bouncing-balls/index-finished.html", '100%', 500)}}
 
@@ -44,7 +44,7 @@ Dans cet article, nous nous concentrerons surtout sur les canevas en deux dimens
 
 ## Apprentissage actif&nbsp;: démarrer avec un élément `<canvas>`
 
-Si vous souhaitez créer une scène 2D _ou_ 3D sur une page web, il vous faudra un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Cet élément définit la zone de la page dans laquelle l'image sera dessiné. Il suffit d'inclure l'élément à la page&nbsp;:
+Si vous souhaitez créer une scène 2D _ou_ 3D sur une page web, il vous faudra un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas). Cet élément définit la zone de la page dans laquelle l'image sera dessiné. Il suffit d'inclure l'élément à la page&nbsp;:
 
 ```html
 <canvas width="320" height="240"></canvas>
@@ -70,7 +70,7 @@ Commençons par créer notre propre canevas sur lequel on dessinera quelques exp
    - "index.html"
    - "script.js"
    - "style.css"
-2. Ouvrez le fichier `index.html`, puis ajoutez le code qui suit à l'intérieur, juste après la balise ouvrante [`<body>`](/fr/docs/Web/HTML/Element/body)&nbsp;:
+2. Ouvrez le fichier `index.html`, puis ajoutez le code qui suit à l'intérieur, juste après la balise ouvrante [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body)&nbsp;:
 
    ```html
    <canvas class="monCanevas">
@@ -117,7 +117,7 @@ ctx.fillStyle = "rgb(0, 0, 0)";
 ctx.fillRect(0, 0, width, height);
 ```
 
-Ici, on définit une couleur de remplissage en utilisant la propriété [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) du contexte (cette propriété utilise [des valeurs de couleur](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleurs), comme les propriétés CSS), puis on dessine un rectangle qui couvre toute la zone du canevas avec la méthode [`fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect) (dont les deux premiers paramètres sont les coordonnées du coin supérieur gauche du rectangle et dont les deux derniers sont la largeur et la hauteur voulues pour le rectangle, on utilise ici les variables `width` et `height` qui sont bien utiles)&nbsp;!
+Ici, on définit une couleur de remplissage en utilisant la propriété [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) du contexte (cette propriété utilise [des valeurs de couleur](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#couleurs), comme les propriétés CSS), puis on dessine un rectangle qui couvre toute la zone du canevas avec la méthode [`fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect) (dont les deux premiers paramètres sont les coordonnées du coin supérieur gauche du rectangle et dont les deux derniers sont la largeur et la hauteur voulues pour le rectangle, on utilise ici les variables `width` et `height` qui sont bien utiles)&nbsp;!
 
 Notre modèle de base est désormais terminé, passons à la suite.
 
@@ -353,7 +353,7 @@ Il est possible d'afficher des images externes sur le canevas. Il peut s'agir d'
    image.src = "firefox.png";
    ```
 
-   Ici, on crée un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) grâce au constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image). L'objet qui est renvoyé a le même type que celui obtenu lorsqu'on récupère une référence à un élément [`<img>`](/fr/docs/Web/HTML/Element/img) avec les fonctions du DOM. On définit son attribut [`src`](/fr/docs/Web/HTML/Element/img#attr-src) afin qu'il pointe vers l'image du logo de Firefox. C'est à cet instant que le navigateur commence à charger l'image.
+   Ici, on crée un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) grâce au constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image). L'objet qui est renvoyé a le même type que celui obtenu lorsqu'on récupère une référence à un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) avec les fonctions du DOM. On définit son attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#attr-src) afin qu'il pointe vers l'image du logo de Firefox. C'est à cet instant que le navigateur commence à charger l'image.
 
 3. On peut alors essayer d'intégrer l'image avec la méthode `drawImage()`, mais il faut d'abord s'assurer que le fichier de l'image a bien été chargé, sinon le dessin échouera. Pour cela, on peut utiliser l'évènement `load` qui est uniquement déclenché après que le chargement de l'image est terminé. Ajoutez le bloc qui suit après les instructions précédentes&nbsp;:
 
@@ -518,7 +518,7 @@ Créons maintenant notre propre animation en recréant un personnage d'un ancien
    ctx.translate(width / 2, height / 2);
    ```
 
-3. Créez maintenant un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et faites pointer l'attribut [`src`](/fr/docs/Web/HTML/Element/img#attr-src) vers l'image qu'on souhaite afficher. Ajoutez ensuite un gestionnaire d'évènement avec la propriété `onload` pour déclencher l'exécution de la fonction `draw()` lorsque l'image est chargée&nbsp;:
+3. Créez maintenant un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et faites pointer l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#attr-src) vers l'image qu'on souhaite afficher. Ajoutez ensuite un gestionnaire d'évènement avec la propriété `onload` pour déclencher l'exécution de la fonction `draw()` lorsque l'image est chargée&nbsp;:
 
    ```js
    const image = new Image();
@@ -679,11 +679,11 @@ draw();
 ```
 
 > [!NOTE]
-> Les contrôles [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range` et `color` sont plutôt bien pris en charge par les navigateurs sauf pour Internet Explorer avant la version 10 et pour Safari qui ne prend pas en charge `color`. Si votre navigateur ne prend pas en charge ces contrôles, il présentera à la place des champs texte et ce sera à la personne de saisir un nombre ou une couleur valide par elle-même.
+> Les contrôles [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `range` et `color` sont plutôt bien pris en charge par les navigateurs sauf pour Internet Explorer avant la version 10 et pour Safari qui ne prend pas en charge `color`. Si votre navigateur ne prend pas en charge ces contrôles, il présentera à la place des champs texte et ce sera à la personne de saisir un nombre ou une couleur valide par elle-même.
 
 ## WebGL
 
-Laissons la 2D de côté pour le moment et voyons les canevas en trois dimensions. Pour créer du contenu en 3D sur un canevas, on utilisera l'API [WebGL](/fr/docs/Web/API/WebGL_API), qui est complètement différente de l'API en 2D, même si le résultat de chacune est dessiné sur des éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
+Laissons la 2D de côté pour le moment et voyons les canevas en trois dimensions. Pour créer du contenu en 3D sur un canevas, on utilisera l'API [WebGL](/fr/docs/Web/API/WebGL_API), qui est complètement différente de l'API en 2D, même si le résultat de chacune est dessiné sur des éléments [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas).
 
 WebGL est basé sur [OpenGL](/fr/docs/Glossary/OpenGL) (<i lang="en">Open Graphics Library</i> qu'on pourrait traduire par bibliothèque de graphismes ouverte), et permet de communiquer directement avec la [carte graphique](/fr/docs/Glossary/GPU) de l'ordinateur. C'est pour cette raison qu'écrire du WebGL brut se rapproche plus des langages de bas niveau comme C++ plutôt que de JavaScript. C'est plutôt complexe mais incroyablement puissant.
 
@@ -740,7 +740,7 @@ Prenons un exemple simple pour créer quelque chose avec une bibliothèque WebGL
    document.body.appendChild(renderer.domElement);
    ```
 
-   La première ligne crée un nouveau moteur de rendu, la deuxième définit la taille à laquelle le moteur affichera la vue de la caméra et la troisième ajoute l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) créé par le moteur de rendu dans le corps du document ([`<body>`](/fr/docs/Web/HTML/Element/body)). À partir de ce point, tout ce qui est rendu par le moteur sera affiché dans la fenêtre.
+   La première ligne crée un nouveau moteur de rendu, la deuxième définit la taille à laquelle le moteur affichera la vue de la caméra et la troisième ajoute l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) créé par le moteur de rendu dans le corps du document ([`<body>`](/fr/docs/Web/HTML/Reference/Elements/body)). À partir de ce point, tout ce qui est rendu par le moteur sera affiché dans la fenêtre.
 
 7. Ensuite, on veut créer le cube à afficher dans le canevas. Ajoutez le fragment de code qui suit à la suite de votre code JavaScript&nbsp;:
 

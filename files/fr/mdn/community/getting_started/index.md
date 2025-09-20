@@ -44,7 +44,7 @@ Pour contribuer, vous aurez besoin d'un compte GitHub. Si vous n'en avez pas dé
 
 - [Étiquette pour la contribution aux projets <i lang="en">open source</i>](/fr/docs/MDN/Community/Open_source_etiquette)
   - : Si vous n'avez jamais contribué à un projet <i lang="en">open source</i> auparavant, nous vous encourageons à lire ce document.
-- [Apprendre le développement web](/fr/docs/Learn)
+- [Apprendre le développement web](/fr/docs/Learn_web_development)
   - : Si vous débutez en HTML, CSS ou JavaScript, nous avons une section dédiée sur MDN pour vous aider à démarrer.
 - [La collaboration sur les <i lang="en">pull requests</i> (en anglais)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
   - : Un guide de GitHub sur les différentes façons de collaborer à plusieurs sur les <i lang="en">pull requests</i>.
