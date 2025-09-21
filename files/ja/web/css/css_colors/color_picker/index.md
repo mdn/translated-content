@@ -1,9 +1,8 @@
 ---
 title: 色選択ツール
 slug: Web/CSS/CSS_colors/Color_picker
-original_slug: Web/CSS/CSS_colors/Color_picker_tool
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: c148812e0874220770cab62c16f33f48ceb98e99
 ---
 
 このツールは、 sRGB {{glossary("color space","色空間")}}で色を選択し、それをさまざまな CSS [色形式](/ja/docs/Web/CSS/color_value)に変換することで、次の sRGB 色記法の構文を理解するのに役立ちます。
@@ -14,7 +13,7 @@ l10n:
 - {{CSSxRef("color_value/hwb", "hwb()")}} は、色相、白色度、黒色度とアルファ（透明度）の成分によって指定される色を定義します。
 - {{CSSxRef("color_value/color", "color()")}} は、指定された色空間で色を定義します。
 
-色を定義するパラメーターを調整すると、3 つの標準ウェブ CSS 形式すべてが表示されます。アルファチャンネルの制御にも対応しています。
+色を定義するパラメーターを調整すると、4 つの標準ウェブ CSS 形式すべてが表示されます。アルファチャンネルの制御にも対応しています。
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
