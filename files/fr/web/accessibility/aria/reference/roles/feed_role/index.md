@@ -22,7 +22,7 @@ Le rôle `feed` est une liste dynamique et défilante d'`articles` dans laquelle
 
 Un `feed` est un type de [`list`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role), le rôle conteneur pour les [`articles`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/article_role) défilables où le défilement peut entraîner l'ajout d'articles en haut ou en bas de la liste. Le rôle permet aux technologies d'assistance d'utiliser le curseur de lecture en mode de navigation pour à la fois lire et faire défiler un flux de contenu riche qui peut continuer à défiler indéfiniment en chargeant plus de contenu au fur et à mesure que l'utilisateur·ice lit. Les exemples incluent un flux RSS, des flux d'actualités, des flux de médias sociaux comme Facebook, Instagram ou Mastodon, ou même une liste de produits connexes sur une page de commerce électronique. Ces flux peuvent être limités ou infinis, chargeant plus de contenu au fur et à mesure que l'utilisateur·ice fait défiler. La mise en œuvre du modèle `feed` permet à un lecteur d'écran de lire de manière fiable et de déclencher le chargement du contenu du flux tout en étant en mode lecture.
 
-Contrairement aux éléments de structure de document qui représentent des éléments HTML statiques, le rôle `feed` nécessite des interactions spécifiques et la mise en œuvre de la navigation au clavier. Le `feed` est un élément conteneur dont les enfants sont des {{HTMLElement('article')}} ou ont le rôle `article`. Chaque article au sein d'un flux doit être focusable, avec un tabindex de 0 ou -1. Un article doit être défilé dans la vue lorsqu'il, ou un élément descendant, reçoit le focus. Si l'ajout d'articles occupe le thread principal du navigateur, assurez-vous de définir `aria-busy="true"` sur le flux lui-même, et assurez-vous de le définir à nouveau sur `false` lorsque le traitement se termine, sinon l'utilisateur·ice risque de ne pas voir les mises à jour.
+Contrairement aux éléments de structure de document qui représentent des éléments HTML statiques, le rôle `feed` nécessite des interactions spécifiques et la mise en œuvre de la navigation au clavier. Le `feed` est un élément conteneur dont les enfants sont des {{HTMLElement('article')}} ou ont le rôle `article`. Chaque article au sein d'un flux doit être sélectionnable, avec un tabindex de 0 ou -1. Un article doit être défilé dans la vue lorsqu'il, ou un élément descendant, reçoit la sélection. Si l'ajout d'articles occupe le thread principal du navigateur, assurez-vous de définir `aria-busy="true"` sur le flux lui-même, et assurez-vous de le définir à nouveau sur `false` lorsque le traitement se termine, sinon l'utilisateur·ice risque de ne pas voir les mises à jour.
 
 Si le nombre d'articles est connu, définissez [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) sur les articles eux-mêmes. Cependant, si le nombre total est extrêmement grand, indéfini ou change souvent, définissez `aria-setsize="-1"` pour indiquer que la taille du flux n'est pas connue.
 
@@ -32,19 +32,19 @@ Le modèle de flux permet une interaction fiable en mode de lecture des technolo
 
 Dans le contexte d'un flux, le code de la page Web est responsable de&nbsp;:
 
-- Le défilement visuel approprié du contenu en fonction de l'article qui contient le focus DOM.
-- Le chargement ou la suppression des articles du flux en fonction de l'article qui contient le focus DOM.
+- Le défilement visuel approprié du contenu en fonction de l'article qui contient la sélection du DOM.
+- Le chargement ou la suppression des articles du flux en fonction de l'article qui contient la sélection du DOM.
 
 ### Interactions au clavier
 
-Il est recommandé de prendre en charge l'interface suivante, ou une interface similaire, lorsque le focus est à l'intérieur du flux&nbsp;:
+Il est recommandé de prendre en charge l'interface suivante, ou une interface similaire, lorsque la sélection est à l'intérieur du flux&nbsp;:
 
-- <kbd>Page bas</kbd>&nbsp;: Déplacer le focus vers l'article suivant.
-- <kbd>Page haut</kbd>&nbsp;: Déplacer le focus vers l'article précédent.
-- <kbd>Contrôle + Fin</kbd>&nbsp;: Déplacer le focus vers le premier élément focusable après le flux.
-- <kbd>Contrôle + Début</kbd>&nbsp;: Déplacer le focus vers le premier élément focusable avant le flux.
+- <kbd>Page bas</kbd>&nbsp;: Déplacer la sélection vers l'article suivant.
+- <kbd>Page haut</kbd>&nbsp;: Déplacer la sélection vers l'article précédent.
+- <kbd>Contrôle + Fin</kbd>&nbsp;: Déplacer la sélection vers le premier élément sélectionnable après le flux.
+- <kbd>Contrôle + Début</kbd>&nbsp;: Déplacer la sélection vers le premier élément sélectionnable avant le flux.
 
-Si un flux est imbriqué dans un flux, comme un flux de commentaires dans un flux d'articles de blog, la convention consiste à tabuler dans le flux imbriqué avec la touche <kbd>Tab</kbd> et à fournir une autre touche, comme <kbd>Alt + Page bas</kbd>, pour naviguer d'un article "extérieur" vers le premier élément du flux imbriqué de cet article. Naviguez entre le flux imbriqué et le flux principal avec <kbd>Contrôle + Fin</kbd>, déplaçant le focus du flux intérieur vers le prochain article du flux extérieur.
+Si un flux est imbriqué dans un flux, comme un flux de commentaires dans un flux d'articles de blog, la convention consiste à tabuler dans le flux imbriqué avec la touche <kbd>Tab</kbd> et à fournir une autre touche, comme <kbd>Alt + Page bas</kbd>, pour naviguer d'un article "extérieur" vers le premier élément du flux imbriqué de cet article. Naviguez entre le flux imbriqué et le flux principal avec <kbd>Contrôle + Fin</kbd>, déplaçant la sélection du flux intérieur vers le prochain article du flux extérieur.
 
 ### Propriétés, états et rôles WAI-ARIA associés
 
@@ -72,7 +72,7 @@ Remarque&nbsp;: Il incombe à l'auteur d'appliquer le comportement clavier "ci-d
 
 ## Bonnes pratiques
 
-Pour garantir une bonne expérience utilisateur, évitez d'insérer ou de supprimer des articles au milieu d'un `feed`, chargez de nouveaux articles avant que l'utilisateur·ice n'atteigne la fin du flux, et fournissez des commandes clavier pour déplacer le focus entre les articles afin que les utilisateur·ice·s de clavier puissent naviguer dans votre flux. Voir [Interactions au clavier](#interactions_au_clavier).
+Pour garantir une bonne expérience utilisateur, évitez d'insérer ou de supprimer des articles au milieu d'un `feed`, chargez de nouveaux articles avant que l'utilisateur·ice n'atteigne la fin du flux, et fournissez des commandes clavier pour déplacer la sélection entre les articles afin que les utilisateur·ice·s de clavier puissent naviguer dans votre flux. Voir [Interactions au clavier](#interactions_au_clavier).
 
 ## Spécifications
 
