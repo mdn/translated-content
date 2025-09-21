@@ -2,7 +2,7 @@
 title: IndexedDB の主な特徴と基本用語
 slug: Web/API/IndexedDB_API/Basic_Terminology
 l10n:
-  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
+  sourceCommit: 941ade970fd7ebad52af692b6ac27cfd96f94100
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
