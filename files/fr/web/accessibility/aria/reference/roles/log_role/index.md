@@ -42,4 +42,4 @@ Avec une zone qui a du texte défilant, comme un téléscripteur boursier, le r�
 - [ARIA&nbsp;: rôle `marquee`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
 - [ARIA&nbsp;: rôle `status`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
 - [ARIA&nbsp;: rôle `timer`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
-- [Les régions en direct en ARIA](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions)
+- [Les zones ARIA en direct](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions)
