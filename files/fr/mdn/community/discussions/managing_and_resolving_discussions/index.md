@@ -2,7 +2,7 @@
 title: Gestion et résolution des discussions
 slug: MDN/Community/Discussions/Managing_and_resolving_discussions
 l10n:
-   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 La communauté MDN est encouragée à [initier et à participer à des discussions](/fr/docs/MDN/Community/Discussions) autour de la documentation du MDN Web Docs. Certaines discussions n'ont pas besoin de résolution ou d'accord, mais si c'est le cas, il est naturel que ceux qui lancent la discussion s'attendent à ce que leurs idées proposées atteignent une conclusion logique. La plupart de ces discussions parviennent rapidement à un large consensus. Cependant, certaines discussions risquent de devenir bloquées en raison d'un chemin peu clair vers une résolution, souvent en raison d'opinions divergentes. Ce document propose des directives&nbsp;; suggérant des processus et des stratégies pour vous aider à progresser vers une résolution dans un délai raisonnable sans que la conversation ne soit bloquée.
