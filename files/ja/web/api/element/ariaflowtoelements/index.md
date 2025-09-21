@@ -57,7 +57,7 @@ l10n:
 }
 ```
 
-```html
+```html-nolint
 <div id="section1" class="section" aria-flowto="section3">
   <h2>セクション 1</h2>
   <p>通常フローの最初のセクション。セクション 3 は代替フローです。</p>
