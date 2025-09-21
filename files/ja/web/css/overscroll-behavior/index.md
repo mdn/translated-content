@@ -2,10 +2,10 @@
 title: overscroll-behavior
 slug: Web/CSS/overscroll-behavior
 l10n:
-  sourceCommit: 05a61497f79c7bf5ffaf8fe7d94b36d5a0b9626e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`overscroll-behavior`** は CSS のプロパティで、スクロール領域の境界に達したときにブラウザーが何をするかを設定します。これは {{cssxref("overscroll-behavior-x")}} および {{cssxref("overscroll-behavior-y")}} の一括指定です。
+**`overscroll-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール領域の境界に達したときのブラウザーの挙動を設定します。
 
 {{InteractiveExample("CSS デモ: overscroll-behavior")}}
 
@@ -19,14 +19,6 @@ overscroll-behavior: contain;
 
 ```css interactive-example-choice
 overscroll-behavior: none;
-```
-
-```css interactive-example-choice
-overscroll-behavior: auto;
-```
-
-```css interactive-example-choice
-overscroll-behavior: contain;
 ```
 
 ```html interactive-example
@@ -88,9 +80,12 @@ overscroll-behavior: contain;
 }
 ```
 
-既定で、モバイルブラウザーはページの上端または下端（または他のスクロール領域）に到達したときに「跳ね返り」効果や、ページの更新を行う傾向があります。また、スクロールするコンテンツのあるページの上にスクロールするコンテンツのあるダイアログボックスがある場合、ダイアログボックスのスクロールの境界線に達すると、その下にあるページがスクロールを開始することにお気づきかもしれませんが、これは **スクロール連鎖** と呼ばれます。
+## 構成要素のプロパティ
 
-場合によっては、この動きが望ましくないことがあります。 `overscroll-behavior` を使用すると、望ましくないスクロール連鎖を抑止したり、ブラウザー版の Facebook や Twitter アプリなどに見られる「引いて更新」の類の動きを実現したりすることができます。
+このプロパティは、以下の CSS プロパティの一括指定です。
+
+- {{Cssxref("overscroll-behavior-x")}}
+- {{Cssxref("overscroll-behavior-y")}}
 
 ## 構文
 
@@ -111,18 +106,26 @@ overscroll-behavior: revert-layer;
 overscroll-behavior: unset;
 ```
 
-`overscroll-behavior` プロパティは、次に挙げた値の一覧のうち 1 つまたは 2 つのキーワードで指定します。
+`overscroll-behavior` プロパティは、次の値の一覧のうち 1 つまたは 2 つのキーワードで指定します。
 
-2 つのキーワードでは、 `overscroll-behavior` のそれぞれ `x` 及び `y` 軸の値を指定します。値が 1 つだけ指定された場合は、 x および y が同じ値とみなされます。
+2 つのキーワードでは、 `overscroll-behavior` のそれぞれ `x` および `y` 軸の値を指定します。値が 1 つだけ指定された場合は、 x および y が同じ値とみなされます。
 
 ### 値
 
 - `auto`
-  - : スクロールの末端における既定の振る舞いが通常通りに発生します。
+  - : 既定のスクロールオーバーフロー動作が、通常通り発生します。
 - `contain`
-  - : この値が設定された要素の内部では、スクロールの末端における既定の振る舞いが見られますが、隣接するスクロール領域に対するスクロール連鎖はありません。例えば、基底となる要素はスクロールしません。
+  - : この値が設定された要素内では、既定のスクロールオーバーフロー動作（「跳ね返り」効果など）が見られます。ただし、隣接するスクロール領域でのスクロール連鎖は発生せず、背後に配置された要素はスクロールしません。 `contain` の値では、垂直方向の引いて更新のジェスチャーや、水平方向のスワイプ操作を含む、ブラウザーのネイティブナビゲーションが無効になります。
 - `none`
-  - : 隣接するスクロール領域に対するスクロール連鎖はなく、スクロールの末端における既定の振る舞いが抑制されます。
+  - : 隣接するスクロール領域へのスクロールの連鎖は発生せず、既定のスクロールオーバーフロー動作が抑止されます。
+
+## 解説
+
+既定では、モバイルブラウザーはページの上端または下端（または他のスクロール領域）に到達したときに「跳ね返り」効果や、ページの更新を行う傾向があります。また、スクロールするコンテンツのあるページの上に、やはりスクロールするコンテンツのあるダイアログボックスがある場合、ダイアログボックスの{{Glossary("Scroll_boundary", "スクロール境界")}}に達すると、その下にあるページがスクロールを開始することにお気づきかもしれません。これは{{Glossary("Scroll_chaining", "スクロール連鎖")}}と呼ばれます。
+
+場合によっては、この動きが望ましくないことがあります。 `overscroll-behavior` を使用すると、望ましくないスクロール連鎖を抑止したり、ブラウザー版の Facebook や Twitter アプリなどに見られる「引いて更新」の類の動きを実現したりすることができます。
+
+このプロパティは{{Glossary("Scroll_container", "スクロールコンテナー")}}にのみ適用されることに注意してください。特に、[`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) はスクロールコンテナーではないため、iframe にこのプロパティを設定しても効果はありません。 iframe からのスクロール連鎖を制御するには、 `overscroll-behavior` を iframe 内の文書の [`<html>`](/ja/docs/Web/HTML/Reference/Elements/html) 要素と [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) 要素の両方に設定してください。
 
 ## 公式定義
 
@@ -136,7 +139,7 @@ overscroll-behavior: unset;
 
 ### 下の要素がスクロールするのを抑止する
 
-[overscroll-behavior の例](https://mdn.github.io/css-examples/overscroll-behavior/) ([ソースコード](https://github.com/mdn/css-examples/tree/main/overscroll-behavior)はこちら) は、全画面で擬似連絡先の一覧を、ダイアログボックスでチャットウィンドウを表示します。
+[overscroll-behavior の例](https://mdn.github.io/css-examples/overscroll-behavior/)（[ソースコード](https://github.com/mdn/css-examples/tree/main/overscroll-behavior)も参照）は、全画面で擬似連絡先の一覧を、チャットウィンドウのついたダイアログボックスで表示します。
 
 !['Active chat' と題されたポップアップチャットウィンドウで、 Chris と Bob の会話が表示されています。チャットウィンドウの背後には、 'overscroll-behavior demo' と題された連絡先リストが掲載されています。](example.png)
 
@@ -150,7 +153,7 @@ overscroll-behavior: unset;
 }
 ```
 
-連絡先が先頭または末端までスクロールしたときの標準のスクロール末端効果を抑止したいかもしれません（例えば Android 版 Chrome は、冒頭の境界を超えてスクロールしようとするとページを再読み込みします）。これは `overscroll-behavior: none` を {{htmlelement("html")}} 要素に設定することで抑止することができます。
+連絡先が先頭または末端までスクロールしたときの標準のスクロール末端効果を抑止したいかもしれません（例えば Android 版 Chrome は、先頭の境界を超えてスクロールしようとするとページを再読み込みします）。これは `overscroll-behavior: none` を {{htmlelement("html")}} 要素に設定することで抑止することができます。
 
 ```css
 html {
@@ -169,4 +172,6 @@ html {
 
 ## 関連情報
 
+- [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール
+- [CSS スクロールアンカリング](/ja/docs/Web/CSS/CSS_scroll_anchoring)モジュール
 - [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ（英語）](https://developer.chrome.com/blog/overscroll-behavior/#demo)

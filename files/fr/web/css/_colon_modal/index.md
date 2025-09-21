@@ -2,25 +2,69 @@
 title: :modal
 slug: Web/CSS/:modal
 l10n:
-  sourceCommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:modal`** cible un élément qui est dans un état interdisant toute interaction avec les autres éléments situés en dehors jusqu'à ce que l'interaction soit terminée. Plusieurs éléments peuvent être ciblés par la pseudo-classe `:modal` à un même instant donné, mais un seul de ces éléments sera actif et permettra de recevoir une saisie.
 
+{{InteractiveExample("Démonstration CSS&nbsp;: :modal", "tabbed-shorter")}}
+
+```css interactive-example
+button {
+  display: block;
+  margin: auto;
+  width: 12rem;
+  height: 2rem;
+}
+
+:modal {
+  background-color: beige;
+  border: 2px solid burlywood;
+  border-radius: 5px;
+}
+
+p {
+  color: black;
+}
+```
+
+```html interactive-example
+<p>Souhaitez-vous voir un nouveau nombre aléatoire ?</p>
+<button id="showNumber">Montre-moi</button>
+
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>Le nombre chanceux est&nbsp;: <strong id="number"></strong></p>
+    <button>Fermer la boîte de dialogue</button>
+  </form>
+</dialog>
+```
+
+```js interactive-example
+const showNumber = document.getElementById("showNumber");
+const favDialog = document.getElementById("favDialog");
+const number = document.getElementById("number");
+
+showNumber.addEventListener("click", () => {
+  number.innerText = Math.floor(Math.random() * 1000);
+  favDialog.showModal();
+});
+```
+
 ## Syntaxe
 
-```
-:modal
+```css
+:modal {
+  /* ... */
+}
 ```
 
 ## Notes d'utilisation
 
 Voici des exemples d'éléments qui peuvent empêcher une interaction avec le reste de la page et qui pourront être ciblés par la pseudo-classe&nbsp;:
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) lorsqu'il est ouvert avec la méthode du DOM `showModal()`.
-- Un élément ciblé par la pseudo-classe [`:fullscreen`](/fr/docs/Web/CSS/:fullscreen) lorsqu'il est ouvert avec la méthode du DOM `requestFullscreen()`.
+- L'élément {{HTMLElement("dialog")}} lorsqu'il est ouvert avec la méthode du DOM `showModal()`.
+- Un élément ciblé par la pseudo-classe {{CSSxRef(":fullscreen")}} lorsqu'il est ouvert avec la méthode du DOM `requestFullscreen()`.
 
 ## Exemples
 
@@ -63,7 +107,7 @@ Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lors
 :modal {
   border: 5px solid red;
   background-color: yellow;
-  box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
 }
 ```
 
@@ -104,7 +148,7 @@ favDialog.addEventListener("close", () => {
 
 ### Résultat
 
-{{EmbedLiveSample("", "100%", 300)}}
+{{EmbedLiveSample("mettre_en_forme_une_boîte_de_dialogue", "100%", 300)}}
 
 ## Spécifications
 
@@ -116,8 +160,8 @@ favDialog.addEventListener("close", () => {
 
 ## Voir aussi
 
-- L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog)
+- L'élément HTML {{HTMLElement("dialog")}}
 - Les autres pseudo-classes relatives à l'état d'affichage&nbsp;:
-  - [`:fullscreen`](/fr/docs/Web/CSS/:fullscreen)
-  - [`:picture-in-picture`](/fr/docs/Web/CSS/:picture-in-picture)
+  - {{CSSxRef(":fullscreen")}}
+  - {{CSSxRef(":picture-in-picture")}}
 - La liste complète des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)

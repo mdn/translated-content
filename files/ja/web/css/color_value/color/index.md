@@ -377,7 +377,7 @@ div {
 
 - [`<color>` データ型](/ja/docs/Web/CSS/color_value): すべての色記法の一覧
 - [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
-- [sRGB カラーピッカーおよび変換ツール](/ja/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [sRGB カラーピッカーおよび変換ツール](/ja/docs/Web/CSS/CSS_colors/Color_picker)
 - [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
 - [`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) メディア特性
 - [Wide Gamut Color in CSS with Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

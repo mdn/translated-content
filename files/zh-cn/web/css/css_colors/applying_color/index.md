@@ -588,7 +588,7 @@ colorPicker.addEventListener(
 
 几个示例（截至本列表最后一次修订时，所有示例均可免费使用）：
 
-- [MDN 的取色工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [MDN 色彩选择工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker)
 - [Paletton](https://paletton.com/)
 - [Adobe Color CC 在线调色盘](https://color.adobe.com/create/color-wheel)
 

@@ -83,7 +83,7 @@ JavaScript は _二項演算子_ や _単項演算子_ を実装しており、�
 | [ビット論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)         | `x \|= f()`   | `x = x \| f()`     |
 | [論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)             | `x &&= f()`   | `x && (x = f())`   |
 | [論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)               | `x \|\|= f()` | `x \|\| (x = f())` |
-| [Null 合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)          | `x ??= f()`   | `x ?? (x = f())`   |
+| [ヌル値合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)         | `x ??= f()`   | `x ?? (x = f())`   |
 
 ### プロパティへの代入
 
@@ -635,7 +635,7 @@ const var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing">Null 合体演算子</a> (<code>??</code>)
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing">ヌル値合体演算子</a> (<code>??</code>)
       </td>
       <td><code>expr1 ?? expr2</code></td>
       <td>
@@ -680,7 +680,7 @@ const o6 = false || "Cat"; // f || t は Cat を返す
 const o7 = "Cat" || false; // t || f は Cat を返す
 ```
 
-以下のコードでは、 `??` （NUll 合体）演算子の例を示します。
+以下のコードでは、 `??` （ヌル値合体）演算子の例を示します。
 
 ```js
 const n1 = null ?? 1; // 1
@@ -689,7 +689,7 @@ const n3 = false ?? 3; // false
 const n4 = 0 ?? 4; // 0
 ```
 
-`??` は `||` と似た動作をしますが、最初の式が "[nullish](/ja/docs/Glossary/Nullish)"、つまり [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) の場合に、 2 番目の式のみを返すことに注意してください。 `null` または `undefined` となる可能性がある値の既定値を設定するには、 `||` よりも `??` の方が適しています。特に、 `''` や `0` のような値が有効な値であり、既定値を適用しない場合です。
+`??` は `||` と似た動作をしますが、最初の式が "[ヌル値](/ja/docs/Glossary/Nullish)"、つまり [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) の場合に、 2 番目の式のみを返すことに注意してください。 `null` または `undefined` となる可能性がある値の既定値を設定するには、 `||` よりも `??` の方が適しています。特に、 `''` や `0` のような値が有効な値であり、既定値を適用しない場合です。
 
 以下のコードでは、 ! （論理否定）演算子の例を示します。
 
@@ -705,7 +705,7 @@ const n3 = !"Cat"; // !t は false を返す
 
 - `偽値 && 何か` は偽値へと短絡評価されます。
 - `真値 || 何か` は真値へと短絡評価されます。
-- `非 Nullish ?? 何か` は非 Nullish 値へと短絡評価されます。
+- `非ヌル値 ?? 何か` は非ヌル値へと短絡評価されます。
 
 論理的なルールにより、これらの評価が常に正確であることが保証されます。上記の式で`何か`の部分は評価されないため、どのようにしても副作用が生じないことに注意してください。
 
