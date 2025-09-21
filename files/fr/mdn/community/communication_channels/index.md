@@ -1,9 +1,9 @@
 ---
 title: Canaux de communication
 slug: MDN/Community/Communication_channels
+l10n:
+  sourceCommit: c68f51255b41e080f34f27aafc6fcd3aafa52114
 ---
-
-{{MDNSidebar}}
 
 Il existe divers canaux de communication que la communauté peut utiliser pour contacter l'équipe de MDN Web Docs et participer aux discussions.
 
@@ -21,19 +21,19 @@ Rejoignez la communauté MDN Web Docs via notre [invitation Discord](/discord).
 
 Les salles de discussion Matrix sont une alternative au serveur Discord.
 
-- [Salon du MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur l'application web Mozilla Element
-- [Salon du MDN](https://app.element.io/#/room/#mdn:mozilla.org) sur l'application web Matrix Element
+- [Salon du MDN <sup>(angl.)</sup>](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur l'application web Mozilla Element
+- [Salon du MDN <sup>(angl.)</sup>](https://app.element.io/#/room/#mdn:mozilla.org) sur l'application web Matrix Element
 - [Salon du MDN Français](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org) sur l'application web Mozilla Element
-- [Salon des Add-ons](https://chat.mozilla.org/#/room/#addons:mozilla.org)
+- [Salon des Add-ons <sup>(angl.)</sup>](https://chat.mozilla.org/#/room/#addons:mozilla.org)
 - [Liste de toutes les salles Mozilla](https://wiki.mozilla.org/Matrix#Commonly_used_rooms)
 
 ## Discussions sur GitHub
 
-[Les Discussions GitHub](https://github.com/orgs/mdn/discussions) sur MDN Web Docs sont l'endroit où trouver des [annonces](https://github.com/orgs/mdn/discussions/categories/announcements) pour tout le projet, et où partager le travail que vous prévoyez de faire si vous pensez qu'un consensus est nécessaire sur une bonne marche à suivre.
+[Les Discussions GitHub <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions) sur MDN Web Docs sont l'endroit où trouver des [annonces <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions/categories/announcements) pour tout le projet, et où partager le travail que vous prévoyez de faire si vous pensez qu'un consensus est nécessaire sur une bonne marche à suivre.
 Vous pouvez également utiliser les Discussions GitHub pour échanger des idées et définir un travail actionnable, en particulier lorsque les modifications ont un impact large.
 
 Utilisez les discussions GitHub pour poser vos questions et proposer vos suggestions.
-Choisissez la [catégorie de discussion](https://github.com/mdn/mdn-community#github-discussions) appropriée lors de la création d'un fil de discussion.
+Choisissez la [catégorie de discussion <sup>(angl.)</sup>](https://github.com/mdn/mdn-community#github-discussions) appropriée lors de la création d'un fil de discussion.
 Vos questions avec réponses peuvent être très utiles pour d'autres personnes recherchant des informations similaires à l'avenir.
 
 Consultez les [lignes directrices pour les discussions](/fr/docs/MDN/Community/Discussions) spécifiques à MDN avant de créer une nouvelle soumission.
