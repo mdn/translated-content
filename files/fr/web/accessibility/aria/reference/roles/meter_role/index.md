@@ -33,7 +33,9 @@ Par exemple, considérez l'élément `meter` suivant, qui contient un titre&nbsp
 Comme les descendants de `meter` sont des éléments de présentation, le code suivant est équivalent&nbsp;:
 
 ```html
-<div role="meter"><h3 role="presentation">Titre de mon indicateur de mesure</h3></div>
+<div role="meter">
+  <h3 role="presentation">Titre de mon indicateur de mesure</h3>
+</div>
 ```
 
 Du point de vue de l'utilisateur·ice de technologies d'assistance, le titre n'existe pas puisque les extraits de code précédents sont équivalents à ce qui suit dans [l'arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
