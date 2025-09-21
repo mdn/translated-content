@@ -3,7 +3,7 @@ title: "Element: ariaInvalid プロパティ"
 short-title: ariaInvalid
 slug: Web/API/Element/ariaInvalid
 l10n:
-  sourceCommit: 6bed868c7b75c4c3ca3721fa8ed6c6ad2f41262b
+  sourceCommit: 4578af853ec3e520f4f2038c028c265591cbaa70
 ---
 
 {{APIRef("DOM")}}
