@@ -78,9 +78,7 @@ Lorsque les éléments d'une `menubar` sont disposés verticalement et que les �
       <a role="menuitem" href="#description">Description</a>
     </li>
     <li role="presentation">
-      <a
-        role="menuitem"
-        href="#propriétés_états_et_rôles_wai-aria_associés">
+      <a role="menuitem" href="#propriétés_états_et_rôles_wai-aria_associés">
         Propriétés, états et rôles WAI-ARIA associés
       </a>
     </li>
