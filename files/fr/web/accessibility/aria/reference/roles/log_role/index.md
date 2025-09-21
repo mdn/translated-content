@@ -1,82 +1,45 @@
 ---
-title: Utiliser le rôle log
+title: "ARIA : rôle log"
+short-title: log
 slug: Web/Accessibility/ARIA/Reference/Roles/log_role
 original_slug: Web/Accessibility/ARIA/Roles/log_role
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{AccessibilitySidebar}}
+Le rôle `log` est utilisé pour identifier un élément qui crée [une zone en direct](https://www.w3.org/WAI/PF/aria/terms#def_liveregion) où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent être supprimées.
 
-### Description
+## Description
 
-Cette technique présente l'utilisation du rôle [`log`](https://www.w3.org/TR/wai-aria/roles#log) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+Un journal (<i lang="en">log</i> en anglais) est un type de zone en direct où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent disparaître. Des exemples incluent les journaux de discussion, l'historique des messages, les journaux de jeu ou un journal d'erreurs. Contrairement à d'autres zones en direct, dans ce rôle, il existe une relation entre l'arrivée de nouveaux éléments dans le journal et l'ordre de lecture. Le journal contient une séquence significative et de nouvelles informations ne sont ajoutées qu'à la fin du journal, et non à des points arbitraires.
 
-Le rôle `log` est utilisé pour identifier un élément qui crée [une zone live](https://www.w3.org/WAI/PF/aria/terms#def_liveregion) où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent être supprimées. Par exemple, un journal de salon de discussion, l'historique d'une messagerie ou un fichier d'erreurs. Contrairement aux autres types de zones live, ce rôle est ordonné de façon séquentielle et les nouvelles informations sont uniquement ajoutées à la fin de l'enregistrement. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement `log` accessible aux produits de technologie d'assistance qui pourront alors le notifier à l'utilisateur.
+Contrairement à d'autres types de zones en direct, un journal est ordonné de manière séquentielle et de nouvelles informations ne sont ajoutées qu'à la fin du journal. Lorsque ce rôle est ajouté à un élément, le navigateur enverra un événement de journal accessible aux produits de technologie d'assistance qui pourront alors notifier l'utilisateur·ice à ce sujet.
 
-Par défaut, les mises à jour ne contiennent que les changements apportés à la zone live et elles sont annoncées à l'utilisateur lorsqu'il est inactif. Si l'utilisateur a besoin d'entendre l'ensemble de la zone live lorsqu'un changement se produit, il faut utiliser `aria-atomic="true"`. Pour faire les annonces le plus tôt possible et lorsque l'utilisateur peut être interrompu, `aria-live="assertive"` peut être défini pour lancer des mises à jour plus agressives.
+Par défaut, les mises à jour ne contiennent que les modifications apportées à la zone en direct et celles-ci sont annoncées lorsque l'utilisateur·ice est inactif·ve. Les éléments ayant le rôle `log` ont une valeur implicite `aria-live` de `polite`. Lorsque l'utilisateur·ice doit entendre l'ensemble de la zone en direct lors d'un changement, `aria-atomic="true"` doit être défini. Pour que les annonces soient faites dès que possible et où l'utilisateur·ice peut être interrompu·e, `aria-live="assertive"` peut être défini pour des mises à jour plus agressives.
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### Propriétés, états et rôles WAI-ARIA associés
 
-Lorsque le rôle `log` est ajouté à un élément, ou qu'un tel élément devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+- [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
+  - : Définit si les technologies d'assistance doivent présenter l'ensemble ou seulement une partie de la région modifiée. Les éléments ayant le rôle `log` ont une valeur implicite `aria-atomic` de `false`.
 
-- Présenter l'élément ayant un rôle de journal à l'API d'accessibilité du système d'exploitation&nbsp;;
-- Déclencher un événement journal accessible à l'aide de l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+- [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
+  - : Définit quand la technologie d'assistance doit informer l'utilisateur·ice des mises à jour du contenu. Les éléments ayant le rôle `log` ont une valeur implicite `aria-live` de `polite`, ce qui signifie que les lecteurs d'écran annonceront les changements à l'intérieur du journal lorsque l'utilisateur·ice est inactif·ve.
 
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
+- `aria-label` et `aria-labelledby`
+  - : Le rôle `log` doit avoir un nom accessible. Utilisez `aria-labelledby` si un label visible est présent, sinon utilisez `aria-label`.
 
-- Les lecteurs d'écran devraient annoncer les changements intervenus dans le fichier de journalisation lorsque l'utilisateur est inactif, à moins que `aria-live="assertive"` soit défini, dans quel cas l'utilisateur peut être interrompu.
-- Les loupes d'écran devraient indiquer visuellement la disponibilité d'une mise à jour du fichier de journalisation.
+## Bonnes pratiques
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+Avec une zone qui a du texte défilant, comme un téléscripteur boursier, le rôle [`marquee`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role) doit être utilisé à la place.
 
-### Exemples
+## Spécifications
 
-#### Exemple 1&nbsp;: Ajout du rôle dans du code HTML
+{{Specifications}}
 
-L'extrait de code ci-dessous montre comment le rôle `log` est ajouté directement dans le code source HTML.
+## Voir aussi
 
-```html
-<div id="liveregion" class="region" role="log"></div>
-```
-
-#### Exemple 2&nbsp;: Extrait d'un exemple d'application
-
-Cet extrait de code crée le journal dans une application de chat AJAX.
-
-```html
-<div id="chatArea" role="log">
-  <ul id="chatRegion" aria-live="polite" aria-atomic="false">
-    <li>Veuillez choisir un pseudo pour commencer à utiliser AJAX Chat.</li>
-  </ul>
-
-  <ul
-    id="userListRegion"
-    aria-live="off"
-    aria-relevant="additions removals text"></ul>
-</div>
-```
-
-Voir l'[exemple](http://codetalks.org/source/live/chat.html) sur CodeTalks pour plus d'informations.
-
-#### Exemples concrets
-
-- <http://test.cita.illinois.edu/aria/live/live1.php>&nbsp;;
-- <http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/>&nbsp;;
-- <http://codetalks.org/source/live/chat.html> \[[notes](http://codetalks.org/source/live/chat_notes.html)].
-
-### Notes
-
-- L'utilisation du rôle `log` sur un élément implique que cet élément possède l'attribut `aria-live="polite"`.
-- Pour une zone avec un défilement de texte, comme un bandeau défilant, il est préférable d'utiliser le rôle `marquee`.
-
-### Attributs ARIA utilisés
-
-- [log](https://www.w3.org/TR/wai-aria/roles#log).
-
-### Techniques ARIA connexes
-
-- Rôle [marquee](https://www.w3.org/TR/wai-aria/roles#marquee).
-
-### Autres ressources
-
-- Bonnes pratiques ARIA – Implémentation des zones live&nbsp;: [#LiveRegions](https://www.w3.org/TR/wai-aria-practices/#LiveRegions).
+- [ARIA&nbsp;: rôle `alert`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
+- [ARIA&nbsp;: rôle `marquee`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
+- [ARIA&nbsp;: rôle `status`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
+- [ARIA&nbsp;: rôle `timer`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
+- [Les régions en direct en ARIA](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions)
