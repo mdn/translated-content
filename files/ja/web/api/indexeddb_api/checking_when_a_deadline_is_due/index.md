@@ -2,7 +2,7 @@
 title: 期限の確認
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: fd56a549d24a8002df09735ee8319ce1a721c233
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -35,45 +35,61 @@ l10n:
 function addData(e) {
   e.preventDefault();
 
-  if (!title.value || !hours.value || !minutes.value || !day.value || !month.value || !year.value) {
-    note.innerHTML += '<li>Data not submitted — form incomplete.</li>';
+  if (
+    !title.value ||
+    !hours.value ||
+    !minutes.value ||
+    !day.value ||
+    !month.value ||
+    !year.value
+  ) {
+    note.appendChild(document.createElement("li")).textContent =
+      "データが送信されませんでした。フォームが不完全です。";
     return;
   }
+  // ...
+}
 ```
 
 この部分では、フォームのフィールドにすべての情報が入力されているかどうかを確認します。記入されていない場合は、開発者通知ペイン (アプリの UI の左下を参照) にメッセージを表示して、何が起こっているのかをユーザーに伝え、機能を終了します。このステップは、主に HTML フォームの検証に対応していないブラウザーのためのものです (検証に対応しているブラウザーでは、 HTML で required 属性を使用して検証を強制しています)。
 
 ```js
-   else {
-    const newItem = [
-      {
-        taskTitle: title.value,
-        hours    : hours.value,
-        minutes  : minutes.value,
-        day      : day.value,
-        month    : month.value,
-        year     : year.value,
-        notified : "no"
-      }
-    ];
+function addData(e) {
+  // ...
+  const newItem = [
+    {
+      taskTitle: title.value,
+      hours: hours.value,
+      minutes: minutes.value,
+      day: day.value,
+      month: month.value,
+      year: year.value,
+      notified: "no",
+    },
+  ];
 
-    // open a read/write db transaction, ready for adding the data
-    const transaction = db.transaction(["toDoList"], "readwrite");
+  // open a read/write db transaction, ready for adding the data
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
-    // report on the success of opening the transaction
-    transaction.oncomplete = (event) => {
-      note.innerHTML += '<li>Transaction opened for task addition.</li>';
-    };
+  // report on the success of opening the transaction
+  transaction.oncomplete = (event) => {
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction opened for task addition.";
+  };
 
-    transaction.onerror = (event) => {
-      note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
-    };
+  transaction.onerror = (event) => {
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction not opened due to error. Duplicate items not allowed.";
+  };
 
-    // create an object store on the transaction
-    const objectStore = transaction.objectStore("toDoList");
+  // create an object store on the transaction
+  const objectStore = transaction.objectStore("toDoList");
 
-    // add our newItem object to the object store
-    const request = objectStore.add(newItem[0]);
+  // add our newItem object to the object store
+  const request = objectStore.add(newItem[0]);
+
+  // ...
+}
 ```
 
 この部分では、データベースへの挿入に必要な形式でデータを保存する `newItem` というオブジェクトを作成します。次の数行では、データベーストランザクションを開き、これが成功したか失敗したかをユーザーに通知するメッセージを提供しています。そして、新しい項目が追加される `objectStore` が生成されます。データオブジェクトの `notified` プロパティは、 To-do リストの項目の期限がまだ来ておらず、通知されていないことを示しています。これについては後ほど説明します。
@@ -82,29 +98,25 @@ function addData(e) {
 > 変数 `db` には IndexedDB のデータベースインスタンスへの参照が格納されています。この変数の様々なプロパティを使用してデータを操作することができます。
 
 ```js
-    request.onsuccess = (event) => {
+function addData(e) {
+  // ...
+  request.onsuccess = (event) => {
+    note.appendChild(document.createElement("li")).textContent =
+      "新しいアイテムがデータベースに追加されました。";
 
-      note.innerHTML += '<li>New item added to database.</li>';
-
-      title.value = '';
-      hours.value = null;
-      minutes.value = null;
-      day.value = '01';
-      month.value = 'January';
-      year.value = 2020;
-    };
-  }
-```
-
-次の部分では、新しい項目の追加が成功したことを示すログメッセージを作成し、次のタスクが入力できるようにフォームをリセットします。
-
-```js
+    title.value = "";
+    hours.value = null;
+    minutes.value = null;
+    day.value = "01";
+    month.value = "January";
+    year.value = 2020;
+  };
   // update the display of data to show the newly added item, by running displayData() again.
   displayData();
-};
+}
 ```
 
-最後に `displayData()` 関数を実行して、アプリ内のデータの表示を更新し、先ほど入力された新しいタスクを表示します。
+この次の節では、新規アイテムの追加が成功したことを伝えるログメッセージを作成し、フォームをリセットして次のタスクの入力準備を整えます。最後に `displayData()` 関数を実行して、アプリ内のデータの表示を更新し、先ほど入力された新しいタスクを表示します。
 
 ### 期限に達したかどうかの確認
 
@@ -113,110 +125,94 @@ function addData(e) {
 ```js
 function checkDeadlines() {
   const now = new Date();
+  const minuteCheck = now.getMinutes();
+  const hourCheck = now.getHours();
+  const dayCheck = now.getDate();
+  const monthCheck = now.getMonth();
+  const yearCheck = now.getFullYear();
+  // ...
+}
 ```
 
-まず、空の `Date` オブジェクトを作成して、現在の日付と時刻を取得します。簡単でしょう？ここからは少し複雑な話になります。
+まず、空の `Date` オブジェクトを作成して、現在の日付と時刻を取得します。`Date` オブジェクトには、内部の日付や時刻のさまざまな部分を抽出するためのメソッドがいくつかあります。ここでは、現在の分 (簡単な数値として取得)、時 (簡単な数値として取得)、日 (これは `getDate()` が必要、 `getDay()` は曜日を 1-7 で返すため)、月 (0-11 の数値を返す。下記参照)、年 (`getFullYear()` が必要、`getYear()` は非推奨であり、誰にとってもあまり役に立たない奇妙な値を返します) を読み取ります。
 
 ```js
-const minuteCheck = now.getMinutes();
-const hourCheck = now.getHours();
-const dayCheck = now.getDate();
-const monthCheck = now.getMonth();
-const yearCheck = now.getFullYear();
-```
-
-`Date` オブジェクトには、内部の日付や時刻のさまざまな部分を抽出するためのメソッドがいくつかあります。ここでは、現在の分 (簡単な数値として取得)、時 (簡単な数値として取得)、日 (これは `getDate()` が必要、 `getDay()` は曜日を 1-7 で返すため)、月 (0-11 の数値を返す。下記参照)、年 (`getFullYear()` が必要、`getYear()` は非推奨であり、誰にとってもあまり役に立たない奇妙な値を返します) を読み取ります。
-
-```js
-  const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+function checkDeadlines() {
+  // ...
+  const objectStore = db
+    .transaction(["toDoList"], "readwrite")
+    .objectStore("toDoList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     let monthNumber;
 
-    if (cursor) {
+    if (!cursor) return;
+    // ...
+    cursor.continue();
+  };
+}
 ```
 
-次にもう一つ、 IndexedDB の `objectStore` を生成し、 `openCursor()` メソッドを使用してカーソルを開きます。これは基本的に IndexedDB がストア内のすべての項目を反復処理する方法です。そして、カーソル内に有効な項目が残っている限り、カーソル内のすべての項目をループします。
+次にもう一つ、 IndexedDB の `objectStore` を生成し、 `openCursor()` メソッドを使用してカーソルを開きます。これは基本的に IndexedDB がストア内のすべての項目を反復処理する方法です。そして、カーソル内に有効な項目が残っている限り、カーソル内のすべての項目をループします。関数の最後の行でカーソルを移動させると、IndexedDBに格納される次のタスクに対して、上記の期限チェック機構が実行されるようになります。
+
+これで、期限を調べるための `onsuccess` ハンドラーにコードを記述していきます。
 
 ```js
-switch (cursor.value.month) {
-  case "January":
-    monthNumber = 0;
-    break;
-  case "February":
-    monthNumber = 1;
-    break;
-
-  // other lines removed from listing for brevity
-
-  case "December":
-    monthNumber = 11;
-    break;
-  default:
-    alert("Incorrect month entered in database.");
-}
+const { hours, minutes, day, month, year, notified, taskTitle } = cursor.value;
+const monthNumber = MONTHS.indexOf(month);
+if (monthNumber === -1) throw new Error("Incorrect month entered in database.");
 ```
 
 まず最初に行うことは、データベースに保存されている月名を、 JavaScript が理解できる月の数値に変換することです。前に見たように、 JavaScript の Date オブジェクトは月の値を 0 から 11 までの数値として生成します。
 
-```js
-if (
-  Number(cursor.value.hours) === hourCheck &&
-  Number(cursor.value.minutes) === minuteCheck &&
-  Number(cursor.value.day) === dayCheck &&
-  monthNumber === monthCheck &&
-  cursor.value.year === yearCheck &&
-  notified === "no"
-) {
-  // If the numbers all do match, run the createNotification()
-  // function to create a system notification
-  createNotification(cursor.value.taskTitle);
-}
-```
-
-IndexedDB に格納された値と照合したい現在の時刻と日付の部分がすべて組み立てられたので、いよいよチェックを実行します。ユーザーに期限切れを知らせる何らかの通知を行う前に、すべての値が一致している必要があります。
-
-ここでの `+` 演算子は、先頭にゼロが付いている数字を、先頭にゼロが付いていない同等の数字に変換します (例えば 09 -> 9)。これが必要なのは、 JavaScript の Date の数値には先頭にゼロがないが、データにはあるかもしれないからです。
-
-`notified === "no"` のチェックは、 1 つの To-Do アイテムに対して 1 つの通知しか受け取れないようにするためのものです。各項目のオブジェクトに対して通知が発生すると、その `notification` プロパティが `"yes"` に設定されるので、次の繰り返しではこのチェックが通らないようにするために、 `createNotification()` 関数の中に次のようなコードを入れています (詳しくは [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)を読んでください)。
+IndexedDB に格納された値と照合したい現在の時刻と日付の部分がすべて組み立てられたので、いよいよチェックを実行します。ユーザーに期限切れを知らせる何らかの通知を行う前に、すべての値が一致している必要があります。すべてのチェックが一致する場合には、 `createNotification()` 関数を実行してユーザーに通知を提供します。
 
 ```js
-    // now we need to update the value of notified to "yes" in this particular data object, so the
-    // notification won't be set off on it again
-
-    // first open up a transaction as usual
-    const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
-
-    // get the to-do list object that has this title as it's title
-    const request = objectStore.get(title);
-
-    request.onsuccess = () => {
-      // grab the data object returned as the result
-      const data = request.result;
-
-      // update the notified value in the object to "yes"
-      data.notified = "yes";
-
-      // create another request that inserts the item back into the database
-      const requestUpdate = objectStore.put(data);
-
-      // when this new request succeeds, run the displayData() function again to update the display
-      requestUpdate.onsuccess = () => {
-        displayData();
-      }
-```
-
-すべてのチェックが一致した場合は、 `createNotification()` 関数を実行して、ユーザーに通知を行います。
-
-```js
-      cursor.continue();
-    }
+let matched = parseInt(hours, 10) === hourCheck;
+matched &&= parseInt(minutes, 10) === minuteCheck;
+matched &&= parseInt(day, 10) === dayCheck;
+matched &&= monthNumber === monthCheck;
+matched &&= parseInt(year, 10) === yearCheck;
+if (matched && notified === "no") {
+  // If the numbers all do match, run the createNotification() function to create a system notification
+  // but only if the permission is set
+  if (Notification.permission === "granted") {
+    createNotification(taskTitle);
   }
 }
 ```
 
-この関数の最後の行では、カーソルが上に移動し、 IndexedDB に格納されている次のタスクに対して、上記の期限チェックの仕組みが実行されます。
+`notified === "no"` のチェックは、 1 つの To-Do アイテムに対して 1 つの通知しか受け取れないようにするためのものです。各項目のオブジェクトに対して通知が発生すると、その `notification` プロパティが `"yes"` に設定されるので、次の繰り返しではこのチェックが通らないようにするために、 `createNotification()` 関数の中に次のようなコードを入れています (詳しくは [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)を読んでください)。
+
+```js
+// now we need to update the value of notified to "yes" in this particular data object, so the
+// notification won't be set off on it again
+
+// first open up a transaction as usual
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
+
+// Get the to-do list object that has this title as its title
+const objectStoreTitleRequest = objectStore.get(title);
+
+objectStoreTitleRequest.onsuccess = () => {
+  // Grab the data object returned as the result
+  const data = objectStoreTitleRequest.result;
+
+  // Update the notified value in the object to 'yes'
+  data.notified = "yes";
+
+  // Create another request that inserts the item back into the database
+  const updateTitleRequest = objectStore.put(data);
+
+  // When this new request succeeds, run the displayData() function again to update the display
+  updateTitleRequest.onsuccess = () => {
+    displayData();
+  };
+};
+```
 
 ### チェックし続ける
 
