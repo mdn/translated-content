@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`Range.createContextualFragment()`** 方法返回一个 {{domxref("DocumentFragment")}} ，它通过调用 HTML 片段解析算法 或 XML 片段解析算法来生成，所使用的上下文节点是范围的起始位置（即所选节点的*父*节点）。如果该范围属于一个已设置 HTMLness 位的 `Document`，则会使用 HTML 片段解析算法。在 HTML 的情况下，如果上下文节点是 `html`，出于历史原因，片段解析算法会改为使用 `body` 作为上下文来执行。
+**`Range.createContextualFragment()`** 方法通过以范围的起始位置（即所选节点的*父*节点）作为上下文节点，调用 HTML 片段解析算法或 XML 片段解析算法，返回一个 {{domxref("DocumentFragment")}}。如果该范围属于一个已设置 HTMLness 位的 `Document`，则会使用 HTML 片段解析算法。在 HTML 的情况下，出于历史原因，如果上下文节点是 `html`，片段解析算法则会改为使用 `body` 作为上下文执行。
 
 ## 语法
 
