@@ -25,11 +25,11 @@ Le rôle `document` est destiné au conteneur principal contenant du contenu que
 
 Cet exemple montre un [dialog](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role), un rôle de widget composite complexe, avec quelques contrôles et une section contenant un texte informatif que l'utilisateur·ice de la technologie d'assistance peut lire en mode lecture lorsqu'il est sélectionné.
 
-Par défaut, les pages Web sont traitées comme des documents ; les technologies d'assistance (<abbr>TA</abbr>) entrent en mode de navigation ou de lecture lorsqu'elles accèdent à une nouvelle page Web. Ce mode peut être modifié par divers rôles, y compris les rôles de widget et d'application. Le rôle `document` ramène les <abbr>TA</abbr> en mode de navigation ou de lecture.
+Par défaut, les pages Web sont traitées comme des documents&nbsp;; les technologies d'assistance (<abbr>TA</abbr>) entrent en mode de navigation ou de lecture lorsqu'elles accèdent à une nouvelle page Web. Ce mode peut être modifié par divers rôles, y compris les rôles de widget et d'application. Le rôle `document` ramène les <abbr>TA</abbr> en mode de navigation ou de lecture.
 
 Généralement placé dans un rôle d'application ou un autre rôle de widget interactif, le rôle `document` est utilisé pour indiquer une section d'un widget composite complexe que l'utilisateur·ice de la technologie d'assistance doit lire en utilisant son mode de navigation ou de lecture virtuelle, si disponible.
 
-Parce que les <abbr>TA</abbr> avec un mode de lecture par défaut à ce mode pour tous les éléments sauf ceux avec un rôle de widget ou d'application défini, le rôle de document n'est utile que pour les éléments focusables au sein d'un widget ou d'une application qui doivent être lus comme du texte enrichi statique. Ajouter `role="document"` et `tabindex="0"` à l'élément contenant le texte dans un widget permet à l'utilisateur·ice de lecteur d'écran d'appuyer sur la touche Tab pour placer le focus sur l'élément document et lire le texte avec le curseur de lecture du lecteur d'écran.
+Parce que les <abbr>TA</abbr> avec un mode de lecture par défaut à ce mode pour tous les éléments sauf ceux avec un rôle de widget ou d'application défini, le rôle de document n'est utile que pour les éléments sélectionnables au sein d'un widget ou d'une application qui doivent être lus comme du texte enrichi statique. Ajouter `role="document"` et `tabindex="0"` à l'élément contenant le texte dans un widget permet à l'utilisateur·ice de lecteur d'écran d'appuyer sur la touche Tab pour placer la sélection sur l'élément document et lire le texte avec le curseur de lecture du lecteur d'écran.
 
 Les technologies d'assistance doivent revenir au mode document, en interceptant éventuellement les contrôles réaffectés au contexte dynamique du parent, réactivant les événements d'entrée standard, tels que les événements de clavier flèche haut ou bas, pour contrôler le curseur de lecture.
 
@@ -41,11 +41,11 @@ En contraste avec le rôle [`article`](/fr/docs/Web/Accessibility/ARIA/Reference
   - : Inclure avec une valeur `true` ou `false` si l'élément document est pliable, pour indiquer si le document est actuellement développé ou réduit. D'autres valeurs incluent la valeur par défaut `undefined` qui signifie que le document n'est pas pliable.
 
 - tabindex="0"
-  - : Utilisé pour le rendre focusable afin que l'utilisateur·ice de la technologie d'assistance puisse y accéder par tabulation et commencer à lire immédiatement.
+  - : Utilisé pour le rendre sélectionnable afin que l'utilisateur·ice de la technologie d'assistance puisse y accéder par tabulation et commencer à lire immédiatement.
 
 ### Interactions au clavier
 
-L'élément doit être rendu focusable en définissant l'attribut / paire de valeurs `tabindex="0"` sur celui-ci. De cette façon, l'utilisateur·ice peut y accéder par tabulation, le mode de lecture est invoqué automatiquement et le contenu peut être lu immédiatement.
+L'élément doit être rendu sélectionnable en définissant l'attribut / paire de valeurs `tabindex="0"` sur celui-ci. De cette façon, l'utilisateur·ice peut y accéder par tabulation, le mode de lecture est invoqué automatiquement et le contenu peut être lu immédiatement.
 
 ### Fonctionnalités JavaScript requises
 
@@ -53,11 +53,11 @@ Aucune, sauf si cela est requis par des attributs. Par exemple, si le `document`
 
 ## Exemples
 
-Un exemple est Gmail et la vue de conversation unique. GMail est une application Web. Lorsqu'il est dans GMail, la plupart des interactions de l'agent utilisateur sont usurpées par l'application. Cependant, lorsque le focus du clavier est placé sur le titre de départ d'une conversation unique contenant le sujet de la conversation, l'utilisateur·ice de lecteur d'écran peut utiliser les commandes de mode de lecture pour lire les messages, les développer ou les réduire, et les manipuler. Une fois le focus revenu à la liste des messages, soit en activant le bouton Retour, soit en appuyant sur une combinaison de touches associée, le mode d'interaction directe de l'application est à nouveau invoqué, et l'utilisateur·ice peut se déplacer vers une autre conversation de la liste avec les touches <kbd>flèche</kbd>.
+Un exemple est Gmail et la vue de conversation unique. GMail est une application Web. Lorsqu'il est dans GMail, la plupart des interactions de l'agent utilisateur sont usurpées par l'application. Cependant, lorsque la sélection du clavier est placé sur le titre de départ d'une conversation unique contenant le sujet de la conversation, l'utilisateur·ice de lecteur d'écran peut utiliser les commandes de mode de lecture pour lire les messages, les développer ou les réduire, et les manipuler. Une fois la sélection revenue à la liste des messages, soit en activant le bouton Retour, soit en appuyant sur une combinaison de touches associée, le mode d'interaction directe de l'application est à nouveau invoqué, et l'utilisateur·ice peut se déplacer vers une autre conversation de la liste avec les touches <kbd>flèche</kbd>.
 
 ## Bonnes pratiques
 
-Assurez-vous toujours qu'un élément avec le rôle de document est focusable, en définissant l'attribut `tabindex` avec une valeur de 0. Cela l'inclura également dans l'ordre de tabulation.
+Assurez-vous toujours qu'un élément avec le rôle de document est sélectionnable, en définissant l'attribut `tabindex` avec une valeur de 0. Cela l'inclura également dans l'ordre de tabulation.
 
 ### Avantages supplémentaires
 
