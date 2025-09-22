@@ -51,7 +51,7 @@ l10n:
 ### 术语表和定义
 
 - {{glossary("CSSOM", "CSS 对象模型（CSSOM）")}}
-- {{glossary("CSS pixel", "像素")}}
+- {{glossary("CSS pixel", "CSS 像素")}}
 - {{glossary("Scroll container", "滚动容器")}}
 
 ## 规范
