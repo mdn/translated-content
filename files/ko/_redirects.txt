@@ -803,7 +803,8 @@
 /ko/docs/Web/CSS/CSS_User_Interface	/ko/docs/Web/CSS/CSS_basic_user_interface
 /ko/docs/Web/CSS/CSS_Variables	/ko/docs/Web/CSS/CSS_cascading_variables
 /ko/docs/Web/CSS/CSS_charsets	/ko/docs/Web/CSS/CSS_syntax
-/ko/docs/Web/CSS/CSS_colors/Color_picker_tool	/ko/docs/Web/CSS/CSS_colors/Color_picker
+/ko/docs/Web/CSS/CSS_colors/Color_picker	/ko/docs/Web/CSS/CSS_colors/Color_format_converter
+/ko/docs/Web/CSS/CSS_colors/Color_picker_tool	/ko/docs/Web/CSS/CSS_colors/Color_format_converter
 /ko/docs/Web/CSS/CSS_flow_layout	/ko/docs/Web/CSS/CSS_display/Flow_layout
 /ko/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow	/ko/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
 /ko/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow	/ko/docs/Web/CSS/CSS_display/Flow_layout_and_overflow
