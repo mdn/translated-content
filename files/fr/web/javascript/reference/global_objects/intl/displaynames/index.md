@@ -35,9 +35,9 @@ console.log(regionNamesInTraditionalChinese.of("US"));
 ## Méthodes des instances
 
 - [`Intl.DisplayNames.prototype.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of)
-  - : Cette méthodes reçoit un `code` et retourne une chaine à partir sur la langue et les options fournies lors de l'instanciation de [`Intl.DisplayNames`](#).
+  - : Cette méthode reçoit un `code` et retourne une chaine à partir de la langue et des options fournies lors de l'instanciation de [`Intl.DisplayNames`](#).
 - [`Intl.DisplayNames.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions)
-  - : Retourne un nouvel objet dont les propriété feflètent la langue et les options de formattage calculées lors de l'initialisation de l'objet.
+  - : Retourne un nouvel objet dont les propriété reflètent la langue et les options de formattage calculées lors de l'initialisation de l'objet.
 
 ## Exemples
 
@@ -56,7 +56,7 @@ nomsRégions.of('MM');  // "Myanmar (Burma)"
 
 // Obtenir le nom d'une région en chinois traditionnel
 nomsRégions = new Intl.DisplayNames(['zh-Hant'], {type: 'region'});
-nomsRégions.of('419'; // "拉丁美洲"
+nomsRégions.of('419'); // "拉丁美洲"
 nomsRégions.of('BZ'); // "貝里斯"
 nomsRégions.of('US'); // "美國"
 nomsRégions.of('BA'); // "波士尼亞與赫塞哥維納"
@@ -109,14 +109,14 @@ nomsSystèmes.of("Kana"); // "片假名"
 Pour créer un objet `Intl.DisplayNames` pour une langue et obtenir le nom correspondant au code d'une devise.
 
 ```js
-// Obtenir le nom d'une devise in English
+// Obtenir le nom d'une devise en anglais
 let nomsDevises = new Intl.DisplayNames(["en"], { type: "currency" });
 nomsDevises.of("USD"); // "US Dollar"
 nomsDevises.of("EUR"); // "Euro"
 nomsDevises.of("TWD"); // "New Taiwan Dollar"
 nomsDevises.of("CNY"); // "Chinese Yuan"
 
-// Obtenir le nom d'une devise in Traditional Chinese
+// Obtenir le nom d'une devise en chinois traditionnel
 nomsDevises = new Intl.DisplayNames(["zh-Hant"], { type: "currency" });
 nomsDevises.of("USD"); // "美元"
 nomsDevises.of("EUR"); // "歐元"
