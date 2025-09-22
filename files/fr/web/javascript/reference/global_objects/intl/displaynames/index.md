@@ -47,20 +47,20 @@ Pour créer un objet `Intl.DisplayNames` pour une langue et obtenir le nom corre
 
 ```js
 // Obtenir le nom d'une région en anglais
-let nomsRégions = new Intl.DisplayNames(['en'], {type: 'region'});
-nomsRégions.of('419'); // "Latin America"
-nomsRégions.of('BZ');  // "Belize"
-nomsRégions.of('US');  // "United States"
-nomsRégions.of('BA');  // "Bosnia & Herzegovina"
-nomsRégions.of('MM');  // "Myanmar (Burma)"
+let nomsRégions = new Intl.DisplayNames(["en"], { type: "region" });
+nomsRégions.of("419"); // "Latin America"
+nomsRégions.of("BZ"); // "Belize"
+nomsRégions.of("US"); // "United States"
+nomsRégions.of("BA"); // "Bosnia & Herzegovina"
+nomsRégions.of("MM"); // "Myanmar (Burma)"
 
 // Obtenir le nom d'une région en chinois traditionnel
-nomsRégions = new Intl.DisplayNames(['zh-Hant'], {type: 'region'});
-nomsRégions.of('419'); // "拉丁美洲"
-nomsRégions.of('BZ'); // "貝里斯"
-nomsRégions.of('US'); // "美國"
-nomsRégions.of('BA'); // "波士尼亞與赫塞哥維納"
-nomsRégions.of('MM'); // "緬甸"
+nomsRégions = new Intl.DisplayNames(["zh-Hant"], { type: "region" });
+nomsRégions.of("419"); // "拉丁美洲"
+nomsRégions.of("BZ"); // "貝里斯"
+nomsRégions.of("US"); // "美國"
+nomsRégions.of("BA"); // "波士尼亞與赫塞哥維納"
+nomsRégions.of("MM"); // "緬甸"
 ```
 
 ### Affichage des noms de langues
