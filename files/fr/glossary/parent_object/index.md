@@ -9,4 +9,4 @@ L'{{glossary("object","objet")}} auquel appartient une {{glossary("property","pr
 
 ## Voir aussi
 
-- [Discussion sur l'héritage et les prototypes en JavaScript](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Discussion sur l'héritage et les prototypes en JavaScript](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

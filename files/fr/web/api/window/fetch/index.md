@@ -12,7 +12,7 @@ La méthode globale **`fetch()`** démarre le chargement d'une ressource sur le 
 
 Une promesse {{domxref("GlobalFetch.fetch","fetch()")}} n'est rejetée que quand un problème de réseau est rencontré, même si en réalité cela signifie généralement qu'il y a un problème de permissions ou quelque chose de similaire. La promesse ne sera pas rejetée en cas d'erreur HTTP (`404`, etc.) Pour cela, un gestionnaire `then()` doit vérifier que la propriété {{domxref("Response.ok")}} ait bien pour valeur `true` et/ou la valeur de la propriété {{domxref("Response.status")}}.
 
-La méthode `fetch()` est contrôlée par la directive `connect-src` de l'entête [Content Security Policy](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) plutôt que par la directive de la ressource qui est récupérée.
+La méthode `fetch()` est contrôlée par la directive `connect-src` de l'entête [Content Security Policy](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) plutôt que par la directive de la ressource qui est récupérée.
 
 > [!NOTE]
 > Les paramètres de la méthode `fetch()` sont identiques à ceux du contructeur d'une {{domxref("Request.Request","Request()")}}.
@@ -33,7 +33,7 @@ const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
 - `init` {{optional_inline}}
   - : Un objet qui contient les paramètres de votre requête. Les options possibles sont :
     - `method`
-      - : La méthode de la requête, par exemple `GET` ou `POST`. Comme spécifié, dans la [spécification WHATWG](https://fetch.spec.whatwg.org/#methods), toute méthode définie dans la [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) sera automatiquement mise en majuscule. Si vous souhaitez utiliser une méthode exotique (comme `PATCH`), vous devrez la mettre en majuscule vous-même. Notez que l'en-tête [`Origin`](/fr/docs/Web/HTTP/Headers/Origin) n'était pas défini dans les requêtes `fetch()` avec les méthodes [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) ou [`GET`](/fr/docs/Web/HTTP/Methods/GET) à cause d'un bug pour Firefox avant Firefox 65 (voir [bug 1508661](https://bugzil.la/1508661)).
+      - : La méthode de la requête, par exemple `GET` ou `POST`. Comme spécifié, dans la [spécification WHATWG](https://fetch.spec.whatwg.org/#methods), toute méthode définie dans la [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) sera automatiquement mise en majuscule. Si vous souhaitez utiliser une méthode exotique (comme `PATCH`), vous devrez la mettre en majuscule vous-même. Notez que l'en-tête [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin) n'était pas défini dans les requêtes `fetch()` avec les méthodes [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) ou [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) à cause d'un bug pour Firefox avant Firefox 65 (voir [bug 1508661](https://bugzil.la/1508661)).
     - `headers`
       - : Les entêtes à ajouter à votre requête, contenues dans un objet {{domxref("Headers")}} ou dans un objet avec des {{domxref("ByteString")}} pour valeurs.
     - `body`
@@ -143,5 +143,5 @@ let maRequete = new Request("fleurs.jpg", monInit);
 
 - [Fetch API](/fr/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

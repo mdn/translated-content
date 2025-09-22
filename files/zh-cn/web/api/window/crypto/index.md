@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Window")}} 接口的 **`crypto`** 只读属性返回当前窗口的作用域的 {{domxref("Crypto")}} 对象。此对象允许网页访问某些加密相关的服务。
 
-虽然该属性自身是只读的，但它的所有方法（以及其子对象 {{domxref("SubtleCrypto")}} 的方法）不仅是只读的，因此容易受到 {{glossary("polyfill")}} 的攻击。
+虽然该属性自身是只读的，但它的所有方法（以及其子对象 {{domxref("SubtleCrypto")}} 的方法）并不是只读的，因此容易受到 {{glossary("polyfill")}} 的攻击。
 
 虽然 `crypto` 在所有窗口上均可用，但其返回的 `Crypto` 对象在不安全的上下文中仅有一个可用的特性：{{domxref("Crypto.getRandomValues", "getRandomValues()")}} 方法。通常，你应该仅在安全上下文中使用此 API。
 

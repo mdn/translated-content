@@ -10,7 +10,7 @@ L'élément HTML **`<noscript>`** définit un fragment HTML qui doit être affic
 
 ## Attributs
 
-On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
+On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur cet élément.
 
 ## Exemples
 

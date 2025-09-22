@@ -44,7 +44,7 @@ doc.nodeName # Propriété DOM de l'objet document;
 p_list = doc.getElementsByTagName("para");
 ```
 
-Pour plus d'informations sur ce que ces techniques impliquent dans l'écriture de JavaScript sur le web, voir [Survol des technologies JavaScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview).
+Pour plus d'informations sur ce que ces techniques impliquent dans l'écriture de JavaScript sur le web, voir [Survol des technologies JavaScript](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Méthodes d'accès au DOM
 

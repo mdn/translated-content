@@ -7,7 +7,7 @@ slug: Web/API/Document/activeElement
 
 La propriété en lecture seule **`activeElement`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie l'élément (l'objet [`Element`](/fr/docs/Web/API/Element) qui lui correspond) contenu dans le DOM et qui a le focus à cet instant.
 
-La plupart du temps, `activeElement` renverra un objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) ou [`HTMLTextAreaElement`](/fr/docs/Web/API/HTMLTextAreaElement) si le texte de celui-ci est sélectionné au moment de l'appel. Si tel est le cas, il est possible d'obtenir plus de détails à l'aide des propriétés `selectionStart` et `selectionEnd` de l'objet. Dans les autres cas, l'élément avec le focus pourra être un élément [`<select>`](/fr/docs/Web/HTML/Element/select) (menu) ou un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut `"button"`, `"checkbox"`, ou `"radio"`.
+La plupart du temps, `activeElement` renverra un objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) ou [`HTMLTextAreaElement`](/fr/docs/Web/API/HTMLTextAreaElement) si le texte de celui-ci est sélectionné au moment de l'appel. Si tel est le cas, il est possible d'obtenir plus de détails à l'aide des propriétés `selectionStart` et `selectionEnd` de l'objet. Dans les autres cas, l'élément avec le focus pourra être un élément [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) (menu) ou un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut `"button"`, `"checkbox"`, ou `"radio"`.
 
 Généralement, une personne utilise la touche <kbd>Tabulation</kbd> pour déplacer le focus entre les éléments qui peuvent le recevoir et utilise la touche <kbd>Espace</kbd> pour activer l'élément (c'est-à-dire pour appuyer sur un bouton ou pour changer l'état d'un bouton radio). Les éléments qui peuvent recevoir le focus dépendent de la plateforme et de la configuration du navigateur. Ainsi, sur les systèmes macOS et par défaut, les éléments qui ne sont pas des champs de saisie texte ne peuvent pas recevoir le focus.
 
@@ -16,7 +16,7 @@ Généralement, une personne utilise la touche <kbd>Tabulation</kbd> pour dépla
 
 ## Valeur
 
-Un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui a le focus, [`<body>`](/fr/docs/Web/HTML/Element/body) ou
+Un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui a le focus, [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) ou
 `null` si aucun élément n'a le focus.
 
 ## Exemples

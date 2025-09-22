@@ -92,7 +92,7 @@ On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/
 
 ## Attributs
 
-Comme les autres éléments HTML, cet élément possède les [attributs globaux](/fr/docs/Web/HTML/Global_attributes).
+Comme les autres éléments HTML, cet élément possède les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`height`**
   - : La hauteur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 150.
@@ -109,7 +109,7 @@ Il est fortement recommandé de fournir un contenu alternatif au contenu du bloc
 
 ### Balise `</canvas>` obligatoire
 
-À la différence de [`<img>`](/fr/docs/Web/HTML/Element/img), l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) **doit** être fermé avec la balise fermante `</canvas>`.
+À la différence de [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) **doit** être fermé avec la balise fermante `</canvas>`.
 
 ### Dimensionnement du canevas : CSS ou HTML
 

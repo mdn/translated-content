@@ -41,7 +41,7 @@ Commençons par regarder le CSS.
 
 ### Sémantique correcte et attentes de l'utilisateur
 
-Il est possible d'utiliser CSS pour détourner l'apparence d'un élément HTML pour qu'il ressemble à un autre, mais cela ne veut pas dire que vous devriez le faire. Comme nous l'avons souvent mentionné dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Learn/Accessibility/HTML), vous devez utiliser, dans la mesure du possible, l'élément sémantique approprié. Sinon, cela peut créer de la confusion et des difficultés d'usage pour tout le monde, plus particulièrement pour les utilisateurs handicapés. L'utilisation de la sémantique correcte a beaucoup à voir avec les attentes des utilisateurs — les éléments ont une apparence et un comportement particuliers, en fonction de leurs fonctionnalités, et ces conventions communes sont attendues par les utilisateurs.
+Il est possible d'utiliser CSS pour détourner l'apparence d'un élément HTML pour qu'il ressemble à un autre, mais cela ne veut pas dire que vous devriez le faire. Comme nous l'avons souvent mentionné dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/HTML), vous devez utiliser, dans la mesure du possible, l'élément sémantique approprié. Sinon, cela peut créer de la confusion et des difficultés d'usage pour tout le monde, plus particulièrement pour les utilisateurs handicapés. L'utilisation de la sémantique correcte a beaucoup à voir avec les attentes des utilisateurs — les éléments ont une apparence et un comportement particuliers, en fonction de leurs fonctionnalités, et ces conventions communes sont attendues par les utilisateurs.
 
 Par exemple, un utilisateur de lecteur d'écran ne peut pas naviguer dans une page via des éléments d'en-tête si le développeur n'a pas utilisé les éléments d'en-tête de manière appropriée pour annoter le contenu. De la même manière, un en-tête perd son utilité visuelle si vous le stylisez de sorte qu'il ne ressemble pas à un en-tête.
 
@@ -83,7 +83,7 @@ Vous devriez :
 - Vos listes devraient ressembler à des listes.
 - La couleur du texte doit présenter un contraste suffisant avec la couleur de fond.
 
-Voir [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) et [Introduction au style de texte](/fr/docs/Learn/CSS/Styling_text) pour plus d'informations.
+Voir [Fondamentaux du texte HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) et [Introduction au style de texte](/fr/docs/Learn_web_development/Core/Text_styling) pour plus d'informations.
 
 #### Texte mis en emphase
 
@@ -107,7 +107,7 @@ em {
 }
 ```
 
-Cependant, vous aurez rarement besoin de styliser des éléments d'emphase de manière significative. Les conventions standard de texte en gras () et en italique (emphase) sont très reconnaissables, et le changement de style peut être source de confusion. Pour mettre des contenus en avant de manière efficace, voir [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance).
+Cependant, vous aurez rarement besoin de styliser des éléments d'emphase de manière significative. Les conventions standard de texte en gras () et en italique (emphase) sont très reconnaissables, et le changement de style peut être source de confusion. Pour mettre des contenus en avant de manière efficace, voir [Fondamentaux du texte HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#emphasis_and_importance).
 
 #### Les abréviations
 
@@ -128,7 +128,7 @@ abbr {
 }
 ```
 
-Par convention, on souligne en pointillés les abréviations et il n'est pas judicieux de s'écarter significativement cette règle reconnue. Pour plus d'informations sur les abréviations, voir [Abréviations](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations).
+Par convention, on souligne en pointillés les abréviations et il n'est pas judicieux de s'écarter significativement cette règle reconnue. Pour plus d'informations sur les abréviations, voir [Abréviations](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations).
 
 #### Liens
 
@@ -206,7 +206,7 @@ Un autre conseil est de ne pas compter uniquement sur la couleur pour les pannea
 
 ### Cacher des choses
 
-Dans de nombreux cas, une conception visuelle nécessitera de ne pas afficher tout le contenu en même temps. Par exemple, dans notre [Exemple de boîte d'information à onglets](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (voir notre [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)), nous avons trois panneaux d'informations, mais nous les [positionnons](/fr/docs/Learn/CSS/CSS_layout/Positioning) les uns sur les autres et fournissons des onglets sur lesquels on peut cliquer pour les afficher à tour de rôle (c'est aussi accessible au clavier – vous pouvez également utiliser <kbd>Tab</kbd> et <kbd>Entrée</kbd> pour les sélectionner).
+Dans de nombreux cas, une conception visuelle nécessitera de ne pas afficher tout le contenu en même temps. Par exemple, dans notre [Exemple de boîte d'information à onglets](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (voir notre [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)), nous avons trois panneaux d'informations, mais nous les [positionnons](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning) les uns sur les autres et fournissons des onglets sur lesquels on peut cliquer pour les afficher à tour de rôle (c'est aussi accessible au clavier – vous pouvez également utiliser <kbd>Tab</kbd> et <kbd>Entrée</kbd> pour les sélectionner).
 
 ![](tabbed-info-box.png)
 
@@ -233,12 +233,12 @@ JavaScript peut également compromettre l'accessibilité, selon son utilisation.
 
 Le JavaScript moderne est un langage puissant, et nous pouvons faire beaucoup de choses avec cela de nos jours, du contenu simple et des mises à jour d'interface utilisateur aux jeux 2D et 3D à part entière. Aucune règle ne stipule que tout le contenu doit être accessible à 100% à toutes les personnes. Vous devez simplement faire ce que vous pouvez et rendre vos applications aussi accessibles que possible.
 
-Le contenu et les fonctionnalités simples sont facilement accessibles – texte, images, tableaux, formulaires et bouton-poussoir activant des fonctions. Comme nous l'avons vu dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Learn/Accessibility/HTML), les principales considérations sont les suivantes :
+Le contenu et les fonctionnalités simples sont facilement accessibles – texte, images, tableaux, formulaires et bouton-poussoir activant des fonctions. Comme nous l'avons vu dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/HTML), les principales considérations sont les suivantes :
 
 - Bonne sémantique : Utiliser le bon élément pour le bon travail. Par exemple, assurez-vous que vous utilisez les en-têtes et les paragraphes, et les éléments {{htmlelement("button")}} et {{htmlelement("a")}}.
-- S'assurer que le contenu est disponible sous forme de texte, soit directement sous forme de contenu textuel, soit par un libellé pour des éléments `<form>` soit par [textes par défaut](/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles) pour les images.
+- S'assurer que le contenu est disponible sous forme de texte, soit directement sous forme de contenu textuel, soit par un libellé pour des éléments `<form>` soit par [textes par défaut](/fr/docs/Learn_web_development/Core/Accessibility/HTML#alternatives_textuelles) pour les images.
 
-Nous avons également examiné un exemple d'utilisation de JavaScript pour intégrer des fonctionnalités là où il manque – voir [Remettre l'accessibilité au clavier](/fr/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in). Ce n'est pas l'idéal – vous devez utiliser le bon élément pour le bon travail – mais cela montre que c'est possible dans des situations où, pour une raison quelconque, vous ne pouvez pas contrôler le balisage utilisé. Un autre moyen d'améliorer l'accessibilité pour les widgets non sémantiques reposant sur JavaScript consiste à utiliser WAI-ARIA pour fournir une sémantique supplémentaire aux utilisateurs de lecteurs d'écran. Le prochain article couvrira également cela en détail.
+Nous avons également examiné un exemple d'utilisation de JavaScript pour intégrer des fonctionnalités là où il manque – voir [Remettre l'accessibilité au clavier](/fr/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in). Ce n'est pas l'idéal – vous devez utiliser le bon élément pour le bon travail – mais cela montre que c'est possible dans des situations où, pour une raison quelconque, vous ne pouvez pas contrôler le balisage utilisé. Un autre moyen d'améliorer l'accessibilité pour les widgets non sémantiques reposant sur JavaScript consiste à utiliser WAI-ARIA pour fournir une sémantique supplémentaire aux utilisateurs de lecteurs d'écran. Le prochain article couvrira également cela en détail.
 
 Les fonctionnalités complexes telles que les jeux 3D ne sont pas si faciles à rendre accessibles – un jeu 3D complexe créé à l'aide de [L'API WebGL : graphismes 2D et 3D pour le web](/fr/docs/Web/API/WebGL_API) sera rendu sur un élément {{htmlelement("canvas")}}, qui n'a pour l'instant aucune possibilité de fournir textes alternatifs ou autres informations à utiliser par les utilisateurs malvoyants. On peut soutenir qu'un tel jeu ne compte pas vraiment ce groupe de personnes dans son public cible principal, et il serait déraisonnable de s'attendre à ce que vous le rendiez accessible à 100% aux aveugles, quelle que soit l'implantation des [contrôles clavier](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) faite pour qu'il soit utilisable par les utilisateurs sans souris. De plus, rendez le jeu de couleurs suffisamment contrasté pour pouvoir rendre le jeu vidéo utilisable par ceux qui ont des déficiences de la perception des couleurs.
 
@@ -334,7 +334,7 @@ Pour terminer, nous avons utilisé certains attributs de WAI-ARIA dans notre dé
 </div>
 ```
 
-Nous expliquerons ces attributs dans notre prochain article, qui couvre [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics) de manière beaucoup plus détaillée.
+Nous expliquerons ces attributs dans notre prochain article, qui couvre [WAI-ARIA](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) de manière beaucoup plus détaillée.
 
 > [!NOTE]
 > Certains d'entre vous penseront probablement au fait que les formulaires HTML5 ont des mécanismes de validation intégrés tels que les attributs `required`, `min`/`minlength`, et `max`/`maxlength` (voir {{htmlelement("input")}} référence d'élément pour plus d'informations). Nous avons fini par ne pas les utiliser dans la démo, car la prise en charge multi-navigateurs est inégale (par exemple, IE10 et versions ultérieures, pas de prise en charge de Safari).
@@ -366,7 +366,7 @@ imgThumb.onblur = hideImg;
 
 Les deux premières lignes exécutent les fonctions lorsque le pointeur de la souris survole et cesse de survoler la vignette, respectivement. Cela ne nous permettra toutefois pas d'accéder à la vue agrandie à l'aide du clavier ; pour cela, nous avons inclus les deux dernières lignes, qui exécutent les fonctions lorsque l'image est nette et floue (lorsque la mise au point s'arrête). Cela peut être fait en tapant sur l'image, car nous avons inclus `tabindex="0"` dessus.
 
-L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/Element/click_event) après avoir pressé <kbd>Entrée</kbd> sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in)).
+L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/Element/click_event) après avoir pressé <kbd>Entrée</kbd> sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in)).
 
 ## Résumé
 

@@ -53,7 +53,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 - これまでずっと、空文字列を返すだけだった `navigator.securityPolicy` プロパティが完全に削除されました。
 - [`BlobBuilder`](/ja/docs/Web/API/Blob) がサポートされました。現時点では接頭辞付きの実装 (`MozBlobBuilder`) となっています。
-- [`document.height`](/ja/docs/conflicting/Web/API/Element/clientHeight), [`document.width`](/ja/docs/conflicting/Web/API/Element/clientWidth) が削除されました。 [バグ 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
+- `document.height`, `document.width` が削除されました。 [バグ 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
 - [`DocumentType`](/ja/docs/Web/API/DocumentType) オブジェクトの `entities`, `notations` プロパティが削除されました。これは実装されておらず常に `null` を返しており、また仕様からも削除されていました。
 - `DOMConfiguration` インターフェイスと、それを使用していた `document.domConfig` プロパティが削除されました。これらはサポートされておらず、また DOM 仕様からも削除されていました。
 - `hashchange` イベントが適切に [`newURL`, `oldURL` フィールド](/ja/docs/Web/API/Window/hashchange_event#the_hashchange_event) を含むようになりました。
