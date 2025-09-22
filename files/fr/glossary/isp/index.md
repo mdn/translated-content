@@ -11,5 +11,5 @@ Un FAI (Fournisseur d'Accès à Internet) vend un accès à Internet, et parfois
 
 ### Culture générale
 
-- [Le fonctionnement de l'Internet](/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work) (explications pour les débutants)
+- [Le fonctionnement de l'Internet](/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (explications pour les débutants)
 - [Fournisseur d'accès à Internet](https://fr.wikipedia.org/wiki/Fournisseur_d'accès_à_Internet) sur Wikipédia

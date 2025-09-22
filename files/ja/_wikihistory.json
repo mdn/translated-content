@@ -24558,7 +24558,7 @@
       "karaage-kun"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_picker": {
     "modified": "2019-03-18T21:32:04.433Z",
     "contributors": [
       "mfuji09"
@@ -42422,6 +42422,12 @@
       "takashi"
     ]
   },
+  "Web/Security/Attacks/Subdomain_takeover": {
+    "modified": "2020-10-23T16:21:24.230Z",
+    "contributors": [
+      "silverskyvicto"
+    ]
+  },
   "Web/Security/Certificate_Transparency": {
     "modified": "2020-10-24T06:27:55.333Z",
     "contributors": [
@@ -42502,12 +42508,6 @@
       "silverskyvicto",
       "mfuji09",
       "YuichiNukiyama"
-    ]
-  },
-  "Web/Security/Subdomain_takeovers": {
-    "modified": "2020-10-23T16:21:24.230Z",
-    "contributors": [
-      "silverskyvicto"
     ]
   },
   "Web/Security/Subresource_Integrity": {

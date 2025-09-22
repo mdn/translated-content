@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/details
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<details>`** est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément [`<summary>`](/fr/docs/Web/HTML/Element/summary).
+L'élément HTML **`<details>`** est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément [`<summary>`](/fr/docs/Web/HTML/Reference/Elements/summary).
 
 La plupart du temps, le contrôle utilisé pour cet élément est un triangle qui est tourné ou tordu afin d'indiquer si l'élément est révélé ou non. Si le premier élément fils de l'élément `<details>` est un élément `<summary>`, c'est le contenu de ce dernier qui est utilisé comme intitulé pour le contenu à révéler (l'intitulé est donc toujours visible).
 
@@ -56,7 +56,7 @@ Par défaut, lorsqu'il est fermé, le widget est seulement assez haut pour affic
 > [!NOTE]
 > Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.
 
-Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS `display: list-item` à l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary). Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir [Personnaliser l'apparence](#personnaliser_lapparence) pour plus de détails.
+Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS `display: list-item` à l'élément [`<summary>`](/fr/docs/Web/HTML/Reference/Elements/summary). Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir [Personnaliser l'apparence](#personnaliser_lapparence) pour plus de détails.
 
 <table class="properties">
   <tbody>
@@ -128,7 +128,7 @@ Les implémentations entièrement conformes aux normes appliquent automatiquemen
 
 ## Attributs
 
-Comme tous les éléments HTML, cet élément accepte les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les éléments HTML, cet élément accepte les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `open`
   - : Cet attribut booléen indique si les détails — c'est-à-dire le contenu de l'élément `<details>` — sont actuellement visibles ou non. Les détails sont affichés lorsque cet attribut existe, ou cachés lorsque cet attribut est absent. Par défaut, cet attribut est absent, ce qui signifie que les détails ne sont pas visibles.
@@ -259,7 +259,7 @@ Le sélecteur `details[open]` peut être utilisé pour donner un style à l'él�
 
 Le triangle généralement utilisé peut également être personnalisé. Toutefois, cette fonctionnalité a été standardisée récemment et n'est pas encore largement prise en charge. De plus, la méthode de prise en charge varie encore d'un navigateur à un autre.
 
-L'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary) prend en charge la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style) et ses propriétés longues, comme [`list-style-type`](/fr/docs/Web/CSS/list-style-type), pour changer le triangle de divulgation en ce que vous choisissez (généralement avec [`list-style-image`](/fr/docs/Web/CSS/list-style-image)). Par exemple, nous pouvons supprimer l'icône du widget de divulgation en définissant `list-style : none`.
+L'élément [`<summary>`](/fr/docs/Web/HTML/Reference/Elements/summary) prend en charge la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style) et ses propriétés longues, comme [`list-style-type`](/fr/docs/Web/CSS/list-style-type), pour changer le triangle de divulgation en ce que vous choisissez (généralement avec [`list-style-image`](/fr/docs/Web/CSS/list-style-image)). Par exemple, nous pouvons supprimer l'icône du widget de divulgation en définissant `list-style : none`.
 
 Actuellement, Chrome ne prend pas en charge cette fonctionnalité et il faut utiliser [le pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) spécifique `::-webkit-details-marker` afin de personnaliser l'apparence.
 
@@ -325,4 +325,4 @@ Ce CSS crée un aspect similaire à celui d'une interface à onglets, où l'acti
 
 ## Voir aussi
 
-- L'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary)
+- L'élément [`<summary>`](/fr/docs/Web/HTML/Reference/Elements/summary)

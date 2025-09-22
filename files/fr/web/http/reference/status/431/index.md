@@ -4,14 +4,14 @@ slug: Web/HTTP/Reference/Status/431
 original_slug: Web/HTTP/Status/431
 ---
 
-Le code de statut de réponse HTTP **`431 Request Header Fields Too Large`** indique que le serveur n'est pas disposé à traiter la requête, car les [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) sont trop grands. La requête peut être renvoyée une fois que les en-têtes de la requête auront été réduits.
+Le code de statut de réponse HTTP **`431 Request Header Fields Too Large`** indique que le serveur n'est pas disposé à traiter la requête, car les [en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) sont trop grands. La requête peut être renvoyée une fois que les en-têtes de la requête auront été réduits.
 
 Ce code peut être utilisé lorsque la taille totale occupée par les en-têtes est trop importante ou lorsqu'un seul en-tête est trop grand. Utiliser le corps de la réponse pour indiquer plus précisément la nature de l'erreur peut aider la partie cliente à diagnostiquer. Il peut également être utile de préciser le ou les en-têtes concernés afin que l'utilisatrice ou l'utilisateur puisse corriger le problème (par exemple en supprimant les cookies).
 
 Les serveurs produiront généralement ce statut si&nbsp;:
 
-- L'URL contenue dans l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) est trop longue
-- La requête contient de trop nombreux [cookies](/fr/docs/Web/HTTP/Cookies)
+- L'URL contenue dans l'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) est trop longue
+- La requête contient de trop nombreux [cookies](/fr/docs/Web/HTTP/Guides/Cookies)
 
 ## Statut
 
@@ -29,5 +29,5 @@ Les serveurs produiront généralement ce statut si&nbsp;:
 
 ## Voir aussi
 
-- [`414 URI Too Long`](/fr/docs/Web/HTTP/Status/414)
+- [`414 URI Too Long`](/fr/docs/Web/HTTP/Reference/Status/414)
 - [En-tête de requête](/fr/docs/Glossary/Request_header)

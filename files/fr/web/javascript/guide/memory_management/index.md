@@ -99,7 +99,7 @@ Comme on vient de le voir, savoir si de la mémoire peut être libérée demeure
 
 ### Références
 
-Le concept principal utilisé par les algorithmes de ramasse-miettes est celui de _référence_. Dans ce contexte, un objet en référence un autre lorsqu'il a accès à lui (implicitement ou explicitement). Ainsi, un objet JavaScript référencera son [prototype](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) (référence implicite) et ses propriétés (référence explicite).
+Le concept principal utilisé par les algorithmes de ramasse-miettes est celui de _référence_. Dans ce contexte, un objet en référence un autre lorsqu'il a accès à lui (implicitement ou explicitement). Ainsi, un objet JavaScript référencera son [prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) (référence implicite) et ses propriétés (référence explicite).
 
 Dans ce contexte, la notion d'objet s'étend et dépasse celle utilisée pour décrire les objets JavaScript, elle contiendra notamment les portées de fonctions (ou la portée globale).
 

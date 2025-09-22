@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Cheatsheet
 
 {{LearnSidebar}}
 
-Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et récapitulative (_cheatsheet_) peut s'avérer plutôt pratique pour se souvenir rapidement de quelle balise HTML utiliser dans quel cas. MDN possède également une [documentation HTML exhaustive](/fr/docs/Web/HTML/Element) ainsi que différents [tutoriels HTML détaillés](/fr/docs/Learn/HTML/Howto). Toutefois, dans la plupart des cas, il suffit juste d'une rapide vérification afin de pouvoir continuer. Cet article, sous la forme d'une antisèche synthétique, est là pour fournir des exemples de codes concis pour les usages les plus fréquents des éléments les plus utilisés.
+Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et récapitulative (_cheatsheet_) peut s'avérer plutôt pratique pour se souvenir rapidement de quelle balise HTML utiliser dans quel cas. MDN possède également une [documentation HTML exhaustive](/fr/docs/Web/HTML/Reference/Elements) ainsi que différents [tutoriels HTML détaillés](/fr/docs/Learn_web_development/Howto/Solve_HTML_problems). Toutefois, dans la plupart des cas, il suffit juste d'une rapide vérification afin de pouvoir continuer. Cet article, sous la forme d'une antisèche synthétique, est là pour fournir des exemples de codes concis pour les usages les plus fréquents des éléments les plus utilisés.
 
 > [!NOTE]
 > Les balises HTML doivent en premier lieu être utilisées pour leur sémantique et non pour leur apparence. Il est toujours possible de modifier la mise en forme d'une balise donnée grâce à {{Glossary("CSS")}}. Aussi, quand vous utilisez HTML, soyez concentré-e sur la signification plutôt que sur l'apparence finale.

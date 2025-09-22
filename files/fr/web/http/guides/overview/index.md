@@ -58,7 +58,7 @@ Même s'il est devenu plus complexe avec l'arrivée d'HTTP/2 et l'encapsulation 
 
 ### HTTP est extensible
 
-À partir de HTTP/1.0, les [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) permettent d'étendre facilement le protocole et de mener des expérimentations avec celui-ci. De nouvelles fonctionnalités peuvent même être introduites par un simple accord entre le client et le serveur à propos de la sémantique des nouveaux en-têtes.
+À partir de HTTP/1.0, les [en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) permettent d'étendre facilement le protocole et de mener des expérimentations avec celui-ci. De nouvelles fonctionnalités peuvent même être introduites par un simple accord entre le client et le serveur à propos de la sémantique des nouveaux en-têtes.
 
 ### HTTP est sans état, mais pas sans session
 
@@ -80,12 +80,12 @@ Au fil du temps, la nature extensible de HTTP a permis de mieux contrôler le We
 
 Voici une liste de fonctionnalités courantes, qui peuvent être contrôlées grâce à HTTP.
 
-- _[Cache](/fr/docs/Web/HTTP/Caching)_
+- _[Cache](/fr/docs/Web/HTTP/Guides/Caching)_
   La façon dont les documents sont mis en cache peut être contrôlée par HTTP. Le serveur peut indiquer aux proxys et aux clients ce qu'ils doivent mettre en cache et pour combien de temps. Le client peut indiquer aux proxys de cache intermédiaires d'ignorer le document qui est stocké.
 - _Lever la contrainte d'origine unique_
   Pour éviter l'espionnage et d'autres invasions dans la vie privée, les navigateurs web imposent une séparation stricte entre les sites web. Seules les pages de la **même [origine](/fr/docs/Glossary/Origin)** peuvent accéder à toutes les informations d'une page web. Bien que cette contrainte soit un fardeau pour le serveur, les en-têtes HTTP peuvent assouplir cette séparation stricte du côté serveur, en permettant à un document de devenir un patchwork d'informations en provenance de différents domaines (il existe même des raisons de sécurité de procéder ainsi).
 - _Authentification_
-  Certaines pages peuvent être protégées de sorte que seuls certains utilisateurs puissent y accéder. Une authentification simple peut être fournie par HTTP, soit en utilisant l'en-tête {{HTTPHeader ("WWW-Authenticate")}} et des en-têtes similaires, soit en définissant une session spécifique grâce à des [cookies HTTP](/fr/docs/Web/HTTP/Cookies).
+  Certaines pages peuvent être protégées de sorte que seuls certains utilisateurs puissent y accéder. Une authentification simple peut être fournie par HTTP, soit en utilisant l'en-tête {{HTTPHeader ("WWW-Authenticate")}} et des en-têtes similaires, soit en définissant une session spécifique grâce à des [cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies).
 - [Proxys et tunnels](/fr/docs/Web/HTTP/Proxy_servers_and_tunneling)
   Les serveurs et/ou les clients sont souvent situés sur des intranets et cachent leur véritable adresse IP à d'autres. Les requêtes HTTP passent ensuite par des proxys pour traverser cette barrière de réseau. Tous les proxys ne sont pas des proxys HTTP. Le protocole SOCKS, par exemple, fonctionne à un niveau inférieur. D'autres, comme FTP, peuvent être manipulés par ces proxys.
 - _Sessions_
@@ -137,10 +137,10 @@ Un exemple de requête HTTP :
 
 Une requête comprend les éléments suivants :
 
-- Une [méthode](/fr/docs/Web/HTTP/Methods) HTTP : généralement un verbe tel que {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} ou un nom comme {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} qui définit l'opération que le client souhaite effectuer. Par exemple, un client souhaite accéder à une ressource (en utilisant GET) ou téléverser le résultat d'un [formulaire HTML](/fr/docs/Learn/Forms) (en utilisant `POST`), bien que d'autres opérations puissent être nécessaires dans d'autres cas.
+- Une [méthode](/fr/docs/Web/HTTP/Reference/Methods) HTTP : généralement un verbe tel que {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} ou un nom comme {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} qui définit l'opération que le client souhaite effectuer. Par exemple, un client souhaite accéder à une ressource (en utilisant GET) ou téléverser le résultat d'un [formulaire HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) (en utilisant `POST`), bien que d'autres opérations puissent être nécessaires dans d'autres cas.
 - Le chemin de la ressource à extraire : l'URL de la ressource à laquelle on a retiré les éléments déductibles du contexte, par exemple le {{glossary ("protocole")}} (http\://), le {{glossary ("domaine")}} (ici .mozilla.org), ou le {{glossary ("port")}} TCP (ici 80).
 - La version du protocole HTTP.
-- Les [en-têtes](/fr/docs/Web/HTTP/Headers) optionnels qui transmettent des informations supplémentaires pour les serveurs.
+- Les [en-têtes](/fr/docs/Web/HTTP/Reference/Headers) optionnels qui transmettent des informations supplémentaires pour les serveurs.
 - Ou un corps, pour certaines méthodes comme POST, semblable à ceux dans les réponses, qui contiennent la ressource envoyée.
 
 ### Réponses
@@ -152,9 +152,9 @@ Un exemple de réponse :
 Une réponse comprend les éléments suivants:
 
 - La version du protocole HTTP qu'elle suit
-- Un [code de statut](/fr/docs/Web/HTTP/Status), qui indique si la requête a réussi ou non.
+- Un [code de statut](/fr/docs/Web/HTTP/Reference/Status), qui indique si la requête a réussi ou non.
 - Un message de statut qui est une description rapide, informelle, du code de statut
-- Les [en-têtes](/fr/docs/Web/HTTP/Headers) HTTP, comme pour les requêtes.
+- Les [en-têtes](/fr/docs/Web/HTTP/Reference/Headers) HTTP, comme pour les requêtes.
 - Éventuellement un corps contenant la ressource récupérée.
 
 ## Les APIs basées sur HTTP

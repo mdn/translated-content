@@ -364,6 +364,6 @@ div.rgba {
 ## 参见
 
 - {{CSSXref("&lt;color&gt;")}} 数据类型，以了解所有颜色标记的列表
-- [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker)
 - [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)模块

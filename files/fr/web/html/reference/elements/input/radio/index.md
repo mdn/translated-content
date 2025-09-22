@@ -46,7 +46,7 @@ input {
 
 On les appelle boutons radios par analogie avec les boutons qui étaient utilisés sur les anciens postes de radios.
 
-> **Note :** [Les cases à cocher (_checkboxes_)](/fr/docs/Web/HTML/Element/input/checkbox) ressemblent aux boutons radios. Toutefois, il existe une différence fondamentale : les boutons radio ne permettent de sélectionner qu'une seule option au sein d'un groupe alors que les cases à cocher permettent d'en sélectionner plusieurs.
+> **Note :** [Les cases à cocher (_checkboxes_)](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) ressemblent aux boutons radios. Toutefois, il existe une différence fondamentale : les boutons radio ne permettent de sélectionner qu'une seule option au sein d'un groupe alors que les cases à cocher permettent d'en sélectionner plusieurs.
 
 ## Valeur
 
@@ -54,11 +54,11 @@ L'attribut `value` est une chaîne de caractères (un objet {{domxref("DOMString
 
 ### Définir un groupe de boutons radio
 
-Pour définir un groupe de boutons radio, on leur donne le même nom via l'attribut [`name`](/fr/docs/Web/HTML/Element/input#name). Une fois qu'on a formé un groupe de boutons radio, on ne pourra sélectionner qu'une seule des options de ce groupes (cliquer sur une option désélectionnera automatiquement l'option précédemment choisie dans ce groupe).
+Pour définir un groupe de boutons radio, on leur donne le même nom via l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name). Une fois qu'on a formé un groupe de boutons radio, on ne pourra sélectionner qu'une seule des options de ce groupes (cliquer sur une option désélectionnera automatiquement l'option précédemment choisie dans ce groupe).
 
 Il est possible d'avoir autant de groupes que nécessaire, il suffit que chaque groupe ait un nom (l'attribut `name`) unique.
 
-Ainsi, si on souhaite utiliser un formulaire afin de demander à l'utilisateur sa méthode de contact préférée, on pourra créer trois boutons radio avec l'attribut `name` qui vaut `contact` et pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) varie : `email` pour le premier, `telephone` pour le deuxième et `courrier` pour le dernier. Cette valeur et le nom du groupe ne sont pas affichés (ce sera le rôle de l'élément {{HTMLElement("label")}} de fournir un intitulé).
+Ainsi, si on souhaite utiliser un formulaire afin de demander à l'utilisateur sa méthode de contact préférée, on pourra créer trois boutons radio avec l'attribut `name` qui vaut `contact` et pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) varie : `email` pour le premier, `telephone` pour le deuxième et `courrier` pour le dernier. Cette valeur et le nom du groupe ne sont pas affichés (ce sera le rôle de l'élément {{HTMLElement("label")}} de fournir un intitulé).
 
 Voici le fragment de code HTML correspondant à cet exemple :
 
@@ -81,7 +81,7 @@ Voici le fragment de code HTML correspondant à cet exemple :
 </form>
 ```
 
-On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{domxref("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} via l'attribut [`for`](/fr/docs/Web/HTML/Element/label#for).
+On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{domxref("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} via l'attribut [`for`](/fr/docs/Web/HTML/Reference/Elements/label#for).
 
 Voici le résultat obtenu :
 
@@ -158,7 +158,7 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 
 Un attribut booléen qui indique si c'est ce champ radio qui est sélectionné parmi le groupe.
 
-À la différence des autres navigateurs, Firefox conservera [l'état coché dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un bouton radio au fur et à mesure des chargements de la page. On pourra utiliser l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/input#autocomplete) afin de contrôler cette fonctionnalité.
+À la différence des autres navigateurs, Firefox conservera [l'état coché dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un bouton radio au fur et à mesure des chargements de la page. On pourra utiliser l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) afin de contrôler cette fonctionnalité.
 
 ### `value`
 

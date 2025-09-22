@@ -6,7 +6,7 @@ original_slug: Web/CSS/At-rule
 
 {{cssref}}
 
-Une **règle @** est une [expression CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_instructions_css) commençant par le symbole '@' (U+0040 COMMERCIAL AT), suivi d'un identifiant et qui contient tout ce qui se trouve jusqu'au prochain point-virgule, ';' (U+003B SEMICOLON), ou jusqu'au prochain [bloc CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_blocs_css) trouvé en premier.
+Une **règle @** est une [expression CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started#les_instructions_css) commençant par le symbole '@' (U+0040 COMMERCIAL AT), suivi d'un identifiant et qui contient tout ce qui se trouve jusqu'au prochain point-virgule, ';' (U+003B SEMICOLON), ou jusqu'au prochain [bloc CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started#les_blocs_css) trouvé en premier.
 
 ```css
 /* Forme générique */

@@ -415,7 +415,7 @@ Once you have decided on your base color, there are plenty of online tools that 
 
 A few examples (all free to use as of the time this list was last revised):
 
-- [MDN's color picker tool](/ru/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [MDN's color picker tool](/ru/docs/Web/CSS/CSS_colors/Color_picker)
 - [Paletton](http://paletton.com)
 - [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 

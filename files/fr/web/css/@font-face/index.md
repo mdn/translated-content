@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
 
 ## Syntaxe
 
@@ -103,7 +103,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`**
     | `format("opentype-variations")` | `format(opentype) tech(variations)` |
     | `format("truetype-variations")` | `format(truetype) tech(variations)` |
 
-    > **Note :** `format(svg)` correspond aux [polices SVG](/fr/docs/Web/SVG/Tutorial/SVG_fonts), tandis que `tech(color-SVG)` correspond aux [polices OpenType avec un tableau SVG](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (également appelées polices de couleur OpenType-SVG)&nbsp;: il s'agit de deux types de polices complètement différents.
+    > **Note :** `format(svg)` correspond aux [polices SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts), tandis que `tech(color-SVG)` correspond aux [polices OpenType avec un tableau SVG](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (également appelées polices de couleur OpenType-SVG)&nbsp;: il s'agit de deux types de polices complètement différents.
 
 - [`unicode-range`](/fr/docs/Web/CSS/@font-face/unicode-range)
   - : L'intervalle des points de code Unicode pour lesquels la règle `@font-face` s'applique.
@@ -118,7 +118,7 @@ Les navigateurs tentent le téléchargement des ressources selon leur ordre de d
 
 En permettant de fournir ses propres polices, `@font-face` permet de concevoir du contenu qui ne soit pas limité aux polices universellement disponibles. En permettant d'indiquer le nom d'une police locale, on peut personnaliser le contenu sans pour autant avoir besoin d'une connexion Internet.
 
-La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuille de styles et aussi [au sein d'une règle de groupe conditionnelle](/fr/docs/Web/CSS/At-rule#les_règles_de_groupe_conditionnelles).
+La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuille de styles et aussi [au sein d'une règle de groupe conditionnelle](/fr/docs/Web/CSS/CSS_syntax/At-rule#les_règles_de_groupe_conditionnelles).
 
 ### Types MIME pour les polices
 
@@ -131,7 +131,7 @@ La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuill
 
 ### Notes
 
-- Les polices utilisées sur le Web sont sujettes à la règle de même origine (les fichiers des polices doivent être sur le même domaine que la page qui les utilise), à moins que [les paramètres de CORS](/fr/docs/Web/HTTP/CORS) soient utilisés afin de lever ces restrictions.
+- Les polices utilisées sur le Web sont sujettes à la règle de même origine (les fichiers des polices doivent être sur le même domaine que la page qui les utilise), à moins que [les paramètres de CORS](/fr/docs/Web/HTTP/Guides/CORS) soient utilisés afin de lever ces restrictions.
 - `@font-face` ne peut pas être déclarée au sein d'un sélecteur CSS. L'exemple qui suit ne fonctionnera pas&nbsp;:
 
   ```css example-bad

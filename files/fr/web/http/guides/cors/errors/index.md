@@ -4,7 +4,7 @@ slug: Web/HTTP/Guides/CORS/Errors
 original_slug: Web/HTTP/CORS/Errors
 ---
 
-[Cross-Origin Resource Sharing](/fr/docs/Web/HTTP/CORS) ({{Glossary("CORS")}}) est une norme qui permet à un serveur d'assouplir la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy).
+[Cross-Origin Resource Sharing](/fr/docs/Web/HTTP/Guides/CORS) ({{Glossary("CORS")}}) est une norme qui permet à un serveur d'assouplir la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy).
 
 Celle-ci est utilisée pour autoriser explicitement certaines requêtes provenant d'autres sources tout en en rejetant d'autres. Par exemple, si un site offre un service intégrable, il peut être nécessaire d'assouplir certaines restrictions. La configuration d'une telle configuration CORS n'est pas nécessairement facile et peut présenter certains défis. Dans ces pages, nous examinerons quelques messages d'erreur CORS courants et comment les résoudre.
 
@@ -34,13 +34,13 @@ additional information here).
 
 Firefox affiche les erreurs dans la console lors d'échec de requête CORS. Ce message contient entre autres un champ "reason" donnant un meilleur contexte quant à la raison de l'échec de la requête. Ces messages sont listés ci-dessous; chacun de ces liens pointent vers un article plus spécifique et contenant des pistes de solution.
 
-- [Raison: CORS désactivé](/fr/docs/Web/HTTP/CORS/Errors/CORSDisabled)
-- [Raison: la requête CORS a échoué](/fr/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed)
+- [Raison: CORS désactivé](/fr/docs/Web/HTTP/Guides/CORS/Errors/CORSDisabled)
+- [Raison: la requête CORS a échoué](/fr/docs/Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed)
 - [Raison: l'en-tête CORS 'Origin' ne peut pas être ajouté](/fr/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
 - [Raison: Requête CORS redirection externe non autorisée](/fr/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed)
-- [Raison: Requête CORS non http](/fr/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)
-- [Raison: En-tête CORS 'Access-Control-Allow-Origin' manquant](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
-- [Raison: l'en-tête CORS 'Access-Control-Allow-Origin' ne correspond pas à 'xyz'](/fr/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
+- [Raison: Requête CORS non http](/fr/docs/Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp)
+- [Raison: En-tête CORS 'Access-Control-Allow-Origin' manquant](/fr/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin)
+- [Raison: l'en-tête CORS 'Access-Control-Allow-Origin' ne correspond pas à 'xyz'](/fr/docs/Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
 - [Raison: les informations d'identification ne sont pas prises en charge si l'en-tête CORS 'Access-Control-Allow-Origin' est '\*'](/fr/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
 - [Raison: Méthode introuvable dans l'en-tête CORS 'Access-Control-Allow-Methods'](/fr/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
 - [Raison: 'true' attendu dans l'en-tête CORS 'Access-Control-Allow-Credentials'](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
@@ -53,8 +53,8 @@ Firefox affiche les erreurs dans la console lors d'échec de requête CORS. Ce m
 ## Voir aussi
 
 - Glossaire: {{Glossary("CORS")}}
-- [CORS introduction](/fr/docs/Web/HTTP/CORS)
-- [Paramètres CORS côté serveur](/fr/docs/Web/HTTP/CORS)
-- [Image compatible CORS](/fr/docs/Web/HTML/CORS_enabled_image)
-- [Attributs des paramètres CORS](/fr/docs/Web/HTML/Attributes/crossorigin)
+- [CORS introduction](/fr/docs/Web/HTTP/Guides/CORS)
+- [Paramètres CORS côté serveur](/fr/docs/Web/HTTP/Guides/CORS)
+- [Image compatible CORS](/fr/docs/Web/HTML/How_to/CORS_enabled_image)
+- [Attributs des paramètres CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin)
 - <https://www.test-cors.org> – une page pour tester les requêtes CORS

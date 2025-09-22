@@ -17,9 +17,9 @@ path( [[<'fill-rule'>,]?<string>)
 ### Paramètres
 
 - `<'fill-rule'>`
-  - : La règle de remplissage de l'intérieur du tracé. Les valeurs possibles sont `nonzero` ou `evenodd`. La valeur par défaut est `nonzero`. Voir [fill-rule](/fr/docs/Web/SVG/Attribute/fill-rule) pour plus de détails.
+  - : La règle de remplissage de l'intérieur du tracé. Les valeurs possibles sont `nonzero` ou `evenodd`. La valeur par défaut est `nonzero`. Voir [fill-rule](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) pour plus de détails.
 - `<string>`
-  - : Doit être une [chaîne représentant les données d'un chemin SVG](/fr/docs/Web/SVG/Element/path).
+  - : Doit être une [chaîne représentant les données d'un chemin SVG](/fr/docs/Web/SVG/Reference/Element/path).
 
 ## Exemples
 

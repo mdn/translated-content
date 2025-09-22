@@ -58,5 +58,5 @@ resource: est disponible uniquement dans Firefox.
 ## Voir aussi
 
 - [Identifier des ressources sur le Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-- [Qu'est-ce qu'une URL ?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Qu'est-ce qu'une URL ?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [Liste des schémas URI maintenue par l'IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` est [définie ici](https://www.iana.org/assignments/uri-schemes/prov/resource))
