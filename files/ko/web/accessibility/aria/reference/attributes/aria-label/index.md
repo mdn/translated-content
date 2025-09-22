@@ -10,7 +10,7 @@ l10n:
 
 ## 설명
 
-때때로 요소의 기본 [접근 가능한 이름](/ko/docs/Glossary/accessible_name)이 없거나, 접근 가능한 이름이 요소의 내용을 정확하게 설명하지 못하고, 객체에 의미를 부여할 수 있는 보이는 DOM 콘텐츠도 없는 경우가 있습니다. 이러한 요소의 흔한 예는 텍스트 없이 SVG 아이콘만 포함된 버튼입니다.
+때때로 요소의 기본 [접근 가능한 이름](/ko/docs/Glossary/Accessible_name)이 없거나, 접근 가능한 이름이 요소의 내용을 정확하게 설명하지 못하고, 객체에 의미를 부여할 수 있는 보이는 DOM 콘텐츠도 없는 경우가 있습니다. 이러한 요소의 흔한 예는 텍스트 없이 SVG 아이콘만 포함된 버튼입니다.
 
 요소가 [금지된 목록](#associated_roles)에 속하지 않고 접근 가능한 이름이 없거나 접근 가능한 이름이 부정확하며, [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 속성을 통해 참조할 수 있는 DOM의 보이는 콘텐츠도 없는 경우, `aria-label` 속성을 사용하여 해당 상호작용 요소에 레이블이 될 문자열을 정의할 수 있습니다. 이렇게 하면 요소에 접근 가능한 이름이 제공됩니다.
 
