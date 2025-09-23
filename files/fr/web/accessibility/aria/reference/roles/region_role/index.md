@@ -67,7 +67,9 @@ S'il y a plus d'un repère `region` dans un document, fournissez un label unique
 …
 
 <div role="region" aria-labelledby="please-reconsider">
-  <h3 id="please-reconsider">Veuillez reconsidérer la structure de votre document</h3>
+  <h3 id="please-reconsider">
+    Veuillez reconsidérer la structure de votre document
+  </h3>
   <!-- contenu -->
 </div>
 ```
