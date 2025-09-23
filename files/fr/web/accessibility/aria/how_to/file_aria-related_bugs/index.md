@@ -1,5 +1,5 @@
 ---
-title: Comment déposer un bug lié à ARIA
+title: Comment signaler un bug lié à ARIA
 slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
 original_slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
 l10n:
