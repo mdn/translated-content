@@ -187,4 +187,4 @@ Le résultat ressemble à ceci&nbsp;:
 
 - [ARIA&nbsp;: rôle checkbox](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
 - [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)
-- [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
+- L'attribut ARIA [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
