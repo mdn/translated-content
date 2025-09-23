@@ -5,6 +5,7 @@ slug: Web/Accessibility/ARIA/Reference/Attributes/aria-checked
 l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
+
 L'attribut `aria-checked` indique l'état actuel («&nbsp;sélectionné&nbsp;» ou non) des cases à cocher, boutons radio et autres widgets.
 
 > [!NOTE]
@@ -57,7 +58,6 @@ Utilisé dans les rôles&nbsp;:
 - [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
 - [`radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
 - [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-
 
 ## Interfaces associées
 
