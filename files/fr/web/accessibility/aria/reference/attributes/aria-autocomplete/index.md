@@ -43,6 +43,7 @@ Si une suggestion de la liste est automatiquement acceptée lorsque le champ per
 ## Rôles associés
 
 Utilisé dans les rôles&nbsp;:
+
 - le rôle [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
 - le rôle [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
 - hérite du rôle [`searchbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
