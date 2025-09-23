@@ -69,7 +69,9 @@ Par exemple, considérez l'élément `scrollbar` ci‑dessous qui contient un ti
 Étant donné que les descendants d'une `scrollbar` sont présentiels, le code suivant est équivalent&nbsp;:
 
 ```html
-<div role="scrollbar"><h3 role="presentation">Titre de ma barre de défilement</h3></div>
+<div role="scrollbar">
+  <h3 role="presentation">Titre de ma barre de défilement</h3>
+</div>
 ```
 
 Du point de vue de la personne utilisant une technologie d'assistance, le titre n'existe pas puisque les extraits précédents sont équivalents à ce qui suit dans l'[arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
