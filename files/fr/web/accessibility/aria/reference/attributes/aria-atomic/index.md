@@ -27,7 +27,6 @@ Si aucun ancêtre n'a explicitement défini `aria-atomic`, seul le ou les nœuds
 
 Utilisé dans **TOUS** les [rôles](/fr/docs/Web/Accessibility/ARIA/Reference/Roles).
 
-
 ## Spécifications
 
 {{Specifications}}
