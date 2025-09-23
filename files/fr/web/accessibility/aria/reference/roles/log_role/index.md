@@ -7,7 +7,7 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-Le rôle `log` est utilisé pour identifier un élément qui crée [une zone en direct](https://www.w3.org/WAI/PF/aria/terms#def_liveregion) où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent être supprimées.
+Le rôle `log` est utilisé pour identifier un élément qui crée [une zone dynamique <sup>(angl.)</sup>](https://www.w3.org/WAI/PF/aria/terms#def_liveregion) où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent être supprimées.
 
 ## Description
 
