@@ -4076,7 +4076,8 @@
 /ja/docs/Web/CSS/CSS_cascade/specified_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値
 /ja/docs/Web/CSS/CSS_cascade/used_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
-/ja/docs/Web/CSS/CSS_colors/Color_picker_tool	/ja/docs/Web/CSS/CSS_colors/Color_picker
+/ja/docs/Web/CSS/CSS_colors/Color_picker	/ja/docs/Web/CSS/CSS_colors/Color_format_converter
+/ja/docs/Web/CSS/CSS_colors/Color_picker_tool	/ja/docs/Web/CSS/CSS_colors/Color_format_converter
 /ja/docs/Web/CSS/CSS_container_queries	/ja/docs/Web/CSS/CSS_containment/Container_queries
 /ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
 /ja/docs/Web/CSS/CSS_flow_layout	/ja/docs/Web/CSS/CSS_display/Flow_layout
