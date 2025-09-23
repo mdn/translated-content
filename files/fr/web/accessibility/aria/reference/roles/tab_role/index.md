@@ -237,5 +237,5 @@ Quelles sont les propriétés associées, et dans quel ordre cet attribut ou cet
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement('button')}}
-- [KeyboardEvent.key <sup>(angl.)</sup>](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)
+- [KeyboardEvent.key](/fr/docs/Web/API/KeyboardEvent/key)
 - [ARIA&nbsp;: rôle `tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)
