@@ -60,7 +60,8 @@ L'info-bulle doit apparaître à la sélection ou au survol de l'élément, sans
   <ul>
     <li>8 caractères minimum</li>
     <li>
-      Inclure au moins une lettre minuscule, une lettre majuscule, un chiffre et un caractère spécial
+      Inclure au moins une lettre minuscule, une lettre majuscule, un chiffre et
+      un caractère spécial
     </li>
     <li>Unique à ce site web</li>
   </ul>
