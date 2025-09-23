@@ -55,7 +55,6 @@ Un nom accessible n'est pas nécessaire.
 
 Le rôle de séparateur peut être utilisé pour identifier l'élément comme un séparateur visuel entre des groupes d'éléments dans un menu, tels que des groupes d'éléments `menuitemradio` ou `menuitemcheckbox`.
 
-
 Si le séparateur est sélectionnable, qu'il fournit une frontière visible entre deux sections de contenu et permet à l'utilisateur·ice de modifier la taille relative des sections en déplaçant sa position, la valeur de [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) doit être définie sur un nombre reflétant la position courante du séparateur et cette valeur doit être mise à jour lors des changements. Les propriétés [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) et [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) doivent aussi être incluses si elles ne sont pas définies sur les valeurs par défaut 0 et 100 respectivement.
 
 Un nom accessible, avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label), doit être ajouté s'il y a plus d'un séparateur sélectionnable.
