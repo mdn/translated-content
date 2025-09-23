@@ -9,11 +9,11 @@ l10n:
 
 本篇是[游戏开发 Canvas 教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的第一节。如果你完成了本篇教程之后，你可以在 [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html) 看到源码。
 
-在我们开始编写游戏功能之前，我们可以通过 HTML 的 canvas 标签创建支撑游戏的基本结构。
+在我们开始编写游戏功能之前，我们可以通过 HTML 的 {{htmlelement("canvas")}} 元素创建支撑游戏的基本结构。
 
 ## 页面部分
 
-HTML 文档的结构是非常精简的，我们的游戏将完全呈现在这个 HTML 的 canvas 标签中。你可以选择一款你最喜欢的文本编辑器，创建一个 HTML 文件，保存到你理想的位置，名称为 index.html。并添加以下代码：
+HTML 文档的结构是非常精简的，我们的游戏将完全呈现在这个 HTML 的 {{htmlelement("canvas")}} 元素中。你可以选择一款你最喜欢的文本编辑器，创建一个 HTML 文件，保存到你理想的位置，名称为 `index.html`。并添加以下代码：
 
 ```html
 <!doctype html>
