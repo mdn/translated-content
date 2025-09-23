@@ -26,8 +26,8 @@ Le rôle `role="rowheader"` désigne une [cellule](/fr/docs/Web/Accessibility/AR
   </div>
   <div role="rowgroup">
     <div role="row">
-  <span role="rowheader">Finlande</span>
-  <span role="cell">5,5 millions</span>
+      <span role="rowheader">Finlande</span>
+      <span role="cell">5,5 millions</span>
     </div>
     <div role="row">
   <span role="rowheader">France</span>
