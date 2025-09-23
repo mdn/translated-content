@@ -24,10 +24,8 @@ Lorsque l'élément ayant la sélection DOM est une boîte combinée, une zone d
 
 La valeur de `aria-activedescendant` référence un élément possédé par l'élément contrôlé. Par exemple, dans une boîte combinée, la sélection peut rester sur la boîte combinée tandis que la valeur de `aria-activedescendant` sur cet élément référence un descendant d'une liste déroulante contrôlée par la boîte combinée.
 
-
 > [!NOTE]
 > L'attribut n'est pris en charge que sur quelques rôles. Par exemple, les «&nbsp;boîtes de dialogue&nbsp;» (<i lang="en">`dialog`</i>) ne prennent pas en charge `aria-activedescendant`. Lorsqu'une boîte combinée ouvre une boîte de dialogue, la sélection DOM passe de la boîte combinée à la boîte de dialogue, qui ne peut pas être référencée par cet attribut.
-
 
 > [!NOTE]
 > Lorsqu'un descendant d'une «&nbsp;liste déroulante&nbsp;» (<i lang="en">`listbox`</i>), d'une grille (<i lang="en">`grid`</i>) ou d'une arborescence (<i lang="en">`tree`</i>) contextuelle reçoit la sélection, la sélection DOM reste sur la boîte combinée et celle-ci possède `aria-activedescendant` défini sur une valeur qui référence l'élément sélectionné dans la fenêtre contextuelle.
