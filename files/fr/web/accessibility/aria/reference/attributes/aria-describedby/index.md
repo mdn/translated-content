@@ -30,7 +30,8 @@ La propriété `aria-describedby` est adaptée lorsque le contenu associé conti
 <button aria-describedby="trash-desc">Déplacer vers la corbeille</button>
 …
 <p id="trash-desc">
-  Les éléments de la corbeille seront définitivement supprimés après 30&nbsp;jours.
+  Les éléments de la corbeille seront définitivement supprimés après
+  30&nbsp;jours.
 </p>
 ```
 
