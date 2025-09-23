@@ -32,7 +32,6 @@ Si un élément avec le rôle [`feed`](/fr/docs/Web/Accessibility/ARIA/Reference
 
 Si les modifications d'un widget affiché créent un état où le widget manque d'éléments enfants requis pendant l'exécution du script, définissez `aria-busy` à `true` sur le widget pendant le processus de mise à jour. Par exemple, si une arborescence affichée met à jour plusieurs branches qui ne sont pas nécessairement rendues simultanément, une alternative au remplacement de tout l'arbre en une seule mise à jour consiste à marquer l'arbre comme occupé pendant la modification de chaque branche.
 
-
 ## Valeurs
 
 - `false` (valeur par défaut)&nbsp;:
