@@ -83,7 +83,9 @@ Les deux couleurs d'entrée, `couleur-une` et `couleur-deux`, sont affichées à
         <td><input type="color" id="color-input" value="#bada55" /></td>
       </tr>
       <tr>
-        <td><label for="color-opacity">Sélectionnez une opacité&nbsp;:</label></td>
+        <td>
+          <label for="color-opacity">Sélectionnez une opacité&nbsp;:</label>
+        </td>
         <td>
           <input
             type="range"
