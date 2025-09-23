@@ -20,8 +20,8 @@ Le rôle `role="rowheader"` désigne une [cellule](/fr/docs/Web/Accessibility/AR
   <div id="country_population_desc">Populations mondiales par pays</div>
   <div role="rowgroup">
     <div role="row">
-  <span role="columnheader" aria-sort="descending">Pays</span>
-  <span role="columnheader" aria-sort="none">Population</span>
+      <span role="columnheader" aria-sort="descending">Pays</span>
+      <span role="columnheader" aria-sort="none">Population</span>
     </div>
   </div>
   <div role="rowgroup">
