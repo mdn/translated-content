@@ -138,6 +138,6 @@ Utilisez uniquement {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLEl
 
 ## Voir aussi
 
-- [Apprendre&nbsp;: Accessibilité des tableaux HTML <sup>(angl.)</sup>](/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
-- [Apprendre&nbsp;: Bases des tableaux HTML <sup>(angl.)</sup>](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- [Apprendre&nbsp;: Accessibilité des tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
+- [Apprendre&nbsp;: Bases des tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [ARIA&nbsp;: rôle `grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
