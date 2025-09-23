@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{DOMxRef("Window")}} 属性 **`screen`** 返回一个与该窗口关联的屏幕对象引用。`screen` 对象实现了 {{DOMxRef("Screen")}} 接口，是一个用于检查当前窗口所渲染屏幕属性的特殊对象。
+{{DOMxRef("Window")}} 的 **`screen`** 属性返回一个与该窗口关联的屏幕对象引用。`screen` 对象实现了 {{DOMxRef("Screen")}} 接口，是一个用于检查当前窗口所渲染屏幕属性的特殊对象。
 
 ## 值
 
