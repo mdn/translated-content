@@ -13,7 +13,7 @@ Le rôle `meter` sert à identifier un élément utilisé comme indicateur de me
 
 ## Description
 
-Un indicateur de mesure (<i lang="en">meter</i> en anglais) est une représentation graphique d'une valeur numérique dans une plage définie. Par exemple, l'affichage du pourcentage de batterie. Un indicateur de mesure n'est pas adapté aux valeurs qui n'ont pas de limite maximale significative. Il ne doit pas être utilisé pour indiquer une progression (ex&nbsp;: chargement), cela doit être communiqué avec l'élément {{HTMLElement('progress')}}.
+Un indicateur de mesure (<i lang="en">meter</i> en anglais) est une représentation graphique d'une valeur numérique dans une plage définie. Par exemple, l'affichage du pourcentage de batterie. Un indicateur de mesure n'est pas adapté aux valeurs qui n'ont pas de limite maximale significative. Il ne doit pas être utilisé pour indiquer une progression (exemple&nbsp;: chargement), cela doit être communiqué avec l'élément {{HTMLElement('progress')}}.
 
 Chaque élément avec `role="meter"` doit également comporter l'un des attributs suivants&nbsp;:
 
