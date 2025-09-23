@@ -6,20 +6,20 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-The `window` role defines a browser or app window.
+Le rôle `window` définit une fenêtre de navigateur ou d'application.
 
 > [!WARNING]
-> The `window` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
+> Le rôle `window` est un rôle abstrait. Il est inclus ici pour que la documentation soit complète. Il ne doit pas être utilisé par les auteurs Web.
 
 ## Description
 
-The `window` role, an abstract role, is a superclass for roles defining a browser or app window. The sub-class roles, currently only the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) role, have a window-like <abbr>GUI</abbr>, or graphical user interface, whether it's a full native window or just a section of a document styled to look like a window, where `role="dialog"` would be appropriate.
+Le rôle `window`, un rôle abstrait, est une superclasse pour les rôles définissant une fenêtre de navigateur ou d'application. Les rôles de sous-classe, actuellement uniquement le rôle [`dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role), ont une interface graphique (<abbr>GUI</abbr>) de type fenêtre, qu'il s'agisse d'une fenêtre native complète ou simplement d'une section d'un document stylisée pour ressembler à une fenêtre, où `role="dialog"` serait approprié.
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 
-## See also
+## Voir aussi
 
-- [ARIA: `roletype` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/roletype_role)
-- [ARIA: `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
+- [ARIA&nbsp;: rôle `roletype`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/roletype_role)
+- [ARIA&nbsp;: rôle `dialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
