@@ -82,7 +82,7 @@ Pour indiquer programmatiquement qu'un bouton radio doit être choisi dans un gr
 
 ## Tous les descendants sont des éléments de présentation
 
-Certaines interfaces utilisateur, lorsqu'elles sont représentées dans une API d'accessibilité de plateforme, ne peuvent contenir que du texte. Les API d'accessibilité ne permettent pas de représenter des éléments sémantiques contenus dans un `radio`. Pour pallier cette limitation, les navigateurs appliquent automatiquement le rôle [`présentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) à tous les descendants d'un élément `radio`, car il s'agit d'un rôle qui ne prend pas en charge les enfants sémantiques.
+Certaines interfaces utilisateur, lorsqu'elles sont représentées dans une API d'accessibilité de plateforme, ne peuvent contenir que du texte. Les API d'accessibilité ne permettent pas de représenter des éléments sémantiques contenus dans un `radio`. Pour pallier cette limitation, les navigateurs appliquent automatiquement le rôle [`presentation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) à tous les descendants d'un élément `radio`, car il s'agit d'un rôle qui ne prend pas en charge les enfants sémantiques.
 
 Par exemple, considérez l'élément `radio` suivant, qui contient un titre&nbsp;:
 
@@ -133,7 +133,7 @@ Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'ex
 
 ### Boutons radio dans une barre d'outils
 
-Comme les flèches sont utilisées pour naviguer entre les éléments d'une barre d'outils et que la touche <kbd>Tab</kbd> déplace la sélection dans et hors de la barre d'outils, lorsqu'un groupe radio est imbriqué dans une barre d'outils, l'interaction clavier du groupe radio est légèrement différente de celle d'un groupe radio qui n'est pas dans une barre d'outils. Voir [interactions au clavier du radiogroup](#interactions_au_clavier) pour plus d'informations.
+Comme les flèches sont utilisées pour naviguer entre les éléments d'une barre d'outils et que la touche <kbd>Tab</kbd> déplace la sélection dans et hors de la barre d'outils, lorsqu'un groupe radio est imbriqué dans une barre d'outils, l'interaction clavier du groupe radio est légèrement différente de celle d'un groupe radio qui n'est pas dans une barre d'outils. Voir les [interactions au clavier de radiogroup](#interactions_au_clavier) pour plus d'informations.
 
 ## JavaScript requis
 
