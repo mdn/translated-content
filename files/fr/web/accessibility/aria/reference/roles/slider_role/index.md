@@ -109,14 +109,14 @@ Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'ex
 
 ### Interactions au clavier
 
-| Touche(s)                                                   | Action                                                          |
-| ----------------------------------------------------------- | --------------------------------------------------------------- |
-| <kbd>Flèche droite</kbd> et <kbd>Flèche vers le haut</kbd>  | Augmente la valeur sélectionnée d'un cran                       |
-| <kbd>Flèche gauche</kbd> et <kbd>Flèche vers le bas</kbd>   | Diminue la valeur sélectionnée d'un cran                        |
-| <kbd>Page suivante</kbd>                                    | (Optionnel) augmente la valeur d'un montant supérieur à un cran |
-| <kbd>Page précédente</kbd>                                  | (Optionnel) diminue la valeur d'un montant supérieur à un cran  |
-| <kbd>Début</kbd>                                            | Définit le curseur sur la valeur minimale                       |
-| <kbd>Fin</kbd>                                              | Définit le curseur sur la valeur maximale                       |
+| Touche(s)                                                  | Action                                                          |
+| ---------------------------------------------------------- | --------------------------------------------------------------- |
+| <kbd>Flèche droite</kbd> et <kbd>Flèche vers le haut</kbd> | Augmente la valeur sélectionnée d'un cran                       |
+| <kbd>Flèche gauche</kbd> et <kbd>Flèche vers le bas</kbd>  | Diminue la valeur sélectionnée d'un cran                        |
+| <kbd>Page suivante</kbd>                                   | (Optionnel) augmente la valeur d'un montant supérieur à un cran |
+| <kbd>Page précédente</kbd>                                 | (Optionnel) diminue la valeur d'un montant supérieur à un cran  |
+| <kbd>Début</kbd>                                           | Définit le curseur sur la valeur minimale                       |
+| <kbd>Fin</kbd>                                             | Définit le curseur sur la valeur maximale                       |
 
 Pour les touches optionnelles <kbd>Page suivante</kbd> et <kbd>Page précédente</kbd>, le changement de valeur du curseur doit être supérieur à celui effectué par les flèches.
 
