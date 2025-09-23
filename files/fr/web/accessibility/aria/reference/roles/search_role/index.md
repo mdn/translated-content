@@ -44,7 +44,7 @@ L'utilisation de l'élément {{HTMLElement('form')}} en conjonction avec une dé
 
 #### Points de repère multiples
 
-S'il y a plus d'un rôle de point de repère `search` dans un document, fournissez une étiquette (`aria-label`) pour chaque point de repère. Cette étiquette permettra à un utilisateur de technologie d'assistance de comprendre rapidement le but de chaque point de repère.
+S'il y a plus d'un rôle de point de repère `search` dans un document, fournissez une étiquette (`aria-label`) pour chaque point de repère. Cette étiquette permettra à un·e utilisateur·ice de technologie d'assistance de comprendre rapidement le but de chaque point de repère.
 
 ```html
 <form id="site-search" role="search" aria-label="Sur l'ensemble du site">
