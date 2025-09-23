@@ -42,7 +42,7 @@ L'utilisation de l'élément {{HTMLElement('section')}} communique automatiqueme
 
 ## Problèmes d'accessibilité
 
-À utiliser avec parcimonie&nbsp;! Les [rôles de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) sont conçus pour identifier les grandes sections du document. En utiliser trop peut créer du «&nbsp;bruit&nbsp;» pour les lecteur·ice·s d'écran, rendant la compréhension de la structure globale plus difficile.
+À utiliser avec parcimonie&nbsp;! Les [rôles de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères) sont conçus pour identifier les grandes sections du document. En utiliser trop peut créer du «&nbsp;bruit&nbsp;» pour les lecteur·ice·s d'écran, rendant la compréhension de la structure globale plus difficile.
 
 N'utilisez le rôle `region` que si aucun autre élément de sectionnement de contenu ou rôle de repère pertinent ne s'applique. Si plusieurs régions existent sur une page, il peut être utile de revoir la structure globale du document.
 
