@@ -108,7 +108,7 @@ Chacune des pages ci-dessous contient des informations détaillées sur la synta
 - {{CSSxRef("clamp", "clamp()")}}
   - : Calcule la valeur centrale d'une valeur minimale, centrale et maximale.
 
-### Les fonctions de valeur discrète
+### Les fonctions de valeur par paliers
 
 - {{CSSxRef("round", "round()")}}
   - : Calcule un nombre arrondi en fonction d'une stratégie d'arrondi.
