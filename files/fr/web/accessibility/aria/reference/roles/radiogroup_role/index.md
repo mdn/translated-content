@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-Le rôle `radiogroup` représente un groupe de boutons radio (`radio`).
+Le rôle `radiogroup` représente un groupe de boutons `radio`.
 
 ## Description
 
@@ -25,34 +25,34 @@ Le `radiogroup` doit avoir un nom accessible, soit par un label visible référe
 ## Propriétés, états et rôles WAI-ARIA associés
 
 - le rôle [`radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-  -&nbsp;: Un des boutons sélectionnables d'un groupe, dans un `radiogroup`, où un seul bouton peut être sélectionné à la fois.
+  - : Un des boutons sélectionnables d'un groupe, dans un `radiogroup`, où un seul bouton peut être sélectionné à la fois.
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) / [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-  -&nbsp;: Le `radiogroup` doit avoir un nom accessible, soit par un label visible référencé par `aria-labelledby`, soit par un label spécifié avec `aria-label`.
+  - : Le `radiogroup` doit avoir un nom accessible, soit par un label visible référencé par `aria-labelledby`, soit par un label spécifié avec `aria-label`.
 - [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-  -&nbsp;: Référence vers des éléments fournissant des informations supplémentaires sur le `radiogroup`.
+  - : Référence vers des éléments fournissant des informations supplémentaires sur le `radiogroup`.
 - [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
-  -&nbsp;: Indique qu'un bouton radio du groupe doit avoir `aria-checked="true"` avant que le formulaire puisse être soumis. L'état requis est spécifié sur l'élément `radiogroup` et non sur les boutons radio, contrairement à l'attribut HTML [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) qui est défini directement sur un ou plusieurs éléments radio {{HTMLElement('input')}}.
+  - : Indique qu'un bouton radio du groupe doit avoir `aria-checked="true"` avant que le formulaire puisse être soumis. L'état requis est spécifié sur l'élément `radiogroup` et non sur les boutons radio, contrairement à l'attribut HTML [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) qui est défini directement sur un ou plusieurs éléments radio {{HTMLElement('input')}}.
 - [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-  -&nbsp;: Identifie l'élément qui fournit un message d'erreur pour le `radiogroup`, si une erreur est présente. Ce message doit être masqué lorsqu'il n'est pas pertinent.
+  - : Identifie l'élément qui fournit un message d'erreur pour le `radiogroup`, si une erreur est présente. Ce message doit être masqué lorsqu'il n'est pas pertinent.
 
 ## Interactions au clavier
 
 Pour les boutons radio dans un `radiogroup` qui n'est pas dans une [`toolbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role), les interactions clavier suivantes doivent être prises en charge&nbsp;:
 
 - <kbd>Tab</kbd> et <kbd>Maj + Tab</kbd>
-  -&nbsp;: Déplace la sélection dans et hors du `radiogroup`. Lorsque la sélection entre dans un `radiogroup`, si un bouton radio est sélectionné, la sélection se place sur ce bouton. Si aucun bouton n'est sélectionné, la sélection se place sur le premier bouton du groupe.
+  - : Déplace la sélection dans et hors du `radiogroup`. Lorsque la sélection entre dans un `radiogroup`, si un bouton radio est sélectionné, la sélection se place sur ce bouton. Si aucun bouton n'est sélectionné, la sélection se place sur le premier bouton du groupe.
 - <kbd>Espace</kbd>
-  -&nbsp;: Sélectionne le bouton radio sélectionné si ce n'est pas déjà le cas.
+  - : Sélectionne le bouton radio sélectionné si ce n'est pas déjà le cas.
 - <kbd>Flèche vers la droite</kbd> et <kbd>Flèche vers le bas</kbd>
-  -&nbsp;: Déplace la sélection vers le bouton radio suivant du groupe, désélectionne le bouton précédemment sélectionné et sélectionne le nouveau bouton. Si la sélection est sur le dernier bouton, elle se déplace vers le premier bouton du groupe.
+  - : Déplace la sélection vers le bouton radio suivant du groupe, désélectionne le bouton précédemment sélectionné et sélectionne le nouveau bouton. Si la sélection est sur le dernier bouton, elle se déplace vers le premier bouton du groupe.
 - <kbd>Flèche vers la gauche</kbd> et <kbd>Flèche vers le haut</kbd>
-  -&nbsp;: Déplace la sélection vers le bouton radio précédent du groupe, désélectionne le bouton précédemment sélectionné et sélectionne le nouveau bouton. Si la sélection est sur le premier bouton, elle se déplace vers le dernier bouton du groupe.
+  - : Déplace la sélection vers le bouton radio précédent du groupe, désélectionne le bouton précédemment sélectionné et sélectionne le nouveau bouton. Si la sélection est sur le premier bouton, elle se déplace vers le dernier bouton du groupe.
 
 Les flèches sont utilisées pour naviguer entre les éléments d'une barre d'outils. Lorsqu'un `radiogroup` est imbriqué dans une barre d'outils, l'utilisateur·ice doit pouvoir naviguer parmi tous les éléments de la barre, y compris les boutons radio, sans changer le bouton sélectionné. Ainsi, lors de la navigation dans un `radiogroup` dans une [`toolbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role) avec les flèches, le bouton sélectionné ne change pas. Dans une barre d'outils, les touches <kbd>Espace</kbd> et <kbd>Entrée</kbd> sélectionnent le bouton radio sélectionné si ce n'est pas déjà le cas, et <kbd>Tab</kbd> déplace la sélection dans et hors de la barre d'outils.
 
 ## Fonctionnalités JavaScript requises
 
-Les interactions utilisateur pour les `radiogroup` doivent reproduire celles d'un groupe de boutons radio HTML natifs avec le même nom. Les événements clavier pour Tab, Espace et les flèches doivent être capturés. Les clics sur les éléments radio et leurs labels associés doivent aussi être capturés. De plus, [la gestion de la sélection](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability)<sup>(angl.)</sup> doit être assurée.
+Les interactions utilisateur pour les `radiogroup` doivent reproduire celles d'un groupe de boutons radio HTML natifs avec le même nom. Les événements clavier pour Tab, Espace et les flèches doivent être capturés. Les clics sur les éléments radio et leurs labels associés doivent aussi être capturés. De plus, [la gestion de la sélection <sup>(angl.)</sup>](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) doit être assurée.
 
 En général, quitter un élément sélectionné amène à l'élément sélectionnable suivant dans l'ordre du DOM. Utiliser les flèches pour naviguer dans un groupe de boutons radio maintient la sélection dans le groupe, déplaçant la sélection vers le premier bouton radio lorsque <kbd>Flèche vers la droite</kbd> ou <kbd>Flèche vers le bas</kbd> est relâchée alors que la sélection était sur le dernier bouton, et vers le dernier bouton si <kbd>Flèche vers la gauche</kbd> ou <kbd>Flèche vers le haut</kbd> est relâchée alors que la sélection était sur le premier bouton. La gestion dynamique de [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) est une méthode pour gérer ces événements.
 
