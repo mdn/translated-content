@@ -81,7 +81,9 @@ Par exemple, considérez l'élément `slider` ci‑dessous qui contient un titre
 Étant donné que les descendants d'un `slider` sont présentiels, le code suivant est équivalent&nbsp;:
 
 ```html
-<div role="slider"><h3 role="presentation">Température en degrés Celsius</h3></div>
+<div role="slider">
+  <h3 role="presentation">Température en degrés Celsius</h3>
+</div>
 ```
 
 Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'existe pas puisque les extraits précédents sont équivalents à ce qui suit dans l'[arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree)&nbsp;:
