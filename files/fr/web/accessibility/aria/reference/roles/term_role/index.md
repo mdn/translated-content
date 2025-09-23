@@ -88,4 +88,4 @@ Laissez le terme lui-même définir le nom accessible. N'utilisez pas `aria-labe
 ## Voir aussi
 
 - [ARIA&nbsp;: rôle `definition`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role).
-- L'élément HTML {{HTMLElement('dfn')}} 
+- L'élément HTML {{HTMLElement('dfn')}}
