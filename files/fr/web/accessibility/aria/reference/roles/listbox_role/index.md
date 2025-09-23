@@ -66,19 +66,15 @@ Lorsque le rôle `listbox` est ajouté à un élément, ou qu'un tel élément d
   - Si une ou plusieurs options sont sélectionnées avant que la boîte de liste ne reçoive la sélection, elle est placée sur la première option de la liste qui est sélectionnée.
 
 - <kbd>Flèche vers le bas</kbd>
-
   - : Déplace la sélection sur l'option suivante. En option, dans une boîte de liste à sélection unique, la sélection peut également se déplacer avec la sélection.
 
 - <kbd>Flèche vers le haut</kbd>
-
   - : Déplace la sélection sur l'option précédente. En option, dans une boîte de liste à sélection unique, la sélection peut également se déplacer avec la sélection.
 
 - <kbd>Début</kbd>
-
   - : (Optionnel)&nbsp;: Déplace la sélection sur la première option. En option, dans une boîte de liste à sélection unique, la sélection peut également se déplacer avec la sélection. Il est fortement recommandé de prendre en charge cette touche pour les listes de plus de cinq options.
 
 - <kbd>Fin</kbd>
-
   - : (Optionnel)&nbsp;: Déplace la sélection sur la dernière option. En option, dans une boîte de liste à sélection unique, la sélection peut également se déplacer avec la sélection. Il est fortement recommandé de prendre en charge cette touche pour les listes de plus de cinq options.
 
 - La saisie anticipée est recommandée pour toutes les boîtes de liste, en particulier celles avec plus de sept options&nbsp;:
