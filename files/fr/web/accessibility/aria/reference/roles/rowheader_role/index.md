@@ -75,8 +75,8 @@ Aucune.
   </div>
   <div role="rowgroup">
     <div role="row">
-  <span role="columnheader" aria-sort="none">Rôle ARIA</span>
-  <span role="columnheader" aria-sort="none">Élément sémantique</span>
+      <span role="columnheader" aria-sort="none">Rôle ARIA</span>
+      <span role="columnheader" aria-sort="none">Élément sémantique</span>
     </div>
   </div>
   <div role="rowgroup">
