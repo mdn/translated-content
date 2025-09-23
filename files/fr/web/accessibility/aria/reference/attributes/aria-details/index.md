@@ -41,11 +41,12 @@ Pour les rôles de définition et de terme, `aria-details` serait ajouté sur l'
 
 <p role="definition" id="bezier">
   Une <strong>courbe de Bézier</strong> (prononcé \ ˈbe-zē-ˌā \)
-  <i aria-description="Prononciation anglaise">BEH-zee-ay</i>) est une courbe décrite
-  mathématiquement, utilisée en infographie et en animation. La courbe est définie par
-  un ensemble de points de contrôle, au minimum deux. Les graphiques et animations web
-  utilisent des courbes de Bézier cubiques, qui sont des courbes à quatre points de contrôle
-  P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub> et P<sub>3</sub>.
+  <i aria-description="Prononciation anglaise">BEH-zee-ay</i>) est une courbe
+  décrite mathématiquement, utilisée en infographie et en animation. La courbe
+  est définie par un ensemble de points de contrôle, au minimum deux. Les
+  graphiques et animations web utilisent des courbes de Bézier cubiques, qui
+  sont des courbes à quatre points de contrôle P<sub>0</sub>, P<sub>1</sub>,
+  P<sub>2</sub> et P<sub>3</sub>.
 </p>
 
 <a
