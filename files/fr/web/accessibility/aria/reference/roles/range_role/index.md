@@ -9,7 +9,7 @@ l10n:
 Le rôle abstrait `range` est un type générique de rôle de structure représentant une plage de valeurs.
 
 > [!WARNING]
-> Le rôle `range` est un [rôle abstrait](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). Il est inclus ici pour compléter la documentation. Il ne doit pas être utilisé par les développeur·euse·s web.
+> Le rôle `range` est un [rôle abstrait](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._rôles_abstraits). Il est inclus ici pour compléter la documentation. Il ne doit pas être utilisé par les développeur·euse·s web.
 
 ## Description
 
