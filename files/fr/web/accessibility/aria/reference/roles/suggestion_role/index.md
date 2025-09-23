@@ -39,7 +39,6 @@ On peut même fournir une boîte d'information indiquant qui a fait la suggestio
 </div>
 ```
 
-
 Les navigateurs ont tendance à fournir une barre noire par défaut pour les suppressions, et un soulignement noir pour les insertions lorsqu'on utilise les éléments HTML qui exposent implicitement ces rôles. Mais lorsque vous utilisez des rôles ARIA explicites pour modifier des éléments HTML, comme des div, il faudra utiliser du CSS pour personnaliser le style visuel de ces suppressions et insertions.
 
 ## Bonnes pratiques
