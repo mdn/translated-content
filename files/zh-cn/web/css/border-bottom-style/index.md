@@ -1,9 +1,6 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
-page-type: css-property
-browser-compat: css.properties.border-bottom-style
-sidebar: cssref
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-bottom-style`** 设置元素底部 {{cssxref("border")}} 的线条样式。
