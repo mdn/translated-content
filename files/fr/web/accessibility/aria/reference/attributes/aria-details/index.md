@@ -33,10 +33,10 @@ Pour les rôles de définition et de terme, `aria-details` serait ajouté sur l'
 
 ```html
 <p>
-  La notation fonctionnelle <strong>cubic-bezier()</strong> définit une courbe de
-  <span role="term" aria-details="bezier bezImg">Bézier</span>. Comme ces courbes
-  sont continues, elles servent souvent à adoucir le début et la fin de la courbe et
-  sont donc parfois appelées fonctions d'assouplissement.
+  La notation fonctionnelle <strong>cubic-bezier()</strong> définit une courbe
+  de <span role="term" aria-details="bezier bezImg">Bézier</span>. Comme ces
+  courbes sont continues, elles servent souvent à adoucir le début et la fin de
+  la courbe et sont donc parfois appelées fonctions d'assouplissement.
 </p>
 
 <p role="definition" id="bezier">
