@@ -1,6 +1,6 @@
 ---
 title: 顏色選擇器
-slug: Web/CSS/CSS_colors/Color_picker
+slug: Web/CSS/CSS_colors/Color_format_converter
 l10n:
   sourceCommit: c148812e0874220770cab62c16f33f48ceb98e99
 ---

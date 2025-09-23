@@ -2,7 +2,7 @@
 title: Document
 slug: Web/API/Document
 l10n:
-  sourceCommit: 41018309bf920684054c0c2d81d362365b543493
+  sourceCommit: cf16851e73da29823438198c4f0efcb7026b7d10
 ---
 
 {{APIRef("DOM")}}
@@ -83,7 +83,7 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : {{DOMxRef("HTMLCollection")}} で、利用可能なプラグインのリストを返します。
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : ポインターがロックされている場合、マウスイベントのターゲットとして設定された要素を返します。ロック待ちの場合、ポインターがロックされていない場合、ターゲットが他の文書にある場合は `null` を返します。
-- {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}} {{non-standard_inline}}
   - : 論理値で、文書が現在、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) によって開始されたような、事前レンダリング中であるかどうかを示します。
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、文書内のすべての {{HTMLElement("script")}} 要素を返します。
@@ -94,7 +94,7 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
 - {{DOMxRef("Document.timeline")}} {{ReadOnlyInline}}
   - : タイムラインを {{domxref("DocumentTimeline")}} の特別なインスタンスで返します。これはページの読み込み時に自動的に生成されます。
 - {{DOMxRef("Document.visibilityState")}} {{ReadOnlyInline}}
-  - : 文書の可視性を表す文字列を返します。 `visible`, `hidden`, `prerender`, `unloaded` のいずれかの値になります。
+  - : 文書の可視性を表す文字列を返します。 `visible`, `hidden`, `unloaded` のいずれかの値になります。
 
 ### HTML 文書向けの拡張
 
@@ -169,7 +169,7 @@ _HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocumen
   - : 訪問済みのハイパーリンクの色を取得/設定します。
 - {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : XML 宣言によって決められたエンコーディングを返します。
-- {{DOMxRef("Document.xmlStandalone")}} {{Deprecated_Inline}}
+- `Document.xmlStandalone` {{Deprecated_Inline}}
   - : XML 宣言で文書がスタンドアロンである（_例_: DTD の外部パートが文書のコンテンツに影響する）場合に `true` を、そうでない場合に `false` を返します。
 - {{DOMxRef("Document.xmlVersion")}} {{Deprecated_Inline}}
   - : XML 宣言で指定されたバージョン番号、または宣言が省略されている場合に `"1.0"` を返します。
@@ -184,7 +184,7 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 文書の最後の子の後に {{domxref("Node")}} オブジェクトまたは文字列の集合を挿入します。
 - {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : 過去 3 つのエポックのそれぞれから 1 つずつ、ユーザーのトップトピックを表すオブジェクトの配列で履行されるプロミスを返します。既定では、このメソッドは、呼び出し側が監視している現在のページの訪問をブラウザーに記録させるので、後でページのホスト名をトピックの計算に使用することができます。詳細は[トピック API](/ja/docs/Web/API/Topics_API) を参照してください。
-- {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
+- `Document.captureEvents()` {{Deprecated_Inline}}
   - : {{DOMxRef("Window.captureEvents")}} をご覧ください。
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
   - : キャレットを含む DOM ノードと、そのノード内でのキャレットの文字オフセットを含む {{DOMxRef('CaretPosition')}} オブジェクトを返します。
@@ -234,7 +234,7 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : ポインターロックを解放します。
 - {{DOMxRef("Document.getAnimations()")}}
   - : 現在実行中であるすべての {{DOMxRef("Animation")}} オブジェクトの配列を返します。この対象要素は、`document` の子孫要素です。
-- {{domxref("Document.getBoxQuads()")}} {{Experimental_Inline}}
+- `Document.getBoxQuads()` {{Experimental_Inline}}
   - : このノードの CSS フラグメントを表す {{domxref("DOMQuad")}} オブジェクトのリストを返します。
 - {{DOMxRef("Document.getElementById", "Document.getElementById()")}}
   - : 識別された要素のオブジェクト参照を返します。
@@ -252,7 +252,7 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : {{DOMxRef("Document.hasStorageAccess()")}} の新しい名前です。
 - {{DOMxRef("Document.importNode()")}}
   - : 外部文書のノードの複製を返します。
-- {{DOMxRef("Document.moveBefore()")}} {{Experimental_Inline}}
+- {{DOMxRef("Document.moveBefore()")}}
   - : 指定された {{domxref("Node")}} を、ノードを除去して挿入し直すことなく、指定された参照ノードの前に、直接の子として `Document` DOM ノード内に移動します。
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
   - : 指定した要素 ID の背景画像として使用している要素を変更することができます。
@@ -264,7 +264,7 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 指定したセレクターに一致する、文書内のすべての要素ノードのリストを返します。
 - {{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}
   - : この文書内の要素でマウスキャプチャを行っている場合、マウスキャプチャを解放します。
-- {{DOMxRef("Document.releaseEvents()")}} {{Deprecated_Inline}}
+- `Document.releaseEvents()` {{Deprecated_Inline}}
   - : {{DOMxRef("Window.releaseEvents()")}} をご覧ください。
 - {{DOMxRef("Document.replaceChildren()")}}
   - : 文書の既存の子を、指定された新しい子の集合で置き換えます。
@@ -302,13 +302,13 @@ HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument
   - : 書き込み用の文書ストリームを開きます。
 - {{DOMxRef("Document.queryCommandEnabled()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 現在の領域でフォーマットコマンドを実行できる場合に、 true を返します。
-- {{DOMxRef("Document.queryCommandIndeterm()")}} {{Deprecated_Inline}}
+- `Document.queryCommandIndeterm()` {{Deprecated_Inline}}
   - : 現在の領域でフォーマットコマンドの状態が不確定である場合に true を返します。
 - {{DOMxRef("Document.queryCommandState()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 現在の領域でフォーマットコマンドを実行した場合に true を返します。
 - {{DOMxRef("Document.queryCommandSupported()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 現在の領域でフォーマットコマンドをサポートしている場合に、true を返します。
-- {{DOMxRef("Document.queryCommandValue()")}} {{Deprecated_Inline}}
+- `Document.queryCommandValue()` {{Deprecated_Inline}}
   - : 指定したフォーマットコマンドについて、現在の領域における値を返します。
 - {{DOMxRef("Document.write()")}} {{deprecated_inline}}
   - : 文書にテキストを書き込みます。
@@ -410,11 +410,11 @@ _このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("E
 - {{domxref("HTMLMediaElement/durationchange_event", "durationchange")}}
 - {{domxref("HTMLMediaElement/emptied_event", "emptied")}}
 - {{domxref("HTMLMediaElement/ended_event", "ended")}}
-- {{domxref("Element/error_event", "error")}}
+- {{domxref("HTMLElement/error_event", "error")}}
 - {{domxref("Element/focus_event", "focus")}}
 - {{domxref("HTMLFormElement/formdata_event", "formdata")}}
 - {{domxref("Element/input_event", "input")}}
-- {{domxref("HTMLElement/invalid_event", "invalid")}}
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
 - {{domxref("Element/keydown_event", "keydown")}}
 - {{domxref("Element/keypress_event", "keypress")}}
 - {{domxref("Element/keyup_event", "keyup")}}
@@ -442,7 +442,7 @@ _このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("E
 - {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
 - {{domxref("HTMLMediaElement/seeked_event", "seeked")}}
 - {{domxref("HTMLMediaElement/seeking_event", "seeking")}}
-- {{domxref("Element/select_event", "select")}}
+- {{domxref("HTMLInputElement/select_event", "select")}}
 - {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}
 - {{domxref("HTMLMediaElement/stalled_event", "stalled")}}
 - {{domxref("HTMLFormElement/submit_event", "submit")}}

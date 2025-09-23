@@ -2550,7 +2550,8 @@
 /zh-CN/docs/Web/CSS/CSS_cascade/initial_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值
 /zh-CN/docs/Web/CSS/CSS_cascade/specified_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值
 /zh-CN/docs/Web/CSS/CSS_cascade/used_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值
-/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool	/zh-CN/docs/Web/CSS/CSS_colors/Color_picker
+/zh-CN/docs/Web/CSS/CSS_colors/Color_picker	/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter
+/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool	/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter
 /zh-CN/docs/Web/CSS/CSS_container_queries	/zh-CN/docs/Web/CSS/CSS_containment/Container_queries
 /zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/zh-CN/docs/Glossary/Flexbox
 /zh-CN/docs/Web/CSS/CSS_flow_layout	/zh-CN/docs/Web/CSS/CSS_display/Flow_layout

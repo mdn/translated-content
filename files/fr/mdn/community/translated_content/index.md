@@ -2,50 +2,73 @@
 title: Localiser MDN
 slug: MDN/Community/Translated_content
 original_slug: MDN/Community/Contributing/Translated_content
+l10n:
+  sourceCommit: 7b476c3bf3bce8ac1413bf35e15204320acbb1e4
 ---
 
-{{MDNSidebar}}
+MDN Web Docs contient près de 14000 pages de documentation dans la locale `en-US`.
+Le contenu de MDN est traduit en huit locales maintenues par une communauté de contributeurs dédiée et diversifiée.
 
-Depuis le 14 décembre 2020, MDN fonctionne sur la nouvelle plateforme [Yari](https://github.com/mdn/yari) basée sur GitHub. Cela présente de nombreux avantages pour MDN, mais nous avons dû apporter des changements radicaux à la façon dont nous gérons la localisation. En effet, nous nous sommes retrouvés avec un grand nombre de contenus non maintenus et obsolètes dans nos langues autres que l'anglais et nous voulons mieux les gérer à l'avenir.
+## Comment contribuer
 
-L'objectif est de geler tout le contenu localisé (ce qui signifie que nous n'accepterons aucune modification, il sera en lecture seule), puis de ne dégeler que les localisations pour lesquelles des équipes dédiées se chargent de leur maintenance.
+Si vous souhaitez contribuer à l'une des locales actives existantes, consultez le [dépôt GitHub mdn/translated-content](https://github.com/mdn/translated-content).
+Ce dépôt contient tous les documents localisés pour toutes les locales actives, ainsi que des projets de suivi des problèmes.
+Nous vous recommandons de lire d'abord le [guide de traduction](https://github.com/mdn/translated-content/tree/main/docs).
+
+Si vous avez besoin d'aide ou si vous avez des questions, n'hésitez pas à contacter l'un des membres actifs ou des communautés listées ci-dessous, ou [contactez-nous](/fr/docs/MDN/Community/Communication_channels).
 
 ## Langues actives
 
-Nous avons actuellement dégelé les langues suivantes :
+### Portugais brésilien (`pt-BR`)
 
-> [!NOTE]
-> Si vous voulez contribuer à l'une des langues actives existantes, ou si vous voulez discuter du dégel d'une langue actuellement gelée, contactez l'un des membres actifs listés ci-dessous, ou [contactez-nous pour obtenir de l'aide](/fr/docs/MDN/Community/Getting_started#step_4_ask_for_help).
+- Discussions&nbsp;: [Telegram (`MDN localization in Brazilian Portuguese`)](https://t.me/mdn_l10n_pt_br)
+- Contributeurs actuels&nbsp;: [Nathália Pissuti](https://github.com/nathipg), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
 
-### Chinois (zh-CN, zh-TW)
+### Chinois (`zh-CN`, `zh-TW`)
 
-- Discussions : [Discord (`#zh-cn`)](/discord), [Discord (`#zh-tw`)](/discord), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
-- Contributeurs actuels : [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
+- Discussions&nbsp;: [Discord (`#zh-cn`)](/discord), [Discord (`#zh-tw`)](/discord), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
+- Contributeurs actuels&nbsp;: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
-### Français (fr)
+### Français (`fr`)
 
-- Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Contributeurs actuels : [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- Discussions&nbsp;: [Matrix (`#l10n-fr`)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
+- Contributeurs actuels&nbsp;: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
-### Japonais (ja)
+### Japonais (`ja`)
 
-- Discussions : [Slack (#translation channel)](https://mozillajp.slack.com/), [GitHub (mozilla-japan)](https://github.com/mozilla-japan/translation), [Google Group (Mozilla.translations.ja)](https://groups.google.com/forum/#!forum/mozilla-translations-ja)
-- Contributeurs actuels : [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
+- Discussions&nbsp;: [Slack (`#translation`)](https://mozillajp.slack.com/), [GitHub (`mozilla-japan`)](https://github.com/mozilla-japan/translation), [Google Group (`Mozilla.translations.ja`)](https://groups.google.com/forum/#!forum/mozilla-translations-ja)
+- Contributeurs actuels&nbsp;: [mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
 
-### Coréen (ko)
+### Coréen (`ko`)
 
-- Discussions : [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
-- Contributeurs actuels : [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
+- Discussions&nbsp;: [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- Contributeurs actuels&nbsp;: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
-### Russe (ru)
+### Russe (`ru`)
 
-- Discussions : [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Contributeurs actuels : [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
+- Discussions&nbsp;: [Matrix (`#mdn-l10n-ru`)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
+- Contributeurs actuels&nbsp;: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
-### Espagnol (es)
+### Espagnol (`es`)
 
-- Discussions : [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
-- Contributeurs actuels : [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz)
+- Discussions&nbsp;: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
+- Contributeurs actuels&nbsp;: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
+
+## Locales traduites par machine
+
+Les locales expérimentales suivantes sont traduites par machine à partir de l'anglais et sont gérées dans des dépôts séparés des autres locales.
+
+### Allemand (`de`)
+
+- Dépôt&nbsp;: [mdn/translated-content-de](https://github.com/mdn/translated-content-de)
+- Discussions&nbsp;: [Discord (`#german`)](/discord)
+- Contributeurs actuels&nbsp;: [caugner](https://github.com/caugner)
+
+### Italien (`it`)
+
+- Dépôt&nbsp;: [mdn/translated-content-it](https://github.com/mdn/translated-content-it)
+- Discussions&nbsp;: [Discord (`#italian`)](/discord)
+- Contributeurs actuels&nbsp;: [caugner](https://github.com/caugner)
 
 ## Autres sujets de localisation sur MDN
 
@@ -55,7 +78,7 @@ Les macros KumaScript continuent de fonctionner sur la nouvelle plateforme MDN, 
 
 ## Voir aussi
 
-- [MDN localization in March — Tier 1 locales unfrozen, and future plans](https://hacks.mozilla.org/2021/03/mdn-localization-in-march-tier-1-locales-unfrozen-and-future-plans/) — les prévisions pour le dégel des prochaines langues et des informations sur les langues qui seront supprimées.
-- [MDN localization update, February 2021](https://hacks.mozilla.org/mdn-localization-update-february-2021/) — le dernier état de la localisation sur MDN.
-- [An update on MDN Web Docs' localization strategy](https://hacks.mozilla.org/an-update-on-mdn-web-docs-localization-strategy/) — stratégie actualisée sur la base des réactions de la communauté.
-- [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — plus d'informations sur les avantages de la nouvelle plateforme et sur les raisons des changements de localisation.
+- [MDN localization update, February 2021 <sup>(angl.)</sup>](https://hacks.mozilla.org/mdn-localization-update-february-2021/) — le dernier état de la localisation sur MDN.
+- [An update on MDN Web Docs' localization strategy <sup>(angl.)</sup>](https://hacks.mozilla.org/an-update-on-mdn-web-docs-localization-strategy/) — stratégie actualisée sur la base des réactions de la communauté.
+- [MDN Web Docs evolves! Lowdown on the upcoming new platform <sup>(angl.)</sup>](https://hacks.mozilla.org/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — plus d'informations sur les avantages de la nouvelle plateforme et sur les raisons des changements de localisation.
+- [Canaux de communication MDN](/fr/docs/MDN/Community/Communication_channels)

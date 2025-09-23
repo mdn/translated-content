@@ -31,14 +31,14 @@ moveBefore(movedNode, referenceNode)
 
 - `HierarchyRequestError` {{jsxref("TypeError")}}
   - : 以下のいずれかの場面で発生します。
-    - 指定された `movedNode` がこの DOM に属しておらず、この DOM に属しているノードの中に移動しようとしています。またはその逆です。
-    - 指定された `movedNode` が、`moveBefore()` が呼び出された要素の祖先ノードです。
-    - `movedNode` を2つの異なる文書間で移動しようとしています。
-    - 指定された `movedNode` は {{domxref("Element")}} または {{domxref("CharacterData")}} ノードではありません。
+    - 指定された `movedNode` がこの DOM に属しておらず、この DOM に属しているノードの中に移動しようとしている。またはその逆。
+    - 指定された `movedNode` が、`moveBefore()` が呼び出された要素の祖先ノードである。
+    - `movedNode` を 2 つの異なる文書間で移動しようとしている。
+    - 指定された `movedNode` は {{domxref("Element")}} または {{domxref("CharacterData")}} ノードではない。
 - `NotFoundError` {{jsxref("TypeError")}}
-  - : 指定された `referenceNode` は、`moveBefore()` を呼び出したノードの子ノードではありません。つまり、`movedNode` の移動先ノードの子ノードではないということです。
+  - : 指定された `referenceNode` は、`moveBefore()` を呼び出したノードの子ノードではない。つまり、`movedNode` の移動先ノードの子ノードではない。
 - `TypeError` {{jsxref("TypeError")}}
-  - : 2 つ目の引数が指定されていません。
+  - : 2 つ目の引数が指定されていない。
 
 ## 解説
 

@@ -1,7 +1,7 @@
 ---
 title: Color picker tool
-slug: Web/CSS/CSS_colors/Color_picker
-original_slug: Web/CSS/CSS_colors/Color_picker_tool
+slug: Web/CSS/CSS_colors/Color_format_converter
+original_slug: Web/CSS/CSS_colors/Color_picker
 ---
 
 이 도구를 사용하면 웹용 사용자 정의 색상을 쉽게 만들고 조정하고 실험 할 수 있습니다. 또한 HEXA 색상, RGB (빨강 / 녹색 / 파랑) 및 HSL (색조 / 채도 / 밝기)를 비롯하여 [CSS](/ko/docs/Web/CSS) 에서 지원하는 다양한 [색상 형식](/ko/docs/Web/CSS/color_value) 간에 쉽게 변환 할 수 [있습니다](/ko/docs/Web/CSS/color_value) . RGB (rgba) 및 HSL (hsla) 형식에서도 알파 채널을 제어 할 수 있습니다.

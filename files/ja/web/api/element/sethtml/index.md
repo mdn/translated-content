@@ -20,7 +20,7 @@ setHTML(input, options)
 ### 引数
 
 - `input`
-  - : 文字列で、サニタイズされ要素に挿入されるHTMLを定義します。
+  - : 文字列で、サニタイズされ要素に挿入される HTML を定義します。
 - `options` {{optional_inline}}
   - : 以下のオプション引数を持つオプションオブジェクトです。
     - `sanitizer`

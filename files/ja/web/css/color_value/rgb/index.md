@@ -365,6 +365,6 @@ div.rgba {
 ## 関連情報
 
 - {{CSSXref("&lt;color&gt;")}} データ型: すべての色記法の一覧
-- [色選択ツール](/ja/docs/Web/CSS/CSS_colors/Color_picker)
+- [色選択ツール](/ja/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS 色](/ja/docs/Web/CSS/CSS_colors)
