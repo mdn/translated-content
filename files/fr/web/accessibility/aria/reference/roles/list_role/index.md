@@ -71,7 +71,7 @@ Cela dit, notez que si vous utilisez les éléments HTML sémantiques `<ol>` ou 
 - L'élément HTML {{HTMLElement("ul")}}
 - L'élément HTML {{HTMLElement("ol")}}
 - L'élément HTML {{HTMLElement("li")}}
-- [ARIA: rôle listitem](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
+- [ARIA&nbsp;: rôle listitem](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
 - [Exemples de listes ARIA <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — par Scott O'Hara
 - [Modèle d'objet d'accessibilité <sup>(angl.)</sup>](https://wicg.github.io/aom/spec/)
 - [ARIA en HTML <sup>(angl.)</sup>](https://w3c.github.io/html-aria/)
