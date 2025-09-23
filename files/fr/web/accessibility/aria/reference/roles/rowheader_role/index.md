@@ -6,11 +6,11 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-Le rôle `role="rowheader"` désigne une [cellule](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) contenant l'information d'en-tête d'une [ligne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) au sein d'une structure tabulaire, comme une [`grille`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), une [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) ou un [`arbre-grille`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role).
+Le rôle `role="rowheader"` désigne une [cellule](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) contenant l'information d'en-tête d'une [ligne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) au sein d'une structure tabulaire, comme une [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), une [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) ou un [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role).
 
 ## Description
 
-`Rowheader` est la [cellule](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) d'en-tête d'une ligne ; il établit une relation entre cette cellule et les autres cellules de la même [ligne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role).
+`Rowheader` est la [cellule](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) d'en-tête d'une ligne&nbsp;; il établit une relation entre cette cellule et les autres cellules de la même [ligne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role).
 
 ```html
 <div
@@ -140,7 +140,7 @@ Ci‑dessus, la manière sémantique d'écrire un tableau. Les rôles ARIA ne so
 
 Aucun.
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 
