@@ -40,10 +40,7 @@ Ce tableau n'est pas très complexe. S'il s'agissait d'un tableur de plus de 100
       <th aria-colindex="110" aria-colindextext="Valeur début 2021" scope="col">
         01/21
       </th>
-      <th
-        aria-colindex="122"
-        aria-colindextext="Valeur début 2022"
-        scope="col">
+      <th aria-colindex="122" aria-colindextext="Valeur début 2022" scope="col">
         01/22
       </th>
       <th aria-colindex="124" scope="col">Recommandation</th>
