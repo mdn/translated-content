@@ -18,7 +18,6 @@ L'attribut `aria-describedby` est très proche de l'attribut [`aria-labelledby`]
 
 Les éléments liés via `aria-describedby` n'ont pas besoin d'être visibles. Il est possible de référencer un élément même s'il est masqué. Par exemple, un contrôle de formulaire peut avoir une description masquée par défaut et affichée à la demande via un widget de type «&nbsp;plus d'informations&nbsp;». Les utilisateur·ice·s voyant·e·s cliquent sur l'icône pour afficher la description, tandis que les utilisateur·ice·s de technologies d'assistance y ont immédiatement accès car la description est référencée depuis ce contrôle via `aria-describedby`.
 
-
 La propriété `aria-describedby` est adaptée lorsque le contenu associé contient du texte simple. Si le contenu est volumineux, possède une sémantique utile ou une structure complexe nécessitant une navigation, utilisez plutôt [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details). `aria-details` permet aux utilisateur·ice·s de technologies d'assistance de visiter le contenu structuré associé et offre des commandes de navigation supplémentaires, facilitant la compréhension de la structure ou l'accès à l'information par petits morceaux.
 
 > [!NOTE]
