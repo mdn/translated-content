@@ -111,7 +111,7 @@ Voici deux exemples d'implémentations de menus.
 
 Pour améliorer progressivement ce widget de navigation qui est par défaut accessible, la classe pour masquer le `menu` et l'inclusion de `tabindex="-1"` sur le contenu interactif de l'élément de menu doivent être ajoutées avec JavaScript au chargement.
 
-Quand on inclut un «&nbsp;menu&nbsp;» pour la navigation du site, il ne faut pas utiliser le rôle `menu`. Au lieu de cela, pour la navigation principale du site, utilisez l'élément HTML natif {{HTMLElement("nav")}} ou simplement une liste de liens. Le rôle `menu` doit être réservé aux widgets composites nécessitant une gestion de la sélection. Voir [ARIA practices for disclosure navigation](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/) pour une explication et des exemples supplémentaires.
+Quand on inclut un «&nbsp;menu&nbsp;» pour la navigation du site, il ne faut pas utiliser le rôle `menu`. Au lieu de cela, pour la navigation principale du site, utilisez l'élément HTML natif {{HTMLElement("nav")}} ou simplement une liste de liens. Le rôle `menu` doit être réservé aux widgets composites nécessitant une gestion de la sélection. Voir [Pratiques ARIA pour la navigation dans les informations divulguées <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/) pour une explication et des exemples supplémentaires.
 
 ### Exemple 2 : sélecteur d'options de sous-menu de barre de menu
 
