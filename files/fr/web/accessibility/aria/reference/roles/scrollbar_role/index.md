@@ -164,10 +164,10 @@ Le CSS ci‑dessus force l'apparition d'une barre de défilement native lorsque 
 - [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range)
 - L'élément HTML {{HTMLElement('progress')}}
 - L'élément HTML {{HTMLElement('meter')}}
- - Autres widgets de type range&nbsp;:
-  - [ARIA&nbsp;: rôle `meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
-  - [ARIA&nbsp;: rôle `slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
-  - [ARIA&nbsp;: rôle `separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (si focalisable)
-  - [ARIA&nbsp;: rôle `progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
-  - [ARIA&nbsp;: rôle `spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+- Autres widgets de type range&nbsp;:
+- [ARIA&nbsp;: rôle `meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
+- [ARIA&nbsp;: rôle `slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+- [ARIA&nbsp;: rôle `separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (si focalisable)
+- [ARIA&nbsp;: rôle `progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
+- [ARIA&nbsp;: rôle `spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
 - [Événement `scroll` du Document](/fr/docs/Web/API/Document/scroll_event)
