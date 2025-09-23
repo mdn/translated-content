@@ -9,9 +9,9 @@ l10n:
 
 `this` 키워드는 코드 조각이 실행되는 컨텍스트를 가리킵니다(예: 함수 본문). 가장 일반적으로는 객체 메서드에서 사용되며, 이때 `this`는 그 메서드가 속한 객체를 가리킵니다. 이를 통해 동일한 메서드를 서로 다른 객체에서 재사용할 수 있습니다.
 
-JavaScript에서 `this`의 값은 함수가 정의 시점이 아니라 실행 시점에 함수가 어떤 방식으로 호출되었는지에 따라 달라집니다. 일반 함수가 객체의 메서드로 호출될 때(`obj.method()`), `this`는 해당 객체를 가리킵니다. 객체에 연결되지 않은 독립된 함수(`func()`)로 호출될 때는 일반적으로 [전역 객체](/ko/docs/Glossary/Global_object)(비엄격 모드)를 참조하거나 `undefined`([엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode))를 참조합니다. [`Function.prototype.bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드는 `this` 바인딩이 고정된 함수를 생성할 수 있으며, [`Function.prototype.apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)와 [`Function.prototype.call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)로 특정 호출에 대한 `this` 값을 설정할 수 있습니다.
+JavaScript에서 `this`의 값은 함수가 정의 시점이 아니라 함수가 어떤 방식으로 호출({{glossary("binding")}}) 되었는지에 따라 달라집니다. 일반 함수가 객체의 메서드로 호출될 때(`obj.method()`), `this`는 해당 객체를 가리킵니다. 객체에 연결되지 않은 독립된 함수(`func()`)로 호출될 때는 일반적으로 [전역 객체](/ko/docs/Glossary/Global_object)(비엄격 모드)를 참조하거나 `undefined`([엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode))를 참조합니다. {{jsxref("Function.prototype.bind()")}} 메서드는 `this` 바인딩이 고정된 함수를 생성할 수 있으며, {{jsxref("Function.prototype.apply()")}}와 {{jsxref("Function.prototype.call()")}}로 특정 호출에 대한 `this` 값을 설정할 수 있습니다.
 
-화살표 함수는 `this`를 처리하는 방식이 다릅니다. 화살표 함수는 정의될 때의 상위 스코프로부터 `this`를 상속받습니다. 이런 동작 때문에 화살표 함수는 콜백 함수나 컨텍스트를 유지해야 하는 상황에서 특히 유용합니다. 그러나 화살표 함수는 자체적인 `this` 바인딩을 갖지 않습니다. 따라서 `bind()`, `apply()`, `call()` 메서드로 `this` 값을 설정할 수 없으며, 객체 메서드 안에서 현재 객체를 가리키지도 않습니다.
+[화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)는 `this`를 처리하는 방식이 다릅니다. 화살표 함수는 정의될 때의 상위 스코프로부터 `this`를 상속받습니다. 이런 동작 때문에 화살표 함수는 콜백 함수나 컨텍스트를 유지해야 하는 상황에서 특히 유용합니다. 그러나 화살표 함수는 자체적인 `this` 바인딩을 갖지 않습니다. 따라서 `bind()`, `apply()`, `call()` 메서드로 `this` 값을 설정할 수 없으며, 객체 메서드 안에서 현재 객체를 가리키지도 않습니다.
 
 {{InteractiveExample("JavaScript Demo: Expressions - this")}}
 
@@ -112,7 +112,7 @@ console.log(typeof getThisStrict()); // "undefined"
 
 비엄격 모드에서는 [`this` 치환(this substitution)](/ko/docs/Web/JavaScript/Reference/Strict_mode#javascript_보안)이라는 특별한 과정이 있어 `this`의 값이 항상 객체가 되도록 보장됩니다.
 
-- 함수가 `this`가 `undefined`나 `null`로 설정된 상태에서 호출되면, `this`는 [`globalThis`](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis)로 치환됩니다.
+- 함수가 `this`가 `undefined`나 `null`로 설정된 상태에서 호출되면, `this`는 {{jsxref("globalThis")}}로 치환됩니다.
 - 함수가 `this`가 원시 값으로 설정된 상태에서 호출되면, `this`는 해당 원시 값의 래퍼 객체로 치환됩니다.
 
 ```js
@@ -126,11 +126,11 @@ console.log(typeof (1).getThis()); // "object"
 console.log(getThis() === globalThis); // true
 ```
 
-일반적인 함수 호출에서는 `this`가 함수의 접두사(점(.) 앞의 부분)를 통해 매개변수처럼 암묵적으로 전달됩니다. 또한 [`Function.prototype.call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`Function.prototype.apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [`Reflect.apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply) 메서드를 사용하여 `this` 값을 명시적으로 설정할 수도 있습니다. [`Function.prototype.bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)를 사용하면, 함수가 어떻게 호출되든 변하지 않는 특정 `this` 값을 가진 새 함수를 생성할 수 있습니다. 이때, 함수가 비엄격 모드라면 앞서 설명한 this 치환(this substitution) 규칙이 여전히 적용됩니다.
+일반적인 함수 호출에서는 `this`가 함수의 접두사(점(.) 앞의 부분)를 통해 매개변수처럼 암묵적으로 전달됩니다. 또한 {{jsxref("Function.prototype.call()")}}, {{jsxref("Function.prototype.apply()")}}, {{jsxref("Reflect.apply()")}} 메서드를 사용하여 `this` 값을 명시적으로 설정할 수도 있습니다. {{jsxref("Function.prototype.bind()")}}를 사용하면, 함수가 어떻게 호출되든 변하지 않는 특정 `this` 값을 가진 새 함수를 생성할 수 있습니다. 이때, 함수가 비엄격 모드라면 앞서 설명한 this 치환(this substitution) 규칙이 여전히 적용됩니다.
 
 #### 콜백
 
-함수가 콜백으로 전달될 때, `this`의 값은 콜백이 어떻게 호출되는지에 따라 달라집니다. 이 호출 방식은 API를 구현한 사람이 결정합니다. 콜백은 일반적으로 어떤 객체에도 붙이지 않고 직접 호출되므로, `this` 값이 `undefined`로 전달되는 경우가 많습니다. 즉, 함수가 비엄격 모드라면, `this`는 전역 객체([`globalThis`](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis))를 가리키게 됩니다. 이러한 경우는 배열의 [반복 메서드(iterative array methods)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드), [`Promise()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 생성자 등이 해당합니다.
+함수가 콜백으로 전달될 때, `this`의 값은 콜백이 어떻게 호출되는지에 따라 달라집니다. 이 호출 방식은 API를 구현한 사람이 결정합니다. 콜백은 일반적으로 어떤 객체에도 붙이지 않고 직접 호출되므로, `this` 값이 `undefined`로 전달되는 경우가 많습니다. 즉, 함수가 비엄격 모드라면, `this`는 전역 객체({{jsxref("globalThis")}})를 가리키게 됩니다. 이러한 경우는 배열의 [반복 메서드(iterative array methods)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드), [`Promise()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 생성자 등이 해당합니다.
 
 ```js
 function logThis() {
@@ -141,14 +141,14 @@ function logThis() {
 [1, 2, 3].forEach(logThis); // undefined, undefined, undefined
 ```
 
-일부 API에서는 콜백을 호출할 때 사용할 `this` 값을 설정할 수 있습니다. 예를 들어, 모든 배열 반복 메서드와 [`Set.prototype.forEach()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach) 같은 관련 메서드는 선택적인 `thisArg` 매개변수를 받아 `this` 값을 지정할 수 있습니다.
+일부 API에서는 콜백을 호출할 때 사용할 `this` 값을 설정할 수 있습니다. 예를 들어, 모든 배열 반복 메서드와 {{jsxref("Set.prototype.forEach()")}} 같은 관련 메서드는 선택적인 `thisArg` 매개변수를 받아 `this` 값을 지정할 수 있습니다.
 
 ```js
 [1, 2, 3].forEach(logThis, { name: "obj" });
 // { name: 'obj' }, { name: 'obj' }, { name: 'obj' }
 ```
 
-때때로 콜백은 `undefined`가 아닌 다른 `this` 값과 함께 호출되기도 합니다. 예를 들어, [`JSON.parse()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)의 `reviver` 매개변수와 [`JSON.stringify()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)의 `replacer` 매개변수는 해당 속성이 속한 객체를 `this`로 설정한 상태에서 호출됩니다.
+때때로 콜백은 `undefined`가 아닌 다른 `this` 값과 함께 호출되기도 합니다. 예를 들어, {{jsxref("JSON.parse()")}}의 `reviver` 매개변수와 {{jsxref("JSON.stringify()")}}의 `replacer` 매개변수는 해당 속성이 속한 객체를 `this`로 설정한 상태에서 호출됩니다.
 
 #### 화살표 함수
 
@@ -179,7 +179,7 @@ console.log(boundFoo() === globalObject); // true
 
 #### 생성자
 
-함수가 생성자로 사용될 때([`new`](/ko/docs/Web/JavaScript/Reference/Operators/new) 키워드와 함께), `this`는 생성 중인 새로운 객체에 바인딩됩니다. 이때, 생성자 함수가 어떤 객체의 속성으로 접근되었는지는 상관없습니다. `this`의 값은 `new` 표현식의 값이 되지만, 생성자 함수가 다른 비원시 값을 반환하면 그 값이 대신 반환됩니다.
+함수가 생성자로 사용될 때({{jsxref("Operators/new", "new")}} 키워드와 함께), `this`는 생성 중인 새로운 객체에 바인딩됩니다. 이때, 생성자 함수가 어떤 객체의 속성으로 접근되었는지는 상관없습니다. `this`의 값은 `new` 표현식의 값이 되지만, 생성자 함수가 다른 비원시 값을 반환하면 그 값이 대신 반환됩니다.
 
 ```js
 function C() {
@@ -202,7 +202,7 @@ console.log(o.a); // 38
 
 #### super
 
-함수가 `super.method()` 형태로 호출될 때, 메서드 내부의 `this`는 `super.method()` 호출 주변의 `this` 값과 동일합니다. 대부분 이 `this` 값은 `super`가 참조하는 객체와 같지 않습니다. 이는 `super.method`가 위에서 설명한 일반 객체 멤버 접근과 달리, 특수한 문법이며 다른 바인딩 규칙을 가지기 때문입니다. 자세한 예시는 [`super`](/ko/docs/Web/JavaScript/Reference/Operators/super#super에서_메서드_호출)를 참고하세요.
+함수가 `super.method()` 형태로 호출될 때, 메서드 내부의 `this`는 `super.method()` 호출 주변의 `this` 값과 동일합니다. 대부분 이 `this` 값은 `super`가 참조하는 객체와 같지 않습니다. 이는 `super.method`가 위에서 설명한 일반 객체 멤버 접근과 달리, 특수한 문법이며 다른 바인딩 규칙을 가지기 때문입니다. 자세한 예시는 {{jsxref("Operators/super", "super()")}}를 참고하세요.
 
 ### 클래스 컨텍스트
 
@@ -260,7 +260,7 @@ new Bad(); // ReferenceError: 파생 클래스에서는 this에 접근하거나 
 
 전역 실행 컨텍스트(함수나 클래스 외부, [블록](/ko/docs/Web/JavaScript/Reference/Statements/block) 안이나 전역 스코프에서 정의된 [화살표 함수](/ko/docs/Web/JavaScript/Reference/Operators/this#생성자) 안 포함)에서 `this`의 값은 스크립트가 실행되는 실행 컨텍스트에 따라 달라집니다. [콜백](/ko/docs/Web/JavaScript/Reference/Operators/this#콜백)과 마찬가지로, `this` 값은 런타임 환경(호출자)에 의해 결정됩니다.
 
-스크립트 최상위 수준에서는, 엄격 모드 여부와 상관없이 `this`는 항상 [`globalThis`](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis)를 가리킵니다. 이는 일반적으로 전역 객체와 동일합니다. 예를 들어 HTML [`<script>`](/ko/docs/Web/HTML/Reference/Elements/script) 요소 안에서 스크립트를 실행하면 `this === window`가 됩니다.
+스크립트 최상위 수준에서는, 엄격 모드 여부와 상관없이 `this`는 항상 {{jsxref("globalThis")}}를 가리킵니다. 이는 일반적으로 전역 객체와 동일합니다. 예를 들어 HTML [`<script>`](/ko/docs/Web/HTML/Reference/Elements/script) 요소 안에서 스크립트를 실행하면 `this === window`가 됩니다.
 
 > **참고:** `globalThis`는 일반적으로 전역 객체와 동일한 개념입니다. 즉, `globalThis`에 프로퍼티를 추가하면 전역 변수가 됩니다. 브라우저와 Node.js에서는 이 규칙이 적용됩니다. 하지만 호스트 환경에 따라, 전역 객체와 관련 없는 다른 값을 `globalThis`로 제공할 수도 있습니다.
 
@@ -345,7 +345,7 @@ add.apply(o, [10, 20]); // 34
 
 ### this와 객체 변환
 
-비엄격 모드에서는, 함수가 객체가 아닌 값을 `this`로 호출하면, `this` 값이 객체로 치환됩니다. `null`과 `undefined`는 `globalThis`로 변환됩니다. 숫자, 문자열 같은 원시 값(`7`, `'foo'`)은 관련 생성자를 사용해 객체로 변환됩니다. 따라서 숫자 `7`은 [`Number`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number) 래퍼 클래스로 변환되고 문자열 `'foo'`는 [`String`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String) 래퍼 클래스로 변환됩니다.
+비엄격 모드에서는, 함수가 객체가 아닌 값을 `this`로 호출하면, `this` 값이 객체로 치환됩니다. `null`과 `undefined`는 `globalThis`로 변환됩니다. 숫자, 문자열 같은 원시 값(`7`, `'foo'`)은 관련 생성자를 사용해 객체로 변환됩니다. 따라서 숫자 `7`은 {{jsxref("Number")}} 래퍼 클래스로 변환되고 문자열 `'foo'`는 {{jsxref("String")}} 래퍼 클래스로 변환됩니다.
 
 ```js
 function bar() {
@@ -558,4 +558,4 @@ with (obj) {
 ## 같이 보기
 
 - [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)
-- [globalThis](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+- {{jsxref("globalThis")}}
