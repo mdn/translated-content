@@ -22,7 +22,6 @@ Lorsque vous avez un changement de contenu qui implique une insertion _et_ une s
 </p>
 ```
 
-
 On peut même fournir une boîte d'information indiquant qui a fait la suggestion et quand, et l'associer à la suggestion via [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)&nbsp;:
 
 ```html
