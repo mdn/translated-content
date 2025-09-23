@@ -52,7 +52,6 @@ Lorsque vous souhaitez contribuer au projet MDN, vous pouvez vous trouver dans l
 
 Si vous ne savez pas par où commencer, contactez-nous sur [le serveur Discord](/fr/docs/MDN/Community/Communication_channels) et demandez un retour.
 
-
 ### Ouvrir une requête de tirage
 
 Lorsque vous êtes prêt·e à ouvrir une requête de tirage, suivez ces recommandations&nbsp;:
