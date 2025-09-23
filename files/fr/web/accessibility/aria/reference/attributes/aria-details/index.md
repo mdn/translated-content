@@ -53,7 +53,9 @@ Pour les rôles de définition et de terme, `aria-details` serait ajouté sur l'
   href="bezierExplanation.html"
   id="bezImg"
   aria-label="Explication de la courbe de Bézier dans les fonctions d'assouplissement CSS">
-  <img alt="Courbe de Bézier animée montrant 4 points de contrôle." src="bezier.gif" />
+  <img
+    alt="Courbe de Bézier animée montrant 4 points de contrôle."
+    src="bezier.gif" />
 </a>
 ```
 
