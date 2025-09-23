@@ -9,11 +9,11 @@ l10n:
 Le rôle abstrait `range` est un type générique de rôle de structure représentant une plage de valeurs.
 
 > [!WARNING]
-> Le rôle `range` est un [rôle abstrait](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). Il est inclus ici pour compléter la documentation. Il ne doit pas être utilisé par les auteurs web.
+> Le rôle `range` est un [rôle abstrait](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). Il est inclus ici pour compléter la documentation. Il ne doit pas être utilisé par les développeur·euse·s web.
 
 ## Description
 
-Le rôle `range` est un rôle abstrait. Il ne doit pas être utilisé par les auteurs web. Il est la superclasse des rôles structurels pour les éléments qui acceptent une valeur dans une plage de valeurs, y compris le rôle [`meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), le rôle [`progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role) et le rôle [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role). Pour ces trois rôles, envisagez d'utiliser l'élément {{HTMLElement("meter")}}, l'élément {{HTMLElement("progress")}} et l'élément {{HTMLElement("input/range")}}, respectivement.
+Le rôle `range` est un rôle abstrait. Il ne doit pas être utilisé par les développeur·euse·s web. Il est la superclasse des rôles structurels pour les éléments qui acceptent une valeur dans une plage de valeurs, y compris le rôle [`meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role), le rôle [`progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role) et le rôle [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role). Pour ces trois rôles, envisagez d'utiliser l'élément {{HTMLElement("meter")}}, l'élément {{HTMLElement("progress")}} et l'élément {{HTMLElement("input/range")}}, respectivement.
 
 ## Spécifications
 
