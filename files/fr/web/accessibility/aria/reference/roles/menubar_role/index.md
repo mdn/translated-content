@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-Le rôle `menubar` est une présentation de `menu` qui reste généralement visible et est généralement présenté horizontalement.
+Le rôle `menubar` est une présentation de `menu` qui reste généralement visible et présenté horizontalement.
 
 ## Description
 
