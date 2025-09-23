@@ -58,7 +58,9 @@ S'il y a plus d'un repère `region` dans un document, fournissez un label unique
 
 ```html
 <div role="region" aria-labelledby="use-discretion">
-  <h3 id="use-discretion">Veuillez utiliser le rôle `region` avec discernement</h3>
+  <h3 id="use-discretion">
+    Veuillez utiliser le rôle `region` avec discernement
+  </h3>
   <!-- contenu -->
 </div>
 
