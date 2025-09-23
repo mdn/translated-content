@@ -2,7 +2,7 @@
 title: :target
 slug: Web/CSS/:target
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: b460458fa125f4ee252d01466c1390d16ba19215
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) correspond au fragment d'identifiant de l'URI du document.
@@ -37,7 +37,7 @@ L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL pré
 
 ## Description
 
-Quand un document HTML est chargé, le navigateur définit son élément cible. L'élément est identifié à l'aide de l'identifiant de fragment d'URL. Sans l'identifiant de fragment d'URL, le document n'a pas d'élément cible. La pseudo-classe `:target` permet de mettre en forme l'élément cible du document. L'élément peut être mis au point, mis en surbrillance, animé, etc.
+Quand un document HTML est chargé, le navigateur définit son élément cible. L'élément est identifié à l'aide de l'identifiant de fragment d'URL. Sans l'identifiant de fragment d'URL, le document n'a pas d'élément cible. La pseudo-classe `:target` permet de mettre en forme l'élément cible du document. L'élément peut être mis au point, mis en évidence, animé, etc.
 
 L'élément cible est défini au chargement du document et lors des appels de méthodes [`history.back()`](/fr/docs/Web/API/History/back), [`history.forward()`](/fr/docs/Web/API/History/forward) et [`history.go()`](/fr/docs/Web/API/History/forward). Mais il n'est _pas_ modifié lorsque les méthodes [`history.pushState()`](/fr/docs/Web/API/History/pushState) et [`history.replaceState()`](/fr/docs/Web/API/History/replaceState) sont appelées.
 
@@ -48,7 +48,7 @@ L'élément cible est défini au chargement du document et lors des appels de m�
 
 ### Une table des matières
 
-La pseudo-classe `:target` peut être utilisée pour mettre en surbrillance la partie d'une page qui a été liée à partir d'une table des matières.
+La pseudo-classe `:target` peut être utilisée pour mettre en évidence la partie d'une page qui a été liée à partir d'une table des matières.
 
 #### HTML
 
@@ -90,7 +90,7 @@ p:target::before {
   margin-right: 0.25em;
 }
 
-/* Met en surbrillance les éléments en italique dans l'élément cible */
+/* Met en évidence les éléments en italique dans l'élément cible */
 p:target i {
   color: red;
 }
@@ -111,3 +111,4 @@ p:target i {
 ## Voir aussi
 
 - [Utiliser la pseudo-classe `:target` dans les sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- {{cssxref("::target-text")}} (pour mettre en évidence les fragments de texte)
