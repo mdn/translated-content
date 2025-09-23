@@ -24,7 +24,7 @@ Si vous ne voyez pas de barre de défilement actuellement, c'est peut‑être pa
 
 ### Rôle ARIA `scrollbar`
 
-Il est toujours préférable d'utiliser les barres de défilement natives. Vous pouvez utiliser la propriété CSS {{CSSXref('overflow')}} pour garantir l'apparition des barres de défilement natives. Une spécification CSS pour les barres de défilement est en cours d'élaboration&nbsp;: <https://drafts.csswg.org/css-scrollbars/>. Certains navigateurs autorisent [le style des barres via des pseudo-éléments préfixés](/fr/docs/Web/CSS/::-webkit-scrollbar).
+Il est toujours préférable d'utiliser les barres de défilement natives. Vous pouvez utiliser la propriété CSS {{CSSXref('overflow')}} pour garantir l'apparition des barres de défilement natives. Une [spécification CSS pour les barres de défilement <sup>(angl.)</sup>](https://drafts.csswg.org/css-scrollbars/) est en cours d'élaboration. Certains navigateurs autorisent [le style des barres via des pseudo-éléments préfixés](/fr/docs/Web/CSS/::-webkit-scrollbar).
 
 Comme le style des barres natives a historiquement été limité, vous pouvez rencontrer des barres de défilement implémentées en JavaScript que vous devez prendre en charge et rendre totalement accessibles. Pour cela, vous pouvez utiliser le rôle `scrollbar` afin d'indiquer aux technologies d'assistance qu'un contrôle d'interface utilisateur est une barre de défilement interactive.
 
@@ -165,9 +165,9 @@ Le CSS ci‑dessus force l'apparition d'une barre de défilement native lorsque 
 - L'élément HTML {{HTMLElement('progress')}}
 - L'élément HTML {{HTMLElement('meter')}}
 - Autres widgets de type range&nbsp;:
-- [ARIA&nbsp;: rôle `meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
-- [ARIA&nbsp;: rôle `slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
-- [ARIA&nbsp;: rôle `separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (si focalisable)
-- [ARIA&nbsp;: rôle `progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
-- [ARIA&nbsp;: rôle `spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+  - [ARIA&nbsp;: rôle `meter`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
+  - [ARIA&nbsp;: rôle `slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+  - [ARIA&nbsp;: rôle `separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (si sélectionnable)
+  - [ARIA&nbsp;: rôle `progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
+  - [ARIA&nbsp;: rôle `spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
 - [Événement `scroll` du Document](/fr/docs/Web/API/Document/scroll_event)
