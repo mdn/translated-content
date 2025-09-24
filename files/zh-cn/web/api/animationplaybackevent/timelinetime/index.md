@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-{{domxref("AnimationPlaybackEvent")}} 接口的 **`timelineTime`** 只读属性表示事件排队时动画的{{domxref("AnimationTimeline", "时间线", "", 1)}}的时间值。如果生成事件时动画未与时间线关联，或者关联的时间线处于非活动状态，则该值将为未解析状态。
+{{domxref("AnimationPlaybackEvent")}} 接口的 **`timelineTime`** 只读属性表示事件排队时动画的{{domxref("AnimationTimeline", "时间线", "", 1)}}的时间值。如果生成事件时动画未与时间线关联，或者关联的时间线处于非活动状态，则该值将为未兑现状态。
 
 ## 值
 
