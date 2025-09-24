@@ -44,7 +44,7 @@ Vous pouvez en général choisir n'importe quel nom (même avec des emojis), mai
 
 Les mots-clés prédéfinis sont des valeurs textuelles définies par la spécification pour une propriété donnée. Ces mots-clés sont aussi des identifiants CSS, donc ils s'utilisent sans guillemets.
 
-Dans la syntaxe des valeurs de propriété CSS (dans la spécification ou sur MDN), les mots-clés autorisés sont listés ainsi. Les valeurs {{glossary("énumérées")}} suivantes sont les mots-clés autorisés pour {{cssxref("float")}}&nbsp;:
+Dans la syntaxe des valeurs de propriété CSS (dans la spécification ou sur MDN), les mots-clés autorisés sont listés ainsi. Les valeurs {{glossary("enumerated", "énumérées")}} suivantes sont les mots-clés autorisés pour {{cssxref("float")}}&nbsp;:
 
 ```plain
 left | right | none | inline-start | inline-end
