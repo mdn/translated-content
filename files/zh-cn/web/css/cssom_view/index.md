@@ -116,7 +116,7 @@ l10n:
 
 ## 指南
 
-- [坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [坐标系](/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : 用于指定显示上下文中位置的坐标系系统，包括：显示器窗口坐标系、移动设备视口坐标系以及打印纸张位置坐标系。
 - [视口概念](/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts)
   - : 视口的概念解析：涵盖视口的本质定义，对 CSS、SVG 和移动设备的影响，以及可视视口与布局视口的关键区别。

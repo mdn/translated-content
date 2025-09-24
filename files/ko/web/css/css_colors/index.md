@@ -126,4 +126,4 @@ l10n:
 - [`VideoColorSpace`](/ko/docs/Web/API/VideoColorSpace) 인터페이스
 - SVG [`<feColorMatrix>`](/ko/docs/Web/SVG/Element/feColorMatrix) 요소
 - [Canvas API: 스타일과 색상 적용](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
-- [색상 선택 도구](/ko/docs/Web/CSS/CSS_colors/Color_picker_tool): 이 도구는 사용자 정의 색상을 만들고, 조정하고 실험하는 것을 쉽게 만들어줍니다.
+- [색상 선택 도구](/ko/docs/Web/CSS/CSS_colors/Color_picker): 이 도구는 사용자 정의 색상을 만들고, 조정하고 실험하는 것을 쉽게 만들어줍니다.

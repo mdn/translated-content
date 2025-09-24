@@ -1,30 +1,28 @@
 ---
-title: 論理積 (&&)
+title: 論理積演算子 (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 l10n:
-  sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
-
-論理積 (`&&`) 演算子 (論理結合) を一組の論理型のオペランドに対して使用すると、すべてのオペランドが `true` である場合にのみ `true` になります。それ以外の場合は `false` になります。
+**論理積演算子 (`&&`)** （論理結合）を一連の論理型のオペランドに対して使用すると、すべてのオペランドが `true` である場合にのみ `true` になります。それ以外の場合は `false` になります。
 
 一般的には、この演算子は左から右に向けて評価した際に最初の{{Glossary("falsy", "偽値")}}のオペランドに遭遇したときにはその値を、またはすべてが{{Glossary("truthy", "真値")}}であった場合は最後のオペランドの値を返します。
 
-{{InteractiveExample("JavaScript デモ: Expressions - Logical AND", "shorter")}}
+{{InteractiveExample("JavaScript デモ: 論理積演算子 (&&)", "shorter")}}
 
 ```js interactive-example
 const a = 3;
 const b = -2;
 
 console.log(a > 0 && b > 0);
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文
 
-```js
-x && y;
+```js-nolint
+x && y
 ```
 
 ## 解説
@@ -50,8 +48,8 @@ result = 2 && 0; // result には 0 が代入される
 result = "foo" && 4; // result には 4 が代入される
 ```
 
-`&&` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#boolean_type)に変換することが可能であるため、論理演算子と見なすことができます。
-返値（または一般的な式）を対応する論理値に明示的に変換するには、二重の[否定演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT)または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
+`&&` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)に変換することが可能であるため、論理演算子と見なすことができます。
+返値（または一般的な式）を対応する論理値に明示的に変換するには、二重の[否定演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT)または {{jsxref("Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
 ### 短絡評価
 
@@ -60,7 +58,7 @@ result = "foo" && 4; // result には 4 が代入される
 
 以下の擬似コードを考えてみてください。
 
-```
+```plain
 (偽値の式) && expr
 ```
 
@@ -86,12 +84,12 @@ console.log(A() && B());
 
 ### 演算子の優先順位
 
-AND 演算子は OR 演算子よりも高い優先順位を持つので、 `&&` 演算子は `||` 演算子よりも先に実行されます（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を参照）。
+論理積演算子は論理和演算子よりも高い優先順位を持つので、 `&&` 演算子は `||` 演算子よりも先に実行されます（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を参照）。
 
 ```js-nolint
-true || false && false; // true を返す
-true && (false || false); // false を返す
-(2 === 3) || (4 < 0) && (1 === 1); // false を返す
+true || false && false; // true
+true && (false || false); // false
+(2 === 3) || (4 < 0) && (1 === 1); // false
 ```
 
 ## 例
@@ -114,7 +112,7 @@ a9 = false && ""; // f && f で false を返す
 
 ### 論理型の変換規則
 
-#### AND から OR への変換
+#### 論理積から論理和への変換
 
 **論理型**に関する以下の操作は、
 
@@ -128,7 +126,7 @@ bCondition1 && bCondition2
 !(!bCondition1 || !bCondition2)
 ```
 
-#### OR から AND への変換
+#### 論理和から論理積への変換
 
 **論理型**に関する以下の操作は、
 

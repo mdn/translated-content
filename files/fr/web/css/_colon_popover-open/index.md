@@ -2,10 +2,8 @@
 title: :popover-open
 slug: Web/CSS/:popover-open
 l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:popover-open`** représente un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément avec un attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)) qui est dans l'état ouvert. Vous pouvez l'utiliser pour appliquer un style aux éléments <i lang="en">popovers</i> uniquement lorsqu'ils sont affichés.
 
@@ -18,6 +16,14 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 ```
 
 ## Exemples
+
+### HTML
+
+```html
+<button popovertarget="monpopo">Afficher/masquer le popover</button>
+
+<div id="monpopo" popover="manual">Coucou ? Caché ?</div>
+```
 
 ### CSS
 
@@ -52,17 +58,9 @@ Pour surcharger les styles par défaut et faire apparaître le <i lang="en">popo
 }
 ```
 
-### HTML
-
-```html
-<button popovertarget="monpopo">Afficher/masquer le popover</button>
-
-<div id="monpopo" popover="manual">Coucou ? Caché ?</div>
-```
-
 ### Résultat
 
-{{EmbedLiveSample("","100%",150)}}
+{{EmbedLiveSample("exemples", "100%", 150)}}
 
 ## Spécifications
 
@@ -75,3 +73,4 @@ Pour surcharger les styles par défaut et faire apparaître le <i lang="en">popo
 ## Voir aussi
 
 - [L'API Popover](/fr/docs/Web/API/Popover_API)
+- L'attribut HTML global [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)

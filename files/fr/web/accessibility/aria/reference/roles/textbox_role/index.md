@@ -1,71 +1,126 @@
 ---
-title: Utiliser le rôle textbox
+title: "ARIA : rôle textbox"
+short-title: textbox
 slug: Web/Accessibility/ARIA/Reference/Roles/textbox_role
 original_slug: Web/Accessibility/ARIA/Roles/textbox_role
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{AccessibilitySidebar}}
+Le rôle `textbox` sert à identifier un élément qui permet la saisie de texte libre. Chaque fois que possible, préférez utiliser un élément {{HTMLElement("input")}} avec [type="text"](/fr/docs/Web/HTML/Reference/Elements/input/text) pour une saisie sur une seule ligne, ou un élément {{HTMLElement("textarea")}} pour une saisie sur plusieurs lignes.
 
-### Description
+## Description
 
-Cette technique présente l'utilisation du rôle [`textbox`](https://www.w3.org/TR/wai-aria/roles#textbox) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+Lorsqu'un élément possède le rôle `textbox`, le navigateur envoie un événement de zone de saisie accessible aux technologies d'assistance, qui peuvent alors en informer l'utilisateur·ice.
 
-Le rôle `textbox` est utilisé pour identifier un élément permettant la saisie d'un texte librement formaté. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement `textbox` accessible aux produits de technologie d'assistance qui pourront alors le notifier à l'utilisateur.
+Par défaut, il s'agit d'une saisie sur une seule ligne, où <kbd>Entrée</kbd> ou <kbd>Retour</kbd> soumet le formulaire&nbsp;: dans ce cas, il est préférable d'utiliser un élément HTML {{HTMLElement("input")}} avec `type="text"`. Pour créer une zone de texte multiligne qui prend en charge les retours à la ligne, comme avec un élément HTML {{HTMLElement("textarea")}}, définissez `aria-multiline="true"`. L'ajout de l'attribut HTML `contenteditable` garantit que le nœud texte est éditable.
 
-L'utilisation par défaut est pour un champ de saisie monoligne où <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, enverra le formulaire, par exemple, comme avec le HTML `<input type="text">`. Lorsqu'on a un champ multilignes et que les retours à la ligne sont pris en charge, par exemple avec l'utilisation d'un élément HTML `<textarea>`, il est également nécessaire de définir l'attribut `aria-multiline="true"`.
+```html
+<!-- Champ de saisie de texte -->
+<div id="txtboxLabel">Saisissez votre code postal à cinq chiffres</div>
+<div
+  role="textbox"
+  contenteditable="true"
+  aria-placeholder="Code postal à cinq chiffres"
+  aria-labelledby="txtboxLabel"></div>
 
-Lorsqu'un champ texte est en lecture seule, cela devrait être indiqué en utilisant l'attribut `aria-readonly="true"` sur l'élément concerné.
+<!-- Zone de texte multiligne -->
+<div id="txtboxMultilineLabel">Saisissez les balises pour l'article</div>
+<div
+  role="textbox"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labelledby="txtboxMultilineLabel"
+  aria-required="true"></div>
+```
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+Les éléments sémantiques sont plus concis et ne nécessitent aucun JavaScript pour prendre en charge les fonctionnalités de zone de saisie.
 
-Lorsque le rôle `textbox` est ajouté à un élément, ou qu'un tel élément devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+```html
+<label for="txtbox">Saisissez votre code postal à cinq chiffres</label>
+<input type="text" placeholder="Code postal à cinq chiffres" id="txtbox" />
 
-- Présenter l'élément comme ayant un rôle `textbox` à l'API d'accessibilité du système d'exploitation&nbsp;;
-- Déclencher un événement `textbox` accessible à l'aide de l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+<!-- Zone de texte multiligne -->
+<label for="txtboxMultiline">Saisissez les balises pour l'article</label>
+<textarea id="txtboxMultiline" required></textarea>
+```
 
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
+Si un champ de texte est en lecture seule, indiquez-le en définissant `aria-readonly="true"` sur l'élément.
 
-- Les lecteurs d'écran devraient annoncer son label et son rôle lorsque le focus est sur la boite de texte. Si elle contient également du contenu, il devrait être annoncé comme avec une boite de texte régulière&nbsp;;
-- Les loupes d'écran devraient agrandir la boite de texte.
+### Propriétés, états et rôles associés
+
+- l'attribut [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
+  - : Prend comme valeur l'id d'un descendant de l'élément ayant la sélection dans le DOM, ou d'un descendant logique indiqué par l'attribut [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns). Il indique quand cet élément a la sélection, notamment dans un widget composite comme un [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role). Par exemple, dans un combobox, la sélection peut rester sur la zone de saisie tandis que la valeur de `aria-activedescendant` sur l'élément textbox fait référence à un descendant d'une liste déroulante contrôlée par la zone de saisie. Cet attribut doit être mis à jour par programmation lors des changements de sélection.
+- l'attribut [`aria-autocomplete`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete)
+  - : Indique si et comment la saisie de l'utilisateur·ice dans le champ peut déclencher l'affichage d'une suggestion de valeur. Les valeurs possibles sont&nbsp;:
+    - `inline`&nbsp;: le texte prédit est inséré après le curseur.
+    - `list`&nbsp;: le texte prédit est présenté comme une liste de valeurs.
+    - `both`&nbsp;: le texte prédit est présenté comme une liste de valeurs, avec le texte nécessaire pour compléter une valeur inséré après le curseur.
+    - `none` (valeur par défaut)&nbsp;: aucune suggestion n'est proposée.
+
+    Si la valeur est `list` ou `both`, il faut aussi inclure les attributs [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) et [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup). La valeur de `aria-controls` est l'id de l'élément qui contient la liste des valeurs suggérées. De plus, la zone de saisie ou un élément parent avec le rôle `combobox` doit avoir une valeur pour `aria-haspopup` qui correspond au rôle de l'élément contenant la liste des valeurs suggérées.
+
+- l'attribut [`aria-multiline`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline)
+  - : Si `aria-multiline="true"` est défini, la technologie d'assistance informe l'utilisateur·ice que la zone de saisie accepte plusieurs lignes, avec l'attente que <kbd>Entrée</kbd> ou <kbd>Retour</kbd> crée un saut de ligne au lieu de soumettre le formulaire. ARIA ne modifie pas le comportement de l'élément&nbsp;: cette fonctionnalité doit être gérée par le·la développeur·euse. Si la valeur est `false` ou si l'attribut est omis (par défaut à `false`), l'utilisateur·ice s'attend à une saisie sur une seule ligne, et <kbd>Entrée</kbd> ou <kbd>Retour</kbd> soumet le formulaire.
+
+- l'attribut [`aria-placeholder`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder)
+  - : Représente une indication (mot ou expression) pour l'utilisateur·ice sur ce qu'il·elle doit saisir dans le champ. L'indication doit être une valeur exemple ou une brève description du format attendu. Cette information ne doit pas remplacer une étiquette&nbsp;: une étiquette est sélectionnable, permanente, indique le type d'information attendu et augmente la zone de sélection du contrôle, tandis que le texte d'indication n'est qu'une aide temporaire sur la valeur attendue, ce qui, si mal implémenté, peut réduire l'accessibilité. L'indication doit être visible lorsque la valeur du contrôle est une chaîne vide, par exemple lors de la première sélection ou quand l'utilisateur·ice efface une valeur précédemment saisie. Préférez l'attribut `placeholder` des éléments sémantiques `<input type="text">` ou `<textarea>` à `aria-placeholder`.
+- l'attribut [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
+  - : Indique que l'utilisateur·ice ne peut pas modifier la valeur du champ de texte. Préférez l'attribut `readonly` des éléments sémantiques `<input type="text">` ou `<textarea>` à `aria-readonly`.
+- l'attribut [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
+  - : Indique qu'une valeur doit être fournie avant la soumission du champ. Préférez l'attribut `required` des éléments sémantiques `<input type="text">` ou `<textarea>` à `aria-required`.
+
+### Interactions au clavier
+
+En saisie sur une seule ligne (quand `aria-multiline` vaut `false` ou n'est pas utilisé), la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> soumet le formulaire. En saisie multiligne (quand `aria-multiline` vaut `true`), la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> insère un saut de ligne.
+
+### Fonctionnalités JavaScript
+
+Toutes les fonctionnalités associées aux propriétés et états doivent être maintenues, et la soumission du formulaire sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> dans une zone de saisie sur une seule ligne doit être gérée.
+
+- Gestionnaire d'événement de sélection et attribut `aria-activedescendant`
+  - : Si vous implémentez un widget composite, comme une boîte combinée composée d'une zone de saisie et d'une liste déroulante, vous devez gérer l'attribut `aria-activedescendant` via un gestionnaire. Avant d'utiliser cette technique, assurez-vous que les navigateurs ciblés la prennent en charge. Voir la [spécification aria-descendant <sup>(angl.)</sup>](https://w3c.github.io/aria/#aria-activedescendant) pour plus d'informations.
 
 > [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> Il est préférable d'utiliser un élément {{HTMLElement("input")}} avec type="text", ou un élément {{HTMLElement("textarea")}} plutôt que le rôle ARIA textbox. Lorsque vous utilisez l'un de ces éléments sémantiques, le rôle ARIA textbox n'est pas nécessaire. Voir [Notes sur l'utilisation d'ARIA en HTML <sup>(angl.)</sup>](https://w3c.github.io/using-aria/).
 
-### Exemples
+## Effets possibles sur les agents utilisateur et les technologies d'assistance
 
-#### Exemple 1&nbsp;: ajout du rôle `textbox` dans le code HTML d'un champ de saisie monoligne `<input>`
+Lorsque le rôle `textbox` est ajouté à un élément, ou que cet élément devient visible, l'agent utilisateur doit&nbsp;:
 
-L'extrait de code ci-dessous montre comment le rôle `textbox` est ajouté directement dans le code source HTML.
+- Exposer l'élément comme ayant le rôle textbox dans l'API d'accessibilité du système d'exploitation.
+- Déclencher un événement de zone de saisie accessible via l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+
+Les produits de technologies d'assistance doivent écouter cet événement et en informer l'utilisateur·ice&nbsp;:
+
+- Les lecteurs d'écran doivent annoncer son étiquette et son rôle lors de la première sélection sur une zone de saisie. Si elle contient du contenu, celui-ci doit être annoncé comme pour une zone de saisie classique.
+- Les loupes d'écran peuvent agrandir la zone de saisie.
+
+> [!NOTE]
+> Les avis peuvent diverger sur la façon dont les technologies d'assistance doivent gérer cette technique. Les informations ci-dessus sont l'une de ces opinions et peuvent être vécues différemment.
+
+## Exemples
+
+### Exemple&nbsp;1&nbsp;: Ajouter le rôle dans le code HTML pour une saisie sur une seule ligne
+
+L'extrait ci-dessous montre comment le rôle textbox est ajouté directement dans le code source HTML.
 
 ```html
-<input type="text" role="textbox" value="Voici du texte" />
+<div role="textbox" contenteditable="true"></div>
 ```
 
-#### Exemple 2&nbsp;: ajout du rôle `textbox` dans le code HTML d'un champ de saisie multilignes `<textarea>`
+### Exemple&nbsp;2&nbsp;: Ajouter le rôle dans le code HTML pour une saisie multiligne
 
-L'extrait de code ci-dessous montre comment le rôle `textbox` est ajouté directement dans le code source HTML.
+L'extrait ci-dessous montre comment le rôle textbox est ajouté directement dans le code source HTML.
 
 ```html
-<textarea role="textbox" aria-multiline="true">
-  Voici du texte
-  …
-  sur plusieurs lignes.
-</textarea>
+<div role="textbox" contenteditable="true" aria-multiline="true"></div>
 ```
 
-#### Exemples concrets
+## Bonnes pratiques
 
-### Notes
+Veillez à ajouter l'attribut `contenteditable="true"` à l'élément HTML auquel ce rôle est appliqué. Faites-le même si vous définissez `aria-readonly` à `true`&nbsp;: ainsi, vous indiquez que le contenu serait éditable s'il n'était pas en lecture seule.
 
-- Les développeurs doivent connaitre la distinction qui existe entre les champs de saisie monolignes et les champs de saisie multilignes lorsqu'ils créent un champ&nbsp;;
-- Les champs en lecture seule devraient être indiqués avec l'attribut `aria-readonly`.
+## Voir aussi
 
-### Attributs ARIA utilisés
-
-- [textbox](https://www.w3.org/TR/wai-aria/roles#textbox).
-
-### Techniques ARIA connexes
-
-N/A
-
-### Autres ressources
+- [ARIA&nbsp;: rôle `search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

@@ -1,61 +1,42 @@
 ---
 title: :empty
 slug: Web/CSS/:empty
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:empty`** correspond à un élément qui n'a aucun enfant. Seules les feuilles de l'arbre et le texte (espaces inclus) sont pris en compte. Les commentaires, les attributs ou le contenu généré en CSS avec {{cssxref("content")}} n'ont pas d'influence sur le contenu de l'élément (autrement dit, si un élément ne contient que des commentaires, il sera considéré comme vide).
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:empty`** correspond à un élément qui n'a aucun enfant. Seules les feuilles de l'arbre et le texte (espaces inclus) sont pris en compte. Les commentaires, les attributs ou le contenu généré en CSS avec {{cssxref("content")}} n'ont pas d'influence sur le contenu de l'élément (autrement dit, si un élément ne contient que des commentaires, il sera considéré comme vide).
+{{InteractiveExample("Démonstration CSS&nbsp;: :empty", "tabbed-shorter")}}
 
-```css
-/* Cible tous les éléments <div> qui */
-/* n'ont pas de contenu */
+```css interactive-example
 div:empty {
-  background: lime;
+  outline: 2px solid deeppink;
+  height: 1em;
 }
+```
+
+```html interactive-example
+<p>Élément sans contenu :</p>
+<div></div>
+
+<p>Élément avec commentaire :</p>
+<div><!-- A comment --></div>
+
+<p>Élément avec élément imbriqué vide :</p>
+<div><p></p></div>
 ```
 
 > [!NOTE]
-> Avec CSS4 Selectors, le sélecteur `:empty` a été modifié afin de se comporter comme {{CSSxRef(":-moz-only-whitespace")}} mais, à l'heure actuelle, aucun navigateur ne prend en charge cette fonctionnalité.
+> Avec les [Sélecteurs en CSS Niveau 4 <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), le sélecteur `:empty` a été modifié afin de se comporter comme {{CSSxRef(":-moz-only-whitespace")}} mais, à l'heure actuelle, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Syntaxe
 
-{{csssyntax}}
-
-## Exemples
-
-### CSS
-
 ```css
-body {
-  display: flex;
-  justify-content: space-around;
-}
-
-.box {
-  background: red;
-  height: 100px;
-  width: 100px;
-}
-
-.box:empty {
-  background: blue;
+:empty {
+  /* ... */
 }
 ```
-
-### HTML
-
-```html
-<div class="box"><!-- Je serai bleu. --></div>
-<div class="box">Je serai rouge.</div>
-<div class="box">
-  <!-- Je serai rouge à cause des espaces autour du commentaire -->
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples','100%','105')}}
 
 ## Accessibilité
 
@@ -73,6 +54,48 @@ Le texte fournissant le nom accessible peut être masqué grâce [à des propri�
 
   [<i lang="en">Understanding Success Criterion 2.4.4</i> (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 
+## Exemples
+
+### HTML
+
+```html
+<div class="box"><!-- Je serai verte. --></div>
+<div class="box">Je serai rose.</div>
+<div class="box">
+  <!-- Je serai rose à cause des espaces autour du commentaire -->
+</div>
+<div class="box">
+  <p>
+    <!-- Je serai rose dans tous les navigateurs à cause des espaces non réductibles et des éléments autour de ce commentaire. -->
+  </p>
+</div>
+```
+
+### CSS
+
+```css hidden
+body {
+  display: flex;
+  justify-content: space-around;
+}
+```
+
+```css
+.box {
+  background: pink;
+  height: 80px;
+  width: 80px;
+}
+
+.box:empty {
+  background: lime;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample('Exemples','100%','105')}}
+
 ## Spécifications
 
 {{Specifications}}
@@ -83,4 +106,5 @@ Le texte fournissant le nom accessible peut être masqué grâce [à des propri�
 
 ## Voir aussi
 
-- {{cssxref(":blank")}}{{Experimental_inline}}
+- {{CSSxRef(":-moz-only-whitespace")}} — L'implémentation des {{glossary("Vendor_Prefix", "préfixes")}} dans les changements de [Selectors Level 4 <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#the-empty-pseudo)
+- {{CSSxRef(":blank")}}
