@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode statique **`Date.parse()`** analyse la représentation sous forme de chaîne de caractères d'une date et renvoie l'[horodatage](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) correspondant.
+La méthode statique **`Date.parse()`** analyse la représentation sous forme de chaîne de caractères d'une date et renvoie l'[horodatage](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#le_format_epoch_les_horodatages_et_les_dates_invalides) correspondant.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Date.parse()")}}
 
@@ -32,11 +32,11 @@ Date.parse(dateString)
 ### Paramètres
 
 - `dateString`
-  - : Une chaîne de caractères (`string`) au [format date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format). Voir la référence liée pour les précautions concernant l'utilisation de différents formats.
+  - : Une chaîne de caractères (`string`) au [format date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_date_et_heure). Voir la référence liée pour les précautions concernant l'utilisation de différents formats.
 
 ### Valeur de retour
 
-Un nombre représentant l'[horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) de la date donnée. Si `dateString` ne peut pas être analysé comme une date valide, {{jsxref("NaN")}} est renvoyé.
+Un nombre représentant l'[horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#le_format_epoch_les_horodatages_et_les_dates_invalides) de la date donnée. Si `dateString` ne peut pas être analysé comme une date valide, {{jsxref("NaN")}} est renvoyé.
 
 ## Description
 
@@ -44,7 +44,7 @@ Cette fonction est utile pour définir des valeurs de date à partir de chaînes
 
 Les formats que `parse()` peut traiter ne sont pas explicitement spécifiés, mais il existe quelques {{Glossary("invariant", "invariants")}}&nbsp;:
 
-- Le [format de chaîne de caractères date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) (produit par {{jsxref("Date/toISOString", "toISOString()")}}) doit être pris en charge.
+- Le [format de chaîne de caractères date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_date_et_heure) (produit par {{jsxref("Date/toISOString", "toISOString()")}}) doit être pris en charge.
 - Si `x` est un objet Date dont la valeur en millisecondes est zéro, alors `x.valueOf()` doit être égal à l'une des valeurs suivantes&nbsp;: `Date.parse(x.toString())`, `Date.parse(x.toUTCString())`, `Date.parse(x.toISOString())`. Cela signifie que les formats produits par {{jsxref("Date/toString", "toString()")}} et {{jsxref("Date/toUTCString", "toUTCString()")}} doivent aussi être pris en charge.
 - La spécification _n'exige pas_ la prise en charge du format produit par {{jsxref("Date/toLocaleString", "toLocaleString()")}}. Cependant, les principaux moteurs essaient tous de prendre en charge le format `toLocaleString("en-US")`.
 
