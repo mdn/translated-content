@@ -27,7 +27,7 @@ getDevices()
 ## 异常
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果由于[安全问题](/zh-CN/docs/Web/API/Web_Bluetooth_API#security_considerations)，例如在当前文档的访问被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy) 指令 {{HTTPHeader("Permissions-Policy/bluetooth","bluetooth")}} 阻止时调用，则会抛出此异常。
+  - : 如果由于[安全问题](/zh-CN/docs/Web/API/Web_Bluetooth_API#security_considerations)，例如在当前文档的访问被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)指令 {{HTTPHeader("Permissions-Policy/bluetooth","bluetooth")}} 阻止时调用，则会抛出此异常。
 
 ## 规范
 
