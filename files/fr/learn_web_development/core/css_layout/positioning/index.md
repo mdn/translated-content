@@ -394,9 +394,8 @@ Voici maintenant l'exemple terminé où vous devriez voir le paragraphe vert par
   <span
     >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
     du texte</span
-  >&nbsp;;
-  sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image
-  le fait&nbsp;:
+  >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
+  cette image le fait&nbsp;:
   <img
     src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
     alt="un extrait de tissu" />
