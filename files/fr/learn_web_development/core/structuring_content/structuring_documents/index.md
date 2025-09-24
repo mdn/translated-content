@@ -211,7 +211,8 @@ Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément séman
   Le Roi retourna ivre à sa chambre à une heure, la bière ne l'aidant en rien
   alors qu'il titubait en travers de la porte
   <span class="editor-note">
-    [Note du rédacteur&nbsp;: Pour cette scène, la lumière doit être faible].</span
+    [Note du rédacteur&nbsp;: Pour cette scène, la lumière doit être
+    faible].</span
   >
 </p>
 ```
