@@ -95,7 +95,7 @@ measureUserAgentSpecificMemory()
 
 `measureUserAgentSpecificMemory()` API는 메모리 사용량 데이터를 집계하여 메모리 누수를 찾는 데 도움을 줍니다. 이는 메모리 회귀 탐지나 기능의 메모리 영향을 평가하기 위한 A/B 테스트에 사용할 수 있습니다. 이 메서드를 한 번만 호출하기보다는, 세션 기간 동안 메모리 사용량이 어떻게 변화하는지 추적하기 위해 주기적으로 호출하는 것이 좋습니다.
 
-The `byte` values this API returns aren't comparable across browsers or between different versions of the same browser as these are highly implementation 이 API가 반환하는 `byte` 값은 구현에 크게 의존하기 때문에 브라우저 간이나 동일한 브라우저의 다른 버전 간에 비교할 수 없습니다. 또한 `breakdown` 과 `attribution` 배열이 제공되는 방식도 브라우저에 따라 다릅니다. 이 데이터에 대해 어떤 가정도 하드코딩하지 않는 것이 가장 좋습니다. 이 API는 데이터를 집계하고 샘플 간의 차이를 분석하기 위해 (무작위 간격으로) 주기적으로 호출하도록 설계되었습니다.
+이 API가 반환하는 `byte` 값은 구현에 크게 의존하기 때문에 브라우저 간이나 동일한 브라우저의 다른 버전 간에 비교할 수 없습니다. 또한 `breakdown` 과 `attribution` 배열이 제공되는 방식도 브라우저에 따라 다릅니다. 이 데이터에 대해 어떤 가정도 하드코딩하지 않는 것이 가장 좋습니다. 이 API는 데이터를 집계하고 샘플 간의 차이를 분석하기 위해 (무작위 간격으로) 주기적으로 호출하도록 설계되었습니다.
 
 ## 보안 요구사항
 
