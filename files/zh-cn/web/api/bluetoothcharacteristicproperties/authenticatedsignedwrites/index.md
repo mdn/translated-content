@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-{{domxref("BluetoothCharacteristicProperties")}} 接口的只读属性 **`authenticatedSignedWrites`** 返回一个当允许对特征值进行签名写入时为为 `true` 的布尔值。
+{{domxref("BluetoothCharacteristicProperties")}} 接口的只读属性 **`authenticatedSignedWrites`** 返回一个当允许对特征值进行签名写入时为 `true` 的布尔值。
 
 ## 值
 
