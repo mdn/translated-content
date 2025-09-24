@@ -19,7 +19,7 @@ new CSSMathSum(values)
 ### 参数
 
 - `values`
-  - : 一个或多个数字（被包装为 `unit: "number"` 的 {{domxref("CSSUnitValue")}}）或 {{domxref("CSSNumericValue")}} 对象。
+  - : 一个或多个数字（被封装为具有 `unit: "number"` 的 {{domxref("CSSUnitValue")}}）或 {{domxref("CSSNumericValue")}} 对象。
 
 ## 规范
 
