@@ -1727,8 +1727,8 @@
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
 /fr/docs/Glossary/Reference	/fr/docs/Glossary/Object_reference
 /fr/docs/Glossary/Rendering_engine	/fr/docs/Glossary/Engine/Rendering
-/fr/docs/Glossary/Second-level_Domain	/fr/docs/conflicting/Glossary/SLD
-/fr/docs/Glossary/Self-Executing_Anonymous_Function	/fr/docs/conflicting/Glossary/IIFE
+/fr/docs/Glossary/Second-level_Domain	/fr/docs/Glossary/SLD
+/fr/docs/Glossary/Self-Executing_Anonymous_Function	/fr/docs/Glossary/IIFE
 /fr/docs/Glossary/Simple_header	/fr/docs/Glossary/CORS-safelisted_request_header
 /fr/docs/Glossary/Simple_response_header	/fr/docs/Glossary/CORS-safelisted_response_header
 /fr/docs/Glossary/Symbol	/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol

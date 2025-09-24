@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Un **en-tête de réponse simple** (ou un en-tête de réponse sécurisé [_CORS_](/en-US/docs/Web/HTTP/Guides/CORS)) est un [en-tête HTTP](/fr/docs/Web/HTTP/Reference/Headers) qui a été sécurisé pour ne pas être filtré lorsque les réponses sont traitées par CORS, car elles sont considérées comme sûres.
+Un **en-tête de réponse simple** (ou un en-tête de réponse sécurisé [_CORS_](/fr/docs/Web/HTTP/Guides/CORS)) est un [en-tête HTTP](/fr/docs/Web/HTTP/Reference/Headers) qui a été sécurisé pour ne pas être filtré lorsque les réponses sont traitées par CORS, car elles sont considérées comme sûres.
 
 Par défaut, la liste des réponses sûres inclut les en-têtes de réponse suivants&nbsp;:
 
