@@ -28,7 +28,9 @@ word-spacing: -0.4ch;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    街道上四处泥泞，像是洪水刚刚从大地上退去一般，倘若此时你在霍尔本山腰间遇上一只大约四十英尺长的斑龙，如同巨象一般横冲直撞地进入山中，那也不足为奇。
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
   </p>
 </section>
 ```
@@ -85,8 +87,8 @@ word-spacing: unset;
 ### HTML
 
 ```html
-<div id="mozdiv1">这是第一段句子。</div>
-<div id="mozdiv2">这是第二段句子。</div>
+<div id="mozdiv1">Lorem ipsum dolor sit amet.</div>
+<div id="mozdiv2">Lorem ipsum dolor sit amet.</div>
 ```
 
 ### CSS
