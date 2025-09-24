@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
-{{CSSRef}}
-
 **CSS** (pour <i lang="en">Cascading Style Sheets</i> en anglais), soit feuilles de style en cascade, est un langage de [feuille de style](/fr/docs/Web/API/StyleSheet) utilisé pour décrire la présentation d'un document écrit en [HTML](/fr/docs/Web/HTML) ou [XML](/fr/docs/Web/XML/Guides/XML_introduction) (y compris les dialects XML que sont [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML), ou [XHTML](/fr/docs/Glossary/XHTML)). CSS décrit la façon dont les éléments doivent être affichés à l'écran, sur papier, à l'oral ou sur d'autres médias.
 
 CSS est l'un des langages principaux du **Web ouvert** et a été standardisé [par le W3C](https://w3.org/Style/CSS/#specs). Auparavant, le développement des différentes parties de la spécification CSS était réalisé de façon synchrone, permettant d'avoir une version pour l'ensemble de la recommandation. Vous avez donc pu entendre parler de CSS1, CSS2.1, voire CSS3. Toutefois, il n'y aura pas de version CSS4 ou d'autres version globale numérotée de CSS.
@@ -71,5 +69,4 @@ La section [CSS - Apprendre le Web](/fr/docs/Learn_web_development/Core/Styling_
 
 ## Voir aussi
 
-- [Quelques démonstrations en CSS](/fr/docs/orphaned/Web/Demos#css)
 - Les langages du Web auxquels CSS s'applique&nbsp;: [HTML](/fr/docs/Web/HTML), [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML), [XHTML](/fr/docs/Glossary/XHTML), et [XML](/fr/docs/Web/XML/Guides/XML_introduction).
