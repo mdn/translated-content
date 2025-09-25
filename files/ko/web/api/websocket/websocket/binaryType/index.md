@@ -2,8 +2,8 @@
 title: "WebSocket: binaryType property"
 short-title: binaryType
 slug: Web/API/WebSocket/binaryType
-page-type: web-api-instance-property
-browser-compat: api.WebSocket.binaryType
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
 {{APIRef("WebSockets API")}}{{AvailableInWorkers}}
