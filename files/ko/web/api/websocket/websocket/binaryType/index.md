@@ -1,5 +1,5 @@
 ---
-title: "WebSocket: binaryType property"
+title: "WebSocket: binaryType 속성"
 short-title: binaryType
 slug: Web/API/WebSocket/binaryType
 l10n:
@@ -10,9 +10,9 @@ l10n:
 
 **`WebSocket.binaryType`** 속성은 WebSocket 연결을 통해 수신되는 이진 데이터의 유형을 제어합니다.
 
-## Value
+## 값
 
-A string:
+문자열:
 
 - `"blob"`
   - : 이진 데이터는 기본 값으로 {{domxref("Blob")}} 객체를 사용합니다.
@@ -41,7 +41,7 @@ socket.addEventListener("message", (event) => {
 });
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
