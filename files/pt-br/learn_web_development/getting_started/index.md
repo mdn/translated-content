@@ -1,8 +1,6 @@
 ---
 title: Módulos de introdução
 slug: Learn_web_development/Getting_started
-page-type: landing-page
-sidebar: learnsidebar
 l10n:
   sourceCommit: 6a5c619dfad295ca9a9d317a4088908cfd33e686
 ---
