@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}
 
-{{domxref("CSSTransformComponent")}} 接口的字符串化方法 **`toString()`** 返回一个 [CSS Transform](/zh-CN/docs/Web/CSS/CSS_transforms) 函数。
+{{domxref("CSSTransformComponent")}} 接口的{{Glossary("stringifier", "字符串化")}}方法 **`toString()`** 返回一个 [CSS Transform](/zh-CN/docs/Web/CSS/CSS_transforms) 函数。
 
 ## 语法
 
