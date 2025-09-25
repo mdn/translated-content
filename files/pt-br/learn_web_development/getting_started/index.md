@@ -50,11 +50,12 @@ primeiro.
 
 ## Veja também
 
-- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN learning partner_](/pt-BR/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
-- : O _Frontend Developer Career Path_ da [Scrimba](https://scrimba.com?via=mdn)
-  ensina tudo o que você precisa saber para ser uma pessoa desenvolvedora web
-  front-end competente, com lições e desafios interativos divertidos,
-  pessoas professoras experientes e uma comunidade de apoio.
-  Vá do zero até conseguir seu primeiro emprego front-end!
-  Muitos dos componentes do curso estão disponíveis como versões gratuitas
-  independentes.
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)
+  <sup>[_MDN learning partner_](/pt-BR/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : O _Frontend Developer Career Path_ da [Scrimba](https://scrimba.com?via=mdn)
+    ensina tudo o que você precisa saber para ser uma pessoa desenvolvedora web
+    front-end competente, com lições e desafios interativos divertidos,
+    pessoas professoras experientes e uma comunidade de apoio.
+    Vá do zero até conseguir seu primeiro emprego front-end!
+    Muitos dos componentes do curso estão disponíveis como versões gratuitas
+    independentes.
