@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}
 
-{{domxref("CSSPerspective")}} 接口的 **`length`** 属性用于设置 z=0 的距离。
+{{domxref("CSSPerspective")}} 接口的 **`length`** 属性用于设置到 z=0 的距离。
 
 它用于对元素及其内容应用透视变换。如果该值为 0 或负数，则不应用透视变换。
 
