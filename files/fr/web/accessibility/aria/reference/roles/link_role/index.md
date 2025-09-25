@@ -1,15 +1,16 @@
 ---
-title: "ARIA : le rôle link"
+title: "ARIA : rôle link"
+short-title: link
 slug: Web/Accessibility/ARIA/Reference/Roles/link_role
 original_slug: Web/Accessibility/ARIA/Roles/link_role
+l10n:
+  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
 ---
-
-{{AccessibilitySidebar}}
 
 Un rôle ARIA `link` fournit une référence interactive à une ressource. La ressource cible peut être externe ou locale, c'est-à-dire à l'intérieur ou à l'extérieur de la page ou de l'application active.
 
 > [!NOTE]
-> Dans la mesure du possible, il est recommandé d'utiliser un élément natif [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) plutôt que le rôle `link`, car les éléments natifs sont plus largement pris en charge par les agents utilisateurs et les technologies d'assistance. Les éléments natifs [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) prennent également en charge par défaut les exigences relatives au clavier et au ciblage, sans qu'il soit nécessaire de les personnaliser.
+> Dans la mesure du possible, il est recommandé d'utiliser un élément natif {{HTMLElement("a")}} plutôt que le rôle `link`, car les éléments natifs sont plus largement pris en charge par les agents utilisateurs et les technologies d'assistance. Les éléments natifs {{HTMLElement("a")}} prennent également en charge par défaut les exigences relatives au clavier et au ciblage, sans qu'il soit nécessaire de les personnaliser.
 
 ## Description
 
@@ -24,7 +25,7 @@ Utilisez l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/t
 
 ## Exemple
 
-Pour recréer un lien accessible en utilisant le rôle `link` sur un élément qui n'est pas un [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a), vous devez vous assurer que le lien reçoit la mise au point dans le bon ordre d'onglet, que l'élément ressemble à un lien, et que le «&nbsp;lien&nbsp;» se comporte comme un lien.
+Pour recréer un lien accessible en utilisant le rôle `link` sur un élément qui n'est pas un {{HTMLElement("a")}}, vous devez vous assurer que le lien reçoit la mise au point dans le bon ordre d'onglet, que l'élément ressemble à un lien, et que le «&nbsp;lien&nbsp;» se comporte comme un lien.
 
 ```html
 <span data-href="https://mozilla.org" tabindex="0" role="link">
@@ -81,11 +82,11 @@ Facultativement, <kbd>SHIFT</kbd> + <kbd>F10</kbd> ouvre un menu contextuel pour
 
 Les différents rôles sont utilisés pour définir des modèles interactifs communs. Semblable aux rôles document-structure, certains de ces rôles, y compris le rôle `link`, dupliquent la sémantique des éléments HTML natifs qui sont bien pris en charge et ne doivent pas être utilisés.
 
-Évitez d'utiliser `link`, que nous avons inclus par souci d'exhaustivité. L'équivalent sémantique [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) a une interactivité accessible qui est disponible et pris en charge.
+Évitez d'utiliser `link`, que nous avons inclus par souci d'exhaustivité. L'équivalent sémantique {{HTMLElement("a")}} a une interactivité accessible qui est disponible et pris en charge.
 
 ### Utilisez le HTML
 
-Utilisez de préférence l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a).
+Utilisez de préférence l'élément {{HTMLElement("a")}}.
 
 > [!NOTE]
 > Il n'est pas nécessaire d'inclure `role="lien"` sur un lien HTML, car l'élément `<a>`, a ce rôle par défaut.
@@ -96,7 +97,7 @@ Utilisez de préférence l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Element
 
 ## Voir aussi
 
-- L'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)
-- L'élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)
-- [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-- [Bonnes pratiques ARIA - Rôle `link` (en anglais)](https://www.w3.org/WAI/ARIA/apg/patterns/link/)
+- L'élément HTML {{HTMLElement("a")}}
+- L'élément HTML {{HTMLElement("button")}}
+- L'attribut ARIA [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [Bonnes pratiques ARIA - Rôle `link` <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/link/examples/link/)

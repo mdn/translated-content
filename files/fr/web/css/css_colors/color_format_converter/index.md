@@ -1,7 +1,7 @@
 ---
 title: Outil de sélection des couleurs
-slug: Web/CSS/CSS_colors/Color_picker
-original_slug: Web/CSS/CSS_colors/Color_picker_tool
+slug: Web/CSS/CSS_colors/Color_format_converter
+original_slug: Web/CSS/CSS_colors/Color_picker
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

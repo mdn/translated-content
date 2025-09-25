@@ -60,8 +60,8 @@ Unicode のコードポイントは `0` から `1114111` (`0x10FFFF`) までの�
 
 ```js
 const str = "𠮷𠮾";
-console.log(str.charAt(0)); // 55362、または d842、これは妥当な Unicode 文字ではない
-console.log(str.charAt(1)); // 57271、または dfb7、これは妥当な Unicode 文字ではない
+console.log(str.charCodeAt(0)); // 55362、または d842、これは妥当な Unicode 文字ではない
+console.log(str.charCodeAt(1)); // 57271、または dfb7、これは妥当な Unicode 文字ではない
 ```
 
 指定された位置の完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} を使用してください。

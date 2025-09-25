@@ -40,7 +40,7 @@ l10n:
 まず、HTML メール入力フィールドを定義し、その `aria-errormessage` 属性を `id` が `err1` の要素を参照するように設定します。
 次に、この ID を持つ `<span>` 要素を定義し、その中にエラーメッセージを含めます。
 
-```html
+```html-nolint
 <p>
   <label for="email">メールアドレス:</label>
   <input type="email" name="email" id="email" aria-errormessage="err1" />

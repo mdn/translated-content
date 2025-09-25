@@ -4724,7 +4724,8 @@
 /fr/docs/Web/CSS/CSS_Variables	/fr/docs/Web/CSS/CSS_cascading_variables
 /fr/docs/Web/CSS/CSS_animations/Tips	/fr/docs/Web/API/Web_Animations_API/Tips
 /fr/docs/Web/CSS/CSS_charsets	/fr/docs/Web/CSS/CSS_syntax
-/fr/docs/Web/CSS/CSS_colors/Color_picker_tool	/fr/docs/Web/CSS/CSS_colors/Color_picker
+/fr/docs/Web/CSS/CSS_colors/Color_picker	/fr/docs/Web/CSS/CSS_colors/Color_format_converter
+/fr/docs/Web/CSS/CSS_colors/Color_picker_tool	/fr/docs/Web/CSS/CSS_colors/Color_format_converter
 /fr/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/fr/docs/Glossary/Flexbox
 /fr/docs/Web/CSS/CSS_flow_layout	/fr/docs/Web/CSS/CSS_display/Flow_layout
 /fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow	/fr/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
