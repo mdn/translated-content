@@ -2,7 +2,7 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
+  sourceCommit: 7860297e91985460147c2bd6ced2bfa8cab5aba7
 ---
 
 {{APIRef("DOM")}}
@@ -141,12 +141,21 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : ウィンドウ階層における最上位のウィンドウへの参照を返します。このプロパティは読み取り専用です。
 - {{domxref("Window.trustedTypes")}} {{ReadOnlyInline}}
   - : グローバルオブジェクトに関連付けられた {{domxref("TrustedTypePolicyFactory")}} オブジェクトを返します。これは{{domxref("Trusted Types API", "信頼型 API", "", "nocode")}} を使用するためのエントリーポイントです。
+- {{domxref("Window.viewport")}} {{Experimental_inline}} {{ReadOnlyInline}}
+  - : {{domxref("Viewport")}} オブジェクトインスタンスを返します。これは、端末のビューポートの現在の状態に関する情報を提供します。
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
   - : 指定したウィンドウの視覚的なビューポートを表す {{domxref("VisualViewport")}} オブジェクトを返します。
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : 現在のウィンドウへの参照を返します。
 - `window[0]`、`window[1]` など
   - : フレーム内の `window` オブジェクトへの参照を返します。詳しくは {{domxref("Window.frames")}} をご覧ください。
+- 名前付きプロパティ
+  - : 文書内のいくつかの要素は、ウィンドウのプロパティとしても公開されています。
+    - それぞれの {{HTMLElement("embed")}}、{{HTMLElement("form")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("object")}} 要素については、その `name` が（空でないものは）公開されます。
+      例えば、文書に `<form name="my_form">` が含まれている場合、`window["my_form"]`（および同等の `window.my_form`）はその要素への参照を返します。
+    - それぞれの HTML 要素については、その `id` が（空でないものは）公開されます。
+
+    プロパティが単一の要素に対応している場合、その要素が直接返されます。プロパティが複数の要素に対応している場合、それらすべてを含む {{domxref("HTMLCollection")}} が返されます。いずれかの要素がナビゲーション可能な `<iframe>` または `<object>` である場合、代わりに最初の該当する iframe の {{domxref("HTMLIFrameElement/contentWindow", "contentWindow")}} が返されます。
 
 ### 非推奨のプロパティ
 
@@ -272,8 +281,6 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : ブラウザーで他の高負荷なタスクが完了した後に、関数を実行します。
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : ユーザーがウィンドウをリサイズできるかを切り替えます。
-- {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : モーダルダイアログを表示します。
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : ノードの座標系からページの座標系へ {{domxref("WebKitPoint")}} を変換します。
 - {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -291,18 +298,6 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : ウィンドウのサイズが変更されたときに発行されます。
 - {{domxref("Window/storage_event", "storage")}}
   - : ストレージ領域 (`localStorage` または `sessionStorage`) が他の文書のコンテキストから変更されたときに発生します。
-
-### クリップボードイベント
-
-- {{domxref("Window/copy_event", "copy")}}
-  - : ブラウザーのユーザーインターフェイスからユーザーがコピー操作を行ったときに発生します。
-    {{domxref("HTMLElement/copy_event", "oncopy")}} プロパティからも利用できます。
-- {{domxref("Window/cut_event", "cut")}}
-  - : ブラウザーのユーザーインターフェイスからユーザーが切り取り操作を行ったときに発生します。
-    {{domxref("HTMLElement/cut_event", "oncut")}} プロパティからも利用できます。
-- {{domxref("Window/paste_event", "paste")}}
-  - : ブラウザーのユーザーインターフェイスからユーザーが貼り付け操作を行ったときに発生します。
-    {{domxref("HTMLElement/paste_event", "onpaste")}} プロパティからも利用できます。
 
 ### 接続イベント
 
@@ -324,10 +319,8 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 
 - {{domxref("Window/blur_event", "blur")}}
   - : 要素がフォーカスを失ったときに発生します。
-    {{domxref("Window/blur_event", "onblur")}} プロパティからも利用できます。
 - {{domxref("Window/focus_event", "focus")}}
   - : 要素がフォーカスを得たときに発生します。
-    {{domxref("Window/focus_event", "onfocus")}} プロパティからも利用できます。
 
 ### ゲームパッドイベント
 
@@ -357,7 +350,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : ウィンドウ、文書、そのリソースがアンロードされるときに発生します。
 - {{domxref("Window/load_event", "load")}}
   - : スタイルシートや画像などの依存するすべてのリソースを含め、ページ全体の読み込みが完了したときに発生します。
-- {{domxref("Window/unload_event", "unload")}}
+- {{domxref("Window/unload_event", "unload")}} {{deprecated_inline}}
   - : 文書や子リソースがアンロードされるときに発生します。
 
 ### マニフェストイベント
@@ -444,7 +437,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("HTMLMediaElement/ended_event", "ended")}}
 - {{domxref("HTMLFormElement/formdata_event", "formdata")}}
 - {{domxref("Element/input_event", "input")}}
-- {{domxref("HTMLElement/invalid_event", "invalid")}}
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
 - {{domxref("Element/keydown_event", "keydown")}}
 - {{domxref("Element/keypress_event", "keypress")}}
 - {{domxref("Element/keyup_event", "keyup")}}
@@ -469,7 +462,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
 - {{domxref("HTMLMediaElement/seeked_event", "seeked")}}
 - {{domxref("HTMLMediaElement/seeking_event", "seeking")}}
-- {{domxref("Element/select_event", "select")}}
+- {{domxref("HTMLInputElement/select_event", "select")}}
 - {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}
 - {{domxref("HTMLMediaElement/stalled_event", "stalled")}}
 - {{domxref("HTMLFormElement/submit_event", "submit")}}
