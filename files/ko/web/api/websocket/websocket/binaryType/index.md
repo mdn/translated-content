@@ -19,7 +19,7 @@ l10n:
 - `"arraybuffer"`
   - : 이진 데이터는 {{jsxref("ArrayBuffer")}} 객체를 사용합니다.
 
-## Examples
+## 예제
 
 ```js
 // WebSocket 연결 생성
