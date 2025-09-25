@@ -66,7 +66,7 @@ moveBefore(movedNode, referenceNode)
 
 ### 状態を保持しながらのカスタム要素の移動
 
-[カズタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements) の DOM 内の位置が `Element.moveBefore()` や、{{domxref("Node.insertBefore()")}} などの類似メソッドによって変更されるたびに、その `disconnectedCallback()` および `connectedCallback()` ライフサイクルコールバックが発生します。これらのコールバックは通常、要素のライフサイクルの始まる時または終わりに実行する必要のある初期化やクリーンアップコードを実装するために使用されるため、要素が移動された時（除去されるまたは挿入される時ではなく）に実行すると、その状態に問題が発生することがあります。
+[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements) の DOM 内の位置が `Element.moveBefore()` や、{{domxref("Node.insertBefore()")}} などの類似メソッドによって変更されるたびに、その `disconnectedCallback()` および `connectedCallback()` ライフサイクルコールバックが発生します。これらのコールバックは通常、要素のライフサイクルの始まる時または終わりに実行する必要のある初期化やクリーンアップコードを実装するために使用されるため、要素が移動された時（除去されるまたは挿入される時ではなく）に実行すると、その状態に問題が発生することがあります。
 
 カスタム要素の状態を保持するには、`connectedMoveCallback()` コールバックを使用することができます。カスタム要素が移動される際に `moveBefore()` が使用された場合、 `connectedMoveCallback()` が `connectedCallback()` ヤ `disconnectedCallback()` の代わりに実行されます。
 
