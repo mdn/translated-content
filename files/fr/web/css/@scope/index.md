@@ -284,8 +284,7 @@ Dans cet exemple, nous utilisons deux blocs `@scope` distincts pour cibler les l
 <div class="light-scheme">
   <p>
     MDN contient beaucoup d'informations sur
-    <a href="/fr/docs/Web/HTML">HTML</a>,
-    <a href="/fr/docs/Web/CSS">CSS</a>, et
+    <a href="/fr/docs/Web/HTML">HTML</a>, <a href="/fr/docs/Web/CSS">CSS</a>, et
     <a href="/fr/docs/Web/JavaScript">JavaScript</a>.
   </p>
 </div>
