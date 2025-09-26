@@ -9,7 +9,7 @@ Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`page
 
 Ce descripteur facilite la mise en page et l'orientation des documents imprimés, en particulier lorsque les documents sont imprimés recto‑verso. L'utilisateur·rice peut préciser comment les pages seront tournées à l'impression. C'est utile pour disposer du contenu tel que des tableaux, qui peuvent être plus larges que le reste du document, dans une orientation différente.
 
-> [!NOTE]  
+> [!NOTE]
 > Les [boîtes de marge](/fr/docs/Web/CSS/@page#règles_de_marge) et les autres éléments positionnels n'interagissent pas spécialement avec ce descripteur. Les marges sont posées comme d'habitude sur la page non tournée, puis tournées avec le reste du contenu.
 
 ## Syntaxe
@@ -34,11 +34,11 @@ Ce descripteur facilite la mise en page et l'orientation des documents imprimés
 ## Valeurs
 
 - `upright`
-  -&nbsp;: Aucune orientation n'est appliquée&nbsp;; la page est mise en page et formatée comme d'habitude.  
+  -&nbsp;: Aucune orientation n'est appliquée&nbsp;; la page est mise en page et formatée comme d'habitude.
 - `rotate-left`
-  -&nbsp;: Après la mise en page, la page doit être affichée tournée d'un quart de tour vers la gauche (sens inverse des aiguilles d'une montre).  
+  -&nbsp;: Après la mise en page, la page doit être affichée tournée d'un quart de tour vers la gauche (sens inverse des aiguilles d'une montre).
 - `rotate-right`
-  -&nbsp;: Après la mise en page, la page doit être affichée tournée d'un quart de tour vers la droite (sens des aiguilles d'une montre).  
+  -&nbsp;: Après la mise en page, la page doit être affichée tournée d'un quart de tour vers la droite (sens des aiguilles d'une montre).
 
 ## Définition formelle
 
@@ -112,14 +112,18 @@ La seconde partie du code CSS déclare une règle de page nommée définie ci‑
 ```html hidden live-sample___rotating-pages
 <fieldset id="printStyle">
   <legend>
-    Cliquez sur «&nbsp;Imprimer&nbsp;». La page sera mise en page dans l'orientation définie.
+    Cliquez sur «&nbsp;Imprimer&nbsp;». La page sera mise en page
+    dans l'orientation définie.
   </legend>
   <button id="print">Imprimer</button>
 </fieldset>
 <div id="print-area">
   <section class="upright">
     <h2>Section en portrait / verticale</h2>
-    <p>Cette section sera imprimée en portrait et en position verticale avec&nbsp;:</p>
+    <p>
+      Cette section sera imprimée en portrait et en position verticale
+      avec&nbsp;:
+    </p>
     <pre>
 .upright {
   size: portrait;
@@ -131,7 +135,10 @@ La seconde partie du code CSS déclare une règle de page nommée définie ci‑
   </section>
   <section class="left">
     <h2>Section en paysage / gauche</h2>
-    <p>Cette section sera imprimée en paysage et tournée vers la gauche avec&nbsp;:</p>
+    <p>
+      Cette section sera imprimée en paysage et tournée vers la gauche
+      avec&nbsp;:
+    </p>
     <pre>
 .left {
   size: landscape;
@@ -227,7 +234,10 @@ La seconde partie du code CSS déclare une règle de page nommée définie ci‑
   </section>
   <section class="right">
     <h2>Section en paysage / droite</h2>
-    <p>Cette section sera imprimée en paysage et tournée vers la droite avec&nbsp;:</p>
+    <p>
+      Cette section sera imprimée en paysage et tournée vers la droite
+      avec&nbsp;:
+    </p>
     <pre>
 .right {
   size: landscape;
