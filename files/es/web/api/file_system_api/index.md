@@ -1,7 +1,7 @@
 ---
 title: API de Sistema de Archivos
 slug: Web/API/File_System_API
-l1on:
+l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
