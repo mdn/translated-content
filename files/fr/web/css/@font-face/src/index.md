@@ -99,15 +99,15 @@ src: url("fonts.svg#WhichFont");
 Le tableau suivant présente les mots-clés valides et leurs formats de police correspondants.
 Pour vérifier si un format de police est pris en charge par un navigateur en CSS, utilisez la règle {{cssxref("@supports", "@supports")}}.
 
-| Mot-clé              | Format de police           | Extensions courantes |
-| -------------------- | ------------------------- | -------------------- |
-| `collection`         | OpenType Collection       | .otc, .ttc           |
-| `embedded-opentype`  | Embedded OpenType         | .eot                 |
-| `opentype`           | OpenType                  | .otf, .ttf           |
-| `svg`                | Police SVG (obsolète)     | .svg, .svgz          |
-| `truetype`           | TrueType                  | .ttf                 |
-| `woff`               | WOFF 1.0                  | .woff                |
-| `woff2`              | WOFF 2.0                  | .woff2               |
+| Mot-clé             | Format de police      | Extensions courantes |
+| ------------------- | --------------------- | -------------------- |
+| `collection`        | OpenType Collection   | .otc, .ttc           |
+| `embedded-opentype` | Embedded OpenType     | .eot                 |
+| `opentype`          | OpenType              | .otf, .ttf           |
+| `svg`               | Police SVG (obsolète) | .svg, .svgz          |
+| `truetype`          | TrueType              | .ttf                 |
+| `woff`              | WOFF 1.0              | .woff                |
+| `woff2`             | WOFF 2.0              | .woff2               |
 
 > [!NOTE]
 >
