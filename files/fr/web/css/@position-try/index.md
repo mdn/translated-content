@@ -28,46 +28,46 @@ Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utili
 
 Les descripteurs définissent les valeurs des propriétés qui déterminent le comportement de l'option de position personnalisée, c'est-à-dire l'endroit où l'élément positionné sera placé.
 
-  - `position-anchor`&nbsp;: Définit la valeur de la propriété {{cssxref("position-anchor")}} qui indique l'élément d'ancrage auquel l'élément positionné est attaché, en spécifiant une valeur {{cssxref("dashed-ident")}} identique à la propriété {{cssxref("anchor-name")}} de l'élément d'ancrage.
-  - `position-area`&nbsp;: Définit la valeur de la propriété {{cssxref("position-area")}} qui indique la position de l'élément positionné par rapport à l'ancre.
-  - Descripteurs des propriétés d'insertion&nbsp;: Spécifient des valeurs de fonction [`anchor()`](/fr/docs/Web/CSS/anchor) qui définissent la position des bords de l'élément positionné par rapport aux bords de l'élément d'ancrage. Les descripteurs d'insertion peuvent représenter les propriétés suivantes&nbsp;:
-    - {{cssxref("top")}}
-    - {{cssxref("left")}}
-    - {{cssxref("bottom")}}
-    - {{cssxref("right")}}
-    - {{cssxref("inset-block-start")}}
-    - {{cssxref("inset-block-end")}}
-    - {{cssxref("inset-inline-start")}}
-    - {{cssxref("inset-inline-end")}}
-    - {{cssxref("inset-block")}}
-    - {{cssxref("inset-inline")}}
-    - {{cssxref("inset")}}
-  - Descripteurs de marge&nbsp;: Spécifient la marge appliquée à l'élément positionné. Les descripteurs de marge peuvent représenter les propriétés suivantes&nbsp;:
-    - {{cssxref("margin-top")}}
-    - {{cssxref("margin-left")}}
-    - {{cssxref("margin-bottom")}}
-    - {{cssxref("margin-right")}}
-    - {{cssxref("margin-block-start")}}
-    - {{cssxref("margin-block-end")}}
-    - {{cssxref("margin-inline-start")}}
-    - {{cssxref("margin-inline-end")}}
-    - {{cssxref("margin")}}
-    - {{cssxref("margin-block")}}
-    - {{cssxref("margin-inline")}}
-  - Descripteurs de taille&nbsp;: Spécifient des valeurs de fonction [`anchor-size()`](/fr/docs/Web/CSS/anchor-size) qui définissent la taille de l'élément positionné par rapport à la taille de l'ancre. Les descripteurs de taille peuvent représenter les propriétés suivantes&nbsp;:
-    - {{cssxref("width")}}
-    - {{cssxref("height")}}
-    - {{cssxref("min-width")}}
-    - {{cssxref("min-height")}}
-    - {{cssxref("max-width")}}
-    - {{cssxref("max-height")}}
-    - {{cssxref("block-size")}}
-    - {{cssxref("inline-size")}}
-    - {{cssxref("min-block-size")}}
-    - {{cssxref("min-inline-size")}}
-    - {{cssxref("max-block-size")}}
-    - {{cssxref("max-inline-size")}}
-  - Descripteurs d'auto-alignement&nbsp;: Spécifient la valeur [`anchor-center`](/fr/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) pour aligner l'élément positionné par rapport au centre de l'ancre, dans la direction du bloc ou de l'axe inline. Les propriétés {{cssxref("align-self")}} et {{cssxref("justify-self")}} peuvent prendre la valeur `anchor-center`.
+- `position-anchor`&nbsp;: Définit la valeur de la propriété {{cssxref("position-anchor")}} qui indique l'élément d'ancrage auquel l'élément positionné est attaché, en spécifiant une valeur {{cssxref("dashed-ident")}} identique à la propriété {{cssxref("anchor-name")}} de l'élément d'ancrage.
+- `position-area`&nbsp;: Définit la valeur de la propriété {{cssxref("position-area")}} qui indique la position de l'élément positionné par rapport à l'ancre.
+- Descripteurs des propriétés d'insertion&nbsp;: Spécifient des valeurs de fonction [`anchor()`](/fr/docs/Web/CSS/anchor) qui définissent la position des bords de l'élément positionné par rapport aux bords de l'élément d'ancrage. Les descripteurs d'insertion peuvent représenter les propriétés suivantes&nbsp;:
+  - {{cssxref("top")}}
+  - {{cssxref("left")}}
+  - {{cssxref("bottom")}}
+  - {{cssxref("right")}}
+  - {{cssxref("inset-block-start")}}
+  - {{cssxref("inset-block-end")}}
+  - {{cssxref("inset-inline-start")}}
+  - {{cssxref("inset-inline-end")}}
+  - {{cssxref("inset-block")}}
+  - {{cssxref("inset-inline")}}
+  - {{cssxref("inset")}}
+- Descripteurs de marge&nbsp;: Spécifient la marge appliquée à l'élément positionné. Les descripteurs de marge peuvent représenter les propriétés suivantes&nbsp;:
+  - {{cssxref("margin-top")}}
+  - {{cssxref("margin-left")}}
+  - {{cssxref("margin-bottom")}}
+  - {{cssxref("margin-right")}}
+  - {{cssxref("margin-block-start")}}
+  - {{cssxref("margin-block-end")}}
+  - {{cssxref("margin-inline-start")}}
+  - {{cssxref("margin-inline-end")}}
+  - {{cssxref("margin")}}
+  - {{cssxref("margin-block")}}
+  - {{cssxref("margin-inline")}}
+- Descripteurs de taille&nbsp;: Spécifient des valeurs de fonction [`anchor-size()`](/fr/docs/Web/CSS/anchor-size) qui définissent la taille de l'élément positionné par rapport à la taille de l'ancre. Les descripteurs de taille peuvent représenter les propriétés suivantes&nbsp;:
+  - {{cssxref("width")}}
+  - {{cssxref("height")}}
+  - {{cssxref("min-width")}}
+  - {{cssxref("min-height")}}
+  - {{cssxref("max-width")}}
+  - {{cssxref("max-height")}}
+  - {{cssxref("block-size")}}
+  - {{cssxref("inline-size")}}
+  - {{cssxref("min-block-size")}}
+  - {{cssxref("min-inline-size")}}
+  - {{cssxref("max-block-size")}}
+  - {{cssxref("max-inline-size")}}
+- Descripteurs d'auto-alignement&nbsp;: Spécifient la valeur [`anchor-center`](/fr/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) pour aligner l'élément positionné par rapport au centre de l'ancre, dans la direction du bloc ou de l'axe inline. Les propriétés {{cssxref("align-self")}} et {{cssxref("justify-self")}} peuvent prendre la valeur `anchor-center`.
 
 > [!NOTE]
 > Lorsqu'une option de position personnalisée est appliquée à un élément, les valeurs définies dans le descripteur de la règle `@position-try` prennent le dessus sur celles définies sur l'élément via les propriétés CSS standard.
