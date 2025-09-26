@@ -72,7 +72,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("utiliser_une_police_différente_pour_un_seul_caractère",  500, 104)}}
+{{EmbedLiveSample("utiliser_une_police_différente_pour_un_seul_caractère", 500, 104)}}
 
 ## Spécifications
 
