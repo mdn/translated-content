@@ -1,16 +1,8 @@
 ---
 title: API de Sistema de Archivos
 slug: Web/API/File_System_API
-page-type: web-api-overview
-browser-compat:
-  - api.FileSystemHandle
-  - api.FileSystemFileHandle
-  - api.FileSystemDirectoryHandle
-  - api.FileSystemWritableFileStream
-  - api.FileSystemSyncAccessHandle
-spec-urls:
-  - https://fs.spec.whatwg.org/
-  - https://wicg.github.io/file-system-access/
+l1on:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
