@@ -20,7 +20,7 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/C
 
 ### Concepts clés
 
-- {{cssxref("at-rule")}}
+- {{cssxref("CSS_syntax/At-rule", "règles @")}}
 - [échappement de caractères](/fr/docs/Web/CSS/custom-ident#escaping_characters)
 - [commentaires CSS](/fr/docs/Web/CSS/CSS_syntax/Comments)
 - [déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration)
@@ -31,7 +31,7 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/C
 
 ### Termes du glossaire
 
-- {{glossary("CSS_Descriptor", "Descripteur CSS")}}
+- {{glossary("CSS_Descriptor", "descripteur CSS")}}
 - {{glossary("parse", "analyse")}}
 - {{glossary("stylesheet", "feuille de style")}}
 - {{glossary("whitespace", "espace blanc")}}
