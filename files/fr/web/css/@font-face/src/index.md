@@ -116,12 +116,12 @@ Pour vérifier si un format de police est pris en charge par un navigateur en CS
 
 Les anciennes valeurs non normalisées de `format()` ont la syntaxe équivalente suivante&nbsp;; elles sont fournies sous forme de chaîne entre guillemets pour des raisons de rétrocompatibilité&nbsp;:
 
-| Ancienne syntaxe                 | Syntaxe équivalente                |
-| -------------------------------- | ---------------------------------- |
-| `format("woff2-variations")`    | `format(woff2) tech(variations)`   |
-| `format("woff-variations")`     | `format(woff) tech(variations)`    |
-| `format("opentype-variations")` | `format(opentype) tech(variations)`|
-| `format("truetype-variations")` | `format(truetype) tech(variations)`|
+| Ancienne syntaxe                | Syntaxe équivalente                 |
+| ------------------------------- | ----------------------------------- |
+| `format("woff2-variations")`    | `format(woff2) tech(variations)`    |
+| `format("woff-variations")`     | `format(woff) tech(variations)`     |
+| `format("opentype-variations")` | `format(opentype) tech(variations)` |
+| `format("truetype-variations")` | `format(truetype) tech(variations)` |
 
 ### Technologies de police
 
