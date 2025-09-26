@@ -38,16 +38,16 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/C
 
 ## Guides
 
--- [Introduction à la syntaxe CSS&nbsp;: déclarations, ensembles de règles et instructions](/fr/docs/Web/CSS/CSS_syntax/Syntax)
+- [Introduction à la syntaxe CSS&nbsp;: déclarations, ensembles de règles et instructions](/fr/docs/Web/CSS/CSS_syntax/Syntax)
   - : Présente la syntaxe générale de CSS et explique comment les déclarations, blocs de déclaration, ensembles de règles et instructions forment les règles de style.
 
--- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - : Explique la grammaire formelle pour définir les valeurs valides des propriétés et fonctions CSS, ainsi que les contraintes sémantiques. Un guide pour comprendre les types de valeurs composants CSS, les combinateurs et les multiplicateurs.
 
--- [Gestion des erreurs CSS](/fr/docs/Web/CSS/CSS_syntax/Error_handling)
+- [Gestion des erreurs CSS](/fr/docs/Web/CSS/CSS_syntax/Error_handling)
   - : Vue d'ensemble de la façon dont les navigateurs gèrent le CSS invalide.
 
--- [Premiers pas avec CSS&nbsp;: la syntaxe CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics)
+- [Premiers pas avec CSS&nbsp;: la syntaxe CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics)
   - : Guide d'introduction à CSS, incluant une présentation de la syntaxe CSS.
 
 ## Concepts associés
