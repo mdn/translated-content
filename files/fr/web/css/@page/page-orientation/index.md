@@ -112,8 +112,8 @@ La seconde partie du code CSS déclare une règle de page nommée définie ci‑
 ```html hidden live-sample___rotating-pages
 <fieldset id="printStyle">
   <legend>
-    Cliquez sur «&nbsp;Imprimer&nbsp;». La page sera mise en page
-    dans l'orientation définie.
+    Cliquez sur «&nbsp;Imprimer&nbsp;». La page sera mise en page dans
+    l'orientation définie.
   </legend>
   <button id="print">Imprimer</button>
 </fieldset>
