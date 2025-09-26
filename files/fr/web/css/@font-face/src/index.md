@@ -128,19 +128,19 @@ Les anciennes valeurs non normalisées de `format()` ont la syntaxe équivalente
 Le tableau suivant présente les valeurs valides pour le descripteur `tech()` et leurs technologies de police correspondantes.
 Pour vérifier si une technologie de police est prise en charge par un navigateur en CSS, utilisez la règle {{cssxref("@supports", "@supports")}}.
 
-| Mot-clé              | Description                                                                                   |
-| :------------------- | :------------------------------------------------------------------------------------------- |
-| `color-cbdt`         | Tables de données bitmap couleur                                                             |
-| `color-colrv0`       | Glyphes multicolores via la table COLR version 0                                             |
-| `color-colrv1`       | Glyphes multicolores via la table COLR version 1                                             |
-| `color-sbix`         | Tables graphiques bitmap standard                                                            |
-| `color-svg`          | Tables SVG multicolores                                                                      |
-| `features-aat`       | Tables TrueType `morx` et `kerx`                                                             |
-| `features-graphite`  | Fonctionnalités Graphite&nbsp;: tables `Silf`, `Glat`, `Gloc`, `Feat` et `Sill`              |
-| `features-opentype`  | Tables OpenType `GSUB` et `GPOS`                                                             |
-| `incremental`        | Chargement incrémental de police                                                             |
-| `palettes`           | Palettes de police via `font-palette` pour sélectionner une palette de couleurs dans la police|
-| `variations`         | Variations de police dans TrueType et OpenType pour contrôler l'axe, la graisse, les glyphes, etc. |
+| Mot-clé             | Description                                                                                        |
+| :------------------ | :------------------------------------------------------------------------------------------------- |
+| `color-cbdt`        | Tables de données bitmap couleur                                                                   |
+| `color-colrv0`      | Glyphes multicolores via la table COLR version 0                                                   |
+| `color-colrv1`      | Glyphes multicolores via la table COLR version 1                                                   |
+| `color-sbix`        | Tables graphiques bitmap standard                                                                  |
+| `color-svg`         | Tables SVG multicolores                                                                            |
+| `features-aat`      | Tables TrueType `morx` et `kerx`                                                                   |
+| `features-graphite` | Fonctionnalités Graphite&nbsp;: tables `Silf`, `Glat`, `Gloc`, `Feat` et `Sill`                    |
+| `features-opentype` | Tables OpenType `GSUB` et `GPOS`                                                                   |
+| `incremental`       | Chargement incrémental de police                                                                   |
+| `palettes`          | Palettes de police via `font-palette` pour sélectionner une palette de couleurs dans la police     |
+| `variations`        | Variations de police dans TrueType et OpenType pour contrôler l'axe, la graisse, les glyphes, etc. |
 
 ## Définition formelle
 
