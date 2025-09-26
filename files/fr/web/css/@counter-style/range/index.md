@@ -42,7 +42,6 @@ La valeur est une liste de plages séparées par des virgules, chacune comprenan
 - `[ [ <integer> | infinite ]{2} ]#`
   - : Chaque plage dans la liste séparée par des virgules comprend deux valeurs, chacune étant soit un {{cssxref("integer")}} soit le mot-clé `infinite`. Si `infinite` est utilisé comme première valeur d'une plage, cela représente l'infini négatif&nbsp;; s'il est utilisé comme seconde valeur, cela représente l'infini positif. La première valeur de chaque plage est la borne inférieure et la seconde la borne supérieure, incluses. Si la borne inférieure de l'une des plages de la liste est supérieure à la borne supérieure, le descripteur `range` entier est invalide et sera ignoré.
 
-
 ## Description
 
 La valeur du descripteur `range` peut être soit `auto`, soit une liste séparée par des virgules de plages avec bornes inférieure et supérieure, spécifiées à l'aide d'entiers négatifs ou positifs ou du mot-clé `infinite`.
