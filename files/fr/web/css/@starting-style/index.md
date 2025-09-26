@@ -217,7 +217,9 @@ Le HTML contient un élément {{htmlelement("div")}} déclaré comme popover gr�
 
 ```html
 <button popovertarget="mypopover">Afficher le popover</button>
-<div popover="auto" id="mypopover">Je suis un popover&nbsp;! Je devrais être animé.</div>
+<div popover="auto" id="mypopover">
+  Je suis un popover&nbsp;! Je devrais être animé.
+</div>
 ```
 
 #### CSS
