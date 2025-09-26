@@ -3,15 +3,60 @@ title: border-image
 slug: Web/CSS/border-image
 ---
 
-{{CSSRef}}
-
 **`border-image`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 주위에 이미지를 그립니다. 일반 [테두리](/ko/docs/Web/CSS/border)를 대체합니다.
 
-{{EmbedInteractiveExample("pages/css/border-image.html")}}
+{{InteractiveExample("CSS Demo: border-image")}}
 
-`border-image`는 {{cssxref("border-image-source")}}, {{cssxref("border-image-slice")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}}, {{cssxref("border-image-repeat")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다. 다른 단축 속성과 마찬가지로, 생략한 속성은 [초기값](/ko/docs/Web/CSS/initial_value)으로 설정됩니다.
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
+```
 
-> **참고:** 테두리 이미지를 불러오는데 실패할 경우에 대비해 {{cssxref("border-style")}} 속성을 설정해야 합니다. 사실 명세에 따르면 필수로 지정해야 하지만 모든 브라우저가 그렇게 구현하지는 않았습니다.
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30 /
+  19px round;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+  fill / 30px / 30px space;
+```
+
+```css interactive-example-choice
+border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+```
+
+```css interactive-example-choice
+border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
+  60;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
+
+`border-image`는 {{cssxref("border-image-source")}}, {{cssxref("border-image-slice")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}}, {{cssxref("border-image-repeat")}}의 [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)입니다. 다른 단축 속성과 마찬가지로, 생략한 속성은 [초기값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)으로 설정됩니다.
+
+> [!NOTE]
+> 테두리 이미지를 불러오는데 실패할 경우에 대비해 {{cssxref("border-style")}} 속성을 설정해야 합니다. 사실 명세에 따르면 필수로 지정해야 하지만 모든 브라우저가 그렇게 구현하지는 않았습니다.
 
 ## 구문
 
@@ -31,7 +76,8 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 
 `border-image` 속성은 아래 나열한 값 중 한 개에서 다섯 개 사이를 사용해 지정할 수 있습니다.
 
-> **참고:** 만약 {{cssxref("border-image-source")}}의 [계산값](/ko/docs/Web/CSS/computed_value)이 `none`이거나 이미지를 그릴 수 없다면 {{cssxref("border-style")}}이 대신 보여집니다.
+> [!NOTE]
+> 만약 {{cssxref("border-image-source")}}의 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)이 `none`이거나 이미지를 그릴 수 없다면 {{cssxref("border-style")}}이 대신 보여집니다.
 
 ### 값
 
@@ -78,12 +124,8 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
   margin: 30px;
   padding: 10px;
 
-  border-image:
-      url("border.png")  /* 원본 이미지 */
-      27 /                    /* 슬라이스 */
-      36px 28px 18px 8px /    /* 너비 */
-      18px 14px 9px 4px       /* 거리 */
-      round;                  /* 반복 */
+  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
+    round;
 }
 ```
 

@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 
 El método **`Intl.NumberFormat.prototype.format()`** formatea un número de acuerdo con la configuración regional y las opciones de formato de este objeto {{jsxref("NumberFormat")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format")}}
+
+```js interactive-example
+const amount = 654321.987;
+
+const options1 = { style: "currency", currency: "RUB" };
+const numberFormat1 = new Intl.NumberFormat("ru-RU", options1);
+
+console.log(numberFormat1.format(amount));
+// Expected output: "654 321,99 ₽"
+
+const options2 = { style: "currency", currency: "USD" };
+const numberFormat2 = new Intl.NumberFormat("en-US", options2);
+
+console.log(numberFormat2.format(amount));
+// Expected output: "$654,321.99"
+```
 
 ## Sintaxis
 

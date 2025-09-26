@@ -9,7 +9,46 @@ La propriété **`border-bottom-color`** permet de définir la couleur utilisée
 
 Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-bottom")}}.
 
-{{EmbedInteractiveExample("pages/css/border-bottom-color.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-color")}}
+
+```css interactive-example-choice
+border-bottom-color: red;
+```
+
+```css interactive-example-choice
+border-bottom-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-bottom-color: rgb(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+border-bottom-color: hsl(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-bottom-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntaxe
 
@@ -83,18 +122,15 @@ border-bottom-color: unset;
 ## Voir aussi
 
 - Les propriétés raccourciées liées aux bordures
-
   - {{cssxref("border")}},
   - {{cssxref("border-bottom")}},
   - {{cssxref("border-color")}}.
 
 - Les propriétés de couleur pour les autres bordures :
-
   - {{cssxref("border-right-color")}},
   - {{cssxref("border-top-color")}},
   - {{cssxref("border-left-color")}}.
 
 - Les autres propriétés liées à la bordure du haut :
-
   - {{cssxref("border-bottom-style")}},
   - {{cssxref("border-bottom-width")}}.

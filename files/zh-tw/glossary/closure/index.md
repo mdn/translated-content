@@ -15,4 +15,4 @@ slug: Glossary/Closure
 
 ### 技術參考
 
-- MDN 上的[閉包](/zh-TW/docs/Web/JavaScript/Closures)
+- MDN 上的[閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)

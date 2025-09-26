@@ -1,21 +1,17 @@
 ---
-title: FileReader.error
+title: FileReader：error 属性
 slug: Web/API/FileReader/error
+l10n:
+  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-返回读取文件时的错误信息
+{{domxref("FileReader")}} 接口的 **`error`** 只读属性返回读取文件时发生的错误。
 
-## 语法
+## 值
 
-```plain
-var error = instanceOfFileReader.error
-```
-
-## 返回值
-
-返回一个 {{domxref("DOMError")}}
+包含相关错误的 {{domxref("DOMException")}} 对象。
 
 ## 规范
 
@@ -25,6 +21,6 @@ var error = instanceOfFileReader.error
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("FileReader")}}

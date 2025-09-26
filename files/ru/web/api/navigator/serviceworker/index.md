@@ -27,5 +27,5 @@ var workerContainerInstance = navigator.serviceWorker;
 
 ## Смотрите также
 
-- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
-- [Использование Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)

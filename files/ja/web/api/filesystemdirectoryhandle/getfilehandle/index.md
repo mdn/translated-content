@@ -21,9 +21,7 @@ getFileHandle(name, options)
 - `name`
   - : 取得したいファイルの {{domxref('FileSystemHandle.name')}} を表す文字列です。
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `create`
       - : {{jsxref('Boolean')}} です。デフォルトは `false` です。
         `true` に設定すると、ファイルが見つからない場合、指定した名前のファイルが作成されて返されます。
@@ -64,5 +62,5 @@ const fileHandle = currentDirHandle.getFileHandle(fileName, { create: true });
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

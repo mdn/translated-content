@@ -11,9 +11,9 @@ l10n:
 
 {{AvailableInWorkers}}
 
-## 構文
+## 値
 
-A string.
+文字列です。
 
 ## 例
 

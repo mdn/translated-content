@@ -3,6 +3,8 @@ title: WebDAV
 slug: Glossary/WebDAV
 ---
 
+{{GlossarySidebar}}
+
 **WebDAV** (_Web Distributed Authoring and Versioning_) est une extension {{Glossary("HTTP")}} qui permet aux développeurs web de faire des mises à jour de contenu à distance depuis un client.
 
 WebDav est rarement utilisé seul, mais deux extensions sont très répandues : {{Glossary("CalDAV")}} (accès distant aux données d'agenda) et {{Glossary("CardDAV")}} (accès distant au carnet d'adresses).

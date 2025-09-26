@@ -28,13 +28,15 @@ Esto generará un cuadro de diálogo de solicitud, a lo largo de las siguientes 
 
 Desde aquí el usuario puede optar por permitir las notificaciones de este origen, o bloquearlas. Una vez que se ha hecho una elección, la configuración generalmente persistirá durante la sesión actual.
 
-> **Nota:** A partir de Firefox 44 se combinaron los permisos de Notificaciones y [Push](/es/docs/Web/API/Push_API). Si se otorga permiso para las notificaciones, también se habilitará el envío.
+> [!NOTE]
+> A partir de Firefox 44 se combinaron los permisos de Notificaciones y [Push](/es/docs/Web/API/Push_API). Si se otorga permiso para las notificaciones, también se habilitará el envío.
 
 A continuación, se crea una nueva notificación usando el constructor {{domxref("Notification.Notification","Notification()")}}. A esto se le debe pasar un argumento de título y, opcionalmente, se le puede pasar un objeto de opciones para especificar opciones, como la dirección del texto, el cuerpo del texto, el icono para mostrar, el sonido de notificación para reproducir y más.
 
 Además, la especificación de la API de notificaciones especifica una serie de adiciones a la [API ServiceWorker](/es/docs/Web/API/Service_Worker_API), para permitir que los _service workers_ activen las notificaciones.
 
-> **Nota:** Para obtener más información sobre el uso de notificaciones en su propia aplicación, lea [Uso de la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+> [!NOTE]
+> Para obtener más información sobre el uso de notificaciones en su propia aplicación, lea [Uso de la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API).
 
 ## Interfaces de notificaciones
 

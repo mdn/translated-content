@@ -5,7 +5,7 @@ slug: Web/CSS/animation
 
 {{CSSRef}}
 
-La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet d'appliquer une animation entre des styles.
+La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet d'appliquer une animation entre des styles.
 
 C'est une propriété qui synthétise les propriétés suivantes :
 
@@ -18,7 +18,49 @@ C'est une propriété qui synthétise les propriétés suivantes :
 - {{cssxref("animation-fill-mode")}},
 - {{cssxref("animation-play-state")}}.
 
-{{EmbedInteractiveExample("pages/css/animation.html")}}
+{{InteractiveExample("CSS Demo: animation")}}
+
+```css interactive-example-choice
+animation: 3s ease-in 1s infinite reverse both running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite alternate slidein;
+```
+
+```css interactive-example-choice
+animation: 0.5s linear 1s infinite alternate slidein;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  margin: 20px;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+```
 
 ```css
 /* @keyframes duration | timing-function | delay |
@@ -241,7 +283,7 @@ window.addEventListener("load", function () {
 
 {{EmbedLiveSample("Exemple_danimation", "100%", 260, "", "", "example-outcome-frame")}}
 
-[Une liste des propriétés qui peuvent être animées](/fr/docs/Web/CSS/Liste_propriétés_CSS_animées) est disponible. On notera que cette liste est également valable pour [les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS).
+[Une liste des propriétés qui peuvent être animées](/fr/docs/Web/CSS/CSS_animated_properties) est disponible. On notera que cette liste est également valable pour [les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 ## Syntaxe
 
@@ -250,7 +292,6 @@ La propriété `animation` se définit grâce à une ou plusieurs animations, s�
 Chaque animation se définit comme :
 
 - zéro ou une valeur du type :
-
   - {{cssxref("&lt;single-transition-timing-function&gt;")}}
   - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#&lt;single-animation-iteration-count&gt;")}}
   - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#&lt;single-animation-direction&gt;")}}
@@ -285,7 +326,8 @@ L'ordre des valeurs est également important pour chaque définition d'animation
 
 ## Exemples
 
-> **Note :** D'autres exemples sont disponibles sur la page [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
+> [!NOTE]
+> D'autres exemples sont disponibles sur la page [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ### Vue laser
 
@@ -374,5 +416,5 @@ Veillez à fournir un mécanisme qui permette d'interrompre ou de désactiver l'
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

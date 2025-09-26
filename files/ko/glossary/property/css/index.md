@@ -1,7 +1,11 @@
 ---
 title: Property (CSS)
 slug: Glossary/Property/CSS
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 **CSS 특성**은 연관된 값이 어떻게 브라우저가 요소를 표시하는지 한 측면을 정의하는 특성(색상처럼)입니다.
 
@@ -23,6 +27,6 @@ div {
 
 ## 같이 보기
 
-- [CSS 배우기](/ko/docs/Learn/CSS)
+- [CSS 배우기](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)
 - [MDN에서 CSS 참조](/ko/docs/Web/CSS/Reference)
 - [CSS 작업 그룹의 현재 작업](https://www.w3.org/Style/CSS/current-work)

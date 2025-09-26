@@ -12,7 +12,6 @@ Essas palavras-chave especificam o interior do elemento{{CSSxRef("display")}} ty
 O `<display-inside>` O valor é definido usando uma palavra-chave da lista abaixo:
 
 - `flow` {{Experimental_Inline}}
-
   - : O elemento expõe seu conteúdo usando o layout de fluxo (layout em bloco e em linha).
     Se o seu tipo de exibição externo for
 
@@ -58,18 +57,18 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -81,37 +80,36 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
 
 ### Suporte a vários valores de palavras-chave
 
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
+{{Compat}}
 
 ### Suporte de fluxo-raiz
 
-{{Compat("css.properties.display.flow-root", 10)}}
+{{Compat}}
 
 ### Suporte de tabela
 
-{{Compat("css.properties.display.table_values", 10)}}
+{{Compat}}
 
 ### Suporte de grade
 
-{{Compat("css.properties.display.grid", 10)}}
+{{Compat}}
 
 ### Suporte de flex
 
-{{Compat("css.properties.display.flex", 10)}}
+{{Compat}}
 
 ### Suporte de ruby
 
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Conceitos básicos do Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Conceitos básicos do Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

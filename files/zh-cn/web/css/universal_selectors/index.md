@@ -3,8 +3,6 @@ title: 通配选择器
 slug: Web/CSS/Universal_selectors
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 在 CSS 中，一个星号 (`*`) 就是一个通配选择器。它可以匹配任意类型的 HTML 元素。在配合其他简单选择器的时候，省略掉通配选择器会有同样的效果。比如，`*.warning` 和`.warning` 的效果完全相同。
@@ -44,7 +42,8 @@ slug: Web/CSS/Universal_selectors
 
 {{EmbedLiveSample('示例')}}
 
-> **备注：** 笔者不推荐使用通配选择器，因为它是[性能最低的一个 CSS 选择器](http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/).
+> [!NOTE]
+> 笔者不推荐使用通配选择器，因为它是[性能最低的一个 CSS 选择器](https://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/).
 
 ## 规范
 

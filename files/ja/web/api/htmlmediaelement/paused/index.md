@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.paused
+title: "HTMLMediaElement: paused プロパティ"
+short-title: paused
 slug: Web/API/HTMLMediaElement/paused
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -16,7 +17,7 @@ l10n:
 ## 例
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.paused); // true
 ```
 
@@ -30,4 +31,4 @@ console.log(obj.paused); // true
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.paused` プロパティを定義しているインターフェイス

@@ -40,7 +40,7 @@ function myFunction(event) {
 
 L'objet **PageTransitionEvent** possède les types de membres suivants&nbsp;:
 
-- [Propriétés](#Propriétés)
+- [Propriétés](#propriétés)
 
 ### Propriétés
 

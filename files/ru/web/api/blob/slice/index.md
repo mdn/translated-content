@@ -7,7 +7,8 @@ slug: Web/API/Blob/slice
 
 Метод **`Blob.slice()`** используется для создания нового объекта {{domxref("Blob")}}, содержащего данные в указанном диапазоне байтов исходника {{domxref("Blob")}}.
 
-> **Примечание:** Помните, что метод `slice()` имеет префиксы в некоторых браузерах и версиях: `blob.mozSlice()` для Firefox 12 и ранних, и `blob.webkitSlice()` для Safari. Старая версия метода `slice()` без префиксов, имела разную семантику, и устарела.
+> [!NOTE]
+> Помните, что метод `slice()` имеет префиксы в некоторых браузерах и версиях: `blob.mozSlice()` для Firefox 12 и ранних, и `blob.webkitSlice()` для Safari. Старая версия метода `slice()` без префиксов, имела разную семантику, и устарела.
 
 ## Синтаксис
 
@@ -28,15 +29,15 @@ var blob = instanceOfBlob.slice([start [, end [, contentType]]]);
 
 Новый {{domxref("Blob")}} объект содержит данные, указанные в источнике {{domxref("Blob")}}.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Blob")}}
 - {{domxref("BlobBuilder")}}

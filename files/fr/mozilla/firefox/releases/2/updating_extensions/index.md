@@ -3,8 +3,6 @@ title: Mise à jour des extensions pour Firefox 2
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
 ---
 
-{{FirefoxSidebar}}
-
 Cet article s'adresse aux développeurs qui souhaitent mettre à jour leur extension pour qu'elle fonctionne correctement avec Firefox 2.
 
 ## Étape 1&nbsp;: Mise à jour du manifeste d'installation
@@ -37,6 +35,6 @@ Assurez-vous de tester en profondeur votre extension sous Firefox 2 avant de la 
 
 ## Étape 4&nbsp;: Publication
 
-Mettez à jour la description de votre extension sur <http://addons.mozilla.org>, pour vous assurez que les utilisateurs la retrouveront.
+Mettez à jour la description de votre extension sur <https://addons.mozilla.org>, pour vous assurez que les utilisateurs la retrouveront.
 
 De plus, si le manifeste d'installation contient une [`URL de mise à jour`](/fr/Manifestes_d'installation#updateURL), vérifiez qu'elle est valide pour que Firefox puisse automatiquement trouver les nouvelles versions de votre extension. De cette manière, Firefox proposera de l'installer automatiquement au premier lancement de l'extension après le passage à Firefox 2.

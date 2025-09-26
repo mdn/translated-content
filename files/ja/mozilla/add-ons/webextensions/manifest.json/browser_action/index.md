@@ -45,9 +45,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 browser action はあなたのブラウザーのツールバーに拡張機能のボタンを追加します。ボタンはアイコンと、オプションで HTML、CSS と JavaScript を使用した、ポップアップコンテンツを使用できます。
 
-ポップアップを提供する場合は、ユーザーがボタンをクリックしたときポップアップが開かれ、ポップアップで実行されている JavaScript は、ユーザーの実行を処理できます。ポップアップを提供しない場合、ユーザーがボタンをクリックすると、クリックイベントが拡張機能の[バックグラウンドスクリプト](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)に送信されます。
+ポップアップを提供する場合は、ユーザーがボタンをクリックしたときポップアップが開かれ、ポップアップで実行されている JavaScript は、ユーザーの実行を処理できます。ポップアップを提供しない場合、ユーザーがボタンをクリックすると、クリックイベントが拡張機能の[バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)に送信されます。
 
-You can also create and manipulate browser actions programmatically using the [browserAction API](/ja/Add-ons/WebExtensions/API/browserAction).
+You can also create and manipulate browser actions programmatically using the [browserAction API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
 
 ## 構文
 
@@ -319,8 +319,8 @@ browser.browseAction.onClicked.addListener(handleClick);
 
 A browser action with an icon, a title, and a popup. The popup will be shown when the user clicks the button.
 
-For a simple, but complete, extension that uses a browser action, see the [walkthrough tutorial](/ja/Add-ons/WebExtensions/Your_second_WebExtension).
+For a simple, but complete, extension that uses a browser action, see the [walkthrough tutorial](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.browser_action", 10)}}
+{{Compat}}

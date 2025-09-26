@@ -21,11 +21,11 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 @media screen, print { ... }
 ```
 
-Список устройств вы можете найти перейдя по [этой ссылке](/ru/docs/CSS/@media#Media_types). Но для задания более детальных и узконаправленных правил вам нужно просмотреть следующий раздел.
+Список устройств вы можете найти перейдя по [этой ссылке](/ru/docs/Web/CSS/@media#media_types). Но для задания более детальных и узконаправленных правил вам нужно просмотреть следующий раздел.
 
 ## Узконаправленные @media
 
-[Media features](/ru/docs/CSS/@media#Media_features) описывают некие характеристики определённого {{glossary("user agent")}}, устройства вывода или окружения. Например, вы можете применить выбранные стили только для широкоэкранных мониторов, компьютеров с мышью, или для устройств, которые используются в условиях слабой освещённости. В примере ниже стили будут применены только когда _основное_ устройство ввода пользователя (например мышь) будет расположено над элементами:
+[Media features](/ru/docs/Web/CSS/@media#media_features) описывают некие характеристики определённого {{glossary("user agent")}}, устройства вывода или окружения. Например, вы можете применить выбранные стили только для широкоэкранных мониторов, компьютеров с мышью, или для устройств, которые используются в условиях слабой освещённости. В примере ниже стили будут применены только когда _основное_ устройство ввода пользователя (например мышь) будет расположено над элементами:
 
 ```css
 @media (hover: hover) { ... }
@@ -49,7 +49,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 @media speech and (aspect-ratio: 11/5) { ... }
 ```
 
-Дополнительные примеры медиавыражений, смотрите на [справочной странице](/ru/docs/Web/CSS/@media#Media_features) для каждой конкретной функции.
+Дополнительные примеры медиавыражений, смотрите на [справочной странице](/ru/docs/Web/CSS/@media#media_features) для каждой конкретной функции.
 
 ## Создание комплексных медиавыражений
 
@@ -57,7 +57,8 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 В прошлом примере мы видели, как применяется оператор `and` для группировки _type_ и функции. Оператор `and` также может комбинировать несколько функций в одно медиавыражение. Между тем, оператор not отрицает медиавыражение, полностью инвертируя его значение. Оператор _only_ работает тогда, когда применяется всё выражение, не позволяя старым браузерам применять стили.
 
-> **Примечание:** In most cases, the `all` media type is used by default when no other type is specified. However, if you use the `not` or `only` operators, you must explicitly specify a media type.
+> [!NOTE]
+> In most cases, the `all` media type is used by default when no other type is specified. However, if you use the `not` or `only` operators, you must explicitly specify a media type.
 
 ### `and`
 
@@ -128,9 +129,9 @@ The `only` keyword prevents older browsers that do not support media queries wit
 
 ## Смотрите также
 
-- [Media types](/ru/docs/CSS/@media#Media_types)
-- [Media features](/ru/docs/CSS/@media#Media_features)
-- [Testing media queries using code](/ru/docs/CSS/Using_media_queries_from_code)
-- [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries)
+- [Media types](/ru/docs/Web/CSS/@media#media_types)
+- [Media features](/ru/docs/Web/CSS/@media#media_features)
+- [Testing media queries using code](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Extended Mozilla media features](/ru/docs/Web/CSS/Mozilla_Extensions#Media_features)
 - [Extended WebKit media features](/ru/docs/Web/CSS/Webkit_Extensions#Media_features)

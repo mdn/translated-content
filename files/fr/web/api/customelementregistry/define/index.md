@@ -50,7 +50,8 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 - [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
   - : Exception levée si le deuxième argument passé n'est pas un constructeur.
 
-> **Note :** Si vous rencontrez l'exception `NotSupportedError` lors d'un appel à `define()`, cela ne signifie pas nécessairement que c'est cette méthode qui échoue. Il s'agit plutôt généralement d'un problème lié à [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow).
+> [!NOTE]
+> Si vous rencontrez l'exception `NotSupportedError` lors d'un appel à `define()`, cela ne signifie pas nécessairement que c'est cette méthode qui échoue. Il s'agit plutôt généralement d'un problème lié à [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow).
 
 ## Exemples
 
@@ -145,7 +146,8 @@ customElements.define("popup-info", PopUpInfo);
   data-text="Le cryptogramme visuel de votre carte permet une meilleure sécurité. Il s'agit d'une séquence de 3 ou 4 chiffres au dos de votre carte."></popup-info>
 ```
 
-> **Note :** Les constructeurs pour les éléments personnalisés autonomes doivent étendre [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
+> [!NOTE]
+> Les constructeurs pour les éléments personnalisés autonomes doivent étendre [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
 
 ### Élément personnalisé natif
 

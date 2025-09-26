@@ -9,10 +9,10 @@ slug: Web/API/AudioNode/connect
 
 ## 语法
 
-```
-var destinationNode = AudioNode.connect(destination, outputIndex, inputIndex);
-
-AudioNode.connect(destination, outputIndex);
+```js-nolint
+connect(destination)
+connect(destination, outputIndex)
+connect(destination, outputIndex, inputIndex)
 ```
 
 ### 属性
@@ -20,9 +20,9 @@ AudioNode.connect(destination, outputIndex);
 - `destination`
   - : 需要连接的 {{domxref("AudioNode")}} 或 {{domxref("AudioParam")}}.
 - `outputIndex` {{optional_inline}}
-  - : 一个索引，用于描述当前 `AudioNode` 的哪个输出会连接到 destination。索引数字是由输出频道（详见 [Audio channels](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels)）的数量来确定的。当你只能将给定的输出连接到给定的输入一次（重复的尝试会被忽略）时，可以通过多次调用 `connect()` 将一个输出连接到多个输入。可以通过这样来实现扇出。这个参数的默认值为 0。
+  - : 一个索引，用于描述当前 `AudioNode` 的哪个输出会连接到 destination。索引数字是由输出频道（详见 [Audio channels](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)）的数量来确定的。当你只能将给定的输出连接到给定的输入一次（重复的尝试会被忽略）时，可以通过多次调用 `connect()` 将一个输出连接到多个输入。可以通过这样来实现扇出。这个参数的默认值为 0。
 - `inputIndex` {{optional_inline}}
-  - : 一个索引，用于描述当前 `AudioNode` 会连接到 destination 的哪个输入，它的默认值是 0。索引数字是由输入频道（详见 [Audio channels](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_channels)）的数量来确定的。将一个 `AudioNode` 连接回之前的 `AudioNode`，以此形成一个圈是可行的。不过只在这个圈里有至少一个 {{domxref("DelayNode")}} 才可行。否则会抛出一个 `NotSupportedError` 异常。此参数在 destination 是 {{domxref("AudioParam")}}时不可用。
+  - : 一个索引，用于描述当前 `AudioNode` 会连接到 destination 的哪个输入，它的默认值是 0。索引数字是由输入频道（详见 [Audio channels](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)）的数量来确定的。将一个 `AudioNode` 连接回之前的 `AudioNode`，以此形成一个圈是可行的。不过只在这个圈里有至少一个 {{domxref("DelayNode")}} 才可行。否则会抛出一个 `NotSupportedError` 异常。此参数在 destination 是 {{domxref("AudioParam")}}时不可用。
 
 ### 返回值
 
@@ -100,9 +100,9 @@ lfo.start();
 
 #### AudioParam notes
 
-It is possible to connect an `AudioNode` output to more than one {{ domxref("AudioParam") }}, and more than one AudioNode output to a single {{ domxref("AudioParam") }}, with multiple calls to `connect()`. [Fan-in and fan-out](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Fan-in_and_Fan-out) are therefore supported.
+It is possible to connect an `AudioNode` output to more than one {{ domxref("AudioParam") }}, and more than one AudioNode output to a single {{ domxref("AudioParam") }}, with multiple calls to `connect()`. [Fan-in and fan-out](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out) are therefore supported.
 
-An {{ domxref("AudioParam") }} will take the rendered audio data from any `AudioNode` output connected to it and convert it to mono by [down-mixing](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) (if it is not already mono). Next, it will mix it together with any other such outputs, and the intrinsic parameter value (the value the {{ domxref("AudioParam") }} would normally have without any audio connections), including any timeline changes scheduled for the parameter.
+An {{ domxref("AudioParam") }} will take the rendered audio data from any `AudioNode` output connected to it and convert it to mono by [down-mixing](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) (if it is not already mono). Next, it will mix it together with any other such outputs, and the intrinsic parameter value (the value the {{ domxref("AudioParam") }} would normally have without any audio connections), including any timeline changes scheduled for the parameter.
 
 Therefore, it is possible to choose the range in which an {{domxref("AudioParam")}} will change by setting the value of the {{domxref("AudioParam")}} to the central frequency, and to use a {{domxref("GainNode")}} between the audio source and the {{domxref("AudioParam")}} to adjust the range of the {{domxref("AudioParam")}} changes.
 

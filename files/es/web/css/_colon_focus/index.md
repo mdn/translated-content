@@ -1,9 +1,7 @@
 ---
-title: ":focus"
+title: :focus
 slug: Web/CSS/:focus
 ---
-
-{{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:focus`** [CSS](/es/docs/Web/CSS) representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.
 
@@ -14,7 +12,8 @@ input:focus {
 }
 ```
 
-> **Nota:** Esta pseudo-clase se aplica solo al elemento enfocado en sí mismo. Utilice {{cssxref(":focus-within")}} si desea seleccionar un elemento que contenga un elemento enfocado.
+> [!NOTE]
+> Esta pseudo-clase se aplica solo al elemento enfocado en sí mismo. Utilice {{cssxref(":focus-within")}} si desea seleccionar un elemento que contenga un elemento enfocado.
 
 ## Sintaxis
 

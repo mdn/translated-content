@@ -3,7 +3,22 @@ title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
 
-{{JSRef}}Известный символ **`Symbol.toStringTag`** - это строковое значение свойства, которое используется при создании строки описания объекта по умолчанию. Доступ к нему осуществляется через {{jsxref("Object.prototype.toString()")}} метод.{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}{{js_property_attributes(0,0,0)}}
+{{JSRef}}Известный символ **`Symbol.toStringTag`** - это строковое значение свойства, которое используется при создании строки описания объекта по умолчанию. Доступ к нему осуществляется через {{jsxref("Object.prototype.toString()")}} метод.
+
+{{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}
+
+```js interactive-example
+class ValidatorClass {
+  get [Symbol.toStringTag]() {
+    return "Validator";
+  }
+}
+
+console.log(Object.prototype.toString.call(new ValidatorClass()));
+// Expected output: "[object Validator]"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Описание
 

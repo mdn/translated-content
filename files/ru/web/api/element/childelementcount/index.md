@@ -16,7 +16,8 @@ var elCount = Node.childElementCount;
 - **`elCount`** - целое число, количество дочерних элементов узла **Node.**
 - **`Node`** - объект, представляющий собой `Document`, `DocumentFragment` или `Element`.
 
-> **Предупреждение:** А наш добрый друг **Internet Explorer** в **6, 7** и **8** версиях ошибочно считает элементами комментарии в HTML-коде ({{domxref("Comment")}}).
+> [!WARNING]
+> А наш добрый друг **Internet Explorer** в **6, 7** и **8** версиях ошибочно считает элементами комментарии в HTML-коде ({{domxref("Comment")}}).
 
 ## Пример
 
@@ -27,10 +28,10 @@ if (foo.childElementCount > 0) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

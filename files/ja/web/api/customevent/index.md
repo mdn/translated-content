@@ -20,7 +20,7 @@ l10n:
 
 ## インスタンスプロパティ
 
-_親である {{domxref("Event")}} インターフェイスから継承したプロパティがありますます。_
+_親である {{domxref("Event")}} インターフェイスから継承したプロパティがあります。_
 
 - {{domxref("CustomEvent.detail")}} {{ReadOnlyInline}}
   - : イベントが初期化されたときに渡された何らかのデータを返します。
@@ -43,4 +43,4 @@ _親である {{domxref("Event")}} インターフェイスから継承したメ
 ## 関連情報
 
 - {{domxref("Window.postMessage()")}}
-- [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)
+- [イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)

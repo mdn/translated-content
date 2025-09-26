@@ -3,17 +3,20 @@ title: Escribiendo un servidor WebSocket en C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 ## Introducción
 
 Si deseas utilizar la API WebSocket, es conveniente si tienes un servidor. En este artículo te mostraré como puedes escribir uno en C#. Tú puedes hacer esto en cualquier lenguaje del lado del servidor, pero para mantener las cosas simples y más comprensibles, elegí el lenguaje de Microsoft.
 
-Este servidor se ajusta a [RFC 6455](http://tools.ietf.org/html/rfc6455) por lo que solo manejará las conexiones de Chrome version 16, Firefox 11, IE 10 and superiores.
+Este servidor se ajusta a [RFC 6455](https://tools.ietf.org/html/rfc6455) por lo que solo manejará las conexiones de Chrome version 16, Firefox 11, IE 10 and superiores.
 
 ## Primeros pasos
 
 WebSocket se comunica a través de conexiones [TCP (Transmission Control Protocol)](https://es.wikipedia.org/wiki/Transmission_Control_Protocol), afortunadamente C# tiene una clase [TcpListener](http://msdn.microsoft.com/es-es/library/system.net.sockets.tcplistener.aspx) la cual hace lo que su nombre sugiere. Esta se encuentra en el namespace _System.Net.Sockets_.
 
-> **Nota:** Es una buena idea usar la instrucción `using` para escribir menos. Eso significa que no tendrás que re escribir el namespace de nuevo en cada ocasión.
+> [!NOTE]
+> Es una buena idea usar la instrucción `using` para escribir menos. Eso significa que no tendrás que re escribir el namespace de nuevo en cada ocasión.
 
 ### TcpListener
 
@@ -25,7 +28,8 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` especifica la IP a escuchar y `port` especifica el puerto.
 
-> **Nota:** Para crear un objeto `IPAddress` desde un `string`, usa el método estático `Parse` de `IPAddres.`
+> [!NOTE]
+> Para crear un objeto `IPAddress` desde un `string`, usa el método estático `Parse` de `IPAddres.`
 
 Métodos:
 
@@ -173,13 +177,14 @@ Si nosotros enviamos "MDN", obtendremos estos bytes:
 | 1                              | 0    | 0    | 0    | 0x1=0001 |
 
 FIN: Puedes enviar tu mensaje en marcos, pero ahora debe mantener las cosas simples.
-Opcode _0x1_ significa que es un texto. [Lista completa de Opcodes](http://tools.ietf.org/html/rfc6455#section-5.2)
+Opcode _0x1_ significa que es un texto. [Lista completa de Opcodes](https://tools.ietf.org/html/rfc6455#section-5.2)
 
 \- 131:
 
 Si el segundo byte menos 128 se encuentra entre 0 y 125, esta es la longitud del mensaje. Si es 126, los siguientes 2 bytes (entero sin signo de 16 bits), si es 127, los siguientes 8 bytes (entero sin signo de 64 bits) son la longitud.
 
-> **Nota:** Puedo tomar 128, porque el primer bit siempre es 1.
+> [!NOTE]
+> Puedo tomar 128, porque el primer bit siempre es 1.
 
 \- 61, 84, 35 y 6 son los bytes de la clave a decodificar. Cambian en cada oportunidad.
 
@@ -203,4 +208,4 @@ for (int i = 0; i < encoded.Length; i++) {
 
 ## Relacionado
 
-- [Escribiendo servidores WebSocket](/es/docs/WebSockets/Writing_WebSocket_servers)
+- [Escribiendo servidores WebSocket](/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/yield*
 
 **`yield*` 표현식**은 다른 {{jsxref("Statements/function*", "generator")}} 또는 이터러블(iterable) 객체에 yield를 위임할 때 사용됩니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - yield*")}}
+
+```js interactive-example
+function* func1() {
+  yield 42;
+}
+
+function* func2() {
+  yield* func1();
+}
+
+const iterator = func2();
+
+console.log(iterator.next().value);
+// Expected output: 42
+```
 
 ## 구문
 
@@ -112,7 +127,7 @@ console.log(result); // "foo"
 
 ## 같이 보기
 
-- [The Iterator protocol](/ko/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

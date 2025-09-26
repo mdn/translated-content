@@ -1,48 +1,42 @@
 ---
-title: FormData.get()
+title: FormData：get() 方法
 slug: Web/API/FormData/get
+l10n:
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
-{{domxref("FormData")}} 的 **`get()`** 方法會返回 `FormData 物件中，`指定 key 值所對應之第一組物件中的 value 值 。然而，如果您想要獲得多組以及全部的 value ，那應該使用 {{domxref("FormData.getAll()","getAll()")}} 方法。
-
-**注意**: 這個方法已可以在 [Web Workers](/zh-TW/docs/Web/API/Web_Workers_API) 中使用。
+`FormData` 介面的 **`get()`** 方法會回傳 `FormData` 物件中與給定鍵相關聯的第一個值。如果你預期有多個值且想要取得全部的值，請改用 {{domxref("FormData.getAll()","getAll()")}} 方法。
 
 ## 語法
 
-```plain
-formData.get(name);
+```js-nolint
+get(name)
 ```
 
 ### 參數
 
 - `name`
-  - : 一個 {{domxref("USVString")}} ，代表您想要得到的 value 所對應的 key 值名稱。
+  - : 一個代表你想要檢索的鍵名的字串。
 
 ### 回傳值
 
-A {{domxref("FormDataEntryValue")}} containing the value.
+一個鍵符合指定 `name` 的值。否則回傳 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null)。
 
 ## 範例
 
-下面一行程式會產生一個空的 `FormData 物件：`
+如果我們使用 {{domxref("FormData.append", "append()")}} 將兩個 `username` 值新增到一個 {{domxref("FormData")}} 中：
 
-```plain
-var formData = new FormData();
+```js
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
-用 {{domxref("FormData.append")}} 方法新增兩組 `username 值`
+下方的 `get()` 方法將只會回傳第一個 `username` 值：
 
-```plain
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
-```
-
-接下來使用 `get() 方法，將只會返回上一步驟，第一組新增的 username 所對應的值`
-
-```plain
-formData.get('username'); // Returns "Chris"
+```js
+formData.get("username"); // 回傳「Chris」
 ```
 
 ## 規範
@@ -53,9 +47,7 @@ formData.get('username'); // Returns "Chris"
 
 {{Compat}}
 
-## 延伸閱讀
+## 參見
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-TW/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 物件](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

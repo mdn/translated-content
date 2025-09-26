@@ -3,8 +3,6 @@ title: Gecko 1.9 Changes affecting websites
 slug: Mozilla/Firefox/Releases/3/Site_compatibility
 ---
 
-{{FirefoxSidebar}}
-
 此页设法提供在 [Gecko](cn/Gecko) 1.8 和 Gecko 1.9 之间的变动概要，这些变动可能会影响某些网站的行为或网页渲染。
 
 参见 [Firefox 3 开发者参考](cn/Firefox_3_for_developers)
@@ -27,7 +25,7 @@ window.addEventListener("load", yourFunction, true);
 window.addEventListener("load", yourFunction, false);
 ```
 
-事件捕获如何工作的解释，参见 [DOM Level 2 事件捕获](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture)
+事件捕获如何工作的解释，参见 [DOM Level 2 事件捕获](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture)
 
 ### preventBubble 已被移出
 

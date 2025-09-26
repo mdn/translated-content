@@ -3,9 +3,7 @@ title: "@supports"
 slug: Web/CSS/@supports
 ---
 
-{{CSSRef}}
-
-**`@supports`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/At-rule)은 주어진 하나 이상의 CSS 기능을 브라우저가 지원하는지에 따라 다른 스타일 선언을 할 수 있는 방법을 제공합니다. 이를 기능 쿼리(feature query)라고 부릅니다. `@supports`는 스타일의 최상위 단계, 또는 다른 [조건부 그룹 규칙](/ko/docs/Web/CSS/At-rule#조건부_그룹_규칙)에 중첩해 위치할 수 있습니다.
+**`@supports`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)은 주어진 하나 이상의 CSS 기능을 브라우저가 지원하는지에 따라 다른 스타일 선언을 할 수 있는 방법을 제공합니다. 이를 기능 쿼리(feature query)라고 부릅니다. `@supports`는 스타일의 최상위 단계, 또는 다른 [조건부 그룹 규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule#조건부_그룹_규칙)에 중첩해 위치할 수 있습니다.
 
 ```css
 @supports (display: grid) {
@@ -69,7 +67,8 @@ JavaScript에서, `@supports`는 CSS 객체 모델 인터페이스 {{DOMxRef("CS
 }
 ```
 
-> **참고:** 최상위 `not` 연산자는 괄호로 감싸지 않아도 괜찮습니다. `and`, `or` 등 다른 연산자와 함께 사용할 때는 괄호가 필요합니다.
+> [!NOTE]
+> 최상위 `not` 연산자는 괄호로 감싸지 않아도 괜찮습니다. `and`, `or` 등 다른 연산자와 함께 사용할 때는 괄호가 필요합니다.
 
 ### `and` 연산자
 

@@ -3,11 +3,23 @@ title: 自减（--）
 slug: Web/JavaScript/Reference/Operators/Decrement
 ---
 
-{{jsSidebar("Operators")}}
-
 **自减**（**`--`**）运算符对其操作数进行自减（减一），并根据运算符的位置返回自减之前或之后的值。
 
-{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x--;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:2, y:3"
+
+let a = 3;
+const b = --a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:2, b:2"
+```
 
 ## 语法
 

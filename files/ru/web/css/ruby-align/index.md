@@ -128,17 +128,15 @@ This gives the following result:
 
 {{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_element", 180, 40)}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                     | Status                   | Comment            |
-| ----------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{ SpecName('CSS3 Ruby', '#ruby-align-property', 'ruby-align') }} | {{ Spec2('CSS3 Ruby') }} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - HTML Ruby elements: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}}.
 - CSS Ruby properties: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}.

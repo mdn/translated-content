@@ -3,8 +3,6 @@ title: 특성 선택자
 slug: Web/CSS/Attribute_selectors
 ---
 
-{{CSSRef("Selectors")}}
-
 [CSS](/ko/docs/Web/CSS) **특성 선택자**는 주어진 특성의 존재 여부나 그 값에 따라 요소를 선택합니다.
 
 ```css
@@ -161,7 +159,7 @@ div[data-lang="zh-TW"] {
 
 ### HTML 정렬 목록
 
-[`type`](/ko/docs/Web/HTML/Element/input#type) 특성은 주로 {{htmlelement("input")}} 요소에 사용하므로, HTML 명세는 type의 대소문자를 구분하지 않고 선택하도록 요구하고 있습니다. 그러므로 {{htmlelement("ol")}}의 [`type`](/ko/docs/Web/HTML/Element/ol#type)을 특성 선택자로 선택할 땐 [대소문자 구분](#case-sensitive) 수정자를 지정하지 않으면 동작하지 않습니다.
+[`type`](/ko/docs/Web/HTML/Element/input#type) 특성은 주로 {{htmlelement("input")}} 요소에 사용하므로, HTML 명세는 type의 대소문자를 구분하지 않고 선택하도록 요구하고 있습니다. 그러므로 {{htmlelement("ol")}}의 [`type`](/ko/docs/Web/HTML/Reference/Elements/ol#type)을 특성 선택자로 선택할 땐 [대소문자 구분](#case-sensitive) 수정자를 지정하지 않으면 동작하지 않습니다.
 
 #### CSS
 

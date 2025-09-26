@@ -29,7 +29,7 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -42,7 +42,7 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code></td>
+      <td><code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
@@ -55,7 +55,7 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
 
 Este elemento inclui os atributos globais. O atributo `tabindex` não deve ser utilizado no elemento `<dialog>`.
 
-- {{htmlattrdef("open")}}
+- `open`
   - : Indica que o Dialog está ativo e pronto para uso. Quando o atributo `open` não for definido, ele não deve ser mostrado ao usuário.
 
 ## Notas de uso
@@ -132,14 +132,11 @@ Este exemplo abre uma caixa de diálogo contendo um formulário quando o botão 
 
 ## Especificações
 
-| Especificação                                                                             | Status                   | Comentário        |
-| ----------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}            | {{Spec2('HTML WHATWG')}} |                   |
-| {{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.2')}}     | Difinição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.dialog")}}
+{{Compat}}
 
 ## Polyfills
 
@@ -149,8 +146,8 @@ Inclua este polyfill para suportar browsers antigos.
 
 ## Veja também
 
-- O {{event("close")}} evento
-- O {{event("cancel")}} evento
+- O [`close`](/pt-BR/docs/Web/API/HTMLDialogElement/close_event) evento
+- O [`cancel`](/pt-BR/docs/Web/API/HTMLDialogElement/cancel_event) evento
 - Guia de formulários HTML.
 
 {{HTMLSidebar}}

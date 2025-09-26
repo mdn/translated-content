@@ -7,7 +7,8 @@ slug: Web/API/NodeList
 
 **`NodeList`** 物件是節點的集合，可藉由 {{domxref("Node.childNodes")}} 屬性以及 {{domxref("document.querySelectorAll()")}} 方法取得。
 
-> **備註：** 雖然 `NodeList` 不是 `Array`，但仍可以使用 `forEach()` 方法來進行迭代。一些老舊瀏覽器並未實作此方法。
+> [!NOTE]
+> 雖然 `NodeList` 不是 `Array`，但仍可以使用 `forEach()` 方法來進行迭代。一些老舊瀏覽器並未實作此方法。
 
 在某些情況下，`NodeList` 為*動態集合（live collection）*，意思是 DOM 的改變會反映於集合。例如，{{domxref("Node.childNodes")}} 便是即時更新（live）的：
 
@@ -51,9 +52,9 @@ for (var i = 0; i < myNodeList.length; ++i) {
 }
 ```
 
-Don't be tempted to use [`for...in`](/zh-TW/docs/JavaScript/Reference/Statements/for...in) or [`for each...in`](/zh-TW/docs/JavaScript/Reference/Statements/for_each...in) to enumerate the items in the list, since that will also enumerate the length and item properties of the `NodeList` and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, `for..in` is not guaranteed to visit the properties in any particular order.
+Don't be tempted to use [`for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) or [`for each...in`](/zh-TW/docs/JavaScript/Reference/Statements/for_each...in) to enumerate the items in the list, since that will also enumerate the length and item properties of the `NodeList` and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, `for..in` is not guaranteed to visit the properties in any particular order.
 
-[`for...of`](/zh-TW/docs/JavaScript/Reference/Statements/for...of) loops will loop over `NodeList` objects correctly:
+[`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) loops will loop over `NodeList` objects correctly:
 
 ```js
 var list = document.querySelectorAll("input[type=checkbox]");

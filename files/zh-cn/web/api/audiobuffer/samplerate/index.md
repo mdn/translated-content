@@ -54,6 +54,6 @@ button.onclick = function () {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

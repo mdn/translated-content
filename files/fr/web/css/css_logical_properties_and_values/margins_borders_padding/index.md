@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
 
 La spécification [sur les propriétés et valeurs logiques](https://drafts.csswg.org/css-logical/) définit des correspondances pour les propriétés servant à définir les marges, les bordures et les remplissages (_padding_) et les propriétés raccourcies associées. Dans ce guide, nous verrons comment utiliser ces propriétés logiques.
 
-Si vous avez consulté la page principale sur [les propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_Logical_Properties), vous avez pu voir une grande quantité de propriétés. Cela est principalement du au fait que pour chaque marge, bordure et remplissage, il y a quatre propriétés détaillées et une propriété raccourcie.
+Si vous avez consulté la page principale sur [les propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values), vous avez pu voir une grande quantité de propriétés. Cela est principalement du au fait que pour chaque marge, bordure et remplissage, il y a quatre propriétés détaillées et une propriété raccourcie.
 
 ## Correspondances pour les marges, les bordures et les remplissages (_padding_)
 
@@ -87,7 +87,8 @@ Avec un mode d'écriture horizontal, cette déclaration CSS appliquerait une mar
 }
 ```
 
-> **Note :** Ces propriétés raccourcies, `margin-inline` et `margin-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
+> [!NOTE]
+> Ces propriétés raccourcies, `margin-inline` et `margin-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
 
 ## Exemples pour le remplissage
 
@@ -113,7 +114,8 @@ Avec un mode d'écriture horizontal, cette déclaration CSS appliquera un rempli
 }
 ```
 
-> **Note :** Ces propriétés raccourcies, `padding-inline` et `padding-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
+> [!NOTE]
+> Ces propriétés raccourcies, `padding-inline` et `padding-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
 
 ## Exemples pour les bordures
 
@@ -136,7 +138,8 @@ Il y a des propriétés raccourcies avec deux valeurs pour paramétrer la largeu
 }
 ```
 
-> **Note :** Ces propriétés raccourcies, `border-inline` et `border-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
+> [!NOTE]
+> Ces propriétés raccourcies, `border-inline` et `border-block`, ont été implémentées avec Firefox 66. Elles restent relativement nouvelles et mieux vaut donc vérifier la compatibilité navigateur avant de les utiliser.
 
 ### Propriétés pour les courbures des bordures relatives au flux
 

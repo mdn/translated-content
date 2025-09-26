@@ -3,6 +3,8 @@ title: Node (networking)
 slug: Glossary/Node/networking
 ---
 
+{{GlossarySidebar}}
+
 ネットワークでは、 **node** はネットワーク内の接続ポイントです。物理ネットワークでは通常、コンピューターやルーターなどのデバイスです。
 
 ## 詳細情報

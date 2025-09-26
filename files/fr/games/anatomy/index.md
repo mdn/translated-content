@@ -3,8 +3,6 @@ title: Anatomie d'un jeu vidéo
 slug: Games/Anatomy
 ---
 
-{{GamesSidebar}}
-
 Cet article se concentre sur l'anatomie et le flux de la plupart des jeux video à partir d'un point de vue technique, concernant la manière dont la boucle principale devrait tourner. Cela aide les débutants dans l'arène du développement à comprendre ce qui est requis quand il est question de bâtir un jeu et comment les standards du web comme JavaScript leur est offert comme outil. Les programmeurs de jeux expérimentés et nouveaux dans le développement web pourront aussi en tirer bénéfice.
 
 ## Présenter, accepter, interpréter, calculer, repéter
@@ -107,7 +105,7 @@ La clé pour programmer une boucle principale, en JavaScript, est d'attacher n'i
 
 ## Construire une boucle principale encore plus optimisée en JavaScript
 
-En fin de compte, en JavaScript, le navigateur roule sa propre boucle principale et votre code existe dans certaines de ses étapes. La section ci-dessus décrit des boucles principales qui essaient de ne pas lâcher le contrôle du navigateur. Ces méthodes principales s'attachent à `window.requestAnimationFrame()`, qui demandent au navigateur le contrôle sur la prochaine image qui arrive. C'est au navigateur de décider de la gestion de sa boucle principale. Les spécifications du [W3C en matière de requestAnimationFrame](http://www.w3.org/TR/animation-timing/) ne définissent pas exactement quand les navigateur doivent éxécuter les rappels de requestAnimationFrame. Cela pourrait être bénéfique car cela laisse aux concepteurs de navigateurs la liberté d'expérimenter les solutions qu'ils pensent être les meilleures au travers du temps.
+En fin de compte, en JavaScript, le navigateur roule sa propre boucle principale et votre code existe dans certaines de ses étapes. La section ci-dessus décrit des boucles principales qui essaient de ne pas lâcher le contrôle du navigateur. Ces méthodes principales s'attachent à `window.requestAnimationFrame()`, qui demandent au navigateur le contrôle sur la prochaine image qui arrive. C'est au navigateur de décider de la gestion de sa boucle principale. Les spécifications du [W3C en matière de requestAnimationFrame](https://www.w3.org/TR/animation-timing/) ne définissent pas exactement quand les navigateur doivent éxécuter les rappels de requestAnimationFrame. Cela pourrait être bénéfique car cela laisse aux concepteurs de navigateurs la liberté d'expérimenter les solutions qu'ils pensent être les meilleures au travers du temps.
 
 Les versions modernes de Firefox et Google Chrome (et probablement d'autres)_tentent_ de connecter les rappels de `requestAnimationFrame` à leur fil principal au tout début de chaque image. De ce fait, le déroulement principal _essaye_ d'être le plus possible comme ci-dessous:
 
@@ -202,15 +200,12 @@ D'autres méthodes d'approcher le problème existent.
 Une technique commune est de mettre à jour la simulation à une fréquence constante et dessiner autant (ou au moins) que le taux actuel le permet. Cette méthode de mise à jour peut continuer à boucler sans se soucier de ce que l'utilisateur voit. Cette méthode peut voir la dernière mise à jour, et quand elle est arrivée. Quand le dessin sait quand il est représenté, et le temps simulé pour la dernière mise à jour, il peut prédire une image plausible à dessiner. Cela n'a pas d'importance si c'est plus fréquent que la mise à jour officielle (ou même moins fréquente). La méthode de mise à jour établis des points de contrôle, autant que le système le permet, la méthode de rendu va dessiner autour de ces intants de temps. Il y a plusieurs manières de séparer la méthode de mise à jour dans les standards du web :
 
 - Dessiner à chaque `requestAnimationFrame` et mettre à jour {{ domxref("window.setInterval") }} ou {{ domxref("window.setTimeout") }}.
-
   - Cela utilise le temps du processeur même quand il n'a pas l'attention ou qu'il est minimisé, qu'il ne monopolise pas le fil principal, et est probablement un artefact de la traditionnelle boucle principale (mais plus simple).
 
-- Dessiner à chaque `requestAnimationFrame` et mettre à jour sur un `setInterval` ou `setTimeout` dans un [Web Worker](/fr/docs/Web/Guide/Performance/Using_web_workers).
-
+- Dessiner à chaque `requestAnimationFrame` et mettre à jour sur un `setInterval` ou `setTimeout` dans un [Web Worker](/fr/docs/Web/API/Web_Workers_API/Using_web_workers).
   - C'est la même chose que ci-dessus, excepté que la mise à jour ne monopolise pas le fil principal (ni le fil principal ne le monopolise). C'est une solution plus complexe, et ce pourrait être trop de travail pour de simples mises à jours.
 
 - Dessiner à chaque `requestAnimationFrame` et l'utiliser pour solliciter un Web Worker qui contient la méthode de mise à jour avec la quantité de temps à calculer, s'il y a lieu.
-
   - Cela se met en veille jusqu'à ce que `requestAnimationFrame` est appelée et ne pollue pas le fil principal, et de plus vous ne vous reposez pas sur d'anciennes méthodes. À nouveau, c'est un peu plus complexe que les deux premières options, et _débuter_ chaque mise à jour sera bloqué tant que le navigateur ne décide de lancer les retours rAF.
 
 Chacune de ces méthodes ont un compromis similaire :
@@ -302,15 +297,12 @@ J'aimerai être clair que rien de ce qu'il y a ci-dessus, ou rien de cela, ne pu
 Une chose importante à retenir pour les plateformes gérées, telles que le web, est que votre boucle pourrait arrêter son éxécution pour une période de temps significative. Cela pourrait arriver quand l'utilisateur déselectionne votre onglet et que le navigateur tombe en veille (ou ralenti) son interval de retour `requestAnimationFrame`. Vous avez plusieurs façons de gérer cela et cela peut dépendre de votre jeu, s'il est pour un seul joueur ou multijoueurs. Certains des choix sont:
 
 - Considérer le écart comme "une pause" et ne pas prendre en compte le temps.
-
   - Vous pouvez probablement voir comment cela peut être problématique pour la plupart des jeux multijoueurs.
 
 - Vous pouvez stimuler l'écart pour faire du rattrapage.
-
   - Cela peut être un problème pour de longues pauses et/ou des mises à jour complexes.
 
 - Vous pouvez récupérer l'état du jeu à partir d'un pair sur le serveur.
-
   - Ceci n'est pas efficace si votre pair ou le serveur sont périmés eux-aussi, ou s'ils n'existent pas car le jeu en mode un seul joueur n'existe pas et n'a pas de serveur.
 
 Une fois que votre boucle principale a été développée et que vous avez pris vos décisions sur un lot d'hypothèses et de compromis qui conviendront à votre jeu, cela devient juste une question d'utilisation de vos décisions pour calculer n'importe quelle physique applicable, intelligence artificielle, sons, synchronisation réseau, et quoique votre jeu ai besoin.

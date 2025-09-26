@@ -11,7 +11,7 @@ Los objetos `File` son generalmente recuperados a través de un objeto {{domxref
 
 Un objeto `File` es una especie específica de {{DOMxRef("Blob")}}, y puede ser utilizada en cualquier contexto que un Blob puede ser usado. En particular, {{DOMxRef("FileReader")}}, {{DOMxRef("URL.createObjectURL()")}}, {{DOMxRef("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, y {{DOMxRef("XMLHttpRequest", "", "send()")}} aceptan tanto `Blob`s y `File`s.
 
-Ver [Utilizando archivos desde aplicaciones web (Using files from web applications)](/es/docs/Using_files_from_web_applications) para más información y ejemplos.
+Ver [Utilizando archivos desde aplicaciones web (Using files from web applications)](/es/docs/Web/API/File_API/Using_files_from_web_applications) para más información y ejemplos.
 
 {{InheritanceDiagram}}
 
@@ -29,7 +29,6 @@ Ver [Utilizando archivos desde aplicaciones web (Using files from web applicatio
 - {{DOMxRef("File.name")}}{{ReadOnlyInline}}
   - : Retorna el nombre del archivo referenciada por el objeto `File`.
 - {{DOMxRef("File.webkitRelativePath")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
-
   - : Retorna la ruta relativa de la URL del {{DOMxRef("File")}}.
 
     `File` implementa {{DOMxRef("Blob")}}, así que también cuenta con las siguientes propiedades:
@@ -37,7 +36,7 @@ Ver [Utilizando archivos desde aplicaciones web (Using files from web applicatio
 - {{DOMxRef("File.size")}}{{ReadOnlyInline}}
   - : Retorna el tamaño del archivo en bytes.
 - {{DOMxRef("File.type")}}{{ReadOnlyInline}}
-  - : Retorna el tipo [MIME](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types)del archivo.
+  - : Retorna el tipo [MIME](/es/docs/Web/HTTP/Guides/MIME_types)del archivo.
 
 ## Métodos
 
@@ -62,6 +61,6 @@ _La interfaz `File` no define algún método, pero los hereda de la interfaz {{d
 
 ## Ver también
 
-- [Usando archivos desde aplicaciones web](/es/docs/Using_files_from_web_applications)
+- [Usando archivos desde aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
 - [Usando la API DOM File en código chrome](/es/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - {{domxref("FileReader")}}

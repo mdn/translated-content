@@ -36,7 +36,7 @@ L'événement `message` est déclenché sur un objet {{domxref('Window')}} lorsq
 
 ## Exemples
 
-Supposons qu'un script envoie un message à un contexte de navigation différent, tel qu'un autre [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), en utilisant un code comme celui-ci:
+Supposons qu'un script envoie un message à un contexte de navigation différent, tel qu'un autre [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), en utilisant un code comme celui-ci:
 
 ```js
 const targetFrame = window.top.frames[1];
@@ -56,7 +56,7 @@ window.addEventListener("message", (event) => {
 });
 ```
 
-Alternativement l'écouteur peut utiliser la propriété du gestionnaire d'événements [`onmessage`](/fr/docs/Web/API/WindowEventHandlers/onmessage):
+Alternativement l'écouteur peut utiliser la propriété du gestionnaire d'événements [`onmessage`](/fr/docs/Web/API/Window/message_event):
 
 ```js
 window.onmessage = (event) => {

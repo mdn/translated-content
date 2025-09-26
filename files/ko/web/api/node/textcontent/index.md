@@ -26,7 +26,8 @@ someOtherNode.textContent = string;
 
 - 노드가 {{domxref("document")}} 또는 {{glossary("Doctype")}}이면 {{jsxref("null")}}을 반환합니다.
 
-  > **참고:** 전체 문서의 모든 텍스트와 CDATA 데이터를 얻으려면 `document.documentElement.textContent`를 사용하세요.
+  > [!NOTE]
+  > 전체 문서의 모든 텍스트와 CDATA 데이터를 얻으려면 `document.documentElement.textContent`를 사용하세요.
 
 - 노드가 [CDATA 구획](/ko/docs/Web/API/CDATASection), 주석, [처리 명령](/ko/docs/Web/API/ProcessingInstruction), [텍스트 노드](/ko/docs/Web/API/Text)면 노드 내의 텍스트, 즉 {{domxref("Node.nodeValue")}}를 반환합니다.
 - 다른 노드 유형에 대해서는 주석과 처리 명령을 제외한 모든 자식 노드의 `textContent`를 병합한 결과를 반환합니다. 자식이 없는 경우 빈 문자열입니다.
@@ -39,7 +40,6 @@ someOtherNode.textContent = string;
 
 - `textContent`는 {{htmlelement("script")}}와 {{htmlelement("style")}} 요소를 포함한 모든 요소의 콘텐츠를 가져옵니다. 반면 `innerText`는 "사람이 읽을 수 있는" 요소만 처리합니다.
 - `textContent`는 노드의 모든 요소를 반환합니다. 그에 비해 `innerText`는 스타일링을 고려하며, "숨겨진" 요소의 텍스트는 반환하지 않습니다.
-
   - 또한, `innerText`의 CSS 고려로 인해, innerText 값을 읽으면 최신 계산값을 반영하기 위해 {{glossary("reflow", "리플로우")}}가 발생합니다. (리플로우 계산은 비싸므로 가능하면 피해야 합니다)
 
 - Internet Explorer 기준, `innerText`를 수정하면 요소의 모든 자식 노드를 제거하고, 모든 자손 텍스트 노드를 영구히 파괴합니다. 이로 인해, 해당 텍스트 노드를 이후에 다른 노드는 물론 같은 노드에 삽입하는 것도 불가능합니다.

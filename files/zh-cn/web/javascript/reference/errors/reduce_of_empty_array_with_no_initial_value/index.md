@@ -3,8 +3,6 @@ title: "TypeError: Reduce of empty array with no initial value"
 slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 消息
 
 ```plain
@@ -86,7 +84,7 @@ var name_list2 = Array.prototype.reduce.call(
 // name_list2 == "" when names is empty.
 ```
 
-## 另见
+## 参见
 
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}

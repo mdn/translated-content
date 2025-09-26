@@ -3,12 +3,12 @@ title: "Element: hasPointerCapture() メソッド"
 short-title: hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: f70edbb6584d2df5ad4842ecf2170b3cbddc6cf6
 ---
 
 {{APIRef("DOM")}}
 
-**`hasPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、それを呼び出した要素が、指定されたポインター ID によって識別されるポインターに対するポインターキャプチャを持つかどうかを示します。
+**`hasPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、それを呼び出した要素が、指定されたポインター ID によって識別されるポインターに対する[ポインターキャプチャ](/ja/docs/Web/API/Pointer_events#ポインターキャプチャ)を持つかどうかを示します。
 
 ## 構文
 
@@ -23,7 +23,7 @@ hasPointerCapture(pointerId)
 
 ### 返値
 
-論理値です。要素がポインターキャプチャを持っている場合は `true`、持っていない場合は `false` です。
+論理値です。 指定されたポインター ID で識別されるポインターのポインターキャプチャが要素にある場合は `true`、ない場合は `false` を返します。
 
 ## 例
 
@@ -37,12 +37,12 @@ hasPointerCapture(pointerId)
 
       // …
 
-      // 要素にまだポインタキャプチャがあるかどうかを確認します
+      // 要素にまだポインターキャプチャがあるかどうかを確認します
       let pointerCap = el.hasPointerCapture(ev.pointerId);
       if (pointerCap) {
-        // まだポインタキャプチャがあります
+        // まだポインターキャプチャがあります
       } else {
-        // おっと、ポインタキャプチャを失いました！
+        // おっと、ポインターキャプチャを失いました！
       }
     }
 
@@ -52,7 +52,7 @@ hasPointerCapture(pointerId)
     }
   </script>
   <body onload="init();">
-    <div id="target">この要素をポインタでタッチします。</div>
+    <div id="target">この要素をポインターでタッチします。</div>
   </body>
 </html>
 ```
@@ -69,4 +69,4 @@ hasPointerCapture(pointerId)
 
 - {{ domxref("Element.setPointerCapture()")}}
 - {{ domxref("Element.releasePointerCapture()")}}
-- {{ domxref("Pointer_events","Pointer Events") }}
+- {{ domxref("Pointer_events","ポインターイベント", "", 1) }}

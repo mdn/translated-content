@@ -3,6 +3,8 @@ title: Abstraction (抽象化)
 slug: Glossary/Abstraction
 ---
 
+{{GlossarySidebar}}
+
 {{Glossary("Computer_Programming", "コンピュータープログラミング")}}における抽象化とは、複雑なソフトウェアシステムにおいて、複雑さを軽減し、また効率的な設計と実装を可能にする方法です。これはシステムの技術的な複雑さを、{{Glossary("API")}} の背後に隠します。
 
 ## データ抽象化の利点

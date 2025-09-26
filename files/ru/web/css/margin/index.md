@@ -5,9 +5,63 @@ slug: Web/CSS/margin
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`margin`** определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
+[CSS](/ru/docs/Web/CSS) свойство **`margin`** определяет [внешний отступ](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
 
-{{EmbedInteractiveExample("pages/css/margin.html")}}
+{{InteractiveExample("CSS Demo: margin")}}
+
+```css interactive-example-choice
+margin: 1em;
+```
+
+```css interactive-example-choice
+margin: 5% 0;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px 0;
+```
+
+```css interactive-example-choice
+margin: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## Составные свойства
 
@@ -60,7 +114,7 @@ margin: unset;
 
 {{cssinfo}}
 
-## Синтаксис
+## Формальный синтаксис
 
 {{csssyntax}}
 
@@ -139,7 +193,7 @@ margin: auto;
 
 ### Схлопывание отступов
 
-Иногда внешние отступы (margins) для верхней и нижней сторон схлопываются в один отступ, который равен наибольшему из двух отступов. Смотри [Схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) для получения большей информации.
+Иногда внешние отступы для верхней и нижней сторон схлопываются в один отступ, который равен наибольшему из двух отступов. Смотрите [Схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) для получения большей информации.
 
 ## Спецификации
 
@@ -151,7 +205,7 @@ margin: auto;
 
 ## Смотрите также
 
-- [Введение в базовую блочную модель CSS](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Введение в базовую блочную модель CSS](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}
 - Логические свойства: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}} и {{cssxref("margin-inline-end")}}. А так же сокращенные варианты: {{cssxref("margin-block")}} и {{cssxref("margin-inline")}}

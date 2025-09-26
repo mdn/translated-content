@@ -3,6 +3,8 @@ title: Privileged
 slug: Glossary/Privileged
 ---
 
+{{GlossarySidebar}}
+
 ユーザーは、システムに対する追加の権限が付与されている場合、または通常のユーザーと比較してより高い優先度レベルのコンテンツへの最終的なアクセス権が付与されている場合に、**特権がある**と言われます。
 
 ## 関連項目
@@ -13,4 +15,4 @@ slug: Glossary/Privileged
 
 ### これについて学ぶ
 
-- [Information Security Tutorial](/ja/Learn/tutorial/Information_Security_Basics)
+- [Information Security Tutorial](/ja/docs/Learn/tutorial/Information_Security_Basics)

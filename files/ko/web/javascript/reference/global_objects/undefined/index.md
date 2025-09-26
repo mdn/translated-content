@@ -8,7 +8,21 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 전역 **`undefined`** 속성은 `{{Glossary("Undefined", "undefined")}}` 원시 값을 나타내며,
 JavaScript의 {{Glossary("Primitive", "원시 자료형")}} 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+```
 
 ## 값
 
@@ -24,7 +38,8 @@ JavaScript의 {{Glossary("Primitive", "원시 자료형")}} 중 하나입니다.
 
 값을 할당하지 않은 변수는 `undefined` 자료형입니다. 메서드나 선언도 평가할 변수가 값을 할당받지 않은 경우에 `undefined`를 반환합니다. 함수는 값을 명시적으로 {{jsxref("Statements/return", "반환")}}하지 않으면 `undefined`를 반환합니다.
 
-> **참고:** 전역 범위 이외의 모든 범위에서 {{Glossary("Identifier", "식별자")}} (변수 이름)로 `undefined`를 사용할 수 있지만(`undefined`는 [예약어](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)가 아니기 때문에), 그렇게 하는 것은 매우 나쁜 생각입니다. 코드를 유지보수하고 디버깅하기 어렵게 만듭니다.
+> [!NOTE]
+> 전역 범위 이외의 모든 범위에서 {{Glossary("Identifier", "식별자")}} (변수 이름)로 `undefined`를 사용할 수 있지만(`undefined`는 [예약어](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)가 아니기 때문에), 그렇게 하는 것은 매우 나쁜 생각입니다. 코드를 유지보수하고 디버깅하기 어렵게 만듭니다.
 >
 > ```js example-bad
 > // DON'T DO THIS
@@ -57,7 +72,7 @@ if (x === undefined) {
 > **참고:**: `x == undefined`는 `x`가 `null`일 때도 참이기 때문에, 엄격한 동등 연산자(표준 동등 연산자와 반대로)를 사용해야 합니다.
 > 반면에, 엄격한 동등 연산자는 그렇지 않습니다. 이것은 `null`이 `undefined`하고 동일하지 않기 때문입니다.
 >
-> 자세한 내용은 [Equality comparison and sameness](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness) 문서를 확인하세요.
+> 자세한 내용은 [Equality comparison and sameness](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) 문서를 확인하세요.
 
 ### `typeof` 연산자와 `undefined`
 

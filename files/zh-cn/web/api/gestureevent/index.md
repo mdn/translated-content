@@ -3,9 +3,7 @@ title: GestureEvent
 slug: Web/API/GestureEvent
 ---
 
-{{APIRef("DOM Events")}}
-
-{{Non-standard_header()}}
+{{APIRef("UI Events")}}{{Non-standard_header}}
 
 **`GestureEvent`** 是 WebKit 的专有接口，提供多点触控的信息。这个接口的事件包括 {{domxref("Element/gesturestart_event", "gesturestart")}}、{{domxref("Element/gesturechange_event", "gesturechange")}} 和 {{domxref("Element/gestureend_event", "gestureend")}}.
 

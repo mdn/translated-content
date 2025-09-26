@@ -11,7 +11,8 @@ Un objet **`FinalizationRegistry`** permet de déclencher une fonction de rappel
 
 `FinalizationRegistry` fournit une méthode pour demander à ce qu'une fonction de nettoyage soit appelée à un moment lorsqu'un objet enregistré dans le registre de mémoire a été _récupéré_ (traité par le ramasse-miettes). Ces fonctions de rappel pour du nettoyage sont parfois appelées _finaliseurs_.
 
-> **Note :** Ces fonctions de rappels ne devraient pas être utilisées pour des opérations essentielles à la logique d'un programme. Voir les notes ci-après pour plus de détails.
+> [!NOTE]
+> Ces fonctions de rappels ne devraient pas être utilisées pour des opérations essentielles à la logique d'un programme. Voir les notes ci-après pour plus de détails.
 
 On crée le registre en passant la fonction de rappel en paramètre&nbsp;:
 

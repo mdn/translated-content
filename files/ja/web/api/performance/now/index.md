@@ -1,32 +1,72 @@
 ---
-title: performance.now()
+title: "Performance: now() メソッド"
+short-title: now()
 slug: Web/API/Performance/now
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("High Resolution Timing")}}
+{{APIRef("Performance API")}}
 
-**`performance.now()`** メソッドは、ミリ秒単位で計測された {{domxref("DOMHighResTimeStamp")}} を返します。
-
-{{AvailableInWorkers}}
-
-返値は[時刻原点](/ja/docs/Web/API/DOMHighResTimeStamp#the_time_origin)からの経過時間を表します。
-
-次の点に留意してください。
-
-- {{domxref("Window")}} コンテキストから生成された専用ワーカー (dedicated worker) では、この値は生成元の window における`performance.now()` の値よりも小さい値になります。従来はメインコンテキストの `t0` と同じでしたが、変更されました。
-- 共有ワーカー (shared worker) またはサービスワーカー (service worker) では、この値はメインコンテキストでの値よりも大きくなるかもしれません。 window はワーカーよりも後に生成される可能性があるからです。
-
-ブラウザーは通常、 [Spectre](https://spectreattack.com/) のような潜在的なセキュリティ脅威を軽減するために、予測可能性を低下させる目的で、返される値をある量で丸めることを覚えておくことが重要です。これは、タイマーの解像度や精度を制限することで、意図的にある程度不正確にします。例えば、 Firefox は返される時刻を 1 ミリ秒単位で丸めます。
-
-返される値の精度は、セキュリティ上の懸念が他の手段で軽減された場合、またはされた場合に変更される可能性があります。
+**`performance.now()`** メソッドは高解像度のタイムスタンプをミリ秒で返します。これは {{domxref("Performance.timeOrigin")}} （ウィンドウコンテキストではナビゲーションを開始した時刻、 {{domxref("Worker")}} および {{domxref("ServiceWorker")}} コンテキストではワーカーを実行した時刻）からの経過時間を表します。
 
 ## 構文
 
-```js
-t = performance.now();
+```js-nolint
+now()
 ```
 
+### 引数
+
+なし。
+
+### 返値
+
+ミリ秒単位で計測した {{domxref("DOMHighResTimeStamp")}} を返します。
+
+## 解説
+
+### `Performance.now` と `Date.now`
+
+[`Date.now`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/now) とは異なり、`performance.now()` が返すタイムスタンプは 1 ミリ秒の解像度に制限されません。時刻をマイクロ秒精度までの浮動小数点数で表します。
+
+また、 `Date.now()` は Unix 元期 (1970-01-01T00:00:00Z) からの相対値で、システムクロックに依存しているため、システムクロックやユーザークロックの調整、クロックスキューなどの影響を受ける可能性があります。
+一方、 `performance.now()` メソッドは、 [monotonic clock](https://w3c.github.io/hr-time/#dfn-monotonic-clock) である `timeOrigin` プロパティからの相対値です。その現在時刻は決して減少せず、調整の対象にはなりません。
+
+### `performance.now` の仕様の変更
+
+高解像度時間レベル 1 とレベル 2 では、 `performance.now()` メソッドの意味づけが変わりました。
+
+| 変更     | レベル 1                                                                                   | レベル 2                                                                                                                                                            |
+| -------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 基点     | [`performance.timing.navigationStart`](/ja/docs/Web/API/PerformanceTiming/navigationStart) | {{domxref("Performance.timeOrigin")}}                                                                                                                               |
+| 起動条件 | 文書の読み込みまたはアンロードのプロンプト（もしあれば）。                                 | 閲覧コンテキストの作成（前の文書がない場合）、アンロードプロンプト（ある場合）、またはナビゲーションの開始（HTML 内で定義しているように、取得のいくつか前の段階）。 |
+
+`performance.now()` メソッドは、ナビゲーションタイミング仕様書の [`performance.timing.navigationStart`](/ja/docs/Web/API/PerformanceTiming/navigationStart) プロパティからの相対値を使用していました。これが変更され、 `performance.now()` は {{domxref("Performance.timeOrigin")}} からの相対値となり、ウェブページ間でタイムスタンプを比較する際の時計の変化のリスクを避けることができるようになりました。
+
+```js
+// レベル 1 （時計の変更のリスクあり）
+currentTime = performance.timing.navigationStart + performance.now();
+
+// レベル 2 （時計の変更のリスクなし）
+currentTime = performance.timeOrigin + performance.now();
+```
+
+### スリープ中のカウント
+
+詳細度（レベル2）では、スリープ中に `performance.now()` がカウント動作することが要求されています。Windows の Firefox と Windows の Chromium だけがスリープ中も動き続けているようです。他にも関連するブラウザーバグがあります。
+
+- Chrome/Chromium ([bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1206450))
+- Firefox ([bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1709767))
+- Safari/WebKit ([bug](https://bugs.webkit.org/show_bug.cgi?id=225610))
+
+詳細は仕様の issue [hr-time#115](https://github.com/w3c/hr-time/issues/115) でも得られます。
+
 ## 例
+
+### `performance.now()` の使用
+
+コードの具体的な点からの経過時間を調べるには、次のようにします。
 
 ```js
 const t0 = performance.now();
@@ -35,45 +75,21 @@ const t1 = performance.now();
 console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 ```
 
-JavaScript で利用できる他の時刻のデータ（例えば [`Date.now`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/now)）とは異なり、 `performance.now()` が返すタイムスタンプは、 1 ミリ秒の分解能に制限されません。代わりに、マイクロ秒までの精度を持った浮動小数点の値で時刻を表します。
+## セキュリティ要件
 
-また、`Date.now()` とは違い、`performance.now()` が返す値は、（手動で調整、または NTP のようなソフトウェアで変更される可能性がある）システムクロックから独立しており、常に一定の割合で増加します。一方、 `performance.timing.navigationStart + performance.now()` は、おおよそ `Date.now()` と等しくなります。
+タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)から保護するために、 `performance.now()` はサイトの分離状態に基づいて粗くなります。
 
-## 時間精度の引き下げ
+- 独立したコンテキストでの解像度: 5 マイクロ秒
+- 独立していないコンテキストでの解像度: 100 マイクロ秒
 
-タイミング攻撃やフィンガープリンティングから保護するため、ブラウザーの設定によっては、 `performance.now()` の精度が丸められることがあります。
-Firefox では、 `privacy.reduceTimerPrecision` の設定が既定で有効になっており、既定で 1 ミリ秒となっています。
+{{HTTPHeader("Cross-Origin-Opener-Policy")}} と {{HTTPHeader("Cross-Origin-Embedder-Policy")}} ヘッダーを使用して、サイトをオリジン間分離します。
 
-```js
-// Firefox 60 での時間精度の引き下げ (1ms)
-performance.now();
-// 8781416
-// 8781815
-// 8782206
-// ...
-
-// `privacy.resistFingerprinting` 有効化による時間精度の引き下げ`
-performance.now();
-// 8865400
-// 8866200
-// 8866700
-// ...
-```
-
-Firefox では `privacy.resistFingerprinting` も有効にすることができます。これは、精度を 100 ミリ秒または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` のどちらか大きい方へ変更します。
-
-Firefox 79 以降では、高精度タイマーは文書が {{HTTPHeader("Cross-Origin-Opener-Policy")}} および {{HTTPHeader("Cross-Origin-Embedder-Policy")}} ヘッダーを使用してクロスオリジン分離を行っている場合に使用することができるようになりました。
-
-```plain
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
 これらのヘッダーは、最上位の文書がクロスオリジン文書と閲覧コンテキストグループを共有しないことを保証します。 COOP プロセスは、文書を分離し、潜在的な攻撃者がポップアップでそれを開いていたとしても、グローバルオブジェクトにアクセスできないようにし、 [XS-Leaks](https://github.com/xsleaks/xsleaks) と呼ばれる一連のクロスオリジン攻撃を防止しています。
-
-## 仕様
-
-{{Specifications}}
 
 ## 仕様書
 
@@ -85,4 +101,4 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ## 関連情報
 
-- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) (HTML5 Rocks)
+- {{domxref("Performance.timeOrigin")}}

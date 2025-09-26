@@ -3,8 +3,6 @@ title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
 ---
 
-{{FirefoxSidebar}}
-
 Web 开发者需要关注的变化
 
 ### Developer Tools
@@ -60,6 +58,6 @@ _No change._
 
 - [Site Compatibility for Firefox 31](/zh-CN/docs/Mozilla/Firefox/Releases/31/Site_Compatibility)
 
-### Older versions
+### 更早期的版本
 
-{{Firefox_for_developers('30')}}
+{{Firefox_for_developers}}

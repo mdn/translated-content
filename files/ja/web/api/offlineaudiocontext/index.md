@@ -37,7 +37,8 @@ _親インターフェイスである {{domxref("BaseAudioContext")}} からの�
 - {{domxref("OfflineAudioContext.resume()")}}
   - : 前回中断した音声の時刻の進行を再開します。
 
-> **メモ:** `resume()` メソッドはまだ利用できます。これは {{domxref("BaseAudioContext")}} インターフェイスで定義されるようになり（{{domxref("AudioContext.resume")}} を参照）、従って {{domxref("AudioContext")}} および {{domxref("OfflineAudioContext")}} インターフェイスの両方でアクセスできます。
+> [!NOTE]
+> `resume()` メソッドはまだ利用できます。これは {{domxref("BaseAudioContext")}} インターフェイスで定義されるようになり（{{domxref("AudioContext.resume")}} を参照）、従って {{domxref("AudioContext")}} および {{domxref("OfflineAudioContext")}} インターフェイスの両方でアクセスできます。
 
 ## イベント
 
@@ -54,13 +55,14 @@ _親インターフェイスである {{domxref("BaseAudioContext")}} からの�
 
 この時点で、別の音声コンテキストを作成し、その中に {{domxref("AudioBufferSourceNode")}} を作成し、そのバッファーをプロミス `AudioBuffer` と等しくなるように設定します。これは単純な標準音声グラフの一部として再生されます。
 
-> **メモ:** 動作する例については、 [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) の GitHub リポジトリーを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise)も参照してください）。
+> [!NOTE]
+> 動作する例については、 [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) の GitHub リポジトリーを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise)も参照してください）。
 
 ```js
 // オンラインとオフラインのオーディオコンテキストを定義
 
 const audioCtx = new AudioContext();
-const offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+const offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -70,9 +72,9 @@ source = offlineCtx.createBufferSource();
 function getData() {
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
   request.onload = () => {
     const audioData = request.response;
@@ -83,22 +85,25 @@ function getData() {
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then((renderedBuffer) => {
-        console.log('Rendering completed successfully');
-        const song = audioCtx.createBufferSource();
-        song.buffer = renderedBuffer;
+      offlineCtx
+        .startRendering()
+        .then((renderedBuffer) => {
+          console.log("Rendering completed successfully");
+          const song = audioCtx.createBufferSource();
+          song.buffer = renderedBuffer;
 
-        song.connect(audioCtx.destination);
+          song.connect(audioCtx.destination);
 
-        play.onclick = () => {
-          song.start();
-        }
-      }).catch((err) => {
+          play.onclick = () => {
+            song.start();
+          };
+        })
+        .catch((err) => {
           console.error(`Rendering failed: ${err}`);
           // 注意: OfflineAudioContext の startRendering が二回以上呼び出されるとプロミスは拒否されます。
-      });
+        });
     });
-  }
+  };
 
   request.send();
 }

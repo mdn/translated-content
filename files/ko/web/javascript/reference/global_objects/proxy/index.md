@@ -139,7 +139,7 @@ console.log(target.a);
 
 ### 프라이빗 속성 포워딩 없음
 
-프록시는 여전히 다른 ID를 가진 또 다른 객체로, 래핑된 객체와 외부 사이에서 작동하는 **프록시**일 뿐입니다. 따라서 프록시는 원래 객체의 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)에 직접 접근할 수 없습니다.
+프록시는 여전히 다른 ID를 가진 또 다른 객체로, 래핑된 객체와 외부 사이에서 작동하는 **프록시**일 뿐입니다. 따라서 프록시는 원래 객체의 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements)에 직접 접근할 수 없습니다.
 
 ```js
 class Secret {

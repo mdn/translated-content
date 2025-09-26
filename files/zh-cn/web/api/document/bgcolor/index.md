@@ -1,31 +1,34 @@
 ---
-title: Document.bgColor
+title: Document：bgColor 属性
 slug: Web/API/Document/bgColor
+l10n:
+  sourceCommit: 23fb12ae62339140281b9aad2c9f856e2e5a4762
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{APIRef("DOM")}} {{Deprecated_Header}}
 
-`bgColor` 获取/设置当前文档的背景颜色
+已弃用的 `bgColor` 属性用于获取或设置当前文档的背景颜色。
 
-## 语法
+## 值
 
-```plain
-color = document.bgColor
-document.bgColor =color
-```
-
-### 参数
-
-- `color` 表示颜色的字符串如“red”，或者是十六进制的色值如“#ff0000”。
+表示颜色的字符串，可以是颜色名称（例如“red”）或十六进制值（例如“`#ff0000`”）。
 
 ## 示例
 
-```plain
+```js
 document.bgColor = "darkblue";
 ```
 
-## 笔记
+## 备注
 
-这个属性在 Mozilla Firefox 中的默认值是白色“#ffffff”。
+Firefox 中该属性的默认值是白色（十六进制的 `#ffffff`）。
 
-`document.bgColor` 在 [DOM Level 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) 中已经不推荐使用。推荐使用 CSS 的 [background-color](en/CSS/background-color) 或者 `document.body.style.backgroundColor` 来给文档设置背景颜色。另外一种方式是使用 `document.body.bgColor`, 这种方式也已经不推荐使用了。
+在 [DOM 第 2 版 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) 规范中 `document.bgColor` 已被弃用。推荐的替代方法是使用 CSS 样式 {{Cssxref("background-color")}}，可以通过 DOM 中的 `document.body.style.backgroundColor` 来访问该样式。另一种替代方法是 `document.body.bgColor`，不过 HTML 4.01 也已弃用这种方法，转而使用 CSS 替代方法。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

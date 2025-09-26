@@ -3,7 +3,7 @@ title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 {{WebExtAPIRef("downloads")}} API の **`download()`** 関数では URL とそのほかのオプションの設定を行うことでファイルのダウンロードをすることができます。
 
@@ -20,12 +20,10 @@ var downloading = browser.downloads.download(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `options`
-
   - : この`object`ではダウンロードしたいファイルやその他のダウンロードに関する設定を指定します。指定できるプロパティは以下です。
-
     - `body`{{optional_inline}}
       - : リクエストの body を`string`で指定します。
     - `conflictAction`{{optional_inline}}
@@ -39,7 +37,6 @@ var downloading = browser.downloads.download(
     - `method`{{optional_inline}}
       - : HTTP\[S]を使用した URL を指定した際、HTTP メソッドを`string`で指定します。GET もしくは POST を設定できます。
     - `saveAs`{{optional_inline}}
-
       - : A `boolean` that specifies whether to provide a file chooser dialog to allow the user to select a filename (`true`), or not (`false`).
 
         If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or `browser.download.useDownloadDir` in about:config).
@@ -53,7 +50,7 @@ var downloading = browser.downloads.download(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.downloads.download")}}
+{{Compat}}
 
 ## 例
 
@@ -81,7 +78,8 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API を元にしています。
+> [!NOTE]
+> この API は Chromium の [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-download) API を元にしています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

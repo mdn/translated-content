@@ -46,6 +46,6 @@ if (serviceWorker) {
 
 {{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}

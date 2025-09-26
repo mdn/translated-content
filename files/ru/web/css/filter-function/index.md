@@ -5,7 +5,7 @@ slug: Web/CSS/filter-function
 
 {{cssref}}
 
-[Тип данных](/ru/docs/Web/CSS/CSS_Types) [CSS](/ru/docs/Web/CSS) **`<filter-function>`** представляет собой графический эффект, который может изменить внешний вид входного изображения. Он используется в свойствах {{cssxref("filter")}} и {{cssxref("backdrop-filter")}}.
+[Тип данных](/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/ru/docs/Web/CSS) **`<filter-function>`** представляет собой графический эффект, который может изменить внешний вид входного изображения. Он используется в свойствах {{cssxref("filter")}} и {{cssxref("backdrop-filter")}}.
 
 ## Синтаксис
 
@@ -32,11 +32,9 @@ slug: Web/CSS/filter-function
 - {{cssxref("filter-function/sepia", "sepia()")}}
   - : Преобразует изображение в сепию.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                         | Статус                     | Комментарии         |
-| ------------------------------------------------------------------------------------ | -------------------------- | ------------------- |
-| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Первое определение. |
+{{Specifications}}
 
 ## Смотрите также
 

@@ -54,10 +54,10 @@ Pour les anciens navigateurs qui n'implémenteraient pas le constructeur [`URL()
 
 ## Méthodes statiques
 
-- [`createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL)
+- [`createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static)
   - : Renvoie une chaîne de caractères contenant une URL de blob unique, c'est-à-dire une URL dont le schéma est `blob:`, suivi d'une chaîne de caractères opaque identifiant de façon unique l'objet dans le navigateur.
-- [`revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL)
-  - : Révoque un objet `URL` précédemment créé à l'aide de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL).
+- [`revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL_static)
+  - : Révoque un objet `URL` précédemment créé à l'aide de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static).
 
 ## Notes d'utilisation
 
@@ -113,5 +113,5 @@ const response = await fetch(
 
 - [Une prothèse d'émulation pour `URL` avec la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [L'API URL](/fr/docs/Web/API/URL_API)
-- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/What_is_a_URL)
+- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams).

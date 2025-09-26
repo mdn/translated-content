@@ -57,7 +57,7 @@ Geolocation API는 {{domxref("Navigator.geolocation", "navigator.geolocation")}}
 
 ### 가용성
 
-Wi-Fi 기반의 위치 정보는 보통 Google이 제공하므로, 기본 Geolocation API로는 중국에서 사용하지 못할 수도 있습니다. 대신 [Baidu](http://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), [Tencent](http://lbs.qq.com/tool/component-geolocation.html) 등 지역 서드파티 제공자가 지원하는 라이브러리를 사용할 수 있습니다. 이 서비스들은 Wi-Fi 대신 IP 주소와 지역 앱을 사용해 개선된 위치 정보를 제공합니다.
+Wi-Fi 기반의 위치 정보는 보통 Google이 제공하므로, 기본 Geolocation API로는 중국에서 사용하지 못할 수도 있습니다. 대신 [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), [Tencent](https://lbs.qq.com/tool/component-geolocation.html) 등 지역 서드파티 제공자가 지원하는 라이브러리를 사용할 수 있습니다. 이 서비스들은 Wi-Fi 대신 IP 주소와 지역 앱을 사용해 개선된 위치 정보를 제공합니다.
 
 ## 같이 보기
 

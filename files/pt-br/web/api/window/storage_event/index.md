@@ -5,7 +5,7 @@ slug: Web/API/Window/storage_event
 
 {{ ApiRef() }}
 
-A propriedade **`WindowEventHandlers.onstorage`** contém um manipulador de eventos que executa quando o evento {{event("storage")}} dispara. Isto ocorre quando a área de armazenamento é mudada. (ex. um novo item é armazenado.)
+A propriedade **`WindowEventHandlers.onstorage`** contém um manipulador de eventos que executa quando o evento [`storage`](/pt-BR/docs/Web/API/Window/storage_event) dispara. Isto ocorre quando a área de armazenamento é mudada. (ex. um novo item é armazenado.)
 
 ## Sintaxe
 

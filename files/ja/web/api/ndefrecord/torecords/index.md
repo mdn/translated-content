@@ -1,16 +1,19 @@
 ---
-title: NDEFRecord.toRecords()
+title: "NDEFRecord: toRecords() メソッド"
+short-title: toRecords()
 slug: Web/API/NDEFRecord/toRecords
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 **`toRecords()`** は {{DOMxRef("NDEFRecord")}} インターフェイスのメソッドで、 {{DOMxRef("NDEFRecord.data")}} を {{DOMxRef("NDEFRecord.recordType")}} に基づいた一連のレコードに変換し、その結果を返すものです。これにより、スマートポスターや外部型レコードなど、ネストしたレコードを含む可能性のあるレコード型のペイロードを解釈することができます。
 
 ## 構文
 
-```js
-NDEFRecord.toRecords()
+```js-nolint
+toRecords()
 ```
 
 ### 引数
@@ -23,7 +26,7 @@ NDEFRecord.toRecords()
 
 ## 例外
 
-- {{domxref("DOMException")}} `"NotSupported"`
+- `NotSupported` {{domxref("DOMException")}}
   - : {{Glossary("User Agent", "ユーザーエージェント")}}が {{DOMxRef("NDEFRecord.data")}} と {{DOMxRef("NDEFRecord.recordType")}} のこの組み合わせを解釈する方法を知らないことを示します。
 
 ## 例
@@ -42,16 +45,16 @@ const ndefReader = new NDEFReader();
 await ndefReader.scan();
 ndefReader.onreading = (event) => {
   const externalRecord = event.message.records.find(
-    record => record.type == "example.com:smart-poster"
+    (record) => record.type === "example.com:smart-poster",
   );
 
   let action, text;
 
   for (const record of externalRecord.toRecords()) {
-    if (record.recordType == "text") {
+    if (record.recordType === "text") {
       const decoder = new TextDecoder(record.encoding);
       text = decoder.decode(record.data);
-    } else if (record.recordType == ":act") {
+    } else if (record.recordType === ":act") {
       action = record.data.getUint8(0);
     }
   }

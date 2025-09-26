@@ -40,4 +40,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.devtools_page")}}
+{{Compat}}

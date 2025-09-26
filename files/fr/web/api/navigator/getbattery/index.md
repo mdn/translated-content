@@ -34,7 +34,7 @@ L'API Battery Status fournit des informations sur le niveau de charge du systèm
 
 ## Exemple
 
-Voir aussi [l'exemple dans la specification](http://dev.w3.org/2009/dap/system-info/battery-status.html#introduction).
+Voir aussi [l'exemple dans la specification](https://dev.w3.org/2009/dap/system-info/battery-status.html#introduction).
 
 ```js
 var battery =
@@ -59,5 +59,5 @@ updateBatteryStatus();
 
 ## Voir aussi
 
-- [Blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
-- [David Walsh on the Javascript Battery Api](http://davidwalsh.name/battery-api)
+- [Blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [David Walsh on the Javascript Battery Api](https://davidwalsh.name/battery-api)

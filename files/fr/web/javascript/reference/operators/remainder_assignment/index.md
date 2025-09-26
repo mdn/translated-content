@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 
 L'opérateur de reste et d'affectation (`%=`) calcule le reste de la division de l'opérande gauche par l'opérande droit et affecte ce résultat à la variable représentée par l'opérande gauche.
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Remainder assignment operator")}}
+
+```js interactive-example
+let a = 3;
+
+console.log((a %= 2));
+// Expected output: 1
+
+console.log((a %= 0));
+// Expected output: NaN
+
+console.log((a %= "hello"));
+// Expected output: NaN
+```
 
 ## Syntaxe
 
@@ -37,5 +50,5 @@ truc %= 0; // NaN
 
 ## Voir aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
 - [L'opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)

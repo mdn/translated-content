@@ -17,7 +17,7 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 
 除了文字選擇、圖片或超連結之外，沒有元素預設是可拖曳的。所以要讓一個元素可以拖曳，有幾件事必須要做：
 
-- 在想要拖曳的元素上設定 [`draggable`](/zh-TW/docs/Web/HTML/Global_attributes#draggable) 屬性為 `true`。
+- 在想要拖曳的元素上設定 [`draggable`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#draggable) 屬性為 `true`。
 - 註冊 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件之事件處理器。
 - {{domxref("DataTransfer.setData","Set the drag data")}} within the listener defined above.
 
@@ -59,17 +59,17 @@ draggable 為 true 後，該 DIV 元素便可以拖曳，反之，倘若 draggab
 
 ## 拖曳資料
 
-所有的拖曳事件物件都有一個 [dataTransfer](/zh-TW/docs/DragDrop/DataTransfer) 屬性，這個屬性是用來攜帶資料。
+所有的拖曳事件物件都有一個 [dataTransfer](/zh-TW/docs/Web/API/DataTransfer) 屬性，這個屬性是用來攜帶資料。
 
 當拖曳時，資料必須和被拖曳目標作連結，比如說拖曳文字框中反白選擇的文字，那麼文字本身便是連結資料，同理，拖曳連結時 URL 便是連結資料。
 
-資料包含兩個部分，一是資料型態(或格式)、二是資料值。所謂資料型態是用文字描述資料型態(如[text/plain](/zh-TW/docs/DragDrop/Recommended_Drag_Types#text)代表文字資料)，而資料值則是文字，要加入拖曳資料需要提供資料的型態和內容值；有了資料後，我們可以在 dragenter 或 dragover 事件處理器中，透過檢查資料型態來決定是否可以接受後續的放置操作，比如說只接受連結類資料的拖曳目標區(drop target)，會檢查資料型態是否為[text/uri-list](/zh-TW/docs/DragDrop/Recommended_Drag_Types#link)。
+資料包含兩個部分，一是資料型態(或格式)、二是資料值。所謂資料型態是用文字描述資料型態(如[text/plain](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text)代表文字資料)，而資料值則是文字，要加入拖曳資料需要提供資料的型態和內容值；有了資料後，我們可以在 dragenter 或 dragover 事件處理器中，透過檢查資料型態來決定是否可以接受後續的放置操作，比如說只接受連結類資料的拖曳目標區(drop target)，會檢查資料型態是否為[text/uri-list](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link)。
 
-資料型態符合 MIME 型態，如[text/plain](/zh-TW/docs/DragDrop/Recommended_Drag_Types#text)或[image/jpeg](/zh-TW/docs/DragDrop/Recommended_Drag_Types#image)等等，而我們自己也可以自定義其他型態，最常使用的型態請見[推薦拖曳資料型態](/zh-TW/docs/DragDrop/Recommended_Drag_Types)。
+資料型態符合 MIME 型態，如[text/plain](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text)或[image/jpeg](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image)等等，而我們自己也可以自定義其他型態，最常使用的型態請見[推薦拖曳資料型態](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)。
 
 一趟拖曳作業中可以攜帶多個多種型態的資料，所以我們可以自定義自己的型態同時，還提供其他資料給不認得自定義資料型態的其他拖曳目標區使用。通常最通用的資料會是文字類型資料。
 
-呼叫[setData](/zh-TW/docs/DragDrop/DataTransfer#setData.28.29)方法，傳入資料型態和資料，這樣就可以攜帶想要的資料了：
+呼叫[setData](/zh-TW/docs/Web/API/DataTransfer#setdata.28.29)方法，傳入資料型態和資料，這樣就可以攜帶想要的資料了：
 
 ```js
 event.dataTransfer.setData("text/plain", "Text to drag");
@@ -90,7 +90,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 如果對同一種資料型態加入兩次資料，則新加資料會取代舊資料。
 
-呼叫[clearData](/zh-TW/docs/DragDrop/DataTransfer#clearData.28.29)會清除資料。
+呼叫[clearData](/zh-TW/docs/Web/API/DataTransfer#cleardata.28.29)會清除資料。
 
 ```js
 event.dataTransfer.clearData("text/uri-list");
@@ -138,7 +138,7 @@ function dragWithCustomImage(event) {
 
 拖曳作業有好機種；copy 作業代表被拖曳資料會被複製一份到拖曳目標區，move 作業代表移動被拖曳的資料，link 作業代表拖曳來源區和拖曳目標區有某種關係。
 
-在 dragstart 事件中可以設定[effectAllowed](/zh-TW/docs/DragDrop/DataTransfer#effectAllowed.28.29)屬性，指定拖曳源頭允許的作業。
+在 dragstart 事件中可以設定[effectAllowed](/zh-TW/docs/Web/API/DataTransfer#effectallowed.28.29)屬性，指定拖曳源頭允許的作業。
 
 ```js
 event.dataTransfer.effectAllowed = "copy";
@@ -163,12 +163,11 @@ event.dataTransfer.effectAllowed = "copy";
 - linkMove
 
   all
-
   - : 複製、移動或連結皆可。
 
-[effectAllowed](/zh-TW/docs/DragDrop/DataTransfer#effectAllowed.28.29) 屬性預設所有作業都接受，如 all 值。
+[effectAllowed](/zh-TW/docs/Web/API/DataTransfer#effectallowed.28.29) 屬性預設所有作業都接受，如 all 值。
 
-在 dragenter 或 dragover 事件中，我們可以藉由檢查 effectAllowed 來知道那些作業是被允許的，另外，另一個相關聯的[dropEffect](/zh-TW/docs/DragDrop/DataTransfer#dropEffect.28.29)屬性應該要是 effectAllowed 的其中一個作業，但是 dropEffect 不接受多重作業，只可以是 none, copy, move 和 link。
+在 dragenter 或 dragover 事件中，我們可以藉由檢查 effectAllowed 來知道那些作業是被允許的，另外，另一個相關聯的[dropEffect](/zh-TW/docs/Web/API/DataTransfer#dropeffect.28.29)屬性應該要是 effectAllowed 的其中一個作業，但是 dropEffect 不接受多重作業，只可以是 none, copy, move 和 link。
 
 dropEffect 屬性會在在 dragenter 以及 dragover 事件中初始化為使用者想要執行的作業效果，使用者能夠透過按鍵(依平台不同，通常是 Shift 或 Ctrl 鍵)，在複製、移動、連接作業之間切換，同時滑鼠指標也會跟著相應變換，例如複製作業的滑鼠旁會多出一個+的符號。
 
@@ -199,7 +198,7 @@ dragenter 和 dragover 事件就是用來指定拖曳目標區，也就是放置
 
 通常我們只有在適當的時機點才需要呼叫 event.preventDefault 方法、取消預設事件行為，比如說被拖曳進來的是連結。所以檢查被拖曳進來的物件，當符合條件後再來取消預設事件行為。
 
-藉由檢查拖曳資料型態來決定是否允許放置，是最常見的作法。dataTransfer 物件的[types](/zh-TW/docs/DragDrop/DataTransfer#types.28.29)屬性是一個拖曳資料型態的列表，其中順序按照資料被加入之先後排序。
+藉由檢查拖曳資料型態來決定是否允許放置，是最常見的作法。dataTransfer 物件的[types](/zh-TW/docs/Web/API/DataTransfer#types.28.29)屬性是一個拖曳資料型態的列表，其中順序按照資料被加入之先後排序。
 
 ```js
 function doDragOver(event) {
@@ -242,7 +241,7 @@ You could always use some feature detection to determine which method is support
 
 其他比如說插入圖片等，在 dragenter 事件內執行更多更複雜的樣式變化也是可以的。
 
-倘若想要做出圖片更著滑鼠在拖曳目標區上面移動的效果，那麼可以在 dragover 事件內來取得的[clientX](/zh-TW/docs/DOM/event.clientX)和[clientY](/zh-TW/docs/DOM/event.clientY)的滑鼠座標資訊。
+倘若想要做出圖片更著滑鼠在拖曳目標區上面移動的效果，那麼可以在 dragover 事件內來取得的[clientX](/zh-TW/docs/Web/API/MouseEvent/clientX)和[clientY](/zh-TW/docs/Web/API/MouseEvent/clientY)的滑鼠座標資訊。
 
 最後，應該要在 dragleave 事件內復原之前所做樣式變更，dragleave 事件不需要取消預設事件行為、永遠都會觸發，即使拖曳被取消了；至於使用-moz-drag-over 的 CSS 方法的話，樣式復原會自動執行，不用擔心。
 
@@ -250,7 +249,7 @@ You could always use some feature detection to determine which method is support
 
 當使用者在拖曳目標區上放開滑鼠時，drop 事件就會觸發。當 drop 事件發生，我們需要取出被丟入的資料，然後處理之。
 
-要取出被丟入的資料，那就要呼叫 dataTransfer 物件的[getData](/zh-TW/docs/DragDrop/DataTransfer#getData.28.29)方法。getData 方法接受資料型態的參數，它會回傳[setData](/zh-TW/docs/DragDrop/DataTransfer#setData.28.29)所存入的對應資料型態的資料，倘若沒有對應型態資料，那空字串就會被回傳。
+要取出被丟入的資料，那就要呼叫 dataTransfer 物件的[getData](/zh-TW/docs/Web/API/DataTransfer#getdata.28.29)方法。getData 方法接受資料型態的參數，它會回傳[setData](/zh-TW/docs/Web/API/DataTransfer#setdata.28.29)所存入的對應資料型態的資料，倘若沒有對應型態資料，那空字串就會被回傳。
 
 ```js
 function onDrop(event) {
@@ -264,7 +263,7 @@ function onDrop(event) {
 
 網頁之中，如果我們已經處理過放置資料，那應該要呼叫{preventDefault}方法防止瀏覽器再次處理資料，比如說，Firefox 預設是會開啟拖入的連結，但我們可以取消這項預設行為來避免開啟連結。
 
-當然也可以取得其他種類資料來使用，比如說連結資料，[text/uri-list](/zh-TW/docs/DragDrop/Recommended_Drag_Types#link)。
+當然也可以取得其他種類資料來使用，比如說連結資料，[text/uri-list](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link)。
 
 ```js
 function doDrop(event)
@@ -283,7 +282,7 @@ function doDrop(event)
 }
 ```
 
-上面的範例取得連結資料，然後生成連結元素、加入頁面。從 text/uri-list 字面上不難猜出這種資料是一行行的 URL，所以我們呼叫 [split](/zh-TW/docs/JavaScript/Reference/Global_Objects/String/split) 方法拆開一行行的 URL，再將 URL 一個一個加入頁面。請注意我們有避開開頭為「#」字元的註解。
+上面的範例取得連結資料，然後生成連結元素、加入頁面。從 text/uri-list 字面上不難猜出這種資料是一行行的 URL，所以我們呼叫 [split](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/split) 方法拆開一行行的 URL，再將 URL 一個一個加入頁面。請注意我們有避開開頭為「#」字元的註解。
 
 更簡單的作法是採用特別 URL 型態。URL 型態是一個特殊簡寫用途形態，它不會出現在{types}屬性中，但它可以方便的取得第一個連結，如下:
 
@@ -309,11 +308,11 @@ function doDrop(event)
 
 ## 完成拖曳
 
-拖曳作業完成後，不論成功或取消於否，被拖曳元素的[`dragend`](/zh-TW/docs/Web/Reference/Events/dragend)事件都會觸發，如果想要判別作業是否完成，可以檢查 dropEffect 屬性，若是 dropEffect 為 none，代表拖曳作業被取消，否則 dropEffect 的值代表所完成的作業類型。
+拖曳作業完成後，不論成功或取消於否，被拖曳元素的[`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event)事件都會觸發，如果想要判別作業是否完成，可以檢查 dropEffect 屬性，若是 dropEffect 為 none，代表拖曳作業被取消，否則 dropEffect 的值代表所完成的作業類型。
 
-有一個 Gecko 專屬的[mozUserCancelled](/zh-TW/docs/DragDrop/DataTransfer#mozUserCancelled.28.29)屬性，當使用者按 ESC 鍵取消拖曳後，這個屬性會為 true，但若是因其他理由被取消或成功，則為 false
+有一個 Gecko 專屬的[mozUserCancelled](/zh-TW/docs/Web/API/DataTransfer#mozusercancelled.28.29)屬性，當使用者按 ESC 鍵取消拖曳後，這個屬性會為 true，但若是因其他理由被取消或成功，則為 false
 
-拖曳作業的放置可以發生在同一個視窗或其他應用程式，而且 dragend 事件還是會觸發，不過事件中的[screenX](/zh-TW/docs/DOM/event.screenX)與[screenY](/zh-TW/docs/DOM/event.screenY)屬性會是放置發生點的資訊。
+拖曳作業的放置可以發生在同一個視窗或其他應用程式，而且 dragend 事件還是會觸發，不過事件中的[screenX](/zh-TW/docs/Web/API/MouseEvent/screenX)與[screenY](/zh-TW/docs/Web/API/MouseEvent/screenY)屬性會是放置發生點的資訊。
 
 當 dragend 事件結束傳遞後，拖曳作業也完成了。
 
@@ -323,5 +322,5 @@ function doDrop(event)
 
 - [HTML Drag and Drop API (Overview)](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
-- [Recommended Drag Types](/zh-TW/docs/Web/Guide/HTML/Recommended_Drag_Types)
+- [Recommended Drag Types](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

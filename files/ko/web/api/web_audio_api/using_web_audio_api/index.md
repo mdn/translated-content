@@ -46,7 +46,8 @@ const audioContext = new AudioContext();
 
 우리가 이것을 할 때 무슨 일이 벌어질까요? {{domxref("BaseAudioContext")}}가 자동적으로 생성되고 온라인 오디오 컨텍스트로 확장됩니다. 우리는 라이브 사운드를 재생하기 때문에 이것을 원할 것입니다.
 
-> **참고:** 예를 들어, 만약 여러분이 단지 오디오 데이터를 처리하고, 그것을 버퍼링하고 스트리밍 하지만 재생하기를 원하지 않는다면, 여러분은 {{domxref("OfflineAudioContext")}}를 만드는 방법을 살펴볼 수 있습니다.
+> [!NOTE]
+> 예를 들어, 만약 여러분이 단지 오디오 데이터를 처리하고, 그것을 버퍼링하고 스트리밍 하지만 재생하기를 원하지 않는다면, 여러분은 {{domxref("OfflineAudioContext")}}를 만드는 방법을 살펴볼 수 있습니다.
 
 ## 사운드 로딩하기
 
@@ -56,7 +57,8 @@ const audioContext = new AudioContext();
 <audio src="myCoolTrack.mp3"></audio>
 ```
 
-> **참고:** 만약 로딩한 사운드 파일이 다른 도메인에 있다면 `crossorigin` 특성을 사용할 필요가 있습니다; 더 많은 정보를 보시려면 [Cross Origin Resource Sharing (CORS)](/ko/docs/Web/HTTP/CORS)를 참고해 보세요.
+> [!NOTE]
+> 만약 로딩한 사운드 파일이 다른 도메인에 있다면 `crossorigin` 특성을 사용할 필요가 있습니다; 더 많은 정보를 보시려면 [Cross Origin Resource Sharing (CORS)](/ko/docs/Web/HTTP/Guides/CORS)를 참고해 보세요.
 
 Web Audio API로 얻을 수 있는 모든 것을 사용하려면 이 요소에서 소스를 가져와 우리가 만든 컨텍스트에 연결해야 합니다. 운 좋게도 이걸 할 수 있는 메서드가 있습니다 — {{domxref("AudioContext.createMediaElementSource")}}입니다:
 
@@ -68,7 +70,7 @@ const audioElement = document.querySelector("audio");
 const track = audioContext.createMediaElementSource(audioElement);
 ```
 
-> **참고:**
+> [!NOTE]
 >
 > 위의 `<audio>` 요소는 {{domxref("HTMLMediaElement")}} 유형의 객체에 의해 DOM에 표현되는데, 이는 고유한 기능을 가지고 있습니다.
 >
@@ -80,7 +82,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 JavaScript 코드에서 프로그래밍적으로 사운드를 제어하는 것은 브라우저의 자동 재생 지원 정책에 의해 다뤄지는데, 그러한 것은 허가가 사용자 (또는 화이트리스트)에 의해 승인되지 않은 채로 차단될 가능성이 있습니다. 자동 재생 정책은 보통 스크립트가 오디오를 재생하게 할 수 있게 하기 전에 페이지에서 명시적인 허가나 사용자의 허락 중 하나를 요구합니다.
 
-이 특별한 요구는 필수적으로 가동 중인데 그 이유는 예기치 않은 사운드는 짜증나고 거슬릴 수 있고, 접근성 문제를 유발할 수 있기 때문입니다. [미디어와 Web Audio API에 대한 자동 재생 가이드](/ko/docs/Web/Media/Autoplay_guide) 문서에서 이것에 대해 더 배울 수 있습니다.
+이 특별한 요구는 필수적으로 가동 중인데 그 이유는 예기치 않은 사운드는 짜증나고 거슬릴 수 있고, 접근성 문제를 유발할 수 있기 때문입니다. [미디어와 Web Audio API에 대한 자동 재생 가이드](/ko/docs/Web/Media/Guides/Autoplay) 문서에서 이것에 대해 더 배울 수 있습니다.
 
 우리의 스크립트는 사용자의 입력 이벤트 (예를 들자면 재생 버튼의 클릭)에 응답하여 오디오를 재생하므로, 우리는 이상이 없고 자동 재생 방지로부터 문제가 없어야만 합니다. 그러므로, 우리의 재생과 정지 기능을 살펴봄으로써 시작해 봅시다. 우리는 트랙이 재생중일 때 정지 버튼으로 바뀌는 재생 버튼을 가지고 있습니다:
 
@@ -169,7 +171,7 @@ gain의 기본값은 1입니다; 이것은 현재 볼륨을 같게 유지할 것
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
 ```
 
-> **참고:**
+> [!NOTE]
 > 범위 입력은 오디오 노드의 값을 갱신하는 데 있어 정말로 유용한 입력 유형입니다.
 > 여러분은 범위의 값을 명시할 수 있고 오디오 노드의 파라미터와 함께 이것을 바로 사용할 수 있습니다.
 
@@ -187,7 +189,7 @@ volumeControl.addEventListener(
 );
 ```
 
-> **참고:**
+> [!NOTE]
 > 노드 객체의 값 (예: `GainNode.gain`)은 단순한 값이 아닙니다.
 > 이 값은 실제로는 {{domxref("AudioParam")}} 유형의 객체입니다 — 이것은 파라미터라고 불립니다.
 > 이것이 바로 `gain`에 직접 값을 설정하기보다, `GainNode.gain`의 `value` 속성을 설정해야 하는 이유입니다.
@@ -201,7 +203,7 @@ volumeControl.addEventListener(
 
 {{domxref("StereoPannerNode")}} 노드가 있는데, 이는 만약 사용자가 스테레오를 사용할 수 있다면, 좌측과 우측 스피커 사이의 소리의 균형을 변화시킵니다.
 
-> **참고:**
+> [!NOTE]
 >
 > `StereoPannerNode`는 여러분이 단지 좌에서 우로 스테레오 패닝을 원하는 단순한 상황을 위한 것입니다.
 > {{domxref("PannerNode")}}도 있는데, 이는 더욱 복잡한 효과를 생성하기 위해, 3D 공간, 즉 사운드 _공간화_ 제어의 훌륭한 방법을 고려합니다.
@@ -218,7 +220,7 @@ const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
 ```
 
-> **참고:**
+> [!NOTE]
 >
 > 노드 생성의 생성자 메서드는 이 시점에서 모든 브라우저에서 지원되지 않습니다. 오래된 팩토리 메서드는 더욱 널리 지원됩니다.
 

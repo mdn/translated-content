@@ -3,11 +3,56 @@ title: border-style
 slug: Web/CSS/border-style
 ---
 
-{{CSSRef}}
+**`border-style`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소 테두리 네 면의 스타일을 지정합니다.
 
-**`border-style`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소 테두리 네 면의 스타일을 지정합니다.
+{{InteractiveExample("CSS Demo: border-style")}}
 
-{{EmbedInteractiveExample("pages/css/border-style.html")}}
+```css interactive-example-choice
+border-style: none;
+```
+
+```css interactive-example-choice
+border-style: dotted;
+```
+
+```css interactive-example-choice
+border-style: inset;
+```
+
+```css interactive-example-choice
+border-style: dashed solid;
+```
+
+```css interactive-example-choice
+border-style: dashed double none;
+```
+
+```css interactive-example-choice
+border-style: dashed groove none dotted;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 ## 구문
 
@@ -51,7 +96,6 @@ border-style: unset;
 ### 값
 
 - `<line-style>`
-
   - : 테두리의 스타일을 설명합니다. 다음 표의 값을 사용할 수 있습니다.
 
     | `none`   |     | `hidden` 키워드와 마찬가지로 테두리를 표시하지 않습니다. {{cssxref("background-image")}}를 지정하지 않았으면 해당 면의 {{cssxref("border-width")}} 계산값은 지정값을 무시하고 `0`이 됩니다. 표에서, 칸의 테두리 상쇄 시 `none`은 제일 낮은 우선순위를 가집니다. 따라서 주변 칸이 테두리를 가진다면 테두리를 그립니다.          |

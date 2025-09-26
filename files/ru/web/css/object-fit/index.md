@@ -5,9 +5,46 @@ slug: Web/CSS/object-fit
 
 {{CSSRef}}
 
-Свойство **`object-fit`** определяет, как содержимое заменяемого элемента, такого как [`<img>`](/ru/docs/Web/HTML/Element/img) или [`<video>`](/ru/docs/Web/HTML/Element/video), должно заполнять контейнер относительно его высоты и ширины.
+Свойство **`object-fit`** определяет, как содержимое заменяемого элемента, такого как [`<img>`](/ru/docs/Web/HTML/Reference/Elements/img) или [`<video>`](/ru/docs/Web/HTML/Reference/Elements/video), должно заполнять контейнер относительно его высоты и ширины.
 
-{{EmbedInteractiveExample("pages/css/object-fit.html")}}
+{{InteractiveExample("CSS Demo: object-fit")}}
+
+```css interactive-example-choice
+object-fit: fill;
+```
+
+```css interactive-example-choice
+object-fit: contain;
+```
+
+```css interactive-example-choice
+object-fit: cover;
+```
+
+```css interactive-example-choice
+object-fit: none;
+```
+
+```css interactive-example-choice
+object-fit: scale-down;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: 100%;
+  border: 2px dotted #888;
+}
+```
 
 ## Синтаксис
 
@@ -121,14 +158,11 @@ img {
 
 ## Технические параметры
 
-| Specification                                                | Status                   | Comment                                        |
-| ------------------------------------------------------------ | ------------------------ | ---------------------------------------------- |
-| {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} | `Добавлены ключевые слова from-image` `и flip` |
-| {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Первоначальное определение                     |
+{{Specifications}}
 
 {{cssinfo}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -3,7 +3,7 @@ title: Event.cancelable
 slug: Web/API/Event/cancelable
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 ## Описание
 

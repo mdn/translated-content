@@ -1,15 +1,17 @@
 ---
-title: HTMLMediaElement.seekToNextFrame()
+title: "HTMLMediaElement: seekToNextFrame() メソッド"
+short-title: seekToNextFrame()
 slug: Web/API/HTMLMediaElement/seekToNextFrame
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{non-standard_header}}
 
 **`HTMLMediaElement.seekToNextFrame()`** メソッドは、非同期に現在の再生位置をメディアの次のフレームに進めます。
 
-> **警告:** この標準外のメソッドは、フィルタリングや編集などのタスクのためのメディアへの非リアルタイムアクセスに対応している実験プロセスの一部です。
+> [!WARNING]
+> この標準外のメソッドは、フィルタリングや編集などのタスクのためのメディアへの非リアルタイムアクセスに対応している実験プロセスの一部です。
 > このメソッドは、予告なしに実装が変更されたり、削除されたりする可能性があるため、実運用コードでは使用しない方がよいでしょう。しかし、このメソッドを使って実験することは可能です。
 
 このメソッドを使用すると、メディアをリアルタイムで実行せずに、動画メディアのフレームにアクセスすることができます。また、タイムコードではなくフレームをシーク単位として使用してメディアにアクセスすることもできます（ただし、目的のフレームに到達するまで一度に 1 フレームずつシークするだけですが）。このメソッドの有益な使用法としては、動画コンテンツのフィルタリングや編集が挙げられます。

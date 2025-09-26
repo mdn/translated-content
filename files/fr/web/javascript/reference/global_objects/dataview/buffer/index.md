@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 
 L'accesseur **`buffer`** est une propriété représentant l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} référencé par la vue `DataView` lors de sa construction.
 
-{{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+
+```js interactive-example
+// Create an ArrayBuffer
+const buffer = new ArrayBuffer(123);
+
+// Create a view
+const view = new DataView(buffer);
+
+console.log(view.buffer.byteLength);
+// Expected output: 123
+```
 
 ## Syntaxe
 

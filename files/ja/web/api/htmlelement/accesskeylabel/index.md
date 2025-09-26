@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: accessKeyLabel プロパティ"
+short-title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -34,7 +35,9 @@ btn.onclick = () => {
 ### HTML
 
 ```html
-<button accesskey="h" title="キャプション" id="btn1">マウスを当ててください</button>
+<button accesskey="h" title="キャプション" id="btn1">
+  マウスを当ててください
+</button>
 ```
 
 ### 結果
@@ -52,4 +55,4 @@ btn.onclick = () => {
 ## 関連情報
 
 - {{domxref("HTMLElement.accessKey")}}
-- [accesskey](/ja/docs/Web/HTML/Global_attributes/accesskey) グローバル属性
+- [accesskey](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) グローバル属性

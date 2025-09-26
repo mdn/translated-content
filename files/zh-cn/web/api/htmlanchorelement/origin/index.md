@@ -1,39 +1,40 @@
 ---
-title: HTMLHyperlinkElementUtils.origin
+title: HTMLAnchorElement：origin 属性
 slug: Web/API/HTMLAnchorElement/origin
+l10n:
+  sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("HTML DOM")}}
 
-**`HTMLHyperlinkElementUtils.origin`** 只读属性是一个 {{domxref("USVString")}} ，其中包含代表 URL 的原始码的 Unicode 序列化，即：
+**`HTMLAnchorElement.origin`** 只读属性是一个字符串，包含所表示 URL 的来源的 Unicode 序列化形式。
 
-- for URL using the `http` or `https`, the scheme followed by `'://'`, followed by the domain, followed by `':'`, followed by the port (the default port, `80` and `443` respectively, if explicitely specified);
-- for URL using `file:` scheme, the value is browser dependant;
-- for URL using the `blob:` scheme, the origin of the URL following `blob:`. E.g `"blob:https://mozilla.org"` will have `"https://mozilla.org".`
+即：
 
-{{AvailableInWorkers}}
+- 对于使用 `http` 或 `https` 协议的 URL，协议后跟 `'://'`，然后是域名，再后跟 `':'`，最后是端口号（如果明确指定了端口号，则分别为默认的 `80` 和 `443`）；
+- 对于使用 `file:` 协议的 URL，值依赖于浏览器；
+- 对于使用 `blob:` 协议的 URL，`blob:` 后跟的 URL 的来源。例如，`"blob:https://mozilla.org"` 的 `origin` 将是 `"https://mozilla.org"`。
 
-## Syntax
+## 值
 
-```plain
-string = object.origin;
-```
+一个字符串。
 
-## Examples
+## 示例
 
 ```js
-// On this page, returns the origin
-var result = window.location.origin; // Returns:'https://developer.mozilla.org'
+// 文档中有一个 <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/HTMLAnchorElement"> 元素
+const anchor = document.getElementById("myAnchor");
+anchor.origin; // 返回“https://developer.mozilla.org”
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.
+- 所属接口 {{domxref("HTMLAnchorElement")}}。

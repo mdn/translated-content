@@ -1,13 +1,14 @@
 ---
-title: ":-moz-broken"
+title: :-moz-broken
 slug: Web/CSS/:-moz-broken
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`:-moz-broken`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions) であり、壊れた画像リンクを表している要素に一致します。
 
-> **メモ:** このセレクターは、主にテーマ開発者が使用することを意図しているものです。
+> [!NOTE]
+> このセレクターは、主にテーマ開発者が使用することを意図しているものです。
 
 ## 構文
 

@@ -3,8 +3,6 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 ---
 
-{{CSSRef("CSS Tables")}}
-
 ## 概述
 
 `border-spacing` 属性指定相邻单元格边框之间的距离（只适用于 [边框分离模式](/zh-CN/docs/Web/CSS/border-collapse) ）。相当于 HTML 中的 `cellspacing` 属性，但是第二个可选的值可以用来设置不同于水平间距的垂直间距。
@@ -47,7 +45,7 @@ border-spacing: unset;
 
 ## 示例
 
-[查看在线演示](/samples/cssref/border-spacing.html)
+[查看在线演示](https://mdn.dev/archives/media/samples/cssref/border-spacing.html)
 
 ```css
 table {

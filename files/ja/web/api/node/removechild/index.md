@@ -9,10 +9,11 @@ l10n:
 
 **`removeChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、子ノードを DOM から取り除き、取り除いたノードを返します。
 
-> **メモ:** 取り除かれた子ノードへの参照が保持されている限り、子ノードはメモリー内に残りますが、 DOM の一部ではなくなります。
+> [!NOTE]
+> 取り除かれた子ノードへの参照が保持されている限り、子ノードはメモリー内に残りますが、 DOM の一部ではなくなります。
 > これは、後のコードで再利用することができます。
 >
-> `removeChild()` の返値が保持されず、他の参照もなくなった場合は、まもなくメモリーから[自動的に削除](/ja/docs/Web/JavaScript/Memory_management)されます。
+> `removeChild()` の返値が保持されず、他の参照もなくなった場合は、まもなくメモリーから[自動的に削除](/ja/docs/Web/JavaScript/Guide/Memory_management)されます。
 
 {{domxref("Node.cloneNode()")}} とは異なり、返値は関連付けられた {{domxref("EventTarget.addEventListener", "EventListener")}} オブジェクトを保持します。
 

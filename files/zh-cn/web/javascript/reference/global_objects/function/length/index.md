@@ -1,46 +1,56 @@
 ---
-title: Function.length
+title: Function：length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
 
 {{JSRef}}
 
-**`length`** 属性指明函数的形参个数。
+{{jsxref("Function")}} 实例的 **`length`** 数据属性表示函数期望的参数数量。
 
-{{EmbedInteractiveExample("pages/js/function-length.html")}}
+{{InteractiveExample("JavaScript Demo: Function.length")}}
 
-{{js_property_attributes(0,0,1)}}
+```js interactive-example
+function func1() {}
+
+function func2(a, b) {}
+
+console.log(func1.length);
+// Expected output: 0
+
+console.log(func2.length);
+// Expected output: 2
+```
+
+## 值
+
+一个数字。
+
+{{js_property_attributes(0, 0, 1)}}
 
 ## 描述
 
-`length` 是函数对象的一个属性值，指该函数期望传入的参数数量，即形参的个数。
+一个 {{jsxref("Function")}} 对象的 `length` 属性表示函数期望的参数个数，即形参的个数。这个数字不包括{{jsxref("Functions/rest_parameters", "剩余参数", "", 1)}}，只包括在第一个具有默认值的参数之前的参数。相比之下，{{jsxref("Functions/arguments/length", "arguments.length")}} 是局限于函数内部的，它提供了实际传递给函数的参数个数。
 
-形参的数量不包括剩余参数个数，仅包括第一个具有默认值之前的参数个数。
+{{jsxref("Function")}} 构造函数本身就是一个 `Function` 对象。它的 `length` 数据属性的值为 `1`。
 
-与之对比的是，{{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} 是函数被调用时实际传参的个数。
-
-### `Function` 构造器的属性
-
-{{jsxref("Function")}} 构造器本身也是个 [Function](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。它的 `length` 属性值为 1。
-
-### `Function`.prototype 对象的属性
-
-{{jsxref("Function.prototype")}} 对象的 `length` 属性值为 0。
+由于历史原因，`Function.prototype` 本身是可调用的。`Function.prototype` 的 `length` 属性的值为 `0`。
 
 ## 示例
+
+### 使用 function length
 
 ```js
 console.log(Function.length); // 1
 
 console.log((() => {}).length); // 0
 console.log(((a) => {}).length); // 1
-console.log(((a, b) => {}).length); // 2 etc.
+console.log(((a, b) => {}).length); // 2，依此类推
 
 console.log(((...args) => {}).length);
-// 0, 剩余参数不计算在内
+// 0，剩余参数不计算在内
 
 console.log(((a, b = 1, c) => {}).length);
-// 1, 只有第一个具有默认值的参数之前的参数才会被计算
+// 1，只计算第一个具有默认值的参数之前的参数
 ```
 
 ## 规范

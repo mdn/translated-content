@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 
 Le constructeur **`DataView()`** permet de construire des objets [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView).
 
-{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Create a couple of views
+const view1 = new DataView(buffer);
+const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+view1.setInt8(12, 42); // Put 42 in slot 12
+
+console.log(view2.getInt8(0));
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -35,7 +48,6 @@ Cet objet peut être vu comme un interpréteur du tableau d'octets fourni par le
 ### Exceptions
 
 - [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
-
   - : Levée si les valeurs des paramètres `decalageOctets` ou `longueurOctets` entraînent un dépassement de la vue après la fin du tampon.
 
     Ainsi, si le tampon de mémoire mesure 16 octets, que la valeur fournie pour `decalageOctets` est 8, et que celle fournie pour `longueurOctets` est 10, cette exception sera déclenchée, car la vue résultante dépassera de deux octets la taille du tampon.

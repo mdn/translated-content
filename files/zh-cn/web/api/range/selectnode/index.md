@@ -9,8 +9,8 @@ slug: Web/API/Range/selectNode
 
 ## 语法
 
-```
-range.selectNode(referenceNode);
+```js-nolint
+selectNode(referenceNode)
 ```
 
 ### 参数
@@ -37,4 +37,4 @@ range.selectNode(referenceNode);
 
 ## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)

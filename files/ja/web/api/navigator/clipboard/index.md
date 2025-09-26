@@ -1,13 +1,18 @@
 ---
-title: Navigator.clipboard
+title: "Navigator: clipboard プロパティ"
+short-title: clipboard
 slug: Web/API/Navigator/clipboard
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
+
+{{APIRef("Clipboard API")}}
 
 [クリップボード API](/ja/docs/Web/API/Clipboard_API) は **{{domxref("Navigator")}}** インターフェイスに読み取り専用の **`clipboard`** プロパティを追加し、これはクリップボードの内容を読み書きするために使用する {{domxref("Clipboard")}} オブジェクトを返します。
 
 クリップボード API は切り取り、コピー、貼り付け機能をウェブアプリケーションに実装するために使用することができます。
 
-非同期のクリップボード読み書きメソッドを使用するには、ユーザーがウェブサイトやアプリにクリップボードへのアクセスを許可する必要があります。この許可は [Permissions API](/ja/docs/Web/API/Permissions_API) から、 `"clipboard-read"` や `"clipboard-write"` の権限を取得する必要があります。
+非同期のクリップボード読み書きメソッドを使用するには、ユーザーがウェブサイトやアプリにクリップボードへのアクセスを許可する必要があります。この許可は [権限 API](/ja/docs/Web/API/Permissions_API) から、 `"clipboard-read"` や `"clipboard-write"` の権限を取得する必要があります。
 
 ## 値
 
@@ -18,8 +23,11 @@ slug: Web/API/Navigator/clipboard
 以下のコードは、クリップボードの内容を読み取る目的でシステムのクリップボードにアクセスするため、 `navigator.clipboard` を使用します。
 
 ```js
-navigator.clipboard.readText().then(
-  (clipText) => document.querySelector(".cliptext").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".cliptext").innerText = clipText),
+  );
 ```
 
 このスニペットは、クラスが `"cliptext"` の要素の内容を、クリップボードのテキストコンテンツで置き換えます。おそらくこのコードは現在のクリップボードの内容を表示するブラウザー拡張機能に使用されているもので、定期的または特定のイベントが発生したときに自動的に更新されます。
@@ -33,5 +41,3 @@ navigator.clipboard.readText().then(
 ## ブラウザーの互換性
 
 {{Compat}}
-
-{{APIRef("Clipboard API")}}

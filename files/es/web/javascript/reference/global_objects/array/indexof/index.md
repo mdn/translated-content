@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 El método **indexOf()** retorna el primer índice en el que se puede encontrar un elemento dado en el array, ó retorna -1 si el elemento no esta presente.
 
-> **Nota:** Para el método String, ver {{jsxref("String.prototype.indexOf()")}}.
+> [!NOTE]
+> Para el método String, ver {{jsxref("String.prototype.indexOf()")}}.
 
 ## Sintaxis
 

@@ -7,9 +7,53 @@ slug: Web/CSS/column-gap
 
 La propriété **`column-gap`** permet de définir la taille des espaces ([gouttières](/fr/docs/Glossary/Gutters)) entre les colonnes d'un élément.
 
-{{EmbedInteractiveExample("pages/css/column-gap.html")}}
+{{InteractiveExample("CSS Demo: column-gap")}}
 
-La propriété `column-gap` était initialement définie dans le module de spécification [Colonnes CSS](/fr/docs/Web/CSS/CSS_Columns). Cette définition a depuis été élargie afin de pouvoir être utilisée dans les différents modes de disposition et fait désormais partie du module de spécification [_Box Alignment_ (alignement des boîtes en CSS)](/fr/docs/Web/CSS/CSS_Box_Alignment). Cette propriété peut être utilisée pour les dispositions multi-colonnes, les dispositions flexibles et les dispositions en grille.
+```css interactive-example-choice
+column-gap: 0;
+```
+
+```css interactive-example-choice
+column-gap: 10%;
+```
+
+```css interactive-example-choice
+column-gap: 1em;
+```
+
+```css interactive-example-choice
+column-gap: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
+
+La propriété `column-gap` était initialement définie dans le module de spécification [Colonnes CSS](/fr/docs/Web/CSS/CSS_multicol_layout). Cette définition a depuis été élargie afin de pouvoir être utilisée dans les différents modes de disposition et fait désormais partie du module de spécification [_Box Alignment_ (alignement des boîtes en CSS)](/fr/docs/Web/CSS/CSS_box_alignment). Cette propriété peut être utilisée pour les dispositions multi-colonnes, les dispositions flexibles et les dispositions en grille.
 
 ## Syntaxe
 
@@ -82,7 +126,7 @@ column-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample("","auto","130px")}}
+{{EmbedLiveSample("disposition_flexible","auto","130px")}}
 
 ### Disposition en grille
 
@@ -115,7 +159,7 @@ column-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample("","auto", "130px")}}
+{{EmbedLiveSample("disposition_en_grille","auto", "130px")}}
 
 ### Disposition multi-colonnes
 
@@ -139,11 +183,11 @@ column-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample("", "auto", "130px")}}
+{{EmbedLiveSample("disposition_multi-colonnes", "auto", "130px")}}
 
 ## Spécifications
 
-{{Specifications("css.properties.column-gap.grid_context")}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -152,5 +196,5 @@ column-gap: unset;
 ## Voir aussi
 
 - Les autres propriétés relatives aux gouttières&nbsp;: [`row-gap`](/fr/docs/Web/CSS/row-gap), [`gap`](/fr/docs/Web/CSS/gap)
-- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_gouttières)_
-- Guide sur la disposition multi-colonnes&nbsp;: _[Mettre en forme les colonnes](/fr/docs/Web/CSS/CSS_Columns/Styling_Columns)_
+- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_gouttières)_
+- Guide sur la disposition multi-colonnes&nbsp;: _[Mettre en forme les colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_

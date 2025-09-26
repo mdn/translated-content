@@ -46,7 +46,7 @@ window.scrollTo(0, 1000);
 
 ## 참고
 
-이 함수는 [window.scroll](/ko/docs/DOM/Window.scroll)과 효과적으로 같습니다. 스크롤링 관련 정보는 [window.scrollBy](/ko/docs/DOM/Window.scrollBy), [window.scrollByLines](/ko/docs/DOM/Window.scrollByLines), 그리고 [window.scrollByPages](/ko/docs/DOM/Window.scrollByPages)가 있습니다.
+이 함수는 [window.scroll](/ko/docs/Web/API/Window/scroll)과 효과적으로 같습니다. 스크롤링 관련 정보는 [window.scrollBy](/ko/docs/Web/API/Window/scrollBy), [window.scrollByLines](/ko/docs/Web/API/Window/scrollByLines), 그리고 [window.scrollByPages](/ko/docs/Web/API/Window/scrollByPages)가 있습니다.
 
 ## 명세서
 

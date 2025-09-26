@@ -42,7 +42,8 @@ g.return("toto"); // { value: "toto", done: true }
 g.next(); // { value: undefined, done: true }
 ```
 
-> **Note :** Si `done` vaut `true`, `return(valeur)` renverra la même chose que `next()` : `undefined`. Si aucun argument n'est fourni, la propriété `value` de l'objet renvoyé sera la même qu'avec un appel à `.next()`. Si un argument est fourni, c'est lui qui sera utilisé comme valeur pour l'attribut `value` du résultat.
+> [!NOTE]
+> Si `done` vaut `true`, `return(valeur)` renverra la même chose que `next()` : `undefined`. Si aucun argument n'est fourni, la propriété `value` de l'objet renvoyé sera la même qu'avec un appel à `.next()`. Si un argument est fourni, c'est lui qui sera utilisé comme valeur pour l'attribut `value` du résultat.
 >
 > ```js
 > function* gen() {
@@ -69,4 +70,4 @@ g.next(); // { value: undefined, done: true }
 
 ## Voir aussi
 
-- [`function*`](/fr/docs/Web/JavaScript/Reference/Instructions/function*)
+- [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*)

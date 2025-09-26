@@ -1,13 +1,26 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+l10n:
+  sourceCommit: c08b415e28c07247ab8ef41c504f29d94f5bee6f
 ---
 
 {{JSRef}}
 
 {{jsxref("Promise")}} 实例的 **`catch()`** 方法用于注册一个在 promise 被拒绝时调用的函数。它会立即返回一个等效的 {{jsxref("Promise")}} 对象，这可以允许你[链式](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)调用其他 promise 的方法。此方法是 {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}} 的一种简写形式。
 
-{{EmbedInteractiveExample("pages/js/promise-catch.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise1.catch((error) => {
+  console.error(error);
+});
+// Expected output: Error: Uh-oh!
+```
 
 ## 语法
 
@@ -24,7 +37,7 @@ catch(onRejected)
 
 ### 返回值
 
-返回一个新的 {{jsxref("Promise")}}，无论当前的 promise 状态如何，这个新的 promise 在返回时总是处于待定状态。如果 `onRejected` 方法抛出了一个错误或者返回了一个被拒绝的 promise，那么这个新的 promise 也会被拒绝；否则它最终会被兑现。
+返回一个新的 {{jsxref("Promise")}}，无论当前的 promise 状态如何，这个新的 promise 在返回时总是处于待定（pending）状态。如果调用了 `onRejected`，则返回的 promise 将根据此调用的返回值进行兑现，或者使用此调用引发的错误进行拒绝。如果当前的 promise 已兑现，则 `onRejected` 不会被调用，并且返回的 promise 具有相同的兑现值。
 
 ## 描述
 
@@ -62,7 +75,8 @@ Promise.resolve().catch(function XXX() {});
 
 因为 `catch()` 只是单纯的调用了 `then()`，它支持子类化。
 
-> **备注：** 下面的示例抛出了 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 的实例。与同步的 [`throw`](/zh-CN/docs/Web/JavaScript/Reference/Statements/throw) 语句一样，这被认为是一种良好的实践；否则，执行捕获的部分将不得不对参数进行检查，以查看它是字符串还是错误，并且你可能会丢失有用的信息，例如堆栈跟踪。
+> [!NOTE]
+> 下面的示例抛出了 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 的实例。与同步的 [`throw`](/zh-CN/docs/Web/JavaScript/Reference/Statements/throw) 语句一样，这被认为是一种良好的实践；否则，执行捕获的部分将不得不对参数进行检查，以查看它是字符串还是错误，并且你可能会丢失有用的信息，例如堆栈跟踪。
 
 ## 示例
 

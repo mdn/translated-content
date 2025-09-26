@@ -24,7 +24,7 @@ l10n:
 
 - [`controllerchange`](/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
   - : 文書に関連する {{domxref("ServiceWorkerRegistration")}} が新しいアクティブ（{{domxref("ServiceWorkerRegistration.active","active")}}）ワーカーを取得すると発生します。
-- [`error`](/ja/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
+- [`error`](/ja/docs/conflicting/Web/API/ServiceWorker/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 関連するサービスワーカーでエラーが発生するたびに発生します。
 - [`message`](/ja/docs/Web/API/ServiceWorkerContainer/message_event)
   - : 着信メッセージを {{domxref("ServiceWorkerContainer")}} オブジェクトが受信したときに発生します（例えば、{{domxref("MessagePort.postMessage()")}} 呼び出しを介して）。
@@ -53,8 +53,8 @@ if ("serviceWorker" in navigator) {
     .then((registration) => {
       console.log("サービスワーカー登録成功:", registration);
 
-    // この時点で、オプションで registration に何かを行うことができます。
-    // https://developer.mozilla.org/ja/docs/Web/API/ServiceWorkerRegistration を参照してください
+      // この時点で、オプションで registration に何かを行うことができます。
+      // https://developer.mozilla.org/ja/docs/Web/API/ServiceWorkerRegistration を参照してください
     })
     .catch((error) => {
       console.error(`サービスワーカー登録失敗: ${error}`);
@@ -69,7 +69,7 @@ if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
     console.log(
       "このページは現在サービスワーカーによって制御されています:",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   }
 
@@ -78,7 +78,7 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.oncontrollerchange = () => {
     console.log(
       "このページは次のものが制御しています。",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   };
 } else {

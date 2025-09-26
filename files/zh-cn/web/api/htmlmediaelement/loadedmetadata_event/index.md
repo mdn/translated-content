@@ -29,4 +29,4 @@ var handlerFunction = element.onloadedmetadata;
 ## 参考
 
 - [`loadedmetadata`](/zh-CN/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-- [DOM 事件句柄](/zh-CN/docs/Web/Guide/Events/Event_handlers)
+- [DOM 事件句柄](/zh-CN/docs/Web/API/Document_Object_Model/Events)

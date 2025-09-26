@@ -3,7 +3,7 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 ---
 
-{{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
+{{ SeeCompatTable() }}
 
 ## Resumen
 
@@ -63,7 +63,7 @@ Las palabras clave son abreviaciones por convención que coinciden con los sigui
 
 ## Ejemplos
 
-Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
+Ver [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) para más ejemplos.
 
 ### Ejemplos en vivo
 
@@ -89,4 +89,4 @@ Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
 
 ## Ver también
 
-- [Uso de CSS transform](/es/docs/CSS/Using_CSS_transforms)
+- [Uso de CSS transform](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

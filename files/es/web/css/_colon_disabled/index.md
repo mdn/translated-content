@@ -1,9 +1,7 @@
 ---
-title: ":disabled"
+title: :disabled
 slug: Web/CSS/:disabled
 ---
-
-{{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:disabled` de [CSS](/es/docs/Web/CSS) representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado (por ejemplo ser selecionado, hacer click en él o aceptar texto de entrada) ni aceptar el foco. El elemento tiene además un estado habilitado en el cual puede ser activado o recibir foco.
 
@@ -20,7 +18,7 @@ input:disabled {
 
 ## Ejemplo
 
-Este ejemplo muestra un formulario de envío básico. Utiliza el evento [JavaScript](/es/docs/Web/JavaScript) [`change`](/es/docs/Web/Reference/Events/change) para permitir al usuario habilitar / deshabilitar los campos de facturación.
+Este ejemplo muestra un formulario de envío básico. Utiliza el evento [JavaScript](/es/docs/Web/JavaScript) [`change`](/es/docs/Web/API/HTMLElement/change_event) para permitir al usuario habilitar / deshabilitar los campos de facturación.
 
 ### HTML
 

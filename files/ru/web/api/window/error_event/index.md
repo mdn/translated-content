@@ -3,7 +3,7 @@ title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef}}
 
 Обработчик события для ошибок среды Javascript.
 
@@ -18,7 +18,6 @@ window.onerror = funcRef;
 ### Параметры
 
 - `funcRef` ссылка на функцию. Когда функция возвращает `true`, блокируется вызов обработчика события по умолчанию. Параметры функции:
-
   - Сообщение ошибки (string)
   - Url, где произошла ошибка (string)
   - Номер строки, где произошла ошибка (number)

@@ -37,14 +37,14 @@ WebSocket.close(code, reason);
 - `INVALID_ACCESS_ERR`
   - : Un code invalide a été fourni avec `code`.
 - `SYNTAX_ERR`
-
   - : La chaîne de caractères pour `reason` est trop longue ou contient des
 
     <i lang="en">surrogates</i>
 
     non appairés.
 
-> **Note :** Avant Gecko 8.0, cette méthode ne prenait en charge aucun paramètre.
+> [!NOTE]
+> Avant Gecko 8.0, cette méthode ne prenait en charge aucun paramètre.
 
 ## Spécifications
 

@@ -1,15 +1,29 @@
 ---
 title: Number.isSafeInteger()
+short-title: isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Number.isSafeInteger()`** は静的メソッドで、指定された値が*安全な整数*であるかどうかを判定します。
 
-{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
+{{InteractiveExample("JavaScript デモ: Number.isSafeInteger()")}}
+
+```js interactive-example
+function warn(x) {
+  if (Number.isSafeInteger(x)) {
+    return "Precision safe.";
+  }
+  return "Precision may be lost!";
+}
+
+console.log(warn(Math.pow(2, 53)));
+// 予想される結果: "Precision may be lost!"
+
+console.log(warn(Math.pow(2, 53) - 1));
+// 予想される結果: "Precision safe."
+```
 
 ## 構文
 
@@ -65,7 +79,8 @@ Number.isSafeInteger(3.0); // true
 ## 関連情報
 
 - [`Number.isSafeInteger` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
-- 所属先の {{jsxref("Number")}} オブジェクト
+- [es-shims による `Number.isSafeInteger` のポリフィル](https://www.npmjs.com/package/number.issafeinteger)
+- {{jsxref("Number")}}
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
 - {{jsxref("Number.MAX_SAFE_INTEGER")}}
 - {{jsxref("BigInt")}}

@@ -39,11 +39,11 @@ escape("@*_+-./"); // "@*_+-./"
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("encodeURI")}}
 - {{jsxref("encodeURIComponent")}}

@@ -7,11 +7,12 @@ slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
 
 Avec l'API Cookies, vos extensions ont accès à des fonctionnalités similaires à celles utilisées par les sites Web pour stocker et lire les cookies. Les fonctionnalités de l'API permettent aux extensions de stocker des informations site par site. Ainsi, comme nous le verrons dans l'exemple, vous pouvez stocker des détails sur le choix de la couleur de fond d'un site pour un utilisateur. Ensuite, lorsque l'utilisateur revient sur le site, votre extension peut utiliser la capacité de l'API pour obtenir des détails sur les cookies et les lire pour récupérer le choix de l'utilisateur et l'appliquer au site Web.
 
-> **Note :** Le comportement des cookies peut être contrôlé à l'aide de la propriété {{WebExtAPIRef("privacy.websites")}} `cookieConfig`. Cette propriété contrôle si et comment les cookies sont acceptés ou si tous les cookies sont traités comme des cookies de session.
+> [!NOTE]
+> Le comportement des cookies peut être contrôlé à l'aide de la propriété {{WebExtAPIRef("privacy.websites")}} `cookieConfig`. Cette propriété contrôle si et comment les cookies sont acceptés ou si tous les cookies sont traités comme des cookies de session.
 
 ## Permissions
 
-Pour utiliser l'API Cookies, vous devez demander à la fois la permission `"cookies"` et les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour les protocoles, domaines, ou sites web auxquels vous souhaitez accéder ou utiliser `"<all_urls>"` pour accéder à tous les protocoles et domaines. La façon dont vous définissez votre chaîne de permission d'hôte affecte la capacité de votre extension à lire, écrire et supprimer les cookies.
+Pour utiliser l'API Cookies, vous devez demander à la fois la permission `"cookies"` et les [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour les protocoles, domaines, ou sites web auxquels vous souhaitez accéder ou utiliser `"<all_urls>"` pour accéder à tous les protocoles et domaines. La façon dont vous définissez votre chaîne de permission d'hôte affecte la capacité de votre extension à lire, écrire et supprimer les cookies.
 
 <table>
   <colgroup>
@@ -228,5 +229,5 @@ En plus des API mentionnées jusqu'à présent, l'API Cookies propose également
 
 Si vous voulez en savoir plus sur l'API Cookies, consultez :
 
-- [Cookies API reference](/fr/Add-ons/WebExtensions/API/cookies).
+- [Cookies API reference](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies).
 - [List-cookies](https://github.com/mdn/webextensions-examples/tree/master/list-cookies) exemple.

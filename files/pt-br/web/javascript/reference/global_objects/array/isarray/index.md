@@ -3,7 +3,7 @@ title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -24,7 +24,7 @@ Array.isArray(obj)
 
 Se o objeto é um {{jsxref("Array")}}, retorna `true`(verdadeiro), caso contrário é retornado `false`(falso).
 
-Veja o artigo ["Determinando com absoluta precisão se um objeto em Javascript é ou não uma array"](http://web.mit.edu/jwalden/www/isArray.html) para mais detalhes.
+Veja o artigo ["Determinando com absoluta precisão se um objeto em Javascript é ou não uma array"](https://web.mit.edu/jwalden/www/isArray.html) para mais detalhes.
 
 ## Exemplos
 
@@ -62,14 +62,11 @@ if (!Array.isArray) {
 
 ## Especificações
 
-| Especificação                                              | Status             | Comentário                                           |
-| ---------------------------------------------------------- | ------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}    | {{Spec2('ES5.1')}} | Definição Inicial. Implementado em JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ES6')}}   |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com o Browser
 
-{{Compat("javascript.builtins.Array.isArray")}}
+{{Compat}}
 
 ## Veja Também
 

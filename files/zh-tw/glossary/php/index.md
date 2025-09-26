@@ -52,7 +52,6 @@ PHP（PHP: Hypertext Preprocessor 的遞歸縮寫，意為「PHP：超文字預�
 - 維基教科書的 [PHP](https://zh.wikibooks.org/wiki/PHP)
 - [臺灣 php 聯盟](https://twpug.net/)
 - [MDN Web Docs 術語](/zh-TW/docs/Glossary)
-
   - {{Glossary("Java")}}
   - {{Glossary("JavaScript")}}
   - {{Glossary("Python")}}

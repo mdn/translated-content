@@ -18,7 +18,6 @@ O `<display-outside>` O valor é definido usando uma palavra-chave da lista abai
 - `inline`
   - : O elemento gera uma ou mais caixas de elementos embutidos que não geram quebras de linha antes ou depois de si mesmas. No fluxo normal, o próximo elemento estará na mesma linha se houver espaço
 - `run-in` {{Experimental_Inline}}
-
   - : O elemento gera uma caixa de introdução. Se o irmão adjacente do elemento definido como`display: run-in` box é uma caixa de bloco, o `run-in` box se torna a primeira caixa embutida da caixa de bloco a seguir.
 
     Os elementos de entrada funcionam como linhas ou blocos, dependendo dos elementos circundantes. Ou seja: Se a caixa de introdução contém uma caixa de bloco, o mesmo que bloco. Se uma caixa de bloco segue a caixa de introdução, a caixa de introdução torna-se a primeira caixa embutida da caixa de bloco. Se uma caixa embutida se seguir, a caixa de introdução se tornará uma caixa de bloco.
@@ -36,16 +35,15 @@ No exemplo a seguir, os elementos de extensão (normalmente exibidos como elemen
 ### HTML
 
 ```html
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
 ### CSS
 
 ```css
 span {
-    display: block;
-    border: 1px solid rebeccapurple;
+  display: block;
+  border: 1px solid rebeccapurple;
 }
 ```
 
@@ -55,12 +53,11 @@ span {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}
@@ -68,4 +65,4 @@ span {
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
 - [Layout de bloco e embutido no fluxo normal](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)

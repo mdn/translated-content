@@ -47,18 +47,18 @@ var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 var x = supportPageOffset
   ? window.pageXOffset
   : isCSS1Compat
-  ? document.documentElement.scrollLeft
-  : document.body.scrollLeft;
+    ? document.documentElement.scrollLeft
+    : document.body.scrollLeft;
 var y = supportPageOffset
   ? window.pageYOffset
   : isCSS1Compat
-  ? document.documentElement.scrollTop
-  : document.body.scrollTop;
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
 ```
 
 ## Especificación
 
-- CSSOM View Module: [window.scrollY](http://dev.w3.org/csswg/cssom-view/#dom-window-scrolly) (Editor's Draft)
+- CSSOM View Module: [window.scrollY](https://dev.w3.org/csswg/cssom-view/#dom-window-scrolly) (Editor's Draft)
 
 ## Ver también
 

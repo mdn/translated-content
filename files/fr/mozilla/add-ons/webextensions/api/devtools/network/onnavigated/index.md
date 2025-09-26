@@ -3,7 +3,7 @@ title: devtools.network.onNavigated
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Mise en place lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page
 
@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
-
     - `url`
       - : `string`. La nouvelle URL pour la fenêtre.
 
@@ -51,11 +49,9 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
->
-> Les données de compatibilité de Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

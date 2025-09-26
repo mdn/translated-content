@@ -83,6 +83,6 @@ p {
 
 ## Voir aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("transform")}}
 - {{cssxref("transform-origin")}}

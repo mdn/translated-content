@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 **`Object.entries()`** 에 의해 반환된 배열(array)의 순서는 객체가 정의된 방법과 관련이 없습니다. 배열 순서가 쓸 곳이 있다면, 다음과 같이 정렬을 먼저 하시는 것이 좋습니다 `Object.entries(obj).sort((a, b) => b[0].localeCompare(a[0]));`.
 
-{{EmbedInteractiveExample("pages/js/object-entries.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()", "taller")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## Syntax
 
@@ -108,7 +123,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 ### Iterating through an `Object`
 
-[Array Destructuring](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring)을 사용하면 객체를 쉽게 반복 할 수 있습니다.
+[Array Destructuring](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring)을 사용하면 객체를 쉽게 반복 할 수 있습니다.
 
 ```js
 const obj = { foo: "bar", baz: 42 };
@@ -125,7 +140,7 @@ Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); 
 
 ## See also
 
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

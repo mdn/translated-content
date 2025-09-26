@@ -28,7 +28,7 @@ window.scrollTo(0, 1000);
 
 ## Notas
 
-Essa função é efetivamente a mesma que [window.scroll](/pt-BR/docs/DOM/Window.scroll). Para rolagem relativa, veja [window.scrollBy](/pt-BR/docs/DOM/Window.scrollBy), [window.scrollByLines](/pt-BR/docs/DOM/Window.scrollByLines) e [window.scrollByPages](/pt-BR/docs/DOM/Window.scrollByPages).
+Essa função é efetivamente a mesma que [window.scroll](/pt-BR/docs/Web/API/Window/scroll). Para rolagem relativa, veja [window.scrollBy](/pt-BR/docs/Web/API/Window/scrollBy), [window.scrollByLines](/pt-BR/docs/Web/API/Window/scrollByLines) e [window.scrollByPages](/pt-BR/docs/Web/API/Window/scrollByPages).
 
 ## Especificações
 

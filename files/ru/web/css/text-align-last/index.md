@@ -13,7 +13,7 @@ slug: Web/CSS/text-align-last
 
 ## Синтаксис
 
-[Formal syntax](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("text-align-last")}}
+[Formal syntax](/ru/docs/Web/CSS/Value_definition_syntax): {{csssyntax("text-align-last")}}
 
 ```css
 text-align-last: auto
@@ -58,7 +58,7 @@ div {
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -3,11 +3,43 @@ title: var()
 slug: Web/CSS/var
 ---
 
-{{CSSRef}}
+**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
 
-**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-cn/docs/Web/CSS/CSS_Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
+{{InteractiveExample("CSS Demo: var()")}}
 
-{{EmbedInteractiveExample("pages/css/var.html")}}
+```css interactive-example-choice
+border-color: var(--color-a);
+```
+
+```css interactive-example-choice
+border-color: var(--color-b);
+```
+
+```css interactive-example-choice
+border-color: var(--color-c);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    Three color options have been set on the :root use these to change the
+    border color.
+  </div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --color-a: pink;
+  --color-b: green;
+  --color-c: rebeccapurple;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 `var()` 函数不能作为属性名、选择器或者其他除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）
 
@@ -17,7 +49,8 @@ slug: Web/CSS/var
 
 {{csssyntax}}
 
-> **备注：** 自定义属性的回退值允许使用逗号。例如，`var(--foo, red, blue)` 将 `red, blue` 同时指定为回退值；即是说任何在第一个逗号之后到函数结尾前的值都会被考虑为回退值。
+> [!NOTE]
+> 自定义属性的回退值允许使用逗号。例如，`var(--foo, red, blue)` 将 `red, blue` 同时指定为回退值；即是说任何在第一个逗号之后到函数结尾前的值都会被考虑为回退值。
 
 ### 值
 
@@ -85,4 +118,4 @@ body {
 ## 参见
 
 - {{cssxref("env","env(…)")}}——由 user‑agent 控制的只读环境变量。
-- [使用 CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+- [使用 CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)

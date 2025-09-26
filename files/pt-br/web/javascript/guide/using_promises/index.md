@@ -42,7 +42,7 @@ Nós chamamos isso de _chamada de função assíncrona_. Essa convenção tem v�
 
 Ao contrário dos callbacks com retornos de funções old-style, uma promise vem com algumas garantias:
 
-- Callbacks nunca serão chamados antes da [conclusão da execução atual](/pt-BR/docs/Web/JavaScript/EventLoop#Run-to-completion) do loop de eventos do JavaScript.
+- Callbacks nunca serão chamados antes da [conclusão da execução atual](/pt-BR/docs/Web/JavaScript/Reference/Execution_model#run-to-completion) do loop de eventos do JavaScript.
 - Callbacks adicionadas com .then mesmo _depois_ do sucesso ou falha da operação assíncrona, serão chamadas, como acima.
 - Multiplos callbacks podem ser adicionados chamando-se .then várias vezes, para serem executados independentemente da ordem de inserção.
 
@@ -283,10 +283,10 @@ console.log(1); // 1, 2, 3, 4
 ## Ver também
 
 - {{jsxref("Promise.then()")}}
-- [Promises/A+ specification](http://promisesaplus.com/)
+- [Promises/A+ specification](https://promisesaplus.com/)
 - [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
 - [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
 {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}

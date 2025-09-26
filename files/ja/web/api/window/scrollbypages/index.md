@@ -10,7 +10,7 @@ slug: Web/API/Window/scrollByPages
 ## 概要
 
 ```js
-window.scrollByPages(pages)
+window.scrollByPages(pages);
 ```
 
 ### 引数
@@ -33,7 +33,7 @@ DOM Level 0 です。仕様書にはありません。
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollByPages")}}
+{{Compat}}
 
 ## 関連情報
 

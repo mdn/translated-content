@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 
 La fonction **`Math.imul()`** renvoie le résultat de la multiplication de deux nombres, calculée avec la représentation sur 32 bits de ces nombres, à la façon du langage C.
 
-{{EmbedInteractiveExample("pages/js/math-imul.html")}}
+{{InteractiveExample("JavaScript Demo: Math.imul()")}}
+
+```js interactive-example
+console.log(Math.imul(3, 4));
+// Expected output: 12
+
+console.log(Math.imul(-5, 12));
+// Expected output: -60
+
+console.log(Math.imul(0xffffffff, 5));
+// Expected output: -5
+
+console.log(Math.imul(0xfffffffe, 5));
+// Expected output: -10
+```
 
 ## Syntaxe
 

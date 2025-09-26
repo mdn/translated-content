@@ -22,7 +22,7 @@ Dans l'exemple qui suit, on utilise le gestionnaire d'évènement `onclick` pour
 ```js
 notification.onclick = function (event) {
   event.preventDefault(); // empêcher le navigateur de passer le focus sur l'onglet de la navigation
-  window.open("http://www.mozilla.org", "_blank");
+  window.open("https://www.mozilla.org", "_blank");
 };
 ```
 
@@ -37,4 +37,4 @@ notification.onclick = function (event) {
 ## Voir aussi
 
 - {{domxref("Notification")}}
-- [Utiliser l'API Notifications](/fr/docs/Web/API/notification/Using_Web_Notifications)
+- [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

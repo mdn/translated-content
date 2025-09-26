@@ -13,7 +13,7 @@ _这个接口没有特定的属性，并且也没有继承到任何属性。_
 
 ## 方法
 
-_没有继承的方法_
+_没有继承的方法。_
 
 - {{domxref("DOMImplementation.createDocument()")}}
   - : 创建并返回一个 {{domxref("XMLDocument")}}对象。
@@ -32,6 +32,6 @@ _没有继承的方法_
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [The DOM interfaces index.](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)

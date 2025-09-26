@@ -34,20 +34,19 @@ _以下のプロパティに加え、 `Node` は親である {{DOMxRef("EventTar
 - {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
   - : `Node` の名前を持つ文字列を返します。名前の構造は、ノードの型によって異なります。例えば、{{DOMxRef("HTMLElement")}} は {{DOMxRef("HTMLAudioElement")}} に対して `'audio'` というように対応するタグの名前、 {{DOMxRef("Text")}} ノードは `'#text'` という文字列、 {{DOMxRef("Document")}} ノードは `'#document'` という文字列になります。
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
-
   - : ノードの型を表す `unsigned short` を返します。使用できる値は次の通りです。
 
-    | 名前                          | 値 |
-    | ----------------------------- | ----- |
-    | `ELEMENT_NODE`                | `1`   |
-    | `ATTRIBUTE_NODE`              | `2`   |
-    | `TEXT_NODE`                   | `3`   |
-    | `CDATA_SECTION_NODE`          | `4`   |
-    | `PROCESSING_INSTRUCTION_NODE` | `7`   |
-    | `COMMENT_NODE`                | `8`   |
-    | `DOCUMENT_NODE`               | `9`   |
-    | `DOCUMENT_TYPE_NODE`          | `10`  |
-    | `DOCUMENT_FRAGMENT_NODE`      | `11`  |
+    | 名前                          | 値   |
+    | ----------------------------- | ---- |
+    | `ELEMENT_NODE`                | `1`  |
+    | `ATTRIBUTE_NODE`              | `2`  |
+    | `TEXT_NODE`                   | `3`  |
+    | `CDATA_SECTION_NODE`          | `4`  |
+    | `PROCESSING_INSTRUCTION_NODE` | `7`  |
+    | `COMMENT_NODE`                | `8`  |
+    | `DOCUMENT_NODE`               | `9`  |
+    | `DOCUMENT_TYPE_NODE`          | `10` |
+    | `DOCUMENT_FRAGMENT_NODE`      | `11` |
 
 - {{DOMxRef("Node.nodeValue")}}
   - : 現在のノードの値を取得または設定します。

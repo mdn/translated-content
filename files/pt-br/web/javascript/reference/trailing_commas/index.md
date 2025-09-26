@@ -38,8 +38,8 @@ arr.length; // 3
 
 Se for utilizada mais do que uma trailing comma, é produzida uma elisão (ou buraco). Uma elisão
 com buracos é chamado de _sparse_ (uma matriz _densa_ não tem sparse). Quando
-arrays iteráveis por exemplo com {{jsxref("Array.prototype.forEach()")}}} ou
-{{jsxref("Array.prototype.map()")}}}, os buracos da matriz são saltados.
+arrays iteráveis por exemplo com {{jsxref("Array.prototype.forEach()")}} ou
+{{jsxref("Array.prototype.map()")}}, os buracos da matriz são saltados.
 
 ```js
 const arr = [1, 2, 3, , ,];
@@ -115,7 +115,7 @@ function f(...p,) {} // SyntaxError: parâmetro após parâmetro de repouso
 ### Trailing commas em desestruturação
 
 Também é permitida uma vírgula no lado esquerdo quando se usa
-[atribuição de desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+[atribuição de desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring):
 
 ```js
 // desestruturação de array com trailing comma
@@ -128,7 +128,7 @@ const o = {
 const { p, q } = o;
 ```
 
-Mais uma vez, ao utilizar um elemento de rest, um {{jsxref("SyntaxError")}}} será lançado:
+Mais uma vez, ao utilizar um elemento de rest, um {{jsxref("SyntaxError")}} será lançado:
 
 ```js example-bad
 const [a, ...b] = [1, 2, 3];

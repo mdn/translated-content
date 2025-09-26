@@ -72,6 +72,6 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 ## See also
 
 - {{domxref("navigator.mediaDevices.getUserMedia()")}}
-- [WebRTC](/ko/docs/WebRTC) - the introductory page to the API
-- [MediaStream API](/ko/docs/WebRTC/MediaStream_API) - the API for the media stream objects
-- [Taking webcam photos](/ko/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia()` for taking photos rather than video.
+- [WebRTC](/ko/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/ko/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/ko/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia()` for taking photos rather than video.

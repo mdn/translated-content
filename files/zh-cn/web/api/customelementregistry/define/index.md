@@ -14,8 +14,9 @@ slug: Web/API/CustomElementRegistry/define
 
 ## 语法
 
-```
-customElements.define(name, constructor, options);
+```js-nolint
+define(name, constructor)
+define(name, constructor, options)
 ```
 
 ### 参数
@@ -25,9 +26,7 @@ customElements.define(name, constructor, options);
 - constructor
   - : 自定义元素构造器。
 - options {{optional_inline}}
-
   - : 控制元素如何定义。目前有一个选项支持：
-
     - `extends`. 指定继承的已创建的元素。被用于创建自定义元素。
 
 ### 返回值
@@ -124,7 +123,8 @@ customElements.define("popup-info", PopUpInfo);
                                     numbers on the back of your card."></popup-info>
 ```
 
-> **备注：** 自主自定义元素的构造函数必须扩展{{domxref("HTMLElement")}}。
+> [!NOTE]
+> 自主自定义元素的构造函数必须扩展{{domxref("HTMLElement")}}。
 
 ### 自定义内置元素
 

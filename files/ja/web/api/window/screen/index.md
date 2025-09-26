@@ -5,7 +5,7 @@ slug: Web/API/Window/screen
 
 {{APIRef("CSSOM")}}
 
-{{DOMxRef("Window")}} の **`screen`** プロパティは、ウィンドウに関連付けられた画面オブジェクトへの参照を返します。 `screen` オブジェクトは {{DOMxRef("Screen")}} インターフェースを実装しており、現在のウィンドウがレンダリングされている画面のプロパティを検査するための特別なオブジェクトです。
+{{DOMxRef("Window")}} の **`screen`** プロパティは、ウィンドウに関連付けられた画面オブジェクトへの参照を返します。 `screen` オブジェクトは {{DOMxRef("Screen")}} インターフェイスを実装しており、現在のウィンドウがレンダリングされている画面のプロパティを検査するための特別なオブジェクトです。
 
 ## 構文
 
@@ -29,4 +29,4 @@ if (screen.pixelDepth < 8) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.screen")}}
+{{Compat}}

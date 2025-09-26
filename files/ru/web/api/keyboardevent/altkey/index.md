@@ -3,7 +3,7 @@ title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent.altKey`** свойство только для чтения, возвращает {{jsxref("Boolean")}}, если клавиша <kbd>alt</kbd> (<kbd>Option</kbd> или <kbd>⌥</kbd> на OS X) была нажата (`true`) или не нажата (`false`), когда событие произошло.
 
@@ -42,11 +42,11 @@ function showChar(e){
 </html>
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

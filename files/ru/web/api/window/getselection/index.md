@@ -3,7 +3,7 @@ title: Window.getSelection()
 slug: Web/API/Window/getSelection
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
 ## Коротко
 
@@ -59,7 +59,7 @@ var selectedText = selObj.toString();
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

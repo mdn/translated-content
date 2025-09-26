@@ -1,9 +1,9 @@
 ---
-title: "HTMLElement: transitionstart 事件"
+title: HTMLElement：transitionstart 事件
 slug: Web/API/Element/transitionstart_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 **`transitionstart`** 事件会在 [CSS transition](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 实际开始的时候触发，或者说在某个 {{cssxref("transition-delay")}} 已经结束之后触发。
 

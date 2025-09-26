@@ -10,7 +10,7 @@ slug: Web/API/ClipboardItem/getType
 ## 構文
 
 ```js
-getType(type)
+getType(type);
 ```
 
 ### 引数
@@ -40,14 +40,11 @@ async function getClipboardContents() {
     const clipboardItems = await navigator.clipboard.read();
 
     for (const clipboardItem of clipboardItems) {
-
       for (const type of clipboardItem.types) {
         const blob = await clipboardItem.getType(type);
         // we can now use blob here
       }
-
     }
-
   } catch (err) {
     console.error(err.name, err.message);
   }

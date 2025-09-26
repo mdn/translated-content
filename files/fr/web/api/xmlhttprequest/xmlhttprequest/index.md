@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest/XMLHttpRequest
 
 Le constructeur **`XMLHttpRequest()`** crée un nouvel objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).
 
-Pour plus de détails sur l'utilisation de `XMLHttpRequest`, voir la page [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
+Pour plus de détails sur l'utilisation de `XMLHttpRequest`, voir la page [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 ## Syntaxe
 
@@ -34,9 +34,7 @@ const request = new XMLHttpRequest(paramsDictionary);
 ### Paramètres (non standard)
 
 - `objParameters`
-
   - : Un drapeau qui peut être activé&nbsp;:
-
     - `mozAnon`
       - : Un booléen. Si ce drapeau vaut `true`, il empêchera le navigateur d'exposer [l'origine](/fr/docs/Glossary/Origin) et [des informations d'authentification](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) lors de la récupération des ressources. Plus important encore, cela signifie que les [cookies](/fr/docs/Glossary/Cookie) ne seront pas envoyés, sauf s'ils sont ajoutés de façon explicite en utilisant la méthode `setRequestHeader()`.
 
@@ -50,5 +48,5 @@ const request = new XMLHttpRequest(paramsDictionary);
 
 ## Voir aussi
 
-- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

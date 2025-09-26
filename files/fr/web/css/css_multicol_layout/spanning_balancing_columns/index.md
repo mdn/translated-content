@@ -7,7 +7,8 @@ slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
 
 Dans ce guide, nous verrons comment répartir les éléments sur plusieurs colonnes et comment contrôler le remplissage des colonnes.
 
-> **Note :** Les fonctionnalités décrites dans cet article ne sont pas aussi bien prises en charge que celles décrites dans les deux articles précédents. Pour plus d'informations, nous vous invitons à vous référer aux tableaux de compatibilité à la fin des pages décrivant chacune des propriétés.
+> [!NOTE]
+> Les fonctionnalités décrites dans cet article ne sont pas aussi bien prises en charge que celles décrites dans les deux articles précédents. Pour plus d'informations, nous vous invitons à vous référer aux tableaux de compatibilité à la fin des pages décrivant chacune des propriétés.
 
 ## Étendre sur plusieurs colonnes
 
@@ -41,7 +42,7 @@ De plus, si un élément qui s'étend sur les colonnes se retrouve plus loin dan
 
 Lorsque toutes les colonnes possèdent environ la même quantité de contenu, on parle d'un ensemble équilibré. On pourra jouer sur le remplissage et l'équilibrage des colonnes lorsque la quantité de contenu est inférieure à la quantité d'espace fournie, notamment lorsque le conteneur a une hauteur donnée.
 
-La valeur initiale de la propriété {{cssxref("column-fill")}}, dans une disposition multi-colonnes, est `balance`. Cette valeur signifie que les colonnes doivent être aussi équilibrées que possible. Pour les contextes fragmentés tels que [les médias paginés](/fr/docs/Web/CSS/CSS_Pages), seul le dernier fragment est équilibré. Cela signifie que c'est sur la dernière page du document que l'ensemble des colonnes sera équilibré.
+La valeur initiale de la propriété {{cssxref("column-fill")}}, dans une disposition multi-colonnes, est `balance`. Cette valeur signifie que les colonnes doivent être aussi équilibrées que possible. Pour les contextes fragmentés tels que [les médias paginés](/fr/docs/Web/CSS/CSS_paged_media), seul le dernier fragment est équilibré. Cela signifie que c'est sur la dernière page du document que l'ensemble des colonnes sera équilibré.
 
 La valeur `balance-all` permet quant à elle d'avoir des colonnes équilibrées sur l'ensemble des fragments (et pas uniquement sur le dernier).
 
@@ -55,4 +56,4 @@ Dans cet exemple, on a des colonnes qui contiennent une image et du texte qui so
 
 On notera que l'équilibrage des colonnes n'est pas pris en charge de façon homogène par les navigateurs. Aussi, si vous l'utilisez, vérifiez vos résultats dans les différents navigateurs pour contrôler l'effet obtenu. Vous pouvez aussi consulter les tableaux de compatibilité des navigateurs à la fin des pages de chacune des propriétés.
 
-Dans le prochain guide, nous verrons [comment gérer le dépassement au sein d'un conteneur multi-colonnes](/fr/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol), à l'intérieur des colonnes et lorsqu'il y a plus de contenu que le conteneur peut en avoir.
+Dans le prochain guide, nous verrons [comment gérer le dépassement au sein d'un conteneur multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout), à l'intérieur des colonnes et lorsqu'il y a plus de contenu que le conteneur peut en avoir.

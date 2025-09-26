@@ -3,7 +3,7 @@ title: Selection.toString()
 slug: Web/API/Selection/toString
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 Метод **`Selection.toString()`** возвращает строку, содержащуюся в выделенном объекте, т.е. выделенный текст.
 
@@ -32,14 +32,14 @@ alert(window.getSelection()); // What is called
 alert(window.getSelection().toString()); // What is actually being effectively called.
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Selection")}}, the interface it belongs to.

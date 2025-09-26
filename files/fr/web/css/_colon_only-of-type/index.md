@@ -1,17 +1,45 @@
 ---
-title: ":only-of-type"
+title: :only-of-type
 slug: Web/CSS/:only-of-type
 l10n:
-  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:only-of-type`** permet de cibler un élément qui ne possède aucun nœud frère du même type.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-of-type.html", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: :only-of-type", "tabbed-shorter")}}
 
-> **Note :** Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de niveau 4).
+```css interactive-example
+a:only-of-type {
+  color: fuchsia;
+}
+
+dd:only-of-type {
+  background-color: bisque;
+}
+```
+
+```html interactive-example
+<p>
+  Pour en savoir plus sur <b>QUIC</b>, consultez les <a href="#">RFC 9000</a> et
+  <a href="#">RFC 9114</a>.
+</p>
+
+<dl>
+  <dt>Publication</dt>
+  <dd>2021</dd>
+  <dd>2022</dd>
+</dl>
+
+<p>
+  Les détails concernant <b>QPACK</b> se trouvent dans <a href="#">RFC 9204</a>.
+</p>
+
+<dl>
+  <dt>Publication</dt>
+  <dd>2022</dd>
+</dl>
+```
 
 ## Syntaxe
 
@@ -51,7 +79,7 @@ main :only-of-type {
 
 #### Résultat
 
-{{EmbedLiveSample('','100%',180)}}
+{{EmbedLiveSample('mettre_en_forme_des_éléments_sans_voisins_du_même_type', '100%', 180)}}
 
 ## Spécifications
 

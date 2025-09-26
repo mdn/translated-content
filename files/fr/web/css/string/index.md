@@ -17,7 +17,8 @@ Les nouvelles lignes ne sont pas acceptées, sauf si elles sont échappées à l
 
 Les caractères peuvent être décrits en utilisant leur [point de code Unicode](https://fr.wikipedia.org/wiki/Unicode#Partitionnement) hexadécimal, qui doit alors être échappé à l'aide du caractère `\`. `\27` représente par exemple le guillemet droit simple (`'`) et `\A9` le symbole du _copyright_ ©.
 
-> **Note :** Les [entités](/fr/docs/Glossary/Entity) telles que `&nbsp;` ou `&#8212;` ne peuvent pas être utilisées pour les chaînes de caractères CSS.
+> [!NOTE]
+> Les [entités](/fr/docs/Glossary/Entity) telles que `&nbsp;` ou `&#8212;` ne peuvent pas être utilisées pour les chaînes de caractères CSS.
 
 ## Exemples
 
@@ -34,7 +35,8 @@ de caractères"
 "Une grande chaîne de caractères"
 ```
 
-> **Note :** on peut également échapper des doubles quotes avec `\22` et les simples quotes avec `\27`.
+> [!NOTE]
+> On peut également échapper des doubles quotes avec `\22` et les simples quotes avec `\27`.
 
 ## Spécifications
 
@@ -47,5 +49,5 @@ de caractères"
 ## Voir aussi
 
 - [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Tutoriel - Introduction aux valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Types de donnée en CSS](/fr/docs/Web/CSS/CSS_Types)
+- [Tutoriel - Introduction aux valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- [Types de donnée en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)

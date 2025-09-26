@@ -1,5 +1,5 @@
 ---
-title: '502'
+title: "502"
 slug: conflicting/Web/HTTP/Status/502
 original_slug: Glossary/502
 ---
@@ -12,4 +12,4 @@ Normalmente el servidor no está caído (por ejemplo no proporciona respuesta al
 
 ## Aprender más
 
-- [list of HTTP response codes](/es/docs/Web/HTTP/Response_codes)
+- [list of HTTP response codes](/es/docs/Web/HTTP/Reference/Status)

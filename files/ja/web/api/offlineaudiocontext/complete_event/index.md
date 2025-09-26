@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener('complete', (event) => { });
+addEventListener("complete", (event) => {});
 
-oncomplete = (event) => { };
+oncomplete = (event) => {};
 ```
 
 ## イベント型
@@ -41,11 +41,11 @@ _親である {{domxref("Event")}} からプロパティを継承しています
 ```js
 const offlineAudioCtx = new OfflineAudioContext();
 
-offlineAudioCtx.addEventListener('complete', () => {
-  console.log('Offline audio processing now complete');
-  showModalDialog('Song processed and ready to play');
+offlineAudioCtx.addEventListener("complete", () => {
+  console.log("Offline audio processing now complete");
+  showModalDialog("Song processed and ready to play");
   playBtn.disabled = false;
-})
+});
 ```
 
 また、 `oncomplete` プロパティを使用して、イベントハンドラーを設定することもできます。
@@ -54,10 +54,10 @@ offlineAudioCtx.addEventListener('complete', () => {
 const offlineAudioCtx = new OfflineAudioContext();
 
 offlineAudioCtx.oncomplete = () => {
-  console.log('Offline audio processing now complete');
-  showModalDialog('Song processed and ready to play');
+  console.log("Offline audio processing now complete");
+  showModalDialog("Song processed and ready to play");
   playBtn.disabled = false;
-}
+};
 ```
 
 ## 仕様書

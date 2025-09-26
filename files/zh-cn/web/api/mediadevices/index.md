@@ -91,7 +91,7 @@ function errorMsg(msg, error) {
 
 ## 参见
 
-- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API): The API this interface is part of.
+- [媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API): The API this interface is part of.
 - [Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API): The API defining the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method.
 - [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("Navigator.mediaDevices")}}: Returns a reference to a `MediaDevices` object that can be used to access devices.

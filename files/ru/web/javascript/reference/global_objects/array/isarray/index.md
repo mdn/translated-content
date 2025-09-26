@@ -3,7 +3,7 @@ title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -26,7 +26,7 @@ Array.isArray(obj)
 
 ## Описание
 
-За подробностям обращайтесь к статье [«Абсолютно точное определение того, является ли JavaScript-объект массивом или нет»](http://web.mit.edu/jwalden/www/isArray.html).
+За подробностям обращайтесь к статье [«Абсолютно точное определение того, является ли JavaScript-объект массивом или нет»](https://web.mit.edu/jwalden/www/isArray.html).
 
 ## Примеры
 

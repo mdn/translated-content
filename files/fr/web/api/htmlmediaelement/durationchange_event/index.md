@@ -3,12 +3,14 @@ title: "HTMLMediaElement: durationchange"
 slug: Web/API/HTMLMediaElement/durationchange_event
 ---
 
+{{APIRef("HTMLMediaElement")}}
+
 L'évènement **`durationchange`** est déclenché quand l'attribut de durée est mis à jour.
 
 ## Informations générales
 
 - Spécification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-durationchange)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-durationchange)
 - Interface
   - : {{domxref("Event")}}
 - Propagation

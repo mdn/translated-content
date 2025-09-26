@@ -5,7 +5,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Formatage_du_texte", "Web/JavaScript/Guide/Collections_indexées")}}
 
-Les expressions rationnelles sont des motifs utilisés pour correspondre à certaines combinaisons de caractères au sein de chaînes de caractères. En JavaScript, les expressions rationnelles sont également des objets. Ces motifs sont utilisés avec les méthodes {{jsxref("RegExp.exec", "exec")}} et {{jsxref("RegExp.test", "test")}} de {{jsxref("RegExp")}}, et avec les méthodes {{jsxref("String.match", "match")}}, {{jsxref("String.matchAll", "matchAll")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}} et {{jsxref("String.split", "split")}} de {{jsxref("String")}}. Ce chapitre explique comment utiliser les expressions rationnelles en JavaScript (aussi appelées expressions régulières ou « _RegExp_ »).
+Les expressions rationnelles sont des motifs utilisés pour correspondre à certaines combinaisons de caractères au sein de chaînes de caractères. En JavaScript, les expressions rationnelles sont également des objets. Ces motifs sont utilisés avec les méthodes {{jsxref("RegExp.exec", "exec")}} et {{jsxref("RegExp.test", "test")}} de {{jsxref("RegExp")}}, et avec les méthodes {{jsxref("String.match", "match")}}, {{jsxref("String.matchAll", "matchAll")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.replaceAll", "replaceAll")}}, {{jsxref("String.search", "search")}} et {{jsxref("String.split", "split")}} de {{jsxref("String")}}. Ce chapitre explique comment utiliser les expressions rationnelles en JavaScript (aussi appelées expressions régulières ou « _RegExp_ »).
 
 ## Créer une expression rationnelle
 
@@ -41,15 +41,15 @@ Lorsque le motif à trouver est plus complexe qu'une simple égalité (trouver t
 
 Les pages suivantes décrivent en détail les caractères spéciaux qui peuvent être utilisés afin de composer une expression rationnelle.
 
-- [Assertions](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Assertions)
+- [Assertions](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - : Une assertion caractérisant la façon dont la correspondance peut se produire (en recherchant un motif avant, après ou avec une expression conditionnelle).
-- [Limites](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Limites)
+- [Limites](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - : Permet d'indiquer le début ou la fin d'une ligne ou d'un mot.
-- [Classes de caractère](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Classes_de_caractères)
+- [Classes de caractère](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - : Les classes permettent de distinguer différents caractères selon différents groupes (par exemple les lettres et les chiffres).
-- [Groupes et intervalles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Groupes_et_intervalles)
+- [Groupes et intervalles](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
   - : Permet d'indiquer un groupe ou un intervalle de caractères.
-- [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Quantificateurs)
+- [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - : Permet d'indiquer un nombre de caractères ou d'expressions qui doivent correspondre.
 - [Propriétés Unicode](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Unicode_Properties)
   - : Permet de distinguer les caractères en fonction de leurs caractéristiques Unicode (majuscule/minuscule, symbole mathématique, ponctuation).
@@ -631,7 +631,8 @@ function escapeRegExp(string) {
 
 Le marqueur `g` situé en fin d'expression permet d'effectuer une recherche globale, qui parcoure toute la chaîne et renvoie l'ensemble des correspondances trouvées (voir [Utiliser les marqueurs](#recherches_flag) ci-après).
 
-> **Note :** Voir la page sur la méthode [`String.replace`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/replace) pour plus d'informations.
+> [!NOTE]
+> Voir la page sur la méthode [`String.replace`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace) pour plus d'informations.
 
 ### Utiliser les parenthèses
 
@@ -645,17 +646,19 @@ Pour qu'une partie de la chaîne de caractère corresponde mais que la correspon
 
 ## Utiliser les expressions rationnelles
 
-Les expresssions régulières sont utilisées avec les méthodes `test` et `exec` de l'objet `RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+Les expresssions régulières sont utilisées avec les méthodes {{jsxref("RegExp/test", "test()")}} et {{jsxref("RegExp/exec", "exec()")}} de l'objet `RegExp` et avec les méthodes {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/replaceAll", "replaceAll()")}}, {{jsxref("String/search", "search()")}}, et {{jsxref("String/split", "split()")}}.
+de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
-| Méthode                                   | Description                                                                                                                                                                                        |
-| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.exec", "exec")}}         | Une méthode de l'objet `RegExp` qui exécute une recherche de correspondance dans une chaîne de caractères. Elle renvoie un tableau d'informations ou `null` lorsqu'il n'y a pas de correspondance. |
-| {{jsxref("RegExp.test", "test")}}         | Une méthode de l'objet `RegExp` testant la présence d'une correspondance dans une chaîne de caractères. Elle renvoie true ou false.                                                                |
-| {{jsxref("String.match", "match")}}       | Une méthode de l'objet `String` qui exécute une recherche de correspondance dans une chaîne de caractères. Elle renvoie un tableau d'informations ou `null` lorsqu'il n'y a pas de correspondance. |
-| {{jsxref("String.matchAll", "matchAll")}} | Une méthode de l'objet `String` qui renvoie un itérateur contenant l'ensemble des correspondances, y compris les groupes capturants.                                                               |
-| {{jsxref("String.search", "search")}}     | Une méthode de l'objet `String` qui teste la présence d'une correspondance dans une chaîne de correspondance. Elle renvoie la position de la correspondance ou -1 s'il n'y en a pas.               |
-| {{jsxref("String.replace", "replace")}}   | Une méthode de l'objet `String` qui recherche une correspondance dans une chaîne de caractères et qui remplace la correspondance par une chaîne de substitution.                                   |
-| {{jsxref("String.split", "split")}}       | Une méthode de l'objet `String` qui utilise une expression régulière ou une chaîne de caractères pour découper une chaîne de caractères en un tableau comprenant les fragments résultants.         |
+| Méthode                                       | Description                                                                                                                                                                                        |
+| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.exec", "exec")}}             | Une méthode de l'objet `RegExp` qui exécute une recherche de correspondance dans une chaîne de caractères. Elle renvoie un tableau d'informations ou `null` lorsqu'il n'y a pas de correspondance. |
+| {{jsxref("RegExp.test", "test")}}             | Une méthode de l'objet `RegExp` testant la présence d'une correspondance dans une chaîne de caractères. Elle renvoie true ou false.                                                                |
+| {{jsxref("String.match", "match")}}           | Une méthode de l'objet `String` qui exécute une recherche de correspondance dans une chaîne de caractères. Elle renvoie un tableau d'informations ou `null` lorsqu'il n'y a pas de correspondance. |
+| {{jsxref("String.matchAll", "matchAll")}}     | Une méthode de l'objet `String` qui renvoie un itérateur contenant l'ensemble des correspondances, y compris les groupes capturants.                                                               |
+| {{jsxref("String.replace", "replace")}}       | Une méthode de l'objet `String` qui recherche une correspondance dans une chaîne de caractères et qui remplace la correspondance par une chaîne de substitution.                                   |
+| {{jsxref("String.replaceAll", "replaceAll")}} | Une méthode de l'objet `String` qui recherche toutes les correspondances dans une chaîne de caractères et qui remplace chaque correspondance par une chaîne de substitution.                       |
+| {{jsxref("String.search", "search")}}         | Une méthode de l'objet `String` qui teste la présence d'une correspondance dans une chaîne de correspondance. Elle renvoie la position de la correspondance ou -1 s'il n'y en a pas.               |
+| {{jsxref("String.split", "split")}}           | Une méthode de l'objet `String` qui utilise une expression régulière ou une chaîne de caractères pour découper une chaîne de caractères en un tableau comprenant les fragments résultants.         |
 
 Pour savoir si un motif est présent au sein d'une chaîne de caractères, utiliser les méthodes `test` ou `search`. Pour obtenir plus d'informations (moins rapidement) on utilisera les méthodes `exec` ou `match`. Si on utilise `exec` ou `match` et qu'une correspondance est trouvée, ces méthodes renverront un tableau et mettront à jour des propriétés de l'objet global `RegExp` et aussi de l'instance de `RegExp` associée à l'expression rationnelle. Si aucune correspondance n'est trouvée, la méthode `exec` renverra `null` (qui est automatiquement converti à `false` lors d'un test conditionnel).
 
@@ -835,7 +838,7 @@ var re = new RegExp("\\w+\\s", "g");
 
 pour obtenir le même résultat.
 
-Le comportement du marqueur `'g'` est différent selon qu'il est utilisé avec [`exec()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp/exec) ou avec [`match()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/match). Pour `match()`, c'est la chaîne de caractères qui invoque la méthode et l'expression rationnelle est alors un argument. Pour `exec()`, c'est l'expression rationnelle qui invoque la méthode et c'est la chaîne de caractères qui est passée en argument. Dans l'appel à `exec()`, le marqueur `'g'` permet d'avoir une progression itérative.
+Le comportement du marqueur `'g'` est différent selon qu'il est utilisé avec [`exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) ou avec [`match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match). Pour `match()`, c'est la chaîne de caractères qui invoque la méthode et l'expression rationnelle est alors un argument. Pour `exec()`, c'est l'expression rationnelle qui invoque la méthode et c'est la chaîne de caractères qui est passée en argument. Dans l'appel à `exec()`, le marqueur `'g'` permet d'avoir une progression itérative.
 
 Le marqueur `m` pourra être utilisé pour traiter une chaîne de caractères de plusieurs lignes comme plusieurs lignes distinctes. Si ce marqueur est utilisé, les caractères spéciaux `^` et `$` correspondront au début ou à la fin de n'importe quelle ligne appartenant à la chaîne de caractères au lieu de correspondre simplement au début ou à la fin de la chaîne.
 

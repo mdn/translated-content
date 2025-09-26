@@ -3,17 +3,17 @@ title: perspective
 slug: Web/CSS/perspective
 ---
 
-{{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
+{{ SeeCompatTable() }}
 
 ## Resumen
 
-La propiedad `perspective` [CSS](/en/CSS) determina la distancia entre el plano z=0 y el usuario para dar algo de perspectiva al elemento 3D posicionado. Cada elemento 3D con z>0 se hace más grande y con z<0 se vuelve más pequeño. La intensidad del efecto es determinado por el valor de esta propiedad.
+La propiedad `perspective` [CSS](/es/docs/Web/CSS) determina la distancia entre el plano z=0 y el usuario para dar algo de perspectiva al elemento 3D posicionado. Cada elemento 3D con z>0 se hace más grande y con z<0 se vuelve más pequeño. La intensidad del efecto es determinado por el valor de esta propiedad.
 
 Parte de los elementos 3D que se encuentran destrás del usuario, es decir que su coordenada del eje z es mayor que el valor de la propiedad perspective de CSS no es dibujada.
 
 La posición de origen que se usará para la transformación es por defecto colocado en el centro del elemento, pero su posición puede ser cambiada usando la propiedad {{ cssxref("perspective-origin") }}.
 
-Usando esta propiedad con un valor diferente a 0 y none se crea un nuevo [contexto de apilamiento](/en/CSS/Understanding_z-index/The_stacking_context).
+Usando esta propiedad con un valor diferente a 0 y none se crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 
 {{cssinfo}}
 
@@ -54,4 +54,4 @@ perspective: inherited
 
 ## Ver también
 
-- [Usando transformaciones CSS](/es/docs/CSS/Using_CSS_transforms)
+- [Usando transformaciones CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

@@ -1,19 +1,31 @@
 ---
-title: ビット論理積代入 (&=)
+title: ビット論理積代入演算子 (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+**ビット論理積代入 (`&=`)** 演算子は、 2 つのオペランドで[論理積](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)を取り、その結果を左オペランドへ代入します。
 
-ビット論理積代入演算子 (`&=`) は、両方のオペランドの二進表現を使用し、それらに対してビット単位の AND 演算を実行して、結果を変数に代入します。
+{{InteractiveExample("JavaScript デモ: ビット論理積代入演算子 (&=)", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a &= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000001
+// 予想される結果: 1
+```
 
 ## 構文
 
-```js
-x &= y // x = x & y
+```js-nolint
+x &= y
 ```
+
+## 解説
+
+`x &= y` は `x = x & y` と同等ですが、 `x` は一度しか評価されません。
 
 ## 例
 
@@ -24,6 +36,9 @@ let a = 5;
 // 5:     00000000000000000000000000000101
 // 2:     00000000000000000000000000000010
 a &= 2; // 0
+
+let b = 5n;
+b &= 2n; // 0n
 ```
 
 ## 仕様書
@@ -36,5 +51,5 @@ a &= 2; // 0
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
-- [ビット論理積演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
+- [ビット論理積 (`&`)](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)

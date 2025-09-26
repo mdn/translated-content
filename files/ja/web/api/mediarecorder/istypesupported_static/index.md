@@ -36,7 +36,11 @@ const types = [
 ];
 
 for (const type of types) {
-  console.log(`${type} に対応している? ${MediaRecorder.isTypeSupported(type) ? "たぶん!" : "いいえ :("}`);
+  console.log(
+    `${type} に対応している? ${
+      MediaRecorder.isTypeSupported(type) ? "たぶん!" : "いいえ :("
+    }`,
+  );
 }
 ```
 
@@ -52,7 +56,7 @@ for (const type of types) {
 
 - [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API)
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブ上のメディア種別や形式のガイド](/ja/docs/Web/Media/Formats)
+- [ウェブ上のメディア種別や形式のガイド](/ja/docs/Web/Media/Guides/Formats)
 - [よくあるメディア種別の "codecs" 引数](/ja/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStream")}}

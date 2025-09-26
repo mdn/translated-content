@@ -34,7 +34,8 @@ function forEachKey(callback) {
 }
 ```
 
-> **Note :** Pour un exemple plus poussé, consultez la [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> Pour un exemple plus poussé, consultez la [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Autre exemple
 

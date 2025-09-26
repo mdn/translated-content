@@ -2,14 +2,14 @@
 title: Element
 slug: Web/API/Element
 l10n:
-  sourceCommit: 930683b0618a36a5bb497cfaedced2f4de767889
+  sourceCommit: cf16851e73da29823438198c4f0efcb7026b7d10
 ---
 
 {{APIRef("DOM")}}
 
 **`Element`** は {{DOMxRef("Document")}} が継承するオブジェクトの中にあるすべての要素オブジェクト（すなわち、要素を表現するオブジェクト）が継承する、もっとも一般的な基底クラスです。すべての種類の要素の共通するメソッドとプロパティのみを持ちます。もっと具体的なクラスが `Element` を継承しています。
 
-例えば {{DOMxRef("HTMLElement")}} インターフェイスは HTML 要素の基本インターフェイスであり、 {{DOMxRef("SVGElement")}} インターフェイスはすべての SVG 要素の基本になります。ほとんどの機能は、クラスの階層を下りると具体化していきます。
+例えば {{DOMxRef("HTMLElement")}} インターフェイスは、HTML 要素の基本インターフェイスです。同様に、{{DOMxRef("SVGElement")}} インターフェイスはすべての SVG 要素の基本になっており、{{DOMxRef("MathMLElement")}} インターフェイスは MathML 要素の基本インターフェイスです。ほとんどの機能は、クラスの階層を下りると具体化していきます。
 
 XUL の `XULElement` インターフェイスのようなウェブプラットフォームの枠外の言語もまた、`Element` インターフェイスを実装しています。
 
@@ -39,8 +39,10 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
   - : この要素の上境界の幅を表す数値を返します。
 - {{DOMxRef("Element.clientWidth")}} {{ReadOnlyInline}}
   - : この要素の内部の幅を表す数値を返します。
+- {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
+  - : 要素の実効ズームサイズを示す数値。要素がレンダリングされない場合は 1.0 です。
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
-  - : {{domxref("PerformanceElementTiming")}} API において要素を監視するためのマークとなる [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を に反映した文字列です。
+  - : {{domxref("PerformanceElementTiming")}} API において要素を監視するためのマークとなる [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を反映した文字列です。
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
   - : この要素の最初の子要素を返します。
 - {{DOMxRef("Element.id")}}
@@ -52,13 +54,9 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
 - {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
   - : 文字列で、この要素の修飾名のローカル部分を表します。
 - {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
-
   - : この要素の名前空間の URI。名前空間がない場合は `null` になります。
-
-    > **メモ:** Firefox 3.5 および以前のバージョンでは、HTML 要素の名前空間はありません。以降のバージョンでは、HTML 要素は HTML ツリーおよび XML ツリーで [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) 名前空間内に存在します。
-
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("Element")}} で、ツリー上で自身の直後の要素を表します。兄弟ノードがなければ `null` になります。
+  - : `Element` で、ツリー上で自身の直後の要素を表します。兄弟ノードがなければ `null` になります。
 - {{DOMxRef("Element.outerHTML")}}
   - : 文字列で、その要素の内容を含むマークアップを表します。値が設定された場合、その文字列から解釈されたノードでその要素を置換します。
 - {{DOMxRef("Element.part")}}
@@ -66,7 +64,7 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : 文字列で、要素の名前空間接頭辞を表します。接頭辞が指定されていない場合は `null` です。
 - {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("Element")}} で、ツリー上で自身の直前の要素を表します。兄弟ノードがなければ `null` です。
+  - : `Element` で、ツリー上で自身の直前の要素を表します。兄弟ノードがなければ `null` です。
 - {{DOMxRef("Element.scrollHeight")}} {{ReadOnlyInline}}
   - : この要素のスクロールビューの高さを表す数値を返します。
 - {{DOMxRef("Element.scrollLeft")}}
@@ -88,107 +86,147 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
 
 ### ARIA から導入されたインスタンスプロパティ
 
-_`Element` インターフェイスは、 `ARIAMixin` ミックスインで定義されている以下のプロパティを持っています。_
+_`Element` インターフェイスには、以下のプロパティもあります。_
 
 - {{domxref("Element.ariaAtomic")}}
-  - : 文字列で、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性を反映し、 [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性で定義された変更通知に基づいて、支援技術が変更された領域のすべてを提示するか、一部のみを提示するかを示します。
+  - : 文字列で、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性を反映し、 [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性で定義された変更通知に基づいて、支援技術が変更された領域のすべてを提示するか、一部のみを提示するかを示します。
 - {{domxref("Element.ariaAutoComplete")}}
-  - : 文字列で、[`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性を反映し、コンボボックス、検索ボックス、テキストボックスでテキストを入力する際に、ユーザーの意図した値の 1 つ以上の予測を表示するかどうか、予測が行われた場合にはどのように表示するかを指定します。
+  - : 文字列で、[`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性を反映し、コンボボックス、検索ボックス、テキストボックスでテキストを入力する際に、ユーザーの意図した値の 1 つ以上の予測を表示するかどうか、予測が行われた場合にはどのように表示するかを指定します。
+- {{domxref("Element.ariaBrailleLabel")}}
+  - : 文字列で、要素の点字ラベルを定義する [`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) 属性を反映します。
+- {{domxref("Element.ariaBrailleRoleDescription")}}
+  - : 文字列で、要素の ARIA 点字ロール説明を定義する [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) 属性を反映します。
 - {{domxref("Element.ariaBusy")}}
-  - : 文字列で、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-busy) 属性を反映し、要素が修正されているかどうかを示します。支援技術では、修正が完了するまで待ってからユーザーに公開したい場合があります。
+  - : 文字列で、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) 属性を反映し、要素が修正されているかどうかを示します。支援技術では、修正が完了するまで待ってからユーザーに公開したい場合があります。
 - {{domxref("Element.ariaChecked")}}
-  - : 文字列で、[`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-checked) 属性を反映し、チェックボックス、ラジオボタン、その他のチェック状態を持つウィジェットの現在の「チェック」状態を示します。
+  - : 文字列で、[`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) 属性を反映し、チェックボックス、ラジオボタン、その他のチェック状態を持つウィジェットの現在の「チェック」状態を示します。
 - {{domxref("Element.ariaColCount")}}
-  - : 文字列で、[`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性を反映し、テーブル、グリッド、ツリーグリッドの列数を定義します。
+  - : 文字列で、[`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) 属性を反映し、テーブル、グリッド、ツリーグリッドの列数を定義します。
 - {{domxref("Element.ariaColIndex")}}
-  - : 文字列で、[`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性を反映し、テーブル、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスまたは位置を定義します。
+  - : 文字列で、[`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性を反映し、テーブル、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスまたは位置を定義します。
+- {{domxref("Element.ariaColIndexText")}}
+  - : 文字列で、[`aria-colindextext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) 属性を反映します。これは aria-colindex の代替となる読み取り可能なテキストを定義します。
 - {{domxref("Element.ariaColSpan")}}
-  - : 文字列で、[`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 属性を反映し、テーブル、グリッド、ツリーグリッド内のセルまたはグリッドセルがカバーする列数を定義します。
+  - : 文字列で、[`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) 属性を反映し、テーブル、グリッド、ツリーグリッド内のセルまたはグリッドセルがカバーする列数を定義します。
 - {{domxref("Element.ariaCurrent")}}
-  - : 文字列で、[`aria-current`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性を反映し、コンテナーまたは関連要素のセット内の現在の項目を表す要素を示します。
+  - : 文字列で、[`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性を反映し、コンテナーまたは関連要素のセット内の現在の項目を表す要素を示します。
 - {{domxref("Element.ariaDescription")}}
-  - : 文字列で、[`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性を反映し、現在の要素を説明または注釈する文字列値を定義します。
+  - : 文字列で、[`aria-description`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) 属性を反映し、現在の要素を説明または注釈する文字列値を定義します。
 - {{domxref("Element.ariaDisabled")}}
-  - : 文字列で、[`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) 属性を反映し、この要素が知覚可能であるが無効であるため、編集やその他の操作ができないことを示します。
+  - : 文字列で、[`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) 属性を反映し、この要素が知覚可能であるが無効であるため、編集やその他の操作ができないことを示します。
 - {{domxref("Element.ariaExpanded")}}
-  - : 文字列で、[`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性を反映し、この要素が所有または制御するグループ化要素が展開されているか畳まれているかを示します。
+  - : 文字列で、[`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) 属性を反映し、この要素が所有または制御するグループ化要素が展開されているか畳まれているかを示します。
 - {{domxref("Element.ariaHasPopup")}}
-  - : 文字列で、[`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性を反映し、この要素によって引き起こされるメニューやダイアログのような対話型のポップアップ要素の有無と種類を示します。
+  - : 文字列で、[`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) 属性を反映し、この要素によって引き起こされるメニューやダイアログのような対話型のポップアップ要素の有無と種類を示します。
 - {{domxref("Element.ariaHidden")}}
-  - : 文字列で、[`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性を反映し、この要素がアクセシビリティ API に公開されているかどうかを示します。
+  - : 文字列で、[`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性を反映し、この要素がアクセシビリティ API に公開されているかどうかを示します。
+- {{domxref("Element.ariaInvalid")}}
+  - : 文字列で、[`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) 属性を反映し、入力された値がアプリケーションが期待する書式に適合していないことを示します。
 - {{domxref("Element.ariaKeyShortcuts")}}
-  - : 文字列で、[`aria-keyshortcuts`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) 属性を反映し、要素を活性化したりフォーカスを与えたりするために作者が実装したキーボードショートカットを示します。
+  - : 文字列で、[`aria-keyshortcuts`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) 属性を反映し、要素を活性化したりフォーカスを与えたりするために作者が実装したキーボードショートカットを示します。
 - {{domxref("Element.ariaLabel")}}
-  - : 文字列で、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を反映し、現在の要素をラベル付けする文字列値を定義します。
+  - : 文字列で、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を反映し、現在の要素をラベル付けする文字列値を定義します。
 - {{domxref("Element.ariaLevel")}}
-  - : 文字列で、[`aria-level`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-level) 属性を反映し、構造内の要素の階層レベルを定義します。
+  - : 文字列で、[`aria-level`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) 属性を反映し、構造内の要素の階層レベルを定義します。
 - {{domxref("Element.ariaLive")}}
-  - : 文字列で、[`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性を反映し、この要素が更新されること、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
+  - : 文字列で、[`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性を反映し、この要素が更新されること、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
 - {{domxref("Element.ariaModal")}}
-  - : 文字列で、[`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal) 属性を反映し、要素が表示されたときにモーダルであるかどうかを示します。
+  - : 文字列で、[`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) 属性を反映し、要素が表示されたときにモーダルであるかどうかを示します。
 - {{domxref("Element.ariaMultiline")}}
-  - : 文字列で、[`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) 属性を反映し、テキストボックスが複数行の入力を受け入れるか、一行のみを受け入れるかを示します。
+  - : 文字列で、[`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) 属性を反映し、テキストボックスが複数行の入力を受け入れるか、一行のみを受け入れるかを示します。
 - {{domxref("Element.ariaMultiSelectable")}}
-  - : 文字列で、[`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) 属性を反映し、ユーザーが現在の選択可能な子孫から複数の項目を選択できることを示します。
+  - : 文字列で、[`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) 属性を反映し、ユーザーが現在の選択可能な子孫から複数の項目を選択できることを示します。
 - {{domxref("Element.ariaOrientation")}}
-  - : 文字列で、[`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 属性を反映し、要素の方向が水平、垂直、または不明/曖昧であることを示す。
+  - : 文字列で、[`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) 属性を反映し、要素の方向が水平、垂直、または不明/曖昧であることを示す。
 - {{domxref("Element.ariaPlaceholder")}}
-  - : 文字列で、[`aria-placeholder`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) 属性を反映し、コントロールに値がない場合にユーザーのデータ入力を支援するための短いヒントを定義します。
+  - : 文字列で、[`aria-placeholder`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder) 属性を反映し、コントロールに値がない場合にユーザーのデータ入力を支援するための短いヒントを定義します。
 - {{domxref("Element.ariaPosInSet")}}
-  - : 文字列で、[`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) 属性を反映し、リストアイテムまたはツリーアイテムの現在のセットにおける要素の数または位置を定義します。
+  - : 文字列で、[`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) 属性を反映し、リストアイテムまたはツリーアイテムの現在のセットにおける要素の数または位置を定義します。
 - {{domxref("Element.ariaPressed")}}
-  - : 文字列で、[`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性を反映し、トグルボタンの現在の「押された」状態を示します。
+  - : 文字列で、[`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) 属性を反映し、トグルボタンの現在の「押された」状態を示します。
 - {{domxref("Element.ariaReadOnly")}}
-  - : 文字列で、[`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) 属性を反映し、要素が編集不可能であることを示すが、それ以外は操作可能であることを示します。
+  - : 文字列で、[`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) 属性を反映し、要素が編集不可能であることを示すが、それ以外は操作可能であることを示します。
 - {{domxref("Element.ariaRelevant")}} {{Non-standard_Inline}}
-  - : 文字列で、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性を反映し、ライブリージョン内のアクセシビリティツリーが変更された場合に、ユーザエージェントがどのような通知を行うかを示します。これは、 `aria-live` リージョン内のどのような変更が関連性があり、アナウンスされるべきかを記述するために使用されます。
+  - : 文字列で、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性を反映し、ライブリージョン内のアクセシビリティツリーが変更された場合に、ユーザーエージェントがどのような通知を行うかを示します。これは、 `aria-live` リージョン内のどのような変更が関連性があり、アナウンスされるべきかを記述するために使用されます。
 - {{domxref("Element.ariaRequired")}}
-  - : 文字列で、[`aria-required`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-required) 属性を反映し、フォームを送信する前に要素にユーザーの入力が必要であることを示します。
+  - : 文字列で、[`aria-required`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) 属性を反映し、フォームを送信する前に要素にユーザーの入力が必要であることを示します。
 - {{domxref("Element.ariaRoleDescription")}}
-  - : 文字列で、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 属性を反映し、要素の役割について、人間が読める、著者がローカライズした説明を定義します。
+  - : 文字列で、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) 属性を反映し、要素の役割について、人間が読める、著者がローカライズした説明を定義します。
 - {{domxref("Element.ariaRowCount")}}
-  - : 文字列で、[`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 属性を反映し、テーブル、グリッド、ツリーグリッドの行の総数を定義します。
+  - : 文字列で、[`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) 属性を反映し、テーブル、グリッド、ツリーグリッドの行の総数を定義します。
 - {{domxref("Element.ariaRowIndex")}}
-  - : 文字列で、[`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性を反映し、テーブル、グリッド、ツリーグリッド内の行の総数に対する要素の行インデックスまたは位置を定義します。
+  - : 文字列で、[`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) 属性を反映し、テーブル、グリッド、ツリーグリッド内の行の総数に対する要素の行インデックスまたは位置を定義します。
+- {{domxref("Element.ariaRowIndexText")}}
+  - : 文字列で、[`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) 属性を反映し、aria-rowindex の代替となる人間に読み取り可能なテキストを定義します。
 - {{domxref("Element.ariaRowSpan")}}
-  - : 文字列で、[`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性を反映し、テーブル、グリッド、ツリーグリッド内のセルまたはグリッドセルがカバーする行数を定義します。
+  - : 文字列で、[`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) 属性を反映し、テーブル、グリッド、ツリーグリッド内のセルまたはグリッドセルがカバーする行数を定義します。
 - {{domxref("Element.ariaSelected")}}
-  - : 文字列で、[`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性を反映し、選択状態を持つ要素の現在の「選択された」状態を示します。
+  - : 文字列で、[`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) 属性を反映し、選択状態を持つ要素の現在の「選択された」状態を示します。
 - {{domxref("Element.ariaSetSize")}}
-  - : 文字列で、[`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) 属性を反映し、現在のリストアイテムまたはツリーアイテムのセットのアイテム数を定義します。
+  - : 文字列で、[`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) 属性を反映し、現在のリストアイテムまたはツリーアイテムのセットのアイテム数を定義します。
 - {{domxref("Element.ariaSort")}}
-  - : 文字列で、[`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性を反映し、テーブルやグリッドのアイテムが昇順または降順でソートされるかどうかを示します。
+  - : 文字列で、[`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) 属性を反映し、テーブルやグリッドのアイテムが昇順または降順でソートされるかどうかを示します。
 - {{domxref("Element.ariaValueMax")}}
-  - : 文字列で、[`aria-valueMax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性を反映し、 range ウィジェットの最大許容値を定義します。
+  - : 文字列で、[`aria-valueMax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性を反映し、 range ウィジェットの最大許容値を定義します。
 - {{domxref("Element.ariaValueMin")}}
-  - : 文字列で、[`aria-valueMin`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) 属性を反映し、 range ウィジェットに許容される最小値を定義します。
+  - : 文字列で、[`aria-valueMin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) 属性を反映し、 range ウィジェットに許容される最小値を定義します。
 - {{domxref("Element.ariaValueNow")}}
-  - : 文字列で、[`aria-valueNow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性を反映し、 range ウィジェットの現在の値を定義します。
+  - : 文字列で、[`aria-valueNow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性を反映し、 range ウィジェットの現在の値を定義します。
 - {{domxref("Element.ariaValueText")}}
-  - : 文字列で、[`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 属性を反映し、 range ウィジェットの aria-valuenow の代替となる人間が読めるテキストを定義します。
+  - : 文字列で、[`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) 属性を反映し、 range ウィジェットの aria-valuenow の代替となる人間が読めるテキストを定義します。
+- {{domxref("Element.role")}}
+  - : 明示的に設定された [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) 属性をを反映する文字列。要素の意味的役割を提供します。
+
+#### ARIA 要素参照から反映されるインスタンスプロパティ
+
+これらのプロパティは、対応する属性内の `id` の参照によって指定された要素を反映しますが、いくつかの注意点があります。詳細は属性の反映ガイドの[要素の参照の反映](/ja/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)を参照してください。
+
+- {{domxref("Element.ariaActiveDescendantElement")}}
+  - : フォーカスが [`composite`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) ウィジェット、[`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)、[`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)、[`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)、[`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) のいずれかにあるときの、現在のアクティブな要素を表します。
+    [`aria-activedescendant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) 属性を反映します。
+- {{domxref("Element.ariaControlsElements")}}
+  - : 適用される要素がそのコンテンツまたは存在をコントロールする要素の配列です。
+    [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 属性を反映します。
+- {{domxref("Element.ariaDescribedByElements")}}
+  - : 適用対象の要素に対するアクセシブル説明が含まれている要素の配列です。
+    [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性を反映します。
+- {{domxref("Element.ariaDetailsElements")}}
+  - : 適用された要素に対してアクセシブルな詳細を提供する要素の配列です。
+    [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) 属性を反映します。
+- {{domxref("Element.ariaErrorMessageElements")}}
+  - : 適用された要素に対してエラーメッセージを提供する要素の配列です。
+    [`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) 属性を反映します。
+- {{domxref("Element.ariaFlowToElements")}}
+  - : コンテンツを読む順における次の要素（または要素群）を識別する要素の配列。ユーザーの裁量により、一般的な既定の読む順をオーバーライドする。
+    [`aria-flowto`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) 属性を反映します。
+- {{domxref("Element.ariaLabelledByElements")}}
+  - : 適用された要素のアクセシブル名を提供する要素の配列です。
+    [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性を反映します。
+- {{domxref("Element.ariaOwnsElements")}}
+  - : この要素が適用される要素が自分自身で所有する要素の配列です。
+    これは、 DOM 階層を用いて関係を表すことのできない場合に、親要素とその子要素の間の視覚的、機能的、文脈的な関係を定義するために使用されています。
+    [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) 属性を反映します。
 
 ## インスタンスメソッド
 
 _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{DOMxRef("EventTarget")}} からメソッドを継承しています。_
 
-- {{DOMxRef("EventTarget.addEventListener()")}}
-  - : この要素、特定のイベント型を扱うイベントハンドラーを登録します。
 - {{DOMxRef("Element.after()")}}
   - : {{domxref("Node")}} オブジェクトまたは文字列を、この `Element` の親の子ノードリストの中、 `Element` の直後に追加します。
-- {{DOMxRef("Element.attachShadow()")}}
-  - : 指定した要素にシャドウ DOM ツリーを結びつけて、その {{DOMxRef("ShadowRoot")}} への参照を返します。
 - {{DOMxRef("Element.animate()")}}
   - : この要素でアニメーションを作成および実行するためのショートカットメソッドです。作成した Animation オブジェクトのインスタンスを返します。
 - {{DOMxRef("Element.append()")}}
   - : この要素の最後の子の後に、一連の {{domxref("Node")}} オブジェクトまたは文字列を挿入します。
+- {{DOMxRef("Element.attachShadow()")}}
+  - : 指定した要素にシャドウ DOM ツリーを結びつけて、その {{DOMxRef("ShadowRoot")}} への参照を返します。
 - {{DOMxRef("Element.before()")}}
   - : {{domxref("Node")}} オブジェクトまたは文字列をこの `Element` の親の子ノードリストの中、 `Element` の直前に追加します。
+- {{DOMxRef("Element.checkVisibility()")}}
+  - : 構成可能な検査に基づいて、要素が可視になることが期待されているかどうかを返します。
 - {{DOMxRef("Element.closest()")}}
-  - : {{DOMxRef("Element")}} 型で、引数に指定したセレクターによって選択される要素がもっとも近い祖先要素（または当該要素自身）を返します。
+  - : `Element` 型で、引数に指定したセレクターによって選択される要素がもっとも近い祖先要素（または当該要素自身）を返します。
 - {{DOMxRef("Element.computedStyleMap()")}}
   - : {{DOMxRef("StylePropertyMapReadOnly")}} インターフェイスで、 {{DOMxRef("CSSStyleDeclaration")}} に代わる、CSS 宣言ブロックを読み取り専用で表現したものを返します。
-- {{DOMxRef("EventTarget.dispatchEvent()")}}
-  - : DOM 内のこのノードにイベントを送ります。そして、イベントをキャンセルしたハンドラーがないかを示す論理値を返します。
 - {{DOMxRef("Element.getAnimations()")}}
   - : 要素でアクティブな Animation オブジェクトの配列を返します。
 - {{DOMxRef("Element.getAttribute()")}}
@@ -212,7 +250,9 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{DOMxRef("Element.getElementsByTagName()")}}
   - : 現在要素から、特定のタグ名を持つすべての子孫要素の集合を取得して生きた {{DOMxRef("HTMLCollection")}} で返します。
 - {{DOMxRef("Element.getElementsByTagNameNS()")}}
-  - : 生きた {{DOMxRef("HTMLCollection")}} で、現在要素から、特定のタグ名と名前空間を持つすべての子孫要素の集合を取得して、生きた {{DOMxRef("HTMLCollection")}} で返します。
+  - : 生きた {{DOMxRef("HTMLCollection")}} で、現在要素から、特定のタグ名と名前空間を持つすべての子孫要素の集合を取得して返します。
+- {{DOMxRef("Element.getHTML()")}}
+  - : 要素の DOM コンテンツを HTML 文字列として返します。オプションで、シャドウ DOM が含まれます。
 - {{DOMxRef("Element.hasAttribute()")}}
   - : 要素が指定された指定された属性を持っているか否かを示す論理値を返します。
 - {{DOMxRef("Element.hasAttributeNS()")}}
@@ -229,6 +269,8 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : メソッドを実行した要素に対して相対的な指定位置に、テキストノードを挿入します。
 - {{DOMxRef("Element.matches()")}}
   - : 要素が指定されたセレクター文字列で選択されるか否かを示す論理値を返します。
+- {{DOMxRef("Element.moveBefore()")}}
+  - : 指定された {{domxref("Node")}} を、呼び出し元ノード内で直接の子として、指定された参照ノードの前に移動します。ノードは除去される前に再挿入されることはありません。
 - {{DOMxRef("Element.prepend()")}}
   - : この要素の最初の子の前に、一連の {{domxref("Node")}} オブジェクトまたは文字列を挿入します。
 - {{DOMxRef("Element.querySelector()")}}
@@ -245,8 +287,6 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : 現在のノードから名前の付いた属性のノード表現を取り除きます。
 - {{DOMxRef("Element.removeAttributeNS()")}}
   - : 現在ノードから，指定された名前と名前空間を持つ属性を取り除きます。
-- {{DOMxRef("EventTarget.removeEventListener()")}}
-  - : 要素からイベントリスナーを取り除きます。
 - {{DOMxRef("Element.replaceChildren()")}}
   - : {{domxref("Node")}} の既存の子を指定された新しい一連の子に置き換えます。
 - {{DOMxRef("Element.replaceWith()")}}
@@ -275,8 +315,10 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : 現在ノードに、指定された名前と名前空間を持つ属性値を設定します。
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : マウスイベントキャプチャーを設定し、すべてのマウスイベントをこの要素にリダイレクトします。
-- {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}}
-  - : HTML の文字列を解釈して[無害化](/ja/docs/Web/API/HTML_Sanitizer_API)し、DOM にこの要素のサブツリーとして挿入します。
+- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}} {{experimental_inline}}
+  - : HTML の文字列を解釈し、[サニタイズ](/ja/docs/Web/API/HTML_Sanitizer_API)して文書フラグメントに変換し、 DOM 内の要素の元のサブツリーを置き換えます。
+- {{DOMxRef("Element.setHTMLUnsafe()")}}
+  - : HTML の文字列を無害化せずに構文解析して文書フラグメントに入れ、DOM 内の要素の元サブツリーを置き換えます。HTML 文字列は宣言的なシャドウルートを入れることができますが、[`Element.innerHTML`](/ja/docs/Web/API/Element/innerHTML) を使用して HTML を設定した場合は、テンプレート要素として解釈されます。
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : 指定された要素を、以降の[ポインターイベント](/ja/docs/Web/API/Pointer_events)のキャプチャー対象として指定します。
 - {{DOMxRef("Element.toggleAttribute()")}}
@@ -286,22 +328,35 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 
 これらのイベントを待ち受けするには、 `addEventListener()` を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
 
+- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
+  - : スクリプトが実行されたときに発行されます。
+- {{domxref("Element/beforeinput_event", "beforeinput")}}
+  - : 入力要素の値が変更されようとすると発行されます。
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
-  - : [見つかるまでの間は非表示](/ja/docs/Web/HTML/Global_attributes/hidden)状態にある要素で、ユーザーが「ページ内検索」機能やフラグメントナビゲーションによってコンテンツを見つけたため、ブラウザーがそのコンテンツを公開しようとしているときに発行されます。
-- {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
-  - : ユーザーがブラウザーに、現在開いているモーダルダイアログを閉じたいと指示したときに {{HTMLElement("dialog")}} に発行されます。ブラウザーがこのイベントを発行させる可能性があるのは、例えばユーザーが <kbd>Esc</kbd> キーを押してモーダルダイアログを閉じた時です。
-- {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
-  - : {{cssxref("content-visibility", "content-visibility: auto")}} が設定されている要素が[ユーザーに関連する](/ja/docs/Web/CSS/CSS_Containment#relevant_to_the_user)、[コンテンツのスキップ](/ja/docs/Web/CSS/CSS_Containment#skips_its_contents)を開始または終了するときに、その要素を対象に発行されます。
-- {{domxref("Element/error_event", "error")}}
-  - : リソースの読み込みに失敗したか、利用できなかった場合に発行されます。例えば、スクリプトに実行エラーがあった場合や、画像が見つからなかった場合、無効であった場合などです。
-- {{domxref("Element/scroll_event", "scroll")}}
-  - : 文書のビューまたは要素がスクロールしたときに発行されます。
+  - : [見つかるまでの間は非表示](/ja/docs/Web/HTML/Reference/Global_attributes/hidden)状態にある要素で、ユーザーが「ページ内検索」機能やフラグメントナビゲーションによってコンテンツを見つけたため、ブラウザーがそのコンテンツを公開しようとしているときに発行されます。
+- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
+  - : スクリプトが実行されそうになったときに発行されます。
+- {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
+  - : WebXR の選択イベント ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) の前に発行されます。
+- {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
+  - : {{cssxref("content-visibility", "content-visibility: auto")}} が設定されている要素が[ユーザーに関連する](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#ユーザーとの関連)、[コンテンツのスキップ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#コンテンツのスキップ)を開始または終了するときに、その要素を対象に発行されます。
+- {{domxref("Element/input_event","input")}}
+  - : ユーザー操作の結果として要素の値が変更されたときに発行されます。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
-  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)に違反したときに発生します。
-- {{domxref("Element/select_event", "select")}}
-  - : いくらかのテキストが選択されたときに発行されます。
+  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)に違反したときに発生します。
 - {{domxref("Element/wheel_event","wheel")}}
   - : ユーザーがポインティングデバイス（普通はマウス）のホイールボタンを回転させたときに発行されます。
+
+### アニメーションイベント
+
+- {{domxref("Element/animationcancel_event", "animationcancel")}}
+  - : アニメーションが予期せず中断したときに発行されます。
+- {{domxref("Element/animationend_event", "animationend")}}
+  - : アニメーションが完全に終了したときに発行されます。
+- {{domxref("Element/animationiteration_event", "animationiteration")}}
+  - : アニメーションの反復処理が完全に完了したときに発行されます。
+- {{domxref("Element/animationstart_event", "animationstart")}}
+  - : アニメーションが始まるときに発行されます。
 
 ### クリップボードイベント
 
@@ -312,14 +367,14 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{domxref("Element/paste_event", "paste")}}
   - : ユーザーがブラウザーのユーザーインターフェイスを通して、貼り付け操作を行ったときに発行されます。
 
-### 構成イベント
+### 変換イベント
 
 - {{domxref("Element/compositionend_event", "compositionend")}}
-  - : {{glossary("input method editor", "インプットメソッドエディター")}}のようなテキスト構成システムで、現在の入力セッションが完了またはキャンセルされたときに発行されます。
+  - : {{glossary("input method editor", "インプットメソッドエディター")}}のようなテキスト。変換システムで、現在の入力セッションが完了またはキャンセルされたときに発行されます。
 - {{domxref("Element/compositionstart_event", "compositionstart")}}
-  - : {{glossary("input method editor", "インプットメソッドエディター")}}のようなテキスト構成システムで、新しい入力セッションを始まったときに発行されます。
+  - : {{glossary("input method editor", "インプットメソッドエディター")}}のようなテキスト。変換システムで、新しい入力セッションを始まったときに発行されます。
 - {{domxref("Element/compositionupdate_event", "compositionupdate")}}
-  - : {{glossary("input method editor", "インプットメソッドエディター")}}のようなテキスト構成システムによって制御されている入力セッションのコンテキストに、新しい文字が入力されたときに発行されます。
+  - : {{glossary("input method editor", "インプットメソッドエディター")}}のようなテキスト。変換システムによって制御されている入力セッションのコンテキストに、新しい文字が入力されたときに発行されます。
 
 ### フォーカスイベント
 
@@ -335,7 +390,7 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 ### 全画面イベント
 
 - {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : [全画面](/ja/docs/Web/API/Fullscreen_API/Guide)モードへの移行時または終了時に、 {{domxref("Element")}} に送られます。
+  - : [全画面](/ja/docs/Web/API/Fullscreen_API/Guide)モードへの移行時または終了時に、 `Element` に送られます。
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : [全画面](/ja/docs/Web/API/Fullscreen_API/Guide)モードへの移行または終了を試みている中でエラーが発生したときに、 `Element` に送られます。
 
@@ -360,6 +415,8 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : ポインティングデバイスのボタン（例えば、マウスの第一ボタン）が単一の要素上で 2 回クリックされたときに発行されます。
 - {{domxref("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
   - : 要素が、例えばマウスのクリックやキーの押下によってアクティブになったときに発行されます。
+- {{domxref("Element/DOMMouseScroll_event", "DOMMouseScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : マウスホイールなどを操作し、前回のイベントから累積スクロール量が 1 行または 1 ページ以上経過した場合に発生します。
 - {{domxref("Element/mousedown_event", "mousedown")}}
   - : ポインティングデバイスのボタンが要素上で押されたときに発行されます。
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
@@ -374,8 +431,12 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : ポインティングデバイス（ふつうはマウス）が、リスナーが割り当てられた要素またはその子要素の上を移動したときに発行されます。
 - {{domxref("Element/mouseup_event", "mouseup")}}
   - : ポインティングデバイスのボタンが要素の上で離されたときに発行されます。
+- {{domxref("Element/mousewheel_event", "mousewheel")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : マウスのホイールなどを操作すると発行されます。
+- {{domxref("Element/MozMousePixelScroll_event", "MozMousePixelScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : マウスのホイールなどを操作すると発行されます。
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
-  - : trackpadtouchscreen の上の圧力が変化するたびに発行されます。
+  - : トラックパッドのタッチ画面の上の圧力が変化するたびに発行されます。
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
   - : 「強制クリック」と判断されるのに十分な圧力があった直後の mousedown イベントの後で発行されます。
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{Non-standard_Inline}}
@@ -383,8 +444,50 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{Non-standard_Inline}}
   - : 「強制クリック」が終了したといえるほど圧力が減少した直後の {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} イベントの後で発行されます。
 
+### ポインターイベント
+
+- {{domxref("Element/gotpointercapture_event", "gotpointercapture")}}
+  - : 要素が {{domxref("Element/setPointerCapture", "setPointerCapture()")}} を使用してポインターをキャプチャしたときに発行されます。
+- {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
+  - : [ポインターキャプチャ](/ja/docs/Web/API/Pointer_events#pointer_capture)が解放されたときに発行されます。
+- {{domxref("Element/pointercancel_event", "pointercancel")}}
+  - : ポインターイベントがキャンセルされたときに発行されます。
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+  - : ポインターがアクティブになったときに発行されます。
+- {{domxref("Element/pointerenter_event", "pointerenter")}}
+  - : ポインターが要素またはその子孫のヒットテスト境界内に移動されたときに発行されます。
+- {{domxref("Element/pointerleave_event", "pointerleave")}}
+  - : ポインターが要素のヒットテスト境界から移動されたときに発行されます。
+- {{domxref("Element/pointermove_event", "pointermove")}}
+  - : ポインターの座標が変更されたときに発行されます。
+- {{domxref("Element/pointerout_event", "pointerout")}}
+  - : ポインターが（何らかの理由で）要素のヒットテスト境界の外に移動されたときに発行されます。
+- {{domxref("Element/pointerover_event", "pointerover")}}
+  - : ポインターが要素のヒットテスト境界内に移動されたときに発行されます。
+- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}
+  - : ポインターが {{domxref("Element/pointerdown_event", "pointerdown")}} または {{domxref("Element/pointerup_event", "pointerup")}} イベントを発行しないプロパティを変更したときに発行されます。
+- {{domxref("Element/pointerup_event", "pointerup")}}
+  - : ポインターがアクティブでなくなったときに発行されます。
+
+### スクロールイベント
+
+- {{domxref("Element/scroll_event", "scroll")}}
+  - : 文書ビューまたは要素がスクロールされたときに発行されます。
+- {{domxref("Element/scrollend_event", "scrollend")}}
+  - : 文書ビューのスクロールが完全に終了したときに発行されます。
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : 新しいスクロールスナップターゲットが選択された場合に、スクロール操作の終わりにスクロールコンテナーで発行されます。
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : 新しいスクロールスナップターゲットが待機中になったとブラウザーが判断した場合、すなわち、現在のスクロール操作が終わったときに選択されるであろう場合、スクロールコンテナーで発行されます。
+
 ### タッチイベント
 
+- {{domxref("Element/gesturechange_event","gesturechange")}} {{Non-standard_Inline}}
+  - : タッチジェスチャー中に指が移動されたときに発行されます。
+- {{domxref("Element/gestureend_event","gestureend")}} {{Non-standard_Inline}}
+  - : タッチ面に複数の指が接触しなくなり、ジェスチャーが終わると発行されます。
+- {{domxref("Element/gesturestart_event","gesturestart")}} {{Non-standard_Inline}}
+  - : 複数の指がタッチ面に連絡し、新しいジェスチャーを始める時に発行されます。
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
   - : 1 つ以上のタッチ点が実装依存の理由により破棄された（例えば、タッチ点が多く作られすぎた）場合に発行されます。
 - {{domxref("Element/touchend_event", "touchend")}}
@@ -393,6 +496,17 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : 1 つ以上のタッチ点がタッチ面上で移動したときに発行されます。
 - {{domxref("Element/touchstart_event", "touchstart")}}
   - : 1 つ以上のタッチ点がタッチ面に配置されたときに発行されます。
+
+### トランジションイベント
+
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}}
+  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)がキャンセルされたときに発行されます。
+- {{domxref("Element/transitionend_event", "transitionend")}}
+  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の再生が終了したときに発行されます。
+- {{domxref("Element/transitionrun_event", "transitionrun")}}
+  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が作成されたとき（すなわち、実行する一連のトランジションが追加されたとき）に発行されます。開始されているとは限りません。
+- {{domxref("Element/transitionstart_event", "transitionstart")}}
+  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)のトランジションが開始したときに発行されます。
 
 ## 仕様書
 

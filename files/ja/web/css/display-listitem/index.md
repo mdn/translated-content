@@ -1,9 +1,9 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 `list-item` キーワードは、要素に {{CSSxRef("list-style")}} プロパティで指定された内容 (例えば見出し記号) を含む `::marker` 擬似要素と共に、自身の内容物のために指定された種類の基本的なボックスを生成します。
 
@@ -13,9 +13,14 @@ slug: Web/CSS/display-listitem
 
 `list-item` は {{CSSxRef("&lt;display-outside&gt;")}} キーワードのいずれかと、 {{CSSxRef("&lt;display-inside&gt;")}} の `flow` または `flow-root` キーワードと組み合わせることもできます。
 
-> **メモ:** 二つの値の構文に対応しているブラウザーでは、内部表示種別がないと既定で `flow` になります。外部表示種別が指定されないと、基本ボックスは外部表示種別が `block` になります。
+> [!NOTE]
+> 二つの値の構文に対応しているブラウザーでは、内部表示種別がないと既定で `flow` になります。外部表示種別が指定されないと、基本ボックスは外部表示種別が `block` になります。
 
-<h2 id="Examples">例</h2>
+## 形式文法
+
+{{csssyntax}}
+
+## 例
 
 ### HTML
 
@@ -42,14 +47,11 @@ slug: Web/CSS/display-listitem
 
 ## ブラウザーの互換性
 
-### `list-item` の対応
-
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}
 
 ## 関連情報
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

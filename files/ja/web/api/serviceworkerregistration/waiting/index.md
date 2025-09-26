@@ -9,7 +9,8 @@ l10n:
 
 **`waiting`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、サービスワーカーのうち {{domxref("ServiceWorker.state")}} がインストール済み (`installed`) のものを返します。 このプロパティは、最初は `null` に設定されています。
 
-> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> [!NOTE]
+> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 値
 

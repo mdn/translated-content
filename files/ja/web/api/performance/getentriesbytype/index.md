@@ -1,81 +1,58 @@
 ---
-title: performance.getEntriesByType()
+title: "Performance: getEntriesByType() メソッド"
+short-title: getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
+l10n:
+  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
-**`getEntriesByType()`** メソッドは、指定された型の {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。リストのメンバー（エントリー）は、明示的な時点でパフォーマンス*マーク*または*メジャー*を作成することで（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すことで）作成できます。
+**`getEntriesByType()`** メソッドは、現在パフォーマンスタイムラインにある、指定された*型*の {{domxref("PerformanceEntry")}} オブジェクトの配列を返します。
 
-{{AvailableInWorkers}}
+特定の名前のパフォーマンス項目に関心がある場合は、 {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} を参照してください。すべてのパフォーマンス項目の場合は、 {{domxref("Performance.getEntries", "getEntries()")}} を参照してください。
+
+> [!NOTE]
+> このメソッドは新しいパフォーマンス項目を通知しません。このメソッドを呼び出した時点でパフォーマンスタイムラインに存在している項目のみを取得します。
+> 利用できるようになった項目の通知を受け取るには、 {{domxref("PerformanceObserver")}} を使用してください。
+
+以下の項目型はこのメソッドではまったく対応しておらず、これらの型の項目が存在したとしても返されません。
+
+- `"element"` ({{domxref("PerformanceElementTiming")}})
+- `"event"` ({{domxref("PerformanceEventTiming")}})
+- `"largest-contentful-paint"` ({{domxref("LargestContentfulPaint")}})
+- `"layout-shift"` ({{domxref("LayoutShift")}})
+- `"longtask"` ({{domxref("PerformanceLongTaskTiming")}})
+
+これらの型の項目にアクセスするには、代わりに {{domxref("PerformanceObserver")}} を使用する必要があります。
 
 ## 構文
 
-```js
-entries = window.performance.getEntriesByType(type);
+```js-nolint
+getEntriesByType(type)
 ```
 
 ### 引数
 
-- type
-  - : "`mark`" など、取得するエントリーの種類。有効なエントリー種別の一覧は {{domxref("PerformanceEntry.entryType")}} にあります。
+- `type`
+  - : 取得する項目の型。 "`mark`" など。有効な項目型は {{domxref("PerformanceEntry.entryType")}} に掲載されています。対応している `entryTypes` は、静的プロパティ {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} を使用して取得することができます。
 
 ### 返値
 
-- entries
-  - : 指定された `type` を持つ {{domxref("PerformanceEntry")}} オブジェクトのリスト。項目はエントリーの {{domxref("PerformanceEntry.startTime","startTime")}} に基づいて時系列に並んでいます。指定された `type` を持つオブジェクトがない場合、または引数が指定されていない場合は、空のリストが返されます。
+指定された `type` を持つ {{domxref("PerformanceEntry")}} オブジェクトの配列 ({{jsxref("Array")}}) です。
+要素は項目の {{domxref("PerformanceEntry.startTime","startTime")}} に基づいて時系列に並びます。指定された基準を満たすオブジェクトがない場合は、空のリストが返されます。
 
 ## 例
 
+### リソース項目をログ出力
+
+次の例は"`resource`"という項目型を持つすべての項目をログ出力します。
+
 ```js
-function usePerformanceEntryMethods() {
-  log("PerformanceEntry tests ...");
-
-  if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
-    return;
-  }
-
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  doWork(50000);
-  performance.mark("End");
-  performance.mark("Begin");
-  doWork(100000);
-  performance.mark("End");
-  doWork(200000);
-  performance.mark("End");
-
-  // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
-    checkPerformanceEntry(p[i]);
-  }
-
-  // Use getEntries(name, entryType) to get specific entries
-  p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (var i=0; i < p.length; i++) {
-    log("Begin[" + i + "]");
-    checkPerformanceEntry(p[i]);
-  }
-
-  // Use getEntriesByType() to get all "mark" entries
-  p = performance.getEntriesByType("mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
-  }
-
-  // Use getEntriesByName() to get all "mark" entries named "Begin"
-  p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
-  }
-}
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+});
 ```
 
 ## 仕様書
@@ -85,3 +62,9 @@ function usePerformanceEntryMethods() {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("Performance.getEntries()")}}
+- {{domxref("Performance.getEntriesByName()")}}
+- {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}

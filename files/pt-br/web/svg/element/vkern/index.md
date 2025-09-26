@@ -17,7 +17,7 @@ A distância vertical entre dois glifos de fontes cima-para-baixo podem ser bem 
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
 
 ### Atributos específicos
 
@@ -29,11 +29,11 @@ A distância vertical entre dois glifos de fontes cima-para-baixo podem ser bem 
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGVKernElement`](/pt-BR/DOM/SVGVKernElement).
+Este elemento implementa a interface do [`SVGVKernElement`](/pt-BR/docs/DOM/SVGVKernElement).
 
 ## Veja também
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("glyph") }}
 - {{ SVGElement("hkern") }}
-- [Tutorial SVG: SVG fonts](/pt-BR/SVG/Tutorial/SVG_fonts)
+- [Tutorial SVG: SVG fonts](/pt-BR/docs/SVG/Tutorial/SVG_fonts)

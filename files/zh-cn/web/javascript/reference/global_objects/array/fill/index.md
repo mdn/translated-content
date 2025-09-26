@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 
 **`fill()`** 方法用一个固定值填充一个数组中从起始索引（默认为 `0`）到终止索引（默认为 `array.length`）内的全部元素。它返回修改后的数组。
 
-{{EmbedInteractiveExample("pages/js/array-fill.html")}}
+{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// Fill with 0 from position 2 until position 4
+console.log(array1.fill(0, 2, 4));
+// Expected output: Array [1, 2, 0, 0]
+
+// Fill with 5 from position 1
+console.log(array1.fill(5, 1));
+// Expected output: Array [1, 5, 5, 5]
+
+console.log(array1.fill(6));
+// Expected output: Array [6, 6, 6, 6]
+```
 
 ## 语法
 
@@ -45,7 +60,8 @@ fill(value, start, end)
 
 `fill()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值有一个 `length` 属性。虽然字符串也是类似数组的，但这个方法不适合应用于它们，因为字符串是不可变的。
 
-> **备注：** 在一个空数组（`length = 0`）上使用 `Array.prototype.fill()` 不会对其进行修改，因为数组没有要修改的内容。要在声明一个数组时使用 `Array.prototype.fill()`，请确保数组的 `length` 不为零。[参见示例](#使用_fill_填充空数组)。
+> [!NOTE]
+> 在一个空数组（`length = 0`）上使用 `Array.prototype.fill()` 不会对其进行修改，因为数组没有要修改的内容。要在声明一个数组时使用 `Array.prototype.fill()`，请确保数组的 `length` 不为零。[参见示例](#使用_fill_填充空数组)。
 
 ## 示例
 
@@ -113,6 +129,6 @@ console.log(Array.prototype.fill.call(arrayLike, 1));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.fill` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

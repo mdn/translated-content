@@ -34,9 +34,7 @@ var nuevo_array = arr.map(function callback(currentValue, index, array) {
 ### Parámetros
 
 - `callback`
-
   - : Función que producirá un elemento del nuevo array, recibe tres argumentos:
-
     - `currentValue`
       - : El elemento actual del array que se está procesando.
     - `index`

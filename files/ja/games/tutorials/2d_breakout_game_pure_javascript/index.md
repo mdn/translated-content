@@ -3,15 +3,13 @@ title: 純粋な JavaScript を使ったブロック崩しゲーム
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 このステップバイステップのチュートリアルでは、すべて JavaScript だけで書かれた、 HTML5 の {{htmlelement("canvas")}} で表示できる簡単な **MDN ブロック崩し**ゲームを作ります。</p>
 
 各ステップには編集可能なライブサンプルがあるので、中間ステージがどのように見えるかを確認しながらプレイすることができます。画像のレンダリングと移動、衝突検出、制御機構、勝敗状態などの基本的なゲーム メカニックを使用するための {{htmlelement("canvas")}} 要素の基本的な使用方法を学びます。
 
-このシリーズのほとんどの記事は理解するために初歩または中級レベルの [JavaScript](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics) の知識を必要とします。このチュートリアルを一通りこなすことで簡単なウェブゲームを作れるようになるでしょう。
+このシリーズのほとんどの記事は理解するために初歩または中級レベルの [JavaScript](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) の知識を必要とします。このチュートリアルを一通りこなすことで簡単なウェブゲームを作れるようになるでしょう。
 
 ![パドルを使用してボールを弾き、スコアとライフをキープしながらレンガのフィールドを破壊していくゲーム「MDN Breakout」のゲーム画面。](mdn-breakout-gameplay.png)
 
@@ -32,9 +30,11 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 まずは JavaScript だけで始めるのがウェブゲーム開発の確実な知識を手に入れる一番良い方法です。そのあと、自分のプロジェクトで使うフレームワークを選びましょう。フレームワークは JavaScript 言語で書かれた単なるツールです。ですから、たとえフレームワークを用いて開発しようとしていてもまずはその言語を学び、手元で実際に何が起こっているか理解すると良いでしょう。フレームワークは開発速度を上げ、ゲームのとるに足らない部分を処理してくれますが、もし何かが思ったように動かないなんてことがあったらいつでもデバッグしたり、あるいは単に JavaScript で自分なりの解を出すということもできるのです。
 
-> **メモ:** ゲームライブラリを用いた 2D ウェブゲーム開発に興味があるのであれば、このシリーズに対応する [Phaser を使ったブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)も参照してください。
+> [!NOTE]
+> ゲームライブラリーを用いた 2D ウェブゲーム開発に興味があるのであれば、このシリーズに対応する [Phaser を使ったブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)も参照してください。
 
-> **メモ:** このシリーズはゲーム開発ワークショップのハンズオンの資料として使えます。ゲーム開発全般について話すつもりならこのチュートリアルに基づいた [Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit) も利用できます。
+> [!NOTE]
+> このシリーズはゲーム開発ワークショップのハンズオンの資料として使えます。ゲーム開発全般について話すつもりならこのチュートリアルに基づいた [Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit) も利用できます。
 
 ## 次のステップ
 

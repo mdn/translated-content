@@ -44,4 +44,4 @@ pc.setIdentityAssertion("developer.mozilla.org");
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)

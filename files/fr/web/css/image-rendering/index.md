@@ -7,7 +7,39 @@ slug: Web/CSS/image-rendering
 
 La propriété [CSS](/fr/docs/Web/CSS) **`image-rendering`** fournit une indication au navigateur à propos de l'algorithme qui devrait être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies via les autres propriétés CSS et aux éléments descendants de l'élément ciblé.
 
-{{EmbedInteractiveExample("pages/css/image-rendering.html")}}
+{{InteractiveExample("CSS Demo: image-rendering")}}
+
+```css interactive-example-choice
+image-rendering: auto;
+```
+
+```css interactive-example-choice
+image-rendering: smooth;
+```
+
+```css interactive-example-choice
+image-rendering: crisp-edges;
+```
+
+```css interactive-example-choice
+image-rendering: pixelated;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/lizard.png" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 480px;
+  object-fit: cover;
+}
+```
 
 L'agent utilisateur redimensionnera une image si l'auteur de la page indique des dimensions différentes de la taille naturelle de l'image, ou si la personne visualisant l'image interagit en zoomant par exemple. Si, par exemple, la taille naturelle de l'image est `100×100px` et que l'auteur indique les dimensions `200×200px` (ou `50×50px`), l'image sera agrandie (ou réduite) aux nouvelles dimensions via l'algorithme indiqué. Le redimensionnement peut aussi avoir lieu suite aux interactions utilisateurs (avec un zoom par exemple). Cette propriété n'a aucun effet sur les images qui ne sont pas redimensionnées.
 
@@ -39,7 +71,8 @@ image-rendering: unset;
 - `smooth` {{Experimental_inline}}
   - : L'algorithme utilisé pour le redimensionnement doit maximiser l'apparence de l'image. Les algorithmes qui adoucissent les couleurs (l'interpolation bilinéaire par exemple) sont acceptables. Cette valeur est destinée aux images telles que les photos.
 
-> **Note :** Les valeurs `optimizeQuality` et `optimizeSpeed` qui étaient présentes dans un brouillon de la spécification (et qui provenaient de la spécification équivalente pour SVG) sont synonymes respectifs de `smooth` et `pixelated`.
+> [!NOTE]
+> Les valeurs `optimizeQuality` et `optimizeSpeed` qui étaient présentes dans un brouillon de la spécification (et qui provenaient de la spécification équivalente pour SVG) sont synonymes respectifs de `smooth` et `pixelated`.
 
 ## Définition formelle
 

@@ -9,7 +9,15 @@ l10n:
 
 **`TypedArray.BYTES_PER_ELEMENT`** 속성은 각 형식화 배열 요소의 바이트 크기입니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-bytes-per-element.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.BYTES_PER_ELEMENT", "shorter")}}
+
+```js interactive-example
+console.log(Float64Array.BYTES_PER_ELEMENT);
+// Expected output: 8
+
+console.log(Int8Array.BYTES_PER_ELEMENT);
+// Expected output: 1
+```
 
 ## 값
 
@@ -77,5 +85,5 @@ new BigUint64Array([]).BYTES_PER_ELEMENT; // 8
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

@@ -3,6 +3,8 @@ title: window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 ---
 
+{{APIRef("CSSOM")}}
+
 Метод **`Window.getComputedStyle()`** возвращает объект, содержащий значения всех CSS-свойств элемента, полученных после применения всех активных таблиц стилей, и завершения базовых вычислений значений, которые они могут содержать. Некоторые CSS-свойства доступны через API, предоставляемые объектом, или индексацию по именам CSS-свойств.
 
 ## Синтаксис
@@ -111,16 +113,16 @@ During a CSS transition, `getComputedStyle` returns the original property value 
 
 In Firefox, properties with the value `auto` return the used value, not the value `auto`. So if you apply `top:auto;` and `bottom:0`; on an element with `height:30px` and its containing block is `height:100px;`, upon requesting the computed style for `top`, Firefox will return `top:70px`, as `100px-30px=70px`.
 
-## Браузерная поддержка
-
-{{Compat}}
-
 ## Спецификации
 
 - [DOM Level 2 Style: getComputedStyle](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
 - [CSS Object Model specification](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle)
 
-## Смотреть также
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
 
 - {{domxref("window.getDefaultComputedStyle")}}
 - {{cssxref("resolved_value", "Resolved Value")}}

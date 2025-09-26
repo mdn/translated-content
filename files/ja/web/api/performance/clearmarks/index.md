@@ -1,60 +1,55 @@
 ---
-title: performance.clearMarks()
+title: "Performance: clearMarks() メソッド"
+short-title: clearMarks()
 slug: Web/API/Performance/clearMarks
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
-**`clearMarks()`** メソッドは、ブラウザーのパフォーマンスエントリーバッファーから*名前付きマーク*を削除します。このメソッドが引数なしで呼び出された場合、{{domxref("PerformanceEntry.entryType","エントリー種別", "", 1)}}が "`mark`" の{{domxref("PerformanceEntry","パフォーマンスエントリー", "", 1)}}がすべてパフォーマンスエントリーバッファーから削除されます。
-
-{{AvailableInWorkers}}
+**`clearMarks()`** メソッドは、すべての、または特定の {{domxref("PerformanceMark")}} オブジェクトを、ブラウザーのパフォーマンスタイムラインから除去します。
 
 ## 構文
 
-```js
-performance.clearMarks();
-performance.clearMarks(name);
+```js-nolint
+clearMarks()
+clearMarks(name)
 ```
 
 ### 引数
 
-- name {{optional_inline}}
-  - : タイムスタンプの名前を表す {{domxref("DOMString")}} です。 この引数を省略すると、{{domxref("PerformanceEntry.entryType","エントリー種別", "", 1)}}が "`mark`" であるすべての{{domxref("PerformanceEntry","パフォーマンスエントリー", "", 1)}}が削除されます。
+- `name` {{optional_inline}}
+  - : 文字列で、 {{domxref("PerformanceMark")}} オブジェクトの{{domxref("PerformanceEntry.name", "名前", "", 1)}}を表します。この引数を省略すると、 {{domxref("PerformanceEntry.entryType","entryType")}} が "`mark`" であるすべての項目が除去されます。
 
 ### 返値
 
-- void
-  - :
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-次の例は、`clearMarks()` メソッドの両方の使用法を示しています。
+### マーカーを除去
+
+パフォーマンスマークをすべて、あるいは特定の項目だけを消去するには、次のように `clearMarks()` メソッドを使用します。
 
 ```js
-// PerformanceMark のエントリーがいくつあるかを表示する小さなヘルパーを作成します。
-function logMarkCount() {
-  console.log(
-    "Found this many entries: " + performance.getEntriesByType("mark").length
-  );
-}
+// マークの束を作成
+performance.mark("login-started");
+performance.mark("login-started");
+performance.mark("login-finished");
+performance.mark("form-sent");
+performance.mark("video-loaded");
+performance.mark("video-loaded");
 
-// Create a bunch of marks.
-performance.mark("squirrel");
-performance.mark("squirrel");
-performance.mark("monkey");
-performance.mark("monkey");
-performance.mark("dog");
-performance.mark("dog");
+performance.getEntriesByType("mark").length; // 6
 
-logMarkCount() // "Found this many entries: 6"
+// "login-started" マーク項目のみを削除
+performance.clearMarks("login-started");
+performance.getEntriesByType("mark").length; // 4
 
-// Delete just the "squirrel" PerformanceMark entries.
-performance.clearMarks('squirrel');
-logMarkCount() // "Found this many entries: 4"
-
-// Delete all of the PerformanceMark entries.
+// すべてのマーク項目を削除
 performance.clearMarks();
-logMarkCount() // "Found this many entries: 0"
+performance.getEntriesByType("mark").length; // 0
 ```
 
 ## 仕様書
@@ -64,3 +59,7 @@ logMarkCount() // "Found this many entries: 0"
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("PerformanceMark")}}

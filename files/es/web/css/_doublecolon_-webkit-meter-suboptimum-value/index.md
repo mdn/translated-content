@@ -1,9 +1,9 @@
 ---
-title: "::-webkit-meter-suboptimum-value"
+title: ::-webkit-meter-suboptimum-value
 slug: Web/CSS/::-webkit-meter-suboptimum-value
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 
@@ -25,7 +25,8 @@ meter::-webkit-meter-suboptimum-value {
 
 {{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-> **Nota:** Sólo funciona en navegadores basados en Webkit/Blink
+> [!NOTE]
+> Sólo funciona en navegadores basados en Webkit/Blink
 
 ## Especificaciones
 

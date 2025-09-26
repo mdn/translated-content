@@ -7,7 +7,7 @@ slug: Web/API/Document/defaultView
 
 ## Sumário
 
-Em navegadores, retorna o objeto [window](/pt-BR/docs/DOM/window) associado ao documento ou `null` se não houver.
+Em navegadores, retorna o objeto [window](/pt-BR/docs/Web/API/Window) associado ao documento ou `null` se não houver.
 
 ## Sintaxe
 
@@ -19,7 +19,7 @@ Esta propriedade é de somente-leitura.
 
 ## Notas
 
-De acordo com o [quirksmode](http://www.quirksmode.org/dom/w3c_html.html), `defaultView` não é suportado no IE até o IE 9.
+De acordo com o [quirksmode](https://www.quirksmode.org/dom/w3c_html.html), `defaultView` não é suportado no IE até o IE 9.
 
 ## Especificação
 

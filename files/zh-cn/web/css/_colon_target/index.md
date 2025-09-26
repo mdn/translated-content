@@ -1,11 +1,9 @@
 ---
-title: ":target"
+title: :target
 slug: Web/CSS/:target
 ---
 
-{{CSSRef}}
-
-**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个唯一的元素（_目标元素_），其 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 与当前 URL 片段匹配。
+**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个唯一的元素（_目标元素_），其 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 与当前 URL 片段匹配。
 
 ```css
 /* 选择一个 ID 与当前 URL 片段匹配的元素*/
@@ -16,7 +14,7 @@ slug: Web/CSS/:target
 
 例如，以下 URL 具有一个片段（由 # 符号表示），指向名为 `section2` 的元素：
 
-```
+```url
 http://www.example.com/index.html#section2
 ```
 
@@ -84,7 +82,8 @@ p:target i {
 
 你可以不使用任何 Javascript 代码，只使用 `:target` 伪类创建一个高亮框。该技术依赖于初始化时就隐藏在页面中的链接到指定元素的锚。一旦定位，CSS 就会更改其 `display` 以便显示它们。
 
-> **备注：** 一个基于 `:target` 伪类的更为完善的纯 CSS 高亮框可以在 [GitHub](https://github.com/madmurphy/takefive.css/)（[demo](https://madmurphy.github.io/takefive.css/)）上找到。
+> [!NOTE]
+> 一个基于 `:target` 伪类的更为完善的纯 CSS 高亮框可以在 [GitHub](https://github.com/madmurphy/takefive.css/)（[demo](https://madmurphy.github.io/takefive.css/)）上找到。
 
 #### HTML
 

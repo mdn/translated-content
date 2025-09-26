@@ -1,9 +1,9 @@
 ---
-title: "-moz-image-rect"
+title: -moz-image-rect
 slug: Web/CSS/-moz-image-rect
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The **`-moz-image-rect`** value for [CSS](/zh-CN/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background. This allows you to, for example, use different parts of one larger image as backgrounds in different parts of your content.
 

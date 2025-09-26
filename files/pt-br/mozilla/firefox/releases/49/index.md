@@ -3,8 +3,6 @@ title: Firefox 49 para desenvolvedores
 slug: Mozilla/Firefox/Releases/49
 ---
 
-{{FirefoxSidebar}}
-
 [Para testar estes novos recursos do Firefox,
 Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 49 foi lançado em 20 de Setembro de 2016. Este artigo faz uma lista das principais alterações não só para desenvolvedores web, mas também desenvolvedores Firefox e Gecko e de extensões.
 
@@ -15,22 +13,21 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - Erros de JavaScript registrados no console [Agora com um link \[Leia Mais\]](https://hacks.mozilla.org/2016/06/helping-web-developers-with-javascript-errors/) para ajuda complementar na depuração ([Erro do Firefox 1179876](https://bugzil.la/1179876)).
 - CSS autocompletar: mostra mais sugestões para o autocompletar
   ([Erro do Firefox 1260419](https://bugzil.la/1260419)).
-- O inspector de animação agora [fornece informações do desempenho da animação](/pt-BR/docs/Tools/Page_Inspector/How_to/Work_with_animations#Further_information_about_animation_compositing) nas ferramentas de desenvolvimento ([Erro do Firefox 1254408](https://bugzil.la/1254408)).
-- O [menu de contexto do Inspector](/pt-BR/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_context_menu) foi reorganizado ser mais claro e fácil de usar ([Erro do Firefox 1211613](https://bugzil.la/1211613)).
+- O inspector de animação agora [fornece informações do desempenho da animação](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#further_information_about_animation_compositing) nas ferramentas de desenvolvimento ([Erro do Firefox 1254408](https://bugzil.la/1254408)).
+- O [menu de contexto do Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#element_popup_context_menu) foi reorganizado ser mais claro e fácil de usar ([Erro do Firefox 1211613](https://bugzil.la/1211613)).
 - O Inspector agora suporta sintaxe para valores de cores em `#RRGGBBAA` e `#RGBA` ([Erro do Firefox 1271191](https://bugzil.la/1271191)).
 - As ferramentas de desvenvolvedor deixa de exibir marcas de fechamento automático (tal como {{HTMLElement("br")}} e {{HTMLElement("img")}} como se eles tivessem uma tag de fechamento em páginas HTML ; o comportamento é inalteravel para páginas XHTML ([Erro do Firefox 820926](https://bugzil.la/820926)).
 - Melhorias na acessibilidade!
-
   - A caixa de ferramenta faz um trabalho melhor em assegurar que o foco no teclado seja mais visível ([Erro do Firefox 1242851](https://bugzil.la/1242851)).
   - Foram adicionados rótulos de acessibilidade a controles não marcados ([Erro do Firefox 1242715](https://bugzil.la/1242715)).
   - Adicionada semântica de exibição de árvore adequada e navegação de teclado para a exibição de marcação do Inspetor ([Erro do Firefox 1242694](https://bugzil.la/1242694)).
 
-- O [Monitor de Rede](/pt-BR/docs/Tools/Network_Monitor) agora mostra uma coluna de Causa, onde fornece e indica o que causa de cada requerimento de rede específico ([Erro do Firefox 1134073](https://bugzil.la/1134073)).
+- O [Monitor de Rede](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) agora mostra uma coluna de Causa, onde fornece e indica o que causa de cada requerimento de rede específico ([Erro do Firefox 1134073](https://bugzil.la/1134073)).
 - Na _about:debugging_ página de extesões, o botão de recarregar é o único abilitado para extensões temporárias. Será desabilitado para todas as outras extensões ([Erro do Firefox 1273184](https://bugzil.la/1273184)).
-- Na página Workers em _about:debbuging_, uma mensagem de alerta será exibida na seção Service Workers se o [service workers for incompatíveil](/pt-BR/docs/Tools/about:debugging#Service_workers_not_compatible) com as configurações atuais do navegador ([Erro do Firefox 1266415](https://bugzil.la/1266415)).
-- _about:debugging_ agora existe uma [nova página de Tabs](/pt-BR/docs/Tools/about:debugging#Tabs) disponível, quer fornece uma lista completa de todas abas abertas debugaveis na instancia do Firefox ([Erro do Firefox 1266128](https://bugzil.la/1266128)).
-- A opção _Desabilitar Cache_ na [Caixa de ferramentas de configurações avançadas](/pt-BR/docs/Tools/Settings#Advanced_settings) foi renomeada para Desabilitar HTTP Cache, para clarear que isso afeta o cache do HTTP, e não [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API)/o [Cache API](/pt-BR/docs/Web/API/Cache) (bug(1253018)).
-- O [Inspector de armazenamento agora permite IndexedDB databases ser deletado](/pt-BR/docs/Tools/Storage_Inspector#IndexedDB) através de seu próprio menu ([Erro do Firefox 1205123](https://bugzil.la/1205123)), e mostrará uma mensagem de alerta se a IndexedDB poder ser deletada por alguma rasão (Se ainda existir conexão ativa, por exemplo) ([Erro do Firefox 1268460](https://bugzil.la/1268460)).
+- Na página Workers em _about:debbuging_, uma mensagem de alerta será exibida na seção Service Workers se o [service workers for incompatíveil](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#service_workers_not_compatible) com as configurações atuais do navegador ([Erro do Firefox 1266415](https://bugzil.la/1266415)).
+- _about:debugging_ agora existe uma [nova página de Tabs](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#tabs) disponível, quer fornece uma lista completa de todas abas abertas debugaveis na instancia do Firefox ([Erro do Firefox 1266128](https://bugzil.la/1266128)).
+- A opção _Desabilitar Cache_ na [Caixa de ferramentas de configurações avançadas](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html#advanced_settings) foi renomeada para Desabilitar HTTP Cache, para clarear que isso afeta o cache do HTTP, e não [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API)/o [Cache API](/pt-BR/docs/Web/API/Cache) (bug(1253018)).
+- O [Inspector de armazenamento agora permite IndexedDB databases ser deletado](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#indexeddb) através de seu próprio menu ([Erro do Firefox 1205123](https://bugzil.la/1205123)), e mostrará uma mensagem de alerta se a IndexedDB poder ser deletada por alguma rasão (Se ainda existir conexão ativa, por exemplo) ([Erro do Firefox 1268460](https://bugzil.la/1268460)).
 
 ### HTML
 
@@ -53,14 +50,12 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - Adicionado a [`unidade de comprimento q`](/pt-BR/docs/Web/CSS/length#q) ([Erro do Firefox 1274526](https://bugzil.la/1274526)).
 - A propiedade {{cssxref("text-align-last")}} foi desprezada ([Erro do Firefox 1039541](https://bugzil.la/1039541)).
 - Adicionado suporte para {{cssxref("overflow-wrap")}}, substituindo {{cssxref("word-wrap")}} que ainda é suportado como nome alternativo ([Erro do Firefox 955857](https://bugzil.la/955857)).
-- Nossa experiencia com a implementação do [CSS Grids](/pt-BR/docs/Web/CSS/CSS_Grid_Layout) foi melhorado:
-
+- Nossa experiencia com a implementação do [CSS Grids](/pt-BR/docs/Web/CSS/CSS_grid_layout) foi melhorado:
   - implementado {{cssxref("&lt;percentage&gt;")}} para as propriedades {{cssxref("grid-gap")}}, {{cssxref("grid-row-gap")}}, e {{cssxref("grid-column-gap")}} ([Erro do Firefox 1266268](https://bugzil.la/1266268)).
   - Implementado suporte a layout grid layout para {{cssxref("align")}}, {{cssxref("justify-self")}}`:baseline` e `last-baseline` (aka "baseline self-alignment") ([Erro do Firefox 1221525](https://bugzil.la/1221525)).
   - Implementado alinhamento de conteúdo baseline de item em grid ([Erro do Firefox 1256429](https://bugzil.la/1256429)).
 
-- Nosso experimeto implementação de [CSS Masks](/pt-BR/docs/Web/CSS/CSS_Masks) foi melhorado:
-
+- Nosso experimeto implementação de [CSS Masks](/pt-BR/docs/Web/CSS/CSS_masking) foi melhorado:
   - A propiedade {{cssxref("mask-origin")}} agora usa `border-box` ao invés de `padding-box` como valor inicial, para coincidir com a especificação ([Erro do Firefox 1258286](https://bugzil.la/1258286)).
   - A propriedade {{cssxref("mask-repeat")}} suporta os seguintes volumes: `space` e `round` values ([Erro do Firefox 1258626](https://bugzil.la/1258626)).
   - Corrigido o problema que impedia o atributo {{cssxref("mask-position")}} de ser animado ([Erro do Firefox 1273804](https://bugzil.la/1273804)).
@@ -111,7 +106,7 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 #### WebGL
 
 - A extensão {{domxref("EXT_color_buffer_float")}} {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} foi implementada ([Erro do Firefox 1129332](https://bugzil.la/1129332)).
-- O evento {{Event("webglcontextcreationerror")}}, que é criando quando a tentativa de criação de contexto do WebGL falha, foi implementado ([Erro do Firefox 1271478](https://bugzil.la/1271478)). Use isso para ajudar a entender melhor, tanto para depuração quanto para o processamento de errros de produção.
+- O evento [`webglcontextcreationerror`](/pt-BR/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event), que é criando quando a tentativa de criação de contexto do WebGL falha, foi implementado ([Erro do Firefox 1271478](https://bugzil.la/1271478)). Use isso para ajudar a entender melhor, tanto para depuração quanto para o processamento de errros de produção.
 
 #### IndexedDB
 
@@ -149,7 +144,7 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - Para especificações correspondentes, a propriedade {{domxref("VTTCue.positionAlign")}} agora retorna um `PositionAlign` enum em vez de `Align` enum ([Erro do Firefox 1276129](https://bugzil.la/1276129)).
 - A parte de síntese da [API Web Speech](/pt-BR/docs/Web/API/Web_Speech_API#Speech_synthesis) agora é ativo por padrão ([Erro do Firefox 1268633](https://bugzil.la/1268633)).
 - A [API Timeline de performace](/pt-BR/docs/Web/API/Performance_Timeline) agora está disponível de padrão no Nightly (embrora não no Aurora, Beta ou Release).
-- O evento {{event("install")}}, e o {{domxref("Window.oninstall")}} manipulador de evento, são agora suportado por [Web Manifests](/pt-BR/docs/Web/Manifest) ([Erro do Firefox 1265279](https://bugzil.la/1265279)).
+- O evento [`install`](/pt-BR/docs/Web/API/Window/appinstalled_event), e o {{domxref("Window.oninstall")}} manipulador de evento, são agora suportado por [Web Manifests](/pt-BR/docs/Web/Progressive_web_apps/Manifest) ([Erro do Firefox 1265279](https://bugzil.la/1265279)).
 - Quando usar o metodo {{domxref("AudioContext.createPeriodicWave()")}} de [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API), você pode específicar se a onda periódica resultante deve ser normalizada incluindo um objeto de dicionário como o terceiro parâmetro, que inclui um único parâmetro — `{disableNormalization: true}` ([Erro do Firefox 1265405](https://bugzil.la/1265405)).
 - Na APIWebVTT, {{domxref("VTTCue.positionAlign")}} retorna corretamente um `PositionAlignSetting` enum conforme a especificação; anteriormente ele retornava um `AlignSetting` enum ([Erro do Firefox 1276129](https://bugzil.la/1276129)).
 - A parte de síntese de fala da API Web Speech agora é habilitado por padrão em todos os navegadores desktop ([Erro do Firefox 1268633](https://bugzil.la/1268633)).
@@ -184,7 +179,6 @@ _Sem mudanças._
 A fim de melhorar a compatilidade com o conteúdo existente, Firefox agora aceita algumas propriedades e atributos do webkit.
 
 - As propriedades a seguir também trabalham com prefixo -webkit:
-
   - {{cssxref("-webkit-align-items")}}
   - {{cssxref("-webkit-align-content")}}
   - {{cssxref("-webkit-align-self")}}
@@ -232,7 +226,6 @@ A fim de melhorar a compatilidade com o conteúdo existente, Firefox agora aceit
   - {{cssxref("-webkit-user-select")}}
 
 - As propriedades a seguir correspondem à propriedade prefixa equivalente
-
   - {{cssxref("-webkit-box-flex")}}
   - {{cssxref("-webkit-box-ordinal-group")}}
   - {{cssxref("-webkit-box-orient")}}
@@ -240,19 +233,16 @@ A fim de melhorar a compatilidade com o conteúdo existente, Firefox agora aceit
   - {{cssxref("-webkit-box-pack")}}
 
 - Para valores {{cssxref("&lt;image&gt;")}}:
-
   - As funções a seguir correspondem aos seus equivalentes não predefinidos: {{cssxref("-webkit-linear-gradient", "-webkit-linear-gradient()")}}, {{cssxref("-webkit-radial-gradient", "-webkit-radial-gradient()")}}, {{cssxref("-webkit-repeating-linear-gradient", "-webkit-repeating-linear-gradient()")}}, e {{cssxref("-webkit-repeating-radial-gradient","-webkit-repeating-radial-gradient()")}}.
   - O desatualizado `-webkit-gradient` é suportado (e traduzindo para um gradiente regular)
 
 - Os seguintes valores {{cssxref("display")}} foram traduzidos:
-
   - `-webkit-box` to `-moz-box`
   - `-webkit-flex` to `flex`
   - `-webkit-inline-box` to `inline-flex`
   - `-webkit-inline-flex` to `-moz-inline-flex`
 
 - As seguintes propriedades são suportadas ( E não mapeia para qualquer equivalente não predefinido):
-
   - {{cssxref("-webkit-text-fill-color")}}
   - {{cssxref("-webkit-text-stroke-color")}}
   - {{cssxref("-webkit-text-stroke-width")}}
@@ -260,10 +250,9 @@ A fim de melhorar a compatilidade com o conteúdo existente, Firefox agora aceit
 
 - A interface {{domxref("WebKitCSSMatrix")}} é um nome de {{domxref("DOMMatrix")}}
 - Os seguintes recursos de consulta de mídia foram implementados:
-
-  - `-webkit-min-device-pixel-ratio` é um nome para [`min-resolution`](/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries#resolution) com o mesmo valor em (em `dppx)`, embora este recurso seja [disabilitado por padrão](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) (atras de preferências no about:config `layout.css.prefixes.device-pixel-ratio-webkit`)
-  - `-webkit-max-device-pixel-ratio` é um nome de [`max-resolution`](/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries#resolution) para o mesmo valor (em `dppx`); essa característica é destivada por padrão, atras da mesma preferência no about:config
-  - [`-webkit-transform-3d`](/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries#-webkit-transform-3d) sempre combinando, indicando suporte a transformações 3D.
+  - `-webkit-min-device-pixel-ratio` é um nome para [`min-resolution`](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) com o mesmo valor em (em `dppx)`, embora este recurso seja [disabilitado por padrão](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) (atras de preferências no about:config `layout.css.prefixes.device-pixel-ratio-webkit`)
+  - `-webkit-max-device-pixel-ratio` é um nome de [`max-resolution`](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) para o mesmo valor (em `dppx`); essa característica é destivada por padrão, atras da mesma preferência no about:config
+  - [`-webkit-transform-3d`](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries#-webkit-transform-3d) sempre combinando, indicando suporte a transformações 3D.
 
 ## Mudanças para extensões e desenvolvedores Mozilla
 

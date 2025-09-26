@@ -5,7 +5,7 @@ slug: Web/API/Service_Worker_API
 
 {{DefaultAPISidebar("Service Workers API")}}
 
-Service worker 本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验，它会拦截网络请求并根据网络是否可用来采取适当的动作、更新来自服务器的的资源。它还提供入口以推送通知和访问后台同步 API。
+Service worker 本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验，它会拦截网络请求并根据网络是否可用来采取适当的动作、更新来自服务器的资源。它还提供入口以推送通知和访问后台同步 API。
 
 ## Service worker 的概念和用法
 
@@ -15,11 +15,14 @@ Service worker 运行在 worker 上下文：因此它无法访问 DOM，相对�
 
 出于安全考量，Service worker 只能由 HTTPS 承载，毕竟修改网络请求的能力暴露给{{Glossary("MitM", "中间人攻击")}}会非常危险，如果允许访问这些强大的 API，此类攻击将会变得很严重。在 Firefox 浏览器的[用户隐私模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，Service Worker 不可用。
 
-> **备注：** 在 Firefox，为了进行测试，你可以通过 HTTP 运行 service worker（不安全）；只需选中 Firefox 开发者选项/齿轮菜单中的 **Enable Service Workers over HTTP (when toolbox is open)** 选项。
+> [!NOTE]
+> 在 Firefox，为了进行测试，你可以通过 HTTP 运行 service worker（不安全）；只需选中 Firefox 开发者选项/齿轮菜单中的 **Enable Service Workers over HTTP (when toolbox is open)** 选项。
 
-> **备注：** 与之前在该领域的尝试不同，如 [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/)），service worker 并不确定你试图去做什么，但是当这些假设不完全正确时，它们会被中断。相对地，service worker 可以更细致地控制每一件事情。
+> [!NOTE]
+> 与之前在该领域的尝试不同，如 [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/)），service worker 并不确定你试图去做什么，但是当这些假设不完全正确时，它们会被中断。相对地，service worker 可以更细致地控制每一件事情。
 
-> **备注：** Service worker 大量使用 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，因为通常它们会等待响应后继续，并根据响应返回一个成功或者失败的操作。Promise 非常适合这种场景。
+> [!NOTE]
+> Service worker 大量使用 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，因为通常它们会等待响应后继续，并根据响应返回一个成功或者失败的操作。Promise 非常适合这种场景。
 
 ### 注册
 
@@ -52,7 +55,8 @@ Service worker 运行在 worker 上下文：因此它无法访问 DOM，相对�
 
 Servcie worker 可以通过 {{domxref("FetchEvent")}} 事件去响应请求。通过使用 {{domxref("FetchEvent.respondWith") }} 方法，你可以任意修改对于这些请求的响应。
 
-> **备注：** 因为 `oninstall` 和 `onactivate` 完成前需要一些时间，service worker 标准提供一个 {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} 方法。一旦在带有 promise 的 `install` 或 `activate` 事件上调用它，那么 `fetch` 和 `push` 等功能事件将等待，直到 promise 成功兑现。
+> [!NOTE]
+> 因为 `oninstall` 和 `onactivate` 完成前需要一些时间，service worker 标准提供一个 {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} 方法。一旦在带有 promise 的 `install` 或 `activate` 事件上调用它，那么 `fetch` 和 `push` 等功能事件将等待，直到 promise 成功兑现。
 
 构建一个基本用例的完整教程，请阅读[使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)。
 
@@ -95,7 +99,7 @@ Service workers 也可以用来做这些事情：
   - : 传递给 {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} 处理函数的参数，`InstallEvent` 接口代表一个在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 中分发的安装动作，作为 {{domxref("ExtendableEvent")}} 的子事件，它保证诸如 {{domxref("FetchEvent")}} 的功能性事件在安装过程中不会被分发。
 - {{DOMxRef("NavigationPreloadManager")}}
   - : 提供与 service worker 一起管理资源预加载的方法。
-- {{domxref("Navigator.serviceWorker") }}
+- {{DOMxRef("Navigator.serviceWorker")}} 和 {{DOMxRef("WorkerNavigator.serviceWorker")}}
   - : 返回一个 {{domxref("ServiceWorkerContainer")}} 对象，该对象提供对[相关 document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window) 的注册、删除、更新以及与 {{domxref("ServiceWorker")}} 对象通信的访问。
 - {{domxref("NotificationEvent") }}
   - : 传递给 {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} 处理函数的参数，`NotificationEvent` 接口代表在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 中分发的单击事件通知。
@@ -123,7 +127,7 @@ Service workers 也可以用来做这些事情：
 ## 参见
 
 - [ServiceWorker 烹饪书](https://github.com/mdn/serviceworker-cookbook/)
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service worker 基础代码示例](https://github.com/mdn/sw-test)
 - [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)

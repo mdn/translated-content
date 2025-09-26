@@ -9,7 +9,8 @@ l10n:
 
 以下は、ドラッグ & ドロップ操作が行われる時の各段階についての解説です。
 
-> **メモ:** この文書で記述されているドラッグ操作は {{domxref("DataTransfer")}} インターフェイスを使用します。この文書では {{domxref("DataTransferItem")}} インターフェイスや {{domxref("DataTransferItemList")}} インターフェイスは説明*しません*。
+> [!NOTE]
+> この文書で記述されているドラッグ操作は {{domxref("DataTransfer")}} インターフェイスを使用します。この文書では {{domxref("DataTransferItem")}} インターフェイスや {{domxref("DataTransferItemList")}} インターフェイスは説明*しません*。
 
 ## draggable 属性
 
@@ -19,7 +20,7 @@ HTML では、画像、リンク、選択範囲の上での既定の動作を除
 
 上記以外の他の HTML 要素をドラッグできるようにするには、以下の 3 つのことをしなくてはなりません。
 
-1. ドラッグできるようにしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性の値を `"true"` に設定する。
+1. ドラッグできるようにしたい要素の [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性の値を `"true"` に設定する。
 2. {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントにリスナーを設定し、そのリスナーの中でドラッグデータを設定する。
 3. 上記で定義されたリスナーの中で[ドラッグデータを設定する](/ja/docs/Web/API/DataTransfer/setData)。
 
@@ -33,15 +34,16 @@ HTML では、画像、リンク、選択範囲の上での既定の動作を除
 const draggableElement = document.querySelector('p[draggable="true"]');
 
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
-[`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性を `"true"` に設定すると、その要素はドラッグできるようになります。この属性が設定されていない、あるいは `"false"` に設定されている場合、その要素をドラッグする事はできず、代わりにテキストが選択されるでしょう。
+[`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性を `"true"` に設定すると、その要素はドラッグできるようになります。この属性が設定されていない、あるいは `"false"` に設定されている場合、その要素をドラッグする事はできず、代わりにテキストが選択されるでしょう。
 
-[`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性は画像やリンクを含めてあらゆる要素に設定できます。ただし、画像とリンクについてだけは既定値が `true`となっていますので、実際にこれらの要素で使う場合は、要素をドラッグできないようにするために [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性に `false` を設定するという場合がほとんどでしょう。
+[`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性は画像やリンクを含めてあらゆる要素に設定できます。ただし、画像とリンクについてだけは既定値が `true`となっていますので、実際にこれらの要素で使う場合は、要素をドラッグできないようにするために [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性に `false` を設定するという場合がほとんどでしょう。
 
-> **メモ:** 要素がドラッグ可能になった場合、文字列やその要素に含まれている他の要素が、マウスによるクリックやドラッグなどの通常の操作では選択する事ができなくなることに注意してください。ユーザーが文字列を選択するには、通常の操作の代わりに、 <kbd>Alt</kbd> キーを押しながらマウスで選択するか、キーボードで操作を行う必要があります。
+> [!NOTE]
+> 要素がドラッグ可能になった場合、文字列やその要素に含まれている他の要素が、マウスによるクリックやドラッグなどの通常の操作では選択する事ができなくなることに注意してください。ユーザーが文字列を選択するには、通常の操作の代わりに、 <kbd>Alt</kbd> キーを押しながらマウスで選択するか、キーボードで操作を行う必要があります。
 
 ## ドラッグ操作の開始
 
@@ -54,7 +56,7 @@ draggableElement.addEventListener("dragstart", (event) =>
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
@@ -236,7 +238,7 @@ function doDragOver(event) {
 
 実際の正確な表示のされ方はユーザーのプラットフォームに依存しますが、通常は例えば「コピー」に対しては「＋」記号が表示され、また、ドロップが許可されていない時は「ここにはドロップできません」という意味のアイコンが表示されるでしょう。多くの場合において、このポインターによるフィードバックは十分に役立ちます。
 
-より凝った視覚効果のために、例えばドロップが行われる位置に要素を挿入するなど、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの間に他の操作をすることもできます。この例なら、挿入される要素は、挿入箇所を示すマーカーあるいはドラッグされている要素が新しい位置に挿入された時の状態のプレビューなどとして利用できるでしょう。このような効果は、例えば [`<img>`](/ja/docs/Web/HTML/Element/img) 要素を生成して、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの処理中にドキュメント中に単に挿入するだけで実現できます。
+より凝った視覚効果のために、例えばドロップが行われる位置に要素を挿入するなど、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの間に他の操作をすることもできます。この例なら、挿入される要素は、挿入箇所を示すマーカーあるいはドラッグされている要素が新しい位置に挿入された時の状態のプレビューなどとして利用できるでしょう。このような効果は、例えば [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素を生成して、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの処理中にドキュメント中に単に挿入するだけで実現できます。
 
 {{domxref("HTMLElement/dragover_event", "dragover")}} イベントは、マウスポインターが現在指している要素において発行されます。挿入点のマーカーを {{domxref("HTMLElement/dragover_event", "dragover")}} イベントの発行に応じて移動させたいと思うのは自然な欲求でしょう。そのような場合には、他のマウスイベントでマウスポインターの位置を取得するために使われるのと同じ要領で、イベントの {{domxref("MouseEvent.clientX","clientX")}} と {{domxref("MouseEvent.clientY","clientY")}} プロパティを利用できます。
 
@@ -307,7 +309,7 @@ function doDrop(event) {
     "text/plain",
   ];
   const types = event.dataTransfer.types.filter((type) =>
-    supportedTypes.includes(type)
+    supportedTypes.includes(type),
   );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);
@@ -330,6 +332,6 @@ function doDrop(event) {
 ## 関連情報
 
 - [HTML ドラッグ & ドロップ API (概要)](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
-- [複数の項目のドラッグ & ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [複数の項目のドラッグ & ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

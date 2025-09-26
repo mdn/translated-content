@@ -108,8 +108,8 @@ No IE 6, 7 e 8, `typeof alert === 'object'`
 
 ## Especificação
 
-[ECMA-262 section 11.4.3](http://ecma-international.org/ecma-262/5.1/#sec-11.4.3)
+[ECMA-262 section 11.4.3](https://ecma-international.org/ecma-262/5.1/#sec-11.4.3)
 
 ## Veja também
 
-- [instanceof](/pt-BR/docs/JavaScript/Reference/Operators/instanceof)
+- [instanceof](/pt-BR/docs/Web/JavaScript/Reference/Operators/instanceof)

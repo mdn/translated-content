@@ -3,7 +3,7 @@ title: Dynamically modifying XUL-based user interface
 slug: orphaned/Dynamically_modifying_XUL-based_user_interface
 ---
 
-この記事では、[DOM](/ja/DOM) やその他の API を使って [XUL](/ja/XUL) インターフェイスを操作する方法について検討します。まず DOM
+この記事では、[DOM](/ja/docs/Web/API/Document_Object_Model) やその他の API を使って [XUL](/ja/XUL) インターフェイスを操作する方法について検討します。まず DOM
 _ドキュメント_
 の概念について説明し、DOM の呼び出しを使ってドキュメントを操作する基本的な方法の例を幾つか実演したのち、 Mozilla 固有のメソッドを使って
 _匿名 [XBL](/ja/XBL) コンテント_
@@ -13,11 +13,11 @@ _匿名 [XBL](/ja/XBL) コンテント_
 
 ### はじめに
 
-ご存知の通り、[XUL](/ja/XUL) は Firefox や Thunderbird のような様々な Mozilla ベースのアプリケーションでユーザーインターフェイスを記述するのに使われている [XML](/ja/XML) 言語です。XUL アプリケーションでは動作を定義するのに [JavaScript](/ja/JavaScript) が使われており、その中では XUL ドキュメントにアクセスするのに [DOM API](/ja/Gecko_DOM_Reference) を使っています。
+ご存知の通り、[XUL](/ja/XUL) は Firefox や Thunderbird のような様々な Mozilla ベースのアプリケーションでユーザーインターフェイスを記述するのに使われている [XML](/ja/XML) 言語です。XUL アプリケーションでは動作を定義するのに [JavaScript](/ja/docs/Web/JavaScript) が使われており、その中では XUL ドキュメントにアクセスするのに [DOM API](/ja/Gecko_DOM_Reference) を使っています。
 
 では **D**ocument **O**bject **M**odel API とは何なのでしょうか？
 
-DOM API はスクリプトとドキュメント間で行われるやり取りのあらゆる所で使われるインターフェイスです。一度でも XUL (または HTML) ドキュメントとやり取りするスクリプトを書いた事があるなら、あなたは既に DOM 呼び出しを使っています。最も有名な DOM メソッドはおそらく [`document.getElementById()`](/ja/DOM/document.getElementById) で、これは与えられた `id` に対応する要素を返します。あなたはそれ以外にも [`element.setAttribute()`](/ja/DOM/element.setAttribute) や、拡張機能を書いた事があるなら [`addEventListener()`](/ja/DOM/element.addEventListener) といった呼び出しを使った事があるかもしれません。これらは全て DOM で定義されているものです。
+DOM API はスクリプトとドキュメント間で行われるやり取りのあらゆる所で使われるインターフェイスです。一度でも XUL (または HTML) ドキュメントとやり取りするスクリプトを書いた事があるなら、あなたは既に DOM 呼び出しを使っています。最も有名な DOM メソッドはおそらく [`document.getElementById()`](/ja/docs/Web/API/Document/getElementById) で、これは与えられた `id` に対応する要素を返します。あなたはそれ以外にも [`element.setAttribute()`](/ja/docs/Web/API/Element/setAttribute) や、拡張機能を書いた事があるなら [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) といった呼び出しを使った事があるかもしれません。これらは全て DOM で定義されているものです。
 
 DOM メソッドには、ドキュメントに要素を作成したり、動かしたり、削除するものもあります。これらは後のセクションで実演します。まずは、
 _ドキュメント_
@@ -33,13 +33,13 @@ _ドキュメント_
 
 ### DOM メソッドの使用例
 
-このセクションでは DOM メソッドの [`appendChild()`](/ja/DOM/element.appendChild) 、[`createElement()`](/ja/DOM/document.createElement) 、[`insertBefore()`](/ja/DOM/element.insertBefore) 、[`removeChild()`](/ja/DOM/element.removeChild) の使い方を実演します。
+このセクションでは DOM メソッドの [`appendChild()`](/ja/docs/Web/API/Node/appendChild) 、[`createElement()`](/ja/docs/Web/API/Document/createElement) 、[`insertBefore()`](/ja/docs/Web/API/Node/insertBefore) 、[`removeChild()`](/ja/docs/Web/API/Node/removeChild) の使い方を実演します。
 
 #### ある要素の子要素を全て削除する
 
-この例では、id=`someElement` である要素の全ての子要素を現在のドキュメントから削除するために、[`removeChild()`](/ja/DOM/element.removeChild) メソッドを呼び出して子要素が全てなくなるまで最初の子要素を削除しています。
+この例では、id=`someElement` である要素の全ての子要素を現在のドキュメントから削除するために、[`removeChild()`](/ja/docs/Web/API/Node/removeChild) メソッドを呼び出して子要素が全てなくなるまで最初の子要素を削除しています。
 
-[`hasChildNodes()`](/ja/DOM/element.hasChildNodes) と [`firstChild`](/ja/DOM/element.firstChild) も DOM API の一部です。
+[`hasChildNodes()`](/ja/docs/Web/API/Node/hasChildNodes) と [`firstChild`](/ja/docs/Web/API/Node/firstChild) も DOM API の一部です。
 
 ```
 var element = document.getElementById("someElement");
@@ -50,12 +50,12 @@ var element = document.getElementById("someElement");
 
 #### メニューにメニューアイテムを挿入する
 
-この例では [`<menupopup>`](/ja/XUL/menupopup) の最初と最後に二つの新しいメニューアイテムを追加します。アイテムを作成するのには [`document.createElementNS()`](/ja/DOM/document.createElementNS) メソッドを使用しており、作成された xml 要素を [`insertBefore()`](/ja/DOM/element.insertBefore) と [`appendChild()`](/ja/DOM/element.appendChild) を使ってドキュメントに挿入しています。
+この例では [`<menupopup>`](/ja/XUL/menupopup) の最初と最後に二つの新しいメニューアイテムを追加します。アイテムを作成するのには [`document.createElementNS()`](/ja/docs/DOM/document.createElementNS) メソッドを使用しており、作成された xml 要素を [`insertBefore()`](/ja/docs/Web/API/Node/insertBefore) と [`appendChild()`](/ja/docs/Web/API/Node/appendChild) を使ってドキュメントに挿入しています。
 
 注:
 
-- [`document.createElementNS()`](/ja/DOM/document.createElementNS) は要素を作成しますが、ドキュメントのどこにもそれを設置しません。新しく作成された要素をドキュメントに挿入するには、[`appendChild()`](/ja/DOM/element.appendChild) のような他の DOM メソッドを使う必要があります。
-- [`appendChild()`](/ja/DOM/element.appendChild) はノードを他の全てのノードの後ろに追加するのに対し、[`insertBefore()`](/ja/DOM/element.insertBefore) はノードを 2 つ目のパラメータで参照されたノードの前に挿入します。
+- [`document.createElementNS()`](/ja/docs/DOM/document.createElementNS) は要素を作成しますが、ドキュメントのどこにもそれを設置しません。新しく作成された要素をドキュメントに挿入するには、[`appendChild()`](/ja/docs/Web/API/Node/appendChild) のような他の DOM メソッドを使う必要があります。
+- [`appendChild()`](/ja/docs/Web/API/Node/appendChild) はノードを他の全てのノードの後ろに追加するのに対し、[`insertBefore()`](/ja/docs/Web/API/Node/insertBefore) はノードを 2 つ目のパラメータで参照されたノードの前に挿入します。
 
 ```
 function createMenuItem(aLabel) {
@@ -71,7 +71,7 @@ popup.insertBefore(first, popup.firstChild);
 popup.appendChild(last);
 ```
 
-[`appendChild()`](/ja/DOM/element.appendChild) や [`insertBefore()`](/ja/DOM/element.insertBefore) は存在している要素を動かすのにも使えます。例えば次の文を上の例の最後の行に追加すれば、 "First item" とラベルが付けられたアイテムをポップアップの最後に動かす事が出来ます。
+[`appendChild()`](/ja/docs/Web/API/Node/appendChild) や [`insertBefore()`](/ja/docs/Web/API/Node/insertBefore) は存在している要素を動かすのにも使えます。例えば次の文を上の例の最後の行に追加すれば、 "First item" とラベルが付けられたアイテムをポップアップの最後に動かす事が出来ます。
 
 ```
 popup.appendChild(first);

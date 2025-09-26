@@ -9,7 +9,7 @@ Existem agora três modos usados pelos mecanismos de layout nos navegadores web:
 
 ## Como os navegadores determinam qual modo usar?
 
-Para documentos [HTML](/pt-BR/docs/HTML), os navegadores usam um DOCTYPE no início do documento para decidir se os tratarão em _quirks mode_ ou _standards mode_. Para garantir que sua página use o _full standards mode_, certifique-se que sua página tenha um DOCTYPE como deste exemplo:
+Para documentos [HTML](/pt-BR/docs/Web/HTML), os navegadores usam um DOCTYPE no início do documento para decidir se os tratarão em _quirks mode_ ou _standards mode_. Para garantir que sua página use o _full standards mode_, certifique-se que sua página tenha um DOCTYPE como deste exemplo:
 
 ```html
 <!doctype html>
@@ -28,11 +28,11 @@ Certifique-se de colocar o DOCTYPE logo no início de seu documento HTML. Qualqu
 
 Em HTML5, o único propósito do DOCTYPE é de ativar o _full standards mode_. Versões mais antigas do padrão HTML deram significado adicional ao DOCTYPE, mas nenhum navegador jamais usou o DOCTYPE para qualquer outra coisa além de alternar entre o _quirks mode_ e o _standards mode_.
 
-Veja também uma descrição detalhada de [quando diferentes navegadores escolhem diferentes modos](http://hsivonen.iki.fi/doctype/).
+Veja também uma descrição detalhada de [quando diferentes navegadores escolhem diferentes modos](https://hsivonen.iki.fi/doctype/).
 
 ### XHTML
 
-Se você servir sua página como [XHTML](/pt-BR/docs/XHTML) usando o MIME type `application/xhtml+xml` no cabeçalho HTTP `Content-Type`, você não precisará de um DOCTYPE para ativar o _full standards mode_, já que tais documentos sempre usam este modo. Note porém que servir suas páginas como `application/xhtml+xml` irá fazer com que o Internet Explorer 8 (e anteriores) [mostre uma caixa de diálogo para download](/pt-BR/docs/XHTML#Support) de um formato desconhecido ao invés de exibir sua página, pois a primeira versão do Internet Explorer com suporte ao XHTML é o Internet Explorer 9.
+Se você servir sua página como [XHTML](/pt-BR/docs/Glossary/XHTML) usando o MIME type `application/xhtml+xml` no cabeçalho HTTP `Content-Type`, você não precisará de um DOCTYPE para ativar o _full standards mode_, já que tais documentos sempre usam este modo. Note porém que servir suas páginas como `application/xhtml+xml` irá fazer com que o Internet Explorer 8 (e anteriores) [mostre uma caixa de diálogo para download](/pt-BR/docs/Glossary/XHTML#support) de um formato desconhecido ao invés de exibir sua página, pois a primeira versão do Internet Explorer com suporte ao XHTML é o Internet Explorer 9.
 
 Se você servir conteúdo como XHTML usando o MIME type `text/html`, os navegadores irão lê-lo como HTML, e você precisará colocar o DOCTYPE para usar o _standards mode_.
 

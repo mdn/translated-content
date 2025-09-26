@@ -1,18 +1,33 @@
 ---
 title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Objects")}}
+**`isNaN()`** 関数は、必要に応じてまず値を数値に変換してから、引数が {{jsxref("NaN")}} (非数) かどうかを判定します。 `isNaN()` 関数内の型変換は[予想外](#解説)の結果になることがあるため、 {{jsxref("Number.isNaN()")}} を使用することをお勧めします。
 
-**`isNaN()`** 関数は引数が {{jsxref("NaN")}} (非数) かどうかを判定します。`isNaN` 関数の型強制は[意外なもの](#confusing_special-case_behavior)になる可能性があるため、他の {{jsxref("Number.isNaN()")}} を使用した方が良いかもしれません。
+{{InteractiveExample("JavaScript デモ: isNaN()")}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
+```js interactive-example
+function milliseconds(x) {
+  if (isNaN(x)) {
+    return "Not a Number!";
+  }
+  return x * 1000;
+}
+
+console.log(milliseconds("100F"));
+// 予想される結果: "Not a Number!"
+
+console.log(milliseconds("0.0314E+2"));
+// 予想される結果: 3140
+```
 
 ## 構文
 
-```js
-isNaN(value);
+```js-nolint
+isNaN(value)
 ```
 
 ### 引数
@@ -22,36 +37,26 @@ isNaN(value);
 
 ### 返値
 
-渡された値が {{jsxref("NaN")}} である場合は **`true`** を返し, そうでなければ **`false`** を返します。
+指定された値を[数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)した後で {{jsxref("NaN")}} であれば、 `true` を返します。それ以外の場合は、 `false` を返します。
 
 ## 解説
 
-### isNaN 関数の必要性
+`isNaN()` は、グローバルオブジェクトの関数プロパティです。
 
-JavaScript のその他すべての値とは違い、等値性評価演算子（== と ===）を {{jsxref("NaN")}} に対して使用してその値が `NaN` であるかどうかを判定することはできません。 `NaN == NaN` と `NaN === NaN` はどちらも `false` と評価されるからです。そこで、`isNaN` が必要となります。
+数値の場合、 `isNaN()` は、その数値が [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) であるかどうかを検査します。 `isNaN()` 関数の引数が[数値](/ja/docs/Web/JavaScript/Guide/Data_structures#数値型)型でない場合、その値はまず数値に変換され、その結果が {{jsxref("NaN")}} と比較されます。
 
-### NaN 値の生成条件
+数値以外の引数に対する `isNaN()` のこの動作は、紛らわしいかもしれません。例えば、空文字列は 0 に強制変換されますが、論理値は 0 または 1 に強制変換されます。どちらの値も直感的には「数値ではない」ですが、 `NaN` と評価されないため、 `isNaN()` は `false` を返します。したがって、 `isNaN()` は、「入力は浮動小数点 {{jsxref("NaN")}} 値であるか」という質問にも、「入力は数値ではないか」という質問にも答えません。
 
-`NaN` の値は、算術演算の結果が*未定義*または*表現不可能*な値となった時に生成されます。こうした値が常にオーバーフロー状態を表現するとは限りません。`NaN` はプリミティブな数値が利用不可能といった、非数値を数値へと型強制した結果として生成されることもあります。
+{{jsxref("Number.isNaN()")}} は、値が数値 `NaN` であるかどうかを検査する、より信頼性の高い方法です。あるいは、式 `x !== x` を使用することもできます。どちらの解決策も、グローバルな `isNaN()` の信頼できない誤検出の影響を受けません。値が数値であるかどうかを検査するには、 [`typeof x === "number"`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) を使用してください。
 
-例えば、ゼロをゼロで除算した場合の結果は `NaN` になりますが、その他の数をゼロで除算した場合は異なります。
+`isNaN()` 関数は、「入力は、数値コンテキストで使用した場合、 {{jsxref("NaN")}} と機能的に同等であるか」という質問に答えます。 `isNaN(x)` が `false` を返す場合、 `x` は `NaN` ではない有効な数値であるかのように、算術式で使用することができます。 `isNaN(x)` が `true` を返す場合、 `x` は `NaN` に強制変換され、ほとんどの算術式は `NaN` を返します（`NaN` は伝播するため）。これを使用すると、例えば、関数の引数が算術処理可能（数値と同様に使用可能）であるかどうかをテストし、数値ではない値の場合にエラーを発生させたり、既定値を提供して処理させたりすることができます。このようにして、コンテキストに応じて値を暗黙的に変換することで、 JavaScript が提供する汎用性を最大限に活用する関数を持つことができます。
 
-### 特殊な場合における厄介な動作
-
-`isNaN` 関数の定義はごく初期のバージョン以降、数値ではない引数における振る舞いが分かりにくいものとなっていました。 `isNaN` 関数の引数が[数値型](http://es5.github.com/#x8.5)ではない場合、その値はまず数へと型強制されます。その結果の値はその後 {{jsxref("NaN")}} かどうかがテストされます。このようにして、数値型に型強制される際に結果が NaN ではない数値となる非数値 (とりわけ型強制されると 0 や 1 の値になる空文字列や論理値プリミティブ) に対しては、予想外なことに "false" が返されます。無論、例えば空文字列は「数ではありません」。この混乱は、 "not a number" (数ではない) というこの用語が IEEE-754 浮動小数点数定義で表現された数においては特別な意味を持っていることに起因しています。この関数は、「この値を数値型に型強制した場合、IEEE-754 における 'Not A Number' という値になりますか？」という質問に答えるものとして解釈すべきです。
-
-ECMAScript 2015 では {{jsxref("Number.isNaN()")}} 関数が存在します。`Number.isNaN(x)` は `x` が `NaN` かどうかをテストする確実な方法です。しかしながら `Number.isNaN` においても、`NaN` の意味は明確な数値的意味を持つ "not a number" のままです。`Number.isNaN` が利用できない場合、`x` が `NaN` かどうかを確実にテストする代わりの方法として `(x != x)` という式があります。この式の結果は信頼性のない `isNaN` が引き起こす誤検出の影響を受けません。
-
-`isNaN` のポリフィルは以下のようになります (このポリフィルは `NaN` が自分自身と常に等しくならないという特徴を利用しています)。
-
-```js
-const isNaN = function (value) {
-  const n = Number(value);
-  return n !== n;
-};
-```
+> [!NOTE]
+> [`+` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)は、数値の加算と文字列の連結の両方を実行します。したがって、 `isNaN()` が両方のオペランドに対して `false` を返した場合でも、 `+` 演算子は算術演算子として使用されないため、文字列を返す場合があります。例えば、 `isNaN("1")` は `false` を返しますが、 `"1" + 1` は `"11"` を返します。確実に数値で処理を行うには、[値を数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)し、 {{jsxref("Number.isNaN()")}} を使用して結果を検査してください。
 
 ## 例
+
+`isNaN()` は、値 `NaN` でなく、数値でもない値に対して `true` を返すことに注意してください。
 
 ```js
 isNaN(NaN); // true
@@ -62,28 +67,23 @@ isNaN(true); // false
 isNaN(null); // false
 isNaN(37); // false
 
-// strings
+// 文字列
 isNaN("37"); // false: "37" は非数でない数値 37 に変換される
 isNaN("37.37"); // false: "37.37" は非数でない数値 37.37 に変換される
 isNaN("37,5"); // true
-isNaN("123ABC"); // true:  parseInt("123ABC") の結果は 123、しかし Number("123ABC") の結果は NaN
+isNaN("123ABC"); // true: Number("123ABC") の結果は非数
 isNaN(""); // false: 空文字列は非数でない 0 に変換される
 isNaN(" "); // false: 半角スペースからなる文字列は非数でない 0 に変換される
 
-// dates
-isNaN(new Date()); // false
-isNaN(new Date().toString()); // true
+// 日付
+isNaN(new Date()); // false: Date オブジェクトは数値（タイムスタンプ）に変換される
+isNaN(new Date().toString()); // true: Date オブジェクトの文字列表現は数値として解釈できない
 
-// isNaN が信頼性に欠ける理由となる誤検出の例
-isNaN("blabla"); // true: "blabla" が数値に変換される。
-// 数値への変換が失敗し NaN が返される。
+// 配列
+isNaN([]); // false: プリミティブ表現は "" となり、数値 0 へ変換される
+isNaN([1]); // false: プリミティブ表現は "1" となる
+isNaN([1, 2]); // true: プリミティブ表現は "1,2" となり、数値として解釈できない
 ```
-
-### 特殊な場合における便利な動作
-
-`isNaN()` のふるまいを考慮した別の使用方法があります。`isNaN(x)` が `false` を返す場合、`NaN` を返すことなく算術式内で `x` を使用できます。`true` を返す場合、`x` を使用すると全ての算術式で `NaN` を返すことになります。これはつまり、JavaScript において `isNaN(x) == true` という式は、`x - 0` という式が `NaN` を返すかどうか、というケースと同等である（JavaScript では `x - 0 == NaN` は常に false を返すため、このことを確認できませんが）ということです。実際、`isNaN(x)`、`isNaN(x - 0)`、`isNaN(Number(x))`、`Number.isNaN(x - 0)`、そして `Number.isNaN(Number(x))` は常に同じ値を返し、JavaScript では `isNaN(x)` がこれらの条件を表す最も短い形式となります。
-
-例えばこの動作を使って、ある関数への引数が算術処理可能か (数値として利用できるか) どうかをテストするのに利用し、そうでない場合は既定値などを与えるようにできます。この方法によりコンテキスト次第で値を暗黙的に変換する汎用性の高い JavaScript 関数を作成できます。
 
 ## 仕様書
 

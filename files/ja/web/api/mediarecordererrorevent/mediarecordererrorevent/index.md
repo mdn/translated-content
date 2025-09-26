@@ -9,7 +9,8 @@ l10n:
 
 **`MediaRecorderErrorEvent()`** コンストラクターは、新しい {{domxref("MediaRecorderErrorEvent")}} オブジェクトを作成します。これは、[MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) によるメディアの記録中に発生したエラーを表します。
 
-> **メモ:** 一般に、これらを自分で作成することはありません。 メディアの記録中にエラーが発生すると、 {{domxref("MediaRecorder.error_event", "onerror")}} の実装に配信されます。
+> [!NOTE]
+> 一般に、これらを自分で作成することはありません。 メディアの記録中にエラーが発生すると、 {{domxref("MediaRecorder.error_event", "onerror")}} の実装に配信されます。
 
 ## 構文
 
@@ -27,13 +28,14 @@ new MediaRecorderErrorEvent(type, options)
     - `error`
       - : 発生したエラーを説明する {{domxref("DOMException")}}。 このオブジェクトの {{domxref("DOMException.name", "name")}} プロパティは、発生したエラーの名前を示すべきです。 他のフィールドは存在する場合と存在しない場合があります。
 
-> **メモ:** 一部の{{Glossary("user agent", "ユーザーエージェント")}}は、スタックダンプ、JavaScript ファイルの名前、エラーが発生した行番号、その他のデバッグツールなどの情報を提供するその他のプロパティを `error` オブジェクトに追加しますが、本番環境ではこの情報に頼るべきではありません。
+> [!NOTE]
+> 一部の{{Glossary("user agent", "ユーザーエージェント")}}は、スタックダンプ、JavaScript ファイルの名前、エラーが発生した行番号、その他のデバッグツールなどの情報を提供するその他のプロパティを `error` オブジェクトに追加しますが、本番環境ではこの情報に頼るべきではありません。
 
 ### 返値
 
 新しい {{domxref("MediaRecorderErrorEvent")}} オブジェクトです。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

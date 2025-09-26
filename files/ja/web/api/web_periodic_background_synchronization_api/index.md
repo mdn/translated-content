@@ -15,11 +15,12 @@ l10n:
 
 API が呼び出された際には最小の時間間隔が設定されますが、ユーザーエージェントはサービスワーカーがそのイベントを受け取るタイミングに影響を与える様々な要素を考慮します。その要素には、例えばウェブサイトのエンゲージメントや特定のネットワークへの接続などがあります。
 
-{{domxref('PeriodicSyncManager')}} インターフェースは {{domxref('ServiceWorkerRegistration.periodicSync')}} によって提供されます。一意のタグが sync イベントの 'name' として設定され、これは {{domxref('ServiceWorker')}} スクリプト内で取得することができます。イベントを受け取った際には、キャッシュの更新や新たなリソースの取得といった任意の利用可能な機能を実行することができます
+{{domxref('PeriodicSyncManager')}} インターフェイスは {{domxref('ServiceWorkerRegistration.periodicSync')}} によって提供されます。一意のタグが sync イベントの 'name' として設定され、これは {{domxref('ServiceWorker')}} スクリプト内で取得することができます。イベントを受け取った際には、キャッシュの更新や新たなリソースの取得といった任意の利用可能な機能を実行することができます
 
-この API はサービスワーカーに依存しているため、この API も安全なコンテキストでしか利用できません。
+この API はサービスワーカーに依存しているため、この API も保護されたコンテキストでしか利用できません。
 
-> **メモ:** 執筆時点では、ウェブ定期バックグラウンド同期 API は、インストールされた[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)を介してのみ利用可能です。
+> [!NOTE]
+> 執筆時点では、ウェブ定期バックグラウンド同期 API は、インストールされた[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)を介してのみ利用可能です。
 
 ## ウェブ定期バックグラウンド同期インターフェイス
 
@@ -49,11 +50,11 @@ API が呼び出された際には最小の時間間隔が設定されますが�
 async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
-    await registration.periodicSync.register('get-latest-news', {
+    await registration.periodicSync.register("get-latest-news", {
       minInterval: 24 * 60 * 60 * 1000,
     });
   } catch {
-    console.log('Periodic Sync could not be registered!');
+    console.log("Periodic Sync could not be registered!");
   }
 }
 ```
@@ -65,8 +66,7 @@ async function registerPeriodicNewsCheck() {
 ```js
 navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.getTags().then((tags) => {
-    if (tags.includes('get-latest-news'))
-      skipDownloadingLatestNewsOnPageLoad();
+    if (tags.includes("get-latest-news")) skipDownloadingLatestNewsOnPageLoad();
   });
 });
 ```
@@ -77,7 +77,7 @@ navigator.serviceWorker.ready.then((registration) => {
 
 ```js
 navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.unregister('get-latest-news');
+  registration.periodicSync.unregister("get-latest-news");
 });
 ```
 
@@ -86,8 +86,8 @@ navigator.serviceWorker.ready.then((registration) => {
 以下の例では、サービスワーカーの定期的な同期イベントに応答する方法を示しています。
 
 ```js
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'get-latest-news') {
+self.addEventListener("periodicsync", (event) => {
+  if (event.tag === "get-latest-news") {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });

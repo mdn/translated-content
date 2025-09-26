@@ -3,16 +3,14 @@ title: Firefox
 slug: Mozilla/Firefox
 ---
 
-{{FirefoxSidebar}}
-
-O [Firefox](https://www.mozilla.org/pt-br/docs/firefox/new/) é um popular navegador de internet da Mozilla, disponível para várias plataformas como Windows, Mac OS X e Linux no desktop, bem como Android e iOS nos dispositivos móveis. Sendo altamente compatível com as últimas tecnologias web e poderosas [ferramentas de desenvolvimento](/pt-BR/docs/Tools), o Firefox é um excelente navegador tanto para usuários comuns quanto desenvolvedores web.
+O [Firefox](https://www.mozilla.org/pt-br/docs/firefox/new/) é um popular navegador de internet da Mozilla, disponível para várias plataformas como Windows, Mac OS X e Linux no desktop, bem como Android e iOS nos dispositivos móveis. Sendo altamente compatível com as últimas tecnologias web e poderosas [ferramentas de desenvolvimento](https://firefox-source-docs.mozilla.org/devtools-user/index.html), o Firefox é um excelente navegador tanto para usuários comuns quanto desenvolvedores web.
 
 Firefox é um projeto de código aberto; muito do seu código vem de contribuições de uma gigantesca comunidade de voluntários. Aqui você irá aprender sobre como contribuir com o projeto Firefox, além de encontrar links para documentação sobre construção de add-ons do Firefox, uso de ferramentas do Firefox para desenvolvedores, entre outros.
 
 Aprenda a criar complementos para [Firefox](https://www.mozilla.org/pt-br/docs/firefox/), como desenvolver e compilar o Firefox, como funciona internamente o Firefox e subprojetos.
 
 - Notas de lançamento para o desenvolvedor
-  - : [Notas de versão focada em desenvolvedores](/pt-BR/docs/Firefox/Releases); aprenda quais são os novos recursos para ambos Web sites e add-on que chegam a cada versão do Firefox.
+  - : [Notas de versão focada em desenvolvedores](/pt-BR/docs/Mozilla/Firefox/Releases); aprenda quais são os novos recursos para ambos Web sites e add-on que chegam a cada versão do Firefox.
 - Documentação do projeto
   - : Encontre informações detalhadas sobre [o funcionamento do Firefox](/pt-BR/docs/Mozilla) e o seu sistema de versões, assim você poderá encontrar o seu caminho no código.
 - Guia do desenvolvedor
@@ -32,7 +30,7 @@ A cada noite nós geramos uma _build_ do Firefox com o código mais recente no [
 
 Esta é uma versão do Firefox feita para desenvolvedores. A cada seis semanas, nós pegamos as funcionalidades que estão no Firefox Nightly e são estáveis o suficiente e criamos uma nova versão do Firefox Developer Edition. Nós também adicionamos alguns recursos extras que estão disponíveis apenas neste canal.
 
-[Saiba mais sobre o Firefox Developer Edition](/pt-BR/Firefox/Developer_Edition).
+[Saiba mais sobre o Firefox Developer Edition](/pt-BR/docs/Mozilla/Firefox/Developer_Edition).
 
 [Baixar o Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
 
@@ -52,7 +50,7 @@ Após estabilizar por outras seis semanas no Beta, nós estamos prontos para ent
 
 Firefox ESR é uma edição de suporte de longo prazo do Firefox para desktop. Feito para ser usado em organizações como escolas, universidades, empresas e outras que necessitam de suporte extendido para distribuições em massa.
 
-[Saiba mais sobre o Firefox Extended Support Release.](/pt-BR/Firefox/Firefox_ESR)
+[Saiba mais sobre o Firefox Extended Support Release.](/pt-BR/docs/Mozilla/Firefox/Firefox_ESR)
 
 [Baixar o Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
 

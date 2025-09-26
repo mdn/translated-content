@@ -3,11 +3,14 @@ title: FormData()
 slug: Web/API/FormData/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Le constructeur **`FormData()`** crée un nouvel objet {{domxref("FormData")}}.
 
-> **Note :** Cette fonctionnalité est disponible dans [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette fonctionnalité est disponible dans [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
@@ -54,7 +57,8 @@ Ou vous pouvez spécifier l'argument optionnel `form` à la création de l'objet
 </form>
 ```
 
-> **Note :** Seuls les champs de formulaires valides sont inclus dans un objet FormData, c'est-à-dire ceux qui portent un nom (attribut `name`), qui ne sont pas désactivés et qui sont cochés (boutons radio et cases à cocher) ou sélectionnés (une ou plusieurs options dans une sélection).
+> [!NOTE]
+> Seuls les champs de formulaires valides sont inclus dans un objet FormData, c'est-à-dire ceux qui portent un nom (attribut `name`), qui ne sont pas désactivés et qui sont cochés (boutons radio et cases à cocher) ou sélectionnés (une ou plusieurs options dans une sélection).
 
 ```js
 var myForm = document.getElementById("myForm");
@@ -72,6 +76,6 @@ formData = new FormData(myForm);
 ## Voir aussi
 
 - {{domxref("XMLHTTPRequest")}}
-- [Manipuler `XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Utiliser les objets `FormData`](/fr/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Manipuler `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

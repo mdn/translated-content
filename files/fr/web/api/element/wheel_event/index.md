@@ -23,5 +23,5 @@ element.onwheel = function() { .. }
 
 ## Voir aussi
 
-- [Document: `wheel` event](/fr/docs/Web/API/Document/wheel_event)
+- [Document: `wheel` event](/fr/docs/Web/API/Element/wheel_event)
 - [Element: `wheel` event](/fr/docs/Web/API/Element/wheel_event)

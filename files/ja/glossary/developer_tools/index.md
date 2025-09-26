@@ -1,22 +1,21 @@
 ---
-title: 開発者ツール
+title: Developer Tools (開発者ツール)
 slug: Glossary/Developer_Tools
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-開発者ツール（"DevTools"と略されます）は開発者がソフトウェアを作成、テスト、{{Glossary("debug", "デバッグ")}} するのを助けるプログラムです。
+{{GlossarySidebar}}
 
-現在のブラウザーには、ウェブサイトの調査を可能にする開発者ツールが統合されています。ブラウザーの開発者ツールによって、ウェブサイトの{{Glossary("HTML")}}/{{Glossary("CSS")}}/{{Glossary("JavaScript")}}の調査やデバッグ、ウェブサイトによって発生したネットワークトラフィックの調査、ウェブサイトのパフォーマンスの計測など、たくさんのことが可能となります。
+開発者ツール（"DevTools" と略されます）は開発者がソフトウェアを作成、テスト、デバッグするのを助けるプログラムです。
 
-## 関連項目
+現在のブラウザーには、ウェブサイトの調査を可能にする開発者ツールが統合されています。ブラウザーの開発者ツールによって、ウェブサイトの {{Glossary("HTML")}}、{{Glossary("CSS")}}、{{Glossary("JavaScript")}} の調査やデバッグ、ウェブサイトによって発生したネットワークトラフィックの調査、ウェブサイトのパフォーマンスの計測など、たくさんのことが可能となります。
 
-### 基礎知識
+## 関連情報
 
-- Wikipedia 上の記事：[Web development tools](https://en.wikipedia.org/wiki/Web_development_tools)
-
-### 技術リファレンス
-
-- MDN 上の記事：[Firefox Developer Tools](/ja/docs/Tools)
+- [Web development tools](https://en.wikipedia.org/wiki/Web_development_tools) (Wikipedia)
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) (MDN)
 - [Firebug](https://getfirebug.com/) (Firefox 向けの以前の開発者ツール)
-- chrome.com 上の記事：[Chrome DevTools](https://developer.chrome.com/devtools)
-- apple.com 上の記事：[Safari Web Inspector](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1)
-- microsoft.com 上の記事：[Edge Dev Tools](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide)
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) (chrome.com)
+- [Safari Developer Tools](https://support.apple.com/en-gb/guide/safari-developer/dev073038698/mac) (apple.com)
+- [Edge Dev Tools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) (microsoft.com)

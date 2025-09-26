@@ -3,13 +3,109 @@ title: position
 slug: Web/CSS/position
 ---
 
-{{CSSRef}}Свойство {{cssxref('','CSS')}} **`position`** указывает, как элемент позиционируется в документе. {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} определяют конечное местоположение позиционированных элементов.{{EmbedInteractiveExample("pages/css/position.html")}}
+{{CSSRef}}
+
+[CSS](/ru/docs/Web/CSS)-свойство **`position`** указывает, как элемент позиционируется в документе. Свойства {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} определяют конечное местоположение позиционируемых элементов.
+
+{{InteractiveExample("CSS Demo: position")}}
+
+```css interactive-example-choice
+position: static;
+```
+
+```css interactive-example-choice
+position: relative;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: absolute;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: sticky;
+top: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element-container">
+    <p>
+      In this demo you can control the <code>position</code> property for the
+      yellow box.
+    </p>
+    <div class="box"></div>
+    <div class="box" id="example-element"></div>
+    <div class="box"></div>
+    <p class="clear">
+      To see the effect of <code>sticky</code> positioning, select the
+      <code>position: sticky</code> option and scroll this container.
+    </p>
+    <p>
+      The element will scroll along with its container, until it is at the top
+      of the container (or reaches the offset specified in <code>top</code>),
+      and will then stop scrolling, so it stays visible.
+    </p>
+    <p>
+      The rest of this text is only supplied to make sure the container
+      overflows, so as to enable you to scroll it and see the effect.
+    </p>
+    <hr />
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.box {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  float: left;
+  width: 65px;
+  height: 65px;
+}
+
+.box + .box {
+  margin-left: 10px;
+}
+
+.clear {
+  clear: both;
+  padding-top: 1em;
+}
+
+#example-element-container {
+  position: relative;
+  text-align: left;
+}
+
+#example-element {
+  background-color: yellow;
+  border: 3px solid red;
+  z-index: 1;
+}
+```
 
 ### Типы позиционирования
 
 - **Позиционируемый элемент** — это элемент, у которого {{cssxref('computed_value', 'вычисленное значение')}} `position` является `relative`, `absolute`, `fixed` либо `sticky`. (Другими словами, это все, кроме `static`.)
 - **Относительно позиционируемый элемент** является элементом, {{cssxref('computed_value', 'вычисленное значение')}} `position` которого является `relative`. Свойства {{cssxref('top')}} и {{cssxref('bottom')}} определяют смещение по вертикали от его нормального положения; свойства {{cssxref('left')}} и {{cssxref('right')}} задают горизонтальное смещение.
-- **Абсолютно позиционируемый элемент** — это элемент, чьё {{cssxref('computed_value', 'вычисленное значение')}} `position` является `absolute` или `fixed`. {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} задают смещения от краёв {{cssxref('Containing_Block', 'содержащего блок элемента')}}. (Содержащий блок является предком, относительно которого расположен элемент.) Если элемент имеет поля, они добавляются к смещению. Элемент устанавливает новый [контекст форматирования блока](/ru/docs/Web/Guide/CSS/Block_formatting_context) (BFC) для своего содержимого.
+- **Абсолютно позиционируемый элемент** — это элемент, чьё {{cssxref('computed_value', 'вычисленное значение')}} `position` является `absolute` или `fixed`. {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} задают смещения от краёв {{cssxref('Containing_Block', 'содержащего блок элемента')}}. (Содержащий блок является предком, относительно которого расположен элемент.) Если элемент имеет поля, они добавляются к смещению. Элемент устанавливает новый [контекст форматирования блока](/ru/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) для своего содержимого.
 - **Элемент с липкой позицией** — это элемент, у которого {{cssxref('computed_value', 'значение вычисленного')}} `position` является `sticky`. Он рассматривается как относительно позиционированный до тех пор, пока {{cssxref('Containing_Block', 'содержащий его блок')}} не пересечёт указанный порог (например, установка {{cssxref('top')}} в значение, отличное от `auto`) внутри его корня потока (или в контейнере, в котором он прокручивается), после чего он обрабатывается как «застрявший» до тех пор, пока не встретит противоположный край {{cssxref('Containing_Block', 'содержащего его блока')}}.
 
 В большинстве случаев абсолютно позиционированные элементы, которые имеют {{cssxref('height')}} и {{cssxref('width')}} установленные в `auto`, имеют размер, соответствующий их содержимому. Тем не менее, незамещаемые, абсолютно позиционированные элементы можно сделать такими, чтобы они заполнили доступное вертикальное пространство, указав как {{cssxref('top')}}, так и {{cssxref('bottom')}}, и оставляя {{cssxref('height')}} неопределённым (то есть , `auto`). Ими также можно заполнить доступное горизонтальное пространство, указав как {{cssxref('left')}}, так и {{cssxref('right')}}, и оставляя {{cssxref('width')}} как `auto`.
@@ -322,11 +418,8 @@ dd + dd {
 
 ## Характеристики
 
-| Спецификация                                                        | Статус                        | Коммент                              |
-| ------------------------------------------------------------------- | ----------------------------- | ------------------------------------ |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}           |                                      |
-| {{SpecName('CSS3 Positioning','#position-property','position')}}    | {{Spec2('CSS3 Positioning')}} | Добавляет значение свойства `sticky` |
+{{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}

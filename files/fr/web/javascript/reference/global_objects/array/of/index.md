@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/of
 
 La methode **`Array.of()`** permet de créer une nouvelle instance d'objet `Array` à partir d'un nombre variable d'arguments, quels que soient leur nombre ou leur type.
 
-La différence entre **`Array.of()`** et le constructeur **`Array`** se situe dans la gestion de d'arguments entiers : **`Array.of(7)`** crée un tableau avec un seul élément, 7, tandis que **`Array(7)`** produit un tableau avec 7 éléments vides (à ne pas confondre avec des éléments qui auraient explicitement la valeur [`undefined`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/undefined)).
+La différence entre **`Array.of()`** et le constructeur **`Array`** se situe dans la gestion de d'arguments entiers : **`Array.of(7)`** crée un tableau avec un seul élément, 7, tandis que **`Array(7)`** produit un tableau avec 7 éléments vides (à ne pas confondre avec des éléments qui auraient explicitement la valeur [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ```js
 Array.of(7); // [7]

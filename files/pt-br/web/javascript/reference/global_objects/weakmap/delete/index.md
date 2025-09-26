@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 
 O método **`delete()`** remover o elemento especificado ou setado a partir de um objeto instanciado do `WeakMap`.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+
+weakmap1.set(object1, 42);
+
+console.log(weakmap1.delete(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object1));
+// Expected output: false
+```
 
 ## Sintaxe
 
@@ -39,14 +52,11 @@ wm.has(window); // Retorna false. O objeto window não é mais pertecente ao Wea
 
 ## Especificações
 
-| Especificação                                                                        | Status               | Comentário        |
-| ------------------------------------------------------------------------------------ | -------------------- | ----------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}  | {{Spec2('ES2015')}}  | Definição inicial |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.delete")}}
+{{Compat}}
 
 ## Ver também
 

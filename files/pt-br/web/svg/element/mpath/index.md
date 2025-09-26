@@ -63,8 +63,8 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atributos específicos
@@ -73,7 +73,7 @@ Resultado:
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGMPathElement`](/pt-BR/DOM/SVGMPathElement).
+Este elemento implementa a interface do [`SVGMPathElement`](/pt-BR/docs/DOM/SVGMPathElement).
 
 ## Relacionado
 

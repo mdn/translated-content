@@ -5,15 +5,61 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS)의 **`justify-content`** 속성은 브라우저가 콘텐츠 항목 사이와 주변의 공간을 플렉스 컨테이너에서는 {{Glossary("Main Axis", "main-axis")}}, 그리고 그리드 컨테이너에서는 인라인 축을 기준으로 어떻게 정렬할 것인지를 정의합니다.
 
 아래의 상호작용하는 예제는 그리드 레이아웃을 사용할 때의 일부 값들을 설명합니다.
 
-{{EmbedInteractiveExample("pages/css/justify-content.html")}}
+{{InteractiveExample("CSS Demo: justify-content")}}
 
-자동 바깥 여백과 길이가 적용된 이후에 정렬이 적용됩니다. 즉, [Flexbox layout](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout) 안에서 최소 하나의 플렉스 요소가 `0`이 아닌 {{cssxref("flex-grow")}} 값을 갖는다면, 더 이상 사용할 수 있는 공간이 없기 때문에 아무 효과가 없습니다.
+```css interactive-example-choice
+justify-content: start;
+```
+
+```css interactive-example-choice
+justify-content: center;
+```
+
+```css interactive-example-choice
+justify-content: space-between;
+```
+
+```css interactive-example-choice
+justify-content: space-around;
+```
+
+```css interactive-example-choice
+justify-content: space-evenly;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 220px;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  row-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
+
+자동 바깥 여백과 길이가 적용된 이후에 정렬이 적용됩니다. 즉, [Flexbox layout](/ko/docs/Web/CSS/CSS_flexible_box_layout) 안에서 최소 하나의 플렉스 요소가 `0`이 아닌 {{cssxref("flex-grow")}} 값을 갖는다면, 더 이상 사용할 수 있는 공간이 없기 때문에 아무 효과가 없습니다.
 
 ## 구문
 
@@ -166,7 +212,7 @@ justifyContent.addEventListener("change", (evt) => {
 
 ## 같이 보기
 
-- CSS Flexbox Guide: _[플렉스박스의 기본 개념](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[플렉스박스의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
 - CSS Flexbox Guide: _[플렉스 컨테이너에서 항목 정렬하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[CSS 그리드 레이아웃에서의 박스 정렬](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Grid Guide: _[CSS 그리드 레이아웃에서의 박스 정렬](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS 박스 정렬](/ko/docs/Web/CSS/CSS_Box_Alignment)

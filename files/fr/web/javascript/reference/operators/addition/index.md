@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Addition
 
 L'opérateur d'addition (`+`) produit la somme de deux opérandes numériques ou la concaténation de deux chaînes de caractères.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+
+```js interactive-example
+console.log(2 + 2);
+// Expected output: 4
+
+console.log(2 + true);
+// Expected output: 3
+
+console.log("hello " + "everyone");
+// Expected output: "hello everyone"
+
+console.log(2001 + ": A Space Odyssey");
+// Expected output: "2001: A Space Odyssey"
+```
 
 ## Syntaxe
 

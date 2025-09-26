@@ -3,12 +3,14 @@ title: abort
 slug: Web/API/IDBTransaction/abort_event
 ---
 
+{{APIRef("IndexedDB")}}
+
 Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompue.
 
 ## Informations générales
 
 - Spécification
-  - : [IndexedDB](http://www.w3.org/TR/IndexedDB/#request-api)
+  - : [IndexedDB](https://www.w3.org/TR/IndexedDB/#request-api)
 - Interface
   - : Event
 - Propagation
@@ -31,4 +33,4 @@ Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompu
 
 ## Voir aussi
 
-- [Utilisation d'IndexedDB](/fr/docs/IndexedDB/Using_IndexedDB)
+- [Utilisation d'IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)

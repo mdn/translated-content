@@ -29,14 +29,14 @@ Além disso, existem ferramentas para medir a integridade de uma aplicação Web
 
 Existem alguns princípios que uma aplicação Web deve tentar seguir para serem identificadas como uma PWA. Deveria ser:
 
-- [Detectável](/pt-BR/Apps/Progressive/Advantages#Discoverable), o seu conteúdo deve poder ser encontrado por mecanismos de busca na Web.
-- [Instalável](/pt-BR/Apps/Progressive/Advantages#Installable), deve poder ser acessada a partir da tela inicial do dispositivo.
-- [Linkavel](/Apps/Progressive/Advantages#Linkable), você deve poder compartilhar simplesmente enviando a sua URL.
-- [Independente de rede](/pt-BR/Apps/Progressive/Advantages#Network_independent), deve funcionar offline e ou com uma conexão fraca.
-- [Progressiva](/pt-BR/Apps/Progressive/Advantages#Progressive), deve funcionar em um nível básico e navegadores antigos e em um nível completo nos mais modernos.
-- [Re-engajável](/pt-BR/Apps/Progressive/Advantages#Re-engageable), deve ser possível enviar notificações.
-- [Responsiva](/pt-BR/Apps/Progressive/Advantages#Responsive), deve ser utilizável em qualquer dispositivo com uma tela e em navegadores — telefones móveis, tablets, laptops, TVs, geladeiras, etc.
-- [Segura](/pt-BR/Apps/Progressive/Advantages#Safe), a conexão deve ser segura contra terceiros que tentarem acessar dados confidenciais.
+- [Detectável](/pt-BR/docs/Apps/Progressive/Advantages#discoverable), o seu conteúdo deve poder ser encontrado por mecanismos de busca na Web.
+- [Instalável](/pt-BR/docs/Apps/Progressive/Advantages#installable), deve poder ser acessada a partir da tela inicial do dispositivo.
+- [Linkavel](/docs/Web/Apps/Progressive/Advantages#linkable), você deve poder compartilhar simplesmente enviando a sua URL.
+- [Independente de rede](/pt-BR/docs/Apps/Progressive/Advantages#network_independent), deve funcionar offline e ou com uma conexão fraca.
+- [Progressiva](/pt-BR/docs/Apps/Progressive/Advantages#progressive), deve funcionar em um nível básico e navegadores antigos e em um nível completo nos mais modernos.
+- [Re-engajável](/pt-BR/docs/Apps/Progressive/Advantages#re-engageable), deve ser possível enviar notificações.
+- [Responsiva](/pt-BR/docs/Apps/Progressive/Advantages#responsive), deve ser utilizável em qualquer dispositivo com uma tela e em navegadores — telefones móveis, tablets, laptops, TVs, geladeiras, etc.
+- [Segura](/pt-BR/docs/Apps/Progressive/Advantages#safe), a conexão deve ser segura contra terceiros que tentarem acessar dados confidenciais.
 
 ### Is it worth doing all that?
 
@@ -67,7 +67,7 @@ As mentioned before, PWAs don't depend on a single API, but rather using various
 
 The key ingredient required for PWAs is [service worker](/pt-BR/docs/Web/API/Service_Worker_API) support. Thankfully service workers are [now supported on all major browsers](https://jakearchibald.github.io/isserviceworkerready/) on desktop and mobile.
 
-Other features such as [Web App Manifest](/pt-BR/docs/Web/Manifest), [Push](/pt-BR/docs/Web/API/Push_API), [Notifications](/pt-BR/docs/Web/API/Notifications_API), and [Add to Home Screen](/pt-BR/docs/Web/Apps/Progressive/Add_to_home_screen) functionality have wide support too. Currently Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
+Other features such as [Web App Manifest](/pt-BR/docs/Web/Progressive_web_apps/Manifest), [Push](/pt-BR/docs/Web/API/Push_API), [Notifications](/pt-BR/docs/Web/API/Notifications_API), and [Add to Home Screen](/pt-BR/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) functionality have wide support too. Currently Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
 
 Some of these APIs are experimental, with the documentation still in draft, but seeing success stories like those of Flipkart and AliExpress should convince you to try and implement some of the PWA features in your web app already.
 
@@ -75,7 +75,7 @@ Above all you should follow the progressive enhancement rule — use the technol
 
 ## An example application
 
-In this series of articles we will examine the source code of a super simple website that lists information about games submitted to the [A-Frame category](http://js13kgames.com/aframe) in the [js13kGames 2017](http://2017.js13kgames.com/) competition. You don't have to think about what the actual content on the website is — the main point is to learn how to use PWA features in your own projects.
+In this series of articles we will examine the source code of a super simple website that lists information about games submitted to the [A-Frame category](https://js13kgames.com/aframe) in the [js13kGames 2017](https://2017.js13kgames.com/) competition. You don't have to think about what the actual content on the website is — the main point is to learn how to use PWA features in your own projects.
 
 You can find the online version at [mdn.github.io/pwa-examples/js13kpwa](https://mdn.github.io/pwa-examples/js13kpwa/) (also [see the source code](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)), which we will be carefully explaining in the next few articles.
 

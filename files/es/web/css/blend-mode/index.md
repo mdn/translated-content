@@ -3,8 +3,6 @@ title: <blend-mode>
 slug: Web/CSS/blend-mode
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo **`<blend-mode>`** es una coleccion de palabras clave que describen modos de mezcla.
@@ -20,13 +18,11 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
 ### Valores posibles
 
 - `normal`
-
   - : El color final es el de la capa superior, sin importar el color de fondo.
 
     El efecto es similar a dos trozos de papel sobrepuestos.
 
 - `multiply`
-
   - : El color final es el resultado de multiplicar el color superior y el inferior.
 
     Una capa negra conduce a una capa final negra, y una capa blanca lleva a que no haya cambios.
@@ -34,7 +30,6 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
     El efecto ese similar a dos imágenes impresas en papel transparente sobrepuestas.
 
 - `screen`
-
   - : El color final ees el resultado de invertir los colores, multiplicándolos e invirtiendo el valor resultante.
 
     Una capa negra no produce cambio alguno, y una capa blanca conduce a una capa blanca final.
@@ -42,21 +37,17 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
     El efecto es similar a dos imágenes mostrándose desde un proyector.
 
 - `overlay`
-
   - : El color final es el resultado de `multiply` si el color inferior es más oscuro, o `screen` si el color inferior es más claro.
 
     Este modo de mezcla es equivalente a `hard-light`, pero si las capas son intercambiadas.
 
 - `darken`
-
   - : El resultado final es un color compuesto de los valores más oscuros por cada canal de color.
 
 - `lighten`
-
   - : El resultado final es un color compuesto de los valores más claros por cada canal de color.
 
 - `color-dodge`
-
   - : El color final es el resultado de dividir el color inferior por el inverso del color superior.
 
     Un fondo negro no produce cambio alguno. Un color de primer plano con el color invertido del fondo produce un color completamente iluminado.
@@ -64,7 +55,6 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
     Este modo de mezcla es similar a `screen`, pero basta con que el color de primer plano sea tan claro como el inverso del color de fondo para alcanzar un color completamente iluminado.
 
 - `color-burn`
-
   - : El color final es el resultado de invertir el color de fondo, dividier el valor por el color superior, e invertir ese valor.
 
     Un fondo blanco no produce cambio alguno. Un color de primer plano con el color invertido del fondo produce una imagen negra.
@@ -72,7 +62,6 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
     Este modo de mezcla es similar a `multiply`, pero basta con que el color de primer plano sea tan oscuro como el inverso del color de fondo para dar como resultado una imagen negra.
 
 - `hard-light`
-
   - : El color final es el resultado de `multiply` si el color superior es más oscuro, o `screen` si el color superior es más oscuro.
 
     Este modo de mezcla es equivalente a `overlay`, pero con las capas intercambiadas.
@@ -80,7 +69,6 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
     El efecto es similar a encender un foco con mucha _intensidad_ en el fondo.
 
 - `soft-light`
-
   - : El color final es similar a `hard-light`, pero más suave.
 
     Este modo de mezcla se comporta similar a `hard-light`.
@@ -88,35 +76,29 @@ Sintaxis formal: normal | multiply | screen | overlay | darken | lighten | color
     El efecto es similar a encender un foco _difuso_ en el fondo.
 
 - `difference`
-
   - : El color final es elresultado de restar el color más oscuro de las dos capas, del más claro.
 
     Una capa negra no produce efecto alguno, mientras una capa blanca invierte el color de la otra capa.
 
 - `exclusion`
-
   - : El color final es similar a `difference,` pero con menor contraste.
 
     Así como con `difference`, una capa negra no produce efecto alguno, mientras una capa blanca invierte el color de la otra capa.
 
 - `hue`
-
   - : El color final tiene el _matiz_ del color superior, mientras usa la _saturación_ y _luminosidad_ del color inferior.
 
 - `saturation`
-
   - : El color final tiene la _saturación_ del color superior, mientras usa el _matiz_ y _luminosidad_ del color inferior.
 
     Un fondo gris puro, que no tenga saturación, no producirá efecto alguno.
 
 - `color`
-
   - : El color final tiene el **matiz** y **saturación** del color superior, mientras usa la _luminosidad_ del color inferior.
 
     El efecto preserva los niveles de grid y puede ser usado para colorear el primer plano.
 
 - `luminosity`
-
   - : El color final tiene la _luminosidad_ del color superior, mientras usa el _matiz_ y _saturación_ del color inferior.
 
     Este modo de mezcla es equivalente a `color`, pero con las capas intercambiadas.
@@ -411,4 +393,4 @@ Los cambios entre modos de mezcla no son interpolados. Cualquier cambio ocurrir�
 
 - Propiedades que usan valores de este tipo: {{cssxref("background-blend-mode")}} y {{cssxref("mix-blend-mode")}}
 - [Blend modes](http://en.wikipedia.org/wiki/Blend_modes)
-- Índice de [Referencia CSS](/es/docs/CSS/CSS_Reference)
+- Índice de [Referencia CSS](/es/docs/Web/CSS/Reference)

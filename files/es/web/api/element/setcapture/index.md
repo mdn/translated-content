@@ -65,7 +65,7 @@ En este ejemplo, las coordenadas actuales del mouse se dibujan mientras situas e
 </html>
 ```
 
-[Ver ejemplo en vivo](/samples/domref/mousecapture.html)
+[Ver ejemplo en vivo](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
 
 ## Notas
 

@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 
 **`toString()`** 메서드는 {{jsxref("Date")}} 객체의 시간을 문자열로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toString()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toString());
+// Expected output: "Tue Aug 19 1975 23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## 구문
 
@@ -39,14 +47,12 @@ dateObj.toString();
 - 공백
 - 문자열 "GMT"
 - 시간대 차이의 부호.
-
   - 0 이상일 경우 "+"
   - 0 미만일 경우 "-"
 
 - 두 글자 숫자로 표현한 시 차이. 예: "14"
 - 두 글자 숫자로 표현한 분 차이. 예: "00"
 - 선택사항: 다음으로 구성한 시간대의 이름.
-
   - 공백
   - 여는 소괄호
   - 구현마다 다를 수 있는 시간대 이름. 약어와 전체 이름 둘 다 가능. 예: "Korea Standard Time", "한국 표준시" 또는 "KST"

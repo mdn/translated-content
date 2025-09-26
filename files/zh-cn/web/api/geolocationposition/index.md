@@ -30,5 +30,5 @@ _`Position`接口没有继承任何属性。_
 
 ## 参阅
 
-- [使用地理位置定位](/zh-CN/docs/Web/API/Geolocation/Using_geolocation)
+- [使用地理位置定位](/zh-CN/docs/Web/API/Geolocation_API)
 - 使用它的{{domxref("Geolocation")}}接口。

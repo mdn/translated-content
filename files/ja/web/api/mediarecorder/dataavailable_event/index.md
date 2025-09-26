@@ -14,7 +14,8 @@ l10n:
 - {{domxref("MediaRecorder.requestData()")}} を呼び出すと、収録を開始してから、または最後に `dataavailable` イベントが発生してからキャプチャされたすべてのメディアデータが引き渡されます。 その後、新しい `Blob` が作成され、メディアのキャプチャがその blob に対して続行されます。
 - `timeslice` プロパティをメディアキャプチャを開始した {{domxref("MediaRecorder.start()")}} メソッドに渡した場合は、`timeslice` ミリ秒ごとに `dataavailable` イベントが発生します。 つまり、各 blob は特定の期間を持つことになります（最後の blob を除いてで、最後のイベント以降に残っているものは何でもということになるので、これはもっと短いかもしれません）。 そのため、メソッド呼び出しが次のようになっていれば — `recorder.start(1000);` — `dataavailable` イベントはメディアキャプチャの毎秒後に発生し、イベントハンドラーは一秒の長さのメディアデータの blob で毎秒呼ばれるでしょう。 `timeslice` を {{domxref("MediaRecorder.stop()")}} および {{domxref("MediaRecorder.requestData()")}} と共に使用して、複数の同じ長さの blob と他の短い blob を生成することもできます。
 
-> **メモ:** メディアデータを含む {{domxref("Blob")}} は、{{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントの `data` プロパティで利用できます。
+> [!NOTE]
+> メディアデータを含む {{domxref("Blob")}} は、{{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントの `data` プロパティで利用できます。
 
 ## 構文
 
@@ -38,17 +39,17 @@ const chunks = [];
 mediaRecorder.onstop = (e) => {
   console.log("MediaRecorder.stop() 呼び出し後に利用可能なデータ。");
 
-  const audio = document.createElement('audio');
+  const audio = document.createElement("audio");
   audio.controls = true;
-  const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
   const audioURL = window.URL.createObjectURL(blob);
   audio.src = audioURL;
   console.log("レコーダー停止");
-}
+};
 
 mediaRecorder.ondataavailable = (e) => {
   chunks.push(e.data);
-}
+};
 ```
 
 ## 仕様書

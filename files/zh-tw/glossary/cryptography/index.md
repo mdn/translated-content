@@ -13,4 +13,4 @@ slug: Glossary/Cryptography
 
 - 維基百科上的 [密碼學](https://zh.wikipedia.org/wiki/密碼學)
 - {{glossary("cryptanalysis")}}
-- [信息安全教程](/zh-TW/Learn/tutorial/Information_Security_Basics)
+- [信息安全教程](/zh-TW/docs/Learn/tutorial/Information_Security_Basics)

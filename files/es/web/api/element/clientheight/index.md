@@ -9,7 +9,8 @@ La propiedad de sólo lectura `Element.clientHeight` devuelve la altura de un el
 
 `clientHeight` puede ser calculado como CSS `height` + CSS `padding` - alto de la barra horizontal (si existe).
 
-> **Nota:** Esta propiedad redondeará el valor a un entero. Si necesitas un valor fraccional usa {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Esta propiedad redondeará el valor a un entero. Si necesitas un valor fraccional usa {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Sintaxis
 
@@ -35,5 +36,5 @@ var h = element.clientHeight;
 
 - {{domxref("Element.offsetHeight")}}
 - {{domxref("Element.scrollHeight")}}
-- [Determining the dimensions of elements](/es/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

@@ -1,23 +1,21 @@
 ---
-title: Document.plugins
+title: "Document: plugins プロパティ"
+short-title: plugins
 slug: Web/API/Document/plugins
+l10n:
+  sourceCommit: 512af5e9b7feff9d3e02ff02c780bf7a68c40a67
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} インターフェイスの **`plugins`** プロパティは読み取り専用で、現在の文書内にある {{HTMLElement("embed")}} 要素を表す 1 つ以上の {{domxref("HTMLEmbedElement")}} を含んだ {{domxref("HTMLCollection")}} オブジェクトを返します。
+**`plugins`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、現在の文書内にある {{HTMLElement("embed")}} 要素を表す 1 つ以上の {{domxref("HTMLEmbedElement")}} を含んだ {{domxref("HTMLCollection")}} オブジェクトを返します。
 
-> **メモ:** インストールされているプラグインの一覧には、このメソッドでなく {{domxref("window.navigator.plugins")}} を使用してください。
+> [!NOTE]
+> インストールされているプラグインの一覧には、このメソッドでなく [Navigator.plugins](/ja/docs/Web/API/Navigator/plugins) を使用してください。
 
-## 構文
+## 値
 
-```
-embedArrayObj = document.plugins
-```
-
-### 値
-
-{{domxref("HTMLCollection")}}、または文書内に embed がなければ `null` です。
+{{domxref("HTMLCollection")}} です。
 
 ## 仕様書
 
@@ -26,7 +24,3 @@ embedArrayObj = document.plugins
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- [MSDN documentation](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)

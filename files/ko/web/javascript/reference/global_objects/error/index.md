@@ -34,8 +34,7 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
   - : 변수나 매개변수가 유효한 자료형이 아님을 나타내는 오류 인스턴스를
     생성합니다.
 - {{jsxref("URIError")}}
-  - : {{jsxref("encodeURI", "encodeURI()")}}나 {{jsxref("decodeURI",
-    "decodeURl()")}} 함수에 부적절한 매개변수를 제공했을 때 발생하는 오류의
+  - : {{jsxref("encodeURI", "encodeURI()")}}나 {{jsxref("decodeURI", "decodeURl()")}} 함수에 부적절한 매개변수를 제공했을 때 발생하는 오류의
     인스턴스를 생성합니다.
 - {{JSxRef("AggregateError")}}
   - : 하나의 동작이 여러 개의 오류 발생시키는 경우(예:
@@ -68,13 +67,13 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
 - {{jsxref("Error.prototype.number")}}
   - : 오류 번호를 위한 비표준 마이크로소프트 속성
 - {{jsxref("Error.prototype.fileName")}}
-  - : 해당 오류를 발생시킨 파일의 경로를 표시하기 위한 비표준 모질라 속성
+  - : 해당 오류를 발생시킨 파일의 경로를 표시하기 위한 비표준 Mozilla 속성
 - {{jsxref("Error.prototype.lineNumber")}}
-  - : 해당 오류를 발생시킨 파일의 줄 번호를 표시하기 위한 비표준 모질라 속성
+  - : 해당 오류를 발생시킨 파일의 줄 번호를 표시하기 위한 비표준 Mozilla 속성
 - {{jsxref("Error.prototype.columnNumber")}}
-  - : 해당 오류를 발생시킨 파일의 칸 번호를 표시하기 위한 비표준 모질라 속성
+  - : 해당 오류를 발생시킨 파일의 칸 번호를 표시하기 위한 비표준 Mozilla 속성
 - {{jsxref("Error.prototype.stack")}}
-  - : 스택 추적을 위한 비표준 모질라 속성
+  - : 스택 추적을 위한 비표준 Mozilla 속성
 
 ## 인스턴스 메서드
 
@@ -86,9 +85,7 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
 
 ### 일반적인 오류 던지기
 
-`Error` 객체를 생성한 후엔 대개 {{jsxref("Statements/throw",
-  "throw")}} 키워드를 이용해 던집니다. {{jsxref("Statements/try...catch",
-  "try...catch")}} 구문을 이용하여 오류를 처리할 수 있습니다.
+`Error` 객체를 생성한 후엔 대개 {{jsxref("Statements/throw", "throw")}} 키워드를 이용해 던집니다. {{jsxref("Statements/try...catch", "try...catch")}} 구문을 이용하여 오류를 처리할 수 있습니다.
 
 ```js
 try {
@@ -102,8 +99,7 @@ try {
 
 오류의 {{jsxref("Object.prototype.constructor", "constructor")}} 속성을 이용해
 유형을 판별, 특정 오류만 처리할 수 있습니다. 만약 최신 Javascript 엔진에서
-동작하는 코드를 작성한다면 {{jsxref("Operators/instanceof",
-  "instanceof")}} 키워드를 이용할 수도 있습니다.
+동작하는 코드를 작성한다면 {{jsxref("Operators/instanceof", "instanceof")}} 키워드를 이용할 수도 있습니다.
 
 ```js
 try {
@@ -127,9 +123,11 @@ try {
 
 #### ES6 사용자 정의 오류 클래스
 
-> **경고:** Babel 버전 7 미만으로 사용자 정의 오류 클래스를 처리하려면 {{jsxref("Object.defineProperty()")}} 메서드를 사용해 정의해야만 합니다. 그렇지 않으면 오래된 Babel 및 다른 트랜스파일러가 [추가 설정](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) 없이 코드를 처리할 수 없습니다.
+> [!WARNING]
+> Babel 버전 7 미만으로 사용자 정의 오류 클래스를 처리하려면 {{jsxref("Object.defineProperty()")}} 메서드를 사용해 정의해야만 합니다. 그렇지 않으면 오래된 Babel 및 다른 트랜스파일러가 [추가 설정](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) 없이 코드를 처리할 수 없습니다.
 
-> **참고:** ES2015 클래스를 사용할 때, 일부 브라우저는 <code>CustomError</code> 생성자를 스택 트레이스에 포함합니다.
+> [!NOTE]
+> ES2015 클래스를 사용할 때, 일부 브라우저는 <code>CustomError</code> 생성자를 스택 트레이스에 포함합니다.
 
 ```js
 class CustomError extends Error {

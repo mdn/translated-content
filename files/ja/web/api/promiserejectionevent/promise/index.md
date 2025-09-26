@@ -23,12 +23,11 @@ l10n:
 window.onunhandledrejection = (event) => {
   if (event.reason?.code === "Module not ready") {
     requestIdleCallback((deadline) => {
-      loadModule(event.reason.moduleName)
-        .then(performStartup);
+      loadModule(event.reason.moduleName).then(performStartup);
     });
     event.preventDefault();
   }
-}
+};
 ```
 
 ## 仕様書

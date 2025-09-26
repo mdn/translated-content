@@ -36,7 +36,7 @@ El evento `load` se dispara cuando un recurso y sus recursos dependientes han te
 ## Información general
 
 - Especificación
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
 - Interfaz
   - : UIEvent
 - Propagación
@@ -65,8 +65,8 @@ El evento `load` se dispara cuando un recurso y sus recursos dependientes han te
 
 ## Eventos relacionados
 
-- [`DOMContentLoaded`](/es/docs/Web/Reference/Events/DOMContentLoaded)
-- [`readystatechange`](/es/docs/Web/Reference/Events/readystatechange)
-- [`load`](/es/docs/Web/Reference/Events/load)
-- [`beforeunload`](/es/docs/Web/Reference/Events/beforeunload)
-- [`unload`](/es/docs/Web/Reference/Events/unload)
+- [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event)
+- [`load`](/es/docs/Web/API/Window/load_event)
+- [`beforeunload`](/es/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/es/docs/Web/API/Window/unload_event)

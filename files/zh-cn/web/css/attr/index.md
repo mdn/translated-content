@@ -3,11 +3,10 @@ title: attr
 slug: Web/CSS/attr
 ---
 
-{{CSSRef}}
-
 ## 概述
 
-> **备注：** `attr()` 理论上能用于所有的 CSS 属性但目前支持的仅有伪元素的 {{CSSxRef("content")}} 属性，其他的属性和高级特性目前是实验性的
+> [!NOTE]
+> `attr()` 理论上能用于所有的 CSS 属性但目前支持的仅有伪元素的 {{CSSxRef("content")}} 属性，其他的属性和高级特性目前是实验性的
 >
 > 译者注：如果发现浏览器兼容表里 attr() 的高级用法依旧没有良好的支持的话，本文大部分内容都是纸上谈兵
 
@@ -15,10 +14,23 @@ CSS 表达式 `attr()` 用来获取选择到的元素的某一 HTML 属性值，
 
 `attr()` 表达式可以用于任何 CSS 属性。 {{ experimental_inline() }}
 
-## 用法
+## 语法
 
-```
-语法：attr( attribute-name <type-or-unit>? [, <fallback> ]? )
+```css
+/* 简单用法 */
+attr(data-count);
+attr(title);
+
+/* 带类型 */
+attr(src url);
+attr(data-count number);
+attr(data-width px);
+
+/* 带回退值 */
+attr(data-count number, 0);
+attr(src url, "");
+attr(data-width px, inherit);
+attr(data-something, "default");
 ```
 
 ### 解释
@@ -26,7 +38,6 @@ CSS 表达式 `attr()` 用来获取选择到的元素的某一 HTML 属性值，
 - `attribute-name`
   - : 是 CSS 所引用的 HTML 属性名称。
 - `<type-or-unit>`
-
   - : 表示所引用的属性值的单位。如果该单位相对于所引用的属性值不合法，那么`attr()`表达式也不合法。若省略，则默认值为`string`。其合法值包括：
 
     | 关键字                                                                                                           | 类型                              | 备注                                                                                                                                                                                                                                                                                     | 默认值                                                   |
@@ -41,7 +52,7 @@ CSS 表达式 `attr()` 用来获取选择到的元素的某一 HTML 属性值，
     | `angle` {{ experimental_inline() }}                                                                              | {{ cssxref("&lt;angle&gt;") }}    | 属性值将被解析为 CSS {{ cssxref("&lt;angle&gt;") }}，带单位，如`30.5deg`。若不是合法值（不是角度值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                                                                                    | `0deg`，或该属性允许的最小值（如果 0deg 是不合法的值）。 |
     | `deg`, `grad`, `rad` {{ experimental_inline() }}                                                                 | {{ cssxref("&lt;angle&gt;") }}    | 属性值将被解析为 CSS {{cssxref("&lt;number&gt;")}}，不带单位，如`12.5`)，并被解释为带有所规定单位的 {{ cssxref("&lt;angle&gt;") }} 值。若不是合法值（不是角度值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                       | `0deg`，或该属性允许的最小值（如果 0deg 是不合法的值）。 |
     | `time` {{ experimental_inline() }}                                                                               | {{cssxref("&lt;time&gt;")}}       | 属性值将被解析为 CSS {{cssxref("&lt;time&gt;")}}，带单位，如`30.5ms`。若不是合法值（不是时间值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                                                                                        | `0s`，或该属性允许的最小值（如果 0s 是不合法的值）。     |
-    | `s`, `ms` {{ experimental_inline() }}                                                                            | {{cssxref("&lt;time&gt;")}}       | 属性值将被解析为 CSS {{cssxref("&lt;time&gt;")}}，不带单位，如`30.5`，并被解释为带有所规定单位的 {{cssxref("&lt;time&gt;")}} 值。。若不是合法值（不是时间值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                           | `0s`，或该属性允许的最小值（如果 0s 是不合法的值）。     |
+    | `s`, `ms` {{ experimental_inline() }}                                                                            | {{cssxref("&lt;time&gt;")}}       | 属性值将被解析为 CSS {{cssxref("&lt;time&gt;")}}，不带单位，如`30.5`，并被解释为带有所规定单位的 {{cssxref("&lt;time&gt;")}} 值。若不是合法值（不是时间值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                             | `0s`，或该属性允许的最小值（如果 0s 是不合法的值）。     |
     | `frequency` {{ experimental_inline() }}                                                                          | {{cssxref("&lt;frequency&gt;")}}  | 属性值将被解析为 CSS {{cssxref("&lt;frequency&gt;")}}，带单位，如`12.5kHz`)。若不是合法值（不是频率值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                                                                                 | `0Hz`，或该属性允许的最小值（如果 0Hz 是不合法的值）。   |
     | `Hz`, `kHz` {{ experimental_inline() }}                                                                          | {{cssxref("&lt;frequency&gt;")}}  | 属性值将被解析为 CSS {{cssxref("&lt;frequency&gt;")}}，不带单位，如`12.5`)，并被解释为带有所规定单位的{{cssxref("&lt;frequency&gt;")}}值。若不是合法值（不是频率值或超出 CSS 属性规定的范围），则使用默认值。前缀与后缀空格将被截掉。                                                    | `0Hz`，或该属性允许的最小值（如果 0Hz 是不合法的值）。   |
     | `%` {{ experimental_inline() }}                                                                                  | {{cssxref("&lt;percentage&gt;")}} | 属性值将被解析为 CSS {{cssxref("&lt;number&gt;")}}，不带单位，如`12.5`)，并被解释为带有所规定单位的 {{cssxref("&lt;percentage&gt;")}}值。若不是合法值（不是数字或超出 CSS 属性规定的范围），则使用默认值。若属性值用作长度，`attr()`将其计算为绝对长度。前缀与后缀空格将被截掉。         | `0%`，或该属性允许的最小值（如果 0% 是不合法的值）。     |
@@ -128,5 +139,5 @@ hello world
 ## 参见
 
 - [Attribute selectors](/zh-CN/docs/Web/CSS/Attribute_selectors)
-- [HTML `data-*` attributes](/zh-CN/docs/Web/HTML/Global_attributes/data-*)
-- [SVG `data-*` attributes](/zh-CN/docs/Web/SVG/Attribute/data-*)
+- [HTML `data-*` attributes](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)
+- [SVG `data-*` attributes](/zh-CN/docs/Web/SVG/Reference/Attribute/data-*)

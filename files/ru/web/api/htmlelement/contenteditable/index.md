@@ -24,7 +24,7 @@ element.contentEditable = "true"
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -35,8 +35,8 @@ In Internet Explorer, `contenteditable` cannot be applied to the
 directly. A content editable {{htmlelement("span")}} or {{htmlelement("div")}} element
 can be placed inside the individual table cells.
 
-## See also
+## Смотрите также
 
 - {{domxref("HTMLElement.isContentEditable")}}
-- The [contenteditable](/ru/docs/Web/HTML/Global_attributes/contenteditable) global attribute.
+- The [contenteditable](/ru/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute.
 - [Why ContentEditable is Terrible, Or: How the Medium Editor Works](https://medium.com/medium-eng/why-contenteditable-is-terrible-122d8a40e480)

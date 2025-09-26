@@ -3,8 +3,6 @@ title: Actualizar add-ons para Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 9 no tiene grandes cambios que vayan a resultar en problemas de compatibilidad para los desarrolladores de complementos. Sin embargo, hay algunos elementos que pueden ser problematicos, así que vamos a echarles un vistazo.
 
 ## ¿Es necesario hacer algo?
@@ -13,7 +11,8 @@ Si tu complemento se distribuye en [addons.mozilla.org](https://addons.mozilla.o
 
 Así que puedes empezar visitando AMO para comprobar si tu complemento requiere trabajo.
 
-> **Nota:** Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
+> [!NOTE]
+> Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
 
 ## Los componentes de inicio pueden remover scripts con carga retrasada
 

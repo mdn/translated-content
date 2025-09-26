@@ -3,7 +3,7 @@ title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
 ---
 
-{{jsSidebar("Errors")}}JavaScript 异常"is not a function"会在试图去调用一个像函数一样的值，但是该值实际上不是函数时被抛出。
+JavaScript 异常"is not a function"会在试图去调用一个像函数一样的值，但是该值实际上不是函数时被抛出。
 
 ## 信息
 
@@ -25,11 +25,9 @@ TypeError: "x" is not a function
 再比如，在 JavaScript 中很多原生对象的内置方法需要你提供一个（回调）函数。所以你必须提供一个函数，以使这些方法正常工作：
 
 - 当你在使用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 对象时：
-
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - 当你在使用 {{jsxref("Map")}} 和 {{jsxref("Set")}} 对象时：
-
   - {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}}
 
 ## 示例
@@ -77,7 +75,7 @@ numbers.map(function (num) {
 
 ### 函数与已有属性重名
 
-当您在创建类时，可能会存在某个属性和某个方法的名称相同，当您在调用该函数时，编译器会认为该函数不存在。
+当你在创建类时，可能会存在某个属性和某个方法的名称相同，当你在调用该函数时，编译器会认为该函数不存在。
 
 ```js example-bad
 var Dog = function () {
@@ -117,7 +115,7 @@ myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 
 ### 使用括号进行乘法运算
 
-在数学中，您可以将 2 × (3 + 5) 写为 2\*(3 + 5) 或者省略为 2(3 + 5).
+在数学中，你可以将 2 × (3 + 5) 写为 2\*(3 + 5) 或者省略为 2(3 + 5).
 
 使用后者时将会抛出错误：
 
@@ -127,7 +125,7 @@ alert("2 x (3 + 5) is " + String(sixteen));
 //Uncaught TypeError: 2 is not a function
 ```
 
-您可以添加乘法运算符 `*` 来改正代码：
+你可以添加乘法运算符 `*` 来改正代码：
 
 ```js example-good
 const sixteen = 2 * (3 + 5);

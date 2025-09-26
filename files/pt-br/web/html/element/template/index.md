@@ -53,7 +53,7 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
     </tr>
     <tr>
       <th scope="row">Tags omitidas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos pais permitidos</th>
@@ -148,14 +148,11 @@ table td {
 
 ## Especificações
 
-| Especificação                                                                           | Estado                   | Comentário        |
-| --------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
-| {{SpecName('HTML WHATWG','/scripting-1.html#the-template-element','template element')}} | {{Spec2('HTML WHATWG')}} | Sem mudanças      |
-| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}}   | {{Spec2('HTML5 W3C')}}   | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade de Navegadores
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## Veja também
 

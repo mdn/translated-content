@@ -1,8 +1,9 @@
 ---
-title: MouseEvent()
+title: "MouseEvent: MouseEvent() コンストラクター"
+short-title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
@@ -22,9 +23,7 @@ new MouseEvent(type, options)
   - : 文字列で、イベントの名前を表します。
     大文字小文字の区別があり、ブラウザーは `dblclick`, `mousedown`, `mouseenter`, `mouseleave`, `mousemove`, `mouseout`, `mouseover`, `mouseup` の何れかに設定します。
 - `options` {{optional_inline}}
-
   - : オブジェクトで、 _{{domxref("UIEvent/UIEvent", "UIEvent()")}} で定義されたプロパティに加え_、以下のプロパティを設定することができます。
-
     - `screenX` {{optional_inline}}
       - : 数値で、既定値は `0` であり、ユーザーの画面におけるこのマウスイベントの水平位置です。
         この値を設定しても、マウスポインターは移動しません。
@@ -46,17 +45,15 @@ new MouseEvent(type, options)
     - `metaKey` {{optional_inline}}
       - : 論理値で、既定値は `false` であり、 <kbd>meta</kbd> キーが同時に押されていたかどうかを示します。
     - `button` {{optional_inline}}
-
       - : 数値で、既定値は `0` であり、ボタンの押下や解放に関連するイベント時に、どのボタンが押されたかを示します。
 
-        | 値    | 意味                                                           |
-        | ----- | -------------------------------------------------------------- |
-        | `0`   | 主ボタン（通常は左ボタン）が押された、または初期化されていない |
-        | `1`   | 予備ボタン（通常は中ボタン）が押された                         |
-        | `2`   | 副ボタン（通常は右ボタン）が押された                           |
+        | 値  | 意味                                                           |
+        | --- | -------------------------------------------------------------- |
+        | `0` | 主ボタン（通常は左ボタン）が押された、または初期化されていない |
+        | `1` | 予備ボタン（通常は中ボタン）が押された                         |
+        | `2` | 副ボタン（通常は右ボタン）が押された                           |
 
     - `buttons` {{optional_inline}}
-
       - : 数値で、既定値は `0` であり、イベントが発行されたときに押されたボタンを示します。
 
         | ビットフィールド値 | 意味                                       |

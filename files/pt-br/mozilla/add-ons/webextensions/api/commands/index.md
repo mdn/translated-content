@@ -5,12 +5,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/commands
 
 {{AddonSidebar}}
 
-Escuta por usuário executando comandos que você registrou usando o [`commands` manifest.json key](/pt-BR/Add-ons/WebExtensions/manifest.json/commands).
+Escuta por usuário executando comandos que você registrou usando o [`commands` manifest.json key](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Tipos
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : Objeto representando um comando. Contém a informação especificada no comando [`commands` manifest.json key](/pt-BR/Add-ons/WebExtensions/manifest.json/commands).
+  - : Objeto representando um comando. Contém a informação especificada no comando [`commands` manifest.json key](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Funções
 
@@ -28,9 +28,9 @@ Escuta por usuário executando comandos que você registrou usando o [`commands`
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.commands")}}{{WebExtExamples("h2")}}
+{{Compat}}{{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.commands`](https://developer.chrome.com/extensions/commands) do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
+> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

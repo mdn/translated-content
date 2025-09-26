@@ -1,23 +1,21 @@
 ---
-title: Document.characterSet
+title: "Document: characterSet プロパティ"
+short-title: characterSet
 slug: Web/API/Document/characterSet
+l10n:
+  sourceCommit: 84f47487afe5ca1d6356231d1ec2688e22c0ef53
 ---
 
 {{ ApiRef("DOM") }}
 
-**`Document.characterSet`** プロパティは読み取り専用で、文書の[文字エンコーディング](/ja/docs/Glossary/character_encoding)を表す文字列を返します。 (文字エンコーディングは文字セットであり、入力されたバイト列をどのように文字として解釈するか規定します。)
+**`Document.characterSet`** プロパティは読み取り専用で、この文書の現在の表示に使われている[文字エンコーディング](/ja/docs/Glossary/Character_encoding)を表す文字列を返します。
 
-> **メモ:** 「文字セット」と「文字エンコーディング」は似ていますが違うものです。プロパティ名に反してエンコーディングを返します。
+> [!NOTE]
+> 「文字セット」と「文字エンコーディング」は似ていますが違うものです。プロパティ名に反してエンコーディングを返します。
 
-ユーザーは、 [Content-Type](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーの中や `<meta charset="utf-8">` などのインラインで開発者が指定した文字エンコーディングを上書きできます。例えば Firefox では <kbd>表示 → テキストエンコーディング</kbd> メニューから可能です。このような上書き手段は開発者が誤って指定したエンコーディングによって[文字化け](https://ja.wikipedia.org/wiki/%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91)を引き起こされたときに直すために提供されています。
+## 値
 
-> **メモ:** プロパティ `document.charset` および `document.inputEncoding` は、`document.characterSet` への古いエイリアスです。これらは使用しないでください。
-
-## 構文
-
-```js
-var string = document.characterSet;
-```
+文字列です。
 
 ## 例
 

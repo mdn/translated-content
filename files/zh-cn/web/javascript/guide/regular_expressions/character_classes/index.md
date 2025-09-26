@@ -3,11 +3,21 @@ title: 字符类
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
 
-{{JSSidebar("JavaScript Guide")}}
-
 字符类可以区分各种字符，例如区分字母和数字。
 
-{{EmbedInteractiveExample("pages/js/regexp-character-classes.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+
+```js interactive-example
+const chessStory = "He played the King in a8 and she moved her Queen in c2.";
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+// Expected output: Array [ 'a8', 'c2']
+
+const moods = "happy 🙂, confused 😕, sad 😢";
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+// Expected output: Array ['🙂', '😕', '😢']
+```
 
 ## 类型
 
@@ -119,7 +129,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
   </tr>
   <tr>
    <td><code>[\b]</code></td>
-   <td>匹配退格键。如果您正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">断言</a>。</td>
+   <td>匹配退格键。如果你正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">断言</a>。</td>
   </tr>
   <tr>
    <td><code>\0</code></td>
@@ -238,7 +248,6 @@ console.log("元音数：", aliceExcerpt.match(regexpVowels).length);
 ## 参见
 
 - [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-
   - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)

@@ -1,9 +1,7 @@
 ---
-title: ":host-context()"
+title: :host-context()
 slug: Web/CSS/:host-context
 ---
-
-{{CSSRef}}
 
 **`:host-context()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数选择内部使用了该 CSS 的[影子 DOM（shadow DOM）](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)的影子宿主（shadow host），因此你可以从其影子 DOM 内部选择自定义元素——但前提是作为函数参数的选择器与影子宿主的祖先在 DOM 层次结构中的位置匹配。
 
@@ -11,7 +9,8 @@ slug: Web/CSS/:host-context
 
 这样子做的一个典型用法是与后代选择器表达式（例如 h1）一起使用，仅选择在 `<h1>` 内的自定义元素的实例。另一个典型用法是允许内部元素对任何祖先元素上的类或属性做出反应，例如，在将 `.dark-theme` 类应用于 `<body>` 时应用不同的文本颜色。
 
-> **备注：** 这在影子 DOM 之外使用时无效。
+> [!NOTE]
+> 这在影子 DOM 之外使用时无效。
 
 ```css
 /* 选择影子根宿主，仅当它是给定的选择器参数的后代 */

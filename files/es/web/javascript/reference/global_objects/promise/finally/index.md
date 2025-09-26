@@ -39,7 +39,8 @@ Utilizar `finally()` es muy similar a llamar `.then(onFinally, onFinally)`, sin 
 - A diferencia de `Promise.resolve(2).then(() => {}, () => {})` (que va a resolver a `undefined`), `Promise.resolve(2).finally(() => {})` resolverá con un `2`.
 - Del mismo modo, a diferencia de `Promise.reject(3).then(() => {}, () => {})` (que resolverá con `undefined`), `Promise.reject(3).finally(() => {})` será rechazada con un `3`.
 
-> **Nota:** Un `throw` (o retornar una promesa rechazada) en el callback `finally` va a rechazar la nueva promesa con la razón de rechazo especificada al llamar `throw()`.
+> [!NOTE]
+> Un `throw` (o retornar una promesa rechazada) en el callback `finally` va a rechazar la nueva promesa con la razón de rechazo especificada al llamar `throw()`.
 
 ## Ejemplos
 

@@ -10,7 +10,8 @@ l10n:
 **`isSameNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、 [`===` 厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)の古い別名です。
 すなわち、 2 つのノードが全く同じであるかどうか（言い換えれば、同じオブジェクトを指しているかどうか）を検査します。
 
-> **メモ:** `isSameNode()` を使用する必要はありません。 `===` 厳密等価演算子を使用してください。
+> [!NOTE]
+> `isSameNode()` を使用する必要はありません。 `===` 厳密等価演算子を使用してください。
 
 ## 構文
 
@@ -22,7 +23,8 @@ isSameNode(otherNode)
 
 - `otherNode`
   - : 検査対象となる {{domxref("Node")}} です。
-    > **メモ:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > [!NOTE]
+    > この引数は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 
@@ -60,13 +62,13 @@ let output = document.getElementById("output");
 let divList = document.getElementsByTagName("div");
 
 output.innerHTML += `div 0 と div 0 は同じか: ${divList[0].isSameNode(
-  divList[0]
+  divList[0],
 )}<br/>`;
 output.innerHTML += `div 0 と div 1 は同じか: ${divList[0].isSameNode(
-  divList[1]
+  divList[1],
 )}<br/>`;
 output.innerHTML += `div 0 と div 2 は同じか: ${divList[0].isSameNode(
-  divList[2]
+  divList[2],
 )}<br/>`;
 ```
 

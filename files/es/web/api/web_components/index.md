@@ -27,11 +27,11 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
 ## Tutoriales
 
-- [Utilizando elementos personalizados (Using custom elements)](/es/docs/Web/Web_Components/Using_custom_elements)
+- [Utilizando elementos personalizados (Using custom elements)](/es/docs/Web/API/Web_components/Using_custom_elements)
   - : Guía que muestra como usar las características de los elementos personalizados para crear componentes web sencillos, así como revisar las llamadas del ciclo de vida y algunas características más avanzadas.
-- [Utilizando el shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM)
+- [Utilizando el shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM)
   - : Guía que trata los fundamentos del shadow DOM, mostrando como adjuntar un shadow DOM a un elemento, añadir el árbol del shadow DOM, añadirle estilos y más.
-- [Usando templates y slots](/es/docs/Web/Web_Components/Using_templates_and_slots)
+- [Usando templates y slots](/es/docs/Web/API/Web_components/Using_templates_and_slots)
   - : Guía que muestra como definir una estructura HTML reutilizable utilizando elementos {{htmlelement("template")}} y {{htmlelement("slot")}} elements, y entonces usar esa estructura debto del componente web.
 
 ## Referencia
@@ -42,10 +42,8 @@ La aproximación básica para implementar un componente web, generalmente es la 
   - : Contiene funcionalidad relacionada a los elementos personalizados, más notablemente el método {{domxref("CustomElementRegistry.define()")}} utilizado para registrar nuevos elementos personalizados para que se puedan usar en el documento
 - {{domxref("Window.customElements")}}
   - : Retorna una referencia al objeto `CustomElementRegistry`.
-- [Llamadas del ciclo de vida (Life cycle callbacks)](/es/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
-
+- [Llamadas del ciclo de vida (Life cycle callbacks)](/es/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
   - : Llamadas de funciones especiales declaradas dentro de la clase de definición de los componentes personalizados, los que afectan su comportamiento:
-
     - `connectedCallback`: Invocado cuando el componente personalizado se conecta por primera vez al DOM del documento.
     - `disconnectedCallback`: Invocado cuando el componente personalizado se deconecta del DOM del documento.
     - `adoptedCallback`: Invocado cuando el componente personalizado se mueve a un nuevo documento.
@@ -54,26 +52,20 @@ La aproximación básica para implementar un componente web, generalmente es la 
 <!---->
 
 - Extensiones para crear elementos incorporados personalizados
-
   - : &#x20;
-
-    - El atributo global HTML [`is`](/es/docs/Web/HTML/Global_attributes#is): Permite especificar que un elemento estandar HTML debe comportarse como un elemento incorporado personalizado registrado.
+    - El atributo global HTML [`is`](/es/docs/Web/HTML/Reference/Global_attributes#is): Permite especificar que un elemento estandar HTML debe comportarse como un elemento incorporado personalizado registrado.
     - La opción "is" del método {{domxref("Document.createElement()")}}: Permite crear una instancia de un elemento HTML estandar que se comporta como un determinado elemento incorporado personalizado registrado.
 
 - Pseudo-clases CSS
-
   - : Pseudo-clases relacionadas específicamente a elementos personalizados:
-
     - {{cssxref(":defined")}}: Coincide con cualquier elemento declarado, incluyendo elementos incorporados y elementos personalizados definidos con `CustomElementRegistry.define()`).
-    - {{cssxref(":host")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) conteniendo el CSS que es usado.
-    - {{cssxref(":host()")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) conteniendo el CSS que es usado (para que se pueda seleccionar un elemento personalizado desde dentro de su _shadow DOM_) — pero solo si el selector determinado como el parámetro de la función coincide con el _shadow host_.
-    - {{cssxref(":host-context()")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) conteniendo el CSS que es usado (para que se pueda seleccionar un elemento personalizado desde dentro de su _shadow DOM_) — pero solo si el selector determinado como el parámetro de la función coincide con el shadow host de los ancestros del sitio desde el cual esta ubicado en la jerarquía del DOM.
+    - {{cssxref(":host")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM) conteniendo el CSS que es usado.
+    - {{cssxref(":host()")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM) conteniendo el CSS que es usado (para que se pueda seleccionar un elemento personalizado desde dentro de su _shadow DOM_) — pero solo si el selector determinado como el parámetro de la función coincide con el _shadow host_.
+    - {{cssxref(":host-context()")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM) conteniendo el CSS que es usado (para que se pueda seleccionar un elemento personalizado desde dentro de su _shadow DOM_) — pero solo si el selector determinado como el parámetro de la función coincide con el shadow host de los ancestros del sitio desde el cual esta ubicado en la jerarquía del DOM.
 
 - Pseudo-elementos CSS
-
   - : Pseudo-elementos relacionados especificamente a elementos personalizados:
-
-    - {{cssxref("::part")}}: Representa cualquier elemento dentro del [shadow tree](/es/docs/Web/Web_Components/Using_shadow_DOM) que contiene un atributo [`part`](/es/docs/Web/HTML/Global_attributes#part) que coincida.
+    - {{cssxref("::part")}}: Representa cualquier elemento dentro del [shadow tree](/es/docs/Web/API/Web_components/Using_shadow_DOM) que contiene un atributo [`part`](/es/docs/Web/HTML/Reference/Global_attributes#part) que coincida.
 
 ### Shadow DOM
 
@@ -82,23 +74,17 @@ La aproximación básica para implementar un componente web, generalmente es la 
 - {{domxref("DocumentOrShadowRoot")}}
   - : Un mixin definiendo características que son disponibles a través de documentos y _shadow roots_.
 - Extensiones a {{domxref("Element")}}
-
   - : Extensiones a la interfaz `Element` relacionada al _shadow DOM_:
-
     - El método {{domxref("Element.attachShadow()")}} conecta un árbol _shadow DOM_ al elemento especificado.
     - La propiedad {{domxref("Element.shadowRoot")}} retorna el _shadow root_ acoplado al elemento determinado, o `null` si no hay un _shadow root_ adjuntado.
 
 - Adiciones relevantes a {{domxref("Node")}}
-
   - : Adiciones a la interfaz `Node` relevantes al _shadow DOM_:
-
     - El método {{domxref("Node.getRootNode()")}} retorna la raíz del objeto del contexto, que opcionalmente incluye el _shadow root_ si se encuentra disponible.
     - La propiedad {{domxref("Node.isConnected")}} retorna un boleano indicando si el Nodo esta o no conectado (directamente o indirectamente) al objeto del contexto, es decir, el objeto {{domxref("Document")}} en el caso del DOM normal, o al {{domxref("ShadowRoot")}} en el caso del shadow DOM.
 
 - Extensiones a {{domxref("Event")}}
-
   - : Extensiones a la interfaz `Event` relacionada al shadow DOM:
-
     - {{domxref("Event.composed")}}: Retorna un {{jsxref("Boolean")}} que indica si el evento se va a propagar a través de los límites del _shadow DOM_ hacia el DOM normal (`true`), o no (`false`).
     - {{domxref("Event.composedPath")}}: Retorna la ruta del evento (objetos en los que oyentes serán invocados). Esto no incluye nodos en _shadow trees_ si el _shadow root_ fue creado con {{domxref("ShadowRoot.mode")}} cerrado.
 
@@ -108,7 +94,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
   - : Contiene un fragmento de HTML que no es renderizado cuando se carga inicialmente un documento que lo contiene, pero puede ser desplegado en tiempo de ejecución usando JavaScript, principalmente usado como la base de la estructura de los elementos personalizados. La interfaz DOM asociada es {{domxref("HTMLTemplateElement")}}.
 - {{htmlelement("slot")}}
   - : Un espacio termporal dentro de un componente web que se puede llenar con una plantilla de marcado propia, lo que permite crear árboles DOM separados y presentarlos juntos. La interfaz DOM asociada es {{domxref("HTMLSlotElement")}}.
-- El atributo global HTML [`slot`](/es/docs/Web/HTML/Global_attributes/slot)
+- El atributo global HTML [`slot`](/es/docs/Web/HTML/Reference/Global_attributes/slot)
   - : Asigna un slot en un _shadow tree_ de un _shadow DOM_ shadow tree a un elemento.
 - {{domxref("Slotable")}}
   - : Un mixin implementado tanto por los nodos {{domxref("Element")}} y {{domxref("Text")}}, definiendo características que les permiten convertirse en el contenido de un elemento {{htmlelement("slot")}}. El mixin define un atributo, {{domxref("Slotable.assignedSlot")}}, el cual retorna una referencia al nodo del slot donde esta insertado.
@@ -116,15 +102,11 @@ La aproximación básica para implementar un componente web, generalmente es la 
 <!---->
 
 - Extensiones a {{domxref("Element")}}
-
   - : Extensiones a la interfaz `Element` relacionadas a slots:
-
     - {{domxref("Element.slot")}}: Retorna el nombre del slot del _shadow DOM_ adjunto al elemento.
 
 - Pseudo-elementos de CSS
-
   - : Pseudo-elementos especificamente relacionados a slots:
-
     - {{cssxref("::slotted")}}: Coincide cualquier contenido que es insertado dentro de un slot.
 
 - El evento [`slotchange`](/es/docs/Web/Reference/Events/slotchange)

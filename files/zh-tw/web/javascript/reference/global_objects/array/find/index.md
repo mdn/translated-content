@@ -1,62 +1,67 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+{{jsxref("Array")}} 實例的 **`find()`** 方法會回傳在提供的陣列中第一個通過所提供測試函式的元素。如果沒有任何值通過測試函式，則回傳 {{jsxref("undefined")}}。
 
-**`find()`** 方法會回傳第一個滿足所提供之測試函式的元素**值**。否則回傳 {{jsxref("undefined")}}。
+- 如果你需要取得該元素在陣列中的**索引**，請使用 {{jsxref("Array/findIndex", "findIndex()")}}。
+- 如果你需要找出某個**特定值的索引**，請使用 {{jsxref("Array/indexOf", "indexOf()")}}。（這與 {{jsxref("Array/findIndex", "findIndex()")}} 類似，但它是透過值的相等性來檢查每個元素，而非使用測試函式。）
+- 如果你想知道某個值是否**存在**於陣列中，請使用 {{jsxref("Array/includes", "includes()")}}。它同樣是透過值的相等性來檢查每個元素，而非使用測試函式。
+- 如果你想知道陣列中是否有任一元素通過所提供的測試函式，請使用 {{jsxref("Array/some", "some()")}}。
+- 如果你想取得所有通過測試函式的元素，請使用 {{jsxref("Array/filter", "filter()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-find.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.find()", "shorter")}}
 
-也可以參考 {{jsxref("Array.findIndex", "findIndex()")}} 方法，它回傳被找到的元素在陣列中的**索引**，而不是它的值。
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
 
-If you need to find the position of an element or whether an element exists in an array, use {{jsxref("Array.prototype.indexOf()")}} or {{jsxref("Array.prototype.includes()")}}.
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// 預期輸出：12
+```
 
 ## 語法
 
-```plain
-arr.find(callback[, thisArg])
+```js-nolint
+find(callbackFn)
+find(callbackFn, thisArg)
 ```
 
 ### 參數
 
-- `callback`
-
-  - : 會處理陣列中每個元素的函數，它使用三個參數：
-
+- `callbackFn`
+  - : 會對陣列中的每個元素執行的函式。此函式應回傳[真](/zh-TW/docs/Glossary/Truthy)值以指出找到符合條件的元素，否則應回傳[假](/zh-TW/docs/Glossary/Falsy)值。此函式被呼叫時可以傳入以下引數：
     - `element`
-      - : 在陣列中正被處理的元素。
-    - `index`{{optional_inline}}
-      - : 在陣列中正被處理的元素的索引。
-    - `array`{{optional_inline}}
-      - : 呼叫 `find` 的陣列。
-
-- `thisArg` `{{Optional_inline}}`
-  - : 執行 `callback` 函式時被當作 `this` 的物件。
+      - : 陣列中目前正在處理的元素。
+    - `index`
+      - : 陣列中目前正在處理的元素的索引。
+    - `array`
+      - : 呼叫 `find()` 的陣列。
+- `thisArg` {{optional_inline}}
+  - : 執行 `callbackFn` 時用作 `this` 的值。請參見[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 回傳值
 
-若元素通過測試則為其值；否則為 {{jsxref("undefined")}}。
+回傳第一個通過測試函式的陣列元素。否則回傳 {{jsxref("undefined")}}。
 
 ## 描述
 
-`find` 方法會對每個元素執行一次 `callback` 函式，直到找到一個讓 `callback` 函式回傳 true 的元素。當元素被找到的時候，`find` 會立刻回傳該元素，否則 `find` 會回傳 {{jsxref("undefined")}}。`callback` 會被使用於陣列索引自 `0` 至 `length - 1`，並會被用於每一個的陣列索引，而不僅是那些有賦值的索引。這代表此方法在稀疏陣列（sparse arrays）上的效能可能較其他只存取已賦值索引的方法來的差。
+`find()` 方法是一個[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它會以索引遞增順序對陣列中的每個元素執行一次所提供的 `callbackFn` 函式，直到 `callbackFn` 回傳一個[真](/zh-TW/docs/Glossary/Truthy)值。此時，`find()` 會回傳該元素並停止迭代陣列。若 `callbackFn` 未曾回傳真值，則 `find()` 會回傳 {{jsxref("undefined")}}。請參閱[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)部分以深入了解這些方法的運作方式。
 
-`callback` 函式被呼叫時會傳入三個參數：元素的值、元素索引，以及正被迭代的陣列物件。
+`callbackFn` 會針對陣列中*每個*索引執行一次，不僅限於已被賦值的索引。[稀疏陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#稀疏陣列)中的空槽會視為 `undefined`，行為將會相同。
 
-如果提供 `thisArg` 參數予 `find`，其將會被當作 `callback` 每次被呼叫的 `this`。若是沒提供，則會使用 {{jsxref("undefined")}}。
-
-`find` 並不會改變呼叫該方法的陣列。
-
-The range of elements processed by `find` is set before the first invocation of `callback`. Elements that are appended to the array after the call to `find` begins will not be visited by `callback`. If an existing, unvisited element of the array is changed by `callback`, its value passed to the visiting `callback` will be the value at the time that `find` visits that element's index; elements that are deleted are still visited.
+`find()` 方法是[通用的](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#通用陣列方法)。它只要求 `this` 具有 `length` 屬性以及整數鍵屬性即可。
 
 ## 範例
 
-### Find an object in an array by one of its properties
+### 依物件屬性找出陣列中的某個物件
 
 ```js
-var inventory = [
+const inventory = [
   { name: "apples", quantity: 2 },
   { name: "bananas", quantity: 0 },
   { name: "cherries", quantity: 5 },
@@ -70,13 +75,27 @@ console.log(inventory.find(isCherries));
 // { name: 'cherries', quantity: 5 }
 ```
 
-### 在陣列中找質數
+#### 使用箭頭函式與解構語法
 
-以下範例在陣列中找出一個屬於質數的元素，如果裡面不含質數則回傳 {{jsxref("undefined")}}。
+```js
+const inventory = [
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
+];
+
+const result = inventory.find(({ name }) => name === "cherries");
+
+console.log(result); // { name: 'cherries', quantity: 5 }
+```
+
+### 找出陣列中的第一個質數
+
+下例會回傳陣列中第一個質數元素，若找不到質數則回傳 {{jsxref("undefined")}}。
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
+  let start = 2;
   while (start <= Math.sqrt(element)) {
     if (element % start++ < 1) {
       return false;
@@ -85,85 +104,84 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
+console.log([4, 6, 8, 12].find(isPrime)); // undefined，未找到
 console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
-The following examples show that non-existent and deleted elements are visited and that the value passed to the callback is their value when visited.
+### 使用 callbackFn 的第三個引數
+
+`array` 引數在你沒有另外的變數參照陣列時特別有用，能讓你存取陣列中其他的元素。以下例子中，我們先用 `filter()` 取出所有正數，再用 `find()` 找出第一個比其相鄰數值都小的數字。
 
 ```js
-// Declare array with no element at index 2, 3 and 4
-var a = [0, 1, , , , 5, 6];
-
-// Shows all indexes, not just those that have been assigned values
-a.find(function (value, index) {
-  console.log("Visited index " + index + " with value " + value);
-});
-
-// Shows all indexes, including deleted
-a.find(function (value, index) {
-  // Delete element 5 on first iteration
-  if (index == 0) {
-    console.log("Deleting a[5] with value " + a[5]);
-    delete a[5];
-  }
-  // Element 5 is still visited even though deleted
-  console.log("Visited index " + index + " with value " + value);
-});
-```
-
-## Polyfill
-
-這個方法在 ECMAScript 2015 中首次被規範，可能尚未在所有 JavaScript 應用中被實作。你可以使用以下程式片段來 polyfill `Array.prototype.find`：
-
-```js
-// https://tc39.github.io/ecma262/#sec-array.prototype.find
-if (!Array.prototype.find) {
-  Object.defineProperty(Array.prototype, "find", {
-    value: function (predicate) {
-      // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
-      }
-
-      var o = Object(this);
-
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length >>> 0;
-
-      // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== "function") {
-        throw new TypeError("predicate must be a function");
-      }
-
-      // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
-      var thisArg = arguments[1];
-
-      // 5. Let k be 0.
-      var k = 0;
-
-      // 6. Repeat, while k < len
-      while (k < len) {
-        // a. Let Pk be ! ToString(k).
-        // b. Let kValue be ? Get(O, Pk).
-        // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
-        // d. If testResult is true, return kValue.
-        var kValue = o[k];
-        if (predicate.call(thisArg, kValue, k, o)) {
-          return kValue;
-        }
-        // e. Increase k by 1.
-        k++;
-      }
-
-      // 7. Return undefined.
-      return undefined;
-    },
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const firstTrough = numbers
+  .filter((num) => num > 0)
+  .find((num, idx, arr) => {
+    // 若沒有 arr 引數，就無法存取這個中介陣列，除非先儲存成變數。
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
   });
-}
+console.log(firstTrough); // 1
 ```
 
-If you need to support truly obsolete JavaScript engines that don't support [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), it's best not to polyfill `Array.prototype` methods at all, as you can't make them non-enumerable.
+### 在稀疏陣列中使用 find()
+
+稀疏陣列中的空槽*仍會*被訪問，並被視為與 `undefined` 相同。
+
+```js
+// 宣告在索引 2、3、4 處無元素的陣列
+const array = [0, 1, , , , 5, 6];
+
+// 顯示所有索引，包括未賦值的
+array.find((value, index) => {
+  console.log("訪問索引", index, "，值為", value);
+  return false;
+});
+// 訪問索引 0 ，值為 0
+// 訪問索引 1 ，值為 1
+// 訪問索引 2 ，值為 undefined
+// 訪問索引 3 ，值為 undefined
+// 訪問索引 4 ，值為 undefined
+// 訪問索引 5 ，值為 5
+// 訪問索引 6 ，值為 6
+
+// 顯示所有索引，包括被刪除的元素
+array.find((value, index) => {
+  // 在第一次迭代時刪除元素 5
+  if (index === 0) {
+    console.log("刪除 array[5]，值為", array[5]);
+    delete array[5];
+  }
+  // 即使已刪除，索引 5 仍會被訪問
+  console.log("訪問索引", index, "，值為", value);
+  return false;
+});
+// 刪除 array[5]，值為 5
+// 訪問索引 0 ，值為 0
+// 訪問索引 1 ，值為 1
+// 訪問索引 2 ，值為 undefined
+// 訪問索引 3 ，值為 undefined
+// 訪問索引 4 ，值為 undefined
+// 訪問索引 5 ，值為 undefined
+// 訪問索引 6 ，值為 6
+```
+
+### 對非陣列物件呼叫 find()
+
+`find()` 方法會讀取 `this` 的 `length` 屬性，然後依據非負整數索引存取對應屬性。
+
+```js
+const arrayLike = {
+  length: 3,
+  "-1": 0.1, // 因為 -1 < 0，find() 會忽略
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
+// 7.3
+```
 
 ## 規範
 
@@ -175,7 +193,15 @@ If you need to support truly obsolete JavaScript engines that don't support [`Ob
 
 ## 參見
 
-- {{jsxref("Array.prototype.findIndex()")}} – find and return an index
-- {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array
-- {{jsxref("Array.prototype.filter()")}} – find all matching elements
-- {{jsxref("Array.prototype.every()")}} – test all elements together
+- [在 `core-js` 中 `Array.prototype.find` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.find` 的 es-shims polyfill](https://www.npmjs.com/package/array.prototype.find)
+- [索引集合](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections)指南
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLast()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("Array.prototype.filter()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.find()")}}

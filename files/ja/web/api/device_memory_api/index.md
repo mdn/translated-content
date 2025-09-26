@@ -21,7 +21,7 @@ var RAM = navigator.deviceMemory;
 
 ### クライアントヒント
 
-[クライアントヒント](/ja/docs/Web/HTTP/Client_hints) ヘッダーの `Device-Memory` ディレクティブを使用して、同じく概算の RAM 容量を取得することもできます。
+[クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints) ヘッダーの `Device-Memory` ディレクティブを使用して、同じく概算の RAM 容量を取得することもできます。
 
 ## 仕様書
 
@@ -31,11 +31,11 @@ var RAM = navigator.deviceMemory;
 
 ### JavaScript インターフェイス
 
-{{Compat("api.Navigator.deviceMemory")}}
+{{Compat}}
 
 ### クライアントヒント拡張機能
 
-{{Compat("http.headers.Device-Memory")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -41,7 +41,8 @@ function populateStorage() {
 }
 ```
 
-> **Nota:** Para ver un ejemplo real, vea nuestro [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> Para ver un ejemplo real, vea nuestro [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Especificaciones
 

@@ -1,11 +1,80 @@
 ---
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
+`scroll-margin-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、インライン方向のスクロールマージンを設定します。
 
-`scroll-margin-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、インライン方向のスクロールマージンを設定します。
+{{InteractiveExample("CSS デモ: scroll-margin-inline")}}
+
+```css interactive-example-choice
+scroll-margin-inline: 0;
+```
+
+```css interactive-example-choice
+scroll-margin-inline: 40px 20px;
+```
+
+```css interactive-example-choice
+scroll-margin-inline: 4em 0;
+```
+
+```css interactive-example-choice
+scroll-margin-inline: 0px 3em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">スクロール »</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  flex-wrap: wrap;
+}
+
+.default-example .info {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+}
+
+.scroller {
+  text-align: left;
+  width: 250px;
+  height: 250px;
+  overflow-x: scroll;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: x mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  width: 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: end;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -19,23 +88,24 @@ slug: Web/CSS/scroll-margin-inline
 ```css
 /* <length> 値 */
 scroll-margin-inline: 10px;
-scroll-margin-inline: 1em .5em ;
+scroll-margin-inline: 1em 0.5em;
 
 /* グローバル値 */
 scroll-margin-inline: inherit;
 scroll-margin-inline: initial;
 scroll-margin-inline: revert;
+scroll-margin-inline: revert-layer;
 scroll-margin-inline: unset;
 ```
 
 ### 値
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : スクロールコンテナーの対応する辺からの距離です。
 
 ## 解説
 
-scroll-margin 系のプロパティは、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。
+scroll-margin 系のプロパティは、このボックスを[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)にスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して（スクロールコンテナーの座標空間における軸に合わせられ）、それから指定された外部距離が追加されます。
 
 ## 公式定義
 
@@ -47,15 +117,15 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 ## 例
 
-<h3 id="Simple_demonstration">簡単なデモ</h3>
+### 基本的なデモ
 
-この例では、上記のインタラクティブ例と非常によく似たものを実装していますが、ここではその実装方法を説明します。
+この例では、上記のインタラクティブサンプルととてもよく似たものを実装していますが、ここではその実装方法を説明します。
 
 ここでの目的は、水平方向にスクロールする 4 つのブロックを作成することです。2 つ目と 3 つ目のブロックは、それぞれのブロックの右端に近いところでスナップします。
 
 #### HTML
 
-ブロックを表す HTML はとても簡単です。
+HTML には、4 つの子要素を持つスクローラーがあります。
 
 ```html
 <div class="scroller">
@@ -68,7 +138,7 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 #### CSS
 
-外側のコンテナーのスタイルは以下のようになっています。
+CSS を一通り見てみましょう。外側のコンテナーは次のようにスタイル設定されています。
 
 ```css
 .scroller {
@@ -106,7 +176,7 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 }
 ```
 
-ここで最も重要なのは `scroll-snap-align: end` で、これは右側の端 (ここでは x 軸に沿った「末尾」) をスナップ点として指定するものです。
+ここで最も重要なのは `scroll-snap-align: end` で、これは右側の端（ここでは X 軸方向の「末尾」）をスナップ点として指定するものです。
 
 最後に、スクロールのマージン値を指定しますが、これは 2 番目と 3 番目の子要素に対して異なる値を指定します。
 
@@ -122,13 +192,14 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 つまり、真ん中の子要素を過ぎてスクロールした場合、2 番目の `<div>` のインラインの末尾から `1rem`、3 番目の `<div>` のインラインの末尾から `2rem` のところでスナップすることになります。
 
-> **メモ:** ここでは `scroll-margin` をインライン軸 (この場合は X 軸) の先頭*と*末尾に一度に設定していますが、実際に関係するのは末尾側だけです。例えば `scroll-margin-inline: 0 1rem` や `scroll-margin-inline-end: 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
+> [!NOTE]
+> ここでは `scroll-margin` をインライン軸 (この場合は X 軸) の先頭*と*末尾に一度に設定していますが、実際に関係するのは末尾側だけです。例えば `scroll-margin-inline: 0 1rem` や `scroll-margin-inline-end: 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
 
 #### 結果
 
 自分でやってみましょう。
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## 仕様書
 
@@ -140,5 +211,5 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

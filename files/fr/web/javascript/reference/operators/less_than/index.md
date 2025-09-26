@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Less_than
 
 L'opérateur inférieur strict (`<`) renvoie `true` si son opérande gauche est strictement inférieur à son opérande droit et `false` sinon.
 
-{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Less than operator")}}
+
+```js interactive-example
+console.log(5 < 3);
+// Expected output: false
+
+console.log(3 < 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n < 5);
+// Expected output: true
+
+console.log("aa" < "ab");
+// Expected output: true
+```
 
 ## Syntaxe
 
@@ -22,7 +37,6 @@ Les opérandes sont comparés avec l'algorithme de [comparaison abstraite relati
 - Tout d'abord, les objets sont convertis en valeurs primitives avec [`Symbol.ToPrimitive`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) en utilisant le paramètre `hint` avec la valeur `'number'`.
 - Si les deux valeurs sont des chaînes de caractères, elles sont comparées comme telles selon les valeurs des codes Unicode qu'elles contiennent.
 - Sinon, le moteur JavaScript tente de convertir les valeurs primitives non-numériques en valeurs numériques :
-
   - Les valeurs booléennes `true` et `false` sont respectivement converties en 1 et 0.
   - `null` est converti en 0.
   - `undefined` est converti en `NaN`.

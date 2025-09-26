@@ -28,4 +28,4 @@ Outra alternativa é `document.body.aLink`, embora tenha sido [depreciado no HTM
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.alinkColor")}}
+{{Compat}}

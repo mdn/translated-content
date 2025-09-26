@@ -1,26 +1,27 @@
 ---
 title: "HTMLDialogElement: cancel イベント"
+short-title: cancel
 slug: Web/API/HTMLDialogElement/cancel_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
 {{APIRef}}
 
-**`cancel`** イベントは、ユーザーが現在開いているダイアログを閉じるようブラウザーに指示したときに {{HTMLElement("dialog")}} に発生します。ブラウザーはユーザーが <kbd>Esc</kbd> キーを押した時にこのイベントを発生させます。
+**`cancel`** は {{HTMLElement("dialog")}} 要素で発生するイベントで、ユーザーがブラウザーに対して現在のダイアログを閉じるよう指示した際に発行されます。ブラウザーは、ユーザーが <kbd>Esc</kbd> キーを押したときにこのイベントを発行します。
 
-このイベントはバブリングしません。
+このイベントはキャンセル不可で、バブリングしません。
 
-`<dialog>` を <kbd>Esc</kbd> キーで閉じると、`cancel` イベントと {{domxref("HTMLDialogElement/close_event", "close")}} イベントの両方が発行されます。
+`<dialog>` が <kbd>Esc</kbd> キーで閉じられた時、 `cancel` および {{domxref("HTMLDialogElement/close_event", "close")}} イベントの両方が発生します。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりします。
 
-```js
-addEventListener("cancel", (event) => {});
+```js-nolint
+addEventListener("cancel", (event) => { })
 
-oncancel = (event) => {};
+oncancel = (event) => { }
 ```
 
 ## イベント型
@@ -29,16 +30,16 @@ oncancel = (event) => {};
 
 ## 例
 
-### ライブ例
+### ダイアログをキャンセル
 
 #### HTML
 
-```html
+```html-nolint
 <dialog class="example-dialog">
-  <button class="close" type="reset">Close</button>
+  <button class="close">閉じる</button>
 </dialog>
 
-<button class="open-dialog">Open dialog</button>
+<button class="open-dialog">ダイアログを開く</button>
 
 <div class="result"></div>
 ```
@@ -58,7 +59,7 @@ const result = document.querySelector(".result");
 const dialog = document.querySelector(".example-dialog");
 
 dialog.addEventListener("cancel", (event) => {
-  result.textContent = "dialog was canceled";
+  result.textContent = "ダイアログがキャンセルされました";
 });
 
 const openDialog = document.querySelector(".open-dialog");
@@ -67,7 +68,7 @@ openDialog.addEventListener("click", () => {
     dialog.showModal();
     result.textContent = "";
   } else {
-    result.textContent = "The dialog API is not supported by this browser";
+    result.textContent = "このブラウザーではダイアログ API に未対応です";
   }
 });
 
@@ -79,7 +80,7 @@ closeButton.addEventListener("click", () => {
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '100px') }}
+{{ EmbedLiveSample('ダイアログをキャンセル', '100%', '100px') }}
 
 ## 仕様書
 
@@ -91,5 +92,4 @@ closeButton.addEventListener("click", () => {
 
 ## 関連情報
 
-- HTML {{HTMLElement("dialog")}} element
-- {{domxref("HTMLDialogElement/close_event", "close")}}
+- HTML の {{HTMLElement("dialog")}} 要素

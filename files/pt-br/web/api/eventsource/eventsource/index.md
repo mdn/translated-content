@@ -18,9 +18,7 @@ eventSource = new EventSource(url, configuration);
 - `url`
   - : Uma {{domxref("USVString")}} que representa a localização de um recurso remoto servindo os eventos/mensagens.
 - `configuration` {{optional_inline}}
-
   - : Fornece opções para configurar a nova conexão. Os atributos possíveis são:
-
     - `withCredentials`, valor padrão `false`, indicando se o CORS deve ser instruído a `incluir` credenciais.
 
 ## Exemplos
@@ -37,7 +35,8 @@ evtSource.onmessage = function (e) {
 };
 ```
 
-> **Nota:** Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> Você pode encontrar um exemplo completo no GitHub — veja [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Especificações
 

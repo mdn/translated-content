@@ -14,16 +14,16 @@ Cette interface est limitée à la même origine, mais vous pouvez utiliser l'en
 ## Propriétés
 
 - [`PerformanceServerTiming.description`](/fr/docs/Web/API/PerformanceServerTiming/description){{readonlyInline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) décrivant la métrique spécifiée par le serveur, ou une chaîne vide.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) décrivant la métrique spécifiée par le serveur, ou une chaîne vide.
 - [`PerformanceServerTiming.duration`](/fr/docs/Web/API/PerformanceServerTiming/duration){{readonlyInline}}
   - : Un double qui contient la durée de la métrique spécifiée par le serveur, ou la valeur `0.0`.
 - [`PerformanceServerTiming.name`](/fr/docs/Web/API/PerformanceServerTiming/name){{readonlyInline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) avec le nom de la métrique spécifiée par le serveur.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) avec le nom de la métrique spécifiée par le serveur.
 
 ## Méthodes
 
 - [`PerformanceServerTiming.toJSON()`](</fr/docs/Web/API/PerformanceServerTiming/toJSON()>)
-  - : Retourne une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui est la représentation JSON de l'objet `PerformanceServerTiming`.
+  - : Retourne une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est la représentation JSON de l'objet `PerformanceServerTiming`.
 
 ## Exemple
 

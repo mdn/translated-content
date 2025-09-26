@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 
 **`Promise`** 생성자는 주로 프로미스를 지원하지 않는 함수를 감쌀 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Promise Constructor")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## 구문
 

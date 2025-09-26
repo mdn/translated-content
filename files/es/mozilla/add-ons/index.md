@@ -15,19 +15,19 @@ Existen varios tipos de complementos, pero el tipo más común son las extension
 
 ## Desarrollo de las extensiones
 
-En el pasado, habían varias juegos de herramientas para el desarrollo de las extensiones de Firefox, pero al finalizar el mes de noviembre de 2017, las extensiones deben crearse utilizando las [API de WebExtensions](/es/Add-ons/WebExtensions). Los otros juegos de herramientas, incluidos los complementos de overlay, los complementos de bootstrap y el complemento SDK, se espera que queden obsoletos durante el mismo período de tiempo.
+En el pasado, habían varias juegos de herramientas para el desarrollo de las extensiones de Firefox, pero al finalizar el mes de noviembre de 2017, las extensiones deben crearse utilizando las [API de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions). Los otros juegos de herramientas, incluidos los complementos de overlay, los complementos de bootstrap y el complemento SDK, se espera que queden obsoletos durante el mismo período de tiempo.
 
-Si usted está escribiendo un nuevo complemento, le recomendamos que utilice la [API de WebExtensions](/es/Add-ons/WebExtensions).
+Si usted está escribiendo un nuevo complemento, le recomendamos que utilice la [API de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).
 
 Las WebExtensions están diseñadas para que sean compatibles cross-browser. En la mayoría de los casos podran ser ejecutadas por Chrome, Edge, y Opera con pocos o ningún cambio. También serán completamente compatibles con el multiproceso Firefox.
 
-[Vea las APIs soportada actualmente por Firefox y otros navegadores](/es/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Seguimos diseñando e implementando nuevas API en respuesta a las necesidades de los desarrolladores.
+[Vea las APIs soportada actualmente por Firefox y otros navegadores](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Seguimos diseñando e implementando nuevas API en respuesta a las necesidades de los desarrolladores.
 
 La mayoría de las APIs de WebExtensions estarán también disponibles para Firefox para Android.
 
 ### Migrar un complemento ya existente
 
-Si tu mantienes extensiones que están por ser remplazados, tales como XUL overlay, bootstrapped, o extensiones basadas en SDK, le recomendamos que investige como portarlos a WebExtensions. Existen algunos [recursos de portación en MDN](/es/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
+Si tu mantienes extensiones que están por ser remplazados, tales como XUL overlay, bootstrapped, o extensiones basadas en SDK, le recomendamos que investige como portarlos a WebExtensions. Existen algunos [recursos de portación en MDN](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/).
 
 Hemos recolectado [recursos](https://wiki.mozilla.org/Add-ons/developer/communication) en una página wiki para proporcionar soporte a los desarrolladores mediante la transición. Para empezar, utilice la herramienta de compatibilidad [Lookup Tool](https://compatibility-lookup.services.mozilla.com/) para ver si su herramienta será afectada.
 
@@ -37,15 +37,15 @@ Hemos recolectado [recursos](https://wiki.mozilla.org/Add-ons/developer/communic
 
 No es requerido que tu registres tu complemento en AMO, pero tu complemento será firmado por Mozilla o los usuarios no podrán instalarlos.
 
-Para obtener una visión general del proceso de publicación de su complemento, consulte [Firme y distribuya su complemento](/es/Add-ons/Distribution).
+Para obtener una visión general del proceso de publicación de su complemento, consulte [Firme y distribuya su complemento](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon).
 
 ## Otros tipos de complementos
 
 Además de las extensiones, hay algunos otros tipos de complemento que permiten a los usuarios personalizar Firefox. Estos complementos incluyen:
 
-- [Temas ligeros](/Add-ons/Themes/Background) Son una forma sencilla de proporcionar una personalización limitada para Firefox.
-- [Complementos para móviles](/es/Add-ons/Firefox_for_Android) son complementos de Firefox para Android. Observe que, aunque, tenemos la intención de reemplazar parte de la tecnología subyacente a estas API. En el futuro, WebExtensions será totalmente compatible con Firefox para Android.
-- [Plugins de motores de búsqueda](/es/docs/Creating_OpenSearch_plugins_for_Firefox) agrega nuevos motores de búsqueda a la barra de búsqueda del navegador.
+- [Temas ligeros](/docs/Mozilla/Add-ons/Themes/Background) Son una forma sencilla de proporcionar una personalización limitada para Firefox.
+- [Complementos para móviles](/es/docs/Mozilla/Add-ons/Firefox_for_Android) son complementos de Firefox para Android. Observe que, aunque, tenemos la intención de reemplazar parte de la tecnología subyacente a estas API. En el futuro, WebExtensions será totalmente compatible con Firefox para Android.
+- [Plugins de motores de búsqueda](/es/docs/Web/XML/Guides/OpenSearch) agrega nuevos motores de búsqueda a la barra de búsqueda del navegador.
 - [Diccionarios del usuario](/es/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) son complementos que le permiten revisar la ortografía en diferentes idiomas.
 - [Paquetes de idiomas](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack) son complementos que le permiten tener más idiomas disponibles para la interfaz de usuario de Firefox.
 
@@ -75,7 +75,7 @@ Si eres un fan de IRC, puedes ponerte en contacto:
 
 #### Vulnerabilidades de seguridad
 
-Si descubre una vulnerabilidad de segurida en un complemento, incluso si no está hospedado en un sitio de Mozilla, permítanos saberlo y trabajaremos con el desarrollador para corregir el problema. Por favor, infórmelos [confidencialmente](http://www.mozilla.org/projects/security/security-bugs-policy.html)en [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All) o enviando un correo a <amo-admins@mozilla.org>.
+Si descubre una vulnerabilidad de segurida en un complemento, incluso si no está hospedado en un sitio de Mozilla, permítanos saberlo y trabajaremos con el desarrollador para corregir el problema. Por favor, infórmelos [confidencialmente](https://www.mozilla.org/projects/security/security-bugs-policy.html)en [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All) o enviando un correo a <amo-admins@mozilla.org>.
 
 #### Errores en addons.mozilla.org (AMO)
 

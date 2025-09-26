@@ -26,4 +26,4 @@ var newEvent = document.createEvent("UIEvents");
 
 ### Specification
 
-- [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document)
+- [DOM Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document)

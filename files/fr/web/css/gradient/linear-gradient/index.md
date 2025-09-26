@@ -7,7 +7,38 @@ slug: Web/CSS/gradient/linear-gradient
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`linear-gradient()`** crée une image qui est un dégradé entre deux ou plusieurs couleurs le long d'une ligne droite. Elle fournit une valeur de type [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un type spécial d'image ([`<image>`](/fr/docs/Web/CSS/image)).
 
-{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: linear-gradient()")}}
+
+```css interactive-example-choice
+background: linear-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+```
+
+```css interactive-example-choice
+background:
+  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Syntaxe
 
@@ -44,7 +75,6 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ### Values
 
 - `<side-or-corner>`
-
   - : La position du point de départ de la ligne selon laquelle évolue le dégradé. Si elle est indiquée, elle se compose du mot `to` et peut contenir jusqu'à deux mots-clés&nbsp;: le premier indiquant le côté horizontal (`left` ou `right` pour indiquer respectivement gauche ou droite), et le second indiquant le côté vertical (`top` ou `bottom` pour indiquer respectivement haut ou bas). L'ordre des deux mots-clés n'a pas d'importance. Si aucun n'est utilisé, la valeur par défaut sera `to bottom`.
 
     Les valeurs `to top`, `to bottom`, `to left`, et `to right` sont respectivement équivalentes aux angles `0deg`, `180deg`, `270deg`, et `90deg`. Les autres valeurs sont traduites en un angle.
@@ -56,7 +86,8 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 - `<color-hint>`
   - : Une indication d'interpolation qui définit la progression du dégradé entre deux arrêts de couleur adjacents. La longueur définit à quel point entre les deux arrêts le dégradé doit atteindre la couleur intermédiaire. Si cette valeur est absente, la valeur intermédiaire sera atteinte à mi-parcours entre les deux arrêts.
 
-> **Note :** Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> [!NOTE]
+> Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ## Description
 
@@ -173,7 +204,7 @@ body {
 
 ### D'autres exemples de dégradés linéaires
 
-Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients) pour plus d'exemples.
+Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -185,7 +216,7 @@ Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Les autres fonctions de dégradés&nbsp;:
   - [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
   - [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
@@ -193,7 +224,7 @@ Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS
   - [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
   - [`repeating-conic-gradient()`](</fr/docs/Web/CSS/gradient/repeating-conic-gradient()>)
 - [`<image>`](/fr/docs/Web/CSS/image)
-- [`element()`](</fr/docs/Web/CSS/element()>)
+- [`element()`](/fr/docs/Web/CSS/element)
 - [`image()`](</fr/docs/Web/CSS/image/image()>)
 - [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
-- [`cross-fade()`](</fr/docs/Web/CSS/cross-fade()>)
+- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)

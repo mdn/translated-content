@@ -18,15 +18,11 @@ new NDEFReadingEvent(type, options);
 - `type`
   - : 常に `'type'` です。
 - `options`
-
   - : 以下のメンバーを持つオブジェクトです。
-
     - `serialNumber`
       - : メッセージが読み取られた機器のシリアル番号です。
     - `message`
-
       - : 以下のメンバーを持つオブジェクトの配列です。
-
         - `data` {{optional_inline}}
           - : 転送されるデータが入ります。文字列、{{domxref("BufferSource")}}、ネストされたレコードの配列のいずれかです。
         - `encoding` {{optional_inline}}
@@ -36,21 +32,18 @@ new NDEFReadingEvent(type, options);
         - `lang` {{optional_inline}}
           - : {{RFC(5646, "Tags for Identifying Languages （BCP 47 とも呼ばれる）")}}による有効な言語タグです。
         - `mediaType` {{optional_inline}}
-          - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+          - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
         - `recordType`
-
           - : `data` に格納されているデータの種類を示す文字列です。以下の値のいずれかでなければなりません。
-
             - `"absolute-url"`
 
               データの絶対 URL です。
 
               `"empty"`
-
               - : 空の {{domxref("NDEFRecord")}} です。
 
             - `"mime"`
-              - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+              - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
             - `"smart-poster"`
               - : [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) 仕様書で定義されているようなスマートポスターです。
             - `"text"`

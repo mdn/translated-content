@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 O método **`Promise.all(iterable)`** retorna uma única {{jsxref("Promise")}} que resolve quando todas as promises no argumento iterável forem resolvidas ou quando o iterável passado como argumento não contém promises. É rejeitado com o motivo da primeira promise que foi rejeitada.
 
-{{EmbedInteractiveExample("pages/js/promise-all.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.all()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "foo");
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+  console.log(values);
+});
+// Expected output: Array [3, 42, "foo"]
+```
 
 ## Sintaxe
 
@@ -86,7 +99,7 @@ setTimeout(function () {
 
 ### Assincronia ou sincronia da Promise.all
 
-O exemplo a seguir demonstra a assincronia (ou sincronia, se o iterável passado for fazio) de `Promise.all`:
+O exemplo a seguir demonstra a assincronia (ou sincronia, se o iterável passado for vazio) de `Promise.all`:
 
 ```js
 // Passamos o argumento como um array de promises que já estão resolvidas para disparar Promise.all a mais rápido possível
@@ -204,14 +217,11 @@ Promise.all([
 
 ## Especificações
 
-| Especificação                                              | Status               | Comentário                           |
-| ---------------------------------------------------------- | -------------------- | ------------------------------------ |
-| {{SpecName('ES2015', '#sec-promise.all', 'Promise.all')}}  | {{Spec2('ES2015')}}  | Definição inicial em um padrão ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ESDraft')}} |                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.all")}}
+{{Compat}}
 
 ## Veja também
 

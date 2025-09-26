@@ -1,30 +1,37 @@
 ---
 title: WakeLock
 slug: Web/API/WakeLock
+l10n:
+  sourceCommit: 0d9c7bb3574c48373ad96e2efc6701f306a9a3af
 ---
 
-{{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
-**`WakeLock`** 接口允许一个文件获取屏幕唤醒锁定。
+[屏幕唤醒锁 API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API) 的 **`WakeLock`** 接口可用于请求锁，该锁阻止设备屏幕在应用程序需要保持运行时变暗或锁定。
 
-## 方法
+此接口以及系统唤醒锁通过 {{domxref("Navigator.wakeLock")}} 属性暴露。
 
-- {{domxref("WakeLock.request","WakeLock.request()")}}
-  - : 返回一个决议为 {{DOMxRef("WakeLockSentinel")}} 的 {{JSxRef("Promise")}} 或当唤醒锁定不可访问的时候抛出异常。
+## 实例方法
+
+- {{domxref("WakeLock.request", "request()")}}
+  - : 返回一个 {{jsxref("Promise")}} 对象，该对象在屏幕唤醒锁被授予时会兑现为一个 {{domxref("WakeLockSentinel")}} 对象。
 
 ## 示例
 
-以下例子获取一个唤醒锁定并在 10 分钟后释放它：
+以下代码使用了 `await` 来请求 {{domxref("WakeLockSentinel")}} 对象，如果请求成功则继续执行。
 
-```plain
-function tryKeepScreenAlive(minutes) {
-  navigator.wakeLock.request("screen").then(lock => {
-    setTimeout(() => lock.release(), minutes * 60 * 1000);
-  });
+{{domxref("WakeLock.request", "WakeLock.request()")}} 方法被包裹在 `try...catch` 语句中，以捕捉[导致 promise 被拒绝的情况](/zh-CN/docs/Web/API/WakeLock/request#异常)，例如设备电量低。
+
+```js
+try {
+  const wakeLock = await navigator.wakeLock.request("screen");
+} catch (err) {
+  // 唤醒锁请求失败——通常是系统原因，例如设备电量不足
+  console.log(`${err.name}, ${err.message}`);
 }
-
-tryKeepScreenAlive(10);
 ```
+
+请注意，设备可能会在授予屏幕唤醒锁后撤销它。返回的 {{domxref("WakeLockSentinel")}} 可用于检查锁的状态，以及手动取消持有的屏幕唤醒锁。
 
 ## 规范
 
@@ -34,6 +41,6 @@ tryKeepScreenAlive(10);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{DOMxRef("Navigator.wakeLock")}}
+- [使用屏幕唤醒锁 API 阻止息屏](https://developer.chrome.google.cn/docs/capabilities/web-apis/wake-lock)

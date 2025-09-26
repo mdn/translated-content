@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: title プロパティ"
+short-title: title
 slug: Web/API/HTMLElement/title
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -32,4 +33,4 @@ link.title = "ブドウに関するウィキペディアのページ";
 
 ## 関連情報
 
-- HTML の [**title**](/ja/docs/Web/HTML/Global_attributes/title) グローバル属性
+- HTML の [**title**](/ja/docs/Web/HTML/Reference/Global_attributes/title) グローバル属性

@@ -9,7 +9,8 @@ slug: Web/API/CanvasRenderingContext2D/rect
 
 現在のパスを変更する他のメソッドと同様に、このメソッドも直接何かを描画するわけではありません。 矩形をキャンバスに描画するには、 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用することができます。
 
-> **メモ:** 矩形の作成とレンダリングを一度に行うには、 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} または {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} メソッドを使用してください。
+> [!NOTE]
+> 矩形の作成とレンダリングを一度に行うには、 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} または {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} メソッドを使用してください。
 
 ## 構文
 
@@ -47,8 +48,8 @@ void ctx.rect(x, y, width, height);
 矩形の角は (10, 20) の位置です。幅は 150 で高さは 100 です。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.rect(10, 20, 150, 100);
 ctx.fill();
 ```

@@ -16,7 +16,7 @@ Promise.race(iterable);
 ### Parâmetros
 
 - iterable
-  - : Um objeto iterável, como um {{jsxref("Array")}}. Veja [iterável](/pt-BR/docs/Web/JavaScript/Guide/iterable).
+  - : Um objeto iterável, como um {{jsxref("Array")}}. Veja [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ## Descrição
 
@@ -76,13 +76,11 @@ Promise.race([p5, p6]).then(
 
 ## Especificações
 
-| Especificação                                            | Status           | Comentário                           |
-| -------------------------------------------------------- | ---------------- | ------------------------------------ |
-| {{SpecName('ES6', '#sec-promise.race', 'Promise.race')}} | {{Spec2('ES6')}} | Definição inicial em um padrão ECMA. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.race")}}
+{{Compat}}
 
 ## Ver também
 

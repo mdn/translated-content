@@ -3,11 +3,23 @@ title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
 
-{{JSRef}}
-
 **`push()`** 方法會添加一個或多個元素至陣列的末端，並且回傳陣列的新長度。
 
-{{EmbedInteractiveExample("pages/js/array-push.html")}}
+{{InteractiveExample("JavaScript Demo: Array.push()")}}
+
+```js interactive-example
+const animals = ["pigs", "goats", "sheep"];
+
+const count = animals.push("cows");
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push("chickens", "cats", "dogs");
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
 
 ## 語法
 

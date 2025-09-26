@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Statements/throw
 명령문은 실행되지 않습니다.), 제어 흐름은 콜스택의 첫 번째 [`catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch)
 블록으로 전달됩니다. 호출자 함수 사이에 `catch` 블록이 없으면 프로그램이 종료됩니다.
 
-{{EmbedInteractiveExample("pages/js/statement-throw.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Throw")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (isNaN(width) || isNaN(height)) {
+    throw new Error("Parameter is not a number!");
+  }
+}
+
+try {
+  getRectArea(3, "A");
+} catch (e) {
+  console.error(e);
+  // Expected output: Error: Parameter is not a number!
+}
+```
 
 ## 문법
 

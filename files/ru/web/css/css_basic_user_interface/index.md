@@ -30,13 +30,9 @@ slug: Web/CSS/CSS_basic_user_interface
 
 ## Guides
 
-- [Using URL values for the `cursor` property](/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
+- [Using URL values for the `cursor` property](/ru/docs/Web/CSS/cursor)
   - : Explains how a URL can be used with the {{CSSxRef("cursor")}} property to produce custom cursors.
 
-## Specifications
+## Спецификации
 
-| Specification                     | Status                     | Comment             |
-| --------------------------------- | -------------------------- | ------------------- |
-| {{SpecName("CSS4 Basic UI")}}     | {{Spec2("CSS4 Basic UI")}} |                     |
-| {{SpecName("CSS3 Basic UI")}}     | {{Spec2("CSS3 Basic UI")}} |                     |
-| {{SpecName("CSS2.1", "ui.html")}} | {{Spec2("CSS2.1")}}        | Initial definition. |
+{{Specifications}}

@@ -22,7 +22,7 @@ _Também herda propriedades da sua entidade paterna, {{domxref("BaseAudioContext
 ### Manipuladores de Eventos
 
 - {{domxref("OfflineAudioContext.oncomplete")}}
-  - : É uma chamada {{event("Event_handlers", "event handler")}} quando o processamento é encerrado, é quando o evento {{event("complete")}} - do tipo {{domxref("OfflineAudioCompletionEvent")}} - é gerado, após a versão baseada em eventos do {{domxref("OfflineAudioContext.startRendering()")}} é usada.
+  - : É uma chamada [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) quando o processamento é encerrado, é quando o evento [`complete`](/pt-BR/docs/Web/API/OfflineAudioContext/complete_event) - do tipo {{domxref("OfflineAudioCompletionEvent")}} - é gerado, após a versão baseada em eventos do {{domxref("OfflineAudioContext.startRendering()")}} é usada.
 
 ## Métodos
 
@@ -43,7 +43,8 @@ Quando a 'promise' `startRendering()` é resolvida, a renderização foi conclu�
 
 Neste ponto, criamos outro contexto de áudio, criamos um {{domxref("AudioBufferSourceNode")}} dentro dele e configuramos o buffer para ser igual à promessa `AudioBuffer`. Isso é jogado como parte de um gráfico de áudio padrão simples.
 
-> **Nota:** Para um exemplo de trabalho, veja nosso [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) Github repo (veja o [código fonte](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) também.)
+> [!NOTE]
+> Para um exemplo de trabalho, veja nosso [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) Github repo (veja o [código fonte](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) também.)
 
 ```js
 // define o contexto de áudio online e offline
@@ -112,4 +113,4 @@ getData();
 
 ## Veja também
 
-- [Usando a API de áudio da Web](/pt-BR/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Usando a API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

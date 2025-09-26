@@ -24,7 +24,8 @@ attr(data-width px, inherit);
 attr(data-something, "default");
 ```
 
-> **Note :** La fonction `attr()` peut être utilisée sur n'importe quelle propriété CSS. Toutefois, en dehors de {{cssxref("content")}}, la prise en charge des navigateurs est expérimentale. Voir le tableau de compatibilité en fin d'article.
+> [!NOTE]
+> La fonction `attr()` peut être utilisée sur n'importe quelle propriété CSS. Toutefois, en dehors de {{cssxref("content")}}, la prise en charge des navigateurs est expérimentale. Voir le tableau de compatibilité en fin d'article.
 
 ## Syntaxe
 
@@ -33,7 +34,6 @@ attr(data-something, "default");
 - `attribute-name`
   - : Le nom de l'attribut de l'élément HTML ciblé par la déclaration CSS.
 - `<type-or-unit>` {{experimental_inline}}
-
   - : Un mot-clé indiquant le type de valeur pour l'attribut ou l'unité dans laquelle elle est exprimée. Si la valeur `<type-or-unit>` est invalide pour l'attribut ciblé, l'expression `attr()` sera également considérée comme invalide. Si cette valeur est absente, elle vaudra `string` par défaut. La liste des valeurs valides est :
 
     <table class="standard-table">
@@ -358,5 +358,5 @@ body,
 ## Voir aussi
 
 - [Sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors)
-- [Attributs HTML `data-*`](/fr/docs/Web/HTML/Global_attributes/data-*)
+- [Attributs HTML `data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*)
 - [Attributs SVG `data-*`](/fr/docs/Web/SVG/Attribute/data-*)

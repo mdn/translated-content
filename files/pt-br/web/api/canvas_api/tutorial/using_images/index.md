@@ -41,7 +41,7 @@ We can obtain a reference to images on the same page as the canvas by using one 
 
 ### Using images from other domains
 
-Using the [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/pt-BR/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+Using the [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/pt-BR/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
 ### Using other canvas elements
 
@@ -78,7 +78,7 @@ If you're only using one external image this can be a good approach, but once yo
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: url](/pt-BR/docs/Web/HTTP/data_URIs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: url](/pt-BR/docs/Web/URI/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 var img = new Image(); // Create new img element
@@ -114,7 +114,8 @@ Once we have a reference to our source image object we can use the `drawImage()`
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y)")}}
   - : Draws the `CanvasImageSource` specified by the `image` parameter at the coordinates (`x`, `y`).
 
-> **Nota:** SVG images must specify a width and height in the root \<svg> element.
+> [!NOTE]
+> SVG images must specify a width and height in the root \<svg> element.
 
 ### Example: A simple line graph
 
@@ -160,7 +161,8 @@ The second variant of the `drawImage()` method adds two new parameters and lets 
 
 In this example, we'll use an image as a wallpaper and repeat it several times on the canvas. This is done simply by looping and placing the scaled images at different positions. In the code below, the first `for` loop iterates over the rows. The second `for` loop iterates over the columns. The image is scaled to one third of its original size, which is 50x38 pixels.
 
-> **Nota:** Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.
+> [!NOTE]
+> Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.
 
 ```html hidden
 <html>

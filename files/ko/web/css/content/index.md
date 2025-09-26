@@ -3,9 +3,7 @@ title: content
 slug: Web/CSS/content
 ---
 
-{{CSSRef}}
-
-[CSS](/ko/docs/Web/CSS) **`content`** 속성은 생성한 값으로 요소를 대체합니다. `content` 속성으로 추가한 요소는 "익명 [대체 요소](/ko/docs/Web/CSS/Replaced_element)"입니다.
+[CSS](/ko/docs/Web/CSS) **`content`** 속성은 생성한 값으로 요소를 대체합니다. `content` 속성으로 추가한 요소는 "익명 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)"입니다.
 
 ```css
 /* 다른 값과 조합할 수 없는 키워드 */
@@ -61,7 +59,6 @@ content: unset;
 - {{cssxref("&lt;image&gt;")}}
   - : {{cssxref("&lt;url&gt;")}}이나 {{cssxref("&lt;gradient&gt;")}} 자료형을 사용한 {{cssxref("&lt;image&gt;")}}, 또는 {{cssxref("element")}} 함수를 사용해 가리킨, 보여줄 웹페이지의 일부.
 - {{cssxref("&lt;counter&gt;")}}
-
   - : 보통 숫자인 <a href="/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS 카운터 값</a>.{{cssxref("counter")}}나 {{cssxref("counters")}} 함수를 사용해 지정할 수 있습니다.
 
     {{cssxref("counter")}} 함수는 `counter(<var>name</var>)`과 `counter(<var>name</var>, <var>style</var>)`의 두 형태를 가지고 있습니다. 생성하는 값은 주어진 의사 요소의 현재 범위에서, 해당하는 이름을 가진 가장 안쪽 카운터의 값입니다. 지정한 스타일(기본 `decimal`)에 맞춰 서식을 적용합니다.
@@ -270,7 +267,7 @@ li {
 
 ## 접근성 고려사항
 
-CSS로 생성한 콘텐츠는 [DOM](/ko/docs/Web/API/Document_Object_Model/소개)이 포함하지 않고, [접근성 트리](/ko/docs/Learn/접근성/What_is_accessibility)에도 들어가지 않습니다. 따라서 특정 접근성 기술/브라우저 조합이 내용을 표현하지 않을 수 있습니다. 콘텐츠가 포함한 정보가 페이지의 목적을 이해하는 것에 중요하다면 주 문서로 포함하는 것이 좋습니다.
+CSS로 생성한 콘텐츠는 [DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)이 포함하지 않고, [접근성 트리](/ko/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)에도 들어가지 않습니다. 따라서 특정 접근성 기술/브라우저 조합이 내용을 표현하지 않을 수 있습니다. 콘텐츠가 포함한 정보가 페이지의 목적을 이해하는 것에 중요하다면 주 문서로 포함하는 것이 좋습니다.
 
 - [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
 - [Explanation of WCAG, Guideline 1.3 – MDN](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)

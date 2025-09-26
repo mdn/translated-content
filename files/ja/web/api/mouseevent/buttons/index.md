@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.buttons
+title: "MouseEvent: buttons プロパティ"
+short-title: buttons
 slug: Web/API/MouseEvent/buttons
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
@@ -13,7 +14,8 @@ l10n:
 複数のボタンが押された場合は、ボタンの値を足し合わせて新しい数値が生成されます。
 例えば、副ボタン（`2`）と補助ボタン（`4`）を同時に押した場合、その値は`6`（すなわち、`2 + 4`）となります。
 
-> **メモ:** このプロパティを {{domxref("MouseEvent.button")}} プロパティと混同しないでください。
+> [!NOTE]
+> このプロパティを {{domxref("MouseEvent.button")}} プロパティと混同しないでください。
 > {{domxref("MouseEvent.buttons")}} プロパティはあらゆる種類のマウスイベントの際に押されていたボタンの状態を示すのに対して、
 > {{domxref("MouseEvent.button")}} プロパティは 1 つまたは複数のボタンを押したか離したことによって引き起こされたマウスイベントのみ、正しい値を保証します。
 
@@ -43,17 +45,17 @@ l10n:
 ### JavaScript
 
 ```js
-let log = document.createTextNode('?');   // let log = new Text('?');
+let log = document.createTextNode("?"); // let log = new Text('?');
 
 function logButtons(e) {
-  log.data = `${e.buttons} (${e.type})`;  // log.nodeValue= `${e.buttons} (${e.type})`;
+  log.data = `${e.buttons} (${e.type})`; // log.nodeValue= `${e.buttons} (${e.type})`;
 }
 
-document.addEventListener('mouseup', logButtons);
-document.addEventListener('mousedown', logButtons);
+document.addEventListener("mouseup", logButtons);
+document.addEventListener("mousedown", logButtons);
 // document.addEventListener('mousemove', logButtons);
 
-document.querySelector('#log').appendChild(log)
+document.querySelector("#log").appendChild(log);
 ```
 
 ### 結果

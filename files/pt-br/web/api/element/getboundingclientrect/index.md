@@ -15,11 +15,12 @@ rectObject = object.getBoundingClientRect();
 
 ### Valor de retorno
 
-O valor de retorno é o objeto [DOMRect](/pt-BR/docs/XPCOM_Interface_Reference/nsIDOMClientRect) que é a uniāo dos retângulos retornados por [`getClientRects()`](/pt-BR/docs/DOM/element.getClientRects) para o elemento, ou seja, os atributos border-boxes do CSS associados ao elemento.
+O valor de retorno é o objeto [DOMRect](/pt-BR/docs/XPCOM_Interface_Reference/nsIDOMClientRect) que é a uniāo dos retângulos retornados por [`getClientRects()`](/pt-BR/docs/Web/API/Element/getClientRects) para o elemento, ou seja, os atributos border-boxes do CSS associados ao elemento.
 
 O valor retornado é um objeto `DOMRect`, que contém as propriedades apenas-leitura `left`, `top`, `right` e `bottom` que descrevem o border-box em pixels. `top` e `left` são relativos às propriedades top-left do _viewport_.
 
-> **Nota:** Gecko 1.9.1 adiciona as propriedades `width` e `height` ao objeto `DOMRect`.
+> [!NOTE]
+> Gecko 1.9.1 adiciona as propriedades `width` e `height` ao objeto `DOMRect`.
 
 Border-boxes vazias são completamente ignoradas. Se todos os border-boxes do elemento são vazias, então é retornado o retângulo com width e height como zero, e no lugar de `top` e `left` determina-se o top-left do border-box relacionado ao primeiro box CSS (determinado pela ordem do conteúdo) em relaçāo ao elemento.
 
@@ -60,4 +61,4 @@ var rect = obj.getBoundingClientRect();
 ## Veja também
 
 - [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx>)
-- [`getClientRects()`](/pt-BR/docs/DOM/element.getClientRects)
+- [`getClientRects()`](/pt-BR/docs/Web/API/Element/getClientRects)

@@ -1,19 +1,16 @@
 ---
-title: XRInputSource.handedness
+title: "XRInputSource: handedness プロパティ"
+short-title: handedness
 slug: Web/API/XRInputSource/handedness
+l10n:
+  sourceCommit: 6788d086c530ae04793a497d12863db3d8adf040
 ---
 
 {{APIRef("WebXR Device API")}}
 
-{{domxref("XRInputSource")}} の読み取り専用プロパティ **`handedness`** は、WebXR 入力ソースがユーザーのどの手に関連付けられているか、またはまったく関連付けられていないかを示します。
+{{domxref("XRInputSource")}} の **`handedness`** は読み取り専用プロパティで、WebXR 入力ソースがユーザーのどの手に関連付けられているか、またはまったく関連付けられていないかを示します。
 
-## 構文
-
-```js
-xrInputSource.handedness;
-```
-
-### 値
+## 値
 
 文字列で、入力コントローラーがユーザーの手に握られているかどうか、もしそうならばどちらの手なのかを表します。値は次のうちの一つです。
 
@@ -26,17 +23,17 @@ xrInputSource.handedness;
 
 ## 使用上の注意
 
-入力ソースがユーザーの手に関連付けられた機器でない場合 (握られているか、取り付けられているか、着用されているかに関係なく)、`handedness` の値は `none` です。 これは、例えば、ヘッドセットに組み込まれたコントロールや、頭や体に取り付けられた入力機器など、ハンドヘルドではない入力ソースを示している場合があります。
+入力ソースがユーザーの手に関連付けられた機器でない場合（握られているか、取り付けられているか、着用されているかに関係なく）、`handedness` の値は `none` です。 これは、例えば、ヘッドセットに組み込まれたコントロールや、頭や体に取り付けられた入力機器など、手で持つものではない入力ソースを示している場合があります。
 
 ## 例
 
-`handedness` の重要な使用方法の 1 つは、コントローラーがどちらの手にあるかを判別して、仮想空間でその手 (またはその手が制御している機器) の表現を描画できるようにすることです。
+`handedness` の重要な使用方法の 1 つは、コントローラーがどちらの手にあるかを判別して、仮想空間でその手（またはその手が制御している機器）の表現を描画できるようにすることです。
 
 ```js
 function updateInputSources(session, frame, refSpace) {
-  for (let source of session.inputSources) {
+  for (const source of session.inputSources) {
     if (source.gripSpace) {
-      let gripPose = frame.getPose(source.gripSpace, refSpace);
+      const gripPose = frame.getPose(source.gripSpace, refSpace);
 
       if (gripPose) {
         myRenderHandObject(gripPose, inputSource.handedness);
@@ -46,9 +43,9 @@ function updateInputSources(session, frame, refSpace) {
 }
 ```
 
-この関数は、すべてのアニメーションフレームで (または必要な滑らかさの程度とパフォーマンスの制約に応じて定期的に) 呼び出され、入力ソースのリストをスキャンして、 {{domxref("XRInputSource.gripSpace", "gripSpace")}} が `null` ではないものを探します。 `gripSpace` が存在する場合、それは入力ソースが何らかのハンドヘルド機器であることを意味するため、可能であれば視覚的にレンダリングする必要があります。
+この関数は、すべてのアニメーションフレームで（または必要な滑らかさの程度とパフォーマンスの制約に応じて定期的に）呼び出され、入力ソースのリストをスキャンして、 {{domxref("XRInputSource.gripSpace", "gripSpace")}} が `null` ではないものを探します。 `gripSpace` が存在する場合、それは入力ソースが何らかのハンドヘルド機器であることを意味するため、可能であれば視覚的にレンダリングする必要があります。
 
-`gripSpace` が `null` 以外の場合、この関数は、現在の参照空間に変換された `gripSpace` のポーズを取得します。 それが有効であると仮定すると、`myRenderHandObject()` と呼ばれる関数が、グリップのポーズと `handedness` の値を使用して呼び出されます。 これらの値が手元にあれば (しゃれは意図していません)、正しい手のために配置および形成された適切なモデルを描画できます。
+`gripSpace` が `null` 以外の場合、この関数は、現在の参照空間に変換された `gripSpace` のポーズを取得します。 それが有効であると仮定すると、`myRenderHandObject()` と呼ばれる関数が、グリップのポーズと `handedness` の値を使用して呼び出されます。そして、正しい手に配置され形成された適切なモデルを描画します。
 
 ## 仕様書
 
@@ -60,6 +57,6 @@ function updateInputSources(session, frame, refSpace) {
 
 ## 関連情報
 
-- [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API)
+- [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API)
 - [入力と入力ソース](/ja/docs/Web/API/WebXR_Device_API/Inputs)
-- [WebXR アプリケーションでのゲームパッドの使用](/ja/docs/Web/WebXR%20Device%20API/Gamepads)
+- [WebXR アプリケーションでのゲームパッドの使用](/ja/docs/Web/WebXR_Device_API/Gamepads)

@@ -1,55 +1,63 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
+l10n:
+  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
 {{JSRef}}
 
-静态方法 **`Atomics.notify()`** 提醒一些在等待队列中休眠的代理。
+**`Atomics.notify()`** 静态方法唤醒一些在等待队列中休眠的代理。
 
-> **备注：** 本操作仅在共享的 {{jsxref("Int32Array")}} 下可用。
+> [!NOTE]
+> 此操作仅适用于基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}} 视图。对于非共享的 `ArrayBuffer` 对象，其将返回 `0`。
 
 ## 语法
 
-```plain
+```js-nolint
 Atomics.notify(typedArray, index, count)
 ```
 
 ### 参数
 
 - `typedArray`
-  - : 一个共享的 {{jsxref("Int32Array")}}。
+  - : 基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}。
 - `index`
-  - : `typedArray` 中要唤醒的目标索引。
-- `count`
-  - : 要通知的正在休眠的代理的数量。默认是 {{jsxref("Infinity", "+Infinity")}}。
+  - : `typedArray` 中要唤醒的位置。
+- `count` {{optional_inline}}
+  - : 要唤醒的休眠代理的数量。默认为 {{jsxref("Infinity")}}。
 
 ### 返回值
 
-被唤醒的代理的数量。
+- 返回唤醒的代理数量。
+- 如果在非共享的 {{jsxref("ArrayBuffer")}} 上调用则返回 `0`。
 
 ### 异常
 
-- 若 `typedArray` 不是共享的 {{jsxref("Int32Array")}}，则抛出一个 {{jsxref("TypeError")}} 异常。
-- 若 `index` 索引超出了 `typedArray` 的大小，则抛出一个 {{jsxref("RangeError")}} 异常。
+- {{jsxref("TypeError")}}
+  - : 如果 `typedArray` 不是一个基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}，则抛出该异常。
+- {{jsxref("RangeError")}}
+  - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
 
 ## 示例
 
-分配一个共享的 `Int32Array`：
+### 使用 notify()
+
+给定一个共享的 `Int32Array`：
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var int32 = new Int32Array(sab);
+const sab = new SharedArrayBuffer(1024);
+const int32 = new Int32Array(sab);
 ```
 
-一个读线程会进入休眠并监视索引 0 处的值（默认为 0）。只要索引 0 处的值不为 0，读进程就会唤醒。但是，一旦写进程存储了一个新的值，写进程就会产生一个提醒并返回写入后的新值（123）。（这里示例有问题或者说对初学者不友好，如果直接在浏览器控制台运行下面代码会报错，因为我们不能尝试睡眠主线程，可以见 [重学 js —— 结构化数据之 Atomics 对象](https://github.com/lizhongzhen11/lizz-blog/issues/125#notice)，同时我在 **codepen** 写了一个示例：[Atomics.wait 使用示例](https://codepen.io/lizhongzhen11/project/editor/AmzyaY#)）
+令一个读取线程休眠并在位置 0 处等待，预期该位置的值为 0。只要条件一直为真，则将不会继续运行。然而，一旦写入线程存储了一个新的值，它将被读取线程唤醒并返回新的值（123）。
 
 ```js
 Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123
 ```
 
-写进程写入一个新值并告知等待进程已经写入成功了：
+写入线程存储一个新的值并在写入后唤醒等待的线程：
 
 ```js
 console.log(int32[0]); // 0;
@@ -65,7 +73,8 @@ Atomics.notify(int32, 0, 1);
 
 {{Compat}}
 
-## 相关文档
+## 参见
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.wait()")}}
+- {{jsxref("Atomics.waitAsync()")}}

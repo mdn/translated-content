@@ -3,11 +3,9 @@ title: "@charset"
 slug: Web/CSS/@charset
 ---
 
-{{ CSSRef }}
-
 ## Resumen
 
-La [regla-at](/en/CSS/At-rule) **`@charset`** de [CSS](/en/CSS) especifica la codificación de caracteres usada en la hoja de estilos. Éste debe ser el primer elemento en la hoja de estilos, y no debe ser precedidad por ningun otro caracter; al no ser una [declaración anidada](/en/CSS/Syntax#nested_statements), no puede ser usada dentro de [grupos de reglas-at condicionales](/en/CSS/At-rule#Conditional_Group_Rules). Si se definen varias reglas-at `@charset`, solamente se usará la primera. La regla-at `@charset` no puede ser usada dentro de un atributo `style` style en un elemento HTML o dentro del elemento {{ HTMLElement("style") }} , ya que en estos casos se tomará en cuenta la codificación de la página HTML contenedora.
+La [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) **`@charset`** de [CSS](/es/docs/Web/CSS) especifica la codificación de caracteres usada en la hoja de estilos. Éste debe ser el primer elemento en la hoja de estilos, y no debe ser precedidad por ningun otro caracter; al no ser una [declaración anidada](/es/docs/Web/CSS/CSS_syntax/Syntax#nested_statements), no puede ser usada dentro de [grupos de reglas-at condicionales](/es/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules). Si se definen varias reglas-at `@charset`, solamente se usará la primera. La regla-at `@charset` no puede ser usada dentro de un atributo `style` style en un elemento HTML o dentro del elemento {{ HTMLElement("style") }} , ya que en estos casos se tomará en cuenta la codificación de la página HTML contenedora.
 
 Esta regla-at es útil cuando se usan caracteres fuera de la codificación ASCII en alguna propiedad CSS, como {{ cssxref("content") }}.
 
@@ -27,10 +25,9 @@ Habiendo diferentes maneras de definir la codificación de caracteres en una hoj
 ```
 
 - donde:
-
   - : _charset_
 
-    Es un valor {{cssxref("&lt;string&gt;")}} que denota la codificación de caracteres que será usada. Debe ser el nombre de una codificación de caracteres compatible con Web, definida en el [registro IANA](http://www.iana.org/assignments/character-sets). Si varios nombres están asociados a una codificación, solamente se usará el que está marcado como _principal_.
+    Es un valor {{cssxref("&lt;string&gt;")}} que denota la codificación de caracteres que será usada. Debe ser el nombre de una codificación de caracteres compatible con Web, definida en el [registro IANA](https://www.iana.org/assignments/character-sets). Si varios nombres están asociados a una codificación, solamente se usará el que está marcado como _principal_.
 
 ### Sintaxis formal
 

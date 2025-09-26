@@ -3,11 +3,21 @@ title: getter
 slug: Web/JavaScript/Reference/Functions/get
 ---
 
-{{jsSidebar("Functions")}}
-
 **`get`** 语法将对象属性绑定到查询该属性时将被调用的函数。
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 语法
 
@@ -33,7 +43,7 @@ slug: Web/JavaScript/Reference/Functions/get
 使用`get`语法时应注意以下问题：
 
 - 可以使用数值或字符串作为标识；
-- 必须不带参数（请参考[Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
+- 必须不带参数（请参考[Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
 - 它不能与另一个 `get` 或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 `{ get x() { }, get x() { } }` 和 `{ x: ..., get x() { } }`）。
 
 ## 示例
@@ -95,7 +105,7 @@ console.log(obj.foo); // "bar"
 
 ### 智能 / 自我复写/ 懒加载 getters
 
-Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。getter 延迟计算值的成本，直到需要此值，如果不需要，您就不用支付成本。
+Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。getter 延迟计算值的成本，直到需要此值，如果不需要，你就不用支付成本。
 
 一种额外的优化技术是用**智能 (或称[记忆化](https://en.wikipedia.org/wiki/Memoization))getters** 延迟属性值的计算并将其缓存以备以后访问。该值是在第一次调用 getter 时计算的，然后被缓存，因此后续访问返回缓存值而不重新计算它。这在以下情况下很有用：
 
@@ -103,7 +113,8 @@ Getters 给你一种方法来定义一个对象的属性，但是在访问它们
 - 如果现在不需要该值。它将在稍后使用，或在某些情况下它根本不使用。
 - 如果被使用，它将被访问几次，并且不需要重新计算，该值将永远不会被改变，或者不应该被重新计算。
 
-> **备注：** 这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。
+> [!NOTE]
+> 这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。
 
 在以下示例中，对象具有一个 getter 属性。在获取属性时，该属性将从对象中删除并重新添加，但此时将隐式显示为数据属性。最后返回得到值。
 
@@ -150,7 +161,7 @@ console.log(
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}

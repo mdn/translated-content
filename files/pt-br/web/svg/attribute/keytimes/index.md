@@ -75,13 +75,10 @@ If the {{SVGAttr("calcMode")}} attribute is set to `paced`, the `keyTimes` attri
 
 If the duration of the animation is indefinite, any `keyTimes` specification will be ignored.
 
-## Specifications
+## Especificações
 
-| Specification                                                        | Status                        | Comment            |
-| -------------------------------------------------------------------- | ----------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#KeyTimesAttribute", "keyTimes")}}   | {{Spec2("SVG Animations 2")}} | No change          |
-| {{SpecName("SVG1.1", "animate.html#KeyTimesAttribute", "keyTimes")}} | {{Spec2("SVG1.1")}}           | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.animate.keyTimes")}}
+{{Compat}}

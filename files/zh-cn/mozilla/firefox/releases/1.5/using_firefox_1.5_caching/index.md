@@ -3,18 +3,15 @@ title: Using Firefox 1.5 caching
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 ---
 
-{{FirefoxSidebar}}
-
 ## 介绍
 
-[Firefox 1.5](/zh-CN/docs/Firefox_1.5_for_developers) 对整个 web 页面的一个浏览器会话进行了内存缓存，包括他们对 JavaScript 状态。在访问过的页面间后退和前进不需要页面加载同时保存 JavaScript 状态。这个特性，被称为 bfcache（“后退前进缓存”），使得页面导航（切换）非常快。这个状态缓存被保存直到用户关闭浏览器。
+[Firefox 1.5](/zh-CN/docs/Mozilla/Firefox/Releases/1.5) 对整个 web 页面的一个浏览器会话进行了内存缓存，包括他们对 JavaScript 状态。在访问过的页面间后退和前进不需要页面加载同时保存 JavaScript 状态。这个特性，被称为 bfcache（“后退前进缓存”），使得页面导航（切换）非常快。这个状态缓存被保存直到用户关闭浏览器。
 
 有时候，Firefox 不缓存页面。下面是一些页面不被缓存的常见的编程的原因：
 
 - 页面使用 `unload` 或者 `beforeunload` 处理程序;
 - 页面设置 "cache-control: no-store".
 - 页面是 HTTPS 同时页面至少有一个以下设置：
-
   - "Cache-Control: no-cache"
   - "Pragma: no-cache"
   - 使用 "Expires: 0" 或者 "Expires" 设置相对于“Date”header 值的过去日期值 (除非指定 "Cache-Control: max-age=");
@@ -185,6 +182,6 @@ function loadOnlyFirst() {
 
 ## 开发 Firefox 扩展
 
-Firefox 1.5 [extensions](/zh-CN/docs/Building_an_Extension) 需要允许缓存功能。如果你在开发一个兼容 1.5 及以前版本的 Firefox 扩展，确保它监听事件触发 `load` 可被缓存，监听的 `pageshow` 事件触发不应该被缓存。
+Firefox 1.5 [extensions](/zh-CN/docs/Mozilla/Add-ons) 需要允许缓存功能。如果你在开发一个兼容 1.5 及以前版本的 Firefox 扩展，确保它监听事件触发 `load` 可被缓存，监听的 `pageshow` 事件触发不应该被缓存。
 
 例如，Firefox 的 Google 工具栏为了兼容 1.5 和更早的版本，应该为 autolink 监听 `load` 事件函数，为 PageRank 监听 `pageshow` 事件函数。

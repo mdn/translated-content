@@ -3,7 +3,7 @@ title: runtime.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connect
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Créer une connexion pour plusieurs cas d'utilisation pout votre extension.
 
@@ -26,11 +26,9 @@ var port = browser.runtime.connect(
 ### Paramètres
 
 - `extensionId`{{optional_inline}}
-  - : `string`. L'ID de l'extension à laquelle se connecter. Si la cible à défini un ID dans la clé [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) du fichier manifest.json, alors `extensionId` doit avoir cette valeur. Autrement, il doit avoir l'ID qui a été généré pour la cible.
+  - : `string`. L'ID de l'extension à laquelle se connecter. Si la cible à défini un ID dans la clé [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) du fichier manifest.json, alors `extensionId` doit avoir cette valeur. Autrement, il doit avoir l'ID qui a été généré pour la cible.
 - `connectInfo`{{optional_inline}}
-
   - : `object`. Détails de la connexion:
-
     - `name`{{optional_inline}}
       - : `string`. Sera passé dans {{WebExtAPIRef("runtime.onConnect")}} pour les processus qui écoutent un évènement de type connexion.
     - `includeTlsChannelId`{{optional_inline}}
@@ -72,7 +70,6 @@ Les scripts d'arrière plan correspondant :
 
 - Ecoute les tentatives de connexion du script de contenu.
 - Quand il reçoit une tentative de connexion :
-
   - Stocke le port dans une variable nommé `portFromCS`.
   - envoie un message au script de contenu en utiliant le port.
   - Commence à écouter les messages reçus sur le port, et les enregistre.
@@ -102,11 +99,9 @@ browser.browserAction.onClicked.addListener(function () {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

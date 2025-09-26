@@ -65,7 +65,7 @@ Tú puedes crear un nuevo objeto `Response` usando el constructor{{domxref("Resp
 
 ## Examples
 
-En nuestro [ejemplo básico de ferch](https://github.com/mdn/fetch-examples/tree/gh-pages/basic-fetch) ([ejecutar el ejemplo](http://mdn.github.io/fetch-examples/basic-fetch/)) usamos una llamada `fetch()` para descargar una imagen y mostrarla en una etiqueta {{htmlelement("img")}} . La llamda a `fetch()` call devuelve una promesa, la cual resuelve a un objeto `Response` asociado a la operación fetch.
+En nuestro [ejemplo básico para obtener información](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch) ([ejecutar el ejemplo](https://mdn.github.io/dom-examples/fetch/basic-fetch/)) usamos una llamada `fetch()` para descargar una imagen y mostrarla en una etiqueta {{htmlelement("img")}} . La llamada a `fetch()` devuelve una promesa, la cual resuelve a un objeto `Response` asociado a la operación fetch.
 
 Observa como ya que lo que estamos solicitando es una imagen, necesitamos ejecutar {{domxref("Body.blob")}} ({{domxref("Response")}} implements body) para darle a la respuesta su tipo MIME correcto.
 
@@ -97,6 +97,6 @@ var myResponse = new Response();
 
 ## Ver también
 
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)

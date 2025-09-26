@@ -1,6 +1,9 @@
 ---
-title: Document.importNode()
+title: "Document: importNode() メソッド"
+short-title: importNode()
 slug: Web/API/Document/importNode
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -13,9 +16,9 @@ slug: Web/API/Document/importNode
 
 ## 構文
 
-```js
-importNode(externalNode);
-importNode(externalNode, deep);
+```js-nolint
+importNode(externalNode)
+importNode(externalNode, deep)
 ```
 
 ### 引数
@@ -23,9 +26,7 @@ importNode(externalNode, deep);
 - `externalNode`
   - : 現在の文書にインポートする、外部の {{domxref("Node")}} または {{domxref("DocumentFragment")}} です。
 - `deep` {{optional_inline}}
-
   - : 論理値のフラグで、既定値は `false` であり、`externalNode` の DOM サブツリー全体をインポートするかどうかを制御します。
-
     - `deep` が `true` に設定された場合、 `externalNode` およびその子孫全てが複製されます。
     - `deep` が `false` に設定された場合、 `externalNode` のみがインポートされます — 新しいノードには子ノードはない状態になります。
 
@@ -33,7 +34,8 @@ importNode(externalNode, deep);
 
 インポートする側の文書のスコープにコピーされた `importedNode` です。
 
-> **メモ:** `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
+> [!NOTE]
+> `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
 
 ## 例
 
@@ -51,7 +53,8 @@ document.getElementById("container").appendChild(newNode);
 - {{domXref("document.importNode()")}} でクローンする、または
 - {{domXref("document.adoptNode()")}} で移行する
 
-> **メモ:** Firefox は今のところこのルールを強制していませんが、将来の互換性を改善するために、このルールに従うことを強く推奨します。
+> [!NOTE]
+> Firefox は今のところこのルールを強制していませんが、将来の互換性を改善するために、このルールに従うことを強く推奨します。
 
 {{domXref("Node.ownerDocument")}} の問題に関して詳しくは、W3C DOM FAQ を参照してください。
 

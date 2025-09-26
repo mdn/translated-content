@@ -17,18 +17,18 @@ JavaScript의 표준은 [ECMAScript 언어 사양](https://tc39.es/ecma262/) (EC
 
 JavaScript와 [Java 프로그래밍 언어](<https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)>)를 혼동해서는 안 됩니다. **JavaScript는 "인터프리트 Java"가 아닙니다.** "Java"와 "JavaScript" 는 모두 상표이자 미국 및 기타 국가에 등록된 Oracle의 상표이지만, 두 프로그래밍 언어의 구문, 의미 및 사용 방법은 매우 다릅니다.
 
-핵심 언어 기능(대부분 순수한 [ECMAScript](/ko/docs/Web/JavaScript/JavaScript_technologies_overview))에 대한 JavaScript 문서는 다음과 같습니다.
+핵심 언어 기능(대부분 순수한 [ECMAScript](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview))에 대한 JavaScript 문서는 다음과 같습니다.
 
 - [JavaScript 안내서](/ko/docs/Web/JavaScript/Guide)
 - [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference)
 
-JavaScript 사양과 관련 기술에 대한 자세한 내용은 [JavaScript 기술 개요](/ko/docs/Web/JavaScript/JavaScript_technologies_overview)를 참조하세요.
+JavaScript 사양과 관련 기술에 대한 자세한 내용은 [JavaScript 기술 개요](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)를 참조하세요.
 
 > **알림:** **프론트 엔드 웹 개발자가 되고 싶으신가요?**
 >
 > 목표 달성에 필요한 모든 필수 정보가 포함된 과정을 마련했습니다.
 >
-> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/orphaned/Learn/Front-end_web_developer)
 
 ## 자습서
 
@@ -36,17 +36,17 @@ JavaScript 사양과 관련 기술에 대한 자세한 내용은 [JavaScript 기
 
 ### 입문자용
 
-JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이전 경험이 없는 경우 [JavaScript 주제에 대한 학습 영역](/ko/docs/Learn/JavaScript)을 방문하세요. 전체 과정은 다음과 같습니다.
+JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이전 경험이 없는 경우 [JavaScript 주제에 대한 학습 영역](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)을 방문하세요. 전체 과정은 다음과 같습니다.
 
-- [JavaScript 첫 걸음](/ko/docs/Learn/JavaScript/First_steps)
+- [JavaScript 첫 걸음](/ko/docs/conflicting/Learn_web_development/Core/Scripting)
   - : 변수, 문자열, 숫자 및 배열과 같은 주요 JavaScript 기능에 대해 논의하면서 "JavaScript 는 무엇인가요?", "어떤 모습인가요?", "무엇을 할 수 있나요?"와 같은 몇 가지 기본적인 질문에 답합니다.
-- [JavaScript 구성 요소](/ko/docs/Learn/JavaScript/Building_blocks)
+- [JavaScript 구성 요소](/ko/docs/Learn_web_development/Core/Scripting)
   - : JavaScript의 핵심 기본 기능에 대한 이해를 넓히기 위해 조건문, 반복문, 함수, 이벤트와 같이 흔히 찾을 수 코드 블록의 형태에 대해서 알아봅니다.
-- [JavaScript 객체 소개](/ko/docs/Learn/JavaScript/Objects)
+- [JavaScript 객체 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : JavaScript의 객체 지향적 특성에 대한 이해는 언어의 이해도를 높이며 효율적인 코드를 작성하려는 경우 중요하므로, 이 과정이 도움이 될 것입니다.
-- [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous)
+- [비동기 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS)
   - : 비동기 JavaScript가 중요한 이유와, 비동기적 코드를 사용해 서버에서 리소스 가져오기 등 블록킹 연산을 효율적으로 처리하는 방법에 대해 알아봅니다.
-- [클라이언트측 웹 API](/ko/docs/Learn/JavaScript/Client-side_web_APIs)
+- [클라이언트측 웹 API](/ko/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : API란 무엇인지 탐색해보고, 개발 작업에서 자주 접하게 될 가장 일반적인 API를 사용하는 방법을 알아봅니다.
 
 ### JavaScript 안내서
@@ -56,28 +56,28 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 
 ### 중급
 
-- [클라이언트 측 JavaScript 프레임워크 이해](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [클라이언트 측 JavaScript 프레임워크 이해](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript 프레임워크는 현대 프런트 엔드 웹 개발의 필수 부분으로, 개발자에게 확장 가능한 상호작용형 웹 응용 프로그램을 구축하기위한 입증된 도구를 제공합니다. 이 과정에서는 오늘날 가장 인기있는 일부 프레임워크를 다루는 자습서 시리즈로 이동하기 전에 클라이언트 측 프레임워크가 작동하는 방식과 도구 집합에 맞는 방식에 대한 기본적인 배경 지식을 제공합니다.
-- [자바스크립트 개요](/ko/docs/Web/JavaScript/Language_Overview)
+- [JavaScript 개요](/ko/docs/Web/JavaScript/Guide/Language_overview)
   - : 다른 프로그래밍 언어에서 넘어 온 사람들이 빨리 배울 수 있는 JavaScript의 기본 구문과 의미 체계에 대한 개요입니다.
-- [JavaScript 데이터 구조](/ko/docs/Web/JavaScript/Data_structures)
+- [JavaScript 데이터 구조](/ko/docs/Web/JavaScript/Guide/Data_structures)
   - : JavaScript에서 이용 가능한 데이터 구조 개요입니다.
-- [동등성 비교 및 동일성](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [동등성 비교 및 동일성](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript는 `===`를 사용한 완전 동등, `==`를 사용한 느슨한 동등, 그리고 {{jsxref("Global_Objects/Object/is", "Object.is()")}} 메서드의 세 가지 값 비교 연산을 제공합니다.
-- [속성의 열거 가능성과 소유권](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [속성의 열거 가능성과 소유권](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
   - : 객체 속성 그룹을 하나씩 방문하는 다양한 방법이 속성의 열거 가능성과 소유권을 처리하는 방법입니다.
-- [클로저](/ko/docs/Web/JavaScript/Closures)
+- [클로저](/ko/docs/Web/JavaScript/Guide/Closures)
   - : 클로저는 함수와 그 함수가 선언된 어휘 (lexical) 환경의 조합입니다.
 
 ### 고급
 
-- [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : 널리 오해 받고 과소 평가된 프로토타입 기반 상속을 설명합니다.
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 형식화된 배열은 원시 이진 데이터에 접근하기 위한 메커니즘을 제공합니다.
-- [메모리 관리](/ko/docs/Web/JavaScript/Memory_Management)
+- [메모리 관리](/ko/docs/Web/JavaScript/Guide/Memory_management)
   - : JavaScript의 메모리 생명 주기와 가비지 컬렉션을 설명합니다.
-- [동시성 모델 및 이벤트 루프](/ko/docs/Web/JavaScript/EventLoop)
+- [동시성 모델 및 이벤트 루프](/ko/docs/Web/JavaScript/Reference/Execution_model)
   - : JavaScript는 "이벤트 루프"에 기반을 둔 동시성 모델이 있습니다.
 
 ## 참고서
@@ -87,7 +87,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 - [표준 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects)
   - : {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} 등 표준 내장 객체를 배웁니다.
 - [표현식 및 연산자](/ko/docs/Web/JavaScript/Reference/Operators)
-  - : JavaScript 연산자 {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) 등을 배웁니다.
+  - : JavaScript 연산자 {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence) 등을 배웁니다.
 - [명령문 및 선언문](/ko/docs/Web/JavaScript/Reference/Statements)
   - : {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} 등의 JavaScript의 구문 및 키워드 작동법을 배웁니다.
 - [함수](/ko/docs/Web/JavaScript/Reference/Functions)

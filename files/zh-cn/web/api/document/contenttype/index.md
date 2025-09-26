@@ -1,26 +1,25 @@
 ---
-title: document.contentType
+title: Document：contentType 属性
 slug: Web/API/Document/contentType
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
-### 概述
+**`Document.contentType`** 只读属性表示返回文档正在渲染的 MIME 类型。这可能来自 HTTP 标头或其他 MIME 信息源，并且可能会受到浏览器或扩展程序执行的自动类型转换的影响。
 
-返回当前文档的 Content-Type(MIME) 类型。
+> [!NOTE]
+> 该属性不受 {{HTMLElement("meta")}} 元素的影响。
 
-### 语法
+## 值
 
-```plain
-contentType = document.contentType;
-```
+`contentType` 是只读属性。
 
-该属性为只读。
+## 规范
 
-### 备注
+{{Specifications}}
 
-该属性的返回值是浏览器检测到的，不一定是直接读取 HTTP 响应头中的或者 HTML 中 meta 标签指定的值。
+## 浏览器兼容性
 
-### 规范
-
-非标准属性，仅[Gecko](/zh-CN/Gecko)支持。
+{{Compat}}

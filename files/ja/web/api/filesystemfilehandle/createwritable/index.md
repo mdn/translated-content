@@ -20,9 +20,7 @@ createWritable()
 ### 引数
 
 - FileSystemCreateWritableOptions
-
   - : メソッドに渡すオプションを表すオブジェクトです。以下のオプションがあります。
-
     - `keepExistingData`: `false` であるか指定されない場合、一時ファイルは空に初期化されます。
       そうでない場合、既存のファイルがまず一時ファイルにコピーされます。
 
@@ -62,5 +60,5 @@ async function writeFile(fileHandle, contents) {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -1,11 +1,12 @@
 ---
 title: "ProgressEvent: ProgressEvent() コンストラクター"
+short-title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
 l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`ProgressEvent()`** コンストラクターは、長いプロセスの現在の完了状況を表す {{domxref("ProgressEvent")}} を新しく生成して返します。
 
@@ -20,7 +21,7 @@ new ProgressEvent(type, options)
 
 - `type`
   - : このイベントの名前の文字列です。
-  大文字小文字を区別し、ブラウザーは `loadstart`, `progress`, `abort`, `error`, `load`, `timeout`, `loadend` の何れかを設定します。
+    大文字小文字を区別し、ブラウザーは `loadstart`, `progress`, `abort`, `error`, `load`, `timeout`, `loadend` の何れかを設定します。
 - `options` {{optional_inline}}
   - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加え_、以下のプロパティを持つことができます。
     - `lengthComputable` {{optional_inline}}

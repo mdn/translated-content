@@ -1,13 +1,38 @@
 ---
 title: text-decoration-skip-ink
 slug: Web/CSS/text-decoration-skip-ink
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
+**`text-decoration-skip-ink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
 
-[CSS](/ja/docs/Web/CSS) の **`text-decoration-skip-ink`** プロパティは、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
+{{InteractiveExample("CSS デモ: text-decoration-skip-ink")}}
 
-{{EmbedInteractiveExample("pages/css/text-decoration-skip-ink.html")}}
+```css interactive-example-choice
+text-decoration-skip-ink: auto;
+```
+
+```css interactive-example-choice
+text-decoration-skip-ink: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    <span class="transition-all" id="example-element">parapsychologists</span>
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font:
+    1.9em Georgia,
+    serif;
+  text-decoration: underline;
+}
+```
 
 `text-decoration-skip-ink` は {{cssxref("text-decoration")}} 一括指定の一部ではありません。
 
@@ -20,10 +45,11 @@ text-decoration-skip-ink: auto;
 text-decoration-skip-ink: all;
 
 /* グローバルキーワード */
-text-decoration-skip: inherit;
-text-decoration-skip: initial;
+text-decoration-skip-ink: inherit;
+text-decoration-skip-ink: initial;
 text-decoration-skip-ink: revert;
-text-decoration-skip: unset;
+text-decoration-skip-ink: revert-layer;
+text-decoration-skip-ink: unset;
 ```
 
 ### 値
@@ -33,10 +59,9 @@ text-decoration-skip: unset;
 - `auto`
   - : 既定値です。 — ブラウザーは、下線と上線が文字に触れたり近づいたりしないよう、中断を行う*可能性があります*。つまり、線が文字を横切ろうとするところで中断されます。
 - `all`
-
   - : ブラウザーは、下線や上線が文字に触れたり近づいたりしないように*必ず*中断を行います。これは、 `auto` の動作が中断を発生させない可能性がある中国語、日本語、韓国語の特定のフォントで有用です。
 
-     !["text-decoration-skip-ink" の例](decoration-skip-ink.png)
+    !["text-decoration-skip-ink" の例](decoration-skip-ink.png)
 
 ## 公式定義
 
@@ -46,7 +71,7 @@ text-decoration-skip: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -54,7 +79,9 @@ text-decoration-skip: unset;
 <p>You should go on a quest for a cup of coffee.</p>
 <p class="no-skip-ink">Or maybe you'd prefer some tea?</p>
 <p>この文は、 text-decoration-skip-ink: auto の使用例を示しています。</p>
-<p class="skip-ink-all">この文は、 text-decoration-skip-ink: all の使用例を示しています。</p>
+<p class="skip-ink-all">
+  この文は、 text-decoration-skip-ink: all の使用例を示しています。
+</p>
 ```
 
 ### CSS
@@ -70,12 +97,12 @@ p {
   text-decoration-skip-ink: none;
 }
 
-.skip-ink-all{
+.skip-ink-all {
   text-decoration-skip-ink: all;
 }
 ```
 
-### Result
+### 結果
 
 {{EmbedLiveSample("Examples", "100%", 250)}}
 

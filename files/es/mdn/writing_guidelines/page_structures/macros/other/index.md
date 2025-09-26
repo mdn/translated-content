@@ -1,11 +1,13 @@
 ---
 title: Otras macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Other
+l10n:
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
 
-A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Structures/Macros/Commonly-used_macros), las macros documentadas en este artículo se usan con poca frecuencia o solo en contextos específicos, o están obsoletas.
+A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), las macros documentadas en este artículo se usan con poca frecuencia o solo en contextos específicos, o están obsoletas.
 
 ## Contextos especiales
 
@@ -26,6 +28,6 @@ Tenemos una variedad de macros que se pueden usar para generar automáticamente 
 
 ### Enlaces rápidos
 
-Tenemos una macro diseñada específicamente para crear [enlaces rápidos](/es/docs/MDN/Structures/Quicklinks):
+Tenemos una macro diseñada específicamente para crear [enlaces rápidos](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars):
 
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) crea un conjunto de enlaces rápidos compuestos por las páginas debajo de la página actual (o la página especificada, si se proporciona una). Se generan hasta dos niveles totales de profundidad.

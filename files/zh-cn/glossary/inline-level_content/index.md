@@ -1,26 +1,28 @@
 ---
 title: 行级内容
 slug: Glossary/Inline-level_content
+l10n:
+  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
 {{GlossarySidebar}}
 
 在 CSS 中，参与行内布局的内容被称为**行级内容**（inline-level content）。默认情况下，大多数文本、替换元素以及生成的内容都是行级的。
 
-在行内布局中，通常将文本、[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)以及其它的行级盒分段为一堆按顺序排列的盒子来进行布局。在每个行盒中，行级盒子相互垂直或者水平对齐，具体取决于书写模式。通常，它们与文本的基线进行对齐。这可以使用 CSS 进行更改。
+在行内布局中，通常将文本、{{ glossary("replaced elements", "可替换元素") }}以及其它的行级盒分段为一堆按顺序排列的盒子来进行布局。在每个行盒中，行级盒子相互垂直或者水平对齐，具体取决于书写模式。通常，它们与文本的基线进行对齐。这可以使用 CSS 进行更改。
 
 ![行内布局](inline_layout.png)
 
-> **备注：** HTML（_超文本标记语言_）元素历来被归类为“块级”元素或者“行级”元素。作为一种呈现的特性，现在这将由 CSS 来提供。
+> [!NOTE]
+> HTML（_超文本标记语言_）元素历来被归类为“块级”元素或者“行级”元素。作为一种表现特性，现在由 CSS 来指定。
 
 ## 示例
 
 ```html
 <p>
-  This span is an <span class="highlight">inline-level element</span>; its
-  background has been colored to display both the beginning and end of the
-  element's influence. Input elements, like <input type="radio" /> and
-  <input type="checkbox" />, are also inline-level content.
+  这个 span 是一个<span class="highlight">行级元素</span
+  >；背景已经被着色以显示元素的开始和结束。输入元素，如
+  <input type="radio" /> 和 <input type="checkbox" />，也是行级内容。
 </p>
 ```
 
@@ -42,6 +44,7 @@ body {
 
 ## 参见
 
-- [块级内容](/zh-CN/docs/Glossary/Block-level_content)
-- [行内格式上下文](/zh-CN/docs/Web/CSS/Inline_formatting_context)
+- 相关术语条目：
+  - [块级内容](/zh-CN/docs/Glossary/Block-level_content)
+- [行内格式上下文](/zh-CN/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
 - {{cssxref("display")}}

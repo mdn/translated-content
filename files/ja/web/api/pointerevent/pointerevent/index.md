@@ -1,8 +1,9 @@
 ---
-title: PointerEvent()
+title: "PointerEvent: PointerEvent() コンストラクター"
+short-title: PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{APIRef("Pointer Events")}}
@@ -52,15 +53,15 @@ new PointerEvent(type, options)
 ```js
 const moveEvent = new PointerEvent("pointermove");
 
-const downEvent = new PointerEvent("pointerdown",
-   {pointerId: 1,
-    bubbles: true,
-    cancelable: true,
-    pointerType: "touch",
-    width: 100,
-    height: 100,
-    isPrimary: true
-   });
+const downEvent = new PointerEvent("pointerdown", {
+  pointerId: 1,
+  bubbles: true,
+  cancelable: true,
+  pointerType: "touch",
+  width: 100,
+  height: 100,
+  isPrimary: true,
+});
 ```
 
 ## 仕様書

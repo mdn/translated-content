@@ -7,7 +7,31 @@ slug: Web/JavaScript/Reference/Operators/void
 
 **`void` 연산자**는 주어진 표현식을 평가하고 {{jsxref("undefined")}}를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - void operator")}}
+
+```js interactive-example
+const output = void 1;
+console.log(output);
+// Expected output: undefined
+
+void console.log("expression evaluated");
+// Expected output: "expression evaluated"
+
+void (function iife() {
+  console.log("iife is executed");
+})();
+// Expected output: "iife is executed"
+
+void function test() {
+  console.log("test function executed");
+};
+try {
+  test();
+} catch (e) {
+  console.log("test function is not defined");
+  // Expected output: "test function is not defined"
+}
+```
 
 ## 구문
 
@@ -21,7 +45,7 @@ void expression;
 
 오직 `undefined` 원시값을 얻기 위해 `void 0` 또는 `void(0)`처럼 사용하는 경우도 볼 수 있습니다. 이런 경우 전역 {{jsxref("undefined")}}를 대신 사용해도 됩니다.
 
-`void` 연산자의 [우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)도 유념해야 합니다. [그룹 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Grouping)(괄호)를 사용하면 `void` 연산자를 사용한 식의 평가 과정을 더 명확하게 보일 수 있습니다.
+`void` 연산자의 [우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)도 유념해야 합니다. [그룹 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Grouping)(괄호)를 사용하면 `void` 연산자를 사용한 식의 평가 과정을 더 명확하게 보일 수 있습니다.
 
 ```js
 void 2 == "2"; // undefined == '2', false

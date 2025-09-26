@@ -89,7 +89,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
   - : 配列とその要素を表すローカライズされた文字列を返します。{{jsxref("Array.prototype.toLocaleString()")}} も参照してください。
 - {{jsxref("TypedArray.toString", "BigInt64Array.prototype.toString()")}}
   - : 配列とその要素を表す文字列を返します。{{jsxref("Array.prototype.toString()")}} も参照してください。
-- {{jsxref("TypedArray.@@iterator", "BigInt64Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "BigInt64Array.prototype[Symbol.iterator]()")}}
   - : 配列内ですべての位置における値を提供する新しい*配列イテレーター*を返します。
 
 ## 例
@@ -105,7 +105,7 @@ console.log(bigint64.length); // 2
 console.log(bigint64.BYTES_PER_ELEMENT); // 8
 
 // 配列から
-var arr = new BigInt64Array([21n,31n]);
+var arr = new BigInt64Array([21n, 31n]);
 console.log(arr[1]); // 31n
 
 // From another TypedArray
@@ -118,7 +118,9 @@ var buffer = new ArrayBuffer(32);
 var z = new BigInt64Array(buffer, 0, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
+var iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 var bigint64 = new BigInt64Array(iterable);
 // BigInt64Array[1n, 2n, 3n]
 ```
@@ -133,6 +135,6 @@ var bigint64 = new BigInt64Array(iterable);
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("BigUint64Array")}}
 - {{jsxref("DataView")}}

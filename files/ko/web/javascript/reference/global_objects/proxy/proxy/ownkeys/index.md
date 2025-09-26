@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 
 **`handler.ownKeys()`** 메서드는 {{jsxref("Reflect.ownKeys()")}}에 대한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  _age: 111,
+  [Symbol("secret")]: "I am scared!",
+  eyeCount: 4,
+};
+
+const handler1 = {
+  ownKeys(target) {
+    return Reflect.ownKeys(target);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+for (const key of Object.keys(proxy1)) {
+  console.log(key);
+  // Expected output: "_age"
+  // Expected output: "eyeCount"
+}
+```
 
 ## 구문
 

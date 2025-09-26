@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToPa
 
 **`Intl.RelativeTimeFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮したカスタム書式設定に使用できる相対時間書式を部品単位で表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-formattoparts.html")}}
+{{InteractiveExample("JavaScript デモ: Intl.RelativeTimeFormat.prototype.formatToParts")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const parts = rtf1.formatToParts(10, "seconds");
+
+console.log(parts[0].value);
+// Expected output: "in "
+
+console.log(parts[1].value);
+// Expected output: "10"
+
+console.log(parts[2].value);
+// Expected output: " seconds"
+```
 
 ## 構文
 

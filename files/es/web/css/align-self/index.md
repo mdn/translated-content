@@ -3,11 +3,9 @@ title: align-self
 slug: Web/CSS/align-self
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS) **`align-self`** alinea los elementos flexibles de la línea flexible actual, reemplazando el valor de {{cssxref("align-items")}}. Si el límite transversal de alguno de los elementos está definido como `auto`, el valor de `align-self` es ignorado.
+La propiedad [CSS](/es/docs/Web/CSS) **`align-self`** alinea los elementos flexibles de la línea flexible actual, reemplazando el valor de {{cssxref("align-items")}}. Si el límite transversal de alguno de los elementos está definido como `auto`, el valor de `align-self` es ignorado.
 
 {{cssinfo}}
 

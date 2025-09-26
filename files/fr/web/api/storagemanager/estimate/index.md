@@ -30,7 +30,8 @@ Une promesse (un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Obje
 - `usageDetails` {{Non-standard_Inline}}
   - : Un objet contenant une décomposition de `usage` par système de stockage. Toutes les propriétés incluses sur cet objet auront un `usage` supérieur à 0 et tout système de stockage avec `usage` à 0 ne sera pas fourni comme propriété de cet objet.
 
-> **Note :** Les valeurs renvoyées ne sont pas précisément exactes. Cela est lié à la compression, la déduplication de données et au masquage des informations pour des raisons de sécurité.
+> [!NOTE]
+> Les valeurs renvoyées ne sont pas précisément exactes. Cela est lié à la compression, la déduplication de données et au masquage des informations pour des raisons de sécurité.
 
 Vous pourrez observer que `quota` varie en fonction des origines. Cette variation est basée sur plusieurs facteurs dont&nbsp;:
 

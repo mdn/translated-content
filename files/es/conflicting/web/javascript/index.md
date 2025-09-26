@@ -28,14 +28,14 @@ Con el transcurso del tiempo, y tras varias importantes optimizaciones del entor
 
 Más allá de las implementaciones anteriores, existen otros motores JavaScript populares como:—
 
-- [V8](https://code.google.com/p/v8/) de Google , que se utiliza en el navegador Google Chrome y las versiones recientes del navegador Opera. Este también es el motor que utiliza [Node.js](http://nodejs.org).
+- [V8](https://code.google.com/p/v8/) de Google , que se utiliza en el navegador Google Chrome y las versiones recientes del navegador Opera. Este también es el motor que utiliza [Node.js](https://nodejs.org).
 - [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) utilizado en algunos navegadores WebKit como Apple Safari.
-- [Carakan](http://my.opera.com/ODIN/blog/carakan-faq) en versiones antiguas de Opera.
+- [Carakan](https://my.opera.com/ODIN/blog/carakan-faq) en versiones antiguas de Opera.
 - [Motor Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) utilizado en Internet Explorer (aunque el lenguaje que implementa formalmente se llama "JScript" para evitar problemas de marcas registradas).
 
-Cada uno de los motores de JavaScript de Mozilla expone una API pública que los desarrolladores de aplicaciones pueden utilizar para integrar JavaScript en su software. Hasta ahora, el entorno de alojamiento más común para JavaScript son los navegadores web. Los navegadores web suelen utilizar la API pública para crear **objetos del anfitrión** responsables de reflejar el [DOM](http://www.w3.org/DOM/) en JavaScript.
+Cada uno de los motores de JavaScript de Mozilla expone una API pública que los desarrolladores de aplicaciones pueden utilizar para integrar JavaScript en su software. Hasta ahora, el entorno de alojamiento más común para JavaScript son los navegadores web. Los navegadores web suelen utilizar la API pública para crear **objetos del anfitrión** responsables de reflejar el [DOM](https://www.w3.org/DOM/) en JavaScript.
 
-Otra aplicación común para JavaScript es como lenguaje de programación de lado del servidor (Web). Un servidor web JavaScript expondría objetos del anfitrión que representan una solicitud HTTP y objetos de respuesta, que luego podría manipular un programa JavaScript para generar páginas web dinámicamente. [Node.js](http://nodejs.org) es un ejemplo popular de esto.
+Otra aplicación común para JavaScript es como lenguaje de programación de lado del servidor (Web). Un servidor web JavaScript expondría objetos del anfitrión que representan una solicitud HTTP y objetos de respuesta, que luego podría manipular un programa JavaScript para generar páginas web dinámicamente. [Node.js](https://nodejs.org) es un ejemplo popular de esto.
 
 ## Recursos de JavaScript
 

@@ -9,7 +9,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/values
 
 Метод **`keys()`** является синонимом этого метода (для схожести с объектами {{jsxref("Map")}}). Он ведёт себя точно так же и возвращает **значения** элементов `Set`.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1.values();
+
+console.log(iterator1.next().value);
+// Expected output: 42
+
+console.log(iterator1.next().value);
+// Expected output: "forty two"
+```
 
 ## Синтаксис
 

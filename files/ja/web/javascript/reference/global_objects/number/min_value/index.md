@@ -1,15 +1,29 @@
 ---
 title: Number.MIN_VALUE
+short-title: MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Number.MIN_VALUE`** は静的データプロパティで、 JavaScript において表すことが可能な最小の正の数値を表します。
 
-**`Number.MIN_VALUE`** 静的データプロパティは、 JavaScript において表すことが可能な最小の正の数値を表します。
+{{InteractiveExample("JavaScript デモ: Number.MIN_VALUE")}}
 
-{{EmbedInteractiveExample("pages/js/number-min-value.html")}}
+```js interactive-example
+function divide(x, y) {
+  if (x / y < Number.MIN_VALUE) {
+    return "Process as 0";
+  }
+  return x / y;
+}
+
+console.log(divide(5e-324, 1));
+// 予想される結果: 5e-324
+
+console.log(divide(5e-324, 2));
+// 予想される結果: "Process as 0"
+```
 
 ## 値
 

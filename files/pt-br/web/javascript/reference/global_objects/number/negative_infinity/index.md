@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 
 A propriedade **`Number.NEGATIVE_INFINITY`** representa o valor Infinito negativo.
 
-{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.NEGATIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(smallNumber) {
+  if (smallNumber === Number.NEGATIVE_INFINITY) {
+    return "Process number as -Infinity";
+  }
+  return smallNumber;
+}
+
+console.log(checkNumber(-Number.MAX_VALUE));
+// Expected output: -1.7976931348623157e+308
+
+console.log(checkNumber(-Number.MAX_VALUE * 2));
+// Expected output: "Process number as -Infinity"
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Descrição
 
@@ -36,7 +53,7 @@ Por `NEGATIVE_INFINITY` ser uma propriedade estática de {{jsxref("Number")}}, v
 No seguinte exemplo, a variável `smallNumber` é atribuída um valor que é menor que o valor mínimo. Quando o {{jsxref("Statements/if...else", "if")}} executa, `smallNumber` tem o valor `-Infinity`, então é colocado em `smallNumber` um valor mais manejável antes de continuar.
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2;
+var smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();
@@ -45,13 +62,11 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 
 ## Especificações
 
-| Especificação                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.NEGATIVE_INFINITY")}}
+{{Compat}}
 
 ## Veja também
 

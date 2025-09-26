@@ -25,7 +25,8 @@ if ("geolocation" in navigator) {
 
 Чтобы получить текущее местоположение пользователя, вы должны вызвать метод {{domxref("geolocation.getCurrentPosition()","getCurrentPosition()")}}. Это инициирует асинхронный запрос для обнаружения местоположения пользователя, и запрашивает аппаратные средства позиционирования, чтобы получить последнюю актуальную информацию. Когда местоположение определено, выполняется callback. По желанию вы можете указать вторую callback функцию для обработки ошибки, которая запустится в случае ошибки. Третий, опциональный параметр - объект с опциями, где вы можете настроить максимальное значение возвращаемых данных, время ожидания ответа на запрос, и, при желании, точность возвращаемых данных.
 
-> **Примечание:** По умолчанию {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} пытается вернуть результат так быстро, как это возможно, за счёт чего даёт не очень точный результат. Это может быть полезно, если вам нужно быстро получить ответ, при этом не важна точность. Устройства с GPS, например, могут пытаться скорректировать данные GPS около минуты и даже больше, поэтому в самом начале могут вернуться менее точные данные (местоположение IP или wifi-сети), полученные {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.
+> [!NOTE]
+> По умолчанию {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} пытается вернуть результат так быстро, как это возможно, за счёт чего даёт не очень точный результат. Это может быть полезно, если вам нужно быстро получить ответ, при этом не важна точность. Устройства с GPS, например, могут пытаться скорректировать данные GPS около минуты и даже больше, поэтому в самом начале могут вернуться менее точные данные (местоположение IP или wifi-сети), полученные {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.
 
 ```js
 navigator.geolocation.getCurrentPosition(function (position) {
@@ -39,7 +40,8 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
 Если данные о местоположении меняются (либо устройство находится в движении, либо пришли более точные данные о геопозиции), вы можете указать callback функцию, которая будет вызывается при любом обновлении данных о местоположении. Это делается с использованием функции {{domxref("Geolocation.watchPosition()","watchPosition()")}}, которая имеет несколько входных параметров: {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}. Эта функция вызывается много раз, позволяя браузеру обновлять данные о текущей локации либо во время движения, либо после получения более точной информации о местоположении (после применения более точных приёмов). Функция, которая вызывается при ошибке, для {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}, при желании, может быть вызвана неоднократно.
 
-> **Примечание:** вы можете использовать {{domxref("Geolocation.watchPosition()","watchPosition()")}} без вызова {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.
+> [!NOTE]
+> Вы можете использовать {{domxref("Geolocation.watchPosition()","watchPosition()")}} без вызова {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.
 
 ```js
 var watchID = navigator.geolocation.watchPosition(function (position) {
@@ -55,7 +57,7 @@ navigator.geolocation.clearWatch(watchID);
 
 ### Точная настройка отклика
 
-{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} и {{domxref("Geolocation.watchPosition()","watchPosition()")}} принимают колбэк-функцию при успехе, необязательную колбэк-функцию при ошибке и необязательный объект [`PositionOptions`](/ru/docs/Web/API/PositionOptions).
+{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} и {{domxref("Geolocation.watchPosition()","watchPosition()")}} принимают колбэк-функцию при успехе, необязательную колбэк-функцию при ошибке и необязательный объект [`PositionOptions`](/ru/docs/Web/API/Geolocation/getCurrentPosition).
 
 Этот объект позволяет вам включить возможность определения позиции с высокой точностью, указать максимальное время кеширования значения позиции (при повторных запросах, пока время не вышло, вам будет возвращается кешированное значение; после браузер будет запрашивать актуальные данные), а также указать значение, устанавливающее интервал — как часто браузер должен пытаться получить данные о местоположении, прежде чем выйдет время.
 

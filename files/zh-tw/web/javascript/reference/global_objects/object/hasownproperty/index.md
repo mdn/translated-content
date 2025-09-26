@@ -3,8 +3,6 @@ title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 
-{{JSRef}}
-
 **`hasOwnProperty()`** 回傳物件是否有該屬性的布林值。
 
 ## 表達式
@@ -105,8 +103,8 @@ Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 ## 參見
 
-- [Enumerability and ownership of properties](/zh-TW/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_Revisited)
+- [JavaScript Guide: Inheritance revisited](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

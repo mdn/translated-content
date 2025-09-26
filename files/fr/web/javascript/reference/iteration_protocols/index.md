@@ -99,7 +99,7 @@ var uneChaîne = "coucou";
 typeof uneChaîne[Symbol.iterator]; // "function"
 ```
 
-[L'itérateur par défaut d'un objet `String`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/@@iterator) renverra les caractères de la chaîne les uns à la suite des autres :
+[L'itérateur par défaut d'un objet `String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) renverra les caractères de la chaîne les uns à la suite des autres :
 
 ```js
 var itérateur = uneChaîne[Symbol.iterator]();
@@ -199,7 +199,7 @@ ainsi que {{jsxref("Promise.all", "Promise.all(itérable)")}}, {{jsxref("Promise
 
 ### Les éléments de syntaxe utilisant des itérables
 
-Certains éléments du langage utilisent des itérables, par exemple : [`for..of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of), [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), [yield\*](/fr/docs/Web/JavaScript/Reference/Opérateurs/yield*), [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition) :
+Certains éléments du langage utilisent des itérables, par exemple : [`for..of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), [yield\*](/fr/docs/Web/JavaScript/Reference/Operators/yield*), [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring) :
 
 ```js
 for (let value of ["a", "b", "c"]) {
@@ -360,4 +360,4 @@ unObjetGénérateur[Symbol.iterator]() === unObjetGénérateur
 
 ## Voir aussi
 
-- Pour plus d'informations sur les générateurs définis par ES2015, voir [la page dédiée](/fr/docs/Web/JavaScript/Reference/Instructions/function*).
+- Pour plus d'informations sur les générateurs définis par ES2015, voir [la page dédiée](/fr/docs/Web/JavaScript/Reference/Statements/function*).

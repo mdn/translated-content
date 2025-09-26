@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API
 
 WebGL (Web Graphics Library) é uma API do JavaScript para renderizar gráficos 3D e 2D dentro de um navegador web compatível sem o uso de plug-ins. O WebGL faz isso introduzindo uma API que está de acordo com o OpenGL ES 2.0 e que pode ser usada em elementos do HTML5 {{HTMLElement("canvas")}}.
 
-O suporte para WebGL está presente no [Firefox](/pt-BR/Firefox) 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari](http://www.apple.com/safari/) 5.1+ e [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+. No entanto, o dispositivo do usuário também deve ter um hardware que suporte esses recursos.
+O suporte para WebGL está presente no [Firefox](/pt-BR/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/safari/) 5.1+ e [Internet Explorer](https://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+. No entanto, o dispositivo do usuário também deve ter um hardware que suporte esses recursos.
 
 O elemento {{HTMLElement("canvas")}} é também usado pelo [Canvas 2D](/pt-BR/docs/Web/API/Canvas_API) para renderizar gráficos 2D em páginas web.
 
@@ -67,9 +67,9 @@ O elemento {{HTMLElement("canvas")}} é também usado pelo [Canvas 2D](/pt-BR/do
 
 ### Eventos
 
-- {{Event("webglcontextlost")}}
-- {{Event("webglcontextrestored")}}
-- {{Event("webglcontextcreationerror")}}
+- [`webglcontextlost`](/pt-BR/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
+- [`webglcontextrestored`](/pt-BR/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
+- [`webglcontextcreationerror`](/pt-BR/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
 
 ### Constantes e tipos
 
@@ -88,7 +88,7 @@ O WebGL 2 é uma atualização importante para o WebGL, que é fornecida atravé
 - [Objetos Transform Feedback](/pt-BR/docs/Web/API/WebGLTransformFeedback)
 - Extensões que agora fazem parte da especificação principal do WebGL 2: [Objetos Vertex Array](/pt-BR/docs/Web/API/WebGLVertexArrayObject), [instanciação](/pt-BR/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced), [múltiplas metas de renderização](/pt-BR/docs/Web/API/WebGL2RenderingContext/drawBuffers), [profundidade de fragmentos](/pt-BR/docs/Web/API/EXT_frag_depth).
 
-Veja também os posts [WebGL 2 lands in Firefox](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) e [webglsamples.org/WebGL2Samples](http://webglsamples.org/WebGL2Samples/) para alguns exemplos de demonstração.
+Veja também os posts [WebGL 2 lands in Firefox](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) e [webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) para alguns exemplos de demonstração.
 
 ## Guias e tutoriais
 
@@ -104,9 +104,9 @@ Veja também os posts [WebGL 2 lands in Firefox](https://hacks.mozilla.org/2017/
 ## Recursos
 
 - [WebGL puro: Uma introdução ao WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) Uma conversa com Nick Desaulniers que introduz o básico de WebGL. Este é um ótimo lugar para iniciar se você nunca trabalhou com programação de baixo nível para gráficos.
-- [Site WebGL do Khronos](http://www.khronos.org/webgl/) O site principal para WebGL do Grupo Khronos.
+- [Site WebGL do Khronos](https://www.khronos.org/webgl/) O site principal para WebGL do Grupo Khronos.
 - [Aprendendo WebGL](http://learningwebgl.com/blog/?page_id=1217) Um site com tutoriais de uso do WebGL.
-- [Fundamentos de WebGL](http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/) Um tutorial básico com os fundamentos do WebGL.
+- [Fundamentos de WebGL](https://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/) Um tutorial básico com os fundamentos do WebGL.
 - [Playground do WebGL](http://webglplayground.net) Uma ferramenta online para criar e compartilhar projetos em WebGL. Boa para protótipos rápidos e experimentação.
 - [Academia WebGL](http://www.webglacademy.com) Um editor HTML/JavaScript com tutoriais para aprender o básico de programação em WebGL.
 - [WebGL Stats](http://webglstats.com/) Um site com estatísticas sobre as funcionalidades do WebGL em navegadores de diferentes plataformas.
@@ -115,7 +115,7 @@ Veja também os posts [WebGL 2 lands in Firefox](https://hacks.mozilla.org/2017/
 
 - [glMatrix](https://github.com/toji/gl-matrix) Biblioteca em JavaScript de Matrizes e Vetores para aplicações WebGL de Alta Performance.
 - [PhiloGL](http://senchalabs.github.com/philogl/) é um WebGL _framework_ para Visualização de Dados, Código Criativo, e Desenvolvimento de Jogos.
-- [Pixi.js](http://www.pixijs.com/) é um renderizador gráfico 2D, rápido e com código aberto, que utiliza WebGL.
+- [Pixi.js](https://www.pixijs.com/) é um renderizador gráfico 2D, rápido e com código aberto, que utiliza WebGL.
 - [PlayCanvas](https://playcanvas.com/) motor de jogos com código aberto.
 - [Sylvester](http://sylvester.jcoglan.com/) Uma biblioteca de código aberto para manipular vetores e matrizes. Não é otimizada para WebGL mas é extremamente robusta.
 - [three.js](https://threejs.org/) é uma biblioteca WebGL 3D com recursos completos de código aberto.

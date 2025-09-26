@@ -3,12 +3,14 @@ title: focusout
 slug: Web/API/Element/focusout_event
 ---
 
+{{APIRef}}
+
 L'évènement `focusout` est déclenché lorsqu'un élément du DOM est sur le point de perdre le focus. La différence principale entre cet évènement et [`blur`](/fr/docs/Web/API/Element/blur_event) est que ce dernier ne se propage pas.
 
 ## Informations générales
 
 - Spécification
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
 - Interface
   - : {{domxref("FocusEvent")}}
 - Propagation

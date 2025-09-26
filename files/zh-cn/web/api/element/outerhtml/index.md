@@ -74,7 +74,7 @@ console.log(container.firstChild.nodeName);
 
 ## 注意事项
 
-如果元素没有父元素，即如果它是文档的根元素，则设置其 outerHTML 属性将抛出一个带有错误代码 **_NO_MODIFICATION_ALLOWED_ERR_** 的 [`DOMException`](/zh-CN/DOM/DOMException) 。例如：
+如果元素没有父元素，即如果它是文档的根元素，则设置其 outerHTML 属性将抛出一个带有错误代码 **_NO_MODIFICATION_ALLOWED_ERR_** 的 [`DOMException`](/zh-CN/docs/DOM/DOMException) 。例如：
 
 ```js
 document.documentElement.outerHTML = "test";
@@ -101,7 +101,7 @@ console.log(p.nodeName);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - MSDN: [outerHTML 属性](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)
 - [You Don't Need jQuery](http://youmightnotneedjquery.com/)

@@ -3,8 +3,6 @@ title: background-attachment
 slug: Web/CSS/background-attachment
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 La propiedad CSS **`background-attachment`** determina si la posición de la imagen de fondo será **fija** dentro de la pantalla o **se desplazará** con su bloque contenedor.
@@ -37,7 +35,7 @@ background-attachment: scroll | fixed | inherit
 
 ```css
 p {
-  background-image: url("starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
@@ -54,7 +52,7 @@ p {
 
 #### Resultado
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("Ejemplo_simple")}}
 
 ### Soporta múltiples imagenes de fondo
 
@@ -64,7 +62,7 @@ Esta propiedad soporta multiples imágenes de fondo. Puedes especificar un `<att
 
 ```css
 p {
-  background-image: url("starsolid.gif"), url("startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -94,18 +92,11 @@ p {
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#background-attachment)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/colors.html#propdef-background-attachment)
-- [CSS 3](http://www.w3.org/TR/2005/WD-css3-background-20050216/#background-attachment)
+{{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 

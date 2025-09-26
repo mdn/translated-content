@@ -1,33 +1,57 @@
 ---
-title: Element.setAttributeNS()
+title: Element：setAttributeNS() 方法
 slug: Web/API/Element/setAttributeNS
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-`setAttributeNS` 添加一个新属性或更改具有给定命名空间和名称的一个属性的值。
+`setAttributeNS` 根据给定的命名空间和名称添加一个新属性或改变属性的值。
 
-## 句法
+如果你正在处理 HTML 文档，并且你不需要指定要设置的属性属于特定的命名空间，那么使用 {{domxref("Element.setAttribute()")}} 方法即可。
 
-```plain
-element.setAttributeNS(namespace,name,value)
+## 语法
+
+```js-nolint
+setAttributeNS(namespace, name, value)
 ```
 
-- `namespace` 是指定属性的命名空间的一个字符串。
-- `name` 是标识要设置的属性的一个字符串。
-- `value` 是新属性的所需字符串值。
+### 参数
 
-## 范例
+- `namespace`：一个指定属性的命名空间的字符串。
+- `name`：一个标识属性的限定名称的字符串。即一个命名空间前缀，后跟一个冒号，再跟一个本地名称。
+- `value`：一个表示新的属性值的字符串。
 
-```plain
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
+## 示例
+
+```js
 let d = document.getElementById("d1");
-d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+d.setAttributeNS(
+  "http://www.mozilla.org/ns/specialspace",
+  "spec:align",
+  "center",
+);
 ```
 
-## 注释
+## 备注
 
-{{ DOMAttributeMethods() }}
+在限定命名空间的属性的方法中，`setAttributeNS` 是唯一一个需要完全限定名（即 `"namespace:localname"`）的方法。
 
 ## 规范
 
-[DOM Level 2 Core: setAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Element.hasAttributeNS()")}}
+- {{domxref("Element.getAttributeNS()")}}
+- {{domxref("Element.removeAttributeNS()")}}

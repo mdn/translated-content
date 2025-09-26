@@ -7,7 +7,40 @@ slug: Web/CSS/calc
 
 `calc()` - это функция CSS, которая даёт возможность рассчитать значения свойств CSS во время их определения. Она может быть использована везде, где применимы {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, или {{cssxref("&lt;integer&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-calc.html")}}
+{{InteractiveExample("CSS Demo: calc()")}}
+
+```css interactive-example-choice
+width: calc(10px + 100px);
+```
+
+```css interactive-example-choice
+width: calc(100% - 30px);
+```
+
+```css interactive-example-choice
+width: calc(2em * 5);
+```
+
+```css interactive-example-choice
+width: calc(var(--variable-width) + 20px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change my width.</div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --variable-width: 100px;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 ## Синтаксис
 
@@ -23,11 +56,6 @@ slug: Web/CSS/calc
   - : Деление. Делитель должен быть {{cssxref("&lt;number&gt;")}}.
 
 Операнды в expression могут быть различными выражениями {{cssxref("&lt;length&gt;")}}. Если пожелаете, то можете использовать разные единицы измерения для каждого из операндов. Вы также можете использовать скобки, чтобы указать порядок вычисления.
-
-> **Примечание:** Деление на ноль выдаст ошибку при парсинге HTML.
-
-> **Примечание:** Операторы + и - всегда должны быть по обеим сторонам отделены пробелом. Выражение `calc(50% -8px)` будет интерпретировано как величина в процентах и следующее за ним отрицательное число в пикселях (не верное выражение), в то время как `calc(50% - 8px)` - правильное выражение, будет интерпретировано как вычитание из процентов длины в пикселях.
-> Операторы \* и / не требуют отделения от операндов знаком пробела, но это не запрещено и даже приветствуется.
 
 ### Формальный синтаксис
 
@@ -114,7 +142,7 @@ input {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

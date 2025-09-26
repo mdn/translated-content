@@ -20,13 +20,14 @@ slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 この例では、ブラウザーが `noiseSuppression` 制約に対応しているかどうかを表示します。
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
@@ -34,9 +35,9 @@ slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 let result = document.getElementById("result");
 
 if (navigator.mediaDevices.getSupportedConstraints().noiseSuppression) {
-    result.textContent = "Supported!";
+  result.textContent = "Supported!";
 } else {
-    result.textContent = "Not supported!";
+  result.textContent = "Not supported!";
 }
 ```
 
@@ -54,7 +55,7 @@ if (navigator.mediaDevices.getSupportedConstraints().noiseSuppression) {
 
 ## 関連情報
 
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

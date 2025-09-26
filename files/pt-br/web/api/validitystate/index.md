@@ -45,5 +45,5 @@ Para cada uma das propriedades Booleanas abaixo, caso retorne **`true`**, isso i
 
 ## Veja também
 
-- [Constraint validation](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [Forms: Data form validation](/pt-BR/docs/Web/Guide/HTML/Forms/Data_form_validation)
+- [Constraint validation](/pt-BR/docs/Web/HTML/Constraint_validation)
+- [Forms: Data form validation](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation)

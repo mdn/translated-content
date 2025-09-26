@@ -7,7 +7,8 @@ slug: Web/API/Clipboard_API
 
 **Clipboard API**는 클립보드 명령(잘라내기, 복사, 붙여넣기)에 응답하거나 시스템 클립보드에 비동기적으로 접근하고 쓸 수 있는 기능을 제공합니다.
 
-> **참고:** 이 API는 [웹 워커](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 **없습니다**. ({{domxref("WorkerNavigator")}}에 노출되지 않음)
+> [!NOTE]
+> 이 API는 [웹 워커](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 **없습니다**. ({{domxref("WorkerNavigator")}}에 노출되지 않음)
 
 Clipboard API는 {{domxref("document.execCommand()")}}를 사용한 클립보드 접근을 대체하기 위해 디자인되었습니다.
 

@@ -81,7 +81,7 @@ async function writeFile(fileHandle, contents) {
 
 - 同期式のファイルアクセスハンドルを作成します。
 - ファイルのサイズを取得し、格納用の {{jsxref("ArrayBuffer")}} を作成します。
-- ファイルの内容をそのバッファに読み込みます。
+- ファイルの内容をそのバッファーに読み込みます。
 - メッセージをエンコードし、ファイルの終端に書き込みます。
 - 変更をディスクに保存し、アクセスハンドルを閉じます。
 
@@ -98,7 +98,7 @@ onmessage = async (e) => {
 
   // ファイルのサイズを取得する
   const fileSize = accessHandle.getSize();
-  // ファイルの内容をバッファに読み込む
+  // ファイルの内容をバッファーに読み込む
   const buffer = new DataView(new ArrayBuffer(fileSize));
   const readBuffer = accessHandle.read(buffer, { at: 0 });
 
@@ -115,7 +115,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **メモ:** 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとされていました。これは現在では[修正されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
+> [!NOTE]
+> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとされていました。これは現在では[修正されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
 
 ## 仕様書
 
@@ -127,5 +128,5 @@ onmessage = async (e) => {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

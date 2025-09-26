@@ -5,9 +5,18 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 
 {{JSRef}}
 
-La méthode **`fill()`** remplit les éléments d'un tableau typé contenu entre un indice de début et un indice de fin avec une valeur statique. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.fill()")}}. Dans le reste de cet article, _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés#Les_objets_TypedArray).
+La méthode **`fill()`** remplit les éléments d'un tableau typé contenu entre un indice de début et un indice de fin avec une valeur statique. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.fill()")}}. Dans le reste de cet article, _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays#les_objets_typedarray).
 
-{{EmbedInteractiveExample("pages/js/typedarray-fill.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.fill()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([0, 0, 0, 0]);
+// Value, start position, end position
+uint8.fill(4, 1, 3);
+
+console.log(uint8);
+// Expected output: Uint8Array [0, 4, 4, 0]
+```
 
 ## Syntaxe
 

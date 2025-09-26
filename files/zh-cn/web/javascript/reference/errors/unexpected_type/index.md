@@ -3,13 +3,11 @@ title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
 
-{{jsSidebar("Errors")}}
-
 JavaScript 异常“_x_ is (not) _y_”在出现与期望不符的类型（通常为意外获得的 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值）时被抛出。
 
 ## 消息
 
-```
+```plain
 TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
 TypeError: "x" is undefined (Firefox)
 TypeError: "undefined" is not an object (Firefox)

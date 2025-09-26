@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: focus() メソッド"
+short-title: focus()
 slug: Web/API/HTMLElement/focus
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 1ca8335a919a2877ab9dc1bf6ad5967682d7c876
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -22,15 +23,13 @@ focus(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : フォーカス処理の制御の側面のためのオプションのオブジェクト。
     このオブジェクトには、次のプロパティが含まれる場合があります。
-
     - `preventScroll` {{optional_inline}}
       - : 論理値で、ブラウザーが文書をスクロールして、新しくフォーカスされた要素を表示するかどうかを示します。`preventScroll` の値が `false`（既定値）の場合、ブラウザーは要素をフォーカスした後、その要素をスクロールして表示します。`preventScroll` が `true` に設定されている場合、スクロールしません。
     - `focusVisible` {{optional_inline}} {{experimental_inline}}
-      - : 論理値です。`true` に設定すると、要素にフォーカスが当たっていることを強制的に可視的に示すことができます。
-        既定では、あるいはプロパティが `true` でない場合でも、ブラウザーがユーザーにとってのアクセシビリティを向上させると判断した場合は、可視表示を提供することがあります。
+      - : 論理値です。`true` に設定すると、要素にフォーカスが当たっていることを強制的に可視的に示すことができ、`false` に設定すると、それを防ぐことができます。
+        このプロパティが指定されていない場合は、ブラウザーがユーザーにとってのアクセシビリティを向上させると判断した場合は、可視表示を提供することがあります。
 
 ### 返値
 
@@ -76,8 +75,7 @@ document.getElementById("focusButton").addEventListener("click", () => {
 
 ```html
 <button id="myButton">クリックしてください</button>
-<button id="focusButton">クリックで
-「ボタン」にフォーカスを設定</button>
+<button id="focusButton">クリックで 「ボタン」にフォーカスを設定</button>
 <button id="focusButtonVisibleIndication">
   クリックで「Button」にフォーカスと focusVisible を設定
 </button>
@@ -156,7 +154,7 @@ document.getElementById("focus_no_scroll").addEventListener("click", () => {
 ## メモ
 
 - `HTMLElement.focus()` をmousedown イベントハンドラーから呼び出した場合、 `HTMLElement` からフォーカスが外れないように `event.preventDefault()` を呼び出す必要があります。
-- [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) や{{Glossary("shadow tree", "シャドウ DOM", 1)}} など、これまで仕様が定まらないままだった様々な HTML 機能に関するフォーカスの挙動が、最近（2019 年 10 月に）更新されました。
+- [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) や{{Glossary("shadow tree", "シャドウ DOM", 1)}} など、これまで仕様が定まらないままだった様々な HTML 機能に関するフォーカスの挙動が、最近（2019 年 10 月に）更新されました。
   詳しくは [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) をチェックしてみてください。
 
 ## ブラウザーの互換性

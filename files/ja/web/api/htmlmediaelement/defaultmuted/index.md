@@ -1,13 +1,14 @@
 ---
-title: HTMLMediaElement.defaultMuted
+title: "HTMLMediaElement: defaultMuted プロパティ"
+short-title: defaultMuted
 slug: Web/API/HTMLMediaElement/defaultMuted
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.defaultMuted`** プロパティは、 HTML の [`muted`](/ja/docs/Web/HTML/Element/video#muted) 属性を反映し、メディア要素の音声出力を既定でミュートするかどうかを示します。このプロパティは動的な効果はありません。 音声出力をミュートおよびミュート解除するには、{{domxref("HTMLMediaElement.muted", "muted")}} プロパティを使用してください。
+**`HTMLMediaElement.defaultMuted`** プロパティは、 HTML の [`muted`](/ja/docs/Web/HTML/Reference/Elements/video#muted) 属性を反映し、メディア要素の音声出力を既定でミュートするかどうかを示します。このプロパティは動的な効果はありません。 音声出力をミュートおよびミュート解除するには、{{domxref("HTMLMediaElement.muted", "muted")}} プロパティを使用してください。
 
 ## 値
 
@@ -16,7 +17,7 @@ l10n:
 ## 例
 
 ```js
-const videoEle = document.createElement('video');
+const videoEle = document.createElement("video");
 videoEle.defaultMuted = true;
 console.log(videoEle.outerHTML); // <video muted=""></video>
 ```
@@ -31,6 +32,6 @@ console.log(videoEle.outerHTML); // <video muted=""></video>
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.defaultMuted` プロパティを定義しているインターフェイス
 - {{domxref("HTMLMediaElement.muted")}}
 - {{domxref("HTMLMediaElement.volume")}}

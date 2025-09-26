@@ -1,11 +1,14 @@
 ---
-title: MediaStream.active
+title: "MediaStream: active プロパティ"
+short-title: active
 slug: Web/API/MediaStream/active
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-**`active`** は {{domxref("MediaStream")}} インターフェイスの読み取り専用プロパティで、ストリームが現在アクティブであれば `true` を返し、それ以外の場合は `false` を返します。トラックの状態が {{domxref("MediaStreamTrack.ended")}} でないトラックが 1 本でもある場合は、ストリームがアクティブであるとみなされます。すべでのトラックが終了すると、このストリームの `active` プロパティは `false` になります。
+**`active`** は {{domxref("MediaStream")}} インターフェイスの読み取り専用プロパティで、論理値を返します。ストリームが現在アクティブであれば `true` 、それ以外の場合は `false` となります。 {{domxref("MediaStreamTrack")}} のうち {{domxref("MediaStreamTrack.readyState")}} が `ended` に設定されているトラックが 1 本でもある場合は、ストリームが**アクティブ**であるとみなされます。すべでのトラックが終了すると、このストリームの `active` プロパティは `false` になります。
 
 ## 値
 
@@ -18,11 +21,11 @@ slug: Web/API/MediaStream/active
 ```js
 const promise = navigator.mediaDevices.getUserMedia({
   audio: true,
-  video: true
+  video: true,
 });
 
 promise.then((stream) => {
-  const startBtn = document.querySelector('#startBtn');
+  const startBtn = document.querySelector("#startBtn");
   startBtn.disabled = stream.active;
 });
 ```

@@ -3,13 +3,62 @@ title: filter
 slug: Web/CSS/filter
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`filter`** 속성은 흐림 효과나 색상 변형 등 그래픽 효과를 요소에 적용합니다. 보통 필터는 이미지, 배경, 테두리 렌더링을 조정하는 데 쓰입니다.
 
 CSS 표준은 미리 정의된 효과를 내는 몇 가지 함수를 포함하고 있습니다. [SVG 필터 요소](/ko/docs/Web/SVG/Element/filter)를 가리키는 URL 참조를 사용하여 SVG 필터를 적용할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/css/filter.html")}}
+{{InteractiveExample("CSS Demo: filter")}}
+
+```css interactive-example-choice
+filter: url("/shared-assets/images/examples/shadow.svg#element-id");
+```
+
+```css interactive-example-choice
+filter: blur(5px);
+```
+
+```css interactive-example-choice
+filter: contrast(200%);
+```
+
+```css interactive-example-choice
+filter: grayscale(80%);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(90deg);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(16px 16px 20px red) invert(75%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: #fff;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#example-element {
+  flex: 1;
+  padding: 30px;
+}
+```
 
 ## 구문
 
@@ -408,7 +457,7 @@ table.standard-table td {
 - `<blur-radius>` (선택)
   - : 세 번째 {{cssxref("&lt;length&gt;")}} 값입니다. 클수록 흐려지는 반경이 커지고 그림자가 옅어집니다. 음수 값은 사용할 수 없습니다. 값을 지정하지 않으면 `0`으로 취급하여 그림자 가장자리가 날카로워집니다.
 - `<color>` (선택)
-  - : 가능한 키워드 및 표기법은 {{cssxref("&lt;color&gt;")}}를 참조하세요. 값을 지정하지 않았을 때의 색상은 브라우저에 따라 다릅니다. 보통 {{cssxref("&lt;color&gt;")}} 속성의 값을 사용하지만, 현재 사파리는 투명한 그림자를 그리는 것을 주의하세요.
+  - : 가능한 키워드 및 표기법은 {{cssxref("&lt;color&gt;")}}를 참조하세요. 값을 지정하지 않았을 때의 색상은 브라우저에 따라 다릅니다. 보통 {{cssxref("&lt;color&gt;")}} 속성의 값을 사용하지만, 현재 Safari는 투명한 그림자를 그리는 것을 주의하세요.
 
 ```css
 filter: drop-shadow(16px 16px 10px black);
@@ -1271,4 +1320,4 @@ URL 함수와 SVG 리소스를 사용하는 방법은 다음과 같습니다.
 - [HTML 콘텐츠에 SVG 효과 적용하기](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - {{cssxref("mask")}} 속성
 - [SVG](/ko/docs/Web/SVG)
-- [Understanding CSS filters](http://www.html5rocks.com/en/tutorials/filters/understanding-css/) (HTML5Rocks! 글)
+- [Understanding CSS filters](https://www.html5rocks.com/en/tutorials/filters/understanding-css/) (HTML5Rocks! 글)

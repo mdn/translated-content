@@ -19,7 +19,7 @@ var fragment = document.createDocumentFragment();
 
 Les objets `DocumentFragments` sont analogues à des nœuds du DOM, mais ne font jamais partie de l'arbre DOM. Le cas d'usage le plus courant consiste à créer un fragment pour y stocker des éléments, puis à ajouter en une seule opération le fragment à l'arbre DOM, ce qui a pour effet de le remplacer par tous ses éléments enfants.
 
-Le principal avantage de cette méthode de mise à jour du DOM vient du fait que le fragment est stocké en mémoire, et pas dans l'arbre DOM lui-même, de sorte que le modifier ne déclenche pas de [reflow](http://code.google.com/speed/articles/reflow.html) (le calcul des positions et de la géométrie de chacun des éléments de la page affichée). Par conséquent, l´utilisation de fragments pour effectuer des mises à jour du DOM donne souvent lieu à une [amélioration des performance](http://ejohn.org/blog/dom-documentfragments/)s.
+Le principal avantage de cette méthode de mise à jour du DOM vient du fait que le fragment est stocké en mémoire, et pas dans l'arbre DOM lui-même, de sorte que le modifier ne déclenche pas de [reflow](https://code.google.com/speed/articles/reflow.html) (le calcul des positions et de la géométrie de chacun des éléments de la page affichée). Par conséquent, l´utilisation de fragments pour effectuer des mises à jour du DOM donne souvent lieu à une [amélioration des performance](http://ejohn.org/blog/dom-documentfragments/)s.
 
 ## Exemple
 

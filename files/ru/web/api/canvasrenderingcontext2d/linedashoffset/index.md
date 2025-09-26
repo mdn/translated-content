@@ -7,7 +7,8 @@ slug: Web/API/CanvasRenderingContext2D/lineDashOffset
 
 Свойство **`CanvasRenderingContext2D.lineDashOffset`** в Canvas 2D API устанавливает смещение штрихов, или «фаза».
 
-> **Примечание:** Линии нарисованы вызовом метода {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}.
+> [!NOTE]
+> Линии нарисованы вызовом метода {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}.
 
 ## Синтаксис
 

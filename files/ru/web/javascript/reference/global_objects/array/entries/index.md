@@ -3,7 +3,7 @@ title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 

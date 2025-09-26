@@ -9,7 +9,23 @@ O símbolo **`Symbol.replace`** é conhecido por especificar o método que subst
 
 Para mais informações, veja {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} e {{jsxref("String.prototype.replace()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+
+```js interactive-example
+class Replace1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.replace](string) {
+    return `s/${string}/${this.value}/g`;
+  }
+}
+
+console.log("foo".replace(new Replace1("bar")));
+// Expected output: "s/foo/bar/g"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Exemplos
 
@@ -31,13 +47,11 @@ console.log("football".replace(new CustomReplacer("foo")));
 
 ## Especificações
 
-| Especificação                                                    |
-| ---------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.replace")}}
+{{Compat}}
 
 ## Veja também
 

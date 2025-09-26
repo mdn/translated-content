@@ -143,7 +143,7 @@ if (num === 0) {
 
 여기에 설명된 것 이외에도 {{jsxref("eval", "eval()")}} 처럼 {{jsxref("Function")}} 생성자를 사용하여 런타임 중 문자열에서 함수를 만들 수 있습니다.
 
-객체의 속성이 함수인 것을 **메서드**(method)라고 합니다. 자세한 내용은 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects) 문서를 참고하세요.
+객체의 속성이 함수인 것을 **메서드**(method)라고 합니다. 자세한 내용은 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects) 문서를 참고하세요.
 
 ## 함수 호출
 
@@ -169,7 +169,7 @@ square = function (n) {
 };
 ```
 
-함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)에서 정의된 `showProps()` 함수는 인수로 객체를 받는 함수의 예입니다.
+함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)에서 정의된 `showProps()` 함수는 인수로 객체를 받는 함수의 예입니다.
 
 함수는 자신을 호출할 수 있습니다. 예를 들어, 팩토리얼을 재귀적으로 계산하는 함수가 있습니다.
 
@@ -307,7 +307,7 @@ function loop(x) {
 loop(0);
 ```
 
-그러나 일부 알고리즘은 단순 반복 루프가 될 수 없습니다. 예를 들어, [DOM](/ko/docs/DOM)과 같은 트리 구조의 모든 노드를 가져오는 것은 재귀를 사용하는 편이 더 간편합니다.
+그러나 일부 알고리즘은 단순 반복 루프가 될 수 없습니다. 예를 들어, [DOM](/ko/docs/Web/API/Document_Object_Model)과 같은 트리 구조의 모든 노드를 가져오는 것은 재귀를 사용하는 편이 더 간편합니다.
 
 ```js
 function walkTree(node) {
@@ -452,7 +452,7 @@ result = outside()(20); // 10 대신 20을 반환합니다
 
 ## 클로저
 
-클로저는 자바스크립트의 강력한 기능 중 하나입니다. 자바스크립트는 함수의 중첩(함수 안에 함수를 정의하는 것)을 허용하고, 내부 함수가 외부 함수 안에서 정의된 모든 변수와 함수(및 외부함수가 접근할 수 있는 다른 모든 변수와 함수들까지)에 대해 전체 접근 권한을 부여합니다.
+클로저는 JavaScript의 강력한 기능 중 하나입니다. JavaScript는 함수의 중첩(함수 안에 함수를 정의하는 것)을 허용하고, 내부 함수가 외부 함수 안에서 정의된 모든 변수와 함수(및 외부함수가 접근할 수 있는 다른 모든 변수와 함수들까지)에 대해 전체 접근 권한을 부여합니다.
 
 하지만 외부 함수는 내부 함수에 정의된 변수와 함수에 접근 할 수 없습니다. 이는 내부 함수의 변수에 대한 일종의 캡슐화를 제공합니다.
 
@@ -529,7 +529,8 @@ const getCode = (function () {
 getCode(); // `secureCode`를 반환합니다.
 ```
 
-> **참고:** 클로저를 사용할 때 주의해야 할 점이 있습니다!
+> [!NOTE]
+> 클로저를 사용할 때 주의해야 할 점이 있습니다!
 >
 > 둘러싸인 함수가 외부 스코프의 변수와 동일한 이름을 가진 변수를 정의하면, 외부 스코프의 변수에 다시 참조할 방법이 없습니다. (내부 스코프 변수는 프로그램이 내부 스코프를 종료할 때까지 외부 스코프 변수를 [덮어씁니다](#name_conflicts). 이건 이름 충돌로 생각할 수 있습니다.)
 >
@@ -585,7 +586,8 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
-> **참고:** 인수(arguments) 객체는 배열과 닮은 것이지 배열이 아닙니다. 인수 객체는 번호가 붙여진 인덱스와 길이 속성을 가지고 있다는 점에서 배열과 닮은 것입니다. 인수 객체는 배열을 다루는 모든 메서드를 가지고 있지 않습니다.
+> [!NOTE]
+> 인수(arguments) 객체는 배열과 닮은 것이지 배열이 아닙니다. 인수 객체는 번호가 붙여진 인덱스와 길이 속성을 가지고 있다는 점에서 배열과 닮은 것입니다. 인수 객체는 배열을 다루는 모든 메서드를 가지고 있지 않습니다.
 
 더 자세한 정보를 얻고 싶으시면 {{jsxref("Function")}} 객체 문서를 참고하세요.
 
@@ -718,52 +720,41 @@ var p = new Person();
 JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-
   - : **`eval()`** 메소드는 문자열로 표현된 JavaScript 코드를 실행합니다.
 
 - {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
-
   - : **`uneval()`** 메소드는 {{jsxref("Object")}}의 소스코드를 표현하는 문자열을 만듭니다.
 
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-
   - : 전역 **`isFinite()`** 함수는 전달받은 값이 유한한지 결정합니다. 만약 필요하다면, 매개변수는 첫번째로 숫자로 변환됩니다.
 
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-
   - : **`isNaN()`** 함수는 {{jsxref("Global_Objects/NaN", "NaN")}}인지 아닌지 결정합니다.
-    > **참고:** `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description) 규칙을 가지고 있습니다.
+    > **참고:** `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) 규칙을 가지고 있습니다.
     >
     > {{jsxref("Number.isNaN()")}}을 이용해 값이 NaN인지 확인할 수 있습니다.
     >
     > ECMAScript6에서 정의된 값이 숫자값이 아닌 경우에는 [`typeof`](/ko/docs/Web/JavaScript/Reference/Operators/typeof)를 사용할 수도 있습니다.
 
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-
   - **`parseFloat()`** 함수는 문자열 인수 값을 해석하여 부동소숫점 수를 반환합니다.
 
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-
   - **`parseInt()`** 함수는 문자열 인수 값을 수학적인 수 체계에 따라 해석하여 특정한 진법의 정수를 반환합니다.
 
 - {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-
   - **`decodeURI()`** 함수는 사전에 {{jsxref("Global_Objects/encodeURI", "encodeURI")}}을 통해 만들어지거나 비슷한 과정을 통해 만들어진 URI(Uniform Resource Identifier) 를 해독합니다.
 
 - {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-
   - **`decodeURIComponent()`** 함수는 인코딩으로 이전에 생성된 URI({{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}})를 디코딩합니다. URI(Uniform Resource Identifier) 또는 유사한 루틴을 사용합니다.
 
 - {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-
   - **`encodeURI()`** 메소드는 URI(Uniform Resource Identifier)를 각 인스턴스의 특정한 문자를 한 개, 두 개, 세 개 또는 네 개의 UTF-8인코딩으로 나타내어지는 연속된 확장문자들과 바꾸는 방법으로 부호화 합니다. (두 "surrogate"문자로 구성된 문자들은 오직 네 개의 연속된 확장문자 입니다)
 
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-
   - **`encodeURIComponent()`** 메소드는 URI(Uniform Resource Identifier) 컴포넌트를 각 인스턴스의 특정한 문자를 한개, 두 개, 세 개 또는 네 개의 UTF-8 인코딩으로 나타내어지는 연속된 확장문자들과 바꾸는 방법으로 부호화 합니다.(두 "surrogate"문자로 구성된 문자들은 오직 네개의 연속된 확장문자 입니다.)
 
 - {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
-
   - 곧 사라질 **`escape()`** 메소드는 한 문자열에서 특정 문자들이 16진 확장 비트열로 바뀌어진 문자열로 계산합니다. {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 또는 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 를 사용하세요.
 
 - {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}

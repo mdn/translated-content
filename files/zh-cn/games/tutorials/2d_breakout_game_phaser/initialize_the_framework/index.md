@@ -3,11 +3,9 @@ title: Initialize the framework
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser", "Games/Tutorials/2D_Breakout_game_Phaser/Scaling")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser)系列的第一课。在课程完成之后，你可以在[Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html)找到源码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)系列的第一课。在课程完成之后，你可以在[Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html)找到源码。
 
 在我们开始写游戏的功能之前，我们需要创建一个用来内部渲染游戏的基础架构。使用 HTML 就能做到 — Parser 框架将生成所需的 {{htmlelement("canvas")}} 元素。
 
@@ -63,7 +61,6 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 - 渲染方式。有三个选项分别是 `AUTO`，`CANVAS` 和 `WEBGL`。我们可以指定使用 Canvas 还是 WebGL 来渲染，如果使用了 Auto 则优先使用 WebGL，如果浏览器不支持则会选择 Canvas。
 - {{htmlelement("canvas")}} 的 id。如果该参数有值，则使用该值作为 canvas 标签的 id，我们传入 null，则 phaser 会决定 canvas 的 id 值。
 - 第四个参数指定了 phaser 的三个生命周期所对应的函数。我们使用相同的名字来让程序更清晰
-
   - `preload` 进行资源的加载。
   - `create` 会在资源加载完成后执行一次。
   - `update` 会一直循环执行来处理每一帧动画。
@@ -76,6 +73,6 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 
 ## 下一步
 
-现在我们已经完成了一个简单的 HTML 页面，并且学习了如何安装 Phaser，让我们继续学习第二章： [scaling](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling).
+现在我们已经完成了一个简单的 HTML 页面，并且学习了如何安装 Phaser，让我们继续学习第二章： [scaling](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling).
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser", "Games/Tutorials/2D_Breakout_game_Phaser/Scaling")}}

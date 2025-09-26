@@ -1,13 +1,13 @@
 ---
-title: "Element:  键盘按下事件"
+title: Element：keydown 事件
 slug: Web/API/Element/keydown_event
 ---
 
 {{APIRef}}
 
-**`keydown`**事件触发于键盘按键按下的时候。
+**`keydown`** 事件触发于键盘按键按下的时候。
 
-与[`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件不同的是，所有按键均会触发`keydown`事件，无论这些按键是否会产生字符值。
+与 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件不同的是，所有按键均会触发 `keydown` 事件，无论这些按键是否会产生字符值。
 
 <table class="properties">
   <thead></thead>
@@ -78,17 +78,17 @@ function logKey(e) {
 input.onkeydown = logKey;
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
+- [`input`](/zh-CN/docs/Web/API/Element/input_event)
 - [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
 - [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)
-- [Document `keydown` event](/zh-CN/docs/Web/API/Document/keydown_event)
+- [Document `keydown` event](/zh-CN/docs/Web/API/Element/keydown_event)

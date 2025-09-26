@@ -1,9 +1,9 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 `table` や `ruby` のような一部のレイアウトモデルでは、複雑な内部構造があり、様々なその子要素や子孫要素が担う様々な役割があります。このページではこれらを「内部の」表示値として定義し、特定のレイアウトモードでのみ意味を持ちます。
 
@@ -27,20 +27,24 @@ slug: Web/CSS/display-internal
   - : これらの要素は HTML の {{HTMLElement("col")}} 要素のように動作します。
 - `table-caption`
   - : これらの要素は HTML の {{HTMLElement("caption")}} 要素のように動作します。
-- `ruby-base` {{Experimental_Inline}}
+- `ruby-base`
   - : これらの要素は HTML の {{HTMLElement("rb")}} 要素のように動作します。
-- `ruby-text` {{Experimental_Inline}}
+- `ruby-text`
   - : これらの要素は HTML の {{HTMLElement("rt")}} 要素のように動作します。
-- `ruby-base-container` {{Experimental_Inline}}
-  - : これらの要素は無名のボックスとして生成された HTML の {{HTMLElement("rbc")}} 要素のように動作します。
-- `ruby-text-container` {{Experimental_Inline}}
+- `ruby-base-container`
+  - : これらの要素は無名のボックスとして生成されます。
+- `ruby-text-container`
   - : これらの要素は HTML の {{HTMLElement("rtc")}} 要素のように動作します。
+
+## 形式文法
+
+{{csssyntax}}
 
 ## 例
 
-<h3 id="CSS_tables_example">CSS テーブルの例</h3>
+### CSS テーブルの例
 
-以下の例は、 CSS テーブルレイアウトを使用した単純なフォームのレイアウトを紹介します。
+以下の例は、 CSS テーブルレイアウトを使用したフォームのレイアウトを紹介します。
 
 #### HTML
 
@@ -48,11 +52,11 @@ slug: Web/CSS/display-internal
 <main>
   <div>
     <label for="name">Name</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Age</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
 </main>
 ```
@@ -68,7 +72,8 @@ div {
   display: table-row;
 }
 
-label, input {
+label,
+input {
   display: table-cell;
   margin: 5px;
 }
@@ -84,22 +89,11 @@ label, input {
 
 ## ブラウザーの互換性
 
-### 対応している table の値
-
-`table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, `table-row-group`
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### 対応している ruby の値
-
-`ruby`, `ruby-base`, `ruby-base-container`, `ruby-text`, `ruby-text-container`
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## 関連情報
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

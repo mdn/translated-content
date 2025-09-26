@@ -1,15 +1,17 @@
 ---
-title: Document.createTouch()
+title: "Document: createTouch() メソッド"
+short-title: createTouch()
 slug: Web/API/Document/createTouch
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 **`Document.createTouch()`** メソッドは、新しい {{DOMxRef("Touch")}} オブジェクトを生成して返します。
 
-> **メモ:** {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} コンストラクターを使用してください。
+> [!NOTE]
+> {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} コンストラクターを使用してください。
 
 ## 構文
 
@@ -19,7 +21,8 @@ createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 
 ### 引数
 
-> **メモ:** すべての引数が省略可能です。
+> [!NOTE]
+> すべての引数が省略可能です。
 
 - `view`
   - : タッチが発生した {{DOMxRef("window")}} です。
@@ -36,7 +39,8 @@ createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 - `screenY`
   - : {{DOMxRef("Touch.screenY")}} の値です。
 
-> **メモ:** このメソッドの以前のバージョンでは、以下の追加の引数を含んでいましたが、これらの引数は下記の標準のいずれにも含まれていません。従って、これらの引数は非推奨であり、使用されないと考えてください。
+> [!NOTE]
+> このメソッドの以前のバージョンでは、以下の追加の引数を含んでいましたが、これらの引数は下記の標準のいずれにも含まれていません。従って、これらの引数は非推奨であり、使用されないと考えてください。
 
 - `clientX`
   - : {{DOMxRef("Touch.clientX")}} の値です。

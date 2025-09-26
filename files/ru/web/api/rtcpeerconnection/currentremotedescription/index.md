@@ -9,7 +9,8 @@ slug: Web/API/RTCPeerConnection/currentRemoteDescription
 
 Для изменения значения свойства `currentRemoteDescription`, вызовите метод {{domxref("RTCPeerConnection.setRemoteDescription()")}}, который запускает серию событий, приводящих к установке нового значения. Подробнее о том, что точно происходит и почему изменение значения не происходит немедленно, смотрите [Ожидающие и текущие объекты описания](/ru/docs/Web/API/WebRTC_API/Connectivity#рассматриваемые_и_текущие_описания).
 
-> **Примечание:** В отличии от {{domxref("RTCPeerConnection.remoteDescription")}}, это значение действительный текущий статус соединения; `remoteDescription` может указывать на объект описания, на который соединение находиться в процессе перехода..
+> [!NOTE]
+> В отличии от {{domxref("RTCPeerConnection.remoteDescription")}}, это значение действительный текущий статус соединения; `remoteDescription` может указывать на объект описания, на который соединение находиться в процессе перехода..
 
 ## Синтаксис
 
@@ -51,4 +52,4 @@ else {
 
 - {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.remoteDescription")}}
 - {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/ru/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ru/docs/Web/API/WebRTC_API)

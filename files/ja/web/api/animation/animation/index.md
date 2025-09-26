@@ -1,16 +1,21 @@
 ---
-title: Animation()
+title: "Animation: Animation() コンストラクター"
+short-title: Animation()
 slug: Web/API/Animation/Animation
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 **`Animation()`** は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) のコンストラクターで、新しい `Animation` オブジェクトのインスタンスを返します。
 
 ## 構文
 
-```js
-var animation = new Animation([effect][, timeline]);
+```js-nolint
+new Animation()
+new Animation(effect)
+new Animation(effect, timeline)
 ```
 
 ### 引数
@@ -25,7 +30,10 @@ var animation = new Animation([effect][, timeline]);
 [「白兎を追え」の例](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010)では、 `Animation()` コンストラクターを使用して `Animation` を `rabbitDownKeyframes` に対して、文書の `timeline` を使用して生成しています。
 
 ```js
-var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+const rabbitDownAnimation = new Animation(
+  rabbitDownKeyframes,
+  document.timeline,
+);
 ```
 
 ## 仕様書

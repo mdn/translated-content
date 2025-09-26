@@ -2,13 +2,14 @@
 title: CSSRule
 slug: Web/API/CSSRule
 l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("CSSOM")}}
 
 **`CSSRule`** インターフェイスは、1 つの CSS ルールを表します。 `CSSRule` からプロパティを継承しているルールを表す型がいくつかあります。
 
+- {{DOMXRef("CSSGroupingRule")}}
 - {{DOMXRef("CSSStyleRule")}}
 - {{DOMXRef("CSSImportRule")}}
 - {{DOMXRef("CSSMediaRule")}}
@@ -18,17 +19,20 @@ l10n:
 - {{DOMXRef("CSSKeyframesRule")}}
 - {{DOMXRef("CSSKeyframeRule")}}
 - {{DOMXRef("CSSCounterStyleRule")}}
-- {{DOMXRef("CSSDocumentRule")}}
 - {{DOMXRef("CSSSupportsRule")}}
 - {{DOMXRef("CSSFontFeatureValuesRule")}}
-- {{DOMXRef("CSSViewportRule")}}
+- {{DOMXRef("CSSFontPaletteValuesRule")}}
+- {{DOMXRef("CSSLayerBlockRule")}}
+- {{DOMXRef("CSSLayerStatementRule")}}
+- {{DOMXRef("CSSPropertyRule")}}
+- {{DOMXRef("CSSNestedDeclarations")}}
 
 ## インスタンスプロパティ
 
-`CSSRule` インターフェイスは、すべてのルールに共通のプロパティを規定します。特定の種類のルールに特有のプロパティは、各種類のルールのために、さらに特化したインターフェース内で規定されています。
+`CSSRule` インターフェイスは、すべてのルールに共通のプロパティを規定します。特定の種類のルールに特有のプロパティは、各種類のルールのために、さらに特化したインターフェイス内で規定されています。
 
 - {{domxref("CSSRule.cssText")}}
-  - : このルールのテキスト表現を表します。たとえば "`h1,h2 { font-size: 16pt }`" や "`@import 'url'`" です。ルールの一部（つまり、この例の "font-size" の値）にアクセスまたは変更するには、[ルールの種類に特化したインターフェイス](#型定数)のプロパティを使用してください。
+  - : このルールのテキスト表現を表します。たとえば `"h1,h2 { font-size: 16pt }"` や `"@import 'url'"` です。ルールの一部（つまり、この例の "font-size" の値）にアクセスまたは変更するには、ルールの種類に特化したインターフェイスのプロパティを使用してください（上記参照）。
 - {{domxref("CSSRule.parentRule")}} {{ReadOnlyInline}}
   - : このルールを含むルールを返します。このルールが包含されていなければ `null` を返します。つまり、このルールが {{cssxref("@media")}} ブロック内部のスタイルルールの場合、親ルールは {{domxref("CSSMediaRule")}} になります。
 - {{domxref("CSSRule.parentStyleSheet")}} {{ReadOnlyInline}}

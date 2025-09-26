@@ -1,25 +1,25 @@
 ---
-title: HTMLAnchorElement.download
+title: HTMLAnchorElement：download 属性
 slug: Web/API/HTMLAnchorElement/download
+l10n:
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAnchorElement.download`** 属性是一个{{jsxref("DOMString")}} ，表明链接的资源将被下载，而不是显示在浏览器中。该值表示下载文件的建议名称。如果该名称不是基础操作系统的有效文件名，浏览器将对其进行调整。
+**`HTMLAnchorElement.download`** 属性是一个字符串，表示链接的资源旨在被下载而非在浏览器中显示。如果该属性有值，则指定了在本地文件系统中标记资源时使用的默认文件名。如果名称在底层操作系统中不是有效的文件名，浏览器将会对其进行调整。
 
-> **备注：** 该值对于下载行为来说不一定是有用的，同时也不能决定下载行为是否发生。
+> [!NOTE]
+> 这个值可能不会被用于下载。这个值不能用来确定下载是否会发生。
 
-## 语法
+## 值
 
-```
-var dnload = anchorElt.download;
-anchorElt.download = dnload;
-```
+一个字符串。
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器的兼容性
+## 浏览器兼容性
 
 {{Compat}}

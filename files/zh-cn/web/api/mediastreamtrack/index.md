@@ -24,9 +24,7 @@ slug: Web/API/MediaStreamTrack
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
   - : 返回一个布尔类型的值，为 true 时表示该轨道是只读的，比如视频文件源或一个被设置为不能修改的摄像头源，或则为 false。
 - {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}
-
   - : 返回枚举类型的值，表示轨道的当前状态。该枚举值为以下中的一个：
-
     - "live"表示当前输入已经连接并且在尽力提供实时数据。在这种情况下，输出数据可以通过操作 MediaStreamTrack.enabled 属性进行开关。
     - “ended”表示这个输出连接没有更多的数据了，而且也不会提供更多的数据了。
 
@@ -71,4 +69,4 @@ slug: Web/API/MediaStreamTrack
 
 ## 参见
 
-- [Using the MediaStream API](/zh-CN/docs/WebRTC/MediaStream_API)
+- [Using the MediaStream API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)

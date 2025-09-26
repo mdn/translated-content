@@ -1,47 +1,42 @@
 ---
-title: Document.styleSheetSets
+title: Document：styleSheetSets 属性
 slug: Web/API/Document/styleSheetSets
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
-返回一个所有当前可用样式表集的实时列表。
+**`styleSheetSets`** 只读属性返回一个所有当前可用样式表集合的实时列表。
 
-## Syntax
+## 值
 
-```plain
-sets = document.styleSheetSets
-```
+一个可用的样式表集合的列表。
 
-在返回时，sets 是一个可用的样式表集的列表。
+## 示例
 
-## Example
-
-Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can populate it with the names of all the available style sheet sets with code like this:
+给定一个 ID 为“sheetList”的 {{HTMLElement("ul")}}（列表）元素，你可以使用下面的代码将所有可用样式表集合的名称填充到列表中：
 
 ```js
-var list = document.getElementById("sheetList");
-var sheets = document.styleSheetSets;
+const list = document.getElementById("sheetList");
+const sheets = document.styleSheetSets;
 
-list.innerHTML = "";
+list.textContent = "";
 
-for (var i = 0; i < sheets.length; i++) {
-  var item = document.createElement("li");
-
-  item.innerHTML = sheets[i];
+for (const sheet of sheets) {
+  const item = document.createElement("li");
+  item.textContent = sheet;
   list.appendChild(item);
 }
 ```
 
-## Notes
+## 备注
 
-The list of available style sheet sets is constructed by enumerating all the style sheets available for the document, in the order in which they're listed in the {{domxref("document.styleSheets")}} attribute, adding the `title` of each style sheet that has a title to the list. Duplicates are dropped from the list (using a case-sensitive comparison).
+可用样式表集合的列表是通过以下方式构建的：按照文档中所有可用的样式表在 {{domxref("Document.styleSheets")}} 属性中列出的顺序枚举，并将每个具有标题的样式表的 `title` 添加到列表中。列表中的重复项将被删除（使用区分大小写的比较）。
 
-## Specifications
+## 浏览器兼容性
 
-- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+{{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("Stylesheet")}}
 - {{domxref("document.styleSheets")}}

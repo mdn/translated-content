@@ -3,6 +3,8 @@ title: Document.async
 slug: Web/API/XMLDocument
 ---
 
+{{APIRef("DOM")}}
+
 `document.async` es utilizado para indicar cuándo un llamado de {{domxref("document.load")}} debe ser sincrónico o asincrónico. `true` es su valor por defecto, indicando que el documento se cargó asincrónicamente.
 
 (Desde la versión 1.4 alpha es posible cargar documentos sincrónicamente)
@@ -23,7 +25,7 @@ xmlDoc.load("querydata.xml");
 
 ## Especificación
 
-- [DOM Level 3 Load & Save module](http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS)
+- [DOM Level 3 Load & Save module](https://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS)
 
 ## Véase también
 

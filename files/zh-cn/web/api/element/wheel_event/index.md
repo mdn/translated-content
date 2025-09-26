@@ -9,7 +9,8 @@ slug: Web/API/Element/wheel_event
 
 滚轮事件取代了已被弃用的非标准 {{domxref("Element/mousewheel_event", "mousewheel")}} 事件。
 
-> **备注：** 不要将滚轮事件与 [`scroll`](/zh-CN/docs/Web/API/Document/scroll_event) 事件混淆。滚轮事件的默认行为是取决于实现的，所以不一定会触发 `scroll` 事件。即便如此，滚轮事件的 `delta*` 值也不一定能反映文档内容的实际滚动方向。因此，请不要依赖滚轮事件的 `delta*` 值来获得滚动方向。请通过检测目标的 `scroll` 事件的 {{domxref("Element.scrollLeft", "scrollLeft")}} 和 {{domxref("Element.scrollTop", "scrollTop")}} 这两个值代替。
+> [!NOTE]
+> 不要将滚轮事件与 [`scroll`](/zh-CN/docs/Web/API/Document/scroll_event) 事件混淆。滚轮事件的默认行为是取决于实现的，所以不一定会触发 `scroll` 事件。即便如此，滚轮事件的 `delta*` 值也不一定能反映文档内容的实际滚动方向。因此，请不要依赖滚轮事件的 `delta*` 值来获得滚动方向。请通过检测目标的 `scroll` 事件的 {{domxref("Element.scrollLeft", "scrollLeft")}} 和 {{domxref("Element.scrollTop", "scrollTop")}} 这两个值代替。
 
 ## 语法
 
@@ -38,7 +39,6 @@ _此接口从父接口：{{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEvent")}} 和 
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : 返回一个浮点数（`double`）表示 z 轴方向的滚动量。
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : 返回一个无符号长整型数（`unsigned long`），表示 `delta*` 值滚动量的单位。允许的值为：
 
     | 常量                         | 值     | 描述                                                                                  |
@@ -120,4 +120,4 @@ el.addEventListener("wheel", zoom, { passive: false });
 ## 参见
 
 - {{domxref("WheelEvent")}}
-- [Document：`wheel` 事件](/zh-CN/docs/Web/API/Document/wheel_event)
+- [Document：`wheel` 事件](/zh-CN/docs/Web/API/Element/wheel_event)

@@ -1,17 +1,25 @@
 ---
 title: String.prototype.charAt()
+short-title: charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 l10n:
-  sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`charAt()`** は {{jsxref("String")}} 値のメソッドは、指定されたインデックスにある単一の UTF-16 コード単位からなる新しい文字列を返します。
+**`charAt()`** は {{jsxref("String")}} 値のメソッドで、指定されたインデックスにある単一の UTF-16 コード単位からなる新しい文字列を返します。
 
 `charAt()` は常に文字列を [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして索引付けます。そのため、孤立したサロゲートを返す可能性があります。指定されたインデックスの完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} および {{jsxref("String.fromCodePoint()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/string-charat.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.charAt()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+// 予想される結果: "The character at index 4 is q"
+```
 
 ## 構文
 
@@ -79,7 +87,7 @@ console.log(str.charAt(0)); // "\ud842"、これは妥当な Unicode 文字で�
 console.log(str.charAt(1)); // "\udfb7"、これは妥当な Unicode 文字ではない
 ```
 
-指定された位置の完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)のように、Unicode コードポイントで分割して Unicode コードポイントの配列にするインデックスメソッドを使用してください
+指定された位置の完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)のように、Unicode コードポイントで分割して Unicode コードポイントの配列にするインデックスメソッドを使用してください
 
 ```js
 const str = "𠮷𠮾";
@@ -87,7 +95,8 @@ console.log(String.fromCodePoint(str.codePointAt(0))); // "𠮷"
 console.log([...str][0]); // "𠮷"
 ```
 
-> **メモ:** `charAt()` を使用して上記の解決策を再実装することは避けてください。孤立サロゲートの検出とそのペアリングは複雑で、文字列の内部表現を直接使用する組み込み API の方がパフォーマンスが高いかもしれません。必要であれば、上記の API のポリフィルをインストールしてください。
+> [!NOTE]
+> `charAt()` を使用して上記の解決策を再実装することは避けてください。孤立サロゲートの検出とそのペアリングは複雑で、文字列の内部表現を直接使用する組み込み API の方がパフォーマンスが高いかもしれません。必要であれば、上記の API のポリフィルをインストールしてください。
 
 ## 仕様書
 
@@ -105,4 +114,4 @@ console.log([...str][0]); // "𠮷"
 - {{jsxref("String.prototype.codePointAt()")}}
 - {{jsxref("String.prototype.split()")}}
 - {{jsxref("String.fromCodePoint()")}}
-- [JavaScript has a Unicode problem – Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)
+- [JavaScript has a Unicode problem](https://mathiasbynens.be/notes/javascript-unicode) (Mathias Bynens, 2013)

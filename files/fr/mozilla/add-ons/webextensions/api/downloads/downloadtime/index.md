@@ -3,7 +3,7 @@ title: downloads.DownloadTime
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `DownloadTime` de l'API {{WebExtAPIRef("downloads")}} représente le temps nécessaire au téléchargement.
 
@@ -13,7 +13,6 @@ Un `DownloadTime` peut être l'un de trois types différents :
 
 - Un objet JavaScript [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date).
 - a string:
-
   - Si cela ne contient que des chiffres, il est interprété comme le nombre de millisecondes écoulées depuis l'époque UNI.
   - inon, il est interprété comme une chaîne [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
 
@@ -25,11 +24,9 @@ Un `DownloadTime` peut être l'un de trois types différents :
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

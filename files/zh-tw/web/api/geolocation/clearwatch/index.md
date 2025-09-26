@@ -1,39 +1,47 @@
 ---
-title: Geolocation.clearWatch()
+title: Geolocation：clearWatch() 方法
 slug: Web/API/Geolocation/clearWatch
+l10n:
+  sourceCommit: 049b078b0fff80875027b89802b0399138df63a6
 ---
 
-{{ APIref("Geolocation API") }}
+{{securecontext_header}}{{ APIref("Geolocation API") }}
 
-**`Geolocation.clearWatch()`** 這個函式是用來取消 {{domxref("Geolocation.watchPosition()")}} 註冊的函式。
+{{domxref("Geolocation")}} 介面的 **`clearWatch()`** 方法用於取消註冊先前使用 {{domxref("Geolocation.watchPosition()")}} 安裝的位置／錯誤監控處理器。
 
 ## 語法
 
-```plain
-navigator.geolocation.clearWatch(id);
+```js-nolint
+clearWatch(id)
 ```
 
 ### 參數
 
-- _編號(id)_
-  - : 這個編號(ID) 是由 {{domxref("Geolocation.watchPosition()")}} 這個函式所回傳，當你不再需要收到位置更新時，你可以用此編號，取消 {{domxref("Geolocation.watchPosition()")}} 的註冊。
+- `id`
+  - : 你想移除的處理器的 ID 編號，其是由 {{domxref("Geolocation.watchPosition()")}} 方法在安裝時所回傳的。
+
+### 回傳值
+
+無（{{jsxref("undefined")}}）。
 
 ## 範例
 
 ```js
-var id, target, option;
+let id;
+let target;
+let options;
 
 function success(pos) {
-  var crd = pos.coords;
+  const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulation, you reach the target");
+    console.log("恭喜，你已到達目標！");
     navigator.geolocation.clearWatch(id);
   }
 }
 
 function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+  console.error(`錯誤（${err.code}）：${err.message}`);
 }
 
 target = {
@@ -50,17 +58,17 @@ options = {
 id = navigator.geolocation.watchPosition(success, error, options);
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
+- [使用地理定位](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("Geolocation")}}
 - {{domxref("Geolocation.watchPosition()")}}
 - {{domxref("Geolocation.getCurrentPosition()")}}

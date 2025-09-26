@@ -55,7 +55,7 @@ La différence entre le type `Map` et le type `WeakMap` est que les clés d'un o
 
 Pour plus d'informations et d'exemples, voir également le paragraphe « Pourquoi WeakMap ? » sur l'article {{jsxref("WeakMap")}} de la référence.
 
-Un cas d'utilisation des objets `WeakMap` est le stockage de données privées d'un objet ou pour cacher certains détails d'implémentation. L'exemple qui suit est tiré du billet de blog de Nick Fitzgerald [« Masquer des détails d'implémentation avec les WeakMaps ECMAScript 6 »](http://fitzgeraldnick.com/weblog/53/). Les données et méthodes privées sont stockées dans l'objet WeakMap `privates`. Tout ce qui est exposé par l'instance et le prototype est public. Tout ce qui est en dehors est inaccessible car `privates` n'est pas exporté depuis le module :
+Un cas d'utilisation des objets `WeakMap` est le stockage de données privées d'un objet ou pour cacher certains détails d'implémentation. L'exemple qui suit est tiré du billet de blog de Nick Fitzgerald [« Masquer des détails d'implémentation avec les WeakMaps ECMAScript 6 »](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html). Les données et méthodes privées sont stockées dans l'objet WeakMap `privates`. Tout ce qui est exposé par l'instance et le prototype est public. Tout ce qui est en dehors est inaccessible car `privates` n'est pas exporté depuis le module :
 
 ```js
 const privates = new WeakMap();

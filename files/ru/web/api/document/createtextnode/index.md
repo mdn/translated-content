@@ -49,6 +49,6 @@ function addTextNode(text) {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}

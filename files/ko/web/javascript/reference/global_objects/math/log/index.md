@@ -1,53 +1,64 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
 
-**`Math.log()`** 함수는 자연 로가리즘은 ({{jsxref("Math.E", "e")}} 를 기초) 의 수를 계산합니다, 이건 다음의
+**`Math.log()`** 정적 메서드는 숫자의 자연 로그(밑이 [e](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/E))를 반환합니다. 즉, 아래와 같습니다.
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{고유값} \; y \; \text{같이} \; e^y = x</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0,\;\mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{the unique } y \text{ such that } e^y = x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-자바스크립트 **`Math.log()`** 함수는 _ln(x)_ 수학적으로 같습니다.
+{{InteractiveExample("JavaScript Demo: Math.log()")}}
 
-## 문법
+```js interactive-example
+function getBaseLog(x, y) {
+  return Math.log(y) / Math.log(x);
+}
 
-```js
-Math.log(x);
+// 2 x 2 x 2 = 8
+console.log(getBaseLog(2, 8));
+// Expected output: 3
+
+// 5 x 5 x 5 x 5 = 625
+console.log(getBaseLog(5, 625));
+// Expected output: 4
 ```
 
-### 인자
+## 구문
+
+```js-nolint
+Math.log(x)
+```
+
+### 매개변수
 
 - `x`
-  - : 실수값.
+  - : 0 이상의 수
 
-### 반환값
+### 반환 값
 
-자연 로가리즘은 ({{jsxref("Math.E", "e")}} 를 기초) 실수값으로 줍니다. 마이너스 실수값, {{jsxref("NaN")}} 계산됩니다.
+`x`의 자연 로그(밑이 [e](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/E)). 만약 `x`가 ±0일 경우 [`-Infinity`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY)을 반환하며, `x < 0` 이라면 {{jsxref("NaN")}}을 반환합니다.
 
 ## 설명
 
-만일 값 `x` 가 마이너스라면, 항상 다음값이 계산됩니다 {{jsxref("NaN")}}.
+`log()`는 `Math`의 정적 메서드이기 때문에, 항상 `Math.log()`로 사용합니다. 생성한 `Math` 객체의 메서드로 사용하지 않습니다 (`Math`는 생성자가 아닙니다).
 
-왜그렇냐면 `Math` 의 log() 가 정적 메서드이기 때문,에 매번 다음처럼 `Math.log()` 써야합니다 (생성자로 초기화된 `Math` 개체가 아니기 때문입니다).
+2나 10의 자연 로그가 필요하다면, {{jsxref("Math.LN2")}}나 {{jsxref("Math.LN10")}} 상수를 사용하세요. 밑이 2나 10인 로그가 필요하다면, {{jsxref("Math.log2()")}} 혹은 {{jsxref("Math.log10()")}}을 사용하세요. 다른 밑의 로그가 필요하다면, 아래 예시처럼 `Math.log(x) / Math.log(otherBase)`를 사용하세요. 이 경우 `1 / Math.log(otherBase)`를 미리 계산해 두는 것이 좋습니다. `Math.log(x) * constant` 곱셈이 훨씬 더 빠르기 때문입니다.
 
-자연로그 2 나 10, 상수로쓸때 {{jsxref("Math.LN2")}} or {{jsxref("Math.LN10")}} . 로가리즘 기초값 2 나 10, 쓸때는 {{jsxref("Math.log2()")}} 혹은 {{jsxref("Math.log10()")}} . 로가리즘 다른 기초값은 Math.log(x) / Math.log(기초값) 처럼 예제참고; 미리계산하여 1 / Math.log(기초값) 할 수 있습니다.
+1에 매우 가까운 양수의 경우 정밀도 손실이 발생할 수 있어 자연 로그의 정확도가 떨어질 수 있습니다. 이런 경우에는 {{jsxref("Math.log1p")}}를 대신 사용하는 것이 좋습니다.
 
 ## 예제
 
-### `Math.log() 사용`
+### Math.log() 사용하기
 
-```js
-Math.log(-1); // NaN, 정의범위 초과
-Math.log(0); // -Infinity, 무한
-Math.log(1); // 0
-Math.log(10); // 2.302585092994046
-```
-
-### `Math.log()` 다른 기초값 사용
-
-이 함수는 로가리즘 `y 에 대한것으로` 기초값 `x` (ie. <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>): 입니다
+다음 함수는 밑 `x`의 `y`의 로그를 반환합니다. (예: <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>)
 
 ```js
 function getBaseLog(x, y) {
@@ -55,9 +66,9 @@ function getBaseLog(x, y) {
 }
 ```
 
-다음을 실행하면 `getBaseLog(10, 1000)` 다음 `2.9999999999999996 계산되는데` 적당히 반올림하니다, 거의 3 에 가깝습니다.
+`getBaseLog(10, 1000)`을 실행하면 `2.9999999999999996`을 반환합니다. 이는 부동 소수점 반올림때문인데, 실제 답인 3과 매우 근접합니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

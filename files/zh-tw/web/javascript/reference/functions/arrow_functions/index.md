@@ -3,11 +3,16 @@ title: 箭頭函式
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
 
-{{jsSidebar("Functions")}}
-
 **箭頭函式運算式**（arrow function expression）擁有比[函式運算式](/zh-TW/docs/Web/JavaScript/Reference/Operators/function)還簡短的語法。它沒有自己的 [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this)、[arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)、[super](/zh-TW/docs/Web/JavaScript/Reference/Operators/super)、[new.target](/zh-TW/docs/Web/JavaScript/Reference/Operators/new.target) 等語法。本函式運算式適用於非方法的函式，但不能被用作建構式（constructor）。
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## 基本語法
 
@@ -69,12 +74,12 @@ elements.map((element) => {
 // 當箭頭函式裡的內容只有'return'的時候，我們可以拿掉return和外面的大括號
 elements.map((element) => element.length); // [8, 6, 7, 9]
 
-// 在這個範例中，因為我們只需要length這個屬性，所以也可以使用解構賦值：
+// 在這個範例中，因為我們只需要length這個屬性，所以也可以使用解構：
 // 下方的'length'對應到我們想取得的屬性，而'lengthFooBArX'只是很普通的變數名稱,
 // 可以被任意修改成你想要的名字
 elements.map(({ length: lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
 
-// 上面這種解構賦值之後的參數也可以被改寫為下面這樣。但要注意的是，在這個範例中，
+// 上面這種解構之後的參數也可以被改寫為下面這樣。但要注意的是，在這個範例中，
 // 我們不是要指定'length'這個值給一個虛構的屬性，而是這個變數的名稱'length'本身就是
 // 用來當成我們想從物件上取得的屬性
 elements.map(({ length }) => length); // [8, 6, 7, 9]
@@ -305,7 +310,7 @@ var func = ()
 
 ## Parsing order
 
-箭頭函式的箭頭儘管不是操作符，但藉著[運算子優先等級](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)，箭頭函式有著和普通函式不相同的特殊解析規則。
+箭頭函式的箭頭儘管不是操作符，但藉著[運算子優先等級](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_precedence)，箭頭函式有著和普通函式不相同的特殊解析規則。
 
 ```js
 let callback;

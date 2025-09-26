@@ -1,15 +1,25 @@
 ---
 title: Map.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`has()`** は {{jsxref("Map")}} インスタンスのメソッドで、指定されたキーに対する要素が存在するかどうかを示す論理値を返します。
 
-**`has()`** メソッドは、指定されたキーに対する要素が存在するかどうかを示す論理値を返します。
+{{InteractiveExample("JavaScript デモ: Map.prototype.has()")}}
 
-{{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
+```js interactive-example
+const map = new Map();
+map.set("bar", "foo");
+
+console.log(map.has("bar"));
+// 予想される結果: true
+
+console.log(map.has("baz"));
+// 予想される結果: false
+```
 
 ## 構文
 

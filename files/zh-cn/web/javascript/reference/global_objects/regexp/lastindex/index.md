@@ -3,7 +3,7 @@ title: RegExp.lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## 概述
 
@@ -23,7 +23,6 @@ lastIndex = regExpObj.lastIndex;
 
 - 如果 `lastIndex` 大于字符串的长度，则 `regexp.test` 和 `regexp.exec` 将会匹配失败，然后 `lastIndex` 被设置为 0。
 - 如果 `lastIndex` 等于或小于字符串的长度，则该正则表达式匹配从 `lastIndex` 位置开始的字符串。
-
   - 如果 `regexp.test` 和 `regexp.exec` 匹配成功，`lastIndex` 会被设置为紧随最近一次成功匹配的下一个位置。
   - 如果 `regexp.test` 和 `regexp.exec` 匹配失败，`lastIndex` 会被设置为 0
 
@@ -59,7 +58,7 @@ console.log(re.lastIndex);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("RegExp.prototype.ignoreCase")}}
 - {{jsxref("RegExp.prototype.global")}}

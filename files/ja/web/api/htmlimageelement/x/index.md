@@ -3,7 +3,7 @@ title: "HTMLImageElement: x プロパティ"
 short-title: x
 slug: Web/API/HTMLImageElement/x
 l10n:
-  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -21,7 +21,8 @@ l10n:
 
 ![要素に関連するさまざまなボックスの関係を示す図](boxmodel-3.png)
 
-> **メモ:** `x` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
+> [!NOTE]
+> `x` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
 
 ## 例
 
@@ -45,7 +46,7 @@ l10n:
   <tr>
     <td>12345678</td>
     <td>Johnny Rocket</td>
-    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"></td>
+    <td><img src="/shared-assets/images/examples/grapefruit-slice.jpg"></td>
   </th>
 </table>
 <pre id="log">
@@ -88,13 +89,13 @@ log(`Image's global Y: ${image.y}`);
 
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(100, 100, 100);
+  border: 2px solid rgb(100 100 100);
   font-family: sans-serif;
 }
 
 td,
 th {
-  border: 1px solid rgb(100, 100, 100);
+  border: 1px solid rgb(100 100 100);
   padding: 10px 14px;
 }
 

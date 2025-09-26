@@ -23,7 +23,8 @@ slug: Web/API/Performance_API/Resource_timing
 
 应用程序可以获得用于加载资源的各个阶段的时间戳。处理模型中的第一个属性是 {{domxref("PerformanceEntry.startTime","startTime")}}，它在资源加载过程开始之前立即返回时间。{{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} 跟踪和重定向处理（如果适用），并在 DNS 查找之前进行。下个阶段是{{domxref('PerformanceResourceTiming.connectStart','connectStart')}} 和 {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}} 分别是开始连接到服务器和连接建立完成的时间戳。最后三个按顺序分别是：{{domxref('PerformanceResourceTiming.requestStart','requestStart')}}——在浏览器开始向服务器请求资源时；{{domxref('PerformanceResourceTiming.responseStart','responseStart')}}——资源请求首包返回时；{{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}——资源全部接收完成时。如果资源是通过安全连接加载的 {{domxref('PerformanceResourceTiming.secureConnectionStart','secureConnectionStart')}} 的值将会在 connectStart 和 connectEnd 之间。
 
-> **备注：** 当 {{Glossary("CORS")}} 生效时，除非服务器的访问策略允许共享这些值，否则这些值中的许多将返回为零。这需要提供资源的服务器发送 `Timing-Allow-Origin` HTTP 响应标头并且指定 origin\[s] 来源才能允许获取这些被限制的时间戳。
+> [!NOTE]
+> 当 {{Glossary("CORS")}} 生效时，除非服务器的访问策略允许共享这些值，否则这些值中的许多将返回为零。这需要提供资源的服务器发送 `Timing-Allow-Origin` HTTP 响应标头并且指定 origin\[s] 来源才能允许获取这些被限制的时间戳。
 >
 > 在非 web 页面本身的域名下，这些属性在默认都会返回 0 值：`redirectStart`、`redirectEnd`、`domainLookupStart`、`domainLookupEnd`、`connectStart`、`connectEnd`、`secureConnectionStart`、`requestStart` 和 `responseStart`。
 
@@ -53,7 +54,7 @@ The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceR
 
 ## Implementation status
 
-As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/PerformanceResourceTiming#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
+As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/PerformanceResourceTiming#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
 
 To test your browser's support for these interfaces, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 
@@ -61,6 +62,6 @@ To test your browser's support for these interfaces, run the [`perf-api-support`
 
 - [Resource Timing Standard](https://w3c.github.io/resource-timing/); W3C Editor's Draft
 - [CanIUse data](http://caniuse.com/#search=resource-timing)
-- [Resource Timing practical tips](http://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
-- [Measuring network performance with Resource Timing API](http://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
+- [Resource Timing practical tips](https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
+- [Measuring network performance with Resource Timing API](https://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
 - [A Primer for Web Performance Timing APIs](http://siusin.github.io/perf-timing-primer/); Xiaoqian Wu; W3C Editor's Draft

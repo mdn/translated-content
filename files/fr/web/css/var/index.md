@@ -15,18 +15,19 @@ La fonction `var()` ne peut pas être utilisée pour les noms de propriété, le
 
 ## Syntaxe
 
-Le premier argument de la fonction est le nom de la propriété qu'on veut substituer. Le deuxième argument, optionnel, est une valeur de recours (_fallback_) qui est utilisée au cas où la valeur de subsitution référencée par la propriété est invalide.
+Le premier argument de la fonction est le nom de la propriété qu'on veut substituer. Le deuxième argument, optionnel, est une valeur de recours (_fallback_) qui est utilisée au cas où la valeur de substitution référencée par la propriété est invalide.
 
 {{csssyntax}}
 
-> **Note :** La syntaxe de la valeur de recours permet d'utiliser des virgules. Aussi, si on a `var(--toto, red, blue)`, la valeur de recours sera bien `red, blue` (autrement dit, tout ce qui est situé après la première virgule sert de valeur de recours).
+> [!NOTE]
+> La syntaxe de la valeur de recours permet d'utiliser des virgules. Aussi, si on a `var(--toto, red, blue)`, la valeur de recours sera bien `red, blue` (autrement dit, tout ce qui est situé après la première virgule sert de valeur de recours).
 
 ### Valeurs
 
 - `<custom-property-name>`
   - : Le nom d'une propriété personnalisée, représenté par un identifiant valide qui commence par deux tirets. Les propriétés personnalisées sont uniquement utilisées par les auteurs et les utilisateurs. CSS ne définit pas leur valeur ou leur sémantique.
 - `<declaration-value>`
-  - : Une valeur de subsitution qui peut être utilisée afin que la règle soit valide si la valeur du premier argument ne peut être utilisée ici.
+  - : Une valeur de substitution qui peut être utilisée afin que la règle soit valide si la valeur du premier argument ne peut être utilisée ici.
 
 ## Exemples
 

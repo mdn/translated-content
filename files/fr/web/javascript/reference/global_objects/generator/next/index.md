@@ -23,7 +23,6 @@ gen.next(valeur);
 Un {{jsxref("Object")}} possédant deux propriétés :
 
 - `done` (un booléen)
-
   - vaut `true` si l'itérateur a atteint la fin de la série sur laquelle il itère. Dans ce cas, la propriété `value` définit la valeur de retour pour l'itérateur.
   - vaut `false` si l'itérateur a pu fournir la prochaine valeur de la série. C'est la valeur par défaut si la propriété `done` n'est pas définie.
 
@@ -80,4 +79,4 @@ g.next(2);
 ## Voir aussi
 
 - {{jsxref("Instructions/function*","function*")}}
-- [Les itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs)
+- [Les itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)

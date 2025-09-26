@@ -5,11 +5,11 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** — метод, который возвращает [data URI](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) изображения в
+**`HTMLCanvasElement.toDataURL()`** — метод, который возвращает [data URI](/ru/docs/Web/URI/Reference/Schemes/data) изображения в
 формате, заданном параметром `type` (по умолчанию [PNG](https://ru.wikipedia.org/wiki/PNG)). Возвращаемое изображение имеет
 разрешение 96 dpi.
 
-- Если высота или ширина холста равна `0` или больше [максимального размера холста](/ru/docs/Web/HTML/Element/canvas#maximum_canvas_size),
+- Если высота или ширина холста равна `0` или больше [максимального размера холста](/ru/docs/Web/HTML/Reference/Elements/canvas#maximum_canvas_size),
   возвращается строка `"data:,"`.
 - Если запрошенный тип отличается от `image/png`, но возвращаемое значение начинается с `data:image/png`, то запрошенный тип не поддерживается.
 - Chrome также поддерживает тип `image/webp`.
@@ -31,7 +31,7 @@ canvas.toDataURL(type, encoderOptions);
 
 ### Возвращаемое значение
 
-Строка ({{domxref("DOMString")}}), содержащая запрошенный [data URI](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+Строка ({{domxref("DOMString")}}), содержащая запрошенный [data URI](/ru/docs/Web/URI/Reference/Schemes/data).
 
 ### Исключения
 
@@ -139,4 +139,4 @@ function removeColors() {
 ## Смотрите также
 
 - Интерфейс {{domxref("HTMLCanvasElement")}}.
-- Статья о [Data URIs](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) в разделе [HTTP](/ru/docs/Web/HTTP).
+- [Data URLs](/ru/docs/Web/URI/Reference/Schemes/data).

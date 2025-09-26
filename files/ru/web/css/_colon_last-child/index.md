@@ -1,5 +1,5 @@
 ---
-title: ":last-child"
+title: :last-child
 slug: Web/CSS/:last-child
 ---
 
@@ -41,7 +41,7 @@ li:last-child {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

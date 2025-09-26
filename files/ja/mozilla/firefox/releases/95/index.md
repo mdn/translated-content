@@ -1,9 +1,9 @@
 ---
 title: Firefox 95 for developers
 slug: Mozilla/Firefox/Releases/95
+l10n:
+  sourceCommit: 1822cdf5a86574429c4c49883a402663ef16a4ef
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 95 の変更点をまとめています。
 Firefox 95 は、2021 年 12 月 7 日にリリースされました。
@@ -12,7 +12,7 @@ Firefox 95 は、2021 年 12 月 7 日にリリースされました。
 
 ### HTML
 
-- [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) グローバル属性を、Android だけでなくすべてのプラットフォームでサポートしました。
+- [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) グローバル属性を、Android だけでなくすべてのプラットフォームでサポートしました。
   これは、特定の要素を編集するときにどの種類の仮想キーボードが最適であるかのヒントをブラウザーに与えるものです ([Firefox バグ 1205133](https://bugzil.la/1205133))。
 
 ### CSS
@@ -41,6 +41,10 @@ Firefox 95 は、2021 年 12 月 7 日にリリースされました。
 
 - 設定項目 `layout.css.prefers-color-scheme.content-override` の制御を可能にする `overrideContentColorScheme` を {{WebExtAPIRef("browserSettings")}} に追加しました。ブラウザーのテーマから独立して、ページが好むカラースキーム (ライトまたはダーク) を設定できます ([Firefox バグ 1733461](https://bugzil.la/1733461))。
 
+- `globalPrivacyControl` を {{WebExtAPIRef("privacy.network")}} に追加し、ユーザーがブラウザー内部でグローバルプライバシー制御を有効にしているかどうかを可視化できるようにしました。([Firefox バグ 1670058](https://bugzil.la/1670058)).
+
+- `"webRequestFilterResponse.serviceWorkerScript"` を [API 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)に追加しました。この権限は、サービスワーカースクリプト用に発信されたリクエストに対して {{WebExtAPIRef("webRequest.filterResponseData")}} へのアクセスを指定します。その権限はオプションの権限として提供されます。その権限を使用するための詳細情報は {{WebExtAPIRef("webRequest.filterResponseData")}} を参照してください ([Firefox bug 1636629](https://bugzil.la/1636629))。
+
 ## 過去のバージョン
 
-{{Firefox_for_developers(94)}}
+{{Firefox_for_developers}}

@@ -18,10 +18,8 @@ navigator.geolocation.getCurrentPosition(success[, error[, options]])
 - `error` {{optional_inline}}
   - : Необязательная колбэк-функция, принимающая объект {{domxref("PositionError")}} как единственный входной параметр.
 - `options` {{optional_inline}}
-
   - : Необязательный объект {{domxref("PositionOptions")}}.
     Включает в себя
-
     - `maximumAge`: целое число (миллисекунды) | infinity - максимальное время кеширования позиции.
     - `timeout`: целое число (миллисекунды) - количество времени до вызова callback ошибки. Если 0, вызов не происходит.
     - `enableHighAccuracy`: false | true
@@ -61,5 +59,5 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## Смотрите также
 
-- [Using geolocation](/ru/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/ru/docs/Web/API/Geolocation_API)
 - {{domxref("Navigator.geolocation")}}

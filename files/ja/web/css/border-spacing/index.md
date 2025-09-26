@@ -1,17 +1,62 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`border-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table")}} における隣り合うセルの境界同士の間隔を定めます。このプロパティは {{cssxref("border-collapse")}} が `separate` のときのみ適用されます。
 
-{{EmbedInteractiveExample("pages/css/border-spacing.html")}}
+{{InteractiveExample("CSS デモ: border-spacing")}}
+
+```css interactive-example-choice
+border-spacing: 0;
+```
+
+```css interactive-example-choice
+border-spacing: 5px;
+```
+
+```css interactive-example-choice
+border-spacing: 5px 1rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <td>セル 1.1</td>
+      <td>セル 1.2</td>
+    </tr>
+    <tr>
+      <td>セル 2.1</td>
+      <td>セル 2.2</td>
+    </tr>
+    <tr>
+      <td>セル 3.1</td>
+      <td>セル 3.2</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  width: 15rem;
+  table-layout: fixed;
+}
+
+td {
+  border: 5px solid;
+  border-color: crimson dodgerblue;
+  padding: 0.75rem;
+}
+```
 
 `border-spacing` の値は、表の外周部分にも使用され、表の境界線と最初/最後の列または行との間の距離は、 (縦または横の) 対応する `border-spacing` と、表の対応する側 (上下左右のいずれか) の {{cssxref("padding")}} の合計になります。
 
-> **メモ:** `border-spacing` プロパティは、`<table>` 要素における非推奨の `cellspacing` 属性と同等ですが、任意で 2 つ目の値を指定して、水平方向と垂直方向に異なる間隔を設定することができる点が異なります。
+> [!NOTE]
+> `border-spacing` プロパティは、`<table>` 要素における非推奨の `cellspacing` 属性と同等ですが、 `border-spacing` では任意で 2 つ目の値を指定して、水平方向と垂直方向に異なる間隔を設定することができる点が異なります。
 
 ## 構文
 
@@ -26,6 +71,7 @@ border-spacing: 1cm 2em;
 border-spacing: inherit;
 border-spacing: initial;
 border-spacing: revert;
+border-spacing: revert-layer;
 border-spacing: unset;
 ```
 
@@ -49,7 +95,7 @@ border-spacing: unset;
 
 ## 例
 
-<h3 id="Spacing_and_padding_table_cells">表のセルの余白とパディング</h3>
+### 表のセルの余白とパディング
 
 この例では表のセル間において、垂直方向に `.5em`、水平方向に `1em` の間隔を適用します。なお、外の辺においては、表の `padding` の値が `border-spacing` の値に追加されます。
 
@@ -58,13 +104,19 @@ border-spacing: unset;
 ```html
 <table>
   <tr>
-    <td>1</td><td>2</td><td>3</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
   </tr>
   <tr>
-    <td>4</td><td>5</td><td>6</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
   </tr>
   <tr>
-    <td>7</td><td>8</td><td>9</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
   </tr>
 </table>
 ```
@@ -73,7 +125,7 @@ border-spacing: unset;
 
 ```css
 table {
-  border-spacing: 1em .5em;
+  border-spacing: 1em 0.5em;
   padding: 0 2em 1em 0;
   border: 1px solid orange;
 }
@@ -103,3 +155,4 @@ td {
 
 - {{cssxref("border-collapse")}}, {{cssxref("border-style")}}
 - `border-spacing` プロパティは HTML の {{htmlelement("table")}} 要素の出現方法を変更します。
+- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール

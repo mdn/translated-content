@@ -1,6 +1,9 @@
 ---
-title: Document.createComment()
+title: "Document: createComment() メソッド"
+short-title: createComment()
 slug: Web/API/Document/createComment
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
@@ -9,26 +12,30 @@ slug: Web/API/Document/createComment
 
 ## 構文
 
-```
-CommentNode = document.createComment(data);
+```js-nolint
+createComment(data)
 ```
 
 ### 引数
 
-- _data_
+- `data`
   - : 文字列で、コメントに追加されるデータを含みます。
+
+### 返値
+
+新しい {{domxref("Comment")}} オブジェクトです。
 
 ## 例
 
 ```js
-var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
-var comment = docu.createComment(
+const docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+const comment = docu.createComment(
   "This is a not-so-secret comment in your document",
 );
 
-docu.getElementsByTagName("xml")[0].appendChild(comment);
+docu.querySelector("xml").appendChild(comment);
 
-alert(new XMLSerializer().serializeToString(docu));
+console.log(new XMLSerializer().serializeToString(docu));
 // 表示結果: <xml><!--This is a not-so-secret comment in your document--></xml>
 ```
 

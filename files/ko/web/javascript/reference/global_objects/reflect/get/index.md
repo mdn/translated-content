@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 
 **`Reflect.get()`** 정적 메서드는 객체의 속성을 가져오는 함수입니다. `target[propertyKey]`와 비슷합니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-get.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.get()")}}
+
+```js interactive-example
+const object1 = {
+  x: 1,
+  y: 2,
+};
+
+console.log(Reflect.get(object1, "x"));
+// Expected output: 1
+
+const array1 = ["zero", "one"];
+
+console.log(Reflect.get(array1, 1));
+// Expected output: "one"
+```
 
 ## 구문
 
@@ -34,7 +49,7 @@ Reflect.get(target, propertyKey[, receiver])
 
 ## 설명
 
-`Reflect.get` 메서드는 객체 속성의 값을 가져올 수 있습니다. [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)의 함수판이라고 할 수 있습니다.
+`Reflect.get` 메서드는 객체 속성의 값을 가져올 수 있습니다. [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)의 함수판이라고 할 수 있습니다.
 
 ## 예제
 
@@ -69,4 +84,4 @@ Reflect.get(obj, "foo"); // "foobar"
 ## 같이 보기
 
 - {{jsxref("Reflect")}}
-- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)

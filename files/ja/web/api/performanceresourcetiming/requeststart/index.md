@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Performance API")}}
 
-**`requestStart`** は読み取り専用プロパティで、ブラウザーがサーバ、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザーがリクエストを終了すると、返される値は再試行要求の開始になります。
+**`requestStart`** は読み取り専用プロパティで、ブラウザーがサーバー、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザーがリクエストを終了すると、返される値は再試行要求の開始になります。
 
 `requestStart` には _end_ プロパティはありません。リクエスト時間を計測するには、 {{domxref("PerformanceResourceTiming.responseStart", "responseStart")}} - `requestStart` を計算してください（下記の例を参照してください）。
 
@@ -23,7 +23,7 @@ l10n:
 
 ### リクエスト時間の計測
 
-`requestStart` と {{domxref("PerformanceResourceTiming.responseStart", "responseStart")}} プロパティを使用して、、リクエストにかかる時間を測定することができます。
+`requestStart` と {{domxref("PerformanceResourceTiming.responseStart", "responseStart")}} プロパティを使用して、リクエストにかかる時間を測定することができます。
 
 ```js
 const request = entry.responseStart - entry.requestStart;

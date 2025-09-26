@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**`RTCDataChannel`** インターフェイスは、2 つのピア間で双方向に任意のデータを転送するためのネットワークチャンネルを表現します。すべてのデータチャンネルは {{DOMxRef("RTCPeerConnection")}} に関連付けられており、それぞれのぴあコネクションは理論上、最大 65,534 個のデータチャンネルを持つことができます（実際の上限はブラウザーごとに異なります）。
+**`RTCDataChannel`** インターフェイスは、2 つのピア間で双方向に任意のデータを転送するためのネットワークチャンネルを表現します。すべてのデータチャンネルは {{DOMxRef("RTCPeerConnection")}} に関連付けられており、それぞれのピアコネクションは理論上、最大 65,534 個のデータチャンネルを持つことができます（実際の上限はブラウザーごとに異なります）。
 
 データチャンネルを作成してリモートのピアに参加するかを問い合わせるには、{{DOMxRef("RTCPeerConnection")}} の {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}} メソッドを呼び出します。データ交換に招かれているピアは {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} イベント ({{DOMxRef("RTCDataChannelEvent")}} 型) を受け取って、コネクションにデータチャンネルが追加されたことを知ります。
 

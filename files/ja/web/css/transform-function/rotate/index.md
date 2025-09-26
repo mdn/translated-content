@@ -1,13 +1,41 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
+l10n:
+  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+**`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-**`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+{{InteractiveExample("CSS デモ: rotate()")}}
 
-要素が回転する中心となる特定の点 — 前述 — は、**変形原点**とも呼ばれます。既定では要素の中央ですが、 {{ cssxref("transform-origin") }} プロパティを使用して独自の変形原点を設定することができます。
+```css interactive-example-choice
+transform: rotate(0);
+```
+
+```css interactive-example-choice
+transform: rotate(90deg);
+```
+
+```css interactive-example-choice
+transform: rotate(-0.25turn);
+```
+
+```css interactive-example-choice
+transform: rotate(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+要素が回転する中心となる特定の点 — 前述 — は、**変換原点**とも呼ばれます。既定では要素の中央ですが、 {{ cssxref("transform-origin") }} プロパティを使用して独自の座標変換原点を設定することができます。
 
 ## 構文
 
@@ -26,17 +54,17 @@ rotate(a)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">ℝ^2 のデカルト座標</th>
-      <th scope="col">ℝℙ^2 の同次座標</th>
-      <th scope="col">ℝ^3 のデカルト座標</th>
-      <th scope="col">ℝℙ^3 の同次座標</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
+      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd
@@ -64,13 +92,13 @@ rotate(a)
                   <mo>)</mo></mtd
                 ></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd
@@ -101,13 +129,13 @@ rotate(a)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd
@@ -138,13 +166,13 @@ rotate(a)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd
@@ -178,7 +206,7 @@ rotate(a)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -191,7 +219,7 @@ rotate(a)
 
 ## 例
 
-<h3 id="Basic_example">基本的な例</h3>
+### 基本的な例
 
 #### HTML
 
@@ -217,11 +245,11 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Basic_example", "auto", 180)}}
+{{EmbedLiveSample("基本的な例", "auto", 180)}}
 
-<h3 id="Combining_rotation_with_another_transformation">回転とその他の変形の組み合わせ</h3>
+### 回転とその他の座標変換の組み合わせ
 
-複数の変形を要素に適用したい場合は、変形を指定する順序に気を付けてください。例えば、平行移動前に回転すると、平行移動によって回転の軸が変わってしまいます。
+複数の座標変換を要素に適用したい場合は、座標変換を指定する順序に気を付けてください。例えば、平行移動前に回転すると、平行移動によって回転の軸が変わってしまいます。
 
 #### HTML
 
@@ -275,6 +303,7 @@ div {
 
 ## 関連情報
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} プロパティ
+- {{cssxref("rotate")}} プロパティ
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`rotate3d()`](</ja/docs/Web/CSS/transform-function/rotate3d()>)
+- [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d)

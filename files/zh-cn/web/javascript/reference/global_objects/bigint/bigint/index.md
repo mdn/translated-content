@@ -9,8 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 
 ## 语法
 
-```plain
-BigInt(value);
+```js-nolint
+BigInt(value)
 ```
 
 ### 参数
@@ -18,7 +18,8 @@ BigInt(value);
 - `value`
   - : 被创建的对象的数值。可以是字符串或整数。
 
-> **备注：** `BigInt()` 不与 {{JSxRef("Operators/new", "new")}} 运算符一起使用。
+> [!NOTE]
+> `BigInt()` 不与 {{JSxRef("Operators/new", "new")}} 运算符一起使用。
 
 ## 示例
 
@@ -35,6 +36,6 @@ BigInt(123);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("BigInt")}} class
+- {{jsxref("BigInt")}}

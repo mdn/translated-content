@@ -42,7 +42,7 @@ doc.nodeName # 文档对象的 DOM 属性
 p_list = doc.getElementsByTagName("para")
 ```
 
-要获取更多在网页上使用 JavaScript 的信息，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
+要获取更多在网页上使用 JavaScript 的信息，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)。
 
 ## 访问 DOM
 
@@ -82,7 +82,8 @@ p_list = doc.getElementsByTagName("para")
 
 本页试图用简单的语言描述各种对象和类型。但是，有一些不同的数据类型在 API 中传递，你应该注意到。
 
-> **备注：** 因为绝大多数使用 DOM 的代码都是围绕着操作 HTML 文档进行的，所以我们通常把 DOM 中的节点称为**元素**（element），尽管严格来说并不是每个节点都是一个元素。
+> [!NOTE]
+> 因为绝大多数使用 DOM 的代码都是围绕着操作 HTML 文档进行的，所以我们通常把 DOM 中的节点称为**元素**（element），尽管严格来说并不是每个节点都是一个元素。
 
 下面的表格大致描述了这些数据类型。
 

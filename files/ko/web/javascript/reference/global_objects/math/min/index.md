@@ -1,53 +1,71 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
+l10n:
+  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
 {{JSRef}}
 
-**`Math.min()`** 함수는 주어진 숫자들 중 가장 작은 값을 반환합니다.
+**`Math.min()`** 정적 메서드는 입력 매개변수로 주어진 숫자 중 가장 작은 수를 반환하거나, 매개변수가 없으면 {{jsxref("Infinity")}}를 반환합니다.
 
-## Syntax
+{{InteractiveExample("JavaScript Demo: Math.min()")}}
 
-```js
-    Math.min([value1[, value2[, ...]]])
+```js interactive-example
+console.log(Math.min(2, 3, 1));
+// Expected output: 1
+
+console.log(Math.min(-2, -3, -1));
+// Expected output: -3
+
+const array1 = [2, 3, 1];
+
+console.log(Math.min(...array1));
+// Expected output: 1
 ```
 
-### Parameters
+## 구문
 
-- `value1, value2, ...`
-  - : 숫자형
-
-### Return value
-
-주어진 숫자들 중 가장 작은 값. 만약 적어도 1개 이상의 인자값이 숫자형으로 변환이 불가능 한 경우 이 함수는 {{jsxref("NaN")}} 를 반환 합니다.
-
-## Description
-
-`min()` 함수는 `Math` 의 정적 메소드 이므로, 사용자가 생성한 `Math` 객체의 메소드로 호출하는 것이 아닌 항상 `Math.min()` 으로 호출되어야 합니다. (`Math` 는 생성자가 아닙니다).
-
-만약 주어진 인자값이 없을 경우, {{jsxref("Infinity")}} 가 반환됩니다.
-
-만약 적어도 1개 이상의 인자값이 숫자형으로 변환이 불가능 한 경우, {{jsxref("NaN")}} 가 반환됩니다.
-
-## Examples
-
-### Using `Math.min()`
-
-아래 수식은 `x` 와`y` 중 작은 값을 찾아 `z` 에 할당 합니다.
-
-```js
-var x = 10,
-  y = -20;
-var z = Math.min(x, y);
+```js-nolint
+Math.min()
+Math.min(value1)
+Math.min(value1, value2)
+Math.min(value1, value2, /* …, */ valueN)
 ```
 
-### Clipping a value with `Math.min()`
+### 매개변수
 
-`Math.min()` 함수는 때때로 값 제한, 즉 항상 기준 보다 작거나 같은 값으로 제한하는 용도로 사용됩니다. 예를 들면,
+- `value1`, …, `valueN`
+  - : 0 혹은 그 이상의 숫자 중 선택되어 반환될 가장 작은 값
+
+### 반환 값
+
+주어진 숫자 중 가장 작은 값입니다. `NaN`이 있거나 `NaN`으로 변환되는 매개변수가 하나라도 있다면 {{jsxref("NaN")}}을 반환합니다. 매개변수가 아무것도 주어지지 않으면 {{jsxref("Infinity")}}을 반환합니다.
+
+## 설명
+
+`min()`은 `Math`의 정적 메서드이기 때문에, 생성한 `Math` 객체의 메서드 대신 언제나 `Math.min()`으로 사용해야 합니다(`Math`는 생성자가 아닙니다).
+
+[`Math.min.length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 값이 2 인데, 이는 이 메서드가 최소 2개의 매개변수를 받도록 설계되었음을 암시합니다.
+
+## 예제
+
+### Math.min() 사용하기
+
+`x`와 `y` 중 최소 값을 찾고 이를 `z`에 할당합니다.
 
 ```js
-var x = f(foo);
+const x = 10;
+const y = -20;
+const z = Math.min(x, y); // -20
+```
+
+### Math.min()로 값 제한하기
+
+`Math.min()` 함수는 항상 경계보다 작거나 같은 값으로 제한하는 용도로 사용됩니다. 예를 들어 보겠습니다.
+
+```js
+let x = f(foo);
 
 if (x > boundary) {
   x = boundary;
@@ -57,10 +75,10 @@ if (x > boundary) {
 위 코드는 다음과 같이 쓸 수 있습니다.
 
 ```js
-var x = Math.min(f(foo), boundary);
+const x = Math.min(f(foo), boundary);
 ```
 
-{{jsxref("Math.max()")}} 함수 또한 같은 방식으로 기준보다 크거나 같은 값으로 제한하는 용도로 사용할 수 있습니다.
+{{jsxref("Math.max()")}} 함수 또한 같은 방식으로 값으로 제한하기 위해 사용할 수 있습니다.
 
 ## 명세서
 
@@ -70,6 +88,6 @@ var x = Math.min(f(foo), boundary);
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{jsxref("Math.max()")}}

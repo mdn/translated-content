@@ -10,25 +10,21 @@ O CSS 2 usou uma sintaxe de palavra-chave única para o `display` , exigindo pal
 ## Sintaxe
 
 - `inline-block`
-
   - : O elemento gera uma caixa de elemento de bloco que fluirá com o conteúdo circundante, como se fosse uma única caixa embutida (se comportando como um elemento substituído).
 
     É equivalente a `inline flow-root`.
 
 - `inline-table`
-
   - : O `inline-table` O valor não possui um mapeamento direto em HTML. Ele se comporta como um HTML{{HTMLElement("table")}} elemento, mas como uma caixa embutida, em vez de uma caixa no nível do bloco. Dentro da caixa da tabela há um contexto em nível de bloco.
 
     É equivalente a `inline table`.
 
 - `inline-flex`
-
   - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo flexbox.
 
     É equivalente a `inline flex`.
 
 - `inline-grid`
-
   - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de grade.
 
     É equivalente a `inline grid`.
@@ -76,24 +72,23 @@ Na nova sintaxe, o contêiner flex inline seria criado usando dois valores, inli
 
 ### Suporte de`inline-block`
 
-{{Compat("css.properties.display.inline-block", 10)}}
+{{Compat}}
 
 ### Suporte de`inline-table`
 
-{{Compat("css.properties.display.inline-table", 10)}}
+{{Compat}}
 
 ### Suporte de`inline-flex`
 
-{{Compat("css.properties.display.inline-flex", 10)}}
+{{Compat}}
 
 ### Suporte de`inline-grid`
 
-{{Compat("css.properties.display.inline-grid", 10)}}
+{{Compat}}
 
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

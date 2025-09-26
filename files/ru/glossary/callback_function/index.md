@@ -3,6 +3,8 @@ title: Колбэк-функция
 slug: Glossary/Callback_function
 ---
 
+{{GlossarySidebar}}
+
 Колбэк-функция (или обратный вызов) - это функция, переданная в другую функцию в качестве аргумента, которая затем вызывается по завершению какого-либо действия.
 
 Вот краткий пример:
@@ -39,7 +41,7 @@ function onPageLoadingFinished(pageData) {
 pageLoader(onPageLoadingFinished);
 ```
 
-Вот ещё один пример асинхронного обратного вызова: [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([живой пример](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)). Он использует Google Maps API и Geolocation API для отображения карты текущего местоположения вашего устройства.
+Вот ещё один пример асинхронного обратного вызова: [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([живой пример](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)). Он использует Google Maps API и Geolocation API для отображения карты текущего местоположения вашего устройства.
 
 ```js
 // maps-example.html

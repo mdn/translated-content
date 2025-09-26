@@ -9,7 +9,22 @@ l10n:
 
 **`if...else`** 文は、指定された条件が{{Glossary("truthy", "真値")}}ならば文を実行します。条件が{{Glossary("falsy", "偽値")}}なら、オプションの `else` 節にあるもう一方の文を実行します。
 
-{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
+{{InteractiveExample("JavaScript デモ: Statement - If...Else")}}
+
+```js interactive-example
+function testNum(a) {
+  let result;
+  if (a > 0) {
+    result = "positive";
+  } else {
+    result = "NOT positive";
+  }
+  return result;
+}
+
+console.log(testNum(-5));
+// Expected output: "NOT positive"
+```
 
 ## 構文
 

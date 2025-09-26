@@ -3,13 +3,56 @@ title: border-radius
 slug: Web/CSS/border-radius
 ---
 
-{{CSSRef("CSS Borders")}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-radius`** 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个（椭）圆与边框的交集形成圆角效果。
 
-{{EmbedInteractiveExample("pages/css/border-radius.html")}}
+{{InteractiveExample("CSS Demo: border-radius")}}
 
-该属性是一个 [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，是为了将这四个属性 {{Cssxref("border-top-left-radius")}}、{{Cssxref("border-top-right-radius")}}、{{Cssxref("border-bottom-right-radius")}}，和 {{Cssxref("border-bottom-left-radius")}} 简写为一个属性。
+```css interactive-example-choice
+border-radius: 30px;
+```
+
+```css interactive-example-choice
+border-radius: 25% 10%;
+```
+
+```css interactive-example-choice
+border-radius: 10% 30% 50% 70%;
+```
+
+```css interactive-example-choice
+border-radius: 10% / 50%;
+```
+
+```css interactive-example-choice
+border-radius: 10px 100px / 120px;
+```
+
+```css interactive-example-choice
+border-radius: 50% 20% / 10% 40%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with rounded corners.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
+
+该属性是一个 [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，是为了将这四个属性 {{Cssxref("border-top-left-radius")}}、{{Cssxref("border-top-right-radius")}}、{{Cssxref("border-bottom-right-radius")}} 和 {{Cssxref("border-bottom-left-radius")}} 简写为一个属性。
 
 即使元素没有边框，圆角也可以用到 {{ Cssxref("background") }} 上面，具体效果受 {{ Cssxref("background-clip") }} 影响。
 
@@ -174,11 +217,11 @@ pre#example-7 {
 
 ### 在线示例
 
-- 示例 1：<http://jsfiddle.net/Tripad/qnGKj/2/>
-- 示例 2：<http://jsfiddle.net/Tripad/qnGKj/3/>
-- 示例 3：<http://jsfiddle.net/Tripad/qnGKj/4/>
-- 示例 4：<http://jsfiddle.net/Tripad/qnGKj/5/>
-- 示例 5：<http://jsfiddle.net/Tripad/qnGKj/6/>
+- 示例 1：<https://jsfiddle.net/Tripad/qnGKj/2/>
+- 示例 2：<https://jsfiddle.net/Tripad/qnGKj/3/>
+- 示例 3：<https://jsfiddle.net/Tripad/qnGKj/4/>
+- 示例 4：<https://jsfiddle.net/Tripad/qnGKj/5/>
+- 示例 5：<https://jsfiddle.net/Tripad/qnGKj/6/>
 
 ## 规范
 

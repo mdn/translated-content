@@ -1,13 +1,14 @@
 ---
-title: IntersectionObserver.unobserve()
+title: "IntersectionObserver: unobserve() メソッド"
+short-title: unobserve()
 slug: Web/API/IntersectionObserver/unobserve
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserver")}} の **`unobserve()`** メソッドは、 `IntersectionObserver` に指定された対象要素の監視を停止するよう指示します。
+**`unobserve()`** は {{domxref("IntersectionObserver")}} インターフェイスのメソッドで、 `IntersectionObserver` に指定された対象要素の監視を停止するよう指示します。
 
 ## 構文
 
@@ -18,7 +19,8 @@ unobserve(target)
 ### 引数
 
 - `target`
-  - : 監視を停止する {{domxref("Element")}} を指定します。指定された要素を監視していない場合、このメソッドは何もせず、例外も発生しません。
+  - : 監視を停止する {{domxref("Element")}} を指定します。
+    指定された要素を監視していない場合、このメソッドは何もせず、例外も発生しません。
 
 ### 返値
 

@@ -113,7 +113,7 @@ document.addEventListener("change", (evt) => {
 - Les autres propriétés CSS associées aux images&nbsp;:
   - [`object-fit`](/fr/docs/Web/CSS/object-fit)
   - [`object-position`](/fr/docs/Web/CSS/object-position)
-  - [`image-rendering`](/fr/docs/Web/CSS/Image-rendering)
+  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering)
   - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`rotate`](/fr/docs/Web/CSS/rotate)

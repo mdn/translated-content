@@ -1,26 +1,22 @@
 ---
-title: HTMLSlotElement.assignedSlot
+title: Text：assignedSlot 属性
 slug: Web/API/Text/assignedSlot
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{SeeCompatTable}}{{APIRef("Shadow DOM")}}
+{{APIRef("DOM")}}
 
-**`assignedSlot`** 是 {{domxref("Text")}} 接口的属性，返回与该元素相关联的{{domxref("HTMLSlotElement")}} .
+{{domxref("Text")}} 接口的 **`assignedSlot`** 只读属性返回与元素相关联的 {{domxref("HTMLSlotElement")}} 对象。
 
-## Syntax
+## 值
 
-```plain
-var htmlSlotElement = text.assignedSlot
-```
+{{domxref("HTMLSlotElement")}}，如果文本节点没有关联 {{HTMLElement("slot")}} 元素，则为 `null`。
 
-### Value
-
-一个 {{domxref("HTMLSlotElement")}} 对象。
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser Compatibility
+## 浏览器兼容性
 
 {{Compat}}

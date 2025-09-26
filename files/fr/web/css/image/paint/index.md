@@ -88,8 +88,8 @@ On a ajouté une propriété personnalisée dans le sélecteur pour définir `bo
 
 ## Voir aussi
 
-- [`PaintWorklet`](/fr/docs/Web/API/PaintWorklet)
+- [`PaintWorklet`](/fr/docs/Web/API/PaintWorkletGlobalScope)
 - [L'API `CSS Painting`](/fr/docs/Web/API/CSS_Painting_API)
 - [Utiliser l'API CSS Painting](/fr/docs/Web/API/CSS_Painting_API/Guide)
 - [`<image>`](/fr/docs/Web/CSS/image)
-- [`canvas`](/fr/docs/Web/API/canvas)
+- [`canvas`](/fr/docs/Web/API/Canvas_API)

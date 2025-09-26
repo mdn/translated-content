@@ -5,21 +5,22 @@ slug: Web/API/Document/execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-当一个 HTML 文档切换到设计模式时，`document`暴露 **`execCommand`** 方法，该方法允许运行命令来操纵[可编辑内容区域](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)的元素。
+当一个 HTML 文档切换到设计模式时，`document`暴露 **`execCommand`** 方法，该方法允许运行命令来操纵[可编辑内容区域](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)的元素。
 
 大多数命令影响`document`的 [selection](/zh-CN/docs/Web/API/Selection)（粗体，斜体等），当其他命令插入新元素（添加链接）或影响整行（缩进）。当使用`contentEditable`时，调用 `execCommand()` 将影响当前活动的可编辑元素。
 
 ## 语法
 
-```
-bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+```js-nolint
+execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
 
 ### 返回值
 
 一个 {{jsxref('Boolean')}} ，如果是 `false` 则表示操作不被支持或未被启用。
 
-> **备注：** 在调用一个命令前，不要尝试使用返回值去校验浏览器的兼容性
+> [!NOTE]
+> 在调用一个命令前，不要尝试使用返回值去校验浏览器的兼容性
 
 ### 参数
 
@@ -49,7 +50,7 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `decreaseFontSize`
   - : 给选中文字加上 {{HTMLElement("small")}} 标签，或在选中点插入该标签。(IE 浏览器不支持)
 - `defaultParagraphSeparator`
-  - : 更改在可编辑文本区域中创建新段落时使用的段落分隔符。有关更多详细信息，请参阅[标记生成的差异](/zh-CN/docs/Web/Guide/HTML/Content_Editable#Differences_in_markup_generation)。
+  - : 更改在可编辑文本区域中创建新段落时使用的段落分隔符。有关更多详细信息，请参阅[标记生成的差异](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation)。
 - `delete`
   - : 删除选中部分。
 - `enableAbsolutePositionEditor`
@@ -134,7 +135,7 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 ## 示例
 
-CodePen 中关于 [如何使用](http://codepen.io/netsi1964/full/QbLLGW/) 如何使用的一个例子。
+CodePen 中关于 [如何使用](https://codepen.io/netsi1964/full/QbLLGW/) 如何使用的一个例子。
 
 ## 规范
 

@@ -3,7 +3,7 @@ title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`pageX`** 是一个由 {{domxref("MouseEvent")}} 接口返回的相对于整个文档的 x（水平）坐标以像素为单位的只读属性。
 

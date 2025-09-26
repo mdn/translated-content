@@ -16,9 +16,7 @@ targetElement.insertAdjacentElement(position, element);
 ### Paramètres
 
 - position
-
   - : Un objet {{domxref("DOMString")}} (_chaîne de caractères_) représentant la position par rapport à `targetElement` ; cela doit correspondre ( sans prendre en compte la casse ) à une des chaînes suivantes :
-
     - `'beforebegin'` : Avant `targetElement` lui-même.
     - `'afterbegin'` : A l'intérieur de `targetElement`, avant son premier enfant.
     - `'beforeend'` : A l'intérieur de `targetElement`, après son dernier enfant.
@@ -50,7 +48,8 @@ L'élément inséré ou `null` si l'insertion a échouée.
 <!-- afterend -->
 ```
 
-> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et s'il possède un élément parent.
+> [!NOTE]
+> Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et s'il possède un élément parent.
 
 ## Exemple
 

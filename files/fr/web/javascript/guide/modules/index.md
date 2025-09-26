@@ -29,7 +29,8 @@ Pour illustrer le fonctionnement des modules, nous avons créé [un ensemble d'e
 
 Ces opérations sont assez simples, mais nous les avons choisies pour nous concentrer plutôt sur le fonctionnement des modules.
 
-> **Note :** Si vous souhaitez télécharger les exemples et les exécuter en local, vous devrez utiliser un serveur web local.
+> [!NOTE]
+> Si vous souhaitez télécharger les exemples et les exécuter en local, vous devrez utiliser un serveur web local.
 
 ## Structure de l'exemple
 
@@ -43,17 +44,16 @@ modules/
     square.js
 ```
 
-> **Note :** Tous les exemples de ce guide suivent la même structure.
+> [!NOTE]
+> Tous les exemples de ce guide suivent la même structure.
 
 Le répertoire dédié aux modules contient deux modules&nbsp;:
 
 - `canvas.js` — responsable de fonctions pour gérer le canevas
-
   - `create()` — crée un canevas avec les dimensions souhaitées (`width` / `height`) à l'intérieur d'un élément {{htmlelement("div")}} doté d'un identifiant et qui est ajouté à l'intérieur d'un élément indiqué. Cette fonction renvoie l'objet contenant le contexte du canevas et l'identifiant du conteneur.
   - `createReportList()` — crée une liste non ordonnée à l'intérieur d'un élément indiqué et dans lequel on affiche des données. Cette fonction renvoie l'identifiant de la liste.
 
 - `square.js`
-
   - `name` — une constante qui est une chaîne de caractères&nbsp;: `"square"`.
   - `draw()` — dessine un carré avec une taille/position/couleur donnée sur le canevas indiqué. Cette fonction renvoie un objet contenant la taille du carré, sa position et sa couleur.
   - `reportArea()` — écrit la surface d'un carré dans une liste donnée en fonction de la longueur de son côté.
@@ -68,7 +68,7 @@ Tout au long de cet article, nous utiliserons l'extension `.js` pour les fichier
 
 Toutefois, nous avons décidé de conserver l'extension `.js`. Pour que les modules fonctionnent dans les navigateurs, vous devez vous assurer qu'ils sont servis avec un en-tête `Content-Type` qui contient un type MIME JavaScript comme `text/javascript`. Si ce n'est pas le cas, vous aurez une erreur de vérification du type MIME et le navigateur n'exécutera pas le JavaScript de ces fichiers. La plupart des serveurs web utilisent le type MIME correct pour les fichiers `.js` mais pas encore pour les fichiers `.mjs`. Parmi les serveurs qui servent correctement les fichiers `.mjs`, on trouve [GitHub Pages](https://pages.github.com/) et [`http-server`](https://github.com/http-party/http-server#readme) en Node.js.
 
-Il n'y a pas de problème si vous utilisez déjà un tel environnement ou si vous savez ce que vous faites et avez accès à la configuration de votre serveur pour paramétrer le bon [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) pour les fichiers `.mjs`). Cela pourrait malheureusement être source de confusion si vous ne contrôlez pas le serveur qui sert les fichiers ou que vous publiez des fichiers pour un usage public (comme nous le faisons ici).
+Il n'y a pas de problème si vous utilisez déjà un tel environnement ou si vous savez ce que vous faites et avez accès à la configuration de votre serveur pour paramétrer le bon [`Content-Type`](/fr/docs/Web/HTTP/Reference/Headers/Content-Type) pour les fichiers `.mjs`). Cela pourrait malheureusement être source de confusion si vous ne contrôlez pas le serveur qui sert les fichiers ou que vous publiez des fichiers pour un usage public (comme nous le faisons ici).
 
 Aussi, à des fins d'apprentissage et de portabilité, nous avons décidé de conserver l'extension `.js` ici.
 
@@ -135,7 +135,8 @@ devient&nbsp;:
 
 Vous pouvez voir ces lignes dans [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
-> **Note :** Pour certains systèmes de module, on peut omettre l'extension de fichier et le point (c'est-à-dire qu'on peut écrire `'/modules/square'`). Cela ne fonctionne pas pour les modules JavaScript !
+> [!NOTE]
+> Pour certains systèmes de module, on peut omettre l'extension de fichier et le point (c'est-à-dire qu'on peut écrire `'/modules/square'`). Cela ne fonctionne pas pour les modules JavaScript !
 
 Une fois les fonctionnalités importées dans le script, vous pouvez utiliser les valeurs dans votre script. Dans `main.js`, après les lignes d'import, on trouvera&nbsp;:
 
@@ -148,7 +149,8 @@ reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
 
-> **Note :** Bien que les fonctionnalités importées soient disponibles dans le fichier, ce ne sont que des vues en lecture seule pour les fonctionnalités exportées. On ne peut pas changer la variable importée, mais on peut toujours modifier ses propriétés (à la façon dont les variables sont gérées avec `const`). De plus, ces fonctionnalités sont importées avec des liaisons dynamiques, ce qui signifie que leur valeur peut changer, même si on ne peut pas modifier la liaison (à la différence de `const`).
+> [!NOTE]
+> Bien que les fonctionnalités importées soient disponibles dans le fichier, ce ne sont que des vues en lecture seule pour les fonctionnalités exportées. On ne peut pas changer la variable importée, mais on peut toujours modifier ses propriétés (à la façon dont les variables sont gérées avec `const`). De plus, ces fonctionnalités sont importées avec des liaisons dynamiques, ce qui signifie que leur valeur peut changer, même si on ne peut pas modifier la liaison (à la différence de `const`).
 
 ## Charger le module via le document HTML
 
@@ -176,7 +178,7 @@ Les instructions `import` et `export` ne peuvent être utilisées qu'à l'intér
 
 - Attention aux tests sur un environnement local&nbsp;: si vous chargez le fichier HTML directement depuis le système de fichier dans le navigateur (en double-cliquant dessus par exemple, ce qui donnera une URL `file://`), vous rencontrerez des erreurs CORS pour des raisons de sécurité. Il faut donc un serveur local afin de pouvoir tester.
 - On pourra avoir un comportement différent entre un même script utilisé comme un module et un script utilisé de façon « classique ». En effet, les modules utilisent automatiquement [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
-- Il n'est pas nécessaire d'utiliser l'attribut `defer` (voir [les attributs de `<script>`](/fr/docs/Web/HTML/Element/script#attributs)) lors du chargement d'un module, celui-ci étant automatiquement différé.
+- Il n'est pas nécessaire d'utiliser l'attribut `defer` (voir [les attributs de `<script>`](/fr/docs/Web/HTML/Reference/Elements/script#attributs)) lors du chargement d'un module, celui-ci étant automatiquement différé.
 - Les modules sont exécutés une seule fois, même s'ils sont référencés dans plusieurs balises `<script>`.
 - Enfin, les fonctionnalités importées ne sont disponibles qu'au sein de la portée du script qui les utilise ! Les valeurs importées ne sont manipulables que depuis le script, elles ne sont pas rattachées à la portée globale. On ne pourra par exemple pas y accéder depuis la console JavaScript. Bien que les erreurs soient toujours indiquées dans les outils de développement, certaines techniques de débogage ne seront pas disponibles.
 
@@ -214,7 +216,8 @@ On voit ici aussi l'absence d'accolade, car il n'y a qu'un seul export par défa
 import { default as randomSquare } from "./modules/square.js";
 ```
 
-> **Note :** Pour en savoir plus sur le renommage des objets exportés, voir ci-après [Renommage des imports et des exports](#renommage_des_imports_et_des_exports).
+> [!NOTE]
+> Pour en savoir plus sur le renommage des objets exportés, voir ci-après [Renommage des imports et des exports](#renommage_des_imports_et_des_exports).
 
 ## Gestion des conflits de nommage
 
@@ -440,7 +443,8 @@ export { Circle } from "./shapes/circle.js";
 
 On récupère ainsi l'ensemble des exports de chaque module et on les rend disponibles via `shapes.js`.
 
-> **Note :** Cette notation ne permet que de rediriger les exports via le fichier. Les objets importés/exportés n'existent pas vraiment dans `shapes.js` et on ne peut donc pas écrire de code _utile_ qui les manipule.
+> [!NOTE]
+> Cette notation ne permet que de rediriger les exports via le fichier. Les objets importés/exportés n'existent pas vraiment dans `shapes.js` et on ne peut donc pas écrire de code _utile_ qui les manipule.
 
 Dans le fichier `main.js`, on pourra alors remplacer&nbsp;:
 
@@ -502,7 +506,7 @@ On voit ici que, parce que la promesse renvoie un objet module à la résolution
 
 ### `await` au plus haut niveau
 
-L'utilisation du mot-clé `await` au plus haut niveau est une fonctionnalité disponible dans les modules. Cela permet d'avoir des modules qui agissent comme des [grandes fonctions asynchrones](/fr/docs/Learn/JavaScript/Asynchronous/Introducing), ce qui signifie que le code peut être évalué avant d'être utilisé dans des modules parents mais sans bloquer le chargement des modules frères et sœurs.
+L'utilisation du mot-clé `await` au plus haut niveau est une fonctionnalité disponible dans les modules. Cela permet d'avoir des modules qui agissent comme des [grandes fonctions asynchrones](/fr/docs/Learn_web_development/Extensions/Async_JS/Introducing), ce qui signifie que le code peut être évalué avant d'être utilisé dans des modules parents mais sans bloquer le chargement des modules frères et sœurs.
 
 Prenons un exemple. Vous trouverez les fichiers et le code de cette section au sein du répertoire [`top-level-await`](https://github.com/mdn/js-examples/tree/master/module-examples/top-level-await) qui repart des exemples précédents.
 

@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 {{AddonSidebar}}
 
-この API はコンテントスクリプトを登録するためにお使いいただけます。コンテントスクリプトを登録することで、指定した URL にマッチするページにそのスクリプトを挿入するようブラウザに指定することができます。
+この API はコンテントスクリプトを登録するためにお使いいただけます。コンテントスクリプトを登録することで、指定した URL にマッチするページにそのスクリプトを挿入するようブラウザーに指定することができます。
 
 この API は`manifest.json`にある"content_scripts"キーと似ていますが、"content_scripts"ではコンテントスクリプトと URL のパターンは**インストールタイム**に固定されます。一方`content_scripts` API は、**ランタイム（実行時）**でスクリプトを登録・登録解除することが可能です。
 
@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 `RegisteredContentScript` オブジェクトは `register()` で登録されたスクリプトを保持し、`unregister()`でそのスクリプトを登録解除(unregister)できます。また、コンテントスクリプトはそれらを作ったページが消された際にも自動的に登録解除されます。例えば、background ページによって登録されたコンテントスクリプトは、background ページが消去された際に自動的に登録解除されます。
 
-`contentScripts` API にパーミッションは存在しませんが、拡張機能は register()でマッチさせる URL においては適切な[host permissions](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)を持っている必要があります。
+`contentScripts` API にパーミッションは存在しませんが、拡張機能は register()でマッチさせる URL においては適切な[host permissions](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)を持っている必要があります。
 
 ## Types
 
@@ -25,8 +25,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 - {{WebExtAPIRef("contentScripts.register()")}}
   - : コンテントスクリプトを登録します。
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-{{Compat("webextensions.api.contentScripts", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

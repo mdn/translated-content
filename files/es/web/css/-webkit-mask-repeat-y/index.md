@@ -1,9 +1,9 @@
 ---
-title: "-webkit-mask-repeat-y"
+title: -webkit-mask-repeat-y
 slug: Web/CSS/-webkit-mask-repeat-y
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 
@@ -38,7 +38,6 @@ La propiedad CSS `-webkit-mask-repeat-y` especifica si una imagen de máscara se
 - space
   - : La imagen se repite tanta veces como sea posible pero sin aplicarle ningún recorte. La primera y la última imagen estarán pegadas al borde superior e inferior del elemento y el espacio restante se distribuye de igual manera entre las imágenes. Se ignora la propiedad {{cssxref("mask-position")}} a menos que únicamente se pueda mostrar una sóla imagen sin aplicar recortes. El único caso en el que se aplican recortes usando este valor es cuando no hay suficiente espacio para mostrar una sóla imagen.
 - round
-
   - : Al aumentar el espacio vertical la imágenes repetidas pueden estiarse (sin dejar huecos) hasta que sólo haya hueco para añadir una más. Al añadir la siguiente se encogen para permitir el hueco.Ejemplo: Una imagen con una altura original de 260px, repetida 3 veces, puede estirarse hasta que cada repetición tenga una altura de 300px y, entonces, se añadirá otra que se encogerá hasta una altura 225px.
 
     As the allowed vertical space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original height of 260px, repeated three times, might stretch until each repetition is 300px high, and then another image will be added. They will then compress to a height of 225px.

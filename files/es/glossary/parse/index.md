@@ -3,6 +3,8 @@ title: Parse (análisis sintáctico)
 slug: Glossary/Parse
 ---
 
+{{GlossarySidebar}}
+
 "Parsing" significa analizar y convertir un programa en un formato interno que un entorno de ejecución pueda realmente ejecutar, por ejemplo el motor {{glossary("JavaScript")}} dentro de los navegadores.
 
 El [navegador analiza el HTML](/docs/Web/Guide/HTML/HTML5/HTML5_Parser) en un árbol {{glossary('DOM')}}. El análisis de HTML implica la "[tokenización](/docs/Web/API/DOMTokenList)" (dividir en fragmentos) y en la construcción del árbol. Los "tokens" HTML incluyen etiquetas de inicio y final, así como nombres de atributos y valores. Si el documento está bien formado, el análisis sintáctico es más sencillo y rápido. El "parser" analiza la entrada simbólica en el documento, construyendo el árbol del documento.

@@ -1,9 +1,9 @@
 ---
-title: "-moz-float-edge"
+title: -moz-float-edge
 slug: Web/CSS/-moz-float-edge
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propiedad [CSS](/es/docs/Web/CSS) no estandarizada **`-moz-float-edge`** especifica si las propiedades {{cssxref("height")}} y {{cssxref("width")}} del elemento incluyen el grosor del margen, borde, o relleno.
 

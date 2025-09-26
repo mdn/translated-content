@@ -1,17 +1,18 @@
 ---
-title: XMLHttpRequest.responseText
+title: "XMLHttpRequest: responseText プロパティ"
+short-title: responseText
 slug: Web/API/XMLHttpRequest/responseText
 l10n:
-  sourceCommit: 8e294a76bdebc9583d418ee14b42422eb4a8f4a5
+  sourceCommit: 9c78a44b9321fcd3fbe63d6f5b61ed749c2fa261
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 {{domxref("XMLHttpRequest")}} の **`responseText`** プロパティは読み取り専用で、送信されたリクエストに続いてサーバーから受け取ったテキストを返します。
 
 ## 値
 
-文字列で、 `XMLHttpRequest` を使用して受信したテキストデータ、またはリクエストが失敗したときは `null`、またはリクエストがまだ {{domxref("XMLHttpRequest.send", "send()")}} の呼び出しによって送信されていない場合は `""` です。
+文字列で、 `XMLHttpRequest` を使用して受信したテキストデータ、またはリクエストが失敗した場合もしくはまだコンテンツが受信されていない場合は `""` です。
 
 非同期リクエストを処理している間、 `responseText` の値は、データが完全に受信できておらず不完全であっても、常にサーバーから受信した現在のコンテンツを持ちます。
 
@@ -26,10 +27,10 @@ l10n:
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 // If specified, responseType must be empty string or "text"
-xhr.responseType = 'text';
+xhr.responseType = "text";
 
 xhr.onload = () => {
   if (xhr.readyState === xhr.DONE) {

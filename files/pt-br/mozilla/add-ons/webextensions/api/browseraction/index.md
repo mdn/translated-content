@@ -7,9 +7,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 Adiciona um botão a barra de ferramentas do navegador.
 
-Uma [browser action](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Browser_action) é um botão na barra de ferramentas do navegador.
+Uma [browser action](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) é um botão na barra de ferramentas do navegador.
 
-Você pode associar um popup junto ao botão. O popup é especificado usando HTML, CSS e JavaScript, apenas como uma página web normal. O JavaScript rodando no popup tem o mesmo acesso a API WebExtension completa, assim como seus scripts em backend, mas seu contexto global é o popup, não a página exibida no navegador atualmente. Para afetar páginas web você precisa comunicá-las via [messages](/pt-BR/Add-ons/WebExtensions/Modify_a_web_page#Messaging).
+Você pode associar um popup junto ao botão. O popup é especificado usando HTML, CSS e JavaScript, apenas como uma página web normal. O JavaScript rodando no popup tem o mesmo acesso a API WebExtension completa, assim como seus scripts em backend, mas seu contexto global é o popup, não a página exibida no navegador atualmente. Para afetar páginas web você precisa comunicá-las via [messages](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
 
 Se você especificar um popup ele está exibido — e o conteúdo será carregado — quando o usuário clicar no ícone. Você não especificar um popup, quando o usuário clicar no ícone um evento será disparado para sua extensão.
 
@@ -63,7 +63,7 @@ Com a API `browserAction você pode`:
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.browserAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`appinstalled`** は[ウェブマニフェスト API](/ja/docs/Web/Manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。
+**`appinstalled`** は[ウェブマニフェスト API](/ja/docs/Web/Progressive_web_apps/Manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('appinstalled', (event) => { });
+addEventListener("appinstalled", (event) => {});
 
-onappinstalled = (event) => { };
+onappinstalled = (event) => {};
 ```
 
 ## イベント型
@@ -30,8 +30,8 @@ onappinstalled = (event) => { };
 `appinstalled` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
 
 ```js
-window.addEventListener('appinstalled', () => {
-  console.log('アプリをインストールしてくれてありがとう！');
+window.addEventListener("appinstalled", () => {
+  console.log("アプリをインストールしてくれてありがとう！");
 });
 ```
 
@@ -39,7 +39,7 @@ window.addEventListener('appinstalled', () => {
 
 ```js
 window.onappinstalled = () => {
-  console.log('アプリをインストールしてくれてありがとう！');
+  console.log("アプリをインストールしてくれてありがとう！");
 };
 ```
 

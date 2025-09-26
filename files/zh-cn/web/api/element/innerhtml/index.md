@@ -7,7 +7,8 @@ slug: Web/API/Element/innerHTML
 
 **`Element.innerHTML`** 属性设置或获取 HTML 语法表示的元素的后代。
 
-> **备注：** 如果一个 {{HTMLElement("div")}}, {{HTMLElement("span")}}, 或 {{HTMLElement("noembed")}} 节点有一个文本子节点，该节点包含字符 `(&)`, `(<)`, 或 `(>)`, `innerHTML` 将这些字符分别返回为 \&amp;, \&lt; 和 \&gt;。使用{{domxref("Node.textContent")}} 可获取一个这些文本节点内容的正确副本。
+> [!NOTE]
+> 如果一个 {{HTMLElement("div")}}, {{HTMLElement("span")}}, 或 {{HTMLElement("noembed")}} 节点有一个文本子节点，该节点包含字符 `(&)`, `(<)`, 或 `(>)`, `innerHTML` 将这些字符分别返回为 \&amp;, \&lt; 和 \&gt;。使用{{domxref("Node.textContent")}} 可获取一个这些文本节点内容的正确副本。
 
 如果要向一个元素中插入一段 HTML，而不是替换它的内容，那么请使用 {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} 方法。
 
@@ -46,7 +47,8 @@ let contents = myElement.innerHTML;
 
 查看元素内容节点的 HTML 标记。
 
-> **备注：** 返回的 HTML 或者 XML 片段是基于当前元素的内容生成的，所以返回的标记和格式可能与原始页面的标记不匹配。
+> [!NOTE]
+> 返回的 HTML 或者 XML 片段是基于当前元素的内容生成的，所以返回的标记和格式可能与原始页面的标记不匹配。
 
 ### 替换元素的内容
 
@@ -88,7 +90,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
 ```
 
-尽管这看上去像 [cross-site scripting](https://zh.wikipedia.org/wiki/cross-site_scripting) 攻击，结果并不会导致什么。HTML 5 中指定不执行由 `innerHTML` 插入的 {{HTMLElement("script")}} 标签。
+尽管这看上去像[跨站脚本](https://zh.wikipedia.org/wiki/跨網站指令碼)攻击，结果并不会导致什么。HTML 5 中指定不执行由 `innerHTML` 插入的 {{HTMLElement("script")}} 标签。
 
 然而，有很多不依赖 {{HTMLElement("script")}} 标签去执行 JavaScript 的方式。所以当你使用`innerHTML` 去设置你无法控制的字符串时，这仍然是一个安全问题。例如：
 
@@ -99,7 +101,8 @@ el.innerHTML = name; // shows the alert
 
 基于这个原因，当插入纯文本时，建议不要使用 `innerHTML` 。取而代之的是使用 {{domxref("Node.textContent")}} ，它不会把给定的内容解析为 HTML，它仅仅是将原始文本插入给定的位置。
 
-> **警告：** 如果你的项目将要经过各种形式的安全检查的话，使用 `innerHTML` 可能导致代码被拒绝。例如，如果你在[浏览器扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)中[使用 `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) 并将扩展提交到 [addons.mozilla.org](https://addons.mozilla.org/) 的话，它将会在自动审核过程中被拒绝。
+> [!WARNING]
+> 如果你的项目将要经过各种形式的安全检查的话，使用 `innerHTML` 可能导致代码被拒绝。例如，如果你在[浏览器扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)中[使用 `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) 并将扩展提交到 [addons.mozilla.org](https://addons.mozilla.org/) 的话，它将会在自动审核过程中被拒绝。
 
 ## 示例
 
@@ -196,7 +199,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

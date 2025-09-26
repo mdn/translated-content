@@ -11,33 +11,33 @@ slug: Web/JavaScript/Guide
 
 Это руководство разделено на несколько глав:
 
-- [Введение](/ru/docs/Web/JavaScript/Guide/Введение_в_JavaScript)
+- [Введение](/ru/docs/Web/JavaScript/Guide/Introduction)
 
-  [Об этом руководстве](/ru/docs/Web/JavaScript/Guide/Введение_в_JavaScript#Где_можно_найти_информацию_о_JavaScript)
-  [О JavaScript](/ru/docs/Web/JavaScript/Guide/Введение_в_JavaScript#Что_такое_JavaScript)
-  [JavaScript и Java](/ru/docs/Web/JavaScript/Guide/Введение_в_JavaScript#JavaScript_и_Java)
-  [ECMAScript](/ru/docs/Web/JavaScript/Guide/Введение_в_JavaScript#JavaScript_и_спецификация_ECMAScript)
-  [Инструменты](/ru/docs/Web/JavaScript/Guide/Введение_в_JavaScript#Начинаем_знакомство_с_JavaScript)
-  [Hello World](/ru/docs/Web/JavaScript/Guide/Введение_в_JavaScript#Hello_world)
+  [Об этом руководстве](/ru/docs/Web/JavaScript/Guide/Introduction#где_можно_найти_информацию_о_javascript)
+  [О JavaScript](/ru/docs/Web/JavaScript/Guide/Introduction#что_такое_javascript)
+  [JavaScript и Java](/ru/docs/Web/JavaScript/Guide/Introduction#javascript_и_java)
+  [ECMAScript](/ru/docs/Web/JavaScript/Guide/Introduction#javascript_и_спецификация_ecmascript)
+  [Инструменты](/ru/docs/Web/JavaScript/Guide/Introduction#начинаем_знакомство_с_javascript)
+  [Hello World](/ru/docs/Web/JavaScript/Guide/Introduction#hello_world)
 
 - [Грамматика и типы](/ru/docs/Web/JavaScript/Guide/Grammar_and_types)
 
-  [Базовый синтаксис и комментарии](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Основы)
-  [Объявления](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Объявления)
-  [Область видимости переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Область_видимости_переменных)
-  [Поднятие переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Поднятие_переменных)
-  [Структуры и типы данных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Структуры_и_типы_данных)
-  [Литералы](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Литералы)
+  [Базовый синтаксис и комментарии](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#основы)
+  [Объявления](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#объявления)
+  [Область видимости переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#область_видимости_переменных)
+  [Поднятие переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#поднятие_переменных)
+  [Структуры и типы данных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#структуры_и_типы_данных)
+  [Литералы](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#литералы)
 
 - [Порядок выполнения и обработка ошибок](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
-  [`if...else`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Инструкция_if...else)
-  [`switch`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Инструкция_switch)
-  [`try`/`catch`/`throw`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Инструкции_обработки_исключений)
-  [Объекты `Error`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Использование_объекта_Error)
-  [Объект `Promise`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Объект_Promise)
+  [`if...else`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#инструкция_if...else)
+  [`switch`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#инструкция_switch)
+  [`try`/`catch`/`throw`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#инструкции_обработки_исключений)
+  [Объекты `Error`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#использование_объекта_error)
+  [Объект `Promise`](/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#объект_promise)
 
-- [Циклы и итерации](/ru/docs/Web/JavaScript/Guide/Циклы_и_итерации)
+- [Циклы и итерации](/ru/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
   `for while do...while break/continue for..in for..of`
 
@@ -45,83 +45,83 @@ slug: Web/JavaScript/Guide
 
 - [Функции](/ru/docs/Web/JavaScript/Guide/Functions)
 
-  [Объявление функций](/ru/docs/Web/JavaScript/Guide/Functions#Объявление_функций)
-  [Вызов функций](/ru/docs/Web/JavaScript/Guide/Functions#Вызов_функций)
-  [Область видимости функций](/ru/docs/Web/JavaScript/Guide/Functions#Область_видимости_функций)
-  [Замыкания](/ru/docs/Web/JavaScript/Guide/Functions#Замыкания)
-  [Аргументы](/ru/docs/Web/JavaScript/Guide/Functions#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0_arguments) и [параметры](/ru/docs/Web/JavaScript/Guide/Functions#Параметры_функции)
-  [Стрелочные функции](/ru/docs/Web/JavaScript/Guide/Functions#Стрелочные_функции)
+  [Объявление функций](/ru/docs/Web/JavaScript/Guide/Functions#объявление_функций)
+  [Вызов функций](/ru/docs/Web/JavaScript/Guide/Functions#вызов_функций)
+  [Область видимости функций](/ru/docs/Web/JavaScript/Guide/Functions#область_видимости_функций)
+  [Замыкания](/ru/docs/Web/JavaScript/Guide/Functions#замыкания)
+  [Аргументы](/ru/docs/Web/JavaScript/Guide/Functions#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0_arguments) и [параметры](/ru/docs/Web/JavaScript/Guide/Functions#параметры_функции)
+  [Стрелочные функции](/ru/docs/Web/JavaScript/Guide/Functions#стрелочные_функции)
 
-- [Выражения и операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Выражения и операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-  [Присваивание](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Операторы_присваивания) и [Сравнение](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Операторы_сравнения)
-  [Арифметические операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Арифметические_операторы)
-  [Побитовые операторы](</ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Битовые_(поразрядные)_операторы>) и [логические операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Логические_операторы)
-  [Условный (тернарный) операторы](</ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Условный_(тернарный)_оператор>)
+  [Присваивание](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#%d0%9e%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b_%d0%bf%d1%80%d0%b8%d1%81%d0%b2%d0%b0%d0%b8%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f) и [Сравнение](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#%d0%9e%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b_%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f)
+  [Арифметические операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#%d0%90%d1%80%d0%b8%d1%84%d0%bc%d0%b5%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5_%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b)
+  [Побитовые операторы](</ru/docs/Web/JavaScript/Guide/Expressions_and_operators#Битовые_(поразрядные)_операторы>) и [логические операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#%d0%9b%d0%be%d0%b3%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5_%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b)
+  [Условный (тернарный) операторы](</ru/docs/Web/JavaScript/Guide/Expressions_and_operators#Условный_(тернарный)_оператор>)
 
-- [Числа и даты](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates) [Числовые литералы](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates#Numbers)
+- [Числа и даты](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings) [Числовые литералы](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
 
-  [Объект `Number`](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates#Объект_Number)
-  [Объект `Math`](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates#Объект_Math)
-  [Объект `Date`](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates#Объект_Date)
+  [Объект `Number`](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings#объект_number)
+  [Объект `Math`](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings#объект_math)
+  [Объект `Date`](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings#объект_date)
 
-- [Форматирование текста](/ru/docs/Web/JavaScript/Guide/Text_formatting)
+- [Форматирование текста](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
 
-  [Строковые литералы](/ru/docs/Web/JavaScript/Guide/Text_formatting#Строковые_литералы)
-  [Объект `String`](/ru/docs/Web/JavaScript/Guide/Text_formatting#Объекты_String)
-  [Шаблонные литералы](/ru/docs/Web/JavaScript/Guide/Text_formatting#Многострочные_шаблонные_строки)
-  [Интернационализация](/ru/docs/Web/JavaScript/Guide/Text_formatting#Интернационализация)
-  [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions#Работа_с_Регулярными_Выражениями)
+  [Строковые литералы](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#строковые_литералы)
+  [Объект `String`](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#объекты_string)
+  [Шаблонные литералы](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#многострочные_шаблонные_строки)
+  [Интернационализация](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#интернационализация)
+  [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions#%d0%a0%d0%b0%d0%b1%d0%be%d1%82%d0%b0_%d1%81_%d0%a0%d0%b5%d0%b3%d1%83%d0%bb%d1%8f%d1%80%d0%bd%d1%8b%d0%bc%d0%b8_%d0%92%d1%8b%d1%80%d0%b0%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f%d0%bc%d0%b8)
 
 <!---->
 
 - [Индексированные коллекции](/ru/docs/Web/JavaScript/Guide/Indexed_collections)
 
-  [Массивы](/ru/docs/Web/JavaScript/Guide/Indexed_collections#Array_объект)
-  [Типизированные массивы](/ru/docs/Web/JavaScript/Guide/Indexed_collections#Типизированные_массивы)
+  [Массивы](/ru/docs/Web/JavaScript/Guide/Indexed_collections#array_объект)
+  [Типизированные массивы](/ru/docs/Web/JavaScript/Guide/Indexed_collections#типизированные_массивы)
 
 - [Коллекции](/ru/docs/Web/JavaScript/Guide/Keyed_collections)
 
-  [`Map`](/ru/docs/Web/JavaScript/Guide/Keyed_collections#Тип_Map)
-  [`WeakMap`](/ru/docs/Web/JavaScript/Guide/Keyed_collections#Тип_WeakMap)
-  [`Set`](/ru/docs/Web/JavaScript/Guide/Keyed_collections#Тип_Set)
-  [`WeakSet`](/ru/docs/Web/JavaScript/Guide/Keyed_collections#Тип_WeakSet)
+  [`Map`](/ru/docs/Web/JavaScript/Guide/Keyed_collections#тип_map)
+  [`WeakMap`](/ru/docs/Web/JavaScript/Guide/Keyed_collections#тип_weakmap)
+  [`Set`](/ru/docs/Web/JavaScript/Guide/Keyed_collections#тип_set)
+  [`WeakSet`](/ru/docs/Web/JavaScript/Guide/Keyed_collections#тип_weakset)
 
-- [Работа с объектами](/ru/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [Работа с объектами](/ru/docs/Web/JavaScript/Guide/Working_with_objects)
 
-  [Объекты и свойства](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Объекты_и_свойства)
-  [Создание объектов](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Создание_новых_объектов)
-  [Определение методов](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Определение_методов)
-  [Геттеры и Сеттеры](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Определение_геттеров_и_сеттеров)
+  [Объекты и свойства](/ru/docs/Web/JavaScript/Guide/Working_with_objects#%d0%9e%d0%b1%d1%8a%d0%b5%d0%ba%d1%82%d1%8b_%d0%b8_%d1%81%d0%b2%d0%be%d0%b9%d1%81%d1%82%d0%b2%d0%b0)
+  [Создание объектов](/ru/docs/Web/JavaScript/Guide/Working_with_objects#%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5_%d0%bd%d0%be%d0%b2%d1%8b%d1%85_%d0%be%d0%b1%d1%8a%d0%b5%d0%ba%d1%82%d0%be%d0%b2)
+  [Определение методов](/ru/docs/Web/JavaScript/Guide/Working_with_objects#%d0%9e%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5_%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d0%be%d0%b2)
+  [Геттеры и Сеттеры](/ru/docs/Web/JavaScript/Guide/Working_with_objects#%d0%9e%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5_%d0%b3%d0%b5%d1%82%d1%82%d0%b5%d1%80%d0%be%d0%b2_%d0%b8_%d1%81%d0%b5%d1%82%d1%82%d0%b5%d1%80%d0%be%d0%b2)
 
-- [Подробнее про объектную модель](/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+- [Подробнее про объектную модель](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
-  [Прототипно-ориентированное ООП](/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Языки_основанные_на_классах_против_Прототипно-ориентированных_языков)
-  [Создание иерархии объектов](/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Создание_иерархии)
-  [Наследование](/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Наследование_свойств)
+  [Прототипно-ориентированное ООП](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#%d0%af%d0%b7%d1%8b%d0%ba%d0%b8_%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5_%d0%bd%d0%b0_%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b0%d1%85_%d0%bf%d1%80%d0%be%d1%82%d0%b8%d0%b2_%d0%9f%d1%80%d0%be%d1%82%d0%be%d1%82%d0%b8%d0%bf%d0%bd%d0%be-%d0%be%d1%80%d0%b8%d0%b5%d0%bd%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d1%8b%d1%85_%d1%8f%d0%b7%d1%8b%d0%ba%d0%be%d0%b2)
+  [Создание иерархии объектов](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5_%d0%b8%d0%b5%d1%80%d0%b0%d1%80%d1%85%d0%b8%d0%b8)
+  [Наследование](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#%d0%9d%d0%b0%d1%81%d0%bb%d0%b5%d0%b4%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5_%d1%81%d0%b2%d0%be%d0%b9%d1%81%d1%82%d0%b2)
 
 <!---->
 
-- [Промисы](/ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov)
+- [Промисы](/ru/docs/Web/JavaScript/Guide/Using_promises)
 
-  [Гарантии](/ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov#Гарантии)
-  [Цепочка вызовов](/ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov#Цепочка_вызовов)
-  [Распространённые ошибки](/ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov#Распространение_ошибки)
-  [Композиция](/ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov#Композиция)
-  [Порядок выполнения](/ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov#Порядок_выполнения)
+  [Гарантии](/ru/docs/Web/JavaScript/Guide/Using_promises#гарантии)
+  [Цепочка вызовов](/ru/docs/Web/JavaScript/Guide/Using_promises#цепочка_вызовов)
+  [Распространённые ошибки](/ru/docs/Web/JavaScript/Guide/Using_promises#распространение_ошибки)
+  [Композиция](/ru/docs/Web/JavaScript/Guide/Using_promises#композиция)
+  [Порядок выполнения](/ru/docs/Web/JavaScript/Guide/Using_promises#порядок_выполнения)
 
-- [Итераторы и Генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Итераторы и Генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators)
 
-  [Итераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#Итераторы)
-  [Итерируемые объекты](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#Итерируемые_объекты)
-  [Генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#Генераторы)
+  [Итераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators#%d0%98%d1%82%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b)
+  [Итерируемые объекты](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators#%d0%98%d1%82%d0%b5%d1%80%d0%b8%d1%80%d1%83%d0%b5%d0%bc%d1%8b%d0%b5_%d0%be%d0%b1%d1%8a%d0%b5%d0%ba%d1%82%d1%8b)
+  [Генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators#%d0%93%d0%b5%d0%bd%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b)
 
 - [Мета
   программирование](/ru/docs/Web/JavaScript/Guide/Meta_programming)
 
-  [Объект `Proxy`](/ru/docs/Web/JavaScript/Guide/Meta_programming#Объекты_Proxy)
-  [Обработчики и ловушки](/ru/docs/Web/JavaScript/Guide/Meta_programming#Обработчики_и_ловушки)
-  [Отзываемый `Proxy`](/ru/docs/Web/JavaScript/Guide/Meta_programming#Отзываемый_Proxy)
-  [Рефлексия](/ru/docs/Web/JavaScript/Guide/Meta_programming#Рефлексия)
+  [Объект `Proxy`](/ru/docs/Web/JavaScript/Guide/Meta_programming#объекты_proxy)
+  [Обработчики и ловушки](/ru/docs/Web/JavaScript/Guide/Meta_programming#обработчики_и_ловушки)
+  [Отзываемый `Proxy`](/ru/docs/Web/JavaScript/Guide/Meta_programming#отзываемый_proxy)
+  [Рефлексия](/ru/docs/Web/JavaScript/Guide/Meta_programming#рефлексия)
 
 {{Next("Web/JavaScript/Guide/Introduction")}}

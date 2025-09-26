@@ -3,13 +3,28 @@ title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Sumário
 
 O método `toString()` retorna uma string representando o objeto.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+
+```js interactive-example
+function Dog(name) {
+  this.name = name;
+}
+
+const dog1 = new Dog("Gabby");
+
+Dog.prototype.toString = function dogToString() {
+  return `${this.name}`;
+};
+
+console.log(dog1.toString());
+// Expected output: "Gabby"
+```
 
 ## Sintaxe
 
@@ -26,7 +41,8 @@ var o = new Object();
 o.toString(); // retorna [object Object]
 ```
 
-> **Nota:** Starting in JavaScript 1.8.5 `toString()` called on {{jsxref("Global_Objects/null", "null")}} returns `[object Null]`, and {{jsxref("Global_Objects/undefined", "undefined")}} returns `[object Undefined]`, as defined in the 5th Edition of ECMAScript and a subsequent Errata. See [Using toString to detect object type](#example:_using_tostring_to_detect_object_type).
+> [!NOTE]
+> Starting in JavaScript 1.8.5 `toString()` called on {{jsxref("Global_Objects/null", "null")}} returns `[object Null]`, and {{jsxref("Global_Objects/undefined", "undefined")}} returns `[object Undefined]`, as defined in the 5th Edition of ECMAScript and a subsequent Errata. See [Using toString to detect object type](#example:_using_tostring_to_detect_object_type).
 
 ## Examples
 

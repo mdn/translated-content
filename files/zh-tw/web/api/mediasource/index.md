@@ -56,7 +56,7 @@ _從親介面 (parent interface) {{domxref("EventTarget")}} 繼承屬性。_
 
 ## 範例
 
-以下簡單的範例儘快的載入一個個影片塊 (chunk) 且儘快的播放。這個範例是由 Nick Desaulniers 所撰寫且可以[在此實際觀看](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)（您也可以[下載原始碼](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)以更進一步研究）
+以下簡單的範例儘快的載入一個個影片塊 (chunk) 且儘快的播放。這個範例是由 Nick Desaulniers 所撰寫且可以[在此實際觀看](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)（你也可以[下載原始碼](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)以更進一步研究）
 
 ```js
 var video = document.querySelector("video");

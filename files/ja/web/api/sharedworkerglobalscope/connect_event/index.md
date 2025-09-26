@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('connect', (event) => { });
+addEventListener("connect", (event) => {});
 
-onconnect = (event) => { };
+onconnect = (event) => {};
 ```
 
 ## イベント型
@@ -44,21 +44,21 @@ _このインターフェイスには、親である {{domxref("Event")}} から
 
 ## 例
 
-この例は共有ワーカーファイルを示しています。メインスレッドから {{domxref("MessagePort")}} を通してわーカーへの接続が発生したとき、 `onconnect` イベントハンドラーが呼び出されます。イベントオブジェクトは {{domxref("MessageEvent")}} です。
+この例は共有ワーカーファイルを示しています。メインスレッドから {{domxref("MessagePort")}} を通してワーカーへの接続が発生したとき、 `onconnect` イベントハンドラーが呼び出されます。イベントオブジェクトは {{domxref("MessageEvent")}} です。
 
 接続しようとしているポート番号は、イベントオブジェクトの `ports` 引数で参照することができます。この参照にはポートを通じて来るメッセージを扱うために割り当てられた `onmessage` ハンドラーがあり、その `postMessage()` メソッドにワーカーを使用してメインスレッドにメッセージを送り返すために使用することができます。
 
 ```js
 self.onconnect = (e) => {
-    const port = e.ports[0];
+  const port = e.ports[0];
 
-    port.onmessage = (e) => {
-      const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-      port.postMessage(workerResult);
-    }
+  port.onmessage = (e) => {
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
+    port.postMessage(workerResult);
+  };
 
-    port.start();
-}
+  port.start();
+};
 ```
 
 実行している例を完成させるには、 [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([共有ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)) をご覧ください。
@@ -68,14 +68,13 @@ self.onconnect = (e) => {
 {{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドを使用してイベントハンドラーを設定することもできます。
 
 ```js
-self.addEventListener('connect', (e) => {
+self.addEventListener("connect", (e) => {
   const port = e.ports[0];
 
   port.onmessage = (e) => {
     const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
-  }
-
+  };
 });
 ```
 

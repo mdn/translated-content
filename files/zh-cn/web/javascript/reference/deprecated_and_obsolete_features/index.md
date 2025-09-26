@@ -3,8 +3,6 @@ title: 废弃和过时的特性
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
 
-{{JsSidebar("More")}}
-
 本附录列出了那些已经废弃（仍然可用，但是已计划删除）或者过时（已被删除，无法使用）的 JavaScript 特性。
 
 ## 废弃的特性
@@ -52,7 +50,8 @@ console.log("b");
 - {{jsxref("RegExp.rightContext", "rightContext, $'")}}
   - : 最近一次匹配后的子串。
 
-> **警告：** 避免使用这些静态属性，因为它们可能导致[与外部代码交互时的问题](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)！
+> [!WARNING]
+> 避免使用这些静态属性，因为它们可能导致[与外部代码交互时的问题](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)！
 
 {{jsxref("RegExp/compile", "compile()")}} 方法已被废弃，请构造一个新的 `RegExp` 实例。
 
@@ -183,7 +182,7 @@ console.log("b");
 
 数组推导式和生成器推导式已被移除。
 
-```
+```js-nolint
 // 遗留的数组推导式
 [for (x of iterable) x]
 [for (x of iterable) if (condition) x]

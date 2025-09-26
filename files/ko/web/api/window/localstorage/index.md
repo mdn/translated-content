@@ -52,7 +52,8 @@ localStorage.removeItem("myCat");
 localStorage.clear();
 ```
 
-> **참고:** 참고: [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 문서에서 전체 예제를 살펴보세요.
+> [!NOTE]
+> 참고: [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 문서에서 전체 예제를 살펴보세요.
 
 ## 명세
 
@@ -65,5 +66,5 @@ localStorage.clear();
 ## 함께 보기
 
 - [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Local storage with Window.localStorage](/ko/docs/Web/API/Web_Storage_API/Local_storage)
+- [Local storage with Window.localStorage](/ko/docs/Web/API/Window/localStorage)
 - {{domxref("Window.sessionStorage")}}

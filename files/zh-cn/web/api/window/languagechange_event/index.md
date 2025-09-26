@@ -1,49 +1,63 @@
 ---
-title: languagechange
+title: Window：languagechange 事件
 slug: Web/API/Window/languagechange_event
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{SeeCompatTable}}
+{{APIRef}}
 
-当用户首选语言更改时，将在全局范围对象上触发 languagechange 事件。
+**`languagechange`** 事件在用户首选语言发生变化时，在全局对象作用域上触发。
 
-## General info
+## 语法
 
-- Interface
-  - : {{domxref("Event")}}
-- Bubbles
-  - : No
-- Cancelable
-  - : No
-- Target
-  - : The default window scope, being {{domxref("Window")}} on Web pages and {{domxref("WorkerGlobalScope")}} in [Web Workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers).
-- Default Action
-  - : None
+在如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-## Properties
+```js
+addEventListener("languagechange", (event) => {});
+onlanguagechange = (event) => {};
+```
 
-_Being of type {{domxref("Event")}}, this event implements the properties of this interface._
+## 事件类型
 
-- {{domxref("Event.target")}} {{ReadonlyInline}}
-  - : Returns an {{domxref("EventTarget")}} that is the topmost target in the DOM tree of the event.
-- {{domxref("Event.type")}} {{ReadonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the type of event, here `"languagechange"`.
-- {{domxref("Event.bubbles")}}{{ReadonlyInline}}
-  - : Returns a {{domxref("Boolean")}} indicating if the event normally bubbles or not.
-- {{domxref("Event.cancelable")}}{{ReadonlyInline}}
-  - : Returns a {{domxref("Boolean")}} indicating if it is possible to cancel the event.
+一个通用的 {{domxref("Event")}}。
 
-## Specification
+## 事件处理器别名
+
+除了 `Window` 接口以外，事件处理器属性 `onlanguagechange` 同样可以用于以下目标：
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
+
+## 示例
+
+你可以在 {{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 `languagechange` 事件：
+
+```js
+window.addEventListener("languagechange", () => {
+  console.log("检测到 languagechange 事件！");
+});
+```
+
+或使用 `onlanguagechange` 事件处理器属性：
+
+```js
+window.onlanguagechange = (event) => {
+  console.log("检测到 languagechange 事件！");
+};
+```
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{domxref("NavigatorLanguage.language","navigator.language")}}
-- {{domxref("NavigatorLanguage.languages","navigator.languages")}}
-- {{domxref("Navigator")}}
-- {{domxref("Window.onlanguagechange")}}
+- {{domxref("navigator.language")}}
+- {{domxref("navigator.languages")}}
+- {{domxref("navigator")}}

@@ -1,9 +1,9 @@
 ---
-title: "-webkit-border-before"
+title: -webkit-border-before
 slug: Web/CSS/-webkit-border-before
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

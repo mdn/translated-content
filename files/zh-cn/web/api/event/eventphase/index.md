@@ -13,13 +13,13 @@ slug: Web/API/Event/eventPhase
 var phase = event.eventPhase;
 ```
 
-返回一个代表当前执行阶段的 整数值，下面列出了不同的执行阶段[事件阶段常量](#事件阶段常量).
+返回一个代表当前执行阶段的整数值，下面列出了不同的执行阶段[事件阶段常量](#事件阶段常量)。
 
 ## 常量
 
 ### 事件阶段常量
 
-### 下面这些值表示了事件流当前执行的阶段。
+### 下面这些值表示了事件流当前执行的阶段
 
 | 常量                    | 值  | 描述                                                                                                                                                                                                                                                                                                            |
 | ----------------------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +28,7 @@ var phase = event.eventPhase;
 | `Event.AT_TARGET`       | 2   | 事件对象已经抵达{{domxref("EventTarget", "the event's target", "", 1)}}. 为这个阶段注册的事件监听被调用。如果 {{domxref("Event.bubbles")}} 的值为 false，对事件对象的处理在这个阶段后就会结束。                                                                                                                 |
 | `Event.BUBBLING_PHASE`  | 3   | 事件对象逆向向上传播回目标元素的祖先元素，从父亲元素开始，并且最终到达包含元素 {{domxref("Window")}}. 这就是冒泡，并且只有{{domxref("Event.bubbles")}} 值为 true 的时候才会发生。为这个阶段注册的{{domxref("EventListener", "Event listeners", "", 1)}} 在这个过程中被触发。                                    |
 
-更多细节，请看[section 3.1, Event dispatch and DOM event flow](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow), DOM 级别 3 的事件说明。
+更多细节，请看[section 3.1, Event dispatch and DOM event flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow), DOM 级别 3 的事件说明。
 
 ## 示例
 
@@ -127,12 +127,12 @@ function OnDivClick(e) {
     e.eventPhase == 0
       ? "none"
       : e.eventPhase == 1
-      ? "capturing"
-      : e.eventPhase == 2
-      ? "target"
-      : e.eventPhase == 3
-      ? "bubbling"
-      : "error";
+        ? "capturing"
+        : e.eventPhase == 2
+          ? "target"
+          : e.eventPhase == 3
+            ? "bubbling"
+            : "error";
   divInfo.innerHTML += e.currentTarget.id + "; eventPhase: " + level + "<br/>";
 }
 

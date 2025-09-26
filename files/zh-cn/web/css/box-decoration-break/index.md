@@ -3,11 +3,48 @@ title: box-decoration-break
 slug: Web/CSS/box-decoration-break
 ---
 
-{{CSSRef}}
-
 **`box-decoration-break`** 属性用来定义当元素跨多行、多列或多页时，元素的片段应如何呈现。
 
-{{EmbedInteractiveExample("pages/css/box-decoration-break.html")}}
+{{InteractiveExample("CSS Demo: box-decoration-break")}}
+
+```css interactive-example-choice
+-webkit-box-decoration-break: slice;
+box-decoration-break: slice;
+```
+
+```css interactive-example-choice
+-webkit-box-decoration-break: clone;
+box-decoration-break: clone;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-container">
+    <span id="example-element">This text breaks across multiple lines.</span>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-container {
+  width: 14rem;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #6f6f6f, #000);
+  color: white;
+  box-shadow:
+    8px 8px 10px 0 #ff1492,
+    -5px -5px 5px 0 #00f,
+    5px 5px 15px 0 #ff0;
+  padding: 0 1em;
+  border-radius: 16px;
+  border-style: solid;
+  margin-left: 10px;
+  font: 24px sans-serif;
+  line-height: 2;
+}
+```
 
 指定的值将影响元素以下属性的表现：
 
@@ -91,7 +128,7 @@ box-decoration-break: clone;
 
 你可以[尝试这两个例子](https://mdn.dev/archives/media/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html)。
 
-下面是一个使用大圆角值的内联元素示例。第二个“iM”在“i”和“M”之间有一个分界线，作为比较，第一个“iM”是没有换行符的。请注意，如果您将两个片段的呈现水平地排列在一起，就会导致非分段呈现。
+下面是一个使用大圆角值的内联元素示例。第二个“iM”在“i”和“M”之间有一个分界线，作为比较，第一个“iM”是没有换行符的。请注意，如果你将两个片段的呈现水平地排列在一起，就会导致非分段呈现。
 
 ![A screenshot of the rendering of the second inline element example.](box-decoration-break-slice-inline-2.png)
 

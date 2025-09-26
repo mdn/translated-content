@@ -3,8 +3,6 @@ title: background
 slug: Web/CSS/background
 ---
 
-{{CSSRef}}
-
 La propiedad `background` es un atajo para definir los valores individuales del fondo en una única regla CSS. Se puede usar `background` para definir los valores de una o de todas las propiedades siguientes: {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color", "color") }}, {{ Cssxref("background-image", "image") }}, {{ Cssxref("background-position", "position") }}, {{ Cssxref("background-repeat", "repeat") }}.
 
 - {{ Cssxref("initial", "Valor inicial") }}: ver propiedades individuales
@@ -35,7 +33,6 @@ La propiedad `background` se especifica como una o más capas de fondo, separada
 La sintaxis de cada capa es la siguiente:
 
 - Cada capa puede incluir cero o una ocurrencia de cualquiera de los siguientes valores
-
   - [`<attachment>`](#attachment)
   - [`<bg-image>`](#bg-image)
   - [`<position>`](#position)
@@ -49,15 +46,15 @@ La sintaxis de cada capa es la siguiente:
 ## Valores
 
 - background-color
-  - : ver [`color`](/es/CSS/background-color).
+  - : ver [`color`](/es/docs/Web/CSS/background-color).
 - background-image
-  - : ver [`image`](/es/CSS/background-image).
+  - : ver [`image`](/es/docs/Web/CSS/background-image).
 - background-repeat
-  - : ver [`repeat`](/es/CSS/background-repeat).
+  - : ver [`repeat`](/es/docs/Web/CSS/background-repeat).
 - background-attachment
-  - : ver [`background-attachment`](/es/CSS/background-attachment).
+  - : ver [`background-attachment`](/es/docs/Web/CSS/background-attachment).
 - background-position
-  - : ver [`position`](/es/CSS/background-position).
+  - : ver [`position`](/es/docs/Web/CSS/background-position).
 
 ## Ejemplos
 
@@ -80,7 +77,7 @@ La sintaxis de cada capa es la siguiente:
 }
 
 .topbanner {
-  background: url("starsolid.gif") #00d repeat-y fixed;
+  background: url("star-solid.gif") #00d repeat-y fixed;
 }
 ```
 
@@ -92,20 +89,13 @@ La sintaxis de cada capa es la siguiente:
 
 Tomando una declaración válida, la propiedad `background` inicia las propiedades individuales a sus valores iniciales para después asignarles los valores especificadas explícitamente en la declaración. No hay que definir un valor por cada propiedad individual, se cambia solo las que necesitamos en relación al valor por defecto.
 
-## Especificaciones
+### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#background)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/colors.html#propdef-background)
-- [CSS 3](http://www.w3.org/TR/2005/WD-css3-background-20050216/#the-background)
+{{Specifications}}
 
-## Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Mínima versión |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ## Ver también
 

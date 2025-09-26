@@ -1,13 +1,14 @@
 ---
 title: "HTMLElement: hidden プロパティ"
+short-title: hidden
 slug: Web/API/HTMLElement/hidden
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLElement")}} の **`hidden`** プロパティは、この要素の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性の値を反映します。
+{{domxref("HTMLElement")}} の **`hidden`** プロパティは、この要素の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性の値を反映します。
 
 ## 値
 
@@ -20,7 +21,7 @@ l10n:
 - `"until-found"`
   - : この要素は _hidden until found_ で、隠されているが、ページ内検索で見つかったり、フラグメントナビゲーションで到達したりすると表示されることを意味します。
 
-この属性の使い方の詳細は、このプロパティが反映する HTML の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性のページを参照してください。
+この属性の使い方の詳細は、このプロパティが反映する HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性のページを参照してください。
 
 ## 例
 
@@ -49,7 +50,11 @@ l10n:
 
 ```css
 .panel {
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border: 1px solid #22d;
   padding: 12px;
   width: 500px;
@@ -57,7 +62,11 @@ l10n:
 }
 
 .button {
-  font: 22px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    22px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   padding: 5px 36px;
 }
 
@@ -78,7 +87,7 @@ document.getElementById("okButton").addEventListener(
     document.getElementById("welcome").hidden = true;
     document.getElementById("awesome").hidden = false;
   },
-  false
+  false,
 );
 ```
 
@@ -96,5 +105,5 @@ document.getElementById("okButton").addEventListener(
 
 ## 関連情報
 
-- [`hidden`](/ja/docs/Web/HTML/Global_attributes#hidden) 属性
+- [hidden](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性
 - {{cssxref("display")}}

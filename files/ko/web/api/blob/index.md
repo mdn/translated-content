@@ -53,7 +53,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### 형식화 배열의 콘텐츠를 나타내는 URL 생성하기
 
-다음 코드는 JavaScript [형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)을 생성하고, 배열의 데이터를 담은 `Blob` 객체도 만듭니다. 그 후, {{domxref("URL.createObjectURL()")}}을 호출해 블롭을 {{glossary("URL")}}로 변환합니다.
+다음 코드는 JavaScript [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)을 생성하고, 배열의 데이터를 담은 `Blob` 객체도 만듭니다. 그 후, {{domxref("URL.createObjectURL()")}}을 호출해 블롭을 {{glossary("URL")}}로 변환합니다.
 
 #### HTML
 
@@ -67,7 +67,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 #### JavaScript
 
-아래 코드의 주제는 `typedArrayToURL()` 함수로, 주어진 형식화 배열에서 `Blob`을 생성한 후 블롭의 객체 URL을 반환합니다. 데이터를 객체 URL로 변환한 후에는 (데이터가 이미지 정보라면) {{HTMLElement("img")}} 요소의 [`src`](/ko/docs/Web/HTML/Element/img#src) 특성에 지정하는 등 다양하게 사용할 수 있습니다.
+아래 코드의 주제는 `typedArrayToURL()` 함수로, 주어진 형식화 배열에서 `Blob`을 생성한 후 블롭의 객체 URL을 반환합니다. 데이터를 객체 URL로 변환한 후에는 (데이터가 이미지 정보라면) {{HTMLElement("img")}} 요소의 [`src`](/ko/docs/Web/HTML/Reference/Elements/img#src) 특성에 지정하는 등 다양하게 사용할 수 있습니다.
 
 ```js
 function typedArrayToURL(typedArray, mimeType) {
@@ -135,4 +135,4 @@ const text = await blob.text();
 - {{domxref("FileReader")}}
 - {{domxref("File")}}
 - {{domxref("URL.createObjectURL")}}
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)

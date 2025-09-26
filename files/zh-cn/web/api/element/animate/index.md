@@ -7,7 +7,8 @@ slug: Web/API/Element/animate
 
 {{domxref("Element")}} 接口的 **`animate()`** 方法是创建一个新的 {{domxref("Animation")}} 的便捷方法，将它应用于元素，然后运行动画。它将返回一个新建的 {{domxref("Animation")}} 对象实例
 
-> **备注：** 一个元素上可以应用多个动画效果。你可以通过调用 {{domxref("Element.getAnimations()")}} 函数获得这些动画效果的一个列表。
+> [!NOTE]
+> 一个元素上可以应用多个动画效果。你可以通过调用 {{domxref("Element.getAnimations()")}} 函数获得这些动画效果的一个列表。
 
 ## 语法
 
@@ -20,9 +21,7 @@ animate(keyframes, options)
 - `keyframes`
   - : 关键帧对象数组，**或**一个关键帧对象（其属性为可迭代值的数组）。参见[关键帧格式](/zh-CN/docs/Web/API/Web_Animations_API/Keyframe_Formats)以了解详细信息。
 - `options`
-
   - : **代表动画持续时间的整数**（以毫秒为单位），或者一个包含一个或多个时间属性（在 [`KeyframeEffect()` options 参数](/zh-CN/docs/Web/API/KeyframeEffect/KeyframeEffect#参数)和下方列出）的对象：
-
     - `id` {{optional_inline}}
       - : 在 `animate()` 里可作为唯一标识的属性：一个用来引用动画的字符串。
 

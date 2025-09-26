@@ -16,7 +16,7 @@ tokenList.toggle(token [, force]);
 ### Paramètres
 
 - token
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le jeton que l'on veut activer ou désactiver.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le jeton que l'on veut activer ou désactiver.
 - force {{optional_inline}}
   - : Un _booléen_ qui, s'il est inclus, transforme la bascule en opération à un seul sens. Si ce paramètre vaut `false`, le jeton sera seulement supprimé et aucun ajout ne suivra. S'il vaut `true`, le jeton sera seulement ajouté et pas supprimé.
 
@@ -26,7 +26,7 @@ Un booléen qui vaut `true` ou `false` selon que le jeton se trouve dans la list
 
 ## Exemples
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList). Lors d'un clic sur le texte, nous remplaçons alors un jeton dans la liste et écrivons la liste dans le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<span>`.
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList). Lors d'un clic sur le texte, nous remplaçons alors un jeton dans la liste et écrivons la liste dans le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<span>`.
 
 ### HTML
 

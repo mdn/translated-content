@@ -22,11 +22,9 @@ await registeredUserScript.unregister();
 ### Paramètres
 
 - `userScriptOptions`
-
   - : `object`. Un objet `UserScriptOptions` représentant les scripts de contenu à enregistrer. Il a une syntaxe similaire aux options supportées par {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}.
 
     L'objet `UserScriptOptions` possède les propriétés suivantes :
-
     - scriptMetadata `{{Optional_Inline}}`
       - : Un objet `JSON` qui contient certaines propriétés de métadonnées associées aux `userScripts` enregistrés
     - `allFrames {{Optional_Inline}}`
@@ -52,7 +50,8 @@ Contrairement aux options de script de contenu, l'objet userScriptOptions n'a pa
 
 Une {{JSxRef("Promise")}} qui sera rempli avec un objet {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} que vous pouvez utiliser pour désinscrire ce script utilisateur particulier.
 
-> **Note :** Actuellement, les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés.
+> [!NOTE]
+> Actuellement, les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés.
 
 ## Compatibilité des navigateurs
 

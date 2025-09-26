@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 O método **`indexOf()`** retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+
+```js interactive-example
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf("bison", 2));
+// Expected output: 4
+
+console.log(beasts.indexOf("giraffe"));
+// Expected output: -1
+```
 
 ## Sintaxe
 
@@ -24,7 +38,7 @@ array.indexOf(elementoDePesquisa, [pontoInicial = 0])
 
 ## Descrição
 
-`indexOf()` compara o `elementoDePesquisa` com os elementos do Array usando [igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (o mesmo método usado pelo ===, ou triple-equals operator).
+`indexOf()` compara o `elementoDePesquisa` com os elementos do Array usando [igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (o mesmo método usado pelo ===, ou triple-equals operator).
 
 ## Exemplos
 
@@ -153,14 +167,11 @@ if (!Array.prototype.indexOf) {
 
 ## Especificações
 
-| Especificação                                                                  | Status             | Comentários                                       |
-| ------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}             | {{Spec2('ES5.1')}} | Definição inicial implementada no Javascript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.indexOf")}}
+{{Compat}}
 
 ## Veja também
 

@@ -19,7 +19,7 @@ nodeItem = nodeList.item(index);
 
 ## Alternate Syntax
 
-자바스크립트는 NodeList 에서 index를 얻기 위한, 배열과 같은 브라켓 문법(\[])을 제공합니다 :
+JavaScript는 NodeList 에서 index를 얻기 위한, 배열과 같은 브라켓 문법(\[])을 제공합니다 :
 
 ```js
 nodeItem = nodeList[index];

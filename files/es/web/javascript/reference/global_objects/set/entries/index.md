@@ -7,9 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 
 El método **`entries()`** devuelve un nuevo objeto de tipo `Iterator` que contiene **un array de tuplas `[value, value]`** por cada elemento en el `Set` original, manteniendo el orden de inserción. En los objetos de tipo `Set` no existe una clave key como ocurre en los objetos de tipo `Map`. Sin embargo, para mantener una API similar a la de los objetos de tipo `Map`, cada _entry_ contiene el mismo valor para su clave y valor, devolviendo por tanto un array de tuplas `[value, value]`.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
 
-El código de este ejemplo interactivo esta almacenado en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interativos, simplemente clona <https://github.com/mdn/interactive-examples> y envíanos una pull request.
+```js interactive-example
+const set1 = new Set();
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1.entries();
+
+for (const entry of iterator1) {
+  console.log(entry);
+  // Expected output: Array [42, 42]
+  // Expected output: Array ["forty two", "forty two"]
+}
+```
 
 ## Sintaxis
 

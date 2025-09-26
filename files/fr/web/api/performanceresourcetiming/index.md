@@ -5,7 +5,7 @@ slug: Web/API/PerformanceResourceTiming
 
 {{APIRef("Resource Timing API")}}
 
-L'interface **`PerformanceResourceTiming`** permet de récupérer et d'analyser des données de synchronisation réseau détaillées concernant le chargement des _ressources_ d'une application. Une application peut utiliser les mesures temporelles pour déterminer, par exemple, la durée nécessaire à l'extraction d'une ressource spécifique, telle qu'une [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), un élément [`<svg>`](/fr/docs/Web/SVG/Element/svg), une image ou un script.
+L'interface **`PerformanceResourceTiming`** permet de récupérer et d'analyser des données de synchronisation réseau détaillées concernant le chargement des _ressources_ d'une application. Une application peut utiliser les mesures temporelles pour déterminer, par exemple, la durée nécessaire à l'extraction d'une ressource spécifique, telle qu'une [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), un élément [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), une image ou un script.
 
 Les propriétés de l'interface créent une _chronologie de chargement des ressources_ avec un [timestamps haute résolution](/fr/docs/Web/API/DOMHighResTimeStamp) pour les événements réseau tels que les heures de début et de fin de redirection, les heures de début de récupération, les heures de début et de fin de recherche DNS, les heures de début et de fin de réponse, etc. En outre, l'interface étend [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) avec d'autres propriétés qui fournissent des données sur la taille de la ressource extraite ainsi que le _type_ de ressource qui a initié l'extraction.
 
@@ -29,9 +29,9 @@ Cette interface étend les propriétés [`PerformanceEntry`](/fr/docs/Web/API/Pe
 L'interface prend également en charge les propriétés suivantes, qui sont énumérées dans l'ordre temporel selon lequel elles sont enregistrées pour l'extraction d'une seule ressource. Une liste alphabétique est présentée dans la navigation, à gauche.
 
 - [`PerformanceResourceTiming.initiatorType`](/fr/docs/Web/API/PerformanceResourceTiming/initiatorType) {{readonlyInline}}
-  - : Une chaîne de caractère [`string`](/fr/docs/Web/API/DOMString) représentant le _type_ de ressource qui a initié l'entrée de performance, comme spécifié dans [`PerformanceResourceTiming.initiatorType`](/fr/docs/Web/API/PerformanceResourceTiming/initiatorType).
+  - : Une chaîne de caractère [`string`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le _type_ de ressource qui a initié l'entrée de performance, comme spécifié dans [`PerformanceResourceTiming.initiatorType`](/fr/docs/Web/API/PerformanceResourceTiming/initiatorType).
 - [`PerformanceResourceTiming.nextHopProtocol`](/fr/docs/Web/API/PerformanceResourceTiming/nextHopProtocol) {{readonlyInline}}
-  - : Une chaîne de caractère [`string`](/fr/docs/Web/API/DOMString) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
+  - : Une chaîne de caractère [`string`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le _protocole réseau_ utilisé pour récupérer la ressource, tel qu'identifié par le [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 - [`PerformanceResourceTiming.workerStart`](/fr/docs/Web/API/PerformanceResourceTiming/workerStart) {{readonlyInline}}
   - : Retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant de transmettre le [`FetchEvent`](/fr/docs/Web/API/FetchEvent) si un processus de Service Worker est déjà en cours, ou immédiatement avant de lancer le processus de Service Worker s'il n'est pas encore en cours. Si la ressource n'est pas interceptée par un Service Worker, la propriété retourne toujours 0.
 - [`PerformanceResourceTiming.redirectStart`](/fr/docs/Web/API/PerformanceResourceTiming/redirectStart) {{readonlyInline}}
@@ -68,11 +68,11 @@ L'interface prend également en charge les propriétés suivantes, qui sont énu
 ## Méthodes
 
 - [`PerformanceResourceTiming.toJSON()`](/fr/docs/Web/API/PerformanceResourceTiming/toJSON)
-  - : Renvoie une chaîne de caractère [`DOMString`](/fr/docs/Web/API/DOMString) qui est la représentation JSON de l'objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming).
+  - : Renvoie une chaîne de caractère [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est la représentation JSON de l'objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming).
 
 ## Exemple
 
-Voir l'exemple dans [Utilisation de Resource Timing API](/fr/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API).
+Voir l'exemple dans [Utilisation de Resource Timing API](/fr/docs/Web/API/Performance_API/Resource_timing).
 
 ## Spécifications
 
@@ -84,5 +84,5 @@ Voir l'exemple dans [Utilisation de Resource Timing API](/fr/docs/Web/API/Resour
 
 ## Voir aussi
 
-- [L'API _Resource Timing_](/fr/docs/Web/API/Resource_Timing_API)
-- [Utilisation de l'API _Resource Timing_](/fr/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [L'API _Resource Timing_](/fr/docs/Web/API/Performance_API/Resource_timing)
+- [Utilisation de l'API _Resource Timing_](/fr/docs/Web/API/Performance_API/Resource_timing)

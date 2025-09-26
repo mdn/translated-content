@@ -9,7 +9,7 @@ l10n:
 
 **`nodeValue`** は {{domxref("Node")}} インターフェイスのプロパティで、現在のノードの値を返したり設定したりします。
 
-## Value
+## 値
 
 もしあれば、現在のノードの値を含む文字列です。
 文書自身においては、 `nodeValue` は `null` を返します。
@@ -18,19 +18,20 @@ l10n:
 
 以下の表はノードの種類別の返値を表しています。
 
-| ノード                               | nodeValue の値                      |
-| ------------------------------------ | ----------------------------------- |
-| {{domxref("CDATASection")}}          | CDATA セクションの中身              |
-| {{domxref("Comment")}}               | コメントの中身                      |
-| {{domxref("Document")}}              | `null`                              |
-| {{domxref("DocumentFragment")}}      | `null`                              |
-| {{domxref("DocumentType")}}          | `null`                              |
-| {{domxref("Element")}}               | `null`                              |
-| {{domxref("NamedNodeMap")}}          | `null`                              |
-| {{domxref("ProcessingInstruction")}} | 対象を除く内容物全体                |
-| {{domxref("Text")}}                  | テキストノードの中身                |
+| ノード                               | nodeValue の値         |
+| ------------------------------------ | ---------------------- |
+| {{domxref("CDATASection")}}          | CDATA セクションの中身 |
+| {{domxref("Comment")}}               | コメントの中身         |
+| {{domxref("Document")}}              | `null`                 |
+| {{domxref("DocumentFragment")}}      | `null`                 |
+| {{domxref("DocumentType")}}          | `null`                 |
+| {{domxref("Element")}}               | `null`                 |
+| {{domxref("NamedNodeMap")}}          | `null`                 |
+| {{domxref("ProcessingInstruction")}} | 対象を除く内容物全体   |
+| {{domxref("Text")}}                  | テキストノードの中身   |
 
-> **メモ:** `nodeValue` が `null` になると定義されている場合は、設定しても効果がありません。
+> [!NOTE]
+> `nodeValue` が `null` になると定義されている場合は、設定しても効果がありません。
 
 ## 例
 

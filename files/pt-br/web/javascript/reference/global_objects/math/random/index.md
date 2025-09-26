@@ -3,7 +3,7 @@ title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -55,7 +55,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Nota:** Pode ser tentandor usar `Math.round()` para arredondar `min` e `max`, mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.
+> [!NOTE]
+> Pode ser tentandor usar `Math.round()` para arredondar `min` e `max`, mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.
 
 ### Gerando um número inteiro aleatório entre dois valores, inclusive
 
@@ -71,12 +72,8 @@ function getRandomIntInclusive(min, max) {
 
 ## Especificações
 
-| Especificação                                                            | Status                   | Comentário                                                                          |
-| ------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}     | Definição inicial. JavaScript 1.0 (UNIX Only) / JavaScript 1.1 (Todas plataformas). |
-| {{SpecName('ES5.1', '#sec-15.8.2.14', 'Math.random')}} | {{Spec2('ES5.1')}} |                                                                                     |
-| {{SpecName('ES6', '#sec-math.random', 'Math.random')}} | {{Spec2('ES6')}}     |                                                                                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.random")}}
+{{Compat}}

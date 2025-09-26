@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 返値
@@ -35,12 +35,12 @@ resolvedOptions()
 ### resolvedOptions の使用
 
 ```js
-const displayNames = new Intl.DisplayNames(['de-DE'], {type: 'region'});
+const displayNames = new Intl.DisplayNames(["de-DE"], { type: "region" });
 
 const usedOptions = displayNames.resolvedOptions();
-console.log(usedOptions.locale);   // "de-DE"
-console.log(usedOptions.style);    // "long"
-console.log(usedOptions.type);     // "region"
+console.log(usedOptions.locale); // "de-DE"
+console.log(usedOptions.style); // "long"
+console.log(usedOptions.type); // "region"
 console.log(usedOptions.fallback); // "code"
 ```
 

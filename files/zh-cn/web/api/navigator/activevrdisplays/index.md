@@ -1,40 +1,42 @@
 ---
-title: Navigator.activeVRDisplays
+title: Navigator：activeVRDisplays 属性
 slug: Web/API/Navigator/activeVRDisplays
+l10n:
+  sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
+{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-**`activeVRDisplays`** 是 {{domxref("Navigator")}} 接口返回的数组中每个 {{domxref("VRDisplay")}} 对象的只读属性（{{domxref("VRDisplay.ispresenting")}} 为 `true`）。
+{{domxref("Navigator")}} 接口的只读属性 **`activeVRDisplays`** 返回一个包含所有当前正在呈现（{{domxref("VRDisplay.ispresenting")}} 为 `true`）的 {{domxref("VRDisplay")}} 对象的数组。
 
-> **备注：** 这个属性是旧的 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) 的一部分，已经被 [WebXR Device API](https://immersive-web.github.io/webxr/) 取代。
+> [!NOTE]
+> 此属性是旧版 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) 的一部分。它已被 [WebXR 设备 API](https://immersive-web.github.io/webxr/) 取代。
 
-## 返回值
+## 值
 
-{{domxref("VRDisplay")}} 对象数组。
+{{domxref("VRDisplay")}} 对象的数组。
 
-## 例子
+## 示例
 
 ```js
 function showActive() {
   const displays = navigator.activeVRDisplays;
   for (const display of displays) {
-    console.log(`Display ${display.displayId} is active.`);
+    console.log(`显示屏 ${display.displayId} 已激活。`);
   }
 }
 ```
 
 ## 规范
 
-此项属性是旧的 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) 的一部分，已经被 [WebXR Device API](https://immersive-web.github.io/webxr/) 取代。它不再有望成为标准。
+此属性是旧版 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) 的一部分，已被 [WebXR 设备 API](https://immersive-web.github.io/webxr/) 取代。其不再处于标准化轨道。
 
-在所有浏览器实现新的 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals) 之前，推荐使用一些框架，如 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/)、[Three.js](https://threejs.org/) 或使用 [polyfill](https://github.com/immersive-web/webxr-polyfill)，来开发可以在任何浏览器中运行的 WebXR 应用程序 [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
+由于并非所有浏览器都已实现新的 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals)，因此建议依赖框架（例如 [A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/) 或 [Three.js](https://threejs.org/)）或 [polyfill](https://github.com/immersive-web/webxr-polyfill) 来开发可在所有浏览器中运行的 WebXR 应用程序 [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [WebVR API 主页](/zh-CN/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/>——示例、下载和其他来自于 Mozilla VR 团队的资源。
+- [WebVR API](/zh-CN/docs/Web/API/WebVR_API)

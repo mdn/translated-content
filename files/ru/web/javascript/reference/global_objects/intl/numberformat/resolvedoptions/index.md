@@ -3,7 +3,7 @@ title: Intl.NumberFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 ---
 
-{{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -26,13 +26,11 @@ numberFormat.resolvedOptions()
 - `style`
 
   `useGrouping`
-
   - : Значения, предоставленные для этих свойств в аргументе `options`, либо значения по умолчанию.
 
 - `currency`
 
   `currencyDisplay`
-
   - : Значения, предоставленные для этих свойств в аргументе `options`, либо значения по умолчанию. Эти свойства присутствуют только в том случае, если свойство `style` равно `"currency"`.
 
 Из следующих двух групп свойств включается только одна:
@@ -42,20 +40,16 @@ numberFormat.resolvedOptions()
   `minimumFractionDigits`
 
   `maximumFractionDigits`
-
   - : Значения, предоставленные для этих свойств в аргументе `options`, либо значения по умолчанию. Эти свойства присутствуют только в том случае, если в аргументе `options` не присутствовало ни свойства `minimumSignificantDigits`, ни свойства `maximumSignificantDigits`.
 
 - `minimumSignificantDigits`
 
   `maximumSignificantDigits`
-
   - : Значения, предоставленные для этих свойств в аргументе `options`, либо значения по умолчанию. Эти свойства присутствуют только в том случае, если в аргументе `options` присутствовало хотя бы одно из них.
 
 ## Спецификации
 
-| Спецификация                                                                             | Статус                  | Комментарии              |
-| ---------------------------------------------------------------------------------------- | ----------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-11.3.3', 'Intl.NumberFormat.prototype.resolvedOptions')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

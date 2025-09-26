@@ -18,7 +18,7 @@ SyntaxError: missing } after property list (Firefox)
 
 ## Quel est le problème ?
 
-Il y a une coquille dans le [littéral objet](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet) utilisé. Cela peut être dû à une accolade manquante ou à une virgule manquante. Il est aussi utile de vérifier que les accolades et les parenthèses sont bien ordonnées. Pour ce type d'erreur, une bonne indentation permet de repérer plus facilement la coquille parmi les lignes de code.
+Il y a une coquille dans le [littéral objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer) utilisé. Cela peut être dû à une accolade manquante ou à une virgule manquante. Il est aussi utile de vérifier que les accolades et les parenthèses sont bien ordonnées. Pour ce type d'erreur, une bonne indentation permet de repérer plus facilement la coquille parmi les lignes de code.
 
 ## Exemples
 
@@ -46,4 +46,4 @@ var obj = {
 
 ## Voir aussi
 
-- [Les littéraux objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet)
+- [Les littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)

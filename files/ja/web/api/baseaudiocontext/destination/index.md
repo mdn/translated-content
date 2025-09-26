@@ -1,6 +1,9 @@
 ---
-title: BaseAudioContext.destination
+title: "BaseAudioContext: destination プロパティ"
+short-title: destination
 slug: Web/API/BaseAudioContext/destination
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -13,15 +16,15 @@ slug: Web/API/BaseAudioContext/destination
 
 ## 例
 
-> **メモ:** 完全な実装の例は、 [MDN GitHub リポジトリー](https://github.com/mdn/)の [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic) などを参照してください。
+> [!NOTE]
+> より完全な応用例や情報については、[Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) のデモをご覧ください（関連するコードは [app.js の 108 - 193 行目](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)を参照）。
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 // 古い webkit/blink のブラウザーでは接頭辞が必要です
 
-var oscillatorNode = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillatorNode = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillatorNode.connect(gainNode);
 gainNode.connect(audioCtx.destination);

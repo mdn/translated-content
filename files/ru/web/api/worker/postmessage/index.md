@@ -20,7 +20,6 @@ worker.postMessage(message, [transfer]);
 - _message_
   - : `Object` передаваемый в `worker`. Будет содержаться в поле `data` описания события обработчика {{domxref("DedicatedWorkerGlobalScope.onmessage")}}. Это может быть любое значение или объект JavaScript, которые может обработать алгоритм структурированного клонирования, поддерживающий циклические ссылки.
 - _transfer_ {{optional_inline}}
-
   - : Необязательный [`array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array) с передаваемыми ({{domxref("Transferable")}}) объектами (из тех, что были указаны в `message`) на которые передаются права собственности. Если право на объект передаётся, он становится непригодным (_neutered_) в контексте, из которого был отправлен, и становится доступным только в `worker`, которому он был отправлен.
 
     Переданные (`transferable`) объекты могут быть экземплярами классов {{domxref("ArrayBuffer")}}, {{domxref("MessagePort")}} или {{domxref("ImageBitmap")}}. null не является допустимым значением для передачи прав.
@@ -31,7 +30,7 @@ Void.
 
 ## Пример
 
-В следующем фрагменте кода показано создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}. При изменении значений одного из двух полей формы (`first` и `second`) событием {{event("change")}} вызывается функция `postMessage()` для отправки значений полей текущему worker.
+В следующем фрагменте кода показано создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}. При изменении значений одного из двух полей формы (`first` и `second`) событием [`change`](/ru/docs/Web/API/HTMLElement/change_event) вызывается функция `postMessage()` для отправки значений полей текущему worker.
 
 ```js
 var myWorker = new Worker("worker.js");
@@ -47,7 +46,7 @@ second.onchange = function () {
 };
 ```
 
-Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
 > **Примечание:** `postMessage()` может отправить только один объект за раз. Если нужно передать несколько значений, то можно отправить массив, как показано выше.
 

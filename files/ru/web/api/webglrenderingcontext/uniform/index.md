@@ -7,7 +7,8 @@ slug: Web/API/WebGLRenderingContext/uniform
 
 **`WebGLRenderingContext.uniform[1234][fi][v]()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) устанавливает значение для постоянных переменных Uniform.
 
-> **Примечание:** Многие из описанных в этом разделе функцию имеют расширенные интерфейсы WebGL 2, которые можно найти {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
+> [!NOTE]
+> Многие из описанных в этом разделе функцию имеют расширенные интерфейсы WebGL 2, которые можно найти {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
 
 ## Синтаксис
 
@@ -44,9 +45,7 @@ gl.uniform1iv(samplerCubeUniformLoc, [v]); // для samplerCube или масс
 - location
   - : {{domxref("WebGLUniformLocation")}} объект содержащий uniform атрибут для его изменения.
 - `value, v0, v1, v2, v3`
-
   - : Новое значение для uniform переменной. Допустимые типы:
-
     - Тип float {{jsxref("Number")}} для этого типа (методы с "f").
     - Последовательность чисел с плавающей точкой (пример {{jsxref("Float32Array")}} или {{jsxref("Array")}} чисел) для векторных методов с плавающей точкой (методы с "fv").
     - Тип {{jsxref("Number")}} для этого типа (методы с "i").
@@ -62,7 +61,7 @@ None.
 GL.uniform1f(GL.getUniformLocation(PROGRAM, "u_time"), timeStamp / 1000.0);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

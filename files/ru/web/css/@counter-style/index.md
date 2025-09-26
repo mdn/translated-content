@@ -7,7 +7,7 @@ slug: Web/CSS/@counter-style
 
 ## Описание
 
-The **`@counter-style`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) lets authors define specific counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.
+The **`@counter-style`** [CSS](/en-US/CSS) [at-rule](/en-US/CSS/At-rule) lets authors define specific counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.
 
 Initial version of CSS defined a set of useful counter styles. Although more styles where added to this set of predefined styles over the years, this restrictive way proved unable to fulfill the needs of worldwide typography. The `@counter-style` at-rule addresses this shortcoming in an open-ended manner, by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.
 
@@ -53,7 +53,6 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 <!---->
 
 - {{cssxref("@counter-style/symbols", "symbols")}}
-
   - : Specifies the symbols that are to be used for the marker representations. Symbols can contain string, images or custom identifiers. How the symbols are used to construct the marker representation is up to the algorithm specified in the system descriptor. For example, if the system specified is fixed, then each of the N symbols specified in the descriptor will be used to represent the first N counter symbols. Once the specified set of symbols have exhausted, the fallback style will be used for the rest of the list.
 
     The below @counter-style rule uses images instead of character symbols.
@@ -119,9 +118,7 @@ Checkout more examples on the [demo page](https://mdn.github.io/css-counter-styl
 
 ## Спецификации
 
-| Спецификация                                                                    | Статус                           | Комментарий                |
-| ------------------------------------------------------------------------------- | -------------------------------- | -------------------------- |
-| {{SpecName('CSS3 Counter Styles', '#the-counter-style-rule', 'counter-style')}} | {{Spec2('CSS3 Counter Styles')}} | Первоначальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

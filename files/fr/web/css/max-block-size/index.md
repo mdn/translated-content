@@ -13,7 +13,46 @@ Cette propriété permet, contrairement à `max-height` et `max-width`, de défi
 
 Cette propriété est une propriété _logique_ qui doit remplacer les propriétés _physiques_ correspondantes (`max-height` ou `max-width`) si on souhaite que la disposition tienne compte du mode d'écriture de la page (que celui-ci soit horizontal ou vertical). Vous pouvez consulter [ces exemples](/fr/docs/Web/CSS/writing-mode#exemple) pour en savoir plus.
 
-{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
+{{InteractiveExample("CSS Demo: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum block size. <br />This will
+    limit the size in the block dimension, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntaxe
 
@@ -67,9 +106,11 @@ La valeur de `writing-mode` détermine la propriété physique correspondant à 
 | `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | [`max-height`](/fr/docs/Web/CSS/max-height)       |
 | `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | [`max-width`](/fr/docs/Web/CSS/max-width)         |
 
-> **Note :** Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et pourraient être réintroduites dans la spécification de niveau 4.
+> [!NOTE]
+> Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et pourraient être réintroduites dans la spécification de niveau 4.
 
-> **Note :** Les modes d'écriture `lr`, `lr-tb`, `rl`, `rb` et `rb-tl` ne sont plus autorisés pour les contextes [HTML](/fr/docs/Glossary/HTML) et peuvent uniquement être utilisés dans des contextes [SVG](/fr/docs/Glossary/SVG) 1.x.
+> [!NOTE]
+> Les modes d'écriture `lr`, `lr-tb`, `rl`, `rb` et `rb-tl` ne sont plus autorisés pour les contextes [HTML](/fr/docs/Glossary/HTML) et peuvent uniquement être utilisés dans des contextes [SVG](/fr/docs/Glossary/SVG) 1.x.
 
 ## Définition formelle
 
@@ -89,7 +130,7 @@ Excepté cette différence sur le mode d'écriture, les boîtes sont identiques,
 
 #### HTML
 
-Le fragment HTML se compose de deux blocs [`<div>`](/fr/docs/Web/HTML/Element/div) dont le mode d'écriture sera défini avec la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) selon que la classe HTML utilisée vaut `horizontal` ou `vertical`. Les deux boîtes utilisent la classe `standard-box`, qui fournit la coloration, le remplissage et les valeurs pour `max-block-size`.
+Le fragment HTML se compose de deux blocs [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) dont le mode d'écriture sera défini avec la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) selon que la classe HTML utilisée vaut `horizontal` ou `vertical`. Les deux boîtes utilisent la classe `standard-box`, qui fournit la coloration, le remplissage et les valeurs pour `max-block-size`.
 
 ```html
 <p>Writing mode <code>horizontal-tb</code> (the default):</p>

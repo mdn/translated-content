@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-`message` 이벤트는 window가 메세지를 받을 때, 예를 들어 다른 브라우징 맥락에서 [`Window.postMessage()`](/ko-KR/docs/Web/API/Window/postMessage)을 호출할 때 {{domxref('Window')}} 객체에서 실행됩니다.
+`message` 이벤트는 window가 메세지를 받을 때, 예를 들어 다른 브라우징 맥락에서 [`Window.postMessage()`](/ko/docs/Web/API/Window/postMessage)을 호출할 때 {{domxref('Window')}} 객체에서 실행됩니다.
 
 이 이벤트는 취소할 수 없고, 버블링되지도 않습니다.
 
@@ -44,7 +44,7 @@ _이 인터페이스는 부모인 {{domxref("Event")}}의 속성들도 상속받
 
 ## 예시
 
-서로 다른 [`<iframe>`](/ko-KR/docs/Web/HTML/Element/iframe)과 같은, 다른 브라우징 맥락에서 메세지를 보낸다고 가정할 때, 아래와 같이 코드를 작성하면 됩니다.
+서로 다른 [`<iframe>`](/ko/docs/Web/HTML/Element/iframe)과 같은, 다른 브라우징 맥락에서 메세지를 보낸다고 가정할 때, 아래와 같이 코드를 작성하면 됩니다.
 
 ```js
 const targetFrame = window.top.frames[1];
@@ -56,7 +56,7 @@ windowMessageButton.addEventListener("click", () => {
 });
 ```
 
-수신자는 [`addEventListener()`](/ko-KR/docs/Web/API/EventTarget/addEventListener)를 사용해, 아래 코드와 같이 메세지를 받을 수 있습니다.
+수신자는 [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용해, 아래 코드와 같이 메세지를 받을 수 있습니다.
 
 ```js
 window.addEventListener("message", (event) => {
@@ -82,5 +82,5 @@ window.onmessage = (event) => {
 
 ## 같이 보기
 
-- 연관된 이벤트들: [`messageerror`](/en-US/docs/Web/API/Window/messageerror_event).
-- [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage).
+- 연관된 이벤트들: [`messageerror`](/ko/docs/Web/API/Window/messageerror_event).
+- [`Window.postMessage()`](/ko/docs/Web/API/Window/postMessage).

@@ -1,13 +1,14 @@
 ---
-title: PointerEvent.pointerType
+title: "PointerEvent: pointerType プロパティ"
+short-title: pointerType
 slug: Web/API/PointerEvent/pointerType
 l10n:
-  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("Pointer Events") }}
 
-**`pointerType`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、特定のポインターイベントを引き起こした機器の種類（マウス、ペン、またはタッチ）を示します。
+**`pointerType`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、特定のポインターイベントを引き起こした機器の種類（マウス、ペン、タッチのいずれか）を示します。
 
 ## 値
 
@@ -20,14 +21,14 @@ l10n:
 - `"touch"`
   - : このイベントは指などのタッチによって生成されました。
 
-機器の種類がブラウザーで検出できない場合、値は空の文字列 (`""`) になります。 ブラウザーが上記以外のポインター機器の種類に対応している場合は、他の種類の機器と名前が競合しないように、値に *ベンダー接頭辞* をつける必要があります。
+機器の種類がブラウザーで検出できない場合、値は空の文字列 (`""`) になります。 ブラウザーが上記以外のポインター機器の種類に対応している場合は、他の種類の機器と名前が競合しないように、値に _ベンダー接頭辞_ をつける必要があります。
 
 ## 例
 
 この例は、`pointerType` プロパティの値を使用して適切なポインターの種類の処理関数を呼び出す方法を示しています。
 
 ```js
-  targetElement.addEventListener(
+targetElement.addEventListener(
   "pointerdown",
   (event) => {
     // 適切なポインターの種類のハンドラーを呼び出す
@@ -45,7 +46,7 @@ l10n:
         console.log(`pointerType ${event.pointerType} には対応していません`);
     }
   },
-  false
+  false,
 );
 ```
 

@@ -7,19 +7,32 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 
 **`Symbol.iterator`** 为每一个对象定义了默认的迭代器。该迭代器可以被 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环使用。
 
-{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+
+```js interactive-example
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+console.log([...iterable1]);
+// Expected output: Array [1, 2, 3]
+```
 
 ## 描述
 
-当需要对一个对象进行迭代时（比如开始用于一个 `for..of` 循环中），它的 `@@iterator` 方法都会在不传参情况下被调用，返回的**迭代器**用于获取要迭代的值。
+当需要对一个对象进行迭代时（比如开始用于一个 `for..of` 循环中），它的 `[Symbol.iterator]()` 方法都会在不传参情况下被调用，返回的**迭代器**用于获取要迭代的值。
 
-一些内置类型拥有默认的迭代器行为，其他类型（如 {{jsxref("Object")}}）则没有。拥有默认的 `@@iterator` 方法的内置类型是：
+一些内置类型拥有默认的迭代器行为，其他类型（如 {{jsxref("Object")}}）则没有。拥有默认的 `[Symbol.iterator]()` 方法的内置类型是：
 
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
+- [`String.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
+- [`Map.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
+- [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
 
 更多信息请参见[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
@@ -65,7 +78,7 @@ console.log(...someObj); // 'a', 'b'
 
 ### 不符合标准的迭代器
 
-如果一个迭代器 `@@iterator` 没有返回一个迭代器对象，那么它就是一个不符合标准的迭代器。这样的迭代器将会在运行期抛出异常，甚至出现非常诡异的 Bug：
+如果一个迭代器 `[Symbol.iterator]()` 没有返回一个迭代器对象，那么它就是一个不符合标准的迭代器。这样的迭代器将会在运行期抛出异常，甚至出现非常诡异的 Bug：
 
 ```js example-bad
 const nonWellFormedIterable = {};
@@ -85,8 +98,10 @@ nonWellFormedIterable[Symbol.iterator] = () => 1;
 
 - [`core-js` 中 `Symbol.iterator` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
+- [`String.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
+- [`Map.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
+- [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
+- [`arguments[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
+- [`Segments.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator)

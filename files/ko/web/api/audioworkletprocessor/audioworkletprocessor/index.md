@@ -20,11 +20,9 @@ new AudioWorkletProcessor(options);
 ### 매개변수
 
 - `options`
-
   - : {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}}에 _options_ 매개변수로서 전달되고 [structured clone algorithm](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)에 통과되는 객체. 사용 가능한 속성들은 다음과 같습니다:
 
     <!-- 명세는 이 객체를 다음으로 나타냅니다: AudioWorkletNodeOptions -->
-
     - `numberOfInputs` {{optional_inline}}
       - : {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} 속성을 초기화할 값. 기본 값은 1입니다.
     - `numberOfOutputs` {{optional_inline}}
@@ -36,8 +34,7 @@ new AudioWorkletProcessor(options);
     - `processorOptions` {{optional_inline}}
       - : 근본적인 {{domxref("AudioWorkletProcessor")}}의 사용자 정의 초기화에 사용될 수 있는 모든 추가적인 데이터
 
-    처음 두 개의 속성에 대해 기본 값이 있어서, {{domxref("AudioWorkletNode.AudioWorkletNode",
-    "AudioWorkletNode constructor")}}에 전달되는 _options_ 객체가 없을지라도, 노드에 의해 `AudioWorkletProcessor` 생성자에 전달된 _options_ 객체는 존재할 것이고 최소한 `numberOfInputs` 과 `numberOfOutputs` 을 가질 것이라는 데 주목하세요.
+    처음 두 개의 속성에 대해 기본 값이 있어서, {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}}에 전달되는 _options_ 객체가 없을지라도, 노드에 의해 `AudioWorkletProcessor` 생성자에 전달된 _options_ 객체는 존재할 것이고 최소한 `numberOfInputs` 과 `numberOfOutputs` 을 가질 것이라는 데 주목하세요.
 
 ### 반환 값
 

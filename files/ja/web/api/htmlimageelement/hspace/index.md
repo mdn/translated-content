@@ -10,7 +10,7 @@ l10n:
 
 **`hspace`** は {{domxref("HTMLImageElement")}} インターフェイスの*廃止された*プロパティで、ページをレイアウトする際に {{HTMLElement("img")}} 要素の左右に何ピクセル分の空きを残すかを指定します。
 
-このプロパティは、{{Glossary("HTML")}} の [`hspace`](/ja/docs/Web/HTML/Element/img#hspace) 属性を反映します。
+このプロパティは、{{Glossary("HTML")}} の [`hspace`](/ja/docs/Web/HTML/Reference/Elements/img#hspace) 属性を反映します。
 
 ## 値
 
@@ -20,7 +20,8 @@ l10n:
 
 `hspace` に指定された値は {{cssxref("margin-left")}} および {{cssxref("margin-right")}} プロパティにマッピングされて、それらのマージンの幅をピクセル単位で指定します。
 
-> **警告:** このプロパティは廃止されました。代わりに、CSS の {{cssxref("margin")}} プロパティとその個別指定プロパティを使用して、`<img>` の周囲に余白を設定してください。
+> [!WARNING]
+> このプロパティは廃止されました。代わりに、CSS の {{cssxref("margin")}} プロパティとその個別指定プロパティを使用して、`<img>` の周囲に余白を設定してください。
 
 ## 仕様書
 

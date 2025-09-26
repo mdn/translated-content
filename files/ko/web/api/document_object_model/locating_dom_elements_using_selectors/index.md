@@ -1,6 +1,6 @@
 ---
 title: 선택자로 DOM 요소 선택하기
-slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -16,9 +16,10 @@ slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 - `querySelectorAll`
   - : 노드의 하위 트리 안에서 일치하는 모든 `Element`를 포함한 {{domxref("NodeList")}}를 반환합니다. 결과가 없으면 빈 `NodeList`를 반환합니다.
 
-> **참고:** The [`NodeList`](/ko/docs/DOM/NodeList) returned by [`querySelectorAll()`](/ko/docs/DOM/Element.querySelectorAll) is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.
+> [!NOTE]
+> The [`NodeList`](/ko/docs/Web/API/NodeList) returned by [`querySelectorAll()`](/ko/docs/Web/API/Element/querySelectorAll) is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.
 
-You may find examples and details by reading the documentation for the [`querySelector()`](/ko/docs/DOM/Element.querySelector) and [`querySelectorAll()`](/ko/docs/DOM/Element.querySelectorAll) methods, as well as in the article [Code snippets for querySelector](/ko/docs/Code_snippets/QuerySelector).
+You may find examples and details by reading the documentation for the [`querySelector()`](/ko/docs/Web/API/Element/querySelector) and [`querySelectorAll()`](/ko/docs/Web/API/Element/querySelectorAll) methods, as well as in the article [Code snippets for querySelector](/ko/docs/Code_snippets/QuerySelector).
 
 ## 선택자
 
@@ -40,9 +41,9 @@ You may use any CSS selectors with the `querySelector()` and `querySelectorAll()
 
 ## 같이 보기
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
-- [`element.querySelector`](/ko/docs/DOM/Element.querySelector)
-- [`element.querySelectorAll`](/ko/docs/DOM/Element.querySelectorAll)
-- [`document.querySelector`](/ko/docs/DOM/Document.querySelector)
-- [`document.querySelectorAll`](/ko/docs/DOM/Document.querySelectorAll)
+- [Selectors API](https://www.w3.org/TR/selectors-api/)
+- [`element.querySelector`](/ko/docs/Web/API/Element/querySelector)
+- [`element.querySelectorAll`](/ko/docs/Web/API/Element/querySelectorAll)
+- [`document.querySelector`](/ko/docs/Web/API/Document/querySelector)
+- [`document.querySelectorAll`](/ko/docs/Web/API/Document/querySelectorAll)
 - [Code snippets for querySelector](/ko/docs/Code_snippets/QuerySelector)

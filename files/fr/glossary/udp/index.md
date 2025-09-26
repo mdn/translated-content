@@ -3,6 +3,8 @@ title: UDP
 slug: Glossary/UDP
 ---
 
+{{GlossarySidebar}}
+
 **UDP** (User Datagram Protocol) est un {{glossary("protocol","protocole")}} de longue date utilisé avec {{glossary("IPv6","IP")}} pour envoyer des données lorsque la vitesse de transmission et l'efficacité importent davantage que la sécurité et la fiabilitié.
 
 ## Pour en savoir plus
@@ -13,6 +15,6 @@ slug: Glossary/UDP
 
 ### Référence technique
 
-- [Spécification](http://tools.ietf.org/html/rfc768)
+- [Spécification](https://tools.ietf.org/html/rfc768)
 
 <!---->

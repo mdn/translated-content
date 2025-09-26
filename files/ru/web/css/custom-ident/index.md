@@ -5,7 +5,7 @@ slug: Web/CSS/custom-ident
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_Types) **`<custom-ident>`** включает любые определённые пользователем строки, используемые в качестве {{glossary("identifier", "идентификатора")}}. Они чувствительны к регистру, некоторые значения запрещены в разных контекстах, чтобы избежать неоднозначности.
+[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<custom-ident>`** включает любые определённые пользователем строки, используемые в качестве {{glossary("identifier", "идентификатора")}}. Они чувствительны к регистру, некоторые значения запрещены в разных контекстах, чтобы избежать неоднозначности.
 
 ## Синтаксис
 
@@ -31,13 +31,11 @@ slug: Web/CSS/custom-ident
   {{CSSxRef("counter-reset")}}
 
   {{CSSxRef("counter-increment")}}
-
   - : Запрещают глобальные значения CSS (`unset`, `initial` и `inherit`), а также `none`.
 
 - {{CSSxRef("@counter-style")}}
 
   {{CSSxRef("list-style-type")}}
-
   - : Запрещает глобальные значения CSS (`unset`, `initial` и `inherit`), а также значения `none`, `inline` и `outside`. Также довольно много предопределённых значений используются в разных браузерах: `disc`, `circle`, `square`, `decimal`, `cjk-decimal`, `decimal-leading-zero`, `lower-roman`, `upper-roman`, `lower-greek`, `lower-alpha`, `lower-latin`, `upper-alpha`, `upper-latin`, `arabic-indic`, `armenian`, `bengali`, `cambodian`, `cjk-earthly-branch`, `cjk-heavenly-stem`, `cjk-ideographic`, `devanagari`, `ethiopic-numeric`, `georgian`, `gujarati`, `gurmukhi`, `hebrew`, `hiragana`, `hiragana-iroha`, `japanese-formal`, `japanese-informal`, `kannada`, `katakana`, `katakana-iroha`, `khmer`, `korean-hangul-formal`, `korean-hanja-formal`, `korean-hanja-informal`, `lao`, `lower-armenian`, `malayalam`, `mongolian`, `myanmar`, `oriya`, `persian`, `simp-chinese-formal`, `simp-chinese-informal`, `tamil`, `telugu`, `thai`, `tibetan`, `trad-chinese-formal`, `trad-chinese-informal`, `upper-armenian`, `disclosure-open`, and `disclosure-close`.
 
 - {{CSSxRef("grid-row-start")}}
@@ -74,20 +72,13 @@ bili.bob          Только буквы, цифры, _ и - можно не э
 
 ## Спецификации
 
-| Specification                                                                                                                            | Status                           | Comment                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#custom-idents', '<code>&lt;custom-ident&gt;</code>')}}                                                       | {{Spec2('CSS4 Values')}}         |                                                                                                                                                                     |
-| {{SpecName('CSS Will Change', '#valdef-will-change-custom-ident', '<code>&lt;custom-ident&gt;</code> for <code>will-change</code>')}}    | {{Spec2('CSS Will Change')}}     | Defines which values are excluded for {{CSSxRef("will-change")}}.                                                                                                   |
-| {{SpecName('CSS3 Counter Styles', '#typedef-counter-style-name', '<code>&lt;custom-ident&gt;</code> for <code>list-style-type</code>')}} | {{Spec2('CSS3 Counter Styles')}} | Uses `<custom-ident>` instead of a finite list of keywords. Defines which values are excluded for {{CSSxRef("list-style-type")}} and {{CSSxRef("@counter-style")}}. |
-| {{SpecName('CSS3 Lists', '#counter-properties', '<code>&lt;custom-ident&gt;</code> for <code>counter-*</code>')}}                        | {{Spec2('CSS3 Lists')}}          | Renames `<identifier>` to `<custom-ident>`. Adds its usage to the new `counter-set` property.                                                                       |
-| {{SpecName('CSS3 Animations', '#typedef-single-animation-name', '<code>&lt;custom-ident&gt;</code> for <code>animation-name</code>')}}   | {{Spec2('CSS3 Animations')}}     | Defines which values are excluded for {{CSSxRef("animation-name")}}.                                                                                                |
-| {{SpecName('CSS3 Values', '#custom-idents', '<code>&lt;custom-ident&gt;</code>')}}                                                       | {{Spec2('CSS3 Values')}}         | Renames `<identifier>` to `<custom-ident>`. Makes it a pseudo-type and forbids the use of excluded values.                                                          |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-identifier', '<code>&lt;identifier&gt;</code>')}}                                           | {{Spec2('CSS2.1')}}              | Initial definition.                                                                                                                                                 |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-_As this type is not a real type but a convenience type used to simplify the description of allowed values, there is no browser compatibility information as such._
+_Поскольку этот тип не является реальным типом, а служит соглашением, используемым для упрощения описания допустимых значений, информация о совместимости браузера как таковая отсутствует._
 
 ## Смотрите также
 
-- {{CSSxRef("&lt;ident&gt;")}}
+- [&lt;ident&gt;](/ru/docs/Web/CSS/ident)
+- [&lt;dashed-ident&gt;](/ru/docs/Web/CSS/dashed-ident)

@@ -54,4 +54,4 @@ test();
 
 ## Смотрите также
 
-- [Temporal Dead Zone and errors with let](/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)
+- [Temporal Dead Zone and errors with let](/ru/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)

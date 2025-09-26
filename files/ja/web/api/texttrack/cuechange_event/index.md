@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('cuechange', (event) => { })
+addEventListener("cuechange", (event) => {});
 
-oncuechange = (event) => { }
+oncuechange = (event) => {};
 ```
 
 ## イベント型
@@ -28,8 +28,8 @@ oncuechange = (event) => { }
 `cuechange` イベントのリスナーを `TextTrack` に設定するには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用します。
 
 ```js
-track.addEventListener('cuechange', () => {
-  const cues = track.activeCues;  // 現在のキューの配列
+track.addEventListener("cuechange", () => {
+  const cues = track.activeCues; // 現在のキューの配列
   // …
 });
 ```
@@ -39,7 +39,7 @@ track.addEventListener('cuechange', () => {
 ```js
 track.oncuechange = (event) => {
   let cues = track.activeCues; // 現在のキューの配列
-}
+};
 ```
 
 ## 仕様書

@@ -1,11 +1,12 @@
 ---
 title: "Worker: messageerror イベント"
+short-title: messageerror
 slug: Web/API/Worker/messageerror_event
 l10n:
-  sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
 `messageerror` イベントは、 {{domxref('Worker')}} オブジェクトに、解読 (deserialize) できないメッセージを受け取ったときに発生します。
 
@@ -15,10 +16,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener('messageerror', (event) => { });
+```js-nolint
+addEventListener("messageerror", (event) => { })
 
-onmessageerror = (event) => { };
+onmessageerror = (event) => { }
 ```
 
 ## イベント型
@@ -38,7 +39,7 @@ _このインターフェイスには、親である {{domxref("Event")}} から
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : 文字列で、このイベントの固有の ID を表します。
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : `MessageEventSource` （{{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} の何れかのオブジェクトがなれる）で、メッセージ送信者を表します。
+  - : `MessageEventSource` （{{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} の何れかのオブジェクトがなれる）で、メッセージ送信者を表します。
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャネルに関連するポートを表します（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、必要に応じて）。
 
@@ -52,11 +53,11 @@ _このインターフェイスには、親である {{domxref("Event")}} から
 const worker = new Worker("static/scripts/worker.js");
 
 worker.addEventListener("message", (event) => {
-    console.error(`Received message from worker: ${event}`);
+  console.error(`Received message from worker: ${event}`);
 });
 
 worker.addEventListener("messageerror", (event) => {
-    console.error(`Error receiving message from worker: ${event}`);
+  console.error(`Error receiving message from worker: ${event}`);
 });
 ```
 
@@ -68,15 +69,15 @@ worker.addEventListener("messageerror", (event) => {
 const worker = new Worker("static/scripts/worker.js");
 
 worker.onmessage = (event) => {
-    console.error(`Received message from worker: ${event}`);
+  console.error(`Received message from worker: ${event}`);
 };
 
 worker.onmessageerror = (event) => {
-    console.error(`Error receiving message from worker: ${event}`);
+  console.error(`Error receiving message from worker: ${event}`);
 };
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
@@ -84,7 +85,7 @@ worker.onmessageerror = (event) => {
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage)
 - 関連イベント: [`message`](/ja/docs/Web/API/Worker/message_event)

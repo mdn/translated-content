@@ -7,9 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 
 El constructor **`Boolean()`** se usa para crear objetos {{jsxref("Boolean")}}.
 
-{{EmbedInteractiveExample("pages/js/boolean-constructor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Boolean Constructor", "shorter")}}
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
+```js interactive-example
+const flag = new Boolean();
+
+console.log(flag);
+// Expected output: false
+```
 
 ## Sintaxis
 

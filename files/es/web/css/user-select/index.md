@@ -3,8 +3,6 @@ title: user-select
 slug: Web/CSS/user-select
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`user-select`** controla si el usuario puede seleccionar el texto. Esto no tiene ningún efecto en el contenido cargado bajo {{Glossary("Chrome", "chrome")}}, excepto en cuadros de texto.
 
 ```css
@@ -45,9 +43,7 @@ user-select: unset;
 - `none`
   - : El texto y sus sub elementos no son seleccionables. Tenga en cuenta que el objeto {{domxref("Selection")}} puede contener estos elementos.
 - `auto`
-
   - : El valor calculado auto se determina de la siguiente manera: En los pseudo elementos `::before` y `::after`, el valor calculado es `none`
-
     - Si el elemento es un elemento editable, el valor calculado es `contain`
     - De lo contrario, si el valor calculador de `user-select` en la matriz de este elemento es `all`, el valor calculado es `all`
     - De lo contrario, si el valor calulado de `user-select` en la matriz de este elemento es `none`, el valor calculado es `none`
@@ -62,7 +58,8 @@ user-select: unset;
 - `element`{{non-standard_inline}} (IE-specific alias)
   - : Igual que `contain`. Solo lo soportado en Internet Explorer.
 
-> **Nota:** CSS UI 4 [renombra user-select: a contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+> [!NOTE]
+> CSS UI 4 [renombra user-select: a contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
 
 ### Formal syntax
 
@@ -112,4 +109,4 @@ user-select: unset;
 
 - {{Cssxref("::selection")}}
 - The JavaScript {{domxref("Selection")}} object.
-- [user-select](http://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](http://www.w3.org/TR/css-ui-4/).
+- [user-select](https://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](https://www.w3.org/TR/css-ui-4/).

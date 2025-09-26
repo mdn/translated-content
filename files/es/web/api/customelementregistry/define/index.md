@@ -10,7 +10,7 @@ El método **`define()`** de la interfaz {{domxref("CustomElementRegistry")}} de
 Se pueden crear dos tipos de elementos personalizados:
 
 - **Elementos personalizados autónomos**: Elementos autónomos; estos heredan de HTMLElement (Elemento HTML genérico).
-- **Elementos personalizados preconstruidos**: Estos elementos heredan - y extienden - elementos HTML ya existentes (p.ej HTMLParagraphElement que es el elemento HTML [`<p>`](/es/docs/Web/HTML/Element/p)).
+- **Elementos personalizados preconstruidos**: Estos elementos heredan - y extienden - elementos HTML ya existentes (p.ej HTMLParagraphElement que es el elemento HTML [`<p>`](/es/docs/Web/HTML/Reference/Elements/p)).
 
 ## Sintaxis
 
@@ -25,9 +25,7 @@ customElements.define(name, constructor, options);
 - constructor
   - : Constructor para el nuevo elemento personalizado
 - options {{optional_inline}}
-
   - : Objecto que controla cómo se define el elemento. Actualmente solo se permite una opción:
-
     - `extends`: Cadena que especifica el nombre del elemento preconstruido del cual se va a extender. Se usa para crear _elementos personalizados preconstruidos_.
 
 ### Valor de retorno
@@ -42,7 +40,8 @@ Void.
 | `SyntaxError`       | El nombre proporcionado no es un [nombre válido de elemento personalizado](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).                                                                                          |
 | `TypeError`         | El constructor referenciado no es un constructor                                                                                                                                                                                                            |
 
-> **Nota:** A menudo se obtienen excepciones `NotSupportedError`s cuando el método `define()` está fallando, pero realmente es un problema relacionado con {{domxref("Element.attachShadow()")}}.
+> [!NOTE]
+> A menudo se obtienen excepciones `NotSupportedError`s cuando el método `define()` está fallando, pero realmente es un problema relacionado con {{domxref("Element.attachShadow()")}}.
 
 ## Ejemplos
 
@@ -137,7 +136,8 @@ customElements.define("popup-info", PopUpInfo);
   text="Su código de validación de tarjeta (CVC) es una característica extra de seguridad — consiste en 3 o 4 numeros en la parte posterior de su tarjeta."></popup-info>
 ```
 
-> **Nota:** Los constructores de elementos personalizados autónomos deben extender {{domxref("HTMLElement")}}.
+> [!NOTE]
+> Los constructores de elementos personalizados autónomos deben extender {{domxref("HTMLElement")}}.
 
 ### Elemento personalizado preconstruido
 

@@ -7,7 +7,7 @@ slug: Web/CSS/background-attachment
 
 ## Resumo
 
-Se um {{cssxref("background-image")}} é especificado, a propriedade [CSS](/pt-BR/docs/CSS) **`background-attachment`** determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.
+Se um {{cssxref("background-image")}} é especificado, a propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-attachment`** determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.
 
 {{cssinfo}}
 
@@ -36,13 +36,13 @@ background-attachment: inherit;
 
 ## Exemplos
 
-### Exemplo simpes
+### Exemplo simples
 
 #### CSS
 
 ```css
 p {
-  background-image: url("starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
@@ -59,7 +59,7 @@ p {
 
 #### Resultado
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("Exemplo_simples")}}
 
 ### Suporte de múltiplas imagem de background
 
@@ -69,7 +69,7 @@ Essa propriedade suporta múltiplas imagens de background. Você pode especifica
 
 ```css
 p {
-  background-image: url("starsolid.gif"), url("startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -99,16 +99,12 @@ p {
 
 ## Especificações
 
-| Especificação                                                                                | Status                        | Comentário                                                                                      |
-| -------------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}      | {{Spec2('CSS3 Backgrounds')}} | The shorthand property has been extended to support multiple backgrounds and the `local` value. |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}} | {{Spec2('CSS2.1')}}           | Mudança não significativa.                                                                      |
-| {{SpecName('CSS1', '#background-attachment', 'background-attachment')}}                      | {{Spec2('CSS1')}}             | Mudança não significativa                                                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.background-attachment")}}
+{{Compat}}
 
 ## Veja também
 
-- [Multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds)
+- [Multiple backgrounds](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

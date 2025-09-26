@@ -3,6 +3,8 @@ title: SLD
 slug: Glossary/SLD
 ---
 
+{{GlossarySidebar}}
+
 Un SLD (Second Level Domain) est un domaine qui est hiérarchiquement directement sous un {{Glossary("TLD")}}.
 
 Il est en général utilisé comme un moyen de différencier les différentes fonctions d'un serveur ou pour délimiter des zones sous un même domaine. Par exemple, `www` est un SLD habituellement utilisé pour indiquer le domaine qui pointe vers un serveur web.

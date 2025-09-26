@@ -12,7 +12,6 @@ A interface **`PositionError`** representa a rasão de um erro ocorrer quando us
 _A interface `PositionError` não herda nenhuma propriedade_.
 
 - {{domxref("PositionError.code")}} {{readonlyInline}}
-
   - : Retorna um tipo `unsigned short` representando o código de erro. Os valores possíveis são os seguintes:
 
     | Valor | Constante associada    | Descrição                                                                                                                                              |
@@ -38,5 +37,5 @@ _A interface `PositionError` não herda nenhuma propriedade_.
 
 ## Veja também
 
-- [Usando geolocation](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Usando geolocation](/pt-BR/docs/Web/API/Geolocation_API)
 - A interface {{domxref("Geolocation")}} que o utiliza.

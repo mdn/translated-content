@@ -58,7 +58,6 @@ _继承属性自_ _{{domxref("AudioNode")}}。_
 - {{domxref("AnalyserNode.minDecibels")}}
   - : 是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最小阈值 - 基本上，它限定了调用`getByteFrequencyData()`时结果范围的最小值
 - {{domxref("AnalyserNode.maxDecibels")}}
-
   - : 是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最大阈值 - 基本上，它限定了调用`getByteFrequencyData()`时结果范围的最大值
 
 - {{domxref("AnalyserNode.smoothingTimeConstant")}}
@@ -79,7 +78,8 @@ _继承方法自_ _{{domxref("AudioNode")}}_.
 
 ## 例子
 
-> **备注：** 查看 [Visualizations with Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 指南以获得更多关于创建音频可视化效果的信息。
+> [!NOTE]
+> 查看 [Visualizations with Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 指南以获得更多关于创建音频可视化效果的信息。
 
 ### 基础用法
 
@@ -150,4 +150,4 @@ draw();
 
 ## 相关内容
 
-- [Web Audio API 的运用](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API 的运用](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

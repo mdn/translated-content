@@ -3,7 +3,7 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
-{{JSRef("Global_Objects", "Set")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -31,7 +31,6 @@ Como cada valor no Set deve ser único, a igualdade será checada e não é base
 ## Propriedades
 
 - `Set.length`
-
   - : O valor da propriedade comprimento é 0.
 
     Para contar o número de elementos de um `Set`, use {{jsxref("Set.prototype.size")}}.
@@ -47,11 +46,11 @@ Todas as instâncias de `Set` herdam de {{jsxref("Set.prototype")}}.
 
 ### Propriedades
 
-{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties') -->
 
 ### Métodos
 
-{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('pt-BR/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods') -->
 
 ## Exemplos
 
@@ -228,14 +227,11 @@ meuSet.size; // 5
 
 ## Especificações
 
-| Especificação                                      | Status               | Comentário         |
-| -------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-set-objects', 'Set')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-set-objects', 'Set')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Set")}}
+{{Compat}}
 
 ## Veja também
 

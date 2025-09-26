@@ -1,11 +1,14 @@
 ---
-title: XRInputSource.targetRayMode
+title: "XRInputSource: targetRayMode プロパティ"
+short-title: targetRayMode
 slug: Web/API/XRInputSource/targetRayMode
+l10n:
+  sourceCommit: 6788d086c530ae04793a497d12863db3d8adf040
 ---
 
 {{APIRef("WebXR Device API")}}
 
-{{domxref("XRInputSource")}} の読み取り専用プロパティ **`targetRayMode`** は、入力ソースのターゲット光線を生成する方法と、それをユーザーに提示する方法を示します。
+{{domxref("XRInputSource")}} の **`targetRayMode`** プロパティは読み取り専用で、入力ソースのターゲット光線を生成する方法と、それをユーザーに提示する方法を示します。
 
 一般的には、ターゲティングシステムのソースから、ユーザーが見ている、または指している方向のターゲット光線に沿って、ターゲット光線が描かれます。光線のスタイルは一般的に自由で、光線の終点を示す方法も自由です。ターゲットとなるポイントやオブジェクトは、図形を描いたり、ターゲットとなる表面やオブジェクトをハイライトすることで示されるかもしれません。
 
@@ -13,20 +16,14 @@ slug: Web/API/XRInputSource/targetRayMode
 
 ![ハンドコントローラからターゲット光線を照射している画面](example-target-ray.gif)
 
-ターゲット光線は、単純な線 (理想的には距離に応じて消えていく) から、上のスクリーンショットにあるような SF の「フェイザー」スタイルのようなアニメーション効果まで、さまざまなものがあります。
+ターゲット光線は、単純な線（理想的には距離に応じて消えていく）から、上のスクリーンショットにあるような SF の「フェイザー」スタイルのようなアニメーション効果まで、さまざまなものがあります。
 
-## 構文
-
-```js
-let rayMode = xrInputSource.targetRayMode;
-```
-
-### 値
+## 値
 
 ターゲット光線を生成してユーザーに提示する際に、どの方法を使用するかを示す文字列です。指定できる値は次の通りです。
 
 - `gaze` (視線)
-  - : ユーザーは、ユーザーが見ている方向を検出する視線追跡システム (または**視線入力**) を使用しています。 ターゲット光線は、ビューアーの目を起点として描画され、ビューアーが見ている方向に追従します。
+  - : ユーザーは、ユーザーが見ている方向を検出する視線追跡システム（または**視線入力**）を使用しています。 ターゲット光線は、ビューアーの目を起点として描画され、ビューアーが見ている方向に追従します。
 - `screen` (画面)
   - : ターゲット光線の方向は、タッチスクリーン、マウス、またはその他の触覚入力機器をタップして示します。
 - `tracked-pointer` (追跡ポインター)
@@ -46,16 +43,16 @@ let rayMode = xrInputSource.targetRayMode;
 
 ```js
 function updateInputSources(session, frame, refSpace) {
-  for (let source of session.getInputSources()) {
-    let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
+  for (const source of session.getInputSources()) {
+    const targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
 
     if (targetRayPose) {
-      if (source.targetRayMode == "tracked-pointer") {
+      if (source.targetRayMode === "tracked-pointer") {
         myRenderTargetRayAsBeam(targetRayPose);
       }
     }
 
-    /* ... */
+    // …
   }
 }
 ```
@@ -72,6 +69,6 @@ function updateInputSources(session, frame, refSpace) {
 
 ## 関連情報
 
-- [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API)
+- [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API)
 - [入力と入力ソース](/ja/docs/Web/API/WebXR_Device_API/Inputs)
 - [WebXR アプリケーションでのゲームパッドの使用](/ja/docs/Web/WebXR%20Device%20API/Gamepads)

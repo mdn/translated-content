@@ -2,7 +2,7 @@
 title: サービスワーカーの使用
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 l10n:
-  sourceCommit: ac3a9701390bedd2544895fda96fd0be488e4fad
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}
@@ -89,19 +89,20 @@ registerServiceWorker();
 
 1 つのサービスワーカーで、多数のページを制御することができます。スコープ内のページが読み込まれるたびに、サービスワーカーはそのページにインストールされて動作します。そのため、サービスワーカースクリプト内でのグローバル変数の扱いには注意が必要だということを心にとどめておいてください。各ページが固有のワーカーを持つわけではありません。
 
-> **メモ:** サービスワーカーの良いところは、以上で見てきたような機能の検出をすることで、サービスワーカーに対応していないブラウザーでもオンラインで期待通りの流儀でアプリを使用することができることです。
+> [!NOTE]
+> サービスワーカーの良いところは、以上で見てきたような機能の検出をすることで、サービスワーカーに対応していないブラウザーでもオンラインで期待通りの流儀でアプリを使用することができることです。
 
 #### サービスワーカーの登録に失敗する理由
 
 次の可能性が考えられます。
 
 - HTTPS を使用してアプリケーションを実行していない。
-- サービスワーカーファイルへのパスが正しく書かれていない。 — アプリのルートディレクトリではなく、アプリのオリジンからの相対パスで書く必要があります。上記の例では、ワーカーが `https://bncb2v.csb.app/sw.js` にあり、アプリのルートは `https://bncb2v.csb.app/` です。しかし、パスは `/sw.js` と書く必要があります。
+- サービスワーカーファイルへのパスが正しく書かれていない。 — アプリのルートディレクトリーではなく、アプリのオリジンからの相対パスで書く必要があります。上記の例では、ワーカーが `https://bncb2v.csb.app/sw.js` にあり、アプリのルートは `https://bncb2v.csb.app/` です。しかし、パスは `/sw.js` と書く必要があります。
 - 指定されているサービスワーカーがアプリとは異なるオリジンにある。これは許可されていません。
 - サービスワーカーはサービスワーカーのスコープ内にあるクライアントからのリクエストのみを取得します。
 - サービスワーカーの最大スコープは、ワーカーのある場所です。
-- サービスワーカーの最大スコープはワーカーの位置です（言い換えれば、スクリプト `sw.js` が `/js/sw.js` にある場合、 既定では `/js/` 以下の URL しか制御できません）。サービスワーカーの最大スコープのリストは [`Service-Worker-Allowed`](/ja/docs/Web/HTTP/Header/Service-Worker-Allowed) ヘッダーで指定することができます。
-- Firefoxでは、ユーザーが[プライベートブラウジングモード](https://bugzil.la/1320796)である場合、履歴が無効である場合、Firefox を閉じたときに Cookie がクリアされる場合、サービスワーカーの API は隠され使用することができません。
+- サービスワーカーの最大スコープはワーカーの位置です（言い換えれば、スクリプト `sw.js` が `/js/sw.js` にある場合、 既定では `/js/` 以下の URL しか制御できません）。サービスワーカーの最大スコープのリストは `Service-Worker-Allowed` ヘッダーで指定することができます。
+- Firefox では、ユーザーが[プライベートブラウジングモード](https://bugzil.la/1320796)である場合、履歴が無効である場合、Firefox を閉じたときに Cookie がクリアされる場合、サービスワーカーの API は隠され使用することができません。
 - Chrome の場合、「すべての Cookie をブロックする（推奨しない）」オプションが有効になっていると、登録に失敗します。
 
 ### インストールとアクティブ化: キャッシュの作成
@@ -130,7 +131,7 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 ```
@@ -140,9 +141,11 @@ self.addEventListener("install", (event) => {
 3. プロミスが拒否された場合、インストールが失敗し、ワーカーは何もしません。これは、コードを修正し、次に登録が発生したときに再試行することができるので、問題ありません。
 4. インストールに成功すると、サービスワーカーがアクティブになります。これは、サービスワーカーの初回インストール/アクティベーション時にはあまり明確な用途はありませんが、サービスワーカーが更新された時にはより大きな意味を持ちます（後の [サービスワーカーの更新](#サービスワーカーの更新)の節を参照してください）。
 
-> **メモ:** [ウェブストレージ API (`localStorage`)](/ja/docs/Web/API/Web_Storage_API) はサービスワーカーキャッシュと同じように動作しますが、同期処理であるため、サービスワーカー内では許可されていません。
+> [!NOTE]
+> [ウェブストレージ API (`localStorage`)](/ja/docs/Web/API/Web_Storage_API) はサービスワーカーキャッシュと同じように動作しますが、同期処理であるため、サービスワーカー内では許可されていません。
 
-> **メモ:** 必要であれば、 [IndexedDB](/ja/docs/Web/API/IndexedDB_API) をサービスワーカー内でデータ保存のために使用することができます。
+> [!NOTE]
+> 必要であれば、 [IndexedDB](/ja/docs/Web/API/IndexedDB_API) をサービスワーカー内でデータ保存のために使用することができます。
 
 ### リクエストに対するカスタムレスポンス
 
@@ -264,7 +267,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+    }),
   );
 });
 ```
@@ -367,7 +370,7 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 
@@ -377,7 +380,7 @@ self.addEventListener("fetch", (event) => {
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+    }),
   );
 });
 ```
@@ -388,7 +391,8 @@ self.addEventListener("fetch", (event) => {
 
 サービスワーカーが以前にインストールされているが、ページの更新や読み込みの時に新しいバージョンのワーカーが利用できる場合、新しいバージョンはバックグラウンドでインストールされますが、まだアクティブ化しません。まだ古いサービスワーカーを使用している読み込まれたページがなくなったら、新しいサービスワーカーがアクティブ化します。
 
-> **メモ:** [`Clients.claim()`](/ja/docs/Web/API/Clients/claim) を使用して、これを回避することが可能です。
+> [!NOTE]
+> [`Clients.claim()`](/ja/docs/Web/API/Clients/claim) を使用して、これを回避することが可能です。
 
 新しいサービスワーカーで、 `install` イベントリスナーをこのようなもの（新しいバージョン番号を通知するもの）に更新したくなるでしょう。
 
@@ -409,8 +413,8 @@ self.addEventListener("install", (event) => {
 
       // …
 
-       // 新しいバージョンのための新しい他のリソースを入れてください...
-    ])
+      // 新しいバージョンのための新しい他のリソースを入れてください...
+    ]),
   );
 });
 ```

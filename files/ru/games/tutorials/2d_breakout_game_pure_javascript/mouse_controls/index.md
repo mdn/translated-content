@@ -3,15 +3,15 @@ title: Управление мышью
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
-{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключение")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключение")}}
 
-Это 9-й шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код к этому уроку в [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
+Это 9-й шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код к этому уроку в [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
 
 Сама игра на самом деле закончена, так что давайте отполируем её. Мы уже добавили элементы управления клавиатуру, но мы могли бы легко добавить элемент управления мышь.
 
 ## Отслеживание движений мыши
 
-Отслеживание движений мыши ещё проще, чем обработка нажатий клавиш. Все, что нам нужно, это следить за событиями {{event("mousemove")}}. Добавьте следующую строку в том же месте, как и для других событий, чуть ниже `keyup event`:
+Отслеживание движений мыши ещё проще, чем обработка нажатий клавиш. Все, что нам нужно, это следить за событиями [`mousemove`](/ru/docs/Web/API/Element/mousemove_event). Добавьте следующую строку в том же месте, как и для других событий, чуть ниже `keyup event`:
 
 ```js
 document.addEventListener("mousemove", mouseMoveHandler, false);
@@ -44,6 +44,6 @@ function mouseMoveHandler(e) {
 
 ## Следующий шаг
 
-Теперь у нас есть полная игра, мы закончим нашу серию уроков с ещё несколькими небольшими хитростями — [Finishing up](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Finishing_up).
+Теперь у нас есть полная игра, мы закончим нашу серию уроков с ещё несколькими небольшими хитростями — [Finishing up](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}

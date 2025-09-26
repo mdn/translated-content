@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/attachShader
 
 {{APIRef("WebGL")}}
 
-La méthode **WebGLRenderingContext.attachShader()** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) attache un {{domxref("WebGLShader")}} de fragment ou de sommet à un {{domxref("WebGLProgram")}}.
+La méthode **WebGLRenderingContext.attachShader()** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) attache un {{domxref("WebGLShader")}} de fragment ou de sommet à un {{domxref("WebGLProgram")}}.
 
 ## Syntaxe
 

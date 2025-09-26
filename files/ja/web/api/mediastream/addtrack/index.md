@@ -1,18 +1,22 @@
 ---
-title: MediaStream.addTrack()
+title: "MediaStream: addTrack() メソッド"
+short-title: addTrack()
 slug: Web/API/MediaStream/addTrack
+l10n:
+  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-**`MediaStream.addTrack()`** メソッドは、ストリームへ新しいトラックを追加します。このトラックは {{domxref("MediaStreamTrack")}} 型の引数して指定します。
+**`addTrack()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、ストリームへ新しいトラックを追加します。このトラックは {{domxref("MediaStreamTrack")}} 型の引数して指定します。
 
-> **メモ:** 指定されたトラックが既にストリームのトラックセットにあった場合、このメソッドは何もしません。
+> [!NOTE]
+> 指定されたトラックが既にストリームのトラックセットにあった場合、このメソッドは何もしません。
 
 ## 構文
 
-```js
-stream.addTrack(track);
+```js-nolint
+addTrack(track)
 ```
 
 ### 引数
@@ -22,7 +26,7 @@ stream.addTrack(track);
 
 ### 返値
 
-{{jsxref("undefined")}}
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -36,4 +40,4 @@ stream.addTrack(track);
 
 ## 関連情報
 
-- {{domxref("MediaStream")}} （所属先のインターフェイス）
+- 所属先のインターフェイスである {{domxref("MediaStream")}}。

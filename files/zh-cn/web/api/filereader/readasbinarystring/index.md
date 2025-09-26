@@ -1,46 +1,55 @@
 ---
-title: FileReader.readAsBinaryString()
+title: FileReader：readAsBinaryString() 方法
 slug: Web/API/FileReader/readAsBinaryString
+l10n:
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{APIRef("File API")}} {{non-standard_header}}
+{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}
 
-`readAsBinaryString` 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象，当读取完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成`DONE`（已完成），并触发 [`loadend`](/zh-CN/docs/Web/API/XMLHttpRequest/loadend_event) 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含所读取文件原始二进制格式。
+> [!NOTE]
+> 此方法已弃用，取而代之的是 {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}。
 
-注意：从 2012 年 7 月 12 日起，该方法已从 W3C 工作草案废除。
+{{domxref("FileReader")}} 接口的 **`readAsBinaryString()`** 方法用于开始读取指定 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成后，{{domxref("FileReader.readyState","readyState")}} 属性变为 `DONE`，并且 {{domxref("FileReader/loadend_event", "loadend")}} 事件被触发。此时，{{domxref("FileReader.result","result")}} 属性包含来自的原始二进制数据文件。
+
+请注意，此方法曾经从文件 API 规范中删除，但重新引入以实现向后兼容性。建议使用 {{domxref("FileReader.readAsArrayBuffer()")}}。
 
 ## 语法
 
-```plain
-instanceOfFileReader.readAsBinaryString(blob);
+```js-nolint
+readAsBinaryString(blob)
 ```
 
 ### 参数
 
 - `blob`
-  - : 即将被读取的 {{domxref("Blob")}} 或者 {{domxref("File")}} 对象。
+  - : 从中读取的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
 ```js
-var canvas = document.createElement("canvas");
-var height = 200;
-var width = 200;
+const canvas = document.createElement("canvas");
+const height = 200;
+const width = 200;
 
 canvas.width = width;
 canvas.height = height;
 
-var ctx = canvas.getContext("2d");
+const ctx = canvas.getContext("2d");
 
 ctx.strokeStyle = "#090";
 ctx.beginPath();
 ctx.arc(width / 2, height / 2, width / 2 - width / 10, 0, Math.PI * 2);
 ctx.stroke();
 
-canvas.toBlob(function (blob) {
-  var reader = new FileReader();
+canvas.toBlob((blob) => {
+  const reader = new FileReader();
 
-  reader.onloadend = function () {
+  reader.onload = () => {
     console.log(reader.result);
   };
 
@@ -50,12 +59,12 @@ canvas.toBlob(function (blob) {
 
 ## 规范
 
-该方法已从 FileAPI 标准移除，请使用 {{domxref("FileReader.readAsArrayBuffer()")}} 代替。
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("FileReader")}}

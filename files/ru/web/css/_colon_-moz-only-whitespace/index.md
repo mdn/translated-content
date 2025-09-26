@@ -1,5 +1,5 @@
 ---
-title: ":blank"
+title: :blank
 slug: Web/CSS/:-moz-only-whitespace
 ---
 
@@ -59,7 +59,7 @@ div {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -9,7 +9,8 @@ La méthode **`DocumentFragment.querySelectorAll()`** renvoie une {{domxref("Nod
 
 Si les sélecteurs spécifiés dans paramètre sont invalides une {{domxref("DOMException")}} avec une valeur `SYNTAX_ERR` est lancée.
 
-> **Note :** La définition de cet API a été déplacé vers l'interface {{domxref("ParentNode")}}.
+> [!NOTE]
+> La définition de cet API a été déplacé vers l'interface {{domxref("ParentNode")}}.
 
 ## Syntaxe
 

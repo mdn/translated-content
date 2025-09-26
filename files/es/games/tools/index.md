@@ -3,8 +3,6 @@ title: Herramientas para desarrolladores de juegos
 slug: Games/Tools
 ---
 
-{{GamesSidebar}}
-
 En esta pagina puedes encontrar enlaces a nuestros articulos de desarrollo de juegos, que enventualmente apuenta a cubrir frameworks, compiladores y herramientas de depuracion.
 
 - [asm.js](/es/docs/Games/Tools/asm.js)
@@ -18,9 +16,7 @@ En esta pagina puedes encontrar enlaces a nuestros articulos de desarrollo de ju
 - [Shumway](/es/docs/Mozilla/Projects/Shumway)
   - : _Shumway_ es un renderizador para Adobe Flash construido completamente con JavaScript, WebGL, entre otros, haciendo una brecha entre Flash y los estandares Web. Este articulo muestra como hacer uso de Shumway y como contribuir arreglos y errores al proyecto.
 - Cadena de herramientas para desarrollar y depurar juegos
-
   - , pero aqui te vamos a proveer una cadena de herramientas practicas para depurar juegos con links a las cosas de Will:
-
     - Basic tools overview
-    - [Shader editor](/es/docs/Tools/Shader_Editor)
+    - [Shader editor](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Performance tools (still in production, estimated early 2014)

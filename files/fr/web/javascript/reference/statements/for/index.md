@@ -5,9 +5,20 @@ slug: Web/JavaScript/Reference/Statements/for
 
 {{jsSidebar("Statements")}}
 
-L'instruction **`for`** crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement [une instruction de bloc](/fr/docs/Web/JavaScript/Reference/Instructions/bloc)) à exécuter dans la boucle.
+L'instruction **`for`** crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement [une instruction de bloc](/fr/docs/Web/JavaScript/Reference/Statements/block)) à exécuter dans la boucle.
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## Syntaxe
 
@@ -104,7 +115,8 @@ function showOffsetPos(sId) {
 }
 ```
 
-> **Note :** Dans cas, où on n'utilise pas la section d'instruction, **il faut mettre un point-virgule immédiatement après la déclaration de la boucle.**
+> [!NOTE]
+> Dans cas, où on n'utilise pas la section d'instruction, **il faut mettre un point-virgule immédiatement après la déclaration de la boucle.**
 
 ## Spécifications
 

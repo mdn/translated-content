@@ -9,7 +9,8 @@ Les assertions indiquent les conditions selon lesquelles il est possible d'avoir
 
 ## Types
 
-> **Note :** Le caractère `?` peut également être utilisé comme quantificateur.
+> [!NOTE]
+> Le caractère `?` peut également être utilisé comme quantificateur.
 
 <table class="standard-table">
   <thead>
@@ -110,7 +111,7 @@ console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
 
 ### Signification différente de `'?!'` entre les assertions et les intervalles
 
-La combinaison de caractères `?!` a un sens différent entre les [assertions](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Assertions) `/x(?!y)/` et les [intervalles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Groupes_et_intervalles) `[^?!]`.
+La combinaison de caractères `?!` a un sens différent entre les [assertions](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) `/x(?!y)/` et les [intervalles](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) `[^?!]`.
 
 ```js
 let orangePasCitron =

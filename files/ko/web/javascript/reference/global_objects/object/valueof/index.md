@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 **`valueOf()`** 메서드는 특정 객체의 원시 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## 구문
 
@@ -19,7 +34,7 @@ object.valueOf();
 
 객체의 원시 값.
 
-> **참고:** [(단항) 더하기 기호](/ko/docs/Web/JavaScript/Reference/Operators#단항_연산자) 는 가끔 `valueOf` 의 단축 표현으로 사용됩니다. 예를 들면, 다음과 같은 표현을 보세요. `+new Number()`. [단항 더하기 사용하기](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf#단항_더하기_사용하기).도 참조 하세요.
+> **참고:** [(단항) 더하기 기호](/ko/docs/Web/JavaScript/Reference/Operators#단항_연산자) 는 가끔 `valueOf` 의 단축 표현으로 사용됩니다. 예를 들면, 다음과 같은 표현을 보세요. `+new Number()`. [단항 더하기 사용하기](#단항_더하기_사용하기).도 참조 하세요.
 
 ## 설명
 
@@ -49,7 +64,8 @@ MyNumberType.prototype.valueOf = function () {
 myNumberType.valueOf();
 ```
 
-> **참고:** 문자열 문맥에서 객체-문자열 변환은 {{jsxref("Object.toString", "toString()")}} 메서드를 사용하며, {{jsxref("String")}} 객체의 `valueOf`를 사용해 원시 문자열로 변환하는 것과는 다릅니다. 모든 객체는, 비록 결과가 "`[object type]`" 뿐이라도 문자열 변환 기능을 가지고 있습니다. 그러나 대다수의 객체는 숫자, 불리언, 함수 등으로 변환되지 않습니다.
+> [!NOTE]
+> 문자열 문맥에서 객체-문자열 변환은 {{jsxref("Object.toString", "toString()")}} 메서드를 사용하며, {{jsxref("String")}} 객체의 `valueOf`를 사용해 원시 문자열로 변환하는 것과는 다릅니다. 모든 객체는, 비록 결과가 "`[object type]`" 뿐이라도 문자열 변환 기능을 가지고 있습니다. 그러나 대다수의 객체는 숫자, 불리언, 함수 등으로 변환되지 않습니다.
 
 ## 예제
 

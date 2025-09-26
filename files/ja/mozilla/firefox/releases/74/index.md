@@ -3,8 +3,6 @@ title: Firefox 74 for developers
 slug: Mozilla/Firefox/Releases/74
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 74 は、米国時間 2020 年 3 月 10 日にリリースされました。このページでは、開発者に影響する Firefox 74 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -13,7 +11,7 @@ Firefox 74 は、米国時間 2020 年 3 月 10 日にリリースされまし�
 
 #### ウェブコンソール
 
-- `$x()` [ウェブコンソールヘルパー](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) の第 3 引数 (結果の型) が、[`XPathResult` 定数](/ja/docs/Web/API/XPathResult#Constants) と同様に単純な文字列値を受け入れるようになりました ([Firefox バグ 1602591](https://bugzil.la/1602591))。
+- `$x()` [ウェブコンソールヘルパー](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) の第 3 引数 (結果の型) が、[`XPathResult` 定数](/ja/docs/Web/API/XPathResult#constants) と同様に単純な文字列値を受け入れるようになりました ([Firefox バグ 1602591](https://bugzil.la/1602591))。
 - コンソールのオートコンプリートでも使用可能な、optional chaining 演算子 "?." を新たにサポートしました ([Firefox バグ 1594009](https://bugzil.la/1594009))。
 - デバッガーで [入れ子の worker](/ja/docs/Web/API/Web_Workers_API/Using_web_workers) を調査およびデバッグできるようになりました ([Firefox バグ 1590766](https://bugzil.la/1590766))。
 
@@ -29,7 +27,7 @@ _変更なし。_
 
 #### 廃止
 
-- `-moz-` 接頭辞がついた [マルチカラムレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) 関連のプロパティを削除しました ([Firefox バグ 1308636](https://bugzil.la/1308636))。詳しくは [Firefox サイト互換性情報をご覧ください](https://www.fxsitecompat.dev/docs/2020/prefixed-css-multi-column-properties-have-been-removed/)。
+- `-moz-` 接頭辞がついた [マルチカラムレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) 関連のプロパティを削除しました ([Firefox バグ 1308636](https://bugzil.la/1308636))。詳しくは [Firefox サイト互換性情報をご覧ください](https://www.fxsitecompat.dev/docs/2020/prefixed-css-multi-column-properties-have-been-removed/)。
 
 ### SVG
 
@@ -67,13 +65,13 @@ _変更なし。_
 
 ### HTTP
 
-- Feature Policy をデフォルトで有効にしました! フレームの許可を設定するには {{HTMLElement("iframe")}} 要素の [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性 (および {{domxref("HTMLIFrameElement")}} の {{domxref("HTMLIFrameElement.allow", "allow")}} プロパティ) を使用してください ([Firefox バグ 1617219](https://bugzil.la/1617219))。
-- [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) ヘッダーをデフォルトで有効にしました ([Firefox バグ 1602363](https://bugzil.la/1602363))。
+- Feature Policy をデフォルトで有効にしました! フレームの許可を設定するには {{HTMLElement("iframe")}} 要素の [`allow`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) 属性 (および {{domxref("HTMLIFrameElement")}} の {{domxref("HTMLIFrameElement.allow", "allow")}} プロパティ) を使用してください ([Firefox バグ 1617219](https://bugzil.la/1617219))。
+- [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) ヘッダーをデフォルトで有効にしました ([Firefox バグ 1602363](https://bugzil.la/1602363))。
 
 ### セキュリティ
 
 - TLS 1.0 および 1.1 のサポートを Firefox から削除しました。今後はサーバーで TLS 1.2 または 1.3 をサポートすることが必要です。今後は古いバージョンの TLS を使用するサーバーに接続すると、[Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) エラーが発生します ([Firefox バグ 1606734](https://bugzil.la/1606734))。
-- Firefox 74 から、サイトが [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性を使用して {{HTMLElement("iframe")}} 内の埋め込みコンテンツにリソースへのアクセス許可を与えて、埋め込まれたページがそのリソースの使用許可を要求したとき、埋め込まれたドメインにリソースの使用許可や共有許可を与えるかを、外側のページと内側のページの両方が許可を確認するのではなく、親ページがユーザーへ確認するようになりました。外側のぺーが `allow` 属性で要求された許可を得ていない場合は、`<iframe>` がユーザーへ確認することなく直ちにアクセスを拒否されます ([Firefox バグ 1483631](https://bugzil.la/1483631))。
+- Firefox 74 から、サイトが [`allow`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) 属性を使用して {{HTMLElement("iframe")}} 内の埋め込みコンテンツにリソースへのアクセス許可を与えて、埋め込まれたページがそのリソースの使用許可を要求したとき、埋め込まれたドメインにリソースの使用許可や共有許可を与えるかを、外側のページと内側のページの両方が許可を確認するのではなく、親ページがユーザーへ確認するようになりました。外側のぺーが `allow` 属性で要求された許可を得ていない場合は、`<iframe>` がユーザーへ確認することなく直ちにアクセスを拒否されます ([Firefox バグ 1483631](https://bugzil.la/1483631))。
 
 ### プラグイン
 
@@ -82,7 +80,7 @@ _変更なし。_
 ### WebDriver conformance (Marionette)
 
 - カレントページを PDF 文書として印刷する `WebDriver:Print` を追加しました ([Firefox バグ 1604506](https://bugzil.la/1604506))。
-- `Webdriver:TakeScreenshot` が、キャプチャーする要素が指定されていない場合に現在選択されているブラウジングコンテキストではなく、常にトップレベルのブラウジングコンテキストをキャプチャーするようになりました ([Firefox バグ 1398087](https://bugzil.la/1398087), [Firefox バグ 1606794](https://bugzil.la/1606794))。
+- `Webdriver:TakeScreenshot` が、キャプチャーする要素が指定されていない場合に現在選択されている閲覧コンテキストではなく、常にトップレベルの閲覧コンテキストをキャプチャーするようになりました ([Firefox バグ 1398087](https://bugzil.la/1398087), [Firefox バグ 1606794](https://bugzil.la/1606794))。
 - `Webdriver:TakeScreenshot` の `full` 引数を使用すると、ページ全体をキャプチャーします ([Firefox バグ 1571424](https://bugzil.la/1571424))。
 
 ## アドオン開発者向けの変更点

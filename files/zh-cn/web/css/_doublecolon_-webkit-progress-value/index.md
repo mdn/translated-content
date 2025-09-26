@@ -1,13 +1,14 @@
 ---
-title: "::-webkit-progress-value"
+title: ::-webkit-progress-value
 slug: Web/CSS/::-webkit-progress-value
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`::-webkit-progress-value`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 代表的是{{HTMLElement("progress")}} 元素中进度条未完成的部分。它是{{cssxref("::-webkit-progress-bar")}} 伪元素的子元素。
 
-> **备注：** 为了使 `::-webkit-progress-value` 生效， `<progress>` 元素的{{cssxref("-webkit-appearance")}} 需要设置为 `none`。
+> [!NOTE]
+> 为了使 `::-webkit-progress-value` 生效， `<progress>` 元素的{{cssxref("-webkit-appearance")}} 需要设置为 `none`。
 
 ## 示例
 
@@ -48,7 +49,6 @@ progress {
 ## 参见
 
 - WebKit/Blink 使用的用来修改{{HTMLElement("progress")}}元素其他部分样式的伪元素：
-
   - {{ cssxref("::-webkit-progress-bar") }}
   - {{ cssxref("::-webkit-progress-inner-element") }}
 

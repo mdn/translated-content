@@ -3,6 +3,8 @@ title: performance.getEntriesByName()
 slug: Web/API/Performance/getEntriesByName
 ---
 
+{{APIRef("Performance API")}}
+
 **`getEntriesByName()`**方法返回一个给定名称和 name 和 type 属性的{{domxref("PerformanceEntry")}}对象数组。在创建 performance 标记或在明确的时间点测量（比如手动调用{{domxref("Performance.mark","mark()")}}方法）也可以创建这样的对象数组。
 
 在 Workers 中可以使用该方法。

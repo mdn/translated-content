@@ -7,7 +7,7 @@ slug: Web/API/TimeRanges
 
 一个 `TimeRanges` 对象包括一个或多个时间范围，其中每个都由一个开始偏移量和结束偏移量指定。你可以将你想要检索的时间范围的索引值传递给 `start()` 和 `end()` 方法来引用每个时间范围。
 
-术语"[normalized TimeRanges object](http://www.w3.org/TR/html5/the-iframe-element.html#normalized-timeranges-object)"指出这种对象中的范围时有序的，不重叠的，不为空并且不接触的（相邻范围被折叠成更大的范围）。
+术语"[normalized TimeRanges object](https://www.w3.org/TR/html5/the-iframe-element.html#normalized-timeranges-object)"指出这种对象中的范围时有序的，不重叠的，不为空并且不接触的（相邻范围被折叠成更大的范围）。
 
 ## 属性
 

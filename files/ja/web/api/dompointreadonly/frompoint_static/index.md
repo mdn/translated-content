@@ -18,9 +18,7 @@ fromPoint(sourcePoint);
 ### 引数
 
 - `sourcePoint`
-
   - : 新しい点のプロパティの値を取得するための {{domxref("DOMPoint")}} または {{domxref("DOMPointReadOnly")}} インスタンス、あるいは以下のプロパティを含むオブジェクトです。
-
     - `x`
       - : 空間上の点の `x` 座標を表す、無制限の浮動小数点数。これは一般に水平座標であり、正の値は右側に、負の値は左側になります。既定値は `0` です。
     - `y`
@@ -44,7 +42,7 @@ fromPoint(sourcePoint);
 const point2D = DOMPointReadOnly.fromPoint({ x: 25, y: 25 });
 ```
 
-### 既存の点を使用して三次元の点を作成します。
+### 既存の点を使用して三次元の点を作成します
 
 この例では、 {{domxref("DOMPoint")}} を用いて、 {{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}} 型の点 `origPoint` を作成しています。そして、その点は `fromPoint()` の入力として使用され、新しい点 `newPoint` を作成します。
 

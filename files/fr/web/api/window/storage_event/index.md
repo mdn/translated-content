@@ -43,7 +43,7 @@ window.addEventListener("storage", () => {
 });
 ```
 
-La même action peut être réalisée ) l'aide de la propriété du gestionnaire d'événements [`onstorage`](/fr/docs/Web/API/WindowEventHandlers/onstorage) :
+La même action peut être réalisée ) l'aide de la propriété du gestionnaire d'événements [`onstorage`](/fr/docs/Web/API/Window/storage_event) :
 
 ```js
 window.onstorage = () => {

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされました。このページでは、開発者に影響する Firefox 66 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -29,8 +27,7 @@ Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされまし�
 
 - [スクロールアンカリング](https://drafts.csswg.org/css-scroll-anchoring/)を、デスクトップ版 Firefox に実装しました (モバイル版は未実装です)。{{cssxref("overflow-anchor")}} プロパティを含みます ([Firefox バグ 1305957](https://bugzil.la/1305957))。
 - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) で、大文字・小文字の区別に関する修飾子 `s` をサポートしました ([Firefox バグ 1512386](https://bugzil.la/1512386))。
-- いくつかの [論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) ショートハンドと、フローに関係する border radius プロパティを実装しました:
-
+- いくつかの [論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values) ショートハンドと、フローに関係する border radius プロパティを実装しました:
   - {{cssxref("padding-block")}} および {{cssxref("padding-inline")}} ([Firefox バグ 1519847](https://bugzil.la/1519847))。
   - {{cssxref("margin-block")}} および {{cssxref("margin-inline")}} ([Firefox バグ 1519944](https://bugzil.la/1519944))。
   - {{cssxref("inset")}}、{{cssxref("inset-block")}}、{{cssxref("inset-inline")}} ([Firefox バグ 1520229](https://bugzil.la/1520229))。
@@ -42,7 +39,6 @@ Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされまし�
 - 仕様書で公表された規則に従って、{{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} のアニメーションを実装しました ([Firefox バグ 1348519](https://bugzil.la/1348519))。
 - テーブルのセルや列の幅で、パーセンテージを使用した {{cssxref("calc")}} をサポートしました ([Firefox バグ 957915](https://bugzil.la/957915))。
 - `min-content` および `max-content` キーワードが、接頭辞なしで使用可能になりました ([Firefox バグ 1322780](https://bugzil.la/1322780))。これらは以下のプロパティに設定できます:
-
   - {{cssxref("width")}}
   - {{cssxref("height")}}
   - {{cssxref("flex-basis")}}
@@ -88,7 +84,7 @@ _変更なし。_
 
 #### メディア、ウェブオーディオ、WebRTC
 
-- 新しい [AV1 動画コーデック](/ja/docs/Web/Media/Formats/Video_codecs#av1) を macOS および Windows (Intel プロセッサー用) で、デフォルトで有効にしました。Linux は Firefox 67 でサポートする予定です ([Firefox バグ 1521181](https://bugzil.la/1521181)、[Firefox バグ 1452146](https://bugzil.la/1452146)、[Firefox バグ 1534814](https://bugzil.la/1534814))。
+- 新しい [AV1 動画コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1) を macOS および Windows (Intel プロセッサー用) で、デフォルトで有効にしました。Linux は Firefox 67 でサポートする予定です ([Firefox バグ 1521181](https://bugzil.la/1521181)、[Firefox バグ 1452146](https://bugzil.la/1452146)、[Firefox バグ 1534814](https://bugzil.la/1534814))。
 - {{domxref("MediaDevices")}} の {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッド (`navigator.mediaDevices.getDisplayMedia()` として使用可能) を追加して、仕様書に一致させました。このメソッドは、スクリーンまたはスクリーンの一部を {{domxref("MediaStream")}} として取得して、操作または共有できます ([Firefox バグ 1321221](https://bugzil.la/1321221))。
 - スクリーンやウィンドウの内容を取得するための、Firefox 独自の {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} に基づくメソッドを最終的に非推奨にする取り組みの一部として、非標準の `mediaSource` 定数を値 `screen` および `window` と同等に扱うようになりました。どちらも、ユーザーが選択するスクリーンやウィンドウのリストを提供します ([Firefox バグ 1474376](https://bugzil.la/1474376))。
 - ローカル出力の {{domxref("RTCRTPStreamStats")}} オブジェクトに {{domxref("RTCRtpStreamStats.qpSum", "qpSum")}} を追加しました。これは、ビデオトラックで送受信するすべてのフレームの量子化パラメーターの合計を表します。この値が高ければ、ストリームはより圧縮されていると考えられます ([Firefox バグ 1347070](https://bugzil.la/1347070))。
@@ -117,7 +113,6 @@ _変更なし。_
 - 新しい閲覧コンテキストを開く操作をサポートするため `WebDriver:NewWindow` を追加しました。ウィンドウまたはタブのいずれかを開くことができます ([Firefox バグ 1504756](https://bugzil.la/1504756))。
 - 指定した要素が現在の閲覧コンテキストに含まれていない場合に、`WebDriver:SwitchToFrame` で `no such element` エラーが発生するようになりました ([Firefox バグ 1517196](https://bugzil.la/1517196))。
 - `WebDriver:ExecuteScript` および `WebDriver:ExecuteAsyncScript` が、仕様書に準拠しない `scriptTimeout` 引数をサポートしないようになりました。代わりに `WebDriver:SetTimeout` または `timeouts` 機能を使用してください ([Firefox バグ 1510929](https://bugzil.la/1510929))。
-
   - さらに、不定のスクリプトタイムアウトをサポートしました ([Firefox バグ 1128997](https://bugzil.la/1128997))。
 
 - `WebDriver:SetWindowRect` が、応答でウィンドウの状態を返さないようになりました ([Firefox バグ 1517587](https://bugzil.la/1517587))。

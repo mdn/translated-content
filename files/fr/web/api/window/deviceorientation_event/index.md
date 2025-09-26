@@ -5,7 +5,7 @@ slug: Web/API/Window/deviceorientation_event
 
 {{APIRef}}
 
-L'événement `deviceorientation` est déclenché lorsque des données sont disponibles, à partir d'un capteur d'orientation, sur l'orientation actuelle de l'appareil par rapport au cadre de coordonnées de la Terre. Ces données sont recueillies à partir d'un magnétomètre à l'intérieur de l'appareil. Voir [Données d'orientation et de mouvement expliquées](/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained) pour plus de détails.
+L'événement `deviceorientation` est déclenché lorsque des données sont disponibles, à partir d'un capteur d'orientation, sur l'orientation actuelle de l'appareil par rapport au cadre de coordonnées de la Terre. Ces données sont recueillies à partir d'un magnétomètre à l'intérieur de l'appareil. Voir [Données d'orientation et de mouvement expliquées](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) pour plus de détails.
 
 <table class="properties">
   <tbody>
@@ -76,6 +76,6 @@ var handleOrientationEvent = function (
 ## Voir aussi
 
 - L'événement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
-- [Détection de l'orientation des appareils.](/fr/docs/Web/API/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained)
+- [Détection de l'orientation des appareils.](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
 - Simulation d'événements d'orientation sur les navigateurs de bureau avec [orientation-devtool](https://louisremi.github.com/orientation-devtool/).

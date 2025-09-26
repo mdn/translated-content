@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 
 La méthode **`setMilliseconds()`** définit les millièmes de secondes pour la date, selon l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-setmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setMilliseconds()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.getMilliseconds());
+// Expected output: 0
+
+event.setMilliseconds(456);
+
+console.log(event.getMilliseconds());
+// Expected output: 456
+```
 
 ## Syntaxe
 

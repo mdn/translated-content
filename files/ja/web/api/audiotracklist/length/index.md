@@ -1,8 +1,9 @@
 ---
-title: AudioTrackList.length
+title: "AudioTrackList: length プロパティ"
+short-title: length
 slug: Web/API/AudioTrackList/length
 l10n:
-  sourceCommit: 6b8b53f565c67eb22fd78f8dec036c4694ad18d4
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,7 +16,7 @@ l10n:
 
 ## 例
 
-このスニペットは、{{domxref("Document.querySelector", "querySelector()")}} によって {{Glossary("DOM")}} 内で見つかった最初の {{HTMLElement("video")}} 要素内の音声トラックの数を取得します。
+このスニペットは、{{Glossary("DOM")}} 内で見つかった最初の {{HTMLElement("video")}} 要素内の音声トラックの数を {{domxref("Document.querySelector", "querySelector()")}} によって取得します。
 
 ```js
 const videoElem = document.querySelector("video");

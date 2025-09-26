@@ -3,7 +3,7 @@ title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 ---
 
-{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -20,9 +20,7 @@ Intl.DateTimeFormat.supportedLocalesOf(locales[, options])
 - `locales`
   - : Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}.
 - `options`
-
   - : Необязательный параметр. Объект, который может содержать следующее свойство:
-
     - `localeMatcher`
       - : Используемый алгоритм сопоставления локалей. Возможными значениями являются `"lookup"` и `"best fit"`; значением по умолчанию является `"best fit"`. Информацию по этой опции смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_negotiation", 1)}}.
 
@@ -47,9 +45,7 @@ console.log(
 
 ## Спецификации
 
-| Спецификация                                                                        | Статус                  | Комментарии              |
-| ----------------------------------------------------------------------------------- | ----------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-12.2.2', 'Intl.DateTimeFormat.supportedLocalesOf')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

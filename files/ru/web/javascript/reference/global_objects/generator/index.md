@@ -56,15 +56,15 @@ console.log(gen.next().value); // 2
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 ### Legacy generators
 
-- [The legacy Iterator protocol](/ru/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol)
+- [The legacy Iterator protocol](/ru/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 
 ### ES2015 generators
 
@@ -75,4 +75,4 @@ console.log(gen.next().value); // 2
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("GeneratorFunction")}}
-- [The Iterator protocol](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)

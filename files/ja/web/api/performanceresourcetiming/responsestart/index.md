@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Performance API")}}
 
-**`responseStart`** は読み取り専用プロパティで、ブラウザーがサーバ、キャッシュ、またはローカルリソースからレスポンスの最初のバイトを受信した直後の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`responseStart`** は読み取り専用プロパティで、ブラウザーがサーバー、キャッシュ、またはローカルリソースからレスポンスの最初のバイトを受信した直後の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
 
 ## 値
 

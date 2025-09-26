@@ -1,11 +1,13 @@
 ---
 title: ruby-align
 slug: Web/CSS/ruby-align
+l10n:
+  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}
+**`ruby-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ベースに対するさまざまなルビ要素の配分を定義します。
 
-**`ruby-align`** は CSS のプロパティで、ベースに対するさまざまなルビの配分を定義します。
+## 構文
 
 ```css
 /* キーワード値 */
@@ -18,10 +20,9 @@ ruby-align: space-around;
 ruby-align: inherit;
 ruby-align: initial;
 ruby-align: revert;
+ruby-align: revert-layer;
 ruby-align: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -30,9 +31,9 @@ ruby-align: unset;
 - `center`
   - : ルビをベーステキストの中央に揃えることを示すキーワードです。
 - `space-between`
-  - : ルビの要素の範囲内に配分するよう、スペースを付加することを示すキーワードです。
+  - : ルビの要素の範囲内に割り付けるために、空間を付加することを示すキーワードです。
 - `space-around`
-  - : ルビの要素の範囲内に配分するよう、スペースを付加することを示すキーワードです。また、ルビの周囲にもスペースを付加します。
+  - : ルビの要素の範囲内に割り付けるために、空間を付加し、ルビの周囲にも空間を付加することを示すキーワードです。
 
 ## 公式定義
 
@@ -44,7 +45,7 @@ ruby-align: unset;
 
 ## 例
 
-<h3 id="Ruby_aligned_at_the_start_of_the_base_text">ルビをベーステキストの先頭に揃える</h3>
+### ルビをベーステキストの先頭に揃える
 
 #### HTML
 
@@ -65,9 +66,9 @@ ruby {
 
 #### 結果
 
-{{EmbedLiveSample("Ruby_aligned_at_the_start_of_the_base_text", 180, 40)}}
+{{EmbedLiveSample("ルビをベーステキストの先頭に揃える", 180, 40)}}
 
-<h3 id="Ruby_aligned_at_the_center_of_the_base_text">ルビをベーステキストの中央に揃える</h3>
+### ルビをベーステキストの中央に揃える
 
 #### HTML
 
@@ -88,9 +89,9 @@ ruby {
 
 #### 結果
 
-{{EmbedLiveSample("Ruby_aligned_at_the_center_of_the_base_text", 180, 40)}}
+{{EmbedLiveSample("ルビをベーステキストの中央に揃える", 180, 40)}}
 
-<h3 id="Extra_space_distributed_between_ruby_elements">ルビ要素の範囲内にスペースを配分する</h3>
+### ルビ要素の範囲内に空間を配分する
 
 #### HTML
 
@@ -111,9 +112,9 @@ ruby {
 
 #### 結果
 
-{{EmbedLiveSample("Extra_space_distributed_between_ruby_elements", 180, 40)}}
+{{EmbedLiveSample("ルビ要素の範囲内に空間を配分する", 180, 40)}}
 
-<h3 id="Extra_space_distributed_between_and_around_ruby_elements">ルビ要素内および周囲にスペースを配分する</h3>
+### ルビ要素内および周囲に空間を配分する
 
 #### HTML
 
@@ -134,7 +135,7 @@ ruby {
 
 #### 結果
 
-{{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_elements", 180, 40)}}
+{{EmbedLiveSample("ルビ要素内および周囲に空間を配分する", 180, 40)}}
 
 ## 仕様書
 

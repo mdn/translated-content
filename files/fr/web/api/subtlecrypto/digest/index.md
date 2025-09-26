@@ -18,7 +18,6 @@ const digest = crypto.subtle.digest(algorithm, data);
 ### Paramètres
 
 - _`algorithm`_ est une {{domxref("DOMString")}} indiquant la fonction de condensé à utiliser. Les valeurs possibles sont:
-
   - `SHA-1` (ne pas utiliser pour des applications cryptographiques)
   - `SHA-256`
   - `SHA-384`
@@ -32,13 +31,14 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ## Algorithmes supportés
 
-Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossaire/Fonction_de_hachage_cryptographique), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
+Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossary/Hash_function), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
 
 ### SHA-1
 
 Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1, et produit un résultat de 160 bits de long.
 
-> **Attention :** Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
+> [!WARNING]
+> Cet algorithme est maintenant considéré comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
 
 ### SHA-256
 
@@ -52,7 +52,8 @@ Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpub
 
 Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.4, et produit un résultat de 512 bits de long.
 
-> **Note :** Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/fr/docs/Web/API/SubtleCrypto/sign#HMAC).
+> [!NOTE]
+> Si vous cherchez à créer un condensé pour authentifié un message ([HMAC](/fr/docs/Glossary/HMAC)), vous aurez plutôt besoin de [SubtleCrypto.sign()](/fr/docs/Web/API/SubtleCrypto/sign#HMAC).
 
 ## Exemples
 

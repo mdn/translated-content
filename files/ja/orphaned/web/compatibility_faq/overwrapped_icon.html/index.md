@@ -46,4 +46,4 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Icon.html
 ・px 指定した場合は、少ない修正で横幅の変動するアイコンに対応できます。
 ・「auto」で指定した場合は、他のアイコンの表示位置指定を全体的に見直す必要がありますが、桁数の少ない場合と多い場合で、それぞれ合った表示を行うことが可能となります。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

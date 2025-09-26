@@ -54,15 +54,15 @@ function handleTrackEvent(event) {
 
   if (event.target instanceof VideoTrackList) {
     trackKind = "映像";
-  } else if (event.target instanceof(AudioTrackList)) {
+  } else if (event.target instanceof AudioTrackList) {
     trackKind = "音声";
-  } else if (event.target instanceof(TextTrackList)) {
+  } else if (event.target instanceof TextTrackList) {
     trackKind = "テキスト";
   } else {
     trackKind = "不明な";
   }
 
-  switch(event.type) {
+  switch (event.type) {
     case "addtrack":
       console.log(trackKind + "トラックが追加されました。");
       break;

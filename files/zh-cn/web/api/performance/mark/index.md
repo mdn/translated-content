@@ -20,8 +20,9 @@ slug: Web/API/Performance/mark
 
 ## 语法
 
-```
-performance.mark(name);
+```js-nolint
+mark(name)
+mark(name, markOptions)
 ```
 
 ### 参数

@@ -19,9 +19,9 @@ No SVG, você pode especificar que quaisquer outros objetos gráficos ou element
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -37,7 +37,7 @@ No SVG, você pode especificar que quaisquer outros objetos gráficos ou element
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGMaskElement`](/pt-BR/DOM/SVGMaskElement).
+Este elemento implementa a interface do [`SVGMaskElement`](/pt-BR/docs/DOM/SVGMaskElement).
 
 ## Veja também
 

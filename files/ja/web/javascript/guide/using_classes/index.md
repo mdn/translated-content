@@ -2,22 +2,22 @@
 title: クラスの使用
 slug: Web/JavaScript/Guide/Using_classes
 l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript はプロトタイプベースの言語です。オブジェクトの動作は、自分自身のプロパティとプロトタイプのプロパティで指定します。しかし、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)の追加により、オブジェクトの階層の作成、プロパティとその値の継承は、Java などの他のオブジェクト指向言語とかなり方向性が近くなっています。この章では、クラスからオブジェクトを作成する方法を説明します。
 
 他にも多くの言語では、クラスやコンストラクターは、オブジェクトやインスタンスと明確に判別されます。JavaScript では、クラスは主に既存のプロトタイプ継承の仕組みを抽象化したもので、すべてのパターンがプロトタイプベースの継承に変換可能です。クラス自体も通常の JavaScript の値であり、独自のプロトタイプチェーンを持っています。実際、JavaScript のほとんどの関数はコンストラクターとして使用することができます - 新しいオブジェクトを作成するには、コンストラクター関数と一緒に `new` 演算子を使用します。
 
-このチュートリアルでは、よく抽象化されたクラスモデルを使って遊び、クラスがどのような意味づけをするのかについて説明します。もし、基盤となるプロトタイプシステムを深く掘り下げたいのであれば、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)のガイドを読むと良いでしょう。
+このチュートリアルでは、よく抽象化されたクラスモデルを使って遊び、クラスがどのような意味づけをするのかについて説明します。もし、基盤となるプロトタイプシステムを深く掘り下げたいのであれば、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)のガイドを読むと良いでしょう。
 
 この章では、あなたがすでに JavaScript にある程度慣れていて、普通のオブジェクトを使用したことがあることを想定しています。
 
 ## クラスの概要
 
-JavaScript をある程度使いこなしている方、あるいはガイドに沿って進んできた方は、たとえ作成していなくても、すでにクラスを使用したことがあるのではないでしょうか？例えば、これは[馴染みがあるかもしれません](/ja/docs/Web/JavaScript/Guide/Numbers_and_dates)。
+JavaScript をある程度使いこなしている方、あるいはガイドに沿って進んできた方は、たとえ作成していなくても、すでにクラスを使用したことがあるのではないでしょうか？例えば、これは[馴染みがあるかもしれません](/ja/docs/Web/JavaScript/Guide/Representing_dates_times)。
 
 ```js
 const bigDay = new Date(2019, 6, 19);
@@ -101,7 +101,8 @@ MyClass.prototype.myMethod = function () {
 })();
 ```
 
-> **メモ:** プライベートフィールドとメソッドは、クラスにおける新しい機能であり、関数コンストラクターにおける同等の機能はありません。
+> [!NOTE]
+> プライベートフィールドとメソッドは、クラスにおける新しい機能であり、関数コンストラクターにおける同等の機能はありません。
 
 ### クラスの構築
 
@@ -174,7 +175,7 @@ console.log(red);
 
 このような出力が確認できるはずです。
 
-```
+```plain
 Object { values: (3) […] }
   values: Array(3) [ 255, 0, 0 ]
 ```
@@ -266,7 +267,7 @@ class Color {
 console.log(new Color().getRed === new Color().getRed); // false
 ```
 
-これに対して、メソッドを使用すると、すべてのインスタンスで共有されることになります。関数はすべてのインスタンスで共有することができますが、それでも異なるインスタンスが呼び出すと、`this` の値が異なるため、動作が異なることがあります。このメソッドがどこに格納されているかというと、すべてのインスタンスのプロトタイプ、つまり `Color.prototype` に定義されています。詳しくは [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) に説明があります。
+これに対して、メソッドを使用すると、すべてのインスタンスで共有されることになります。関数はすべてのインスタンスで共有することができますが、それでも異なるインスタンスが呼び出すと、`this` の値が異なるため、動作が異なることがあります。このメソッドがどこに格納されているかというと、すべてのインスタンスのプロトタイプ、つまり `Color.prototype` に定義されています。詳しくは [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) に説明があります。
 
 同様に、色の赤成分の値を設定する `setRed` という新しいメソッドを作成することができます。
 
@@ -324,9 +325,9 @@ const red = new Color(255, 0, 0);
 console.log(red.values[0]); // 0。255 ではなくなります。純粋な赤の H の値は 0 だからです。
 ```
 
-ユーザーは `values` が RGB 値を突然崩壊させることを意味していると思い込み、自分のロジックが壊れる原因になりかねません。そのため、もしあなたがクラスの実装者であれば、インスタンスの内部データ構造をユーザーから隠したいでしょう。これは、API をきれいに保つためと、あなたが「害のないリファクタリング」をしたときにユーザーのコードが壊れるのを防ぐためです。クラスでは、これは [_private fields_](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields) を通して行われます。
+ユーザーは `values` が RGB 値を突然崩壊させることを意味していると思い込み、自分のロジックが壊れる原因になりかねません。そのため、もしあなたがクラスの実装者であれば、インスタンスの内部データ構造をユーザーから隠したいでしょう。これは、API をきれいに保つためと、あなたが「害のないリファクタリング」をしたときにユーザーのコードが壊れるのを防ぐためです。クラスでは、これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を通して行われます。
 
-プライベートフィールドは、接頭辞に `#` (ハッシュ記号) を持つ識別子です。このハッシュはフィールドの名前に不可欠な要素であり、プライベートプロパティがパブリックプロパティと名前が衝突することはないことを意味しています。プライベートフィールドをクラスのどこかで参照するには、クラス本体でそれを宣言する必要があります（プライベートプロパティをその場で作成することはできません）。これを除けば、プライベートフィールドは通常のプロパティとほとんど同じです。
+プライベートフィールドは、接頭辞に `#` (ハッシュ記号) を持つ識別子です。このハッシュはフィールドの名前に不可欠な部分であり、プライベートフィールドがパブリックフィールドやメソッドと名前が衝突することはないことを意味しています。プライベートフィールドをクラスのどこかで参照するには、クラス本体でそれを宣言する必要があります（プライベートをその場で作成することはできません）。これを除けば、プライベートフィールドは通常のプロパティとほとんど同じです。
 
 ```js
 class Color {
@@ -349,9 +350,12 @@ console.log(red.getRed()); // 255
 
 クラス外からプライベートフィールドにアクセスすると、初期の構文エラーになります。`#privateField` は特殊な構文なので、静的解析を行い、コードを評価する前にプライベートフィールドの使い方をすべて見つけることができるため、言語はこれを防ぐことができます。
 
-```js example-bad
+```js-nolint example-bad
 console.log(red.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
 ```
+
+> [!NOTE]
+> Chrome コンソールで実行するコードは、クラスの外部からプライベート要素にアクセスすることができます。これは、 JavaScript の構文制限を緩和した開発ツール独自の機能です。
 
 JavaScript でのプライベートフィールドはハードプライベートです。クラスがこのプライベートフィールドを公開するメソッドを実装していない場合、クラスの外からそれを取得する仕組みは全くありません。つまり、公開されるメソッドの動作が変わらない限り、クラスのプライベートフィールドにどんなリファクタリングを行っても安全だということです。
 
@@ -401,7 +405,7 @@ const crimson = new Color(220, 20, 60);
 red.redDifference(crimson); // 35
 ```
 
-しかし、`anotherColor` が Color のインスタンスでない場合、`#values` は存在しないことになります。（他のクラスが同じ名前の `#values` プライベートフィールドを持っていたとしても、同じことを参照しているわけではないので、ここではアクセスすることができません。）存在しないプライベートプロパティにアクセスすると、通常のプロパティのように `undefined` を返すのではなく、エラーが発生します。オブジェクトにプライベートフィールドが存在するかどうかわからず、エラーを処理するために `try`/`catch` を使用せずにアクセスしたい場合は、 [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用することができます。
+しかし、`anotherColor` が Color のインスタンスでない場合、`#values` は存在しないことになります。（他のクラスが同じ名前の `#values` プライベートフィールドを持っていたとしても、同じことを参照しているわけではないので、ここではアクセスすることができません。）存在しないプライベート要素にアクセスすると、通常のプロパティのように `undefined` を返すのではなく、エラーが発生します。オブジェクトにプライベートフィールドが存在するかどうかわからず、エラーを処理するために `try`/`catch` を使用せずにアクセスしたい場合は、 [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用することができます。
 
 ```js
 class Color {
@@ -418,11 +422,12 @@ class Color {
 }
 ```
 
-> **メモ:** このとき、`#` は特殊な識別子構文であり、フィールド名を文字列のように使用することはできないことに留意してください。`"#values" in anotherColor` は、プライベートフィールドではなく、文字通り `"#values"` というプロパティ名を探していくことになります。
+> [!NOTE]
+> このとき、`#` は特殊な識別子構文であり、フィールド名を文字列のように使用することはできないことに留意してください。`"#values" in anotherColor` は、プライベートフィールドではなく、文字通り `"#values"` というプロパティ名を探していくことになります。
 
-プライベートプロパティを使用するには、いくつかの制限があります。同じ名前を単一のクラスで 2 回宣言することはできませんし、削除することもできません。どちらも初期の構文エラーにつながります。
+プライベート要素を使用するには、いくつかの制限があります。同じ名前を単一のクラスで 2 回宣言することはできませんし、削除することもできません。どちらも初期の構文エラーにつながります。
 
-```js example-bad
+```js-nolint example-bad
 class BadIdeas {
   #firstName;
   #firstName; // syntax error occurs here
@@ -435,7 +440,7 @@ class BadIdeas {
 
 メソッド、[ゲッター、セッター](#アクセサーフィールド)も同様にプライベートにすることができます。クラスが内部で行う必要があるが、コードの他の部分からは呼び出すことができないような複雑なものがある場合に有用です。
 
-例えば、[HTML のカスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)を作成し、クリックしたりタップしたりしたときに何かやや複雑な動作をさせることを想像してみてください。さらに、要素がクリックされたときに起こるやや複雑なことは、このクラスに限定されるべきで、JavaScript の他の部分がそれにアクセスすることはない（あるいは、する必要がある）ためです。
+例えば、[HTML のカスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を作成し、クリックしたりタップしたりしたときに何かやや複雑な動作をさせることを想像してみてください。さらに、要素がクリックされたときに起こるやや複雑なことは、このクラスに限定されるべきで、JavaScript の他の部分がそれにアクセスすることはない（あるいは、する必要がある）ためです。
 
 ```js
 class Counter extends HTMLElement {
@@ -536,7 +541,8 @@ class MyClass {
 
 `Date` の例では、現在の日付を返す [`Date.now()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/now) メソッドにも遭遇しています。このメソッドは Date のインスタンスに属するものではなく、クラスそのものに属するものです。しかし、Dateインスタンスを扱うときに有益なメソッドであるため、グローバルな `DateNow()` 関数として公開するのではなく、`Date` クラスに搭載しています。
 
-> **メモ:** ユーティリティメソッドの接頭辞に、そのメソッドが扱うものを付けることは「名前空間化」と呼ばれ、良い習慣とされています。例えば、JavaScript では、古い接頭辞のない [`parseInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/parseInt) メソッドに加え、後から、数字を扱うためのメソッドであることを示すために [`Number.parseInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) メソッドが追加されました。
+> [!NOTE]
+> ユーティリティメソッドの接頭辞に、そのメソッドが扱うものを付けることは「名前空間化」と呼ばれ、良い習慣とされています。例えば、JavaScript では、古い接頭辞のない [`parseInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/parseInt) メソッドに加え、後から、数字を扱うためのメソッドであることを示すために [`Number.parseInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) メソッドが追加されました。
 
 [静的プロパティ](/ja/docs/Web/JavaScript/Reference/Classes/static)は、クラスの個々のインスタンスではなく、クラス自体に定義されるクラス機能のグループです。これらの機能には、次のようなものがあります。
 
@@ -578,7 +584,7 @@ class MyClass {
 console.log(MyClass.myStaticProperty); // 'foo'
 ```
 
-静的初期化ブロックは、クラスが宣言された後、すぐにコードを実行するのとほぼ同じです。唯一の違いは、静的なプライベートプロパティにアクセスできることです。
+静的初期化ブロックは、クラスが宣言された後、すぐにコードを実行するのとほぼ同じです。唯一の違いは、静的なプライベート要素にアクセスできることです。
 
 ## 拡張と継承
 
@@ -627,7 +633,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-すぐに気付くことがいくつかあります。最初の点は、コンストラクタの中で、`super(r, g, b)` を呼び出していることです。`this` にアクセスする前に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出すことは言語要件です。`super()` は親クラスのコンストラクターを呼び出して `this` を初期化します — ここでは `this = new Color(r, g, b)` とほぼ同じ意味です。`super()` の前にコードを置くことはできますが、`super()` の前に `this` にアクセスすることはできません。言語上、未初期化の `this` にアクセスすることはできないからです。
+すぐに気付くことがいくつかあります。最初の点は、コンストラクターの中で、`super(r, g, b)` を呼び出していることです。`this` にアクセスする前に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出すことは言語要件です。`super()` は親クラスのコンストラクターを呼び出して `this` を初期化します — ここでは `this = new Color(r, g, b)` とほぼ同じ意味です。`super()` の前にコードを置くことはできますが、`super()` の前に `this` にアクセスすることはできません。言語上、未初期化の `this` にアクセスすることはできないからです。
 
 親クラスが `this` を変更した後、派生クラスは自分自身でロジックを作成することができます。ここでは、`#alpha` というプライベートフィールドを追加し、それと対話するためのゲッター/セッターのペアを提供しました。
 
@@ -689,7 +695,7 @@ console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 
 派生クラスは親クラスのプライベートフィールドにアクセスできません。これは、JavaScript のプライベートフィールドが「ハードプライベート」であることのもう一つの重要な側面です。プライベートフィールドは、クラス本体にスコープされ、外部のコードにアクセスすることはできません。
 
-```js example-bad
+```js-nolint example-bad
 class ColorWithAlpha extends Color {
   log() {
     console.log(this.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
@@ -711,7 +717,7 @@ console.log(color instanceof ColorWithAlpha); // true
 
 このガイドはこれまで実用的なものでした。私たちはクラスをどのように使用できるかに焦点を当てていますが、1つだけ未解決の疑問があります。なぜクラスを使用するのでしょうか？答えは、「場合による」です。
 
-クラスはパラダイム、つまりコードを整理する方法を導入します。クラスはオブジェクト指向プログラミングの基礎であり、[継承](<https://ja.wikipedia.org/wiki/継承_(プログラミング)>)や[多態性](<https://ja.wikipedia.org/wiki/ポリモーフィズム>)（特にサブタイピング）といった概念に基づいて構築されています。しかし、多くの人は哲学的にある種の OOP の実践に反対しており、その結果クラスを使用していません。
+クラスはパラダイム、つまりコードを整理する方法を導入します。クラスはオブジェクト指向プログラミングの基礎であり、[継承](<https://ja.wikipedia.org/wiki/継承_(プログラミング)>)や[多態性](https://ja.wikipedia.org/wiki/ポリモーフィズム)（特にサブタイピング）といった概念に基づいて構築されています。しかし、多くの人は哲学的にある種の OOP の実践に反対しており、その結果クラスを使用していません。
 
 例えば、`Date` オブジェクトが悪名高いのは、変更可能であることです。
 
@@ -763,4 +769,4 @@ function isValidColor(color) {
 
 JavaScript には、コードを正規のオブジェクト指向で整理する仕組みがありますが、それを使用するかどうか、どのように使用するかは、すべてプログラマーの裁量に委ねられています。
 
-{{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
+{{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}

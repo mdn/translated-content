@@ -45,7 +45,7 @@ window.addEventListener("vrdisplayconnect", function () {
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplayconnect`](/fr/docs/Web/API/Window/onvrdisplayconnect) :
+Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplayconnect`](/fr/docs/Web/API/Window/vrdisplayconnect_event) :
 
 ```js
 window.onvrdisplayconnect = function () {
@@ -64,5 +64,4 @@ window.onvrdisplayconnect = function () {
 
 ## Voir aussi
 
-- [WebVR API homepage](/fr/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — démos, téléchargements et autres ressources de l'équipe Mozilla VR.
+- [WebVR API](/fr/docs/Web/API/WebVR_API)

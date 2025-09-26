@@ -75,7 +75,7 @@ draw();
 
 Эти свойства могут быть вам знакомы если вы работали с CSS.
 
-Изображение от [WHATWG](http://www.whatwg.org/) ниже показывает различные варианты свойства `textBaseline`.![The top of the em square is
+Изображение от [WHATWG](https://www.whatwg.org/) ниже показывает различные варианты свойства `textBaseline`.![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,
@@ -156,6 +156,6 @@ function draw() {
 
 ## Примечания
 
-В ранних версиях Gecko (движок рендеринга в Firefox, Firefox OS и других приложениях Mozilla) были реализованы [методы API с префиксами](/ru/docs/Web/API/CanvasRenderingContext2D#Prefixed_APIs) для рисования текста на canvas. На данный момент они устарели и уже, возможно, удалены, поэтому их правильная работа не гарантируется.
+В ранних версиях Gecko (движок рендеринга в Firefox, Firefox OS и других приложениях Mozilla) были реализованы [методы API с префиксами](/ru/docs/Web/API/CanvasRenderingContext2D#prefixed_apis) для рисования текста на canvas. На данный момент они устарели и уже, возможно, удалены, поэтому их правильная работа не гарантируется.
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

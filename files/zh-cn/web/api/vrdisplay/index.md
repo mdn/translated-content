@@ -69,5 +69,4 @@ TBD.
 
 ## 参见
 
-- [WebVR API 主页](/zh-CN/docs/Web/API/WebVR_API)。
-- [MozVr.com](http://mozvr.com/) — 来源于 Mozilla VR 团队的演示、下载以及其他资源。
+- [WebVR API](/zh-CN/docs/Web/API/WebVR_API)

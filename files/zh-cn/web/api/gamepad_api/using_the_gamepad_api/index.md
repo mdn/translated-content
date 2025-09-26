@@ -13,7 +13,8 @@ HTML5 为丰富的交互式游戏开发引入了许多必要的组件。像 `<ca
 
 当一个新的手柄连接到计算机时，焦点页面 (当前页面) 首先接收一个 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件。如果在加载页面时已经连接了手柄，则会在用户按下某个按钮或移动坐标方向 (axes) 时触发焦点页面的 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件。
 
-> **备注：** 在 Firefox 中，控制器只会暴露给与用户产生交互的可见页面。这有助于防止控制器被用于获取用户的指纹。一旦有一个手柄与页面产生交互，那么其他连接的控制器将自动对页面可见。
+> [!NOTE]
+> 在 Firefox 中，控制器只会暴露给与用户产生交互的可见页面。这有助于防止控制器被用于获取用户的指纹。一旦有一个手柄与页面产生交互，那么其他连接的控制器将自动对页面可见。
 
 你可以这样使用 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) ：
 
@@ -104,18 +105,18 @@ window.addEventListener("gamepadconnected", function (e) {
 - `mapping`: 一个用来指示浏览器是否已将设备上的控件重新映射到已知布局的字符串。目前只有一个受支持的已知布局 - [standard gamepad](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping)(标准控制器)。如果浏览器能够将设备上的控件映射为该布局，`mapping` 属性将会为字符串 `standard`。
 - `connected`: 一个用来指示控制器是否连接到系统的布尔值。如果已连接则为 `True`；反之则为 `False`。
 - `buttons`: 一个表示设备上按钮的 {{ domxref("GamepadButton") }} 数组对象。每个 {{ domxref("GamepadButton") }} 都含有一个 `pressed` 和一个 `value` 属性：
-
   - `pressed` 属性是一个表示按钮当前是按下 (`true`) 还是没按下 (`false`) 的布尔值。
   - `value` 属性是一个表示已触发模拟按钮 (例如目前很多控制器的线性/段式扳机键) 的值的浮点值。值的范围被规范为 0.0 到 1.0。0.0 表示没被按下的按钮，1.0 表示被完全按下的按钮。
 
 - `axes`: 一个表示设备上坐标输入控件 (例如控制器摇杆) 的数组对象。数组中的每个值都是介于 -1.0 到 1.0 的浮点值，来表示坐标方向的最低 (-1.0) 和最大 (1.0) 值。
 - `timestamp`: 它将返回一个 {{ domxref("DOMHighResTimeStamp") }} ，该值表示上次更新此控制器数据的时间，以便开发者确定 `axes` 和 `button` 数据是否已从硬件更新。该值必须相对于 {{ domxref("PerformanceTiming") }} 接口的 `navigationStart` 对象。值是单调递增的，这意味着可以通过对比大小来确定数据更新的先后顺序，因为新的值始终比旧的值大。请注意 Firefox 当前不支持该属性。
 
-> **备注：** 出于安全原因，Gamepad 对象在 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件上可用而在 {{ domxref("Window") }} 对象上不可用。一旦我们得到了对它的引用，我们就可以获取其属性以了解有关控制器当前状态的信息。在后台，此对象将会在控制器状态更改时更新。
+> [!NOTE]
+> 出于安全原因，Gamepad 对象在 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件上可用而在 {{ domxref("Window") }} 对象上不可用。一旦我们得到了对它的引用，我们就可以获取其属性以了解有关控制器当前状态的信息。在后台，此对象将会在控制器状态更改时更新。
 
 ### 使用按键信息
 
-让我们看一个简单的示例：显示一个控制器的连接信息 (忽略后续连接的控制器) ，并让您使用控制器右侧的四个操作按钮移动屏幕上一个球。你可以 [查看在线演示](http://chrisdavidmills.github.io/gamepad-buttons/)，并可在 Github 上[找到源代码](https://github.com/chrisdavidmills/gamepad-buttons/tree/master)。
+让我们看一个简单的示例：显示一个控制器的连接信息 (忽略后续连接的控制器) ，并让你使用控制器右侧的四个操作按钮移动屏幕上一个球。你可以 [查看在线演示](http://chrisdavidmills.github.io/gamepad-buttons/)，并可在 Github 上[找到源代码](https://github.com/chrisdavidmills/gamepad-buttons/tree/master)。
 
 我们首先声明一些变量：`gamepadInfo` 用于写入连接信息的段落；`ball` 是我们希望控制移动的球；`start` 作为 `requestAnimation Frame` ID 的初始变量； `a` 和 `b` 变量作为球位置动量，并且变量会被用于 {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} 和 {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} 。（？）
 
@@ -171,8 +172,8 @@ function pollGamepads() {
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads
-    : [];
+      ? navigator.webkitGetGamepads
+      : [];
   for (var i = 0; i < gamepads.length; i++) {
     var gp = gamepads[i];
     if (gp) {
@@ -209,8 +210,8 @@ function gameLoop() {
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads
-    : [];
+      ? navigator.webkitGetGamepads
+      : [];
   if (!gamepads) {
     return;
   }
@@ -234,13 +235,9 @@ function gameLoop() {
 }
 ```
 
-### 使用坐标方向 (axes) 信息
+## 完整的示例：显示控制器状态
 
-**待讨论 (除了一个用 axes\[i] 一个用 button\[i].value，其他基本一样，Firefox 与 Chrome 均是。)**
-
-## 完整的例子：显示控制器状态
-
-这个例子展示了怎样使用 {{ domxref("Gamepad") }} 对象，还有 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 和 [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件显示所有已连接到系统的控制器的状态。你可以查看[在线演示](http://luser.github.io/gamepadtest/)并且可在 Github 上看到[完整的源代码](https://github.com/luser/gamepadtest)。
+这个示例展示了怎样使用 {{ domxref("Gamepad") }} 对象，还有 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 和 [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件显示所有已连接到系统的控制器的状态。你可以查看[在线演示](http://luser.github.io/gamepadtest/)并且可在 Github 上看到[完整的源代码](https://github.com/luser/gamepadtest)。
 
 ```js
 var haveEvents = "ongamepadconnected" in window;
@@ -354,8 +351,8 @@ function scangamepads() {
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads()
-    : [];
+      ? navigator.webkitGetGamepads()
+      : [];
   for (var i = 0; i < gamepads.length; i++) {
     if (gamepads[i]) {
       if (gamepads[i].index in controllers) {

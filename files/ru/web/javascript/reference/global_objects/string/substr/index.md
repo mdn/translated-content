@@ -5,11 +5,22 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substr
 
 {{JSRef}}
 
-> **Предупреждение:** Внимание: так как `String.prototype.substr(…)` не полностью упразднена (а лишь "удалена из стандартов по вебу"), она считается **унаследованной функцией**, использование которой лучше избегать там, где это возможно. Она не является частью ядра языка JavaScript и может быть удалена в будущем. Если есть возможность, используйте метод [`substring()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
+> [!WARNING]
+> Так как `String.prototype.substr(…)` не полностью упразднена (а лишь "удалена из стандартов по вебу"), она считается **унаследованной функцией**, использование которой лучше избегать там, где это возможно. Она не является частью ядра языка JavaScript и может быть удалена в будущем. Если есть возможность, используйте метод [`substring()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
 
 Метод **`substr()`** возвращает указанное количество символов из строки, начиная с указанной позиции.
 
-{{EmbedInteractiveExample("pages/js/string-substr.html")}}
+{{InteractiveExample("JavaScript Demo: String.substr()")}}
+
+```js interactive-example
+const str = "Mozilla";
+
+console.log(str.substr(1, 2));
+// Expected output: "oz"
+
+console.log(str.substr(2));
+// Expected output: "zilla"
+```
 
 ## Синтаксис
 

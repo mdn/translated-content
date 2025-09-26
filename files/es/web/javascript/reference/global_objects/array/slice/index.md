@@ -7,8 +7,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 `El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por _inicio_ hasta _fin_ (_fin_ no incluido). El array original no se modificará.
 
-El código fuente de esta demostración interactiva está alojado en un repositorio Github. Si desea contribuir con ella, por favor clone <https://github.com/mdn/interactive-examples> y envíenos un _"pull request"_.
-
 ## Sintaxis
 
 ```
@@ -18,7 +16,6 @@ arr.slice([inicio [, fin]])
 ## Parámetros
 
 - `inicio`
-
   - : Índice donde empieza la extracción. El primer elemento corresponde con el índice 0.
 
     Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)` extrae los dos últimos elementos del array
@@ -28,7 +25,6 @@ arr.slice([inicio [, fin]])
     Si `inicio` es mayor a la longitud del array, se devuelve un array vacío.
 
 - `fin`
-
   - : Índice que marca el final de la extracción. `slice` extrae hasta, pero sin incluir el final.
 
     `slice(1,4)` extrae desde el segundo elemento hasta el cuarto (los elementos con índices 1, 2, y 3).
@@ -112,7 +108,8 @@ nuevoCoche[0].color = azul
 
 ## Objetos array-like
 
-> **Nota:** Se dice que un objeto es **array-like** ( similar o que se asemeja a un array) cuando entre sus propiedades existen algunas cuyos nombres son **números** y en particular tiene una propiedad llamada **length**. Este hecho hace suponer que el objeto es algún tipo de colección de elementos indexados por números. Es conveniente, a veces, convertir estos objetos a arrays para otorgarles la funcionalidad que de serie se incorpora en todos los arrays a través de su prototipo.
+> [!NOTE]
+> Se dice que un objeto es **array-like** ( similar o que se asemeja a un array) cuando entre sus propiedades existen algunas cuyos nombres son **números** y en particular tiene una propiedad llamada **length**. Este hecho hace suponer que el objeto es algún tipo de colección de elementos indexados por números. Es conveniente, a veces, convertir estos objetos a arrays para otorgarles la funcionalidad que de serie se incorpora en todos los arrays a través de su prototipo.
 
 El método `slice` puede ser usado para convertir objetos parecidos a arrays o colecciones a un nuevo Array. Simplemente debe enlazar el método al objeto. El {{jsxref("Functions_and_function_scope/arguments", "arguments")}} dentro de una función es un ejemplo de un objeto parecido a arrays.
 

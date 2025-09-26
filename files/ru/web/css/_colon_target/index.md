@@ -1,11 +1,11 @@
 ---
-title: ":target"
+title: :target
 slug: Web/CSS/:target
 ---
 
 {{CSSRef}}
 
-[Псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим [`id`](/ru/docs/Web/HTML/Global_attributes#id) URL-фрагментом.
+[Псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим [`id`](/ru/docs/Web/HTML/Reference/Global_attributes#id) URL-фрагментом.
 
 ```css
 /* Выбирает элемент с подходящим ID текущего URL-фрагмента */
@@ -90,7 +90,8 @@ p:target i {
 
 Вы можете использовать псевдокласс `:target` для создания lightbox без использования JavaScript. Этот метод основан на способности якорных ссылок указывать на элементы, которые изначально скрыты на странице. После этого, CSS изменяет их `display` на видимый.
 
-> **Примечание:** Более полный pure-CSS lightbox , основанный на псевдоклассе`:target` - [available on GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
+> [!NOTE]
+> Более полный pure-CSS lightbox , основанный на псевдоклассе`:target` - [available on GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
 
 #### HTML
 
@@ -193,7 +194,7 @@ p:target i {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

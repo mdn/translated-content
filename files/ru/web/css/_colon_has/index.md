@@ -1,5 +1,5 @@
 ---
-title: ":has()"
+title: :has()
 slug: Web/CSS/:has
 ---
 
@@ -34,13 +34,15 @@ var test = document.querySelector('a:has(> img)');
 Следующий селектор находит только те теги {{HTMLElement("a")}}, которые непосредственно содержат дочерний элемент {{HTMLElement("img")}}:
 
 ```css
-a:has(> img) {}
+a:has(> img) {
+}
 ```
 
 Следующий селектор находит только те теги {{HTMLElement("h1")}}, при условии, что следом за ними находится элемент {{htmlelement("p")}}:
 
 ```css
-h1:has(+ p) {}
+h1:has(+ p) {
+}
 ```
 
 ## Спецификации

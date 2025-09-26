@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 **`test()`** 메서드는 주어진 문자열이 정규 표현식을 만족하는지 판별하고, 그 여부를 `true` 또는 `false`로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+
+```js interactive-example
+const str = "table football";
+
+const regex = new RegExp("foo*");
+const globalRegex = new RegExp("foo*", "g");
+
+console.log(regex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 0
+
+console.log(globalRegex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 9
+
+console.log(globalRegex.test(str));
+// Expected output: false
+```
 
 ## 구문
 
@@ -61,7 +83,7 @@ function testInput(re, str) {
 
 ### 전역 플래그와 `test()`
 
-정규 표현식에 [전역 플래그](/ko/docs/Web/JavaScript/Guide/Regular_Expressions#플래그를_사용한_고급검색)를 설정한 경우, `test()` 메서드는 정규 표현식의 {{jsxref("RegExp.lastIndex", "lastIndex")}}를 업데이트합니다. ({{jsxref("RegExp.prototype.exec()")}}도 `lastIndex` 속성을 업데이트합니다.)
+정규 표현식에 [전역 플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#%ed%94%8c%eb%9e%98%ea%b7%b8%eb%a5%bc_%ec%82%ac%ec%9a%a9%ed%95%9c_%ea%b3%a0%ea%b8%89%ea%b2%80%ec%83%89)를 설정한 경우, `test()` 메서드는 정규 표현식의 {{jsxref("RegExp.lastIndex", "lastIndex")}}를 업데이트합니다. ({{jsxref("RegExp.prototype.exec()")}}도 `lastIndex` 속성을 업데이트합니다.)
 
 `test(str)`을 또 호출하면 `str` 검색을 `lastIndex`부터 계속 진행합니다. `lastIndex` 속성은 매 번 `test()`가 `true`를 반환할 때마다 증가하게 됩니다.
 
@@ -100,6 +122,6 @@ regex.test("foobar"); //false
 
 ## 같이 보기
 
-- [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype")}}

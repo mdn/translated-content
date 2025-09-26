@@ -68,7 +68,7 @@ Sur MDN, nous cherchons continuellement à documenter les technologies web stand
 
 En général, le seuil pour déclencher la documentation d'une nouvelle technologie web correspond au moment où&nbsp;:
 
-_«&nbsp;La fonctionnalité est en voie de standardisation et implémentée quelque part.&nbsp;»_
+« _La fonctionnalité est en voie de standardisation et implémentée quelque part._ »
 
 Une nouvelle technologie mérite sans doute d'être documentée si&nbsp;:
 
@@ -91,10 +91,10 @@ Une nouvelle technologie ne doit pas être documentée si&nbsp;:
 
 Il arrive parfois, pendant le développement d'une spécification et au fur à et mesure de l'évolution de standards évolutifs que de nouveaux éléments, de nouvelles méthodes ou propriétés ou autres soient ajoutés à la spécification, y restent pendant quelque temps avant d'être retirés. Cela arrive parfois rapidement et peut aussi prendre plusieurs mois ou années avant que la suppression soit effectuée. Gérer cette suppression dans la documentation peut alors s'avérer délicat. Voici quelques lignes directrices pour vous aider à décider de ce qu'il faut faire.
 
-> **Note :** Pour la suite de cette discussion, le terme «&nbsp;élément&nbsp;» sera utilisé de façon générique pour indique n'importe quel objet qui peut faire partie d'une spécification&nbsp;: un élément, un attribut d'un élément, une interface, une méthode spécifique, une propriété, un membre d'une interface, etc.
+> [!NOTE]
+> Pour la suite de cette discussion, le terme «&nbsp;élément&nbsp;» sera utilisé de façon générique pour indique n'importe quel objet qui peut faire partie d'une spécification&nbsp;: un élément, un attribut d'un élément, une interface, une méthode spécifique, une propriété, un membre d'une interface, etc.
 
 - Si l'élément n'a _jamais_ été implémenté dans une version release d'_aucun_ navigateur (y compris derrière une préférence ou un marqueur/flag), on supprimera toute référence à cet élément de la documentation.
-
   - Si l'élément n'est décrit dans la documentation que par une ou des pages concernant uniquement cet élément (tel que [`RTCPeerConnection.close()`](/fr/docs/Web/API/RTCPeerConnection/close)), on supprimera cette page. Si l'élément à retirer est une interface, on retirera également toutes les sous-pages pour chacune des propriétés et des méthodes pour cette interface.
   - On supprimera l'élément de toute liste de propriétés, d'attributs, de méthodes, etc. Pour les méthodes d'une interface, cela signifie qu'on retirera le lien de la section «&nbsp;Méthodes&nbsp;» de la page générale sur l'interface.
   - On cherchera dans le texte de la page de l'interface toute mention à cet élément afin de les supprimer. Lors de cette suppression on fera attention à vérifier que la modification ne cause pas d'erreur de grammaire ou d'incohérence. Aussi, il faudra parfois reformuler une phrase ou un paragraphe lors de la suppression. On peut aussi avoir à supprimer des sections entières si la description de l'élément est verbeuse.
@@ -103,7 +103,6 @@ Il arrive parfois, pendant le développement d'une spécification et au fur à e
   - Si les fichiers JSON du [dépôt pour les données de compatibilité des navigateurs](https://github.com/mdn/browser-compat-data) contiennent des données relatives aux éléments supprimés, on les supprimera des fichiers et on fournira une PR expliquant la raison de cette suppression dans le message de commit et dans la description de la PR. Ce faisant, on veillera à ne pas casser la structure syntaxique du JSON.
 
 - Si l'élément a été implémenté dans au moins une release d'au moins un des principaux navigateurs _mais uniquement derrière une préférence_ ou un marqueur, on ne supprimera pas immédiatement la documentation associée. À la place, on indiquera que l'élément est déprécié de la façon suivante&nbsp;:
-
   - Si la documentation possède des pages décrivant uniquement cet élément (tel que [`RTCPeerConnection.close()`](/fr/docs/Web/API/RTCPeerConnection/close)), on ajoutera la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) en haut de la page et on ajoutera la balise `Deprecated` à la liste des étiquettes de la page.
   - Sur la page de présentation de l'élément, de l'interface ou de l'API, on trouvera la liste des éléments qui incluent cet élément retiré et on ajoutera la macro [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) après le nom de l'élément dans la liste.
   - On cherchera les mentions de cet élément parmi les textes d'informations sur la page générale de l'interface, de l'élément et on ajoutera des avertissements pertinents au sein de ces textes en indiquant «&nbsp;\[telle fonctionnalité] a été retirée de la spécification et sera prochainement retiré des navigateurs. Voir \[lien vers un autre article] pour une autre façon de procéder&nbsp;».
@@ -113,7 +112,6 @@ Il arrive parfois, pendant le développement d'une spécification et au fur à e
   - On mettra à jour les données [du dépôt de données quant à la compatibilité des navigateurs](https://github.com/mdn/browser-compat-data) pour refléter cette obsolescence.
 
 - Si l'élément a été implémenté dans au moins une release d'au moins un navigateur sans préférence ou marqueur nécessaire, on marquera la dépréciation de l'élément ainsi&nbsp;:
-
   - Si l'élément est documenté dans des pages de référence qui lui sont spécifiques (par exemple [`RTCPeerConnection.close()`](/fr/docs/Web/API/RTCPeerConnection/close)), on ajoutera [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) en haut de la page et on ajoutera l'étiquette «&nbsp;<i lang="en">Deprecated</i>&nbsp;» aux méta-données de la page.
   - Sur la page qui présente l'élément, l'interface ou l'API, on ajoutera la macro [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) pour les mentions de l'élément supprimé dans les différentes listes.
   - Pour tout texte d'information ou de description sur la page de présentation générale, on ajoutera des avertissements indiquant que l'élément a été supprimé de la spécification et qu'il est désormais déprécié et pourra être supprimé des navigateurs. On indiquera que son utilisation est déconseillée et on ajoutera des liens vers toute page qui documenterait des méthodes alternatives.
@@ -130,13 +128,14 @@ Il existe souvent du contenu utile sur un sujet donné en dehors de MDN. Toutefo
 
 Sur le plan technique, les moteurs de recherche ont tendance à pénaliser le classement d'un site qui reproduit du contenu existant par ailleurs. Il est donc préférable d'avoir du contenu original sur MDN pour veiller au bon référencement. On peut tout à fait ajouter des liens vers du contenu externe.
 
-Sur le plan légal, il faut être autorisé à contribuer au contenu et il doit être sous une licence et une attribution compatible avec [celle de MDN](/fr/docs/MDN/About#copyrights_and_licenses).
+Sur le plan légal, il faut être autorisé à contribuer au contenu et il doit être sous une licence et une attribution compatible avec [celle de MDN](/fr/docs/MDN/Writing_guidelines#copyrights_and_licenses).
 
 - **Si vous avez créé le contenu en question** (pour votre propre intérêt et en dehors de tout travail rémunéré) et que vous souhaitez contribuer à MDN sous la licence de MDN, c'est la situation la plus simple, n'hésitez pas à contribuer avec ce contenu.
 - **Si les droits d'auteur du contenu appartiennent à quelqu'un d'autre**, il devra être sous une licence et attribué de façon compatible avec la licence de MDN. Il n'est souvent pas facile de déterminer la compatibilité entre deux licences sans bagage juridique. Pour ne pas prendre de risque inutile, vous pouvez contacter quelqu'un de l'équipe MDN sur [le canal MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur [Matrix](https://wiki.mozilla.org/Matrix) ou sur le forum de discussion [Discourse](https://discourse.mozilla.org/c/mdn).
 
 ### Comment indiquer un conflit de spécification
 
-Il arrive (rarement) qu'il y ait un conflit entre les différentes versions d'une spécification (généralement pour celles du W3C et du WHATWG). Par exemple, une des spécifications peut indiquer une fonctionnalité comme dépréciée tandis que l'autre n'indique pas cet état. Dans ces cas, on étudiera le comportement réel des navigateurs et on écrira une note afin d'indiquer cet état. Ainsi, en janvier 2019, l'attribut global [`inputmode`](/fr/docs/Web/HTML/Global_attributes/inputmode) était touché par un conflit de spécification qui était indiqué ainsi sur la page&nbsp;:
+Il arrive (rarement) qu'il y ait un conflit entre les différentes versions d'une spécification (généralement pour celles du W3C et du WHATWG). Par exemple, une des spécifications peut indiquer une fonctionnalité comme dépréciée tandis que l'autre n'indique pas cet état. Dans ces cas, on étudiera le comportement réel des navigateurs et on écrira une note afin d'indiquer cet état. Ainsi, en janvier 2019, l'attribut global [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode) était touché par un conflit de spécification qui était indiqué ainsi sur la page&nbsp;:
 
-> **Attention :** Conflit de spécification&nbsp;: la [spécification WHATWG liste l'attribut `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) et les navigateurs travaillent à son implémentation. La [spécification W3C HTML 5.2](https://www.w3.org/TR/html52/index.html#contents) ne le mentionne plus en revanche (ce qui indique qu'il est considéré comme obsolète). Jusqu'à ce qu'un consensus soit atteint, on pourra considérer que c'est la définition du WHATWG qui est correcte.
+> [!WARNING]
+> Conflit de spécification&nbsp;: la [spécification WHATWG liste l'attribut `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) et les navigateurs travaillent à son implémentation. La [spécification W3C HTML 5.2](https://www.w3.org/TR/html52/index.html#contents) ne le mentionne plus en revanche (ce qui indique qu'il est considéré comme obsolète). Jusqu'à ce qu'un consensus soit atteint, on pourra considérer que c'est la définition du WHATWG qui est correcte.

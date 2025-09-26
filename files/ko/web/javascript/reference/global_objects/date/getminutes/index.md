@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 
 **`getMinutes()`** 메서드는 `Date` 인스턴스의 분을 현지 시간 기준으로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMinutes()")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+```
 
 ## 구문
 

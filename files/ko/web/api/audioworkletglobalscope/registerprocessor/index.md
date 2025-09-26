@@ -20,7 +20,8 @@ AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
 - `processorCtor`
   - : {{domxref("AudioWorkletProcessor")}}로부터 파생된 클래스의 생성자.
 
-> **참고:** 프로세서가 한 번 등록되고 나면
+> [!NOTE]
+> 프로세서가 한 번 등록되고 나면
 > {{domxref("AudioWorkletGlobalScope")}}에서
 > 키-값 쌍 `{ name: constructor }` 가 내부적으로 저장됩니다.
 > _name_ 은 등록된 프로세서를 기반으로 한 {{domxref("AudioWorkletNode")}}를 생성할 때 참조됩니다.
@@ -33,19 +34,14 @@ AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
 ### 예외
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : 다음의 조건 아래서 발생됩니다:
-
     - _name_ 이 빈 문자열입니다.
     - 주어진 _name_ 아래의 생성자가 이미 등록되었습니다. 같은 이름을 두 번 등록하는 것은 허용되지 않습니다.
 
 - `TypeError` {{domxref("DOMException")}}
-
   - : 다음의 조건 아래서 발생됩니다:
-
     - _processorCtor_ 이 호출 가능한 생성자가 아닙니다.
-    - 생성자의 {{domxref("AudioWorkletProcessor.parameterDescriptors",
-        "parameterDescriptors")}} 속성이 존재하고 {{domxref("AudioParamDescriptor")}} 기반의 객체의 배열을 반환하지 않습니다.
+    - 생성자의 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} 속성이 존재하고 {{domxref("AudioParamDescriptor")}} 기반의 객체의 배열을 반환하지 않습니다.
 
 ## 예제
 

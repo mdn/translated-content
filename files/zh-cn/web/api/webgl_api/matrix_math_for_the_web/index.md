@@ -5,9 +5,9 @@ slug: Web/API/WebGL_API/Matrix_math_for_the_web
 
 {{DefaultAPISidebar("WebGL")}}
 
-矩阵可以用于表示空间中的对象的变换，并且是 Web 页面可视化的重要工具。本文探索如何创建并配合[CSS3 变换](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transforms)和 matrix3d 变换类型使用矩阵。
+矩阵可以用于表示空间中的对象的变换，并且是 Web 页面可视化的重要工具。本文探索如何创建并配合 [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)和 matrix3d 变换类型使用矩阵。
 
-虽然本文为了便于解释而使用了 CSS3，矩阵却是许多技术中的核心概念，包括 WebGL 和着色器。本文也是[MDN content kit](https://github.com/TatumCreative/mdn-matrix-math)的一部分。示例使用了一组全局对象 MDN 下的[工具函数](https://github.com/TatumCreative/mdn-webgl)。
+虽然本文为了便于解释而使用了 CSS，矩阵却是许多技术中的核心概念，包括 WebGL 和着色器。本文也是 [MDN content kit](https://github.com/TatumCreative/mdn-matrix-math) 的一部分。示例使用了一组全局对象 MDN 下的[工具函数](https://github.com/TatumCreative/mdn-webgl)。
 
 ## 什么是变换矩阵？
 
@@ -125,8 +125,6 @@ function multiplyMatrices(matrixA, matrixB) {
 }
 ```
 
-### 用法
-
 让我们看一看实际使用：
 
 ```js
@@ -138,7 +136,8 @@ var identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 var someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 ```
 
-> **警告：** 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组，可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如[glMatrix](http://glmatrix.net/)就是一个注重速度和性能的库。
+> [!WARNING]
+> 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组，可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如[glMatrix](https://glmatrix.net/)就是一个注重速度和性能的库。
 
 ## 平移矩阵
 
@@ -285,8 +284,8 @@ function rotateAroundZAxis(a) {
 
 另一个需要记住的点是在 WebGL 和 CSS3 中的矩阵相乘需要和变换发生的顺序相反。例如，缩放对象到 80%，向下移动 200 像素，然后绕原点旋转 90 度在伪代码中应该像下面这样。
 
-```
-  transformation = rotate * translate * scale
+```plain
+transformation = rotate * translate * scale
 ```
 
 ### 组合多种变换

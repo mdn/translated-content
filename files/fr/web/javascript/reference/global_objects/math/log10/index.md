@@ -9,7 +9,21 @@ La fonction **`Math.log10()`** renvoie le logarithme en base 10 d'un nombre, don
 
 <math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log10</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>l'unique </mtext><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log10}(x)} = \log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-log10.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log10()")}}
+
+```js interactive-example
+console.log(Math.log10(100000));
+// Expected output: 5
+
+console.log(Math.log10(2));
+// Expected output: 0.3010299956639812
+
+console.log(Math.log10(1));
+// Expected output: 0
+
+console.log(Math.log10(0));
+// Expected output: -Infinity
+```
 
 ## Syntaxe
 

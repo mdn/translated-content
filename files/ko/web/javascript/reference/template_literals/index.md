@@ -83,8 +83,8 @@ var classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-  ? " icon-expander"
-  : " icon-collapser";
+    ? " icon-expander"
+    : " icon-collapser";
 ```
 
 ES2015에서 중첩(nesting)없이 템플릿 리터럴 사용한 경우:
@@ -161,7 +161,7 @@ t2Closure("Hello", { foo: "World" }); // "Hello World!"
 
 ### Raw strings
 
-태그 지정된 템플릿의 첫 번째 함수 인수에서 사용할 수있는 특별한 `raw` property을 사용하면 [escape sequences](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings) 처리하지 않고 원시 문자열을 입력 한대로 액세스 할 수 있습니다.
+태그 지정된 템플릿의 첫 번째 함수 인수에서 사용할 수있는 특별한 `raw` property을 사용하면 [escape sequences](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings) 처리하지 않고 원시 문자열을 입력 한대로 액세스 할 수 있습니다.
 
 ```js
 function tag(strings) {
@@ -223,7 +223,8 @@ latex`\unicode`;
 
 escape sequence 제한은 _tagged_ templates에만 적용되며 _untagged_ template literals에는 적용되지 않습니다.
 
-> **Warning:** let bad = `bad escape sequence: \unicode`;
+> [!WARNING]
+> let bad = `bad escape sequence: \unicode`;
 
 ## 명세서
 

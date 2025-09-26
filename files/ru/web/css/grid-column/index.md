@@ -5,9 +5,56 @@ slug: Web/CSS/grid-column
 
 {{CSSRef}}
 
-[Сокращённое CSS-свойство](/ru/docs/Web/CSS/Shorthand_properties) **`grid-column`** задаёт размер и положение элемента, находящегося внутри {{glossary("grid column", "грид-колонки")}}, путём размещения его по грид-линии, расширяя его при необходимости, тем самым определяя начальную и конечную границу {{glossary("grid areas", "грид-области")}}, в пределах которой он должен находиться.
+[Сокращённое CSS-свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`grid-column`** задаёт размер и положение элемента, находящегося внутри {{glossary("grid column", "грид-колонки")}}, путём размещения его по грид-линии, расширяя его при необходимости, тем самым определяя начальную и конечную границу {{glossary("grid areas", "грид-области")}}, в пределах которой он должен находиться.
 
-{{EmbedInteractiveExample("pages/css/grid-column.html")}}
+{{InteractiveExample("CSS Demo: grid-column")}}
+
+```css interactive-example-choice
+grid-column: 1;
+```
+
+```css interactive-example-choice
+grid-column: 1 / 3;
+```
+
+```css interactive-example-choice
+grid-column: 2 / -1;
+```
+
+```css interactive-example-choice
+grid-column: 1 / span 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Связанные свойства
 
@@ -19,7 +66,7 @@ slug: Web/CSS/grid-column
 ## Syntax
 
 ```css
-/* Значения с ключевыми словами */
+/* Ключевые слова */
 grid-column: auto;
 grid-column: auto / auto;
 
@@ -64,15 +111,14 @@ grid-column: unset;
 - `auto`
   - : Ключевое слово, указывающее, что свойство ничего не делает для размещения элементов, подразумевается автоматическое размещение элемента и занимаемых им колонок, по умолчанию `1`.
 - `<custom-ident>`
-
   - : Если существует грид-линия с именем в формате `<custom-ident>-start`/`<custom-ident>-end`, элемент будет расположен с начала этой линии.
 
-    > **Примечание:** именованные грид-области автоматически создают имена линий в соответствии с показанным выше форматом, поэтому `grid-column: foo;` выберет начало/конец этой именованной грид-области (в случае если явно не указана другая линия с именами `foo-start`/`foo-end`).
+    > [!NOTE]
+    > Именованные грид-области автоматически создают имена линий в соответствии с показанным выше форматом, поэтому `grid-column: foo;` выберет начало/конец этой именованной грид-области (в случае если явно не указана другая линия с именами `foo-start`/`foo-end`).
 
     Если такой грид-линии нет, то этот значение неявно преобразуется в `<custom-ident>` с числом `1`.
 
 - `<integer> && <custom-ident>?`
-
   - : Размещает грид-элемент на грид-линии, заданной числом `<integer>`. Если указано отрицательное число, отсчёт начинается в обратном порядке, начиная с конца грид-раскладки.
 
     Если в значении задано имя `<custom-ident>`, то будут учитываться линии только с этим именем. Если линий с таким именем не хватает, тогда для поиска нужной позиции будут учитываться неявные грид-линии. То есть эти линии будут учитываться так, как если бы у них было задано указанное имя.
@@ -80,7 +126,6 @@ grid-column: unset;
     Целое ({{cssxref("integer")}}) значение `0` считается некорректным.
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Размещает грид-элемент таким образом, что он будет расширен на указанное число ячеек.
 
     Если в значении задано имя `<custom-ident>`, то будут учитываться линии только с этим именем. Если линий с таким именем не хватает, тогда для выбора нужного количества ячеек будут учитываться неявно заданные грид-линии. То есть эти линии будут учитываться так, как если бы у них было задано указанное имя.
@@ -142,12 +187,12 @@ grid-column: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}
-- Руководство по грид-раскладке: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Обучающее видео: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
+- Руководство по грид-раскладке: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Обучающее видео: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

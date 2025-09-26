@@ -47,8 +47,8 @@ Al contrario que el atributo `dir` en HTML, la propiedad `direction` no es hered
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#direction)
-- [CSS 3 Text Module](http://www.w3.org/TR/2003/CR-css3-text-20030514/#direction)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/visuren.html#direction)
+- [CSS 3 Text Module](https://www.w3.org/TR/2003/CR-css3-text-20030514/#direction)
 
 ### Ver también
 

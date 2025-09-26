@@ -1,8 +1,9 @@
 ---
-title: UIEvent.detail
+title: "UIEvent: detail プロパティ"
+short-title: detail
 slug: Web/API/UIEvent/detail
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("UI Events")}}

@@ -22,4 +22,4 @@ alert(currentURL);
 
 ## Specification
 
-- [DOM Level 2 HTML: URL](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-46183437)
+- [DOM Level 2 HTML: URL](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-46183437)

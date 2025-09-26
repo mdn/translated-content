@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4b9fefebc6d21e003c8f31b40d98136a7a4b5a95
 ---
 
-{{GamesSidebar}}
-
 Este artículo examina la anatomía y el flujo de trabajo de un videojuego promedio desde un punto de vista técnico, en términos de cómo debe ejecutarse el bucle principal. Ayuda a los principiantes en el desarrollo de videojuegos modernos a entender qué se necesita para crear un juego y cómo los estándares web como JavaScript se prestan a ser herramientas. Los programadores de juegos experimentados que son nuevos en el desarrollo web también podrían beneficiarse.
 
 ## Presentar, aceptar, interpretar, calcular, repetir
@@ -39,7 +37,8 @@ window.main = () => {
 main(); // Iniciar el ciclo
 ```
 
-> **Nota:** En cada uno de los métodos `main()` discutidos aquí, programamos un nuevo `requestAnimationFrame` antes de realizar el contenido de nuestro bucle. Esto no es accidental y se considera la mejor práctica. Llamar al siguiente `requestAnimationFrame` antes de tiempo asegura que el navegador lo recibe a tiempo para planificar en consecuencia incluso si tu frame actual pierde su ventana VSync.
+> [!NOTE]
+> En cada uno de los métodos `main()` discutidos aquí, programamos un nuevo `requestAnimationFrame` antes de realizar el contenido de nuestro bucle. Esto no es accidental y se considera la mejor práctica. Llamar al siguiente `requestAnimationFrame` antes de tiempo asegura que el navegador lo recibe a tiempo para planificar en consecuencia incluso si tu frame actual pierde su ventana VSync.
 
 El fragmento de código anterior tiene dos sentencias. La primera crea una función como variable global llamada `main()`. Esta función hace algo de trabajo y también le dice al navegador que se llame a sí mismo al siguiente frame con `window.requestAnimationFrame()`. La segunda sentencia llama a la función `main()`, definida en la primera sentencia. Debido a que `main()` es llamada una vez en la segunda sentencia y cada llamada se coloca en la cola de cosas a hacer en el siguiente frame, `main()` está sincronizada con tu tasa de frames.
 
@@ -77,7 +76,8 @@ Hay dos problemas obvios con nuestro bucle principal anterior: `main()` contamin
 
 Cuando el navegador se encuentre con este IIFE, definirá tu bucle principal e inmediatamente lo pondrá en cola para el siguiente frame. No se adjuntará a ningún objeto y `main` (o `main()` para métodos) será un nombre válido sin usar en el resto de la aplicación, libre para ser definido como otra cosa.
 
-> **Nota:** En la práctica, es más común prevenir la siguiente `requestAnimationFrame()` con una sentencia `if`, en lugar de llamar a `cancelAnimationFrame()`.
+> [!NOTE]
+> En la práctica, es más común prevenir la siguiente `requestAnimationFrame()` con una sentencia `if`, en lugar de llamar a `cancelAnimationFrame()`.
 
 Para el segundo problema, detener el bucle principal, tendrá que cancelar la llamada a `main()` con `{{ domxref("window.cancelAnimationFrame()") }}`. Usted tendrá que pasar `cancelAnimationFrame()` el ID token dado por `requestAnimationFrame()` cuando fue llamado por última vez. Supongamos que las funciones y variables de tu juego están construidas sobre un espacio de nombres que has llamado `MiJuego`. Ampliando nuestro último ejemplo, el bucle principal ahora se vería así:
 
@@ -128,7 +128,8 @@ Puedes pensar en el desarrollo de aplicaciones en tiempo real como si tuvieras u
 
 Ya que estamos en el tema de presupuestar el tiempo, muchos navegadores web tienen una herramienta llamada _High Resolution Time_. El objeto {{jsxref("Date")}} ya no es el método reconocido para cronometrar eventos porque es muy impreciso y puede ser modificado por el reloj del sistema. _High Resolution Time_, por otro lado, cuenta el número de milisegundos desde `navigationStart` (cuando se descarga el documento anterior). Este valor se devuelve como un número decimal con una precisión de una milésima de milisegundo. Se conoce como {{ domxref("DOMHighResTimeStamp") }} pero, a todos los efectos, considérelo un número de coma flotante.
 
-> **Nota:** Los sistemas (hardware o software) que no son capaces de precisión de microsegundos se les permite proporcionar precisión de milisegundos como mínimo. Sin embargo, deben proporcionar una precisión de 0,001 ms si son capaces de ello.
+> [!NOTE]
+> Los sistemas (hardware o software) que no son capaces de precisión de microsegundos se les permite proporcionar precisión de milisegundos como mínimo. Sin embargo, deben proporcionar una precisión de 0,001 ms si son capaces de ello.
 
 Este valor no es demasiado útil por sí solo, ya que es relativo a un evento bastante poco interesante, pero puede restarse de otra marca de tiempo para determinar con exactitud y precisión cuánto tiempo transcurrió entre esos dos puntos. Para adquirir una de estas marcas de tiempo, puede llamar a `window.performance.now()` y almacenar el resultado como una variable.
 
@@ -169,7 +170,8 @@ Hay otras optimizaciones posibles y todo depende de lo que intente conseguir tu 
 
 Tendrás que tomar decisiones difíciles sobre tu bucle principal: cómo simular el progreso preciso del tiempo. Si usted exige un control por fotograma, entonces tendrá que determinar la frecuencia con la que su juego se actualizará y dibujará. Incluso es posible que desee que la actualización y el dibujo se produzcan a diferentes velocidades. También tendrás que considerar cómo de elegante fallará tu juego si el sistema del usuario no puede mantener la carga de trabajo. Empecemos asumiendo que manejarás la entrada del usuario y actualizarás el estado del juego cada vez que dibujes. Más adelante nos extenderemos.
 
-> **Nota:** Cambiar cómo tu bucle principal trata el tiempo es una pesadilla de depuración, en todas partes. Piense en sus necesidades cuidadosamente antes de trabajar en su bucle principal.
+> [!NOTE]
+> Cambiar cómo tu bucle principal trata el tiempo es una pesadilla de depuración, en todas partes. Piense en sus necesidades cuidadosamente antes de trabajar en su bucle principal.
 
 ### Cómo deberían ser la mayoría de los juegos de navegador
 
@@ -216,15 +218,12 @@ Existen otros métodos para abordar el problema.
 Una técnica habitual consiste en actualizar la simulación con una frecuencia constante y, a continuación, dibujar la mayor cantidad (o la menor) posible de fotogramas reales. El método de actualización puede continuar en bucle sin preocuparse de lo que ve el usuario. El método `draw` puede ver la última actualización y cuándo ocurrió. Dado que dibujar sabe cuando representa, y el tiempo de simulación de la última actualización, puede predecir un fotograma plausible para dibujar para el usuario. No importa si esto es más frecuente que el bucle de actualización oficial (o incluso menos frecuente). El método de actualización establece puntos de control y, tan frecuentemente como el sistema lo permita, el método de renderizado dibuja instantes de tiempo alrededor de ellos. Hay muchas formas de separar el método de actualización en los estándares web:
 
 - Dibuja en `requestAnimationFrame` y actualiza en un {{ domxref("setInterval()") }} o {{ domxref("setTimeout()") }}.
-
   - Esto utiliza tiempo del procesador incluso cuando está desenfocado o minimizado, acapara el hilo principal, y es probablemente un artefacto de los bucles de juego tradicionales (pero es simple).
 
 - Dibujar en `requestAnimationFrame` y actualizar en un `setInterval` o `setTimeout` en un [Web Worker](/es/docs/Web/API/Web_Workers_API/Using_web_workers).
-
   - Esto es lo mismo que lo anterior, excepto que la actualización no acapara el hilo principal (ni el hilo principal lo acapara a él). Esta es una solución más compleja, y podría ser demasiada sobrecarga para actualizaciones simples.
 
 - Dibuja en `requestAnimationFrame` y úsalo para dar un toque a un Web Worker que contenga el método `update` con el número de `ticks` a calcular, si los hay.
-
   - Esto duerme hasta que `requestAnimationFrame` es llamado y no contamina el hilo principal, además de que no estás dependiendo de métodos anticuados. Una vez más, esto es un poco más complejo que las dos opciones anteriores, y _el inicio_ de cada actualización se bloqueará hasta que el navegador decida activar las devoluciones de llamada de rAF.
 
 Cada uno de estos métodos tiene ventajas y desventajas similares:
@@ -237,7 +236,8 @@ Cada uno de estos métodos tiene ventajas y desventajas similares:
 
 Un método separado de actualización y dibujo podría parecerse al siguiente ejemplo. En aras de la demostración, el ejemplo se basa en el tercer punto, pero sin utilizar Web Workers para facilitar la lectura (y, seamos sinceros, la escritura).
 
-> **Advertencia:** Este ejemplo, en concreto, necesita una revisión técnica.
+> [!WARNING]
+> Este ejemplo, en concreto, necesita una revisión técnica.
 
 <!-- prettier-ignore-start -->
 ```js
@@ -319,15 +319,12 @@ Cualquiera de las opciones anteriores, o ninguna de ellas, podría ser la mejor 
 Una cosa importante a recordar para plataformas gestionadas, como la web, es que tu bucle puede detener la ejecución durante periodos significativos de tiempo. Esto podría ocurrir cuando el usuario deselecciona tu pestaña y el navegador duerme (o ralentiza) su intervalo de callback `requestAnimationFrame`. Tienes muchas maneras de lidiar con esta situación y esto podría depender de si tu juego es de un solo jugador o multijugador. Algunas opciones son:
 
 - Considera el vacío como "una pausa" y sáltate el tiempo.
-
   - Probablemente puedes ver cómo esto es problemático para la mayoría de los juegos multijugador.
 
 - Puedes simular el vacío para ponerte al día.
-
   - Esto puede ser un problema para caídas largas y/o actualizaciones complejas.
 
 - Puedes recuperar el estado del juego de un peer o del servidor.
-
   - Esto es ineficaz si tus compañeros o el servidor están desactualizados también, o no existen porque el juego es de un solo jugador y no tiene servidor.
 
 Una vez que se ha desarrollado el bucle principal y se ha decidido un conjunto de suposiciones y compensaciones que se adapten a su juego, ahora es sólo cuestión de utilizar sus decisiones para calcular cualquier física aplicable, IA, sonidos, sincronización de red y cualquier otra cosa que su juego pueda requerir.

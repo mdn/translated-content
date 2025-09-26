@@ -31,7 +31,8 @@ function populateStorage() {
 }
 ```
 
-> **참고:** 실제 사용 예제를 보시려면 저희의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)를 방문하세요.
+> [!NOTE]
+> 실제 사용 예제를 보시려면 저희의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)를 방문하세요.
 
 ## 명세
 

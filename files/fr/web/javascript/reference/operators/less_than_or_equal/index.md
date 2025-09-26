@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
 
 L'opérateur inférieur ou égal (`<=`) renvoie `true` si l'opérande gauche est inférieur ou égal à l'opérande droit et `false` sinon.
 
-{{EmbedInteractiveExample("pages/js/expressions-less-than-or-equal.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Less than or equal operator")}}
+
+```js interactive-example
+console.log(5 <= 3);
+// Expected output: false
+
+console.log(3 <= 3);
+// Expected output: true
+
+// Compare bigint to number
+console.log(3n <= 5);
+// Expected output: true
+
+console.log("aa" <= "ab");
+// Expected output: true
+```
 
 ## Syntaxe
 

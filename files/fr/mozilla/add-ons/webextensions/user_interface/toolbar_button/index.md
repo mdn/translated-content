@@ -9,9 +9,9 @@ Une action du navigateur est un bouton que vous pouvez ajouter à la barre d'out
 
 ![](browser-action.png)
 
-Il existe deux façons de spécifier une action du navigateur : avec une [fenêtre contextuelle](/fr/Add-ons/WebExtensions/Popups), ou sans fenêtre contextuelle.
+Il existe deux façons de spécifier une action du navigateur : avec une [fenêtre contextuelle](/fr/docs/Mozilla/Add-ons/WebExtensions/Popups), ou sans fenêtre contextuelle.
 
-Si vous ne spécifiez pas de popup, alors lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que vous pouvez écouter à l'aide de [`browserAction.onClicked`](/fr/Add-ons/WebExtensions/API/BrowserAction/onClicked):
+Si vous ne spécifiez pas de popup, alors lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que vous pouvez écouter à l'aide de [`browserAction.onClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked):
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);
@@ -23,7 +23,7 @@ Notez que votre extension ne peut avoir qu'une seule action du navigateur.
 
 ## Specification de l'action de navigateur
 
-Vous définissez les propriétés de l'action du navigateur - icône, titre, popup - en utilisant la clé [`browser_action`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) dans manifest.json:
+Vous définissez les propriétés de l'action du navigateur - icône, titre, popup - en utilisant la clé [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) dans manifest.json:
 
 ```json
 "browser_action": {
@@ -36,7 +36,7 @@ Vous définissez les propriétés de l'action du navigateur - icône, titre, pop
 }
 ```
 
-La seule clé obligatoire est `default_icon`. Vous pouvez changer n'importe laquelle de ces propriétés par programme à l'aide de l'API [`browserAction`](/fr/Add-ons/WebExtensions/API/browserAction) .
+La seule clé obligatoire est `default_icon`. Vous pouvez changer n'importe laquelle de ces propriétés par programme à l'aide de l'API [`browserAction`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) .
 
 ## Exemples
 

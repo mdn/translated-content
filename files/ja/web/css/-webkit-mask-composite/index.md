@@ -1,9 +1,9 @@
 ---
-title: "-webkit-mask-composite"
+title: -webkit-mask-composite
 slug: Web/CSS/-webkit-mask-composite
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`webkit-mask-composite`** プロパティは、同じ要素に適用された複数のマスク画像を互いに合成する方法を指定します。マスク画像は、{{CSSxRef("-webkit-mask-image")}} プロパティで宣言された順序とは逆に合成されます。
 
@@ -27,7 +27,8 @@ slug: Web/CSS/-webkit-mask-composite
 -webkit-mask-composite: unset;
 ```
 
-> **メモ:** この標準外のプロパティの一部を別のキーワードでカバーする、標準化された {{CSSxRef("mask-composite")}} プロパティがあります。
+> [!NOTE]
+> この標準外のプロパティの一部を別のキーワードでカバーする、標準化された {{CSSxRef("mask-composite")}} プロパティがあります。
 
 ## 構文
 

@@ -18,8 +18,8 @@ L'API fournit quatres interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 
 ## Tutoriels & Outils
 
-- Un [shim](http://code.google.com/p/stringencoding/) permettant d'utiliser cette interface dans les navigateurs ne le supportant pas.
-- [`StringView`](/fr/Add-ons/Code_snippets/StringView) – une représentation de type C des chaînes basée sur des tableaux typés.
+- Un [shim](https://code.google.com/p/stringencoding/) permettant d'utiliser cette interface dans les navigateurs ne le supportant pas.
+- [`StringView`](/fr/docs/Mozilla/Add-ons/Code_snippets/StringView) – une représentation de type C des chaînes basée sur des tableaux typés.
 
 ## Spécifications
 

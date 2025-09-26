@@ -16,9 +16,7 @@ var wakeLock = navigator.wakeLock.request(type);
 ### 引数
 
 - _type_
-
   - : オプションは次の通りです。
-
     - `'screen'`: 画面の起動ロックを要求します。端末の画面が暗くなったりロックされたりすることを防ぎます。
 
 ### 返値
@@ -28,9 +26,7 @@ var wakeLock = navigator.wakeLock.request(type);
 ### 例外
 
 - `NotAllowedError`
-
   - : 起動ロックが利用できないときに発生します。原因は以下のようなものです。
-
     - 文書が screen-wake-lock ポリシーにより、画面起動ロックを使用することができない。
     - 文書が完全にアクティブではない。
     - 文書が非表示になっている。
@@ -44,15 +40,13 @@ var wakeLock = navigator.wakeLock.request(type);
 ```js
 const requestWakeLock = async () => {
   try {
-
-    const wakeLock = await navigator.wakeLock.request('screen');
-
+    const wakeLock = await navigator.wakeLock.request("screen");
   } catch (err) {
     // 起動ロックの要求に失敗 - 通常は、バッテリー低下などシステムに起因する。
 
     console.log(`${err.name}, ${err.message}`);
   }
-}
+};
 
 requestWakeLock();
 ```

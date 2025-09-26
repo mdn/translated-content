@@ -1,9 +1,7 @@
 ---
-title: ":first-child"
+title: :first-child
 slug: Web/CSS/:first-child
 ---
-
-{{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`:first-child`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 요소 중 제일 첫 요소를 나타냅니다.
 
@@ -15,7 +13,8 @@ p:first-child {
 }
 ```
 
-> **참고:** 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. Selectors Level 4부터는 이 제한이 사라졌습니다.
+> [!NOTE]
+> 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. Selectors Level 4부터는 이 제한이 사라졌습니다.
 
 ## 구문
 

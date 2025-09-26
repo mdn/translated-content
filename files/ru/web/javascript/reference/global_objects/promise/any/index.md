@@ -16,7 +16,7 @@ Promise.any(iterable);
 ### Параметры
 
 - `iterable`
-  - : Итерируемый([iterable](/ru/docs/Web/JavaScript/Guide/iterable)) объект, например {{JSxRef("Array")}}.
+  - : Итерируемый([iterable](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)) объект, например {{JSxRef("Array")}}.
 
 ### Возвращаемое значение
 

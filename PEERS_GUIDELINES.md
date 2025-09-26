@@ -35,34 +35,27 @@ The review teams for each locale are:
   - [kenji-yamasaki](https://github.com/kenji-yamasaki)
   - [mfuji09](https://github.com/mfuji09)
 - Korea (`ko`) content — the [yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko) team, which consists of:
+  - [1ilsang](https://github.com/1ilsang)
   - [sunhpark42](https://github.com/sunhpark42)
-  - [jho2301](https://github.com/jho2301)
-  - [swimjiy](https://github.com/swimjiy)
   - [wisedog](https://github.com/wisedog)
-  - [cos18](https://github.com/cos18)
   - [yechoi42](https://github.com/yechoi42)
-  - [GwangYeol-Im](https://github.com/GwangYeol-Im)
-  - [pje1740](https://github.com/pje1740)
-  - [yujo11](https://github.com/yujo11)
   - [hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the [yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru) team, which consists of:
+  - [leon-win](https://github.com/leon-win)
+  - [sashasushko](https://github.com/sashasushko)
+  - [Saionaro](https://github.com/Saionaro)
   - [yanaklose](https://github.com/yanaklose)
   - [myshov](https://github.com/myshov)
-  - [Saionaro](https://github.com/Saionaro)
-  - [sashasushko](https://github.com/sashasushko)
   - [lex111](https://github.com/lex111)
 - Chinese (`zh-CN` and `zh-TW`) content — the [yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh) team, which consists of:
   - [t7yang](https://github.com/t7yang)
   - [irvin](https://github.com/irvin)
   - [yin1999](https://github.com/yin1999)
   - [jasonren0403](https://github.com/jasonren0403)
+  - [JasonLamv-t](https://github.com/JasonLamv-t)
 - Spanish (`es`) content - the [yari-content-es](https://github.com/orgs/mdn/teams/yari-content-es) team, which consists of:
   - [JuanVqz](https://github.com/JuanVqz)
   - [Graywolf9](https://github.com/Graywolf9)
-  - [davbrito](https://github.com/davbrito)
-  - [Vallejoanderson](https://github.com/vallejoanderson)
-  - [marcelozarate](https://github.com/marcelozarate)
-  - [Jalkhov](https://github.com/Jalkhov)
 
 ---
 

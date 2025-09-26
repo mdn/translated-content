@@ -3,6 +3,8 @@ title: Control flow (制御フロー)
 slug: Glossary/Control_flow
 ---
 
+{{GlossarySidebar}}
+
 _制御フロー_（制御の流れ）は、コンピューターがスクリプト内の文を実行する順序です。
 
 条件やループなどの（非常によく出てくる）制御フローを変更する構造にコンピューターが出合わない限り、コードはファイルの最初の行から順に最後の行まで実行します。
@@ -31,8 +33,8 @@ if (field==empty) {
 
 ### 技術文書
 
-- MDN の [JavaScript リファレンス - 制御フロー](/ja/docs/Web/JavaScript/Reference#Control_flow)
+- MDN の [JavaScript リファレンス - 制御フロー](/ja/docs/Web/JavaScript/Reference#control_flow)
 
 ### それについて学ぶ
 
-- MDN の [文（制御フロー）](/ja/docs/Web/JavaScript/Guide/Statements)
+- MDN の [文（制御フロー）](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)

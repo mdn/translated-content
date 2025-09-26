@@ -3,8 +3,6 @@ title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 
-{{JSRef}}
-
 **`Object.getPrototypeOf()`** 回傳指定物件的原型，換句話說，就是取得該物件的 `[[Prototype]]` 屬性的值).
 
 ## 表達式
@@ -54,5 +52,5 @@ Object.getPrototypeOf("foo");
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
 - [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- John Resig 的文章－－《 [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/) 》
+- John Resig 的文章－－《[getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)》
 - {{jsxref("Reflect.getPrototypeOf()")}}

@@ -19,10 +19,10 @@ geo = navigator.geolocation
 
 {{Specifications}}
 
-## Доступность в браузере
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование геолокации.](/ru/docs/WebAPI/Using_geolocation)
+- [Использование геолокации.](/ru/docs/Web/API/Geolocation_API)

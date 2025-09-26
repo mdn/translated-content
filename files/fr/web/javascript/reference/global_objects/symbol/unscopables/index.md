@@ -5,13 +5,28 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 
 {{JSRef}}
 
-Le symbole connu **`Symbol.unscopables`** est utilisé afin de définir les noms des propriétés propres et héritées qui sont exclues de l'objet lors de l'utilisation de [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with) sur l'objet en question.
+Le symbole connu **`Symbol.unscopables`** est utilisé afin de définir les noms des propriétés propres et héritées qui sont exclues de l'objet lors de l'utilisation de [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with) sur l'objet en question.
 
-{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+object1[Symbol.unscopables] = {
+  property1: true,
+};
+
+with (object1) {
+  console.log(property1);
+  // Expected output: Error: property1 is not defined
+}
+```
 
 ## Description
 
-Le symbole `@@unscopables` (`Symbol.unscopables`) peut être défini sur n'importe quel objet afin de ne pas exposer certaines propriétés lors des liaisons lexicales avec [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with). Note : en mode strict, l'instruction `with` n'est pas disponible et ce symbole est donc probablement moins nécessaire.
+Le symbole `@@unscopables` (`Symbol.unscopables`) peut être défini sur n'importe quel objet afin de ne pas exposer certaines propriétés lors des liaisons lexicales avec [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with). Note : en mode strict, l'instruction `with` n'est pas disponible et ce symbole est donc probablement moins nécessaire.
 
 En définissant une propriété comme `true` dans un objet `unscopables`, cela exclura la propriété de la portée lexicale. En définissant une propriété comme `false`, celle-ci pourra faire partie de la portée lexicale et être manipulée dans un bloc `with`.
 
@@ -63,4 +78,4 @@ with (obj) {
 ## Voir aussi
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
-- [L'instruction `with`](/fr/docs/Web/JavaScript/Reference/Instructions/with) (qui n'est pas disponible [en mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode))
+- [L'instruction `with`](/fr/docs/Web/JavaScript/Reference/Statements/with) (qui n'est pas disponible [en mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode))

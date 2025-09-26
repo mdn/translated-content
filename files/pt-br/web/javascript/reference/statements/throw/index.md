@@ -26,7 +26,7 @@ throw 42; // gera uma exceção com o valor 42
 throw true; // gera uma exceção com o valor true
 ```
 
-Note também que a instrução `throw` é afetada pela [inserção automática de ponto-e-vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) como nenhum terminador de linha entre a palavra `throw` e a expressão é permitido.
+Note também que a instrução `throw` é afetada pela [inserção automática de ponto-e-vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) como nenhum terminador de linha entre a palavra `throw` e a expressão é permitido.
 
 ## Exemplos
 
@@ -160,18 +160,13 @@ try {
 }
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                      | Status               | Comment                                           |
-| ------------------------------------------------------------------ | -------------------- | ------------------------------------------------- |
-| {{SpecName('ES3')}}                                                | {{Spec2('ES3')}}     | Definição inicial. Implementada no JavaScript 1.4 |
-| {{SpecName('ES5.1', '#sec-12.13', 'throw statement')}}             | {{Spec2('ES5.1')}}   |                                                   |
-| {{SpecName('ES6', '#sec-throw-statement', 'throw statement')}}     | {{Spec2('ES6')}}     |                                                   |
-| {{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}} | {{Spec2('ESDraft')}} |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.throw")}}
+{{Compat}}
 
 ## Veja também
 

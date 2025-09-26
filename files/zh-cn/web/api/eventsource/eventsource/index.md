@@ -18,9 +18,7 @@ pc = new EventSource(url, configuration);
 - `url`
   - : 一个{{domxref("USVString")}} ，它代表远程资源的位置
 - `configuration` {{optional_inline}}
-
   - : 为配置新连接提供选项。可选项是：
-
     - `withCredentials`，默认为 `false`，指示 CORS 是否应包含凭据 ( credentials )。
 
 ### 返回值
@@ -41,7 +39,8 @@ evtSource.onmessage = function (e) {
 };
 ```
 
-> **备注：** 你可以在 GitHub 查看完整示例 — 请查看 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> 你可以在 GitHub 查看完整示例 — 请查看 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## 规范
 
@@ -51,6 +50,6 @@ evtSource.onmessage = function (e) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("EventSource")}}

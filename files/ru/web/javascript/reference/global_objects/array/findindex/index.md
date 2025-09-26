@@ -3,7 +3,7 @@ title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -20,9 +20,7 @@ arr.findIndex(callback[, thisArg])
 ### Параметры
 
 - `callback`
-
   - : Функция, вызывающаяся для каждого значения в массиве, принимает три аргумента:
-
     - `element`
       - : Текущий обрабатываемый элемент в массиве.
     - `index`

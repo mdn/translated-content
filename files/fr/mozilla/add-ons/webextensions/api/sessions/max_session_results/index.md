@@ -3,7 +3,7 @@ title: sessions.MAX_SESSION_RESULTS
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/MAX_SESSION_RESULTS
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le nombre maximum de sessions qui seront retournées par un appel à {{WebExtAPIRef("sessions.getRecentlyClosed()")}}. Il est en lecture seule pour le code des WebExtensions, et défini à 25.
 
@@ -11,11 +11,9 @@ Le nombre maximum de sessions qui seront retournées par un appel à {{WebExtAPI
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

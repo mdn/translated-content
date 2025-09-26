@@ -8,7 +8,6 @@ slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 La fusion des marges se produit si on a l'un de ces trois cas :
 
 - Des éléments voisins adjacents
-
   - : Les marges des éléments voisins adjacents sont fusionnés (sauf quand le dernier voisin doit passer à la ligne pour [dégager](/fr/docs/Web/CSS/clear) les flottements). Ainsi :
 
     ```html
@@ -17,7 +16,7 @@ La fusion des marges se produit si on a l'un de ces trois cas :
     ```
 
 - Aucun contenu séparant le parent et ses descendants
-  - : S'il n'y a aucune bordure, remplissage, contenu en ligne (_inline_), lorsqu' un [contexte de formatage de blocs](/fr/docs/Web/CSS/Block_formatting_context) est créé ou _[dégagement](/fr/docs/Web/CSS/clear)_ pour séparer la marge haute d'un bloc avec la marge haute d'un ou plusieurs des blocs descendants ou quand il n'y a aucune bordure, remplissage, contenu en ligne, {{cssxref("height")}}, {{cssxref("min-height")}} ou {{cssxref("max-height")}} pour séparer la marge basse d'un bloc avec la marge basse d'un ou plusieurs des blocs descendants, ces marges sont fusionnées. La marge fusionnée termine en dehors de l'élément parent.
+  - : S'il n'y a aucune bordure, remplissage, contenu en ligne (_inline_), lorsqu' un [contexte de formatage de blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) est créé ou _[dégagement](/fr/docs/Web/CSS/clear)_ pour séparer la marge haute d'un bloc avec la marge haute d'un ou plusieurs des blocs descendants ou quand il n'y a aucune bordure, remplissage, contenu en ligne, {{cssxref("height")}}, {{cssxref("min-height")}} ou {{cssxref("max-height")}} pour séparer la marge basse d'un bloc avec la marge basse d'un ou plusieurs des blocs descendants, ces marges sont fusionnées. La marge fusionnée termine en dehors de l'élément parent.
 - Des blocs vides
   - : S'il n'y a aucune bordure, remplissage, contenu en ligne, {{cssxref("height")}} ou {{cssxref("min-height")}} pour séparer la marge haute d'un bloc de sa marge basse, ces deux marges sont fusionnées.
 

@@ -39,8 +39,6 @@ d.setAttributeNS(
 
 ## メモ
 
-{{ DOMAttributeMethods() }}
-
 `setAttributeNS` は名前空間属性のための唯一のメソッドで、完全修飾名、つまり `"namespace:localname"` を期待します。
 
 ## 仕様書

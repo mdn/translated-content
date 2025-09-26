@@ -5,15 +5,17 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 {{apiref("Streams")}}
 
-자바스크립트 개발자로서, 프로그래밍적으로 네트워크로부터 받은 데이터 스트림을 Chunk단위로 읽고 다루는 것은 매우 유용합니다! 그러나 어떻게 스트림 API의 Readable stream을 잘 사용할수 있을까요. 이번 내용은 그것을 설명하고 있습니다.
+JavaScript 개발자로서, 프로그래밍적으로 네트워크로부터 받은 데이터 스트림을 Chunk단위로 읽고 다루는 것은 매우 유용합니다! 그러나 어떻게 스트림 API의 Readable stream을 잘 사용할수 있을까요. 이번 내용은 그것을 설명하고 있습니다.
 
-> **참고:** This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/ko/docs/Web/API/Streams_API#Concepts_and_usage) and dedicated [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts) article, then come back.
+> [!NOTE]
+> This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/ko/docs/Web/API/Streams_API#concepts_and_usage) and dedicated [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts) article, then come back.
 
-> **참고:** If you are looking for information on writable streams try [Using writable streams](/ko/docs/Web/API/Streams_API/Using_writable_streams) instead.
+> [!NOTE]
+> If you are looking for information on writable streams try [Using writable streams](/ko/docs/Web/API/Streams_API/Using_writable_streams) instead.
 
 ## Browser support
 
-파이어폭스 65+ 와 크롬 42+ 에서 Fetch Body 객체를 스트림으로서 사용 할수 있고, custom readable 스트림을 만들수 있습니다. 현재 [Pipe chains](/ko/docs/Web/API/Streams_API/Concepts#Pipe_chains)의 경우 오직 크롬에서만 지원하고 있고 그 기능은 변경될 수 있습니다.
+Firefox 65+ 와 크롬 42+ 에서 Fetch Body 객체를 스트림으로서 사용 할수 있고, custom readable 스트림을 만들수 있습니다. 현재 [Pipe chains](/ko/docs/Web/API/Streams_API/Concepts#Pipe_chains)의 경우 오직 크롬에서만 지원하고 있고 그 기능은 변경될 수 있습니다.
 
 ## Finding some examples
 
@@ -119,7 +121,8 @@ if (done) {
 }
 ```
 
-> **참고:** 여기서 사용한 `close()` 는 새로만든 커스텀 스트림의 일부이며 오리지널 스트림의 것이 아닙니다. 커스텀 스트림에 대해서는 다음섹션에서 더 자세히 살펴 볼 예정입니다.
+> [!NOTE]
+> 여기서 사용한 `close()` 는 새로만든 커스텀 스트림의 일부이며 오리지널 스트림의 것이 아닙니다. 커스텀 스트림에 대해서는 다음섹션에서 더 자세히 살펴 볼 예정입니다.
 
 만약 `done` 이 `true` 가 아니라면, 우선 읽어 드린 Chunk를 처리하고 (`value` 속성), `pump()` 함수를 재귀적으로 다시 호출 함으로서 다음 chunk를 읽어 드립니다.
 
@@ -199,7 +202,7 @@ simple example code 를 다시한번 살펴보면, `ReadableStream()` 생성자�
 
 ### ReadableStream controllers
 
-ReadableStrem() 생성자에 인자로 전달된 객체안의 `start()` 와 `pull()` 메서드에 controller라는 인자가 전달되는 것을 볼수 있습니다. 이것은 {{domxref("ReadableStreamDefaultController")}} 클래스의 인스턴스이며 우리의 스트림을 제어하는데 사용 됩니다.
+ReadableStream() 생성자에 인자로 전달된 객체안의 `start()` 와 `pull()` 메서드에 controller라는 인자가 전달되는 것을 볼수 있습니다. 이것은 {{domxref("ReadableStreamDefaultController")}} 클래스의 인스턴스이며 우리의 스트림을 제어하는데 사용 됩니다.
 
 우리의 예제에서, 우리는 fetch된 body로부터 chunk의 값을 읽은 뒤 그 값을 커스텀 스트림에 집어 넣기 위해 Controller의 {{domxref("ReadableStreamDefaultController.enqueue","enqueue()")}} 메서드를 상용하고 있습니다.
 

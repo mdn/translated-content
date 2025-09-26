@@ -1,37 +1,32 @@
 ---
-title: window.closed
+title: "Window: closed プロパティ"
+short-title: closed
 slug: Web/API/Window/closed
+l10n:
+  sourceCommit: 94ef07a7b073c2663cbace0667bdb717a40bfa28
 ---
 
-{{ApiRef}}
+{{APIRef}}
 
-## 概要
+**`Window.closed`** は読み取り専用プロパティで、対象ウィンドウが閉じられているかどうかを示します。
 
-この読取専用プロパティは、対象ウィンドウが閉じられているかどうかを示します。
+## 値
 
-## 構文
+論理値です。取りうる値は次の通りです。
 
-```
-var isClosed = windowRef.closed;
-```
-
-- `isClosed`
-
-  - : 真偽値。次の何れかの値を取り得ます :
-
-    - `true`: ウィンドウが閉じられている事を示す
-    - `false`: ウィンドウが開いている事を示す
+- `true`: ウィンドウが閉じられています。
+- `false`: ウィンドウが開いています。
 
 ## 例
 
 ### ポップアップからウィンドウの URL を変化させる
 
-次の例は、どのようにポップアップウィンドウでそれを開いたウィンドウの URL を変化させるかというデモです。URL を変化させる前に、 {{domxref("window.opener")}} プロパティを用いて、現在のウィンドウがそのポップアップを開いたウィンドウであるどうか、そして、その開いた側のウィンドウが閉じられていないかをチェックします。:
+次の例は、どのようにポップアップウィンドウでそれを開いたウィンドウの URL を変化させるかというデモです。URL を変化させる前に、 {{domxref("window.opener")}} プロパティを用いて、現在のウィンドウがそのポップアップを開いたウィンドウであるどうか、そして、その開いた側のウィンドウが閉じられていないかをチェックします。
 
 ```js
 // 開いた側のウィンドウが存在するか、かつ、閉じられていないかを調べます。
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "http://www.mozilla.org";
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 
@@ -39,10 +34,10 @@ if (window.opener && !window.opener.closed) {
 
 ### 以前に開いたポップアップを更新する
 
-この例では、関数 `refreshPopupWindow()` が ポップアップのデータを更新するために ポップアップの location オブジェクト中の `reload` メソッドを呼び出します。ポップアップがまだ開かれていない場合、または、ユーザがそれを閉じてしまっている場合は、新しいウィンドウが開かれます。
+この例では、関数 `refreshPopupWindow()` が ポップアップのデータを更新するために ポップアップの location オブジェクト中の `reload` メソッドを呼び出します。ポップアップがまだ開かれていない場合、または、ユーザーがそれを閉じてしまっている場合は、新しいウィンドウが開かれます。
 
 ```js
-var popupWindow = null;
+let popupWindow = null;
 
 function refreshPopupWindow() {
   if (popupWindow && !popupWindow.closed) {
@@ -50,15 +45,15 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // 新しいウィンドウを開きます。
-    popupWindow = window.open("popup.html","dataWindow");
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```
 
-## 仕様
+## 仕様書
 
-DOM Level 0。 `window.closed` は、W3C の仕様や技術勧告に含まれるものではありません。
+{{Specifications}}
 
-## 関連情報
+## ブラウザーの互換性
 
-- [MSDN window.closed](http://msdn.microsoft.com/ja-jp/library/ms533574.aspx)
+{{Compat}}

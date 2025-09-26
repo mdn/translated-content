@@ -39,7 +39,7 @@ console.log(encodeURIComponent("\uDFFF"));
 
 `Для application/x-www-form-urlencoded` пробелы должны быть заменены на "+", поэтому вам может понадобиться `encodeURIComponent` с дополнительной заменой "%20" на "+".
 
-Чтобы строго соблюдать [RFC 3986](http://tools.ietf.org/html/rfc3986) (который резервирует !, ', (, ), и \*), даже не смотря на то, что символы не используют сформированных URI разделителей, можно безопасно использовать следующие:
+Чтобы строго соблюдать [RFC 3986](https://tools.ietf.org/html/rfc3986) (который резервирует !, ', (, ), и \*), даже не смотря на то, что символы не используют сформированных URI разделителей, можно безопасно использовать следующие:
 
 ```js
 function fixedEncodeURIComponent(str) {
@@ -76,13 +76,9 @@ function encodeRFC5987ValueChars(str) {
 
 ## Спецификации
 
-| Спецификация                                                                      | Статус             | Комментарий         |
-| --------------------------------------------------------------------------------- | ------------------ | ------------------- |
-| {{SpecName('ES3')}}                                                               | {{Spec2('ES3')}}   | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}                      | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} | {{Spec2('ES6')}}   |                     |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

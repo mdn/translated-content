@@ -3,7 +3,7 @@ title: "Element: requestFullscreen() メソッド"
 short-title: requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: bafc473d01411340a547b9fae11702ead2b28016
 ---
 
 {{APIRef("Fullscreen API")}}
@@ -28,12 +28,14 @@ requestFullscreen(options)
       - : 要素が全画面モードのときにナビゲーション UI を表示するかどうかを制御します。
         既定値では `"auto"` であり、これはブラウザーが何をすべきかを決定することを示す。
         - `"hide"`
-          - : このとき、ブラウザーのナビゲーションインターフェースは非表示になり、画面全体が要素の表示に割り当てられます。
+          - : このとき、ブラウザーのナビゲーションインターフェイスは非表示になり、画面全体が要素の表示に割り当てられます。
         - `"show"`
           - : ブラウザーは、ページナビゲーションコントロールや、場合によっては他のユーザーインターフェイスを表示します。要素の寸法（および画面の知覚サイズ）は、このユーザーインターフェイスのためのスペースを残すために締め付けられます。
         - `"auto"`
           - : 上記の設定のうち、どれを適用するかはブラウザーが選択します。
             これが既定値です。
+    - `screen` {{optional_inline}} {{experimental_inline}}
+      - : 要素を全画面モードで表示したい画面を指定します。これは {{domxref("ScreenDetailed")}} オブジェクトを値として取り、選択された画面を表します。
 
 ### 返値
 
@@ -44,12 +46,10 @@ requestFullscreen(options)
 _`requestFullscreen()` プロシージャは、従来の例外を発生させるのではなく、返された `Promise` を拒否することでエラー状況を知らせます。拒絶ハンドラーは以下の例外値のいずれかを受け取ります。_
 
 - {{jsxref("TypeError")}}
-
   - : 例外 `TypeError` は以下のいずれかの状況で送出されることがあります。
-
     - その要素を含む文書が完全にアクティブでない、つまり、現在のアクティブ文書でない。
     - その要素が文書内に含まれていない。
-    - この要素は、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の設定または他のアクセス制御機能により、 `fullscreen` 機能を使用することが許可されていない。
+    - この要素は、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の設定または他のアクセス制御機能により、 `fullscreen` 機能を使用することが許可されていない。
     - 要素とその文書が同じノードである。
     - この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)であり、既に {{domxref("HTMLElement.showPopover()")}} で表示されている。
 
@@ -65,7 +65,7 @@ _`requestFullscreen()` プロシージャは、従来の例外を発生させる
 
 - 標準の HTML 要素または {{SVGElement("svg")}} または {{MathMLElement("math")}} のいずれかであること。
 - {{HTMLElement("dialog")}} 要素ではないこと。
-- 最上位の文書内か、 [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性を適用した {{HTMLElement("iframe")}} 内に位置していなければなりません。
+- 最上位の文書内か、 [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性を適用した {{HTMLElement("iframe")}} 内に位置していなければなりません。
 
 さらに、設定された権限ポリシーがこの機能の使用を許可している必要があります。
 
@@ -124,6 +124,23 @@ elem
 
 プロミスの解決ハンドラーは何もしませんが、プロミスが拒否された場合は {{DOMxRef("Window.alert", "alert()")}} を呼び出すことでエラーメッセージが表示します。
 
+### screen オプションの使用
+
+要素を OS の第 1 画面で全画面にしたい場合は、以下のようなコードを使用することで実現できます。
+
+```js
+try {
+  const primaryScreen = (await getScreenDetails()).screens.find(
+    (screen) => screen.isPrimary,
+  );
+  await document.body.requestFullscreen({ screen: primaryScreen });
+} catch (err) {
+  console.error(err.name, err.message);
+}
+```
+
+{{domxref("Window.getScreenDetails()")}} メソッドを使用して、現在の端末の {{domxref("ScreenDetails")}} オブジェクトを取得します。これには、利用できるさまざまな画面を表す {{domxref("ScreenDetailed")}} オブジェクトが格納されています。
+
 ## 仕様書
 
 {{Specifications}}
@@ -139,4 +156,4 @@ elem
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

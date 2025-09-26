@@ -3,13 +3,14 @@ title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 
 Метод **`every()`** проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции.
 
-> **Примечание:** метод возвращает `true` при любом условии для пустого массива.
+> [!NOTE]
+> Метод возвращает `true` при любом условии для пустого массива.
 
 ## Синтаксис
 
@@ -20,9 +21,7 @@ arr.every(callback(currentValue[, index[, array]])[, thisArg])
 ### Параметры
 
 - `callback`
-
   - : Функция проверки каждого элемента, принимает три аргумента:
-
     - `currentValue`
       - : Текущий обрабатываемый элемент массива.
     - `index`{{Optional_inline}}

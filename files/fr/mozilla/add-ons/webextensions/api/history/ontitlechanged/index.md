@@ -3,7 +3,7 @@ title: history.onTitleChanged
 slug: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 ---
 
-{{AddonSidebar()}}Lancé lorsque le titre d'une page visitée par l'utilisateur est enregistré.Pour écouter les visites d'une page, vous pouvez utiliser {{WebExtAPIRef("history.onVisited")}}. Cependant, le {{WebExtAPIRef("history.HistoryItem")}} que cet événement passe à son écouteur n'inclut pas le titre de la page, car le titre de la page n'est généralement pas connu au moment où `history.onVisited` est envoyé.Au lieu de cela, {{WebExtAPIRef("history.HistoryItem")}} stocké est mis à jour avec le titre de la page après le chargement de la page, une fois le titre connu. L'événement history.onTitleChanged est déclenché à ce moment-là. Donc, si vous avez besoin de connaître les titres des pages telles qu'elles sont visitées, écoutez `history.onTitleChanged`.
+{{AddonSidebar}}Lancé lorsque le titre d'une page visitée par l'utilisateur est enregistré.Pour écouter les visites d'une page, vous pouvez utiliser {{WebExtAPIRef("history.onVisited")}}. Cependant, le {{WebExtAPIRef("history.HistoryItem")}} que cet événement passe à son écouteur n'inclut pas le titre de la page, car le titre de la page n'est généralement pas connu au moment où `history.onVisited` est envoyé.Au lieu de cela, {{WebExtAPIRef("history.HistoryItem")}} stocké est mis à jour avec le titre de la page après le chargement de la page, une fois le titre connu. L'événement history.onTitleChanged est déclenché à ce moment-là. Donc, si vous avez besoin de connaître les titres des pages telles qu'elles sont visitées, écoutez `history.onTitleChanged`.
 
 ## Syntaxe
 
@@ -27,9 +27,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Function that will be called when this event occurs. The function will be passed an object with the following properties:
-
     - `url`
       - : `String`. URL of the page visited.
     - `title`
@@ -54,11 +52,9 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

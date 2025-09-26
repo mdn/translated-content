@@ -1,0 +1,48 @@
+{
+  "lineWidth": -1,
+  "schema": {
+    "title": "Front matter schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["title", "slug"],
+    "properties": {
+      "title": {
+        "title": "Title",
+        "description": "Rendered page title and for SEO",
+        "type": "string",
+        "maxLength": 120
+      },
+      "short-title": {
+        "title": "Short Title",
+        "description": "To be used in sidebars",
+        "type": "string",
+        "maxLength": 60
+      },
+      "slug": {
+        "title": "slug",
+        "description": "URL path of the page",
+        "type": "string"
+      },
+      "original_slug": {
+        "title": "Original slug",
+        "description": "URL path of the page before it was moved to /conflicting or /orphaned (Note: this key should ONLY be present in those two folders)",
+        "type": "string"
+      },
+      "l10n": {
+        "title": "Localization info",
+        "description": "Metadata about the localization",
+        "type": "object",
+        "properties": {
+          "sourceCommit": {
+            "title": "Source commit",
+            "description": "The full commit hash of the commit from upstream this localization is synchronized with. Used to track changes between upstream and localization.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": ["sourceCommit"]
+      }
+    }
+  },
+  "attribute-order": ["title", "short-title", "slug", "original_slug", "l10n"]
+}

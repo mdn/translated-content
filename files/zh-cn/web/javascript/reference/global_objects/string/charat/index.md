@@ -9,7 +9,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 
 `charAt()` 方法总是将字符串作为 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)序列进行索引，因此它可能会返回孤项代理。要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 和 {{jsxref("String.fromCodePoint()")}}。
 
-{{EmbedInteractiveExample("pages/js/string-charat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.charAt()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+// Expected output: "The character at index 4 is q"
+```
 
 ## 语法
 
@@ -58,7 +67,7 @@ console.log(`在索引 999 处的字符为 '${anyString.charAt(999)}'`);
 
 上面代码的输出为：
 
-```
+```plain
 在索引 0 处的字符为 'B'
 
 在索引 0 处的字符为 'B'
@@ -77,7 +86,7 @@ console.log(str.charAt(0)); // "\ud842"，这不是有效的 Unicode 字符
 console.log(str.charAt(1)); // "\udfb7"，这不是有效的 Unicode 字符
 ```
 
-要获取给定索引处的完整 Unicode 码位，请使用按 Unicode 码位拆分的索引方法，例如 {{jsxref("String.prototype.codePointAt()")}} 和将字符串[展开为 Unicode 码位数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)。
+要获取给定索引处的完整 Unicode 码位，请使用按 Unicode 码位拆分的索引方法，例如 {{jsxref("String.prototype.codePointAt()")}} 和将字符串[展开为 Unicode 码位数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)。
 
 ```js
 const str = "𠮷𠮾";
@@ -85,7 +94,8 @@ console.log(String.fromCodePoint(str.codePointAt(0))); // "𠮷"
 console.log([...str][0]); // "𠮷"
 ```
 
-> **备注：** 避免使用 `charAt()` 重新实现上述解决方案。检测孤项代理及其配对很复杂，而内置 API 可能更高效，因为它们直接使用字符串的内部表示形式。如有必要，请安装上述 API 的 polyfill。
+> [!NOTE]
+> 避免使用 `charAt()` 重新实现上述解决方案。检测孤项代理及其配对很复杂，而内置 API 可能更高效，因为它们直接使用字符串的内部表示形式。如有必要，请安装上述 API 的 polyfill。
 
 ## 规范
 

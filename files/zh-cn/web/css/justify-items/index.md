@@ -3,17 +3,59 @@ title: justify-items
 slug: Web/CSS/justify-items
 ---
 
-{{CSSRef}}
+[CSS](/zh-CN/docs/Web/CSS) 的 **`justify-items`** 属性为所有盒中的项目定义了默认的 {{CSSxRef("justify-self")}} ，可以使这些项目以默认方式沿适当轴线对齐到每个盒子。
 
-[CSS](/zh-CN/docs/CSS) 的 **`justify-items`** 属性为所有盒中的项目定义了默认的 {{CSSxRef("justify-self")}} ，可以使这些项目以默认方式沿适当轴线对齐到每个盒子。
+{{InteractiveExample("CSS Demo: justify-items")}}
 
-{{EmbedInteractiveExample("pages/css/justify-items.html")}}
+```css interactive-example-choice
+justify-items: stretch;
+```
+
+```css interactive-example-choice
+justify-items: center;
+```
+
+```css interactive-example-choice
+justify-items: start;
+```
+
+```css interactive-example-choice
+justify-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 该属性的作用效果取决于我们使用的布局模式：
 
 - 在块级布局中，会将其包含的项目在其行内轴上对齐；
 - 绝对定位的元素中，会将其包含的项目在其行内轴上对齐，同时考虑 top、left、bottom、right 的值；
-- 表格单元中，该属性被忽略（块级元素、绝对定位元素和表格布局中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Block_Abspos_Tables)）；
+- 表格单元中，该属性被忽略（块级元素、绝对定位元素和表格布局中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)）；
 - 弹性盒子布局中，该属性被忽略（弹性盒子中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)）；
 - 栅格布局中，会将其栅格区域内的项目在其行内轴上对齐（栅格布局中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)）；
 
@@ -68,9 +110,7 @@ justify-items: unset;
 - `auto`
   - : 使用的值是父元素的 justify-items 属性的值，除非该方框没有父元素，或者是绝对定位的，在这些情况下，`auto` 代表 `normal`。
 - `normal`
-
   - : 这个关键字的效果取决于我们所处的布局模式：
-
     - 在块级布局中，相当于是 `start`。
     - In absolutely-positioned layouts, the keyword behaved like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In table cell layouts, this keyword has no meaning as this property is _ignored_.
@@ -122,7 +162,7 @@ justify-items: unset;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)

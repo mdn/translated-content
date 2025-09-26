@@ -5,7 +5,7 @@ slug: Web/API/AudioListener
 
 {{ APIRef("Web Audio API") }}
 
-`AudioListener` 接口代表了人听音乐场景时声音的位置和方向，和用于[音频空间化](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)。所有{{domxref("PannerNode")}} 相对于 `AudioListener` 的空间化储存在{{domxref("BaseAudioContext.listener")}} 属性里。
+`AudioListener` 接口代表了人听音乐场景时声音的位置和方向，和用于[音频空间化](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)。所有{{domxref("PannerNode")}} 相对于 `AudioListener` 的空间化储存在{{domxref("BaseAudioContext.listener")}} 属性里。
 
 特别需要注意的是一个环境中只能有一个收听者而且这不是{{domxref("AudioNode")}}.
 
@@ -13,7 +13,8 @@ slug: Web/API/AudioListener
 
 ## Properties
 
-> **备注：** position,forward 和 up 值是以不同的语法设置和检索的。检索是通过访问来实现的，比如说 `AudioListener.positionX` ，设置相同属性时可以通过使用 `AudioListener.positionX.value` 来完成。这就是为什么他们不被标记为只读，这在规范的接口定义中就是这么说的。
+> [!NOTE]
+> position,forward 和 up 值是以不同的语法设置和检索的。检索是通过访问来实现的，比如说 `AudioListener.positionX` ，设置相同属性时可以通过使用 `AudioListener.positionX.value` 来完成。这就是为什么他们不被标记为只读，这在规范的接口定义中就是这么说的。
 
 - {{domxref("AudioListener.positionX")}}
   - : 在笛卡尔右手坐标系中代表一个收听者的水平坐标。默认值是 0.
@@ -41,7 +42,8 @@ slug: Web/API/AudioListener
 - {{domxref("AudioListener.setPosition()")}} {{deprecated_inline}}
   - : 设置收听者的位置。
 
-> **备注：** Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox, Internet Explorer and Safari.
+> [!NOTE]
+> Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox, Internet Explorer and Safari.
 
 ## Deprecated features
 
@@ -70,4 +72,4 @@ The `setOrientation()` and `setPosition()` methods have been replaced by setting
 
 ## See also
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

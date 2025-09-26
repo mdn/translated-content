@@ -5,7 +5,7 @@ slug: Web/API/Element/contextmenu_event
 
 {{ ApiRef("HTML DOM") }}
 
-Um uma propriedade do manipulador de eventos da janela para eventos com o botão direito do mouse. A menos que o comportamento padrão do navegador seja bloqueado (veja exemplos abaixo sobre como fazer isso), o menu de contexto do navegador irá ser ativado (apesar do IE8 ter um bug com ele e não irá ativar o menu de contexto se o manipulador de eventos contextmenu for definido). Note que este evento irá acontecer com qualquer evento não-desabilitado do botão direito do mouse e não depende de um elemento que contenha o [atributo "contextmenu"](http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/).
+Um uma propriedade do manipulador de eventos da janela para eventos com o botão direito do mouse. A menos que o comportamento padrão do navegador seja bloqueado (veja exemplos abaixo sobre como fazer isso), o menu de contexto do navegador irá ser ativado (apesar do IE8 ter um bug com ele e não irá ativar o menu de contexto se o manipulador de eventos contextmenu for definido). Note que este evento irá acontecer com qualquer evento não-desabilitado do botão direito do mouse e não depende de um elemento que contenha o [atributo "contextmenu"](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/).
 
 ## Sintaxe
 

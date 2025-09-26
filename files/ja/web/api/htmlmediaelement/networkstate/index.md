@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.networkState
+title: "HTMLMediaElement: networkState プロパティ"
+short-title: networkState
 slug: Web/API/HTMLMediaElement/networkState
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,12 +14,12 @@ l10n:
 
 `unsigned short` 型。 可能な値は次のとおりです。
 
-| 定数            | 値 | 説明                                                                           |
-| ------------------- | ----- | ------------------------------------------------------------------------------------- |
-| `NETWORK_EMPTY`     | 0     | まだデータがありません。 また、`readyState` は `HAVE_NOTHING` です。                           |
-| `NETWORK_IDLE`      | 1     | `HTMLMediaElement` はアクティブで、リソースを選択しましたが、ネットワークを使用していません。 |
-| `NETWORK_LOADING`   | 2     | ブラウザーは `HTMLMediaElement` のデータをダウンロードしています。                                     |
-| `NETWORK_NO_SOURCE` | 3     | `HTMLMediaElement` の `src` が見つかりません。                                                        |
+| 定数                | 値  | 説明                                                                                          |
+| ------------------- | --- | --------------------------------------------------------------------------------------------- |
+| `NETWORK_EMPTY`     | 0   | まだデータがありません。 また、`readyState` は `HAVE_NOTHING` です。                          |
+| `NETWORK_IDLE`      | 1   | `HTMLMediaElement` はアクティブで、リソースを選択しましたが、ネットワークを使用していません。 |
+| `NETWORK_LOADING`   | 2   | ブラウザーは `HTMLMediaElement` のデータをダウンロードしています。                            |
+| `NETWORK_NO_SOURCE` | 3   | `HTMLMediaElement` の `src` が見つかりません。                                                |
 
 ## 例
 
@@ -31,14 +32,12 @@ l10n:
 ```
 
 ```js
-const obj = document.getElementById('example');
+const obj = document.getElementById("example");
 
-obj.addEventListener('playing', () => {
-
+obj.addEventListener("playing", () => {
   if (obj.networkState === 2) {
     // 読み込み中...
   }
-
 });
 ```
 
@@ -52,4 +51,4 @@ obj.addEventListener('playing', () => {
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.networkState` プロパティを定義しているインターフェイス

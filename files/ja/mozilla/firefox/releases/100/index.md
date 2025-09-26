@@ -3,8 +3,6 @@ title: Firefox 100 for developers
 slug: Mozilla/Firefox/Releases/100
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 100 の変更点をまとめています。Firefox 100 は、米国時間 2022 年 5 月 3 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -33,13 +31,13 @@ slug: Mozilla/Firefox/Releases/100
 
 #### DOM
 
-- コードで [`AbortSignal.timeout()`](/ja/docs/Web/API/AbortSignal/timeout) 静的メソッドが使用可能になりました。
+- コードで [`AbortSignal.timeout()`](/ja/docs/Web/API/AbortSignal/timeout_static) 静的メソッドが使用可能になりました。
   これは、指定した時間の後に `TimeoutError` で操作を自動的に中止するために使用できる {{domxref("AbortSignal")}} を返します ([Firefox バグ 1753309](https://bugzil.la/1753309))。
 
 ### WebAssembly
 
 - WebAssembly で、WebAssembly または Javascript (あるいは他のランタイム) のどちらかでスローおよびキャッチでき、処理されない場合は環境の境界を越える例外をサポートしました。
-  WebAssembly の例外を JavaScript で表したものが、[WebAssembly.Exception](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) および [WebAssembly.Tag](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) です ([Firefox バグ 1759217](https://bugzil.la/1759217))。
+  WebAssembly の例外を JavaScript で表したものが、[WebAssembly.Exception](/ja/docs/WebAssembly/JavaScript_interface/Exception) および [WebAssembly.Tag](/ja/docs/WebAssembly/JavaScript_interface/Tag) です ([Firefox バグ 1759217](https://bugzil.la/1759217))。
 
 ### WebDriver conformance (Marionette)
 

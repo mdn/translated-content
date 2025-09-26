@@ -18,11 +18,9 @@ function* nombre([param[, param[, ... param]]]) {
 ```
 
 - `nombre`
-
   - : El nombre de la función.
 
 - `param`
-
   - : El nombre de los argumentos que se le van a pasar a la función. Una función puede tener hasta 255 argumentos.
 
 - `instrucciones`
@@ -89,7 +87,7 @@ console.log(gen.next().value); // 20
 
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("GeneratorFunction")}} object
-- [The Iterator protocol](/es/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object
@@ -97,8 +95,7 @@ console.log(gen.next().value); // 20
 - {{jsxref("Operators/function", "function expression")}}
 - {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
 - Other web resources:
-
   - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)
   - [Task.js](http://taskjs.org/)

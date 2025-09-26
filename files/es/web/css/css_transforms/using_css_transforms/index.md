@@ -3,8 +3,6 @@ title: Uso de CSS transforms
 slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 ---
 
-{{CSSRef}}
-
 Al modificar las coordenadas del espacio, las transformaciones CSS permiten cambiar la posición del contenido afectado sin interrumpir el flujo normal. Se implementan haciendo uso de un conjunto de propiedades CSS que permiten aplicar transformaciones lineales a elementos HTML. Estas transformaciones incluyen rotar, torcer, escalar y desplazar en plano o en un espacio 3D.
 
 ## Propiedades de las transformaciones CSS
@@ -74,4 +72,4 @@ Una vez has hecho esto, ya puedes trabajar con los elementos en el espacio 3D.
 
 ## See also
 
-- [Using deviceorientation in 3D Transforms](/en/Using_Deviceorientation_In_3D_Transforms)
+- [Using deviceorientation in 3D Transforms](/en-US/Using_Deviceorientation_In_3D_Transforms)

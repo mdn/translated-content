@@ -3,8 +3,6 @@ title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 信息
 
 ```plain
@@ -53,4 +51,4 @@ loop(0);
 ## 相关页面
 
 - {{Glossary("Recursion","递归")}}
-- [Recursive functions](/zh-CN/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Recursive functions](/zh-CN/docs/Web/JavaScript/Guide/Functions#recursion)

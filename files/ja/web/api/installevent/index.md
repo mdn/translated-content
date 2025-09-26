@@ -35,7 +35,8 @@ _祖先である {{domxref("Event")}} からメソッドを継承しています
 
 このコードスニペットでは、サービスワーカーが使用するキャッシュをバージョン管理するためのベストプラクティスも示しています。この例ではキャッシュを 1 つしか保有していませんが、この手法を複数のキャッシュに使用することができます。このコードでは、キャッシュの一括指定と、バージョン管理された固有のキャッシュ名とを割り当てています。
 
-> **メモ:** Google Chromeでは、chrome://serviceworker-internals 経由でアクセスした関連サービスワーカーの "Inspect" インターフェイスでログ出力します。
+> [!NOTE]
+> Google Chromeでは、chrome://serviceworker-internals 経由でアクセスした関連サービスワーカーの "Inspect" インターフェイスでログ出力します。
 
 ```js
 const CACHE_VERSION = 1;
@@ -52,7 +53,7 @@ self.addEventListener("install", (event) => {
 
   console.log(
     "Handling install event. Resources to pre-fetch:",
-    urlsToPrefetch
+    urlsToPrefetch,
   );
 
   event.waitUntil(
@@ -63,7 +64,7 @@ self.addEventListener("install", (event) => {
           .addAll(
             urlsToPrefetch.map((urlToPrefetch) => {
               return new Request(urlToPrefetch, { mode: "no-cors" });
-            })
+            }),
           )
           .then(() => {
             console.log("All resources have been fetched and cached.");
@@ -71,7 +72,7 @@ self.addEventListener("install", (event) => {
       })
       .catch((error) => {
         console.error("Pre-fetching failed:", error);
-      })
+      }),
   );
 });
 ```

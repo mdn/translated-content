@@ -3,11 +3,41 @@ title: hyphens
 slug: Web/CSS/hyphens
 ---
 
-{{CSSRef}}La propiedad [CSS](/es/docs/Web/CSS) **`hyphens`** especifica cómo deben dividirse las palabras cuando el texto se ajusta a través de múltiples líneas. Puede impedir la separación de sílabas por completo, usar guiones manualmente en puntos específicos del texto o dejar que el navegador inserte los guiones automáticamente donde corresponda.{{EmbedInteractiveExample("pages/css/hyphens.html")}}
+La propiedad [CSS](/es/docs/Web/CSS) **`hyphens`** especifica cómo deben dividirse las palabras cuando el texto se ajusta a través de múltiples líneas. Puede impedir la separación de sílabas por completo, usar guiones manualmente en puntos específicos del texto o dejar que el navegador inserte los guiones automáticamente donde corresponda.
 
-Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo [`lang`](/es/docs/Web/HTML/Global_attributes/lang) y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo `xml:lang.`
+{{InteractiveExample("CSS Demo: hyphens")}}
 
-> **Nota:** Las reglas que definen cómo se realiza la separación de sílabas no están explícitamente definidas por la especificación, por lo que esta puede variar de un navegador a otro.
+```css interactive-example-choice
+hyphens: none;
+```
+
+```css interactive-example-choice
+hyphens: manual;
+```
+
+```css interactive-example-choice
+hyphens: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+}
+```
+
+Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo [`lang`](/es/docs/Web/HTML/Reference/Global_attributes/lang) y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo `xml:lang.`
+
+> [!NOTE]
+> Las reglas que definen cómo se realiza la separación de sílabas no están explícitamente definidas por la especificación, por lo que esta puede variar de un navegador a otro.
 
 ## Sintaxis
 
@@ -34,7 +64,8 @@ La propiedad `hyphens` se especifica con una única palabra de la lista a contin
 - `auto`
   - : El navegador es libre de separar palabras en puntos de separación apropiados, siguiendo cualquiera de las reglas elegidas. Sin embargo, las oportunidades de separación de línea (ver [Sugiriendo oportunidades de separación de línea](#sugiriendo_oportunidades_de_separación_de_línea) más abajo) anularán la separación automática cuando exista.
 
-> **Nota:** El comportamiento del valor `auto` dependerá de que el idioma esté bien etiquetado de manera que las reglas de separación silábica puedan ser seleccionadas. Se debe especificar el idioma con el atributo `lang` de HTML de cara a garantizar que la separación silábica automática se aplique en ese idioma.
+> [!NOTE]
+> El comportamiento del valor `auto` dependerá de que el idioma esté bien etiquetado de manera que las reglas de separación silábica puedan ser seleccionadas. Se debe especificar el idioma con el atributo `lang` de HTML de cara a garantizar que la separación silábica automática se aplique en ese idioma.
 
 ### Sintaxis formal
 
@@ -57,14 +88,18 @@ Este ejemplo usa tres clases, una por cada posible configuración de la propieda
 
 ```html
 <ul>
-  <li><code>none</code>: sin separación; se desbordará si es preciso
+  <li>
+    <code>none</code>: sin separación; se desbordará si es preciso
     <p lang="es" class="none">Una extrema&shy;damente larga palabra</p>
   </li>
-  <li><code>manual</code>: separación sólo en &amp;hyphen; o &amp;shy; (si fuera necesario)
+  <li>
+    <code>manual</code>: separación sólo en &amp;hyphen; o &amp;shy; (si fuera
+    necesario)
     <p lang="es" class="manual">Una extrema&shy;damente larga palabra</p>
   </li>
-  <li><code>auto</code>: separará donde decida el algoritmo (si fuera necesario)
-    <p lang="enes class="auto">Una extrema&shy;damente larga palabra</p>
+  <li>
+    <code>auto</code>: separará donde decida el algoritmo (si fuera necesario)
+    <p lang="es" class="auto">Una extrema&shy;damente larga palabra</p>
   </li>
 </ul>
 ```

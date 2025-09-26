@@ -1,8 +1,9 @@
 ---
 title: "HTMLMediaElement: loadstart イベント"
+short-title: loadstart
 slug: Web/API/HTMLMediaElement/loadstart_event
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: bfd82524fe63319725243d07aab809f0d1617366
 ---
 
 {{APIRef}}
@@ -14,9 +15,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('loadstart', (event) => {});
+addEventListener("loadstart", (event) => {});
 
-onloadstart = (event) => { };
+onloadstart = (event) => {};
 ```
 
 ## イベント型
@@ -79,32 +80,31 @@ video {
 #### JavaScript
 
 ```js
-const loadVideo = document.querySelector('button');
-const video = document.querySelector('video');
-const eventLog = document.querySelector('.event-log-contents');
+const loadVideo = document.querySelector("button");
+const video = document.querySelector("video");
+const eventLog = document.querySelector(".event-log-contents");
 let source = null;
 
 function handleEvent(event) {
-    eventLog.textContent += `${event.type}\n`;
+  eventLog.textContent += `${event.type}\n`;
 }
 
-video.addEventListener('loadstart', handleEvent);
-video.addEventListener('progress', handleEvent);
-video.addEventListener('canplay', handleEvent);
-video.addEventListener('canplaythrough', handleEvent);
+video.addEventListener("loadstart", handleEvent);
+video.addEventListener("progress", handleEvent);
+video.addEventListener("canplay", handleEvent);
+video.addEventListener("canplaythrough", handleEvent);
 
-loadVideo.addEventListener('click', () => {
+loadVideo.addEventListener("click", () => {
+  if (source) {
+    document.location.reload();
+  } else {
+    loadVideo.textContent = "Reset example";
+    source = document.createElement("source");
+    source.setAttribute("src", "/shared-assets/videos/flower.webm");
+    source.setAttribute("type", "video/webm");
 
-    if (source) {
-        document.location.reload();
-    } else {
-        loadVideo.textContent = "Reset example";
-        source = document.createElement('source');
-        source.setAttribute('src', 'https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm');
-        source.setAttribute('type', 'video/webm');
-
-        video.appendChild(source);
-    }
+    video.appendChild(source);
+  }
 });
 ```
 

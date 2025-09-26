@@ -9,7 +9,8 @@ slug: Web/API/ReadableStreamDefaultReader/cancel
 
 cancel 用于在不再需要来自一个流的任何数据的情况下完全结束这个流，即使仍有排队等待的数据块。调用 cancel 后该数据丢失，并且流不再可读。为了仍然可以读这些数据块而不完全结束这个流，你应该使用 {{domxref("ReadableStreamDefaultController.close()")}}。
 
-> **备注：** 如果 reader 处于激活状态，`cancel()` 方法的行为和关联流 ({{domxref("ReadableStream.cancel()")}}) 的行为相同。
+> [!NOTE]
+> 如果 reader 处于激活状态，`cancel()` 方法的行为和关联流 ({{domxref("ReadableStream.cancel()")}}) 的行为相同。
 
 ## 语法
 

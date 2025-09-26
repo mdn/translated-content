@@ -3,6 +3,8 @@ title: WebGL
 slug: Glossary/WebGL
 ---
 
+{{GlossarySidebar}}
+
 **WebGL** (_Web グラフィックライブラリー_) は、インタラクティブな 2D/3D グラフィックを描画する {{Glossary("JavaScript")}} {{Glossary("API")}} です。
 
 [Khronos グループ](https://www.khronos.org/) が WebGL をメンテナンスしていて、これは {{Glossary("OpenGL")}} ES 2.0 を元にしています。
@@ -20,5 +22,5 @@ slug: Glossary/WebGL
 
 ### 技術記事
 
-- [MDN の WebGL](/ja/docs/Web/WebGL)
+- [MDN の WebGL](/ja/docs/Web/API/WebGL_API)
 - [WebGL のサポート表](http://caniuse.com/#feat=webgl)

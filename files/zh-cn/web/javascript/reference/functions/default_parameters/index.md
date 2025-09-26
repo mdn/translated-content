@@ -3,11 +3,21 @@ title: 默认参数值
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 
-{{jsSidebar("Functions")}}
-
 **函数默认参数**允许在没有值或 `undefined` 被传入时使用默认形参。
 
-{{EmbedInteractiveExample("pages/js/functions-default.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Default")}}
+
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
 
 ## 语法
 
@@ -195,7 +205,7 @@ f(2); // [2, undefined]
 
 ### 有默认值的解构参数
 
-你可以通过[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)为参数赋值：
+你可以通过[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)为参数赋值：
 
 ```js
 function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
@@ -213,6 +223,9 @@ f(); // 6
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)参考
+- [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

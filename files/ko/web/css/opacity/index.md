@@ -3,15 +3,45 @@ title: opacity
 slug: Web/CSS/opacity
 ---
 
-{{CSSRef}}
-
 **`opacity`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 불투명도를 설정합니다. 불투명도는 요소 뒤쪽 콘텐츠가 숨겨지는 정도로, 투명도의 반대입니다.
 
-{{EmbedInteractiveExample("pages/css/opacity.html")}}
+{{InteractiveExample("CSS Demo: opacity")}}
+
+```css interactive-example-choice
+opacity: 0;
+```
+
+```css interactive-example-choice
+opacity: 0.33;
+```
+
+```css interactive-example-choice
+opacity: 1;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #963770;
+  color: white;
+  padding: 1em;
+}
+```
 
 `opacity`는 요소의 내용을 포함해 모든 곳에 영향을 주지만 자식 요소가 상속하지는 않습니다. 따라서 요소와 자식의 투명도가 서로 다르더라도 배경에 대해서는 상대적으로 같은 투명도를 갖습니다.
 
-`opacity` 값이 `1`이 아니면 요소를 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)에 배치합니다.
+`opacity` 값이 `1`이 아니면 요소를 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)에 배치합니다.
 
 자식 요소는 불투명하게 유지하고 싶다면 {{cssxref("background")}} 속성을 대신 사용하세요.
 
@@ -24,7 +54,6 @@ background: rgba(0, 0, 0, 0.4);
 ### 값
 
 - `<alpha-value>`
-
   - : 채널의 불투명도(알파 채널의 값)를 나타내는 `0.0` 이상 `1.0` 이하의 {{cssxref("number")}}, 또는 0% 이상 100% 이하의 {{cssxref("percentage")}}. 범위 밖의 숫자는 구문 상 유효하지만, 실제 적용 시에는 범위에 맞춰 나머지 값은 버려집니다.
 
     | 값                               | 뜻                                      |

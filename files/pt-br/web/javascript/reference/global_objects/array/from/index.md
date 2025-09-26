@@ -3,7 +3,7 @@ title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -31,9 +31,9 @@ Array.from(arrayLike[, mapFn[, thisArg]])
 `Array.from()` deixa você criar um Array de:
 
 - objetos array-like (objetos com a propriedade `length` e elementos indexados); ou
-- [Objetos iteráveis](/pt-BR/docs/Web/JavaScript/Guide/iterable) (objetos onde você pode coletar seus elementos, assim como {{jsxref("Map")}} e {{jsxref("Set")}}).
+- [Objetos iteráveis](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols) (objetos onde você pode coletar seus elementos, assim como {{jsxref("Map")}} e {{jsxref("Set")}}).
 
-`Array.from()` tem um parametro opcional `mapFn`, que permite executar a função {{jsxref("Array.prototype.map", "map")}} para cada elemento do array (ou subclasse de objeto) que está sendo criado. Simplificando, `Array.from(obj, mapFn, thisArg)` é o mesmo que `Array.from(obj).map(mapFn, thisArg)`, com a excessão de não cria um array intermediário . Isso é importante, principalmente para certas subclasses de array, como [typed array](/pt-BR/docs/Web/JavaScript/Typed_arrays), no qual o array intermediário iria necessáriamente ter o valor truncado para encaixar-se no tipo apropriado.
+`Array.from()` tem um parametro opcional `mapFn`, que permite executar a função {{jsxref("Array.prototype.map", "map")}} para cada elemento do array (ou subclasse de objeto) que está sendo criado. Simplificando, `Array.from(obj, mapFn, thisArg)` é o mesmo que `Array.from(obj).map(mapFn, thisArg)`, com a excessão de não cria um array intermediário . Isso é importante, principalmente para certas subclasses de array, como [typed array](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays), no qual o array intermediário iria necessáriamente ter o valor truncado para encaixar-se no tipo apropriado.
 
 A propriedade `length` do método `from()` é `1`.
 
@@ -175,15 +175,13 @@ Array.from({ length: 5 }, (v, k) => k);
 // [0, 1, 2, 3, 4]
 ```
 
-## Especificação
+## Especificações
 
-| Specification                                        | Status           | Comment             |
-| ---------------------------------------------------- | ---------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.from', 'Array.from')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.from")}}
+{{Compat}}
 
 ## Veja também
 

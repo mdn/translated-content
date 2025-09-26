@@ -3,18 +3,15 @@ title: Использование кеширования в Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 ---
 
-{{FirefoxSidebar}}
-
 ### Введение
 
-[Firefox 1.5](/en/Firefox_1.5_for_developers) использует кеширование целых Web-страниц, включая их JavaScript-состояния, в рамках сессии браузера. Переходы по посещённым страницам вперёд-назад не требуют загрузки страниц, а JavaScript-состояния сохраняются. Эта функция, обозначаемая иногда как **bfcache** (Back-Forward Cache), делает навигацию по страницам очень быстрой. Такое кешированное состояние сохраняется, пока пользователь не закроет браузер.
+[Firefox 1.5](/en-US/Firefox_1.5_for_developers) использует кеширование целых Web-страниц, включая их JavaScript-состояния, в рамках сессии браузера. Переходы по посещённым страницам вперёд-назад не требуют загрузки страниц, а JavaScript-состояния сохраняются. Эта функция, обозначаемая иногда как **bfcache** (Back-Forward Cache), делает навигацию по страницам очень быстрой. Такое кешированное состояние сохраняется, пока пользователь не закроет браузер.
 
 Есть случаи, в которых Firefox не кеширует страницы. Вот некоторые обычные программные причины того, что страница не кеширована:
 
 - страница использует обработчик `unload` или `beforeunload`;
 - страница устанавливает заголовок «cache-control: no-store».
 - доступ к сайту происходит по протоколу HTTPS, а страница устанавливает по меньшей мере один из следующих заголовков:
-
   - «Cache-Control: no-cache»
   - «Pragma: no-cache»
   - с заголовком «Expires: 0» or «Expires» со значением даты, лежащим в прошлом относительно значению заголовка «Date» (если только не указан также заголовок «Cache-Control: max-age=»);
@@ -216,6 +213,6 @@ function UnloadHandler() {
 
 ### Developing Firefox extensions
 
-Firefox 1.5 [extensions](/en/Building_an_Extension) need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the `load` event for triggers that can be cached and listens for the `pageshow` event for triggers that shouldn't be cached.
+Firefox 1.5 [extensions](/en-US/Building_an_Extension) need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the `load` event for triggers that can be cached and listens for the `pageshow` event for triggers that shouldn't be cached.
 
 For instance, the Google Toolbar for Firefox should listen for the `load` event for the autolink function and to the `pageshow` event for the PageRank function in order to be compatible with both 1.5 and earlier versions.

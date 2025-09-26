@@ -3,14 +3,12 @@ title: "URL: protocol プロパティ"
 short-title: protocol
 slug: Web/API/URL/protocol
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 **`protocol`** は {{domxref("URL")}} インターフェイスのプロパティで、最後の `':'` を含む URL のプロトコルスキームを表す文字列です。
-
-{{AvailableInWorkers}}
 
 ## 値
 
@@ -25,7 +23,7 @@ const url = new URL(
 console.log(url.protocol); // "https:" とログ出力
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

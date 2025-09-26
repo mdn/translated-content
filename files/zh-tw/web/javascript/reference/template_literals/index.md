@@ -3,8 +3,6 @@ title: 樣板字面值
 slug: Web/JavaScript/Reference/Template_literals
 ---
 
-{{JsSidebar("More")}}
-
 樣板字面值（Template literals）是允許嵌入運算式的字串字面值（string literals）。你可以透過樣板字面值來使用多行字串及字串內插（string interpolation）功能。他們在 ES2015 規範的先行版本中被稱為「樣板字串（template strings）」。
 
 ## 語法
@@ -81,8 +79,8 @@ var classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-  ? " icon-expander"
-  : " icon-collapser";
+    ? " icon-expander"
+    : " icon-collapser";
 ```
 
 In ES2015 with template literals and without nesting:
@@ -157,7 +155,7 @@ t2Closure("Hello", { foo: "World" }); // "Hello World!"
 
 ### 原始字串
 
-標籤函數的第一個參數，帶有一個特殊的屬性「 `raw` 」，允許你獲取原始輸入的、未處理任何[轉義序列](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings)的字串值。
+標籤函數的第一個參數，帶有一個特殊的屬性「 `raw` 」，允許你獲取原始輸入的、未處理任何[轉義序列](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings)的字串值。
 
 ```js
 function tag(strings) {
@@ -199,7 +197,7 @@ latex`\unicode`;
 // SyntaxError: malformed Unicode character escape sequence
 ```
 
-Tagged template literals should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. The ECMAScript proposal [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/) (stage 4, to be integrated in the ECMAScript 2018 standard) removes the syntax restriction of ECMAScript escape sequences from tagged template literals.
+Tagged template literals should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. The ECMAScript proposal [Template Literal Revision](https://tc39.es/proposal-template-literal-revision/) (stage 4, to be integrated in the ECMAScript 2018 standard) removes the syntax restriction of ECMAScript escape sequences from tagged template literals.
 
 However, illegal escape sequence must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
 

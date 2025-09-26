@@ -15,7 +15,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 - 该数组中是否*存在*一个值，使用 {{jsxref("Array/includes()", "includes()")}}。同样地，它检查每个元素是否和值相等，而不是使用一个测试函数。
 - 是否有任意一个元素满足提供的测试函数，使用 {{jsxref("Array/some()", "some()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const found = array1.findLast((element) => element > 45);
+
+console.log(found);
+// Expected output: 130
+```
 
 ## 语法
 
@@ -53,7 +62,8 @@ findLast(callbackFn, thisArg)
 - 给已访问过的索引重新赋值将不会被 `callbackFn` 重新访问。
 - 如果 `callbackFn` 更改了数组中现有的、尚未访问的元素，则其传递给 `callbackFn` 的值将是 `findLast()` 访问该元素索引时的值。[已删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素会被当做 `undefined` 来访问。
 
-> **警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
+> [!WARNING]
+> 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
 
 `findLast()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
@@ -82,7 +92,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### 使用箭头函数和解构
 
-前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构对象)重写如下：
+前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#解构对象)重写如下：
 
 ```js
 const inventory = [
@@ -103,12 +113,15 @@ console.log(result);
 以下示例查找数组中的最后一个素数元素（如果没有素数，则返回 {{jsxref("undefined")}}）：
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -118,6 +131,9 @@ function isPrime(element) {
 console.log([4, 6, 8, 12].findLast(isPrime)); // undefined，没有找到
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
+
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
 ### 在稀疏数组上使用 findLast()
 
@@ -186,7 +202,7 @@ console.log(
 ## 参见
 
 - [`core-js` 中 `Array.prototype.findLast` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}

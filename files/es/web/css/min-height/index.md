@@ -3,8 +3,6 @@ title: min-height
 slug: Web/CSS/min-height
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 La propiedad `min-height` se utiliza para definir la altura mínima de un elemento dado. Impide que el valor de la propiedad {{ Cssxref("height") }} llegue a ser más pequeña que la especificada en la altura mínima (`min-height`).
@@ -32,17 +30,13 @@ form {min-height: 0;}
 
 {{ Cssxref("min-height") }} tiene prioridad sobre los valores {{ Cssxref("max-height") }} y {{ Cssxref("height") }}.
 
-### Esdpecificaciones
+### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS2/visudet.html#min-max-heights)
+{{Specifications}}
 
-### Compatibilidades
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 6              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 

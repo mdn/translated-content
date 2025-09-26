@@ -17,7 +17,7 @@ document.clear();
 
 ## Spécifications
 
-- [HTML5](http://www.whatwg.org/html/#dom-document-clear)
+- [HTML5](https://www.whatwg.org/html/#dom-document-clear)
 
 ## Compatibilité des navigateurs
 

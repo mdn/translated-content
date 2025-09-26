@@ -25,7 +25,8 @@ disconnect()
 
 없음 ({{jsxref("undefined")}}).
 
-> **참고:** 감지기가 '감지'했으나 아직 콜백으로 '보고'하지 못한 알림들은 모두 버려집니다. 이런 알림들도 처리하려면 {{domxref("MutationObserver.takeRecords()", "takeRecords()")}} 메서드를 사용해 저장하세요.
+> [!NOTE]
+> 감지기가 '감지'했으나 아직 콜백으로 '보고'하지 못한 알림들은 모두 버려집니다. 이런 알림들도 처리하려면 {{domxref("MutationObserver.takeRecords()", "takeRecords()")}} 메서드를 사용해 저장하세요.
 
 ## 사용 일람
 

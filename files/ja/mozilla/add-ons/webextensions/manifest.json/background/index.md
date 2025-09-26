@@ -34,7 +34,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 `persistent` が `false` と指定されている場合を除き、バックグラウンドスクリプトは拡張機能が読み込まれるとすぐに読み込まれて、拡張機能が無効化やアンインストールされるまで読み込まれたままになります。スクリプト内では、必要な [permissions](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を要求している限り、あらゆる WebExtension APIs を使用できます
 
-詳しくは [拡張機能の中身](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages)の「バックグラウンドページ」の節を見てください。
+詳しくは [拡張機能の中身](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages)の「バックグラウンドページ」の節を見てください。
 
 `background` キーは次の 2 つのプロパティ(両方ともオプションです)のうち 1 つを持つオブジェクトです:
 
@@ -124,7 +124,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
           </li>
           <li>
             <code>false</code>
-            を指定すると、バックグラウンドページはアイドル状態の時にメモリー上からアンロードされ、必要に応じて再生成されます。このようなバックグラウンドページは、リスナーを登録したイベントを処理するためだけにメモリー上に読み込まれるため、イベントページとも呼ばれます。バックグラウンドページがメモリ上からアンロードされていても、リスナーの登録状態は永続化されますが、他の値は永続化されません。イベントページにおいてデータを永続化したい場合は、<a
+            を指定すると、バックグラウンドページはアイドル状態の時にメモリー上からアンロードされ、必要に応じて再生成されます。このようなバックグラウンドページは、リスナーを登録したイベントを処理するためだけにメモリー上に読み込まれるため、イベントページとも呼ばれます。バックグラウンドページがメモリー上からアンロードされていても、リスナーの登録状態は永続化されますが、他の値は永続化されません。イベントページにおいてデータを永続化したい場合は、<a
               href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage"
               >storage API</a
             >を使う必要があります。
@@ -155,4 +155,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.background", 10)}}
+{{Compat}}

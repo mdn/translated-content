@@ -3,7 +3,7 @@ title: element
 slug: Web/CSS/element
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 [CSS](/zh-CN/docs/Web/CSS) 函数 **`element()`** 定义了一个从任意的 HTML 元素中生成的图像 {{cssxref("&lt;image&gt;")}} 值。该图像值是实时的，这意味着如果被指定的 HTML 元素被更改，the CSS properties using the resulting value are automatically updated.
 
@@ -13,7 +13,7 @@ slug: Web/CSS/element
 
 ## 语法
 
-```
+```css
 element(id)
 ```
 
@@ -24,7 +24,7 @@ element(id)
 
 ## 示例
 
-在支持 `-moz-element()` 的 Firefox 中，可以[实地考察](/samples/cssref/moz-element.html)这些例子。
+在支持 `-moz-element()` 的 Firefox 中，可以[实地考察](https://mdn.dev/archives/media/samples/cssref/moz-element.html)这些例子。
 
 ### 一个比较现实的例子
 

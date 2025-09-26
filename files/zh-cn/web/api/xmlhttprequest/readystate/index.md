@@ -26,8 +26,6 @@ slug: Web/API/XMLHttpRequest/readyState
 - DONE
   - : 请求操作已经完成。这意味着数据传输已经彻底完成或失败。
 
-> **备注：** 在 IE 中，状态有着不同的名称，并不是 `UNSENT`，`OPENED` ，`HEADERS_RECEIVED` ，`LOADING` 和 `DONE`，而是 `READYSTATE_UNINITIALIZED` (0)，`READYSTATE_LOADING` (1) ，`READYSTATE_LOADED` (2) ，`READYSTATE_INTERACTIVE` (3) `和 READYSTATE_COMPLETE` (4) 。
-
 ## 示例
 
 ```js

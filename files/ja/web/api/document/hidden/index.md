@@ -1,34 +1,29 @@
 ---
-title: Document.hidden
+title: "Document: hidden プロパティ"
+short-title: hidden
 slug: Web/API/Document/hidden
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: 9b89bf6c59aa5f4dfe7e68b7e4fee42507d67cc4
 ---
 
 {{ ApiRef("DOM") }}
 
 **`Document.hidden`** は読み取り専用のプロパティで、ページが非表示になっているとみられるかどうかを示す論理値を返します。
 
-> **メモ:** このプロパティは、[Page Visibility Level 2 仕様書](https://www.w3.org/TR/page-visibility-2/)では「歴史的」と記述されています。代わりに {{domxref("Document.visibilityState")}} プロパティを使用することを検討してください。
+ページが非表示であるかどうかを判断する代替方法としては、{{domxref("Document.visibilityState")}} プロパティもあります。
 
-## 構文
+## 値
 
-```js-nolint
-document.hidden
-```
+論理値です。ページが非表示の場合は `true`、そうでなければ `false` です。
 
 ## 例
 
 ```js
 document.addEventListener("visibilitychange", () => {
   console.log(document.hidden);
-  // 振る舞いを修正...
+  // 動作を変更...
 });
 ```
-
-## 使用上の注意
-
-> **警告:** プリレンダリングのために、ページがユーザーにとって実際に可視であっても、`document.hidden` が true になることがあります。このようなシナリオでは、ページの読み込みは `document.visibilityState = "prerender"` で始まり、ある程度遅れて `document.visibilityState = "visible"` に遷移します。このシナリオは、 Safari で新しいブラウザータブを開き、 URL バーに URL を貼り付けて、その URL へ移動することで再現することができます。
 
 ## 仕様書
 
@@ -37,3 +32,7 @@ document.addEventListener("visibilitychange", () => {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("Document.visibilityState")}}

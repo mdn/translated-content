@@ -3,6 +3,8 @@ title: Degradação graciosa
 slug: Glossary/Graceful_degradation
 ---
 
+{{GlossarySidebar}}
+
 **Degradação graciosa** é uma filosofia de design centrada na tentativa de criar um site/aplicativo moderno que funcione nos navegadores mais recentes, mas recorre a uma experiência que, embora não tão boa, ainda oferece conteúdo e funcionalidade essenciais para os navegadores antigos.
 
 {{Glossary("Polyfill","Polyfills")}} podem ser usados para criar com JavaScript recursos ausentes, mas alternativas aceitáveis para recursos como estilo e layout devem ser fornecidas sempre que possível, por exemplo, usando a cascata CSS ou o comportamento de HTML substituto. Alguns bons exemplos podem ser encontrados em [Handling common HTML and CSS problems](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS).
@@ -14,7 +16,6 @@ slug: Glossary/Graceful_degradation
 2. [Handling common HTML and CSS problems](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 3. [Implementing feature detection](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 4. [MDN Web Docs Glossary](/pt-BR/docs/Glossary)
-
    1. {{Glossary("Graceful degradation")}}
    2. {{Glossary("Polyfill")}}
    3. {{Glossary("Progressive enhancement")}}

@@ -17,12 +17,12 @@ O elemento `set` fornece um meio simples para apenas definir o valor de um atrib
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de eventos da animação](/pt-BR/SVG/Attribute#AnimationEvent) »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
-- [Atributos de destino do atributo da animação](/pt-BR/SVG/Attribute#AnimationAttributeTarget) »
-- [Atributos de cronometragem da animação](/pt-BR/SVG/Attribute#AnimationTiming) »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de eventos da animação](/pt-BR/docs/SVG/Attribute#animationevent) »
+- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
+- [Atributos de destino do atributo da animação](/pt-BR/docs/SVG/Attribute#animationattributetarget) »
+- [Atributos de cronometragem da animação](/pt-BR/docs/SVG/Attribute#animationtiming) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atributos específicos
@@ -31,7 +31,7 @@ O elemento `set` fornece um meio simples para apenas definir o valor de um atrib
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGSetElement`](/pt-BR/DOM/SVGSetElement).
+Este elemento implementa a interface do [`SVGSetElement`](/pt-BR/docs/DOM/SVGSetElement).
 
 ## Veja também
 

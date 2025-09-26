@@ -3,13 +3,11 @@ title: "RangeError: argument is not a valid code point"
 slug: Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 ---
 
-{{jsSidebar("Errors")}}
-
 JavaScript 异常“Invalid code point”会在 {{jsxref("String.fromCodePoint()")}} 方法与 {{jsxref("NaN")}} 值、负整数（-1）、非整数（5.4）或大于 0x10FFFF（1114111）的值一起使用时抛出。
 
 ## 错误信息
 
-```
+```plain
 RangeError: Invalid code point -1 (V8-based)
 RangeError: -1 is not a valid code point (Firefox)
 RangeError: Arguments contain a value that is out of range of code points (Safari)

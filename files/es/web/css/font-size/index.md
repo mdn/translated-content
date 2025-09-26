@@ -3,8 +3,6 @@ title: font-size
 slug: Web/CSS/font-size
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad `font-size` especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades `em` y `ex`.
@@ -25,8 +23,8 @@ La propiedad `font-size` especifica la dimensión de la letra. Este tamaño pued
   - : un grupo de palabras clave de dimensión absoluta en relación al que determina el usuario como tamaño por defecto (que es `medium`). De forma parecida a las sentencias HTML `<font size="1">` hasta `<font size="7">` donde el tamaño por defecto es `<font size="3">`.
 - larger, smaller
   - : más grande o más pequeño que el tamaño de letra del elemento padre, con aproximadamente el mismo ratio que el mencionado anteriormente.
-- [\<longitud>](/es/CSS/length)
-  - : una unidad positiva de [longitud](/es/CSS/length).
+- [\<longitud>](/es/docs/Web/CSS/length)
+  - : una unidad positiva de [longitud](/es/docs/Web/CSS/length).
 
 <!---->
 
@@ -37,7 +35,7 @@ Es aconsejable evitar el uso de valores que no sean relativos al tamaño por def
 
 ## Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/font-size.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font-size.html)
 
 ```
 /* Ajusta el texto del párrafo a un cuerpo de letra muy grande. */
@@ -57,6 +55,6 @@ Las unidades `em` y `ex` en la propiedad {{ Cssxref("font-size") }} son relativa
 
 ## Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#font-size)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/fonts.html#propdef-font-size)
-- [css3-fonts](http://www.w3.org/TR/css3-fonts/#font-size)
+- [CSS 1](https://www.w3.org/TR/CSS1#font-size)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/fonts.html#propdef-font-size)
+- [css3-fonts](https://www.w3.org/TR/css3-fonts/#font-size)

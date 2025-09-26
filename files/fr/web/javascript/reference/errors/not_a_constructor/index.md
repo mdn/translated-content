@@ -26,11 +26,11 @@ TypeError: Atomics is not a constructor
 
 ## Quel est le problème ?
 
-Une variable ou un objet a été utilisé comme un constructeur alors que cet objet ou cette variable n'est pas un constructeur. Pour plus d'informations sur les constructeurs, voir la page sur [l'opérateur `new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new).
+Une variable ou un objet a été utilisé comme un constructeur alors que cet objet ou cette variable n'est pas un constructeur. Pour plus d'informations sur les constructeurs, voir la page sur [l'opérateur `new`](/fr/docs/Web/JavaScript/Reference/Operators/new).
 
 De nombreux objets globaux tels que {{jsxref("String")}} ou {{jsxref("Array")}}, sont constructibles avec `new`. Cependant, d'autres objets globaux ne le sont pas (leurs propriétés et méthodes sont statiques). Les objets standards natifs suivants ne sont pas des constructeur : {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.
 
-[Les fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Instructions/function*) ne peuvent pas non plus être utilisées comme des constructeurs.
+[Les fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*) ne peuvent pas non plus être utilisées comme des constructeurs.
 
 ## Exemples
 
@@ -96,4 +96,4 @@ return Promise.reject(false);
 ## Voir aussi
 
 - {{Glossary("constructor")}}
-- [L'opérateur `new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new)
+- [L'opérateur `new`](/fr/docs/Web/JavaScript/Reference/Operators/new)

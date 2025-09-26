@@ -18,7 +18,7 @@ parseInt(string, base);
 ## Parâmetros
 
 - `string`
-  - : O valor a analisar. Se o argumento `string` não for uma string, então o valor é convertido para uma string (utilizando a operação abstrata [`ToString`](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring)). Os espaços em branco na `string` são ignorados.
+  - : O valor a analisar. Se o argumento `string` não for uma string, então o valor é convertido para uma string (utilizando a operação abstrata [`ToString`](https://www.ecma-international.org/ecma-262/6.0/#sec-tostring)). Os espaços em branco na `string` são ignorados.
 - `base`
   - : Um inteiro entre `2` e `36` que representa a _base_ da `string` (sistemas numéricos matemáticos) mencionada no parâmetro anterior. Especifique `10` para o sistema numérico decimal comumente usado por humanos. **Sempre especifique este parâmetro** para eliminar confusão do leitor e para garantir o comportamento esperado. Implementações diferentes produzem resultados diferentes quando `base` não é especificado, normalmente assumindo o valor como `10`.
 
@@ -133,15 +133,11 @@ console.log(filterInt("1.61803398875")); // NaN
 
 ## Especificações
 
-| Especificação                                                 | Status             | Comentário        |
-| ------------------------------------------------------------- | ------------------ | ----------------- |
-| ECMAScript 1st Edition.                                       | Padrão             | Definição inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.2', 'parseInt')}}            | {{Spec2('ES5.1')}} |                   |
-| {{SpecName('ES6', '#sec-parseint-string-radix', 'parseInt')}} | {{Spec2('ES6')}}   |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.parseInt")}}
+{{Compat}}
 
 ## Veja também
 

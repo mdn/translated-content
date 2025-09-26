@@ -19,13 +19,9 @@ requestAdapter(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 一个包含以下属性的对象：
-
     - `powerPreference` {{optional_inline}}
-
       - : 一个枚举值，可用于为用户代理提供提示，指示应从系统可用的适配器中选择哪类适配器。可用值为：
-
         - `undefined`（或者未指定），不提供提示。
         - `"low-power"`，为优先考虑节能而不是性能提供一个提示。如果你的应用程序在此设置下运行正常，建议使用它，因为它可以显著提高便携式设备的电池寿命。如果没有提供 options，这通常是默认值。
         - `"high-performance"`，为优先考虑性能而不是功耗提供了一个提示。我们支持你在十分必要时才使用这个值，因为该值会显著地缩短便携式设备的寿命。它也可能导致 {{domxref("GPUDevice")}} 损失增加——系统有时会切换到一个低功耗适配去去保存电力。
@@ -38,7 +34,8 @@ requestAdapter(options)
 
 如果你希望阻止你的应用程序运行在备用的适配器，你应该在请求 {{domxref("GPUDevice")}} 之前检查 {{domxref("GPUAdapter.isFallbackAdapter")}} 属性。
 
-> **备注：** 该规范包含 `requestAdapter()` 的 `forceFallbackAdapter` 选项。这是一个布尔值，如果设置为 `true`，则强制用户代理返回备用适配器（如果可用）。然而，任何浏览器仍没有支持这一点。
+> [!NOTE]
+> 该规范包含 `requestAdapter()` 的 `forceFallbackAdapter` 选项。这是一个布尔值，如果设置为 `true`，则强制用户代理返回备用适配器（如果可用）。然而，任何浏览器仍没有支持这一点。
 
 ### 返回值
 

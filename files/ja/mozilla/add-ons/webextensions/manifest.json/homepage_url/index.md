@@ -28,9 +28,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 
 拡張機能のホームページの URL です。
 
-[developer](/ja/Add-ons/WebExtensions/manifest.json/developer) キーが提供されていて、そこに "url" プロパティが含まれている場合、homepage_url キーは上書きされます。
+[developer](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) キーが提供されていて、そこに "url" プロパティが含まれている場合、homepage_url キーは上書きされます。
 
-これは[国際化できるプロパティ](/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)です。
+これは[国際化できるプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
 
 ## 例
 
@@ -40,4 +40,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.homepage_url")}}
+{{Compat}}

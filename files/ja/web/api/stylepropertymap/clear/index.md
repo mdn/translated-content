@@ -25,11 +25,11 @@ clear()
 
 ## 例
 
-以下の例は、要素の [style 属性](/ja/docs/Web/HTML/Global_attributes/style)からすべてのスタイルを削除します。
+以下の例は、要素の [style 属性](/ja/docs/Web/HTML/Reference/Global_attributes/style)からすべてのスタイルを削除します。
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('.example');
+const buttonEl = document.querySelector(".example");
 
 // style 属性からすべてのスタイルを削除
 buttonEl.attributeStyleMap.clear();

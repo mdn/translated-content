@@ -1,9 +1,9 @@
 ---
 title: <display-legacy>
 slug: Web/CSS/display-legacy
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 CSS 2 では `display` プロパティで単一のキーワードによる構文を採用しており、同じレイアウトモードのブロックレベルとインラインレベルで別々のキーワードが必要でした。このページではこれらの値を詳しく紹介します。
 
@@ -12,29 +12,30 @@ CSS 2 では `display` プロパティで単一のキーワードによる構文
 有効な `<display-legacy>` は以下のとおりです。
 
 - `inline-block`
-
   - : この要素はブロック要素ボックスを生成しますが、周囲のコンテンツに対しては単一のインラインボックスであるかのように流れるようになります (置換要素の場合と似ています)。
 
     これは `inline flow-root` と等価です。
 
 - `inline-table`
-
   - : `inline-table` は、 HTML には直接的に対応するものがありません。これは、 HTML の {{HTMLElement("table")}} 要素と同じようにふるまいつつ、ブロックレベルボックスではなく、インラインボックスのようにふるまいます。表ボックスの内部はブロックレベルのコンテキストになります。
 
     これは `inline table` と等価です。
 
 - `inline-flex`
-
   - : 要素は、インライン要素のようにふるまいつつ、その内容物をフレックスボックスモデルに従ってレイアウトします。
 
     これは `inline flex` と等価です。
-- `inline-grid`
 
+- `inline-grid`
   - : 要素は、インライン要素のようにふるまいつつ、その内容物をグリッドモデルに従ってレイアウトします。
 
     これは `inline grid` と等価です。
 
-<h2 id="Examples">例</h2>
+## 形式文法
+
+{{csssyntax}}
+
+## 例
 
 以下の例では、インラインフレックスコンテナーを従来型のキーワードである inline-flex で生成します。
 
@@ -75,26 +76,11 @@ Not a flex item
 
 ## ブラウザーの互換性
 
-### inline-block の対応
-
-{{Compat("css.properties.display.inline-block", 10)}}
-
-### inline-table の対応
-
-{{Compat("css.properties.display.inline-table", 10)}}
-
-### inline-flex の対応
-
-{{Compat("css.properties.display.inline-flex", 10)}}
-
-### inline-grid の対応
-
-{{Compat("css.properties.display.inline-grid", 10)}}
+{{Compat}}
 
 ## 関連情報
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

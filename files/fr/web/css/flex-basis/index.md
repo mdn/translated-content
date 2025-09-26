@@ -7,9 +7,48 @@ slug: Web/CSS/flex-basis
 
 La propriété **`flex-basis`** détermine la base de flexibilité utilisée comme taille initiale principale pour un élément flexible. Cette propriété détermine la taille de la boîte de contenu sauf si une autre boîte est visée par {{cssxref("box-sizing")}}.
 
-{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
+{{InteractiveExample("CSS Demo: flex-basis")}}
 
-> **Note :** Dans le cas où `flex-basis` (avec une valeur différente de `auto`) et `width` (ou `height` si `flex-direction: column`) sont définis pour un élément, c'est `flex-basis` qui a la priorité.
+```css interactive-example-choice
+flex-basis: auto;
+```
+
+```css interactive-example-choice
+flex-basis: 0;
+```
+
+```css interactive-example-choice
+flex-basis: 200px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Item One</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+```
+
+> [!NOTE]
+> Dans le cas où `flex-basis` (avec une valeur différente de `auto`) et `width` (ou `height` si `flex-direction: column`) sont définis pour un élément, c'est `flex-basis` qui a la priorité.
 
 ## Syntaxe
 
@@ -43,12 +82,13 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 - `<'width'>`
   - : Un longueur absolue (type {{cssxref("&lt;length&gt;")}} ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}})relatif à la taille principale du conteneur flexible ou encore le mot-clé `auto`. Les valeurs négatives ne sont pas autorisées. La valeur par défaut est `auto`.
 - `content`
-
   - : Le dimensionnement se fera de façon automatique selon le contenu de l'élément flexible.
 
-    > **Note :** Cette valeur n'était pas définie par la première version de la spécification sur les boîtes flexibles. Aussi, certaines anciennes implémentations se basant sur cette version de la spécification ne prendront pas cette valeur en charge. Un effet équivalent peut être obtenu en réglant la taille principale ({{cssxref("width")}} ou {{cssxref("height")}}) avec `auto`.
+    > [!NOTE]
+    > Cette valeur n'était pas définie par la première version de la spécification sur les boîtes flexibles. Aussi, certaines anciennes implémentations se basant sur cette version de la spécification ne prendront pas cette valeur en charge. Un effet équivalent peut être obtenu en réglant la taille principale ({{cssxref("width")}} ou {{cssxref("height")}}) avec `auto`.
 
-    > **Note :** Voici un rapide historique pour cette propriété :
+    > [!NOTE]
+    > Voici un rapide historique pour cette propriété :
     >
     > - Au début, `flex-basis:auto` signifiait « se référer à ma propriété `width` ou `height` »
     > - Ensuite, `flex-basis:auto` a été modifiée pour indiquer un dimensionnement automatique et le mot-clé `main-size` fut introduit pour faire référence à la propriété `width` ou `height`. L'implémentation dans Gecko a été suivie avec le [bug Firefox 1032922](https://bugzil.la/1032922).
@@ -178,5 +218,5 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 ## Voir aussi
 
 - {{cssxref("width")}}
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

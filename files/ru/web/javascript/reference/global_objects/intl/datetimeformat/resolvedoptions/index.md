@@ -3,7 +3,7 @@ title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 ---
 
-{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -24,7 +24,6 @@ dateTimeFormat.resolvedOptions()
 - `calendar`
 
   `numberingSystem`
-
   - : Значения, запрошенные ключами расширения Unicode `"ca"` и `"nu"`, либо значения по умолчанию.
 
 - `timeZone`
@@ -48,14 +47,11 @@ dateTimeFormat.resolvedOptions()
   `second`
 
   `timeZoneName`
-
   - : Значения, получившиеся в результате объединения соответствующих свойств в аргументе `options` и доступных комбинаций и представлений форматирования даты/времени в выбранной локали. Некоторые из этих свойств могут не присутствовать, что означает, что соответствующие компоненты не попадают в форматированный вывод.
 
 ## Спецификации
 
-| Спецификация                                                                               | Статус                  | Комментарии              |
-| ------------------------------------------------------------------------------------------ | ----------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-12.3.3', 'Intl.DateTimeFormat.prototype.resolvedOptions')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

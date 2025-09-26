@@ -48,7 +48,7 @@ typeof Object(1n) === "object"; // true
 
 ### 运算
 
-以下操作符可以和 `BigInt` 一起使用： `+`、`*`、`-`、`**`、`%`。除 `>>>` （无符号右移）之外的 [位操作](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) 也可以支持。因为 `BigInt` 都是有符号的， `>>>` （无符号右移）不能用于 `BigInt`。[为了兼容 asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)，`BigInt` 不支持单目 (`+`) 运算符。
+以下操作符可以和 `BigInt` 一起使用： `+`、`*`、`-`、`**`、`%`。除 `>>>` （无符号右移）之外的 [位操作](/zh-CN/docs/Web/JavaScript/Reference/Operators) 也可以支持。因为 `BigInt` 都是有符号的， `>>>` （无符号右移）不能用于 `BigInt`。[为了兼容 asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)，`BigInt` 不支持单目 (`+`) 运算符。
 
 ```js
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
@@ -78,7 +78,8 @@ bigN * -1n
 
 `/` 操作符对于整数的运算也没问题。可是因为这些变量是 `BigInt` 而不是 `BigDecimal` ，该操作符结果会向零取整，也就是说不会返回小数部分。
 
-> **警告：** 当使用 `BigInt` 时，带小数的运算会被取整。
+> [!WARNING]
+> 当使用 `BigInt` 时，带小数的运算会被取整。
 
 ```js
 const expected = 4n / 2n;
@@ -221,46 +222,52 @@ JSON.stringify(BigInt(1));
 
 ## 示例
 
-### Calculating Primes
+### 计算质数
 
 ```js
-function isPrime(p) {
-  for (let i = 2n; i * i <= p; i++) {
-    if (p % i === 0n) return false;
+function isPrime(n) {
+  if (n < 2n) {
+    return false;
+  }
+  if (n % 2n === 0n) {
+    return n === 2n;
+  }
+  for (let factor = 3n; factor * factor <= n; factor += 2n) {
+    if (n % factor === 0n) {
+      return false;
+    }
   }
   return true;
 }
 
-// Takes a BigInt as an argument and returns a BigInt
+// 接收一个 BigInt 值参数，以 BigInt 值返回第 n 个质数值
 function nthPrime(nth) {
   let maybePrime = 2n;
   let prime = 0n;
-
   while (nth >= 0n) {
     if (isPrime(maybePrime)) {
-      nth -= 1n;
+      nth--;
       prime = maybePrime;
     }
-    maybePrime += 1n;
+    maybePrime++;
   }
-
   return prime;
 }
-
 nthPrime(20n);
-// ↪ 73n
+// 73n
 ```
 
-## 标准
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
-| 标准                                                          | 状态      |
-| ------------------------------------------------------------- | --------- |
-| [BigInt](https://tc39.es/proposal-bigint/#sec-bigint-objects) | 第 4 阶段 |
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{JSxRef("Number")}}

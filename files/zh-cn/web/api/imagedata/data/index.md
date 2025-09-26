@@ -7,11 +7,9 @@ slug: Web/API/ImageData/data
 
 只读的 **`ImageData.data`** 属性，返回 {{jsxref("Uint8ClampedArray")}} ，描述一个一维数组，包含以 RGBA 顺序的数据，数据使用 `0` 至 `255`（包含）的整数表示。
 
-## 语法
+## 值
 
-```
-imagedata.data
-```
+一个 {{jsxref("Uint8ClampedArray")}}。
 
 ## 示例
 

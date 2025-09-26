@@ -1,15 +1,16 @@
 ---
-title: "::-webkit-progress-bar"
+title: ::-webkit-progress-bar
 slug: Web/CSS/::-webkit-progress-bar
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-progress-bar`** representa la barra entera del elemento {{HTMLElement("progress")}} . Normalmente sólo está visible a partir de la porción rellena de la barra ya que, por defecto se muestra debajo del pseudo-lemento {{ cssxref("::-webkit-progress-value") }}. Es hijo del pseudo-elemento {{cssxref("::-webkit-progress-inner-element")}} y padre del pseudo-elemento {{cssxref("::-webkit-progress-value")}}.
 
-> **Nota:** para que `::-webkit-progress-value` tenga efecto , en el elemento `<progress>` {{cssxref("-webkit-appearance")}} debe tener el valor _none_.
+> [!NOTE]
+> Para que `::-webkit-progress-value` tenga efecto , en el elemento `<progress>` {{cssxref("-webkit-appearance")}} debe tener el valor _none_.
 
 ## Ejemplo
 
@@ -50,7 +51,6 @@ No es parte de ninguna especificación. Es un pseudo-elemento propietario y espe
 ## Ver además
 
 - Los pseudo-elementos usados por WebKit/Blink para dar estilo a otras partes del elemento {{HTMLElement("progress")}}:
-
   - {{ cssxref("::-webkit-progress-value") }}
   - {{ cssxref("::-webkit-progress-inner-element") }}
 

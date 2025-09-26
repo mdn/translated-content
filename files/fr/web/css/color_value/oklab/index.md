@@ -20,7 +20,6 @@ oklab(59.69% 0.1007 0.1191 / .5)
 ### Valeurs
 
 - `oklab(L a b [/ A])`
-
   - : `L` indique la luminosité perçue et est exprimée comme un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) compris entre `0%`, pour le noir, et `100%`, pour le blanc.
 
     Le deuxième argument, `a`, indique la distance sur l'axe `a` de l'espace de couleur OKLab.

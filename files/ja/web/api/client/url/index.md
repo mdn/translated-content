@@ -36,12 +36,12 @@ self.addEventListener("notificationclick", (event) => {
         if (clients.openWindow) {
           return clients.openWindow("/");
         }
-      })
+      }),
   );
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

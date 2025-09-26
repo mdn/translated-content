@@ -17,7 +17,7 @@ l10n:
 
 ```js
 if (navigator.getUserMedia) {
-  console.log('getUserMediaがサポートされています。');
+  console.log("getUserMediaがサポートされています。");
   navigator.getUserMedia(
     // 制約 - このアプリに必要なのは音声のみ
     {
@@ -30,7 +30,7 @@ if (navigator.getUserMedia) {
 
       const myStream = mediaRecorder.stream;
       console.log(myStream);
-    }
+    },
   );
 }
 ```

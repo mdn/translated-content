@@ -7,7 +7,8 @@ slug: Web/API/NodeList
 
 Los objetos **`NodeList`** son colecciones de nodos como los devueltos por propiedades como {{domxref ("Node.childNodes")}} y el método {{domxref ("document.querySelectorAll ()")}}..
 
-> **Nota:** Aunque `NodeList` no es un `Array`, es posible iterar sobre él utilizando `forEach()`. También puede convertirse a un `Array` usando `Array.from`.
+> [!NOTE]
+> Aunque `NodeList` no es un `Array`, es posible iterar sobre él utilizando `forEach()`. También puede convertirse a un `Array` usando `Array.from`.
 >
 > Sin embargo, algunos navegadores antiguos no han implementado `NodeList.forEach()` ni `Array.from()`. Pero esas limitaciones pueden eludirse utilizando {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} (más en este documento).
 
@@ -53,9 +54,9 @@ for (var i = 0; i < myNodeList.length; i++) {
 }
 ```
 
-No se sienta tentado a [`for...in`](/es/docs/JavaScript/Reference/Statements/for...in) or [`for each...in`](/es/docs/JavaScript/Reference/Statements/for_each...in) para enumerar los elementos en la lista, ya que eso también enumerará la longitud y las propiedades del elemento de `NodeList` y causará errores si su secuencia de comandos asume que solo tiene que tratar con objetos {{domxref ("element")}}. Además, `for..in` no garantiza visitar las propiedades en ningún orden en particular.
+No se sienta tentado a [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in) or [`for each...in`](/es/docs/JavaScript/Reference/Statements/for_each...in) para enumerar los elementos en la lista, ya que eso también enumerará la longitud y las propiedades del elemento de `NodeList` y causará errores si su secuencia de comandos asume que solo tiene que tratar con objetos {{domxref ("element")}}. Además, `for..in` no garantiza visitar las propiedades en ningún orden en particular.
 
-Los bucles [`for...of`](/es/docs/JavaScript/Reference/Statements/for...of) harán un bucle sobre los objetos `NodeList` correctamente:
+Los bucles [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of) harán un bucle sobre los objetos `NodeList` correctamente:
 
 ```js
 var list = document.querySelectorAll("input[type=checkbox]");

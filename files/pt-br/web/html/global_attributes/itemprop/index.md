@@ -194,7 +194,8 @@ An element introducing a property can also introduce multiple properties at once
 </div>
 ```
 
-> **Note:** Note: There is no relationship between the microdata and the content of the document where the microdata is marked up.
+> [!NOTE]
+> There is no relationship between the microdata and the content of the document where the microdata is marked up.
 
 ### Same structured data marked up in two different ways
 
@@ -273,51 +274,42 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 **Tokens** are either strings or URL's. An item is called a **typed item** if it is a URL. Otherwise, it is a string. Strings cannot contain a period or a colon (see below).
 
 1. If the item is a typed item it must be either:
-
    1. A defined property name, or
    2. A valid URL, which refers to the vocabulary definition, or
    3. A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
 
 2. If the item is not a typed item it must be:
-
    1. A string that contains no "**.**" (U+002E FULL STOP) characters and no "**:**" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
-> **Note:** the rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
+> [!NOTE]
+> The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 
 ## Values
 
 The property value of a name-value pair is as given for the first matching case in the following list:
 
 - If the element has an **itemscope** attribute
-
   - The value is the **item** created by the element.
 
 - If the element is a **meta** element
-
   - The value is the value of the element's **content** attribute
 
 - If the element is an **audio**, **embed**, **iframe**, **img**, **source**, **track**, or **video** element
-
-  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/pt-BR/docs/Web/API/Microdata_DOM_API)) of the element at the time the attribute is set
+  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/pt-BR/docs/Web/HTML/Microdata)) of the element at the time the attribute is set
 
 - If the element is an **a**, **area**, or **link** element
-
   - The value is the resulting URL string that results from parsing the value of the element's href attribute relative to the node document of the element at the time the attribute is set
 
 - If the element is an **object** element
-
   - The value is the resulting URL string that results from parsing the value of the element's data attribute relative to the node document of the element at the time the attribute is set
 
 - If the element is a **data** element
-
   - The value is the value of the element's value attribute
 
 - If the element is a **meter** element
-
   - The value is the value of the element's **value** attribute
 
 - If the element is a **time** element
-
   - The value is the element's **datetime** value
 
 Otherwise
@@ -421,7 +413,7 @@ Names are unordered relative to each other, but if a particular name has multipl
 
 ### Result
 
-{{EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Global_attributes/itemprop')}}
+{{EmbedLiveSample('HTML_2')}}
 
 ## Specifications
 
@@ -431,13 +423,12 @@ Names are unordered relative to each other, but if a particular name has multipl
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.itemprop")}}
+{{Compat}}
 
 ## See also
 
 - [Other different global attributes](/pt-BR/docs/Web/HTML/Global_attributes)
 - Other, microdata related, global attributes:
-
   - [`itemid`](/pt-BR/docs/Web/HTML/Global_attributes#itemid)
   - [`itemref`](/pt-BR/docs/Web/HTML/Global_attributes#itemref)
   - [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes#itemscope)

@@ -1,15 +1,29 @@
 ---
 title: Map.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`entries()`** は {{jsxref("Map")}} インスタンスのメソッドで、挿入順でこの `Map` オブジェクトのそれぞれの要素に対する `[キー, 値]` のペアを含む新しい[マップイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-**`entries()`** メソッドは、挿入順で `Map` オブジェクトのそれぞれの要素に対する `[key, value]` のペアを含む新しい [イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators) オブジェクトを返します。この具体的な例では、このイテレーターオブジェクトは反復可能オブジェクトでもあるので、 for-of ループを使用することができます。プロトコル `[Symbol.iterator]` が使用されると、呼び出されたときにこのイテレーター自身を返す関数を返します。
+{{InteractiveExample("JavaScript デモ: Map.prototype.entries()")}}
 
-{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
+```js interactive-example
+const map = new Map();
+
+map.set("0", "foo");
+map.set(1, "bar");
+
+const iterator = map.entries();
+
+console.log(iterator.next().value);
+// 予想される結果: Array ["0", "foo"]
+
+console.log(iterator.next().value);
+// 予想される結果: Array [1, "bar"]
+```
 
 ## 構文
 
@@ -17,9 +31,13 @@ l10n:
 entries()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-新しい {{jsxref("Map")}} のイテレーターオブジェクトです。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 例
 

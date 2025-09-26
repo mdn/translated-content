@@ -29,14 +29,15 @@ O primeiro parágrafo de qualquer página do glossário é uma descrição simpl
 De preferência, não deve ter mais do que duas frases.
 Certifique-se de que qualquer pessoa que leia a descrição possa entender imediatamente o termo definido.
 
-> **Observação:** Não copie e cole de outras definições ou conteúdo da Internet.
+> [!CALLOUT]
+> Não copie e cole de outras definições ou conteúdo da Internet.
 > (E especialmente não a Wikipedia, já que sua gama de versões de licença é menor e incompatível com MDN.) Sua entrada de glossário deve ser conteúdo original.
 
 #### Escrevendo uma boa entrada no glossário
 
 Adicione alguns parágrafos extras, se necessário, mas é fácil acabar escrevendo um artigo inteiro.
 Escrever um artigo é bom, mas, por favor, não o crie no/para o glossário.
-Se você não tem certeza de onde colocar seu artigo, sinta-se à vontade para [entrar em contato para discuti-lo](/pt-BR/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+Se você não tem certeza de onde colocar seu artigo, sinta-se à vontade para [entrar em contato para discuti-lo](/pt-BR/docs/MDN/Community/Getting_started#step_4_ask_for_help).
 
 Existem algumas diretrizes simples a serem consideradas para escrever uma entrada de glossário melhor:
 

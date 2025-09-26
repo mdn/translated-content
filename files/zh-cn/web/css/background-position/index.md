@@ -3,11 +3,48 @@ title: background-position
 slug: Web/CSS/background-position
 ---
 
-{{CSSRef}}
-
 **`background-position`** [CSS](/zh-CN/docs/Web/CSS) 属性为每一个背景图片设置初始位置。这个位置是相对于由 {{cssxref("background-origin")}} 定义的位置图层的。
 
-{{EmbedInteractiveExample("pages/css/background-position.html")}}
+{{InteractiveExample("CSS Demo: background-position")}}
+
+```css interactive-example-choice
+background-position: top;
+```
+
+```css interactive-example-choice
+background-position: left;
+```
+
+```css interactive-example-choice
+background-position: center;
+```
+
+```css interactive-example-choice
+background-position: 25% 75%;
+```
+
+```css interactive-example-choice
+background-position: bottom 50px right 100px;
+```
+
+```css interactive-example-choice
+background-position: right 35% bottom 45%;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 ## 语法
 
@@ -50,17 +87,14 @@ background-position: unset;
 ### 值
 
 - `<position>`
-
   - : 一个 {{cssxref("&lt;position&gt;")}} 定义一组 x/y 坐标（相对于一个元素盒子模型的边界），来放置项目（原文为 item）。它可以使用一到四个值进行定义。如果使用两个非关键字值，第一个值表示水平位置，第二个值表示垂直位置。如果仅指定一个值，则第二个值默认是 `center`。如果使用三个或四个值，则长度百分比值是前面关键字值的偏移量。
 
     **一个值的语法：** 值可能是：
-
     - 关键字 `center`，用来居中背景图片。
     - 关键字 `top`、`left`、`bottom`、`right` 中的一个。用来指定把这个项目（原文为 item）放在哪一个边界。另一个维度被设置成 50%，所以这个项目（原文为 item）被放在指定边界的中间位置。
     - {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}。指定相对于左边界的 x 坐标，y 坐标被设置成 50%。
 
     **两个值的语法：** 一个定义 x 坐标，另一个定义 y 坐标。每个值可以是：
-
     - 关键字 `top`、`left`、`bottom`、`right` 中的一个。如果这里给出 `left` 或 `right`，那么这个值定义 x 轴位置，另一个值定义 y 轴位置。如果这里给出 `top` 或 `bottom`，那么这个值定义 y 轴位置，另一个值定义 x 轴位置。
     - {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}。如果另一个值是 `left` 或 `right`，则该值定义相对于顶部边界的 Y。如果另一个值是 `top` 或 `bottom`，则该值定义相对于左边界的 X。如果两个值都是 `<length>` 或 `<percentage>` 值，则第一个定义 X，第二个定义 Y。
     - 注意：如果一个值是 `top` 或 `bottom`，那么另一个值不可能是 `top` 或 `bottom`。如果一个值是 `left` 或 `right`，那么另一个值不可能是 `left` 或 `right`。也就是说，例如，`top top` 和 `left right` 是无效的。
@@ -68,13 +102,11 @@ background-position: unset;
     - 默认值是 `left top` 或者 `0% 0%`。
 
     **三个值的语法：** 两个值是关键字值，第三个是前面值的偏移量：
-
     - 第一个值是关键字 `top`、`left`、`bottom`、`right`，或者 `center`。如果设置为 `left` 或 `right`，则定义了 X。如果设置为 `top` 或 `bottom`，则定义了 Y，另一个关键字值定义了 X。
     - {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，如果是第二个值，则是第一个值的偏移量。如果是第三个值，则是第二个值的偏移量。
     - 单个长度或百分比值是其前面的关键字值的偏移量。一个关键字与两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值的组合无效。
 
     **四个值的语法：** 第一个和第三个值是定义 X 和 Y 的关键字值。第二个和第四个值是前面 X 和 Y 关键字值的偏移量：
-
     - 第一个值和第三个值是关键字值 `top`、`left`、`bottom`、 `right` 之一。如果设置为 `left` 或 `right`，则定义了 X。如果设置为 `top` 或 `bottom`，则定义了 Y，另一个关键字值定义了 X。
     - 第二个和第四个值是 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}。第二个值是第一个关键字的偏移量。第四个值是第二个关键字的偏移量。
 
@@ -84,20 +116,20 @@ background-position: unset;
 
 基本上发生的情况是从相应的容器尺寸中*减去*背景图像尺寸，然后将结果值的百分比用作从左（或顶部）边界的直接偏移量。
 
-```
+```plain
 (container width - image width) * (position x%) = (x offset value)
 (container height - image height) * (position y%) = (y offset value)
 ```
 
 以 X 轴为例，假设我们有一个 300px 宽的图像，我们在一个 100px 宽的容器中使用它，`background-size` 设置为 `auto`：
 
-```
+```plain
 100px - 300px = -200px (container & image difference)
 ```
 
 因此，位置百分比为 -25%、0%、50%、100%、125%，我们得到这些图像到容器边界偏移值：
 
-```
+```plain
 -200px * -25% = 50px
 -200px * 0% = 0px
 -200px * 50% = -100px
@@ -113,7 +145,7 @@ background-position: unset;
 - \-200px (将图片相对容器左移 200px，这意味着图片右部分的 100px 内容将出现在容器中)
 - \-250px (将图片相对容器左移 250px，这意味着图片的右边界对齐容器的中线)
 
-值得一提的是，如果您的 `background-size` 等于给定轴的容器大小，那么该轴的 _百分比_ 位置将不起作用，因为“容器图像差异”将为零。您将需要使用绝对值进行偏移。
+值得一提的是，如果你的 `background-size` 等于给定轴的容器大小，那么该轴的 _百分比_ 位置将不起作用，因为“容器图像差异”将为零。你将需要使用绝对值进行偏移。
 
 ## 形式定义
 
@@ -151,15 +183,15 @@ div {
 
 /* 这些例子使用 `background` 缩写 */
 .exampleone {
-  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
+  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* 多背景图片：每个图片依次和相应的 `background-position` 匹配 */
 .examplethree {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
     right 3em bottom 2em;

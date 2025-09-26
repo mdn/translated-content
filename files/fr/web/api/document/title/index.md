@@ -41,5 +41,5 @@ document.title = newTitle;
 
 ## Spécification
 
-- [DOM Level 2 HTML: document.title](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-18446827)
-- [HTML5](http://www.whatwg.org/html/#document.title)
+- [DOM Level 2 HTML: document.title](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-18446827)
+- [HTML5](https://www.whatwg.org/html/#document.title)

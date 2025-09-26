@@ -3,11 +3,46 @@ title: outline
 slug: Web/CSS/outline
 ---
 
-{{CSSRef}}
+[CSS](/ko/docs/Web/CSS) **`outline`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 모든 외곽선 속성을 한꺼번에 지정합니다.
 
-[CSS](/ko/docs/Web/CSS) **`outline`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 모든 외곽선 속성을 한꺼번에 지정합니다.
+{{InteractiveExample("CSS Demo: outline")}}
 
-{{EmbedInteractiveExample("pages/css/outline.html")}}
+```css interactive-example-choice
+outline: solid;
+```
+
+```css interactive-example-choice
+outline: dashed red;
+```
+
+```css interactive-example-choice
+outline: 1rem solid;
+```
+
+```css interactive-example-choice
+outline: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+outline: 8px ridge rgba(170, 50, 220, 0.6);
+border-radius: 2rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  padding: 0.75rem;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구성 속성
 
@@ -40,7 +75,8 @@ outline: unset;
 
 `outline` 속성은 아래의 값 중 한 개에서 세 개를 사용해 지정할 수 있으며 순서는 상관하지 않습니다.
 
-> **참고:** 많은 요소의 외곽선은 스타일을 지정하지 않을 경우 보이지 않습니다. 스타일 기본값이 `none`이기 때문인데, 주목할만한 예외는 {{htmlelement("input")}} 요소로 브라우저의 기본 스타일이 적용됩니다.
+> [!NOTE]
+> 많은 요소의 외곽선은 스타일을 지정하지 않을 경우 보이지 않습니다. 스타일 기본값이 `none`이기 때문인데, 주목할만한 예외는 {{htmlelement("input")}} 요소로 브라우저의 기본 스타일이 적용됩니다.
 
 ### 값
 
@@ -58,7 +94,7 @@ outline: unset;
 - 외곽선은 요소 콘텐츠의 밖에 그려지며 절대 공간을 차지하지 않습니다.
 - 명세에 따르면 외곽선은 직사각형일 필요가 없습니다. 보통 직사각형으로 그리기는 합니다.
 
-다른 모든 단축 속성과 마찬가지로, 누락한 하위 속성의 값은 [초깃값](/ko/docs/Web/CSS/initial_value)으로 설정됩니다.
+다른 모든 단축 속성과 마찬가지로, 누락한 하위 속성의 값은 [초깃값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)으로 설정됩니다.
 
 ## 접근성 고려사항
 

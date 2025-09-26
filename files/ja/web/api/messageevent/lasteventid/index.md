@@ -1,8 +1,9 @@
 ---
-title: MessageEvent.lastEventId
+title: "MessageEvent: lastEventId プロパティ"
+short-title: lastEventId
 slug: Web/API/MessageEvent/lastEventId
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("HTML DOM")}}
@@ -18,7 +19,7 @@ ID を表す文字列です。
 ```js
 myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
+  console.log("Message received from worker");
   console.log(e.lastEventId);
 };
 ```

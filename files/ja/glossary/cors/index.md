@@ -3,6 +3,8 @@ title: CORS
 slug: Glossary/CORS
 ---
 
+{{GlossarySidebar}}
+
 **CORS** (オリジン間リソース共有、 Cross-Origin Resource Sharing) は、 {{Glossary("Header", "HTTP ヘッダー")}}の転送で構成されるシステムであり、ブラウザーがオリジンをまたいだリクエストのレスポンスに、フロントエンドの JavaScript コードがアクセスすることをブロックするかどうかを決めるものです。
 
 [同一オリジンセキュリティポリシー](/ja/docs/Web/Security/Same-origin_policy)は、既定でリソースへのオリジン間のアクセスを禁止しています。しかし、 CORS はウェブサーバーに、リソースへのオリジンをまたいだアクセスを許可すると言うことができるようにします。
@@ -11,7 +13,7 @@ slug: Glossary/CORS
 
 ### 一般知識
 
-- MDN 上の [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
+- MDN 上の [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - Wikipedia 上の [Cross-origin_resource_sharing](https://ja.wikipedia.org/wiki/Cross-origin_resource_sharing) （英語）
 
 ### CORS のヘッダー
@@ -31,12 +33,10 @@ slug: Glossary/CORS
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : プリフライトリクエストを発行する際に、実際のリクエストを行う際に使用される HTTP ヘッダーをサーバーに知らせるために使用します。
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : プリフライトリクエストを発行する際に、実際のリクエストを行う際に使用される [HTTP メソッド](/ja/docs/Web/HTTP/Methods)をサーバーに知らせるために使用します。
+  - : プリフライトリクエストを発行する際に、実際のリクエストを行う際に使用される [HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)をサーバーに知らせるために使用します。
 - {{HTTPHeader("Origin")}}
   - : どのオリジンからアクセスしているかを示します。
 
 ### 技術リファレンス
 
 - [Fetch specification](https://fetch.spec.whatwg.org)
-
-{{QuickLinksWithSubpages("/ja/docs/Glossary")}}

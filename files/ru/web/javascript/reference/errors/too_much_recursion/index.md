@@ -51,4 +51,4 @@ loop(0);
 ## Смотрите также
 
 - {{Glossary("Recursion")}}
-- [Рекурсия](/ru/docs/Web/JavaScript/Guide/Functions#Рекурсия)
+- [Рекурсия](/ru/docs/Web/JavaScript/Guide/Functions#рекурсия)

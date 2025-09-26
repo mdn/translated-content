@@ -30,7 +30,7 @@ document.forms["myform"].addEventListener(
   () => {
     document.forms["myform"].reportValidity();
   },
-  false
+  false,
 );
 ```
 

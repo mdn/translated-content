@@ -3,8 +3,6 @@ title: max-block-size
 slug: Web/CSS/max-block-size
 ---
 
-{{CSSRef}}
-
 La propiedad **`max-block-size`** [CSS](/es/docs/Web/CSS) especifica el tamaño máximo de un elemento en la dirección opuesta a la escritura dirigida como se especifica por {{cssxref("writing-mode")}}. Es decir, si la dirección de escritura es horizontal, entonces `max-block-size` es equivalente a {{cssxref("max-height")}}; si la dirección de escritura es vertical, `max-block-size` es el mismo que {{cssxref("max-width")}}.
 
 El tamaño máximo de la otra dimensión se especifica usando la propiedad {{cssxref("max-inline-size")}}.
@@ -13,7 +11,46 @@ Esto es útil porque `max-width` se usa siempre para tamaños horizontales y `ma
 
 En los momentos que normalmente utilizaría `max-height` o `max-width`, debería usar `max-block-size` para establecer el "alto" máximo del contenido (incluso si esto no es un valor vertical) y `max-inline-size` para establecer el "ancho" máximo del contenido (aunque esto puede ser vertical en lugar de horizontal). Vea el [Ejemplo](/es/docs/Web/CSS/writing-mode#ejemplo), que muestra los diferentes modos de escritura en acción.
 
-{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
+{{InteractiveExample("CSS Demo: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum block size. <br />This will
+    limit the size in the block dimension, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Sintaxis
 
@@ -65,9 +102,11 @@ Los valores de `writing-mode` afectan al mapeo de `max-block-size` a `max-width`
 | `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
 | `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
 
-> **Nota:** Los valores de `writing-mode`: `sideways-lr` y `sideways-rl`, fueron eliminados de la especificación de escritura de nivel 3 de CSS en el proceso de diseño de sucesión. Pueden ser restaurados en el nivel 4.
+> [!NOTE]
+> Los valores de `writing-mode`: `sideways-lr` y `sideways-rl`, fueron eliminados de la especificación de escritura de nivel 3 de CSS en el proceso de diseño de sucesión. Pueden ser restaurados en el nivel 4.
 
-> **Nota:** Los modos de escritura `lr`, `lr-tb`, `rl`, `rb`, y `rb-tl` ya no están permitidos en contextos {{Glossary("HTML")}}; sólo se pueden usar en contextos 1.x {{Glossary("SVG")}}.
+> [!NOTE]
+> Los modos de escritura `lr`, `lr-tb`, `rl`, `rb`, y `rb-tl` ya no están permitidos en contextos {{Glossary("HTML")}}; sólo se pueden usar en contextos 1.x {{Glossary("SVG")}}.
 
 ## Definición formal
 

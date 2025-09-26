@@ -7,9 +7,45 @@ slug: Web/CSS/background-position-y
 
 La propriété **`background-position-y`** définit la position verticale initiale de chaque image d'arrière-plan. La position est relative à l'origine définie par {{cssxref("background-origin")}}.
 
-{{EmbedInteractiveExample("pages/css/background-position-y.html")}}
+{{InteractiveExample("CSS Demo: background-position-y")}}
 
-> **Note :** La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration.
+```css interactive-example-choice
+background-position-y: top;
+```
+
+```css interactive-example-choice
+background-position-y: center;
+```
+
+```css interactive-example-choice
+background-position-y: 25%;
+```
+
+```css interactive-example-choice
+background-position-y: 2rem;
+```
+
+```css interactive-example-choice
+background-position-y: bottom 32px;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
+
+> [!NOTE]
+> La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration.
 
 ## Syntaxe
 
@@ -79,4 +115,4 @@ background-position-y: unset;
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Manipuler plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Manipuler plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

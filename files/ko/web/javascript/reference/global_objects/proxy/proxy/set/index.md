@@ -7,7 +7,33 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 
 **`handler.set()`** 메서드는 속성 값을 설정을 위한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
+
+```js interactive-example
+const monster1 = { eyeCount: 4 };
+
+const handler1 = {
+  set(obj, prop, value) {
+    if (prop === "eyeCount" && value % 2 !== 0) {
+      console.log("Monsters must have an even number of eyes");
+    } else {
+      return Reflect.set(...arguments);
+    }
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+proxy1.eyeCount = 1;
+// Expected output: "Monsters must have an even number of eyes"
+
+console.log(proxy1.eyeCount);
+// Expected output: 4
+
+proxy1.eyeCount = 2;
+console.log(proxy1.eyeCount);
+// Expected output: 2
+```
 
 ## 구문
 
@@ -28,7 +54,6 @@ new Proxy(target, {
 - `value`
   - : 설정할 속성의 새 값
 - `receiver`
-
   - : 할당이 지시된 원래 객체입니다. 이것은 일반적으로 프록시 자체입니다.
     그러나 `set()` 처리기는 프로토타입 체인이나 다양한 다른 방법 등을 통해
     간접적으로 호출할 수도 있습니다.

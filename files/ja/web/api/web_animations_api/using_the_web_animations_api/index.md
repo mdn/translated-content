@@ -11,9 +11,9 @@ l10n:
 
 ## ウェブアニメーション API との出会い
 
-[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) は、ブラウザー内のアニメーションエンジンを開発者に効果しい、JavaScript で操作します。この API は [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)と [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の両方の実装基盤となるように設計されており、将来のアニメーション効果への扉を開いた状態にしています。これは、ハックや強制、{{domxref("Window.requestAnimationFrame()")}} なしで、ブラウザーに自分自身で内部最適化をさせる、ウェブ上でアニメーションするためのほとんどのパフォーマンスの高い方法の 1 つです。
+[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) は、ブラウザー内のアニメーションエンジンを開発者に公開し、JavaScript で操作できるようにします。この API は [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)と [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の両方の実装基盤となるように設計されており、将来のアニメーション効果への扉を開いた状態にしています。これは、ハックや強制、{{domxref("Window.requestAnimationFrame()")}} なしで、ブラウザーに自分自身で内部最適化をさせる、ウェブ上でアニメーションするためのほとんどのパフォーマンスの高い方法の 1 つです。
 
-ウェブアニメーション API を使うと、インタラクティブなアニメーションをスタイルシートから JavaScript に移し、表示と動作を分離することができます。再生方向を制御するために、CSS プロパティを書いたり、要素にクラスをスコープしたりといった、DOM を酷使する技法に頼る必要はなくなりました。また、純粋な宣言型の CSS とは異なり、JavaScript ではプロパティから継続時間まで動的に値を設定することもできます。カスタムアニメーションライブラリーを作成したり、対話するアニメーションを作成したりするのに、ウェブアニメーション API は最適かもしれません。何ができるか見てみましょう！
+ウェブアニメーション API を使うと、インタラクティブなアニメーションをスタイルシートから JavaScript に移し、表示と動作を分離することができます。再生方向を制御するために、CSS プロパティを書いたり、要素にクラスをスコープしたりといった、DOM を酷使する技法に頼る必要はなくなりました。また、純粋な宣言型の CSS とは異なり、JavaScript ではプロパティから再生時間まで動的に値を設定することもできます。カスタムアニメーションライブラリーを作成したり、対話するアニメーションを作成したりするのに、ウェブアニメーション API は最適かもしれません。何ができるか見てみましょう！
 
 ## ウェブアニメーション API を利用して CSS アニメーションを構築する
 
@@ -86,10 +86,11 @@ const aliceTiming = {
 
 CSS にこける同等の値の表し方とは異なる形で表現されていることにお気づきでしょう。
 
-- 1 つ目は間隔時間はミリ秒単位で表現されています。3 秒という指定ではなく、3000 ミリ秒です。{{domxref("setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように、ウェブアニメーション API はミリ秒でしか値を取りません。
+- 1 つ目は間隔時間はミリ秒単位で表現されています。3 秒という指定ではなく、3000 ミリ秒です。{{domxref("Window.setTimeout", "setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように、ウェブアニメーション API はミリ秒でしか値を取りません。
 - もう 1 つは `iteration-count` ではなく `iterations` ということです。
 
-> **メモ:** CSS アニメーションで使用される用語とウェブアニメーションで利用される用語とではいくつか小さな違いがあります。例えば、ウェブアニメーションは `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。既定の [animation-timing-function](/ja/docs/Web/CSS/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
+> [!NOTE]
+> CSS アニメーションで使用される用語とウェブアニメーションで利用される用語とではいくつか小さな違いがあります。例えば、ウェブアニメーションは `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。既定の [animation-timing-function](/ja/docs/Web/CSS/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
 
 #### パーツをまとめる
 
@@ -113,7 +114,7 @@ document.getElementById("alice").animate(
   {
     duration: 3000,
     iterations: Infinity,
-  }
+  },
 );
 ```
 
@@ -126,7 +127,7 @@ document.getElementById("alice").animate(
     { color: "#431236", offset: 0.3 },
     { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
   ],
-  3000
+  3000,
 );
 ```
 
@@ -151,7 +152,7 @@ const nommingCake = document
       fill: "forwards",
       easing: "steps(4, end)",
       duration: aliceChange.effect.getComputedTiming().duration / 2,
-    }
+    },
   );
 ```
 
@@ -239,9 +240,9 @@ document.addEventListener("touchstart", goFaster);
 要素をアニメーションさせるとき、アニメーションが完了した後に、最終的な状態を維持したいことがよくあります。このために、アニメーションの [fill モード](/ja/docs/Web/API/KeyframeEffect/KeyframeEffect#fill)を `forwards` に設定するという方法がときどき使われます。しかし、2 つの理由から、アニメーションの効果を無期限に維持するために fill モードを使用することは推奨されません。
 
 - アニメーションがアクティブなままであり、ブラウザーがその状態を維持しなければならないため、アニメーションが終了してもアニメーションがリソースを消費し続けます。なお、これは[満了したアニメーションの自動削除](#満了したアニメーションの自動削除)をすることでいくらか緩和されます。
-- アニメーションで適用されたスタイルは、指定されたスタイルより[カスケードにおいて高い優先度](/ja/docs/Web/CSS/Cascade#カスケード順)を持つため、必要に応じて上書きすることが困難になる場合があります。
+- アニメーションで適用されたスタイルは、指定されたスタイルより[カスケードにおいて高い優先度](/ja/docs/Web/CSS/CSS_cascade/Cascade#カスケード順)を持つため、必要に応じて上書きすることが困難になる場合があります。
 
-より良い方法は、{{domxref("Animation.commitStyles()")}} メソッドを使うことです。これはこのアニメーションの現在のスタイルを、対象要素の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性に書き込むので、その後は通常にスタイル設定しなおすことができます。
+より良い方法は、{{domxref("Animation.commitStyles()")}} メソッドを使うことです。これはこのアニメーションの現在のスタイルを、対象要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性に書き込むので、その後は通常にスタイル設定しなおすことができます。
 
 ## 満了したアニメーションの自動削除
 
@@ -297,7 +298,7 @@ const aliceChange = document
       duration: 8000,
       easing: "ease-in-out",
       fill: "both",
-    }
+    },
   );
 ```
 
@@ -363,7 +364,8 @@ const endGame = () => {
 };
 ```
 
-> **メモ:** `getAnimations()` と `effect` は、この記事を書いている時点ではすべてのブラウザーで対応しているわけではありませんが、ポリフィルでは対応しています。
+> [!NOTE]
+> `getAnimations()` と `effect` は、この記事を書いている時点ではすべてのブラウザーで対応しているわけではありませんが、ポリフィルでは対応しています。
 
 ## コールバックとプロミス
 

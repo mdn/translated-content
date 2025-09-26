@@ -102,7 +102,8 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`, `top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
 
-> **Nota:** Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
+> [!NOTE]
+> Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 
 This method is also demonstrated in the article [Manipulating video using canvas](/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
@@ -301,14 +302,14 @@ function draw(img) {
 
 ## Guardando las imágenes
 
-The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URI](/es/docs/Web/HTTP/data_URIs) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
+The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URI](/es/docs/Web/URI/Reference/Schemes/data) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : Default setting. Creates a PNG image.
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
 
-Once you have generated a data URI from you canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/es/docs/Web/HTML/Element/a#attr-download) to save it to disc, for example.
+Once you have generated a data URI from you canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/es/docs/Web/HTML/Reference/Elements/a#attr-download) to save it to disc, for example.
 
 You can also create a {{domxref("Blob")}} from the canvas.
 

@@ -30,5 +30,5 @@ _A interface `Position` não herda nenhuma propriedade_.
 
 ## Veja também
 
-- [Usando geolocalização](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Usando geolocalização](/pt-BR/docs/Web/API/Geolocation_API)
 - A interface {{domxref("Geolocation")}} que usa isto

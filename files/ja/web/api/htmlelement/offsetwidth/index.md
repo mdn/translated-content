@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: offsetWidth プロパティ"
+short-title: offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -17,7 +18,8 @@ l10n:
 
 要素の `offsetWidth` ピクセル値に対応する整数です。 `offsetWidth` プロパティは読み取り専用です。
 
-> **メモ:** このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> [!NOTE]
+> このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
 ## 例
 
@@ -26,10 +28,6 @@ l10n:
 ## 仕様書
 
 {{Specifications}}
-
-### メモ
-
-`offsetWidth` は、MSIE によって最初に導入された DHTML オブジェクトモデルのプロパティです。 要素の物理的/グラフィカルな寸法、または要素の境界ボックスの幅 (border-box width) と呼ばれることもあります。
 
 ## ブラウザーの互換性
 

@@ -1,13 +1,16 @@
 ---
-title: XMLHttpRequest.abort()
+title: "XMLHttpRequest: abort() メソッド"
+short-title: abort()
 slug: Web/API/XMLHttpRequest/abort
 l10n:
-  sourceCommit: 8e294a76bdebc9583d418ee14b42422eb4a8f4a5
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 **`XMLHttpRequest.abort()`** メソッドは、すでに送信されたリクエストを中止します。リクエストが中止されたら、 {{domxref("XMLHttpRequest.readyState", "readyState")}} が `XMLHttpRequest.UNSENT` (0) に変化し、リクエストの {{domxref("XMLHttpRequest.status", "status")}} コードが 0 に設定されます。
+
+リクエストがまだ進行中である場合（その `readyState` が `XMLHttpRequest.DONE` または `XMLHttpRequest.UNSENT` でない場合）、 {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} イベントと、{{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}}、そして {{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}} イベントが、この順序で配信されます。同期リクエストの場合、イベントは配信されず、代わりにエラーが発生します。
 
 ## 構文
 
@@ -50,4 +53,4 @@ if (OH_NOES_WE_NEED_TO_CANCEL_RIGHT_NOW_OR_ELSE) {
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

@@ -1,5 +1,5 @@
 ---
-title: ":optional"
+title: :optional
 slug: Web/CSS/:optional
 ---
 
@@ -16,7 +16,8 @@ input:optional {
 
 Esta pseudo-classe é utilizada para estilizar campos do formulário que não são requeridos para sumissão.
 
-> **Nota:** A pseudo-classe {{cssxref(":required")}} seleciona campos do fumulário _requeridos_.
+> [!NOTE]
+> A pseudo-classe {{cssxref(":required")}} seleciona campos do fumulário _requeridos_.
 
 ## Sintaxe
 
@@ -37,18 +38,13 @@ Entradas requeridas devem ser indicadas visualmente, utilizando um tratamento qu
 
 ## Especificações
 
-| Specification                                                          | Status                        | Comment                                                 |
-| ---------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-optional', ':optional') }}       | {{ Spec2('HTML WHATWG') }}    | Sem mudança.                                            |
-| {{ SpecName('HTML5 W3C', '#selector-optional', ':optional') }}         | {{ Spec2('HTML5 W3C') }}      | Define a semântica da validação e da restrição do HTML. |
-| {{ SpecName('CSS4 Selectors', '#opt-pseudos', ':optional') }}          | {{ Spec2('CSS4 Selectors') }} | Sem mudança.                                            |
-| {{ SpecName('CSS3 Basic UI', '#pseudo-required-value', ':optional') }} | {{ Spec2('CSS3 Basic UI') }}  | Define a pseudo-classe, mas não a semântica associada.  |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.optional")}}
+{{Compat}}
 
 ## Ver também
 
 - Outra pseudo-classes de validação relacionadas: {{ cssxref(":required") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Validação de dados de formulário](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
+- [Validação de dados de formulário](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation)

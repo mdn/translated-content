@@ -1,16 +1,18 @@
 ---
-title: UIEvent()
+title: "UIEvent: UIEvent() コンストラクター"
+short-title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 l10n:
-  sourceCommit: b9bcca1e96839aa9cddea3263196e0cf4656d387
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("UI Events")}}
 
 **`UIEvent()`** コンストラクターは新しい {{domxref("UIEvent")}} を生成します。
 
-> **メモ:** このコンストラクターを使用して合成イベントを作成した場合、セキュリティ上の理由から、そのイベントは信頼されません。
-> ブラウザーで生成された UIEvent オブジェクトのみが信頼され、信頼されたイベントのみが既定のアクションを発生させます。
+> [!NOTE]
+> このコンストラクターを使用して合成イベントを作成した場合、セキュリティ上の理由から、そのイベントは信頼されません。
+> ブラウザーで生成された `UIEvent`` オブジェクトのみが信頼され、信頼されたイベントのみが既定のアクションを発生させます。
 
 ## 構文
 
@@ -25,7 +27,6 @@ new UIEvent(type, options)
   - : 文字列で、このイベントの名前を表します。
     大文字小文字の区別があり、ブラウザーは `load`, `unload`, `abort`, `error`, `select` の何れかに設定します。
 - `options` {{optional_inline}}
-
   - : _{{domxref("Event/Event", "Event()")}} で定義されたプロパティに加え_、以下のプロパティを持つすることができるオブジェクトです。
     - `detail` {{optional_inline}}
       - : 数値で、このイベントに関連付けられたイベント依存の値です。

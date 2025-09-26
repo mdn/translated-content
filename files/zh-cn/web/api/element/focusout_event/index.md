@@ -3,12 +3,14 @@ title: focusout
 slug: Web/API/Element/focusout_event
 ---
 
-当元素即将失去焦点时，focusout 事件被触发。focusout 事件和 [blur](/zh-CN/docs/Web/Events/blur) 事件之间的主要区别在于后者不会冒泡。
+{{APIRef}}
+
+当元素即将失去焦点时，focusout 事件被触发。focusout 事件和 [blur](/zh-CN/docs/Web/API/Element/blur_event) 事件之间的主要区别在于后者不会冒泡。
 
 ## 基本信息
 
 - Specification
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
 - Interface
   - : {{domxref("FocusEvent")}}
 - Bubbles

@@ -9,7 +9,7 @@ slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 
 ## Симуляция освещения и затенения в 3D
 
-Хотя детали теории, лежащей в основе симуляции освещения в 3D-графике лежат далеко за пределами этой статьи, будет полезным немного узнать о том, как это работает. Посмотрите статью [Затенение по Фонгу](http://en.wikipedia.org/wiki/Phong_shading) в Википедии, чтобы получить хороший обзор наиболее часто используемых моделей освещения. А [в этой статье](https://webglfundamentals.org/webgl/lessons/webgl-3d-lighting-point.html) вы можете посмотреть объяснение, основанное на WebGL.
+Хотя детали теории, лежащей в основе симуляции освещения в 3D-графике лежат далеко за пределами этой статьи, будет полезным немного узнать о том, как это работает. Посмотрите статью [Затенение по Фонгу](https://ru.wikipedia.org/wiki/Затенение_по_Фонгу) в Википедии, чтобы получить хороший обзор наиболее часто используемых моделей освещения. А [в этой статье](https://webglfundamentals.org/webgl/lessons/webgl-3d-lighting-point.html) вы можете посмотреть объяснение, основанное на WebGL.
 
 Существует три основных типа источников света:
 
@@ -215,9 +215,9 @@ const programInfo = {
 
 И это всё!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-[Посмотреть код примера полностью](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Открыть демо в новом окне](http://mdn.github.io/webgl-examples/tutorial/sample7/)
+[Посмотреть код примера полностью](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [Открыть демо в новом окне](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## Самостоятельные упражнения
 

@@ -40,7 +40,8 @@ new Promise((resolveOuter) => {
 
 Essa promise já está _resolvida_ no momento em que é criada (porque o `resolveOuter` é chamado de forma síncrona), mas é resolvido com outra promise e, portanto, não será _cumprida_ até 1 segundo depois, quando a promise interna for cumprida. Na prática, a "resolução" muitas vezes é feita nos bastidores e não observável, e apenas o seu cumprimento ou rejeição o são.
 
-> **Nota:** várias outras linguagens têm mecanismos para avaliação preguiçosa e adiamento de uma computação, que eles também chamam de "promises", por exemplo, Esquema. As promises em JavaScript representam processos que já estão acontecendo, que podem ser encadeados com funções de retorno de chamada. Se você deseja avaliar lentamente uma expressão, considere usar uma função sem argumentos, por exemplo. `f = () => expressão` para criar a expressão avaliada lentamente e `f()` para avaliar a expressão imediatamente.
+> [!NOTE]
+> Várias outras linguagens têm mecanismos para avaliação preguiçosa e adiamento de uma computação, que eles também chamam de "promises", por exemplo, Esquema. As promises em JavaScript representam processos que já estão acontecendo, que podem ser encadeados com funções de retorno de chamada. Se você deseja avaliar lentamente uma expressão, considere usar uma função sem argumentos, por exemplo. `f = () => expressão` para criar a expressão avaliada lentamente e `f()` para avaliar a expressão imediatamente.
 
 ### Promises em cadeia
 
@@ -89,7 +90,8 @@ minhaPromise
   });
 ```
 
-> **Nota:** para uma execução mais rápida, todas as ações síncronas devem ser feitas preferencialmente em um manipulador, caso contrário, seriam necessários vários tiques para executar todos os manipuladores em sequência.
+> [!NOTE]
+> Para uma execução mais rápida, todas as ações síncronas devem ser feitas preferencialmente em um manipulador, caso contrário, seriam necessários vários tiques para executar todos os manipuladores em sequência.
 
 A condição de término de uma promise determina o estado "estabelecido" da próxima promise na cadeia. Um estado "cumprido" indica uma conclusão bem-sucedida da promise, enquanto um estado "rejeitado" indica falta de sucesso. O valor de retorno de cada promise cumprida na cadeia é passado para o próximo `.then()`, enquanto o motivo da rejeição é passado para a próxima função de tratamento de rejeição na cadeia.
 
@@ -217,7 +219,8 @@ Se alterarmos isso para que o `<iframe>` no documento esteja ouvindo as mensagen
 
 No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o objeto de configurações incumbente for rastreado. Isso porque, sem rastrear o titular, podemos acabar usando o ambiente errado para enviar a mensagem.
 
-> **Nota:** atualmente, o rastreamento de realm incumbente é totalmente implementado no Firefox e tem implementações parciais no Chrome e no Safari.
+> [!NOTE]
+> Atualmente, o rastreamento de realm incumbente é totalmente implementado no Firefox e tem implementações parciais no Chrome e no Safari.
 
 ## Construtor
 
@@ -227,7 +230,6 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
 ## Métodos estáticos
 
 - {{JSxRef("Promise.all", "Promise.all(iterable)")}}
-
   - : Aguarde que todas as promises sejam cumpridas ou que alguma seja rejeitada.
 
     Se a promise retornada for cumprida, ela será cumprida com uma matriz de agregação dos valores das promises cumpridas, na mesma ordem definida no iterável de várias promises.
@@ -235,7 +237,6 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
     Se for rejeitado, será rejeitado com o motivo da primeira promise no iterável que foi rejeitada.
 
 - {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
-
   - : Aguarde até que todas as promises sejam resolvidas (cada uma pode cumprir ou rejeitar).
 
     Retorna uma Promise que cumpre depois que todas as promises fornecidas são cumpridas ou rejeitadas, com uma matriz de objetos que descrevem o resultado de cada promise.
@@ -243,7 +244,6 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
 - {{JSxRef("Promise.any", "Promise.any(iterable)")}}
   - : Pega um iterável de objetos Promise e, assim que uma das promises do iterável é cumprida, retorna uma única promise que cumpre com o valor dessa promise.
 - {{JSxRef("Promise.race", "Promise.race(iterable)")}}
-
   - : Aguarde até que alguma das promises seja cumprida ou rejeitada.
 
     Se a promise retornada for cumprida, ela será cumprida com o valor da primeira promise no iterável que foi cumprida.
@@ -253,7 +253,6 @@ No exemplo acima, o texto interno do `<iframe>` será atualizado somente se o ob
 - {{JSxRef("Promise.reject", "Promise.reject(reason)")}}
   - : Retorna um novo objeto `Promise` que é rejeitado com o motivo fornecido.
 - {{JSxRef("Promise.resolve", "Promise.resolve(value)")}}
-
   - : Retorna um novo objeto `Promise` que é resolvido com o valor fornecido. Se o valor for um thenable (ou seja, tem um método `then`), a promise retornada "seguirá" esse thenable, adotando seu estado eventual; caso contrário, a promise devolvida será cumprida com o valor.
 
     Geralmente, se você não sabe se um valor é uma promise ou não, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} e trabalhe com o valor de retorno como uma promise.

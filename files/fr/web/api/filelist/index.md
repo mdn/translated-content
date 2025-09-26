@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File API")}}
 
-On pourra obtenir un objet de type `FileList` grâce à la propriété `files` d'un objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) (qui représente un élément HTML [`<input>`](/fr/docs/Web/HTML/Element/input)) du DOM. Un objet `FileList` permet d'accéder à la liste des fichiers sélectionnés via un élément `<input type="file">`. Il est également utilisé pour manipuler une liste de fichiers déposé dans du contenu web en glisser/déposer. Voir [la page sur l'objet `DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails sur ce deuxième usage.
+On pourra obtenir un objet de type `FileList` grâce à la propriété `files` d'un objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) (qui représente un élément HTML [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)) du DOM. Un objet `FileList` permet d'accéder à la liste des fichiers sélectionnés via un élément `<input type="file">`. Il est également utilisé pour manipuler une liste de fichiers déposé dans du contenu web en glisser/déposer. Voir [la page sur l'objet `DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails sur ce deuxième usage.
 
 Tous les nœuds qui sont des éléments `<input>` possèdent un attribut `files` de type `FileList` qui permet d'accéder aux éléments de cette liste. Ainsi, avec le fragment de HTML qui suit&nbsp;:
 
@@ -21,7 +21,8 @@ On pourra utiliser la ligne de code suivante pour récupérer le premier fichier
 const file = document.getElementById("fileItem").files[0];
 ```
 
-> **Note :** Cette interface [se voulait une tentative de modélisation d'une liste non-modifiable](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) et continue uniquement d'être prise en charge pour ne pas casser le code qui l'utilise encore. Les API plus récentes utilisent des types qui se basent sur le type ECMAScript [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array), afin que les objets puissent être traités comme des tableaux tout en imposant une sémantique additionnelle correspondant à leur utilisation (par exemple, en marquant leurs éléments comme étant en lecture seule).
+> [!NOTE]
+> Cette interface [se voulait une tentative de modélisation d'une liste non-modifiable](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) et continue uniquement d'être prise en charge pour ne pas casser le code qui l'utilise encore. Les API plus récentes utilisent des types qui se basent sur le type ECMAScript [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array), afin que les objets puissent être traités comme des tableaux tout en imposant une sémantique additionnelle correspondant à leur utilisation (par exemple, en marquant leurs éléments comme étant en lecture seule).
 
 ## Propriétés des instances
 

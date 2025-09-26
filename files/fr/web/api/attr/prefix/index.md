@@ -7,7 +7,8 @@ slug: Web/API/Attr/prefix
 
 La propriété **`Attr.prefix`** en lecture seule renvoie le préfixe de l'espace de noms de l'attribut spécifié ou `null` si aucun préfixe n'est spécifié.
 
-> **Note :** Avant DOM4, cette API a été définie dans l'interface {{domxref ("Node")}}.
+> [!NOTE]
+> Avant DOM4, cette API a été définie dans l'interface {{domxref ("Node")}}.
 
 ## Syntaxe
 

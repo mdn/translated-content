@@ -3,8 +3,6 @@ title: Firefox 66 para desarrolladores
 slug: Mozilla/Firefox/Releases/66
 ---
 
-{{FirefoxSidebar}}
-
 Este artículo proporciona información sobre los cambios en Firefox 66 que afectarán a los desarrolladores. Firefox 66 fue lanzado el 19 de marzo de 2019.
 
 ## Cambios para desarrolladores web
@@ -27,8 +25,7 @@ Este artículo proporciona información sobre los cambios en Firefox 66 que afec
 
 - [El Anclaje de desplazamiento](https://drafts.csswg.org/css-scroll-anchoring/) se ha implementado en Firefox Desktop (pero todavía no en dispositivos móviles), que incluye la {{cssxref("overflow-anchor")}} propiedad ([Error 1305957 en Firefox](https://bugzil.la/1305957)).
 - Hemos implementado el modificador de [selector de atributo](/es/docs/Web/CSS/Attribute_selectors) que distingue entre mayúsculas y minúsculas, `s` ([Error 1512386 en Firefox](https://bugzil.la/1512386)).
-- Varias [propiedades logicas](/es/docs/Web/CSS/CSS_Logical_Properties) abreviadas han aterrizado, junto con las propiedades del radio del borde relativo al flujo:
-
+- Varias [propiedades logicas](/es/docs/Web/CSS/CSS_logical_properties_and_values) abreviadas han aterrizado, junto con las propiedades del radio del borde relativo al flujo:
   - {{cssxref("padding-block")}} y {{cssxref("padding-inline")}} ([Error 1519847 en Firefox](https://bugzil.la/1519847)).
   - {{cssxref("margin-block")}} y {{cssxref("margin-inline")}} ([Error 1519944 en Firefox](https://bugzil.la/1519944)).
   - {{cssxref("inset")}}, {{cssxref("inset-block")}}, y {{cssxref("inset-inline")}} ([Error 1520229 en Firefox](https://bugzil.la/1520229)).
@@ -40,7 +37,6 @@ Este artículo proporciona información sobre los cambios en Firefox 66 que afec
 - {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}} ahora se pueden animar, según las reglas establecidas en sus especificaciones ([Error 1348519 en Firefox](https://bugzil.la/1348519)).
 - Ahora soportamos {{cssxref("calc")}} con porcentajes para celdas de tabla y anchos de columna ([Error 957915 en Firefox](https://bugzil.la/957915)).
 - Las palabras clave `min-content` y `max-content` ahora están disponibles sin prefijo ([Error 1322780 en Firefox](https://bugzil.la/1322780)). Estos se pueden establecer en:
-
   - {{cssxref("width")}}
   - {{cssxref("height")}}
   - {{cssxref("flex-basis")}}
@@ -61,7 +57,7 @@ _No hay adicionales._
 
 #### Removido
 
-- Eliminamos el soporte para [`xml:base`](/es/docs/XML_introduction/xml:base) atributo ([Error 903372 en Firefox](https://bugzil.la/903372)).
+- Eliminamos el soporte para [`xml:base`](/es/docs/Web/API/Node/baseURI) atributo ([Error 903372 en Firefox](https://bugzil.la/903372)).
 
 ### JavaScript
 
@@ -82,7 +78,7 @@ _Sin cambios._
 
 - La {{domxref("InputEvent.inputType")}} propiedad ha sido implementada ([Error 1447239 en Firefox](https://bugzil.la/1447239)).
 - Las propiedades {{domxref("Window.event")}} y {{domxref("Event.returnValue")}} ropiedades, que originalmente eran propiedad de IE, y que luego se admitían en otros navegadores por motivos de compatibilidad, se han vuelto a introducir en Firefox 66, después de haber sido agregadas primero en las versiones 63 y 64 respectivamente, pero luego se eliminaron nuevamente debido a problemas de compatibilidad.
-- A partir de 66, cuando la {{domxref("KeyboardEvent.keyCode")}} propiedad del [`keypress`](/es/docs/Web/Reference/Events/keypress) evento del objeto es 0, el valor será el mismo que {{domxref("KeyboardEvent.charCode")}}. Por el contrario, cuando, `charCode` es 0, será igual que `keyCode`. Este comportamiento de duplicación coincide con otros navegadores y se espera que solucione la mayoría de los problemas de compatibilidad asociados, sin embargo, la detección de agentes de usuario puede causar problemas adicionales en algunas bibliotecas de JavaScript. Tenga en cuenta que en términos de especificaciones, hemos cambiado desde el _modelo de división_ del _modelo fusionado_ (ver [Como determinar keyCode para eventos de pulsaciones de tecla](https://w3c.github.io/uievents/#determine-keypress-keyCode) en la especificación de interfaz de usuario de eventos).
+- A partir de 66, cuando la {{domxref("KeyboardEvent.keyCode")}} propiedad del [`keypress`](/es/docs/Web/API/Element/keypress_event) evento del objeto es 0, el valor será el mismo que {{domxref("KeyboardEvent.charCode")}}. Por el contrario, cuando, `charCode` es 0, será igual que `keyCode`. Este comportamiento de duplicación coincide con otros navegadores y se espera que solucione la mayoría de los problemas de compatibilidad asociados, sin embargo, la detección de agentes de usuario puede causar problemas adicionales en algunas bibliotecas de JavaScript. Tenga en cuenta que en términos de especificaciones, hemos cambiado desde el _modelo de división_ del _modelo fusionado_ (ver [Como determinar keyCode para eventos de pulsaciones de tecla](https://w3c.github.io/uievents/#determine-keypress-keyCode) en la especificación de interfaz de usuario de eventos).
 
 #### Media, Audio Web, y WebRTC
 

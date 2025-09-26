@@ -7,9 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 
 El metodo **`toJSON()`** retorna una representacion de cadena del objeto {{jsxref("Date")}}
 
-{{EmbedInteractiveExample("pages/js/date-tojson.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toJSON()")}}
 
-La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, por favor clone <https://github.com/mdn/interactive-examples> y envienos un pull request.
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 UTC");
+
+const jsonDate = event.toJSON();
+
+console.log(jsonDate);
+// Expected output: "1975-08-19T23:15:30.000Z"
+
+console.log(new Date(jsonDate).toUTCString());
+// Expected output: "Tue, 19 Aug 1975 23:15:30 GMT"
+```
 
 ## Syntaxis
 

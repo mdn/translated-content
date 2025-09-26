@@ -18,8 +18,6 @@ CSS Ruby Layout - это модуль [CSS](/ru/docs/Web/CSS), который п
 
 _None._
 
-## Specifications
+## Спецификации
 
-| Specification             | Status                 | Comment            |
-| ------------------------- | ---------------------- | ------------------ |
-| {{SpecName('CSS3 Ruby')}} | {{Spec2('CSS3 Ruby')}} | Initial definition |
+{{Specifications}}

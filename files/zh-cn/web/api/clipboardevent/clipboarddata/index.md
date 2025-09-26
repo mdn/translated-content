@@ -12,12 +12,6 @@ slug: Web/API/ClipboardEvent/clipboardData
 
 参见 [`cut`](/zh-CN/docs/Web/API/Element/cut_event) 、[`copy`](/zh-CN/docs/Web/API/Element/copy_event) 和 [`paste`](/zh-CN/docs/Web/API/Element/paste_event) 事件的文档以获取更多信息。
 
-## 语法
-
-```
-data = ClipboardEvent.clipboardData
-```
-
 ## 规范
 
 {{Specifications}}
@@ -26,7 +20,7 @@ data = ClipboardEvent.clipboardData
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 与复制相关的事件：[`copy`](/zh-CN/docs/Web/API/Element/copy_event), [`cut`](/zh-CN/docs/Web/API/Element/cut_event), [`paste`](/zh-CN/docs/Web/API/Element/paste_event)
 - 本对象所属的{{domxref("ClipboardEvent")}}接口。

@@ -38,6 +38,6 @@ _O construtor `AnimationEvent()`_ _também herda argumentos do {{domxref("Event.
 
 ## Veja também
 
-- [Usando animações CSS](/pt-BR/docs/CSS/Using_CSS_animations).
+- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 - Tópicos relacionados a animação CSS, propriedades e regras: [`animation`](/pt-BR/docs/Web/CSS/animation), [`animation-delay`](/pt-BR/docs/Web/CSS/animation-delay), [`animation-direction`](/pt-BR/docs/Web/CSS/animation-direction), [`animation-duration`](/pt-BR/docs/Web/CSS/animation-duration), [`animation-fill-mode`](/pt-BR/docs/Web/CSS/animation-fill-mode), [`animation-iteration-count`](/pt-BR/docs/Web/CSS/animation-iteration-count), [`animation-name`](/pt-BR/docs/Web/CSS/animation-name), [`animation-play-state`](/pt-BR/docs/Web/CSS/animation-play-state), [`animation-timing-function`](/pt-BR/docs/Web/CSS/animation-timing-function), [`@keyframes`](/pt-BR/docs/Web/CSS/@keyframes)
 - The {{domxref("AnimationEvent")}} interface it belongs to.

@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 La propriété globale **`globalThis`** renvoie l'objet global de plus haut niveau.
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis")}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 ## Syntaxe
 
@@ -34,7 +43,7 @@ D'autres noms furent proposés pour cette fonctionnalité (tels que `self` et `g
 
 ## Exemples
 
-Avant l'introduction de `globalThis`, la seule façon qui permettait d'obtenir l'objet global de l'environnement de façon homogène était `Function('return this')()`. Toutefois, cela enfreignait certaines règles [CSP](/fr/docs/Web/HTTP/CSP) avec certains réglages et [es6-shim](https://github.com/paulmillr/es6-shim), par exemple, devait utiliser une logique conditionnelle :
+Avant l'introduction de `globalThis`, la seule façon qui permettait d'obtenir l'objet global de l'environnement de façon homogène était `Function('return this')()`. Toutefois, cela enfreignait certaines règles [CSP](/fr/docs/Web/HTTP/Guides/CSP) avec certains réglages et [es6-shim](https://github.com/paulmillr/es6-shim), par exemple, devait utiliser une logique conditionnelle :
 
 ```js
 var getGlobal = function () {

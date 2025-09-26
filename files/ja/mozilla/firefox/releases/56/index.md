@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされました。このページでは、開発者に影響する Firefox 56 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -19,11 +17,11 @@ Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされまし�
 ### HTML
 
 - ラベル付け可能なフォームコントロールに `labels` プロパティを実装しました。例えば {{domxref("HTMLInputElement.labels")}} です ([Firefox バグ 556743](https://bugzil.la/556743))。
-- `<link rel="preload">` を実装しました。詳しくは [リンク種別: preload](/ja/docs/Web/HTML/Link_types/preload) をご覧ください ([Firefox バグ 1222633](https://bugzil.la/1222633))。現在は Firefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
+- `<link rel="preload">` を実装しました。詳しくは [リンク種別: preload](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) をご覧ください ([Firefox バグ 1222633](https://bugzil.la/1222633))。現在は Firefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
 
 ### CSS
 
-- Mozilla の独自仕様である {{cssxref("&lt;color&gt;")}} 値 `-moz-win-accentcolor` と `-moz-win-accentcolortext` ([Firefox バグ 1344910](https://bugzil.la/1344910))、および独自仕様のメディアクエリーである [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) を実装しました ([Firefox バグ 1379938](https://bugzil.la/1379938))。
+- Mozilla の独自仕様である {{cssxref("&lt;color&gt;")}} 値 `-moz-win-accentcolor` と `-moz-win-accentcolortext` ([Firefox バグ 1344910](https://bugzil.la/1344910))、および独自仕様のメディアクエリーである [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) を実装しました ([Firefox バグ 1379938](https://bugzil.la/1379938))。
 
 ### SVG
 
@@ -45,7 +43,7 @@ _変更なし。_
 - {{domxref("Gamepad.displayId")}} プロパティを実装しました ([Firefox バグ 1375816](https://bugzil.la/1375816))。
 - {{domxref("PerformanceTiming.secureConnectionStart")}} プロパティを実装しました ([Firefox バグ 772589](https://bugzil.la/772589))。
 - Firefox は `iso-2022-jp` の {{domxref("TextDecoder.TextDecoder","TextDecoder()")}} がインスタンス化されたときに黙って `iso-2022-jp-2` シーケンスを受け入れていました。しかし他のブラウザーはこれに対応しておらず、またこれを使用するページもないようですので、API を単純化するためにこの動作を削除しました ([Firefox バグ 715833](https://bugzil.la/715833))。
-- {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} の 4ms 制限の動作を、[Timeouts throttled to >=4ms](/ja/docs/Web/API/setTimeout#timeouts_throttled_to_%3e4ms) で説明しているとおり、他のブラウザーに合わせるよう更新しました ([Firefox バグ 1378586](https://bugzil.la/1378586))。
+- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("Window.setInterval", "setInterval()")}} の 4ms 制限の動作を、[Timeouts throttled to >=4ms](/ja/docs/Web/API/Window/setTimeout#timeouts_throttled_to_%3e4ms) で説明しているとおり、他のブラウザーに合わせるよう更新しました ([Firefox バグ 1378586](https://bugzil.la/1378586))。
 - [ページ可視性 API](/ja/docs/Web/API/Page_Visibility_API) の {{domxref("Document.onvisibilitychange")}} ハンドラーを追加しました ([Firefox バグ 1333912](https://bugzil.la/1333912))。
 - {{domxref("Window.showModalDialog()")}} メソッドを削除しました ([Firefox バグ 981796](https://bugzil.la/981796))。
 - {{domxref("HTMLFormElement.action")}}、{{domxref("HTMLInputElement.formAction")}}、{{domxref("HTMLButtonElement.formAction")}} プロパティの実装を、仕様書に従って正しい形式のサブミッション URL を返すように変更しました ([Firefox バグ 1366361](https://bugzil.la/1366361))。
@@ -117,8 +115,8 @@ _変更なし。_
 - [privacy.services](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/services) が passwordSavingEnabled プロパティを持つようになりました。
 - [privacy.websites.referrersEnabled](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites) をサポートしました。
 - [protocol_handlers](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) で "gopher" をサポートしました。
-- proxy.registerProxyScript() を [proxy.register()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) に改名しました。
-- [proxy.unregister()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) をサポートしました。
+- proxy.registerProxyScript() を [proxy.register()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) に改名しました。
+- [proxy.unregister()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) をサポートしました。
 - [runtime.onInstalled](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) で `temporary` フラグをサポートしました。
 - [tabs.print()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/print)、[tabs.PageSettings](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings)、[tabs.printPreview()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/printPreview)、[tabs.saveAsPDF()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) をサポートしました。
 - [tabs.Tab.lastAccessed](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) をサポートしました。

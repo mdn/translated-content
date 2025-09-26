@@ -3,8 +3,6 @@ title: 属性选择器
 slug: Web/CSS/Attribute_selectors
 ---
 
-{{CSSRef}}
-
 CSS **属性选择器**匹配那些具有特定属性或属性值的元素。
 
 ```css
@@ -152,9 +150,9 @@ div[data-lang="zh-TW"] {
 ```html
 <div lang="en-us en-gb en-au en-nz">Hello World!</div>
 <div lang="pt">Olá Mundo!</div>
-<div lang="zh-CN">世界您好！</div>
-<div lang="zh-TW">世界您好！</div>
-<div data-lang="zh-TW">世界您好！</div>
+<div lang="zh-CN">世界你好！</div>
+<div lang="zh-TW">世界你好！</div>
+<div data-lang="zh-TW">世界你好！</div>
 ```
 
 #### 结果
@@ -163,7 +161,7 @@ div[data-lang="zh-TW"] {
 
 ### HTML 有序列表
 
-HTML 规范要求 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性被不分大小写地匹配，因为它主要用于 {{HTMLElement("input")}} 元素中。请注意，如果用户代理不支持这些修饰符，那么选择器将无法匹配。
+HTML 规范要求 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性被不分大小写地匹配，因为它主要用于 {{HTMLElement("input")}} 元素中。请注意，如果用户代理不支持这些修饰符，那么选择器将无法匹配。
 
 #### CSS
 

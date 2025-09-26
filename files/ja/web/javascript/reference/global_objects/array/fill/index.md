@@ -1,19 +1,33 @@
 ---
 title: Array.prototype.fill()
+short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`fill()`** は {{jsxref("Array")}} インスタンスのメソッドで、インデックスの範囲内にある配列のすべての要素を一定の値に変更します。これは変更した配列を返します。
 
-**`fill()`** メソッドは、開始位置（既定値は `0`）から終了位置（既定値は `array.length`）までのすべての要素を、静的な値に変更した配列を返します。
+{{InteractiveExample("JavaScript デモ: Array.prototype.fill()")}}
 
-{{EmbedInteractiveExample("pages/js/array-fill.html")}}
+```js interactive-example
+const array = [1, 2, 3, 4];
+
+// 0 で位置 2 から位置 4 までを埋める
+console.log(array.fill(0, 2, 4));
+// 予想される結果: Array [1, 2, 0, 0]
+
+// Fill with 5 from position 1
+console.log(array.fill(5, 1));
+// 予想される結果: Array [1, 5, 5, 5]
+
+console.log(array.fill(6));
+// 予想される結果: Array [6, 6, 6, 6]
+```
 
 ## 構文
 
-```js
+```js-nolint
 fill(value)
 fill(value, start)
 fill(value, start, end)
@@ -22,11 +36,18 @@ fill(value, start, end)
 ### 引数
 
 - `value`
-  - : 配列に設定する値です。
+  - : 配列を埋める値。もし `value` がオブジェクトであれば、配列のそれぞれの要素はそのオブジェクトを参照します。
 - `start` {{optional_inline}}
-  - : 開始する位置です。既定値は `0` です。
+  - : 埋め始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= start < 0` の場合、 `start + array.length` が使用されます。
+    - `start < -array.length` または `start` が省略された場合は `0` が使用されます。
+    - `start >= array.length` の場合、埋められるインデックスはありません。
 - `end` {{optional_inline}}
-  - : 終了する位置です。既定値は `arr.length` です。
+  - : 埋め終える位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。 `fill()` は `end` を含まず、その直前までを埋めます。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `end < 0` の場合、 `end + array.length` が使用されます。
+    - `end < -array.length` の場合は `0` が使用されます。
+    - `end >= array.length` または `end` が省略されているか `undefined` の場合、`array.length` が使用され、末尾までのすべてのインデックスが埋められます。
+    - `end` が `start` が示す位置よりも前またはその位置であることを意味する場合、何も埋められません。
 
 ### 返値
 
@@ -34,13 +55,14 @@ fill(value, start, end)
 
 ## 解説
 
-- `start` が負の場合 `array.length + start` として扱われます。
-- `end` が負の場合 `array.length + end` として扱われます。
-- `fill` は意図的に一般化されています。 `this` が `Array` オブジェクトである必要はありません。
-- `fill` は変更を行うメソッドです。配列そのものを変更して返します。コピーを返すのではありません。
-- 最初の引数がオブジェクトの場合、配列の各スロットはそのオブジェクトを参照します。
+`fill()` メソッドは[変更メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。これは `this` の長さは変更しませんが、 `this` のコンテンツは変更します。
 
-> **メモ:** `Array.prototype.fill()` を空の配列に対して使用すると、配列に変更するものがないので何も変更されません。
+`fill()` メソッドは[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットを、 `value` で埋めます。
+
+`fill()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` の値に `length` プロパティと整数のキーを持ったプロパティがあることだけを求めます。文字列も配列風のものですが、文字列は不変なので、このメソッドを適用するのは適していません。
+
+> [!NOTE]
+> `Array.prototype.fill()` を空の配列に対して使用すると、配列に変更するものがないので何も変更されません。
 > 配列を宣言する際に `Array.prototype.fill()` を使用する場合は、スロットを配列に割り当てるようにしてください。
 > [例はこちら](#fill_を使用して空の配列を生成)。
 
@@ -49,20 +71,19 @@ fill(value, start, end)
 ### fill の使用
 
 ```js
-console.log([1, 2, 3].fill(4));                // [4, 4, 4]
-console.log([1, 2, 3].fill(4, 1));             // [1, 4, 4]
-console.log([1, 2, 3].fill(4, 1, 2));          // [1, 4, 3]
-console.log([1, 2, 3].fill(4, 1, 1));          // [1, 2, 3]
-console.log([1, 2, 3].fill(4, 3, 3));          // [1, 2, 3]
-console.log([1, 2, 3].fill(4, -3, -2));        // [4, 2, 3]
-console.log([1, 2, 3].fill(4, NaN, NaN));      // [1, 2, 3]
-console.log([1, 2, 3].fill(4, 3, 5));          // [1, 2, 3]
-console.log(Array(3).fill(4));                 // [4, 4, 4]
-console.log([].fill.call({ length: 3 }, 4));   // {0: 4, 1: 4, 2: 4, length: 3}
+console.log([1, 2, 3].fill(4)); // [4, 4, 4]
+console.log([1, 2, 3].fill(4, 1)); // [1, 4, 4]
+console.log([1, 2, 3].fill(4, 1, 2)); // [1, 4, 3]
+console.log([1, 2, 3].fill(4, 1, 1)); // [1, 2, 3]
+console.log([1, 2, 3].fill(4, 3, 3)); // [1, 2, 3]
+console.log([1, 2, 3].fill(4, -3, -2)); // [4, 2, 3]
+console.log([1, 2, 3].fill(4, NaN, NaN)); // [1, 2, 3]
+console.log([1, 2, 3].fill(4, 3, 5)); // [1, 2, 3]
+console.log(Array(3).fill(4)); // [4, 4, 4]
 
 // 配列の各スロットから参照される、単一のオブジェクト。
 const arr = Array(3).fill({}); // [{}, {}, {}]
-arr[0].hi = "hi";              // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
+arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 ```
 
 ### fill() を使用してすべて 1 の行列を作成
@@ -89,6 +110,18 @@ console.log(arr[2][0]); // 1
 const tempGirls = Array(5).fill("girl", 0);
 ```
 
+配列は最初はインデックスが割り当てられていない[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)であることに注意してください。 `fill()` でこの配列を埋めることができます。
+
+### 配列でないオブジェクトに対する fill() の呼び出し
+
+`fill()` メソッドは `this` の `length` プロパティを読み取り、 `start` から `end` までの各整数キーのプロパティの値を設定します。
+
+```js
+const arrayLike = { length: 2 };
+console.log(Array.prototype.fill.call(arrayLike, 1));
+// { '0': 1, '1': 1, length: 2 }
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -100,5 +133,6 @@ const tempGirls = Array(5).fill("girl", 0);
 ## 関連情報
 
 - [`Array.prototype.fill` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

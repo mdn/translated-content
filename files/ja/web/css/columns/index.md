@@ -1,13 +1,44 @@
 ---
 title: columns
 slug: Web/CSS/columns
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`columns`** は [CSS](/ja/docs/Web/CSS) 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/columns.html")}}
+{{InteractiveExample("CSS デモ: columns")}}
+
+```css interactive-example-choice
+columns: 2;
+```
+
+```css interactive-example-choice
+columns: 6rem auto;
+```
+
+```css interactive-example-choice
+columns: 12em;
+```
+
+```css interactive-example-choice
+columns: 3;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ロンドン。ミカエル学期の終わり、リンカーンズ・イン・ホールに大法官が座っています。容赦のない 11 月の天候。街は、まるで地球から水が引き始めたばかりのように泥だらけで、ホルボーン・ヒルを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 21rem;
+  text-align: left;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -35,6 +66,7 @@ columns: auto auto;
 columns: inherit;
 columns: initial;
 columns: revert;
+columns: revert-layer;
 columns: unset;
 ```
 
@@ -61,17 +93,15 @@ columns: unset;
 
 #### HTML
 
-```html
+```html-nolint live-sample___setting_three_equal_columns
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `columns` property. The text
-  is equally distributed over the columns.
+  これは、 CSS の `columns` プロパティを使用して 3 つの列に分割されたテキストの束です。テキストは各カラムに均等に配置されている。
 </p>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_three_equal_columns
 .content-box {
   columns: 3 auto;
 }
@@ -93,5 +123,5 @@ columns: unset;
 
 - {{cssxref("widows")}}
 - {{cssxref("orphans")}}
-- [ページ化メディア](/ja/docs/Web/CSS/Paged_Media)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [ページ化メディア](/ja/docs/Web/CSS/CSS_paged_media)
+- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)

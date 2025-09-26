@@ -5,9 +5,59 @@ slug: Web/CSS/margin-bottom
 
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/CSS) **`margin-bottom`** устанавливает внешний отступ внизу элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
+Свойство [CSS](/ru/docs/Web/CSS) **`margin-bottom`** устанавливает внешний отступ внизу элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
 
-{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
+{{InteractiveExample("CSS Demo: margin-bottom")}}
+
+```css interactive-example-choice
+margin-bottom: 1em;
+```
+
+```css interactive-example-choice
+margin-bottom: 10%;
+```
+
+```css interactive-example-choice
+margin-bottom: 10px;
+```
+
+```css interactive-example-choice
+margin-bottom: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ![Влияние CSS-свойства margin-bottom на блок элемента](margin-bottomru.png)
 
@@ -16,13 +66,13 @@ slug: Web/CSS/margin-bottom
 ## Синтаксис
 
 ```css
-/* числовые значения */
+/* Ключевые слова */
+margin-bottom: auto;
+
+/* Числовые значения */
 margin-bottom: 10px; /* Абсолютная длина */
 margin-bottom: 1em; /* относительно размера текста */
 margin-bottom: 5%; /* относительно длины родительского блока */
-
-/* Значения-ключевые слова */
-margin-bottom: auto;
 
 /* Глобальные значения */
 margin-bottom: inherit;
@@ -99,6 +149,6 @@ div {
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 
 La méthode **`set()`** permet d'enregistrer plusieurs valeurs dans le tableau typé à partir d'un tableau donné.
 
-{{EmbedInteractiveExample("pages/js/typedarray-set.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.set()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
+
+// Copy the values into the array starting at index 3
+uint8.set([1, 2, 3], 3);
+
+console.log(uint8);
+// Expected output: Uint8Array [0, 0, 0, 1, 2, 3, 0, 0]
+```
 
 ## Syntaxe
 
@@ -55,6 +67,6 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

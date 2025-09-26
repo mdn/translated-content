@@ -20,7 +20,7 @@ slug: Web/API/WakeLock
 
 ```js
 try {
-  const wakeLock = await navigator.wakeLock.request('screen');
+  const wakeLock = await navigator.wakeLock.request("screen");
 } catch (err) {
   // 起動ロックの要求に失敗 - 通常は、バッテリー低下などシステムに起因する。
   console.log(`${err.name}, ${err.message}`);

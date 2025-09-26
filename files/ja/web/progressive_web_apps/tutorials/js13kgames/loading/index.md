@@ -1,17 +1,21 @@
 ---
-title: プログレッシブ読み込み
+title: プログレッシブな読み込み
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
+l10n:
+  sourceCommit: 31ff21cf5f083a3258fc04267d54b1fb72224ff6
 ---
 
-{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
+{{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-前回の記事では、[js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) の例をプログレッシブウェブアプリケーションにするのに役立つ API について説明しました — [サービスワーカー](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)、[ウェブマニフェスト](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)、[通知、およびプッシュ](/ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)です。 この記事では、リソースを徐々に読み込せて、アプリのパフォーマンスをさらに向上させます。
+{{PWASidebar}}
+
+前回の記事では、[js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) の例をプログレッシブウェブアプリケーションにするのに役立つ API について説明しました。[サービスワーカー](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)、[ウェブマニフェスト](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs)、[通知、およびプッシュ](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push)です。この記事ではさらに踏み込んで、リソースを徐々に読み込むことでアプリのパフォーマンスをさらに向上させる方法をご紹介します。
 
 ## First meaningful paint — 最初の意味のあるペイント
 
 できるだけ早く意味のあるものをユーザーに提供することが重要です — ページが読み込まれるのを待つ時間が長いほど、すべてが完了するのを待つ前にユーザーが離れる可能性が大きくなります。 少なくとも見たいページの基本的なビューだけでなく、最終的により多くのコンテンツが読み込まれる場所にプレースホルダーを表示することもできるはずです。
 
-これはプログレッシブ読み込み (progressive loading) によっても達成できます — [遅延読み込み](https://ja.wikipedia.org/wiki/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF) (Lazy loading) としても知られています。 これは、できるだけ多くのリソース (HTML、CSS、JavaScript) の読み込みを遅らせること、そして最初のエクスペリエンスに本当に必要なものだけをすぐに読み込むことです。
+これはプログレッシブな読み込み (progressive loading) によっても達成できます — [遅延読み込み](https://ja.wikipedia.org/wiki/%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF) (Lazy loading) としても知られています。 これは、できるだけ多くのリソース (HTML、CSS、JavaScript) の読み込みを遅らせること、そして最初の経験に本当に必要なものだけをすぐに読み込むことです。
 
 ## バンドリングと分割
 
@@ -29,7 +33,22 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 <script src="app.js" defer></script>
 ```
 
-それらは文書自体が解析された*後*にダウンロードされて実行されるので、それは HTML 構造のレンダリングをブロックしません。 CSS ファイルを分割して次のようにメディア種別を追加することもできます。
+これらは文書自体が解釈できるようになった後にダウンロードされ実行されるため、 HTML 構造のレンダリングを妨げることはありません。
+
+別な方法として、必要がある場合のみ、[動的インポート](/ja/docs/Web/JavaScript/Reference/Operators/import)を使用して JavaScript モジュールを読み込むという方法もあります。
+
+例えば、ウェブサイトに検索ボタンが存在する場合、ユーザーが検索ボタンをクリックした後に、検索機能の JavaScript が読み込まれたとします。
+
+```js
+document.getElementById("open-search").addEventListener("click", async () => {
+  const searchModule = await import("/modules/search.js");
+  searchModule.loadAutoComplete();
+});
+```
+
+ユーザーがボタンをクリックすると、非同期クリックハンドラーが呼び出されます。関数は、モジュールが読み込まれるまで待ち、そのモジュールからエクスポートされた `loadAutoComplete()` 関数を呼び出します。そのため、 `search.js` モジュールは、操作が行われたときにのみダウンロード、構文解析、実行されます。
+
+CSS ファイルを分割し、メディア型を追加することもできます。
 
 ```html
 <link rel="stylesheet" href="style.css" />
@@ -131,7 +150,7 @@ if ("IntersectionObserver" in window) {
 }
 ```
 
-{{domxref("IntersectionObserver")}} オブジェクトがサポートされている場合、アプリはその新しいインスタンスを作成します。 パラメータとして渡される関数は、1 つ以上の `items` が `observer` と交差している（つまり、ビューポート内に表示されている）場合を処理します。 それぞれの場合を繰り返してそれに応じて反応することができます — 画像が見えるときは、正しい画像を読み込み、監視する必要がなくなるので監視を中止します。
+{{domxref("IntersectionObserver")}} オブジェクトがサポートされている場合、アプリはその新しいインスタンスを作成します。 パラメーターとして渡される関数は、1 つ以上の `items` が `observer` と交差している（つまり、ビューポート内に表示されている）場合を処理します。 それぞれの場合を繰り返してそれに応じて反応することができます — 画像が見えるときは、正しい画像を読み込み、監視する必要がなくなるので監視を中止します。
 
 プログレッシブエンハンスメントについての前述の説明をもう一度繰り返しましょう。 このコードは、Intersection Observer がサポートされているかどうかにかかわらずアプリが機能するように作成されています。 されていない場合は、先ほど説明したより基本的な方法を使用して画像を読み込みます。
 
@@ -151,10 +170,8 @@ if ("IntersectionObserver" in window) {
 
 ## 最終的な考え
 
-このチュートリアルのシリーズではこれですべてです — [js13kPWA サンプルアプリのソースコード](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)を調べて、[紹介](/ja/docs/Web/Progressive_web_apps/Introduction)、[PWA の構造](/ja/docs/Web/Progressive_web_apps/App_structure)、[サービスワーカーでのオフライン可用性](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)、[インストール可能な PWA](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)、そして最後に[通知](/ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)など、プログレッシブウェブアプリ機能の使用方法について学びました。 また、[サービスワーカークックブック](https://github.com/mdn/serviceworker-cookbook/)（英語）の助けを借りてプッシュを説明しました。 そしてこの記事では、[Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API) を利用した興味深い例を含めて、プログレッシブ読み込みの概念を調べました。
+このチュートリアルのシリーズではこれですべてです — [js13kPWA サンプルアプリのソースコード](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)を調べて、[紹介](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames)、[PWA の構造](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure)、[サービスワーカーでのオフライン可用性](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)、[インストール可能な PWA](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs)、そして最後に[通知](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push)など、プログレッシブウェブアプリ機能の使用方法について学びました。 また、[サービスワーカークックブック](https://github.com/mdn/serviceworker-cookbook/)（英語）の助けを借りてプッシュを説明しました。 そしてこの記事では、[Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API) を利用した興味深い例を含めて、プログレッシブな読み込みの概念を調べました。
 
 コードを試したり、PWA 機能を使用して既存のアプリを拡張したり、まったく新しいものを自分で作成したりしてください。 PWA は通常のウェブアプリよりも大きな利点をもたらします。
 
-{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

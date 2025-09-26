@@ -1,15 +1,16 @@
 ---
-title: Cache.put()
+title: "Cache: put() メソッド"
+short-title: put()
 slug: Web/API/Cache/put
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("Service Workers API")}}
 
 **`put()`** は {{domxref("Cache")}} インターフェイスのメソッドで、キーと値のペアを現在の {{domxref("Cache")}} オブジェクトに追加することができます。
 
-多くの場合、やりたいことは、ただ 1 つ以上のリクエストを {{domxref("fetch()")}} して、その結果を直接キャッシュに追加するだけです。そのような場合は、{{domxref("Cache.add","Cache.add()")}} や {{domxref("Cache.addAll","Cache.addAll()")}} を使用した方がよいでしょう。 これらはこうした操作を 1 つ以上行うための一括操作関数であるためです。
+多くの場合、やりたいことは、ただ 1 つ以上のリクエストを {{domxref("Window/fetch", "fetch()")}} して、その結果を直接キャッシュに追加するだけです。そのような場合は、{{domxref("Cache.add","Cache.add()")}} や {{domxref("Cache.addAll","Cache.addAll()")}} を使用した方がよいでしょう。 これらはこうした操作を 1 つ以上行うための一括操作関数であるためです。
 
 ```js
 fetch(url).then((response) => {
@@ -20,9 +21,11 @@ fetch(url).then((response) => {
 });
 ```
 
-> **メモ:** `put()` は、リクエストが以前にキャッシュに保存されたものと一致すると、キーと値のペアを上書きします。
+> [!NOTE]
+> `put()` は、リクエストが以前にキャッシュに保存されたものと一致すると、キーと値のペアを上書きします。
 
-> **メモ:** {{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は、200 台にない `Response.status` 値を持つレスポンスをキャッシュしませんが、 {{domxref("Cache.put")}} では、リクエストとレスポンスのペアを格納できます。結果的に、{{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は不透明なレスポンスを格納するために使用できませんが、 {{domxref("Cache.put")}} では可能です。
+> [!NOTE]
+> {{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は、200 台にない `Response.status` 値を持つレスポンスをキャッシュしませんが、 {{domxref("Cache.put")}} では、リクエストとレスポンスのペアを格納できます。結果的に、{{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は不透明なレスポンスを格納するために使用できませんが、 {{domxref("Cache.put")}} では可能です。
 
 ## 構文
 

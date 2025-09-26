@@ -3,8 +3,6 @@ title: font-variant
 slug: Web/CSS/font-variant
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad `font-variant` selecciona entre los aspectos `normal` y `small-caps` para la {{ Cssxref("font-family", "familia de fuente") }} determinado.
@@ -36,5 +34,5 @@ p { font-variant: small-caps}
 
 ## Especificaciones
 
-- [Fuentes en CSS 2 (en)](http://www.w3.org/TR/CSS2/fonts.html#propdef-font-variant)
-- [Fuentes en CSS 3 (en)](http://www.w3.org/TR/css3-fonts/#font-variant)
+- [Fuentes en CSS 2 (en)](https://www.w3.org/TR/CSS2/fonts.html#propdef-font-variant)
+- [Fuentes en CSS 3 (en)](https://www.w3.org/TR/css3-fonts/#font-variant)

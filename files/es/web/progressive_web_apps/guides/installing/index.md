@@ -3,6 +3,8 @@ title: Instalar y desinstalar aplicaciones web
 slug: Web/Progressive_web_apps/Guides/Installing
 ---
 
+{{PWASidebar}}
+
 La instalación de aplicaciones web es una función disponible en los navegadores modernos que permite a los usuarios elegir "instalar" fácil y cómodamente una aplicación web en su dispositivo para que puedan acceder a ella de la misma manera que lo harían con cualquier otra aplicación. Dependiendo del dispositivo y las características del sistema operativo y el navegador, esto puede resultar en lo que esencialmente es una aplicación con todas las funciones (por ejemplo, usando [WebAPK](https://developers.google.com/web/fundamentals/integration/webapks) en Android) o como un acceso directo agregado a la pantalla de tu dispositivo. Esta guía explica cómo se realiza la instalación, qué significa y qué debes hacer como desarrollador para que los usuarios la aprovechen.
 
 ## ¿Por qué la instalación?
@@ -47,7 +49,8 @@ _Si tienes Google Chrome para Android disponible, la experiencia es ligeramente 
 
 ![Captura de pantalla de un pasquín de Chrome que solicita permiso para instalar la aplicación de muestra Foxes](chrome-a2hs-banner.png)
 
-> **Nota:** Puedes obtener más información sobre los mensajes de instalación de Chrome en el artículo [Mensajes de instalación de aplicaciones web](https://developers.google.com/web/fundamentals/app-install-banners/).
+> [!NOTE]
+> Puedes obtener más información sobre los mensajes de instalación de Chrome en el artículo [Mensajes de instalación de aplicaciones web](https://developers.google.com/web/fundamentals/app-install-banners/).
 
 _Si eliges no agregarlo a tu pantalla de inicio en este momento, los puedes hacer más tarde usando el ícono "Agregar a la pantalla de inicio" en el menú principal de Chrome._
 

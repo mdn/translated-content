@@ -9,7 +9,16 @@ l10n:
 
 **`Intl.Segmenter.supportedLocalesOf()`** メソッドは、指定したロケールのうち、ランタイムのデフォルトロケールにフォールバックすることなくサポートされているものを含む配列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-supportedlocalesof.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Intl.Segmenter.supportedLocalesOf", "shorter")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup", granularity: "string" };
+
+console.log(Intl.Segmenter.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## 構文
 

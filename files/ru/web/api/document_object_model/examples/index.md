@@ -1,7 +1,9 @@
 ---
-title: Examples of web and XML development using the DOM
+title: Примеры использования DOM в web-разработке и XML
 slug: Web/API/Document_Object_Model/Examples
 ---
+
+{{DefaultAPISidebar("DOM")}}
 
 В этой главе представлены более длинные примеры разработки веб-сайтов и XML с использованием DOM. По возможности, примеры используют общие API, трюки и шаблоны в JavaScript для управления объектом документа.
 
@@ -49,14 +51,16 @@ slug: Web/API/Document_Object_Model/Examples
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -65,7 +69,7 @@ slug: Web/API/Document_Object_Model/Examples
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
@@ -416,5 +420,5 @@ getComputedStyle () возвращает объект ComputedCSSStyleDeclaratio
 
 - [DOM Reference](/ru/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/ru/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/ru/docs/Web/API/Document_Object_Model/Events)
+- [Events and the DOM](/ru/docs/Learn_web_development/Core/Scripting/Events)
 - [Examples](/ru/docs/Web/API/Document_Object_Model/Examples)

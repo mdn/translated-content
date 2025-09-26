@@ -3,11 +3,24 @@ title: Groups and ranges
 slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 组和范围表示表达式字符的 组和范围
 
-{{EmbedInteractiveExample("pages/js/regexp-groups-ranges.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
+
+```js interactive-example
+// Groups
+const imageDescription = "This image has a resolution of 1440×900 pixels.";
+const regexpSize = /([0-9]+)×([0-9]+)/;
+const match = imageDescription.match(regexpSize);
+console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
+// Expected output: "Width: 1440 / Height: 900."
+
+// Backreferences
+const findDuplicates = "foo foo bar";
+const regex = /\b(\w+)\s+\1\b/g;
+console.log(findDuplicates.match(regex));
+// Expected output: Array ["foo foo"]
+```
 
 ## 类型
 
@@ -37,7 +50,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
       <td>
         <p>
           字符集。
-          匹配任何一个包含的字符。您可以使用连字符来指定字符范围，但如果连字符显示为方括号中的第一个或最后一个字符，则它将被视为作为普通字符包含在字符集中的文字连字符。也可以在字符集中包含字符类。
+          匹配任何一个包含的字符。你可以使用连字符来指定字符范围，但如果连字符显示为方括号中的第一个或最后一个字符，则它将被视为作为普通字符包含在字符集中的文字连字符。也可以在字符集中包含字符类。
         </p>
         <p>
           例如，<code>[abcd]</code> 是与<code>[a-d]</code>.一样的，它们会
@@ -101,7 +114,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
               >String.match()</a
             ></code
           >
-          不会返回组，如果设置了 <code>/.../g</code> 标志。但是，您仍然可以使用
+          不会返回组，如果设置了 <code>/.../g</code> 标志。但是，你仍然可以使用
           <code
             ><a
               href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
@@ -111,7 +124,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
           to get all matches.
         </p>
         <p>
-          match() 不会返回组，如果/…但是，您仍然可以使用 String.matchAll()
+          match() 不会返回组，如果/…但是，你仍然可以使用 String.matchAll()
           来获取所有匹配项。
         </p>
       </td>
@@ -203,7 +216,6 @@ do {
 ## 参见
 
 - [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-
   - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)

@@ -3,6 +3,8 @@ title: beforeprint
 slug: Web/API/Window/beforeprint_event
 ---
 
+{{APIRef}}
+
 L'événement **`beforeprint`** est déclenché lorsque le document associé est sur le point d'être imprimé ou qu'un "aperçu avant impression" est lancé.
 
 ## Informations générales
@@ -41,4 +43,4 @@ window.addEventListener("beforeprint", (evenement) => {
 
 ## Evénements liés
 
-- [afterprint](/fr/docs/Mozilla_event_reference/afterprint)
+- [afterprint](/fr/docs/Web/API/Window/afterprint_event)

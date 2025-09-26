@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('controllerchange', (event) => { });
+addEventListener("controllerchange", (event) => {});
 
-oncontrollerchange = (event) => { };
+oncontrollerchange = (event) => {};
 ```
 
 ## イベント型

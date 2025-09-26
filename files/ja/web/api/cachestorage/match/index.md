@@ -1,19 +1,21 @@
 ---
-title: CacheStorage.match()
+title: "CacheStorage: match() メソッド"
+short-title: match()
 slug: Web/API/CacheStorage/match
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 **`match()`** は {{domxref("CacheStorage")}} インターフェイスのメソッドで、所与の {{domxref("Request")}} または URL 文字列が保存された {{domxref("Response")}} のキーであるかどうかをチェックします。 このメソッドは、{{domxref("Response")}} の {{jsxref("Promise")}}、または一致するものが見つからない場合に `undefined` に解決される {{jsxref("Promise")}} を返します。
 
-`CacheStorage` には、グローバルな {{domxref("caches")}} プロパティを介してアクセスできます。
+`CacheStorage` には、ウィンドウの {{domxref("Window.caches")}} プロパティまたはワーカーの {{domxref("WorkerGlobalScope.caches")}} を介してアクセスできます。
 
 `Cache` オブジェクトは作成順に検索されます。
 
-> **メモ:** {{domxref("CacheStorage.match()", "caches.match()")}} は便利なメソッドです。
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} は便利なメソッドです。
 > 各キャッシュに対して（{{domxref("CacheStorage.keys()", "caches.keys()")}} によって返される順序で）、{{domxref("Response")}} が返されるまで {{domxref("cache.match()")}} を呼び出すのと同等の機能です。
 
 ## 構文
@@ -28,9 +30,7 @@ match(request, options)
 - `request`
   - : 照合したい {{domxref("Request")}}。 これは、{{domxref("Request")}} オブジェクトまたは URL 文字列にすることができます。
 - `options` {{optional_inline}}
-
   - : `match` 操作での照合方法を制御するプロパティを持つオブジェクト。 利用可能なオプションは次のとおりです。
-
     - `ignoreSearch`
       - : 論理値で、照合処理が URL のクエリー文字列を無視するかどうかを指定します。例えば、`true` に設定すると、 `http://foo.com/?value=bar` の `?value=bar` 部分は、照合するときに無視されます。
         既定値は `false` です。
@@ -94,4 +94,4 @@ self.addEventListener("fetch", (event) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} および {{domxref("WorkerGlobalScope.caches")}}

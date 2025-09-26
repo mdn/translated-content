@@ -3,12 +3,12 @@ title: "HTMLTimeElement: dateTime プロパティ"
 short-title: dateTime
 slug: Web/API/HTMLTimeElement/dateTime
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLTimeElement.dateTime`** プロパティは文字列で、HTML の [`datetime`](/ja/docs/Web/HTML/Element/time#datetime) 属性を反映し、要素の日付と時刻の値を機械可読な形で保持します。
+**`HTMLTimeElement.dateTime`** プロパティは文字列で、HTML の [`datetime`](/ja/docs/Web/HTML/Reference/Elements/time#datetime) 属性を反映し、要素の日付と時刻の値を機械可読な形で保持します。
 
 文字列の形式は以下の HTML のマイクロ構文に従わなければなりません。
 

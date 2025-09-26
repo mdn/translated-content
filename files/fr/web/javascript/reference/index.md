@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference
 
 {{JsSidebar}}
 
-Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le langage JavaScript. En savoir plus [à propos de cette référence](/fr/docs/Web/JavaScript/Reference/About).
+Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le langage JavaScript. En savoir plus [à propos de cette référence](/fr/docs/Web/JavaScript/Reference).
 
 ## Objets natifs
 
@@ -123,14 +123,14 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 ### WebAssembly
 
-- [`WebAssembly`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)
-- [`WebAssembly.Module`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)
-- [`WebAssembly.Instance`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance)
-- [`WebAssembly.Memory`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
-- [`WebAssembly.Table`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)
-- [`WebAssembly.CompileError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError)
-- [`WebAssembly.LinkError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError)
-- [`WebAssembly.RuntimeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError)
+- [`WebAssembly`](/fr/docs/WebAssembly/Reference/JavaScript_interface)
+- [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module)
+- [`WebAssembly.Instance`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Instance)
+- [`WebAssembly.Memory`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+- [`WebAssembly.Table`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table)
+- [`WebAssembly.CompileError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
+- [`WebAssembly.LinkError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
+- [`WebAssembly.RuntimeError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
 
 ## Instructions
 
@@ -196,11 +196,11 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 - [`{}`](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 - [`/ab+c/i`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [`( )`](/fr/docs/Web/JavaScript/Reference/Operators/Grouping)
-- [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null)
+- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null)
 
 ### Expressions vers la gauche
 
-- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`?.` pour le chaînage optionnel](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new)
 - [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new%2Etarget)
@@ -266,11 +266,11 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 - [`&&`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND)
 - [`||`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [`??`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [`??`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 
 ### Opérateur conditionnel (opérateur ternaire)
 
-- [`(condition ? ifTrue : ifFalse)`](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [`(condition ? ifTrue : ifFalse)`](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
 ### Opérateurs d'affectation
 
@@ -289,13 +289,13 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 - [`|=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - [`&&=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
 - [`||=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
-- [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)
-- [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-- [`{a, b} = {a:1, b:2}`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+- [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
+- [`{a, b} = {a:1, b:2}`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### Opérateur virgule
 
-- [`,`](/fr/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
+- [`,`](/fr/docs/Web/JavaScript/Reference/Operators/Comma_operator)
 
 ## Fonctions
 
@@ -309,6 +309,6 @@ Ce chapitre documente comment travailler avec [les fonctions JavaScript](/fr/doc
 ## Autres pages de la référence
 
 - [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Types de données et structures de données](/fr/docs/Web/JavaScript/Data_structures)
+- [Types de données et structures de données](/fr/docs/Web/JavaScript/Guide/Data_structures)
 - [Mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
 - [Fonctionnalités dépréciées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

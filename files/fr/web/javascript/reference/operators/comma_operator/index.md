@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Comma_operator
 
 L'opérateur **virgule** permet d'évaluer chacun de ses opérandes (de la gauche vers la droite) et de renvoyer la valeur du dernier opérande.
 
-{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}
+
+```js interactive-example
+let x = 1;
+
+x = (x++, x);
+
+console.log(x);
+// Expected output: 2
+
+x = (2, 3);
+
+console.log(x);
+// Expected output: 3
+```
 
 ## Syntaxe
 
@@ -40,7 +54,7 @@ Dans le code suivant, `a` est défini avec la valeur de `b = 3` (qui est 3) et l
 
 ```js
 var a, b, c;
-(a = b = 3), (c = 4); // Renvoie 4 dans la console
+((a = b = 3), (c = 4)); // Renvoie 4 dans la console
 console.log(a); // 3
 ```
 
@@ -60,7 +74,7 @@ Un autre exemple consiste à effectuer un certain traitement sur la variable pui
 function maFonction() {
   var x = 0;
 
-  return (x += 1), x; // ce qui revient à renvoyer ++x
+  return ((x += 1), x); // ce qui revient à renvoyer ++x
 }
 ```
 

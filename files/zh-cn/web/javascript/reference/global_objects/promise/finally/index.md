@@ -1,6 +1,8 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
+l10n:
+  sourceCommit: 1766bc83f96aedb321f76068bdd51e9d4953c28d
 ---
 
 {{JSRef}}
@@ -9,7 +11,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 
 这可以让你避免在 promise 的 {{jsxref("Promise/then", "then()")}} 和 {{jsxref("Promise/catch", "catch()")}} 处理器中重复编写代码。
 
-{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.finally()", "taller")}}
+
+```js interactive-example
+function checkMail() {
+  return new Promise((resolve, reject) => {
+    if (Math.random() > 0.5) {
+      resolve("Mail has arrived");
+    } else {
+      reject(new Error("Failed to arrive"));
+    }
+  });
+}
+
+checkMail()
+  .then((mail) => {
+    console.log(mail);
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+  .finally(() => {
+    console.log("Experiment completed");
+  });
+```
 
 ## 语法
 
@@ -24,7 +49,7 @@ finally(onFinally)
 
 ### 返回值
 
-返回等效的 {{jsxref("Promise")}}。如果处理程序抛出错误或返回被拒绝的 promise，那么 `finally()` 返回的 promise 将以该值被拒绝。否则，处理程序的返回值不会影响原始 promise 的状态。
+立即返回一个新的 {{jsxref("Promise")}}。无论当前 promise 的状态如何，此新的 promise 在返回时始终处于待定（pending）状态。如果 `onFinally` 抛出错误或返回被拒绝的 promise，则新的 promise 将使用该值进行拒绝。否则，新的 promise 将以与当前 promise 相同的状态敲定（settled）。
 
 ## 描述
 
@@ -38,11 +63,13 @@ finally(onFinally)
   - 与 `Promise.resolve(2).then(() => 77, () => {})` 不同，它返回一个最终会兑现为值 `77` 的 promise，而 `Promise.resolve(2).finally(() => 77)` 返回一个最终兑现为值 `2` 的 promise。
   - 类似地，与 `Promise.reject(3).then(() => {}, () => 88)` 不同，它返回一个最终兑现为值 `88` 的 promise，而 `Promise.reject(3).finally(() => 88)` 返回一个最终以原因 `3` 拒绝的 promise。
 
-> **备注：** 在 `finally` 回调函数中抛出错误（或返回被拒绝的 promise）仍会导致返回的 promise 被拒绝。例如，`Promise.reject(3).finally(() => { throw 99; })` 和 `Promise.reject(3).finally(() => Promise.reject(99))` 都以理由 `99` 拒绝返回的 promise。
+> [!NOTE]
+> 在 `finally` 回调函数中抛出错误（或返回被拒绝的 promise）仍会导致返回的 promise 被拒绝。例如，`Promise.reject(3).finally(() => { throw 99; })` 和 `Promise.reject(3).finally(() => Promise.reject(99))` 都以理由 `99` 拒绝返回的 promise。
 
 与 {{jsxref("Promise/catch", "catch()")}} 一样，`finally()` 在内部调用其调用对象上的 `then` 方法。如果 `onFinally` 不是函数，则调用 `then()` 时使用 `onFinally` 同时作为两个参数——对于 {{jsxref("Promise.prototype.then()")}}，这意味着没有附加有效的处理器。否则，`then()` 被调用时会使用两个内部创建的函数，其行为如下：
 
-> **警告：** 这只是为了演示，而不是一个 polyfill。
+> [!WARNING]
+> 这只是为了演示，而不是一个 polyfill。
 
 ```js
 promise.then(
@@ -54,7 +81,7 @@ promise.then(
 );
 ```
 
-因为 `finally()` 调用 `then()`，所以它支持子类化。此外，请注意上面的 {{jsxref("Promise.resolve()")}} 调用——实际上，`onFinally()` 的返回值是使用与 `Promise.resolve()` 相同的算法解决的，但用于构造解决的 promise 的实际构造函数将是子类。`finally()` 通过 [`promise.constructor[@@species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species) 获取构造函数。
+因为 `finally()` 调用 `then()`，所以它支持子类化。此外，请注意上面的 {{jsxref("Promise.resolve()")}} 调用——实际上，`onFinally()` 的返回值是使用与 `Promise.resolve()` 相同的算法解决的，但用于构造解决的 promise 的实际构造函数将是子类。`finally()` 通过 [`promise.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species) 获取构造函数。
 
 ## 示例
 

@@ -7,7 +7,51 @@ slug: Web/CSS/text-shadow
 
 La propriété **`text-shadow`** ajoute des ombres au texte. Elle accepte une liste d'ombres à appliquer au texte et aux [décorations](/fr/docs/Web/CSS/text-decoration) de l'élément. Chaque ombre est décrite par une certaine combinaison de décalages X et Y de l'élément, de rayon de flou et de couleur.
 
-{{EmbedInteractiveExample("pages/css/text-shadow.html")}}
+{{InteractiveExample("CSS Demo: text-shadow")}}
+
+```css interactive-example-choice
+text-shadow: 1px 1px 2px pink;
+```
+
+```css interactive-example-choice
+text-shadow: #fc0 1px 0 10px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 5px #558abb;
+```
+
+```css interactive-example-choice
+text-shadow: red 2px 5px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 10px;
+```
+
+```css interactive-example-choice
+text-shadow:
+  1px 1px 2px red,
+  0 0 1em blue,
+  0 0 0.2em blue;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy...
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font:
+    1.5em Georgia,
+    serif;
+}
+```
 
 ## Syntaxe
 
@@ -40,7 +84,7 @@ Chaque ombre est spécifiée par deux ou trois valeurs `<length>`, suivies d'une
 
 Lorsque plus d'une ombre est indiquée, les ombres sont appliquées d'avant en arrière, avec la première ombre spécifiée sur le dessus.
 
-Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments) {{cssxref("::first-line")}} et {{cssxref("::first-letter")}}.
+Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) {{cssxref("::first-line")}} et {{cssxref("::first-letter")}}.
 
 ### Valeurs
 
@@ -115,4 +159,4 @@ Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseud
 - [Text Shadow Generator](https://cssgenerator.org/text-shadow-css-generator.html) - Un générateur CSS d'ombre de texte interactif
 - {{cssxref("box-shadow")}}
 - Le type de données {{cssxref("&lt;color&gt;")}} (pour spécifier la couleur d'ombre)
-- [Appliquer des couleurs sur des éléments HTML](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML](/fr/docs/Web/CSS/CSS_colors/Applying_color)

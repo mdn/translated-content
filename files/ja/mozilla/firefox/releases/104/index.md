@@ -3,8 +3,6 @@ title: Firefox 104 for developers
 slug: Mozilla/Firefox/Releases/104
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 104 の変更点をまとめています。Firefox 104 は、2022 年 8 月 23 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -21,7 +19,7 @@ slug: Mozilla/Firefox/Releases/104
   これらはそれぞれ、{{jsxref("Array")}} または {{jsxref("TypedArray")}} で、与えたテスト関数にマッチする最後の要素の値または添字を発見するために使用します。
   (詳しくは [Firefox バグ 1775026](https://bugzil.la/1775026) をご覧ください)
 
-- [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) および [`structuredClone()`](/ja/docs/Web/API/structuredClone) で [ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) を使用したとき、シリアライズした結果に (`stack` を持つエラーの型で) [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
+- [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) および [`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) で [ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) を使用したとき、シリアライズした結果に (`stack` を持つエラーの型で) [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
   [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) など、ほかの API を使用してエラーを送信する場合は、まだ `stack` をシリアライズしません
   (詳しくは [Firefox バグ 1774866](https://bugzil.la/1774866) をご覧ください)。
 
@@ -69,7 +67,7 @@ slug: Mozilla/Firefox/Releases/104
 #### WebDriver BiDi
 
 - `log.entryAdded` イベントで `source` をサポートしました ([Firefox バグ 1770792](https://bugzil.la/1770792))。
-- 新たに開いたブラウジングコンテキストについて、`browsingContext.contextCreated` イベントに送信する `url` を `about:blank` に更新しました ([Firefox バグ 1775141](https://bugzil.la/1775141))。
+- 新たに開いた閲覧コンテキストについて、`browsingContext.contextCreated` イベントに送信する `url` を `about:blank` に更新しました ([Firefox バグ 1775141](https://bugzil.la/1775141))。
 
 #### Marionette
 

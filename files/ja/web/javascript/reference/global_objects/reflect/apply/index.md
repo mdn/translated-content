@@ -7,7 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 
 静的な **`Reflect.apply()`** メソッドは、指定された引数とともに対象となる関数を呼び出します。
 
-{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
+{{InteractiveExample("JavaScript デモ: Reflect.apply()")}}
+
+```js interactive-example
+console.log(Reflect.apply(Math.floor, undefined, [1.75]));
+// Expected output: 1
+
+console.log(
+  Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]),
+);
+// Expected output: "hello"
+
+console.log(
+  Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index,
+);
+// Expected output: 4
+
+console.log(Reflect.apply("".charAt, "ponies", [3]));
+// Expected output: "i"
+```
 
 ## 構文
 
@@ -50,13 +68,13 @@ Function.prototype.apply.call(Math.floor, undefined, [1.75]);
 Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
-Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111])
+Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
 // "hello"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index
+Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 // 4
 
-Reflect.apply(''.charAt, 'ponies', [3])
+Reflect.apply("".charAt, "ponies", [3]);
 // "i"
 ```
 
@@ -66,7 +84,7 @@ Reflect.apply(''.charAt, 'ponies', [3])
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.apply")}}
+{{Compat}}
 
 ## 関連情報
 

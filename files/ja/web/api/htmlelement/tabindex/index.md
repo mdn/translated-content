@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: tabIndex プロパティ"
+short-title: tabIndex
 slug: Web/API/HTMLElement/tabIndex
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -40,5 +41,5 @@ b1.tabIndex = 1;
 
 ## 関連情報
 
-- [キーボードでナビゲート可能な JavaScript ウィジェットのアクセシビリティ](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-- HTML の [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) グローバル属性
+- [キーボードでナビゲート可能な JavaScript ウィジェットのアクセシビリティ](/ja/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
+- HTML の [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) グローバル属性

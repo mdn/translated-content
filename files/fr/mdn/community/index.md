@@ -1,56 +1,49 @@
 ---
-title: Faire un retour à propos de MDN Web Docs
+title: Ressources de la communauté
+short-title: Resources
 slug: MDN/Community
+l10n:
+  sourceCommit: 7819249f906dcfc59a2c4cb702b80a35b7964842
 ---
 
-{{MDNSidebar}}
+👋 Bienvenue sur MDN Web Docs, un projet collaboratif et open-source qui documente les technologies de la plateforme web, y compris [HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS), [JavaScript](/fr/docs/Web/JavaScript) et [Web APIs](/fr/docs/Web/API).
+Nous fournissons également de nombreuses [ressources d'apprentissage](/fr/docs/Learn_web_development) pour les développeurs débutants et les étudiants.
 
-Bienvenue sur MDN Web Docs ! Si vous avez des suggestions ou avez des problèmes avec MDN, vous êtes au bon endroit. Nous vous remercions par avance de l'intérêt que vous nous portez.
+- [Pour commencer](/fr/docs/MDN/Community/Getting_started)
+  - : Cette section explique comment vous pouvez commencer à contribuer et le type de contributions que nous acceptons.
+    Tout le monde peut contribuer, et chaque personne qui contribue a un impact sur des millions de lecteurs.
+    Découvrez comment contribuer et stimuler l'innovation sur le Web ouvert.
+- [Canaux de communication](/fr/docs/MDN/Community/Communication_channels)
+  - : Cette page répertorie les canaux de communication utilisés par l'équipe MDN et notre communauté, avec des conseils sur ceux qui pourraient vous convenir le mieux.
+- [Nos dépôts](/fr/docs/MDN/Community/Our_repositories)
+  - : Ce document décrit les dépôts GitHub (<i lang="en">repos</i>) dont vous pourriez avoir besoin lorsque vous contribuez à MDN Web Docs.
+- [Contenu traduit](/fr/docs/MDN/Community/Translated_content)
+  - : Informations sur la localisation de MDN Web Docs, avec des détails sur les équipes, les canaux de communication et comment s'impliquer.
+- [Étiquette open source](/fr/docs/MDN/Community/Open_source_etiquette)
+  - : Cet article donne des conseils sur la façon de se comporter lors de la contribution à MDN et à d'autres projets open source, y compris des conseils pour la collaboration et la gestion des conflits.
+- [Créer et travailler sur des problèmes](/fr/docs/MDN/Community/Issues)
+  - : Les problèmes (_issues_) sont utilisées pour suivre tous les bugs et le travail ayant un résultat clair et exploitable.
+    Cet article contient des directives sur l'ouverture et le traitement des issues et couvre également le triage des issues et les suggestions de contenu.
+- [Pull requests](/fr/docs/MDN/Community/Pull_requests)
+  - : Cette section couvre nos directives pour la soumission de _pull requests_ et ce à quoi vous devez vous attendre lors du processus de révision.
+- [GitHub Discussions](/fr/docs/MDN/Community/Discussions)
+  - : Sur MDN Web Docs, nous encourageons notre communauté à initier et à participer à des discussions autour de sujets liés au projet.
+    Les discussions GitHub sont un bon moyen de recueillir des commentaires sur des idées et d'atteindre un consensus sur des tâches qui peuvent avoir de nombreuses approches différentes.
+- [Rôles et équipes](/fr/docs/MDN/Community/Roles_teams)
+  - : Cette section fournit un aperçu des utilisateur·ice·s et des équipes qui font partie du projet MDN Web Docs et détaille ce que signifie faire partie d'une équipe.
+- [Directives de participation de la communauté (CPG)](/fr/docs/MDN/Community/Community_Participation_Guidelines)
+  - : Cette page répertorie toutes les directives de participation de la communauté que nous avons pour nous aider à favoriser une communauté accueillante, inclusive et sûre. Elle couvre également [Comment signaler](/fr/docs/MDN/Community/Community_Participation_Guidelines#processus_de_signalement) une violation des CPG.
+- [Journal des modifications de MDN Web Docs](/fr/docs/MDN/Writing_guidelines/Changelog)
+  - : Ce document enregistre les changements notables apportés aux processus de contenu de MDN et aux meilleures pratiques, avec des informations sur le moment et les raisons de ces changements.
 
-Il y existe plusieurs façons pour porter votre voix, cet article vous les explique.
+## Code de conduite
 
-## Mettre à jour la documentation
+En participant à l'un de nos projets en personne ou en ligne, vous reconnaissez avoir lu et accepté les [Directives de participation de la communauté Mozilla](/fr/docs/MDN/Community/Community_Participation_Guidelines) (CPG).
 
-Tout d'abord, si vous avez constaté un problème dans la documentation, sentez vous libre de le corriger vous-même. Commencez par lire les [étapes spécifiques pour se préparer à faire des contributions](https://github.com/mdn/content/#making-contributions).
+## Support général
 
-Si vous souhaitez savoir comment contribuer aux traductions en français, vous pouvez également lire [ce billet](https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer).
+Nous sommes une petite équipe qui travaille dur pour répondre aux demandes de documentation d'un écosystème web en constante évolution.
+Malheureusement, nous ne pouvons pas aider avec des questions de support général, telles que le dépannage de code.
+Si vous apprenez, la section [Apprendre le développement web](/fr/docs/Learn_web_development) est un excellent point de départ, et vous pouvez poser des questions de codage ou rechercher des réponses sur [Stack Overflow](https://stackoverflow.com/questions/).
 
-Les sources de la documentation ici sont [stockées dans GitHub](https://github.com/mdn/translated-content/), et gérées par une équipe de bénévoles et de salariés, alors ne soyez pas timide - votre grammaire n'a pas besoin d'être parfaite. Nous passerons en revue vos modifications et vous aiderons à corriger les erreurs éventuelles.
-
-Pour plus d'information sur comment contribuer à la documentation :
-
-- [Débuter sur MDN](/fr/docs/MDN/Contribute/Getting_started)
-- [Contribuer à MDN](/fr/docs/MDN/Contribute)
-
-## Rejoignez la conversation
-
-Venez nous parler ! Il y a plusieurs méthodes pour rentrer en contact avec les personnes qui travaillent sur le contenu de MDN.
-
-### Discussions en direct - chats
-
-Nous utilisons [Matrix](https://wiki.mozilla.org/Matrix) pour converser sur MDN et son contenu. Vous pouvez participer à la conversation !
-
-- [MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org)
-  - : Sur ce salon sont regroupés les membres de la communauté internationale de MDN, il est destiné aux discussions générales sur MDN : utilisation du site, lecture du contenu du site et contribution au contenu du site. Si vous avez des questions ou des commentaires sur le contenu des articles, sur les nouveaux articles que vous aimeriez voir ou créer, ou si vous voulez simplement parler avec l'équipe de rédaction, c'est l'endroit idéal. Il s'agit d'un canal anglophone, toutefois, des personnes francophones s'y trouvent généralement.
-- [Localisation / traduction en français](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-  - : Sur ce salon sont regroupés les membres de la communauté francophone de Mozilla (que ce soit pour Firefox, MDN ou d'autres sites ou outils).
-
-### Discussions (asynchrones)
-
-Les discussions plus importantes et qui ne nécessitent pas d'être connecté à tout moment se déroulent sur [le forum Discourse](https://discourse.mozilla-community.org/c/mdn). Vous pouvez envoyer des messages sur ce forum par e-mail en utilisant l'adresse [mdn@mozilla-community.org](mailto://mdn@mozilla-community.org). Si vous vous inscrivez sur le forum, vous pouvez également choisir de recevoir des notifications par e-mail à propos des discussions.
-
-## Signaler un problème
-
-### Problèmes dans la documentation
-
-Si vous voyez un problème avec la documentation et que vous ne pouvez pas la corriger vous-même pour une quelconque raison, vous pouvez [signaler un problème](https://github.com/mdn/translated-content/issues/new). Vous pouvez utiliser ce formulaire pour tout problème avec la documentation, pas exemple :
-
-- une simple correction
-- une demande de contenu entièrement nouveau
-- signaler les contenus inappropriés (y compris le spam et les traductions mal placées)
-
-Comme évoqué plus haut, n'hésitez pas à contribuer vous-même pour corriger ces erreurs.
-
-### Problèmes sur le site
-
-Si vous rencontrez un problème avec le site ou avez de nouvelles idées pour celui-ci, vous pouvez [créer un ticket à l'équipe de développement de MDN](https://github.com/mdn/yari/issues).
+Les problèmes, discussions ou demandes de tirage sur les dépôts MDN demandant un support général seront dirigés ici et peuvent être fermés et verrouillés.

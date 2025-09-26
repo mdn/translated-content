@@ -18,11 +18,8 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ### Параметры
 
 - `callback`
-
   - : Функция которая производит элементы нового массива, принимает три аргумента:
-
     - `currentValue`
-
       - : Текущий обрабатываемый элемент массива.
 
     - `index`{{optional_inline}}
@@ -91,11 +88,11 @@ arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 
 //=> \[1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

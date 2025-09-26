@@ -15,8 +15,8 @@ slug: Web/API/DataTransfer/setData
 
 ## 语法
 
-```
-void dataTransfer.setData(format, data);
+```js-nolint
+setData(format, data)
 ```
 
 ### 参数

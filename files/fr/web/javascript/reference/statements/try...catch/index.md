@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Statements/try...catch
 
 L'instruction **`try...catch`** regroupe des instructions à exécuter et définit une réponse si l'une de ces instructions provoque une exception.
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```
 
 ## Syntaxe
 
@@ -52,7 +62,7 @@ La clause `finally` s'exécute après le bloc `try` et après le bloc `catch` (s
 
 Il est possible d'imbriquer plusieurs instructions `try`. Si un `try` imbriqué ne possède pas de clause `catch`, la clause `catch` du `try` du niveau supérieur sera utilisée (et ainsi de suite).
 
-Pour plus d'informations sur les exceptions et les erreurs en JavaScript, voir le chapitre du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Instructions#Les_instructions_utilis.C3.A9es_pour_les_exceptions) correspondant.
+Pour plus d'informations sur les exceptions et les erreurs en JavaScript, voir le chapitre du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#les_instructions_utilis.c3.a9es_pour_les_exceptions) correspondant.
 
 ### Clause `catch` inconditionnelle
 

@@ -3,8 +3,6 @@ title: CSS Scrollbars
 slug: Web/CSS/CSS_scrollbars_styling
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
 **CSS Scrollbars** 标准化了由 ie5 引入的废弃的滚动条颜色属性
 
 ## 示例
@@ -37,9 +35,9 @@ slug: Web/CSS/CSS_scrollbars_styling
 
 {{EmbedLiveSample("示例")}}
 
-## Reference
+## 参考
 
-### CSS Properties
+### CSS 属性
 
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
@@ -47,12 +45,6 @@ slug: Web/CSS/CSS_scrollbars_styling
 ## 规范
 
 {{Specifications}}
-
-## Accessibility concerns
-
-When you customize scrollbars, consider they have enough contrast and that their hit area is large enough for people who use touch input.
-
-- [Baseline Rules for Scrollbar Usability | Adrian Roselli](http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
 
 ## 浏览器兼容性
 

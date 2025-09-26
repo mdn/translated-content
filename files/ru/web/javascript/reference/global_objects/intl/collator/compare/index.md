@@ -3,7 +3,7 @@ title: Intl.Collator.prototype.compare
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 ---
 
-{{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -20,7 +20,6 @@ collator.compare(string1, string2)
 - `string1`
 
   `string2`
-
   - : Сравниваемые друг с другом строки.
 
 ## Описание
@@ -61,9 +60,7 @@ console.log(matches.join(", "));
 
 ## Спецификации
 
-| Спецификация                                                                 | Статус                  | Комментарии              |
-| ---------------------------------------------------------------------------- | ----------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

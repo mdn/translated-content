@@ -1,15 +1,17 @@
 ---
-title: Référence Web API
+title: Les API Web
 slug: Web/API
+l10n:
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
-Quand vous codez en JavaScript pour le web, il y a un grand nombre d'API disponibles. La liste ci-dessous énumère toutes les interfaces (types et objets) que vous pouvez appeler quand vous développez votre application web ou votre site.
+Quand vous codez pour le Web, de nombreuses API existent. La liste ci-dessous énumère toutes les API et interfaces (c'est-à-dire les types d'objet) que vous pouvez appeler quand vous développez votre application web ou votre site.
 
-Les APIs Web sont habituellement utilisés avec le JavaScript, bien que cela ne devrait pas toujours être le cas.
+Les API Web sont généralement utilisées avec JavaScript, même si ça n'est pas obligatoire.
 
 ## Spécifications
 
-Voici une liste de toutes les APIs disponibles.
+Voici une liste de toutes les API disponibles.
 
 {{ListGroups}}
 
@@ -18,7 +20,3 @@ Voici une liste de toutes les APIs disponibles.
 Voici une liste de toutes les interfaces (c'est à dire, les types d'objets) disponibles.
 
 {{APIListAlpha}}
-
-## Voir aussi
-
-- [Web API event reference](/fr/docs/Web/Events)

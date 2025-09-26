@@ -23,7 +23,8 @@ const estimatePromise = StorageManager.estimate();
 
 {{jsxref('Promise')}} で、これは {{domxref('StorageEstimate')}} 辞書に準拠したオブジェクトに解決します。この辞書には、このオリジンで利用可能なおよその大きさが {{domxref("StorageEstimate.quota")}} に、現在使用されているおよその量が {{domxref("StorageEstimate.usage")}} に入ります。
 
-> **メモ:** **これらは正確な数値ではありません。**圧縮、重複排除セキュリティ上の理由による難読化などが行われるため、正確な値にはなりません。
+> [!NOTE]
+> **これらは正確な数値ではありません。**圧縮、重複排除セキュリティ上の理由による難読化などが行われるため、正確な値にはなりません。
 
 `quota` はオリジンごとに異なることに気づくかもしれません。この違いは次のような要因に基づきます。
 
@@ -39,17 +40,19 @@ const estimatePromise = StorageManager.estimate();
 
 ```html
 <label>
-  現在、使用可能なストレージの約 <output id="percent">
-  </output>% を使用しています。
+  現在、使用可能なストレージの約 <output id="percent"> </output>%
+  を使用しています。
 </label>
 ```
 
 ### JavaScript の内容
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+navigator.storage.estimate().then(function (estimate) {
+  document.getElementById("percent").value = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 
@@ -63,7 +66,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.StorageManager.estimate")}}
+{{Compat}}
 
 ## 関連情報
 

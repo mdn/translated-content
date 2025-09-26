@@ -29,7 +29,7 @@ getGamepads()
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によって、この機能の使用がブロックされた場合。
+  - : [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって、この機能の使用がブロックされた場合。
 
 ## 例
 
@@ -52,5 +52,5 @@ window.addEventListener("gamepadconnected", (e) => {
 
 ## 関連情報
 
-- [ゲームパッド API の使用](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-- [ゲームパッド API](/en-US/docs/Web/API/Gamepad_API)
+- [ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)

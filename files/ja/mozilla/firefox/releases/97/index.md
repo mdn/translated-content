@@ -3,8 +3,6 @@ title: Firefox 97 for developers
 slug: Mozilla/Firefox/Releases/97
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 97 の変更点をまとめています。Firefox 97 は、米国時間 2022 年 2 月 8 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -46,7 +44,7 @@ slug: Mozilla/Firefox/Releases/97
 
 ### API
 
-- [`DedicatedWorkerGlobalScope`](/ja/docs/Web/API/DedicatedWorkerGlobalScope) で `AnimationFrameProvider` が使用可能になりました。これは、専用ワーカーで [`requestAnimationFrame`](/ja/docs/Web/API/window/requestAnimationFrame) および [`cancelAnimationFrame`](/ja/docs/Web/API/Window/cancelAnimationFrame) メソッドが使用できることを意味します
+- [`DedicatedWorkerGlobalScope`](/ja/docs/Web/API/DedicatedWorkerGlobalScope) で `AnimationFrameProvider` が使用可能になりました。これは、専用ワーカーで [`requestAnimationFrame`](/ja/docs/Web/API/Window/requestAnimationFrame) および [`cancelAnimationFrame`](/ja/docs/Web/API/Window/cancelAnimationFrame) メソッドが使用できることを意味します
   (詳しくは [Firefox バグ 1388931](https://bugzil.la/1388931) をご覧ください)。
 
 #### DOM

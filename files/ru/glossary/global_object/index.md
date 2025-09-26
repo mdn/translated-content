@@ -3,6 +3,8 @@ title: Global object
 slug: Glossary/Global_object
 ---
 
+{{GlossarySidebar}}
+
 Глобальный объект - это {{glossary("object","объект")}}, который всегда существует в {{glossary("global scope","глобальной области видимости")}}.
 
 В JavaScript всегда определён глобальный объект. В веб-браузере, когда скрипты создают глобальные переменные, они создаются как свойства глобального объекта. (В {{Glossary("Node.js")}} это не так.) {{Glossary("Interface")}} глобального объекта зависит от контекста, в котором выполняется скрипт.К примеру:
@@ -55,7 +57,6 @@ greeting: function greeting() {
 ```
 
 - [MDN Web Docs Glossary](/ru/docs/Glossary)
-
   - {{glossary("global scope")}}
   - {{glossary("object")}}
 

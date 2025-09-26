@@ -36,10 +36,10 @@ let xrRigidTransform = new XRRigidTransform(position, orientation);
 ```js
 let animationFrameRequestID = 0;
 
-xrSession.requestReferenceSpace("local-floor")
-.then((refSpace) => {
+xrSession.requestReferenceSpace("local-floor").then((refSpace) => {
   xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerPosition, viewerOrientation));
+    new XRRigidTransform(viewerPosition, viewerOrientation),
+  );
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
 });
 ```
@@ -50,10 +50,10 @@ xrSession.requestReferenceSpace("local-floor")
 
 [移動、向き、モーション](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion)には、さらに多くの例があります。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.XRRigidTransform")}}
+{{Compat}}

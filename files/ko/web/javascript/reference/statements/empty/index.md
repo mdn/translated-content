@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Statements/Empty
 
 **empty** 문은 JavaScript 아무것도 동작하지 않습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-empty.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Empty")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+// Assign all array values to 0
+for (let i = 0; i < array1.length; array1[i++] = 0 /* empty statement */);
+
+console.log(array1);
+// Expected output: Array [0, 0, 0]
+```
 
 ## 구문
 
@@ -42,11 +52,12 @@ if (condition);       // Caution, this "if" does nothing!
 
 다른 예 : 중괄호 ({})가없는 [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 문에서 `three`가 `true`이면 아무 일도 일어나지 않고 `four`를 건너 뛰고 else case의 launchRocket() 함수도 실행되지 않습니다.
 
-```js
+```js-nolint
 if (one) doOne();
 else if (two) doTwo();
 else if (three); // nothing here
-else if (four) doFour();
+else if (four)
+  doFour();
 else launchRocket();
 ```
 

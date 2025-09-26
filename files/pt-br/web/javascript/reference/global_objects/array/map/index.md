@@ -3,9 +3,19 @@ title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## Resumo
 
@@ -20,9 +30,7 @@ arr.map(callback[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função cujo retorno produz o elemento do novo Array. Recebe três argumentos:
-
     - `valorAtual`
       - : O valor do elemento original do Array de origem.
     - `indice`
@@ -232,14 +240,11 @@ if (!Array.prototype.map) {
 
 ## Especificações
 
-| Especificação                                                          | Status             | Comentário                                        |
-| ---------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.19', 'Array.prototype.map')}}         | {{Spec2('ES5.1')}} | Definição inicial implementada no JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.map', 'Array.prototype.map')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com os browsers
 
-{{Compat("javascript.builtins.Array.map")}}
+{{Compat}}
 
 ## Veja também
 

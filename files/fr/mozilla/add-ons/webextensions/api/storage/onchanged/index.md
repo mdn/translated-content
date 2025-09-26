@@ -3,7 +3,7 @@ title: storage.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un ou plusieurs éléments changent.
 
@@ -29,14 +29,11 @@ Les événements ont trois fonctions:
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `changes`
       - : `object`. Objet décrivant le changement. Cela contient une propriété pour chaque clé qui a changé. Le nom de la propriété est le nom de la clé qui a changé, et sa valeur est un objet {{WebExtAPIRef('storage.StorageChange')}} décrivant la modification apportée à cet élément.
 
     <!---->
-
     - `areaName`
       - : `string`. Le nom de la zone de stockage (`"sync"`, `"local"` or `"managed"`) auquel les modifications ont été apportées.
 
@@ -71,11 +68,9 @@ browser.storage.onChanged.addListener(logStorageChange);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

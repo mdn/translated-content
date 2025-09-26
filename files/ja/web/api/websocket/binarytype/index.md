@@ -1,11 +1,12 @@
 ---
-title: WebSocket.binaryType
+title: "WebSocket: binaryType プロパティ"
+short-title: binaryType
 slug: Web/API/WebSocket/binaryType
 l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 **`WebSocket.binaryType`** プロパティは、この WebSocke 接続によって受信されているバイナリーデータの型を制御します。
 

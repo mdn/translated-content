@@ -24,14 +24,13 @@ Para hacer esto de forma que sea compatible con los navegadores que no soportan 
 - `none`
   - : Escoge el tamaño de la fuente basándose sólo en función de la propiedad {{ Cssxref("font-size") }}.
 - \<número>
-
   - : Escoge el tamaño de la fuente de manera tal que su letra minúscula (determinada por la altura-x de la fuente) sea el*número* de veces el tamaño de {{ Cssxref("font-size") }}.
 
     El número especificado es generalmente la relación de aspecto de la fuente de primera elección en la propiedad {{ Cssxref("font-family") }}. Esto significa que la primera fuente, si está disponible, aparecerá con el mismo tamaño en los navegadores, soporten estos o no la propiedad {{ Cssxref("font-size-adjust") }}.
 
 ## Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/font-size-adjust.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font-size-adjust.html)
 
 ```
 p{
@@ -42,8 +41,8 @@ p{
 
 ## Especificaciones
 
-- [CSS 2](http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font-size-adjust)
-- [css3-fonts](http://www.w3.org/TR/css3-fonts/#font-size-adjust)
+- [CSS 2](https://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font-size-adjust)
+- [css3-fonts](https://www.w3.org/TR/css3-fonts/#font-size-adjust)
 
 ## Compatibilidades
 

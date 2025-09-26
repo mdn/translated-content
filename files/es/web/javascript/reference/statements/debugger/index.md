@@ -40,4 +40,4 @@ Cuando el depurador es invocado, la ejecución se detiene en la sentencia debugg
 ## Vea también
 
 - [Debugging JavaScript](/es/docs/Debugging_JavaScript)
-- [The Debugger in the Firefox Developer Tools](/es/docs/Tools/Debugger)
+- [The Debugger in the Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

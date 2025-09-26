@@ -98,7 +98,7 @@ function pointermoveHandler(ev) {
 
   // キャッシュ内でこのイベントを見つけ、このイベントの記録を更新します
   const index = evCache.findIndex(
-    (cachedEv) => cachedEv.pointerId === ev.pointerId
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
   );
   evCache[index] = ev;
 
@@ -156,7 +156,8 @@ function pointerupHandler(ev) {
 
 ```html
 <body onload="init();" style="touch-action:none">
-  <div id="target">2 つの点に触れたままにして、ピンチインまたはピンチアウトしてください。<br />
+  <div id="target">
+    2 つの点に触れたままにして、ピンチインまたはピンチアウトしてください。<br />
     ピンチが開いている場合（ズームイン）は背景色がピンクに変わり、
     ピンチが閉じている場合（ズームアウト）は背景色が水色に変わります。
   </div>
@@ -180,7 +181,7 @@ function pointerupHandler(ev) {
 function removeEvent(ev) {
   // このイベントをターゲットのキャッシュから削除する
   const index = evCache.findIndex(
-    (cachedEv) => cachedEv.pointerId === ev.pointerId
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
   );
   evCache.splice(index, 1);
 }

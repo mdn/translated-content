@@ -5,9 +5,16 @@ slug: Web/JavaScript/Reference/Functions/Arrow_functions
 
 {{jsSidebar("Functions")}}
 
-Une **expression de fonction fléchée** (_arrow function_ en anglais) permet d'avoir une syntaxe plus courte que [les expressions de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function) et ne possède pas ses propres valeurs pour [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super), ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Opérateurs/new.target). Les fonctions fléchées sont souvent [anonymes](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/name) et ne sont pas destinées à être utilisées pour déclarer des méthodes.
+Une **expression de fonction fléchée** (_arrow function_ en anglais) permet d'avoir une syntaxe plus courte que [les expressions de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function) et ne possède pas ses propres valeurs pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super), ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target). Les fonctions fléchées sont souvent [anonymes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name) et ne sont pas destinées à être utilisées pour déclarer des méthodes.
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## Syntaxe
 
@@ -53,7 +60,8 @@ f();
 
 Deux facteurs sont à l'origine de la conception des fonctions fléchées&nbsp;: une syntaxe plus courte et l'absence de `this` spécifique à la fonction. Sur ce dernier point, cela signifie qu'une fonction fléchée ne lie pas son propre {{jsxref("Opérateurs/L_opérateur_this","this")}} au sein de la fonction (il en va de même avec {{jsxref("Fonctions/arguments","arguments")}}, {{jsxref("Opérateurs/super","super")}} ou {{jsxref("Opérateurs/new.target","new.target")}}).
 
-> **Note :** Voir aussi l'article sur les fonctions fléchées présent sur <https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees> (l'article original en anglais est disponible [ici](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)).
+> [!NOTE]
+> Voir aussi l'article sur les fonctions fléchées présent sur <https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees> (l'article original en anglais est disponible [ici](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)).
 
 ### Syntaxe plus courte
 
@@ -119,7 +127,7 @@ function Personne() {
 }
 ```
 
-Autrement, on aurait pu utiliser une [fonction de liaison](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/bind) afin que la bonne valeur `this` soit passée à la fonction `grandir`.
+Autrement, on aurait pu utiliser une [fonction de liaison](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) afin que la bonne valeur `this` soit passée à la fonction `grandir`.
 
 Les fonctions fléchées ne créent pas de nouveau contexte, elles utilisent la valeur `this` de leur contexte. Aussi, si le mot-clé `this` est utilisé dans le corps de la fonction, le moteur recherchera la référence à cette valeur dans une portée parente. Le code qui suit fonctionne ainsi de la façon attendue car le `this` utilisé dans `setInterval` est le `this` de la portée de `Personne` :
 
@@ -138,7 +146,7 @@ var p = new Personne();
 
 #### Liens avec le mode strict
 
-Ici `this` provient du contexte englobant, les règles du [mode strict](/fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode) sont donc ignorées pour ce qui concerne `this`.
+Ici `this` provient du contexte englobant, les règles du [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) sont donc ignorées pour ce qui concerne `this`.
 
 ```js
 var f = () => {
@@ -181,7 +189,7 @@ console.log(ajouter.addViaCall(1));
 
 #### Pas de liaison pour `arguments`
 
-Les fonctions fléchées n'exposent pas d'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) : `arguments.length`, `arguments[0]`, `arguments[1]`, et autres ne font donc pas référence aux arguments passés à la fonction fléchés. Dans ce cas `arguments` est simplement une référence à la variable de même nom si elle est présente dans la portée englobante&nbsp;:
+Les fonctions fléchées n'exposent pas d'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) : `arguments.length`, `arguments[0]`, `arguments[1]`, et autres ne font donc pas référence aux arguments passés à la fonction fléchés. Dans ce cas `arguments` est simplement une référence à la variable de même nom si elle est présente dans la portée englobante&nbsp;:
 
 ```js
 var arguments = [1, 2, 3];
@@ -198,7 +206,7 @@ function toto() {
 toto(3); // 5
 ```
 
-Les fonctions fléchées n'ont donc pas leur propre objet `arguments`, mais dans la plupart des cas, [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste) représentent une bonne alternative&nbsp;:
+Les fonctions fléchées n'ont donc pas leur propre objet `arguments`, mais dans la plupart des cas, [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters) représentent une bonne alternative&nbsp;:
 
 ```js
 function toto() {
@@ -241,7 +249,7 @@ console.log(Toto.prototype);
 
 #### Utiliser le mot-clé `yield`
 
-Le mot-clé [`yield`](/fr/docs/Web/JavaScript/Reference/Opérateurs/yield) ne peut pas être utilisé dans le corps d'une fonction fléchée (sauf si cela intervient dans une autre fonction, imbriquée dans la fonction fléchée). De fait, les fonctions fléchéees ne peuvent donc pas être utilisées comme générateurs.
+Le mot-clé [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield) ne peut pas être utilisé dans le corps d'une fonction fléchée (sauf si cela intervient dans une autre fonction, imbriquée dans la fonction fléchée). De fait, les fonctions fléchéees ne peuvent donc pas être utilisées comme générateurs.
 
 #### Utiliser le mot-clé `new`
 

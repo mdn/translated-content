@@ -9,7 +9,23 @@ l10n:
 
 **`for await...of`** 문은 [동기 이터러블](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)뿐만 아니라 [비동기 이터러블 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)를 순환하는 루프를 생성합니다. 이 문은 [비동기 함수](/ko/docs/Web/JavaScript/Reference/Statements/async_function) 본문 내부 와 [모듈](/ko/docs/Web/JavaScript/Guide/Modules) 내부를 포함하여 [`await`](/ko/docs/Web/JavaScript/Reference/Operators/await)를 사용할 수 있는 맥락에서만 사용할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - For Await...Of", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield 1;
+  yield 2;
+}
+
+(async function () {
+  for await (const num of foo()) {
+    console.log(num);
+    // Expected output: 1
+
+    break; // Closes iterator, triggers return
+  }
+})();
+```
 
 ## 구문
 
@@ -167,7 +183,8 @@ for (const numOrPromise of generator()) {
 // 4
 ```
 
-> **참고:** 동기 제너레이터에서 거부된 프로미스 yield에 유의하세요. 이 경우 `for await...of`는 거부된 프로미스를 처리할 때 throw를 하고, 해당 제너레이터의 `finally` 블록을 **호출하지 않습니다**. 이것은 할당된 일부 리소스를 `try/finally`로 해제해야 하는 경우에 바람직하지 않을 수 있습니다.
+> [!NOTE]
+> 동기 제너레이터에서 거부된 프로미스 yield에 유의하세요. 이 경우 `for await...of`는 거부된 프로미스를 처리할 때 throw를 하고, 해당 제너레이터의 `finally` 블록을 **호출하지 않습니다**. 이것은 할당된 일부 리소스를 `try/finally`로 해제해야 하는 경우에 바람직하지 않을 수 있습니다.
 
 ```js
 function* generatorWithRejectedPromises() {

@@ -3,6 +3,8 @@ title: OpenSSL
 slug: Glossary/OpenSSL
 ---
 
+{{GlossarySidebar}}
+
 OpenSSL は、{{glossary("SSL")}} と {{glossary("TLS")}} のオープンソースの実装です。
 
 ## もっと学ぶ

@@ -3,8 +3,6 @@ title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 ---
 
-{{AddonSidebar}}
-
 <table class="fullwidth-table standard-table">
   <tbody>
     <tr>
@@ -34,11 +32,11 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
   </tbody>
 </table>
 
-浏览器按钮（browser action）指您的扩展在浏览器工具栏上所添加的按钮。该按钮有个图标，并可可选地拥有一个使用 HTML，CSS，和 JavaScript 指定内容的弹出窗口。
+浏览器按钮（browser action）指你的扩展在浏览器工具栏上所添加的按钮。该按钮有个图标，并可可选地拥有一个使用 HTML，CSS，和 JavaScript 指定内容的弹出窗口。
 
-如果您使用弹窗（popup），则该弹窗将在用户点击该按钮时打开，并且弹窗中你所提供的运行中的 JavaScript 将可处理用户与其的交互。如果您不使用弹窗，则会在用户点击该按钮时将点击事件传递给你扩展的 [background scripts](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) 中。
+如果你使用弹窗（popup），则该弹窗将在用户点击该按钮时打开，并且弹窗中你所提供的运行中的 JavaScript 将可处理用户与其的交互。如果你不使用弹窗，则会在用户点击该按钮时将点击事件传递给你扩展的 [background scripts](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) 中。
 
-您同样可以使用 [browserAction API](/zh-CN/Add-ons/WebExtensions/API/browserAction) 以编程的方式创建及控制浏览器按钮。
+你同样可以使用 [browserAction API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) 以编程的方式创建及控制浏览器按钮。
 
 ## 语法
 
@@ -62,7 +60,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
         <p>
           使用此项来包含一个样式表以使其与浏览器 UI 和其他使用了
           <code>browser_style</code> 属性的扩展外观上保持一致。虽然此键值默认为
-          <code>false</code>，还是建议您将其包含并设其为 <code>true</code>。
+          <code>false</code>，还是建议你将其包含并设其为 <code>true</code>。
         </p>
         <p>
           在 Firefox 中，该样式表详阅 chrome://browser/content/extension.css，OS
@@ -72,7 +70,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
           <a href="https://firefoxux.github.io/StyleGuide/#/controls"
             >Firefox Style Guide</a
           >
-          记述了为获得特定样式您所能为弹窗中元素应用的 class。
+          记述了为获得特定样式你所能为弹窗中元素应用的 class。
         </p>
         <p>
           <a
@@ -143,11 +141,11 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
         <p>
           该 HTML 文件可能会使用
           <code
-            ><a href="/zh-CN/docs/Web/HTML/Element/link">&#x3C;link></a></code
+            ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code
           >
           and
           <code
-            ><a href="/zh-CN/docs/Web/HTML/Element/script"
+            ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/script"
               >&#x3C;script></a
             ></code
           >
@@ -200,7 +198,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 "default_icon": "path/to/geo.svg"
 ```
 
-或者，您可以提供几个不同尺寸的图标，浏览器将选择最佳匹配。
+或者，你可以提供几个不同尺寸的图标，浏览器将选择最佳匹配。
 
 Firefox 中：
 
@@ -249,7 +247,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 浏览器按钮具有一个图标，一个标题，还有一个弹窗。弹窗会在用户点击按钮时出现。
 
-对于一个简易，但是完整，使用了浏览器按钮的扩展，参见[演练教程](/zh-CN/Add-ons/WebExtensions/Your_second_WebExtension)。
+对于一个简易，但是完整，使用了浏览器按钮的扩展，参见[演练教程](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)。
 
 ## 浏览器兼容性
 

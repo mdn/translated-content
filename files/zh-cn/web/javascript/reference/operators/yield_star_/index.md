@@ -3,8 +3,6 @@ title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 ---
 
-{{jsSidebar("Operators")}}
-
 **`yield*` 表达式**用于委托给另一个{{jsxref("Statements/function*", "generator")}} 或可迭代对象。
 
 ## 语法
@@ -108,9 +106,9 @@ console.log(result); // "foo"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [迭代器协议](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield", "yield")}}

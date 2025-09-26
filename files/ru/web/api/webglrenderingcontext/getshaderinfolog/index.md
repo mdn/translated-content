@@ -42,7 +42,7 @@ if (message.length > 0) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

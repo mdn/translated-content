@@ -1,13 +1,17 @@
 ---
-title: Flex アイテム
+title: Flex Item (フレックスアイテム)
 slug: Glossary/Flex_Item
+l10n:
+  sourceCommit: 3c5185e55298c2ca14e4e63913a50bb81e3c5609
 ---
 
-{{glossary("Flex Container")}} (`display: flex` または `display: inline-flex` が設定された要素) の直下の子要素が**「flex アイテム」**となります。
+{{GlossarySidebar}}
 
-Flex コンテナ内で直下に続くテキストも flex アイテムになります。
+{{glossary("Flex Container", "フレックスコンテナー")}}（`display: flex` または `display: inline-flex` が設定された要素）の直下の子要素は**フレックスアイテム**となります。
 
-## 関連項目
+フレックスコンテナー内で直下に続くテキストもフレックスアイテムになります。
+
+## 関連情報
 
 ### プロパティリファレンス
 
@@ -19,6 +23,6 @@ Flex コンテナ内で直下に続くテキストも flex アイテムになり
 
 ### 参考文献
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Ordering flex items](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)

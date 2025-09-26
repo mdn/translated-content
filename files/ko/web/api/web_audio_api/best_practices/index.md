@@ -17,7 +17,7 @@ Web Audio API를 가지고 사운드를 로딩하는 4가지의 주요한 방법
 
 그러나, 만약 버퍼 노드를 사용한다면 여러분은 더 많은 제어를 할 수 있습니다. 여러분은 파일을 요청하고 이것이 로딩되기를 기다려야 하지만 ([이 글의 이 섹션은](/ko/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample) 이것을 하는 좋은 방법을 보여줍니다), 그 다음에 여러분은 데이터에 직접 접근할 수 있는데, 이는 더욱 정밀한 조작이 가능함을 의미합니다.
 
-만약 여러분이 유저의 카메라나 마이크로부터의 오디오로 작업하는 방법을 찾고 있다면 여러분은 [Media Stream API](/ko/docs/Web/API/Media_Streams_API)와 {{domxref("MediaStreamAudioSourceNode")}} 인터페이스를 통해 그것에 접근할 수 있습니다. 이것은 WebRTC와 녹음이나 오디오 분석을 원하는 상황에 알맞습니다.
+만약 여러분이 유저의 카메라나 마이크로부터의 오디오로 작업하는 방법을 찾고 있다면 여러분은 [Media Stream API](/ko/docs/Web/API/Media_Capture_and_Streams_API)와 {{domxref("MediaStreamAudioSourceNode")}} 인터페이스를 통해 그것에 접근할 수 있습니다. 이것은 WebRTC와 녹음이나 오디오 분석을 원하는 상황에 알맞습니다.
 
 마지막 방법은 여러분만의 사운드를 생성하는 것인데, 이는 {{domxref("OscillatorNode")}}나 버퍼를 만들고 데이터를 채워넣는 방법으로 이루어질 수 있습니다. 오실레이터와 버퍼로 사운드를 생성하기 위해 [이 자습서에서 여러분만의 악기를 만드는 방법에 대해서](/ko/docs/Web/API/Web_Audio_API/Advanced_techniques) 알아보세요.
 
@@ -84,7 +84,7 @@ button.addEventListener(
 
 만약 여러분이 오디오를 켜고 끄는 버튼을 가지고 있다면, ARIA [`role="switch"`](/ko/docs/Web/Accessibility/ARIA/Roles/Switch_role) 특성을 그것에 사용하는 것은 보조 기술에 그 버튼의 정확한 목적이 무엇인지에 대한 신호를 보내고, 그럼으로써 앱을 더욱 접근 가능하게 만들기 위한 좋은 옵션입니다. [여기 어떻게 이것을 사용하는지에 대한 데모](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100)가 있습니다.
 
-여러분은 Web Audio API 내에서 많은 변화하는 값들을 가지고 작업하고 유저에게 이것들에 대한 제어를 제공하기를 원할 것이므로, [`range input`](/ko/docs/Web/HTML/Element/input/range)은 종종 사용할 제어의 좋은 선택입니다. 이것은 여러분이 최소와 최대값 뿐만 아니라 [`step`](/ko/docs/Web/HTML/Element/input#attr-step) 특성으로 증가량 또한 설정할 수 있으므로 좋은 옵션입니다.
+여러분은 Web Audio API 내에서 많은 변화하는 값들을 가지고 작업하고 유저에게 이것들에 대한 제어를 제공하기를 원할 것이므로, [`range input`](/ko/docs/Web/HTML/Element/input/range)은 종종 사용할 제어의 좋은 선택입니다. 이것은 여러분이 최소와 최대값 뿐만 아니라 [`step`](/ko/docs/Web/HTML/Element/input#step) 특성으로 증가량 또한 설정할 수 있으므로 좋은 옵션입니다.
 
 ## AudioParam 값 설정하기
 

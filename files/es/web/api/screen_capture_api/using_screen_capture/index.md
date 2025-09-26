@@ -9,7 +9,8 @@ l10n:
 
 En este artículo, examinaremos cómo utilizar la API de captura de pantalla y su método {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} para capturar parte o la totalidad de una pantalla para transmitir, grabar o compartir durante una sesión de conferencia [WebRTC](/es/docs/Web/API/WebRTC_API).
 
-> **Nota:** Puede ser útil tener en cuenta que las versiones recientes [adapter.js shim de WebRTC](https://github.com/webrtcHacks/adapter) incluyen implementaciones de `getDisplayMedia()` para habilitar el uso compartido de pantalla en navegadores que lo admiten pero no implementar la API estándar actual. Esto funciona al menos con Chrome, Edge y Firefox.
+> [!NOTE]
+> Puede ser útil tener en cuenta que las versiones recientes [adapter.js shim de WebRTC](https://github.com/webrtcHacks/adapter) incluyen implementaciones de `getDisplayMedia()` para habilitar el uso compartido de pantalla en navegadores que lo admiten pero no implementar la API estándar actual. Esto funciona al menos con Chrome, Edge y Firefox.
 
 ## Captura de contenido de la pantalla
 
@@ -22,9 +23,8 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions,
-    );
+    captureStream =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     console.error(`Error: ${err}`);
   }
@@ -75,11 +75,13 @@ Los objetos `video` y `audio` pasados al objeto de opciones también pueden cont
 
 Ninguna de las restricciones se aplica de ninguna manera hasta que se haya seleccionado el contenido a capturar. Las restricciones alteran lo que ve en el flujo resultante. Por ejemplo, si especifica una restricción {{domxref("MediaTrackConstraints.width", "width")}} para el video, se aplica escalando el video después de que el usuario seleccione el área para compartir. No establece una restricción sobre el tamaño de la fuente en sí.
 
-> **Nota:** Las restricciones _nunca_ causan cambios en la lista de fuentes disponibles para la captura por parte de la API de uso compartido de pantalla. Esto garantiza que las aplicaciones web no puedan obligar al usuario a compartir contenido específico restringiendo la lista de fuentes hasta que solo quede un elemento.
+> [!NOTE]
+> Las restricciones _nunca_ causan cambios en la lista de fuentes disponibles para la captura por parte de la API de uso compartido de pantalla. Esto garantiza que las aplicaciones web no puedan obligar al usuario a compartir contenido específico restringiendo la lista de fuentes hasta que solo quede un elemento.
 
 Mientras la captura de pantalla está en uso, la máquina que comparte el contenido de la pantalla mostrará algún tipo de indicador para que el usuario sepa que se está compartiendo.
 
-> **Nota:** Por motivos de privacidad y seguridad, las fuentes de pantalla compartida no se pueden enumerar mediante {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Relacionado con esto, el evento {{domxref("MediaDevices/devicechange_event", "devicechange")}} nunca se envía cuando hay cambios en las fuentes disponibles para `getDisplayMedia()`.
+> [!NOTE]
+> Por motivos de privacidad y seguridad, las fuentes de pantalla compartida no se pueden enumerar mediante {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Relacionado con esto, el evento {{domxref("MediaDevices/devicechange_event", "devicechange")}} nunca se envía cuando hay cambios en las fuentes disponibles para `getDisplayMedia()`.
 
 ### Captura de audio compartido
 
@@ -213,9 +215,8 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions,
-    );
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
   } catch (err) {
     console.error(err);
@@ -320,7 +321,7 @@ El producto final se ve así. Si su navegador es compatible con la API de captur
 
 ## Seguridad
 
-Para poder funcionar cuando la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) está habilitada, necesitarás el permiso `display-capture`. Esto se puede hacer usando el encabezado {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} o, si está usando la API de captura de pantalla en un {{HTMLElement("iframe") }}, el atributo [`allow`](/es/docs/Web/HTML/Element/iframe#allow) del elemento `<iframe>`.
+Para poder funcionar cuando la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) está habilitada, necesitarás el permiso `display-capture`. Esto se puede hacer usando el encabezado {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} o, si está usando la API de captura de pantalla en un {{HTMLElement("iframe") }}, el atributo [`allow`](/es/docs/Web/HTML/Reference/Elements/iframe#allow) del elemento `<iframe>`.
 
 Por ejemplo, esta línea en los encabezados HTTP habilitará la API de captura de pantalla para el documento y cualquier elemento {{HTMLElement("iframe")}} incrustado que se cargue desde el mismo origen:
 

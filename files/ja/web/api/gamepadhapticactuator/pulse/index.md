@@ -20,7 +20,8 @@ gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ...
 - _duration_
   - : パルスの持続時間をミリ秒で表す double 。
 
-> **メモ:** `pulse()` への繰り返しの呼び出しは、それらがまた進行中である場合、以前の呼び出しをオーバーライドします。
+> [!NOTE]
+> `pulse()` への繰り返しの呼び出しは、それらがまた進行中である場合、以前の呼び出しをオーバーライドします。
 
 ### 返り値
 
@@ -36,7 +37,7 @@ TBC
 
 ## ブラウザーの互換性
 
-{{Compat("api.GamepadHapticActuator.pulse")}}
+{{Compat}}
 
 ## 関連情報
 

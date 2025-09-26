@@ -1,185 +1,196 @@
 ---
-title: CSS グリッドにおける線に基づく配置
+title: 線ベースの配置を使用したグリッドレイアウト
+short-title: 線ベースの配置の使い方
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)ガイドでは、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
 
-[グリッドレイアウトの基本的な考え方](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)の記事では、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
+グリッドの探索は、番号が付けられた線から始めるのが最も論理的です。グリッドレイアウトを使用する場合、常に番号が付けられた線があるからです。線は列と行に番号が付けられ、`1` から順に番号が振られます。なお、グリッドは、文書の書字方向に従って番号が振られます。英語などの左書きの言語では、1 本目はグリッドの左側にあります。アラビア語などの右書きの言語で作業している場合、1 本目はグリッドの右側にあります。書字方向とグリッドの相互作用の詳細については、[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)のガイドで学びます。
 
-グリッドレイアウトを使用する際には、常に番号付きの線があるので、番号付きの線からグリッドの探求を始めるのが最も論理的な方法です。グリッドには列と行にそれぞれ番号が振られており、1 から順番に並んでいます。ただし、グリッドは文書の記述方法に応じて番号が振られます。英語のような左書きの言語では、行 1 はグリッドの左側にあります。アラビア語のように右書きの言語では、行 1 はグリッドの右端になります。書字方向とグリッドの相互作用については、後のガイドで詳しく説明します。
+### 基本的な例
 
-<h3 id="A_basic_example">基本的な例</h3>
-
-非常に簡単な例として、3 本の列トラックと 3 本の行トラックを持つグリッドを考えてみましょう。これにより、各次元に 4 本の線ができます。
-
-グリッドコンテナーの中には、4 つの子要素があります。これらをグリッドに何も配置しなければ、自動配置ルールに従って、最初の 4 つのセルにそれぞれ 1 つのアイテムが配置されます。[Firefox グリッドハイライター](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)を使うと、グリッドの列と行がどのように定義されているかがわかります。
-
-![開発ツールで強調表示されたグリッド](3_hilighted_grid.png)
+基本的な例として、3 本の列トラックと 3 本の行トラックを持つグリッドを作成します。これにより、それぞれの次元に 4 本の線ができます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, 100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 ```
 
+グリッドコンテナーの中には、 4 つの子要素が含まれています。
+
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 {{ EmbedLiveSample('A_basic_example', '300', '330') }}
 
-<h2 id="Positioning_items_by_line_number">線番号によるアイテムの配置</h2>
+グリッドコンテナーの中には、4 つの子要素があります。これらをグリッドに何も配置しなければ、自動配置ルールに従って、最初の 4 つのセルにそれぞれ 1 つのアイテムが配置されます。ブラウザーの開発者ツールを使用すると、グリッドの列と行がどのように定義されているかを調べることができます。
 
-これらのアイテムをグリッド上のどこに配置するかは、線ベースの配置を使って制御できます。最初のアイテムは、グリッドの左端から始まり、1 列分のトラックに広がるようにしたいと思います。また、グリッドの一番上にある 1 行目の線から始まり、4 行目の線までの範囲に配置します。
+![開発ツールで強調表示されたグリッド](highlighted_grid.png)
+
+## 線番号によるアイテムの配置
+
+線ベースの配置を使用すると、これらのアイテムがグリッド上のどこに配置されるかを制御することができます。 {{cssxref("grid-column-start")}} および {{cssxref("grid-column-end")}} プロパティを使用すると、最初のアイテムをグリッドの左端から開始し、単一の列トラックにまたがって配置することができます。 {{cssxref("grid-row-start")}} および {{cssxref("grid-row-end")}} で、アイテムをグリッドの上部にある 1 行目に開始し、4 行目までまたがらせることができます。
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 ```
 
-あるアイテムを位置指定すると、グリッド上の他のアイテムは、自動配置ルールに従って続いて配置されます。この仕組みについては後ほど詳しく紹介しますが、グリッドを操作していると、位置指定されていないアイテムがグリッドの空きセルにレイアウトされていくのがわかります。
+いくつかのアイテムを位置指定すると、グリッド上の他のアイテムは自動配置ルールを使用してレイアウトされ続けます。この動作については、[グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) ガイドで説明しています。ここでは、グリッドが、配置されていないアイテムをグリッドの空のセルにどのようにレイアウトしているかを観察してください。
 
-それぞれのアイテムに対応して、4 つのアイテムを行と列のトラックにまたがって配置します。なお、必要に応じてセルを空けておくこともできます。グリッドレイアウトの優れた点の 1 つは、余白を残したままのデザインが実現できることです。
+各アイテムに同じプロパティを使用しますが、値はそれぞれ異なる値を設定して、行と列のトラックにまたがる 4 つのアイテムをすべて配置します。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 3;
-   grid-row-start: 1;
-   grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
-   grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 ```
 
 {{ EmbedLiveSample('Positioning_items_by_line_number', '300', '330') }}
 
+必要に応じて、セルを空白のままにしておくことができることに注意してください。グリッドレイアウトのとても良い点の 1 つは、ハックを使用せずにデザインに空白を含めることができることです。
+
 ## `grid-column` および `grid-row` の一括指定
 
-ここでは、各アイテムを配置するためにかなり多くのコードを使用しています。当然ながら一括指定プロパティがあります。{{cssxref("grid-column-start")}} と {{cssxref("grid-column-end")}} のプロパティは併せて {{cssxref("grid-column")}} となり、{{cssxref("grid-row-start")}} と {{cssxref("grid-row-end")}} は併せて {{cssxref("grid-row")}} となります。
+前の例では、各アイテムを配置するためにかなり多くのコードを使用しています。当然のことですが、[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)があることはご存じでしょう。 {{cssxref("grid-column-start")}} と {{cssxref("grid-column-end")}} のプロパティは併せて {{cssxref("grid-column")}} となり、{{cssxref("grid-row-start")}} と {{cssxref("grid-row-end")}} は併せて {{cssxref("grid-row")}} となります。この例では、これらの一括指定プロパティを使用して、上記の例を再現します。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 / 2;
-   grid-row: 1 / 4;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 / 4;
-   grid-row: 1 / 3;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 / 3;
-   grid-row: 1 /  2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
 }
 ```
 
@@ -194,54 +205,56 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 つまり、基本的な個別指定で例を表すと次のようになります。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
 }
 ```
 
@@ -252,51 +265,53 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 一括指定は以下のコードのようになります。スラッシュはなく、2 番目の値は 1 つのトラックにまたがるアイテムのみになります。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 ;
-   grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 ;
-   grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 ;
-   grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 ```
 
@@ -304,209 +319,213 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ## `grid-area` プロパティ
 
-さらに一歩進んで、各領域を単一のプロパティ {{cssxref("grid-area")}} で定義することができます。 grid-area の値の順番は以下の通りです。
+さらに一歩進んで、各領域を単一のプロパティ {{cssxref("grid-area")}} で定義することができます。 `grid-area` の値の順番は以下の通りです。
 
-- grid-row-start
-- grid-column-start
-- grid-row-end
-- grid-column-end
+– {{cssxref("grid-row-start")}}
+– {{cssxref("grid-column-start")}}
+– {{cssxref("grid-row-end")}}
+– {{cssxref("grid-column-end")}}
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
-   grid-area: 1 / 3 / 3 / 4;
+  grid-area: 1 / 3 / 3 / 4;
 }
 .box3 {
-   grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 2 / 2 / 3;
 }
 .box4 {
-   grid-area: 3 / 2 / 4 / 4;
+  grid-area: 3 / 2 / 4 / 4;
 }
 ```
 
 {{ EmbedLiveSample('The_grid-area_property', '300', '330') }}
 
-この `grid-area` の値の順序は、少し奇妙に思えるかもしれません。これは、例えば、マージンやパディングを一括指定として指定するときの順番とは逆です。これは、グリッドが CSS Writing Modes 仕様書で定義されているフローに関連した方向を使用しているためだと理解するとよいでしょう。グリッドと書字方向の連携については後述しますが、ここではフローに関連した方向の概念が 4 つあります。
+`grid-area` の値のこの順序は、少し奇妙に見えるかもしれません。これは、例えば、マージンやパディングを一括指定で指定する場合の方向と逆になっているからです。これは、CSS グリッドレイアウトが [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)で定義されているフロー関連方向を使用しているためであることを理解すると理解しやすいでしょう。グリッドが書き込みモードでどのように動作するのかについては、[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)で説明しています。ここでは、4 つの{{glossary("Flow relative values", "フロー関連")}}方向の概念について考えてみましょう。
 
-- block-start
-- block-end
-- inline-start
-- inline-end
+- `block-start`
+- `block-end`
+- `inline-start`
+- `inline-end`
 
-ここでは、左書きの言語である英語で考えてみます。 block-start はグリッドコンテナーの先頭の行の線で、 block-end はコンテナーの末尾の行の線です。inline-start は左の列の線で、inline-start は常に現在の書字方向でテキストが書かれる位置であり、inline-end はグリッドの最終列の線です。
+ここでは、左書きの言語である英語で考えてみます。 `block-start` はグリッドコンテナーの行方向の先頭の線で、 `block-end` はコンテナーの行方向の末尾の線です。 `inline-start` は常に現在の書字方向でテキストが書かれる位置であるため、 `inline-start` は列方向の左端の線であり、 `inline-end` はグリッドの列方向の最後の線です。
 
-`grid-area` プロパティを使用してグリッド領域を指定する際には、まず、両方の先頭の線、 `block-start` と `inline-start` を定義し、次に両方の末尾の線、 `block-end` と `inline-end` を定義します。top、right、bottom、leftという物理的なプロパティに慣れていると、最初は変わっているように見えますが、ウェブサイトが書字方向によって多数の方向があると考えれば、より納得がいきます。
+`grid-area` プロパティを使用してグリッド領域を指定する際には、まず、両方の先頭の線、 `block-start` と `inline-start` を定義し、次に両方の末尾の線、 `block-end` と `inline-end` を定義します。{{glossary("physical properties", "物理的なプロパティ")}}（`top`、`right`、`bottom`、`left`）に慣れていると、最初は奇妙に見えますが、ウェブサイトが書字方向によって多数の方向があると考えれば、より納得がいきます。
 
 ## 逆に数える
 
-また、グリッドのブロックやイン線の端から逆に数えることもできます。英語の場合は、右の列の線と最後の行の線になります。これらの線は `-1` として扱われ、そこから逆算することができます。つまり、最後から 2 行目は `-2` となります。最後の線は、*明示的グリッド* (`grid-template-columns` と `grid-template-rows` で定義されるグリッド) の最後の線であり、その外で追加された*暗黙的グリッド*である行や列は考慮されないことに注意しましょう。
+また、グリッドのブロックやインラインの端から逆に数えることもできます。英語の場合は、右の列の線と最後の行の線になります。明示的グリッドの末尾の線は `-1` として扱われ、そこから逆算することができます。つまり、最後から 2 行目は `-2` となります。
+
+負の値は明示的なグリッドにのみ適用されることに注意してください。最後の線は、明示的グリッド（`grid-template-columns` と `grid-template-rows` で定義されるグリッド）の最後の線であり、その外で追加された暗黙的グリッドである行や列は考慮されないことに注意しましょう。
 
 次の例では、アイテムを配置する際に、グリッドの右と下から行うことで、それまでのレイアウトを反転させています。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: -1;
-   grid-column-end: -2;
-   grid-row-start: -1;
-   grid-row-end: -4;
+  grid-column-start: -1;
+  grid-column-end: -2;
+  grid-row-start: -1;
+  grid-row-end: -4;
 }
 .box2 {
-   grid-column-start: -3;
-   grid-column-end: -4;
-   grid-row-start: -1;
-   grid-row-end: -3;
+  grid-column-start: -3;
+  grid-column-end: -4;
+  grid-row-start: -1;
+  grid-row-end: -3;
 }
 .box3 {
-   grid-column-start: -2;
-   grid-column-end: -3;
-   grid-row-start: -1;
-   grid-row-end: -2;
+  grid-column-start: -2;
+  grid-column-end: -3;
+  grid-row-start: -1;
+  grid-row-end: -2;
 }
 .box4 {
-   grid-column-start: -2;
-   grid-column-end: -4;
-   grid-row-start: -3;
-   grid-row-end: -4;
+  grid-column-start: -2;
+  grid-column-end: -4;
+  grid-row-start: -3;
+  grid-row-end: -4;
 }
 ```
 
 {{ EmbedLiveSample('Counting_backwards', '300', '330') }}
 
-### アイテムをグリッド上に伸ばす
+### グリッドをまたがってアイテムを伸ばす
 
 グリッドの先頭と末尾の線を指定することができると、アイテムをグリッド全体に引き伸ばせるので便利です。
 
 ```css
 .item {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 ```
 
 ## 溝または路地
 
-CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} プロパティを使って、列と行のトラックの間に溝を追加する機能があります。これらは、段組みレイアウトにおける {{cssxref("column-gap")}} プロパティと同様の働きをするギャップを指定します。
+CSS グリッドでは、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} プロパティ、または {{cssxref("gap")}} 一括指定を使って、列と行のトラックの間に溝を追加する機能があります。
 
-> **メモ:** グリッドがブラウザーに初めて搭載されたとき、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティには、それぞれ `grid-` という接頭辞が付けられ、`grid-column-gap`、`grid-row-gap`、`grid-gap` となっていました。
->
-> ブラウザーのレンダリングエンジンはこの接頭辞を削除するように更新されていますが、接頭辞付きのバージョンは別名として維持されるため、安全に使用することができます。
-
-ギャップはグリッドのトラック間にのみ現れ、コンテナーの上下左右に余白を追加することはありません。これらのプロパティをグリッドコンテナーに使用することで、先ほどの例にギャップを追加することができます。
+間隔はグリッドのトラック間にのみ現れ、コンテナーの上下左右に余白を追加することはありません。これらのプロパティをグリッドコンテナーに使用することで、先ほどの例に間隔を追加することができます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-    grid-column: 1 ;
-    grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-    grid-column: 3 ;
-    grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-    grid-column: 2 ;
-    grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-    grid-column: 2 / 4;
-    grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    column-gap: 20px;
-    row-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  column-gap: 20px;
+  row-gap: 1em;
 }
 ```
 
@@ -514,81 +533,83 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 
 ### gap 一括指定
 
-この 2 つのプロパティは、{{cssxref("gap")}} という省略形で表すこともできます。`gap` に 1 つの値だけを指定すると、列と行の両方のギャップに適用されます。2 つの値を指定した場合は、1 つ目の値が `row-gap` に、2 つ目の値が `column-gap` に使用されます。
+この 2 つのプロパティは、 {{cssxref("gap")}} という一括指定で表すこともできます。`gap` に 1 つの値だけを指定すると、列と行の両方の間隔に適用されます。2 つの値を指定した場合は、1 つ目の値が `row-gap` に、2 つ目の値が `column-gap` に使用されます。
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    gap: 1em 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  gap: 1em 20px;
 }
 ```
 
-線ベースのアイテムの配置において、ギャップはあたかも線の幅が増えたかのように機能します。その線から始まるものはギャップの後に始まり、ギャップを処理したり、ギャップに何かを配置することはできません。通常のトラックのように動作するガッターが必要な場合は、もちろん、そのためのトラックを定義することができます。
+線ベースのアイテムの配置において、間隔はあたかも線の幅が増えたかのように機能します。その線から始まるものは間隔の後に始まり、間隔を処理したり、間隔に何かを配置することはできません。通常のトラックと同様に機能する溝が必要な場合は、そのためのトラックを定義することができます。
 
 ## `span` キーワードの使用
 
-先頭の線と末尾の線を番号で指定するだけでなく、先頭の線を指定してから領域をまたぐトラックの数を指定することもできます。
+先頭の線と最後の線を数値で指定する以外に、`span` キーワードを使用して、先頭の線と、その領域に含める予定のトラックの数を指定することができます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-    grid-column: 1;
-    grid-row: 1 / span 3;
+  grid-column: 1;
+  grid-row: 1 / span 3;
 }
 .box2 {
-    grid-column: 3;
-    grid-row: 1 / span 2;
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 .box3 {
-    grid-column: 2;
-    grid-row: 1;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-    grid-column: 2 / span 2;
-    grid-row: 3;
+  grid-column: 2 / span 2;
+  grid-row: 3;
 }
 ```
 
 {{ EmbedLiveSample('Using_the_span_keyword', '300', '330') }}
 
-また、`grid-row-start`/`grid-row-end` や `grid-column-start`/`grid-column-end` の値に `span` キーワードを使用することもできます。次の 2 つの例では、同じグリッド領域を作成します。最初の例では、先頭の行の線を設定し、次に末尾の行を設定し、3 本にまたがるようにしたいと説明しています。領域は 1 本目から始まり、3 本目から 4 本目までとなります。
+また、`grid-row-start`/`grid-row-end` や `grid-column-start`/`grid-column-end` の値に `span` キーワードを使用することもできます。次の 2 つの例では、同じグリッド領域を作成します。まず、行方向の先頭の線を設定し、次に行方向の末尾を設定し、領域が 3 トラックにまたがるようにしたいと指定しています。この領域は 1 本目から始まり、 1 本目から数えて 3 本目で終わるので、 4 本目で終わります。
 
 ```css
 .box1 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 3;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 3;
 }
 ```
 
@@ -596,12 +617,12 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 
 ```css
 .box1 {
-    grid-column-start: 1;
-    grid-row-start: span 3;
-    grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: span 3;
+  grid-row-end: 4;
 }
 ```
 
 グリッドにおける線ベースの配置に慣れるために、列数の異なるグリッドにアイテムを配置して、一般的なレイアウトをいくつか作ってみましょう。すべてのアイテムを配置しなくても、残ったアイテムは自動配置のルールに従って配置されることを覚えておいてください。このようにして、思い通りのレイアウトになることもありますが、思いがけないところにアイテムが表示されている場合は、そのアイテムの位置が設定されているかどうかを確認してください。
 
-また、このように明示的に配置すると、グリッド上のアイテム同士が重なってしまうことがあります。いい効果が得られることもありますが、先頭の線や末尾の線の指定を間違えると、間違って重なってしまうこともあります。[Firefox グリッドハイライター](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)は、特にグリッドが非常に複雑な場合、学習の際にとても役立ちます。
+また、このように明示的に配置すると、グリッド上のアイテム同士が重なってしまうことがあります。アイテムが重なることで、素敵な効果を生むこともできますが、開始線や終了線を間違って指定すると、不適切な重なりが生じる場合があります。ブラウザーの開発者ツールを使用してグリッドを検査すると、学習中にこのような問題を発見するのに非常に役立ちます。特に、グリッドが非常に複雑な場合は、この方法が有効です。

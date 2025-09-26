@@ -1,11 +1,11 @@
 ---
-title: "::spelling-error"
+title: ::spelling-error
 slug: Web/CSS/::spelling-error
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-El [pseudo-elemento](/en/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::spelling-error`** representa un segmento de texto que el {{glossary("user agent")}} ha marcado como deletreado incorrectamente.
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::spelling-error`** representa un segmento de texto que el {{glossary("user agent")}} ha marcado como deletreado incorrectamente.
 
 ```css
 ::spelling-error {

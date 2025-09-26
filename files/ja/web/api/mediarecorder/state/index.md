@@ -28,7 +28,7 @@ record.onclick = () => {
   console.log(mediaRecorder.state);
   // Will return "recording"
   console.log("recorder started");
-}
+};
 ```
 
 ## 使用書

@@ -12,7 +12,7 @@ Console API изначально было собственным API с разл
 - [Google Chrome DevTools implementation](https://developers.google.com/chrome-developer-tools/docs/console-api)
 - [Safari DevTools implementation](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
 
-Использование крайне простое — объект {{domxref("console")}} ({{domxref("window.console")}} в браузерах или {{domxref("WorkerGlobalScope.console")}} в Web Worker) содержит множество методов, которые вы можете вызвать для выполнения отладки. В основном используется для вывода [веб-консоль](/ru/docs/Tools/Web_Console) различных значений.
+Использование крайне простое — объект {{domxref("console")}} ({{domxref("window.console")}} в браузерах или {{domxref("WorkerGlobalScope.console")}} в Web Worker) содержит множество методов, которые вы можете вызвать для выполнения отладки. В основном используется для вывода [веб-консоль](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) различных значений.
 
 Один из самых часто используемых методов {{domxref("console.log")}}, который используют для вывода текущего значения переменной.
 
@@ -30,7 +30,7 @@ let myString = "Hello world";
 console.log(myString);
 ```
 
-Смотрите больше примеров на странице [Console](/ru/docs/Web/API/Console#Usage).
+Смотрите больше примеров на странице [Console](/ru/docs/Web/API/console#usage).
 
 ## Спецификации
 
@@ -42,6 +42,6 @@ console.log(myString);
 
 ## Смотрите также
 
-- [Инструменты разработчика](/ru/docs/Tools)
-- [Веб-консоль](/ru/docs/Tools/Web_Console) — как Веб-консоль в Firefox работает с вызовами Console API
-- [Отладка удалённых скриптов](/ru/docs/Tools/Remote_Debugging) — как увидеть консоль, когда выполняется отладка на мобильных устройствах
+- [Инструменты разработчика](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Веб-консоль](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — как Веб-консоль в Firefox работает с вызовами Console API
+- [Отладка удалённых скриптов](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — как увидеть консоль, когда выполняется отладка на мобильных устройствах

@@ -7,7 +7,7 @@ slug: Web/CSS/width
 
 ## Resumo
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **width** determina a largura da área de conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area) fica dentro do preenchimento, da borda, e da margem de um elemento.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **width** determina a largura da área de conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area) fica dentro do preenchimento, da borda, e da margem de um elemento.
 
 As propriedades {{cssxref("min-width")}} e {{cssxref("max-width")}} sobrescrevem o {{cssxref("width")}}.
 
@@ -59,9 +59,7 @@ width: unset;
 - `available` {{experimental_inline}}
   - : Do bloco contendo a largura menos a margin horizontal, borda ou preenchimento.
 - `fit-content` {{experimental_inline}}
-
   - : A largura:
-
     - do comprimento interno mínimo.
     - do menor comprimento interno preferível e da largura disponível.
 
@@ -80,7 +78,9 @@ p.douradinho {
 ```
 
 ```html
-<p class="douradinho">A comunidade Mozilla produz diversos softwares incríveis.</p>
+<p class="douradinho">
+  A comunidade Mozilla produz diversos softwares incríveis.
+</p>
 ```
 
 {{EmbedLiveSample('Largura_padrão', '500px', '64px')}}
@@ -131,14 +131,16 @@ p.douradinho {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
 }
 ```
 
 ```html
-<p class="maxgreen">A comunidade Mozilla produz diversos softwares incríveis.</p>
+<p class="maxgreen">
+  A comunidade Mozilla produz diversos softwares incríveis.
+</p>
 ```
 
 {{EmbedLiveSample('Exemplo utilizando "max-content"', '500px', '64px')}}
@@ -148,7 +150,7 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
+  width: -moz-min-content; /* Firefox */
   width: -webkit-min-content; /* Chrome */
 }
 ```
@@ -161,18 +163,12 @@ p.minblue {
 
 ## Especificações
 
-| Especificação                                                                                | Status                                   | Comentários                                                                                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-width-and-height-properties', 'width')}} | {{Spec2('CSS3 Box')}}             | Adicionadas as palavras-chave `max-content`, `min-content`, `available`, `fit-content`, `border-box`, `content-box` |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'width')}}             | {{Spec2('CSS3 Transitions')}} | Lista a largura como animável.                                                                                      |
-| {{SpecName('CSS2.1', 'visudet.html#the-width-property', 'width')}}     | {{Spec2('CSS2.1')}}                 | Determina em qual elemento vai ser aplicado.                                                                        |
-| {{SpecName('CSS1', '#width', 'width')}}                                         | {{Spec2('CSS1')}}                 | Definição inicial                                                                                                   |
-| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}         | {{Spec2('CSS3 Sizing')}}         | Adiciona novas palavras-chave para largura e altura.                                                                |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.width")}}
+{{Compat}}
 
 ## Veja também
 
-- [box model](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

@@ -7,20 +7,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 
 **`unshift()`** 方法将指定元素添加到数组的开头，并返回数组的新长度。
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
 
 ## 语法
 
 ```js-nolint
 unshift()
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, /* …, */ elementN)
 ```
 
 ### 参数
 
-- `elementN`
+- `element1`、…、`elementN`
   - : 添加到 `arr` 开头的元素。
 
 ### 返回值
@@ -108,7 +118,7 @@ console.log(plainObj);
 ## 参见
 
 - [`core-js` 中 `Array.prototype.unshift` 的 Polyfill，并对此方法进行了修复](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}

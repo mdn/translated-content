@@ -5,7 +5,7 @@ slug: Web/API/Page_Visibility_API
 
 {{DefaultAPISidebar("Page Visibility API")}}
 
-A **API de visibilidade de página** deixa você saber quando uma página da web está visível ou em foco. Com a navegação em abas, existem razões para que quaisquer páginas da web que estejam sendo executadas em segundo plano e não visíveis para o usuário. Quando o usuário minimiza a página ou muda para outra aba, a API envia um evento {{event("visibilitychange")}} informando o estado de visibilidade da página. Você pode detectar o evento e realizar algumas ações ou modificar o seu comportamento. Por exemplo, se a sua aplicação web estiver reproduzindo um video, ela pode pausar durante o momento que o usuário estiver olhando para outra aba, e reproduz novamente quando o usuário retorna para a aba. O usuário não perde nenhuma parte do video e pode continuar assistindo.
+A **API de visibilidade de página** deixa você saber quando uma página da web está visível ou em foco. Com a navegação em abas, existem razões para que quaisquer páginas da web que estejam sendo executadas em segundo plano e não visíveis para o usuário. Quando o usuário minimiza a página ou muda para outra aba, a API envia um evento [`visibilitychange`](/pt-BR/docs/Web/API/Document/visibilitychange_event) informando o estado de visibilidade da página. Você pode detectar o evento e realizar algumas ações ou modificar o seu comportamento. Por exemplo, se a sua aplicação web estiver reproduzindo um video, ela pode pausar durante o momento que o usuário estiver olhando para outra aba, e reproduz novamente quando o usuário retorna para a aba. O usuário não perde nenhuma parte do video e pode continuar assistindo.
 
 ### Benefícios
 
@@ -151,5 +151,5 @@ Os estados de visibilidade de {{HTMLElement("iframe")}} são os mesmos do docume
 
 ## Veja também
 
-- Descrição da [API de Visibilidade de Página](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) do IEBlog.
-- Descrição da [API de visibilidade de Página](http://code.google.com/chrome/whitepapers/pagevisibility.html) do Google
+- Descrição da [API de Visibilidade de Página](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) do IEBlog.
+- Descrição da [API de visibilidade de Página](https://code.google.com/chrome/whitepapers/pagevisibility.html) do Google

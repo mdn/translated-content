@@ -9,9 +9,21 @@ El constructor **`RegExp`** crea un objeto de expresión regular para hacer coin
 
 Para ver la introducción a las expresiones regulares, lee el {{JSxRef("../Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}.
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 ## Sintaxis
 
@@ -26,13 +38,11 @@ RegExp(patrón[, banderas])
 ### Parámetros
 
 - `patrón`
-
   - : El texto de la expresión regular.
 
     A partir de ES5, también puede ser otro objeto o `RegExp` literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir {{JSxRef("../Guide/Regular_Expressions", "caracteres especiales", "#Usar_caracteres_especiales")}} para que coincidan con un rango de valores más amplio que el de una cadena literal.
 
 - `banderas`
-
   - : Si se especifica, `banderas` es una cadena que contiene las banderas para agregar.
 
     Alternativamente, si se proporciona un objeto para el patrón, la cadena `banderas` reemplazará cualquiera de las banderas de ese objeto (y `lastIndex` se restablecerá a `0`) (a partir de ES2015).
@@ -40,7 +50,6 @@ RegExp(patrón[, banderas])
     Si no se especifica `banderas` y se proporciona un objeto de expresiones regulares, las banderas de ese objeto (y el valor de `lastIndex`) se copiarán.
 
     `banderas` puede contener cualquier combinación de los siguientes caracteres:
-
     - `g` (coincidencia global)
       - : Encuentra todas las coincidencias en lugar de detenerse después de la primera.
     - `i` (ignorar mayúsculas y minúsculas)
@@ -50,7 +59,7 @@ RegExp(patrón[, banderas])
     - `s` («_dotAll_» o punto para todo)
       - : Permite que el punto (`.` coincida con nuevas líneas o no.
     - `u` (unicode)
-      - : Trata el `patrón` como una secuencia de puntos de código Unicode. (Consulta también [Cadenas binarias](/es/docs/Web/API/DOMString/Binary)).
+      - : Trata el `patrón` como una secuencia de puntos de código Unicode. (Consulta también [Cadenas binarias](/es/docs/Web/API/Window/btoa)).
     - `y` (sticky)
       - : Coincide solo con el índice indicado por la propiedad `lastIndex` de esta expresión regular en la cadena destino. No intenta coincidir con índices posteriores.
 

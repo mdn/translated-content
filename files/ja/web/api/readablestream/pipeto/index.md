@@ -1,8 +1,9 @@
 ---
-title: ReadableStream.pipeTo()
+title: "ReadableStream: pipeTo() メソッド"
+short-title: pipeTo()
 slug: Web/API/ReadableStream/pipeTo
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
 {{APIRef("Streams")}}
@@ -21,14 +22,11 @@ pipeTo(destination, options)
 ### 引数
 
 - `destination`
-
   - : {{domxref("ReadableStream")}} の最終的な宛先として機能する {{domxref("WritableStream")}}。
 
 - `options` {{optional_inline}}
-
   - : `writable` ストリームにパイプ接続するときに使用するオプションです。
-    利用できるオプションは以下の通り。
-
+    利用できるオプションは以下の通りです。
     - `preventClose`
       - : これを `true` に設定すると、入力元の `ReadableStream` が閉じられても、出力先の `WritableStream` が閉じられることはなくなります。
         このメソッドは、この処理が完全に終了すると履行されるプロミスを返します。ただし、出力先を閉じる際にエラーが発生した場合は、そのエラーで拒否されます。
@@ -56,11 +54,24 @@ pipeTo(destination, options)
 
 ```js
 // 元の画像を読み取る
-fetch('png-logo.png')
-// その body を ReadableStream として取得
-.then((response) => response.body)
-.then((body) => body.pipeThrough(new PNGTransformStream()))
-.then((rs) => rs.pipeTo(new FinalDestinationStream()))
+fetch("png-logo.png")
+  // その body を ReadableStream として取得
+  .then((response) => response.body)
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => rs.pipeTo(new FinalDestinationStream()));
+```
+
+同じ例で {{jsxref("Operators/await", "await")}} 使用すると次のようになります。
+
+```js
+(async () => {
+  // 元の画像を読み取る
+  const response = await fetch("png-logo.png");
+  // その body を ReadableStream として取得
+  response.body
+    .pipeThrough(new PNGTransformStream())
+    .pipeTo(new FinalDestinationStream());
+})();
 ```
 
 ## 仕様書
@@ -70,3 +81,8 @@ fetch('png-logo.png')
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクター
+- [パイプチェーン](/ja/docs/Web/API/Streams_API/Using_readable_streams#パイプチェーン)

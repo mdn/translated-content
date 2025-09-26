@@ -3,7 +3,7 @@ title: GlobalEventHandlers.onscroll
 slug: Web/API/Element/scroll_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
 Обработчик для события скролла.
 

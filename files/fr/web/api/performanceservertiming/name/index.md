@@ -5,7 +5,7 @@ slug: Web/API/PerformanceServerTiming/name
 
 {{APIRef("Resource Timing API")}}
 
-La propriété en lecture seule **`name`** retourne une valeur [`DOMString`](/fr/docs/Web/API/DOMString) qui est le nom de la métrique spécifiée par le serveur.
+La propriété en lecture seule **`name`** retourne une valeur [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est le nom de la métrique spécifiée par le serveur.
 
 ## Syntaxe
 

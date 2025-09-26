@@ -76,11 +76,11 @@ function displayDataByIndex() {
 
 Not currently part of any specification.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using IndexedDB](/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Starting transactions: {{domxref("IDBDatabase")}}

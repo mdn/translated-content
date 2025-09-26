@@ -3,19 +3,73 @@ title: clear
 slug: Web/CSS/clear
 ---
 
-{{CSSRef}}
+**`clear`** [CSS](/zh-CN/docs/Web/CSS) 属性指定一个元素是否必须移动 (清除浮动后) 到在它之前的浮动元素下面。`clear` 属性适用于浮动和非浮动元素。
 
-**`clear`** [CSS](/zh-CN/docs/CSS) 属性指定一个元素是否必须移动 (清除浮动后) 到在它之前的浮动元素下面。`clear` 属性适用于浮动和非浮动元素。
+{{InteractiveExample("CSS Demo: clear")}}
 
-{{EmbedInteractiveExample("pages/css/clear.html")}}
+```css interactive-example-choice
+clear: none;
+```
 
-当应用于非浮动块时，它将非浮动块的[边框边界](/zh-CN/docs/CSS/box_model)移动到所有相关浮动元素[外边界](/zh-CN/docs/CSS/box_model)的下方。这个非浮动块的顶部外边距会折叠。
+```css interactive-example-choice
+clear: left;
+```
 
-另一方面，两个浮动元素的垂直外边距将不会折叠。当应用于浮动元素时，它将底部元素的[外边界边缘](/zh-CN/docs/CSS/box_model)移动到所有相关的浮动元素外边界边缘的下方。这会影响后面浮动元素的布局，因为后面的浮动元素的位置无法高于它之前的元素。
+```css interactive-example-choice
+clear: right;
+```
 
-要被清除的相关浮动元素指的是在相同[块级格式化上下文](/zh-CN/docs/CSS/block_formatting_context)中的前置浮动。
+```css interactive-example-choice
+clear: both;
+```
 
-> **备注：** 如果一个元素里只有浮动元素，那它的高度会是 0。如果你想要它自适应即包含所有浮动元素，那你需要清除它的子元素。一种方法叫做**clearfix**，即`clear`一个不浮动的 {{cssxref("::after")}} [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="floated-left">Left</div>
+    <div class="floated-right">Right</div>
+    <div class="transition-all" id="example-element">
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  line-height: normal;
+}
+
+.floated-left {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: left;
+}
+
+.floated-right {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: right;
+  height: 150px;
+}
+```
+
+当应用于非浮动块时，它将非浮动块的[边框边界](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)移动到所有相关浮动元素[外边界](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)的下方。这个非浮动块的顶部外边距会折叠。
+
+另一方面，两个浮动元素的垂直外边距将不会折叠。当应用于浮动元素时，它将底部元素的[外边界边缘](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)移动到所有相关的浮动元素外边界边缘的下方。这会影响后面浮动元素的布局，因为后面的浮动元素的位置无法高于它之前的元素。
+
+要被清除的相关浮动元素指的是在相同[块级格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)中的前置浮动。
+
+> [!NOTE]
+> 如果一个元素里只有浮动元素，那它的高度会是 0。如果你想要它自适应即包含所有浮动元素，那你需要清除它的子元素。一种方法叫做**clearfix**，即`clear`一个不浮动的 {{cssxref("::after")}} [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。
 >
 > ```css
 > #container::after {
@@ -27,8 +81,8 @@ slug: Web/CSS/clear
 
 ## 语法
 
-```
-/* Keyword values */
+```css
+/* 关键字值 */
 clear: none;
 clear: left;
 clear: right;
@@ -36,9 +90,11 @@ clear: both;
 clear: inline-start;
 clear: inline-end;
 
-/* Global values */
+/* 全局值 */
 clear: inherit;
 clear: initial;
+clear: revert;
+clear: revert-layer;
 clear: unset;
 ```
 
@@ -215,4 +271,4 @@ p {
 
 ## 参见
 
-- [盒模型](/zh-CN/docs/CSS/box_model)
+- [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

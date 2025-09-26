@@ -16,9 +16,7 @@ targetElement.insertAdjacentElement(position, element);
 ### Параметры
 
 - position
-
   - : {{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
-
     - `'beforebegin'`: перед самим элементом `targetElement`.
     - `'afterbegin'`: внутри элемента `targetElement`, перед его первым потомком.
     - `'beforeend'`: внутри элемента `targetElement`, после его последнего потомка.
@@ -50,7 +48,8 @@ foo
 <!-- afterend -->
 ```
 
-> **Примечание:** значения `beforebegin` и `afterend` работают только если targetElement находится в DOM-дереве и имеет родительский элемент.
+> [!NOTE]
+> Значения `beforebegin` и `afterend` работают только если targetElement находится в DOM-дереве и имеет родительский элемент.
 
 ## Примеры
 

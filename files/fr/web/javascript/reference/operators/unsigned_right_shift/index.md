@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 
 L'opérateur de **décalage binaire à droite non-signé (`>>>`)** décale la séquence de bits formée par le premier opérande d'autant de bits vers la droite que la valeur indiquée par le second opérande. Les bits en excès à droite sont écartés et ce sont des zéros qui sont ajoutés à gauches. Le bit de signe devient alors nécessairement `0` et le résultat est donc positif. À la différence des autres opérateurs binaires, cet opérateur renvoie un entier non-signé sur 32 bits.
 
-{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift operator")}}
+
+```js interactive-example
+const a = 5; //  00000000000000000000000000000101
+const b = 2; //  00000000000000000000000000000010
+const c = -5; //  11111111111111111111111111111011
+
+console.log(a >>> b); //  00000000000000000000000000000001
+// Expected output: 1
+
+console.log(c >>> b); //  00111111111111111111111111111110
+// Expected output: 1073741822
+```
 
 ## Syntaxe
 
@@ -54,5 +66,5 @@ Toutefois, ce n'est pas le cas pour les nombres négatifs : `-9 >>> 2` renverra 
 
 ## Voir aussi
 
-- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
 - [L'opérateur de décalage binaire à droite non-signé et d'affectation](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

@@ -56,7 +56,7 @@ onbeforeunload = (event) => {};
 
 개발자는 성능에 미치는 영향을 최소화하기 위해 이 시나리오에서 실제로 저장되지 않는 변경 사항이 있을 때만 `beforeunload`를 수신하는 것이 좋습니다. 이에 대한 예는 아래의 예제 섹션을 참조하세요.
 
-`beforeunload` 이벤트와 관련된 문제에 대한 더 많은 정보는 [페이지 라이프사이클 API](https://developer.chrome.com/blog/page-lifecycle-api/) 가이드를 참고하세요.
+`beforeunload` 이벤트와 관련된 문제에 대한 더 많은 정보는 [페이지 라이프사이클 API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api) 가이드를 참고하세요.
 
 ## 예제
 
@@ -121,6 +121,6 @@ Chrome DevTools에 포커스가 있는 상태에서 F5를 누르는 것은 사�
 - [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)
 - [Remove Custom Messages in onbeforeload Dialogs after Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeunload_dialogs)
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/)는 `beforeunload`/`unload`가 아닌 `visibilitychange`를 사용해야 하는 이유를 자세히 설명합니다.
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state)는 웹 애플리케이션에서 페이지 수명 주기 동작을 처리하는 모범 사례 지침을 제공합니다.
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state)는 웹 애플리케이션에서 페이지 수명 주기 동작을 처리하는 모범 사례 지침을 제공합니다.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle)는 페이지 생명 주기 동작의 브라우저간 불일치를 처리하는 JavaScript 라이브러리입니다.
 - [Back/forward cache](https://web.dev/bfcache/)는 back/forward 캐시가 무엇이며 다양한 페이지 수명 주기 이벤트에 미치는 영향을 설명합니다.

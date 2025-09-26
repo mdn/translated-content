@@ -48,7 +48,7 @@ Avec la combinaison de `mouseenter` et `mouseleave` (déclenché quand le pointe
 
 ## Exemples
 
-La documentation [`mouseover`](/fr/docs/Web/API/Element/mouseover_event#Exemples) illustre la différence entre `mouseover` et `mouseenter`.
+La documentation [`mouseover`](/fr/docs/Web/API/Element/mouseover_event#exemples) illustre la différence entre `mouseover` et `mouseenter`.
 
 Ici, on utilise `mouseenter` pour modifier la bordure d'un `div` lorsque la souris rentre sur cet espace. On ajoute alors un élément à la liste avec le nombre d'évènements `mouseenter` ouor `mouseleave` event.
 
@@ -123,9 +123,8 @@ function addListItem(text) {
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
 - D'autres évènements connexes
-
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
   - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
   - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)

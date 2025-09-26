@@ -1,11 +1,12 @@
 ---
-title: ExtendableEvent()
+title: "ExtendableEvent: ExtendableEvent() コンストラクター"
+short-title: ExtendableEvent()
 slug: Web/API/ExtendableEvent/ExtendableEvent
 l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 **`ExtendableEvent()`** コンストラクターは、新しい {{domxref("ExtendableEvent")}} オブジェクトを作成します。
 
@@ -40,6 +41,4 @@ new ExtendableEvent(type, options)
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- {{jsxref("Promise")}}
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -13,13 +13,14 @@ Le mode strict apporte quelques changements à la sémantique « normale » de J
 2. Le mode strict corrige les erreurs qui font qu'autrement il est difficile pour les moteurs JavaScript d'effectuer des optimisations. Le code sera donc exécuté plus rapidement en mode strict, sans changer une seule ligne si cela n'est pas nécessaire.
 3. Le mode strict interdit les mot-clés susceptibles d'être définis dans les futures versions de ECMAScript.
 
-Voir la page [Passer au mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict) pour plus de détails quant à la migration d'une base de code non-stricte vers une base de code compatible avec le mode strict.
+Voir la page [Passer au mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) pour plus de détails quant à la migration d'une base de code non-stricte vers une base de code compatible avec le mode strict.
 
-> **Note :** Le mode non strict (celui actif par défaut) est parfois appelé « _sloppy mode_ » en anglais. Bien que ce ne soit pas la dénomination officielle, on la rencontre occasionnellement.
+> [!NOTE]
+> Le mode non strict (celui actif par défaut) est parfois appelé « _sloppy mode_ » en anglais. Bien que ce ne soit pas la dénomination officielle, on la rencontre occasionnellement.
 
 ## Invoquer le mode strict
 
-Le mode strict s'applique à des _scripts entiers_ ou à des _fonctions individuelles_. Il ne peut s'appliquer à des blocs d'instructions entourés d'accolades `{}`; essayer de l'appliquer dans ces contextes ne fera rien. Les codes présents dans {{jsxref("Objets_globaux/eval","eval()")}}, {{jsxref("Function")}}, les attributs d'événements et les chaînes passées à [`setTimeout`](/fr/docs/Web/API/WindowTimers/setTimeout), ou autres sont des scripts entiers, et invoquer le mode strict à l'intérieur de ceux-ci fonctionnera comme prévu.
+Le mode strict s'applique à des _scripts entiers_ ou à des _fonctions individuelles_. Il ne peut s'appliquer à des blocs d'instructions entourés d'accolades `{}`; essayer de l'appliquer dans ces contextes ne fera rien. Les codes présents dans {{jsxref("Objets_globaux/eval","eval()")}}, {{jsxref("Function")}}, les attributs d'événements et les chaînes passées à [`setTimeout`](/fr/docs/Web/API/Window/setTimeout), ou autres sont des scripts entiers, et invoquer le mode strict à l'intérieur de ceux-ci fonctionnera comme prévu.
 
 ### Le mode strict pour les scripts
 
@@ -80,7 +81,7 @@ Premièrement, en mode strict, il est impossible de créer accidentellement des 
 variableMalDéclarée = 17; // lève une ReferenceError
 ```
 
-Deuxièmement, le mode strict fait en sorte que les affectations qui échoueraient silencieusement lèveront aussi une exception. Par exemple, {{jsxref("Objets_globaux/NaN","NaN")}} est une variable globale en lecture seule. En mode normal, une affectation à `NaN` ne fera rien ; le développeur ne recevra aucun retour par rapport à cette faute. En mode strict, affecter une valeur quelconque à `NaN` lèvera une exception. Toute affectation qui échouera silencieusement en mode non-strict (affectation à une propriété en lecture seule, affectation à une propriété sans méthode `set`, affectation à une nouvelle propriété sur un objet [non-extensible](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/preventExtensions)) lèvera une exception en mode strict :
+Deuxièmement, le mode strict fait en sorte que les affectations qui échoueraient silencieusement lèveront aussi une exception. Par exemple, {{jsxref("Objets_globaux/NaN","NaN")}} est une variable globale en lecture seule. En mode normal, une affectation à `NaN` ne fera rien ; le développeur ne recevra aucun retour par rapport à cette faute. En mode strict, affecter une valeur quelconque à `NaN` lèvera une exception. Toute affectation qui échouera silencieusement en mode non-strict (affectation à une propriété en lecture seule, affectation à une propriété sans méthode `set`, affectation à une nouvelle propriété sur un objet [non-extensible](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)) lèvera une exception en mode strict :
 
 ```js
 "use strict";
@@ -122,7 +123,8 @@ Quatrièmement, le mode strict, avant Gecko 34, requiert que toutes les proprié
 var o = { p: 1, p: 2 }; // !!! erreur de syntaxe
 ```
 
-> **Note :** Cela n'est plus le cas avec ECMAScript 2015 ([bug Firefox 1041128](https://bugzil.la/1041128)).
+> [!NOTE]
+> Cela n'est plus le cas avec ECMAScript 2015 ([bug Firefox 1041128](https://bugzil.la/1041128)).
 
 Cinquièmement, le mode strict requiert que les noms de paramètres de fonction soient uniques. En mode non-strict, le dernier argument dupliqué cache les arguments précédents ayant le même nom. Ces arguments précédents demeurent disponibles via `arguments[i]`, ils ne sont donc pas complètement inaccessibles. Pourtant, cette cachette n'a guère de sens et n'est probablement pas souhaitable (cela pourrait cacher une faute de frappe, par exemple). Donc en mode strict, les doublons de noms d'arguments sont une erreur de syntaxe :
 
@@ -374,4 +376,4 @@ Désormais, l'ensemble des navigateurs majeurs implémentent le mode strict. Cep
 - [John Resig - ECMAScript 5 Strict Mode, JSON, and More](https://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/) (billet en anglais)
 - [ECMA-262-5 in detail. Chapter 2. Strict Mode.](https://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/) (billet en anglais)
 - [Tableau de compatibilité pour le mode strict](https://kangax.github.io/compat-table/es5/#Strict_mode) (Kangax)
-- [Passer au mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict)
+- [Passer au mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)

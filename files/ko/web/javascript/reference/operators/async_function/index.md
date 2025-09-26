@@ -80,21 +80,18 @@ const add = async function (x) {
   return x + a + b;
 };
 
-add(10)
-  .then((v) => {
-    console.log(v); // 4초 뒤에 60 출력
-  })
-  (
-    // async function 표현식을 IIFE로 사용
-    async function (x) {
-      const p1 = resolveAfter2Seconds(20);
-      const p2 = resolveAfter2Seconds(30);
-      return x + (await p1) + (await p2);
-    },
-  )(10)
-  .then((v) => {
-    console.log(v); // 2초 뒤에 60 출력
-  });
+add(10).then((v) => {
+  console.log(v); // 4초 뒤에 60 출력
+});
+
+// async function 표현식을 IIFE로 사용
+(async function (x) {
+  const p1 = resolveAfter2Seconds(20);
+  const p2 = resolveAfter2Seconds(30);
+  return x + (await p1) + (await p2);
+})(10).then((v) => {
+  console.log(v); // 2초 뒤에 60 출력
+});
 ```
 
 ## 명세

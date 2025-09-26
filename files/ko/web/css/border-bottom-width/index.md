@@ -3,11 +3,48 @@ title: border-bottom-width
 slug: Web/CSS/border-bottom-width
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`border-bottom-width`** 속성은 요소의 아래 테두리 너비를 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-bottom-width.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-width")}}
+
+```css interactive-example-choice
+border-bottom-width: thick;
+```
+
+```css interactive-example-choice
+border-bottom-width: 2em;
+```
+
+```css interactive-example-choice
+border-bottom-width: 4px;
+```
+
+```css interactive-example-choice
+border-bottom-width: 2ex;
+```
+
+```css interactive-example-choice
+border-bottom-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구문
 
@@ -31,7 +68,6 @@ border-bottom-width: unset;
 ### 값
 
 - `<line-width>`
-
   - : 테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
 
     | `thin`   |     | 얇은 테두리 |
@@ -39,7 +75,8 @@ border-bottom-width: unset;
     | `medium` |     | 중간 테두리 |
     | `thick`  |     | 굵은 테두리 |
 
-    > **참고:** 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
+    > [!NOTE]
+    > 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
 
 ## 형식 정의
 

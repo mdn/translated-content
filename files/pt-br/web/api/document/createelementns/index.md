@@ -15,9 +15,9 @@ Cria um elemento com Namespace URI e nome qualificado, como especificado.
 element = document.createElementNS(namespaceURI, qualifiedName);
 ```
 
-- `element` é o [element](/pt-BR/docs/DOM/element) criado.
-- `namespaceURI` é uma string que especifica o [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) para associar com o elemento. A propriedade [namespaceURI](/pt-BR/docs/DOM/element.namespaceURI) do elemento criado é inicializada com os valores de `namespaceURI`. (Consulte seção abaixo para "Namespace URI's válidos")
-- `qualifiedName` é uma string que especifica o tipo de elemento a ser criado. A propriedade [nodeName](/pt-BR/docs/DOM/element.nodeName) do elemento criado é inicializada com o valor de `qualifiedName`
+- `element` é o [element](/pt-BR/docs/Web/API/Element) criado.
+- `namespaceURI` é uma string que especifica o [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) para associar com o elemento. A propriedade [namespaceURI](/pt-BR/docs/Web/API/Element/namespaceURI) do elemento criado é inicializada com os valores de `namespaceURI`. (Consulte seção abaixo para "Namespace URI's válidos")
+- `qualifiedName` é uma string que especifica o tipo de elemento a ser criado. A propriedade [nodeName](/pt-BR/docs/Web/API/Node/nodeName) do elemento criado é inicializada com o valor de `qualifiedName`
 
 ## Namespace URI's válidos
 
@@ -28,7 +28,7 @@ element = document.createElementNS(namespaceURI, qualifiedName);
 
 ## Exemplo
 
-Isso cria um novo elemento \<div> no namespace [XHTML](/pt-BR/docs/XHTML) e anexa ele ao elemento vbox. Embora isso não seja um documento [XUL](/pt-BR/docs/XUL) extremamente útil, pode demonstrar o uso de elementos de dois namespaces diferentes em apenas um documento:
+Isso cria um novo elemento \<div> no namespace [XHTML](/pt-BR/docs/Glossary/XHTML) e anexa ele ao elemento vbox. Embora isso não seja um documento [XUL](/pt-BR/docs/XUL) extremamente útil, pode demonstrar o uso de elementos de dois namespaces diferentes em apenas um documento:
 
 ```xml
 <?xml version="1.0"?>

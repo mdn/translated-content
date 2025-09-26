@@ -11,7 +11,8 @@ l10n:
 
 サービスワーカー登録の存続期間は、対応するサービスワーカークライアントの存続期間内でそれらを表す `ServiceWorkerRegistration` オブジェクトの存続期間を超えています。 ブラウザーは、アクティブな `ServiceWorkerRegistration` オブジェクトの永続的なリストを維持します。
 
-> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> [!NOTE]
+> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 {{InheritanceDiagram}}
 
@@ -44,7 +45,7 @@ _親インターフェイスである {{domxref("EventTarget")}} から継承し
 
 ## インスタンスメソッド
 
-_親インターフェースである {{domxref("EventTarget")}} から継承したメソッドも実装しています。_
+_親インターフェイスである {{domxref("EventTarget")}} から継承したメソッドも実装しています。_
 
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
   - : {{domxref("Notification")}} オブジェクトの配列に解決される {{jsxref("Promise")}} を返します。
@@ -75,7 +76,8 @@ if ("serviceWorker" in navigator) {
         const installingWorker = registration.installing;
         console.log(
           "新しいサービスワーカーをインストールしています:",
-          installingWorker);
+          installingWorker,
+        );
 
         // インストール中のサービスワーカーの状態の変更を、
         // installingWorker.onstatechange を介して待ち受けできます
@@ -85,7 +87,7 @@ if ("serviceWorker" in navigator) {
       console.error(`サービスワーカーの登録に失敗しました: ${error}`);
     });
 } else {
-  console.error('サービスワーカーに対応していません。');
+  console.error("サービスワーカーに対応していません。");
 }
 ```
 

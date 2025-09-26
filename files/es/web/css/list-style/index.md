@@ -65,9 +65,9 @@ List 2
 
 ## Especificaciones
 
-- [CSS 1 (en)](http://www.w3.org/TR/CSS1#list-style)
-- [CSS 2.1 (en)](http://www.w3.org/TR/CSS21/generate.html#propdef-list-style)
-- [css3-lists (en)](http://www.w3.org/TR/css3-lists/#list-style)
+- [CSS 1 (en)](https://www.w3.org/TR/CSS1#list-style)
+- [CSS 2.1 (en)](https://www.w3.org/TR/CSS21/generate.html#propdef-list-style)
+- [css3-lists (en)](https://www.w3.org/TR/css3-lists/#list-style)
 
 ## Compatibilidad con navegadores
 

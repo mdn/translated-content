@@ -1,20 +1,32 @@
 ---
-title: Document.clear()
+title: Document：clear() 方法
 slug: Web/API/Document/clear
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-这个方法用来在早期版本的 Mozilla 中清除整个指定文档。
-
-在最近版本的基于 Mozilla 的应用以及 Internet Explorer 和 Netscape 4 中这个方法什么也不做
+**`Document.clear()`** 方法不起任何作用，但也不会引发任何错误。
 
 ## 语法
 
-```plain
-document.clear()
+```js-nolint
+clear()
 ```
+
+### 参数
+
+无。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 规范
 
-- [HTML5](http://www.whatwg.org/html/#dom-document-clear)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

@@ -5,7 +5,7 @@ slug: Web/CSS/flex-flow
 
 {{ CSSRef}}
 
-**`flex-flow`** [CSS](/ru/docs/CSS) свойство, которое является сокращением для отдельных свойств `flex-direction` и `flex-wrap`.
+**`flex-flow`** [CSS](/ru/docs/Web/CSS) свойство, которое является сокращением для отдельных свойств `flex-direction` и `flex-wrap`.
 
 ```css
 /* flex-flow: <'flex-direction'> */
@@ -32,13 +32,13 @@ flex-flow: unset;
 
 {{cssinfo}}
 
-Больше информации и свойств описано в [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes).
+Больше информации и свойств описано в [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
 
 ## Синтаксис
 
 ### Значения
 
-Смотрите [`flex-direction`](/ru/docs/CSS/flex-direction) и [`flex-wrap`](/ru/docs/CSS/flex-wrap).
+Смотрите [`flex-direction`](/ru/docs/Web/CSS/flex-direction) и [`flex-wrap`](/ru/docs/Web/CSS/flex-wrap).
 
 ### Формальный синтаксис
 
@@ -63,4 +63,4 @@ element {
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)
+- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

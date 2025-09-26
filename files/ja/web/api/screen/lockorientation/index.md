@@ -1,30 +1,33 @@
 ---
-title: Screen.lockOrientation()
+title: "Screen: lockOrientation() メソッド"
+short-title: lockOrientation()
 slug: Web/API/Screen/lockOrientation
+l10n:
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 **`lockOrientation()`** は {{DOMxRef("Screen")}} インターフェイスのメソッドで、画面を特定の方向にロックします。
 
-> **警告:** この機能は非推奨であり、仕様をさけてください。代わりに {{DOMxRef("ScreenOrientation.lock()")}} メソッドを使用してください。
+> [!WARNING]
+> この機能は非推奨であり、仕様をさけてください。代わりに {{DOMxRef("ScreenOrientation.lock()")}} メソッドを使用してください。
 
-> **メモ:** このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
+> [!NOTE]
+> このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
 
 ## 構文
 
-```js
+```js-nolint
 lockOrientation(orientation)
 ```
 
 ### 引数
 
 - `orientation`
-
   - : 画面をロックする向きです。文字列または文字列の配列で指定します。複数の文字列を渡したときは、選択した向きでのみ回転できるようになります。
 
     以下の文字列表現が向きとして指定できます。
-
     - `portrait-primary`
       - : 第一ポートレートモードである画面の向きを表します。
         第一ポートレートモードとは、端末を通常の向きが縦向きの場合と、端末の通常の位置が横向きの場合に時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、端末によって異なります。
@@ -44,7 +47,8 @@ lockOrientation(orientation)
     - `default`
       - : 端末に自然な向きによって `portrait-primary` または `landscape-primary` が選ばれます。たとえば、ディスプレイの解像度が 1280\*800 なら、 `default` は `landscape` になるでしょうし、800\*1280 なら、 `default` は `portrait` になるでしょう。
 
-> **メモ:** 複数のロックが同時に指定されることがあります。そのため、 1 つの向きにのみロックがセットされた場合には、画面の向きはロックが解除されるまで決して変更されません。もしそうでなければ、端末がロックされた向きを含む複数の向きの間で、画面の向きが 1 つの向きから別の向きへと移り変わってしまうことになります。
+> [!NOTE]
+> 複数のロックが同時に指定されることがあります。そのため、 1 つの向きにのみロックがセットされた場合には、画面の向きはロックが解除されるまで決して変更されません。もしそうでなければ、端末がロックされた向きを含む複数の向きの間で、画面の向きが 1 つの向きから別の向きへと移り変わってしまうことになります。
 
 ### 返値
 
@@ -55,7 +59,10 @@ lockOrientation(orientation)
 ### 文字列引数での使用方法
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal("landscape-primary")) {
   // 向きがロックされた
@@ -67,9 +74,14 @@ if (screen.lockOrientationUniversal("landscape-primary")) {
 ### `Array` 引数での使用方法
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
-if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])) {
+if (
+  screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])
+) {
   // 向きがロックされた
 } else {
   // 向きのロックに失敗した
@@ -91,4 +103,4 @@ if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"]
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.unlockOrientation()")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [画面の向きの管理](/ja/docs/Managing_screen_orientation)
+- [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

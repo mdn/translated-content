@@ -11,7 +11,7 @@ l10n:
 
 ## 値
 
- {{domxref("Response")}} によって解決される {{jsxref("Promise")}} 。
+{{domxref("Response")}} によって解決される {{jsxref("Promise")}} 。
 
 ## 例
 

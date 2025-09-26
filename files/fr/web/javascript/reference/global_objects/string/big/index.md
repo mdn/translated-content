@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/big
 
 La méthode **`big()`** crée un élément HTML {{HTMLElement("big")}} qui affichera la chaine de caractères avec une taille de police importante.
 
-> **Note :** L'élément `<big>` a été retiré de [HTML5](/fr/docs/Web/Guide/HTML/HTML5) et ne doit pas être utilisé. À la place, les développeurs web doivent utiliser les propriétés [CSS](/fr/docs/Web/CSS).
+> [!NOTE]
+> L'élément `<big>` a été retiré de [HTML5](/fr/docs/Glossary/HTML5) et ne doit pas être utilisé. À la place, les développeurs web doivent utiliser les propriétés [CSS](/fr/docs/Web/CSS).
 
 ## Syntaxe
 

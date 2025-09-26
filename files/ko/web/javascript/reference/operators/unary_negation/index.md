@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Unary_negation
 
 단항 부정 연산자(`-`)는 피연산자 앞에 위치하며, 피연산자의 부호를 부정합니다. 즉 양수는 음수로, 음수는 양수로 바꿉니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+
+```js interactive-example
+const x = 4;
+const y = -x;
+
+console.log(y);
+// Expected output: -4
+
+const a = "4";
+const b = -a;
+
+console.log(b);
+// Expected output: -4
+```
 
 ## 구문
 

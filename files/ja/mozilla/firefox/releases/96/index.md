@@ -3,8 +3,6 @@ title: Firefox 96 for developers
 slug: Mozilla/Firefox/Releases/96
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 96 の変更点をまとめています。Firefox 96 は、米国時間 2022 年 1 月 11 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -19,10 +17,10 @@ slug: Mozilla/Firefox/Releases/96
 
 - Firefox で {{CSSxRef("color-scheme")}} プロパティをサポートしました。これは、要素がどの配色で快適に表示できるかを示すことができます。一般的なオプションは "ライト" と "ダーク"、または "昼間モード" と "夜間モード" です ([Firefox バグ 1576289](https://bugzil.la/1576289))。
 
-- {{CSSxRef("counter-reset")}} プロパティで、_逆順の_ [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) を生成する `reversed()` 関数をサポートしました。これは、降順の番号つき要素を意図するものです。
+- {{CSSxRef("counter-reset")}} プロパティで、_逆順の_ [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) を生成する `reversed()` 関数をサポートしました。これは、降順の番号つき要素を意図するものです。
   これは `list-item` カウンターと合わせて、番号つきリストを自動的に、リスト内の要素の数から始まる逆順にするために使用します。
   (`list-item` は {{HTMLElement("ol")}} を使用して生成したリストのような番号つきリストへ自動的に適用されるカウンターです)。
-  Firefox はこの機能を、`<ol>` の [`reversed` 属性](/ja/docs/Web/HTML/Element/ol#attr-reversed) をサポートするため内部的に使用しています
+  Firefox はこの機能を、`<ol>` の [`reversed` 属性](/ja/docs/Web/HTML/Reference/Elements/ol#attr-reversed) をサポートするため内部的に使用しています
   ([Firefox バグ 1706346](https://bugzil.la/1706346))。
 
 ### JavaScript
@@ -31,25 +29,25 @@ slug: Mozilla/Firefox/Releases/96
 
 ### HTTP
 
-- 同じドメインであるが異なるスキーム (例えば http と https) で送信された Cookie が、[SameSite](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) ディレクティブについて別のサイトから送信されたものとみなすようになりました。
-  加えて、`SameSite` 属性が指定されていない Cookie は暗黙的に `SameSite=Lax`が指定されたとみなすようになり (以前の既定値は `SameSite=None`)、また `SameSite=None` を指定した Cookie は安全なコンテキストが必要になりました ([Firefox バグ 1617609](https://bugzil.la/1617609))。
+- 同じドメインであるが異なるスキーム (例えば http と https) で送信された Cookie が、[SameSite](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) ディレクティブについて別のサイトから送信されたものとみなすようになりました。
+  加えて、`SameSite` 属性が指定されていない Cookie は暗黙的に `SameSite=Lax`が指定されたとみなすようになり (以前の既定値は `SameSite=None`)、また `SameSite=None` を指定した Cookie は保護されたコンテキストが必要になりました ([Firefox バグ 1617609](https://bugzil.la/1617609))。
 
 ### API
 
 - {{domxref("navigator.canShare()")}} を Android でサポートしました。特定のターゲットに対して {{domxref("navigator.share()")}} が成功するかをコードから確認できます。
   この機能は、デスクトップオペレーティングシステムでは設定項目で制御されています
   ([Firefox バグ 1666203](https://bugzil.la/1666203))。
-- [Web Locks API](/ja/docs/Web/API/Web_Locks_API) をデフォルトで有効にしました。複数のタブや worker で実行されている Web アプリが、使用するリソースを調整できます ([Firefox バグ 1740044](https://bugzil.la/1740044))。
+- [Web Locks API](/ja/docs/Web/API/Web_Locks_API) をデフォルトで有効にしました。複数のタブや worker で実行されているウェブアプリが、使用するリソースを調整できます ([Firefox バグ 1740044](https://bugzil.la/1740044))。
 
 #### Canvas
 
-- [WebP](/ja/docs/Web/Media/Formats/Image_types#webp) 画像形式のエンコーダーをサポートしました。
+- [WebP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp) 画像形式のエンコーダーをサポートしました。
   canvas 要素が、以下のメソッドを使用して内容物を WebP データとしてエクスポートできます: {{domxref("HTMLCanvasElement.toDataURL()")}}、{{domxref("HTMLCanvasElement.toBlob()")}}、{{domxref("OffscreenCanvas.convertToBlob", "OffscreenCanvas.toBlob")}}
   ([Firefox バグ 1511670](https://bugzil.la/1511670))。
 
 #### DOM
 
-- {{domxref("IntersectionObserver.IntersectionObserver()","IntersectionObserver()")}} コンストラクターが、関連づけられたパラメーターオプションで空文字列が渡された場合に、例外を発生させるのに代わって既定値 `rootMargin` を設定するようになりました ([Firefox バグ 1738791](https://bugzil.la/1738791))。
+- {{domxref("IntersectionObserver.IntersectionObserver()","IntersectionObserver()")}} コンストラクターが、関連づけられた引数オプションで空文字列が渡された場合に、例外を発生させるのに代わって既定値 `rootMargin` を設定するようになりました ([Firefox バグ 1738791](https://bugzil.la/1738791))。
 
 #### Media、WebRTC、Web Audio
 

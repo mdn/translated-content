@@ -3,6 +3,8 @@ title: Tree shaking
 slug: Glossary/Tree_shaking
 ---
 
+{{GlossarySidebar}}
+
 **Tree shaking** とは実行されないコードを削除することで、JavaScript の文脈で利用される用語です。
 
 Tree shaking は ES2015 の [import](/ja/docs/Web/JavaScript/Reference/Statements/import) 文と [export](/ja/docs/Web/JavaScript/Reference/Statements/export) 文を利用して、エクスポートされたコードが他の JavaScript ファイルで利用されているかどうかを判定します。
@@ -13,7 +15,7 @@ Tree shaking は ES2015 の [import](/ja/docs/Web/JavaScript/Reference/Statement
 
 #### 一般的な知識
 
-- ["Benefits of dead code elimination during bundling"](http://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) in Axel Rauschmayer's book: "Exploring JS: Modules"
+- ["Benefits of dead code elimination during bundling"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) in Axel Rauschmayer's book: "Exploring JS: Modules"
 
 #### 技術的なレファレンス
 

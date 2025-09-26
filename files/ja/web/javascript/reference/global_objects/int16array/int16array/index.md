@@ -41,7 +41,7 @@ console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // From an array
-var arr = new Int16Array([21,31]);
+var arr = new Int16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -54,7 +54,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Int16Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int16 = new Int16Array(iterable);
 // Int16Array[1, 2, 3]
 ```
@@ -65,7 +67,7 @@ var int16 = new Int16Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Int16Array.Int16Array")}}
+{{Compat}}
 
 ### 互換性メモ
 
@@ -83,6 +85,6 @@ var dv = new Int16Array([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

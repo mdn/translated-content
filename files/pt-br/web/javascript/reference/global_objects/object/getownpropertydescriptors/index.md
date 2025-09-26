@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 
 O **`Object.getOwnPropertyDescriptors()`** método retorna todas as descrições próprias da propriedade de um dado objeto.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const descriptors1 = Object.getOwnPropertyDescriptors(object1);
+
+console.log(descriptors1.property1.writable);
+// Expected output: true
+
+console.log(descriptors1.property1.value);
+// Expected output: 42
+```
 
 ## Sintaxe
 
@@ -52,7 +66,7 @@ Enquanto o {{jsxref("Object.assign()")}} método vai copiar somente o enumeráve
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -66,23 +80,18 @@ superclass.prototype = {
   // Define seu método e propriedades aqui
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define seu método e propriedades aqui
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define seu método e propriedades aqui
+});
 ```
 
 ## Especificações
 
-| Especificações                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}
+{{Compat}}
 
 ## Veja também
 

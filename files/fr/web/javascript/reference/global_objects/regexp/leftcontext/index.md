@@ -20,7 +20,7 @@ La propriété `leftContext` est une propriété statique, elle n'est donc pas d
 
 La valeur de la propriété `leftContext` n'est accessible uniquement qu'en lecture. Elle est modifiée par le moteur à chaque fois qu'une nouvelle correspondance est trouvée.
 
-L'alias ne peut pas être utilisé avec la notation utilisant le point (`` RegExp.$` ``). En effet, le parseur attend un gabarit de chaîne à la suite de l'accent grave. Si on utilise le point, on aura donc une exception {{jsxref("SyntaxError")}}. Pour cet alias, on utilisera [la notation à base de crochets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_crochets).
+L'alias ne peut pas être utilisé avec la notation utilisant le point (`` RegExp.$` ``). En effet, le parseur attend un gabarit de chaîne à la suite de l'accent grave. Si on utilise le point, on aura donc une exception {{jsxref("SyntaxError")}}. Pour cet alias, on utilisera [la notation à base de crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
 
 ## Exemples
 

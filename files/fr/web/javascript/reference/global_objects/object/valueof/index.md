@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 La méthode **`valueOf()`** renvoie la valeur primitive d'un objet donné.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## Syntaxe
 
@@ -51,7 +66,8 @@ C'est habituellement JavaScript qui invoquera la méthode `valueOf`, mais il est
 monNombre.valueOf();
 ```
 
-> **Note :** Les objets à utiliser dans un contexte textuel sont convertis avec la méthode {{jsxref("Object.toString", "toString()")}} ce qui est différent de la conversion d'objets {{jsxref("String")}} en valeurs primitives avec `valueOf`. Tous les objets peuvent être convertis en chaînes de caractères (la façon la plus générique étant "`[object type]`"). En revanche, la plupart des objets ne peut pas être convertie en nombre ou booléen par exemple.
+> [!NOTE]
+> Les objets à utiliser dans un contexte textuel sont convertis avec la méthode {{jsxref("Object.toString", "toString()")}} ce qui est différent de la conversion d'objets {{jsxref("String")}} en valeurs primitives avec `valueOf`. Tous les objets peuvent être convertis en chaînes de caractères (la façon la plus générique étant "`[object type]`"). En revanche, la plupart des objets ne peut pas être convertie en nombre ou booléen par exemple.
 
 ## Exemples
 

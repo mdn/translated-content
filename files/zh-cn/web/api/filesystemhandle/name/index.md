@@ -1,9 +1,11 @@
 ---
 title: FileSystemHandle：name 属性
 slug: Web/API/FileSystemHandle/name
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 {{domxref("FileSystemHandle")}} 接口的 **`name`** 只读属性返回句柄所代表的条目的名称。
 
@@ -38,4 +40,4 @@ async function getFile() {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)

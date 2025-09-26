@@ -3,13 +3,14 @@ title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Sumário
 
 O método `indexOf()` retorna o índice da primeira ocorrência do valor fornecido em searchValue, começando a busca a partir de `fromIndex`. Retorna `-1` se o valor não for encontrado.
 
-> **Nota:** Para o método de Array, veja {{jsxref("Array.prototype.indexOf()")}}.
+> [!NOTE]
+> Para o método de Array, veja {{jsxref("Array.prototype.indexOf()")}}.
 
 ## Sintaxe
 
@@ -126,15 +127,11 @@ console.log(count);
 
 ## Especificações
 
-| Especificação                                                                    | Situação           | Comentário         |
-| -------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| {{SpecName('ES1')}}                                                              | {{Spec2('ES1')}}   | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}               | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.indexOf")}}
+{{Compat}}
 
 ## Veja também
 

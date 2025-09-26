@@ -11,7 +11,7 @@ A API Battery Status API estende {{domxref("Window.navigator")}} com uma proprie
 
 ## Exemplo
 
-Neste exemplo, nós observamos as mudanças em ambos os status de carregamento (se estamos ou não conectados e carregando) e para mudanças no nível da bateria. Isto é feito escutando pelos eventos {{event("chargingchange")}} e {{event("levelchange")}}, respectivamente.
+Neste exemplo, nós observamos as mudanças em ambos os status de carregamento (se estamos ou não conectados e carregando) e para mudanças no nível da bateria. Isto é feito escutando pelos eventos [`chargingchange`](/pt-BR/docs/Web/Events/chargingchange) e [`levelchange`](/pt-BR/docs/Web/Events/levelchange), respectivamente.
 
 ```js
 var battery =
@@ -30,7 +30,7 @@ battery.addEventListener("levelchange", updateBatteryStatus);
 updateBatteryStatus();
 ```
 
-Veja também [o exemplo na especificação](http://dev.w3.org/2009/dap/system-info/battery-status.html#introduction).
+Veja também [o exemplo na especificação](https://dev.w3.org/2009/dap/system-info/battery-status.html#introduction).
 
 ## Especificações
 
@@ -42,6 +42,6 @@ Veja também [o exemplo na especificação](http://dev.w3.org/2009/dap/system-in
 
 ## Veja também
 
-- [Hacks blog post - Usando a API Battery API (em inglês)](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [Hacks blog post - Usando a API Battery API (em inglês)](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
 - {{domxref("BatteryManager")}}
 - {{domxref("Navigator.battery","navigator.battery")}}

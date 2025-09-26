@@ -89,7 +89,6 @@ IE 8 和 9 中存在一个错误，在将 {{cssxref("background-color")}} 的计
 该错误的解决方案：
 
 - 仅适用于 IE 9：
-
   - 设置 {{cssxref("background-color")}}`: rgba(0,0,0,0)`
   - 设置 {{cssxref("opacity")}}`: 0` 以及为 {{cssxref("background-color")}} 设置一个明确的、除 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 以外的值。
 
@@ -153,7 +152,7 @@ button.addEventListener("click", (event) => {
 
 ## 参见
 
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/auxclick_event", "auxclick")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}

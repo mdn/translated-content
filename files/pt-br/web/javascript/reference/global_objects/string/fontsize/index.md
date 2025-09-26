@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 
 O método `fontsize()` cria um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font) que faz com que uma string seja exibida no tamanho da fonte especificada.
 
-> **Nota:** O elemento `<font>` foi removido do [HTML5](/pt-BR/docs/Web/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
+> [!NOTE]
+> O elemento `<font>` foi removido do [HTML5](/pt-BR/docs/Web/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
 
 ## Sintaxe
 
@@ -26,7 +27,7 @@ Uma string contendo um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font
 
 ## Descrição
 
-Ao especificar o tamanho como um inteiro, você define o tamanho da fonte do texto para um dos 7 tamanhos definidos. Ao especificar `size` como uma string como "-2", você ajusta o tamanho da fonte do texto em relação ao tamanho definido na tag [\<basefont>](/pt-BR/docs/Web/HTML/Element/basefont).
+Ao especificar o tamanho como um inteiro, você define o tamanho da fonte do texto para um dos 7 tamanhos definidos. Ao especificar `size` como uma string como "-2", você ajusta o tamanho da fonte do texto em relação ao tamanho definido na tag [\<basefont>](/pt-BR/docs/Web/CSS/CSS_fonts).
 
 ## Exemplos
 
@@ -42,7 +43,7 @@ console.log(worldString.big()); // <big>Olá, mundo</big>
 console.log(worldString.fontsize(7)); // <font size="7">Olá, mundo</fontsize>
 ```
 
-Com o objeto [`element.style`](/pt-BR/docs/Web/API/ElementCSSInlineStyle/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
+Com o objeto [`element.style`](/pt-BR/docs/Web/API/HTMLElement/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
 ```js
 document.getElementById("#oIdDoElemento").style.fontSize = "0.7em";
@@ -50,13 +51,11 @@ document.getElementById("#oIdDoElemento").style.fontSize = "0.7em";
 
 ## Especificações
 
-| Specification                                                                          |
-| -------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.fontsize', 'String.prototype.fontsize')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.fontsize")}}
+{{Compat}}
 
 ## Veja também
 

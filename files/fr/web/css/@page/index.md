@@ -19,7 +19,8 @@ La règle @ **`@page`** est utilisée afin de modifier certaines propriétés CS
 
 La règle @ `@page` peut être manipulée via le CSSOM, notamment avec l'interface {{domxref("CSSPageRule")}}.
 
-> **Note :** Le W3C est en train de discuter de la gestion des unités de longueur ({{cssxref("&lt;length&gt;")}}) relative à la zone d'affichage (_viewport_) : `vh`, `vw`, `vmin` et `vmax`. En attendant, il est conseillé de ne pas les utiliser au sein d'une règle `@page`.
+> [!NOTE]
+> Le W3C est en train de discuter de la gestion des unités de longueur ({{cssxref("&lt;length&gt;")}}) relative à la zone d'affichage (_viewport_) : `vh`, `vw`, `vmin` et `vmax`. En attendant, il est conseillé de ne pas les utiliser au sein d'une règle `@page`.
 
 ## Syntaxe
 

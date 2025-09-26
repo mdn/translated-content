@@ -77,7 +77,7 @@ void close(
 #### Parámetros
 
 - `code` {{optional_inline}}
-  - : Un valor numérico indicando el código de estado que explica porqué la conexión está siendo cerrada. Si no se especifica este parámetro, se asume un valor por defecto de 1000 (que indica un cierre normal por "transacción completa") . Ver [códigos de estado](/es/docs/Web/API/CloseEvent#Status_codes) en la página de [CloseEvent](/es/docs/Web/API/CloseEvent) para la lista de valores permitidos.
+  - : Un valor numérico indicando el código de estado que explica porqué la conexión está siendo cerrada. Si no se especifica este parámetro, se asume un valor por defecto de 1000 (que indica un cierre normal por "transacción completa") . Ver [códigos de estado](/es/docs/Web/API/CloseEvent#status_codes) en la página de [CloseEvent](/es/docs/Web/API/CloseEvent) para la lista de valores permitidos.
 - `reason` {{optional_inline}}
   - : Una cadena legible explicando porqué la conexión está siendo cerrada. Esta cadena no puede ser mayor que 123 bytes de texto UTF-8 (**no** caracteres)
 
@@ -88,7 +88,8 @@ void close(
 - `SYNTAX_ERR`
   - : La `reason` cadena es demasiado larga o continene caracteres no validos.
 
-> **Nota:** En Gecko, este método no soporta ningun parámetro antes de Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
+> [!NOTE]
+> En Gecko, este método no soporta ningun parámetro antes de Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
 
 ### send()
 
@@ -120,7 +121,8 @@ void send(
 - `SYNTAX_ERR`
   - : La data tiene caracteres no válidos que no se pueden decodificar.
 
-> **Nota:** La implementación del método `send()` en el motor de renderizado Gecko puede cambiar de la especificación en Gecko 6.0; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en Gecko 8.0.
+> [!NOTE]
+> La implementación del método `send()` en el motor de renderizado Gecko puede cambiar de la especificación en Gecko 6.0; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en Gecko 8.0.
 >
 > A partir de Gecko 11.0, implementa {{jsxref("ArrayBuffer")}} pero no tipos de datos {{domxref("Blob")}}.
 

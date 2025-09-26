@@ -23,5 +23,5 @@ if (document.getElementById("form1").length > 1) {
 
 ## Spécifications
 
-- [HTML 5, Section 4.10.3, The form Element](http://www.w3.org/TR/html5/forms.html#dom-form-length)
-- [DOM Level 2: length](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#HTML-HTMLFormElement-length)
+- [HTML 5, Section 4.10.3, The form Element](https://www.w3.org/TR/html5/forms.html#dom-form-length)
+- [DOM Level 2: length](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#HTML-HTMLFormElement-length)

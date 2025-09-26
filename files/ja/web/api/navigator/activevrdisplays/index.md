@@ -1,13 +1,17 @@
 ---
-title: Navigator.activeVRDisplays
+title: "Navigator: activeVRDisplays プロパティ"
+short-title: activeVRDisplays
 slug: Web/API/Navigator/activeVRDisplays
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
+{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 **`activeVRDisplays`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、すべての {{domxref("VRDisplay")}} オブジェクトのうち、現在表示中 ({{domxref("VRDisplay.ispresenting")}} が `true`) のものを含んだ配列を返します。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 値
 
@@ -18,8 +22,8 @@ slug: Web/API/Navigator/activeVRDisplays
 ```js
 function showActive() {
   const displays = navigator.activeVRDisplays;
-  for(let i = 0; i < displays.length; i++) {
-    console.log('Display ' + displays[i].displayId + ' is active.');
+  for (const display of displays) {
+    console.log(`Display ${display.displayId} is active.`);
   }
 }
 ```
@@ -36,5 +40,4 @@ function showActive() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

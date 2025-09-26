@@ -37,8 +37,8 @@ Il renvoie également `null` si le nœud vient d'être créé et n'est pas encor
 
 ## Spécification
 
-- [DOM Level 2 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
-- [DOM Level 3 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
+- [DOM Level 2 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
+- [DOM Level 3 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
 
 ## Voir aussi
 

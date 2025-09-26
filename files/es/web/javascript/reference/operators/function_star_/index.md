@@ -7,9 +7,23 @@ slug: Web/JavaScript/Reference/Operators/function*
 
 La palabra clave **`function*`** puede ser utilizada para definir una función generadora en una expresión.
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression")}}
 
-El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si le gustaría contribuir al proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíenos un pull request.
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## Sintaxis
 
@@ -54,7 +68,7 @@ var x = function* (y) {
 
 - {{jsxref("Statements/function*", "Sentencia function*")}}
 - Objeto {{jsxref("GeneratorFunction")}}
-- [El protocolo iterable](/es/docs/Web/JavaScript/Referencia/Iteration_protocols)
+- [El protocolo iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - Objeto {{jsxref("Function")}}

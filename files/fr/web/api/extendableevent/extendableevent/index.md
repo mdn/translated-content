@@ -30,8 +30,8 @@ var myExtendableEvent = new ExtendableEvent(type, init);
 
 ## Voir aussi
 
-- [Utilisation des Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)
 - [Les ServiceWorker sont-ils prêts?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Utilisation performante des web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)
+- [Utilisation performante des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)

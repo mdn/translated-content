@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 
 O método **`Math.trunc()`** retorna a parte inteira de um número, descartando suas casas decimais.
 
-{{EmbedInteractiveExample("pages/js/math-trunc.html")}}
+{{InteractiveExample("JavaScript Demo: Math.trunc()")}}
+
+```js interactive-example
+console.log(Math.trunc(13.37));
+// Expected output: 13
+
+console.log(Math.trunc(42.84));
+// Expected output: 42
+
+console.log(Math.trunc(0.123));
+// Expected output: 0
+
+console.log(Math.trunc(-0.123));
+// Expected output: -0
+```
 
 ## Sintaxe
 
@@ -39,14 +53,14 @@ Já que `trunc()` é um método estático em `Math`, sempre utilize `Math.trunc(
 ### Usando `Math.trunc()`
 
 ```js
-Math.trunc(13.37);    // 13
-Math.trunc(42.84);    // 42
-Math.trunc(0.123);    //  0
-Math.trunc(-0.123);   // -0
-Math.trunc('-1.123'); // -1
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
 ```
 
 ## Polyfill
@@ -54,20 +68,20 @@ Math.trunc();         // NaN
 (um*Polyfill* é um pedaço de código que o desenvolvedor pode colocar na sua página para garantir compatilibilidade do método. No exemplo abaixo, caso o navegador não tiver o método `trunc` na classe `Math`, ele será criado);
 
 ```js
-Math.trunc = Math.trunc || function(x) {
-  return x < 0 ? Math.ceil(x) : Math.floor(x);
-}
+Math.trunc =
+  Math.trunc ||
+  function (x) {
+    return x < 0 ? Math.ceil(x) : Math.floor(x);
+  };
 ```
 
 ## Especificações
 
-| Especificação                                                        | Status               | Comentário         |
-| -------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-math.trunc', 'Math.trunc')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.Math.trunc")}}
+{{Compat}}
 
 ## Veja também
 

@@ -9,15 +9,16 @@ l10n:
 
 **`online`** は {{domxref("Window")}} インターフェイスのイベントで、ブラウザーがネットワークにアクセスできるようになり、 {{domxref("Navigator.onLine")}} の値が `true` に切り替わると発行されます。
 
-> **メモ:** このイベントは、特定のウェブサイトの利用可能性を判断するために使用されるべきではありません。ネットワークの問題やファイアウォールが原因で、そのウェブサイトに到達できない可能性があります。
+> [!NOTE]
+> このイベントは、特定のウェブサイトの利用可能性を判断するために使用されるべきではありません。ネットワークの問題やファイアウォールが原因で、そのウェブサイトに到達できない可能性があります。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('online', (event) => { });
-ononline = (event) => { };
+addEventListener("online", (event) => {});
+ononline = (event) => {};
 ```
 
 ## イベント型
@@ -36,8 +37,8 @@ ononline = (event) => { };
 
 ```js
 // addEventListener 版
-window.addEventListener('online', (event) => {
-    console.log("You are now connected to the network.");
+window.addEventListener("online", (event) => {
+  console.log("You are now connected to the network.");
 });
 
 // ononline 版

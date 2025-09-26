@@ -3,8 +3,6 @@ title: Basic Concepts of Multicol
 slug: Web/CSS/CSS_multicol_layout/Basic_concepts
 ---
 
-{{CSSRef}}
-
 多列布局（通常称为 multicol）是一种规范，用于将内容布置到一组列框中，就像报纸中的列一样。本指南解释了规范如何与一些常见的用例示例一起使用。
 
 ## 关键概念和术语
@@ -36,19 +34,83 @@ Multicol 与 CSS 中的任何其他布局方法不同，它将内容（包括所
 
 在以下示例中，我们使用 column-count 属性在 `.container` 元素上创建三列。 `.container` 元素的内容包括其子元素都会分裂成三列。
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
+```html live-sample___column-count
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
 
-在上面的例子中内容被段落 p 标签的默认样式包裹。因此，每段都有一个间距。你可以看到这个间距引起第一行文本被推了下来。这是因为 multicol 容器创建了一个新的块格式化上下文（BFC)，这意味着子元素的间距不会与父容器的间距互相重叠。
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-count
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 3;
+}
+```
+
+{{EmbedLiveSample("column-count", "", "280px")}}
+
+在上面的例子中内容被段落 p 标签的默认样式包裹。因此，每段都有一个间距。你可以看到这个间距引起第一行文本被推了下来。这是因为 multicol 容器创建了一个新的块格式化上下文（BFC），这意味着子元素的间距不会与父容器的间距互相重叠。
 
 ### `column-width` 属性
 
-`column-width` 属性用于给每列设置一个最佳宽度。如果你声明 `column-width`,浏览器将算出 该宽度在 multicol 容器能分多少列，并且把额外的的空间填充到这些列当中。因此，应将列宽视为最小宽度，因为由于额外的空间，列可能而更宽。
+`column-width` 属性用于给每列设置一个最佳宽度。如果你声明 `column-width`，浏览器将算出该宽度在 multicol 容器能分多少列，并且把额外的空间填充到这些列当中。因此，应将列宽视为最小宽度，因为由于额外的空间，列可能而更宽。
 
 当单个列的可用宽度小于 column-width 的值的情况下，列的宽度会缩小为小于所声明的列宽。
 
 在以下示例中，我们使用 column-width 属性值为 200 px。但最终为了适配容器，列的宽度却大于 200 像素，额外的空间被平均分配了。
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-width.html", '100%', 550)}}
+```html hidden live-sample___column-width
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-width
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 200px;
+}
+```
+
+{{EmbedLiveSample("column-width", "", "280px")}}
 
 ### 同时使用 `column-count` 和 `column-width`
 
@@ -58,11 +120,44 @@ Multicol 与 CSS 中的任何其他布局方法不同，它将内容（包括所
 
 在下一个例子中，我们使用 column-width 的值为 200px，column-count 的值为 2。即使有超过两列的空间，我们也得到两个。如果没有足够的空间容纳两列 200px，我们得到一个。
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-count-width.html", '100%', 550)}}
+```html hidden live-sample___column-count-width
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko. .
+  </p>
+</div>
+```
+
+```css live-sample___column-count-width
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 2;
+  column-width: 200px;
+}
+```
+
+{{EmbedLiveSample("column-count-width", "", "280px")}}
 
 ### `columns` 缩写
 
-您可以使用 columns 缩写来设置 `column-count` 和 `column-width`。如果设置长度单位，这将用于 `column-width`，设置一个整数，它将用于 `column-count`。您可以设置两者，用空格分隔这两个值。
+你可以使用 columns 缩写来设置 `column-count` 和 `column-width`。如果设置长度单位，这将用于 `column-width`，设置一个整数，它将用于 `column-count`。你可以设置两者，用空格分隔这两个值。
 
 此 CSS 结果与示例 1 相同，column-count 设置为 3。
 

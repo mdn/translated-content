@@ -1,25 +1,24 @@
 ---
-title: Document.all
+title: "Document: all プロパティ"
+short-title: all
 slug: Web/API/Document/all
+l10n:
+  sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-{{DOMxRef("Document")}} インターフェイスの **`all`** プロパティは読み取り専用で、 document ノードをルートとした {{DOMxRef("HTMLAllCollection")}} を返します。言い換えれば、文書のすべての要素を、 (配列のように) 順序および (通常のオブジェクトのように) ID でアクセスすることができる形で返します。
+{{DOMxRef("Document")}} インターフェイスの **`all`** プロパティは読み取り専用で、この文書ノードをルートとした {{DOMxRef("HTMLAllCollection")}} を返します。
 
-## 構文
+`document.all` を使用してこの文書内のすべての要素を文書順に {{DOMxRef("HTMLAllCollection")}} で返す代わりに、{{DOMxRef("Document.querySelectorAll")}} を使用してこの文書内のすべての要素を文書順に {{DOMxRef("NodeList")}} で返すことができます。
 
+```js
+const allElements = document.querySelectorAll("*");
 ```
-var htmlAllCollection = document.all;
-```
 
-### 値
+## 値
 
 文書のすべてのノードを含む {{DOMxRef("HTMLAllCollection")}} です。
-
-## 論理型への変換
-
-`document.all` は JavaScript からアクセスすることができる唯一の{{Glossary("falsy", "値が偽となる")}}オブジェクトです。これは、[\[\[IsHTMLDDA\]\] 内部スロット](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot)を持つためです。これは、 Internet Explorer の古いバージョンとの互換性のために行われています。これについての詳細な情報は、 [StackOverflow のこの回答](https://stackoverflow.com/a/62005426)にあります。
 
 ## 仕様書
 

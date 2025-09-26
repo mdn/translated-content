@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 Термин «глобальные объекты» (или стандартные встроенные объекты) здесь не следует путать с самим _глобальным объектом_. Далее в главе под этим обозначением понимаются _объекты в глобальном пространстве имён_ (но только, если не используется строгий режим ECMAScript 5! В противном случае они возвращают `undefined`). Сам же _глобальный объект_ в глобальном пространстве имён доступен через оператор {{jsxref("Operators/this", "this")}}. На самом деле, глобальное пространство имён _состоит из_ свойств глобального объекта (в том числе включая унаследованные свойства, если они есть).
 
-Другие объекты в глобальном пространстве имён [создаются либо с помощью пользовательских скриптов](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects), либо предоставляются приложением хоста. Объекты хоста, доступные в контекстах браузера, задокументированы в [справке по API](/ru/docs/Web/API/Reference). Для получения дополнительной информации о различии между [DOM](/ru/docs/DOM/DOM_Reference) и ядром [JavaScript](/ru/docs/Web/JavaScript), смотрите [обзор технологии JavaScript](/ru/docs/Web/JavaScript/JavaScript_technologies_overview).
+Другие объекты в глобальном пространстве имён [создаются либо с помощью пользовательских скриптов](/ru/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects), либо предоставляются приложением хоста. Объекты хоста, доступные в контекстах браузера, задокументированы в [справке по API](/ru/docs/Web/API). Для получения дополнительной информации о различии между [DOM](/ru/docs/Web/API/Document_Object_Model) и ядром [JavaScript](/ru/docs/Web/JavaScript), смотрите [обзор технологии JavaScript](/ru/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Стандартные объекты (по категориям)
 
@@ -101,8 +101,8 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 Буферы данных и Объектная нотация JavaScript (**J**ava**S**cript **O**bject **N**otation).
 
-- [`ArrayBuffer`](/ru/docs/JavaScript_typed_arrays/ArrayBuffer)
-- [`DataView`](/ru/docs/JavaScript_typed_arrays/DataView)
+- [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+- [`DataView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/DataView)
 - {{jsxref("Global_Objects/JSON", "JSON")}}
 
 ### Объекты управляющих абстракций

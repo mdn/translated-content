@@ -13,7 +13,8 @@ slug: Web/API/BaseAudioContext/destination
 
 ## 示例
 
-> **备注：** 如果需要完整的实现示例，可以去看看 [MDN Github repo](https://github.com/mdn/) 的演示，比如 [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic)。
+> [!NOTE]
+> 如果需要完整的实现示例，可以去看看 [MDN Github repo](https://github.com/mdn/) 的演示，比如 [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic)。
 
 ```js
 const audioCtx = new AudioContext();
@@ -36,4 +37,4 @@ gainNode.connect(audioCtx.destination);
 
 ## 参见
 
-- [使用 Web 音频 API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

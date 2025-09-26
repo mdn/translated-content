@@ -7,7 +7,12 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 
 La méthode statique **`String.fromCodePoint()`** renvoie une chaîne de caractères créée à partir d'un suite de codets.
 
-{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html")}}
+{{InteractiveExample("JavaScript Demo: String.fromCodePoint()")}}
+
+```js interactive-example
+console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
+// Expected output: "☃★♲你"
+```
 
 ## Syntaxe
 

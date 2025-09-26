@@ -1,32 +1,32 @@
 ---
 title: SVGTextElement
 slug: Web/API/SVGTextElement
+l10n:
+  sourceCommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
 ---
 
-## SVGTextElement インタフェース
+{{APIRef("SVG")}}
 
-`SVGTextElement` インタフェースは {{SVGElement("text")}} 要素に対応するインタフェースです。
+**`SVGTextElement`** インターフェイスは {{SVGElement("text")}} 要素に対応するインターフェイスです。
 
-### インタフェースの概要
+{{InheritanceDiagram}}
 
-| 実装インタフェース | {{domxref("SVGTextPositioningElement")}} 、 {{domxref("SVGTransformable")}} |
-| ------------------ | ------------------------------------------------------------------------------------------------ |
-| メソッド           | _無し_                                                                                           |
-| プロパティ         | _無し_                                                                                           |
-| 標準文書           | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/text.html#InterfaceSVGTextElement)              |
+## インスタンスプロパティ
 
-## プロパティ
+_このインターフェイスには固有のプロパティはありませんが、親インターフェイスである {{domxref("SVGTextPositioningElement")}} から継承したプロパティがあります。_
 
-固有のプロパティはありません。
+## インスタンスメソッド
 
-## メソッド
+_このインターフェイスには固有のプロパティはありませんが、親インターフェイスである {{domxref("SVGTextPositioningElement")}} から継承したメソッドがあります。_
 
-固有のメソッドはありません。
+## 仕様書
 
-## ブラウザ実装状況
+{{Specifications}}
 
-{{Compat("api.SVGTextElement")}}
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連情報
 
-- {{SVGElement("text")}} SVG 要素
+- {{SVGElement("text")}}

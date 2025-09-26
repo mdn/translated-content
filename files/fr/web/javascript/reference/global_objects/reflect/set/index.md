@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 
 La méthode statique **`Reflect.set()`** permet de définir ou de modifier une propriété sur un objet.
 
-{{EmbedInteractiveExample("pages/js/reflect-set.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.set()")}}
+
+```js interactive-example
+const object1 = {};
+Reflect.set(object1, "property1", 42);
+
+console.log(object1.property1);
+// Expected output: 42
+
+const array1 = ["duck", "duck", "duck"];
+Reflect.set(array1, 2, "goose");
+
+console.log(array1[2]);
+// Expected output: "goose"
+```
 
 ## Syntaxe
 
@@ -36,7 +50,7 @@ Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
 
 ## Description
 
-La méthode `Reflect.set` permet de définir une propriété sur un objet. Elle effectue une affectation de propriété et est semblable à la syntaxe pour [accéder à un propriété](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres) mais sous la forme d'une fonction.
+La méthode `Reflect.set` permet de définir une propriété sur un objet. Elle effectue une affectation de propriété et est semblable à la syntaxe pour [accéder à un propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors) mais sous la forme d'une fonction.
 
 ## Exemples
 
@@ -76,4 +90,4 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 ## Voir aussi
 
 - {{jsxref("Reflect")}}
-- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres)
+- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)

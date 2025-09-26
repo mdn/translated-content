@@ -16,18 +16,15 @@ canvas.getContext(typeDeContexte, attributsDeContexte);
 ### Paramètres
 
 - typeDeContexte
-
   - : Est un {{domxref("DOMString")}} contenant l'identifcateur de contexte définissant le contexte de dessin associé au canevas. Les valeurs possibles sont :
-
     - `"2d`", conduisant à la création d'un objet {{domxref("CanvasRenderingContext2D")}} représentant un contexte de représentation bi-dimensionnel.
-    - `"webgl"` (ou `"experimental-webgl"`) pour créer un objet {{domxref("WebGLRenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 1 de [WebGL](/fr/docs/Web/WebGL) (OpenGL ES 2.0).
-    - "`webgl2`" pour créer un objet {{domxref("WebGL2RenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 2 de [WebGL](/fr/docs/Web/WebGL) (OpenGL ES 3.0). {{experimental_inline}}.
+    - `"webgl"` (ou `"experimental-webgl"`) pour créer un objet {{domxref("WebGLRenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 1 de [WebGL](/fr/docs/Web/API/WebGL_API) (OpenGL ES 2.0).
+    - "`webgl2`" pour créer un objet {{domxref("WebGL2RenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 2 de [WebGL](/fr/docs/Web/API/WebGL_API) (OpenGL ES 3.0). {{experimental_inline}}.
     - `"bitmaprenderer"` pour créer un {{domxref("ImageBitmapRenderingContext")}} ne fournissant que la fonctionnalité de remplacement du contenu du canevas par une {{domxref("ImageBitmap")}} donnée.
 
     Note : l'identificateur "`experimental-webgl`" est utilisé dans les nouvelles implémentations de WebGL. Ces implémentations n'ont pas encore obtenu la conformité à la suite de test, ou l'emploi des pilotes graphiques sur la plateforme n'est pas encore stable. Le [Khronos Group](https://www.khronos.org/) certifie les implémentations WebGL sous certaines [règles de conformité](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `attributsDeContexte`
-
   - : Vous pouvez utiliser plusieurs attributs de contexte quand vous créez votre contexte de représentation, par exemple :
 
     ```js
@@ -35,13 +32,11 @@ canvas.getContext(typeDeContexte, attributsDeContexte);
     ```
 
     attributs de contexte 2d :
-
     - **`alpha`**&nbsp;: booléen indiquant que le canevas contient un canal alpha. Si positionné à `false`, le navigateur saura ainsi que l'arrière-plan est toujours opaque, ce qui peut alors accélérer le dessin de contenus et d'images transparents.
     - {{non-standard_inline}} (Gecko seulement) **`willReadFrequently`**&nbsp;: booléen indiquant si de nombreuses opérations de relecture sont prévues ou non. Cela forcera l'utilisation d'un canevas 2D logiciel (au lieu d'un canevas accéléré matériellement) et peut faire économiser de la mémoire lors d'appels fréquents à [`getImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData). Cette option est seulement disponible si l'indicateur `gfx.canvas.willReadFrequently.enable` est positionné à `true` (ce qui, par défaut, est seulement le cas pour B2G/Firefox OS).
     - {{non-standard_inline}} (Blink seulement) **`storage`**&nbsp;: chaîne indiquant quel stockage est utilisé (`persistent` par défaut).
 
     attributs de contexte WebGL :
-
     - **`alpha`**&nbsp;: booléen indiquant que le canevas contient un tampon alpha.
     - **`depth`**&nbsp;: booléen indiquant que le tampon de dessin a un tampon de profondeur d'au moins 16 bits.
     - **`stencil`**&nbsp;: booléen indiquant que le tampon de dessin a un tampon stencil d'au moins 8 bits.

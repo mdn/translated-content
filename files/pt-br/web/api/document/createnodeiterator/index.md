@@ -5,7 +5,8 @@ slug: Web/API/Document/createNodeIterator
 
 {{APIRef("DOM")}}Uma interface **`NodeFilter`** representa um objeto usado para filtrar os nós (elementos), em uma iteração {{ domxref("NodeIterator") }} ou {{ domxref("TreeWalker") }}. Essas interfaces não conhecem nada sobre o DOM ou sobre como percorrer ou atravessar, elementos; elas apenas sabem como avaliar se um único nó atende aos requisitos do filtro fornecido ou não.
 
-> **Nota:** O navegador não fornece nenhum objeto que implemente essa interface. É esperado que o desenvolvedor escreva tal objeto, utilizando o método `acceptNode()` conforme as suas necessidades, podendo mesclar com objetos do tipo {{domxref("TreeWalker")}} ou {{domxref("NodeIterator")}} em sua implementação..
+> [!NOTE]
+> O navegador não fornece nenhum objeto que implemente essa interface. É esperado que o desenvolvedor escreva tal objeto, utilizando o método `acceptNode()` conforme as suas necessidades, podendo mesclar com objetos do tipo {{domxref("TreeWalker")}} ou {{domxref("NodeIterator")}} em sua implementação..
 
 ## Properties
 
@@ -16,7 +17,6 @@ _Essa interface não implementa, nem herda, nenhuma propriedade._
 _Essa interface não herda nenhum método._
 
 - {{domxref("NodeFilter.acceptNode()")}}
-
   - : Returns an `unsigned short` that will be used to tell if a given {{domxref("Node")}} must be accepted or not by the {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} iteration algorithm. This method is expected to be written by the user of a `NodeFilter`. Possible return values are:
 
     | Constant        | Description                                                                                                                                                                                                                                                                        |

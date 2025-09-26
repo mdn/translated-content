@@ -22,7 +22,7 @@ arr.lastIndexOf(searchElement[, fromIndex = arr.length - 1])
 
 ## Descrição
 
-`lastIndexOf` compara `searchElement` a elementos do Array usando [igualdade rigorosa](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (o mesmo método usado pelo operador ===, ou "igual triplo").
+`lastIndexOf` compara `searchElement` a elementos do Array usando [igualdade rigorosa](/pt-BR/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (o mesmo método usado pelo operador ===, ou "igual triplo").
 
 ## Exemplos
 
@@ -107,14 +107,11 @@ Novamente, perceba que essa implementação foca na absoluta compatibilidade com
 
 ## Especificações
 
-| Especificação                                                                          | Status             | Comentário                                         |
-| -------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.15', 'Array.prototype.lastIndexOf')}}                 | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.lastIndexOf")}}
+{{Compat}}
 
 ## Veja também
 

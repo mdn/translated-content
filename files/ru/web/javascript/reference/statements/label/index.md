@@ -5,9 +5,23 @@ slug: Web/JavaScript/Reference/Statements/label
 
 {{jsSidebar("Statements")}}
 
-**Метки** используются вместе с операторами {{jsxref("Statements/break", "break")}} и {{jsxref("Statements/continue", "continue")}}. Они выступают в роли идентификатора выражения, на который можно сослаться.
+**Метки** используются вместе с операторами {{jsxref("Statements/break", "break")}} и {{jsxref("Statements/continue", "continue")}}. Они выступают в роли идентификатора инструкции, на который можно сослаться.
 
-{{EmbedInteractiveExample("pages/js/statement-label.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Label")}}
+
+```js interactive-example
+let str = "";
+
+loop1: for (let i = 0; i < 5; i++) {
+  if (i === 1) {
+    continue loop1;
+  }
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "0234"
+```
 
 ## Синтаксис
 
@@ -19,7 +33,7 @@ label:
 - `label`
   - : Идентификатор. Любое слово, кроме ключевых и зарезервированных в JavaScript.
 - `statement`
-  - : Выражение. С `break` можно использоваться любое блочное выражение, а с `continue` только циклы.
+  - : Инструкция. `break` может быть использован внутри любого блока инструкций с меткой, а с `continue` только внутри циклов.
 
 ## Описание
 
@@ -119,7 +133,7 @@ top: for (i = 0; i < items.length; i++) {
 }
 ```
 
-### Использование метки для блочного выражения с break
+### Использование метки для блока инструкций с break
 
 Метки можно использовать для обычных блоков кода, но только с оператором `break`.
 

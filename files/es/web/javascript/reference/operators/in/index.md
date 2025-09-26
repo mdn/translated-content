@@ -14,7 +14,6 @@ prop in object
 ### Parámetros
 
 - `prop`
-
   - : Una cadena o expresión númerica que representa el nombre de una propiedad o el índice de un array (lo que no sea un símbolo se forzará a string).
 
 - `object`
@@ -99,8 +98,8 @@ El operador `in` devuelve `true` para propiedades en la cadena del prototipo.
 
 ## Vea también
 
-- [`for...in`](/es-ES/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`delete`](/es-ES/docs/Web/JavaScript/Reference/Operators/delete)
+- [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`delete`](/es/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

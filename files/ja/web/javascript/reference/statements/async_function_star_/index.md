@@ -11,7 +11,27 @@ l10n:
 
 非同期ジェネレーター関数は、{{jsxref("AsyncGeneratorFunction")}} コンストラクターや [`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)の構文を使用して定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## 構文
 
@@ -27,7 +47,8 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-> **メモ:** 非同期ジェネレーター関数には、対応するアロー関数はありません。
+> [!NOTE]
+> 非同期ジェネレーター関数には、対応するアロー関数はありません。
 
 ### 引数
 
@@ -42,7 +63,7 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 
 非同期ジェネレーター関数は、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)と[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)の機能を組み合わせたものです。関数の内部で [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) と [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) のキーワードの両方を使うことができます。これにより、ジェネレーター関数の遅延の性質を利用しながら、`await` で人間工学的に非同期タスクを処理することができるようになります。
 
-`function*` で宣言された通常のジェネレーター関数とは異なり、非同期ジェネレーター関数は {{jsxref("Global_Objects/AsyncGenerator","AsyncGenerator")}} オブジェクトを返します。[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)に準拠しています。`next()` を呼び出すたびに、イテレーターの結果オブジェクトに解決する {{jsxref("Promise")}} を返します。
+`function*` で宣言された通常のジェネレーター関数とは異なり、非同期ジェネレーター関数は {{jsxref("Global_Objects/AsyncGenerator","AsyncGenerator")}} オブジェクトを返します。[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)に準拠しています。`next()` を呼び出すたびに、イテレーターの結果オブジェクトに解決する {{jsxref("Promise")}} を返します。
 
 非同期ジェネレーターからプロミスが生成されると、イテレーターの結果のプロミスの最終的な状態は、生成されたプロミスの状態と一致します。例えば次のようになります。
 

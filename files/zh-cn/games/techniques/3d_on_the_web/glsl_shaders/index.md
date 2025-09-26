@@ -3,8 +3,6 @@ title: GLSL 着色器
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
 
-{{GamesSidebar}}
-
 使用 GLSL 的着色器（shader），GLSL 是一门特殊的有着类似于 C 语言的语法，在图形管道 (graphic pipeline) 中直接可执行的 OpenGL 着色语言。着色器有两种类型——顶点着色器 (Vertex Shader) 和片段着色器（Fragment Shader）。前者是将形状转换到真实的 3D 绘制坐标中，后者是计算最终渲染的颜色和其他属性用的。
 
 GLSL 不同于 JavaScript, 它是强类型语言，并且内置很多数学公式用于计算向量和矩阵。快速编写着色器非常复杂，但创建一个简单的着色器并不难。在这篇文章我们将介绍使用着色器的基础知识，并且构建一个使用 Three.js 的例子来加速代码编写。
@@ -43,7 +41,8 @@ void main() {
 
 让我们构建一个简单的例子来解释这些着色器的动作。假设你已经看过[Three.js 教程](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)并掌握了场景，物体和材质的基本概念。
 
-> **备注：** 记住你没必要使用 Three.js 或者其他库来编写着色器——纯[WebGL](/zh-CN/docs/Web/API/WebGL_API) 完全够了。我们这里使用 Three.js 来制作背景代码更简单和易理解。所以你只需关注着色器代码。Three.js 和其他 3D 库给你抽象了很多东西出来——如果你想要用纯 WebGL 创建这个例子，你得写很多其他的代码才能运行。
+> [!NOTE]
+> 记住你没必要使用 Three.js 或者其他库来编写着色器——纯[WebGL](/zh-CN/docs/Web/API/WebGL_API) 完全够了。我们这里使用 Three.js 来制作背景代码更简单和易理解。所以你只需关注着色器代码。Three.js 和其他 3D 库给你抽象了很多东西出来——如果你想要用纯 WebGL 创建这个例子，你得写很多其他的代码才能运行。
 
 ### 环境设置
 
@@ -51,7 +50,7 @@ void main() {
 
 - 确保你在使用对 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 有良好支持的现代浏览器，比如最新版的 Firefox 或 Chrome.
 - 创建一个目录保存你的实验。
-- 拷贝一份的 [压缩版的 Three.js 库](http://threejs.org/build/three.min.js) 到你的目录。
+- 拷贝一份的 [压缩版的 Three.js 库](https://threejs.org/build/three.min.js) 到你的目录。
 
 ### HTML 结构
 
@@ -116,7 +115,8 @@ void main() {
 
 每次的`gl_Position` 的结果是计算 model-view 矩阵和投射矩阵和投射矩阵相乘并得到最后的顶点位置。
 
-> **备注：** 你可以在 [顶点处理](/zh-CN/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing)中学到更多关于模型，视图和投射变换，并且你可以在文末看到更多学习链接。
+> [!NOTE]
+> 你可以在 [顶点处理](/zh-CN/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing)中学到更多关于模型，视图和投射变换，并且你可以在文末看到更多学习链接。
 
 `projectionMatrix` 和 `modelViewMatrix` 两个函数都是 Three.js 提供的，并且传入了一个新的 3D 位置向量，转成着色器之后直接导致立方体向 `x` 轴移动 10 个单位，向`z` 轴移动了 5 个单位。我们可以忽略第四个参数并且保持为默认的`1.0` ; 这是用来控制 3D 空间中订单位置裁剪的，这个例子中不需要。
 
@@ -140,7 +140,7 @@ void main() {
 // var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 ```
 
-然后创建 [`shaderMaterial`](http://threejs.org/docs/#Reference/Materials/ShaderMaterial):
+然后创建 [`shaderMaterial`](https://threejs.org/docs/#Reference/Materials/ShaderMaterial):
 
 ```js
 var shaderMaterial = new THREE.ShaderMaterial({
@@ -180,4 +180,4 @@ Three.js 编译和运行这两个这两个着色器到材质所在的网格 (mes
 ## 其他链接
 
 - [学习 WebGL](http://learningwebgl.com/blog/?page_id=1217) — 基本 WebGL 知识
-- [WebGL 着色器和 WebGL 中的 GLSL 基础](http://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — GLSL 特定信息
+- [WebGL 着色器和 WebGL 中的 GLSL 基础](https://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — GLSL 特定信息

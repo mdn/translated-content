@@ -44,4 +44,4 @@ var obj = Object.setPrototypeOf({}, null);
 
 ## Voir aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions)
+- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Functions)

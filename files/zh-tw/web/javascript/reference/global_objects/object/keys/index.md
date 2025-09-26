@@ -3,8 +3,6 @@ title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 
-{{JSRef}}
-
 **`Object.keys()`** 方法會回傳一個由指定物件所有可列舉之屬性組成的陣列，該陣列中的的排列順序與使用 {{jsxref("Statements/for...in", "for...in")}} 進行迭代的順序相同（兩者的差異在於 `for-in` 迴圈還會迭代出物件自其原型鏈所繼承來的可列舉屬性）。
 
 ## 語法
@@ -125,7 +123,7 @@ if (!Object.keys) {
 
 請注意以上的代碼片段在 IE7 中( IE8 也有可能 )，從不同的 window 傳入物件將包含非可列舉的 key 。
 
-較精簡的瀏覽器 Polyfill，請參閱 [Javascript - Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
+較精簡的瀏覽器 Polyfill，請參閱 [Javascript - Object.keys Browser Compatibility](https://tokenposts.blogspot.com/2012/04/javascript-objectkeys-browser.html).
 
 ## 規範
 
@@ -137,7 +135,7 @@ if (!Object.keys) {
 
 ## 參見
 
-- [Enumerability and ownership of properties](/zh-TW/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

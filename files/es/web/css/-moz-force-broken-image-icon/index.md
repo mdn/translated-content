@@ -1,5 +1,5 @@
 ---
-title: "-moz-force-broken-image-icon"
+title: -moz-force-broken-image-icon
 slug: Web/CSS/-moz-force-broken-image-icon
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/-moz-force-broken-image-icon
 
 `-moz-force-broken-image-icon` es una propiedad CSS extendida. El valor `1` fuerza un icono de imagen no encontrada aunque la imagen tenga el atributo `alt`. Cuando el valor es `0` la imagen actuará normalmente y solo mostrará el atributo `alt`.
 
-> **Nota:** Aunque el valor sea `1` el atributo `alt` se seguirá mostrando. Más información debajo.
+> [!NOTE]
+> Aunque el valor sea `1` el atributo `alt` se seguirá mostrando. Más información debajo.
 
 {{cssinfo}}
 
@@ -39,7 +40,8 @@ img {
 
 {{ EmbedLiveSample('Examples','125','125','/files/4619/broken%20image%20link.png') }}
 
-> **Nota:** A no ser que la imagen tenga una altura y ancho especificados, el icono de imagen rota no se mostrará, pero el atributo alt no se mostrará si el valor de `-moz-force-broken-image-icon` es `1`.
+> [!NOTE]
+> A no ser que la imagen tenga una altura y ancho especificados, el icono de imagen rota no se mostrará, pero el atributo alt no se mostrará si el valor de `-moz-force-broken-image-icon` es `1`.
 
 ## Notas
 

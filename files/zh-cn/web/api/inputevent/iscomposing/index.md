@@ -1,36 +1,32 @@
 ---
-title: InputEvent.isComposing
+title: InputEvent：isComposing 属性
 slug: Web/API/InputEvent/isComposing
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-The **`InputEvent.isComposing`** read-only property returns a {{jsxref("Boolean")}} value indicating if the event is fired after [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event) and before [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event).
+**`InputEvent.isComposing`** 只读属性返回一个布尔值，表示事件是否是在 {{domxref("Element/compositionstart_event", "compositionstart")}} 之后且在 {{domxref("Element/compositionend_event", "compositionend")}} 之前触发的。
 
-## 这是一个只读属性，返回 boolean 类型。表示正处于输入事件的开始与结束之间，表示正在输入状态。
+## 返回值
 
-## Syntax
+一个布尔值。
 
-```plain
-var bool = event.isComposing;
-```
-
-## Example
+## 示例
 
 ```js
-var inputEvent = new InputEvent("syntheticInput", false);
-console.log(inputEvent.isComposing); // return false
+const inputEvent = new InputEvent("syntheticInput", false);
+console.log(inputEvent.isComposing); // 返回 false
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event) and [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event)
+- {{domxref("Element/compositionstart_event", "compositionstart")}} 和 {{domxref("Element/compositionend_event", "compositionend")}}
 - {{domxref("InputEvent")}}

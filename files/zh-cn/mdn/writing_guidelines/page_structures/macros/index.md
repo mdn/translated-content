@@ -3,8 +3,6 @@ title: 使用宏
 slug: MDN/Writing_guidelines/Page_structures/Macros
 ---
 
-{{MDNSidebar}}
-
 为了自动化执行某些工作，[Yari](https://github.com/mdn/yari) 平台提供了一个强大的宏系统——[KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript)。本文提供了一些相关信息，方便你在参与编辑 MDN 时使用这些宏。
 
 本文只是简要介绍了相关内容，[KumaScript 指南](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md)提供了更深入的内容。

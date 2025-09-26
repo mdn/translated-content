@@ -3,7 +3,7 @@ title: "HTMLElement: error イベント"
 short-title: error
 slug: Web/API/HTMLElement/error_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: c87cce81bf1a0e3d4d010efb914d620b7f23e522
 ---
 
 {{APIRef}}
@@ -120,6 +120,5 @@ imgError.addEventListener("click", () => {
 ## 関連情報
 
 - 関連イベント:
-
   - Window: {{domxref("Window/error_event", "error")}} イベント
   - HTMLElement: {{domxref("HTMLElement/load_event", "load")}} イベント

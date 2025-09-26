@@ -3,13 +3,47 @@ title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 ---
 
-{{CSSRef}}
+{{InteractiveExample("CSS Demo: overflow-wrap")}}
 
-{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
+```css interactive-example-choice
+overflow-wrap: normal;
+```
+
+```css interactive-example-choice
+overflow-wrap: anywhere;
+```
+
+```css interactive-example-choice
+overflow-wrap: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Most words are short &amp; don't need to break. But
+    <strong class="transition-all" id="example-element"
+      >Antidisestablishmentarianism</strong
+    >
+    is long. The width is set to min-content, with a max-width of 11em.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid #663399;
+  padding: 0.75em;
+  width: min-content;
+  max-width: 11em;
+  height: 200px;
+}
+```
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-wrap`** 应用于行级元素，用来设置浏览器是否应该在一个本来不能断开的字符串中插入换行符，以防止文本溢出其行向盒。
 
-> **备注：** 与 {{cssxref("word-break")}} 相比，`overflow-wrap` 仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生换行。
+> [!NOTE]
+> 与 {{cssxref("word-break")}} 相比，`overflow-wrap` 仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生换行。
 
 这个属性原本属于微软扩展的一个非标准、无前缀的属性，叫做 `word-wrap`，后来在大多数浏览器中以相同的名称实现。目前它已被更名为 {{cssxref("overflow-wrap")}}，`word-wrap` 相当于其别称。
 

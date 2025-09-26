@@ -15,7 +15,8 @@ div:hover {
 
 Las pseudoclases, junto con los pseudoelementos, permiten aplicar un estilo a un elemento no sólo en relación con el contenido del árbol de documento, sino también en relación a factores externos como el historial del navegador ({{ cssxref(":visited") }}, por ejemplo), el estado de su contenido (como {{ cssxref(":checked") }} en algunos elementos de formulario), o la posición del ratón (como {{ cssxref(":hover") }} que permite saber si el ratón está encima de un elemento o no).
 
-> **Nota:** En lugar de usar pseudoclases, {{cssxref("pseudo-elements")}} puede usarse para dar estilo a una _parte específica_ de un elemento.
+> [!NOTE]
+> En lugar de usar pseudoclases, {{cssxref("pseudo-elements")}} puede usarse para dar estilo a una _parte específica_ de un elemento.
 
 ## Sintaxis
 

@@ -7,12 +7,13 @@ slug: Web/API/Window/screenY
 
 **`Window.screenY`** は読み取り専用のプロパティで、ユーザーのブラウザーのビューポートの上端から画面の上端までの垂直距離を CSS ピクセル数で返します。
 
-> **メモ:** `screenY` の別名である {{domxref("Window.screenTop")}} が、最近は新しいブラウザー間で実装されていました。これはもともと IE のみが対応していましたが、有名であるためあらゆる場所で導入されています。
+> [!NOTE]
+> `screenY` の別名である {{domxref("Window.screenTop")}} が、最近は新しいブラウザー間で実装されていました。これはもともと IE のみが対応していましたが、有名であるためあらゆる場所で導入されています。
 
 ## 構文
 
 ```js
-topWindowPos = window.screenY
+topWindowPos = window.screenY;
 ```
 
 ### 返値
@@ -34,14 +35,25 @@ function positionElem() {
   let leftUpdate = initialLeft - newLeft;
   let topUpdate = initialTop - newTop;
 
-  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillStyle = "rgb(0, 0, 0)";
   ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = 'rgb(0, 0, 255)';
+  ctx.fillStyle = "rgb(0, 0, 255)";
   ctx.beginPath();
-  ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
+  ctx.arc(
+    leftUpdate + width / 2,
+    topUpdate + height / 2 + 35,
+    50,
+    degToRad(0),
+    degToRad(360),
+    false,
+  );
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent =
+    "Window.screenLeft: " +
+    window.screenLeft +
+    ", Window.screenTop: " +
+    window.screenTop;
 
   window.requestAnimationFrame(positionElem);
 }
@@ -55,7 +67,7 @@ window.requestAnimationFrame(positionElem);
 `screenX`/`screenY` で代替するようになっています。
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }
@@ -67,7 +79,7 @@ if(!window.screenLeft) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.screenY")}}
+{{Compat}}
 
 ## 関連情報
 

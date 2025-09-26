@@ -22,9 +22,7 @@ new TextDecoderStream(label, options)
   - : 文字列で、既定値は `utf-8` です。
     [何れかの有効なラベル](/ja/docs/Web/API/Encoding_API/Encodings)にすることができます。
 - `options` {{optional_inline}}
-
   - : 次のプロパティを持つオブジェクトです。
-
     - `fatal`
       - : 論理値で、このオブジェクトが無効なデータをデコードした場合に {{jsxref("TypeError")}} を発生させる必要があるかどうかを示します。
         既定値では `false` であり、これはデコードする際に不正なデータを置換文字で置き換えることを意味します。
@@ -36,7 +34,7 @@ new TextDecoderStream(label, options)
 
 ## 例
 
-次の例は、{{domxref("fetch()")}} の呼び出しから取得したバイナリーデータをデコードする方法を示しています。
+次の例は、{{domxref("Window/fetch", "fetch()")}} の呼び出しから取得したバイナリーデータをデコードする方法を示しています。
 このデータには `label` が渡されていないので、UTF-8 として解釈されます。
 
 ```js

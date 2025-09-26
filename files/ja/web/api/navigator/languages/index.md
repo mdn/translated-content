@@ -1,8 +1,9 @@
 ---
-title: Navigator.languages
+title: "Navigator: languages プロパティ"
+short-title: languages
 slug: Web/API/Navigator/languages
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,8 +23,8 @@ l10n:
 ## 例
 
 ```js
-navigator.language   //"en-US"
-navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+navigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## 仕様書

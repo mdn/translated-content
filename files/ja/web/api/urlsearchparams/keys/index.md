@@ -3,14 +3,12 @@ title: "URLSearchParams: keys() メソッド"
 short-title: keys()
 slug: Web/API/URLSearchParams/keys
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 **`keys()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを反復処理できる{{jsxref("Iteration_protocols",'イテレーター')}}を返します。 キーは文字列です。
-
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 構文
 
@@ -53,6 +51,6 @@ key2
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("URL")}} インターフェイス

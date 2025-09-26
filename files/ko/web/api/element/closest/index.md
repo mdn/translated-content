@@ -5,7 +5,7 @@ slug: Web/API/Element/closest
 
 {{APIRef('DOM')}}
 
-{{domxref("Element")}}의 **`closest()`** 메서드는 주어진 [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)와 일치하는 요소를 찾을 때까지, 자기 자신을 포함해 위쪽(부모 방향, 문서 루트까지)으로 문서 트리를 순회합니다.
+{{domxref("Element")}}의 **`closest()`** 메서드는 주어진 [CSS 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)와 일치하는 요소를 찾을 때까지, 자기 자신을 포함해 위쪽(부모 방향, 문서 루트까지)으로 문서 트리를 순회합니다.
 
 ## 구문
 
@@ -16,7 +16,7 @@ closest(selectors);
 ### 매개변수
 
 - `selectors`
-  - : {{domxref("Element")}}와 그 조상 요소들에 테스트할, 유효한 [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors) 문자열입니다.
+  - : {{domxref("Element")}}와 그 조상 요소들에 테스트할, 유효한 [CSS 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) 문자열입니다.
 
 ### 반환 값
 
@@ -116,5 +116,5 @@ if (window.Element && !Element.prototype.closest) {
 
 ## 같이보기
 
-- [CSS 선택자 참고서](/ko/docs/Web/CSS/CSS_Selectors)
+- [CSS 선택자 참고서](/ko/docs/Web/CSS/CSS_selectors)
 - 선택자를 받는 {{domxref("Element")}} 메서드: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, {{domxref("Element.matches()")}}

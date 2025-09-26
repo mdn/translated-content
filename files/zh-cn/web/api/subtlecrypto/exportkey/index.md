@@ -53,7 +53,8 @@ exportKey(format, key)
 
 ## 示例
 
-> **备注：** 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html)。
+> [!NOTE]
+> 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html)。
 
 ### 导出为 Raw 格式
 
@@ -99,7 +100,7 @@ window.crypto.subtle
 ```js
 /*
 将 ArrayBuffer 转换为字符串
-代码来自 https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
+代码来自 https://developer.chrome.google.cn/blog/how-to-convert-arraybuffer-to-and-from-string
 */
 function ab2str(buf) {
   return String.fromCharCode.apply(null, new Uint8Array(buf));
@@ -150,7 +151,7 @@ window.crypto.subtle
 ```js
 /*
 将 ArrayBuffer 转换为字符串
-代码来自 https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
+代码来自 https://developer.chrome.google.cn/blog/how-to-convert-arraybuffer-to-and-from-string
 */
 function ab2str(buf) {
   return String.fromCharCode.apply(null, new Uint8Array(buf));

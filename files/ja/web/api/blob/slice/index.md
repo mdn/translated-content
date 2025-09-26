@@ -1,13 +1,14 @@
 ---
-title: Blob.slice()
+title: "Blob: slice() メソッド"
+short-title: slice()
 slug: Web/API/Blob/slice
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-{{domxref("Blob")}} インターフェイスの **`slice()`** メソッドは、呼び出された blob のサブセットのデータを含む新しい `Blob` オブジェクトを作成して返します。
+**`slice()`** は {{domxref("Blob")}} インターフェイスのメソッドで、呼び出された blob のサブセットのデータを含む新しい `Blob` オブジェクトを作成して返します。
 
 ## 構文
 
@@ -35,7 +36,7 @@ slice(start, end, contentType)
 
 {{Specifications}}
 
-## ブラウザの実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 

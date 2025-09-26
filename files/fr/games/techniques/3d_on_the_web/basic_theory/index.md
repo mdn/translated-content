@@ -3,8 +3,6 @@ title: Explication des bases théoriques de la 3D
 slug: Games/Techniques/3D_on_the_web/Basic_theory
 ---
 
-{{GamesSidebar}}
-
 Cet article explique l'ensemble des bases théoriques utiles à connaître lorsque vous commencez à travailler avec la 3D.
 
 ## Système de coordonnées
@@ -54,7 +52,7 @@ Il y a 4 étapes dans ce traitement : la première implique d'arranger les objet
 
 ![Camera](mdn-games-3d-camera.png)
 
-La **transformation de la projection** (aussi appelée transformation de la perspective) définit ensuite les réglages de la caméra. Elle définit ce qui peut être vu par la caméra — la configuration inclut le champ de vision, le ratio d'aspect, et éventuellement les plans proches et éloignés. Lisez le [paragraphe sur la Caméra](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#Camera) dans l'article de Three.js pour en savoir plus.
+La **transformation de la projection** (aussi appelée transformation de la perspective) définit ensuite les réglages de la caméra. Elle définit ce qui peut être vu par la caméra — la configuration inclut le champ de vision, le ratio d'aspect, et éventuellement les plans proches et éloignés. Lisez le [paragraphe sur la Caméra](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#camera) dans l'article de Three.js pour en savoir plus.
 
 ![](mdn-games-3d-camera-settings.png)
 

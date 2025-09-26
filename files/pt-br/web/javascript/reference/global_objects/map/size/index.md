@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/size
 
 A propriedade acessora **`size`** retorna o número de elementos que estão dentro do objeto {{jsxref("Map")}}
 
-{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("a", "alpha");
+map1.set("b", "beta");
+map1.set("g", "gamma");
+
+console.log(map1.size);
+// Expected output: 3
+```
 
 ## Descrição
 
@@ -20,11 +31,11 @@ A função acessora set para `size` é `undefined`; você não poderá alterar e
 
 ```js
 var myMap = new Map();
-myMap.set('a', 'alpha');
-myMap.set('b', 'beta');
-myMap.set('g', 'gamma');
+myMap.set("a", "alpha");
+myMap.set("b", "beta");
+myMap.set("g", "gamma");
 
-myMap.size // 3
+myMap.size; // 3
 ```
 
 ## Especificações

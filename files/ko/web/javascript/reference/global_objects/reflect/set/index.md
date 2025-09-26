@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 
 **`Reflect.set()`** 정적 메서드는 객체 속성의 값을 설정합니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-set.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.set()")}}
+
+```js interactive-example
+const object1 = {};
+Reflect.set(object1, "property1", 42);
+
+console.log(object1.property1);
+// Expected output: 42
+
+const array1 = ["duck", "duck", "duck"];
+Reflect.set(array1, 2, "goose");
+
+console.log(array1[2]);
+// Expected output: "goose"
+```
 
 ## 구문
 
@@ -36,7 +50,7 @@ Reflect.set(target, propertyKey, value[, receiver])
 
 ## 설명
 
-`Reflect.set()` 메서드는 객체 속성의 값을 설정할 수 있습니다. 속성 추가도 할 수 있으며, 함수라는 점을 제외하면 동작 방식은 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)와 같습니다.
+`Reflect.set()` 메서드는 객체 속성의 값을 설정할 수 있습니다. 속성 추가도 할 수 있으며, 함수라는 점을 제외하면 동작 방식은 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)와 같습니다.
 
 ## 예제
 
@@ -75,4 +89,4 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 ## 같이 보기
 
 - {{jsxref("Reflect")}}
-- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)

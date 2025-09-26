@@ -11,9 +11,11 @@ slug: Web/API/CacheStorage
 
 Вы можете получить доступ к `CacheStorage` через глобальное свойство {{domxref("WorkerGlobalScope.caches", "caches")}}.
 
-> **Примечание:** CacheStorage всегда возвращает отказ с `SecurityError` для ненадёжных источников (т.e. тех, что не используют HTTPS, хотя это утверждение, вероятно, станет более общим в будущем). При тестировании это можно обойти, установив опцию "Enable Service Workers over HTTP (when toolbox is open)" в меню Firefox Devtools options/gear.
+> [!NOTE]
+> CacheStorage всегда возвращает отказ с `SecurityError` для ненадёжных источников (т.e. тех, что не используют HTTPS, хотя это утверждение, вероятно, станет более общим в будущем). При тестировании это можно обойти, установив опцию "Enable Service Workers over HTTP (when toolbox is open)" в меню Firefox Devtools options/gear.
 
-> **Примечание:** {{domxref("CacheStorage.match()")}} удобный метод. Подобная функциональность сопоставления записей кеша может быть реализован путём открытия вашего кеша с помощью {{domxref("CacheStorage.open()")}}, возвращения записей, в ней содержащихся, через {{domxref("CacheStorage.keys()")}} и сравнения необходимой {{domxref("CacheStorage.match()")}}.
+> [!NOTE]
+> Подобная функциональность сопоставления записей кеша может быть реализована путём открытия вашего кеша с помощью {{domxref("CacheStorage.open()")}}, возвращения записей, в ней содержащихся, через {{domxref("CacheStorage.keys()")}} и сравнения необходимой {{domxref("CacheStorage.match()")}}.
 
 ## Методы
 
@@ -91,6 +93,6 @@ this.addEventListener("fetch", function (event) {
 
 ## Смотрите также
 
-- [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

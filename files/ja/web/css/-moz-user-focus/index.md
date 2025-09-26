@@ -1,9 +1,9 @@
 ---
-title: "-moz-user-focus"
+title: -moz-user-focus
 slug: Web/CSS/-moz-user-focus
 ---
 
-{{CSSRef}} {{Non-standard_header}}
+{{Non-standard_header}}
 
 **`-moz-user-focus`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素がフォーカスを持つことができるかどうかを示すために使用されます。
 

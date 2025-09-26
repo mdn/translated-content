@@ -3,7 +3,7 @@ title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
 
-{{JSRef("Global_Objects", "Promise")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -91,14 +91,11 @@ p2.then(function (value) {
 
 ## Especificações
 
-| Especificações                                                                | Status           | Comentários                                |
-| ----------------------------------------------------------------------------- | ---------------- | ------------------------------------------ |
-| [domenic/promises-unwrapping](https://github.com/domenic/promises-unwrapping) | Draft            | Standardization work is taking place here. |
-| {{SpecName('ES6', '#sec-promise.prototype.then', 'Promise.prototype.then')}}  | {{Spec2('ES6')}} | Initial definition in an ECMA standard.    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.then")}}
+{{Compat}}
 
 ## Veja também
 

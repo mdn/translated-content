@@ -5,7 +5,7 @@ slug: Web/API/TransitionEvent
 
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 
-TransitonEvent 接口指那些提供了与 [transition](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions) 有关信息的事件。
+TransitonEvent 接口指那些提供了与[过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)有关信息的事件。
 
 ## 属性
 
@@ -30,15 +30,15 @@ _同时也继承了父类 {{domxref("Event")}}_ 的属性。
 - {{domxref("TransitionEvent.initTransitionEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
   - : 使用已经废弃的{{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}} 方法初始化已经创建的 TransitonEvent 事件。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using CSS transitions](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
-- CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- CSS 属性：{{cssxref("transition")}}、{{cssxref("transition-delay")}}、{{cssxref("transition-duration")}}、{{cssxref("transition-property")}}、{{cssxref("transition-timing-function")}}。

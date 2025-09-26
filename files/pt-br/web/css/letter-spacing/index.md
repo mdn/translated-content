@@ -7,7 +7,46 @@ slug: Web/CSS/letter-spacing
 
 A propriedade CSS **`letter-spacing`** específica o comportamento do espaçamento entre caracteres de texto.
 
-{{EmbedInteractiveExample("pages/css/letter-spacing.html")}}
+{{InteractiveExample("CSS Demo: letter-spacing")}}
+
+```css interactive-example-choice
+letter-spacing: normal;
+```
+
+```css interactive-example-choice
+letter-spacing: 0.2rem;
+```
+
+```css interactive-example-choice
+letter-spacing: 1px;
+```
+
+```css interactive-example-choice
+letter-spacing: -1px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+section {
+  font-size: 1.2em;
+  font-family: Amstelvar;
+}
+```
 
 ## Syntax
 
@@ -18,7 +57,7 @@ letter-spacing: normal;
 /* <length> values */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* Global values */
 letter-spacing: inherit;
@@ -52,11 +91,21 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
+.normal {
+  letter-spacing: normal;
+}
+.em-wide {
+  letter-spacing: 0.4em;
+}
+.em-wider {
+  letter-spacing: 1em;
+}
+.em-tight {
+  letter-spacing: -0.05em;
+}
+.px-wide {
+  letter-spacing: 6px;
+}
 ```
 
 ### Result
@@ -65,19 +114,13 @@ letter-spacing: unset;
 
 ## Specifications
 
-| Specification                                                                                        | Status                                   | Comment                                 |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
-| {{SpecName('CSS3 Text', '#letter-spacing-property', 'letter-spacing')}}     | {{Spec2('CSS3 Text')}}             | No change.                              |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'letter-spacing')}}         | {{Spec2('CSS3 Transitions')}} | Defines `letter-spacing` as animatable. |
-| {{SpecName('CSS2.1', 'text.html#propdef-letter-spacing', 'letter-spacing')}} | {{Spec2('CSS2.1')}}                 | No change.                              |
-| {{SpecName('SVG1.1', 'text.html#LetterSpacingProperty', 'letter-spacing')}} | {{Spec2('SVG1.1')}}                 | Initial SVG definition.                 |
-| {{SpecName('CSS1', '#letter-spacing', 'letter-spacing')}}                         | {{Spec2('CSS1')}}                 | Initial definition.                     |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Browser compatibility
 
-{{Compat("css.properties.letter-spacing")}}
+{{Compat}}
 
 ## See also
 

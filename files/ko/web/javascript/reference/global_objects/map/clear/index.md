@@ -2,14 +2,29 @@
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`clear()`** 메서드는 `Map` 객체의 모든 요소를 제거합니다.
+{{jsxref("Map")}}의 **`clear()`** 메서드는 해당 Map의 모든 요소를 제거합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("bar", "baz");
+map1.set(1, "foo");
+
+console.log(map1.size);
+// Expected output: 2
+
+map1.clear();
+
+console.log(map1.size);
+// Expected output: 0
+```
 
 ## 구문
 
@@ -17,9 +32,13 @@ l10n:
 clear()
 ```
 
+### 매개변수
+
+없음.
+
 ### 반환 값
 
-{{jsxref("undefined")}}.
+없음({{jsxref("undefined")}}).
 
 ## 예제
 

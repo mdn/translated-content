@@ -1,15 +1,18 @@
 ---
-title: MediaStreamTrack.stop()
+title: "MediaStreamTrack: stop() メソッド"
+short-title: stop()
 slug: Web/API/MediaStreamTrack/stop
+l10n:
+  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-**`MediaStreamTrack.stop()`** メソッドは、トラックを停止します。
+**`stop()`** は {{domxref("MediaStreamTrack")}} のメソッドで、トラックを停止します。
 
 ## 構文
 
-```js
+```js-nolint
 stop()
 ```
 
@@ -38,7 +41,7 @@ function stopStreamedVideo(videoElem) {
   const stream = videoElem.srcObject;
   const tracks = stream.getTracks();
 
-  tracks.forEach(function(track) {
+  tracks.forEach((track) => {
     track.stop();
   });
 

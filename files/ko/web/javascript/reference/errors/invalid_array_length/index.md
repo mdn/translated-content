@@ -50,8 +50,8 @@ b.length = b.length + 1; // set 2^32 to the length property
 ### 올바른 예제
 
 ```js example-good
-[ Math.pow(2, 40) ]; // [ 1099511627776 ]
-[ -1 ]; // [ -1 ]
+[Math.pow(2, 40)]; // [ 1099511627776 ]
+[-1]; // [ -1 ]
 new ArrayBuffer(Math.pow(2, 32) - 1);
 new ArrayBuffer(0);
 

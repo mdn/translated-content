@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 O método **`reduce()`** executa uma função **reducer** (fornecida por você) para cada elemento do array, resultando num único valor de retorno.
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 A função **reducer** recebe quatro parâmetros:
 
@@ -50,13 +64,14 @@ O método `reduce()` executa a função de `callback` uma vez para cada elemento
 
 A primeira vez que o callback é chamado, o `acumulador` e o `valorAtual` podem ter um de dois valores possíveis. Se o `valorInicial` tiver sido fornecido na chamada à função `reduce()`, então o `acumulador` será igual ao `valorInicial` e o `valorAtual` será igual ao primeiro valor no array. Caso nenhum `valorInicial` seja fornecido, `acumulador` será igual ao primeiro valor no array, e `valorAtual` será igual ao segundo.
 
-> **Nota:** Se o `valorInicial` não tiver sido passado como argumento, então reduce() executará o callback da função começando a partir do índice 1 (index 1), pulando o primeiro índice (`index 0`). Se o `valorInicial` for passado como argumento, a função irá começar no index 0.
+> [!NOTE]
+> Se o `valorInicial` não tiver sido passado como argumento, então reduce() executará o callback da função começando a partir do índice 1 (index 1), pulando o primeiro índice (`index 0`). Se o `valorInicial` for passado como argumento, a função irá começar no index 0.
 
 Se a array estiver vazia e o `valorInicial` não tiver sido informado, uma exceção do tipo {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançada.
 
 Se a array possuir somente um elemento (independente da posição) e o `valorInicial` não tiver sido fornecido, ou se `valorInicial` for fornecido, mas a array estiver vazia, o valor será retornado sem que a função de `callback` seja chamada.
 
-É mais seguro provir um `valorInicial`, porque existem até _quatro_ possíveis saídas sem o `valorInicial`, como mostrado no exemplo:
+É mais seguro prover um `valorInicial`, porque existem até _quatro_ possíveis saídas sem o `valorInicial`, como mostrado no exemplo:
 
 ```js
 var maxCallback = (acc, cur) => Math.max(acc.x, cur.x);
@@ -99,7 +114,7 @@ Você também pode usar uma {{jsxref("Functions/Arrow_functions", "Arrow Functio
 [0, 1, 2, 3, 4].reduce((accum, curr) => accum + curr);
 ```
 
-Se você informar um valorInicial como o segundo argumento de reduce, o resultado será:
+Se você informar um `valorInicial` como o segundo argumento de reduce, o resultado será:
 
 ```js
 [0, 1, 2, 3, 4].reduce(function (acumulador, valorAtual, indice, array) {
@@ -141,7 +156,7 @@ var total = [0, 1, 2, 3].reduce(
 
 ### Soma de valores de um objeto de um array
 
-Para resumir os valores contidos em um array, você **deve** fornecer um valorInicial, para que cada item passe por sua função.
+Para resumir os valores contidos em um array, você **deve** fornecer um `valorInicial`, para que cada item passe por sua função.
 
 ```js
 var valorInicial = 0;
@@ -279,7 +294,8 @@ var allbooks = friends.reduce(
 
 ### Removendo itens duplicados num array
 
-> **Nota:** Se você estiver usando um ambiente compatível com {{jsxref("Set")}} and {{jsxref("Array.from()")}}, você pode usar `let orderedArray = Array.from(new Set(myArray))` para obter um array em que os itens duplicados tenham sido removidos.
+> [!NOTE]
+> Se você estiver usando um ambiente compatível com {{jsxref("Set")}} and {{jsxref("Array.from()")}}, você pode usar `let orderedArray = Array.from(new Set(myArray))` para obter um array em que os itens duplicados tenham sido removidos.
 
 ```js
 let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
@@ -418,14 +434,11 @@ if (!Array.prototype.reduce) {
 
 ## Especificações
 
-| Especificação                                                                | Status             | Comentário                                        |
-| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.21', 'Array.prototype.reduce')}}            | {{Spec2('ES5.1')}} | Definição inicial. Implemetada no JavaScript 1.8. |
-| {{SpecName('ES6', '#sec-array.prototype.reduce', 'Array.prototype.reduce')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
 ## Leia também
 

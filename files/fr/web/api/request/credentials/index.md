@@ -40,6 +40,6 @@ var myCred = myRequest.credentials; // renvoie "same-origin" par défaut
 
 ## Voir aussi
 
-- [L'API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API)
-- [Contrôle d'accès HTTP avec les origines (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
+- [Contrôle d'accès HTTP avec les origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

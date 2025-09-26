@@ -5,7 +5,7 @@ slug: Web/CSS/@media/scripting
 
 {{cssref}}
 
-[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`scripting`** может использоваться для проверки доступности скриптов (таких как JavaScript)
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`scripting`** может использоваться для проверки доступности скриптов (таких как JavaScript)
 
 ## Синтаксис
 
@@ -60,7 +60,7 @@ p {
 
 {{EmbedLiveSample("Пример")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

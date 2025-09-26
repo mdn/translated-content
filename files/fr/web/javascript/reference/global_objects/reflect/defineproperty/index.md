@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 
 La méthode statique **`Reflect.defineProperty()`** est semblable à {{jsxref("Object.defineProperty()")}} mais renvoie un {{jsxref("Boolean")}}.
 
-{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
+  console.log("property1 created!");
+  // Expected output: "property1 created!"
+} else {
+  console.log("problem creating property1");
+}
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -48,7 +62,7 @@ obj.x; // 7
 
 ### Vérifier si la définition de propriété a réussi
 
-{{jsxref("Object.defineProperty")}} renvoie un objet si la définition a réussi ou lève une exception {{jsxref("TypeError")}} sinon, ce qui implique d'utiliser un bloc [`try...catch`](/fr/docs/Web/JavaScript/Reference/Instructions/try...catch) pour attraper l'erreur. `Reflect.defineProperty` renvoie un booléen pour indiquer la réussite ou l'échec, un bloc [`if...else`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) suffit :
+{{jsxref("Object.defineProperty")}} renvoie un objet si la définition a réussi ou lève une exception {{jsxref("TypeError")}} sinon, ce qui implique d'utiliser un bloc [`try...catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch) pour attraper l'erreur. `Reflect.defineProperty` renvoie un booléen pour indiquer la réussite ou l'échec, un bloc [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) suffit :
 
 ```js
 if (Reflect.defineProperty(cible, propriété, attributs)) {

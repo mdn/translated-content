@@ -9,7 +9,16 @@ l10n:
 
 El símbolo conocido como **`Symbol.matchAll`** devuelve un iterador, que devuelve las coincidencias de la expresión regular con una cadena. Esta función es llamada por el método {{jsxref("String.prototype.matchAll()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Symbol.matchAll", "shorter")}}
+
+```js interactive-example
+const re = /[0-9]+/g;
+const str = "2016-01-02|2019-03-07";
+const result = re[Symbol.matchAll](str);
+
+console.log(Array.from(result, (x) => x[0]));
+// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+```
 
 ## Descripción
 

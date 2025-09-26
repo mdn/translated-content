@@ -17,7 +17,8 @@ On notera que bien que les valeurs {{cssxref("&lt;percentage&gt;")}} soient auss
 
 Une longueur est un nombre (type {{cssxref("&lt;number&gt;")}}) immédiatement suivi d'une unité de longueur (`px`, `em`, `pc`, `in`, `mm`…). Comme toutes les dimensions CSS, il n'y aucun espace entre le nombre et l'unité. L'unité est optionnelle pour la valeur nulle.
 
-> **Note :** Certaines propriétés permettent d'utiliser des longueurs négatives alors que d'autres n'acceptent que des valeurs positives.
+> [!NOTE]
+> Certaines propriétés permettent d'utiliser des longueurs négatives alors que d'autres n'acceptent que des valeurs positives.
 
 ### Unités
 
@@ -34,10 +35,10 @@ Les unités relatives aux polices de caractères permettent d'obtenir des longue
 - `ch`
   - : Cette unité représente la largeur du caractère « 0 » (zéro, le caractère Unicode U+0030) dans la police actuelle. Dans les cas où il est impossible ou trop complexe de déterminer la taille du glyphe pour « 0 », on prend l'hypothèse que celui-ci mesure 0.5em de large sur 1em de haut.
 - `em`
-
   - : Cette unité représente la {{cssxref("font-size")}} calculée de l'élément. Si utilisée avec la propriété {{cssxref("font-size")}}, elle représente la taille de police _héritée_ de l'élément.
 
-    > **Note :** Cette unité est souvent utilisée pour créer des mises en page s'adaptant à la taille des contenus, qui gardent le [rythme vertical de la page](http://24ways.org/2006/compose-to-a-vertical-rhythm/), même lorsque l'utilisateur change la taille des polices. Les propriétés CSS {{cssxref("line-height")}}, {{cssxref("font-size")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-top")}} ont souvent des dimensions exprimées en **em**.
+    > [!NOTE]
+    > Cette unité est souvent utilisée pour créer des mises en page s'adaptant à la taille des contenus, qui gardent le [rythme vertical de la page](http://24ways.org/2006/compose-to-a-vertical-rhythm/), même lorsque l'utilisateur change la taille des polices. Les propriétés CSS {{cssxref("line-height")}}, {{cssxref("font-size")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-top")}} ont souvent des dimensions exprimées en **em**.
 
 - `ex`
   - : Cette unité représente la [hauteur d'x](https://fr.wikipedia.org/wiki/Hauteur_d%27x) de la {{cssxref("font")}} de l'élément. Il peut s'agir généralement de la hauteur des lettres bas de casse de la police. `1ex ≈ 0.5em` dans de nombreuses polices.
@@ -46,10 +47,10 @@ Les unités relatives aux polices de caractères permettent d'obtenir des longue
 - `lh`
   - : Cette unité représente la valeur calculée de la propriété {{cssxref("line-height")}}, convertie en longueur absolue, de l'élément sur lequel elle est utilisée.
 - `rem`
-
   - : Cette unité représente la {{cssxref("font-size")}} de l'élément racine (par exemple la taille de la police de l'élément {{HTMLElement("html")}}). Quand utilisée avec {{cssxref("font-size")}} sur l'élément racine, elle représente sa valeur initiale.
 
-    > **Note :** Cette unité est utile pour la création de mises en page s'adaptant à la taille des contenus. Si elle n'est pas supportée par les navigateurs ciblés, ces mises en pages peuvent être réalisées en utilisant l'unité **em**, mais la réalisation est un petit peu plus complexe.
+    > [!NOTE]
+    > Cette unité est utile pour la création de mises en page s'adaptant à la taille des contenus. Si elle n'est pas supportée par les navigateurs ciblés, ces mises en pages peuvent être réalisées en utilisant l'unité **em**, mais la réalisation est un petit peu plus complexe.
 
 - `rlh`
   - : Cette unité représente la valeur calculée de la propriété {{cssxref("line-height")}} de l'élément racine, convertie en longueur absolue. Lorsque cette unité est utilisée pour les propriétés {{cssxref("font-size")}} ou {{cssxref("line-height")}} de l'élément racine, l'unité `rlh` fait référence aux valeurs initiales des propriétés.
@@ -63,7 +64,6 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
 - `vb`
   - : 1 % de la taille du bloc englobant initial selon la direction de bloc (la direction orthogonale au sens d'écriture) de l'élément racine.
 - `vh`
-
   - : 1/100
 
     <sup>e</sup>
@@ -73,7 +73,6 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
 - `vi`
   - : 1 % de la taille du bloc englobant initial selon la direction en ligne (la direction du sens d'écriture) de l'élément racine.
 - `vw`
-
   - : 1/100
 
     <sup>e</sup>
@@ -81,7 +80,6 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
     de la largeur du _viewport_.
 
 - `vmin`
-
   - : 1/100
 
     <sup>e</sup>
@@ -89,7 +87,6 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
     du côté le plus petit du _viewport_.
 
 - `vmax`
-
   - : 1/100
 
     <sup>e</sup>
@@ -104,14 +101,14 @@ Pour les périphériques ayant un faible nombre de points par pouce, l'unité **
 
 Pour les périphériques ayant un nombre de points par pouce élevé, les pouces (`in`), centimètres (`cm`) et millimètres (`mm`) sont définis comme leur équivalent physique. Par conséquent, l'unité **px** est définie comme étant relavite à eux (1/96 de pouce).
 
-> **Note :** Les utilisateurs peuvent augmenter la taille des polices pour des raisons d'accessibilité. Pour permettre des mises en page adaptées quelque soit la taille des polices, utilisez uniquement des unités de longueur quand les caractéristiques physiques du média de sortie sont connues, telles que les images matricielles (bitmap) et sinon, privilégiez les unités relatives telles que `em` et `rem` (notamment pour {{cssxref("font-size")}}).
+> [!NOTE]
+> Les utilisateurs peuvent augmenter la taille des polices pour des raisons d'accessibilité. Pour permettre des mises en page adaptées quelque soit la taille des polices, utilisez uniquement des unités de longueur quand les caractéristiques physiques du média de sortie sont connues, telles que les images matricielles (bitmap) et sinon, privilégiez les unités relatives telles que `em` et `rem` (notamment pour {{cssxref("font-size")}}).
 
 - `px`
   - : Pour l'affichage sur écran, correspond typiquement à un pixel de l'affichage. Pour les écrans en haute résolution et les imprimantes, un pixel CSS correspond à plusieurs pixels du périphérique, de sorte que le nombre de pixels par pouce (ppi) reste aux alentours de 96.
 - `mm`
   - : Un millimètre. Pour l'affichage sur écran, le nombre de pixels par millimètre est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
 - `Q`{{experimental_inline}}
-
   - : Un quart de millimètre (1/40
 
     <sup>e</sup>
@@ -123,7 +120,6 @@ Pour les périphériques ayant un nombre de points par pouce élevé, les pouces
 - `in`
   - : Un pouce (soit 2,54 centimètres). Pour l'affichage sur écran, le nombre de pixels par pouce est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
 - `pt`
-
   - : Un point pica (soit 1/72
 
     <sup>e</sup>
@@ -131,7 +127,6 @@ Pour les périphériques ayant un nombre de points par pouce élevé, les pouces
     de pouce). Pour l'affichage sur écran, le nombre de pixels par point est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
 
 - `pc`
-
   - : Un pica (soit 12 points, soit 1/6
 
     <sup>e</sup>
@@ -143,7 +138,8 @@ Pour les périphériques ayant un nombre de points par pouce élevé, les pouces
 
 ## Unités CSS et points par pouce
 
-> **Note :** L'unité `in` ne représente pas un pouce physique de l'écran, mais `96px`. Celà signifie que quelque soit la densité de pixel réelle de l'écran, elle est supposée correspondre à `96dpi`. Sur les périphériques dotés d'une plus grande densité de pixel, `1in` fera moins d'1 pouce physique. De la même manière, `mm`, `cm`, et `pt` ne sont pas des longueurs absolues.
+> [!NOTE]
+> L'unité `in` ne représente pas un pouce physique de l'écran, mais `96px`. Celà signifie que quelque soit la densité de pixel réelle de l'écran, elle est supposée correspondre à `96dpi`. Sur les périphériques dotés d'une plus grande densité de pixel, `1in` fera moins d'1 pouce physique. De la même manière, `mm`, `cm`, et `pt` ne sont pas des longueurs absolues.
 
 Quelques exemples particuliers :
 
@@ -165,6 +161,6 @@ Les valeurs du type `<length>` peuvent être interpolées de manière à rendre 
 
 ## Voir aussi
 
-- [Tutoriel sur les unités et valeurs CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Tutoriel sur les unités et valeurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [Référence des unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Modèle de boîtes CSS](/fr/docs/Web/CSS/CSS_Box_Model)
+- [Modèle de boîtes CSS](/fr/docs/Web/CSS/CSS_box_model)

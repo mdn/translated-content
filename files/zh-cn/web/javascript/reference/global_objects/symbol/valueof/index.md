@@ -1,35 +1,53 @@
 ---
 title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
+l10n:
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef("Global_Objects", "Symbol")}}
+{{JSRef}}
 
-## 概述
+{{jsxref("Symbol")}} 值的 **`valueOf()`** 方法会返回该符号（symbol）的值。
 
-**`valueOf()`** 方法返回当前 symbol 对象所包含的 symbol 原始值。
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.valueOf()")}}
+
+```js interactive-example
+const symbol1 = Symbol("foo");
+
+console.log(typeof Object(symbol1));
+// Expected output: "object"
+
+console.log(typeof Object(symbol1).valueOf());
+// Expected output: "symbol"
+```
 
 ## 语法
 
-```plain
-symbol.valueOf();
+```js-nolint
+valueOf()
 ```
+
+### 参数
+
+无。
+
+### 返回值
+
+指定的 {{jsxref("Symbol")}} 对象的原始值。
 
 ## 描述
 
-在 JavaScript 中，虽然大多数类型的对象在某些操作下都会自动的隐式调用自身的 `valueOf()` 方法或者 `toString()` 方法来将自己转换成一个原始值，但 symbol 对象不会这么干，symbol 对象无法隐式转换成对应的原始值：
+{{jsxref("Symbol")}} 的 `valueOf()` 方法会以 Symbol 数据类型返回 Symbol 对象的原始值。
+
+JavaScript 调用 `valueOf()` 方法会将对象转换为原始值。你很少需要自己调用 `valueOf()` 方法；当遇到期望原始值的对象时，JavaScript 会自动调用它。
+
+## 示例
+
+### 使用 valueOf()
 
 ```js
-Object(Symbol("foo")) + "bar";
-// TypeError: can't convert symbol object to primitive
-// 无法隐式的调用 valueOf() 方法
-
-Object(Symbol("foo")).valueOf() + "bar";
-// TypeError:  can't convert symbol to string
-// 手动调用 valueOf() 方法，虽然转换成了原始值，但 symbol 原始值不能转换为字符串
-
-Object(Symbol("foo")).toString() + "bar";
-// "Symbol(foo)bar"，需要手动调用 toString() 方法才行
+const sym = Symbol("example");
+sym === sym.valueOf(); // true
 ```
 
 ## 规范
@@ -40,6 +58,6 @@ Object(Symbol("foo")).toString() + "bar";
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.valueOf()")}}

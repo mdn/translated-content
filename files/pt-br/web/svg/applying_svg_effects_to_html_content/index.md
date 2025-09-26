@@ -3,11 +3,12 @@ title: Applying SVG effects to HTML content
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
-Firefox 3.5 introduziu suporte para uso do [SVG](/pt-BR/docs/SVG) como um componente do [CSS](/pt-BR/docs/Web/CSS) em ordem para introduzir efeitos SVG no conteúdo HTML.
+Firefox 3.5 introduziu suporte para uso do [SVG](/pt-BR/docs/Web/SVG) como um componente do [CSS](/pt-BR/docs/Web/CSS) em ordem para introduzir efeitos SVG no conteúdo HTML.
 
 Você pode embutir o SVG nos estilos dentro do mesmo documento, ou com um _stylesheet_ externo.
 
-> **Nota:** Referencias para SVG em arquivos externos podem ter mesma origem como as do documento originário.
+> [!NOTE]
+> Referencias para SVG em arquivos externos podem ter mesma origem como as do documento originário.
 
 ## Usando SVG embutido
 
@@ -87,7 +88,7 @@ O exemplo acima pode rodar com uma máscara aplicadaa ele.
 
 ### Exemplo: Clipping
 
-Esse exemplo demonstra como usar SVG to recortar conteúdo HTML. Esse exemplo demonstra como usar SVG para recortar conteúdo HTML. Quando você ver a [demonstração](/@api/deki/files/3214/=clipdemo.xhtml), não irá notar que as áreas quentes para links são recortes.
+Esse exemplo demonstra como usar SVG to recortar conteúdo HTML. Esse exemplo demonstra como usar SVG para recortar conteúdo HTML. Quando você ver a [demonstração](clipdemo.xhtml), não irá notar que as áreas quentes para links são recortes.
 
 ```html
 <p class="target" style="background:lime;">
@@ -126,7 +127,8 @@ p {
 
 Isso estabelece uma área recortada composta por um círculo e um retângulo, e atribui para ela ID "#c1". Isso é então referenciado por um estilo. Quando o estilo `target` é estabelecido desse modo, `clip-path` pode ser atribuido para qualquer outro elemento.
 
-> **Nota:** Também você pode fazer mudanças no SVG em tempo real e ver suas alterações imediatamente afetar a renderização do HTML. Por exemplo, você pode redimensionar o círculo dentro do caminho do recorte estabelecendo o seguinte:
+> [!NOTE]
+> Também você pode fazer mudanças no SVG em tempo real e ver suas alterações imediatamente afetar a renderização do HTML. Por exemplo, você pode redimensionar o círculo dentro do caminho do recorte estabelecendo o seguinte:
 
 ```js
 function toggleRadius() {
@@ -234,8 +236,8 @@ Por exemplo, se seu CSS está em um arquivo com nome `default.css`, esse pode pa
 
 O SVG é importado do arquivo com nome `resources.svg`, usando o clip-path com o ID c1.
 
-**Veja também**
+## Veja também
 
-- [SVG](/pt-BR/docs/SVG)
-- [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
+- [SVG](/pt-BR/docs/Web/SVG)
+- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
 - ([\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))

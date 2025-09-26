@@ -58,7 +58,8 @@ options = {
 id = navigator.geolocation.watchPosition(success, error, options);
 ```
 
-> **Note :** Si votre application fonctionne sous Firefox OS, veillez à la [geolocation wake lock](/fr/docs/Web/API/Geolocation/navigator.requestWakeLock) pour que votre application continue à recevoir les changements de positions si votre application tourne en tâche de fond, ou si votre écran est éteint.
+> [!NOTE]
+> Si votre application fonctionne sous Firefox OS, veillez à la [geolocation wake lock](/fr/docs/Web/API/Geolocation/navigator.requestWakeLock) pour que votre application continue à recevoir les changements de positions si votre application tourne en tâche de fond, ou si votre écran est éteint.
 
 ## Spécifications
 
@@ -71,7 +72,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 ## Voir aussi
 
 - [geolocation wake lock](</fr/docs/Web/API/Geolocation/navigator.requestWakeLock()>)
-- [Utiliser geolocation](/fr/docs/WebAPI/Using_geolocation)
+- [Utiliser geolocation](/fr/docs/Web/API/Geolocation_API)
 - L'interface qui lui est réservée, {{domxref("Geolocation")}}, et la façon d'y accéder {{domxref("NavigatorGeolocation.geolocation")}}.
 - L'opération inverse : {{domxref("Geolocation.clearWatch()")}}
 - Une méthode similaire : {{domxref("Geolocation.getCurrentPosition()")}}

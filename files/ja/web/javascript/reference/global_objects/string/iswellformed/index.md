@@ -1,11 +1,10 @@
 ---
 title: String.prototype.isWellFormed()
+short-title: isWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
 l10n:
- sourceCommit: 5635446aa0127d686183ddd4fd5adcc34be567da
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`isWellFormed()`** は {{jsxref("String")}} 値のメソッドで、この文字列に[孤立サロゲート](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)があるかどうかを示す論理値を返します。
 
@@ -15,9 +14,13 @@ l10n:
 isWellFormed()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-この文字列に孤立サロゲートがある場合は `true`、そうでなれば `false`。
+この文字列に孤立サロゲートがない場合は `true`、そうでなれば `false`。
 
 ## 解説
 
@@ -31,10 +34,10 @@ JavaScript の文字列は UTF-16 エンコードです。UTF-16 エンコーデ
 
 ```js
 const strings = [
-  // 孤立高サロゲート
+  // 孤立上位サロゲート
   "ab\uD800",
   "ab\uD800c",
-  // 孤立低サロゲート
+  // 孤立下位サロゲート
   "\uDFFFab",
   "c\uDFFFab",
   // 整形式
@@ -85,5 +88,6 @@ if (illFormed.isWellFormed()) {
 ## 関連情報
 
 - [`String.prototype.isWellFormed` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#well-formed-unicode-strings)
+- [es-shims による `String.prototype.isWellFormed` のポリフィル](https://www.npmjs.com/package/string.prototype.iswellformed)
 - {{jsxref("String.prototype.toWellFormed()")}}
 - {{jsxref("String.prototype.normalize()")}}

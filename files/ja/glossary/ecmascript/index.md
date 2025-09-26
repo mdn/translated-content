@@ -3,7 +3,9 @@ title: ECMAScript
 slug: Glossary/ECMAScript
 ---
 
-**ECMAScript** は {{glossary("JavaScript")}} のベースとなっているスクリプト言語仕様です。[Ecma International](http://www.ecma-international.org) が ECMAScript の標準化を担当しています。
+{{GlossarySidebar}}
+
+**ECMAScript** は {{glossary("JavaScript")}} のベースとなっているスクリプト言語仕様です。[Ecma International](https://www.ecma-international.org) が ECMAScript の標準化を担当しています。
 
 ## 詳細情報
 

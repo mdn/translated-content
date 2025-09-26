@@ -3,8 +3,6 @@ title: counter()
 slug: Web/CSS/counter
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 函数 **`counter()`**，返回一个代表计数器的当前值的字符串。它通常和伪元素搭配使用，但是理论上可以在支持\<string>值的任何地方使用。
 
 ```css
@@ -17,11 +15,20 @@ counter(countername, upper-roman)
 
 一个[计数器](/zh-CN/docs/Web/CSS/CSS_lists/Using_CSS_counters)本身没有可见的效果，而是通过`counter()`函数（和[`counters()`](/zh-CN/docs/Web/CSS/counters)函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。
 
-> **备注：** `counter()`函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/zh-CN/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
+> [!NOTE]
+> `counter()`函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/zh-CN/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
 >
-> 在使用此功能之前，请仔细检查[浏览器兼容性表](#Browser_compatibility)。
+> 在使用此功能之前，请仔细检查[浏览器兼容性表](#browser_compatibility)。
 
 ## 语法
+
+```css
+/* 简单的用法 */
+counter(countername);
+
+/* 改变计数器的显示 */
+counter(countername, upper-roman)
+```
 
 ### 值
 
@@ -32,15 +39,7 @@ counter(countername, upper-roman)
 
 ### 形式语法
 
-```
-counter( <custom-ident>, <counter-style>? )
-
-where
-<counter-style> = <counter-style-name> | symbols()
-
-where
-<counter-style-name> = <custom-ident>
-```
+{{CSSSyntax}}
 
 ## 示例
 
@@ -97,11 +96,8 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == [" counter(
-      count,
-      lower-alpha
-    )
-    "]";
+  content: "[" counter(count, decimal-leading-zero) "] == ["
+    counter(count, lower-alpha) "]";
 }
 ```
 

@@ -1,21 +1,17 @@
 ---
-title: document.embeds
+title: Document：embeds 属性
 slug: Web/API/Document/embeds
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ ApiRef() }}
+{{ApiRef}}
 
-{{domxref("Document")}}接口的只读属性`embeds` 返回当前文档内的\<embed>**HTML** {{htmlelement("object")}}元素列表
+{{domxref("Document")}} 接口的 **`embeds`** 只读属性返回当前文档中嵌入的 {{htmlelement("embed")}} 元素的列表。
 
-## 语法
+## 值
 
-```plain
-nodeList = document.embeds
-```
-
-### 值
-
-一个 {{domxref("HTMLCollection")}}类型的值
+{{domxref("HTMLCollection")}}。
 
 ## 规范
 

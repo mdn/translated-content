@@ -1,5 +1,5 @@
 ---
-title: ":active"
+title: :active
 slug: Web/CSS/:active
 ---
 
@@ -7,7 +7,8 @@ slug: Web/CSS/:active
 
 Esse estilo pode ser substituído por qualquer outra pseudo-classe relacionada ao link, ou seja, {{cssxref(":link")}}, {{cssxref(":hover")}} e {{cssxref(":visited")}}, aparecendo nas regras subseqüentes. Para estilizar apropriadamente os links, você precisa colocar a regra `:active` depois de todas as outras regras relacionadas ao link, conforme definido pela ordem LVHA. `:link` — `:visited` — `:hover` — `:active`.
 
-> **Nota:** Em sistemas com mouses com vários botões, o CSS 3 especifica que a pseudo-classe :active só deve ser aplicada ao botão principal em mouses destros, este é tipicamente o botão mais à esquerda.
+> [!NOTE]
+> Em sistemas com mouses com vários botões, o CSS 3 especifica que a pseudo-classe :active só deve ser aplicada ao botão principal em mouses destros, este é tipicamente o botão mais à esquerda.
 
 ## Exemplo
 
@@ -47,16 +48,11 @@ a:active {
 
 ## Especificações
 
-| Especificação                                                             | Status                      | Comentário         |
-| ------------------------------------------------------------------------- | --------------------------- | ------------------ |
-| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}               | {{Spec2('CSS4 Selectors')}} | Nenhuma mudança.   |
-| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}          | {{Spec2('CSS3 Selectors')}} | Nenhuma mudança.   |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}         | Nenhuma mudança.   |
-| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                 | {{Spec2('CSS1')}}           | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.active")}}
+{{Compat}}
 
 ## Veja também
 

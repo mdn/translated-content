@@ -7,14 +7,56 @@ slug: Web/CSS/vertical-align
 
 A propriedade **`vertical-align`** do [CSS](/pt-BR/docs/Web/CSS) define o alinhamento vertical de uma caixa inline, inline-block ou table-cell.
 
-{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
+{{InteractiveExample("CSS Demo: vertical-align")}}
+
+```css interactive-example-choice
+vertical-align: baseline;
+```
+
+```css interactive-example-choice
+vertical-align: top;
+```
+
+```css interactive-example-choice
+vertical-align: middle;
+```
+
+```css interactive-example-choice
+vertical-align: bottom;
+```
+
+```css interactive-example-choice
+vertical-align: sub;
+```
+
+```css interactive-example-choice
+vertical-align: text-top;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p>
+    Align the star:
+    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+  </p>
+</section>
+```
+
+```css interactive-example
+#default-example > p {
+  line-height: 3em;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-decoration: underline overline;
+}
+```
 
 A propriedade vertical-align pode ser usada em dois contextos:
 
 - Para alinhar verticalmente a caixa de um elemento inline dentro da caixa de linha que a contém. Por exemplo, pode ser usado para [posicionar verticalmente uma imagem em uma linha de texto](#vertical_alignment_in_a_line_box).
 - Para alinhar verticalmente [o conteúdo de uma célula em uma tabela](#vertical_alignment_in_a_table_cell).
 
-Observe que `vertical-align` só se aplica a elementos inline, inline-block e table-cell: você não pode usá-lo para alinhar verticalmente [elementos em nível de bloco](/pt-BR/docs/Web/HTML/Block-level_elements).
+Observe que `vertical-align` só se aplica a elementos inline, inline-block e table-cell: você não pode usá-lo para alinhar verticalmente [elementos em nível de bloco](/pt-BR/docs/Glossary/Block-level_content).
 
 ## Sintaxe
 
@@ -153,20 +195,20 @@ img.middle {
 
 ```html
 <p>
-top:         <img style="vertical-align: top" src="star.png"/>
-middle:      <img style="vertical-align: middle" src="star.png"/>
-bottom:      <img style="vertical-align: bottom" src="star.png"/>
-super:       <img style="vertical-align: super" src="star.png"/>
-sub:         <img style="vertical-align: sub" src="star.png"/>
+  top: <img style="vertical-align: top" src="star.png" /><br />
+  middle: <img style="vertical-align: middle" src="star.png" /><br />
+  bottom: <img style="vertical-align: bottom" src="star.png" /><br />
+  super: <img style="vertical-align: super" src="star.png" /><br />
+  sub: <img style="vertical-align: sub" src="star.png" /><br />
 </p>
 
 <p>
-text-top:    <img style="vertical-align: text-top" src="star.png"/>
-text-bottom: <img style="vertical-align: text-bottom" src="star.png"/>
-0.2em:       <img style="vertical-align: 0.2em" src="star.png"/>
--1em:        <img style="vertical-align: -1em" src="star.png"/>
-20%:         <img style="vertical-align: 20%" src="star.png"/>
--100%:       <img style="vertical-align: -100%" src="star.png"/>
+  text-top: <img style="vertical-align: text-top" src="star.png" /><br />
+  text-bottom: <img style="vertical-align: text-bottom" src="star.png" /><br />
+  0.2em: <img style="vertical-align: 0.2em" src="star.png" /><br />
+  -1em: <img style="vertical-align: -1em" src="star.png" /><br />
+  20%: <img style="vertical-align: 20%" src="star.png" /><br />
+  -100%: <img style="vertical-align: -100%" src="star.png" /><br />
 </p>
 ```
 
@@ -207,13 +249,12 @@ p {
     <td style="vertical-align: bottom">bottom</td>
     <td>
       <p>
-        Existe uma teoria que afirma que se alguém descobrir exatamente
-        para que serve o Universo e por que ele está aqui, ele desaparecerá instantaneamente
-        e será substituído por algo ainda mais bizarro e inexplicável.
+        Existe uma teoria que afirma que se alguém descobrir exatamente para que
+        serve o Universo e por que ele está aqui, ele desaparecerá
+        instantaneamente e será substituído por algo ainda mais bizarro e
+        inexplicável.
       </p>
-      <p>
-        Há outra teoria que afirma que isso já aconteceu.
-      </p>
+      <p>Há outra teoria que afirma que isso já aconteceu.</p>
     </td>
   </tr>
 </table>

@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
-ユーザーエージェントクライアントヒント API (User-Agent Client Hints API) は、[クライアントヒント](/ja/docs/Web/HTTP/Client_hints)を拡張し、 User-Agent レスポンスおよびリクエストヘッダー、および JavaScript API によってブラウザーとプラットフォーム情報を公開する方法を提供します。
+ユーザーエージェントクライアントヒント API (User-Agent Client Hints API) は、[クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)を拡張し、 User-Agent レスポンスおよびリクエストヘッダー、および JavaScript API によってブラウザーとプラットフォーム情報を公開する方法を提供します。
 
 ## 概念と使い方
 
@@ -56,13 +56,17 @@ console.log(navigator.userAgentData.brands);
 以下の例では、 {{domxref("NavigatorUAData.getHighEntropyValues()")}} メソッドを使用して多くのヒントがリクエストされます。プロミスが解決すると、この情報がコンソールに表示されます。
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platform",
-  "platformVersion",
-  "fullVersionList"])
-  .then((ua) => { console.log(ua) });
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platform",
+    "platformVersion",
+    "fullVersionList",
+  ])
+  .then((ua) => {
+    console.log(ua);
+  });
 ```
 
 ## 仕様書

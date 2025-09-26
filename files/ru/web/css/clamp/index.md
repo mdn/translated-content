@@ -78,19 +78,17 @@ p {
 
 TBD
 
-## Specifications
+## Спецификации
 
-| Specification                                            | Status                   | Comment             |
-| -------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("CSS4 Values", "#calc-notation", "clamp()")}} | {{Spec2('CSS4 Values')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}
 - {{CSSxRef("min")}}
-- [CSS Values](/ru/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

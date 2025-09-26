@@ -7,7 +7,39 @@ slug: Web/CSS/scrollbar-color
 
 La propriété **`scrollbar-color`** permet à un auteur de définir la couleur utilisée pour le curseur et la piste (la ligne sur laquelle se déplace le curseur) de la barre de défilement.
 
-{{EmbedInteractiveExample("pages/css/scrollbar-color.html")}}
+{{InteractiveExample("CSS Demo: scrollbar-color")}}
+
+```css interactive-example-choice
+scrollbar-color: yellow blue;
+```
+
+```css interactive-example-choice
+scrollbar-color: #87ceeb #ff5621;
+```
+
+```css interactive-example-choice
+scrollbar-color: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+    corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+    fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+    earthnut pea peanut soko zucchini.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+}
+```
 
 ## Syntaxe
 
@@ -31,7 +63,6 @@ scrollbar-color: unset;
 ### Valeurs
 
 - `<scrollbar-face-color>`
-
   - : Une valeur définissant la couleur.
 
     <table class="standard-table">
@@ -72,9 +103,11 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-    > **Note :** Pour toute valeur de `scrollbar-color`, les agents utilisateur doivent appliquer la valeur sur l'élément racine de la zone d'affichage (_viewport_).
+    > [!NOTE]
+    > Pour toute valeur de `scrollbar-color`, les agents utilisateur doivent appliquer la valeur sur l'élément racine de la zone d'affichage (_viewport_).
 
-    > **Note :** Si la couleur d'une partie de la barre de défilement est indiquée, les implémentations peuvent afficher une barre de défilement simple (plutôt que celle provenant du système) afin de la colorer avec la/les couleur(s) indiquée(s).
+    > [!NOTE]
+    > Si la couleur d'une partie de la barre de défilement est indiquée, les implémentations peuvent afficher une barre de défilement simple (plutôt que celle provenant du système) afin de la colorer avec la/les couleur(s) indiquée(s).
 
 ## Définition formelle
 

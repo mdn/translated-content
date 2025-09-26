@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 표준 내장 객체와 **전역 객체**를 헷갈리지 않도록 주의하세요. 표준 내장 객체는 **전역 범위의 여러 객체**를 일컫습니다. 전역 객체는 엄격 모드를 사용하지 않을 땐 전역 범위에서 {{jsxref("Operators/this", "this")}}, 지원하는 환경에선 {{jsxref("globalThis")}}를 사용해 접근할 수 있는 객체입니다. 사실 전역 범위는 **전역 객체와 전역 객체가 상속한 속성**으로 이루어집니다.
 
-전역 범위의 나머지 객체는 [사용자 스크립트가 생성](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects)하거나, 호스트 응용 프로그램이 제공합니다. 브라우저 맥락에서 사용 가능한 호스트 객체는 [API 참고서](/ko/docs/Web/API)에서 읽을 수 있습니다. [DOM](/ko/docs/DOM/DOM_Reference) 및 코어 [JavaScript](/ko/docs/Web/JavaScript)의 차이에 관한 자세한 정보는 [JavaScript 기술 개요](/ko/docs/Web/JavaScript/JavaScript_technologies_overview)를 참고하세요.
+전역 범위의 나머지 객체는 [사용자 스크립트가 생성](/ko/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects)하거나, 호스트 응용 프로그램이 제공합니다. 브라우저 맥락에서 사용 가능한 호스트 객체는 [API 참고서](/ko/docs/Web/API)에서 읽을 수 있습니다. [DOM](/ko/docs/Web/API/Document_Object_Model) 및 코어 [JavaScript](/ko/docs/Web/JavaScript)의 차이에 관한 자세한 정보는 [JavaScript 기술 개요](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)를 참고하세요.
 
 ## 항목별 표준 객체
 
@@ -36,7 +36,6 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
 - {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
 - **Deprecated**
-
   - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
   - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
 

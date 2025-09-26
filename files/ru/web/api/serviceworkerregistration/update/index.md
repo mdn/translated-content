@@ -3,11 +3,9 @@ title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 Метод **`update`** интерфейса {{domxref("ServiceWorkerRegistration")}} предназначен для обновления service worker. Он обращается по URL service worker-a, и если новый worker побайтно не совпадает с текущим, инсталлирует новую версию. Обращение за новой версией worker обходит любые кеши браузера, если предыдущее обращение произошло более 24 часов назад..
-
-> **Примечание:** Эта возможность доступна в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Синтаксис
 
@@ -55,8 +53,8 @@ if ("serviceWorker" in navigator) {
 
 ## Смотрите также
 
-- [Использование Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers базовый пример кода](https://github.com/mdn/sw-test)
 - [Готов ли ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Промисы")}}
-- [Использование web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Использование web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

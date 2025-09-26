@@ -12,7 +12,24 @@ Les doublons sont omis et le tableau est trié selon l'ordre lexicographique (pl
 Cette méthode peut être utilisée afin de tester les fonctionnalités prises en charge par une implémentation donnée afin de les surcharger par une prothèse d'implémentation si nécessaire.
 Elle peut également être utilisée pour construire des interfaces utilisateur permettant aux personnes de choisir leurs préférences pour la localisation (par exemple lorsque l'interface est construite dynamiquement en WebGL ou côté serveur).
 
-{{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.supportedValuesOf")}}
+
+```js interactive-example
+console.log(Intl.supportedValuesOf("calendar"));
+console.log(Intl.supportedValuesOf("collation"));
+console.log(Intl.supportedValuesOf("currency"));
+console.log(Intl.supportedValuesOf("numberingSystem"));
+console.log(Intl.supportedValuesOf("timeZone"));
+console.log(Intl.supportedValuesOf("unit"));
+// Expected output: Array ['key'] (for each key)
+
+try {
+  Intl.supportedValuesOf("someInvalidKey");
+} catch (err) {
+  console.log(err.toString());
+  // Expected output: RangeError: invalid key: "someInvalidKey"
+}
+```
 
 ## Syntaxe
 
@@ -56,7 +73,8 @@ Intl.supportedValuesOf("calendar").forEach(function (calendar) {
 });
 ```
 
-> **Note :** Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
+> [!NOTE]
+> Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
 
 Les autres valeurs peuvent être obtenues de la même façon&nbsp;:
 

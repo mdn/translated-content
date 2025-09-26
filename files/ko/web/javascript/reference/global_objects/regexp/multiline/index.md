@@ -9,7 +9,24 @@ l10n:
 
 **`multiline`** 접근자 속성은 `m` 플래그가 정규표현식에 사용되었는지 여부를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}
+
+```js interactive-example
+const regex1 = new RegExp("^football");
+const regex2 = new RegExp("^football", "m");
+
+console.log(regex1.multiline);
+// Expected output: false
+
+console.log(regex2.multiline);
+// Expected output: true
+
+console.log(regex1.test("rugby\nfootball"));
+// Expected output: false
+
+console.log(regex2.test("rugby\nfootball"));
+// Expected output: true
+```
 
 ## 설명
 

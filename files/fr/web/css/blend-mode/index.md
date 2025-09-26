@@ -339,7 +339,6 @@ Il n'y a pas d'interpolation pour les modes de fusion. Toute transition se produ
 ## Voir aussi
 
 - Les propriétés utilisant des valeurs de ce type :
-
   - {{cssxref("background-blend-mode")}}
   - {{cssxref("mix-blend-mode")}}
 

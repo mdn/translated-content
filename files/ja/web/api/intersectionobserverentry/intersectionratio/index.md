@@ -1,17 +1,19 @@
 ---
-title: IntersectionObserverEntry.intersectionRatio
+title: "IntersectionObserverEntry: intersectionRatio プロパティ"
+short-title: intersectionRatio
 slug: Web/API/IntersectionObserverEntry/intersectionRatio
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`intersectionRatio`** プロパティは、対象の要素が現在どの程度見えているかを、ルートの交差比率で 0.0 から 1.0 の間の値で示します。
+**`intersectionRatio`** は {{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用のプロパティで、対象の要素が現在どの程度見えているかを、ルートの交差比率で 0.0 から 1.0 の間の値で示します。
 
 ## 値
 
-0.0 から 1.0 の間の数値で、対象要素がルートの交差矩形内で実際にどの程度表示されているかを示します。より正確には、この値は交差矩形の面積 ({{domxref("IntersectionObserverEntry.intersectionRect", "intersectionRect")}}) と対象の外接矩形の面積 ({{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} の比になります。
+0.0 から 1.0 の間の数値で、対象要素がルートの交差矩形内で実際にどの程度表示されているかを示します。
+より正確には、この値は交差矩形の面積 ({{domxref("IntersectionObserverEntry.intersectionRect", "intersectionRect")}}) と対象の外接矩形の面積 ({{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}}) の比になります。
 
 対象の外接矩形の面積が 0 の場合、 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} が `true` ならば 1、そうでないならば 0 が返されます。
 

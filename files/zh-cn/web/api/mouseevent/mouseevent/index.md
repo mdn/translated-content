@@ -3,24 +3,23 @@ title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent()`** 构造器创建一个 {{domxref("MouseEvent")}}。
 
 ## 语法
 
-```
- event = new MouseEvent(typeArg, mouseEventInit);
+```js-nolint
+new MouseEvent(type)
+new MouseEvent(type, options)
 ```
 
-### 形参
+### 参数
 
 - _typeArg_
   - : {{domxref("DOMString")}} 格式的事件名称。
 - _mouseEventInit_ {{optional_inline}}
-
   - : 初始化 `MouseEvent` 的字典，有下列属性字段：
-
     - `"screenX"`，`long` 型可选，默认为 `0`，设置鼠标事件发生时相对于用户屏幕的水平坐标位置；该操作并不会改变真实鼠标的位置。
     - `"screenY"`，`long` 型可选，默认为 `0`，设置鼠标事件发生时相对于用户屏幕的垂直坐标位置；该操作并不会改变真实鼠标的位置。
     - `"clientX"`，`long` 型可选，默认为 `0`，设置鼠标事件时相对于客户端窗口的水平坐标位置；该操作并不会改变真实鼠标的位置。

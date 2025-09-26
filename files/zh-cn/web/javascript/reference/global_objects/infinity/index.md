@@ -3,11 +3,21 @@ title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
 
-{{jsSidebar("Objects")}}
-
 全局属性 **`Infinity`** 是一个数值，表示无穷大。
 
-{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+
+```js interactive-example
+const maxNumber = Math.pow(10, 1000); // Max positive number
+
+if (maxNumber === Infinity) {
+  console.log("Let's call it Infinity!");
+  // Expected output: "Let's call it Infinity!"
+}
+
+console.log(1 / maxNumber);
+// Expected output: 0
+```
 
 ## 值
 

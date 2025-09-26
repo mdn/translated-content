@@ -3,6 +3,8 @@ title: Tag
 slug: Glossary/Tag
 ---
 
+{{GlossarySidebar}}
+
 Em {{Glossary("HTML")}} a tag é usada para criar um {{Glossary("element", "elemento")}}. O **nome** de um elemento HTML é o nome usado entre colchetes angulares como "\<p>" para criar parágrafos. Note que ao fechar uma tag ela tem uma barra antes de seu nome, "\</p>" , e que em elementos vazios a tag final não é requirida e nem permitida. Se os {{Glossary("Attribute", "atributos")}} não forem mencionados, os valores padrões serão usados em cada caso.
 
 ## Aprenda mais
@@ -14,4 +16,4 @@ Em {{Glossary("HTML")}} a tag é usada para criar um {{Glossary("element", "elem
 
 ### Referência técnica
 
-- [Introdução ao HTML (em inglês)](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
+- [Introdução ao HTML (em inglês)](/pt-BR/docs/Learn_web_development/Core/Structuring_content)

@@ -1,11 +1,12 @@
 ---
-title: ExtendableMessageEvent()
+title: "ExtendableMessageEvent: ExtendableMessageEvent() コンストラクター"
+short-title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 **`ExtendableMessageEvent()`** コンストラクターは、新しい {{domxref("ExtendableMessageEvent")}} オブジェクトのインスタンスを作成します。
 
@@ -65,5 +66,4 @@ const myEME = new ExtendableMessageEvent("message", init);
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
 - [チャンネルメッセージング](/ja/docs/Web/API/Channel_Messaging_API)

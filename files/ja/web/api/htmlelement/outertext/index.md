@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: outerText プロパティ"
+short-title: outerText
 slug: Web/API/HTMLElement/outerText
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{APIRef("DOM")}}
@@ -24,7 +25,8 @@ l10n:
 
 この例では、 `outerText` と `innerText` をセッターとして使用した場合の根本的な違いを強調しています（ゲッターで使用した場合は同じです）。
 
-> **メモ:** この例は [What is the difference between innerText and outerText?](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435) (Stack overflow) の記事で [codingintrigue](https://stackoverflow.com/users/571194/codingintrigue) が作成し、 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) のライセンスで配布されているものを変更したものです。
+> [!NOTE]
+> この例は [What is the difference between innerText and outerText?](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435) (Stack overflow) の記事で [codingintrigue](https://stackoverflow.com/users/571194/codingintrigue) が作成し、 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) のライセンスで配布されているものを変更したものです。
 
 以下のような HTML が入っているページがあるとします。
 

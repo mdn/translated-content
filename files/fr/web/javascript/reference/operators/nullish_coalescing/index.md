@@ -7,9 +7,19 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 
 L'**opérateur de coalescence des nuls** (`??`), est un opérateur logique qui renvoie son opérande de droite lorsque son opérande de gauche vaut {{jsxref("null")}} ou {{jsxref("undefined")}} et qui renvoie son opérande de gauche sinon.
 
-Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques), l'opérande de gauche sera renvoyé s'il s'agit d'une [valeur équivalente à `false`](/fr/docs/Glossaire/Falsy) qui n'est ni `null`, ni `undefined`. En d'autres termes, si vous utilisez `||` pour fournir une valeur par défaut à une variable `foo`, vous pourriez rencontrer des comportements inattendus si vous considérez certaines valeurs _falsy_ comme utilisables (par exemple une chaine vide `''` ou `0`). Voir ci-dessous pour plus d'exemples.
+Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Operators), l'opérande de gauche sera renvoyé s'il s'agit d'une [valeur équivalente à `false`](/fr/docs/Glossary/Falsy) qui n'est ni `null`, ni `undefined`. En d'autres termes, si vous utilisez `||` pour fournir une valeur par défaut à une variable `foo`, vous pourriez rencontrer des comportements inattendus si vous considérez certaines valeurs _falsy_ comme utilisables (par exemple une chaine vide `''` ou `0`). Voir ci-dessous pour plus d'exemples.
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## Syntaxe
 
@@ -102,7 +112,7 @@ console.log(B() ?? C());
 
 ### Pas de chaînage possible avec les opérateurs AND ou OR
 
-Il n'est pas possible de combiner les opérateurs AND (`&&`) ou OR (`||`) directement avec l'opérateur de coalescence des nuls (`??`). Un tel cas lèverait une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError).
+Il n'est pas possible de combiner les opérateurs AND (`&&`) ou OR (`||`) directement avec l'opérateur de coalescence des nuls (`??`). Un tel cas lèverait une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError).
 
 ```js example-bad
 null || undefined ?? "toto"; // soulève une SyntaxError
@@ -117,7 +127,7 @@ Cependant, fournir des parenthèses pour indiquer explicitement la priorité est
 
 ### Relation avec l'opérateur de chaînage optionnel (`?.`)
 
-Tout comme l'opérateur de coalescence des nuls, l'[opérateur de chaînage optionnel (?.)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Optional_chaining) traite les valeurs `null` et `undefined` comme des valeurs spécifiques. Ce qui permet d'accéder à une propriété d'un objet qui peut être `null` ou `undefined`.
+Tout comme l'opérateur de coalescence des nuls, l'[opérateur de chaînage optionnel (?.)](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining) traite les valeurs `null` et `undefined` comme des valeurs spécifiques. Ce qui permet d'accéder à une propriété d'un objet qui peut être `null` ou `undefined`.
 
 ```js
 let toto = { uneProprieteToto: "coucou" };
@@ -136,7 +146,7 @@ console.log(toto.uneProprieteTiti?.toUpperCase()); // undefined
 
 ## Voir aussi
 
-- [_Falsy values_ (Valeurs équivalentes à `false` dans un contexte booléen)](/fr/docs/Glossaire/Falsy)
-- [Opérateur de chaînage optionnel (_optional chaining_)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Optional_chaining)
-- [Opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques#Logical_OR)
-- [Valeurs par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments)
+- [_Falsy values_ (Valeurs équivalentes à `false` dans un contexte booléen)](/fr/docs/Glossary/Falsy)
+- [Opérateur de chaînage optionnel (_optional chaining_)](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Operators#logical_or)
+- [Valeurs par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters)

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Element.append()`** メソッドは、一連の {{domxref("Node")}} オブジェクトまたは文字列を `Element` のの最後の子の後に挿入します。文字列は、等価な {{domxref("Text")}} ノードとして挿入されます。
+**`Element.append()`** メソッドは、一連の {{domxref("Node")}} オブジェクトまたは文字列を `Element` の最後の子の後に挿入します。文字列は、等価な {{domxref("Text")}} ノードとして挿入されます。
 
 {{domxref("Node.appendChild()")}} との違いは次の通りです。
 

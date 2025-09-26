@@ -3,13 +3,14 @@ title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
 
-{{JSRef("Global_Objects", "Function")}}
+{{JSRef}}
 
 ## Introdução
 
 O método **`call()`** invoca uma função com um dado valor `this` e argumentos passados individualmente.
 
-> **Nota:** Apesar de a sintaxe desta função ser quase idêntica à de {{jsxref("Function.prototype.apply", "apply()")}}, a principal diferença é que `call()` aceita uma **lista de argumentos**, enquanto `apply()` aceita **um único array de argumentos.**
+> [!NOTE]
+> Apesar de a sintaxe desta função ser quase idêntica à de {{jsxref("Function.prototype.apply", "apply()")}}, a principal diferença é que `call()` aceita uma **lista de argumentos**, enquanto `apply()` aceita **um único array de argumentos.**
 
 ## Sintaxe
 
@@ -105,18 +106,14 @@ apresentacao.call(i); // Douglas Crockford é um excelente Desenvolvedor Javascr
 
 ## Especificações
 
-| Especificações                                                                 | Status             | Comentário                                         |
-| ------------------------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                            | {{Spec2('ES1')}}   | Definição inicial. Implementado no JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.4', 'Function.prototype.call')}}              | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-function.prototype.call', 'Function.prototype.call')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.call")}}
+{{Compat}}
 
 ## Veja também
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [Introdução à JavaScript Orientado à Objetos](/pt-BR/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- [Introdução à JavaScript Orientado à Objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

@@ -3,13 +3,59 @@ title: border-right-style
 slug: Web/CSS/border-right-style
 ---
 
-{{CSSRef}}
+**`border-right-style`** 是 border 中的一个 [CSS](/zh-CN/docs/Web/CSS) 子属性，描述的是右边框的样式 {{cssxref("border")}}.
 
-**`border-right-style`** 是 border 中的一个 [CSS](/zh-CN/docs/CSS) 子属性，描述的是右边框的样式 {{cssxref("border")}}.
+{{InteractiveExample("CSS Demo: border-right-style")}}
 
-{{EmbedInteractiveExample("pages/css/border-right-style.html")}}
+```css interactive-example-choice
+border-right-style: none;
+```
 
-> **备注：** 这个 css 没有定义不同样式的边界之间如何拼接。
+```css interactive-example-choice
+border-right-style: dotted;
+```
+
+```css interactive-example-choice
+border-right-style: dashed;
+```
+
+```css interactive-example-choice
+border-right-style: solid;
+```
+
+```css interactive-example-choice
+border-right-style: groove;
+```
+
+```css interactive-example-choice
+border-right-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
+
+> [!NOTE]
+> 这个 css 没有定义不同样式的边界之间如何拼接。
 
 ## Syntax
 

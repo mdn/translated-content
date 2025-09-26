@@ -36,7 +36,7 @@ l10n:
 - {{domxref("crypto_property", "Window.crypto")}} {{readOnlyInline}}
   - : 브라우저 암호화 객체를 반환합니다.
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : 새로운 [사용자 정의 요소](/ko/docs/Web/Web_Components/Using_custom_elements)를 등록하거나 이전에 등록한 요소에 대한 정보를 얻을 수 있는, {{domxref("CustomElementRegistry")}} 객체의 참조를 반환합니다.
+  - : 새로운 [사용자 정의 요소](/ko/docs/Web/API/Web_components/Using_custom_elements)를 등록하거나 이전에 등록한 요소에 대한 정보를 얻을 수 있는, {{domxref("CustomElementRegistry")}} 객체의 참조를 반환합니다.
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
   - : 현재 화면에서의 물리적 픽셀과 CSS 픽셀의 비율을 반환합니다.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
@@ -94,7 +94,7 @@ l10n:
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : 현재 창 또는 하위 프레임의 부모 참조를 반환합니다.
 - {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
-  - : {{domxref("Performance")}} 객체를 반환합니다. 이 객체의 {{domxref("Performance.timing", "timing")}}, {{domxref("Performance.navigation", "navigation")}} 특성 등은 각각 [성능 관련 데이터](/ko/docs/Web/API/Navigation_timing_API)를 제공하는 객체입니다. [탐색 타이밍 사용하기](/ko/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)에서 추가 정보와 예제를 확인하세요.
+  - : {{domxref("Performance")}} 객체를 반환합니다. 이 객체의 {{domxref("Performance.timing", "timing")}}, {{domxref("Performance.navigation", "navigation")}} 특성 등은 각각 [성능 관련 데이터](/ko/docs/Web/API/Performance_API/Navigation_timing)를 제공하는 객체입니다. [탐색 타이밍 사용하기](/ko/docs/Web/API/Performance_API/Navigation_timing)에서 추가 정보와 예제를 확인하세요.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : `personalbar` 객체를 반환합니다.
 - {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
@@ -382,13 +382,13 @@ l10n:
 ### 트랜지션 이벤트
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 취소되면 발생합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 취소되면 발생합니다.
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 끝나면 발생합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 끝나면 발생합니다.
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 처음으로 생성되면 시작합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 처음으로 생성되면 시작합니다.
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 시작하면 발생합니다.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)이 시작하면 발생합니다.
 
 ### Deprecated events
 

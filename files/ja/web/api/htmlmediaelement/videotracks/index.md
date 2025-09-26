@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.videoTracks
+title: "HTMLMediaElement: videoTracks プロパティ"
+short-title: videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
 l10n:
-  sourceCommit: e60194342c9666ad8a2e6e5e6c25705fe818bcde
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -27,6 +28,6 @@ l10n:
 
 ## 関連情報
 
-- 定義している {{DOMxRef("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.videoTracks` プロパティを定義しているインターフェイス
 - {{HTMLElement("video")}}
-- {{DOMxRef("VideoTrack")}} および {{DOMxRef("VideoTrackList")}}
+- {{DOMxRef("VideoTrack")}}, {{DOMxRef("VideoTrackList")}}

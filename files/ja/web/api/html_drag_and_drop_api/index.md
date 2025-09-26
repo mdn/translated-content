@@ -23,17 +23,18 @@ HTML ドラッグ & ドロップ では {{domxref("Event", "DOM イベントモ�
 
 それぞれの[ドラッグイベントの種類](/ja/docs/Web/API/DragEvent#イベントの種類)には、関連したイベントハンドラーがあります。
 
-| イベント                                             | 発生する条件…                                                                                                                                                                  |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{domxref('HTMLElement/drag_event', 'drag')}}           | …ドラッグ項目（要素や選択テキスト）がドラッグされた場合                                                                                                                        |
-| {{domxref('HTMLElement/dragend_event', 'dragend')}}     | …ドラッグ操作の終了（マウスボタンを離したり、Esc キーを押したりした場合。詳しくは[ドラッグの終了](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)を参照。）   |
-| {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | …ドラッグ項目が有効なドロップ対象に入った場合（[ドラッグターゲットの特定](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)を参照）                         |
-| {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | …ドラッグ項目が有効なドロップ対象を離れた場合                                                                                                                                  |
-| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | …ドラッグ項目が有効なドロップ対象にドラッグされた場合、数百ミリ秒ごとに                                                                                                        |
-| {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | …ユーザーが項目をドラッグ開始した場合（[ドラッグ操作の開始](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart) を参照）                                        |
-| {{domxref('HTMLElement/drop_event', 'drop')}}           | …項目が有効なドロップ対象にドロップされた場合（[ドロップの実行](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop) を参照）                                         |
+| イベント                                                | 発生する条件…                                                                                                                                                                |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref('HTMLElement/drag_event', 'drag')}}           | …ドラッグ項目（要素や選択テキスト）がドラッグされた場合                                                                                                                      |
+| {{domxref('HTMLElement/dragend_event', 'dragend')}}     | …ドラッグ操作の終了（マウスボタンを離したり、Esc キーを押したりした場合。詳しくは[ドラッグの終了](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)を参照。） |
+| {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | …ドラッグ項目が有効なドロップ対象に入った場合（[ドラッグターゲットの特定](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)を参照）                       |
+| {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | …ドラッグ項目が有効なドロップ対象を離れた場合                                                                                                                                |
+| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | …ドラッグ項目が有効なドロップ対象にドラッグされた場合、数百ミリ秒ごとに                                                                                                      |
+| {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | …ユーザーが項目をドラッグ開始した場合（[ドラッグ操作の開始](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart) を参照）                                      |
+| {{domxref('HTMLElement/drop_event', 'drop')}}           | …項目が有効なドロップ対象にドロップされた場合（[ドロップの実行](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop) を参照）                                       |
 
-> **メモ:** `dragstart` と `dragend` イベントは、どちらも OS からブラウザーにファイルをドラッグしたときには発生しません。
+> [!NOTE]
+> `dragstart` と `dragend` イベントは、どちらも OS からブラウザーにファイルをドラッグしたときには発生しません。
 
 ## インターフェイス
 
@@ -49,9 +50,10 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 {{domxref("DataTransferItemList")}} オブジェクトは {{domxref("DataTransferItem")}} オブジェクトのリストです。このリストオブジェクトはリストにドラッグ項目を追加したり、リストからドラッグ項目を削除したり、ドラッグ項目のリストをクリアするメソッドを持ちます。
 
-{{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。.
+{{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。
 
-> **メモ:** {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは[相互運用性](#相互運用性)を見てください。
+> [!NOTE]
+> {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは[相互運用性](#相互運用性)を見てください。
 
 ## 基本
 
@@ -59,7 +61,7 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 ### ドラッグ可能なものを特定
 
-要素を*ドラッグ可能*とするには、以下のコードのように [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性と {{domxref("HTMLElement.dragstart_event","ondragstart")}} のイベントハンドラーを追加することが求められます。
+要素を*ドラッグ可能*とするには、以下のコードのように [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性と {{domxref("HTMLElement.dragstart_event","ondragstart")}} のイベントハンドラーを追加することが求められます。
 
 ```html
 <script>
@@ -81,7 +83,7 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 詳しくは、以下の記事を参照してください。
 
-- [draggable 属性リファレンス](/ja/docs/Web/HTML/Global_attributes/draggable)
+- [draggable 属性リファレンス](/ja/docs/Web/HTML/Reference/Global_attributes/draggable)
 - [ドラッグ操作ガイド](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)
 
 ### ドラッグするデータの定義
@@ -97,7 +99,7 @@ function dragstart_handler(ev) {
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
   ev.dataTransfer.setData(
     "text/uri-list",
-    ev.target.ownerDocument.location.href
+    ev.target.ownerDocument.location.href,
   );
 }
 ```
@@ -242,7 +244,7 @@ function dragstart_handler(ev) {
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
 - [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- ファイルのドラッグ & ドロップ (Firefox のみ): <http://jsfiddle.net/9C2EF/>
+- ファイルのドラッグ & ドロップ (Firefox のみ): <https://jsfiddle.net/9C2EF/>
 - ファイルのドラッグ & ドロップ (全ブラウザー): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 - Drag and Drop API を使った駐車場プロジェクト: <https://park.glitch.me/> ([ここで](https://glitch.com/edit/#!/park)編集できます)
 

@@ -13,23 +13,14 @@ slug: Web/API/Performance/getEntries
 
 取全部：
 
-```
-entries = window.performance.getEntries();
-entries = window.performance.getEntries(PerformanceEntryFilterOptions);
-```
-
-取特定：
-
-```
-entries = performance.getEntries({name: "entry_name", entryType: "mark"});
+```js-nolint
+getEntries()
 ```
 
 ### 参数
 
 - PerformanceEntryFilterOptions {{optional_inline}}
-
   - : `PerformanceEntryFilterOptions` 是一个带有以下键值的字典：
-
     - `"name"`, performance entry. 的名字
     - `"entryType"`, entry 类型。合法的 entry 类型可以从{{domxref("PerformanceEntry.entryType")}} 方法获取。
     - `"initiatorType"`, 初始化资源的类型 (例如一个 HTML element). 其取值被 {{domxref("PerformanceResourceTiming.initiatorType")}} 接口所定义。
@@ -39,7 +30,7 @@ entries = performance.getEntries({name: "entry_name", entryType: "mark"});
 - entries
   - : 一个由符合 filter 条件的{{domxref("PerformanceEntry")}} 对象构成的数组 . 数组成员按 PerformanceEntry.{{domxref("PerformanceEntry.startTime","startTime")}}时间顺序排列 . 如果没有符合 filter 条件的对象，那么返回空数组。如果不带任何参数，返回全部 entries.
 
-## Example
+## 示例
 
 ```js
 function use_PerformanceEntry_methods() {

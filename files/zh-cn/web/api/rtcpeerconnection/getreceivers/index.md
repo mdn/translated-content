@@ -31,7 +31,7 @@ var receivers = rtcPeerConnection.getReceivers();
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC_API)
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("RTCRtpSender")}}

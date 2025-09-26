@@ -5,7 +5,7 @@ slug: Web/CSS/@layer
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
 
 ## Syntaxe
 
@@ -59,7 +59,8 @@ Comme l'ordre initial dans lequel sont déclarés les couches indique la précé
 
 Une règle présente dans `utilities` s'appliquerait _même si sa spécificité est inférieure_ à celle de la règle dans `theme`. En effet, dès lors que l'ordre des couches a été établi, la spécificité et l'ordre d'apparence sont ignorés. Cela permet la création de sélecteurs CSS plus simples, car il n'est pas nécessaire de s'assurer qu'un sélecteur a une spécificité suffisamment élevée pour l'emporter sur les autres règles, il suffit de s'assurer qu'il apparaît dans une couche qui arrive après.
 
-> **Note :** Lorsque les noms des couches sont déclarées, leur ordre est défini. On peut ensuite ajouter des règles CSS aux couches en redéclarant leur nom. Les styles sont ainsi ajoutés à la couche et l'ordre des couches reste inchangé.
+> [!NOTE]
+> Lorsque les noms des couches sont déclarées, leur ordre est défini. On peut ensuite ajouter des règles CSS aux couches en redéclarant leur nom. Les styles sont ainsi ajoutés à la couche et l'ordre des couches reste inchangé.
 
 La troisième façon consiste à créer une couche de cascade sans nom, par exemple&nbsp;:
 
@@ -75,7 +76,8 @@ Cela crée une _couche de cascade anonyme_. Cette couche fonctionne de façon an
 
 Une autre façon pour créer une couche de cascade consiste à utiliser [`@import`](/fr/docs/Web/CSS/@import). Dans ce cas, les règles associées proviendraient de la feuille de style importée.
 
-> **Attention :** La règle @ `@import` doit précéder tous les autres types de règles, à l'exception des règles `@charset`.
+> [!WARNING]
+> La règle @ `@import` doit précéder tous les autres types de règles, à l'exception des règles `@charset`.
 
 ```css
 @import "theme.css" layer(utilities);
@@ -114,7 +116,7 @@ Pour ajouter des règles à la couche `layout` située à l'intérieur de `frame
 
 ### Exemple simple
 
-Dans l'exemple suivant, deux règles CSS sont créées. Une pour les éléments [`<p>`](/fr/docs/Web/HTML/Element/p) en dehors de toute couche et une pour ceux qui sont situés dans une couche intitulée `type` pour `.box p`.
+Dans l'exemple suivant, deux règles CSS sont créées. Une pour les éléments [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) en dehors de toute couche et une pour ceux qui sont situés dans une couche intitulée `type` pour `.box p`.
 
 Sans couche, le sélecteur `.box p` aurait la plus haute spécificité et le texte `Coucou le monde !` serait alors affiché en vert. La couche `type` arrivant avant la couche anonyme pour gérer le contenu qui n'est pas affecté à une couche, le texte sera en violet.
 

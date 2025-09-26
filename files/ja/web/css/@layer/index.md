@@ -1,21 +1,74 @@
 ---
 title: "@layer"
 slug: Web/CSS/@layer
+l10n:
+  sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
 
-**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、*カスケードレイヤー*を宣言します。カスケードレイヤー内のルールは一緒にカスケードされるため、ウェブ開発者はカスケードをより自由に制御することができます。
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 
-```css
-@layer utilities {
-  /* utilities という名前のレイヤーを作成します。 */
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
 }
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">ゾンビに注意</p>
 ```
 
 ## 構文
 
-`@layer` アットルールは、 3 つの方法のうちの 1 つでカスケードレイヤーを作成するために使用されます。 1 つ目は、上記の例のように、そのレイヤーの CSS ルールを内部に持つブロックのアットルールを作成する方法です。
+```css
+/* 文のアットルール */
+@layer layer-name;
+@layer layer-name, layer-name, layer-name;
+
+/* ブロックのアットルール */
+@layer {rules}
+@layer layer-name {rules}
+```
+
+ここで次のようになります。
+
+- _layer-name_
+  - : カスケードレイヤーの名前です。
+- _rules_
+  - : そのカスケードレイヤーに含まれる一連の CSS ルールです。
+
+## 解説
+
+カスケードレイヤー内のルールは一緒にカスケードされ、ウェブ開発者はカスケードをより制御できるようになります。レイヤー内で定義されていないスタイルは、常に名前付きまたは無名のレイヤーで宣言されたスタイルを上書きします。
+
+次の図は、 1, 2, ..., N の順に宣言されたレイヤーの優先順位を示しています。
+
+![カスケードレイヤーの優先順位を示す図](layer-cascade.svg)
+
+上記の図に示されているように、 `!important` フラグ付きの重要な宣言は、通常の宣言、つまり `!important` フラグのない通常の宣言よりも優先されます。重要なルール間の優先順位は、通常のルールの順序と逆になります。トランジションが最も優先順位が高くなります。次に優先順位が高いのは、重要な{{glossary("user agent", "ユーザーエージェント")}}宣言、重要なユーザー宣言、重要な作成者宣言の順です。ユーザーは、ブラウザーの環境設定、オペレーティングシステムの環境設定、またはブラウザーの拡張機能を使用してスタイルを指定することができます。これらの重要な宣言は、作成者、つまりウェブ開発者が書いた重要な宣言よりも優先されます。
+
+作成者スタイル内では、CSSレイヤー内で宣言されたすべての重要な宣言は、レイヤー外で宣言された重要な宣言を引き継ぎますが、CSSレイヤー内で宣言されたすべての通常の宣言は、レイヤー外で宣言された宣言よりも優先順位が低くなります。
+宣言の順序は重要です。最初に宣言されたレイヤーは最も低い優先順位となり、最後に宣言されたレイヤーは最も高い順位となります。ただし、 [`!important`](/ja/docs/Web/CSS/important) フラグが使用された場合は優先順位が逆転します。
+
+`@layer` アットルールは、 3 つの方法のいずれかでカスケードレイヤーを作成するために使用します。
+
+最初の方法は、 `@layer` ブロックアットルールを使用して名前付きカスケードレイヤーを作成し、 CSS ルールをその中に入れることです。
 
 ```css
 @layer utilities {
@@ -29,19 +82,14 @@ slug: Web/CSS/@layer
 }
 ```
 
-カスケードレイヤーは {{cssxref("@import")}} で作ることができ、この場合のルールはインポートされたスタイルシートにあることになります。
-
-```css
-@import (utilities.css) layer(utilities);
-```
-
-また、スタイルを割り当てずに、名前付きのカスケードレイヤーを作成することもできます。これは単一の名前にすることができます。
+2 つ目の方法は、 `@layer` 文アットルールを使用して、
+スタイルを割り当てずに名前付きのカスケードレイヤーを作成する方法です。これは下記のように単一のレイヤーとすることができます。
 
 ```css
 @layer utilities;
 ```
 
-また、次のようにして複数のレイヤーを一度に定義することもできます。
+次のようにして複数のレイヤーを一度に定義することもできます。
 
 ```css
 @layer theme, layout, utilities;
@@ -51,9 +99,26 @@ slug: Web/CSS/@layer
 
 `utilities` のルールの方が `theme` ルールよりも詳細度が低くても適用されます。これは、レイヤーの順序が決まれば、詳細度や見た目の順序は無視されるからです。これは、セレクターが競合するルールを上書きするのに十分な高い詳細度を持つことを保証する必要がなく、後のレイヤーに表示されることだけを保証すればよいため、よりシンプルな CSS セレクターを作成することが可能になるのです。
 
-> **メモ:** レイヤー名を宣言して順番を決めたら、名前を宣言し直してレイヤーに CSS ルールを追加してください。すると、スタイルがレイヤーに追加され、レイヤーの順序は変更されません。
+> [!NOTE]
+> レイヤー名を宣言して順番を決めたら、名前を宣言し直してレイヤーに CSS ルールを追加してください。すると、スタイルがレイヤーに追加され、レイヤーの順序は変更されません。
 
-レイヤーにないスタイルはまとめて、宣言されたすべてのレイヤーの後にある無名レイヤーに配置されます。これは、レイヤーの外で宣言されたスタイルは、レイヤーで宣言されたスタイルを上書きすることを意味します。
+3 つ目の方法は、 `@layer` ブロックアットルールを使用して名前のないカスケードレイヤーを作成する方法です。
+
+```css
+@layer {
+  p {
+    margin-block: 1rem;
+  }
+}
+```
+
+これは無名カスケードレイヤーを作成します。このレイヤーは名前付きレイヤーと同じように機能しますが、後でルールを割り当てることはできません。無名レイヤーの優先順位は、名前付きまたは無名のレイヤーが宣言された順番であり、レイヤーの外側で宣言されたスタイル設定よりも下になります。
+
+カスケードレイヤーを作成するもう一つの方法は、 {{cssxref("@import")}} を使用することです。この場合、ルールはインポートされたスタイルシートの中にあることになります。 `@import` アットルールは、 `@charset` ルールと `@layer` ルールを除く、他のすべての種類のルールに先立って入力しなければならないことを覚えておいてください。
+
+```css
+@import "theme.css" layer(utilities);
+```
 
 ### レイヤーの入れ子
 
@@ -76,27 +141,13 @@ slug: Web/CSS/@layer
 }
 ```
 
-### 無名レイヤー
-
-次のように名前のないレイヤーを作成すると、
-
-```css
-@layer {
-  p {
-    margin-block: 1rem;
-  }
-}
-```
-
-そして、無名の、名前のないレイヤーが作成されます。これは名前付きレイヤーと同じように機能しますが、後からルールを割り当てることはできません。
-
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
-### 単純な例
+### 基本的な例
 
 次の例では、 2 つの CSS ルールが作成されています。 1 つはレイヤーの外にある {{htmlelement("p")}} 要素に対して、もう一つは `.box p` に対して `type` というレイヤーの内側にあります。
 
@@ -130,7 +181,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("Basic_example")}}
 
 ### 既存のレイヤーにルールを割り当てる
 
@@ -138,11 +189,9 @@ p {
 
 #### HTML
 
-```html
+```html-nolint
 <div class="item">
-  I am displayed in <code>color: rebeccapurple</code> because the
-  <code>special</code> layer comes after the <code>base</code> layer. My green
-  border, font-size, and padding come from the <code>base</code> layer.
+  これは、 <code>base</code> レイヤーの後に <code>special</code> レイヤーが来るため、 <code>color: rebeccapurple</code> で表示されます。緑色の境界線、フォントサイズ、パディングは、 <code>base</code> レイヤーで決まります。
 </div>
 ```
 
@@ -181,4 +230,12 @@ p {
 
 ## 関連情報
 
-- [The Future of CSS: Cascade Layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/)
+- [`@import`](/ja/docs/Web/CSS/@import)
+- {{domxref("CSSLayerBlockRule")}}
+- {{domxref("CSSLayerStatementRule")}}
+- [`!important`](/ja/docs/Web/CSS/important)
+- [`revert-layer`](/ja/docs/Web/CSS/revert-layer)
+- [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
+- [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) (bram.us (2021))

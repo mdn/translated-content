@@ -91,7 +91,7 @@ Al usar {{cssxref("grid-template-areas")}} para crear el diseño. A parte de las
 }
 ```
 
-Esto no creará ningún diseño, sin embargo, nuestros elementos ahora tienen nombres que podemos utilizar para hacerlo. Al margen de las media queries, ahora voy a configurar el diseño para el ancho móvil. Aquí estoy manteniendo todo en el orden de origen, tratando de evitar cualquier separación entre la fuente y la pantalla, tal y como se describe en la guía _[Grid layout y accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_. No he definido ninguna vía de columna o de fila, pero este diseño dicta una sola columna, y las filas se crearán según sea necesario para cada uno de los items de la cuadrícula implícita.
+Esto no creará ningún diseño, sin embargo, nuestros elementos ahora tienen nombres que podemos utilizar para hacerlo. Al margen de las media queries, ahora voy a configurar el diseño para el ancho móvil. Aquí estoy manteniendo todo en el orden de origen, tratando de evitar cualquier separación entre la fuente y la pantalla, tal y como se describe en la guía _[Grid layout y accesibilidad](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_. No he definido ninguna vía de columna o de fila, pero este diseño dicta una sola columna, y las filas se crearán según sea necesario para cada uno de los items de la cuadrícula implícita.
 
 ```css
 .wrapper {
@@ -107,7 +107,7 @@ Esto no creará ningún diseño, sin embargo, nuestros elementos ahora tienen no
 }
 ```
 
-Después de establecer la columna simple para todas los tamaños de pantalla, ahora podemos añadir una [media query](/es/docs/Web/CSS/Media_Queries) y redefinir nuestro layout para los casos en los que tuviéramos suficiente pantalla real como para mostrar dos columnas.
+Después de establecer la columna simple para todas los tamaños de pantalla, ahora podemos añadir una [media query](/es/docs/Web/CSS/CSS_media_queries) y redefinir nuestro layout para los casos en los que tuviéramos suficiente pantalla real como para mostrar dos columnas.
 
 ```css
 @media (min-width: 500px) {
@@ -220,9 +220,9 @@ Entonces puedo ponerlos en la rejilla usando los nombres de las líneas, y la pa
 
 {{ EmbedLiveSample('layout_2', '800', '400') }}
 
-Como se describe en la [guía de líneas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines), estamos utilizando la línea con nombre para colocar nuestro ítem. Como tenemos 12 líneas todas con el mismo nombre usamos el nombre, y luego el index de la línea. También puedes usar el propio index de líneas si lo prefieres y evitar el uso de líneas con nombre.
+Como se describe en la [guía de líneas con nombre](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines), estamos utilizando la línea con nombre para colocar nuestro ítem. Como tenemos 12 líneas todas con el mismo nombre usamos el nombre, y luego el index de la línea. También puedes usar el propio index de líneas si lo prefieres y evitar el uso de líneas con nombre.
 
-En lugar de establecer el número de la línea final, he elegido decir cuántas pistas debe expandir este elemento, utilizando la palabra clave span. Me gusta este enfoque, ya que cuando trabajamos con un sistema de diseño de múltiples columnas normalmente pensamos en bloques en términos del número de vías de la cuadrícula que atraviesan, y los ajustamos para diferentes puntos de ruptura. Para ver cómo se alinean los bloques con las vías, utiliza el [Firefox Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts). Muestra claramente cómo se colocan nuestros ítems.
+En lugar de establecer el número de la línea final, he elegido decir cuántas pistas debe expandir este elemento, utilizando la palabra clave span. Me gusta este enfoque, ya que cuando trabajamos con un sistema de diseño de múltiples columnas normalmente pensamos en bloques en términos del número de vías de la cuadrícula que atraviesan, y los ajustamos para diferentes puntos de ruptura. Para ver cómo se alinean los bloques con las vías, utiliza el [Firefox Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html). Muestra claramente cómo se colocan nuestros ítems.
 
 ![Showing the items placed on the grid with grid tracks highlighted.](11-grid-inspector-12col.png)
 
@@ -361,7 +361,7 @@ Finalmente vamos a la versión de tres columnas de este diseño. El encabezado c
 
 {{ EmbedLiveSample('layout_3', '800', '450') }}
 
-Una vez más el Grid Inspector [Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) es útil para ayudarnos a ver cómo ha tomado forma nuestro diseño.
+Una vez más el Grid Inspector [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) es útil para ayudarnos a ver cómo ha tomado forma nuestro diseño.
 
 ![Showing the layout with grid tracks highlighted by the grid inspector.](11-grid-inspector-12col-layout.png)
 
@@ -369,7 +369,7 @@ Algo a tener en cuenta a la hora de crear este diseño es que no hemos necesitad
 
 ## Un listado de productos con auto-placement
 
-Muchos diseños son esencialmente conjuntos de "tarjetas" - listados de productos, galerías de imágenes, etc. Una cuadrícula puede hacer que sea muy fácil crear estos listados de una manera responsiva sin necesidad de añadir [media queries](/es/docs/Web/CSS/Media_Queries) para ello. En este siguiente ejemplo estoy combinando CSS Grid y Flexbox Layouts para hacer un sencillo diseño de listado de productos.
+Muchos diseños son esencialmente conjuntos de "tarjetas" - listados de productos, galerías de imágenes, etc. Una cuadrícula puede hacer que sea muy fácil crear estos listados de una manera responsiva sin necesidad de añadir [media queries](/es/docs/Web/CSS/CSS_media_queries) para ello. En este siguiente ejemplo estoy combinando CSS Grid y Flexbox Layouts para hacer un sencillo diseño de listado de productos.
 
 El marcado de mi anuncio es una lista no ordenada de artículos. Cada elemento contiene un encabezado, un texto de altura variable y un enlace para llamar a la acción.
 
@@ -481,7 +481,7 @@ Todo esto se ve bastante completo ahora, sin embargo, a veces tenemos unas carta
 
 #### Usando `grid-auto-flow: dense`
 
-Puedo hacer que una rejilla rellene esos huecos ajustando {{cssxref("grid-auto-flow")}}`: dense` en el grid container. Sin embargo, presta atención al hacer esto, ya que saca los elementos de su orden lógico de origen. Sólo deberías hacerlo si tus ítems no tienen un orden establecido - y en ese caso tener en cuenta características de [accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#Visual_not_logical_re-ordering): el tabulador seguirá el orden de la fuente y no de la visualización reordenada.
+Puedo hacer que una rejilla rellene esos huecos ajustando {{cssxref("grid-auto-flow")}}`: dense` en el grid container. Sin embargo, presta atención al hacer esto, ya que saca los elementos de su orden lógico de origen. Sólo deberías hacerlo si tus ítems no tienen un orden establecido - y en ese caso tener en cuenta características de [accesibilidad](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#visual_not_logical_re-ordering): el tabulador seguirá el orden de la fuente y no de la visualización reordenada.
 
 ```html hidden
 <ul class="listing">
@@ -585,8 +585,8 @@ Esta técnica de auto-placement con algunas reglas aplicadas a ciertos ítems es
 
 La mejor manera de aprender a usar el diseño de la cuadrícula es continuar construyendo ejemplos como los que hemos tratado aquí. Escoge algo que normalmente construyes usando tu framework preferido, o usando floats, y ve si puedes construirlo usando grid. No olvides buscar ejemplos que sean imposibles de construir con los métodos actuales. Eso podría significar inspirarse en revistas u otras fuentes ajenas a la web. Grid Layout abre posibilidades que antes no teníamos, no necesitamos estar atados a los mismos viejos layouts para utilizarlo
 
-- Para inspirarte mira [_Layout Labs_ de Jen Simmons](http://labs.jensimmons.com/), ella ha estado creando diseños basados en una variedad de fuentes.
-- ara obtener patrones de diseño comunes adicionales, consulta _[Grid by Example](http://gridbyexample.com)_, donde hay muchos ejemplos> de diseño de cuadrícula y también algunos patrones de interfaz de usuario más grandes y diseños de página completa.
+- Para inspirarte mira [_Layout Labs_ de Jen Simmons](https://labs.jensimmons.com/), ella ha estado creando diseños basados en una variedad de fuentes.
+- ara obtener patrones de diseño comunes adicionales, consulta _[Grid by Example](https://gridbyexample.com)_, donde hay muchos ejemplos> de diseño de cuadrícula y también algunos patrones de interfaz de usuario más grandes y diseños de página completa.
 
 <section id="Quick_links">
 <ol>

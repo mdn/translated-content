@@ -3,8 +3,6 @@ title: Firefox
 slug: Mozilla/Firefox
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox](https://www.mozilla.org/fr/firefox/new/) est le navigateur populaire de Mozilla, disponible sur de nombreuses plates-formes dont Windows, Mac OS et Linux pour les ordinateurs de bureau, ainsi que Android et iOS pour les appareils mobiles. Grâce à une large compatibilité, les dernières nouveautés en technologie web et des outils puissants pour développer, Firefox est idéal pour les développeurs web et les utilisateurs.
 
 Firefox est un projet libre et ouvert. Une grande partie du code source provient des contributions de notre très grande communauté de volontaires. Découvrez ici comment contribuer au projet Firefox et vous trouverez également des liens vers de la documentation sur la création de modules complémentaires pour Firefox, l'utilisation d'outils de développement dans Firefox et bien plus encore.
@@ -13,7 +11,7 @@ Découvrez comment créer des modules complémentaires pour [Firefox](https://ww
 
 - Notes de versions
 
-  [Les notes de versions pour les développeurs](/fr/docs/Firefox/Versions) vous permettent de garder un œil sur les nouvelles fonctionnalités pour les sites web et les modules complémentaires qu'apporte chaque nouvelle version de Firefox.
+  [Les notes de versions pour les développeurs](/fr/docs/Mozilla/Firefox/Releases) vous permettent de garder un œil sur les nouvelles fonctionnalités pour les sites web et les modules complémentaires qu'apporte chaque nouvelle version de Firefox.
 
 - Documentation du projet
 
@@ -57,7 +55,7 @@ Essayé, testé et adopté par des millions de personnes à travers le monde. Ap
 
 Firefox ESR est une édition avec un support à long terme. Très utile pour des organisations telles que des écoles, des universités, des entreprises ou autres qui ont besoin d'un support étendu pour des déploiements importants.
 
-[En savoir plus sur Firefox Extended Support Release](/fr/docs/Firefox/Firefox_ESR).
+[En savoir plus sur Firefox Extended Support Release](/fr/docs/Mozilla/Firefox/Firefox_ESR).
 
 [Télécharger Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
 

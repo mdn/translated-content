@@ -5,11 +5,51 @@ l10n:
   sourceCommit: e50172e0d7844ebf17e0eac05d5274a7df26d180
 ---
 
-{{CSSRef}}
+**`animation`** [단축](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축형입니다.
 
-**`animation`** [단축](/ko/docs/Web/CSS/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축형입니다.
+{{InteractiveExample("CSS Demo: animation")}}
 
-{{EmbedInteractiveExample("pages/css/animation.html")}}
+```css interactive-example-choice
+animation: 3s ease-in 1s infinite reverse both running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite alternate slidein;
+```
+
+```css interactive-example-choice
+animation: 0.5s linear 1s infinite alternate slidein;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  margin: 20px;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+```
 
 ## 구성 속성
 
@@ -47,7 +87,6 @@ animation:
 - {{cssxref("&lt;time&gt;")}} 값이 0개, 1개 또는 2개 존재
 
 - 다음 값이 0개 또는 1개 존재
-
   - {{cssxref("animation", "&lt;single-easing-function&gt;", "#single-easing-function")}}
   - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
   - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}
@@ -56,7 +95,8 @@ animation:
 
 - 애니메이션의 선택적인 이름. `none`, {{cssxref("&lt;custom-ident&gt;")}}, 또는 {{cssxref("&lt;string&gt;")}}일 수 있음.
 
-> **참고:** 현재 구현은 재설정 전용이므로 {{cssxref("animation-timeline")}}, {{cssxref("animation-range-start")}}, 그리고 {{cssxref("animation-range-end")}}가 현재 이 목록에 포함되어 있지 않습니다. 즉, `animation`을 포함하면 이전에 선언된 `animation-timeline` 값이 `auto`로 재설정되고, 이전에 선언된 `animation-range-start`와 `animation-range-end` 값은 `normal`로 재설정되지만, 이러한 속성은 `animation`을 통해 설정할 수 없습니다. [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)을 만들 때 적용하려면 애니메이션 단축을 선언한 후 이러한 속성을 선언해야 합니다.
+> [!NOTE]
+> 현재 구현은 재설정 전용이므로 {{cssxref("animation-timeline")}}, {{cssxref("animation-range-start")}}, 그리고 {{cssxref("animation-range-end")}}가 현재 이 목록에 포함되어 있지 않습니다. 즉, `animation`을 포함하면 이전에 선언된 `animation-timeline` 값이 `auto`로 재설정되고, 이전에 선언된 `animation-range-start`와 `animation-range-end` 값은 `normal`로 재설정되지만, 이러한 속성은 `animation`을 통해 설정할 수 없습니다. [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)을 만들 때 적용하려면 애니메이션 단축을 선언한 후 이러한 속성을 선언해야 합니다.
 
 ### 값
 
@@ -90,7 +130,7 @@ animation:
 - [움직임 민감성을 위한 더 안전한 웹 애니메이션 설계 · A List Apart 기사](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [움직임 감소 미디어 쿼리 소개 | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [반응형 움직임 디자인 | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN WCAG 이해하기, 가이드라인 2.2 설명](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN WCAG 이해하기, 가이드라인 2.2 설명](/ko/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Success Criterion 2.2.2 이해하기 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 형식 정의
@@ -299,5 +339,5 @@ animation:
 
 ## 같이 보기
 
-- [CSS 애니매이션 사용하기](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS 애니매이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

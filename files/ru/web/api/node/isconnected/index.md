@@ -63,10 +63,10 @@ style.textContent =
 console.log(style.isConnected); // returns true
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка Браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -129,7 +129,7 @@ WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによ
 
 ### 高度なチュートリアル
 
-- [WebGL model view projection](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
+- [WebGL のモデル、ビュー、投影](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
   - : 3D オブジェクトビューを表現するためによく使用する 3 つの主要な行列 (モデル行列、ビュー行列、プロジェクション行列) について、詳しく説明します
 - [Matrix math for the web](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
   - : 3D 変換行列がどのように働くか、およびウェブ (WebGL の演算や、CSS 座標変換) でどのように使用できるかのガイドです
@@ -166,7 +166,7 @@ WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによ
 
 ### 互換性に関する注記
 
-ブラウザだけでなく、GPU も機能をサポートしていなければなりません。よって、例えば S3 Texture Compression (S3TC) は Tegra ベースのタブレットでしか使用できません。ほとんどのブラウザーでは WebGL コンテキストを、コンテキスト名 `webgl` で作成しますが、古いブラウザーでは `experimental-webgl` も必要です。さらに将来の [WebGL 2](/ja/docs/Web/API/WebGL2RenderingContext) では完全な下位互換性があり、コンテキスト名 `webgl2` を持ちます。
+ブラウザーだけでなく、GPU も機能をサポートしていなければなりません。よって、例えば S3 Texture Compression (S3TC) は Tegra ベースのタブレットでしか使用できません。ほとんどのブラウザーでは WebGL コンテキストを、コンテキスト名 `webgl` で作成しますが、古いブラウザーでは `experimental-webgl` も必要です。さらに将来の [WebGL 2](/ja/docs/Web/API/WebGL2RenderingContext) では完全な下位互換性があり、コンテキスト名 `webgl2` を持ちます。
 
 ### Gecko に関するメモ
 

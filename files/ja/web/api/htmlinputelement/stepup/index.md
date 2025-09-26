@@ -1,14 +1,15 @@
 ---
 title: "HTMLInputElement: stepUp() メソッド"
+short-title: stepUp()
 slug: Web/API/HTMLInputElement/stepUp
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.stepUp()`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を
-[`step`](/ja/docs/Web/HTML/Attributes/step) 属性の値、または step 属性が明示的に設定されていない場合は既定の `step` の値だけ増加させるものです。このメソッドを呼び出すと、 [`value`](/ja/docs/Web/HTML/Element/input#value) は ([`step`](/ja/docs/Web/HTML/Element/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で `1` となり、[`step`](/ja/docs/Web/HTML/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
+[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性の値、または step 属性が明示的に設定されていない場合は既定の `step` の値だけ増加させるものです。このメソッドを呼び出すと、 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) は ([`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で `1` となり、[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
 
 <table class="no-markdown">
   <thead>
@@ -79,7 +80,7 @@ l10n:
   </thead>
 </table>
 
-このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。引数が渡されなかった場合の既定値は `1` です。このメソッドは、値が [`max`](/ja/docs/Web/HTML/Attributes/max) を上回ったり、 [`step`](/ja/docs/Web/HTML/Attributes/step) 属性が設定する制約に違反させるようなことはしません。
+このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。引数が渡されなかった場合の既定値は `1` です。このメソッドは、値が [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) を上回ったり、 [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性が設定する制約に違反させるようなことはしません。
 
 `stepUp()` メソッドを呼び出す前の値が無効であった場合、例えば `step` 属性で設定した制約に適合しない場合、 `stepUp()` メソッドを呼び出すと、フォームコントロールの制約に適合する値が返されます。
 
@@ -115,9 +116,7 @@ stepUp(stepIncrement)
   <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label>
-    増加させたい段階の数を入力するか、空欄のままにしてください。
-  </label>
+  <label>増加させたい段階の数を入力するか、空欄のままにしてください。</label>
   <input type="number" step="1" id="incrementInput" min="0" max="25" />
 </p>
 <input type="button" value="Increment" id="theButton" />
@@ -177,5 +176,5 @@ input:invalid {
 - {{HTMLElement("input")}}
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLInputElement.stepDown")}}
-- [`step`](/ja/docs/Web/HTML/Attributes/step),
-  [`min`](/ja/docs/Web/HTML/Attributes/min), [`max`](/ja/docs/Web/HTML/Attributes/max) 属性
+- [`step`](/ja/docs/Web/HTML/Reference/Attributes/step),
+  [`min`](/ja/docs/Web/HTML/Reference/Attributes/min), [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性

@@ -1,32 +1,57 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
+l10n:
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
 {{JSRef}}
 
-**`padStart()`** 메서드는 현재 문자열의 시작을 다른 문자열로 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다. 채워넣기는 대상 문자열의 시작(좌측)부터 적용됩니다.
+**`padStart()`** 메서드는 {{jsxref("String")}} 값의 메서드로, 결과 문자열이 주어진 길이에 도달할 때까지 이 문자열의 시작 부분에 다른 문자열을 (필요하다면 여러 번) 채웁니다.
+패딩은 이 문자열의 시작 부분부터 적용됩니다.
 
-{{EmbedInteractiveExample("pages/js/string-padstart.html")}}
+{{InteractiveExample("JavaScript Demo: String.padStart()")}}
+
+```js interactive-example
+const str1 = "5";
+
+console.log(str1.padStart(2, "0"));
+// Expected output: "05"
+
+const fullNumber = "2034399002125581";
+const last4Digits = fullNumber.slice(-4);
+const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+
+console.log(maskedNumber);
+// Expected output: "************5581"
+```
 
 ## 구문
 
-```js
-str.padStart(targetLength [, padString])
+```js-nolint
+padStart(targetLength)
+padStart(targetLength, padString)
 ```
 
 ### 매개변수
 
 - `targetLength`
-  - : 목표 문자열 길이. 현재 문자열의 길이보다 작다면 채워넣지 않고 그대로 반환.
+  - : 현재 `str`이 패딩된 후의 결과 문자열의 길이입니다.
+    만약 이 값이 `str.length보`다 작거나 같다면,
+    `str`이 그대로 반환됩니다.
 - `padString` {{optional_inline}}
-  - : 현재 문자열에 채워넣을 다른 문자열. 문자열이 너무 길어 목표 문자열 길이를 초과한다면 좌측 일부를 잘라서 넣음. 기본값은 " ". (U+0020)
+  - : 현재 `str`을 채우는 데 사용할 문자열입니다.
+    만약 `padString`이 `targetLength` 대비 너무 길다면,
+    끝 부분이 잘립니다. 기본값은 유니코드
+    "space" 문자 (U+0020)입니다.
 
-### 반환값
+### 반환 값
 
-시작점부터 주어진 문자열로 채워 목표 길이를 만족하는 {{jsxref("String")}}.
+지정된 `targetLength`의 {{jsxref("String")}}으로, `padString`이 시작 부분부터 적용됩니다.
 
-## 예시
+## 예제
+
+### 기본 예제
 
 ```js
 "abc".padStart(10); // "       abc"
@@ -36,31 +61,20 @@ str.padStart(targetLength [, padString])
 "abc".padStart(1); // "abc"
 ```
 
-## 폴리필
-
-다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 `String.prototype.padStart()` 메서드를 사용할 수 있습니다.
+### 고정 길이 문자열 숫자 변환
 
 ```js
-// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
-// https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
-if (!String.prototype.padStart) {
-  String.prototype.padStart = function padStart(targetLength, padString) {
-    targetLength = targetLength >> 0; //truncate if number or convert non-number to 0;
-    padString = String(typeof padString !== "undefined" ? padString : " ");
-    if (this.length > targetLength) {
-      return String(this);
-    } else {
-      targetLength = targetLength - this.length;
-      if (targetLength > padString.length) {
-        padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
-      }
-      return padString.slice(0, targetLength) + String(this);
-    }
-  };
+// JavaScript version of: (unsigned)
+// printf "%0*d" width num
+function leftFillNum(num, targetLength) {
+  return num.toString().padStart(targetLength, "0");
 }
+
+const num = 123;
+console.log(leftFillNum(num, 5)); // "00123"
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -70,4 +84,5 @@ if (!String.prototype.padStart) {
 
 ## 같이 보기
 
+- [`core-js`에서의 `String.prototype.padStart` 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.padEnd()")}}

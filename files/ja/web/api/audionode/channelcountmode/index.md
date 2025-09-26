@@ -15,25 +15,23 @@ l10n:
 以下が、列挙値 `channelCountMode` の取りうる値とその意味です。
 
 - `max`
-
   - : チャンネルの数は、全接続における最大のチャンネル数です。
     この場合、`channelCount` は無視され、アップミキシングのみが発生します。
 
     以下の `AudioNode` の子におけるデフォルト値です: {{domxref("GainNode")}}, {{domxref("DelayNode")}}, {{domxref("ScriptProcessorNode")}}, {{domxref("BiquadFilterNode")}}, {{domxref("WaveShaperNode")}}
 
 - `clamped-max`
-
   - : チャンネル数は、全接続における最大のチャンネル数ですが、`channelCount` の値を上限とします。
 
     以下の `AudioNode` の子におけるデフォルト値です: {{domxref("PannerNode")}}, {{domxref("ConvolverNode")}}, {{domxref("DynamicsCompressorNode")}}
 
 - `explicit`
-
   - : チャンネル数は、`channelCount` の値になります。
 
     以下の `AudioNode` の子におけるデフォルト値です: {{domxref("AudioDestinationNode")}}, {{domxref("AnalyserNode")}}, {{domxref("ChannelSplitterNode")}}, {{domxref("ChannelMergerNode")}}
 
-> **メモ:** 仕様書の以前のバージョンでは、{{domxref("ChannelSplitterNode")}} でのデフォルト値は `max` でした。
+> [!NOTE]
+> 仕様書の以前のバージョンでは、{{domxref("ChannelSplitterNode")}} でのデフォルト値は `max` でした。
 
 ## 例
 

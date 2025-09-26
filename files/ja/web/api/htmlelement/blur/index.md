@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: blur() メソッド"
+short-title: blur()
 slug: Web/API/HTMLElement/blur
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -31,7 +32,9 @@ blur()
 
 ```html
 <input type="text" id="sampleText" value="サンプルテキスト" /><br /><br />
-<button type="button" onclick="focusInput()">クリックするとフォーカスを得ます</button>
+<button type="button" onclick="focusInput()">
+  クリックするとフォーカスを得ます
+</button>
 ```
 
 #### JavaScript

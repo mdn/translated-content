@@ -22,7 +22,7 @@ document.mozSetImageElement(imageElementId, imageElement);
 
 Cet exemple change l'arrière-plan d'un bloc {{ HTMLElement("div") }} chaque fois que l'utilisateur clique sur le bloc.
 
-[Vue de cet exemple en direct](/samples/domref/mozSetImageElement.html).
+[Vue de cet exemple en direct](https://mdn.dev/archives/media/samples/domref/mozSetImageElement.html).
 
 ```html
 <style type="text/css">

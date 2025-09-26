@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("File System Access API", "File System Access API", "", "nocode")}} の **`FileSystemSyncAccessHandle`** インターフェイスは、ファイルシステムのエントリーを扱う同期式のハンドルを表します。ファイルの読み書きにおける同期式であるという性質は、[WebAssembly](/ja/docs/WebAssembly) などの非同期操作が高いオーバーヘッドに繋がる状況における重要なメソッドのパフォーマンスを高めることができます。
 
-このクラスは、それ用の [Web Workers](/ja/docs/Web/API/Web_Workers_API) 内で[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_Access_API#%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%B3%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)にあるファイルを操作するときのみアクセスできます。
+このクラスは、それ用の [Web Workers](/ja/docs/Web/API/Web_Workers_API) 内で[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API#%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%B3%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)にあるファイルを操作するときのみアクセスできます。
 
 このインターフェイスは {{domxref('FileSystemFileHandle.createSyncAccessHandle()')}} メソッド経由でアクセスされます。
 
@@ -74,7 +74,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **メモ:** 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期のメソッドとされていました。これは現在は[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
+> [!NOTE]
+> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期のメソッドとされていました。これは現在は[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
 
 ## 仕様書
 
@@ -86,5 +87,5 @@ onmessage = async (e) => {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -66,7 +66,8 @@ a {
   width: 50px;
   text-decoration: none;
 }
-nav, scroll-container {
+nav,
+scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -98,10 +99,8 @@ scroll-page {
 
 ## Especificações
 
-| Especificações                                                                                   | Status                           | Comentário             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}} | {{Spec2('CSSOM View')}} | Especificações inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegador
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

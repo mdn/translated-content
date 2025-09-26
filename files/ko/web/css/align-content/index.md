@@ -3,11 +3,55 @@ title: align-content
 slug: Web/CSS/align-content
 ---
 
-[CSS](/ko/docs/Web/CSS) **`align-content`** 속성은 콘텐츠 사이와 콘텐츠 주위 빈 공간을 [플렉스 박스](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout)'의 교차축 또는 [그리드](/ko/docs/Web/CSS/CSS_Grid_Layout)의 블록 축을 따라 배치하는 방식을 결정합니다.
+[CSS](/ko/docs/Web/CSS) **`align-content`** 속성은 콘텐츠 사이와 콘텐츠 주위 빈 공간을 [플렉스 박스](/ko/docs/Web/CSS/CSS_flexible_box_layout)'의 교차축 또는 [그리드](/ko/docs/Web/CSS/CSS_grid_layout)의 블록 축을 따라 배치하는 방식을 결정합니다.
 
 아래의 대화형 예제는 그리드 레이아웃을 사용해 이 속성의 값을 시연합니다.
 
-{{EmbedInteractiveExample("pages/css/align-content.html")}}
+{{InteractiveExample("CSS Demo: align-content")}}
+
+```css interactive-example-choice
+align-content: start;
+```
+
+```css interactive-example-choice
+align-content: center;
+```
+
+```css interactive-example-choice
+align-content: space-between;
+```
+
+```css interactive-example-choice
+align-content: space-around;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  column-gap: 10px;
+  height: 180px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 이 속성은 한 줄로만 이루어진 플렉스 컨테이너에는 아무 효과도 없습니다(`flex-wrap: nowrap` 등).
 
@@ -229,9 +273,7 @@ display.addEventListener("change", function (evt) {
 
 ## 같이 보기
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
 - CSS Flexbox Guide: _[Aligning items in a flex container](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/ko/docs/Web/CSS/CSS_Box_Alignment)
-
-{{CSSRef}}

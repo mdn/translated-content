@@ -3,8 +3,6 @@ title: "@page"
 slug: Web/CSS/@page
 ---
 
-{{CSSRef}}
-
 **`@page`** CSS @규칙은 문서를 인쇄할 때 일부 CSS 속성을 수정하는 데 쓰입니다. `@page`로 모든 CSS 속성을 바꿀 수는 없습니다. 문서의 margin, orphan, widow(앞단에서 넘어온 짤막한 행) 및 page break만 바꿀 수 있습니다. 다른 CSS 속성을 바꾸려는 시도는 무시됩니다.
 
 ```css
@@ -19,7 +17,8 @@ slug: Web/CSS/@page
 
 `@page` @규칙은 CSS 객체 모델 인터페이스 {{domxref("CSSPageRule")}}를 통해 액세스될 수 있습니다.
 
-> **참고:** **주의:** W3C은 viewport 관련 {{cssxref("&lt;length&gt;")}} 단위, `vh`, `vw`, `vmin` 및 `vmax` 처리법을 논의 중입니다. 그 동안에 `@page` @규칙 내에서 사용하지 마세요.
+> [!NOTE]
+> W3C은 viewport 관련 {{cssxref("&lt;length&gt;")}} 단위, `vh`, `vw`, `vmin` 및 `vmax` 처리법을 논의 중입니다. 그 동안에 `@page` @규칙 내에서 사용하지 마세요.
 
 ## 구문
 

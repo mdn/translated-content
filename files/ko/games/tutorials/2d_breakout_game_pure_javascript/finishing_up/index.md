@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 {{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 **10개의 레슨 중 마지막 단계**입니다. 이 수업을 마친 후 비교하여 살펴볼 소스코드는 [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html)에서 찾아볼 수 있습니다.
@@ -39,7 +37,7 @@ document.location.reload();
 clearInterval(interval); // Needed for Chrome to end game
 ```
 
-이를 통해 아래와 같이 약간 복잡한 논리를 추가할 수 있습니다:
+이를 통해 아래와 같이 약간 복잡한 논리를 추가할 수 있습니다.
 
 ```js
 lives--;
@@ -80,13 +78,13 @@ const interval = setInterval(draw, 10);
 draw();
 ```
 
-다음 각 인스턴스를 제거합니다:
+다음 각 인스턴스를 제거합니다.
 
 ```js
 clearInterval(interval); // Needed for Chrome to end game
 ```
 
-그 다음, `draw()`함수의 맨 아래 (닫는 '`}`'바로 전에) 다음 줄을 추가하여 `draw()`함수가 반복적으로 자신을 호출하게 합니다:
+그 다음, `draw()`함수의 맨 아래 (닫는 '`}`'바로 전에) 다음 줄을 추가하여 `draw()`함수가 반복적으로 자신을 호출하게 합니다.
 
 ```js
 requestAnimationFrame(draw);
@@ -100,7 +98,8 @@ requestAnimationFrame(draw);
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/dfh2tpu1/","","395")}}
 
-> **참고:** 생명의 수와 공이 패들에서 튕겨나가는 각도를 변경해 보세요.
+> [!NOTE]
+> 생명의 수와 공이 패들에서 튕겨나가는 각도를 변경해 보세요.
 
 ## 게임 오버 - 마무리!
 

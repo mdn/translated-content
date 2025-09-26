@@ -1,9 +1,9 @@
 ---
-title: "::spelling-error"
+title: ::spelling-error
 slug: Web/CSS/::spelling-error
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::spelling-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、綴りが正しくないと{{glossary("user agent", "ユーザーエージェント")}}が判断したテキストの区間を示します。
 
@@ -22,8 +22,8 @@ slug: Web/CSS/::spelling-error
 
 ## 構文
 
-```css
-::spelling-error
+```css-nolint
+::spelling-error {}
 ```
 
 ## 例
@@ -35,13 +35,15 @@ slug: Web/CSS/::spelling-error
 #### HTML
 
 ```html
-<p contenteditable spellcheck="true">My friends are coegdfgfddffbgning to the party tonight.</p>
+<p contenteditable spellcheck="true">
+  My friends are coegdfgfddffbgning to the party tonight.
+</p>
 ```
 
 #### CSS
 
 ```css
-::spelling-error  {
+::spelling-error {
   text-decoration: wavy red;
 }
 ```

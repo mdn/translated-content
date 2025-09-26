@@ -3,11 +3,12 @@ title: EventListener
 slug: Web/API/EventTarget/addEventListener
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 **`EventListener`** 介面表示一個可以處理由 {{domxref("EventTarget")}} 物件分派事件的物件。
 
-> **備註：** 基於相容舊版內容的需要， `EventListener` 可以接受一個函式及一個帶有 `handleEvent()` 屬性函式的物件。相關的[範例](#Example)顯示在下方。
+> [!NOTE]
+> 基於相容舊版內容的需要， `EventListener` 可以接受一個函式及一個帶有 `handleEvent()` 屬性函式的物件。相關的[範例](#example)顯示在下方。
 
 ## 屬性
 

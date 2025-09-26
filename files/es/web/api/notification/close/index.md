@@ -8,7 +8,8 @@ slug: Web/API/Notification/close
 El método `close()` de la interfaz {{domxref("Notification")}} se utiliza para
 cerrar/eliminar una notificación mostrada anteriormente.
 
-> **Nota:** Esta API no debe usarse solo para tener la notificación
+> [!NOTE]
+> Esta API no debe usarse solo para tener la notificación
 > eliminada de la pantalla después de un retraso fijo ya que este método también eliminará la
 > notificación de cualquier bandeja de notificación, evitando que los usuarios interactúen con ella
 > después de que se mostró inicialmente. Un uso válido para esta API sería eliminar una

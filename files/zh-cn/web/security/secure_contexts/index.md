@@ -23,7 +23,8 @@ slug: Web/Security/Secure_Contexts
 
 本地传递的资源，如那些带有 `http://127.0.0.1`、`http://localhost` 和 `http://*.localhost` 网址（如 `http://dev.whatever.localhost/`）和 `file://` 网址的资源也是认为经过安全传递的。
 
-> **备注：** Firefox 84 及更新的版本支持 `http://localhost` 和 `http://*.localhost` URL 作为信任的源，而早期版本不支持这样做，因为还没有保证 `localhost` 映射到本地或回环地址上。
+> [!NOTE]
+> Firefox 84 及更新的版本支持 `http://localhost` 和 `http://*.localhost` URL 作为信任的源，而早期版本不支持这样做，因为还没有保证 `localhost` 映射到本地或回环地址上。
 
 非本地资源要被认为是安全的，必须满足以下标准：
 
@@ -32,7 +33,7 @@ slug: Web/Security/Secure_Contexts
 
 ## 特性检测
 
-页面可以通过暴露在全局范围的 {{domxref("isSecureContext")}} 布尔属性值真假来判断它是否处于安全上下文中。
+页面可以通过暴露在全局范围的 {{domxref("Window.isSecureContext")}} 或 {{domxref("WorkerGlobalScope.isSecureContext")}} 布尔属性值的真假来判断它是否处于安全上下文中。
 
 ```js
 if (window.isSecureContext) {
@@ -50,8 +51,6 @@ if (window.isSecureContext) {
 ## 参见
 
 - [仅在安全上下文中可用的平台特性](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)——只在安全上下文中可用的特性列表
-- {{domxref("isSecureContext")}}
+- {{domxref("Window.isSecureContext")}} 和 {{domxref("WorkerGlobalScope.isSecureContext")}}
 - <https://permission.site>——一个允许你检查你的浏览器在 HTTP 和 HTTPS 上采用何种 API 权限检查的网站
-- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP 标头
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
+- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP 标头

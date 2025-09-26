@@ -1,8 +1,9 @@
 ---
 title: "Document: styleSheets プロパティ"
+short-title: styleSheets
 slug: Web/API/Document/styleSheets
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: b8af61d883d15a2d7e964ca96e00cafbd94f6e6a
 ---
 
 {{APIRef("CSSOM")}}
@@ -13,7 +14,7 @@ l10n:
 
 返されるリストは次の順になります。
 
-- {{htmlelement("link")}} ヘッダーから受け取ったスタイルシートが先に、ヘッダーの順序で並べられます。
+- {{HTTPHeader("Link")}} ヘッダーから受け取ったスタイルシートが先に、ヘッダーの順序で並べられます。
 - DOM から受け取ったスタイルシートが後に、[ツリー順](https://dom.spec.whatwg.org/#concept-tree-order)に並べられます。
 
 ## 例

@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Classes/Public_class_fields
 
 {{JsSidebar("Classes")}}
 
-> **Примечание:** Эта страница описывает экспериментальные возможности.
+> [!NOTE]
+> Эта страница описывает экспериментальные возможности.
 >
 > Публичные и приватные поля — это [экспериментальная функция (stage
 > 3\)](https://github.com/tc39/proposal-class-fields), предложенная комитетом по стандарту JavaScript [TC39](https://tc39.es/).
@@ -106,8 +107,7 @@ console.log(SubClassWithStaticField.subStaticField);
 
 Такие публичные поля имеются у каждого экземпляра данного класса. Объявляя публичные поля, мы можем гарантировать, что поле всегда присутствует, а объявление класса является более самодокументированным.
 
-Публичные поля экземпляра добавляются через {{jsxref("Global_Objects/Object/defineProperty",
-  "Object.defineProperty()")}} либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится `super()` в классе наследнике.
+Публичные поля экземпляра добавляются через {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится `super()` в классе наследнике.
 
 ```js
 class ClassWithInstanceField {
@@ -266,7 +266,7 @@ console.log(instance.msg);
 
 {{Specifications("javascript.classes")}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

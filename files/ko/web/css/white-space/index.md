@@ -3,13 +3,64 @@ title: white-space
 slug: Web/CSS/white-space
 ---
 
-{{CSSRef}}
-
 CSS **`white-space`** 속성은 요소가 공백 문자를 처리하는 법을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/white-space.html")}}
+{{InteractiveExample("CSS Demo: white-space")}}
 
-> **참고:** 단어 안에서 줄이 바뀌기를 원하는 경우 {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}를 사용하세요.
+```css interactive-example-choice
+white-space: normal;
+```
+
+```css interactive-example-choice
+white-space: pre;
+```
+
+```css interactive-example-choice
+white-space: pre-wrap;
+```
+
+```css interactive-example-choice
+white-space: pre-line;
+```
+
+```css interactive-example-choice
+white-space: wrap;
+```
+
+```css interactive-example-choice
+white-space: collapse;
+```
+
+```css interactive-example-choice
+white-space: preserve nowrap;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <p>
+      But ere she from the church-door stepped She smiled and told us why: 'It
+      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
+      smiled, and passed it off Ere from the door she stept—
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 16rem;
+}
+
+#example-element p {
+  border: 1px solid #c5c5c5;
+  padding: 0.75rem;
+  text-align: left;
+}
+```
+
+> [!NOTE]
+> 단어 안에서 줄이 바뀌기를 원하는 경우 {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}를 사용하세요.
 
 ## 구문
 
@@ -43,9 +94,7 @@ white-space: unset;
 - `pre-line`
   - : 연속 공백을 하나로 합침. 줄바꿈은 개행 문자와 {{htmlelement("br")}} 요소에서 일어나며, 한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다.
 - `break-spaces`
-
   - : 다음 차이점을 제외하면 `pre-wrap`과 동일합니다.
-
     - 연속 공백이 줄의 끝에 위치하더라도 공간을 차지합니다.
     - 연속 공백의 중간과 끝에서도 자동으로 줄을 바꿀 수 있습니다.
     - 유지한 연속 공백은 `pre-wrap`과 달리 요소 바깥으로 넘치지 않으며, 공간도 차지하므로 박스의 본질 크기(`min-content`, `max-content`)에 영향을 줍니다.

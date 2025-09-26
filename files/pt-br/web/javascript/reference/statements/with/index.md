@@ -3,7 +3,8 @@ title: with
 slug: Web/JavaScript/Reference/Statements/with
 ---
 
-> **Aviso:** O uso da declaração `with` não é recomendado, isso porque ele pode ser a fonte de bugs confusos e problemas de compatibilidade. Veja o parágrafo "Contra de ambiguidade" na seção "Descrição" para mais detalhes.
+> [!WARNING]
+> O uso da declaração `with` não é recomendado, isso porque ele pode ser a fonte de bugs confusos e problemas de compatibilidade. Veja o parágrafo "Contra de ambiguidade" na seção "Descrição" para mais detalhes.
 
 {{jsSidebar("Statements")}}
 
@@ -25,7 +26,8 @@ with (expressão)
 
 JavaScript procura por um nome não qualificado procurando uma cadeia de escopo associada à execução do contexto do script ou função contendo um nome não qualificado. A declaração 'with' adiciona o dado objeto à frenet dessa cadeia de escopo durante a validação desse corpo de declarações. Se um nome não qualificado usado no corpo for igual ao de uma propriedade na cadeia de escopo, então o nome ficará ligado à propriedade e ao objeto contendo a propriedade. Senão, um {{jsxref("ReferenceError")}} será invocado.
 
-> **Nota:** Usar `with` não é recomendado, e está probido no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode) do ECMAScript 5. A alternativa recomendada é atribuir o objeto cujas propriedades você quer acessar a uma variável temporária.
+> [!NOTE]
+> Usar `with` não é recomendado, e está probido no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) do ECMAScript 5. A alternativa recomendada é atribuir o objeto cujas propriedades você quer acessar a uma variável temporária.
 
 ### Pros & contras de perfomance
 
@@ -78,21 +80,15 @@ with (Math) {
 
 ## Especificações
 
-| Especificação                                                    | Situação             | Comentário                      |
-| ---------------------------------------------------------------- | -------------------- | ------------------------------- |
-| {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} | {{Spec2('ESDraft')}} |                                 |
-| {{SpecName('ES6', '#sec-with-statement', 'with statement')}}     | {{Spec2('ES6')}}     |                                 |
-| {{SpecName('ES5.1', '#sec-12.10', 'with statement')}}            | {{Spec2('ES5.1')}}   | Agora proibido no modo estrito. |
-| {{SpecName('ES3', '#sec-12.10', 'with statement')}}              | {{Spec2('ES3')}}     |                                 |
-| {{SpecName('ES1', '#sec-12.10', 'with statement')}}              | {{Spec2('ES1')}}     | Definição inicial               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.with")}}
+{{Compat}}
 
 ## Veja também
 
 - {{jsxref("Statements/block", "block")}}
-- [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}

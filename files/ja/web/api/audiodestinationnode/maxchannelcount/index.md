@@ -1,48 +1,43 @@
 ---
-title: AudioDestinationNode.maxChannelCount
+title: "AudioDestinationNode: maxChannelCount プロパティ"
+short-title: maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioDestinationNode") }}インターフェースの`maxchannelCount`プロパティは、`unsigned long`で表された物理的なデバイスが扱えるチャンネルの最大数です。
+`maxchannelCount` は {{ domxref("AudioDestinationNode") }} インターフェイスのプロパティで、物理的な機器が扱えるチャンネルの最大数を `unsigned long` で定義します。
 
-{{domxref("AudioNode.channelCount")}}プロパティは 0 からこの値の間(両端を含む)です。もし{{domxref("OfflineAudioContext")}}のように`maxChannelCount`が 0 ならば、チャンネルの数は変えられません。
+{{domxref("AudioNode.channelCount")}} プロパティは 0 以上この値以下になります。もし {{domxref("OfflineAudioContext")}} のように `maxChannelCount` が `0` の場合、チャンネルの数は変更できません。
 
-## 構文
+## 値
 
-```js
-var audioCtx = new AudioContext();
-var myDestination = audioCtx.destination;
-myDestination.maxChannelCount = 2;
-```
-
-### 値
-
-`unsigned long`
+`unsigned long` です。
 
 ## 例
 
-次の例は単純な設定です。`AudioDestinationNode`の`maxChannelCount`を 2 にしています。
+次の例は単純な設定です。`AudioDestinationNode` の `maxChannelCount` を 2 にしています。
 
 ```js
-var audioCtx = new AudioContext();
-var source = audioCtx.createMediaElementSource(myMediaElement);
+const audioCtx = new AudioContext();
+const source = audioCtx.createMediaElementSource(myMediaElement);
 source.connect(gainNode);
 audioCtx.destination.maxChannelCount = 2;
 gainNode.connect(audioCtx.destination);
 ```
 
-完全な実装は、MDN Web Audio の[Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/)や[Violent Theremin](http://mdn.github.io/violent-theremin/)のようなサンプルを参考にしてください。
+完全な実装は、MDN Web Audio の [Voice-change-o-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) や [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) のような例を参考にしてください。
 
-## 使用
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
-{{Compat("api.AudioDestinationNode.maxChannelCount")}}
+{{Compat}}
 
-## 参考
+## 関連情報
 
-- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

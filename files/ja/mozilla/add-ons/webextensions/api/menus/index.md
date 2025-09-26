@@ -7,11 +7,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus
 
 ブラウザーのメニューシステムに項目を追加します。
 
-この API は、Chrome のエクステンションでコンテキストメニューに項目を追加できる機能である["contextMenus"](https://developer.chrome.com/extensions/contextMenus) API をモデルにしています。この `browser.menus` API は Chrome の API にいくつかの機能を追加しています。
+この API は、Chrome のエクステンションでコンテキストメニューに項目を追加できる機能である["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API をモデルにしています。この `browser.menus` API は Chrome の API にいくつかの機能を追加しています。
 
-Firefox 55 より前ではこの API は `contextMenus` という名前でした。その名称は一応エイリアスにしています。そのため `contextMenus` という名称を使って Firefox や他のブラウザでも動くコードを書くことできます。
+Firefox 55 より前ではこの API は `contextMenus` という名前でした。その名称は一応エイリアスにしています。そのため `contextMenus` という名称を使って Firefox や他のブラウザーでも動くコードを書くことできます。
 
-この API を使用するためには `menus` [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 必要です。 `menus` の代わりにエイリアスの `contextMenus` を使用することができますが、もし使用するのであれば`browser.contextMenus` で API にアクセスしなければなりません。.
+この API を使用するためには `menus` [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 必要です。 `menus` の代わりにエイリアスの `contextMenus` を使用することができますが、もし使用するのであれば`browser.contextMenus` で API にアクセスしなければなりません。
 
 この API は[`menus.getTargetElement()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)以外はコンテンツスクリプトからは使用できません。バックグラウンドページからは使えます。
 
@@ -34,7 +34,7 @@ If you have created more than one context menu item or more than one tools menu 
 
 ## アイコン
 
-If you've specified icons for your extension using the ["icons" manifest key](/ja/Add-ons/WebExtensions/manifest.json/icons), your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:
+If you've specified icons for your extension using the ["icons" manifest key](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:
 
 ![](menus-2.png)
 
@@ -150,17 +150,18 @@ browser.menus.create(
 - {{WebExtAPIRef("menus.onClicked")}}
   - : メニューアイテムがクリックされたときに発火。
 - {{WebExtAPIRef("menus.onHidden")}}
-  - : ブラウザがメニューを隠したときに発火。
+  - : ブラウザーがメニューを隠したときに発火。
 - {{WebExtAPIRef("menus.onShown")}}
-  - : ブラウザがメニューを見せたときに発火。
+  - : ブラウザーがメニューを見せたときに発火。
 
 ## ブラウザーの互換性
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

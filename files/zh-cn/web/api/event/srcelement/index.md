@@ -1,24 +1,22 @@
 ---
-title: Event.srcElement
+title: Event：srcElement 属性
 slug: Web/API/Event/srcElement
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}{{AvailableInWorkers}}
 
-{{ Non-standard_header() }}
-
-**`Event.srcElement`** 是标准的 {{domxref("Event.target")}} 属性的一个别名。它只对老版本的 IE 浏览器有效。
+已弃用的 **`Event.srcElement`** 是 {{domxref("Event.target")}} 属性的别名。请使用 {{domxref("Event.target")}} 代替。
 
 ## 规范
 
-不属于任何规范
-
-微软 **[在 MSDN 有一篇描述。](<https://msdn.microsoft.com/en-us/library/ff974945(v=vs.85).aspx>)**
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Window.event")}}

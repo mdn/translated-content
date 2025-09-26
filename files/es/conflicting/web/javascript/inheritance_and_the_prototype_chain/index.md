@@ -25,7 +25,8 @@ En los lenguajes basados en clases defines una clase en una _definición de clas
 
 JavaScript sigue un modelo similar, pero sin tener la definición de clase separada del constructor. En su lugar, se define una función constructor para crear objetos con un conjunto inicial de propiedades y valores. Cualquier función JavaScript puede utilizarse como constructor. Se utiliza el operador `new` con una función constructor para crear un nuevo objeto.
 
-> **Nota:** Nota que ECMAScript 2015 introduce la [declaración de clases](/es/docs/Web/JavaScript/Reference/Classes):
+> [!NOTE]
+> Nota que ECMAScript 2015 introduce la [declaración de clases](/es/docs/Web/JavaScript/Reference/Classes):
 >
 > > Las Clases en JavaScript, introducidas en ECMAScript 2015, son básicamente un retoque sintáctico sobre la herencia basada en prototipos de JavaScript. La sintaxis _class_ no introduce un nuevo modelo de herencia orientado a objetos en Javascript.
 
@@ -76,7 +77,7 @@ Hay varias formas de definir funciones constructor para implementar la jerarquí
 
 Esta sección muestra como utilizar definiciones muy sencillas (y comparativamente inflexibles) para mostrar como hacer funcionar la herencia. En estas definiciones no puedes especificar valores de propiedades cuando creas un objeto. El nuevo objeto que se crea simplemente obtiene valores por defecto, que puedes cambiar posteriormente. La figura 8.2 muestra la jerarquía con estas definiciones sencillas.
 
-En una aplicación real probablemente definirías constructores que proporcionen valores a las propiedades en el momento de la creación del objeto (para más información ver [Constructores más flexibles](#More_flexible_constructors)). Por ahora, estas definiciones sencillas nos sirven para mostrar como funciona la herencia.
+En una aplicación real probablemente definirías constructores que proporcionen valores a las propiedades en el momento de la creación del objeto (para más información ver [Constructores más flexibles](#more_flexible_constructors)). Por ahora, estas definiciones sencillas nos sirven para mostrar como funciona la herencia.
 
 ![figure8.2.png](figure8.2.png)
 **Figura 8.2: Definiciones de los objetos de la jerarquía Employee**
@@ -177,7 +178,8 @@ public class Engineer extends WorkerBee {
 
 Usando estas definiciones puedes crear instancias de estos objetos, que adquieren valores por defecto para sus propiedades. La figura 8.3 revela el uso de estas definiciones JavaScript para crear nuevos objetos y muestra los valores de las propiedades de estos nuevos objetos.
 
-> **Nota:** El termino **instancia** tiene un significado técnico específico en lenguajes basados en clases, donde una instancia es un ejemplar individual de una clase y es fundamentalmente diferente a la clase. En JavaScript, "instancia" no tiene este mismo significado ya que JavaScript no hace diferencia entre clases e instancias. Sin embargo, al hablar de JavaScript, "instancia" puede ser usado informalmente para indicar que un objeto ha sido creado usando una función constructora particular. En este ejemplo, puedes decir que `jane` es una instancia de `Engineer`. De la misma manera, aunque los términos _parent_, _child_, _ancestor_, y _descendant_ no tienen un significado formal en JavaScript; puedes usarlos informalmente para referirte a objetos que están por encima o por debajo de la cadena de prototipos.
+> [!NOTE]
+> El termino **instancia** tiene un significado técnico específico en lenguajes basados en clases, donde una instancia es un ejemplar individual de una clase y es fundamentalmente diferente a la clase. En JavaScript, "instancia" no tiene este mismo significado ya que JavaScript no hace diferencia entre clases e instancias. Sin embargo, al hablar de JavaScript, "instancia" puede ser usado informalmente para indicar que un objeto ha sido creado usando una función constructora particular. En este ejemplo, puedes decir que `jane` es una instancia de `Engineer`. De la misma manera, aunque los términos _parent_, _child_, _ancestor_, y _descendant_ no tienen un significado formal en JavaScript; puedes usarlos informalmente para referirte a objetos que están por encima o por debajo de la cadena de prototipos.
 
 ### Creando objetos con definiciones simples
 
@@ -211,7 +213,7 @@ mark.dept = "general";
 mark.projects = [];
 ```
 
-El objeto `mark` hereda valores para las propiedades `name` y `dept` su objeto prototipico que enlaza en `mark.__proto__`. Se le asigna un valor local la propiedad `projects` a través del constructor `WorkerBee`. De esta forma se heredan propiedades y sus valores en JavaScript. En la sección [Property inheritance revisited](#Property_inheritance_revisited) se discuten algunos detalles de este proceso.
+El objeto `mark` hereda valores para las propiedades `name` y `dept` su objeto prototipico que enlaza en `mark.__proto__`. Se le asigna un valor local la propiedad `projects` a través del constructor `WorkerBee`. De esta forma se heredan propiedades y sus valores en JavaScript. En la sección [Property inheritance revisited](#property_inheritance_revisited) se discuten algunos detalles de este proceso.
 
 Debido a que estos constructores no permiten especificar valores específicos de instancia, esta información es genérica. Los valores de las propiedades son los valores por omisión, compartidos por todos los objetos nuevos creados a partir de `WorkerBee`. Por supuesto se pueden cambiar después los valores de estas propiedades. Por ejemplo podríamos dar valores con información específica a `mark` de la siguiente forma:
 
@@ -337,7 +339,8 @@ this.name = name || "";
 
 El operador lógico OR de JavaScript (`||`) evalúa su primer argumento. Si dicho argumento se convierte a true, el operador lo devuelve. Si no, el operador devuelve el valor del segundo argumento. Por tanto, esta linea de código comprueba si `name` tiene un valor útil para la propiedad `name`, en cuyo caso asigna a `this.name` este valor. En caso contrario asigna a `this.name` el string vacío. Este capitulo emplea este uso idiomático por abreviación. Sin embargo puede resultar chocante a primera vista.
 
-> **Nota:** Esto puede no resultar según lo esperado si la función _constructor_ es llamada con argumentos que se convierten a `false` (como `0` (cero) y una cadena vacía (`""`). En este caso el valor por defecto resulta elegido en lugar del valor proporcionado en la llamada al constructor.
+> [!NOTE]
+> Esto puede no resultar según lo esperado si la función _constructor_ es llamada con argumentos que se convierten a `false` (como `0` (cero) y una cadena vacía (`""`). En este caso el valor por defecto resulta elegido en lugar del valor proporcionado en la llamada al constructor.
 
 Con estas definiciones, cuando creas una instancia de un objeto, puedes especificar valores para las propiedades definidas localmente. Tal como se muestra en [Figura 8.5](#8.5), puedes utilizar la siguiente sentencia para crear un nuevo `Engineer`:
 
@@ -414,7 +417,7 @@ Employee.prototype.specialty = "none";
 
 Ahora el valor de la propiedad `specialty `del objeto` jane` si es "none".
 
-Otra forma de llamar al constructor es mediante el uso de los métodos [`call()`](/es/docs/JavaScript/Reference/Global_Objects/Function/call) / [`apply()`](/es/docs/JavaScript/Reference/Global_Objects/Function/apply):
+Otra forma de llamar al constructor es mediante el uso de los métodos [`call()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/call) / [`apply()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply):
 
 #### JavaScript
 
@@ -523,7 +526,7 @@ var f = new Foo();
 var isTrue = (f instanceof Foo);
 ```
 
-Para ver un ejemplo más detallado, supongamos que tenemos el conjunto de definiciones mostrado en [heredando propiedades](#Inheriting_properties). Creamos un objeto `Engineer` somo sigue:
+Para ver un ejemplo más detallado, supongamos que tenemos el conjunto de definiciones mostrado en [heredando propiedades](#inheriting_properties). Creamos un objeto `Engineer` somo sigue:
 
 ```js
 var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");
@@ -555,7 +558,8 @@ function instanceOf(object, constructor) {
 }
 ```
 
-> **Nota:** La implementación anterior compara el tipo del objeto con "xml" para soslayar un pequeño problema sobre como se representan los objetos XML en las versiones recientes de JavaScript. Ver [Error 634150 en Firefox](https://bugzil.la/634150) para entender los detalles.
+> [!NOTE]
+> La implementación anterior compara el tipo del objeto con "xml" para soslayar un pequeño problema sobre como se representan los objetos XML en las versiones recientes de JavaScript. Ver [Error 634150 en Firefox](https://bugzil.la/634150) para entender los detalles.
 
 Usando esta función `instanceOf` estas expresiones son todas `true`:
 

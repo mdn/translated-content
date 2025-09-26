@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 
 La méthode **`getMilliseconds()`** renvoie les millièmes de secondes de la date renseignée d'après l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMilliseconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+moonLanding.setMilliseconds(123);
+
+console.log(moonLanding.getMilliseconds());
+// Expected output: 123
+```
 
 ## Syntaxe
 

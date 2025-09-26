@@ -28,7 +28,7 @@ new ArrayBuffer(length)
 
 ### Создание буфера
 
-- [Из Base64 строки](/ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [Из Base64 строки](/ru/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [Из локального файла](</ru/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
 ## Свойства
@@ -54,17 +54,14 @@ var buffer = new ArrayBuffer(8);
 var view = new Int32Array(buffer);
 ```
 
-## Спецификация
+## Спецификации
 
-| Specification                                                      | Status                   | Comment                                 |
-| ------------------------------------------------------------------ | ------------------------ | --------------------------------------- |
-| {{SpecName('Typed Array')}}                                        | {{Spec2('Typed Array')}} | Заменён спецификацией ECMAScript 6.     |
-| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} | {{Spec2('ES6')}}         | Первичное определение в ECMA стандарте. |
+{{Specifications}}
 
-## Таблица совместимости
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Также
 
-- [JavaScript типизированные массивы](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript типизированные массивы](/ru/docs/Web/JavaScript/Guide/Typed_arrays)

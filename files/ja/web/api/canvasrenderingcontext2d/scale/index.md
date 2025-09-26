@@ -41,19 +41,19 @@ void ctx.scale(x, y);
 キャンバス上の位置も変わることに注意してください。角の位置の指定値が (10, 10) のため、実際の角の位置は (90, 30) になります。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // 拡縮された長方形
 ctx.scale(9, 3);
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(10, 10, 8, 20);
 
 // 変形行列を単位行列に戻す
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 // 原型の長方形
-ctx.fillStyle = 'gray';
+ctx.fillStyle = "gray";
 ctx.fillRect(10, 10, 8, 20);
 ```
 
@@ -78,12 +78,12 @@ ctx.fillRect(10, 10, 8, 20);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.scale(-1, 1);
-ctx.font = '48px serif';
-ctx.fillText('Hello world!', -280, 90);
+ctx.font = "48px serif";
+ctx.fillText("Hello world!", -280, 90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ```
 

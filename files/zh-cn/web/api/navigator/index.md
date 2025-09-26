@@ -1,131 +1,184 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
+l10n:
+  sourceCommit: a3d19af7e3eeb1c40748c80cd6b5143cfa201c54
 ---
 
-{{apiref("DOM4")}}
+{{APIRef("DOM")}}
 
-`Navigator` 接口表示用户代理的状态和标识。它允许脚本查询它和注册自己进行一些活动。
+**`Navigator`** 接口代表了用户代理的状态和身份，它允许脚本对其进行查询并注册自身以便执行某些活动。
 
-可以使用只读的 {{domxref("window.navigator")}} 属性检索 navigator 对象。
+可以通过 {{domxref("window.navigator")}} 只读属性获取 `Navigator` 对象。
 
-## 属性
+## 实例属性
 
-不从 _{{domxref("NavigatorID")}}、{{domxref("NavigatorLanguage")}}、{{domxref("NavigatorOnLine")}}、{{domxref("NavigatorGeolocation")}}、{{domxref("NavigatorPlugins")}}、{{domxref("NavigatorUserMedia")}}_ 和 _{{domxref("NetworkInformation")}}_ 中继承任何属性，但是实现了定义在这些对象中的如下属性。
+_不继承任何属性_。
 
 ### 标准属性
 
-- {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}{{experimental_inline}}
-  - : 筛选所有的 {{domxref("VRDisplay")}} 对象，把其中所有 {{domxref("VRDisplay.ispresenting")}} 属性的值为 `true` 的对象以数组的形式返回。
-- {{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{deprecated_inline}}
-  - : 返回当前浏览器的内部“开发代号”名称。不能保证此属性返回的值是正确的。
-- {{domxref("NavigatorID.appName")}} {{readonlyInline}}{{deprecated_inline}}
-  - : 以 {{domxref("DOMString")}} 的形式返回浏览器官方名称。不能保证此属性返回的值是正确的。
-- {{domxref("NavigatorID.appVersion")}} {{readonlyInline}}{{deprecated_inline}}
-  - : 以 {{domxref("DOMString")}} 的形式返回浏览器版本。不能保证此属性返回的值是正确的。
-- {{domxref("Navigator.battery")}} {{readonlyInline}}{{deprecated_inline}}
-  - : 返回一个 {{domxref("BatteryManager")}} 对象，你可以用它来获取一些电池充电状态的信息。
-- {{domxref("Navigator.connection")}} {{readonlyInline}}{{experimental_inline}}
-  - : 提供一个 {{domxref("NetworkInformation")}} 对象来获取设备的网络连接信息。
-- {{domxref("Navigator.cookieEnabled")}} {{readonlyinline}}
-  - : 当忽略 Cookie 时返回 false，否则返回 true
-- {{domxref("Navigator.geolocation")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("Geolocation")}} 对象，据之可访问设备的地理位位置信息。
-- {{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readOnlyInline}}
-  - : 返回可用的逻辑处理器核心数。
-- {{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}{{experimental_inline}}
-  - : 返回 {{domxref("Boolean")}} 表明浏览器是否支持 Java。
-- {{domxref('Navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}
-  - : 返回一个 {{domxref("Keyboard")}} 对象，该对象提供对以下功能的访问：检索键盘布局图和切换从物理键盘捕获按键的功能。
-- {{domxref("NavigatorLanguage.language")}} {{readonlyInline}}
-  - : 返回 {{domxref("DOMString")}} 表示用户的首先语言，通常是浏览器用户界面的语言。当未知的时，返回 null。
-- {{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}
-  - : 返回一个表示用户已知语言的 {{domxref("DOMString")}} 数组，并按优先顺序排列。
-- {{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}
-  - : 返回 {{domxref("MimeTypeArray")}} 数组用于列举浏览器所支持的 MIME 类型。
-- {{domxref("Navigator.locks")}} {{readonlyinline}}{{experimental_inline}}
-  - : Returns a {{domxref("LockManager")}} object which provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object
-- {{domxref("Navigator.mediaCapabilities")}} {{readonlyinline}}{{experimental_inline}}
-  - : Returns a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities.
-- {{domxref("Navigator.maxTouchPoints")}} {{readonlyInline}}
-  - : Returns the maximum number of simultaneous touch contact points are supported by the current device.
-- {{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}
-  - : 返回 {{domxref("Boolean")}} 来表明浏览器是否联网。
-- {{domxref("Navigator.oscpu")}}
-  - : 返回当前操作系统名。
-- {{domxref("Navigator.permissions")}} {{readonlyinline}}{{experimental_inline}}
-  - : 返回一个 {{domxref("Permissions")}} 对象，该对象可用于查询和更新 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 涵盖的 API 的权限状态。
-- {{domxref("NavigatorID.platform")}} {{readonlyInline}}{{experimental_inline}}
-  - : 返回浏览器平台名，不确定此值是否有效。
-- {{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}
-  - : 返回 {{domxref("PluginArray")}} 数组用于列举出浏览器安装的插件。
-- {{domxref("NavigatorID.product")}} {{readonlyInline}} {{experimental_inline}}
-  - : 在任意浏览器下都只返回 `'Gecko'`，此属性只用于兼容的目的。
-- {{domxref("Navigator.serviceWorker")}} {{readonlyInline}}
-  - : 返回 {{domxref("ServiceWorkerContainer")}} 对象用于提供注册、删除、更新以及为了 [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window) 的 {{domxref("ServiceWorker")}} 对象之间的通信。
-- {{domxref("NavigatorStorage.storage")}} {{readonlyinline}}
-  - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
-- {{domxref("NavigatorID.userAgent")}} {{readonlyInline}}
+- {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回一个当前文档的 {{domxref("Bluetooth")}} 对象，提供对 [web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API) 功能的访问。
+- {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
+  - : 返回一个用于读写访问系统剪贴板内容的 {{domxref("Clipboard")}} 对象。
+- {{domxref("Navigator.connection")}} {{ReadOnlyInline}}
+  - : 返回一个包含有关网络连接信息的 {{domxref("NetworkInformation")}} 对象。
+- {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref('ContactsManager')}} 接口，允许用户从他们的联系人列表中选择条目，并与网站或应用程序共享所选条目的有限详细信息。
+- {{domxref("Navigator.cookieEnabled")}} {{ReadOnlyInline}}
+  - : 如果设置 cookie 会被忽略则返回 false，否则返回 true。
+- {{domxref("Navigator.credentials")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回 {{domxref("CredentialsContainer")}} 接口，该接口暴露了请求凭据及在成功登录或注销等重要事件发生时通知用户代理的方法。
+- {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回设备内存的近似值。该值通过向下取整到最接近的 2 的幂，然后将其除以 1024 来近似。
+- {{domxref("Navigator.devicePosture")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 返回浏览器的 {{domxref("DevicePosture")}} 对象，允许开发者查询设备当前的姿态（即视口是处于平放还是折叠状态），并在姿态变化时执行相应的代码。
+- {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
+  - : 返回一个 {{domxref("Geolocation")}} 对象，用于访问设备的位置。
+- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回当前浏览上下文的 {{domxref("GPU")}} 对象。是 {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}} 的入口点。
+- {{domxref("Navigator.hardwareConcurrency")}} {{ReadOnlyInline}}
+  - : 返回可用的逻辑处理器核心数量。
+- {{domxref("Navigator.hid")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref("HID")}} 对象，提供用于连接 HID 设备、列出已连接的 HID 设备以及连接的 HID 设备的事件处理程序的方法。
+- {{domxref("Navigator.ink")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 返回一个当前文档的 {{domxref("Ink")}} 对象，提供对 [Ink API](/zh-CN/docs/Web/API/Ink_API) 功能的访问。
+- {{domxref('Navigator.keyboard')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref('Keyboard')}} 对象，该对象可用于访问检索键盘布局映射和切换捕捉物理键盘按键的函数。
+- {{domxref("Navigator.language")}} {{ReadOnlyInline}}
+  - : 返回一个字符串，表示用户的首选语言，通常是浏览器 UI 的语言。如果未知，则返回 `null` 值。
+- {{domxref("Navigator.languages")}} {{ReadOnlyInline}}
+  - : 返回一个字符串数组，表示用户的首选语言，按优先级排序。
+- {{domxref("Navigator.locks")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref("LockManager")}} 对象，提供了请求新的 {{domxref('Lock')}} 对象和查询现有的 {{domxref('Lock')}} 对象的方法。
+- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 提供对浏览器 {{domxref("NavigatorLogin")}} 对象的访问权限，联合身份提供商（IdP）可以使用它在用户登录或退出 IdP 时设置其登录状态。更多详细信息请参阅[联合凭证管理（FedCM）API](/zh-CN/docs/Web/API/FedCM_API)。
+- {{domxref("Navigator.maxTouchPoints")}} {{ReadOnlyInline}}
+  - : 返回当前设备支持的最大同时触摸接触点数。
+- {{domxref("Navigator.mediaCapabilities")}} {{ReadOnlyInline}}
+  - : 返回一个 {{domxref("MediaCapabilities")}} 对象，可以暴露有关给定格式的解码和编码能力。
+- {{domxref("Navigator.mediaDevices")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref("MediaDevices")}} 对象的引用，可用于获取有关可用媒体设备的信息（{{domxref("MediaDevices.enumerateDevices()")}}）、了解计算机用户和用户代理支持的媒体约束属性（{{domxref("MediaDevices.getSupportedConstraints()")}}）、以及请求访问媒体资源 {{domxref("MediaDevices.getUserMedia()")}}。
+- {{domxref("Navigator.mediaSession")}} {{ReadOnlyInline}}
+  - : 返回 {{domxref("MediaSession")}} 对象，可用于向浏览器提供有关当前播放媒体的元数据，以便在全局媒体控制 UI 中向用户展示相关信息。
+- {{domxref("Navigator.onLine")}} {{ReadOnlyInline}}
+  - : 返回浏览器的在线状态。该属性返回一个布尔值。
+- {{domxref("Navigator.pdfViewerEnabled")}} {{ReadOnlyInline}}
+  - : 如果浏览器在导航到 PDF 文件时可以使用它们，返回 `true`，否则为 `false`。
+- {{domxref("Navigator.permissions")}} {{ReadOnlyInline}}
+  - : 返回一个 {{domxref("Permissions")}} 对象，可以用来查询和更新受[权限 API](/zh-CN/docs/Web/API/Permissions_API) 支持的 API 的权限状态。
+- {{domxref("Navigator.presentation")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回一个对 {{domxref("Presentation")}} API 的引用。
+- {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 返回一个当前文档的 {{domxref("Scheduling")}} 对象。
+- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref("Serial")}} 对象，代表了 [Web Serial API](/zh-CN/docs/Web/API/Web_Serial_API) 的入口点，用于控制串行端口。
+- {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref("ServiceWorkerContainer")}} 对象，它提供了注册、移除、升级以及与[相关文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorker")}} 对象进行通信的功能。
+- {{domxref("Navigator.storage")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回用于按站点或按应用管理持久化权限及估算可用存储空间的单例 {{domxref('StorageManager')}} 对象。
+- {{domxref("Navigator.usb")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回一个当前文档的 {{domxref("USB")}} 对象，提供对 [WebUSB API](/zh-CN/docs/Web/API/WebUSB_API) 功能的访问。
+- {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
+  - : 返回一个包含有关当前窗口用户激活状态的信息的 {{domxref("UserActivation")}} 对象。
+- {{domxref("Navigator.userAgent")}} {{ReadOnlyInline}}
   - : 返回当前浏览器的用户代理。
-- {{domxref("Navigator.webdriver")}} {{readonlyInline}} {{experimental_inline}}
-  - : TBD
+- {{domxref("Navigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref("NavigatorUAData")}} 对象，提供了关于用户浏览器和操作系统的信息。
+- {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref("VirtualKeyboard")}} API 的引用，以控制屏幕上的虚拟键盘。
+- {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回一个 {{domxref("WakeLock")}} 接口，你可以使用它来请求屏幕唤醒锁并防止屏幕变暗、关闭或显示屏幕保护程序。
+- {{domxref("Navigator.webdriver")}} {{ReadOnlyInline}}
+  - : 表示用户代理是否受自动化控制。
+- {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 返回 {{domxref("WindowControlsOverlay")}} 接口，该接口暴露了桌面渐进式 Web 应用程序标题栏的几何信息，以及在标题栏发生变化时触发的事件。
+- {{domxref("Navigator.xr")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回 {{domxref("XRSystem")}} 对象，它代表了 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API) 的入口点。
 
-### 非标准方法
+### 非标准的属性
 
-- {{domxref("window.navigator.buildID", "navigator.buildID")}} {{non-standard_inline}}
-  - : 返回浏览器识别码。这一方法返回时间戳，例如：在 Firefox 64 发行版中返回 `20181001000000`。
-- {{domxref("Navigator.cookieEnabled")}} {{non-standard_inline}}
-  - : 返回布尔值以表明 Cookies 是否能再浏览器中启用
-- {{domxref("navigator.doNotTrack")}} {{non-standard_inline}}
-  - : 报告用户的不追踪参数值，当值为 yes，你的网址或应用将不追踪用户
-- {{domxref("navigator.id")}} {{non-standard_inline}}
-  - : 返回 {{domxref("window.navigator.id", "id")}} 对象，你能用 [BrowserID](/zh-CN/docs/BrowserID) 添加支持到你的网址。
-- {{domxref("window.navigator.mozApps", "navigator.mozApps")}} {{non-standard_inline}}
-  - : Returns an {{domxref("window.navigator.mozApps", "Apps")}} object you can use to install, manage, and control [Open Web apps](/Open_Web_Apps).
-- {{domxref("Navigator.mozAudioChannelManager", "navigator.mozAudioChannelManager")}} {{non-standard_inline}}
-  - : The `navigator.mozAudioChannelManager` object provides access to the {{domxref("mozAudioChannelManager")}} interface, which is used to manage your Firefox OS device's audio channels, including setting what channel's volume to affect when the volume buttons are pressed inside a particular app.
-- {{domxref("window.navigator.mozNotification","navigator.mozNotification")}} {{deprecated_inline}} {{non-standard_inline}}
-  {{domxref("window.navigator.webkitNotification","navigator.webkitNotification")}}
-  - : Returns a {{domxref("navigator.mozNotification", "notification")}} object you can use to deliver notifications to the user from your web application.
-- {{domxref("navigator.mozSocial")}} {{non-standard_inline}}
-  - : The Object, returned by the `navigator.mozSocial` property, is available within the social media provider's panel to provide functionality it may need.
-- {{domxref("window.navigator.productSub", "navigator.productSub")}} {{non-standard_inline}}
-  - : Returns the build number of the current browser (e.g., "20060909").
-- {{domxref("window.navigator.securitypolicy", "navigator.securitypolicy")}} {{non-standard_inline}}
-  - : Returns an empty string. In Netscape 4.7x, returns "US & CA domestic policy" or "Export policy".
-- {{domxref("window.navigator.standalone", "navigator.standalone")}} {{non-standard_inline}}
-  - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
-- {{domxref("window.navigator.vendor", "navigator.vendor")}} {{non-standard_inline}}
-  - : 返回当前浏览器的供应商的名字（例如：“Netscape6”）。
-- {{domxref("window.navigator.vendorSub", "navigator.vendorSub")}} {{non-standard_inline}}
-  - : 返回供应商版本号码（例如：“6.1”）。
-- [`navigator.webkitPointer`](/zh-CN/docs/API/Pointer_Lock_API) {{non-standard_inline}}
-  - : Returns a PointerLock object for the [Mouse Lock API](/zh-CN/docs/API/Pointer_Lock_API).
+- {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : 返回浏览器的构建标识符。在现代浏览器中，为了保护隐私，该属性现在返回一个固定的时间戳，例如 Firefox 64 及更高版本中返回 `20181001000000`。
+- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 返回一个布尔值，表示用户是否同意共享或出售他们的信息。
+- {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
+  - : 返回一个布尔值，表示浏览器是否以独立模式运行。仅在 Apple 的 iOS Safari 上可用。
 
-## 方法
+### 已弃用的属性
 
-_Doesn't inherit any method, but implements those defined in {{domxref("NavigatorID")}}, {{domxref("NavigatorContentUtils")}}, _{{domxref("NavigatorUserMedia")}},_ and {{domxref("NavigatorStorageUtils")}}._
+- {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : 返回一个包含所有当前正在呈现（{{domxref("VRDisplay.isPresenting")}} 为 `true`）的 {{domxref("VRDisplay")}} 对象的数组。
+- {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 在任何浏览器中始终返回 `'Mozilla'`。
+- {{domxref("Navigator.appName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 在任何浏览器中始终返回 `'Netscape'`。
+- {{domxref("Navigator.appVersion")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 返回浏览器版本号字符串。请勿依赖此属性返回正确的值。
+- {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
+  - : 报告用户的请勿追踪设置的首选项的值，当该值为“1”时，你的网站或应用程序不应该跟踪用户。
+- {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 返回一个 {{domxref("MimeTypeArray")}} 对象，表示浏览器识别和支持的 MIME 类型。
+- {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 返回一个表示当前操作系统版本的字符串。
+- {{domxref("Navigator.platform")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 返回一个表示浏览器平台的字符串。请勿依赖此函数返回重要值。
+- {{domxref("Navigator.plugins")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 返回一个 {{domxref("PluginArray")}} 对象，列出了浏览器中安装的所有插件。
+- {{domxref("Navigator.product")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 在任何浏览器中始终返回 `'Gecko'`。
+- {{domxref("Navigator.productSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 返回字符串 `'20030107'` 或 `'20100101'`。
+- {{domxref("Navigator.vendor")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 返回空字符串、`'Apple Computer Inc.'` 或 `'Google Inc.'`。
+- {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : 始终返回空字符串。
 
-### 标准方法
+## 实例方法
 
-- {{domxref("Navigator.getVRDisplays()")}} {{deprecated_inline}}
-  - : Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.
-- {{domxref("NavigatorUserMedia.getUserMedia()")}}{{deprecated_inline}}
-  - : After having prompted the user for permission, returns the audio or video stream associated to a camera or microphone on the local computer.
-- {{domxref("window.navigator.registerContentHandler", "navigator.registerContentHandler")}}
-  - : Allows web sites to register themselves as a possible handler for a given MIME type.
-- {{domxref("navigator.registerProtocolHandler", "navigator.registerProtocolHandler")}}
-  - : Allows web sites to register themselves as a possible handler for a given protocol.
-- {{domxref("Navigator.requestMediaKeySystemAccess()")}} {{experimental_inline}}
-  - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
-- {{domxref("Navigator.sendBeacon()")}}{{experimental_inline}}
-  - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
-- {{domxref("Navigator.share()")}}{{experimental_inline}}
-  - : Invokes the native sharing mechanism of the current platform.
-- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline}} {{experimental_inline}}
-  - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
+_不继承任何方法_。
+
+- {{domxref("Navigator.canShare()")}} {{SecureContext_Inline}}
+  - : 如果调用 `Navigator.share()` 成功，则返回 `true`。
+- {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
+  - : 清除当前应用图标的徽标，并返回一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}} 对象。
+- {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
+  - : 针对给定的不透明 URN 或 `FencedFrameConfig` 的内部 `url` 属性，在映射 URL 中替换指定字符串。此方法作为临时措施（标记为“已弃用”）提供，以支持对围栏框架 URL 执行此类替换，帮助广告技术提供商将现有的实现迁移到[隐私沙盒](https://developers.google.cn/privacy-sandbox) API。
+- {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
+  - : 返回一个值，表示指定的媒体元素、音频上下文或媒体特性“类型”是否允许自动播放。
+- {{domxref("Navigator.getBattery()")}} {{SecureContext_Inline}}
+  - : 返回一个 promise，兑现为一个 {{domxref("BatteryManager")}} 对象，返回有关电池充电状态的信息。
+- {{domxref("Navigator.getGamepads()")}}
+  - : 返回一个 {{domxref("Gamepad")}} 数组对象，对应每一个设备上连接的手柄。
+- {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回一个 promise，当敲定时会提供一个对象数组，这些对象代表着用户已安装的任何相关原生应用或[渐进式 Web 应用（PWA）](/zh-CN/docs/Web/Progressive_web_apps)的信息。
+- {{domxref("Navigator.registerProtocolHandler()")}} {{SecureContext_Inline}}
+  - : 允许网站注册自身为特定协议的潜在处理程序。
+- {{domxref("Navigator.requestMediaKeySystemAccess()")}} {{SecureContext_Inline}}
+  - : 返回一个表示 MediaKeySystemAccess 对象的 {{jsxref("Promise")}}。
+- {{domxref("Navigator.requestMIDIAccess()")}} {{SecureContext_Inline}}
+  - : 返回一个 {{jsxref('Promise')}} 对象，代表了请求访问用户系统上的 MIDI 设备的操作。
+- {{domxref("Navigator.sendBeacon()")}}
+  - : 用于通过 {{Glossary("HTTP")}} 协议异步地从用户代理向 Web 服务器传输少量数据。
+- {{domxref("Navigator.setAppBadge()")}} {{SecureContext_Inline}}
+  - : 在与此应用程序关联的图标上设置徽标，并返回一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}} 对象。
+- {{domxref("Navigator.share()")}} {{SecureContext_Inline}}
+  - : 调用当前平台的原生分享机制。
 - {{domxref("Navigator.vibrate()")}}
-  - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
+  - : 在支持振动功能的设备上触发振动。若设备不支持振动功能，则此方法无效。
+- {{domxref("Navigator.unregisterProtocolHandler()")}} {{SecureContext_Inline}}
+  - : 注销作为指定协议处理程序的网站。
+
+### 已弃用的方法
+
+- {{domxref("Navigator.getUserMedia()")}} {{Deprecated_Inline}} {{SecureContext_Inline}}
+  - : 在向用户请求权限后，返回与本地计算机上的摄像头或麦克风关联的音频或视频流。
+- {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : 返回一个 promise，该 promise 兑现为一个数组中包含了代表连接到计算机的所有可用 VR 设备的 {{domxref("VRDisplay")}} 对象。
+- {{domxref("Navigator.javaEnabled()")}} {{Deprecated_Inline}}
+  - : 始终返回 false。
+- {{domxref("Navigator.taintEnabled()")}} {{Deprecated_Inline}}
+  - : 在 JavaScript 1.2 版本中移除了对数据污染/净化函数的支持，其返回值为 `false`。
 
 ## 规范
 

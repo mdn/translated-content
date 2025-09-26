@@ -9,7 +9,8 @@ slug: Web/API/Document/querySelectorAll
 
 返回与指定的选择器组匹配的文档中的元素列表 (使用深度优先的先序遍历文档的节点)。返回的对象是 {{domxref("NodeList")}} 。
 
-> **备注：** 此方法基于{{domxref("ParentNode")}} mixin 的{{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} 实现。
+> [!NOTE]
+> 此方法基于{{domxref("ParentNode")}} mixin 的{{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} 实现。
 
 ## 语法
 
@@ -20,15 +21,17 @@ querySelectorAll(selectors)
 ### 参数
 
 - `selectors`
-  - : 一个包含一个或多个匹配的选择器的字符串。其必须是一个有效的 [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)字符串，如果不是，会抛出 `SyntaxError` 异常。有关使用选择器标识元素的更多信息，请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)，可以通过使用逗号分隔多个选择器来指定它们。
+  - : 一个包含一个或多个匹配的选择器的字符串。其必须是一个有效的 [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)字符串，如果不是，会抛出 `SyntaxError` 异常。有关使用选择器标识元素的更多信息，请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)，可以通过使用逗号分隔多个选择器来指定它们。
 
-> **备注：** 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符)
+> [!NOTE]
+> 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符)
 
 ### 返回值
 
 一个静态 {{domxref("NodeList")}}，包含一个与至少一个指定选择器匹配的元素的{{domxref("Element")}}对象，或者在没有匹配的情况下为空{{domxref("NodeList")}}
 
-> **备注：** 如果 `selectors` 参数中包含 [CSS 伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，则返回的列表始终为空。
+> [!NOTE]
+> 如果 `selectors` 参数中包含 [CSS 伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，则返回的列表始终为空。
 
 ### 异常
 
@@ -75,7 +78,7 @@ var matches = container.querySelectorAll("li[data-active='1']");
 
 一旦返回匹配元素的{{domxref("NodeList")}}，就可以像任何数组一样检查它。如果数组为空（即，其`length`属性为 0），则找不到匹配项。
 
-否则，您只需使用标准数组方法来访问列表的内容。您可以使用任何常见的循环语句，例如：
+否则，你只需使用标准数组方法来访问列表的内容。你可以使用任何常见的循环语句，例如：
 
 ```js
 var highlightedItems = userList.querySelectorAll(".highlighted");
@@ -129,9 +132,9 @@ inner.length; // 0
 
 ## 参见
 
-- [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/zh-CN/docs/Web/CSS/Attribute_selectors) in the CSS Guide
-- [Attribute selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}

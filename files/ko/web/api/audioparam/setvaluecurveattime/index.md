@@ -41,7 +41,8 @@ var paramRef = param.setValueCurveAtTime(values, startTime, duration);
 
 파라미터의 값이 커브를 따라서 종료되었을 때, 파라미터의 값은 `values` 매개변수에서 명시된 값들의 집합의 마지막 값과 일치하도록 보장됩니다.
 
-> **참고:** Web Audio API의 몇몇 이른 구현은 이것이 사실임을
+> [!NOTE]
+> Web Audio API의 몇몇 이른 구현은 이것이 사실임을
 > 보장하지 않는데, 이는 예기치 않은 결과를 유발합니다.
 
 ## 예제

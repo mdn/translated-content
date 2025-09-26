@@ -3,6 +3,8 @@ title: Attribute (属性)
 slug: Glossary/Attribute
 ---
 
+{{GlossarySidebar}}
+
 **属性** (attribute) 属性は{{Glossary("element", "要素")}}を拡張し、動作を変更したりメタデータを提供したりします。
 
 属性は常に `name="value"` の形式を取ります (属性の識別子に関連付けられた値が続きます)。
@@ -21,5 +23,5 @@ slug: Glossary/Attribute
 
 ### 技術リファレンス
 
-- [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
-- [グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
+- [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)

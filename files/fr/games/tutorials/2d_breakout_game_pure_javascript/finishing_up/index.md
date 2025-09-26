@@ -3,11 +3,9 @@ title: Finitions
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
-{{GamesSidebar}}
-
 {{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
-C'est la dernière étape de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/Breakout_game_from_scratch). Vous pouvez trouver le code source tel qu'il devrait être après avoir terminé cette leçon à l'adresse [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
+C'est la dernière étape de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source tel qu'il devrait être après avoir terminé cette leçon à l'adresse [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 
 Il y a toujours des améliorations possibles pour tous les jeux que nous créons. Par exemple, nous pouvons offrir plus d'une vie au joueur. Il peut faire une ou deux erreurs et être encore capable de terminer le jeu. Nous pourrions également améliorer le rendu visuel du jeu.
 
@@ -102,8 +100,8 @@ C'est tout — la version finale du jeu est prête et prête à être lancée !
 
 ## Game over - pour l'instant !
 
-Vous avez terminé toutes les leçons - félicitations ! À ce stade, vous devriez maintenant connaître les bases de la manipulation des Canevas et la logique des jeux simples en 2D. C'est maintenant le bon moment pour apprendre quelques frameworks et continuer le développement du jeu. Vous pouvez découvrir le pendant de cette série, le [casse-brique 2D utilisant Phaser](/fr/docs/Games/Workflows/2D_breakout_game_Phaser) ou le [tutoriel Cyber Orb](/fr/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR) construit avec Phaser. Vous pouvez également consulter la section [Jeux sur MDN](/fr/docs/Jeux) pour vous inspirer et approfondir vos connaissances.
+Vous avez terminé toutes les leçons - félicitations ! À ce stade, vous devriez maintenant connaître les bases de la manipulation des Canevas et la logique des jeux simples en 2D. C'est maintenant le bon moment pour apprendre quelques frameworks et continuer le développement du jeu. Vous pouvez découvrir le pendant de cette série, le [casse-brique 2D utilisant Phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) ou le [tutoriel Cyber Orb](/fr/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation) construit avec Phaser. Vous pouvez également consulter la section [Jeux sur MDN](/fr/docs/Games) pour vous inspirer et approfondir vos connaissances.
 
-Vous pouvez également revenir à la [page d'accueil](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript) de cette série de tutoriels. Amusez-vous bien à coder !
+Vous pouvez également revenir à la [page d'accueil](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) de cette série de tutoriels. Amusez-vous bien à coder !
 
 {{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

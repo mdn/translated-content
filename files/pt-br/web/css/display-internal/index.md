@@ -42,18 +42,17 @@ Salvo indicação em contrário, o tipo de exibição interno e o tipo de exibi�
 
 `table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, and `table-row-group`
 
-{{Compat("css.properties.display.table_values", 10)}}
+{{Compat}}
 
 ### Suporte de valores de rubi
 
 `ruby`, `ruby-base`, `ruby-base-container`, `ruby-text`, and `ruby-text-container`
 
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

@@ -1,15 +1,25 @@
 ---
 title: Map.prototype.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`get()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトから指定された要素を返します。指定されたキーに関連付けられた値がオブジェクトである場合は、そのオブジェクトの参照を受け取ることになり、そのオブジェクトに対して変更を行った場合は、 `Map` オブジェクトの中にあるものに変更が行われます。
 
-**`get()`** メソッドは、指定された要素を `Map` オブジェクトから返します。指定されたキーに関連付けられた値がオブジェクトである場合は、そのオブジェクトの参照を受け取ることになり、そのオブジェクトに対して変更を行った場合は、 `Map` オブジェクトの中にあるものに変更が行われます。
+{{InteractiveExample("JavaScript デモ: Map.prototype.get()")}}
 
-{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
+```js interactive-example
+const map = new Map();
+map.set("bar", "foo");
+
+console.log(map.get("bar"));
+// 予想される結果: "foo"
+
+console.log(map.get("baz"));
+// 予想される結果: undefined
+```
 
 ## 構文
 

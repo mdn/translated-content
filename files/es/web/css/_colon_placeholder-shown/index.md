@@ -1,11 +1,11 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:placeholder-shown`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{htmlElement("input")}} o {{htmlElement("textarea")}} que esté mostrando actualmente el [texto de marcador de posición (placeholder)](/es/docs/Web/HTML/Element/input#attr-placeholder).
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{htmlElement("input")}} o {{htmlElement("textarea")}} que esté mostrando actualmente el [texto de marcador de posición (placeholder)](/es/docs/Web/HTML/Reference/Elements/input#attr-placeholder).
 
 ```css
 /* Selecciona cualquier elemento con un placeholder activo */
@@ -80,4 +80,4 @@ input:placeholder-shown {
 - El pseudo-elemento {{cssxref("::placeholder")}} estiliza el placeholder _por sí mismo_.
 - Elementos HTML relacionados: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
 - {{cssxref(":-moz-placeholder")}}, {{cssxref("::-moz-placeholder")}}
-- [Formularios HTML](/es/docs/Learn/HTML/Forms)
+- [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)

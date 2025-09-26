@@ -1,13 +1,14 @@
 ---
-title: ServiceWorkerGlobalScope.skipWaiting()
+title: "ServiceWorkerGlobalScope: skipWaiting() メソッド"
+short-title: skipWaiting()
 slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
 l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-**`ServiceWorkerGlobalScope.skipWaiting()`** は {{domxref("ServiceWorkerGlobalScope")}} のメソッドで、待機しているサービスワーカーがアクティブになるように強制します。
+**`skipWaiting()`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのメソッドで、待機しているサービスワーカーがアクティブになるように強制します。
 
 このメソッドは、 {{domxref("Clients.claim()")}} と併用することで、現在のクライアントと他のすべてのアクティブなクライアントの両方で、元となるサービスワーカーの更新が即座に有効になるようにします。
 
@@ -23,7 +24,7 @@ skipWaiting()
 
 ### 返値
 
-{{jsxref("Promise")}} で、直ちに `undefined` に解決します。
+{{jsxref("Promise")}} で、新しくインストールされたサービスワーカーを起動しようとした後、`undefined` で解決します。
 
 ## 例
 
@@ -54,7 +55,5 @@ self.addEventListener("install", (event) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{domxref("Clients.claim()")}}
-- {{jsxref("Promise", "プロミス", "", 1)}}
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -24,7 +24,7 @@ Pour utiliser les fonctionnalités d'identité contextuelle dans les extensions,
 
 ## Permissions
 
-Pour utiliser l'API {{WebExtAPIRef("contextualIdentities")}} vous devez inclure la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json). Vous n'avez pas besoin de la permission "tabs" pour utiliser {{WebExtAPIRef("tabs.create")}} ; vous avez besoin de la permission "cookies" pour spécifier le conteneur de cookies que vous souhaitez utiliser.
+Pour utiliser l'API {{WebExtAPIRef("contextualIdentities")}} vous devez inclure la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Vous n'avez pas besoin de la permission "tabs" pour utiliser {{WebExtAPIRef("tabs.create")}} ; vous avez besoin de la permission "cookies" pour spécifier le conteneur de cookies que vous souhaitez utiliser.
 
 ## Exemple de procédure pas à pas
 
@@ -168,8 +168,8 @@ Si l'utilisateur sélectionne l'option permettant de fermer tous les onglets pou
 
 Si vous voulez en savoir plus sur l'API contextualIdentities, consultez :
 
-- [contextualIdentities API reference](/fr/Add-ons/WebExtensions/API/contextualIdentities).
-- code source de l'extension [Multi-Account Containers](https://github.com/mozilla/multi-account-containers/#readme). C'est le code pour l'extension [Firefox Multi-Account Containers](/fr/firefox/addon/multi-account-containers/).
+- [contextualIdentities API reference](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities).
+- code source de l'extension [Multi-Account Containers](https://github.com/mozilla/multi-account-containers/#readme). C'est le code pour l'extension [Firefox Multi-Account Containers](/fr/docs/Mozilla/Firefox/addon/multi-account-containers/).
 
   Cette extension fournit aux utilisateurs des fonctionnalités améliorées pour les identités contextuelles, telles que la possibilité de cliquer longuement sur le nouveau bouton de l'onglet, puis de sélectionner l'identité à utiliser dans le nouvel onglet. Il met vraiment en valeur les capacités offertes par les identités contextuelles et vaut le détour.
 

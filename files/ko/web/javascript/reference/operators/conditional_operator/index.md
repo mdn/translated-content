@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Conditional_operator
 
 **조건 (삼항) 연산자**는 JavaScript에서 세 개의 피연산자를 받는 유일한 연산자입니다. 앞에서부터 조건문, 물음표(`?`), 조건문이 참({{Glossary("truthy")}})일 경우 실행할 표현식, 콜론(`:`), 조건문이 거짓({{Glossary("falsy")}})일 경우 실행할 표현식이 배치됩니다. 해당 연산자는 [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else)문의 대체재로 빈번히 사용됩니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Conditional operator")}}
+
+```js interactive-example
+function getFee(isMember) {
+  return isMember ? "$2.00" : "$10.00";
+}
+
+console.log(getFee(true));
+// Expected output: "$2.00"
+
+console.log(getFee(false));
+// Expected output: "$10.00"
+
+console.log(getFee(null));
+// Expected output: "$10.00"
+```
 
 ## 구문
 

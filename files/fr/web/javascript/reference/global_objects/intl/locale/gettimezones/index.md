@@ -11,7 +11,8 @@ La propriété **`Intl.Locale.prototype.timeZones`** est un accesseur qui renvoi
 
 Renvoie un tableau avec les fuseaux horaires pris en charge et associés à l'objet `Locale` courant. Les éléments du tableau sont représentés [au format IANA](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database).
 
-> **Note :** Si l'identifiant de langue Unicode ne contient pas le tiret indiquant la sous-balise de région, la valeur de retour sera `undefined`.
+> [!NOTE]
+> Si l'identifiant de langue Unicode ne contient pas le tiret indiquant la sous-balise de région, la valeur de retour sera `undefined`.
 
 ## Exemples
 

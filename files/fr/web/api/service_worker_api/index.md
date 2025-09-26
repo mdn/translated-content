@@ -17,11 +17,14 @@ Un <i lang="en">service worker</i> s'exécute dans le contexte d'un <i lang="en"
 
 Pour des raisons de sécurité, les <i lang="en">service workers</i> ne fonctionnent qu'avec le protocole HTTPS. En effet, les connexions HTTP sont susceptibles d'être victimes d'injection de code par [attaque du monstre du milieu](/fr/docs/Glossary/MitM) et l'accès à ces API aggraverait ces attaques.
 
-> **Note :** Sur Firefox, les <i lang="en">service workers</i> ne fonctionnent pas en navigation privée.
+> [!NOTE]
+> Sur Firefox, les <i lang="en">service workers</i> ne fonctionnent pas en navigation privée.
 
-> **Note :** Sur Firefox, il est possible de tester les <i lang="en">service workers</i> via HTTP (donc de façon non-sécurisée) en cochant l'option **Activer les Service Workers via HTTP (lorsque la boîte à outils est ouverte)** dans les options des outils de développement.
+> [!NOTE]
+> Sur Firefox, il est possible de tester les <i lang="en">service workers</i> via HTTP (donc de façon non-sécurisée) en cochant l'option **Activer les Service Workers via HTTP (lorsque la boîte à outils est ouverte)** dans les options des outils de développement.
 
-> **Note :** Les <i lang="en">service workers</i> utilisent [les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Ils attendent généralement l'arrivée de réponses auxquelles ils répondront par une action de réussite ou d'échec. L'architecture asynchrone des promesses est idéale pour ce mode de fonctionnement.
+> [!NOTE]
+> Les <i lang="en">service workers</i> utilisent [les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Ils attendent généralement l'arrivée de réponses auxquelles ils répondront par une action de réussite ou d'échec. L'architecture asynchrone des promesses est idéale pour ce mode de fonctionnement.
 
 ### Enregistrement
 
@@ -54,7 +57,8 @@ Il existe également un évènement [`activate`](/fr/docs/Web/API/ServiceWorkerG
 
 Un <i lang="en">service worker</i> peut répondre aux requêtes en utilisant l'évènement [`FetchEvent`](/fr/docs/Web/API/FetchEvent). Les réponses à ces requêtes peuvent être modifiées en utilisant la méthode [`FetchEvent.respondWith()`](/fr/docs/Web/API/FetchEvent/respondWith).
 
-> **Note :** Comme les évènements `install`/`activate` peuvent prendre un certain temps à finir, la spécification fournit une méthode [`waitUntil()`](/fr/docs/Web/API/ExtendableEvent/waitUntil). Lorsque celle-ci est appelée sur les évènements `install` ou `activate` avec une promesse, les évènements fonctionnels comme `fetch` et `push` attendront la résolution de la promesse.
+> [!NOTE]
+> Comme les évènements `install`/`activate` peuvent prendre un certain temps à finir, la spécification fournit une méthode [`waitUntil()`](/fr/docs/Web/API/ExtendableEvent/waitUntil). Lorsque celle-ci est appelée sur les évènements `install` ou `activate` avec une promesse, les évènements fonctionnels comme `fetch` et `push` attendront la résolution de la promesse.
 
 Pour un tutoriel complet illustrant comment construire un premier exemple simple fonctionnel, voir le guide [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 

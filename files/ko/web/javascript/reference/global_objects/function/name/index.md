@@ -1,19 +1,40 @@
 ---
-title: Function.name
+title: "Function: name"
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 
 {{JSRef}}
 
-**`function.name`** 속성(property)은 함수 이름을 반환합니다.
+{{jsxref("Function")}} 인스턴스의 **`name`** 속성은 함수가 생성될 때 지정된 대로 함수의 이름을 나타내거나 익명으로 생성된 함수의 경우 `anonymous` 또는 `''`(빈 문자열)일 수 있습니다.
 
-{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
 
-비표준, ES6 이전 구현에서는 설정가능(`configurable`) attribute도 `false`였음을 주의하세요.
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
+
+## 값
+
+문자열.
+
+{{js_property_attributes(0, 0, 1)}}
+
+> [!NOTE]
+> 비표준, ES6 이전 구현에서는 `configurable` 속성 또한 `false` 였습니다.
 
 ## 설명
 
-`name` 속성은 함수 이름 또는 (ES6 구현 이전) 익명(anonymous) 함수에 대해서는 빈 문자열을 반환합니다:
+`name` 속성은 함수 이름 또는 (ES6 구현 이전) 익명(anonymous) 함수에 대해서는 빈 문자열을 반환합니다.
 
 ```js
 function doSomething() {}
@@ -89,3 +110,8 @@ console.log(b.constructor.name); // logs "a"
 ## 브라우저 호환성
 
 {{Compat}}
+
+## 같이 보기
+
+- A polyfill for functions' `.name` property is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- {{jsxref("Function")}}

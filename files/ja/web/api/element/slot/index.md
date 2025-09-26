@@ -10,7 +10,7 @@ l10n:
 
 **`slot`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素が挿入されたシャドウ DOM のスロットの名前を返します。
 
-スロットは[ウェブコンポーネント](/ja/docs/Web/Web_Components)内のプレースホルダーで、ユーザーが独自のマークアップで埋めることができます（詳しくは、[テンプレートとスロットの使用](/ja/docs/Web/Web_Components/Using_templates_and_slots)をご覧ください）。
+スロットは[ウェブコンポーネント](/ja/docs/Web/API/Web_components)内のプレースホルダーで、ユーザーが独自のマークアップで埋めることができます（詳しくは、[テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)をご覧ください）。
 
 ## 値
 
@@ -20,7 +20,7 @@ l10n:
 
 [simple-template の例](https://github.com/mdn/web-components-examples/tree/main/simple-template) ([ライブで見る](https://mdn.github.io/web-components-examples/simple-template/)) では、`<my-paragraph>` という些細なカスタム要素の例を作りました。この要素にはシャドウルートが取り付けられ、次に `my-text` というスロットを含むテンプレートの内容を使って入力されるようになっています。
 
-文書内で `<my-paragraph>` が使用されると、スロットは `my-text` という値を持つ [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性を持つ要素内に含めることによって、 slotable 要素によって生成されることになります。以下はそのような例です。
+文書内で `<my-paragraph>` が使用されると、スロットは `my-text` という値を持つ [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性を持つ要素内に含めることによって、 slotable 要素によって生成されることになります。以下はそのような例です。
 
 ```html
 <my-paragraph>

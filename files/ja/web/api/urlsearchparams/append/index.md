@@ -3,16 +3,14 @@ title: "URLSearchParams: append() メソッド"
 short-title: append()
 slug: Web/API/URLSearchParams/append
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 **`append()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、指定されたキー/値のペアを新しい検索パラメーターとして追加します。
 
 下にある例に示すように、同じキーが複数回追加された場合、各値がパラメーター文字列に複数回現れます。
-
-{{availableinworkers}}
 
 ## 構文
 
@@ -22,9 +20,9 @@ append(name, value)
 
 ### 引数
 
-- name
+- `name`
   - : 追加するパラメーターの名前。
-- value
+- `value`
   - : 追加するパラメーターの値。
 
 ### 返値

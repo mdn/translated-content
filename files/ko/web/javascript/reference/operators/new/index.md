@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/new
 
 **`new` 연산자**는 사용자 정의 객체 타입 또는 내장 객체 타입의 인스턴스를 생성한다.
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## 구문
 
@@ -39,9 +52,9 @@ new constructor[([arguments])];
 
 언제든 이전에 정의된 객체에 속성을 추가할 수 있다. 예를 들면, `car1.color = "black"` 구문은 `color` 속성을 `car1`에 추가하고 해당 속성에 "`black`"이란 값을 할당한다. 그러나, 이것이 다른 객체들에게는 영향을 주지 않는다. 동일한 타입의 모든 객체들에게 새로운 속성을 추가하려면, `Car` 객체 타입의 정의에 이 속성을 추가해야한다.
 
-[`Function.prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 속성을 사용하여 이전에 정의된 객체 타입에 공유 속성을 추가할 수 있다. 이것은 객체 타입의 인스턴스 하나에만 적용되는 것이 아니라 이 함수로 생성하는 모든 객체와 공유하는 속성을 정의한다.
+[`Function.prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 속성을 사용하여 이전에 정의된 객체 타입에 공유 속성을 추가할 수 있다. 이것은 객체 타입의 인스턴스 하나에만 적용되는 것이 아니라 이 함수로 생성하는 모든 객체와 공유하는 속성을 정의한다.
 
-다음의 코드는 `car` 타입의 모든 객체에 "`original color`" 값을 갖는 color 속성을 추가한다. 그리고 `car1` 객체 인스턴스에서만 이 값을 문자열 "`black`"으로 덮어쓴다. 더 많은 정보는 [prototype](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)을 참조한다.
+다음의 코드는 `car` 타입의 모든 객체에 "`original color`" 값을 갖는 color 속성을 추가한다. 그리고 `car1` 객체 인스턴스에서만 이 값을 문자열 "`black`"으로 덮어쓴다. 더 많은 정보는 [prototype](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)을 참조한다.
 
 ```js
 function Car() {}

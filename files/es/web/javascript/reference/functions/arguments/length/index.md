@@ -33,7 +33,8 @@ function adder(base /*, n2, ... */) {
 }
 ```
 
-> **Nota:** Tenga en cuenta la diferencia entre {{jsxref("Function.length")}} y arguments.length
+> [!NOTE]
+> Tenga en cuenta la diferencia entre {{jsxref("Function.length")}} y arguments.length
 
 ## Especificaciones
 

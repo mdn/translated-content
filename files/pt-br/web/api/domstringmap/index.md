@@ -65,7 +65,7 @@ void removeProp(
 
 ## Compatibilidade
 
-{{Compat("api.DOMStringMap")}}
+{{Compat}}
 
 ## Veja também
 

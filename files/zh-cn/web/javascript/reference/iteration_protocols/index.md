@@ -3,8 +3,6 @@ title: 迭代协议
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
 
-{{jsSidebar("More")}}
-
 **迭代协议**并不是新的内置实现或语法，而是*协议*。这些协议可以被任何遵循某些约定的对象来实现。
 
 迭代协议具体分为两个协议：[可迭代协议](#可迭代协议)和[迭代器协议](#迭代器协议)。
@@ -13,12 +11,12 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 **可迭代协议**允许 JavaScript 对象定义或定制它们的迭代行为，例如，在一个 {{jsxref("Statements/for...of", "for..of")}} 结构中，哪些值可以被遍历到。一些内置类型同时是[内置的可迭代对象](#内置的可迭代对象)，并且有默认的迭代行为，比如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}，而其他内置类型则不是（比如 {{jsxref("Object")}}）。
 
-要成为**可迭代**对象，该对象必须实现 **`@@iterator`** 方法，这意味着对象（或者它[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)上的某个对象）必须有一个键为 `@@iterator` 的属性，可通过常量 {{jsxref("Symbol.iterator")}} 访问该属性：
+要成为**可迭代**对象，该对象必须实现 **`[Symbol.iterator]()`** 方法，这意味着对象（或者它[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)上的某个对象）必须有一个键为 `[Symbol.iterator]` 的属性，可通过常量 {{jsxref("Symbol.iterator")}} 访问该属性：
 
 - `[Symbol.iterator]`
   - : 一个无参数的函数，其返回值为一个符合[迭代器协议](#迭代器协议)的对象。
 
-当一个对象需要被迭代的时候（比如被置入一个 {{jsxref("Statements/for...of", "for...of")}} 循环时），首先，会不带参数调用它的 `@@iterator` 方法，然后使用此方法返回的**迭代器**获得要迭代的值。
+当一个对象需要被迭代的时候（比如被置入一个 {{jsxref("Statements/for...of", "for...of")}} 循环时），首先，会不带参数调用它的 `[Symbol.iterator]()` 方法，然后使用此方法返回的**迭代器**获得要迭代的值。
 
 值得注意的是调用此无参数函数时，它将作为对可迭代对象的方法进行调用。因此，在函数内部，`this` 关键字可用于访问可迭代对象的属性，以决定在迭代过程中提供什么。
 
@@ -36,7 +34,6 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 所有迭代器协议的方法（`next()`、`return()` 和 `throw()`）都应返回实现 `IteratorResult` 接口的对象。它必须有以下属性：
 
 - `done` {{optional_inline}}
-
   - : 如果迭代器能够生成序列中的下一个值，则返回 `false` 布尔值。（这等价于没有指定 `done` 这个属性。）
 
     如果迭代器已将序列迭代完毕，则为 `true`。这种情况下，`value` 是可选的，如果它依然存在，即为迭代结束之后的默认返回值。
@@ -57,9 +54,10 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 - `throw(exception)` {{optional_inline}}
   - : 无参数或者接受一个参数的函数，并返回符合 `IteratorResult` 接口的对象，通常 `done` 等于 `true`。调用这个方法表明迭代器的调用者监测到错误的状况，并且 `exception` 通常是一个 {{jsxref("Error")}} 实例。
 
-> **备注：** 无法通过反射的方法确定（例如，没有实际调用 `next()` 并验证返回的结果）一个特定的对象是否实现了迭代器协议。
+> [!NOTE]
+> 无法通过反射的方法确定（例如，没有实际调用 `next()` 并验证返回的结果）一个特定的对象是否实现了迭代器协议。
 
-很容易使一个迭代器也可迭代：只需实现 `[@@iterator]()` 方法，并返回它的 `this`。
+很容易使一个迭代器也可迭代：只需实现 `[Symbol.iterator]()` 方法，并返回它的 `this`。
 
 ```js
 // Satisfies both the Iterator Protocol and Iterable
@@ -86,13 +84,13 @@ console.log(typeof aGeneratorObject.next);
 // "function"——它有 next 方法（返回正确的值），所以它是迭代器
 
 console.log(typeof aGeneratorObject[Symbol.iterator]);
-// "function"——它有 @@iterator 方法（返回正确的迭代器），所以它是可迭代的
+// "function"——它有 [Symbol.iterator]() 方法（返回正确的迭代器），所以它是可迭代的
 
 console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
-// true——它的 @@iterator 方法返回自身（一个迭代器），所以它是一个可迭代的迭代器
+// true——它的 [Symbol.iterator]() 方法返回自身（一个迭代器），所以它是一个可迭代的迭代器
 ```
 
-然而，可能的情况下，`iterable[Symbol.iterator]` 最好返回总是从头开始的不同的迭代器，像 [`Set.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) 做的那样。
+然而，可能的情况下，`iterable[Symbol.iterator]` 最好返回总是从头开始的不同的迭代器，像 [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) 做的那样。
 
 ## 异步迭代器和异步可迭代协议
 
@@ -118,13 +116,13 @@ JavaScript 语言指定了产生或使用可迭代对象和迭代器的 API。
 
 ### 内置的可迭代对象
 
-{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}} 以及 {{jsxref("Intl.Segments")}} 都是内置的可迭代对象，因为它们的每个 `prototype` 对象都实现了 `@@iterator` 方法。此外，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象和一些 DOM 集合类型，如 {{domxref("NodeList")}} 也是可迭代的。目前，没有内置的异步可迭代对象。
+{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}} 以及 {{jsxref("Intl.Segments")}} 都是内置的可迭代对象，因为它们的每个 `prototype` 对象都实现了 `[Symbol.iterator]()` 方法。此外，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象和一些 DOM 集合类型，如 {{domxref("NodeList")}} 也是可迭代的。目前，没有内置的异步可迭代对象。
 
 [生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)返回[生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，它们是可迭代的迭代器。[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)返回[异步生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)，它们是异步可迭代的迭代器。
 
 从内置迭代返回的迭代器实际上都继承了一个公共类（目前尚未暴露），该类实现了上述 `[Symbol.iterator]() { return this; }` 方法，使它们都是可迭代的迭代器。将来，除了迭代器协议要求的 `next()` 方法外，这些内置迭代器可能还有其他[辅助方法](https://github.com/tc39/proposal-iterator-helpers)。你可以通过在图形控制台中记录迭代器的原型链来检查它。
 
-```
+```plain
 console.log([][Symbol.iterator]());
 
 Array Iterator {}
@@ -166,7 +164,7 @@ new WeakSet(
 
 ### 期待迭代对象的语法
 
-一些语句和表达式期望可迭代对象，例如 {{jsxref("Statements/for...of", "for...of")}} 循环、[数组和参数扩展](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}} 和[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)：
+一些语句和表达式期望可迭代对象，例如 {{jsxref("Statements/for...of", "for...of")}} 循环、[数组和参数扩展](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}} 和[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)：
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -227,11 +225,11 @@ for (const b of obj) {
 // Closing
 ```
 
-[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)（但不是[同步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)）中的 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和 [`yield*`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*) 是与异步迭代交互的唯一方式。在不是同步迭代的异步迭代对象（即它有 `[@@asyncIterator]()` 但没有 `[@@iterator]()`）上使用 `for...of`、数组展开等将抛出 `TypeError：x is not iterable`。
+[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)（但不是[同步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)）中的 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和 [`yield*`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*) 是与异步迭代交互的唯一方式。在不是同步迭代的异步迭代对象（即它有 `[Symbol.asyncIterator]()` 但没有 `[Symbol.iterator]()`）上使用 `for...of`、数组展开等将抛出 `TypeError：x is not iterable`。
 
 ### 不符合标准的可迭代对象
 
-如果一个可迭代对象的 `@@iterator` 方法不能返回迭代器对象，那么可以认为它是一个*不符合标准的*（Non-well-formed）可迭代对象。
+如果一个可迭代对象的 `[Symbol.iterator]()` 方法不能返回迭代器对象，那么可以认为它是一个*不符合标准的*（Non-well-formed）可迭代对象。
 
 使用这样的可迭代对象很可能会导致如下的运行时异常，或者不可预料的表现：
 
@@ -280,7 +278,7 @@ function makeIterator(array) {
   };
 }
 
-const it = makeIterator(["yo", "ya"]);\
+const it = makeIterator(["yo", "ya"]);
 
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
@@ -343,7 +341,7 @@ console.log(it.next().value); // 2
 
 ### 使用类定义一个可迭代对象
 
-状态封装也可以对[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)进行。
+状态封装也可以对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)进行。
 
 ```js
 class SimpleClass {
@@ -361,7 +359,7 @@ class SimpleClass {
 
     return {
       // Note: using an arrow function allows `this` to point to the
-      // one of `[@@iterator]()` instead of `next()`
+      // one of `[Symbol.iterator]()` instead of `next()`
       next: () => {
         if (index < this.#data.length) {
           return { value: this.#data[index++], done: false };
@@ -389,7 +387,7 @@ const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
-`String` 的[默认迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)会逐个地返回字符串的代码点：
+`String` 的[默认迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)会逐个地返回字符串的代码点：
 
 ```js
 const iterator = someString[Symbol.iterator]();
@@ -399,7 +397,7 @@ console.log(iterator.next()); // { value: "i", done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
 ```
 
-你可以提供我们自己的 `@@iterator` 重新定义迭代行为：
+你可以提供我们自己的 `[Symbol.iterator]()` 重新定义迭代行为：
 
 ```js
 // need to construct a String object explicitly to avoid auto-boxing
@@ -418,7 +416,7 @@ someString[Symbol.iterator] = function () {
 };
 ```
 
-注意，如何使用迭代协议重新定义 `@@iterator` 以影响内置结构的行为：
+注意，如何使用迭代协议重新定义 `[Symbol.iterator]()` 以影响内置结构的行为：
 
 ```js
 console.log([...someString]); // ["bye"]

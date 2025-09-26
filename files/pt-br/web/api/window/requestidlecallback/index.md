@@ -9,7 +9,8 @@ O método **`window.requestIdleCallback()`** enfileira uma função para ser exe
 
 Você pode chamar `requestIdleCallback()` com uma função callback ociosa para agendar outro callback para ter lugar não antes da próxima passagem pelo event loop.
 
-> **Nota:** Um `timeout` é altamento recomendado, caso contrário, é possível que vários segundos passem antes que a função callback seja chamada.
+> [!NOTE]
+> Um `timeout` é altamento recomendado, caso contrário, é possível que vários segundos passem antes que a função callback seja chamada.
 
 ## Syntax
 
@@ -26,9 +27,7 @@ An ID which can be used to cancel the callback by passing it into the {{domxref(
 - `callback`
   - : A reference to a function that should be called in the near future, when the event loop is idle. The callback function is passed an {{domxref("IdleDeadline")}} object describing the amount of time available and whether or not the callback has been run because the timeout period expired.
 - `options` {{optional_inline}}
-
   - : Contains optional configuration parameters. Currently only one property is defined:
-
     - `timeout`: If `timeout` is specified and has a positive value, and the callback has not already been called by the time _timeout_ milliseconds have passed, the callback will be called during the next idle period, even if doing so risks causing a negative performance impact.
 
 ## Example

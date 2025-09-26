@@ -24,9 +24,10 @@ Um número representando o valor de unidade de código UTF-16 do caractere no í
 
 ## Descrição
 
-Os pontos de código Unicode variam de `0` a `1114111` (`0x10FFFF`). Os primeiros 128 pontos de código Unicode são uma correspondência direta da codificação de caracteres ASCII. (Para informações sobre Unicode, veja o [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals).)
+Os pontos de código Unicode variam de `0` a `1114111` (`0x10FFFF`). Os primeiros 128 pontos de código Unicode são uma correspondência direta da codificação de caracteres ASCII. (Para informações sobre Unicode, veja o [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types).)
 
-> **Nota:** o `charCodeAt()` sempre retornará um valor menor do que `65536`. Isso ocorre pois os pontos de código mais altos são representados por um par de pseudo-caracteres "substitutos" (de menor valor) que são usados para compreender o caracter real.
+> [!NOTE]
+> O `charCodeAt()` sempre retornará um valor menor do que `65536`. Isso ocorre pois os pontos de código mais altos são representados por um par de pseudo-caracteres "substitutos" (de menor valor) que são usados para compreender o caracter real.
 >
 > Por isso, para examinar (ou reproduzir) o caractere completo para valores de caracteres individuais de valor `65536` e acima, é necessário recuperar não apenas o `charCodeAt(i)`, mas também o `charCodeAt(i+1)` (como se examinando/reproduzindo a string com duas letras), ou usar o `codePointAt(i)`. Veja o exemplo 2 e 3 (abaixo).
 
@@ -77,53 +78,13 @@ function fixedCharCodeAt(str, idx) {
 }
 ```
 
-### Corrigindo o `charCodeAt()` para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida
-
-```js
-function knownCharCodeAt(str, idx) {
-  str += "";
-  var code,
-    end = str.length;
-
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
-      idx++;
-    } else {
-      break;
-    }
-  }
-
-  if (idx >= end || idx < 0) {
-    return NaN;
-  }
-
-  code = str.charCodeAt(idx);
-
-  var hi, low;
-  if (0xd800 <= code && code <= 0xdbff) {
-    hi = code;
-    low = str.charCodeAt(idx + 1);
-    // Vá um adiante, já que um dos "characters" é parte de um par substituto
-    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
-  }
-  return code;
-}
-```
-
 ## Especificações
 
-| Especificação                                                                              | Status               | Comentário                                         |
-| ------------------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                        | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.5', 'String.prototype.charCodeAt')}}                      | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.charCodeAt")}}
+{{Compat}}
 
 ## Veja também
 

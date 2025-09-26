@@ -2,7 +2,7 @@
 title: ConstantSourceNode
 slug: Web/API/ConstantSourceNode
 l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
 {{APIRef("Web Audio API")}}
@@ -29,7 +29,7 @@ l10n:
 ## コンストラクター
 
 - {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}
-  - : 新しい `ConstantSourceNode` インスタンスを作成して返します。オプションとして、オブジェクトのプロパティの初期値を確立するためのオブジェクトを指定します。別の方法として、{{domxref("BaseAudioContext.createConstantSource()")}} ファクトリーメソッドを使用することができます。[AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+  - : 新しい `ConstantSourceNode` インスタンスを作成して返します。オプションとして、オブジェクトのプロパティの初期値を確立するためのオブジェクトを指定します。別の方法として、{{domxref("BaseAudioContext.createConstantSource()")}} ファクトリーメソッドを使用することができます。[AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## インスタンスプロパティ
 
@@ -42,7 +42,8 @@ _親インターフェイスである {{domxref("AudioScheduledSourceNode")}} �
 
 _親インターフェイスである {{domxref("AudioScheduledSourceNode")}} からイベントを継承しています。_
 
-> **メモ:** 一部のブラウザーでは、このイベントの実装は {{domxref("AudioScheduledSourceNode")}} インターフェイスの一部となっています。
+> [!NOTE]
+> 一部のブラウザーでは、このイベントの実装は {{domxref("AudioScheduledSourceNode")}} インターフェイスの一部となっています。
 
 - {{domxref("AudioScheduledSourceNode.ended_event","ended")}}
   - : {{domxref('ConstantSourceNode')}} データの再生が停止するたびに発生します。
@@ -51,7 +52,8 @@ _親インターフェイスである {{domxref("AudioScheduledSourceNode")}} �
 
 _親インターフェイスである {{domxref("AudioScheduledSourceNode")}} からメソッドを継承しています。_
 
-> **メモ:** 一部のブラウザーでは、これらのメソッドの実装は {{domxref("AudioScheduledSourceNode")}} インターフェイスの一部となっています。
+> [!NOTE]
+> 一部のブラウザーでは、これらのメソッドの実装は {{domxref("AudioScheduledSourceNode")}} インターフェイスの一部となっています。
 
 - {{domxref("AudioScheduledSourceNode.start", "start()")}}
   - : 正確な時刻に音を再生するようにスケジュールします。

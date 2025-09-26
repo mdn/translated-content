@@ -18,11 +18,11 @@ l10n:
 以下の例では、新しい {{domxref("VTTCue")}} （`TextTrackCue` を継承）を作成し、それをトラックに追加しています。 `track` の値はコンソールに表示されます。
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let captiontrack = video.addTextTrack("captions", "Captions", "en");
 captiontrack.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
 captiontrack.addCue(cue1);
 console.log(cue1.track); // a TextTrack object.
 ```

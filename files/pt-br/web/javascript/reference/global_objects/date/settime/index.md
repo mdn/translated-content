@@ -3,7 +3,27 @@ title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 ---
 
-{{JSRef}}O método **`setTime()`** atribui ao objecto {{jsxref("Date")}} a hora representada pelo número de milisegundos desde 1 de janeiro de 1970 as 00:00:00 UTC.{{EmbedInteractiveExample("pages/js/date-settime.html")}}
+{{JSRef}}
+
+O método **`setTime()`** atribui ao objecto {{jsxref("Date")}} a hora representada pelo número de milisegundos desde 1 de janeiro de 1970 as 00:00:00 UTC.
+
+{{InteractiveExample("JavaScript Demo: Date.setTime()")}}
+
+```js interactive-example
+const launchDate = new Date("July 1, 1999, 12:00:00");
+const futureDate = new Date();
+futureDate.setTime(launchDate.getTime());
+
+console.log(futureDate);
+// Expected output: "Thu Jul 01 1999 12:00:00 GMT+0200 (CEST)"
+
+const fiveMinutesInMillis = 5 * 60 * 1000;
+futureDate.setTime(futureDate.getTime() + fiveMinutesInMillis);
+
+console.log(futureDate);
+// Expected output: "Thu Jul 01 1999 12:05:00 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Sintáxe
 
@@ -36,16 +56,11 @@ sameAsBigDay.setTime(theBigDay.getTime());
 
 ## Especificações
 
-| Especificação                                                                    | Status               | Comentário                                         |
-| -------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                              | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.27', 'Date.prototype.setTime')}}                | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.settime', 'Date.prototype.setTime')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.settime', 'Date.prototype.setTime')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setTime")}}
+{{Compat}}
 
 ## Veja também
 

@@ -3,8 +3,6 @@ title: import
 slug: Web/JavaScript/Reference/Statements/import
 ---
 
-{{jsSidebar("Statements")}}
-
 **import** 宣告用於引入由另一個模塊所導出的綁定。被引入的模塊，無論是否宣告{{jsxref("Strict_mode","strict mode","嚴謹模式")}}，都會處於該模式。`import` 宣告無法用於嵌入式腳本（embedded scripts）。
 
 There is also a function-like dynamic **`import()`**, which does not require scripts of `type="module"`.
@@ -203,4 +201,4 @@ for (const link of document.querySelectorAll("nav > a")) {
 - [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

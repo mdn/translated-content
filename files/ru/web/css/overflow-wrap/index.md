@@ -7,9 +7,45 @@ slug: Web/CSS/overflow-wrap
 
 [CSS](/ru/docs/Web/CSS) свойство **`overflow-wrap`** применяется к строковым элементам, устанавливая должен ли браузер расставлять переносы строк внутри неразрывной строки, чтобы избежать выхода текста за границы элемента.
 
-{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
+{{InteractiveExample("CSS Demo: overflow-wrap")}}
 
-> **Примечание:** В отличие от {{cssxref("word-break")}}, `overflow-wrap` создаёт перенос только, если целое слово не может быть размещено на своей линии без переполнения
+```css interactive-example-choice
+overflow-wrap: normal;
+```
+
+```css interactive-example-choice
+overflow-wrap: anywhere;
+```
+
+```css interactive-example-choice
+overflow-wrap: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Most words are short &amp; don't need to break. But
+    <strong class="transition-all" id="example-element"
+      >Antidisestablishmentarianism</strong
+    >
+    is long. The width is set to min-content, with a max-width of 11em.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid #663399;
+  padding: 0.75em;
+  width: min-content;
+  max-width: 11em;
+  height: 200px;
+}
+```
+
+> [!NOTE]
+> В отличие от {{cssxref("word-break")}}, `overflow-wrap` создаёт перенос только, если целое слово не может быть размещено на своей линии без переполнения
 
 Изначально свойство `word-wrap` не было стандартом, хотя и было реализовано большинством браузеров. Впоследствии оно было переименовано в `overflow-wrap` c алиасом `word-wrap`.
 
@@ -123,19 +159,15 @@ p {
 
 {{ EmbedLiveSample('Сравнение_overflow-wrap_word-break_и_hyphens', '100%', 260) }}
 
-## Specifications
+## Спецификации
 
-| Specification                                                          | Status                   | Comment            |
-| ---------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }} | {{ Spec2('CSS3 Text') }} | Initial definition |
+{{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}

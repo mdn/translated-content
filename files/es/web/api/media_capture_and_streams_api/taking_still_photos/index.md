@@ -3,9 +3,11 @@ title: Capturar fotografías con la cámara web
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 ---
 
+{{DefaultAPISidebar("Media Capture and Streams")}}
+
 ## Introducción y demostración
 
-Este es un tutorial rápido de cómo acceder a la cámara de tu laptop y capturar una foto con ella. Puedes observar el [código final en acción en este JSFiddle](http://jsfiddle.net/codepo8/agaRe/4/). También existe una versión más avanzada en JavaScript para cargar fotos a **imgur** disponible como [código en GitHub](https://github.com/codepo8/interaction-cam/) o [como demo](http://codepo8.github.com/interaction-cam/).
+Este es un tutorial rápido de cómo acceder a la cámara de tu laptop y capturar una foto con ella. Puedes observar el [código final en acción en este JSFiddle](https://jsfiddle.net/codepo8/agaRe/4/). También existe una versión más avanzada en JavaScript para cargar fotos a **imgur** disponible como [código en GitHub](https://github.com/codepo8/interaction-cam/) o [como demo](http://codepo8.github.com/interaction-cam/).
 
 ## El formato HTML
 
@@ -111,7 +113,8 @@ Entonces, ¿Qué es lo que sucede aquí? Lo analizaremos paso por paso.
 
 Empezamos por encerrar el script entero en una función anónima para evitar las variables globales. Tomamos los elementos HTML que necesitamos y definimos el ancho (width) del video a 320 y la altura (height) a 0, ya que calcularemos la altura apropiada posteriormente.
 
-> **Advertencia:** En estos momentos existe una diferencia entre los tamaños de video proporcionados por getUserMedia. Firefox Nightly utiliza una resolución de 352x288 y Opera y Chrome utiliza una resolución de 640x400. Esto cambiará en el futuro, pero cambiando el tamaño con la proporción que usaremos más abajo, nos aseguraremos de no obtener sorpresas desagradables.
+> [!WARNING]
+> En estos momentos existe una diferencia entre los tamaños de video proporcionados por getUserMedia. Firefox Nightly utiliza una resolución de 352x288 y Opera y Chrome utiliza una resolución de 640x400. Esto cambiará en el futuro, pero cambiando el tamaño con la proporción que usaremos más abajo, nos aseguraremos de no obtener sorpresas desagradables.
 
 ### Obtener el video
 

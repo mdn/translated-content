@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 
 El método **`Array.from()`** crea una nueva instancia de `Array` a partir de un objeto iterable.
 
-{{EmbedInteractiveExample("pages/js/array-from.html")}}
+{{InteractiveExample("JavaScript Demo: Array.from()")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## Sintaxis
 
@@ -33,9 +41,9 @@ Una nueva instancia de {{jsxref("Array")}}.
 `Array.from()` permite crear `Arrays` de:
 
 - Objetos array-like (objetos con propiedad `length` o elementos indexados).
-- [Objetos iterables](/es/docs/Web/JavaScript/Referencia/Iteration_protocols) (objetos de los cuales se pueden obtener sus elementos como {{jsxref("Map")}} y {{jsxref("Set")}}).
+- [Objetos iterables](/es/docs/Web/JavaScript/Reference/Iteration_protocols) (objetos de los cuales se pueden obtener sus elementos como {{jsxref("Map")}} y {{jsxref("Set")}}).
 
-`Array.from()` tiene un parámetro opcional `mapFn`, que te permite ejecutar una función {{jsxref("Array.prototype.map", "map")}} a cada elemento del array (o a la subclase del objeto) que se ha creado. Para aclararlo, `Array.from(obj, mapFn, thisArg)` es igual que `Array.from(obj).map(mapFn, thisArg)`, excepto en que éste no crea un array intermedio. Esto es importante para ciertas subclases de array, [vectores tipados](/es/docs/Web/JavaScript/Vectores_tipados), ya que el vector intermedio necesitaría tener valores truncados para trabajar con el tipo adecuado.
+`Array.from()` tiene un parámetro opcional `mapFn`, que te permite ejecutar una función {{jsxref("Array.prototype.map", "map")}} a cada elemento del array (o a la subclase del objeto) que se ha creado. Para aclararlo, `Array.from(obj, mapFn, thisArg)` es igual que `Array.from(obj).map(mapFn, thisArg)`, excepto en que éste no crea un array intermedio. Esto es importante para ciertas subclases de array, [vectores tipados](/es/docs/Web/JavaScript/Guide/Typed_arrays), ya que el vector intermedio necesitaría tener valores truncados para trabajar con el tipo adecuado.
 
 La propiedad `length` del método `from()` es 1.
 

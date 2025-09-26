@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## イベント型
@@ -44,23 +44,23 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 
 ## 例
 
-あるスクリプトが、次のようなコードを使用して、別の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) のような異なる閲覧コンテキストにメッセージを送信するとします。
+あるスクリプトが、次のようなコードを使用して、別の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) のような異なる閲覧コンテキストにメッセージを送信するとします。
 
 ```js
 const targetFrame = window.top.frames[1];
-const targetOrigin = 'https://example.org';
-const windowMessageButton = document.querySelector('#window-message');
+const targetOrigin = "https://example.org";
+const windowMessageButton = document.querySelector("#window-message");
 
-windowMessageButton.addEventListener('click', () => {
-    targetFrame.postMessage('hello there', targetOrigin);
+windowMessageButton.addEventListener("click", () => {
+  targetFrame.postMessage("hello there", targetOrigin);
 });
 ```
 
 受信側は、以下のようなコードで [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用し、メッセージを待ち受けることができます。
 
 ```js
-window.addEventListener('message', (event) => {
-    console.log(`Received message: ${event.data}`);
+window.addEventListener("message", (event) => {
+  console.log(`Received message: ${event.data}`);
 });
 ```
 
@@ -68,7 +68,7 @@ window.addEventListener('message', (event) => {
 
 ```js
 window.onmessage = (event) => {
-    console.log(`Received message: ${event.data}`);
+  console.log(`Received message: ${event.data}`);
 };
 ```
 

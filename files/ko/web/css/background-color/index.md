@@ -3,11 +3,47 @@ title: background-color
 slug: Web/CSS/background-color
 ---
 
-{{CSSRef}}
+[CSS](/en-US/CSS) **`background-color`** 속성은 요소의 배경 색을 지정합니다.
 
-[CSS](/en/CSS) **`background-color`** 속성은 요소의 배경 색을 지정합니다.
+{{InteractiveExample("CSS Demo: background-color")}}
 
-{{EmbedInteractiveExample("pages/css/background-color.html")}}
+```css interactive-example-choice
+background-color: brown;
+```
+
+```css interactive-example-choice
+background-color: #74992e;
+```
+
+```css interactive-example-choice
+background-color: rgb(255, 255, 128);
+```
+
+```css interactive-example-choice
+background-color: rgba(255, 255, 128, 0.5);
+```
+
+```css interactive-example-choice
+background-color: hsl(50, 33%, 25%);
+```
+
+```css interactive-example-choice
+background-color: hsla(50, 33%, 25%, 0.75);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## 구문
 
@@ -112,7 +148,7 @@ background-color: unset;
 
 ## 더 보기
 
-- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - {{cssxref("&lt;color&gt;")}} 자료형
 - 색상 관련 다른 속성: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [CSS로 HTML 요소에 색입히기](/ko/docs/Web/HTML/Applying_color)
+- [CSS로 HTML 요소에 색입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)

@@ -29,7 +29,8 @@ O tempo é controlado com alta precisão e baixa latência, permitindo que os de
 
 A API de áudio da Web também nos permite controlar como o áudio é _espacializado_. Utilizando um sistema baseado em um _modelo de ouvinte-fonte_, permite o controle do _modelo panorâmico_ e trata da _atenuação induzida por distância_ induzida por uma fonte em movimento (ou ouvinte em movimento).
 
-> **Observação:** você pode ler sobre a teoria da API de áudio da Web com muito mais detalhes em nosso artigo [Conceitos básicos por trás da API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) .
+> [!CALLOUT]
+> você pode ler sobre a teoria da API de áudio da Web com muito mais detalhes em nosso artigo [Conceitos básicos por trás da API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) .
 
 ## Público-alvo da API de áudio da Web
 
@@ -47,7 +48,7 @@ Também temos outros tutoriais e material de referência abrangente disponível 
 
 Se você está mais familiarizado com o lado musical das coisas, está familiarizado com os conceitos de teoria musical, quer começar a construir instrumentos, então você pode ir em frente e começar a construir coisas com o tutorial avançado e outros como um guia (o tutorial linkado acima cobre agendando notas, criando osciladores e envelopes sob medida, bem como um LFO entre outras coisas.)
 
-Se você não estiver familiarizado com o básico de programação, você pode querer consultar alguns tutoriais JavaScript para iniciantes e depois voltar aqui - veja nosso [módulo de aprendizado JavaScript para iniciantes](/pt-BR/docs/Learn/JavaScript) para um ótimo lugar para começar.
+Se você não estiver familiarizado com o básico de programação, você pode querer consultar alguns tutoriais JavaScript para iniciantes e depois voltar aqui - veja nosso [módulo de aprendizado JavaScript para iniciantes](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308) para um ótimo lugar para começar.
 
 ## Interfaces da API de áudio da Web
 
@@ -213,7 +214,7 @@ Você pode encontrar vários exemplos em nosso [repositório webaudio-example](h
 - [Controlando vários parâmetros com ConstantSourceNode](/pt-BR/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Misturando áudio posicional e WebGL (2012)](https://web.dev/webaudio-positional-audio/)
 - [Desenvolvendo o áudio do jogo com a API de áudio da Web (2012)](https://auth.web.dev/webaudio-games/)
-- [Migrando código webkitAudioContext para padrões baseados em AudioContext](/pt-BR/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [Migrando código webkitAudioContext para padrões baseados em AudioContext](/pt-BR/docs/Web/API/Web_Audio_API)
 
 ### Bibliotecas
 
@@ -228,4 +229,4 @@ Você pode encontrar vários exemplos em nosso [repositório webaudio-example](h
 ### Tópicos relacionados
 
 - [Tecnologias de mídia da Web](/pt-BR/docs/Web/Media)
-- [Guia para tipos e formatos de mídia na web](/pt-BR/docs/Web/Media/Formats)
+- [Guia para tipos e formatos de mídia na web](/pt-BR/docs/Web/Media/Guides/Formats)

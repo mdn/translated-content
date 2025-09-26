@@ -9,7 +9,21 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 阅读[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节以了解正则表达式。
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 ## 语法
 
@@ -26,7 +40,6 @@ RegExp(pattern[, flags])
 - `pattern`
   - : 正则表达式的文本。从 ES5 开始，这也可以是另一个 `RegExp` 对象或文字（仅用于两个 RegExp 构造函数符号）。模式可以包含[特殊字符](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#使用特殊字符)来匹配比字面值字符串更广泛的值范围。
 - `flags`
-
   - : 如果指定，`flags` 是包含要添加的标志的字符串。
 
     或者，如果为模式提供了一个对象，flags 字符串将替换该对象的任何标志 (并且`lastIndex`将重置为 0)(从 ES2015 开始)。
@@ -34,7 +47,6 @@ RegExp(pattern[, flags])
     如果没有指定`flags`并且提供了一个正则表达式对象，则该对象的 flags(和 lastIndex 值) 将被复制。
 
     `flags` 可包含下列任何字符的组合：
-
     - `g` （全局匹配）
       - : 找到所有的匹配，而不是在第一个匹配之后停止。
     - `i` （忽略大小写）
@@ -44,7 +56,7 @@ RegExp(pattern[, flags])
     - `s` （点号匹配所有字符）
       - : 允许`.` 去匹配新的行
     - `u` （unicode）
-      - : Treat `pattern` as a sequence of Unicode code points. (See also [Binary strings](/zh-CN/docs/Web/API/DOMString/Binary)).
+      - : Treat `pattern` as a sequence of Unicode code points. (See also [Binary strings](/zh-CN/docs/Web/API/Window/btoa)).
     - `y` （sticky，粘性匹配）
       - : Matches only from the index indicated by the `lastIndex` property of this regular expression in the target string. Does not attempt to match from any later indexes.
 
@@ -67,7 +79,7 @@ new RegExp("ab+c", "i"); // 构造函数
 
 当表达式被求值时，文字表示法会导致对正则表达式的编译。当正则表达式保持不变时，请使用字面量表示法。例如，如果使用字面量表示法来构造循环中使用的正则表达式，则不会在每次迭代时重新编译正则表达式。
 
-正则表达式对象的构造函数—例如，new RegExp('ab+c')—会导致正则表达式的运行时编译。当您知道正则表达式模式将发生变化时，或者您不知道该模式，但正在从其他来源 (如用户输入) 获取它时，请使用构造函数。
+正则表达式对象的构造函数—例如，new RegExp('ab+c')—会导致正则表达式的运行时编译。当你知道正则表达式模式将发生变化时，或者你不知道该模式，但正在从其他来源 (如用户输入) 获取它时，请使用构造函数。
 
 ## 规范
 

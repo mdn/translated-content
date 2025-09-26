@@ -103,14 +103,6 @@ new Int8Array(32).foo; // "bar"
 
 Все TypedArrays-массивы наследуют от {{jsxref("TypedArray.prototype")}}.
 
-### Свойства
-
-{{page('ru/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','Properties')}}
-
-### Методы
-
-{{page('ru/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','Methods')}}
-
 ### Полифилы (дополнители) методов
 
 Многие методы, используемые в TypedArray, могут быть подменены, используя методы, присутствующие среди стандартных в прототипе Arrays. Следующий кусок Javascript-кода демонстрирует, как вы можете дополнить недостающие методы Typed Array.
@@ -141,26 +133,12 @@ for (var k in typedArrayTypes)
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Совместимость
-
-Начиная с ECMAScript 2015, конструкторы `TypedArray` требуют использования оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора `TypedArray` как функции без `new`, отныне выбросит ошибку {{jsxref("TypeError")}}.
-
-```js example-bad
-var dv = Int8Array([1, 2, 3]);
-// TypeError: вызов встроенного конструктора Int8Array
-// без new запрещён
-```
-
-```js example-good
-var dv = new Int8Array([1, 2, 3]);
-```
-
 ## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

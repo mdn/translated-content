@@ -3,9 +3,25 @@ title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
 
-{{JSRef("Global_Objects", "Math")}}该函数将两个参数分别转换为 32 位整数，相乘后返回 32 位结果，类似 C 语言的 32 位整数相乘。
+{{JSRef}}
 
-{{EmbedInteractiveExample("pages/js/math-imul.html")}}
+该函数将两个参数分别转换为 32 位整数，相乘后返回 32 位结果，类似 C 语言的 32 位整数相乘。
+
+{{InteractiveExample("JavaScript Demo: Math.imul()")}}
+
+```js interactive-example
+console.log(Math.imul(3, 4));
+// Expected output: 12
+
+console.log(Math.imul(-5, 12));
+// Expected output: -60
+
+console.log(Math.imul(0xffffffff, 5));
+// Expected output: -5
+
+console.log(Math.imul(0xfffffffe, 5));
+// Expected output: -10
+```
 
 ## 语法
 
@@ -38,42 +54,6 @@ Math.imul(0xffffffff, 5); //-5
 Math.imul(0xfffffffe, 5); //-10
 ```
 
-## Polyfill
-
-下面的 JavaScript 代码可以实现该函数：
-
-```js
-if (!Math.imul)
-  Math.imul = function (a, b) {
-    var aHi = (a >>> 16) & 0xffff;
-    var aLo = a & 0xffff;
-    var bHi = (b >>> 16) & 0xffff;
-    var bLo = b & 0xffff;
-    // the shift by 0 fixes the sign on the high part
-    // the final |0 converts the unsigned value into a signed value
-    return (aLo * bLo + (((aHi * bLo + aLo * bHi) << 16) >>> 0)) | 0;
-  };
-```
-
-然而，下面的实现性能会更好一些。因为运行这段 polyfill 的浏览器很有可能会在内部使用浮点数，而不是整数表示 javascript 的 Number。
-
-```js
-if (!Math.imul)
-  Math.imul = function (opA, opB) {
-    opB |= 0; // ensure that opB is an integer. opA will automatically be coerced.
-    // floating points give us 53 bits of precision to work with plus 1 sign bit
-    // automatically handled for our convienence:
-    // 1. 0x003fffff /*opA & 0x000fffff*/ * 0x7fffffff /*opB*/ = 0x1fffff7fc00001
-    //    0x1fffff7fc00001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
-    var result = (opA & 0x003fffff) * opB;
-    // 2. We can remove an integer coersion from the statement above because:
-    //    0x1fffff7fc00001 + 0xffc00000 = 0x1fffffff800001
-    //    0x1fffffff800001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
-    if (opA & 0xffc00000 /*!== 0*/) result += ((opA & 0xffc00000) * opB) | 0;
-    return result | 0;
-  };
-```
-
 ## 规范
 
 {{Specifications}}
@@ -81,3 +61,8 @@ if (!Math.imul)
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [`core-js` 中 `Math.imul` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-math)
+- 维基百科上的 [Emscripten](https://zh.wikipedia.org/wiki/Emscripten) 词条

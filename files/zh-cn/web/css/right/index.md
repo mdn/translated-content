@@ -3,8 +3,6 @@ title: right
 slug: Web/CSS/right
 ---
 
-{{CSSRef}}
-
 **`right`** [CSS](/zh-CN/docs/Web/CSS) 属性定义了定位元素的右外边距边界与其包含块右边界之间的偏移，非定位元素设置此属性无效。
 
 ```css
@@ -40,18 +38,14 @@ right: unset;
 ### 取值
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : 可以是负的，正的 或者 null {{cssxref("&lt;length&gt;")}} 表示：
-
     - 对于**绝对定位的元素**，元素右外边距边界与其包含块右边界之间的偏移。
     - 对于**相对定位定位的元素**，元素的右边界离开其正常位置的偏移。
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : 代表元素包含块的宽度的百分比 {{cssxref("&lt;percentage&gt;")}}。
 - `auto`
-
   - : 这个关键字表示：
-
     - 对于绝对定位元素，元素将忽略此属性而以 {{ Cssxref("left") }} 属性为准，如果此时设置 `width: auto`，将基于内容需要的宽度设置宽度；如果 `left` 也为 `auto` 的话，元素的水平位置就是它假如作为静态（即 static）元素时该在的位置。
     - 对于相对定位元素，元素相对正常位置的偏移量将基于 {{ Cssxref("left") }} 属性；如果 `left` 也为 `auto` 的话，元素将不会有偏移。
 

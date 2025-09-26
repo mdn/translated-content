@@ -28,7 +28,7 @@ Utilisez cette clé pour activer votre extension et intégrer les outils de dév
 
 Cette clé est définie comme une URL d'un fichier HTML. Le fichier HTML doit être regroupé avec l'extension, et l'URL est relative à la racine de l'extension.
 
-Voir [Extension des outils développeurs](/fr/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
+Voir [Extension des outils développeurs](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
 
 ## Exemple
 

@@ -102,7 +102,7 @@ La méthode [`Object.getOwnPropertySymbols()`](/fr/docs/Web/JavaScript/Reference
   - : Renvoie une chaîne de caractères contenant la description du symbole. Il s'agit d'une surcharge de la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 - [`Symbol.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/valueOf)
   - : Renvoie le symbole. Il s'agit d'une surcharge de la méthode [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
-- [`Symbol.prototype[@@toPrimitive]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
+- [`Symbol.prototype[@@toPrimitive]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
   - : Renvoie le symbole.
 
 ## Exemples
@@ -176,7 +176,7 @@ obj[Object(sym)]; // toujours 1
 ## Voir aussi
 
 - [Une prothèse d'émulation de `Symbol` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [La page du glossaire sur le type de données symbole](/fr/docs/Glossary/Symbol)
+- [La page du glossaire sur le type de données symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 - [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof)
-- [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
 - [L'article ES6 en détails sur les symboles, disponible sur tech.mozfr.org](https://tech.mozfr.org/post/2015/06/21/ES6-en-details-%3A-les-symboles)

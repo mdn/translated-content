@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/texParameter
 
 {{APIRef("WebGL")}}
 
-Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définissent les paramètres de texture.
+Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définissent les paramètres de texture.
 
 ## Syntaxe
 
@@ -17,13 +17,10 @@ void gl.texParameteri(GLenum cible, GLenum nomp, GLint param);
 ### Paramètres
 
 - cible
-
   - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
-
     - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionelle.
     - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texte appliquée sur un cube.
     - Lorsqu'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
-
       - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
       - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture bi-dimensionnelle en tableau.
 

@@ -46,7 +46,6 @@ _这个类型没有属性。它是一个双精度浮点数。_
 **时间源**是一个可以被认定为当前文档生命周期的开始节点的标准时间，计算方法如下：
 
 - 如果脚本的 {{Glossary("global object")}} 是 {{domxref("Window")}}，则时间源的确定方式如下：
-
   - 如果当前 {{domxref("Document")}} 是中加载的第一个 `Window`，则**时间源**是创建浏览器上下文的时间。
   - 如果处于卸载窗口中已加载的先前文档的过程中，一个确认对话框会显示出来，让用户确认是否离开前一页，则**时间源**是用户确认导航到新页面的这个时间，这一点是被认同的。
   - 如果以上方式都不能确定**时间源**，那么**时间源**是创建窗口中当前 `Document` 的导航发生的时机。
@@ -58,9 +57,9 @@ _这个类型没有属性。它是一个双精度浮点数。_
 
 _这个类型没有方法。_
 
-## 用法说明
+## 使用说明
 
-您可以通过调用 {{domxref("performance")}} 的 {{domxref("performance.now", "now()")}} 方法来获取当前的时间戳的值（自创建上下文以来经过的时间）。此方法在 {{domxref("Window")}} 和 {{domxref("Worker")}} 上下文中均可用。
+你可以通过调用 {{domxref("performance")}} 的 {{domxref("performance.now", "now()")}} 方法来获取当前的时间戳的值（自创建上下文以来经过的时间）。此方法在 {{domxref("Window")}} 和 {{domxref("Worker")}} 上下文中均可用。
 
 ## 示例
 
@@ -86,7 +85,7 @@ const elapsedTime = performance.now() - startTime;
 
 ## 参见
 
-- [Navigation Timing API](/zh-CN/docs/Navigation_timing)
+- [Navigation Timing API](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)
 - [Performance.now()](/zh-CN/docs/Web/API/Performance/now)
 - <https://www.w3.org/TR/hr-time/#sec-DOMHighResTimeStamp>
 - <https://www.w3.org/TR/hr-time-2/>

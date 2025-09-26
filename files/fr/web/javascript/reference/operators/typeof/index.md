@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/typeof
 
 L'opérateur **`typeof`** renvoie une chaîne qui indique le type de son opérande.
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof "blubber");
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+```
 
 ## Syntaxe
 
@@ -25,19 +39,19 @@ typeof operande;
 
 ## Description
 
-Le tableau qui suit liste les résultats possibles de l'opérateur `typeof`. Pour plus d'informations sur les types et valeurs primitives en JavaScript, voir la page sur [les types et structures de données JavaScript](/fr/docs/Web/JavaScript/Data_structures).
+Le tableau qui suit liste les résultats possibles de l'opérateur `typeof`. Pour plus d'informations sur les types et valeurs primitives en JavaScript, voir la page sur [les types et structures de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures).
 
-| Type                                                                                              | Résultat                   |
-| ------------------------------------------------------------------------------------------------- | -------------------------- |
-| [indéfini](/fr/docs/Glossary/undefined)                                                           | `"undefined"`              |
-| [nul](/fr/docs/Glossary/Null)                                                                     | `"object"` (voir ci-après) |
-| [booléen](/fr/docs/Glossary/Boolean)                                                              | `"boolean"`                |
-| [nombre](/fr/docs/Glossary/Number)                                                                | `"number"`                 |
-| [grand entier (nouveauté d'ECMAScript 2020)](/fr/docs/Glossary/BigInt)                            | `"bigint"`                 |
-| [chaîne de caractère](/fr/docs/Glossary/String)                                                   | `"string"`                 |
-| [symbole (nouveauté d'ECMAScript 6 / 2015)](/fr/docs/Glossary/Symbol)                             | `"symbol"`                 |
-| [objet Function (au sens ECMA-262, un objet qui implémente [[Call]])](/fr/docs/Glossary/Function) | `"function"`               |
-| Tout autre objet                                                                                  | `"object"`                 |
+| Type                                                                                                 | Résultat                   |
+| ---------------------------------------------------------------------------------------------------- | -------------------------- |
+| [indéfini](/fr/docs/Glossary/Undefined)                                                              | `"undefined"`              |
+| [nul](/fr/docs/Glossary/Null)                                                                        | `"object"` (voir ci-après) |
+| [booléen](/fr/docs/Glossary/Boolean)                                                                 | `"boolean"`                |
+| [nombre](/fr/docs/Glossary/Number)                                                                   | `"number"`                 |
+| [grand entier (nouveauté d'ECMAScript 2020)](/fr/docs/Glossary/BigInt)                               | `"bigint"`                 |
+| [chaîne de caractère](/fr/docs/Glossary/String)                                                      | `"string"`                 |
+| [symbole (nouveauté d'ECMAScript 6 / 2015)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) | `"symbol"`                 |
+| [objet Function (au sens ECMA-262, un objet qui implémente [[Call]])](/fr/docs/Glossary/Function)    | `"function"`               |
+| Tout autre objet                                                                                     | `"object"`                 |
 
 ## Exemples
 

@@ -30,7 +30,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -58,7 +58,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
 
 ## Atributos
 
-Este elemento inclui apenas [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui apenas [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Notas
 
@@ -77,17 +77,13 @@ A saída do HTML acima:
 
 Mais informações podem ser encontradas em \[ISO-0000].
 
-## Especificação
+## Especificações
 
-| Especificação                                                                           | Estado                   | Comentário |
-| --------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-cite-element', '&lt;cite&gt;')}}          | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-cite-element', '&lt;cite&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;cite&gt;')}}                    | {{Spec2('HTML4.01')}}    |            |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("html.elements.cite")}}
+{{Compat}}
 
 ## Veja também
 

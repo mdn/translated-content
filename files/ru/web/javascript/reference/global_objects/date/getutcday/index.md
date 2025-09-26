@@ -3,7 +3,7 @@ title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -36,11 +36,7 @@ var weekday = today.getUTCDay();
 
 ## Спецификации
 
-| Спецификация                                                                     | Статус             | Комментарии                                            |
-| -------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                          | Стандарт           | Изначальное определение. Реализовано в JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.17', 'Date.prototype.getUTCDay')}}              | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.getutcday', 'Date.prototype.getUTCDay')}} | {{Spec2('ES6')}}   |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

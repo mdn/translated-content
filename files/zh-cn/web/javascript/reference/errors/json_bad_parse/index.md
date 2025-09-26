@@ -3,8 +3,6 @@ title: "SyntaxError: JSON.parse: bad parsing"
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 信息
 
 ```plain
@@ -106,7 +104,7 @@ JSON.parse('{"foo" : 1 }');
 JSON.parse('{"foo" : 1.0 }');
 ```
 
-## 相关链接
+## 参见
 
 - {{jsxref("JSON")}}
 - {{jsxref("JSON.parse()")}}

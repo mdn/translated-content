@@ -1,15 +1,31 @@
 ---
 title: Number.isNaN()
+short-title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Number.isNaN()`** は静的メソッドで、渡された値が数値型の {{jsxref("NaN")}} であるかどうかを判定します。入力が数値型でなかった場合は `false` を返します。元となるグローバルの {{jsxref("isNaN()")}} よりも堅牢な版です。
 
-**`Number.isNaN()`** は静的メソッドで、渡された値が数値型の {{jsxref("NaN")}} であるかどうかを判定します。入力が数値型でなかった場合は `false` を返します。元となるグローバルの {{jsxref("isNaN", "isNaN()")}} よりも堅牢な版です。
+{{InteractiveExample("JavaScript デモ: Number.isNaN()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
+```js interactive-example
+function typeOfNaN(x) {
+  if (Number.isNaN(x)) {
+    return "Number NaN";
+  }
+  if (isNaN(x)) {
+    return "NaN";
+  }
+}
+
+console.log(typeOfNaN("100F"));
+// 予想される結果: "NaN"
+
+console.log(typeOfNaN(NaN));
+// 予想される結果: "Number NaN"
+```
 
 ## 構文
 
@@ -32,7 +48,7 @@ Number.isNaN(value)
 
 JavaScript の有効なすべての値の中で、`x !== x` は `NaN` だけが true になりますので、`Number.isNaN(x)` は `x !== x` の検査を置き換えることができますが、後者の方が可読性が低くなります。
 
-グローバルの {{jsxref("isNaN", "isNaN()")}} 関数とは異なり、 `Number.isNaN()` は強制的に引数が数値に変換される問題の影響をうけません。これにより、通常 {{jsxref("NaN")}} に変換されるが実際には {{jsxref("NaN")}} ではない値が、安全に渡されます。つまりこの関数は、数値型であり、かつ {{jsxref("NaN")}} である値が渡されたときのみ、 `true` を返すということです。
+グローバルの {{jsxref("isNaN()")}} 関数とは異なり、 `Number.isNaN()` は強制的に引数が数値に変換される問題の影響をうけません。これにより、通常 {{jsxref("NaN")}} に変換されるが実際には {{jsxref("NaN")}} ではない値が、安全に渡されます。つまりこの関数は、数値型であり、かつ {{jsxref("NaN")}} である値が渡されたときのみ、 `true` を返すということです。
 
 ## 例
 
@@ -62,7 +78,7 @@ Number.isNaN("");
 Number.isNaN(" ");
 ```
 
-グローバルの {{jsxref("isNaN", "isNaN()")}} は、引数を数値に変換します。
+グローバルの {{jsxref("isNaN()")}} は、引数を数値に変換します。
 
 ```js
 isNaN("NaN"); // true
@@ -88,5 +104,6 @@ isNaN(" "); // false、これは 0 に変換される
 ## 関連情報
 
 - [`Number.isNaN` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims による `Number.isNaN` のポリフィル](https://www.npmjs.com/package/number.isnan)
 - {{jsxref("Number")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

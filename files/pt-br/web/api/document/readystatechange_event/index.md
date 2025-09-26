@@ -10,7 +10,7 @@ O evento `readystatechange` é ativado quando o atributo [`readyState`](/pt-BR/d
 ## Informações gerais
 
 - Especificação
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
 - Interface
   - : Event
 - Propaga
@@ -44,12 +44,12 @@ document.onreadystatechange = function () {
 
 ## Compatibilidade com navegadores
 
-Este evento tem sido suportado pelo Internet Explorer há várias versões, e pode ser usada como uma alternativa para o evento [`DOMContentLoaded`](</pt-BR/docs/Mozilla_event_reference/DOMContentLoaded_(event)>) (veja a seção [cross-browser fallback](/pt-BR/docs/Web/Events/DOMContentLoaded#Cross-browser_fallback)).
+Este evento tem sido suportado pelo Internet Explorer há várias versões, e pode ser usada como uma alternativa para o evento [`DOMContentLoaded`](</pt-BR/docs/Mozilla_event_reference/DOMContentLoaded_(event)>) (veja a seção [cross-browser fallback](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event#cross-browser_fallback)).
 
 ## Eventos Relacionados
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/pt-BR/docs/Web/API/Document/readystatechange_event)
+- [`load`](/pt-BR/docs/Web/API/Window/load_event)
+- [`beforeunload`](/pt-BR/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/pt-BR/docs/Web/API/Window/unload_event)

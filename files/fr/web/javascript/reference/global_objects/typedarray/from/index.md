@@ -44,8 +44,8 @@ Une nouvelle instance de {{jsxref("TypedArray")}}.
 
 `TypedArray.from()` permet de créer des tableaux typés à partir :
 
-- d'[objets semblables à des tableaux](/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Manipuler_des_objets_semblables_aux_tableaux) (qui disposent d'une propriété `length` et d'éléments indexés) ou
-- d'[objets itérables](/fr/docs/Web/JavaScript/Guide/iterable) (par exemple des objets {{jsxref("Map")}} ou {{jsxref("Set")}}).
+- d'[objets semblables à des tableaux](/fr/docs/Web/JavaScript/Guide#manipuler_des_objets_semblables_aux_tableaux) (qui disposent d'une propriété `length` et d'éléments indexés) ou
+- d'[objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (par exemple des objets {{jsxref("Map")}} ou {{jsxref("Set")}}).
 
 `Array.from` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau typé (ou de l'instance de la classe fille) qui est créé. Autrement dit `TypedArray.from(obj, fonctionMap, thisArg)` correspond exactement à `TypedArray.from(obj).map(fonctionMap, thisArg)`.
 

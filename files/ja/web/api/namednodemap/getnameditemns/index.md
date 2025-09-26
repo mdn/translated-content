@@ -19,7 +19,8 @@ getNamedItemNS(namespace, localName);
 
 - `namespace`
   - : 文字列で、希望する属性の名前空間 URI です。
-    > **警告:** `namespace` は名前空間の URI であり、接頭辞ではありません。
+    > [!WARNING]
+    > `namespace` は名前空間の URI であり、接頭辞ではありません。
 - `localName`
   - : 文字列で、希望する属性のローカル名です。
 
@@ -35,7 +36,8 @@ getNamedItemNS(namespace, localName);
 
 ```js
 const parser = new DOMParser();
-const xmlString = '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';
+const xmlString =
+  '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';
 const doc = parser.parseFromString(xmlString, "application/xml");
 
 const pre = document.getElementsByTagName("pre")[0];
@@ -43,7 +45,9 @@ const warning = doc.getElementsByTagName("warning")[0];
 
 const attrMap = warning.attributes;
 
-pre.textContent = `The 'ob:one' attribute contains: ${attrMap.getNamedItemNS("http://www.example.com/ob", "one").value}.`;
+pre.textContent = `The 'ob:one' attribute contains: ${
+  attrMap.getNamedItemNS("http://www.example.com/ob", "one").value
+}.`;
 ```
 
 {{EmbedLiveSample("Example", "100%", 80)}}

@@ -3,9 +3,7 @@ title: rotate()
 slug: Web/CSS/transform-function/rotate
 ---
 
-{{CSSRef}}
-
-La función [CSS](/es/docs/) **`rotate()`** define una transformación que gira un elemento alrededor de un punto fijo en un plano 2D sin deformarlo.
+La función [CSS](/es/docs/Web) **`rotate()`** define una transformación que gira un elemento alrededor de un punto fijo en un plano 2D sin deformarlo.
 
 El punto fijo alrededor del cual gira el elemento, mencionado anteriormente, también se conoce como el **origen de transformación**. Se establece de manera predeterminada en el centro del elemento, pero se puede personalizar utilizando la propiedad {{ cssxref("transform-origin") }}.
 

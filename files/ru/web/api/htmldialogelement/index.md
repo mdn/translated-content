@@ -14,7 +14,7 @@ slug: Web/API/HTMLDialogElement
 _Наследует свойства от своего родителя, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.open")}}
-  - : {{domxref("Boolean")}} отражает HTML атрибут элемента [`open`](/ru/docs/Web/HTML/Element/dialog#open), указывающий на то, доступно ли диалоговое окно для воздействия.
+  - : {{domxref("Boolean")}} отражает HTML атрибут элемента [`open`](/ru/docs/Web/HTML/Reference/Elements/dialog#open), указывающий на то, доступно ли диалоговое окно для воздействия.
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : {{domxref("DOMString")}} устанавливает или возвращает передаваемое диалоговому окну значение.
 
@@ -89,7 +89,8 @@ _Наследует методы своего родителя, {{domxref("HTMLE
 </script>
 ```
 
-> **Примечание:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> [!NOTE]
+> You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Спецификации
 

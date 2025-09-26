@@ -1,18 +1,18 @@
 ---
 title: "HTMLInputElement: stepDown() メソッド"
+short-title: stepDown()
 slug: Web/API/HTMLInputElement/stepDown
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLInputElement.stepDown([n])`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を
-[`step`](/ja/docs/Web/HTML/Attributes/step) 属性の値、または引数として数値が渡された場合は step 属性の最大 `n` 倍の値だけ減少させるものです。
+**`HTMLInputElement.stepDown([n])`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性の値、または引数として数値が渡された場合は step 属性の最大 `n` 倍の値だけ減少させるものです。
 
-このメソッドを呼び出すと、 [`value`](/ja/docs/Web/HTML/Element/input#value) は ([`step`](/ja/docs/Web/HTML/Element/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で 1 となり、[`step`](/ja/docs/Web/HTML/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
+このメソッドを呼び出すと、 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) は ([`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で 1 となり、[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
 
-step 属性に対応しているすべての数値、日付、時刻の入力タイプ（{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
+step 属性に対応しているすべての数値、日付、時刻の入力型（{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
 {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}},{{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}}）で有効です。
 
 `<input id="myTime" type="time" max="17:00" step="900" value="17:00">` と指定された場合、 `myTime.stepDown(3)` を呼び出すと値は 16:15 になります。これは `3 * 900` または 45 分を引くからです。 `myTime.stepDown()` を引数無しで呼び出すと、 `n` が既定で `1` となるので `16:45` になります。
@@ -52,20 +52,18 @@ input2.stepDown();
 console.log(input2.value); // "16:45"
 ```
 
-このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。引数が渡されなかった場合の既定値は `1` です。このメソッドは、値が [`min`](/ja/docs/Web/HTML/Attributes/min) を下回ったり、 [`step`](/ja/docs/Web/HTML/Attributes/step) 属性が設定する制約に違反させるようなことはしません。 `n` に負の値を指定すると、値が増加しますが、[`max`](/ja/docs/Web/HTML/Attributes/max) の値を超えて増加することはありません。
+このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。引数が渡されなかった場合の既定値は `1` です。このメソッドは、値が [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) を下回ったり、 [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性が設定する制約に違反させるようなことはしません。 `n` に負の値を指定すると、値が増加しますが、[`max`](/ja/docs/Web/HTML/Reference/Attributes/max) の値を超えて増加することはありません。
 
 `stepDown()` メソッドを呼び出す前の値が無効であった場合、例えば `step` 属性で設定した制約に適合しない場合、 `stepDown()` メソッドを呼び出すと、フォームコントロールの制約に適合する値が返されます。
 
 フォームコントロールが時刻、日付、数値以外のもので、 `step` 属性に対応していない場合（前述の対応している入力型のリストを参照）、または `step` 値が `any` に設定されている場合、 `InvalidStateError` 例外が発生します。
 
 - {{domxref("HTMLInputElement.stepDown()")}}
-
-  - : [`value`](/ja/docs/Web/HTML/Element/input#value) を（[`step`](/ja/docs/Web/HTML/Element/input#step) \* n だけ）減少させます。ここで n が指定されなかった場合は、既定で 1 になります。次の場合は例外 `InvalidStateError` が発生します。
-
-    - このメソッドが現在の [`type`](/ja/docs/Web/HTML/Element/input#type) の値に適切ではない場合
-    - この要素に [`step`](/ja/docs/Web/HTML/Element/input#step) の値がなかった場合
-    - [`value`](/ja/docs/Web/HTML/Element/input#value) が数値に変換できなかった場合
-    - 結果の値が [`max`](/ja/docs/Web/HTML/Element/input#max) を超えたり、 [`min`](/ja/docs/Web/HTML/Element/input#min) を下回ったりした場合
+  - : [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) を（[`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) \* n だけ）減少させます。ここで n が指定されなかった場合は、既定で 1 になります。次の場合は例外 `InvalidStateError` が発生します。
+    - このメソッドが現在の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) の値に適切ではない場合
+    - この要素に [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) の値がなかった場合
+    - [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が数値に変換できなかった場合
+    - 結果の値が [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) を超えたり、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) を下回ったりした場合
 
 ## 構文
 
@@ -77,7 +75,6 @@ stepDown(stepDecrement)
 ### 引数
 
 - `stepDecrement` {{optional_inline}}
-
   - : 数値です。引数が渡されなかった場合、 _stepDecrement_ は既定で 1 になります。
 
     この値が浮動小数点数であった場合、値は [`Math.floor(stepDecrement)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) が渡されたときと同様に減少します。この値が負の数であった場合は、値は減少するのではなく増加します。
@@ -145,7 +142,7 @@ input:invalid {
 
 `stepDown()` メソッドに引数を渡さなかった場合、既定値は 1 になります。他の値は `step` 属性の値に乗算されるので、この場合は 5 となります。 _`stepDecrement`_ に `4` を渡した場合、 `stepDown` は `4 * 5` すなわち `20` だけ行われます。この引数が `0` であった場合、数値は減算されません。 `stepDown()` メソッドは入力が範囲外にならないように、この場合は 0 になった時点で停止し、引数として渡された値の小数点以下を切り捨てます。
 
-入力の言さんちをを `1.2` に設定してみてください。メソッドを呼び出すとどうなるでしょうか？
+入力の減算値を `1.2` に設定してみてください。メソッドを呼び出すとどうなるでしょうか？
 
 値を不正な数値である `44` に設定してみてください。メソッドを呼び出すとどうなるでしょうか？
 
@@ -162,5 +159,6 @@ input:invalid {
 - {{HTMLElement("input")}}
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLInputElement.stepUp", "HTMLInputElement.stepUp()")}}
-- [`step`](/ja/docs/Web/HTML/Attributes/step),
-  [`min`](/ja/docs/Web/HTML/Attributes/min), [`max`](/ja/docs/Web/HTML/Attributes/max) 属性
+- [`step`](/ja/docs/Web/HTML/Reference/Attributes/step),
+  [`min`](/ja/docs/Web/HTML/Reference/Attributes/min),
+  [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性

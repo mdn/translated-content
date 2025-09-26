@@ -3,7 +3,7 @@ title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.
 
@@ -20,24 +20,20 @@ browser.runtime.onInstalled.hasListener(listener);
 Les événements ont trois fonctions :
 
 - `addListener(callback)`
-  - : Ajouterun écouteur à cet événement.
+  - : Ajoute un gestionnaire d'événement à cet événement.
 - `removeListener(listener)`
-  - : Arrêtez d'écoutercet événement. L'argument `listener` est l'écouteur à supprimer.
+  - : Arrête d'écouter cet événement. L'argument `listener` est le gestionnaire d'événement à supprimer.
 - `hasListener(listener)`
-  - : Vérifie si un `écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
+  - : Vérifie si un gestionnaire d'événement `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
 
 ## Syntaxe addListener
 
 ### Paramètres
 
 - `function`
-
   - : La fonction de rappel appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `details`
-
       - : Un objet avec les propriétés suivantes :
-
         - `id`{{optional_inline}}
           - : `string`. L'ID de l'extension de module partagé importé mise à jour. Ceci n'est présent que si la valeur de `raison` est `shared_module_update`.
         - `previousVersion`{{optional_inline}}
@@ -45,7 +41,7 @@ Les événements ont trois fonctions :
         - `reason`
           - : Une valeur {{WebExtAPIRef('runtime.OnInstalledReason')}}, indiquant la raison pour laquelle cet événement est distribué.
         - `temporary`
-          - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant [web-ext run](/fr/Add-ons/WebExtensions/Getting_started_with_web-ext). Sinon faux.
+          - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant [web-ext run](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/). Sinon faux.
 
 ## Compatibilité des navigateurs
 
@@ -53,7 +49,7 @@ Les événements ont trois fonctions :
 
 ## Exemples
 
-Lorsque l'extensin est installé, connectez-vous à la raison de l'installon et ouvrez <https://www.reddit.com/r/CatGifs/>:
+Lorsque l'extension est installée, enregistrer la raison de l'installation dans la console et ouvrir <https://www.reddit.com/r/CatGifs/>:
 
 ```js
 function handleInstalled(details) {
@@ -68,11 +64,9 @@ browser.runtime.onInstalled.addListener(handleInstalled);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

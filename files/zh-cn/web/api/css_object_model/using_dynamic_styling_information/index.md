@@ -38,7 +38,7 @@ CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，
 
 {{ EmbedLiveSample('通过 CSSOM 修改样式表') }}
 
-[DOM CSS Properties List](/zh-CN/docs/DOM/CSS) 中给出了 DOM 中 style 属性的可用属性列表。
+[DOM CSS Properties List](/zh-CN/docs/Web/CSS/Reference) 中给出了 DOM 中 style 属性的可用属性列表。
 
 若要使用 CSS 语法修改文档的样式，可以插入样式规则，或者插入{{HTMLElement("style")}} 标签，并将其 `innerHTML` 属性设置为期望的 CSS。
 
@@ -87,11 +87,11 @@ CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，
 
 {{ EmbedLiveSample('修改元素样式') }}
 
-`document.defaultView` 对象的 {{domxref("window.getComputedStyle", "getComputedStyle()")}} 返回某个元素的所有经过计算的样式。查看[Example 6: getComputedStyle](/zh-CN/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) 示例章节了解更多使用该方法的信息。.
+`document.defaultView` 对象的 {{domxref("window.getComputedStyle", "getComputedStyle()")}} 返回某个元素的所有经过计算的样式。
 
 ## DOM 样式对象
 
-`style` 对象表示了一个单独的样式声明。不像[`document.styleSheets`](/zh-CN/DOM/document.styleSheets) 集合中每个单独的样式规则，样式规则是通过 `document` 对象或者应用改样式的元素来访问的。它表示特定元素的内联样式。
+`style` 对象表示了一个单独的样式声明。不像[`document.styleSheets`](/zh-CN/docs/DOM/document.styleSheets) 集合中每个单独的样式规则，样式规则是通过 `document` 对象或者应用改样式的元素来访问的。它表示特定元素的内联样式。
 
 比这两个属性更重要的是使用 `style` 对象来给某个元素设置单独的样式属性。
 
@@ -125,7 +125,7 @@ style 的 media 和 type 给不给出都可以。
 
 ### 使用 `setAttribute` 方法
 
-注意，你也可以通过获得元素的引用，然后使用它的 [`setAttribute`](/zh-CN/DOM/element.setAttribute) 方法，指定 CSS 属性和值，来改变该元素的样式。
+注意，你也可以通过获得元素的引用，然后使用它的 [`setAttribute`](/zh-CN/docs/Web/API/Element/setAttribute) 方法，指定 CSS 属性和值，来改变该元素的样式。
 
 ```js
 var el = document.getElementById("some-element");

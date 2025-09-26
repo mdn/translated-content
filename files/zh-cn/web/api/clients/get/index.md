@@ -18,7 +18,7 @@ self.clients.get(id).then(function (client) {
 ### 参数
 
 - `id`
-  - : 一个 {{domxref("DOMString")}} ，表示您想要获取的 client id.
+  - : 一个 {{domxref("DOMString")}} ，表示你想要获取的 client id.
 
 ### 返回
 

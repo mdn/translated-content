@@ -10,7 +10,22 @@ l10n:
 **`throw`** 文は、ユーザー定義の例外を発生させます。
 現在の関数の実行を停止し（`throw` の後の文は実行されません）、コールスタック内の最初の [`catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックに制御を移します。呼び出し元の関数に `catch` ブロックが存在しない場合は、プログラムが終了します。
 
-{{EmbedInteractiveExample("pages/js/statement-throw.html")}}
+{{InteractiveExample("JavaScript デモ: Statement - Throw")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (isNaN(width) || isNaN(height)) {
+    throw new Error("Parameter is not a number!");
+  }
+}
+
+try {
+  getRectArea(3, "A");
+} catch (e) {
+  console.error(e);
+  // Expected output: Error: Parameter is not a number!
+}
+```
 
 ## 構文
 

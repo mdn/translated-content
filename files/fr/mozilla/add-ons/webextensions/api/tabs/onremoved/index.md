@@ -3,7 +3,7 @@ title: tabs.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé quand un onglet est fermé.
 
@@ -29,16 +29,13 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `tabId`
       - : `integer`. ID de l'onglet qui s'est fermé.
 
     <!---->
-
     - `removeInfo`
-      - : [`object`](#removeInfo). L'ID de la fenêtre de l'onglet et un booléen indiquant si la fenêtre est également fermée.
+      - : [`object`](#removeinfo). L'ID de la fenêtre de l'onglet et un booléen indiquant si la fenêtre est également fermée.
 
 ## Objets supplémentaires
 
@@ -69,11 +66,9 @@ browser.tabs.onRemoved.addListener(handleRemoved);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

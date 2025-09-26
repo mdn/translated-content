@@ -1,26 +1,26 @@
 ---
-title: ShadowRoot.innerHTML
+title: ShadowRoot：innerHTML 属性
 slug: Web/API/ShadowRoot/innerHTML
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{SeeCompatTable}}{{APIRef("Shadow DOM")}}
+{{APIRef("Shadow DOM")}}
 
-{{domxref("ShadowRoot")}} 接口的 **`innerHTML`** 属性设置或返回 ShadowRoot 内的 DOM 树。
+{{domxref("ShadowRoot")}} 接口的 **`innerHTML`** 属性用于设置或返回 `ShadowRoot` 内部 DOM 树的引用。
 
-## 句法
+## 值
 
-```plain
-let domString = shadowRoot.innerHTML
-// 返回
+一个字符串。
 
-shadowRoot.innerHTML = domString;
+## 示例
 
-// 设置
+```js
+let customElem = document.querySelector("my-shadow-dom-element");
+let shadow = customElem.shadowRoot;
+
+shadow.innerHTML = "<strong>此元素应当具有更高的优先级！</strong>";
 ```
-
-### 值
-
-一个 {{domxref("DOMString")}}.
 
 ## 规范
 

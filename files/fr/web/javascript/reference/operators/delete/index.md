@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/delete
 
 L'opérateur **`delete`** permet de retirer une propriété d'un objet.
 
-{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+
+```js interactive-example
+const Employee = {
+  firstname: "Maria",
+  lastname: "Sanchez",
+};
+
+console.log(Employee.firstname);
+// Expected output: "Maria"
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+// Expected output: undefined
+```
 
 ## Syntaxe
 
@@ -31,7 +46,7 @@ delete objet["propriete"];
 
 ### Valeur de retour
 
-`true` pour tous les cas sauf lorsque la propriété est une propriété [propre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) [non-configurable](/fr/docs/Web/JavaScript/Reference/Erreurs/Cant_delete) auquel cas `false` est renvoyé en mode non-strict.
+`true` pour tous les cas sauf lorsque la propriété est une propriété [propre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) [non-configurable](/fr/docs/Web/JavaScript/Reference/Errors/Cant_delete) auquel cas `false` est renvoyé en mode non-strict.
 
 ### Exceptions
 
@@ -39,14 +54,13 @@ Cet opérateur lève une exception {{jsxref("TypeError")}} en [mode strict](/fr/
 
 ## Description
 
-Contrairement à ce qu'on pourrait penser, l'opérateur `delete` n'a rien à voir avec une libération de mémoire directe. La gestion de la mémoire en JavaScript est réalisée de façon indirecte en tenant compte des références, [voir cette page pour plus de détails](/fr/docs/Web/JavaScript/Gestion_de_la_mémoire).
+Contrairement à ce qu'on pourrait penser, l'opérateur `delete` n'a rien à voir avec une libération de mémoire directe. La gestion de la mémoire en JavaScript est réalisée de façon indirecte en tenant compte des références, [voir cette page pour plus de détails](/fr/docs/Web/JavaScript/Guide/Memory_management).
 
 L'opérateur **`delete`** permet de retirer une propriété donnée d'un objet. Lorsque la suppression se déroule sans problème, l'opération renvoie `true`, sinon c'est la valeur `false` qui est renvoyée. Voici quelques scénarios importants qui précisent ce comportement :
 
 - Si la propriété qu'on souhaite supprimer n'existe pas, `delete` n'aura aucun effet et l'opération renverra `true`
 - Si une propriété du même nom existe sur la chaîne de prototypes, après la suppression, l'objet utilisera la propriété disponible sur la chaîne de prototypes. Autrement dit, `delete` n'a d'effet que sur les propriétés directement rattachées à un objet (les propriétés « propres »).
 - Toute propriété déclarée avec {{jsxref("Instructions/var","var")}} ne peut pas être supprimée de la portée globale ou de la portée d'une fonction.
-
   - Aussi, `delete` ne pourra supprimer des fonctions de la portée globale (que ce soit une définition de fonction ou une expression de fonction).
   - Les fonctions qui font partie d'un objet (à l'exception de la portée globale) peuvent être supprimées avec `delete`.
 

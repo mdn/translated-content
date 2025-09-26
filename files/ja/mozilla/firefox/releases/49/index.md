@@ -5,8 +5,6 @@ l10n:
   sourceCommit: dd08ec8cf78926a7854d8f5f7793bf7ae199484e
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、 Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/) Firefox 49 は、米国時間 2016 年 9 月 20 日にリリースされました。このページでは、開発者に影響する Firefox 49 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -20,7 +18,6 @@ l10n:
 - インスペクターで、`#RRGGBBAA` および `#RGBA` 構文の色の値をサポートしました ([Firefox バグ 1271191](https://bugzil.la/1271191))。
 - HTML のページにおける開発ツールで、自己完結タグ ({{HTMLElement("br")}} や {{HTMLElement("img")}} など) が終了タグを持つかのように表示しないようになりました。XHTML ページではこの動作を変更していません ([Firefox バグ 820926](https://bugzil.la/820926))。
 - アクセシビリティが向上しました。
-
   - ツールボックスで、キーボードフォーカスが見やすくなるように対処しました ([Firefox バグ 1242851](https://bugzil.la/1242851))。
   - アクセシビリティのラベルがついていないコントロールに、ラベルを追加しました ([Firefox バグ 1242715](https://bugzil.la/1242715))。
   - インスペクターのマークアップビューに、適切なツリービューの意味とキーボードナビゲーションを追加しました ([Firefox バグ 1242694](https://bugzil.la/1242694))。
@@ -35,12 +32,12 @@ l10n:
 ### HTML
 
 - {{HTMLElement("details")}} 要素および {{HTMLElement("summary")}} 要素をサポートしました ([Firefox バグ 1226455](https://bugzil.la/1226455))。
-- {{HTMLElement("input")}} 要素の [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性は、背後の JavaScript {{jsxref("RegExp")}} で `'u'` 引数ーを使用するようになりました ([Firefox バグ 1227906](https://bugzil.la/1227906))。
-- 仕様書の変更に合わせて、{{HTMLElement('track')}} 要素の [`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性で無効な値は、`'subtitles'` ではなく `'metadata'` と同様に扱うようになりました ([Firefox バグ 1269712](https://bugzil.la/1269712))。
-- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性で値 `'allow-popups-to-escape-sandbox'` および `'allow-modals'` をサポートしました ([Firefox バグ 1190641](https://bugzil.la/1190641))。
+- {{HTMLElement("input")}} 要素の [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性は、背後の JavaScript {{jsxref("RegExp")}} で `'u'` 引数ーを使用するようになりました ([Firefox バグ 1227906](https://bugzil.la/1227906))。
+- 仕様書の変更に合わせて、{{HTMLElement('track')}} 要素の [`kind`](/ja/docs/Web/HTML/Reference/Elements/track#kind) 属性で無効な値は、`'subtitles'` ではなく `'metadata'` と同様に扱うようになりました ([Firefox バグ 1269712](https://bugzil.la/1269712))。
+- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性で値 `'allow-popups-to-escape-sandbox'` および `'allow-modals'` をサポートしました ([Firefox バグ 1190641](https://bugzil.la/1190641))。
 - microdata 属性および Microdata API のサポートを廃止しました ([Firefox バグ 909633](https://bugzil.la/909633))。
-- {{HTMLElement("a")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/a#referrerpolicy) 属性で値 `'no-referrer-when-downgrade`' および `'origin-when-cross-origin'` をサポートしました ([Firefox バグ 1178337](https://bugzil.la/1178337))。
-- {{HTMLElement("label")}} 要素の [`form`](/ja/docs/Web/HTML/Element/label#form) コンテンツ属性を削除しました。{{domxref("HTMLLabelElement.form")}} はまだ存在していますが、コントロールが存在する (およびそのコントロールがフォームに関連付けられている) 場合に、ラベルのコントロールが関連付けられているフォームを返すようになりました ([Firefox バグ 1268852](https://bugzil.la/1268852))。
+- {{HTMLElement("a")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/a#referrerpolicy) 属性で値 `'no-referrer-when-downgrade`' および `'origin-when-cross-origin'` をサポートしました ([Firefox バグ 1178337](https://bugzil.la/1178337))。
+- {{HTMLElement("label")}} 要素の [`form`](/ja/docs/Web/HTML/Reference/Elements/label#form) コンテンツ属性を削除しました。{{domxref("HTMLLabelElement.form")}} はまだ存在していますが、コントロールが存在する (およびそのコントロールがフォームに関連付けられている) 場合に、ラベルのコントロールが関連付けられているフォームを返すようになりました ([Firefox バグ 1268852](https://bugzil.la/1268852))。
 
 ### CSS
 
@@ -48,19 +45,17 @@ l10n:
 - {{cssxref("background-repeat")}} で、キーワード `round` および `space` をサポートしました ([Firefox バグ 548372](https://bugzil.la/548372))。
 - {{cssxref("background-clip")}} で、キーワード `text` をデフォルトで有効化しました ([Firefox バグ 1264905](https://bugzil.la/1264905))。
 - 4 桁および 8 桁の 16 進数による CSS [色](/ja/docs/Web/CSS/color_value) の値 (#RRGGBBAA や #RGBA) による、アルファチャンネルを含む色の指定をサポートしました ([Firefox バグ 567283](https://bugzil.la/567283))。
-- {{cssxref(":dir()")}} 疑似クラスの接頭辞を外しました ([Firefox バグ 859301](https://bugzil.la/859301))。
+- {{cssxref(":dir()")}} 擬似クラスの接頭辞を外しました ([Firefox バグ 859301](https://bugzil.la/859301))。
 - {{cssxref("clip-path")}} の実験的な実装 (デフォルトで有効化していません) で、複数の {{cssxref("&lt;basic-shape&gt;")}} 値の間で補間処理が可能になりました ([Firefox バグ 1110460](https://bugzil.la/1110460))。
 - [長さの単位 `q`](/ja/docs/Web/CSS/length#q) をサポートしました ([Firefox バグ 1274526](https://bugzil.la/1274526))。
 - {{cssxref("text-align-last")}} プロパティの接頭辞を削除しました ([Firefox バグ 1039541](https://bugzil.la/1039541))。
 - {{cssxref("overflow-wrap")}} をサポートしました。 `word-wrap` を置き換えるものですが、こちらも別名としてサポートを続けます ([Firefox バグ 955857](https://bugzil.la/955857))。
-- [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout) の実験的な実装が進展しました。
-
+- [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) の実験的な実装が進展しました。
   - {{cssxref("&lt;percentage&gt;")}} を `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティで対応しました ([Firefox バグ 1266268](https://bugzil.la/1266268))。
   - {{cssxref("align")}}、{{cssxref("justify-self")}}`:baseline`、`last-baseline` ("baseline self-alignment" として知られる) でグリッドレイアウトをサポートしました ([Firefox バグ 1221525](https://bugzil.la/1221525))。
   - グリッドアイテムの Baseline Content Alignment を実装しました ([Firefox バグ 1256429](https://bugzil.la/1256429))。
 
-- [CSS マスク](/ja/docs/Web/CSS/CSS_Masking) の実験的な実装が進展しました。
-
+- [CSS マスク](/ja/docs/Web/CSS/CSS_masking) の実験的な実装が進展しました。
   - {{cssxref("mask-origin")}} プロパティの初期値を、仕様書に合わせて `padding-box` から `border-box` に変更しました ([Firefox バグ 1258286](https://bugzil.la/1258286))。
   - {{cssxref("mask-repeat")}} プロパティで値 `space` および `round` をサポートしました ([Firefox バグ 1258626](https://bugzil.la/1258626))。
   - {{cssxref("mask-position")}} 属性でアニメーションを行えない問題を修正しました ([Firefox バグ 1273804](https://bugzil.la/1273804))。
@@ -70,7 +65,7 @@ l10n:
 ### JavaScript
 
 - ES2015 の {{jsxref("Proxy")}} のトラップである {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} および {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} を実装しました ([Firefox バグ 888969](https://bugzil.la/888969))。
-- ES2015 の {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}、{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}、{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}、{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}} メソッドおよび {{jsxref("RegExp.@@species", "RegExp[@@species]")}} getter を実装しました ([Firefox バグ 887016](https://bugzil.la/887016))。
+- ES2015 の {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[Symbol.match]()")}}、{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[Symbol.replace]()")}}、{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[Symbol.search]()")}}、{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[Symbol.split]()")}} メソッドおよび {{jsxref("RegExp.Symbol.species", "RegExp[Symbol.species]")}} getter を実装しました ([Firefox バグ 887016](https://bugzil.la/887016))。
 - 非推奨かつ非標準である、`String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} の `flags` 引数を廃止しました ([Firefox バグ 1108382](https://bugzil.la/1108382))。
 - Google Chrome ブラウザーとの相互運用性を高めるため {{jsxref("Date.parse()")}} で、2 桁で表す年の処理を変更しました ([Firefox バグ 1265136](https://bugzil.la/1265136))。
 
@@ -121,7 +116,7 @@ l10n:
 #### サービスワーカー関連
 
 - [フェッチ API](/ja/docs/Web/API/Fetch_API) の {{domxref("Response")}} オブジェクトに、リダイレクトされたリクエストのレスポンスであるかを示す {{domxref("Response.redirected", "redirected")}} プロパティを実装しました。このプロパティを使用する前に、ドキュメントでセキュリティ関連の注意事項を確認してください ([Firefox バグ 1243792](https://bugzil.la/1243792))。
-- [Permissions API](/ja/docs/Web/API/Permissions_API) で、Firefox は `PermissionDescriptor` 辞書型 (仕様書では `PushPermissionDescriptor` として言及されています) の 'push' のサポートを廃止しました。Firefox は `userVisibleOnly` ステータスの制御で代わりにクォータシステムに依存しており、`PushPermissionDescriptor` インスタンスに出くわしたときにエラーが発生していたためです ([Firefox バグ 1266821](https://bugzil.la/1266821))。この辞書の削除により、Firefox は単に無視するようになりました。
+- [権限 API](/ja/docs/Web/API/Permissions_API) で、Firefox は `PermissionDescriptor` 辞書型 (仕様書では `PushPermissionDescriptor` として言及されています) の 'push' のサポートを廃止しました。Firefox は `userVisibleOnly` ステータスの制御で代わりにクォータシステムに依存しており、`PushPermissionDescriptor` インスタンスに出くわしたときにエラーが発生していたためです ([Firefox バグ 1266821](https://bugzil.la/1266821))。この辞書の削除により、Firefox は単に無視するようになりました。
 
 #### メディアストリーム
 
@@ -149,7 +144,7 @@ l10n:
 - 仕様書に合わせて、{{domxref("VTTCue.positionAlign")}} プロパティが `Align` 列挙型ではなく `PositionAlign` 列挙型を返すようになりました ([Firefox バグ 1276129](https://bugzil.la/1276129))。
 - [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API#speech_synthesis) の、音声合成の部分をサポートしました ([Firefox バグ 1268633](https://bugzil.la/1268633))。
 - [Performance Timeline API](/ja/docs/Web/API/Performance_Timeline) を、Nightly でデフォルトで有効化しました (Aurora、Beta、Release では無効です)。
-- {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} イベントおよび {{domxref("Window.appinstalled_event", "Window.oninstall")}} イベントハンドラーを[ウェブマニフェスト](/ja/docs/Web/Manifest)向けにサポートしました ([Firefox バグ 1265279](https://bugzil.la/1265279))。
+- {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} イベントおよび {{domxref("Window.appinstalled_event", "Window.oninstall")}} イベントハンドラーを[ウェブマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)向けにサポートしました ([Firefox バグ 1265279](https://bugzil.la/1265279))。
 - [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("BaseAudioContext/createPeriodicWave", "AudioContext.createPeriodicWave()")}} メソッドを使用するとき、結果の周期的な波形をノーマライズすべきかを、第 3 引数にディクショナリーオブジェクトを含めることで指定可能になりました。このオブジェクトにはひとつの引数を含めて `{disableNormalization: true}` のようにします ([Firefox バグ 1265405](https://bugzil.la/1265405))。
 - WebVTT API で {{domxref("VTTCue.positionAlign")}} が、仕様書どおりに正しく `PositionAlignSetting` 列挙型を返すようになりました。以前は `AlignSetting` 列挙型を返していました ([Firefox バグ 1276129](https://bugzil.la/1276129))。
 - ウェブ音声 API の音声合成の部分を、すべてのデスクトップブラウザーでデフォルトで有効にしました ([Firefox バグ 1268633](https://bugzil.la/1268633))。
@@ -170,13 +165,13 @@ _変更なし。_
 
 ### プラグインと Flash
 
-Firefox 49 より、サイトが正しく機能するために必要ではない特定の種類の Flash コンテンツをデフォルトでブロックするようになりました。この動作は設定項目 `browser.safebrowsing.blockedURIs.enabled` で制御しており、サイトのユーザービリティに大きな影響を与えることなく、一般的にはサイトや Firefox のパフォーマンスを向上する助けになります。また、クラッシュの主要な原因を取り除くことにより、ブラウジング体験の安定性を向上する助けにもなります。ブロックされる Flash モジュールにはフィンガープリンティングのためだけに使用されるものやいくつかの "スーパー Cookie" モジュールが含まれまており、将来はより多くの種類のモジュールをブロックするように拡張するでしょう。詳しくは [Firefox バグ 1275591](https://bugzil.la/1275591) をご覧ください。
+Firefox 49 より、サイトが正しく機能するために必要ではない特定の種類の Flash コンテンツをデフォルトでブロックするようになりました。この動作は設定項目 `browser.safebrowsing.blockedURIs.enabled` で制御しており、サイトのユーザビリティに大きな影響を与えることなく、一般的にはサイトや Firefox のパフォーマンスを向上する助けになります。また、クラッシュの主要な原因を取り除くことにより、ブラウジング体験の安定性を向上する助けにもなります。ブロックされる Flash モジュールにはフィンガープリンティングのためだけに使用されるものやいくつかの "スーパー Cookie" モジュールが含まれまており、将来はより多くの種類のモジュールをブロックするように拡張するでしょう。詳しくは [Firefox バグ 1275591](https://bugzil.la/1275591) をご覧ください。
 
 これはプラグインがない未来への行程の、次のステップになります。機能を果たすためにプラグインを必要としない段階に、HTML はとても近づいています。
 
 ## HTTP
 
-- [`Cache-Control: immutable`](/ja/docs/Web/HTTP/Headers/Cache-Control) ディレクティブを実装しました ([Firefox バグ 1267474](https://bugzil.la/1267474))。詳しくは [ブログ記事](https://bitsup.blogspot.com/2016/05/cache-control-immutable.html) もご覧ください。
+- [`Cache-Control: immutable`](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ディレクティブを実装しました ([Firefox バグ 1267474](https://bugzil.la/1267474))。詳しくは [ブログ記事](https://bitsup.blogspot.com/2016/05/cache-control-immutable.html) もご覧ください。
 - {{HTTPHeader("Content-Security-Policy")}} の {{CSP("require-sri-for")}} を実装しました ([Firefox バグ 1265318](https://bugzil.la/1265318))。
 
 ## ネットワーク
@@ -185,14 +180,13 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 
 ## セキュリティ
 
-- {{domxref("isSecureContext")}} プロパティを実装し、これが[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を必要とする機能を使用できるコンテキストであるかを示ようになりました ([Firefox バグ 1162772](https://bugzil.la/1162772))。
+- {{domxref("isSecureContext")}} プロパティを実装し、これが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を必要とする機能を使用できるコンテキストであるかを示ようになりました ([Firefox バグ 1162772](https://bugzil.la/1162772))。
 
 ## 互換性
 
 既存のコンテンツとの互換性を高めるために、一部の webkit 接頭辞つきプロパティおよび属性を Firefox で受け入れるようになりました。
 
 - 以下のプロパティは、`-webkit` 接頭辞がついていても動作します。
-
   - `-webkit-align-items`
   - `-webkit-align-content`
   - `-webkit-align-self`
@@ -240,7 +234,6 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
   - `-webkit-user-select`
 
 - 以下のプロパティは、同等の接頭辞つきプロパティに紐づけています:
-
   - `-webkit-box-flex`
   - `-webkit-box-ordinal-group`
   - `-webkit-box-orient`
@@ -248,19 +241,16 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
   - `-webkit-box-pack`
 
 - {{cssxref("&lt;image&gt;")}} の値について:
-
   - `-webkit-linear-gradient()`、`-webkit-radial-gradient()`、`-webkit-repeating-linear-gradient()`、`-webkit-repeating-radial-gradient()` 関数は、接頭辞なしの同等物に紐づけています。
   - 旧式の `-webkit-gradient` をサポートします (また、正規のグラデーションに変換します)。
 
 - 以下の {{cssxref("display")}} の値を変換します:
-
   - `-webkit-box` を `-moz-box` に変換
   - `-webkit-flex` を `flex` に変換
   - `-webkit-inline-box` を `inline-flex` に変換
   - `-webkit-inline-flex` を `-moz-inline-flex` に変換
 
 - 以下のプロパティをサポートします (接頭辞なしの同等物に紐づけません)。
-
   - {{cssxref("-webkit-text-fill-color")}}
   - {{cssxref("-webkit-text-stroke-color")}}
   - {{cssxref("-webkit-text-stroke-width")}}
@@ -268,8 +258,7 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 
 - `WebKitCSSMatrix` インターフェイスを {{domxref("DOMMatrix")}} の別名にしました。
 - 以下のメディアクエリー特性を実装しました:
-
-  - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
+  - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
   - `-webkit-max-device-pixel-ratio` を [`max-resolution`](/ja/docs/Web/CSS/@media/resolution) の別名として、同じ値 (`dppx`) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。
   - [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d) がマッチするようになりました。3D Transform をサポートすることを示します。
 

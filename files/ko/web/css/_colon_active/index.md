@@ -1,9 +1,7 @@
 ---
-title: ":active"
+title: :active
 slug: Web/CSS/:active
 ---
-
-{{CSSRef}}
 
 **`:active`** [CSS](/ko/docs/Web/API/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 사용자가 활성화한 요소(버튼 등)를 나타냅니다. 마우스를 사용하는 경우, "활성"이란 보통 마우스 버튼을 누르는 순간부터 떼는 시점까지를 의미합니다.
 
@@ -18,7 +16,8 @@ a:active {
 
 `:active` 의사 클래스로 정의한 스타일은 자신보다 뒤에 위치하고 동등한 명시성을 가진 다른 링크 의사 클래스({{cssxref(":link")}}, {{cssxref(":hover")}}, {{cssxref(":visited")}})가 덮어씁니다. 링크를 적절히 디자인하려면 _LVHA-순서(_`:link` — `:visited` — `:hover` — `:active`)를 따라, `:active` 규칙을 다른 모든 링크 규칙들보다 뒤에 배치하세요.
 
-> **참고:** CSS3 명세에 따르면, 다수의 버튼을 가진 마우스라도 `:active` 의사 클래스는 주 버튼에만 적용돼야 합니다. 오른손잡이 마우스 기준, 주 버튼은 보통 맨 왼쪽 버튼입니다.
+> [!NOTE]
+> CSS3 명세에 따르면, 다수의 버튼을 가진 마우스라도 `:active` 의사 클래스는 주 버튼에만 적용돼야 합니다. 오른손잡이 마우스 기준, 주 버튼은 보통 맨 왼쪽 버튼입니다.
 
 ## 구문
 

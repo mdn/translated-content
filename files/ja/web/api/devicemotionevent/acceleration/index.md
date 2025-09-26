@@ -11,7 +11,8 @@ l10n:
 **`acceleration`** プロパティは、端末によって記録された加速度の量を[メートル毎秒毎秒 (m/s²)](https://ja.wikipedia.org/wiki/メートル毎秒毎秒)単位で返します。
 {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} とは異なり、加速度値は重力の影響を含みません。
 
-> **メモ:** ハードウェアが加速度データから重力を除去する方法を知らない場合、{{DOMxRef("DeviceMotionEvent")}} にこの値が存在しないことがあります。この場合、代わりに {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} を使用する必要があります。
+> [!NOTE]
+> ハードウェアが加速度データから重力を除去する方法を知らない場合、{{DOMxRef("DeviceMotionEvent")}} にこの値が存在しないことがあります。この場合、代わりに {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} を使用する必要があります。
 
 ## 値
 

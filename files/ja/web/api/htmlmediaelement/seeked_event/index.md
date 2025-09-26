@@ -1,8 +1,9 @@
 ---
 title: "HTMLMediaElement: seeked イベント"
+short-title: seeked
 slug: Web/API/HTMLMediaElement/seeked_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -16,9 +17,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('seeked', (event) => {});
+addEventListener("seeked", (event) => {});
 
-onseeked = (event) => { };
+onseeked = (event) => {};
 ```
 
 ## イベント型
@@ -27,25 +28,25 @@ onseeked = (event) => { };
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `seeked` イベントにイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`HTMLMediaElement` の `seeked` イベントにイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
 `addEventListener()` を使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('seeked', (event) => {
-  console.log('動画が探していた再生位置を見つけました。');
+video.addEventListener("seeked", (event) => {
+  console.log("動画が探していた再生位置を見つけました。");
 });
 ```
 
 `onseeked` イベントハンドラープロパティを使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onseeked = (event) => {
-  console.log('動画が探していた再生位置を見つけました。');
+  console.log("動画が探していた再生位置を見つけました。");
 };
 ```
 
@@ -62,7 +63,6 @@ video.onseeked = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.playing_event", 'playing')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント

@@ -3,11 +3,45 @@ title: column-count
 slug: Web/CSS/column-count
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`column-count`** divide el contenido de un elemento en el número de columnas indicado.
 
-{{EmbedInteractiveExample("pages/css/column-count.html")}}
+{{InteractiveExample("CSS Demo: column-count")}}
+
+```css interactive-example-choice
+column-count: 2;
+```
+
+```css interactive-example-choice
+column-count: 3;
+```
+
+```css interactive-example-choice
+column-count: 4;
+```
+
+```css interactive-example-choice
+column-count: auto;
+column-width: 8rem;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  text-align: left;
+}
+```
 
 ## Sintaxis
 
@@ -69,4 +103,4 @@ column-count: unset;
 ## Ver también
 
 - [Diseño con columnas múltiples](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Conceptos básicos de Multicol](/es/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [Conceptos básicos de Multicol](/es/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

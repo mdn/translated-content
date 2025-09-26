@@ -27,14 +27,14 @@ Auto margin поглощает все доступное пространств�
 
 В этом случаи левый auto margin занимает любое доступное пространство и толкает элемент к правому краю. Вы могли применить класс push к любому элементу в списке.
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Смотрите также
 
-- [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_flexible_box_layout)

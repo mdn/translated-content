@@ -42,4 +42,4 @@ _Também herda métodos do pai `{{domxref("Event")}}`_.
 
 ## Veja também
 
-- [Usando animações CSS](/pt-BR/docs/CSS/Using_CSS_animations)
+- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)

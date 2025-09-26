@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 
 O método **`codePointAt()`** retorna um número inteiro não negativo que é o valor do ponto de código Unicode.
 
-{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.codePointAt()", "shorter")}}
+
+```js interactive-example
+const icons = "☃★♲";
+
+console.log(icons.codePointAt(1));
+// Expected output: "9733"
+```
 
 ## Sintaxe
 
@@ -115,13 +122,11 @@ for (let codePoint of "\ud83d\udc0e\ud83d\udc71\u2764") {
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.codePointAt")}}
+{{Compat}}
 
 ## Veja também
 

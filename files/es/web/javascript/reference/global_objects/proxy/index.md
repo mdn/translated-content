@@ -61,7 +61,7 @@ Aquí hemos provisto una implementación del manipulador
 intentos de acceder a las propiedades del objeto envuelto.
 
 Las funciones manipuladoras son llamadas a menudo _trampas_, probablemente
-proque atrapan las llamadas al objeto envuelto. La trampa simple de arriba en
+porque atrapan las llamadas al objeto envuelto. La trampa simple de arriba en
 `handler2` redefine todos los accesores de propiedades:
 
 ```js
@@ -422,7 +422,7 @@ var docCookies = new Proxy(docCookies, {
     return oTarget.setItem(sKey, vValue);
   },
   deleteProperty: function (oTarget, sKey) {
-    if (!sKey in oTarget) {
+    if ((!sKey) in oTarget) {
       return false;
     }
     return oTarget.removeItem(sKey);

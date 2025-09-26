@@ -15,7 +15,7 @@ Un **empty statement** o sentencia vacía es usada para no proveer una sentencia
 
 ## Descripción
 
-La sentencia vacía es un punto y coma (;) que indica que no se ejecutará ninguna sentencia, incluso si la sintaxis JavaScript requiere una. El comportamiento opuesto, donde se desean ejecutar varias sentencias pero JavaScript solo permite una sola, es posible usando una [sentencia de bloque](/es/docs/Web/JavaScript/Referencia/Sentencias/block); la cual combina varias declaraciones en una.
+La sentencia vacía es un punto y coma (;) que indica que no se ejecutará ninguna sentencia, incluso si la sintaxis JavaScript requiere una. El comportamiento opuesto, donde se desean ejecutar varias sentencias pero JavaScript solo permite una sola, es posible usando una [sentencia de bloque](/es/docs/Web/JavaScript/Reference/Statements/block); la cual combina varias declaraciones en una.
 
 ## Ejemplos
 

@@ -1,17 +1,18 @@
 ---
 title: "HTMLElement: inputMode プロパティ"
+short-title: inputMode
 slug: Web/API/HTMLElement/inputMode
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLElement")}} の **`inputMode`** プロパティは、この要素の [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性の値を反映します。
+{{domxref("HTMLElement")}} の **`inputMode`** プロパティは、この要素の [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性の値を反映します。
 
 要素やコンテンツの編集中にユーザーが入力する可能性のあるデータの種類を示すヒントを提供するものです。これにより、ブラウザーは適切な仮想キーボードを表示することができます。
 
-これは主に {{HTMLElement("input")}} 要素で使用されますが、どの要素でも [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) モードであれば使用できます。
+これは主に {{HTMLElement("input")}} 要素で使用されますが、どの要素でも [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) モードであれば使用できます。
 
 ## 値
 
@@ -29,16 +30,16 @@ l10n:
     端末によって、マイナスキーがある場合とない場合があります。
 - `search`
   - : 検索入力に最適化された仮想キーボードです。
-    例えば、[リターン/送信キー](https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute)は「検索」と表示されているかもしれません。
+    例えば、[リターン/送信キー](https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute)には「検索」と表示されているかもしれません。
 - `tel`
-  - : 電話機のキーパッド入力で、0 ～ 9 の数字、アスタリスク (<kbd>*</kbd>)、ナンバー (<kbd>#</kbd>) キーを含めるために使用します。
+  - : 電話機のキーパッド入力で、0 ～ 9 の数字、アスタリスク (<kbd>\*</kbd>)、ナンバー (<kbd>#</kbd>) キーを含めるために使用します。
 - `text`
   - : ユーザーの現在のロケールに対応した標準入力キーボードです。
 - `url`
   - : URL の入力に最適化されたキーパッドです。
     これは例えば、<kbd>/</kbd> キーがより目立つように持つことができるかもしれません。
 
-この属性の使い方は、このプロパティを反映した HTML の [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性のページを参照してください。
+この属性の使い方は、このプロパティを反映した HTML の [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性のページを参照してください。
 
 ## 例
 
@@ -52,4 +53,4 @@ l10n:
 
 ## 関連情報
 
-- [inputmode](/ja/docs/Web/HTML/Global_attributes#inputmode) 属性
+- [inputmode](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性

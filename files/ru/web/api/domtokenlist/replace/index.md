@@ -24,7 +24,8 @@ tokenList.replace(oldToken, newToken);
 
 Boolean, которое будет `true`, если `oldToken` был успешно заменён, или `false` в противном случае.
 
-> **Примечание:** В старых браузерах `replace()` возвращает void.
+> [!NOTE]
+> В старых браузерах `replace()` возвращает void.
 
 ## Примеры
 

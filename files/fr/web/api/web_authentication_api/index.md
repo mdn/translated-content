@@ -27,7 +27,8 @@ De nombreux sites web ont des pages qui permettent de créer un compte ou de s'a
 - [`navigator.credentials.get()`](/fr/docs/Web/API/CredentialsContainer/get)
   - : Lorsqu'elle est utilisée avec l'option `publicKey`, elle utilise des informations d'authentification existantes afin de s'authentifier sur un service, pour connecter la personne ou comme deuxième facteur d'authentification.
 
-> **Note :** Ces deux méthodes, `create()` et `get()`, doivent être utilisées depuis [un contexte securisé](/fr/docs/Web/Security/Secure_Contexts) (c'est-à-dire que la connexion au serveur soit en HTTPS ou que le site soit servi depuis localhost). Elles ne seront pas disponibles si le navigateur n'est pas dans un tel contexte.
+> [!NOTE]
+> Ces deux méthodes, `create()` et `get()`, doivent être utilisées depuis [un contexte securisé](/fr/docs/Web/Security/Secure_Contexts) (c'est-à-dire que la connexion au serveur soit en HTTPS ou que le site soit servi depuis localhost). Elles ne seront pas disponibles si le navigateur n'est pas dans un tel contexte.
 
 Dans leurs formes les plus simples, `create()` et `get()` reçoivent un grand nombre aléatoire appelé «&nbsp;challenge&nbsp;» de la part du serveur et renvoient au serveur le challenge signé avec la clé privée. Cela prouve au serveur que la personne est en possession de la clé privée requise pour l'authentification, sans révéler de secrets sur le réseau.
 
@@ -51,38 +52,34 @@ Pour commencer (l'étape 0 dans le diagramme), l'application effectue la requêt
 Les étapes suivantes sont&nbsp;:
 
 1. **Le serveur envoie le challenge, les informations liées à l'utilisatrice ou à l'utilisateur et les informations relatives au tiers de confiance.**
-
    - Ces informations sont envoyées au programme JavaScript. Le protocole de communication avec le serveur ne fait pas partie de la spécification de l'API Web Authentication. Il s'agit généralement d'une communication via HTTPS en [REST](/fr/docs/Glossary/REST) (et qui utilisera probablement [l'API Fetch](/fr/docs/Web/API/Fetch_API) ou encore [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)) (en théorie, tout protocole sécurisé peut être utilisé). Les paramètres reçus du serveur seront passés lors de l'appel à [`create()`](/fr/docs/Web/API/CredentialsContainer/create) (généralement avec peu ou pas de modification) qui renverra [une promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) contenant un objet [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse).
 
-   > **Attention :** Il est absolument nécessaire que le challenge soit un tampon mémoire d'informations aléatoires (d'au moins 16 octets) et qui soit généré sur le serveur afin de garantir la sécurité du processus d'enregistrement.
+   > [!WARNING]
+   > Il est absolument nécessaire que le challenge soit un tampon mémoire d'informations aléatoires (d'au moins 16 octets) et qui soit généré sur le serveur afin de garantir la sécurité du processus d'enregistrement.
 
 2. **Le navigateur appelle `authenticatorMakeCredential()` qui sollicite l'authentificateur.**
-
    - Dans ses rouages internes, le navigateur valide les paramètres et utilise des valeurs par défaut pour les paramètres non renseignés. Cela devient [`AuthenticatorResponse.clientDataJSON`](/fr/docs/Web/API/AuthenticatorResponse/clientDataJSON). Un paramètre majeur est l'origine. Celle-ci est enregistrée au sein de `clientData` afin que l'origine puisse être vérifiée par le serveur ultérieurement. Les paramètres de l'appel à `create()` sont transmis à l'authentificateur avec une empreinte SHA-256 de `clientDataJSON` (seule une empreinte est envoyée, car la communication avec l'authentificateur peut se faire via un canal de communication à faible bande passante comme le NFC ou le Bluetooth), l'authentificateur va signer l'empreinte pour s'assurer qu'elle n'a pas été corrompue.
 
 3. **L'authentificateur crée une nouvelle paire de clés et une attestation.**
-
    - Avant de faire quoi que ce soit, l'authentificateur demandera généralement une vérification de la part de la personne. Cela peut être la saisie d'un code, l'utilisation d'une empreinte digitale ou rétinienne, etc. Il s'agit de prouver que la personne est présente et consent à l'enregistrement. Après cette vérification, l'authentificateur créera une nouvelle paire de clés asymétrique et stockera la clé privée de façon sécurisée afin qu'elle puisse être utilisée à l'avenir. La clé publique devient une composante de l'attestation qui est signée par l'authentificateur à l'aide d'une clé privée qui a été gravée dans l'authentificateur lors de sa fabrication et qui possède une chaîne de certificats qui permet de remonter jusqu'à une autorité de confiance.
 
 4. **L'authentificateur renvoie les données au navigateur.**
-
    - La nouvelle clé publique, un identifiant d'authentification globalement unique ainsi que les autres données de l'attestation sont renvoyées au navigateur et deviennent `attestationObject`.
 
 5. **Le navigateur crée les données finales et l'application envoie la réponse au serveur.**
-
    - La promesse fournie par `create()` est résolue en un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential), possédant une propriété [`PublicKeyCredential.rawId`](/fr/docs/Web/API/PublicKeyCredential/rawId) qui correspond à l'identifiant d'authentification globalement unique et une propriété [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response) contenant le reste de la réponse sous la forme d'un objet [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse) qui contient [`AuthenticatorResponse.clientDataJSON`](/fr/docs/Web/API/AuthenticatorResponse/clientDataJSON) et [`AuthenticatorAttestationResponse.attestationObject`](/fr/docs/Web/API/AuthenticatorAttestationResponse/attestationObject). Cet objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) est renvoyé au serveur en utilisant le format et le protocole voulu.
 
-   > **Note :** Les propriétés qui sont des `ArrayBuffer` doivent être encodés en base64 ou d'une autre façon.
+   > [!NOTE]
+   > Les propriétés qui sont des `ArrayBuffer` doivent être encodés en base64 ou d'une autre façon.
 
 6. **Le serveur valide et finalise l'enregistrement.**
-
    1. Pour finir, le serveur réalise une suite de vérification pour s'assurer que l'enregistrement est terminé et qu'il n'y a pas eu de corruption. Parmi ces vérifications, on a&nbsp;:
-
       1. La vérification que le challenge reçu correspond bien au challenge envoyé&nbsp;;
       2. La vérification que l'origine correspond bien à l'origine attendu&nbsp;;
       3. La validation de la signature de l'empreinte des données du client et de l'attestation en utilisant la chaîne de certificats associée au modèle de l'authentificateur.
 
-      > **Note :** La liste complète des étapes de validation [est détaillée dans la spécification de l'API](https://w3c.github.io/webauthn/#registering-a-new-credential).
+      > [!NOTE]
+      > La liste complète des étapes de validation [est détaillée dans la spécification de l'API](https://w3c.github.io/webauthn/#registering-a-new-credential).
 
    2. Si toutes les vérifications sont réussies, le serveur enregistre la nouvelle clé publique pour le compte de la personne afin qu'elle puisse être utilisée par la suite (quand la personne s'authentifiera).
 
@@ -104,36 +101,31 @@ Pour commencer (il s'agit de l'étape 0 sur le diagramme), l'application effectu
 On a ensuite ces étapes pour l'authentification&nbsp;:
 
 1. **Le serveur envoie un challenge.**
-
    - Le serveur envoie un challenge au programme JavaScript. Le protocole de communication n'est pas détaillé par la spécification. Généralement, on a une requête HTTPS [REST](/fr/docs/Glossary/REST) (qui utilise [l'API Fetch](/fr/docs/Web/API/Fetch_API) ou encore [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)), mais il peut s'agir, en théorie, de n'importe quel protocole sécurisé. Les paramètres reçus du serveur sont passés à l'appel de la méthode [`get()`](/fr/docs/Web/API/CredentialsContainer/get) avec peu ou pas de modification.
 
-   > **Attention :** Il est crucial que le challenge soit un tampon d'informations aléatoires (au moins 16 octets) et que celui-ci ait été généré sur le serveur pour garantir la sécurité du processus d'authentification.
+   > [!WARNING]
+   > Il est crucial que le challenge soit un tampon d'informations aléatoires (au moins 16 octets) et que celui-ci ait été généré sur le serveur pour garantir la sécurité du processus d'authentification.
 
 2. **Le navigateur appelle `authenticatorGetCredential()` qui sollicite l'authentificateur.**
-
    - Dans ses rouages internes, le navigateur valide les paramètres et utilise des valeurs par défaut pour les paramètres non renseignés. Cela devient [`AuthenticatorResponse.clientDataJSON`](/fr/docs/Web/API/AuthenticatorResponse/clientDataJSON). Un des paramètres les plus importants est l'origine, enregistrée dans `clientData` afin qu'elle puisse être vérifiée par le serveur par la suite. Les paramètres passés à `get()` sont transmis à l'authentificateur avec une empreinte SHA-256 de `clientDataJSON` (seule une empreinte est envoyée, car la communication avec l'authentificateur peut se faire via un canal de communication à faible bande passante comme le NFC ou le Bluetooth), l'authentificateur va signer l'empreinte pour s'assurer qu'elle n'a pas été corrompue.
 
 3. **L'authentificateur crée une assertion.**
-
    - L'authentificateur trouve des informations d'authentification associées au service qui correspond à l'identifiant du tiers de confiance et demande à la personne son consentement pour l'authentification. Si ces deux étapes sont réussies, l'authentificateur crée une nouvelle assertion en signant `clientDataHash` et `authenticatorData` avec la clé privée générée pour ce compte pendant l'enregistrement.
 
 4. **L'authentificateur renvoie les données au navigateur.**
-
    - L'authentificateur renvoie `authenticatorData` et la signature de l'assertion au navigateur.
 
 5. **Le navigateur crée les données finales et l'application envoie sa réponse au serveur.**
-
    - Le navigateur résout [la promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) en un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) ayant une propriété [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response). L'application JavaScript transmet alors ces données au serveur en utilisant le format et le protocole de son choix.
 
 6. **Le serveur valide les données reçues et finalise l'authentification.**
-
    1. À la réception de la réponse à la requête d'authentification, le serveur réalise une validation de la réponse avec différentes étapes comme&nbsp;:
-
       1. Utiliser la clé publique enregistrée lors de la requête d'enregistrement afin de valider la signature de l'authentificateur.
       2. Vérifier que le challenge signé par l'authenticateur correspond à celui généré par le serveur.
       3. Vérifier que l'identifiant du tiers de confiance est celui attendu pour ce service.
 
-      > **Note :** La liste complète des étapes de validation d'une assertion [est détaillée dans la spécification de l'API](https://w3c.github.io/webauthn/#verifying-assertion).
+      > [!NOTE]
+      > La liste complète des étapes de validation d'une assertion [est détaillée dans la spécification de l'API](https://w3c.github.io/webauthn/#verifying-assertion).
 
    2. Si la validation est réussie, le serveur notera que la personne est authentifiée. Bien que cela ne soit pas dans le périmètre de la spécification de l'API, cela pourra par exemple se traduire par le dépôt d'un cookie pour la session de la personne.
 
@@ -173,7 +165,8 @@ On a ensuite ces étapes pour l'authentification&nbsp;:
 
 ### Exemple d'utilisation
 
-> **Attention :** Pour des raisons de sécurité, les appels à [`create()`](/fr/docs/Web/API/CredentialsContainer/create) et [`get()`](/fr/docs/Web/API/CredentialsContainer/get) sont annulés si la fenêtre du navigateur perd le focus lorsque l'appel est en attente.
+> [!WARNING]
+> Pour des raisons de sécurité, les appels à [`create()`](/fr/docs/Web/API/CredentialsContainer/create) et [`get()`](/fr/docs/Web/API/CredentialsContainer/get) sont annulés si la fenêtre du navigateur perd le focus lorsque l'appel est en attente.
 
 ```js
 // des arguments d'exemple pour un enregistrement
@@ -204,9 +197,9 @@ const createCredentialDefaultArgs = {
 
     challenge: new Uint8Array([
       // doit être un nombre cryptographiquement aléatoire fourni par le serveur
-      0x8c, 0x0a, 0x26, 0xff, 0x22, 0x91, 0xc1, 0xe9, 0xb9, 0x4e, 0x2e, 0x17, 0x1a,
-      0x98, 0x6a, 0x73, 0x71, 0x9d, 0x43, 0x48, 0xd5, 0xa7, 0x6a, 0x15, 0x7e, 0x38,
-      0x94, 0x52, 0x77, 0x97, 0x0f, 0xef,
+      0x8c, 0x0a, 0x26, 0xff, 0x22, 0x91, 0xc1, 0xe9, 0xb9, 0x4e, 0x2e, 0x17,
+      0x1a, 0x98, 0x6a, 0x73, 0x71, 0x9d, 0x43, 0x48, 0xd5, 0xa7, 0x6a, 0x15,
+      0x7e, 0x38, 0x94, 0x52, 0x77, 0x97, 0x0f, 0xef,
     ]).buffer,
   },
 };
@@ -218,9 +211,9 @@ const getCredentialDefaultArgs = {
     // allowCredentials: [newCredential] // voir ci-dessous
     challenge: new Uint8Array([
       // doit être un nombre cryptographiquement aléatoire fourni par le serveur
-      0x79, 0x50, 0x68, 0x71, 0xda, 0xee, 0xee, 0xb9, 0x94, 0xc3, 0xc2, 0x15, 0x67,
-      0x65, 0x26, 0x22, 0xe3, 0xf3, 0xab, 0x3b, 0x78, 0x2e, 0xd5, 0x6f, 0x81, 0x26,
-      0xe2, 0xa6, 0x01, 0x7d, 0x74, 0x50,
+      0x79, 0x50, 0x68, 0x71, 0xda, 0xee, 0xee, 0xb9, 0x94, 0xc3, 0xc2, 0x15,
+      0x67, 0x65, 0x26, 0x22, 0xe3, 0xf3, 0xab, 0x3b, 0x78, 0x2e, 0xd5, 0x6f,
+      0x81, 0x26, 0xe2, 0xa6, 0x01, 0x7d, 0x74, 0x50,
     ]).buffer,
   },
 };

@@ -9,7 +9,22 @@ La méthode statique **`Object.hasOwn()`** renvoie `true` si l'objet indiqué po
 
 > **Note :** `Object.hasOwn()` est conçu comme une méthode de remplacement pour [`Object.hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty).
 
-{{EmbedInteractiveExample("pages/js/object-hasown.html")}}
+{{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
+
+```js interactive-example
+const object1 = {
+  prop: "exists",
+};
+
+console.log(Object.hasOwn(object1, "prop"));
+// Expected output: true
+
+console.log(Object.hasOwn(object1, "toString"));
+// Expected output: false
+
+console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -142,8 +157,8 @@ if (Object.hasOwn(toto, "prop")) {
 
 ## Voir aussi
 
-- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- [Héritage et chaîne de prototypes dans le guide JavaScript](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Héritage et chaîne de prototypes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [`Object.hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
 - [`Object.getOwnPropertyNames()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
 - [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in)

@@ -1,35 +1,41 @@
 ---
-title: VRDisplayEvent.display
+title: "VRDisplayEvent: свойство display"
 slug: Web/API/VRDisplayEvent/display
+l10n:
+  sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}} {{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-Свойство **`display`** только для чтения интерфейса {{domxref ("VRDisplayEvent")}} возвращает параметр {{domxref ("VRDisplay")}}, связанный с этим событием.
+Доступное только для чтения свойство **`display`** интерфейса {{domxref ("VRDisplayEvent")}} возвращает объект {{domxref ("VRDisplay")}}, связанный с этим событием.
 
-## Синтаксис
-
-```js
-var myDisplay = vrDisplayEventInstance.display;
-```
+> [!NOTE]
+> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ### Значение
 
-A {{domxref("VRDisplay")}} object.
+Объект {{domxref("VRDisplay")}}.
 
-## Пример
+## Примеры
 
-{{page("/Web/API/VRDisplayEvent", "Examples")}}
+```js
+window.addEventListener("vrdisplaypresentchange", (e) => {
+  console.log(
+    `Устройство ${e.display.displayId} отображения было изменено по причине: ${e.reason}.`,
+  );
+});
+```
 
 ## Спецификации
 
-{{Specifications}}
+Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/). Больше не планируется сделать его стандартом.
 
-## Совместимость браузера
+Пока все браузеры не реализуют новые [WebXR API](/ru/docs/Web/API/WebXR_Device_API/Fundamentals), рекомендуется использовать такие фреймворки как [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), [Three.js](https://threejs.org/) или [полифил](https://github.com/immersive-web/webxr-polyfill) для разработки приложений WebXR, которые будут работать [во всех браузерах](https://developer.oculus.com/documentation/web/port-vr-xr/).
+
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Дополнительно
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрационные материалы,материалы для загрузки и другие ресурсы команды Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

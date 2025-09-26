@@ -1,13 +1,14 @@
 ---
 title: "HTMLCanvasElement: toDataURL() メソッド"
+short-title: toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 l10n:
-  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** メソッドは、 `type` 引数で指定された形式で画像を表現したものが入った[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) を返します。
+**`HTMLCanvasElement.toDataURL()`** メソッドは、 `type` 引数で指定された形式で画像を表現したものが入った[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を返します。
 
 希望するファイル形式や画像品質を指定することができます。
 ファイル形式を指定しなかった場合、または指定された形式に対応していない場合は、データは `image/png` として書き出されます。
@@ -29,16 +30,16 @@ toDataURL(type, encoderOptions)
 
 - `type` {{optional_inline}}
   - : 文字列で、画像形式を表します。
-  既定の形式は `image/png` です。この形式は、指定された形式に対応していない場合にも使用されます。
+    既定の形式は `image/png` です。この形式は、指定された形式に対応していない場合にも使用されます。
 - `encoderOptions` {{optional_inline}}
   - : `0` から `1` の間の数値であり、作成する画像が非可逆圧縮（`image/jpeg` や `image/webp` など）であった場合の画像品質を示します。
     このオプションが指定されなかったり、許可されている範囲外の数値であったりした場合は、ユーザーエージェントは既定の品質値を使用します。
 
 ### 返値
 
-要求された[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) の入った文字列です。
+要求された[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) の入った文字列です。
 
-キャンバスの高さまたは幅が `0` または[キャンバスの最大サイズ](/ja/docs/Web/HTML/Element/canvas#キャンバスの最大寸法)より大きい場合、 `"data:,"` という文字列が返されます。
+キャンバスの高さまたは幅が `0` または[キャンバスの最大サイズ](/ja/docs/Web/HTML/Reference/Elements/canvas#キャンバスの最大寸法)より大きい場合、 `"data:,"` という文字列が返されます。
 
 ### 例外
 
@@ -140,4 +141,4 @@ function removeColors() {
 
 ## 関連情報
 
-- [データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)（[HTTP](/ja/docs/Web/HTTP) リファレンス）
+- [データ URL](/ja/docs/Web/URI/Reference/Schemes/data)（[HTTP](/ja/docs/Web/HTTP) リファレンス）

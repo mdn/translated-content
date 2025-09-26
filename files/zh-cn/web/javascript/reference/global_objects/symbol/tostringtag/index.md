@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 
 **`Symbol.toStringTag`** 内置通用（well-known）symbol 是一个字符串值属性，用于创建对象的默认字符串描述。它由 {{jsxref("Object.prototype.toString()")}} 方法内部访问。
 
-{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}
+
+```js interactive-example
+class ValidatorClass {
+  get [Symbol.toStringTag]() {
+    return "Validator";
+  }
+}
+
+console.log(Object.prototype.toString.call(new ValidatorClass()));
+// Expected output: "[object Validator]"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## 示例
 
@@ -27,7 +40,7 @@ Object.prototype.toString.call(null); // "[object Null]"
 
 ### 内置的 toStringTag symbol
 
-大多数内置的对象提供了它们自己的 `@@toStringTag` 属性。所有内置对象的 `@@toStringTag` 属性都是不可写的（writable）、不可枚举的（enumerable）但是可配置的（configurable）。
+大多数内置的对象提供了它们自己的 `[Symbol.toStringTag]` 属性。所有内置对象的 `[Symbol.toStringTag]` 属性都是不可写的（writable）、不可枚举的（enumerable）但是可配置的（configurable）。
 
 ```js
 Object.prototype.toString.call(new Map()); // "[object Map]"

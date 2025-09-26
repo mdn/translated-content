@@ -67,4 +67,4 @@ if (done === true) {
 
 - [`if...else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Операторы сравнения](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения)
-- [Making decisions in your code — conditionals](/ru/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Making decisions in your code — conditionals](/ru/docs/Learn_web_development/Core/Scripting/Conditionals)

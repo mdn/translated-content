@@ -1,9 +1,9 @@
 ---
-title: ":fullscreen"
+title: :fullscreen
 slug: Web/CSS/:fullscreen
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** de [CSS](/es/docs/Web/CSS) representa un elemento que se muestra cuando el navegador está en modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API).
 
@@ -24,7 +24,8 @@ div:fullscreen {
 }
 ```
 
-> **Nota:** La especificación W3C usa la palabra única `:fullscreen`, sin guiones, pero las implementaciones experimentales de WebKit y Gecko usan una variante prefijada con dos palabras separadas por un guión: `:-webkit-full-screen` y `:-moz-full-screen`, respectivamente. Microsoft Edge e Internet Explorer utilizan la convención estándar: `:fullscreen` y `:-ms-fullscreen`, respectivamente.
+> [!NOTE]
+> La especificación W3C usa la palabra única `:fullscreen`, sin guiones, pero las implementaciones experimentales de WebKit y Gecko usan una variante prefijada con dos palabras separadas por un guión: `:-webkit-full-screen` y `:-moz-full-screen`, respectivamente. Microsoft Edge e Internet Explorer utilizan la convención estándar: `:fullscreen` y `:-ms-fullscreen`, respectivamente.
 
 ## Sintaxis
 
@@ -143,4 +144,4 @@ fullscreenButton.addEventListener("click", enterFullscreen);
 - [Usando el modo de pantalla completa](/es/docs/Web/API/Fullscreen_API)
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreen") }}, {{ domxref("Document.fullscreenElement") }}
-- Atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)
+- Atributo [`allowfullscreen`](/es/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

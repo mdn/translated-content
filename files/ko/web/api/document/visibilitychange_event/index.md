@@ -75,4 +75,4 @@ document.onvisibilitychange = () => {
 - [Page Visibility API](/ko/docs/Web/API/Page_Visibility_API)
 - {{domxref("Document.visibilityState")}}
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/)에서는 왜 `beforeunload`/`unload` 대신 `visibilitychange`를 사용해야 하는지 자세히 설명합니다.
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state)에서는 웹 애플리케이션에서 페이지의 수명 주기 동작을 처리하는 최선의 방법들을 제시합니다.
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state)에서는 웹 애플리케이션에서 페이지의 수명 주기 동작을 처리하는 최선의 방법들을 제시합니다.

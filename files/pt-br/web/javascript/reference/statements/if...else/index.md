@@ -14,7 +14,7 @@ if (condição) afirmação1 [else afirmação2]
 ```
 
 - `condição`
-  - : Uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) (premissa) que pode ser avaliada como verdadeira (true) ou falsa (false), veja lógica de programação para entender melhor.
+  - : Uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#expressions) (premissa) que pode ser avaliada como verdadeira (true) ou falsa (false), veja lógica de programação para entender melhor.
 - `condição1`
   - : Condicional que será executada caso a condição em _if_ seja verdadeira (true). Pode ser qualquer instrução, incluindo mais condicionais _if_ aninhadas à instrução. Para executar multiplas instruções, faça um agrupamento com uma instrução em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) ({ ... }). Para não executar nenhuma instrução, utilize uma instrução vazia ([empty](/pt-BR/docs/Web/JavaScript/Reference/Statements/Empty)).
 - `condição2`
@@ -110,17 +110,11 @@ if ((x = y)) {
 
 ## Especificações
 
-| Especificação                                                | Status               | Comentário        |
-| ------------------------------------------------------------ | -------------------- | ----------------- |
-| {{SpecName('ESDraft', '#sec-if-statement', 'if statement')}} | {{Spec2('ESDraft')}} |                   |
-| {{SpecName('ES6', '#sec-if-statement', 'if statement')}}     | {{Spec2('ES6')}}     |                   |
-| {{SpecName('ES5.1', '#sec-12.5', 'if statement')}}           | {{Spec2('ES5.1')}}   |                   |
-| {{SpecName('ES3', '#sec-12.5', 'if statement')}}             | {{Spec2('ES3')}}     |                   |
-| {{SpecName('ES1', '#sec-12.5', 'if statement')}}             | {{Spec2('ES1')}}     | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.if_else")}}
+{{Compat}}
 
 ## Veja também
 

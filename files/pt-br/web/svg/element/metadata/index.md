@@ -17,16 +17,16 @@ Metadados são dados estruturados sobre dados. Metadados que são incluídos com
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
 
 ### Atributos específicos
 
-_Não existem atributos específicos_
+_Não existem atributos específicos._
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGMetadataElement`](/pt-BR/DOM/SVGMetadataElement).
+Este elemento implementa a interface do [`SVGMetadataElement`](/pt-BR/docs/DOM/SVGMetadataElement).
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.metadata")}}
+{{Compat}}

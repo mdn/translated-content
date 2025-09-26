@@ -37,7 +37,8 @@ document.onclick = function (event) {
 };
 ```
 
-> **Nota:** Para un ejemplo más completo, vea [Example](/es/docs/Web/API/Element/requestFullScreen#example).
+> [!NOTE]
+> Para un ejemplo más completo, vea [Example](/es/docs/Web/API/Element/requestFullscreen#example).
 
 ## Especificaciones
 
@@ -54,4 +55,4 @@ document.onclick = function (event) {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- The {{HTMLElement("iframe")}} [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen) attribute
+- The {{HTMLElement("iframe")}} [`allowfullscreen`](/es/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) attribute

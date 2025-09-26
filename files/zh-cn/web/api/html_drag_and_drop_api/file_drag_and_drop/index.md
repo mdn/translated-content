@@ -42,7 +42,8 @@ HTML 拖放接口使得 web 应用能够在网页中拖放文件。这篇文档�
 }
 ```
 
-> **备注：** 注意当执行将文件拖入浏览器的操作时操作系统并不会触发 `dragstart` 和 `dragend` 事件。
+> [!NOTE]
+> 注意当执行将文件拖入浏览器的操作时操作系统并不会触发 `dragstart` 和 `dragend` 事件。
 
 ## 执行释放事件
 
@@ -95,5 +96,5 @@ function dragOverHandler(ev) {
 ## 参见
 
 - [HTML Drag and Drop API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/zh-CN/docs/Web/Guide/HTML/Drag_operations)
+- [Drag Operations](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

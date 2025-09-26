@@ -1,17 +1,27 @@
 ---
-title: HTMLMediaElement.sinkId
+title: "HTMLMediaElement: sinkId プロパティ"
+short-title: sinkId
 slug: Web/API/HTMLMediaElement/sinkId
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 3df177b401e00e3a855c40fc074b5ef2469b700d
 ---
 
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+{{APIRef("Audio Output Devices API")}}{{securecontext_header}}
 
-**`HTMLMediaElement.sinkId`** は読み取り専用プロパティで、出力を配信する音声機器の固有の ID である文字列を返します。ユーザーエージェントの既定で使用されている場合は、空文字列を返します。この ID は {{domxref("MediaDevices.enumerateDevices()")}}、`id-multimedia`、`id-communications` から返される値のいずれかである必要があります。
+**`sinkId`** は {{domxref("HTMLMediaElement")}} インターフェイスの読み取り専用プロパティで、出力を配信する音声機器の固有の ID である文字列を返します。
+
+この ID は {{domxref("MediaDevices.enumerateDevices()")}} から返される {{domxref("MediaDeviceInfo.deviceId")}} の値、`id-multimedia`、`id-communications` のいずれかである必要があります。
+ユーザーエージェントの既定の機器が使用されている場合は、空文字列を返します。
 
 ## 値
 
-文字列です。
+出力を配信する音声機器の固有の ID である文字列を返します。ユーザーエージェントの既定の機器が使用されている場合は、空文字列を返します。
+
+## セキュリティの要件
+
+このプロパティにアクセスするには、以下の制約があります。
+
+- このプロパティは、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
 
 ## 仕様書
 
@@ -20,3 +30,9 @@ l10n:
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [オーディオ出力機器 API](/ja/docs/Web/API/Audio_Output_Devices_API)
+- {{domxref("MediaDevices.selectAudioOutput()")}}
+- {{domxref("HTMLMediaElement.setSinkId()")}}

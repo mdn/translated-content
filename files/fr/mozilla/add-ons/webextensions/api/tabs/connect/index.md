@@ -3,13 +3,13 @@ title: tabs.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Appelez cette fonction pour configurer une connexion entre les scripts d'arrière-plan de l'extension (ou d'autres scripts privilégiés, tels que les scripts d'arrière-plan de l'extrension (ou d'autres scripts privilégiés, tels que les scripts de pages d'options) et les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) appartenant à cette extension et s'exécutant dans l'onglet spécifié. Cette fonction renvoie un objet {{WebExtAPIRef("runtime.Port")}}.
 
 Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} est déclenché dans tout script de contenu appartenant à cette extension qui s'exécute dans l'onglet spécifié. L'écouteur d'événement recevra un autre objet {{WebExtAPIRef("runtime.Port")}}. Les deux parties peuvent ensuite utiliser les objets `Port` pour échanger des messages.
 
-Pour plus de détails, voir [connection-based messaging](/fr/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging).
+Pour plus de détails, voir [connection-based messaging](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
 
 ## Syntaxe
 
@@ -25,9 +25,7 @@ browser.tabs.connect(
 - `tabId`
   - : `integer`. ID of the tab whose content scripts we want to connect to.
 - `connectInfo`{{optional_inline}}
-
   - : `object`.
-
     - `name`{{optional_inline}}
       - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.
     - `frameId`{{optional_inline}}
@@ -39,7 +37,7 @@ browser.tabs.connect(
 
 ## Examples
 
-In this example a background script listens for a click on a [browser action](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2), then connects to the currently active tab, then sends a message using the `Port` that's returned from `connect()`:
+In this example a background script listens for a click on a [browser action](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), then connects to the currently active tab, then sends a message using the `Port` that's returned from `connect()`:
 
 ```js
 function connectToTab(tabs) {
@@ -70,11 +68,9 @@ browser.browserAction.onClicked.addListener(function () {
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

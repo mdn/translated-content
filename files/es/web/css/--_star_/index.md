@@ -3,8 +3,6 @@ title: "Propiedades personalizadas (--*): variables CSS"
 slug: Web/CSS/--*
 ---
 
-{{CSSRef}}
-
 Los nombres de las propiedades que tiene el prefijo `--`, como `--ejemplo-nombre`, representan las _propiedades personalizadas_ que contienen un valor que puede ser usado en otras declaraciones usando la función {{cssxref("var")}}.
 
 Las propiedades personalizadas tienen como alcance los elementos en los que se declaran y participan en la cascada: el valor de dicha propiedad personalizada es el de la declaración decidida por el algoritmo en cascada.
@@ -22,7 +20,8 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 - `<declaración-valor>`
   - : Este valor coincide con cualquier secuencia de uno o más tokens, siempre que la secuencia no contenga un token no permitido.
 
-> **Nota:** Los nombres de las propiedades personalizadas distinguen entre mayúsculas y minúsculas — `--mi-color` se tratará como una propiedad personalizada separada de `--Mi-color`.
+> [!NOTE]
+> Los nombres de las propiedades personalizadas distinguen entre mayúsculas y minúsculas — `--mi-color` se tratará como una propiedad personalizada separada de `--Mi-color`.
 
 ### Sintaxis formal
 
@@ -88,5 +87,5 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 
 ## Ver también
 
-- [Usando variables CSS](/es/docs/Web/CSS/Using_CSS_variables)
+- [Usando variables CSS](/es/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 - La función {{cssxref("var")}}

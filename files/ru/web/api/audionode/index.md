@@ -12,24 +12,21 @@ slug: Web/API/AudioNode
 
 Разные узлы могут быть связаны в _граф обработки_. Граф помещается в {{domxref("AudioContext")}}. Один `AudioNode` может принадлежать только одному {{domxref("AudioContext")}}. В общем, узлы наследуют свойства и методы AudioNode, но они могут также и определять собственный функционал.Смотрите описания конкретных узлов на страницах этих узлов перечисленных на главной странице [Web Audio API](/ru/docs/Web/API/Web_Audio_API).
 
-> **Примечание:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
+> [!NOTE]
+> An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
 ## Свойства
 
 - {{domxref("AudioNode.context")}} {{readonlyInline}}
-
   - : Возвращает связанный {{domxref("AudioContext")}}, это объект, представляющий граф, в котором находится данный узел.
 
 - {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
-
   - : Возвращает количество входов узла. Узлы определённые как источники имеют `numberOfInputs` равное 0.
 
 - {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
-
   - : Возвращает количество выходов узла. Узлы назначения — такие как {{ domxref("AudioDestinationNode") }} — имеют количество выходов равное 0.
 
 - {{domxref("AudioNode.channelCount")}}
-
   - : Это целое число, используемое для определения того, сколько каналов используются для [up-mixing and down-mixing](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) с любыми входами узла. Его использование точнее определяется значением {{domxref("AudioNode.channelCountMode")}}.
 
 - {{domxref("AudioNode.channelCountMode")}}
@@ -78,6 +75,6 @@ oscillator.channelCount;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

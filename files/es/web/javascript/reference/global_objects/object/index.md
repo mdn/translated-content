@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 {{JSRef}}
 
-La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/docs/Web/JavaScript/Data_structures). Es usado para guardar una colección de datos definidos y entidades más complejas. Los objetos pueden ser creados utilizando el constructor {{jsxref("Object/Object", "Object()")}} o [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/docs/Web/JavaScript/Guide/Data_structures). Es usado para guardar una colección de datos definidos y entidades más complejas. Los objetos pueden ser creados utilizando el constructor {{jsxref("Object/Object", "Object()")}} o [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Descripción
 
@@ -81,25 +81,25 @@ No hay ningún método en un Objeto que sirva para borrar sus propiedades (como 
 
 - {{jsxref("Object.prototype.constructor")}}
   - : Especifica la función que crea el prototipo de un objeto.
-- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__proto__)
+- [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
   - : Apunta al objeto que fue usado como prototipo cuando el objeto fue instanciado.
 
 ## Métodos de instancia
 
-- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : Asocia una función a una propiedad que, cuando es accedida, ejecuta la función y retorna su valor de retorno.
-- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : Asocia una función a una propiedad que, cuando es estipulada, ejecuta la función que modificará dicha propiedad.
-- [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__).
-- [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__).
+- [`Object.prototype.__lookupGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__).
+- [`Object.prototype.__lookupSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__).
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : Devuelve un booleano que indica si el objeto contiene una propiedad determinada como una propiedad directa del objeto y que no haya sido heredada a través de la cadena de prototipos.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
   - : Devuelve un booleano que indica si el objeto por el cual este método está siendo llamado está en la cadena de prototipos del objeto específicado.
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-  - : Devuelve un booleano indicando si el [atributo ECMAScript [[Enumerable\]\]](/es/docs/Web/JavaScript/Data_structures#propiedades) interno está establecido.
+  - : Devuelve un booleano indicando si el [atributo ECMAScript [[Enumerable\]\]](/es/docs/Web/JavaScript/Guide/Data_structures#propiedades) interno está establecido.
 - {{jsxref("Object.prototype.toLocaleString()")}}
   - : Llama a {{jsxref("Object.toString", "toString()")}}.
 - {{jsxref("Object.prototype.toString()")}}

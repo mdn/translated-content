@@ -7,16 +7,6 @@ slug: Web/API/Element/children
 
 **`Element.children`** 是一个只读属性，返回 一个 Node 的子{{domxref("Element","elements")}} ，是一个动态更新的 {{domxref("HTMLCollection")}}。
 
-## 语法
-
-```
-var children = node.children;
-```
-
-```
-var elList = elementNodeReference.children;
-```
-
 ## 备注
 
 `children` 属性为只读属性，对象类型为 {{ domxref("HTMLCollection") }}，你可以使用 `elementNodeReference.children[1].nodeName` 来获取某个子元素的标签名称。
@@ -44,7 +34,7 @@ if (parg.childElementCount) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - The {{domxref("Element")}} and {{domxref("ChildNode")}} pure interfaces.
 - Object types implementing this pure interface: {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("DocumentFragment")}}.

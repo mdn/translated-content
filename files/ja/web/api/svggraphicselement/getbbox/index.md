@@ -9,7 +9,8 @@ slug: Web/API/SVGGraphicsElement/getBBox
 
 メモ: `getBBox` は要素がまだレンダリングされていない場合でも、メソッドが呼び出されたときに実際の境界ボックスを返します。また、要素またはその親に適用される変換は無視します。
 
-> **メモ:** `getBBox` は {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。
+> [!NOTE]
+> `getBBox` は {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。
 
 ## 構文
 
@@ -27,35 +28,37 @@ let bboxRect = object.getBBox();
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <g id="group_text_1">
-        <text x="5" y="16" transform="scale(2, 2)">Hello World!</text>
-        <text x="8" y="32" transform="translate(0 20) scale(1.25 1)">Hello World Again!</text>
-    </g>
-    <!-- Shows BBox in green -->
-    <rect id="rect_1" stroke="#00ff00" stroke-width="3" fill="none"> </rect>
-    <!-- Shows BoundingClientRect in red -->
-    <rect id="rect_2" stroke="#ff0000" stroke-width="3" fill="none"></rect>
+  <g id="group_text_1">
+    <text x="5" y="16" transform="scale(2, 2)">Hello World!</text>
+    <text x="8" y="32" transform="translate(0 20) scale(1.25 1)">
+      Hello World Again!
+    </text>
+  </g>
+  <!-- Shows BBox in green -->
+  <rect id="rect_1" stroke="#00ff00" stroke-width="3" fill="none"></rect>
+  <!-- Shows BoundingClientRect in red -->
+  <rect id="rect_2" stroke="#ff0000" stroke-width="3" fill="none"></rect>
 </svg>
 ```
 
 ### JavaScript
 
 ```js
-var rectBBox = document.querySelector('#rect_1');
-var rectBoundingClientRect = document.querySelector('#rect_2');
-var groupElement = document.querySelector('#group_text_1');
+var rectBBox = document.querySelector("#rect_1");
+var rectBoundingClientRect = document.querySelector("#rect_2");
+var groupElement = document.querySelector("#group_text_1");
 
 var bboxGroup = groupElement.getBBox();
-rectBBox.setAttribute('x', bboxGroup.x);
-rectBBox.setAttribute('y', bboxGroup.y);
-rectBBox.setAttribute('width', bboxGroup.width);
-rectBBox.setAttribute('height', bboxGroup.height);
+rectBBox.setAttribute("x", bboxGroup.x);
+rectBBox.setAttribute("y", bboxGroup.y);
+rectBBox.setAttribute("width", bboxGroup.width);
+rectBBox.setAttribute("height", bboxGroup.height);
 
 var boundingClientRectGroup = groupElement.getBoundingClientRect();
-rectBoundingClientRect.setAttribute('x', boundingClientRectGroup.x);
-rectBoundingClientRect.setAttribute('y', boundingClientRectGroup.y);
-rectBoundingClientRect.setAttribute('width', boundingClientRectGroup.width);
-rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);
+rectBoundingClientRect.setAttribute("x", boundingClientRectGroup.x);
+rectBoundingClientRect.setAttribute("y", boundingClientRectGroup.y);
+rectBoundingClientRect.setAttribute("width", boundingClientRectGroup.width);
+rectBoundingClientRect.setAttribute("height", boundingClientRectGroup.height);
 ```
 
 ## 仕様書

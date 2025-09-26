@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/privacy
 
 さまざまなプライバシー関連のブラウザー設定にアクセスや変更を行います。
 
-privacy API を使うには、"privacy" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
+privacy API を使うには、"privacy" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
 
 ## プロパティ
 
@@ -20,11 +20,12 @@ privacy API を使うには、"privacy" [API パーミッション](/ja/Add-ons/
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.privacy", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

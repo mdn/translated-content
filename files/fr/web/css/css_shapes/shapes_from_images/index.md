@@ -21,7 +21,7 @@ On peut utiliser {{cssxref("shape-margin")}} afin d'écarter le texte de la form
 
 ## Origines et compatibilité CORS
 
-Attention, les images utilisées pour créer les formes doivent [être compatibles pour le CORS](/fr/docs/Web/HTTP/CORS). Une image hébergée sur le même domaine que le site devrait fonctionner. En revanche, si les images sont hébergées sur un domaine différent (celui d'un CDN par exemple), il faudra s'assurer que les bons en-têtes HTTP sont fournis afin de construire des images. À cause de ce prérequis, si vous testez un site en local avec vos fichiers, les formes CSS à partir d'images ne fonctionneront pas si vous ne mettez pas en place de serveur web local.
+Attention, les images utilisées pour créer les formes doivent [être compatibles pour le CORS](/fr/docs/Web/HTTP/Guides/CORS). Une image hébergée sur le même domaine que le site devrait fonctionner. En revanche, si les images sont hébergées sur un domaine différent (celui d'un CDN par exemple), il faudra s'assurer que les bons en-têtes HTTP sont fournis afin de construire des images. À cause de ce prérequis, si vous testez un site en local avec vos fichiers, les formes CSS à partir d'images ne fonctionneront pas si vous ne mettez pas en place de serveur web local.
 
 ### Ai-je à faire à un problème de CORS ?
 
@@ -45,7 +45,7 @@ Il est nécessaire d'avoir un contenu flottant pour créer une forme mais ce con
 
 ## Créer des formes avec un dégradé
 
-En CSS, [un dégradé](/fr/docs/Web/CSS/Utilisation_de_dégradés_CSS) est une image. On peut donc utiliser un dégradé afin de générer une forme.
+En CSS, [un dégradé](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) est une image. On peut donc utiliser un dégradé afin de générer une forme.
 
 Dans le prochain exemple, on utilise un contenu généré flottant dont l'image d'arrière-plan est un dégradé linéaire. On utilise la même valeur pour {{cssxref("shape-outside")}}. Le dégradé linéaire évolue du mauve vers le transparent. En modifiant la valeur de {{cssxref("shape-image-threshold")}}, on peut donc sélectionner le niveau de transparence nécessaire à la création de la forme. N'hésitez pas à modifier la valeur du seuil dans l'exemple suivant afin de voir le déplacement du contour en fonction du niveau de dégradé.
 

@@ -18,14 +18,14 @@ slug: Web/API/WebSockets_API
 
 ## Herramientas
 
-- [Socket.IO](http://socket.io): Una poderosa API WebSocket multi-plataforma para [Node.js](http://nodejs.org).
-- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): Un servidor WebSocket API implementado para [Node.js](http://nodejs.org).
-- [Total.js](http://www.totaljs.com): Framework para aplicaciones web para [Node.js](http://www.nodejs.org) (Ejemplo: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
-- [Faye](https://www.npmjs.com/package/faye-websocket): Un servidor y cliente [WebSocket](/es/docs/Web/API/WebSockets_API) (conexión bidireccional) y [EventSource](/es/docs/Web/API/EventSource/) (conexión unidireccional) para [Node.js](http://nodejs.org).
+- [Socket.IO](http://socket.io): Una poderosa API WebSocket multi-plataforma para [Node.js](https://nodejs.org).
+- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): Un servidor WebSocket API implementado para [Node.js](https://nodejs.org).
+- [Total.js](https://www.totaljs.com): Framework para aplicaciones web para [Node.js](http://www.nodejs.org) (Ejemplo: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
+- [Faye](https://www.npmjs.com/package/faye-websocket): Un servidor y cliente [WebSocket](/es/docs/Web/API/WebSockets_API) (conexión bidireccional) y [EventSource](/es/docs/Web/API/EventSource) (conexión unidireccional) para [Node.js](https://nodejs.org).
 
 ## Temas RELACIONADOS
 
-- [AJAX](/es/docs/AJAX), [JavaScript](/es/docs/JavaScript)
+- [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/es/docs/Web/JavaScript)
 
 ## Especificaciones
 
@@ -37,6 +37,6 @@ slug: Web/API/WebSockets_API
 
 ## Ver también
 
-- [RFC 6455 - The WebSocket Protocol](http://tools.ietf.org/html/rfc6455)
-- [WebSocket API Specification](http://www.w3.org/TR/websockets/)
-- [Server-Sent Events](/es/docs/Server-sent_events)
+- [RFC 6455 - The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
+- [WebSocket API Specification](https://www.w3.org/TR/websockets/)
+- [Server-Sent Events](/es/docs/Web/API/Server-sent_events)

@@ -9,13 +9,14 @@ l10n:
 
 多くの WebVR ハードウェアは、ヘッドセットとゲームパッドがセットになっています。WebVR アプリにおいては、ヘッドセットとゲームパッドは[ゲームパッド API](/ja/docs/Web/API/Gamepad_API)を通じて接続されます。中でも、[ゲームパッド拡張 API](/ja/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) は、ゲームパッドの状態([controller pose](/ja/docs/Web/API/GamepadPose))、触覚アクチュエータ([haptic actuators](/ja/docs/Web/API/GamepadHapticActuator))などの情報を取得します。この記事では、その基礎となる部分を解説します。
 
-> **メモ:** WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
+> [!NOTE]
+> WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
 
 ## WebVR API
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) は初期段階ではあるが、開発者がウェブベースのバーチャルリアリティー経験を生み出すことのできるとても興味深いウェブの新しい機能です。コンピュータとつながっている VR ヘッドセット（VR ディスプレイ）へのアクセスを与えることで、ディスプレイをスタートしたり、ストップする操作ができます。動きのデータ（例：方向や位置）へアクセスして得られたデータは、各アニメーションループのフレームごとにディスプレイをアップデートするためなどに使用されます。
 
-この記事を読む前提として、Web VR API の基礎についてすでに知っていることを想定しています。 — もしまだ [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)にを読んでいない場合には、まずはそちらを読んでみましょう。その記事の中では、ブラウザ側がハードウェアの設定をサポートしたり、設定を要求したりすることについて詳しく説明しています。
+この記事を読む前提として、Web VR API の基礎についてすでに知っていることを想定しています。 — もしまだ [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)にを読んでいない場合には、まずはそちらを読んでみましょう。その記事の中では、ブラウザー側がハードウェアの設定をサポートしたり、設定を要求したりすることについて詳しく説明しています。
 
 ## ゲームパッド API
 
@@ -23,7 +24,7 @@ l10n:
 
 ゲームパッド API の基本的な使い方については、[ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)や[ゲームパッド API を使用した制御の実装](/ja/docs/Games/Techniques/Controls_Gamepad_API)の中で詳しく知ることができます。
 
-しかしながら、この記事では主に、位置、方向、触覚アクチュエーター（バイブレーション）などの高度なゲームパッド情報へのアクセスのような、[ゲームパッド拡張](https://w3c.github.io/gamepad/extensions.html) API で与えられたいくつかの新しい特徴に注目します。この API はとても新しく、Firefox 55+ Beta や Firefox Nightly のブラウザでのみデフォルトで WebVR API がサポートされています。
+しかしながら、この記事では主に、位置、方向、触覚アクチュエーター（バイブレーション）などの高度なゲームパッド情報へのアクセスのような、[ゲームパッド拡張](https://w3c.github.io/gamepad/extensions.html) API で与えられたいくつかの新しい特徴に注目します。この API はとても新しく、Firefox 55+ Beta や Firefox Nightly のブラウザーでのみデフォルトで WebVR API がサポートされています。
 
 ## ゲームパッドの種類
 
@@ -46,10 +47,11 @@ VR ハードウェアに付随するゲームパッドには、２つの種類�
 let initialRun = true;
 
 if (navigator.getVRDisplays && navigator.getGamepads) {
-  info.textContent = 'WebVR API and Gamepad API supported.'
+  info.textContent = "WebVR API and Gamepad API supported.";
   reportDisplays();
 } else {
-  info.textContent = 'WebVR API and/or Gamepad API not supported by this browser.'
+  info.textContent =
+    "WebVR API and/or Gamepad API not supported by this browser.";
 }
 ```
 
@@ -62,8 +64,9 @@ function reportDisplays() {
     displays.forEach((display, i) => {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
+      const listItem = document.createElement("li");
+      listItem.innerHTML =
+        `<strong>Display ${i + 1}</strong><br>` +
         `VR Display ID: ${display.displayId}<br>` +
         `VR Display Name: ${display.displayName}<br>` +
         `Display can present content: ${cap.canPresent}<br>` +
@@ -82,7 +85,7 @@ function reportDisplays() {
 
 この関数は最初にプロミスベースの {{domxref("Navigator.getVRDisplays()")}} メソッドを使用し、接続されたディスプレイを表す {{domxref("VRDisplay")}} オブジェクトを含む配列を使用して解決します。次に、各ディスプレイの {{domxref("VRDisplay.displayId")}} と {{domxref("VRDisplay.displayName")}} 値、およびそのディスプレイに関連付けられた {{domxref("VRCapabilities")}} オブジェクトに格納されている多くの有用な値が表示されます。これらのうち最も有益なのは {{domxref("VRCapabilities.hasOrientation", "hasOrientation")}} と {{domxref("VRCapabilities.hasPosition", "hasPosition")}} で、これにより機器が向きと位置のデータを返すことができるかどうかを検出し、それに応じてアプリを設定することができます。
 
-この関数に含まれる最後の行は {{domxref("setTimeout()")}} 呼び出しで、 1 秒後に `reportGamepads()` 関数を実行します。なぜこのようなことが必要なのでしょうか？まず第一に、 VR コントローラーは関連する VR ヘッドセットがアクティブになって初めて準備が整います。そのため、`getVRDisplays()`が呼び出されてディスプレイ情報を返した後に、この関数を呼び出す必要があります。 2 つ目として、ゲームパッド API は WebVR API よりもずっと古く、プロミスベースではありません。後ほど説明しますが、`getGamepads()` メソッドは同期型で、`Gamepad` オブジェクトをすぐに返すだけです - コントローラーが情報を報告する準備ができるまで待つことはありません。少し待たないと、返された情報は正確ではないかもしれません（少なくとも、我々のテストではそうでした）。
+この関数に含まれる最後の行は {{domxref("Window.setTimeout", "setTimeout()")}} 呼び出しで、 1 秒後に `reportGamepads()` 関数を実行します。なぜこのようなことが必要なのでしょうか？まず第一に、 VR コントローラーは関連する VR ヘッドセットがアクティブになって初めて準備が整います。そのため、`getVRDisplays()`が呼び出されてディスプレイ情報を返した後に、この関数を呼び出す必要があります。 2 つ目として、ゲームパッド API は WebVR API よりもずっと古く、プロミスベースではありません。後ほど説明しますが、`getGamepads()` メソッドは同期型で、`Gamepad` オブジェクトをすぐに返すだけです - コントローラーが情報を報告する準備ができるまで待つことはありません。少し待たないと、返された情報は正確ではないかもしれません（少なくとも、我々のテストではそうでした）。
 
 ### ゲームゲームパッドの情報を取得
 
@@ -90,20 +93,21 @@ function reportDisplays() {
 
 ```js
 function reportGamepads() {
-    const gamepads = navigator.getGamepads();
-    console.log(`${gamepads.length} controllers`);
-    for (const gp of gamepads) {
-        const listItem = document.createElement('li');
-        listItem.classList = 'gamepad';
-        listItem.innerHTML = `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
-          `Associated with VR Display ID: ${gp.displayId}<br>` +
-          `Gamepad associated with which hand: ${gp.hand}<br>` +
-          `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
-          `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
-          `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
-        list.appendChild(listItem);
-    }
-    initialRun = false;
+  const gamepads = navigator.getGamepads();
+  console.log(`${gamepads.length} controllers`);
+  for (const gp of gamepads) {
+    const listItem = document.createElement("li");
+    listItem.classList = "gamepad";
+    listItem.innerHTML =
+      `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
+      `Associated with VR Display ID: ${gp.displayId}<br>` +
+      `Gamepad associated with which hand: ${gp.hand}<br>` +
+      `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
+      `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
+      `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
+    list.appendChild(listItem);
+  }
+  initialRun = false;
 }
 ```
 
@@ -127,7 +131,7 @@ function reportGamepads() {
 
 ```js
 function removeGamepads() {
-  const gpLi = document.querySelectorAll('.gamepad');
+  const gpLi = document.querySelectorAll(".gamepad");
   for (let i = 0; i < gpLi.length; i++) {
     list.removeChild(gpLi[i]);
   }
@@ -140,14 +144,14 @@ function removeGamepads() {
 `removeGamepads()` は、ゲームパッドが接続または切断されるたびに、以下のイベントハンドラーで実行されます。
 
 ```js
-window.addEventListener('gamepadconnected', (e) => {
+window.addEventListener("gamepadconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} connected.`;
   if (!initialRun) {
     setTimeout(removeGamepads, 1000);
   }
 });
 
-window.addEventListener('gamepaddisconnected', (e) => {
+window.addEventListener("gamepaddisconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} disconnected.`;
   setTimeout(removeGamepads, 1000);
 });
@@ -192,22 +196,14 @@ if (gp) {
 ```js
 if (gp && gpPose.hasPosition) {
   mvTranslate([
-    0.0 + (curPos[0] * 15) - (curOrient[1] * 15),
-    0.0 + (curPos[1] * 15) + (curOrient[0] * 15),
-    -15.0 + (curPos[2] * 25)
+    0.0 + curPos[0] * 15 - curOrient[1] * 15,
+    0.0 + curPos[1] * 15 + curOrient[0] * 15,
+    -15.0 + curPos[2] * 25,
   ]);
 } else if (gp) {
-  mvTranslate([
-    0.0 + (curOrient[1] * 15),
-    0.0 + (curOrient[0] * 15),
-    -15.0
-  ]);
+  mvTranslate([0.0 + curOrient[1] * 15, 0.0 + curOrient[0] * 15, -15.0]);
 } else {
-  mvTranslate([
-    0.0,
-    0.0,
-    -15.0
-  ]);
+  mvTranslate([0.0, 0.0, -15.0]);
 }
 ```
 
@@ -223,26 +219,31 @@ if (gp && gpPose.hasPosition) {
 function displayPoseStats(pose) {
   const pos = pose.position;
 
-  const formatCoords = ([x, y, z]) => `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
+  const formatCoords = ([x, y, z]) =>
+    `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
 
   posStats.textContent = pose.hasPosition
     ? `Position: ${formatCoords(pose.position)}`
-    : 'Position not reported';
+    : "Position not reported";
 
   orientStats.textContent = pose.hasOrientation
     ? `Orientation: ${formatCoords(pose.orientation)}`
-    : 'Orientation not reported';
+    : "Orientation not reported";
 
-  linVelStats.textContent = `Linear velocity: ${formatCoords(pose.linearVelocity)}`;
-  angVelStats.textContent = `Angular velocity: ${formatCoords(pose.angularVelocity)}`;
+  linVelStats.textContent = `Linear velocity: ${formatCoords(
+    pose.linearVelocity,
+  )}`;
+  angVelStats.textContent = `Angular velocity: ${formatCoords(
+    pose.angularVelocity,
+  )}`;
 
   linAccStats.textContent = pose.linearAcceleration
     ? `Linear acceleration: ${formatCoords(pose.linearAcceleration)}`
-    : 'Linear acceleration not reported';
+    : "Linear acceleration not reported";
 
   angAccStats.textContent = pose.angularAcceleration
     ? `Angular acceleration: ${formatCoords(pose.angularAcceleration)}`
-    : 'Angular acceleration not reported';
+    : "Angular acceleration not reported";
 }
 ```
 

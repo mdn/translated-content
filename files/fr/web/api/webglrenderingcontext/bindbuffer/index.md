@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/bindBuffer
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.bindBuffer()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) lie un {{domxref("WebGLBuffer")}} donné à une cible.
+La méthode **`WebGLRenderingContext.bindBuffer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) lie un {{domxref("WebGLBuffer")}} donné à une cible.
 
 ## Syntaxe
 
@@ -23,7 +23,6 @@ void gl.bindBuffer(cible, tampon);
 - `gl.ARRAY_BUFFER` : tampon contenant des attributs de sommet, tels que des coordonnées de vertex, des données de coordonnées de texture ou des données de couleurs de sommet ;
 - `gl.ELEMENT_ARRAY_BUFFER` : tampon utilisé pour les indices d'éléments ;
 - Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL context 2", "", 1)}}, les valeurs suivantes sont disponibles en plus :
-
   - `gl.COPY_READ_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
   - `gl.COPY_WRITE_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
   - `gl.TRANSFORM_FEEDBACK_BUFFER` : tampon pour les opérations de retour de la transformation ;

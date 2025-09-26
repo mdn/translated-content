@@ -3,8 +3,6 @@ title: list-style-image
 slug: Web/CSS/list-style-image
 ---
 
-{{CSSRef}}
-
 ## 概要
 
 **`list-style-image`** 属性用来指定一个能用来作为列表元素标记的图片。
@@ -20,7 +18,7 @@ slug: Web/CSS/list-style-image
 list-style-image: none;
 
 /* <url> values */
-list-style-image: url("starsolid.gif");
+list-style-image: url("star-solid.gif");
 
 /* Global values */
 list-style-image: inherit;
@@ -54,7 +52,7 @@ list-style-image: unset;
 
 ```css
 ul {
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 

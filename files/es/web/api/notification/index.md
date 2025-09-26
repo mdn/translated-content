@@ -85,9 +85,9 @@ Las siguientes propiedades están listadas en las especificaciones más actualiz
 #### Manejador de Eventos(Event Handler)
 
 - {{domxref("Notification.onclick")}}
-  - : Un manejador para el [`click`](/es/docs/Web/Reference/Events/click) event. Sera inicializado cada vez que el usuario de click en la notificacion.
+  - : Un manejador para el [`click`](/es/docs/Web/API/Element/click_event) event. Sera inicializado cada vez que el usuario de click en la notificacion.
 - {{domxref("Notification.onerror")}}
-  - : A handler for the [`error`](/es/docs/Web/Reference/Events/error) event. It is triggered each time the notification encounters an error.
+  - : A handler for the [`error`](/es/docs/Web/API/HTMLElement/error_event) event. It is triggered each time the notification encounters an error.
 
 #### Obsolete handlers
 
@@ -154,7 +154,7 @@ function notifyMe() {
 
 {{EmbedLiveSample('Example', '100%', 30)}}
 
-In many cases, you don't need to be this verbose. For example, in our [Emogotchi demo](http://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)), we simply run {{domxref("Notification.requestPermission")}} regardless to make sure we can get permission to send notifications (this uses the newer promise-based method syntax):
+In many cases, you don't need to be this verbose. For example, in our [Emogotchi demo](https://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)), we simply run {{domxref("Notification.requestPermission")}} regardless to make sure we can get permission to send notifications (this uses the newer promise-based method syntax):
 
 ```js
 Notification.requestPermission().then(function (result) {

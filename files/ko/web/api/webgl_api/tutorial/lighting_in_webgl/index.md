@@ -19,7 +19,7 @@ WebGL은 OpenGL 표준과는 다르게 자체적인 조명 효과를 제공하�
 
 **점광**(**Point light**)은 한 지점에서 모든 방향으로 퍼지면서 발산하는 빛입니다. 실생활에서 접할 수 있는 대부분의 빛이 이 점광에 해당합니다. 전구에서 나오는 빛이 점광의 대표적인 예라고 할 수 있겠습니다.
 
-이 글에서는 [반사광 하이라이트(specular highlight)](http://en.wikipedia.org/wiki/Specular_highlight)나 점광원에 대해서는 다루지 않고, 단순한 방향광 조명과 주변광 조명만 알아 보겠습니다. 주변광에 방향광원(directional light source)을 더한 조명 효과를 [앞 단원의 예제](/en/WebGL/Using_textures_in_WebGL)에 있던 회전하는 정육면체에 적용해보겠습니다.
+이 글에서는 [반사광 하이라이트(specular highlight)](http://en.wikipedia.org/wiki/Specular_highlight)나 점광원에 대해서는 다루지 않고, 단순한 방향광 조명과 주변광 조명만 알아 보겠습니다. 주변광에 방향광원(directional light source)을 더한 조명 효과를 [앞 단원의 예제](/en-US/WebGL/Using_textures_in_WebGL)에 있던 회전하는 정육면체에 적용해보겠습니다.
 
 점광원이나 반사광을 고려하지 않는다면, 방향광 조명을 구현하기 위한 정보는 크게 두 가지가 있습니다:
 
@@ -151,7 +151,7 @@ gl.uniformMatrix4fv(
 
 앞 단원의 예제에서 했던 것처럼 텍셀의 색상값을 계산합니다. 하지만 이번에는 텍셀의 색상값을 바로 프래그먼트의 색상값으로 설정하지 않고, 조명 효과를 표현할 수 있도록 텍셀의 색상값에 빛의 양을 곱한 값을 프래그먼트의 색상값으로 설정합니다.
 
-자 이제 다 완성했습니다! WebGL을 지원하는 브라우저라면 [여기](/samples/webgl/sample7/index.html)에서 실제 동작하는 예제를 확인할 수 있습니다.
+자 이제 다 완성했습니다! WebGL을 지원하는 브라우저라면 [여기](http://mdn.github.io/webgl-examples/tutorial/sample7/index.html)에서 실제 동작하는 예제를 확인할 수 있습니다.
 
 ## 연습해보기
 

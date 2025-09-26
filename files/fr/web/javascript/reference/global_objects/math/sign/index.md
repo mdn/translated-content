@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 
 La fonction **`Math.sign()`** renvoie le signe d'un nombre et permet de savoir si un nombre est positif, négatif ou nul.
 
-{{EmbedInteractiveExample("pages/js/math-sign.html")}}
+{{InteractiveExample("JavaScript Demo: Math.sign()")}}
+
+```js interactive-example
+console.log(Math.sign(3));
+// Expected output: 1
+
+console.log(Math.sign(-3));
+// Expected output: -1
+
+console.log(Math.sign(0));
+// Expected output: 0
+
+console.log(Math.sign("-3"));
+// Expected output: -1
+```
 
 ## Syntaxe
 

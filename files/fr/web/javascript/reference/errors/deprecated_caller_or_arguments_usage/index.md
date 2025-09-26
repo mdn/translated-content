@@ -26,7 +26,7 @@ Un avertissement uniquement affiché en mode strict qui prend la forme d'une {{j
 
 ### Utilisation de `function.caller` ou de `arguments.callee.caller`
 
-{{jsxref("Function.caller")}} et [`arguments.callee.caller`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee) sont dépréciées (se référer aux articles de la référence pour plus d'informations).
+{{jsxref("Function.caller")}} et [`arguments.callee.caller`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee) sont dépréciées (se référer aux articles de la référence pour plus d'informations).
 
 ```js example-bad
 "use strict";
@@ -71,7 +71,7 @@ console.log("returned: " + g.arguments);
 
 ## Voir aussi
 
-- [Les fonctionnalités obsolètes et dépréciées](/fr/docs/JavaScript/Reference/Annexes/Fonctionnalités_dépréciées)
+- [Les fonctionnalités obsolètes et dépréciées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Function.arguments")}}
 - {{jsxref("Function.caller")}} and [`arguments.callee.caller`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee)

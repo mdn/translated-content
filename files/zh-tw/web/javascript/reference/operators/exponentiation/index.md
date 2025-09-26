@@ -3,13 +3,25 @@ title: 指數運算子（**）
 slug: Web/JavaScript/Reference/Operators/Exponentiation
 ---
 
-{{jsSidebar("Operators")}}
-
 指數運算子（`**`）會回傳以第一個數字作為底數；第二個數字做為指數的運算結果。
 
 它類同於 `Math.pow`，不一樣的是 `**` 可以用於 BigInt 的計算而 `Math.pow` 不行。
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## 語法
 

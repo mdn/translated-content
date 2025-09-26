@@ -3,12 +3,14 @@ title: blocked
 slug: Web/API/IDBOpenDBRequest/blocked_event
 ---
 
+{{APIRef("IndexedDB")}}
+
 Le handler **blocked** est exécuté lorsque l'ouverture d'une connexion à une base de données bloque une transaction _versionchange_ sur celle-ci.
 
 ## Informations générales
 
 - Spécification
-  - : [IndexedDB](http://www.w3.org/TR/IndexedDB/#request-api)
+  - : [IndexedDB](https://www.w3.org/TR/IndexedDB/#request-api)
 - Interface
   - : IDBVersionChangeEvent
 - Propagation
@@ -51,4 +53,4 @@ req1.onsuccess = function (event) {
 
 ## Voir aussi
 
-- [Utilisation d'IndexedDB](/fr/docs/IndexedDB/Using_IndexedDB)
+- [Utilisation d'IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)

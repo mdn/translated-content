@@ -3,6 +3,8 @@ title: HPKP
 slug: Glossary/HPKP
 ---
 
+{{GlossarySidebar}}
+
 **HPKP** (HTTP 公開鍵ピンニング、 HTTP Public Key Pinning) は、偽造された証明書による {{Glossary("MITM")}} 攻撃のリスクを減らすために、特定の暗号化公開鍵を特定のウェブサーバーに関連付けるようにウェブクライアントに指示するセキュリティ機能です。
 
 ## より詳しく知る

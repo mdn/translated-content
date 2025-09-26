@@ -1,8 +1,9 @@
 ---
 title: "HTMLMediaElement: abort イベント"
+short-title: abort
 slug: Web/API/HTMLMediaElement/abort_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef}}
@@ -16,9 +17,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('abort', (event) => {});
+addEventListener("abort", (event) => {});
 
-onabort = (event) => { };
+onabort = (event) => {};
 ```
 
 ## イベント型
@@ -28,16 +29,16 @@ onabort = (event) => { };
 ## 例
 
 ```js
-const video = document.querySelector('video');
-const videoSrc = 'https://example.org/path/to/video.webm';
+const video = document.querySelector("video");
+const videoSrc = "https://example.org/path/to/video.webm";
 
-video.addEventListener('abort', () => {
+video.addEventListener("abort", () => {
   console.log(`Abort loading: ${videoSrc}`);
 });
 
-const source = document.createElement('source');
-source.setAttribute('src', videoSrc);
-source.setAttribute('type', 'video/webm');
+const source = document.createElement("source");
+source.setAttribute("src", videoSrc);
+source.setAttribute("type", "video/webm");
 
 video.appendChild(source);
 ```

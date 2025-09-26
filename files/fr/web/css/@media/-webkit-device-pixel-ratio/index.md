@@ -1,5 +1,5 @@
 ---
-title: "-webkit-device-pixel-ratio"
+title: -webkit-device-pixel-ratio
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/@media/-webkit-device-pixel-ratio
 
 Sa valeur correspond au nombre de pixels physiques utilisés par l'appareil pour représenter [un pixel CSS (`px`)](/fr/docs/Web/CSS/length#unités_de_longueur_absolues). Bien que la valeur soit de type {{cssxref("&lt;number&gt;")}}, sans unité donc, l'unité implicite est [`dppx`](/fr/docs/Web/CSS/resolution#unités).
 
-> **Attention :** Cette caractéristique est spécifique à WebKit. Tant que possible, on utilisera {{cssxref("@media/resolution","resolution")}}.
+> [!WARNING]
+> Cette caractéristique est spécifique à WebKit. Tant que possible, on utilisera {{cssxref("@media/resolution","resolution")}}.
 
 ## Syntaxe
 

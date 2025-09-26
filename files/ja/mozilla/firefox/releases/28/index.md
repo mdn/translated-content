@@ -3,8 +3,6 @@ title: Firefox 28 for developers
 slug: Mozilla/Firefox/Releases/28
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
 
 ## ウェブ開発者向けの変更点
@@ -13,24 +11,24 @@ Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました�
 
 - {{domxref("console.exception")}} プロパティを追加しました ([Firefox バグ 922214](https://bugzil.la/922214))。
 - {{domxref("console.assert")}} プロパティを追加しました ([Firefox バグ 760193](https://bugzil.la/760193))。
-- アプリマネージャー: 新しいマニフェストエディタを追加しました。
+- アプリマネージャー: 新しいマニフェストエディターを追加しました。
 - アプリマネージャー: アプリのデバッグ用のツールボックスを、アプリマネージャーの UI 内に組み込みました。
 - ウェブコンソール: "スプリットコンソール" モードを追加しました。Escape キーを押すと、他のツール内にコンソールをすばやく開きます。
 - ウェブコンソール: 出力エリア用の Dark テーマを追加しました。
 - デバッガー: ミニファイされた JavaScript の整形。
 - デバッガー: 変数にマウスポインターを乗せるか変数をクリックすると、現在の値をポップアップで表示します。
 - インスペクター: ルールビューでのカラーピッカーや、さまざまなツールチップを追加しました。
-- ブラウザツールボックス: アドオンやプラットフォームの開発者が、ブラウザ自身を対象にしてほぼすべての開発ツールを使用できるようになりました。
+- ブラウザーツールボックス: アドオンやプラットフォームの開発者が、ブラウザー自身を対象にしてほぼすべての開発ツールを使用できるようになりました。
 
 詳しくは[こちらの投稿](https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/)をご覧ください。
 
 ### CSS
 
-- 複数行の [flexbox](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) をサポートしました ([Firefox バグ 939901](https://bugzil.la/939901))。
+- 複数行の [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) をサポートしました ([Firefox バグ 939901](https://bugzil.la/939901))。
 - 東アジア言語における長い表記のの[カウンタースタイル](/ja/docs/Web/CSS/list-style-type)を実装しました ([Firefox バグ 934072](https://bugzil.la/934072))。
 - {{cssxref("background-blend-mode")}} プロパティをサポートしました ([Firefox バグ 841601](https://bugzil.la/841601))。
 - {{cssxref("font-variant-ligatures")}} プロパティに値 `none` を追加しました ([Firefox バグ 913264](https://bugzil.la/913264))。
-- 疑似要素で {{cssxref(":hover")}} ユーザーアクション疑似クラスをサポートしました ([Firefox バグ 922669](https://bugzil.la/922669))。
+- 擬似要素で {{cssxref(":hover")}} ユーザーアクション擬似クラスをサポートしました ([Firefox バグ 922669](https://bugzil.la/922669))。
 
 ### HTML
 
@@ -39,7 +37,6 @@ Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました�
 ### JavaScript
 
 - [ECMAScript 2015](/ja/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) の実装が続いています。
-
   - `Array` の新たなメソッド、 {{jsxref("Array.prototype.entries()")}} および {{jsxref("Array.prototype.keys()")}} を実装しました ([Firefox バグ 894658](https://bugzil.la/894658))。
 
 - A bug causing that {{jsxref("Object.getOwnPropertyNames()")}} did not see unresolved properties of {{jsxref("Error")}} objects has been fixed ([Firefox バグ 724768](https://bugzil.la/724768)).

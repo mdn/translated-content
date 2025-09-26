@@ -16,7 +16,7 @@ Há dois tipos de fontes subjacentes:
 - **Push sources** constatemente envia dados enquanto os acessa, e você decide quando iniciar, pausar ou cancelar o acesso ao stream. Exemplos deste tipo incluem stream de vídeo e sockets TCP/[Web sockets](/pt-BR/docs/Web/API/WebSockets_API).
 - **Pull sources** requer que você requisite os dados explicitamente uma conectado. Exemplos deste tipo incluem operações de acesso a arquivos via chamada [Fetch](/pt-BR/docs/Web/API/Fetch_API) ou [XHR](/pt-BR/docs/Web/API/XMLHttpRequest/XMLHttpRequest).
 
-O dado é lido sequencialmente em pequenos blocos de informação chamado chunks. Um chunk por ser um simples byte, ou, pode ser algo maior como um [typed array](/pt-BR/docs/Web/JavaScript/Typed_arrays) de um certo tamanho.
+O dado é lido sequencialmente em pequenos blocos de informação chamado chunks. Um chunk por ser um simples byte, ou, pode ser algo maior como um [typed array](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) de um certo tamanho.
 Um simples stream pode conter chunks de diferentes tamanhos e tipos.
 ![](readable_streams.png)
 
@@ -73,7 +73,8 @@ Para iniciar um pipe chain é chamado o **original source**, e no final é chama
 
 ![](pipechain.png)
 
-> **Nota:** Esta funcionalidade não está totalmente pensada ainda, embora disponível em muitos navegadores. Até certo ponto espero que a especificação dos writers pode contribuir para algo como uma clase `TransformStream` para criar facilmente transform stream.
+> [!NOTE]
+> Esta funcionalidade não está totalmente pensada ainda, embora disponível em muitos navegadores. Até certo ponto espero que a especificação dos writers pode contribuir para algo como uma clase `TransformStream` para criar facilmente transform stream.
 
 ## Backpressure
 
@@ -102,6 +103,7 @@ high water mark - total size of chunks in queue = desired size
 
 O **desired size** é o tamanho de chunks que um stream ainda pode aceitar para manter o fluxo do stream menor que o high water mark. Após o cálculo ser efetuado, a geração de chunks terá sua velocidade reduzida ou aumentada conforme apropriado para manter o fluxo do stream o mais rápido possível enquanto mantém o tamanho desejado acima de zero. Se o valor cair para zero (ou menor no caso de writable streams), significa que os chunks estão sendo gerados mais rápido que o stream pode lidar, o qual resulta em problemas.
 
-> **Nota:** O que ocorre no caso em que valor desejado for zero ou negativo não foi definido na especificação até o momento. Paciência é uma virtude.
+> [!NOTE]
+> O que ocorre no caso em que valor desejado for zero ou negativo não foi definido na especificação até o momento. Paciência é uma virtude.
 
 Como um exemplo, vamos pegar um chunk de tamanho 1, e uma high water mark de 3. Isto significa que até 3 chunks podem ser enfileirados antes que a high water mark seja alcançada e o backpressure aplicado.

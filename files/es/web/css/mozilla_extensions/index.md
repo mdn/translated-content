@@ -3,9 +3,7 @@ title: Extensiones CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
 ---
 
-{{CSSRef}}
-
-Mozilla soporta ciertas extensiones de [CSS](/es/docs/CSS) con el prefijo`-moz-`.
+Mozilla soporta ciertas extensiones de [CSS](/es/docs/Web/CSS) con el prefijo`-moz-`.
 
 Algunas de estas propiedades han sido incluidas en una especificación de CSS en borrador para incluirlas en la recomendación final, pero aún están en proceso experimental. La propiedad final estándar puede ser diferente de la implementación actual con prefijo. Algunas de estas propiedades no estándares solo son aplicables en elementos XUL.
 
@@ -258,16 +256,13 @@ W—Z
 ### {{cssxref("background-image")}}
 
 - Gradientes
-
   - {{cssxref("-moz-linear-gradient")}}
   - {{cssxref("-moz-radial-gradient")}}
 
 - Elementos
-
   - {{cssxref("-moz-element")}}
 
 - Sub-imágenes
-
   - {{cssxref("-moz-image-rect")}}
 
 ### {{Cssxref("border-color")}}

@@ -1,17 +1,70 @@
 ---
-title: ":where()"
+title: :where()
 slug: Web/CSS/:where
 l10n:
-  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:where()`** prend une liste de sélecteurs en argument et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
+La différence entre `:where()` et {{CSSxRef(":is", ":is()")}} réside dans le fait que `:where()` a toujours une [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) de 0, tandis que `:is()` prend la spécificité du sélecteur le plus spécifique parmi ses arguments.
 
-`:where()` a toujours une spécificité de 0, tandis que `:is()` participe à la spécificité du sélecteur en prenant la spécificité de son argument le plus spécifique.
+{{InteractiveExample("Démonstration CSS&nbsp;: :where", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+/* Non appliqué à ol, en raison d'une spécificité inférieure */
+:where(ol, ul, menu:unsupported) :where(ol, ul) {
+  color: green;
+}
+
+:where(ol, ul) :where(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturne</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Encelade</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
+
+## Syntaxe
+
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
+```
+
+## Paramètres
+
+La pseudo-classe `:where()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#liste_de_sélecteurs), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument.
 
 ### Analyse permissive de la liste des sélecteurs
 
@@ -125,17 +178,10 @@ Cela ne fonctionnera pas pour les liens rouges, car les sélecteurs à l'intéri
 
 Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité à 0, et le lien orange du pied de page sera surchargé par le sélecteur simple.
 
-> **Note :** Vous pouvez également consulter [cet exemple sur GitHub](https://mdn.github.io/css-examples/is-where/).
+> [!NOTE]
+> Vous pouvez également consulter [cet exemple sur GitHub](https://mdn.github.io/css-examples/is-where/).
 
-{{EmbedLiveSample('', '100%', 600)}}
-
-## Syntaxe
-
-```css-nolint
-:where(<complex-selector-list>) {
-  /* … */
-}
-```
+{{EmbedLiveSample('comparer_where_et_is', '100%', 600)}}
 
 ## Spécifications
 
@@ -147,6 +193,6 @@ Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité �
 
 ## Voir aussi
 
-- [`:is()`](/fr/docs/Web/CSS/:is)
+- {{CSSxRef(":is", ":is()")}}
 - [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list)
 - [Composants web](/fr/docs/Web/API/Web_components)

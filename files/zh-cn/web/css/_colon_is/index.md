@@ -1,15 +1,57 @@
 ---
-title: ":is()"
+title: :is()
 slug: Web/CSS/:is
 ---
 
-{{CSSRef}}
-
 **`:is()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数以选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。
 
-> **备注：** 最初该选择器被命名为 `:matches()`（以及 `:any()`），但在 [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) 中被重命名为 `:is()`。
+> [!NOTE]
+> 最初该选择器被命名为 `:matches()`（以及 `:any()`），但在 [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) 中被重命名为 `:is()`。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :is", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:is(ol, ul, menu:unsupported) :is(ol, ul) {
+  color: green;
+}
+
+:is(ol, ul) :is(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturn</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
 
 伪元素在 `:is()` 的选择器列表中无效。
 
@@ -44,7 +86,7 @@ slug: Web/CSS/:is
 
 ### 简化列表选择器
 
-`:is()` 伪类可以大大简化您的 CSS 选择器。例如，考虑以下 CSS：
+`:is()` 伪类可以大大简化你的 CSS 选择器。例如，考虑以下 CSS：
 
 ```css
 /* 三层或更深的无序列表使用方形符号。 */
@@ -111,7 +153,7 @@ dir dir dir {
 
 ### 简化段落选择器
 
-`:is()` 伪类在处理[段落和标题](/zh-CN/docs/Web/HTML/Element/Heading_Elements)时特别有用。由于 {{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}} 和 {{HTMLElement("nav")}} 通常嵌套在一起，如果没有 `:is()`，将它们设置为相互匹配很棘手。
+`:is()` 伪类在处理[段落和标题](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)时特别有用。由于 {{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}} 和 {{HTMLElement("nav")}} 通常嵌套在一起，如果没有 `:is()`，将它们设置为相互匹配很棘手。
 
 例如，没有 `:is()`，在不同的深度对所有 {{HTMLElement("Heading_Elements", "h1")}} 元素进行样式化可能是非常复杂的：
 
@@ -214,6 +256,6 @@ some-element::after {
 
 ## 参见
 
-- {{CSSxRef(":where", ":where()")}}——类似于 `:is()`，但是其[优先级](/zh-CN/docs/Web/CSS/Specificity)为 0。
+- {{CSSxRef(":where", ":where()")}}——类似于 `:is()`，但是其[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)为 0。
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
 - [Web 组件](/zh-CN/docs/Web/API/Web_components)

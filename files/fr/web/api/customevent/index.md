@@ -21,7 +21,7 @@ L'interface **`CustomEvent`** représente un évènement initialisé par une app
 _Cette interface hérite des propriétés de son parent, [`Event`](/fr/docs/Web/API/Event)._
 
 - [`CustomEvent.detail`](/fr/docs/Web/API/CustomEvent/detail) {{readonlyinline}}
-  - : Renvoie toutes les données passées lor de l'initialisation de l'évènement.
+  - : Renvoie toutes les données passées lors de l'initialisation de l'évènement.
 
 ## Méthodes
 
@@ -41,4 +41,4 @@ _Cette interface hérite des propriétés de son parent, [`Event`](/fr/docs/Web/
 ## Voir aussi
 
 - [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage)
-- [Créer et déclencher des évènements](/fr/docs/Web/Events/Creating_and_triggering_events)
+- [Créer et déclencher des évènements](/fr/docs/conflicting/Web/API/Document_Object_Model/Events)

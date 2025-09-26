@@ -1,8 +1,9 @@
 ---
-title: Document.fullscreen
+title: "Document: fullscreen プロパティ"
+short-title: fullscreen
 slug: Web/API/Document/fullscreen
 l10n:
-  sourceCommit: a33aa4b21a269539354089513b22846f4be83f3c
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
@@ -11,7 +12,8 @@ l10n:
 
 このプロパティは読み取り専用ですが、変更されても（厳格モードでも）例外を投げません。セッターは何もしないので、無視されます。
 
-> **メモ:** このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{DOMxRef("Document.fullscreenElement")}} が `null` ではないことで確認することができます。
+> [!NOTE]
+> このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{DOMxRef("Document.fullscreenElement")}} が `null` ではないことで確認することができます。
 
 ## 返値
 

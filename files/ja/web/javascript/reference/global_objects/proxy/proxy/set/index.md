@@ -1,15 +1,40 @@
 ---
 title: handler.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`handler.set()`** メソッドは、オブジェクトの `[[Set]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップであり、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用してプロパティの値を設定する操作に使われます。
 
-**`handler.set()`** は、オブジェクトの `[[Set]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。プロパティの値を設定することに対するトラップです。
+{{InteractiveExample("JavaScript デモ: handler.set()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
+```js interactive-example
+const monster = { eyeCount: 4 };
+
+const handler = {
+  set(obj, prop, value) {
+    if (prop === "eyeCount" && value % 2 !== 0) {
+      console.log("Monsters must have an even number of eyes");
+    } else {
+      return Reflect.set(...arguments);
+    }
+  },
+};
+
+const proxy = new Proxy(monster, handler);
+
+proxy.eyeCount = 1;
+// 予想される結果: "Monsters must have an even number of eyes"
+
+console.log(proxy.eyeCount);
+// 予想される結果: 4
+
+proxy.eyeCount = 2;
+console.log(proxy.eyeCount);
+// 予想される結果: 2
+```
 
 ## 構文
 
@@ -17,7 +42,7 @@ l10n:
 new Proxy(target, {
   set(target, property, value, receiver) {
   }
-});
+})
 ```
 
 ### 引数
@@ -27,21 +52,17 @@ new Proxy(target, {
 - `target`
   - : ターゲットオブジェクトです。
 - `property`
-  - : プロパティを設定する名前または {{jsxref("Symbol")}} です。
+  - : 文字列または {{jsxref("Symbol")}} で、プロパティ名を表します。
 - `value`
   - : 設定するプロパティの新しい値です。
 - `receiver`
-
-  - : 割り当てがもともと行われていたオブジェクトです。これは通常、プロキシーそのものです。しかし、 `set()` ハンドラーは内部的にプロトタイプチェーンや様々な他の方法経由で呼び出されます。
-
-    例えば、スクリプト上に `obj.name = "jen"` があり、`obj` はプロキシーではなく、独自の `.name` プロパティを持っていません。しかし、プロトタイプチェーンでプロキシーを持っています。その場合、そのプロキシーの `set()` ハンドラーが呼ばれて、 `obj` はレシーバーとして渡されます。
+  - : セッターの `this` 値。 {{jsxref("Reflect.set()")}} を参照。これは通常、プロキシー自体またはプロキシーから継承したオブジェクトです。
 
 ### 返値
 
-`set()` メソッドは論理値を返します。
+`set()` メソッドは、代入が成功したかどうかを示す論理値 ({{jsxref("Boolean")}}) を返す必要があります。それ以外の値は[論理値に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#論理型への変換)。
 
-- `true` を返すと割り当てが成功したことを示します。
-- `set()` メソッドの返値が `false` で、厳格モードで割り当てが起こった場合、 {{jsxref("TypeError")}} が発生します。
+多くの操作（[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) でのプロパティアクセサーの使用が含まれます）は、 `[[Set]]` 内部メソッドが `false` を返した場合、{{jsxref("TypeError")}} が発生します。
 
 ## 解説
 
@@ -56,11 +77,10 @@ new Proxy(target, {
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーで {{jsxref("TypeError")}} が発生します。
+プロキシーの `[[Set]]` 内部メソッドにおいて、ハンドラーの定義が次のいずれかの不変条件に違反する場合、{{jsxref("TypeError")}} が発生します。
 
-- 対応するターゲットオブジェクトのプロパティが書き込み不可かつ設定不可のデータプロパティの場合、プロパティの値と異なる値に変更することはできません。
-- 対応するターゲットオブジェクトのプロパティが `[[Set]]` 属性として `undefined` を持つ設定不可のアクセスプロパティの場合、プロパティの値を設定することはできません。
-- 厳格モードでは、`set()` ハンドラーから `false` を返す場合、 {{jsxref("TypeError")}} 例外が発生します。
+- プロパティの値が、対応する対象とするオブジェクトのプロパティの値と異なる値に変更できません。ただし、対応する対象とするオブジェクトのプロパティが、書き込み不可かつ構成不可の自分自身でデータプロパティである場合に限ります。つまり、{{jsxref("Reflect.getOwnPropertyDescriptor()")}} が `target` のプロパティに対して `configurable: false, writable: false` を返す場合、かつ `value` が `target` のプロパティ記述子内の `value` 属性と異なる場合、トラップは偽値を返す必要があります。
+- 対応する対象オブジェクトのプロパティが、設定不可の自己アクセサープロパティであり、そのセッターが未定義で設定されている場合、そのプロパティの値を設定できません。つまり、{{jsxref("Reflect.getOwnPropertyDescriptor()")}} が `target` のプロパティに対して `configurable: false, set: undefined` を返す場合、トラップは偽値を返す必要があります。
 
 ## 例
 

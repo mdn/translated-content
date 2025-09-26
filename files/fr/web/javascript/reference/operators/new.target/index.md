@@ -5,9 +5,24 @@ slug: Web/JavaScript/Reference/Operators/new.target
 
 {{JSSidebar("Operators")}}
 
-La syntaxe **`new.target`** est disponible dans toutes les fonctions et permet entre autres de tester si une fonction ou un constructeur a été appelé avec `new`. Dans les constructeurs, il fait référence au constructeur invoqué par [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new). Dans les appels de fonction « normaux », `new.target` vaut {{jsxref("undefined")}}.
+La syntaxe **`new.target`** est disponible dans toutes les fonctions et permet entre autres de tester si une fonction ou un constructeur a été appelé avec `new`. Dans les constructeurs, il fait référence au constructeur invoqué par [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Dans les appels de fonction « normaux », `new.target` vaut {{jsxref("undefined")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new.target")}}
+
+```js interactive-example
+function Foo() {
+  if (!new.target) {
+    throw new TypeError("calling Foo constructor without new is invalid");
+  }
+}
+
+try {
+  Foo();
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: calling Foo constructor without new is invalid
+}
+```
 
 ## Syntaxe
 
@@ -19,13 +34,13 @@ new.target;
 
 La syntaxe `new.target` se compose du mot-clé `new`, suivi d'un point puis d'un nom de propriété (ici `target`). Généralement et par ailleurs, `new.` est utilisé comme contexte pour accéder à une propriété. Ici, `new.` ne fait pas réellement référence à un objet. Dans les appels de constructeurs, `new.target` fait référence au constructeur qui a été appelé par `new`. Cette syntaxe permet donc de récupérer cette valeur.
 
-`new.target` est une méta-propriété, disponible pour toutes les fonctions. Dans [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), `new.target` fait référence au `new.target` de la fonction englobante.
+`new.target` est une méta-propriété, disponible pour toutes les fonctions. Dans [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `new.target` fait référence au `new.target` de la fonction englobante.
 
 ## Exemples
 
 ### Utilisation de `new.target` dans les appels de fonction
 
-Utilisé dans les appels de fonctions « classiques » (autrement dit pour les fonctions qui ne sont pas des constructeurs), `new.target` vaut {{jsxref("undefined")}}. Cela permet de détecter si une fonction a été appelée comme constructeur avec [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new) :
+Utilisé dans les appels de fonctions « classiques » (autrement dit pour les fonctions qui ne sont pas des constructeurs), `new.target` vaut {{jsxref("undefined")}}. Cela permet de détecter si une fonction a été appelée comme constructeur avec [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new) :
 
 ```js
 function Toto() {
@@ -83,8 +98,8 @@ var d = new D(); // function D()
 
 ## Voir aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions)
+- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
 - [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)
-- [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new)
-- [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this)
+- [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this)
 - [Cet article sur les classes traduit en français](https://tech.mozfr.org/post/2015/08/12/ES6-en-details-%3A-les-sous-classes-et-l-heritage)

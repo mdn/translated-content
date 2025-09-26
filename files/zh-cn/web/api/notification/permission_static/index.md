@@ -1,11 +1,13 @@
 ---
 title: Notification：permission 静态属性
 slug: Web/API/Notification/permission_static
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-{{domxref("Notification")}} 接口的只读属性 `permission` 表明当前用户是否授予当前来源（origin）显示 web 通知的权限。
+{{domxref("Notification")}} 接口的 **`permission`** 只读静态属性表明当前用户是否授予当前来源（origin）显示 web 通知的权限。
 
 ## 值
 

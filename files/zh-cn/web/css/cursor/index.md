@@ -3,11 +3,55 @@ title: cursor
 slug: Web/CSS/cursor
 ---
 
-{{CSSRef}}
-
 **`cursor`** [CSS](/zh-CN/docs/Web/CSS) 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式。
 
-{{EmbedInteractiveExample("pages/css/cursor.html")}}
+{{InteractiveExample("CSS Demo: cursor")}}
+
+```css interactive-example-choice
+cursor: help;
+```
+
+```css interactive-example-choice
+cursor: wait;
+```
+
+```css interactive-example-choice
+cursor: crosshair;
+```
+
+```css interactive-example-choice
+cursor: not-allowed;
+```
+
+```css interactive-example-choice
+cursor: zoom-in;
+```
+
+```css interactive-example-choice
+cursor: grab;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div id="example-element">
+    Move over this element to see the cursor style.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  background-color: #1766aa;
+  color: white;
+  height: 180px;
+  width: 360px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+  padding: 5px;
+}
+```
 
 ## 语法
 
@@ -53,7 +97,6 @@ cursor:
 - `<x>` `<y>` {{experimental_inline}}
   - : 可选 x，y 坐标。两个小于 32 的无单位非负数。
 - 关键字值
-
   - : 鼠标悬浮于值上可实时演示
 
     <table class="standard-table">
@@ -315,7 +358,7 @@ cursor:
 
 ## 示例
 
-```
+```css
 .foo {
   cursor: crosshair;
 }
@@ -343,6 +386,6 @@ cursor:
 - [Using URL values for the cursor property](/zh-CN/docs/CSS/Using_URL_values_for_the_cursor_property)
 - {{ cssxref("pointer-events") }}
 - {{cssxref("url()", "url()")}} function
-- [Webkit's cursor demos](http://trac.webkit.org/export/37902/trunk/WebCore/manual-tests/cursor.html) (including the extended ones: `zoom`, `zoom-out`, `grab`, `grabbing`)
+- [Webkit's cursor demos](https://trac.webkit.org/export/37902/trunk/WebCore/manual-tests/cursor.html) (including the extended ones: `zoom`, `zoom-out`, `grab`, `grabbing`)
 - [Cursor Property (MSDN)](http://msdn.microsoft.com/en-us/library/aa358795.aspx)
 - [CSS 2.1 and CSS 3 cursor propery test](http://www.elektronotdienst-nuernberg.de/bugs/cursor.html)

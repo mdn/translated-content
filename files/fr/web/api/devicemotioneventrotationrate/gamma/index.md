@@ -18,7 +18,7 @@ Cette propriété est en lecture seule.
 ### Valeur retournée
 
 - `gamma`
-  - : Un `double` indiquant la vitesse de rotation autour de l'axe Y, en degrés par seconde. Voir [Détecter l'orientation d'un appareil](/fr/docs/WebAPI/Detecting_device_orientation#Accelerometer_values_explained) pour plus de détails.
+  - : Un `double` indiquant la vitesse de rotation autour de l'axe Y, en degrés par seconde. Voir [Détecter l'orientation d'un appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation#accelerometer_values_explained) pour plus de détails.
 
 ## Spécifications
 

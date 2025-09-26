@@ -9,7 +9,19 @@ O método `replaceAll()` retorna uma nova string com todas as ocorrências de um
 
 A _string_ original é mantida sem modificação.
 
-{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
+{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replaceAll("dog", "monkey"));
+// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+// Global flag required when calling replaceAll with regex
+const regex = /Dog/gi;
+console.log(paragraph.replaceAll(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+```
 
 ## Sintaxe
 
@@ -17,7 +29,8 @@ A _string_ original é mantida sem modificação.
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Nota:** quando usar uma `regexp`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
+> [!NOTE]
+> Quando usar uma `regexp`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
 
 ### Parâmetros
 
@@ -26,7 +39,6 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 - `substr` (padrão)
   - : Uma {{jsxref ("String")}} que deve ser substituída por `newSubstr`. É tratada como uma string literal e não é interpretada como uma expressão regular (_`RegExp`_).
 - `newSubstr` (substituição)
-
   - : É a {{jsxref("String")}} que substitui a `substring` especificada pelo parâmetro `regexp` ou `substr`. Um número de padrões especiais para substituição são suportados; veja a seção "
 
     Especificando uma string como parâmetro
@@ -100,13 +112,11 @@ Já o código abaixo vai funcionar:
 
 ## Especificações
 
-| Especificação                                                                              |
-| ------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.replaceAll")}}
+{{Compat}}
 
 ## Veja também
 

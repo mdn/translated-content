@@ -5,9 +5,48 @@ slug: Web/CSS/border-color
 
 {{CSSRef}}
 
-La propriété CSS **`border-color`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de définir la couleur de la bordure sur les quatre côtés de la boîte de bordure d'un élément.
+La propriété CSS **`border-color`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir la couleur de la bordure sur les quatre côtés de la boîte de bordure d'un élément.
 
-{{EmbedInteractiveExample("pages/css/border-color.html")}}
+{{InteractiveExample("CSS Demo: border-color")}}
+
+```css interactive-example-choice
+border-color: red;
+```
+
+```css interactive-example-choice
+border-color: red #32a1ce;
+```
+
+```css interactive-example-choice
+border-color: red rgba(170, 50, 220, 0.6) green;
+```
+
+```css interactive-example-choice
+border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-color: red yellow green transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Chaque côté peut être paramétré individuellement grâce aux propriétés {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}} et {{cssxref("border-left-color")}} ou, si on utilise les propriétés logiques : {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start-color")}} et {{cssxref("border-inline-end-color")}}.
 
@@ -146,7 +185,6 @@ ul {
 ## Voir aussi
 
 - Les propriétés liées à la couleur de la bordure
-
   - {{cssxref("border")}},
   - {{cssxref("border-top-color")}},
   - {{cssxref("border-right-color")}},
@@ -154,10 +192,9 @@ ul {
   - {{cssxref("border-left-color")}},
 
 - Les autres propriétés raccourcies liées à la bordure :
-
   - {{cssxref("border-width")}},
   - {{cssxref("border-style")}}.
 
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 - Le type de données {{cssxref("&lt;color&gt;")}}
 - Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}.

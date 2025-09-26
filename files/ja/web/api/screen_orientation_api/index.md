@@ -1,13 +1,13 @@
 ---
-title: Screen Orientation API
+title: 画面方向 API
 slug: Web/API/Screen_Orientation_API
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
 {{DefaultAPISidebar("Screen Orientation API")}}
 
-**Screen Orientation API** は、画面の向きに関する情報を提供します。
+**画面方向 API** (Screen Orientation API) は、画面の向きに関する情報を提供します。
 
 ## インターフェイス
 

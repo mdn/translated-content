@@ -23,9 +23,7 @@ gen.throw(exception)
 2 つのプロパティを持つ {{jsxref("Global_Objects/Object", "Object")}} です。
 
 - `done` (boolean)
-
   - : &#x20;
-
     - イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの*返値*を指定します。
     - イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
 
@@ -40,11 +38,11 @@ gen.throw(exception)
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     try {
-       yield 42;
-    } catch(e) {
-      console.log('Error caught!');
+      yield 42;
+    } catch (e) {
+      console.log("Error caught!");
     }
   }
 }
@@ -52,7 +50,7 @@ function* gen() {
 const g = gen();
 g.next();
 // { value: 42, done: false }
-g.throw(new Error('Something went wrong'));
+g.throw(new Error("Something went wrong"));
 // "Error caught!"
 // { value: 42, done: false }
 ```
@@ -63,7 +61,7 @@ g.throw(new Error('Something went wrong'));
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Generator.throw")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -3,7 +3,7 @@ title: webRequest.Streamfilter.error
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Une chaîne de caractères qui contiendra un message d'erreur après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}}.
 

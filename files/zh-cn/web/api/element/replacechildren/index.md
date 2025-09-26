@@ -3,31 +3,33 @@ title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
 ---
 
-{{APIRef("DOM")}}{{seecompattable}}
+{{APIRef("DOM")}}
 
-**`Element.replaceChildren()`** 方法将一个 {{domxref("Node")}} 的后代替换为指定的后代集合。这些新的后代可以为 {{domxref("DOMString")}} 或 {{domxref("Node")}} 对象。
+**`Element.replaceChildren()`** 方法将一个 {{domxref("Node")}} 的后代替换为指定的后代集合。这些新的后代可以为字符串或 {{domxref("Node")}} 对象。
 
 ## 语法
 
-```plain
-// [Throws, Unscopable]
-Element.replaceChildren(...nodesOrDOMStrings) // 返回 undefined
+```js-nolint
+replaceChildren(param1)
+replaceChildren(param1, param2)
+replaceChildren(param1, param2, /* …, */ paramN)
 ```
 
 ### 参数
 
-- `nodesOrDOMStrings`
-  - : 一组用于替换 `Element` 现有后代的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。若没有指定替代对象时，`Element` 的所有后代都将被清空。
+- `param1`、…、`paramN`
+  - : 一组用于替换 `Element` 现有后代的 {{domxref("Node")}} 或字符串对象。若没有指定替代对象时，`Element` 的所有后代都将被清空。
 
 ### 异常
 
-- {{domxref("HierarchyRequestError")}}: 当违反了[节点树的约束条件](https://dom.spec.whatwg.org/#concept-node-tree)时抛出。
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : 当违反了[节点树的约束条件](https://dom.spec.whatwg.org/#concept-node-tree)时抛出。
 
 ## 示例
 
 ### 清空一个节点
 
-`replaceChildren()` 为清空一个节点的后代提供了非常方便的机制，您只需在父节点不指定任何实参调用该方法即可。
+`replaceChildren()` 为清空一个节点的后代提供了非常方便的机制，你只需在父节点不指定任何实参调用该方法即可。
 
 ```js
 myNode.replaceChildren();
@@ -35,7 +37,7 @@ myNode.replaceChildren();
 
 ### 在父节点之间转移节点
 
-`replaceChildren()` 允许您更轻松地在父节点之间转移节点，而无需依赖冗余的循环代码。例如，有一个简单的应用程序让您选择您派对上的食物。它的 HTML 可能如下：
+`replaceChildren()` 允许你更轻松地在父节点之间转移节点，而无需依赖冗余的循环代码。例如，有一个简单的应用程序让你选择你派对上的食物。它的 HTML 可能如下：
 
 ```html
 <h2>派对食物列表</h2>
@@ -145,7 +147,6 @@ noBtn.addEventListener("click", () => {
 
 ## 参见
 
-- {{domxref("Element")}} and {{domxref("ChildNode")}}
 - {{domxref("Element.prepend()")}}
 - {{domxref("Element.append()")}}
 - {{domxref("NodeList")}}

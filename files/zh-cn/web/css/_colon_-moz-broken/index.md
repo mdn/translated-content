@@ -1,13 +1,14 @@
 ---
-title: ":-moz-broken"
+title: :-moz-broken
 slug: Web/CSS/:-moz-broken
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`:-moz-broken`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，用于匹配表示损坏图像链接的元素。
 
-> **备注：** 这个选择器主要是为主题开发人员设计。
+> [!NOTE]
+> 这个选择器主要是为主题开发人员设计。
 
 ## 语法
 

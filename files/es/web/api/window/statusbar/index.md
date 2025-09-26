@@ -52,4 +52,4 @@ Para alternar la visibilidad de las barras, debe de firmar sus scripts o abilita
 
 ## Ver tambien
 
-- [window.locationbar](/es/docs/Web/API/Window.locationbar), [window.menubar](/es/docs/Web/API/Window.menubar), [window.personalbar](/es/docs/Web/API/Window.personalbar), [window.scrollbars](/es/docs/Web/API/Window.scrollbars), [window.toolbar](/es/docs/Web/API/Window.toolbar)
+- [window.locationbar](/es/docs/Web/API/Window/locationbar), [window.menubar](/es/docs/Web/API/Window/menubar), [window.personalbar](/es/docs/Web/API/Window/personalbar), [window.scrollbars](/es/docs/Web/API/Window/scrollbars), [window.toolbar](/es/docs/Web/API/Window/toolbar)

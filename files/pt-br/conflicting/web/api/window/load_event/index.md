@@ -50,9 +50,7 @@ Existe também os [Gecko-Specific DOM Events](/pt-BR/docs/Web/Events), como o `D
 
 ## Especificações
 
-| Especificação                                                                                    | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName("HTML WHATWG", "webappapis.html#handler-onload", "onload")}} | {{Spec2("HTML WHATWG")}} | Definição inicial |
+{{Specifications}}
 
 ## Veja também
 

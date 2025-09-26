@@ -1,9 +1,7 @@
 ---
-title: ":defined"
+title: :defined
 slug: Web/CSS/:defined
 ---
-
-{{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:defined`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que se haya definido. Esto incluye cualquier elemento estándar integrado en el navegador y elementos personalizados que se hayan definido correctamente (es decir, con el método {{domxref("CustomElementRegistry.define()")}}).
 
@@ -96,4 +94,4 @@ Esto es útil si tiene un elemento personalizado complejo que demora un tiempo e
 
 ## Ver también
 
-- [Componentes web](/es/docs/Web/Web_Components)
+- [Componentes web](/es/docs/Web/API/Web_components)

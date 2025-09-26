@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 
 O método **`Number.parseInt()`** converte um argumento de _string_ e retorna um inteiro da raiz ou base específica.
 
-{{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}
+
+```js interactive-example
+function roughScale(x, base) {
+  const parsed = Number.parseInt(x, base);
+  if (Number.isNaN(parsed)) {
+    return 0;
+  }
+  return parsed * 100;
+}
+
+console.log(roughScale(" 0xF", 16));
+// Expected output: 1500
+
+console.log(roughScale("321", 2));
+// Expected output: 0
+```
 
 ## Sintaxe
 
@@ -32,7 +48,7 @@ Se a `radix` é menor que `2` ou maior que `36`, e o primeiro caracter que não 
 
 ```js
 if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt
+  Number.parseInt = window.parseInt;
 }
 ```
 
@@ -43,20 +59,18 @@ if (Number.parseInt === undefined) {
 Este método tem a mesma funcionalidade que o método global {{jsxref("parseInt", "parseInt()")}}:
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
 e é parte do ECMAScript 2015 (sua proposta é a modularização dos globais). Por favor veja {{jsxref("parseInt", "parseInt()")}} para mais detalhes e exemplos.
 
 ## Especificações
 
-| Especificação                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.parseInt")}}
+{{Compat}}
 
 ## Veja também
 

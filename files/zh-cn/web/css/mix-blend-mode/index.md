@@ -3,22 +3,54 @@ title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 ---
 
-{{CSSRef}}
-
 **`mix-blend-mode`** CSS 属性描述了元素的内容应该与元素的直系父元素的内容和元素的背景如何混合。
 
-{{EmbedInteractiveExample("pages/css/mix-blend-mode.html")}}
+{{InteractiveExample("CSS Demo: mix-blend-mode")}}
+
+```css interactive-example-choice
+mix-blend-mode: normal;
+```
+
+```css interactive-example-choice
+mix-blend-mode: multiply;
+```
+
+```css interactive-example-choice
+mix-blend-mode: hard-light;
+```
+
+```css interactive-example-choice
+mix-blend-mode: difference;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: sandybrown;
+}
+```
 
 ## 语法
 
-```
+```css
+/* 关键字值 */
 mix-blend-mode: normal;
 mix-blend-mode: multiply;
 mix-blend-mode: screen;
 mix-blend-mode: overlay;
 mix-blend-mode: darken;
 mix-blend-mode: lighten;
-mix-blend-mode: color-dodge
+mix-blend-mode: color-dodge;
 mix-blend-mode: color-burn;
 mix-blend-mode: hard-light;
 mix-blend-mode: soft-light;
@@ -28,9 +60,14 @@ mix-blend-mode: hue;
 mix-blend-mode: saturation;
 mix-blend-mode: color;
 mix-blend-mode: luminosity;
+mix-blend-mode: plus-darker;
+mix-blend-mode: plus-lighter;
 
-mix-blend-mode: initial;
+/* 全局值 */
 mix-blend-mode: inherit;
+mix-blend-mode: initial;
+mix-blend-mode: revert;
+mix-blend-mode: revert-layer;
 mix-blend-mode: unset;
 ```
 
@@ -549,7 +586,8 @@ body {
 
 .container {
   position: relative;
-  background: linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
+  background:
+    linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
     linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
   width: 150px;
   height: 150px;

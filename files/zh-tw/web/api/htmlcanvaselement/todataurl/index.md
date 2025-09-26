@@ -1,69 +1,84 @@
 ---
-title: HTMLCanvasElement.toDataURL()
+title: HTMLCanvasElement：toDataURL() 方法
 slug: Web/API/HTMLCanvasElement/toDataURL
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** 方法回傳含有圖像和參數設置特定格式的 [data URIs](/zh-TW/docs/Web/HTTP/data_URIs) (預設 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). 回傳的圖像解析度為 96 dpi.
+**`HTMLCanvasElement.toDataURL()`** 方法會返回包含影像表示的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)，格式由參數 `type` 指定。
 
-- 如果 canvas 的高度或是寬度為 `0`, 將會回傳字串 `"data:,"`.
-- 如果要求的圖像類型並非 `image/png`, 但是回傳的類型卻是 `data:image/png`, 表示要求的圖像類型並不支援.
-- Chrome 也支援 `image/webp` 類型.
+可以指定所需的檔案格式和影像品質。如果未指定檔案格式，或者指定的格式不受支援，則數據會以 `image/png` 格式匯出。換句話說，如果對於任何其他類型（type）的請求地返回值是以 `data:image/png` 開頭，則表示該格式不受支援。
 
-## 表達式
+瀏覽器必須支援 `image/png` 格式；許多瀏覽器也會支援額外的格式，例如 `image/jpeg` 和 `image/webp`。
 
-```plain
-canvas.toDataURL(type, encoderOptions);
+對於支援編碼解析度中繼資料的檔案格式，創建的影像數據將有 96dpi 的解析度。
+
+> [!WARNING]
+> `toDataURL()` 會將整個影像編碼為一個內存字串。對於較大的影像，這可能會帶來效能問題，甚至在指定給 {{domxref("HTMLImageElement.src")}} 時超過瀏覽器的 URL 長度限制。建議一般使用 [`toBlob()`](/zh-TW/docs/Web/API/HTMLCanvasElement/toBlob)，並搭配 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}。
+
+## 語法
+
+```js-nolint
+toDataURL()
+toDataURL(type)
+toDataURL(type, quality)
 ```
 
 ### 參數
 
 - `type` {{optional_inline}}
-  - : 圖像格式的 {{domxref("DOMString")}}. 預設為 `image/png`.
-- `encoderOptions` {{optional_inline}}
-  - : `表示 image/jpeg 或是 image/webp 的圖像品質, 為0` 到 `1` 之間的 {{jsxref("Number")}}.
-    如果值不在上述範圍中, 將會使用預設值. 其他的會忽略.
+  - : 表示影像格式的字串。預設格式為 `image/png`；如果指定的格式不支援，也會使用此格式。
+- `quality` {{optional_inline}}
+  - : 一個介於 `0` 和 `1` 之間的 {{jsxref("Number")}}，表示創建有損壓縮格式（如 `image/jpeg` 或 `image/webp`）影像時所用的影像品質。如果未指定此選項或數值超出允許範圍，則用戶代理將使用預設的品質值。
 
-### 回傳值
+### 返回值
 
-包含 [data URI](/zh-TW/docs/Web/HTTP/data_URIs) 的 {{domxref("DOMString")}}.
+包含請求的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的字串。
+
+如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Reference/Elements/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
+
+### 例外
+
+- `SecurityError`
+  - : 當畫布的點陣圖非來源乾淨，或其內容有部分可能來自與載入的文件本身不同的網站時。
 
 ## 範例
 
-創建 {{HTMLElement("canvas")}} 元素:
+以下是此 {{HTMLElement("canvas")}} 元素：
 
 ```html
 <canvas id="canvas" width="5" height="5"></canvas>
 ```
 
-可以使用下面的方式獲取 data-URL:
+可以使用以下程式碼取得該畫布的數據 URL：
 
 ```js
-var canvas = document.getElementById("canvas");
-var dataURL = canvas.toDataURL();
+const canvas = document.getElementById("canvas");
+const dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
 ```
 
-### 設置圖像的品質
+### 設定 jpeg 格式的影像品質
 
 ```js
-var fullQuality = canvas.toDataURL("image/jpeg", 1.0);
-// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
-var mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
-var lowQuality = canvas.toDataURL("image/jpeg", 0.1);
+const fullQuality = canvas.toDataURL("image/jpeg", 1.0);
+// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ…9oADAMBAAIRAxEAPwD/AD/6AP/Z"
+const mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
+const lowQuality = canvas.toDataURL("image/jpeg", 0.1);
 ```
 
-### 範例: 動態改變圖像
+### 範例：動態變更影像
 
-為了動態改變圖像, 可以與滑鼠事件一起使用 (gray-scale versus color in this example):
+可以搭配滑鼠事件，動態更改影像（例如切換為灰階或彩色影像）。
 
 #### HTML
 
 ```html
-<img class="grayscale" src="myPicture.png" alt="Description of my picture" />
+<img class="grayscale" src="myPicture.png" alt="我的圖片描述" />
 ```
 
 #### JavaScript
@@ -82,38 +97,33 @@ function showGrayImg() {
 }
 
 function removeColors() {
-  var aImages = document.getElementsByClassName("grayscale"),
-    nImgsLen = aImages.length,
-    oCanvas = document.createElement("canvas"),
-    oCtx = oCanvas.getContext("2d");
-  for (
-    var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0;
-    nImgId < nImgsLen;
-    nImgId++
-  ) {
-    oColorImg = aImages[nImgId];
-    nWidth = oColorImg.offsetWidth;
-    nHeight = oColorImg.offsetHeight;
-    oCanvas.width = nWidth;
-    oCanvas.height = nHeight;
-    oCtx.drawImage(oColorImg, 0, 0);
-    oImgData = oCtx.getImageData(0, 0, nWidth, nHeight);
-    aPix = oImgData.data;
-    nPixLen = aPix.length;
-    for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-      aPix[nPixel + 2] =
-        aPix[nPixel + 1] =
-        aPix[nPixel] =
-          (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
+  const images = document.getElementsByClassName("grayscale");
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  for (const colorImg of images) {
+    const width = colorImg.offsetWidth;
+    const height = colorImg.offsetHeight;
+    canvas.width = width;
+    canvas.height = height;
+    ctx.drawImage(colorImg, 0, 0);
+    const imgData = ctx.getImageData(0, 0, width, height);
+    const pix = imgData.data;
+    const pixLen = pix.length;
+    for (let pixel = 0; pixel < pixLen; pixel += 4) {
+      pix[pixel + 2] =
+        pix[pixel + 1] =
+        pix[pixel] =
+          (pix[pixel] + pix[pixel + 1] + pix[pixel + 2]) / 3;
     }
-    oCtx.putImageData(oImgData, 0, 0);
-    oGrayImg = new Image();
-    oGrayImg.src = oCanvas.toDataURL();
-    oGrayImg.onmouseover = showColorImg;
-    oColorImg.onmouseout = showGrayImg;
-    oCtx.clearRect(0, 0, nWidth, nHeight);
-    oColorImg.style.display = "none";
-    oColorImg.parentNode.insertBefore(oGrayImg, oColorImg);
+    ctx.putImageData(imgData, 0, 0);
+    const grayImg = new Image();
+    grayImg.src = canvas.toDataURL();
+    grayImg.onmouseover = showColorImg;
+    colorImg.onmouseout = showGrayImg;
+    ctx.clearRect(0, 0, width, height);
+    colorImg.style.display = "none";
+    colorImg.parentNode.insertBefore(grayImg, colorImg);
   }
 }
 ```
@@ -128,5 +138,4 @@ function removeColors() {
 
 ## 參見
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
-- [Data URIs](/zh-TW/docs/Web/HTTP/data_URIs) in the [HTTP](/zh-TW/docs/Web/HTTP) reference.
+- [HTTP](/zh-TW/docs/Web/HTTP) 參考中的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)。

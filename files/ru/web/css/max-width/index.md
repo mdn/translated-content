@@ -5,27 +5,62 @@ slug: Web/CSS/max-width
 
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`max-width`** устанавливает максимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления больше, чем значение, указанное для `max-width`.
+Свойство [CSS](/ru/docs/Web/CSS) **`max-width`** устанавливает максимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b) свойства {{ Cssxref("width") }} от становления больше, чем значение, указанное для `max-width`.
 
-{{EmbedInteractiveExample("pages/css/max-width.html")}}
+{{InteractiveExample("CSS Demo: max-width")}}
+
+```css interactive-example-choice
+max-width: 150px;
+```
+
+```css interactive-example-choice
+max-width: 20em;
+```
+
+```css interactive-example-choice
+max-width: 75%;
+```
+
+```css interactive-example-choice
+max-width: 20ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the maximum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 {{ Cssxref("max-width") }} перекрывает {{cssxref("width")}}, но {{ Cssxref("min-width") }} перекрывает {{ Cssxref("max-width") }}.
 
 ## Синтаксис
 
 ```css
-/* <length> значение */
-max-width: 3.5em;
-
-/* <percentage> значение */
-max-width: 75%;
-
-/* Значения-ключевые слова */
+/* Ключевые слова */
 max-width: none;
 max-width: max-content;
 max-width: min-content;
 max-width: fit-content;
 max-width: fill-available;
+
+/* Значения длины */
+max-width: 3.5em;
+
+/* <percentage> значение */
+max-width: 75%;
 
 /* Глобальные значения */
 max-width: inherit;
@@ -108,7 +143,7 @@ max-width: unset;
 
 {{EmbedLiveSample("fit-content-demo", 400, 100)}}
 
-## Проблемы доступности
+## Доступность
 
 Убедитесь, что элементы с `max-width` не обрезаются и / или не закрывают другой контент, когда страница увеличена для увеличения размера текста.
 
@@ -121,11 +156,11 @@ max-width: unset;
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
-- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("box-sizing") }}

@@ -9,7 +9,21 @@ l10n:
 
 **`let`** 文はブロックスコープのローカル変数を宣言します。任意で値を代入して初期化できます。
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript デモ: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## 構文
 
@@ -28,7 +42,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 - `valueN` {{optional_inline}}
   - : 宣言される変数ごとに、任意で初期値を JavaScript の正式な式で指定することができます。
 
-[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文を変数の宣言に使用することもできます。
+[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)構文を変数の宣言に使用することもできます。
 
 ```js
 let { bar } = foo; // where foo = { bar: 10, baz: 12 };

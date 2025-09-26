@@ -106,7 +106,7 @@ elements = document.getElementsByTagNameNS(namespace, name);
 
 ## 지원하지 않는 다른 브라우저를 위한 잠재적인 대안
 
-원하는 브라우저가 XPath 를 지원하지 않는다면, 원하는 로컬명과 네임스페이스를 갖는 모든 태그를 찾기 위한 다른 접근법(모든 자식을 거쳐 DOM 을 횡단, 모든 @xmlns 인스턴스 식별 등)이 필요하지만, XPath 가 훨씬 빠릅니다(Explorer 에 적용하려면, 아래의 함수에서 XPath 대신 [이 래퍼 클래스같은](http://www.davidflanagan.com/javascript5/display.php?n=21-10&f=21/10.js) XPath 래퍼를 호출할 수 있습니다(Explorer 는 다른 API 로 XPath 를 지원합니다).)
+원하는 브라우저가 XPath 를 지원하지 않는다면, 원하는 로컬명과 네임스페이스를 갖는 모든 태그를 찾기 위한 다른 접근법(모든 자식을 거쳐 DOM 을 횡단, 모든 @xmlns 인스턴스 식별 등)이 필요하지만, XPath 가 훨씬 빠릅니다(Explorer 에 적용하려면, 아래의 함수에서 XPath 대신 [이 래퍼 클래스같은](https://www.davidflanagan.com/javascript5/display.php?n=21-10&f=21/10.js) XPath 래퍼를 호출할 수 있습니다(Explorer 는 다른 API 로 XPath 를 지원합니다).)
 
 ```js
 function getElementsByTagNameNSWrapper(ns, elName, doc, context) {

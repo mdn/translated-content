@@ -1,19 +1,31 @@
 ---
 title: String.prototype.toLowerCase()
+short-title: toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`toLowerCase()`** は {{jsxref("String")}} 値のメソッドで、呼び出す文字列の値を小文字に変換して返します。
 
-**`toLowerCase()`** メソッドは、呼び出す文字列の値を小文字に変換して返します。
+{{InteractiveExample("JavaScript デモ: String.prototype.toLowerCase()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/string-tolowercase.html","shorter")}}
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.toLowerCase());
+// 予想される結果: "the quick brown fox jumps over the lazy dog."
+```
 
 ## 構文
 
+```js-nolint
+toLowerCase()
 ```
-str.toLowerCase()
-```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -28,7 +40,7 @@ str.toLowerCase()
 ### `toLowerCase()` メソッドの使用
 
 ```js
-console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## 仕様書
@@ -37,7 +49,7 @@ console.log('ALPHABET'.toLowerCase()); // 'alphabet'
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.toLowerCase")}}
+{{Compat}}
 
 ## 関連情報
 

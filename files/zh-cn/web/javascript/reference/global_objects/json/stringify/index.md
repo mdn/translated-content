@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 **`JSON.stringify()`** 方法将一个 JavaScript 对象或值转换为 JSON 字符串，如果指定了一个 replacer 函数，则可以选择性地替换值，或者指定的 replacer 是数组，则可选择性地仅包含数组指定的属性。
 
-{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.stringify()")}}
+
+```js interactive-example
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// Expected output: '{"x":5,"y":6}'
+
+console.log(
+  JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
+);
+// Expected output: '[3,"false",false]'
+
+console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
+// Expected output: '{"x":[10,null,null,null]}'
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// Expected output: '"2006-01-02T15:04:05.000Z"'
+```
 
 ## 语法
 
@@ -169,6 +185,22 @@ JSON.stringify(obj); // '"bar"'
 JSON.stringify({ x: obj }); // '{"x":"bar"}'
 ```
 
+### 关于序列化循环引用的问题
+
+由于 [JSON 格式](https://www.json.org/)不支持对象引用（尽管有一个 [IETF 草案存在](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)），如果尝试编码带有循环引用的对象，将会抛出 {{jsxref("TypeError")}} 异常。
+
+```js example-bad
+const circularReference = {};
+circularReference.myself = circularReference;
+
+// 序列化循环引用会抛出 "TypeError: cyclic object value" 错误
+JSON.stringify(circularReference);
+```
+
+要序列化循环引用，你可以使用支持循环引用的库（例如 Douglas Crockford 的 [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)），或者自己实现一个解决方案，这需要找到循环引用，并用可序列化的值替换（或移除）它们。
+
+如果你在使用 `JSON.stringify()` 来深拷贝一个对象，你可能想要使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}}，它支持循环引用。JavaScript 引擎的二进制序列化 API，比如 [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue)，也支持循环引用。
+
 ### `JSON.stringify`用作 JavaScript
 
 注意 JSON 不是 JavaScript 严格意义上的子集，在 JSON 中不需要省略两条终线（Line separator 和 Paragraph separator），但在 JavaScript 中需要被省略。因此，如果 JSON 被用作 JSONP 时，下面方法可以使用：
@@ -234,7 +266,7 @@ console.log(restoredSession);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中对现代 `JSON.stringify` 行为（符号和良好格式的 unicode）的 polyfill](https://github.com/zloirock/core-js#ecmascript-json)
 - {{JSxRef("JSON.parse()")}}
-- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – Introduces two functions: `JSON.decycle` and `JSON.retrocycle`. These allow encoding and decoding of cyclical structures and DAGs into an extended and retrocompatible JSON format.

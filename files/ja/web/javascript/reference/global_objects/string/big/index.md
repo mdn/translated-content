@@ -1,21 +1,27 @@
 ---
 title: String.prototype.big()
+short-title: big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-**`big()`** メソッドは、文字列を {{HTMLElement("big")}} 要素の中に埋め込み (`<big>str</big>`)、文字列が大きなフォントで表示されるようにします。
+**`big()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("big")}} 要素の中に埋め込み (`<big>str</big>`)、この文字列が大きなフォントで表示されるようにします。
 
-> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)はすべて非推奨となっており、互換性目的のみで標準化されています。`<big>` 要素自体は [HTML5](/ja/docs/Glossary/HTML5) で削除されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
+> [!NOTE]
+> [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。`<big>` 要素自体は HTML 仕様書から削除されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
 
 ## 構文
 
 ```js-nolint
 big()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -25,17 +31,24 @@ big()
 
 ### big() の使用
 
-以下の例では文字列のメソッドを使用して、文字列の大きさを変更しています。
+下記のコードは HTML 文字列を作成し、文書内の本体を文字列で置き換えています。
 
 ```js
-const worldString = "Hello, world";
+const contentString = "Hello, world";
 
-console.log(worldString.small()); // <small>Hello, world</small>
-console.log(worldString.big()); // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <font size="7">Hello, world</font>
+document.body.innerHTML = contentString.big();
 ```
 
-{{domxref("HTMLElement/style", "element.style")}} オブジェクトを使用すると、要素の `style` 属性を使用して、次のようにもっと汎用的に操作することができます。
+これで次の HTML が作成されます。
+
+```html
+<big>Hello, world</big>
+```
+
+> [!WARNING]
+> `big` は有効な要素ではなくなっているので、このマークアップは無効です。
+
+`big()` を使用して直接 HTML テキストを作成する代わりに、 CSS を使用してフォントを操作しましょう。例えば、 {{domxref("HTMLElement/style", "element.style")}} 属性を通して {{cssxref("font-size")}} を操作することができます。
 
 ```js
 document.getElementById("yourElemId").style.fontSize = "2em";
@@ -52,5 +65,6 @@ document.getElementById("yourElemId").style.fontSize = "2em";
 ## 関連情報
 
 - [`String.prototype.big` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.small()")}}
+- [es-shims による `String.prototype.big` のポリフィル](https://www.npmjs.com/package/es-string-html-methods)
+- [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)
+- {{HTMLElement("big")}}

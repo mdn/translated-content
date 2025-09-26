@@ -3,9 +3,11 @@ title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
 
-`XMLHttpRequest` es un objeto [JavaScript](/en/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](http://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
+{{APIRef("XMLHttpRequest API")}}
 
-A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en/HTTP) (incluyendo `file` y `ftp`).
+`XMLHttpRequest` es un objeto [JavaScript](/es/docs/Web/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](https://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
+
+A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en-US/HTTP) (incluyendo `file` y `ftp`).
 
 Para crear una instancia de `XMLHttpRequest`, debes hacer lo siguiente:
 
@@ -13,9 +15,10 @@ Para crear una instancia de `XMLHttpRequest`, debes hacer lo siguiente:
 var req = new XMLHttpRequest();
 ```
 
-Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHttpRequest](/Es/XMLHttpRequest/Using_XMLHttpRequest).
+Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
-> **Nota:** De forma predeterminada, Firefox 3 limita la cantidad de conexiones de `XMLHttpRequest` por servidor a 6 (las versiones previas limitan a 2 conexiones por servidor). Algunos sitios web interactivos pueden mantener una conexión `XMLHttpRequest` abierta, así que abrir múltiples sesiones a esos sitios puede derivar en congelamientos del navegador de una forma que la ventana no se actualiza y los controles no responden. Este valor puede ser cambiado al editar la preferencia `network.http.max-persistent-connections-per-server` en [`about:config`](/about:config).
+> [!NOTE]
+> De forma predeterminada, Firefox 3 limita la cantidad de conexiones de `XMLHttpRequest` por servidor a 6 (las versiones previas limitan a 2 conexiones por servidor). Algunos sitios web interactivos pueden mantener una conexión `XMLHttpRequest` abierta, así que abrir múltiples sesiones a esos sitios puede derivar en congelamientos del navegador de una forma que la ventana no se actualiza y los controles no responden. Este valor puede ser cambiado al editar la preferencia `network.http.max-persistent-connections-per-server` en [`about:config`](/about:config).
 
 ## Resumen del método
 
@@ -36,31 +39,29 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 - `channel`: `nsIChannel`
   - : El canal es usado por el objeto cuando se produce el pedido. Esto da `null` si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. **Es necesario tener privilegios elevados para acceder; sólo lectura.** {{ Non-standard_inline() }}
 - `mozBackgroundRequest`: `booleano`
-
   - : Indica si el objeto representa o no un pedido de un servicio de fondo. Si es `true`, no se asocia una carga de grupo con el pedido, y los diálogos de seguridad no se muestran al usuario. **Es necesario tener privilegios elevados para acceder.** {{ Non-standard_inline() }}
 
     En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
 
 - `mozResponseArrayBuffer` {{ Non-standard_inline() }}
-  : [`ArrayBuffer`](/es/JavaScript_typed_arrays/ArrayBuffer)
+  : [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
   - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
 - `multipart`: `booleano`
-
   - : Indica cuando se espera que la respuesta sea o no una serie de mútiples documentos XML. Si se define como `true`, el tipo de contenido de la respuesta inicial debe ser `multipart/x-mixed-replace` u ocurrirá un error. Todos los pedidos deben ser asincrónicos.
 
     Esto permite el uso del push del servidor; para cada documento XML que se escribe para este pedido, se crea un nuevo XMLDOMdocument y se llama al manejador `onload` entre cada documento.
 
-    > **Nota:** Cuando esto se elige, el manejador `onload` y otros manejadores de eventos no son reiniciados después de que el primer XMLdocument es cargado, y el manejador `onload` es llamado después de que cada parte de la respuesta es recibida.
+    > [!NOTE]
+    > Cuando esto se elige, el manejador `onload` y otros manejadores de eventos no son reiniciados después de que el primer XMLdocument es cargado, y el manejador `onload` es llamado después de que cada parte de la respuesta es recibida.
 
 - `onreadystatechange`
   : `nsIDOMEventListener`
-
   - : Una función del objeto JavaScript que se llama cuando el atributo `readyState` cambia. El callback se llama desde la interfaz del usuario.
 
-    > **Advertencia:** Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.
+    > [!WARNING]
+    > Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.
 
 - `readyState`: `long`
-
   - : El estado del pedido:
 
     | Valor | Estado          | Descripción                                                                |
@@ -74,10 +75,10 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 - `responseText`: `AString`
   - : La respuesta al pedido como texto, o `null` si el pedido no fue exitoso o todavía no se envió. **Sólo lectura.**
 - `responseXML`: `nsIDOMDocument`
+  - : La respuesta al pedido como un objeto DOM[`Document`](/es/docs/Web/API/Document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
 
-  - : La respuesta al pedido como un objeto DOM[`Document`](/es/DOM/document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
-
-    > **Nota:** Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
+    > [!NOTE]
+    > Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
 
 - `status`: `unsigned long`
   - : El estado de la respuesta al pedido. Éste es el código HTTPresult (por ejemplo, `status` es 200 por un pedido exitoso). **Sólo lectura.**
@@ -86,10 +87,10 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 - `upload`: `nsIXMLHttpRequestUpload`
   - : El proceso de subida puede ser rastreado al agregar un registro de evento a `upload`.
 - `withCredentials`: `booleano`
-
   - : Indica cuando el pedido de Access-Control entre sitios debe o no ser realizado usando credenciales como cookies o encabezados de autorización.
 
-    > **Nota:** Esto nunca afecta los pedidos en para el propio sitio.
+    > [!NOTE]
+    > Esto nunca afecta los pedidos en para el propio sitio.
 
     El valor predeterminado es `false`.
 
@@ -111,7 +112,8 @@ Ninguno.
 
 Devuelve todos los encabezados de respuesta como una cadena.
 
-> **Nota:** Para pedidos multi partes, esto devuelve los encabezados de la parte _actual_ del pedido, no del canal original.
+> [!NOTE]
+> Para pedidos multi partes, esto devuelve los encabezados de la parte _actual_ del pedido, no del canal original.
 
 ```
 string getAllResponseHeaders();
@@ -148,7 +150,8 @@ Una cadena que contiene el texto de un encabezado específico, o `null` tanto si
 
 Inicializa el objeto para que sea usado desde código C++.
 
-> **Advertencia:** **Aviso:** Este método _no_ debe ser llamado desde JavaScript.
+> [!WARNING]
+> **Aviso:** Este método _no_ debe ser llamado desde JavaScript.
 
 ```
 [noscript] void init(
@@ -171,7 +174,8 @@ Inicializa el objeto para que sea usado desde código C++.
 
 Inicializa el pedido. Este método es para ser usado desde código JavaScript, para inicializar un pedido desde código nativo, debes usar [`openRequest()`](</en/XMLHttpRequest#openRequest()>).
 
-> **Nota:** Llamar a este método en un pedido activo (uno para el cual `open()` o `openRequest()` ya han sido llamados) es equivalente a usar `abort()`.
+> [!NOTE]
+> Llamar a este método en un pedido activo (uno para el cual `open()` o `openRequest()` ya han sido llamados) es equivalente a usar `abort()`.
 
 ```
 void open(
@@ -202,7 +206,8 @@ Inicia la peticion, este metodo est
 
 Inicializa la peticion. Este método se utiliza desde el código nativo, para inicializar una solicitud desde el código JavaScript, utilice `open ()` en su lugar.
 
-> **Nota:** Calling this method an already active request (one for which `open()` or `openRequest()` has already been called) is the equivalent of calling `abort()`.
+> [!NOTE]
+> Calling this method an already active request (one for which `open()` or `openRequest()` has already been called) is the equivalent of calling `abort()`.
 
 ```
 void open(
@@ -231,7 +236,8 @@ void open(
 
 Overrides the MIMEtype returned by the server.
 
-> **Nota:** This method must be called before `send()`.
+> [!NOTE]
+> This method must be called before `send()`.
 
 ```
 void overrideMimeType(
@@ -248,7 +254,8 @@ void overrideMimeType(
 
 Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent. If the request is synchronous, this method doesn't return until the response has arrived.
 
-> **Nota:** Any event listeners you wish to set must be set before calling `send()`.
+> [!NOTE]
+> Any event listeners you wish to set must be set before calling `send()`.
 
 ```
 void send(
@@ -259,7 +266,7 @@ void send(
 ###### Parameters
 
 - `body`
-  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) you may also specify a [`FormData`](/en/XMLHttpRequest/FormData) object.
+  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) you may also specify a [`FormData`](/es/docs/Web/API/FormData) object.
 
 ###### Notes
 
@@ -286,7 +293,8 @@ void sendAsBinary(
 
 Sets the value of an HTTPrequest header.
 
-> **Nota:** You must call [`open()`](</en/XMLHttpRequest#open()>)before using this method.
+> [!NOTE]
+> You must call [`open()`](</en/XMLHttpRequest#open()>)before using this method.
 
 ```
 void setRequestHeader(
@@ -308,11 +316,11 @@ void setRequestHeader(
 
 ## See also
 
-- [Using XMLHttpRequest](/En/XMLHttpRequest/Using_XMLHttpRequest)
-- [`FormData`](/en/XMLHttpRequest/FormData)
-- [MDC AJAX introduction](/en/AJAX/Getting_Started)
-- [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
+- [Using XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [`FormData`](/es/docs/Web/API/FormData)
+- [MDC AJAX introduction](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-- [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
-- ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-- [The XMLHttpRequest Object: W3C Working Draft](http://www.w3.org/TR/XMLHttpRequest/)
+- [Apple developers' reference](https://developer.apple.com/internet/webcontent/xmlhttpreq.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [The XMLHttpRequest Object: W3C Working Draft](https://www.w3.org/TR/XMLHttpRequest/)

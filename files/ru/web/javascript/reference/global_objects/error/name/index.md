@@ -3,7 +3,7 @@ title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
 ---
 
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -27,11 +27,7 @@ throw e;
 
 ## Спецификации
 
-| Спецификация                                                             | Статус             | Комментарии              |
-| ------------------------------------------------------------------------ | ------------------ | ------------------------ |
-| ECMAScript 1-е издание.                                                  | Стандарт           | Изначальное определение. |
-| {{SpecName('ES5.1', '#sec-15.11.4.2', 'Error.prototype.name')}}          | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES6', '#sec-error.prototype.name', 'Error.prototype.name')}} | {{Spec2('ES6')}}   |                          |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

@@ -44,7 +44,7 @@ WebCodecs API 提供了对浏览器中已存在的编解码器的访问能力。
 
 ## 示例
 
-在下面这个例子中，获取从 {{domxref("MediaStreamTrackProcessor")}} 中返回的帧，然后对他们进行编码。在文章 [Video processing with WebCodecs](https://web.dev/webcodecs/) 查看完整示例并了解更多细节。
+在下面这个例子中，获取从 {{domxref("MediaStreamTrackProcessor")}} 中返回的帧，然后对他们进行编码。在文章[使用 WebCodec 处理视频](https://developer.chrome.google.cn/docs/web-platform/best-practices/webcodecs)查看完整示例并了解更多细节。
 
 ```js
 let frame_counter = 0;
@@ -70,4 +70,4 @@ while (true) {
 
 ## 参考
 
-- [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [使用 WebCodec 处理视频](https://developer.chrome.google.cn/docs/web-platform/best-practices/webcodecs)

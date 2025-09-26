@@ -1,17 +1,30 @@
 ---
 title: Number.MAX_SAFE_INTEGER
+short-title: MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Number.MAX_SAFE_INTEGER`** 定数は、JavaScript における安全な整数の最大値 (2<sup>53</sup> – 1) を表します。
+**`Number.MAX_SAFE_INTEGER`** は静的データプロパティで、JavaScript における安全な整数の最大値 (2<sup>53</sup> – 1) を表します。
 
 もっと大きな整数には、 {{jsxref("BigInt")}} を使用することを検討してください。
 
-{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}
+{{InteractiveExample("JavaScript デモ: Number.MAX_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MAX_SAFE_INTEGER + 1;
+const y = Number.MAX_SAFE_INTEGER + 2;
+
+console.log(Number.MAX_SAFE_INTEGER);
+// 予想される結果: 9007199254740991
+
+console.log(x);
+// 予想される結果: 9007199254740992
+
+console.log(x === y);
+// 予想される結果: true
+```
 
 ## 値
 
@@ -52,6 +65,7 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
 ## 関連情報
 
 - [`Number.MAX_SAFE_INTEGER` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims による `Number.MAX_SAFE_INTEGER` のポリフィル](https://www.npmjs.com/package/es-constants)
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
 - {{jsxref("Number.isSafeInteger()")}}
 - {{jsxref("BigInt")}}

@@ -246,7 +246,8 @@ Les notations fonctionnelles sont des types de valeur qui peuvent représenter d
 
 Les espaces sont optionnels mais autorisés à l'intérieur des parenthèses.
 
-> **Note :** Contrairement à d'autres langages, la virgule n'est pas toujours le séparateur utilisé entre les arguments d'une notation fonctionnelle.
+> [!NOTE]
+> Contrairement à d'autres langages, la virgule n'est pas toujours le séparateur utilisé entre les arguments d'une notation fonctionnelle.
 
 Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des virgules pour séparer des arguments mais la plupart du temps, les virgules sont uniquement utilisées afin de séparer les éléments d'une liste. Si une virgule est utilisée comme séparateur entre des arguments, on peut ajouter un espace optionnel avant et après la virgule.
 
@@ -256,5 +257,5 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
 
 ## Voir aussi
 
-- [Les types de donnée de base en CSS](/fr/docs/Web/CSS/CSS_Types)
-- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Les types de donnée de base en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [Introduction à CSS : les valeurs et les unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

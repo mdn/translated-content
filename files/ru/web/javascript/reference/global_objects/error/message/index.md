@@ -3,7 +3,7 @@ title: Error.prototype.message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 ---
 
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -27,11 +27,7 @@ throw e;
 
 ## Спецификации
 
-| Спецификация                                                                   | Статус             | Комментарии              |
-| ------------------------------------------------------------------------------ | ------------------ | ------------------------ |
-| ECMAScript 1-е издание.                                                        | Стандарт           | Изначальное определение. |
-| {{SpecName('ES5.1', '#sec-15.11.4.3', 'Error.prototype.message')}}             | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES6', '#sec-error.prototype.message', 'Error.prototype.message')}} | {{Spec2('ES6')}}   |                          |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

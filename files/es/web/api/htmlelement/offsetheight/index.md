@@ -11,7 +11,8 @@ Generalmente, `offsetHeight` es una medida en píxeles que representa la altura 
 
 Si un elemento está oculto (por ejemplo, al establecer `style.display` a `"none"` en el elemento o uno de sus ancestros), se devuelve `0`.
 
-> **Nota:** Esta propiedad redondea el valor a un entero. Si necesitas un valor decimal, usa {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Esta propiedad redondea el valor a un entero. Si necesitas un valor decimal, usa {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Sintaxis
 

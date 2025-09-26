@@ -9,7 +9,24 @@ A propriedade **`Math.E`** representa a base dos logarítmos naturais, aproximad
 
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-e.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Math.E")}}
+
+```js interactive-example
+function compoundOneYear(interestRate, currentVal) {
+  return currentVal * Math.E ** interestRate;
+}
+
+console.log(Math.E);
+// Expected output: 2.718281828459045
+
+console.log((1 + 1 / 1000000) ** 1000000);
+// Expected output: 2.718280469 (approximately)
+
+console.log(compoundOneYear(0.05, 100));
+// Expected output: 105.12710963760242
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Descrição
 
@@ -31,16 +48,11 @@ getNapier(); // 2.718281828459045
 
 ## Especificações
 
-| Especificação                                                    | Status                       | Comentário                                         |
-| ---------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                         | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.1', 'Math.E')}} | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.e', 'Math.E')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.e', 'Math.E')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.E")}}
+{{Compat}}
 
 ## Veja também
 

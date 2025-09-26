@@ -67,7 +67,7 @@ for (const [prop, val] of allComputedStyles) {
 }
 ```
 
-En [navegadores que soportan `computedStyleMap()`](/es/docs/Web/API/Element/computedStyleMap#Browser_compatibility), verás una lista de todas las propiedades CSS y valores. En otros navegadores verás un enlace.
+En [navegadores que soportan `computedStyleMap()`](#browser_compatibility), verás una lista de todas las propiedades CSS y valores. En otros navegadores verás un enlace.
 
 {{EmbedLiveSample("Examples", 300, 300)}}
 

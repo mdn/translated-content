@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Statements/continue
 1. `continue`
 2. `continue label`
 
-**範例 1**
+## 範例 1
 
 以下範例示範加上 `continue` 語法的 `while` 循環，`continue` 語法會在 `i` 值為 3 時執行。因此，`n` 的值依序為 1、3、7、12。
 
@@ -27,7 +27,7 @@ while (i < 5) {
 }
 ```
 
-**範例 2**
+## 範例 2
 
 已加上標籤的語法 `checkiandj` 內含已加上標籤的語法 `checkj`。如果遇到 `continue`，程式會終止 `checkj` 這一次的反覆過程，並開始下一次的反覆過程。每當遇到 `continue`，就會反覆執行 `checkj` 直到他的條件返回 false 為止。當返回 false 時，`checkiandj` 語句完成了餘數的計算，且 `checkiandj` 會反覆執行，直到他的條件返回為 false 為止。當返回 false 時，程式繼續執行 `checkiandj` 後面的語句。
 
@@ -47,5 +47,3 @@ checkiandj: while (i < 4) {
   document.write("j = " + j + "<br/>");
 }
 ```
-
-{{ PreviousNext("Core_JavaScript_1.5_教學:循環語法:break_語法", "Core_JavaScript_1.5_教學:物件的操作語法") }}

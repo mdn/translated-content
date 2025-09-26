@@ -7,13 +7,8 @@ slug: Web/API/Attr/prefix
 
 **`Attr.prefix`** 为只读属性，返回指定标签属性的名字空间前缀，如果没有前缀则返回 `null`。
 
-> **备注：** 在 DOM4 之前此 API 被定义在 {{domxref("Node")}} 接口中。
-
-## 语法
-
-```
-string = attribute.prefix
-```
+> [!NOTE]
+> 在 DOM4 之前此 API 被定义在 {{domxref("Node")}} 接口中。
 
 ## 示例
 

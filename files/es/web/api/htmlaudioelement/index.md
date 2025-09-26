@@ -5,9 +5,9 @@ slug: Web/API/HTMLAudioElement
 
 {{APIRef("HTML DOM")}}
 
-La interfaz `HTMLAudioElement` proporciona acceso a las propiedades de los elementos {{ HTMLElement("audio") }}, así como métodos para manipularlos. Se deriva de la interfaz [`HTMLMediaElement`](/en/DOM/HTMLMediaElement); se implementa por medio de `nsIDOMHTMLMediaElement`.
+La interfaz `HTMLAudioElement` proporciona acceso a las propiedades de los elementos {{ HTMLElement("audio") }}, así como métodos para manipularlos. Se deriva de la interfaz [`HTMLMediaElement`](/es/docs/Web/API/HTMLMediaElement); se implementa por medio de `nsIDOMHTMLMediaElement`.
 
-Para obtener más detalles sobre cómo usar las caracterísitcas de transmisión de sonido que expone esta interfaz, por favor consulta [Introducción a la extensión de la API de sonido](/en/Introducing_the_Audio_API_Extension).
+Para obtener más detalles sobre cómo usar las caracterísitcas de transmisión de sonido que expone esta interfaz, por favor consulta [Introducción a la extensión de la API de sonido](/en-US/Introducing_the_Audio_API_Extension).
 
 ## Propiedades
 
@@ -26,5 +26,5 @@ Para obtener más detalles sobre cómo usar las caracterísitcas de transmisión
 
 ## Consulta también
 
-- [Introducción a la extensión de la API de sonido](/en/Introducing_the_Audio_API_Extension)
+- [Introducción a la extensión de la API de sonido](/en-US/Introducing_the_Audio_API_Extension)
 - {{ HTMLElement("audio") }}

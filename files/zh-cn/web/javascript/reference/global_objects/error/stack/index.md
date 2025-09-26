@@ -100,7 +100,7 @@ try {
 // @file:///C:/example.html:7:6
 ```
 
-你也可以使用`//# sourceURL` 命名 eval 源的指令。也可以查看在 [Debugger](/zh-CN/docs/Tools/Debugger)文档中的[Debug eval 源](/zh-CN/docs/Tools/Debugger/How_to/Debug_eval_sources)和[blog post 博客。](http://fitzgeraldnick.com/weblog/59/)
+在 Firefox 中，你可以使用 `//# sourceURL` 指令来为 eval 源命名。参见 Firefox [调试 eval 源](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html)文档以及[使用 `//# sourceURL` 指令命名 `eval` 脚本](https://fitzgen.com/2014/12/05/name-eval-scripts.html)博客以了解更多细节。
 
 ## 规范
 

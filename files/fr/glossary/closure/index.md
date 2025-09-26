@@ -3,6 +3,8 @@ title: Fermeture
 slug: Glossary/Closure
 ---
 
+{{GlossarySidebar}}
+
 La contrainte qui définit la **{{glossary("scope","portée")}}** d'exécution. En {{glossary("JavaScript")}}, les **{{glossary("function","fonctions")}}** créent un contexte de fermeture.
 
 ## Voir aussi
@@ -13,4 +15,4 @@ La contrainte qui définit la **{{glossary("scope","portée")}}** d'exécution. 
 
 ### Référence technique
 
-- [Fermeture](/fr/docs/Web/JavaScript/Closures) sur MDN
+- [Fermeture](/fr/docs/Web/JavaScript/Guide/Closures) sur MDN

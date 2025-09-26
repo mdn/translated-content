@@ -35,11 +35,11 @@ O global `EvalError` não contém métodos próprios, no entando, ele irá herda
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -63,16 +63,11 @@ try {
 
 ## Especificações
 
-| Especificação                                                                                   | Status               | Comentário                                                                        |
-| ----------------------------------------------------------------------------------------------- | -------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}     | Definição inicial.                                                                |
-| {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                            | {{Spec2('ES5.1')}}   | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}     | {{Spec2('ES6')}}     | Não utilizada na especificação. Presente para compatibilidade com outras versões. |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ESDraft')}} |                                                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.EvalError")}}
+{{Compat}}
 
 ## Veja também
 

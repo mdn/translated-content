@@ -1,13 +1,14 @@
 ---
 title: "HTMLMediaElement: volumechange イベント"
+short-title: volumechange
 slug: Web/API/HTMLMediaElement/volumechange_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
-`volumechange` イベントは、ボリュームが変更されたときに発生します。
+`volumechange`イベントは、{{domxref("HTMLMediaElement.volume", "volume")}} 属性か {{domxref("HTMLMediaElement.muted", "muted")}} 属性のいずれかが変更されたときに発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -16,9 +17,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('volumechange', (event) => {});
+addEventListener("volumechange", (event) => {});
 
-onvolumechange = (event) => { };
+onvolumechange = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +33,20 @@ onvolumechange = (event) => { };
 `addEventListener()` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('volumechange', (event) => {
-  console.log('The volume changed.');
+video.addEventListener("volumechange", (event) => {
+  console.log("The volume changed.");
 });
 ```
 
 `onvolumechange` イベントハンドラープロパティを使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onvolumechange = (event) => {
-  console.log('The volume changed.');
+  console.log("The volume changed.");
 };
 ```
 
@@ -73,7 +74,6 @@ video.onvolumechange = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} イベント

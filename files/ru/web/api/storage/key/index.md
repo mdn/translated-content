@@ -42,13 +42,14 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 ```
 
-> **Примечание:** более реалистичный пример использования функции показан на странице [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> Более реалистичный пример использования функции показан на странице [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

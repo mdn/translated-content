@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Statements/label
 
 **레이블 구문**은 {{jsxref("Statements/break", "break")}}나 {{jsxref("Statements/continue", "continue")}} 구문과 함께 사용할 수 있다. 원하는 식별자로 구문 앞에 레이블을 추가할 수 있다.
 
-> **Note:** 레이블을 붙인 반복문이나 블록가 자주 사용되는 것은 아니다. 반복문으로 점프하는 대신에 함수를 호출할 수도 있다.
+> [!NOTE]
+> 레이블을 붙인 반복문이나 블록가 자주 사용되는 것은 아니다. 반복문으로 점프하는 대신에 함수를 호출할 수도 있다.
 
 ## 문법
 
@@ -17,7 +18,7 @@ label:
 ```
 
 - `label`
-  - : 자바스크립트에서 사용할 수 있는 식별자면 모두 가능하다.
+  - : JavaScript에서 사용할 수 있는 식별자면 모두 가능하다.
 - `statement`
   - : 구문. break는 모든 레이블 구문에서 사용될 수 있으며, continue는 반복 레이블 구문에서만 사용할 수 있다.
 
@@ -25,7 +26,7 @@ label:
 
 반복문에 레이블을 붙이고, break나 continue 구문을 사용해 반복문의 어느 위치에서 작업을 멈추고 어느 위치에서 다시 수행할지를 알려줄 수 있다.
 
-자바스크립트에는 goto 구문이 없다는 것에 주의. break나 continue에서만 레이블을 사용할 수 있다.
+JavaScript에는 goto 구문이 없다는 것에 주의. break나 continue에서만 레이블을 사용할 수 있다.
 
 [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) 코드에서 "let"을 레이블 이름으로 사용할 수 없다. {{jsxref("SyntaxError")}}를 발생시킨다. (let은 허용되지 않는 식별자이다.)
 
@@ -137,7 +138,7 @@ console.log("swap");
 
 ### 레이블 붙인 함수 선언문
 
-ECMAScript 2015에서, 레이블 붙인 함수 선언문은 [web compatibility annex of the specification](http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations)의 non-strict 모드에서 표준화되어 있다.
+ECMAScript 2015에서, 레이블 붙인 함수 선언문은 [web compatibility annex of the specification](https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations)의 non-strict 모드에서 표준화되어 있다.
 
 ```js
 L: function F() {}

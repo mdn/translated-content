@@ -3,7 +3,7 @@ title: 運算式與運算子
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 這個章節將講述 JavaScript 的運算式與運算子，包括賦值運算子，比較運算子，算術運算子，位元運算子， 邏輯運算子, 字串運算子, 條件(三元)運算子 以及更多運算子.
 
@@ -48,29 +48,29 @@ JavaScript 同時具有二元運算子及一元運算子， 以及一種特殊�
 
 ### 賦值運算子
 
-一個 [賦值運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators) 將 基於其 右方的運算元 的值賦予其 左方的運算元。 最簡單的 賦值運算子 是 等於 (`=`)， 它將賦予 左方運算元 與 右方運算元相同之值。 也就是， `x = y` 會把 y 的值賦予給 x。
+一個 [賦值運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment) 將 基於其 右方的運算元 的值賦予其 左方的運算元。 最簡單的 賦值運算子 是 等於 (`=`)， 它將賦予 左方運算元 與 右方運算元相同之值。 也就是， `x = y` 會把 y 的值賦予給 x。
 
 也有一些復合的 賦值運算子 是為了縮短下面表中的運算:
 
-| 名稱                                                                                                                                                                                        | 簡化的運算子 | 意義          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------------- |
-| [賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment)                                                                                                      | `x = y`      | `x = y`       |
-| [加法](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Addition_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment)       | `x += y`     | `x = x + y`   |
-| [減法](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Subtraction_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment)    | `x -= y`     | `x = x - y`   |
-| [乘法](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Multiplication_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment) | `x *= y`     | `x = x * y`   |
-| [除法](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Division_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment)       | `x /= y`     | `x = x / y`   |
-| [餘數](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Remainder_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment)      | `x %= y`     | `x = x % y`   |
-| [指數](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Exponentiation_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment) | `x **= y`    | `x = x ** y`  |
-| [左移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Left_shift_assignment)                                                                                       | `x <<= y`    | `x = x << y`  |
-| [右移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Right_shift_assignment)                                                                                      | `x >>= y`    | `x = x >> y`  |
-| [無號右移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Unsigned_right_shift_assignment)                                                                         | `x >>>= y`   | `x = x >>> y` |
-| [位元 AND 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_AND_assignment)                                                                                 | `x &= y`     | `x = x & y`   |
-| [位元 XOR 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_XOR_assignment)                                                                                 | `x ^= y`     | `x = x ^ y`   |
-| [位元 OR 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Bitwise_OR_assignment)                                                                                   | `x \|= y`    | `x = x \| y`  |
+| 名稱                                                                                           | 簡化的運算子 | 意義          |
+| ---------------------------------------------------------------------------------------------- | ------------ | ------------- |
+| [賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment)                              | `x = y`      | `x = y`       |
+| [加法賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                 | `x += y`     | `x = x + y`   |
+| [減法賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)              | `x -= y`     | `x = x - y`   |
+| [乘法賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)           | `x *= y`     | `x = x * y`   |
+| [除法賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division_assignment)                 | `x /= y`     | `x = x / y`   |
+| [餘數賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                | `x %= y`     | `x = x % y`   |
+| [指數賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)           | `x **= y`    | `x = x ** y`  |
+| [左移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)               | `x <<= y`    | `x = x << y`  |
+| [右移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)              | `x >>= y`    | `x = x >> y`  |
+| [無號右移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= y`   | `x = x >>> y` |
+| [位元 AND 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)         | `x &= y`     | `x = x & y`   |
+| [位元 XOR 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)         | `x ^= y`     | `x = x ^ y`   |
+| [位元 OR 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)           | `x \|= y`    | `x = x \| y`  |
 
 #### 解構
 
-為了進行更複雜的賦值，[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)是 JavaScript 用來從陣列或物件中提取資料的語法。
+為了進行更複雜的賦值，[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)是 JavaScript 用來從陣列或物件中提取資料的語法。
 
 ```js
 var foo = ["one", "two", "three"];
@@ -86,29 +86,30 @@ var [one, two, three] = foo;
 
 ### 比較運算子
 
-[比較運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 會比較 運算元 並基於比較的結果回傳邏輯值。 運算元可以是數字，字串，邏輯，或物件的值。 字串的比較是基於字典序的， 使用 Unicode 的值。 在多數情況下，假如兩個運算元不具有相同型態， JavaScript 會嘗試將它們轉換成相同型態。這個行為通常是將運算元以數學形式對待。 在某些的轉換型態的例外中會使用到 `===` 及 `!==` 運算子， 它們會嚴格地進行相等或不相等的比較。 這些運算子不會在確認相等與否前嘗試轉換運算元的型態。 下面的表解釋了比較運算子:
+[比較運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators) 會比較 運算元 並基於比較的結果回傳邏輯值。 運算元可以是數字，字串，邏輯，或物件的值。 字串的比較是基於字典序的， 使用 Unicode 的值。 在多數情況下，假如兩個運算元不具有相同型態， JavaScript 會嘗試將它們轉換成相同型態。這個行為通常是將運算元以數學形式對待。 在某些的轉換型態的例外中會使用到 `===` 及 `!==` 運算子， 它們會嚴格地進行相等或不相等的比較。 這些運算子不會在確認相等與否前嘗試轉換運算元的型態。 下面的表解釋了比較運算子:
 
 ```js
 var var1 = 3;
 var var2 = 4;
 ```
 
-| 運算子                                                                                                                  | 描述                                                                                                                                                     | 會回傳 True 的例子                   |
-| ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                             | 假如運算元等價就回傳 True。                                                                                                                              | `3 == var1` `"3" == var1` `3 == '3'` |
-| [不等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality) (`!=`)                         | 假如運算元等價就回傳 True。                                                                                                                              | `var1 != 4 var2 != "3"`              |
-| [嚴格等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity) (`===`)                        | 假如運算元具有相同型態且等價則回傳 True。參考 {{jsxref("Object.is")}} 及 [JS 中的等價性](/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness)。 | `3 === var1`                         |
-| [嚴格不等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity) (`!==`)                   | 假如運算元具有相同型態但不等價，或是具有不同型態，回傳 True。                                                                                            | `var1 !== "3" 3 !== '3'`             |
-| [大於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator) (`>`)                 | 假如左方運算元大於右方運算元，回傳 True。                                                                                                                | `var2 > var1 "12" > 2`               |
-| [大於或等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator) (`>=`) | 假如左方運算元大於或等於右方運算元，回傳 True。                                                                                                          | `var2 >= var1 var1 >= 3`             |
-| [小於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator) (`<`)                    | 假如左方運算元小於右方運算元，回傳 True。                                                                                                                | `var1 < var2 "2" < 12`               |
-| [小於或等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_or_equal_operator) (`<=`)    | 假如左方運算元小於或等於右方運算元，回傳 True。                                                                                                          | `var1 <= var2 var2 <= 5`             |
+| 運算子                                                                                             | 描述                                                                                                                                                           | 會回傳 True 的例子                   |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [等於](/zh-TW/docs/Web/JavaScript/Reference/Operators#equality) (`==`)                             | 假如運算元等價就回傳 True。                                                                                                                                    | `3 == var1` `"3" == var1` `3 == '3'` |
+| [不等於](/zh-TW/docs/Web/JavaScript/Reference/Operators#inequality) (`!=`)                         | 假如運算元等價就回傳 True。                                                                                                                                    | `var1 != 4 var2 != "3"`              |
+| [嚴格等於](/zh-TW/docs/Web/JavaScript/Reference/Operators#identity) (`===`)                        | 假如運算元具有相同型態且等價則回傳 True。參考 {{jsxref("Object.is")}} 及 [JS 中的等價性](/zh-TW/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)。 | `3 === var1`                         |
+| [嚴格不等於](/zh-TW/docs/Web/JavaScript/Reference/Operators#nonidentity) (`!==`)                   | 假如運算元具有相同型態但不等價，或是具有不同型態，回傳 True。                                                                                                  | `var1 !== "3" 3 !== '3'`             |
+| [大於](/zh-TW/docs/Web/JavaScript/Reference/Operators#greater_than_operator) (`>`)                 | 假如左方運算元大於右方運算元，回傳 True。                                                                                                                      | `var2 > var1 "12" > 2`               |
+| [大於或等於](/zh-TW/docs/Web/JavaScript/Reference/Operators#greater_than_or_equal_operator) (`>=`) | 假如左方運算元大於或等於右方運算元，回傳 True。                                                                                                                | `var2 >= var1 var1 >= 3`             |
+| [小於](/zh-TW/docs/Web/JavaScript/Reference/Operators#less_than_operator) (`<`)                    | 假如左方運算元小於右方運算元，回傳 True。                                                                                                                      | `var1 < var2 "2" < 12`               |
+| [小於或等於](/zh-TW/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator) (`<=`)    | 假如左方運算元小於或等於右方運算元，回傳 True。                                                                                                                | `var1 <= var2 var2 <= 5`             |
 
-> **備註：** `=>` 不是運算子，是 [箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
+> [!NOTE]
+> `=>` 不是運算子，是[箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
 ### 算術運算子
 
-[算術運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) 以 數值 (文字或變數也可以)作為其運算元，並回傳單一數值。最常見的算術運算元是 加法 (`+`)，減法 (`-`)， 乘法 (`*`)，及除法 (`/`)。 這些運算子在大多數程式語言中功能相同 (比較特別的是，在除數為 0 時 {{jsxref("Infinity")}})。例如:
+[算術運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators) 以 數值 (文字或變數也可以)作為其運算元，並回傳單一數值。最常見的算術運算元是 加法 (`+`)，減法 (`-`)， 乘法 (`*`)，及除法 (`/`)。 這些運算子在大多數程式語言中功能相同 (比較特別的是，在除數為 0 時 {{jsxref("Infinity")}})。例如:
 
 ```js
 1 / 2; // 0.5
@@ -117,30 +118,30 @@ var var2 = 4;
 
 除了標準的算術運算子外 (+, -, \* /)， JavaScript 提供以下表中的算術運算子:
 
-| 運算子                                                                                                                          | 描述                                                                                                                                              | 範例                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [取餘數](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder) (`%`)                                   | 二元運算子。回傳兩個運算元相除後的餘數。                                                                                                          | 12 % 5 回傳 2.                                                                                  |
-| [增加](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) (`++`)                                    | 一元運算子。 將運算元增加 1。假如使用在運算元之前 (`++x`)，會運算元回傳增加 1 後的值;假如使用在運算元之後。 (`x++`)`，` 會回傳運算元加 1 前的值。 | 假如 `x是` 3，那 `++x` 將把 `x` 設定為 4 並回傳 4，而 `x++ 會回傳` 3 ， 接著才把 `x 設定為` 4。 |
-| [減少](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement) (`--`)                                    | 一元運算子。 將運算元減少 1。回傳值的情況與 增加運算元 相同。                                                                                     | 假如 `x是` 3，那 `--x` 將把 `x` 設定為 2 並回傳 2，而 `x-- 會回傳` 3 ， 接著才把 `x 設定為` 2。 |
-| [(一元運算子)減號](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation) (`-`)                    | 一元運算子。回傳運算元的負數。                                                                                                                    | 假如 x 是 3，-x 回傳 -3。                                                                       |
-| [(一元運算子)加號](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus) (`+`)                        | 一元運算子。嘗試將運算元轉換成數字，假如它還不是數字的話。                                                                                        | `+"3"` `回傳 3`。 `+true` 回傳 `1.`                                                             |
-| [指數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) (`**`) {{experimental_inline}} | 計算以 a 為底的 `b` 次方， 也就是, `a^b`                                                                                                          | `2 ** 3` `回傳 8`. `10 ** -1` 回傳 `0.1`.                                                       |
+| 運算子                                                                                                     | 描述                                                                                                                                              | 範例                                                                                            |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [取餘數](/zh-TW/docs/Web/JavaScript/Reference/Operators#remainder) (`%`)                                   | 二元運算子。回傳兩個運算元相除後的餘數。                                                                                                          | 12 % 5 回傳 2.                                                                                  |
+| [增加](/zh-TW/docs/Web/JavaScript/Reference/Operators#increment) (`++`)                                    | 一元運算子。 將運算元增加 1。假如使用在運算元之前 (`++x`)，會運算元回傳增加 1 後的值;假如使用在運算元之後。 (`x++`)`，` 會回傳運算元加 1 前的值。 | 假如 `x是` 3，那 `++x` 將把 `x` 設定為 4 並回傳 4，而 `x++ 會回傳` 3 ， 接著才把 `x 設定為` 4。 |
+| [減少](/zh-TW/docs/Web/JavaScript/Reference/Operators#decrement) (`--`)                                    | 一元運算子。 將運算元減少 1。回傳值的情況與 增加運算元 相同。                                                                                     | 假如 `x是` 3，那 `--x` 將把 `x` 設定為 2 並回傳 2，而 `x-- 會回傳` 3 ， 接著才把 `x 設定為` 2。 |
+| [(一元運算子)減號](/zh-TW/docs/Web/JavaScript/Reference/Operators#unary_negation) (`-`)                    | 一元運算子。回傳運算元的負數。                                                                                                                    | 假如 x 是 3，-x 回傳 -3。                                                                       |
+| [(一元運算子)加號](/zh-TW/docs/Web/JavaScript/Reference/Operators#unary_plus) (`+`)                        | 一元運算子。嘗試將運算元轉換成數字，假如它還不是數字的話。                                                                                        | `+"3"` `回傳 3`。 `+true` 回傳 `1.`                                                             |
+| [指數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators#exponentiation) (`**`) {{experimental_inline}} | 計算以 a 為底的 `b` 次方， 也就是, `a^b`                                                                                                          | `2 ** 3` `回傳 8`. `10 ** -1` 回傳 `0.1`.                                                       |
 
 ### 位元運算子
 
-[位元運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) 把運算元當作 32 位元的集合來看待 (0 和 1)， 而不是十進位，十六進位，或八進位。例如，十進位數字 9 以二進位表示就是 1001。 位元運算子將運算元以上述二進位的形式處理，但是回傳 Javascript 中的數字類型值。
+[位元運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators) 把運算元當作 32 位元的集合來看待 (0 和 1)， 而不是十進位，十六進位，或八進位。例如，十進位數字 9 以二進位表示就是 1001。 位元運算子將運算元以上述二進位的形式處理，但是回傳 Javascript 中的數字類型值。
 
 下列表總結了 JavaScript' 中的位元運算子。
 
-| 運算子                                                                                                   | 用法      | 描述                                                           |
-| -------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------- |
-| [位元 AND](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND)                 | `a & b`   | 回傳兩個運算元對於每個 bit 做 AND 的結果。                     |
-| [位元 OR](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR)                   | `a \| b`  | 回傳兩個運算元對於每個 bit 做 OR 的結果。                      |
-| [位元 XOR](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR)                 | `a ^ b`   | 回傳兩個運算元對於每個 bit 做 XOR 的結果。                     |
-| [位元 NOT](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT)                 | `~ a`     | 將運算元中的每個 bit 反轉(1->0,0->1)。                         |
-| [左移](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift)                      | `a << b`  | 將 `a` 的每個 bit 向左移動 `b` 個 bits，空餘的位數以 0 填滿。  |
-| [有號右移](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Right_shift)                 | `a >> b`  | 將 `a` 的每個 bit 向右移動 `b` 個 bits，空餘位數以最高位補滿。 |
-| [以 0 填充的右移](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Unsigned_right_shift) | `a >>> b` | 將 `a` 的每個 bit 向右移動 `b` 個 bits，空餘的位數以 0 填滿。  |
+| 運算子                                                                                 | 用法      | 描述                                                           |
+| -------------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------- |
+| [位元 AND](/zh-TW/docs/Web/JavaScript/Reference/Operators#bitwise_and)                 | `a & b`   | 回傳兩個運算元對於每個 bit 做 AND 的結果。                     |
+| [位元 OR](/zh-TW/docs/Web/JavaScript/Reference/Operators#bitwise_or)                   | `a \| b`  | 回傳兩個運算元對於每個 bit 做 OR 的結果。                      |
+| [位元 XOR](/zh-TW/docs/Web/JavaScript/Reference/Operators#bitwise_xor)                 | `a ^ b`   | 回傳兩個運算元對於每個 bit 做 XOR 的結果。                     |
+| [位元 NOT](/zh-TW/docs/Web/JavaScript/Reference/Operators#bitwise_not)                 | `~ a`     | 將運算元中的每個 bit 反轉(1->0,0->1)。                         |
+| [左移](/zh-TW/docs/Web/JavaScript/Reference/Operators#left_shift)                      | `a << b`  | 將 `a` 的每個 bit 向左移動 `b` 個 bits，空餘的位數以 0 填滿。  |
+| [有號右移](/zh-TW/docs/Web/JavaScript/Reference/Operators#right_shift)                 | `a >> b`  | 將 `a` 的每個 bit 向右移動 `b` 個 bits，空餘位數以最高位補滿。 |
+| [以 0 填充的右移](/zh-TW/docs/Web/JavaScript/Reference/Operators#unsigned_right_shift) | `a >>> b` | 將 `a` 的每個 bit 向右移動 `b` 個 bits，空餘的位數以 0 填滿。  |
 
 #### 位元邏輯運算子
 
@@ -184,13 +185,13 @@ var var2 = 4;
 
 ### 邏輯運算子
 
-[邏輯運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators) 通常被用於布林(邏輯)值; 使用於 布林(邏輯)值時， 它們會回傳布林型態的值。 然而，`&&` 和 `||` 運算子實際上是回傳兩指定運算元之一，因此用於非布林型態值時，它可能會回傳一個非布林型態的值。 邏輯運算子將在下表中被詳細解釋。
+[邏輯運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators) 通常被用於布林(邏輯)值; 使用於 布林(邏輯)值時， 它們會回傳布林型態的值。 然而，`&&` 和 `||` 運算子實際上是回傳兩指定運算元之一，因此用於非布林型態值時，它可能會回傳一個非布林型態的值。 邏輯運算子將在下表中被詳細解釋。
 
-| Operator                                                                                        | Usage                  | Description                                                                                                                                                |
-| ----------------------------------------------------------------------------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [邏輯 AND](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND) (`&&`) | `運算式1 && 運算式2`   | 假如 `運算式1` 可以被轉換成 false 的話，回傳 `運算式1`; 否則，回傳 `運算式2`。 因此，`&&`只有在 兩個運算元都是 True 時才會回傳 True，否則回傳 `false`。    |
-| [邏輯 OR](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR) (`\|\|`) | `運算式1 \|\| 運算式2` | 假如 `運算式1` 可以被轉換成 true 的話，回傳 `運算式1`; 否則，回傳 `運算式2`。 因此，`\|\|`在 兩個運算元有任一個是 True 時就會回傳 True，否則回傳 `false`。 |
-| [邏輯 NOT](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) (`!`)  | `!運算式`              | 假如單一個運算元能被轉換成 True 時，回傳`false` ， 不然回傳 `true`。                                                                                       |
+| Operator                                                                      | Usage                  | Description                                                                                                                                                |
+| ----------------------------------------------------------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [邏輯 AND](/zh-TW/docs/Web/JavaScript/Reference/Operators#logical_and) (`&&`) | `運算式1 && 運算式2`   | 假如 `運算式1` 可以被轉換成 false 的話，回傳 `運算式1`; 否則，回傳 `運算式2`。 因此，`&&`只有在 兩個運算元都是 True 時才會回傳 True，否則回傳 `false`。    |
+| [邏輯 OR](/zh-TW/docs/Web/JavaScript/Reference/Operators#logical_or) (`\|\|`) | `運算式1 \|\| 運算式2` | 假如 `運算式1` 可以被轉換成 true 的話，回傳 `運算式1`; 否則，回傳 `運算式2`。 因此，`\|\|`在 兩個運算元有任一個是 True 時就會回傳 True，否則回傳 `false`。 |
+| [邏輯 NOT](/zh-TW/docs/Web/JavaScript/Reference/Operators#logical_not) (`!`)  | `!運算式`              | 假如單一個運算元能被轉換成 True 時，回傳`false` ， 不然回傳 `true`。                                                                                       |
 
 可以被轉換為 false 的運算式是 null、0、NaN、空字串（""），或 undefined。
 
@@ -256,7 +257,7 @@ mystring += "母"; // 得到 "字母" 並賦與給變數 mystring.
 
 ### 條件（三元）運算子
 
-[條件運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) 是 JavaScript 中唯一需要三個運算元的運算子。 這個運算子接受兩個運算元作為值且一個運算元作為條件。 語法是:
+[條件運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_operator) 是 JavaScript 中唯一需要三個運算元的運算子。 這個運算子接受兩個運算元作為值且一個運算元作為條件。 語法是:
 
 ```plain
 條件 ? 值1 : 值2
@@ -521,7 +522,7 @@ if (theDay instanceof Date) {
 | 指定運算子     | `= += -= *= /= %= <<= >>= >>>= &= ^= \|=` |
 | 逗點運算子     | `,`                                       |
 
-這個表格更詳細的版本，解釋了運算子的更多細節和關聯性， 可以在 [JavaScript 參考](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table) 中被找到。
+這個表格更詳細的版本，解釋了運算子的更多細節和關聯性， 可以在 [JavaScript 參考](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) 中被找到。
 
 ## 運算式
 
@@ -638,7 +639,7 @@ super.父物件的函式([參數]);
 
 #### 展開運算子
 
-[展開運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator)能將運算式展開於需要多個參數的地方（如函式呼叫）或是需要多個元素（如陣列字串常數）的地方。
+[展開運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax)能將運算式展開於需要多個參數的地方（如函式呼叫）或是需要多個元素（如陣列字串常數）的地方。
 
 **範例**：現在你想要用已存在的一個陣列做為新的一個陣列的一部份，當字串常數不再可用而你必須使用指令式編程，也就是使用，一連串的 `push`、`splice`、`concat`，等等。展開運算子能讓過程變得更加簡潔:
 

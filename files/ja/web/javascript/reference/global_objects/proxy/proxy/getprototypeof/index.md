@@ -1,24 +1,46 @@
 ---
 title: handler.getPrototypeOf()
+short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`handler.getPrototypeOf()`** メソッドは、オブジェクトの `[[GetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.getPrototypeOf()")}} などの操作で使用されます。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.getPrototypeOf()", "taller")}}
+
+```js interactive-example
+const monster = {
+  eyeCount: 4,
+};
+
+const monsterPrototype = {
+  eyeCount: 2,
+};
+
+const handler = {
+  getPrototypeOf(target) {
+    return monsterPrototype;
+  },
+};
+
+const proxy = new Proxy(monster, handler);
+
+console.log(Object.getPrototypeOf(proxy) === monsterPrototype);
+// 予想される結果: true
+
+console.log(Object.getPrototypeOf(proxy).eyeCount);
+// 予想される結果: 2
+```
 
 ## 構文
 
 ```js-nolint
-new Proxy(obj, {
+new Proxy(target, {
   getPrototypeOf(target) {
-    // …
   }
-});
+})
 ```
 
 ### 引数
@@ -31,7 +53,7 @@ new Proxy(obj, {
 
 ### 返値
 
-`getPrototypeOf()` メソッドはオブジェクト、または `null` を返さなければなりません。
+`getPrototypeOf()` メソッドは、対象とするオブジェクトのプロトタイプを表すオブジェクトまたは `null` を返す必要があります。
 
 ## 解説
 
@@ -49,10 +71,10 @@ new Proxy(obj, {
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+プロキシーの `[[GetPrototypeOf]]` 内部メソッドは、ハンドラー定義が以下のいずれかの不変条件に違反する場合、{{jsxref("TypeError")}} が発生します。
 
-- `getPrototypeOf` メソッドはオブジェクト、または `null` を返さなければなりません。
-- `target`が拡張不可の場合、 `Object.getPrototypeOf(proxy)` メソッドは `Object.getPrototypeOf(target)` と同じ値を返さなければなりません。
+- 結果は、{{jsxref("Object")}} または `null` のどちらかでなければなりません。
+- 対象のオブジェクトが拡張可能でない場合（つまり、 {{jsxref("Reflect.isExtensible()")}} が `target` に対して `false` を返す場合）、結果は `Reflect.getPrototypeOf(target)` の結果と同じでなければなりません。
 
 ## 例
 
@@ -102,13 +124,13 @@ const p = new Proxy(obj, {
 });
 Object.getPrototypeOf(p); // TypeError: "foo" is not an object or null
 
-const obj = Object.preventExtensions({});
-const p = new Proxy(obj, {
+const obj2 = Object.preventExtensions({});
+const p2 = new Proxy(obj2, {
   getPrototypeOf(target) {
     return {};
   },
 });
-Object.getPrototypeOf(p); // TypeError: expected same prototype value
+Object.getPrototypeOf(p2); // TypeError: expected same prototype value
 ```
 
 ## 仕様書

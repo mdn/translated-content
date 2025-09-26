@@ -27,7 +27,8 @@ getRegistrations()
 
 ```js
 navigator.serviceWorker.getRegistrations().then((registrations) => {
-  document.querySelector('#status').textContent = 'ServiceWorkerRegistration が見つかりました。';
+  document.querySelector("#status").textContent =
+    "ServiceWorkerRegistration が見つかりました。";
 });
 ```
 

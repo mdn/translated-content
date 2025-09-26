@@ -2,7 +2,7 @@
 title: 式文
 slug: Web/JavaScript/Reference/Statements/Expression_statement
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
 {{jsSidebar("Statements")}}
@@ -27,12 +27,12 @@ expression;
 - 関数呼び出し (`console.log("Hello");`, `[1, 2, 3].forEach((i) => console.log(i));`)
 - [タグ付きテンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)
 - [代入式](/ja/docs/Web/JavaScript/Reference/Operators#代入演算子)（複合演算子を含む）
-- [インクリメント／デクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators#increment_and_decrement)
+- [インクリメント／デクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators#インクリメントとデクリメント)
 - [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete)
 - [`import()`](/ja/docs/Web/JavaScript/Reference/Operators/import)
 - [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) および [`yield*`](/ja/docs/Web/JavaScript/Reference/Operators/yield*)
 
-他にも副次的な効果がある場合があるものとして、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)の呼び出しや[型変換](/ja/docs/Web/JavaScript/Data_structures#型変換)の実行があります。
+他にも副次的な効果がある場合があるものとして、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)の呼び出しや[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)の実行があります。
 
 ### 禁止されている式
 
@@ -41,12 +41,12 @@ expression;
 - `function`: [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)または [`function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function*)となり、[`function` 式](/ja/docs/Web/JavaScript/Reference/Operators/function)または [`function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/function*)とはならない。
 - `async function`: [`async function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function)または [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)となり、[`async function` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function)または [`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)とはならない。
 - `class`: [`class` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)となり、[`class` 式](/ja/docs/Web/JavaScript/Reference/Operators/class)にはならない。
-- `let[`: [`let` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/let) の[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)となり、`let` 上の[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)にはならない（`let` は[厳格モード以外](/ja/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words)でのみ識別子になる）
+- `let[`: [`let` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/let) の[配列の構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)となり、`let` 上の[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)にはならない（`let` は[厳格モード以外](/ja/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words)でのみ識別子になる）
 - `{`: [ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)となり、[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)にはなりません。
 
 従って、以下のものは全て不正です。
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
   console.log("foo");
 }(); // SyntaxError: Unexpected token '('
@@ -95,7 +95,7 @@ console.log(let); // [1, 2, 3]
 
 ### 制御フロー文の回避
 
-制御フロー文の使用は、式文を使ってほとんど避けることができます。例えば、`if...else` は[三項演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)や[論理演算子](/ja/docs/Web/JavaScript/Reference/Operators#binary_logical_operators)に置き換えることができます。`for` や `for...of` のような反復処理文は、[配列メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#インスタンスメソッド)に置き換えることができます。
+制御フロー文の使用は、式文を使ってほとんど避けることができます。例えば、`if...else` は[三項演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)や[論理演算子](/ja/docs/Web/JavaScript/Reference/Operators#バイナリー論理演算子)に置き換えることができます。`for` や `for...of` のような反復処理文は、[配列メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#インスタンスメソッド)に置き換えることができます。
 
 ```js
 // 制御フロー文の使用
@@ -117,7 +117,8 @@ function range2(start, end) {
 }
 ```
 
-> **警告:** これは、言語の能力の一端を示すに過ぎません。制御フロー文の代用として式文を過剰に使用すると、コードの可読性が大幅に低下する可能性があります。
+> [!WARNING]
+> これは、言語の能力の一端を示すに過ぎません。制御フロー文の代用として式文を過剰に使用すると、コードの可読性が大幅に低下する可能性があります。
 
 ## 仕様書
 

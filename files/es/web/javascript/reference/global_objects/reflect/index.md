@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 
 {{JSRef}}
 
-**Reflect** es un objecto incorporado que proporciona metodos para interceptar operaciones de javascript. Los métodos son los mismos que los de [proxy handlers](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). `Reflect` no es un objeto de funciones y por lo tanto no puede ser construido.
+**Reflect** es un objecto incorporado que proporciona metodos para interceptar operaciones de javascript. Los métodos son los mismos que los de [proxy handlers](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). `Reflect` no es un objeto de funciones y por lo tanto no puede ser construido.
 
 ## Descripción
 
@@ -13,7 +13,7 @@ A diferencia de la mayoria de los objetos globales, `Reflect` no es un construct
 
 ## Métodos
 
-El objeto `Reflect` proporciona las siguientes funciones estáticas con los mismos nombres de los métodos de [proxy handler](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). Algunos de estos métodos son correspondientes a los métodos de {{jsxref("Object")}}.
+El objeto `Reflect` proporciona las siguientes funciones estáticas con los mismos nombres de los métodos de [proxy handler](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). Algunos de estos métodos son correspondientes a los métodos de {{jsxref("Object")}}.
 
 - {{jsxref("Reflect.apply()")}}
   - : Calls a target function with arguments as specified by the `args` parameter. See also {{jsxref("Function.prototype.apply()")}}.

@@ -33,35 +33,32 @@ slug: Web/API/Element/attachShadow
 
 ## 语法
 
-```
-var shadowroot = element.attachShadow(shadowRootInit);
+```js-nolint
+attachShadow(options)
 ```
 
 ### 参数
 
-- `shadowRootInit`
-
-  - : 一个 `ShadowRootInit` 字典，包括下列字段：
-
-    - `mode 模式`
-
+- `options`
+  - : 一个包括下列字段的对象：
+    - `mode`
       - : 指定 Shadow DOM 树*封装模式*的字符串，可以是以下值：
-
         - `open` shadow root 元素可以从 js 外部访问根节点，例如使用 {{domxref("Element.shadowRoot")}}:
 
-        ```
+        ```js
+        element.attachShadow({ mode: "open" });
         element.shadowRoot; // 返回一个 ShadowRoot 对象
         ```
 
         - `closed` 拒绝从 js 外部访问关闭的 shadow root 节点
 
-        ```
+        ```js
+        element.attachShadow({ mode: "closed" });
         element.shadowRoot; // 返回 null
         ```
 
-    - `delegatesFocus 焦点委托`
-      - : 一个布尔值，当设置为 `true` 时，指定减轻自定义元素的聚焦性能问题行为。
-        当 shadow DOM 中不可聚焦的部分被点击时，让第一个可聚焦的部分成为焦点，并且 shadow host（影子主机）将提供所有可用的 `:focus` 样式。
+    - `delegatesFocus` {{Optional_Inline}}
+      - : 一个布尔值，当设置为 `true` 时，指定减轻自定义元素的聚焦性能问题行为。当 shadow DOM 中不可聚焦的部分被点击时，让第一个可聚焦的部分成为焦点，并且 shadow host（影子主机）将提供所有可用的 `:focus` 样式。
 
 ### 返回值
 
@@ -71,8 +68,8 @@ var shadowroot = element.attachShadow(shadowRootInit);
 
 | 异常                             | 说明                                                                                                 |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `InvalidStateError 无效状态错误` | 您添加的元素已经是一个 shadow host（影子主机）.                                                      |
-| `NotSupportedError 不被支持错误` | 您应该添加 HTML 元素的命名空间之外的 shadow root，或者这个元素不能有其他 shadow 挂载到它上面 (见上). |
+| `InvalidStateError 无效状态错误` | 你添加的元素已经是一个 shadow host（影子主机）.                                                      |
+| `NotSupportedError 不被支持错误` | 你应该添加 HTML 元素的命名空间之外的 shadow root，或者这个元素不能有其他 shadow 挂载到它上面 (见上). |
 
 ## 示例
 

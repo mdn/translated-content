@@ -3,11 +3,9 @@ title: <resolution>
 slug: Web/CSS/resolution
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
-El tipo de dato [CSS](/es/docs/Web/CSS) `<resolution>`, usado en [media queries](/es/docs/Web/Guide/CSS/Media_queries), define la densidad de píxeles de un dispositivo de salida, su resolución. Es un {{cssxref("&lt;number&gt;")}} inmediatamente seguido por una unidad de resolución (`dpi`, `dpcm`, ...). Como para cualquier dimensión CSS, no hay espacio entre la unidad literal y el número.
+El tipo de dato [CSS](/es/docs/Web/CSS) `<resolution>`, usado en [media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries), define la densidad de píxeles de un dispositivo de salida, su resolución. Es un {{cssxref("&lt;number&gt;")}} inmediatamente seguido por una unidad de resolución (`dpi`, `dpcm`, ...). Como para cualquier dimensión CSS, no hay espacio entre la unidad literal y el número.
 
 En pantallas, la longitud está relacionada a centímetros, pulgadas o píxeles CSS, no en valores físicos.
 
@@ -49,4 +47,4 @@ ten dpi                                            Incorecto: sólo deben ser ut
 
 ## Ver también
 
-- [CSS Media Queries](/es/docs/Web/Guide/CSS/Media_queries)
+- [CSS Media Queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)

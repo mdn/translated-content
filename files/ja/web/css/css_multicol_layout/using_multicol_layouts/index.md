@@ -1,13 +1,11 @@
 ---
 title: 段組みレイアウトの使用
 slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-CSS の**段組みレイアウト** (Multi-column Layout) は、*ブロックレイアウトモード*を拡張して、文章の段組みを定義しやすくするものです。行が長すぎると、文章が読みづらくなるものです。行末から次の行の先頭まで目を移動する距離が長すぎると、どの行を読んでいたか見失ってしまうことがあります。したがって、大きな画面を最大限に活用するためには、新聞のように幅が狭い段を並べた方が適切です。
-
-残念ながら、 CSS と HTML では位置を指定してで段を区切ったり、文章に許されるマークアップを厳重に制限したり、大げさなスクリプトを使用したりしなければ実現できません。この制限は、従来のブロックレイアウトモードを拡張する新しい CSS プロパティを追加することで解決します。
+**CSS 段組みレイアウトモジュール** で定義されるプロパティは、ブロックレイアウトモードを拡張して、テキストの段組みを定義しやすくするものです。行が長すぎると、文章が読みづらくなるものです。行末から次の行の先頭まで目を移動する距離が長すぎると、どの行を読んでいたか見失ってしまうことがあります。大きな画面でテキストを読む際に読みやすくするため、新聞のように、横に並んでいるテキストに段組みを指定して、テキストの幅を制限しましょう。
 
 ## 段組みの使用
 
@@ -24,21 +22,20 @@ CSS の**段組みレイアウト** (Multi-column Layout) は、*ブロックレ
 ```html
 <div id="col">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
   </p>
   <p>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat.
   </p>
   <p>
-    Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+    eu fugiat nulla pariatur.
   </p>
   <p>
-    Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+    deserunt mollit anim id est laborum.
   </p>
 </div>
 ```
@@ -53,7 +50,7 @@ CSS の**段組みレイアウト** (Multi-column Layout) は、*ブロックレ
 
 ### 結果
 
-内容が（段組み対応のブラウザーを使用していれば）2 段で表示されます。
+コンテンツが 2 段で表示されます。
 
 {{EmbedLiveSample("Example_1", "100%")}}
 
@@ -65,14 +62,12 @@ CSS の**段組みレイアウト** (Multi-column Layout) は、*ブロックレ
 
 ```html
 <div id="wid">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit
-  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-  occaecat cupidatat non proident, sunt in culpa qui officia
-  deserunt mollit anim id est laborum
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 </div>
 ```
 
@@ -88,30 +83,26 @@ CSS の**段組みレイアウト** (Multi-column Layout) は、*ブロックレ
 
 {{EmbedLiveSample("Example_2", "100%")}}
 
-より厳密な詳細については、 [CSS3 仕様書](https://www.w3.org/TR/css-multicol-1/)で説明されています。
-
 段組みをしたブロックでは、コンテンツは必要に応じてある段から次の段に流れます。 HTML、 CSS、 DOM 機能はすべて段組みでの編集や印刷に対応しています。
 
 ### 一括指定の columns
 
-たいていの場合、ウェブデザイナーは {{cssxref("column-count")}} と {{cssxref("column-width")}} の 2 つのうち 1 つを使用します。これらのプロパティの値は重複しないので、一括指定の {{cssxref("columns")}} を使うのがふつうは便利です。例えば以下のようにします。
-
-CSS 宣言の `column-width: 12em` は `columns: 12em` に置き換えることができます。
+{{cssxref("column-count")}} と {{cssxref("column-width")}} のどちらかを使用することができます。これらのプロパティの値は重複しないので、一括指定の {{cssxref("columns")}} を使うのがふつうは便利です。
 
 ## 例 3
+
+この例では、CSS 宣言 `column-width: 12em` は `columns: 12em` に置き換えられています。
 
 ### HTML
 
 ```html
 <div id="col_short">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit
-  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-  occaecat cupidatat non proident, sunt in culpa qui officia
-  deserunt mollit anim id est laborum
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 </div>
 ```
 
@@ -123,26 +114,22 @@ CSS 宣言の `column-width: 12em` は `columns: 12em` に置き換えること�
 }
 ```
 
-### 結果
-
-{{EmbedLiveSample("Example_3", "100%")}}
-
-CSS 宣言 の `column-count: 4` は `columns: 4` に置き換えられます。
+{{EmbedLiveSample("例 3", "100%")}}
 
 ## 例 4
+
+CSS 宣言 の `column-count: 4` は `columns: 4` に置き換えられます。
 
 ### HTML
 
 ```html
 <div id="columns_4">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit
-  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-  occaecat cupidatat non proident, sunt in culpa qui officia
-  deserunt mollit anim id est laborum
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 </div>
 ```
 
@@ -158,22 +145,20 @@ CSS 宣言 の `column-count: 4` は `columns: 4` に置き換えられます。
 
 {{EmbedLiveSample("Example_4", "100%")}}
 
-`column-width: 8em` と `column-count: 12` の 2 つの CSS 宣言は、 `columns: 12 8em` で置き換えることができます。
-
 ## 例 5
+
+`column-width: 8em` と `column-count: 12` の 2 つの CSS 宣言は、 `columns: 12 8em` で置き換えることができます。一括指定の `column-count` は、表示される段の最大数です。 `column-width` は、段ごとの最小幅です。
 
 ### HTML
 
 ```html
 <div id="columns_12">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit
-  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-  occaecat cupidatat non proident, sunt in culpa qui officia
-  deserunt mollit anim id est laborum
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 </div>
 ```
 
@@ -188,6 +173,8 @@ CSS 宣言 の `column-count: 4` は `columns: 4` に置き換えられます。
 ### 結果
 
 {{EmbedLiveSample("Example_5", "100%")}}
+
+段間のギャップを既定の `1em` と想定すると、コンテナーの幅が `103ems` （12 段 \* 幅 `8em` + 7 `1em` のギャップ） より広い場合、12 段ができ、各列の幅は `8ems` 以上になります。コンテナーの幅が `103ems` 未満の場合は、12 段未満になります。コンテナーの幅が `17ems` 未満 （`8em` の段 + `8em` の段 + `1em` ギャップ） の場合は、コンテンツは段のギャップのない単一の列として表示されます。
 
 ### 高さの均衡
 
@@ -205,14 +192,12 @@ CSS の段組みでは、段の高さが揃っていなければならないと�
 
 ```html
 <div id="column_gap">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in voluptate velit
-  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-  occaecat cupidatat non proident, sunt in culpa qui officia
-  deserunt mollit anim id est laborum
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 </div>
 ```
 
@@ -229,10 +214,6 @@ CSS の段組みでは、段の高さが揃っていなければならないと�
 
 {{EmbedLiveSample("Example_6", "100%")}}
 
-## グレイスフルデグラデーション
-
-段組みのプロパティは、段組みに対応していないブラウザーでは単に無視されます。従って、そのようなブラウザーでは一列で表示し、対応しているブラウザーでは段組みを行うというレイアウトが比較的簡単に作成できます。
-
 ## まとめ
 
-CSS の段組みは、ウェブ開発者が画面の資産を最大限に活用できるようにするためのレイアウト方法です。想像的な開発者は、特に自動的に高さを調整する機能を利用して、様々な利用方法を見つけるでしょう。
+CSS の段は、レスポンシブコンテンツが広いビューポートで表示されたときに、大きなテキストブロックを読みやすくするためのレイアウトプリミティブです。想像力豊かな開発者は、特に[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)や自動高さバランス機能と組み合わせて、さまざまな用途を見つけることができるでしょう。

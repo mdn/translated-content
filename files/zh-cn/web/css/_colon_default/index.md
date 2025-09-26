@@ -1,13 +1,11 @@
 ---
-title: ":default"
+title: :default
 slug: Web/CSS/:default
 ---
 
-{{CSSRef}}
-
 **`:default`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-class](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示一组相关元素中的默认表单元素。
 
-该选择器可以在 {{htmlelement("button")}}, [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/zh-CN/docs/Web/HTML/Element/input/radio), 以及 {{htmlelement("option")}} 上使用。
+该选择器可以在 {{htmlelement("button")}}, [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio), 以及 {{htmlelement("option")}} 上使用。
 
 ```css
 /* Selects any default <input> */
@@ -16,7 +14,7 @@ input:default {
 }
 ```
 
-允许多个选择的分组元素也可以具有多个默认值，即，它们可以具有最初选择的多个项目。在这种情况下，所有默认值都使用 `:default` 伪类表示。例如，您可以在一组复选框之间设置默认复选框。
+允许多个选择的分组元素也可以具有多个默认值，即，它们可以具有最初选择的多个项目。在这种情况下，所有默认值都使用 `:default` 伪类表示。例如，你可以在一组复选框之间设置默认复选框。
 
 ## 语法
 

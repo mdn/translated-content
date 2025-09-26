@@ -13,7 +13,7 @@ Atualmente, o MDN não é uma ferramenta fácil para autorizar esse conteúdo at
 
 ## MDN amostras ao vivo
 
-O MDN possui um recurso muito legal chamado **live samples**. É um mecanismo que transforma qualquer código HTML, CSS e JavaScript dentro de uma página MDN em seu equivalente executado. Antes de usá-lo, você deve ler [Usando o sistema de amostra ao vivo](/pt-BR/docs/MDN/Contribute/Editor/Live_samples),qual é a nossa documentação completa para construí-los. Embora sejam fáceis de fazer, há peculiaridades e truques que você aprenderá ao longo do caminho.
+O MDN possui um recurso muito legal chamado **live samples**. É um mecanismo que transforma qualquer código HTML, CSS e JavaScript dentro de uma página MDN em seu equivalente executado. Antes de usá-lo, você deve ler [Usando o sistema de amostra ao vivo](/pt-BR/docs/MDN/Writing_guidelines/Page_structures/Live_samples),qual é a nossa documentação completa para construí-los. Embora sejam fáceis de fazer, há peculiaridades e truques que você aprenderá ao longo do caminho.
 
 O que é interessante é que é realmente fácil ajustar esse recurso para usá-lo para incorporar qualquer tipo de ferramenta ou utilitário que você deseja em uma página MDN.
 
@@ -158,7 +158,7 @@ document.addEventListener('keyup', function () {
 </div>
 ```
 
-Você pode ver um exemplo mais avançado de tal ajuste sobre [a página API do Canvas.](/pt-BR/docs/Web/API/Canvas_API#JavaScript)
+Você pode ver um exemplo mais avançado de tal ajuste sobre [a página API do Canvas.](/pt-BR/docs/Web/API/Canvas_API#javascript)
 
 ### Código de fora da página
 
@@ -172,6 +172,6 @@ Clique no seguinte quadrado para alterar aleatoriamente a cor ou simplesmente di
 
 {{EmbedLiveSample('The_example', 120, 120, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}
 
-Desta vez, [se você olhar para o HTML da página usando o editor MDN](/pt-BR/docs/MDN/Contribute/Editor/Source_mode) , você não está a ver o código oculto. Se você quiser ver o código, vá para uma [página que o hospeda.](/pt-BR/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example)
+Desta vez, [se você olhar para o HTML da página usando o editor MDN](/pt-BR/docs/MDN/Contribute/Editor/Source_mode) , você não está a ver o código oculto. Se você quiser ver o código, vá para uma [página que o hospeda.](/pt-BR/docs/conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web)
 
-Você pode ver um exemplo mais avançado do uso em nosso [tutorial HTML Form](/pt-BR/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets) , que usa essa técnica para permitir uma experiência com formulários.
+Você pode ver um exemplo mais avançado do uso em nosso [tutorial HTML Form](/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls) , que usa essa técnica para permitir uma experiência com formulários.

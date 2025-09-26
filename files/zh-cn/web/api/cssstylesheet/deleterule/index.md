@@ -25,10 +25,10 @@ stylesheet.deleteRule(index)
  myStyles.deleteRule(0);
 ```
 
-## 相关链接
+### 参见
 
-- [insertRule](/zh-CN/DOM/CSSStyleSheet/insertRule)
+- [insertRule](/zh-CN/docs/DOM/CSSStyleSheet/insertRule)
 
 ### 规范
 
-[deleteRule](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-deleteRule)
+[deleteRule](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-deleteRule)

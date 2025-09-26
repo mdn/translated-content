@@ -1,14 +1,16 @@
 ---
 title: TOFU
 slug: Glossary/TOFU
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-**Trust On First Use** **(TOFU**) とは、クライアントが未知のサーバーとの信頼関係（trust relationship）を築く必要がある場合における、セキュリティ・モデルです。それを行うために、クライアントは識別子（例：公開鍵）がローカルに保存されているか探します。もし識別子が見つかれば、クライアントは接続を確立できます。もし識別子が見つからなければ、クライアントが識別子を信頼すべきか、ユーザーに決定を促します。
+{{GlossarySidebar}}
 
-TOFU は SSH プロトコルの中で使われており、サーバーによって返される最初の公開鍵をブラウザが受け入れる [HTTP Public Key Pinning](/ja/docs/Web/HTTP/Public_Key_Pinning) ({{Glossary("HPKP")}}) と、ブラウザがリダイレクトルールに従う場面での {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) が該当します。
+**Trust On First Use** **(TOFU**) とは、クライアントが未知のサーバーとの信頼関係（trust relationship）を築く必要がある場合における、セキュリティモデルです。それを行うために、クライアントは識別子（例：公開鍵）がローカルに保存されているか探します。もし識別子が見つかれば、クライアントは接続を確立できます。もし識別子が見つからなければ、クライアントが識別子を信頼すべきか、ユーザーに決定を促します。
 
-## 関連項目
+TOFU は SSH プロトコルの {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) で使用され、ブラウザーはリダイレクトルールに従います。
 
-- [HTTP Public Key Pinning](/ja/docs/Web/HTTP/Public_Key_Pinning) ({{Glossary("HPKP")}})
-- {{HTTPHeader("Public-Key-Pins")}}
+## 関連情報
+
 - Wikipedia: [TOFU](https://en.wikipedia.org/wiki/Trust_on_first_use)

@@ -9,7 +9,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 
 표준시 대신 현지 시간을 기준으로 하는 {{jsxref("Date")}} 인스턴스의 날짜를 변경하려면 {{jsxref("Date.prototype.setDate", "setDate()")}} 메소드를 사용하세요.
 
-{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCDate()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+
+console.log(event.getUTCDate());
+// Expected output: 20
+
+event.setUTCDate(19);
+
+console.log(event.getUTCDate());
+// Expected output: 19
+```
 
 ## 구문
 

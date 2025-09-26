@@ -3,9 +3,11 @@ title: SVGAElement
 slug: Web/API/SVGAElement
 ---
 
+{{APIRef("SVG")}}
+
 ## SVG a DOM interface
 
-L'interface `SVGAElement` fournit un accès aux propriétés des éléments [`<a>`](/fr/docs/Web/SVG/Element/a) ainsi qu'aux méthodes pour les manipuler.
+L'interface `SVGAElement` fournit un accès aux propriétés des éléments [`<a>`](/fr/docs/Web/SVG/Reference/Element/a) ainsi qu'aux méthodes pour les manipuler.
 
 ### Interface overview
 

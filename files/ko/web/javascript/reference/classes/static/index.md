@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Classes/static
 
 **static** 키워드는 클래스의 정적 메서드를 정의합니다.
 
-{{EmbedInteractiveExample("pages/js/classes-static.html")}}
+{{InteractiveExample("JavaScript Demo: Classes Static")}}
+
+```js interactive-example
+class ClassWithStaticMethod {
+  static staticProperty = "someValue";
+  static staticMethod() {
+    return "static method has been called.";
+  }
+  static {
+    console.log("Class static initialization block called");
+  }
+}
+
+console.log(ClassWithStaticMethod.staticProperty);
+// Expected output: "someValue"
+console.log(ClassWithStaticMethod.staticMethod());
+// Expected output: "static method has been called."
+```
 
 ## 문법
 

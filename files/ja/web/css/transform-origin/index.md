@@ -1,13 +1,149 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
-
-{{ CSSRef }}
 
 **`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の座標変換 (transform) における原点を設定します。
 
-{{EmbedInteractiveExample("pages/css/transform-origin.html")}}
+{{InteractiveExample("CSS デモ: transform-origin")}}
+
+```css interactive-example-choice
+transform-origin: center;
+```
+
+```css interactive-example-choice
+transform-origin: top left;
+```
+
+```css interactive-example-choice
+transform-origin: 50px 50px;
+```
+
+```css interactive-example-choice
+/* 3D rotation with z-axis origin */
+transform-origin: bottom right 60px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-container">
+    <div id="example-element">Rotate me!</div>
+    <img
+      alt=""
+      id="crosshair"
+      src="/shared-assets/images/examples/crosshair.svg"
+      width="24px" />
+    <div id="static-element"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes rotate3d {
+  from {
+    transform: rotate3d(0);
+  }
+
+  to {
+    transform: rotate3d(1, 2, 0, 60deg);
+  }
+}
+
+#example-container {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+#example-element {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background: #f7ebee;
+  color: #000000;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#example-element.rotate {
+  animation: rotate 1s forwards;
+}
+
+#example-element.rotate3d {
+  animation: rotate3d 1s forwards;
+}
+
+#crosshair {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  position: absolute;
+}
+
+#static-element {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: dotted 3px #ff1100;
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  function update() {
+    const selected = document.querySelector(".selected");
+
+    /* Restart the animation
+           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips */
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className =
+          el.style.transformOrigin.split(" ")[2] === "60px"
+            ? "rotate3d"
+            : "rotate";
+      });
+    });
+
+    const transformOrigin = getComputedStyle(el).transformOrigin;
+    const pos = transformOrigin.split(/\s+/);
+    crosshair.style.left = `calc(${pos[0]} - 12px)`;
+    crosshair.style.top = `calc(${pos[1]} - 12px)`;
+  }
+
+  const crosshair = document.getElementById("crosshair");
+  const el = document.getElementById("example-element");
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+  crosshair.style.opacity = "1";
+});
+```
 
 座標変換の原点とは、それを中心に座標変換が適用される点です。例えば、 [`rotate()`](/ja/docs/Web/CSS/transform-function/rotate) 関数における座標変換の原点は、回転の中心です。
 
@@ -64,26 +200,24 @@ transform-origin: bottom right 2cm;
 transform-origin: inherit;
 transform-origin: initial;
 transform-origin: revert;
+transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-`transform-origin` プロパティは、オフセットを表す 1 ～ 3 つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する[初期値](/ja/docs/Web/CSS/initial_value)にリセットされます。
+`transform-origin` プロパティは、オフセットを表す 1 ～ 3 つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)にリセットされます。
 
 単一の {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} が定義された場合、これは水平方向のオフセットを表します。
 
 2 つ以上の値が定義され、どちらもの値もキーワードでない場合、または使われているキーワードが `center` だけであった場合、最初の値は水平方向のオフセットであり、二番目の値は垂直方向のオフセットです。
 
 - 値 1 つの構文:
-
   - 値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `left`, `center`, `right`, `top`, `bottom` のいずれかでなければなりません。
 
 - 値 2 つの構文:
-
   - 一方の値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, またはキーワードの `left`, `center`, `right` のいずれかでなければなりません。
   - もう一方の値は、 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, またはキーワードの `top`, `center`, `bottom` のいずれかでなければなりません。
 
 - 値 3 つの構文:
-
   - 1 番目と 2 番目の値は、値 2 つの構文と同じです。
   - 3 番目の値は {{cssxref("&lt;length&gt;")}} でなければなりません。これは常に Z オフセットを表します。
 
@@ -116,7 +250,8 @@ transform-origin: unset;
 
 {{CSSInfo}}
 
-> **メモ:** `transform-origin` の初期値は、ルートの `<svg>` 要素と [foreignObject](/ja/docs/Web/SVG/Element/foreignObject) の直接の子である `<svg>` 要素を除いたすべての SVG 要素では `0 0` です。また、 `transform-origin` は他の CSS 要素と同様に `50% 50%` です。詳しくは [SVG transform-origin](/ja/docs/Web/SVG/Attribute/transform-origin) 属性を参照してください。
+> [!NOTE]
+> `transform-origin` の初期値は、ルートの `<svg>` 要素と [foreignObject](/ja/docs/Web/SVG/Reference/Element/foreignObject) の直接の子である `<svg>` 要素を除いたすべての SVG 要素では `0 0` です。また、 `transform-origin` は他の CSS 要素と同様に `50% 50%` です。詳しくは [SVG の transform-origin](/ja/docs/Web/SVG/Reference/Attribute/transform-origin) 属性を参照してください。
 
 ## 形式文法
 
@@ -124,7 +259,7 @@ transform-origin: unset;
 
 ## 例
 
-<h3 id="A_demonstration_of_various_transform_values">様々な変換値のデモ</h3>
+### 様々な座標変換値のデモ
 
 この例は、様々な変換関数で様々なt `transform-origin` の値を選択した場合の効果を表します。
 
@@ -137,8 +272,7 @@ transform-origin: unset;
 
   <pre>
 transform: none;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box2">&nbsp;</div>
@@ -147,8 +281,7 @@ transform: none;
 
   <pre>
 transform: rotate(30deg);
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box3">&nbsp;</div>
@@ -158,8 +291,7 @@ transform: rotate(30deg);
   <pre>
 transform: rotate(30deg);
 transform-origin: 0 0;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box4">&nbsp;</div>
@@ -169,8 +301,7 @@ transform-origin: 0 0;
   <pre>
 transform: rotate(30deg);
 transform-origin: 100% 100%;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box5">&nbsp;</div>
@@ -180,8 +311,7 @@ transform-origin: 100% 100%;
   <pre>
 transform: rotate(30deg);
 transform-origin: -1em -3em;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box6">&nbsp;</div>
@@ -190,8 +320,7 @@ transform-origin: -1em -3em;
 
   <pre>
 transform: scale(1.7);
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box7">&nbsp;</div>
@@ -201,8 +330,7 @@ transform: scale(1.7);
   <pre>
 transform: scale(1.7);
 transform-origin: 0 0;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box8">&nbsp;</div>
@@ -212,8 +340,7 @@ transform-origin: 0 0;
   <pre>
 transform: scale(1.7);
 transform-origin: 100% -30%;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box9">&nbsp;</div>
@@ -223,8 +350,7 @@ transform-origin: 100% -30%;
   <pre>
 transform: skewX(50deg);
 transform-origin: 100% -30%;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box10">&nbsp;</div>
@@ -234,8 +360,7 @@ transform-origin: 100% -30%;
   <pre>
 transform: skewY(50deg);
 transform-origin: 100% -30%;
-</pre
-  >
+  </pre>
 </div>
 ```
 
@@ -315,11 +440,15 @@ transform-origin: 100% -30%;
 
 {{EmbedLiveSample('A_demonstration_of_various_transform_values', '', 1350) }}
 
+## 仕様書
+
+{{Specifications}}
+
 ## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

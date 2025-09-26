@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 
 Позволяет расширениям взаимодействовать с менеджером загрузки браузера. Этот модуль API можно использовать для загрузки, отмены, приостановки, возобновления загрузки файлов и отображения загруженных файлов в файловом менеджере.
 
-Для использования этого API вам необходимо указать "downloads" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) в вашем [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) файле.
+Для использования этого API вам необходимо указать "downloads" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) в вашем [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) файле.
 
 ## Types
 
@@ -72,15 +72,14 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 - {{WebExtAPIRef("downloads.onChanged")}}
   - : When any of a {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}'s properties except `bytesReceived` changes, this event fires with the `downloadId` and an object containing the properties that changed.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Примечание:** Это API основано на API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
->
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> Этот API основан на Chromium API [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

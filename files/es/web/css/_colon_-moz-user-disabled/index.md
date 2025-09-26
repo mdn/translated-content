@@ -1,9 +1,9 @@
 ---
-title: ":-moz-user-disabled"
+title: :-moz-user-disabled
 slug: Web/CSS/:-moz-user-disabled
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

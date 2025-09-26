@@ -3,7 +3,7 @@ title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 このメソッドは一つ以上の content scripts を登録するときに使用します。
 
@@ -19,17 +19,14 @@ var registering = browser.contentScripts.register(
 );
 ```
 
-### パラメーター
+### 引数
 
 - `contentScriptOptions`
-
   - : `object` です。`RegisteredContentScriptOptions` オブジェクトは登録するコンテントスクリプトを表します。[`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) と似た構文のオブジェクトで、その違いは以下の通りです。
-
     - プロパティ名にはスネーク形式ではなくキャメル形式を使用します (例えば、`excludeMatches`を使用します。`exclude_matches` ではありません)
     - `js` プロパティと `css` プロパティには、相対パスのほかに文字列も指定できます。このため、登録したいものがどちらであるのかを明確にできる構文になっています。
 
     `RegisteredContentScriptOptions` は次のプロパティを持ちます:
-
     - `allFrames`{{optional_inline}}
       - : [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) における `all_frames` と同様です。
     - `css`{{optional_inline}}
@@ -57,7 +54,7 @@ var registering = browser.contentScripts.register(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.contentScripts.register", 10)}}
+{{Compat}}
 
 ## 例
 

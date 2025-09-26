@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Statements/for...of
 
 ## Сводка
 
-Оператор `for...of` выполняет цикл обхода [итерируемых объектов](/ru/docs/Web/JavaScript/Guide/iterable) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [аргументов](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) и подобных), вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта.
+Оператор `for...of` выполняет цикл обхода [итерируемых объектов](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [аргументов](/ru/docs/Web/JavaScript/Reference/Functions/arguments) и подобных), вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта.
 
 ## Синтаксис
 
@@ -227,9 +227,9 @@ for (var value of iterable) {
 
 Оба оператора, и `for...in` и `for...of` производят обход объектов . Разница в том, как они это делают.
 
-Для {{jsxref("Statements/for...in", "for...in")}} обход [перечисляемых свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) объекта осуществляется в произвольном порядке.
+Для {{jsxref("Statements/for...in", "for...in")}} обход [перечисляемых свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) объекта осуществляется в произвольном порядке.
 
-Для `for...of` обход происходит в соответствии с тем, какой порядок определён в [итерируемом объекте](/ru/docs/Web/JavaScript/Guide/iterable).
+Для `for...of` обход происходит в соответствии с тем, какой порядок определён в [итерируемом объекте](/ru/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 Следующий пример показывает различия в работе циклов `for...of` и `for...in` при обходе {{jsxref("Array")}}.
 
@@ -265,7 +265,7 @@ let iterable = [3, 5, 7];
 iterable.foo = 'hello';
 ```
 
-Каждый объект унаследует метод `objCustom` и каждый массив {{jsxref("Array")}} унаследует метод `arrCustom` благодаря созданию их в {{jsxref("Object.prototype")}} и {{jsxref("Array.prototype")}}. Объект `iterable` унаследует методы `objCustom` и `arrCustom` из-за [наследования через прототип](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+Каждый объект унаследует метод `objCustom` и каждый массив {{jsxref("Array")}} унаследует метод `arrCustom` благодаря созданию их в {{jsxref("Object.prototype")}} и {{jsxref("Array.prototype")}}. Объект `iterable` унаследует методы `objCustom` и `arrCustom` из-за [наследования через прототип](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ```
 for (let i in iterable) {
@@ -273,7 +273,7 @@ for (let i in iterable) {
 }
 ```
 
-Цикл выводит только [перечисляемые свойства](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) объекта `iterable`, в порядке их создания. Он не выводит **значения** `3`, `5`, `7` и `hello` поскольку они **не являются** перечисляемыми, фактически они вообще не являются свойствами, они являются **значениями**. Выводятся же **имена свойств и методов**, например `arrCustom` и `objCustom`. Если вы ещё не совсем поняли, по каким свойствам осуществляется обход, вот дополнительное объяснение того, как работает {{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} .
+Цикл выводит только [перечисляемые свойства](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) объекта `iterable`, в порядке их создания. Он не выводит **значения** `3`, `5`, `7` и `hello` поскольку они **не являются** перечисляемыми, фактически они вообще не являются свойствами, они являются **значениями**. Выводятся же **имена свойств и методов**, например `arrCustom` и `objCustom`. Если вы ещё не совсем поняли, по каким свойствам осуществляется обход, вот дополнительное объяснение того, как работает {{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} .
 
 ```
 for (let i in iterable) {
@@ -291,7 +291,7 @@ for (let i of iterable) {
 }
 ```
 
-Этот цикл обходит `iterable` и выводит те значения [итерируемого объекта](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B), которые определены в способе его перебора, т.е. не свойства объекта, а значения массива `3`, `5`, `7` .
+Этот цикл обходит `iterable` и выводит те значения [итерируемого объекта](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B), которые определены в способе его перебора, т.е. не свойства объекта, а значения массива `3`, `5`, `7` .
 
 ## Спецификации
 

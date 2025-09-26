@@ -26,7 +26,7 @@ alert(document.head === document.querySelector("head")); // true
 
 ## Notas
 
-`document.head` suporta apenas leitura. Qualquer tentativa de atribuir um valor a essa propriedade irá falhar silenciosamente ou irá, usando o modo [ECMAScript Strict](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode) de um browser Gecko, disparar um [`TypeError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+`document.head` suporta apenas leitura. Qualquer tentativa de atribuir um valor a essa propriedade irá falhar silenciosamente ou irá, usando o modo [ECMAScript Strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) de um browser Gecko, disparar um [`TypeError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
 ## Especificações
 

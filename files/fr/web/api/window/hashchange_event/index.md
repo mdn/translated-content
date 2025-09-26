@@ -3,6 +3,8 @@ title: hashchange
 slug: Web/API/Window/hashchange_event
 ---
 
+{{APIRef}}
+
 L'événement `hashchange` est déclenché lorsque l'identificateur de fragment de l'URL a changé (la partie de l'URL qui suit le symbole #, y compris le symbole # lui-même).
 
 <table class="properties">
@@ -85,5 +87,5 @@ Il existe plusieurs scripts de secours listés sur [cette page](https://github.c
 
 ## Voir aussi
 
-- [`popstate`](/fr/docs/Mozilla_event_reference/popstate)
-- [WindowEventHandlers.onhashchange](/fr/docs/Web/API/WindowEventHandlers/onhashchange)
+- [`popstate`](/fr/docs/Web/API/Window/popstate_event)
+- [WindowEventHandlers.onhashchange](/fr/docs/Web/API/Window/hashchange_event)

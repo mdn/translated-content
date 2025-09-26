@@ -11,20 +11,13 @@ slug: Web/API/BaseAudioContext/decodeAudioData
 
 ## 语法
 
-旧版的回调函数语法
+```js-nolint
+// 基于 Promise 的语法返回一个 Promise：
+decodeAudioData(arrayBuffer)
 
-```
-audioCtx.decodeAudioData(audioData, function(decodedData) {
-  // use the decoded data here
-});
-```
-
-新版的 promise-based 语法：
-
-```
-audioCtx.decodeAudioData(audioData).then(function(decodedData) {
-  // use the decoded data here
-});
+// 回调语法没有返回值：
+decodeAudioData(arrayBuffer, successCallback)
+decodeAudioData(arrayBuffer, successCallback, errorCallback)
 ```
 
 ## 举例
@@ -37,7 +30,8 @@ audioCtx.decodeAudioData(audioData).then(function(decodedData) {
 
 通过按钮来运行 `getData()` 来获取音轨并播放它。当使用 `stop()` 方法后 source 将会被清除。
 
-> **备注：** You can [run the example live](http://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
+> [!NOTE]
+> You can [run the example live](https://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
 
 ```js
 // define variables
@@ -132,4 +126,4 @@ ctx.decodeAudioData(compressedBuffer).then(function (decodedData) {
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

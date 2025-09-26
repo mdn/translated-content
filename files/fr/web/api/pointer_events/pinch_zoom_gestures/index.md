@@ -9,7 +9,8 @@ Ajouter la gestion des _gestes_ à une application peut améliorer de manière s
 
 Cet exemple montre comment détecter les gestes de _pinch/zoom_ (pincer/zoomer), en utilisant les {{domxref("Pointer_events","événements de pointeur")}} pour détecter si l'utilisateur bouge deux pointeurs plus proches ou plus loin l'un de l'autre.
 
-> **Note :** Une version _en direct_ de cette application est disponible sur [Github](https://mdn.github.io/dom-examples/pointerevents/Pinch_zoom_gestures.html). Le [code source est également disponible sur Github](https://github.com/mdn/dom-examples/blob/master/pointerevents/Pinch_zoom_gestures.html); les pull requests et [bug reports](https://github.com/mdn/dom-examples/issues) sont les bienvenus.
+> [!NOTE]
+> Une version _en direct_ de cette application est disponible sur [Github](https://mdn.github.io/dom-examples/pointerevents/Pinch_zoom_gestures.html). Le [code source est également disponible sur Github](https://github.com/mdn/dom-examples/blob/master/pointerevents/Pinch_zoom_gestures.html); les pull requests et [bug reports](https://github.com/mdn/dom-examples/issues) sont les bienvenus.
 
 ## Exemple
 
@@ -150,7 +151,8 @@ function pointerup_handler(ev) {
 
 Cette application utilise un élément {{HTMLElement("div")}} comme zone de toucher et fournit des boutons pour activer et nettoyer les logs.
 
-> **Note :** Pour empêcher que le comportement par défaut du navigateur au toucher surcharge le gestionnaire de l'application, la propriété {{cssxref("touch-action")}} est appliquée à l'élément {{HTMLElement("body")}}.
+> [!NOTE]
+> Pour empêcher que le comportement par défaut du navigateur au toucher surcharge le gestionnaire de l'application, la propriété {{cssxref("touch-action")}} est appliquée à l'élément {{HTMLElement("body")}}.
 
 ```html
 <body onload="init();" style="touch-action:none">
@@ -222,4 +224,4 @@ function clearLog(event) {
 
 - [Pointer Events now in Firefox Nightly](https://hacks.mozilla.org/2015/08/pointer-events-now-in-firefox-nightly/); Mozilla Hacks; by Matt Brubeck and Jason Weathersby; 2015-Aug-04
 - [jQuery Pointer Events Polyfill](https://github.com/jquery/PEP)
-- [Gestures](http://www.google.com/design/spec/patterns/gestures.html); Google Design Patterns
+- [Gestures](https://www.google.com/design/spec/patterns/gestures.html); Google Design Patterns

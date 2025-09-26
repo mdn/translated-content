@@ -7,7 +7,8 @@ l10n:
 
 {{CSSRef}}{{Deprecated_Header}}
 
-> **Attention :** Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/clip-path) à la place.
+> [!WARNING]
+> Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/clip-path) à la place.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clip`** définit la portion visible d'un élément. La propriété `clip` s'applique uniquement aux éléments positionnés de façon absolue (c'est-à-dire qui ont [`position:absolute`](/fr/docs/Web/CSS/position) ou [`position:fixed`](/fr/docs/Web/CSS/position)).
 
@@ -31,7 +32,6 @@ clip: unset;
 ### Valeurs
 
 - [`<shape>`](/fr/docs/Web/CSS/shape)
-
   - : Une forme (type [`<shape>`](/fr/docs/Web/CSS/shape)) rectangulaire avec la structure `rect(<haut>, <droit>, <bas>, <gauche>)`. Les valeurs `<haut>` et `<bas>` sont des décalages à partir du _bord intérieur haut de la bordure_ de la boîte, tandis que `<droit>` et `<gauche>` sont des décalages à partir du _bord intérieur gauche de la bordure_ de la boîte, c'est-à-dire la délimitation de la zone de remplissage (<i lang="en">padding</i>).
 
     Les valeurs `<haut>`, `<droit>`, `<bas>`, et `<gauche>` peuvent être exprimées avec une longueur (valeur de type [`<length>`](/fr/docs/Web/CSS/length)) ou `auto`. Si l'une des valeurs est `auto`, l'élément est rogné sur _le bord intérieur de la bordure_ du côté correspondant.

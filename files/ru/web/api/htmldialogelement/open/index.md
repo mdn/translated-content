@@ -7,7 +7,7 @@ slug: Web/API/HTMLDialogElement/open
 
 {{ SeeCompatTable() }}
 
-**`open`** - свойство интерфейса взаимодействия {{domxref("HTMLDialogElement")}}, является {{domxref("Boolean")}} значением и отражает HTML атрибут [`open`](/ru/docs/Web/HTML/Element/dialog#open) этого элемента, указывающий, доступен ли {{htmlelement("dialog")}} для взаимодействия.
+**`open`** - свойство интерфейса взаимодействия {{domxref("HTMLDialogElement")}}, является {{domxref("Boolean")}} значением и отражает HTML атрибут [`open`](/ru/docs/Web/HTML/Reference/Elements/dialog#open) этого элемента, указывающий, доступен ли {{htmlelement("dialog")}} для взаимодействия.
 
 ## Синтаксис
 
@@ -18,7 +18,7 @@ var myOpenValue = dialogInstance.open;
 
 ### Значение
 
-{{domxref("Boolean")}} значение отражает состояние HTML атрибута [`open`](/ru/docs/Web/HTML/Element/dialog#open). `true` значит, что значение установлено и диалоговое окно показывается в настоящий момент. `false` указывает, что значение не установлено и диалоговое окно не показывается.
+{{domxref("Boolean")}} значение отражает состояние HTML атрибута [`open`](/ru/docs/Web/HTML/Reference/Elements/dialog#open). `true` значит, что значение установлено и диалоговое окно показывается в настоящий момент. `false` указывает, что значение не установлено и диалоговое окно не показывается.
 
 Свойство доступно только для чтения — значение можно установить программно методы show и hide элемента {{htmlelement("dialog")}}.
 
@@ -82,7 +82,8 @@ var myOpenValue = dialogInstance.open;
 </script>
 ```
 
-> **Примечание:** вы можете найти данный пример на [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> [!NOTE]
+> Вы можете найти данный пример на [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Спецификации
 

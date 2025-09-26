@@ -82,7 +82,7 @@ button.onclick = function () {
 };
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

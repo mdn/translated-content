@@ -1,13 +1,14 @@
 ---
 title: "MediaDevices: devicechange イベント"
+short-title: devicechange
 slug: Web/API/MediaDevices/devicechange_event
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: ee846961725e36cf7bb407afe7a2df82d2860658
 ---
 
-{{APIRef}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-`devicechange` はイベントで、カメラ、マイク、スピーカーなどのメディア機器がシステムに接続・切断されるたびに {{domxref("MediaDevices")}} へ送られます。
+**`devicechange`** はイベントで、カメラ、マイク、スピーカーなどのメディア機器がシステムに接続・切断されるたびに {{domxref("MediaDevices")}} へ送られます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -48,7 +49,10 @@ ondevicechange = (event) => {};
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -99,7 +103,7 @@ const logElement = document.querySelector("output");
 const startButton = document.querySelector("#startButton");
 
 function log(msg) {
-  logElement.innerHTML += `${msg}<br>`;
+  logElement.innerText += `${msg}\n`;
 }
 
 startButton.addEventListener(
@@ -128,7 +132,7 @@ startButton.addEventListener(
         log(`${err.name}: ${err.message}`);
       });
   },
-  false
+  false,
 );
 ```
 
@@ -146,8 +150,8 @@ const videoList = document.getElementById("videoList");
 ```js
 function updateDeviceList() {
   navigator.mediaDevices.enumerateDevices().then((devices) => {
-    audioList.innerHTML = "";
-    videoList.innerHTML = "";
+    audioList.textContent = "";
+    videoList.textContent = "";
 
     devices.forEach((device) => {
       const elem = document.createElement("li");
@@ -170,7 +174,7 @@ function updateDeviceList() {
 
 すべての機器の情報を出力するために、 {{jsxref("Array.forEach", "forEach()")}} ループを使用しています。それぞれの機器で、ユーザーへこの機器情報を見せるために新しい {{HTMLElement("li")}} オブジェクトを作成します。
 
-`let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);` の行について詳しく説明します。ここでは[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)を使用しており、 {{jsxref("String.match()")}} によって返された配列の値を `kind`、`type`、`direction` の変数へ代入しています。なぜこのようなことをするのかというと、 {{domxref("MediaDeviceInfo.kind")}} の文字列は、 "audioinput" や "videooutput" のように、メディア種別とメディアフローの向きの 2 つの情報を含んでいるためです。この行で、種別（"audio" または "video"）と方向（"input" と "output"）を取り出すことで、一覧に表示する文字列を作成することができます。
+`let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);` の行について詳しく説明します。ここでは[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用しており、 {{jsxref("String.match()")}} によって返された配列の値を `kind`、`type`、`direction` の変数へ代入しています。なぜこのようなことをするのかというと、 {{domxref("MediaDeviceInfo.kind")}} の文字列は、 "audioinput" や "videooutput" のように、メディア種別とメディアフローの向きの 2 つの情報を含んでいるためです。この行で、種別（"audio" または "video"）と方向（"input" と "output"）を取り出すことで、一覧に表示する文字列を作成することができます。
 
 太字のデバイス名と括弧で囲まれた方向を含む文字列が作成されると、デバイス種別に基づいて`audioList`または`videoList`対応する一覧へ{{domxref("Node.appendChild", "appendChild()")}}の呼び出しによって追加されます。
 
@@ -184,7 +188,7 @@ navigator.mediaDevices.ondevicechange = (event) => {
 };
 ```
 
-このコードでは、ユーザがカメラ、マイク、他のメディア機器を接続したり、電源を入れたり、電源を切ったりする度に、 `updateDeviceList()` を呼び出し接続された機器一覧を再描画します。
+このコードでは、ユーザーがカメラ、マイク、他のメディア機器を接続したり、電源を入れたり、電源を切ったりする度に、 `updateDeviceList()` を呼び出し接続された機器一覧を再描画します。
 
 ### 結果
 

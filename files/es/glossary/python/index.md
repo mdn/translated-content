@@ -3,6 +3,8 @@ title: Python
 slug: Glossary/Python
 ---
 
+{{GlossarySidebar}}
+
 **Python** es un leguaje de programación de alto nivel y de propósito general. Utiliza un enfoque multiparadigma, lo que significa que soporta programación orientada a objetos, procedural y en menor medida, programación funcional.
 
 Fue creado por Guido van Rossun como sucesor a otro lenguaje (llamado ABC) entre 1985 y 1990, y es usado actualmente en una gran variedad de campos, como el desarrollo web, en la creación de aplicaciones actuales y para la construcción de archivos de procesamiento por lotes (Scripts).

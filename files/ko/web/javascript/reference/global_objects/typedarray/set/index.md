@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 
 **`set()`** 메서드는 지정된 배열로부터 입력 값을 읽어 형식화 배열 내에 여러 값을 저장합니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-set.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.set()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
+
+// Copy the values into the array starting at index 3
+uint8.set([1, 2, 3], 3);
+
+console.log(uint8);
+// Expected output: Uint8Array [0, 0, 0, 1, 2, 3, 0, 0]
+```
 
 ## 구문
 
@@ -53,6 +65,6 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

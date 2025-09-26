@@ -1,13 +1,20 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+{{jsxref("Date")}} 實例的 **`getMinutes()`** 方法會根據本地時間回傳此日期的分鐘數。
 
-**`getMinutes()`** 方法基於本地時區回傳指定日期的分鐘數。
+{{InteractiveExample("JavaScript Demo: Date.prototype.getMinutes()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html","shorter")}}
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// 預期輸出：20
+```
 
 ## 語法
 
@@ -15,18 +22,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 getMinutes()
 ```
 
-### 返回值
+### 參數
 
-一個基於本地時區表示指定日期的分鐘數、介於 0 至 59 的整數值。
+無。
+
+### 回傳值
+
+一個介於 0 到 59 之間的整數，表示根據本地時間的給定日期的分鐘數。如果日期是[無效的](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)，則回傳 `NaN`。
 
 ## 範例
 
 ### 使用 getMinutes()
 
-下方第二行陳述式將 {{jsxref("Global_Objects/Date", "Date")}} 物件 `xmas95` 的值 15，指派給變數 `minutes`。
+`minutes` 變數的值為 `15`，此值基於 {{jsxref("Date")}} 物件 `xmas95` 的值。
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
+const xmas95 = new Date("1995-12-25T23:15:30");
 const minutes = xmas95.getMinutes();
 
 console.log(minutes); // 15

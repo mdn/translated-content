@@ -8,14 +8,15 @@ l10n:
 
 {{APIRef}}
 
-**`securitypolicyviolation`** イベントは、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)に違反したときに発生します。
+**`securitypolicyviolation`** イベントは、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)に違反したときに発生します。
 
 イベントはポリシーに違反した要素で発行され、バブリングします。
 通常は {{domxref("Window")}} または {{domxref("Document")}} オブジェクトのイベントハンドラーによって処理されます。
 
 ハンドラーは `onsecuritypolicyviolation` プロパティを使用するか、{{domxref("EventTarget.addEventListener()")}} を使用して割り当てることができます。
 
-> **メモ:** このイベントのハンドラーは最上位のオブジェクト（{{domxref("Window")}} や {{domxref("Document")}} など）に追加する必要があります。
+> [!NOTE]
+> このイベントのハンドラーは最上位のオブジェクト（{{domxref("Window")}} や {{domxref("Document")}} など）に追加する必要があります。
 > HTML 要素にプロパティが存在する間は、要素が読み込まれるまでプロパティにイベントハンドラーを割り当てることはできません。
 
 ## 構文
@@ -58,4 +59,4 @@ window.addEventListener("securitypolicyviolation", (e) => {
 
 ## 関連情報
 
-- [HTTP > コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)
+- [HTTP > コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)

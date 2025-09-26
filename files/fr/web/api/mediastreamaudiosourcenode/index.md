@@ -85,5 +85,5 @@ Voir [`AudioContext.createMediaStreamSource()`](/fr/docs/Web/API/AudioContext/cr
 
 - [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [L'API WebRTC](/fr/docs/Web/API/WebRTC_API)
-- [Les API <i lang="en">Media Capture</i> et <i lang="en">Streams</i>](/fr/docs/Web/API/Media_Streams_API)
+- [Les API <i lang="en">Media Capture</i> et <i lang="en">Streams</i>](/fr/docs/Web/API/Media_Capture_and_Streams_API)
 - [`MediaStreamTrackAudioSourceNode`](/fr/docs/Web/API/MediaStreamTrackAudioSourceNode)

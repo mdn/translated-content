@@ -3,13 +3,14 @@ title: GlobalEventHandlers.onblur
 slug: Web/API/Window/blur_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
-Свойство **`onblur`** из {{domxref("GlobalEventHandlers")}} событий {{event("Event_handlers", "event handler")}} для {{event("blur")}} события. Оно доступно для{{domxref("Element")}}, {{domxref("Document")}} и {{domxref("Window")}}.
+Свойство **`onblur`** из {{domxref("GlobalEventHandlers")}} событий [`event handler`](/ru/docs/Web/Events/Event_handlers) для [`blur`](/ru/docs/Web/API/Element/blur_event) события. Оно доступно для{{domxref("Element")}}, {{domxref("Document")}} и {{domxref("Window")}}.
 
 Событие `blur` возникает когда элемент теряет фокус.
 
-> **Примечание:** Обратным `onblur` является {{domxref("GlobalEventHandlers.onfocus", "onfocus")}}.
+> [!NOTE]
+> Обратным `onblur` является {{domxref("GlobalEventHandlers.onfocus", "onfocus")}}.
 
 ## Syntax
 
@@ -62,7 +63,7 @@ function inputFocus() {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- {{event("blur")}} event
+- Событие [`blur`](/ru/docs/Web/API/Element/blur_event)
 - Related event handler: {{domxref("GlobalEventHandlers.onfocus")}}

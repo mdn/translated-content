@@ -3,7 +3,7 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 ---
 
-[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`prefers-reduced-motion`** может использоваться для определения того, запросил ли пользователь, чтобы ОС минимизировала количество анимации или движения, которые она использует.
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`prefers-reduced-motion`** может использоваться для определения того, запросил ли пользователь, чтобы ОС минимизировала количество анимации или движения, которые она использует.
 
 ## Синтаксис
 
@@ -120,7 +120,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 {{EmbedLiveSample("Примеры")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
@@ -128,7 +128,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 {{Compat}}
 
-## [Смотрите также](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#See_also)
+## [Смотрите также](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#see_also)
 
 - [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/)
 

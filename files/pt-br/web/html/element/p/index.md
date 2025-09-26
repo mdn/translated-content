@@ -5,13 +5,13 @@ slug: Web/HTML/Element/p
 
 O **elemento HTML** **`<p>`** representa um parágrafo. Em mídias visuais, parágrafos são representados como blocos indentados de texto com a primeira letra avançada e separados por linhas em branco. Já em HTML, parágrafos são usados para agrupar conteúdos relacionados de qualquer tipo, como imagens e campos de um formulário.
 
-Parágrafos são [Elementos block-level](/pt-BR/docs/Web/HTML/Elementos_block-level), e fecharão automaticamente caso outro [Elemento block-level](/pt-BR/docs/Web/HTML/Elementos_block-level) inicie antes da tag de fechamento `</p>`. Veja "Omissão de tag" abaixo.
+Parágrafos são [Elementos block-level](/pt-BR/docs/Glossary/Block-level_content), e fecharão automaticamente caso outro [Elemento block-level](/pt-BR/docs/Glossary/Block-level_content) inicie antes da tag de fechamento `</p>`. Veja "Omissão de tag" abaixo.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo)_
-  [Conteúdos de fluxo](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conteúdo_de_fluxo), conteúdos palpáveis.
-- _Conteúdo permitido_[Conteúdo frasal](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_fraseado).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_
+  [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo), conteúdos palpáveis.
+- _Conteúdo permitido_[Conteúdo frasal](/pt-BR/docs/Web/HTML/Content_categories#Conte%C3%BAdo_fraseado).
 - _Omissão de tag_ A tag de abertura é obrigatória. A tag de fechamento pode ser omitida caso o elemento {{HTMLElement("p")}} seja imediatamente sucedido pelos elementos {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hr")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}}, {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("section")}}, {{HTMLElement("table")}}, {{HTMLElement("ul")}}, ou por outro elemento {{HTMLElement("p")}}, ou, caso não haja mais conteúdo no elemento pai e o elemento pai não for um elemento {{HTMLElement("a")}}.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_de_fluxo).
+- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Conte%C3%BAdo_de_fluxo).
 - _Interface DOM_ {{domxref("HTMLParagraphElement")}}
 
 ## Atributos
@@ -123,15 +123,11 @@ p {
 
 ## Especificações
 
-| Specification                                                                 | Status                   | Comment                                                        |
-| ----------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}      | {{Spec2('HTML WHATWG')}} | Nenhuma alteração desde a última w3c {{SpecName("HTML5 W3C")}} |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}} | {{Spec2('HTML5 W3C')}}   | Atributo `align` está obsoleto                                 |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}             | {{Spec2('HTML4.01')}}    | Definição inicial                                              |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.p")}}
+{{Compat}}
 
 ## Veja também
 

@@ -26,9 +26,7 @@ toSorted(function compareFn(a, b) { /* … */ })
 ### 参数
 
 - `compareFn` {{optional_inline}}
-
   - : 指定一个定义排序顺序的函数。如果省略，则将数组元素转换为字符串，然后根据每个字符的 Unicode 码位值进行排序。
-
     - `a`
       - : 用于比较的第一个元素。
     - `b`
@@ -57,7 +55,7 @@ console.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']
 console.log(months); // ['Mar', 'Jan', 'Feb', 'Dec']
 
 const values = [1, 10, 21, 2];
-const sortedValues = values.toSorted((a, b) => a - b));
+const sortedValues = values.toSorted((a, b) => a - b);
 console.log(sortedValues); // [1, 2, 10, 21]
 console.log(values); // [1, 10, 21, 2]
 ```

@@ -1,8 +1,9 @@
 ---
 title: "EventSource: error イベント"
+short-title: error
 slug: Web/API/EventSource/error_event
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef}}

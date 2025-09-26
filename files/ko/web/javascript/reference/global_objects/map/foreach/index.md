@@ -2,14 +2,30 @@
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`forEach()`** 메서드는 삽입 순서에 따라 `Map` 객체의 각 키/값 쌍마다 한 번씩 제공된 함수를 실행합니다.
+{{jsxref("Map")}} 인스턴스의 **`forEach()`** 메서드는 이 Map 객체의 키/값 쌍마다 각각 제공된 함수를 삽입되었던 순서대로 실행합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.forEach()")}}
+
+```js interactive-example
+function logMapElements(value, key, map) {
+  console.log(`m[${key}] = ${value}`);
+}
+
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
+
+// Expected output: "m[foo] = 3"
+// Expected output: "m[bar] = [object Object]"
+// Expected output: "m[baz] = undefined"
+```
 
 ## 구문
 
@@ -21,19 +37,19 @@ forEach(callbackFn, thisArg)
 ### 매개변수
 
 - `callbackFn`
-  - : 맵의 각 항목에 대해 실행할 함수입니다. 이 함수는 다음 인수를 사용하여 호출됩니다:
+  - : 맵의 각 항목에 대해 실행할 함수입니다. 이 함수는 다음 인수를 사용하여 호출됩니다.
     - `value`
       - : 각 반복의 값입니다.
     - `key`
       - : 각 반복의 키입니다.
     - `map`
-      - : 반복되는 map입니다.
+      - : 반복되는 Map 입니다.
 - `thisArg` {{optional_inline}}
   - : `callbackFn`을 실행하고 있을 때 `this`로 사용하는 값.
 
 ### 반환 값
 
-{{jsxref("undefined")}}.
+없음 ({{jsxref("undefined")}}).
 
 ## 설명
 

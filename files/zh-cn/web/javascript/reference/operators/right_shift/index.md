@@ -3,11 +3,21 @@ title: 右移（>>）
 slug: Web/JavaScript/Reference/Operators/Right_shift
 ---
 
-{{jsSidebar("Operators")}}
-
 **右移运算符**（**`>>`**）将一个操作数的二进制表示形式向右移动指定位数，该操作数可以是数值或者 BigInt 类型。右边移出位被丢弃，左边移出的空位补符号位（最左边那位）。该操作也称为“符号位传播右移”（sign-propagating right shift）或“算术右移”（arithmetic right shift），因为返回值的符号位与第一个操作数的符号位相同。
 
-{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Right shift operator")}}
+
+```js interactive-example
+const a = 5; //  00000000000000000000000000000101
+const b = 2; //  00000000000000000000000000000010
+const c = -5; //  11111111111111111111111111111011
+
+console.log(a >> b); //  00000000000000000000000000000001
+// Expected output: 1
+
+console.log(c >> b); //  11111111111111111111111111111110
+// Expected output: -2
+```
 
 ## 语法
 
@@ -17,7 +27,7 @@ x >> y
 
 ## 描述
 
-`>>` 运算符针对这两种操作数的类型进行了重载：数值和 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。对于数值，该运算符返回一个 32 位整数；对于 BigInt 类型，该运算符返回一个 BigInt。右移运算符首先[将两个操作数强制转换为数值](/zh-CN/docs/Web/JavaScript/Data_structures#强制数字类型转换)并测试它们的类型。如果两个操作数都转换成 BigInt，则执行 BigInt 右移；否则，它将两个操作数都转换为 [32 位整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#固定宽度数值转换)并执行数值右移。如果一个操作数变为 BigInt 而另一个变为数值，则会抛出 {{jsxref("TypeError")}}。
+`>>` 运算符针对这两种操作数的类型进行了重载：数值和 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。对于数值，该运算符返回一个 32 位整数；对于 BigInt 类型，该运算符返回一个 BigInt。右移运算符首先[将两个操作数强制转换为数值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制数字类型转换)并测试它们的类型。如果两个操作数都转换成 BigInt，则执行 BigInt 右移；否则，它将两个操作数都转换为 [32 位整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#固定宽度数值转换)并执行数值右移。如果一个操作数变为 BigInt 而另一个变为数值，则会抛出 {{jsxref("TypeError")}}。
 
 由于新的数字最左边位与之前数字的最左边位是相同值，故符号位（最左边的位）不会改变，因此被称为“符号位传播”（sign-propagating）。
 

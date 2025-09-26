@@ -42,7 +42,8 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 ```
 
-> **참고:** 실제로 쓰이는 예제를 보려면 우리의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) 를 참조하세요.
+> [!NOTE]
+> 실제로 쓰이는 예제를 보려면 우리의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) 를 참조하세요.
 
 ## 명세서
 

@@ -3,8 +3,6 @@ title: 欄レイアウト
 slug: Web/CSS/Layout_cookbook/Column_layouts
 ---
 
-{{CSSRef}}
-
 いくつかの欄を含むレイアウトを作成する必要があることがよくあります。 CSS にはこれを行うためのいくつかの方法があります。 グリッド、フレックスボックス、段組みのレイアウトのどれを使用するかは、達成しようとしている内容によって異なります。 このレシピでは、これらの選択肢について説明します。
 
 ![コンテナー内に 2 つの欄を持つ 3 種類のレイアウトスタイル。](cookbook-multiple-columns.png)
@@ -29,7 +27,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-multicol--download.html)
 
@@ -47,7 +45,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html)
 
@@ -55,7 +53,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox-wrapping--download.html)
 
@@ -67,11 +65,11 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 ### 項目を行と列に並べる — グリッドレイアウト
 
-欲しいものが項目が行と列に並ぶレイアウトであるならば、CSS グリッドレイアウトを選ぶべきです。 グリッドレイアウトは、フレックスボックスがフレックスコンテナの直接の子に作用するのと同様の方法で、グリッドコンテナの直接の子に作用しますが、CSS グリッドでは、項目を行と列に並べることができます — これは2次元として記述されています。
+欲しいものが項目が行と列に並ぶレイアウトであるならば、CSS グリッドレイアウトを選ぶべきです。 グリッドレイアウトは、フレックスボックスがフレックスコンテナーの直接の子に作用するのと同様の方法で、グリッドコンテナーの直接の子に作用しますが、CSS グリッドでは、項目を行と列に並べることができます — これは2次元として記述されています。
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-grid--download.html)
 
@@ -87,26 +85,26 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 #### column-width
 
-{{Compat("css.properties.column-width")}}
+{{Compat}}
 
 #### column-rule
 
-{{Compat("css.properties.column-rule")}}
+{{Compat}}
 
 #### flex
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 #### flex-wrap
 
-{{Compat("css.properties.flex-wrap")}}
+{{Compat}}
 
 #### grid-template-columns
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## MDN の関連資料
 
-- [段組みレイアウトのガイド](/ja/docs/Web/CSS/CSS_Columns)
-- [フレックスボックスのガイド](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
-- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [段組みレイアウトのガイド](/ja/docs/Web/CSS/CSS_multicol_layout)
+- [フレックスボックスのガイド](/ja/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_grid_layout)

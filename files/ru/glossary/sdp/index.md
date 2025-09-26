@@ -3,6 +3,8 @@ title: SDP
 slug: Glossary/SDP
 ---
 
+{{GlossarySidebar}}
+
 **SDP** (Session Description {{glossary("Protocol")}} - протокол описания сессии) - это текстовый формат для описания {{Glossary("P2P","peer-to-peer")}}-соединения. SDP содержит описание {{Glossary("кодеков")}}, адрес источника и информацию для синхронизации аудио и видео.
 
 Here is a typical SDP message:
@@ -27,4 +29,4 @@ SDP is never used alone, but by protocols like {{Glossary("RTP")}} and {{Glossar
 
 ### General knowledge
 
-- [WebRTC protocols](/ru/docs/Web/API/WebRTC_API/Architecture/Protocols)
+- [WebRTC protocols](/ru/docs/Web/API/WebRTC_API/Protocols)

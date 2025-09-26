@@ -3,8 +3,6 @@ title: Usando degradados con CSS
 slug: Web/CSS/CSS_images/Using_CSS_gradients
 ---
 
-{{CSSRef}}
-
 Los **degradados en CSS** están representados por el tipo de dato {{cssxref("&lt;gradient&gt;")}}, un tipo especial de {{cssxref("&lt;image&gt;")}} hecho de una transición progresiva entre dos o más colores. Puede elegir entre tres tipos de degradados: lineal (creado con la función {{cssxref("gradient/linear-gradient", "linear-gradient()")}}), radial (creado con la función {{cssxref("gradient/radial-gradient", "radial-gradient()")}}) y cónica (creada con la función {{cssxref("gradient/conic-gradient", "conic-gradient()")}}). También puede crear degradados repetidos con {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", " repeating-radial-gradient()")}}, y {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}.
 
 Los degradados se pueden usar en cualquier lugar donde usaría `<image>`, como en los fondos. Debido a que los degradados se generan dinámicamente, pueden anular la necesidad de los archivos de imagen de trama que tradicionalmente se usaban para lograr efectos similares. Además, debido a que los degradados son generados por el navegador, se ven mejor que las imágenes rasterizadas cuando se acercan y se pueden cambiar de tamaño sobre la marcha.
@@ -326,8 +324,8 @@ div {
 
 ```css
 .layered-image {
-  background: linear-gradient(to right, transparent, mistyrose),
-    url("critters.png");
+  background:
+    linear-gradient(to right, transparent, mistyrose), url("critters.png");
 }
 ```
 
@@ -350,11 +348,9 @@ div {
 
 ```css
 .stacked-linear {
-  background: linear-gradient(
-      217deg,
-      rgba(255, 0, 0, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  background:
+    linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }
 ```
@@ -609,7 +605,8 @@ div {
         circle at 93.3% 75%,
         rgba(0, 255, 0, 0.5),
         rgba(0, 255, 0, 0) 70.71%
-      ) beige;
+      )
+      beige;
   border-radius: 50%;
 }
 ```
@@ -747,7 +744,8 @@ div {
 
 ```css
 .multi-repeating-linear {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       190deg,
       rgba(255, 0, 0, 0.5) 40px,
       rgba(255, 153, 0, 0.5) 80px,
@@ -757,7 +755,8 @@ div {
       rgba(75, 0, 130, 0.5) 240px,
       rgba(238, 130, 238, 0.5) 280px,
       rgba(255, 0, 0, 0.5) 300px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -190deg,
       rgba(255, 0, 0, 0.5) 30px,
       rgba(255, 153, 0, 0.5) 60px,
@@ -767,8 +766,18 @@ div {
       rgba(75, 0, 130, 0.5) 180px,
       rgba(238, 130, 238, 0.5) 210px,
       rgba(255, 0, 0, 0.5) 230px
-    ), repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green
-        200px, blue 250px, indigo 300px, violet 350px, red 370px);
+    ),
+    repeating-linear-gradient(
+      23deg,
+      red 50px,
+      orange 100px,
+      yellow 150px,
+      green 200px,
+      blue 250px,
+      indigo 300px,
+      violet 350px,
+      red 370px
+    );
 }
 ```
 
@@ -791,7 +800,8 @@ div {
 
 ```css
 .plaid-gradient {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent,
       transparent 50px,
@@ -805,7 +815,8 @@ div {
       transparent 116px,
       rgba(255, 206, 0, 0.25) 116px,
       rgba(255, 206, 0, 0.25) 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       0deg,
       transparent,
       transparent 50px,
@@ -819,20 +830,24 @@ div {
       transparent 116px,
       rgba(255, 206, 0, 0.25) 116px,
       rgba(255, 206, 0, 0.25) 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 5px,
       rgba(143, 77, 63, 0.25) 5px,
       rgba(143, 77, 63, 0.25) 10px
-    ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(
-          143,
-          77,
-          63,
-          0.25
-        ) 5px, rgba(143, 77, 63, 0.25) 10px);
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgba(143, 77, 63, 0.25) 5px,
+      rgba(143, 77, 63, 0.25) 10px
+    );
 
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent 0 50px,
       rgba(255, 127, 0, 0.25) 50px 56px,
@@ -840,7 +855,8 @@ div {
       rgba(255, 127, 0, 0.25) 63px 69px,
       transparent 69px 116px,
       rgba(255, 206, 0, 0.25) 116px 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       0deg,
       transparent 0 50px,
       rgba(255, 127, 0, 0.25) 50px 56px,
@@ -848,16 +864,17 @@ div {
       rgba(255, 127, 0, 0.25) 63px 69px,
       transparent 69px 116px,
       rgba(255, 206, 0, 0.25) 116px 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -45deg,
       transparent 0 5px,
       rgba(143, 77, 63, 0.25) 5px 10px
-    ), repeating-linear-gradient(45deg, transparent 0 5px, rgba(
-          143,
-          77,
-          63,
-          0.25
-        ) 5px 10px);
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 5px,
+      rgba(143, 77, 63, 0.25) 5px 10px
+    );
 }
 ```
 
@@ -913,14 +930,16 @@ div {
         rgba(0, 0, 0, 0.5) 15px,
         rgba(255, 255, 255, 0.5) 15px,
         rgba(255, 255, 255, 0.5) 30px
-      ) top left no-repeat,
+      )
+      top left no-repeat,
     repeating-radial-gradient(
         ellipse at 20% 50%,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5) 10px,
         rgba(255, 255, 255, 0.5) 10px,
         rgba(255, 255, 255, 0.5) 20px
-      ) top left no-repeat yellow;
+      )
+      top left no-repeat yellow;
   background-size:
     200px 200px,
     150px 150px;

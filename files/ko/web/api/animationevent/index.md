@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Animations")}}
 
-**`AnimationEvent`** 인터페이스는 [애니메이션](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)과 관련된 정보를 제공하는 이벤트를 나타냅니다.
+**`AnimationEvent`** 인터페이스는 [애니메이션](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)과 관련된 정보를 제공하는 이벤트를 나타냅니다.
 
 {{InheritanceDiagram}}
 
@@ -41,5 +41,5 @@ l10n:
 
 ## 같이 보기
 
-- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - 애니메이션 관련 CSS 속성과 @규칙: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}

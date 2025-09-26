@@ -5,7 +5,7 @@ slug: Web/CSS/border-right
 
 {{CSSRef}}
 
-La propriété **`border-right`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de décrire la bordure droite d'un élément.
+La propriété **`border-right`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de décrire la bordure droite d'un élément.
 
 Elle définit les valeurs des propriétés suivantes :
 
@@ -13,11 +13,50 @@ Elle définit les valeurs des propriétés suivantes :
 - {{cssxref("border-right-style")}},
 - {{cssxref("border-right-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border-right.html")}}
+{{InteractiveExample("CSS Demo: border-right")}}
+
+```css interactive-example-choice
+border-right: solid;
+```
+
+```css interactive-example-choice
+border-right: dashed red;
+```
+
+```css interactive-example-choice
+border-right: 1rem solid;
+```
+
+```css interactive-example-choice
+border-right: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-right: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Ces propriétés permettent de décrire la bordure du côté droit d'un élément.
 
-> **Note :** Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
+> [!NOTE]
+> Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
 >
 > Comme pour les autres propriétés raccourcies, `border-right` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
 >

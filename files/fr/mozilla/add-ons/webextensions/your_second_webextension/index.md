@@ -1,30 +1,29 @@
 ---
 title: Votre deuxième WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+l10n:
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
-
-{{AddonSidebar}}
 
 Si vous avez lu l'article [votre première extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension), vous avez déjà une idée de la manière d'écrire une extension. Dans cet article, nous allons écrire une extension légèrement plus complexe qui illustre un peu plus les API.
 
-L'extension ajoute un nouveau bouton à la barre d'outils Firefox. Lorsque l'utilisateur clique sur le bouton, nous affichons une fenêtre contextuelle qui leur permet de choisir un animal. Une fois l'animal choisi, l'extension remplace le contenu de la page actuelle par une image de l'animal choisi.
+L'extension ajoute un nouveau bouton à la barre d'outils Firefox. Lorsque l'utilisateur·ice clique sur le bouton, nous affichons une fenêtre contextuelle qui leur permet de choisir un animal. Une fois l'animal choisi, l'extension remplace le contenu de la page actuelle par une image de l'animal choisi.
 
-Pour implémenter ce module, il nous faut :
+Pour implémenter ce module, il nous faut&nbsp;:
 
-- **Définir une [action du navigateur (_browser action_)](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action), matérialisée par un bouton dans la barre d'outils de Firefox**. Pour ce bouton, nous avons besoin :
-
-  - d'une icône, nommée "beasts-32.png"
+- **Définir une [action du navigateur (_browser action_)](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), matérialisée par un bouton dans la barre d'outils de Firefox**. Pour ce bouton, nous avons besoin&nbsp;:
+  - d'une icône, nommée `beasts-32.png`
   - d'une popup qui s'ouvrira lorsqu'on cliquera sur le bouton. La popup sera constituée d'HTML, de CSS et de JavaScript.
 
-- **Définir l'icône de l'extension,** nommée "beasts-48.png". Elle apparaîtra dans le gestionnaire de module.
-- **Écrire un script de contenu (_content script_), "beastify.js" qui sera injecté dans les pages web**. C'est le code qui va effectivement transformer les pages.
+- **Définir l'icône de l'extension,** nommée `beasts-48.png`. Elle apparaîtra dans le gestionnaire de module.
+- **Écrire un script de contenu (_content script_), `beastify.js` qui sera injecté dans les pages web**. C'est le code qui va effectivement transformer les pages.
 - **Packager les images d'animaux, afin de remplacer les images de la page web**. Nous définirons les images comme étant des ressources accessibles par le Web de sorte que la page web puisse y accéder.
 
-Voici une visualisation globale possible de la structure du module :
+Voici une visualisation globale possible de la structure du module&nbsp;:
 
-![](untitled-1.png)
+![Le fichier manifest.json inclut des icônes, des actions de navigateur, y compris des popups, et des ressources accessibles par le Web. La ressource JavaScript de la popup de choix de bête est appelée dans le script beastify.](untitled-1.png)
 
-Il s'agit d'une extension simple mais qui démontre plusieurs concepts élémentaires de l'API des WebExtensions :
+Il s'agit d'une extension simple mais qui démontre plusieurs concepts élémentaires de l'API des WebExtensions&nbsp;:
 
 - Ajout d'un bouton à la barre d'outils
 - Définition d'une popup à l'aide de HTML, CSS et JavaScript
@@ -38,7 +37,7 @@ Afin de tester cette extension, vous aurez besoin de Firefox 45 ou d'une version
 
 ## Écrire l'extension
 
-Créez un nouveau répertoire et positionnez-vous dedans :
+Créez un nouveau répertoire et positionnez-vous dedans&nbsp;:
 
 ```bash
 mkdir beastify
@@ -47,7 +46,7 @@ cd beastify
 
 ### manifest.json
 
-Créez un nouveau fichier nommé "manifest.json" directement dans le répertoire "beastify" et saisissez-y le contenu suivant :
+Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire «&nbsp;beastify&nbsp;» et saisissez-y le contenu suivant&nbsp;:
 
 ```json
 {
@@ -77,15 +76,14 @@ Créez un nouveau fichier nommé "manifest.json" directement dans le répertoire
 }
 ```
 
-- Les trois premières clés : [`manifest_version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), et [`version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version), sont obligatoires et contiennent les métadonnées élémentaires nécessaires à l'extension.
-- [`description`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) and [`homepage_url`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) sont optionnelles mais recommandées : elles apportent des informations utiles à propos de l'extension.
-- [`icons`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) est optionnelle mais recommandée : elle permet de spécifier l'icône du module qui s'affichera dans le gestionnaire d'extension.
+- Les trois premières clés&nbsp;: [`manifest_version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), et [`version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version), sont obligatoires et contiennent les métadonnées élémentaires nécessaires à l'extension.
+- [`description`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) and [`homepage_url`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) sont optionnelles mais recommandées&nbsp;: elles apportent des informations utiles à propos de l'extension.
+- [`icons`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) est optionnelle mais recommandée&nbsp;: elle permet de spécifier l'icône du module qui s'affichera dans le gestionnaire d'extension.
 - [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) indique les permissions nécessaires à cette extension. Ici, uniquement [la permission `activeTab`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) est demandée.
-- [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) spécifie le bouton de la barre d'outil. Nous fournissons trois informations :
-
+- [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) spécifie le bouton de la barre d'outil. Nous fournissons trois informations&nbsp;:
   - `default_icon` est obligatoire et référence l'icône du bouton
   - `default_title` est optionelle et s'affichera dans une bulle d'aide
-  - `default_popup` est nécessaire si vous souhaitez qu'une popup s'affiche lorsque l'utilisateur clique sur le bouton. C'est notre cas, nous avons donc défini cette clé et l'avons faite pointer sur un fichier HTML inclus dans le module.
+  - `default_popup` est nécessaire si vous souhaitez qu'une popup s'affiche lorsque l'utilisateur·ice clique sur le bouton. C'est notre cas, nous avons donc défini cette clé et l'avons faite pointer sur un fichier HTML inclus dans le module.
 
 - [`web_accessible_resources`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) liste les fichiers qui doivent être accessibles aux pages web. Comme cette extension remplace le contenu de la page web par les images incluses dans cette extension, il faut les rendre accessibles à la page.
 
@@ -93,11 +91,11 @@ Il est à noter que tous les chemins sont relatifs au fichier manifest.json.
 
 ### L'icône
 
-L'extension doit posséder une icône qui sera affichée dans le catalogue des extensions et dans la liste des extensions du navigateur (vous pouvez afficher le gestionnaire en ouvrant l'URL "about:addons"). Le fichier manifest.json a déclaré une icône pour la barre d'outils, "icons/beasts-48.png".
+L'extension doit posséder une icône qui sera affichée dans le catalogue des extensions et dans la liste des extensions du navigateur (vous pouvez afficher le gestionnaire en ouvrant l'URL «&nbsp;about:addons&nbsp;»). Le fichier manifest.json a déclaré une icône pour la barre d'outils, `icons/beasts-48.png`.
 
-Créez le répertoire "icons" et enregistrez-y une icône nommée "beasts-48.png". Vous pouvez utiliser [une image de notre exemple](https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-48.png), provenant du jeu d'icônes de [Aha-Soft's Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set) et utilisable selon les termes de sa [licence](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Créez le répertoire «&nbsp;icons&nbsp;» et enregistrez-y une icône nommée `beasts-48.png`. Vous pouvez utiliser [une image de notre exemple](https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-48.png), provenant du jeu d'icônes de [Aha-Soft's Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set) et utilisable selon les termes de sa [licence](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
 
-Si vous décidez de fournir votre propre icône, sa taille devra être de 48 pixels par 48 pixels. Il vous est aussi possible de fournir une icône de taille 96 pixels par 96 pixels, adaptée aux affichages haute résolution, et, devra dans ce cas, être spécifiée par la propriété `96` de l'objet `icons` du manifeste :
+Si vous décidez de fournir votre propre icône, sa taille devra être de 48 pixels par 48 pixels. Il vous est aussi possible de fournir une icône de taille 96 pixels par 96 pixels, adaptée aux affichages haute résolution, et, devra dans ce cas, être spécifiée par la propriété `96` de l'objet `icons` du manifeste&nbsp;:
 
 ```json
 "icons": {
@@ -108,21 +106,21 @@ Si vous décidez de fournir votre propre icône, sa taille devra être de 48 pix
 
 ### Le bouton de la barre d'outils
 
-Une icône est nécessaire pour le bouton de la barre d'outils et le manifeste déclare une icône "icons/beasts-32.png" pour la barre d'outils.
+Une icône est nécessaire pour le bouton de la barre d'outils et le manifeste déclare une icône `icons/beasts-32.png` pour la barre d'outils.
 
-Enregistrez une icône nommée "beasts-32.png" dans le répertoire "icons". Vous pouvez utiliser [une image de notre exemple](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png), provenant du jeu d'icône [IconBeast Lite icon](http://www.iconbeast.com/free) et utilisable selon les termes de sa [licence](http://www.iconbeast.com/faq/).
+Enregistrez une icône nommée `beasts-32.png` dans le répertoire «&nbsp;icons&nbsp;». Vous pouvez utiliser [une image de notre exemple](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png), provenant du jeu d'icône [IconBeast Lite icon](http://www.iconbeast.com/free) et utilisable selon les termes de sa [licence](http://www.iconbeast.com/faq/).
 
-Si vous ne fournissez pas de popup, alors un évènement `click` est propagé au contexte de l'extension lorque l'utilisateur clique sur le bouton. Si une popup est fournie, l'évènement `click` n'est pas propagé, mais la popup fournie par l'extension s'ouvrira à la place. C'est ce que nous voulons faire ici, créons cette popup.
+Si vous ne fournissez pas de popup, alors un évènement `click` est propagé au contexte de l'extension lorque l'utilisateur·ice clique sur le bouton. Si une popup est fournie, l'évènement `click` n'est pas propagé, mais la popup fournie par l'extension s'ouvrira à la place. C'est ce que nous voulons faire ici, créons cette popup.
 
 ### La popup
 
-Le but de la popup est de permettre à l'utilisateur de choisir une des trois bêtes.
+Le but de la popup est de permettre à l'utilisateur·ice de choisir une des trois bêtes.
 
-Créez un nouveau répertoire nommé "popup" à la racine de l'extension. Ce sera l'emplacement du code de la popup. La popup sera constituée de trois fichiers :
+Créez un nouveau répertoire nommé «&nbsp;popup&nbsp;» à la racine de l'extension. Ce sera l'emplacement du code de la popup. La popup sera constituée de trois fichiers&nbsp;:
 
 - **`choose_beast.html`** qui définit le contenu du panneau
 - **`choose_beast.css`** qui met en forme le contenu de ce panneau
-- **`choose_beast.js`** qui gére le choix de l'utilisateur en exécutant un script de contenu dans l'onglet actif du navigateur
+- **`choose_beast.js`** qui gére le choix de l'utilisateur·ice en exécutant un script de contenu dans l'onglet actif du navigateur
 
 ```bash
 mkdir popup
@@ -132,7 +130,7 @@ touch choose_beast.html choose_beast.css choose_beast.js
 
 #### choose_beast.html
 
-Voici le contenu du fichier HTML :
+Voici le contenu du fichier HTML&nbsp;:
 
 ```html
 <!doctype html>
@@ -159,13 +157,13 @@ Voici le contenu du fichier HTML :
 </html>
 ```
 
-On a un élément [`<div>`](/fr/docs/Web/HTML/Element/div) dont l'identifiant (`id`) vaut `"popup-content"` et qui contient un élément pour chaque choix d'animal. On a également un autre `<div>` avec l'identifiant `"error-content"` et une classe `"hidden"`. Nous utiliserons cet élément au cas où il y ait un problème à l'initialisation de la popup.
+On a un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) dont l'identifiant (`id`) vaut `"popup-content"` et qui contient un élément pour chaque choix d'animal. On a également un autre `<div>` avec l'identifiant `"error-content"` et une classe `"hidden"`. Nous utiliserons cet élément au cas où il y ait un problème à l'initialisation de la popup.
 
 Il est à noter que le ficher CSS et le fichier JS sont inclus depuis ce fichier, tout comme une page web normale.
 
 #### choose_beast.css
 
-Le CSS fixe la taille de la popup, s'assure que les trois choix remplissent l'espace et les met en forme de façon élémentaire. C'est aussi le CSS qui masque les éléments avec `class="hidden"`, cela signifie que l'élément `<div>` `"error-content"` sera masqué par défaut :
+Le CSS fixe la taille de la popup, s'assure que les trois choix remplissent l'espace et les met en forme de façon élémentaire. C'est aussi le CSS qui masque les éléments avec `class="hidden"`, cela signifie que l'élément `<div>` `"error-content"` sera masqué par défaut&nbsp;:
 
 ```css
 html,
@@ -312,7 +310,7 @@ browser.tabs
   .catch(reportExecuteScriptError);
 ```
 
-Pour commencer, le script de la popup exécute un script de contenu dans l'onglet actif dès que la popup est chargée grâce à la méthode [`browser.tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si l'exécution du script est réussie, le script de contenu sera chargé dans la page jusqu'à ce que l'onglet soit fermé ou que l'utilisateur navigue sur une autre page.
+Pour commencer, le script de la popup exécute un script de contenu dans l'onglet actif dès que la popup est chargée grâce à la méthode [`browser.tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si l'exécution du script est réussie, le script de contenu sera chargé dans la page jusqu'à ce que l'onglet soit fermé ou que l'utilisateur·ice navigue sur une autre page.
 
 On peut avoir des erreurs lors de l'appel à `browser.tabs.executeScript()` car il est impossible d'exécuter des scripts de contenu sur certaines pages. On ne peut, par exemple, pas en exécuter pour certaines pages privilégiées comme about:debugging ou sur des pages du domaine [addons.mozilla.org](https://addons.mozilla.org/). Si un tel échec se produit, `reportExecuteScriptError()` masquera l'élément avec `"popup-content"` et affichera celui avec `"error-content"` puis enregistrera une erreur dans [la console](https://extensionworkshop.com/documentation/develop/debugging/).
 
@@ -321,20 +319,20 @@ Si l'exécution du script de contenu réussit, la méthode `listenForClicks()` e
 - Si le clic a lieu sur un bouton avec `class="beast"`, on appelle `beastify()`.
 - Si le clic a lieu sur un bouton avec `class="reset"`, on appelle `reset()`.
 
-La fonction `beastify()` fait trois choses :
+La fonction `beastify()` fait trois choses&nbsp;:
 
 - Correspondre le bouton qui a reçu le clic avec l'URL d'une image correspondant à la bête choisie
 - Masquer tout le contenu de la page en injectant du CSS avec [`browser.tabs.insertCSS()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
-- Envoyer un message "beastify" au script de contenu avec [`browser.tabs.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) pour lui demander de transformer la page en lui passant l'URL de l'image pour la bête sélectionnée.
+- Envoyer un message «&nbsp;beastify&nbsp;» au script de contenu avec [`browser.tabs.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) pour lui demander de transformer la page en lui passant l'URL de l'image pour la bête sélectionnée.
 
-La fonction `reset()` annule la transformation de l'onglet courant en :
+La fonction `reset()` annule la transformation de l'onglet courant en&nbsp;:
 
 - Retirant le CSS ajouté grâce à [`browser.tabs.removeCSS()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS)
-- Envoyant un message "reset" au script de contenu pour lui demander de réinitialiser la page.
+- Envoyant un message «&nbsp;reset&nbsp;» au script de contenu pour lui demander de réinitialiser la page.
 
 ### Le script de contenu (_content script_)
 
-Créez un nouveau répertoire sous la racine du module nommé "content_scripts" et créez un nouveau fichier nommé "beastify.js", contenant :
+Créez un nouveau répertoire sous la racine du module nommé `content_scripts` et créez un nouveau fichier nommé `beastify.js`, contenant&nbsp;:
 
 ```js
 (function () {
@@ -387,24 +385,28 @@ Créez un nouveau répertoire sous la racine du module nommé "content_scripts" 
 })();
 ```
 
-La première chose que fait le script de contenu est de vérifier une variable globale `window.hasRun` : si elle est déjà définie, le script rend la main et sinon, il définit `window.hasRun` puis continue. On fait ceci pour éviter que la popup exécute un script de contenu à chaque fois que l'utilisateur ouvre la popup (y compris pour le même onglet) afin d'éviter d'avoir plusieurs instances du script dans le même onglet. Si un utilisateur ouvre plusieurs fois la popup, on doit s'assurer que c'est bien la première instance du script qui gère ce qui se passe.
+La première chose que fait le script de contenu est de vérifier une variable globale `window.hasRun`&nbsp;: si elle est déjà définie, le script rend la main et sinon, il définit `window.hasRun` puis continue. On fait ceci pour éviter que la popup exécute un script de contenu à chaque fois que l'utilisateur·ice ouvre la popup (y compris pour le même onglet) afin d'éviter d'avoir plusieurs instances du script dans le même onglet. Si un·e utilisateur·ice ouvre plusieurs fois la popup, on doit s'assurer que c'est bien la première instance du script qui gère ce qui se passe.
 
-Après ça, on voit plus loin que le script de contenu utilise [`browser.runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage). Cela permet de faire le lien avec le script de popup qui envoyait deux messages : "beastify" et "reset".
+Après ça, on voit plus loin que le script de contenu utilise [`browser.runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage). Cela permet de faire le lien avec le script de popup qui envoyait deux messages&nbsp;: «&nbsp;beastify&nbsp;» et «&nbsp;reset&nbsp;».
 
-- Si le message est "beastify", on s'attend à ce que celui-ci contienne une URL pointant vers une image. On supprime alors toute image de bête ayant été placée par d'éventuels appels précédents puis on construit et on ajoute un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) dont l'attribut `src` est défini avec l'URL pointant vers l'image de la bête sélectionnée.
-- Si le message est "reset", on retire toute image de bête ayant été ajoutée.
+- Si le message est «&nbsp;beastify&nbsp;», on s'attend à ce que celui-ci contienne une URL pointant vers une image. On supprime alors toute image de bête ayant été placée par d'éventuels appels précédents puis on construit et on ajoute un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) dont l'attribut `src` est défini avec l'URL pointant vers l'image de la bête sélectionnée.
+- Si le message est «&nbsp;reset&nbsp;», on retire toute image de bête ayant été ajoutée.
 
 ### Les bêtes
 
 Enfin, nous devons inclure les images d'animaux.
 
-Créez un nouveau répertoire nommé "beasts", et ajoutez-y les trois images, nommées de façon appropriée. Vous pouvez récupérer les images du [dépôt GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), ou bien ci-après :
+Créez un nouveau répertoire nommé `beasts`, et ajoutez-y les trois images, nommées de façon appropriée. Vous pouvez récupérer les images du [dépôt GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), ou bien ci-après&nbsp;:
 
-![](frog.jpg)![](snake.jpg)![](turtle.jpg)
+![Une grenouille marron.](frog.jpg)
+
+![Un boa de la forêt émeraude avec des rayures blanches.](snake.jpg)
+
+![Une tortue à oreilles rouges.](turtle.jpg)
 
 ## Test
 
-D'abord, vérifiez de nouveau que les bons fichiers sont au bon endroit :
+D'abord, vérifiez de nouveau que les bons fichiers sont au bon endroit&nbsp;:
 
 ```
 beastify/
@@ -431,17 +433,17 @@ beastify/
 
 A partir de Firefox version 45, il est possible d'installer les WebExtensions temporairement.
 
-Ouvrez "about:debugging" dans Firefox, cliquez sur "Charger un module complémentaire temporaire", et choisissez le fichier manifest.json. Vous devriez voir apparaitre l'icône du module dans la barre d'outils de Firefox :
+Ouvrez «&nbsp;about:debugging&nbsp;» dans Firefox, cliquez sur «&nbsp;Charger un module complémentaire temporaire&nbsp;», et choisissez le fichier manifest.json. Vous devriez voir apparaitre l'icône du module dans la barre d'outils de Firefox&nbsp;:
 
-{{EmbedYouTube("sAM78GU4P34")}}
+![L'icône de beastify dans la barre d'outils de Firefox](beastify_icon.png)
 
-Ouvrez une page web et cliquez sur l'icône, sélectionnez une bête et observez la page web se modifier :
+Ouvrez une page web et cliquez sur l'icône, sélectionnez une bête et observez la page web se modifier&nbsp;:
 
-{{EmbedYouTube("YMQXyAQSiE8")}}
+![Une page remplacée par l'image d'une tortue](beastify_page.png)
 
 ## Développement depuis la ligne de commande
 
-Il est possible d'automatiser l'installation temporaire de modules, étape par étape en utilisant l'outil [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) tool. Essayez ainsi :
+Il est possible d'automatiser l'installation temporaire de modules, étape par étape en utilisant l'outil [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) tool. Essayez ainsi&nbsp;:
 
 ```bash
 cd beastify
@@ -450,9 +452,9 @@ web-ext run
 
 ## Et ensuite ?
 
-Maitenant que vous avez créé une WebExtension avancée pour Firefox, vous pouvez :
+Maitenant que vous avez créé une WebExtension avancée pour Firefox, vous pouvez&nbsp;:
 
 - [Explorer l'anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explorer les exemples d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_expérience_d'apprentissage).
+- [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next#continuez_votre_expérience_d'apprentissage).

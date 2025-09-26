@@ -9,11 +9,11 @@ slug: Web/API/Text/splitText
 
 如果指定的偏移量刚好等于原文本节点所包含字符串的长度，则返回一个内容为空的文本节点。
 
-分割后的文本节点还可以使用[`Node.normalize`](/zh-CN/docs/DOM/Node.normalize)方法来合并。
+分割后的文本节点还可以使用[`Node.normalize`](/zh-CN/docs/Web/API/Node/normalize)方法来合并。
 
 ## 语法
 
-```
+```js-nolint
 newNode = textNode.splitText(offset)
 ```
 
@@ -24,7 +24,7 @@ newNode = textNode.splitText(offset)
 
 ### 返回值
 
-返回一个新创建的 {{domxref("Text")}} 节点，该节点包含了 the text after the specified offset point.
+返回一个新创建的 {{domxref("Text")}} 节点，该节点包含了指定偏移量之后的文本。
 
 ### 异常
 
@@ -78,5 +78,5 @@ p.insertBefore(u, bar);
 
 ## 参见
 
-- The {{domxref("Text")}} interface it belongs to.
-- The opposite method: {{domxref("Node.normalize")}}.
+- 所属的接口：{{domxref("Text")}}。
+- 相反的方法：{{domxref("Node.normalize")}}。

@@ -104,7 +104,8 @@ Pour des raisons de compatibilité, la propriété historique [`page-break-befor
 | `avoid`             | `avoid`        |
 | `always`            | `page`         |
 
-> **Note :** La valeur `always` pour `page-break-*` a été implémentée par les navigateurs comme une rupture de page et non comme une rupture de colonne. C'est pourquoi l'alias ici utilisé est `page` et non `always`.
+> [!NOTE]
+> La valeur `always` pour `page-break-*` a été implémentée par les navigateurs comme une rupture de page et non comme une rupture de colonne. C'est pourquoi l'alias ici utilisé est `page` et non `always`.
 
 ## Définition formelle
 
@@ -209,5 +210,5 @@ article {
 
 ## Voir aussi
 
-- [Disposition sur plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Disposition sur plusieurs colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)

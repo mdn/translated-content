@@ -3,6 +3,8 @@ title: Variable
 slug: Glossary/Variable
 ---
 
+{{GlossarySidebar}}
+
 {{jsSidebar}}
 
 Una variable es una ubicación nombrada para almacenar un {{Glossary("Value", "valor")}}. De esta manera se puede acceder a un valor impredecible por medio de un nombre predeterminado.

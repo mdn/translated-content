@@ -3,13 +3,11 @@ title: translate3d()
 slug: Web/CSS/transform-function/translate3d
 ---
 
-{{CSSRef}}
-
 `translate3d()` CSS 函数在 3D 空间内移动一个元素的位置。这个移动由一个三维向量来表达，分别表示他在三个方向上移动的距离。
 
 ## 语法
 
-```
+```css
 translate3d(tx, ty, tz)
 ```
 
@@ -85,7 +83,7 @@ p {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample("单轴变化示例","100%","250")}}
 
@@ -114,7 +112,7 @@ p {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample("z 轴与 x 轴变化","100%","250")}}
 

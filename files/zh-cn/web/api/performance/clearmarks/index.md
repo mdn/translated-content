@@ -7,11 +7,11 @@ slug: Web/API/Performance/clearMarks
 
 **`clearMarks()`** 这个方法可以从浏览器的 performance entry 缓存中移除声明的标记。如果调用这个方法时没有传递参数，则所有带有{{domxref("PerformanceEntry.entryType","entry type")}}这类标记的{{domxref("PerformanceEntry","performance entries")}} 将从 performance entry 缓存区中被移除。
 
-## 用法
+## 语法
 
-```
-performance.clearMarks();
-performance.clearMarks(name);
+```js-nolint
+clearMarks()
+clearMarks(name)
 ```
 
 ### 参数
@@ -23,7 +23,7 @@ performance.clearMarks(name);
 
 无
 
-## 例子
+## 示例
 
 下面的例子演示 `clearMarks()` 的两种用法。
 

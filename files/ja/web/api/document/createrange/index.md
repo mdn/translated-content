@@ -1,6 +1,9 @@
 ---
-title: Document.createRange()
+title: "Document: createRange() メソッド"
+short-title: createRange()
 slug: Web/API/Document/createRange
+l10n:
+  sourceCommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
 ---
 
 {{APIRef("DOM")}}
@@ -9,22 +12,28 @@ slug: Web/API/Document/createRange
 
 ## 構文
 
-```
-range = document.createRange();
+```js-nolint
+createRange()
 ```
 
-_range_ は生成された {{domxref("Range")}} オブジェクトです。
+### 引数
+
+なし。
+
+### 返値
+
+生成された {{domxref("Range")}} オブジェクトです。
 
 ## 例
 
 ```js
-let range = document.createRange();
+const range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
 ```
 
-## 注
+## メモ
 
 `Range` を生成したあと、大部分のメソッドを使用するには境界を設定する必要があります。
 

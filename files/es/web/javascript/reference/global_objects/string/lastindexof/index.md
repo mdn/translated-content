@@ -3,7 +3,7 @@ title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -18,7 +18,6 @@ cadena.lastIndexOf(valorBusqueda[, indiceDesde])
 ### Parámetros
 
 - `valorBusqueda`
-
   - : Una cadena que representa el valor que se desea buscar.
 
 - `indiceDesde`

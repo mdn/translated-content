@@ -1,27 +1,60 @@
 ---
 title: column-rule-color
 slug: Web/CSS/column-rule-color
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`column-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の色を設定します。
 
-{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}
+{{InteractiveExample("CSS デモ: column-rule-color")}}
+
+```css interactive-example-choice
+column-rule-color: red;
+```
+
+```css interactive-example-choice
+column-rule-color: rgb(48, 125, 222);
+```
+
+```css interactive-example-choice
+column-rule-color: hsla(120, 80%, 40%, 0.6);
+```
+
+```css interactive-example-choice
+column-rule-color: currentcolor;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ロンドン。ミカエル学期の終わり、リンカーンズ・イン・ホールに大法官が座っています。容赦のない 11 月の天候。街は、まるで地球から水が引き始めたばかりのように泥だらけで、ホルボーン・ヒルを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  columns: 3;
+  column-rule: solid;
+  text-align: left;
+}
+```
 
 ## 構文
 
 ```css
 /* <color> 値 */
 column-rule-color: red;
-column-rule-color: rgb(192, 56, 78);
+column-rule-color: rgb(192 56 78);
 column-rule-color: transparent;
-column-rule-color: hsla(0, 100%, 50%, 0.6);
+column-rule-color: hsl(0 100% 50% / 60%);
 
 /* グローバル値 */
 column-rule-color: inherit;
 column-rule-color: initial;
 column-rule-color: revert;
+column-rule-color: revert-layer;
 column-rule-color: unset;
 ```
 
@@ -46,16 +79,15 @@ column-rule-color: unset;
 
 #### HTML
 
-```html
-<p>This is a bunch of text split into three columns.
-   The `column-rule-color` property is used to change
-   the color of the line that is drawn between columns.
-   Don't you think that's wonderful?</p>
+```html-nolint live-sample___setting_a_blue_column_rule
+<p>
+  これは 3 つの段組みに分割されたテキストです。 `column-rule-color` プロパティは、段の間に描画される行の色を変更するために使用されます。素晴らしいと思いませんか？
+</p>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_a_blue_column_rule
 p {
   column-count: 3;
   column-rule-style: solid;
@@ -79,4 +111,3 @@ p {
 
 - {{cssxref("&lt;color&gt;")}} データ型
 - 色に関する他のプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)

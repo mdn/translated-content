@@ -3,17 +3,15 @@ title: Firefox 42 for developers
 slug: Mozilla/Firefox/Releases/42
 ---
 
-{{FirefoxSidebar}}
-
 ## Changements pour les développeurs Web
 
 ### Outils de développement
 
 Points forts:
 
-- [Débogage de Firefox pour Android via Wifi](/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi)
+- [Débogage de Firefox pour Android via Wifi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#Connecting_over_the_Network)
 - [Configuration de Firefox OS Simulator dans WebIDE](/fr/docs/Tools/WebIDE/Setting_up_runtimes#Configuring_Simulators)
-- [Préréglages de filtre CSS](/fr/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters#Saving_filter_presets)
+- [Préréglages de filtre CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html#saving_filter_presets)
 
 [Tous les bogues devtools corrigés entre Firefox 41 et Firefox 42](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-08-10&query_format=advanced&chfield=resolution&chfieldfrom=2015-06-29&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12478437).
 
@@ -27,7 +25,7 @@ Points forts:
 
 ### HTML
 
-- Prise en charge expérimentale de l'attribut [`referrer`](/fr/docs/Web/HTML/Element/input#referrer) de {{HTMLElement("img")}} ([bug Firefox 1166910](https://bugzil.la/1166910)), {{htmlElement("iframe")}} ([bug Firefox 1175736](https://bugzil.la/1175736)), {{HTMLElement("a")}} et {{HTMLElement("area")}} ont été ajoutés ([bug Firefox 1174913](https://bugzil.la/1174913)). Il n'y a aucun effet par défaut, le `network.http.enablePerElementReferrer` étant `false` par défaut.
+- Prise en charge expérimentale de l'attribut [`referrer`](/fr/docs/Web/HTML/Reference/Elements/input#referrer) de {{HTMLElement("img")}} ([bug Firefox 1166910](https://bugzil.la/1166910)), {{htmlElement("iframe")}} ([bug Firefox 1175736](https://bugzil.la/1175736)), {{HTMLElement("a")}} et {{HTMLElement("area")}} ont été ajoutés ([bug Firefox 1174913](https://bugzil.la/1174913)). Il n'y a aucun effet par défaut, le `network.http.enablePerElementReferrer` étant `false` par défaut.
 
 ### JavaScript
 
@@ -39,10 +37,9 @@ Points forts:
 
 #### DOM & HTML DOM
 
-- Les images avec une [`id`](/fr/docs/Web/HTML/Element/img#id) ne sont plus répertoriées comme propriété de l'interface {{domxref("Window")}} : `<img id="login">` n'est plus accessible en tant que `window.login`. Ce comportement a été introduit dans Firefox 26 et a été supprimé pour correspondre à une modification ultérieure de la spécification ([bug Firefox 959992](https://bugzil.la/959992)).
+- Les images avec une [`id`](/fr/docs/Web/HTML/Reference/Elements/img#id) ne sont plus répertoriées comme propriété de l'interface {{domxref("Window")}} : `<img id="login">` n'est plus accessible en tant que `window.login`. Ce comportement a été introduit dans Firefox 26 et a été supprimé pour correspondre à une modification ultérieure de la spécification ([bug Firefox 959992](https://bugzil.la/959992)).
 - {{domxref('MouseEvent.offsetX')}} et {{domxref('MouseEvent.offsetY')}} ont été ajoutés ([bug Firefox 69787](https://bugzil.la/69787)).
 - L'interface {{domxref("HTMLInputElement")}} a été étendue expérimentalement pour gérer le téléchargement des répertoires ([bug Firefox 1164310](https://bugzil.la/1164310)). Ces quatre membres peuvent être exposés en définissant la préférence `dom.input.dirpicker` sur `true`:
-
   - {{domxref("HTMLInputElement.directory")}}
   - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
   - {{domxref("HTMLInputElement.getFilesAndDirectories()")}}
@@ -69,7 +66,7 @@ Notre implémentation expérimentale de l'[API Web Animations](/fr/docs/Web/API/
 
 #### Composants Web
 
-Notre implémentation expérimentale du [Shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM) a été modifiée:
+Notre implémentation expérimentale du [Shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM) a été modifiée:
 
 - Lorsque vous essayez d'appeler {{domxref('Node.cloneNode()')}} sur un {{domxref('ShadowRoot')}}, lance une exception `DataCloneError` ([bug Firefox 1176757](https://bugzil.la/1176757)).
 - En invoquant {{domxref('Document.importNode()')}} avec un {{domxref('ShadowRoot')}} comme argument, nous lançons maintenant une exception `NotSupportedError` ([bug Firefox 1177914](https://bugzil.la/1177914)).
@@ -114,7 +111,7 @@ _Pas de changement._
 
 ## La mise en réseau
 
-- La directive [`upgrade-insecure-requests`](/fr/docs/Web/Security/CSP/CSP_policy_directives#upgrade-insecure-requests) du CSP a été implémentée ([bug Firefox 1139297](https://bugzil.la/1139297)).
+- La directive [`upgrade-insecure-requests`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#upgrade-insecure-requests) du CSP a été implémentée ([bug Firefox 1139297](https://bugzil.la/1139297)).
 
 ## Sécurité
 

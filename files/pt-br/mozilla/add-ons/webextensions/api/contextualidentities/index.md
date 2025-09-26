@@ -52,4 +52,4 @@ Para usar esta API você precisará incluir a [permissão](/pt-BR/docs/Mozilla/A
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.contextualIdentities")}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}

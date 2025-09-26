@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Errors")}}
 
-L'exception JavaScript <i lang="en">"cannot use `??` unparenthesized within `||` and `&&` expressions"</i> se produit lorsque [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) est utilisé avec [un OU logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR) ou avec [un ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND), dans la même expression et sans parenthèses.
+L'exception JavaScript <i lang="en">"cannot use `??` unparenthesized within `||` and `&&` expressions"</i> se produit lorsque [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) est utilisé avec [un OU logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR) ou avec [un ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND), dans la même expression et sans parenthèses.
 
 ## Message
 
@@ -23,7 +23,7 @@ SyntaxError: Unexpected token '??'. Coalescing and logical operators used togeth
 
 ## Quel est le problème&nbsp;?
 
-[La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) ressemble à ceci&nbsp;:
+[La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence) ressemble à ceci&nbsp;:
 
 ```
 |   >   &&   >   ||   >   =
@@ -76,5 +76,5 @@ function getId(user, fallback) {
 ## Voir aussi
 
 - [Discussion originale à propos de la précédence de l'opérateur de coalescence des nuls (en anglais)](https://github.com/tc39/proposal-nullish-coalescing/issues/15)
-- [L'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-- [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [L'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

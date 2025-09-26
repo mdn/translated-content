@@ -1,13 +1,37 @@
 ---
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`Number.MAX_SAFE_INTEGER`** 상수는 JavaScript에서 안전한 최대 정수값을 나타냅니다. (`2^53 - 1`).
+**`Number.MAX_SAFE_INTEGER`** 정적 데이터 속성은 JavaScript의 최대 안전 정수 값(2<sup>53</sup> – 1)을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}{{js_property_attributes(0, 0, 0)}}
+더 큰 정수는 {{jsxref("BigInt")}}를 고려해보시기 바랍니다.
+
+{{InteractiveExample("JavaScript Demo: Number.MAX_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MAX_SAFE_INTEGER + 1;
+const y = Number.MAX_SAFE_INTEGER + 2;
+
+console.log(Number.MAX_SAFE_INTEGER);
+// Expected output: 9007199254740991
+
+console.log(x);
+// Expected output: 9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
+
+## 값
+
+`9007199254740991` (9,007,199,254,740,991, or \~9천 조).
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 설명
 
@@ -19,21 +43,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 
 ## 예제
 
+### MAX_SAFE_INTEGER의 반환 값
+
 ```js
 Number.MAX_SAFE_INTEGER; // 9007199254740991
-Number.MAX_SAFE_INTEGER * Number.EPSILON; // 2 because in floating points, the value is actually the decimal trailing "1"
-// except for in subnormal precision cases such as zero
 ```
 
-## 폴리필
+### MAX_SAFE_INTEGER와 EPSILON의 관계
+
+{{jsxref("Number.EPSILON")}}는 2<sup>-52</sup>인데 반해 `MAX_SAFE_INTEGER`는 2<sup>53</sup> – 1 입니다. 두 값은 모두 53비트(가장 높은 비트는 언제나 1)인 가수부의 너비에서 파생됩니다. 이를 곱하면 2에 매우 가깝지만 같지는 않은 값이 나옵니다.
 
 ```js
-if (!Number.MAX_SAFE_INTEGER) {
-  Number.MAX_SAFE_INTEGER = Math.pow(2, 53) - 1; // 9007199254740991
-}
+Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -43,6 +67,7 @@ if (!Number.MAX_SAFE_INTEGER) {
 
 ## 같이 보기
 
+- [`core-js`에서의 `Number.MAX_SAFE_INTEGER` 폴리필](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
 - {{jsxref("Number.isSafeInteger()")}}
 - {{jsxref("BigInt")}}

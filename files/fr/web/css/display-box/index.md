@@ -10,7 +10,6 @@ Ces mots-clés définissent si un élément génère des boîtes d'affichage ou 
 ## Syntaxe
 
 - `contents` {{Experimental_Inline}}
-
   - : L'élément ne produit pas de boîte qui lui soit spécifique. Il est remplacé par sa pseudo-boîte et les boîtes de ses enfants. On notera que le module de spécification CSS Display de niveau 3 définit la façon dont la valeur `contents` affecte les éléments « inhabituels » tels que les éléments remplacés. Voir [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) pour plus de détails.
 
     À l'heure actuelle, en raison d'un bug, les éléments ciblés par une règle avec `display: contents` sont retirés de l'arbre d'accessibilité et ne sont donc pas parcourus par les lecteurs d'écran*.*
@@ -78,10 +77,10 @@ Dans cet exemple, l'élément {{htmlelement("div")}} externe a une bordure rouge
 
 ## Accessibilité
 
-Via leur implémentation, la plupart des navigation retireront un élément de [l'arbre d'accessibilité](/fr/docs/Apprendre/a11y/What_is_accessibility) si celui-ci reçoit `display: contents`. Cet élément (ainsi que ses descendants pour certains navigateurs) ne sera plus annoncé par les outils de lecture d'écran. Ce comportement est incorrect selon [la spécification CSSWG](https://drafts.csswg.org/css-display/#the-display-properties).
+Via leur implémentation, la plupart des navigation retireront un élément de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility) si celui-ci reçoit `display: contents`. Cet élément (ainsi que ses descendants pour certains navigateurs) ne sera plus annoncé par les outils de lecture d'écran. Ce comportement est incorrect selon [la spécification CSSWG](https://drafts.csswg.org/css-display/#the-display-properties).
 
 - [Améliorer l'accessibilité du contenu avec `display: contents`, par Hidde de Vries (en anglais)](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
-- [`display: contents` n'est pas un outil de réinitialisation CSS, par Adrian Roselli (en anglais)](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [`display: contents` n'est pas un outil de réinitialisation CSS, par Adrian Roselli (en anglais)](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ## Compatibilité des navigateurs
 
@@ -90,12 +89,11 @@ Via leur implémentation, la plupart des navigation retireront un élément de [
 ## Voir aussi
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [`display: contents` n'est pas un outil de réinitialisation CSS (en anglais)](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [`display: contents` n'est pas un outil de réinitialisation CSS (en anglais)](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 - [Un balisage plus accessible avec `display: contents` (en anglais)](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)

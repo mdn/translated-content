@@ -3,6 +3,8 @@ title: Recursion (再帰)
 slug: Glossary/Recursion
 ---
 
+{{GlossarySidebar}}
+
 関数が自分自身を呼び出す動作、再帰は問題がより小さな小問題から成っている場合に解決するのに使われます。再帰関数は、ベースケース (再帰終了) と再帰ケース (再帰再開) の 2 種類の入力を受け取る可能性があります。
 
 ## 例
@@ -39,4 +41,4 @@ recurse(10)
 ### 一般知識
 
 - Wikipedia の [再帰](https://ja.wikipedia.org/wiki/再帰)
-- [JavaScript での再帰についての詳細](/ja/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [JavaScript での再帰についての詳細](/ja/docs/Web/JavaScript/Guide/Functions#recursion)

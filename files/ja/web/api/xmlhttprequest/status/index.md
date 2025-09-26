@@ -1,13 +1,14 @@
 ---
-title: XMLHttpRequest.status
+title: "XMLHttpRequest: status プロパティ"
+short-title: status
 slug: Web/API/XMLHttpRequest/status
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-**`XMLHttpRequest.status`** プロパティは読み取り専用で、 `XMLHttpRequest` のレスポンスにおける数値の HTTP [ステータスコード](/ja/docs/Web/HTTP/Status)を返します。
+**`XMLHttpRequest.status`** プロパティは読み取り専用で、 `XMLHttpRequest` のレスポンスにおける数値の HTTP [ステータスコード](/ja/docs/Web/HTTP/Reference/Status)を返します。
 
 リクエストが完了する前は、 `status` の値は 0 になります。 `XMLHttpRequest` がエラーになった場合も、ブラウザーはステータスとして 0 を返します。
 
@@ -19,17 +20,17 @@ l10n:
 
 ```js
 const xhr = new XMLHttpRequest();
-console.log('UNSENT: ', xhr.status);
+console.log("UNSENT: ", xhr.status);
 
-xhr.open('GET', '/server');
-console.log('OPENED: ', xhr.status);
+xhr.open("GET", "/server");
+console.log("OPENED: ", xhr.status);
 
 xhr.onprogress = () => {
-  console.log('LOADING: ', xhr.status);
+  console.log("LOADING: ", xhr.status);
 };
 
 xhr.onload = () => {
-  console.log('DONE: ', xhr.status);
+  console.log("DONE: ", xhr.status);
 };
 
 xhr.send();
@@ -54,5 +55,5 @@ xhr.send();
 
 ## 関連情報
 
-- [HTTP ステータス](/ja/docs/Web/HTTP/Status)の一覧
+- [HTTP ステータス](/ja/docs/Web/HTTP/Reference/Status)の一覧
 - [HTTP](/ja/docs/Web/HTTP)

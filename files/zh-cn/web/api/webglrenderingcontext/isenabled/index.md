@@ -9,16 +9,15 @@ slug: Web/API/WebGLRenderingContext/isEnabled
 
 默认的，除了 `gl.DITHER`，所有的功能项都是未启用的。
 
-## 句法
+## 语法
 
-```
-void gl.isEnabled(cap);
+```js-nolint
+isEnabled(cap)
 ```
 
 ### 参数
 
 - `cap`
-
   - : {{domxref("GLenum")}} 指定待检测的 WebGL 功能项。可能的值有：
 
     | Constant                      | Description                                                                                                                         |
@@ -65,7 +64,7 @@ gl.disable(gl.STENCIL_TEST);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.enable()")}}
 - {{domxref("WebGLRenderingContext.disable()")}}

@@ -1,21 +1,23 @@
 ---
-title: document.all
+title: Document：all 属性
 slug: Web/API/Document/all
+l10n:
+  sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-{{domxref("Document")}} 接口上的一个只读属性。返回一个 {{domxref("HTMLAllCollection")}}，包含了页面上的所有元素。
+{{DOMxRef("Document")}} 接口的 **`all`** 只读属性会返回以文档节点为根的 {{DOMxRef("HTMLAllCollection")}} 集合。
 
-## 语法
+与其使用 `document.all` 来按文档顺序返回包含所有文档元素的 {{DOMxRef("HTMLAllCollection")}}，不如使用 {{DOMxRef("Document.querySelectorAll")}} 按文档顺序返回包含所有文档元素的 {{DOMxRef("NodeList")}}：
 
+```js
+const allElements = document.querySelectorAll("*");
 ```
-var htmlAllCollection = document.all;
-```
 
-### 值
+## 值
 
-返回一个 {{domxref("HTMLAllCollection")}}，包含了页面上的所有元素。
+{{DOMxRef("HTMLAllCollection")}}，其中包含文档中的所有元素。
 
 ## 规范
 

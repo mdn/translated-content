@@ -1,89 +1,94 @@
 ---
-title: OffscreenCanvas.getContext()
+title: "OffscreenCanvas: getContext() メソッド"
+short-title: getContext()
 slug: Web/API/OffscreenCanvas/getContext
+l10n:
+  sourceCommit: 4752e8a68c630b2fc8354dc4af4573701d6dfe28
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-The **`OffscreenCanvas.getContext()`** method returns a drawing context for an offscreen canvas, or {{jsxref("null")}} if the context identifier is not supported.
+**`OffscreenCanvas.getContext()`** メソッドは、オフスクリーンキャンバスの描画コンテキストを返します。コンテキスト識別子が対応していない場合、またはオフスクリーンキャンバスがすでに別のコンテキストモードに設定されている場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
 
-> **メモ:** This API is currently implemented for [WebGL1](/ja/docs/Web/API/WebGLRenderingContext) and [WebGL2](/ja/docs/Web/API/WebGL2RenderingContext) contexts only. See [Firefox バグ 801176](https://bugzil.la/801176) for [Canvas 2D API](/ja/docs/Web/API/Canvas_API) support from workers.
+## 構文
 
-**構文**
-
-```
-offscreen.getContext(contextType, contextAttributes);
+```js-nolint
+getContext(contextType, contextAttributes)
 ```
 
 ### 引数
 
 - `contextType`
-
-  - : Is a {{domxref("DOMString")}} containing the context identifier defining the drawing context associated to the canvas. Possible values are:
-
+  - : キャンバスに関連付けられた描画コンテキストを定義するコンテキスト識別子を含む文字列。実現可能な値は次のとおりです。
     - `2d`
-      - : Creates a {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional rendering context.
+      - : 2 次元レンダリングコンテキストを表す {{domxref("OffscreenCanvasRenderingContext2D")}} オブジェクトです。
     - `webgl`
-      - : Creates a {{domxref("WebGLRenderingContext")}} object representing a three-dimensional rendering context. This context is only available on browsers that implement [WebGL](/ja/docs/Web/WebGL) version 1 (OpenGL ES 2.0).
+      - : 3 次元レンダリングコンテキストを表す {{domxref("WebGLRenderingContext")}} オブジェクトを作成します。このコンテキストは、[WebGL](/ja/docs/Web/API/WebGL_API) バージョン 1 （OpenGL ES 2.0） を実装しているブラウザーでのみ利用できます。
     - `webgl2`
-      - : Creates a {{domxref("WebGL2RenderingContext")}} object representing a three-dimensional rendering context. This context is only available on browsers that implement [WebGL](/ja/docs/Web/WebGL) version 2 (OpenGL ES 3.0). {{experimental_inline}}
+      - : 3 次元レンダリングコンテキストを表す {{domxref("WebGL2RenderingContext")}} オブジェクトを作成します。このコンテキストは、[WebGL](/ja/docs/Web/API/WebGL_API) バージョン 2 （OpenGL ES 3.0） を実装しているブラウザーでのみ利用できます。
+    - `"webgpu"`
+      - : WebGPU レンダリングパイプラインの 3 次元レンダリングコンテキストを表す {{domxref("GPUCanvasContext")}} オブジェクトを作成します。このコンテキストは、[WebGPU API](/ja/docs/Web/API/WebGPU_API) を実装しているブラウザーでのみ利用可能です。
     - `bitmaprenderer`
-      - : Creates a {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to replace the content of the canvas with a given {{domxref("ImageBitmap")}}.
+      - : キャンバスのコンテンツを指定された {{domxref("ImageBitmap")}} で置き換える機能のみを提供する {{domxref("ImageBitmapRenderingContext")}} を作成します。
 
-    Note: The identifiers **`"experimental-webgl"`** or **`"experimental-webgl2"`** are also used in implementations of WebGL. These implementations have not reached test suite conformance, or the graphic drivers situation on the platform is not yet stable. The [Khronos Group](https://www.khronos.org/) certifies WebGL implementations under certain [conformance rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    > [!NOTE]
+    > 識別子 **`"experimental-webgl"`** や **`"experimental-webgl2"`** も WebGL の実装で使用されています。
+    > これらの実装は、テストスイートの適合性に達していなかったり、プラットフォーム上のグラフィックドライバーの状況がまだ安定していなかったりします。
+    > [Khronos Group](https://www.khronos.org/) は、特定の[適合性ルール](https://registry.khronos.org/webgl/sdk/tests/CONFORMANCE_RULES.txt)に基づいて WebGL の実装を認定しています。
 
 - `contextAttributes`
-
-  - : You can use several context attributes when creating your rendering context, for example:
+  - : レンダリングコンテキストを作成する際に、複数のコンテキスト属性を使用することができます。例えば、次のようにします。
 
     ```js
-    offscreen.getContext("webgl",
-                     { antialias: false,
-                       depth: false });
+    offscreen.getContext("webgl", { antialias: false, depth: false });
     ```
 
-    2d context attributes:
-
+    2d コンテキストの属性は次の通りです。
     - `alpha`
-      - : Boolean that indicates if the canvas contains an alpha channel. If set to `false`, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images then.
-    - `willReadFrequently` {{non-standard_inline}} (Gecko only)
-      - : Boolean that indicates whether or not a lot of read-back operations are planned. This will force the use of a software (instead of hardware accelerated) 2D canvas and can save memory when calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} frequently. This option is only available, if the flag `gfx.canvas.willReadFrequently.enable` is set to `true` (which, by default, is only the case for B2G/Firefox OS).
-    - `storage` {{non-standard_inline}} (Blink only)
-      - : String that indicates which storage is used ("persistent" by default).
+      - : 論理値で、キャンバスにアルファチャンネルが含まれているかどうかを示します。 `false` に設定すると、ブラウザーは背景が常に不透明であることを認識し、透明なコンテンツや画像の描画を高速化できます。
+    - `willReadFrequently`
+      - : 論理値で、多くの読み戻し操作が計画されているかどうかを示します。
+        これにより、ハードウェアアクセラレーションではなくソフトウェアによる 2D キャンバスの使用が強制され、 {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} を頻繁に呼び出す場合にメモリーを節約できます。
+        Firefox では、このオプションはフラグ `gfx.canvas.willReadFrequently.enable` が `true` に設定されている場合（既定では B2G/Firefox OS の場合のみ）にのみ利用できます。
 
-    WebGL context attributes:
-
+    WebGL コンテキストの属性は次の通りです。
     - `alpha`
-      - : Boolean that indicates if the canvas contains an alpha buffer.
+      - : 論理値で、キャンバスにアルファチャンネルが含まれているかどうかを示します。
     - `depth`
-      - : Boolean that indicates that the drawing buffer has a depth buffer of at least 16 bits.
+      - : 論理値で、描画バッファーに 16 ビット以上の深度バッファーが要求されることを示します。
     - `stencil`
-      - : Boolean that indicates that the drawing buffer has a stencil buffer of at least 8 bits.
+      - : 論理値で、描画バッファーに 8 ビット以上のステンシルバッファーが要求されることを示します。
     - `antialias`
-      - : Boolean that indicates whether or not to perform anti-aliasing.
+      - : 論理値で、実現可能な場合にアンチエイリアシングを実行するかどうかを示します。
     - `premultipliedAlpha`
-      - : Boolean that indicates that the page compositor will assume the drawing buffer contains colors with pre-multiplied alpha.
+      - : 論理値で、ページコンポジターが、描画バッファーにアルファが事前に乗算された色が含まれていると想定することを示します。
     - `preserveDrawingBuffer`
-      - : If the value is true the buffers will not be cleared and will preserve their values until cleared or overwritten by the author.
+      - : 値が true の場合、バッファーはクリアされず、作成者がクリアまたは上書きするまでその値が保持されます。
     - `failIfMajorPerformanceCaveat`
-      - : Boolean that indicates if a context will be created if the system performance is low.
+      - : 論理値で、システムのパフォーマンスが低い場合にコンテキストが作成されるかどうかを示します。
 
 ### 返値
 
-A {{domxref("RenderingContext")}} which is either a
+次のいずれかのレンダリングコンテキストです。
 
-- {{domxref("CanvasRenderingContext2D")}} for `"2d"`,
-- {{domxref("WebGLRenderingContext")}} for `"webgl"` and `"experimental-webgl"`,
-- {{domxref("WebGL2RenderingContext")}} for `"webgl2"` and `"experimental-webgl2"` {{experimental_inline}}, or
-- {{domxref("ImageBitmapRenderingContext")}} for `"bitmaprenderer"`.
+- {{domxref("OffscreenCanvasRenderingContext2D")}} （`"2d"` の場合）
+- {{domxref("WebGLRenderingContext")}} （`"webgl"` や `"experimental-webgl"` の場合）
+- {{domxref("WebGL2RenderingContext")}} （`"webgl2"` や `"experimental-webgl2"` の場合）
+- {{domxref("GPUCanvasContext")}} （`"webgpu"` の場合）
+- {{domxref("ImageBitmapRenderingContext")}} （`"bitmaprenderer"` の場合）
 
-If the `contextType` doesn't match a possible drawing context, `null` is returned.
+そのコンテキスト識別子に対応していない場合、またはキャンバスがすでに別のコンテキストモードに設定されている場合は、 `null` が返されます。
+
+### 例外
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : キャンバスが別のコンテキストスコープ（例えば、ワーカー）に移譲されている場合に発生します。
 
 ## 例
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext("webgl");
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext("webgl");
 
 gl; // WebGLRenderingContext
 gl.canvas; // OffscreenCanvas
@@ -93,12 +98,12 @@ gl.canvas; // OffscreenCanvas
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-{{Compat("api.OffscreenCanvas.getContext")}}
+{{Compat}}
 
-## See also
+## 関連情報
 
-- The interface defining this method: {{domxref("OffscreenCanvas")}}
+- このメソッドを定義しているインターフェイス: {{domxref("OffscreenCanvas")}}
 - {{domxref("HTMLCanvasElement.getContext()")}}
-- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}, and {{domxref("ImageBitmapRenderingContext")}}
+- 利用可能なレンダリングコンテキスト: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}, {{domxref("ImageBitmapRenderingContext")}}, {{domxref("OffscreenCanvasRenderingContext2D")}}

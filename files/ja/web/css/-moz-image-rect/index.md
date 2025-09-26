@@ -1,9 +1,9 @@
 ---
-title: "-moz-image-rect"
+title: -moz-image-rect
 slug: Web/CSS/-moz-image-rect
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 **`-moz-image-rect`** は [CSS](/ja/docs/Web/CSS) の {{CSSxRef("background-image")}} に対する値で、大きな画像の一部を背景として使用することができます。
 
@@ -156,4 +156,4 @@ function rotate() {
 ## 関連情報
 
 - [Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)
-- [CSS 背景と境界モジュール](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [CSS 背景と境界モジュール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)

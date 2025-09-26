@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 
 La méthode **`getUTCMonth()`** renvoie le mois de la date renseignée, d'après UTC. La numérotation des mois commence à 0 pour le premier mois de l'année.
 
-{{EmbedInteractiveExample("pages/js/date-getutcmonth.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCMonth()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+
+// December
+console.log(date1.getUTCMonth());
+// Expected output: 11
+
+// January
+console.log(date2.getUTCMonth());
+// Expected output: 0
+```
 
 ## Syntaxe
 

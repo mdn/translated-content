@@ -3,15 +3,41 @@ title: appearance
 slug: Web/CSS/appearance
 ---
 
-{{CSSRef}}
-
 **`appearance`** CSS 属性用于控制 UI 控件的基于操作系统主题的原生外观。
 
-{{EmbedInteractiveExample("pages/css/appearance.html")}}
+{{InteractiveExample("CSS Demo: appearance")}}
+
+```css interactive-example-choice
+appearance: none;
+```
+
+```css interactive-example-choice
+appearance: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="background">
+    <button id="example-element">button</button>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
+```
 
 在标准化之前，这个属性允许将简单的元素显示为控件，例如按钮或复选框。这被认为是一个缺陷，现在鼓励开发者仅使用标准关键字。
 
-> **备注：** 如果你想在网站上使用此属性，应非常谨慎地进行测试。虽然它在大多数现代浏览器中得到支持，但实现方式不同。在旧的浏览器中，即使是关键字 `none` 对于不同浏览器中的所有表单元素也没有相同的效果，有些浏览器甚至不支持它。在最新的浏览器中差异较小。
+> [!NOTE]
+> 如果你想在网站上使用此属性，应非常谨慎地进行测试。虽然它在大多数现代浏览器中得到支持，但实现方式不同。在旧的浏览器中，即使是关键字 `none` 对于不同浏览器中的所有表单元素也没有相同的效果，有些浏览器甚至不支持它。在最新的浏览器中差异较小。
 
 ## 语法
 

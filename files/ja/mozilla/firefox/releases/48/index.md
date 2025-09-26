@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/) Firefox 48 は、米国時間 2016 年 8 月 2 日にリリースされました。このページでは、開発者に影響する Firefox 48 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -25,7 +23,6 @@ l10n:
 ### HTML
 
 - {{HTMLElement("details")}} および {{HTMLElement("summary")}} 要素を、Nightly および Aurora (DevTools) でデフォルトで有効にしました。Beta および Release では無効です:
-
   - これらの要素のデフォルトのスタイルが、仕様書に合致するようになりました ([Firefox バグ 1258657](https://bugzil.la/1258657))。
   - {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントが、{{HTMLElement("details")}} 要素を開いたり閉じたりしたときに送られるようになりました ([Firefox バグ 1225412](https://bugzil.la/1225412))。
 
@@ -34,12 +31,10 @@ l10n:
 ### CSS
 
 - 仕様書に準拠するよう、{{cssxref("calc", "calc()")}} を改良しました。
-
   - {{cssxref("line-height")}} プロパティで {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 594933](https://bugzil.la/594933))。
   - CSS {{cssxref("calc", "calc()")}} の入れ子をサポートしました ([Firefox バグ 968761](https://bugzil.la/968761))。
 
 - CSS グリッドの実験的な実装を更新しました。
-
   - グリッドレイアウトでフラグメンテーションを実装しました ([Firefox バグ 1144096](https://bugzil.la/1144096))。
   - \[css-grid] グリッドコンテナーのサイズが不定である場合は、パーセンテージ指定されたトラックのサイズを `auto` として扱うようになりました ([Firefox バグ 1264607](https://bugzil.la/1264607))。
   - {{HTMLElement("fieldset")}} で grid および flex レイアウトをサポートしました ([Firefox バグ 1230207](https://bugzil.la/1230207))。
@@ -50,14 +45,13 @@ l10n:
 - 画像や背景の印刷をページから許可できるようにするための {{cssxref("color-adjust")}} プロパティを実験的にサポートしました ([Firefox バグ 1209273](https://bugzil.la/1209273))。
 - {{cssxref("::first-letter")}} 擬似要素が、実際の先頭文字の前または直後にあるタイプ Pd の句読点にも一致するようになりました。これは CSS Pseudo-element module level 4 の新たな要求です ([Firefox バグ 1260366](https://bugzil.la/1260366))。
 - いくつかの `-webkit` 接頭辞付きプロパティおよび値を、ウェブの互換性のためにサポートしました。設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です:
-
   - {{cssxref("-webkit-text-fill-color")}} ([Firefox バグ 1247777](https://bugzil.la/1247777))
   - {{cssxref("-webkit-text-stroke")}}, {{cssxref("-webkit-text-stroke-color")}}, {{cssxref("-webkit-text-stroke-width")}} ([Firefox バグ 1248708](https://bugzil.la/1248708))
   - `-webkit-background-clip` (background-clip として) の値 text ([Firefox バグ 759568](https://bugzil.la/759568)).
   - `-webkit-box-direction`、`-webkit-box-orient` ([Firefox バグ 1262049](https://bugzil.la/1262049).
   - {{cssxref("display")}} プロパティの値 `-webkit-inline-box` を、`inline-flex` の別名としてサポートしました ([Firefox バグ 1257661](https://bugzil.la/1257661))。
   - `-webkit-flex-direction`、`-webkit-flex-wrap`、`-webkit-flex-flow`、`-webkit-order`、`-webkit-flex`、`-webkit-flex-grow`、`-webkit-flex-shrink`、`-webkit-flex-basis`、`-webkit-justify-content`、`-webkit-align-items`、`-webkit-align-self`、`-webkit-align-content` を接頭辞なしプロパティの別名として、また {{cssxref("display")}} プロパティの値 `-webkit-flex` および `-webkit-inline-flex` を接頭辞なし値の別名として追加しました ([Firefox バグ 1274096](https://bugzil.la/1274096))。
-  - `-webkit-box-flex`、`-webkit-box-ordinal-group`、`-webkit-box-align`、`-webkit-box-pack` プロパティおよび {{cssxref("display")}} プロパティの値 `-webkit-box` を、最新の [CSS フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox) の別名として追加しました ([Firefox バグ 1208635](https://bugzil.la/1208635))。
+  - `-webkit-box-flex`、`-webkit-box-ordinal-group`、`-webkit-box-align`、`-webkit-box-pack` プロパティおよび {{cssxref("display")}} プロパティの値 `-webkit-box` を、最新の [CSS フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) の別名として追加しました ([Firefox バグ 1208635](https://bugzil.la/1208635))。
 
 - {{cssxref("background-clip")}} の値 `text` が、(Release 以外のビルドだけでなく) すべてのタイプの Firefox で使用可能になりました ([Firefox バグ 1263516](https://bugzil.la/1263516))。
 - {{cssxref("position")}} プロパティの値 `absolute` を、最上位レイヤーの要素でサポートしました ([Firefox バグ 1236828](https://bugzil.la/1236828))。
@@ -68,17 +62,17 @@ l10n:
 #### 新規 API
 
 - {{jsxref("String.prototype.padStart()")}} および {{jsxref("String.prototype.padEnd()")}} メソッドを実装しました ([Firefox バグ 1260509](https://bugzil.la/1260509))。
-- ES2015 (ES6) の {{jsxref("Symbol.unscopables")}} および {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} プロパティを実装しました ([Firefox バグ 1054759](https://bugzil.la/1054759) および [Firefox バグ 1258163](https://bugzil.la/1258163))。
+- ES2015 (ES6) の {{jsxref("Symbol.unscopables")}} および {{jsxref("Array.@@unscopables", "Array.prototype[Symbol.unscopables]")}} プロパティを実装しました ([Firefox バグ 1054759](https://bugzil.la/1054759) および [Firefox バグ 1258163](https://bugzil.la/1258163))。
 - ES2015 (ES6) の {{jsxref("Symbol.isConcatSpreadable")}} シンボルを実装しました ([Firefox バグ 1041586](https://bugzil.la/1041586))。
-- ES2015 (ES6) の {{jsxref("Array.@@species", "Array[@@species]")}} getter を実装しました ([Firefox バグ 1165052](https://bugzil.la/1165052))。
-- ES2015 (ES6) の {{jsxref("ArrayBuffer.@@species", "ArrayBuffer[@@species]")}} getter および {{jsxref("TypedArray.@@species", "%TypedArray%[@@species]")}} getter を実装しました ([Firefox バグ 1165053](https://bugzil.la/1165053))。
+- ES2015 (ES6) の {{jsxref("Array.Symbol.species", "Array[Symbol.species]")}} getter を実装しました ([Firefox バグ 1165052](https://bugzil.la/1165052))。
+- ES2015 (ES6) の {{jsxref("ArrayBuffer.Symbol.species", "ArrayBuffer[Symbol.species]")}} getter および {{jsxref("TypedArray.Symbol.species", "%TypedArray%[Symbol.species]")}} getter を実装しました ([Firefox バグ 1165053](https://bugzil.la/1165053))。
 - ECMAScript Internationalization API 草案の {{jsxref("Intl.getCanonicalLocales()")}} メソッドを実装しました ([Firefox バグ 1263040](https://bugzil.la/1263040))。
 
 #### 非推奨化および削除
 
 - 非推奨の [古い Proxy API](/ja/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` および `Proxy.createFunction()`) を廃止しました。代わりに標準の {{jsxref("Proxy")}} オブジェクトを使用してください ([Firefox バグ 892903](https://bugzil.la/892903))。
 - `String.prototype.contains()` メソッドを削除しました (バージョン 40 より非推奨でした)。代わりに {{jsxref("String.prototype.includes()")}} メソッドを使用してください ([Firefox バグ 1103588](https://bugzil.la/1103588))。
-- 非標準の `RegExp.multiline` プロパティ ({{jsxref("RegExp.prototype.multiline")}} ではありません) を削除しました。代わりに標準の [m フラグ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) を使用してください ([Firefox バグ 1219757](https://bugzil.la/1219757))。
+- 非標準の `RegExp.multiline` プロパティ ({{jsxref("RegExp.prototype.multiline")}} ではありません) を削除しました。代わりに標準の [m フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索) を使用してください ([Firefox バグ 1219757](https://bugzil.la/1219757))。
 - [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) および [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) メソッドは、オブジェクトを伴わないグローバルスコープでは呼び出すことができなくなりました ([Firefox バグ 1253016](https://bugzil.la/1253016))。
 
 ### インターフェイス/API/DOM
@@ -94,7 +88,6 @@ l10n:
 - {{domxref("Document.scrollingElement")}} をデフォルトで有効にしました ([Firefox バグ 1265032](https://bugzil.la/1265032))。
 - `Node.localName`、`Node.namespaceURI`、`Node.prefix` を {{domxref("Element")}} および {{domxref("Attr")}} API に移動しました ([Firefox バグ 1055776](https://bugzil.la/1055776))。
 - 最新の仕様書に従って、以下のキーについて {{domxref("KeyboardEvent.code")}} が返す値を変更しました ([Firefox バグ 1264150](https://bugzil.la/1264150) を参照):
-
   - `"OSLeft"` および `"OSRight"` が `"MetaLeft"` および `"MetaRight"` になりました。
   - `"VolumeDown"`、`"VolumeUp"`、`"VolumeMute"` が `"AudioVolumeDown"`、`"AudioVolumeUp"`、`"AudoVolumeMute"` になりました。
   - `"IntlHash"` を削除しました。

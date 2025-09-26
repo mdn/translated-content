@@ -1,22 +1,49 @@
 ---
-title: 組積レイアウト
+title: メイソンリーレイアウト
 slug: Web/CSS/CSS_grid_layout/Masonry_layout
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+{{SeeCompatTable}}
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)仕様書の Level 3 では、 `masonry` の値が {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} に含まれています。このガイドでは、組積 (masonry) レイアウトとは何か、どのように使用するかについて詳しく説明します。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)仕様書のレベル 3 では、 `masonry` の値が {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} に含まれています。このガイドでは、メイソンリー（組積）レイアウトとは何か、どのように使用するかについて詳しく説明します。
 
-> **警告:** この機能は Firefox でのみ実装されており、テストやフィードバックを可能にするために、 `about:config` でフラグ `layout.css.grid-template-masonry-value.enabled` を `true` に設定することで有効になります。
+メイソンリーレイアウトとは、一方の軸（多くの場合は列）が一般的な厳格なグリッドレイアウトを使用し、もう一方の軸がメイソンリーレイアウトを使用するレイアウト方法です。メイソンリーレイアウトでは、短いアイテムの後に隙間ができるような厳密なグリッドではなく、次の行のアイテムが隙間を完全に埋めるように立ち上がっていきます。
 
-組積レイアウトとは、一方の軸（多くの場合は列）が一般的な厳格なグリッドレイアウトを使用し、もう一方の軸が組積レイアウトを使用するレイアウト方法です。組積レイアウトでは、短いアイテムの後に隙間ができるような厳密なグリッドではなく、次の行のアイテムが隙間を完全に埋めるように立ち上がっていきます。
+## メイソンリーレイアウトの作成
 
-## 組積レイアウトの作成
+最も一般的なメイソンリーレイアウトを作成するには、列がグリッドの軸、行がメイソンリーの軸になり、 `grid-template-columns` と `grid-template-rows` で定義します。
+これで、このコンテナー内の子要素は、通常のグリッドレイアウトの自動配置と同様に、行に沿ってアイテムごとにレイアウトされます。
 
-最も一般的な組積レイアウトを作成するには、列がグリッドの軸、行が組積の軸になります。このレイアウトは `grid-template-columns` と `grid-template-rows` で定義します。
+アイテムが行の新しい段に移されると、メイソンリー・アルゴリズムに従って表示されます。アイテムは最もスペースのある列に読み込まれ、厳密な行のトラックなしで、ぎっしりと詰まったレイアウトになります。
 
-```css
-.container {
+```css hidden live-sample___block-axis live-sample___inline-axis live-sample___spanners live-sample___positioned
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 1.2em sans-serif;
+}
+
+.grid {
+  padding: 10px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.item {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
+```
+
+```css live-sample___block-axis
+.grid {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -24,56 +51,144 @@ slug: Web/CSS/CSS_grid_layout/Masonry_layout
 }
 ```
 
-このコンテナーの子要素は、通常のグリッドレイアウトの自動配置と同じように、アイテムごとに行に沿って配置されます。しかし、新しい行に移動すると、アイテムは組積アルゴリズムに従って表示されます。アイテムは最も余裕のある列に配置されるため、厳密な行のトラックがなくてもぎっしりとしたレイアウトになります。
+```html live-sample___block-axis live-sample___inline-axis
+<div class="grid">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/block-axis.html", '100%', 800)}}
+```js live-sample___block-axis live-sample___spanners live-sample___positioned
+// prettier-ignore
+const itemSizes = [
+  "2em", "3em", "1.6em", "4em", "3.2em",
+  "3em", "4.5em", "1em", "3.5em", "2.8em",
+];
+const items = document.querySelectorAll(".item");
+for (let i = 0; i < items.length; i++) {
+  items[i].style.blockSize = itemSizes[i];
+}
+```
 
-また、アイテムを列にして読み込む組積レイアウトも可能です。
+{{EmbedLiveSample("block-axis", "", "250px")}}
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/inline-axis.html", '100%', 1000)}}
+アイテムを列に読み込む対応するレイアウトを作成することも可能です。
+
+```js live-sample___inline-axis
+// prettier-ignore
+const itemSizes = [
+  "2em", "3em", "1.6em", "4em", "2.2em",
+  "3em", "4.5em", "1em", "3.5em", "2.8em",
+];
+const items = document.querySelectorAll(".item");
+for (let i = 0; i < items.length; i++) {
+  items[i].style.inlineSize = itemSizes[i];
+}
+```
+
+```css live-sample___inline-axis
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: masonry;
+  grid-template-rows: repeat(3, 100px);
+}
+```
+
+{{EmbedLiveSample("inline-axis", "", "450px")}}
 
 ## グリッド軸の制御
 
 グリッド軸では、グリッドレイアウトで期待した通りに動作します。キーワード `span` を使えば、自動配置を維持したまま、アイテムを複数のトラックにまたがって配置することができます。また、線ベースの位置指定を使ってアイテムを配置することもできます。
 
-### アイテムをまたがらせる組積レイアウト
+### アイテムをまたがらせるメイソンリーレイアウト
 
 この例では、 2 つのアイテムが 2 本のトラックにまたがり、組積アイテムがそれを取り囲むように配置されています。
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/spanners.html", '100%', 800)}}
+```html live-sample___spanners
+<div class="grid">
+  <div class="item"></div>
+  <div class="item span-2"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item span-2"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+```
 
-この例では、柱の位置が決まっているアイテムが含まれています。配置が確定しているアイテムは、組積レイアウトが行われる前に配置されます。
+```css live-sample___spanners
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
+}
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/positioned.html", '100%', 1000)}}
+.span-2 {
+  grid-column-end: span 2;
+}
+```
 
-## 組積軸の制御
+{{EmbedLiveSample("spanners", "", "270px")}}
 
-組積軸は、通常のグリッドの自動配置ルールではなく、組積のレイアウトルールに従っているため、異なるルールで動作します。この軸を制御するために、グリッド Level 3 仕様で定義されている 3 つの追加プロパティ {{cssxref("align-tracks")}}、{{cssxref("justify-tracks")}}、{{cssxref("masonry-auto-flow")}} があります。
+この例では、列の位置が決まっているアイテムが含まれています。配置が確定しているアイテムは、メイソンリーレイアウトが行われる前に配置されます。
 
-### masonry-auto-flow
+```html-nolint live-sample___positioned
+<div class="grid">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item positioned">位置指定されています。</div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+```
 
-`masonry-auto-flow` プロパティでは、組積アルゴリズムの動作を変更することができます。`next` という値を与えると、アイテムは空きスペースのあるトラックに入るのではなく、グリッド軸上に順番に表示されます。また、`positioned` という値を与えると、配置が確定しているアイテムを無視して、order で変更した文書順でアイテムを配置します。
+```css live-sample___positioned
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
+}
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/masonry-auto-flow.html", '100%', 1000)}}
+.positioned {
+  padding: 1em;
+  grid-column: 2 / 4;
+}
+```
 
-### align-tracks
+{{EmbedLiveSample("positioned", "", "290px")}}
 
-`align-tracks` プロパティは、グリッドコンテナー内のアイテムをブロック軸の組積で整列させることができます。このプロパティは、フレックスレイアウトの動作と同じように、トラック内のアイテムを整列させます。このプロパティは `align-content` と同じ値を取りますが、複数の値を指定して、グリッド軸のトラックごとに異なる整列値を設定することができます。
+## メイソンリーレイアウトの代替
 
-トラックよりも多くの値を指定すると、追加の値は無視されます。値よりもトラックの数が多い場合、追加のトラックは最後に指定した値を使用します。
+[組積に対応していない](#ブラウザーの互換性)ブラウザーでは、代わりに通常のグリッドの自動配置が使用されます。
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/align-tracks.html", '100%', 1000)}}
+## 仕様書
 
-### justify-tracks
+{{Specifications}}
 
-`justify-tracks` プロパティは、 align-tracks と同じように動作しますが、組積の軸がインライン軸の場合に使用されます。
+## ブラウザーの互換性
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/justify-tracks.html", '100%', 1000)}}
-
-## 代替
-
-組積に対応していないブラウザーでは、代わりに通常のグリッドの自動配置が使用されます。
+{{Compat}}
 
 ## 関連情報
 
-- [Native CSS Masonry Layout In CSS Grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)
+- {{cssxref("grid-auto-flow")}}: グリッドの自動配置の制御
+- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)

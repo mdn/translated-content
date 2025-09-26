@@ -5,15 +5,14 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 57 の変更点をまとめています。
 
 ## Firefox 57 === Firefox Quantum
 
 Firefox 57 は、Firefox を徹底的に再構築してパフォーマンス、安定性、外見を大きく向上させることを目指す [Firefox Quantum](https://wiki.mozilla.org/Quantum) エンジニアリングプロジェクトにちなんで **Quantum** というリリース名が与えられました。Firefox 57 はこれらの改善点の一部をリリースする最初のバージョンであり、祝福を求めていました。
 
-> **メモ:** このリリースの Quantum の特徴について詳しくは、Dan Callahan による記事 [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) をご覧ください。
+> [!NOTE]
+> このリリースの Quantum の特徴について詳しくは、Dan Callahan による記事 [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) をご覧ください。
 
 [Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/)、別名 **Quantum CSS** または **Stylo** はデスクトップ版の Firefox 57 でデフォルトで有効であり、モバイル版の Firefox は追って有効化します。多くのパフォーマンス向上は別として、開発者が何らかの大きな違いに気づくことがあってはいけません。Stylo には多くの小規模な機能差がありますが、Gecko で取り除くべき非標準の動作を修正するために実装したものです。このような差異は、適宜リファレンスのページやリリースノートに掲載します ([Quantum CSS に関する補足](#quantum_css_に関する補足) を参照)。
 
@@ -25,11 +24,11 @@ _変更なし。_
 
 ### HTML
 
-- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Element/input/date) および [time](/ja/docs/Web/HTML/Element/input/time) 型が、すべてのビルドで有効になりました ([Firefox バグ 1399036](https://bugzil.la/1399036))。
+- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Reference/Elements/input/date) および [time](/ja/docs/Web/HTML/Reference/Elements/input/time) 型が、すべてのビルドで有効になりました ([Firefox バグ 1399036](https://bugzil.la/1399036))。
 
 ### CSS
 
-- [`display-mode`](/ja/docs/Web/CSS/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Manifest#display) もご覧ください。
+- [`display-mode`](/ja/docs/Web/CSS/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Progressive_web_apps/Manifest#display) もご覧ください。
 - `grid-row-gap` および `grid-column-gap` プロパティが、{{CSSxRef("grid")}} ショートハンドプロパティでリセットされないようになりました ([Firefox バグ 1387410](https://bugzil.la/1387410))。
 - 設定項目 `layout.css.clip-path-shapes.enabled` を削除しました ([Firefox バグ 1399767](https://bugzil.la/1399767))。この設定項目で、{{CSSxRef("clip-path")}} の {{cssxref("&lt;basic-shape&gt;")}} のサポートを無効化できました。これは Firefox 54 で導入されたものであり、今後は無効化できません。
 
@@ -50,7 +49,7 @@ Quantum で以下の不具合を修正しました。
 - Gecko では {{CSSxRef("calc", "calc()")}} 式を {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}} の半径の構成要素として使用すると、式が拒否されて値が無効になります ([Firefox バグ 1376019](https://bugzil.la/1376019))。
 - Gecko では `calc(1*2*3)` が正しく解析されません。Quantum CSS でこの不具合を修正しました ([Firefox バグ 1379467](https://bugzil.la/1379467))。
 - Quantum CSS では、[`calc()` を仕様書で説明されているとおり全面的にサポートしています](https://drafts.csswg.org/css-values-3/#calc-notation) ([Firefox バグ 1350857](https://bugzil.la/1350857))。Gecko はそうではありません。
-- Gecko は {{CSSxRef("::before")}} および {{CSSxRef("::after")}} 疑似要素で、{{CSSxRef("content")}} プロパティの値が `normal` や `none` であっても疑似要素を生成する不具合があります。仕様書によると、このようにするべきではありません ([Firefox バグ 1387931](https://bugzil.la/1387931))。
+- Gecko は {{CSSxRef("::before")}} および {{CSSxRef("::after")}} 擬似要素で、{{CSSxRef("content")}} プロパティの値が `normal` や `none` であっても擬似要素を生成する不具合があります。仕様書によると、このようにするべきではありません ([Firefox バグ 1387931](https://bugzil.la/1387931))。
 - Gecko は {{CSSxRef("background-position")}} プロパティで、異なる数の {{CSSxRef("&lt;position&gt;")}} 値を持つ 2 つの値の間 (例えば `background-position: 10px 10px;` と `background-position: 20px 20px, 30px 30px;`) でトランジションを行えない不具合があります ([Firefox バグ 1390446](https://bugzil.la/1390446))。
 
 ### SVG
@@ -70,7 +69,7 @@ _変更なし。_
 #### 新規 API
 
 - {{DOMxRef("PerformanceObserver")}} API をデフォルトで有効にしました ([Firefox バグ 1386021](https://bugzil.la/1386021))。
-- {{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイス (Abort API) を追加しました。必要に応じて、DOM リクエスト ([fetch リクエスト](/ja/docs/Web/API/fetch) など) を中止できます ([Firefox バグ 1378342](https://bugzil.la/1378342))。
+- {{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイス (Abort API) を追加しました。必要に応じて、DOM リクエスト ([fetch リクエスト](/ja/docs/Web/API/Window/fetch) など) を中止できます ([Firefox バグ 1378342](https://bugzil.la/1378342))。
 - [Storage API](/ja/docs/Web/API/Storage_API) を実装して、デフォルトで有効にしました ([Firefox バグ 1399038](https://bugzil.la/1399038))。
 
 #### DOM
@@ -90,7 +89,8 @@ _変更なし。_
 
 - SCTP メッセージの end-of-record (EOR) フラグを使用することにより、{{DOMxRef("RTCDataChannel")}} で任意のサイズ (256kiB が相互運用性が高いのですが、最大 1GiB まで) のメッセージをサポートしました。詳しくは [Understanding message size limits](/ja/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) をご覧ください ([Firefox バグ 979417](https://bugzil.la/979417))。
 
-  > **メモ:** Firefox は、複数のソースの SCTP メッセージを多重化する機能を提供する SCTP ndata プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての SCTP 通信で著しい遅延が発生する可能性があります。Firefox の ndata サポートの実装および展開の進捗を追跡するには、[Firefox バグ 1381145](https://bugzil.la/1381145) をご覧ください。
+  > [!NOTE]
+  > Firefox は、複数のソースの SCTP メッセージを多重化する機能を提供する SCTP ndata プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての SCTP 通信で著しい遅延が発生する可能性があります。Firefox の ndata サポートの実装および展開の進捗を追跡するには、[Firefox バグ 1381145](https://bugzil.la/1381145) をご覧ください。
 
 - {{DOMxRef("RTCDataChannel.send()")}} メソッドで、送信しようとしたメッセージのサイズが受信側の {{Glossary("user agent","ユーザーエージェント")}} と互換性がない場合に `TypeError` 例外を発生できるようになりました (これは [Firefox バグ 979417](https://bugzil.la/979417) の一部として実装しました)。
 - [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) を更新し、録画中に発生した問題を報告するために送信される {{domxref("MediaRecorder/error_event", "error")}} イベントを一般的なイベントから {{DOMxRef("MediaRecorderErrorEvent")}} 型にしました。
@@ -113,7 +113,7 @@ _変更なし。_
 
 ### HTML
 
-- さまざまなウェブ互換性の問題があるため、Firefox 57 で `<link rel="preload">` ([Preloading content with rel="preload"](/ja/docs/Web/HTML/Link_types/preload) をご覧ください) を無効化しました ([Firefox バグ 1405761](https://bugzil.la/1405761))。キャッシュ不可のリソース向けに改良したバージョンを Firefox 58 に搭載する予定です。
+- さまざまなウェブ互換性の問題があるため、Firefox 57 で `<link rel="preload">` ([Preloading content with rel="preload"](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) をご覧ください) を無効化しました ([Firefox バグ 1405761](https://bugzil.la/1405761))。キャッシュ不可のリソース向けに改良したバージョンを Firefox 58 に搭載する予定です。
 
 ### API
 
@@ -125,76 +125,63 @@ _変更なし。_
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
-> **メモ:** Firefox 57 より、XPCOM ベースのアドオンのサポートを全面的に廃止します。すべての拡張機能は新しい [ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions) (WebExtensions としても知られています) への移行が必要であり、そうしなければ動作しません。
+> [!NOTE]
+> Firefox 57 より、XPCOM ベースのアドオンのサポートを全面的に廃止します。すべての拡張機能は新しい [ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions) (WebExtensions としても知られています) への移行が必要であり、そうしなければ動作しません。
 
 ### WebExtensions
 
 以下の API を追加または拡張しました:
 
 - [`bookmarks`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
-
   - [`bookmarks.BookmarkTreeNodeType`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType) でセパレーターをサポートしました。
 
 - [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-
   - light/dark テーマアイコンのための `theme_icons` プロパティ
 
 - [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
-
   - [`browserAction.openPopup()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup)
 
 - [`browserSettings`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
-
   - [`allowPopupsForUserEvents`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents)
   - [`homepageOverride`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
   - [`imageAnimationBehavior`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior)
   - [`newTabPageOverride`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride)
 
 - [`browsingData`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-
   - [`browsingData.removeLocalStorage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage)
 
 - [`clipboard`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
-
   - [`setImageData()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData)
 
 - [`contextualIdentities`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
-
   - [`onCreated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated)
   - [`onRemoved`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved)
   - [`onUpdated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
   - [`contextualIdentitities.ContextualIdentity`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity) の `colorCode` および `iconUrl`
 
 - [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
-
-  - [`devtools.panels.ElementsPanel.createSidebarPane()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane)
+  - [`devtools.panels.ElementsPanel.createSidebarPane()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
 
 - [`downloads`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
-
   - [`downloads.download()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download) の `incognito` オプション
   - [`downloads.DownloadItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem) の `estimatedEndTime` プロパティ
 
 - [`find`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find)
-
   - [`find()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
   - [`highlightResults()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
   - [`removeHighlighting()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
 
 - [`pageAction.openPopup()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
 - [`privacy`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
-
   - [`websites.trackingProtectionMode`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
 
 - [`proxy`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
-
   - `FindProxyForURL()` がオブジェクトを返せるようになりました
 
 - [`runtime`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
-
   - [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) を Android でサポート
 
 - [`sessions`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
-
   - [`setTabValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue)
   - [`getTabValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue)
   - [`removeTabValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue)
@@ -203,38 +190,31 @@ _変更なし。_
   - [`removeWindowValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue)
 
 - [`sidebarAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
-
   - [`sidebarAction.open()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open)
 
 - [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage)
-
   - [`storage.managed`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed)
 
 - [`tabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
-
   - [`tabs.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update) の `loadReplace` オプション
   - [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)、[`tabs.onUpdated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated)、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) の `discarded` プロパティ
   - [`tabs.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) で "view-source:" URL を開くことが可能になりました
   - [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)、[`tabs.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create)、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)、[`tabs.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update) の `openerTabId` プロパティ
 
 - [`theme`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
-
   - `colors.toolbar`
   - `colors.toolbar_field`
   - `colors.toolbar_field_text`
   - `colors.toolbar_text`
 
 - [`theme`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme)
-
   - [`theme.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) の `windowId` オプション
 
 - [`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
-
   - [`filterResponseData()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData)
   - [`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) イベントの `proxyInfo` プロパティ
 
 - [`windows`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows)
-
   - [`windows.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) の `allowScriptsToClose` プロパティ
 
 ## 過去のバージョン

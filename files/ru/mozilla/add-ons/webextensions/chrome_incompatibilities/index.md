@@ -7,26 +7,24 @@ slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 
 Веб расширения разработаны с поддержкой совместимости с расширениями Chrome и Оперы на сколько это возможно. Расширения, написанные для этих браузеров, должны работать в Firefox с минимальными изменениями.
 
-Всё же, Firefox на данный момент имеет поддержку только для ограниченного набора функций и API, поддержуемых в Chrome и Опере. Мы работаем над добавлением большей поддержки, но много функций пока ещё не поддерживаются и некоторые из них никогда не будут поддерживаться.
+Всё же, Firefox на данный момент имеет поддержку только для ограниченного набора функций и API, поддерживаемых в Chrome. Мы работаем над добавлением большей поддержки, но много функций пока ещё не поддерживаются и некоторые из них никогда не будут поддерживаться.
 
 Эта статья перечисляет все функции и API, которые полностью поддерживаются в Firefox Developer Edition (на данный момент Firefox 47). Там где функция поддерживается частично, мы указали на проблемные места.
-
-> **Примечание:** You should assume that features and APIs not listed here at all are not yet supported.
 
 ## manifest.json функция
 
 ### Полностью поддерживаемые ключи
 
-- [`applications`](/en-US/Add-ons/WebExtensions/manifest.json/applications)
-- [`browser_action`](/en-US/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`default_locale`](/en-US/Add-ons/WebExtensions/manifest.json/default_locale)
-- [`description`](/en-US/Add-ons/WebExtensions/manifest.json/description)
-- [`icons`](/en-US/Add-ons/WebExtensions/manifest.json/icons)
-- [`manifest_version`](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version)
-- [`name`](/en-US/Add-ons/WebExtensions/manifest.json/name)
-- [`page_action`](/en-US/Add-ons/WebExtensions/manifest.json/page_action)
-- [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version)
-- [`web_accessible_resources`](/en-US/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
+- [`applications`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
+- [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`default_locale`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
+- [`description`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
+- [`icons`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+- [`manifest_version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
+- [`name`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
+- [`page_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
+- [`version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
+- [`web_accessible_resources`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
 ### Частично поддерживаемые ключи
 
@@ -60,7 +58,7 @@ Firefox не поддерживает:
 
 - `chrome_style`
 
-Using `options_ui` requires a valid value for the [applications.gecko.id](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) property.
+Using `options_ui` requires a valid value for the [applications.gecko.id](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) property.
 
 #### permissions
 
@@ -86,15 +84,13 @@ Firefox does not support the following incognito (private browsing) modes:
 
 - [alarms](/ru/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
 - [browserAction](/ru/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
-
   - Relative URLs passed to `setPopup()` are resolved relative to the caller document, rather than to the extension root
 
 - [commands](/ru/docs/Mozilla/Add-ons/WebExtensions/API/commands)
-- [contextMenus](/ru/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus)
+- [contextMenus](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus)
 - [cookies](/ru/docs/Mozilla/Add-ons/WebExtensions/API/cookies)
 - [i18n](/ru/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
 - [pageAction](/ru/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
-
   - Relative URLs passed to `setPopup()` are resolved relative to the caller document, rather than to the extension root
 
 ### Partially supported APIs
@@ -102,7 +98,6 @@ Firefox does not support the following incognito (private browsing) modes:
 #### bookmarks
 
 - Firefox does not support:
-
   - `import()`
   - `export()`
   - `onCreated`
@@ -119,13 +114,11 @@ Firefox does not support the following incognito (private browsing) modes:
 #### contextMenus
 
 - Firefox does not support:
-
   - the "browser_action" or "page_action" context types
 
 #### downloads
 
 - Firefox does not support:
-
   - `drag()`
   - `acceptDanger()`
   - `setShelfEnabled()`
@@ -136,11 +129,9 @@ Firefox does not support the following incognito (private browsing) modes:
 #### extension
 
 - Firefox does not support:
-
   - `setUpdateUrlData()`
 
 - Additionally, the following deprecated properties will not be supported:
-
   - `onRequest`
   - `onRequestExternal`
   - `getExtensionTabs()`
@@ -149,7 +140,6 @@ Firefox does not support the following incognito (private browsing) modes:
 #### idle
 
 - Firefox does not support:
-
   - `onStateChanged`
   - `setDetectionInterval()`
 
@@ -158,7 +148,6 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### notifications
 
 - Firefox does not support:
-
   - `update()`
 
 - Firefox doesn't provide `byUser` data.
@@ -166,7 +155,6 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### runtime
 
 - Firefox does not support:
-
   - `getPackageDirectoryEntry()`
   - `reload()`
   - `requestUpdateCheck()`
@@ -185,7 +173,6 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### storage
 
 - Firefox does not support:
-
   - `managed` storage area
   - `sync` storage area
   - `getBytesInUse()`.
@@ -201,14 +188,12 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
   ```
 
 - In Firefox, you can't open (using {{WebExtAPIRef("tabs.create")}}), or navigate to (using {{WebExtAPIRef("tabs.update")}}) privileged URLs:
-
   - chrome: URLs
   - javascript: URLs
   - data: URLs
   - privileged about: URLs (for example, about:config, about:addons, about:debugging)
 
 - Additionally, the following deprecated properties will not be supported:
-
   - `sendRequest()`
   - `getSelected()`
   - `onActiveChanged`
@@ -218,14 +203,12 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### webNavigation
 
 - Firefox does not support:
-
   - `onCreatedNavigationTarget`
   - `onTabReplaced`
 
 #### webRequest
 
 - Firefox does not support:
-
   - `onAuthRequired`
   - filtering by `windowId` and `tabId`
   - the `"requestBody"` instruction in `opt_extraInfoSpec`
@@ -235,7 +218,6 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 #### windows
 
 - Firefox does not support:
-
   - the `focused` option in `create()`
 
 - In Firefox `onFocusChanged` will trigger multiple times for a given focus change.
@@ -245,9 +227,9 @@ Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of
 We don't support the following APIs, but plan to, soon:
 
 - [Devtools (mostly panels)](https://developer.chrome.com/extensions/devtools)
-- [debugger](https://developer.chrome.com/extensions/debugger)
-- [omnibox](https://developer.chrome.com/extensions/omnibox)
-- [permissions](https://developer.chrome.com/extensions/permissions)
+- [debugger](https://developer.chrome.com/docs/extensions/reference/api/debugger)
+- [omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox)
+- [permissions](https://developer.chrome.com/docs/extensions/reference/api/permissions)
 
 This doesn't mean that these are the only additional APIs we will support, but that they are our current priorities.
 
@@ -261,4 +243,4 @@ Firefox resolves URLs in injected CSS files relative to the CSS file itself, rat
 
 #### Additional incompatibilities
 
-Firefox does not support using [alert()](/ru/docs/Web/API/Window/alert) from background pages. Using `alert(message)` from a background page will cause the [Browser Console](/ru/docs/Tools/Browser_Console) to be opened and both a line stating "alert() is not supported in background windows; please use console.log instead." and the `message` will be output to the console.
+Firefox does not support using [alert()](/ru/docs/Web/API/Window/alert) from background pages. Using `alert(message)` from a background page will cause the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to be opened and both a line stating "alert() is not supported in background windows; please use console.log instead." and the `message` will be output to the console.

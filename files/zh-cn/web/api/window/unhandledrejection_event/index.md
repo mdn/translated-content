@@ -57,7 +57,7 @@ window.addEventListener("unhandledrejection", (event) => {
 });
 ```
 
-您还可以使用 {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} 事件处理程序属性来设置事件侦听器：
+你还可以使用 {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} 事件处理程序属性来设置事件侦听器：
 
 ```js
 window.onunhandledrejection = (event) => {
@@ -71,7 +71,7 @@ window.onunhandledrejection = (event) => {
 
 ```js
 window.addEventListener("unhandledrejection", function (event) {
-  // ...您的代码可以处理未处理的 rejection...
+  // ...你的代码可以处理未处理的 rejection...
 
   // 阻止默认处理（例如将错误输出到控制台）
 

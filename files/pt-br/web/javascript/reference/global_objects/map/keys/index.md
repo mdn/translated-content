@@ -5,15 +5,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 
 {{JSRef}}
 
-O método **`keys()`** retorna um novo objeto **[iterador](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_Generators)** que contém
+O método **`keys()`** retorna um novo objeto **[iterador](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators)** que contém
 as chaves de cada elemento dentro do objeto `Map` na ordem em que foram inseridos.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.keys()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.keys();
+
+console.log(iterator1.next().value);
+// Expected output: "0"
+
+console.log(iterator1.next().value);
+// Expected output: 1
+```
 
 ## Sintaxe
 
 ```js
-keys()
+keys();
 ```
 
 ### Valor retornado
@@ -26,9 +41,9 @@ Um novo objeto {{jsxref("Map")}} iterador.
 
 ```js
 var myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 var mapIter = myMap.keys();
 

@@ -18,11 +18,11 @@ l10n:
 以下の例では、 `addCue()` を使用して、動画のテキストトラックに 2 つのキューを追加しています。 `cues` の値はコンソールに表示されます。返された {{domxref("TextTrackCueList")}} オブジェクトには、 2 つのキューが格納されます。
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
-track.addCue(new VTTCue(0, 0.9, 'Hildy!'));
-track.addCue(new VTTCue(1, 1.4, 'How are you?'));
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
 console.log(track.cues);
 ```
 

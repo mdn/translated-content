@@ -27,7 +27,7 @@ alert(location); // alerts "https://developer.mozilla.org/ja/docs/Web/API/Window
 
 ### 例 1: 新しいページへ移動
 
-location オブジェクトに新しい値が代入されるたびに、 `location.assign()` が変更された URL で呼び出されたかのうように、その URL の文書が読み込まれます。
+location オブジェクトに新しい値が代入されるたびに、 `location.assign()` が変更された URL で呼び出されたかのように、その URL の文書が読み込まれます。
 
 なお、[ナビゲーション関連のサンドボックスフラグ](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate)によっては、例外が発生して移動に失敗する場合があります。
 
@@ -56,9 +56,14 @@ function reloadPageWithHash() {
 
 ```js
 function showLoc() {
-  const logLines = ["Property (Typeof): Value", `location (${typeof location}): ${location}`];
+  const logLines = [
+    "Property (Typeof): Value",
+    `location (${typeof location}): ${location}`,
+  ];
   for (const prop in location) {
-    logLines.push(`${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`);
+    logLines.push(
+      `${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`,
+    );
   }
   alert(logLines.join("\n"));
 }
@@ -81,7 +86,7 @@ function sendData(data) {
 ### 例 6: `hash` プロパティを変更せずにブックマークを使用
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -385,8 +390,12 @@ const showBookmark = (() => {
       return;
     }
     _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / frames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / frames);
+    document.documentElement.scrollTop = Math.round(
+      _scrollY + ((_nodeY - _scrollY) * _itFrame) / frames,
+    );
+    document.documentElement.scrollLeft = Math.round(
+      _scrollX + ((_nodeX - _scrollX) * _itFrame) / frames,
+    );
     if (_useHash && _itFrame === frames) {
       location.hash = _bookMark;
     }

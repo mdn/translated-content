@@ -41,10 +41,10 @@ bounds = xrReferenceSpace.boundsGeometry;
 
 一部のサンプルは、メッシュまたはその他の形状をレンダリングしてユーザーに境界を表示しますが、実際のアプリケーションでは、これを行うべきではありません。 ただし、ブラウザーは、リスク（移動し続けると、物理的な壁にぶつかる恐れなど）についてユーザーに適切な警告を提供する必要があります。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRBoundedReferenceSpace.boundsGeometry")}}
+{{Compat}}

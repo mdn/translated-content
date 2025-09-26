@@ -3,6 +3,8 @@ title: Dominio
 slug: Glossary/Domain
 ---
 
+{{GlossarySidebar}}
+
 Un dominio es una autoridad dentro de internet que controla sus propios recursos. Su "nombre de dominio" es una forma de dirigirse a esta autoridad como parte de la jerarquía en una {{Glossary("URL")}}, que generalmente es la parte más significativa de la misma, por ejemplo, un nombre de marca.
 
 Un nombre de dominio completo (FQDN, por sus siglas en inglés) contiene todas las partes necesarias para buscar esta autoridad por su nombre sin ambigüedades utilizando el sistema {{Glossary("DNS")}} de Internet.

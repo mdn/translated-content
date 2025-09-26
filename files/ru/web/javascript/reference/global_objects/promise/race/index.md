@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 Метод **Promise.race(iterable)** возвращает выполненный или отклонённый промис, в зависимости от того, с каким результатом завершится первый из переданных промисов, со значением или причиной отклонения этого промиса.
 
-{{EmbedInteractiveExample("pages/js/promise-race.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.race()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, "one");
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // Both resolve, but promise2 is faster
+});
+// Expected output: "two"
+```
 
 ## Синтаксис
 
@@ -18,7 +34,7 @@ Promise.race(iterable);
 ### Параметры
 
 - `iterable`
-  - : Итерируемый объект, такой как ({{jsxref("Array")}}). Смотри [iterable](/ru/docs/Web/JavaScript/Guide/iterable).
+  - : Итерируемый объект, такой как ({{jsxref("Array")}}). Смотри [iterable](/ru/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ### Возвращаемое значение
 

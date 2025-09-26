@@ -1,13 +1,45 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
+**`column-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のコンテンツを指定された段数の段組みに分割します。
 
-**`column-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された段数で要素の内容物を分割します。
+{{InteractiveExample("CSS デモ: column-count")}}
 
-{{EmbedInteractiveExample("pages/css/column-count.html")}}
+```css interactive-example-choice
+column-count: 2;
+```
+
+```css interactive-example-choice
+column-count: 3;
+```
+
+```css interactive-example-choice
+column-count: 4;
+```
+
+```css interactive-example-choice
+column-count: auto;
+column-width: 8rem;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ロンドン。ミカエル学期の終わり、リンカーンズ・イン・ホールに大法官が座っています。容赦のない 11 月の天候。街は、まるで地球から水が引き始めたばかりのように泥だらけで、ホルボーン・ヒルを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  text-align: left;
+}
+```
 
 ## 構文
 
@@ -22,15 +54,16 @@ column-count: 3;
 column-count: inherit;
 column-count: initial;
 column-count: revert;
+column-count: revert-layer;
 column-count: unset;
 ```
 
 ### 値
 
 - `auto`
-  - : 段数は {{cssxref("column-width")}} など、他の CSS プロパティによって決定されます。
+  - : 段組みの段数は {{cssxref("column-width")}} など、他の CSS プロパティによって決定されます。
 - {{cssxref("&lt;integer&gt;")}}
-  - : 正の{{cssxref("&lt;integer&gt;", "整数")}}のみで、要素の中で流れる理想的な列の数を記述します。 {{cssxref("column-width")}} が `auto` 以外の値で一緒に設定された場合は、最大の列数を示します。
+  - : 正の{{cssxref("&lt;integer&gt;", "整数")}}のみで、要素の中で流れる理想的な段の数を記述します。 {{cssxref("column-width")}} が `auto` 以外の値で一緒に設定された場合は、最大の段数を示します。
 
 ## 公式定義
 
@@ -46,17 +79,15 @@ column-count: unset;
 
 #### HTML
 
-```html
+```html-nolint live-sample___splitting_a_paragraph_across_three_columns
 <p class="content-box">
-  これは、 3 つの段に分割されたテキストの束です。
-  CSS の `column-count` プロパティを使用しています。
-  テキストはそれぞれの段に均等に配置されています。
+  これは、 CSS の <code>column-count</code> プロパティを使用して 3 段に分割されたテキストの束です。テキストはそれぞれの段に均等に配置されています。
 </p>
 ```
 
 #### CSS
 
-```css
+```css live-sample___splitting_a_paragraph_across_three_columns
 .content-box {
   column-count: 3;
 }
@@ -76,5 +107,7 @@ column-count: unset;
 
 ## 関連情報
 
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (レイアウトの学習)
-- [段組みの基本概念](/ja/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- {{CSSXref("column-width")}}, {{CSSXref("columns")}} 一括指定
+- {{CSSXref("column-rule-color")}}, {{CSSXref("column-rule-style")}}, {{CSSXref("column-rule-width")}}, {{CSSXref("column-rule")}} 一括指定
+- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（レイアウトの学習）
+- [段組みの基本概念](/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

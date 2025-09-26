@@ -20,9 +20,10 @@ counters(countername, '-');
 counters(countername, '.', upper-roman)
 ```
 
-Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`counter()`](/fr/docs/Web/CSS/counter_function) doivent être utilisées pour créer du contenu.
+Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`counter()`](/fr/docs/Web/CSS/counter) doivent être utilisées pour créer du contenu.
 
-> **Note :** Bien que la fonction `counters()` puisse être utilisée avec n'importe quelle propriété CSS, la prise en charge des propriétés autres que {{CSSxRef("content")}} reste experimentale.
+> [!NOTE]
+> Bien que la fonction `counters()` puisse être utilisée avec n'importe quelle propriété CSS, la prise en charge des propriétés autres que {{CSSxRef("content")}} reste experimentale.
 >
 > Avant d'utiliser cette fonctionnalité en production, référez vous au tableau de compatibilité ci-après.
 
@@ -33,7 +34,7 @@ Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`c
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Un nom identifiant les compteurs à utiliser. C'est le même nom qui pourra être utilisé avec les propriétés {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer par deux tirets et ne peut pas être `none`, `unset`, `initial` ou `inherit`.
 - `<counter-style>`
-  - : Un style de compteur (cf. [les valeurs décrites pour `list-style-type`](/fr/docs/Web/CSS/list-style-type#valeurs)) ou une fonction [`symbols()`](</fr/docs/Web/CSS/symbols()>). En absence de valeur, le style utilisé sera `decimal`.
+  - : Un style de compteur (cf. [les valeurs décrites pour `list-style-type`](/fr/docs/Web/CSS/list-style-type#valeurs)) ou une fonction [`symbols()`](/fr/docs/Web/CSS/symbols). En absence de valeur, le style utilisé sera `decimal`.
 - {{cssxref("&lt;string&gt;")}}
   - : Une suite de caractères. Les caractères qui ne sont pas latins doivent être encodés avec leur séquence d'échappement Unicode. `\000A9` représentera par exemple le symbole copyright (©).
 - `none`
@@ -88,11 +89,8 @@ li::marker {
   content: counters(listCounter, ".", upper-roman) ") ";
 }
 li::before {
-  content: counters(listCounter, ".") " == " counters(
-      listCounter,
-      ".",
-      lower-roman
-    );
+  content: counters(listCounter, ".") " == "
+    counters(listCounter, ".", lower-roman);
 }
 ```
 
@@ -143,11 +141,8 @@ li::marker {
   content: counters(count, ".", upper-alpha) ") ";
 }
 li::before {
-  content: counters(count, ".", decimal-leading-zero) " == " counters(
-      count,
-      ".",
-      lower-alpha
-    );
+  content: counters(count, ".", decimal-leading-zero) " == "
+    counters(count, ".", lower-alpha);
 }
 ```
 
@@ -165,9 +160,9 @@ li::before {
 
 ## Voir aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- La fonction CSS [`counter()`](/fr/docs/Web/CSS/counter_function)
+- La fonction CSS [`counter()`](/fr/docs/Web/CSS/counter)
 - {{cssxref("::marker")}}

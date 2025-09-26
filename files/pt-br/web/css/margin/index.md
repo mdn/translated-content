@@ -5,9 +5,63 @@ slug: Web/CSS/margin
 
 {{CSSRef}}
 
-A propriedade **`margin`** do [CSS](/pt-BR/docs/Web/CSS) define a [área de margem](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.
+A propriedade **`margin`** do [CSS](/pt-BR/docs/Web/CSS) define a [área de margem](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.
 
-{{EmbedInteractiveExample("pages/css/margin.html")}}
+{{InteractiveExample("CSS Demo: margin")}}
+
+```css interactive-example-choice
+margin: 1em;
+```
+
+```css interactive-example-choice
+margin: 5% 0;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px 0;
+```
+
+```css interactive-example-choice
+margin: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## Sintaxe
 
@@ -59,7 +113,9 @@ A propriedade `margin` pode ser especificada usando um, dois, três ou quatro va
 ```html
 <div class="center">Este elemento está centralizado.</div>
 
-<div class="outside">Este elemento está posicionado fora de seu bloco recipiente.</div>
+<div class="outside">
+  Este elemento está posicionado fora de seu bloco recipiente.
+</div>
 ```
 
 #### CSS
@@ -83,27 +139,27 @@ A propriedade `margin` pode ser especificada usando um, dois, três ou quatro va
 ### Mais exemplos
 
 ```css
-margin: 5%;                 /* todos os lados: margem de 5% */
+margin: 5%; /* todos os lados: margem de 5% */
 
-margin: 10px;               /* todos os lados: margem de 10px */
+margin: 10px; /* todos os lados: margem de 10px */
 
-margin: 1.6em 20px;         /* topo e inferior:    margem de 1.6em */
-                            /* esquerda e direita: margem de 20px  */
+margin: 1.6em 20px; /* topo e inferior:    margem de 1.6em */
+/* esquerda e direita: margem de 20px  */
 
-margin: 10px 3% 1em;        /* topo:               margem de 10px */
-                            /* esquerda e direita: margem de 3%   */
-                            /* inferior:           margem de 1em  */
+margin: 10px 3% 1em; /* topo:               margem de 10px */
+/* esquerda e direita: margem de 3%   */
+/* inferior:           margem de 1em  */
 
-margin: 10px 3px 30px 5px;  /* topo:     margem de 10px */
-                            /* direita:  margem de 3px  */
-                            /* inferior: margem de 30px */
-                            /* esquerda: margem de 5px  */
+margin: 10px 3px 30px 5px; /* topo:     margem de 10px */
+/* direita:  margem de 3px  */
+/* inferior: margem de 30px */
+/* esquerda: margem de 5px  */
 
-margin: 2em auto;           /* topo e inferior: margem de 2em          */
-                            /* caixa está horizontalmente centralizada */
+margin: 2em auto; /* topo e inferior: margem de 2em          */
+/* caixa está horizontalmente centralizada */
 
-margin: auto;               /* topo e inferior: margem de 0            */
-                            /* caixa está horizontalmente centralizada */
+margin: auto; /* topo e inferior: margem de 0            */
+/* caixa está horizontalmente centralizada */
 ```
 
 ## Notas
@@ -116,24 +172,19 @@ Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, est
 
 ### Colapso de margens
 
-Às vezes, as margens superior e inferior de elementos são colapsadas em uma única margem que é igual à maior das duas margens. Veja [Dominando margin collapsing](/pt-BR/docs/Web/CSS/CSS_Box_Model/margin_collapsing) para mais informações.
+Às vezes, as margens superior e inferior de elementos são colapsadas em uma única margem que é igual à maior das duas margens. Veja [Dominando margin collapsing](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) para mais informações.
 
 ## Especificações
 
-| Especificação                                                                        | Status                                   | Comentário                               |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------- |
-| {{ SpecName('CSS3 Box', '#margin', 'margin') }}                     | {{ Spec2('CSS3 Box') }}         | Nenhuma mudança significativa.           |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'margin') }} | {{ Spec2('CSS3 Transitions') }} | Define `margin` como animável.           |
-| {{ SpecName('CSS2.1', 'box.html#margin-properties', 'margin') }} | {{ Spec2('CSS2.1') }}             | Remove seu efeito em elementos _inline_. |
-| {{ SpecName('CSS1', '#margin', 'margin') }}                             | {{ Spec2('CSS1') }}                 | Definição inicial.                       |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.margin")}}
+{{Compat}}
 
 ## Veja também
 
-- [CSS Box Model](/pt-BR/CSS/box_model)
-- [Margin collapsing](/pt-BR/CSS/margin_collapsing)
+- [CSS Box Model](/pt-BR/docs/CSS/box_model)
+- [Margin collapsing](/pt-BR/docs/CSS/margin_collapsing)

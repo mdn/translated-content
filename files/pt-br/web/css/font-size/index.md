@@ -9,7 +9,39 @@ A propriedade **`font-size`** no [CSS](/pt-BR/docs/Web/CSS) estabelece o tamanho
 
 Esta propriedade também é usada para computaro tamanho de `em`, `ex`, e outras unidades {{cssxref("&lt;length&gt;")}} relativas.
 
-{{EmbedInteractiveExample("pages/css/font-size.html")}}
+{{InteractiveExample("CSS Demo: font-size")}}
+
+```css interactive-example-choice
+font-size: 1.2rem;
+```
+
+```css interactive-example-choice
+font-size: x-small;
+```
+
+```css interactive-example-choice
+font-size: smaller;
+```
+
+```css interactive-example-choice
+font-size: 12px;
+```
+
+```css interactive-example-choice
+font-size: 80%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
 
 ## Sintaxe
 
@@ -52,7 +84,6 @@ The `font-size` property is specified in one of the following ways:
 - `larger`, `smaller`
   - : Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
 - {{cssxref("&lt;length&gt;")}}
-
   - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
 
     For font-relative units that are root-based (such as `rem`), the font size is relative to the size of the font used by the {{HTMLElement("html")}} (root) element.
@@ -60,7 +91,8 @@ The `font-size` property is specified in one of the following ways:
 - {{cssxref("&lt;percentage&gt;")}}
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
 
-> **Nota:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
+> [!NOTE]
+> To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
 ### Formal syntax
 
@@ -80,7 +112,8 @@ Setting the font size in pixel values (`px`) is a good choice when you need pixe
 
 Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element in the page.
 
-> **Nota:** Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
+> [!NOTE]
+> Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
 
 ### Ems
 
@@ -109,7 +142,7 @@ span {
 
 ```html
 <div>
-<span>Outer <span>inner</span> outer</span>
+  <span>Outer <span>inner</span> outer</span>
 </div>
 ```
 
@@ -150,14 +183,20 @@ In this example, the words "outer inner outer" are all displayed at 16px (assumi
 
 ```css
 /* Sets paragraph text to be very large */
-p { font-size: xx-large; }
+p {
+  font-size: xx-large;
+}
 
 /* Sets <h1> text to be 2.5 times the size
    of the text around it */
-h1 { font-size: 250%; }
+h1 {
+  font-size: 250%;
+}
 
 /* Sets text enclosed within span tag to be 16px */
-span { font-size: 16px; }
+span {
+  font-size: 16px;
+}
 ```
 
 ### Example 2
@@ -198,15 +237,10 @@ span { font-size: 16px; }
 
 ## Specifications
 
-| Specification                                                                            | Status                                   | Comment                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}             | {{Spec2('CSS3 Fonts')}}         | No change.                         |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}     | {{Spec2('CSS3 Transitions')}} | Defines `font-size` as animatable. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}                 | No change.                         |
-| {{SpecName('CSS1', '#font-size', 'font-size')}}                         | {{Spec2('CSS1')}}                 | Initial definition.                |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

@@ -11,9 +11,8 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 구현 내용:
 
-- **Firefox 툴바에 추가된 버튼의 [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_action)을 정의합니다.**
+- **Firefox 툴바에 추가된 버튼의 [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)을 정의합니다.**
   버튼을 위해 필요한것:
-
   - "beasts-32.png" 아이콘
   - 버튼을 누를때 나오는 팝업. 이 팝업은 HTML과 CSS, JavaScript로 구성됩니다.
 
@@ -83,7 +82,6 @@ cd beastify
 - [`icons`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 도 선택사항이나 애드온 매니저에서 확장 기능 아이콘을 보여줄 수 있기에 권장됩니다.
 - [`permissions`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 은 확장 기능이 필요로 하는 권한의 목록입니다. 이 확장 기능에서는 [`activeTab` 권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) 을 사용합니다.
 - [`browser_action`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)는 툴바에 나오는 버튼을 정의하고 세 가지 정보를 정의합니다.
-
   - `default_icon` 는 필수이고, 버튼의 아이콘을 정의합니다.
   - `default_title` 는 선택사항이고 툴팁을 정의합니다.
   - `default_popup` 은 사용자가 버튼을 클릭할때 팝업을 보여주고 싶을 때 사용합니다. 이 키로 확장 기능에 포함된 HTML파일을 지정합니다.
@@ -160,7 +158,7 @@ HTML파일의 내용은 다음과 같습니다.
 </html>
 ```
 
-각각의 동물들을 보여주는 항목을 가지는 [`<div>`](/ko/docs/Web/HTML/Element/div) 요소의 ID에 `"popup-content"` 를 정의했습니다. 또 다른 `"error-content"` ID를 가지는 `<div>`는 `"hidden"` 이라는 class를 정의하였고 팝업을 초기화 할때 문제가 생기는 경우 사용할 것입니다.
+각각의 동물들을 보여주는 항목을 가지는 [`<div>`](/ko/docs/Web/HTML/Reference/Elements/div) 요소의 ID에 `"popup-content"` 를 정의했습니다. 또 다른 `"error-content"` ID를 가지는 `<div>`는 `"hidden"` 이라는 class를 정의하였고 팝업을 초기화 할때 문제가 생기는 경우 사용할 것입니다.
 
 이 HTML파일은 일반 웹페이지처럼 CSS파일과 JS파일을 포함합니다.
 
@@ -435,7 +433,7 @@ beastify/
 
 ## Developing from the command line
 
-아래처럼 [web-ext](/ko/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)툴을 이용해 설치할 수도 있습니다.
+아래처럼 [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)툴을 이용해 설치할 수도 있습니다.
 
 ```bash
 cd beastify
@@ -448,5 +446,5 @@ web-ext run
 
 - [확장 기능의 구조에 대해 읽어보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [확장 기능 예제 살펴보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [확장 기능을 개발하고, 테스트하고, 게시하는 데 필요한 것 찾아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [더 공부하기](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next_#continue_your_learning_experience)
+- [확장 기능을 개발하고, 테스트하고, 게시하는 데 필요한 것 찾아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [더 공부하기](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience)

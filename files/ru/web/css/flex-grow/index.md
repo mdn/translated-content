@@ -9,7 +9,45 @@ slug: Web/CSS/flex-grow
 
 На практике flex-grow используется вместе с другими flex-свойствами {{cssxref("flex-shrink")}} и {{cssxref("flex-basis")}}, и обычно определяется с помощью сокращения (shorthand) {{cssxref("flex")}}, чтобы убедиться, что все значения заданы.
 
-{{EmbedInteractiveExample("pages/css/flex-grow.html")}}
+{{InteractiveExample("CSS Demo: flex-grow")}}
+
+```css interactive-example-choice
+flex-grow: 1;
+```
+
+```css interactive-example-choice
+flex-grow: 2;
+```
+
+```css interactive-example-choice
+flex-grow: 3;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">I grow</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+```
 
 ## Синтаксис
 
@@ -24,7 +62,7 @@ flex-grow: initial;
 flex-grow: unset;
 ```
 
-Свойство `flex-grow` указывается одним числом — значением типа [`<number>`](/ru/docs/Web/CSS/flex-grow#number).
+Свойство `flex-grow` указывается одним числом — значением типа [`<number>`](#number).
 
 ### Значения
 
@@ -91,9 +129,7 @@ flex-grow: unset;
 
 ## Спецификации
 
-| Спецификация                                          | Статус                    | Комментарий           |
-| ----------------------------------------------------- | ------------------------- | --------------------- |
-| {{SpecName('CSS3 Flexbox','#flex-grow','flex-grow')}} | {{Spec2('CSS3 Flexbox')}} | Первичное определение |
+{{Specifications}}
 
 {{cssinfo}}
 
@@ -103,6 +139,6 @@ flex-grow: unset;
 
 ## Смотрите также
 
-- Руководство по CSS Flexbox: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- Руководство по CSS Flexbox: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- Руководство по CSS Flexbox: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Руководство по CSS Flexbox: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
 - [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) статья Мануэля Матузовича (Manuel Matuzovic) на CSS-Tricks, которая показывает как работает flex-grow

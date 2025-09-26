@@ -91,13 +91,15 @@ Aquí están las funciones utilizadas para realizar estos pasos:
 
 El primer paso para crear un trazado es llamar a `beginPath()`. Internamente, los trazados se almacenan como una lista de sub-trazados (líneas, arcos, etc.) que juntos forman una forma. Cada vez que se llama a este método, la lista se restablece y podemos empezar a dibujar nuevas formas.
 
-> **Nota:** Cuando el trazado actual está vacío, como por ejemplo inmediatamente después de llamar a `beginPath()`, o en un canvas recién creado, el primer comando de construcción del trazado siempre se trata como un `moveTo()`, independientemente de lo que realmente sea. Por esta razón, casi siempre querrá establecer específicamente su posición inicial después de reiniciar un trazado.
+> [!NOTE]
+> Cuando el trazado actual está vacío, como por ejemplo inmediatamente después de llamar a `beginPath()`, o en un canvas recién creado, el primer comando de construcción del trazado siempre se trata como un `moveTo()`, independientemente de lo que realmente sea. Por esta razón, casi siempre querrá establecer específicamente su posición inicial después de reiniciar un trazado.
 
 El segundo paso es llamar a los métodos que realmente especifican los trazados a dibujar. Los veremos en breve.
 
 El tercer paso, y opcional, es llamar a `closePath()`. Este método intenta cerrar la forma dibujando una línea recta desde el punto actual hasta el inicio. Si la forma ya ha sido cerrada o sólo hay un punto en la lista, esta función no hace nada.
 
-> **Nota:** Cuando se llama a `fill()`, cualquier forma abierta se cierra automáticamente, por lo que no es necesario llamar a `closePath()`. Este **no** es el caso cuando se llama a `stroke()`.
+> [!NOTE]
+> Cuando se llama a `fill()`, cualquier forma abierta se cierra automáticamente, por lo que no es necesario llamar a `closePath()`. Este **no** es el caso cuando se llama a `stroke()`.
 
 ### Dibujar un triángulo
 
@@ -174,7 +176,8 @@ El resultado se ve así:
 
 Si quisieras ver las líneas conectadas, puedes eliminar las líneas que llaman a `moveTo()`.
 
-> **Nota:** Para saber más sobre la función `arc()`, consulte la sección [Arcos](#arcos) más abajo.
+> [!NOTE]
+> Para saber más sobre la función `arc()`, consulte la sección [Arcos](#arcos) más abajo.
 
 ### Líneas
 
@@ -236,7 +239,8 @@ Para dibujar arcos o círculos, utilizamos los métodos `arc()` o `arcTo()`.
 
 Veamos con más detalle el método `arc`, que toma seis parámetros: `x` e `y` son las coordenadas del centro del círculo sobre el que se dibujará el arco. El parámetro `radio` se explica por sí mismo. Los parámetros `startAngle` y `endAngle` definen los puntos inicial y final del arco en radianes, a lo largo de la curva del círculo. Se miden desde el eje x. El parámetro `counterclockwise` es un valor Booleano que, cuando es `true`, dibuja el arco en sentido contrario a las agujas del reloj; en caso contrario, el arco se dibuja en sentido de las agujas del reloj.
 
-> **Nota:** Los ángulos en la función `arc` se miden en radianes, no en grados. Para convertir los grados en radianes puedes utilizar la siguiente expresión de JavaScript: `radianes = (Math.PI/180)*grados`.
+> [!NOTE]
+> Los ángulos en la función `arc` se miden en radianes, no en grados. Para convertir los grados en radianes puedes utilizar la siguiente expresión de JavaScript: `radianes = (Math.PI/180)*grados`.
 
 El siguiente ejemplo es un poco más complejo que los que hemos visto anteriormente. Dibuja 12 arcos diferentes, todos con diferentes ángulos y rellenos.
 
@@ -246,7 +250,8 @@ Las coordenadas `x` e `y` deberían ser lo suficientemente claras. `radius` y `s
 
 La sentencia para el parámetro `clockwise` hace que la primera y tercera fila se dibujen como arcos en el sentido de las agujas del reloj y la segunda y cuarta fila como arcos en sentido contrario. Por último, la sentencia `if` hace que la mitad superior tenga arcos trazados y la mitad inferior arcos rellenos.
 
-> **Nota:** Este ejemplo requiere un canvas ligeramente más grande que los otros de esta página: 150 x 200 píxeles.
+> [!NOTE]
+> Este ejemplo requiere un canvas ligeramente más grande que los otros de esta página: 150 x 200 píxeles.
 
 ```html hidden
 <html>

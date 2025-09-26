@@ -5,11 +5,40 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
 **`linear-gradient()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 두 개 이상의 색상이 직선을 따라 점진적으로 변화되는 선형 그라데이션 그림을 생성합니다. 그 결과는 {{CSSxRef("&lt;gradient&gt;")}} 데이터 유형의 객체이며, 이는 {{CSSxRef("&lt;image&gt;")}}의 특별한 종류 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: linear-gradient()")}}
+
+```css interactive-example-choice
+background: linear-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+```
+
+```css interactive-example-choice
+background:
+  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## 구문
 
@@ -41,17 +70,14 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ### 값들
 
 - `<side-or-corner>`
-
   - : 그라데이션의 시작 지점의 위치. 이 값이 지정될 때에는 `to`라는 값과 함께 최대 2개의 키워드를 가질 수 있습니다. 한 경우는 `left`와 `right` 값을 통해 수평선을 의미하는 방식이고, 다른 경우는 `top`과 `bottom`을 이용해 수직선을 의미하는 방식입니다. 각 키워드의 순서는 중요하지 않습니다. 만약 이 값이 명시되지 않으면, 기본적으로 `to bottom`이 지정됩니다.
 
     `to top`, `to bottom`, `to left`, 그리고 `to right`은 각각 각도 `0deg`, `180deg`, `270deg`, `90deg`과 동일합니다. 다른 값의 경우는 각도 그 자체로 해석됩니다.
 
 - {{CSSxRef("&lt;angle&gt;")}}
-
   - : 그라데이션 선 방향의 각도. `0deg`은 `to top`과 동일한 의미를 가지며 값이 증가할수록 시계 방향으로 회전합니다.
 
 - `<linear-color-stop>`
-
   - : {{CSSxRef("&lt;color&gt;")}} 값의 색 중지점으로, 하나 혹은 두 개의 중지 위치에 대한 값이 뒤따라옵니다. 중지 위치에 대한 값은 그라데이션의 축을 따라 정해지는 {{CSSxRef("&lt;percentage&gt;")}} 혹은 {{CSSxRef("&lt;length&gt;")}} 값 입니다.
 
 - `<color-hint>`
@@ -180,7 +206,7 @@ body {
 
 ### 더 많은 선형 그라데이션 예제
 
-더 많은 예제를 보기 위해서는 [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)를 참조하세요.
+더 많은 예제를 보기 위해서는 [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)를 참조하세요.
 
 ## 명세서
 
@@ -192,7 +218,7 @@ body {
 
 ## 같이 보기
 
-- [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 다른 그라데이션 함수들: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{CSSxRef("&lt;image&gt;")}}
 - {{cssxref("element", "element()")}}

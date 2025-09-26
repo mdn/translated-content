@@ -3,8 +3,6 @@ title: <frequency>
 slug: Web/CSS/frequency
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo de dato [CSS](/es/docs/Web/CSS) `<frequency>` denota una dimensión en frecuencia, como el tono de una voz hablando. Consisste en un valor {{cssxref("&lt;number&gt;")}} seguido inmediatamente por la unidad. Como en cualquier dimensión CSS, no hay espacio entre la unidad literal y el número.
@@ -18,7 +16,7 @@ Aunque todas las unidades representen la misma frecuencia para el valor `0`, la 
 
 ## Ejemplos
 
-**Valores de frecuencia permitidos**
+### Valores de frecuencia permitidos
 
 | Código    | Significado                                                                                                        |
 | --------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -29,7 +27,7 @@ Aunque todas las unidades representen la misma frecuencia para el valor `0`, la 
 | `+0Hz`    | Cero, con un símbolo `+ y la unidad`.                                                                              |
 | `-0kHz`   | Cero, con un símbolo `-` y la unidad (Aunque no sea común, es un valor permitido).                                 |
 
-**Valores de frecuencia no permitidos**
+### Valores de frecuencia no permitidos
 
 | Código | Significado                                                                                                    |
 | ------ | -------------------------------------------------------------------------------------------------------------- |

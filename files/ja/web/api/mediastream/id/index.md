@@ -1,26 +1,30 @@
 ---
-title: MediaStream.id
+title: "MediaStream: id プロパティ"
+short-title: id
 slug: Web/API/MediaStream/id
+l10n:
+  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-**`MediaStream.id()`** は読み取り専用プロパティであり、このオブジェクトの固有識別子 (GUID) である 36 文字で表現される {{domxref("DOMString")}} を返します。
+**`id`** は {{domxref("MediaStream")}} インターフェイスの読み取り専用プロパティで、このオブジェクトの固有識別子 (GUID) である 36 文字で表現される文字列を返します。
 
-## 構文
+## 値
 
-```js
-var id = mediaStream.id;
-```
+文字列です。
 
 ## 例
 
 ```js
-var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+const promise = navigator.mediaDevices.getUserMedia({
+  audio: true,
+  video: true,
+});
 
-p.then(function(stream) {
-   console.log(stream.id);
-})
+promise.then((stream) => {
+  console.log(stream.id);
+});
 ```
 
 ## 仕様書

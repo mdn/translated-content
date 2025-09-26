@@ -27,4 +27,4 @@ var handlerFunction = element.oncuechange;
 ## 查看更多
 
 - [`cuechange`](/zh-CN/docs/Web/API/TextTrack/cuechange_event)
-- [DOM 事件处理函数](/zh-CN/docs/Web/Guide/Events/Event_handlers)
+- [DOM 事件处理函数](/zh-CN/docs/Web/API/Document_Object_Model/Events)

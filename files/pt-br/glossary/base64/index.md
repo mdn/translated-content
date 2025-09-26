@@ -3,20 +3,22 @@ title: Base64
 slug: Glossary/Base64
 ---
 
+{{GlossarySidebar}}
+
 **Base64** é um grupo de esquemas de [codificação binários](https://en.wikipedia.org/wiki/Binary-to-text_encoding) para texto semelhantes que representam dados binários em um formato de string ASCII, traduzindo-os em uma representação radix-64. O termo _Base64_ se origina de uma codificação de [transferência de conteúdo MIME](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 
 Os esquemas de codificação Base64 são comumente usados quando há necessidade de codificar dados binários que precisam ser armazenados e transferidos por meio de mídia projetada para lidar com ASCII. Isso é para garantir que os dados permaneçam intactos sem modificação durante o transporte. _Base64_ é comumente usado em vários aplicativos, incluindo e-mail via [MIME](https://pt.wikipedia.org/wiki/MIME) e armazenamento de dados complexos em [XML](/pt-BR/docs/Web/XML)
 
-Uma aplicação comum da codificação Base64 na web é codificar dados binários para que possam ser incluídos em um [data: URL](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+Uma aplicação comum da codificação Base64 na web é codificar dados binários para que possam ser incluídos em um [data: URL](/pt-BR/docs/Web/URI/Schemes/data).
 
 Em JavaScript existem duas funções respectivamente para decodificar e codificar strings Base64:
 
-- [`btoa()`](/pt-BR/docs/Web/API/btoa): cria uma string ASCII codificada em Base64 a partir de uma "string" de dados binários ("btoa" deve ser lido como "binário para ASCII").
-- [`atob()`](/pt-BR/docs/Web/API/atob): decodifica uma string codificada em Base64 ("atob" deve ser lida como "ASCII para binário").
+- [`btoa()`](/pt-BR/docs/Web/API/Window/btoa): cria uma string ASCII codificada em Base64 a partir de uma "string" de dados binários ("btoa" deve ser lido como "binário para ASCII").
+- [`atob()`](/pt-BR/docs/Web/API/Window/atob): decodifica uma string codificada em Base64 ("atob" deve ser lida como "ASCII para binário").
 
 O algoritmo usado por `atob()` e `btoa()` é especificado na [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), seção 4.
 
-Observe que `btoa()` espera receber dados binários e lançará uma exceção se a string fornecida contiver quaisquer caracteres cuja representação UTF-16 ocupe mais de um byte. Para obter mais detalhes, consulte a documentação de [`btoa()`](/pt-BR/docs/Web/API/btoa).
+Observe que `btoa()` espera receber dados binários e lançará uma exceção se a string fornecida contiver quaisquer caracteres cuja representação UTF-16 ocupe mais de um byte. Para obter mais detalhes, consulte a documentação de [`btoa()`](/pt-BR/docs/Web/API/Window/btoa).
 
 ## Aumento de tamanho codificado
 
@@ -69,7 +71,8 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ### Solution #2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
 
-> **Note:** The following code is also useful to get an [ArrayBuffer](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
+> [!NOTE]
+> The following code is also useful to get an [ArrayBuffer](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
 
 ```js
 "use strict";
@@ -78,14 +81,14 @@ function b64ToUint6(nChr) {
   return nChr > 64 && nChr < 91
     ? nChr - 65
     : nChr > 96 && nChr < 123
-    ? nChr - 71
-    : nChr > 47 && nChr < 58
-    ? nChr + 4
-    : nChr === 43
-    ? 62
-    : nChr === 47
-    ? 63
-    : 0;
+      ? nChr - 71
+      : nChr > 47 && nChr < 58
+        ? nChr + 4
+        : nChr === 43
+          ? 62
+          : nChr === 47
+            ? 63
+            : 0;
 }
 
 function base64DecToArr(sBase64, nBlocksSize) {
@@ -122,14 +125,14 @@ function uint6ToB64(nUint6) {
   return nUint6 < 26
     ? nUint6 + 65
     : nUint6 < 52
-    ? nUint6 + 71
-    : nUint6 < 62
-    ? nUint6 - 4
-    : nUint6 === 62
-    ? 43
-    : nUint6 === 63
-    ? 47
-    : 65;
+      ? nUint6 + 71
+      : nUint6 < 62
+        ? nUint6 - 4
+        : nUint6 === 62
+          ? 43
+          : nUint6 === 63
+            ? 47
+            : 65;
 }
 
 function base64EncArr(aBytes) {
@@ -180,27 +183,27 @@ function UTF8ArrToStr(aBytes) {
             aBytes[++nIdx] -
             128
         : nPart > 247 && nPart < 252 && nIdx + 4 < nLen /* five bytes */
-        ? ((nPart - 248) << 24) +
-          ((aBytes[++nIdx] - 128) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* four bytes */
-        ? ((nPart - 240) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* three bytes */
-        ? ((nPart - 224) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
-        ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
-        : /* nPart < 127 ? */ /* one byte */
-          nPart,
+          ? ((nPart - 248) << 24) +
+            ((aBytes[++nIdx] - 128) << 18) +
+            ((aBytes[++nIdx] - 128) << 12) +
+            ((aBytes[++nIdx] - 128) << 6) +
+            aBytes[++nIdx] -
+            128
+          : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* four bytes */
+            ? ((nPart - 240) << 18) +
+              ((aBytes[++nIdx] - 128) << 12) +
+              ((aBytes[++nIdx] - 128) << 6) +
+              aBytes[++nIdx] -
+              128
+            : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* three bytes */
+              ? ((nPart - 224) << 12) +
+                ((aBytes[++nIdx] - 128) << 6) +
+                aBytes[++nIdx] -
+                128
+              : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
+                ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
+                : /* nPart < 127 ? */ /* one byte */
+                  nPart,
     );
   }
   return sView;
@@ -224,14 +227,14 @@ function strToUTF8Arr(sDOMStr) {
       nChr < 0x80
         ? 1
         : nChr < 0x800
-        ? 2
-        : nChr < 0x10000
-        ? 3
-        : nChr < 0x200000
-        ? 4
-        : nChr < 0x4000000
-        ? 5
-        : 6;
+          ? 2
+          : nChr < 0x10000
+            ? 3
+            : nChr < 0x200000
+              ? 4
+              : nChr < 0x4000000
+                ? 5
+                : 6;
   }
 
   aBytes = new Uint8Array(nArrLen);
@@ -323,7 +326,8 @@ const myBuffer = base64DecToArr(
 alert(myBuffer.byteLength);
 ```
 
-> **Note:** A função `base64DecToArr(sBase64[, nBlocksSize])` retorna
+> [!NOTE]
+> A função `base64DecToArr(sBase64[, nBlocksSize])` retorna
 > um [uint8Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) de bytes.
 > Se o seu objetivo é construir um buffer de dados brutos de 16 bits / 32 bits / 64 bits,
 > use o argumento `nBlocksSize`,

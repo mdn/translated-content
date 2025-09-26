@@ -1,11 +1,11 @@
 ---
-title: ":indeterminate"
+title: :indeterminate
 slug: Web/CSS/:indeterminate
 ---
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:indeterminate`** находит элементы в неопределённом состоянии.
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** находит элементы в неопределённом состоянии.
 
 ```css
 /* Выбирает все элементы <input>, которые находятся в неопределённом состоянии */
@@ -17,7 +17,7 @@ input:indeterminate {
 Селектор находит следующие элементы:
 
 - Элементы [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox), свойство `indeterminate` которых было установлено в `true` через [JavaScript](/ru/docs/Web/JavaScript)
-- Элементы [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio), когда все радио переключатели в одной группе (с одинаковым атрибутом `name`) не выбраны
+- Элементы [`<input type="radio">`](/ru/docs/Web/HTML/Reference/Elements/input/radio), когда все радио переключатели в одной группе (с одинаковым атрибутом `name`) не выбраны
 - Элементы {{HTMLElement("progress")}} в неопределённом состоянии
 
 ## Синтаксис
@@ -93,6 +93,6 @@ progress:indeterminate {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -1,9 +1,9 @@
 ---
-title: "-webkit-text-stroke-color"
+title: -webkit-text-stroke-color
 slug: Web/CSS/-webkit-text-stroke-color
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

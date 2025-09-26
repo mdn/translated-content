@@ -9,4 +9,4 @@ slug: Glossary/HTML5
 
 ## 了解更多
 
-- [我們的 HTML5 引導](/zh-TW/docs/Web/Guide/HTML/HTML5)
+- [我們的 HTML5 引導](/zh-TW/docs/Glossary/HTML5)

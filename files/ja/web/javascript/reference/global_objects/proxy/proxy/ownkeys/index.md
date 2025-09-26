@@ -1,15 +1,36 @@
 ---
 title: handler.ownKeys()
+short-title: ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`handler.ownKeys()`** メソッドは、オブジェクトの `[[OwnPropertyKeys]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Object.keys()")}}, {{jsxref("Reflect.ownKeys()")}} などの操作で使用されます。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.ownKeys()", "taller")}}
+
+```js interactive-example
+const monster = {
+  _age: 111,
+  [Symbol("secret")]: "I am scared!",
+  eyeCount: 4,
+};
+
+const handler = {
+  ownKeys(target) {
+    return Reflect.ownKeys(target);
+  },
+};
+
+const proxy = new Proxy(monster, handler);
+
+for (const key of Object.keys(proxy)) {
+  console.log(key);
+  // 予想される結果: "_age"
+  // 予想される結果: "eyeCount"
+}
+```
 
 ## 構文
 
@@ -17,7 +38,7 @@ l10n:
 new Proxy(target, {
   ownKeys(target) {
   }
-});
+})
 ```
 
 ### 引数
@@ -29,7 +50,7 @@ new Proxy(target, {
 
 ### 返値
 
-`ownKeys()` メソッドは列挙可能オブジェクトを返さなければなりません。
+`ownKeys()` メソッドは [配列風オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#配列風オブジェクト)を返す必要があります。それぞれの要素は {{jsxref("String")}} または {{jsxref("Symbol")}} であり、重複するアイテムを含んではいけません。
 
 ## 解説
 
@@ -46,12 +67,13 @@ new Proxy(target, {
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+プロキシーの `[[OwnPropertyKeys]]` 内部メソッドでは、ハンドラー定義が以下の不変条件のいずれかに違反する場合、{{jsxref("TypeError")}} が発生します。
 
-- `ownKeys()` の結果は配列である必要があります。
-- 配列のそれぞれの要素の型は、{{jsxref("String")}} または {{jsxref("Symbol")}} のどちらかです。
-- 結果のリストはターゲットオブジェクトのすべての非設定の独自プロパティのキーを含みます。
-- ターゲットオブジェクトが拡張可能でないなら、結果リストはターゲットオブジェクトのすべての独自プロパティのキーを含まなければなりません。そして、他の値を含みません。
+- 結果が {{jsxref("Object")}} である。
+- キーのリストには重複する値が含まれていない。
+- それぞれのキーの型が {{jsxref("String")}} または {{jsxref("Symbol")}} のどちらかである。
+- 結果リストには、ターゲットオブジェクトのすべての構成不可の自己プロパティのキーが含まれていなければならない。つまり、ターゲットオブジェクトに対して {{jsxref("Reflect.ownKeys()")}} が返すすべてのキーについて、そのキーが {{jsxref("Reflect.getOwnPropertyDescriptor()")}} によって `configurable: false` を返す場合、そのキーは結果リストに含まれていなければならない。
+- 対象オブジェクトが拡張不可の場合、結果リストには対象オブジェクトの自己プロパティのすべてのキーが含まれ、それ以外の値は含まれてはいけない。つまり、{{jsxref("Reflect.isExtensible()")}} が `target` で `false` を返す場合、結果リストには {{jsxref("Reflect.ownKeys()")}} を `target` に適用した結果と同じ値が含まれなければならない。
 
 ## 例
 

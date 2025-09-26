@@ -65,13 +65,11 @@ if (!String.prototype.includes) {
 
 ## Especificações
 
-| Especificação                                                                      | Status           | Comentário         |
-| ---------------------------------------------------------------------------------- | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-string.prototype.includes', 'String.prototype.includes')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.includes")}}
+{{Compat}}
 
 ## String.prototype.contains
 

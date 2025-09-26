@@ -3,7 +3,7 @@ title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 ---
 
-{{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -26,7 +26,6 @@ collator.resolvedOptions()
   `sensitivity`
 
   `ignorePunctuation`
-
   - : Значения, предоставленные для этих свойств в аргументе `options`, либо значения по умолчанию.
 
 - `collation`
@@ -34,14 +33,11 @@ collator.resolvedOptions()
 - `numeric`
 
   `caseFirst`
-
   - : Значения, предоставленные для этих свойств в аргументе `options` или запрошенные ключами расширения Unicode `"kn"` и `"kf"`, либо значения по умолчанию. Если реализация не поддерживает эти свойства, они будут опущены.
 
 ## Спецификации
 
-| Спецификация                                                                         | Статус                  | Комментарии              |
-| ------------------------------------------------------------------------------------ | ----------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-10.3.3', 'Intl.Collator.prototype.resolvedOptions')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

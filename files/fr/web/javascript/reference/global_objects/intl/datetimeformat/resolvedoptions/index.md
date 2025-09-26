@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOption
 
 La méthode **`Intl.DateTimeFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de format et de locale pour les heures et dates, calculées pendant l'initialisation de l'objet [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat).
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.resolvedOptions")}}
+
+```js interactive-example
+const region1 = new Intl.DateTimeFormat("zh-CN", { timeZone: "UTC" });
+const options1 = region1.resolvedOptions();
+
+console.log(options1.locale);
+// Expected output: "zh-CN"
+
+console.log(options1.calendar);
+// Expected output: "gregory"
+
+console.log(options1.numberingSystem);
+// Expected output: "latn"
+```
 
 ## Syntaxe
 

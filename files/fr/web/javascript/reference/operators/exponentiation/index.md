@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Exponentiation
 
 L'opérateur d'exponentiation (`**`) fournit le résultat obtenu lorsqu'on élève le premier opérande à la puissance indiquée par le second. Il est équivalent `Math.pow` exception faite que cet opérateur permet également d'utiliser des valeurs BigInt comme opérandes.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## Syntaxe
 
@@ -32,7 +46,7 @@ En JavaScript, il est impossible d'écrire une expression d'exponentiation ambig
 // -4 en JavaScript, les parenthèses évitent l'ambiguité.
 ```
 
-Attnetion, certains langages de programmation utilisent l'accent circonflexe <kbd>^</kbd> pour exprimer l'exponentiaion mais JavaScript utilise ce symbole pour [l'opérateur binaire OU exclusif (XOR)](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR).
+Attnetion, certains langages de programmation utilisent l'accent circonflexe <kbd>^</kbd> pour exprimer l'exponentiaion mais JavaScript utilise ce symbole pour [l'opérateur binaire OU exclusif (XOR)](/fr/docs/Web/JavaScript/Reference/Operators#bitwise_xor).
 
 ## Exemples
 

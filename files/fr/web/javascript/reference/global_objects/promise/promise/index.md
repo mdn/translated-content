@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 
 Le constructeur **`Promise()`** est principalement utilisé afin d'envelopper des fonctions qui ne prennent pas en charge les promesses.
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise Constructor", "taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## Syntaxe
 
@@ -18,7 +34,6 @@ new Promise(executeur);
 ### Paramètres
 
 - `executeur`
-
   - : Une [fonction](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) à exécuter par le constructeur lors de la construction du nouvel objet `Promise`. `executeur` contient du code spécifique qui relie le résultat d'une opération à une promesse. C'est le programme qui doit fournir ce code. Sa signature doit être&nbsp;:
 
     ```js
@@ -38,18 +53,15 @@ new Promise(executeur);
     Le paramètre `valeur` de `fonctionResolution` peut être une autre promesse, auquel cas la promesse est insérée dynamiquement dans [la chaîne de promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#enchaînement_de_promesses).
 
     Quant à `executeur`, il est important de comprendre&nbsp;:
-
     - Que la valeur de retour de `executeur` est ignorée.
     - Que si une erreur est déclenchée pendant l'exécution de `executeur`, la promesse est rejetée.
 
     Ainsi, voici le mécanisme par lequel `executeur` produit un effet&nbsp;:
-
     - Au moment où le constructeur génère le nouvel objet `Promise`, il génère également une paire de fonctions correspondantes `fonctionResolution` et `fonctionRejet` qui sont «&nbsp;reliées&nbsp;» à l'objet `Promise`.
     - Le code contenu dans `executeur` peut réaliser une opération et refléter le résultat de l'opération (si la valeur n'est pas un autre objet `Promise`) en object) comme étant «&nbsp;résolue&nbsp;» ou «&nbsp;rejetée&nbsp;» en appelant respectivement `fonctionResolution` ou `fonctionRejet`.
     - Autrement dit, le code contenu dans `executeur` communique par l'effet de bord fourni avec `fonctionResolution` ou `fonctionRejet`. De cette façon, la promesse devient «&nbsp;résolue&nbsp;» ou «&nbsp;rejetée&nbsp;».
 
     Pour résumer, voici les étapes généralement suivies&nbsp;:
-
     1. L'opération portée par `executeur` est asynchrone et fournit une fonction de rappel (<i lang="en">callback</i>).
     2. La fonction de rappel est définie au sein du code de `executeur`.
     3. La fonction de rappel se termine en invoquant `fonctionResolution`.

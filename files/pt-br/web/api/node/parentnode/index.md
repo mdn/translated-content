@@ -39,7 +39,7 @@ if (node.parentNode) {
 
 ## Notas
 
-`Document` e `DocumentFragment` [nodes](/pt-BR/docs/DOM/Node.nodeType) nunca podem ter um node parent, sendo assim `parentNode` sempre retornará `null`. Também retornará null se o node já tiver sido criado e não ainda não estiver anexado à estrutura DOM.
+`Document` e `DocumentFragment` [nodes](/pt-BR/docs/Web/API/Node/nodeType) nunca podem ter um node parent, sendo assim `parentNode` sempre retornará `null`. Também retornará null se o node já tiver sido criado e não ainda não estiver anexado à estrutura DOM.
 
 ## Especificações
 

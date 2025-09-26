@@ -98,19 +98,17 @@ a fim de usar o objeto `arguments`, você precisará converte-lo para um array a
 
 ## Especificações
 
-| Especificações                                                           | Status           | Comentário          |
-| ------------------------------------------------------------------------ | ---------------- | ------------------- |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade
 
-{{Compat("javascript.functions.rest_parameters")}}
+{{Compat}}
 
 ## Veja também
 
 - [Arguments object](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Functions](/pt-BR/docs/Web/JavaScript/Reference/Functions)
-- [Spread Operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [Spread Operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)

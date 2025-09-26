@@ -22,7 +22,8 @@ Conteúdo editável é totalmente compatível com os seguintes browsers.
 
 Ainda não é suportato pelo Opera Mini.
 
-> **Nota:** \*A maioria dos elementos HTML não suporta esta funcionalidade
+> [!NOTE]
+> \*A maioria dos elementos HTML não suporta esta funcionalidade
 
 ## Como isso funciona?
 
@@ -43,7 +44,7 @@ Um exemplo simples:
 </html>
 ```
 
-Você pode ver o exemplo funcionando com com uma integração de JavaScript utilizando LocalStorage [aqui](http://html5demos.com/contenteditable). Com a fonte [aqui](http://html5demos.com/contenteditable#view-source).
+Você pode ver o exemplo funcionando com com uma integração de JavaScript utilizando LocalStorage [aqui](https://html5demos.com/contenteditable). Com a fonte [aqui](https://html5demos.com/contenteditable#view-source).
 
 ## Veja também
 
@@ -54,4 +55,4 @@ user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
 user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
 ```
 
-[Como interagir com o conteúdo](/en/Midas) (Antiga API do IE) [aqui](/en/Rich-Text_Editing_in_Mozilla)
+[Como interagir com o conteúdo](/en-US/Midas) (Antiga API do IE) [aqui](/en-US/Rich-Text_Editing_in_Mozilla)

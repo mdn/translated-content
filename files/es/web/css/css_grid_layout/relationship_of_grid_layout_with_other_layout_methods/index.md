@@ -5,11 +5,12 @@ slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_meth
 
 CSS Grid Layout ha sido diseñado para trabajar junto con otros elementos de CSS, como parte de un sistema completo para hacer el diseño. En esta guía explicaré cómo se ajusta _Grid_ junto con otras técnicas que ya se estén usando.
 
-> **Nota:** Las traducciones posibles a la palabra Grid en este contexto son: Grilla, Rejilla, Cuadrícula, Malla. Para efecto del contenido será _Grid_.
+> [!NOTE]
+> Las traducciones posibles a la palabra Grid en este contexto son: Grilla, Rejilla, Cuadrícula, Malla. Para efecto del contenido será _Grid_.
 
 ## Grid y flexbox
 
-La diferencia básica entre CSS Grid Layout y [CSS Flexbox Layout](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) es que Flexbox se creó para diseños de una dimensión, en una fila o una columna. En cambio CSS Grid Layout se pensó para el diseño bidimensional, en varias filas y columnas al mismo tiempo. Sin embargo, las dos especificaciones comparten algunas características comunes, y si ya has aprendido cómo utilizar Flexbox, verás semejanzas que te ayudarán a entender _Grid_.
+La diferencia básica entre CSS Grid Layout y [CSS Flexbox Layout](/es/docs/Web/CSS/CSS_flexible_box_layout) es que Flexbox se creó para diseños de una dimensión, en una fila o una columna. En cambio CSS Grid Layout se pensó para el diseño bidimensional, en varias filas y columnas al mismo tiempo. Sin embargo, las dos especificaciones comparten algunas características comunes, y si ya has aprendido cómo utilizar Flexbox, verás semejanzas que te ayudarán a entender _Grid_.
 
 ### Diseños de Una dimensión vs. dos dimensiones
 

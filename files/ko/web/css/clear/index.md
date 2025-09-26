@@ -3,19 +3,73 @@ title: clear
 slug: Web/CSS/clear
 ---
 
-{{CSSRef}}
-
 **`clear`** [CSS](/ko/docs/Web/CSS) 속성은 요소가 선행 [부동](/ko/docs/Web/CSS/float)(floating) 요소 다음일 수 있는지 또는 그 아래로 내려가(해제되어(cleared))야 하는 지를 지정합니다. `clear` 속성은 부동 및 비부동 요소 모두에 적용됩니다.
 
-{{EmbedInteractiveExample("pages/css/clear.html")}}
+{{InteractiveExample("CSS Demo: clear")}}
 
-비부동 블록에 적용되는 경우, 모든 관련 부동체(floats)의 [마진 경계](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) 아래로까지 요소의 [보더 경계](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)를 아래로 내립니다. 이 움직임(이 일어나는 경우)은 [마진 상쇄](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)가 일어나지 않도록 합니다.
+```css interactive-example-choice
+clear: none;
+```
 
-부동 요소에 적용되는 경우, 모든 관련 부동체의 [마진 경계](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) 아래로 요소의 [마진 경계](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)를 옮깁니다. 이는 나중(later) 부동체의 위치에 영향을 줍니다, 나중 부동체가 앞선(earlier) 부동체보다 높게 위치될 수 없기에.
+```css interactive-example-choice
+clear: left;
+```
 
-해제(cleared)와 관련된 부동체는 같은 [블록 형성 문맥](/ko/docs/Web/Guide/CSS/Block_formatting_context) 내 앞선 부동체입니다.
+```css interactive-example-choice
+clear: right;
+```
 
-> **참고:** **주의:** 요소가 그 안에 모든 부동 요소를 포함하고 싶은 경우, 컨테이너도 부동하거나 컨테이너의 {{cssxref("::after")}} 대체 [가상 요소](/ko/docs/Web/CSS/Pseudo-elements)에 `clear`를 쓸 수 있습니다.
+```css interactive-example-choice
+clear: both;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="floated-left">Left</div>
+    <div class="floated-right">Right</div>
+    <div class="transition-all" id="example-element">
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  line-height: normal;
+}
+
+.floated-left {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: left;
+}
+
+.floated-right {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: right;
+  height: 150px;
+}
+```
+
+비부동 블록에 적용되는 경우, 모든 관련 부동체(floats)의 [마진 경계](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) 아래로까지 요소의 [보더 경계](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)를 아래로 내립니다. 이 움직임(이 일어나는 경우)은 [마진 상쇄](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)가 일어나지 않도록 합니다.
+
+부동 요소에 적용되는 경우, 모든 관련 부동체의 [마진 경계](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) 아래로 요소의 [마진 경계](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)를 옮깁니다. 이는 나중(later) 부동체의 위치에 영향을 줍니다, 나중 부동체가 앞선(earlier) 부동체보다 높게 위치될 수 없기에.
+
+해제(cleared)와 관련된 부동체는 같은 [블록 형성 문맥](/ko/docs/Web/CSS/CSS_display/Block_formatting_context) 내 앞선 부동체입니다.
+
+> [!NOTE]
+> 요소가 그 안에 모든 부동 요소를 포함하고 싶은 경우, 컨테이너도 부동하거나 컨테이너의 {{cssxref("::after")}} 대체 [가상 요소](/ko/docs/Web/CSS/Pseudo-elements)에 `clear`를 쓸 수 있습니다.
 >
 > ```css
 > #container::after {
@@ -215,4 +269,4 @@ p {
 
 ## See also
 
-- [CSS basic box model](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS basic box model](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

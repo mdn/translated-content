@@ -2,7 +2,7 @@
 title: CSS オブジェクトモデル (CSSOM)
 slug: Web/API/CSS_Object_Model
 l10n:
-  sourceCommit: 58792ac0cd1e3ab302683533862f821b666c5e3b
+  sourceCommit: a3a1dd3b7b81f1c4bbdfe1bdccc28dac2cac550d
 ---
 
 {{DefaultAPISidebar("CSSOM")}}
@@ -16,7 +16,6 @@ CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オ
 - {{DOMxRef("AnimationEvent")}}
 - {{DOMxRef("CaretPosition")}}
 - {{DOMxRef("CSS")}}
-- {{DOMxRef("CSSCharsetRule")}}
 - {{DOMxRef("CSSConditionRule")}}
 - {{DOMxRef("CSSCounterStyleRule")}}
 - {{DOMxRef("CSSFontFaceRule")}}
@@ -30,18 +29,19 @@ CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オ
 - {{DOMxRef("CSSMediaRule")}}
 - {{DOMxRef("CSSNamespaceRule")}}
 - {{DOMxRef("CSSPageRule")}}
+- {{DOMxRef("CSSPositionTryRule")}}
+- {{DOMxRef("CSSPositionTryDescriptors")}}
 - {{DOMxRef("CSSRule")}}
 - {{DOMxRef("CSSRuleList")}}
+- {{DOMxRef("CSSStartingStyleRule")}}
 - {{DOMxRef("CSSStyleDeclaration")}}
 - {{DOMxRef("CSSStyleSheet")}}
 - {{DOMxRef("CSSStyleRule")}}
 - {{DOMxRef("CSSSupportsRule")}}
-- {{DOMxRef("CSSVariablesMap")}}
-- {{DOMxRef("CSSViewportRule")}}
+- {{DOMXRef("CSSNestedDeclarations")}}
 - {{DOMxRef("FontFace")}}
 - {{DOMxRef("FontFaceSet")}}
 - {{DOMxRef("FontFaceSetLoadEvent")}}
-- {{DOMxRef("GetStyleUtils")}}
 - {{DOMxRef("MediaList")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}
@@ -49,41 +49,40 @@ CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オ
 - {{DOMxRef("StyleSheet")}}
 - {{DOMxRef("StyleSheetList")}}
 - {{DOMxRef("TransitionEvent")}}
+- {{DOMxRef("VisualViewport")}}
 
 他にも CSSOM に関する仕様書で拡張されているインターフェイスがあります。 {{DOMxRef("Document")}}, {{DOMxRef("Window")}}, {{DOMxRef("Element")}}, {{DOMxRef("HTMLElement")}}, {{DOMxRef("HTMLImageElement")}}, {{DOMxRef("Range")}}, {{DOMxRef("MouseEvent")}}, {{DOMxRef("SVGElement")}} です。
 
-### CSS 型付きオブジェクトモデル {{Experimental_Inline}}
+### CSS 型付きオブジェクトモデル
 
-{{SeeCompatTable}}
-
-- {{DOMxRef("CSSImageValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSKeywordValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathInvert")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathMax")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathMin")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathNegate")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathProduct")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathSum")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMatrixComponent")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSNumericArray")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSNumericValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSPerspective")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSPositionValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSRotate")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSScale")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSSkew")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSSkewX")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSSkewY")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSStyleValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSTransformComponent")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSTransformValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSTranslate")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSUnitValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSUnparsedValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSVariableReferenceValue")}} {{Experimental_Inline}}
-- {{DOMxRef("StylePropertyMap")}} {{Experimental_Inline}}
-- {{DOMxRef("StylePropertyMapReadOnly")}} {{Experimental_Inline}}
+- {{DOMxRef("CSSImageValue")}}
+- {{DOMxRef("CSSKeywordValue")}}
+- {{DOMxRef("CSSMathInvert")}}
+- {{DOMxRef("CSSMathMax")}}
+- {{DOMxRef("CSSMathMin")}}
+- {{DOMxRef("CSSMathNegate")}}
+- {{DOMxRef("CSSMathProduct")}}
+- {{DOMxRef("CSSMathSum")}}
+- {{DOMxRef("CSSMathValue")}}
+- {{DOMxRef("CSSMatrixComponent")}}
+- {{DOMxRef("CSSNumericArray")}}
+- {{DOMxRef("CSSNumericValue")}}
+- {{DOMxRef("CSSPerspective")}}
+- {{DOMxRef("CSSPositionValue")}}
+- {{DOMxRef("CSSRotate")}}
+- {{DOMxRef("CSSScale")}}
+- {{DOMxRef("CSSSkew")}}
+- {{DOMxRef("CSSSkewX")}}
+- {{DOMxRef("CSSSkewY")}}
+- {{DOMxRef("CSSStyleValue")}}
+- {{DOMxRef("CSSTransformComponent")}}
+- {{DOMxRef("CSSTransformValue")}}
+- {{DOMxRef("CSSTranslate")}}
+- {{DOMxRef("CSSUnitValue")}}
+- {{DOMxRef("CSSUnparsedValue")}}
+- {{DOMxRef("CSSVariableReferenceValue")}}
+- {{DOMxRef("StylePropertyMap")}}
+- {{DOMxRef("StylePropertyMapReadOnly")}}
 
 ### 廃止された CSSOM インターフェイス {{deprecated_inline}}
 
@@ -95,7 +94,7 @@ CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オ
 
 ## チュートリアル
 
-- [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (これは DHTML/Ajax 時代に作られたのでいくらか更新が必要です)。
+- [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## 仕様書
@@ -109,4 +108,4 @@ CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オ
 ## 関連情報
 
 - [Document Object Model (DOM)](/ja/docs/Web/API/Document_Object_Model)
-- [Houdini](/ja/docs/Web/Guide/Houdini)
+- [Houdini API](/ja/docs/Web/API/Houdini_APIs)

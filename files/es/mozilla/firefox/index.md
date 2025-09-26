@@ -3,8 +3,6 @@ title: Firefox
 slug: Mozilla/Firefox
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox](https://www.mozilla.org/firefox/) es el popular navegador Web de Mozilla, disponible para múltiples plataformas incluyendo Windows, OS X, y Linux en las máquinas de escritorio así como en los dispositivos móviles basados en Android e iOS. Su amplia compatibilidad, su adaptación a las más recientes tecnologías Web y poderosas herramientas de desarrollo, hacen de Firefox la elección por excelencia para desarrolladores Web y también para usuarios finales.
 
 Firefox es un proyecto de código abierto; la mayor parte del código lo aporta nuestra gran comunidad de voluntarios. Aquí aprenderás a contribuir al proyecto de Firefox y también encontrarás enlaces a información sobre la creación de complementos de Firefox, utilizando las herramientas de desarrollo de Firefox, y otros temas.
@@ -37,7 +35,7 @@ Cada noche, creamos Firefox a partir del más reciente código disponible en [mo
 
 Esta es una versión de Firefox hecha a la medida de desarrolladores. Cada seis semanas, cogemos las características de Firefox Nightly que son lo suficientemente estables y creamos una nueva versión de Firefox Developer Edition. Además, añadimos algunas características adicionales que solo están disponibles en este canal.
 
-[Descubre más sobre](/es/docs/Firefox/Developer_Edition)[Firefox Developer Edition](/es/docs/Firefox/Developer_Edition).
+[Descubre más sobre](/es/docs/Mozilla/Firefox/Developer_Edition)[Firefox Developer Edition](/es/docs/Mozilla/Firefox/Developer_Edition).
 
 [Descarga Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
 
@@ -57,7 +55,7 @@ Después de estabilizarse durante otras seis semanas en Beta, estamos listos par
 
 Firefox ESR es la edición de soporte a largo plazo de Firefox para escritorio para uso de grandes organizaciones, como escuelas, universidades, empresas y otras personas que necesitan un soporte extendido para implementaciones masivas.
 
-[Descubre más sobre Firefox Versión de Soporte Extendida](/es/Firefox/Firefox_ESR).
+[Descubre más sobre Firefox Versión de Soporte Extendida](/es/docs/Mozilla/Firefox/Firefox_ESR).
 
 [Descarga Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
 

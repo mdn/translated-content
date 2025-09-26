@@ -1,83 +1,63 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
+l10n:
+  sourceCommit: 6558de67a347fee30c303da8a0b262a9270a6885
 ---
 
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
+{{JSRef}}
 
-## Сводка
+Объект **`SyntaxError`** представляет ошибку, возникающую при попытке интерпретировать синтаксически неправильный код. Это происходит, когда движок JavaScript при синтаксическом анализе кода обнаруживает токены или порядок токенов, не соответствующие синтаксису языка.
 
-Объект **`SyntaxError`** представляет ошибку, возникающую при попытке интерпретировать синтаксически неправильный код.
+`SyntaxError` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
 
-## Синтаксис
+`SyntaxError` является подклассом {{jsxref("Error")}}.
 
-```
-new SyntaxError([message[, fileName[, lineNumber]]])
-```
+## Конструктор
 
-### Параметры
+- {{jsxref("SyntaxError/SyntaxError", "SyntaxError()")}}
+  - : Создаёт новый объект `SyntaxError`.
 
-- `message`
-  - : Необязательный параметр. Человеко-читаемое описание ошибки.
-- `fileName` {{non-standard_inline}}
-  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.
-- `lineNumber` {{non-standard_inline}}
-  - : Необязательный параметр. Номер строки кода, вызвавшей исключение.
+## Свойства экземпляра
 
-## Описание
+_Также наследует свойства своего родителя {{jsxref("Error")}}_.
 
-Исключение `SyntaxError` выбрасывается, когда движок JavaScript при разборе кода обнаруживает токены или токен, которые, согласно синтаксису, не должны здесь находиться.
+Эти свойства определены в `SyntaxError.prototype` и есть у всех экземпляров `SyntaxError`.
 
-## Свойства
+- {{jsxref("Object/constructor", "SyntaxError.prototype.constructor")}}
+  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `SyntaxError` начальным значением является конструктор {{jsxref("SyntaxError/SyntaxError", "SyntaxError")}}.
+- {{jsxref("Error/name", "SyntaxError.prototype.name")}}
+  - : Представляет название типа ошибки. Начальным значением `SyntaxError.prototype.name` является `"SyntaxError"`.
 
-- {{jsxref("SyntaxError.prototype")}}
-  - : Позволяет добавлять свойства в объект `SyntaxError`.
+## Методы экземпляра
 
-## Методы
-
-Глобальный объект `SyntaxError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
-
-## Экземпляры объекта `SyntaxError`
-
-### Свойства
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Properties')}}
-
-### Методы
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', 'Methods')}}
+_Наследует методы своего родителя {{jsxref("Error")}}_.
 
 ## Примеры
 
-### Пример: перехват исключения `SyntaxError`
+### Перехват `SyntaxError`
 
 ```js
 try {
   eval("hoo bar");
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
-  console.log(e.message); // "missing ; before statement" - перед инструкцией отсутствует символ ;
+  console.log(e.message);
   console.log(e.name); // "SyntaxError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 1
-  console.log(e.columnNumber); // 4
-  console.log(e.stack); // "@Scratchpad/1:2:3\n"
+  console.log(e.stack); // Стек ошибок
 }
 ```
 
-### Пример: возбуждение исключения `SyntaxError`
+### Создание `SyntaxError`
 
 ```js
 try {
-  throw new SyntaxError("Привет", "someFile.js", 10);
+  throw new SyntaxError("Привет");
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
   console.log(e.message); // "Привет"
   console.log(e.name); // "SyntaxError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:11:9\n"
+  console.log(e.stack); // Стек ошибок
 }
 ```
 
@@ -92,4 +72,3 @@ try {
 ## Смотрите также
 
 - {{jsxref("Error")}}
-- {{jsxref("SyntaxError.prototype")}}

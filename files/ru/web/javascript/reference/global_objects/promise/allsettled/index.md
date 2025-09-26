@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 
 Метод **`Promise.allSettled()`** возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.
 
-{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.allSettled()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) =>
+  setTimeout(reject, 100, "foo"),
+);
+const promises = [promise1, promise2];
+
+Promise.allSettled(promises).then((results) =>
+  results.forEach((result) => console.log(result.status)),
+);
+
+// Expected output:
+// "fulfilled"
+// "rejected"
+```
 
 ## Синтаксис
 
@@ -38,6 +54,6 @@ promise.allSettled(iterable);
 
 - [Promises](/ru/docs/Archive/Add-ons/Techniques/Promises)
 - [Использование промисов](/ru/docs/Web/JavaScript/Guide/Using_promises)
-- [Graceful asynchronous programming with promises](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Graceful asynchronous programming with promises](/ru/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}

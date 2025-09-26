@@ -1,45 +1,60 @@
 ---
-title: AudioContext.currentTime
+title: "BaseAudioContext: свойство currentTime"
 slug: Web/API/BaseAudioContext/currentTime
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{ APIRef("AudioContext") }}
+{{ APIRef("Web Audio API") }}
 
-Поле currentTime принадлежит {{ domxref("AudioContext") }} и возвращает время с момента создания AudioContext. Может использоваться при планировании воспроизведения или визуализации. Поле currentTime является не перезаписываемым и не может быть остановлено или сброшено.
+Доступное только для чтения свойство `currentTime` интерфейса {{ domxref("BaseAudioContext") }} возвращает начинающуюся с 0 и постоянно увеличивающуюся аппаратную метку времени в секундах, которая может использоваться для планирования воспроизведения звука, визуализации и т.д.
 
-## Синтаксис
+## Значение
 
-```js
-var audioCtx = new AudioContext();
-console.log(audioCtx.currentTime);
-```
-
-### Тип данных
-
-A double.
+Число с плавающей запятой.
 
 ## Примеры
 
-> **Примечание:** для большего понимания реализации Web Audio, посмотрите наши Web Audio Demos на [MDN Github repo](https://github.com/mdn/), like [panner-node](https://github.com/mdn/panner-node). Попробуйте ввести `audioCtx.currentTime` в консоли вашего браузера.
-
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-// Older webkit/blink browsers require a prefix
+const audioCtx = new AudioContext();
+// Для работы в старых webkit/blink-браузерах требуется префикс
 
-...
+// …
 
 console.log(audioCtx.currentTime);
 ```
 
-## Specifications
+## Снижение точности времени
+
+Для обеспечения защиты от атак и [слежения за пользователем](/ru/docs/Glossary/Fingerprinting), точность `audioCtx.currentTime` может округляться в зависимости от настроек браузера.
+В Firefox настройка `privacy.reduceTimerPrecision` включена по умолчанию и равна 20 мкс в Firefox 59 (2 мс в Firefox 60).
+
+```js
+// снижение точности времени (2 мс) в Firefox 60
+audioCtx.currentTime;
+// 23.404
+// 24.192
+// 25.514
+// …
+
+// снижение точности времени с включённой настройкой `privacy.resistFingerprinting`
+audioCtx.currentTime;
+// 49.8
+// 50.6
+// 51.7
+// …
+```
+
+В Firefox также есть настройка `privacy.resistFingerprinting`, которая изменяет точность до 100 мс или значения `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, в зависимости от того, что больше.
+
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Использование Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

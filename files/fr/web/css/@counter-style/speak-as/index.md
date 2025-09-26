@@ -26,9 +26,7 @@ speak-as: <counter-style-name>;
 ### Valeurs
 
 - `auto`
-
   - : Dans ce cas, la valeur réelle de `speak-as` sera définie selon la valeur utilisée pour le descripteur {{cssxref("system")}} :
-
     - Si `system` vaut `alphabetic`, `speak-as` sera alors synonyme de `spell-out`.
     - Si `system` vaut `cyclic`, `speak-as` sera alors synonyme de `bullets`.
     - Si `system` vaut `extends`, la valeur de `speak-as` sera la même que celle correspondante à `auto` dans le style étendu.

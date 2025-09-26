@@ -13,13 +13,13 @@ Vous pouvez trouver plus d'informations sur de nombreux sujets abordés sur cett
 
 Vous n'avez pas besoin d'outils spéciaux de développement ou de création d'environnement pour créer des extensions de navigateur : il est tout à fait possible de créer de superbes extensions de navigateur avec un simple éditeur de texte. Cependant, vous avez peut-être développé pour le Web et avez un ensemble d'outils et un environnement que vous souhaitez réutiliser. Si vous le faites, vous devez être conscient de certaines choses.
 
-Si vous utilisez des outils de minimisation ou d'obscurcissement pour fournir votre code final, vous devez fournir votre code source au [processus de révision AMO](#The_review_process). De plus, les outils que vous utilisez — minification, obscurcissement et construction — doivent être open source (ou offrir une utilisation gratuite illimitée) et être disponible pour fonctionner sur l'ordinateur de l'utilisateur (Windows, Mac, ou Linux). Malheureusement, nos réviseurs ne peuvent pas travailler avec des outils commerciaux ou basés sur le Web.
+Si vous utilisez des outils de minimisation ou d'obscurcissement pour fournir votre code final, vous devez fournir votre code source au [processus de révision AMO](#the_review_process). De plus, les outils que vous utilisez — minification, obscurcissement et construction — doivent être open source (ou offrir une utilisation gratuite illimitée) et être disponible pour fonctionner sur l'ordinateur de l'utilisateur (Windows, Mac, ou Linux). Malheureusement, nos réviseurs ne peuvent pas travailler avec des outils commerciaux ou basés sur le Web.
 
 [En savoir plus sur les outils de développement sur l'atelier d'extensions](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)
 
 ## Bibliothèques tierces
 
-Les bibliothèques tierces sont un excellent moyen d'ajouter rapidement des fonctionnalités ou fonctionnalités complexes aux extensions de votre navigateur. Lorsque vous soumettez une extension au [processus de révision AMO](#The_review_processv), le processus considère également les bibliothèques tierces utilisées. Pour rationaliser la révision, assurez-vous de toujours télécharger des bibliothèques tierces à partir de leur site Web officiel ou référentiel, et si la bibliothèque est minifiée, fournissez un lien vers le code source. Veuillez noter que les bibliothèques tierces ne peuvent être modifiées d'aucune façon.
+Les bibliothèques tierces sont un excellent moyen d'ajouter rapidement des fonctionnalités ou fonctionnalités complexes aux extensions de votre navigateur. Lorsque vous soumettez une extension au [processus de révision AMO](#the_review_processv), le processus considère également les bibliothèques tierces utilisées. Pour rationaliser la révision, assurez-vous de toujours télécharger des bibliothèques tierces à partir de leur site Web officiel ou référentiel, et si la bibliothèque est minifiée, fournissez un lien vers le code source. Veuillez noter que les bibliothèques tierces ne peuvent être modifiées d'aucune façon.
 
 [En savoir plus sur la soumission du code source sur l'atelier d'extensions](https://extensionworkshop.com/documentation/publish/source-code-submission/)
 
@@ -47,8 +47,8 @@ Si vous choisissez de lister l'extension de votre navigateur sur AMO, votre exte
 
 Maintenant, vous savez ce qui nous attend, il est temps de plonger dans plus de détails sur le développement de l'extension du navigateur. Dans les sections suivantes, vous découvrirez :
 
-- En savoir plus sur les concepts fondamentaux des extensions de navigateur, en commençant par les détails sur l'[utilisation des APIs Javascript](/fr/Add-ons/WebExtensions/API).
-- Un guide des [composants de l'interface utilisateur](/fr/Add-ons/WebExtensions/user_interface) disponibles pour les extensions de votre navigateur.
+- En savoir plus sur les concepts fondamentaux des extensions de navigateur, en commençant par les détails sur l'[utilisation des APIs Javascript](/fr/docs/Mozilla/Add-ons/WebExtensions/API).
+- Un guide des [composants de l'interface utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface) disponibles pour les extensions de votre navigateur.
 - Une collection de guides pratiques sur la réalisation des tâches clés dans vos extensions ou l'utilisation des API JavaScript.
 - Un guide de référence complet sur les [APIs JavaScript](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
 - Un guide de référence complet sur les [clés du manifeste](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).

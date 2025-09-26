@@ -3,11 +3,46 @@ title: outline-color
 slug: Web/CSS/outline-color
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`outline-color`** establece el color del contorno de un elemento.
 
-{{EmbedInteractiveExample("pages/css/outline-color.html")}}
+{{InteractiveExample("CSS Demo: outline-color")}}
+
+```css interactive-example-choice
+outline-color: red;
+```
+
+```css interactive-example-choice
+outline-color: #32a1ce;
+```
+
+```css interactive-example-choice
+outline-color: rgba(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+outline-color: hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+outline-color: currentcolor;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Sintaxis
 
@@ -50,7 +85,7 @@ Los [estilos de enfoque](/es/docs/Web/CSS/:focus) personalizados normalmente imp
 La relación de contraste de color se determina comparando la luminosidad del texto y los valores de color de fondo. Para cumplir con las [Directrices de Accesibilidad al Contenido Web (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) actuales, se requiere una proporción de 4.5:1 para el contenido de texto y de 3:1 para textos más grandes, como los encabezados. El texto grande se define como 18.66 px y en [negrita](/es/docs/Web/CSS/font-weight) o más grande, o 24 px o más.
 
 - [WebAIM: Comprobador de contraste de color](https://webaim.org/resources/contrastchecker/)
-- [MDN Entendiendo las WCAG, Directriz 1.4 explicaciones](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Entendiendo las WCAG, Directriz 1.4 explicaciones](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Comprender el Criterio de Conformidad 1.4.3 | W3C Entendiendo las WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Definicion formal

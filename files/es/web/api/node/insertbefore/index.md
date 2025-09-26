@@ -26,7 +26,8 @@ var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 
 Si `referenceNode` es `null`, el `newNode` se insertará al final de la lista de nodos hijos.
 
-> **Nota:** `referenceNode` **no** es un parámetro opcional — debes pasar explícitamente un `Node` o `null`. No proporcionándolo o pasando valores no válidos podría provocar un [comportamiento](https://code.google.com/p/chromium/issues/detail?id=419780) [distinto](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) en diferentes versiones de navegadores.
+> [!NOTE]
+> `referenceNode` **no** es un parámetro opcional — debes pasar explícitamente un `Node` o `null`. No proporcionándolo o pasando valores no válidos podría provocar un [comportamiento](https://code.google.com/p/chromium/issues/detail?id=419780) [distinto](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) en diferentes versiones de navegadores.
 
 ### Valor devuelto
 
@@ -98,7 +99,7 @@ Si `sp2` no tiene ningún hermano depués de él, entonces debe ser el último h
 
 ### Ejemplo 3
 
-Inserta un elemento antes del primer elemento hijo, utilizando la propiedad [firstChild](/es/docs/DOM/Node.firstChild).
+Inserta un elemento antes del primer elemento hijo, utilizando la propiedad [firstChild](/es/docs/Web/API/Node/firstChild).
 
 ```js
 // Obtener una referencia al elemento en el que se quiere insertar un nuevo nodo

@@ -3,13 +3,38 @@ title: unicode-bidi
 slug: Web/CSS/unicode-bidi
 ---
 
-{{CSSRef}}
-
 **`unicode-bidi`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("direction")}} プロパティと共に、文書内の双方向テキストの扱いを指定します。例えば、テキストブロックに左書き (LTR) と右書き (RTL) の両方のテキストが含まれている場合、ユーザーエージェントは、複雑な Unicode アルゴリズムを用いてテキストの表示方法を決定します。 `unicode-bidi` プロパティは、このアルゴリズムを上書きして開発者がテキストの埋め込みを制御できるようにします。
+
+{{InteractiveExample("CSS デモ: unicode-bidi")}}
+
+```css interactive-example-choice
+unicode-bidi: normal;
+```
+
+```css interactive-example-choice
+unicode-bidi: bidi-override;
+```
+
+```css interactive-example-choice
+unicode-bidi: plaintext;
+```
+
+```css interactive-example-choice
+unicode-bidi: isolate-override;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p class="transition-all" id="example-element">
+    בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ.
+  </p>
+</section>
+```
 
 `unicode-bidi` と {{cssxref("direction")}} プロパティだけは、 {{cssxref("all")}} 一括指定プロパティによる影響を受けません。
 
-> **警告:** このプロパティは文書型定義 (DTD) デザイナー向けです。ウェブデザイナー等の作者は、このアルゴリズムを**上書きすべきではありません**。
+> [!WARNING]
+> このプロパティは文書型定義 (DTD) デザイナー向けです。ウェブデザイナー等の作者は、このアルゴリズムを**上書きすべきではありません**。
 
 ## 構文
 

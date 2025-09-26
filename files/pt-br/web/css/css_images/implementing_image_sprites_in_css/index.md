@@ -7,7 +7,8 @@ slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 
 **Sprites de imagens** são utilizados em diversas aplicações web onde várias imagens são usadas. Ao invés de incluir cada arquivo de imagem separadamente, é mais amigável com a memória e largura de banda enviar tudo como uma única imagem, diminuindo o número de pedidos em HTTP.
 
-> **Nota:** Quando usando HTTP/2, é mais amigável com a largura de banda usar vários pequenos pedidos.
+> [!NOTE]
+> Quando usando HTTP/2, é mais amigável com a largura de banda usar vários pequenos pedidos.
 
 ## Implementação
 
@@ -46,4 +47,4 @@ De forma similar, você pode criar um efeito de hover com:
 
 ## Veja também
 
-- [Demo completa em CSS Tricks](http://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
+- [Demo completa em CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)

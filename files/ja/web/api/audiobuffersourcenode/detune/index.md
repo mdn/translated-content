@@ -1,8 +1,9 @@
 ---
-title: AudioBufferSourceNode.detune
+title: "AudioBufferSourceNode: detune プロパティ"
+short-title: detune
 slug: Web/API/AudioBufferSourceNode/detune
 l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Web Audio API")}}
@@ -16,7 +17,8 @@ l10n:
 A [k-rate](/ja/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
 whose value indicates the detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-> **メモ:** `AudioParam` は読み取り専用の値を返しますが、値は読み取り専用ではありません。
+> [!NOTE]
+> `AudioParam` は読み取り専用の値を返しますが、値は読み取り専用ではありません。
 
 ## 例
 

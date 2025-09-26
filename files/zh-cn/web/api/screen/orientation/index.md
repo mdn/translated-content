@@ -53,4 +53,4 @@ if (orientation === "landscape-primary") {
 
 - {{DOMxRef("ScreenOrientation")}}
 - {{DOMxRef("Screen.onorientationchange")}}
-- [Managing screen orientation](/zh-CN/docs/Managing_screen_orientation)
+- [Managing screen orientation](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

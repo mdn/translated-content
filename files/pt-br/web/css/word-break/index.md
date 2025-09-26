@@ -7,9 +7,45 @@ slug: Web/CSS/word-break
 
 A propriedade CSS **`word-break`** é usada para especificar se o navegador deve inserir ou não quebras de linha onde, normalmente, o texto vazaria de seu container.
 
-{{EmbedInteractiveExample("pages/css/word-break.html")}}
+{{InteractiveExample("CSS Demo: word-break")}}
 
-> **Nota:** comparando com {{cssxref("overflow-wrap")}}, `word-break` criará uma quebra de linha no ponto exato em que o texto vazaria, mesmo que uma palavra pudesse ser colocada por completo em uma nova linha sem a necessidade de quebra da palavra.
+```css interactive-example-choice
+word-break: normal;
+```
+
+```css interactive-example-choice
+word-break: break-all;
+```
+
+```css interactive-example-choice
+word-break: keep-all;
+```
+
+```css interactive-example-choice
+word-break: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Honorificabilitudinitatibus califragilisticexpialidocious
+    Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+    グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  padding: 20px;
+  text-align: start;
+  border: solid 1px darkgray;
+}
+```
+
+> [!NOTE]
+> comparando com {{cssxref("overflow-wrap")}}, `word-break` criará uma quebra de linha no ponto exato em que o texto vazaria, mesmo que uma palavra pudesse ser colocada por completo em uma nova linha sem a necessidade de quebra da palavra.
 
 ## Sintaxe
 
@@ -46,50 +82,58 @@ word-break: unset;
 
 ```html
 <p>1. <code>word-break: normal</code></p>
-<p class="normal narrow">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
+<p class="normal narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
+</p>
 
 <p>2. <code>word-break: break-all</code></p>
-<p class="breakAll narrow">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
+<p class="breakAll narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
+</p>
 
 <p>3. <code>word-break: keep-all</code></p>
-<p class="keepAll narrow">This is a long and
- Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- 次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
+<p class="keepAll narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
+</p>
 
 <p>4. <code>word-break: break-word</code></p>
-<p class="breakWord narrow">This is a long and
-  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
-  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉</p>
+<p class="breakWord narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  次の単語グレートブリテンおよび北アイルランド連合王国で本当に大きな言葉
+</p>
 ```
 
 ### Conteúdo CSS
 
 ```css
 .narrow {
-    padding: 5px;
-    border: 1px solid;
-    display: table;
-    max-width: 100%;
+  padding: 5px;
+  border: 1px solid;
+  display: table;
+  max-width: 100%;
 }
 
 .normal {
-    word-break: normal;
+  word-break: normal;
 }
 
 .breakAll {
-    word-break: break-all;
+  word-break: break-all;
 }
 
 .keepAll {
-    word-break: keep-all;
+  word-break: keep-all;
 }
 
 .breakWord {
-    word-break: break-word;
+  word-break: break-word;
 }
 ```
 
@@ -97,13 +141,11 @@ word-break: unset;
 
 ## Especificações
 
-| Especificação                                                                        | Status                       | Commentário       |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
-| {{SpecName('CSS3 Text', '#word-break-property', 'word-break')}} | {{Spec2('CSS3 Text')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.word-break")}}
+{{Compat}}
 
 ## Veja também
 

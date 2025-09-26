@@ -9,7 +9,8 @@ JavaScript の例外 "Invalid array length" は、配列の長さが負の数か
 
 配列の長さに許されている最大値は、プラットフォームとブラウザーとそのバージョンに依存します。 {{jsxref("Array")}} については、最大長は 2GB-1 (2^32-1) です。 {{jsxref("ArrayBuffer")}} については、最大値は 32 ビットシステムで 2GB-1 (2^32-1) です。 Firefox バージョン 89 から、 {{jsxref("ArrayBuffer")}} の最大値は 64 ビットシステムでは 8GB (2^33) です。
 
-> **メモ:** `Array` と `ArrayBuffer` は別個のデータ構造です (一方の実装がもう一方には影響しません)。
+> [!NOTE]
+> `Array` と `ArrayBuffer` は別個のデータ構造です (一方の実装がもう一方には影響しません)。
 
 ## メッセージ
 
@@ -41,26 +42,26 @@ RangeError: Array buffer allocation failed (Chromium-based)
 ### 不正なケース
 
 ```js example-bad
-new Array(Math.pow(2, 40))
-new Array(-1)
-new ArrayBuffer(Math.pow(2, 32)) //32 ビットシステム
-new ArrayBuffer(-1)
+new Array(Math.pow(2, 40));
+new Array(-1);
+new ArrayBuffer(Math.pow(2, 32)); //32 ビットシステム
+new ArrayBuffer(-1);
 
 let a = [];
-a.length = a.length - 1;         // length プロパティに -1 を設定
+a.length = a.length - 1; // length プロパティに -1 を設定
 
 let b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1;         // length プロパティに 2^32 を設定
+b.length = b.length + 1; // length プロパティに 2^32 を設定
 ```
 
 ### 有効な場合
 
 ```js example-good
-[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
-[ -1 ]                                  // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1)
-new ArrayBuffer(Math.pow(2, 33))  // 64 ビットシステム、 Firefox 89 以降
-new ArrayBuffer(0)
+[Math.pow(2, 40)]; // [ 1099511627776 ]
+[-1]; // [ -1 ]
+new ArrayBuffer(Math.pow(2, 32) - 1);
+new ArrayBuffer(Math.pow(2, 33)); // 64 ビットシステム、 Firefox 89 以降
+new ArrayBuffer(0);
 
 let a = [];
 a.length = Math.max(0, a.length - 1);

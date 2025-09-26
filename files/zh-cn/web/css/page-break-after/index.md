@@ -3,11 +3,9 @@ title: page-break-after
 slug: Web/CSS/page-break-after
 ---
 
-{{CSSRef}}
-
 **`page-break-after`** CSS 属性调整当前元素之后的分页符。
 
-此属性适用于生成一个盒子的块元素。它不适用于不会生成一个盒子的空 [`<div>`](/zh-CN/docs/Web/HTML/Element/div)。
+此属性适用于生成一个盒子的块元素。它不适用于不会生成一个盒子的空 [`<div>`](/zh-CN/docs/Web/HTML/Reference/Elements/div)。
 
 ```plain
 /* Keyword values */
@@ -25,7 +23,8 @@ page-break-after: initial;
 page-break-after: unset;
 ```
 
-> **备注：** 这个属性正在被更通用的 {{ cssxref("break-after")}} 取代。这个新的属性也处理列和区域中断，并在语法上兼容 `page-break-after`。
+> [!NOTE]
+> 这个属性正在被更通用的 {{ cssxref("break-after")}} 取代。这个新的属性也处理列和区域中断，并在语法上兼容 `page-break-after`。
 >
 > 在使用 `page-break-after` 之前，请检查是否可以使用 `break-after` 代替。在将来， `page-break-after` 将只是它的一些值的别名。
 
@@ -87,5 +86,5 @@ div.footnotes {
 
 ## See also
 
-- [`page-break-before`](/zh-CN/CSS/page-break-before), [`page-break-inside`](/zh-CN/CSS/page-break-inside)
-- [`orphans`](/zh-CN/CSS/orphans), [`widows`](/zh-CN/CSS/widows)
+- [`page-break-before`](/zh-CN/docs/CSS/page-break-before), [`page-break-inside`](/zh-CN/docs/CSS/page-break-inside)
+- [`orphans`](/zh-CN/docs/CSS/orphans), [`widows`](/zh-CN/docs/CSS/widows)

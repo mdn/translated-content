@@ -20,7 +20,7 @@ RangeError: Invalid code point {0} (Chrome)
 
 El metodo {{jsxref("String.fromCodePoint()")}} acepta solamente _**code point**_ validos.
 
-Un [code point](https://en.wikipedia.org/wiki/Code_point) es un valor en el conjunto de caracteres [Unicode](/es/docs/); esto es, un rango de enteros que va desde `0` a `0x10FFFF`.
+Un [code point](https://en.wikipedia.org/wiki/Code_point) es un valor en el conjunto de caracteres [Unicode](/es/docs/Web); esto es, un rango de enteros que va desde `0` a `0x10FFFF`.
 
 Usando valores {{jsxref("NaN")}}, enteros negativos (`-1`), no enteros (`3.14`), o valores mayores a `0x10FFFF` (`1114111`) no trabajarian con este metodo.
 

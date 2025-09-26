@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 **`forEach()`** 方法对数组的每个元素执行一次给定的函数。
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 语法
 
@@ -45,7 +55,8 @@ forEach(callbackFn, thisArg)
 - 已经访问过的索引的更改不会导致 `callbackFn` 再次调用它们。
 - 如果 `callbackFn` 更改了数组中已经存在但尚未访问的元素，则传递给 `callbackFn` 的值将是在访问该元素时的值。已经被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素不会被访问。
 
-> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
+> [!WARNING]
+> 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
 `forEach()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
@@ -114,7 +125,8 @@ items.forEach((item) => {
 
 ### 打印出数组的内容
 
-> **备注：** 为了在控制台中显示数组的内容，你可以使用 {{domxref("console/table", "console.table()")}} 来展示经过格式化的数组。下面的例子则是另一种使用 `forEach()` 的格式化的方法。
+> [!NOTE]
+> 为了在控制台中显示数组的内容，你可以使用 {{domxref("console/table", "console.table()")}} 来展示经过格式化的数组。下面的例子则是另一种使用 `forEach()` 的格式化的方法。
 
 下面的代码会为每一个数组元素输出一行记录：
 
@@ -158,7 +170,8 @@ console.log(obj.sum); // 16
 
 因为 `thisArg` 参数（`this`）传给了 `forEach()`，每次调用时，它都被传给 `callbackFn` 函数，作为它的 `this` 值。
 
-> **备注：** 如果使用[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来传入函数参数， `thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 {{jsxref("Operators/this", "this")}} 值。
+> [!NOTE]
+> 如果使用[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来传入函数参数， `thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 {{jsxref("Operators/this", "this")}} 值。
 
 ### 对象复制函数
 
@@ -249,7 +262,7 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.forEach` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.map()")}}

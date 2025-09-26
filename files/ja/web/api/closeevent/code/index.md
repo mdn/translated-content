@@ -1,8 +1,9 @@
 ---
 title: "CloseEvent: code プロパティ"
+short-title: code
 slug: Web/API/CloseEvent/code
 l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
 {{APIRef("Websockets API")}}
@@ -52,7 +53,7 @@ l10n:
       <td><code>1003</code></td>
       <td>未対応のデータ</td>
       <td>
-        エンドポイントが受け付けない種類のデータを受信したため、接続を終了した。（例えば、テキストのみのエンドポイントがバイナリデータを受信した場合など。）
+        エンドポイントが受け付けない種類のデータを受信したため、接続を終了した。（例えば、テキストのみのエンドポイントがバイナリーデータを受信した場合など。）
       </td>
     </tr>
     <tr>
@@ -113,14 +114,14 @@ l10n:
     </tr>
     <tr>
       <td><code>1012</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">サービス再起動</a></td>
+      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">サービス再起動</a></td>
       <td>
         サーバーが再起動するため、接続を終了しようとしている。
       </td>
     </tr>
     <tr>
       <td><code>1013</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">後で再試行</a></td>
+      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">後で再試行</a></td>
       <td>
         サーバーが過負荷のため、一部のクライアントを切断するなど、一時的な状態により接続を終了している。
       </td>

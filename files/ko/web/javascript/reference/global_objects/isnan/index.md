@@ -5,9 +5,24 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 
 {{jsSidebar("Objects")}}
 
-**`isNaN()`** 함수는 어떤 값이 {{jsxref("NaN")}}인지 판별합니다. `isNaN` 함수는 몇몇 [혼란스러운 케이스](special-behavior)을 가지고 있으므로, ECMAScript 2015에서 추가한 {{jsxref("Number.isNaN()")}}으로 바꾸는 편이 좋을 수도 있습니다.
+**`isNaN()`** 함수는 어떤 값이 {{jsxref("NaN")}}인지 판별합니다. `isNaN` 함수는 몇몇 [혼란스러운 케이스](#설명)을 가지고 있으므로, ECMAScript 2015에서 추가한 {{jsxref("Number.isNaN()")}}으로 바꾸는 편이 좋을 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+
+```js interactive-example
+function milliseconds(x) {
+  if (isNaN(x)) {
+    return "Not a Number!";
+  }
+  return x * 1000;
+}
+
+console.log(milliseconds("100F"));
+// Expected output: "Not a Number!"
+
+console.log(milliseconds("0.0314E+2"));
+// Expected output: 3140
+```
 
 ## 구문
 

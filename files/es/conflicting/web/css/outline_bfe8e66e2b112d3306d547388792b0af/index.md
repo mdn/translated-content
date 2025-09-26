@@ -1,10 +1,10 @@
 ---
-title: '-moz-outline-radius-topright'
+title: "-moz-outline-radius-topright"
 slug: conflicting/Web/CSS/outline_bfe8e66e2b112d3306d547388792b0af
 original_slug: Web/CSS/-moz-outline-radius-topright
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

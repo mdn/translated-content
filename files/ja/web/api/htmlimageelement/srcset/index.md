@@ -3,7 +3,7 @@ title: "HTMLImageElement: srcset プロパティ"
 short-title: srcset
 slug: Web/API/HTMLImageElement/srcset
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +14,8 @@ l10n:
 
 `srcset` プロパティは {{domxref("HTMLImageElement.sizes", "sizes")}} プロパティとともに、レスポンシブウェブサイトを設計する上で重要な要素です。これらのプロパティを併用することにより、描画状況に適した画像を使用するページを作成できます。
 
-> **メモ:** [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性が幅記述子を使用した場合、`sizes` 属性も指定する必要があります。さもないと `srcset` 自体が無視されます。
+> [!NOTE]
+> [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性が幅記述子を使用した場合、`sizes` 属性も指定する必要があります。さもないと `srcset` 自体が無視されます。
 
 ## 値
 
@@ -54,9 +55,9 @@ l10n:
 ```html
 <div class="box">
   <img
-    src="/en-us/web/html/element/img/clock-demo-200px.png"
+    src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="/en-us/web/html/element/img/clock-demo-400px.png 2x" />
+    srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 2x" />
 </div>
 ```
 
@@ -67,7 +68,7 @@ CSS では、画像とその周囲のボックスは 200 ピクセル四方で�
 ```css
 .box {
   width: 200px;
-  border: 2px solid rgb(150, 150, 150);
+  border: 2px solid rgb(150 150 150);
   padding: 0.5em;
   word-break: break-all;
 }
@@ -98,7 +99,7 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("Examples", 640, 320)}}
 
-それ以外の例については、[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)のガイドを参照してください。
+それ以外の例については、[レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)のガイドを参照してください。
 
 ## 仕様書
 
@@ -110,6 +111,6 @@ window.addEventListener("load", () => {
 
 ## 関連情報
 
-- [HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types)
+- [HTML の画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
+- [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)

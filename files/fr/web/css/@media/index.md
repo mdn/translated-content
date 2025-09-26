@@ -5,13 +5,14 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/Media_Queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/CSS_media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
 
-> **Note :** Il est possible de manipuler la règle @ `@media` via le CSSOM (et JavaScript) grâce à l'interface [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule).
+> [!NOTE]
+> Il est possible de manipuler la règle @ `@media` via le CSSOM (et JavaScript) grâce à l'interface [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule).
 
 ## Syntaxe
 
-Une requête média (type `<media-query>`) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre [règle conditionnelle](/fr/docs/Web/CSS/At-rule#les_règles_de_groupe_conditionnelles).
+Une requête média (type `<media-query>`) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre [règle conditionnelle](/fr/docs/Web/CSS/CSS_syntax/At-rule#les_règles_de_groupe_conditionnelles).
 
 ```css
 /* Au niveau le plus haut du code */
@@ -31,7 +32,7 @@ Une requête média (type `<media-query>`) est composée d'un type de média (op
 }
 ```
 
-Pour plus d'informations sur la syntaxe des requêtes média, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries).
+Pour plus d'informations sur la syntaxe des requêtes média, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 ## Description
 
@@ -42,11 +43,12 @@ _Les types de média_ décrivent la catégorie générale d'un appareil. Sauf qu
 - `all`
   - : Applicable à tous les appareils.
 - `print`
-  - : Destiné pour le contenu paginé et les documents visualisés sur un écran en aperçu d'impression. Voir [la page sur les médias paginés](/fr/docs/Web/CSS/Paged_Media) pour plus d'informations sur les aspects de formatage spécifiques à ces formats.
+  - : Destiné pour le contenu paginé et les documents visualisés sur un écran en aperçu d'impression. Voir [la page sur les médias paginés](/fr/docs/Web/CSS/CSS_paged_media) pour plus d'informations sur les aspects de formatage spécifiques à ces formats.
 - `screen`
   - : Destiné principalement aux écrans.
 
-> **Note :** CSS2.1 et [le module de spécification sur les requêtes média de niveau 3](https://drafts.csswg.org/mediaqueries-3/#background) ont défini des types de média supplémentaires (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, et `aural`), mais ceux-ci ont été dépréciés avec [le module de spécification sur les requêtes média de niveau 4](https://dev.w3.org/csswg/mediaqueries/#media-types) et ne devraient donc pas être utilisés.
+> [!NOTE]
+> CSS2.1 et [le module de spécification sur les requêtes média de niveau 3](https://drafts.csswg.org/mediaqueries-3/#background) ont défini des types de média supplémentaires (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, et `aural`), mais ceux-ci ont été dépréciés avec [le module de spécification sur les requêtes média de niveau 4](https://dev.w3.org/csswg/mediaqueries/#media-types) et ne devraient donc pas être utilisés.
 
 ### Caractéristiques de média
 
@@ -72,7 +74,7 @@ Les expressions de caractéristique de média testent la présence ou la valeur 
 - [`device-width`](/fr/docs/Web/CSS/@media/device-width) {{deprecated_inline}}
   - : La largeur de la surface de rendu de l'appareil de sortie. Dépréciée avec le module de spécification sur les requêtes média de niveau 4.
 - [`display-mode`](/fr/docs/Web/CSS/@media/display-mode)
-  - : Le mode d'affichage de l'application, tel qu'indiqué par la propriété [`display`](/fr/docs/Web/Manifest#display) du manifeste de l'application. Définie par [la spécification du manifeste des applications web](https://w3c.github.io/manifest/#the-display-mode-media-feature).
+  - : Le mode d'affichage de l'application, tel qu'indiqué par la propriété [`display`](/fr/docs/Web/Progressive_web_apps/Manifest#display) du manifeste de l'application. Définie par [la spécification du manifeste des applications web](https://w3c.github.io/manifest/#the-display-mode-media-feature).
 - [`dynamic-range`](/fr/docs/Web/CSS/@media/dynamic-range)
   - : Une combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
 - [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
@@ -105,7 +107,7 @@ Les expressions de caractéristique de média testent la présence ou la valeur 
   - : La densité de pixel de l'appareil de sortie.
 - [`scripting`](/fr/docs/Web/CSS/@media/scripting)
   - : Indique la disponibilité d'un moteur de script (par exemple JavaScript). Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`update`](/fr/docs/Web/CSS/@media/update-frequency)
+- [`update`](/fr/docs/Web/CSS/@media/update)
   - : Indique la fréquence à laquelle l'appareil de sortie peut modifier l'apparence du contenu. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
 - [`video-dynamic-range`](/fr/docs/Web/CSS/@media/video-dynamic-range)
   - : Une combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
@@ -120,10 +122,10 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 - `and`
   - : Cet opérateur permet de combiner plusieurs tests de caractéristiques afin que le résultat du test vaille `true` si chacun des tests individuels vaut `true`. Il permet également de joindre des tests de caractéristiques média et des tests de type de média.
 - `not`
-
   - : Cet opérateur donne la négation d'une requête média, renvoyant `true` si la requête devait renvoyer `false`. Si cet opérateur est présent dans une liste de requêtes séparées par des virgules, la négation portera uniquement sur la requête sur laquelle l'opérateur est appliqué. Si l'opérateur `not` est utilisé, il _est nécessaire_ d'indiquer un type de média.
 
-    > **Note :** Dans la spécification de niveau 3, le mot-clé `not` permet uniquement de prendre la négation d'une requête média entière (et pas d'une caractéristique seule).
+    > [!NOTE]
+    > Dans la spécification de niveau 3, le mot-clé `not` permet uniquement de prendre la négation d'une requête média entière (et pas d'une caractéristique seule).
 
 - `only`
   - : Applique la mise en forme uniquement si toute la requête correspond. Ce mot-clé est utile pour empêcher les anciens navigateurs d'appliquer les styles en question. Sans utiliser `only`, les anciens navigateurs interpréteraient la requête `screen and (max-width: 500px)` comme `screen`, en ignorant le reste et en appliquant donc le style à tous les écrans. Si l'opérateur `only` est utilisé, il _est nécessaire_ d'indiquer un type de média.
@@ -132,9 +134,9 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 
 ## Accessibilité
 
-Pour une meilleure interaction, notamment avec les personnes qui zooment sur une page pour accroître la taille du texte ou qui définissent une taille de police par défaut pour l'ensemble du navigateur, on utilisera l'unité [`em`](/fr/docs/Web/CSS/length#em) comme valeur pour [les requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries) lorsqu'il faut utiliser une longueur (valeur de type [`<length>`](/fr/docs/Web/CSS/length)).
+Pour une meilleure interaction, notamment avec les personnes qui zooment sur une page pour accroître la taille du texte ou qui définissent une taille de police par défaut pour l'ensemble du navigateur, on utilisera l'unité [`em`](/fr/docs/Web/CSS/length#em) comme valeur pour [les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) lorsqu'il faut utiliser une longueur (valeur de type [`<length>`](/fr/docs/Web/CSS/length)).
 
-Les unités [`em`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) et [`px`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) sont toutes les deux valides mais [`em`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) s'adapte mieux quand la taille de la police du navigateur a été ajustée.
+Les unités [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longueur_et_taille) et [`px`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longueur_et_taille) sont toutes les deux valides mais [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#longueur_et_taille) s'adapte mieux quand la taille de la police du navigateur a été ajustée.
 
 On privilégiera, autant que possible, les requêtes média de la spécification de niveau 4 afin d'améliorer l'ergonomie. On pourra, par exemple, se baser sur [`prefers-reduced-motion` afin de détecter si l'utilisateur souhaite minimiser les animations ou les déplacements](/fr/docs/Web/CSS/@media/prefers-reduced-motion).
 
@@ -190,7 +192,7 @@ Avec la mise à jour de la spécification pour les requêtes média, une nouvell
 }
 ```
 
-Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries).
+Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 ## Spécifications
 
@@ -202,5 +204,5 @@ Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/Medi
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - L'interface CSSOM [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule) qui est associée avec cette règle @.

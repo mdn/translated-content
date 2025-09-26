@@ -1,8 +1,9 @@
 ---
 title: "Document: scroll イベント"
+short-title: scroll
 slug: Web/API/Document/scroll_event
 l10n:
-  sourceCommit: ad11fa09cfe07fbce82de0457daa8c5ac243b748
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef}}
@@ -29,7 +30,7 @@ onscroll = (event) => {};
 
 ### スクロールイベントの間引き
 
-`scroll` イベントは高い確率で生じることができるため、イベントハンドラーは DOM の変更といった計算上の処理コストの高い操作を実行すべきではありません。その代わり、次のように {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}}、{{DOMxRef("CustomEvent")}} などを使ってイベントを間引くことをお勧めします。
+`scroll` イベントは高い確率で生じることができるため、イベントハンドラーは DOM の変更といった計算上の処理コストの高い操作を実行すべきではありません。その代わり、次のように {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{domxref("Window.setTimeout", "setTimeout()")}}、{{DOMxRef("CustomEvent")}} などを使ってイベントを間引くことをお勧めします。
 
 ただし、入力イベントやアニメーションフレームは同じような割合で発生するため、そのため下記のような最適化は不要の場合が多いことに注意してください。 この例では `requestAnimationFrame` の `scroll` イベントを最適化しています。
 

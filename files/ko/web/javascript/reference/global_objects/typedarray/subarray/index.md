@@ -9,7 +9,17 @@ l10n:
 
 **`subarray()`** 메서드는 이 TypedArray 객체와 동일한 {{jsxref("ArrayBuffer")}} 저장소에 동일한 요소의 타입을 가진 새로운 TypedArray를 반환합니다. 시작 오프셋은 **포함**하고 마지막 오프셋은 **제외**합니다. TypedArray는 [타입이 지정된 배열 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.subarray()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.subarray(1, 3));
+// Expected output: Uint8Array [20, 30]
+
+console.log(uint8.subarray(1));
+// Expected output: Uint8Array [20, 30, 40, 50]
+```
 
 ## 구문
 

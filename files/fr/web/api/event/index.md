@@ -5,17 +5,18 @@ slug: Web/API/Event
 
 {{APIRef("DOM")}}
 
-L'interface **`Event`** interface représente un évènement qui se produit dans le DOM.
+L'interface **`Event`** représente un évènement qui se produit dans le DOM.
 
 Un évènement peut être déclenché par une action humaine (clic avec la souris, appui sur une touche du clavier) ou généré par des API pour représenter la progression d'une tâche asynchrone. Il est également possible de déclencher un évènement à partir d'un programme, en appelant par exemple la méthode [`HTMLElement.click()`](/fr/docs/Web/API/HTMLElement/click) sur un élément ou en définissant l'évènement avant de l'envoyer sur une cible avec la méthode [`EventTarget.dispatchEvent()`](/fr/docs/Web/API/EventTarget/dispatchEvent).
 
 Il existe de nombreux types d'évènements dont certains utilisent d'autres interfaces basées sur `Event`. L'interface `Event` contient les propriétés et méthodes qui sont communes à l'ensemble des évènements.
 
-De nombreux éléments DOM peuvent être paramétrés afin d'accepter (« d'écouter ») ces évènements et d'exécuter du code en réaction afin de les traiter (« gérer »). Les gestionnaires d'évènements sont généralement connectés (« attachés ») aux [éléments HTML](/fr/docs/Web/HTML/Element) (tels que `<button>`, `<div>`, `<span>`, etc.) grâce à la méthode [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) qui remplace les anciens [attributs de gestion d'évènement](/fr/docs/Web/HTML/Global_attributes) qui étaient auparavant utilisés en HTML. Avec cette méthode d'ajout plus récente, les gestionnaires peuvent également être déconnectés/détachés si besoin via la méthode [`EventTarget.removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener).
+De nombreux éléments DOM peuvent être paramétrés afin d'accepter (« d'écouter ») ces évènements et d'exécuter du code en réaction afin de les traiter (« gérer »). Les gestionnaires d'évènements sont généralement connectés (« attachés ») aux [éléments HTML](/fr/docs/Web/HTML/Reference/Elements) (tels que `<button>`, `<div>`, `<span>`, etc.) grâce à la méthode [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) qui remplace les anciens [attributs de gestion d'évènement](/fr/docs/Web/HTML/Reference/Global_attributes) qui étaient auparavant utilisés en HTML. Avec cette méthode d'ajout plus récente, les gestionnaires peuvent également être déconnectés/détachés si besoin via la méthode [`EventTarget.removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener).
 
-> **Note :** Il est tout à fait possible d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse pourront tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).
+> [!NOTE]
+> Il est tout à fait possible d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse pourront tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).
 
-Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres [de bouillonnement (_bubbling_) et de capture](/fr/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) définis sur chaque gestionnaire ainsi déclenché.
+Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres [de bouillonnement (_bubbling_) et de capture](/fr/docs/Learn_web_development/Core/Scripting/Events#event_bubbling_and_capture) définis sur chaque gestionnaire ainsi déclenché.
 
 ## Interfaces basées sur Event
 
@@ -91,7 +92,7 @@ On notera que l'ensemble des interfaces d'évènements ont un nom qui termine pa
   - : Un booléen qui indique si l'évènement peut bouillonner entre l'arbre du shadow DOM et le DOM standard.
 - [`Event.currentTarget`](/fr/docs/Web/API/Event/currentTarget) {{readonlyinline}}
   - : Une référence vers la cible actuellement enregistrée pour l'évènement. Il s'agit de l'objet vers lequel l'évènement est présentement destiné à être envoyé. Cette cible peut avoir été modifiée pendant la vie de l'évènement via un reciblage.
-- [`Event.deepPath`](/fr/docs/Web/API/Event/deepPath) {{non-standard_inline}}
+- [`Event.deepPath`](/fr/docs/Web/API/Event/composedPath) {{non-standard_inline}}
   - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) de nœuds ([`Node`](/fr/docs/Web/API/Node)) du DOM qui ont été parcourus lors du bouillonnement/de la remontée de l'évènement.
 - [`Event.defaultPrevented`](/fr/docs/Web/API/Event/defaultPrevented) {{readonlyinline}}
   - : Indique si un appel à [`Event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) a annulé l'évènement.
@@ -145,6 +146,6 @@ On notera que l'ensemble des interfaces d'évènements ont un nom qui termine pa
 
 ## Voir aussi
 
-- Les types d'évènement disponibles : [Référence des évènements](/fr/docs/Web/Events)
-- [Comparaison des cibles d'évènements](/fr/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
-- [Créer et déclencher des évènements personnalisés](/fr/docs/Web/Events/Creating_and_triggering_events)
+- Les types d'évènement disponibles : [Référence des évènements](/fr/docs/Web/API/Document_Object_Model/Events)
+- [Comparaison des cibles d'évènements](/fr/docs/Learn_web_development/Core/Scripting/Event_bubbling) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
+- [Créer et déclencher des évènements personnalisés](/fr/docs/conflicting/Web/API/Document_Object_Model/Events)

@@ -5,26 +5,24 @@ l10n:
   sourceCommit: da3834afbae2d4ceb209593458d5df3c1e2d2d20
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 115 の変更点をまとめています。Firefox 115 は、米国時間 2023 年 7 月 4 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性で [`modulepreload`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) キーワードをサポートしました。
+- {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性で [`modulepreload`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) キーワードをサポートしました。
   これは [モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules) やその依存先を早期に (非同期で) 並列で読み込むことができ、それらは文書のモジュールマップに保存されます ([Firefox bug 1425310](https://bugzil.la/1425310))。
 
 ### CSS
 
 - CSSの {{cssxref("animation-composition")}} プロパティを、デフォルトで有効にしました。このプロパティを使用して、複数のアニメーションが同じプロパティへ同時に影響を与えるときの合成処理を指定できます ([Firefox bug 1823862](https://bugzil.la/1823862))。
-- CSS {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule) の `supports()` で `supports-conditions` をデフォルトで有効にしました。この機能で、指定した機能がユーザーのブラウザーでサポートされている場合に限り、スタイルシートをインポートできます ([Firefox bug 1830779](https://bugzil.la/1830779))。
+- CSS {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の `supports()` で `supports-conditions` をデフォルトで有効にしました。この機能で、指定した機能がユーザーのブラウザーでサポートされている場合に限り、スタイルシートをインポートできます ([Firefox bug 1830779](https://bugzil.la/1830779))。
 
 ### JavaScript
 
 - {{jsxref("Array.fromAsync()")}} 静的メソッドをサポートしました。
-  このメソッドは [非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)、[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)、あるいは [配列のような](/ja/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) オブジェクトから、新たにシャローコピーした `Array` のインスタンスを非同期に返します ([Firefox bug 1795816](https://bugzil.la/1795816))。
+  このメソッドは [非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)、[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)、あるいは [配列のような](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い) オブジェクトから、新たにシャローコピーした `Array` のインスタンスを非同期に返します ([Firefox bug 1795816](https://bugzil.la/1795816))。
 - `Array` および `TypedArray` メソッドで [`Array.toReversed()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)、[`Array.toSorted()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)、[`Array.toSpliced()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)、[`Array.with()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/with)、[`TypedArrays.toReversed()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed)、[`TypedArrays.toSorted()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted)、[`TypedArrays.with()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/with) をサポートしました。
   これらのメソッドは、シャローコピーされた要素を持つ新しい配列を返します (`to` 接頭辞がつかない似た名前のメソッドは、配列の要素を直接変更します) ([Firefox bug 1811057](https://bugzil.la/1811057))。
 
@@ -34,7 +32,7 @@ l10n:
 
 ### HTTP
 
-- [`Sec-Purpose`](/ja/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}} が、リソースを {{Glossary("Prefetch", "プリフェッチ")}} する要求に含まれるようになりました。
+- [`Sec-Purpose`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}} が、リソースを {{Glossary("Prefetch", "プリフェッチ")}} する要求に含まれるようになりました。
   これにより要求に対してキャッシュの期限を調節するなど、サーバーが必要に応じて特別な制御を行うことができます ([Firefox bug 1836328](https://bugzil.la/1836328))。
 
 ### API
@@ -44,7 +42,7 @@ l10n:
 - [`URL.canParse()`](/ja/docs/Web/API/URL/canParse_static) 静的メソッドを使用して、絶対 URL または相対 URL とベース URL の解析や検証が可能になりました。
   これは `try...catch` ブロックや例外処理で構築するよりも高速かつ簡単に、URL が有効であるかを確認する手段を提供します ([Firefox bug 1823354](https://bugzil.la/1823354))。
 - [`URLSearchParams.has()`](/ja/docs/Web/API/URLSearchParams/has) および [`URLSearchParams.delete()`](/ja/docs/Web/API/URLSearchParams/delete) メソッドで、省略可能な引数 `value` をサポートしました。
-  これは `name` および `value` の両方で検索パラメーターとマッチングさせることができ、同じ名前で複数の検索パラメーターを持つクエリー文字列を操作できます ([Firefox bug 1831587](https://bugzil.la/1831587))。
+  これは `name` および `value` の両方で検索引数と照合させることができ、同じ名前で複数の検索引数を持つクエリー文字列を操作できます ([Firefox bug 1831587](https://bugzil.la/1831587))。
 
 #### 廃止
 

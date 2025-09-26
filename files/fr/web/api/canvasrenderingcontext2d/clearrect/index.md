@@ -26,7 +26,7 @@ void ctx.clearRect(x, y, largeur, hauteur);
 
 ## Notes d'utilisation
 
-Un problème classique avec `clearRect` est qu'il peut apparaître comme ne fonctionnant pas si l'on n'[utilise pas les trajets de façon appropriée](/fr/docs/Tutoriel_canvas/Formes_géométriques#Drawing_paths). N'oubliez pas d'appeler {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} avant de commencer à dessiner une nouvelle image après avoir appelé `clearRect`.
+Un problème classique avec `clearRect` est qu'il peut apparaître comme ne fonctionnant pas si l'on n'[utilise pas les trajets de façon appropriée](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths). N'oubliez pas d'appeler {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} avant de commencer à dessiner une nouvelle image après avoir appelé `clearRect`.
 
 ## Exemples
 

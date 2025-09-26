@@ -1,34 +1,34 @@
 ---
-title: Document.scripts
+title: Document：scripts 属性
 slug: Web/API/Document/scripts
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
-### 概述
+{{domxref("Document")}} 接口的 **`scripts`** 属性返回文档中 {{HTMLElement("script")}} 元素的列表。返回的对象是 {{domxref("HTMLCollection")}}。
 
-返回一个{{ domxref("HTMLCollection") }}对象，包含了当前文档中所有{{ HTMLElement("script") }}元素的集合。
+## 值
 
-### 语法
+{{domxref("HTMLCollection")}}。你可以像使用数组一样使用它来获取列表中的所有元素。
 
-```plain
-var scriptList = document.scripts;
-```
+## 示例
 
-`scriptList` 是一个 {{ domxref("HTMLCollection") }} 对象。你可以像使用数组一样通过索引来获取其中包含的 {{ HTMLElement("script") }} 元素。
-
-### 例子
-
-下例演示了如何查看当前页面是否包含有{{ HTMLElement("script") }}元素。
+此示例将查询页面是否有任何 {{HTMLElement("script")}} 元素。
 
 ```js
-var scripts = document.scripts;
+let scripts = document.scripts;
 
 if (scripts.length) {
-  alert("该页面存在 script 标签！");
+  alert("此页面包含脚本！");
 }
 ```
 
-### 浏览器兼容性
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
 
 {{Compat}}

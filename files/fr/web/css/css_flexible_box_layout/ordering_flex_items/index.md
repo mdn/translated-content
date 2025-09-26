@@ -44,7 +44,8 @@ Si vous utilisez une valeur qui inverse cet affichage ou une méthode qui réord
 
 > «&nbsp;Les autrices et auteurs ne doivent pas utiliser `order` ou les valeurs `-reverse` de `flex-flow`/`flex-direction` comme remplacement d'un ordre correct dans le document source, car cela peut nuire à l'accessibilité du document.&nbsp;»
 
-> **Note :** Pendant plusieurs années, Firefox possédait un bug avec lequel il essayait de suivre l'ordre visuel plutôt que l'ordre de la source, à la différence des autres navigateurs. Ce bug a été corrigé. Il faut toujours considérer l'ordre des éléments dans le document source comme étant l'ordre logique, tous les agents utilisateurs modernes respectent la spécification à cet égard.
+> [!NOTE]
+> Pendant plusieurs années, Firefox possédait un bug avec lequel il essayait de suivre l'ordre visuel plutôt que l'ordre de la source, à la différence des autres navigateurs. Ce bug a été corrigé. Il faut toujours considérer l'ordre des éléments dans le document source comme étant l'ordre logique, tous les agents utilisateurs modernes respectent la spécification à cet égard.
 
 Dans l'exemple qui suit, nous avons ajouté une mise en forme sur le focus afin que vous puissiez voir quel lien est actif lorsque vous naviguez au clavier. Si vous modifier la valeur de `flex-direction`, vous pouvez voir que la navigation au clavier continue de suivre l'ordre dans lequel les éléments sont écrits dans le document source.
 

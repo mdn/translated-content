@@ -9,7 +9,8 @@ l10n:
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-block`** est une propriété logique qui définit ce qu'il faut afficher quand le contenu dépasse d'un élément de bloc sur les bords de bloc (ceux orthogonaux au sens d'écriture). On peut choisir d'afficher rien, une barre de défilement ou de laisser le contenu dépasser.
 
-> **Note :** La propriété `overflow-block` correspond à [`overflow-y`](/fr/docs/Web/CSS/overflow-y) ou [`overflow-x`](/fr/docs/Web/CSS/overflow-x) selon le mode d'écriture du document.
+> [!NOTE]
+> La propriété `overflow-block` correspond à [`overflow-y`](/fr/docs/Web/CSS/overflow-y) ou [`overflow-x`](/fr/docs/Web/CSS/overflow-x) selon le mode d'écriture du document.
 
 ## Syntaxe
 
@@ -171,4 +172,4 @@ div {
 - [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/CSS_overflow)
 - [Les propriétés logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Les modes d'écritures](/fr/docs/Web/CSS/CSS_writing_modes)
-- [Apprendre le débordement de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Apprendre le débordement de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow)

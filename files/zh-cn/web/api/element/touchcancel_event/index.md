@@ -3,6 +3,8 @@ title: Element：touchcancel 事件
 slug: Web/API/Element/touchcancel_event
 ---
 
+{{APIRef}}
+
 `touchcancel` 事件在触点被中断时触发，中断方式基于特定实现而有所不同（例如，创建了太多的触点）。
 
 ## 语法
@@ -58,4 +60,4 @@ _此接口从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承
 
 ## 参见
 
-- 以 [`Document`](/zh-CN/docs/Web/API/Document) 为目标的相同事件：[`touchcancel`](/zh-CN/docs/Web/API/Document/touchcancel_event)
+- 以 [`Document`](/zh-CN/docs/Web/API/Document) 为目标的相同事件：[`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event)

@@ -1,13 +1,14 @@
 ---
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
+l10n:
+  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
-
-{{CSSRef}}
 
 **`any-pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。
 
-> **メモ:** *第一の*ポインティングデバイスの正確性を調べたい場合は、代わりに [`pointer`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
+> [!NOTE]
+> *第一の*ポインティングデバイスの正確性を調べたい場合は、代わりに [`pointer`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
 
 ## 構文
 
@@ -20,7 +21,8 @@ slug: Web/CSS/@media/any-pointer
 - `fine`
   - : 正確性が高いポインティングデバイスが、少なくとも一つ含まれています。
 
-> **メモ:** 異なる性質を持つ複数の機器が利用できる場合は、複数の値に一致することがありますが、 `none` はポインティングデバイスがない場合のみ一致します。
+> [!NOTE]
+> 異なる性質を持つ複数の機器が利用できる場合は、複数の値に一致することがありますが、 `none` はポインティングデバイスがない場合のみ一致します。
 
 ## 例
 
@@ -29,7 +31,7 @@ slug: Web/CSS/@media/any-pointer
 ### HTML
 
 ```html
-<input id="test" type="checkbox" /> <label for="test">Look at me!</label>
+<input id="test" type="checkbox" /> <label for="test">こちらを見て！</label>
 ```
 
 ### CSS
@@ -41,8 +43,6 @@ input[type="checkbox"]:checked {
 
 @media (any-pointer: fine) {
   input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     appearance: none;
     width: 15px;
     height: 15px;
@@ -52,8 +52,6 @@ input[type="checkbox"]:checked {
 
 @media (any-pointer: coarse) {
   input[type="checkbox"] {
-    -moz-appearance: none;
-    -webkit-appearance: none;
     appearance: none;
     width: 30px;
     height: 30px;

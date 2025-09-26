@@ -3,8 +3,6 @@ title: contain-intrinsic-block-size
 slug: Web/CSS/contain-intrinsic-block-size
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values) **`contain-intrinsic-block-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_containment#尺寸局限)时浏览器用于布局的元素块向尺寸。
 
 块向尺寸为元素在垂直于行内文本流的方向上的尺寸。在如标准英文等横向书写模式（{{CSSXref("writing-mode")}}）中，块向尺寸为纵向尺度（高度）；在纵向书写模式中，块向尺寸为横向尺度。
@@ -97,7 +95,7 @@ contain-intrinsic-block-size: unset;
 
 ## 参见
 
-- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/content-visibility/)（web.dev）
+- [content-visibility：提高渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（web.developers.google.cn）
 - {{CSSXref("contain-intrinsic-inline-size")}}
 - {{CSSXref("contain-intrinsic-size")}}
 - {{CSSXref("contain-intrinsic-width")}}

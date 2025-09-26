@@ -33,10 +33,10 @@ Os vários métodos de layout têm diferente suporte para o navegador. Veja os g
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Veja também
 
-- [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout)
 - [Fornecendo uma trilha de "migalha de pão"](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Usando o atributo aria-current](https://tink.uk/using-the-aria-current-attribute/)

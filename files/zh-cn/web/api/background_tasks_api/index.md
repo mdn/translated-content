@@ -7,64 +7,24 @@ slug: Web/API/Background_Tasks_API
 
 **后台任务协作调度 API**（Cooperative Scheduling of Background Tasks API，也叫后台任务 API，或者简单称为 `requestIdleCallback()` API）提供了由用户代理决定的，在空闲时间自动执行队列任务的能力。
 
-> **备注：** 此 API *无法*在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
+> [!NOTE]
+> 此 API *无法*在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
 
 ## 概念和用法
 
-浏览器的主线程以其事件循环队列为中心。此代码渲染 {{domxref("Document")}} 上待更新展示的内容，执行页面待运行的 JavaScript 脚本，接收来自输入设备的事件，以及分发事件给需要接收事件的元素。此外，事件循环队列处理与操作系统的交互、浏览器自身用户界面的更新等等。这是一个非常繁忙的代码块，您的主要 JavaScript 代码可能会和这些代码一起也在这个线程中执行。当然，大多数（不是所有）能够更改 DOM 的代码都在主线程中运行，因为用户界面更改通常只对主线程可用。
+浏览器的主线程以其事件循环队列为中心。此代码渲染 {{domxref("Document")}} 上待更新展示的内容，执行页面待运行的 JavaScript 脚本，接收来自输入设备的事件，以及分发事件给需要接收事件的元素。此外，事件循环队列处理与操作系统的交互、浏览器自身用户界面的更新等等。这是一个非常繁忙的代码块，你的主要 JavaScript 代码可能会和这些代码一起也在这个线程中执行。当然，大多数（不是所有）能够更改 DOM 的代码都在主线程中运行，因为用户界面更改通常只对主线程可用。
 
-因为事件处理和屏幕更新是用户关注性能最明显的两种方式。对于您的代码来说，防止在事件队列中出现卡顿是很重要的。在过去，除了编写尽可能高效的代码和将尽可能多的工作移交给 [worker](/zh-CN/docs/Web/API/Web_Workers_API) 之外，没有其他可靠的方法可以做到这一点。{{domxref("Window.requestIdleCallback()")}} 允许浏览器告诉您的代码可以安全使用多少时间而不会导致系统延迟，从而有助于确保浏览器的事件循环平稳运行。如果您保持在给定的范围内，您可以使用户体验更好。
+因为事件处理和屏幕更新是用户关注性能最明显的两种方式。对于你的代码来说，防止在事件队列中出现卡顿是很重要的。在过去，除了编写尽可能高效的代码和将尽可能多的工作移交给 [worker](/zh-CN/docs/Web/API/Web_Workers_API) 之外，没有其他可靠的方法可以做到这一点。{{domxref("Window.requestIdleCallback()")}} 允许浏览器告诉你的代码可以安全使用多少时间而不会导致系统延迟，从而有助于确保浏览器的事件循环平稳运行。如果你保持在给定的范围内，你可以使用户体验更好。
 
 ### 充分利用空闲回调
 
-因为 idle callback 旨在为代码提供一种与事件循环协作的方式，以确保系统充分利用其潜能，不会过度分配任务，从而导致延迟或其他性能问题，因此您应该考虑如何使用它。
+因为 idle callback 旨在为代码提供一种与事件循环协作的方式，以确保系统充分利用其潜能，不会过度分配任务，从而导致延迟或其他性能问题，因此你应该考虑如何使用它。
 
 - **对非高优先级的任务使用空闲回调**。已经创建了多少回调，用户系统的繁忙程度，你的回调多久会执行一次（除非你指定了 `timeout`），这些都是未知的。不能保证每次事件循环（甚至每次屏幕更新）后都能执行空闲回调；如果事件循环用尽了所有可用时间，那你可就倒霉了（再说一遍，除非你用了 `timeout`）。
 - **空闲回调应尽可能不超支分配到的时间**。尽管即使你超出了规定的时间上限，通常来说浏览器、代码、网页也能继续正常运行，这里的时间限制是用来保证系统能留有足够的时间去完成当前的事件循环然后进入下一个循环，而不会导致其他代码卡顿或动画效果延迟。目前，{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 有一个 50 ms 的上限时间，但实际上你能用的时间比这个少，因为在复杂的页面中事件循环可能已经花费了其中的一部分，浏览器的扩展插件也需要处理时间，等等。
 - **避免在空闲回调中改变 DOM**。空闲回调执行的时候，当前帧已经结束绘制了，所有布局的更新和计算也已经完成。如果你做的改变影响了布局，你可能会强制停止浏览器并重新计算，而从另一方面来看，这是不必要的。如果你的回调需要改变 DOM，它应该使用 {{domxref("Window.requestAnimationFrame()")}} 来调度它。
 - **避免运行时间无法预测的任务**。你的空闲回调必须避免做任何占用时间不可预测的事情。比如说，应该避免做任何会影响页面布局的事情。你也必须避免 执行{{domxref("Promise")}} 的 `resolve` 和 `reject`，因为这会在你的回调函数返回后立即引用 Promise 对象对 `resolve` 和 `reject` 的处理程序。
 - **在你需要的时候要用 timeout，但记得只在需要的时候才用**。使用 timeout 可以保证你的代码按时执行，但是在剩余时间不足以强制执行你的代码的同时保证浏览器的性能表现的情况下，timeout 就会造成延迟或者动画不流畅。
-
-### 回退到 setTimeout
-
-因为后台任务 API 还是相当新的，而你的代码可能需要在那些不仍不支持此 API 的浏览器上运行。你可以把 {{domxref("WindowTimers.setTimeout()", "setTimeout()")}} 用作回调选项来做这样的事。这个并不是 {{Glossary("polyfill")}} ，因为它在功能上并不相同；`setTimeout()` 并不会让你利用空闲时段，而是使你的代码在情况允许时执行你的代码，以使我们可以尽可能地避免造成用户体验性能表现延迟的后果。
-
-```js
-window.requestIdleCallback =
-  window.requestIdleCallback ||
-  function (handler) {
-    let startTime = Date.now();
-
-    return setTimeout(function () {
-      handler({
-        didTimeout: false,
-        timeRemaining: function () {
-          return Math.max(0, 50.0 - (Date.now() - startTime));
-        },
-      });
-    }, 1);
-  };
-```
-
-如果 {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} 是 undefined, 我们在这里把它创建出来。这个函数首先会记录我们调用具体实现的时间。我们将用它计算填充程序 {{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}} 返回的值。
-
-接着，我们调用 {{domxref("WindowTimers.setTimeout", "setTimeout()")}}，并给它传一个函数，在这个函数里，我们传给 `requestIdleCallback()` 的具体实现的回调会得以执行。这个回调会接收一个和 {{domxref("IdleDeadline")}} 相符合的 object，此 object 的 {{domxref("IdleDeadline.didTimeout", "didTimeout")}} 被设定为 false，并拥有一个 {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 方法，用来给回调函数 50 毫秒的开始时间。每次调用 `timeRemaining()`，它都会从开始的 50 毫秒中减去已逝去的时间，来确定还剩余的时间。
-
-结果是，虽然我们的填充程序不会像真正的 `requestIdleCallback()` 将自己限制在当前事件循环传递中的空闲时间内，但它至少将每次传递的运行时间限制为不超过 50 毫秒。
-
-我们 {{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}} 的具体实现要简单的多。
-
-```js
-window.cancelIdleCallback =
-  window.cancelIdleCallback ||
-  function (id) {
-    clearTimeout(id);
-  };
-```
-
-如果 `cancelIdleCallback()` 没有定义，它将创建一个来简单地把指定回调 ID 传递给 {{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}。
-
-现在，尽管效率不高，你的代码也可以在不支持后台任务 API 的浏览器上运行了。
 
 ## 接口
 
@@ -413,7 +373,7 @@ function log(text) {
 
 #### 任务处理器
 
-`logTaskHandler()`，将是我们用来作为任务处理器的函数，也是用作任务对象 `handler` 属性的值。它是一个简单的为每个任务向记录输出大量内容的函数。在您自己的应用程序中，您可以将此代码替换为您希望在空闲时间执行的任何任务。只要记住任何 DOM 变化都需要通过 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 处理。
+`logTaskHandler()`，将是我们用来作为任务处理器的函数，也是用作任务对象 `handler` 属性的值。它是一个简单的为每个任务向记录输出大量内容的函数。在你自己的应用程序中，你可以将此代码替换为你希望在空闲时间执行的任何任务。只要记住任何 DOM 变化都需要通过 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 处理。
 
 ```js
 function logTaskHandler(data) {

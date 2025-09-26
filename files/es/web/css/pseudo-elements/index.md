@@ -32,9 +32,11 @@ selector::pseudo-elemento { propiedad: valor; }
 
 De vez en cuando se utilizan dos puntos dobles (::) en vez de solo uno (:). Esto forma parte de CSS3 y de un intento para distinguir pseudo-elementos de pseudo-clases.
 
-> **Nota:** `::selection` siempre se escribe con dos puntos dobles (::).
+> [!NOTE]
+> `::selection` siempre se escribe con dos puntos dobles (::).
 
-> **Nota:** Solo se puede usar un pseudo-elemento por selector. Debe aparecer después del selector simple.
+> [!NOTE]
+> Solo se puede usar un pseudo-elemento por selector. Debe aparecer después del selector simple.
 
 <table class="standard-table">
   <tbody>

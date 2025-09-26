@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_media_queries/Testing_media_queries
 
 {{cssref}}
 
-{{Glossary("DOM")}} предоставляет возможности, позволяющие тестировать результат [медиавыражений](/ru/docs/Web/CSS/Media_Queries) программно, с помощью интерфейса {{domxref("MediaQueryList") }}, его методов и свойств. Однажды, создав объект {{domxref("MediaQueryList") }} вы можете проверить результат выражения или получать уведомление, при изменении результата.
+{{Glossary("DOM")}} предоставляет возможности, позволяющие тестировать результат [медиавыражений](/ru/docs/Web/CSS/CSS_media_queries) программно, с помощью интерфейса {{domxref("MediaQueryList") }}, его методов и свойств. Однажды, создав объект {{domxref("MediaQueryList") }} вы можете проверить результат выражения или получать уведомление, при изменении результата.
 
 ## Создание списка медиавыражений
 
@@ -67,15 +67,13 @@ function handleOrientationChange(evt) {
 mediaQueryList.removeListener(handleOrientationChange);
 ```
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
-### `MediaQueryList` interface
+{{Compat}}
 
-{{Compat("api.MediaQueryList")}}
+## Смотрите также
 
-## See also
-
-- [Media queries](/ru/docs/CSS/Media_queries)
+- [Media queries](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{domxref("window.matchMedia()") }}
 - {{domxref("MediaQueryList") }}
 - {{domxref("MediaQueryListEvent") }}

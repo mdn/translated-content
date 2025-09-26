@@ -21,4 +21,4 @@ slug: Glossary/CSRF
 
 - 維基百科上的 [跨站請求偽造](https://zh.wikipedia.org/wiki/跨站請求偽造)
 - [Prevention measures](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>)
-- [MDN 安全手冊](/zh-TW/Learn/tutorial/Information_Security_Basics)
+- [MDN 安全手冊](/zh-TW/docs/Learn/tutorial/Information_Security_Basics)

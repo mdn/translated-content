@@ -25,7 +25,7 @@ slug: Web/API/Window/outerHeight
 
 ## ブラウザーの対応
 
-{{Compat("api.Window.outerHeight")}}
+{{Compat}}
 
 ## 関連情報
 

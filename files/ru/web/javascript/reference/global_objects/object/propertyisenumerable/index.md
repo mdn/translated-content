@@ -3,7 +3,7 @@ title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -96,11 +96,7 @@ o.propertyIsEnumerable("firstMethod"); // вернёт false
 
 ## Спецификации
 
-| Спецификация                                                                                               | Статус             | Комментарии              |
-| ---------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------ |
-| ECMAScript 3-е издание.                                                                                    | Стандарт           | Изначальное определение. |
-| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                            | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ES6')}}   |                          |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
@@ -108,7 +104,7 @@ o.propertyIsEnumerable("firstMethod"); // вернёт false
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

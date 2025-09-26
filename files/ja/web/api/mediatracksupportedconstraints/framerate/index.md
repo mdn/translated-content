@@ -1,50 +1,53 @@
 ---
-title: MediaTrackSupportedConstraints.frameRate
+title: "MediaTrackSupportedConstraints: frameRate プロパティ"
+short-title: frameRate
 slug: Web/API/MediaTrackSupportedConstraints/frameRate
+l10n:
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaTrackSupportedConstraints")}} 辞書の **`frameRate`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が {{domxref("MediaTrackConstraints.frameRate", "frameRate")}} 制約に対応しています。
 
 制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。
 
-`frameRate` 制約は、新しい映像トラックの映像フレームレートの許容上限と下限を設定したり、リクエストが成功するために提供されなければならない正確なフレームレートを指定するために使用することができます。このプロパティの値を確認することで、ユーザーエージェントがフレームレートによる映像トラック構成の制約を許可しているかどうかを判断できます。このプロパティがどのように使用できるかは、[例](#例)を参照してください。
+`frameRate` 制約は、新しい映像トラックの映像フレームレートの許容上限と下限を設定したり、リクエストが成功するために提供されなければならない正確なフレームレートを指定するために使用することができます。
+このプロパティの値を確認することで、ユーザーエージェントがフレームレートによる映像トラック構成の制約を許可しているかどうかを判断できます。このプロパティがどのように使用できるかは、[例](#例)を参照してください。
 
 ### 値
 
-このプロパティは、ユーザーエージェントが `frameRate` 制約に対応している場合に、辞書に現れます。このプロパティが現れない場合、ユーザーエージェントはビデオトラックのフレームレートの制限を指定することを許可していません。
+このプロパティは、ユーザーエージェントが `frameRate` 制約に対応している場合に、辞書に現れます。
+このプロパティが現れない場合、ユーザーエージェントはビデオトラックのフレームレートの制限を指定することを許可していません。
 
-> **メモ:** このプロパティが存在する場合は、常に `true` になります。
+> [!NOTE]
+> このプロパティが存在する場合は、常に `true` になります。
 
 ## 例
 
-この簡単な例では、映像トラックを要求する際に、ブラウザがフレームレートの制約に対応しているかどうかを調べます。
+この簡単な例では、映像トラックを要求する際に、ブラウザーがフレームレートの制約に対応しているかどうかを調べます。
 
 ### JavaScript
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
-    result.textContent = "Supported!";
-} else {
-    result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().frameRate;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### HTML
 
 ```html
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ### CSS
 
 ```css
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
@@ -66,7 +69,7 @@ if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
 
 ## 関連情報
 
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

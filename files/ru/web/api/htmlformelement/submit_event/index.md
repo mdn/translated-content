@@ -3,7 +3,7 @@ title: GlobalEventHandlers.onsubmit
 slug: Web/API/HTMLFormElement/submit_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
 Обработчик события отправки формы
 

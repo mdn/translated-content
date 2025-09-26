@@ -40,7 +40,7 @@ var charge = function() {
 正しくは、次の通りです。
 
 ```js example-good
-var charge = function() {
+var charge = function () {
   if (sunny) {
     useSolarCells();
   } else {
@@ -49,7 +49,7 @@ var charge = function() {
 };
 ```
 
-たとえば、 [IIFE](/ja/docs/Glossary/IIFE) や[クロージャ](/ja/docs/Web/JavaScript/Closures)、そのほかのたくさんの中括弧や括弧を使用する構造を使用しているときは、さらに分かりにくくなります。
+たとえば、 [IIFE](/ja/docs/Glossary/IIFE) や[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)、そのほかのたくさんの中括弧や括弧を使用する構造を使用しているときは、さらに分かりにくくなります。
 
 ```js example-bad
 (function() { if (true) { return false; } );
@@ -58,7 +58,7 @@ var charge = function() {
 多くの場合、インデントを変えるか、インデントをダブルチェックすると、これらのエラーを特定するのに役立ちます。
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }

@@ -3,11 +3,62 @@ title: order
 slug: Web/CSS/order
 ---
 
-{{CSSRef}}
-
 **`order`** [CSS](/ko/docs/Web/CSS) 속성은 플렉스 또는 그리드 컨테이너 안에서 현재 요소의 배치 순서를 지정합니다. 컨테이너 아이템의 정렬 순서는 오름차순 `order` 값이고, 같은 값일 경우 소스 코드의 순서대로 정렬됩니다.
 
-{{EmbedInteractiveExample("pages/css/order.html")}}
+{{InteractiveExample("CSS Demo: order")}}
+
+```css interactive-example-choice
+order: 0;
+```
+
+```css interactive-example-choice
+order: 3;
+```
+
+```css interactive-example-choice
+order: -1;
+```
+
+```css interactive-example-choice
+order: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Box 1:</div>
+  <div style="order: 1">Box 2: <code>order: 1;</code></div>
+  <div style="order: 2">Box 3: <code>order: 2;</code></div>
+  <div style="order: 2">Box 4: <code>order: 2;</code></div>
+  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  max-height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+
+#example-element::after {
+  content: attr(style);
+  outline: 2px dashed;
+  font-family: monospace;
+}
+```
 
 ## 구문
 
@@ -75,7 +126,7 @@ main > aside {
 `order` 속성을 사용하면 실제 DOM 순서와 화면에 보여지는 콘텐츠의 순서가 서로 연결되지 않습니다. 이는 낮은 시각으로 스크린 리더 등 보조 기술을 사용해 이동하는 사용자의 경험에 부정적인 영향을 줄 수 있습니다. 시각적 순서(CSS)가 중요하더라도 스크린 리더 사용자는 제대로 된 읽기 순서를 알 수 없습니다.
 
 - [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [Source Order Matters | Adrian Roselli](http://adrianroselli.com/2015/09/source-order-matters.html)
+- [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
@@ -91,6 +142,6 @@ main > aside {
 
 ## 같이 보기
 
-- CSS 플렉스박스 안내서: _[플렉스박스의 기본 개념](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS 플렉스박스 안내서: _[플렉스박스의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
 - CSS 플렉스박스 안내서: _[플렉스 아이템의 순서 정하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS 그리드 안내서: _[CSS 그리드 레이아웃과 접근성](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_
+- CSS 그리드 안내서: _[CSS 그리드 레이아웃과 접근성](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_

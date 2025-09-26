@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 La méthode **`catch()`** renvoie un objet {{jsxref("Promise")}} et ne traite que des cas où la promesse initiale est rejetée. Elle a le même effet qu'un appel à {{jsxref("Promise.then", "Promise.prototype.then(undefined, siRejetée)")}} (c'est en fait ce qui se passe dans le moteur, `obj.catch(onRejected)` est traduit en `obj.then(undefined, onRejected)`). Cela signifie qu'il est nécessaire de fournir une fonction `onRejected`, même si on souhaite avoir une valeur de secours qui est `undefined` (par exemple avec `obj.catch(() => {})`.
 
-{{EmbedInteractiveExample("pages/js/promise-catch.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise1.catch((error) => {
+  console.error(error);
+});
+// Expected output: Error: Uh-oh!
+```
 
 ## Syntaxe
 
@@ -22,9 +33,7 @@ p.catch(function (raison) {
 ### Paramètres
 
 - `siRejetée`
-
   - : Une {{jsxref("Function","fonction","",1)}} à appeler si la `Promise` est rejetée (i.e. n'est pas tenue). Cette fonction possède un argument :
-
     - `raison`
       - : Une chaîne de caractères qui indique pourquoi la promesse n'est pas tenue.
 
@@ -36,7 +45,7 @@ Une promesse ({{jsxref("Promise")}}).
 
 ## Description
 
-La méthode `catch()` est utile pour gérer les cas d'erreur en cas de compositions de plusieurs promesses. Elle renvoie elle-même une promesse et peut donc être utilisée lorsqu'on [chaîne des promesses](/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses#Chaînage_après_un_catch), à l'instar de la méthode sœur qu'est {{jsxref("Promise.prototype.then()")}}.
+La méthode `catch()` est utile pour gérer les cas d'erreur en cas de compositions de plusieurs promesses. Elle renvoie elle-même une promesse et peut donc être utilisée lorsqu'on [chaîne des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_après_un_catch), à l'instar de la méthode sœur qu'est {{jsxref("Promise.prototype.then()")}}.
 
 ## Exemples
 

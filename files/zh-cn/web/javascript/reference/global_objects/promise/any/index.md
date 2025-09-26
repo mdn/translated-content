@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 **`Promise.any()`** 静态方法将一个 Promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。当输入的任何一个 Promise 兑现时，这个返回的 Promise 将会兑现，并返回第一个兑现的值。当所有输入 Promise 都被拒绝（包括传递了空的可迭代对象）时，它会以一个包含拒绝原因数组的 {{jsxref("AggregateError")}} 拒绝。
 
-{{EmbedInteractiveExample("pages/js/promise-any.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.any()")}}
+
+```js interactive-example
+const promise1 = Promise.reject(0);
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, "quick"));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, "slow"));
+
+const promises = [promise1, promise2, promise3];
+
+Promise.any(promises).then((value) => console.log(value));
+
+// Expected output: "quick"
+```
 
 ## 语法
 
@@ -25,7 +37,7 @@ Promise.any(iterable)
 一个 {{jsxref("Promise")}}，其状态为：
 
 - **已拒绝（already rejected）**，如果传入的 `iterable` 为空的话。
-- **异步兑现（asynchronously filfilled）**，当给定的 `iterable` 中的任何一个 Promise 被兑现时，返回的 Promise 就会被兑现。其兑现值是第一个兑现的 Promise 的兑现值。
+- **异步兑现（asynchronously fulfilled）**，当给定的 `iterable` 中的任何一个 Promise 被兑现时，返回的 Promise 就会被兑现。其兑现值是第一个兑现的 Promise 的兑现值。
 - **异步拒绝（asynchronously rejected）**，当给定的 `iterable` 中的所有 Promise 都被拒绝时。拒绝原因是一个 {{jsxref("AggregateError")}}，其 `errors` 属性包含一个拒绝原因数组。无论完成顺序如何，这些错误都是按照传入的 Promise 的顺序排序。如果传递的 `iterable` 是非空的，但不包含待定的 Promise，则返回的 Promise 仍然是异步拒绝的（而不是同步拒绝的）。
 
 ## 描述

@@ -67,11 +67,9 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-
   - : Copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.
 
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-
   - : Copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
@@ -81,7 +79,8 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Examples
 
-> **Примечание:** See the guide [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
+> [!NOTE]
+> See the guide [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
 
 ### Basic usage
 
@@ -148,6 +147,6 @@ draw();
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

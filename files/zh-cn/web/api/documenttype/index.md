@@ -24,7 +24,7 @@ _继承自父节点 {{domxref("Node")}}, 并实现了 {{domxref("ChildNode")}} �
 - {{domxref("DocumentType.publicId")}} {{readonlyInline}}
   - : 一个{{domxref("DOMString")}}，例：HTML5 中的空字符串——`"-//W3C//DTD HTML 4.01//EN"`。
 - {{domxref("DocumentType.systemId")}} {{readonlyInline}}
-  - : 一个{{domxref("DOMString")}}，例：HTML5 中的空字符串—— `"http://www.w3.org/TR/html4/strict.dtd"`。
+  - : 一个{{domxref("DOMString")}}，例：HTML5 中的空字符串——`"http://www.w3.org/TR/html4/strict.dtd"`。
 
 ## 方法
 
@@ -43,6 +43,6 @@ _继承方法自父节点，{{domxref("Node")}}, 并实现了 {{domxref("ChildNo
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model#DOM_%E6%8E%A5%E5%8F%A3)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model#dom_接口)
 - {{domxref("Entity")}}
 - {{domxref("Notation")}}

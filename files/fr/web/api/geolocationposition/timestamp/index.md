@@ -27,5 +27,5 @@ Un objet {{domxref("DOMTimeStamp")}}.
 
 ## Voir aussi
 
-- [Utiliser l'API de Geolocation](/fr/docs/Web/API/Geolocation_API/Using)
+- [Utiliser l'API de Geolocation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("GeolocationPosition")}}

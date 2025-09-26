@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`data`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、HTML の [`data`](/ja/docs/Web/HTML/Element/object#data) 属性を反映した文字列を返します。リソースのデータのアドレスを指定します。
+**`data`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、HTML の [`data`](/ja/docs/Web/HTML/Reference/Elements/object#data) 属性を反映した文字列を返します。リソースのデータのアドレスを指定します。
 
 ## 値
 

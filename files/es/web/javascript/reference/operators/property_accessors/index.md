@@ -75,7 +75,7 @@ alert(objeto[bar]);
 
 Un método no está enlazado al objeto del que es método. Específicamente, `this` no está establecido en un método, es decir, `this` no se refiere necesariamente a un objeto conteniendo el método. `this`, en cambio, se "pasa" mediante la llamada de función.
 
-Vea [enlace a métodos](/es/docs/Web/JavaScript/Referencia/Operadores/this#Funciones_enlazadas).
+Vea [enlace a métodos](/es/docs/Web/JavaScript/Reference/Operators/this#funciones_enlazadas).
 
 ### Nota sobre `eval`
 

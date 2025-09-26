@@ -3,13 +3,13 @@ title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit le panneau de la barre latérale: c'est-à-dire le document HTML qui définit le contenu de cette barre latérale.
 
 ## Types de panneau
 
-Les barres latérales ont toujours un _"panneau manifest"_, qui est le panneau défini dans la clé de manifest [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action).
+Les barres latérales ont toujours un _"panneau manifest"_, qui est le panneau défini dans la clé de manifest [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action).
 
 Si vous définissez un nouveau panneau à l'aide de `setPanel()`, et incluez l'option `tabId` le panneau est défini uniquement pour l'onglet donné. Ce panneau est appelé "tab-specific panel".
 
@@ -28,17 +28,13 @@ browser.sidebarAction.setPanel(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet avec les propriétés suivantes :
-
     - `panel`
-
       - : `string` ou `null`. Le panneau à charger dans la barre latérale, spécifié comme une URL pointant vers un document HTML, ou `null`, ou une chaîne vide.
 
         Ceci peut pointer vers un fichier empaqueté dans l'extension (for exemple, créé à l'aide de {{WebExtAPIRef("runtime.getURL")}}), ou un document distant (par exemple `https://example.org/`). Il doit s'agir d'une URL valide.
 
         Si `panel` est `null` ou `""`,alors un panneau précédemment défini sera supprimé, de sorte que :
-
         - Si `tabId` est spécifié, et que l'onglet a un jeu de panneaux spécifiques aux onglets, alors l'onglet héritera du panneau à partir de la fenêtre à laquelle il appartient.
         - Si `windowId` est spécifié, et que la fenêtre a un jeu de panneaux spécifiques à la fenêtre, alors la fenêtre héritera du panneau global.
         - Sinon, le panneau global sera réinitialisé au panneau manifest.
@@ -80,11 +76,9 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,7 +3,7 @@ title: blur (evento)
 slug: Web/API/Element/blur_event
 ---
 
-O evento `blur` é acionado quando um elemento perde foco. A diferença principal entre este evento e [`focusout`](/pt-BR/docs/Mozilla_event_reference/focusout) é que apenas o segundo 'borbulha'.
+O evento `blur` é acionado quando um elemento perde foco. A diferença principal entre este evento e [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event) é que apenas o segundo 'borbulha'.
 
 ## Informação geral
 
@@ -20,7 +20,8 @@ O evento `blur` é acionado quando um elemento perde foco. A diferença principa
 - Ação padrão
   - : Nenhuma
 
-> **Nota:** O valor de {{domxref("Document.activeElement")}} varia entre navegadores enquanto este evento é processado ([Erro do Firefox 452307](https://bugzil.la/452307)): O IE10 define-o para o elemento para onde o foco moverá, enquanto Firefox e Chrome muitas vezes definem-o para o `body` do documento.
+> [!NOTE]
+> O valor de {{domxref("Document.activeElement")}} varia entre navegadores enquanto este evento é processado ([Erro do Firefox 452307](https://bugzil.la/452307)): O IE10 define-o para o elemento para onde o foco moverá, enquanto Firefox e Chrome muitas vezes definem-o para o `body` do documento.
 
 ## Propriedades
 
@@ -34,7 +35,7 @@ O evento `blur` é acionado quando um elemento perde foco. A diferença principa
 
 ## Delegação do evento
 
-Existem duas maneiras de implementar a delegação de eventos para este evento: usando o evento `focusout` nos navegadores que suportam-o, ou definindo o parâmetro "useCapture" do [`addEventListener`](/pt-BR/docs/DOM/element.addEventListener) para `true`:
+Existem duas maneiras de implementar a delegação de eventos para este evento: usando o evento `focusout` nos navegadores que suportam-o, ou definindo o parâmetro "useCapture" do [`addEventListener`](/pt-BR/docs/Web/API/EventTarget/addEventListener) para `true`:
 
 ### Conteúdo HTML
 
@@ -77,7 +78,7 @@ form.addEventListener(
 
 ## Eventos relacionados
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/pt-BR/docs/Web/API/Element/focus_event)
+- [`blur`](/pt-BR/docs/Web/API/Element/blur_event)
+- [`focusin`](/pt-BR/docs/Web/API/Element/focusin_event)
+- [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event)

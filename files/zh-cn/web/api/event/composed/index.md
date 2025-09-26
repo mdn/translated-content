@@ -7,7 +7,8 @@ slug: Web/API/Event/composed
 
 {{domxref("Event")}} 接口的只读属性 **`composed`** 返回一个 {{jsxref("Boolean")}} 值，用来指示该事件是否可以从 Shadow DOM 传递到一般的 DOM。
 
-> **备注：** 此属性以前命名为`scoped`。
+> [!NOTE]
+> 此属性以前命名为`scoped`。
 
 ## 语法
 
@@ -66,13 +67,13 @@ document.querySelector("html").addEventListener("click", function (e) {
 
 `<open-shadow>` 元素的组合路径是：
 
-```
+```plain
 Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 
 而 `<closed-shadow>` 元素的组合路径是：
 
-```
+```plain
 Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 

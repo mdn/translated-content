@@ -23,7 +23,7 @@ _Hérite des propriétés de son parent,_ _{{domxref("ExtendableEvent")}}_.
 - {{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}
   - : Retourne l'origine du {{domxref("ServiceWorkerClient")}} qui envoie le message.
 - {{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}
-  - : Représente, dans un [server-sent events](/fr/docs/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
+  - : Représente, dans un [server-sent events](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
 - {{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}
   - : Retourne une référence vers le service worker qui envoie le message.
 - {{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}
@@ -66,7 +66,7 @@ self.onmessage = function (e) {
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)
 - [Les serviceWorker sont-ils prêts?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Cannal de Messagerie](/fr/docs/Web/API/Channel_Messaging_API)

@@ -64,5 +64,5 @@ function probarEntrada(regexp, cadena) {
 
 ## Vea también
 
-- El capítulo [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) de la [Guía JavaScript](/es/docs/Web/JavaScript/Guide)
+- El capítulo [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) de la [Guía JavaScript](/es/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---
 
-{{FirefoxSidebar}}
-
 この記事は、拡張機能を更新して Firefox 3 に対応させたいと考える開発者のために役立つ情報を提供します。
 
 読み進める前に、私たちからひとつだけ参考になるヒントをお教えしましょう。もしあなたの拡張機能に必要な変更がインストールマニフェスト内の `maxVersion` 項目の更新だけで、なおかつ [addons.mozilla.org](https://addons.mozilla.org) に拡張機能を登録している場合、新しいバージョンの拡張機能をアップロードする必要はありません！ AMO 上の「開発者用コントロールパネル」を使って `maxVersion` を更新するだけで作業は完了です。この方法なら、拡張機能が再度レビューに回ることもありません。
@@ -33,7 +31,8 @@ l10n:
 
 これまでに、一部の拡張機能に影響すると思われる API の変更がいくつも行われています (まだ今後も変更は行われるでしょう)。私たちは現在、これらの変更の完全なリストを作成中です。
 
-> **メモ:** もし拡張機能が、まだ [`Install.js`](/ja/docs/Install.js) スクリプトを[インストールマニフェスト](/ja/docs/Install_Manifests) の代わりに、使っている場合は、今回インストールマニフェストに移行していただく必要があります。Firefox 3 は XPI ファイル内の `install.js` スクリプトをサポートしません。
+> [!NOTE]
+> もし拡張機能が、まだ [`Install.js`](/ja/docs/Install.js) スクリプトを[インストールマニフェスト](/ja/docs/Install_Manifests) の代わりに、使っている場合は、今回インストールマニフェストに移行していただく必要があります。Firefox 3 は XPI ファイル内の `install.js` スクリプトをサポートしません。
 
 ### インストールマニフェストに翻訳を追加する
 
@@ -66,7 +65,7 @@ RDF データ形式から [Storage](/ja/docs/Storage) API への移行にあた�
 
 ### パスワードマネージャー
 
-あなたの拡張機能からパスワードマネージャーを利用してユーザのログイン情報にアクセスしている場合、新しいログインマネージャー API を利用するように更新する必要があります。
+あなたの拡張機能からパスワードマネージャーを利用してユーザーのログイン情報にアクセスしている場合、新しいログインマネージャー API を利用するように更新する必要があります。
 
 - [nsILoginManager の使い方](/ja/docs/XPCOM_Interface_Reference/Using_nsILoginManager) という記事には、パスワードマネージャーとログインマネージャーの両方を用いることで、Firefox 3 とそれ以前のバージョンの両方で機能拡張を動作させるデモなど、コードサンプルが載っています。
 - `nsILoginInfo`
@@ -80,13 +79,12 @@ XUL のポップアップシステムは Firefox 3 で大幅に変更されま�
 
 #### 自動補完
 
-`nsIAutoCompleteController` インターフェイスの `handleEnter()` メソッドは、テキストが自動補完ポップアップから選択されたか、ユーザが自分で入力した後 Enter キーを押したかを示す引数を受け付けるよう変更が行われました。
+`nsIAutoCompleteController` インターフェイスの `handleEnter()` メソッドは、テキストが自動補完ポップアップから選択されたか、ユーザーが自分で入力した後 Enter キーを押したかを示す引数を受け付けるよう変更が行われました。
 
 ### DOMParser
 
 - `DOMParser` がインスタンス化されると、呼び出したコードのプリンシパルと、コンストラクターが呼び出したウィンドウの `documentURI` と `baseURI` を継承するようになります。
 - 呼び出し元が UniversalXPConnect の権限を持っている場合、`new DOMParser()` に引数を渡すことができます。渡される引数が 3 つ以下の場合、残りの引数は既定で `null` になります。
-
   - 最初の引数は使用するプリンシパルです。これは通常継承されるデフォルトプリンシパルを上書きします。
   - 2 番目の引数には、使用する `documentURI` を指定します。
   - 3 番目の引数は、使用する `baseURI` です。
@@ -101,9 +99,9 @@ XUL のポップアップシステムは Firefox 3 で大幅に変更されま�
 - [XPCOM Glue](/ja/docs/XPCOM_Glue)
 - [内部連携から凍結連携への移行について](/ja/docs/Migrating_from_Internal_Linkage_to_Frozen_Linkage)
 
-### 削除されたインタフェース
+### 削除されたインターフェイス
 
-以下のインタフェースは、Firefox 3 の基盤である Gecko 1.9 から削除されました。あなたの拡張機能でいずれかを使用している場合、コードを更新する必要があるでしょう。
+以下のインターフェイスは、Firefox 3 の基盤である Gecko 1.9 から削除されました。あなたの拡張機能でいずれかを使用している場合、コードを更新する必要があるでしょう。
 
 - `nsIDOMPaintListener`
 - `nsIDOMScrollListener`
@@ -158,7 +156,6 @@ _もし、拡張機能を Firefox 3 対応にするために必要な小さい�
 - [`<xul:tabbrowser>`](/ja/docs/Mozilla/Tech/XUL/tabbrowser) 要素は「ツールキット」の一部ではなくなりました ([Firefox バグ 339964](https://bugzil.la/339964))。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。
 - `nsISupports_proxies` の変更と、おそらくスレッド関連インターフェイスへの変更については、ドキュメントを用意する必要があります。
 - XUL ファイル内で `<?xml-stylesheet ?>` などの XML 処理命令を用いている場合、 [Firefox バグ 319654](https://bugzil.la/319654) で行われた以下の変更に注意してください。
-
   1. XML PI が XUL ドキュメントの DOM に追加されました。これは、 {{ Domxref("Node.firstChild", "document.firstChild") }} が必ずしもルート要素を返すとは限らない、ということを意味します。スクリプト内でルートドキュメントを得るには、代わりに {{ Domxref("document.documentElement") }} を用いてください。
   2. `<?xml-stylesheet ?>` と `<?xul-overlay ?>` 処理命令は、ドキュメントの前文以外の場所に書かれた場合、動作しなくなりました。
 

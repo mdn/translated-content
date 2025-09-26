@@ -29,4 +29,5 @@ console.log(img);
 <img width="100" height="200" src="picture.jpg" />
 ```
 
-> **Примечание:** Примечание: этот конструктор существует только для истории, и возвращает экземпляр [HTMLImageElement](/ru/docs/Web/API/HTMLImageElement) точно также, как и `document.createElement('img')`.
+> [!NOTE]
+> Этот конструктор существует только для истории, и возвращает экземпляр [HTMLImageElement](/ru/docs/Web/API/HTMLImageElement) точно также, как и `document.createElement('img')`.

@@ -38,13 +38,11 @@ console.log(worldString.strike()); // <strike>Olá, mundo</strike>
 
 ## Especificações
 
-| Specification                                                                      |
-| ---------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.strike', 'String.prototype.strike')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.strike")}}
+{{Compat}}
 
 ## Veja também
 

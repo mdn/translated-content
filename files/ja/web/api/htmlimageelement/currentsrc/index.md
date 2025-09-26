@@ -3,7 +3,7 @@ title: "HTMLImageElement: currentSrc プロパティ"
 short-title: currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 75d3108eaade9d64de3ece87258c946b9bf13068
 ---
 
 {{APIRef("HTML DOM")}}
@@ -16,13 +16,13 @@ l10n:
 
 ## 例
 
-この例では、時計の画像に 2 種類のサイズを用意しています。一つは幅 200px で、もう一つは幅 400px です。 [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性は、ビューポートが幅 400px 未満の場合は画像を文書幅の 50% で、それ以外の場合は画像を文書幅の 90% で描画することを指定しています。
+この例では、時計の画像に 2 種類のサイズを用意しています。一つは幅 200px で、もう一つは幅 400px です。 [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性は、ビューポートが幅 400px 未満の場合は画像を文書幅の 50% で、それ以外の場合は画像を文書幅の 90% で描画することを指定しています。
 
 ### HTML
 
 ```html
 <img
-  src="/files/16797/clock-demo-400px.png"
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png"
   alt="Clock"
   srcset="
     /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,

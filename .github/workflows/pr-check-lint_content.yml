@@ -10,21 +10,57 @@ on:
 permissions:
   pull-requests: write
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   lint-and-review-docs:
+    # do not run on PRs in forks
+    if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout BASE
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
+
+      - name: Get changed files
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Use the GitHub API to get the list of changed files
+          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
+
+          # Get files as newline-separated list
+          FILTERED_FILES=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename' | \
+            egrep -i "^files/.*\.md$")
+
+          # Store as multiline output
+          EOF="$(openssl rand -hex 8)"
+          echo "DIFF_DOCUMENTS<<${EOF}" >> "$GITHUB_OUTPUT"
+          echo "${FILTERED_FILES}" >> "$GITHUB_OUTPUT"
+          echo "${EOF}" >> "$GITHUB_OUTPUT"
+
+          # Also set a simple flag for whether we have files
+          if [ -n "${FILTERED_FILES// /}" ]; then
+            echo "HAS_FILES=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "HAS_FILES=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Checkout HEAD
-        uses: actions/checkout@v3
+        if: steps.check.outputs.HAS_FILES == 'true'
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
 
       - name: Get changed content from HEAD
+        if: steps.check.outputs.HAS_FILES == 'true'
         run: |
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
@@ -39,65 +75,116 @@ jobs:
           git add .
           git commit -m "Code from PR head"
 
-      - name: Get changed files
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-        run: |
-          # Use the GitHub API to get the list of changed files
-          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
-          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
-            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
-          # filter out files that are not markdown
-          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i ".*\.md$" | xargs)
-          echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
+      - name: Checkout (content)
+        uses: actions/checkout@v5
+        if: steps.check.outputs.HAS_FILES == 'true'
+        with:
+          repository: mdn/content
+          path: mdn/content
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3
+        if: steps.check.outputs.HAS_FILES == 'true'
+        uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: mdn/content/.nvmrc
           cache: yarn
+          cache-dependency-path: |
+            mdn/content/yarn.lock
+            yarn.lock
 
-      - name: Install all yarn packages
+      - name: Install all yarn packages for mdn/translated-content
+        if: steps.check.outputs.HAS_FILES == 'true'
         run: yarn --frozen-lockfile
 
+      - name: Install all yarn packages for mdn/content
+        if: steps.check.outputs.HAS_FILES == 'true'
+        working-directory: ${{ github.workspace }}/mdn/content
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Lint and format markdown files
-        if: ${{ env.DIFF_DOCUMENTS }}
+        id: lint
+        if: steps.check.outputs.DIFF_DOCUMENTS
+        env:
+          DIFF_DOCUMENTS: ${{ steps.check.outputs.DIFF_DOCUMENTS }}
         run: |
           # Generate random delimiter
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           EOF="$(openssl rand -hex 8)"
 
-          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+          # The DIFF_DOCUMENTS env var contains the clean newline-separated list
+          # Read into array, one filename per line
+          readarray -t files_to_lint <<< "$DIFF_DOCUMENTS"
+
+          # Debug: show what we got
+          printf "Files to process (%d files):\n" "${#files_to_lint[@]}"
+          printf "'%s'\n" "${files_to_lint[@]}"
+
+          echo "crlf line ending check"
+          CRLF_FAILED=true
+          CRLF_LOG=$(git ls-files --eol "${files_to_lint[@]}" | grep -E 'w/(mixed|crlf)') || CRLF_FAILED=false
+          echo "CRLF_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
+          echo "${CRLF_LOG}" >> "$GITHUB_OUTPUT"
+          echo "${EOF}" >> "$GITHUB_OUTPUT"
+          echo "CRLF_FAILED=${CRLF_FAILED}" >> "$GITHUB_OUTPUT"
 
           echo "Running markdownlint --fix"
           MD_LINT_FAILED=false
-          MD_LINT_LOG=$(yarn markdownlint-cli2 --fix ${files_to_lint} 2>&1) || MD_LINT_FAILED=true
-          echo "MD_LINT_LOG<<${EOF}" >> $GITHUB_ENV
-          echo "${MD_LINT_LOG}" >> $GITHUB_ENV
-          echo "${EOF}" >> $GITHUB_ENV
-          echo "MD_LINT_FAILED=${MD_LINT_FAILED}" >> $GITHUB_ENV
+          MD_LINT_LOG=$(yarn markdownlint-cli2 --fix "${files_to_lint[@]}" 2>&1) || MD_LINT_FAILED=true
+          echo "MD_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
+          echo "${MD_LINT_LOG}" >> "$GITHUB_OUTPUT"
+          echo "${EOF}" >> "$GITHUB_OUTPUT"
+          echo "MD_LINT_FAILED=${MD_LINT_FAILED}" >> "$GITHUB_OUTPUT"
+
+          echo "Linting front-matter"
+          FM_LINT_FAILED=false
+          # absolute_paths is needed because front-matter linter is run from mdn/content directory
+          absolute_paths=()
+          for file in "${files_to_lint[@]}"; do
+              absolute_paths+=("$(realpath -e "$file")")
+          done
+          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/.front-matter-config.json "${absolute_paths[@]}" 2>&1) || FM_LINT_FAILED=true
+          echo "FM_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
+          echo "${FM_LINT_LOG}" >> "$GITHUB_OUTPUT"
+          echo "${EOF}" >> "$GITHUB_OUTPUT"
+          echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> "$GITHUB_OUTPUT"
+
+          echo "Running url locale checker"
+          node ./scripts/check-url-locale.js --fix "${files_to_lint[@]}"
+
+          echo "Running autocorrect"
+          yarn autocorrect --fix "${files_to_lint[@]}"
 
           echo "Running Prettier"
-          yarn prettier -w ${files_to_lint}
+          PRETTIER_FAILED=false
+          PRETTIER_LOG=$(yarn prettier --check "${files_to_lint[@]}" 2>&1) || PRETTIER_FAILED=true
+          echo "PRETTIER_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
+          echo "${PRETTIER_LOG}" >> "$GITHUB_OUTPUT"
+          echo "${EOF}" >> "$GITHUB_OUTPUT"
+          echo "PRETTIER_FAILED=${PRETTIER_FAILED}" >> "$GITHUB_OUTPUT"
+          yarn prettier -w "${files_to_lint[@]}"
 
           if [[ -n $(git diff) ]]; then
-            echo "FILES_MODIFIED=true" >> $GITHUB_ENV
+            echo "FILES_MODIFIED=true" >> "$GITHUB_OUTPUT"
           fi
 
           # info for troubleshooting
+          echo CRLF_FAILED=${CRLF_FAILED}
           echo MD_LINT_FAILED=${MD_LINT_FAILED}
+          echo FM_LINT_FAILED=${FM_LINT_FAILED}
+          echo PRETTIER_FAILED=${PRETTIER_FAILED}
           git diff
 
       - name: Setup reviewdog
-        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
-        uses: reviewdog/action-setup@v1
+        if: steps.lint.outputs.FILES_MODIFIED == 'true' || steps.lint.outputs.MD_LINT_FAILED == 'true'
+        uses: reviewdog/action-setup@d8edfce3dd5e1ec6978745e801f9c50b5ef80252 # v1.4.0
         with:
           reviewdog_version: latest
 
       - name: Suggest changes using diff
-        if: env.FILES_MODIFIED == 'true'
+        if: steps.lint.outputs.FILES_MODIFIED == 'true'
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -108,14 +195,16 @@ jobs:
             -name="mdn-linter" \
             -f=diff \
             -f.diff.strip=1 \
+            -filter-mode=diff_context \
             -reporter=github-pr-review < "${TMPFILE}"
 
       - name: Add reviews for markdownlint errors
-        if: env.MD_LINT_FAILED == 'true'
+        if: steps.lint.outputs.MD_LINT_FAILED == 'true'
         env:
+          MD_LINT_LOG: ${{ steps.lint.outputs.MD_LINT_LOG }}
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "${{ env.MD_LINT_LOG }}" | \
+          echo "${MD_LINT_LOG}" | \
             reviewdog \
             -efm="%f:%l:%c %m" \
             -efm="%f:%l %m" \
@@ -124,9 +213,40 @@ jobs:
             -reporter="github-pr-review"
 
       - name: Fail if any issues pending
-        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
+        if: steps.lint.outputs.FILES_MODIFIED == 'true' || steps.lint.outputs.CRLF_FAILED == 'true' || steps.lint.outputs.MD_LINT_FAILED == 'true' || steps.lint.outputs.FM_LINT_FAILED == 'true'
+        env:
+          CRLF_FAILED: ${{ steps.lint.outputs.CRLF_FAILED }}
+          MD_LINT_FAILED: ${{ steps.lint.outputs.MD_LINT_FAILED }}
+          FM_LINT_FAILED: ${{ steps.lint.outputs.FM_LINT_FAILED }}
+          PRETTIER_FAILED: ${{ steps.lint.outputs.PRETTIER_FAILED }}
+          CRLF_LOG: ${{ steps.lint.outputs.CRLF_LOG }}
+          MD_LINT_LOG: ${{ steps.lint.outputs.MD_LINT_LOG }}
+          FM_LINT_LOG: ${{ steps.lint.outputs.FM_LINT_LOG }}
+          PRETTIER_LOG: ${{ steps.lint.outputs.PRETTIER_LOG }}
         run: |
-          echo -e "\nLogs from markdownlint:"
-          echo "${{ env.MD_LINT_LOG }}"
-          echo -e "\nPlease fix all the linting issues mentioned in above logs and in the review comments."
+          echo -e "\nPlease fix all the linting issues mentioned in the following logs and in the PR review comments."
+
+          if [[ ${CRLF_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 In the following files make sure all the lines end with only Line Feed (LF) character and not with Carriage Return Line Feed (CRLF) characters:"
+            echo "${CRLF_LOG}"
+            echo "For more information refer https://gist.github.com/LunarLambda/3df0840b336a5e314e4ffdac03cbf619 ."
+            echo "You may use https://app.execeratics.com/LFandCRLFonline/?l=en online tool to convert line endings from CRLF to LF."
+          fi
+
+          if [[ ${MD_LINT_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from markdownlint:"
+            echo "${MD_LINT_LOG}"
+          fi
+
+          if [[ ${FM_LINT_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from front-matter linter:"
+            echo "${FM_LINT_LOG}"
+          fi
+
+          if [[ ${PRETTIER_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from Prettier formatter:"
+            echo "${PRETTIER_LOG}"
+            echo -e "\nYou can use Prettier playground to format the files online (configuration pre-filled): https://prettier.io/playground/#N4Igxg9gdgLgprEAuEBiABABwIYGd7owAWc6CMAlgE6kBmFANqSTSADQgSaXS7KjYqVCAHcACoIR8U2BiOwBPPhwBGVbGADWcGAGVsAWzgAZClDjIYVAK5xV6rTt04wZgOaWbdkLjgGKnrYccAAemHBUFEawsgAqEVCCFHDStLK+HLjuTACK1hDwyGkMGSAAVrghutlweQUWSMWlAI758GLCmNIgeAC05nAAJkPsIFbYjO4AwhAGBtjIPQwMo1lQbkwAgjBWFCrW7RGm5kXp3kQwBgwA6kQU8LgucLpS9xQAbvcKi2C4yiDvWwASSgw1gujAkW4m1BuhgCiYpxK3kwwl813UmEWqJSEXeFg4Zl8VBgHWwbnmSNKOCoxMW8yomkGoigo1RZhg1wog2IyAAHAAGDg0VrUOBkikLRpnDgwbAqLk8ojIABMHGsvli8tSMpAfhUQ2Gg2M2HW1nJcAAYhAqPMdu5FtgDhAQABfV1AA \n"
+          fi
+
           exit 1

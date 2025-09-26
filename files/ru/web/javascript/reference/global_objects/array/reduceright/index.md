@@ -3,7 +3,7 @@ title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -18,9 +18,7 @@ arr.reduceRight(callback[, initialValue])
 ### Параметры
 
 - `callback`
-
   - : Функция, выполняющаяся для каждого элемента массива, принимает четыре аргумента:
-
     - `previousValue`
       - : Значение, возвращённое предыдущим выполнением функции `callback`, либо значение `initialValue`, если оно предоставлено (смотрите пояснения ниже).
     - `currentValue`
@@ -141,7 +139,7 @@ if ("function" !== typeof Array.prototype.reduceRight) {
     if (arguments.length >= 2) {
       value = arguments[1];
     } else {
-      while (k >= 0 && !k in t) {
+      while (k >= 0 && (!k) in t) {
         k--;
       }
       if (k < 0) {
@@ -161,10 +159,7 @@ if ("function" !== typeof Array.prototype.reduceRight) {
 
 ## Спецификации
 
-| Спецификация                                                                           | Статус             | Комментарии                                            |
-| -------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.4.4.22', 'Array.prototype.reduceRight')}}                 | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8. |
-| {{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}} | {{Spec2('ES6')}}   |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

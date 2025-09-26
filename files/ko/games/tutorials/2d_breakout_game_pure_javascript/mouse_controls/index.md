@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
 
 이 레슨은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10개 중 **9번째** 단계입니다. 당신은 [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html)에서 완성된 소스코드를 찾을 수 있습니다.
@@ -44,7 +42,8 @@ function mouseMoveHandler(e) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
 
-> **참고:** 패들이 캔버스 양쪽 가장자리에서 반만 잘려나가 보일 것입니다. 패들 이동 제한 경계를 조정해 보세요.
+> [!NOTE]
+> 패들이 캔버스 양쪽 가장자리에서 반만 잘려나가 보일 것입니다. 패들 이동 제한 경계를 조정해 보세요.
 
 ## 다음 단계
 

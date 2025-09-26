@@ -134,7 +134,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
   - : 심볼 설명을 담은 문자열을 반환합니다. {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다.
 - {{jsxref("Symbol.prototype.valueOf()")}}
   - : 심볼을 반환합니다. {{jsxref("Object.prototype.valueOf()")}} 메서드를 재정의합니다.
-- [`Symbol.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
+- [`Symbol.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
   - : 심볼을 반환합니다.
 
 ## 예제
@@ -210,5 +210,5 @@ obj[Object(sym)]; // still 1
 
 - [`core-js`의 `Symbol` 폴리필](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [데이터 타입과 자료구조](/ko/docs/Web/JavaScript/Data_structures)
+- [데이터 타입과 자료구조](/ko/docs/Web/JavaScript/Guide/Data_structures)
 - [hacks.mozilla.org의 "ES6 In Depth: Symbols"](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)

@@ -11,6 +11,6 @@ _響應式網頁設計_（**RWD**）是一種強調製作能在所有上網設�
 
 ### 基本知識
 
-- [Summary and resources](/zh-TW/docs/Web_Development/Responsive_Web_design)
-- [Pros and cons of going responsive](/zh-TW/docs/Web_Development/Mobile/Responsive_design)
+- [Summary and resources](/zh-TW/docs/Web/Progressive_web_apps)
+- [Pros and cons of going responsive](/zh-TW/docs/Web/Progressive_web_apps)
 - [Responsive Web Design](http://msdn.microsoft.com/zh-tw/magazine/hh653584.aspx)

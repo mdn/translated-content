@@ -3,8 +3,6 @@ title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`font-variant-alternates`** controla el uso de glifos alternos. Estos glifos alternos pueden ser referenciados por nombres alternativos en {{cssxref("@font-feature-values")}}.
@@ -47,10 +45,10 @@ font-variant-alternates: unset;
 - `swash()`
   - : Esta función habilita la muestra de glifos de tipografía [swash](http://en.wikipedia.org/wiki/Swash_%28typography%29). El parámetro es un nombre específico de fuente mapeado a un número. Corresponde a los valores de OpenType `swsh` y `cswh`, como `swsh 2` y `cswh 2`.
 - `ornaments()`
-
   - : Esta función habilita la muestra de ornamentas, que son [florones](http://en.wikipedia.org/wiki/Fleuron_%28typography%29) y otros glifos de estilo dingbat. El parámetro es un nombre específico de fuente mapeado a un número. Corresponde al valor de OpenType `ornm`, como `ornm 2`.
 
-    > **Nota:** para manteneer la semántica de la fuente, se invita a los diseñadores de fuentes a incluir ornamentas qoe no coincidan con caracteres zingbat de Unicode como variantes de ornamenta al caracter de viñeta (U+2022). Las fuentes bien diseñadas lo harán, aunque muchas otras fuentes no.
+    > [!NOTE]
+    > Para manteneer la semántica de la fuente, se invita a los diseñadores de fuentes a incluir ornamentas qoe no coincidan con caracteres zingbat de Unicode como variantes de ornamenta al caracter de viñeta (U+2022). Las fuentes bien diseñadas lo harán, aunque muchas otras fuentes no.
 
 - `annotation()`
   - : Esta función habilita la muestra de anotaciones, como dígitos circulares o caracteres invertidos. El parámetro es un nombre de fuente específico mapeado a un número. Corresponde al valor de OpenType `nalt`, como `nalt 2`.

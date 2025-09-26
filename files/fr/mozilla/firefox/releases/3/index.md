@@ -3,8 +3,6 @@ title: Firefox 3 pour les développeurs
 slug: Mozilla/Firefox/Releases/3
 ---
 
-{{FirefoxSidebar}}
-
 Pour les développeurs qui désirent prendre connaissance de toutes les nouvelles fonctionnalités de Firefox 3, c'est ici qu'il convient de commencer. Cet article fournit la liste des nouveaux articles couvrant les fonctionnalités qui ont été ajoutées à Firefox 3. Même s'il ne couvre pas nécessairement chaque petite modification, il vous aidera à découvrir les améliorations majeures.
 
 ## Nouvelles fonctionnalités pour les développeurs dans Firefox 3
@@ -104,7 +102,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 <!---->
 
 - [Mises à jour sécurisées](/fr/Versions_d'une_extension,_mise_à_jour_et_compatibilité#Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es)
-  - : Afin que le processus de mise à jour soit plus sûr pour les utilisateurs, les modules complémentaires doivent à présent fournir une méthode sécurisée de distribution des mises à jour avant de pouvoir être installés. Les modules hébergés sur [AMO](http://addons.mozilla.org) fournissent ceci automatiquement. Tout module installé ne fournissant pas une méthode de mise à jour sécurisée lorsque l'utilisateur migrera vers Firefox 3 sera désactivé automatiquement. Firefox continuera cependant à vérifier si des mises à jour sont disponibles au travers du chemin non sécurisé et essayera d'installer toute mise à jour proposée (l'installation échouera si la mise à jour ne propose pas non plus de méthode de mise à jour sécurisée).
+  - : Afin que le processus de mise à jour soit plus sûr pour les utilisateurs, les modules complémentaires doivent à présent fournir une méthode sécurisée de distribution des mises à jour avant de pouvoir être installés. Les modules hébergés sur [AMO](https://addons.mozilla.org) fournissent ceci automatiquement. Tout module installé ne fournissant pas une méthode de mise à jour sécurisée lorsque l'utilisateur migrera vers Firefox 3 sera désactivé automatiquement. Firefox continuera cependant à vérifier si des mises à jour sont disponibles au travers du chemin non sécurisé et essayera d'installer toute mise à jour proposée (l'installation échouera si la mise à jour ne propose pas non plus de méthode de mise à jour sécurisée).
 
 <!---->
 

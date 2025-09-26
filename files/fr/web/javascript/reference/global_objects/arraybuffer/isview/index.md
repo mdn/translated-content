@@ -5,9 +5,17 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 
 {{JSRef}}
 
-La méthode **`ArrayBuffer.isView()`** renvoie `true` si l'argument passé est une des vues `ArrayBuffer`, comme par exemple [un tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou une {{jsxref("DataView")}} ; `false` sinon.
+La méthode **`ArrayBuffer.isView()`** renvoie `true` si l'argument passé est une des vues `ArrayBuffer`, comme par exemple [un tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou une {{jsxref("DataView")}} ; `false` sinon.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.isView()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+console.log(ArrayBuffer.isView(new Int32Array()));
+// Expected output: true
+```
 
 ## Syntaxe
 
@@ -53,4 +61,4 @@ ArrayBuffer.isView(dv); // true
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)

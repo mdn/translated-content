@@ -1,5 +1,6 @@
 ---
 title: "HTMLInputElement: setRangeText() メソッド"
+short-title: setRangeText()
 slug: Web/API/HTMLInputElement/setRangeText
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -27,10 +28,8 @@ setRangeText(replacement, start, end, selectMode)
 - `end` {{optional_inline}}
   - : 置換する最後の文字の*次の*文字を 0 から始まる位置で指定します。既定値は現在の `selectionEnd` の値（ユーザーが現在選択している末尾）です。
 - `selectMode` {{optional_inline}}
-
   - : テキストが置換された後で、選択範囲がどのように設定されるかを定義する文字列です。
     次の値が利用できます。
-
     - `"select"`: 新規挿入したテキストを選択します。
     - `"start"`: 挿入したテキストの直前に選択範囲を移動します。
     - `"end"`: 挿入したテキストの直後に選択範囲を移動します。

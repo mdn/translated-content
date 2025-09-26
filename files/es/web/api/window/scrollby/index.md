@@ -26,7 +26,6 @@ Si X o Y son positivos, desplazarán la página hacia la derecha o hacia abajo r
 \- or -
 
 - `opciones` es un objeto con tres posibles propiedades:
-
   - `top`, que es lo mismo que `Y`
   - `left`, que es lo mismo que `X`
   - `behavior`, que es un string cuyo valor puede ser smooth, instant, or auto. Por defecto el valor es `auto`
@@ -56,7 +55,7 @@ window.scrollBy({
 
 ## Notas
 
-[window.scrollBy](/es/docs/DOM/Window.scrollBy) desplaza el documento una cantidad determinada, mientras que [window.scroll](/es/docs/DOM/Window.scroll) lo hace hacia una posición absoluta en el documento. Vea también [window.scrollByLines](/es/docs/DOM/Window.scrollByLines), [window.scrollByPages](/es/docs/DOM/Window.scrollByPages)
+[window.scrollBy](/es/docs/Web/API/Window/scrollBy) desplaza el documento una cantidad determinada, mientras que [window.scroll](/es/docs/Web/API/Window/scroll) lo hace hacia una posición absoluta en el documento. Vea también [window.scrollByLines](/es/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/es/docs/Web/API/Window/scrollByPages)
 
 ## Especificaciones
 

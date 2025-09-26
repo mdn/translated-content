@@ -9,7 +9,8 @@ La méthode **`keys()`** de l'interface {{domxref("Cache")}} retourne une {{jsxr
 
 Les requêtes sont retournées dans le même ordre que l'ordre d'insertion.
 
-> **Note :** Les requêtes avec des URLs déjà présentes mais des headers différents peuvent être retournées si leurs réponses comportent le header `VARY`.
+> [!NOTE]
+> Les requêtes avec des URLs déjà présentes mais des headers différents peuvent être retournées si leurs réponses comportent le header `VARY`.
 
 ## Syntaxe
 
@@ -24,9 +25,7 @@ cache.keys(request, { options }).then(function (response) {
 - request {{optional_inline}}
   - : La {{domxref("Request", "Requête")}} à retourner, si une clé en particulier est désirée.
 - options {{optional_inline}}
-
   - : Un objet dont les paramètres contrôlent comment le matching est effectué lors de l'opération `keys`. Les options disponibles sont :
-
     - `ignoreSearch`: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url. Si mis à `true`, la partie `?value=bar` de l'url `http://foo.com/?value=bar` sera ignorée lors du matching. Est à `false` par défaut.
     - `ignoreMethod`: Un {{domxref("Boolean")}} qui, quand mis à `true`, empêche les opérations de matching de valider la méthode `HTTP` de la {{domxref("Request", "Requête")}} (en temps normal, seules `GET` et `HEAD` sont autorisées). Est à `false` par défaut.
     - `ignoreVary`: Un {{domxref("Boolean")}} qui, quand mis à `true,` indique à l'opération de matching de ne pas effectuer le matching `VARY` des header. En d'autres termes, si l'URL correspond, un match sera obtenu peu importe que la {{domxref("Response", "Réponse")}} ait un header `VARY` ou non. Est à `false` par défaut.

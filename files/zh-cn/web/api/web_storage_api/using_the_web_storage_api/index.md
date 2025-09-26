@@ -3,11 +3,13 @@ title: 使用 Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 
+{{DefaultAPISidebar("Web Storage API")}}
+
 Web Storage API 提供了存储机制，通过该机制，浏览器可以安全地存储键值对，比使用 cookie 更加直观。这篇文章一步一步讲解如何使用这项简单的技术。
 
 ## 基本概念
 
-存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。您可以像访问对象一样访问这些值，或者使用 {{domxref("Storage.getItem()")}} 和 {{domxref("Storage.setItem()")}} 方法。这三行都设置了（相同的）colorSetting 条目：
+存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。你可以像访问对象一样访问这些值，或者使用 {{domxref("Storage.getItem()")}} 和 {{domxref("Storage.setItem()")}} 方法。这三行都设置了（相同的）colorSetting 条目：
 
 ```js
 localStorage.colorSetting = "#a4509b";
@@ -20,7 +22,7 @@ Web Storage 包含如下两种机制：
 - `sessionStorage` 为每一个给定的源（given origin）维持一个独立的存储区域，该存储区域在页面会话期间可用（即只要浏览器处于打开状态，包括页面重新加载和恢复）。
 - `localStorage` 同样的功能，但是在浏览器关闭，然后重新打开后数据仍然存在。
 
-这两种机制是通过 {{domxref("Window.sessionStorage")}} 和 {{domxref("Window.localStorage")}} 属性使用（更确切的说，在支持的浏览器中 `Window` 对象实现了 `WindowLocalStorage` 和 `WindowSessionStorage` 对象并挂在其 `localStorage` 和 `sessionStorage` 属性下）—— 调用其中任一对象会创建 {{domxref("Storage")}} 对象，通过 {{domxref("Storage")}} 对象，可以设置、获取和移除数据项。对于每个源（origin）`sessionStorage` 和 `localStorage` 使用不同的 Storage 对象——独立运行和控制。
+这两种机制是通过 {{domxref("Window.sessionStorage")}} 和 {{domxref("Window.localStorage")}} 属性使用（更确切的说，在支持的浏览器中 `Window` 对象实现了 `WindowLocalStorage` 和 `WindowSessionStorage` 对象并挂在其 `localStorage` 和 `sessionStorage` 属性下）——调用其中任一对象会创建 {{domxref("Storage")}} 对象，通过 {{domxref("Storage")}} 对象，可以设置、获取和移除数据项。对于每个源（origin）`sessionStorage` 和 `localStorage` 使用不同的 Storage 对象——独立运行和控制。
 
 例如，在文档中调用 `localStorage` 将会返回一个 {{domxref("Storage")}} 对象；调用 `sessionStorage` 返回一个不同的 {{domxref("Storage")}} 对象。可以使用相同的方式操作这些对象，但是操作是独立的。
 
@@ -32,7 +34,7 @@ Web Storage 包含如下两种机制：
 
 支持 localStorage 的浏览器将在窗口对象上具有一个名为 localStorage 的属性。但是，仅断言该属性存在可能会引发异常。如果 localStorage 确实存在，则仍然不能保证 localStorage 实际可用，因为各种浏览器都提供了禁用 localStorage 的设置。因此，浏览器可能支持 localStorage，但不适用于页面上的脚本。
 
-例如，私有浏览模式下的 Safari 浏览器为我们提供了一个空的 l ocalStorage 对象，其配额为零，实际上使它无法使用。相反，我们可能会收到合法的 QuotaExceededError，这意味着我们已经用完了所有可用的存储空间，但实际上存储空间可用。我们的功能检测应考虑这些情况。
+例如，私有浏览模式下的 Safari 浏览器为我们提供了一个空的 localStorage 对象，其配额为零，实际上使它无法使用。相反，我们可能会收到合法的 QuotaExceededError，这意味着我们已经用完了所有可用的存储空间，但实际上存储空间可用。我们的功能检测应考虑这些情况。
 
 这是一个检测 localStorage 是否同时受支持和可用的函数：
 
@@ -65,7 +67,7 @@ function storageAvailable(type) {
 }
 ```
 
-这是您将如何使用它：
+这是你将如何使用它：
 
 ```js
 if (storageAvailable("localStorage")) {
@@ -75,7 +77,7 @@ if (storageAvailable("localStorage")) {
 }
 ```
 
-您可以通过调用 `storageAvailable('sessionStorage')` 来测试 sessionStorage。
+你可以通过调用 `storageAvailable('sessionStorage')` 来测试 sessionStorage。
 
 请参阅此处，[brief history of feature-detecting localStorage](https://gist.github.com/paulirish/5558557).。
 
@@ -89,7 +91,8 @@ if (storageAvailable("localStorage")) {
 
 ![](event-output.png)
 
-> **备注：** 除了使用上面的链接查看示例页面外，还可以[获取源码](https://github.com/mdn/dom-examples/tree/master/web-storage)。
+> [!NOTE]
+> 除了使用上面的链接查看示例页面外，还可以[获取源码](https://github.com/mdn/dom-examples/tree/master/web-storage)。
 
 ### 测试本地存储是否已被填充
 
@@ -105,7 +108,8 @@ if (!localStorage.getItem("bgcolor")) {
 
 {{domxref("Storage.getItem()")}} 方法用来从存储中获取一个数据项。该例中，我们测试 `bgcolor` 数据项是否存在。如果不存在，执行 `populateStorage()` 来将存在的自定义值添加到存储中。如果有值存在，则执行 `setStyles()` 来使用存储的值更新页面的样式。
 
-> **备注：** 你还可以使用 {{domxref("Storage.length")}} 来测试存储对象是否为空。
+> [!NOTE]
+> 你还可以使用 {{domxref("Storage.length")}} 来测试存储对象是否为空。
 
 ### 从存储中获取值
 
@@ -188,7 +192,8 @@ Web Storage 提供了一对简单的方法用于移除数据。我们没用在�
 
 各浏览器支持的 localStorage 和 sessionStorage 容量上限不同。测试页面 [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/)。
 
-> **备注：** 从 ios 5.1 后，Safari 移动存储本地存储的数据在缓存文件夹，这样在系统空间不足的情况下，方便系统自动清理。
+> [!NOTE]
+> 从 ios 5.1 后，Safari 移动存储本地存储的数据在缓存文件夹，这样在系统空间不足的情况下，方便系统自动清理。
 
 ## 相关链接
 

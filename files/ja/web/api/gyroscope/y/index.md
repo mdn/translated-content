@@ -1,0 +1,37 @@
+---
+title: "Gyroscope: y プロパティ"
+slug: Web/API/Gyroscope/y
+l10n:
+  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+---
+
+{{APIRef("Sensor API")}}
+
+{{domxref("Gyroscope")}} インターフェイスの読み取り専用プロパティ **`y`** は、デバイスの y 軸方向の角速度を表す数値を返します。
+
+## 値
+
+{{jsxref('Number')}} です。
+
+## 例
+
+ジャイロスコープは、通常 {{domxref('Sensor.reading_event', 'reading')}} イベントコールバックで読み取られます。以下の例では、これを 1 秒に 60 回行います。
+
+```js
+let gyroscope = new Gyroscope({ frequency: 60 });
+
+gyroscope.addEventListener("reading", (e) => {
+  console.log(`X 軸方向の角速度 ${gyroscope.x}`);
+  console.log(`Y 軸方向の角速度 ${gyroscope.y}`);
+  console.log(`Z 軸方向の角速度 ${gyroscope.z}`);
+});
+gyroscope.start();
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

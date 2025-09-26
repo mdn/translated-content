@@ -1,47 +1,61 @@
 ---
 title: Promise.prototype.then()
+short-title: then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 l10n:
-  sourceCommit: 3fe5c1d405128b70e38347931153fd2ce10b3545
+  sourceCommit: 337d60017f421e14f17bf8e9051d302b0fdb9b9b
 ---
 
-{{JSRef}}
+**`then()`** は {{jsxref("Promise")}} インスタンスのメソッドであり、最大 2 つの引数として、この `Promise` が成功した場合と失敗した場合のコールバック関数を取ります。コールバックは、それが呼び出されたプロミス内に格納され、すぐに別の {{jsxref("Promise")}} オブジェクトを返値において返し、他のプロミスのメソッドに対する[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)呼び出しを行うことができます。
 
-**`then()`** は {{jsxref("Promise")}} オブジェクトのメソッドであり、最大 2 つの引数として、 `Promise` が成功した場合と失敗した場合のコールバック関数を取ります。これは直ちに同等の {{jsxref("Promise")}} オブジェクトを返し、プロミスの他のメソッドを[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#chaining)呼び出し
+{{InteractiveExample("JavaScript デモ: Promise.prototype.then()")}}
 
-{{EmbedInteractiveExample("pages/js/promise-then.html")}}
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  resolve("Success!");
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // 予想される結果: "Success!"
+});
+```
 
 ## 構文
 
 ```js-nolint
 then(onFulfilled)
 then(onFulfilled, onRejected)
-
-then(
-  (value) => { /* 履行ハンドラー */ },
-  (reason) => { /* 拒否ハンドラー */ },
-)
 ```
 
 ### 引数
 
-- `onFulfilled` {{optional_inline}}
-  - : `Promise` が成功したときに非同期に呼び出される関数 ({{jsxref("Function")}}) です。この関数は 1 つの引数、 _履行値_ を取ります。これが関数ではない場合は、内部的に、履行された値を送るための _識別_ 関数 (`(x) => x`) に置き換えられます。
+- `onFulfilled`
+  - : このプロミスが履行されたときに非同期に呼び出される関数です。この返値は、`then()` から返されるプロミスの履行値になります。この関数は以下の引数と共に呼び出されます。
+    - `value`
+      - : このプロミスが履行されたときの値。
+
+    これが関数ではない場合は、内部的に、履行された値を送るための _恒等_ 関数 (`(x) => x`) に置き換えられます。
+
 - `onRejected` {{optional_inline}}
-  - : `Promise` が拒否されたときに非同期に呼び出される関数 ({{jsxref("Function")}}) です。この関数は 1 つの引数、 _拒否理由_ を取ります。これが関数ではない場合は、内部的に引数として受け取ったエラーを投げる _スロワー_ 関数 (`(x) => { throw x; }`) に置き換えられます。
+  - : このプロミスが拒否されたときに非同期に呼び出される関数です。この返値は、`then()` から返されるプロミスの履行値になります。この関数は以下の引数と共に呼び出されます。
+    - `reason`
+      - : こプロミスが拒否されたときの値。
+
+    これが関数ではない場合は、内部的に引数として受け取ったエラーを投げる _スロワー_ 関数 (`(x) => { throw x; }`) に置き換えられます。
 
 ### 返値
 
-新しい {{jsxref("Promise")}} をすぐに返します。この新しいプロミスは、現在のプロミスの状態に関係なく、返すときには常に待機状態です。
+新しい {{jsxref("Promise")}} をすぐに返します。この返されたプロミスは、現在のプロミスの状態に関係なく、返すときには常に待機状態です。
 
-`onFulfilled` と `onRejected` ハンドラーのいずれかが実行され、現在のプロミスの履行されたか拒否されたかが処理されます。この呼び出しは、現在のプロミスが既に決定されている場合でも、常に非同期で行われます。返されたプロミス（`p` と呼ぶ）の振る舞いは、ハンドラーの実行結果に依存し、一連の特定のルールに従います。もしハンドラー関数が、
+`onFulfilled` と `onRejected` ハンドラーのいずれかが実行され、現在のプロミスの履行されたか拒否されたかが処理されます。この呼び出しは、現在のプロミスが既に決定されている場合でも、常に非同期で行われます。 `then()` が返すプロミス（以下、 `p` と呼ぶ）の動作は、一連の特定のルールに従って、ハンドラーの実行結果によって決まります。もしハンドラー関数が、
 
 - 値を返した場合、 `p` は返値をその値として履行されます。
-- 何も返さなかった場合、 `p` は `undefined` の値で履行されます。
+- 何も返さなかった場合、 `p` は `undefined` をその値として履行されます。
 - エラーを投げた場合、 `p` はその値としてエラーを投げて拒否されます。
 - すでに履行されたプロミスを返した場合、 `p` は、そのプロミスの値をその値として履行されます。
 - すでに拒否されたプロミスを返した場合、 `p` は、そのプロミスの値をその値として拒否されます。
-- 他の待機状態のプロミスオブジェクトを返した場合、 `then` から返されたプロミスの履行/拒否は、ハンドラーによって返されたプロミスの履行/拒否結果に依存します。また、 `then` から返されたプロミスの解決値は、ハンドラーによって返されたプロミスの解決値と同じになります。
+- 他の待機状態のプロミスオブジェクトを返した場合、 `p` は待機中となり、そのプロミスが履行/拒否された直後にそのプロミスの値として履行/拒否されたプロミスとなります。
 
 ## 解説
 
@@ -49,11 +63,21 @@ then(
 
 `onRejected` ハンドラーの詳細については、 {{jsxref("Promise/catch", "catch()")}} のリファレンスを参照してください。
 
-`then()` は、新しいプロミスオブジェクトを返すことです。同じプロミスオブジェクトで `then()` メソッドを 2 回呼び出すと（連鎖するのではなく）、このプロミスオブジェクトは 2 組の決定ハンドラーを保有することになります。同じプロミスオブジェクトに付けられたすべてのハンドラーは、常に追加された順番に呼び出されます。さらに、 `then()` の各呼び出しによって返される 2 つのプロミスは、別個の連鎖を始め、お互いの決定を待つことはありません。
+`then()` は新しいプロミスオブジェクトを返しますが、呼び出されたプロミスオブジェクトを変更し、ハンドラーを内部リストに追加します。 したがって、ハンドラーは元のプロミスによって保持され、その寿命は少なくとも元のプロミスの寿命と同じ長さになります。 例えば、次の例では、返されたプロミスが保持されないにもかかわらず、最終的にはメモリーを使い果たします。
 
-`then()` チェーンに沿って発生する [Thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) オブジェクトは常に[解決](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function)されます。`onFulfilled` ハンドラーは thenable オブジェクトを決して受け取らず、いずれかのハンドラーによって返される thenable は常に次のハンドラーに渡される前に解決されます。これは、新しいプロミスを構築するときに、 `executor` から渡された `resolve` 関数と `reject` 関数が保存され、現在のプロミスが決定したときに、それぞれの関数が履行された値または拒絶の理由とともに呼び出されるからです。解決ロジックは、 {{jsxref("Promise/Promise", "Promise()")}} コンストラクターから渡されるリゾルバー関数から決まります。
+```js
+const pendingPromise = new Promise(() => {});
+while (true) {
+  pendingPromise.then(doSomething);
+}
+```
 
-`then()` はサブクラス化に対応しており、`Promise` のサブクラスのインスタンスに対して呼び出すことができ、その結果はサブクラスの型のプロミスになります。返す値の種類は [`@@species`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species) プロパティでカスタマイズすることができます。
+`then()` は、新しいプロミスオブジェクトを返すことです。
+同じプロミスオブジェクトで `then()` メソッドを 2 回呼び出すと（連鎖するのではなく）、このプロミスオブジェクトは 2 組の決定ハンドラーを保有することになります。同じプロミスオブジェクトに付けられたすべてのハンドラーは、常に追加された順番に呼び出されます。さらに、 `then()` の各呼び出しによって返される 2 つのプロミスは、別個の連鎖を始め、お互いの決定を待つことはありません。
+
+`then()` チェーンに沿って発生する [Thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) オブジェクトは常に[解決](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function)されます。`onFulfilled` ハンドラーは thenable オブジェクトを決して受け取らず、いずれかのハンドラーによって返される thenable は常に次のハンドラーに渡される前に解決されます。これは、新しいプロミスを構築するときに、 `executor` から渡された `resolve` 関数と `reject` 関数が保存され、現在のプロミスが決定したときに、それぞれの関数が履行された値または拒絶の理由とともに呼び出されるからです。解決ロジックは、 {{jsxref("Promise/Promise", "Promise()")}} コンストラクターから渡されるリゾルバー関数から決まります。
+
+`then()` はサブクラス化に対応しており、`Promise` のサブクラスのインスタンスに対して呼び出すことができ、その結果はサブクラスの型のプロミスになります。返す値の種類は [`[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species) プロパティでカスタマイズすることができます。
 
 ## 例
 
@@ -80,14 +104,14 @@ p1.then(
 
 ```js
 Promise.resolve(1).then(2).then(console.log); // 1
-Promise.reject(1).then(2, 2).then(console.log, console.log); // 1
+Promise.reject(new Error("failed")).then(2, 2).then(console.log, console.log); // Error: failed
 ```
 
 ### 連鎖
 
 `then` メソッドは `Promise` を返すので、メソッド連鎖ができます。
 
-関数が `then` にハンドラーとして渡されると `Promise` を返します。同じ `Promise` がメソッド連鎖の次の `then` に現れます。次のスニペットは、非同期実行をシミュレートする、 `setTimeout` 関数付きのコードです。
+`then` にハンドラーとして渡された関数が `Promise` を返す場合、同じ `Promise` がメソッド連鎖の次の `then` に現れます。次のスニペットは、非同期実行をシミュレートする、 `setTimeout` 関数付きのコードです。
 
 ```js
 Promise.resolve("foo")
@@ -141,7 +165,7 @@ p2.then((value) => {
   console.log(value); // 1
   return value + 1;
 }).then((value) => {
-  console.log(value, " - A synchronous value works"); // 2 - A synchronous value works
+  console.log(value, "- A synchronous value works"); // 2 - A synchronous value works
 });
 
 p2.then((value) => {
@@ -186,7 +210,7 @@ Promise.resolve()
 他にもすべての場合において、返されたプロミスは最終的に履行されます。以下の例では、最初の `then()` は、チェーン内の前のプロミスが拒否されたにもかかわらず、履行されたプロミスに包まれた `42` を返します。
 
 ```js
-Promise.reject()
+Promise.reject(new Error("Oh no!"))
   .then(
     () => 99,
     () => 42,
@@ -209,10 +233,8 @@ function rejectLater(resolve, reject) {
 }
 
 const p1 = Promise.resolve("foo");
-const p2 = p1.then(() => {
-  // Return promise here, that will be resolved to 10 after 1 second
-  return new Promise(resolveLater);
-});
+// ここでプロミスを返します。これは 1 秒後に 1 に解決されます。
+const p2 = p1.then(() => new Promise(resolveLater));
 p2.then(
   (v) => {
     console.log("resolved", v); // "resolved", 10
@@ -223,10 +245,8 @@ p2.then(
   },
 );
 
-const p3 = p1.then(() => {
-  // Return promise here, that will be rejected with 'Error' after 1 second
-  return new Promise(rejectLater);
-});
+// 1 秒後に 'Error' で拒否されるプロミスをここで返します。
+const p3 = p1.then(() => new Promise(rejectLater));
 p3.then(
   (v) => {
     // not called

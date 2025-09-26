@@ -1,7 +1,10 @@
 ---
 title: SLD
 slug: Glossary/SLD
+original_slug: Glossary/Second-level_Domain
 ---
+
+{{GlossarySidebar}}
 
 SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD")}} 直下の階層のドメイン名です。
 
@@ -12,11 +15,9 @@ SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD
 もう一つの例として、 `developer.mozilla.org` では、 `developer` サブドメインが、 Mozilla ウェブサイトの開発者向け (developer) の章を含むサブドメインを指定するのに使われています。
 
 1. Wikipedia articles
-
    1. [SLD](https://ja.wikipedia.org/wiki/セカンドレベルドメイン)
 
-2. [用語集](/ja/docs/Glossary)
-
+2. 関連用語:
    1. {{Glossary("DNS")}}
    2. {{Glossary("Domain", "ドメイン")}}
    3. {{Glossary("Domain name", "ドメイン名")}}

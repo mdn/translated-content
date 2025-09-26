@@ -3,7 +3,7 @@ title: Protocolos de Iteración
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
 
-{{jsSidebar("More")}}Las nuevas características de ECMAScript 6 no solo están asociadas a cambios y adiciones de sintaxis o a nuevos objetos nativos, sino también a protocolos. Dichos protocolos puede ser implementados por cualquier objeto en relación a algunas convenciones.Existen dos protocolos: El[protocolo iterable](#The_.22iterable.22_protocol) y el[protocolo iterador](#The_.22iterator.22_protocol).
+{{jsSidebar("More")}}Las nuevas características de ECMAScript 6 no solo están asociadas a cambios y adiciones de sintaxis o a nuevos objetos nativos, sino también a protocolos. Dichos protocolos puede ser implementados por cualquier objeto en relación a algunas convenciones.Existen dos protocolos: El[protocolo iterable](#the_.22iterable.22_protocol) y el[protocolo iterador](#the_.22iterator.22_protocol).
 
 ## El protocolo iterable
 
@@ -14,7 +14,7 @@ Para ser iterable, un objeto debe implementar el método **@@iterator**, lo cual
 - Propiedad
   - : `[Symbol.iterator]`
 - Valor
-  - : Una función sin argumentos que retorna un objeto, de acuerdo al [protocolo iterador](#The_.22iterator.22_protocol).
+  - : Una función sin argumentos que retorna un objeto, de acuerdo al [protocolo iterador](#the_.22iterator.22_protocol).
 
 Siempre que un objeto necesite ser iterado (como al comienzo de un `for..of` loop), su método `@@iterator` es llamado sin argumentos, y el **iterador** retornado es usado para obtener los valores a ser iterados.
 
@@ -27,12 +27,9 @@ Un objeto es un iterador cuando este implementa un método **`next()`** con la s
 - Propiedad
   - : `next`
 - Valor
-
   - : Una función sin argumentos que retorna un objeto con dos propiedades:
-
     - `done` (boleano)
-
-      - Su valor es `true` si el iterador está más allá del final de la secuencia iterada. En este caso `value` opcionalmente especifica el _valor retornado_ por el iterador. Los valores retornados son explicados [aquí](http://www.2ality.com/2013/06/iterators-generators.html#generators-as-threads).
+      - Su valor es `true` si el iterador está más allá del final de la secuencia iterada. En este caso `value` opcionalmente especifica el _valor retornado_ por el iterador. Los valores retornados son explicados [aquí](https://www.2ality.com/2013/06/iterators-generators.html#generators-as-threads).
       - Su valor es `false` si el iterador pudo producir el siguiente valor en la secuencia. Esto es equivalente a no especificar la propiedad `done` en su totalidad.
 
     - `value` - cualquier valor de JavaScript retornado por el iterador. Puede ser omitido cuando el valor de `done` es `true`.
@@ -67,7 +64,7 @@ iterator.next(); // { value: "i", done: false }
 iterator.next(); // { value: undefined, done: true }
 ```
 
-En algunas estructuras nativas del lenguaje como en el caso del [operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator), el mismo protocolo de iteración está presente en su parte interna:
+En algunas estructuras nativas del lenguaje como en el caso del [operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), el mismo protocolo de iteración está presente en su parte interna:
 
 ```js
 [...someString]; // ["h", "i"]
@@ -161,7 +158,7 @@ De igual manera {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Pr
 
 ### Sintaxis que espera un iterable
 
-Algunas declaraciones y expresiones esperan iterables, por ejemplo el bucle [`for-of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), el[operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator), la expresión [`Yield*`](/es/docs/Web/JavaScript/Reference/Operators/yield*), y la [asignación desestructurada _destructuring assignment_](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Algunas declaraciones y expresiones esperan iterables, por ejemplo el bucle [`for-of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), el[operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), la expresión [`Yield*`](/es/docs/Web/JavaScript/Reference/Operators/yield*), y la [asignación desestructurada _destructuring assignment_](/es/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ```js
 for (let value of ["a", "b", "c"]) {

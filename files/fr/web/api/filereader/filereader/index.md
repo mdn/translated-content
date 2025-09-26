@@ -3,9 +3,11 @@ title: FileReader()
 slug: Web/API/FileReader/FileReader
 ---
 
+{{APIRef("File API")}}
+
 **`FileReader()`** est un constructeur qui permet de créer un nouvel objet FileReader.
 
-Pour plus de details à propos de `FileReader`, visiter [Using files from web applications](/fr/docs/Web/API/File/Using_files_from_web_applications).
+Pour plus de details à propos de `FileReader`, visiter [Using files from web applications](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
 
 ## Syntaxe
 
@@ -37,4 +39,4 @@ function printFile(file) {
 
 ## Voir aussi
 
-- [Using files from web applications](/fr/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/fr/docs/Web/API/File_API/Using_files_from_web_applications)

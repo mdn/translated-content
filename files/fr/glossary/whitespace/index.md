@@ -3,6 +3,8 @@ title: Whitespace
 slug: Glossary/Whitespace
 ---
 
+{{GlossarySidebar}}
+
 **Whitespace** sont un ensemble de {{Glossary("Character", "characters")}} qui est utilisé pour afficher des espaces horizontaux ou verticaux entre d'autres caractères. Ils sont souvent utilisés pour séparer les jetons dans {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}, et dans d'autres langages informatiques. Les caractères whitespace et leur utilisation varient selon les langages.
 
 ## En HTML
@@ -17,7 +19,7 @@ slug: Glossary/Whitespace
 
 - [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)
 - [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
-- [How whitespace is handled by HTML, CSS, and in the DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
+- [How whitespace is handled by HTML, CSS, and in the DOM](/fr/docs/Web/CSS/CSS_text/Whitespace)
 - {{cssxref("white-space")}}
 - [Espace](<https://fr.wikipedia.org/wiki/Espace_(typographie)>) sur Wikipédia
 - {{Glossary("Character")}}

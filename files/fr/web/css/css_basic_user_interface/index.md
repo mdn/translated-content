@@ -30,7 +30,7 @@ slug: Web/CSS/CSS_basic_user_interface
 
 ## Guides
 
-- [Utiliser des URL pour la propriété `cursor`](/fr/docs/Web/CSS/CSS_Basic_User_Interface/Utilisation_d_URL_pour_la_propriété_cursor)
+- [Utiliser des URL pour la propriété `cursor`](/fr/docs/Web/CSS/cursor)
   - : Ce guide décrit comment utiliser des URL avec la propriété {{CSSxRef("cursor")}} afin de créer des curseurs personnalisés.
 
 ## Spécifications

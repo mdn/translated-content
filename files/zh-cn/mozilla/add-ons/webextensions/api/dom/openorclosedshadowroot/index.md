@@ -1,32 +1,39 @@
 ---
-title: Element.openOrClosedShadowRoot
+title: dom.openOrClosedShadowRoot()
 slug: Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{APIRef("Shadow DOM")}}{{non-standard_header}}
+获取指定元素的开放或封闭的影子根。如果影子根未附加到该元素，则返回 `null`。
 
-> **备注：** This API is available only to [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions).
+> [!NOTE]
+> 在 Firefox 中，等效属性是 `element.openOrClosedShadowRoot`。该只读属性表示元素所承载的影子 DOM，无论其 {{DOMxRef("ShadowRoot.mode", "mode")}} 是 `open` 还是 `closed`。
+>
+> 使用 {{DOMxRef("Element.attachShadow()")}} 将影子 DOM 添加到元素中。
 
-`Element.openOrCloseShadowRoot` 是一个只读属性。represents the shadow root hosted by the element, regardless if its {{DOMxRef("ShadowRoot.mode", "mode")}} is `open` or `closed`. Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing element.
+## 语法
 
-## Syntax
-
+```js-nolint
+let shadowRoot = browser.dom.openOrClosedShadowRoot(
+  element,    // HTMLElement
+)
 ```
-var shadowroot = element.shadowRoot;
-```
 
-### Value
+### 参数
 
-A {{DOMxRef("ShadowRoot")}} object instance, regardless if its {{DOMxRef("ShadowRoot.mode", "mode")}} is set to `open` or `closed`, or `null` if no shadow root is present. (See {{DOMxRef("Element.attachShadow()")}} for further details).
+- `element`
+  - : `HTMLElement`。宿主元素。
 
-## Specifications
+### 返回值
 
-_This property is not part of any specification._
+一个 {{DOMxRef("ShadowRoot")}} 对象实例，无论其 {{DOMxRef("ShadowRoot.mode", "mode")}} 设置为 `open` 还是 `closed`，如果没有影子 DOM，则返回 `null`。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{DOMxRef("Element.shadowRoot")}}
+- [`chrome.dom.openOrClosedShadowRoot`](https://developer.chrome.google.cn/docs/extensions/reference/api/dom#method-openOrClosedShadowRoot)

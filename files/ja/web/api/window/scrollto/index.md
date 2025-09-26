@@ -35,7 +35,7 @@ window.scrollTo(0, 1000);
 window.scrollTo({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 
@@ -51,4 +51,4 @@ window.scrollTo({
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollTo")}}
+{{Compat}}

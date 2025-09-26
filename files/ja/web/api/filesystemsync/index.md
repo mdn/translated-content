@@ -7,9 +7,10 @@ l10n:
 
 {{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-[ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction) では、 `FileSystemSync` オブジェクトはファイルシステムを表します。 2 つのプロパティがあります。
+[ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_System_API) では、 `FileSystemSync` オブジェクトはファイルシステムを表します。 2 つのプロパティがあります。
 
-> **メモ:** このインターフェイスは非推奨で、標準路線ではなくなりました。
+> [!NOTE]
+> このインターフェイスは非推奨で、標準路線ではなくなりました。
 > _もう使用しないでください。_ 代わりに[ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)を使用してください。
 
 ## 基本コンセプト
@@ -34,4 +35,4 @@ l10n:
 ## 関連情報
 
 - [ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルおよびディレクトリー項目 API 入門](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルおよびディレクトリー項目 API 入門](/ja/docs/Web/API/File_System_API)

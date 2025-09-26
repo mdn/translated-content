@@ -3,6 +3,8 @@ title: CSS
 slug: Glossary/CSS
 ---
 
+{{GlossarySidebar}}
+
 **CSS** (Cascading Style Sheets, или каскадные таблицы стилей) - это декларативный язык, который отвечает за то, как страницы выглядят в {{glossary("browser","веб браузере")}}. CSS стили содержат свойства и их значения, которые и определяют, как будет выглядеть сайт.
 
 CSS одна из ключевых Web технологий, наряду с {{Glossary("HTML")}} и {{Glossary("JavaScript")}}. Как правило CSS используется для определения стилей {{Glossary("Element","HTML-элементов")}}, но также может быть применён совместно с другими языками разметки, такими как {{Glossary("SVG")}} или {{Glossary("XML")}}.
@@ -31,9 +33,9 @@ p {
 ### Техническая документация
 
 - [CSS документация на MDN](/ru/docs/Web/CSS)
-- [Рабочая группа CSS по текущей работе](http://www.w3.org/Style/CSS/current-work)
+- [Рабочая группа CSS по текущей работе](https://www.w3.org/Style/CSS/current-work)
 
 ### Веб-курсы CSS
 
-- [Веб курсы на codecademy.com](http://www.codecademy.com/en/tracks/web)
+- [Веб курсы на codecademy.com](https://www.codecademy.com/en/tracks/web)
 - [Веб курсы на W3Schools](http://www.w3schools.com/css/default.asp)

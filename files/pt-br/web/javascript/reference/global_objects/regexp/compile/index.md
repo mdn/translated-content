@@ -18,9 +18,7 @@ regexObj.compile(pattern, flags)
 - `pattern`
   - : É o texto da expressão regular.
 - `flags`
-
   - : Se especificado, as flags podem ter qualquer combinação dos seguintes valores:
-
     - `g`
       - : global.
     - `i`
@@ -47,14 +45,11 @@ regexObj.compile("new foo", "g");
 
 ## Especificações
 
-| Especificação                                                                        | Estado               | Comentario                                                                                                  |
-| ------------------------------------------------------------------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}}     | {{Spec2('ES6')}}     | Initial definition. Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}} | {{Spec2('ESDraft')}} | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers.                     |
+{{Specifications}}
 
 ## Browser compativeis
 
-{{Compat("javascript.builtins.RegExp.compile")}}
+{{Compat}}
 
 ## Veja também
 

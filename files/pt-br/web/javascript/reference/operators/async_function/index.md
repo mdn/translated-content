@@ -13,7 +13,7 @@ async function [nome]([parametro1[, parametro2[, ..., parametroN]]]) {
 }
 ```
 
-Como no [ES2015](/pt-BR/docs/), você tambem pode usar [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Como no [ES2015](/pt-BR/docs/Web), você tambem pode usar [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Parâmetros
 
@@ -64,13 +64,11 @@ add(10).then((v) => {
 
 ## Especificações
 
-| Especificação                                                                | Status               | Comentário                   |
-| ---------------------------------------------------------------------------- | -------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.async_function")}}
+{{Compat}}
 
 ## Veja também
 

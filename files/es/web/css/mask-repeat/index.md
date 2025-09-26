@@ -1,9 +1,9 @@
 ---
-title: "-webkit-mask-repeat"
+title: -webkit-mask-repeat
 slug: Web/CSS/mask-repeat
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

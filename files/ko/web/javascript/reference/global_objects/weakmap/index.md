@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`WeakMap`** 은 키/값 쌍의 모음으로, 키는 반드시 객체 또는 [등록되지 않은 심볼][]이며 값은 임의의 [JavaScript 타입](/ko/docs/Web/JavaScript/Data_structures#javascript의_타입)입니다. `WeakMap`은 키에 대한 강력한 참조를 생성하지 않으므로, 객체가 `WeakMap`의 키에 포함되더라도 가비지 컬렉션의 대상이 됩니다. 키 객체가 가비지 컬렉터에 의해 정리된 후에는, 다른 곳에 강력한 참조가 존재하지 않는 한, 키에 연결됐던 값 또한 가비지 컬렉션 대상이 됩니다. `WeakMap`의 키로 사용할 수 있는 유일한 원시 값은 심볼, 정확히는 [등록되지 않은 심볼][]인데, 등록되지 않은 심볼은 고유함이 보장되며 다시 생성할 수 없기 때문입니다.
+**`WeakMap`** 은 키/값 쌍의 모음으로, 키는 반드시 객체 또는 [등록되지 않은 심볼][]이며 값은 임의의 [JavaScript 타입](/ko/docs/Web/JavaScript/Guide/Data_structures#javascript의_타입)입니다. `WeakMap`은 키에 대한 강력한 참조를 생성하지 않으므로, 객체가 `WeakMap`의 키에 포함되더라도 가비지 컬렉션의 대상이 됩니다. 키 객체가 가비지 컬렉터에 의해 정리된 후에는, 다른 곳에 강력한 참조가 존재하지 않는 한, 키에 연결됐던 값 또한 가비지 컬렉션 대상이 됩니다. `WeakMap`의 키로 사용할 수 있는 유일한 원시 값은 심볼, 정확히는 [등록되지 않은 심볼][]인데, 등록되지 않은 심볼은 고유함이 보장되며 다시 생성할 수 없기 때문입니다.
 
 `WeakMap`을 사용하면 값이 키를 참조하더라도 키 객체의 가비지 컬렉션을 방지하지 않는 방식으로 데이터를 객체에 연결할 수 있습니다. 그러나 `WeakMap`은 키의 활성 상태를 관찰하는 것을 허용하지 않으며, 이는 `WeakMap`의 키를 열거할 수 없는 이유입니다. 만약 `WeakMap`이 키 목록을 얻을 수 있는 어떤 메서드를 제공했다면, 그 목록은 가비지 컬렉션 상태에 따라 달라질 것이므로 비결정성이 발생합니다. 키 목록이 필요하면 `WeakMap` 대신 {{jsxref("Map")}}을 사용해야 합니다.
 
@@ -127,7 +127,7 @@ class ClearableWeakMap {
 
 - {{jsxref("Map")}}과 비교했을 때, `WeakMap`은 키로 사용되는 객체에 대한 강력한 참조를 보유하지 않으므로 객체와 그 메타데이터가 동일한 수명을 공유하고, 따라서 메모리 누수를 방지할 수 있습니다.
 - 열거할 수 없는 속성이나 {{jsxref("Symbol")}} 속성을 사용하는 것과 비교했을 때, `WeakMap`은 객체 외부에 존재하므로 {{jsxref("Object.getOwnPropertySymbols")}} 등 리플렉션 메서드를 사용하더라도 사용자 코드에서는 메타데이터를 가져올 수 없습니다.
-- [클로저](/ko/docs/Web/JavaScript/Closures)와 비교했을 때, 하나의 `WeakMap`을 생성자에서 생성한 모든 인스턴스에 재사용할 수 있으므로 메모리 효율성이 더 높고, 같은 클래스의 다른 인스턴스가 서로의 비공개 멤버를 읽을 수 있습니다.
+- [클로저](/ko/docs/Web/JavaScript/Guide/Closures)와 비교했을 때, 하나의 `WeakMap`을 생성자에서 생성한 모든 인스턴스에 재사용할 수 있으므로 메모리 효율성이 더 높고, 같은 클래스의 다른 인스턴스가 서로의 비공개 멤버를 읽을 수 있습니다.
 
 ```js
 let Thing;
@@ -168,7 +168,7 @@ thing.showPrivate();
 // 1
 ```
 
-위 코드는 [비공개 필드](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)를 사용하는 아래 예제와 동일하다고 볼 수 있습니다.
+위 코드는 [비공개 필드](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements)를 사용하는 아래 예제와 동일하다고 볼 수 있습니다.
 
 ```js
 class Thing {
@@ -198,7 +198,7 @@ thing.showPrivate();
 
 ### 메타데이터 연결하기
 
-{{jsxref("WeakMap")}}을 사용하면 객체의 생명 주기에 영향을 주지 않고도 메타데이터를 연결할 수 있습니다. 비공개 멤버 예제하고도 굉장히 비슷한데, 비공개 멤버 또한 [프로토타입 상속](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)에 참여하지 않는 외부 메타데이터로 설계됐기 때문입니다.
+{{jsxref("WeakMap")}}을 사용하면 객체의 생명 주기에 영향을 주지 않고도 메타데이터를 연결할 수 있습니다. 비공개 멤버 예제하고도 굉장히 비슷한데, 비공개 멤버 또한 [프로토타입 상속](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)에 참여하지 않는 외부 메타데이터로 설계됐기 때문입니다.
 
 하지만 이 방법은 이미 생성된 객체들을 대상으로도 확장할 수 있습니다. 예를 들어 웹에서는, DOM 요소에 추가 데이터를 연결했다가 나중에 접근하고 싶은 경우가 생길 수 있습니다. 흔히 쓰이는 방법은 데이터를 요소의 속성으로 붙이는 것입니다.
 
@@ -256,7 +256,7 @@ function handleObjectValues(obj) {
 }
 ```
 
-하지만 함수가 한 객체를 받을 때만 사용할 수 있다는 점을 주의해야 합니다. 또한 입력했던 객체를 함수에 다시 전달할 일이 영원히 없다고 해도, 결과는 캐시에 계속 남아있게 됩니다. 더 효율적인 방법은 {{jsxref("Map")}}과 {{jsxref("WeakRef")}} 객체를 사용해서, 임의 타입의 입력 값을 그에 대응하는 (아마도 매우 큰) 계산 결과와 연관짓는 것입니다. 자세한 내용은 [WeakRef와 FinalizationRegistry](/ko/docs/Web/JavaScript/Memory_management#weakref와_finalizationregistry) 예제를 참고하세요.
+하지만 함수가 한 객체를 받을 때만 사용할 수 있다는 점을 주의해야 합니다. 또한 입력했던 객체를 함수에 다시 전달할 일이 영원히 없다고 해도, 결과는 캐시에 계속 남아있게 됩니다. 더 효율적인 방법은 {{jsxref("Map")}}과 {{jsxref("WeakRef")}} 객체를 사용해서, 임의 타입의 입력 값을 그에 대응하는 (아마도 매우 큰) 계산 결과와 연관짓는 것입니다. 자세한 내용은 [WeakRef와 FinalizationRegistry](/ko/docs/Web/JavaScript/Guide/Memory_management#weakref와_finalizationregistry) 예제를 참고하세요.
 
 ## 명세서
 

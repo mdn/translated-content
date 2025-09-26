@@ -3,13 +3,13 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## Sumário
 
 O construtor **`RegExp`** cria um objeto de expressão regular para realizar uma correspondência de texto com um padrão.
 
-Para uma introdução à expressões regulares, leia o [capítulo de Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) no [Guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide).
+Para uma introdução à expressões regulares, leia o [capítulo de Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) no [Guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide).
 
 ## Construtor
 
@@ -26,9 +26,7 @@ RegExp(padrão[, flags])
 - `padrão`
   - : O texto da expressão regular, ou como em ES5, outro objeto RegExp. Os padrões podem incluir caracteres especiais para correspondencia em um intervalo maior de valores do que uma string literal.
 - `flags`
-
   - : Se especificado, <kbd>flags</kbd>indica os marcadores que podem ser adicionados, ou se um objeto é suficiente para o padrão, os valores de flags serão substituidos por qualquer uma das flags de objetos. O valor de <kbd>flags</kbd>é uma string contendo qualquer combinação dos seguintes valores:
-
     - `g`
       - : corresponder globalmente; acha **todas** as correspondências em vez de parar após achar a primeira
     - `i`
@@ -682,11 +680,11 @@ O objeto global `RegExp não possui métodos próprios, no entanto, herda alguns
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -788,18 +786,14 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // prints 'xxx'
 
 ## Especificações
 
-| Specification                                                           | Status             | Comment                                            |
-| ----------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                 | Standard           | Initial definition. Implemented em JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.10', 'RegExp')}}                           | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-regexp-regular-expression-objects', 'RegExp')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp")}}
+{{Compat}}
 
 ## Veja também
 
-- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) chapter no [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) chapter no [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

@@ -5,7 +5,7 @@ slug: Web/API/DOMStringMap
 
 {{ APIRef("HTML DOM") }}
 
-Used by the [`dataset`](/ru/docs/Web/HTML/Global_attributes#dataset) HTML attribute to represent data for custom attributes added to elements.
+Used by the [`dataset`](/ru/docs/Web/HTML/Reference/Global_attributes#dataset) HTML attribute to represent data for custom attributes added to elements.
 
 ## Доступные методы
 
@@ -63,11 +63,11 @@ void removeProp(
 - `attr`
   - : The property to remove from the dataset.
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{ domxref("HTMLElement.dataset") }}
-- [`dataset`](/ru/docs/Web/HTML/Global_attributes#dataset)
+- [`dataset`](/ru/docs/Web/HTML/Reference/Global_attributes#dataset)

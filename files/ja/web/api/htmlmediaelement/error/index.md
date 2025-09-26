@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.error
+title: "HTMLMediaElement: error プロパティ"
+short-title: error
 slug: Web/API/HTMLMediaElement/error
 l10n:
-  sourceCommit: 5e10a2aab4ec9ecbcf8cf79f589f9b7ece88ef60
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("HTML DOM")}}
@@ -18,10 +19,12 @@ l10n:
 この例では video 要素を設けて、それにエラーハンドラーを追加しています。エラーハンドラーは単に詳細をコンソールに記録します。
 
 ```js
-const videoElement = document.createElement('video');
+const videoElement = document.createElement("video");
 videoElement.onerror = () => {
-  console.error(`Error ${videoElement.error.code}; details: ${videoElement.error.message}`);
-}
+  console.error(
+    `Error ${videoElement.error.code}; details: ${videoElement.error.message}`,
+  );
+};
 videoElement.src = "https://example.com/bogusvideo.mp4";
 ```
 
@@ -35,5 +38,5 @@ videoElement.src = "https://example.com/bogusvideo.mp4";
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.error` プロパティを定義しているインターフェイス
 - {{HTMLElement("audio")}} および {{HTMLElement("video")}}

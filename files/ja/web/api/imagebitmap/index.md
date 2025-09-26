@@ -9,7 +9,7 @@ l10n:
 
 **`ImageBitmap`** インターフェイスは、{{HTMLElement("canvas")}} に過度の遅延なく描画することができるビットマップ画像を表します。これは {{domxref("createImageBitmap()")}} ファクトリーメソッドを使用して、様々なソースオブジェクトから作成することができます。`ImageBitmap` は、WebGL でレンダリングするためのテクスチャを準備するための、非同期でリソース効率の良い経路を提供します。
 
-`ImageBitmap` は[転送可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)です。
+`ImageBitmap` は[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)です。
 
 ## インスタンスプロパティ
 

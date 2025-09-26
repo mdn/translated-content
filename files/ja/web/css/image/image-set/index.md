@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
 ---
 
-{{CSSRef}}
-
-**`image-set()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)表記で、主に高解像度の画面において、指定されたセットから最も適切な CSS 画像をブラウザーに選択させる方法です。
+**`image-set()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)表記で、主に高解像度の画面において、指定されたセットから最も適切な CSS 画像をブラウザーに選択させる方法です。
 
 解像度や帯域幅は、端末や ネットワークのアクセスによって異なります。`image-set()` 関数は、ユーザーの端末に最も適した画像解像度を提供します。画像オプションの集合を提供し、それぞれに関連する解像度宣言を付けて、そこからブラウザーが端末や設定に最も適したものを選び出します。解像度はファイルサイズのプロキシーとして使用することができます。高解像度の画面を持つ遅いモバイル接続のユーザーエージェントは、高解像度の画像を読み込むのを待つよりも、低解像度の画像を受信することを好むかもしれません。
 
@@ -63,7 +61,8 @@ image-set(
 
 {{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
 
-> **メモ:** 上記の例では、 `-webkit` の接頭辞が付いた版を Chrome および Safari に対応させるために併用しています。 Firefox 90 では（標準のプロパティを追加していない開発者の互換性を確保するために） `-webkit-image-set()` を `image-set()` の別名として使用する対応が追加されました。
+> [!NOTE]
+> 上記の例では、 `-webkit` の接頭辞が付いた版を Chrome および Safari に対応させるために併用しています。 Firefox 90 では（標準のプロパティを追加していない開発者の互換性を確保するために） `-webkit-image-set()` を `image-set()` の別名として使用する対応が追加されました。
 
 ### image-set() を使用して別な画像形式を提供
 
@@ -89,7 +88,7 @@ image-set(
 
 ブラウザーは支援技術に対して、背景画像についての特別な情報を何も提供しません。これは主に読み上げソフトにとって重要であり、読み上げソフトは背景画像が存在することをアナウンスせず、したがってユーザーには何も伝えられません。もし画像がページ全体の目的を理解するのに重要な情報を含んでいる場合は、文書中に意味的に記述するようにしてください。
 
-- [MDN WCAG を理解する, ガイドライン 1.1 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN WCAG を理解する, ガイドライン 1.1 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 仕様書

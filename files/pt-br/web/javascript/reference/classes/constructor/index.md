@@ -66,10 +66,7 @@ constructor(...args) {
 
 ## Especificações
 
-| Especificação                                                                            | Status               | Comentário        |
-| ---------------------------------------------------------------------------------------- | -------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-static-semantics-constructormethod', 'Constructor Method')}}     | {{Spec2('ES6')}}     | Definição inicial |
-| {{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

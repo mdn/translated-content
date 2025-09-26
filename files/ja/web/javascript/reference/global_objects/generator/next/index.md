@@ -28,6 +28,7 @@ generatorObject.next(value)
   - : イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの _返値_ を指定します。
 
     イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
+
 - `value`
   - : イテレーターが yield または return した、何らかの JavaScript の値です。
 
@@ -45,10 +46,10 @@ function* gen() {
 }
 
 const g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### リストでの next() の使用
@@ -61,19 +62,20 @@ function* getPage(list, pageSize = 1) {
     yield list.slice(index, index + pageSize);
   }
 }
-const list = [1, 2, 3, 4, 5, 6, 7, 8]
-const page = getPage(list, 3);            // Generator { }
-page.next();                              // { value: [1, 2, 3], done: false }
-page.next();                              // { value: [4, 5, 6], done: false }
-page.next();                              // { value: [7, 8], done: false }
-page.next();                              // { value: undefined, done: true }
+const list = [1, 2, 3, 4, 5, 6, 7, 8];
+const page = getPage(list, 3); // Generator { }
+page.next(); // { value: [1, 2, 3], done: false }
+page.next(); // { value: [4, 5, 6], done: false }
+page.next(); // { value: [7, 8], done: false }
+page.next(); // { value: undefined, done: true }
 ```
 
 ### ジェネレーターへ値を送る
 
 この例では `next` を値付きで呼び出しています。
 
-> **メモ:** 最初の呼び出しではジェネレーターが何も生成していないため、何もログを記録しません。
+> [!NOTE]
+> 最初の呼び出しではジェネレーターが何も生成していないため、何もログを記録しません。
 
 ```js
 function* gen() {
@@ -97,9 +99,9 @@ g.next(2);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Generator.next")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{jsxref("Statements/function*", "function*")}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)

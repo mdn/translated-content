@@ -15,7 +15,7 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 
 大部分性能条目都在不需要任何额外操作的情况下进行记录，并可以通过 {{domxref("Performance.getEntries()")}} 或（最好）通过 {{domxref("PerformanceObserver")}} 访问。例如，{{domxref("PerformanceEventTiming")}} 条目用于记录花费的时间超过设定阈值的事件。而 Performance API 也允许你使用 {{domxref("PerformanceMark")}} 和 {{domxref("PerformanceMeasure")}} 接口定义和记录自定义事件。
 
-{{domxref("Performance")}} 主接口在全局作用域下可通过 {{domxref("performance_property", "self.performance")}} 访问，并允许你增加自定义性能条目、清除性能条目，以及查询性能条目。
+{{domxref("Performance")}} 主接口在 {{domxref("Window.performance", "Window")}} 和 {{domxref("WorkerGlobalScope.performance", "Worker")}} 全局作用域下都可用，并允许你增加自定义性能条目、清除性能条目，以及查询性能条目。
 
 {{domxref("PerformanceObserver")}} 接口允许你监听记录的不同类型的性能条目。
 
@@ -28,7 +28,7 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 - {{domxref("LargestContentfulPaint")}}
   - : 测量视口范围内可见的图像和文本块的最大渲染时间，从页面开始加载时开始记录。
 - {{domxref("Performance")}}
-  - : 用于性能测量的主接口。可在 window 和 worker 上下文中通过 {{domxref("performance_property", "self.performance")}} 来访问。
+  - : 用于性能测量的主接口。可在 window 和 worker 上下文中通过 {{domxref("Window.performance")}} 或 {{domxref("WorkerGlobalScope.performance")}} 来访问。
 - {{domxref("PerformanceElementTiming")}}
   - : 测量特定元素的渲染时间戳。
 - {{domxref("PerformanceEntry")}}
@@ -70,4 +70,4 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 ## 参见
 
 - [Web 性能](/zh-CN/docs/Web/Performance)
-- [学习：Web 性能](/zh-CN/docs/Learn/Performance)
+- [学习：Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)

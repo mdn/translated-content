@@ -1,5 +1,5 @@
 ---
-title: ":target"
+title: :target
 slug: Web/CSS/:target
 ---
 
@@ -90,7 +90,8 @@ p:target i {
 
 Você pode usar a pseudo-classe `:target` para criar uma lightbox sem usar JavaScript. Essa técnica requer que os links apontem para os elementos que inicialmente estavam escondidas na página. Uma vez designado, o CSS muda o `display` então, assim o conteúdo pode ser mostrado.
 
-> **Nota:** Uma lightbox com CSS puro mais completo usando a pseudo-classe `:target` [está disponível no GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
+> [!NOTE]
+> Uma lightbox com CSS puro mais completo usando a pseudo-classe `:target` [está disponível no GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
 
 #### HTML
 
@@ -191,15 +192,11 @@ Você pode usar a pseudo-classe `:target` para criar uma lightbox sem usar JavaS
 
 ## Especificações
 
-| Especificações                                                          | Status                      | Comentário                           |
-| ----------------------------------------------------------------------- | --------------------------- | ------------------------------------ |
-| {{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}} | {{Spec2("HTML WHATWG")}}    | Define semântica específica do HTML. |
-| {{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}         | {{Spec2("CSS4 Selectors")}} | Não há mudanças.                     |
-| {{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}             | {{Spec2("CSS3 Selectors")}} | Definição inicial.                   |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("css.selectors.target")}}
+{{Compat}}
 
 ## Veja também
 

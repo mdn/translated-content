@@ -3,11 +3,9 @@ title: height
 slug: Web/CSS/height
 ---
 
-{{CSSRef}}
-
 ## 概要
 
-**`高度(height)`** 的 CSS 屬性指定了元素內容區域的高度。[content area](/zh-TW/docs/CSS/box_model#content) 在元素的留白(padding)、邊框(border) 與 邊界(margin) 內。
+**`高度(height)`** 的 CSS 屬性指定了元素內容區域的高度。[content area](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content) 在元素的留白(padding)、邊框(border) 與 邊界(margin) 內。
 
 {{cssxref("min-height")}} 與 {{cssxref("max-height")}} 的特性比 {{Cssxref("height")}} 更重要。
 
@@ -53,9 +51,7 @@ height: unset;
 - `available` {{experimental_inline}}
   - : The containing block height minus vertical margin, border and padding.
 - `fit-content` {{experimental_inline}}
-
   - : The larger of:
-
     - the intrinsic minimum height
     - the smaller of the intrinsic preferred height and the available height
 
@@ -120,4 +116,4 @@ div {
 
 ## See also
 
-- [box model](/zh-TW/docs/CSS/box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}
+- [box model](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}

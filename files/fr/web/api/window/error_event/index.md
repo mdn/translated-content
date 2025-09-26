@@ -5,10 +5,10 @@ slug: Web/API/Window/error_event
 
 {{ApiRef("HTML DOM")}}
 
-Un [gestionnaire d'événement](/fr/docs/Web/Guide/Events/Event_handlers) pour l'événement [`error`](/fr/docs/Web/Events/error). Des événements d'erreur sont déclenchés vers diverses cibles et pour différents types d'erreurs:
+Un [gestionnaire d'événement](/fr/docs/Web/Events/Event_handlers) pour l'événement [`error`](/fr/docs/Web/API/HTMLElement/error_event). Des événements d'erreur sont déclenchés vers diverses cibles et pour différents types d'erreurs:
 
-- Lorsqu'une **erreur de runtime JavaScript** se produit (erreurs de syntaxe comprises), un évènement [`error`](/fr/docs/Web/Events/error) utilisant l'interface {{domxref("ErrorEvent")}} est envoyé à {{domxref("window")}}, et `window.onerror()` est appelé.
-- Lorsque le **chargement d'une ressource** (telle que {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **échoue**, un événement [`error`](/fr/docs/Web/Events/error) utilisant l'interface {{domxref("Event")}} est déclenché sur l'élément qui a initié le chargement, et le gestionnaire `onerror()` de l'élément est invoqué. Ces évènements d'erreur ne remontent pas à window, mais (au moins dans FireFox) ils peuvent être gérés par une unique capture {{domxref("window.addEventListener")}}.
+- Lorsqu'une **erreur de runtime JavaScript** se produit (erreurs de syntaxe comprises), un évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) utilisant l'interface {{domxref("ErrorEvent")}} est envoyé à {{domxref("window")}}, et `window.onerror()` est appelé.
+- Lorsque le **chargement d'une ressource** (telle que {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **échoue**, un événement [`error`](/fr/docs/Web/API/HTMLElement/error_event) utilisant l'interface {{domxref("Event")}} est déclenché sur l'élément qui a initié le chargement, et le gestionnaire `onerror()` de l'élément est invoqué. Ces évènements d'erreur ne remontent pas à window, mais (au moins dans FireFox) ils peuvent être gérés par une unique capture {{domxref("window.addEventListener")}}.
 
 ## Syntaxe
 
@@ -38,7 +38,7 @@ element.onerror = function(event) { ... }
 
 ## Notes
 
-Quand une erreur de syntaxe**(?)** se produit dans un script chargé à partir d'une [origine différente](/fr/docs/Web/Security/Same-origin_policy), les détails de l'erreur de syntaxe ne sont pas rapportés, afin de prévenir la fuite d'information (voir [bug Firefox 363897](https://bugzil.la/363897)). A la place, l'erreur est simplement reportée en tant que **`"Script error"`**. Ce comportement peut être surchargé par certains navigateurs en utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/script#crossorigin) de {{HTMLElement("script")}} et en faisant en sorte que le serveur envoie les entêtes de réponse [CORS](/fr/docs/Web/HTTP/Access_control_CORS) HTTP appropriés. Un contournement consiste à isoler "Script error" et à la gérer en sachant que les détails de l'erreur ne sont visibles que la console du navigateur et non accessibles en JavaScript.
+Quand une erreur de syntaxe**(?)** se produit dans un script chargé à partir d'une [origine différente](/fr/docs/Web/Security/Same-origin_policy), les détails de l'erreur de syntaxe ne sont pas rapportés, afin de prévenir la fuite d'information (voir [bug Firefox 363897](https://bugzil.la/363897)). A la place, l'erreur est simplement reportée en tant que **`"Script error"`**. Ce comportement peut être surchargé par certains navigateurs en utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/script#crossorigin) de {{HTMLElement("script")}} et en faisant en sorte que le serveur envoie les entêtes de réponse [CORS](/fr/docs/Web/HTTP/Guides/CORS) HTTP appropriés. Un contournement consiste à isoler "Script error" et à la gérer en sachant que les détails de l'erreur ne sont visibles que la console du navigateur et non accessibles en JavaScript.
 
 ```js
 window.onerror = function (msg, url, noLigne, noColonne, erreur) {

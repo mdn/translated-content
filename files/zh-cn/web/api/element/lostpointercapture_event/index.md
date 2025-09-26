@@ -7,7 +7,7 @@ slug: Web/API/Element/lostpointercapture_event
 
 The **`onlostpointercapture`** event handler property of the {{domxref("GlobalEventHandlers")}} interface returns the event handler (function) for the `lostpointercapture` event type.
 
-**语法**
+## 语法
 
 ```plain
 window.onlostpointercapture = functionReference
@@ -44,7 +44,6 @@ function init() {
 ## 参见
 
 - 相关事件
-
   - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
   - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
   - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)

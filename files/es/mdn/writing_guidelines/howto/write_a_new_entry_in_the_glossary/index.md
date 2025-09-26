@@ -31,7 +31,8 @@ El primer párrafo de cualquier página del glosario es una descripción breve y
 Preferiblemente, esto no debe ser más de dos oraciones.
 Asegúrese de que cualquier persona que lea la descripción pueda comprender inmediatamente el término definido.
 
-> **Nota:** Por favor, no copie y pegue de otras definiciones o contenido en Internet.
+> [!NOTE]
+> Por favor, no copie y pegue de otras definiciones o contenido en Internet.
 > (Y especialmente no de Wikipedia, ya que su rango de versiones de licencia es más pequeño e incompatible con MDN). La entrada de su glosario debe ser contenido original.
 
 #### Escribir una buena entrada de glosario

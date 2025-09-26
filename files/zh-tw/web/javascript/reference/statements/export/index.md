@@ -3,8 +3,6 @@ title: export
 slug: Web/JavaScript/Reference/Statements/export
 ---
 
-{{jsSidebar("Statements")}}
-
 用 **export** 可以指派函式、物件或變數，透過 {{jsxref("Statements/import", "import")}} 宣告給外部檔案引用。
 
 導出的模塊都會處於{{jsxref("Strict_mode","嚴謹模式")}}，無論是否有所宣告。導出宣告無法使用嵌入式腳本（embedded script）。
@@ -153,4 +151,4 @@ Note 注意預設輸出不能使用 var, let , const。
 
 - {{jsxref("Statements/import", "import")}}
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

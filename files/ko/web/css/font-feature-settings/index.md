@@ -3,11 +3,70 @@ title: font-feature-settings
 slug: Web/CSS/font-feature-settings
 ---
 
-{{CSSRef}}
-
 **`font-feature-settings`** CSS 속성은 오픈타입 폰트의 다양한 오픈타입 피처를 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
+{{InteractiveExample("CSS Demo: font-feature-settings")}}
+
+```css interactive-example-choice
+font-feature-settings: normal;
+```
+
+```css interactive-example-choice
+font-feature-settings: "liga" 0;
+```
+
+```css interactive-example-choice
+font-feature-settings: "tnum";
+```
+
+```css interactive-example-choice
+font-feature-settings: "smcp", "zero";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+    <table>
+      <tr>
+        <td><span class="tabular">0O</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 ## 문법
 
@@ -29,7 +88,7 @@ font-feature-settings: initial;
 font-feature-settings: unset;
 ```
 
-가능하다면 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)인 {{cssxref("font-variant")}} 속성을 사용하거나, 각각의 피처와 연관된 {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}} 등을 사용하는 것이 `font-feature-settings`를 직접 사용하는 것에 비해 더 효율적이고, 예측 가능하게 동작하며 이해하기도 쉽습니다.
+가능하다면 [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)인 {{cssxref("font-variant")}} 속성을 사용하거나, 각각의 피처와 연관된 {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}} 등을 사용하는 것이 `font-feature-settings`를 직접 사용하는 것에 비해 더 효율적이고, 예측 가능하게 동작하며 이해하기도 쉽습니다.
 
 이는 `font-feature-settings`는 원래 작은 대문자(Small caps)와 같이 접근할 수 있는 다른 방법이 없는 오픈타입 피처를 제어하기 위해 만들어진 저수준의 기능이기 때문입니다.
 
@@ -38,10 +97,9 @@ font-feature-settings: unset;
 - `normal`
   - : 기본값을 이용하여 텍스트를 표시합니다.
 - `&#x3C;feature-tag-value>`
-
   - : 텍스트를 렌더링할 때, 오픈타입 피처를 활성화하거나 비활성화하기 위해 피처 태그 목록을 렌더링 엔진에 전달합니다. 피처 태그는 4개의 ASCII 문자로 이루어진 {{cssxref("&lt;string&gt;")}}이어야 합니다. 만약 태그가 네 글자보다 짧거나, 유니코드 `U+20` – `U+7E` 범위 바깥에 있는 문자를 포함한다면 속성 전체가 무효처리됩니다.
 
-  값은 양의 정수 값을 가집니다. 각각 `1`, `0`과 같은 의미를 가지는 키워드 `on` 과 `off`도 사용할 수 있습니다. 아무런 값이 설정되지 않았다면 기본값은 `1`입니다. [stylistic alternates](http://www.microsoft.com/typography/otspec/features_pt.htm#salt)와 같이 Boolean 타입이 아닌 오픈타입 피처의 경우, 값은 선택되어야 하는 글리프(글자)를 의미합니다. Boolean 타입인 경우에는 스위치라고 생각하시면 됩니다.
+  값은 양의 정수 값을 가집니다. 각각 `1`, `0`과 같은 의미를 가지는 키워드 `on` 과 `off`도 사용할 수 있습니다. 아무런 값이 설정되지 않았다면 기본값은 `1`입니다. [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)와 같이 Boolean 타입이 아닌 오픈타입 피처의 경우, 값은 선택되어야 하는 글리프(글자)를 의미합니다. Boolean 타입인 경우에는 스위치라고 생각하시면 됩니다.
 
 ## Formal definition
 
@@ -122,6 +180,6 @@ td.tabular {
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
-- [OpenType Feature Tags](http://www.microsoft.com/typography/otspec/featurelist.htm) list
-- [Using the whole font](http://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx)
+- [OpenType Feature Tags](https://www.microsoft.com/typography/otspec/featurelist.htm) list
+- [Using the whole font](https://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx)
   _(**Note:** The `-moz` syntax is the old one. On Gecko, use the `-ms` syntax but with `-moz`.)_

@@ -9,7 +9,19 @@ A propriedade **`Math.PI`** representa a proporção entre circunferência de um
 
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3.14159</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-pi.html")}}
+{{InteractiveExample("JavaScript Demo: Math.PI")}}
+
+```js interactive-example
+function calculateCircumference(radius) {
+  return 2 * Math.PI * radius;
+}
+
+console.log(Math.PI);
+// Expected output: 3.141592653589793
+
+console.log(calculateCircumference(10));
+// Expected output: 62.83185307179586
+```
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -28,21 +40,16 @@ function calcularCircunferencia(raio) {
   return 2 * Math.PI * raio;
 }
 
-calcularCircunferencia(1);  // 6.283185307179586
+calcularCircunferencia(1); // 6.283185307179586
 ```
 
 ## Especificações
 
-| Specification                                                        | Status                       | Comment                                            |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definiçao inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.6', 'Math.PI')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.pi', 'Math.PI')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.PI")}}
+{{Compat}}
 
 ## Veja também
 

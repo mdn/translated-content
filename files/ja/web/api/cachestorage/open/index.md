@@ -1,17 +1,19 @@
 ---
-title: CacheStorage.open()
+title: "CacheStorage: open() メソッド"
+short-title: open()
 slug: Web/API/CacheStorage/open
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 **`open()`** は {{domxref("CacheStorage")}} インターフェイスのメソッドで、 `cacheName` に一致する {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。
 
-`CacheStorage` には、グローバルな {{domxref("caches")}} プロパティを介してアクセスできます。
+`CacheStorage` には、ウィンドウの {{domxref("Window.caches")}} プロパティまたはワーカーの {{domxref("WorkerGlobalScope.caches")}} を介してアクセスできます。
 
-> **メモ:** 指定した {{domxref("Cache")}} が存在しない場合、その `cacheName` で新しいキャッシュを作成し、この新しい {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。
+> [!NOTE]
+> 指定した {{domxref("Cache")}} が存在しない場合、その `cacheName` で新しいキャッシュを作成し、この新しい {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。
 
 ## 構文
 
@@ -49,8 +51,8 @@ self.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```
@@ -67,4 +69,4 @@ self.addEventListener("install", (event) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} および {{domxref("WorkerGlobalScope.caches")}}

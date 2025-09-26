@@ -2,14 +2,25 @@
 title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
 
-**`getUTCFullYear()`** メソッドは、協定世界時に基づき、指定された日時の「年」を返します。
+**`getUTCFullYear()`** は {{jsxref("Date")}} インスタンスのメソッドで、協定世界時に基づき、指定された日時の「年」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getutcfullyear.html")}}
+{{InteractiveExample("JavaScript デモ: Date.prototype.getUTCFullYear()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCFullYear());
+// 予想される結果: 1975
+
+console.log(date2.getUTCFullYear());
+// 予想される結果: 1976
+```
 
 ## 構文
 
@@ -17,15 +28,17 @@ l10n:
 getUTCFullYear()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-数値です。
-`Date` オブジェクトが有効な日時を表している場合、指定された日時の西暦を世界時で表した整数を返します。
-それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
+指定された日時の、協定世界時に基づく年を表す整数です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 解説
 
-`getUTCFullYear()` が返す値は、 2000 年問題に対応した表記に従う絶対的な値、例えば 1995 などです。
+{{jsxref("Date/getYear", "getYear()")}} とは異なり、 `getUTCFullYear()` が返す値は絶対数値です。1000 年から 9999 年の日付の場合、 `getFullYear()` は 4 桁の数値（例えば 1995）を返します。 2000 年以降の年に対応していることを確認するには、この関数を使用してください。
 
 ## 例
 

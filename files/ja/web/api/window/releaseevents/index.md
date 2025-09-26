@@ -10,7 +10,7 @@ slug: Web/API/Window/releaseEvents
 ## 構文
 
 ```js
-window.releaseEvents(eventType)
+window.releaseEvents(eventType);
 ```
 
 `eventType` は、 `Event.ABORT`, `Event.BLUR`, `Event.CLICK`, `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`, `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`, `Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`, `Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`, `Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`, `Event.RESET`, `Event.RESIZE`, `Event.SELECT`, `Event.SUBMIT`, `Event.UNLOAD` の値の組み合わせです。
@@ -18,7 +18,7 @@ window.releaseEvents(eventType)
 ## 例
 
 ```js
-window.releaseEvents(Event.KEYPRESS)
+window.releaseEvents(Event.KEYPRESS);
 ```
 
 ## 注
@@ -33,4 +33,4 @@ window.releaseEvents(Event.KEYPRESS)
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.releaseEvents")}}
+{{Compat}}

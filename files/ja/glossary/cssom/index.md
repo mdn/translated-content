@@ -3,6 +3,8 @@ title: CSS Object Model (CSSOM)
 slug: Glossary/CSSOM
 ---
 
+{{GlossarySidebar}}
+
 **CSS Object Model (CSSOM)** とは、すべての CSS セレクターとそれぞれのセレクターに関連するプロパティを、ルートノード、兄弟、子孫、子、その他の関係からなるツリーの形に変換したものです。CSSOM は、{{glossary('DOM', 'Document Object Model (DOM)')}} とよく似ています。それらの両方は、ウェブサイトを適切にレンダリングするために必ず発生する一連のステップである、クリティカルレンダリングパスの一部です。
 
 CSSOM は、DOM とともに、レンダリングツリーを構築し、さらにブラウザーによってウェブページをレイアウトし描画するために使用されます。
@@ -13,4 +15,4 @@ CSSOM は、DOM とともに、レンダリングツリーを構築し、さら�
 
 ## 関連情報
 
-- [ページの生成：ブラウザーはどのように動作するか](/ja/docs/Web/Performance/How_browsers_work)
+- [ページの生成：ブラウザーはどのように動作するか](/ja/docs/Web/Performance/Guides/How_browsers_work)

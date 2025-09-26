@@ -3,11 +3,23 @@ title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 ---
 
-{{JSSidebar("Operators")}}
-
 **`typeof`** 运算符返回一个字符串，表示操作数的类型。
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof "blubber");
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+```
 
 ## 语法
 
@@ -22,11 +34,11 @@ typeof operand
 
 ## 描述
 
-下表总结了 `typeof` 可能的返回值。有关类型和基本类型的更多信息，可查看 [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Data_structures) 页面。
+下表总结了 `typeof` 可能的返回值。有关类型和基本类型的更多信息，可查看 [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures) 页面。
 
 | 类型                                                                                                                                              | 结果                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| [Undefined](/zh-CN/docs/Glossary/undefined)                                                                                                       | `"undefined"`                      |
+| [Undefined](/zh-CN/docs/Glossary/Undefined)                                                                                                       | `"undefined"`                      |
 | [Null](/zh-CN/docs/Glossary/Null)                                                                                                                 | `"object"`（[原因](#typeof_null)） |
 | [Boolean](/zh-CN/docs/Glossary/Boolean)                                                                                                           | `"boolean"`                        |
 | [Number](/zh-CN/docs/Glossary/Number)                                                                                                             | `"number"`                         |
@@ -107,7 +119,7 @@ typeof Math.sin === "function";
 typeof null === "object";
 ```
 
-在 JavaScript 最初的实现中，JavaScript 中的值是由一个表示类型的标签和实际数据值表示的。对象的类型标签是 0。由于 `null` 代表的是空指针（大多数平台下值为 0x00），因此，null 的类型标签是 0，`typeof null` 也因此返回 `"object"`。（[参考来源](http://www.2ality.com/2013/10/typeof-null.html)）
+在 JavaScript 最初的实现中，JavaScript 中的值是由一个表示类型的标签和实际数据值表示的。对象的类型标签是 0。由于 `null` 代表的是空指针（大多数平台下值为 0x00），因此，null 的类型标签是 0，`typeof null` 也因此返回 `"object"`。（[参考来源](https://www.2ality.com/2013/10/typeof-null.html)）
 
 曾有一个 ECMAScript 的修复提案（通过选择性加入的方式），但[被拒绝了](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null)。该提案会导致 `typeof null === 'null'`。
 
@@ -147,7 +159,7 @@ typeof (someData + " Wisen"); // "string"
 typeof undeclaredVariable; // "undefined"
 ```
 
-但在加入了块级作用域的 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 之后，在其被声明之前对块中的 `let` 和 `const` 变量使用 `typeof` 会抛出一个 [ReferenceError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)。块作用域变量在块的头部处于“[暂存死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)”，直至其被初始化，在这期间，访问变量将会引发错误。
+但在加入了块级作用域的 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 之后，在其被声明之前对块中的 `let` 和 `const` 变量使用 `typeof` 会抛出一个 [ReferenceError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)。块作用域变量在块的头部处于“[暂存死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)”，直至其被初始化，在这期间，访问变量将会引发错误。
 
 ```js example-bad
 typeof newLetVariable; // ReferenceError
@@ -167,7 +179,7 @@ class newClass {}
 typeof document.all === "undefined";
 ```
 
-虽然 `document.all` 也是[假值](/zh-CN/docs/Glossary/falsy)，与 `undefined` [非严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)，但它不是 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。在 Web 标准中，`document.all` 具有 `"undefined"` 类型的情况被归类为“故意违反”原始 ECMAScript Web 兼容性标准。
+虽然 `document.all` 也是[假值](/zh-CN/docs/Glossary/Falsy)，与 `undefined` [非严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)，但它不是 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。在 Web 标准中，`document.all` 具有 `"undefined"` 类型的情况被归类为“故意违反”原始 ECMAScript Web 兼容性标准。
 
 ### 获取具体类型的自定义方法
 

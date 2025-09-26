@@ -3,18 +3,15 @@ title: <basic-shape>
 slug: Web/CSS/basic-shape
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo **`<basic-shape>`** puede ser especificado usando funciones de figura (shape) básicas. Al usar esta sintaxis para definir figuras, la caja de referencia es definida por cada propiedad que usa valores `<basic-shape>`. El sistema de coordenadas para la figura tiene su origen en la esquina superior izquierda de la caja de referencia, con el eje x corriendo hacia la derecha y el eje y, hacia abajo. Todas las longitudes expresadas en porcentajes son resueltas con base en las dimensiones de la caja de referencia.
 
 ## Figuras posibles
 
-Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/Sintaxis_definición_de_valor).
+Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax).
 
 - `inset()`
-
   - : &#x20;
 
     ```
@@ -30,7 +27,6 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
     Cuando un par de valores inset en cualquier dimensión suman un valor mayor al límite de la dimensión disponible (como por ejemplo, que los valores inset izquierdo y derecho sean de 75% cada uno), se está definiendo una figura que no encierra ningun área. Para esta especificación, el resultado es un área flotante vacía.
 
 - `polygon()`
-
   - : &#x20;
 
     ```
@@ -42,7 +38,6 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
     Cada elemento par de la lista representa _xi_ y _yi_ - las coordenadas del eje x y el eje y en el vértice _i_ del polígono.
 
 - `circle(`)
-
   - : &#x20;
 
     ```
@@ -54,7 +49,6 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
     El argumento {{cssxref("&lt;position&gt;")}} define el centro del círculo. Su valor predeterminado es `center`.
 
 - `ellipse()`
-
   - : &#x20;
 
     ```

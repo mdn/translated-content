@@ -1,47 +1,70 @@
 ---
-title: 加算代入 (+=)
+title: 加算代入演算子 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+**加算代入 (`+=`)** 演算子は、 2 つのオペランドの[加算](/ja/docs/Web/JavaScript/Reference/Operators/Addition)（数値の加算または文字列の結合のどちらか）を実行し、左オペランドへ結果を代入します。
 
-加算代入演算子 (`+=`) は、右オペランドの値を変数に加算し、結果を変数に代入します。2 つのオペランドの型が加算代入演算子の動作を決定します。加算もしくは連結が可能です。
+{{InteractiveExample("JavaScript デモ: 加算代入演算子 (+=)")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+```js interactive-example
+let a = 2;
+let b = "hello";
+
+console.log((a += 3)); // 加算
+// 予想される結果: 5
+
+console.log((b += " world")); // 結合
+// 予想される結果: "hello world"
+```
 
 ## 構文
 
-```js
-x += y // x = x + y
+```js-nolint
+x += y
 ```
+
+## 解説
+
+`x += y` は `x = x + y` と同等ですが、式 `x` は一度しか評価されません。
 
 ## 例
 
-### 加算代入の使用
+### 数値を使用した加算代入
 
 ```js
-// 以下の変数を想定
-//  foo = 'foo'
-//  bar = 5
-//  baz = true
+let bar = 5;
+bar += 2; // 7
+```
 
-// 数値 + 数値 -> 加算
-bar += 2 // 7
+それ以外の文字列でも長整数でもない値は、数値に変換されます。
 
-// 論理値 + 数値 -> 加算
-baz += 1 // 2
+```js
+let baz = true;
+baz += 1; // 2
+baz += false; // 2
+```
 
-// 論理値 + 論理値 -> 加算
-baz += false // 1
+### 長整数を使用した加算代入
 
-// 数値 + 文字列 -> 連結
-bar += 'foo' // "5foo"
+```js
+let x = 1n;
+x += 2n; // 3n
 
-// 文字列 + 論理値 -> 連結
-foo += false // "foofalse"
+x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
 
-// 文字列 + 文字列 -> 連結
-foo += 'bar' // "foobar"
+### 文字列を使用した加算代入
+
+```js
+let foo = "foo";
+foo += false; // "foofalse"
+foo += "bar"; // "foofalsebar"
+
+let bar = 5;
+bar += "foo"; // "5foo"
 ```
 
 ## 仕様書
@@ -54,5 +77,5 @@ foo += 'bar' // "foobar"
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
-- [加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
+- [加算演算子 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Addition)

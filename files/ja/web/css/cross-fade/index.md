@@ -5,14 +5,13 @@ l10n:
   sourceCommit: def614b0d1e298c5942205468c78b9d0ff798f46
 ---
 
-{{CSSRef}}
-
-**`cross-fade()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、2 枚以上の画像を所定の透過度で合成するために使用することができます。
+**`cross-fade()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、2 枚以上の画像を所定の透過度で合成するために使用することができます。
 これは単色で色を薄めたり、放射状グラデーションとの組み合わせでページの特定の領域を強調させたりするような、数多くの単純な画像加工に使用することができます。
 
 ## 構文
 
-> **警告:** 仕様書と現在の実装とで構文が異なっています。
+> [!WARNING]
+> 仕様書と現在の実装とで構文が異なっています。
 > 仕様書の構文を先に説明します。
 
 ### 仕様書上の構文
@@ -45,9 +44,9 @@ cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% 
 
 ```css
 cross-fade( url(white.png) 0%,   url(black.png)); /* 完全に黒 */
-cross-fade( url(white.png) 25%,  url(black.png)); /* 黒 25%、白 75% */
+cross-fade( url(white.png) 25%, url(black.png)); /* 黒 25%、白 75% */
 cross-fade( url(white.png),      url(black.png)); /* 白 50%、白 50% */
-cross-fade( url(white.png) 75%,  url(black.png)); /* 白 75%、黒 25% */
+cross-fade( url(white.png) 75%, url(black.png)); /* 白 75%、黒 25% */
 cross-fade( url(white.png) 100%, url(black.png)); /* 完全に白 */
 cross-fade( url(green.png) 75%, url(red.png) 75%); /* 緑と赤がともに 75% */
 ```
@@ -78,9 +77,9 @@ cross-fade( <image>, <image>, <percentage> )
 
 ```css
 cross-fade(url(white.png), url(black.png), 0%);   /* 完全に黒 */
-cross-fade(url(white.png), url(black.png), 25%);  /* 黒 25%、白 75% */
-cross-fade(url(white.png), url(black.png), 50%);  /* 白 50%、白 50% */
-cross-fade(url(white.png), url(black.png), 75%);  /* 白 75%、黒 25% */
+cross-fade(url(white.png), url(black.png), 25%); /* 黒 25%、白 75% */
+cross-fade(url(white.png), url(black.png), 50%); /* 白 50%、白 50% */
+cross-fade(url(white.png), url(black.png), 75%); /* 白 75%、黒 25% */
 cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 ```
 
@@ -95,7 +94,7 @@ cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
 背景画像を使用する場合は、色のコントラストを大きくして、画像がない場合と同様に、画像の上にどのような文字も読み取れるようにしてください。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 形式文法
@@ -142,5 +141,5 @@ cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("element")}}
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - グラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}

@@ -3,44 +3,34 @@ title: 国际化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
 
-{{AddonSidebar}}
-
 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) API 有一个相当方便的模块可用于附加组件的国际化（[i18n](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n)）。我们将在本文中探讨其功能，并为它的运作方式提供一个实例。WebExtensions 的 i18n 系统类似常见的 i18n 用途 JavaScript 库，例如 [i18n.js](http://i18njs.com/)。
 
-> **备注：** 本文中的 WebExtension 实例 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 可在 GitHub 上查阅。在阅读下列章节时，可参照它的代码。
+> [!NOTE]
+> 本文中的 WebExtension 实例 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 可在 GitHub 上查阅。在阅读下列章节时，可参照它的代码。
 
 ## 剖析一个国际化的 WebExtension
 
 一个国际化的 WebExtension 与其他 WebExtension 一样可以包含各类功能，如[后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本)、[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)等，但它也有些额外的部分，从而允许它适应不同的语言区域。目录树大致如下：
 
 - webextension-根目录/
-
   - \_locales
-
     - en
-
       - messages.json
-
         - 英语消息（字符串）
 
     - de
-
       - messages.json
-
         - 德语消息（字符串）
 
     - 等其他语言
 
   - manifest.json
-
     - 含按语言区域而定的元数据
 
   - myJavascript.js
-
     - 含用于检索浏览器语言区域、特定语言环境的消息等的 JavaScript。
 
   - myStyles.css
-
     - 含按语言区域而定的 CSS
 
 让我们逐项探讨这些新特性，因为下列每个章节都是你在国际化 WebExtension 时所要遵循的步骤。
@@ -89,7 +79,8 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 这个文件是一个标准的 JSON — 其中每个成员都是一个带有名称的对象，里面包含一个 `message`（消息）和一个 `description`（描述）。这些项目都是字符串。`$URL$` 是一个占位符，在 WebExtension 调用 `notificationContent` 成员时将被一个子字符串替换。你将在接下来的[从 JavaScript 检索消息字符串](#从_javascript_检索消息字符串)章节中了解如何使用。
 
-> **备注：** 你可以在 [Locale-Specific Message reference](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference) 里找到更多有关 `messages.json` 文件中内容的信息。
+> [!NOTE]
+> 你可以在 [Locale-Specific Message reference](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference) 里找到更多有关 `messages.json` 文件中内容的信息。
 
 ## 国际化 manifest.json
 
@@ -116,7 +107,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 4. 你想调用的在 `messages.json` 中定义的消息名称，接着是
 5. 两个下划线
 
-```
+```plain
  __MSG_ + messageName + __
 ```
 
@@ -132,7 +123,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 ## 依赖语言区域的 CSS
 
-您还可以在扩展的 CSS 文件中检索本地化的字符串。例如，您可能想构建一个依赖于语言区域的 CSS 规则，如下所示：
+你还可以在扩展的 CSS 文件中检索本地化的字符串。例如，你可能想构建一个依赖于语言区域的 CSS 规则，如下所示：
 
 ```css
 header {
@@ -144,7 +135,7 @@ header {
 
 ## 从 JavaScript 检索消息字符串
 
-所以，您应该已经建立起您的消息字符串和 manifest。现在只需开始从 JavaScript 调用这些消息字符串，以便你的扩展尽可能多地表述适合的语言。实际上 [i18n API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n) 相当简单，只需包含以下四个主要的方法（method）：
+所以，你应该已经建立起你的消息字符串和 manifest。现在只需开始从 JavaScript 调用这些消息字符串，以便你的扩展尽可能多地表述适合的语言。实际上 [i18n API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n) 相当简单，只需包含以下四个主要的方法（method）：
 
 - 你最常用的很可能是 {{WebExtAPIRef("i18n.getMessage()")}} — 使用此方法可以检索一个指定的语言字符串。下方有特定的用法示例。
 - {{WebExtAPIRef("i18n.getAcceptLanguages()")}} 和 {{WebExtAPIRef("i18n.getUILanguage()")}} 这两个方法可以在你需要根据语言区域自定义用户界面时使用 — 或许你希望根据用户想要的语言在首选项列表更高层显示首选项，或只显示和特定语言有关的文化信息，又或是按浏览器语言显示格式化过的日期。
@@ -161,7 +152,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 ```json
 "notificationContent": {
-  "message": "您点击了 $URL$。",
+  "message": "你点击了 $URL$。",
   "description": "告诉用户点击了哪个链接。",
   "placeholders": {
     "url" : {
@@ -172,18 +163,18 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 }
 ```
 
-`"placeholders"` 这个成员定义了所有的占位符，以及它们所检索的来源。`"url"` 这个占位符指定了其内容取自 $1，它就是 `getMessage()` 第二个参数里的第一个值。由于占位符就叫做 `"url"`，我们就在实际的消息字符串中用 `$URL$` 调用它（`"name"` 用 `$NAME$` 调用也是一样的，以此类推）。对于多个占位符，你可以将其置于数组内，并作为第二个参数传递到 {{WebExtAPIRef("i18n.getMessage()")}} —`[a, b, c]`可替换为`$1`, `$2`, and `$3，以此类推，并置于` `messages.json` 内。
+`"placeholders"` 这个成员定义了所有的占位符，以及它们所检索的来源。`"url"` 这个占位符指定了其内容取自 $1，它就是 `getMessage()` 第二个参数里的第一个值。由于占位符就叫做 `"url"`，我们就在实际的消息字符串中用 `$URL$` 调用它（`"name"` 用 `$NAME$` 调用也是一样的，以此类推）。对于多个占位符，你可以将其置于数组内，并作为第二个参数传递到 {{WebExtAPIRef("i18n.getMessage()")}} —`[a, b, c]`可替换为`$1`, `$2`, and `$3`，以此类推，并置于 `messages.json` 内。
 
 接下来我们看一个例子：在 `en/messages.json` 文件中原始的 `notificationContent` 消息字符串如下：in the `en/messages.json` file is
 
-```
-您点击了 $URL$。
+```plain
+你点击了 $URL$。
 ```
 
 我们可以看到链接点击后会打开 `https://developer.mozilla.org`。在 {{WebExtAPIRef("i18n.getMessage()")}} 调用后，第二个参数的内容就变成了 messages.json 里的 `$1`，并替换定义在 `"url"` 占位符里的 `$URL$` 这个占位符。所以最后的消息字符串就变成了：
 
-```
-您点击了 https://developer.mozilla.org。
+```plain
+你点击了 https://developer.mozilla.org。
 ```
 
 ### 直接占位符的使用
@@ -221,7 +212,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 ## 选择本地化的字符串
 
-语言区域可以仅使用语言代码指定，例如 `fr` 或 `en`，也可以进一步限定区域代码，例如 `en_US` 或 `en_GB`，其描述了使用相同基础语言的区域变体。当您向 i18n 系统询问一个字符串时，它将使用以下算法选择一个字符串：
+语言区域可以仅使用语言代码指定，例如 `fr` 或 `en`，也可以进一步限定区域代码，例如 `en_US` 或 `en_GB`，其描述了使用相同基础语言的区域变体。当你向 i18n 系统询问一个字符串时，它将使用以下算法选择一个字符串：
 
 1. 如果有精确匹配当前语言区域的 `messages.json` 文件，并且它包含该字符串，则返回它。
 2. 否则，如果当前语言区域有合格区域（例如 `en_US`）并且有一个无区域限定的 `messages.json` 文件（例如 `en`）且包含该字符串，则返回它。
@@ -231,25 +222,17 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 参见下列示例：
 
 - webextension-root-directory/
-
   - \_locales
-
     - en_GB
-
       - messages.json
-
         - `{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }`
 
       en
-
       - messages.json
-
         - `{ "colorLocalised": { "message": "color", "description": "Color." }, ... }`
 
     - fr
-
       - messages.json
-
         - `{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}`
 
 假设 `default_locale` 是设为 `fr`，而浏览器的语言环境为 `en_GB`：
@@ -261,13 +244,13 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 i18n 模块为我们提供了一些预定义的消息，我们可以用之前在 [在 manifests 中检索本地化的字符串](#在_manifests_中检索本地化的字符串) 中看到的相同的方式调用。例如：
 
-```
+```plain
 __MSG_extensionName__
 ```
 
 预定义的消息使用完全相同的语法，例如在消息名称之前使用 `@@`
 
-```
+```plain
 __MSG_@@ui_locale__
 ```
 
@@ -388,7 +371,8 @@ padding-left: 1.5em;
 2. 双击该首选项（或按回车）以选择它，输入你想测试的语言环境的语言代码，然后点击“确定”（或按回车）。我们的示例扩展支持“en”（英语）、“de”德语（）、“nl”（荷兰语）和“ja”日语。
 3. 重启你的浏览器以完成更改。
 
-> **备注：** 这个方法可以用来修改浏览器的语言区域，即使你未安装过该语言区域对应的[语言包](https://addons.mozilla.org/en-US/firefox/language-tools/)。这样的话你就可以将浏览器用户界面调整显示为你的默认语言。
+> [!NOTE]
+> 这个方法可以用来修改浏览器的语言区域，即使你未安装过该语言区域对应的[语言包](https://addons.mozilla.org/zh-CN/firefox/language-tools/)。这样的话你就可以将浏览器用户界面调整显示为你的默认语言。
 
 再次从磁盘临时加载该扩展，然后测试你的新语言区域：
 

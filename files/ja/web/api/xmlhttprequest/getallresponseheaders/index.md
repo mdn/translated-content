@@ -1,17 +1,19 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
+title: "XMLHttpRequest: getAllResponseHeaders() メソッド"
+short-title: getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: 99b2676da42700bafbb3189449a30b00e727e2c5
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 {{domxref("XMLHttpRequest")}} の **`getAllResponseHeaders()`** メソッドは、すべてのレスポンスヘッダーを {{Glossary('CRLF')}} で区切った文字列として返し、レスポンスを受信していない場合は `null` を返します。
 
 ネットワークエラーが発生した場合は、空文字列が返されます。
 
-> **メモ:** マルチパートリクエストでは、これはリクエストの元のチャンネルではなく、*現在の*部分を返します。
+> [!NOTE]
+> マルチパートリクエストでは、これはリクエストの元のチャンネルではなく、*現在の*部分を返します。
 
 ## 構文
 
@@ -45,7 +47,8 @@ x-xss-protection: 1; mode=block\r\n
 
 各行はキャリッジリターンとラインフィード文字 (`\r\n`) の両方で終わります。これらはそれぞれのヘッダーを区切る基本的なデリミターです。
 
-> **メモ:** 最近のブラウザーでは、ヘッダー名は最新の仕様書にあるように、すべて小文字で返されます。
+> [!NOTE]
+> 最近のブラウザーでは、ヘッダー名は最新の仕様書にあるように、すべて小文字で返されます。
 
 ## 例
 
@@ -57,8 +60,7 @@ request.open("GET", "foo.txt", true);
 request.send();
 
 request.onreadystatechange = () => {
-  if (request.readyState === this.HEADERS_RECEIVED) {
-
+  if (request.readyState === request.HEADERS_RECEIVED) {
     // 生のヘッダー文字列を取得
     const headers = request.getAllResponseHeaders();
 
@@ -69,13 +71,13 @@ request.onreadystatechange = () => {
     // ヘッダー名と値のマップを生成
     const headerMap = {};
     arr.forEach((line) => {
-      const parts = line.split(': ');
+      const parts = line.split(": ");
       const header = parts.shift();
-      const value = parts.join(': ');
+      const value = parts.join(": ");
       headerMap[header] = value;
     });
   }
-}
+};
 ```
 
 いったんこれを行えば、次のようなことができます。
@@ -96,5 +98,5 @@ const contentType = headerMap["content-type"];
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - リクエストヘッダーの設定: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

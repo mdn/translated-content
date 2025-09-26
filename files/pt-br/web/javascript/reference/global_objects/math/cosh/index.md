@@ -9,7 +9,21 @@ A função **`Math.cosh()`** retorna o cosseno hiperbólico de um número, que p
 
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-cosh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cosh()")}}
+
+```js interactive-example
+console.log(Math.cosh(0));
+// Expected output: 1
+
+console.log(Math.cosh(1));
+// Expected output: 1.543080634815244 (approximately)
+
+console.log(Math.cosh(-1));
+// Expected output: 1.543080634815244 (approximately)
+
+console.log(Math.cosh(2));
+// Expected output: 3.7621956910836314
+```
 
 ## Sintaxe
 
@@ -35,8 +49,8 @@ Por `cosh()` ser um método estático de `Math`, sempre utilize como `Math.cosh(
 ### Usando `Math.cosh()`
 
 ```js
-Math.cosh(0);  // 1
-Math.cosh(1);  // 1.5430806348152437
+Math.cosh(0); // 1
+Math.cosh(1); // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
 ```
 
@@ -45,29 +59,31 @@ Math.cosh(-1); // 1.5430806348152437
 Isto pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  return (Math.exp(x) + Math.exp(-x)) / 2;
-}
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    return (Math.exp(x) + Math.exp(-x)) / 2;
+  };
 ```
 
 ou usando apenas uma chamada da função {{jsxref("Math.exp()")}}:
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  var y = Math.exp(x);
-  return (y + 1 / y) / 2;
-};
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y + 1 / y) / 2;
+  };
 ```
 
 ## Especificações
 
-| Especificações                                                           |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.cosh")}}
+{{Compat}}
 
 ## See also
 

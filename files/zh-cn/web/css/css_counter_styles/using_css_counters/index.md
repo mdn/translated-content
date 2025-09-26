@@ -3,8 +3,6 @@ title: 使用 CSS 计数器
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 ---
 
-{{CSSRef}}
-
 **CSS 计数器**可让你根据内容在文档中的位置调整其显示的外观。例如，你可以使用计数器自动为网页中的标题编号，或者更改有序列表的编号。
 
 本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则跟踪使用次数以递增或递减。你可以自定义一个计数器，也可以修改 `list-item` 这一默认生成的应用于所有有序列表的计数器。
@@ -58,7 +56,7 @@ h3::before {
 
 当不需要包含父级上下文的编号，而仅需要嵌套内容的编号时，应使用 {{cssxref("counter", "counter()")}} 函数。例如，以下示例的每一个嵌套内容的计数都从 1 开始：
 
-```
+```plain
 1 One
   1 Nested one
   2 Nested two
@@ -71,7 +69,7 @@ h3::before {
 
 当需要同时包含父级上下文和嵌套内容的编号时，应使用 {{cssxref("counters", "counters()")}} 函数。例如，以下示例的每一个嵌套内容会包含父级编号：
 
-```
+```plain
 1 One
   1.1 Nested one
   1.2 Nested two
@@ -107,7 +105,8 @@ counter-reset: reversed(section);
 
 计数器的值会随着通过 {{cssxref("counter-increment")}} 属性指定的负数递减。
 
-> **备注：** 对于非反向计数器，你也仍然可以使用 {{cssxref("counter-increment")}} 属性实现递减。使用反向计数器的优点在于：其默认初始值可以自动根据元素数量生成，自动应用于有序列表的 `list-item` 计数器也可以借此反转编号。
+> [!NOTE]
+> 对于非反向计数器，你也仍然可以使用 {{cssxref("counter-increment")}} 属性实现递减。使用反向计数器的优点在于：其默认初始值可以自动根据元素数量生成，自动应用于有序列表的 `list-item` 计数器也可以借此反转编号。
 
 ### 有序列表（list item）计数器
 

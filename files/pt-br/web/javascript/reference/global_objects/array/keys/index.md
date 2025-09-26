@@ -3,7 +3,7 @@ title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -41,13 +41,11 @@ console.log(denseKeys); // [0, 1, 2]
 
 ## Especificações
 
-| Especificação                                                            | Status           | Comentário         |
-| ------------------------------------------------------------------------ | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade de Browser
 
-{{Compat("javascript.builtins.Array.keys")}}
+{{Compat}}
 
 ## Veja também
 

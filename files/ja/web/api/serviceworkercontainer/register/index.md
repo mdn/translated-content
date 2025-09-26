@@ -23,26 +23,20 @@ register(scriptURL, options)
 ### 引数
 
 - `scriptURL`
-  - : サービスワーカースクリプトの URL。 登録されたサービスワーカーファイルには、有効な [JavaScript の MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript)が必要です。
+  - : サービスワーカースクリプトの URL。 登録されたサービスワーカーファイルには、有効な [JavaScript の MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types#textjavascript)が必要です。
 - `options` {{optional_inline}}
-
   - : 登録オプションを含むオブジェクト。 現在利用可能なオプションは次のとおりです。
-
     - `scope`
       - : 文字列で、サービスワーカーの登録スコープを定義する URL を表します。 つまり、サービスワーカーが制御できる URL の範囲です。 これは通常、相対 URL です。 これは、アプリケーションのベース URL を基準にしています。 既定では、サービスワーカー登録の `scope` 値は、サービスワーカースクリプトが配置されているディレクトリーになります。 動作の詳細については、[例](#例)の節を参照してください。
     - `type`
-
       - : 文字列で、作成するワーカーの種類を指定します。有効な値は次の通りです。
-
         - `'classic'`
           - : 読み込んだサービスワーカーは、標準のスクリプトの中にあります。これは既定値です。
         - `'module'`
           - : 読み込まれたサービスワーカーは、 [ES モジュール](/ja/docs/Web/JavaScript/Guide/Modules)にあり、 import 文は、ワーカーのコンテキストで利用できます。
 
     - `updateViaCache`
-
       - : 文字列で、更新時にサービスワーカースクリプトのリソースに HTTP キャッシュを使用する方法を示します。メモ: これはサービスワーカースクリプトとそのインポートのみを参照し、これらのスクリプトによってフェッチされた他のリソースは参照しません。
-
         - `'all'`
           - : HTTP キャッシュは、メインスクリプトとインポートされたすべてのスクリプトについて照会されます。 HTTP キャッシュに新しいエントリーが見つからなかった場合、スクリプトはネットワークからフェッチされます。
         - `'imports'`
@@ -61,16 +55,19 @@ register(scriptURL, options)
 次の例では、`scope`（を省略した場合）の既定値を使用しています。 この場合、サービスワーカーは `example.com/index.html` とその下のページ（`example.com/product/description.html` など）を制御します。
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // 既定のスコープを使用して、
   // サイトのルートでホストされるサービスワーカーを登録します。
-  navigator.serviceWorker.register('/sw.js').then((registration) => {
-    console.log('サービスワーカー登録成功:', registration);
-  }, /*catch*/ (error) => {
-    console.error(`サービスワーカー登録失敗: ${error}`);
-  });
+  navigator.serviceWorker.register("/sw.js").then(
+    (registration) => {
+      console.log("サービスワーカー登録成功:", registration);
+    },
+    /*catch*/ (error) => {
+      console.error(`サービスワーカー登録失敗: ${error}`);
+    },
+  );
 } else {
-  console.error('サービスワーカーに対応していません。');
+  console.error("サービスワーカーに対応していません。");
 }
 ```
 
@@ -79,15 +76,18 @@ if ('serviceWorker' in navigator) {
 あるいは、このコードが `example.com/product/description.html` のページに含まれている場合、`'./'` のスコープは、サービスワーカーが `example.com/product` の下のリソースにのみ適用されることを意味します。
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // スコープを手動で宣言
-  navigator.serviceWorker.register('/sw.js', {scope: './'}).then((registration) => {
-    console.log('サービスワーカー登録成功:', registration);
-  }, /*catch*/ (error) => {
-    console.error(`サービスワーカー登録失敗: ${error}`);
-  });
+  navigator.serviceWorker.register("/sw.js", { scope: "./" }).then(
+    (registration) => {
+      console.log("サービスワーカー登録成功:", registration);
+    },
+    /*catch*/ (error) => {
+      console.error(`サービスワーカー登録失敗: ${error}`);
+    },
+  );
 } else {
-  console.error('サービスワーカーをサポートしていません。');
+  console.error("サービスワーカーをサポートしていません。");
 }
 ```
 
@@ -96,15 +96,18 @@ _scope_ の意味と使用方法について、しばしば混乱があります
 以下のコードは、サイトのルートにある `example.com/index.html` に記載した場合、 `example.com/product` 以下のリソースにのみ適用されます。
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // スコープを手動で宣言
-  navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then((registration) => {
-    console.log('サービスワーカー登録成功:', registration);
-  }, /*catch*/ (error) => {
-    console.error(`サービスワーカー登録失敗: ${error}`);
-  });
+  navigator.serviceWorker.register("/sw.js", { scope: "/product/" }).then(
+    (registration) => {
+      console.log("サービスワーカー登録成功:", registration);
+    },
+    /*catch*/ (error) => {
+      console.error(`サービスワーカー登録失敗: ${error}`);
+    },
+  );
 } else {
-  console.error('サービスワーカーをサポートしていません。');
+  console.error("サービスワーカーをサポートしていません。");
 }
 ```
 

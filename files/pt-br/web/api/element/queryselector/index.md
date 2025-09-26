@@ -14,7 +14,7 @@ elemento = elementoBase.querySelector(seletores);
 ```
 
 - `elemento` e `elementoBase` são objetos {{domxref("element")}}.
-- `selectores` é um grupo de [selectores](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Selectors).
+- `selectores` é um grupo de [selectores](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Exemplo
 
@@ -46,7 +46,7 @@ O argumento de string do `querySelector` deve seguir a sintaxe CSS. Veja exemplo
 
 ## Veja Também
 
-- [`element.querySelectorAll`](/pt-BR/docs/DOM/Element.querySelectorAll)
-- [`document.querySelector`](/pt-BR/docs/DOM/Document.querySelector)
-- [`document.querySelectorAll`](/pt-BR/docs/DOM/Document.querySelectorAll)
+- [`element.querySelectorAll`](/pt-BR/docs/Web/API/Element/querySelectorAll)
+- [`document.querySelector`](/pt-BR/docs/Web/API/Document/querySelector)
+- [`document.querySelectorAll`](/pt-BR/docs/Web/API/Document/querySelectorAll)
 - [Code snippets for querySelector](/pt-BR/docs/Code_snippets/QuerySelector)

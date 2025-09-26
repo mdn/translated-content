@@ -16,7 +16,7 @@ HTMLTableElement.width = width;
 var width = HTMLTableElement.width;
 ```
 
-[`width`](http://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-width-TABLE)가 픽셀수나 퍼센트 값으로 너비를 나타내는 문자열인 곳.
+[`width`](https://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-width-TABLE)가 픽셀수나 퍼센트 값으로 너비를 나타내는 문자열인 곳.
 
 ### 예제
 

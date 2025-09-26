@@ -11,7 +11,6 @@ La méthode la positionne le curseur de façon approprié, selon la direction in
 
 - Si aucun intervalle de clé n'est spécifié ou qu'il vaut {{jsxref("null")}}, l'intervalle résultant contiendra l'ensemble des enregistrements
 - L'évènement `success` est toujours déclenché :
-
   - Si un enregistrement est trouvé la propriété `result` de l'évènement contient le nouvel objet {{domxref("IDBCursor")}} et la valeur (`value`) de ce curseur est un clône de la valeur référencée
   - Si aucun enregistrement n'est trouvé la propriété `result` de l'évènement vaudra `null`.
 
@@ -126,7 +125,8 @@ function displayDataByIndex() {
 }
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -138,7 +138,7 @@ function displayDataByIndex() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

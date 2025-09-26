@@ -5,9 +5,29 @@ slug: Web/JavaScript/Reference/Operators/Object_initializer
 
 {{JsSidebar("Operators")}}
 
-Il est possible d'initialiser un objet en utilisant les notations [`new Object()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object), `Object.create()`, ou grâce à un littéral (appelée initialisateur). Un initialisateur d'objet est une liste contenant plusieurs (éventuellement 0) propriétés, séparées par des virgules, et leurs valeurs associées, cette liste étant entourée d'accolades (`{}`).
+Il est possible d'initialiser un objet en utilisant les notations [`new Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), `Object.create()`, ou grâce à un littéral (appelée initialisateur). Un initialisateur d'objet est une liste contenant plusieurs (éventuellement 0) propriétés, séparées par des virgules, et leurs valeurs associées, cette liste étant entourée d'accolades (`{}`).
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Object initializer")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+```
 
 ## Syntaxe
 
@@ -53,7 +73,7 @@ var o = {
 
 ## Description
 
-Un initialisateur d'objet est une expression qui permet de décrire l'initialisation d'un {{jsxref("Object")}}. Les objets sont constitués de propriétés qui permettent de les décrire. Les valeurs des propriétés d'un objet peuvent être construites à partir de [types de données primitifs](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives) ou à partir d'autres objets.
+Un initialisateur d'objet est une expression qui permet de décrire l'initialisation d'un {{jsxref("Object")}}. Les objets sont constitués de propriétés qui permettent de les décrire. Les valeurs des propriétés d'un objet peuvent être construites à partir de [types de données primitifs](/fr/docs/Web/JavaScript/Guide/Data_structures#les_valeurs_primitives) ou à partir d'autres objets.
 
 ### Créer des objets
 
@@ -75,7 +95,7 @@ var object = {
 
 ### Accéder à des propriétés
 
-Après la création d'un objet, vous pourrez avoir besoin de consulter ou de modifier ses propriétés. Il est possible d'accéder aux propriétés d'un objet en utilisant un point ou des crochets. Voir la page sur les [accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres) pour plus d'information.
+Après la création d'un objet, vous pourrez avoir besoin de consulter ou de modifier ses propriétés. Il est possible d'accéder aux propriétés d'un objet en utilisant un point ou des crochets. Voir la page sur les [accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors) pour plus d'information.
 
 ```js
 object.toto; // "truc"
@@ -227,11 +247,11 @@ var fusion = { ...obj1, ...obj2 };
 // Object { toto: 'bidule', x: 42, y: 13 };
 ```
 
-On notera que la méthode {{jsxref("Object.assign()")}} déclenche [les mutateurs](/fr/docs/Web/JavaScript/Reference/Fonctions/set), ce qui n'est pas le cas de l'opérateur de décomposition.
+On notera que la méthode {{jsxref("Object.assign()")}} déclenche [les mutateurs](/fr/docs/Web/JavaScript/Reference/Functions/set), ce qui n'est pas le cas de l'opérateur de décomposition.
 
 ### Changement de prototype
 
-Définir une propriété avec la syntaxe `__proto__: valeur` ou `"__proto__": valeur` ne permet pas de créer une propriété avec le nom `__proto__`. Si la valeur fournie est un objet ou est [`null`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/null), cela modifie le `[[Prototype]]` de l'objet. (Si la valeur fournie n'est pas un objet ou n'est pas null, l'objet ne sera pas modifié.)
+Définir une propriété avec la syntaxe `__proto__: valeur` ou `"__proto__": valeur` ne permet pas de créer une propriété avec le nom `__proto__`. Si la valeur fournie est un objet ou est [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), cela modifie le `[[Prototype]]` de l'objet. (Si la valeur fournie n'est pas un objet ou n'est pas null, l'objet ne sera pas modifié.)
 
 ```js
 var obj1 = {};
@@ -274,7 +294,7 @@ assert(obj3.__proto__ === 17);
 
 ## Notation littérale et JSON
 
-La notation utilisant un littéral objet n'est pas identique à celle utilisée par la **J**ava**S**cript **O**bject **N**otation ([JSON](/fr/docs/JSON)). Bien que ces notations se ressemblent, il existe certaines différences :
+La notation utilisant un littéral objet n'est pas identique à celle utilisée par la **J**ava**S**cript **O**bject **N**otation ([JSON](/fr/docs/Glossary/JSON)). Bien que ces notations se ressemblent, il existe certaines différences :
 
 - JSON ne permet de définir des propriétés qu'en utilisant la syntaxe `"propriété": valeur`. Le nom de la propriété doit être entouré de double-quotes et la définition de la propriété ne peut pas être raccourcie.
 - En JSON les valeurs ne peuvent être uniquement que des chaînes de caractères, des nombres, des tableaux, `true`, `false`, `null`, ou tout autre objet (JSON).
@@ -292,7 +312,7 @@ La notation utilisant un littéral objet n'est pas identique à celle utilisée 
 
 ## Voir aussi
 
-- [Accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres)
-- [`get`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_get) / [`set`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_set)
-- [Définitions de méthode](/fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode)
-- [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale) de JavaScript
+- [Accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set)
+- [Définitions de méthode](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Lexical_grammar) de JavaScript

@@ -1,32 +1,47 @@
 ---
-title: Element.getAttributeNodeNS()
+title: Element：getAttributeNodeNS() 方法
 slug: Web/API/Element/getAttributeNodeNS
+l10n:
+  sourceCommit: 2c7ff5fb33e462e72ceeab8e62dacad5a195a575
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-## 概要
+{{domxref("Element")}} 实例的 **`getAttributeNodeNS()`** 方法返回元素的指定命名空间的 {{domxref("Attr")}} 节点。
 
-通过命名空间 URI 和名称来获取属性节点。
+如果你需要限定命名空间的属性的[实例属性](/zh-CN/docs/Web/API/Attr#实例属性)，此方法会很有用。如果你只需要限定命名空间的属性的值，你可以改用 {{domxref("Element.getAttributeNS()", "getAttributeNS()")}} 方法。
+
+如果你需要 HTML 文档中的元素的 {{domxref("Attr")}} 节点，并且属性没有限定命名空间，那么可以改用 {{domxref("Element.getAttributeNode()", "getAttributeNode()")}} 方法。
 
 ## 语法
 
-```plain
-attributeNode = element.getAttributeNodeNS(namespace,nodeName)
+```js-nolint
+getAttributeNodeNS(namespace, nodeName)
 ```
 
-- `attributeNode` 获取的属性节点。
-- `namespace` 命名空间字符串
-- `nodeName` 属性节点的名称。
+### 参数
 
-\== Example == TBD The example needs to be fixed pre> // html: \<div id="top" /> t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<http://www.mozilla.org/ns/specialspace>", "id"); // iNode.value = "full-top" \</pre
+- `namespace`：指定属性的命名空间的字符串。
+- `nodeName`：指定属性名称的字符串。
 
-## 笔记
+### 返回值
 
-`getAttributeNodeNS` 相比 [getAttributeNode](en/DOM/element.getAttributeNode) 更加具体，允许你在特定的命名空间里获取属性。对应的 setter 方法是 [setAttributeNodeNS](en/DOM/element.setAttributeNodeNS).
+指定属性的节点。
 
-{{ DOMAttributeMethods() }}
+## 备注
 
-## 规格
+`getAttributeNodeNS` 相比 [getAttributeNode](/zh-CN/docs/Web/API/Element/getAttributeNode) 更加具体，因为它允许你指定属于特定命名空间的属性。对应的 setter 方法是 [setAttributeNodeNS](/zh-CN/docs/Web/API/Element/setAttributeNodeNS)。
 
-[DOM Level 2 Core: getAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS)
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Document.createAttributeNS()")}}
+- {{domxref("Element.setAttributeNodeNS()")}}

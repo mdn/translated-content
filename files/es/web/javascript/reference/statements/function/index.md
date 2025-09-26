@@ -18,11 +18,9 @@ function nombre([parametro1] [,parametro2] [..., parametroN]) {sentencias}
 ```
 
 - `nombre`
-
   - : El nombre de la función.
 
 - `parametroN`
-
   - : El nombre de un argumento que se pasa a la función. Una función puede tener hasta 255 argumentos.
 
 - `sentencias`
@@ -52,6 +50,6 @@ function calcular_ventas(unidades_a, unidades_b, unidades_c) {
 
 ## Vea También
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
 - Operadores{{jsxref("Operadores/function", "function")}}

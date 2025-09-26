@@ -45,15 +45,15 @@ var gl = offscreen.getContext("webgl");
 gl.canvas; // OffscreenCanvas
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("CanvasRenderingContext2D.canvas")}}
 - {{domxref("OffscreenCanvas")}}

@@ -1,15 +1,18 @@
 ---
-title: MediaStreamTrack.id
+title: "MediaStreamTrack: id プロパティ"
+short-title: id
 slug: Web/API/MediaStreamTrack/id
+l10n:
+  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-**`MediaStreamTrack.id`** は読み取り専用のプロパティであり、このトラックのための固有識別子 (GUID)を含む文字列を返します。この値は{{glossary("user agent", "ユーザーエージェント")}}によって生成されます。
+**`id`** は {{domxref("MediaStreamTrack")}} インターフェイスの読み取り専用のプロパティで、このトラックのための固有識別子 (GUID) を含む文字列を返します。この値は{{glossary("user agent", "ユーザーエージェント")}}によって生成されます。
 
 ## 構文
 
-```js
+```js-nolint
 const id = track.id
 ```
 

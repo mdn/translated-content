@@ -1,13 +1,16 @@
 ---
 title: "HTMLElement: dragend イベント"
+short-title: dragend
 slug: Web/API/HTMLElement/dragend_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
 {{APIRef}}
 
 `dragend` イベントは、ドラッグ操作が終わろうとしているとき（マウスボタンを離したり、エスケープキーを押したりしたとき）に発生します。
+
+このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
@@ -106,16 +109,9 @@ source.addEventListener("dragend", (event) => {
 ## 関連情報
 
 - その他のドラッグ＆ドロップイベント:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他を対象としたこのイベント:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragend_event", "dragend")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/dragend_event", "dragend")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragend_event", "dragend")}} イベント

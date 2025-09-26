@@ -9,7 +9,8 @@ l10n:
 
 古い **`PerformanceNavigation`** インターフェイスは、現在のドキュメントへのナビゲーションがどのように行われたかに関する情報を表します。
 
-> **警告:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。
+> [!WARNING]
+> このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。
 > 代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
 この型のオブジェクトは、{{domxref("Performance.navigation")}} 読み取り専用属性を呼び出すことによって取得できます。
@@ -19,9 +20,7 @@ l10n:
 _`PerformanceNavigation` インターフェイスはプロパティを継承していません。_
 
 - {{domxref("PerformanceNavigation.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
-
   - : `unsigned short` で、このページへのナビゲーションがどのように行われたかを示します。取りうる値は次のとおりです。
-
     - `TYPE_NAVIGATE` (0)
       - : リンク、ブックマーク、フォーム送信、またはスクリプトを使用するか、アドレスバーに URL を入力してページにアクセスしました。
     - `TYPE_RELOAD` (1)

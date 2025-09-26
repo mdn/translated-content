@@ -7,11 +7,45 @@ slug: Web/CSS/background-origin
 
 La propriété **`background-origin`** détermine l'origine de l'arrière-plan [`background-image`](/fr/docs/Web/CSS/background-image) à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (<i lang="en">padding</i>).
 
-{{EmbedInteractiveExample("pages/css/background-origin.html")}}
+{{InteractiveExample("CSS Demo: background-origin")}}
+
+```css interactive-example-choice
+background-origin: border-box;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-origin: padding-box;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-origin: content-box;
+background-repeat: no-repeat;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is the content of the element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/leopard.jpg");
+  color: #d73611;
+  text-shadow: 2px 2px black;
+  padding: 20px;
+  border: 10px dashed #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+```
 
 Attention, `background-origin` est ignorée lorsque [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`.
 
-> **Note :** Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
+> [!NOTE]
+> Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
 
 ## Syntaxe
 
@@ -71,7 +105,8 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("mainback.png"); /* Applique deux images en arrière-plan */
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* Applique deux images en arrière-plan */
   background-position:
     top right,
     0px 0px;
@@ -95,12 +130,14 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
 .box {
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       90deg,
       rgba(131, 58, 180, 1) 0%,
       rgba(253, 29, 29, 0.6) 60%,
       rgba(252, 176, 69, 1) 100%
-    ), radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
+    ),
+    radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;

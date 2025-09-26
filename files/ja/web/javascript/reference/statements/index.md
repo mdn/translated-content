@@ -61,7 +61,7 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
 - {{jsxref("Statements/for...in", "for...in")}}
   - : オブジェクトの列挙可能なプロパティに対し任意の順番で反復処理を行います。それぞれ個別のプロパティに対し、文を実行できます。
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : 反復可能オブジェクト ({{jsxref("Global_Objects/Array","配列","","true")}}、配列風オブジェクト、[イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を含む) を反復処理し、それぞれ個別のプロパティの値に対する実行文をともなった反復処理フックを呼び出します。
+  - : 反復可能オブジェクト ({{jsxref("Global_Objects/Array","配列","",1)}}、配列風オブジェクト、[イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を含む) を反復処理し、それぞれ個別のプロパティの値に対する実行文をともなった反復処理フックを呼び出します。
 - {{jsxref("Statements/for-await...of", "for await...of")}}
   - : 非同期反復オブジェクト、配列風オブジェクト、[イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を反復処理し、各固有のプロパティ値で実行する文を実行しつつ、カスタムイテレーションフックを実行する。
 - {{jsxref("Statements/while", "while")}}
@@ -133,7 +133,8 @@ if (条件)
 label: const a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
-> **メモ:** [関数宣言にラベルを持たせる](/ja/docs/Web/JavaScript/Reference/Statements/label#labeled_function_declarations)古い文法がありますが、ウェブの現実との互換性のために標準化されただけです。
+> [!NOTE]
+> [関数宣言にラベルを持たせる](/ja/docs/Web/JavaScript/Reference/Statements/label#labeled_function_declarations)古い文法がありますが、ウェブの現実との互換性のために標準化されただけです。
 
 これを回避するには、宣言を中括弧で囲んで、[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)の一部にすることができます。
 

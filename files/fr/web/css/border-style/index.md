@@ -5,9 +5,56 @@ slug: Web/CSS/border-style
 
 {{CSSRef}}
 
-La propriété CSS **`border-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir le style des lignes utilisées pour les bordures des quatre côtés de la boîte d'un élément.
+La propriété CSS **`border-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir le style des lignes utilisées pour les bordures des quatre côtés de la boîte d'un élément.
 
-{{EmbedInteractiveExample("pages/css/border-style.html")}}
+{{InteractiveExample("CSS Demo: border-style")}}
+
+```css interactive-example-choice
+border-style: none;
+```
+
+```css interactive-example-choice
+border-style: dotted;
+```
+
+```css interactive-example-choice
+border-style: inset;
+```
+
+```css interactive-example-choice
+border-style: dashed solid;
+```
+
+```css interactive-example-choice
+border-style: dashed double none;
+```
+
+```css interactive-example-choice
+border-style: dashed groove none dotted;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 ## Propriétés détaillées correspondantes
 
@@ -49,7 +96,8 @@ border-style: revert;
 border-style: unset;
 ```
 
-> **Note :** La valeur par défaut de `border-style` est `none`. Cela signifie que si on modifie [`border-width`](/fr/docs/Web/CSS/border-width) et [`border-color`](/fr/docs/Web/CSS/border-color), on ne verra pas la bordure tant que cette propriété n'est pas différente de `none` ou de `hidden`.
+> [!NOTE]
+> La valeur par défaut de `border-style` est `none`. Cela signifie que si on modifie [`border-width`](/fr/docs/Web/CSS/border-width) et [`border-color`](/fr/docs/Web/CSS/border-color), on ne verra pas la bordure tant que cette propriété n'est pas différente de `none` ou de `hidden`.
 
 La propriété `border-style` peut être définie avec une, deux, trois ou quatre valeurs&nbsp;:
 
@@ -63,9 +111,7 @@ Chacune des valeurs peut être un des mots-clés parmi la liste suivante.
 ### Valeurs
 
 - `<line-style>`
-
   - : Un mot-clé qui décrit le style utilisé pour la bordure sur les côtés de la boîte. Ce mot-clé peut prendre l'une des valeurs suivantes&nbsp;:
-
     - `none`
       - : L'effet obtenu est le même qu'avec `hidden`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec [`background-image`](/fr/docs/Web/CSS/background-image)), la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `none` a la priorité la plus _basse_&nbsp;; donc, si une autre bordure est définie et fusionne avec celle-ci, elle sera affichée.
     - `hidden`

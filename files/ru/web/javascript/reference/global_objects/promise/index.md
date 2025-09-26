@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 Объект **`Promise`** используется для отложенных и асинхронных вычислений.
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Promise Constructor")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## Синтаксис
 
@@ -40,7 +56,8 @@ new Promise(function(resolve, reject) { ... });
 
 ![](promises.png)
 
-> **Примечание:** говорят, что промис находится в состоянии _завершён (settled)_ когда он или исполнен или отклонён, т.е. в любом состоянии, кроме ожидания (это лишь форма речи, не являющаяся настоящим состоянием промиса). Также можно встретить термин _исполнен (resolved)_ — это значит что промис _завершён_ или "заблокирован" в ожидании завершения другого промиса. В статье [состояния и fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) приводится более подробное описание терминологии.
+> [!NOTE]
+> Говорят, что промис находится в состоянии _завершён (settled)_ когда он или исполнен или отклонён, т.е. в любом состоянии, кроме ожидания (это лишь форма речи, не являющаяся настоящим состоянием промиса). Также можно встретить термин _исполнен (resolved)_ — это значит что промис _завершён_ или "заблокирован" в ожидании завершения другого промиса. В статье [состояния и fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) приводится более подробное описание терминологии.
 
 ## Свойства
 
@@ -52,19 +69,16 @@ new Promise(function(resolve, reject) { ... });
 ## Методы
 
 - {{jsxref("Promise.all", "Promise.all(iterable)")}}
-
   - : Ожидает исполнения всех промисов или отклонения любого из них.
 
     Возвращает промис, который исполнится после исполнения всех промисов в `iterable`. В случае, если любой из промисов будет отклонён, `Promise.all` будет также отклонён.
 
 - {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
-
   - : Ожидает завершения всех полученных промисов (как исполнения так и отклонения).
 
     Возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.
 
 - {{jsxref("Promise.race", "Promise.race(iterable)")}}
-
   - : Ожидает исполнения или отклонения любого из полученных промисов.
 
     Возвращает промис, который будет исполнен или отклонён с результатом исполнения первого исполненного или отклонённого промиса из `iterable`.
@@ -221,11 +235,8 @@ if ("Promise" in window) {
 
 ## Смотрите также
 
-- [Спецификация Promises/A+](http://promisesaplus.com/)
-- [Jake Archibald: JavaScript Promises: There and Back Again](http://www.html5rocks.com/en/tutorials/es6/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Pattern in JavaScript](http://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
-- [Matt Greer: JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
-- [Forbes Lindesay: promisejs.org](https://www.promisejs.org/)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
-- [Promise polyfill](https://github.com/jakearchibald/es6-promise/)
-- [Udacity: JavaScript Promises](https://www.udacity.com/course/javascript-promises--ud898)
+- [Полифил `Promise` в `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Руководство по использованию промисов](/ru/docs/Web/JavaScript/Guide/Using_promises)
+- [Спецификация Promises/A+](https://promisesaplus.com/)
+- [JavaScript Promises: an introduction](https://web.dev/articles/promises) на web.dev (2013)
+- [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/slideshow/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript/9953720) — презентация Доменика Дениколы (2011)

@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
 ## 構文
 
 ```js
-Intl.ListFormat.supportedLocalesOf(locales)
-Intl.ListFormat.supportedLocalesOf(locales, options)
+Intl.ListFormat.supportedLocalesOf(locales);
+Intl.ListFormat.supportedLocalesOf(locales, options);
 ```
 
 ### 引数
@@ -19,9 +19,7 @@ Intl.ListFormat.supportedLocalesOf(locales, options)
 - `locales`
   - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを持つ可能性があるオブジェクトです。
-
     - `localeMatcher`
       - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl", "#ロケールネゴシエーション", 1)}} のページを参照してください。
 
@@ -40,9 +38,9 @@ Intl.ListFormat.supportedLocalesOf(locales, options)
 リストの書式化でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 `pinyin` の照合はリストの書式化には関係なく、インドネシア語でも使用されません。ここでの `lookup` アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 `best fit` のマッチャーはインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

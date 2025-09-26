@@ -3,7 +3,7 @@ title: browserAction.setBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeTextColor
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit la couleur du texte du badge de l'action du navigateur. Les onglets sans couleur de texte de badge spécifique hériteront de la couleur globale du texte de badge.
 
@@ -18,13 +18,9 @@ browser.browserAction.setBadgeTextColor(
 ### Paramètres
 
 - `details`
-
   - : `object`
-
     - `color`
-
       - : La couleur, spécifiée comme l'une des couleurs :
-
         - une chaîne : toute valeur CSS [\<color>](/fr/docs/Web/CSS/color_value), par exemple `"red"`, `"#FF0000"`, ou `"rgb(255,0,0)"`. Si la chaîne n'est pas une couleur valide, la promesse retournée sera rejetée et la couleur du texte ne sera pas modifiée.
         - Un objet `{{WebExtAPIRef('browserAction.ColorArray')}}`.
         - `null`. Si un `tabId` est spécifié, il supprime la couleur du texte du badge spécifique à l'onglet afin que l'onglet hérite de la couleur globale du texte du badge. Dans le cas contraire, la couleur globale du texte du badge est ramenée à la valeur par défaut.
@@ -72,7 +68,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 

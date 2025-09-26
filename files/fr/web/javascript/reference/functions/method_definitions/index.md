@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Functions/Method_definitions
 
 Avec ECMAScript 2015 (ES6), il est possible d'utiliser une notation plus courte pour définir des méthodes au sein des littéraux objets. On peut ainsi définir plus rapidement une fonction qui sera utilisée comme méthode.
 
-{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Definitions")}}
+
+```js interactive-example
+const obj = {
+  foo() {
+    return "bar";
+  },
+};
+
+console.log(obj.foo());
+// Expected output: "bar"
+```
 
 ## Syntaxe
 
@@ -32,7 +43,7 @@ var obj = {
 
 ## Description
 
-La notation raccourcie est semblable à la syntaxe introduite par ECMAScript 5 pour les [accesseurs](/fr/docs/Web/JavaScript/Reference/Fonctions/get) et [mutateurs](/fr/docs/Web/JavaScript/Reference/Fonctions/set).
+La notation raccourcie est semblable à la syntaxe introduite par ECMAScript 5 pour les [accesseurs](/fr/docs/Web/JavaScript/Reference/Functions/get) et [mutateurs](/fr/docs/Web/JavaScript/Reference/Functions/set).
 
 Le code suivant :
 
@@ -62,7 +73,7 @@ var obj = {
 
 ### Notation raccourcie pour les générateurs
 
-[Les générateurs](/fr/docs/Web/JavaScript/Reference/Instructions/function*) sont des méthodes et peuvent donc être définis en utilisant la notation raccourci. Lorsqu'on les utilise :
+[Les générateurs](/fr/docs/Web/JavaScript/Reference/Statements/function*) sont des méthodes et peuvent donc être définis en utilisant la notation raccourci. Lorsqu'on les utilise :
 
 - L'astérisque de la notation raccourcie doit être située avant le nom de la propriété pour le générateur. Autrement dit, `* g(){}` fonctionnera mais `g*(){}` ne fonctionnera pas.
 - Les définitions des méthodes qui ne sont pas des générateurs ne peuvent pas contenir le mot-clé `yield`. Cela signifie que [l'ancienne syntaxe pour les générateurs](/fr/docs/Web/JavaScript/Reference/Instructions/Fonction_génératrice_historique) ne fonctionnera pas et déclenchera une exception {{jsxref("SyntaxError")}}. Il faut toujours utiliser `yield` avec l'astérisque (`*`).
@@ -91,7 +102,7 @@ console.log(it.next().value); // 1
 
 ### Méthodes asynchrones avec notation raccourcie
 
-[Les méthodes asynchrones](/fr/docs/Web/JavaScript/Reference/Instructions/async_function) peuvent également être définies grâce à une syntaxe raccourcie.
+[Les méthodes asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function) peuvent également être définies grâce à une syntaxe raccourcie.
 
 ```js
 // On utilise une propriété nommée
@@ -112,7 +123,7 @@ var obj3 = {
 
 ### Méthodes génératrices asynchrones
 
-Les méthodes génératrices peuvent également être asynchrones (cf. [`async`](/fr/docs/Web/JavaScript/Reference/Instructions/async_function)) :
+Les méthodes génératrices peuvent également être asynchrones (cf. [`async`](/fr/docs/Web/JavaScript/Reference/Statements/async_function)) :
 
 ```js
 var obj4 = {
@@ -196,6 +207,6 @@ console.log(bar.toto2()); // 2
 
 ## Voir aussi
 
-- [`get`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_get)
-- [`set`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_set)
-- [Grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale)
+- [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set)
+- [Grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)

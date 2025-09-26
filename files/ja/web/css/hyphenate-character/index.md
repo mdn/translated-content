@@ -1,22 +1,52 @@
 ---
 title: hyphenate-character
 slug: Web/CSS/hyphenate-character
+l10n:
+  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
-
-{{CSSRef}}
 
 **`hyphenate-character`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ハイフンによる改行の前で行末に使用される文字（または文字列）を設定します。
 
 自動ハイフネーション、ソフトハイフネーションのどちらでも、指定された hyphenate-character の値に従って表示されます。
 
-## 構文
+{{InteractiveExample("CSS デモ: hyphenate-character")}}
 
-この値は、ハイフンの代わりに使用する文字列を設定するか、またはユーザーエージェントが現在の書体の慣習に基づいて適切な文字列を選択することを示します（既定値）。
+```css interactive-example-choice
+hyphenate-character: auto;
+```
+
+```css interactive-example-choice
+hyphenate-character: "=";
+```
+
+```css interactive-example-choice
+hyphenate-character: "—";
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+  hyphens: auto;
+}
+```
+
+## 構文
 
 ```css
 hyphenate-character: <string>;
 hyphenate-character: auto;
 ```
+
+この値は、ハイフンの代わりに使用する文字列を設定するか、またはユーザーエージェントが現在の書体の慣習に基づいて適切な文字列を選択することを示します（既定値）。
 
 ### 値
 
@@ -38,23 +68,23 @@ hyphenate-character: auto;
 ## 例
 
 この例では、 2 つの同じテキストブロックに {{cssxref("hyphens")}} を設定して、必要な場所で確実に改行し、（`&shy;`を使って作成した）ソフトハイフンで改行するようにしています。
-最初のブロックは、ハイフンの値が等号（"`*`"）に変更されています。
-これは、このプロパティに対応しているユーザーエージェントでは `hyphenate-character: auto` と同じ意味になります。
+最初のブロックは、ハイフンの値が等号 (`=`) に変更されています。
+2 番目のブロックにはハイフネーション文字セットが設定されていません。これは、このプロパティをサポートするユーザーエージェントでは、 `hyphenate-character: auto` と同等です。
 
-#### HTML
+### HTML
 
-```html
+```html live-sample___examples
 <dl>
-  <dt><code>hyphenate-character: "*"</code></dt>
+  <dt><code>hyphenate-character: "="</code></dt>
   <dd id="string" lang="en">Superc&shy;alifragilisticexpialidocious</dd>
   <dt><code>hyphenate-character の設定なし</code></dt>
   <dd lang="en">Superc&shy;alifragilisticexpialidocious</dd>
 </dl>
 ```
 
-#### CSS
+### CSS
 
-```css
+```css live-sample___examples
 dd {
   width: 90px;
   border: 1px solid black;
@@ -62,12 +92,12 @@ dd {
 }
 
 dd#string {
-  -webkit-hyphenate-character: "*";
-  hyphenate-character: "*";
+  -webkit-hyphenate-character: "=";
+  hyphenate-character: "=";
 }
 ```
 
-#### 結果
+### 結果
 
 {{EmbedLiveSample("Examples", "100%", 350)}}
 

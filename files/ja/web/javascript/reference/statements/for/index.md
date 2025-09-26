@@ -9,7 +9,18 @@ l10n:
 
 **`for`** 文は、括弧で囲みセミコロンで区切った 3 つの引数と、続いてループ内で実行される文（ふつうは[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)）から成るループを構成します。
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript デモ: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 構文
 
@@ -19,13 +30,11 @@ for (initialization; condition; afterthought)
 ```
 
 - `initialization` {{optional_inline}}
-
   - : ループが始まる前に一度だけ評価される（[代入式](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)を含む）式または変数宣言。ふつうはカウンター変数を初期化するために使われます。この式では任意で、`var` キーワードを用いて新しい変数を宣言することもできます。`var` で宣言された変数はループ内のローカル変数にはなりません。すなわち、`for` ループが属するスコープと同じスコープになります。`let` で宣言された変数は文内のローカル変数になります。
 
     この式の結果は捨て去られます。
 
 - `condition` {{optional_inline}}
-
   - : ループのそれぞれの反復処理が行われる前に評価される式です。この式が [true と評価された](/ja/docs/Glossary/Truthy)場合は、 `statement` が実行されます。この式が [false と評価された](/ja/docs/Glossary/Falsy)場合は、実行は `for` 構造に続く最初の式に飛びます。
 
     この条件テストはオプションです。省略した場合、この条件は常に true と評価されます。
@@ -118,7 +127,7 @@ while (i <= 3) {
 
 ### 初期化ブロックの字句の宣言
 
-初期化ブロック内で変数を宣言する場合、上位の[スコープ](/ja/docs/Glossary/Scope)で宣言する場合と異なる点があり、特にループ本体内で[クロージャ](/ja/docs/Web/JavaScript/Closures)を作成する場合は重要です。例えば、下記のコードを見てください。
+初期化ブロック内で変数を宣言する場合、上位の[スコープ](/ja/docs/Glossary/Scope)で宣言する場合と異なる点があり、特にループ本体内で[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を作成する場合は重要です。例えば、下記のコードを見てください。
 
 ```js
 for (let i = 0; i < 3; i++) {
@@ -139,7 +148,7 @@ for (; i < 3; i++) {
 }
 ```
 
-`3`、`3`、`3` とログ出力します。なぜかと言うと、それぞれの `setTimeout` が `i` 変数を閉じる新しいクロージャを作成しますが、`i` がループ本体のスコープでない場合、すべてのクロージャは最終的に呼び出されたときに同じ変数を参照します。そして [`setTimeout`](/ja/docs/Web/API/setTimeout) の非同期であるため、すでにループが終了した後に実行され、すべてのキューのコールバック本体の `i` は `3` という値になります。
+`3`、`3`、`3` とログ出力します。なぜかと言うと、それぞれの `setTimeout` が `i` 変数を閉じる新しいクロージャを作成しますが、`i` がループ本体のスコープでない場合、すべてのクロージャは最終的に呼び出されたときに同じ変数を参照します。そして [`setTimeout`](/ja/docs/Web/API/Window/setTimeout) の非同期であるため、すでにループが終了した後に実行され、すべてのキューのコールバック本体の `i` は `3` という値になります。
 
 これは、初期化に `var` 文を使用した場合にも起こります。`var` で宣言された変数は関数スコープのみで、レキシカルスコープにならない（つまり、ループ本体のスコープにすることはできない）からです。
 

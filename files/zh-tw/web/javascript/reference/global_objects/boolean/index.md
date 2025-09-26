@@ -3,8 +3,6 @@ title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 
-{{JSRef}}
-
 **`Boolean`** 是布林值的包覆器。
 
 ## 語法
@@ -117,4 +115,4 @@ var bObjProto = new Boolean({});
 
 - {{jsxref("Boolean.prototype")}}
 - {{Glossary("Boolean")}}
-- [Boolean data type (Wikipedia)](http://en.wikipedia.org/wiki/Boolean_data_type)
+- [布林資料類型（維基百科）](<https://zh.wikipedia.org/wiki/布林_(資料類型)>)

@@ -3,7 +3,7 @@ title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 El método **`EventTarget.removeEventListener()`** remueve del {{domxref("EventTarget")}} un detector de evento previamente registrado con {{domxref("EventTarget.addEventListener")}}. El detector de evento a ser removido es identificado usando una combinación de tipos de eventos, la misma funcion del detector de eventos, y muchas opciones adicionales que pueden afectar
 
@@ -21,14 +21,10 @@ target.removeEventListener(tipo, listener[, useCapture])
 - _detector (listener)_
   - : La función {{domxref("EventListener")}} del manejador de evento a eliminar del objetivo del evento.
 - _options_ {{optional_inline}}
-
   - : Un objeto que especifíca diversas características acerca del detector de eventos. Las opciones disponibles son:
-
     - `capture`: Un {{jsxref("Boolean")}} que indica que eventos de este tipo serán enviados al `listener` antes de ser enviado a cualquier `EventTarget` debado de éste en el DOM.
-    - {{non-standard_inline}} `mozSystemGroup`: Sólo disponible ejecutando XBL o Firefox' chrome, es un {{jsxref("Boolean")}} que define si el detector es añadido al grupo del sistema.
 
 - `useCapture` {{optional_inline}}
-
   - : Especifíca si el {{domxref("EventListener")}} que se está eliminando fue registrado como un detector de captura o no. Si no se indica, por defecto `useCapture` asumirá el valor `false`.
 
     Si un detector se registro dos veces, uno con captura y otro sin, cada uno debe ser eliminado por separado. La eliminación de un detector de captura no afecta a una versión de "no-captura" del mismo detector, y viceversa.

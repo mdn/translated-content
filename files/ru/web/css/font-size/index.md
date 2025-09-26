@@ -7,9 +7,41 @@ slug: Web/CSS/font-size
 
 ## Описание
 
-[CSS](/ru/docs/CSS) Свойство **`font-size`** определяет размер шрифта. Это свойство также используется для вычисления размера `em`, `ex` и других относительных единиц. Подробнее: {{cssxref("&lt;length&gt;")}}.
+[CSS](/ru/docs/Web/CSS) Свойство **`font-size`** определяет размер шрифта. Это свойство также используется для вычисления размера `em`, `ex` и других относительных единиц. Подробнее: {{cssxref("&lt;length&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/font-size.html")}}
+{{InteractiveExample("CSS Demo: font-size")}}
+
+```css interactive-example-choice
+font-size: 1.2rem;
+```
+
+```css interactive-example-choice
+font-size: x-small;
+```
+
+```css interactive-example-choice
+font-size: smaller;
+```
+
+```css interactive-example-choice
+font-size: 12px;
+```
+
+```css interactive-example-choice
+font-size: 80%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
 
 ## Синтаксис
 
@@ -56,7 +88,8 @@ font-size: unset;
 - `<процентные значения>`
   - : Положительное процентное {{cssxref("&lt;percentage&gt;")}} значение по отношению к размеру шрифта родительского элемента.
 
-> **Примечание:** Для обеспечения максимальной совместимости обычно лучше использовать значения, относящиеся к размеру шрифта пользователя по умолчанию.
+> [!NOTE]
+> Для обеспечения максимальной совместимости обычно лучше использовать значения, относящиеся к размеру шрифта пользователя по умолчанию.
 
 ### Формальный синтаксис
 
@@ -76,7 +109,8 @@ Setting the font size in pixel values (`px`) is a good choice when you need pixe
 
 Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element in the page.
 
-> **Примечание:** Defining font sizes in pixel is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. (For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer.) Therefore, avoid using pixels for font sizes if you wish to create an inclusive design.
+> [!NOTE]
+> Defining font sizes in pixel is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. (For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer.) Therefore, avoid using pixels for font sizes if you wish to create an inclusive design.
 
 ### Ems
 
@@ -200,6 +234,6 @@ span {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}

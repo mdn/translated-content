@@ -1,9 +1,9 @@
 ---
-title: "-webkit-mask-position-y"
+title: -webkit-mask-position-y
 slug: Web/CSS/-webkit-mask-position-y
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

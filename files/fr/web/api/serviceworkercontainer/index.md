@@ -5,7 +5,7 @@ slug: Web/API/ServiceWorkerContainer
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-L'interface `ServiceWorkerContainer` de l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) fournit un objet représentant le service worker comme une unité globale de l'écosystème réseau, incluant des fonctionnalités pour enregistrer, désenregistrer et mettre à jour des services workers, et accéder à l'état des services workers et de leurs enregistrements.
+L'interface `ServiceWorkerContainer` de l'[API ServiceWorker](/fr/docs/Web/API/Service_Worker_API) fournit un objet représentant le service worker comme une unité globale de l'écosystème réseau, incluant des fonctionnalités pour enregistrer, désenregistrer et mettre à jour des services workers, et accéder à l'état des services workers et de leurs enregistrements.
 
 Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register(scriptURL, scope[, base])")}} utilisée pour enregistrer les services workers, et la propriété {{domxref("ServiceWorkerContainer.controller")}} utilisée pour déterminer si oui ou non la page courante est activement conrôlée.
 
@@ -77,8 +77,8 @@ if ("serviceWorker" in navigator) {
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers : exemple basique](https://github.com/mdn/sw-test)
 - [Le ServiceWorker est-il prêt&nbsp;?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Utiliser les web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)
+- [Utiliser les web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)

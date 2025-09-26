@@ -20,7 +20,8 @@ isEqualNode(otherNode)
 
 - `otherNode`
   - : 比較対象となる {{domxref("Node")}} です。
-    > **メモ:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > [!NOTE]
+    > この引数は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 
@@ -59,13 +60,13 @@ let output = document.getElementById("output");
 let divList = document.getElementsByTagName("div");
 
 output.innerHTML += `div 0 と div 0 は同じか: ${divList[0].isEqualNode(
-  divList[0]
+  divList[0],
 )}<br/>`;
 output.innerHTML += `div 0 と div 1 は同じか: ${divList[0].isEqualNode(
-  divList[1]
+  divList[1],
 )}<br/>`;
 output.innerHTML += `div 0 と div 2 は同じか: ${divList[0].isEqualNode(
-  divList[2]
+  divList[2],
 )}<br/>`;
 ```
 

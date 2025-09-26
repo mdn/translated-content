@@ -3,7 +3,7 @@ title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.clientY`** 是只读属性，它提供事件发生时的应用客户端区域的垂直坐标 (与页面坐标不同)。例如，当你点击客户端区域的左上角时，鼠标事件的 `clientY` 值为 0，这一值与页面是否有垂直滚动无关。
 

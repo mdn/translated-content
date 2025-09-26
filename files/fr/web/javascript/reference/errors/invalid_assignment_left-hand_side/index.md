@@ -17,7 +17,7 @@ ReferenceError: invalid assignment left-hand side
 
 ## Quel est le problème ?
 
-Un affectation inattendue a eu lieu. Cela peut être dû à un mélange entre [un opérateur d'affectation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation) et [un opérateur de comparaison](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison). Un seul signe égal affectera une valeur à une variable alors que les opérateurs `==` ou `===` comparent des valeurs entre elles.
+Un affectation inattendue a eu lieu. Cela peut être dû à un mélange entre [un opérateur d'affectation](/fr/docs/Web/JavaScript/Reference/Operators) et [un opérateur de comparaison](/fr/docs/Web/JavaScript/Reference/Operators). Un seul signe égal affectera une valeur à une variable alors que les opérateurs `==` ou `===` comparent des valeurs entre elles.
 
 ## Exemples
 
@@ -45,5 +45,5 @@ var str = "Hello, " + "from the " + "other side!";
 
 ## Voir aussi
 
-- [Opérateurs d'affectation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation)
-- [Opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison)
+- [Opérateurs d'affectation](/fr/docs/Web/JavaScript/Reference/Operators)
+- [Opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators)

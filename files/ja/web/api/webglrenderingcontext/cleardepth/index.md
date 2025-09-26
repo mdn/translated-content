@@ -43,7 +43,7 @@ gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.clearDepth")}}
+{{Compat}}
 
 ## 関連項目
 

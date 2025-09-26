@@ -61,8 +61,6 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('Examples', '300', '50') }}
 
-{{DOMAttributeMethods}}
-
 ## 仕様書
 
 {{Specifications}}

@@ -1,48 +1,37 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
+l10n:
+  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-{{APIRef("High Resolution Time")}}
+{{APIRef("Performance API")}}
 
-**`DOMHighResTimeStamp`** 型は `double` であり、時間の値を保存するために使用します。この値は別々の時点や、2 つの別々の時点の間の時間を表すことができます。単位はミリ秒であり、精度は 5 µs (マイクロ秒) であるべきです。ただし、ブラウザーが 5 マイクロ秒精度の時間の値を提供できない場合 (例えば、ハードウェアやソフトウェアの制約により) は、1 ミリ秒精度の時間として表すことができます。
+**`DOMHighResTimeStamp`** 型は `double` であり、時間値をミリ秒単位で格納するために使用されます。
 
-> **メモ:** ユーザーエージェントを実行するデバイスやオペレーティングシステムがマイクロ秒レベルのクロックを持たない場合は、ミリ秒精度に制限されます。
+この型を使用して、離散的な時点または時間間隔（2つの離散的な時点間の時間差）を記述することができます。開始時刻には、ウェブサイトやアプリのスクリプトによって決定された特定の時刻か、[時間原点](/ja/docs/Web/API/Performance/timeOrigin)のいずれかを指定できます。
 
-## プロパティ
+ミリ秒単位で指定された時刻は、5μs（マイクロ秒）までの精度であるべきで、数値の端数はミリ秒の端数を示します。しかし、ブラウザーが（例えばハードウェアやソフトウェアの制約のために）5μ 秒の正確な時刻を提供できない場合、ブラウザーは値をミリ秒の正確な時刻として表すことができます。タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)を避けるためにブラウザー環境設定によって制御する時間精度の縮小については下記の節にも注意してください。
 
-*この*型*はプロパティがありません。これは倍精度浮動小数点数です。*
+さらに、ユーザーエージェントが動作している端末やオペレーティングシステムにマイクロ秒レベルの正確な時計がない場合、ミリ秒レベルの正確さにとどまることがあります。
 
-### 値
+## セキュリティ要件
 
-`DOMHighResTimeStamp` の値は、2 つの時点の間で経過した時間をミリ秒単位 (デバイスがサポートすれば 5 マイクロ秒以内の精度で) で表した倍精度浮動小数点数です。開始時間はサイトやアプリのスクリプトで指定した特定の時刻か、**time origin** にすることができます。
+タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)から保護するために、`DOMHighResTimeStamp` 型はサイトの分離状態に基づいて粗くされます。
 
-#### time origin
+- 分離されたコンテキストでの解決： 5 マイクロ秒
+- 分離されていないコンテキストでの解決： 100 マイクロ秒
 
-**time origin** は、現在のドキュメントの存続期間の開始時点であると考えられる標準時刻です。これは以下のように算出します:
+オリジン間分離を行うには、{{HTTPHeader("Cross-Origin-Opener-Policy")}} および {{HTTPHeader("Cross-Origin-Embedder-Policy")}} ヘッダーを使用します。
 
-- スクリプトの {{Glossary("global object", "グローバルオブジェクト")}} が {{domxref("Window")}} であれば、time origin を以下のように決定します:
+```http
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+```
 
-  - 現在の {{domxref("Document")}} が `Window` で最初に読み込まれたものであれば、ブラウザーコンテキストが生成された時刻を time origin にします。
-  - window に以前読み込まれたドキュメントをアンロードする処理の間に、以前のページから去るかをユーザーに確認させるダイアログを表示した場合は、新しいページに移動することを受諾するとユーザーが確認した時刻を time origin にします。
-  - 前述のどちらでも time origin が決まらない場合は、window の現在の `Document` を生成する原因であるナビゲーションが発生した時刻を time origin にします。
-
-- スクリプトのグローバルオブジェクトが {{domxref("WorkerGlobalScope")}} である (すなわち、スクリプトを web worker として実行している) 場合は、worker が生成された瞬間を time origin にします。
-- その他の場合はすべて、time origin が未定義です。
-
-## メソッド
-
-*この*型*はメソッドがありません。*
-
-## 仕様
-
-{{Specifications}}
-
-## ブラウザー実装状況
-
-{{Compat("api.DOMHighResTimestamp")}}
+これらのヘッダーは、最上位の文書がオリジン間の文書と閲覧コンテキストグループを共有しないことを保証します。COOP は文書をプロセス分離し、潜在的な攻撃者がポップアップで開くためのグローバルオブジェクトにアクセスできないようにし、[XS-Leaks](https://github.com/xsleaks/xsleaks) と呼ばれる一連のオリジン間攻撃を防ぎます。
 
 ## 関連情報
 
-- [Navigation Timing API](/ja/docs/Navigation_timing)
-- [performance.now()](/ja/docs/Web/API/Performance/now)
+- [`performance.now()`](/ja/docs/Web/API/Performance/now)
+- [`performance.timeOrigin`](/ja/docs/Web/API/Performance/timeOrigin)

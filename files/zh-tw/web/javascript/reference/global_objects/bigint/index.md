@@ -3,7 +3,7 @@ title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `BigInt` 是一個內建的物件，提供了表示大於 2^53 的整數的功能 (2^53 是 JavaScript 原生的{{JSxRef("Number")}}能夠表示的最大值)
 
@@ -18,7 +18,8 @@ BigInt(value);
 - `value`
   - : 欲創建的數值，可以為整數或字串。
 
-> **備註：** `BigInt()` 不和 {{JSxRef("Operators/new", "new")}} 一起使用。
+> [!NOTE]
+> `BigInt()` 不和 {{JSxRef("Operators/new", "new")}} 一起使用。
 
 ## 說明
 
@@ -44,7 +45,8 @@ const hugeBin = BigInt(
 
 `BigInt` 跟 {{JSxRef("Number")}} 很像，但在某些部分有些許不同 — 它不可以被用在內建的 {{JSxRef("Math")}} 物件方法中、而且不可以跟 `Number` 的實體混用運算子。
 
-> **警告：** {{JSxRef("Number")}} 和 `BigInt` 不能混和計算 — 他們必須被轉換到同一個型態。
+> [!WARNING]
+> {{JSxRef("Number")}} 和 `BigInt` 不能混和計算 — 他們必須被轉換到同一個型態。
 >
 > 然而，在相互轉換時要注意， `BigInt` 在被轉換成 `Number` 時可能會遺失部分精度的資訊。
 
@@ -95,7 +97,8 @@ bigN * -1n
 
 `/` 運算子也同樣的能夠運行。然而，因為型態是 `BigInt` 而不是 `BigDecimal` ，除法運算會無條件捨去小數。也就是說，回傳值不會包含小數部分。
 
-> **警告：** 回傳值帶小數的運算在使用`BigInt` 時小數部分會被捨去。
+> [!WARNING]
+> 回傳值帶小數的運算在使用`BigInt` 時小數部分會被捨去。
 
 ```js
 const expected = 4n / 2n;

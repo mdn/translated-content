@@ -1,9 +1,9 @@
 ---
-title: CSS Text
+title: CSS text
 slug: Web/CSS/CSS_text
+l10n:
+  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
 ---
-
-{{CSSRef}}
 
 **CSS Text**는 줄 바꿈, 정돈 및 정렬, 공백 처리 및 텍스트 변환 같은 텍스트 조작을 수행하는 법을 정의하는 CSS 모듈입니다.
 
@@ -12,6 +12,7 @@ slug: Web/CSS/CSS_text
 ### 속성
 
 - {{cssxref("hanging-punctuation")}}
+- {{cssxref("hyphenate-limit-chars")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("letter-spacing")}}
 - {{cssxref("line-break")}}
@@ -23,7 +24,9 @@ slug: Web/CSS/CSS_text
 - {{cssxref("text-justify")}}
 - {{cssxref("text-size-adjust")}}
 - {{cssxref("text-transform")}}
+- {{cssxref("text-wrap")}}
 - {{cssxref("white-space")}}
+- {{cssxref("white-space-collapse")}}
 - {{cssxref("word-break")}}
 - {{cssxref("word-spacing")}}
 

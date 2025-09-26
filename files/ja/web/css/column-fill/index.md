@@ -1,13 +1,38 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
+**`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
 
-**`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素の内容物が複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
+{{InteractiveExample("CSS デモ: column-fill")}}
 
-{{EmbedInteractiveExample("pages/css/column-fill.html")}}
+```css interactive-example-choice
+column-fill: auto;
+```
+
+```css interactive-example-choice
+column-fill: balance;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ロンドン。ミカエルマス学期が終わり、リンカーンズ・イン・ホールで大法官が座っています。容赦のない11月の天候です。
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  height: 90%;
+  columns: 3;
+  text-align: left;
+}
+```
 
 ## 構文
 
@@ -15,12 +40,12 @@ slug: Web/CSS/column-fill
 /* キーワード値 */
 column-fill: auto;
 column-fill: balance;
-column-fill: balance-all;
 
 /* グローバル値 */
 column-fill: inherit;
 column-fill: initial;
 column-fill: revert;
+column-fill: revert-layer;
 column-fill: unset;
 ```
 
@@ -31,9 +56,9 @@ column-fill: unset;
 - `auto`
   - : 段は順に埋められます。コンテンツは必要な余地があるときだけ分割されるので、一部の段は空になることがあります。
 - `balance`
-  - : コンテンツは各段に均等に分割されます。[ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)などの断片化されたコンテキストでは、最後の断片のみが均等に分割されます。従ってページ付きメディアでは、最後のページのみが均等に分割されます。
-- `balance-all`
-  - : コンテンツは格段に均等に分割されます。[ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)などの断片化されたコンテキストでは、すべての断片が均等になります。
+  - : コンテンツは各段に均等に分割されます。[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)などの断片化されたコンテキストでは、最後の断片のみが均等に分割されます。従ってページ付きメディアでは、最後のページのみが均等に分割されます。
+
+仕様書では `balance-all` の値を定義しており、この値では[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)などの断片化されたコンテキストにおいて、段の間で均等に分割します。この値は、まだどのブラウザーでも対応していません。
 
 ## 公式定義
 
@@ -49,19 +74,19 @@ column-fill: unset;
 
 #### HTML
 
-```html
+```html-nolint live-sample___balancing_column_content
 <p class="fill-auto">
   この段落では、段を 1 つずつ埋めていきます。すべてのテキストが最初の段に収まるので、他の段は空白になります。
 </p>
 
 <p class="fill-balance">
-  この段落では、それぞれの段で内容量のバランスを取ろうとします。
+  この段落では、それぞれの段でコンテンツの量のバランスを取ろうとします。
 </p>
 ```
 
 #### CSS
 
-```css
+```css live-sample___balancing_column_content
 p {
   height: 7em;
   background: #ff9;
@@ -90,12 +115,13 @@ p.fill-balance {
 
 {{Compat}}
 
-> **警告:** 仕様上の未解決の問題により、 `column-fill` にはブラウザ－間の相互運用性の問題やバグがあることに注意してください。
+> [!WARNING]
+> 仕様上の未解決の問題により、 `column-fill` にはブラウザー間の相互運用性の問題やバグがあることに注意してください。
 >
-> 特に、 `column-fill: auto` を使用して連続的に段を埋める場合、 Chrome は、段組みコンテナーにブロック方向の寸法 (例: 横書きモードならば高さ) がある場合にのみこの値を参照します。 Firefox は常にこのプロパティを参照するため、寸法がない場合は最初の段をすべての内容物で埋めます。
+> 特に、 `column-fill: auto` を使用して連続的に段を埋める場合、 Chrome では、段組みコンテナーにブロック方向の寸法（例: 横書きモードならば高さ）がある場合にのみこの値を参照します。 Firefox は常にこのプロパティを参照するため、寸法がない場合は最初の段をすべてのコンテンツで埋めます。
 
 ## 関連情報
 
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（レイアウトの学習）
 - {{CSSXref("column-count")}}
 - {{CSSXref("column-width")}}

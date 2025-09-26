@@ -1,13 +1,14 @@
 ---
-title: IntersectionObserver.disconnect()
+title: "IntersectionObserver: disconnect() メソッド"
+short-title: disconnect()
 slug: Web/API/IntersectionObserver/disconnect
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserver")}} の **`disconnect()`** メソッドは、すべての対象要素について、表示状態の変化の監視を停止します。
+**`disconnect()`** は {{domxref("IntersectionObserver")}} のメソッドで、すべての対象要素について、表示状態の変化を監視しているオブザーバーを停止します。
 
 ## 構文
 

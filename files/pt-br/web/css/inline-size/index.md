@@ -55,7 +55,7 @@ A propriedade `inline-size` aproveita os mesmos valores que as propriedades {{cs
 ### CSS
 
 ```css
-.exampleText{
+.exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
   inline-size: 110px;
@@ -66,13 +66,11 @@ A propriedade `inline-size` aproveita os mesmos valores que as propriedades {{cs
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                                           | Comentário        |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.inline-size")}}
+{{Compat}}
 
 ## Veja também
 

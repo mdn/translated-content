@@ -43,5 +43,4 @@ TBD.
 
 ## See also
 
-- [WebVR API homepage](/zh-CN/docs/Web/API/WebVR_API).
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/zh-CN/docs/Web/API/WebVR_API)

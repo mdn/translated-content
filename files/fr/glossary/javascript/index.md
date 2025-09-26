@@ -3,6 +3,8 @@ title: JavaScript
 slug: Glossary/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 JavaScript (JS) est un langage de programmation principalement utilisé côté client pour générer des pages web dynamiquement, mais également côté {{Glossary("Server","serveur")}}, depuis l'arrivée de [Node JS](https://nodejs.org/fr/).
 
 Ne pas confondre JavaScript avec [Java](<https://fr.wikipedia.org/wiki/Java_(langage)>). "Java" et "JavaScript" sont des marques commerciales ou des marques déposées d'Oracle aux États-Unis et dans d'autres pays. Cependant, les deux langages de programmation ont une syntaxe, une sémantique et des utilisations très différentes.
@@ -13,7 +15,7 @@ En novembre 1996, Netscape commence à travailler avec ECMA International pour f
 
 JavaScript est principalement utilisé dans le navigateur, permettant aux développeurs de manipuler le contenu des pages internet à travers le {{Glossary("DOM")}}, manipuler les données avec {{Glossary("AJAX")}} et {{Glossary("IndexedDB")}}, dessiner avec {{Glossary("canvas")}}, interargir avec le périphérique qui pilote le navigateur via de nombreuses {{Glossary("API","APIs")}}, etc.. JavaScript est l'un des langages les plus utilisés au monde, grâce au développement et à l'amélioration des performances des {{Glossary("API","APIs")}} dans les navigateurs.
 
-Récemment, JavaScript est revenu du côté serveur grâce au succès de la plateforme [Node.js](http://nodejs.org/), l'environnement d'exécution multi-plateforme le plus populaire en dehors du navigateur. Node.js permet d'utiliser JavaScript comme langage de script pour automatiser des tâches sur un PC et de mettre en place des serveurs {{Glossary("HTTP")}} et {{Glossary("WebSockets")}} pleinement fonctionnels.
+Récemment, JavaScript est revenu du côté serveur grâce au succès de la plateforme [Node.js](https://nodejs.org/), l'environnement d'exécution multi-plateforme le plus populaire en dehors du navigateur. Node.js permet d'utiliser JavaScript comme langage de script pour automatiser des tâches sur un PC et de mettre en place des serveurs {{Glossary("HTTP")}} et {{Glossary("WebSockets")}} pleinement fonctionnels.
 
 ## Voir aussi
 

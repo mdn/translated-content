@@ -3,11 +3,19 @@ title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 
-{{JSRef}}
-
 **`map()`** 方法會建立一個新的陣列，其內容為原陣列的每一個元素經由回呼函式運算後所回傳的結果之集合。
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## 語法
 
@@ -20,11 +28,9 @@ let new_array = arr.map(function callback( currentValue[, index[, array]]) {
 ### 參數
 
 - `callback`
-
   - : 呼叫 `arr` 所有元素的回呼函式。新數值會在每次執行 `callback` 時加到 `new_array`。
 
     `callback` 函式可傳入以下三個參數：
-
     - `currentValue`
       - : 原陣列目前所迭代處理中的元素。
     - `index`{{optional_inline}}
@@ -151,7 +157,7 @@ var values = Array.prototype.map.call(elems, function (obj) {
 
 ### 棘手的範例
 
-[（透過連結的部落格啟發）](http://www.wirfs-brock.com/allen/posts/166)
+[（透過連結的部落格啟發）](https://wirfs-brock.com/allen/posts/166)
 
 透過一個（被遍歷元素的）參數叫出回調是個常見的用法。有些函式也常常在含有其他可選參數的情況下，使用上一個參數。這種行為常常會給人帶來困惑。
 

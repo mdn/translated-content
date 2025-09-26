@@ -24,14 +24,14 @@ data 属性返回一个 {{jsxref("Uint8ClampedArray")}}，它可以被使用作�
 
 例如，要读取图片中位于第 50 行，第 200 列的像素的蓝色部份，你会写以下代码：
 
-```
-blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+```js
+const blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
 ```
 
 根据行、列读取某像素点的 R/G/B/A 值的公式：
 
-```
-imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];
+```js
+imageData.data[50 * (imageData.width * 4) + 200 * 4 + 0 / 1 / 2 / 3];
 ```
 
 你可能用会使用 `Uint8ClampedArray.length` 属性来读取像素数组的大小（以字节为单位）：
@@ -66,7 +66,8 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 这个方法会返回一个 `ImageData` 对象，它代表了画布区域的对象数据，此画布的四个角落分别表示为 (`left`, `top`), (`left + width`, `top`), (`left`, `top + height`), 以及 (`left + width`, `top + height`) 四个点。这些坐标点被设定为画布坐标空间元素。
 
-> **备注：** 任何在画布以外的元素都会被返回成一个透明黑的 `ImageData` 对象。
+> [!NOTE]
+> 任何在画布以外的元素都会被返回成一个透明黑的 `ImageData` 对象。
 
 这个方法也会在文章[用画布操作视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)中展示。
 
@@ -295,7 +296,7 @@ zoomctx.drawImage(
 
 因为反锯齿默认是启用的，我们可能想要关闭它以看到清楚的像素。你可以通过切换勾选框来看到 `imageSmoothingEnabled` 属性的效果（不同浏览器需要不同前缀）。
 
-###### Zoom example
+###### 缩放示例
 
 ```html
 <canvas id="canvas" width="300" height="227"></canvas>
@@ -351,23 +352,23 @@ function draw(img) {
 }
 ```
 
-{{ EmbedLiveSample('Zoom_example', 620, 490) }}
+{{ EmbedLiveSample('缩放示例', 620, 490) }}
 
 ## 保存图片
 
-{{domxref("HTMLCanvasElement")}} 提供一个 `toDataURL()` 方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的[数据链接](/zh-CN/docs/Web/HTTP/data_URIs)。返回的图片分辨率是 96 dpi。
+{{domxref("HTMLCanvasElement")}} 提供一个 `toDataURL()` 方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的[数据链接](/zh-CN/docs/Web/URI/Reference/Schemes/data)。返回的图片分辨率是 96 dpi。
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : 默认设定。创建一个 PNG 图片。
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : 创建一个 JPG 图片。你可以有选择地提供从 0 到 1 的品质量，1 表示最好品质，0 基本不被辨析但有比较小的文件大小。
 
-当你从画布中生成了一个数据链接，例如，你可以将它用于任何{{HTMLElement("image")}}元素，或者将它放在一个有 download 属性的超链接里用于保存到本地。
+当你从画布中生成了一个数据链接，例如，你可以将它用于任何 {{HTMLElement("image")}} 元素，或者将它放在一个有 download 属性的超链接里用于保存到本地。
 
-你也可以从画布中创建一个{{domxref("Blob")}}对像。
+你也可以从画布创建一个 {{domxref("Blob")}} 对象。
 
 - {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
-  - : 这个创建了一个在画布中的代表图片的 `Blob` 对像。
+  - : 这个创建了一个在画布中的代表图片的 `Blob` 对象。
 
 ## 参见
 

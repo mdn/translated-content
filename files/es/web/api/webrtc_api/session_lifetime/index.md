@@ -3,7 +3,10 @@ title: WebRTC Introduction
 slug: Web/API/WebRTC_API/Session_lifetime
 ---
 
-> **Nota:** WebRTC te permite establecer una comunicación par-a-par en una aplicación del navegador.
+{{DefaultAPISidebar("WebRTC")}}
+
+> [!NOTE]
+> WebRTC te permite establecer una comunicación par-a-par en una aplicación del navegador.
 
 ## Estableciendo la conexión
 
@@ -23,4 +26,5 @@ LocalMediaStream object
 
 El soporte para WebRTC en Firefox está escondido detrás de un selector de preferencias. Ve a [about:config](/about:config) y establce 'media.navigator.enabled' a 'true'.
 
-> **Nota:** Hay algunos archivos de prueba en el repositorio de código para darte una idea de cómo funciona. Ve: [dom/media/tests/local_video_test.html](http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html). Por favor, prueba también la[demo de servicio de llamadas](http://webrtc-demo.herokuapp.com/mozdemo), la página de su código, y [el código de su servidor](https://github.com/anantn/webrtc-demo/).
+> [!NOTE]
+> Hay algunos archivos de prueba en el repositorio de código para darte una idea de cómo funciona. Ve: [dom/media/tests/local_video_test.html](http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html). Por favor, prueba también la[demo de servicio de llamadas](http://webrtc-demo.herokuapp.com/mozdemo), la página de su código, y [el código de su servidor](https://github.com/anantn/webrtc-demo/).

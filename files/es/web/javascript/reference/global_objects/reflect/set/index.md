@@ -34,7 +34,7 @@ Un {{jsxref("TypeError")}}, si `target` no es un {{jsxref("Object")}}.
 
 ## Descripción
 
-El método `Reflect.set` permite asignar una propiedad a un objeto. It does property assignment and is like the [property accessor](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
+El método `Reflect.set` permite asignar una propiedad a un objeto. It does property assignment and is like the [property accessor](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax as a function.
 
 ## Ejemplos
 
@@ -73,4 +73,4 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 ## Ver también
 
 - {{jsxref("Reflect")}}
-- [Property accessors](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors)

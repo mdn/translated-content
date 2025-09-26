@@ -80,7 +80,7 @@ eval(code); // 오래된 엔진에서 SyntaxError
                  or ArrayElements , JSON
 ```
 
-중요하지 않은 공백은 `JSONNumber`(숫자에는 공백이 없어야 함) 또는 `JSONString`(문자열에서 해당 문자로 해석되거나 오류를 일으킴) 내를 제외하고 어디에나 존재할 수 있습니다. 탭 문자([U+0009](http://unicode-table.com/en/0009/)), 캐리지 리턴([U+000D](http://unicode-table.com/en/000D/)), 라인 피드([U+000A](http://unicode-table.com/en/000A/)) 및 스페이스([U+0020](http://unicode-table.com/en/0020/)) 문자만이 유효한 공백 문자입니다.
+중요하지 않은 공백은 `JSONNumber`(숫자에는 공백이 없어야 함) 또는 `JSONString`(문자열에서 해당 문자로 해석되거나 오류를 일으킴) 내를 제외하고 어디에나 존재할 수 있습니다. 탭 문자([U+0009](https://symbl.cc/en/0009/)), 캐리지 리턴([U+000D](https://symbl.cc/en/000D/)), 라인 피드([U+000A](https://symbl.cc/en/000A/)) 및 스페이스([U+0020](https://symbl.cc/en/0020/)) 문자만이 유효한 공백 문자입니다.
 
 ## 메서드
 

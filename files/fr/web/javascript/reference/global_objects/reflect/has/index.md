@@ -5,9 +5,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 
 {{JSRef}}
 
-La méthode statique **`Reflect.has()`** fonctionne comme [l'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in) mais sous forme d'une fonction.
+La méthode statique **`Reflect.has()`** fonctionne comme [l'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in) mais sous forme d'une fonction.
 
-{{EmbedInteractiveExample("pages/js/reflect-has.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.has()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Reflect.has(object1, "property1"));
+// Expected output: true
+
+console.log(Reflect.has(object1, "property2"));
+// Expected output: false
+
+console.log(Reflect.has(object1, "toString"));
+// Expected output: true
+```
 
 ## Syntaxe
 
@@ -32,7 +47,7 @@ Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
 
 ## Description
 
-La méthode `Reflect.has` vous permet de vérifier si une propriété est présente sur un objet. C'est une fonction qui agit comme l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in).
+La méthode `Reflect.has` vous permet de vérifier si une propriété est présente sur un objet. C'est une fonction qui agit comme l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in).
 
 ## Exemples
 
@@ -68,4 +83,4 @@ Reflect.has(obj, "bonbon"); // false
 ## Voir aussi
 
 - {{jsxref("Reflect")}}
-- [Opérateur `in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in)
+- [Opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in)

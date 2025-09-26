@@ -3,8 +3,6 @@ title: Babylon.js を使った基本的なデモの作成
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js
 ---
 
-{{GamesSidebar}}
-
 [Babylon.js](https://www.babylonjs.com/) は開発者に使われている最も有名な 3D ゲームエンジンです。他のどんな 3D と同様に、より迅速に共通の3D機能を実装するのを助けるプラグイン機能を提供します。この記事では Babylon.js を使った基礎を通じて開発環境の構築、必要な HTML 構造、 JavaScript の書き方を提供します。
 
 まずは、画面の内側へレンダリングされた立方体という簡単なデモを作成してみることにします。もし、すでにこの基本デモの作成[シリーズ](/ja/docs/Games/Techniques/3D_on_the_web) ([Three.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), [A-Frame](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)) を通して作業をしたことがある人（あるいは、他の 3D ライブラリーに精通している人）は、 Babylon.js がカメラ、光、オブジェクトという同じような概念で動作することに気づくでしょう。
@@ -103,7 +101,8 @@ var camera = new BABYLON.FreeCamera(
 
 Babylon.js では多くの[カメラ](https://doc.babylonjs.com/divingDeeper/cameras)が利用可能です。 `FreeCamera` は最も基本的で汎用的なカメラです。初期化するためには、 3 つの引数を渡す必要があります。使用したい名前、三次元空間での位置の座標、そして追加したいシーンです。
 
-> **メモ:** ここで、`BABYLON.Vector3()` メソッドが使用されていることにお気づきでしょう。これはシーン上の 3D 位置を定義するものです。 Babylon.js には、ベクトル、色、行列などを扱うための完全な数学ライブラリーがバンドルされています。
+> [!NOTE]
+> ここで、`BABYLON.Vector3()` メソッドが使用されていることにお気づきでしょう。これはシーン上の 3D 位置を定義するものです。 Babylon.js には、ベクトル、色、行列などを扱うための完全な数学ライブラリーがバンドルされています。
 
 ## 光あれ
 
@@ -129,7 +128,8 @@ var box = BABYLON.Mesh.CreateBox("box", 2, scene);
 
 メッシュはエンジンが幾何学的な図形を作成する方法なので、後で簡単に素材を適用することができます。この例では、 `Mesh.CreateBox` メソッドを使用して、独自の名前とサイズとして 2、そしてどのシーンに追加するかを宣言してボックスを作成します。
 
-> **メモ:** サイズや位置の値（ボックスのサイズなど）は単位がなく、基本的にミリメートル、メートル、フィート、マイルなど、シーンに適した値を設定することができます。
+> [!NOTE]
+> サイズや位置の値（ボックスのサイズなど）は単位がなく、基本的にミリメートル、メートル、フィート、マイルなど、シーンに適した値を設定することができます。
 
 今、保存して更新すると、オブジェクトは正方形のように見えます。なぜなら、カメラに面しているからです。オブジェクトの良いところは、シーン上で好きなように動かせることです。例えば、回転させたり、拡大縮小したりできます。複数の面が見えるように、ボックスに少し回転を加えてみましょう。もう一度、これらの線を前の線の下に追加してください。
 

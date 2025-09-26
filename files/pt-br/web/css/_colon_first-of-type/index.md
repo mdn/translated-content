@@ -1,5 +1,5 @@
 ---
-title: ":first-of-type"
+title: :first-of-type
 slug: Web/CSS/:first-of-type
 ---
 
@@ -15,7 +15,8 @@ p:first-of-type {
 }
 ```
 
-> **Nota:** Originalmente definido, o elemento selecionado tinha que ter um pai. Desde o Seletores Nível 4, isso não é mais necessário.
+> [!NOTE]
+> Originalmente definido, o elemento selecionado tinha que ter um pai. Desde o Seletores Nível 4, isso não é mais necessário.
 
 ## Sintaxe
 
@@ -80,14 +81,11 @@ article :first-of-type {
 
 ## Especificações
 
-| Specification                                                             | Status                      | Comment                                                           |
-| ------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS4 Selectors')}} | Os elementos correspondentes não são necessários para ter um pai. |
-| {{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                                |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
 ## Veja também
 

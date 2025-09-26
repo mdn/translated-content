@@ -32,4 +32,4 @@ _固有のメソッドはありません。親である {{domxref("HTMLElement")
 
 ## 関連情報
 
-- このインターフェースを実装している HTML 要素: {{HTMLElement("br")}}
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("br")}}

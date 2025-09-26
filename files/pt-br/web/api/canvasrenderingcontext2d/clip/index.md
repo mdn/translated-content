@@ -20,10 +20,8 @@ void ctx.clip(path, fillRule);
 ![](canvas_clipping_path.png)
 
 - `fillRule`
-
   - : O algoritmo pelo qual determina se um ponto esta dentro de um caminho ou fora de um caminho.
     Valores Possíveis:
-
     - `nonzero`
       - : A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
     - `evenodd`
@@ -100,7 +98,8 @@ window.addEventListener("load", drawCanvas);
 
 {{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-> **Nota:** Tenha consciência de que o `clip()` só funciona com formas adicionadas ao caminho; ele não funciona com uma forma primitiva, como retângulos criados com {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}. Nesse caso você teria que usar {{domxref("CanvasRenderingContext2D.rect()","rect()")}} para desenhar um caminho de forma retângular para ser recortado.
+> [!NOTE]
+> Tenha consciência de que o `clip()` só funciona com formas adicionadas ao caminho; ele não funciona com uma forma primitiva, como retângulos criados com {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}. Nesse caso você teria que usar {{domxref("CanvasRenderingContext2D.rect()","rect()")}} para desenhar um caminho de forma retângular para ser recortado.
 
 ## Especificações
 

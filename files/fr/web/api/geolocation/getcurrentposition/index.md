@@ -20,9 +20,7 @@ navigator.geolocation.getCurrentPosition(success[, error[, [options]])
 - `error` {{optional_inline}}
   - : Une fonction de rappel qui prend un objet {{domxref("PositionError")}} comme argument.
 - `options` {{optional_inline}}
-
   - : Un objet {{domxref("PositionOptions")}} optionnel. Les options décrites par cet objet sont :
-
     - `maximumAge` : un entier qui exprime une durée en millisecondes ou l'infini pour indiquer la durée maximale pendant laquelle mettre en cache la position.
     - `timeout` : un entier qui exprime la durée, en millisecondes, avant que la fonction de rappel `error` soit appelé. Si cette propriété vaut `0`, la fonction d'erreur ne sera jamais appelée.
     - `enableHighAccuracy` : un booléen qui indique si une précision élevée est requise.
@@ -62,5 +60,5 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## Voir aussi
 
-- [Utiliser la géolocalisation](/fr/docs/WebAPI/Using_geolocation)
+- [Utiliser la géolocalisation](/fr/docs/Web/API/Geolocation_API)
 - {{domxref("Navigator.geolocation")}}

@@ -1,18 +1,33 @@
 ---
 title: Object.getOwnPropertySymbols()
+short-title: getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`Object.getOwnPropertySymbols()`** は静的メソッドで、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
 
-**`Object.getOwnPropertySymbols()`** メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
+{{InteractiveExample("JavaScript デモ: Object.getOwnPropertySymbols()")}}
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
+```js interactive-example
+const object = {};
+const a = Symbol("a");
+const b = Symbol.for("b");
+
+object[a] = "localSymbol";
+object[b] = "globalSymbol";
+
+const objectSymbols = Object.getOwnPropertySymbols(object);
+
+console.log(objectSymbols.length);
+// 予想される結果: 2
+```
 
 ## 構文
 
-```js
-Object.getOwnPropertySymbols(obj);
+```js-nolint
+Object.getOwnPropertySymbols(obj)
 ```
 
 ### 引数
@@ -55,7 +70,7 @@ console.log(objectSymbols[0]); // Symbol(a)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
+{{Compat}}
 
 ## 関連情報
 

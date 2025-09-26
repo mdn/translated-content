@@ -9,18 +9,17 @@ slug: Web/API/Event/Event
 
 ## 语法
 
-```
- event = new Event(typeArg, eventInit);
+```js-nolint
+new Event(type)
+new Event(type, options)
 ```
 
 ### 参数
 
-- _typeArg_
+- `type`
   - : 是{{domxref("DOMString")}} 类型，表示所创建事件的名称。
-- _eventInit_{{optional_inline}}
-
+- `options` {{optional_inline}}
   - : 是 `EventInit` 类型的字典，接受以下字段：
-
     - `"bubbles"`，可选，{{jsxref("Boolean")}}类型，默认值为 `false`，表示该事件是否冒泡。
     - `"cancelable"`，可选，{{jsxref("Boolean")}}类型，默认值为 `false`，表示该事件能否被取消。
     - `"composed"`，可选，{{jsxref("Boolean")}}类型，默认值为 `false`，指示事件是否会在影子 DOM 根节点之外触发侦听器。

@@ -9,7 +9,25 @@ l10n:
 
 El constructor `Symbol()` devuelve un valor de tipo **symbol**, pero está incompleto como constructor porque no soporta la sintaxis "`new Symbol()`" y no está pensado para ser heredado. Puede utilizarse como valor de una cláusula [`extends`](/es/docs/Web/JavaScript/Reference/Classes/extends) de una definición de `class`, pero una llamada a [`super`](/es/docs/Web/JavaScript/Reference/Operators/super) provocará una excepción.
 
-{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+
+```js interactive-example
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(typeof symbol1);
+// Expected output: "symbol"
+
+console.log(symbol2 === 42);
+// Expected output: false
+
+console.log(symbol3.toString());
+// Expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// Expected output: false
+```
 
 ## Sintaxis
 

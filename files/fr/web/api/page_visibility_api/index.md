@@ -31,17 +31,15 @@ Historiquement, les développeurs ont utilisé des solutions de remplacement imp
 En parallèle avec l'API _Page Visibility,_ un certain nombre de politiques sont en place pour atténuer l'impact négatif sur les performances lié aux onglets en arrière-plan&nbsp;:
 
 - Les appels à {{domxref("Window.requestAnimationFrame()")}} sont suspendus dans la plupart des navigateurs lorsqu'ils sont effectués dans un onglet en arrière-plan ou une {{ HTMLElement("iframe") }} cachée, afin d'améliorer les performances et l'autonomie de la batterie.
-- Les timers tels que {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} sont retardés dans les onglets inactifs ou en arrière-plan pour aider à l'amélioration des performances. Voir [_Reasons for delays longer than specified_](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified) pour plus de détails.
+- Les timers tels que {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} sont retardés dans les onglets inactifs ou en arrière-plan pour aider à l'amélioration des performances. Voir [_Reasons for delays longer than specified_](/fr/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) pour plus de détails.
 - Les navigateurs modernes (Firefox 58+, Chrome 57+) ont mis en œuvre un retardement basé sur un budget pour les timeouts en arrière-plan. Cela place une limite supplémentaire sur la consommation de CPU des timers en arrière-plan. Cette limite opère de manière similaire dans tous les navigateurs modernes, avec les détails qui suivent&nbsp;:
-
   - Dans Firefox, les fenêtres d'onglets en arrière-plan ont chacune leur propre budget de temps en millisecondes — une valeur maximum et minimum de +50 ms et -150 ms, respectivement. Chrome est très similaire, excepté que le budget est spécifié en secondes.
-  - Les fenêtres sont sujettes au retardement après 30 secondes, avec les mêmes règles de délai de retardement que spécifiées pour les timers (encore une fois, voir _[Reasons for delays longer than specified](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified)_). Pour Chrome, cette valeur est de 10 secondes.
+  - Les fenêtres sont sujettes au retardement après 30 secondes, avec les mêmes règles de délai de retardement que spécifiées pour les timers (encore une fois, voir _[Reasons for delays longer than specified](/fr/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified)_). Pour Chrome, cette valeur est de 10 secondes.
   - Les tâches de timers sont permises seulement quand le budget est non négatif.
   - Quand un timer a été exécuté, son temps d'exécution est retranché au budget de la fenêtre depuis laquelle le timer a été appelé.
   - Le budget regénère à un taux de 10 ms par seconde, sous Firefox et sous Chrome.
 
 - Certaines opérations sont exemptées de retardement&nbsp;:
-
   - Les applications qui jouent du son sont considérées comme en avant-plan, et donc ne sont pas retardées.
   - Les applications avec des connexions en temps réel ([WebSockets](/fr/docs/Web/API/WebSockets_API) et [WebRTC](/fr/docs/Web/API/WebRTC_API)), afin d'éviter que ces connexions soient fermées par timeout.
   - Les opérations [IndexedDB](/fr/docs/Web/API/IndexedDB_API).
@@ -117,9 +115,7 @@ if (
 - {{domxref("document.hidden")}}
   - : Retourne `true` si la page est dans un état considéré comme masqué à l'utilisateur, et `false` dans le cas contraire.
 - {{domxref("document.visibilityState")}}
-
   - : Une `string` représentant l'état de visibilité du document. Valeurs possibles&nbsp;:
-
     - `visible`&nbsp;: le contenu de la page peut être au moins partiellement visible. En pratique, cela signifie que la page est l'onglet actif d'une fenêtre non minimisée.
     - `hidden`&nbsp;: le contenu de la page n'est pas visible pour l'utilisateur. En pratique, cela signifie que le document est soit dans un onglet en arrière-plan, soit dans une fenêtre minimizée&nbsp;; ou bien que l'écran de verrouillage de l'OS est actif.
     - `prerender`&nbsp;: le contenu de la page est en train d'être précalculé et n'est pas visible pour l'utilisateur (il est considéré masqué pour `document.hidden`). Le document peut être dans cet état initialement, mais ne passera jamais à cet état depuis une autre valeur. Note&nbsp;: le support des navigateurs est optionnel.
@@ -154,5 +150,5 @@ if (
 
 ## Voir aussi
 
-- La description de [l'API Page Visibility](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) sur l'IEBlog
-- La description de [l'API Page Visibility](http://code.google.com/chrome/whitepapers/pagevisibility.html) par Google
+- La description de [l'API Page Visibility](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) sur l'IEBlog
+- La description de [l'API Page Visibility](https://code.google.com/chrome/whitepapers/pagevisibility.html) par Google

@@ -3,17 +3,15 @@ title: 匹配模式
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
 
-{{AddonSidebar}}
-
 匹配模式是一种指定网址组的方法：一个匹配模式匹配特定的一组 URL。它们由 WebExtensions 在几个地方使用，最明显的是指定要将[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)加载到哪些文档中，并指定要向其中添加 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) 侦听器的 URL。
 
 使用匹配模板的 API 通常接收一个匹配模板的列表，当 URL 匹配任何模式时会恰当的运行。看个例子 在 manifest.json 中的 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 关键字。
 
 ## 匹配模式结构
 
-所有的匹配模式用一个字符串来定义，而且都是["\<all_urls>"](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls) 模板的一部份，匹配模板包含三个部分：_scheme_、_host_ 和 _path_。scheme 和 host 用 `://` 分隔。
+所有的匹配模式用一个字符串来定义，而且都是["\<all_urls>"](#all_urls) 模板的一部份，匹配模板包含三个部分：_scheme_、_host_ 和 _path_。scheme 和 host 用 `://` 分隔。
 
-```
+```plain
 <scheme>://<host><path>
 ```
 
@@ -298,7 +296,8 @@ _path_ 组件必须以“/”开头。
 
 它给了你一个命令行以使你可以执行一些特权 javascript 代码。
 
-> **警告：** 因为运行在浏览器控制台的代码拥有系统特权，在任何时候都请你小心理解你的代码做了什么
+> [!WARNING]
+> 因为运行在浏览器控制台的代码拥有系统特权，在任何时候都请你小心理解你的代码做了什么
 
 现在粘贴以下代码到命令行然后按下 <kbd>enter</kbd>:
 

@@ -35,15 +35,14 @@ window.addEventListener("vrdisplaypresentchange", function (e) {
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демонстрации, загружаемые материалы и другие ресурсы команды the Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

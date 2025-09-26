@@ -15,7 +15,8 @@ Cette propriété peut être définie avec n'importe quelle valeur entière. Tou
 - Si la valeur fournie est inférieure à `0` (ou supérieure à `0` pour les éléments écrits de droite à gauche), `scrollLeft` sera fixée à `0`.
 - Si la valeur fournie est supérieure au défilement maximal possible pour le contenu, `scrollLeft` sera fixée à la valeur maximale possible.
 
-> **Attention :** Pour les systèmes qui utilisent une mise à l'échelle pour l'affichage (<i lang="en">display scaling</i>), `scrollLeft` pourra fournir une valeur décimale.
+> [!WARNING]
+> Pour les systèmes qui utilisent une mise à l'échelle pour l'affichage (<i lang="en">display scaling</i>), `scrollLeft` pourra fournir une valeur décimale.
 
 ## Valeur
 

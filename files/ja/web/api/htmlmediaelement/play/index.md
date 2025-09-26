@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.play()
+title: "HTMLMediaElement: play() メソッド"
+short-title: play()
 slug: Web/API/HTMLMediaElement/play
 l10n:
-  sourceCommit: af967bb052695baa631c004b9b149c6f91920776
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{APIRef("HTML DOM")}}
@@ -10,7 +11,7 @@ l10n:
 {{domxref("HTMLMediaElement")}} の **`play()`** メソッドは、メディアの再生を開始しようとします。
 再生が正常に開始されると解決するプロミス ({{jsxref("Promise")}}) を返します。
 
-パーミッションの問題など、何らかの理由で再生を開始しなかった場合、そのプロミスは拒否されます。
+権限の問題など、何らかの理由で再生を開始しなかった場合、そのプロミスは拒否されます。
 
 ## 構文
 
@@ -26,7 +27,8 @@ play()
 
 再生が開始されたときに解決される、または何らかの理由で再生を開始できない場合は拒否されるプロミス ({{jsxref("Promise")}}) です。
 
-> **メモ:** 古いブラウザーは `play()` から値を返さない可能性があります。
+> [!NOTE]
+> 古いブラウザーは `play()` から値を返さない可能性があります。
 
 ### 例外
 
@@ -34,7 +36,7 @@ play()
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : ユーザーエージェント（ブラウザー）またはオペレーティングシステムが、現在のコンテキストまたは状況においてメディアの再生を許可しない場合に提供されます。
-  ブラウザーは、例えば[許可ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) のため、ユーザーが明示的に "play" ボタンをクリックしてメディア再生を始めるように要求することがあります。
+    ブラウザーは、例えば[許可ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) のため、ユーザーが明示的に "play" ボタンをクリックしてメディア再生を始めるように要求することがあります。
 - `NotSupportedError` {{domxref("DOMException")}}
   - : メディアソース（例えば {{domxref("MediaStream")}}, {{domxref("MediaSource")}}, {{domxref("Blob")}}, または {{domxref("File")}} として指定可能）が、対応しているメディア形式を表していない場合に提供されます。
 
@@ -46,9 +48,10 @@ play()
 
 {{Glossary("user agent","ユーザーエージェント")}}が自動またはスクリプト起動によるメディアの再生を許可しないように設定されている場合、`play()` を呼び出すと返されたプロミスが直ちに `NotAllowedError` で拒否されます。 ウェブサイトはこの状況に対処する準備をしておくべきです。 例えば、サイトには再生が自動的に開始されたことを前提としたユーザーインターフェイスを表示するのではなく、返されたプロミスが解決されたか拒否されたかに基づいて UI を更新する必要があります。 詳しくは、以下の[例](#例)を参照してください。
 
-> **メモ:** `play()` メソッドを使用すると、ユーザーはメディアの再生を許可するように要求され、返されたプロミスが解決されるまでに遅延が生じる可能性があります。 コードが即座の応答を期待していないことを確認してください。
+> [!NOTE]
+> `play()` メソッドを使用すると、ユーザーはメディアの再生を許可するように要求され、返されたプロミスが解決されるまでに遅延が生じる可能性があります。 コードが即座の応答を期待していないことを確認してください。
 
-自動再生および自動再生のブロックの詳細については、[メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。
+自動再生および自動再生のブロックの詳細については、[メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)を参照してください。
 
 ## 例
 
@@ -97,6 +100,6 @@ function handlePlayButton() {
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- 学習: [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
+- 学習: [動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)
 - [ウェブオーディオ API の利用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

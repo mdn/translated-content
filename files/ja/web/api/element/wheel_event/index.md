@@ -3,16 +3,24 @@ title: "Element: wheel イベント"
 short-title: wheel
 slug: Web/API/Element/wheel_event
 l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+  sourceCommit: 63ffc2df0ceb061f6197b30c39080b57c7d52920
 ---
 
 {{APIRef}}
 
-**`wheel`** イベントは、ユーザーがポインティングデバイス（通常はマウス）のホイールボタンを回転させたときに発行されます。
+**`wheel`** イベントは、ユーザーがポインティングデバイス（通常はマウス）のホイールボタンを回転させたときに発行されます。トラックパッドやマウスボールなど、ホイール操作をシミュレートする関連機器でも使用されます。
 
 このイベントは標準外、非推奨の {{domxref("Element/mousewheel_event", "mousewheel")}} イベントを置き換えるものです。
 
-> **メモ:** `wheel` イベントと {{domxref("Element/scroll_event", "scroll")}} イベントを混同しないでください。 `wheel` イベントの既定のアクションは実装固有のものであり、必ずしも `scroll` イベントを発行するわけではありません。その場合でも、ホイールイベントの `delta*` 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。したがって、スクロールの方向を取得するために、 `wheel` イベントの `delta*` プロパティに頼らないようにしてください。代わりに、 `scroll` イベント内のターゲットの {{domxref("Element.scrollLeft", "scrollLeft")}} や {{domxref("Element.scrollTop", "scrollTop")}} の値の変化を検出するようにしてください。
+`wheel` イベントと {{domxref("Element/scroll_event", "scroll")}} イベントを混同しないでください。
+
+- `wheel` イベントは、必ずしも `scroll` イベントを送信するわけではありません。例えば、要素がまったくスクロールできない場合もあります。ホイールやトラックパッドを使用したズーム操作も、 `wheel` イベントを送信します。
+- `scroll`イベントは、必ずしも`wheel`イベントによって引き起こされるわけではありません。 要素は、キーボードや、スクロールバーのドラッグ、 JavaScript を使用することでもスクロールすることができます。
+- `wheel` イベントの `delta*` 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。
+
+したがって、スクロールの方向を取得するために、 `wheel` イベントの `delta*` プロパティに頼らないようにしてください。代わりに、 `scroll` イベント内のターゲットの {{domxref("Element.scrollLeft", "scrollLeft")}} や {{domxref("Element.scrollTop", "scrollTop")}} の値の変化を検出するようにしてください。
+
+`wheel` イベントはキャンセル可能です。イベントがキャンセルされた場合、スクロールやズームは実行されません。このため、実際にコンテンツのスクロールを実行する前に、ブラウザーがすべてのホイールイベントの処理を待機する必要が生じ、パフォーマンス上の問題が発生する可能性があります。これを回避するには、 `passive: true` を設定して {{domxref("EventTarget.addEventListener", "addEventListener()")}} を呼び出します。こうすると、ブラウザーがキャンセル不可能な `wheel` イベントを生成する可能性があります。
 
 ## 構文
 
@@ -26,7 +34,7 @@ onwheel = (event) => {};
 
 ## イベント型
 
-{{domxref("WheelEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxref("WheelEvent")}} です。 {{domxref("MouseEvent")}}、{{domxref("UIEvent")}}、{{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("WheelEvent")}}
 
@@ -41,7 +49,6 @@ _このインターフェイスには、祖先である {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : z 軸のスクロール量を表す `double` を返します。
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : `delta*` 値のスクロール量の単位を表す `unsigned long` を返します。指定可能な値は次の通りです。
 
     | 定数                         | 値     | 説明                                                                                            |
@@ -123,4 +130,3 @@ el.addEventListener("wheel", zoom, { passive: false });
 ## 関連情報
 
 - {{domxref("WheelEvent")}}
-- [Document: `wheel` イベント](/ja/docs/Web/API/Element/wheel_event)

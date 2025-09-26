@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest/abort
 
 {{APIRef('XMLHttpRequest')}}
 
-O método **XMLHttpRequest.abort()** aborta a requisição se ela já tiver sido enviada. Quando uma requisição é abortada, o seu readyState é modificado para 0 (Desativado), mas o evento [readystatechange](/pt-BR/docs/Web/Events/readystatechange) não é disparado.
+O método **XMLHttpRequest.abort()** aborta a requisição se ela já tiver sido enviada. Quando uma requisição é abortada, o seu readyState é modificado para 0 (Desativado), mas o evento [readystatechange](/pt-BR/docs/Web/API/Document/readystatechange_event) não é disparado.
 
 ## Sitaxe
 
@@ -44,4 +44,4 @@ xhr.abort();
 
 ## Veja também
 
-- [Usando o XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest)
+- [Usando o XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

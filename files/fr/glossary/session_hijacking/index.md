@@ -3,6 +3,8 @@ title: Détournement de session
 slug: Glossary/Session_Hijacking
 ---
 
+{{GlossarySidebar}}
+
 **Le détournement de session** se produit lorsqu'un attaquant prend le contrôle d'une session valide entre deux ordinateurs. L'attaquant vole un identifiant de session valide afin de pénétrer dans le système et de fouiller les données.
 
 Le plus souvent, l'authentification se produit seulement au début d'une session {{glossary("TCP")}}. Dans un détournement de session TCP, un attaquant obtient l'accès en prenant en charge une session TCP entre deux machines en milieu de session.

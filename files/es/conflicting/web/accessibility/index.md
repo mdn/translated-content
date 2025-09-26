@@ -23,4 +23,4 @@ Si conoces alguna lista de correo, grupo de noticias, foro, o comunidad relacion
 
 ### Otros Sitios
 
-- [El sitio del WAI (en)](http://www.w3.org/WAI/)
+- [El sitio del WAI (en)](https://www.w3.org/WAI/)

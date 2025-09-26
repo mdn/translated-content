@@ -24,7 +24,8 @@ attr(data-width px, inherit);
 attr(data-something, 'default');
 ```
 
-> **Nota:** A função `attr()` pode ser utilizada com qualquer propriedade CSS, mas o suporte para propriedades que não sejam {{cssxref("content")}} é experimental.
+> [!NOTE]
+> A função `attr()` pode ser utilizada com qualquer propriedade CSS, mas o suporte para propriedades que não sejam {{cssxref("content")}} é experimental.
 
 ## Sintaxe
 
@@ -33,7 +34,6 @@ attr(data-something, 'default');
 - `nome-do-atributo`
   - : É o nome do atributo HTML do elemento referenciado no CSS.
 - `<tipo-ou-unidade>` {{experimental_inline}}
-
   - : É uma palavra-chave representando tanto o tipo quanto o valor do atributo, ou sua unidade, assim como no HTML alguns atributos tem unidades implícitas. Se o uso de `<tipo-ou-unidade>` como um valor para determinado atributo for inválido, a expressão `attr()` será inválida também. Se omitida, o padrão será `string`. A lista de valores válidos é:
 
     | Palavra-chave                                                                                                | Tipo Associado                    | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                   | Valor Padrão                                                                                   |
@@ -82,11 +82,8 @@ p::before {
 
 ## Especificações
 
-| Especificação                                           | Status                   | Comentário                                                                                                                                                                                                                       |
-| ------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Values', '#attr-notation', 'attr()')}} | {{Spec2('CSS3 Values')}} | Added two optional parameters; can be used on all properties; may return other values than {{cssxref("&lt;string&gt;")}}. These changes are experimental and may be dropped during the CR phase if browser support is too small. |
-| {{SpecName('CSS2.1', 'generate.html#x18', 'attr()')}}   | {{Spec2('CSS2.1')}}      | Limited to the {{cssxref("content")}} property; always return a {{cssxref("&lt;string&gt;")}}.                                                                                                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.types.attr")}}
+{{Compat}}

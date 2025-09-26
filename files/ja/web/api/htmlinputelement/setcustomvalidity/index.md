@@ -1,5 +1,6 @@
 ---
 title: "HTMLInputElement: setCustomValidity() メソッド"
+short-title: setCustomValidity()
 slug: Web/API/HTMLInputElement/setCustomValidity
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -63,6 +64,6 @@ function validate(inputID) {
 
 ## 関連情報
 
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - {{domxref('ValidityState')}}

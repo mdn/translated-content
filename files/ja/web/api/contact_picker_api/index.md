@@ -9,7 +9,8 @@ l10n:
 
 連絡先ピッカー API (Contact Picker API) は、ユーザーが連絡先リストから項目を選択し、選択した項目の限定された詳細をウェブサイトやアプリケーションで共有できるようにします。
 
-> **メモ:** この API は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では使用できません（{{domxref("WorkerNavigator")}} に公開されていません）。
+> [!NOTE]
+> この API は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では使用できません（{{domxref("WorkerNavigator")}} に公開されていません）。
 
 ## 連絡先ピッカー API の概念と使用法
 

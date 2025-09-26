@@ -3,8 +3,6 @@ title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
 
-{{JSRef}}
-
 **`ArrayBuffer`** 物件是一種表示通用、固定大小的原始二進制資料緩衝。想要直接操作一個 `ArrayBuffer` 物件的內容是不可能的。若要讀寫該緩衝的內容則必須透過視圖，可以選擇建立一個 {{jsxref("DataView")}} 視圖物件或是一個限定其成員為某種型別的 {{jsxref("TypedArray")}} 視圖物件，它們皆能以特定的型別解讀、修改 `ArrayBuffer`。
 
 ## 語法
@@ -32,14 +30,14 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ### 從既有的資料取得 ArrayBuffer
 
-- [From a Base64 string](/zh-TW/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [From a Base64 string](/zh-TW/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [從本地端檔案](</zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
 ## 屬性
 
 - `ArrayBuffer.length`
   - : The `ArrayBuffer` constructor's length property whose value is 1.
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+- [`ArrayBuffer[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : The constructor function that is used to create derived objects.
 - {{jsxref("ArrayBuffer.prototype")}}
   - : Allows the addition of properties to all `ArrayBuffer` objects.
@@ -57,8 +55,8 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ### 屬性
 
-- `ArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `ArrayBuffer.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : The read-only size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
 

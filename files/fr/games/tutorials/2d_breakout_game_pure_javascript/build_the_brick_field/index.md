@@ -3,11 +3,9 @@ title: Créer les briques
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}
 
-Il s'agit de la **6ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Workflows/Breakout_game_from_scratch). Vous pouvez trouver le code source après avoir complété cette leçon à : [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
+Il s'agit de la **6ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source après avoir complété cette leçon à : [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
 
 Après avoir modifié la mécanique du Gameplay, nous sommes maintenant en mesure de perdre. Et ça c'est top car on a enfin l'impression de jouer à un vrai jeu. Cependant, ça devient vite ennuyeux si la balle ne fait que rebondir sur la raquette. Ce dont a vraiment besoin un jeu de casse-brique c'est des briques à détruire avec la balle. Et c'est ce que nous allons faire maintenant.
 
@@ -110,6 +108,6 @@ Exercice : essayez de changer le nombre de briques dans une colonne ou dans une 
 ## Prochaines étapes
 
 Nous avons donc maintenant des briques !
-Mais la balle n'a toujours aucune interaction avec elles. Nous allons donc changer ça dans le chapitre sept : [Détection des collisions](/fr/docs/)
+Mais la balle n'a toujours aucune interaction avec elles. Nous allons donc changer ça dans le chapitre sept : [Détection des collisions](/fr/docs/Web)
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}

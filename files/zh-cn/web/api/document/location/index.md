@@ -36,7 +36,7 @@ dump(document.location);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - The interface of the returned value, {{domxref("Location")}}.
 - A similar information, but attached to the browsing context, {{domxref("Window.location")}}

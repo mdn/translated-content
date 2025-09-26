@@ -7,13 +7,14 @@ slug: Web/API/Window/moveBy
 
 **`moveBy()`** は {{domxref("Window")}} インターフェイスのメソッドで、現在のウィンドウを指定された量だけ移動します。
 
-> **メモ:** この関数はウィンドウを現在の位置からの相対位置で移動します。
+> [!NOTE]
+> この関数はウィンドウを現在の位置からの相対位置で移動します。
 > それに対して、 {{domxref("window.moveTo()")}} はウィンドウを絶対位置へ移動します。
 
 ## 構文
 
 ```js
-moveBy(deltaX, deltaY)
+moveBy(deltaX, deltaY);
 ```
 
 ### 引数

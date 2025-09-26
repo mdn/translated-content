@@ -1,8 +1,9 @@
 ---
-title: Document.createExpression()
+title: "Document: createExpression() メソッド"
+short-title: createExpression()
 slug: Web/API/Document/createExpression
 l10n:
-  sourceCommit: 57431cfc632ffb8b989cb7ce6bb59f5d529031db
+  sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
 ---
 
 {{APIRef("DOM")}}
@@ -37,6 +38,10 @@ const nodeContext = document.querySelector("nav");
 // XPathExpression "xpathExpr" を再利用
 const otherResult = xpathExpr.evaluate(nodeContext); // XPathResult オブジェクトを返す
 ```
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 

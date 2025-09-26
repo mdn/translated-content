@@ -3,11 +3,24 @@ title: 类表达式
 slug: Web/JavaScript/Reference/Operators/class
 ---
 
-{{jsSidebar("Operators")}}
-
 **`class`** 关键字可用于在表达式中定义类。类似于[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)，类表达式可以是命名的，也可以是匿名的。如果命名，则类的名称只能在类体内部才能访问到。
 
-{{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - class expression")}}
+
+```js interactive-example
+const Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  area() {
+    return this.height * this.width;
+  }
+};
+
+console.log(new Rectangle(5, 8).area());
+// Expected output: 40
+```
 
 ## 语法
 

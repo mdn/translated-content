@@ -14,7 +14,7 @@ Un shell(\*) JavaScript te permite probar rápidamente fragmentos de código [Ja
 
 Las siguientes shells JavaScript son de entorno autónomos, como perl o python.
 
-- [Node.js](http://nodejs.org/) - Node.js es una plataforma para construir fácilmente aplicaciones de red rápidas y escalables.
+- [Node.js](https://nodejs.org/) - Node.js es una plataforma para construir fácilmente aplicaciones de red rápidas y escalables.
 - [JSDB](http://www.jsdb.org/) - Una shell JavaScript autónoma, con binarios compilados para Windows, Mac, y Linux.
 - [JavaLikeScript](http://javalikescript.free.fr/) - Una shell JavaScript autónoma y extensible e incluye bibliotecas nativas y JavaScript.
 - [GLUEscript](http://gluescript.sourceforge.net/) - Una shell JavaScript autónoma para escribir aplicaciones JavaScript multiplataforma. Se puede usar wxWidgets para aplicaciones GUI (del inglés "Interfaces Gráficas de Usuario"), que era conocido anteriormente como wxJavaScript.
@@ -28,11 +28,11 @@ Las siguientes shells JavaScript funcionan con Mozilla.
 - Firefox tiene una consola JavaScript incorporada, llamada [Scratchpad](/es/docs/Tools/Scratchpad), iniciando en la versión 6.
 - [JavaScript Shell](/es/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell) (`js`) - Un intérprete de líneas de comandos para JavaScript
 - [xpcshell](/es/docs/Mozilla/XPConnect/xpcshell) es un shell [XPConnect](/es/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect) habilitado, útil a veces para el desarrollo de Mozilla.
-- [jsconsole.com](http://jsconsole.com/) -- Una consola JavaScript de código abierto con la habilidad de enlazar fácilmente expresiones particulares
-- [JavaScript Shell (web page)](http://www.squarefree.com/shell/) - también disponible como parte de la [Extensión de Desarrolladores de Extensión](https://addons.mozilla.org/en-US/firefox/addon/7434)
+- [jsconsole.com](https://jsconsole.com/) -- Una consola JavaScript de código abierto con la habilidad de enlazar fácilmente expresiones particulares
+- [JavaScript Shell (web page)](https://www.squarefree.com/shell/) - también disponible como parte de la [Extensión de Desarrolladores de Extensión](https://addons.mozilla.org/en-US/firefox/addon/7434)
 - [Jash: JavaScript Shell](http://www.billyreisinger.com/jash/) - una shell basada en DHTML que te da el acceso a líneas de comando a una página web.
 - [MozRepl](http://hyperstruct.net/projects/mozrepl) - Conecta a Firefox y otras aplicaciones Mozilla, explora y modifícalas desde adentro, mientras se ejecutan.
 - [Execute JS](https://addons.mozilla.org/en-US/firefox/addon/execute-js/) - (Ya no está mantenida) - Extensión de Firefox la cual proporciona una mejorada consola JavaScript, donde puedes cómodamente introducir y ejecutar arbitrariamente código JavaScript y modificar funciones.
 - [xqjs](https://addons.mozilla.org/addon/159546) - Consola simple para Firefox.
 - [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/) - Herramientas de desarrollador para Firefox, incluyendo consola.
-- [ES6Console.com](http://es6console.com) - Una consola JavaScript de código abierto para probar código ECMAScript 6 dentro del navegador.
+- [ES6Console.com](https://es6console.com) - Una consola JavaScript de código abierto para probar código ECMAScript 6 dentro del navegador.

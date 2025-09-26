@@ -3,8 +3,6 @@ title: 解释基本的 3D 原理
 slug: Games/Techniques/3D_on_the_web/Basic_theory
 ---
 
-{{GamesSidebar}}
-
 这篇文章解释了当你开始使用 3D 工作的时候需要的所有有用的基本理论
 
 ## 坐标系统
@@ -54,7 +52,7 @@ WebGL 使用右手坐标系统 — `x` 轴向右，`y` 轴向上 `z` 轴指向�
 
 ![Camera](mdn-games-3d-camera.png)
 
-**投射转换**(projection transformation), 也被称作透视转换 (perspective transformation), 这一步定义摄像机设置，在此过程会设置哪些在摄像机中可见，配置包含视野 (field of view), 宽高比例 (aspect ratio) 和可选的近裁剪和远裁剪参数。阅读 Three.js 文章[摄像机](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#Camera)了解更多。
+**投射转换**(projection transformation), 也被称作透视转换 (perspective transformation), 这一步定义摄像机设置，在此过程会设置哪些在摄像机中可见，配置包含视野 (field of view), 宽高比例 (aspect ratio) 和可选的近裁剪和远裁剪参数。阅读 Three.js 文章[摄像机](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#camera)了解更多。
 
 ![Camera settings](mdn-games-3d-camera-settings.png)
 

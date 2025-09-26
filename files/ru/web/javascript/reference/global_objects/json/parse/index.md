@@ -3,7 +3,7 @@ title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 
-{{JSRef("Global_Objects", "JSON")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -72,10 +72,7 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
 
 ## Спецификации
 
-| Спецификация                                         | Статус             | Комментарии                                            |
-| ---------------------------------------------------- | ------------------ | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}  | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}} | {{Spec2('ES6')}}   |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
@@ -83,5 +80,5 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
 
 ## Смотрите также
 
-- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Guide/Using_native_JSON)
+- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - {{jsxref("JSON.stringify()")}}

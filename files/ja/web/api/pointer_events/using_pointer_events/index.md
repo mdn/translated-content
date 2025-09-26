@@ -22,7 +22,8 @@ l10n:
 
 ## 例
 
-> **メモ:** 以下のテキストでは、表面との接触を説明するときに「指」という用語を使用していますが、もちろんスタイラス、マウス、その他の場所を指す方法でもかまいません。
+> [!NOTE]
+> 以下のテキストでは、表面との接触を説明するときに「指」という用語を使用していますが、もちろんスタイラス、マウス、その他の場所を指す方法でもかまいません。
 
 ### キャンバスの作成
 
@@ -104,7 +105,7 @@ function handleMove(evt) {
   if (idx >= 0) {
     ctx.beginPath();
     log(
-      `ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`
+      `ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`,
     );
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
     log(`ctx.lineTo(${evt.clientX}, ${evt.clientY});`);

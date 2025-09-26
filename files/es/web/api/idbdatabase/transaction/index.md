@@ -23,12 +23,12 @@ Un objeto {{domxref("IDBTransaction")}}.
 
 Éste método puede invocar una excepción {{domxref("DOMException")}} de alguno de los siguientes tipos:
 
-| Excepción                        | Descripción                                                                                      |
-| -------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [`InvalidStateError`](/es/docs/) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
-| `NotFoundError`                  | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.      |
-| `TypeError`                      | El valor para el parámetro `mode` es inválido.                                                   |
-| `InvalidAccessError`             | La función fue llamada con una lista vacía de nombres de almacenes.                              |
+| Excepción                           | Descripción                                                                                      |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------ |
+| [`InvalidStateError`](/es/docs/Web) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
+| `NotFoundError`                     | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.      |
+| `TypeError`                         | El valor para el parámetro `mode` es inválido.                                                   |
+| `InvalidAccessError`                | La función fue llamada con una lista vacía de nombres de almacenes.                              |
 
 ## Ejemplo
 
@@ -72,7 +72,6 @@ var objectStore = transaction.objectStore("toDoList");
 ## Parámetros
 
 - storeNames
-
   - : Son los nombres de los almacenes de objetos e índices que están en el ámbito de la nueva transacción, declarados como un arreglo de cadenas de texto. Especifíca solamente aquellos a los que necesitas acceso.
     Si necesitas acceder a un solo almacén, puedes especificar su nombre como una cadena. Por tanto las siguientes líneas son equivalentes:
 
@@ -90,7 +89,6 @@ var objectStore = transaction.objectStore("toDoList");
     Pasar un arreglo vació como parámetro arrojará una excepción.
 
 - mode
-
   - : _Opcional_. Los tipos de acceso que pueden desempeñarse en la transacción. Las transacciones son abiertas en uno de tres modos: `readonly [sólo lectura], readwrite [lectura/escritura],` y `readwriteflush [descarga de lectura/escritura]` (no-estándar, sólo para Firefox). El modo `versionchange [cambio de versión]` no puede ser especificado aquí. Si no provees un parámetro, el modo predeterminado será `readonly [sólo lectura]`. Para evitar ralentizar las cosas, no abras una transacción `readwrite [lectura/escritura]` a menos que realmente necesites escribir en la base de datos.
 
     Si necesitas abrir un almacén de objetos en modo `readwrite` para cambiar los datos, usa lo siguiente:
@@ -101,7 +99,8 @@ var objectStore = transaction.objectStore("toDoList");
 
     Desde Firefox 40, las transacciones de IndexedDB tienen garantías de durabilidad relajadas para aumentar el rendimiento (ver [Error 1112702 en Firefox](https://bugzil.la/1112702)), lo cual es el mismo comportamiento de otros navegadores que soportan IndexedDB. Es decir, anteriormente en una transacción `readwrite` el evento {{domxref("IDBTransaction.oncomplete")}} era invocado sólo cuando se garantizaba que todos los datos habían sido vaciados al disco duro. En Firefox 40+ el evento `complete` es accionado después de indicársele al Sistema Operativo que escriba los datos al disco pero esta confirmación podría suceder poco antes de que los datos hayan sido verdaderamente escritos en él. Si bien dicho evento puede entonces ser entregado un poco antes de tiempo, de cualquier modo, existe una pequeña probabilidad de que la entera transacción se pierda si el SO se bloquea o si ha ocurrido una pérdida de energía antes de que los datos efectivamente se descarguen al disco duro. Como esas catastróficas circunstancias son más bien raras, la mayoría de los consumidores no deberían preocuparse demasiado.
 
-    > **Nota:** En Firefox, si deseas asegurar la durabilidad por alguna razón (por ejemplo, que estés almacenando datos críticos que no puedan ser recalculados después) puedes forzar una transacción a descargar al disco antes de invocar el evento `complete` creando una transacción que use un modo experimental `readwriteflush` (no-estándar) (ver {{domxref("IDBDatabase.transaction")}}). Esto actualmente es experimental, y puede usarse únicamente si la configuración `dom.indexedDB.experimental` es igual a `true` en `about:config`.
+    > [!NOTE]
+    > En Firefox, si deseas asegurar la durabilidad por alguna razón (por ejemplo, que estés almacenando datos críticos que no puedan ser recalculados después) puedes forzar una transacción a descargar al disco antes de invocar el evento `complete` creando una transacción que use un modo experimental `readwriteflush` (no-estándar) (ver {{domxref("IDBDatabase.transaction")}}). Esto actualmente es experimental, y puede usarse únicamente si la configuración `dom.indexedDB.experimental` es igual a `true` en `about:config`.
 
 ## Especificaciones
 

@@ -1,36 +1,38 @@
 ---
-title: WebGLRenderingContext.clearDepth()
+title: WebGLRenderingContext：clearDepth() 方法
 slug: Web/API/WebGLRenderingContext/clearDepth
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.clearDepth()`** 方法用于设置深度缓冲区的深度清除值。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.clearDepth()`** 方法指定深度缓冲区的清除值。
 
-这个深度清除值的设定，是为了调用{{domxref("WebGLRenderingContext.clear", "clear()")}} 的时候使用，这个值的范围是 0 到 1。
+指定调用 {{domxref("WebGLRenderingContext.clear", "clear()")}} 方法时使用的深度值。该值被限制在 0 到 1 之间。
 
 ## 语法
 
-```plain
-void gl.clearDepth(depth);
+```js-nolint
+clearDepth(depth)
 ```
 
 ### 参数
 
 - `depth`
-  - : 类型：{{domxref("GLclampf")}}。深度值的设定，是当清除深度缓冲区的时候使用。默认值为 1。
+  - : {{domxref("WebGL_API/Types", "GLclampf")}}。指定清除深度缓冲区时使用的深度值。默认值为 1。
 
 ### 返回值
 
-None.
+无（{{jsxref("undefined")}}）。
 
-## 样例
+## 示例
 
 ```js
 gl.clearDepth(0.5);
 ```
 
-若要获取当前深度清除值，查询`DEPTH_CLEAR_VALUE` 常量。
+查询 `DEPTH_CLEAR_VALUE` 常量以获取当前深度清除值。
 
 ```js
 gl.getParameter(gl.DEPTH_CLEAR_VALUE);
@@ -45,7 +47,7 @@ gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.clear()")}}
 - {{domxref("WebGLRenderingContext.clearColor()")}}

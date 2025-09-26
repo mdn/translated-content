@@ -1,67 +1,63 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-在 JavaScript 中，生成器函数实际上都是 `GeneratorFunction` 对象。注意，`GeneratorFunction` 并不是一个全局对象，但你可以通过下面的代码创建 `GeneratorFunction()` 构造函数。
+**`GeneratorFunction`** 对象为[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)提供了方法。在 JavaScript 中，每个生成器函数实际上都是一个 `GeneratorFunction` 对象。
+
+请注意，`GeneratorFunction` *不是*全局对象。可以通过以下代码来获取它：
 
 ```js
 const GeneratorFunction = function* () {}.constructor;
 ```
 
-## 语法
+`GeneratorFunction` 是 {{jsxref("Function")}} 的子类。
 
-```js-nolint
-new GeneratorFunction(functionBody)
-new GeneratorFunction(arg0, functionBody)
-new GeneratorFunction(arg0, arg1, functionBody)
-new GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+{{InteractiveExample("JavaScript Demo: GeneratorFunction()", "taller")}}
 
-GeneratorFunction(functionBody)
-GeneratorFunction(arg0, functionBody)
-GeneratorFunction(arg0, arg1, functionBody)
-GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
-```
-
-> **备注：** 调用 `GeneratorFunction()` 时可以选择使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)。两者均可创建一个新的 `GeneratorFunction` 实例。
-
-### 参数
-
-- `argN` {{optional_inline}}
-
-  - : 函数的参数名，它们必须是符合 JavaScript 参数规范（任何[标识符](/zh-CN/docs/Glossary/Identifier)、[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)或[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)参数，以及可选的默认参数值）的字符串。
-
-    由于参数的解析方式与函数声明相同，参数中接受空格和注释。例如：`"x", "theValue = 42", "[a, b] /* numbers */"` 或 `"x, theValue = 42, [a, b] /* numbers */"`。（`"x, theValue = 42", "[a, b]"` 也是正确的，但这容易造成困扰。）
-
-- `functionBody`
-  - : 包含 JavaScript 语句的{{jsxref("String", "字符串", "", 1)}}，这些语句组成了新函数的定义。
-
-## 描述
-
-{{jsxref("Statements/function*", "生成器函数", "", "1")}}对象是在给构造函数传递参数，创建函数时才进行解析的。这比使用 [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)声明生成器函数，然后在代码中调用它的效率更低，因为这些函数与其余的代码一起被解析。
-
-传递给函数的所有参数（除了最后一个）按照它们被传递的顺序被视为要创建的函数中参数的标识符的名称。
-
-> **备注：** 使用 `GeneratorFunction` 构造函数创建的{{jsxref("Statements/function*", "生成器函数", "", 1)}}不会为其创建上下文创建闭包；它们始终在全局范围内创建。
->
-> 当运行它们时，它们只能访问自己的本地变量和全局变量，而不能访问 `GeneratorFunction` 构造函数调用的范围内的变量。
->
-> 这是它与使用 {{jsxref("Global_Objects/eval", "eval")}} 来创建生成器函数表达式不同的地方。
-
-将 `GeneratorFunction` 构造函数调用为函数（不使用 `new` 运算符）与将其作为构造函数调用的效果相同。
-
-## 示例
-
-### 创建和使用 GeneratorFunction() 构造函数
-
-```js
+```js interactive-example
 const GeneratorFunction = function* () {}.constructor;
-const g = new GeneratorFunction("a", "yield a * 2");
-const iterator = g(10);
-console.log(iterator.next().value); // 20
+
+const foo = new GeneratorFunction(`
+  yield 'a';
+  yield 'b';
+  yield 'c';
+`);
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
 ```
+
+## 构造函数
+
+- {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction()")}}
+  - : 创建一个新的 `GeneratorFunction` 对象。
+
+## 实例属性
+
+_也从其父类 {{jsxref("Function")}} 继承实例属性_。
+
+这些属性定义于 `GeneratorFunction.prototype` 并由所有 `GeneratorFunction` 实例所共享。
+
+- {{jsxref("Object/constructor", "GeneratorFunction.prototype.constructor")}}
+  - : 创建实例对象的构造函数。对于 `GeneratorFunction` 实例，其初始值是 {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction")}} 构造函数。
+- `GeneratorFunction.prototype.prototype`
+  - : 所有生成器函数共享同一个 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性，即 [`Generator.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)。每个生成器函数实例也有自己的 `prototype` 属性。当生成器函数被调用时，返回的生成器对象从生成器函数继承 `prototype` 属性，而该属性又继承自 `GeneratorFunction.prototype.prototype`。
+- `GeneratorFunction.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"GeneratorFunction"`。该属性被 {{jsxref("Object.prototype.toString()")}} 使用。
+
+## 实例方法
+
+_从其父类 {{jsxref("Function")}} 继承实例方法_。
 
 ## 规范
 
@@ -73,9 +69,9 @@ console.log(iterator.next().value); // 20
 
 ## 参见
 
-- {{jsxref("Statements/function*", "function* 函数", "", 1)}}
-- {{jsxref("Operators/function*", "function* 表达式", "", 1)}}
-- {{jsxref("Global_Objects/Function", "函数", "", 1)}}
-- {{jsxref("Statements/function", "函数语句", "", 1)}}
-- {{jsxref("Operators/function", "函数表达式", "", 1)}}
-- {{jsxref("Functions", "函数与函数作用域", "", 1)}}
+- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
+- {{jsxref("Function")}}
+- {{jsxref("AsyncFunction")}}
+- {{jsxref("AsyncGeneratorFunction")}}
+- {{jsxref("Functions", "函数", "", 1)}}

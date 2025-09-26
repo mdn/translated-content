@@ -49,66 +49,33 @@ findIndex(callbackFn, thisArg)
 
 ### 在类型化数组中寻找质数的下标
 
-下面的示例在类型化数组中寻找质数元素的下标（如果没有质数则返回 -1）.
+下面的示例在类型化数组中寻找质数元素的下标（如果没有质数则返回 -1）。
 
 ```js
-function isPrime(element, index, array) {
-  var start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return element > 1;
+  return true;
 }
 
-var uint8 = new Uint8Array([4, 6, 8, 12]);
-var uint16 = new Uint16Array([4, 6, 7, 12]);
+const uint8 = new Uint8Array([4, 6, 8, 12]);
+const uint16 = new Uint16Array([4, 6, 7, 12]);
 
 console.log(uint8.findIndex(isPrime)); // -1，未发现
 console.log(uint16.findIndex(isPrime)); // 2
 ```
 
-## Polyfill
-
-```js
-TypedArray.prototype.findIndex = Array.prototype.findIndex =
-  Array.prototype.findIndex ||
-  function (evaluator, thisArg) {
-    "use strict";
-    if (!this) {
-      throw new TypeError("Array.prototype.some called on null or undefined");
-    }
-
-    if (typeof evaluator !== "function") {
-      if (typeof evaluator === "string") {
-        // 尝试将其转换为函数
-        if (!(evaluator = eval(evaluator))) {
-          throw new TypeError();
-        }
-      } else {
-        throw new TypeError();
-      }
-    }
-
-    var i;
-    if (thisArg === undefined) {
-      // 为 thisArg 优化
-      for (i in this) {
-        if (evaluator(this[i], i, this)) {
-          return i;
-        }
-      }
-      return -1;
-    }
-    for (i in this) {
-      if (evaluator.call(thisArg, this[i], i, this)) {
-        return i;
-      }
-    }
-    return -1;
-  };
-```
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
 ## 规范
 
@@ -118,7 +85,14 @@ TypedArray.prototype.findIndex = Array.prototype.findIndex =
 
 {{Compat}}
 
-## 另见
+## 参见
 
+- [`core-js` 中 `TypedArray.prototype.findIndex` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxref("Array.prototype.findIndex()")}}

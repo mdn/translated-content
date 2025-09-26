@@ -7,7 +7,55 @@ slug: Web/CSS/writing-mode
 
 La propriété CSS **`writing-mode`** définit si les lignes d'un texte sont écrites horizontalement ou verticalement et la direction selon laquelle le bloc grandit. Lorsque cette propriété est définie pour un document entier, elle devrait être appliquée à la racine (soit l'élément {{HTMLElement("html")}} pour les documents HTML).
 
-{{EmbedInteractiveExample("pages/css/writing-mode.html")}}
+{{InteractiveExample("CSS Demo: writing-mode")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: sideways-rl;
+```
+
+```css interactive-example-choice
+writing-mode: sideways-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex: 1;
+}
+```
 
 La propriété définit la direction du flux du bloc. C'est dans cette direction que les conteneurs de bloc seront empilés et c'est dans cette direction que le contenu en flux « coule » dans un bloc contenur. Ainsi, la propriété `writing-mode` détermine également l'ordre du contenu de niveau bloc.
 
@@ -187,6 +235,6 @@ Voici un aperçu du résultat avec un navigateur qui prend en charge `writing-mo
 - {{cssxref("unicode-bidi")}}
 - {{cssxref("text-orientation")}}
 - {{cssxref("text-combine-upright")}}
-- [Les propriétés logiques en CSS](/fr/docs/Web/CSS/CSS_Logical_Properties)
+- [Les propriétés logiques en CSS](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Mettre en forme du texte vertical (chinois, coréen, japonais, mongol)](https://www.w3.org/International/articles/vertical-text/)
 - [Tests de prise en charge des navigateurs](https://w3c.github.io/i18n-tests/results/writing-mode-vertical)

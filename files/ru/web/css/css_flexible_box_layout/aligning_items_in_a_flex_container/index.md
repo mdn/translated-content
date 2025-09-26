@@ -26,7 +26,8 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 Также будет рассмотрены авто-отступы для выравнивания элементов во flexbox.
 
-> **Примечание:** Свойства выравнивания во Flexbox помещены в отдельную спецификацию — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Ожидается, что данная спецификация в конце концов заменит свойства, определённые во Flexbox Level One.
+> [!NOTE]
+> Свойства выравнивания во Flexbox помещены в отдельную спецификацию — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Ожидается, что данная спецификация в конце концов заменит свойства, определённые во Flexbox Level One.
 
 ## Перекрёстная ось
 
@@ -56,7 +57,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 Свойство `align-items` устанавливает `align-self` для всех flex элементов как для группы. Это означает, что можно явно указать значение `align-self` для конкретного элемента. Свойство `align-self` может принимать все те же значения, что и свойство `align-items`, а так же значение `auto`, которое сбросит значение, установленное в flex контейнере.
 
-В следующем примере, у flex контейнера установлено `align-items: flex-start`, означающее, что все элементы будут выравнены по началу перекрёстной оси. У первого элемента с помощью `first-child` селектора установлено `align-items: stretch`; у следующего элемента с классом `selected` установлено `align-self: center`. Можно изменять значение `align-items` на контейнере или `align-self` на элементе для изучения их работы.8н
+В следующем примере, у flex контейнера установлено `align-items: flex-start`, означающее, что все элементы будут выравнены по началу перекрёстной оси. У первого элемента с помощью селектора `first-child` установлено `align-self: stretch`; у следующего элемента с классом `selected` установлено `align-self: center`. Можно изменять значение `align-items` на контейнере или `align-self` на элементе для изучения их работы.8н
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
 
@@ -100,7 +101,8 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-> **Примечание:** значение `space-evenly` не определено в спецификации flexbox и добавлено позже в спецификацию Box Alignment. Поддержка браузерами этого значение не так широка, как значений определённым в спецификации flexbox.
+> [!NOTE]
+> Значение `space-evenly` не определено в спецификации flexbox и добавлено позже в спецификацию Box Alignment. Поддержка браузерами этого значение не так широка, как значений определённым в спецификации flexbox.
 
 В [документации по `justify-content` на MDN](/ru/docs/Web/CSS/justify-content) приведено больше деталей о всех значениях и поддержке браузерами.
 
@@ -186,9 +188,9 @@ slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 
 В начале этой статьи объясняется, что свойства выравнивания, которые в настоящее время содержатся в спецификации Flexbox Level 1, также включены в спецификацию Box Alignment Level 3, которая в дальнейшем может расширить эти свойства и значения. Мы уже видели, как это произошло с введением значения `space-evenly` для свойств `align-content` и `justify-content`.
 
-Выравнивание во Flexbox также включает в себя другие методы создания пространства между элементами, такие как `column-gap` and `row-gap`, как показано в макете [CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout). Включение этих свойств в Box Alignment означает, что в будущем мы также сможем использовать `column-gap` и `row-gap` во Flexbox разметке. Это означает, что вам не нужно будет использовать отступы, чтобы создать пространство между элементами.
+Выравнивание во Flexbox также включает в себя другие методы создания пространства между элементами, такие как `column-gap` and `row-gap`, как показано в макете [CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout). Включение этих свойств в Box Alignment означает, что в будущем мы также сможем использовать `column-gap` и `row-gap` во Flexbox разметке. Это означает, что вам не нужно будет использовать отступы, чтобы создать пространство между элементами.
 
-Моё предложение заключается в том, чтобы при изучении выравнивания во Flexbox, делать это параллельно с выравниванием в Grid Layout. В обеих спецификациях используются свойства выравнивания, подобные Flexbox. Вы можете видеть, как эти свойства ведут себя при работе с сеткой в статье [Box Alignment in Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout), а также рассмотреть как выравнивание работает в этих спецификациях в статье [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment).
+Моё предложение заключается в том, чтобы при изучении выравнивания во Flexbox, делать это параллельно с выравниванием в Grid Layout. В обеих спецификациях используются свойства выравнивания, подобные Flexbox. Вы можете видеть, как эти свойства ведут себя при работе с сеткой в статье [Box Alignment in Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), а также рассмотреть как выравнивание работает в этих спецификациях в статье [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment).
 
 Смотрите Также
 

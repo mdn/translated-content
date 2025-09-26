@@ -65,4 +65,4 @@ console.log("Hello" + "World");
 
 ## Смотрите также
 
-- [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)(доступ к свойствам)
+- [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors)(доступ к свойствам)

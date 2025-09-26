@@ -1,8 +1,9 @@
 ---
-title: Cache.delete()
+title: "Cache: delete() メソッド"
+short-title: delete()
 slug: Web/API/Cache/delete
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("Service Workers API")}}
@@ -21,9 +22,7 @@ delete(request, options)
 - `request`
   - : 削除しようとしている {{domxref("Request")}}。 これは、`Request` オブジェクトまたは URL です。
 - `options` {{optional_inline}}
-
   - : プロパティが `delete` 操作でどのように照合するかを制御するオブジェクト。 使用可能なオプションは次のとおりです。
-
     - `ignoreSearch`
       - : 論理値で、照合操作で URL のクエリー文字列を無視するかどうかを指定します。 `true` に設定すると、`http://foo.com/?value=bar` の `?value=bar` 部分を、照合の実行時に無視します。既定値は `false` です。
     - `ignoreMethod`

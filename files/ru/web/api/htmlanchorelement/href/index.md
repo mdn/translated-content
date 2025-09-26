@@ -1,25 +1,24 @@
 ---
-title: HTMLHyperlinkElementUtils.href
+title: "HTMLAnchorElement: свойство href"
 slug: Web/API/HTMLAnchorElement/href
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("HTML DOM")}}
 
-Свойство **`HTMLHyperlinkElementUtils.href`** – это {{domxref("USVString")}}, содержащий URL целиком.
+Свойство **`HTMLAnchorElement.href`** — это {{Glossary("stringifier", "строковый преобразователь")}}, который возвращает строку, содержащую полный URL, и позволяет его изменять.
 
-## Синтаксис
+## Значение
 
-```
-string = object.href;
-object.href = string;
-```
+Строка.
 
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href">
-var anchor = document.getElementById("myAnchor");
-var result = anchor.href; // Вернёт: 'https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href'
+// Документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement">
+const anchor = document.getElementById("myAnchor");
+anchor.href; // вернёт 'https://developer.mozilla.org/en-US/HTMLAnchorElement'
 ```
 
 ## Спецификации
@@ -32,4 +31,4 @@ var result = anchor.href; // Вернёт: 'https://developer.mozilla.org/en-US/
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Интерфейс {{domxref("HTMLAnchorElement")}}.

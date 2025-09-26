@@ -3,13 +3,25 @@ title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
 ---
 
-{{jsSidebar("Objects")}}
-
-全局属性 **`undefined`** 表示原始值 `{{Glossary("Undefined", "undefined")}}`。它是一个 JavaScript 的 {{Glossary("Primitive", "原始数据类型")}} 。
+全局属性 **`undefined`** 表示原始值 {{Glossary("Undefined", "undefined")}}。它是一个 JavaScript 的 {{Glossary("Primitive", "原始数据类型")}} 。
 
 {{js_property_attributes(0,0,0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+```
 
 ## 语法
 
@@ -19,7 +31,7 @@ undefined
 
 ## 描述
 
-`undefined`是*全局对象*的一个属性。也就是说，它是全局作用域的一个变量。`undefined`的最初值就是原始数据类型`{{Glossary("Undefined", "undefined")}}`。
+`undefined` 是*全局对象*的一个属性。也就是说，它是全局作用域的一个变量。
 
 在现代浏览器（JavaScript 1.8.5/Firefox 4+），自 ECMAscript5 标准以来 undefined 是一个不能被配置（non-configurable），不能被重写（non-writable）的属性。即便事实并非如此，也要避免去重写它。
 
@@ -36,7 +48,8 @@ test(); // 返回"undefined"
 
 一个函数如果没有使用 return 语句指定{{jsxref("Statements/return", "返回")}}值，就会返回一个 undefined 值。
 
-> **警告：** 但是它有可能在非全局作用域中被当作{{Glossary("Identifier", "标识符")}}（变量名）来使用（因为 undefined 不是[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字的使用)），这样做是一个非常坏的主意，因为这样会使你的代码难以去维护和排错。
+> [!WARNING]
+> 但是它有可能在非全局作用域中被当作{{Glossary("Identifier", "标识符")}}（变量名）来使用（因为 undefined 不是[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字的使用)），这样做是一个非常坏的主意，因为这样会使你的代码难以去维护和排错。
 >
 > ```js example-bad
 > // 不要这样做！
@@ -67,7 +80,8 @@ if (x === undefined) {
 }
 ```
 
-> **备注：** 这里是必须使用严格相等操作符（===）而不是标准相等操作符（==），因为 x == undefined 会检查 x 是不是 null，但是严格相等不会检查（有点饶人，其实 === 会严格判断双方的类型、值等是否相等）。null 不等同于 undefined。移步{{jsxref("Operators/Comparison_Operators", "比较操作符")}}查看详情。
+> [!NOTE]
+> 这里是必须使用严格相等操作符（===）而不是标准相等操作符（==），因为 x == undefined 会检查 x 是不是 null，但是严格相等不会检查（有点饶人，其实 === 会严格判断双方的类型、值等是否相等）。null 不等同于 undefined。移步{{jsxref("Operators/Comparison_Operators", "比较操作符")}}查看详情。
 
 ### Typeof 操作符和 undefined
 
@@ -114,7 +128,7 @@ if (x === void 0) {
 
 // 没有声明 y
 if (y === void 0) {
-  // 抛出一个 RenferenceError 错误 (与`typeof`相比)
+  // 抛出一个 RenferenceError 错误（与 `typeof` 相比）
 }
 ```
 

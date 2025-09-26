@@ -25,7 +25,7 @@ A promise that resolves with an {{domxref("ArrayBuffer")}}.
 
 ## 例子
 
-In our [fetch array buffer example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-array-buffer) (run [fetch array buffer live](http://mdn.github.io/fetch-examples/fetch-array-buffer/)), we have a Play button. When pressed, the `getData()` function is run.
+In our [fetch array buffer example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-array-buffer) (run [fetch array buffer live](https://mdn.github.io/fetch-examples/fetch-array-buffer/)), we have a Play button. When pressed, the `getData()` function is run.
 
 In `getData()` we create a new request using the {{domxref("Request.Request")}} constructor, then use it to fetch an OGG music track. We also use {{domxref("AudioContext.createBufferSource")}} to create an audio buffer source. When the fetch is successful, we read an {{domxref("ArrayBuffer")}} out of the response using `arrayBuffer()`, decode the audio data using {{domxref("AudioContext.decodeAudioData")}}, set the decoded data as the audio buffer source's buffer (`source.buffer`), then connect the source up to the {{domxref("AudioContext.destination")}}.
 
@@ -66,6 +66,6 @@ play.onclick = function () {
 
 ## 参考
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

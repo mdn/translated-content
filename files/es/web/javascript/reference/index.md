@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference
 
 {{JsSidebar}}
 
-Esta parte de la sección de Javascript en MDN sirve como un repositorio de hechos sobre el lenguaje Javascript. Lee más [sobre esta referencia](/es/docs/Web/JavaScript/Reference/About).
+Esta parte de la sección de Javascript en MDN sirve como un repositorio de hechos sobre el lenguaje Javascript. Lee más [sobre esta referencia](/es/docs/conflicting/Web/JavaScript/Reference).
 
 ## Objetos globales
 
@@ -309,6 +309,6 @@ Este capítulo documenta como trabajar con las [Funciones JavaScript](/es/docs/W
 ## Páginas adicionales de referencia
 
 - [Gramática léxica](/es/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Tipos de datos y estructuras](/es/docs/Web/JavaScript/Data_structures)
+- [Tipos de datos y estructuras](/es/docs/Web/JavaScript/Guide/Data_structures)
 - [Modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode)
 - [Características en desuso y obsoletas](/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

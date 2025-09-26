@@ -106,7 +106,7 @@ Al inicio de JavaScript 1.8.1 (in Firefox 3.6), `propertyIsEnumerable('prototype
 
 ## Véase también
 
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}
