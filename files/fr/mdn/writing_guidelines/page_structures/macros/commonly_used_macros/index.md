@@ -258,7 +258,6 @@ Les macros suivantes sont incluses sur toutes les pages de référence, mais son
 - `\{{Specifications}}`
   - : Ajoute un [tableau de spécifications](/fr/docs/MDN/Writing_guidelines/Page_structures/Specification_tables) pour la ou les fonctionnalités définies par `spec-urls` dans le front-matter, si présent, ou à partir de la spécification listée dans les données de compatibilité définies par `browser-compat` dans le front-matter.
 
-
 ## Voir aussi
 
 - [Macros de barre latérale](/fr/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
