@@ -1,11 +1,11 @@
 ---
 title: size
 slug: Web/CSS/@page/size
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
-Le descripteur **`size`**, associé à la règle @ {{cssxref("@page")}}, permet de définir les dimensions et l'orientation de la boîte utilisée pour représenter une page. La plupart du temps, cette taille correspondra à la totalité de la taille de la page imprimée.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`size`** associé à la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@page")}}, permet de définir les dimensions et l'orientation de la boîte utilisée pour représenter une page. La plupart du temps, cette taille correspondra à la totalité de la taille de la page imprimée.
 
 Les dimensions de cette boîte peuvent être définies de façon absolues ou relatives (dans ce cas, la page occupera l'espace disponible).
 
@@ -13,21 +13,20 @@ Les dimensions de cette boîte peuvent être définies de façon absolues ou rel
 
 ```css
 /* Des mots-clés qui peuvent être utilisées
-   pour remplir l'espace disponible         */
+   pour remplir l'espace disponible */
 size: auto;
 size: portrait;
 size: landscape;
 
 /* Des valeurs de longueur */
-/* Type <length>           */
+/* Type <length> */
 /* 1 valeur : hauteur = largeur */
 size: 6in;
 
 /* 2 valeurs : la largeur puis la hauteur */
 size: 4in 6in;
 
-/* Des mots-clés qui représentent des */
-/* dimensions absolues                */
+/* Des mots-clés qui représentent des dimensions absolues */
 size: A4;
 size: B5;
 size: JIS-B4;
@@ -48,27 +47,27 @@ size: A4 portrait;
 - `<length>`
   - : Une valeur de longueur (cf. {{cssxref("&lt;length&gt;")}}). La première valeur utilisée correspond à la largeur de la boîte de la page et la deuxième correspond à la hauteur. Si une seule valeur est fournie, celle-ci sera utilisée pour la largeur et pour la hauteur.
 - `<page-size>`
-  - : Un mot-clé avec l'une des valeurs suivantes :
+  - : Un mot-clé avec l'une des valeurs suivantes&nbsp;:
     - `A5`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 148mm x 210mm.
+      - : Ce mot-clé correspond aux dimensions ISO standard&nbsp;: 148mm x 210mm.
     - `A4`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 210mm x 297mm (c'est le format le plus utilisé pour les impressions occasionnelles sur les imprimantes personnelles).
+      - : Ce mot-clé correspond aux dimensions ISO standard&nbsp;: 210mm x 297mm (c'est le format le plus utilisé pour les impressions occasionnelles sur les imprimantes personnelles).
     - `A3`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 297mm x 420mm.
+      - : Ce mot-clé correspond aux dimensions ISO standard&nbsp;: 297mm x 420mm.
     - `B5`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 176mm x 250mm.
+      - : Ce mot-clé correspond aux dimensions ISO standard&nbsp;: 176mm x 250mm.
     - `B4`
-      - : Ce mot-clé correspond aux dimensions ISO standard : 250mm x 353mm.
+      - : Ce mot-clé correspond aux dimensions ISO standard&nbsp;: 250mm x 353mm.
     - `JIS-B5`
-      - : Ce mot-clé correspond aux dimensions JIS standard : 182mm x 257mm.
+      - : Ce mot-clé correspond aux dimensions JIS standard&nbsp;: 182mm x 257mm.
     - `JIS-B4`
-      - : Ce mot-clé correspond aux dimensions JIS standard : 257mm x 364mm.
+      - : Ce mot-clé correspond aux dimensions JIS standard&nbsp;: 257mm x 364mm.
     - `letter`
-      - : Ce mot-clé correspond à la taille standard du papier à lettre aux États-Unis : 8.5in x 11in.
+      - : Ce mot-clé correspond à la taille standard du papier à lettre aux États-Unis&nbsp;: 8.5in x 11in.
     - `legal`
-      - : Ce mot-clé correspond à la taille standard des documents légaux aux États-Unis : 8.5in par 14in.
+      - : Ce mot-clé correspond à la taille standard des documents légaux aux États-Unis&nbsp;: 8.5in par 14in.
     - `ledger`
-      - : Ce mot-clé correspond à la taille standard des pages d'un livre en grand format aux États-Unis. Cela correspond à : 11in x 17in.
+      - : Ce mot-clé correspond à la taille standard des pages d'un livre en grand format aux États-Unis. Cela correspond à&nbsp;: 11in x 17in.
 
 ## Définition formelle
 
@@ -80,11 +79,23 @@ size: A4 portrait;
 
 ## Exemples
 
+### Définir la taille et l'orientation
+
 ```css
 @page {
   size: 4cm 6cm landscape;
 }
 ```
+
+### Définir une taille personnalisée
+
+```css
+@page {
+  size: 4in 6in;
+}
+```
+
+### Imbrication dans une règle @media
 
 ```css
 @media print {
@@ -101,8 +112,3 @@ size: A4 portrait;
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Voir aussi
-
-- {{cssxref("@page/bleed", "bleed")}}
-- {{cssxref("@page/marks", "marks")}}
