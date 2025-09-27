@@ -1,11 +1,11 @@
 ---
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
+l10n:
+  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
 ---
 
-{{CSSRef}}
-
-Le descripteur CSS **`ascent-override`** définit la mesure du jambage supérieur (ascendant) de la police (voir la [définition de jambage](https://fr.wikipedia.org/wiki/Jambage)). La mesure du jambage supérieur correspond à la distance verticale par rapport à la hauteur d'X (hauteur du caractère bas de casse, à l'exclusion des jambages inférieurs et supérieurs) que CSS doit utiliser pour agencer les boîtes dans un contexte de formatage en ligne.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`ascent-override`** pour la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-face")}} définit la mesure du jambage supérieur pour la police. La mesure du jambage supérieur est la hauteur au-dessus de la ligne de base que CSS utilise pour disposer les boîtes de ligne dans un contexte de mise en forme en ligne.
 
 ## Syntaxe
 
@@ -19,7 +19,7 @@ ascent-override: 90%;
 - `normal`
   - : La valeur par défaut. La mesure du jambage supérieur est obtenue à partir du fichier de police.
 - `<percentage>`
-  - : Une valeur exprimée en pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui traduit l'augmentation ou la réduction par rapport à la taille de la police ({{cssxref("font-size")}}.
+  - : Une valeur exprimée en pourcentage ({{cssxref("&lt;percentage&gt;")}}).
 
 ## Définition formelle
 
@@ -31,9 +31,9 @@ ascent-override: 90%;
 
 ## Exemples
 
-### Surcharge de la mesure d'une police de recours
+### Surcharge de la mesure d'une police de repli
 
-La propriété `ascent-override` peut aider à la surcharge de la mesure d'une police de secours pour qu'elle corresponde mieux à celle de la police principale.
+La propriété `ascent-override` peut aider à la surcharge de la mesure d'une police de repli pour qu'elle corresponde mieux à celle de la police principale.
 
 ```css
 @font-face {
@@ -64,10 +64,9 @@ La propriété `ascent-override` peut aider à la surcharge de la mesure d'une p
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}

@@ -1,11 +1,11 @@
 ---
 title: size-adjust
 slug: Web/CSS/@font-face/size-adjust
+l10n:
+  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
-Le descripteur CSS **`size-adjust`** CSS définit un multiplicateur destiné aux contours des glyphes et aux mesures associées à la police. Cela facilite l'harmonisation de l'apparence des polices lorsqu'elles sont rendues avec la même taille.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`size-adjust`** CSS définit un multiplicateur destiné aux contours des glyphes et aux mesures associées à la police. Cela facilite l'harmonisation de l'apparence des polices lorsqu'elles sont rendues avec la même taille.
 
 Le descripteur `size-adjust` se comporte d'une manière similaire à la propriété {{cssxref("font-size-adjust")}}. Il calcule l'ajustement à effectuer par police en faisant la correspondance avec leurs hauteurs respectives.
 
@@ -64,8 +64,8 @@ La propriété `size-adjust` peut aider à la surcharge des mesures d'une police
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- La propriété {{cssxref('font-size-adjust')}}

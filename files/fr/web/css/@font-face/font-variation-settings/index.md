@@ -1,19 +1,21 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/@font-face/font-variation-settings
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-variation-settings`**, associé à la [la règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.
 
-Le descripteur **`font-variation-settings`**, associé à la règle @ {{cssxref("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.
+Depuis que ce descripteur définit des valeurs de variation sur l'objet de police dans la règle `@font-face` et non sur un élément entier, seuls certains glyphes d'un élément peuvent être rendus à l'aide de ce descripteur.
 
 ## Syntaxe
 
 ```css
-/* On utilise les paramètres par défaut */
+/* Utilise les paramètres par défaut */
 font-variation-settings: normal;
 
-/* On indique les valeurs pour les noms des axes OpenType */
+/* Indique les valeurs pour les noms des axes OpenType */
 font-variation-settings: "xhgt" 0.7;
 ```
 
@@ -34,6 +36,8 @@ font-variation-settings: "xhgt" 0.7;
 
 ## Exemples
 
+### Modifier le poids et l'étirement de la police dans une règle @font-face
+
 ```css
 @font-face {
   font-family: "OpenTypeFont";
@@ -53,3 +57,14 @@ font-variation-settings: "xhgt" 0.7;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- {{cssxref("@font-face/font-display", "font-display")}}
+- {{cssxref("@font-face/font-family", "font-family")}}
+- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-style", "font-style")}}
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{cssxref("font-feature-settings", "font-feature-settings")}}
+- {{cssxref("@font-face/src", "src")}}
+- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}
