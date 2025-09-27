@@ -1,11 +1,15 @@
 ---
 title: "@document"
 slug: Web/CSS/@document
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{Deprecated_header}}{{Non-standard_header}}
 
-La [règle @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
+
+## Syntaxe
 
 ```css
 @document url("https://www.example.com/")
@@ -15,8 +19,6 @@ La [règle @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule) **`@document`** restreint
   }
 }
 ```
-
-## Syntaxe
 
 Une règle `@document` peut définir une ou plusieurs fonctions de correspondance. Si l'une quelconque des règles s'applique à l'URL donnée, la règle prendra effet sur cette URL. Les fonctions disponibles sont :
 
@@ -35,7 +37,16 @@ Les valeurs échappées fournies à la fonction `regexp()` doivent être en outr
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+```plain
+@document [ <url>                    |
+            url-prefix(<string>)     |
+            domain(<string>)         |
+            media-document(<string>) |
+            regexp(<string>)
+          ]# {
+  <group-rule-body>
+}
+```
 
 ## Exemples
 
@@ -63,7 +74,7 @@ Les valeurs échappées fournies à la fonction `regexp()` doivent être en outr
 
 ## Spécifications
 
-{{Specifications}}
+[Initialement](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) dans le niveau 3, `@document` a été [reporté](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) au niveau 4, mais a ensuite été supprimé.
 
 ## Compatibilité des navigateurs
 
@@ -71,4 +82,4 @@ Les valeurs échappées fournies à la fonction `regexp()` doivent être en outr
 
 ## Voir aussi
 
-- [Per-site user style sheet rules](https://lists.w3.org/Archives/Public/www-style/2004Aug/0135) sur la liste de diffusion www-style.
+- [Règles de feuille de style utilisateur par site <sup>(angl.)</sup>](https://lists.w3.org/Archives/Public/www-style/2004Aug/0135) sur la liste de diffusion www-style.
