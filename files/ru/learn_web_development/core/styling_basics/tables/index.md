@@ -1,6 +1,8 @@
 ---
 title: Стилизация таблиц
 slug: Learn_web_development/Core/Styling_basics/Tables
+l10n:
+  sourceCommit: 074785cea106179cb3305637055ab0a009ca74f2
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Styling_boxes")}}

@@ -1,6 +1,8 @@
 ---
 title: Каким должен быть ваш веб-сайт?
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
+l10n:
+  sourceCommit: 074785cea106179cb3305637055ab0a009ca74f2
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
