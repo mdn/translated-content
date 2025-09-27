@@ -1,6 +1,8 @@
 ---
 title: ImageData
 slug: Web/API/ImageData
+l10n:
+  sourceCommit: eba7ce08cf50c5d9e344652748f6bcfb19f3a396
 ---
 
 {{APIRef("Canvas API")}}
