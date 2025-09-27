@@ -29,7 +29,8 @@ L'exemple qui suit montre l'utilisation des propriétés `height` et `width` pou
 </p>
 
 <p>
-  Image 3&nbsp;: sans height, width, mais avec style="height: 50px; width: 500px;"
+  Image 3&nbsp;: sans height, width, mais avec style="height: 50px; width:
+  500px;"
   <img
     id="image3"
     src="https://www.mozilla.org/images/mozilla-banner.gif"
