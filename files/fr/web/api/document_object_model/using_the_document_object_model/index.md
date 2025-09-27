@@ -35,7 +35,7 @@ Lorsqu'un navigateur Web analyse un document HTML, il construit un arbre DOM pui
 
 ## Que permet l'API Document ?
 
-L'API Document, parfois appelée API DOM, permet de modifier un arbre DOM *comme vous le souhaitez*. Elle permet de créer n'importe quel document HTML ou XML à partir de rien, ou de modifier n'importe quel contenu d'un document existant. Les auteur·ice·s de pages Web peuvent modifier le DOM d'un document en utilisant JavaScript pour accéder à la propriété `document` de l'objet global. Cet objet `document` implémente l'interface {{domxref("Document")}}.
+L'API Document, parfois appelée API DOM, permet de modifier un arbre DOM _comme vous le souhaitez_. Elle permet de créer n'importe quel document HTML ou XML à partir de rien, ou de modifier n'importe quel contenu d'un document existant. Les auteur·ice·s de pages Web peuvent modifier le DOM d'un document en utilisant JavaScript pour accéder à la propriété `document` de l'objet global. Cet objet `document` implémente l'interface {{domxref("Document")}}.
 
 ## Lire et modifier l'arbre
 
