@@ -2,12 +2,12 @@
 title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`border-bottom-left-radius`** [CSS](/zh-CN/docs/Web/CSS) 属性通过指定定义元素左下角曲率的椭圆的半径（或半长轴和半短轴的半径），对元素的左下角进行圆角处理。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-bottom-left-radius`** 通过指定定义元素左下角曲率的椭圆的半径（或半长轴和半短轴的半径），对元素的左下角进行圆角处理。
 
-{{InteractiveExample("CSS Demo: border-bottom-left-radius")}}
+{{InteractiveExample("CSS 演示：border-bottom-left-radius")}}
 
 ```css interactive-example-choice
 border-bottom-left-radius: 80px 80px;
@@ -30,7 +30,7 @@ background-clip: content-box;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a bottom left rounded corner.
+    这是一个左下角带有圆角的盒子。
   </div>
 </section>
 ```
