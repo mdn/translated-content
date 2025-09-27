@@ -220,11 +220,9 @@ Cet exemple montre comment la méthode {{domxref("window.getComputedStyle")}} pe
 
 <form action="">
   <p>
-    <button type="button">Obtenir les styles</button><br/>
-    height <input id="t1" type="text" value="1" /><br/> max-width <input
-      id="t2"
-      type="text"
-      value="2" /><br/>
+    <button type="button">Obtenir les styles</button><br />
+    height <input id="t1" type="text" value="1" /><br />
+    max-width <input id="t2" type="text" value="2" /><br />
     bg-color <input id="t3" type="text" value="3" />
   </p>
 </form>
