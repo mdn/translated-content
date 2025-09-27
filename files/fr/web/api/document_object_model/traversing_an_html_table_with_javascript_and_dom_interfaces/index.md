@@ -41,7 +41,9 @@ function generateTable() {
       // Crée un élément <td> et un nœud texte, place le texte
       // dans le <td>, puis place le <td> à la fin de la ligne
       const cell = document.createElement("td");
-      const cellText = document.createTextNode(`cellule ligne ${i}, colonne ${j}`);
+      const cellText = document.createTextNode(
+        `cellule ligne ${i}, colonne ${j}`,
+      );
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
